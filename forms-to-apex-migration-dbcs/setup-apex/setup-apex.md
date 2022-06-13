@@ -31,7 +31,7 @@ Below are steps on how to provision database on *Database Cloud Service* .
 
 1. Navigate to **Bare Metal, VM, and Exadata**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-dbcs.png " ")
+	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-dbcs.png " ")
 
 2. Select **Create DB System**.  
 

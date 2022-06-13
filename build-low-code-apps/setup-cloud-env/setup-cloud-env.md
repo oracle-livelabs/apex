@@ -58,7 +58,7 @@ Estimated time: 20 minutes
 
    1. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**. From this screen, you will see a list of compartments, click **Create Compartment**.
 
-   ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
+   ![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-compartment.png " ")
 
    ![](images/compartmentScreen.png " ")
 
@@ -129,7 +129,7 @@ To access Cloud Shell:
 
   1. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
 
   2. Make sure you are in the **AppDev** Compartment and click **Create Autonomous Database**.
 
@@ -160,7 +160,7 @@ To access Cloud Shell:
 
 5. Now we are going to create another ATP. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
 
   ![](images/2.jpg " ")
 
@@ -305,7 +305,7 @@ Now you are ready to move on to Step 4.
 
 15. We will get the **Compartment OCID**. Click the **Navigation Menu** in the upper left, navigate to **Identity & Security** and select **Compartments**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/id-compartment.png " ")
+	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/id-compartment.png " ")
 
 16. Copy the OCID and paste into your notepad.
 
