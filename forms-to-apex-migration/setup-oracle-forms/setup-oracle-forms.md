@@ -32,7 +32,7 @@ We start with deploying a pre-configured client machine instance from the OCI ma
 1. Log into your cloud account using your tenant name, username and password.
 2. Click the **Navigation Menu** in the upper left and select **Marketplace**.
 
-	![Navigation menu selecting marketplace.](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/marketplace.png " ")	
+	![Navigation menu selecting marketplace.](https://oracle-livelabs.github.io/common/images/console/marketplace.png " ")	
 
 3. Search for Oracle Forms Service.
       ![Oracle forms service.](./images/oracle-forms.png " ")

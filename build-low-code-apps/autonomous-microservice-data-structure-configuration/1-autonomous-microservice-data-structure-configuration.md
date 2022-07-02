@@ -72,7 +72,7 @@ Estimated time: 30 minutes
 
 6.  Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/storage-buckets.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
 7.  Select the **AppDev** Compartment and click **Create Bucket**
 
@@ -98,7 +98,7 @@ Estimated time: 30 minutes
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
 2.  Select the **AppDev** Compartment and click on **ProductCatalog** Database.
 
@@ -230,7 +230,7 @@ Estimated time: 30 minutes
 
 1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
 2.  Select the **AppDev** Compartment and click on **UserCatalog** Database.
 

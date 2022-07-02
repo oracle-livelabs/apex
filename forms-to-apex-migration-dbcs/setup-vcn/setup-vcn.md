@@ -29,7 +29,7 @@ To create a VCN on Oracle Cloud Infrastructure:
 
 1. Click the menu button on the Oracle Cloud Infrastructure console home page. Click **Networking** -> **Virtual Cloud Networks**.
 
-	![Select Virtual Cloud Network from Networking in menu.](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/new-console-backup/networking-vcn.png " ")
+	![Select Virtual Cloud Network from Networking in menu.](https://oracle-livelabs.github.io/common/images/new-console-backup/networking-vcn.png " ")
 
 2. Click **Start VCN Wizard**.
 

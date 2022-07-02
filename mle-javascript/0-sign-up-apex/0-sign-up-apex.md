@@ -68,7 +68,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     Click the **Navigation Menu** in the upper left, navigate to **Developer Services**, and select **APEX Instances**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/developer-apex.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/developer-apex.png " ")
 
 4. Select a Compartment and Click **Create APEX Service**.
 
@@ -153,7 +153,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
 
-    ![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
 6. Click **Create Autonomous Database**.
 
