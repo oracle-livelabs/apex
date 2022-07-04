@@ -44,44 +44,65 @@ For conducting labs in this workshop, either service can be utilized.
 Click one of the options below to proceed.
 
 ## **Option 1**: APEX Service
-Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. In this part, you set up Oracle APEX Application Development by creating and setting up an APEX Service instance. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
+Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
-1. Sign in to your Oracle Cloud account. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
+In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX.
+
+1.  Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
+
+2.  Once the Signup process is complete, you will be logged in automatically to the Oracle Cloud Infrastructure (OCI) Console.
+    -  In case you have closed the browser, you can always refer to the **Get Started Now with Oracle Cloud** email that you should have received to login to OCI Console.   
+    Make a note of your **Username**, **Password**, and **Cloud Account Name**.
+
+        ![](images/get-started-email.png " ")
+
+    - Alternatively, you can login to your Oracle Cloud account by accessing the following URL from your browser:       
+    [https://cloud.oracle.com](https://cloud.oracle.com)
+
+        Enter your **Cloud Account Name** in the input field and click the **Next** button.
+
+        ![](images/enter-oracle-cloud-account-name.png " ")
+
+        Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
+
+        ![](images/enter-user-name-and-password.png " ")
+
+3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
     
     ![](images/navigate-to-APEX-service.png " ")
     
-2. At the top of the APEX Instances page, click the **Create APEX Service** button.
+4. At the top of the APEX Instances page, click the **Create APEX Service** button.
 
     ![](images/create-APEX-service.png " ")
     
-3. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
+5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
     
     ![](images/APEX-service-settings-1.png " ")
     ![](images/APEX-service-settings-2.png " ")
     ![](images/APEX-service-settings-3.png " ")
     
-4. The APEX Instances Details displays again.
+6. The APEX Instances Details displays again.
 
   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
   
   ![](images/APEX-logo-orange.png " ")
   ![](images/APEX-logo-green.png " ")
   
-5. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
+7. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
   
     On the APEX Instance Details, click Launch APEX.
     
     ![](images/launch-APEX.png " ")
     
-6. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
+8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
   The password is the same as the one entered for the ADMIN user when creating the APEX service: **```SecretPassw0rd```**
   ![](images/log-in-as-admin.png " ")
 
-7. Click **Create Workspace**.
+9. Click **Create Workspace**.
 
   ![](images/welcome-create-workspace.png " ")
 
-8. In the Create Workspace dialog, enter the following:
+10. In the Create Workspace dialog, enter the following:
 
   | Property | Value |
   | --- | --- |
@@ -93,12 +114,12 @@ Oracle Application Development (APEX Service) is a low cost Oracle Cloud service
 
   ![](images/create-workspace.png " ")
 
-9. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
+11. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
   *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
   ![](images/log-out-from-admin.png " ")
 
-10. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+12. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
   ![](images/log-in-to-workspace.png " ")
 
