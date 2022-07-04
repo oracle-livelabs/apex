@@ -213,7 +213,7 @@ Ready to create your **Custom Component** scaffolding.
 
 1. Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 
-	![](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/storage-buckets.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
 2. Choose right **Compartment** from the compartment drop-down and click on **Create Bucket**.
 
