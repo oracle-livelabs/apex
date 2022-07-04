@@ -148,7 +148,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     Click the **Navigation Menu** in the upper left, navigate to **Developer Services**, and select **APEX Instances**.
 
-	![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/developer-apex.png " ")
+	![](https://oracle-livelabs.github.io/common/images/console/developer-apex.png " ")
 
 4. Select a Compartment and Click **Create APEX Service**.
 
@@ -215,7 +215,94 @@ In this part, you will create an Oracle APEX Application Development Service tri
     ![](images/log-in-to-workspace.png " ")
 
 
-## **Option 3**: apex.oracle.com
+## **Option 2**: Autonomous Database in Oracle Cloud
+
+In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous Transaction Processing* database. The final step in the process is to provision Oracle APEX.
+
+1.  Please [click this link to create your free account](https://signup.cloud.oracle.com). When you complete the registration process, you'll receive an account with a $300 credit and several "forever free" services that will enable you to complete the workshop for free. You can then use any remaining credit to continue to explore the Oracle Cloud. The forever free services will continue to work after the trial expires.
+
+2.  Soon after requesting your trial, you will receive a  **Get Started Now with Oracle Cloud** email.   
+    Make note of your **Username**, **Password**, and **Cloud Account Name**.
+
+    ![](images/get-started-email.png " ")
+
+3. Now that you have a service, you will log into your Oracle Cloud account, so that you can start working with various services.        
+    From any browser go to [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in).
+
+    Enter your **Cloud Account Name** in the input field and click the **Next** button.
+
+    ![](images/enter-oracle-cloud-account-name.png " ")
+
+4. Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
+
+    ![](images/enter-user-name-and-password.png " ")
+
+5. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
+
+    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
+
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
+
+6. Click **Create Autonomous Database**.
+
+    ![](images/click-create-autonomous-database.png " ")
+
+7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
+
+    ![](images/atp-settings-1.png " ")
+    ![](images/atp-settings-2.png " ")
+    ![](images/atp-settings-3.png " ")
+
+8. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
+
+    Continue when the status changes from:
+
+    ![](images/status-provisioning.png " ")
+
+    to:
+
+    ![](images/status-available.png " ")
+
+9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
+
+    Click the **Tools** tab.
+    Click **Open APEX**.
+
+    ![](images/click-apex.png " ")
+
+    *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
+
+10. Enter the password for the Administration Services and click **Sign In to Administration**.     
+    The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
+
+    ![](images/log-in-as-admin.png " ")
+
+11. Click **Create Workspace**.
+
+    ![](images/welcome-create-workspace.png " ")
+
+12. In the Create Workspace dialog, enter the following:
+
+    | Property | Value |
+    | --- | --- |
+    | Database User | DEMO |
+    | Password | **`SecretPassw0rd`** |
+    | Workspace Name | DEMO |
+
+    Click **Create Workspace**.
+
+    ![](images/create-workspace.png " ")
+
+13. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
+    *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
+
+    ![](images/log-out-from-admin.png " ")
+
+14. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+
+    ![](images/log-in-to-workspace.png " ")
+
+## **Option 3**: Workspace on apex.oracle.com
 Signing up for apex.oracle.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
 
 1. Go to [https://apex.oracle.com](https://apex.oracle.com.).
