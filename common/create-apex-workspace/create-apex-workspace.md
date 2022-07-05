@@ -10,7 +10,7 @@ Estimated Time: 5 minutes
 An APEX Workspace is a logical domain where you define APEX applications. Each workspace is associated with one or more database schemas (database users) which are used to store the database objects, such as tables, views, packages, and more. These database objects are generally what APEX applications are built on top of.
 
 ### Where to Run the Lab
-This lab is designed for a [a LiveLabs environment](http://developer.oracle.com/livelabs). If you haven't already done so, reserve an environment to run this workshop.
+This lab is designed for a [a LiveLabs environment](http://bit.ly/golivelabs). If you haven't already done so, reserve an environment to run this workshop.
 
 ## Task 1: Create an APEX Workspace on an Autonomous Transaction Processing instance
 
@@ -20,7 +20,7 @@ In this step, you will create an *Autonomous Transaction Processing* database an
 
     From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
 
-    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
+    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
 
 <if type="livelabs">
 
