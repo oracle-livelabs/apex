@@ -25,12 +25,12 @@
     },
     {
       "title": "Lab 4: Add a Map Region and Install PWA",
-      "filename": "../../5-linking-the-calendar/5-using-maps-and-pwa.md"
+      "filename": "../../5-using-maps-and-pwa/5-using-maps-and-pwa.md"
     },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }
