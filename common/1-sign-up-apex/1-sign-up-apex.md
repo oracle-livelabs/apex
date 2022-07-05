@@ -39,7 +39,7 @@ Below are steps on how to sign up for either an *APEX Application Development* S
 
 For conducting labs in this workshop, either service can be utilized.
 
-*Note*: Some of the features showcased in this lab are only available starting APEX 22.1.
+*Note*: Except for the Spreadsheet lab, which has been updated to use APEX 22.1, the remaining APEX workshops currently contain steps/screenshots for 21.2 or earlier. While we are working hard to update the workshops to 22.1 (the latest release), you can continue to refer to the steps in the workshop. Some of the steps may differ.
 
 Click one of the options below to proceed.
 
