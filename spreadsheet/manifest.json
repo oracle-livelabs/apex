@@ -1,9 +1,8 @@
 {
   "workshoptitle": "Building an App from a Spreadsheet for Oracle Autonomous Cloud Service",
-  "help": "livelabs-help-db_us@oracle.com",
-	"tutorials": [
+  "tutorials": [
     {
-      "title": "Getting Started",
+      "title": "Prerequisites",
       "filename": "../common/1-sign-up-apex/1-sign-up-apex.md"
     },
     {
@@ -24,13 +23,13 @@
       "filename": "4-improving-the-report-and-form/4-improving-the-report-and-form.md"
     },
     {
-      "title": "Lab 4: Link the Calendar",
-      "filename": "5-linking-the-calendar/5-linking-the-calendar.md"
+      "title": "Lab 4: Add a Map Region and Install PWA",
+      "filename": "5-using-maps-and-pwa/5-using-maps-and-pwa.md"
     },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/need-help/need-help-livelabs.md"
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

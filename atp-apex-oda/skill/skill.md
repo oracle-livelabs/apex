@@ -14,7 +14,7 @@ As part of this process, you will:
 
 We have to access to **Digital Assistant** section in the **Oracle Cloud Dashboard**.
 
-![ODA Menu](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/analytics-assist.png " ")
+![ODA Menu](https://oracle-livelabs.github.io/common/images/console/analytics-assist.png " ")
 
 Go to **Digital Assistant Dashboard** as we did on **Lab 3**. As a reminder check the following screenshot:
 
