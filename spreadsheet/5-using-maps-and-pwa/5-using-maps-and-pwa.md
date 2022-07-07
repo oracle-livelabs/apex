@@ -85,7 +85,7 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     
 7. Click the edit icon next to **NYC Highschools Map** list entry.
 
-    ![](images/nav-menu.png " ")
+    ![](images/edit-map-entry.png " ")
     
 8. In the edit page, for Image/Class enter **fa-map-marker** and click **Apply Changes**.
 
