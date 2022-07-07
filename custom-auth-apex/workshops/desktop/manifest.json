@@ -1,6 +1,8 @@
 {
   "workshoptitle": "The Title of the Workshop is defined in the manifest",
   "help": "livelabs-help-**enterarea**_us@oracle.com",
+  "variables": ["../../variables/variables.json",
+    "../../variables/variables-in-another-file.json"],
   "tutorials": [
     {
       "title": "Introduction",
@@ -10,7 +12,7 @@
     {
       "title": "Get Started with noVNC Remote Desktop",
       "description": "Using noVNC Remote Desktop",
-      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+      "filename": "https://oracle-livelabs.github.io/common//labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
       "title": "Lab 1: Provision an Instance",
@@ -30,9 +32,17 @@
       "filename": "../../query/query.md"
     },
     {
+        "title": "Lab 5: Tables in LiveLabs",
+        "filename": "../../tables/tables.md"
+    },
+    {
+            "title": "Lab 6: Variables in LiveLabs",
+            "filename": "../../variables/variables.md"
+    },
+    {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+      "filename": "https://oracle-livelabs.github.io/common//labs/need-help/need-help-livelabs.md"
     }
   ]
 }
