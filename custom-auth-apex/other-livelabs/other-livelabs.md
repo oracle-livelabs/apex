@@ -1,5 +1,7 @@
 # Other LiveLabs You Might Like
 
+If you enjoyed this LiveLabs workshop, here are some others you might like...
+
 - [Building an App from a Spreadsheet using Oracle APEX](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=631)
 
 - [Low Code Development Oracle APEX on Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=554)
