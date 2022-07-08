@@ -1,8 +1,9 @@
 # Other LiveLabs You Might Like
 
+- [Building an App from a Spreadsheet using Oracle APEX](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=631)
 
 - [Low Code Development Oracle APEX on Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=554)
 
-- [Manage and Monitor Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=553)
+- [Build a Starter Online Shopping App using Oracle APEX!](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=848)
 
-- [Scaling and Performance in the Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=608)
+... and so many [more](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/home)!
