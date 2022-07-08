@@ -1,8 +1,5 @@
 {
     "workshoptitle": "Custom Authentication in APEX",
-    "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
-                "sample.json":"../../data-load/files/sample.json",
-                "step2.md":"../../data-load/files/step2.md"},
     "help": "livelabs-help-**enterarea**_us@oracle.com",
     "tutorials": [
         {
@@ -12,15 +9,17 @@
         },
         {
             "title": "Lab 1: Creating the Custom Authentication Scheme",
-            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "description": "Creating necessary database objects for custom authentication scheme",
             "filename": "../../1-create-custom-auth-scheme/1-create-custom-auth-scheme.md"
         },
         {
             "title": "Lab 2: Allowing End Users to Create their Own Account",
+            "description": "Creating form necessary for creating a new end user account",
             "filename": "../../2-allow-end-users-create/2-allow-end-users-create.md"
         },
         {
             "title": "Lab 3: Implementing Additional Functionality",
+            "description": "Implementing account activation and password resetting capabilities",
             "filename": "../../3-implement-additional-functionality/3-implement-additional-functionality.md"
         },
         {
