@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "Custom Authentication in APEX",
+    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Get Started with noVNC Remote Desktop",
+            "description": "Using noVNC Remote Desktop",
+            "filename": "https://oracle-livelabs.github.io/common//labs/remote-desktop/using-novnc-remote-desktop.md"
+        },
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
+            "filename": "../../0-introduction/0-introduction.md"
+        },
+        {
+            "title": "Lab 1: Creating the Custom Authentication Scheme",
+            "description": "Creating necessary database objects for custom authentication scheme",
+            "filename": "../../1-create-custom-auth-scheme/1-create-custom-auth-scheme.md"
+        },
+        {
+            "title": "Lab 2: Allowing End Users to Create their Own Account",
+            "description": "Creating form necessary for creating a new end user account",
+            "filename": "../../2-allow-end-users-create/2-allow-end-users-create.md"
+        },
+        {
+            "title": "Lab 3: Implementing Additional Functionality",
+            "description": "Implementing account activation and password resetting capabilities",
+            "filename": "../../3-implement-additional-functionality/3-implement-additional-functionality.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-livelabs.md"
+        },
+        {
+            "title": "Other LiveLabs You Might Like",
+            "description": "Other LiveLabs you might like",
+            "filename": "../../other-livelabs/other-livelabs.md"
+        }
+    ]
+}
