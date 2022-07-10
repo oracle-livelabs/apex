@@ -1,4 +1,4 @@
-# Allowing End Users to Create their Own Account
+# Allow end users to create their own account
 
 ## Introduction
 
@@ -6,7 +6,7 @@ This lab walks you through the steps to create the "Create New User" page shown 
 
 ![Final "Create New User" page appearance and button on login page](images/lab2-cover-image.png)
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -149,7 +149,7 @@ Now that we have the custom authentication Scheme set up, we need to create the 
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 2: Add button to Login page for "Create New User" page
+## Task 2: Add Button to Login Page for "Create New User" Page
 
 Now that we have a Create New User page to go to, we need to add a button to the Login page that directs us here. Follow the steps outlined below to do so.
 
@@ -173,7 +173,7 @@ Now that we have a Create New User page to go to, we need to add a button to the
 
 6. Click **Save** in the top-right corner and click the "Save and Run Page" button (![Save and Run Page button in top-right corner](images/preview-button.png)) to preview your newly updated Login page.
 
-This concludes this lab. You may now **proceed to the next lab.**
+This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 

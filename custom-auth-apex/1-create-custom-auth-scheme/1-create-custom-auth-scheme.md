@@ -1,4 +1,4 @@
-# Creating the Custom Authentication Scheme
+# Create a custom authentication scheme
 
 ## Introduction
 
@@ -20,7 +20,7 @@ In this lab, you will:
 This lab assumes you have:
 * Read through the [Workshop Introduction](?lab=0-introduction) and met all of the prerequisites outlined there
 
-## Task 0: Create an APEX application
+## Task 0: Create an APEX Application
 
 1. From your Oracle database, open APEX and sign into your APEX Workspace.
 
@@ -46,12 +46,12 @@ This lab assumes you have:
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 1: Write a password hashing function
+## Task 1: Write a Password Hashing Function
 Now that we have an application created, we're going to move onto creating the necessary Database objects for our custom authentication scheme.
 
 In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built in **DBMS OBFUSCATION TOOLKIT** and its **MD5** hash.
 
-> **Note:** The MD5 (message-digest) hashing algorithm is a one-way cryptographic function that accepts a message of any length as input and returns a fixed-length digest value as output. There are other hashing algorithms available that can be used here in place of MD5. There are also other ways of writing the below hashing function that still makes use of both the **DBMS OBFUSCATION TOOLKIT** and the MD5 hash, but with variations to the *input* to the MD5 hash. *For more information on the **DBMS_ OBFUSCATION_TOOLKIT**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
+The MD5 (message-digest) hashing algorithm is a one-way cryptographic function that accepts a message of any length as input and returns a fixed-length digest value as output. There are other hashing algorithms available that can be used here in place of MD5. There are also other ways of writing the below hashing function that still makes use of both the **DBMS OBFUSCATION TOOLKIT** and the MD5 hash, but with variations to the *input* to the MD5 hash. *For more information on the **DBMS_ OBFUSCATION_TOOLKIT**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
@@ -75,7 +75,7 @@ In order to keep end users’ credentials secure, it is important to implement a
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 2: Set up a user credentials table
+## Task 2: Set Up a User Credentials Table
 All of your users’ authentication credentials and user information needs to be stored somewhere in order for your application to properly authenticate users upon login. This is the purpose of a user credentials table. In order for the users table to function as intended, you will also need to create a couple of other Database Objects, such as constraints and triggers to maintain uniqueness of usernames/emails as well as to set required values.
 
 
@@ -121,7 +121,7 @@ All of your users’ authentication credentials and user information needs to be
 
 	![Creating Triggers](images/create-triggers.png)
 
-10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:Writeapasswordhashingfunction)) prior to inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
+10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) prior to inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for encrypting the password before inserting it into the table](images/encrypt-before-insert-trigger.png)
 
@@ -153,7 +153,7 @@ All of your users’ authentication credentials and user information needs to be
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 3: Write an authenticate function
+## Task 3: Write an Authenticate Function
 
 The authentication function is the function called at login. It takes in a username and password and queries the user credentials table to see if the account exists, if the account is enabled (**ACCOUNT_STATUS** flag is 1) and if the password is correct. This particular implementation allows users to login with their username *or* email. If you’d like, you can modify this authentication function so that *only the username* or *only the email* can be used for login.
 
@@ -218,7 +218,7 @@ The authentication function is the function called at login. It takes in a usern
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 4: Create the authentication scheme
+## Task 4: Create the Authentication Scheme
 
 Now we will put all the pieces together to build out our custom authentication scheme.
 
@@ -240,7 +240,7 @@ Now we will put all the pieces together to build out our custom authentication s
 
 	![Select "Based on a pre-configured scheme from the gallery"](images/pre-configured-scheme.png)
 
-6.	Give the Authentication Scheme a **Name** – for example: “Custom authentication for end user account creation” and select Custom as the **Scheme Type**.
+6.	Give the Authentication Scheme a **Name** – for example: “Custom authentication for end-user account creation” and select Custom as the **Scheme Type**.
 
 	![Name the authentication scheme and make it Custom](images/auth-scheme-name-and-type.png)
 
@@ -270,7 +270,7 @@ Now we will put all the pieces together to build out our custom authentication s
 
 	![Select the authorization scheme](images/select-authz-scheme.png)
 
-This concludes this lab. You may now **proceed to the next lab.**
+This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 

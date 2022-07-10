@@ -1,4 +1,4 @@
-# Implementing Additional Functionality
+# Implement additional functionality
 
 ## Introduction
 
@@ -6,7 +6,7 @@ This lab does not pertain directly to custom authentication. Instead this lab wi
 
 ![Account Activation and Password Reset emails](images/lab3-cover-image.png)
 
-Estimated Lab Time: 45 minutes
+Estimated Time: 45 minutes
 
 ### Objectives
 
@@ -189,7 +189,7 @@ This concludes this task. You may now **proceed to the next task.**
 
 ## Task 3: Create a Reset Password Page
 
-In addition to Account Activation requirements, many applications have functionality for resetting a user’s password in case the user forgets it. To do so, we will have a Forgot/Reset password button directly on the Login page, and upon clicking this button, we will require users to input the email associated with their account. If the account is activated (referencing the **ACCOUNT_ STATUS** flag as mentioned in [Lab 1, Task 2: Set up a user credentials table](?lab=1-create-custom-auth-scheme#Task2:Setupausercredentialstable)) and belongs to an existing user, a reset password email will be sent to the email with a unique link for the user to reset their password.
+In addition to Account Activation requirements, many applications have functionality for resetting a user’s password in case the user forgets it. To do so, we will have a Forgot/Reset password button directly on the Login page, and upon clicking this button, we will require users to input the email associated with their account. If the account is activated (referencing the **ACCOUNT_ STATUS** flag as mentioned in [Lab 1, Task 2: Set Up a User Credentials Table](?lab=1-create-custom-auth-scheme#Task2:SetUpaUserCredentialsTable)) and belongs to an existing user, a reset password email will be sent to the email with a unique link for the user to reset their password.
 
 The following two tasks will walk you through the creation of the Forgot/Reset Password functionality, which will involve the creation of two pages: one for sending the reset password link (what we’re referring to as the "Forgot Password" functionality) and another for the actual password reset (where the aforementioned link takes you and what we’re referring to as the "Reset Password" functionality). Let’s first create the page where the actual password resetting occurs.
 
@@ -397,7 +397,7 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 This concludes this task. You may now **proceed to the next task.**
 
-## Task 4: Create page for "Forgot Password" Functionality
+## Task 4: Create Page for "Forgot Password" Functionality
 
 Now we will create a Send Reset Password Link page that implements the Forgot Password functionality.
 
