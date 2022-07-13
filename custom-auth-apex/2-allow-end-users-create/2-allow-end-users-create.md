@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to create the "Create New User" page shown below. This page will be accessible from the Login page so that end users can directly fill out this form to create themselves an account.
+This lab walks you through the steps to create the "Create New User" page shown below. This page will be accessible from the Login page so that end users can directly fill out this form to create an account.
 
 ![Final "Create New User" page appearance and button on login page](images/lab2-cover-image.png)
 
@@ -17,11 +17,11 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-* All previous labs successfully completed
+* All previous labs completed
 
 ## Task 1: Create a New User Page
 
-Now that we have the custom authentication Scheme set up, we need to create the page where users can create their own account. This page will look something like the screenshot in this lab's [introduction](#Introduction). The user is prompted to enter an email, username, password, and asked to confirm that password. They then press “Create New User” to create the account, which will automatically return the user to the Login page and will display a success message. In the backend, this page will check that the username and email haven’t already been taken by someone else and that the password meets a minimum set of requirements. These checks will be implemented via Validations in APEX (see the [Learn More](#LearnMore) section).
+Now that we have the custom authentication Scheme set up, we need to create a page where users can create their accounts. This page will look something like the screenshot in this lab's [introduction](#Introduction). The user is prompted to enter an email, username, and password, and then confirm that password. They then press “Create New User” to create the account, which will automatically return the user to the Login page and will display a success message. In the backend, this page will check that the username and email haven’t already been taken by someone else and that the password meets a minimum set of requirements. These checks will be implemented via Validations in APEX (see the [Learn More](#LearnMore) section).
 
 *Remember to save your work throughout. We recommend doing so in the Page Designer each time you add/edit a Page Item, Button, Validation, etc. The **Save** button can be found in the top-right corner.*
 
@@ -53,11 +53,11 @@ Now that we have the custom authentication Scheme set up, we need to create the 
 
 	 ![Change the EMAIl and USERNAME item TYPE](images/change-item-type.png)
 
-9. Add another page item (right click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
+9. Add another page item (right-click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
 
 	![Create another page item to confirm the password](images/create-page-item.png)![Make new item of Type "Password"](images/password-type.png)
 
-10.	Next create a **Validation** on the **EMAIL** page item (right click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
+10.	Next create a **Validation** on the **EMAIL** page item (right-click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
 
 	![Right-click on EMAIL and click "Create Validation"](images/create-validation.png) ![Create the validation](images/unique-email-validation.png)
 
@@ -69,7 +69,7 @@ Now that we have the custom authentication Scheme set up, we need to create the 
 
 11. Similarly, create a **Validation** on the **USERNAME** page item following the same process as in the previous step (step 10), but in the **SQL Query** change **email** to **username** and **PXX_ EMAIL** to **PXX_ USERNAME**.
 
-12. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, that the password must be at least 8 characters long, has at least one special character, has one upper and lower case letter, and has at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
+12. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, the password must be at least 8 characters long, have at least one special character, one upper and lower case letter, and have at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
 
 	> **Note:** Remember to change the “XX” in **PXX_PASSWORD** to your assigned page number. From here on out, assume that this will always be the case for all code snippets. To make it easier to edit the code block, click on the Popout Icon, ![Popout Icon](images/popout-icon.png), and click **OK** in the bottom-right of the dialog when you're finished editing.
 
@@ -100,7 +100,7 @@ Now that we have the custom authentication Scheme set up, we need to create the 
 	END;
 	</copy>
 	```
-13. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 9 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable like was done in the previous steps. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
+13. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 9 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
 
 	```
 	<copy>
@@ -119,9 +119,9 @@ Now that we have the custom authentication Scheme set up, we need to create the 
 
 	![Delete unnecessary buttons](images/default-buttons.png)
 
-15.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add an additional **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “>” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
+15.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “>” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
 
-	![Right-click on the "Cancel Dialog" Dyanmic Action and click "Create TRUE Action"](images/create-true-action.png)
+	![Right-click on the "Cancel Dialog" Dynamic Action and click "Create TRUE Action"](images/create-true-action.png)
 
 16.	In the right-side pane change **Action** to “Refresh”, **Selection Type** to “Region” and **Region** to “Create New User” from the dropdown.
 
@@ -163,7 +163,7 @@ Now that we have a Create New User page to go to, we need to add a button to the
 
 	![Give the new button a name](images/create-new-user-button.png)
 
-4. If you want the button to be centered and appear like the default “Sign In” button appears, change the **Button Position** to “Next” from the dropdown menu and in the **Appearance** section, toggle **Hot** to the on position.
+4. If you want the button to be centered and appear like the default “Sign In” button appears, change the **Button Position** to “Next” from the dropdown menu, and in the **Appearance** section, toggle **Hot** to the on position.
 
 	![Adjust the settings for your new button](images/new-button-settings.png)
 

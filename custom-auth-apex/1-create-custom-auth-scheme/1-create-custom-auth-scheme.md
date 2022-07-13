@@ -22,7 +22,7 @@ This lab assumes you have:
 
 ## Task 0: Create an APEX Application
 
-1. From your Oracle database, open APEX and sign into your APEX Workspace.
+1. From your Oracle database, open APEX and sign in to your APEX Workspace.
 
 	![APEX Workspace Login Page](images/apex-workspace.png)
 
@@ -34,7 +34,7 @@ This lab assumes you have:
 3. Select **New Application**.
 ![New Application](images/new-application.png)
 
-4. Give your application a name and choose an application style/theme by clicking the popout ![Popout Icon](images/popout-icon.png) icon by **Appearance**.
+4. Give your application a name and choose an application style/theme by clicking the pop-out ![Pop-out Icon](images/popout-icon.png) icon by **Appearance**.
 
 	*If you want the application interface to appear exactly as it does in the screenshots in the [Introduction > About this Workshop](?lab=0-introduction#AboutthisWorkshop) section, then select **Redwood Light** as the style/theme.*
 
@@ -47,9 +47,9 @@ This lab assumes you have:
 This concludes this task. You may now **proceed to the next task.**
 
 ## Task 1: Write a Password Hashing Function
-Now that we have an application created, we're going to move onto creating the necessary Database objects for our custom authentication scheme.
+Now that we have an application created, we're going to move on to creating the necessary Database objects for our custom authentication scheme.
 
-In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built in **DBMS OBFUSCATION TOOLKIT** and its **MD5** hash.
+In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built-in **DBMS OBFUSCATION TOOLKIT** and its **MD5** hash.
 
 The MD5 (message-digest) hashing algorithm is a one-way cryptographic function that accepts a message of any length as input and returns a fixed-length digest value as output. There are other hashing algorithms available that can be used here in place of MD5. There are also other ways of writing the below hashing function that still makes use of both the **DBMS OBFUSCATION TOOLKIT** and the MD5 hash, but with variations to the *input* to the MD5 hash. *For more information on the **DBMS_ OBFUSCATION_TOOLKIT**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
 
@@ -76,7 +76,7 @@ The MD5 (message-digest) hashing algorithm is a one-way cryptographic function t
 This concludes this task. You may now **proceed to the next task.**
 
 ## Task 2: Set Up a User Credentials Table
-All of your users’ authentication credentials and user information needs to be stored somewhere in order for your application to properly authenticate users upon login. This is the purpose of a user credentials table. In order for the users table to function as intended, you will also need to create a couple of other Database Objects, such as constraints and triggers to maintain uniqueness of usernames/emails as well as to set required values.
+All of your users’ authentication credentials and user information needs to be stored somewhere for your application to properly authenticate users upon login. This is the purpose of a user credentials table. For the table to function as intended, you will also need to create a couple of other Database Objects, such as constraints and triggers to maintain the uniqueness of usernames/emails as well as to set required values.
 
 
 1. Navigate to the **Object Browser** by clicking the dropdown arrow next to **SQL Workshop** and selecting **Object Browser**.
@@ -97,7 +97,7 @@ All of your users’ authentication credentials and user information needs to be
 
 5. Because we don't have any other tables in our APEX Workspace at this time, we cannot set up any foreign keys. You can simply click **Next** on this page.
 
-6. If you don't want usernames and/or emails to be repeated (which is often the desired restrictions), we need to create a **Unique Constraint**. Next to **Constraint Type** select **Unique** and double-click on the desired column where it says **Key Column(s)**. After double-clicking the desired column, it will move to the box on the right (see screenshot below). Give the constraint a **Name** and then click **Add** in the top-right.
+6. If you don't want usernames and/or emails to be repeated (which is often the desired restriction), we need to create a **Unique Constraint**. Next to **Constraint Type** select **Unique** and double-click on the desired column where it says **Key Column(s)**. After double-clicking the desired column, it will move to the box on the right (see screenshot below). Give the constraint a **Name** and then click **Add** in the top-right.
 
  	![Adding a uniqueness constraint to the usernames column](images/unique-username.png)
 
@@ -107,7 +107,7 @@ All of your users’ authentication credentials and user information needs to be
 
 8. If you're interested in seeing the SQL code associated with creating the table, click on the ![Arrow icon next to SQL](images/arrow-icon.png) icon next to **SQL**. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. Then click **Create Table**.
 
-	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop > SQL Commands** and run the code to create the exact same table that we've created here.*
+	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop > SQL Commands** and run the code to create the same table that we've created here.*
 
 	![Create table](images/create-table.png)
 
@@ -121,7 +121,7 @@ All of your users’ authentication credentials and user information needs to be
 
 	![Creating Triggers](images/create-triggers.png)
 
-10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) prior to inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
+10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) before inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for encrypting the password before inserting it into the table](images/encrypt-before-insert-trigger.png)
 
@@ -135,7 +135,7 @@ All of your users’ authentication credentials and user information needs to be
 
 11. Finally, click **Create Trigger**.
 
-12. We also want to ensure that the user's password is encrypted if they were ever to go back and reset/update their password. Create a Trigger that calls the password hashing function prior to any updates made on the password. Repeat steps 9 through 11, but for the **Firing Point** instead select "update of" and for **Column** select "PASSWORD" from the dropdown. Because this only pertains to updates on the password, we just need the last line in the code snippet above (starting with ":new.password") for the **Trigger Body**. The final Trigger should look like the one in the screenshot below.
+12. We also want to ensure that the user's password is encrypted if they were ever to go back and reset/update their password. Create a Trigger that calls the password hashing function before any updates are made on the password. Repeat steps 9 through 11, but for the **Firing Point**, select "update of", and for **Column**, select "PASSWORD" from the dropdown. Because this only pertains to updates on the password, we just need the last line in the code snippet above (starting with ":new.password") for the **Trigger Body**. The final Trigger should look like the one in the screenshot below.
 
 	![Trigger for encrypting the password once a user updates their password](images/encrypt-before-update-trigger.png)
 
@@ -155,7 +155,7 @@ This concludes this task. You may now **proceed to the next task.**
 
 ## Task 3: Write an Authenticate Function
 
-The authentication function is the function called at login. It takes in a username and password and queries the user credentials table to see if the account exists, if the account is enabled (**ACCOUNT_STATUS** flag is 1) and if the password is correct. This particular implementation allows users to login with their username *or* email. If you’d like, you can modify this authentication function so that *only the username* or *only the email* can be used for login.
+The authentication function is the function called at login. It takes in a username and password and queries the user credentials table to see if the account exists, if the account is enabled (**ACCOUNT_STATUS** flag is 1), and if the password is correct. This particular implementation allows users to log in with their username *or* email. If you’d like, you can modify this authentication function so that *only the username* or *only the email* can be used for login.
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
@@ -254,7 +254,7 @@ Now we will put all the pieces together to build out our custom authentication s
 
 9. While we will not discuss Authorization Schemes in-depth in this workshop, we do need to make a change to our application's security as it pertains to Authorization in order for us to continue with the workshop. Return to the application home page by clicking on "Application XXX" from the Breadcrumb menu in the top-left.
 
-	*Checkout the [Learn More](#LearnMore) section at the end of this lab to learn more about Authorization Schemes.*
+	*Check out the [Learn More](#LearnMore) section at the end of this lab to learn more about Authorization Schemes.*
 
 	![Return to application home page via Breadcrumb menu](images/app-from-breadcrumb.png)
 

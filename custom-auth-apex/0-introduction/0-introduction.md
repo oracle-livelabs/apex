@@ -4,14 +4,14 @@ Estimated Time: 5 minutes
 
 ## About this Workshop
 
-This workshop walks you through creating a custom authentication scheme that allows end users to create their account and manage their own login information without ever seeing the APEX application’s backend.
+This workshop walks you through creating a custom authentication scheme that allows end users to create their accounts and manage their own login information without ever seeing the APEX application’s back end.
 
 ![Preview of what final application should look like](images/workshop-cover-image.png)
 
 Estimated Time: 90 minutes total
 
 ### Use Case
-Sometimes companies want to develop external (customer-facing) applications that require end users to access the application and create their login directly from the frontend. As APEX is configured right now, APEX applications support the use of APEX accounts, Database Accounts, LDAP Directory, and Social Sign-in, among others, as methods of authentication (see [Preconfigured APEX Authentication Schemes](https://docs.oracle.com/en/database/oracle/application-express/21.2/htmdb/preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B)). This means that creating end-user credentials is either via a third-party or by an existing user that has backend access to the APEX Workspace and/or database. This is where custom authentication comes into the picture.
+Sometimes companies want to develop external (customer-facing) applications that require end users to access the application and create their login directly from the front end. As APEX is configured right now, APEX applications support the use of APEX accounts, Database Accounts, LDAP Directory, and Social Sign-in, among others, as methods of authentication (see [Preconfigured APEX Authentication Schemes](https://docs.oracle.com/en/database/oracle/application-express/21.2/htmdb/preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B)). This means that creating end-user credentials is either via a third-party or by an existing user that has back-end access to the APEX Workspace and/or database. This is where custom authentication comes into the picture.
 
 ## Workshop Objectives
 In this workshop, you will learn how to:
