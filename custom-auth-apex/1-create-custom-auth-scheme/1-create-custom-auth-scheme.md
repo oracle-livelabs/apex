@@ -29,14 +29,14 @@ This lab assumes you have:
 2. Navigate to **App Builder** and click **Create**.
 
 	*For this workshop we will create an empty "skeleton" application, but if you have an existing application that you want to implement custom authentication for, feel free to use your own.*
-	![App Builder > Create](images/create-new-app.png)
+	![App Builder &gt; Create](images/create-new-app.png)
 
 3. Select **New Application**.
 ![New Application](images/new-application.png)
 
 4. Give your application a name and choose an application style/theme by clicking the pop-out ![Pop-out Icon](images/popout-icon.png) icon by **Appearance**.
 
-	*If you want the application interface to appear exactly as it does in the screenshots in the [Introduction > About this Workshop](?lab=0-introduction#AboutthisWorkshop) section, then select **Redwood Light** as the style/theme.*
+	*If you want the application interface to appear exactly as it does in the screenshots in the [Introduction &gt; About this Workshop](?lab=0-introduction#AboutthisWorkshop) section, then select **Redwood Light** as the style/theme.*
 
 	![Application Name and Appearance](images/pick-app-name-and-appearance.png)
 
@@ -55,7 +55,7 @@ The MD5 (message-digest) hashing algorithm is a one-way cryptographic function t
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
-	![SQL Workshop > SQL Commands](images/sql-workshop.png)
+	![SQL Workshop &gt; SQL Commands](images/sql-workshop.png)
 
 2. Copy & paste the code snippet below into the editor and click **Run**. A "Function created" message will appear below in the **Results**.
 
@@ -107,7 +107,7 @@ All of your users’ authentication credentials and user information needs to be
 
 8. If you're interested in seeing the SQL code associated with creating the table, click on the ![Arrow icon next to SQL](images/arrow-icon.png) icon next to **SQL**. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. Then click **Create Table**.
 
-	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop > SQL Commands** and run the code to create the same table that we've created here.*
+	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop &gt; SQL Commands** and run the code to create the same table that we've created here.*
 
 	![Create table](images/create-table.png)
 
@@ -159,7 +159,7 @@ The authentication function is the function called at login. It takes in a usern
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
-	![SQL Workshop > SQL Commands](images/sql-workshop.png)
+	![SQL Workshop &gt; SQL Commands](images/sql-workshop.png)
 
 2. Copy & paste the code snippet below into the editor and click **Run**. A "Function created" message will appear below in the **Results**.
 

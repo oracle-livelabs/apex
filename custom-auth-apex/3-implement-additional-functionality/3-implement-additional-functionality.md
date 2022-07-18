@@ -28,19 +28,19 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=2-allow-end-users-c
 
 *Remember to save your work throughout. We recommend doing so in the Page Designer each time you add/edit a Page Item, Button, Validation, etc. The **Save** button can be found in the top-right corner.*
 
-1. From within App Builder and with your application selected, click **Create Page >**.
+1. From within App Builder and with your application selected, click **Create Page &gt;**.
 
 	![Create a new page for Account Activation](images/create-page.png)
 
-2. For **Page Type**, with **Component** selected, choose **Blank Page** and click **Next >**.
+2. For **Page Type**, with **Component** selected, choose **Blank Page** and click **Next &gt;**.
 
 	![Select Blank Page for Page Type](images/blank-page.png)
 
-3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Optional Static Content Regions**, click on the “>” to expand this section. Then give **Region 1** a name like “Account Activation” and click **Next >**.
+3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Optional Static Content Regions**, click on the “&gt;” to expand this section. Then give **Region 1** a name like “Account Activation” and click **Next &gt;**.
 
   ![Input these parameters for this new Blank Page](images/blank-page-params.png)
 
-4.	For **Navigation Preference** keep **Do not associate this page with a navigation menu entry** selected and click **Next >**.
+4.	For **Navigation Preference** keep **Do not associate this page with a navigation menu entry** selected and click **Next &gt;**.
 
 	![Do not associate this page with a navigation menu entry](images/no-nav-entry.png)
 
@@ -197,7 +197,7 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 	![Create a basic form page](images/create-form.png) ![Create a basic form page](images/create-form-2.png)
 
-2. Name it something like "Reset Password". For **Branch Here on Submit** and **Cancel and Go To Page** choose the Login page (should be 9999 by default) and leave everything else as is. On the next screen, leave the default selected and click **Next >**.
+2. Name it something like "Reset Password". For **Branch Here on Submit** and **Cancel and Go To Page** choose the Login page (should be 9999 by default) and leave everything else as is. On the next screen, leave the default selected and click **Next &gt;**.
 
 	![Enter page name and other details](images/form-details.png)
 
@@ -287,7 +287,7 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 	![Change name of CREATE button](images/change-name-of-create-button.png) ![Change behavior of CREATE BUTTON](images/change-button-behavior.png)
 
-13.	What if someone nefariously tries to access a reset password page that they shouldn’t have access to? Let’s make this “Reset Password” region (containing all our form page items) only visible if the link is accessed by the intended user. Under **Components > Body** in the left-side pane, click on the “Reset Password” region. In the right-side pane, scroll down to the **Server-side Condition** section. Under **Type**, select “Function Body” from the drop-down menu and copy & paste the code snippet below into the **PL/SQL Function Body** text box, changing the **PXX_ EMAIL** fields accordingly.
+13.	What if someone nefariously tries to access a reset password page that they shouldn’t have access to? Let’s make this “Reset Password” region (containing all our form page items) only visible if the link is accessed by the intended user. Under **Components &gt; Body** in the left-side pane, click on the “Reset Password” region. In the right-side pane, scroll down to the **Server-side Condition** section. Under **Type**, select “Function Body” from the drop-down menu and copy & paste the code snippet below into the **PL/SQL Function Body** text box, changing the **PXX_ EMAIL** fields accordingly.
 
 	![Edit the Server-side condition](images/server-side-condition.png)
 

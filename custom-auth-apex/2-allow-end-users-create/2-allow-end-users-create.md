@@ -25,19 +25,19 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
 *Remember to save your work throughout. We recommend doing so in the Page Designer each time you add/edit a Page Item, Button, Validation, etc. The **Save** button can be found in the top-right corner.*
 
-1. From within App Builder, and with your application selected, click **Create Page >**.
+1. From within App Builder, and with your application selected, click **Create Page &gt;**.
 
 	![Create new page](images/create-page.png)
 
 2. For **Page Type**, with **Component** selected, choose **Form** and then **Form** again.
 
-3. You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Create New User” and select “Modal Dialog” for **Page Mode**. Then click **Next >**.
+3. You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Create New User” and select “Modal Dialog” for **Page Mode**. Then click **Next &gt;**.
 
 	![Provide information for the page](images/enter-page-name.png)
 
-4.	Leave everything as is and click **Next >** again.
+4.	Leave everything as is and click **Next &gt;** again.
 
-5.	For the **Data Source** part of the wizard, find your users table for the **Table / View Name** and click **Next >**.
+5.	For the **Data Source** part of the wizard, find your users table for the **Table / View Name** and click **Next &gt;**.
 
 	![Select your user credentials table as the data source](images/select-data-source.png)
 
@@ -119,7 +119,7 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
 	![Delete unnecessary buttons](images/default-buttons.png)
 
-15.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “>” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
+15.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “&gt;” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
 
 	![Right-click on the "Cancel Dialog" Dynamic Action and click "Create TRUE Action"](images/create-true-action.png)
 

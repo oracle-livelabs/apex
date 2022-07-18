@@ -13,14 +13,14 @@ Estimated Time: 90 minutes total
 ### Use Case
 Sometimes companies want to develop external (customer-facing) applications that require end users to access the application and create their login directly from the front end. As APEX is configured right now, APEX applications support the use of APEX accounts, Database Accounts, LDAP Directory, and Social Sign-in, among others, as methods of authentication (see [Preconfigured APEX Authentication Schemes](https://docs.oracle.com/en/database/oracle/application-express/21.2/htmdb/preconfigured-authentication-schemes.html#GUID-CD382D4A-AC00-4185-B37F-9A5BC9417A7B)). This means that creating end-user credentials is either via a third-party or by an existing user that has back-end access to the APEX Workspace and/or database. This is where custom authentication comes into the picture.
 
-## Workshop Objectives
+### Workshop Objectives
 In this workshop, you will learn how to:
 * Create your own custom authentication scheme
 * Allow end users to create their own account
 * Implement account activation functionality
 * Build out password resetting capabilities
 
-## Workshop Prerequisites
+### Workshop Prerequisites
 This workshop assumes you have:
 * An existing APEX Workspace
 * Familiarity with application development in APEX (specifically how to use App Builder and SQL Workshop)
