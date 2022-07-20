@@ -4,7 +4,7 @@
 
 This lab does not pertain directly to custom authentication. Instead, this lab will provide the steps to implement additional functionality that often goes hand-in-hand with authentication: the requirement to activate an account (by verifying your email) before logging in and the ability to reset one’s password.
 
-![Account Activation and Password Reset emails](images/lab3-cover-image.png)
+![Account Activation and Password Reset emails](./images/lab3-cover-image.png)
 
 Estimated Time: 45 minutes
 
@@ -30,35 +30,35 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=2-allow-end-users-c
 
 1. From within App Builder and with your application selected, click **Create Page &gt;**.
 
-	![Create a new page for Account Activation](images/create-page.png)
+	![Create a new page for Account Activation](./images/create-page.png)
 
 2. For **Page Type**, with **Component** selected, choose **Blank Page** and click **Next &gt;**.
 
-	![Select Blank Page for Page Type](images/blank-page.png)
+	![Select Blank Page for Page Type](./images/blank-page.png)
 
 3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Optional Static Content Regions**, click on the “&gt;” to expand this section. Then give **Region 1** a name like “Account Activation” and click **Next &gt;**.
 
-  ![Input these parameters for this new Blank Page](images/blank-page-params.png)
+  ![Input these parameters for this new Blank Page](./images/blank-page-params.png)
 
 4.	For **Navigation Preference** keep **Do not associate this page with a navigation menu entry** selected and click **Next &gt;**.
 
-	![Do not associate this page with a navigation menu entry](images/no-nav-entry.png)
+	![Do not associate this page with a navigation menu entry](./images/no-nav-entry.png)
 
 5.	Then click **Finish**.
 
-	![Click green "Finish" button](images/finish-create-page.png)
+	![Click green "Finish" button](./images/finish-create-page.png)
 
 6.	Your new “Account Activation” page should automatically open. Right-click on “Account Activation” in the left-side pane (under **Body**) and click on **Create Page Item**.
 
-	![Create page item in "Account Activation" Body](images/create-page-item.png)
+	![Create page item in "Account Activation" Body](./images/create-page-item.png)
 
 7.	In the right-side pane, give the item a **Name**, like **EMAIL** (keep the “PXX_” prefix). And select **Hidden** as the **Type** from the dropdown menu. Leave everything else as is in the right-side pane.
 
-	![Give the page item a Name and make it of Type "Hidden"](images/hidden-email-page-item.png)
+	![Give the page item a Name and make it of Type "Hidden"](./images/hidden-email-page-item.png)
 
 8.	Now in the left-side pane, select “Account Activation” under **Body** and in the right-side pane, change the **Type** to **PL/SQL Dynamic Content** from the dropdown menu. Click on the icon next to **PL/SQL Code** to open a code editor popup window.
 
-	![Make the content Type "PL/SQL Dynamic Content"](images/dynamic-content-for-activation.png)
+	![Make the content Type "PL/SQL Dynamic Content"](./images/dynamic-content-for-activation.png)
 
 9. We recommend first copying & pasting the following block of code into a local notepad or text editor and making edits there before copying & pasting it into the code editor popup window. You will need to change **PXX_EMAIL** to the item name you gave in step 7. You will also need to change "application-login-url" to your application’s Login page URL. **Keep the double quotes in the code.**
 
@@ -126,11 +126,11 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=2-allow-end-users-c
 
 10.	Along the top bar of the code editor, click on the checkmark and make sure a “Validation successful” message appears before proceeding. Then click **OK** in the bottom-right corner of the code editor popup window.
 
-	![Ensure "Validation Successful" and then click "OK"](images/validation-successful.png)
+	![Ensure "Validation Successful" and then click "OK"](./images/validation-successful.png)
 
 11.	Finally, click on “Page XX: Account Activation” in the left-side pane, and in the right-side pane search for “Security” in the search/filter bar. Change the **Authentication** setting to “Page is Public” from the dropdown. Click **Save** in the top-right corner when done.
 
-	![Make page public](images/page-is-public.png)
+	![Make page public](./images/page-is-public.png)
 
 This concludes this task. You may now **proceed to the next task.**
 
@@ -138,13 +138,13 @@ This concludes this task. You may now **proceed to the next task.**
 
 Now that we have an Account Activation page to go to, we need to build out the functionality that sends the account activation email once the user creates an account. This will be done from the “Create New User” page (created in [Lab 2, Task 1](?lab=2-allow-end-users-create&nav=open#Task1:CreateaNewUserPage)). Follow the steps outlined below to send an account activation email once a user creates an account.
 
-1.	On the “Create New User” page, navigate to the Processing tab on the left-side pane (denoted by ![Processing icon](images/processing-icon.png)) and right-click on “Process form…” and select **Create Process**.
+1.	On the “Create New User” page, navigate to the Processing tab on the left-side pane (denoted by ![Processing icon](./images/processing-icon.png)) and right-click on “Process form…” and select **Create Process**.
 
-	![Create a Process on the "Create New User" page](images/create-process.png)
+	![Create a Process on the "Create New User" page](./images/create-process.png)
 
 2.	Name this process something like “Send link” and make it of **Type** “Execute Code”. Under **Location** select “Local Database” from the dropdown.
 
-	![Name the process and adjust the Type and Location accordingly](images/send-link-process.png)
+	![Name the process and adjust the Type and Location accordingly](./images/send-link-process.png)
 
 3.	Before copying & pasting into the **PL/SQL Code** box, we recommend making the necessary code changes in a local notepad or text editor. You will have to change all the page items to your corresponding page items with the correct page number. You will also need to change the URL to your account activation page’s URL. (include the "https://" at the beginning and the "?" between the URL and the **PXX_ EMAIL** page item). For the "p_from" field, replace the fake email address with the email address that you want this account activation email to be sent from.
 
@@ -195,23 +195,23 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 1. Using the **Create Page** wizard as in previous tasks, create a page of **Page Type** "Form".
 
-	![Create a basic form page](images/create-form.png) ![Create a basic form page](images/create-form-2.png)
+	![Create a basic form page](./images/create-form.png) ![Create a basic form page](./images/create-form-2.png)
 
 2. Name it something like "Reset Password". For **Branch Here on Submit** and **Cancel and Go To Page** choose the Login page (should be 9999 by default) and leave everything else as is. On the next screen, leave the default selected and click **Next &gt;**.
 
-	![Enter page name and other details](images/form-details.png)
+	![Enter page name and other details](./images/form-details.png)
 
 3. Choose the **Data Source** to be the user credentials table you created and make the **Primary Key Column** **USER_ ID**. When selecting the columns to be displayed in the form, double-click on **ACCOUNT_STATUS** so that it is not added as a page item. Then click **Create**.
 
-	![Select data source](images/form-source.png) ![Select primary key](images/form-pk.png)
+	![Select data source](./images/form-source.png) ![Select primary key](./images/form-pk.png)
 
 4. Change the **EMAIL** page item to **Type** “Hidden”, **USERNAME** to **Type** “Display Only”, and **PASSWORD** to **Type** “Password”.
 
-	![Change EMAIL item type](images/email-type.png) ![Change USERNAME item type](images/username-type.png) ![Change PASSWORD item type](images/password-type.png)
+	![Change EMAIL item type](./images/email-type.png) ![Change USERNAME item type](./images/username-type.png) ![Change PASSWORD item type](./images/password-type.png)
 
 5. With the **USERNAME** page item selected in the left-side pane, scroll down in the right-side pane to the **Source** section and change the **Form Region** to “- Select -” and the **Type** to “SQL Query (returning single value)”. Copy & paste the code snippet below into the **SQL Query** text box, changing **PXX_EMAIL** to reflect your page number. Also, change the **Used** value to “Always, replacing any existing value in session state” from the dropdown menu.
 
-	![Change USERNAME source](images/username-source-info.png)
+	![Change USERNAME source](./images/username-source-info.png)
 
 	```
  <copy>
@@ -223,7 +223,7 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 	> **Note:** This Validation requires that the password is a minimum of 8 characters and includes at least one number, one uppercase letter, one lowercase letter, and one special character.
 
-	![Create a Validation on PASSWORD](images/create-validation.png) ![Change validation type and copy & paste code](images/validation-type.png)
+	![Create a Validation on PASSWORD](./images/create-validation.png) ![Change validation type and copy & paste code](./images/validation-type.png)
 
 	```
 	<copy>
@@ -255,16 +255,16 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 7. Create a page item where the user must confirm the new password they entered in the **PASSWORD** field by right-clicking on the **PASSWORD** page item in the left-side pane and clicking “Create Page Item Below”.
 
-	![Create a page item below PASSWORD](images/create-page-item-below.png)
+	![Create a page item below PASSWORD](./images/create-page-item-below.png)
 
 8. Now in the right-side pane, name this new page item something like **CONFIRM_ PASSWORD** (while still keeping the “PXX_” prefix) and make it **Type** “Password”.
 
-	![Name it and make it type "Password"](images/confirm-password-type.png)
+	![Name it and make it type "Password"](./images/confirm-password-type.png)
 
 9. Right-click on this new page item in the left-side pane and click “Create Validation” to create a Validation that confirms that the two password fields match. In the right-side pane, give this Validation a name and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** text box, copy & paste the following code snippet, changing the page items to match your page numbers accordingly.
 
-	![Create a validation on CONFRIM_PASSWORD](images/create-confirm-password-validation.png)
-	![Give the validation a name and copy & paste the code](images/confirm-password-validation.png)
+	![Create a validation on CONFRIM_PASSWORD](./images/create-confirm-password-validation.png)
+	![Give the validation a name and copy & paste the code](./images/confirm-password-validation.png)
 
 	```
 	<copy>
@@ -277,19 +277,19 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 10. Add an **Error Message** that you want to be displayed if the passwords provided do not match.
 
-	![Add error message to validation](images/validation-error-msg.png)
+	![Add error message to validation](./images/validation-error-msg.png)
 
 11.	From the left-side pane, delete the default **CANCEL**, **DELETE**, and **SAVE** buttons (right-click on them and click “Delete”).
 
-	![Delete default buttons](images/delete-default-buttons.png)
+	![Delete default buttons](./images/delete-default-buttons.png)
 
 12.	We’re going to adapt the default **CREATE** button to our use of resetting the user’s password, so select this button in the left-side pane. In the right-side pane, change the **Button Name** to something like **RESET_PASSWORD**. Under the **Behavior** section, select “- Select -” from the dropdown menu for **Database Action**.
 
-	![Change name of CREATE button](images/change-name-of-create-button.png) ![Change behavior of CREATE BUTTON](images/change-button-behavior.png)
+	![Change name of CREATE button](./images/change-name-of-create-button.png) ![Change behavior of CREATE BUTTON](./images/change-button-behavior.png)
 
 13.	What if someone nefariously tries to access a reset password page that they shouldn’t have access to? Let’s make this “Reset Password” region (containing all our form page items) only visible if the link is accessed by the intended user. Under **Components &gt; Body** in the left-side pane, click on the “Reset Password” region. In the right-side pane, scroll down to the **Server-side Condition** section. Under **Type**, select “Function Body” from the drop-down menu and copy & paste the code snippet below into the **PL/SQL Function Body** text box, changing the **PXX_ EMAIL** fields accordingly.
 
-	![Edit the Server-side condition](images/server-side-condition.png)
+	![Edit the Server-side condition](./images/server-side-condition.png)
 
 	```
 	<copy>
@@ -321,12 +321,12 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 14. If we don’t load the form (because someone is trying to access the reset password link inappropriately), then we also need to have something appear letting the user know that it is an invalid link. To do so, we’re going to create another region. In the left-side pane, right-click on **Body** and select “Create Region”.
 
-	![Create a region](images/create-region.png)
+	![Create a region](./images/create-region.png)
 
 15.	Name this new region something like “Invalid Reset Password Link”. In the right-side pane under the **Appearance** section, select “Alert” from the dropdown menu for **Template**. This makes it so that the alert shown in the screenshot below appears when someone tries to access this page without a valid email link.
 
-	![Give the section a name and make it an Alert](images/name-alert-section.png)
-	![Screenshot of alert that will appear if link accessed improperly](images/invalid-reset-password-page-alert.png)
+	![Give the section a name and make it an Alert](./images/name-alert-section.png)
+	![Screenshot of alert that will appear if link accessed improperly](./images/invalid-reset-password-page-alert.png)
 
 16. Now scroll down to the **Server-side Condition** section. Under **Type**, select “Function Body” from the drop-down menu and copy & paste the code snippet below into the **PL/SQL Function Body** text box, changing the **PXX_ EMAIL** fields accordingly.
 
@@ -360,16 +360,16 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 17. To verify this, first, make this page public by selecting “Page XX: Reset Password” in the left-side pane, and in the **Security** section, select “Page is Public” for **Authentication** and "Unrestricted" for **Page Access Protection**. Now click the play button in the top-right corner to preview. Because the page isn’t being accessed from a valid email, you should see the “Invalid Reset Password Link” warning appear. If the page doesn't appear as expected, walk through steps 13-17 again.
 
-	![Test out Invalid Reset Link alert](images/invalid-reset-link.png)
+	![Test out Invalid Reset Link alert](./images/invalid-reset-link.png)
 
-18.	Now we need to write the processes that update the password in the backend and set the account as enabled again so the user can now log in to their account. Navigate to the **Processing** tab in the left-side pane (denoted by ![Processing tab icon](images/processing-icon.png)) and delete the default process that is there by right-clicking on it and clicking “Delete” (should be called something like “Process form for Reset Password”).
+18.	Now we need to write the processes that update the password in the backend and set the account as enabled again so the user can now log in to their account. Navigate to the **Processing** tab in the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)) and delete the default process that is there by right-clicking on it and clicking “Delete” (should be called something like “Process form for Reset Password”).
 
-	![Delete the default process](images/delete-default-process.png)
+	![Delete the default process](./images/delete-default-process.png)
 
 19. Right-click on **Processing** and click “Create Process”. In the right-side pane, give this process a **Name** (something like “Update Password”). Copy & paste the code snippet below in the **PL/SQL Code** text box, changing page item names accordingly to match your page number.
 
-	![Create a new process from scratch](images/create-new-process.png)
-	![Name the new process and copy & paste code](images/new-process-name.png)
+	![Create a new process from scratch](./images/create-new-process.png)
+	![Name the new process and copy & paste code](./images/new-process-name.png)
 
 	```
 	<copy>
@@ -381,7 +381,7 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 20.	Add a **Success Message** and **Error Message** as well (if you’d like).
 
-	![Optional Success and Error Messages for Update Password Process](images/password-update-messages.png)
+	![Optional Success and Error Messages for Update Password Process](./images/password-update-messages.png)
 
 21.	To create another process, right-click on **Processes** in the left-side pane and click “Create Process”. Name it something like “Enable Account” and copy & paste the code snippet below into the **PL/SQL Code** text box.
 
@@ -403,25 +403,25 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 1. Create a page of **Page Type** “Blank” and of **Page Mode** “Modal Dialog” and name it something like “Send Reset Password Link”. Leave everything else as the default settings.
 
-	![Create a Blank page using Create Page Wizard](images/forgot-password-page-blank.png) ![Name the page and make it a Modal Dialog page](images/forgot-password-page-modal.png)
+	![Create a Blank page using Create Page Wizard](./images/forgot-password-page-blank.png) ![Name the page and make it a Modal Dialog page](./images/forgot-password-page-modal.png)
 
 2.	Right-click on **Components** in the left-hand side pane and click “Create Region”.
 
-	![Create region](images/components-create-region.png)
+	![Create region](./images/components-create-region.png)
 
 3.	In the right-side pane, give it a **Title** (something like “Forgot Password”) and make it of **Type** “Form”. Under **Source** provide the user credentials table name in the **Table Name** field. Page items corresponding to the table columns will now appear in the left-side pane.
 
 	> **Note:** For formatting/appearance purposes, I like to change **Template** (in the **Appearance** section) to "- Select -", but that is a personal preference choice.
 
-	![Fill in region information](images/region-information.png)
+	![Fill in region information](./images/region-information.png)
 
 4.	Make the **USER_ ID** item **Type** “Hidden”, and the **EMAIL** item **Type** “Text Field” and **Subtype** “E-Mail”. Delete the **USERNAME**, **PASSWORD**, and **ACCOUNT_STATUS** page items (right-click and click "Delete").
 
-	![Change the Types of USER_ID and EMAIL](images/email-type-subtype.png)
+	![Change the Types of USER_ID and EMAIL](./images/email-type-subtype.png)
 
 5.	Next, create a Validation on the **EMAIL** page item and call it something like **ACCOUNT_EXISTS**. This Validation will check that this email is associated with a user’s account. The **Validation Type** should be set as “Rows returned” and copy & paste the code snippet below as the associated **SQL Query**. Change variable names accordingly. Then provide an **Error Message** that will appear if the email doesn’t match any account.
 
-	![Create an ACCOUNT_EXISTS Validation](images/create-account-exists-validation.png) ![Fill in ACCOUNT_EXISTS Validation information](images/account-exists-validation-info.png)
+	![Create an ACCOUNT_EXISTS Validation](./images/create-account-exists-validation.png) ![Fill in ACCOUNT_EXISTS Validation information](./images/account-exists-validation-info.png)
 
 	```
 	<copy>
@@ -432,7 +432,7 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 6.	Create another Validation on the **EMAIL** page item named something like **ACCOUNT_ IS_ACTIVE** of **Type** "Function Body (returning Error Text)" and copy & paste the code snippet below into the **PL/SQL Function Body Returning Error Text** box, changing variables accordingly. This will ensure that the user requesting a password reset hasn’t already asked for one.
 
-	![Create an ACCOUNT_IS_ACTIVE Validation](images/account-is-active-validation.png)
+	![Create an ACCOUNT_IS_ACTIVE Validation](./images/account-is-active-validation.png)
 
 	```
 	<copy>
@@ -450,7 +450,7 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 7. In the right-side pane, scroll down to the **Server-side Condition** section. For **Type**, select "Rows returned" from the dropdown and copy & paste the code below where it says **SQL Query**, changing the **PXX_EMAIL** variable accordingly.
 
-	![Add a Server-side Condition](images/account-is-active-serverside-condition.png)
+	![Add a Server-side Condition](./images/account-is-active-serverside-condition.png)
 
 	```
 	<copy>
@@ -461,28 +461,28 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 8.	Now we need to create buttons. On the left-side pane, right-click on **Dialog Footer** and click “Create Region”, name it something like “Buttons” and in the right-side pane, for **Template** under the **Appearance** section, select “Buttons Container” from the dropdown menu.
 
-	![Create a region for buttons](images/create-buttons-region.png) ![Name region and change template](images/buttons-region.png)
+	![Create a region for buttons](./images/create-buttons-region.png) ![Name region and change template](./images/buttons-region.png)
 
 9.	In the left-side pane, right-click on this new region and click “Create Button”. In the right-side pane, give it the **Button Name** and **Label** “Cancel”. You can experiment with **Button Position** based on your preference – I have mine set to “Close”.
 
-	![Create button in Buttons Region](images/create-button-in-buttons-region.png) ![Change button name](images/button-name.png)
+	![Create button in Buttons Region](./images/create-button-in-buttons-region.png) ![Change button name](./images/button-name.png)
 
 10.	In the right-side pane under **Behavior**, select “Defined by Dynamic Action” as the **Action**. Then right-click on the button in the left-side pane and click “Create Dynamic Action”. You can just name it “Cancel”.
 
-	![Make the button Defined by a Dynamic Action](images/button-behavior.png) ![Create the dynamic action for the button](images/create-dynamic-action.png) ![Name the dynamic action](images/dynamic-action-name.png)
+	![Make the button Defined by a Dynamic Action](./images/button-behavior.png) ![Create the dynamic action for the button](./images/create-dynamic-action.png) ![Name the dynamic action](./images/dynamic-action-name.png)
 
 11.	Click on “Show” in the left-side pane under **True** associated with this Dynamic Action. In the right-side pane, select “Cancel dialog” as the **Action** from the dropdown menu.
 
-	![Make the dynamic True action "Cancel Dialog"](images/cancel-dialog-action.png)
+	![Make the dynamic True action "Cancel Dialog"](./images/cancel-dialog-action.png)
 
 12.	Now right-click on your buttons region in the left-side pane and create another button, this time named **SEND_EMAIL** with **Label**  “Send reset password link”. I have this button in **Button Position** “Next” and with **Hot** (in **Appearance** section) toggled on, but as I mentioned, this is up to your personal preference.
 
-	![Create "SEND_EMAIL" button](images/send-email-button.png)
+	![Create "SEND_EMAIL" button](./images/send-email-button.png)
 
-13.	Now navigate to the **Processing** tab in the left-side pane (denoted by ![Processing tab icon](images/processing-icon.png)) and right-click on “Processing” and click “Create Process”. This first process will be for sending the reset password link. It should be of **Type** “Execute Code” and the **Source Location** should be “Local Database”.
+13.	Now navigate to the **Processing** tab in the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)) and right-click on “Processing” and click “Create Process”. This first process will be for sending the reset password link. It should be of **Type** “Execute Code” and the **Source Location** should be “Local Database”.
 
-	![Create a new process](images/create-process-for-sending-link.png)
-	![Input information for process that sends password reset link](images/process-for-sending-link.png)
+	![Create a new process](./images/create-process-for-sending-link.png)
+	![Input information for process that sends password reset link](./images/process-for-sending-link.png)
 
 
 14. Copy & paste the code snippet below into a local notepad or text editor *before* the **PL/SQL Code** box so you can make the following changes. Change "URL_ TO_ PAGE" to the appropriate URL for your reset password page and the approved sender email you want the email to be sent from. **PYY_ EMAIL** should represent the page number of the Reset Password Page from [Task 3](#Task3:CreateaResetPasswordPage), while **PXX_EMAIL** should represent the current page number. **Keep the double and single quotes surrounding and within the URL as well as the the '?' and '=''.** Then once the code block is edited with your correct information, copy & paste from your local notepad or text editor into the **PL/SQL Code** box in the right-side pane.
@@ -516,11 +516,11 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 15.	Within this same process, add a **Success Message** in the right-side pane that you want to be displayed once the reset password link is sent.
 
-	![Set a success message for this process](images/success-msg-for-process.png)
+	![Set a success message for this process](./images/success-msg-for-process.png)
 
 16.	Now we need to create the process that temporarily disables the associated account so that this user cannot log in or try to reset their password again until they follow the link that’s been sent to their email. Right-click on “Processes” in the left-side pane and click “Create Process”. It should be of **Type** “Execute Code” and the **Source Location** should be set to “Local Database”. Copy & paste the code snippet below, changing the email field to whatever the page item is called on your page.
 
-	![Create another process for updating backend information](images/process-for-updating-backend.png)
+	![Create another process for updating backend information](./images/process-for-updating-backend.png)
 
 	```
 	<copy>
@@ -530,25 +530,25 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 17.	Now we want to make sure we branch back to the Login page after everything is done. In the left-side pane, right-click on “After Processing” and click “Create Branch”. In the right-side pane, give it a **Name** like “Return to login” and where it says **Target** under **Behavior**, link it to your Login page (9999 by default).
 
-	![Create a branch in the "After Processing" section](images/create-branch-after-processing.png)
-	![Make branch's target the Login page](images/branch-after-processing.png)
+	![Create a branch in the "After Processing" section](./images/create-branch-after-processing.png)
+	![Make branch's target the Login page](./images/branch-after-processing.png)
 
 
-18.	Return to the **Rendering** tab in the left-side pane (denoted by ![Rendering tab icon](images/rendering-icon.png)) and click on “Page XX: Send Reset Password Link”. In the right-side pane search for “Security” in the search/filter bar. Change the **Authentication** setting to “Page is Public” from the dropdown.
+18.	Return to the **Rendering** tab in the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Send Reset Password Link”. In the right-side pane search for “Security” in the search/filter bar. Change the **Authentication** setting to “Page is Public” from the dropdown.
 
-	![Make this new page Public](images/make-page-public.png)
+	![Make this new page Public](./images/make-page-public.png)
 
 19. The last thing we need to do is add a "Forgot Password" button to the Login Page, so let's navigate to our Login Page (page 9999 by default). In the left-side pane, right-click on "Next" and click "Create Button".
 
-	![Create button in Next section](images/next-create-button.png)
+	![Create button in Next section](./images/next-create-button.png)
 
 20. Give the button a **Name** and **Label**, something like "FORGOT_PASSWORD" and "Forgot Password?", respectively.
 
- 	![Give the button a Name and Label](images/forgot-password-button.png)
+ 	![Give the button a Name and Label](./images/forgot-password-button.png)
 
 21. Under **Behavior** in the right-side pane, change the **Action** to "Redirect to Page in this Application". Select the **Target** as your "Send Reset Password Link" page (your page number might differ from the screenshot).
 
-	![Change the Behavior and Target of button](images/forgot-password-button-behavior.png)
+	![Change the Behavior and Target of button](./images/forgot-password-button-behavior.png)
 
 22. Click **Save** in the top-right corner to save your work.
 

@@ -6,7 +6,7 @@ Estimated Time: 5 minutes
 
 This workshop walks you through creating a custom authentication scheme that allows end users to create their accounts and manage their own login information without ever seeing the APEX application’s back end.
 
-![Preview of what final application should look like](images/workshop-cover-image.png)
+![Preview of what final application should look like](./images/workshop-cover-image.png)
 
 Estimated Time: 90 minutes total
 

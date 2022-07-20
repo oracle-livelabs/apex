@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to create the necessary database objects for the custom authentication scheme.
 
-![Creating the Custom Authentication Scheme](images/lab-1-cover-image.png)
+![Creating the Custom Authentication Scheme](./images/lab-1-cover-image.png)
 
 Estimated Time: 20 minutes
 
@@ -24,25 +24,25 @@ This lab assumes you have:
 
 1. From your Oracle database, open APEX and sign in to your APEX Workspace.
 
-	![APEX Workspace Login Page](images/apex-workspace.png)
+	![APEX Workspace Login Page](./images/apex-workspace.png)
 
 2. Navigate to **App Builder** and click **Create**.
 
 	*For this workshop we will create an empty "skeleton" application, but if you have an existing application that you want to implement custom authentication for, feel free to use your own.*
-	![App Builder &gt; Create](images/create-new-app.png)
+	![App Builder &gt; Create](./images/create-new-app.png)
 
 3. Select **New Application**.
-![New Application](images/new-application.png)
+![New Application](./images/new-application.png)
 
-4. Give your application a name and choose an application style/theme by clicking the pop-out ![Pop-out Icon](images/popout-icon.png) icon by **Appearance**.
+4. Give your application a name and choose an application style/theme by clicking the pop-out ![Pop-out Icon](./images/popout-icon.png) icon by **Appearance**.
 
 	*If you want the application interface to appear exactly as it does in the screenshots in the [Introduction &gt; About this Workshop](?lab=0-introduction#AboutthisWorkshop) section, then select **Redwood Light** as the style/theme.*
 
-	![Application Name and Appearance](images/pick-app-name-and-appearance.png)
+	![Application Name and Appearance](./images/pick-app-name-and-appearance.png)
 
 5. Next to **Features**, click **Check All**. We're going to leave the default **Settings** for now. Then click **Create Application**.
 
-	![Check all features and leave default settings](images/check-all-features.png)
+	![Check all features and leave default settings](./images/check-all-features.png)
 
 This concludes this task. You may now **proceed to the next task.**
 
@@ -55,11 +55,11 @@ The MD5 (message-digest) hashing algorithm is a one-way cryptographic function t
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
-	![SQL Workshop &gt; SQL Commands](images/sql-workshop.png)
+	![SQL Workshop &gt; SQL Commands](./images/sql-workshop.png)
 
 2. Copy & paste the code snippet below into the editor and click **Run**. A "Function created" message will appear below in the **Results**.
 
-	![How to run code to create password hashing function](images/run-code.png)
+	![How to run code to create password hashing function](./images/run-code.png)
 
     ```
 		<copy>
@@ -81,49 +81,49 @@ All of your users’ authentication credentials and user information needs to be
 
 1. Navigate to the **Object Browser** by clicking the dropdown arrow next to **SQL Workshop** and selecting **Object Browser**.
 
-	![Object Browser](images/object-browser.png)
+	![Object Browser](./images/object-browser.png)
 
-2. In the top-right corner of the screen, click the ![+ icon](images/plus-icon.png) icon and click **Table**.
+2. In the top-right corner of the screen, click the ![+ icon](./images/plus-icon.png) icon and click **Table**.
 
 3. Give it a **Table Name** and add the **Columns** shown in the screenshot below. Then click **Next**.
 
 	> **Note:** Feel free to change the **Column Names** to your liking as well as the **Precision** and **Scale**. We recommend keeping the **Data Type**, **Not Null**, and **Identity** information as shown. The **ACCOUNT_STATUS** column is optional. This "flag" will be used later to implement the additional functionality discussed in Lab 3.
 
-	![Creating the user credentials table](images/user-creds-table.png)
+	![Creating the user credentials table](./images/user-creds-table.png)
 
 4. Select **Populated by Identity column** for the **Primary Key** and leave the **Primary Key Constraint Name** as is. From the dropdown, select the **USER_ID** column as the **Primary Key**. Then click **Next**.
 
-	![Primary Key settings for user credentials table](images/primary-key.png)
+	![Primary Key settings for user credentials table](./images/primary-key.png)
 
 5. Because we don't have any other tables in our APEX Workspace at this time, we cannot set up any foreign keys. You can simply click **Next** on this page.
 
 6. If you don't want usernames and/or emails to be repeated (which is often the desired restriction), we need to create a **Unique Constraint**. Next to **Constraint Type** select **Unique** and double-click on the desired column where it says **Key Column(s)**. After double-clicking the desired column, it will move to the box on the right (see screenshot below). Give the constraint a **Name** and then click **Add** in the top-right.
 
- 	![Adding a uniqueness constraint to the usernames column](images/unique-username.png)
+ 	![Adding a uniqueness constraint to the usernames column](./images/unique-username.png)
 
 7. Before clicking **Next**, create any additional constraints that you would like by repeating step 6. Ensure all your constraints appear in the table in the top-left corner (see screenshot below). Once all of your desired constraints have been created and properly added to this table, then click **Next**.
 
-	![Ensure constraints have been added before proceeding](images/constraints-added.png)
+	![Ensure constraints have been added before proceeding](./images/constraints-added.png)
 
-8. If you're interested in seeing the SQL code associated with creating the table, click on the ![Arrow icon next to SQL](images/arrow-icon.png) icon next to **SQL**. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. Then click **Create Table**.
+8. If you're interested in seeing the SQL code associated with creating the table, click on the ![Arrow icon next to SQL](./images/arrow-icon.png) icon next to **SQL**. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. Then click **Create Table**.
 
 	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop &gt; SQL Commands** and run the code to create the same table that we've created here.*
 
-	![Create table](images/create-table.png)
+	![Create table](./images/create-table.png)
 
 	This table will now appear in your **Object Browser**. Feel free to explore the different Database Objects that have been created for this table (**Indexes**, **Constraints**, etc.) by clicking on different tabs seen below the table name (see screenshot below).
 
-	![User credentials table](images/user-creds-final-table.png)
+	![User credentials table](./images/user-creds-final-table.png)
 
 9. Now that we have the user credentials table created, we need to create a couple of **Triggers** for this table. Navigate to the **Triggers** tab and click **Create** (see screenshot below).
 
 	*For more information on **Triggers**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
 
-	![Creating Triggers](images/create-triggers.png)
+	![Creating Triggers](./images/create-triggers.png)
 
 10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) before inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
 
-	![Trigger for encrypting the password before inserting it into the table](images/encrypt-before-insert-trigger.png)
+	![Trigger for encrypting the password before inserting it into the table](./images/encrypt-before-insert-trigger.png)
 
 	```
 	<copy>
@@ -137,11 +137,11 @@ All of your users’ authentication credentials and user information needs to be
 
 12. We also want to ensure that the user's password is encrypted if they were ever to go back and reset/update their password. Create a Trigger that calls the password hashing function before any updates are made on the password. Repeat steps 9 through 11, but for the **Firing Point**, select "update of", and for **Column**, select "PASSWORD" from the dropdown. Because this only pertains to updates on the password, we just need the last line in the code snippet above (starting with ":new.password") for the **Trigger Body**. The final Trigger should look like the one in the screenshot below.
 
-	![Trigger for encrypting the password once a user updates their password](images/encrypt-before-update-trigger.png)
+	![Trigger for encrypting the password once a user updates their password](./images/encrypt-before-update-trigger.png)
 
 13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=3-implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
 
-	![Trigger for initially disabling a user's account](images/disable-account-trigger.png)
+	![Trigger for initially disabling a user's account](./images/disable-account-trigger.png)
 
 	```
 	<copy>
@@ -159,7 +159,7 @@ The authentication function is the function called at login. It takes in a usern
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
-	![SQL Workshop &gt; SQL Commands](images/sql-workshop.png)
+	![SQL Workshop &gt; SQL Commands](./images/sql-workshop.png)
 
 2. Copy & paste the code snippet below into the editor and click **Run**. A "Function created" message will appear below in the **Results**.
 
@@ -226,49 +226,49 @@ Now we will put all the pieces together to build out our custom authentication s
 
 2. Click on **Shared Components**.
 
-	![Navigate to Shared Components from your application's homepage](images/shared-components.png)
+	![Navigate to Shared Components from your application's homepage](./images/shared-components.png)
 
 3. Next, locate **Security** and click on **Authentication Schemes**.
 
-	![Navigate to the Authentication Schemes page](images/auth-schemes-page.png)
+	![Navigate to the Authentication Schemes page](./images/auth-schemes-page.png)
 
 4.	Click **Create** in the top-right corner.
 
-	![Click the Create button to get started on creating the authentication scheme](images/create-auth-scheme.png)
+	![Click the Create button to get started on creating the authentication scheme](./images/create-auth-scheme.png)
 
 5.	Select **Create Scheme: Based on a pre-configured scheme from the gallery** and then click **Next**.
 
-	![Select "Based on a pre-configured scheme from the gallery"](images/pre-configured-scheme.png)
+	![Select "Based on a pre-configured scheme from the gallery"](./images/pre-configured-scheme.png)
 
 6.	Give the Authentication Scheme a **Name** – for example: “Custom authentication for end-user account creation” and select Custom as the **Scheme Type**.
 
-	![Name the authentication scheme and make it Custom](images/auth-scheme-name-and-type.png)
+	![Name the authentication scheme and make it Custom](./images/auth-scheme-name-and-type.png)
 
 7.	Where it says **Authentication Function Name** in the **Settings** section, put the name of your authentication function (in our case enter “authenticate_user”). Then click **Create Authentication Scheme**.
 
-	![Set authentication function and create the authentication scheme](images/create-auth-scheme-final.png)
+	![Set authentication function and create the authentication scheme](./images/create-auth-scheme-final.png)
 
 8.	It will take you back to the Authentication Schemes page. A green success message should appear at the top saying that this new Authentication Scheme was set as the current scheme. Additionally, “- Current” should now be displayed next to the new custom authentication scheme you just created.
 
-	![Our new Custom Authentication scheme is now set](images/new-auth-scheme-success.png)
+	![Our new Custom Authentication scheme is now set](./images/new-auth-scheme-success.png)
 
 9. While we will not discuss Authorization Schemes in-depth in this workshop, we do need to make a change to our application's security as it pertains to Authorization in order for us to continue with the workshop. Return to the application home page by clicking on "Application XXX" from the Breadcrumb menu in the top-left.
 
 	*Check out the [Learn More](#LearnMore) section at the end of this lab to learn more about Authorization Schemes.*
 
-	![Return to application home page via Breadcrumb menu](images/app-from-breadcrumb.png)
+	![Return to application home page via Breadcrumb menu](./images/app-from-breadcrumb.png)
 
 10. Click on the "Edit Application Properties" button in the top-right.
 
-	![Edit Application Properties](images/edit-app-properties.png)
+	![Edit Application Properties](./images/edit-app-properties.png)
 
 11. Navigate to the **Security** menu along the top toolbar.
 
-	![Navigate to Security menu](images/navigate-to-security.png)
+	![Navigate to Security menu](./images/navigate-to-security.png)
 
 12. Under **Authorization**, select "- No application authorization required -" for the **Authorization Scheme**. Then click **Apply Changes** in the top-right corner.
 
-	![Select the authorization scheme](images/select-authz-scheme.png)
+	![Select the authorization scheme](./images/select-authz-scheme.png)
 
 This concludes this lab. You may now **proceed to the next lab**.
 
