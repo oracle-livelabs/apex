@@ -1,10 +1,10 @@
-# Create database package for business logic
+# Create a Database Package for Business Logic
 
 ## Introduction
 
-In this lab, you will learn how to create database objects to use in your APEX application. This package contains functions and procedures to add products to the cart, remove products, create the order, clear the cart, and more.
+In this lab, you learn to create database objects to use in your APEX application. This package contains functions and procedures to add products to the cart, remove products, create the order, clear the cart, and more.
 
-To manage items in the cart, you will use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.1/aeapi/APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76), which enable you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session. 
+To manage items in the cart, you will use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.1/aeapi/APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76), which enable you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session.
 
 Estimated Time: 5 minutes
 
@@ -68,7 +68,7 @@ Create specification and body for the package.
         p_store          IN NUMBER,
         p_order_id       OUT orders.order_id%TYPE,
         p_customer_id    OUT NUMBER );
-    END manage_orders; 
+    END manage_orders;
     </copy>
     ```
 
@@ -107,7 +107,7 @@ Create specification and body for the package.
             WHERE  collection_name = 'PRODUCTS'
                   AND a.n001 = p_product;
 
-            apex_collection.delete_member(p_collection_name => 'PRODUCTS', 
+            apex_collection.delete_member(p_collection_name => 'PRODUCTS',
                                           p_seq => l_id);
           END IF;
       END remove_product;
@@ -225,7 +225,7 @@ Create specification and body for the package.
 
           apex_collection.delete_collection(p_collection_name => 'PRODUCTS');
       END create_order;
-    END manage_orders; 
+    END manage_orders;
     </copy>
     ```
 
@@ -235,9 +235,10 @@ Create specification and body for the package.
 
 While you don't have to understand the code to complete the workshop successfully, know that the functions and procedures you've defined in this lab are using a built-in feature of Oracle APEX to handle the user's shopping cart by managing a collection of product id and quantity values specific to the current user, and automatically create new row in the **Customers** table during order creation if it's the first time the user is placing an order.
 
-You now know how to create a package to manage the shopping cart. In the following labs, you will call these procedures and functions when it is required. You may now **proceed to the next lab**. 
+You now know how to create a package to manage the shopping cart. In the following labs, you will call these procedures and functions when it is required. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

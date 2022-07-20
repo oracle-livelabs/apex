@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will build an application based on the data structures you built in previous labs.
+In this lab, you build an application based on the data structures you built in previous labs.
 
 Estimated Time: 15 minutes
 
@@ -16,9 +16,7 @@ In this lab, you will:
 
 ## Task 1: Create an Application
 
-1. In the App Builder menu, click **App Builder**.
-
-2. Click **Create**.
+1. In the App Builder menu, click **App Builder** and then, click **Create**.
 
     ![Click Create](images/go-create-app.png " ")
 
@@ -28,7 +26,9 @@ In this lab, you will:
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name enter **ACME Shop**.
+1. In the Create Application wizard, for Name, enter **ACME Shop**.
+    
+    ![](./images/name-app.png " ")
  
 ## Task 3: Add the Dashboard Page
 
@@ -87,7 +87,9 @@ A dashboard page is a great way to show important information using various char
 7. Click Advanced and check **Set as Administration Page**.
 
     Setting a page as Administration Page will make that only certain users can run the page. In this case, only users with Administration Rights will be able to run the Dashboard page, which means that this page will require authentication.
-
+    
+    ![](./images/set-admin.png " ")
+    
 8. Click **Add Page**.
 
 ## Task 4: Add the Products Page
@@ -95,7 +97,7 @@ A dashboard page is a great way to show important information using various char
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Faceted Search**.
 
-    ![](./images/faceted-search.png " ") 
+    ![](./images/faceted-search.png " ")
 
 3. On the Faceted Search Page, enter the following:
     - Page Name - enter **Products**
@@ -105,17 +107,20 @@ A dashboard page is a great way to show important information using various char
     - Title Column - select **PRODUCT_NAME**
     - Body Column - select **- Select Column -** (to unselect the default column chosen)
 
-    Expand Advanced Section and check **Set as Home Page** 
+    Expand Advanced Section and check **Set as Home Page**
 
-4. Click **Add Page**.
+    Click **Add Page**.
 
     ![](./images/fs-page.png " ")  
 
 ## Task 5: Delete Original Home Page
 
-Since we just designated the product faceted search page we just created as the application's home page, we no longer need the default home page the wizard included in the list of pages. So, here we'll remove the original home page.
+Since we designated the product faceted search page as the application's home page, we no longer need the default home page that the wizard included in the list of pages. Therefore, in this task, we will remove the original home page.
 
 1. Navigate to the original page named "Home" and click **Edit**.
+
+    ![](./images/edit-home.png " ")  
+    
 2. Click **Delete**.    
 
     ![](./images/delete-page.png " ")  
@@ -128,7 +133,7 @@ Since we just designated the product faceted search page we just created as the 
 2. Click the arrow to the left of **Additional Pages** to see additional page types.
 3. Click **Multiple Reports**.
 
-    ![](./images/multiple-reports.png " ") 
+    ![](./images/multiple-reports.png " ")
 
 3. On the Create Multiple Reports Page, select the following tables:
     - CLOTHING_LOOKUP
@@ -140,7 +145,7 @@ Since we just designated the product faceted search page we just created as the 
 
 4. Click **Add Pages**.
 
-    ![](./images/multiple-reports2.png " ") 
+    ![](./images/multiple-reports2.png " ")
 
 ## Task 7: Set Multiple Reports as Administration Pages
 
@@ -150,19 +155,22 @@ Since we just designated the product faceted search page we just created as the 
     - CUSTOMERS
     - DEPARTMENT_LOOKUP
     - PRODUCT_REVIEWS
-    - STORES    
+    - STORES  
+    
+    ![](./images/edit-multiple-reports.png " ")
+      
 
 2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
 3. Click **Save Changes**.
 
-    ![](./images/admin-pages.png " ") 
+    ![](./images/admin-pages.png " ")
 
 ## Task 8: Add Manage Products Page
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Interactive Report**.
 
-    ![](./images/ir-page.png " ") 
+    ![](./images/ir-page.png " ")
 
 3. On the Report Page, enter the following:
     - Page Name - enter **Manage Products**
@@ -181,13 +189,15 @@ Since we just designated the product faceted search page we just created as the 
 
 6. Click **Add Page**.
 
-    ![](./images/ir-page2.png " ") 
+    ![](./images/ir-page2.png " ")
 
 ## Task 9: Set Features
 
 Features are a set of optional application capabilities Oracle APEX can include for your new application. Access Control enables role-based user authorization with a single click.
 
 1. Under **Features** section, check **Access Control**.
+
+    ![](./images/access-control.png " ")
 
 ## Task 10: Finish Creating the Application
 
@@ -208,12 +218,16 @@ Click **Run Application**.
 
     ![](./images/sign-in.png " ")
 
-    The new application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
+
+2. The new application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
+
+    ![](./images/view-app.png " ")
 
 
-You now know how to create an application with a number of different page types based on existing database objects. You may now **proceed to the next lab**. 
+You now know how to create an application with a number of different page types based on existing database objects. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

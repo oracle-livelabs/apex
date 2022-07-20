@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of customers, stores, products, and orders used to manage the shopping cart.
+In this lab, you will learn to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of customers, stores, products, and orders used to manage the shopping cart.
 
 Estimated Time: 5 minutes
 
@@ -18,7 +18,7 @@ In this lab, you will:
 1. Log into your workspace.
 2. From your APEX workspace home page, as shown below, select the down-arrow to the right of  **SQL Workshop**, then click the arrow to the right of  **Utilities**, and choose **Sample Datasets**.
 
-    ![](./images/naviagate-sample-dataset.png " ")
+    ![](./images/navigate-sample-dataset.png " ")
 
 3. On the **Customer Orders** row, click Install.
 
@@ -27,17 +27,17 @@ In this lab, you will:
 4. Click **Next**.
 
    *The schema name defaults to your current schema so will be different from the schema name shown below.*
-    ![](./images/manage-sample-dataset.png" ")
+    ![](./images/manage-sample-dataset.png " ")
 
 5. Click **Install Dataset**.
 
-    ![](./images/load-sample-dataset.png" ")
+    ![](./images/load-sample-dataset.png " ")
 
 6. Click **Exit**.
 
-    ![](./images/load-sample-dataset-results.png" ")
+    ![](./images/load-sample-dataset-results.png " ")
 
->**Note:** You do NOT want to click Create Application, as you will manually create an application 
+>**Note:** You do NOT want to click Create Application, as you will manually create an application later.
 
 ## Task 2: Review Database Objects
 
@@ -49,10 +49,12 @@ In this lab, you will:
 
 3. Click the new tables and the various tabs, such as Data, Constraints, and so forth, to review the table details.
 
+    ![](./images/explore-tables.png " ")
 
-This completes Lab 1. You now know how to install a sample dataset. You may now **proceed to the next lab**. 
+This completes Lab 1. You now know how to install a sample dataset. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
