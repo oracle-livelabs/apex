@@ -9,3 +9,7 @@ If you enjoyed this LiveLabs workshop, here are some others you might like...
 - [Build a Starter Online Shopping App using Oracle APEX!](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=848)
 
 ... and so many [more](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/home)!
+
+## Acknowledgements
+* **Author** - Ana Beyer, Cloud Engineer, Oracle
+* **Last Updated By/Date** - Ana Beyer, July 2022

@@ -1,6 +1,6 @@
 {
-    "workshoptitle": "Custom Authentication in APEX",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "workshoptitle": "Implement custom authentication in APEX",
+    "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
@@ -8,17 +8,22 @@
             "filename": "../../0-introduction/0-introduction.md"
         },
         {
-            "title": "Lab 1: Creating the Custom Authentication Scheme",
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common//labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Create a custom authentication scheme",
             "description": "Creating necessary database objects for custom authentication scheme",
             "filename": "../../1-create-custom-auth-scheme/1-create-custom-auth-scheme.md"
         },
         {
-            "title": "Lab 2: Allowing End Users to Create their Own Account",
+            "title": "Lab 2: Allow end users to create their own account",
             "description": "Creating form necessary for creating a new end user account",
             "filename": "../../2-allow-end-users-create/2-allow-end-users-create.md"
         },
         {
-            "title": "Lab 3: Implementing Additional Functionality",
+            "title": "Lab 3: Implement additional functionality",
             "description": "Implementing account activation and password resetting capabilities",
             "filename": "../../3-implement-additional-functionality/3-implement-additional-functionality.md"
         },
