@@ -24,12 +24,20 @@ In this lab, you will:
 
     ![](./images/new-app.png " ")
 
-## Task 2: Name the Application
+## Task 2: Add a Name and Icon to the Application
 
-1. In the Create Application wizard, for Name, enter **ACME Shop**.
+1. In the Create Application wizard, for Name, enter **ACME Shop** and click the application icon.
     
     ![](./images/name-app.png " ")
+
+2. Click **Upload your own icon** to select an icon or simply drag and drop the image. Download a sample icon [here](./images/shopping-cart.png).
+
+    ![](./images/upload-icon.png " ")
+
+3. Adjust the icon if needed and click **Save Icon**.
  
+    ![](./images/save-icon.png " ")
+    
 ## Task 3: Add the Dashboard Page
 
 A dashboard page is a great way to show important information using various charts. When you installed the Sample Dataset, it also created a number of views, which join data from various tables. These views are ideal as the basis for the dashboard charts.

@@ -26,7 +26,7 @@ In this lab, you will:
 ## Task 1: Create a Normal Page - Order Information
 Create a Normal Page to review the Order that customer has made.
 
-1. In the **App Builder**, click **Create Page**.
+1. In the **App Builder**, navigate to the *ACME Shop application* and click **Create Page**.
     ![](./images/create-page.png " ")
 2. Select **Blank Page** and click **Next**.
     ![](./images/blank-page.png " ")

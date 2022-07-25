@@ -44,11 +44,11 @@ Follow these steps for the four listed pages:
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and go to the next page. 
+4. Navigate to Page Finder and go to the next page.
     ![](./images/page-finder.png " ")
 
 ## Task 2: Clean the Navigation Menu
-Since the home page is the Products page and this is a public access page as some others too, it's not needed to have a navigation menu. 
+Since the home page is the Products page and this is a public access page as some others too, it's not needed to have a navigation menu.
 In this task, you will turn off displaying the navigation menu.
 
 1. Within Page Designer, click the Shared Components icon at the top right.
@@ -76,24 +76,26 @@ Add a new navigation menu entry to allow:
 2. Under Navigation, click **Navigation Bar List**.
     ![](./images/navigation-bar.png " ")
 
-3. Click **Desktop Navigation Bar**.
+3. Click **Navigation Bar**.
+  ![](./images/click-nav-bar.png " ")
 
 4. Click **Create Entry** and enter the following:
-![](./images/create-entry.png " ")
+  ![](./images/create-entry.png " ")
     - For Sequence - enter **1**
     - For Image/Class - **&SHOPPING\_CART\_ICON.**
     - For List Entry Label - **Shopping Cart**
     - For Page - select **17**
     - For Clear cache - enter **17**
-    
+    ![](./images/list-entry1.png " ")
 5. Scroll under **User Defined Attributes** and enter the following:
     - For 1. Badge Value - enter  **&SHOPPING\_CART\_ITEMS.**
     - For 2. List Item CSS Classes - enter **js-shopping-cart-item**
+    ![](./images/list-entry2.png " ")
 
 5. Click **Create List Entry**.
     ![](./images/create-entry2.png " ")
     
-6. Click **&APP_USER.** 
+6. Click **&APP_USER.**
     ![](./images/edit-app-user.png " ")
 
 7. Under Authorization, for Authorization Scheme, select **Administration Rights**.
@@ -109,11 +111,16 @@ Add a new navigation menu entry to allow:
     
 5. Click **Create List Entry**.
     ![](./images/new-entry.png " ")
+    
+6. Click **Run Page** and view the updated application.
+    ![](./images/final-app.png " ")
+    
 
 
 You now know how to enhance and maintain both navigation menu and navigation bar.
 
 ## Acknowledgments
 
-- **Author** - Monica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Contributors** - Monica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

@@ -48,8 +48,8 @@ In this lab, you will:
 
 ### Downloads
 
-- [Download the application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/shopping-cart-app.sql). To run the app, please run the steps described in Lab 1, 2, and 3.
-- [Download images for your application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/products-images.zip).
+- [Download the application](files/shopping-cart-app.sql). To run the app, please run the steps described in Lab 1, 2, and 3.
+- [Download the Application icon](./images/shopping-cart-01.png)
 
 ## Learn More - *Useful Links*
 
