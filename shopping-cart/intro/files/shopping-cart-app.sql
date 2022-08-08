@@ -28,18 +28,18 @@ prompt APPLICATION 15726 - ACME Shop
 -- Application Export:
 --   Application:     15726
 --   Name:            ACME Shop
---   Date and Time:   12:30 Monday July 25, 2022
+--   Date and Time:   14:14 Monday August 8, 2022
 --   Exported By:     LOWCODE
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                     26
---       Items:                   57
+--       Items:                   62
 --       Computations:             1
---       Validations:              1
---       Processes:               34
---       Regions:                 58
---       Buttons:                 51
---       Dynamic Actions:         20
+--       Validations:              4
+--       Processes:               36
+--       Regions:                 59
+--       Buttons:                 53
+--       Dynamic Actions:         21
 --     Shared Components:
 --       Logic:
 --         Items:                  2
@@ -70,7 +70,7 @@ prompt APPLICATION 15726 - ACME Shop
 --       Globalization:
 --       Reports:
 --       E-Mail:
---     Supporting Objects:  Included
+--     Supporting Objects:  Included (auto-install)
 --   Version:         22.1.3
 --   Instance ID:     63102946836549
 --
@@ -121,7 +121,7 @@ wwv_flow_imp.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'ACME Shop'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220725103812'
+,p_last_upd_yyyymmddhh24miss=>'20220808140754'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>10
 ,p_ui_type_name => null
@@ -18352,12 +18352,17 @@ wwv_flow_imp_page.create_page(
 ,p_alias=>'SHOPPING-CART'
 ,p_step_title=>'Shopping Cart'
 ,p_autocomplete_on_off=>'OFF'
+,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'img {',
+'    width: 150px;',
+'    height: 150px;',
+'}'))
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_is_public_y_n=>'Y'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'23'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220720132845'
+,p_last_upd_yyyymmddhh24miss=>'20220808140214'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12099055536742465917)
@@ -18424,6 +18429,256 @@ wwv_flow_imp_page.create_card_action(
 ,p_icon_css_classes=>'fa-cart-edit'
 ,p_is_hot=>false
 );
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(17708342208018976414)
+,p_plug_name=>'Order Information'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_imp.id(16313336579797561862)
+,p_plug_display_sequence=>20
+,p_include_in_reg_disp_sel_yn=>'Y'
+,p_plug_new_grid_row=>false
+,p_plug_query_options=>'DERIVED_REPORT_COLUMNS'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17708342985093976421)
+,p_button_sequence=>60
+,p_button_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_button_name=>'Clear'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
+,p_button_template_id=>wwv_flow_imp.id(16313537836630562051)
+,p_button_image_alt=>'Clear Shopping Cart'
+,p_button_position=>'CHANGE'
+,p_button_condition=>'SHOPPING_CART_ITEMS'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+,p_icon_css_classes=>'fa-cart-empty'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(17708342884709976420)
+,p_button_sequence=>60
+,p_button_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_button_name=>'Proceed'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(16313537714678562050)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Proceed to Checkout'
+,p_button_position=>'CREATE'
+,p_button_condition=>'SHOPPING_CART_ITEMS'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(17708343510259976427)
+,p_branch_name=>'Go to Orders'
+,p_branch_action=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:16:P16_ORDER:&P17_ORDER_ID.&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_when_button_id=>wwv_flow_imp.id(17708342884709976420)
+,p_branch_sequence=>10
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(17708343697962976428)
+,p_branch_name=>'Go to Products'
+,p_branch_action=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:1::&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_when_button_id=>wwv_flow_imp.id(17708342985093976421)
+,p_branch_sequence=>20
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17708342303622976415)
+,p_name=>'P17_CUSTOMER_EMAIL'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_prompt=>'Email Address'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(16313536884542562042)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17708342485584976416)
+,p_name=>'P17_CUSTOMER_FULLNAME'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_prompt=>'Full Name'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(16313536884542562042)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17708342549895976417)
+,p_name=>'P17_ORDER_ID'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17708342631592976418)
+,p_name=>'P17_CUSTOMER_ID'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(17708342728902976419)
+,p_name=>'P17_STORE'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(17708342208018976414)
+,p_prompt=>'Store'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select STORES.STORE_NAME as STORE_NAME,',
+'    STORES.STORE_ID as STORE_ID',
+'from STORES STORES'))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'-Select a Store-'
+,p_cHeight=>1
+,p_field_template=>wwv_flow_imp.id(16313536884542562042)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(17708343025945976422)
+,p_validation_name=>'Validate Name'
+,p_validation_sequence=>10
+,p_validation=>'P17_CUSTOMER_FULLNAME'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please enter your name'
+,p_when_button_pressed=>wwv_flow_imp.id(17708342884709976420)
+,p_associated_item=>wwv_flow_imp.id(17708342485584976416)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(17708343144020976423)
+,p_validation_name=>'Validate Email'
+,p_validation_sequence=>20
+,p_validation=>'P17_CUSTOMER_EMAIL'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please enter your email address'
+,p_when_button_pressed=>wwv_flow_imp.id(17708342884709976420)
+,p_associated_item=>wwv_flow_imp.id(17708342303622976415)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(17708343262237976424)
+,p_validation_name=>'Validate Store'
+,p_validation_sequence=>30
+,p_validation=>'P17_STORE'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please select a store'
+,p_when_button_pressed=>wwv_flow_imp.id(17708342884709976420)
+,p_associated_item=>wwv_flow_imp.id(17708342728902976419)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(17708343796560976429)
+,p_name=>'Update Shopping Cart Header'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(12099055536742465917)
+,p_triggering_condition_type=>'JAVASCRIPT_EXPRESSION'
+,p_triggering_expression=>'parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0'
+,p_bind_type=>'bind'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(17708343890365976430)
+,p_event_id=>wwv_flow_imp.id(17708343796560976429)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-empty'').addClass(''fa-cart-full'');'))
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(17708344044616976432)
+,p_event_id=>wwv_flow_imp.id(17708343796560976429)
+,p_event_result=>'FALSE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('''');',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-full'').addClass(''fa-cart-empty'');'))
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(17708343922101976431)
+,p_event_id=>wwv_flow_imp.id(17708343796560976429)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(12099055536742465917)
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(17708344177138976433)
+,p_event_id=>wwv_flow_imp.id(17708343796560976429)
+,p_event_result=>'FALSE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(12099055536742465917)
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(17708343315873976425)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Checkout'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    MANAGE_ORDERS.create_order (',
+'                                p_customer       => :P17_CUSTOMER_FULLNAME,',
+'                                p_customer_email => :P17_CUSTOMER_EMAIL,',
+'                                p_store          => :P17_STORE,',
+'                                p_order_id       => :P17_ORDER_ID,',
+'                                p_customer_id    => :P17_CUSTOMER_ID);   ',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(17708342884709976420)
+,p_process_success_message=>'Order successfully created: &P17_ORDER_ID.'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(17708343433965976426)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Clear Shopping Cart'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    manage_orders.clear_cart;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(17708342985093976421)
+);
 end;
 /
 prompt --application/pages/page_00018
@@ -18443,7 +18698,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'23'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220720132859'
+,p_last_upd_yyyymmddhh24miss=>'20220808140754'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12099057824389465940)
@@ -18495,7 +18750,6 @@ wwv_flow_imp_page.create_card(
 ,p_media_source_type=>'BLOB'
 ,p_media_blob_column_name=>'PRODUCT_IMAGE'
 ,p_media_display_position=>'FIRST'
-,p_media_appearance=>'SQUARE'
 ,p_media_sizing=>'FIT'
 ,p_pk1_column_name=>'PRODUCT_ID'
 );
@@ -20327,7 +20581,7 @@ end;
 /
 prompt --application/end_environment
 begin
-wwv_flow_imp.import_end(p_auto_install_sup_obj => nvl(wwv_flow_application_install.get_auto_install_sup_obj, false));
+wwv_flow_imp.import_end(p_auto_install_sup_obj => nvl(wwv_flow_application_install.get_auto_install_sup_obj, true));
 commit;
 end;
 /

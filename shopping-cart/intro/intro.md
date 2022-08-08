@@ -68,6 +68,5 @@ In this lab, you will:
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2022

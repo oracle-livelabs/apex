@@ -239,6 +239,5 @@ You now know how to create a package to manage the shopping cart. In the followi
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

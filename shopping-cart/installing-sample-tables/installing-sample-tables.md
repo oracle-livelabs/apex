@@ -55,6 +55,5 @@ This completes Lab 1. You now know how to install a sample dataset. You may now 
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager 
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

@@ -121,6 +121,5 @@ You now know how to enhance and maintain both navigation menu and navigation bar
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Monica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

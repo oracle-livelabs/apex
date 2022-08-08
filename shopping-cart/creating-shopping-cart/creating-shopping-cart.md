@@ -306,11 +306,11 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
         <copy>
         BEGIN
             MANAGE_ORDERS.create_order (
-                                        p_customer       => :P17_CUSTOMER_FULLNAME,
-                                        p_customer_email => :P17_CUSTOMER_EMAIL,
-                                        p_store          => :P17_STORE,
-                                        p_order_id       => :P17_ORDER_ID,
-                                        p_customer_id    => :P17_CUSTOMER_ID);   
+                                        p_customer       => :P16_CUSTOMER_FULLNAME,
+                                        p_customer_email => :P16_CUSTOMER_EMAIL,
+                                        p_store          => :P16_STORE,
+                                        p_order_id       => :P16_ORDER_ID,
+                                        p_customer_id    => :P16_CUSTOMER_ID);   
         END;                                    
         </copy>
         ```
@@ -481,6 +481,6 @@ You now know how to add validations, processes, branches, and dynamic actions to
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Shakeeb Rahman, Architect; Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
+- **Contributors** - Shakeeb Rahman, Architect
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

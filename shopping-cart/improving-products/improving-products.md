@@ -259,6 +259,6 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Shakeeb Rahman, Architect; Monica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
+- **Contributors** - Shakeeb Rahman, Architect
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

@@ -104,7 +104,7 @@ This region allows users to review the details of the product, such as brand, pr
         - For Source - select **BLOB Column**
         - For BLOB Column - select **PRODUCT_IMAGE**
         - For Position - select **First**
-        - For Appearance - select **Square**
+        - For Appearance - select **Auto**
         - For Sizing - select **Fit**
           ![](./images/attributes3.png " ")
     - Under Card section:
@@ -392,6 +392,6 @@ You now know how to customize and enhance an APEX page. You may now **proceed to
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Shakeeb Rahman, Architect; Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
+- **Contributors** - Shakeeb Rahman, Architect
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

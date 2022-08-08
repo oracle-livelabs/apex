@@ -236,6 +236,5 @@ You now know how to create an application with a number of different page types 
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributor** - Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
