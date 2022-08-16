@@ -28,7 +28,7 @@ prompt APPLICATION 15726 - ACME Shop
 -- Application Export:
 --   Application:     15726
 --   Name:            ACME Shop
---   Date and Time:   14:14 Monday August 8, 2022
+--   Date and Time:   10:38 Tuesday August 16, 2022
 --   Exported By:     LOWCODE
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -71,6 +71,7 @@ prompt APPLICATION 15726 - ACME Shop
 --       Reports:
 --       E-Mail:
 --     Supporting Objects:  Included (auto-install)
+--       Install scripts:          1
 --   Version:         22.1.3
 --   Instance ID:     63102946836549
 --
@@ -121,7 +122,7 @@ wwv_flow_imp.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'ACME Shop'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220808140754'
+,p_last_upd_yyyymmddhh24miss=>'20220816091524'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>10
 ,p_ui_type_name => null
@@ -18362,7 +18363,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'23'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220808140214'
+,p_last_upd_yyyymmddhh24miss=>'20220810053108'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12099055536742465917)
@@ -18698,7 +18699,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'23'
 ,p_last_updated_by=>'LOWCODE'
-,p_last_upd_yyyymmddhh24miss=>'20220808140754'
+,p_last_upd_yyyymmddhh24miss=>'20220816091524'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(12099057824389465940)
@@ -18822,7 +18823,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_plug_id=>wwv_flow_imp.id(12099058291417465944)
 ,p_button_name=>'Delete'
 ,p_button_action=>'SUBMIT'
-,p_button_template_options=>'#DEFAULT#:t-Button--danger:t-Button--link:t-Button--gapRight'
+,p_button_template_options=>'#DEFAULT#:t-Button--danger:t-Button--link'
 ,p_button_template_id=>wwv_flow_imp.id(16313537714678562050)
 ,p_button_image_alt=>'Remove from Cart'
 ,p_button_position=>'EDIT'
@@ -20566,7 +20567,27 @@ end;
 /
 prompt --application/deployment/definition
 begin
-null;
+wwv_flow_imp_shared.create_install(
+ p_id=>wwv_flow_imp.id(22148786530832713016)
+);
+end;
+/
+prompt --application/deployment/install/install_add_admin_role
+begin
+wwv_flow_imp_shared.create_install_script(
+ p_id=>wwv_flow_imp.id(22148942499426142118)
+,p_install_id=>wwv_flow_imp.id(22148786530832713016)
+,p_name=>'Add Admin Role'
+,p_sequence=>10
+,p_script_type=>'INSTALL'
+,p_script_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'begin',
+'    APEX_ACL.ADD_USER_ROLE (',
+'        p_application_id => apex_application.g_flow_id,          ',
+'        p_user_name      => apex_application.g_user ,',
+'        p_role_static_id => ''ADMINISTRATOR'' );',
+'end;'))
+);
 end;
 /
 prompt --application/deployment/checks

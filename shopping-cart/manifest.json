@@ -10,39 +10,39 @@
         "filename": "../common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Installing Sample Tables",
+        "title": "Lab 1: Install a Sample Dataset",
         "filename": "installing-sample-tables/installing-sample-tables.md"
       },
       {
-        "title": "Lab 2: Adding Columns to Products Table",
+        "title": "Lab 2: Add Columns to the Products Table",
           "filename": "adding-columns/adding-columns.md"
       },
       {
-        "title": "Lab 3: Creating Database Objects",
+        "title": "Lab 3: Create Database Objects",
         "filename": "creating-db-objects/creating-db-objects.md"
       },
       {
-        "title": "Lab 4: Creating the Application",
+        "title": "Lab 4: Create the Application",
         "filename": "create-app/create-app.md"
       },
       {
-        "title": "Lab 5: Creating the Order Page",
+        "title": "Lab 5: Create the Order Page",
         "filename": "creating-orders-page/creating-order-page.md"
       },
       {
-        "title": "Lab 6: Creating the Shopping Cart Page",
+        "title": "Lab 6: Create the Shopping Cart Page",
         "filename": "creating-shopping-cart/creating-shopping-cart.md"
       },
       {
-        "title": "Lab 7: Creating the Add to Cart Page",
+        "title": "Lab 7: Create the Add to Cart Page",
         "filename": "creating-add-to-cart-page/creating-add-to-cart-page.md"
       },
       {
-        "title": "Lab 8: Improving Products Page",
+        "title": "Lab 8: Improve the Products Page",
         "filename": "improving-products/improving-products.md"
       },
       {
-        "title": "Lab 9: Improving the App",
+        "title": "Lab 9: Improve the Application",
         "filename": "improving-app/improving-app.md"
       },
       {

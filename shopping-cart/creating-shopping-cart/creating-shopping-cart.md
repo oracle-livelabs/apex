@@ -241,7 +241,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
      ![](./images/create-button.png " ")  
 9. Create two buttons as follows:
 
-    | Button Name | Label  | Button Position | Button Template | Hot | Icon |
+    | Button Name | Label  | Position | Button Template | Hot | Icon |
     | --- |  --- | --- |
     | Proceed | Proceed to Checkout | Create | Text | On | |
     | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
