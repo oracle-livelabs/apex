@@ -9,9 +9,11 @@ In this lab, you will learn how to add these three new columns to the **PRODUCTS
 
 Estimated Time: 10 minutes
 
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:klrFD971TtI)
+-->
 
 ### Objectives
 In this lab, you will:
@@ -226,5 +228,5 @@ You now know how to add new columns to your existing tables, how to create looku
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager; 
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

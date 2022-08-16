@@ -6,9 +6,11 @@ In this lab, you build an application based on the data structures you built in 
 
 Estimated Time: 15 minutes
 
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:ssUKy-bZGUw)
+-->
 
 ### Objectives
 In this lab, you will:

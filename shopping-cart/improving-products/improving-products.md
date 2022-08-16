@@ -10,11 +10,11 @@ Once you have finished the workshop and updated all the products as described in
 *Please note that customer can quickly identify the products that already have been added to the shopping cart.*
 
 Estimated Time: 20 minutes
-
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:N3Kd2XuudG4)
-
+-->
 ### Objectives
 In this lab, you will:
 - Improve both Faceted Search and Cards region

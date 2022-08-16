@@ -14,11 +14,11 @@ Once you have finished the workshop and updated all the products as described in
 ![](./images/orders-page.png " ")
 
 Estimated Time: 15 minutes
-
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:qskWwkxJmcM)
-
+-->
 ### Objectives
 In this lab, you will:
 - Create a page to review the items that the customer recently bought.
@@ -191,5 +191,5 @@ You now know how to add a new page to your existing APEX Application and add reg
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager 
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

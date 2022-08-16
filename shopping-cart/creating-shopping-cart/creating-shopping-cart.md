@@ -16,10 +16,11 @@ Customers will be able to:
 
 Estimated Time: 20 minutes
 
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:Cvl9xMAqnm8)
-
+-->
 ### Objectives
 In this lab, you will:
 - Create a page to list the products in the Shopping Cart
