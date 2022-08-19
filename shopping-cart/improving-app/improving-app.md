@@ -5,11 +5,11 @@
 In this lab, you will learn how to make some pages publicly accessible.
 
 Estimated Time: 10 minutes
-
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:lwQ3lvul9iE)
-
+-->
 ### Objectives
 In this lab, you will:
 - Set the following pages as public pages:
@@ -40,29 +40,29 @@ Follow these steps for the four listed pages:
     - Under Security section:
         - For Authentication - select **Page Is Public**
 
-    ![](./images/public-page.png " ")
+    ![Property Editor](./images/public-page.png " ")
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and go to the next page. 
-    ![](./images/page-finder.png " ")
+4. Navigate to Page Finder and go to the next page.
+    ![Page Finder toolbar at the top](./images/page-finder.png " ")
 
 ## Task 2: Clean the Navigation Menu
-Since the home page is the Products page and this is a public access page as some others too, it's not needed to have a navigation menu. 
+Since the home page is the Products page and this is a public access page as some others too, it's not needed to have a navigation menu.
 In this task, you will turn off displaying the navigation menu.
 
 1. Within Page Designer, click the Shared Components icon at the top right.
 
-    ![](./images/shared-components.png " ")
+    ![Page Designer with the toolbar](./images/shared-components.png " ")
    Alternatively, if you are in the App Builder, click Shared Components.
-   ![](./images/shared-components2.png " ")
+   ![App Builder home page](./images/shared-components2.png " ")
 
 2. Under User Interface, click **User Interface Attributes**.
-    ![](./images/interface-attributes.png " ")
+    ![Shared Components page](./images/interface-attributes.png " ")
 3. Click **Navigation Menu**.
 
 4. Set Display Navigation to **Off**.
-    ![](./images/nav-menu.png " ")
+    ![User Interface Attributes page](./images/nav-menu.png " ")
 
 5. Click **Apply Changes**.
 
@@ -72,34 +72,36 @@ Add a new navigation menu entry to allow:
 - Administrators to login and access to administration page
 
 1. Click the Shared Components icon at the top right.
-    ![](./images/shared-components3.png " ")
+    ![Shared Components Page](./images/shared-components3.png " ")
 2. Under Navigation, click **Navigation Bar List**.
-    ![](./images/navigation-bar.png " ")
+    ![Shared Components Page](./images/navigation-bar.png " ")
 
-3. Click **Desktop Navigation Bar**.
+3. Click **Navigation Bar**.
+  ![Navigation Bar List](./images/click-nav-bar.png " ")
 
 4. Click **Create Entry** and enter the following:
-![](./images/create-entry.png " ")
+  ![Create Navigation entry details](./images/create-entry.png " ")
     - For Sequence - enter **1**
     - For Image/Class - **&SHOPPING\_CART\_ICON.**
     - For List Entry Label - **Shopping Cart**
     - For Page - select **17**
     - For Clear cache - enter **17**
-    
+    ![Create Navigation entry details](./images/list-entry1.png " ")
 5. Scroll under **User Defined Attributes** and enter the following:
     - For 1. Badge Value - enter  **&SHOPPING\_CART\_ITEMS.**
     - For 2. List Item CSS Classes - enter **js-shopping-cart-item**
+    ![Create Navigation entry details](./images/list-entry2.png " ")
 
 5. Click **Create List Entry**.
-    ![](./images/create-entry2.png " ")
+    ![Create Navigation entry details](./images/create-entry2.png " ")
     
-6. Click **&APP_USER.** 
-    ![](./images/edit-app-user.png " ")
+6. Click **&APP_USER.**
+    ![Navigation Bar List](./images/edit-app-user.png " ")
 
 7. Under Authorization, for Authorization Scheme, select **Administration Rights**.
 
 8. Click **Apply Changes**.
-    ![](./images/authorization.png " ")
+    ![Edit Navigation list entry](./images/authorization.png " ")
 
 4. Click **Create Entry**  and enter the following:
     - For Sequence - enter **5**
@@ -108,12 +110,16 @@ Add a new navigation menu entry to allow:
     - For Page - select **10000**
     
 5. Click **Create List Entry**.
-    ![](./images/new-entry.png " ")
+    ![Create a list enrty](./images/new-entry.png " ")
+    
+6. Click **Run Page** and view the updated application.
+    ![Run Page icon in the toolbar](./images/final-app.png " ")
+    
 
 
 You now know how to enhance and maintain both navigation menu and navigation bar.
 
 ## Acknowledgments
 
-- **Author** - Monica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

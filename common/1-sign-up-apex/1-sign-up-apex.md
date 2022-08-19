@@ -102,13 +102,17 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Create Workspace](images/welcome-create-workspace.png " ")
 
+10. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+
+  ![Choose type of schema](images/choose-schema.png " ")
+    
 10. In the Create Workspace dialog, enter the following:
 
-  | Property | Value |
-  | --- | --- |
-  | Database User | DEMO |
-  | Password | **`SecretPassw0rd`** |
-  | Workspace Name | DEMO |
+    | Property | Value |
+    | --- | --- |
+    | Workspace Name | DEMO |
+    | Workspace Username | DEMO |
+    | Workspace Password | **`SecretPassw0rd`** |
 
   Click **Create Workspace**.
 
@@ -190,13 +194,18 @@ In this part, you will create an Oracle APEX Application Development Service tri
   
       ![Create Workspace page](images/welcome-create-workspace.png " ")
   
+  11. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+  
+    ![Choose type of schema](images/choose-schema.png " ")
+    
   12. In the Create Workspace dialog, enter the following:
   
       | Property | Value |
       | --- | --- |
-      | Database User | DEMO |
-      | Password | **`SecretPassw0rd`** |
       | Workspace Name | DEMO |
+      | Workspace Username | DEMO |
+      | Workspace Password | **`SecretPassw0rd`** |
+      
   
       Click **Create Workspace**.
   
