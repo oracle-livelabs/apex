@@ -33,7 +33,7 @@ Note: You can also directly access your Autonomous Data Warehouse or Autonomous 
 
 6. Click **Create Autonomous Database**.
 
-  ![Region drop down list](images/Region.png " ")
+  ![Region drop down list](images/region.png " ")
 
 7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
 

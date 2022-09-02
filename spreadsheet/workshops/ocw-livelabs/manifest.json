@@ -33,7 +33,7 @@
       "title": "Lab 4: Add a Map Region and Install PWA",
       "filename": "../../5-using-maps-and-pwa/5-using-maps-and-pwa.md"
    },
-<<<<<<< Updated upstream
+
    {
      "title": "Lab 6: (OPTIONAL) Terminate Autonomous Database",
      "filename": "https://oracle-livelabs.github.io/common/labs/terminate-adb/terminate-adb.md"
@@ -46,12 +46,6 @@
     "title": "Oracle CloudWorld 2022 - Get Help",
     "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
 }
-=======
-    {
-      "title": "Need Help?",
-      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
-    }
->>>>>>> Stashed changes
+
   ]
 }
