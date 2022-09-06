@@ -12,8 +12,8 @@
       "filename": "../../0-workshop-intro-and-setup/0-workshop-intro-and-setup.md"
     },
     {
-            "title": "Sign Up for an APEX Workspace",
-            "filename": "../../../common/1-sign-up-apex/create-adb-livelabs.md"
+      "title": "Sign Up for an APEX Workspace",
+      "filename": "../../../common/1-sign-up-apex/create-adb-livelabs.md"
     },
     {
       "title": "Lab 1: Create an App from a Spreadsheet",
