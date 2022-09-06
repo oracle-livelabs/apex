@@ -60,7 +60,6 @@ to:
 
     ![Autonomous Database Details page](images/click-apex.png " ")
 
-    *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
 
 2. Enter the password for the Administration Services and click **Sign In to Administration**.     
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
