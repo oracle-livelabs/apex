@@ -125,26 +125,7 @@ In this lab, you will:
 
 3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
 
-4. Make a sample API request to get the details of a single movie using your new API Key:
-
-    - Go to the [TMDB Movie Details](https://developers.themoviedb.org/3/movies/get-movie-details) page.
-
-    - Click on the **Try it out** tab.
-
-    ![The Movie Database API get movie details page on the Try It Out tab](images/details-api-edit.png " ")
-
-    - Under **Variables**, click the box next to **api_key** and paste your API key.
-
-    - Under **Path Params**, click the box next to **movie_id** and type 505.
-
-    - Click the bright pink **Send Request** button.  
-      *Note: If the Send Request button does not work, copy the link next to the button, paste it in a new browser tab and hit enter/return.*
-
-    ![Close-up of the Movie Details parameters with the Send Request button outlined](images/details-request-edit.png " ")
-
-    - Now you can explore the data that gets returned when requesting the details for a single movie.  
-
-5. You can also go back to the **Definition** tab (next to Try it out) and scroll to the **Responses** section at bottom of the page to further explore the type of data that gets returned. Under Responses, Schema will show you the object fields and data types, while Example will give you example data without having to make a request like you did above.
+4. On the **Definition** tab towards the bottom of the page, you can further explore the type of data that gets returned. Under **Responses**, Schema will show you the object fields and data types, while **Example** will give you example data without having to make a request like you did above.
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 

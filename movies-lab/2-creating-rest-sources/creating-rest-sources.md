@@ -101,7 +101,8 @@ When you created the REST data sources from the REST Catalog, a new Web Credenti
 
     ![Workspace Utilities page with Web Credentials item highlighted](images/workspace-utilities.png " ")
 
-3. Click on **Credentials for Movie Cast**.
+3. Click on **Credentials for Movie Cast**.  
+*Note: The Web Credentials name may instead match one of the other REST Data Sources you set up in Task 2.*
 
 4. On the Web Credentials edit page, set the following:
 
