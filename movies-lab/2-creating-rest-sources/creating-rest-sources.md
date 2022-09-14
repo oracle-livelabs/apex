@@ -13,13 +13,13 @@ In this lab, you will:
 ### Prerequisites
 - Completion of workshop through Lab 1  
 - A TMDB API key  
-- The <a href="files/TMDB_Catalog.sql" download>TMDB REST Source Catalog</a>
+- The <a href="files/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
 
 
 ## Task 1: Import the REST Catalog
 You will use a REST Source Catalog that contains predefined services to create REST data sources. Using a REST Catalog will greatly simplify the process of creating REST sources to get data from TMDB API because all you will need to do is import the catalog, select the sources you want to use, and update the web credential associated with the sources.
 
-1. Download the TMDB REST Source Catalog by clicking <a href="files/TMDB_Catalog.sql" download>here</a>.
+1. Download the TMDB REST Source Catalog by clicking <a href="files/tmdb_catalog.sql" download>here</a>.
 
 2. In the App Builder tab in your browser, click **Export/Import** on the Movies Watchlist application home page.
 
@@ -31,7 +31,7 @@ You will use a REST Source Catalog that contains predefined services to create R
 
 4. On the Import page:
     
-    * Drag and drop the **TMDB_Catalog.sql** file you downloaded or click on the Drag and Drop region to open the file finder and select the catalog.
+    * Drag and drop the **tmdb_catalog.sql** file you downloaded or click on the Drag and Drop region to open the file finder and select the catalog.
 
     * Set File Type to **REST Source Catalog**.
 
