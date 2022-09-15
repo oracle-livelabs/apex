@@ -19,11 +19,11 @@
           "filename": "../../2-creating-rest-sources/creating-rest-sources.md"
       },
       {
-        "title": "Lab 3: Create the Movie Search Page",
+        "title": "Lab 3: Create the Search Page",
         "filename": "../../3-creating-search-page/creating-movie-search-page.md"
       },
       {
-        "title": "Lab 4: Create the Movie Details Page",
+        "title": "Lab 4: Create the Details Page",
         "filename": "../../4-creating-details-page/creating-movie-details-page.md"
       },
       {
@@ -39,16 +39,12 @@
         "filename": "../../7-implementing-watchlist-page/implementing-watchlist-page.md"
       },
       {
-        "title": "Lab 8: Improve the Movie Details Page",
-        "filename": "../../8-improving-details-page/improving-details-page.md"
+        "title": "Optional Lab: Add Cast List",
+        "filename": "../../8-adding-cast-list/adding-cast-list.md"
       },
       {
-        "title": "Optional Lab 9: Add Cast List",
-        "filename": "../../9-adding-cast-list/adding-cast-list.md"
-      },
-      {
-        "title": "Optional Lab 10: Improve the Watchlist Page",
-        "filename": "../../10-improving-app/improving-watchlist-page.md"
+        "title": "Optional Lab: Improve the UI",
+        "filename": "../../9-improving-app/improving-watchlist-page.md"
       },
       {
         "title": "Optional Lab 11: Terminate Autonomous Database",
