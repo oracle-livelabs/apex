@@ -47,11 +47,11 @@
         "filename": "../../9-improving-app/improving-watchlist-page.md"
       },
       {
-        "title": "Optional Lab 11: Terminate Autonomous Database",
+        "title": "Optional Lab: Terminate Autonomous Database",
         "filename": "https://oracle-livelabs.github.io/common/labs/terminate-adb/terminate-adb.md"
      },
      {
-       "title": "Optional Lab 12: Terminate APEX Service",
+       "title": "Optional Lab: Terminate APEX Service",
        "filename": "../../../common/terminate-apex-service/terminate-apex.md"
      },
       {
