@@ -15984,7 +15984,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_source=>'RUNTIME'
 ,p_source_type=>'FACET_COLUMN'
 ,p_display_as=>'NATIVE_RANGE'
-,p_lov=>'STATIC2:Over 2 hours;120|90,90 minutes to 2 hours;90|120,Less than 90 minutes;|90'
+,p_lov=>'STATIC2:Over 2 hours;120|,90 minutes to 2 hours;90|120,Less than 90 minutes;|90'
 ,p_item_template_options=>'#DEFAULT#'
 ,p_attribute_01=>'Y'
 ,p_attribute_02=>'N'
