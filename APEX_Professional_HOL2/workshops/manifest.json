@@ -1,0 +1,26 @@
+{
+  "workshoptitle": "Getting Started with Oracle APEX",
+    "tutorials": [
+      {
+        "title": "Lab 1: Installing Sample Tables",
+        "filename": "../1-installing-sample-tables/1-installing-sample-tables.md"
+      },
+      {
+        "title": "Lab 2: Adding Tables",
+        "filename": "../2-adding-columns/2-adding-columns.md"
+      },
+      {
+        "title": "Lab 3: Creating Database Objects",
+        "filename": "../3-creating-db-objects/3-creating-db-objects.md"
+      },
+      {
+        "title": "Lab 4: Creating Database Objects using Quick SQL",
+        "filename": "../4-creating-db-objects-quicksql/4-creating-db-objects-quickSQL.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}
