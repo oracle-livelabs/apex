@@ -1,26 +1,25 @@
 # Implement the Watchlist Page
 
 ## Introduction
-Now that you have implemented functionality to find movies and add them to a list, you can use page 1 to view that list, search it, and modify it. In this lab, you will be setting up the My Watchlist page to display each movie in the watchlist table and filter the list, which is the final piece of base functionality you will need to complete this app.
+Now that you have implemented functionality to find movies and add them to a table, you will set up the My Watchlist page to display each movie in that table, filter it, and modify it, which is the final piece of base functionality you will need to complete this app.
 
-Estimated Lab Time: 20 minutes
+Estimated Lab Time: 25 minutes
 
 ### Objectives
 In this lab, you will:  
 - Create cards to display watchlist movies.  
 - Connect the Movie Details page to open details directly from the Watchlist.  
-- Add search facets to filter through movies.  
-- Add a search bar to directly search for movies.
+- Add facets to filter through movies.  
 
 ### Prerequisites
 - Completion of workshop through Lab 6
 
 ## Task 1: Create the Watchlist Cards
-So far, you have only added a button in the Breadcrumb Bar region of page 1. You will start to flesh out the page by first adding a Cards region on the main page so that users can view their personal list of movies. It will be similar to the Cards regions on the Movie Search page, but these cards will be formatted a little differently and the source will not be a REST data source.
+So far, you have only added a button in the Breadcrumb Bar region of page 1. You will start to build out the page by first adding a Cards region so that users can view their personal list of movies. It will be similar to the Cards regions on the Movie Search page, but these cards will be formatted a little differently and the source will not be a REST data source.
 
-1. Navigate to page 1 of your Movies Watchlist application.
+1. Navigate to **page 1** of your Movies Watchlist application.
 
-2. Right click on Body in the rendering tree and select **Create Region**.
+2. Right click on the Body position in the rendering tree and select **Create Region**.
 
 3. Set the following properties for the new region:
 
@@ -60,7 +59,7 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
          where user_id = :USER_ID
         ```
 
-    ![](images/7-1-3-watchlist.png " ")
+    ![Page 1 open in Page Designer with the Watchlist region open in Property Editor](images/watchlist.png " ")
 
 4. Go to the Attributes tab of your new Watchlist region to customize your Watchlist cards.
 
@@ -70,7 +69,7 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
 
     * Title → Column: **TITLE**
 
-    ![](images/1-watchlist-attributes-top-edit.png " ")
+    ![Page 1 open in Page Designer with the Watchlist region attributes open in Property Editor](images/watchlist-attributes-1.png " ")
 
     * Body → Advanced Formatting: **on**
 
@@ -91,14 +90,12 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
 
     * Media → URL: **POSTER\_URL**
 
-    ![](images/1-watchlist-attributes-bottom-edit.png " ")
+    ![Page 1 open in Page Designer with the Watchlist region attributes open in Property Editor](images/watchlist-attributes-2.png " ")
 
 ## Task 2: Connect the Watchlist to the Movie Details Page
-In this step, you are going to connect the My Watchlist page to the Movie Details page to allow a user to view details for any movie on the list, as well as remove a movie from their list or mark a movie as "Watched" without having to go through the Movie Search.
+In this step, you are going to connect the My Watchlist page to the Movie Details page to allow a user to view details for any movie on the list, as well as remove a movie from their list or mark a movie as "Watched."
 
 1. In the rendering pane, right click on the Actions section underneath the Watchlist region and select **Create Action**.
-
-    ![](images/7-2-1-create-action.png " ")
 
 2. Set the following properties:
 
@@ -110,27 +107,23 @@ In this step, you are going to connect the My Watchlist page to the Movie Detail
 
         - Set Items:
 
-            + Name: **P3\_ID**
+            + Name: **P3\_ID** | Value: **&MOVIE\_ID.**
 
-            + Value: **&MOVIE\_ID.**
-
-            + Name: **P3\_PREVIOUS\_PAGE\_ID**
-
-            + Value: **1**
+            + Name: **P3\_PREVIOUS\_PAGE\_ID** | Value: **1**
 
         - Click **Ok**.
+
+        ![Link Builder Target dialog for Watchlist Full Card action open over Page 1 in Page Designer](images/watchlist-action.png " ")
     
 3. Save and run the page.
 
-    ![](images/7-2-3-full-card.png " ")
+    ![Watchlist Cards region on the My Watchlist page in the runtime application](images/watchlist-runtime.png " ")
 
 4. On the tab where the app is running, click on a movie in your watchlist. The Movie Details dialog will pop up with information about that specific movie. Note that you are able to remove a movie or mark it as watched, but you cannot add the movie because it is already in your list. Additionally, there is no back button because you are going to the Movie Details page from the Watchlist page (page 1) instead of the Movie Search page (page 2).  
 *Note: If you have not added any movies to your watch list, the page will say "No data found." Make sure to add movies to your watch list so that you can view them on the Watchlist page!*
 
-    ![](images/7-2-4-watchlist-page.png " ")
-
 ## Task 3: Add the Faceted Search
-The next step is allowing a user to filter through movies in their watchlist to make it easier for users to explore their movie list and find movies they could watch based on specific criteria. You'll do this by using a Faceted Search to create facets for columns we can filter the movie list with.
+The next step is allowing a user to filter through movies in their watchlist to make it easier to explore and find movies they could watch based on specific criteria. You'll do this by using a Faceted Search to create facets for columns we can filter the movie list with.
 
 1. In the Page Designer tab in your browser, right click on the Body region and select **Create Region**.
 
@@ -144,29 +137,27 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
     * Appearance → Template: **Blank with Attributes**
 
-    ![](images/7-3-2-faceted-search.png " ")
+    ![Page 1 open in Page Designer with the new Filter region open in Property Editor](images/faceted-search.png " ")
 
-3. If you look at the layout pane in the Page Designer, the faceted search Filter region is underneath the Watchlist region. That is not a very convenient place and it would be better if the faceted search was sitting on the left side of the Watchlist region so users have easy access. You can change the page template to open up new positions on the page that the Filter region can go in, one of which is the Left Column.
+3. If you look at the layout pane in the middle of Page Designer, the faceted search Filter region is underneath the Watchlist region and that is how it will appear in the runtime app. That is not a very convenient place and it would be better if the faceted search was sitting on the left side of the Watchlist region so users have easy access. You can change the page template to open up new positions on the page that the Filter region can go in, one of which is the Left Column.
 
 4. At the top of the the Rendering Pane, click on **Page 1: My Watchlist**.
 
-5. Scroll down to the **Appearance** property group.
+5. In the **Appearance** property group, set Page Template to **Left Side Column**. 
 
-    * Set Page Template to **Left Side Column**. 
-
-    ![](images/7-3-5-page-temp.png " ")
+    ![Page 1 open in Page Designer with Page open in Property Editor](images/page-template.png " ")
 
 6. Click on the Filter region and set:
 
     * Layout → Position: **Left Column**
 
-    ![](images/7-3-6-left-col.png " ")
+    ![Page 1 open in Page Designer with the Filter region open in Property Editor](images/filter-position.png " ")
 
 7. Notice that the facet **P1_SEARCH** was automatically created with the Faceted Search region.
 
     * Click on P1_SEARCH and set Source → Database Column(s) to **TITLE**
 
-    ![](images/7-3-7-search.png " ")
+    ![Page 1 open in Page Designer with the P1_SEARCH facet open in Property Editor](images/search-facet.png " ")
 
 8. Right click on the Facets section under the Filter region and select **Create Facet**.
 
@@ -188,15 +179,15 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
         - Click **Ok**.
 
-    ![](images/7-3-8-watched.png " ")
+    ![P1_WATCHED_YN Static Values dialog open over Page 1 in Page Designer](images/watched-facet.png " ")
 
-    * List Entries → Show Chart: **off**
-
-    * Advanced → Collapsible: **off**
+    * Actions Menu → Filter: **off**
+    
+    * Actions Menu → Chart: **off**
 
     * Oracle APEX auto-fills the Source based on the facet name.
 
-9. You are going to add three more facets to allow a user to filter by release decade, runtime, and rating, using the DECADE, RUNTIME, and VOTE\_AVERAGE columns. The DECADE column was created within the Watchlist Source SQL select statement as a simpler date column to filter movies by instead of RELEASE\_DATE.
+9. You are going to add two more facets to allow a user to filter by release decade and runtime using the DECADE and RUNTIME columns. The DECADE column was created within the Watchlist Source SQL select statement as a simpler date column to filter movies by instead of RELEASE\_DATE.
 
 10. Create a new facet within the Filter region and set the following properties:
 
@@ -206,14 +197,14 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
     * List Entries → Sort By Top Counts: **off**
 
-    * List Entries → Show Chart: **off**
-
-    * Advanced → Collapsible: **off**
+    * Actions Menu → Filter: **off**
+    
+    * Actions Menu → Chart: **off**
 
     * Source → Data Type: **Number**  
-	   *Note: Again, Source auto-filled based on the Name of the facet. However, the data type did not change, so you have to manually change it to match the type of data you are getting in the DECADE column.*
+	   *Note: Again, Source auto-filled based on the Name of the facet. However, the data type did not change, so you have to manually change it to match the type of data in the DECADE column.*
 
-    ![](images/decade-facet-settings-edit.png " ")
+    ![Page 1 open in Page Designer with the P1_DECADE facet region open in Property Editor](images/decade-facet.png " ")
 
 11. Create another new facet within the Filter region and set the following properties:
 
@@ -229,9 +220,7 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
         - Under Values:
 
-            + Display Value: **Over 3 hours**, Return Value: **180|**
-
-            + Display Value: **2 to 3 hours**, Return Value: **120|180**
+            + Display Value: **Over 2 hours**, Return Value: **120|**
 
             + Display Value: **90 minutes to 2 hours**, Return Value: **90|120**
 
@@ -242,56 +231,20 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
         - Click **Ok**.
 
-    ![](images/7-3-11-runtime.png " ")
+    ![P1_RUNTIME Static Values dialog open over Page 1 in Page Designer](images/runtime-facet.png " ")
 
-    * List Entries → Show Chart: **off**
+    * Actions Menu → Filter: **off**
 
-    * Advanced → Collapsible: **off**
-
+    * Actions Menu → Chart: **off**
+    
     * Source → Data Type: **Number**
 
-12. Create the final facet within the Filter region and set the following properties:
-
-    * Identification → Name: **P1\_VOTE\_AVERAGE**
-
-    * Identification → Type: **Range**
-
-    * Label: **Rating**
-
-    * Settings → Select Multiple: **on**
-
-    * List of Values → Type: **Static Values**
-
-    * Click on the box next to Static Values to manually set up the display values that you will use for this facet.
-
-        - Under Values:
-
-            + Display Value: **Excellent**, Return Value: **8|**
-
-            + Display Value: **Great**, Return Value: **6|8**
-
-            + Display Value: **Fine**, Return Value: **4|6**
-
-            + Display Value: **Bad**, Return Value: **|4**
-
-        - Sort → Sort at Runtime: **off** 
-
-        - Click **Ok**.
-
-    ![](images/7-3-12-rating.png " ")
-
-    * List Entries → Show Chart: **off**
-
-    * Advanced → Collapsible: **off**
-
-    * Source → Data Type: **Number**
+12. Click **Save**.
 
 ## Task 4: Add a Sort By Item
 In addition to the Faceted Search, it would be helpful for there to be a "Sort By" feature that allows users to reorder their list of movies a few different ways.
 
 1. Right click on the Watchlist region in the rendering pane and select **Create Page Item**.
-
-    ![](images/7-4-1-create-item.png " ")
 
 2. Set the following properties:
 
@@ -299,7 +252,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
     * Type: **Select List**
 
-    ![](images/7-4-2-sort-name.png " ")
+    ![Page 1 open in Page Designer with the P1_SORT_BY item open in Property Editor](images/sort-by.png " ")
 
     * List of Values → Type: **Static Values**
 
@@ -319,49 +272,33 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
     * Advanced → Warn on Unsaved Changes: **Ignore**
 
-    ![](images/7-4-2-sort-settings.png " ")
+    ![P1_SORT_BY Static Values dialog open on Page 1 in Page Designer](images/sort-values.png " ")
 
 3. At this point, the sort item has been created but is not connected to anything else on the page.
 
-4. To connect the P1\_SORT\_BY item, you will have to update the SQL query that is used for the Watchlist region source.
+4. You want the value of the Sort By page item to define what the Watchlist Cards region `order by` is, so you will use the Cards Order By properties to link the P1\_SORT\_BY item and use its value to order by the associated column.
 
 5. Click on the **Watchlist** region.
 
-    * In SQL, you can sort data using the `order by` keywords. This means that when the results from the SQL query are received, they are rearranged to be in order based on the given column in the watchlist table.
+    * Source → Order By Item:
 
-    * You want the value of the Sort By page item to define what order by is, so you will update the SQL command to check for the value of P1\_SORT\_BY, and then use that to order by the associated watchlist column.
+        - Item → Name: **P1\_SORT\_BY**
 
-    * Copy the below code and paste it on the next blank line in the **SQL Query** code editor under Source:  
+        - The Key and Display values auto-fill with the values set in the P1\_SORT\_BY item, but you will need to add the Order By clause for each.
 
-		```
-		<copy>
-		order by case when :P1_SORT_BY = 'TITLE'  then title else null end,
-		         case when :P1_SORT_BY = 'RECENT' then created else null end desc,
-		         case when :P1_SORT_BY = 'RATING' then vote_average else null end desc
-		```
-    * Source → Page Items to Submit: **P1\_SORT\_BY**
+        - Title Clause: **"TITLE" asc**
 
-    ![](images/7-4-5-watchlist-sort.png " ")
+        - Rating Clause: **"VOTE_AVERAGE" desc**
 
-6. The final step for P1\_SORT\_BY is to add a Dynamic Action that refreshes the Watchlist region.
+        - Recent Clause: **"CREATED" desc**
 
-7. In the rendering pane, right click on P1\_SORT\_BY and select **Create Dynamic Action**.
+        - Click **Ok**.
 
-    * Name: **Refresh Watchlist**
+    ![Watchlist region Order By Item dialog open on Page 1 in Page Designer](images/watchlist-order-by.png " ")
 
-8. Click on the **Show** action highlighted in red, underneath your new Refresh Watchlist Dynamic Action.
+6. Save and run the page to test out your app.
 
-    * Action: **Refresh**
-
-    * Selection Type: **Region**
-
-    * Region: **Watchlist**
-
-    ![](images/7-4-8-action.png " ")
-
-9. Save and run the page to test out your app.
-
-    ![](images/7-4-9-runtime-app.png " ")
+    ![My Watchlist page in the runtime application showing the Cards region, Faceted Search, and Sort By](images/watchlist-page-runtime.png " ")
 
 You now know how to filter data using a Faceted Search and sort data with a select list. You may now **proceed to the next lab**.
 
@@ -378,16 +315,32 @@ You now know how to filter data using a Faceted Search and sort data with a sele
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 7 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab7.sql) to download a copy of the app at the end of Lab 7.
+- [Click here](./files/lab-7.sql) to download a copy of the app at the end of Lab 7.
 
-- You can import Lab 7 to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- When the install wizard prompts you for Credentials, follow the instructions in the <a href="?lab=creating-movie-details-page#Stuck?DownloadtheApplicationHere" target="_blank">Stuck?</a> section of Lab 4 to update the API key for the Movie Details REST source.
+- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
+*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-- Follow the instructions in the <a href="?lab=creating-movie-search-page#Stuck?DownloadtheApplicationHere" target="_blank">Stuck?</a> section of Lab 3 to update the Popular and Search Movies API keys.
+    ![](images/blank-credentials.png " ")  
+
+- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+
+    - In the Client ID or Username column, enter **api\_key**.
+
+    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+
+    - In the Verify Client Secret/Password column, past your API key again.
+
+        ![](images/complete-credentials.png " ")
+
+- Click **Next**.
+
+- Make sure Install Supporting Objects is **on** and click **Next** again.
+
+- Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgments
 
 - **Author** - Paige Hanssen
-- **Additional Contributors** - Kay Jasanya, Shakeeb Rahman, Steve Muench, Monica Godoy, Eli Feuerstein, Carlos Maciel, Dalia Vazquez
-- **Last Updated By/Date** - Paige Hanssen, March 2022
+- **Last Updated By/Date** - Paige Hanssen, August 2022
