@@ -12,6 +12,9 @@ Watch the video below for a quick walk through of the lab.
 [](youtube:ssUKy-bZGUw)
 -->
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Application](videohub:1_4qg90epw)
+
 ### Objectives
 In this lab, you will:
 - Create an application using the tables and data that you already have installed.

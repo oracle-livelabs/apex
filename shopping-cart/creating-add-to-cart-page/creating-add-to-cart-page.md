@@ -20,6 +20,9 @@ Watch the video below for a quick walk through of the lab.
 [](youtube:8HoOOhY8omU)
 -->
 
+Watch the video below for a quick walk-through of the lab.
+[Create the add to cart page](videohub:1_3adj5cnf)
+
 ### Objectives
 In this lab, you will:
 - Create a page that allows users to add and edit products in the Shopping Cart

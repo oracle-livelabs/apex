@@ -7,6 +7,9 @@ If you review the **NYC Highschools Search** page, you can check and uncheck var
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Improve the Faceted Search](videohub:1_ph68ji7e)
+
 ## **Task 1**: Enhancing the Safe Facet
 Reviewing the facets, you will notice that **Safe** is down the page and you can choose multiple range values from a checkbox group.
 

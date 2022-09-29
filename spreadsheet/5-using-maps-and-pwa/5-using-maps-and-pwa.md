@@ -3,8 +3,10 @@
 ## Introduction
 In this lab, you learn to add a map region to the search page in order to visually enhance the page. The search page includes facets on the left which can readily be used to limit the data shown in the map on the right. Once the final application is built, you learn to download and use the application as a Progressive Web App (PWA).
 
-
 Estimated Time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Add a Map Region and Install PWA](videohub:1_i6brjyuv)
 
 ## **Task 1**: Creating a Copy of an Existing Page
 In order to implement the map, we will copy the existing **NYC Highschools Search** page and modify the new page to include the Map region.
