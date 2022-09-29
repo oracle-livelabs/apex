@@ -5,11 +5,16 @@
 In this lab, you will learn to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of customers, stores, products, and orders used to manage the shopping cart.
 
 Estimated Time: 5 minutes
+
 <!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:ynUk8q6S1qo)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Install a Sample Dataset](videohub:1_7r94t2rk)
+
 ### Objectives
 In this lab, you will:
 - Install a sample dataset into your Oracle APEX Workspace
