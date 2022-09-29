@@ -14,6 +14,8 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:klrFD971TtI)
 -->
+Watch the video below for a quick walk-through of the lab.
+[Add Columns to the Products Table](videohub:1_ozrqd1x1)
 
 ### Objectives
 In this lab, you will:

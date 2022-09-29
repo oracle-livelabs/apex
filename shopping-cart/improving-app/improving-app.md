@@ -10,6 +10,10 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:lwQ3lvul9iE)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Improve the application](videohub:1_g5q8c5n1)
+
 ### Objectives
 In this lab, you will:
 - Set the following pages as public pages:
