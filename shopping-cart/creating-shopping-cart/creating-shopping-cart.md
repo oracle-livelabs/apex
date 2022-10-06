@@ -21,6 +21,10 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:Cvl9xMAqnm8)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Create the shopping cart page](videohub:1_3n85gmue)
+
 ### Objectives
 In this lab, you will:
 - Create a page to list the products in the Shopping Cart

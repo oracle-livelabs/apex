@@ -19,6 +19,10 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:qskWwkxJmcM)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Create the Order Page](videohub:1_w9hncfg8)
+
 ### Objectives
 In this lab, you will:
 - Create a page to review the items that the customer recently bought.
