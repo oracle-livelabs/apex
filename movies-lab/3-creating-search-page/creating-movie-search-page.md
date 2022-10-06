@@ -313,7 +313,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 13. Delete "harry potter" from the search bar and press Enter (Return on Mac). The popular movies should reappear.
 
-14. In the Development Bar at the bottom of the page, click **Page 1** to return to editing Page 1 in Page Designer.
+14. In the Development Bar at the bottom of the page, click **Page 2** to return to editing Page 2 in Page Designer.
 
 	![Close-up of the developer toolbar at the bottom of the page at runtime of Movies Watchlist](images/dev-toolbar.png " ")
 
