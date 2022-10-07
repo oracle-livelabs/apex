@@ -15,6 +15,10 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:N3Kd2XuudG4)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Improve the products page](videohub:1_hjohajza)
+
 ### Objectives
 In this lab, you will:
 - Improve both Faceted Search and Cards region

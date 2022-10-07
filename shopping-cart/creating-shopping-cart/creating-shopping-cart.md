@@ -21,6 +21,10 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:Cvl9xMAqnm8)
 -->
+
+Watch the video below for a quick walk-through of the lab.
+[Create the shopping cart page](videohub:1_3n85gmue)
+
 ### Objectives
 In this lab, you will:
 - Create a page to list the products in the Shopping Cart
@@ -448,7 +452,7 @@ In this task, you will create a dynamic action to:
             </copy>
             ```
 
-14. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action. Right-click on **False** and select **Create FLASE Action**.
+14. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action. Right-click on **False** and select **Create FALSE Action**.
 
 15. In the Property Editor, enter the following:  
     - Under Identification section:
