@@ -5,6 +5,9 @@ In this lab, you will set up a new page that displays the details of a single mo
 
 Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Movie Details Page](videohub:1_0ri1dc4r)
+
 ### Objectives
 In this lab, you will:  
 - Create a new page, Movie Details.  
