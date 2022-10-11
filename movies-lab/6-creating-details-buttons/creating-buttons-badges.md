@@ -5,6 +5,9 @@ In the previous lab, you did the backend work to set up tables and application i
 
 Estimated Lab Time: 25 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Implement Buttons and Badges](videohub:1_otl3rw96)
+
 ### Objectives
 In this lab, you will:  
 - Implement an Add button that inserts a movie into the watchlist table.  

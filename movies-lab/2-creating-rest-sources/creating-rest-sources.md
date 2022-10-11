@@ -5,6 +5,9 @@ This lab will walk you through how to create REST Data Sources that you will use
 
 Estimated Lab Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create REST Data Sources](videohub:1_czyj8k85)
+
 ### Objectives
 In this lab, you will:  
 - Create REST data sources using a REST Catalog.  
