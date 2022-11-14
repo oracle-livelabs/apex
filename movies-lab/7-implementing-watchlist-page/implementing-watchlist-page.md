@@ -5,6 +5,9 @@ Now that you have implemented functionality to find movies and add them to a tab
 
 Estimated Lab Time: 25 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Implement the Watchlist Page](videohub:1_2xjo60jy)
+
 ### Objectives
 In this lab, you will:  
 - Create cards to display watchlist movies.  

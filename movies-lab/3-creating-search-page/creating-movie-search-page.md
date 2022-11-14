@@ -5,6 +5,9 @@ You will create and set up the Movie Search page so that you can view popular mo
 
 Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Movie Search Page](videohub:1_stfhi958)
+
 ### Objectives
 In this lab, you will:   
 - Create a new page.  
@@ -313,7 +316,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 13. Delete "harry potter" from the search bar and press Enter (Return on Mac). The popular movies should reappear.
 
-14. In the Development Bar at the bottom of the page, click **Page 1** to return to editing Page 1 in Page Designer.
+14. In the Development Bar at the bottom of the page, click **Page 2** to return to editing Page 2 in Page Designer.
 
 	![Close-up of the developer toolbar at the bottom of the page at runtime of Movies Watchlist](images/dev-toolbar.png " ")
 

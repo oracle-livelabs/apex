@@ -8,6 +8,9 @@ You will also need to sign up for an account on The Movie Database and obtain an
 
 Estimated Lab Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Application](videohub:1_w4o026xl)
+
 ### Objectives
 In this lab, you will:  
 - Create a new application.  
