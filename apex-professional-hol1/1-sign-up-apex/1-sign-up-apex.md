@@ -29,7 +29,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
     - Sign in to Oracle APEX. The Workspace home page appears.
     - Click the Help menu at the top of the page and select About. The About APEX page appears.
 
-  ![APEX Details](images/Version.png)
+  ![APEX Details](images/version.png)
 
 ### Where to Run the Lab
 
@@ -133,7 +133,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     From the Cloud Dashboard, select the **Navigation Menu** in the upper left
 
-    ![Navigation Menu](images/Navigation.png " ")
+    ![Navigation Menu](images/oci-navigation-menu.png " ")
 
     Select **Autonomous Transaction Processing**.
 
@@ -224,11 +224,11 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     Click the **Navigation Menu** in the upper left
 
-    ![Oracle Cloud Navigation Menu](images/Navigation.png " ")
+    ![Oracle Cloud Navigation Menu](images/navigation.png " ")
 
     Navigate to **Developer Services**, and select **APEX Instances**.
 
-    ![Oracle Cloud Developer Services](images/Navigate-to-Dev_services.png " ")
+    ![Oracle Cloud Developer Services](images/navigate-to-dev-services.png " ")
 
 4. Select a Compartment and Click **Create APEX Service**.
 

@@ -2,6 +2,10 @@
   "workshoptitle": "Getting Started with Oracle APEX",
     "tutorials": [
       {
+        "title": "Introduction",
+        "filename": "../../introduction.md"
+      },
+      {
         "title": "Lab 1: Provision an APEX Workspace",
         "filename": "../../1-sign-up-apex/1-sign-up-apex.md"
       },
