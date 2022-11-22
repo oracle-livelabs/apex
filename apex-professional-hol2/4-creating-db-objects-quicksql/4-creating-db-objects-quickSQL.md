@@ -100,7 +100,7 @@ In this step, you will learn how to create a table and Load data using the Data 
 
    ![Click choose file](images/choose-file-to-load1.png " ")
 
-4. Download [projects.csv](projects.csv) and select the file.
+4. Download [projects.csv](files/projects.csv) and select the file.
 
    ![Select file](images/select-appropriate-file1.png " ")
 
