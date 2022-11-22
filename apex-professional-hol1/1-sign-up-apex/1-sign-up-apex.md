@@ -57,6 +57,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
     ![Request a free workspace](images/request-workspace.png " ")
 
 4. On the Request a Workspace dialog, enter your Identification details – First Name, Last Name, Email, Workspace.
+
    *Note: For workspace, enter a unique name, such as first initial and last name.*
 
     Click **Next**.
