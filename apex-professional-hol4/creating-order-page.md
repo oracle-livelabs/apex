@@ -27,7 +27,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/Online-shopping-cart-1.sql) and import it into your workspace. To run the app, please run the steps described in **Hands-on-lab-01** and **Hands-on-Lab-02**.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/online-shopping-cart-1.sql) and import it into your workspace. To run the app, please run the steps described in **Hands-on-lab-01** and **Hands-on-Lab-02**.
 
 ## Task 1: Navigate and Review the Page Designer panes
 Open the home page in page designer, navigate through and review the page designer panes.
