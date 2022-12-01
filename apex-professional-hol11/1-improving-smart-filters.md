@@ -49,12 +49,12 @@ Filters map to specific database column. When creating a new filter, you can cre
     ![Create Filter](images/create-filter.png " ")
 
 2. Select the new filter and edit the following filter attributes in the Property Editor:
-  - Under **Identification**:
-    - For Name, Enter **P8\_TASK_NAME**.
-    - For Type,  Select **Checkbox Group**.
+    - Under **Identification**:
+      - For Name, Enter **P8\_TASK_NAME**.
+      - For Type,  Select **Checkbox Group**.
 
-  - Under **List of Values**:
-    - For Type, Select **Distinct Values**.
+    - Under **List of Values**:
+      - For Type, Select **Distinct Values**.
 
   ![Create Filter2](images/create-filter1.png " ")
 
