@@ -196,7 +196,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 14. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
-    ![APEX Sign In](images/loGin-to-workspace.png " ")
+    ![APEX Sign In](images/login-to-workspace.png " ")
 
 ## **Option 3**: Oracle APEX Application Development Service
 In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX.
