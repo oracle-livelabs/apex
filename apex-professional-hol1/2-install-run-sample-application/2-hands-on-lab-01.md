@@ -4,6 +4,8 @@
 
 In this lab, you will navigate through the major components of Oracle APEX. This lab also covers installing and running a sample application.
 
+Estimated Time: 10 minutes
+
 ### Objectives
 In this lab, you will:
 - Navigate through the major Components of Oracle APEX

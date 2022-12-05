@@ -4,7 +4,7 @@
 
 Memorizing the SQL to create and maintain database objects can be difficult. However, there are tools that can generate the code for you based on a shorthand syntax or a graphical user interface. In this lab, you will create database objects using Quick SQL and then view the objects in Database Actions. Then you will then use Data Workshop page to load data from a file into your workspace.
 
-Estimated Time: 45 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
