@@ -3,7 +3,7 @@
 ## Introduction
 
 In this lab, you customize:
-  - **Project Tasks** page we Created in Lab 2 of **[Creating an Application](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3526)** Workshop.
+  - **Project Tasks** page we Created in Lab 5.
   - **Interactive Grid** Page as a developer.
 
 <!--
@@ -26,7 +26,7 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects2.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/demo-projects2.sql) and import it into your workspace. To run the app, please run the steps described in **Hands-on-lab-01** and **Hands-on-Lab-02**.
 
 
 ## Task 1: Manage and Customize Interactive Grid as a Developer

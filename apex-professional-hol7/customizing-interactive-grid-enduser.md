@@ -3,7 +3,7 @@
 ## Introduction
 
 In this lab, you customize:
-  - **Project Tasks** page we Created in **Developing Reports** Workshop.
+  - **Project Tasks** page we Created in Lab 5.
   - **Interactive Grid** Page as an end user.
 
 <!--
