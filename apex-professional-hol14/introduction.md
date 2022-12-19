@@ -6,6 +6,8 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this lab, you use the Theme Roller to save a new Theme Style. Then, you enable end users to apply this style while running the application.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 * Using Theme roller to save a new Theme Style.

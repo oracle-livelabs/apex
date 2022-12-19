@@ -1,5 +1,5 @@
 <!--# Create the shopping cart page -->
-
+# Adding Cards and Faceted search page to the Shopping Cart application
 ## Introduction
 
 In this lab, you create:
@@ -19,6 +19,8 @@ Estimated Time: 20 minutes
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:Cvl9xMAqnm8)-->
+
+Estimated Time: 20 minutes
 
 ### Objectives
 In this lab, you will:

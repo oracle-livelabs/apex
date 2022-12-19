@@ -4,6 +4,8 @@
 
 Oracle APEX allows you to build robust, feature-rich applications against remote, web, and REST data sources. In this lab, you login to a remote database, create a database table and then **Register a schema with RESTful Services**. You will then create a **New Application** and then consume the **REST Data Source** we created. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronization**.
 
+Estimated Time: 20 minutes
+
 
 ## Task 1: Enable Remote Database schema to Oracle REST Data Services.
 

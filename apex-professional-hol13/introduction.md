@@ -6,6 +6,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this lab, you will learn how to make some pages publicly accessible.
 
+Estimated Time: 5 minutes
 
 ### Objectives
 

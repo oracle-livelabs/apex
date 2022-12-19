@@ -5,6 +5,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this Hands-on-lab, you will Manage and Customise the Interactive report in the **Sample Reports** application both as a **Developer** and as an **End-user**..
 
+Estimated Time: 5 minutes
 
 
 ### Objectives

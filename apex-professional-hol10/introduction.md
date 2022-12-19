@@ -10,6 +10,8 @@ This Hands-on Lab is a collection of Nine tasks. After completing this lab, your
 - Add, edit, or remove the product from the shopping cart
 - Read the customer reviews
 
+Estimated Time: 5 minutes
+
 
 ### Objectives
 

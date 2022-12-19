@@ -30,7 +30,7 @@ In this lab, you will:
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create applicati�on wizard the icon and color of the icon will be a random selecti�on so most likely will not be the same color or icon that they see in the screenshot.
+1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create application wizard the icon and color of the icon will be a random selecti�on so most likely will not be the same color or icon that they see in the screenshot.
 
     ![Name the application](./images/name-the-application1.png " ")
 

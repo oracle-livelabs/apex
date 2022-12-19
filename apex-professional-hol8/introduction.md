@@ -15,6 +15,8 @@ Customers will be able to:
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*
 
+Estimated Time: 5 minutes
+
 ## Learn More - *Useful Links*
 
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)

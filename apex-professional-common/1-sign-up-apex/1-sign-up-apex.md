@@ -67,6 +67,7 @@ Click one of the options below to proceed.
 Signing up for apex.oracle.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
 
 1. Go to [https://apex.oracle.com](https://apex.oracle.com.).
+
 2. Click **Get Started for Free**.
 
     ![Get started for free](images/getting-started.png " ")
@@ -75,46 +76,31 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     ![Request a free workspace](images/request-workspace.png " ")
 
-4. On the Request a Workspace dialog, enter your Identification details – First Name, Last Name, Email, Workspace.
+4. On the Request a Workspace dialog, enter your Identification details – First Name, Last Name, Email, Workspace Name, Your Location etc.,  
+    Now, Please accept **Terms** of **Oracle APEX Service Agreement** and then **Request Workspace**
 
    *Note: For workspace, enter a unique name, such as first initial and last name.*
 
-    Click **Next**.
+   ![Workspace Request](images/apex-signup.png " ")
 
-    ![Workspace Request](images/request-new-workspace.png " ")
+   ![Confirmation](images/apex-signup1.png " ")
 
-5. Complete the remaining wizard steps.
-
-  Fill the **Survey** and click **Next**
-
-  ![Survey](images/filling-survey.png " ")
-
-  Provide proper Justification under **Why are you requesting this service?**, and click **Next**.
-
-  ![Justification](images/request-justification.png " ")
-
-  Now, Please accept **Terms** of **Oracle APEX Service Agreement** and then **Submit Request**
-
-  ![Agreement](images/accepting-agreement.png " ")
-
-  ![Confirmation](images/submit-request2.png " ")
-
-6. Check your email. You should get an email from `oracle-application-express_ww@oracle.com` within a few minutes.  
+5. Check your email. You should get an email from `apexext-noreply@ociapp-notifications.oracle.com` within a few minutes.  
    *Note: If you don’t get an email go back to Step 3 and make sure to enter your email correctly.*
 
     Within the email body, click **Create Workspace**.
 
     ![Create Workspace](images/create-workspace3.png " ")
 
-7. Click **Continue to Sign In Screen**.
+6. Click **Continue to Sign In Screen**.
 
   ![Continue to Sign In screen](images/continue-to-sign-in.png " ")
 
-8. Enter your password, and click **Apply Changes**.
+7. Enter your password, and click **Apply Changes**.
 
   ![Change password](images/enter-password.png " ")
 
-9. On the APEX Workspace log in page, enter SecretPassw0rd for the password, check the Remember workspace and username checkbox, and then click Sign In.
+8. On the APEX Workspace log in page, enter SecretPassw0rd for the password, check the Remember workspace and username checkbox, and then click Sign In.
 
   ![Sign In](images/login-to-workspace1.png " ")  
 

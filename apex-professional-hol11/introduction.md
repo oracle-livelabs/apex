@@ -8,6 +8,7 @@ In this lab, you will gain an insight into the abilities of Smart Filters, and l
 
 Then, you will learn how to improve the Products page by adding new facets and customizing the cards.
 
+Estimated Time: 5 minutes
 
 ### Objectives
 
