@@ -5,6 +5,9 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this lab, you will create a database application based on existing tables. Then, You will create an application from a Spreadsheet.
 
+Estimated Time: 25 minutes
+
+
 ### Objectives
 
 * Create an application using the tables and data that you already have installed.

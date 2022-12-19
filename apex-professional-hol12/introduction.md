@@ -6,7 +6,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this lab, you will learn how to Create and Customize a **Form** and then you will link the form to an **Interactive Report**.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

@@ -4,7 +4,7 @@
 
 In this Lab, You will first create a Map Page with Store Details and then you will create an entry for Store Details Map in the navigation Menu Entry.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 
 ### Downloads

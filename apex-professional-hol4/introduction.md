@@ -12,7 +12,7 @@ Customers will find the following details of the order:
 - Total price
 - Quantity and price of the items.
 
-Estimated Time: 5 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 

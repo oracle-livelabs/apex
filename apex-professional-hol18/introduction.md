@@ -8,7 +8,7 @@ In this lab, you will add Calendars, Charts, Tree pages and Maps to Demo Project
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*
 
-Estimated Time: 5 minutes
+Estimated Time: 40 minutes
 
 
 ### Objectives

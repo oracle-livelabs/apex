@@ -6,7 +6,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this hands-on lab, you will login to New Remote APEX workspace, create a Table and then **Register Schema with ORDS**.
 
-Estimated Time: 5 minutes
+Estimated Time: 30 minutes
 
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*

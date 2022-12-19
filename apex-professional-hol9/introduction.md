@@ -11,7 +11,7 @@ This Hands-on Lab is a collection of six tasks. After completing this lab, your 
 - Clear the shopping cart
 - Proceed to checkout
 
-Estimated Time: 5 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
