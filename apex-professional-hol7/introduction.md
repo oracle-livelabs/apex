@@ -8,7 +8,7 @@ In this lab, you customize:
   - **Interactive Grid** Page as a Developer.
   - **Interactive Grid** Page as an End-user.
 
-
+Estimated Time: 40 minutes
 
 ### Objectives
 

@@ -1,4 +1,4 @@
-<!--# Create the shopping cart page -->
+# Adding Pages to the Demo Projects application
 
 ## Introduction
 
@@ -20,6 +20,9 @@ Watch the video below for a quick walk through of the lab.
 [](youtube:Cvl9xMAqnm8)
 
 -->
+Estimated Time: 20 minutes
+
+
 ### Objectives
 In this lab, you will:
 - Create Pages to Search and Edit the Projects and Tasks in **Demo Projects** Application.

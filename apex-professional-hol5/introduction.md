@@ -10,6 +10,7 @@ Then, In the **Online Shopping Cart Application**, you will create:
   - **Cards** pages to view **Product Details** and **Customer Reviews** in the online Shopping Cart Application.
   - **Faceted Search Page** to view **Products**.
 
+Estimated Time: 40 minutes
 
 ### Objectives
 

@@ -12,6 +12,8 @@ Watch the video below for a quick walk through of the lab.
 [](youtube:ynUk8q6S1qo)
 -->
 
+Estimated Time: 15 minutes
+
 ### Objectives
 In this lab, you will:
 - Install a sample dataset into your Oracle APEX Workspace

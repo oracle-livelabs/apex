@@ -8,6 +8,9 @@ Application security is very important for majority of the applications. You mus
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*
 
+Estimated Time: 20 minutes
+
+
 ### Objectives
 
 * Implement Social Sign-In in your application.

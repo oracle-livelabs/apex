@@ -9,6 +9,9 @@ Watch the video below for a quick walk through of the lab.
 
 [](youtube:lwQ3lvul9iE)
 -->
+
+Estimated Time: 15 minutes
+
 ### Objectives
 In this lab, you will:
 - Set the following pages as public pages:

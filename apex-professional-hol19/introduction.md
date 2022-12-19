@@ -10,6 +10,8 @@ In the second part of the lab, You will be using Remote Deployment to deploy you
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*
 
+Estimated Time: 20 minutes
+
 ### Objectives
 
 * Create Installation Scripts

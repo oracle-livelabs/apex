@@ -4,6 +4,8 @@
 
 In this Hands-on-lab, you will Manage and Customise the Interactive report in the **Sample Reports** application as a **Developer**.
 
+Estimated Time: 15 minutes
+
 
 ### Objectives
 
