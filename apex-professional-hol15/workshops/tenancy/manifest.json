@@ -1,18 +1,17 @@
 {
-  "workshoptitle": "Getting Started with Oracle APEX",
-  "help": "livelabs-help-db_us@oracle.com",
+  "workshoptitle": "Extending Application Capabilities",
     "tutorials": [
       {
         "title": "Introduction",
         "filename": "../../introduction.md"
       },
       {
-        "title": "Lab 1: Provision an APEX Workspace",
+        "title": "Get Started",
         "filename": "../../../apex-professional-common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 2: Install and Run a Sample Application",
-        "filename": "../../2-install-run-sample-application/2-hands-on-lab-01.md"
+        "title": "Lab : Working with Approvals component",
+        "filename": "../../approval-management.md"
       },
       {
         "title": "Need Help?",
