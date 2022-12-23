@@ -1,4 +1,4 @@
-# Managing REST data, Use Approvals and Unified Tasks Lists
+# Manage REST data, Use Approvals and Unified Tasks Lists
 
 ## Introduction
 

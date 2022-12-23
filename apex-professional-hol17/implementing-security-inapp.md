@@ -1,8 +1,11 @@
-# Implementing Security in your Application
+# Implement Security in your Application
 
 ## Introduction
 
-Application security is very important for majority of the applications. You must ensure that users enter valid credentials, generally username and password (Authentication), and the logged in user has appropriate rights within the application (Authorization).
+Application security is very important for the majority of applications. You must ensure that users enter valid credentials. Generally, username and password (Authentication) and the logged-in user has appropriate rights within the application (Authorization).
+
+
+Estimated Time: 20 minutes
 
 
 Estimated Time: 20 minutes
@@ -10,20 +13,20 @@ Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-9.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-9.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Implementing Social Sign In(Facebook) Authentication in Online Shopping Cart Application.
 
  In this hands-on lab, you create a Social Sign-in authentication scheme to enable Facebook Authentication. You test the authentication scheme.
 
- 1. Log in to Facebook’s developer [console](https://developers.facebook.com/).  Login to the Meta for Developers using your **Facebook Credentials** and then select **My Apps**.
+ 1. Log in to Facebook’s developer [console](https://developers.facebook.com/). Login to the Meta for Developers using your **Facebook Credentials** and then select **My Apps**.
 
   ![Click My Apps](images/click-myapps.png " ")
 
   *Note: If you are logging in to the Facebook developer console for the first time, you must follow the below process before navigating to My Apps*
   - *A new user must first click the Get Started link to Create a Facebook for Developers account.*
   - *This then brings you to a welcome screen that gives you the option to Continue. Click Continue.*
-  - *Review your email and agree or not, to the marketing related communication from Facebook.*
+  - *Review your email and agree or not to the marketing-related communication from Facebook.*
   - *Choose an option for who you are. Example, developer, product manager, etc.*
 
 2. Click **Create App**.
@@ -44,7 +47,7 @@ Estimated Time: 20 minutes
 
   ![Verify your account](images/verify-your-account1.png " ")
 
-6. Navigate to **Settings** and then select **Basic**. There, you can see the App ID and App Secret. Copy the **App ID** and **App secret** and paste in your Notepad, It will be used to create the **web credential** in your **APEX application** later.
+6. Navigate to **Settings** and then select **Basic**. There, you can see the App ID and App Secret. Copy the **App ID** and **App secret** and paste them into your Notepad. It will be used to create the **web credential** in your **APEX application** later.
 
   ![Copy credentials](images/copy-credentials.png " ")
 
@@ -127,7 +130,7 @@ Estimated Time: 20 minutes
 
   ![Click Administration](images/run-app2.png " ")
 
-23. Now, Login to the application using your **Facebook Credentials**.
+23. Now, log in to the application using your **Facebook Credentials**.
 
   ![Login into Facebook](images/fb-login1.png " ")
 

@@ -1,15 +1,18 @@
-# Adding additional pages to your Application
+# Add additional pages to your Application
 
 ## Introduction
 
-In this Lab, You will first create a Map Page with Store Details and then you will create an entry for Store Details Map in the navigation Menu Entry.
+In this Lab, You will first create a Map Page with Store Details, and then you will create an entry for the Store Details Map in the navigation Menu Entry.
+
+Estimated Time: 20 minutes
+
 
 Estimated Time: 20 minutes
 
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Creating a Store Details Map page and adding it to Desktop Navigation Bar.
 
@@ -52,14 +55,14 @@ Estimated Time: 20 minutes
 
   ![Click Create Page](images/create-map6.png " ")
 
-5. The Store Locations Map should be visible to the public. To set the page as Public, select **Page \<n\>: Store Locations Map** in the Rendering tree. In the Property Editor, navigate to **Security**, for **Authentication**, select **Page is Public**.
+5. The Store Locations Map should be visible to the Public. To set the page as Public, select **Page \<n\>: Store Locations Map** in the Rendering tree. In the Property Editor, navigate to **Security**, and for **Authentication**, select **Page is Public**.
     ![Edit Authentication as Public](images/make-page-public.png)
 
 6. Then, click **Save** and **Run Page**.
 
   ![Click Save and Run](images/create-map7.png " ")
 
-7. The **Store Details Map** Page is now displayed. Now, in the developer toolbar select **App < n >**.
+7. The **Store Details Map** Page is now displayed. Now, in the developer toolbar, select **App < n >**.
 
   ![Click on Application ID](images/run-map1.png " ")
 

@@ -1,4 +1,4 @@
-# Adding Validations and Processes to the Shopping Cart Page
+# Add Validations and Processes to the Shopping Cart Page
 
 ## Introduction
 

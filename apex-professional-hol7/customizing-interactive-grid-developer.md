@@ -1,4 +1,4 @@
-# Customizing Interactive Grid as a Developer
+# Customize Interactive Grid as a Developer
 <!--# Create the shopping cart page -->
 ## Introduction
 

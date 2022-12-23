@@ -1,5 +1,5 @@
 <!--# Create the shopping cart page -->
-# Adding Cards and Faceted search page to the Shopping Cart application
+# Add Cards and Faceted search page to the Shopping Cart application
 ## Introduction
 
 In this lab, you create:

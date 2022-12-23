@@ -1,4 +1,4 @@
-# Using Themes and Theme Styles
+# Use Themes and Theme Styles
 
 ## Introduction
 

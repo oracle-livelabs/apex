@@ -1,4 +1,4 @@
-# Customizing Interactive Report as a Developer
+# Customize Interactive Report as a Developer
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Adding additional pages to your Application
+# Add additional pages to your Application
 
 ## Introduction
 
@@ -9,7 +9,7 @@ Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects4.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects4.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Creating a Calendar
 
@@ -49,7 +49,7 @@ Estimated Time: 20 minutes
 
     ![Create Calender2](images/create-calendar-page4.png " ")
 
-6. Click **Save** and **Run Page**. Login to the application with your credentials.
+6. Click **Save** and **Run Page**. Log in to the application with your credentials.
 
 6. In the Developer Toolbar, click **Edit Page \<n\>**.
 
@@ -68,7 +68,7 @@ Estimated Time: 20 minutes
 
 ## Task 2: Creating a Form page on DEMO_PROJECTS Tables.
 
-In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the next labs you will link the form to the Calendar Page.
+In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the next labs, you will link the form to the Calendar Page.
 
 1. Navigate to **App Builder** and in the **Home Page**, click **Demo Projects**. application. Then, click **Create Page**.
 
@@ -123,13 +123,13 @@ In this lab, You will link the form page you created in Task 2 with the Calendar
 
   ![Add Link](images/customizing-calendar6.png " ")  
 
-6. You can enable calendar drag and drop by using the component attribute **Drag and Drop**. Your SQL query must select a primary key column and you must have set the Primary Key Column calendar attribute. Then enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs a SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events primary key value as well as the new start and new end timestamp.  
+6. You can enable calendar drag and drop by using the component attribute **Drag and Drop**. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs a SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events primary key value as well as the new start and new end timestamp.  
 
   Under **Settings**:
   - For **Drag and Drop**, Set it to **Yes**.
   - For **Drag and Drop PL/SQL Code**, Copy and paste the below code.
 
-  ```
+    ```
   <copy>
   begin
   update DEMO_PROJECTS
@@ -142,7 +142,7 @@ In this lab, You will link the form page you created in Task 2 with the Calendar
   </copy>
   ```
 
-  ![Enable drag nad drop](images/customizing-calendar5.png " ")  
+    ![Enable drag nad drop](images/customizing-calendar5.png " ")  
 
 7. Click **Save** and **Run Page**.
 Notice that you can now drag and drop tasks in the calendar. In the Developer Toolbar, click **Application< n >**.
@@ -166,7 +166,7 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
 
   ![Define Page](images/create-tree3.png " ")
 
-4. Now you create a **Tree region**. In the page designer, under Rendering, right-click **Body** and select **Create Region**.
+4. Now, you create a **Tree region**. In the page designer, under Rendering, right-click **Body** and select **Create Region**.
 
   ![Create Region](images/create-tree4.png " ")
 
