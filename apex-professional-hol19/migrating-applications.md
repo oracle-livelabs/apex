@@ -9,6 +9,9 @@ In the second part of the lab, You will be using Remote Deployment to deploy you
 Estimated Time: 20 minutes
 
 
+Estimated Time: 20 minutes
+
+
 ### Objectives
 
 In this lab, you will:

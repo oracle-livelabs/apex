@@ -14,6 +14,8 @@ In this lab, you will:
 - Creating an application and Integrating Application Data from REST Data Source
 - Synchronizing Data from REST Data Sources
 
+Estimated Time: 30 minutes
+
 
 *Note: This workshop assumes you are using Oracle APEX 22.2.*
 
