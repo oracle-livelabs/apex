@@ -1,4 +1,4 @@
-# Improving Smart Filters
+# Improve Smart Filters
 
 ## Introduction
 In this lab, you will gain an insight into the abilities of Smart Filters, and learn how to add **New Filters** and Edit existing Filters

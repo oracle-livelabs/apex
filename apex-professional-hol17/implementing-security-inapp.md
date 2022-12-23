@@ -1,4 +1,4 @@
-# Implementing Security in your Application
+# Implement Security in your Application
 
 ## Introduction
 

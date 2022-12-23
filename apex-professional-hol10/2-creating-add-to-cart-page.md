@@ -1,4 +1,4 @@
-# Adding Computations, Dynamic Actions and Processes.
+# Add Computations, Dynamic Actions and Processes.
 
 ## Introduction
 

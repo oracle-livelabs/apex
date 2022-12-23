@@ -1,4 +1,4 @@
-# Adding additional pages to your Application
+# Add additional pages to your Application
 
 ## Introduction
 

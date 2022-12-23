@@ -1,4 +1,4 @@
-# Adding Pages to the Demo Projects application
+# Add Pages to the Demo Projects application
 
 ## Introduction
 

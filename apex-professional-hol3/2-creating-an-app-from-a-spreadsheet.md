@@ -1,4 +1,4 @@
-# Creating an App from a Spreadsheet
+# Create an App from a Spreadsheet
 
 In this lab, you will learn how to create an APEX application using data imported from a spreadsheet.
 

@@ -1,4 +1,4 @@
-# Customizing Interactive Grid as an End-user
+# Customize Interactive Grid as an End-user
 <!--# Create the shopping cart page -->
 ## Introduction
 

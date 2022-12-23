@@ -1,4 +1,4 @@
-# Customizing Interactive Report as an End-user
+# Customize Interactive Report as an End-user
 
 ## Introduction
 

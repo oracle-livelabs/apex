@@ -1,4 +1,4 @@
-# Migrating Application Development Between Environments
+# Migrate Application Development Between Environments
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-#  Working with Multi-Level Approval Components
+#  Extend Application Capabilities
 
 ## Introduction
 
