@@ -3,6 +3,7 @@
 ## Introduction
 In this lab, you will learn how to Create and Customize a Form and then you will link the form to an Interactive Report
 
+Estimated Time: 20 minutes
 
 ### Downloads
 
