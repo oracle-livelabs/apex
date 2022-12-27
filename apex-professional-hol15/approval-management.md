@@ -25,6 +25,7 @@ In this lab, you will:
 - Learn how to set deadlines and expiration
 
 ## Task 1: Create the Application
+In this lab, you create a new application named Expense Tracker.
 
 1. If you have not already logged into your Oracle APEX workspace, sign in using the workspace name, email, and password you signed up with.
 
@@ -49,6 +50,7 @@ In this lab, you will:
   ![Select New Application ](images/create-application-expense-tracker.png " ")
 
 ## Task 2: Create a SQL Script
+In this lab, you create database objects using SQL Script.
 
 1. At the top of the application home page, click SQL Workshop and then SQL Scripts. The SQL Scripts page appears.
 
@@ -92,7 +94,7 @@ In this lab, you will:
   ```
   Remember that SQL*Plus commands are ignored at runtime.
 
-5. Click Run and Run Now. Now you can see that 6 SQL statements run successfully.
+5. Click Run and Run Now. Now you can see that SQL statements run successfully.
 
   ![Run SQL Script](./images/script.png " ")
 
@@ -101,7 +103,7 @@ In this lab, you will:
   ![SQL Script Created](./images/sql-script-created.png " ")
 
 ## Task 3: Add Users
-  Create users for multi-level approvers.
+   In this lab, you create users for multi-level management.
 
   1. Navigate to the Administration icon beside search and select **Manage Users and Group** from the dropdown list.
 
@@ -121,9 +123,7 @@ In this lab, you will:
 
     ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-    ![Click validate users](./images/create-valid_users.png " ")
-
-    Users Created.
+    ![Click validate users](./images/create_valid_users.png " ")
 
     ![Users created](./images/users-created.png " ")  
 
@@ -142,17 +142,16 @@ To create a task definition:
     ![Select Task Definition](images/task-definition.png " ")
 
 3. Click **Create**.
-   The Create Task Definition wizard appears.
 
    ![Create Task Definition](images/task-definition-create.png " ")
 
 4. Specify the task definition name and define the metadata.
 
-   - For Name - Type Expense Request.
+   - For Name - Enter Expense Request.
 
-   - For Subject - Type &EXPENSE_TYPE. Expense request for &EMP_NAME.
+   - For Subject - Enter &EXPENSE_TYPE. Expense request for &EMP_NAME.
 
-   - Static ID - EXPENSE_REQUEST
+   - For Static ID - Enter EXPENSE_REQUEST
 
    - For Priority - Select 2-High
 
@@ -171,10 +170,7 @@ To create a task definition:
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
     ```
 <copy>
-   select e.empno, e.emp_name, m.emp_name as mgr_name
-   from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
-   where m.empno(+)=e.mgr
-   and e.empno= :APEX$TASK_PK
+   select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
 </copy>
    ```
 
@@ -209,17 +205,11 @@ To create a task definition:
 
    Specify the following:
 
-    - For Name - Type CREATE_EXPENSE_REPORT_ENTRY
+    - For Name - Enter CREATE_EXPENSE_REPORT_ENTRY
 
     - For Type - Select Execute Code
 
-    - For Execution Sequence - 10
-
     - On Event - Select Create
-
-    - For location: Select Local Database
-
-    - For Language: Select PL/SQL
 
     - For Code: Copy the code below and paste it into  the code editor:
 
@@ -252,17 +242,13 @@ end;
 
     Specify the following:
 
-      - For Name - Type **NEXT_APPROVER_OR_UPDATE_STATUS**
+      - For Name - Enter NEXT_APPROVER_OR_UPDATE_STATUS
 
       - For Type - Select Execute Code
 
-      - For Execution Sequence - 20
-
       - On Event - Select Complete
 
-      - For location: Select Local Database
-
-      - For Language: Select PL/SQL
+      - For Outcome : Select Approved
 
       - For Code: Copy the code below and paste it into  the code editor:
 
@@ -273,7 +259,7 @@ end;
     l_task_id number;
     l_request_id number;
     l_req_status varchar2(10) :='PENDING';
-egin
+ Begin
 
     if :APP_USER = :MGR_NAME then --this is the first approver
        -- set the request id to be the id of the task created when the request was submitted
@@ -307,6 +293,8 @@ egin
         ),
         p_detail_pk => :APEX$TASK_PK
     );
+    end if;
+end;
     </copy>
     ```
   Click **Create** to add action.
@@ -321,19 +309,13 @@ egin
 
     Specify the following:
 
-       - For Name - Type UPDATE_REQUEST_STATUS
+       - For Name - Enter UPDATE_REQUEST_STATUS
 
        - For Type - Select Execute Code
 
-       - For Execution Sequence - 30
-
        - On Event - Select Complete
 
-       - Outcome  - Rejected
-
-       - For location: Select Local Database
-
-       - For Language: Select PL/SQL
+       - For Outcome  - Select Rejected
 
        - For Code: Copy the code below and paste it into  the code editor:
   ```
@@ -375,7 +357,7 @@ Add a page to Submit an Expense request.
 
     ![Click create on Application home apge](images/application-create-page.png " ")
 
-3. Select **Blank page** under component.
+3. Select **Blank page** under component and click **Next**
 
     ![Select blank page](images/application-blank-page.png " ")
 
@@ -385,7 +367,7 @@ Add a page to Submit an Expense request.
 
    - For Page Number - Type 3
 
-   - For Name        - Type Apply for Expense
+   - For Name        - Enter Apply for Expense
 
    - For Page Mode   - Select Normal   
 
@@ -413,13 +395,11 @@ Add a page to Submit an Expense request.
 
    Under **Identification** section:
 
-    - For Title: Type New Expense Request
+    - For Title: Enter New Expense Request
 
     - For Type: Select Form
 
   Under **Source** section:
-
-     - For Location: Select Local Database
 
      - For Type: Select SQL Query
 
@@ -434,47 +414,43 @@ Add a page to Submit an Expense request.
 ```    
 ![New Expense request region source](images/submit-expense-region-details.png " ")
 
-7. Now, right-click the region (**New Expense Request**) to contain the item and select Create Page Item.
+7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-  - Add below page items one by one.
+  - For Name - Enter P3_EXPENSE_TYPE
 
-   | Name |  Type  |
-   | --- |  --- |
-   | P13_EMPNO | Display Only |
-   | P13_EMP_NAME | Display Only |
-   | P13_MGR_NAME | Display Only |
-   | P3_EXPENSE_TYPE | Select List |
-   | P3_ESTIMATED_COST | Number Field |
+  - For Type - Select, Select List
 
- ![Add Page Item](images/submit-expense-page-item.png " ")
+  Under **List of Values** section:
 
-  - Select the **P3_EMPNO** page item and enable the primary key.
+   - For Type - Select values
+
+   - For Static Values - Enter below list:
+| Display Value |  Return Value  |
+| --- |  --- |
+| Internet/Broadband Charges | Internet/Broadband Charges |
+| Accommodation | Accommodation |
+| Conference | Conference |
+| Misc. Expenses | Misc. Expenses |
+
+   - List of Values: Display Null Value - Select On.
+
+   - For Null Display Value - Enter text ' --Select Expense Type--'
+
+   ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
+
+8. Right-click region (**New Expense Request**) and select Create Page Item.
+
+    - For Name - Enter P3_ESTIMATED_COST
+
+    - For Type - Select Number Field
+
+9. Select the **P3_EMPNO** page item and enable the primary key.
 
   ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
 
-    - For the **P3_EXPENSE_TYPE** page item - Select List
+    Click **Save** to apply changes.
 
-    Under **List of Values** section:
-
-     - For Type - Select values
-
-     - For Static Values :
-  | Display Value |  Return Value  |
-  | --- |  --- |
-  | Internet/Broadband Charges | Internet/Broadband Charges |
-  | Accommodation | Accommodation |
-  | Conference | Conference |
-  | Misc. Expenses | Misc. Expenses |
-
-     - List of Values: Display Null Value - Select On.
-
-     - For Null Display Value - Enter text ' --Select Expense Type--'
-
-  Click **Save** to apply changes.
-
-  ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
-
-8. On the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
+10. On the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
 
  ![Create rendering process1](images/submit-expense-process.png " ")
 
@@ -495,7 +471,7 @@ Add a page to Submit an Expense request.
   ```
   ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
-9. Add another process on the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
+11. Add another process on the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
 
   ![Create rendering process2](images/submit-expense-fetch.png " ")
 
@@ -508,7 +484,7 @@ Add a page to Submit an Expense request.
 
 Click **Save**.
 
-10. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
+12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
  ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
@@ -528,7 +504,7 @@ Click **Save**.
 
  ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
-11. Under Parameters for Submit Expense Report process:
+13. Under Parameters for Submit Expense Report process:
 
     1. For  Estimated Cost, enter the following:
 
@@ -560,9 +536,9 @@ Click **Save**.
 
      ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
-  12. Click **Save**
+  14. Click **Save**
 
-  13. On Rendering tab, Select Body. Right-click region and select **Create Button**.
+  15. On Rendering tab, Select Body. Right-click region and select **Create Button**.
 
  ![Create Button](images/submit-expense-create-button.png " ")
 
@@ -574,7 +550,7 @@ Click **Save**.
 
  ![Button details](images/submit-expense-button-details.png " ")
 
- 14. Navigate to Processing tab, Select Process **Submit Expense Report**.
+ 16. Navigate to Processing tab, Select Process **Submit Expense Report**.
 
      Under **Server-Side Condition** Section:
 
@@ -582,13 +558,13 @@ Click **Save**.
 
  ![Submit button](images/submit-expense-submit-button.png " ")
 
-15. Click **Save and Run**.
+17. Click **Save and Run**.
 
-16. Expense Tracker Application Login page appears, Enter username and password to login into an application.
+18. Expense Tracker Application Login page appears, Enter username and password to login into an application.
 
     ![Application Login Page](images/application-login-page.png " ")
 
-17. Apply for Expense form appears. Enter Expense type and estimated cost to apply for an expense and click Submit Request.
+19. Apply for Expense form appears. Enter Expense type and estimated cost to apply for an expense and click Submit Request.
 
     ![Apply for Expense](images/apply-for-expense.png " ")
 
