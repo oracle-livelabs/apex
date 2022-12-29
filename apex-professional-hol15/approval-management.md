@@ -164,6 +164,8 @@ To create a task definition:
 
 6. Under **Settings**
 
+    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
@@ -483,7 +485,7 @@ Add a page to Submit an Expense request.
 
      - For Sequence - Enter 5
 
-![Create rendering process2](images/submit-expense-fetch.png " ")
+  ![Create rendering process2](images/submit-expense-fetch.png " ")
 
 11. Click **Save**.
 
@@ -497,7 +499,7 @@ Add a page to Submit an Expense request.
 
    - For Type - Select Human Task - Create
 
-   Under **Settings** Section:
+  Under **Settings** Section:
 
    - For Definition - Select Expense request
 
@@ -509,45 +511,45 @@ Add a page to Submit an Expense request.
 
 13. Under Parameters for Submit Expense request process:
 
-    1. For  Estimated Cost, enter the following:
+    - For  Estimated Cost, enter the following:
 
       - For Type - Select ITEM
 
-     - For Value - Select Page item (P3_ESTIMATED_COST)
+      - For Value - Select **P3_ESTIMATED_COST**
 
     ![Process parameters1](images/submit-expense-report-cost.png " ")
 
-    2. For  Expense Status, enter the following:
+    -  For  Expense Status, enter the following:
 
      - For Type - Select Static Value
 
-     - For Value - Type PENDING
+     - For Value - Type **PENDING**
 
      ![Process parameters2](images/submit-expense-status.png " ")
 
-    3. For  Expense Type, enter the following:
+  - For  Expense Type, enter the following:
 
      - For Type - Select ITEM
 
-     - For Value - Select Page item (P3_EXPENSE_TYPE)
+     - For Value - Select **P3_EXPENSE_TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
-   4. For  Request ID, enter the following:
+ - For  Request ID, enter the following:
 
      - For Type - Select NULL
 
-     ![Process parameters4](images/submit-expense-report-reqid.png " ")
+ ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
   14. Click **Save**
 
-  15. On Rendering tab, Select Body. Right-click region and select **Create Button**.
+  15. On Rendering tab, Right-click Body and select **Create Button**.
 
  ![Create Button](images/submit-expense-create-button.png " ")
 
  In the Property Editor, enter the following:
 
-   - For Button Name - Type SUBMIT_REQUEST
+   - For Button Name - Type **SUBMIT_REQUEST**
 
    - For Hot - Select On
 
@@ -557,11 +559,11 @@ Add a page to Submit an Expense request.
 
      Under **Server-Side Condition** Section:
 
-        - For When Button Pressed : Select SUBMIT_REQUEST
+        - For When Button Pressed : Select **SUBMIT_REQUEST**        
 
  ![Submit button](images/submit-expense-submit-button.png " ")
 
-17. Click **Save**.
+ 17. Click **Save**.
 
 ## Task 6: Create Unified Task Lists
 Add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
