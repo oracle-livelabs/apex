@@ -47,7 +47,7 @@ In this lab, you create a new application named Expense Tracker.
 
 6. Click Create Application to create your app and go to the application home page.
 
-  ![Select New Application ](images/create-application-expense-tracker.png " ")
+    ![Select New Application ](images/create-application-expense-tracker.png " ")
 
 ## Task 2: Create a SQL Script
 In this lab, you create database objects using SQL Script.
@@ -58,14 +58,13 @@ In this lab, you create database objects using SQL Script.
 
 2. Click the Create Button. The Script Editor appears.
 
-  ![Create SQL Scripts](./images/create-sql-scripts.png " ")
+    ![Create SQL Scripts](./images/create-sql-scripts.png " ")
 
 3. In the Script Name, enter a name for the script - Employee details and Expense status.
 
 4. Enter the SQL statements.
 
-
-   Copy the code below and paste it into  the code editor:
+ Copy the code below and paste it into  the code editor:
   ```
   <copy>
   CREATE TABLE "EMPLOYEE_DETAILS"
@@ -120,7 +119,7 @@ In this lab, you create database objects using SQL Script.
 
      - For password and Confirm Password: Enter a password of your wish
 
-     Click **Next** and **Create Valid Users**
+  4. Click **Next** and **Create Valid Users**
 
     ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
@@ -148,18 +147,17 @@ To create a task definition:
 
 4. Specify the task definition name and define the metadata.
 
-   - For Name - Enter Expense Request.
+   - For Name - Enter **Expense Request**
 
    - For Subject - Enter &EXPENSE_TYPE. Expense request for &EMP_NAME.
 
-   - For Static ID - Enter EXPENSE_REQUEST
+   - For Static ID - Enter **EXPENSE_REQUEST**
 
    - For Priority - Select 2-High
 
    Leave Business Administrator and Potential owner blank for now.
 
 5. Click **Create**.
-   The Task Definition details page opens.
 
    ![Click Create on Task Definition page](images/task-definition-details.png " ")
 
@@ -180,11 +178,11 @@ To create a task definition:
 7. **Under Participants** - Select Participants to assign additional people to the Task Definition.
    - Click Add Row.
 
-   - Select Potential Owner as Participant Type
+   - For Participant Type - Select **Potential Owner**
 
-   - Set the Value Type - SQL Query
+   - For Value Type - Select **SQL Query**
 
-   - Set the Value - Copy the code below and paste it into  the code editor
+   - For Value - Copy the code below and paste it into  the code editor
    ```
    <copy>
      select emp_name from emp
@@ -196,7 +194,7 @@ To create a task definition:
 
   ![Task Definition Participants](images/task-definition-participants.png " ")
 
-8. Click on the task definition - Expense Request to continue editing.
+8. Click on the task definition - **Expense Request** to continue editing.
 
    ![Click on Expense Request  ](images/task-definition-created.png " ")
 
@@ -211,13 +209,13 @@ To create a task definition:
 
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
-9. Under **Actions**, Click **Add Action** button
+9. Under **Actions** Section, Click **Add Action** button
 
    ![Task Definition Actions-Create](images/task-definition-actions.png " ")
 
    Specify the following:
 
-    - For Name - Enter CREATE_EXPENSE_REPORT_ENTRY
+    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
     - For Type - Select Execute Code
 
@@ -244,7 +242,8 @@ begin
 end;
 </copy>
 ```
- Click **Create** to save Create Event Action.
+
+  - Click **Create** to save Create Event Action.
 
   ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
@@ -254,7 +253,7 @@ end;
 
     Specify the following:
 
-      - For Name - Enter NEXT_APPROVER_OR_UPDATE_STATUS
+      - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
       - For Type - Select Execute Code
 
@@ -321,7 +320,7 @@ end;
 
     Specify the following:
 
-       - For Name - Enter UPDATE_REQUEST_STATUS
+       - For Name - Enter **UPDATE_REQUEST_STATUS**
 
        - For Type - Select Execute Code
 
@@ -349,13 +348,14 @@ update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'|
 end;
 </copy>
 ```
- Click **Create** and **Apply Changes**
 
- ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
+  - Click **Create** and **Apply Changes**
 
- ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
+   ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
- ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
+   ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
+
+   ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
 
 ## Task 5: Create a Page to Apply for Expense
