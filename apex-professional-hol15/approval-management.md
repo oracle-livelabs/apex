@@ -120,7 +120,6 @@ In this lab, you create database objects using SQL Script.
      - For password and Confirm Password: Enter a password of your wish
 
   4. Click **Next** and **Create Valid Users**
-
     ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
     ![Click validate users](./images/create_valid_users.png " ")
