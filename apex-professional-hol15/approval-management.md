@@ -201,7 +201,7 @@ To create a task definition:
 
 9. Under **Actions**, Click **Add Action** button
 
-   ![Task Definition Actions - Create](images/task-definition-actions.png " ")
+   ![Task Definition Actions-Create](images/task-definition-actions.png " ")
 
    Specify the following:
 
