@@ -170,9 +170,9 @@ To create a task definition:
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
     ```
-<copy>
+    <copy>
    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-</copy>
+   </copy>
    ```
 
   ![Task Definition Settings](images/task-definition-settings.png " ")
@@ -185,14 +185,15 @@ To create a task definition:
    - For Value Type - Select **SQL Query**
 
    - For Value - Copy the code below and paste it into  the code editor
+
    ```
    <copy>
-     select emp_name from emp
-     where empno=(select mgr from emp_1
-     where empno=:APEX$TASK_PK)
-  </copy>
-  ```
+     select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+   </copy>
+   ```
+
   - Click **Apply Changes** to save all existing changes.
+
 
   ![Task Definition Participants](images/task-definition-participants.png " ")
 
