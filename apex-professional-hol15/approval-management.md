@@ -251,9 +251,7 @@ To create a task definition:
 10. To Add the next action, Click **Add Action** button.
 
    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
-
-    Specify the following:
-
+Specify the following:
       - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
       - For Type - Select Execute Code
@@ -264,7 +262,7 @@ To create a task definition:
 
       - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
+```
     <copy>
     declare
     l_mgr number;
@@ -305,7 +303,7 @@ To create a task definition:
     );
     end if;
 end;
-</copy>
+  </copy>
 ```
 
     - Click **Create** to add action.
