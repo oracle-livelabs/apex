@@ -409,14 +409,14 @@ Add a page to Submit an Expense request.
 
     - For SQL query: Copy the code below and paste it into  the code editor:
 
-```
+   ```
      <copy>
     Select e.empno, e.emp_name, m.emp_name as mgr_name
       from EMPLOYEE_DETAILS e , EMPLOYEE_DETAILS m
      where m.empno(+) = e.mgr
       and e.empno = :P3_EMPNO;
     </copy>
-```    
+   ```    
 ![New Expense request region source](images/submit-expense-region-details.png " ")
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
@@ -425,7 +425,7 @@ Add a page to Submit an Expense request.
 
    - For Type - Select, Select List
 
-  Under **List of Values** section:
+Under **List of Values** section:
 
    - For Type - Select Static values
 
@@ -451,8 +451,7 @@ Add a page to Submit an Expense request.
 9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section.
 
   ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
-
-    - Click **Save** to apply changes.
+- Click **Save** to apply changes.
 
 10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
@@ -521,9 +520,9 @@ In the Property Editor, enter the following:
 
   - For  Expense Type, enter the following:
 
-     - For Type - Select ITEM
+      - For Type - Select ITEM
 
-     - For Value - Select **P3_EXPENSE_TYPE**
+      - For Value - Select **P3_EXPENSE_TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
