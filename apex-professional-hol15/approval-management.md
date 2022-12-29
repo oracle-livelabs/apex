@@ -251,7 +251,9 @@ To create a task definition:
 10. To Add the next action, Click **Add Action** button.
 
    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
-Specify the following:
+
+    Specify the following:
+
       - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
       - For Type - Select Execute Code
@@ -303,29 +305,30 @@ Specify the following:
     );
     end if;
 end;
-  </copy>
+</copy>
 ```
 
-    - Click **Create** to add action.
+  Click **Create** to add action.
 
-     ![Task Definition - Approved](images/task-definition-approved-action.png " ")
+  ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-     ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
+  ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
 
 11. Again, Click  **Add Actions** button.
+   ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
- ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+   Specify the following:
 
-    Specify the following:
-       - For Name - Enter **UPDATE_REQUEST_STATUS**
+    - For Name - Enter **UPDATE_REQUEST_STATUS**
 
-       - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-       - On Event - Select Complete
+    - On Event - Select Complete
 
-       - For Outcome  - Select Rejected
+    - For Outcome  - Select Rejected
 
-       - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into  the code editor:
+    
   ```
   <copy>
   declare
