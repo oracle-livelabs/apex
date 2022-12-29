@@ -135,7 +135,7 @@ To create a task definition:
 
 1. In the App Builder, navigate to Expense Tracker and select shared components.
 
-  ![Task Definition in Shared Components](images/task-definition-sc.png " ")
+ ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
 2. Under Workflows and Automations, select Task Definitions.
 
@@ -162,7 +162,7 @@ To create a task definition:
    ![Click Create on Task Definition page](images/task-definition-details.png " ")
 
 
-6. Under **Settings**
+6. Under **Settings** Section:
 
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
 
@@ -177,7 +177,7 @@ To create a task definition:
 
   ![Task Definition Settings](images/task-definition-settings.png " ")
 
-7. **Under Participants** - Select Participants to assign additional people to the Task Definition.
+7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
    - Click Add Row.
 
    - For Participant Type - Select **Potential Owner**
@@ -192,16 +192,15 @@ To create a task definition:
    </copy>
    ```
 
-  - Click **Apply Changes** to save all existing changes.
+   - Click **Apply Changes** to save all existing changes.
 
-
-  ![Task Definition Participants](images/task-definition-participants.png " ")
+   ![Task Definition Participants](images/task-definition-participants.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
    ![Click on Expense Request  ](images/task-definition-created.png " ")
 
-9. **Under Parameters** - Select Add Row and fill in the 4 parameter fields listed below:
+9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
      | Static ID |  Label  | Data Type
      | --- |  --- | --- |
@@ -227,10 +226,10 @@ To create a task definition:
     - For Code: Copy the code below and paste it into  the code editor:
 
     ```
-<copy>
-declare
-l_req_id number;
-begin
+    <copy>
+         declare
+           l_req_id number;
+    begin
     if :APP_USER = :EMP_NAME then --this is the original initiator
         l_req_id := :APEX$TASK_ID;
         -- create a new record in the Employee Expense Request table EMP_EXPENSE_REQUEST
@@ -242,17 +241,16 @@ begin
         '',
        'PENDING');
     end if;
-end;
-</copy>
-```
-
-  - Click **Create** to save Create Event Action.
+    end;
+    </copy>
+    ```
+    - Click **Create** to save Create Event Action.
 
   ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
 10. To Add the next action, Click **Add Action** button.
 
-   ![Task Definition - Add Action](images/task-definition-create-action-Saved.png " ")
+   ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
 
@@ -266,7 +264,7 @@ end;
 
       - For Code: Copy the code below and paste it into  the code editor:
 
-    ```
+      ```
     <copy>
     declare
     l_mgr number;
@@ -274,7 +272,6 @@ end;
     l_request_id number;
     l_req_status varchar2(10) :='PENDING';
  Begin
-
     if :APP_USER = :MGR_NAME then --this is the first approver
        -- set the request id to be the id of the task created when the request was submitted
        l_request_id := :APEX$TASK_ID;
@@ -293,7 +290,6 @@ end;
         update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
          where req_id = l_request_id
            and emp_no=:APEX$TASK_PK;
-
   -- create a new task assigned to the manager of the current approver
         l_task_id := apex_approval.create_task(
             p_application_id => :APP_ID,
@@ -309,9 +305,10 @@ end;
     );
     end if;
 end;
-    </copy>
-    ```
-  Click **Create** to add action.
+</copy>
+```
+
+    - Click **Create** to add action.
 
      ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
@@ -322,7 +319,6 @@ end;
  ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
     Specify the following:
-
        - For Name - Enter **UPDATE_REQUEST_STATUS**
 
        - For Type - Select Execute Code
