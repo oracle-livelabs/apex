@@ -117,6 +117,8 @@ In this lab, you create database objects using SQL Script.
 
      - For a List of Email Addresses: Type MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com
 
+     - For Usernames : Select **Exclude @ domain as part of the username**
+
      - For password and Confirm Password: Enter a password of your wish
 
      Click **Next** and **Create Valid Users**
@@ -199,6 +201,17 @@ To create a task definition:
 
    ![Click on Expense Request  ](images/task-definition-created.png " ")
 
+9. **Under Parameters** - Select Add Row and fill in the 4 parameter fields listed below:
+
+     | Static ID |  Label  | Data Type
+     | --- |  --- | --- |
+     | ESTIMATED_COST | Estimated Cost | String |
+     | EXPENSE_STATUS | Expense Status | String |
+     | EXPENSE_TYPE | Expense Type | String |
+     | EXPENSE_TYPE | Req Id | String |
+
+     ![Task Definition Parameters](images/task-definition-parameters.png " ")
+
 9. Under **Actions**, Click **Add Action** button
 
    ![Task Definition Actions-Create](images/task-definition-actions.png " ")
@@ -236,7 +249,7 @@ end;
 
   ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-10. To Add the next action, Click **Add Action** again.
+10. To Add the next action, Click **Add Action** button.
 
    ![Task Definition - Add Action](images/task-definition-create-action-Saved.png " ")
 
@@ -422,17 +435,15 @@ Add a page to Submit an Expense request.
 
   Under **List of Values** section:
 
-   - For Type - Select values
+   - For Type - Select Static values
 
-   - For Static Values - Enter below list:
+   - For Static Values - Enter below list and click OK
 | Display Value |  Return Value  |
 | --- |  --- |
 | Internet/Broadband Charges | Internet/Broadband Charges |
 | Accommodation | Accommodation |
 | Conference | Conference |
 | Misc. Expenses | Misc. Expenses |
-
-   - List of Values: Display Null Value - Select On.
 
    - For Null Display Value - Enter text ' --Select Expense Type--'
 
@@ -450,7 +461,7 @@ Add a page to Submit an Expense request.
 
     Click **Save** to apply changes.
 
-10. On the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
+10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
  ![Create rendering process1](images/submit-expense-process.png " ")
 
@@ -471,18 +482,11 @@ Add a page to Submit an Expense request.
   ```
   ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
-11. Add another process on the Rendering tab (left pane). Right-click **Before Header** and click **Create Process**.
+     - For Sequence - Enter 5
 
-  ![Create rendering process2](images/submit-expense-fetch.png " ")
+![Create rendering process2](images/submit-expense-fetch.png " ")
 
-  In the Property Editor, enter the following:
-    - For Name - Type Initialize form Apply for Expense
-
-    - For Type - Form Initialization
-
-    - For Form Region - Select New Expense Request
-
-Click **Save**.
+11. Click **Save**.
 
 12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
@@ -504,7 +508,7 @@ Click **Save**.
 
  ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
-13. Under Parameters for Submit Expense Report process:
+13. Under Parameters for Submit Expense request process:
 
     1. For  Estimated Cost, enter the following:
 
@@ -550,7 +554,7 @@ Click **Save**.
 
  ![Button details](images/submit-expense-button-details.png " ")
 
- 16. Navigate to Processing tab, Select Process **Submit Expense Report**.
+ 16. Navigate to Processing tab, Select Process **Submit Expense Request**.
 
      Under **Server-Side Condition** Section:
 
@@ -558,17 +562,7 @@ Click **Save**.
 
  ![Submit button](images/submit-expense-submit-button.png " ")
 
-17. Click **Save and Run**.
-
-18. Expense Tracker Application Login page appears, Enter username and password to login into an application.
-
-    ![Application Login Page](images/application-login-page.png " ")
-
-19. Apply for Expense form appears. Enter Expense type and estimated cost to apply for an expense and click Submit Request.
-
-    ![Apply for Expense](images/apply-for-expense.png " ")
-
-    ![Submit Expense](images/submit-expense.png " ")
+17. Click **Save**.
 
 ## Task 6: Create Unified Task Lists
 Add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
@@ -621,12 +615,6 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
    ![Click create page ](./images/utl-my-requests.png " ")
 
-9. Click **Save and Run** page to view expense requests initiated by the requestor.
-
-  ![My Expense Requests ](./images/my-expense-request.png " ")
-
-  ![Expense Request Details ](./images/my-expense-details.png " ")
-
 
 ## Task 7: Create an Email Template  
 Add an Email Template to add for before expiry action in the task definition.
@@ -651,7 +639,7 @@ To define an email template:
    ![click Create Email Template](./images/email-template-create-button.png " ")
 
 4. Under **Identification**:
-   - For Template Name - Enter BEFORE_EXPENSE_EXPIRY_EMAIL.
+   - For Template Name - Enter BEFORE EXPENSE EXPIRY EMAIL.
 
    - For Email Subject - Enter the Text
       ```
@@ -689,13 +677,11 @@ To define an email template:
   ```
   - (Optional) Comments - Enter comments that describe this template.  
 
-  ![Enter email template details1](./images/email-details.png " ")
+  ![Create Email Template](./images/email-click-create.png " ")
 
   ![Enter email template details1](./images/email-details2.png " ")
 
 7. Click Create Email Template.
-
-   ![Create Email Template](./images/email-click-create.png " ")
 
 ## Task 8: Updating Table Employee Details
 
@@ -720,19 +706,21 @@ To define an email template:
   </copy>
   ```  
 
+  ![SQL Commands](./images/sql-commands.png " ")
+
   NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
 
 ## Task 9: Updating Expense Request Task Definition
 We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
 
-1. Now, In the Expense Tracker Application, go to the Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
+1. Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
 
  ![Edit Expense Request](./images/edit-td.png " ")
 
  ![Click Task definition - Expense request](./images/edit-td-name.png " ")
-2. Edit an Action - NEXT_APPROVER_OR_UPDATE_STATUS under the Action section of the Expense request task definition.
+2. Under **Actions** - Edit NEXT_APPROVER_OR_UPDATE_STATUS
 
- Replace the **code** with the below commands
+ Copy the code below and  replace it into the code editor:
 
  ```
 <copy>
@@ -776,23 +764,26 @@ else -- the request needs to go through another level of Approval
     ),
     p_detail_pk => :APEX$TASK_PK
 );
+end if;
+end;
 </copy>
 ```
 Click **Apply Changes**
 
-3. We can now further update the Participants section in the Expense Request Task Definition in the Edit Task Definition screen that opens.
+3. **Under Participants** - Click Add Row
 
- Click on Add Row in the Participants section.
+    - For Participant Type - Select Potential Owner
 
- ![Add participant](./images/td-participants-add-row.png " ")
+    - For Value Type - Select SQL Query
 
- Select Participant Type as Potential Owner and Value Type as SQL Query. In the Value field, add the following SQL query.
+    - For Value -  Copy the code below and  paste it into the code editor:
+
 ```
  <copy>
    select HR_MGR from EMPLOYEE_DETAILS where EMPNO = :APEX$TASK_PK
  </copy>
    ```
-APEX$TASK_PK is a substitution string that holds the value of the primary key of the system of records to which the task is tied. In this case, it will hold the employee number of the employee for whom this expense request task is being submitted.   
+![Add participant](./images/td-participants-add-row.png " ")  
 
  ![Participant value](./images/td-participants-value.png " ")
 
@@ -869,8 +860,8 @@ Click **Create** to add action.
 ## Task 10: Add Deadline and Expiration for an Expense Request
 Add deadline and expiration events in actions for expense requests.
 
-1. Select the Expense Request Task definition and set the deadline for the expense requests  
-Under **Deadline** Section:
+1. Under **Deadline** Section:
+
  - For Due on type - Select interval
 
  - For Due on the interval - Type PT30M
@@ -883,29 +874,31 @@ Under **Deadline** Section:
 
  ![Enter Deadline details](./images/td-deadline.png " ")
 
-2. Under the **Actions** Section, click **Add Actions** to send an email to the approver before the expiration of a task.  
+2. Select **Expense Request**
 
-  For Name - Enter **BEFORE_EXPIRY**
+   Under the **Actions** Section - click **Add Actions**
 
-  - For Type - Select Send Email
+   Specify the following attributes:
 
-  - For Execution Sequence - 60
+     - For Name - Enter **BEFORE_EXPIRY**
 
-  - On Event - Select **Before Expire**
+     - For Type - Select Send Email
 
-  - For Before Expire Interval - Enter 'PT25M'
+     - On Event - Select **Before Expire**
 
-  - For Success Message - Enter 'Task will expire in 5 minutes
+     - For Before Expire Interval - Enter **PT25M**
 
-  - For location: Select Local Database
+     - For Success Message - Enter **Task will expire in 5 minutes**
 
   Under **Send Email Settings** Section:
 
-  - For From: Enter the Email address of your wish
+     - For From - Enter the Email address of your wish
 
-  - For To: Enter the Email address of your wish
+     - For To - Enter the Email address of your wish
 
-  - For Email Template: Select BEFORE_EXPENSE_EXPIRY_EMAIL
+     - For Email Template - Select **BEFORE EXPENSE EXPIRY EMAIL**
+
+     - For Subject - Enter
 
   ![Add Action - Before Expire](./images/td-6-action.png " ")
 
@@ -959,7 +952,7 @@ Click **Create** to add action.
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
-  Note: To expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
+  Note: In order to expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
 
   ```
 <copy>
