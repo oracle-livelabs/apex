@@ -213,6 +213,7 @@ To create a task definition:
 
 10. Under **Actions** Section, Click **Add Action** button
 ![Task Definition Actions-Create](images/task-definition-actions.png " ")
+
 Specify the following:
  - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
@@ -371,7 +372,7 @@ Add a page to Submit an Expense request.
 
    - For Page Number - Type 3
 
-   - For Name        - Enter Apply for Expense
+   - For Name        - Enter **Apply for Expense**
 
    - For Page Mode   - Select Normal   
 
@@ -383,15 +384,15 @@ Add a page to Submit an Expense request.
 
    - For Use Navigation - Select On
 
-   - For Navigation Preference - Select Create a new Entry
+   - For Navigation Preference - Select **Create a new Entry**
 
-   - For Icon  - Enter 'fa-file-o'
+   - For Icon  - Enter **fa-file-o**
 
    Click **Create Page**.
 
  ![Blank page definition](images/application-blank-page-details.png " ")
 
-5. Now, In the left pane, select the Rendering tab. Right-click an existing container to display the context menu. From the context menu, select **Create Region**.
+5. In the left pane, select the Rendering tab. Right-click **Body** , select **Create Region**.
 
  ![Create create to apply an expense](images/submit-expense-region.png " ")
 
@@ -404,10 +405,10 @@ Add a page to Submit an Expense request.
     - For Type: Select Form
 
   Under **Source** section:
+    - For Type: Select SQL Query
 
-     - For Type: Select SQL Query
+    - For SQL query: Copy the code below and paste it into  the code editor:
 
-     - For SQL query: Copy the code below and paste it into  the code editor:
 ```
      <copy>
     Select e.empno, e.emp_name, m.emp_name as mgr_name
@@ -420,15 +421,16 @@ Add a page to Submit an Expense request.
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-  - For Name - Enter P3_EXPENSE_TYPE
+   - For Name - Enter P3_EXPENSE_TYPE
 
-  - For Type - Select, Select List
+   - For Type - Select, Select List
 
   Under **List of Values** section:
 
    - For Type - Select Static values
 
    - For Static Values - Enter below list and click OK
+
 | Display Value |  Return Value  |
 | --- |  --- |
 | Internet/Broadband Charges | Internet/Broadband Charges |
@@ -436,33 +438,32 @@ Add a page to Submit an Expense request.
 | Conference | Conference |
 | Misc. Expenses | Misc. Expenses |
 
-   - For Null Display Value - Enter text ' --Select Expense Type--'
+  - For Null Display Value - Enter text ' --Select Expense Type--'
 
    ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
 
 8. Right-click region (**New Expense Request**) and select Create Page Item.
 
-    - For Name - Enter P3_ESTIMATED_COST
+    - For Name - Enter **P3_ESTIMATED_COST**
 
     - For Type - Select Number Field
 
-9. Select the **P3_EMPNO** page item and enable the primary key.
+9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section.
 
   ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
 
-    Click **Save** to apply changes.
+    - Click **Save** to apply changes.
 
 10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
  ![Create rendering process1](images/submit-expense-process.png " ")
+In the Property Editor, enter the following:
 
-  In the Property Editor, enter the following:
+  - For Name - Type **Fetch Employee Details for User**
 
-     - For Name - Type Fetch Employee Details for User
+  - For Type - Select Execute code
 
-     - For Type - Select Execute code
-
-     - For PL/SQL Code - Enter the following PL/SQL code:
+  - For PL/SQL Code - Enter the following PL/SQL code:
 
   ```
    <copy>
@@ -471,9 +472,10 @@ Add a page to Submit an Expense request.
   where emp_name=:APP_USER;
   </copy>
   ```
+
   ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
-     - For Sequence - Enter 5
+  - For Sequence - Enter 5
 
   ![Create rendering process2](images/submit-expense-fetch.png " ")
 
@@ -485,17 +487,17 @@ Add a page to Submit an Expense request.
 
    In the Property Editor, enter the following:
 
-   - For Name - Type Submit Expense request
+   - For Name - Type **Submit Expense request**
 
-   - For Type - Select Human Task - Create
+   - For Type - Select **Human Task - Create**
 
   Under **Settings** Section:
 
    - For Definition - Select Expense request
 
-   - For Details Primary key Element: Select P3_EMPNO
+   - For Details Primary key Element: Select **P3_EMPNO**
 
-   - For Success Message: Type Expense Request submitted successfully.
+   - For Success Message: Type **Expense Request submitted successfully**
 
  ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
@@ -511,9 +513,9 @@ Add a page to Submit an Expense request.
 
     -  For  Expense Status, enter the following:
 
-     - For Type - Select Static Value
+      - For Type - Select Static Value
 
-     - For Value - Type **PENDING**
+      - For Value - Type **PENDING**
 
      ![Process parameters2](images/submit-expense-status.png " ")
 
