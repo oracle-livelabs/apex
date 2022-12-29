@@ -251,8 +251,7 @@ To create a task definition:
 10. To Add the next action, Click **Add Action** button.
 
    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
-
-    Specify the following:
+Specify the following:
 
       - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
@@ -316,8 +315,7 @@ end;
 
 11. Again, Click  **Add Actions** button.
    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
-
-   Specify the following:
+Specify the following:
 
     - For Name - Enter **UPDATE_REQUEST_STATUS**
 
