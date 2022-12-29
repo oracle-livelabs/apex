@@ -92,7 +92,6 @@ In this lab, you create database objects using SQL Script.
   CONSTRAINT "EMP_EXPENSE_REQUEST_PK" PRIMARY KEY ("REQ_ID"));  
   </copy>
   ```
-  Remember that SQL*Plus commands are ignored at runtime.
 
 5. Click Run and Run Now. Now you can see that SQL statements run successfully.
 
