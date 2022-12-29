@@ -328,7 +328,7 @@ end;
     - For Outcome  - Select Rejected
 
     - For Code: Copy the code below and paste it into  the code editor:
-    
+
   ```
   <copy>
   declare
@@ -351,11 +351,11 @@ end;
 
   - Click **Create** and **Apply Changes**
 
-   ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
+![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
-   ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
+![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
 
-   ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
+![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
 
 ## Task 5: Create a Page to Apply for Expense
