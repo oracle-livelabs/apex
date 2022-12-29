@@ -212,18 +212,15 @@ To create a task definition:
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
 10. Under **Actions** Section, Click **Add Action** button
+![Task Definition Actions-Create](images/task-definition-actions.png " ")
+Specify the following:
+ - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
-   ![Task Definition Actions-Create](images/task-definition-actions.png " ")
+ - For Type - Select Execute Code
 
-   Specify the following:
+ - On Event - Select Create
 
-    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select Create
-
-    - For Code: Copy the code below and paste it into  the code editor:
+ - For Code: Copy the code below and paste it into  the code editor:
 
     ```
     <copy>
@@ -249,20 +246,17 @@ To create a task definition:
   ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
 11. To Add the next action, Click **Add Action** button.
+![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
+Specify the following:
+  - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
+  - For Type - Select Execute Code
 
-   Specify the following:
+  - On Event - Select Complete
 
-      - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
+  - For Outcome : Select Approved
 
-      - For Type - Select Execute Code
-
-      - On Event - Select Complete
-
-      - For Outcome : Select Approved
-
-      - For Code: Copy the code below and paste it into  the code editor:
+  - For Code: Copy the code below and paste it into  the code editor:
 
 ```
     <copy>
@@ -316,18 +310,16 @@ end;
 
 12. Again, Click  **Add Actions** button.
    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+Specify the following:
+ - For Name - Enter **UPDATE_REQUEST_STATUS**
 
-   Specify the following:
+ - For Type - Select Execute Code
 
-    - For Name - Enter **UPDATE_REQUEST_STATUS**
+ - On Event - Select Complete
 
-    - For Type - Select Execute Code
+ - For Outcome  - Select Rejected
 
-    - On Event - Select Complete
-
-    - For Outcome  - Select Rejected
-
-    - For Code: Copy the code below and paste it into  the code editor:
+ - For Code: Copy the code below and paste it into  the code editor:
 
   ```
   <copy>
