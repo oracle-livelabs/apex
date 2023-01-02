@@ -74,7 +74,7 @@ In this lab, you create database objects using SQL Script.
   "EMP_NAME" VARCHAR2(10),
   "MGR" NUMBER(4,0),
   CONSTRAINT "EMP_PK" PRIMARY KEY ("EMPNO"));
-  insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (10, 'JOHN', 30);
+  insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (10, 'JOHN', 20);
   insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (20, 'CLARA',30);
   insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (30, 'JANE', 40);
   insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (40, 'MATT', null);
@@ -84,7 +84,7 @@ In this lab, you create database objects using SQL Script.
   AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999
   INCREMENT BY 1 START WITH 8000 CACHE 20 NOORDER NOCYCLE NOKEEP NOT NULL ENABLE,
   "EMP_NO" VARCHAR2(10),
-  "EXPENSE_TYPE" VARCHAR2(25),
+  "EXPENSE_TYPE" VARCHAR2(100),
   "ESTIMATED_COST" NUMBER(8,0),
   "UPDATED_BY" VARCHAR2(100),
   "STATUS" VARCHAR2(20),
@@ -561,13 +561,13 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 1. Click Application ID on the right-above corner of the page designer. Application Home page appears.
 
- ![Click Application ID](./images/utl-Appid.png " ")
+ ![Click Application ID](./images/utl-appid.png " ")
 
 2. Click **Create** button. Create Application wizard appears.
 
  ![Click create on Application home apge](./images/utl-create-page.png " ")
 
-3. Under Components, Select Unified Task List.
+3. Under Components, Select Unified Task List and click **Next**
 
  ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
 
@@ -591,7 +591,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
  ![Click create on application home page](./images/utl-create-page.png " ")
 
-7. Under Components, Select Unified Task List.
+7. Under Components, Select Unified Task List and click **Next**
 
   ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
 
@@ -631,14 +631,16 @@ To define an email template:
    ![click Create Email Template](./images/email-template-create-button.png " ")
 
 4. Under **Identification**:
-   - For Template Name - Enter BEFORE EXPENSE EXPIRY EMAIL.
+   - For Template Name - Enter **BEFORE EXPENSE EXPIRY EMAIL**
 
-   - For Email Subject - Enter the Text
-      ```
+   - For Email Subject - Copy and Paste the below Text
+
+```
    <copy>
    Expense Request FOR #APEX_TASK_SUBJECT# Requires your review
    </copy>
-     ```
+```
+
     *Note: For substitution strings with the #STRING_NAME# format. You can pass in values for these strings using the Placeholder Values dialog for the Process in Page Designer or the APEX_MAIL API.
 
 5. Under **HTML Format**:
@@ -659,6 +661,7 @@ To define an email template:
 </copy>
   ```
  - For Plain Text Format - Copy the text below and paste it into Plain text format:
+
 ```
 <copy>
   Hello #APEX_TASK_OWNER#,
@@ -667,19 +670,19 @@ To define an email template:
   Need to make a change to your Approval? Manage your Approval here: #APPROVAL_URL#
 </copy>
   ```
-  - (Optional) Comments - Enter comments that describe this template.  
 
   ![Create Email Template](./images/email-click-create.png " ")
 
   ![Enter email template details1](./images/email-details2.png " ")
 
-7. Click Create Email Template.
+7. Click **Create Email Template**
 
 ## Task 8: Updating Table Employee Details
 
 1. Navigate to SQL Workshop and click SQL Commands
 
-2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table. Paste the command and run it one by one.  
+2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table.
+Paste the command and run it one by one.  
 
   Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
 
@@ -710,7 +713,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
  ![Edit Expense Request](./images/edit-td.png " ")
 
  ![Click Task definition - Expense request](./images/edit-td-name.png " ")
-2. Under **Actions** - Edit NEXT_APPROVER_OR_UPDATE_STATUS
+2. Under **Actions** - Edit **NEXT_APPROVER_OR_UPDATE_STATUS**
 
  Copy the code below and  replace it into the code editor:
 
@@ -762,7 +765,7 @@ end;
 ```
 Click **Apply Changes**
 
-3. **Under Participants** - Click Add Row
+3. **Under Participants** Section - Click Add Row
 
     - For Participant Type - Select Potential Owner
 
@@ -781,27 +784,19 @@ Click **Apply Changes**
 
  Click **Apply Changes** to save the updated Participants.
 
- Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
+ Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
 
 5. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
- Under **Actions** Section:
-
- - Click **Add Actions**
+ Under **Actions** Section: Click **Add Actions**
 
  - For Name - Enter **DELEGATE_EXPENSE_REQUEST**
 
  - For Type - Select Execute Code
 
- - For Execution Sequence - 40
-
  - On Event - Select Delegate
 
- - For Success Message - Enter 'Request Delegated Successfully'
-
- - For location: Select Local Database
-
- - For Language: Select PL/SQL
+ - For Success Message - Enter **Request Delegated Successfully**
 
  - For Code: Copy the code below and paste it into  the code editor:
 
@@ -818,21 +813,15 @@ end;
 
  ![Add action - delegate details](./images/td-delegate.png " ")
 
-Again click **Add Actions** to request information.
+6. Again click **Add Actions** to request information.
 
 For Name - Enter **REQUEST_MORE_INFO**
 
 - For Type - Select Execute Code
 
-- For Execution Sequence - 50
-
 - On Event - Select **Request Information**
 
-- For Success Message - Enter 'Information Requested Successfully'
-
-- For location: Select Local Database
-
-- For Language: Select PL/SQL
+- For Success Message - Enter **Information Requested Successfully**
 
 - For Code: Copy the code below and paste it into  the code editor:
 
@@ -883,7 +872,6 @@ Add deadline and expiration events in actions for expense requests.
      - For Success Message - Enter **Task will expire in 5 minutes**
 
   Under **Send Email Settings** Section:
-
      - For From - Enter the Email address of your wish
 
      - For To - Enter the Email address of your wish
