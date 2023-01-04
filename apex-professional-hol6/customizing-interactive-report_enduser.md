@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Hands-on-lab, you will Manage and Customise the Interactive report in the **Sample Reports** application both as an **End-user**.
+In this Hands-on-lab, you will Manage and Customise the Interactive report in the **Sample Reports** application as an **End-user**.
 
 Estimated Time: 20 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 20 minutes
 ### Objectives
 
 In this lab, you:
-- Customise the Interactive Report page you have have in **Sample Reports** Application as an **End-user**.
+- Customise the Interactive Report page you have in **Sample Reports** Application as an **End-user**.
 
 
 ## Task 1: Customizing an Interactive report as an end-user.
@@ -57,7 +57,7 @@ In this lab, you:
 
   ![](images/select-filter1.png " ")
 
-  b) For Filter Type, select Column. Select the following:
+  b) For Filter Type, Select the following:
    - For **Column**, select **Cost**
    - For **Operator**, select **<=**
    - For **Expression**, enter **2000**   
@@ -120,7 +120,7 @@ In this lab, you:
 
   b) The Compute dialog appears.  
   For Column Label, enter **Cost with Tax**.  
-  For Computation Expression, click **Cost** under Columns. Click *1.05 under Keypad.  
+  For Computation Expression, click **Cost** under Columns alias. Click *1.05 under Keypad.  
   Click **Apply**.
 
   ![](images/create-compute1.png " ")

@@ -147,7 +147,7 @@ A dashboard page is a great way to show important information using various char
 
     ![Add report page](./images/add-report-page.png " ")
 
-
+<!--
 4. Expand Lookup columns, and enter the following:
 
     - Lookup Key 1 - select **CLOTHING_ID**
@@ -156,10 +156,10 @@ A dashboard page is a great way to show important information using various char
     - Display Column 2 - select **DEPARTMENT\_LOOKUP.DEPARTMENT**
     - Lookup Key 3 - select **COLOR_ID**
     - Display Column 3 - select **COLOR_LOOKUP.COLOR**
+-->
+4. Click **Advanced** and check **Set as Administration Page**.
 
-5. Click **Advanced** and check **Set as Administration Page**.
-
-6. Click **Add Page**.
+5. Click **Add Page**.
 
   ![Add page](./images/add-report-page1.png " ")
 

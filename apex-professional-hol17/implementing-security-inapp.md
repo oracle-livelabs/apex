@@ -106,7 +106,7 @@ Estimated Time: 20 minutes
 
   ![Create Authentication Scheme](images/create-auth1.png " ")
 
-19. In the **Authentication Scheme** enter the following and click **Apply Changes**.
+19. In the **Authentication Scheme** enter the following and click **Create Authentication Scheme**.
 
     Under **Name**:
     - For **Name**, Enter **FB Authentication**.

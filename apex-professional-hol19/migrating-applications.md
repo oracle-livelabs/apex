@@ -171,11 +171,11 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
   ![Navigate to Gallery](images/navigate-to-gallery.png " ")
 
-3. Select **Samples** under **Gallery**.
+3. Select **Sample Apps** under **Gallery**.
 
   ![Select Samples](images/click-samples.png " ")
 
-4. Navigate to **Sample Reporting** and click **Download App**.
+4. Navigate to **Sample Reporting** and click **Install**.
 
   ![Download Sample Reporting](images/download-app.png " ")
 

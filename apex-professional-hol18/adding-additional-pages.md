@@ -63,7 +63,7 @@ Estimated Time: 20 minutes
   - Header - select **Hidden but accessible**  
   - Style - select **Remove UI Decoration**  
 
-   Click **OK**. Then **Save** and **Refresh** the runtime environment to see the changes.
+   Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
    ![Click Ok](images/edit-calendar2.png " ")
 
 ## Task 2: Creating a Form page on DEMO_PROJECTS Tables.

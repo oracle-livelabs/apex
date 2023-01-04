@@ -137,7 +137,7 @@ In this lab, you will:
 
             | Name | Value  |
             | --- |  --- |
-            | P16_ORDER | &P16\_ORDER\_ID. |
+            | P16_ORDER | &P16_ORDER_ID. |
 
         - For Clear Cache - enter **16**.
         - Click **OK**.

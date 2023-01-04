@@ -103,15 +103,15 @@ In this lab, you create database objects using SQL Script.
 ## Task 3: Add Users
    In this lab, you create users for multi-level management.
 
-  1. Navigate to the Administration icon beside search and select **Manage Users and Group** from the dropdown list.
+1. Navigate to the Administration icon beside search and select **Manage Users and Group** from the dropdown list.
 
      ![Manage Users and Group](./images/manage-users.png " ")
 
-  2. Click **Create Multiple Users**
+2. Click **Create Multiple Users**
 
      ![Create Multiple Users](./images/create-users.png " ")
 
-  3. Specify the following attributes:
+3. Specify the following attributes:
 
      - For a List of Email Addresses: Type MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com
 
@@ -119,7 +119,7 @@ In this lab, you create database objects using SQL Script.
 
      - For password and Confirm Password: Enter a password of your wish
 
-  4. Click **Next** and **Create Valid Users**
+4. Click **Next** and **Create Valid Users**
 
 ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
@@ -532,9 +532,9 @@ In the Property Editor, enter the following:
 
  ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
-  14. Click **Save**
+14. Click **Save**
 
-  15. On Rendering tab, Right-click Body and select **Create Button**.
+15. On Rendering tab, Right-click Body and select **Create Button**.
 
  ![Create Button](images/submit-expense-create-button.png " ")
 
@@ -546,7 +546,7 @@ In the Property Editor, enter the following:
 
  ![Button details](images/submit-expense-button-details.png " ")
 
- 16. Navigate to Processing tab, Select Process **Submit Expense Request**.
+16. Navigate to Processing tab, Select Process **Submit Expense Request**.
 
      Under **Server-Side Condition** Section:
 
@@ -554,7 +554,7 @@ In the Property Editor, enter the following:
 
  ![Submit button](images/submit-expense-submit-button.png " ")
 
- 17. Click **Save**.
+17. Click **Save**.
 
 ## Task 6: Create Unified Task Lists
 Add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
@@ -720,45 +720,43 @@ We will further extend the Expense Tracker Application to see how tasks could be
  ```
 <copy>
 declare
-l_mgr number;
-l_task_id number;
-l_request_id number;
-l_req_status varchar2(10) :='PENDING';
-l_hr_mgr Varchar2(10);
+    l_mgr number;
+    l_task_id number;
+    l_request_id number;
+    l_req_status varchar2(10) :='PENDING';
 begin
-select mgr into l_mgr from EMPLOYEE_DETAILS where emp_name=:APP_USER;
-if :APP_USER = :MGR_NAME then --this is the first approver
-   -- set the request id to be the id of the task created when the request was submitted
-   l_request_id := :APEX$TASK_ID;
-else
-   -- this is an intermediate approver. Set the request-id from the corresponding task parameter value
-   l_request_id := :REQ_ID;
-end if;
-if l_mgr is null or :ESTIMATED_COST < 50000 then -- the approval is complete
+    select mgr into l_mgr from employee_details where emp_name=:APP_USER;
+    if :APP_USER = :MGR_NAME then --this is the first approver
+       -- set the request id to be the id of the task created when the request was submitted
+       l_request_id := :APEX$TASK_ID;
+    else
+       -- this is an intermediate approver, set the request id from the corresponding task parameter value
+       l_request_id := :REQ_ID;
+    end if;
+    if l_mgr is null or :ESTIMATED_COST < 50000 then -- the approval is complete
 
-    update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
-     where req_id = l_request_id and emp_no=:APEX$TASK_PK;
+        update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
+         where req_id = l_request_id and emp_no=:APEX$TASK_PK;
 
-    l_req_status := 'APPROVED';
-else -- the request needs to go through another level of Approval
-    -- updated the request record with details of the current approver in the chain of approvers
-    update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
-     where req_id = l_request_id
-       and emp_no=:APEX$TASK_PK;  
-
-       -- create a new task assigned to the manager of the current approver
-    l_task_id := apex_approval.create_task(
-        p_application_id => :APP_ID,
-        p_task_def_static_id => 'EXPENSE_REQUEST',
-        p_initiator => :EMP_NAME, -- ensure initiator is the original requestor and not the current task owner
-        p_parameters => apex_approval.t_task_parameters(
-            1 => apex_approval.t_task_parameter(static_id => 'EXPENSE_TYPE', string_value => :EXPENSE_TYPE),
-            2 => apex_approval.t_task_parameter(static_id => 'ESTIMATED_COST', string_value => :ESTIMATED_COST),
-            3 => apex_approval.t_task_parameter(static_id => 'REQ_ID',      string_value => l_request_id),
-            4 => apex_approval.t_task_parameter(static_id => 'STATUS',      string_value => l_req_status)
-    ),
-    p_detail_pk => :APEX$TASK_PK
-);
+        l_req_status := 'APPROVED';
+    else -- the request needs to go through another level of approval
+        -- updated the request record with details of the current approver in the chain of approvers
+        update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
+         where req_id = l_request_id
+           and emp_no=:APEX$TASK_PK;
+        -- create a new task assigned to the manager of the current approver
+        l_task_id := apex_approval.create_task(
+            p_application_id => :APP_ID,
+            p_task_def_static_id => 'EXPENSE_REQUEST',
+            p_initiator => :EMP_NAME, -- ensure initiator is the original requestor and not the current task owner
+            p_parameters => apex_approval.t_task_parameters(
+                1 => apex_approval.t_task_parameter(static_id => 'EXPENSE_TYPE', string_value => :EXPENSE_TYPE),
+                2 => apex_approval.t_task_parameter(static_id => 'ESTIMATED_COST', string_value => :ESTIMATED_COST),
+                3 => apex_approval.t_task_parameter(static_id => 'REQ_ID',      string_value => l_request_id),
+                4 => apex_approval.t_task_parameter(static_id => 'STATUS',      string_value => l_req_status)
+        ),
+        p_detail_pk => :APEX$TASK_PK
+    );
 end if;
 end;
 </copy>
@@ -786,7 +784,7 @@ Click **Apply Changes**
 
  Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
 
-5. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
+4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
  Under **Actions** Section: Click **Add Actions**
 
@@ -813,7 +811,7 @@ end;
 
  ![Add action - delegate details](./images/td-delegate.png " ")
 
-6. Again click **Add Actions** to request information.
+5. Again click **Add Actions** to request information.
 
 For Name - Enter **REQUEST_MORE_INFO**
 
@@ -903,7 +901,7 @@ Add deadline and expiration events in actions for expense requests.
 
   ![Create action before expiry](./images/td-before-email.png " ")
 
-4. To add Expire event, click on **Add Actions** again and specify the following attributes:
+3. To add Expire event, click on **Add Actions** again and specify the following attributes:
 
   - For Name - Enter **TASK_EXPIRED**
 

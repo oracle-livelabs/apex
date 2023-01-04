@@ -4,8 +4,6 @@
 
 In this lab, you learn to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of customers, stores, products, and orders used to manage the shopping cart.
 
-Estimated Time: 5 minutes
-
 <!--
 Watch the video below for a quick walk through of the lab.
 
