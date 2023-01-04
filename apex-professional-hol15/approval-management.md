@@ -4,7 +4,7 @@
 
 In this workshop, you will create an application that allows you to manage expenses using the approvals component. To explain the concepts and terms associated with Approval Management in APEX, we take the example of the Expense Tracker Application.
 
-To apply for an expense, an employee logs into the application and submits an expense request filling in the Type (Accommodation/Conference/Internet/ Miscellaneous Expenses) and total Expenses. The task could be assigned to multiple potential owners, and then they can perform possible actions (Request information/Delegate/Release/Change Priority).
+To apply for an expense, an employee logs into the application and submits an expense request filling in the Type (Accommodation/Conference/Internet/ Miscellaneous Expenses) and Estimated Expenses. The task could be assigned to multiple potential owners, and then they can perform possible actions (Request information/Delegate/Release/Change Priority).
 
 If the expense cost is more than 50000, then the Expense request, once approved by the immediate manager, will go to the next manager and so on, depending on the Expense amount. This is a typical use case for a multi-level approval.
 
@@ -121,11 +121,11 @@ In this lab, you create database objects using SQL Script.
 
 4. Click **Next** and **Create Valid Users**
 
-![Create Multiple Users - details](./images/create-multiple-users.png " ")
+   ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-![Click validate users](./images/create_valid_users.png " ")
+   ![Click validate users](./images/create_valid_users.png " ")
 
-![Users created](./images/users-created.png " ")  
+   ![Users created](./images/users-created.png " ")  
 
 ## Task 4: Create a Task Definition
 
@@ -135,11 +135,11 @@ To create a task definition:
 
 1. In the App Builder, navigate to Expense Tracker and select shared components.
 
- ![Task Definition in Shared Components](images/task-definition-sc.png " ")
+   ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
 2. Under Workflows and Automations, select Task Definitions.
 
-    ![Select Task Definition](images/task-definition.png " ")
+   ![Select Task Definition](images/task-definition.png " ")
 
 3. Click **Create**.
 
@@ -175,7 +175,7 @@ To create a task definition:
    </copy>
    ```
 
-  ![Task Definition Settings](images/task-definition-settings.png " ")
+    ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
    - Click Add Row.
@@ -194,11 +194,11 @@ To create a task definition:
 
    - Click **Apply Changes** to save all existing changes.
 
-   ![Task Definition Participants](images/task-definition-participants.png " ")
+    ![Task Definition Participants](images/task-definition-participants.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
-   ![Click on Expense Request  ](images/task-definition-created.png " ")
+    ![Click on Expense Request  ](images/task-definition-created.png " ")
 
 9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
@@ -212,7 +212,7 @@ To create a task definition:
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
 10. Under **Actions** Section, Click **Add Action** button
-![Task Definition Actions-Create](images/task-definition-actions.png " ")
+     ![Task Definition Actions-Create](images/task-definition-actions.png " ")
 
 Specify the following:
  - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
@@ -244,10 +244,10 @@ Specify the following:
     ```
     - Click **Create** to save Create Event Action.
 
-  ![Task Definition Action - create1](images/task-definition-create-action.png " ")
+    ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
 11. To Add the next action, Click **Add Action** button.
-![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
+    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 Specify the following:
   - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
@@ -682,7 +682,7 @@ To define an email template:
 1. Navigate to SQL Workshop and click SQL Commands
 
 2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table.
-Paste the command and run it one by one.  
+Execute the command one by one.  
 
   Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
 
@@ -690,14 +690,13 @@ Paste the command and run it one by one.
 
   ```
   <copy>
+  insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
+  insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
   alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
-
   update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE'
   where EMPNO in  (10,20);  
-
   update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN'
   where EMPNO in  (30,40);
-
   </copy>
   ```  
 
