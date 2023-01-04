@@ -103,7 +103,7 @@ In this lab, you create database objects using SQL Script.
 ## Task 3: Add Users
    In this lab, you create users for multi-level management.
 
-1. Navigate to the Administration icon beside search and select **Manage Users and Group** from the dropdown list.
+1. Navigate to the Administration icon on Application home page and select **Manage Users and Group** from the dropdown list.
 
      ![Manage Users and Group](./images/manage-users.png " ")
 
@@ -133,7 +133,7 @@ Create a task definition to configure task parameters, participants, actions, an
 
 To create a task definition:
 
-1. In the App Builder, navigate to Expense Tracker and select shared components.
+1. In the App Builder, navigate to Expense Tracker application  and select shared components.
 
    ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
@@ -212,16 +212,17 @@ To create a task definition:
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
 10. Under **Actions** Section, Click **Add Action** button
-     ![Task Definition Actions-Create](images/task-definition-actions.png " ")
 
-Specify the following:
- - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
+     ![Task Definition Actions Create](images/task-definition-actions.png " ")
 
- - For Type - Select Execute Code
+    Specify the following:
+    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
- - On Event - Select Create
+    - For Type - Select Execute Code
 
- - For Code: Copy the code below and paste it into  the code editor:
+    - On Event - Select Create
+
+    - For Code: Copy the code below and paste it into  the code editor:
 
     ```
     <copy>
@@ -247,19 +248,21 @@ Specify the following:
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
 11. To Add the next action, Click **Add Action** button.
+
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
-Specify the following:
-  - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-  - For Type - Select Execute Code
+    Specify the following:
+    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-  - On Event - Select Complete
+    - For Type - Select Execute Code
 
-  - For Outcome : Select Approved
+    - On Event - Select Complete
 
-  - For Code: Copy the code below and paste it into  the code editor:
+    - For Outcome : Select Approved
 
-```
+    - For Code: Copy the code below and paste it into  the code editor:
+
+   ```
     <copy>
     declare
     l_mgr number;
@@ -301,26 +304,28 @@ Specify the following:
     end if;
 end;
 </copy>
-```
+  ```
 
   Click **Create** to add action.
 
-  ![Task Definition - Approved](images/task-definition-approved-action.png " ")
+   ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-  ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
+   ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
 
 12. Again, Click  **Add Actions** button.
+
    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
-Specify the following:
- - For Name - Enter **UPDATE_REQUEST_STATUS**
 
- - For Type - Select Execute Code
+   Specify the following:
+  - For Name - Enter **UPDATE_REQUEST_STATUS**
 
- - On Event - Select Complete
+  - For Type - Select Execute Code
 
- - For Outcome  - Select Rejected
+  - On Event - Select Complete
 
- - For Code: Copy the code below and paste it into  the code editor:
+  - For Outcome  - Select Rejected
+
+  - For Code: Copy the code below and paste it into  the code editor:
 
   ```
   <copy>
@@ -341,14 +346,13 @@ update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'|
 end;
 </copy>
 ```
+ - Click **Create** and **Apply Changes**
 
-  - Click **Create** and **Apply Changes**
+ ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
-![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
+ ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
 
-![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
-
-![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
+ ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
 
 ## Task 5: Create a Page to Apply for Expense
@@ -425,7 +429,7 @@ Add a page to Submit an Expense request.
 
    - For Type - Select, Select List
 
-Under **List of Values** section:
+  Under **List of Values** section:
 
    - For Type - Select Static values
 
@@ -635,11 +639,11 @@ To define an email template:
 
    - For Email Subject - Copy and Paste the below Text
 
-```
+   ```
    <copy>
    Expense Request FOR #APEX_TASK_SUBJECT# Requires your review
    </copy>
-```
+   ```
 
     *Note: For substitution strings with the #STRING_NAME# format. You can pass in values for these strings using the Placeholder Values dialog for the Process in Page Designer or the APEX_MAIL API.
 
@@ -662,13 +666,13 @@ To define an email template:
   ```
  - For Plain Text Format - Copy the text below and paste it into Plain text format:
 
-```
-<copy>
+  ```
+  <copy>
   Hello #APEX_TASK_OWNER#,
   Please check your "My Approvals" inbox. The expense request for #EMP_NAME# requires your timely review manner.
   Thanks for your kind attention to this matter.
   Need to make a change to your Approval? Manage your Approval here: #APPROVAL_URL#
-</copy>
+  </copy>
   ```
 
   ![Create Email Template](./images/email-click-create.png " ")
@@ -812,22 +816,22 @@ end;
 
 5. Again click **Add Actions** to request information.
 
-For Name - Enter **REQUEST_MORE_INFO**
+   - For Name - Enter **REQUEST_MORE_INFO**
 
-- For Type - Select Execute Code
+   - For Type - Select Execute Code
 
-- On Event - Select **Request Information**
+   - On Event - Select **Request Information**
 
-- For Success Message - Enter **Information Requested Successfully**
+   - For Success Message - Enter **Information Requested Successfully**
 
-- For Code: Copy the code below and paste it into  the code editor:
+   - For Code: Copy the code below and paste it into  the code editor:
 
- ```
-<copy>
+   ```
+  <copy>
 begin
 apex_approval.add_to_history ('Information Requested From '|| :APEX$TASK_OWNER);
 end;
-</copy>
+  </copy>
 ```
 Click **Create** to add action.
 
@@ -944,5 +948,5 @@ end;
 
 ## **Acknowledgments**
 
-- **Author** - Roopesh Thokala, Ankita Beri
-- **Last Updated By/Date** - Roopesh Thokala / Ankita Beri, Product Manager, December 2022
+- **Author** - Ankita Beri
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
