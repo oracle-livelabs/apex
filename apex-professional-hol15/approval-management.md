@@ -35,15 +35,15 @@ In this lab, you create a new application named Expense Tracker.
 
     ![Sign In](images/appbuilder.png " ")
 
-3. On the App Builder page, click the Create button.
+3. On the App Builder page, click **Create**.
 
     ![Click Application Homepage Create Button](images/create-new-application.png " ")
 
-4. Click New Application.
+4. Click **New Application**
 
     ![Select New Application ](images/click-new-application.png " ")
 
-5. In the Create an Application wizard, set Name to Expense Tracker.
+5. In the Create an Application wizard, set Name to **Expense Tracker**.
 
 6. Click Create Application to create your app and go to the application home page.
 
@@ -52,15 +52,15 @@ In this lab, you create a new application named Expense Tracker.
 ## Task 2: Create a SQL Script
 In this lab, you create database objects using SQL Script.
 
-1. At the top of the application home page, click SQL Workshop and then SQL Scripts. The SQL Scripts page appears.
+1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
 
     ![Select Sql Workshop](./images/sql-workshop.png " ")
 
-2. Click the Create Button. The Script Editor appears.
+2. Click **Create**. The Script Editor appears.
 
     ![Create SQL Scripts](./images/create-sql-scripts.png " ")
 
-3. In the Script Name, enter a name for the script - Employee details and Expense status.
+3. In the Script Name, enter a name for the script - **Employee details and Expense status**
 
 4. Enter the SQL statements.
 
@@ -92,7 +92,7 @@ In this lab, you create database objects using SQL Script.
   </copy>
   ```
 
-5. Click Run and Run Now. Now you can see that SQL statements run successfully.
+5. Click **Run and Run Now**. Now you can see that SQL statements run successfully.
 
   ![Run SQL Script](./images/script.png " ")
 
@@ -137,7 +137,7 @@ To create a task definition:
 
    ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
-2. Under Workflows and Automations, select Task Definitions.
+2. Under Workflows and Automations, select **Task Definitions**.
 
    ![Select Task Definition](images/task-definition.png " ")
 
@@ -149,11 +149,11 @@ To create a task definition:
 
    - For Name - Enter **Expense Request**
 
-   - For Subject - Enter &EXPENSE_TYPE. Expense request for &EMP_NAME.
+   - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
 
    - For Static ID - Enter **EXPENSE_REQUEST**
 
-   - For Priority - Select 2-High
+   - For Priority - Select **2-High**
 
    Leave Business Administrator and Potential owner blank for now.
 
@@ -256,9 +256,9 @@ To create a task definition:
 
     - For Type - Select Execute Code
 
-    - On Event - Select Complete
+    - On Event - Select **Complete**
 
-    - For Outcome : Select Approved
+    - For Outcome : Select **Approved**
 
     - For Code: Copy the code below and paste it into  the code editor:
 
@@ -321,9 +321,9 @@ end;
 
   - For Type - Select Execute Code
 
-  - On Event - Select Complete
+  - On Event - Select **Complete**
 
-  - For Outcome  - Select Rejected
+  - For Outcome  - Select **Rejected**
 
   - For Code: Copy the code below and paste it into  the code editor:
 
@@ -358,11 +358,11 @@ end;
 ## Task 5: Create a Page to Apply for Expense
 Add a page to Submit an Expense request.
 
-1. Click Application ID, Application home page appears.
+1. Click **Application ID**, Application home page appears.
 
    ![Application Home Page](images/application-id.png " ")
 
-2. Click Create Button, create page wizard appears.
+2. Click **Create**, create page wizard appears.
 
     ![Click create on Application home apge](images/application-create-page.png " ")
 
@@ -404,11 +404,12 @@ Add a page to Submit an Expense request.
 
    Under **Identification** section:
 
-    - For Title: Enter New Expense Request
+    - For Title: Enter **New Expense Request**
 
-    - For Type: Select Form
+    - For Type: Select **Form**
 
   Under **Source** section:
+
     - For Type: Select SQL Query
 
     - For SQL query: Copy the code below and paste it into  the code editor:
@@ -425,9 +426,9 @@ Add a page to Submit an Expense request.
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-   - For Name - Enter P3_EXPENSE_TYPE
+   - For Name - Enter **P3_EXPENSE_TYPE**
 
-   - For Type - Select, Select List
+   - For Type - Select, **Select List**
 
   Under **List of Values** section:
 
@@ -442,7 +443,7 @@ Add a page to Submit an Expense request.
 | Conference | Conference |
 | Misc. Expenses | Misc. Expenses |
 
-  - For Null Display Value - Enter text ' --Select Expense Type--'
+  - For Null Display Value - Enter **--Select Expense Type--**
 
    ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
 
@@ -496,7 +497,7 @@ In the Property Editor, enter the following:
 
   Under **Settings** Section:
 
-   - For Definition - Select Expense request
+   - For Definition - Select **Expense request**
 
    - For Details Primary key Element: Select **P3_EMPNO**
 
