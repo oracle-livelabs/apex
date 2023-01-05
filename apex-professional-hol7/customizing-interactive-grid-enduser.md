@@ -140,7 +140,7 @@ Click the **Start Date** column header and then click **Hide**.
 
   ![](./images/download-report.png " ")
 
-23.  Note that the **HTML** download option is no longer available. Select **Excel** and click **Download**.
+23. Note that the **HTML** download option is no longer available. Select **Excel** and click **Download**.
 
   ![](./images/download-report1.png " ")
 

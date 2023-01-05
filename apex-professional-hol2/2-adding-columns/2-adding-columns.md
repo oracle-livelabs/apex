@@ -43,15 +43,15 @@ In this lab, you will:
 
     ![Add Column - Colors](images/add-color-column.png " ")
 
-6. Click **Finish**.
+5. Click **Finish**.
 
     ![Confirm your request](images/add-color-column2.png " ")
 
-7. Click **Add Column** button.
+6. Click **Add Column** button.
 
     ![Add column Department](images/add-department-column1.png " ")
 
-8.  For Department column, enter the following:
+7.  For Department column, enter the following:
 
     * Add Column - enter **DEPARTMENT**
     * Type - select **VARCHAR2**
@@ -61,15 +61,15 @@ In this lab, you will:
 
     ![Add Column Department2](images/add-department-column2.png " ")
 
-10. Click **Finish**.
+8. Click **Finish**.
 
     ![Confirm your request - Department](images/add-department-column3.png " ")
 
-11. Click **Add Column** button.
+9. Click **Add Column** button.
 
     ![Add column Clothing](images/add-clothing-column1.png " ")
 
-12. For Clothing column, enter the following:
+10. For Clothing column, enter the following:
 
     * Add Column - enter **CLOTHING**
     * Type - select **VARCHAR2**
@@ -79,7 +79,7 @@ In this lab, you will:
 
     ![Add column Clothing2](images/add-clothing-column2.png " ")
 
-14. Click **Finish**.
+11. Click **Finish**.
 
     ![Confirm your request - Clothing](images/add-clothing-column3.png " ")
 
@@ -124,23 +124,23 @@ In this lab, you will:
 
     This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similary, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns respectively based on information found in the JSON product details column in the **Products** table.
 
-5. Click **Run**.
+6. Click **Run**.
 
     ![Run SQL Scripts](images/populate-column-data1.png " ")
 
-6. Click **Run Now**.
+7. Click **Run Now**.
 
     ![Run Script](images/run-script1.png " ")
 
-7. The Script Results page is displayed listing the statements processed, successful, and with errors.
+8. The Script Results page is displayed listing the statements processed, successful, and with errors.
 
     ![Script Results](images/sql-scripts-results1.png " ")
 
-8. To check the values in the Products table, click **SQL Workshop** and click **SQL Commands**.
+9. To check the values in the Products table, click **SQL Workshop** and click **SQL Commands**.
 
     ![SQL Commands](images/open-sql-commands.png " ")
 
-9. Copy the following SQL Query.
+10. Copy the following SQL Query.
     ```
     <copy>
     SELECT p.product_name,
@@ -152,7 +152,7 @@ In this lab, you will:
     </copy>
     ```
 
-10. Click **Run**.
+11. Click **Run**.
 
     ![Run SQL query](images/run-sql-query1.png " ")
 

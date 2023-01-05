@@ -679,7 +679,7 @@ To define an email template:
 
   ![Enter email template details1](./images/email-details2.png " ")
 
-7. Click **Create Email Template**
+6. Click **Create Email Template**
 
 ## Task 8: Updating Table Employee Details
 

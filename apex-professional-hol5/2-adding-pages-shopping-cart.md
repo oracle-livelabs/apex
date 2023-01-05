@@ -410,7 +410,7 @@ This region lets users read the customer reviews for this product.
 
       ![](./images/create-cards-region24.png " ")
 
- 5. Click **Save**.
+5. Click **Save**.
 
 ## Task 9: Add the Products Page.
 

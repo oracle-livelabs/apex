@@ -104,7 +104,7 @@ A dashboard page is a great way to show important information using various char
 
     ![Add Multiple reports1](./images/add-multiple-reports.png " ")
 
-3. On the Create Multiple Reports Page, select the following tables:
+4. On the Create Multiple Reports Page, select the following tables:
     - CLOTHING_LOOKUP
     - COLOR_LOOKUP
     - CUSTOMERS
@@ -112,7 +112,7 @@ A dashboard page is a great way to show important information using various char
     - PRODUCT_REVIEWS
     - STORES
 
-4. Click **Add Pages**.
+5. Click **Add Pages**.
 
     ![Add Multiple reports2](./images/add-multiple-reports2.png " ")
     ![Add Multiple reports3](./images/add-multiple-reports3.png " ")
@@ -130,6 +130,7 @@ A dashboard page is a great way to show important information using various char
   ![](./images/edit-multiple-reports.png " ")
 
 2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
+
 3. Click **Save Changes**.
 
     ![](./images/set-as-admin-page2.png " ")
