@@ -408,8 +408,7 @@ Add a page to Submit an Expense request.
 
     - For Type: Select **Form**
 
-  Under **Source** section:
-
+   Under **Source** section:
     - For Type: Select SQL Query
 
     - For SQL query: Copy the code below and paste it into  the code editor:
@@ -432,7 +431,7 @@ Add a page to Submit an Expense request.
 
   Under **List of Values** section:
 
-   - For Type - Select Static values
+   - For Type - Select **Static values**
 
    - For Static Values - Enter below list and click OK
 
@@ -566,15 +565,15 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 1. Click Application ID on the right-above corner of the page designer. Application Home page appears.
 
- ![Click Application ID](./images/utl-appid.png " ")
+  ![Click Application ID](./images/utl-appid.png " ")
 
-2. Click **Create** button. Create Application wizard appears.
+2. Click **Create**.
 
- ![Click create on Application home apge](./images/utl-create-page.png " ")
+   ![Click create on Application home page](./images/utl-create-page.png " ")
 
 3. Under Components, Select Unified Task List and click **Next**
 
- ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
+   ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
 
 4. Specify the following page attributes:
 
