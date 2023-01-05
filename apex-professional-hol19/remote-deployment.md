@@ -28,35 +28,35 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
     ![Click Drag and Drop](images/import-app2.png " ")
 
-4. Choose the file we **Downloaded** in the **Step 4** from your **Local System** and then click **Next**.
+7. Choose the file we **Downloaded** in the **Step 4** from your **Local System** and then click **Next**.
 
   ![Select file](images/import-app3.png " ")
 
   ![Click Next](images/import-app4.png " ")
 
-5. Click **Next**.
+6. Click **Next**.
 
   ![Click Next](images/import-app5.png " ")
 
 
-6. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
+9. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
 
   ![Click Install Application](images/import-app6.png " ")
 
 
-7. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
+10. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
 
   ![Click Next](images/import-app7.png " ")
 
-8. Click **Install**.
+11. Click **Install**.
 
   ![Click Install](images/import-app8.png " ")
 
-9. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application**
+12. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application**
 
   ![Application Installed](images/import-app9.png " ")
 
-10. Click **Sign Out**.
+13. Click **Sign Out**.
 
   ![Click Sign In](images/sign-out1.png " ")
 
