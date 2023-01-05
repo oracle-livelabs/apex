@@ -51,19 +51,19 @@ Estimated Time: 20 minutes
 
 6. Click **Save** and **Run Page**. Log in to the application with your credentials.
 
-6. In the Developer Toolbar, click **Edit Page \<n\>**.
+7. In the Developer Toolbar, click **Edit Page \<n\>**.
 
     ![Click Edit Page](images/view-page1.png " ")
 
-7. The Calendar page displays the **region title Calendar**, and also has a border around the region. In the Rendering tree, locate the Calendar region. Click **Calendar**. In the **Property Editor**, under **Appearance**, click the **Template Options** button.
+8. The Calendar page displays the **region title Calendar**, and also has a border around the region. In the Rendering tree, locate the Calendar region. Click **Calendar**. In the **Property Editor**, under **Appearance**, click the **Template Options** button.
 
     ![Edit Template Options](images/edit-calendar1.png " ")
 
-8. In the Template Options dialog, input the following:
+9. In the Template Options dialog, input the following:
   - Header - select **Hidden but accessible**  
   - Style - select **Remove UI Decoration**  
 
-   Click **OK**. Then **Save** and **Refresh** the runtime environment to see the changes.
+   Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
    ![Click Ok](images/edit-calendar2.png " ")
 
 ## Task 2: Creating a Form page on DEMO_PROJECTS Tables.

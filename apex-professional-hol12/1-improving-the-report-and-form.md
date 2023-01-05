@@ -100,7 +100,7 @@ Estimated Time: 20 minutes
 
 3. As an alternative to using drag-and-drop you can also reposition items using attributes in the Property Editor.
 
-  In Page Designer, within Layout (or the Rendering tree in the left pane), select **P21\_IMAGE\_CHARSET**. In the Property Editor (right pane), **deselect Layout > Start New Row**.
+  In Page Designer, within Layout (or the Rendering tree in the left pane), select **P21\_IMAGE\_CHARSET**. In the Property Editor (right pane), **Under Layout > Start New Row**.
 
   ![Enhance form2](images/enhance-form2.png " ")
 

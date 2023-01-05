@@ -143,7 +143,7 @@ In this task, you will create a dynamic actions to:
 
      ![](./images/create-computation1.png " ")  
 
-3. In the Property Editor, enter the following:
+4. In the Property Editor, enter the following:
     - Under Identification section:
         - For Item Name - select **P17_QUANTITY**
     - Under Computation:

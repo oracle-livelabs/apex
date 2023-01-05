@@ -213,7 +213,6 @@ This region will list the items that have been added temporarily to the shopping
 
     - Under Messages section:
        - For When No Data Found - enter: **Your shopping cart is empty!**
-       - For No Data Found Icon - select **fa-cart-empty**
 
     - Under Card section:
       - For Primary Key Column 1 - select **ITEM**
@@ -411,7 +410,7 @@ This region lets users read the customer reviews for this product.
 
       ![](./images/create-cards-region24.png " ")
 
- 5. Click **Save**.
+5. Click **Save**.
 
 ## Task 9: Add the Products Page.
 
@@ -444,7 +443,7 @@ This region lets users read the customer reviews for this product.
   - Select **Grid**
   - Title Column - select **PRODUCT_NAME**
   - Body Column - select **- Select Column -** (to unselect the default   column chosen)
-  - Click **Create.**
+  - Click **Create Page**
 
   ![](./images/create-fs-page15.png " ")
 

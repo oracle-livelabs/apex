@@ -271,7 +271,7 @@ In this task, you will create two dynamic actions:
 
 ## Task 7: Run the Products Page
 
-After running products page, your page will look like the following image:
+1. After running products page, your page will look like the following image:
 
    ![Products Page](./images/products-page.png " ")
 

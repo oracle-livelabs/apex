@@ -66,7 +66,7 @@ Estimated Time: 15 minutes
 
 8. On the Run Script page, click **Run Now**.
 
-    ![Run Now1(images/run-now1.png " ")
+    ![Run Now](images/run-now1.png " ")
 
 9. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 
@@ -128,5 +128,5 @@ This completes the Lab. At this point, you know how to use Quick SQL to generate
 
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Product Manager
-* **Contributors** -
+* **Contributors** - Ankita Ber, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

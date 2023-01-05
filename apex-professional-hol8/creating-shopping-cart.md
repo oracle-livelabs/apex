@@ -55,7 +55,7 @@ In this lab, you will:
 
    ![](./images/create-page-item2.png " ")
 
-7. Create four items as follows:
+8. Create four items as follows:
 
     | Name |  Type  | Label  | Template | Value Required |
     | --- |  --- | --- | --- | --- |
@@ -81,12 +81,12 @@ In this lab, you will:
 
   ![](./images/create-store-item.png " ")
 
-7. Navigate to the **Order Information** (left pane) region.
-8. Right-click the **Order Information** region  and click **Create Button**.
+9. Navigate to the **Order Information** (left pane) region.
+10. Right-click the **Order Information** region  and click **Create Button**.
 
      ![](./images/right-click-button.png " ")  
 
-9. Create two buttons as follows:
+11. Create two buttons as follows:
 
     | Button Name | Label  | Button Position | Button Template | Hot | Icon |
     | --- |  --- | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ In this lab, you will:
     ![](./images/create-button1.png " ")
 
      Under Server-side Condition:
-    | Button Name | Type  | Item |
+    | Button Name | Type  | Item  |
     | --- |  --- | --- |
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
@@ -193,5 +193,5 @@ In this task, you will create four-page items:
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Roopesh Thokala, Product Manager
+- **Contributors** -
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022
