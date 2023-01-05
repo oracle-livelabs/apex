@@ -96,7 +96,7 @@ In this lab, you will:
     ![](./images/create-button1.png " ")
 
      Under Server-side Condition:
-    | Button Name | Type  | Item |
+    | Button Name | Type  | Item  |
     | --- |  --- | --- |
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
