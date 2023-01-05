@@ -193,5 +193,5 @@ In this task, you will create four-page items:
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Roopesh Thokala, Product Manager
+- **Contributors** -
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022
