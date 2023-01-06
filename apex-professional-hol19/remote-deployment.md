@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the second part of the lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
+In this lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
 
 Estimated Time: 10 minutes
 
@@ -171,4 +171,5 @@ After making the above selections, click **Deploy**.
   ## **Acknowledgments**
 
   - **Author** - Roopesh Thokala, Product Manager
-  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, June 2022
+  - **Contributor** - Ankita Beri, Product Manager
+  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, Dec 2022

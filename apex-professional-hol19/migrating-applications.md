@@ -155,4 +155,5 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, June 2022
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, Dec 2022
