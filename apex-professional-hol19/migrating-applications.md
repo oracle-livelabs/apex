@@ -6,11 +6,7 @@ In this lab, You will create Installation scripts and Data Packages to export Da
 
 In the second part of the lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
 
-Estimated Time: 20 minutes
-
-
-Estimated Time: 20 minutes
-
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -18,7 +14,6 @@ In this lab, you will:
 - Create Installation Scripts
 - Create Data Packages
 - Export application with supporting Objects.
-- Use Remote Deployment to deploy your Application.
 
 ### Downloads
 

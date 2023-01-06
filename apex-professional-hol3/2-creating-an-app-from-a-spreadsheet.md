@@ -81,7 +81,7 @@ Repeat the steps for **Demo Projects Report** and **Calendar**.
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
-3. Now,Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
+3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
 
     ![PWA Definition](images/navigate-to-pwa.png " ")
 

@@ -1,3 +1,21 @@
+# Migrate Application Development Between Environments
+
+## Introduction
+
+In the second part of the lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
+
+Estimated Time: 10 minutes
+
+### Objectives
+
+In this lab, you will:
+- Export application with supporting Objects.
+- Use Remote Deployment to deploy your Application.
+
+### Downloads
+
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects5.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+
 ## Task 1: Importing Sample application.
 
 The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
