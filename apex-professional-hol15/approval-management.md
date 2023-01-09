@@ -226,7 +226,7 @@ To create a task definition:
 
         - For Code: Copy the code below and paste it into  the code editor:
 
-        ```
+      ```
         <copy>
          declare
            l_req_id number;
@@ -244,7 +244,7 @@ To create a task definition:
     end if;
     end;
         </copy>
-        ```
+      ```
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -265,7 +265,7 @@ To create a task definition:
 
         - For Code: Copy the code below and paste it into  the code editor:
 
-        ```
+      ```
         <copy>
         declare
         l_mgr number;
@@ -307,7 +307,7 @@ To create a task definition:
             end if;
           end;
        </copy>
-       ```
+      ```
 
         - Click **Create** to add action.
 
