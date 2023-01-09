@@ -214,17 +214,17 @@ To create a task definition:
 
 10. Under **Actions** Section, Click **Add Action** button
 
-     ![Task Definition Actions Create](images/task-definition-actions.png " ")
+     ![Task Definition Actions Create](images/task-definition-actions0.png " ")
 
     Specify the following:
 
-        - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
+    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
-        - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-        - On Event - Select Create
+    - On Event - Select Create
 
-        - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into  the code editor:
 
       ```
         <copy>
@@ -255,15 +255,15 @@ To create a task definition:
 
     Specify the following:
 
-        - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
+    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-        - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-        - On Event - Select **Complete**
+    - On Event - Select **Complete**
 
-        - For Outcome : Select **Approved**
+    - For Outcome : Select **Approved**
 
-        - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into  the code editor:
 
       ```
         <copy>
