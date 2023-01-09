@@ -195,7 +195,7 @@ To create a task definition:
 
        - Click **Apply Changes** to save all existing changes.
 
-       ![Task Definition Participants](images/task-definition-participants.png " ")
+       ![Task Definition Participants](images/task-definition-participants0.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
@@ -218,7 +218,7 @@ To create a task definition:
 
     Specify the following:
 
-    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
+    - For Name - Enter **CREATE\_EXPENSE_\REPORT_ENTRY**
 
     - For Type - Select Execute Code
 
@@ -255,7 +255,7 @@ To create a task definition:
 
     Specify the following:
 
-    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
+    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE_\STATUS**
 
     - For Type - Select Execute Code
 
@@ -321,7 +321,7 @@ To create a task definition:
 
    Specify the following:
 
-      - For Name - Enter **UPDATE_REQUEST_STATUS**
+      - For Name - Enter **UPDATE\_REQUEST_\STATUS**
 
       - For Type - Select Execute Code
 
@@ -354,7 +354,7 @@ To create a task definition:
 
      ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
-     ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
+     ![Task Definition - Rejected1](images/task-definition-rejected-code0.png " ")
 
      ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
