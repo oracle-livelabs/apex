@@ -430,7 +430,7 @@ Add a page to Submit an Expense request.
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-    - For Name - Enter **P3_EXPENSE_TYPE**
+    - For Name - Enter **P3\_EXPENSE_\TYPE**
 
     - For Type - Select, **Select List**
 
@@ -453,7 +453,7 @@ Add a page to Submit an Expense request.
 
 8. Right-click region (**New Expense Request**) and select Create Page Item.
 
-    - For Name - Enter **P3_ESTIMATED_COST**
+    - For Name - Enter **P3\_ESTIMATED_\COST**
 
     - For Type - Select Number Field
 
@@ -465,7 +465,7 @@ Add a page to Submit an Expense request.
 
 10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
- ![Create rendering process1](images/submit-expense-process.png " ")
+    ![Create rendering process1](images/submit-expense-process.png " ")
 
     In the Property Editor, enter the following:
 
@@ -481,11 +481,11 @@ Add a page to Submit an Expense request.
         </copy>
         ```
 
-  ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
+    ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
-  - For Sequence - Enter 5
+    - For Sequence - Enter 5
 
-  ![Create rendering process2](images/submit-expense-fetch.png " ")
+    ![Create rendering process2](images/submit-expense-fetch.png " ")
 
 11. Click **Save**.
 
@@ -531,7 +531,7 @@ Add a page to Submit an Expense request.
 
        - For Type - Select ITEM
 
-       - For Value - Select **P3_EXPENSE_TYPE**
+       - For Value - Select **P3\_EXPENSE_\TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
@@ -951,7 +951,7 @@ end;
 ```
 ![Expense Request Details ](./images/expire-task.png " ")
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri
 - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
