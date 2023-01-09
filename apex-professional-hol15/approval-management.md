@@ -286,12 +286,12 @@ To create a task definition:
          where req_id = l_request_id and emp_no=:APEX$TASK_PK;
 
         l_req_status := 'APPROVED';
-    else -- the request needs to go through another level of Approval
+       else -- the request needs to go through another level of Approval
         -- updated the request record with details of the current approver in the chain of approvers
         update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
          where req_id = l_request_id
            and emp_no=:APEX$TASK_PK;
-  -- create a new task assigned to the manager of the current approver
+       -- create a new task assigned to the manager of the current approver
         l_task_id := apex_approval.create_task(
             p_application_id => :APP_ID,
             p_task_def_static_id => 'EXPENSE_REQUEST',
@@ -301,61 +301,62 @@ To create a task definition:
                 2 => apex_approval.t_task_parameter(static_id => 'ESTIMATED_COST', string_value => :ESTIMATED_COST),
                 3 => apex_approval.t_task_parameter(static_id => 'REQ_ID',      string_value => l_request_id),
                 4 => apex_approval.t_task_parameter(static_id => 'STATUS',      string_value => l_req_status)
-        ),
-        p_detail_pk => :APEX$TASK_PK
-    );
-    end if;
-end;
-</copy>
-  ```
+             ),
+            p_detail_pk => :APEX$TASK_PK
+            );
+            end if;
+          end;
+       </copy>
+       ```
 
-  Click **Create** to add action.
+        - Click **Create** to add action.
 
-   ![Task Definition - Approved](images/task-definition-approved-action.png " ")
+       ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-   ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
+       ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
 
 12. Again, Click  **Add Actions** button.
 
    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
    Specify the following:
-  - For Name - Enter **UPDATE_REQUEST_STATUS**
 
-  - For Type - Select Execute Code
+      - For Name - Enter **UPDATE_REQUEST_STATUS**
 
-  - On Event - Select **Complete**
+      - For Type - Select Execute Code
 
-  - For Outcome  - Select **Rejected**
+      - On Event - Select **Complete**
 
-  - For Code: Copy the code below and paste it into  the code editor:
+      - For Outcome  - Select **Rejected**
 
-  ```
-  <copy>
-  declare
-    l_mgr number;
-    l_task_id number;
-    l_request_id number;
-    l_req_status varchar2(10) := 'PENDING';
-begin
-    select mgr into l_mgr from employee_details where emp_name=:APP_USER;
-    if :APP_USER = :MGR_NAME then --this is the first approver
+      - For Code: Copy the code below and paste it into  the code editor:
+
+      ```
+      <copy>
+      declare
+        l_mgr number;
+        l_task_id number;
+        l_request_id number;
+        l_req_status varchar2(10) := 'PENDING';
+      begin
+        select mgr into l_mgr from employee_details where emp_name=:APP_USER;
+      if :APP_USER = :MGR_NAME then --this is the first approver
         l_request_id := :APEX$TASK_ID;
-    else
+      else
         l_request_id := :REQ_ID;
-end if;-- the request is complete and rejected.
-update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'||:APP_USER
- where req_id = l_request_id and emp_no=:APEX$TASK_PK;
-end;
-</copy>
-```
- - Click **Create** and **Apply Changes**
+      end if;-- the request is complete and rejected.
+      update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'||:APP_USER
+      where req_id = l_request_id and emp_no=:APEX$TASK_PK;
+      end;
+      </copy>
+      ```
+     - Click **Create** and **Apply Changes**
 
- ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
+     ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
- ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
+     ![Task Definition - Rejected1](images/task-definition-rejected-code.png " ")
 
- ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
+     ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
 
 ## Task 5: Create a Page to Apply for Expense
@@ -377,31 +378,31 @@ Add a page to Submit an Expense request.
 
    Under **Page Definition** Section:
 
-   - For Page Number - Type 3
+    - For Page Number - Type 3
 
-   - For Name        - Enter **Apply for Expense**
+    - For Name - Enter **Apply for Expense**
 
-   - For Page Mode   - Select Normal   
+    - For Page Mode   - Select Normal   
 
    Under **Navigation** Section:
 
-   - For Use Breadcrumb - Select On
+    - For Use Breadcrumb - Select On
 
-   - For Breadcrumb Parent Entry - Select Home(Page 1)
+    - For Breadcrumb Parent Entry - Select Home(Page 1)
 
-   - For Use Navigation - Select On
+    - For Use Navigation - Select On
 
-   - For Navigation Preference - Select **Create a new Entry**
+    - For Navigation Preference - Select **Create a new Entry**
 
-   - For Icon  - Enter **fa-file-o**
+    - For Icon  - Enter **fa-file-o**
 
    Click **Create Page**.
 
- ![Blank page definition](images/application-blank-page-details.png " ")
+   ![Blank page definition](images/application-blank-page-details.png " ")
 
 5. In the left pane, select the Rendering tab. Right-click **Body** , select **Create Region**.
 
- ![Create create to apply an expense](images/submit-expense-region.png " ")
+   ![Create create to apply an expense](images/submit-expense-region.png " ")
 
 6. In the Property Editor, edit the appropriate attributes:
 
@@ -412,40 +413,41 @@ Add a page to Submit an Expense request.
     - For Type: Select **Form**
 
    Under **Source** section:
-    - For Type: Select SQL Query
+
+    - For Type: Select **SQL Query**
 
     - For SQL query: Copy the code below and paste it into  the code editor:
 
-   ```
+    ```
      <copy>
     Select e.empno, e.emp_name, m.emp_name as mgr_name
       from EMPLOYEE_DETAILS e , EMPLOYEE_DETAILS m
      where m.empno(+) = e.mgr
       and e.empno = :P3_EMPNO;
     </copy>
-   ```    
-![New Expense request region source](images/submit-expense-region-details.png " ")
+    ```    
+    ![New Expense request region source](images/submit-expense-region-details.png " ")
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-   - For Name - Enter **P3_EXPENSE_TYPE**
+    - For Name - Enter **P3_EXPENSE_TYPE**
 
-   - For Type - Select, **Select List**
+    - For Type - Select, **Select List**
 
   Under **List of Values** section:
 
-   - For Type - Select **Static values**
+    - For Type - Select **Static values**
 
-   - For Static Values - Enter below list and click OK
+    - For Static Values - Enter below list and click OK
 
-| Display Value |  Return Value  |
-| --- |  --- |
-| Internet/Broadband Charges | Internet/Broadband Charges |
-| Accommodation | Accommodation |
-| Conference | Conference |
-| Misc. Expenses | Misc. Expenses |
+    | Display Value |  Return Value  |
+    | --- |  --- |
+    | Internet/Broadband Charges | Internet/Broadband Charges |
+    | Accommodation | Accommodation |
+    | Conference | Conference |
+    | Misc. Expenses | Misc. Expenses |
 
-  - For Null Display Value - Enter **--Select Expense Type--**
+    - For Null Display Value - Enter **--Select Expense Type--**
 
    ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
 
@@ -457,27 +459,27 @@ Add a page to Submit an Expense request.
 
 9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section.
 
-  ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
-- Click **Save** to apply changes.
+    ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
+
+    - Click **Save** to apply changes.
 
 10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
  ![Create rendering process1](images/submit-expense-process.png " ")
-In the Property Editor, enter the following:
 
-  - For Name - Type **Fetch Employee Details for User**
+    In the Property Editor, enter the following:
 
-  - For Type - Select Execute code
+    - For Name - Type **Fetch Employee Details for User**
 
-  - For PL/SQL Code - Enter the following PL/SQL code:
+    - For Type - Select Execute code
 
-  ```
-   <copy>
-  select empno into :P3_EMPNO
-    from employee_details
-  where emp_name=:APP_USER;
-  </copy>
-  ```
+    - For PL/SQL Code - Enter the following PL/SQL code:
+
+        ```
+        <copy>
+         select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
+        </copy>
+        ```
 
   ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
@@ -489,77 +491,77 @@ In the Property Editor, enter the following:
 
 12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
- ![Create processing tab process1](images/submit-expense-create-process.png " ")
+   ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
    In the Property Editor, enter the following:
 
-   - For Name - Type **Submit Expense request**
+    - For Name - Type **Submit Expense request**
 
-   - For Type - Select **Human Task - Create**
+    - For Type - Select **Human Task - Create**
 
   Under **Settings** Section:
 
-   - For Definition - Select **Expense request**
+    - For Definition - Select **Expense request**
 
-   - For Details Primary key Element: Select **P3_EMPNO**
+    - For Details Primary key Element: Select **P3_EMPNO**
 
-   - For Success Message: Type **Expense Request submitted successfully**
+    - For Success Message: Type **Expense Request submitted successfully**
 
- ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
+    ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
 13. Under Parameters for Submit Expense request process:
 
-    - For  Estimated Cost, enter the following:
+    a) For  Estimated Cost, enter the following:
 
-      - For Type - Select ITEM
+       - For Type - Select ITEM
 
-      - For Value - Select **P3_ESTIMATED_COST**
+       - For Value - Select **P3_ESTIMATED_COST**
 
     ![Process parameters1](images/submit-expense-report-cost.png " ")
 
-    -  For  Expense Status, enter the following:
+    b) For  Expense Status, enter the following:
 
-      - For Type - Select Static Value
+       - For Type - Select Static Value
 
-      - For Value - Type **PENDING**
+       - For Value - Type **PENDING**
 
      ![Process parameters2](images/submit-expense-status.png " ")
 
-  - For  Expense Type, enter the following:
+    c) For  Expense Type, enter the following:
 
-      - For Type - Select ITEM
+       - For Type - Select ITEM
 
-      - For Value - Select **P3_EXPENSE_TYPE**
+       - For Value - Select **P3_EXPENSE_TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
- - For  Request ID, enter the following:
+    d) For  Request ID, enter the following:
 
-     - For Type - Select NULL
+       - For Type - Select NULL
 
- ![Process parameters4](images/submit-expense-report-reqid.png " ")
+    ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
 14. Click **Save**
 
 15. On Rendering tab, Right-click Body and select **Create Button**.
 
- ![Create Button](images/submit-expense-create-button.png " ")
+    ![Create Button](images/submit-expense-create-button.png " ")
 
- In the Property Editor, enter the following:
+    In the Property Editor, enter the following:
 
-   - For Button Name - Type **SUBMIT_REQUEST**
+      - For Button Name - Type **SUBMIT_REQUEST**
 
-   - For Hot - Select On
+      - For Hot - Select On
 
- ![Button details](images/submit-expense-button-details.png " ")
+    ![Button details](images/submit-expense-button-details.png " ")
 
 16. Navigate to Processing tab, Select Process **Submit Expense Request**.
 
-     Under **Server-Side Condition** Section:
+    Under **Server-Side Condition** Section:
 
-        - For When Button Pressed : Select **SUBMIT_REQUEST**        
+    - For When Button Pressed : Select **SUBMIT_REQUEST**        
 
- ![Submit button](images/submit-expense-submit-button.png " ")
+    ![Submit button](images/submit-expense-submit-button.png " ")
 
 17. Click **Save**.
 
