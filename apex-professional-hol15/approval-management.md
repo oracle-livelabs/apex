@@ -147,15 +147,15 @@ To create a task definition:
 
 4. Specify the task definition name and define the metadata.
 
-   - For Name - Enter **Expense Request**
+       - For Name - Enter **Expense Request**
 
-   - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
+       - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
 
-   - For Static ID - Enter **EXPENSE_REQUEST**
+       - For Static ID - Enter **EXPENSE_REQUEST**
 
-   - For Priority - Select **2-High**
+       - For Priority - Select **2-High**
 
-   Leave Business Administrator and Potential owner blank for now.
+       Leave Business Administrator and Potential owner blank for now.
 
 5. Click **Create**.
 
@@ -164,41 +164,42 @@ To create a task definition:
 
 6. Under **Settings** Section:
 
-    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+       - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
 
-    - For Actions Source - Select SQL Query.
+       - For Actions Source - Select SQL Query.
 
-    - For Actions SQL query - Copy the code below and paste it into  the code editor:  
-    ```
-    <copy>
-   select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-   </copy>
-   ```
+       - For Actions SQL query - Copy the code below and paste it into  the code editor:  
+       ```
+       <copy>
+       select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+       </copy>
+      ```
 
-    ![Task Definition Settings](images/task-definition-settings.png " ")
+       ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
-   - Click Add Row.
 
-   - For Participant Type - Select **Potential Owner**
+       - Click Add Row.
 
-   - For Value Type - Select **SQL Query**
+       - For Participant Type - Select **Potential Owner**
 
-   - For Value - Copy the code below and paste it into  the code editor
+       - For Value Type - Select **SQL Query**
 
-   ```
-   <copy>
-     select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-   </copy>
-   ```
+       - For Value - Copy the code below and paste it into  the code editor
 
-   - Click **Apply Changes** to save all existing changes.
+       ```
+       <copy>
+         select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+       </copy>
+       ```
 
-    ![Task Definition Participants](images/task-definition-participants.png " ")
+       - Click **Apply Changes** to save all existing changes.
+
+       ![Task Definition Participants](images/task-definition-participants.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
-    ![Click on Expense Request  ](images/task-definition-created.png " ")
+       ![Click on Expense Request  ](images/task-definition-created.png " ")
 
 9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
@@ -216,21 +217,22 @@ To create a task definition:
      ![Task Definition Actions Create](images/task-definition-actions.png " ")
 
     Specify the following:
-    - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
-    - For Type - Select Execute Code
+        - For Name - Enter **CREATE_EXPENSE_REPORT_ENTRY**
 
-    - On Event - Select Create
+        - For Type - Select Execute Code
 
-    - For Code: Copy the code below and paste it into  the code editor:
+        - On Event - Select Create
 
-    ```
-    <copy>
+        - For Code: Copy the code below and paste it into  the code editor:
+
+        ```
+        <copy>
          declare
            l_req_id number;
-    begin
-    if :APP_USER = :EMP_NAME then --this is the original initiator
-        l_req_id := :APEX$TASK_ID;
+        begin
+          if :APP_USER = :EMP_NAME then --this is the original initiator
+           l_req_id := :APEX$TASK_ID;
         -- create a new record in the Employee Expense Request table EMP_EXPENSE_REQUEST
         insert into EMP_EXPENSE_REQUEST values
         (to_number(l_req_id),
@@ -241,8 +243,8 @@ To create a task definition:
        'PENDING');
     end if;
     end;
-    </copy>
-    ```
+        </copy>
+        ```
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -252,32 +254,33 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
-    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-    - For Type - Select Execute Code
+        - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
-    - On Event - Select **Complete**
+        - For Type - Select Execute Code
 
-    - For Outcome : Select **Approved**
+        - On Event - Select **Complete**
 
-    - For Code: Copy the code below and paste it into  the code editor:
+        - For Outcome : Select **Approved**
 
-   ```
-    <copy>
-    declare
-    l_mgr number;
-    l_task_id number;
-    l_request_id number;
-    l_req_status varchar2(10) :='PENDING';
- Begin
-    if :APP_USER = :MGR_NAME then --this is the first approver
+        - For Code: Copy the code below and paste it into  the code editor:
+
+        ```
+        <copy>
+        declare
+        l_mgr number;
+        l_task_id number;
+        l_request_id number;
+        l_req_status varchar2(10) :='PENDING';
+        Begin
+           if :APP_USER = :MGR_NAME then --this is the first approver
        -- set the request id to be the id of the task created when the request was submitted
-       l_request_id := :APEX$TASK_ID;
-    else
+          l_request_id := :APEX$TASK_ID;
+        else
        -- this is an intermediate approver. Set the request-id from the corresponding task parameter value
        l_request_id := :REQ_ID;
-    end if;
-    if  :ESTIMATED_COST < 50000 then -- the approval is complete
+       end if;
+       if  :ESTIMATED_COST < 50000 then -- the approval is complete
 
         update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
          where req_id = l_request_id and emp_no=:APEX$TASK_PK;
