@@ -218,7 +218,7 @@ To create a task definition:
 
     Specify the following:
 
-    - For Name - Enter **CREATE\_EXPENSE_\REPORT_ENTRY**
+    - For Name - Enter **CREATE\_EXPENSE\_REPORT\_ENTRY**
 
     - For Type - Select Execute Code
 
@@ -255,7 +255,7 @@ To create a task definition:
 
     Specify the following:
 
-    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE_\STATUS**
+    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     - For Type - Select Execute Code
 
@@ -313,7 +313,7 @@ To create a task definition:
 
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-       ![Task Definition - Approved action created](images/task-definition-approved-code.png " ")
+       ![Task Definition - Approved action created](images/task-definition-approved-code0.png " ")
 
 12. Again, Click  **Add Actions** button.
 
@@ -321,7 +321,7 @@ To create a task definition:
 
    Specify the following:
 
-      - For Name - Enter **UPDATE\_REQUEST_\STATUS**
+      - For Name - Enter **UPDATE\_REQUEST\_STATUS**
 
       - For Type - Select Execute Code
 
