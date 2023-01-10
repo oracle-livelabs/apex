@@ -38,7 +38,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
     ```
     ![Create Table](images/create-table1.png " ")
 
-    ![Insert into Table](images/insert-into-table1.png " ")  
+    ![Insert into Table](images/insert-into-table.png " ")  
 
 4. Select **RESTful Services** under **SQL Workshop**.
 
