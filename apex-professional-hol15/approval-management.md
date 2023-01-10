@@ -616,9 +616,9 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 
 ## Task 7: Create an Email Template  
-    Add an Email Template to add for before expiry action in the task definition.
+Add an Email Template to add for before expiry action in the task definition.
 
-    To define an email template:
+To define an email template:
 
 1. Navigate to the Shared Components page:
 
@@ -669,7 +669,6 @@ Add a Unified Task list page to see the submitted expense request list by a requ
     </copy>
      ```
     - For Plain Text Format - Copy the text below and paste it into Plain text format:
-
     ```
     <copy>
     Hello #APEX_TASK_OWNER#,
@@ -689,28 +688,24 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 1. Navigate to SQL Workshop and click SQL Commands
 
-2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table.
-Execute the command one by one.  
+2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table and Execute the command one by one.  
 
-  Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
+   Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
 
-  Add a new column HR_MGR (HR Manager) to the existing Employee table EMPLOYEE_DETAILS and update the existing Employee records as shown below:
+   Add a new column HR_MGR (HR Manager) to the existing Employee table EMPLOYEE_DETAILS and update the existing Employee records as shown below:
+    ```
+    <copy>
+     insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
+     insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
+     alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
+     update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE' where EMPNO in  (10,20);  
+     update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN' where EMPNO in  (30,40);
+    </copy>
+    ```  
 
-  ```
-  <copy>
-  insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
-  insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
-  alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
-  update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE'
-  where EMPNO in  (10,20);  
-  update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN'
-  where EMPNO in  (30,40);
-  </copy>
-  ```  
+    ![SQL Commands](./images/sql-commands.png " ")
 
-  ![SQL Commands](./images/sql-commands.png " ")
-
-  NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
+   NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
 
 ## Task 9: Updating Expense Request Task Definition
 We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
