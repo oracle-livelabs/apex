@@ -712,22 +712,22 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
 1. Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
 
- ![Edit Expense Request](./images/edit-td.png " ")
+    ![Edit Expense Request](./images/edit-td.png " ")
 
- ![Click Task definition - Expense request](./images/edit-td-name.png " ")
+    ![Click Task definition - Expense request](./images/edit-td-name.png " ")
 2. Under **Actions** - Edit **NEXT_APPROVER_OR_UPDATE_STATUS**
 
- Copy the code below and  replace it into the code editor:
+    Copy the code below and  replace it into the code editor:
 
- ```
-<copy>
-declare
+    ```
+    <copy>
+    declare
     l_mgr number;
     l_task_id number;
     l_request_id number;
     l_req_status varchar2(10) :='PENDING';
-begin
-    select mgr into l_mgr from employee_details where emp_name=:APP_USER;
+    begin
+       select mgr into l_mgr from employee_details where emp_name=:APP_USER;
     if :APP_USER = :MGR_NAME then --this is the first approver
        -- set the request id to be the id of the task created when the request was submitted
        l_request_id := :APEX$TASK_ID;
@@ -759,11 +759,11 @@ begin
         ),
         p_detail_pk => :APEX$TASK_PK
     );
-end if;
-end;
-</copy>
-```
-Click **Apply Changes**
+    end if;
+    end;
+    </copy>
+    ```
+    Click **Apply Changes**
 
 3. **Under Participants** Section - Click Add Row
 
@@ -773,66 +773,64 @@ Click **Apply Changes**
 
     - For Value -  Copy the code below and  paste it into the code editor:
 
-```
- <copy>
-   select HR_MGR from EMPLOYEE_DETAILS where EMPNO = :APEX$TASK_PK
- </copy>
-   ```
-![Add participant](./images/td-participants-add-row.png " ")  
+    ```
+    <copy>
+    select HR_MGR from EMPLOYEE_DETAILS where EMPNO = :APEX$TASK_PK
+    </copy>
+    ```
+    ![Add participant](./images/td-participants-add-row.png " ")  
 
- ![Participant value](./images/td-participants-value.png " ")
+    ![Participant value](./images/td-participants-value.png " ")
 
- Click **Apply Changes** to save the updated Participants.
+    Click **Apply Changes** to save the updated Participants.
 
- Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
+    Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
 
 4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
  Under **Actions** Section: Click **Add Actions**
 
- - For Name - Enter **DELEGATE_EXPENSE_REQUEST**
+    - For Name - Enter **DELEGATE\_EXPENSE\_REQUEST**
 
- - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
- - On Event - Select Delegate
+    - On Event - Select Delegate
 
- - For Success Message - Enter **Request Delegated Successfully**
+    - For Success Message - Enter **Request Delegated Successfully**
 
- - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into  the code editor:
+    ```
+    <copy>
+    begin
+    apex_approval.add_to_history ('Request Delegated by '|| :APEX$TASK_OWNER);
+    end;
+    </copy>
+    ```
+    - Click **Create** to add action.
 
-  ```
-<copy>
-begin
-apex_approval.add_to_history ('Request Delegated by '|| :APEX$TASK_OWNER);
-end;
-</copy>
-```
-- Click **Create** to add action.
+    ![Add action - delegate](./images/td-4-action.png " ")
 
- ![Add action - delegate](./images/td-4-action.png " ")
-
- ![Add action - delegate details](./images/td-delegate.png " ")
+    ![Add action - delegate details](./images/td-delegate.png " ")
 
 5. Again click **Add Actions** to request information.
 
-   - For Name - Enter **REQUEST_MORE_INFO**
+    - For Name - Enter **REQUEST\_MORE\_INFO**
 
-   - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-   - On Event - Select **Request Information**
+    - On Event - Select **Request Information**
 
-   - For Success Message - Enter **Information Requested Successfully**
+    - For Success Message - Enter **Information Requested Successfully**
 
-   - For Code: Copy the code below and paste it into  the code editor:
-
-   ```
-  <copy>
-begin
-apex_approval.add_to_history ('Information Requested From '|| :APEX$TASK_OWNER);
-end;
-  </copy>
-```
-Click **Create** to add action.
+    - For Code: Copy the code below and paste it into  the code editor:
+    ```
+    <copy>
+    begin
+    apex_approval.add_to_history ('Information Requested From '|| :APEX$TASK_OWNER);
+    end;
+    </copy>
+    ```
+    - Click **Create** to add action.
 
   ![Add Action - Request Info](./images/td-5-action.png " ")
 
@@ -843,17 +841,17 @@ Add deadline and expiration events in actions for expense requests.
 
 1. Under **Deadline** Section:
 
- - For Due on type - Select interval
+    - For Due on type - Select interval
 
- - For Due on the interval - Type PT30M
+    - For Due on the interval - Type PT30M
 
- - For Expiration Policy - Select Expire
+    - For Expiration Policy - Select Expire
 
- Click **Apply Changes**
+    Click **Apply Changes**
 
- ![Select Deadline section](./images/td-deadline1.png " ")
+    ![Select Deadline section](./images/td-deadline1.png " ")
 
- ![Enter Deadline details](./images/td-deadline.png " ")
+    ![Enter Deadline details](./images/td-deadline.png " ")
 
 2. Select **Expense Request**
 
@@ -861,89 +859,83 @@ Add deadline and expiration events in actions for expense requests.
 
    Specify the following attributes:
 
-     - For Name - Enter **BEFORE_EXPIRY**
+    - For Name - Enter **BEFORE_EXPIRY**
 
-     - For Type - Select Send Email
+    - For Type - Select Send Email
 
-     - On Event - Select **Before Expire**
+    - On Event - Select **Before Expire**
 
-     - For Before Expire Interval - Enter **PT25M**
+    - For Before Expire Interval - Enter **PT25M**
 
-     - For Success Message - Enter **Task will expire in 5 minutes**
+    - For Success Message - Enter **Task will expire in 5 minutes**
 
-  Under **Send Email Settings** Section:
-     - For From - Enter the Email address of your wish
+   Under **Send Email Settings** Section:
 
-     - For To - Enter the Email address of your wish
+    - For From - Enter the Email address of your wish
 
-     - For Email Template - Select **BEFORE EXPENSE EXPIRY EMAIL**
+    - For To - Enter the Email address of your wish
 
-     - For Subject - Enter
+    - For Email Template - Select **BEFORE EXPENSE EXPIRY EMAIL**
 
-  ![Add Action - Before Expire](./images/td-6-action.png " ")
+    - For Subject - Enter
 
-  ![Enter Before expire details](./images/placeholder-button.png " ")
+    ![Add Action - Before Expire](./images/td-6-action.png " ")
 
-  Click the **Set Placeholder Values** button beside the email template.
+    ![Enter Before expire details](./images/placeholder-button.png " ")
 
-  Add a Column or Value for mentioned Placeholders.
+   Click the **Set Placeholder Values** button beside the email template.
 
-  | Placeholder|  Column or Value  |
-| --- |  --- |
-| APEX_TASK_SUBJECT | &APEX$TASK_SUBJECT. |
-| APEX_TASK_OWNER | &APEX$TASK_OWNER. |
-| EMP_NAME | &EMP_NAME. |
-| APPROVAL_URL | Paste the Login URL of your Expense Tracker Application |
+   Add a Column or Value for mentioned Placeholders.
 
-  Click **Save** to add placeholders.
+   | Placeholder|  Column or Value  |
+   | --- |  --- |
+   | APEX_TASK_SUBJECT | &APEX$TASK_SUBJECT. |
+   | APEX_TASK_OWNER | &APEX$TASK_OWNER. |
+   | EMP_NAME | &EMP_NAME. |
+   | APPROVAL_URL | Paste the Login URL of your Expense Tracker Application |
 
-  ![Set placeholders for email template](./images/placeholder.png " ")
+   Click **Save** to add placeholders.
 
-  Click **Create** to save an action.
+   ![Set placeholders for email template](./images/placeholder.png " ")
 
-  ![Create action before expiry](./images/td-before-email.png " ")
+   Click **Create** to save an action.
+
+   ![Create action before expiry](./images/td-before-email.png " ")
 
 3. To add Expire event, click on **Add Actions** again and specify the following attributes:
 
-  - For Name - Enter **TASK_EXPIRED**
+    - For Name - Enter **TASK_EXPIRED**
 
-  - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-  - For Execution Sequence - 70
+    - For Execution Sequence - 70
 
-  - On Event - Select **Expire**
+    - On Event - Select **Expire**
 
-  - For Success Message - Enter 'Task Expired Successfully'
+    - For Success Message - Enter 'Task Expired Successfully'
 
-  - For location: Select Local Database
+    - For Code: Copy the code below and paste it into  the code editor:
 
-  - For Language: Select PL/SQL
-
-  - For Code: Copy the code below and paste it into  the code editor:
-
- ```
-<copy>
-begin
-apex_approval.add_to_history( 'Task ' || :APEX$TASK_SUBJECT || ' Expired');
-end;
-</copy>
-```
-Click **Create** to add action.
+    ```
+    <copy>
+    begin
+    apex_approval.add_to_history( 'Task ' || :APEX$TASK_SUBJECT || ' Expired');
+    end;
+    </copy>
+    ```
+   Click **Create** to add action.
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
   Note: In order to expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
-
-  ```
-<copy>
-begin
-BEGIN
+    ```
+    <copy>
+    BEGIN
     apex_approval.handle_task_deadlines;
-END;
-end;
-</copy>
-```
-![Expense Request Details ](./images/expire-task.png " ")
+    END;
+    </copy>
+    ```
+   ![Expense Request Details ](./images/expire-task.png " ")
 
 ## Acknowledgments
 
