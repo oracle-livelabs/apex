@@ -55,11 +55,11 @@ In this lab, you will:
 
     - For **Table Options**, Select the **Checkbox**.
 
-    - For **Object**, Select and Move the tables **DEMO_PROJECTS** and **EBA_DEMO_IR_EMP** to the right side.
+    - For **Object**, Select and Move the tables **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** to the right side.
 
     ![Set Attributes and click next](images/create-script3.png " ")
 
-    *Note that it might take 5 to 10 seconds or more, please wait.*
+    *Note: that it might take 5 to 10 seconds or more, please wait.*
 
 9. You will now see the **Scripts** created. Click **Create**.
 
@@ -73,7 +73,7 @@ In this lab, you will:
 
     - For **Name**, select **data.sql**
 
-    - For **Tables**, ensure **DEMO_PROJECTS** and **EBA_DEMO_IR_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
+    - For **Tables**, ensure **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
 
     ![Define Security Attributes](images/create-data-packages.png " ")
 
@@ -91,16 +91,13 @@ In this lab, you will:
 
     ![Select Export and click Next](images/export-app1.png " ")
 
-15. In the **Export Application** page, Under **Export Preferences**, select **Yes and Install on Import Automatically**.  
-
-    Then Click **Export**.
+15. In the **Export Application** page, Under **Export Preferences**, select **Yes and Install on Import Automatically** and Click **Export**.
 
     ![Select Yes and Install on Import Automatically](images/export-app2.png " ")
 
 16. You will now notice that the application is downloaded as **fNNN.sql**
 
     ![File downloaded](images/exported-app.png " ")
-
 
 ## Task 2: Import Application into the Target Workspace and Verify Database Objects.
 
@@ -124,31 +121,29 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 
     ![Select File from computer](images/select-file.png " ")
 
-5. Click **Next**.
-
     ![Click Next](images/click-next.png " ")
 
-6. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
+5. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
 
     ![Click Install Application](images/install-app1.png " ")
 
-7. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
+6. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
 
     ![Click Next](images/install-so1.png " ")
 
-8. Click **Install**.
+7. Click **Install**.
 
     ![Click Install](images/install-app2.png " ")
 
-9. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application** to review the **Database Objects**.
+8. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application** to review the **Database Objects**.
 
     ![Application installed , Click Edit Application](images/install-app3.png " ")
 
-10. Click on the Arrow mark next to **SQL Workshop** and then click **Object Browser**.
+9. Click on the Arrow mark next to **SQL Workshop** and then click **Object Browser**.
 
     ![Navigate to Object Browser](images/object-browser1.png " ")
 
-11. Select **DEMO_PROJECTS** table and then click **Data**. Verify the Data in the table **DEMO_PROJECTS**.
+10. Select **DEMO\_PROJECTS** table and then click **Data**. Verify the Data in the table **DEMO\_PROJECTS**.
 
     ![Navigate to DEMP_PROJECTS to view data](images/object-browser2.png " ")
 
