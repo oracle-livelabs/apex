@@ -24,23 +24,23 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
 1. Log in to the new Workspace you created.
 
-  ![Login to new workspace you created](images/login-to-dev.png " ")
+    ![Login to new workspace you created](images/login-to-dev.png " ")
 
 2. Click **Gallery**.
 
-  ![Navigate to Gallery](images/navigate-to-gallery.png " ")
+    ![Navigate to Gallery](images/navigate-to-gallery.png " ")
 
 3. Select **Samples** under **Gallery**.
 
-  ![Select Samples](images/click-samples.png " ")
+    ![Select Samples](images/click-samples.png " ")
 
 4. Navigate to **Sample Reporting** and click **Download App**.
 
-  ![Download Sample Reporting](images/download-app.png " ")
+    ![Download Sample Reporting](images/download-app.png " ")
 
 5. Navigate back to your application and click the Arrow button next to **APP Builder** in the top navigation menu and select **Import**.
 
-  ![Navigate to Import](images/import-app1.png " ")
+    ![Navigate to Import](images/import-app1.png " ")
 
 6.  Under **Import**, click **Drag and Drop**.
 
@@ -48,37 +48,33 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
 7. Choose the file we **Downloaded** in the **Step 4** from your **Local System** and then click **Next**.
 
-  ![Select file](images/import-app3.png " ")
+    ![Select file](images/import-app3.png " ")
 
-  ![Click Next](images/import-app4.png " ")
+    ![Click Next](images/import-app4.png " ")
 
-6. Click **Next**.
+8. Click **Next**.
 
-  ![Click Next](images/import-app5.png " ")
-
+    ![Click Next](images/import-app5.png " ")
 
 9. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
 
-  ![Click Install Application](images/import-app6.png " ")
-
+    ![Click Install Application](images/import-app6.png " ")
 
 10. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
 
-  ![Click Next](images/import-app7.png " ")
+    ![Click Next](images/import-app7.png " ")
 
 11. Click **Install**.
 
-  ![Click Install](images/import-app8.png " ")
+    ![Click Install](images/import-app8.png " ")
 
 12. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application**
 
-  ![Application Installed](images/import-app9.png " ")
+    ![Application Installed](images/import-app9.png " ")
 
 13. Click **Sign Out**.
 
-  ![Click Sign In](images/sign-out1.png " ")
-
-
+    ![Click Sign In](images/sign-out1.png " ")
 
 ## Task 2: Configuring the Target System.
 
@@ -149,26 +145,23 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
   ![Define Remote Deployment attributes and click next](images/perform-rd4.png " ")
 
 9. The Remote Deployment Options page appears.
-  - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
-  - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
-  - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.
+    - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
+    - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
+    - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.
 
+    After making the above selections, click **Deploy**.
 
-After making the above selections, click **Deploy**.
-
-![Enable Overwrite Existing Application](images/perform-rd5.png " ")
+    ![Enable Overwrite Existing Application](images/perform-rd5.png " ")
 
 10. You see the Remote Deployment Successful message. Your application has been successfully deployed to the remote server.
 
-  ![Application Deployed Successfully](images/perform-rd6.png " ")
+    ![Application Deployed Successfully](images/perform-rd6.png " ")
 
 11. Log in to your remote APEX instance. Make sure that the application is available and with the same application id as in the source system.
 
-  ![Login into your remote APEX Instance](images/perform-rd7.png " ")
+    ![Login into your remote APEX Instance](images/perform-rd7.png " ")
 
-
-
-  ## **Acknowledgments**
+## Acknowledgments
 
   - **Author** - Roopesh Thokala, Product Manager
   - **Contributor** - Ankita Beri, Product Manager
