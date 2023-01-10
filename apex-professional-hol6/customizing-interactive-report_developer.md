@@ -25,7 +25,6 @@ In this lab, you edit an interactive report in page designer and customize it fo
     ![](images/click-page1.png " ")  
 
 2. When the end users click an edit icon for a specified row, they should be directed to a page which shows the column values for that row. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to single row view.
-<!-- In the Developer Toolbar, click Edit Page <n>.  -->
     a) Under Rendering, navigate to **Projects** Interactive Report and then on the Property Editor select **Attributes**. Under **Link**, for **Link Column**, select **Link to Single Row View**. Click **Save and Run Page**.
 
     ![](images/change-srw.png " ")
