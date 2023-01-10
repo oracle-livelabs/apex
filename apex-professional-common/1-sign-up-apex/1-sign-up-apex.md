@@ -125,11 +125,9 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 
 3. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
 
-    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
-
     ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
 
-    From the Cloud Dashboard, select the **Navigation Menu** in the upper left
+    From the Cloud Dashboard, select the **Navigation Menu** in the upper left-hand corner
 
     ![Navigation Menu](images/oci-navigation-menu.png " ")
 
