@@ -11,7 +11,6 @@ Estimated Time: 15 minutes
 - Create database objects using Quick SQL
 - Load data using Data Workshop page.
 
-
 ## Task 1: Create database objects using Quick SQL
 
 1. Return to your APEX Workspace and click **'⌄'** next to **SQL Workshop** tab, then click **Utilities** and then select **Quick SQL**.
@@ -37,6 +36,7 @@ Estimated Time: 15 minutes
      </copy>
     ```
     *Note that the Indentation from the code you copied should be similar to the one we have in the screenshot below*
+
 3. Review the shorthand code. How many tables will be created and how are they related? What types of columns and constraints will be created for the tables? Note that the **Help** button provides details on the shorthand syntax along with several examples of its usage.
 
     When ready, in the Quick SQL (left pane) toolbar, click **Generate SQL**.
@@ -123,10 +123,9 @@ In this step, you will learn how to create a table and Load data using the Data 
     ![View table Projects](images/view-projects-table-data1.png " ")
 
 ## Summary
-
 This completes the Lab. At this point, you know how to use Quick SQL to generate database objects using a SQL shorthand. You also know how to use Data Workshop utility to load data.
 
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Product Manager
-* **Contributors** - Ankita Ber, Product Manager
+* **Contributors** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

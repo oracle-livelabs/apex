@@ -251,9 +251,11 @@ The numeric value of the COLOR\_ID column will now store a reference to the syst
 
 ![Lookup table results](./images/lookup-table-results.png " ")
 
+## Summary
 You now know how to add new columns to your existing tables, how to create lookup tables for reference information, and how to create and run a SQL script to populate your tables. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
