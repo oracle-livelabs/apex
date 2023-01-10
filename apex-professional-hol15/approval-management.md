@@ -844,6 +844,8 @@ We will further extend the Expense Tracker Application to see how tasks could be
 ## Task 10: Add Deadline and Expiration for an Expense Request
 Add deadline and expiration events in actions for expense requests.
 
+Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
+
 1. Under **Deadline** Section:
 
     - For Due on type - Select interval
@@ -942,5 +944,6 @@ Add deadline and expiration events in actions for expense requests.
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri
+- **Author** - Ankita Beri, Product Manager
+- **Contributor** - Roopesh Thokala , Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
