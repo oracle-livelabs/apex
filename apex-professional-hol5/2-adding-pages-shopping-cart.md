@@ -447,9 +447,12 @@ This region lets users read the customer reviews for this product.
 
   ![](./images/create-fs-page15.png " ")
 
+## Summary
 
-## **Acknowledgments**
+You now know how to create an Application item, Application process, Faceted search page and Cards page. You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
