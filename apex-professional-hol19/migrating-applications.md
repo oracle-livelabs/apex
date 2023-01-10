@@ -46,18 +46,22 @@ In this lab, you will:
     ![Click Create from database object](images/create-script1.png " ")
 
 7. Under **Script Attributes**, select the below options and click **Next**.
+
     - For **Name**, Select **Database Objects**.
+
     - For **Object Type**, select Table**
 
     ![Define Script Attributes](images/create-script2.png " ")
 
 8. Now set the following attributes and then click **Next**.
+
     - For **Table Options**, Select the **Checkbox**.
+
     - For **Object**, Select and Move the tables **DEMO_PROJECTS** and **EBA_DEMO_IR_EMP** to the right side.
 
     ![Set Attributes and click next](images/create-script3.png " ")
 
-  *Note that it might take 5 to 10 seconds or more, please wait.*
+    *Note that it might take 5 to 10 seconds or more, please wait.*
 
 9. You will now see the **Scripts** created. Click **Create**.
 
@@ -70,6 +74,7 @@ In this lab, you will:
 11. Under **Script Attributes**, Select the following and click **Next**.
 
     - For **Name**, select **data.sql**
+    
     - For **Tables**, ensure **DEMO_PROJECTS** and **EBA_DEMO_IR_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
 
     ![Define Security Attributes](images/create-data-packages.png " ")
@@ -99,7 +104,7 @@ In this lab, you will:
     ![File downloaded](images/exported-app.png " ")
 
 
-## Task 2: Importing Application into the Target Workspace and Verify Database Objects.
+## Task 2: Import Application into the Target Workspace and Verify Database Objects.
 
 In this Lab, You will login into a new workspace or the Workspace you created in previous labs and import the application along with Supporting objects.
 
