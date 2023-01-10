@@ -34,6 +34,7 @@ In this lab, you will:
     ![](./images/navigate-to-shopping-cart-page.png " ")
 
 3. In the Rendering tree (left pane), click **Processing** tab.
+
 4. Over **Validating**, right-click **Create Validation**.
 
      ![](./images/create-validation1.png " ")  
@@ -128,37 +129,43 @@ In this lab, you will:
 
      ![](./images/create-branch1.png " ")  
 
-3. In the Property Editor, enter the following:     
+3. In the Property Editor, enter the following:  
+
     - For Name - enter **Go to Orders**
+
     - Navigate to Target attribute and click **No Link Defined**.
         - For Type - select **Page in this application**
         - For Page - enter **16**
         - For Set Items - enter:
-
-            | Name | Value  |
-            | --- |  --- |
-            | P16_ORDER | &P16_ORDER_ID. |
-
+          | Name | Value  |
+          | --- |  --- |
+          | P16_ORDER | &P16\_ORDER\_ID. |
         - For Clear Cache - enter **16**.
         - Click **OK**.
+
     - Under Server-side condition, for When Button Pressed, select **Proceed**.
 
-  ![](./images/create-branch2.png " ")
+    ![](./images/create-branch2.png " ")
 
 4. Create a second branch when the user clears the shopping cart. Right-click on **After Processing** and click **Create Branch**.
+
 5. In the Property Editor, enter the following:
     - For Name - enter **Go to Products**
+
     - Navigate to Target attribute and click **No Link Defined**
         - For Type - select **Page in this application**
         - For Page - enter **1**
         - For Clear Cache - enter **1**
         - Click **OK**
+
     - Under Server-side condition, for When Button Pressed, select **Clear**
 
+## Summary
 
 You now know how to add validations, processes and branches to your APEX page. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, May 2022

@@ -275,10 +275,12 @@ In this task, you will create two dynamic actions:
 
    ![Products Page](./images/products-page.png " ")
 
+## Summary
 
 You now know how to enhance faceted search and cards region. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022

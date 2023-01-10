@@ -10,7 +10,7 @@ Estimated Time: 10 minutes
 
 - Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Enhancing Smart Filters
+## Task 1: Enhance Smart Filters
 
 In this Lab, you are going to customize the **Smart Filters** page in **Demo Projects** application.
 The **Project Tasks Search** page utilizes Smart Filters to display the records.
@@ -40,7 +40,7 @@ The revised page appears.
     ![Show edit Filter](images/show-edit-filter1.png " ")
 
 
-## Task 2: Adding New Smart Filter
+## Task 2: Add New Smart Filter
 
 Add new filters in Page Designer by right-clicking filter and selecting Create Filter from the context menu.
 
@@ -63,13 +63,12 @@ Filters map to specific database column. When creating a new filter, you can cre
 3. Click **Save and Run Page** in the upper right corner. If prompted, enter your workspace username and password and click Sign In.
 The revised page appears.
 
+## Summary
 
+You now know how to create smart filters and customize them. You may now **proceed to the next lab**.
 
-## **Summary**
-
-You now know how to create smart filters and customize them.
-
-## **Acknowledgements**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, May 2022
