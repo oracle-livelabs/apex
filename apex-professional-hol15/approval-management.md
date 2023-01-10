@@ -580,39 +580,39 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 4. Specify the following page attributes:
 
-   - For Page Number - Type 4
+    - For Page Number - Type 4
 
-   - For Name - Type **My Approvals**
+    - For Name - Type **My Approvals**
 
-   - For Report Context - Select **My Tasks**
+    - For Report Context - Select **My Tasks**
 
-   Click **Create Page**. A unified Task List page was created.
+    Click **Create Page**. A unified Task List page was created.
 
-   ![Click Create Page](./images/utl-details.png " ")   
+    ![Click Create Page](./images/utl-details.png " ")   
 
 5. To create another Unified Task list page, Again, Click Application ID on the right-above corner of the page designer. Application Home page appears.
 
- ![Crete Unified Task List2](./images/utl-page-created.png " ")
+    ![Crete Unified Task List2](./images/utl-page-created.png " ")
 
 6. Click **Create** button. Create Application wizard appears.
 
- ![Click create on application home page](./images/utl-create-page.png " ")
+    ![Click create on application home page](./images/utl-create-page.png " ")
 
 7. Under Components, Select Unified Task List and click **Next**
 
-  ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
+    ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
 
 8. Specify the following page attributes:
 
-   - For Page Number - Type 6
+    - For Page Number - Type 6
 
-   - For Name - Type **My Expense Requests**
+    - For Name - Type **My Expense Requests**
 
-   - For Report Context - Select **Initiated by Me**
+    - For Report Context - Select **Initiated by Me**
 
-   Click **Create Page**. A unified Task List page was created.
+    Click **Create Page**. A unified Task List page was created.
 
-   ![Click create page ](./images/utl-my-requests.png " ")
+    ![Click create page ](./images/utl-my-requests.png " ")
 
 
 ## Task 7: Create an Email Template  
