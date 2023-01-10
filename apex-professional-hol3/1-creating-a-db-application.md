@@ -193,10 +193,12 @@ Click **Run Application**.
 
     The new application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
 
+## Summary
 
 You now know how to create an application with a number of different page types based on existing database objects. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
