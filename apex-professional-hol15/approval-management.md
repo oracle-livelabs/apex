@@ -692,20 +692,24 @@ To define an email template:
 
    Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
 
-   Add a new column HR_MGR (HR Manager) to the existing Employee table EMPLOYEE_DETAILS and update the existing Employee records as shown below:
+   Add a new column HR\_MGR (HR Manager) to the existing Employee table EMPLOYEE\_DETAILS and update the existing Employee records as shown below:
     ```
     <copy>
-     insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
-     insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
-     alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
-     update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE' where EMPNO in  (10,20);  
-     update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN' where EMPNO in  (30,40);
+    insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
+
+    insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
+
+    Alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
+
+    Update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE' where EMPNO in  (10,20);
+
+    Update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN' where EMPNO in  (30,40);
     </copy>
     ```  
 
     ![SQL Commands](./images/sql-commands.png " ")
 
-   NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
+    NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
 
 ## Task 9: Updating Expense Request Task Definition
 We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
@@ -715,7 +719,8 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ![Edit Expense Request](./images/edit-td.png " ")
 
     ![Click Task definition - Expense request](./images/edit-td-name.png " ")
-2. Under **Actions** - Edit **NEXT_APPROVER_OR_UPDATE_STATUS**
+
+2. Under **Actions** - Edit **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     Copy the code below and  replace it into the code editor:
 
@@ -883,9 +888,9 @@ Add deadline and expiration events in actions for expense requests.
 
     ![Enter Before expire details](./images/placeholder-button.png " ")
 
-   Click the **Set Placeholder Values** button beside the email template.
+3. Click the **Set Placeholder Values** button beside the email template.
 
-   Add a Column or Value for mentioned Placeholders.
+   Add a Column or Value for mentioned Placeholders and Click **Save** to add placeholders.
 
    | Placeholder|  Column or Value  |
    | --- |  --- |
@@ -894,15 +899,13 @@ Add deadline and expiration events in actions for expense requests.
    | EMP_NAME | &EMP_NAME. |
    | APPROVAL_URL | Paste the Login URL of your Expense Tracker Application |
 
-   Click **Save** to add placeholders.
-
    ![Set placeholders for email template](./images/placeholder.png " ")
 
-   Click **Create** to save an action.
+4. Click **Create** to save an action.
 
    ![Create action before expiry](./images/td-before-email.png " ")
 
-3. To add Expire event, click on **Add Actions** again and specify the following attributes:
+5. To add Expire event, click on **Add Actions** and specify the following attributes:
 
     - For Name - Enter **TASK_EXPIRED**
 
@@ -923,7 +926,7 @@ Add deadline and expiration events in actions for expense requests.
     end;
     </copy>
     ```
-   Click **Create** to add action.
+    - Click **Create** to add action.
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
