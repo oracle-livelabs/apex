@@ -4,8 +4,6 @@
 
 In this lab, You will create Installation scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
 
-In the second part of the lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
-
 Estimated Time: 10 minutes
 
 ### Objectives
@@ -74,7 +72,7 @@ In this lab, you will:
 11. Under **Script Attributes**, Select the following and click **Next**.
 
     - For **Name**, select **data.sql**
-    
+
     - For **Tables**, ensure **DEMO_PROJECTS** and **EBA_DEMO_IR_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
 
     ![Define Security Attributes](images/create-data-packages.png " ")
