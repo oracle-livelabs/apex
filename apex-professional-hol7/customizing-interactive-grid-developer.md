@@ -112,15 +112,14 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![](./images/edit-enabled11.png " ")
 
-8.  Delete the column groups in the interactive grid. Under Rendering > Project Tasks Interactive Grid > Column Groups. Select **Schedule**, **Project Breakdown** and **Project Financing**, right-click and click **Delete**.
+8. Delete the column groups in the interactive grid. Under Rendering > Project Tasks Interactive Grid > Column Groups. Select **Schedule**, **Project Breakdown** and **Project Financing**, right-click and click **Delete**.
 
     ![](./images/delete-column-group11.png " ")
 
 9. Suppose you want to display the ID column and exclude the ID column from DML operations. Under **Page Rendering > Project Tasks** Interactive Grid, expand Columns and select **ID**.
 
-Navigate to **Identification** and Set Type to **Display Only**, then Navigate to **Source** and Click on **Query Only** to enable.
-Click **Save and Run Page**.
-
+    Navigate to **Identification** and Set Type to **Display Only**, then Navigate to **Source** and Click on **Query Only** to enable.
+    Click **Save and Run Page**.
     ![](./images/set-id-col-attributes11.png " ")
 
 
