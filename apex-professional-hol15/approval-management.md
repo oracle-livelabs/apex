@@ -31,7 +31,7 @@ In this lab, you create a new application named Expense Tracker.
 
     ![Sign In](images/signin.png " ")
 
-2. At the top left of your workspace, click App Builder.
+2. At the top left of your workspace, click **App Builder**.
 
     ![Sign In](images/appbuilder.png " ")
 
@@ -45,7 +45,7 @@ In this lab, you create a new application named Expense Tracker.
 
 5. In the Create an Application wizard, set Name to **Expense Tracker**.
 
-6. Click Create Application to create your app and go to the application home page.
+6. Click **Create Application** to create your app and go to the application home page.
 
     ![Select New Application ](images/create-application-expense-tracker.png " ")
 
@@ -113,7 +113,7 @@ In this lab, you create database objects using SQL Script.
 
 3. Specify the following attributes:
 
-     - For a List of Email Addresses: Type MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com
+     - For a List of Email Addresses: Enter **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
 
      - For Usernames : Select **Exclude @ domain as part of the username**
 
@@ -133,7 +133,7 @@ Create a task definition to configure task parameters, participants, actions, an
 
 To create a task definition:
 
-1. In the App Builder, navigate to Expense Tracker application  and select shared components.
+1. In the **App Builder**, navigate to **Expense Tracker** application  and select **shared components**.
 
    ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
@@ -205,10 +205,10 @@ To create a task definition:
 
      | Static ID |  Label  | Data Type
      | --- |  --- | --- |
-     | ESTIMATED_COST | Estimated Cost | String |
-     | EXPENSE_STATUS | Expense Status | String |
-     | EXPENSE_TYPE | Expense Type | String |
-     | EXPENSE_TYPE | Req Id | String |
+     | ESTIMATED\_COST | Estimated Cost | String |
+     | EXPENSE\_STATUS | Expense Status | String |
+     | EXPENSE\_TYPE | Expense Type | String |
+     | EXPENSE\_TYPE | Req Id | String |
 
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
@@ -457,7 +457,7 @@ Add a page to Submit an Expense request.
 
     - For Type - Select Number Field
 
-9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section and Click **Save** to apply changes.
+9. Select the **P3\_EMPNO** page item and enable the primary key under **Source** section and Click **Save** to apply changes.
 
     ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
 
@@ -501,7 +501,7 @@ Add a page to Submit an Expense request.
 
     - For Definition - Select **Expense request**
 
-    - For Details Primary key Element: Select **P3_EMPNO**
+    - For Details Primary key Element: Select **P3\_EMPNO**
 
     - For Success Message: Type **Expense Request submitted successfully**
 
@@ -684,13 +684,13 @@ To define an email template:
 
 6. Click **Create Email Template**
 
-## Task 8: Updating Table Employee Details
+## Task 8: Update Table Employee Details
 
 1. Navigate to SQL Workshop and click SQL Commands
 
 2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table and Execute the command one by one.  
 
-   Note: The steps to create and populate the table EMPLOYEE_DETAIL are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
+   Note: The steps to create and populate the table EMPLOYEE\_DETAILS are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
 
    Add a new column HR\_MGR (HR Manager) to the existing Employee table EMPLOYEE\_DETAILS and update the existing Employee records as shown below:
     ```
@@ -711,7 +711,7 @@ To define an email template:
 
     NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
 
-## Task 9: Updating Expense Request Task Definition
+## Task 9: Update Task Definition
 We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
 
 1. Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
@@ -866,7 +866,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
    Specify the following attributes:
 
-    - For Name - Enter **BEFORE_EXPIRY**
+    - For Name - Enter **BEFORE\_EXPIRY**
 
     - For Type - Select Send Email
 
@@ -896,10 +896,10 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
    | Placeholder|  Column or Value  |
    | --- |  --- |
-   | APEX_TASK_SUBJECT | &APEX$TASK_SUBJECT. |
-   | APEX_TASK_OWNER | &APEX$TASK_OWNER. |
-   | EMP_NAME | &EMP_NAME. |
-   | APPROVAL_URL | Paste the Login URL of your Expense Tracker Application |
+   | APEX\_TASK\_SUBJECT | &APEX$TASK\_SUBJECT. |
+   | APEX\_TASK\_OWNER | &APEX$TASK\_OWNER. |
+   | EMP\_NAME | &EMP_NAME. |
+   | APPROVAL\_URL | Paste the Login URL of your Expense Tracker Application |
 
    ![Set placeholders for email template](./images/placeholder.png " ")
 
