@@ -9,7 +9,7 @@ Estimated Time: 20 minutes
 
 - Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Creating a Product Details Form
+## Task 1: Create a Product Details Form
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
 
@@ -42,7 +42,7 @@ Estimated Time: 20 minutes
 
   ![Define Primary key](./images/create-form4.png " ")
 
-## Task 2: Linking a Report to a Form
+## Task 2: Link a Report to a Form
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application** and run **Application**. From the runtime application, navigate to the **Manage Products** page in **Page Designer**.
 
@@ -86,7 +86,7 @@ Estimated Time: 20 minutes
 
   ![View Product Details](./images/refresh-manage-products1.png " ")
 
-## Task 3: Enhancing the Form
+## Task 3: Enhance the Form
 
 1.  Navigate to the **Page 21** in the **App Builder**. Then Click on **P21\_PRODUCT\_NAME** in the Rendering Tree. Now, change the Identification Type to **Text Field** in the Property Editor.
 
@@ -112,8 +112,12 @@ Estimated Time: 20 minutes
 
   ![Enhanced Form](images/enhanced-form.png " ")
 
+## Summary
 
-## **Acknowledgements**
+You now know how to Create and Customize a Form and then link the form to an Interactive Report. You may now **proceed to the next lab**.
+
+## Acknowledgements
 
  - **Author/Contributors** -  Roopesh Thokala, Product Manager
+ - **Contributor** - Ankita Beri, Product Manager
  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022

@@ -187,7 +187,13 @@ Add a new navigation bar entry to allow:
     ![Create List Entry2](./images/create-entry12.png " ")
 <!--
 You now know how to enhance and mantain both navigation menu and navigation bar. You may now **proceed to the next lab**.-->
-## **Acknowledgments**
+
+## Summary
+
+You now know how to set page as public and manage Navigation bar and Navigation menu. You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
