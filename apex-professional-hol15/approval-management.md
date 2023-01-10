@@ -368,7 +368,7 @@ Add a page to Submit an Expense request.
 
 2. Click **Create**, create page wizard appears.
 
-    ![Click create on Application home apge](images/application-create-page.png " ")
+    ![Click create on Application home page](images/application-create-page.png " ")
 
 3. Select **Blank page** under component and click **Next**
 
@@ -430,7 +430,7 @@ Add a page to Submit an Expense request.
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
-    - For Name - Enter **P3\_EXPENSE_\TYPE**
+    - For Name - Enter **P3\_EXPENSE\_TYPE**
 
     - For Type - Select, **Select List**
 
@@ -453,15 +453,13 @@ Add a page to Submit an Expense request.
 
 8. Right-click region (**New Expense Request**) and select Create Page Item.
 
-    - For Name - Enter **P3\_ESTIMATED_\COST**
+    - For Name - Enter **P3\_ESTIMATED\_COST**
 
     - For Type - Select Number Field
 
-9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section.
+9. Select the **P3_EMPNO** page item and enable the primary key under **Source** section and Click **Save** to apply changes.
 
     ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
-
-    - Click **Save** to apply changes.
 
 10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
 
@@ -515,7 +513,7 @@ Add a page to Submit an Expense request.
 
        - For Type - Select ITEM
 
-       - For Value - Select **P3_ESTIMATED_COST**
+       - For Value - Select **P3\_ESTIMATED\_COST**
 
     ![Process parameters1](images/submit-expense-report-cost.png " ")
 
@@ -531,7 +529,7 @@ Add a page to Submit an Expense request.
 
        - For Type - Select ITEM
 
-       - For Value - Select **P3\_EXPENSE_\TYPE**
+       - For Value - Select **P3\_EXPENSE\_TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
