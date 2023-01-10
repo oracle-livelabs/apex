@@ -942,6 +942,11 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     ```
    ![Expense Request Details ](./images/expire-task.png " ")
 
+## **Summary**
+You now know how to manage Approval Components.
+
+You may now **proceed to the next lab**.   
+
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager

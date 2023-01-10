@@ -147,6 +147,8 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 
     ![Navigate to DEMP_PROJECTS to view data](images/object-browser2.png " ")
 
+## **Summary**
+    You now know how to create Installation scripts and Data Packages to export Database objects along with Data. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
