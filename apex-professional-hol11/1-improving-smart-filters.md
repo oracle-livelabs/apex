@@ -28,9 +28,9 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
     ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
 
-4. Now, Update **P8_PROJECT**, Change type to **Radio Group** and enable the **Client-Side Filtering** attribute.  
-In the Rendering tab, select the P8_PROJECT filter (if not already selected).
-In the Property Editor, under **Identification** change type to **Radio Group**, then find **List Entries** and enable **Client-Side Filtering**. Enabling this option renders a search field above the list entries.
+4. Now, Update **P8\_PROJECT**, Change type to **Radio Group** and enable the **Client-Side Filtering** attribute.  
+   In the Rendering tab, select the P8_PROJECT filter (if not already selected).
+   In the Property Editor, under **Identification** change type to **Radio Group**, then find **List Entries** and enable **Client-Side Filtering**. Enabling this option renders a search field above the list entries.
 
     ![Edit Filter](images/edit-filter1.png " ")
 

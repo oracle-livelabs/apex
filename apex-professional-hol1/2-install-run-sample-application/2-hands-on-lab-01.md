@@ -87,7 +87,7 @@ This lab covers installing and running a sample application.
 You now know how to Navigate through the major Components of Oracle APEX
 and Install and run a packaged application . You may now **proceed to the next lab**.
 
-## Acknowledgments*
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributors** - Ankita Beri, Product Manager

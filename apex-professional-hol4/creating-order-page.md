@@ -235,4 +235,5 @@ You now know how to add a new page to your existing APEX Application and add reg
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

@@ -171,7 +171,7 @@ In this example, select New Table for Synchronise To and enter **EMP_1** for Tab
 
     ![data synchronisation is triggered](images/create_rest_data_sync6.png " ")
 
-## **Summary**
+## Summary
 You now know how to login into a remote database, create a database table and then **Register a schema with RESTful Services**. Also how to create a **New Application** , consume the **REST Data Source** and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
 
 You may now **proceed to the next lab**.
