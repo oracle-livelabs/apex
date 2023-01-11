@@ -45,10 +45,6 @@ The Data Load wizard has created a new table and populated that table with the r
 
     ![Data loaded into Demo_projects](images/data-loaded.png " ")
 
-    [//]: # (click **Create Application**. )
-    [//]: # (images/continue-to-create-application-wizard.png " ")
-    [//]: # (Remove Steps 2 and 3)
-
 2. Now you are going to remove the below Pages from the Create Application Page.  
     - Demo Projects Search  
     - Demo Projects Report  

@@ -83,7 +83,7 @@ This lab covers installing and running a sample application.
 
    ![View Reports](images/display-as-report1.png " ")
 
-## **Summary**
+## Summary
 You now know how to Navigate through the major Components of Oracle APEX
 and Install and run a packaged application . You may now **proceed to the next lab**.
 
