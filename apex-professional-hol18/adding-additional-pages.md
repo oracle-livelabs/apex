@@ -6,28 +6,25 @@ In this Hands-on-lab, you will add Calendars, Charts, Tree pages and Maps to Dem
 
 Estimated Time: 20 minutes
 
-
 ### Downloads
 
 - Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects4.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Creating a Calendar
+## Task 1: Create a Calendar
 
 1. Navigate to **App Builder** and in the **Home Page**, click **Demo Projects**. application.
 
-  ![Navigate to App Builder](images/navigate-to-dp.png " ")
+    ![Navigate to App Builder](images/navigate-to-dp.png " ")
 
-  ![Select Demo Projects](images/navigate-to-dp1.png " ")
-
+    ![Select Demo Projects](images/navigate-to-dp1.png " ")
 
 2. In the application home page, click **Create Page**.
 
-  ![Click Create Page](images/create-calendar-page1.png " ")
-
+    ![Click Create Page](images/create-calendar-page1.png " ")
 
 3. Select **Calendar** page type.
 
-  ![Select Calender](images/create-calendar-page2.png " ")
+    ![Select Calender](images/create-calendar-page2.png " ")
 
 4.  In the **Create Calendar** enter the following and click **Next**.
 
@@ -60,11 +57,11 @@ Estimated Time: 20 minutes
     ![Edit Template Options](images/edit-calendar1.png " ")
 
 9. In the Template Options dialog, input the following:
-  - Header - select **Hidden but accessible**  
-  - Style - select **Remove UI Decoration**  
+    - Header - select **Hidden but accessible**  
+    - Style - select **Remove UI Decoration**  
+    Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
 
-   Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
-   ![Click Ok](images/edit-calendar2.png " ")
+    ![Click Ok](images/edit-calendar2.png " ")
 
 ## Task 2: Creating a Form page on DEMO_PROJECTS Tables.
 
@@ -171,11 +168,11 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
   ![Create Region](images/create-tree4.png " ")
 
 5. In the property editor, enter the following:  
-  Under **Identification**:
+    Under **Identification**:
     - For **Name**, Enter **Tree**
     - For **Type**, Select **Tree**
 
-  Under **Source**:
+    Under **Source**:
     - For **Type**, Select **SQL Query**
     - For **Sql Query**, Copy the following code and paste it.
 
@@ -196,41 +193,44 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
      order siblings by "ENAME"
     </copy>
     ```
-
-  ![Define Region](images/create-tree5.png " ")
+    ![Define Region](images/create-tree5.png " ")
 
 6. In the page designer, navigate to **Appearance** and then click the **Template Options** button.
 
-  ![Edit Template options](images/create-tree7.png " ")
+    ![Edit Template options](images/create-tree7.png " ")
 
 7. In the Template Options dialog:
-  - General: Select the **Remove Body Padding** check box.
-  - Header: Select **Hidden but accessible**
-  - Style: Select **Remove UI Decoration**
+    - General: Select the **Remove Body Padding** check box.
+    - Header: Select **Hidden but accessible**
+    - Style: Select **Remove UI Decoration**
+    Click **OK**.
 
-  Click **OK**.
-
-  ![Click Ok](images/create-tree8.png " ")
+    ![Click Ok](images/create-tree8.png " ")
 
 8. In the **Property Editor**, Select **Attributes**. Navigate to **Settings** and select / enter the following:
-  - Node Label Column: **TITLE**
-  - Node Value Column: **VALUE**
-  - Hierarchy: **Not Computed**
-  - Node Status Column: **STATUS**
-  - Hierarchy Level Column: **LEVEL**
-  - Tooltip: **Database Column**
-  - Tooltip Column: **TOOLTIP**
+    - Node Label Column: **TITLE**
+    - Node Value Column: **VALUE**
+    - Hierarchy: **Not Computed**
+    - Node Status Column: **STATUS**
+    - Hierarchy Level Column: **LEVEL**
+    - Tooltip: **Database Column**
+    - Tooltip Column: **TOOLTIP**
 
-  Then, click **Save** and **Run Page**.
+    Then, click **Save** and **Run Page**.
 
-  ![Click Save and Run](images/create-tree9.png " ")
+    ![Click Save and Run](images/create-tree9.png " ")
 
 9. The **Tree Page** is now displayed.
 
- ![](images/run-tree2.png " ")
+    ![](images/run-tree2.png " ")
 
+## Summary
+You now know how to add Calendars, Charts, Tree pages and Maps.
 
-## **Acknowledgments**
+You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022

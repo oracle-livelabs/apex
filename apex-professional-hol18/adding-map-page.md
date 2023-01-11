@@ -96,7 +96,10 @@ Estimated Time: 20 minutes
 
   ![Map navigation displayed](images/run-map2.png " ")  
 
-## **Acknowledgments**
+## Summary
+You now know how to manage Map pages. You may now **proceed to the next lab**.
 
+## Acknowledgments
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022
