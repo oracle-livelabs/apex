@@ -254,6 +254,7 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
+    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -478,7 +479,7 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-
+        
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -614,7 +615,6 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
     ![Click create page ](./images/utl-my-requests.png " ")
 
-
 ## Task 7: Create an Email Template  
 Add an Email Template to add for before expiry action in the task definition.
 
@@ -744,8 +744,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
         update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
          where req_id = l_request_id and emp_no=:APEX$TASK_PK;
-
-        l_req_status := 'APPROVED';
+         l_req_status := 'APPROVED';
     else -- the request needs to go through another level of approval
         -- updated the request record with details of the current approver in the chain of approvers
         update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
@@ -933,6 +932,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
   Note: In order to expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
+
     ```
     <copy>
     BEGIN

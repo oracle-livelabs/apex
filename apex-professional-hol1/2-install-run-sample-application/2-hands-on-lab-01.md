@@ -90,5 +90,5 @@ and Install and run a packaged application . You may now **proceed to the next l
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Ankita Beri, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, March 2022

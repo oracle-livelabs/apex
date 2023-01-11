@@ -137,9 +137,11 @@ In this lab, you will:
         - For Type - select **Page in this application**
         - For Page - enter **16**
         - For Set Items - enter:
+
           | Name | Value  |
           | --- |  --- |
           | P16_ORDER | &P16\_ORDER\_ID. |
+          
         - For Clear Cache - enter **16**.
         - Click **OK**.
 

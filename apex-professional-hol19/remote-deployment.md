@@ -1,3 +1,4 @@
+
 # Migrate Application Development Between Environments
 
 ## Introduction
@@ -128,6 +129,7 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
   ![Define Remote Deployment attributes and click next](images/perform-rd4.png " ")
 
 9. The Remote Deployment Options page appears.
+
     - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
     - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
     - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.

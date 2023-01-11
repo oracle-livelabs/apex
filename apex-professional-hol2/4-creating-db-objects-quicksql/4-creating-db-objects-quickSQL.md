@@ -128,4 +128,4 @@ This completes the Lab. At this point, you know how to use Quick SQL to generate
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Product Manager
 * **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+* **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

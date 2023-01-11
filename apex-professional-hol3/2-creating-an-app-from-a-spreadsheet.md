@@ -77,6 +77,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
+
 3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
 
     ![PWA Definition](images/navigate-to-pwa.png " ")

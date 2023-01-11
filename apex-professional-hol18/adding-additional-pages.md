@@ -57,6 +57,7 @@ Estimated Time: 20 minutes
     ![Edit Template Options](images/edit-calendar1.png " ")
 
 9. In the Template Options dialog, input the following:
+
     - Header - select **Hidden but accessible**  
     - Style - select **Remove UI Decoration**  
     Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
