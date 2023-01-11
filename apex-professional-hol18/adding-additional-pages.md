@@ -122,30 +122,25 @@ In this lab, You will link the form page you created in Task 2 with the Calendar
 
 6. You can enable calendar drag and drop by using the component attribute **Drag and Drop**. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs a SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events primary key value as well as the new start and new end timestamp.  
 
-  Under **Settings**:
-  - For **Drag and Drop**, Set it to **Yes**.
-  - For **Drag and Drop PL/SQL Code**, Copy and paste the below code.
-
+    Under **Settings**:
+    - For **Drag and Drop**, Set it to **Yes**.
+    - For **Drag and Drop PL/SQL Code**, Copy and paste the below code.
     ```
-  <copy>
-  begin
-  update DEMO_PROJECTS
-     set start_date = to_date(:APEX$NEW_START_DATE,
-  'YYYYMMDDHH24MISS'),
-         end_date = to_date(:APEX$NEW_END_DATE,
-  'YYYYMMDDHH24MISS')
-   where ID = :APEX$PK_VALUE;
-  end;
-  </copy>
-  ```
-
+    <copy>
+    begin
+    update DEMO_PROJECTS
+     set start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
+    end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
+     where ID = :APEX$PK_VALUE;
+     end;
+     </copy>
+     ```
     ![Enable drag nad drop](images/customizing-calendar5.png " ")  
 
 7. Click **Save** and **Run Page**.
 Notice that you can now drag and drop tasks in the calendar. In the Developer Toolbar, click **Application< n >**.
 
-  ![Customized Calender](images/customized-calendar1.png " ")
-
+    ![Customized Calender](images/customized-calendar1.png " ")
 
 ## Task 4: Creating and Customizing a Tree Page.
 
@@ -225,7 +220,7 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
     ![](images/run-tree2.png " ")
 
 ## Summary
-You now know how to add Calendars, Charts, Tree pages and Maps.
+You now know how to add Calendars and Tree pages.
 
 You may now **proceed to the next lab**.
 

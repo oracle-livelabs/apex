@@ -144,8 +144,12 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
 
     ![Login into your remote APEX Instance](images/perform-rd7.png " ")
 
+## Summary
+
+You now know how to deploy your Application from Development to UAT. 
+
 ## Acknowledgments
 
-  - **Author** - Roopesh Thokala, Product Manager
-  - **Contributor** - Ankita Beri, Product Manager
-  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, Dec 2022
+- **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, Dec 2022
