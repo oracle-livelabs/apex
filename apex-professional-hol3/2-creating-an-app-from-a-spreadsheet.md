@@ -9,7 +9,7 @@ While APEX developers spend the majority of their time in the App Builder, you s
 
 Estimated Time: 10 minutes
 
-## Task 1: Loading Projects data  
+## Task 1: Load Projects data  
 
 1.  From your APEX workspace home page, click **App Builder**.
 
@@ -37,33 +37,29 @@ Estimated Time: 10 minutes
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 
-## Task 2: Creating an application
+## Task 2: Create an application
 
 The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
 
-1.  In the Load Data dialog, verify that 70 rows have been loaded into the **DEMO_PROJECTS** table, then click **Create Application**.
+1. In the Load Data dialog, verify that 70 rows have been loaded into the **DEMO_PROJECTS** table, then click **Create Application**.
 
     ![Data loaded into Demo_projects](images/data-loaded.png " ")
 
-[//]: # (click **Create Application**. )
-[//]: # (images/continue-to-create-application-wizard.png " ")
-[//]: # (Remove Steps 2 and 3)
 2. Now you are going to remove the below Pages from the Create Application Page.  
-  - Demo Projects Search  
-  - Demo Projects Report  
-  - Calendar
+    - Demo Projects Search  
+    - Demo Projects Report  
+    - Calendar
+   On the Create Application page, Click on **Edit** button next to **Demo Projects Search**.
 
-  On the Create Application page, Click on **Edit** button next to **Demo Projects Search**.
-
-  ![Edit Demo Projects Search](images/delete-pages.png " ")
+    ![Edit Demo Projects Search](images/delete-pages.png " ")
 
 3. In the Add Faceted Search Page, Click on **Delete** Button and then Confirm it by Clicking **OK**.
 
-  ![Click Delete](images/delete-page1.png " ")
+    ![Click Delete](images/delete-page1.png " ")
 
-  ![Perform delete action](images/delete-page2.png " ")
+    ![Perform delete action](images/delete-page2.png " ")
 
-Repeat the steps for **Demo Projects Report** and **Calendar**.
+    Repeat the steps for **Demo Projects Report** and **Calendar**.
 
 4. Then click **Create Application**.
 
@@ -71,7 +67,7 @@ Repeat the steps for **Demo Projects Report** and **Calendar**.
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
-## Task 3: Configuring Progressive Web App Attributes
+## Task 3: Configure Progressive Web App Attributes
 
 1. Navigate to the Edit Application Definition page. From the Application home page, you can access the Edit Application Definition page using **Shared Components**.
 
@@ -81,13 +77,14 @@ Repeat the steps for **Demo Projects Report** and **Calendar**.
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
-3. Now,Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
+
+3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
 
     ![PWA Definition](images/navigate-to-pwa.png " ")
 
-## Task 4: Running and exploring the new app
+## Task 4: Run and Explore the New App
 
-1.  Navigate back to **DEMO_PROJECTS** application and then click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
+1.  Navigate back to **DEMO\_PROJECTS** application and then click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
     ![Run Application](images/run-application1.png " ")
 
@@ -100,12 +97,10 @@ Repeat the steps for **Demo Projects Report** and **Calendar**.
 3. Click on the **Install App** Icon on Top Right of the page to install Application to your local System.
     ![Click on Install App](images/install-app1.png " ")
 
-## **Summary**
-
+## Summary
 You now know how to create an application from a spreadsheet by either dragging and dropping a file or loading sample data for training purposes.
 
-## **Acknowledgements**
-
+## Acknowledgements
  - **Author** -  Roopesh Thokala, Product Manager
- - **Contributors** - Roopesh Thokala, Product Manager
+ - **Contributors** - Ankita Beri, Product Manager
  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

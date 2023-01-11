@@ -98,9 +98,8 @@ In this lab, you will:
 4. For Script Name, enter **Populating new columns**.
 
 5. Copy the following script and paste into the editor.
-
-  ```
-  <copy>
+    ```
+    <copy>
     UPDATE
         (
                 SELECT p.product_id,
@@ -110,7 +109,7 @@ In this lab, you will:
                         p.department,
                         p.product_details
                 FROM   products p ) p
-    SET    p.clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
+     SET    p.clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
         p.color =
         (
                 SELECT c.color
@@ -119,8 +118,8 @@ In this lab, you will:
         (
                 SELECT g.department
                 FROM   json_table (p.product_details, '$' COLUMNS ( department VARCHAR2(4000) path '$.gender') ) g)
-  </copy>
-  ```
+     </copy>
+     ```
 
     This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similary, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns respectively based on information found in the JSON product details column in the **Products** table.
 
@@ -251,9 +250,11 @@ The numeric value of the COLOR\_ID column will now store a reference to the syst
 
 ![Lookup table results](./images/lookup-table-results.png " ")
 
+## Summary
 You now know how to add new columns to your existing tables, how to create lookup tables for reference information, and how to create and run a SQL script to populate your tables. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

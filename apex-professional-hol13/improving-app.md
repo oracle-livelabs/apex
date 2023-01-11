@@ -144,23 +144,25 @@ Add a new navigation bar entry to allow:
 
 4. Click **Create Entry**.
 
-  ![Click Create Entry](./images/create-entry1.png " ")
+    ![Click Create Entry](./images/create-entry1.png " ")
 
 5. In the **List Entry** page, enter the following and click **Create List Entry**.
-  ![Create Entry](./images/create-entry2.png " ")
 
-   - For Sequence - enter **1**
-   - For Image/Class - **&SHOPPING\_CART\_ICON.**
-   - For List Entry Label - **Shopping Cart**
-   - For Page - select **16**
-   - For Clear cache - enter **16**
+    ![Create Entry](./images/create-entry2.png " ")
 
+    - For Sequence - enter **1**
+    - For Image/Class - **&SHOPPING\_CART\_ICON.**
+    - For List Entry Label - **Shopping Cart**
+    - For Page - select **16**
+    - For Clear cache - enter **16**
 
 6. Scroll under **User Defined Attributes** and enter the following:
+
     - For 1. Badge Value - enter  **&SHOPPING\_CART\_ITEMS.**
     - For 2. List Item CSS Classes - enter **js-shopping-cart-item**
 
 7. Click **Create List Entry**.
+
     ![Create List Entry](./images/create-entry3.png " ")
 
 8. Click the **Pencil Icon** before **&APP_USER.**
@@ -170,6 +172,7 @@ Add a new navigation bar entry to allow:
 9. Under Authorization, for Authorization Scheme, select **Administration Rights**.
 
 10. Click **Apply Changes**.
+
     ![Set Admin Rights](./images/set-admin-rights.png " ")
 
 11. Click **Create Entry**  and enter the following:
@@ -181,13 +184,19 @@ Add a new navigation bar entry to allow:
     - For List Entry Label - enter **Administration**
     - For Page - select **10000**
 
-
 12. Click **Create List Entry**.
 
     ![Create List Entry2](./images/create-entry12.png " ")
+    
 <!--
 You now know how to enhance and mantain both navigation menu and navigation bar. You may now **proceed to the next lab**.-->
-## **Acknowledgments**
+
+## Summary
+
+You now know how to set page as public and manage Navigation bar and Navigation menu. You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022

@@ -11,7 +11,7 @@ In this lab, you will:
 - Navigate through the major Components of Oracle APEX
 - Install and run a packaged application
 
-## Task 1: Describing the Major Components of APEX
+## Task 1: Major Components of APEX
 
 To log in to Oracle APEX, you need a Workspace Name, username, and the password created for that Workspace. In this hands-on lab, you log in to your Oracle APEX Workspace.
 
@@ -46,7 +46,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
    ![Sample Applications](images/gallery-page2.png " ")
 
-## Task 2: Installing a Sample Application
+## Task 2: Install Sample Application
 
 This lab covers installing and running a sample application.
 
@@ -83,12 +83,12 @@ This lab covers installing and running a sample application.
 
    ![View Reports](images/display-as-report1.png " ")
 
-## **Summary**
+## Summary
 You now know how to Navigate through the major Components of Oracle APEX
 and Install and run a packaged application . You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Ankita Ber, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, March 2022

@@ -305,7 +305,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
      ![](./images/rendering-tab.png " ")  
 
-2.In the rendering tree, select the root node in the component tree **Page 17: Add to Cart**
+2. In the rendering tree, select the root node in the component tree **Page 17: Add to Cart**
 3. In the Property Editor, do the following changes:
     - Under Identification section:
         For Title, enter **Manage Your Cart**
@@ -317,10 +317,12 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 4. Click **Save**.
 
+## Summary
 
 You now know how to customize and enhance the APEX page. You may now **proceed to the next lab**.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, May 2022

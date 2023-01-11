@@ -42,10 +42,11 @@ In this lab, you will:
 
     ![Load Sample Dataset - Results](images/load-sample-dataset-results1.png " ")
 
->**Note:** You do NOT want to click Create Application, as you will manually create an application later.
+## Summary
+You now know how to install sample tables and views from Sample Datasets. You may now **proceed to the next lab**.
 
-
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributors** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

@@ -27,7 +27,7 @@ In this lab, you will:
 - Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-8.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.  
 
 
-## Task 1: Using Themes and Theme Styles
+## Task 1: Use Themes and Theme Styles
 
 In this hands-on lab, you use the Theme Roller to save a Theme Style. Then, you enable end users to apply this style while running the application.
 
@@ -47,50 +47,53 @@ To edit a specific component, expand a group and select new colors or styling of
   ![Select Theme to Redwood Light](images/change-theme.png " ")
 
 4. For Theme Attributes, enter the following:  
-  Under **Redwood Options**:
+    Under **Redwood Options**:
     - For Layout, select **Floating**.  
+    Under **Appearance**:
+    - For Header, Select **Dark**.
+    - For Body Header, Select **Dark**.
+    - For Body Background, Select **Dark**.  
+    click **Save As**.
 
-  Under **Appearance**:
-  - For Header, Select **Dark**.
-  - For Body Header, Select **Dark**.
-  - For Body Background, Select **Dark**.  
-
-  click **Save As**.
-
-  ![Edit Redwood theme](images/change-redwood-theme-options1.png " ")
+    ![Edit Redwood theme](images/change-redwood-theme-options1.png " ")
 
 5. In the Save As dialog, enter **Redwood Light (Copy_1)** for Style Name and click **Save**.
 
-  ![Save Theme](images/save-theme-as.png " ")
+    ![Save Theme](images/save-theme-as.png " ")
 
 6. Close the **Theme Roller** by clicking **X**. Click **App < n >** in the Developer Toolbar.
 
-  ![Select Application ID](images/select-application.png " ")
+    ![Select Application ID](images/select-application.png " ")
 
 7. In the application home page, click **Shared Components**. Under User Interface, click **User Interface Attributes**.
 
-  ![Navigate to shared Components](images/select-shared-comp.png " ")
+    ![Navigate to shared Components](images/select-shared-comp.png " ")
 
-  ![Click User Interface Attributes](images/click-usa.png " ")
+    ![Click User Interface Attributes](images/click-usa.png " ")
 
 8. Under **Attributes**, click **Enable End Users to Choose Theme Style**. Make sure this attribute is set to **On**.
 Notice that the new Theme Style you saved is displayed under Theme Style list. Click **Apply Changes**.
 
-  ![Change Theme2](images/change-usa.png " ")
+    ![Change Theme2](images/change-usa.png " ")
 
 9. Now, run the application. At the bottom of the page, click the **Customize** link.
 
-  ![Click Customize Link](images/select-customize1.png " ")
+    ![Click Customize Link](images/select-customize1.png " ")
 
 10. Using the Customize dialog, users can specify their Theme Style while running the application. Select the Theme Style that you saved in step 3 above and click Apply Changes.
 
-  ![Customize](images/customize1.png " ")
+    ![Customize](images/customize1.png " ")
 
 11. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
 
-  ![Preferences Changed](images/preferences-changed.png " ")
+    ![Preferences Changed](images/preferences-changed.png " ")
 
-## **Acknowledgments**
+## Summary
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022
+You now know how to use the Theme Roller to save a new Theme Style. You may now **proceed to the next lab**.
+
+## Acknowledgments
+
+  - **Author** - Roopesh Thokala, Product Manager
+  - **Contributor** - Ankita Beri, Product Manager
+  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022

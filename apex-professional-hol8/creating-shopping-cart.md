@@ -48,12 +48,13 @@ In this lab, you will:
     ![](./images/create-page-item1.png " ")
 
 7. In the **Property Editor**, Enter the following.
-   - For Name, Enter **P16\_CUSTOMER\_EMAIL**
-   - For Type, Select **Text Field**.
-   - For Label, Enter **Email Address**.
-   - Under Validation, for Value Required, Set it to **Off**.
 
-   ![](./images/create-page-item2.png " ")
+    - For Name, Enter **P16\_CUSTOMER\_EMAIL**
+    - For Type, Select **Text Field**.
+    - For Label, Enter **Email Address**.
+    - Under Validation, for Value Required, Set it to **Off**.
+
+    ![](./images/create-page-item2.png " ")
 
 8. Create four items as follows:
 
@@ -64,8 +65,7 @@ In this lab, you will:
     | P16\_CUSTOMER\_ID | Hidden |  | | |
     | P16_STORE | Select List | Store | Optional - Floating | Off |
 
-    For **P16_STORE** item, in the list of values section, configure the type as follows:
-
+    For **P16\_STORE** item, in the list of values section, configure the type as follows:
     - For Type - select **SQL Query**
     - For SQL Query - enter the following SQL Query:
 
@@ -79,12 +79,12 @@ In this lab, you will:
     - Set Display Extra Values - to **Off**
     - For Null Display Value - enter **- Select a Store -**
 
-  ![](./images/create-store-item.png " ")
+    ![](./images/create-store-item.png " ")
 
 9. Navigate to the **Order Information** (left pane) region.
 10. Right-click the **Order Information** region  and click **Create Button**.
 
-     ![](./images/right-click-button.png " ")  
+    ![](./images/right-click-button.png " ")  
 
 11. Create two buttons as follows:
 
@@ -190,8 +190,12 @@ In this task, you will create four-page items:
 
     ![](./images/create-danger-button.png " ")
 
-## **Acknowledgments**
+## Summary
+
+You now know how to create Page Items and Page buttons. You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** -
+- **Contributors** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022

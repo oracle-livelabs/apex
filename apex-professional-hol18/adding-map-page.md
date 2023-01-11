@@ -10,7 +10,7 @@ Estimated Time: 20 minutes
 
 - Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Creating a Store Details Map page and adding it to Desktop Navigation Bar.
+## Task 1: Create a Store Details Map page and adding it to Desktop Navigation Bar.
 
 1. Navigate to **App Builder** and in the **Home Page**, click **Online Shopping Application**.
 
@@ -96,7 +96,10 @@ Estimated Time: 20 minutes
 
   ![Map navigation displayed](images/run-map2.png " ")  
 
-## **Acknowledgments**
+## Summary
+You now know how to manage Map pages. You may now **proceed to the next lab**.
 
+## Acknowledgments
 - **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022

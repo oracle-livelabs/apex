@@ -47,7 +47,7 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
-  Under **Page Definition**:
+   Under **Page Definition**:
     - For Page Number, enter **4**.
     - For Page Name, enter **Project Tasks**  
 
@@ -59,12 +59,11 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
   Click **Create Page**.
 
-  ![](./images/create-ig-2.png " ")
+    ![](./images/create-ig-2.png " ")
 
 5. Now that you have created an **Interactive Grid** Page, you can view the page by clicking **Save** and **Run Page** on the top Right.
 
     ![](./images/view-interactive-grid11.png " ")
-
 
 ## Task 2: Add Smart Filters to Demo Projects Application.
 In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You already created the **Demo Projects** application in HOL-3. Now, you will create a Smart Filters in the Demo Projects application.
@@ -93,17 +92,21 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
   ![](./images/create-sf-page13.png " ")
 
 4. For **Select the Filters** page:
-  - Leave the remaining details to defaults.
-  - Click **Create Page**.
+    - Leave the remaining details to defaults.
+    - Click **Create Page**.
 
-  ![](./images/create-sf-page14.png " ")
+    ![](./images/create-sf-page14.png " ")
 
 5. Now that you have created a **Smart Filters** Page, You can view the Page by Clicking **Save and Run Page**
 
-  ![](./images/create-sf-page16.png " ")
+    ![](./images/create-sf-page16.png " ")
 
-## **Acknowledgments**
+## Summary
+
+You now know how to create interactive grid and smart filters. You may now **proceed to the next lab**.
+
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

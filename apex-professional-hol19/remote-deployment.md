@@ -1,4 +1,23 @@
-## Task 1: Importing Sample application.
+
+# Migrate Application Development Between Environments
+
+## Introduction
+
+In this lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
+
+Estimated Time: 10 minutes
+
+### Objectives
+
+In this lab, you will:
+- Export application with supporting Objects.
+- Use Remote Deployment to deploy your Application.
+
+### Downloads
+
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects5.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+
+## Task 1: Import Sample application.
 
 The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
 
@@ -6,63 +25,42 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
 1. Log in to the new Workspace you created.
 
-  ![Login to new workspace you created](images/login-to-dev.png " ")
+    ![Login to new workspace you created](images/login-to-dev.png " ")
 
-2. Click **Gallery**.
+2. Once you Navigate to Gallery, Click **Sample Apps**.
 
-  ![Navigate to Gallery](images/navigate-to-gallery.png " ")
+    ![Click Sample Apps](images/gallery-page3.png " ")
 
-3. Select **Samples** under **Gallery**.
+3. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install** Button.
 
-  ![Select Samples](images/click-samples.png " ")
+    ![Install Sample Reporting](images/install-sample-app.png " ")
 
-4. Navigate to **Sample Reporting** and click **Download App**.
+4. On the Install Application page, click the **Install Application** Button.
 
-  ![Download Sample Reporting](images/download-app.png " ")
+    ![Install Application](images/install-app.png " ")
 
-5. Navigate back to your application and click the Arrow button next to **APP Builder** in the top navigation menu and select **Import**.
+5. You can now see that the application is installed. Run the application by selecting **Run Application**.
 
-  ![Navigate to Import](images/import-app1.png " ")
+    ![Run Application](images/click-run-application.png " ")
 
-6.  Under **Import**, click **Drag and Drop**.
+6. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
 
-    ![Click Drag and Drop](images/import-app2.png " ")
+    ![Sign In Sample App](images/run-application1.png " ")
 
-7. Choose the file we **Downloaded** in the **Step 4** from your **Local System** and then click **Next**.
+7. You now see the Sample Reporting application home page. In your Runtime environment under **Developer Toolbar**, click **Home** to return to the home page of the APEX development environment.
 
-  ![Select file](images/import-app3.png " ")
+    ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
 
-  ![Click Next](images/import-app4.png " ")
+8. Click **App Builder**.
 
-6. Click **Next**.
+   ![Navigate App Builder](images/navigate-to-app-builder.png " ")
 
-  ![Click Next](images/import-app5.png " ")
+9. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are displayed along with their icons and report format.
+   ![View Icons](images/display-as-icons1.png " ")
 
+   ![View Reports](images/display-as-report1.png " ")
 
-9. Under **Install**, Set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and Click **Install Application**.
-
-  ![Click Install Application](images/import-app6.png " ")
-
-
-10. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
-
-  ![Click Next](images/import-app7.png " ")
-
-11. Click **Install**.
-
-  ![Click Install](images/import-app8.png " ")
-
-12. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application**
-
-  ![Application Installed](images/import-app9.png " ")
-
-13. Click **Sign Out**.
-
-  ![Click Sign In](images/sign-out1.png " ")
-
-
-
-## Task 2: Configuring the Target System.
+## Task 2: Configure the Target System.
 
 In this Lab, You will enable the **Target System** to **ORDS**, and then you will copy the URL and paste it into your notepad.
 
@@ -131,26 +129,29 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
   ![Define Remote Deployment attributes and click next](images/perform-rd4.png " ")
 
 9. The Remote Deployment Options page appears.
-  - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
-  - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
-  - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.
 
+    - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
+    - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
+    - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.
 
-After making the above selections, click **Deploy**.
+    After making the above selections, click **Deploy**.
 
-![Enable Overwrite Existing Application](images/perform-rd5.png " ")
+    ![Enable Overwrite Existing Application](images/perform-rd5.png " ")
 
 10. You see the Remote Deployment Successful message. Your application has been successfully deployed to the remote server.
 
-  ![Application Deployed Successfully](images/perform-rd6.png " ")
+    ![Application Deployed Successfully](images/perform-rd6.png " ")
 
 11. Log in to your remote APEX instance. Make sure that the application is available and with the same application id as in the source system.
 
-  ![Login into your remote APEX Instance](images/perform-rd7.png " ")
+    ![Login into your remote APEX Instance](images/perform-rd7.png " ")
 
+## Summary
 
+You now know how to deploy your Application from Development to UAT. 
 
-  ## **Acknowledgments**
+## Acknowledgments
 
-  - **Author** - Roopesh Thokala, Product Manager
-  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, June 2022
+- **Author** - Roopesh Thokala, Product Manager
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, Dec 2022
