@@ -63,7 +63,7 @@ Estimated Time: 20 minutes
 
     ![Click Ok](images/edit-calendar2.png " ")
 
-## Task 2: Creating a Form page on DEMO_PROJECTS Tables.
+## Task 2: Create a Form page on DEMO_PROJECTS Tables.
 
 In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the next labs, you will link the form to the Calendar Page.
 
@@ -92,7 +92,7 @@ In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the ne
 
     ![Click Create page](images/create-form-page4.png " ")
 
-## Task 3: Customizing the Calendar Page.
+## Task 3: Customize the Calendar Page.
 
 In this lab, You will link the form page you created in Task 2 with the Calendar page.
 
@@ -142,7 +142,7 @@ Notice that you can now drag and drop tasks in the calendar. In the Developer To
 
     ![Customized Calender](images/customized-calendar1.png " ")
 
-## Task 4: Creating and Customizing a Tree Page.
+## Task 4: Create and Customize a Tree Page.
 
 In this hands-on lab, you create the **Employee** Tree by first creating a **blank page** and then adding a **Tree region**.
 

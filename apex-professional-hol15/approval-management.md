@@ -146,16 +146,15 @@ To create a task definition:
    ![Create Task Definition](images/task-definition-create.png " ")
 
 4. Specify the task definition name and define the metadata.
+    - For Name - Enter **Expense Request**
 
-       - For Name - Enter **Expense Request**
+    - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
 
-       - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
+    - For Static ID - Enter **EXPENSE_REQUEST**
 
-       - For Static ID - Enter **EXPENSE_REQUEST**
+    - For Priority - Select **2-High**
 
-       - For Priority - Select **2-High**
-
-       Leave Business Administrator and Potential owner blank for now.
+  Leave Business Administrator and Potential owner blank for now.
 
 5. Click **Create**.
 
@@ -163,12 +162,10 @@ To create a task definition:
 
 
 6. Under **Settings** Section:
+    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+    - For Actions Source - Select SQL Query.
 
-       - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
-
-       - For Actions Source - Select SQL Query.
-
-       - For Actions SQL query - Copy the code below and paste it into  the code editor:  
+    - For Actions SQL query - Copy the code below and paste it into  the code editor:  
        ```
        <copy>
        select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
@@ -178,14 +175,13 @@ To create a task definition:
        ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
+    - Click Add Row.
 
-       - Click Add Row.
+    - For Participant Type - Select **Potential Owner**
 
-       - For Participant Type - Select **Potential Owner**
+    - For Value Type - Select **SQL Query**
 
-       - For Value Type - Select **SQL Query**
-
-       - For Value - Copy the code below and paste it into  the code editor
+    - For Value - Copy the code below and paste it into  the code editor
 
        ```
        <copy>
@@ -193,13 +189,13 @@ To create a task definition:
        </copy>
        ```
 
-       - Click **Apply Changes** to save all existing changes.
+    - Click **Apply Changes** to save all existing changes.
 
        ![Task Definition Participants](images/task-definition-participants0.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
-       ![Click on Expense Request  ](images/task-definition-created.png " ")
+    ![Click on Expense Request  ](images/task-definition-created.png " ")
 
 9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
@@ -309,7 +305,7 @@ To create a task definition:
        </copy>
       ```
 
-        - Click **Create** to add action.
+    - Click **Create** to add action.
 
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
@@ -948,7 +944,6 @@ You now know how to manage Approval Components.
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-
-- **Author** - Ankita Beri, Product Manager
-- **Contributor** - Roopesh Thokala , Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
+   - **Author** - Ankita Beri, Product Manager
+   - **Contributor** - Roopesh Thokala , Product Manager
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
