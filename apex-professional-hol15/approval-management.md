@@ -222,8 +222,8 @@ To create a task definition:
 
     - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
-        <copy>
+    ```
+    <copy>
          declare
            l_req_id number;
         begin
@@ -239,8 +239,9 @@ To create a task definition:
        'PENDING');
     end if;
     end;
-        </copy>
-      ```
+    </copy>
+    ```
+
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -475,7 +476,7 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-        
+
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
