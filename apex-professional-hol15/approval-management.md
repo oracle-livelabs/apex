@@ -315,9 +315,10 @@ To create a task definition:
 
 12. Again, Click  **Add Actions** button.
 
-   ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
-   Specify the following:
+    Specify the following:
+    
     - For Name - Enter **UPDATE\_REQUEST\_STATUS**
 
     - For Type - Select Execute Code
