@@ -318,19 +318,18 @@ To create a task definition:
    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
    Specify the following:
+    - For Name - Enter **UPDATE\_REQUEST\_STATUS**
 
-      - For Name - Enter **UPDATE\_REQUEST\_STATUS**
+    - For Type - Select Execute Code
 
-      - For Type - Select Execute Code
+    - On Event - Select **Complete**
 
-      - On Event - Select **Complete**
+    - For Outcome  - Select **Rejected**
 
-      - For Outcome  - Select **Rejected**
+    - For Code: Copy the code below and paste it into  the code editor:
 
-      - For Code: Copy the code below and paste it into  the code editor:
-
-      ```
-      <copy>
+    ```
+    <copy>
       declare
         l_mgr number;
         l_task_id number;
@@ -346,9 +345,10 @@ To create a task definition:
       update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'||:APP_USER
       where req_id = l_request_id and emp_no=:APEX$TASK_PK;
       end;
-      </copy>
-      ```
-     - Click **Create** and **Apply Changes**
+    </copy>
+    ```
+
+    - Click **Create** and **Apply Changes**
 
      ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
@@ -432,11 +432,11 @@ Add a page to Submit an Expense request.
 
     - For Type - Select, **Select List**
 
-  Under **List of Values** section:
+    Under **List of Values** section:
 
     - For Type - Select **Static values**
 
-    - For Static Values - Enter below list and click OK
+    - For Static Values - Enter below list and click **OK**
 
     | Display Value |  Return Value  |
     | --- |  --- |
