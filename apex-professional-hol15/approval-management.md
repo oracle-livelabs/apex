@@ -146,6 +146,7 @@ To create a task definition:
    ![Create Task Definition](images/task-definition-create.png " ")
 
 4. Specify the task definition name and define the metadata.
+
     - For Name - Enter **Expense Request**
 
     - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
@@ -162,19 +163,22 @@ To create a task definition:
 
 
 6. Under **Settings** Section:
+
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
-       ```
-       <copy>
-       select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-       </copy>
-      ```
 
-       ![Task Definition Settings](images/task-definition-settings.png " ")
+    ```
+    <copy>
+    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    </copy>
+    ```
+
+    ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
+
     - Click Add Row.
 
     - For Participant Type - Select **Potential Owner**
@@ -183,19 +187,19 @@ To create a task definition:
 
     - For Value - Copy the code below and paste it into  the code editor
 
-       ```
-       <copy>
+    ```
+    <copy>
          select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-       </copy>
-       ```
+    </copy>
+    ```
 
     - Click **Apply Changes** to save all existing changes.
 
-       ![Task Definition Participants](images/task-definition-participants0.png " ")
+    ![Task Definition Participants](images/task-definition-participants0.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
-    ![Click on Expense Request  ](images/task-definition-created.png " ")
+    ![Click on Expense Request](images/task-definition-created.png " ")
 
 9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
@@ -251,7 +255,6 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
-    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -318,7 +321,7 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
     Specify the following:
-    
+
     - For Name - Enter **UPDATE\_REQUEST\_STATUS**
 
     - For Type - Select Execute Code
