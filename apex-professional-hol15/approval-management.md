@@ -493,13 +493,13 @@ Add a page to Submit an Expense request.
 
    ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
-   In the Property Editor, enter the following:
+    In the Property Editor, enter the following:
 
     - For Name - Type **Submit Expense request**
 
     - For Type - Select **Human Task - Create**
 
-  Under **Settings** Section:
+    Under **Settings** Section:
 
     - For Definition - Select **Expense request**
 
@@ -793,7 +793,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
 4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
- Under **Actions** Section: Click **Add Actions**
+    Under **Actions** Section: Click **Add Actions**
 
     - For Name - Enter **DELEGATE\_EXPENSE\_REQUEST**
 
@@ -804,6 +804,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
     - For Success Message - Enter **Request Delegated Successfully**
 
     - For Code: Copy the code below and paste it into  the code editor:
+
     ```
     <copy>
     begin
@@ -941,6 +942,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
+    
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
