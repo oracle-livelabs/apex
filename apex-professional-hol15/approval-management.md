@@ -123,7 +123,7 @@ In this lab, you create database objects using SQL Script.
 
    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-   ![Click validate users](./images/create_valid_users.png " ")
+   ![Click validate users](./images/create-valid-users.png " ")
 
    ![Users created](./images/users-created.png " ")  
 
@@ -189,7 +189,7 @@ To create a task definition:
 
     ```
     <copy>
-         select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
     </copy>
     ```
 
@@ -267,7 +267,7 @@ To create a task definition:
     - For Code: Copy the code below and paste it into  the code editor:
 
       ```
-        <copy>
+      <copy>
         declare
         l_mgr number;
         l_task_id number;
@@ -307,7 +307,7 @@ To create a task definition:
             );
             end if;
           end;
-       </copy>
+      </copy>
       ```
 
     - Click **Create** to add action.
