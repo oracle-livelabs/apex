@@ -165,6 +165,7 @@ To create a task definition:
 6. Under **Settings** Section:
 
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+    
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
@@ -175,7 +176,7 @@ To create a task definition:
     </copy>
     ```
 
-    ![Task Definition Settings](images/task-definition-settings.png " ")
+       ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
@@ -226,8 +227,8 @@ To create a task definition:
 
     - For Code: Copy the code below and paste it into  the code editor:
 
-    ```
-    <copy>
+      ```
+        <copy>
          declare
            l_req_id number;
         begin
@@ -245,7 +246,6 @@ To create a task definition:
     end;
     </copy>
     ```
-
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -255,6 +255,8 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
+
+    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -480,7 +482,7 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-
+  
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -942,7 +944,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
-    
+   
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
@@ -954,3 +956,4 @@ You may now **proceed to the next lab**.
    - **Author** - Ankita Beri, Product Manager
    - **Contributor** - Roopesh Thokala , Product Manager
    - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
+
