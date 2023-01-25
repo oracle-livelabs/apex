@@ -123,7 +123,7 @@ In this lab, you create database objects using SQL Script.
 
    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-   ![Click validate users](./images/create_valid_users.png " ")
+   ![Click validate users](./images/create-valid-users.png " ")
 
    ![Users created](./images/users-created.png " ")  
 
@@ -147,15 +147,15 @@ To create a task definition:
 
 4. Specify the task definition name and define the metadata.
 
-       - For Name - Enter **Expense Request**
+    - For Name - Enter **Expense Request**
 
-       - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
+    - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
 
-       - For Static ID - Enter **EXPENSE_REQUEST**
+    - For Static ID - Enter **EXPENSE_REQUEST**
 
-       - For Priority - Select **2-High**
+    - For Priority - Select **2-High**
 
-       Leave Business Administrator and Potential owner blank for now.
+  Leave Business Administrator and Potential owner blank for now.
 
 5. Click **Create**.
 
@@ -164,42 +164,43 @@ To create a task definition:
 
 6. Under **Settings** Section:
 
-       - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+    
+    - For Actions Source - Select SQL Query.
 
-       - For Actions Source - Select SQL Query.
+    - For Actions SQL query - Copy the code below and paste it into  the code editor:  
 
-       - For Actions SQL query - Copy the code below and paste it into  the code editor:  
-       ```
-       <copy>
-       select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-       </copy>
-      ```
+    ```
+    <copy>
+    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    </copy>
+    ```
 
        ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
-       - Click Add Row.
+    - Click Add Row.
 
-       - For Participant Type - Select **Potential Owner**
+    - For Participant Type - Select **Potential Owner**
 
-       - For Value Type - Select **SQL Query**
+    - For Value Type - Select **SQL Query**
 
-       - For Value - Copy the code below and paste it into  the code editor
+    - For Value - Copy the code below and paste it into  the code editor
 
-       ```
-       <copy>
-         select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-       </copy>
-       ```
+    ```
+    <copy>
+    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    </copy>
+    ```
 
-       - Click **Apply Changes** to save all existing changes.
+    - Click **Apply Changes** to save all existing changes.
 
-       ![Task Definition Participants](images/task-definition-participants0.png " ")
+    ![Task Definition Participants](images/task-definition-participants0.png " ")
 
 8. Click on the task definition - **Expense Request** to continue editing.
 
-       ![Click on Expense Request  ](images/task-definition-created.png " ")
+    ![Click on Expense Request](images/task-definition-created.png " ")
 
 9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
@@ -243,8 +244,8 @@ To create a task definition:
        'PENDING');
     end if;
     end;
-        </copy>
-      ```
+    </copy>
+    ```
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -254,7 +255,8 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
-    - For Name - Enter **NEXT_APPROVER_OR_UPDATE_STATUS**
+
+    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -267,7 +269,7 @@ To create a task definition:
     - For Code: Copy the code below and paste it into  the code editor:
 
       ```
-        <copy>
+      <copy>
         declare
         l_mgr number;
         l_task_id number;
@@ -307,10 +309,10 @@ To create a task definition:
             );
             end if;
           end;
-       </copy>
+      </copy>
       ```
 
-        - Click **Create** to add action.
+    - Click **Create** to add action.
 
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
@@ -318,22 +320,22 @@ To create a task definition:
 
 12. Again, Click  **Add Actions** button.
 
-   ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
-   Specify the following:
+    Specify the following:
 
-      - For Name - Enter **UPDATE\_REQUEST\_STATUS**
+    - For Name - Enter **UPDATE\_REQUEST\_STATUS**
 
-      - For Type - Select Execute Code
+    - For Type - Select Execute Code
 
-      - On Event - Select **Complete**
+    - On Event - Select **Complete**
 
-      - For Outcome  - Select **Rejected**
+    - For Outcome  - Select **Rejected**
 
-      - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
-      <copy>
+    ```
+    <copy>
       declare
         l_mgr number;
         l_task_id number;
@@ -349,9 +351,10 @@ To create a task definition:
       update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'||:APP_USER
       where req_id = l_request_id and emp_no=:APEX$TASK_PK;
       end;
-      </copy>
-      ```
-     - Click **Create** and **Apply Changes**
+    </copy>
+    ```
+
+    - Click **Create** and **Apply Changes**
 
      ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
@@ -435,11 +438,11 @@ Add a page to Submit an Expense request.
 
     - For Type - Select, **Select List**
 
-  Under **List of Values** section:
+    Under **List of Values** section:
 
     - For Type - Select **Static values**
 
-    - For Static Values - Enter below list and click OK
+    - For Static Values - Enter below list and click **OK**
 
     | Display Value |  Return Value  |
     | --- |  --- |
@@ -479,7 +482,7 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-        
+  
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -492,13 +495,13 @@ Add a page to Submit an Expense request.
 
    ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
-   In the Property Editor, enter the following:
+    In the Property Editor, enter the following:
 
     - For Name - Type **Submit Expense request**
 
     - For Type - Select **Human Task - Create**
 
-  Under **Settings** Section:
+    Under **Settings** Section:
 
     - For Definition - Select **Expense request**
 
@@ -792,7 +795,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
 4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
- Under **Actions** Section: Click **Add Actions**
+    Under **Actions** Section: Click **Add Actions**
 
     - For Name - Enter **DELEGATE\_EXPENSE\_REQUEST**
 
@@ -803,6 +806,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
     - For Success Message - Enter **Request Delegated Successfully**
 
     - For Code: Copy the code below and paste it into  the code editor:
+
     ```
     <copy>
     begin
@@ -940,6 +944,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
+   
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
@@ -948,7 +953,7 @@ You now know how to manage Approval Components.
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
+   - **Author** - Ankita Beri, Product Manager
+   - **Contributor** - Roopesh Thokala , Product Manager
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
 
-- **Author** - Ankita Beri, Product Manager
-- **Contributor** - Roopesh Thokala , Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
