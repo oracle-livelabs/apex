@@ -135,7 +135,7 @@ A dashboard page is a great way to show important information using various char
 
     ![](./images/set-as-admin-page2.png " ")
 
-## Task 8: Add Manage Products Page
+## Task 6: Add Manage Products Page
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Interactive Report**.
@@ -162,9 +162,9 @@ A dashboard page is a great way to show important information using various char
 
 5. Click **Add Page**.
 
-  ![Add page](./images/add-report-page1.png " ")
+  ![Add page](./images/add-page1.png " ")
 
-## Task 9: Set Features
+## Task 7: Set Features
 
 Features are a set of optional application capabilities in Oracle APEX that you can include in your new application. Access Control enables role-based user authorization with a single click.
 
@@ -172,7 +172,7 @@ Features are a set of optional application capabilities in Oracle APEX that you 
 
   ![Check Install Progressive Web App](./images/set-features.png " ")
 
-## Task 10: Finish Creating the Application
+## Task 8: Finish Creating the Application
 
 Now that you have added all the pages, it is time to generate the app and review it.
 
@@ -185,7 +185,7 @@ Click **Run Application**.
 
     ![Run application](./images/run-application.png " ")
 
-## Task 11: Run the Application
+## Task 9: Run the Application
 
 1. Enter your user credentials. Click **Sign In**.
 
