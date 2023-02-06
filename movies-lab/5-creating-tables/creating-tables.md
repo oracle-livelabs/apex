@@ -1,9 +1,12 @@
 # Create Users and Watchlist Tables
 
 ## Introduction
-Up to this point, most of the work has revolved around implementing REST data sources and creating pages to use that data on. In this lab, you will create and start to use local tables to store user and movie data. You will also add an application item and process, which will capture and store a user email and ID, as well as some of the movie details. This is what allows multiple users to have their own watchlist.
+Up to this point, most of the work has revolved around implementing REST data sources and creating pages to use that data on. In this lab, you will create local tables to store user and movie data. You will also add an application item and process, which will capture and store a user email and ID when a user logs into the app. This is what allows multiple users to have their own watchlist.
 
 Estimated Lab Time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create Users and Watchlist Tables](videohub:1_u9hl1p4v)
 
 ### Objectives
 In this lab, you will:  
@@ -16,9 +19,9 @@ In this lab, you will:
 ## Task 1: Create the Movie Users Table
 The first table you need to create is the movie\_users table. It is very simple, but it needs to be created before the watchlist table so that you can access the user ID. The watchlist table has a foreign key, user\_id, that will link it to the movie\_users table and allow different users to have their own unique lists.
 
-1. In the Page Designer tab in your browser, click the dropdown next to SQL Workshop in the top navigation bar, hover over Utilities, and select **Quick SQL**. 
+1. In the Page Designer tab in your browser, click the down arrow next to SQL Workshop in the APEX navigation bar, hover over Utilities, and select **Quick SQL**. 
 
-    ![](images/5-1-1-quick-sql.png " ")
+    ![SQL Workshop menu with the Utilities sub-menu open over Page 2 in Page Designer](images/quick-sql.png " ")
 
 2. Copy the code below and paste into the first line of the code editor:
 
@@ -31,7 +34,7 @@ The first table you need to create is the movie\_users table. It is very simple,
 
 3. Click the **Generate SQL** button at the top of the pane. 
 
-    ![](images/1-generate-users-sql-edit.png " ")
+    ![Quick SQL page with copied movie_users code in the left pane and generated code in the right pane](images/generate-users-sql.png " ")
 
 4. Click **Settings** on the top right of the Quick SQL toolbar. 
 
@@ -41,7 +44,7 @@ The first table you need to create is the movie\_users table. It is very simple,
 
     * Click **Save Changes**.
 
-    ![](images/1-audit-columns-edit.png " ")
+    ![Quick SQL Settings dialog open to the Audit Columns region overlaying the Quick SQL page](images/users-settings.png " ")
 
 5. Click **Save SQL Script**. 
 
@@ -49,7 +52,7 @@ The first table you need to create is the movie\_users table. It is very simple,
 
 7. Click **Save Script**.
 
-    ![](images/1-save-users-script-edit.png " ")
+    ![Save Script dialog open over the Quick SQL page](images/users-save-script.png " ")
 
 8. Click the **Review and Run** button.
 
@@ -57,24 +60,22 @@ The first table you need to create is the movie\_users table. It is very simple,
 
     * You should see a success page with 2 statements successfully processed.
 
-    ![](images/1-script-success.png " ")
+    ![SQL Scripts Results page showing 2 statements processed, 2 successful, and 0 errors](images/users-success.png " ")
 
-10. Now you will add an Application ID and Application Process, which will capture a user's email when they log in and assign them an ID so that you can keep track of their unique watchlist.
+10. Now you will add an Application Item and Application Process, which will capture a user's email when they log in and assign them an ID so that you can keep track of their unique watchlist.
 
 ## Task 2: Create the Application Item and Process
-To store data within the movie\_users database, you will use an application process. The process grabs the user email when they log in and if they are a new user, it adds them to a local table, assigning them an ID. The ID of the current user is also stored in the application item, which will be needed when a user adds, removes, or updates items in their watchlist.
+To store data within the movie\_users database, you will use an application process. The process checks a user's email when they log in and if they are a new user, it adds them to a local table, assigning them an ID. The ID of the current user is also stored in an application item, which will be used when a user adds, removes, or updates movies in their watchlist.
 
 1. Click on **App Builder** in the top APEX toolbar.
 
-    ![](images/1-script-success-edit.png " ")
-
-2. Click on your Movies Watchlist app.
+2. Click on your **Movies Watchlist** app.
 
 3. Click on **Shared Components**.
 
 4. In the Application Logic section of the page, click **Application Items**.
 
-    ![](images/5-2-4-app-items.png " ")
+    ![Shared Components page with Application Items highlighted under the Application Logic region](images/app-items.png " ")
 
 5. Click **Create**.
 
@@ -82,11 +83,11 @@ To store data within the movie\_users database, you will use an application proc
 
     * Click **Create Application Item**.
 
-    ![](images/5-2-5-create-item.png " ")
+    ![Create Application Item page for new USER_ID item](images/create-item.png " ")
 
 6. Go back to Shared Components and click on **Application Processes**.
 
-    ![](images/5-2-6-app-proc.png " ")
+    ![Shared Components page with Application Processes highlighted under the Application Logic region](images/app-processes.png " ")
 
 7. Click **Create**.
 
@@ -96,7 +97,7 @@ To store data within the movie\_users database, you will use an application proc
 
     * Click **Next**.
 
-    ![](images/5-2-7-create-process.png " ")
+    ![Create Application Process dialog over the Application Processes page](images/create-process.png " ")
 
     * Copy and paste the following code into the Code editor box in the Source section:
 
@@ -126,7 +127,7 @@ To store data within the movie\_users database, you will use an application proc
 
     * Click **Next**.
 
-    ![](images/2-create-process-source-edit.png " ")
+    ![Create Application Process dialog on the source code step over the Application Process page](images/create-process-code.png " ")
 
     * Click **Create Process**.
 
@@ -136,20 +137,20 @@ To store data within the movie\_users database, you will use an application proc
 
 10. On the My Watchlist page of your app, click the button at the top right of the screen where your username is displayed and click Sign Out.
 
-    ![](images/2-sign-out-edit.png " ")
+    ![Close-up of user menu in runtime application with Sign Out button highlighted](images/sign-out.png " ")
 
 11. Now, sign back in and your new application process will run and store your user ID in the movie\_users table and the USER\_ID application item.
 
-    ![](images/2-sign-in-edit.png " ")
+    ![Movies Watchlist runtime app sign-in page](images/2-sign-in-edit.png " ")
 
 12. Next, you'll set up a new table using Quick SQL to store all of a user's movies that they add to their list.
 
 ## Task 3: Create the Watchlist Table
-Finally, you will need a table to store some basic movie information in addition to the user information. This is what will display and be the source for the My Watchlist page.
+You will need a table to store some basic movie information in addition to the user information. This data is what will be the source for the My Watchlist page.
 
-1. In the toolbar at the top of your APEX workspace, click the dropdown next to SQL Workshop, hover over Utilities, and select **Quick SQL**.
+1. In the toolbar at the top of your APEX workspace, click the down arrow next to SQL Workshop, hover over Utilities, and select **Quick SQL**.
 
-2. Copy the code below and paste it into the Quick SQL pane to replace the previous Quick SQL code:
+2. Copy the code below and replace the existing code by pasting it into the Quick SQL pane:
 
     ```
     <copy>
@@ -171,13 +172,13 @@ Finally, you will need a table to store some basic movie information in addition
 
 3. Click the **Generate SQL** button at the top of the pane.
 
-    ![](images/generate-watchlist-edit.png " ")
+    ![Quick SQL page with copied watchlist code in the left pane and generated code in the right pane](images/generate-watchlist.png " ")
 
 4. Just like you did for the movie\_users table, click Settings and select **Audit columns**. 
 
 5. Click **Save Changes**.
 
-    ![](images/audit-cols-edit.png " ")
+    ![Quick SQL Settings dialog open to the Audit Columns region overlaying the Quick SQL page](images/watchlist-settings.png " ")
 
 6. Click **Save SQL Script**.
 
@@ -185,7 +186,7 @@ Finally, you will need a table to store some basic movie information in addition
 
     * Click **Save Script**.
 
-    ![](images/save-script.png " ")
+    ![Save Script dialog open over the Quick SQL page](images/watchlist-save-script.png " ")
 
 7. Click **Review and Run**.
 
@@ -193,7 +194,7 @@ Finally, you will need a table to store some basic movie information in addition
 
 9. Click **Run Now**. You should see 3 statements executed successfully.
 
-    ![](images/script-success.png " ")
+    ![SQL Scripts Results page showing 4 statements processed, 4 successful, and 0 errors](images/watchlist-success.png " ")
 
 10. The watchlist table has now been created. When a user clicks the Add to Watchlist button in the Movie Details dialog, the SQL action will capture the movie and user data and store it in this table so that you can access it later to build out our Watchlist on the front end.
 
@@ -205,21 +206,37 @@ You now know how to use Quick SQL to define new tables, and create application i
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 
-- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/application-express/21.1/aeutl/using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD)
+- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/aeutl/using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD)
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 5 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab5.sql) to download a copy of the app at the end of Lab 5.
+- [Click here](./files/lab-5.sql) to download a copy of the app at the end of Lab 5.
 
-- You can import Lab 5 to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- When the install wizard prompts you for Credentials, follow the instructions in the <a href="?lab=creating-movie-details-page#Stuck?DownloadtheApplicationHere" target="_blank">Stuck?</a> section of Lab 4 to update the API key for the Movie Details REST source.
+- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
+*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-- Follow the instructions in the <a href="?lab=creating-movie-search-page#Stuck?DownloadtheApplicationHere" target="_blank">Stuck?</a> section of Lab 3 to update the Popular and Search Movies API keys.
+    ![](images/blank-credentials.png " ")  
+
+- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+
+    - In the Client ID or Username column, enter **api\_key**.
+
+    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+
+    - In the Verify Client Secret/Password column, past your API key again.
+
+        ![](images/complete-credentials.png " ")
+
+- Click **Next**.
+
+- Make sure Install Supporting Objects is **on** and click **Next** again.
+
+- Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgments
 
 - **Author** - Paige Hanssen
-- **Additional Contributors** - Kay Jasanya, Shakeeb Rahman, Steve Muench, Monica Godoy, Eli Feuerstein, Carlos Maciel, Dalia Vazquez
-- **Last Updated By/Date** - Paige Hanssen, March 2022
+- **Last Updated By/Date** - Paige Hanssen, August 2022
