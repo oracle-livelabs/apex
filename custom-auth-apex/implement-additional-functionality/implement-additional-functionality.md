@@ -36,31 +36,23 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=allow-end-users-cre
 
 	![Select Blank Page for Page Type](./images/blank-page.png)
 
-3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Optional Static Content Regions**, click on the “&gt;” to expand this section. Then give **Region 1** a name like “Account Activation” and click **Next &gt;**.
+3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Navigation**, click on the “&gt;” to expand this section. De-select **Use Breadcrumb** and **Use Navigation**. Then click **Create Page**.
 
-  ![Input these parameters for this new Blank Page](./images/blank-page-params.png)
+	![Fill out the "Create Blank Page" form](./images/finish-create-page.png)
 
-4.	For **Navigation Preference** keep **Do not associate this page with a navigation menu entry** selected and click **Next &gt;**.
-
-	![Do not associate this page with a navigation menu entry](./images/no-nav-entry.png)
-
-5.	Then click **Finish**.
-
-	![Click green "Finish" button](./images/finish-create-page.png)
-
-6.	Your new “Account Activation” page should automatically open. Right-click on “Account Activation” in the left-side pane (under **Body**) and click on **Create Page Item**.
+4.	Your new “Account Activation” page should automatically open. Right-click on “Account Activation” in the left-side pane (under **Body**) and click on **Create Page Item**.
 
 	![Create page item in "Account Activation" Body](./images/create-page-item.png)
 
-7.	In the right-side pane, give the item a **Name**, like **EMAIL** (keep the “PXX_” prefix). And select **Hidden** as the **Type** from the dropdown menu. Leave everything else as is in the right-side pane.
+5.	In the right-side pane, give the item a **Name**, like **EMAIL** (keep the “PXX_” prefix). And select **Hidden** as the **Type** from the dropdown menu. Leave everything else as is in the right-side pane.
 
 	![Give the page item a Name and make it of Type "Hidden"](./images/hidden-email-page-item.png)
 
-8.	Now in the left-side pane, select “Account Activation” under **Body** and in the right-side pane, change the **Type** to **PL/SQL Dynamic Content** from the dropdown menu. Click on the icon next to **PL/SQL Code** to open a code editor popup window.
+6.	Now in the left-side pane, select “Account Activation” under **Body** and in the right-side pane, change the **Type** to **PL/SQL Dynamic Content** from the dropdown menu. Click on the icon next to **PL/SQL Code** to open a code editor popup window.
 
 	![Make the content Type "PL/SQL Dynamic Content"](./images/dynamic-content-for-activation.png)
 
-9. We recommend first copying & pasting the following block of code into a local notepad or text editor and making edits there before copying & pasting it into the code editor popup window. You will need to change **PXX_EMAIL** to the item name you gave in step 7. You will also need to change "application-login-url" to your application’s Login page URL. **Keep the double quotes in the code.**
+7. We recommend first copying & pasting the following block of code into a local notepad or text editor and making edits there before copying & pasting it into the code editor popup window. You will need to change **PXX_EMAIL** to the item name you gave in step 7. You will also need to change "application-login-url" to your application’s Login page URL. **Keep the double quotes in the code.**
 
    *To obtain your application's login URL, return to App Builder, locate your application, and click the Play button next to it. The URL that this window opens to is the login URL you're looking for (exclude any trailing "session=...").*
 
@@ -124,11 +116,11 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=allow-end-users-cre
  	</copy>
  	```
 
-10.	Along the top bar of the code editor, click on the checkmark and make sure a “Validation successful” message appears before proceeding. Then click **OK** in the bottom-right corner of the code editor popup window.
+8.	Along the top bar of the code editor, click on the checkmark and make sure a “Validation successful” message appears before proceeding. Then click **OK** in the bottom-right corner of the code editor popup window.
 
 	![Ensure "Validation Successful" and then click "OK"](./images/validation-successful.png)
 
-11.	Finally, click on “Page XX: Account Activation” in the left-side pane, and in the right-side pane search for “Security” in the search/filter bar. Change the **Authentication** setting to “Page is Public” from the dropdown. Click **Save** in the top-right corner when done.
+9.	Finally, click on “Page XX: Account Activation” in the left-side pane, and in the right-side pane search for “Security” in the search/filter bar. Change the **Authentication** setting to “Page is Public” from the dropdown. Click **Save** in the top-right corner when done.
 
 	![Make page public](./images/page-is-public.png)
 
@@ -195,15 +187,15 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 1. Using the **Create Page** wizard as in previous tasks, create a page of **Page Type** "Form".
 
-	![Create a basic form page](./images/create-form.png) ![Create a basic form page](./images/create-form-2.png)
+	![Create a basic form page](./images/create-form.png)
 
-2. Name it something like "Reset Password". For **Branch Here on Submit** and **Cancel and Go To Page** choose the Login page (should be 9999 by default) and leave everything else as is. On the next screen, leave the default selected and click **Next &gt;**.
+2. Name it something like "Reset Password". Choose the **Data Source** to be the user credentials table you created and then click **Next &gt;**.
 
 	![Enter page name and other details](./images/form-details.png)
 
-3. Choose the **Data Source** to be the user credentials table you created and make the **Primary Key Column** **USER_ ID**. When selecting the columns to be displayed in the form, double-click on **ACCOUNT_STATUS** so that it is not added as a page item. Then click **Create**.
+3. Make the **Primary Key Column 1** **USER_ ID**. Change the **Branch Here on Submit** and **Cancel and Go To Page** to the default Login page (9999). Then click **Create Page**.
 
-	![Select data source](./images/form-source.png) ![Select primary key](./images/form-pk.png)
+	![Select primary key](./images/form-pk.png)
 
 4. Change the **EMAIL** page item to **Type** “Hidden”, **USERNAME** to **Type** “Display Only”, and **PASSWORD** to **Type** “Password”.
 
@@ -403,7 +395,7 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 1. Create a page of **Page Type** “Blank” and of **Page Mode** “Modal Dialog” and name it something like “Send Reset Password Link”. Leave everything else as the default settings.
 
-	![Create a Blank page using Create Page Wizard](./images/forgot-password-page-blank.png) ![Name the page and make it a Modal Dialog page](./images/forgot-password-page-modal.png)
+	![Create a Blank page using Create Page Wizard](./images/blank-page.png) ![Name the page and make it a Modal Dialog page](./images/forgot-password-page-modal.png)
 
 2.	Right-click on **Components** in the left-hand side pane and click “Create Region”.
 
