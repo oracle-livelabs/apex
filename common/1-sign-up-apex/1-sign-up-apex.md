@@ -39,7 +39,7 @@ Below are steps on how to sign up for either an *APEX Application Development* S
 
 For conducting labs in this workshop, either service can be utilized.
 
-*Note*: Except for the Spreadsheet lab, which has been updated to use APEX 22.1, the remaining APEX workshops currently contain steps/screenshots for 21.2 or earlier. While we are working hard to update the workshops to 22.1 (the latest release), you can continue to refer to the steps in the workshop. Some of the steps may differ.
+*Note*: Except for the Spreadsheet lab, Building a Shopping Cart App and Movies Watchlist App workshops, which have been updated to use APEX 22.1, the remaining APEX workshops currently contain steps/screenshots for 21.2 or earlier. While we are working hard to update the workshops to 22.1 (the latest release), you can continue to refer to the steps in the workshop. Some of the steps may differ.
 
 Click one of the options below to proceed.
 
@@ -102,13 +102,17 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Create Workspace](images/welcome-create-workspace.png " ")
 
+10. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+
+  ![Choose type of schema](images/choose-schema.png " ")
+    
 10. In the Create Workspace dialog, enter the following:
 
-  | Property | Value |
-  | --- | --- |
-  | Database User | DEMO |
-  | Password | **`SecretPassw0rd`** |
-  | Workspace Name | DEMO |
+    | Property | Value |
+    | --- | --- |
+    | Workspace Name | DEMO |
+    | Workspace Username | DEMO |
+    | Workspace Password | **`SecretPassw0rd`** |
 
   Click **Create Workspace**.
 
@@ -150,7 +154,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
   
       From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
   
-      ![Cloud Dashboard](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
+      ![Cloud Dashboard](images/database-atp.png " ")
   
   6. Click **Create Autonomous Database**.
   
@@ -190,13 +194,18 @@ In this part, you will create an Oracle APEX Application Development Service tri
   
       ![Create Workspace page](images/welcome-create-workspace.png " ")
   
+  11. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+  
+    ![Choose type of schema](images/choose-schema.png " ")
+    
   12. In the Create Workspace dialog, enter the following:
   
       | Property | Value |
       | --- | --- |
-      | Database User | DEMO |
-      | Password | **`SecretPassw0rd`** |
       | Workspace Name | DEMO |
+      | Workspace Username | DEMO |
+      | Workspace Password | **`SecretPassw0rd`** |
+      
   
       Click **Create Workspace**.
   

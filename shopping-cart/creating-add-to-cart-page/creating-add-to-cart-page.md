@@ -5,7 +5,7 @@
 In this lab, you will create a new modal page to add or edit existing items in the Shopping Cart.
 
 Once you have finished the workshop and updated all the products as described in the steps, your page will look like the following image:
-![](./images/creating-ac.png " ")
+![The completed application snapshot](./images/creating-ac.png " ")
 
 Customers will be able to:
 - Review the product details
@@ -14,9 +14,14 @@ Customers will be able to:
 
 Estimated Time: 20 minutes
 
+<!--
 Watch the video below for a quick walk through of the lab.
 
 [](youtube:8HoOOhY8omU)
+-->
+
+Watch the video below for a quick walk-through of the lab.
+[Create the add to cart page](videohub:1_3adj5cnf)
 
 ### Objectives
 In this lab, you will:
@@ -26,21 +31,21 @@ In this lab, you will:
 Create a Modal Page to add products to the cart.
 
 1. Navigate to Create button and click **Page**.
-     ![](./images/create-modal-page.png " ")  
+     ![Toolbar in the page designer](./images/create-modal-page.png " ")  
 2. Select **Blank Page** and click **Next**.
 3. Enter the following and click **Next**.
     - Page Number - enter **18**
     - For Name - enter **Add to Cart**
     - For Page Mode - select **Modal Dialog**
-4. For Navigation Preference, select **Do not associate this page with a navigation menu entry** and click **Next**.
-5. Click **Finish**.
+4. Click **Create Page**.
+      ![Create Page wizard](./images/add-to-cart-page.png " ")
 
 ## Task 2: Add Cards Region for Product Details
 This region allows users to review the details of the product, such as brand, price, description, and more.
 
 1. In the new modal page created, navigate to the **Gallery Menu**.
 2. Drag a **Cards** region and drop it to the Content Body section.
-     ![](./images/create-cards.png " ")  
+     ![Gallery menu in the Page Designer](./images/create-cards.png " ")  
 3. In the Property Editor, enter the following:
     - For Title, enter **Product**
     - Under Source section:
@@ -70,17 +75,17 @@ This region allows users to review the details of the product, such as brand, pr
             </copy>
             ```
 
-    - For Template Options - check **Use Template Defaults**
-        ![](./images/template-options.png " ") 
+    - For Template Options - click **Use Template Defaults**
         - For **Style** - select **Style C**
         - Click **Ok**
+        ![Property Editor](./images/template-options.png " ")
 
 4. Click **Attributes** and enter the following:
-     ![](./images/attributes.png " ") 
+     
 
     - Under Appearance section:
         - For Layout - select **Float**
-
+        ![Property Editor](./images/attributes1.png " ")
     - Under Title section:
         - For Column - select **PRODUCT_NAME**
 
@@ -94,28 +99,29 @@ This region allows users to review the details of the product, such as brand, pr
         - Set Advanced Formatting to **On**.
         - For HTML Expression - enter the following:
             
-            ``` 
+            ```
             <copy>
             Price: &UNIT_PRICE.
             </copy>
             ```   
-
+            ![Property Editor](./images/attributes2.png " ")
     - Under Media section:
         - For Source - select **BLOB Column**
         - For BLOB Column - select **PRODUCT_IMAGE**
         - For Position - select **First**
-        - For Appearance - select **Square**
+        - For Appearance - select **Auto**
         - For Sizing - select **Fit**
-
+          ![Property Editor](./images/attributes3.png " ")
     - Under Card section:
         - For Primary Key Column 1 - select **PRODUCT_ID**    
-    
+          ![Property Editor](./images/attributes4.png " ")
+          
 ## Task 3: Add Cards Region for Customer Reviews
-This region lets users read the customer reviews for this product.
+This region lets users read the customer reviews for a product.
 
 1. Navigate to the **Gallery Menu**.
-2. Drag a **Cards** region and drop it to the Content Body section under **Product** region.
-     ![](./images/create-cards2.png " ")  
+2. Drag a **Cards** region and drop it to the Content Body section under the **Product** region.
+     ![cards region in Content](./images/create-cards2.png " ")  
 3. In the Property Editor, enter the following:
     - For Title - enter **Customer Reviews**
     - Under Source section:
@@ -129,15 +135,15 @@ This region lets users read the customer reviews for this product.
             FROM   products p,
                 product_reviews m
             WHERE  p.product_name = m.product_name
-                AND p.product_id = :p18_product_id 
+                AND p.product_id = :p18_product_id
                 order by m.rating desc
             </copy>
             ```
     - Under Appearance section:
         - For Template - select **Standard**
-
+        ![properties](./images/cr-properties.png " ")
 4. Click **Attributes** and enter the following:
-     ![](./images/attributes.png " ")  
+       
     - Under Appearance section:
         - For Layout - select **Horizontal (Row)**
 
@@ -145,7 +151,7 @@ This region lets users read the customer reviews for this product.
         - Set Advanced Formatting to **On**
         - For HTML Expression - enter the following:
             
-            ``` 
+            ```
             <copy>
             <b>Review:</b> &REVIEW. <br>
             <b>Rating:</b> &RATING.
@@ -154,35 +160,38 @@ This region lets users read the customer reviews for this product.
 
     - Under Messages:
         - For When No Data Found - enter **There are no customer reviews yet.**
+     ![attributes](./images/cr-attributes.png " ")
      
 ## Task 4: Add Items and Buttons
 In this task, you will create four-page items:
-- PRODUCT_ID: To get the product ID
-- ACTION: To identify the action (Add / Edit / Delete) made for the customer
-- QUANTITY: To permit customers to select the number of items to add or edit in the shopping cart
-- SHOPPING\_CART\_ITEMS: To get the number of items (total) in the shopping cart after an action is made
+- **PRODUCT_ID**: To get the product ID
+- **ACTION**: To identify the action (Add / Edit / Delete) made for the customer
+- **QUANTITY**: To permit customers to select the number of items to add or edit in the shopping cart
+- **SHOPPING\_CART\_ITEMS**: To get the number of items (total) in the shopping cart after an action is made
 
 
 1. Navigate to the **Gallery Menu**.
 2. Drag a **Static Content** region and drop it to the **Dialog Footer**.
-     ![](./images/create-sc.png " ")  
+     ![Gallery menu in the Page Designer](./images/create-sc.png " ")  
 
 3. In the Property Editor, enter the following:
     - For Title - enter **Buttons Bar**
     - For Template - select **Buttons Container**
+    ![Property Editor](./images/sc-properties.png " ")
 4. In the Rendering tree (left pane), navigate to **Buttons Bar** region.
 5. Right-click the **Buttons Bar** region and click  **Create Page Item**.
-     ![](./images/create-page-item2.png " ") 
+     ![Rendering Tree](./images/create-page-item2.png " ")
 6. Create four items as follows. In the Property Editor, do the following:
 
-    | Name |  Type  | Label  | Template | 
-    | ---  |  ---   | ---    | --- | 
+    | Name |  Type  | Label  | Template |
+    | ---  |  ---   | ---    | --- |
     | P18_ACTION | Hidden |
     | P18\_PRODUCT\_ID | Hidden |
     | P18_SHOPPING\_CART\_ITEMS | Hidden |
-    | P18_QUANTITY | Select List | Quantity | Required | 
+    | P18_QUANTITY | Select List | Quantity | Required |
+    {: title="Details of the Page Items"}
 
-    For **P18_QUANTITY** item, do the following: 
+    For **P18_QUANTITY** item, do the following:
     - Under List of Values section:
         - For Type - select **Static Values**
         - For Static Values - click **Display1, Display2** and enter the following:
@@ -194,42 +203,46 @@ In this task, you will create four-page items:
             | 3 | 3 |
             | 4 | 4 |
             | 5 | 5 |
+            {: title="List of Static Values"}
 
-    - Click **Ok** 
+    - Click **Ok**
     - Set Display Extra Values to **Off**
     - Set Display Null Value to **Off**
 
 7. Navigate to **Buttons Bar** region (left side).
 8. Right-click the region and click **Create Button**.
-     ![](./images/create-button.png " ") 
+     ![Rendering Tree](./images/create-button.png " ")
 9. Create three buttons as follows:
 
-    | Name | Label | Button Position |Button Template | Hot | 
-    | ---  | ---   | ---             | --- | ---             | 
+    | Name | Label | Button Position |Button Template | Hot |
+    | ---  | ---   | ---             | --- | ---             |
     | Add          | Add to Cart | Next |Text  |  On  |  On |
     | Edit         | Update Quantity| Create   |Text  |  On | |
-    | Delete       | Remove from Cart | Edit   |Text  |  Off | 
+    | Delete       | Remove from Cart | Edit   |Text  |  Off |
+    {: title="Details of the Buttons"}
 
      Under Server-side Condition section:
     | Name | Type | Item |
-    | ---  | ---   | ---             | 
+    | ---  | ---   | ---             |
     | Add  | Item is zero | P18_QUANTITY |
     | Edit         | Item is NOT zero | P18_QUANTITY |
     | Delete       | Item is NOT zero | P18_QUANTITY |
+    {: title="Server-side conditions for the Buttons"}
 
-      ![](./images/buttons.png " ")    
+      ![Button properties in the Property Editor](./images/buttons.png " ")    
 
 10. For **Delete** button, apply the following changes:
-    - Under Appearance section, click Template Options:
+    - Under Appearance section, click **Use Template Defaults**:
         - For Type - select **Danger**
         - For Style -select **Display as Link**
         - For Spacing Right, select **Large**
     - Click **Ok**.
+    ![Property Editor](./images/delete-button.png " ")
 
 ## Task 5: Add Computation to Calculate the Number of Items for a Product
 1. In the Rendering tree (left pane), expand the **Pre-Rendering**.
 2. Right-click **Before Regions** and click **Create Computation**.
-     ![](./images/computation.png " ")    
+     ![Rendering Tree](./images/computation.png " ")    
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Item Name - select **P18_QUANTITY**
@@ -242,15 +255,15 @@ In this task, you will create four-page items:
         RETURN manage_orders.product_exists(p_product => :P18_PRODUCT_ID);
         </copy>
         ```
-     ![](./images/computation2.png " ")          
+     ![Property Editor](./images/computation2.png " ")          
 
 ## Task 6: Add Process to Add Products to the Shopping Cart
-In this Task, you will call the *manage\_orders.add_product* procedure that add the product temporarily in the APEX collection.
+In this Task, you will call the *manage\_orders.add_product* procedure that will add the product temporarily in the APEX collection.
 
 1. In the Rendering tree (left pane), navigate to **Processing** tab.  
-     ![](./images/create-process.png " ")    
+        
 2. Right click **Processing** and click **Create Process**.
-     ![](./images/create-process2.png " ")   
+     ![Processing Tab in the Page Designer](./images/create-process.png " ")   
 3. In the Property Editor, enter the following:
     - For Name - enter **Add product**
     - For Type - select **Execute Code**
@@ -264,12 +277,14 @@ In this Task, you will call the *manage\_orders.add_product* procedure that add 
                                         p_quantity => :P18_QUANTITY);
             END IF;
             :P18_ACTION := 'ADD';
-        END; 
+        END;
         </copy>
         ```
 
     - Under Server-side Condition section:
-        - For When Button Pressed - select **Add**      
+        - For When Button Pressed - select **Add**
+    
+    ![Property Editor](./images/create-process2.png " ")      
 
 ## Task 7: Add Process to Edit Products in the Shopping Cart
 In this Task, you will call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove the product from the shopping cart and add it again with the updated quantity.
@@ -290,19 +305,20 @@ In this Task, you will call the *manage\_orders.remove\_product* and *manage\_or
                                         p_quantity => :P18_QUANTITY);
             END IF;
             :P18_ACTION := 'EDIT';
-        END; 
+        END;
         </copy>
         ```
 
     - Under Server-side Condition section:
         - For When Button Pressed, select **Edit**
+      
+    ![Property Editor](./images/edit-process.png " ")
 
 ## Task 8: Add Process to Delete Products from the Shopping Cart
 In this Task, you will call the *manage\_orders.remove\_product* to remove the product from the shopping cart.
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
-     ![](./images/create-process-cart.png " ")  
 3. In the Property Editor, enter the following:
     - For Name - enter **Delete product**
     - For Type - select **Execute Code**
@@ -315,19 +331,21 @@ In this Task, you will call the *manage\_orders.remove\_product* to remove the p
                 manage_orders.remove_product(p_product => :P18_PRODUCT_ID);
             END IF;
             :P18_ACTION := 'DELETE';
-        END; 
+        END;
         </copy>
         ```
 
     - Under Server-side Condition section:
         - For When Button Pressed - select **Delete**    
-
+        
+      ![Property Editor](./images/delete-process.png " ")
+      
 ## Task 9: Add Process to Calculate the Shopping Cart Items
 In this task, you will call the *manage\_orders.get\_quantity* to get the total of products in the shopping cart.
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click  **Create Process**.
-     ![](./images/create-process-cart.png " ")  
+     ![Processing Tab in the Page Designer](./images/create-process-cart.png " ")  
 3. In the Property Editor, enter the following:
     - For Name - enter **Calculate Shopping Cart Items**
     - For Type - select **Execute Code**
@@ -346,36 +364,39 @@ After the customer has taken action (add/edit/delete) about the product, the mod
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
-     ![](./images/create-process-cart.png " ")  
+     
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Name - enter **Close Dialog**
         - For Type - select **Close Dialog**
     - Under Settings section:
-        - For Items to Return - enter **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY** 
-
+        - For Items to Return - enter **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY**
+      
+    ![Property Editor](./images/close-dialog.png " ")  
+      
 ## Task 11: Enhance the Modal Page
 
 1. Navigate to **Rendering** tab (left pane).
-     ![](./images/rendering-tab.png " ")  
+     ![Rendering Tab in Page Designer](./images/rendering-tab.png " ")  
 
-2. Navigate to **Page 18: Add to Cart** 
+2. Navigate to **Page 18: Add to Cart**
 3. In the Property Editor, do the following changes:
     - Under Identification section:
         For Title, enter **Manage your Cart**
     - Under Dialog section:
         - For Width, enter **600**
         - For Height, enter **600**
-     ![](./images/enhance-modal.png " ")     
+     ![Property Editor](./images/enhance-modal.png " ")     
 
-4. Click **Save**. 
+4. Click **Save**.
+    
+    ![Save button in Page Designer](./images/save-page.png " ")
 
 
-
-You now know how to customize and enhance the APEX page. You may now **proceed to the next lab**. 
+You now know how to customize and enhance an APEX page. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Arabella Yao, Database Product Manager, October 2021
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

@@ -5,6 +5,9 @@ In this lab, you will gain an insight into the abilities of Interactive Reports,
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Improve the Report and Form](videohub:1_vqxp92k7)
+
 ## **Task 1**: Enhancing the Interactive Report
 The **NYC Highschools Report** page utilizes an Interactive Report to display the records. Interactive Reports are exceedingly powerful, as they allow _*end users*_ to modify what data is displayed, and various display characteristics. For this report, you will add a column break, a computational column, an aggregate, a chart, then order the data and save the report for everyone to see.
 
