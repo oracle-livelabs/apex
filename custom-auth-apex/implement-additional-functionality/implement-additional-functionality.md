@@ -24,7 +24,7 @@ This lab assumes you have:
 
 Many websites and applications require an account verification or account activation step between when the account is created and the user can log in. The implementation in this lab builds out this functionality.
 
-As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=2-allow-end-users-create&nav=open#Task1:CreateaNewUserPage), our user credentials table makes use of an **ACCOUNT_ STATUS** flag that is either set to 0, meaning the account is disabled, or 1, meaning it is enabled. At account creation, this flag is automatically set to 0. We take advantage of this flag in the next 2 tasks, for activating accounts, as well as in the following 2 tasks for forgetting/resetting passwords.
+As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=allow-end-users-create&nav=open#Task1:CreateaNewUserPage), our user credentials table makes use of an **ACCOUNT_ STATUS** flag that is either set to 0, meaning the account is disabled, or 1, meaning it is enabled. At account creation, this flag is automatically set to 0. We take advantage of this flag in the next 2 tasks, for activating accounts, as well as in the following 2 tasks for forgetting/resetting passwords.
 
 *Remember to save your work throughout. We recommend doing so in the Page Designer each time you add/edit a Page Item, Button, Validation, etc. The **Save** button can be found in the top-right corner.*
 
@@ -136,7 +136,7 @@ This concludes this task. You may now **proceed to the next task.**
 
 ## Task 2: Set up Account Activation Email
 
-Now that we have an Account Activation page to go to, we need to build out the functionality that sends the account activation email once the user creates an account. This will be done from the “Create New User” page (created in [Lab 2, Task 1](?lab=2-allow-end-users-create&nav=open#Task1:CreateaNewUserPage)). Follow the steps outlined below to send an account activation email once a user creates an account.
+Now that we have an Account Activation page to go to, we need to build out the functionality that sends the account activation email once the user creates an account. This will be done from the “Create New User” page (created in [Lab 2, Task 1](?lab=allow-end-users-create&nav=open#Task1:CreateaNewUserPage)). Follow the steps outlined below to send an account activation email once a user creates an account.
 
 1.	On the “Create New User” page, navigate to the Processing tab on the left-side pane (denoted by ![Processing icon](./images/processing-icon.png)) and right-click on “Process form…” and select **Create Process**.
 
@@ -189,7 +189,7 @@ This concludes this task. You may now **proceed to the next task.**
 
 ## Task 3: Create a Reset Password Page
 
-In addition to Account Activation requirements, many applications have functionality for resetting a user’s password in case the user forgets it. To do so, we will have a Forgot/Reset password button directly on the Login page, and upon clicking this button, we will require users to input the email associated with their account. If the account is activated (referencing the **ACCOUNT_ STATUS** flag as mentioned in [Lab 1, Task 2: Set Up a User Credentials Table](?lab=1-create-custom-auth-scheme#Task2:SetUpaUserCredentialsTable)) and belongs to an existing user, a reset password email will be sent to the email with a unique link for the user to reset their password.
+In addition to Account Activation requirements, many applications have functionality for resetting a user’s password in case the user forgets it. To do so, we will have a Forgot/Reset password button directly on the Login page, and upon clicking this button, we will require users to input the email associated with their account. If the account is activated (referencing the **ACCOUNT_ STATUS** flag as mentioned in [Lab 1, Task 2: Set Up a User Credentials Table](?lab=create-custom-auth-scheme#Task2:SetUpaUserCredentialsTable)) and belongs to an existing user, a reset password email will be sent to the email with a unique link for the user to reset their password.
 
 The following two tasks will walk you through the creation of the Forgot/Reset Password functionality, which will involve the creation of two pages: one for sending the reset password link (what we’re referring to as the "Forgot Password" functionality) and another for the actual password reset (where the aforementioned link takes you and what we’re referring to as the "Reset Password" functionality). Let’s first create the page where the actual password resetting occurs.
 

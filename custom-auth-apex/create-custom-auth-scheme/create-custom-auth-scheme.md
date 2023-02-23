@@ -139,7 +139,7 @@ All of your users’ authentication credentials and user information needs to be
 
 	![Trigger for encrypting the password once a user updates their password](./images/encrypt-before-update-trigger.png)
 
-13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=3-implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
+13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for initially disabling a user's account](./images/disable-account-trigger.png)
 
