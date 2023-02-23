@@ -258,9 +258,9 @@ Now we will put all the pieces together to build out our custom authentication s
 
 	![Return to application home page via Breadcrumb menu](./images/app-from-breadcrumb.png)
 
-10. Click on the "Edit Application Properties" button in the top-right.
+10. Click on the "Edit Application Definition" button in the top-right.
 
-	![Edit Application Properties](./images/edit-app-properties.png)
+	![Edit Application Properties](./images/edit-app-definition.png)
 
 11. Navigate to the **Security** menu along the top toolbar.
 
