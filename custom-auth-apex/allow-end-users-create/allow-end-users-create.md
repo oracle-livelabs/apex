@@ -51,7 +51,7 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
    Make the **EMAIL** page item of **Subtype** “E-Mail” as well so that it will automatically check that the value entered is a properly formatted email address.
 
-	 ![Change the EMAIl and USERNAME item TYPE](./images/change-item-type.png)
+	 ![Change the EMAIL and USERNAME item TYPE](./images/change-item-type.png)
 
 9. Add another page item (right-click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
 
