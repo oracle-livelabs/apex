@@ -552,7 +552,7 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 22. Click **Save** in the top-right corner to save your work.
 
-**Congratulations! This concludes the workshop: Custom Authentication in APEX.**
+**Congratulations! This concludes the workshop: Implement custom authentication in APEX.**
 
 ## Learn More
 
@@ -563,4 +563,4 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, July 2022
+* **Last Updated By/Date** - Ana Beyer, February 2023

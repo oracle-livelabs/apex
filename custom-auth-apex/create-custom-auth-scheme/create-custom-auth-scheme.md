@@ -283,4 +283,4 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, July 2022
+* **Last Updated By/Date** - Ana Beyer, February 2023
