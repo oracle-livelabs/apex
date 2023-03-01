@@ -172,14 +172,11 @@ To create a task definition:
 
     ```
     <copy>
-    select e.empno, e.emp_name, m.emp_name as mgr_name
-      from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
-      where m.empno(+)=e.mgr
-      and e.empno= :APEX$TASK_PK
+    select e.empno, e.emp_name, m.emp_name as mgr_name from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
+    where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
     </copy>
     ```
-
-       ![Task Definition Settings](images/task-definition-settings.png " ")
+    ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
@@ -230,7 +227,7 @@ To create a task definition:
 
     - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
+    ```
         <copy>
          declare
            l_req_id number;
@@ -249,6 +246,7 @@ To create a task definition:
     end;
     </copy>
     ```
+
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
