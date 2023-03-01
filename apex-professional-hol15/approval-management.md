@@ -492,21 +492,21 @@ Add a page to Submit an Expense request.
 
 12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
-   ![Create processing tab process1](images/submit-expense-create-process.png " ")
+    ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
     In the Property Editor, enter the following:
 
-    - For Name - Type **Submit Expense request**
+     - For Name - Type **Submit Expense request**
 
-    - For Type - Select **Human Task - Create**
+     - For Type - Select **Human Task - Create**
 
     Under **Settings** Section:
 
-    - For Definition - Select **Expense request**
+     - For Definition - Select **Expense request**
 
-    - For Details Primary key Element: Select **P3\_EMPNO**
+     - For Details Primary key Element: Select **P3\_EMPNO**
 
-    - For Success Message: Type **Expense Request submitted successfully**
+     - For Success Message: Type **Expense Request submitted successfully**
 
     ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
