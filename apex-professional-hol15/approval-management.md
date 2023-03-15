@@ -246,7 +246,6 @@ To create a task definition:
     end;
     </copy>
     ```
-
     - Click **Create** to save Create Event Action.
 
     ![Task Definition Action - create1](images/task-definition-create-action.png " ")
@@ -481,7 +480,6 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -943,7 +941,6 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
-
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
@@ -955,3 +952,4 @@ You may now **proceed to the next lab**.
    - **Author** - Ankita Beri, Product Manager
    - **Contributor** - Roopesh Thokala , Product Manager
    - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
+

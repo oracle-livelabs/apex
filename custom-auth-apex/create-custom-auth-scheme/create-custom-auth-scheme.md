@@ -139,7 +139,7 @@ All of your users’ authentication credentials and user information needs to be
 
 	![Trigger for encrypting the password once a user updates their password](./images/encrypt-before-update-trigger.png)
 
-13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=3-implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
+13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for initially disabling a user's account](./images/disable-account-trigger.png)
 
@@ -258,9 +258,9 @@ Now we will put all the pieces together to build out our custom authentication s
 
 	![Return to application home page via Breadcrumb menu](./images/app-from-breadcrumb.png)
 
-10. Click on the "Edit Application Properties" button in the top-right.
+10. Click on the "Edit Application Definition" button in the top-right.
 
-	![Edit Application Properties](./images/edit-app-properties.png)
+	![Edit Application Properties](./images/edit-app-definition.png)
 
 11. Navigate to the **Security** menu along the top toolbar.
 
@@ -283,4 +283,4 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, July 2022
+* **Last Updated By/Date** - Ana Beyer, February 2023
