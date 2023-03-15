@@ -149,7 +149,7 @@ To create a task definition:
 
     - For Name - Enter **Expense Request**
 
-    - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
+    - For Subject - Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
 
     - For Static ID - Enter **EXPENSE_REQUEST**
 
@@ -165,18 +165,18 @@ To create a task definition:
 6. Under **Settings** Section:
 
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
-    
+
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
 
     ```
     <copy>
-    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    select e.empno, e.emp_name, m.emp_name as mgr_name from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
+    where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
     </copy>
     ```
-
-       ![Task Definition Settings](images/task-definition-settings.png " ")
+    ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
@@ -227,7 +227,7 @@ To create a task definition:
 
     - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
+    ```
         <copy>
          declare
            l_req_id number;
@@ -255,8 +255,6 @@ To create a task definition:
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
-
-    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -482,7 +480,6 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-  
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -493,21 +490,21 @@ Add a page to Submit an Expense request.
 
 12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
-   ![Create processing tab process1](images/submit-expense-create-process.png " ")
+    ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
     In the Property Editor, enter the following:
 
-    - For Name - Type **Submit Expense request**
+     - For Name - Type **Submit Expense request**
 
-    - For Type - Select **Human Task - Create**
+     - For Type - Select **Human Task - Create**
 
     Under **Settings** Section:
 
-    - For Definition - Select **Expense request**
+     - For Definition - Select **Expense request**
 
-    - For Details Primary key Element: Select **P3\_EMPNO**
+     - For Details Primary key Element: Select **P3\_EMPNO**
 
-    - For Success Message: Type **Expense Request submitted successfully**
+     - For Success Message: Type **Expense Request submitted successfully**
 
     ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
@@ -944,7 +941,6 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
-   
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**

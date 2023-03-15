@@ -46,7 +46,7 @@ In this lab, you will:
     * Select the red color swatch (fifth from the left) and the smiley face icon.
 
     * Click **Save Icon**.
-    
+
     ![Choose Application Icon dialog with the fifth color swatch and Smiley icon selected](images/choose-icon.png " ")
 
 7. In the Pages section of the Create Application wizard, click the **Edit** button next to Home.

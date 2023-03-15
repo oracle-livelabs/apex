@@ -32,7 +32,7 @@ In this lab, you will:
 ## Task 2: Add a Name and Icon to the Application
 
 1. In the Create Application wizard, for Name, enter **ACME Shop** and click the application icon.
-    
+
     ![Create Application wizard](./images/name-app.png " ")
 
 2. Click **Upload your own icon** to select an icon or simply drag and drop the image. Download a sample icon [here](./images/shopping-cart.png).
@@ -40,9 +40,9 @@ In this lab, you will:
     ![Upload icon wizard](./images/upload-icon.png " ")
 
 3. Adjust the icon if needed and click **Save Icon**.
- 
+
     ![Upload icon wizard](./images/save-icon.png " ")
-    
+
 ## Task 3: Add the Dashboard Page
 
 A dashboard page is a great way to show important information using various charts. When you installed the Sample Dataset, it also created a number of views, which join data from various tables. These views are ideal as the basis for the dashboard charts.
@@ -100,9 +100,9 @@ A dashboard page is a great way to show important information using various char
 7. Click Advanced and check **Set as Administration Page**.
 
     Setting a page as Administration Page will make that only certain users can run the page. In this case, only users with Administration Rights will be able to run the Dashboard page, which means that this page will require authentication.
-    
+
     ![Advanced section in Create Application wizard](./images/set-admin.png " ")
-    
+
 8. Click **Add Page**.
 
 ## Task 4: Add the Products Page
@@ -133,7 +133,7 @@ Since we designated the product faceted search page as the application's home pa
 1. Navigate to the original page named "Home" and click **Edit**.
 
     ![Create Application wizard](./images/edit-home.png " ")  
-    
+
 2. Click **Delete**.    
 
     ![Edit page wizard](./images/delete-page.png " ")  
@@ -169,9 +169,9 @@ Since we designated the product faceted search page as the application's home pa
     - DEPARTMENT_LOOKUP
     - PRODUCT_REVIEWS
     - STORES  
-    
+
     ![Edit Page wizard](./images/edit-multiple-reports.png " ")
-      
+
 
 2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
 3. Click **Save Changes**.
@@ -190,17 +190,9 @@ Since we designated the product faceted search page as the application's home pa
     - Table - select **PRODUCTS**
     - Check **Include Form**
 
-4. For Lookup Columns, enter the following:
-    - Lookup Key 1 - select **CLOTHING_ID**
-    - Display Column 1 - select **CLOTHING_LOOKUP.CLOTHING**
-    - Lookup Key 2 - select **DEPARTMENT_ID**
-    - Display Column 2 - select **DEPARTMENT\_LOOKUP.DEPARTMENT**
-    - Lookup Key 3 - select **COLOR_ID**
-    - Display Column 3 - select **COLOR_LOOKUP.COLOR**
+4. Click **Advanced** and check **Set as Administration Page**.
 
-5. Click **Advanced** and check **Set as Administration Page**.
-
-6. Click **Add Page**.
+5. Click **Add Page**.
 
     ![Add Page wizard](./images/ir-page2.png " ")
 
@@ -222,7 +214,7 @@ Now that you have added all the pages, it is time to generate the app and review
 
 2. Once the application is created, you will find the new app on the application home page.
 Click **Run Application**.
-    
+
     ![Application home page](./images/run-app.png " ")
 
 ## Task 11: Run the Application
