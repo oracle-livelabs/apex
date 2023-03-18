@@ -87,17 +87,18 @@ In this lab, you will:
    Copy the following script and paste into the editor.
     ```
     <copy>
-    UPDATE products
-    SET p.clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
-    p.color = json_value(product_details,'$.colour'),
-    p.department = json_value(product_details,'$.gender')
+    UPDATE
+    products
+    SET    clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
+    color = json_value(product_details,'$.colour'),
+    department = json_value(product_details,'$.gender')
     ```
 
     This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similary, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns respectively based on information found in the JSON product details column in the **Products** table.
 
     Click **Run**.
 
-    ![SQL Scripts page with Run and Save buttons](./images/insert-code-run.png " ")
+    ![SQL Scripts page with Run and Save buttons](./images/insert-code.png " ")
 
 6. Click **Run Now**.
 
