@@ -4,7 +4,7 @@
 
 In this lab, you will do the final touch up of the app to improve the aesthetics. You will learn how to customize the CSS
 
-## Task 1 : Add CSS to the page
+## **Task 1**: Add CSS to the page
 
 When we have liked a post we should see the Heart in RED. Also, if we
 are using this app on a small screen (like a mobile device) it would be
@@ -29,8 +29,10 @@ level.
             bottom: 24px;
             right: 24px;
             z-index: 1000;
+        }
     }
-}
+    </copy>
+    ```
 
 
 ## **Task 2**: Clean up the File Browse Page Item

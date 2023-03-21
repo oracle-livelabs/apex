@@ -23,15 +23,15 @@ simplifies the amount of Javascript required to make the magic happen.
 
 2.  Right-click the **Events** entry and choose **Create Dynamic Action**.
 
-        ![Right-click options](images/create-da.png)
+    ![Right-click options](images/create-da.png)
 
 3.  A **New** Dynamic Action has been created with a **True action** defaulted to **Show**. Let's change the Name to **action-like**.
 
-        ![Property editor](images/da-name.png)
+    ![Property editor](images/da-name.png)
 
 3.  For **When > Event**, select **Custom**.
 
-        ![Property Editor](images/when-event.png)
+    ![Property Editor](images/when-event.png)
 
 4.  Now, we can wire our Javascript up to this Dynamic Action by
     setting the **When > Custom Event** to **action-like**
@@ -41,7 +41,7 @@ simplifies the amount of Javascript required to make the magic happen.
 5.  Finally, we need to set the **When > Selection Type** to
     **JavaScript Expression**, and for **Javascript Expression** enter **document** in the box.
 
-        ![Property Editor](images/js-expression.png)
+    ![Property Editor](images/js-expression.png)
 
 ## **Task 2** : Creating the True Actions for the Like Button
 

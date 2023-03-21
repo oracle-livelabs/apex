@@ -1,5 +1,8 @@
 # [OPTIONAL] Wire up the Delete Button with Dynamic Actions
 
+## Introduction
+   In this lab, you will learn to add a DELETE button using which a user can delete the post.
+
 ## **Task 1**: Create a Dynamic Action with a custom action-delete event
 
    Coming soon 
@@ -8,8 +11,8 @@
 
 Coming soon 
 
-
-    We should now be able to Delete our own posts! Save and Run to try it out. Feel free to Add Post a few times and try it out!
+We should now be able to Delete our own posts! Save and Run to try it out. Feel free to Add Post a few times and try it out!
+    
 
 ## **Acknowledgements**
 

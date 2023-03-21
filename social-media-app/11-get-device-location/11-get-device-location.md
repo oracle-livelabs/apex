@@ -12,10 +12,7 @@
 
 ## Task 6: Update Server-side Condition on page Process
 
-   Set **Processing -\> Processes -\> Server-side Condition** for the
-**SAVE** submit-request value from the button **DA** to ensure that if
-more buttons are added, only the **SAVE** submit-request will trigger
-the database operation
+   Set **Processing -\> Processes -\> Server-side Condition** for the **SAVE** submit-request value from the button **DA** to ensure that if more buttons are added, only the **SAVE** submit-request will trigger the database operation.
 
    ![Property Editor](images/process-attributes.png)
 

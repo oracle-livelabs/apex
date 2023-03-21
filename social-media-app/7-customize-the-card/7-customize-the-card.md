@@ -33,8 +33,8 @@ clicking it again will remove the like.
 
 6.  Next, we want to configure the **Appearance** of this button by
     setting the **Display Type** to **Text with Icon** and copying
-    and pasting **fa-heart &USER_REACTION_CSS.** (including
-    the period) into the **Icon** box. The **USER_REACTION_CSS** column
+    and pasting **fa-heart &USER\_REACTION\_CSS.** (including
+    the period) into the **Icon** box. The **USER\_REACTION\_CSS** column
     is defined in the query for this CARDS region.
 
 7.  For the **CSS Classes** property, enter **js-heart-button** which will be used by our Dynamic
@@ -74,7 +74,7 @@ button that only displays for posts that belong to the logged in user:
     whether or not this **button** shows up per card by setting the
     **Type** to **Expression**, and the **Language** to **PL/SQL**.
 
-    - Under **Server-side conditions**, for **PL/SQL expression**, enter **:USER_NAME=:APP_USER**
+    - Under **Server-side conditions**, for **PL/SQL expression**, enter **:USER\_NAME=:APP\_USER**
     
     This expression will compare the query column value returned to
     the currently signed-in APEX user. This colon-prefixed "variable"
@@ -125,12 +125,12 @@ targets, to the Dynamic actions that we will create in Lab 8.
     
     ![Code Editor](images/js-code-2.png)
 
-    Notice that the code references a Page Item, **P1_ACTION_ID** with a squiggly underline, which we have not created
+    Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created
 yet.
 
     ![code editor](images/js-code-3.png)
 
-3. We need this Page Item **P1_ACTION_ID** to be on the page so that this
+3. We need this Page Item **P1\_ACTION\_ID** to be on the page so that this
 javascript can store the particular CARD **ID** when a user clicks
 either buttons, which in turn, will execute either the **like** or the
 **delete** operations from the URL link targets. This is a design
@@ -141,14 +141,14 @@ Dynamic Actions to respond to in the next task.
 
 
 
-4.  To create and configure **P1_ACTION_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
+4.  To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
 
     ![Create page item option](images/create-page-item.png)
 
 5.  APEX will default set **Page Item** > **Name** with the Prefix of
     **P** and the **Page Number** followed by an underscore (**\_**),
-    and **NEW** in this case, as **P1_NEW** -- we want to edit this name
-    to be **P1_ACTION_ID** in the **Page Item > Identification > Name** field.
+    and **NEW** in this case, as **P1\_NEW** -- we want to edit this name
+    to be **P1\_ACTION\_ID** in the **Page Item > Identification > Name** field.
 
 6.  We also want to change the **Type** to **Hidden**
 

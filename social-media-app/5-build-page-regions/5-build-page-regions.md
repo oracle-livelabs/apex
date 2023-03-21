@@ -56,17 +56,17 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
     Click on each of these listed page items one at a time, and press the delete key to remove them. Alternatively, you can control+click each and then delete them all in one motion.
 
-    - **P1_FILE_MIME**
+    - **P\_FILE\_MIME**
 
-    - **P1_FILE_NAME**
+    - **P1\_FILE\_NAME**
 
-    - **P1_CREATED_BY**
+    - **P1\_CREATED\_BY**
 
-    - **P1_CREATED**
+    - **P1\_CREATED**
 
-    - **P1_UPDATED_BY**
+    - **P1\_UPDATED\_BY**
 
-    - **P1_UPDATED**
+    - **P1\_UPDATED**
 
     ![Rendering tree with page items](images/page-items.png "")
 
@@ -82,7 +82,7 @@ carefully delete those that we don't want.
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 
 2. Next, we want to change some parameters of the remaining page items on
-the form. For the **P1_POST_COMMENT** item, update the following:
+the form. For the **P1\_POST\_COMMENT** item, update the following:
     - For **Type**, choose **Text Field**.
     - For **Label**, enter **Post**.
 
@@ -97,17 +97,17 @@ the form. For the **P1_POST_COMMENT** item, update the following:
 
 4. Moving on, the **Lat** and **Lon** items don't need to be seen, so we'll
 hide them next.
-    In Page Designer, multi-select both **P1_LAT** and **P1_LON** and change
+    In Page Designer, multi-select both **P1\_LAT** and **P1\_LON** and change
 the type to **Hidden**.
 
     ![Rendering tree](images/lat-lon.png "")
 
     For the sake of keeping things organized, let's move them under the
-*P1_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
+*P1\_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
 
     ![Rendering tree](images/updated-tree.png "")
 
-5. Next, we want to configure the **P1_FILE_BLOB** page item:
+5. Next, we want to configure the **P1\_FILE\_BLOB** page item:
 
     - Change the **Type** to **File Browse...**
     - Set the **Label** to **Photo**
@@ -118,9 +118,9 @@ the type to **Hidden**.
     With this last change, you will now see a few more attributes for us to
 set:
 
-    - **MIME Type Column**: FILE_MIME
+    - **MIME Type Column**: FILE\_MIME
 
-    - **Filename Column**: FILE_NAME
+    - **Filename Column**: FILE\_NAME
 
     - **File Types**: image/*
 
@@ -142,10 +142,10 @@ from view when the page is loaded. We will then adjust some other
 settings, and then create a button that will be used to make
 this form visible to the user as a modal form.
 
-1. First, we want to move the **P1_POST_COMMENT** page item under the
-**P1_FILE_BLOB** item to improve the UX such that the user will expect to
+1. First, we want to move the **P1\_POST\_COMMENT** page item under the
+**P1\_FILE\_BLOB** item to improve the UX such that the user will expect to
 specify the photo first, and then add a comment. To do this, simply drag
-the **P1_POST_COMMENT** item to underneath the **P1_FILE_BLOB** item:
+the **P1\_POST\_COMMENT** item to underneath the **P1\_FILE\_BLOB** item:
 
     ![Rendering tree with page items is displayed](images/post-page-items.png "")
 
@@ -167,14 +167,14 @@ the **P1_POST_COMMENT** item to underneath the **P1_FILE_BLOB** item:
     4.  Then, set the options to match (check **Auto Height**, set
     **Size** to **None**, and **Heading Level** to **H1**):
 
-        ![Property editor](images/post-property-4.png "")
+    ![Property editor](images/post-property-4.png "")
 
     That should complete what we need to configure for the Post form region
 itself.
 
 3. Let's save and run the app.
 
-*You'll quickly notice that there isn't much to see* - but that's okay!
+    *You'll quickly notice that there isn't much to see* - but that's okay!
 Now that we've changed the form region to be an inline dialog, it will
 be hidden on page load. Inline Dialogs need to be opened by a button
 click (or custom javascript is an option, too), so we need to create a
@@ -188,7 +188,7 @@ button!
 
     ![Rendering tree](images/create-button.png "")
 
-2. Set the **Button Name** to **ADD_POST** and press enter. You will
+2. Set the **Button Name** to **ADD\_POST** and press enter. You will
 see the Label is automatically set to '**Add Post**'.
 
     Configure the following other attributes on this button as follows:
@@ -205,7 +205,7 @@ see the Label is automatically set to '**Add Post**'.
 
     The button configuration should look like this:
 
-        ![Button attributes](images/button-attributes.png "")
+    ![Button attributes](images/button-attributes.png "")
 
 3. To make this button open the Post region (which is an inline dialog), we
 simply need to create an on-click **Dynamic Action**. 
@@ -241,7 +241,7 @@ configure a few more attributes.
 now see the **+Add Post** button and nothing else, until you click it,
 and then the in-line dialog opens with the Post **form**.
 
-        ![Running app](images/run-app-2.png)
+    ![Running app](images/run-app-2.png)
 
 [\*TO BE REMOVED AFTER NEW SCREENSHOTS\* If you made the same mistake I
 made, we need to update the Title to just POST without the S.]{.mark}
@@ -266,7 +266,7 @@ the tree, and click **Create Button**
         - Size: **Large**
         - Width: **Stretch**
 
-        ![Button attributes in property editor](images/configure-button.png)
+    ![Button attributes in property editor](images/configure-button.png)
 
     -  CSS Classes: **post-button**
 
@@ -276,14 +276,14 @@ the tree, and click **Create Button**
 
     The attributes should look this:
 
-        ![Button attributes in property editor](images/configure-button-2.png)
+    ![Button attributes in property editor](images/configure-button-2.png)
 
 3. To enable the form to be able to save the new post data, we need another
 Dynamic Action and then a page process that does the work.
 
   Right-click on the **SAVE** button and choose **Create Dynamic Action**.
     
-        ![Create dynamic action](images/create-da-2.png)
+    ![Create dynamic action](images/create-da-2.png)
 
 4.  Set the **Name** to **Submit post**.
 
@@ -296,8 +296,8 @@ Dynamic Action and then a page process that does the work.
     
     ```
     <copy>
-        apex.item(\'P1_FILE_BLOB\').value.length\>0 \|\|
-        apex.item(\'P1_POST_COMMENT\').value.length\>0
+        apex.item('P1\_FILE\_BLOB').value.length>0 || 
+        apex.item('P1\_POST\_COMMENT').value.length>0
     </copy>
     ```
 
@@ -326,7 +326,7 @@ page with a process for the Form:
     entry in the list (which is actually another tree and will grow in
     length as you add more server-side processes):
 
-        ![Processing tab](images/processing.png)
+    ![Processing tab](images/processing.png)
 
 2.  Right-click on the **Processing** entry and choose **Create Process**.
 
@@ -335,7 +335,7 @@ page with a process for the Form:
 4.  Change the **type** to be **Form -- Automatic Row Processing
     (DML)**
 
-        ![Property editor](images/process-type.png)
+    ![Property editor](images/process-type.png)
 
 5.  Set the **Form Region** to the **Post** region.
 
@@ -343,9 +343,9 @@ page with a process for the Form:
 
     The attributes should look like this:
 
-        ![Property Editor](images/process-attributes.png)
+    ![Property Editor](images/process-attributes.png)
 
-    The form will now insert records into the SM_POSTS table -- but we
+    The form will now insert records into the SM\_POSTS table -- but we
 won't be able to see them on the page until we complete the next lab.
 
 7. However, you can run the app and select an image file (or take a
