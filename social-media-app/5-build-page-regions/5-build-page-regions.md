@@ -298,8 +298,8 @@ Dynamic Action and then a page process that does the work.
     
     ```
     <copy>
-        apex.item('P1\_FILE\_BLOB').value.length>0 || 
-        apex.item('P1\_POST\_COMMENT').value.length>0
+        apex.item('P1_FILE_BLOB').value.length>0 || 
+        apex.item('P1_POST_COMMENT').value.length>0
     </copy>
     ```
 

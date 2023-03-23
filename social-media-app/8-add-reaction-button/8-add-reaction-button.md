@@ -6,7 +6,7 @@ Up until now the Like and Delete buttons are available on the Cards (conditional
 Delete button!). However, clicking these buttons doesn't currently have
 any visible effect. Behind the scenes, the URL Link targets are actually
 calling the javascript on the page, and are setting the
-**P1_ACTION_ID**, but we need to create a Dynamic Action with a Custom
+**P1\_ACTION\_ID**, but we need to create a Dynamic Action with a Custom
 Event for *each* to complete the circuit. This design pattern greatly
 simplifies the amount of Javascript required to make the magic happen.
 
