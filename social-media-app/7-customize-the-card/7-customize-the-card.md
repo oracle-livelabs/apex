@@ -30,7 +30,7 @@ clicking it again will remove the like.
     Set the **Link > Type** to **Redirect to URL**.
 
 5.  Now, click the **Target** button so that you can *copy and paste*
-    **#action\$like?id=&ID.** (including the period) into the
+    **#action$like?id=&ID.** (including the period) into the
     URL box, and click OK.
 
 6.  Next, we want to configure the **Appearance** of this button by
@@ -67,7 +67,7 @@ button that only displays for posts that belong to the logged in user:
     - Under **Link**, change the **Type** to **Redirect to URL**.
 
     - Click on the **Target** button and enter
-    **#action\$delete?id=&ID.** and then *click* on the **OK**.
+    **#action$delete?id=&ID.** and then *click* on the **OK**.
 
     - In the **Appearance** section, change the **Display Type** to **Icon** and for Font-APEX CSS class, enter 
     **fa-trash-o**.
