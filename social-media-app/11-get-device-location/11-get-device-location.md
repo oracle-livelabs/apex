@@ -1,5 +1,10 @@
 # [OPTIONAL] Get Device Location
 
+## Introduction
+In this lab, you will learn to add a map region and get the device location of the end user.
+
+Estimated Time: 5 minutes
+
 ## Task 1: Create Map Region
 
 ## Task 2: Create Map button

@@ -1,8 +1,10 @@
-# Customizing the Card
+# Customize the Card
 
 ## Introduction
 
 In this lab, you will learn to customize the card in order to add a reaction button and a delete button for a user to like a post or delete a post respectively.
+
+Estimated Time: 5 minutes
 
 ## **Task 1** : Create a Like Button
 

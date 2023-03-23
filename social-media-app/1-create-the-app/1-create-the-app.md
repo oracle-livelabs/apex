@@ -1,4 +1,4 @@
-# Creating an APEX Application
+# Create an APEX Application
 
 In this lab, you will learn to create a blank APEX application that will be used to build the Social Media App.
 

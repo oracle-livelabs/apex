@@ -1,10 +1,12 @@
-# Building the Cards Region
+# Build the Cards Region
 
 ## Introduction
 
 In this lab, you learn to create the CARDS region that can query the data
 the way we need it, and configure the region attributes to suit our
 goals.
+
+Estimated Time: 10 minutes
 
 ## **Task 1**: Create a Cards Region
 

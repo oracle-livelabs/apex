@@ -21,15 +21,15 @@ Estimated Time: 60 minutes
 | --- | --- |
 | [Creating an App](?lab=1-create-the-app) | 5 minutes |
 | [Building the Data Model](?lab=2-build-data-model) | 5 minutes |
-| [Getting Familiar with the APEX Developer Tools](?lab=3-familiarize-with-devtools) | 10 minutes |
-| [Customizing the App Homepage](?lab=4-customize-app-homepage) | 10 minutes |
-| [Building the Page Regions](?lab=5-build-page-region) | 20 minutes |
+| [Getting Familiar with the APEX Developer Tools](?lab=3-familiarize-with-devtools) | 5 minutes |
+| [Customizing the App Homepage](?lab=4-customize-app-homepage) | 5 minutes |
+| [Building the Page Regions](?lab=5-build-page-region) | 15 minutes |
 | [Building the Cards Region](?lab=6-build-cards-region) | 10 minutes |
-| [Customizing the Card](?lab=7-customize-the-card) | 10 minutes |
-| [Add a Reaction Button](?lab=8-add-reaction-button) | 10 minutes |
-| [Cleaning Up the App](?lab=9-clean-up) | 10 minutes |
-| [(OPTIONAL) Wiring Up teh Delete Button](?lab=10-wire-up-delete-button) | 10 minutes|
-| [(OPTIONAL) Getting the Device Location](?lab=11-get-device-location) | 10 minutes |
+| [Customizing the Card](?lab=7-customize-the-card) | 5 minutes |
+| [Add a Reaction Button](?lab=8-add-reaction-button) | 5 minutes |
+| [Cleaning Up the App](?lab=9-clean-up) | 5 minutes |
+| [(OPTIONAL) Wiring Up the Delete Button](?lab=10-wire-up-delete-button) | 5 minutes|
+| [(OPTIONAL) Getting the Device Location](?lab=11-get-device-location) | 5 minutes |
 Total estimated time: 60 minutes
 
 ### **Let's Get Started!**

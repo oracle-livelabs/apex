@@ -1,9 +1,9 @@
-# Getting Familiar with the APEX Developer Tools
+# Get Familiar with the APEX Developer Tools
 
 ## Introduction
 In this lab, you will get acquainted with the developer tools where the APEX developers spend most of their time. You will explore the APEX Developer Toolbar and the Page Designer.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 **NOTE: You can skip to [LAB 4](?lab=4-customize-app-homepage) if you are already familiar with the APEX developer tools**
 

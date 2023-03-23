@@ -1,11 +1,11 @@
-# Building the Data Model
+# Build the Data Model
 
 
 ## Introduction
 
 In this lab, you will create the database objects and data required for the app. To do so, you will be introduced to the SQL workshop component of APEX where you will build the database objects using Quick SQL, run SQL scripts and view the data using the Object Browser.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ## **Task 1**: Data Model review and QuickSQL
 

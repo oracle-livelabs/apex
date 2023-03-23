@@ -10,6 +10,8 @@ calling the javascript on the page, and are setting the
 Event for *each* to complete the circuit. This design pattern greatly
 simplifies the amount of Javascript required to make the magic happen.
 
+Estimated Time: 5 minutes
+
 ## **Task 1** : Create a Dynamic Action with a Custom **action-like** Event
 
 1. From the Rendering pane, navigate to the **Dynamic Actions** tab.

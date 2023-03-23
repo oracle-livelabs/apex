@@ -1,8 +1,10 @@
-# Cleaning Up the App
+# Clean Up the App
 
 ## Introduction
 
-In this lab, you will do the final touch up of the app to improve the aesthetics. You will learn how to customize the CSS
+In this lab, you will do the final touch up of the app to improve the aesthetics. You will learn how to customize the CSS.
+
+Estimated Time: 5 minutes
 
 ## **Task 1**: Add CSS to the page
 

@@ -1,9 +1,9 @@
-# Customizing the App Homepage
+# Customize the App Homepage
 
 ## Introduction
 In this lab, you will take advantage of the low code development by customizing the Social Media App declaratively. You will learn to navigate and modify the application and page properties.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ## **Task 1**: Remove the Navigation Menu
 

@@ -1,4 +1,4 @@
-# Building the Page Regions
+# Build the Page Regions
 
 ## Introduction
 
@@ -15,6 +15,8 @@ region. The cards region will serve as our scaffold for other features
 such as displaying the post comment, reaction counts, as well as buttons
 for reacting/liking a post and enabling a user to delete their own
 posts.
+
+Estimated Time: 15 minutes
 
 ## **Task 1**: Add a Form Region
 
