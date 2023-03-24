@@ -1,63 +1,62 @@
-# Improving the Dashboard
+# ダッシュボードの改善
 
-## Introduction
+## 序章
 
-In this lab, you will learn how to manipulate regions in Page Designer to improve your Dashboard.
+このラボでは、Page Designer で領域を操作してダッシュボードを改善する方法を学習します。
 
-## Task 1: Removing Chart 4
-Looking at the Dashboard, you will see that Chart 4 is based on demo data and should be removed.
+## タスク 1: チャート 4 の削除
+ダッシュボードを見ると、グラフ 4 はデモ データに基づいており、削除する必要があることがわかります。
 
-1. In the runtime environment, click **Dashboard**.
-2. In the Developer Toolbar (at the bottom of the runtime page), click **Edit Page 2**.
+1. ランタイム環境で、**ダッシュボード**をクリックします。
+2. 開発者ツールバー (ランタイム ページの下部) で、[**Edit Page 2**] をクリックします。
 
     ![](images/go-page2.png " ")
 
-    You should now be in *Page Designer*. Page Designer is where you will spend the majority of your time improving your application. There are three panes within Page Designer. The left pane initially displays the Rendering tree, with a list of page components. The middle pane displays the Layout, a representation of the page, and Gallery (in the bottom), from which you can drag and drop new components into the Layout. The right pane is the Property Editor, where you can change attributes for the selected component.
+    *Page Designer* が表示されます。 Page Designer は、アプリケーションの改善に多くの時間を費やす場所です。 Page Designer には 3 つのペインがあります。 左ペインには、最初にレンダリング ツリーが表示され、ページ コンポーネントのリストが表示されます。 中央のペインには、ページの表現であるレイアウト、および新しいコンポーネントをレイアウトにドラッグ アンド ドロップできるギャラリー (下部) が表示されます。 右側のペインはプロパティ エディタで、選択したコンポーネントの属性を変更できます。
 
-    *Note: If you don't see the Developer Toolbar at the bottom of your page, try closing the current runtime environment and reaccessing it from the App Builder.*
+     *注意: ページの下部に開発者ツールバーが表示されない場合は、現在のランタイム環境を閉じて、App Builder から再度アクセスしてみてください。*
 
-3. Within Page Designer, in the Rendering tree (left pane), scroll down and _right-click_ **Chart 4** and select **Delete**.
+3. Page Designer 内の Rendering ツリー (左ペイン) で、下にスクロールして **Chart 4** を右クリックし、**Delete** を選択します。
 
     ![](images/delete-chart.png " ")
 
-4. Let’s review the dashboard again.   
-    In the Page Designer toolbar (at the top of your screen), click **Save and Run Page** button.
+4. ダッシュボードをもう一度確認しましょう。
+     Page Designer ツールバー (画面上部) で、**Save and Run Page** ボタンをクリックします。
 
     ![](images/run-dash.png " ")
 
-    The revised layout will be displayed.
+    修正後のレイアウトが表示されます。
 
     ![](images/view-dash.png " ")
 
-## Task 2: Move Regions
-Looking at the revised Dashboard page, it would look better to have the Budget versus Cost chart on a line by itself.
+## タスク 2: リージョンを移動する
+改訂されたダッシュボード ページを見ると、予算とコストのグラフを 1 行に並べた方が見栄えがします。
 
-1. From the runtime environment, navigate back to the App Builder by clicking **Edit Page 2** in the Developer Toolbar, or by navigating back to the App Builder browser tab manually.
-2. Within Page Designer, in the Rendering tree (left pane), click **Project Status**.   
-    In the Property Editor (right pane), **_check_** **Layout > Start New Row**.  
-    *Note: Within Layout (middle pane), the Project Status region will move onto a row by itself*
+1. ランタイム環境から、Developer Toolbar の **Edit Page 2** をクリックするか、手動で App Builder ブラウザー タブに戻って、App Builder に戻ります。
+2. Page Designer の Rendering ツリー (左ペイン) で、**Project Status** をクリックします。
+     プロパティ エディター (右側のペイン) で、**_check_** **[レイアウト] > [新しい行を開始]**。
+     *注意: レイアウト (中央のペイン) 内で、[プロジェクト ステータス] 領域が単独で行に移動します*
 
     ![](images/set-status.png " ")
 
-3. Now to move the Project Leads chart up on to the same line as the Project Status chart.  
-    In the Rendering tree (left pane), click **Project Leads**.     
-    In the Property Editor (right pane), **_uncheck_** **Layout > Start New Row**.  
-    *Note: Within Layout (middle pane), the Project Leads region will move up to be on the same row as Project Status*
+3. 次に、プロジェクト リード チャートをプロジェクト ステータス チャートと同じ行に移動します。
+     レンダリング ツリー (左ペイン) で、**Project Leads** をクリックします。
+     プロパティ エディター (右側のペイン) で、**_uncheck_** **[レイアウト] > [新しい行を開始]**。
+     *注意: レイアウト (中央のペイン) 内で、[プロジェクト リーダー] 領域が上に移動し、[プロジェクト ステータス] と同じ行に表示されます*
 
     ![](images/set-leads.png " ")
 
-5. Now to review the page!     
-    Click **Save and Run Page** button.
+5. 今すぐページを確認してください。
+     **[ページを保存して実行]** ボタンをクリックします。
 
     ![](images/final-dash.png " ")
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 4. You now know how to remove and reposition regions. [Click here to navigate to Lab 5](?lab=lab-5-improving-projects)
+これで演習 4 は完了です。これで、領域を削除して再配置する方法がわかりました。 [ラボ 5 に移動するには、ここをクリックしてください](?lab=lab-5-improving-projects)
 
-## **Acknowledgements**
+## **謝辞**
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
-
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Madhusudhan Rao, Apr 2022

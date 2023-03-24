@@ -1,116 +1,115 @@
-# Regenerating the App
+# アプリの再生成
 
-## Introduction
-In the runtime environment, if you navigate to Milestones, and then from the report page, click the edit icon, the form page for maintaining milestones will be displayed. You will notice that there are only a few fields. Therefore, it may be better to utilize an Interactive Grid, which is similar to a spreadsheet, where several records can be maintained directly within the grid.
+## はじめに
+ランタイム環境で、[マイルストーン] に移動し、レポート ページから編集アイコンをクリックすると、マイルストーンを管理するためのフォーム ページが表示されます。フィールドが少ないことに気付くでしょう。したがって、スプレッドシートに似た対話型グリッドを使用して、グリッド内で複数のレコードを直接管理できる方がよい場合があります。
 
-![](images/milestone-form.png " ")
+![](画像/マイルストーンフォーム.png " ")
 
-*Note: See how to go to your runtime environment from the previous lab.*
+*注: 前のラボのランタイム環境に移動する方法を参照してください。
 
-## Task 1: Delete Generated App
-Given you are going to regenerate the app from the Create Application Wizard, it is best to delete the app you just generated to avoid confusion.
+## タスク1:生成されたアプリを削除する
+アプリケーションの作成ウィザードからアプリを再生成する場合は、混乱を避けるために、生成したアプリを削除することをお勧めします。
 
-1. In the runtime environment, within the develop toolbar, click **Application xxxxx**.  
+1. ランタイム環境の開発ツールバーで、**Application xxxxx** をクリックします。  
 
     ![](images/dev-toolbar.png " ")  
 
-    *Note: The Developer Toolbar is only shown to developers who run the application from the App Builder. End users will never be shown the Developer Toolbar*
+    *注意: 開発者ツールバーは、アプリ ビルダーからアプリケーションを実行する開発者にのみ表示されます。 エンド ユーザーに開発者ツールバーが表示されることはありません*
 
-2. From the App Home Page, under Tasks, click **Delete this Application**.  
+2. アプリのホームページの [タスク] で、[**このアプリケーションを削除**] をクリックします。  
 
     ![](images/delete-app.png " ")  
 
-3. On the Confirm Delete page, click **Permanently Delete Now**.
+3. [削除の確認] ページで、[**今すぐ完全に削除**] をクリックします。
 
-## Task 2: Reload the Projects App
-The Create Application Wizard includes the ability to reload apps that you previously generated, making it easy to make some changes and generate a new and improved version of the initial app.
+## タスク 2: Projects アプリをリロードする
+アプリケーションの作成ウィザードには、以前に生成したアプリをリロードする機能が含まれているため、簡単に変更を加えたり、最初のアプリの新しい改良バージョンを生成したりできます。
 
-1. From the App Builder Home Page, click **Create**.
+1. App Builder のホームページから、[**作成**] をクリックします。
 
     ![](images/create-app.png " ")
 
-2. Click **New Application**.
+2. [**新しいアプリケーション**] をクリックします。
 
-3. Click **Load Blueprint**.    
-    On Load Blueprint, for the latest app generated, click **Load**.  
+3. [**ブループリントをロード**] をクリックします。
+     [ブループリントの読み込み] で、生成された最新のアプリについて、[**読み込み**] をクリックします。  
 
     ![](images/load-blueprint.png " ")  
 
-    The previously defined app blueprint will be displayed.
+    以前に定義したアプリのブループリントが表示されます。
 
-## Task 3: Replacing the Milestone Pages
-Rather than having two ways to maintain milestone records, you will delete the original report and form pages, and then add a new page, and reposition it in the list of pages.
+## タスク 3: マイルストーン ページの置き換え
+マイルストーン レコードを維持するための 2 つの方法を用意するのではなく、元のレポートとフォーム ページを削除してから、新しいページを追加して、ページのリストに再配置します。
 
-1. In the list of pages, for Milestones, click **Edit**.
-2. Click **Delete**.  
+1. ページのリストで、[マイルストーン] の [**編集**] をクリックします。
+2. [**削除**] をクリックします。  
 
     ![](images/delete-old-page.png " ")
 
-3. In the Create Application Wizard, click **Add Page**.
-4. Click **Interactive Grid**.
-5. On the Add Interactive Grid Page, enter the following:
-    - Page Name - enter **Milestones**
-    - Table or View - select **EBA\_PROJECT\_MILESTONES**
+3. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+4. **インタラクティブ グリッド**をクリックします。
+5. [インタラクティブ グリッドの追加] ページで、次のように入力します。
+     - ページ名 - **マイルストーン**を入力
+     - テーブルまたはビュー - **EBA\_PROJECT\_MILESTONES** を選択します
 
-    - Click **Add Page**  
+     - [**ページを追加**] をクリックします  
 
     ![](images/set-milestones.png " ")
 
-6. Now to reorder the new page.
+6. 次に、新しいページを並べ替えます。
 
-    In the list of Pages, for the Milestones page, select the hamburger.    
-    Drag the page up until it is under the Projects page and drop.
+    ページのリストの [マイルストーン] ページで、ハンバーガーを選択します。
+     プロジェクトページの下になるまでページを上にドラッグしてドロップします。
 
     ![](images/move-milestones.png " ")
 
 
-## Task 4: Add the Status Page
-The **EBA\_PROJECT\_STATUS** table is used to maintain project statuses. This table should be maintainable; however, only application administrators should be able to modify records. As such, adding the Status page under Administration is the optimal solution.
+## タスク 4: ステータス ページを追加する
+**EBA\_PROJECT\_STATUS** テーブルは、プロジェクトのステータスを維持するために使用されます。 このテーブルは保守可能である必要があります。 ただし、アプリケーション管理者のみがレコードを変更できる必要があります。 そのため、[管理] の下に [ステータス] ページを追加することが最適なソリューションです。
 
-1. In the Create Application Wizard, click **Add Page**.
-2. Click **Interactive Grid**.
-3. On the Add Interactive Grid Page, enter the following:
-    - Page Name - enter **Statuses**
-    - Table or View - select **EBA\_PROJECT\_STATUS**
-    - Expand **Advanced**
-        - Click **Set as Administration Page**
+1. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+2. **インタラクティブ グリッド**をクリックします。
+3. [インタラクティブ グリッドの追加] ページで、次のように入力します。
+     - ページ名 - **ステータス**を入力
+     - テーブルまたはビュー - **EBA\_PROJECT\_STATUS** を選択します
+     - **高度な**を展開します
+         - [**管理ページとして設定**] をクリックします。
 
-    - Click **Add Page**  
+     - [**ページを追加**] をクリックします  
 
     ![](images/set-status.png " ")
 
 
-## Task 5: Completing the App
-The Create Application Wizard also has the ability to add various features to your app, such as Access Control, Activity Reporting, Feedback, and more, to make your app more functionally complete and "production-ready".
+## タスク 5: アプリの完成
+アプリケーションの作成ウィザードには、アクセス制御、アクティビティ レポート、フィードバックなどのさまざまな機能をアプリに追加して、アプリをより機能的に完成させ、"本番環境に対応した" ものにする機能もあります。
 
-1. In the Create Application Wizard, for Features, click **Check All**
-2. Click **Create Application**
+1. アプリケーションの作成ウィザードで、[機能] の [**すべてチェック**] をクリックします。
+2. **アプリケーションの作成**をクリックします
 
     ![](images/check-features.png " ")
-    *Note: Your new application will generally have a new Application Id*
+    *注: 通常、新しいアプリケーションには新しいアプリケーション ID が割り当てられます*
 
-    Your new application will be displayed in the App Builder.
+     新しいアプリケーションが App Builder に表示されます。
 
-3. Click **Run Application**.
-4. Enter your user credentials.
-5. Navigate to **Milestones**.
-6. Double-click in any column to see how you can enter data directly into the grid.
+3. [**アプリケーションの実行**] をクリックします。
+4. ユーザー資格証明を入力します。
+5. **マイルストーン**に移動します。
+6. 任意の列をダブルクリックして、グリッドにデータを直接入力する方法を確認します。
 
     ![](images/view-milestones.png " ")
 
-    *Note: Project column will display a list of projects, Name and Description columns will be text areas, and Due Date column will be a date picker, based on the different data types.*
+    *注意: プロジェクト列にはプロジェクトのリストが表示され、名前と説明の列はテキスト領域になり、期日列はさまざまなデータ タイプに基づいて日付ピッカーになります。*
 
-7. Click the navigation button at the top-left of the page, and navigate to **Administration** to review the capabilities provided.
+7. ページの左上にあるナビゲーション ボタンをクリックし、**管理** に移動して、提供されている機能を確認します。
 
     ![](images/view-admin.png " ")
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 3. You now know how to regenerate an application and add additional features. [Click here to navigate to Lab 4](?lab=lab-4-improving-dashboard)
+これで実習 3 は終了です。これで、アプリケーションを再生成して機能を追加する方法がわかりました。 [ラボ 4 に移動するには、ここをクリックしてください](?lab=lab-4-improving-dashboard)
 
-## **Acknowledgements**
+## **謝辞**
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
-
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Madhusudhan Rao, Apr 2022

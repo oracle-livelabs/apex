@@ -1,241 +1,240 @@
-# Improving Projects
+# プロジェクトの改善
 
-## Introduction
-In this lab, you will learn how to use the *Create Page Wizard* to add additional pages to your app. Then, you will link the new page to the existing Card page. You will then learn how to easily manipulate how items are displayed, and finally to create a *Dynamic Action*.
+## 紹介
+このラボでは、*Create Page Wizard* を使用してアプリにページを追加する方法を学習します。 次に、新しいページを既存のカード ページにリンクします。 次に、項目の表示方法を簡単に操作する方法を学び、最後に *動的アクション* を作成します。
 
-## Task 1: Changing the Cards Region Style
-Looking at the Projects Card region, you should notice the cards' icons are circle, which could be displayed differently. To change the cards region style, you will utilize **Live Template Options** directly in the runtime environment. You could also make changes from the App Builder; however, it is much easier to make changes as you can see the results.
+## タスク 1: カード領域のスタイルを変更する
+プロジェクト カード リージョンを見ると、カードのアイコンが円形であり、表示が異なることに気付くはずです。 カード領域のスタイルを変更するには、**ライブ テンプレート オプション**をランタイム環境で直接利用します。 App Builder から変更を加えることもできます。 ただし、結果を確認できるため、変更を加える方がはるかに簡単です。
 
-1. In the runtime environment, click **Projects**.
-2. In the Developer Toolbar (at the bottom of the runtime environment), click **Quick Edit**.
+1. ランタイム環境で、[**プロジェクト**] をクリックします。
+2. 開発者ツールバー (ランタイム環境の下部) で、**Quick Edit** をクリックします。
 
-    Move the mouse until it is inside the Cards region, and a blue box surrounds the region, with a wrench in the top right corner.     
-    Click the wrench.
+    マウスを Cards 領域内に移動すると、その領域が青いボックスで囲まれ、右上隅にレンチが表示されます。
+     レンチをクリックします。
 
     ![](images/quick-edit.png " ")
 
-3. In the Live Template Options dialog, select the following:
-    - Style - select **Style A**
+3. [ライブ テンプレート オプション] ダイアログで、次を選択します。
+     - スタイル - **スタイル A** を選択
 
-4. Click **Save**
+4. **保存**をクリックします
 
     ![](images/live-template.png " ")
 
-## Task 2: Enhancing Projects Page
-You will notice that the Projects page shows the cards columns based on the current available width. Let's fix the number of grid columns to 4. We will also add the project lead in the subtitle of the card.
-1. In the Developer Toolbar (at the bottom of the runtime environment), click **Edit Page 4**.
+## タスク 2: プロジェクト ページの強化
+プロジェクトページには、現在利用可能な幅に基づいてカードの列が表示されます。 グリッド列の数を 4 に固定しましょう。また、カードのサブタイトルにプロジェクト リーダーを追加します。
+1. 開発者ツールバー (ランタイム環境の下部) で、**Edit Page 4** をクリックします。
     ![](images/enhance-projects-cards-edit-page.png " ")
-2. In the Property Editor (the right pane), under Attributes tab, change the followings:
-      - Grid Columns to **4 Columns**
-      - Subtitle Column to **PROJECT_LEAD**
-      - Click the **Save and Run Page** button
+2. プロパティ エディター (右側のペイン) の [属性] タブで、次のように変更します。
+       - グリッド列を **4 列**に
+       - **PROJECT_LEAD** へのサブタイトル列
+       - [**ページを保存して実行**] ボタンをクリックします
     ![](images/enhance-projects-cards-save-page.png " ")
-3. The Cards Region now show only four projects per row. The Project Lead is added in the subtitle of the card.
+3. カード領域には、行ごとに 4 つのプロジェクトのみが表示されるようになりました。 プロジェクト リーダーは、カードのサブタイトルに追加されます。
     ![](images/enhance-projects-cards-run-page.png " ")
 
-## Task 3: Adding a Form Page
-Currently there is no way to maintain project records. Therefore, you will use the *Create Page Wizard* to create a form page on the *EBA_PROJECTS* table.
+## タスク 3: フォーム ページの追加
+現在、プロジェクトの記録を維持する方法はありません。 したがって、*Create Page Wizard* を使用して、*EBA_PROJECTS* テーブルにフォーム ページを作成します。
 
-1. Navigate back to the App Builder  by clicking **Application xxxxx** in the Developer Toolbar, or by navigating back to the App Builder browser tab manually.
-2. On the application home page, click **Create Page**.
+1. 開発者ツールバーの **Application xxxxx** をクリックするか、手動で App Builder ブラウザー タブに戻り、App Builder に戻ります。
+2. アプリケーションのホームページで、**Create Page** をクリックします。
 
     ![](images/create-page.png " ")
 
-3. In the Create a Page dialog, click **Form**.
+3. [ページの作成] ダイアログで、[**フォーム**] をクリックします。
 
     ![](images/select-form.png " ")
 
-4. In the Create Page dialog, click **Form**.
+4. [ページの作成] ダイアログで、[**フォーム**] をクリックします。
 
     ![](images/select-form-page.png " ")
 
-5. In the Create Form dialog, for Page Attributes, enter the following:
-      - Page Name – enter **Project**
-      - Page Mode – click **Modal Dialog**
+5. 「フォームの作成」ダイアログで、「ページ属性」に次のように入力します:
+       - ページ名 – **Project** と入力します
+       - ページモード – **モーダルダイアログ**をクリックします
 
-    Click **Next**
+    **次へ**をクリックします
 
     ![](images/page-attributes.png " ")
 
-6. For Navigation Menu, select **Identify an existing navigation menu entry for this page**.
-    For Existing Navigation Menu Entry, select **Projects**.    
-    Click **Next**.  
+6. [ナビゲーション メニュー] で、[**このページの既存のナビゲーション メニュー エントリを特定する**] を選択します。
+     [Existing Navigation Menu Entry] で [**Projects**] を選択します。    
+    **次へ**をクリックします  
 
     ![](images/navigation-menu.png " ")
 
-7. For Table/ View Name, select **EBA_PROJECTS (table)**.    
-    Click **Next**.
+7. [テーブル/ビュー名] で、**EBA_PROJECTS (テーブル)** を選択します。    
+    **次へ**をクリックします
 
     ![](images/data-source.png " ")  
 
-8. For Primary Key Column, select **ID (Number)**.  
-    Click **Create**.
+8. [主キー列] で [**ID (数値)**] を選択します。
+     [**作成**] をクリックします。
 
     ![](images/columns.png " ")
-    *Note: This will create _Page 10: Project_ if you have followed the previous sections correctly. If not Page 10, please repeat Lab 3, and ensure the Interactive Grids for both Milestones and Statuses are created*
+    *注意: 前のセクションに正しく従った場合、_Page 10: Project_ が作成されます。 10 ページでない場合は、ラボ 3 を繰り返して、マイルストーンとステータスの両方のインタラクティブ グリッドが作成されていることを確認してください*
 
-## Task 4: Link to Projects Page
-Now to link this new page to the Project Cards page.    
-*Note: Defining a link for a Card region requires modifying the SQL statement. However, elsewhere in Oracle APEX, defining links is very easy and declarative as you will learn in Lab 7.*
+## タスク 4: プロジェクト ページへのリンク
+この新しいページを Project Cards ページにリンクします。
+*注意: カード領域のリンクを定義するには、SQL ステートメントを変更する必要があります。 ただし、ラボ 7 で学習するように、Oracle APEX の他の場所では、リンクの定義は非常に簡単で宣言型です。
 
-1. In the Application Toolbar, click the page selector in front of the page number (10).    
-    Click **4**, for the Projects page
+1. アプリケーション ツールバーで、ページ番号 (10) の前にあるページ セレクタをクリックします。    
+    [プロジェクト] ページの **4** をクリックします。
 
     ![](images/go-cards.png " ")
 
-    *Note: Alternatively, you can type in a page number or use the up / down arrows in the Application Toolbar to navigate to different pages within Page Designer*
+    *注意: または、ページ番号を入力するか、アプリケーション ツールバーの上下矢印を使用して、Page Designer 内の別のページに移動することもできます*
 
-2. In the Rendering tree (left pane), right click **Actions** under **Projects** then click **Create Action**.   
+2. レンダリング ツリー (左ペイン) で、**Projects** の下の **Actions** を右クリックし、**Create Action** をクリックします。   
     
     ![](images/enhance-projects-cards-create-action.png " ")
 
-    In the Property Editor (right pane), update the following properties:
-    - **Type:** - select Full Card
-    - Click **Link > Target**
-    - In the Link Builder, **Page** - enter **10**
-    - Under **Set Items**, Enter **P10_ID** for **Name** and enter **&ID.** for **Value**
+    プロパティ エディター (右側のペイン) で、次のプロパティを更新します。
+     - **タイプ:** - フルカードを選択
+     - **[リンク] > [ターゲット**] をクリックします
+     - Link Builder で、**ページ** - **10** と入力します
+     - **Set Items** の下で、**Name** に **P10_ID** を入力し、**Value** に **&ID.** を入力します。
 
     ![](images/enhance-projects-cards-link-edit-form.png " ")
 
-3. You also need to be able to add new projects, so will need to add a button and link it to the Project form page. The easiest way to add this is to drag and drop a component into the Layout (middle pane) from the Gallery.
+3. また、新しいプロジェクトを追加できるようにする必要があるため、ボタンを追加してプロジェクト フォーム ページにリンクする必要があります。 これを追加する最も簡単な方法は、コンポーネントをギャラリーからレイアウト (中央のペイン) にドラッグ アンド ドロップすることです。
 
-      - In the Layout (middle pane), click **Breadcrumb** to highlight the region.  
-      - In the Gallery (below Layout), click **Buttons**.   
-      - Click and hold **Text [Hot]**.  
-      - Drag the button up into the Breadcrumb region, and hover under the **Create** placeholder.
+       - レイアウト (中央のペイン) で、**ブレッドクラム**をクリックしてリージョンを強調表示します。
+       - ギャラリー (レイアウトの下) で、[**ボタン**] をクリックします。
+       - **Text [Hot]** をクリックしたままにします。
+       - ボタンをブレッドクラム領域にドラッグし、**作成** プレースホルダーの下にカーソルを置きます。
 
-    Once the CREATE selection expands to a large yellow box, release the mouse.
+     CREATE の選択範囲が大きな黄色のボックスに展開されたら、マウスを離します。
 
     ![](images/drag-button.png " ")
 
-4. Now to update the button properties.     
-    In the Property Editor (right pane), enter the following:
+4. 次に、ボタンのプロパティを更新します。
+     プロパティ エディター (右側のペイン) で、次のように入力します。
 
-    - Identification > Button Name - enter **CREATE**  
-    *Note: The Identification > Label is update to _Create_ once you enter the Button Name*
-    - Behavior > Action - select **Redirect to Page in this Application**
-    - Behavior > Target - click **No Link Defined**, and enter:
-        - Target > Page - enter **10**
-        - Clear / Reset > Clear Cache - enter **10**
+     - 識別 > ボタン名 - **CREATE** と入力します
+     *注意: ボタン名を入力すると、[識別] > [ラベル] が [作成] に更新されます*
+     - Behavior > Action - **Redirect to Page in this Application** を選択します
+     - [動作] > [ターゲット] - [**リンクが定義されていません**] をクリックし、次のように入力します。
+         - ターゲット > ページ - **10** と入力
+         - クリア/リセット > キャッシュをクリア - **10** を入力
 
-5. Click **OK**
+5. [**OK**] をクリックします
 
     ![](images/set-button.png " ")
 
-6. Now to test the page links work!     
-    Click **Save and Run Page** button.
-    Click on a project card or click **Create**.
+6. ページ リンクが機能するかどうかをテストします。
+     **[ページを保存して実行]** ボタンをクリックします。
+     プロジェクト カードをクリックするか、**作成**をクリックします。
 
     ![](images/view-form.png " ")
 
-## Task 5: Update How Items are Displayed
-The way the Status Id, Name, and Project Lead are displayed can be easily improved.
-The **Status Id** item is a foreign key to the **EBA\_PROJECT\_STATUS** table. Therefore, rather than requiring end users to enter a number, you will update the item to be a list of values based on the lookup table. The Name and Project Lead fields should be updated to Text Fields. Lastly, the audit columns (Created, Created By, Updated, Updated by) should be hidden.
+## タスク 5: アイテムの表示方法を更新する
+ステータス ID、名前、およびプロジェクト リーダーの表示方法は、簡単に改善できます。
+**Status Id** アイテムは、**EBA\_PROJECT\_STATUS** テーブルへの外部キーです。 したがって、エンド ユーザーに数値の入力を要求するのではなく、ルックアップ テーブルに基づく値のリストになるように項目を更新します。 Name フィールドと Project Lead フィールドを Text Fields に更新する必要があります。 最後に、監査列 (作成者、作成者、更新者、更新者) を非表示にする必要があります。
 
-1. First you need to change the Status item from a number entry to a list of allowable values.   
-    From the Runtime environment, from the Project Form page, in the Developer Toolbar, click **Edit Page 10**.  
-    Alternatively, navigate back to the App Builder browser tab, and then navigate to Page 10 manually.
-2. In Page Designer for Page 10, in the Rendering tree (left pane), click **P10\_STATUS_ID**.  
-    In the Property Editor (right pane), enter the following:
-    - Identification > Type - select **Select List**    
-    *Note: As soon as you choose Select List, P10\_STATUS\_ID item will change to red and a Message indicator will display in the Application Toolbar. This will be remedied once the List of Values attributes are entered*
+1. 最初に、ステータス項目を数値エントリから許容値のリストに変更する必要があります。
+     ランタイム環境の [プロジェクト フォーム] ページの [開発者ツールバー] で、[**ページ 10 の編集**] をクリックします。
+     または、App Builder ブラウザ タブに戻り、手動で 10 ページに移動します。
+2. Page Designer for Page 10 の Rendering ツリー (左ペイン) で、**P10\_STATUS_ID** をクリックします。
+     プロパティ エディター (右側のペイン) で、次のように入力します。
+     - 識別 > タイプ - **Select List** を選択します
+     *注意: [リストの選択] を選択するとすぐに、P10\_STATUS\_ID 項目が赤色に変わり、アプリケーション ツールバーにメッセージ インジケーターが表示されます。 これは、値リストの属性が入力されると修正されます*
 
-    - Label > Label - enter **Status**
-    - List of Values > Type - select **SQL Query**
-    - SQL Query enter:
+     - ラベル > ラベル - **ステータス**を入力
+     - 値のリスト > タイプ - **SQL クエリ** を選択します
+     - SQL クエリを入力:
 
         ```
         <copy>select code d, id r
         from eba_project_status
-        order by display_order</copy
+        order by display_order</copy>
         ```
 
-    *Note: The _code_ column is the value displayed to users, while the _id_ column is the value returned to the table column. The table includes a _display\_order_ column to ensure the statuses are displayed in the correct order*    
+    *注意: _code_ 列はユーザーに表示される値であり、_id_ 列はテーブル列に返される値です。 テーブルには、ステータスが正しい順序で表示されるように _display\_order_ 列が含まれています*
 
-    - Display Extra Values - **Uncheck**   
-    - Null Display Value - enter **– Select Status -**   
-    *Note: This text must be typed*
+     - 余分な値を表示する - **チェックを外す**
+     - Null Display Value - 入力 ** - Select Status -**
+     *注: このテキストは必ず入力してください*
 
     ![](images/set-status.png " ")
     ![](images/set-status2.png " ")
 
-3. Now to update the Name and Project Lead items to text fields.    
-    In the Rendering Tree (left pane), click **P10\_NAME**  
-    Hold down the [Control] key (or [Command] key in Mac) and click **P10\_PROJECT\_LEAD**  
+3. ここで、名前とプロジェクト リードの項目をテキスト フィールドに更新します。
+     レンダリング ツリー (左ペイン) で、**P10\_NAME** をクリックします。
+     [Control] キー (Mac では [Command] キー) を押しながら、**P10\_PROJECT\_LEAD** をクリックします。
 
-    In the Property Editor (right pane), for Identification > Type, select **Text Field**
+     プロパティ エディター (右側のペイン) の [識別] > [タイプ] で、[**テキスト フィールド**] を選択します。
 
     ![](images/set-text.png " ")
 
-4. Last step is to hide the audit columns.  
-    In the Rendering Tree (left pane), click **P10\_CREATED**  
-    Hold down the [Shift] key and click **P10\_UPDATED\_BY**  
+4. 最後のステップは、監査列を非表示にすることです。
+     レンダリング ツリー (左ペイン) で、**P10\_CREATED** をクリックします。
+     [Shift]キーを押しながら**P10\_UPDATED\_BY**をクリック
 
-    In the Property Editor (right pane), for Identification > Type, select **Hidden**
+     プロパティ エディター (右側のペイン) で、[識別] > [タイプ] に対して [**非表示**] を選択します。
 
     ![](images/set-hidden.png " ")
 
-## Task 6: Improve the Completed Date
-Currently a Completed Date can be entered on any project. However, it would greatly improve data quality to allow the completed date to be entered only if the Status is _COMPLETED_. Implementing such functionality requires JavaScript to dynamically enable / disable the Completed Date item based on the value of Status. Thankfully, as an APEX developer, you don't need to write such JavaScript. You can simply define a *Dynamic Action*, which allows you to declaratively define such client-side interactivity, by specifying the trigger, action, and affected element(s).
+## タスク 6: 完了日の改善
+現在、完了日はどのプロジェクトにも入力できます。 ただし、ステータスが_COMPLETED_の場合にのみ完了日を入力できるようにすると、データ品質が大幅に向上します。 このような機能を実装するには、ステータスの値に基づいて完了日項目を動的に有効/無効にする JavaScript が必要です。 ありがたいことに、APEX 開発者として、そのような JavaScript を記述する必要はありません。 *Dynamic Action* を定義するだけで、トリガー、アクション、および影響を受ける要素を指定することで、そのようなクライアント側の対話機能を宣言的に定義できます。
 
-1. You need to define the Dynamic Action on the triggering element, which is the Status.        
-    In the Rendering Tree (left pane), _right-click_ **P10\_STATUS\_ID**.  
-    Select **Create Dynamic Action**.
+1. ステータスであるトリガー要素で動的アクションを定義する必要があります。
+     レンダリング ツリー (左ペイン) で、_右クリック_ **P10\_STATUS\_ID**.
+     **動的アクションの作成**を選択します。
 
     ![](images/go-da.png " ")
 
-2. Update the Dynamic Action so that it only trigger when the Status is _COMPLETED_.   
-    With the Dynamic Actions selected (click **New** under Dynamic Actions), in the Property Editor (right pane), enter the following:
-    - Identification > Name - enter **Enable Completed Date**
-    - Client-side Condition > Type - select **Item = Value**    
-    *Note: The Client-side Condition > Item is automatically set to the current item _P10\_STATUS\_ID_*
-    - Client-side Condition > Value - enter **3**   
-    *Note: The value _3_ corresponds to a status of COMPLETED*
+2. 動的アクションを更新して、ステータスが _COMPLETED_ の場合にのみトリガーされるようにします。
+     [動的アクション] を選択した状態で ([動的アクション] の下の [**新規**] をクリック)、プロパティ エディター (右側のペイン) で次のように入力します。
+     - 識別 > 名前 - **完了日を有効にする**を入力します
+     - クライアント側の条件 > タイプ - **Item = Value** を選択します
+     *注意: クライアント側の条件 > アイテムは、現在のアイテム _P10\_STATUS\_ID_* に自動的に設定されます。
+     - クライアント側の条件 > 値 - **3** と入力します
+     *注: 値 _3_ は COMPLETED のステータスに対応します*
 
     ![](images/name-da.png " ")
 
-3. Next you need to specify what happens when the triggering event is true.     
-    In the Rendering tree (left pane), click the action under True (currently Show).  
-    In the Property Editor (right pane), enter the following:
-    - Identification > Action - select **Enable** (under **Component**)
-    - Affected Elements > Item(s) - select **P10\_COMPLETED\_DATE**
+3. 次に、トリガー イベントが true の場合に何が起こるかを指定する必要があります。
+     レンダリング ツリー (左ペイン) で、True (現在は表示) の下のアクションをクリックします。
+     プロパティ エディター (右側のペイン) で、次のように入力します。
+     - 識別 > アクション - **有効にする** (**コンポーネント**の下) を選択します。
+     - 影響を受ける要素 > アイテム - **P10\_COMPLETED\_DATE** を選択
 
     ![](images/set-da.png " ")
 
-4. Lastly, it is very important to _disable_ the Completed Date item when the triggering event is false.   
-    In the Rendering tree (left pane), under Dynamic Actions, _right-click_ **Enable**.    
-    Select **Create Opposite Action**.
+4. 最後に、トリガー イベントが false の場合は、Completed Date 項目を_disable_することが非常に重要です。
+     レンダリング ツリー (左ペイン) の [動的アクション] の下で、_右クリック_ **有効にする**。
+     **反対のアクションを作成**を選択します。
 
     ![](images/set-opposite.png " ")
 
-5. Rather than displaying the Completed Date down the page, it would be far better to display the item directly after the Status item.   
-    In the Rendering tree (left pane), click **P10\_COMPLETED\_DATE**.    
-    In the Property Editor (right pane), enter the following:
-    - Layout > Sequence - enter **50**  
-    *Note: This will position P10\_COMPLETED\_DATE between P10\_STATUS\_ID (Sequence 40) and P10\_NAME (Sequence 60)*
-    - Layout > Start New Row - _Uncheck_    
-    *Note: This will position the item on the same line as the previous item, P10\_STATUS\_ID*
+5. 完了日をページの下に表示するよりも、ステータス アイテムの直後にアイテムを表示する方がはるかに優れています。
+     レンダリング ツリー (左ペイン) で、**P10\_COMPLETED\_DATE** をクリックします。
+     プロパティ エディター (右側のペイン) で、次のように入力します。
+     - レイアウト > シーケンス - **50** と入力します
+     *注: これにより、P10\_COMPLETED\_DATE が P10\_STATUS\_ID (シーケンス 40) と P10\_NAME (シーケンス 60) の間に配置されます*
+     - レイアウト > 新しい行を開始 - _チェックを外す_
+     *注意: これにより、前のアイテム P10\_STATUS\_ID* と同じ行にアイテムが配置されます。
 
     ![](images/set-date.png " ")
 
-6. Now to review the Project Form page.     
-    Click **Save**  
-    *Note: If you click the Save and Run Page button, your changes will be saved but the page will not be run. Given the Project Form page is a modal page, it must be run from a calling page, rather than directly from Page Designer*
+6. 次に、プロジェクト フォーム ページを確認します。
+     **保存**をクリックします
+     *注意: [ページを保存して実行] ボタンをクリックすると、変更は保存されますが、ページは実行されません。 プロジェクト フォーム ページはモーダル ページであるため、Page Designer* から直接ではなく、呼び出しページから実行する必要があります。
 
-7. Navigate back to the Runtime environment, refresh the browser, and within the Navigation Menu (left side) click **Projects**.     
-    Click a card record to display the corresponding record in the form page.    
-    Change the Status and ensure the Completed Date is enabled / disabled correctly.    
-    Make changes and click **Apply Changes**, or click **Cancel**.
+7. ランタイム環境に戻り、ブラウザーを更新して、ナビゲーション メニュー (左側) 内で **Projects** をクリックします。
+     カード レコードをクリックすると、対応するレコードがフォーム ページに表示されます。
+     ステータスを変更し、完了日が正しく有効化/無効化されていることを確認します。
+     変更を加えて、[**変更を適用**] をクリックするか、[**キャンセル**] をクリックします。
 
     ![](images/finished-form.png " ")
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 5. You now know how to add additional pages to your application, link pages together, modify how items are displayed, and define client-side interactivity declaratively. [Click here to navigate to Lab 6](?lab=lab-6-improving-milestones)
+これでラボ 5 は終了です。アプリケーションにページを追加する方法、ページをリンクする方法、アイテムの表示方法を変更する方法、およびクライアント側の対話機能を宣言的に定義する方法がわかりました。 [ラボ 6 に移動するには、ここをクリックしてください](?lab=lab-6-improving-milestones)
 
-## **Acknowledgements**
+## **謝辞**
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
-
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Salim Hlayel, Principle Product Manager, November 2020

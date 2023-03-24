@@ -1,84 +1,84 @@
-# Improving Milestones
+# マイルストーンの改善
 
-## Introduction
-In this lab, you will learn how to update and then save the layout of an *Interactive Grid* to improve your Milestones.
+## 紹介
+このラボでは、*インタラクティブ グリッド* のレイアウトを更新して保存し、マイルストーンを改善する方法を学びます。
 
-## Task 1: Change the Name Column
-In your runtime environment, click on **Milestones** and then double-click a record, you can edit the details. Navigate to each column and notice that the Project column is a select list, the Name and Description columns are textareas, and the Due Date is a date picker. Generally, the Name is not that long; therefore, you should update the column type to a text field.
+## タスク 1: 名前列を変更する
+ランタイム環境で **マイルストーン** をクリックし、レコードをダブルクリックすると、詳細を編集できます。 各列に移動し、Project 列が選択リスト、Name 列と Description 列がテキストエリア、Due Date が日付ピッカーであることに注意してください。 通常、名前はそれほど長くありません。 したがって、列タイプをテキスト フィールドに更新する必要があります。
 
-1. Navigate to the App Builder.
-2. Within your application, navigate to **Page 5: Milestones** in Page Designer.
-3. In the Rendering tree (left pane), under the **Project Milestones** region, expand **Columns**.  
-    Within the list of columns click **Name**.  
-    In the Property Editor (right pane), for Identification > Type select **Text Field**.
+1. アプリケーション ビルダーに移動します。
+2. アプリケーション内で、Page Designer の **Page 5: Milestones** に移動します。
+3. レンダリング ツリー (左ペイン) で、**Project Milestones** 領域の下にある **Columns** を展開します。
+     列のリスト内で [**名前**] をクリックします。
+     プロパティ エディター (右側のペイン) で、[識別] > [タイプ] で [**テキスト フィールド**] を選択します。
 
     ![](images/set-name.png " ")
 
-4. In the Application toolbar, click **Save and Run Page**   
-    Double-click a record and review the Name column.
+4. アプリケーション ツールバーで、**Save and Run Page** をクリックします。
+     レコードをダブルクリックして、[名前] 列を確認します。
 
     ![](images/view-name.png " ")
 
-## Task 2: Update the Grid Layout
-Once again reviewing the report, it would be beneficial to rearrange the columns into the following order - Name, Project, Due Date, and then Description. It would also be useful to freeze the Name column so users can scroll left and right to see more of the Description column.
+## タスク 2: グリッド レイアウトを更新する
+もう一度レポートを見直して、名前、プロジェクト、期日、説明の順に列を並べ替えると効果的です。 また、[名前] 列を固定して、ユーザーが左右にスクロールして [説明] 列をさらに表示できるようにすると便利です。
 
-1. In the Runtime environment, click **Actions**, and then click **Columns**
+1. ランタイム環境で、[**アクション**] をクリックし、[**列**] をクリックします。
 
     ![](images/go-columns.png " ")
 
-2. In the Columns dialog, click **Name** and then click the up arrow to move the column before **Project**.    
-    Click **Save**.
+2. [列] ダイアログで [**名前**] をクリックし、上矢印をクリックして列を **プロジェクト** の前に移動します。
+     **保存**をクリックします。
 
     ![](images/move-name.png " ")
 
-3. You can also reorder columns using Drag and Drop.    
-      - Hover over the beginning of the **Due Date** column until the movement indicator is displayed.  
-      - Click and hold the mouse.   
-      - Drag the column to the left until it displays before the **Description** column.    
-      - Release the mouse, dropping the column.
+3. ドラッグ アンド ドロップを使用して列を並べ替えることもできます。
+       - 移動インジケータが表示されるまで、**期日** 列の先頭にカーソルを合わせます。
+       - マウスをクリックしたままにします。
+       - **説明** 列の前に表示されるまで、列を左にドラッグします。
+       - マウスを放して列をドロップします。
 
     ![](images/show-movement.png " ")
     ![](images/drag-date.png " ")
 
-4. To see the grid better, you can collapse the menu.   
-    Click the icon in front of the application name.
+4. グリッドを見やすくするために、メニューを折りたたむことができます。
+     アプリケーション名の前にあるアイコンをクリックします。
 
     ![](images/hide-menu.png " ")
 
-5. Now that the columns are in the correct order, you should freeze the Name column.   
-      - Click the **Name** column heading.  
-      - Click **Freeze**.
+5. 列が正しい順序になったので、名前列を固定する必要があります。
+       - **名前**の列見出しをクリックします。
+       - **フリーズ**をクリックします。
 
     ![](images/freeze.png " ")
 
-6. The column sizes now need to be adjusted to better display the data.     
-      - Hover in between the **Name** and **Project** columns until the resize indicator is displayed.  
-      - Drag the column separator to the right until it is a good size for the **Name** column.     
-      - Repeat for the Project and Due Date columns.  
-    *Note: You can also expand the size of the Description column by using the resize indicator at the end of the column*
+6. データをより適切に表示するには、列のサイズを調整する必要があります。
+       - サイズ変更インジケーターが表示されるまで、**名前** 列と **プロジェクト** 列の間にカーソルを置きます。
+       - **Name** 列に適したサイズになるまで、列区切りを右にドラッグします。
+       - Project 列と Due Date 列についても繰り返します。
+     *注意: 列の末尾にあるサイズ変更インジケーターを使用して、[説明] 列のサイズを拡大することもできます*
 
     ![](images/get-resize.png " ")
     ![](images/column-sizes.png " ")
 
-7. To test the freeze display, redisplay the menu. Click the icon in front of the application name.
+7. フリーズ表示をテストするには、メニューを再表示します。 アプリケーション名の前にあるアイコンをクリックします。
 
     ![](images/freeze-display.png " ")
 
-## Task 3: Save the Report
-The changes you have made to the grid layout are only visible to you. If other users log in, they will see the original layout with the previous column order and column sizes. Therefore, you need to save the Default report layout.
+## タスク 3: レポートを保存する
+グリッド レイアウトに加えた変更は、自分だけに表示されます。 他のユーザーがログインすると、以前の列の順序と列のサイズで元のレイアウトが表示されます。 したがって、デフォルトのレポート レイアウトを保存する必要があります。
 
-1. In the runtime environment, click **Actions**, select **Report**, and then select **Save**.  
-    *Note: Only developers, who have run the application from App Builder, can save the "Default" report. End users can only use "Save As"*
+1. ランタイム環境で、[アクション] をクリックし、[レポート] を選択してから、[保存] を選択します。
+     *注意: App Builder からアプリケーションを実行した開発者のみが、"デフォルト" レポートを保存できます。 エンド ユーザーは [名前を付けて保存] のみを使用できます*
 
     ![](images/save.png " ")
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 6. You now know how to manipulate an Interactive Grid and save a default report. [Click here to navigate to Lab 7](?lab=lab-7-improving-tasks)
+これで演習 6 は終了です。これで、インタラクティブ グリッドを操作してデフォルト レポートを保存する方法がわかりました。 [ラボ 7 に移動するには、ここをクリックしてください](?lab=lab-7-improving-tasks)
 
-## **Acknowledgements**
+## **謝辞**
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Madhusudhan Rao, Apr 2022
 

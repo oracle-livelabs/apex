@@ -10,227 +10,226 @@
 
     ![](images/go-create-app.png " ")
 
-3. Click **New Application**.
+3. [**新規アプリケーション**] をクリックします。
 
     ![](images/new-app.png " ")
 
-## Task 2: Naming the App
-1. In the Create Application wizard, for Name enter **Projects**.
-2. Click **Set Appearance** button in Appearance.  
+## タスク 2: アプリに名前を付ける
+1. アプリケーションの作成ウィザードで、[名前] に **Projects** と入力します。
+2. Appearance の **Set Appearance** ボタンをクリックします。 
 
     ![](images/go-appearance.png " ")
 
-3. On the Appearance dialog, for Theme Style select **Vita – Slate**.
-4. Click **Choose New Icon**.
+3. 外観ダイアログで、テーマ スタイルに **Vita – Slate** を選択します。
+4. [**新しいアイコンを選択**] をクリックします。
 
     ![](images/go-icon.png " ")
 
-5. On the Choose Application Icon dialog, select an icon color and an icon of your choosing.
+5. [Choose Application Icon] ダイアログで、アイコンの色と選択したアイコンを選択します。
 
-    Click **Set Application Icon**.
+    [**アプリケーション アイコンの設定**] をクリックします。
 
     ![](images/set-icon.png " ")
 
-6. Click **Save Changes**.
+6. [**変更を保存**] をクリックします。
 
     ![](images/save-appearance.png " ")
 
-## Task 3: Add the Dashboard Page
+## タスク 3: ダッシュボード ページを追加する
 
-A dashboard page is a great way to show important information using various charts. When you created the Sample Dataset, it also created a view **EBA\_PROJECTS\_V**, which joins data from various tables. This view is ideal as the basis for the dashboard charts.
+ダッシュボード ページは、さまざまなグラフを使用して重要な情報を表示する優れた方法です。 サンプル データセットを作成すると、さまざまなテーブルのデータを結合するビュー **EBA\_PROJECTS\_V** も作成されます。 このビューは、ダッシュボード チャートの基礎として理想的です。
 
-1. In the Create Application wizard, click **Add Page**.
-2. Click **Dashboard**.
+1. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+2. **ダッシュボード**をクリックします。
 
     ![](images/add-dashboard.png " ")
 
-3. For **Chart 1**, enter the following:
-     - Chart Type – select **Bar**
-     - Chart Name – enter **Budget versus Cost**
-     - Table or View – select **EBA\_PROJECTS_V**
-     - Label Column – select **NAME**
-     - Value Column – select **BUDGET\_V_COST**
+3. **グラフ 1** では、次のように入力します。
+      - グラフの種類 – **棒**を選択
+      - チャート名 – **予算対コスト**を入力
+      - テーブルまたはビュー – **EBA\_PROJECTS_V** を選択します
+      - ラベル列 – **NAME** を選択
+      - 値列 – **BUDGET\_V_COST** を選択
 
     ![](images/chart1.png " ")
 
-4. Click **Chart 2**, and enter the following:
-     - Chart Type – select **Pie**
-     - Chart Name – enter **Project Status**
-     - Table or View – select **EBA\_PROJECTS\_V**
-     - Label Column – select **Status**
-     - Type – select **Count**  
+4. **Chart 2** をクリックし、次のように入力します。
+      - グラフの種類 – **円**を選択
+      - チャート名 – **プロジェクト ステータス**を入力
+      - テーブルまたはビュー – **EBA\_PROJECTS\_V** を選択します
+      - ラベル列 – **ステータス**を選択
+      - タイプ – **カウント**を選択します
 
     ![](images/chart2.png " ")  
 
-5. Click **Chart 3**, and enter the following:
-     - Chart Type – select **Bar**
-     - Chart Name – enter **Project Leads**
-     - Table or View – select **EBA\_PROJECTS\_V**
-     - Label Column – select **PROJECT\_LEAD**
-     - Type – select **Count**
+5. **グラフ 3** をクリックし、次のように入力します。
+      - グラフの種類 – **棒**を選択
+      - チャート名 – **Project Leads** を入力します
+      - テーブルまたはビュー – **EBA\_PROJECTS\_V** を選択します
+      - ラベル列 – **PROJECT\_LEAD** を選択
+      - タイプ – **カウント**を選択します
 
-6. Click **Add Page**  
+6. [**ページを追加**] をクリックします。
 
     ![](images/chart3.png " ")  
 
-    *Note: You have not set any values for _Chart 4_; therefore, it will be generated with a chart based on demo data. In a later lab, we will remove this additional chart.*
+    *注意: _Chart 4_ には値を設定していません。 したがって、デモ データに基づくチャートで生成されます。 後のラボでは、この追加のグラフを削除します。*
 
-## Task 4: Add the Project Page
-Card pages are especially good when there is not a huge number of records, and you want to display only a few details. The **EBA_PROJECTS** table only has 12 records and would work well as a card page.
+## タスク 4: プロジェクト ページを追加する
+カード ページは、膨大な数のレコードがなく、いくつかの詳細のみを表示する場合に特に適しています。 **EBA_PROJECTS** テーブルには 12 レコードしかなく、カード ページとして適切に機能します。
 
-1. In the Create Application wizard, click **Add Page**.
-2. Click **Cards**.
+1. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+2. [**カード**] をクリックします。
 
     ![](images/go-cards.png " ")
 
-3. On the Add Cards Page, enter the following:
-     - Page Name - enter **Projects**
-     - Table or View - select **EBA_PROJECTS**
-     - Title Column - select **NAME**
-     - Body Column - select **Description**
-     - Icon Initials Column - select **NAME**
-     - Badge Column - select **COMPLETED_DATE**
+3. [カードの追加] ページで、次のように入力します。
+      - ページ名 - **Projects** と入力します
+      - テーブルまたはビュー - **EBA_PROJECTS** を選択します
+      - タイトル列 - **NAME** を選択
+      - 本文列 - **説明**を選択します
+      - アイコン イニシャル列 - **NAME** を選択
+      - バッジ列 - **COMPLETED_DATE** を選択します
 
-4. Click **Add Page**
+4. [**ページを追加**] をクリックします。
 
     ![](images/set-cards.png " ")
 
-## Task 5: Add the Milestone Pages
-There are 30 records within **EBA\_MILESTONES**. Therefore, you will add a report page and an associated form page.
+## タスク 5: マイルストーン ページを追加する
+**EBA\_MILESTONES** 内に 30 のレコードがあります。 したがって、レポート ページと関連するフォーム ページを追加します。
 
-1. In the Create Application wizard, click **Add Page**.
-2. Click **Interactive Report**.
+1. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+2. **インタラクティブ レポート**をクリックします。
 
     ![](images/go-ir.png " ")
 
-3. On the Add Report Page, enter the following:
-      - Page Name - enter **Milestones**
-      - Table or View - select **EBA\_PROJECT\_MILESTONES**
-      - Check **Include Form**
+3. [レポートの追加] ページで、次のように入力します。
+       - ページ名 - **マイルストーン**を入力
+       - テーブルまたはビュー - **EBA\_PROJECT\_MILESTONES** を選択します
+       - **フォームを含める**にチェックを入れます
 
-  Expand **Lookup Columns**:
-      - Lookup Key 1 - select **PROJECT_ID**
-      - Display Col 1 - select **EBA_PROJECTS.NAME**
+  **参照列**を展開します。
+       - 検索キー 1 - **PROJECT_ID** を選択
+       - 列 1 を表示 - **EBA_PROJECTS.NAME** を選択
 
-4. Click **Add Page**  
+4. [**ページを追加**] をクリックします。
 
     ![](images/set-milestones.png " ")
 
-## Task 6: Add the Tasks Pages
-The **EBA\_PROJECT\_TASKS** table is the primary table, where records will be reviewed and updated the most. Therefore, you will add a Faceted Search page, Report and Form pages, and a Calendar page on this table.
+## タスク 6: タスク ページを追加する
+**EBA\_PROJECT\_TASKS** テーブルは、レコードが最も頻繁に確認および更新されるプライマリ テーブルです。 したがって、ファセット検索ページ、レポートとフォーム ページ、およびカレンダー ページをこのテーブルに追加します。
 
-1. In the Create Application wizard, click **Add Page**.
-2. Click **Faceted Search**.
+1. アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+2. **ファセット検索**をクリックします。
 
     ![](images/go-faceted.png " ")
 
-3. On the Add Faceted Search Page, enter the following:
-    - Page Name - enter **Tasks Search**
-    - Table - select **EBA\_PROJECT\_TASKS**
+3. [ファセット検索の追加] ページで、次のように入力します。
+     - ページ名 - **タスク検索**を入力
+     - テーブル - **EBA\_PROJECT\_TASKS** を選択します
 
-4. Click **Add Page**  
+4. [**ページを追加**] をクリックします。
 
     ![](images/set-faceted.png " ")
 
-5. It would be better to place the **Tasks Search** page up under the **Dashboard** page.
+5. **タスク検索** ページを **ダッシュボード** ページの下に配置することをお勧めします。
 
-    For **Tasks Search**  click and hold the hamburger (four parallel bars), after the Edit button.     
-    Drag the page up until it displays between the **Dashboard** page and the **Projects** page.    
-    Release the mouse.
+    **タスク検索**では、[編集] ボタンの後ろにあるハンバーガー (4 本の平行棒) をクリックしたままにします。
+     **ダッシュボード** ページと **プロジェクト** ページの間に表示されるまで、ページを上にドラッグします。
+     マウスを放します。
 
     ![](images/move-faceted.png " ")
 
-6. Now to add the Report and Form pages.    
-    In the Create Application wizard, click **Add Page**.
-7. Click **Interactive Report**.
-8. On the Add Report Page, enter the following:
-      - Page Name - enter **Tasks Report**
-      - Table or View - select **EBA\_PROJECT\_TASKS**
-      - Check **Include Form**
+6. 次に、Report ページと Form ページを追加します。
+     アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+7. **インタラクティブ レポート**をクリックします。
+8. [レポートの追加] ページで、次のように入力します。
+       - ページ名 - **タスク レポート**を入力します
+       - テーブルまたはビュー - **EBA\_PROJECT\_TASKS** を選択します
+       - **フォームを含める**にチェックを入れます
 
-   Expand **Lookup Columns**
-      - Lookup Key 1 - select **PROJECT\_ID**
-      - Display Col 1 - select **EBA\_PROJECTS.NAME**
-      - Lookup Key 2 - select **MILESTONE\_ID**
-      - Display Col 2 - select **EBA\_PROJECT\_MILESTONES.NAME**
+    **ルックアップ列**を展開します
+       - 検索キー 1 - **PROJECT\_ID** を選択
+       - 列 1 を表示 - **EBA\_PROJECTS.NAME** を選択
+       - 検索キー 2 - **MILESTONE\_ID** を選択
+       - 列 2 を表示 - **EBA\_PROJECT\_MILESTONES.NAME** を選択
 
-9. Click **Add Page**  
+9. [**ページを追加**] をクリックします。  
 
     ![](images/set-tasks.png " ")
 
-10. Last we will add a Calendar.  
-    In the Create Application wizard, click **Add Page**
-11. Click **Calendar**.
-12. On the Add Calendar Page, enter the following:
-      - Page Name - enter **Tasks Calendar**
-      - Table or View - select **EBA\_PROJECT_TASKS**
-      - Display Column - select **NAME**
-      - Start Date Column - select **START_DATE**
-      - End Date Column - select **END_DATE**
+10. 最後にカレンダーを追加します。
+     アプリケーションの作成ウィザードで、[**ページの追加**] をクリックします。
+11. **カレンダー**をクリックします。
+12. [カレンダーの追加] ページで、次のように入力します。
+       - ページ名 - **タスク カレンダー**を入力
+       - テーブルまたはビュー - **EBA\_PROJECT_TASKS** を選択します
+       - 表示列 - **NAME** を選択
+       - 開始日の列 - **START_DATE** を選択します
+       - 終了日列 - **END_DATE** を選択
 
-13. Click **Add Page**  
+13. [**ページを追加**] をクリックします。
 
     ![](images/set-calendar.png " ")
 
-*Note: If you go to **SQL Workshop** > **Object Browser**, select the **EBA\_PROJECT\_TASKS** table, and then click **Create App**, it will create an app with a Dashboard page, Faceted Search page, Report and Form pages, and a Calendar page (if appropriate) all based on the selected table. This technique provides a great starting point for creating your apps, especially if you are not sure what pages you want up front.*
+[ページの追加] をクリックします。 *注意: [SQL ワークショップ] > [オブジェクト ブラウザ] に移動した場合は、[EBA\_PROJECT\_TASKS] テーブルを選択し、[アプリケーションの作成] をクリックします。 、選択したテーブルに基づいて、ダッシュボード ページ、ファセット検索ページ、レポートとフォーム ページ、およびカレンダー ページ (該当する場合) を含むアプリを作成します。 この手法は、アプリを作成するための優れた出発点となります。特に、事前に必要なページがわからない場合に役立ちます。*
 
 ![](images/object-browser-create-app.png " ")
 
-## Task 7: Generate the App
+## タスク 7: アプリを生成する
 
-Now that you have added all the pages, it is time to generate the app and review it.
+すべてのページを追加したので、アプリを生成して確認します。
 
-1. Scroll to the bottom of the page, and click **Create Application**.
+1. ページの一番下までスクロールし、**Create Application** をクリックします。
 
     ![](images/create-app.png " ")
 
-2. Once the application has been generated, your new app will be displayed in the application home page.
+2. アプリケーションが生成されると、新しいアプリがアプリケーションのホームページに表示されます。
 
-    Click **Run Application**.
+    [**アプリケーションの実行**] をクリックします。
 
     ![](images/run-app.png " ")
 
-## Task 8: Runtime App
+## タスク 8: ランタイム アプリ
 
-1. Enter your user credentials. Click **Sign In**.
+1. ユーザー資格証明を入力します。 [**サインイン**] をクリックします。
 
     ![](images/enter-credentials.png " ")
 
-2. This is your *Runtime Environment*. Play around with your new application!
+2. これが*ランタイム環境*です。 新しいアプリケーションをいじってみましょう!
 
     ![](images/runtime-app.png " ")
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 2. You now know how to create an application, with numerous different page types, based on existing database objects. [Click here to navigate to Lab 3](?lab=lab-3-regenerating-app)
+これで演習 2 は終了です。これで、既存のデータベース オブジェクトに基づいて、多数の異なるページ タイプを持つアプリケーションを作成する方法がわかりました。[ラボ 3 に移動するには、ここをクリックしてください](?lab=lab-3-regenerating-app)
 
-## Learn More / Troubleshooting: How to change a page's name
-If you want to change a page's name after you create an application, the process is involved. Though it is recommended that you give a page an accurate name at the beginning, here are the instructions on how you can change a page's name.
+## 詳細 / トラブルシューティング: ページの名前を変更する方法
+アプリケーションを作成した後でページの名前を変更する場合は、プロセスが関与します。 最初にページに正確な名前を付けることをお勧めしますが、ここではページの名前を変更する方法について説明します。
 
-1. In *App Builder*, click you Project. In you Project home page, click the page you want to edit. In *Page Designer*, change **Identification > Name** and **Identification > Title** to the new name. Click **Save and Run Page**. In the runtime environment, you will see the tab's name is updated.
+1. *App Builder* で、プロジェクトをクリックします。 プロジェクトのホームページで、編集するページをクリックします。 *Page Designer* で、**Identification > Name** と **Identification > Title** を新しい名前に変更します。 [**ページを保存して実行**] をクリックします。 ランタイム環境で、タブの名前が更新されていることがわかります。
 
     ![](../../common/change-page-name/images/change_name.png " ")
 
-2. In your Project home page, click **Shared Component** in the development toolbar.
+2. プロジェクトのホームページで、開発ツールバーの **共有コンポーネント** をクリックします。
     ![](../../common/change-page-name/images/shared_component.png " ")
 
-    In Shared Component home page, under **Navigation**, click **Breadcrumbs**. Click **Breadcrumbs** again, click the page you want to edit.
+    共有コンポーネントのホームページで、[ナビゲーション] の下にある [パンくずリスト] をクリックします。 [**ブレッドクラム**] をもう一度クリックし、編集するページをクリックします。
     ![](../../common/change-page-name/images/shared_component_menu.png " ")
 
-    Change **Entry > Short Name** to the new name. Click **Apply Changes**. In the runtime environment, you will see the title of the page is updated.
+    **Entry > Short Name** を新しい名前に変更します。 [**変更を適用**] をクリックします。 ランタイム環境では、ページのタイトルが更新されていることがわかります。
     ![](../../common/change-page-name/images/breadcrumb.png " ")
 
-3. In Shared Component home page, under **Navigation**, click **Navigation Menu**, click **Desktop Nagivation Menu**. Click the page you want to edit, change **Entry > List Entry Label** to the new name. Click **Apply Changes**. You will see the page's name is updated on the left navigation menu.
+3. 共有コンポーネントのホームページで、[ナビゲーション] の下にある [ナビゲーション メニュー] をクリックし、[デスクトップ ナビゲーション メニュー] をクリックします。 編集するページをクリックし、**エントリ > リスト エントリ ラベル**を新しい名前に変更します。 [**変更を適用**] をクリックします。 ページの名前が左側のナビゲーション メニューで更新されていることがわかります。
 
     ![](../../common/change-page-name/images/navigation_menu.png " ")
 
-4. In Shared Component home page, under **Navigation**, click **Lists**, then click **Page Navigation**. Click the page you want to edit, change **Entry > List Entry Label** to the new name. Click **Apply Changes**. You will see the page's name is updated in the Home page of you application.
+4. 共有コンポーネントのホームページで、[ナビゲーション] の下の [リスト] をクリックし、[ページ ナビゲーション] をクリックします。 編集するページをクリックし、**エントリ > リスト エントリ ラベル**を新しい名前に変更します。 [**変更を適用**] をクリックします。 アプリケーションのホームページでページの名前が更新されていることがわかります。
 
     ![](../../common/change-page-name/images/page_navigation.png " ")
 
-## **Acknowledgements**
+## **謝辞**
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
-
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Salim Hlayel, Principle Product Manager, November 2020

@@ -1,187 +1,187 @@
-# Improving Tasks
+# タスクの改善
 
-## Introduction
-In this lab, you will learn how to define a shared *List of Values* and use it to improve the Faceted Searches and Interactive Report pages for Tasks. You will also learn how easy it is to link the Calendar to the Tasks Form page.
+## 紹介
+このラボでは、共有 *List of Values* を定義し、それを使用してタスクのファセット検索とインタラクティブ レポート ページを改善する方法を学習します。 また、Calendar を Tasks Form ページに簡単にリンクできることも学びます。
 
-## Task 1: Defining a Shared List of Values
-In the Runtime environment, navigate to **Tasks Search** and review the page. Notice that Is Complete column simply displays "Y" or "N". Now navigate to **Tasks Report**, and you will notice the same issue. It would be far better to display "Yes" or "No". This can readily be achieved by defining a *List of Values (LOV)*
+## タスク 1: 共有値リストの定義
+ランタイム環境で **Tasks Search** に移動し、ページを確認します。 [Is Complete] 列には単に「Y」または「N」が表示されていることに注意してください。 **タスク レポート**に移動すると、同じ問題に気付くでしょう。 「はい」または「いいえ」を表示する方がはるかに良いでしょう。 これは、*値のリスト (LOV)* を定義することで簡単に実現できます。
 
-You can define a LOV directly on a page. However, if you require the same LOV on multiple pages, as you do here, it is far better to define it once as a *Shared Component*.
+LOV はページ上で直接定義できます。 ただし、ここで行うように複数のページで同じ LOV が必要な場合は、*共有コンポーネント*として 1 回定義する方がはるかに優れています。
 
-1. Navigate back to the App Builder browser tab, click your application.
-2. On the application home page, click **Shared Components**.
+1. App Builder ブラウザ タブに戻り、アプリケーションをクリックします。
+2. アプリケーションのホームページで、[**共有コンポーネント**] をクリックします。
 
     ![](images/app-home.png " ")
 
-    Alternatively, if in Page Designer, within the toolbar, click the **Shared Components** icon.
+    または、Page Designer の場合は、ツールバー内で **Shared Components** アイコンをクリックします。
 
     ![](images/pd.png " ")
 
-3. On Shared Components, under **Other Components**, click **List of Values**.
+3. [共有コンポーネント] で、[**その他のコンポーネント**] の下の [**値のリスト**] をクリックします。
 
     ![](images/go-lov.png " ")
 
-4. You will notice there are already several LOVs listed.   
-    To create a new LOV click **Create**.
+4. 既にいくつかの LOV がリストされていることがわかります。
+     新しい LOV を作成するには、**Create** をクリックします。
 
     ![](images/create-lov.png " ")
 
-5. On the Create List of Values dialog, for Source, keep the default selection ("From Scratch").
-    Click **Next**
-6. On the Name and Type dialog, enter the following:
-      - Name - enter **YES_NO**
-      - Type - select **Static**
+5. [値のリストの作成] ダイアログで、[ソース] はデフォルトの選択 ("最初から") のままにします。
+     **次へ**をクリックします
+6. [名前とタイプ] ダイアログで、次のように入力します。
+       - 名前 - **YES_NO** を入力
+       - タイプ - **静的**を選択します
 
-6. Click **Next**
+6. **次へ**をクリックします
 
     ![](images/lov-name.png " ")
 
-7. On the Static Values dialog, enter the following:
-    - Sequence 1
-        - Display Value - enter **Yes**
-        - Return Value - enter **Y**
-    - Sequence 2
-        - Display Value - enter **No**
-        - Return Value - enter **N**  
+7. [静的値] ダイアログで、次のように入力します。
+     - シーケンス 1
+         - 表示値 - **Yes** と入力します
+         - 戻り値 - **Y** を入力
+     - シーケンス 2
+         - 表示値 - **いいえ**を入力
+         - 戻り値 - **N** を入力
 
-    - Click **Create List of Values**
+     - [**値リストの作成**] をクリックします。
 
     ![](images/lov-values.png " ")
 
-## Task 2: Updating the Faceted Search
-Now that you have defined the shared component, you need to utilize it on the Faceted Search page.
+## タスク 2: ファセット検索の更新
+共有コンポーネントを定義したので、それをファセット検索ページで利用する必要があります。
 
-1. In the breadcrumbs, click **Application xxxxx**
+1. ブレッドクラムで、**Application xxxxx** をクリックします。
 
     ![](images/go-home.png " ")
 
-2. From the application home page, click **3 - Tasks Search**
+2. アプリケーションのホームページから、[**3 - タスク検索**] をクリックします。
 
     ![](images/go-page3.png " ")
 
-3. You first want to update the entries in the *Search*.  
-    - Within Page Designer, in the Rendering tree (left pane), under Search, click **P3\_IS\_COMPLETE\_YN**.   
+3. まず、*検索* のエントリを更新します。
+     - Page Designer 内のレンダリング ツリー (左ペイン) で、[検索] の下にある [**P3\_IS\_COMPLETE\_YN**] をクリックします。   
 
-4. In the Property Editor (right pane), select the following:
-    - List of Values > Type - select **Shared Component**
-    - List of Values > List of Values - select **YES_NO**
+4. プロパティ エディター (右側のペイン) で、次を選択します。
+     - 値の一覧 > タイプ - **共有コンポーネント**を選択します
+     - 値リスト > 値リスト - **YES_NO** を選択します
 
     ![](images/set-facet.png " ")
 
-4. Next you also want to update the displayed value in the *Report*.  
-    - In the Rendering tree (left pane), under **Project Tasks**, expand **Columns**.  
-    - Within the list of columns, click **IS\_COMPLETE\_YN**.
+4. 次に、*Report* に表示される値も更新します。
+     - レンダリング ツリー (左ペイン) で、[プロジェクト タスク] の下にある [列] を展開します。
+     - 列のリスト内で、**IS\_COMPLETE\_YN** をクリックします。
 
-5. In the Property Editor (right pane), enter the following:
-    - Identification > Type - select **Plain Text (based on List of Values)**
-    - List of Values > Type - select **Shared Component**
-    - List of Values > List of Values - select **YES_NO**
+5. プロパティ エディター (右側のペイン) で、次のように入力します。
+     - 識別 > タイプ - **プレーン テキスト (値のリストに基づく)** を選択します。
+     - 値の一覧 > タイプ - **共有コンポーネント**を選択します
+     - 値リスト > 値リスト - **YES_NO** を選択します
 
     ![](images/set-report.png " ")
 
-6. The report has many columns. The Description column takes up too much real estate, so should be hidden.  
-    - In the Rendering tree (left pane), under **Project Tasks**, within the list of columns, click **DESCRIPTION**.   
-    - In the Property Editor (right pane), for Identification > Type select **Hidden Column**.
+6. レポートには多くの列があります。 [説明] 列は場所を取りすぎるため、非表示にする必要があります。
+     - レンダリング ツリー (左側のペイン) で、[プロジェクト タスク] の下の列のリストで [説明] をクリックします。
+     - プロパティ エディター (右側のペイン) で、[識別] > [タイプ] で [**非表示の列**] を選択します。
 
     ![](images/hide-desc.png " ")
 
-7. While we are on the page, we can quickly change the order of the search columns.  
-    - In the Rendering tree (left pane), under **Search**, click **P3\_MILESTONE\_ID**   
-    - In the Property Editor (right pane), for Layout > Sequence enter **25**     
-    *Note: This will position P3\_MILESTONE\_ID after P3\_PROJECT\_ID (Sequence 20)*
+7. ページにいる間に、検索列の順序をすばやく変更できます。
+     - レンダリング ツリー (左ペイン) の **検索** で、**P3\_MILESTONE\_ID** をクリックします。
+     - プロパティ エディター (右側のペイン) で、[レイアウト] > [シーケンス] に **25** と入力します。
+     *注: これにより、P3\_MILESTONE\_ID が P3\_PROJECT\_ID の後に配置されます (シーケンス 20)*
 
-    - In the Rendering tree (left pane), click **P3\_IS\_COMPLETE\_YN**    
-    - In the Property Editor (right pane), for Layout > Sequence enter **35**     
-    *Note: This will position P3\_IS\_COMPLETE\_YN after P3\_ASSIGNEE (Sequence 30)*
+    - レンダリング ツリー (左ペイン) で、**P3\_IS\_COMPLETE\_YN** をクリックします。
+     - プロパティ エディター (右側のペイン) で、[レイアウト] > [シーケンス] に **35** と入力します。
+     *注: これにより、P3\_IS\_COMPLETE\_YN が P3\_ASSIGNEE の後に配置されます (シーケンス 30)*
 
     ![](images/order-facet.png " ")
 
-8. Let’s review that the Faceted Search is complete.  
-    - In the Page Designer toolbar, click **Save and Run Page**.
+8. ファセット検索が完了したことを確認しましょう。
+     - ページ デザイナーのツールバーで、[**ページを保存して実行**] をクリックします。
 
     ![](images/facet-complete.png " ")
 
-## Task 3: Updating the Interactive Report
-The Tasks Report also needs the Is Complete column updated.
+## タスク 3: インタラクティブ レポートの更新
+タスク レポートでは、[完了] 列も更新する必要があります。
 
-1. In the Runtime environment, click **Tasks Report** in the menu.  
-    - In the Developer Toolbar (bottom of page), click **Edit Page 6**.    
-    *Note: You can also navigate back to your application home page in the App Builder browser tab and manually navigate to Page 6*
+1. ランタイム環境で、メニューの **タスク レポート** をクリックします。
+     - 開発者ツールバー (ページの下部) で、[**Edit Page 6**] をクリックします。
+     *注意: App Builder ブラウザー タブでアプリケーションのホームページに戻り、手動でページ 6 に移動することもできます*
 
-2. In Page Designer, with **Page 6: Tasks Report** selected, in the Rendering tree (left pane), under **Project Tasks** region, expand **Columns**.    
-    - In the list of columns, click **IS\_COMPLETE_YN**.
+2. Page Designer で **Page 6: Tasks Report** を選択し、レンダリング ツリー (左ペイン) の **Project Tasks** 領域で **Columns** を展開します。
+     - 列のリストで、**IS\_COMPLETE_YN** をクリックします。
 
-3. In the Property Editor (right pane), enter the following:
-    - Identification > Type - select **Plain Text (based on List of Values)**
-    - List of Values > List of Values - select **YES_NO**
+3. プロパティ エディター (右側のペイン) で、次のように入力します。
+     - 識別 > タイプ - **プレーン テキスト (値のリストに基づく)** を選択します。
+     - 値リスト > 値リスト - **YES_NO** を選択します
 
     ![](images/set-ir.png " ")
 
-3. Run the application.     
-    In the Page Designer toolbar, click **Save and Run Page**.
+3. アプリケーションを実行します。
+     ページ デザイナーのツールバーで、[**ページを保存して実行**] をクリックします。
 
     ![](images/ir-complete.png " ")
 
-4. Click on the edit icon for a record.     
-    Notice that Is Complete uses a Switch so no need to modify the Form page.   
-    *Note: The Form page is Page 7 which we will need in the next part*
+4. レコードの編集アイコンをクリックします。
+     Is Complete はスイッチを使用するため、フォーム ページを変更する必要がないことに注意してください。
+     *注: フォーム ページは、次のパートで必要になるページ 7 です*
 
-## Task 4: Linking the Calendar
-The Tasks Calendar page shows numerous tasks; however, there is no way to directly modify a record. Therefore, you should add a link to the existing Project Task Form page.
+## タスク 4: カレンダーをリンクする
+タスク カレンダー ページには、多数のタスクが表示されます。 ただし、レコードを直接変更する方法はありません。 したがって、既存のプロジェクト タスク フォーム ページへのリンクを追加する必要があります。
 
-1. In the runtime environment, within the Navigation Menu, click **Tasks Calendar**
-2. Click on any entry to confirm it simply displays the event details
+1. ランタイム環境のナビゲーション メニューで、[**タスク カレンダー**] をクリックします。
+2. 任意のエントリをクリックして、イベントの詳細が表示されることを確認します
 
     ![](images/initial-cal.png " ")
 
-3. In the Developer Toolbar (bottom of page), click **Edit Page 8**
-4. In Page Designer, within the Rendering tree (left pane), under **Tasks Calendar**  region, click **Attributes**.  
-    - In the Property Editor (right pane), for Settings > View / Edit Link, click **No Link Defined**
+3. 開発者ツールバー (ページの下部) で、[**Edit Page 8**] をクリックします。
+4. ページ デザイナーのレンダリング ツリー (左ペイン) で、[タスク カレンダー] 領域の下にある [属性] をクリックします。
+     - プロパティ エディター (右側のペイン) で、[設定] > [リンクの表示/編集] で、[**リンクが定義されていません**] をクリックします。
 
-5. In the Link Builder dialog, enter the following:
-    - Target > Page - select **7**
-    - Set Items > Name - select **P7_ID**
-    - Set Items > Value - select **ID** (Returns **&ID.**)
-    - Clear / Reset > Clear Cache - enter **7**
+5. Link Builder ダイアログで、次のように入力します。
+     - ターゲット > ページ - **7** を選択
+     - セット項目 > 名前 - **P7_ID** を選択
+     - Set Items > Value - **ID** を選択 (**&ID.** を返す)
+     - クリア / リセット > キャッシュをクリア - **7** と入力
 
-6. Click **OK**
+6. [**OK**] をクリックします
 
     ![](images/set-link.png " ")
 
-7. It is important that the calendar is updated if the Task Name, Start Date, or End Date are updated when the Project Task Form page is called from the calendar.    
-    - In the Rendering tree (left pane), _right-click_ **Tasks Calendar**.    
-    - Select **Create Dynamic Actions**.
+7. プロジェクト タスク フォーム ページがカレンダーから呼び出されたときに、タスク名、開始日、または終了日が更新された場合、カレンダーが更新されることが重要です。
+     - レンダリング ツリー (左ペイン) で、_右クリック_ **タスク カレンダー**。
+     - **動的アクションの作成**を選択します。
 
     ![](images/go-da.png " ")
 
-8. With **New** under Dynamic Actions selected, in the Property Editor (right pane), enter the following:
-    - Identification > Name - enter **Refresh Calendar**
-    - When > Event - select **Dialog Closed** (under **Framework Events**)
+8. [動的アクション] の下の [**新規**] を選択した状態で、プロパティ エディター (右側のペイン) で次のように入力します。
+     - 識別 > 名前 - **カレンダーを更新**を入力します
+     - When > Event - **Dialog Closed** (**Framework Events** の下) を選択します。
 
-    *Note: The Refresh Calendar event will fire when the Project Task Form page is closed as it is a modal page*
+    *注意: モーダル ページであるため、プロジェクト タスク フォーム ページが閉じられると、カレンダーの更新イベントが発生します*
 
     ![](images/name-da.png " ")
 
-9. In the Rendering tree (left pane), under the True action, click **Show**.    
-    In the Property Editor (right pane), select the following:
-    - Identification > Action - select **Refresh** (under **Component**)
-    - Affected Elements > Selection Type - select **Region**
-    - Affected Elements > Region - select **Tasks Calendar**
+9. レンダリング ツリー (左ペイン) で、True アクションの下にある [**表示**] をクリックします。
+     プロパティ エディター (右側のペイン) で、次を選択します。
+     - 識別 > アクション - **更新** (**コンポーネント**の下) を選択します。
+     - 影響を受ける要素 > 選択タイプ - **領域**を選択します
+     - 影響を受ける要素 > 地域 - **タスク カレンダー**を選択します
 
-    Click **Save**
+    **保存**をクリックします
 
     ![](images/set-true.png " ")
 
-10. Navigate back to the runtime environment, and refresh the browser.   
-    - Click a calendar entry
+10. ランタイム環境に戻り、ブラウザーを更新します。
+     - カレンダーエントリをクリックします
 
     ![](images/final-cal.png " ")
 
-    If you update the Name, Start Date, or End Date, and click **Apply Changes** on the Project Task Form page, the changes will be reflected immediately in the calendar.
+    名前、開始日、または終了日を更新し、[プロジェクト タスク フォーム] ページで [**変更を適用**] をクリックすると、変更がすぐにカレンダーに反映されます。
 
-## **Summary**
+## **まとめ**
 
-This completes Lab 7 and the workshop. You now know how to create a Shared Component, use it to improve Faceted Search page and Interactive Report, and link a Calendar page that refreshes after a record is updated.
+これで、ラボ 7 とワークショップは完了です。 共有コンポーネントを作成し、それを使用してファセット検索ページと対話型レポートを改善し、レコードが更新された後に更新されるカレンダー ページをリンクする方法がわかりました。
 
 ## Learn More
 
@@ -191,9 +191,8 @@ This completes Lab 7 and the workshop. You now know how to create a Shared Compo
 - [APEX Community](https://apex.oracle.com/community)
 - [APEX External Site + Slack](http://apex.world)
 
-## Acknowledgements
+## 謝辞
 
- - **Author** -  Salim Hlayel, Principle Product Manager
- - **Contributors** - Arabella Yao, Product Manager Intern, DB Product Management
- - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
-
+  - **著者** - Salim Hlayel, Principle Product Manager
+  - **寄稿者** - Arabella Yao, Product Manager Intern, DB Product Management
+  - **最終更新者/日付** - Salim Hlayel, Principle Product Manager, November 2020
