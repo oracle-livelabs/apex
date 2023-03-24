@@ -10,9 +10,10 @@ Estimated Time: 5 minutes
 ## **Task 1**: Data Model review and QuickSQL
 
 1. Our application data model will consist of 2 tables: 
-- A table for the POSTS 
-- A table for the REACTIONS on the posts
-These tables will have a primary key in each and a foreign key relationship linking REACTIONS to POSTS.
+- A table for the **POSTS** 
+- A table for the **REACTIONS** on the posts.
+
+    These tables will have a primary key in each and a foreign key relationship linking **REACTIONS** to **POSTS**.
 There will also be a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with ***SM\_*** (short for ***S***ocial ***M***edia) as shown in the following 
 model:
 
@@ -36,26 +37,26 @@ the developer on the left side.
 
 ## **Task 2**: Create Database Objects
 
-1. Copy and paste the below QuickSQL model into the left side, and then click the ***Generate*** SQL
-button. ** Note: It is very important that the tabbing be maintained so that
-all the objects get generated**:
+1. Copy and paste the below QuickSQL model into the left side, and then click the **Generate SQL**
+button. 
+    **Note**: It is very important that the tabbing be maintained so that all the objects get generated.
 
     ```
     <copy>
-        # prefix: "sm_"
-        # apex: true
-        posts /auditcols
-            post_comment vc4000
-            file_blob blob
-            file_mime vc255
-            file_name vc255
+    # prefix: "sm_"
+    # apex: true
+    posts /auditcols
+        post_comment vc4000
+        file_blob blob
+        file_mime vc255
+        file_name vc255
+        lat num
+        lon num
+        reactions /auditcols
+            post_id /fk posts
+            reaction vc16
             lat num
             lon num
-            reactions /auditcols
-                post_id /fk posts
-                reaction vc16
-                lat num
-                lon num
     </copy>
     ```
 
@@ -85,7 +86,7 @@ app will use.
 
     ![Quick SQL action buttons](images/review-run.png "")
 
-    **NOTE**: If you had trouble generating the 90+ lines of script form the previous step, download the script from [HERE](files/apex-sm-quicksql.txt) so that you can copy and paste from the text file and overwrite your generated script with the full and correct script, then proceed to RUN.
+
 
 2. Now, click **Run**.
 
@@ -98,7 +99,7 @@ app will use.
 
 4. We can see that 5 statements were run successfully.
 
-    ![Results of teh execution is displayed](images/sql-processed.png)
+    ![Results of the execution is displayed](images/sql-processed.png)
 
 ## **Task 4**: Create a Custom Table Constraint
 
@@ -118,6 +119,8 @@ Since we prefer that Users react to a post one time only, we need to add a const
     | Constraint Type | **Unique** |
     | Unique column 1 | **POST_ID** |
     | Unique column 2 | **CREATED_BY** |
+
+    ![Add constraint wizard](images/add-constraint.png)
 
 4.  Click **Next** and then **Finish** to create the Constraint.
 
