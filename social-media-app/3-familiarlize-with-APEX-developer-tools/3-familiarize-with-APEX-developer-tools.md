@@ -14,10 +14,7 @@ Developer toolbar at the bottom.
 
     ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "")
 
-    ** Note:** The application users will not see this bar. The developer tool bar
-is only visible to you because you are already logged into the APEX
-builder in another tab. Within it, there are quick links to features of
-APEX that we will use to continue development.
+    **Note**: The application users will not see this bar. The developer tool bar is only visible to you because you are already logged into the APEX builder in another tab. Within it, there are quick links to features of APEX that we will use to continue development.
 
 2. Click on the Page 1 link -- this will open up the APEX Page Designer so
 that we can begin making our changes and get our application built out.

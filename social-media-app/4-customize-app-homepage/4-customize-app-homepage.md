@@ -10,7 +10,7 @@ Estimated Time: 5 minutes
 1. The first thing we want to do is configure the page to not show any
 navigation menu. We do this by ensuring that the top-level rendering
 tree entry is selected on the left section (**Page 1: Timeline**), and
-then by looking at the Page details on the right. Look for the Navigation Menu section in the list.
+then by looking at the Page details on the right. Look for the **Navigation Menu** section in the list.
 
     ![Page designer is seen](images/property-editor-nav.png "")
 
@@ -23,8 +23,7 @@ the List option at the default of *Do not show the Navigation Menu List*.
 
 Since our app is going to be a Single Page Application, we do not need or want a breadcrumb bar at the top of the page. Let us go ahead and delete the one that got created by default.
 
-1. In the Rendering Tree, navigate to **APEX Social Media** under Components > Breadcrumb Bar and then press your
-keyboard delete key.
+1. In the Rendering Tree, navigate to Components > Breadcrumb Bar. Right-click on **APEX Social Media**, and select **Delete**.
 
     ![Rendering Tree in Page Designer](images/breadcrumb-delete.png "")
 
@@ -36,7 +35,7 @@ keyboard delete key.
 
     ![Save and Run button](images/save-and-run.png "")
 
-    **Once your signed in (if you weren't already), your app should look
+    **Once you are signed in (if you weren't already), your app should look
 like this:**
 
     ![The update app after the changes](images/updated-app.png "")
