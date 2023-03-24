@@ -206,7 +206,7 @@ You now know how to use Quick SQL to define new tables, and create application i
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 
-- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/aeutl/using-quick-sql.html#GUID-21EE36C2-F814-48C0-90EA-7D464E9014FD)
+- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/aeutl/using-quick-sql.html)
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 5 and follow the instructions below to import it into your Oracle APEX workspace.
@@ -218,7 +218,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 - You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
 *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")  
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -228,7 +228,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -236,7 +236,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022

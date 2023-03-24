@@ -129,7 +129,7 @@ You now know how to create REST data sources from a REST Catalog in Oracle APEX 
 
 ## Resources
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/managing-REST-data-sources.html)  
+- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
 
 - [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)  
 
@@ -142,7 +142,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - You will be prompted for the Credentials for Movies web credential that was set up in this lab. You can see in the screenshot below that Credentials for Movies does not already exist in your workspace.  
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID or Client Secret values for Credentials for Movies](images/blank-credentials.png " ")  
 
 - Within the Credentials for Movies row:
 
@@ -152,7 +152,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -160,7 +160,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022
