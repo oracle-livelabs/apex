@@ -8,7 +8,7 @@ While the end result is a simple version of a movies watchlist application, you 
 
 Estimated Workshop Time: 2 hours
 
-*Note: This lab assumes you are using Oracle APEX 22.1.*
+*Note: This lab assumes you are using Oracle APEX 22.2.*
 
 ### Objectives
 In this lab, you will:  
@@ -54,7 +54,7 @@ In this lab, you will:
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022
