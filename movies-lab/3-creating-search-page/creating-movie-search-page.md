@@ -5,6 +5,9 @@ You will create and set up the Movie Search page so that you can view popular mo
 
 Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Movie Search Page](videohub:1_stfhi958)
+
 ### Objectives
 In this lab, you will:   
 - Create a new page.  

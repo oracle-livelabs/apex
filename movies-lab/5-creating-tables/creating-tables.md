@@ -5,6 +5,9 @@ Up to this point, most of the work has revolved around implementing REST data so
 
 Estimated Lab Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create Users and Watchlist Tables](videohub:1_u9hl1p4v)
+
 ### Objectives
 In this lab, you will:  
 - Set up the movie_users and watchlist tables using Quick SQL.  
