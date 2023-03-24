@@ -64,7 +64,7 @@ Estimated Workshop Time: 2 hours
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Additional Contributors** - Kay Jasanya, Shakeeb Rahman, Steve Muench, Monica Godoy, Eli Feuerstein, Carlos Maciel, Dalia Vazquez

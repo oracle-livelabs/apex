@@ -132,7 +132,7 @@ You now know how to create, run, and update the theme of an application. You may
 
 ## Resources
 
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/application-builder-concepts.html)
+- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
 
 - [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
 
@@ -147,7 +147,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022
