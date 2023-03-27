@@ -36,7 +36,7 @@ parameters. Enter the following:
     ![Form types select list](images/form-types.png "")
 
 3. The **Form Region** will be tied to the **SM\_POSTS** table that we
-created from the script. Therefore, we need to specify the **Table Name** in the **Source** section.
+created from the script. Therefore, in the **Source** section, specify the **Table Name** as **SM_POSTS**.
 
     ![Page Designer view](images/form-source.png "")
 
@@ -90,8 +90,6 @@ the form. For the **P1\_POST\_COMMENT** item, update the following:
 
     ![Options available for Type is displayed](images/post-type.png "")
 
-
-    ![Label field is displayed](images/post-label.png "")
 
 3. Run the app again and see the results of our changes so far!
 
@@ -166,10 +164,12 @@ the **P1\_POST\_COMMENT** item to underneath the **P1\_FILE\_BLOB** item:
 
         ![Property editor](images/post-property-3.png "")
 
-    4.  Then, set the options to match (check **Auto Height**, set
-    **Size** to **None**, and **Heading Level** to **H1**):
+    4.  Then, set the options to match the following:
+        - Check **Auto Height** 
+        - Set **Size** to **None**
+        - Set **Heading Level** to **H1**
 
-    ![Property editor](images/post-property-4.png "")
+        ![Property editor](images/post-property-4.png "")
 
     That should complete what we need to configure for the Post form region
 itself.
@@ -231,11 +231,11 @@ configure a few more attributes.
         ![Name the dynamic action](images/da-name.png)
 
     2.  Select the other entry, that is under True so that we can configure
-    it, currently titled as* **Show,** and *change the* **Identification > Action** to be **Open Region**
+    it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
 
         ![Action options for a dynamic action](images/da-action.png)
 
-    3.  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts:**
+    3.  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
 
         ![Affected elements in property editor](images/affected-elements.png)
 
@@ -245,12 +245,10 @@ and then the in-line dialog opens with the Post **form**.
 
     ![Running app](images/run-app-2.png)
 
-[\*TO BE REMOVED AFTER NEW SCREENSHOTS\* If you made the same mistake I
-made, we need to update the Title to just POST without the S.]{.mark}
 
 ## **Task 5**: Create a Save Button
 
-1. We now need a button for the user to click to *actually SAVE the post*
+1. We now need a button for the user to *actually SAVE the post*
 they make. To do this, right click on the **Body > Post** region in
 the tree, and click **Create Button**
 
@@ -291,15 +289,14 @@ Dynamic Action and then a page process that does the work.
 
 ### OPTIONAL STEPS (5 and 6)
 
-5.  To prevent users from posting blank rows, we need to set a
-    **Client-side Condition** as **type Javascript expression**.
+5.  To prevent users from posting blank rows, under **Client-side Condition**, we need to set type as **Javascript expression**.
 
 6.  Paste this javascript into the Javascript Expression box:
     
     ```
     <copy>
-        apex.item('P1_FILE_BLOB').value.length>0 || 
-        apex.item('P1_POST_COMMENT').value.length>0
+    apex.item('P1_FILE_BLOB').value.length>0 || 
+    apex.item('P1_POST_COMMENT').value.length>0
     </copy>
     ```
 
@@ -312,11 +309,11 @@ which is initially set to **Show,** and set the following attributes:
 
     - Identification > Action: **Submit Page**
 
-    - **Settings > Request > Button name: **SAVE**
+    - Settings > Request/Button name: **SAVE**
 
     - Ensure **Show processing** is **ON**
 
-        ![Property editor](images/da2-action.png)
+    ![Property editor](images/da2-action.png)
 
 ## **Task 6**: Configure the Submit Process to Insert a New Record into the Table
 
@@ -334,10 +331,7 @@ page with a process for the Form:
 
 3.  Update the **Identification > Name** to be **Insert Post**.
 
-4.  Change the **type** to be **Form -- Automatic Row Processing
-    (DML)**
-
-    ![Property editor](images/process-type.png)
+4.  Change the **Type** to be **Form - Automatic Row Processing(DML)**
 
 5.  Set the **Form Region** to the **Post** region.
 
@@ -347,7 +341,7 @@ page with a process for the Form:
 
     ![Property Editor](images/process-attributes.png)
 
-    The form will now insert records into the SM\_POSTS table -- but we
+    The form will now insert records into the **SM\_POSTS** table, but we
 won't be able to see them on the page until we complete the next lab.
 
 7. However, you can run the app and select an image file (or take a
