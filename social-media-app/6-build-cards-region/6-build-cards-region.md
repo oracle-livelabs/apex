@@ -28,7 +28,6 @@ choose **Create Region**.
 3.  Clear the **SQL Query** that was automatically put into the SQL
     Query box. The attributes should look like the following:
 
-    ![Property Editor](images/type-sql.png)
 
 4.  Copy and paste the following **SQL** statement into that box and
     *tab out* of it
@@ -69,10 +68,11 @@ section:
 
     - In the Appearance > CSS Classes box, put **t-Chat**
 
-    - Then *scroll down* to the **Advanced** section and specify
-    **timeline** as the **Static ID**
+    - Under **Advanced** section, for **Static ID** specify **timeline**.
 
-    We're not quite done with this region yet -- we have to configure
+    ![Property editor](images/appearance.png)
+
+    We're not quite done with this region yet. We have to configure
 which columns from the query results will be used on which parts of the
 CARDS themselves.
 

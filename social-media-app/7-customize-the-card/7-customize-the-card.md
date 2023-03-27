@@ -8,7 +8,7 @@ Estimated Time: 5 minutes
 
 ## **Task 1** : Create a Like Button
 
-The Like button will display the current count of likes next to a heart
+The **Like** button will display the current count of likes next to a heart
 icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their
 like to the post. If the user has already liked the post, the effect of
 clicking it again will remove the like. 
@@ -67,7 +67,7 @@ button that only displays for posts that belong to the logged in user:
     - Under **Link**, change the **Type** to **Redirect to URL**.
 
     - Click on the **Target** button and enter
-    **#action$delete?id=&ID.** and then *click* on the **OK**.
+    **#action$delete?id=&ID.** and then click on the **OK**.
 
     - In the **Appearance** section, change the **Display Type** to **Icon** and for Font-APEX CSS class, enter 
     **fa-trash-o**.
@@ -99,7 +99,7 @@ targets, to the Dynamic actions that we will create in Lab 8.
     on the right. Scroll down to **Execute when Page Loads** section,
     which is currently empty.
 
-2.  *Copy and Paste* this javascript code into that box:
+2.  *Copy and Paste* this javascript code into **Execute when Page Loads** box:
 
     ```
     <copy>
