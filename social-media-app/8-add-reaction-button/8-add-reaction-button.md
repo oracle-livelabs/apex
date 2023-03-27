@@ -53,10 +53,10 @@ the client with either one more or one less like (JavaScript), and
 another to actually invoke the database work necessary to record the
 desired state for the user, for the corresponding post (PL/SQL).
 
-1.  Edit the **True** **Action** **Identification > Name** to be
+1.  Edit the **True** Action **Identification > Name** to be
     something descriptive, ie **LIKE - update UI (adjust count + heart color)**
 
-2.  Set **Action** to **Execute JavaScript**.
+2.  Set **Action** to **Execute JavaScript Code**.
 
 3.  Copy and paste this JavaScript code into the **Code** box:
 
@@ -82,6 +82,7 @@ desired state for the user, for the corresponding post (PL/SQL).
         icon.toggleClass('user-has-liked'); // either add this class or remove it
     </copy>
     ```
+    ![Property Editor of Dynamic Action](images/action-like-true.png)
 
 4. Next, we need to add another True Action to do the database work and
 store the User reaction.
@@ -127,7 +128,7 @@ needs to receive the Page Item values from our form.
 
     ![Property Editor](images/item-to-submit.png)
 
-8. We should now be able to Like our own post! **Save and Run** to try it out. Click the Like and see the Heart turn red.
+8. We should now be able to Like our own post! **Save and Run** to try it out. Click the Like and see the Heart turn Black (Once you define the css class in the next lab, the heart will turn to Red).
 
 9.  You could also explore the table data manually by way of **SQL Workshop > SQL commands**, and running a simple query as follows:
     ```

@@ -35,19 +35,21 @@ level.
     }
     </copy>
     ```
-
+    ![Property Editor](images/css.png)
 
 ## **Task 2**: Clean up the File Browse Page Item
 
-1.  Remove the Page Item **Label** from the **File Browse** Page Item by
-    changing the **Appearance > Template** to **Hidden**, and setting
-    the **Layout > Label Column Span** to 0.
+1.  Naviagte to **Post > Region> P1\_FILE\_BLOB**. In the Property Editor, remove the Page Item **Label** from the **File Browse** Page Item by changing the following:
+    - Change **Appearance > Template** to **Hidden**
+    - Set the **Layout > Label Column Span** to 0.
+
+    ![Property Editor](images/hidden-col-span.png)
 
 2.  Improve its alignment by checking the **Template Options > General > Stretch Form Item** to ON.
 
-3.  And finally, for CSS Classes enter **file-upload** and for icon select **fa-camera-retro**, as shown in the following screenshots:
+    ![Template Options Dialog](images/stretch-form.png)
 
-    ![Property Editor](images/layout.png)
+3.  And finally, for CSS Classes enter **file-upload** and for icon select **fa-camera-retro**, as shown in the following screenshot:
 
     ![Property Editor](images/appearance.png)
 
@@ -56,7 +58,6 @@ application.
 
     ![Running app](images/run-app.png)
 
-    ![Running app](images/run-app-mobile.png)
 
     Send the URL to your mobile and try it out!
 
