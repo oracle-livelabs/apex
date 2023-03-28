@@ -48,6 +48,35 @@ clean slate to proceed with.
 
     Switch back to your browser tab with **Page Designer**.
 
+## [OPTIONAL] Alternate Time Saver
+
+In this task, you will learn to download and import a starter app. If you follow this lab, you can skip Lab 1, Lab 2, Lab 3 and Lab 4. Once you complete this task, go to Lab 5.
+
+1. Download the [Starter App](files/APEX_SOCIAL_MEDIA-HOL-QuickStart-LAB1-4_.sql) for Social Media workshop. This app has all the functionality performed in Lab 1,2,3 and 4.
+
+2. To import an application, from your app builder, click **Import**.
+
+    ![App builder homepage](images/import.png)
+
+3. Drag and drop the Starter app file downloaded in Task 1. Click **Next**.
+
+    ![Import dialog](images/drag-and-drop.png)
+
+4. Click **Next** to confirm import.
+
+    ![Import dialog](images/import-confirm.png)
+
+5. Accept the defaults and click **Install Application**. Click **Next**.
+
+    ![Install app screen](images/install-app.png)
+
+    ![Install app screen](images/supporting-objects.png)
+
+6. Click **Install**. Once you get a success message, click **Run Application**.
+
+    ![Install app screen](images/run-app.png)
+
+    Now, continue Lab 5.
 
 ## **Acknowledgements**
 
