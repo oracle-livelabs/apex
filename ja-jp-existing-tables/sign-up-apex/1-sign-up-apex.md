@@ -135,7 +135,6 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
 
 
 ## **オプション2**：Oracle CloudでのAutonomous Database
---------------------------------------------
 
 このセクションでは、Oracle Cloudのトライアルアカウントを作成します。サービスに登録したら、_Autonomous Transaction Processing_データベースを作成します。プロセスの最後のステップは、Oracle APEXをプロビジョニングすることです。
 
