@@ -45,7 +45,7 @@ APEX Workspace のサインアップ
     
     ![Create Autonomous Database page](images/atp-settings-1.png " ") ![Create Autonomous Database page](images/atp-settings-2.png " ")![Create Autonomous Database page](images/atp-settings-3.png " ")
     
-8.  **自律型データベースの作成** をクリックすると、新しいインスタンスの自律型データベースの詳細ページにリダイレクトされます。次のステータスに変わるまで待ちます。
+8.  **Autonomous Databaseの作成** をクリックすると、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。次のステータスに変わるまで待ちます。
     
     ![Autonomous Database Details page](images/status-provisioning.png " ")
     

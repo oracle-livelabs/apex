@@ -161,15 +161,15 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     ![クラウドダッシュボード](images/database-atp.png " ")
     
   
-6.  **自律型データベースの作成** をクリックします。
+6.  **Autonomous Databaseの作成** をクリックします。
     
     ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
     
-7.  **常時無料** オプションを選択し、管理者パスワードに **`SecretPassw0rd`** を入力し、 **自律型データベースを作成** をクリックします。
+7.  **常時無料** オプションを選択し、管理者パスワードに **`SecretPassw0rd`** を入力し、 **Autonomous Databaseを作成** をクリックします。
     
     ![Create Autonomous Database page](images/atp-settings-1.png " ") ![Create Autonomous Database page](images/atp-settings-2.png " ")![Create Autonomous Database page](images/atp-settings-3.png " ")
     
-8.  **自律型データベースの作成** をクリックした後、新しいインスタンスの自律型データベースの詳細ページにリダイレクトされます。
+8.  **Autonomous Databaseの作成** をクリックした後、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。
     
     ステータスが以下のように変更されたら、続行してください。
     
@@ -185,7 +185,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     
     ![Autonomous Database Details page](images/click-apex.png " ")
     
-    _注意: 常時無料の自律型データベースは、7日間非アクティブになると停止されます。その場合は、 **詳細アクション** をクリックしてから **開始** をクリックして自律型データベースを開始し、その後 **APEX を開く** をクリックする必要があります。_
+    _注意: 常時無料のAutonomous Databaseは、7日間非アクティブになると停止されます。その場合は、 **詳細アクション** をクリックしてから **開始** をクリックしてAutonomous Databaseを開始し、その後 **APEX を開く** をクリックする必要があります。_
     
 10. 管理サービスのパスワードを入力し、 **管理にサインイン** をクリックします。 パスワードは、ATP インスタンスの作成時に ADMIN ユーザーのために入力したものと同じです: **`SecretPassw0rd`**
     ![Administration Services login page](images/log-in-as-admin.png " ")
