@@ -161,7 +161,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     ![クラウドダッシュボード](images/database-atp.png " ")
     
   
-  6.  **自律型データベースの作成** をクリックします。
+6.  **自律型データベースの作成** をクリックします。
     
     ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
     
@@ -188,22 +188,16 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     _注意: 常時無料の自律型データベースは、7日間非アクティブになると停止されます。その場合は、 **詳細アクション** をクリックしてから **開始** をクリックして自律型データベースを開始し、その後 **APEX を開く** をクリックする必要があります。_
     
 10. 管理サービスのパスワードを入力し、 **管理にサインイン** をクリックします。 パスワードは、ATP インスタンスの作成時に ADMIN ユーザーのために入力したものと同じです: **`SecretPassw0rd`**
-    
-
-![Administration Services login page](images/log-in-as-admin.png " ")
+    ![Administration Services login page](images/log-in-as-admin.png " ")
   
 11. **ワークスペースを作成**をクリックします。
     
     ![Create Workspace page](images/welcome-create-workspace.png " ")
     
 12. ワークスペースの作成方法によって、**新しいスキーマ**または**既存のスキーマ**を選択します。初めての場合は、**新しいスキーマ**を選択してください。
-    
+    ![Choose type of schema](images/choose-schema.png " ")
 
-graphqlCopy code
-
-`![Choose type of schema](images/choose-schema.png " ")` 
-
-13. 「ワークスペースを作成」ダイアログに、次の情報を入力します:
+13.  「ワークスペースを作成」ダイアログに、次の情報を入力します:
     
     | プロパティ | 値   |
     | --- | --- |
@@ -215,17 +209,17 @@ graphqlCopy code
     
     ![Create Workspace dialog](images/create-workspace.png " ")
     
-14. APEXインスタンス管理ページで、成功メッセージの中の **DEMO**リンクをクリックします。  
+14.  APEXインスタンス管理ページで、成功メッセージの中の **DEMO**リンクをクリックします。  
     _注：これにより、APEX管理からログアウトして、新しいワークスペースにログインできます。_
     
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
     
-15. APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`** を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。
+15.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`** を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。
     
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
-**オプション3**: apex.oracle.com
----------------------------
+## **オプション3**: apex.oracle.com
+
 
 apex.oracle.comへの登録は、作成したいワークスペースの詳細を提供し、承認メールを待つだけの簡単な手続きです。
 
@@ -263,15 +257,13 @@ apex.oracle.comへの登録は、作成したいワークスペースの詳細�
     ![APEX Builder homepage](images/apex-builder.png " ")
     
 
-**まとめ**
--------
+## **まとめ**
 
 これで、APEXワークスペースの作成方法を知り、素晴らしいアプリケーションの構築を始める準備ができました。
 
 次のラボに進むことができます。
 
-**謝辞**
-------
+## **謝辞**
 
 - **著者** - Apoorva Srinivas, Senior Product Manager
 - **貢献者** - Salim Hlayel, Arabella Yao, Jaden McElvey

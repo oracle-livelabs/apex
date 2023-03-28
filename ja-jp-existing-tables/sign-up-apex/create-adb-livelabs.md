@@ -99,12 +99,12 @@ APEX Workspace のサインアップ
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
     
 
-**要約**
+## **要約**
 
 この時点で、APEXワークスペースを作成する方法を知っており、素晴らしいアプリケーションを素早く構築する準備ができています。
 
 今後の実習に **進んでください** 。
     
-**謝辞**
+## **謝辞**
 - **著者** - Apoorva Srinivas, Senior Product Manager
 - **最終更新者/日付** - Apoorva Srinivas, Senior Product Manager, September 2022
