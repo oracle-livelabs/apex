@@ -18,6 +18,11 @@ posts.
 
 Estimated Time: 15 minutes
 
+## Prerequisite
+
+    - All previous labs 1-4 are executed.
+    - If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
+
 ## **Task 1**: Add a Form Region
 
 1. In the Rendering tree, Right-click on **Body**, and then choose **Create Region**.

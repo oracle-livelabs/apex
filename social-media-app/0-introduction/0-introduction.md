@@ -1,7 +1,9 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is the world's most popular low-code application development platform. It enables you to build scalable and secure enterprise apps with world-class features 20X faster with 100X less code. These apps can be deployed anywhere - cloud or on-premises
+
+Using APEX, developers can quickly develop and deploy compelling apps that solve real problems and provide immediate value. You don't need to be an expert in a vast array of technologies to deliver sophisticated solutions. Focus on solving the problem and let APEX take care of the rest.
 
 Estimated Time: 60 minutes
 
@@ -27,14 +29,15 @@ Estimated Time: 60 minutes
 | [Building the Cards Region](?lab=6-build-cards-region) | 10 minutes |
 | [Customizing the Card](?lab=7-customize-the-card) | 5 minutes |
 | [Add a Reaction Button](?lab=8-add-reaction-button) | 5 minutes |
-| [Cleaning Up the App](?lab=9-clean-up) | 5 minutes |
-| [(OPTIONAL) Wiring Up the Delete Button](?lab=10-wire-up-delete-button) | 5 minutes|
+| [Cleaning Up the App](?lab=9-clean-up-the-app) | 5 minutes |
 | [(OPTIONAL) Getting the Device Location](?lab=11-get-device-location) | 5 minutes |
 Total estimated time: 60 minutes
 
+**Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-region) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
+
 ### **Let's Get Started!**
 
-If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
+If the menu is not displayed, you can open by clicking the menu button (![Menu icon](images/menu-button.png)) at the upper-left corner of the page.
 
 ### Downloads
 
