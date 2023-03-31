@@ -59,8 +59,7 @@ Click **Create Application**.
 
 ## **Task 3**: Observations
 
-1. We currently have the side navigation enabled in our app. We will be
-working to change a few settings to tailor things to our purpose.
+1. We currently have the side navigation enabled in our app. To open the navigation menu, click on the hamburger menu at the top left of the screen. We will be working to change a few settings to tailor things to our purpose.
 
 ![Navigation menu of the app](images/app-nav.png "")
 

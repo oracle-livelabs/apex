@@ -83,7 +83,7 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
     **If you made a mistake**, you can easily re-sync all the Region Page
 items back and repeat the process. If you need to do this, *right click*
-on the **Posts** tree entry, and choose Synchronize Page Items, and then
+on the **Post** tree entry, and choose Synchronize Page Items, and then
 carefully delete those that we don't want.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
