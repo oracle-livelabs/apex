@@ -1,4 +1,4 @@
-# [OPTIONAL] Get Device Location
+# [OPTIONAL] Create a Map Region
 
 ## Introduction
 In this lab, you will enable the app to acquire the device location which will be optional for end-users. If they agree, then their Location/GPS Latitude and Longitude will be acquired on page load and will populate the **P1\_LAT** and **L1\_LON** hidden page items. When users subsequently like a post or create a new post of their own, their location will be recorded and displayed on a Map.

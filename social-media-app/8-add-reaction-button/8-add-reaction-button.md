@@ -1,4 +1,4 @@
-# Add a Reaction Button
+# Add Dynamic Actions
 
 ## Introduction
 
