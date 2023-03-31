@@ -129,7 +129,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
 
   ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-13.  APEXワークスペースログインページにて、パスワードに **``SecretPassw0rd``** を入力し、**ワークスペースとユーザー名を記憶する** チェックボックスをオンにした後、ログイン をクリックします。
+13.  APEXワークスペースログインページにて、パスワードに **``SecretPassw0rd``**を入力し、**ワークスペースとユーザー名を記憶する** チェックボックスをオンにした後、ログインをクリックします。
 
   ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
@@ -161,15 +161,15 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     ![クラウドダッシュボード](images/database-atp.png " ")
     
   
-6.  **Autonomous Databaseの作成** をクリックします。
+6.  **Autonomous Databaseの作成**をクリックします。
     
     ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
     
-7.  **常時無料** オプションを選択し、管理者パスワードに **`SecretPassw0rd`** を入力し、 **Autonomous Databaseを作成** をクリックします。
+7.  **常時無料** オプションを選択し、管理者パスワードに **`SecretPassw0rd`**を入力し、 **Autonomous Databaseを作成**をクリックします。
     
     ![Create Autonomous Database page](images/atp-settings-1.png " ") ![Create Autonomous Database page](images/atp-settings-2.png " ")![Create Autonomous Database page](images/atp-settings-3.png " ")
     
-8.  **Autonomous Databaseの作成** をクリックした後、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。
+8.  **Autonomous Databaseの作成**をクリックした後、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。
     
     ステータスが以下のように変更されたら、続行してください。
     
@@ -181,13 +181,13 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     
 9.  新しいデータベースでは、APEX はまだ設定されていません。したがって、最初に APEX にアクセスするときは、APEX インスタンス管理者としてログインしてワークスペースを作成する必要があります。
     
-    **Tools** タブをクリックします。 **APEX を開く** をクリックします。
+    **Tools** タブをクリックします。 **APEXを開く**をクリックします。
     
     ![Autonomous Database Details page](images/click-apex.png " ")
     
-    _注意: 常時無料のAutonomous Databaseは、7日間非アクティブになると停止されます。その場合は、 **詳細アクション** をクリックしてから **開始** をクリックしてAutonomous Databaseを開始し、その後 **APEX を開く** をクリックする必要があります。_
+    _注意: 常時無料のAutonomous Databaseは、7日間非アクティブになると停止されます。その場合は、 **詳細アクション**をクリックしてから **開始**をクリックしてAutonomous Databaseを開始し、その後 **APEXを開く**をクリックする必要があります。_
     
-10. 管理サービスのパスワードを入力し、 **管理にサインイン** をクリックします。 パスワードは、ATP インスタンスの作成時に ADMIN ユーザーのために入力したものと同じです: **`SecretPassw0rd`**
+10. 管理サービスのパスワードを入力し、 **管理にサインイン**をクリックします。 パスワードは、ATP インスタンスの作成時に ADMIN ユーザーのために入力したものと同じです: **`SecretPassw0rd`**
     ![Administration Services login page](images/log-in-as-admin.png " ")
   
 11. **ワークスペースを作成**をクリックします。
@@ -214,7 +214,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
     
-15.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`** を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。
+15.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`**を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。
     
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 

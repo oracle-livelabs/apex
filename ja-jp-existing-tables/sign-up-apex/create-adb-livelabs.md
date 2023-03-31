@@ -4,7 +4,7 @@ APEX Workspace のサインアップ
 はじめに
 ----
 
-このラボでは、Oracle Autonomous Database（Autonomous Transaction Processing \[ATP\]）で Oracle APEX を使用し始めるための手順を説明します。このラボでは、新しい ATP インスタンスをプロビジョニングして APEX Workspace を作成します。
+このラボでは、Oracle Autonomous Database（Autonomous Transaction Processing \[ATP\]）で Oracle APEXを使用し始めるための手順を説明します。このラボでは、新しい ATP インスタンスをプロビジョニングして APEX Workspaceを作成します。
 
 所要時間: 5 分
 
@@ -14,9 +14,9 @@ APEX Workspace のサインアップ
 
 * Oracle Cloud Infrastructure コンソールを使用して Oracle Autonomous Transaction Processing クラウドサービスにアクセスします。
 * 新しい Autonomous Transaction Processing データベースをプロビジョニングします。
-* APEX Workspace を作成します。
+* APEX Workspaceを作成します。
 
-タスク 1: ATP インスタンスを作成する
+タスク1: ATP インスタンスを作成する
 ----------------------
 
 1.  **はじめに** ラボで示されているように、Oracle Cloud にログインします。
@@ -27,7 +27,7 @@ APEX Workspace のサインアップ
     
     注：ダッシュボードのクイックアクションセクションから Autonomous Data Warehouse や Autonomous Transaction Processing サービスに直接アクセスすることもできます。
     
-3.  **Autonomous Transaction Processing** を選択します。
+3.  **Autonomous Transaction Processing**を選択します。
     
     ![Cloud Dashboard](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
     
@@ -37,15 +37,15 @@ APEX Workspace のサインアップ
     
 5.  ページの右上隅に現在のデフォルトリージョンが表示されます。
     
-6.  **Create Autonomous Database** をクリックします。
+6.  **Create Autonomous Database**をクリックします。
     
     ![Region drop down list](images/region.png " ")
     
-7.  **Always Free** オプションを選択し、ADMIN パスワードに **`SecretPassw0rd`** を入力してから、**Create Autonomous Database** をクリックします。
+7.  **Always Free** オプションを選択し、ADMIN パスワードに **`SecretPassw0rd`**を入力してから、**Create Autonomous Database**をクリックします。
     
     ![Create Autonomous Database page](images/atp-settings-1.png " ") ![Create Autonomous Database page](images/atp-settings-2.png " ")![Create Autonomous Database page](images/atp-settings-3.png " ")
     
-8.  **Autonomous Databaseの作成** をクリックすると、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。次のステータスに変わるまで待ちます。
+8.  **Autonomous Databaseの作成**をクリックすると、新しいインスタンスのAutonomous Databaseの詳細ページにリダイレクトされます。次のステータスに変わるまで待ちます。
     
     ![Autonomous Database Details page](images/status-provisioning.png " ")
     
@@ -56,24 +56,24 @@ APEX Workspace のサインアップ
     に変わったら、続行してください。
     
 
-タスク 2: APEXワークスペースの作成
+タスク2: APEXワークスペースの作成
 --------------------
 
 1.  新しいデータベース内では、APEXはまだ設定されていません。そのため、初めてAPEXにアクセスするときは、APEXインスタンス管理者としてログインしてワークスペースを作成する必要があります。
     
-    **ツール** タブをクリックします。 **APEXを開く** をクリックします。
+    **ツール** タブをクリックします。 **APEXを開く**をクリックします。
     
     ![Autonomous Database Details page](images/click-apex.png " ")
     
-2.  管理サービスのパスワードを入力し、**管理にサインイン** をクリックします。 パスワードは、ATPインスタンスを作成するときにADMINユーザーのために入力したものと同じです: **`SecretPassw0rd`**
+2.  管理サービスのパスワードを入力し、**管理にサインイン**をクリックします。 パスワードは、ATPインスタンスを作成するときにADMINユーザーのために入力したものと同じです: **`SecretPassw0rd`**
     
     ![Administration Services login page](images/log-in-as-admin.png " ")
     
-3.  **ワークスペースの作成** をクリックします。
+3.  **ワークスペースの作成**をクリックします。
     
     ![Create Workspace page](images/welcome-create-workspace.png " ")
     
-4.  ワークスペースを作成する方法によっては、**新しいスキーマ** または **既存のスキーマ** を選択します。始める場合は、 **新しいスキーマ** を選択します。
+4.  ワークスペースを作成する方法によっては、**新しいスキーマ** または **既存のスキーマ**を選択します。始める場合は、 **新しいスキーマ**を選択します。
     
     ![Choose type of schema](images/choose-schema.png " ")
     
@@ -85,7 +85,7 @@ APEX Workspace のサインアップ
     | ワークスペースユーザー名 | DEMO |
     | ワークスペースパスワード | **`SecretPassw0rd`** |
     
-    **ワークスペースの作成** をクリックします。
+    **ワークスペースの作成**をクリックします。
     
     ![Create Workspace dialog](images/create-workspace.png " ")
     
@@ -94,7 +94,7 @@ APEX Workspace のサインアップ
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
     
 
-7.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`** を入力し、 **ワークスペースとユーザー名を記憶する** チェックボックスを選択して、 **サインイン** をクリックします。
+7.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`**を入力し、 **ワークスペースとユーザー名を記憶する** チェックボックスを選択して、 **サインイン**をクリックします。
     
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
     
