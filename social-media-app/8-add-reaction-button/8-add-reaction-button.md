@@ -161,12 +161,11 @@ needs to receive the Page Item values from our form.
 
     ![Page Designer](images/da-overview.png)
 
-4. Change the Name to **action-delete**.
-
-5. Note that **When -> Event** is already set to **Custom** because of how we created this from that event type in the tree. However, we need to set some other properties:
+4. Update the following attributes in the Property Editor: 
+    - Change the Name to **action-delete**.
+    - Note that **When -> Event** is already set to **Custom** because of how we created this from that event type in the tree. However, we need to set some other properties:
     - Set the **When -> Custom** Event to **action-delete** – this is once again an important detail because our page Javascript identifies this Dynamic Action by this Custom Event name.
-
-6. Finally, we need to set the **When -> Selection Type** to **JavaScript Expression** with **document** in the box for the setting so that the **When** section looks as follows:
+    - Finally, we need to set the **When -> Selection Type** to **JavaScript Expression** with **document** in the box for the setting so that the **When** section looks as follows:
 
     ![Property Editor](images/true-property-editor.png)
 
@@ -195,7 +194,7 @@ We now need to configure the True actions for the action-delete Dynamic Action. 
 
     ![Page Designer View](images/exec-server-side.png)
 
-5. And now copy and paste this PL/SQL (which is actually a DML statement, also known as Data Manipulation Language).
+5. And now copy and paste this PL/SQL (which is actually a DML statement, also known as Data Manipulation Language) into the **PL/SQL Code** field.
 
     ```
     <copy>
@@ -206,7 +205,7 @@ We now need to configure the True actions for the action-delete Dynamic Action. 
     This code will delete the post from the *SM\_REACTIONS* table based on the logged in user by way of **:APP\_USER** and matching the table record with ID equal to the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax (prefixed with a colon).
     This code block needs to receive that Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon.
 
-6. This is handled by providing a list of the Page Items to Submit to the Server (in this case, just 1). Paste this Page Item name into that box under the PL/SQL Code property box as shown:
+6. This is handled by providing a list of the Page Items to Submit to the Server (in this case, just 1). Paste this Page Item name into **Items to Submit** field:
 
     ```
     <copy>
@@ -217,7 +216,7 @@ We now need to configure the True actions for the action-delete Dynamic Action. 
     ![Property Editor](images/page-item.png)
 
 7. Finally, after the row is deleted, we want to remove the post from the Timeline UI. 
-    We need to create one last true action, as we did before by right-clicking on the True entry in the tree, or by way of right-clicking the last true action we just created :
+    We need to create one last true action, as we did before by right-clicking on the True entry in the tree.
 
     ![Dynamic Action Tree](images/create-da-2.png)
 
@@ -225,15 +224,16 @@ We now need to configure the True actions for the action-delete Dynamic Action. 
     - Set the **Name** for this action to be **DELETE – remove post in UI** 
     - Set the **Action** to **Execute JavaScript Code**
 
-    ![Property Editopr](images/da-identification.png)
+    ![Property Editor](images/da-identification.png)
 
-9. Lastly, copy and paste the following code into the JavaScript box:
+9. Lastly, copy and paste the following code into the **Code** box:
 
     ```
     <copy>
         $('[data-id='+apex.items.P1_ACTION_ID.value+']').remove();
     </copy>
     ```
+    ![Property Editor](images/code.png)
 
 10. We should now be able to delete our own post. **Save and Run** to try it out!
 
