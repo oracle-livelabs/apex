@@ -39,7 +39,7 @@ level.
 
 ## **Task 2**: Clean up the File Browse Page Item
 
-1.  Naviagte to **Post > Region> P1\_FILE\_BLOB**. In the Property Editor, remove the Page Item **Label** from the **File Browse** Page Item by changing the following:
+1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, remove the Page Item **Label** from the **File Browse** Page Item by changing the following:
     - Change **Appearance > Template** to **Hidden**
     - Set the **Layout > Label Column Span** to 0.
 

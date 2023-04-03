@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you will create the database objects and data required for the app. To do so, you will be introduced to the SQL workshop component of APEX where you will build the database objects using Quick SQL, run SQL scripts and view the data using the Object Browser.
+In this lab, you will create the database objects and data required for the app. To do so, you will be introduced to the **SQL Workshop** component of APEX where you will build the database objects using **Quick SQL**, run SQL scripts and view the data using the Object Browser.
 
 Estimated Time: 5 minutes
 
@@ -17,17 +17,16 @@ Estimated Time: 5 minutes
 There will also be a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with ***SM\_*** (short for ***S***ocial ***M***edia) as shown in the following 
 model:
 
-    ![ER diagram of teh data model](images/data-model.png "")
+    ![ER diagram of the data model](images/data-model.png "")
 
 2. To achieve this, we will create the database objects for our application using **QuickSQL** in **SQL Workshop**.
 
     ![Naviagtion to Quick SQL from Toolbar](images/navigate-quick-sql.png "")
 
-3. The Quick SQL page is displayed. 
-The left side of this page is where a developer can enter QuickSQL
-shorthand notation that represents the design of our data model. The Help button has all the documentation for this shorthand.
+3. The **Quick SQL** page is displayed. 
+The left side of this page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. The Help button has all the documentation for this shorthand.
 
-    The right side of this page is where QuickSQL will generate the DDL
+    The right side of this page is where **Quick SQL** will generate the DDL
 (Database Definition Language) script based on the shorthand entered by
 the developer on the left side.
 
@@ -37,7 +36,7 @@ the developer on the left side.
 
 ## **Task 2**: Create Database Objects
 
-1. Copy and paste the below QuickSQL model into the left side, and then click the **Generate SQL**
+1. Copy and paste the below **Quick SQL** model into the left side, and then click the **Generate SQL**
 button. 
     **Note**: It is very important that the tabbing be maintained so that all the objects get generated.
 
@@ -60,23 +59,18 @@ button.
     </copy>
     ```
 
-2. In this case, we have used APEX QuickSQL shorthand that will be used to generate the SQL
+2. In this case, we have used APEX **Quick SQL** shorthand that will be used to generate the SQL
 script that we will run to build the database objects. This could be
 done manually through APEX Object Browser or even by manually typed
 code.
 
     Save SQL Script with a name like **db objects**.
 
-   ![Save the Quick SQL script](images/save-quick-sql.png "")
+    ![Save the Quick SQL script](images/save-quick-sql.png "")
 
-    **NOTE: !! DO NOT PROCEED !! IF THE \# of lines generated on the right
-is much less than 90 odd lines as shown here (which means there was a
-copy and paste issue of the QuickSQL short hand text):**
-    ![Verify Quick SQL script](images/verify-quick-sql.png "")
+    ![Quick SQL Save dialog](images/name-quick-sql.png "")
 
-   ![Quick SQL Save dialog](images/name-quick-sql.png "")
-
-   ![Save confirmation message](images/confirm-save.png "") 
+    ![Save confirmation message](images/confirm-save.png "") 
 
 ## **Task 3**: Run script to create Database Objects
 
@@ -106,7 +100,7 @@ app will use.
 Since we prefer that Users react to a post one time only, we need to add a constraint to the *SM_REACTIONS* table. This will facilitate the proper functioning of a database operation later in this workshop.
 
 
-1.  From you APEX workspace homepage, click **SQL Workshop** and then right click **Object Browser**, and choose  **Open link in new tab** in order to open SQL Workshop in a new browser tab. 
+1.  From your APEX workspace homepage, click **SQL Workshop** and then right click **Object Browser**, and choose  **Open link in new tab** in order to open SQL Workshop in a new browser tab. 
 
 2.  On the left side, select the Table **SM_REACTIONS**. In the main panel, click on the **Constraints** tab.
 

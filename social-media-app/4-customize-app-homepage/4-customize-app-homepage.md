@@ -52,7 +52,7 @@ clean slate to proceed with.
 
 In this task, you will learn to download and import a starter app. If you follow this lab, you can skip Lab 1, Lab 2, Lab 3 and Lab 4. Once you complete this task, go to Lab 5.
 
-1. Download the [Starter App](files/APEX_SOCIAL_MEDIA-HOL-QuickStart-LAB1-4_.sql) for Social Media workshop. This app has all the functionality performed in Lab 1,2,3 and 4.
+1. Download the [Starter App](files/APEX_SOCIAL_MEDIA-HOL-QuickStart-LAB1-4.sql) for Social Media workshop. This app has all the functionality performed in Lab 1,2,3 and 4.
 
 2. To import an application, from your app builder, click **Import**.
 

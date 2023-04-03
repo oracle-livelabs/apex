@@ -1,4 +1,4 @@
-# Add a Reaction Button
+# Add Dynamic Actions
 
 ## Introduction
 
@@ -145,6 +145,103 @@ needs to receive the Page Item values from our form.
 
     As other users use your app (which we haven't configured any yet), each Reaction for each Post by every user will create a distinct record in this table.
 
+## **Task 3**: Create a Dynamic Action with a custom action-delete event
+
+**Note**: Task 3 and Task 4 can be considered optional – they only enable the user to delete their own post, and are very similar to the previous 2 tasks.
+
+1. First, we want to be sure that we are looking at the **Dynamic Actions** tab. If not, select it so that we can add a new Dynamic action.
+
+    ![Dynamic Actions tab](images/da-tab.png)
+
+2. Right-click the **Custom** entry and choose **Create Dynamic Action**.
+
+    ![Dynamic Actions tree](images/create-da-2.png)
+
+3. You will now see that a New Dynamic Action has been created with a **True** action defaulted to **Show**. The overview of this looks like the following for the next steps:
+
+    ![Page Designer](images/da-overview.png)
+
+4. Update the following attributes in the Property Editor: 
+    - Change the Name to **action-delete**.
+    - Note that **When -> Event** is already set to **Custom** because of how we created this from that event type in the tree. However, we need to set some other properties:
+    - Set the **When -> Custom** Event to **action-delete** – this is once again an important detail because our page Javascript identifies this Dynamic Action by this Custom Event name.
+    - Finally, we need to set the **When -> Selection Type** to **JavaScript Expression** with **document** in the box for the setting so that the **When** section looks as follows:
+
+    ![Property Editor](images/true-property-editor.png)
+
+
+## **Task 4**: Create the Delete Button True Actions
+
+We now need to configure the True actions for the action-delete Dynamic Action. There are actually 3 actions desired here: one for a confirmation, another to actually invoke the database work necessary to delete the desired post (PL/SQL) and the last one that updates the UI on the client by removing the deleted post (much simpler than was necessary for the action-like).
+
+1. Navigate to the **True Action > Show** button and set the following properties: 
+    - Edit the **Name** to be something descriptive, ie **DELETE – Confirm dialog**.
+    - Change the Action to **Confirm**.
+    - Set the **Title** to **Are you Sure?**
+    - Set the **Message** to **You are about to delete this post. Are you sure?**
+
+    ![Property Editor](images/delete-confirm-dialog.png)
+
+2. Next, we need to add another True Action to do the database work and delete the post record from the table.	Right-click on the True title within the action-delete Dynamic Action we just created and select **Create TRUE action**.
+
+    ![Dynamic Actions Tree](images/create-true-action.png)
+
+3. Click on the resulting default **Show** action, and set the **Name** to be **DELETE – do database work**.
+
+    ![Page Designer View](images/do-db-work.png)
+
+4. Set the **Action** to **Execute Server-side Code**.
+
+    ![Page Designer View](images/exec-server-side.png)
+
+5. And now copy and paste this PL/SQL (which is actually a DML statement, also known as Data Manipulation Language) into the **PL/SQL Code** field.
+
+    ```
+    <copy>
+        delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+    </copy>
+    ```
+
+    This code will delete the post from the *SM\_REACTIONS* table based on the logged in user by way of **:APP\_USER** and matching the table record with ID equal to the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax (prefixed with a colon).
+    This code block needs to receive that Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon.
+
+6. This is handled by providing a list of the Page Items to Submit to the Server (in this case, just 1). Paste this Page Item name into **Items to Submit** field:
+
+    ```
+    <copy>
+        P1_ACTION_ID
+    </copy>
+    ```
+
+    ![Property Editor](images/page-item.png)
+
+7. Finally, after the row is deleted, we want to remove the post from the Timeline UI. 
+    We need to create one last true action, as we did before by right-clicking on the True entry in the tree.
+
+    ![Dynamic Action Tree](images/create-da-2.png)
+
+8. In the property Editor,
+    - Set the **Name** for this action to be **DELETE – remove post in UI** 
+    - Set the **Action** to **Execute JavaScript Code**
+
+    ![Property Editor](images/da-identification.png)
+
+9. Lastly, copy and paste the following code into the **Code** box:
+
+    ```
+    <copy>
+        $('[data-id='+apex.items.P1_ACTION_ID.value+']').remove();
+    </copy>
+    ```
+    ![Property Editor](images/code.png)
+
+10. We should now be able to delete our own post. **Save and Run** to try it out!
+
+    ![App is dispalyed](images/run-app.png)
+
+11. Besides the post being removed from your screen, you can navigate to **SQL Workshop > Object Browser** and also confirm that there is no data left in the table (assuming that there was only the one post prior).
+
+    ![SQL Commands page](images/verify-object-browser.png)
 
 ## **Acknowledgements**
 
