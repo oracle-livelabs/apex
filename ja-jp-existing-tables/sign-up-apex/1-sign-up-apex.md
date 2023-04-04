@@ -47,7 +47,7 @@ APEXワークスペースは、APEXアプリケーションを定義する論理
 
 以下のいずれかのオプションをクリックして続行してください。
 
-## **オプション1**: APEXサービス
+## **オプション1**：APEXサービス
 Oracle Application Development（APEX Service）は、Oracle APEXプラットフォームへの便利なアクセスを提供する低コストのOracle Cloudサービスです。[https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/)を訪問して、Oracle Cloud上のAPEXサービスについて詳しく学習してください。
 
 このパートでは、Oracle APEXアプリケーション開発サービスのトライアルアカウントを作成します。サービスに登録した後、* APEX Service *を作成します。プロセスの最終段階は、Oracle APEXをプロビジョニングすることです。
@@ -85,7 +85,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     ![Create instance page](images/APEX-service-settings-2.png " ")
     ![Create instance page](images/APEX-service-settings-3.png " ")
     
-6. APEX Instances Detailsが再表示されます。
+6. APEX Instances詳細が再表示されます。
 
     プロビジョニングプロセスが完了すると、APXロゴはオレンジ色から緑色に変わり、Launch APEXおよびLaunch Database Actionsボタンが有効になります。
   
@@ -94,7 +94,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
   
 7. 新しいAPEXサービスを使用する前に、2つのタスクを完了してAPEXサービスインスタンスをセットアップする必要があります：初期のAPEXワークスペースを作成し、APEXユーザーアカウントを作成します。
 
-    APEX Instance Detailsで、Launch APEXをクリックします。
+    APEX Instance詳細で、Launch APEXをクリックします。
     
     ![APEX instance page](images/launch-APEX.png " ")
     
@@ -197,10 +197,10 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
 12. ワークスペースの作成方法によって、**新しいスキーマ**または**既存のスキーマ**を選択します。初めての場合は、**新しいスキーマ**を選択してください。
     ![Choose type of schema](images/choose-schema.png " ")
 
-13.  「ワークスペースを作成」ダイアログに、次の情報を入力します:
-    
+1. 「ワークスペースを作成」ダイアログに、次の情報を入力します:
+ 
     | プロパティ | 値   |
-    | --- | --- |
+    | ------ | ------ |
     | ワークスペース名 | DEMO |
     | ワークスペースのユーザー名 | DEMO |
     | ワークスペースのパスワード | **`SecretPassw0rd`** |
@@ -208,14 +208,12 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     「ワークスペースを作成」をクリックします。
     
     ![Create Workspace dialog](images/create-workspace.png " ")
-    
+
 14.  APEXインスタンス管理ページで、成功メッセージの中の **DEMO**リンクをクリックします。  
-    _注：これにより、APEX管理からログアウトして、新しいワークスペースにログインできます。_
-    
+    _注：これにより、APEX管理からログアウトして、新しいワークスペースにログインできます。_    
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
     
-15.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`**を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。
-    
+15.  APEXワークスペースのログインページで、パスワードに **`SecretPassw0rd`**を入力し、**ワークスペースとユーザー名を記憶する**チェックボックスをオンにして、**サインイン**をクリックします。    
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
 ## **オプション3**：apex.oracle.com
@@ -233,7 +231,8 @@ apex.oracle.comへの登録は、作成したいワークスペースの詳細�
     
     ![apex.oracle.com homepage](images/request-workspace.png " ")
     
-4.  ワークスペースの識別詳細を入力します。名前、姓、メールアドレス、ワークスペースを入力してください。 _注意: ワークスペースには、ファーストイニシャルと名字など、ユニークな名前を入力してください。_
+4.  ワークスペースの識別詳細を入力します。名前、姓、メールアドレス、ワークスペースを入力してください。   
+_注意: ワークスペースには、ファーストイニシャルと名字など、ユニークな名前を入力してください。_
     
     **次へ**をクリックしてください。
     
