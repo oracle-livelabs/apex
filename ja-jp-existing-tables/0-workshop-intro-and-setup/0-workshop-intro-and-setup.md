@@ -38,7 +38,7 @@
 
 完成したアプリケーションを[ここをクリックして](files/existingtables-app.sql)ダウンロードしてください。
 
-## もっと詳しく知る - *役立つリンク*
+## さらに詳しく - *役立つリンク*
 
 - [Autonomous Database上のAPEX](https://apex.oracle.com/autonomous)
 - [APEXコラテラル](https://apex.oracle.com)
