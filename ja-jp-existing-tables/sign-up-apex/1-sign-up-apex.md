@@ -179,7 +179,7 @@ Oracle Application Development（APEX Service）は、Oracle APEXプラットフ
     
     ![Autonomous Database Details page](images/status-available.png " ")
     
-9.  新しいデータベースでは、APEX はまだ設定されていません。したがって、最初に APEX にアクセスするときは、APEX インスタンス管理者としてログインしてワークスペースを作成する必要があります。
+9.  新しいデータベースでは、APEX はまだ設定されていません。これから最初に APEX にアクセスするときは、APEX インスタンス管理者としてログインしてワークスペースを作成する必要があります。
     
     **Tools** タブをクリックします。 **APEXを開く**をクリックします。
     
