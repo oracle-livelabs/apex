@@ -41,7 +41,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### Downloads
 
-[Click here](files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
+[Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
 
 ## Learn More - *Useful Links*
 
