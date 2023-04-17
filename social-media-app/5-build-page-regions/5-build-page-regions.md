@@ -261,7 +261,7 @@ the tree, and click **Create Button**
 
 2. Configure the button as follows:
 
-    - Button Name: **SAVE**
+    - Button Name: **Save**
 
     - Layout > Position: **Next**
 
@@ -314,7 +314,7 @@ which is initially set to **Show,** and set the following attributes:
 
     - Identification > Action: **Submit Page**
 
-    - Settings > Request/Button name: **SAVE**
+    - Settings > Request/Button name: **Save**
 
     - Ensure **Show processing** is **ON**
 
