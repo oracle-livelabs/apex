@@ -31,33 +31,25 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
 2. For **Page Type**, with **Component** selected, choose **Form** and then **Form** again.
 
-3. You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Create New User” and select “Modal Dialog” for **Page Mode**. Then click **Next &gt;**.
+3. You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Create New User” and select “Modal Dialog” for **Page Mode**. For the **Data Source** part of the wizard, find your users table for the **Table / View Name** and click **Next &gt;**.
 
-	![Provide information for the page](./images/enter-page-name.png)
+	![Provide information for the page](./images/create-form.png)
 
-4.	Leave everything as is and click **Next &gt;** again.
-
-5.	For the **Data Source** part of the wizard, find your users table for the **Table / View Name** and click **Next &gt;**.
-
-	![Select your user credentials table as the data source](./images/select-data-source.png)
-
-6.	Double-click on the **ACCOUNT_STATUS** column so that this field does not appear in the form (because this is set automatically in the backend and not by the user).
-
-7. Then select the **Primary Key Column** as the **USER_ID** column and click **Create**.
+4. Keep **Primary Key Column 1** as **USER_ID** and click **Create Page**.
 
 	![Select the primary key and click Create](./images/select-pk.png)
 
-8. Change the **EMAIL** and **USERNAME** item **Type** to “Text Fields”, and the **PASSWORD** item **Type** to “Password”. To do so, select the page item in the left-side pane, and change the **Type** field in the right-side pane from the dropdown menu.
+5. Change the **EMAIL** and **USERNAME** item **Type** to “Text Fields”, and the **PASSWORD** item **Type** to “Password”. To do so, select the page item in the left-side pane, and change the **Type** field in the right-side pane from the dropdown menu.
 
    Make the **EMAIL** page item of **Subtype** “E-Mail” as well so that it will automatically check that the value entered is a properly formatted email address.
 
-	 ![Change the EMAIl and USERNAME item TYPE](./images/change-item-type.png)
+	 ![Change the EMAIL and USERNAME item TYPE](./images/change-item-type.png)
 
-9. Add another page item (right-click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
+6. Add another page item (right-click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
 
 	![Create another page item to confirm the password](./images/create-page-item.png)![Make new item of Type "Password"](./images/password-type.png)
 
-10.	Next create a **Validation** on the **EMAIL** page item (right-click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
+7.	Next create a **Validation** on the **EMAIL** page item (right-click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
 
 	![Right-click on EMAIL and click "Create Validation"](./images/create-validation.png) ![Create the validation](./images/unique-email-validation.png)
 
@@ -67,9 +59,9 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	</copy>
 	```
 
-11. Similarly, create a **Validation** on the **USERNAME** page item following the same process as in the previous step (step 10), but in the **SQL Query** change **email** to **username** and **PXX_ EMAIL** to **PXX_ USERNAME**.
+8. Similarly, create a **Validation** on the **USERNAME** page item following the same process as in the previous step (step 7), but in the **SQL Query** change **email** to **username** and **PXX_ EMAIL** to **PXX_ USERNAME**.
 
-12. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, the password must be at least 8 characters long, have at least one special character, one upper and lower case letter, and have at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
+9. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, the password must be at least 8 characters long, have at least one special character, one upper and lower case letter, and have at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
 
 	> **Note:** Remember to change the “XX” in **PXX_PASSWORD** to your assigned page number. From here on out, assume that this will always be the case for all code snippets. To make it easier to edit the code block, click on the Popout Icon, ![Popout Icon](./images/popout-icon.png), and click **OK** in the bottom-right of the dialog when you're finished editing.
 
@@ -100,7 +92,7 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	END;
 	</copy>
 	```
-13. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 9 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
+10. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 6 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
 
 	```
 	<copy>
@@ -115,37 +107,37 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	</copy>
 	```
 
-14.	Under **Region Buttons** there should be 4 default buttons already created. Feel free to delete the **DELETE** and **SAVE** buttons as you will not be needing them (right-click on them in the left-side pane and click “Delete”).
+11.	Under **Region Buttons** there should be 4 default buttons already created. Feel free to delete the **DELETE** and **SAVE** buttons as you will not be needing them (right-click on them in the left-side pane and click “Delete”).
 
 	![Delete unnecessary buttons](./images/default-buttons.png)
 
-15.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “&gt;” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
+12.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “&gt;” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
 
 	![Right-click on the "Cancel Dialog" Dynamic Action and click "Create TRUE Action"](./images/create-true-action.png)
 
-16.	In the right-side pane change **Action** to “Refresh”, **Selection Type** to “Region” and **Region** to “Create New User” from the dropdown.
+13.	In the right-side pane change **Action** to “Refresh”, **Selection Type** to “Region” and **Region** to “Create New User” from the dropdown.
 
 	![Edit Dynamic Actions](./images/refresh-dynamic-action.png)
 
-17.	In the **Processing** tab on the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)), click on “Process form …” under **Processes** and add a **Success Message** and **Error Message** notifying the user that their account has/hasn’t been created.
+14.	In the **Processing** tab on the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)), click on “Process form …” under **Processes** and add a **Success Message** and **Error Message** notifying the user that their account has/hasn’t been created.
 
 	![Add Success and Error Messages for when a user tries to create an account](./images/create-user-success-error-msgs.png)
 
-18.	There is a default “Close Dialog” process created that we don’t need. To delete this process, right-click on it and click “Delete”.
+15.	There is a default “Close Dialog” process created that we don’t need. To delete this process, right-click on it and click “Delete”.
 
 	![Delete the "Close Dialog" process](./images/delete-close-dialog.png)
 
-19.	Create a **Branch** (right-click on **After Processing** and click “Create Branch”) of **Behavior Type** “Page or URL (Redirect)” and route it back to the Login page (should be page 9999 by default). Feel free to name this something like “Close Dialog”.
+16.	Create a **Branch** (right-click on **After Processing** and click “Create Branch”) of **Behavior Type** “Page or URL (Redirect)” and route it back to the Login page (should be page 9999 by default). Feel free to name this something like “Close Dialog”.
 
 	![Create a Branch "After Processing"](./images/after-processing-branch.png) ![Select the Behavior Type for this Branch](./images/branch-behavior-type.png)
 
-20.	Then add an **Ajax Callback** (right-click on **Ajax Callback** and click “Create Process”) of **Type** “Clear Session State”. Feel free to name this something like “Display messages”. This callback forces the success/error messages associated with step 17 to appear even after this modal dialog closes.
+17.	Then add an **Ajax Callback** (right-click on **Ajax Callback** and click “Create Process”) of **Type** “Clear Session State”. Feel free to name this something like “Display messages”. This callback forces the success/error messages associated with step 17 to appear even after this modal dialog closes.
 
 	![Create an Ajax Callback](./images/ajax-callback.png) ![Adjust the Ajax callback Type](./images/ajax-callback-settings.png)
 
-21.	Finally, navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
+18.	Finally, navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
 
-22.	Click **Save** in the top-right corner.
+19.	Click **Save** in the top-right corner.
 
 This concludes this task. You may now **proceed to the next task.**
 
@@ -184,4 +176,4 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, May 2022
+* **Last Updated By/Date** - Ana Beyer, February 2023

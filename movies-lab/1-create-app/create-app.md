@@ -8,6 +8,9 @@ You will also need to sign up for an account on The Movie Database and obtain an
 
 Estimated Lab Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Application](videohub:1_w4o026xl)
+
 ### Objectives
 In this lab, you will:  
 - Create a new application.  
@@ -43,7 +46,7 @@ In this lab, you will:
     * Select the red color swatch (fifth from the left) and the smiley face icon.
 
     * Click **Save Icon**.
-    
+
     ![Choose Application Icon dialog with the fifth color swatch and Smiley icon selected](images/choose-icon.png " ")
 
 7. In the Pages section of the Create Application wizard, click the **Edit** button next to Home.
@@ -129,7 +132,7 @@ You now know how to create, run, and update the theme of an application. You may
 
 ## Resources
 
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/application-builder-concepts.html)
+- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
 
 - [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
 
@@ -144,7 +147,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022

@@ -5,6 +5,9 @@ You will create and set up the Movie Search page so that you can view popular mo
 
 Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create the Movie Search Page](videohub:1_stfhi958)
+
 ### Objectives
 In this lab, you will:   
 - Create a new page.  
@@ -55,7 +58,7 @@ To start, you will create the Movie Search page and do a little page setup befor
 
 7. In the CSS property group, you will also add some custom CSS to style some of the items on the page.
 
-    * Copy the code below and paste it in the Inline property code box:
+    * Copy the code below and paste it in the **Inline** property code box:
 
         ```
         <copy>
@@ -297,7 +300,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
     ![Page 1 open in Page Designer editing the Dynamic Action action associated with Refresh on Dialog Closed](images/da-action.png " ")
 
-10. Click the **Add a Movie** button to open the Movie Search page.
+10. Click the **Add Movie** button to open the Movie Search page.
 
     ![Page 1 of Movies Watchlist at runtime](images/add-movie.png " ")
 
@@ -321,19 +324,19 @@ You now know how to create a page in your APEX application and add components to
 
 ## Resources
 
-- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/about-page-designer.html)  
+- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/about-page-designer.html)  
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/managing-cards.html)  
+- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-cards.html)  
 
 - [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)  
 
-- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/creating-dialog-pages.html)  
+- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-dialog-pages.html)  
 
 - [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/) 
 
 - [Intro to Dynamic Actions Video](https://www.youtube.com/watch?v=hpcYevCC-Ow)  
 
-- [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/managing-dynamic-actions.html) 
+- [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-dynamic-actions.html) 
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 3 and follow the instructions below to import it into your Oracle APEX workspace.
@@ -345,7 +348,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 - You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
 *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID or Client Secret values for Credentials for Movies](images/blank-credentials.png " ")  
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -355,7 +358,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -363,7 +366,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
 - **Last Updated By/Date** - Paige Hanssen, August 2022
