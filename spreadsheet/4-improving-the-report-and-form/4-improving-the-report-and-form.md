@@ -92,7 +92,7 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
     | --- | --- | --- |
     | School Name | Ascending | Default |
     | Seats | Descending | Nulls Always Last |
-    | Graduation Date | Descending | Default |
+    | Graduation Rate | Descending | Default |
 
     ![](images/set-sort.png " ")
 
@@ -108,18 +108,16 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
     ![](images/save-report.png " ")
 
-
     On Save Default Report, select **Alternative**, for Name enter **Best Schools**, and click **Apply**.
 
-
-    ![](images/save-alternative.png " ")
+   ![](images/save-alternative.png " ")
 
     A new select list will be displayed at the top of the report which lists all of the saved reports available to the user.
 
 15. To go back to how the end user will see the report when they first access the report, at the top of the report, select **1. Primary Report**. Click **Actions**, select **Report** and then select **Reset**.
 
     ![](images/reset-primary.png " ")
-    
+
 16. Click **Apply** to confirm reset. The changes you have made to the report will be reset and the original report will be displayed.
     ![Confirm reset report](images/apply-reset.png " ")
 
@@ -207,11 +205,11 @@ In the previous task, you explored a few options to enhance the form. In this ta
     The modal form page for the selected record will be displayed.
 
 2. In the Developer Toolbar, at the bottom of the screen, click **Edit Page 5**.
- 
+
     ![](images/edit-page-5.png " ")
 
     *Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
-    
+
 3. Click **Nyc Highschool** in the rendering tree. In the Property Editor, navigate to **Appearance** and for Template select **Tabs Container**.
 
     ![](images/tab-container.png " ")
@@ -221,22 +219,22 @@ In the previous task, you explored a few options to enhance the form. In this ta
     - Metrics
     - Location
     - Other Course Details
-    
+
     ![](images/create-sub-region.png " ")
-    
+
     ![](images/sub-region-title.png " ")
-  
+
 5. In the Property Editor for each Sub Region, perform the following step:
     - Navigate to **Appearance**
     - Select **Template Options**
     - For **Header**, select **Hidden but accessible**
-    
+
     ![](images/template-option.png " ")
-    
+
     ![](images/hide-header.png " ")
-  
+
 6. The Sub Regions created represents the different tabs. Drag and drop the form fields into their respective Sub Region as mentioned in the table.
-    
+
     | Sub Region Title | Form Fields |
     |----------|----------|
     | **General Information** | P5\_BOROUGH <br> P5\_SCHOOL\_NAME <br> P5\_NEIGHBORHOOD <br> P5\_INTEREST <br> P5\_METHOD |
@@ -248,15 +246,15 @@ In the previous task, you explored a few options to enhance the form. In this ta
 
 7. Click **Save** to save your changes. Go to the runtime application and refresh the application. On the **NYC Highschools Report** page, click the **edit icon** for any record.
   Click on various tabs to view the form fields.
-  
+
     ![](images/enhanced-form.png " ")
-    
+
 
 ## **Summary**
- 
+
 You now know how _end-users_ can define custom reports using Interactive Reports, and you can easily improve form pages.
 
 ## **Acknowledgements**
 
  - **Author/Contributors** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
