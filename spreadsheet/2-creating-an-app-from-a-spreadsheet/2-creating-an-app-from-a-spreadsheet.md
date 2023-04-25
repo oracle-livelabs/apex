@@ -10,8 +10,8 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 22.1.
- 
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.1.
+
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk-through of the lab.
@@ -50,18 +50,16 @@ The Data Load wizard has created a new table and populated that table with the r
 
 
 2. In the Object Browser, review the table structure.   
-    In the Table toolbar, click **Create App**.
+    In the Table toolbar, click  **More** and select **Create App**.
 
     ![Image showing the table in the Object Browser](images/object-browser.png " ")
 
-3. On the Create Application page, click **Create App**.
-
 3. On the Create Application page, enter the Name as **NYC Highschools** and click the application icon.
    ![Image showing the Create Application Page](images/name-for-application.png " ")
-   
+
 4. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](files/nyc-highschools.png).
   ![Image showing the Choose Application Icon wizard](images/custom-app-icon.png " ")
-  
+
 5. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/edit-and-save-icon.png " ")
 
@@ -69,11 +67,9 @@ The Data Load wizard has created a new table and populated that table with the r
   Click the **Edit** button for **Nyc Highschools Search** and **Nyc Highschools Report** pages to review more details and update the names to the following:
   - NYC Highschools Search
   - NYC Highschools Report
-  
 
-    Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
+ Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
 
-    ![Image showing the Create Application Page](images/verify-app-details.png " ")
     ![Image showing the Create Application Page](images/create-application.png " ")
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
@@ -94,9 +90,8 @@ The Data Load wizard has created a new table and populated that table with the r
   - Click **Dashboard** (in the home menu or the navigation menu) to view the charts created.
   - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
   - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
-  Finally, review the options available under **Administration**.
 
-    ![Image displaying the new application home page](images/new-app.png " ")
+  ![Image displaying the new application home page](images/new-app.png " ")
 
 ## **Summary**
 
@@ -106,4 +101,4 @@ You now know how to create an application from a spreadsheet by dragging and dro
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
