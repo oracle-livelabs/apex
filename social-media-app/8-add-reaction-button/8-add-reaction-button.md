@@ -100,13 +100,13 @@ We need to configure the True actions for the action-like Dynamic Action. We nee
 
 7. We need to configure one last thing on this action. This code block needs to receive the Page Item values from our form. This is handled by providing a list of the **Page Items to Submit** to the Server.
 
-  Paste this CSV list of Page Items into the box under the **PL/SQL Code** property.
+Paste this CSV list of Page Items into the box under the **PL/SQL Code** property.
+
     ```
     <copy>
         P1_ACTION_ID,P1_LAT,P1_LON
     </copy>
     ```
-
     ![Property Editor](images/item-to-submit.png)
 
 8. We should now be able to Like our own post! **Save and Run** to try it out. Click the Like and see the Heart turn Black (Once you define the css class in the next lab, the heart will turn to Red).
