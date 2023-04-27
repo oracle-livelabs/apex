@@ -15,7 +15,7 @@ Estimated Time: 60 minutes
 * Customize the App using Dynamic Actions and custom CSS
 * Add Maps region, get device location, and install PWA
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.1.*
 
 ### Labs
 
@@ -53,5 +53,5 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

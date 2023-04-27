@@ -69,4 +69,4 @@ create the APEX social Media data model.
 ## **Acknowledgements**
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
