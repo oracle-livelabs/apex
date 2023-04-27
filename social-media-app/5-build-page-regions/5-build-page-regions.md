@@ -73,15 +73,11 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
     ![Rendering tree with page items](images/delete-page-items.png "")
 
-    **If you made a mistake**, you can easily re-sync all the Region Page
-items back and repeat the process. If you need to do this, *right click*
-on the **Post** tree entry, and choose Synchronize Page Items, and then
-carefully delete those that we don't want.
+    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. If you need to do this, *right click* on the **Post** tree entry, and choose Synchronize Page Items, and then carefully delete those that we don't want.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 
-2. Next, we want to change some parameters of the remaining page items on
-the form. For the **P1\_POST\_COMMENT** item, update the following:
+2. Next, we want to change some parameters of the remaining page items on the form. For the **P1\_POST\_COMMENT** item, update the following:
     - For **Type**, choose **Text Field**.
     - For **Label**, enter **Post**.
 
@@ -96,8 +92,7 @@ the form. For the **P1\_POST\_COMMENT** item, update the following:
 
     ![Rendering tree](images/lat-lon.png "")
 
-  For the sake of keeping things organized, let's move them under the *P1\_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
-
+    For the sake of keeping things organized, let's move them under the *P1\_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
     ![Rendering tree](images/updated-tree.png "")
 
 5. Next, we want to configure the **P1\_FILE\_BLOB** page item:
