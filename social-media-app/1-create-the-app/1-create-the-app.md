@@ -10,7 +10,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 22.2.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.1.
 
 Estimated Time: 5 minutes
 
@@ -35,9 +35,9 @@ Blueprint tab selected. Update the following information:
 
 Click **Create Application**.
 
-4. We now have 3 pages in our APEX application. 
-- The Global page (which we won't be using in this lab), 
-- The Timeline page (which is where we'll be doing all of our work in this lab), 
+4. We now have 3 pages in our APEX application.
+- The Global page (which we won't be using in this lab),
+- The Timeline page (which is where we'll be doing all of our work in this lab),
 - The Login Page, which is the default configured to use your workspace account credentials.
 
     !["The pages in the app"](images/pages.png "")
@@ -68,5 +68,5 @@ create the APEX social Media data model.
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

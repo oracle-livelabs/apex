@@ -63,7 +63,7 @@ The Data Load wizard has created a new table and populated that table with the r
 5. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/edit-and-save-icon.png " ")
 
-7. In the Create Application page, review the pages listed.
+6. In the Create Application page, review the pages listed.
   Click the **Edit** button for **Nyc Highschools Search** and **Nyc Highschools Report** pages to review more details and update the names to the following:
   - NYC Highschools Search
   - NYC Highschools Report
