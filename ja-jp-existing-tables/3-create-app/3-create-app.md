@@ -189,24 +189,24 @@
 
 1. *アプリケーション・ビルダー* で、プロジェクトをクリックします。 プロジェクトのホームページで、編集するページをクリックします。 *ページ・デザイナ* で、**識別 > 名前** と **識別 > タイトル**を新しい名前に変更します。 [**ページを保存して実行**]をクリックします。 ランタイム環境で、タブの名前が更新されていることがわかります。
 
-    ![](images/change-page-name/change_name.png " ")
+    ![](images/change-page-name/change-name.png " ")
 
 2. プロジェクトのホームページで、開発ツールバーの **共有コンポーネント**をクリックします。
-    ![](images/change-page-name/shared_component.png " ")
+    ![](images/change-page-name/shared-component.png " ")
 
     共有コンポーネントのホームページで、[ナビゲーションと検索] の下にある [ブレッドクラム]をクリックします。 [**ブレッドクラム**]をもう一度クリックし、編集するページをクリックします。
-    ![](images/change-page-name/shared_component_menu.png " ")
+    ![](images/change-page-name/shared-component-menu.png " ")
 
     **短縮名**を新しい名前に変更します。 [**変更の適用**]をクリックします。 ランタイム環境では、ページのタイトルが更新されていることがわかります。
     ![](images/change-page-name/breadcrumb.png " ")
 
 3. 共有コンポーネントのホームページで、[ナビゲーションと検索] の下にある [ナビゲーション・メニュー]をクリックし、[ナビゲーション・メニュー]をクリックします。 編集するページをクリックし、**リスト・エントリ・ラベル**を新しい名前に変更します。 [**変更の適用**]をクリックします。 ページの名前が左側のナビゲーション メニューで更新されていることがわかります。
 
-    ![](images/change-page-name/navigation_menu.png " ")
+    ![](images/change-page-name/navigation-menu.png " ")
 
 4. 共有コンポーネントのホームページで、[ナビゲーションと検索] の下の [リスト]をクリックし、[ページ・ナビゲーション]をクリックします。 編集するページをクリックし、**リスト・エントリ・ラベル**を新しい名前に変更します。 [**変更の適用**]をクリックします。 アプリケーションのホームページでページの名前が更新されていることがわかります。
 
-    ![](images/change-page-name/page_navigation.png " ")
+    ![](images/change-page-name/page-navigation.png " ")
 
 ## **謝辞**
 
