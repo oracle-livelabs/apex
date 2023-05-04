@@ -177,28 +177,31 @@ In this part, you will create an Oracle APEX Application Development Service tri
       ![Autonomous Database Details page](images/status-available.png " ")
   
   9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
-  
-      Click the **Tools** tab.
-      Click **Open APEX**.
-  
-      ![Autonomous Database Details page](images/click-apex.png " ")
+    Click the **Apex Instance URL** provided on the ATP overview screen.
+    
+    ![Open APEX instance](images/apex-instance.png " ")
+    
+  10. Now, click **Launch APEX**
+   
+    ![Launch APEX instance](images/launch-apex-inst.png " ")
+   
   
       *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
   
-  10. Enter the password for the Administration Services and click **Sign In to Administration**.     
+  11. Enter the password for the Administration Services and click **Sign In to Administration**.     
       The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
   
       ![Administration Services login page](images/log-in-as-admin.png " ")
   
-  11. Click **Create Workspace**.
+  12. Click **Create Workspace**.
   
       ![Create Workspace page](images/welcome-create-workspace.png " ")
   
-  11. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+  13. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
   
     ![Choose type of schema](images/choose-schema.png " ")
     
-  12. In the Create Workspace dialog, enter the following:
+  14. In the Create Workspace dialog, enter the following:
   
       | Property | Value |
       | --- | --- |
