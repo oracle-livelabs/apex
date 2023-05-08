@@ -104,5 +104,5 @@ You now know how to Manage and Customise the Interactive report as a developer. 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022
+- **Contributor** - Roopesh Thokala, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

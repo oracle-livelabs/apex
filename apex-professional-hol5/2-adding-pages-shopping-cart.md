@@ -443,7 +443,7 @@ This region lets users read the customer reviews for this product.
 
    ![](./images/create-fs-page13.png " ")
 
-4. For Facet Selection, Select **Display as** option as **Cards**, Leave the remaining options to default and click **Next**.
+4. For Facet Selection, Select **Display as** option as **Cards**, Click Refresh and Leave the remaining options to default and click **Next**.
 
     ![](./images/create-fs-page14.png " ")
 
@@ -462,5 +462,5 @@ You now know how to create an Application item, Application process, Faceted sea
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Contributor** - Roopesh Thokala, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
