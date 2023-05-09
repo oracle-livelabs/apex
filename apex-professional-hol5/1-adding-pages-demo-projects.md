@@ -48,21 +48,22 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
-   - Under **Page Definition**:
 
-    - For Page Number, enter **4**.
+    - Under **Page Definition**:
+
+        - For Page Number, enter **4**.
 
     - For Page Name, enter **Project Tasks**  
 
-  - Under **Data Source**:
+        - Under **Data Source**:
 
-    - For **Table/View Name**, Select **DEMO_PROJECTS**.
+        - For **Table/View Name**, Select **DEMO_PROJECTS**.
 
-  - Under **Navigation**
+    - Under **Navigation**
 
-    - For **Breadcrumb**, Set it to **No**.
+        - For **Breadcrumb**, Set it to **No**.
 
-  Click **Create Page**.
+    Click **Create Page**.
 
     ![](./images/create-ig-2.png " ")
 
