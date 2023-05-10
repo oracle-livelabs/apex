@@ -300,7 +300,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
     - Under Settings section:
         - For Items to Return - enter **P17\_SHOPPING\_CART\_ITEMS,P17\_PRODUCT\_ID,P17\_ACTION,P17\_QUANTITY**
 
-    Click **Save.**
+4. Click **Save.**
 
     ![](./images/create-close-dialog.png " ")
 
@@ -324,7 +324,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 ## Summary
 
-You now know how to customize and enhance the APEX page. You may now **proceed to the next lab**.
+You now know how to add dynamic actions, Computations and Process to an APEX page. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
