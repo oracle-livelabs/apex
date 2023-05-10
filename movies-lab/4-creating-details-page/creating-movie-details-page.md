@@ -22,11 +22,9 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
 1. In the toolbar at the top of the Page Designer, click the **Create** button (3 buttons left of the Save button) and select **Page**. 
 
-    ![Close-up of Create menu in Page Designer](images/create-page.png " ")
-
     * Click **Form**.
 
-    ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-form.png " ")
+    ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-page.png " ")
 
     * Page Number: **3**
     
@@ -40,7 +38,7 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
     * Click **Next**.
 
-    ![Create Page wizard on the Create a Form step to set the page and data source attributes](images/create-form-attributes.png " ")
+    ![Create Page wizard on the Create a Form step to set the page and data source attributes](images/create-form.png " ")
 
     * Select **ID (Number)** as the Primary Key Column 1 value.
 
@@ -191,9 +189,7 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 6. Click on the **movie\_id** parameter.
 
-    * You will see that its Type is Static Value, and the Static Value is 505, which the id of a single movie and is the default used to set up the REST source.
-
-    * Change the Type from Static Value to **Item**.
+    * Change the Type from REST Source Default to **Item**.
 
     * In the Item field, enter **P3\_ID**.
 

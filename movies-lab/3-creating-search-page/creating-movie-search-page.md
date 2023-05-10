@@ -234,7 +234,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
 7. Click on the **query** parameter.
 
-    * You will see that its Type is Static Value, and the Static Value is harry potter, which is the default used in the URL to set up the REST source.
+    * You will see that its Type is REST Source Default, which is using the default value from the used in the URL to set up the REST source.
 
     * Change the Type from Static Value to **Item**.
 
@@ -244,7 +244,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
     ![Page 2 open in Page Designer editing the Searched Movies region query parameter](images/searched-query.png " ")
 
-## Task 4: Link Add Movie to Movie Search
+## Task 4: Link Movie Search to Watchlist Page
 The last task in this lab is linking the Movie Search page to the My Watchlist page. A modal dialog page like Movie Search can only be run on by launching it from another page, so you will create a button on the Watchlist page that will open the Search page.
 
 1. Go to page 1 by clicking the down arrow in the page navigation on the Page Designer toolbar.
