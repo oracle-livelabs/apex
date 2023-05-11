@@ -104,4 +104,4 @@ You now know how to create an application from a spreadsheet by either dragging 
 ## Acknowledgements
  - **Author** -  Roopesh Thokala, Product Manager
  - **Contributors** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023

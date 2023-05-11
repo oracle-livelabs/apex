@@ -201,4 +201,4 @@ You now know how to create an application with a number of different page types 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
