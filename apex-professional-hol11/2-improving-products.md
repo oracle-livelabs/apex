@@ -158,7 +158,7 @@ Customers need a way to shop the products, so in this task you will add an actio
             | --- | --- |
             | P17\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - For Clear Cache, enter **18**
+        - For Clear Cache, enter **17**
         - Click **Ok**.
 
     ![Add Link Attributes](./images/create-action2.png " ")

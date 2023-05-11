@@ -19,12 +19,12 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
     ![Navigate to Demo Projects Application](./images/select-projects-app.png " ")
 
-2. Now, you run the application using **Run Application** icon.
+2. Now, you run the application using **Run Application** icon. If prompted, enter your workspace username and password and click Sign In.
 
     ![Run Application](images/run-application.png " ")
 
-3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.
-  **Note** that your page number might be different.
+3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.      
+**Note** that your page number might be different.
 
     ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
 
@@ -34,7 +34,7 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
     ![Edit Filter](images/edit-filter1.png " ")
 
-5. Click **Save and Run Page** in the upper right corner. If prompted, enter your workspace username and password and click Sign In.
+5. Click **Save and Run Page** in the upper right corner.
 The revised page appears.
 
     ![Show edit Filter](images/show-edit-filter1.png " ")
