@@ -283,4 +283,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
