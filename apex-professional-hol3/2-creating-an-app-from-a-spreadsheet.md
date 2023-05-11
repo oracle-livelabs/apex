@@ -49,6 +49,7 @@ The Data Load wizard has created a new table and populated that table with the r
     - Demo Projects Search  
     - Demo Projects Report  
     - Calendar
+   
    On the Create Application page, Click on **Edit** button next to **Demo Projects Search**.
 
     ![Edit Demo Projects Search](images/delete-pages.png " ")
