@@ -67,9 +67,9 @@ Estimated Time: 20 minutes
         - For Page - enter **21**.  
         - For Set Items, enter:
 
-                | Name | Value |
-                | --- | --- |
-                | P21_PRODUCT_ID | #PRODUCT_ID# |    
+            | Name | Value |
+            | --- | --- |
+            | P21\_PRODUCT\_ID | #PRODUCT_ID# |    
 
         - For Clear Cache, enter **21**  
         - Click **Ok**.
@@ -120,4 +120,4 @@ You now know how to Create and Customize a Form and then link the form to an Int
 
  - **Author/Contributors** -  Roopesh Thokala, Product Manager
  - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022
+ - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023

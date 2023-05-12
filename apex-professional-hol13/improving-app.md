@@ -95,11 +95,11 @@ Follow these steps for the four listed pages:
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and select **Page 15** from Dialog Page.
+4. Navigate to Page Finder and select **Page 15** from Dialog Page. Repeat steps 2-4.
 
     ![Navigate to Page finder](./images/navigate-to-page-finder.png " ")
 
-5. Repeat steps 2-4 for **Page 16: Shopping Cart** and **Page 17: Add to Cart**.
+5. Similarly, repeat steps 2-4 for **Page 16: Shopping Cart** and **Page 17: Add to Cart**.
 
 ## Task 3: Remove the Navigation Menu
 Since the home page is the Products page and this is a public access page, we do not need a navigation menu.
@@ -199,4 +199,4 @@ You now know how to set page as public and manage Navigation bar and Navigation 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
