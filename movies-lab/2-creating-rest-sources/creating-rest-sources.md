@@ -16,13 +16,13 @@ In this lab, you will:
 ### Prerequisites
 - Completion of workshop through Lab 1  
 - A TMDB API key  
-- The <a href="files/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
+- The <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
 
 
 ## Task 1: Import the REST Catalog
 You will use a REST Source Catalog that contains predefined services to create REST data sources. Using a REST Catalog will greatly simplify the process of creating REST sources to get data from TMDB API because all you will need to do is import the catalog, select the sources you want to use, and update the web credential associated with the sources.
 
-1. Download the TMDB REST Source Catalog by clicking <a href="files/tmdb_catalog.sql" download>here</a>.
+1. Download the TMDB REST Source Catalog by clicking <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>here</a>.
 
 2. In the App Builder tab in your browser, click **Export/Import** on the Movies Watchlist application home page.
 
