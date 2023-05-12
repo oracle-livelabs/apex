@@ -103,7 +103,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
 8. On the APEX Workspace log in page, enter SecretPassw0rd for the password, check the Remember workspace and username checkbox, and then click Sign In.
 
-  ![Sign In](images/login-to-workspace1.png " ")  
+  ![Sign In](images/login-to-workspace.png " ")  
 
 9. You should now be in the APEX Builder.
 
