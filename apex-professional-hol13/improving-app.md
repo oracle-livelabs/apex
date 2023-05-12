@@ -199,4 +199,4 @@ You now know how to set page as public and manage Navigation bar and Navigation 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
