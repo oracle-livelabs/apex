@@ -41,7 +41,7 @@ In this lab, you will:
 
 ### Downloads
 
-- [Click here](./files/movies-watchlist.sql) to download the completed application.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/movies-watchlist-231.sql) to download the completed application.
 
 ## Learn More - *Useful Links*
 
@@ -57,4 +57,4 @@ In this lab, you will:
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023
