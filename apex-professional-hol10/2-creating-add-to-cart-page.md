@@ -53,6 +53,7 @@ In this task, you will create a dynamic actions to:
 
 4. Navigate to **Refresh** Action.
     - Under Identification section:
+        - For Name - enter **Update Badge & Icon**
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
         - For Code - enter the following JavaScript Code:
@@ -74,16 +75,17 @@ In this task, you will create a dynamic actions to:
      ![](./images/create-2da.png " ")
 6. In the Property Editor, enter the following:  
     - Under Identification section:
+        - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
     - Under Affected Elements section:          
         - For Selection Type - select **Region**
         - For Region - select **Shopping Cart**          
-7. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Execute JavaScript Code** action.
-8. Right-click  **Execute JavaScript Code** action and click **Create Opposite Action**.
+7. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Update Badge & Icon** action.
+8. Right-click  **Update Badge & Icon** action and click **Create Opposite Action**.
 
      ![](./images/create-opp-action.png " ")
 
-9. Navigate to **Execute JavaScript Code** Action under the False heading.
+9. Navigate to **Update Badge & Icon** Action under the False heading.
     - Under Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
@@ -107,10 +109,13 @@ In this task, you will create a dynamic actions to:
 
 11. In the Property Editor, enter the following:  
     - Under Identification section:
+        - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
     - Under Affected Elements section:          
         - For Selection Type - select **Region**
-        - For Region - select **Shopping Cart**    
+        - For Region - select **Shopping Cart**
+
+12. Click **Save**.
 
 ## Task 2: Format Products Image Size
 
@@ -188,10 +193,10 @@ In this Task, you call the *manage\_orders.add_product* procedure that will add 
 
   ![](./images/create-process22.png " ")  
 
- - Under Server-side Condition section:
-   - For When Button Pressed - select **Add**
+    - Under Server-side Condition section:
+        - For When Button Pressed - select **Add**
 
-  Click **Save.**
+4. Click **Save.**
 
 ## Task 5: Create a Process to Edit Products in the Shopping Cart
 In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove a product from the shopping cart and add it again with the updated quantity.
@@ -295,7 +300,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
     - Under Settings section:
         - For Items to Return - enter **P17\_SHOPPING\_CART\_ITEMS,P17\_PRODUCT\_ID,P17\_ACTION,P17\_QUANTITY**
 
-    Click **Save.**
+4. Click **Save.**
 
     ![](./images/create-close-dialog.png " ")
 
@@ -319,10 +324,10 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 ## Summary
 
-You now know how to customize and enhance the APEX page. You may now **proceed to the next lab**.
+You now know how to add dynamic actions, Computations and Process to an APEX page. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, May 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023

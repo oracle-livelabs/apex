@@ -96,4 +96,4 @@ You now know how to use the Theme Roller to save a new Theme Style. You may now 
 
   - **Author** - Roopesh Thokala, Product Manager
   - **Contributor** - Ankita Beri, Product Manager
-  - **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+  - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
