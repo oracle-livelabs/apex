@@ -42,22 +42,28 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
     ![](./images/create-page11.png " ")
 
-3. For Create a Page: Select Page Type - Select **Component** and then select **Interactive Grid**.
+3. For Create a Page:
+   Select Page Type - Select **Component** and then select **Interactive Grid**.
 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
-   Under **Page Definition**:
-    - For Page Number, enter **4**.
+
+    - Under **Page Definition**:
+
+        - For Page Number, enter **4**.
+
     - For Page Name, enter **Project Tasks**  
 
-  Under **Data Source**:
-    - For **Table/View Name**, Select **DEMO_PROJECTS**.
+        - Under **Data Source**:
 
-  Under **Navigation**
-    - For **Breadcrumb**, Set it to **No**.
+        - For **Table/View Name**, Select **DEMO_PROJECTS**.
 
-  Click **Create Page**.
+    - Under **Navigation**
+
+        - For **Breadcrumb**, Set it to **No**.
+
+    Click **Create Page**.
 
     ![](./images/create-ig-2.png " ")
 
@@ -72,20 +78,25 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
     ![](./images/create-sf-page11.png " ")
 
-2. For Create a Page: Select Page Type - Under **Component** tab, select **Smart Filters**.
+2. For Create a Page:
+   Select Page Type - Under **Component** tab, select **Smart Filters**.
 
     ![](./images/create-sf-page12.png " ")
 
 3. For **Create Smart Filters**, enter the following:
-   Under **Page Definition**:
-    - For **Page Number**, enter **8**
+    - Under **Page Definition**:
+
+        - For **Page Number**, enter **8**
+
     - For **Name**, enter **Project Tasks Search**  
 
-   Under **Data Source**:
-    - For **Table/View Name**, enter **DEMO_PROJECTS**  
+       - Under **Data Source**:
 
-   Under **Navigation**
-      - For **Breadcrumb**, Set it to **No**.
+       - For **Table/View Name**, enter **DEMO_PROJECTS**  
+
+   - Under **Navigation**
+
+       - For **Breadcrumb**, Set it to **No**.
 
    Click **Next**.
 
@@ -109,4 +120,4 @@ You now know how to create interactive grid and smart filters. You may now **pro
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
