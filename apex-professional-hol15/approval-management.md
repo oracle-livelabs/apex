@@ -24,6 +24,11 @@ In this lab, you will:
 - Learn how to Request Information/ Delegate/ Release
 - Learn how to set deadlines and expiration
 
+### Downloads
+
+**[Click Here](files/expense-tracker-1.sql)** to download the completed application.
+
+
 ## Task 1: Create the Application
 In this lab, you create a new application named Expense Tracker.
 
