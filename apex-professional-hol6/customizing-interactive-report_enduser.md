@@ -12,6 +12,10 @@ Estimated Time: 20 minutes
 In this lab, you:
 - Customise the Interactive Report page you have in **Sample Reports** Application as an **End-user**.
 
+### Downloads
+
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/sample-reporting-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+
 ## Task 1: Customize an Interactive report as an end-user.
 
  In this lab, you customize and use an interactive report as an end user.
