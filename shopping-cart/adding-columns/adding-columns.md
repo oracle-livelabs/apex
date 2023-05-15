@@ -156,7 +156,12 @@ You will create lookup tables based on the new three columns, after you will hav
 
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-9. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
+9. For Text Column, select **CLOTHING**. Click **Create Lookup Table**.
+
+    ![Create Lookup Column wizard](./images/lt-clothing.png " ")
+
+
+10. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
     - COLOR_LOOKUP
     - DEPARTMENT_LOOKUP
     - CLOTHING_LOOKUP
