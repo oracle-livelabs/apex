@@ -158,7 +158,7 @@ Customers need a way to shop the products, so in this task you will add an actio
             | --- | --- |
             | P17\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - For Clear Cache, enter **18**
+        - For Clear Cache, enter **17**
         - Click **Ok**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
@@ -283,4 +283,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
