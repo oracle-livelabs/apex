@@ -25,7 +25,7 @@ In this lab, you will:
 
     ![App builder home page](images/go-create-app.png " ")
 
-3.  Click **New Application**.
+2.  Click **New Application**.
 
     ![Create Application options](./images/new-app.png " ")
 
