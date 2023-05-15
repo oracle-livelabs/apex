@@ -26,7 +26,7 @@ In this lab, you will:
 
 ### Downloads
 
-**[Click Here](files/expense-tracker-1.sql)** to download the completed application.
+**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
 
 
 ## Task 1: Create the Application
