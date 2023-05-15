@@ -24,6 +24,11 @@ In this lab, you will:
 - Learn how to Request Information/ Delegate/ Release
 - Learn how to set deadlines and expiration
 
+### Downloads
+
+**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
+
+
 ## Task 1: Create the Application
 In this lab, you create a new application named Expense Tracker.
 
