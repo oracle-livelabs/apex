@@ -27,6 +27,8 @@ Estimated Time: 20 minutes
 In this lab, you:
 - Customise the Interactive Grid page you have created in **Demo Projects** Application both as an **End-user**.
 
+## Task 1: Manage and Customize Interactive Grid as a Developer
+This lab uses the **Demo Projects** application. In this lab, you customize the **Interactive Grid** for end users. You create column groups, set pagination type, and set the report downloadable formats that should be available for end users. You also enable end users to save the report as Public interactive grids and convert a read only interactive grid to an editable interactive grid.
 
 ## Task 1: Customize interactive grid as an end-user.
 In this lab, you use and customize the display of your interactive grid. You also edit an editable interactive grid.

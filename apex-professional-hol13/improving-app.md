@@ -25,7 +25,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-7.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-8.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Set Products page as the Home Page.
 
@@ -95,11 +95,11 @@ Follow these steps for the four listed pages:
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and select **Page 15** from Dialog Page.
+4. Navigate to Page Finder and select **Page 15** from Dialog Page. Repeat steps 2-4.
 
     ![Navigate to Page finder](./images/navigate-to-page-finder.png " ")
 
-5. Repeat steps 2-4 for **Page 16: Shopping Cart** and **Page 17: Add to Cart**.
+5. Similarly, repeat steps 2-4 for **Page 16: Shopping Cart** and **Page 17: Add to Cart**.
 
 ## Task 3: Remove the Navigation Menu
 Since the home page is the Products page and this is a public access page, we do not need a navigation menu.
@@ -187,7 +187,7 @@ Add a new navigation bar entry to allow:
 12. Click **Create List Entry**.
 
     ![Create List Entry2](./images/create-entry12.png " ")
-    
+
 <!--
 You now know how to enhance and mantain both navigation menu and navigation bar. You may now **proceed to the next lab**.-->
 
@@ -199,4 +199,4 @@ You now know how to set page as public and manage Navigation bar and Navigation 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022
+- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023

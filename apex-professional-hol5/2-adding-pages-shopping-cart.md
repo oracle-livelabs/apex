@@ -149,8 +149,8 @@ This region will list the items that have been added temporarily to the shopping
 3. In the Property Editor, enter the following:
     - For Title - enter **Shopping Cart**
     - Under Source section:
-     - For Type - select **SQL Query**
-     - For SQL Query - enter the following SQL Query:
+      - For Type - select **SQL Query**
+      - For SQL Query - enter the following SQL Query:
 
         ```
             <copy>
@@ -174,16 +174,16 @@ This region will list the items that have been added temporarily to the shopping
 4. Click on **Attributes** and enter the following:
 
     - Under Appearance section:
-      - For Layout \- select **Horizontal (Row)**
+        - For Layout \- select **Horizontal (Row)**
     - Under Title section:
-      - For Column \- select **NAME**
+        - For Column \- select **NAME**
 
     - Under Subtitle section:
-      - For Column - select **BRAND**    
+        - For Column - select **BRAND**    
 
     - Under Body section:
-      - Set Advanced Formatting to **On**
-      - For HTML Expression - enter the following:
+        - Set Advanced Formatting to **On**
+        - For HTML Expression - enter the following:
 
        ```
         <copy>
@@ -376,8 +376,8 @@ This region lets users read the customer reviews for this product.
 3. In the Property Editor, enter the following:
     - For Title - enter **Customer Reviews**
     - Under Source section:
-     - For **Type** - select **SQL Query**
-     - For **SQL Query** - enter the following SQL Code:
+        - For **Type** - select **SQL Query**
+        - For **SQL Query** - enter the following SQL Code:
 
      ```
             <copy>
@@ -399,11 +399,11 @@ This region lets users read the customer reviews for this product.
 4. Click **Attributes** and enter the following:
 
     - Under Appearance section:
-     - For Layout - select **Horizontal (Row)**
+        - For Layout - select **Horizontal (Row)**
 
     - Under Title section:
-     - Set Advanced Formatting to **On**
-     - For HTML Expression - enter the following:
+        - Set Advanced Formatting to **On**
+        - For HTML Expression - enter the following:
 
      ```
             <copy>

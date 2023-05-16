@@ -1,0 +1,42 @@
+{
+  "workshoptitle": "[Japanese] Oracle Autonomousクラウド・サービスの既存のテーブルに基づくアプリの作成",
+  "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+    {
+      "title": "はじめに",
+      "filename": "sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "紹介",
+      "filename": "0-workshop-intro-and-setup/0-workshop-intro-and-setup.md"
+    },
+    {
+      "title": "ラボ1: サンプル表のインストール",
+      "filename": "2-installing-sample-tables/2-installing-sample-tables.md"
+    },
+    {
+      "title": "ラボ2: アプリケーションの作成",
+      "filename": "3-create-app/3-create-app.md"
+    },
+    {
+      "title": "ラボ3: アプリの再生成",
+      "filename": "4-regenerate-app/4-regenerate-app.md"
+    },
+    {
+      "title": "ラボ4: ダッシュボードの改善",
+      "filename": "5-improving-dashboard/5-improving-dashboard.md"
+    },
+    {
+      "title": "ラボ5: プロジェクトの改善",
+      "filename": "6-improving-projects/6-improving-projects.md"
+    },
+    {
+      "title": "ラボ6: マイルストーンの改善",
+      "filename": "7-improving-milestones/7-improving-milestones.md"
+    },
+    {
+      "title": "ラボ7: タスクの改善",
+      "filename": "8-improving-tasks/8-improving-tasks.md"
+    }
+  ]
+}
