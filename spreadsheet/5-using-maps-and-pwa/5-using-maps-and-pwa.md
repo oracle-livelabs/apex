@@ -31,12 +31,12 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     ![Copy Page dialog](images/copy-page-1.png " ")   
 
 4. For Page to Copy, enter the following:
-  - For New Page Name, enter **NYC Highschools Map**
-  - For Breadcrumb, select the Breadcrumb option
-  - For Entry Name - accept the default value or enter **NYC Highschools Map**
-  Accept the default values for other fields and click **Next**.
+    - For New Page Name, enter **NYC Highschools Map**
+    - For Breadcrumb, select the Breadcrumb option
+    - For Entry Name - accept the default value or enter **NYC Highschools Map**
+    Accept the default values for other fields and click **Next**.
 
- ![Page to Copy dialog](images/copy-page-2.png " ")  
+    ![Page to Copy dialog](images/copy-page-2.png " ")  
 
 4. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
 
