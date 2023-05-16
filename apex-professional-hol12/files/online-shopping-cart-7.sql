@@ -33,19 +33,22 @@ prompt APPLICATION 176481 - Online Shopping Application
 -- Application Export:
 --   Application:     176481
 --   Name:            Online Shopping Application
---   Date and Time:   12:30 Sunday May 14, 2023
+--   Date and Time:   13:02 Monday May 15, 2023
 --   Exported By:     ROOPESH.THOKALA@ORACLE.COM
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                     23
---       Items:                   36
---       Validations:              1
---       Processes:               26
---       Regions:                 49
---       Buttons:                 43
---       Dynamic Actions:         16
+--     Pages:                     26
+--       Items:                   51
+--       Computations:             1
+--       Validations:              4
+--       Processes:               33
+--       Regions:                 57
+--       Buttons:                 49
+--       Dynamic Actions:         19
 --     Shared Components:
 --       Logic:
+--         Items:                  2
+--         Processes:              1
 --         App Settings:           1
 --         Build Options:          2
 --       Navigation:
@@ -123,7 +126,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Online Shopping Application'
 ,p_last_updated_by=>'ROOPESH.THOKALA@ORACLE.COM'
-,p_last_upd_yyyymmddhh24miss=>'20230514123004'
+,p_last_upd_yyyymmddhh24miss=>'20230515130130'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>6
 ,p_print_server_type=>'INSTANCE'
@@ -180,6 +183,15 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_icon=>'fa-file-o'
 ,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
 ,p_list_item_current_for_pages=>'15'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(13070556594209669820)
+,p_list_item_display_sequence=>30
+,p_list_item_link_text=>'Products'
+,p_list_item_link_target=>'f?p=&APP_ID.:19:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-table-search'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'19'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(12946892420913533379)
@@ -767,6 +779,49 @@ end;
 prompt --application/shared_components/navigation/navigation_bar
 begin
 null;
+end;
+/
+prompt --application/shared_components/logic/application_processes/initialize_shopping_cart_header
+begin
+wwv_flow_imp_shared.create_flow_process(
+ p_id=>wwv_flow_imp.id(13044962954325672238)
+,p_process_sequence=>1
+,p_process_point=>'BEFORE_HEADER'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Initialize Shopping Cart Header'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'-- Initialize shopping cart navigation bar to show appropriate icon and count',
+'DECLARE',
+'    l_cnt NUMBER := manage_orders.get_quantity;',
+'BEGIN',
+'    IF l_cnt > 0 THEN',
+'        :SHOPPING_CART_ITEMS := l_cnt;',
+'        :SHOPPING_CART_ICON := ''fa-cart-full'';',
+'    ELSE',
+'        :SHOPPING_CART_ITEMS := '''';',
+'        :SHOPPING_CART_ICON := ''fa-cart-empty'';',
+'    END IF;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+);
+end;
+/
+prompt --application/shared_components/logic/application_items/shopping_cart_icon
+begin
+wwv_flow_imp_shared.create_flow_item(
+ p_id=>wwv_flow_imp.id(13044377225674175797)
+,p_name=>'SHOPPING_CART_ICON'
+,p_protection_level=>'I'
+);
+end;
+/
+prompt --application/shared_components/logic/application_items/shopping_cart_items
+begin
+wwv_flow_imp_shared.create_flow_item(
+ p_id=>wwv_flow_imp.id(13045023923506179560)
+,p_name=>'SHOPPING_CART_ITEMS'
+,p_protection_level=>'I'
+);
 end;
 /
 prompt --application/shared_components/logic/application_settings
@@ -20663,6 +20718,992 @@ wwv_flow_imp_page.create_page_item(
 ,p_item_plug_id=>wwv_flow_imp.id(9941481178447697528)
 ,p_display_as=>'NATIVE_HIDDEN'
 ,p_attribute_01=>'Y'
+);
+end;
+/
+prompt --application/pages/page_00016
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>16
+,p_name=>'Shopping Cart'
+,p_alias=>'SHOPPING-CART'
+,p_step_title=>'Shopping Cart'
+,p_autocomplete_on_off=>'OFF'
+,p_inline_css=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'img {',
+'    width: 150px;',
+'    height: 150px;',
+'}'))
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'23'
+,p_last_updated_by=>'ROOPESH.THOKALA@ORACLE.COM'
+,p_last_upd_yyyymmddhh24miss=>'20230515085759'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(9941481836538697535)
+,p_plug_name=>'Shopping Cart'
+,p_region_template_options=>'#DEFAULT#'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(12946455936009531143)
+,p_plug_display_sequence=>10
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT seq_id item,',
+'    p.product_image,',
+'    p.product_id,',
+'    p.product_name name,',
+'    p.unit_price,',
+'    n002               quantity,',
+'    p.unit_price* n002 subtotal,',
+'    b.brand',
+'FROM   apex_collections a,',
+'    products p,',
+'    json_table (p.product_details, ''$'' columns ( brand varchar2(4000) path ''$.brand'') ) b',
+'WHERE  collection_name = ''PRODUCTS''',
+'AND    p.product_id = a.n001'))
+,p_lazy_loading=>false
+,p_plug_source_type=>'NATIVE_CARDS'
+,p_plug_query_num_rows_type=>'SCROLL'
+,p_plug_query_no_data_found=>'Your shopping cart is empty!'
+,p_no_data_found_icon_classes=>'fa-cart-empty'
+,p_show_total_row_count=>false
+);
+wwv_flow_imp_page.create_card(
+ p_id=>wwv_flow_imp.id(9941481937041697536)
+,p_region_id=>wwv_flow_imp.id(9941481836538697535)
+,p_layout_type=>'ROW'
+,p_title_adv_formatting=>false
+,p_title_column_name=>'NAME'
+,p_sub_title_adv_formatting=>false
+,p_sub_title_column_name=>'BRAND'
+,p_body_adv_formatting=>true
+,p_body_html_expr=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<b>Unit Price: &UNIT_PRICE. </b> <BR>',
+'<b>Subtotal: &SUBTOTAL. </b>'))
+,p_second_body_adv_formatting=>false
+,p_media_adv_formatting=>false
+,p_media_source_type=>'BLOB'
+,p_media_blob_column_name=>'PRODUCT_IMAGE'
+,p_media_display_position=>'BODY'
+,p_media_sizing=>'FIT'
+,p_pk1_column_name=>'ITEM'
+);
+wwv_flow_imp_page.create_card_action(
+ p_id=>wwv_flow_imp.id(9941482050987697537)
+,p_card_id=>wwv_flow_imp.id(9941481937041697536)
+,p_action_type=>'BUTTON'
+,p_position=>'PRIMARY'
+,p_display_sequence=>10
+,p_label=>'New'
+,p_link_target_type=>'REDIRECT_PAGE'
+,p_link_target=>'f?p=&APP_ID.:17:&SESSION.::&DEBUG.::P17_PRODUCT_ID:&PRODUCT_ID.'
+,p_button_display_type=>'TEXT_WITH_ICON'
+,p_icon_css_classes=>'fa-cart-edit'
+,p_is_hot=>false
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(9941483146185697548)
+,p_plug_name=>'Order Information'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_imp.id(12946515505360531166)
+,p_plug_display_sequence=>20
+,p_plug_new_grid_row=>false
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13286104513718328607)
+,p_button_sequence=>60
+,p_button_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_button_name=>'Clear'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#:t-Button--iconLeft'
+,p_button_template_id=>wwv_flow_imp.id(12946588865524531197)
+,p_button_image_alt=>'Clear Shopping Cart	'
+,p_button_position=>'CHANGE'
+,p_button_condition=>'SHOPPING_CART_ITEMS'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+,p_icon_css_classes=>'fa-cart-empty'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13286104426137328606)
+,p_button_sequence=>60
+,p_button_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_button_name=>'Proceed'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(12946588795320531197)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Proceed to Checkout'
+,p_button_position=>'CREATE'
+,p_button_condition=>'SHOPPING_CART_ITEMS'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(13286106160884328623)
+,p_branch_name=>'Go to Orders'
+,p_branch_action=>'f?p=&APP_ID.:16:&SESSION.::&DEBUG.:16:P16_ORDER_ID:&P16_ORDER_ID.&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_when_button_id=>wwv_flow_imp.id(13286104426137328606)
+,p_branch_sequence=>10
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(13286106240997328624)
+,p_branch_name=>'Go to Products'
+,p_branch_action=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.:1::&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_sequence=>20
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(9941483268493697549)
+,p_name=>'P16_CUSTOMER_EMAIL'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_prompt=>'Customer Email'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286103909194328601)
+,p_name=>'P16_CUSTOMER_FULLNAME'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_prompt=>'Full Name'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286104038071328602)
+,p_name=>'P16_ORDER_ID'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_prompt=>'Order Id'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286104193783328603)
+,p_name=>'P16_CUSTOMER_ID'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_prompt=>'Customer Id'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>30
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_attribute_01=>'N'
+,p_attribute_02=>'N'
+,p_attribute_04=>'TEXT'
+,p_attribute_05=>'BOTH'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286104378376328605)
+,p_name=>'P16_STORE'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(9941483146185697548)
+,p_prompt=>'Store'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'select STORES.STORE_NAME as STORE_NAME,',
+'    STORES.STORE_ID as STORE_ID',
+'from STORES'))
+,p_lov_display_null=>'YES'
+,p_lov_null_text=>'- Select a Store -'
+,p_cHeight=>1
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(13286105655966328618)
+,p_validation_name=>'Validate Name'
+,p_validation_sequence=>10
+,p_validation=>'P16_CUSTOMER_FULLNAME'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please enter your Name.'
+,p_when_button_pressed=>wwv_flow_imp.id(13286104426137328606)
+,p_associated_item=>wwv_flow_imp.id(13286103909194328601)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(13286105732218328619)
+,p_validation_name=>'Validate Email'
+,p_validation_sequence=>20
+,p_validation=>'P16_CUSTOMER_EMAIL'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please enter your email address	'
+,p_when_button_pressed=>wwv_flow_imp.id(13286104426137328606)
+,p_associated_item=>wwv_flow_imp.id(9941483268493697549)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_validation(
+ p_id=>wwv_flow_imp.id(13286105838836328620)
+,p_validation_name=>'Validate Store	'
+,p_validation_sequence=>30
+,p_validation=>'P16_STORE'
+,p_validation_type=>'ITEM_NOT_NULL'
+,p_error_message=>'Please select a store'
+,p_when_button_pressed=>wwv_flow_imp.id(13286104426137328606)
+,p_associated_item=>wwv_flow_imp.id(13286104378376328605)
+,p_error_display_location=>'INLINE_WITH_FIELD_AND_NOTIFICATION'
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13286106397735328625)
+,p_name=>'Update Shopping Cart Header'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(9941481836538697535)
+,p_triggering_condition_type=>'JAVASCRIPT_EXPRESSION'
+,p_triggering_expression=>'parseInt(this.data.P17_SHOPPING_CART_ITEMS) > 0'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286106491691328626)
+,p_event_id=>wwv_flow_imp.id(13286106397735328625)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_name=>'Update Badge & Icon'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P17_SHOPPING_CART_ITEMS);',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-empty'').addClass(''fa-cart-full'');'))
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286106628701328628)
+,p_event_id=>wwv_flow_imp.id(13286106397735328625)
+,p_event_result=>'FALSE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_name=>'Refresh Shopping Cart region'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('''');',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-full'').addClass(''fa-cart-empty'');'))
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286106533497328627)
+,p_event_id=>wwv_flow_imp.id(13286106397735328625)
+,p_event_result=>'TRUE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_name=>'Refresh Shopping Cart region'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(9941481836538697535)
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286106734602328629)
+,p_event_id=>wwv_flow_imp.id(13286106397735328625)
+,p_event_result=>'FALSE'
+,p_action_sequence=>20
+,p_execute_on_page_init=>'N'
+,p_name=>'Refresh Shopping Cart region'
+,p_action=>'NATIVE_REFRESH'
+,p_affected_elements_type=>'REGION'
+,p_affected_region_id=>wwv_flow_imp.id(9941481836538697535)
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286105929402328621)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Checkout'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    MANAGE_ORDERS.create_order (',
+'                                p_customer       => :P16_CUSTOMER_FULLNAME,',
+'                                p_customer_email => :P16_CUSTOMER_EMAIL,',
+'                                p_store          => :P16_STORE,',
+'                                p_order_id       => :P16_ORDER_ID,',
+'                                p_customer_id    => :P16_CUSTOMER_ID);   ',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(13286104426137328606)
+,p_process_success_message=>'Order successfully created: &P16_ORDER_ID.'
+,p_internal_uid=>13286105929402328621
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286106036649328622)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Clear Shopping Cart'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    manage_orders.clear_cart;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(13286104513718328607)
+,p_internal_uid=>13286106036649328622
+);
+end;
+/
+prompt --application/pages/page_00017
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>17
+,p_name=>'Add to Cart'
+,p_alias=>'ADD-TO-CART'
+,p_page_mode=>'MODAL'
+,p_step_title=>'Manage your Cart'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_dialog_height=>'600'
+,p_dialog_width=>'600'
+,p_protection_level=>'C'
+,p_page_component_map=>'23'
+,p_last_updated_by=>'ROOPESH.THOKALA@ORACLE.COM'
+,p_last_upd_yyyymmddhh24miss=>'20230515090830'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(9941482142953697538)
+,p_plug_name=>'Product'
+,p_region_template_options=>'#DEFAULT#:t-CardsRegion--styleC'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(12946455936009531143)
+,p_plug_display_sequence=>10
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT product_id,',
+'         product_name,',
+'         unit_price,',
+'         product_details,',
+'         product_image,',
+'         image_mime_type,',
+'         image_filename,',
+'         image_charset,',
+'         image_last_updated,',
+'         color_id,',
+'         department_id,',
+'         clothing_id,',
+'         d.description,',
+'         b.brand',
+'     FROM   products p,',
+'         json_table (p.product_details, ''$'' columns ( description varchar2(4000) path ''$.description'') ) d,',
+'         json_table (p.product_details, ''$'' columns ( brand       varchar2(4000) path ''$.brand'') ) b',
+'     WHERE  product_id = :p17_product_id'))
+,p_lazy_loading=>false
+,p_plug_source_type=>'NATIVE_CARDS'
+,p_plug_query_num_rows_type=>'SCROLL'
+,p_show_total_row_count=>false
+);
+wwv_flow_imp_page.create_card(
+ p_id=>wwv_flow_imp.id(9941482228809697539)
+,p_region_id=>wwv_flow_imp.id(9941482142953697538)
+,p_layout_type=>'FLOAT'
+,p_title_adv_formatting=>false
+,p_title_column_name=>'PRODUCT_NAME'
+,p_sub_title_adv_formatting=>false
+,p_sub_title_column_name=>'BRAND'
+,p_body_adv_formatting=>false
+,p_body_column_name=>'DESCRIPTION'
+,p_second_body_adv_formatting=>true
+,p_second_body_html_expr=>'Price: &UNIT_PRICE.'
+,p_media_adv_formatting=>false
+,p_media_source_type=>'BLOB'
+,p_media_blob_column_name=>'PRODUCT_IMAGE'
+,p_media_display_position=>'BODY'
+,p_media_sizing=>'FIT'
+,p_pk1_column_name=>'PRODUCT_ID'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(9941482361103697540)
+,p_plug_name=>'Customer Reviews'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(12946515505360531166)
+,p_plug_display_sequence=>20
+,p_plug_new_grid_row=>false
+,p_plug_new_grid_column=>false
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT m.rating,',
+'    m.review',
+'FROM   products p,',
+'    product_reviews m',
+'WHERE  p.product_name = m.product_name',
+'    AND p.product_id = :p17_product_id',
+'    order by m.rating desc'))
+,p_lazy_loading=>false
+,p_plug_source_type=>'NATIVE_CARDS'
+,p_plug_query_num_rows_type=>'SCROLL'
+,p_plug_query_no_data_found=>'There are no customer reviews yet.'
+,p_show_total_row_count=>false
+);
+wwv_flow_imp_page.create_card(
+ p_id=>wwv_flow_imp.id(9941482411680697541)
+,p_region_id=>wwv_flow_imp.id(9941482361103697540)
+,p_layout_type=>'ROW'
+,p_title_adv_formatting=>true
+,p_title_html_expr=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<b>Review:</b> &REVIEW. <br>',
+'<b>Rating:</b> &RATING.'))
+,p_sub_title_adv_formatting=>false
+,p_body_adv_formatting=>false
+,p_second_body_adv_formatting=>false
+,p_media_adv_formatting=>false
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(13286104636954328608)
+,p_plug_name=>'Buttons Bar'
+,p_region_template_options=>'#DEFAULT#'
+,p_plug_template=>wwv_flow_imp.id(12946451644707531141)
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_03'
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13286105433261328616)
+,p_button_sequence=>50
+,p_button_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_button_name=>'Edit'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(12946588795320531197)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Update Quantity'
+,p_button_position=>'CREATE'
+,p_button_condition=>'P17_QUANTITY'
+,p_button_condition_type=>'ITEM_IS_NOT_ZERO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13286105557210328617)
+,p_button_sequence=>50
+,p_button_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_button_name=>'Delete'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#:t-Button--danger:t-Button--link:t-Button--gapRight'
+,p_button_template_id=>wwv_flow_imp.id(12946588795320531197)
+,p_button_image_alt=>'Remove from Cart'
+,p_button_position=>'EDIT'
+,p_button_condition=>'P17_QUANTITY'
+,p_button_condition_type=>'ITEM_IS_NOT_ZERO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13286105346742328615)
+,p_button_sequence=>50
+,p_button_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_button_name=>'Add'
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>wwv_flow_imp.id(12946588795320531197)
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Add'
+,p_button_position=>'NEXT'
+,p_button_condition=>'P17_QUANTITY'
+,p_button_condition_type=>'ITEM_IS_ZERO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286104799247328609)
+,p_name=>'P17_ACTION'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286104970420328611)
+,p_name=>'P17_PRODUCT_ID'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286105099128328612)
+,p_name=>'P17_SHOPPING_CART_ITEMS'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_display_as=>'NATIVE_HIDDEN'
+,p_attribute_01=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286105273527328614)
+,p_name=>'P17_QUANTITY'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(13286104636954328608)
+,p_prompt=>'Quantity'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC:1;1,2;2,3;3,4;4,5;5'
+,p_cHeight=>1
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_lov_display_extra=>'NO'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+);
+wwv_flow_imp_page.create_page_computation(
+ p_id=>wwv_flow_imp.id(13286106863450328630)
+,p_computation_sequence=>10
+,p_computation_item=>'P17_QUANTITY'
+,p_computation_point=>'BEFORE_BOX_BODY'
+,p_computation_type=>'FUNCTION_BODY'
+,p_computation_language=>'PLSQL'
+,p_computation=>'RETURN manage_orders.product_exists(p_product => :P17_PRODUCT_ID);'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286106903615328631)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Add Product'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    IF manage_orders.product_exists(p_product => :P17_PRODUCT_ID) = 0 THEN',
+'        manage_orders.add_product (p_product  => :P17_PRODUCT_ID,',
+'                                p_quantity => :P17_QUANTITY);',
+'    END IF;',
+'    :P17_ACTION := ''ADD'';',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(13286105346742328615)
+,p_internal_uid=>13286106903615328631
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286107014960328632)
+,p_process_sequence=>20
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Edit product'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    IF manage_orders.product_exists(p_product => :P17_PRODUCT_ID) > 0 THEN',
+'        manage_orders.remove_product(p_product => :P17_PRODUCT_ID);',
+'        manage_orders.add_product (p_product  => :P17_PRODUCT_ID,',
+'                                p_quantity => :P17_QUANTITY);',
+'    END IF;',
+'    :P17_ACTION := ''EDIT'';',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(13286105433261328616)
+,p_internal_uid=>13286107014960328632
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286107110123328633)
+,p_process_sequence=>30
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Delete product'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    IF manage_orders.product_exists(p_product => :P17_PRODUCT_ID) > 0 THEN',
+'        manage_orders.remove_product(p_product => :P17_PRODUCT_ID);',
+'    END IF;',
+'    :P17_ACTION := ''DELETE'';',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(13286105557210328617)
+,p_internal_uid=>13286107110123328633
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286107228425328634)
+,p_process_sequence=>40
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Calculate Shopping Cart Items'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'BEGIN',
+'    :P17_SHOPPING_CART_ITEMS := manage_orders.get_quantity;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>13286107228425328634
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(13286107365340328635)
+,p_process_sequence=>50
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_CLOSE_WINDOW'
+,p_process_name=>'Close Dialog'
+,p_attribute_01=>'P17_SHOPPING_CART_ITEMS,P17_PRODUCT_ID,P17_ACTION,P17_QUANTITY'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>13286107365340328635
+);
+end;
+/
+prompt --application/pages/page_00019
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>19
+,p_name=>'Products'
+,p_alias=>'PRODUCTS'
+,p_step_title=>'Products'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>wwv_flow_imp.id(12946415849800531127)
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'22'
+,p_last_updated_by=>'ROOPESH.THOKALA@ORACLE.COM'
+,p_last_upd_yyyymmddhh24miss=>'20230515130130'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(13070556950900669822)
+,p_plug_name=>'Search Results'
+,p_region_template_options=>'#DEFAULT#:t-CardsRegion--styleA'
+,p_plug_template=>wwv_flow_imp.id(12946455936009531143)
+,p_plug_display_sequence=>20
+,p_query_type=>'SQL'
+,p_plug_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'SELECT "PRODUCT_ID",',
+'    "PRODUCT_NAME",',
+'    "UNIT_PRICE",',
+'    "PRODUCT_DETAILS",',
+'    "PRODUCT_IMAGE",',
+'    "IMAGE_MIME_TYPE",',
+'    "IMAGE_FILENAME",',
+'    "IMAGE_CHARSET",',
+'    "IMAGE_LAST_UPDATED",',
+'    "COLOR_ID",',
+'    (',
+'            SELECT l1."COLOR"',
+'            FROM   "COLOR_LOOKUP" l1',
+'            WHERE  l1."COLOR_ID" = m."COLOR_ID") "COLOR_ID_L$1",',
+'    "DEPARTMENT_ID",',
+'    (',
+'            SELECT l2."DEPARTMENT"',
+'            FROM   "DEPARTMENT_LOOKUP" l2',
+'            WHERE  l2."DEPARTMENT_ID" = m."DEPARTMENT_ID") "DEPARTMENT_ID_L$2",',
+'    "CLOTHING_ID",',
+'    (',
+'            SELECT l3."CLOTHING"',
+'            FROM   "CLOTHING_LOOKUP" l3',
+'            WHERE  l3."CLOTHING_ID" = m."CLOTHING_ID") "CLOTHING_ID_L$3",',
+'    b.brand',
+'FROM   "PRODUCTS" m,',
+'    json_table (m.product_details, ''$'' columns ( brand varchar2(4000) path ''$.brand'') ) b'))
+,p_query_order_by_type=>'ITEM'
+,p_query_order_by=>'{ "itemName": "P19_ORDER_BY", "orderBys": [{"key":"PRODUCT_NAME","expr":"\"PRODUCT_NAME\" asc"}]}'
+,p_lazy_loading=>false
+,p_plug_source_type=>'NATIVE_CARDS'
+,p_plug_query_num_rows_type=>'SCROLL'
+,p_show_total_row_count=>false
+,p_pagination_display_position=>'BOTTOM_RIGHT'
+);
+wwv_flow_imp_page.create_card(
+ p_id=>wwv_flow_imp.id(13070559484516669826)
+,p_region_id=>wwv_flow_imp.id(13070556950900669822)
+,p_layout_type=>'GRID'
+,p_title_adv_formatting=>false
+,p_title_column_name=>'PRODUCT_NAME'
+,p_sub_title_adv_formatting=>true
+,p_sub_title_html_expr=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'<small>&BRAND.</small><br />',
+'<b class="u-success-text u-pullRight" id="message_&PRODUCT_ID.">',
+'{if QUANTITY/} &QUANTITY. in cart {endif/}',
+'</b>',
+'<b>$&UNIT_PRICE.</b>'))
+,p_body_adv_formatting=>false
+,p_second_body_adv_formatting=>false
+,p_media_adv_formatting=>false
+,p_media_source_type=>'BLOB'
+,p_media_blob_column_name=>'PRODUCT_IMAGE'
+,p_media_display_position=>'FIRST'
+,p_media_appearance=>'WIDESCREEN'
+,p_media_sizing=>'FIT'
+,p_pk1_column_name=>'PRODUCT_ID'
+);
+wwv_flow_imp_page.create_card_action(
+ p_id=>wwv_flow_imp.id(13286108047395328642)
+,p_card_id=>wwv_flow_imp.id(13070559484516669826)
+,p_action_type=>'FULL_CARD'
+,p_display_sequence=>10
+,p_link_target_type=>'REDIRECT_PAGE'
+,p_link_target=>'f?p=&APP_ID.:17:&SESSION.::&DEBUG.:17:P17_PRODUCT_ID:&PRODUCT_ID.'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(13070557091386669822)
+,p_plug_name=>'Search'
+,p_region_template_options=>'#DEFAULT#:t-Region--noPadding:t-Region--hideHeader:t-Region--scrollBody'
+,p_plug_template=>wwv_flow_imp.id(12946515505360531166)
+,p_plug_display_sequence=>10
+,p_plug_grid_column_span=>4
+,p_plug_display_point=>'REGION_POSITION_02'
+,p_plug_source_type=>'NATIVE_FACETED_SEARCH'
+,p_filtered_region_id=>wwv_flow_imp.id(13070556950900669822)
+,p_landmark_label=>'Filters'
+,p_attribute_01=>'N'
+,p_attribute_06=>'E'
+,p_attribute_08=>'#active_facets'
+,p_attribute_09=>'Y'
+,p_attribute_10=>'Total Products'
+,p_attribute_12=>'10000'
+,p_attribute_13=>'N'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(13070558201537669824)
+,p_plug_name=>'Button Bar'
+,p_region_template_options=>'#DEFAULT#:t-ButtonRegion--noPadding:t-ButtonRegion--noUI'
+,p_escape_on_http_output=>'Y'
+,p_plug_template=>wwv_flow_imp.id(12946451644707531141)
+,p_plug_display_sequence=>10
+,p_query_type=>'SQL'
+,p_plug_source=>'<div id="active_facets"></div>'
+,p_plug_query_num_rows=>15
+,p_attribute_01=>'N'
+,p_attribute_02=>'HTML'
+,p_attribute_03=>'Y'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(13070558709657669825)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(13070558201537669824)
+,p_button_name=>'RESET'
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#:t-Button--noUI:t-Button--iconLeft'
+,p_button_template_id=>wwv_flow_imp.id(12946588865524531197)
+,p_button_image_alt=>'Reset'
+,p_button_position=>'NEXT'
+,p_button_redirect_url=>'f?p=&APP_ID.:19:&APP_SESSION.::&DEBUG.:RR,19::'
+,p_icon_css_classes=>'fa-undo'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13070557527355669823)
+,p_name=>'P19_SEARCH'
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(13070557091386669822)
+,p_prompt=>'Search'
+,p_source=>'IMAGE_MIME_TYPE,IMAGE_FILENAME,IMAGE_CHARSET,PRODUCT_NAME,DEPARTMENT_ID,CLOTHING_ID,COLOR_ID'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_SEARCH'
+,p_attribute_01=>'ROW'
+,p_attribute_02=>'FACET'
+,p_attribute_04=>'N'
+,p_fc_collapsible=>false
+,p_fc_initial_collapsed=>false
+,p_fc_show_chart=>false
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13070557922070669824)
+,p_name=>'P19_UNIT_PRICE'
+,p_source_data_type=>'NUMBER'
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(13070557091386669822)
+,p_prompt=>'Unit Price'
+,p_source=>'UNIT_PRICE'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_RANGE'
+,p_lov=>'STATIC2:<10;|10,10 - 20;10|20,20 - 25;20|25,25 - 35;25|35,>=35;35|'
+,p_attribute_01=>'Y'
+,p_attribute_02=>'N'
+,p_fc_show_label=>true
+,p_fc_collapsible=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>7
+,p_fc_filter_values=>false
+,p_fc_show_selected_first=>false
+,p_fc_show_chart=>true
+,p_fc_initial_chart=>false
+,p_fc_actions_filter=>true
+,p_fc_toggleable=>false
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13070559920065669826)
+,p_name=>'P19_ORDER_BY'
+,p_is_required=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(13070556950900669822)
+,p_item_display_point=>'ORDER_BY_ITEM'
+,p_item_default=>'PRODUCT_NAME'
+,p_prompt=>'Order By'
+,p_display_as=>'NATIVE_SELECT_LIST'
+,p_lov=>'STATIC2:Product Name;PRODUCT_NAME'
+,p_ajax_optimize_refresh=>'Y'
+,p_cHeight=>1
+,p_label_alignment=>'RIGHT'
+,p_field_template=>wwv_flow_imp.id(12946586224211531196)
+,p_item_template_options=>'#DEFAULT#'
+,p_warn_on_unsaved_changes=>'I'
+,p_lov_display_extra=>'NO'
+,p_escape_on_http_output=>'N'
+,p_attribute_01=>'NONE'
+,p_attribute_02=>'N'
+,p_attribute_03=>'Y'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286107611777328638)
+,p_name=>'P19_CLOTHING_ID'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(13070557091386669822)
+,p_prompt=>'Clothing Id'
+,p_source=>'CLOTHING_ID'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_CHECKBOX'
+,p_item_template_options=>'#DEFAULT#'
+,p_fc_show_label=>true
+,p_fc_collapsible=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>7
+,p_fc_filter_values=>false
+,p_fc_sort_by_top_counts=>true
+,p_fc_show_selected_first=>false
+,p_fc_show_chart=>true
+,p_fc_initial_chart=>false
+,p_fc_actions_filter=>true
+,p_fc_toggleable=>false
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286107839017328640)
+,p_name=>'P19_DEPARTMENT_ID'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(13070557091386669822)
+,p_prompt=>'Department Id'
+,p_source=>'DEPARTMENT_ID'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_CHECKBOX'
+,p_item_template_options=>'#DEFAULT#'
+,p_fc_show_label=>true
+,p_fc_collapsible=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>7
+,p_fc_filter_values=>false
+,p_fc_sort_by_top_counts=>true
+,p_fc_show_selected_first=>false
+,p_fc_show_chart=>true
+,p_fc_initial_chart=>false
+,p_fc_actions_filter=>true
+,p_fc_toggleable=>false
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(13286107904688328641)
+,p_name=>'P19_COLOR_ID'
+,p_source_data_type=>'VARCHAR2'
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(13070557091386669822)
+,p_prompt=>'Color Id'
+,p_source=>'COLOR_ID'
+,p_source_type=>'FACET_COLUMN'
+,p_display_as=>'NATIVE_CHECKBOX'
+,p_item_template_options=>'#DEFAULT#'
+,p_fc_show_label=>true
+,p_fc_collapsible=>false
+,p_fc_compute_counts=>true
+,p_fc_show_counts=>true
+,p_fc_zero_count_entries=>'H'
+,p_fc_show_more_count=>7
+,p_fc_filter_values=>false
+,p_fc_sort_by_top_counts=>true
+,p_fc_show_selected_first=>false
+,p_fc_show_chart=>true
+,p_fc_initial_chart=>false
+,p_fc_actions_filter=>true
+,p_fc_toggleable=>false
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13286108139151328643)
+,p_name=>'Show Success Message'
+,p_event_sequence=>10
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(13070556950900669822)
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286108274313328644)
+,p_event_id=>wwv_flow_imp.id(13286108139151328643)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'var productAction   = this.data.P17_ACTION,',
+'    productQuantity = this.data.P17_QUANTITY,',
+'    productCard$  = apex.jQuery("#message_" + this.data.P17_PRODUCT_ID);',
+'',
+'if (productAction === ''ADD'') {',
+'    productCard$.text("Added " + productQuantity + " to cart!");',
+'} else if (productAction === ''EDIT'') {',
+'    productCard$.text("Updated quantity to " + productQuantity + "!");',
+'} else if (productAction === ''DELETE'') {',
+'    productCard$.text("Removed from cart!");',
+'}'))
+);
+wwv_flow_imp_page.create_page_da_event(
+ p_id=>wwv_flow_imp.id(13286108472562328646)
+,p_name=>'Update Shopping Cart Header'
+,p_event_sequence=>20
+,p_triggering_element_type=>'REGION'
+,p_triggering_region_id=>wwv_flow_imp.id(13070556950900669822)
+,p_triggering_condition_type=>'JAVASCRIPT_EXPRESSION'
+,p_triggering_expression=>'parseInt(this.data.P17_SHOPPING_CART_ITEMS) > 0'
+,p_bind_type=>'bind'
+,p_execution_type=>'IMMEDIATE'
+,p_bind_event_type=>'apexafterclosedialog'
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286108500243328647)
+,p_event_id=>wwv_flow_imp.id(13286108472562328646)
+,p_event_result=>'TRUE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P17_SHOPPING_CART_ITEMS);',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-empty'').addClass(''fa-cart-full'');'))
+);
+wwv_flow_imp_page.create_page_da_action(
+ p_id=>wwv_flow_imp.id(13286108677479328648)
+,p_event_id=>wwv_flow_imp.id(13286108472562328646)
+,p_event_result=>'FALSE'
+,p_action_sequence=>10
+,p_execute_on_page_init=>'N'
+,p_action=>'NATIVE_JAVASCRIPT_CODE'
+,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'// Update Badge Text',
+'apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('''');',
+'',
+'// Update Icon',
+'apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass(''fa-cart-full'').addClass(''fa-cart-empty'');'))
 );
 end;
 /
