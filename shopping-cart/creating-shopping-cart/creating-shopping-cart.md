@@ -34,10 +34,15 @@ In this lab, you will:
 These items are needed to count the number of items in the shopping cart and the icon to display in the Navigation Bar.
 
 1. Click on **Shared Components**
+
     ![Application homepage](./images/shared-components-icon.png " ")
+
 2. Under Application Logic, click **Application Items**.
+
     ![Shared Components page](./images/application-items.png " ")
+
 3. Click **Create**.
+
 4. Create two items as follow:
 
     | Name |  Scope  |
@@ -47,9 +52,11 @@ These items are needed to count the number of items in the shopping cart and the
     {: title="Application items"}
 
 5. Click **Create Application Item** and create the second item.
+
     ![Application Items page](./images/create-application-item.png " ")
 
 ## Task 2: Create Application Process
+
 This process is needed to refresh the number of items in the Shopping Cart, which will be shown in the navigation bar.
 
 1. Click on **Shared Components**.
@@ -82,7 +89,7 @@ This process is needed to refresh the number of items in the Shopping Cart, whic
     ```
     Click **Next**.
     ![Enter code dialog while creating Application Process.](./images/application-process2.png " ")
-             
+
 7. Click **Create Process**.   
 
 ## Task 3: Create a Normal Page - Shopping Cart
@@ -130,24 +137,24 @@ This region will list the items that have been added temporarily to the shopping
             </copy>
         ```
         ![Property Editor](./images/cards-details.png " ")
-        
+
 4. Click on **Attributes** and enter the following:
-    
+
     - Under Appearance section:
         - For Layout - select **Horizontal (Row)**
         ![Attributes tab of the Page Designer](./images/attributes1.png " ")
-        
+
     - Under Title section:
         - For Column - select **NAME**
 
     - Under Subtitle section:
         - For Column - select **BRAND**    
         ![Attributes tab of the Page Designer](./images/attributes2.png " ")
-        
+
     - Under Body section:
         - Set Advanced Formatting to **On**
         - For HTML Expression - enter the following:
-        
+
             ```
             <copy>
             Quantity: &QUANTITY.
@@ -165,7 +172,7 @@ This region will list the items that have been added temporarily to the shopping
             </copy>
             ```
           ![Attributes tab of the Page Designer](./images/attributes-body.png " ")
-          
+
     - Under Media section:
         - For Source - select **BLOB Column**
         - For BLOB Column - select **PRODUCT_IMAGE**
@@ -175,7 +182,7 @@ This region will list the items that have been added temporarily to the shopping
         - For When No Data Found - enter: **Your shopping cart is empty!**
         - For No Data Found Icon - select **fa-cart-empty**
         ![Attributes tab of the Page Designer](./images/attributes4.png " ")
-        
+
     - Under Card section:
         - For Primary Key Column 1 - select **ITEM**
         ![Attributes tab of the Page Designer](./images/attributes5.png " ")
@@ -208,7 +215,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 1. Navigate to the **Gallery Menu**.
 2. Drag a **Static Content** region and drop it to the right of the Shopping Cart region to create a second region of content.
     ![Gallery Menu in the Page Designer](./images/static-content-r.png " ")
-    
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Order Information**
 4. Navigate to the **Order Information** (left pane) region.
@@ -282,7 +289,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     | Please enter your email address | Inline with Field and in Notification | P17\_CUSTOMER\_EMAIL |
     | Please select a store | Inline with Field and in Notification | P17_STORE |
     {: title="Error Messages for the Validations"}
-    
+
      ![Validation attributes in the Page Designer](./images/validations.png " ")
 
      As these validations only apply when user proceeds to checkout, let's create that condition.
@@ -296,7 +303,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     {: title="Server-side Conditions"}   
 
      ![Validation attributes in the Page Designer](./images/button-condition.png " ")       
-    
+
 ## Task 8: Add Process to Create the Order
 
 1. On the **Processing** tab (left pane).
@@ -322,9 +329,9 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
     - For Success Message, enter **Order successfully created: &P17\_ORDER\_ID.**
     - Under Server-side conditions, for When Button Pressed, select **Proceed**
-    
+
     ![Property Editor](./images/process-properties.png " ")
-    
+
 
 ## Task 9: Add Process to Clear the Shopping Cart
 
@@ -344,9 +351,9 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     ```
 
     - For When Button Pressed, select **Clear**
-    
+
     ![Property Editor for Process](./images/clear-process.png " ")
-    
+
 
 ## Task 10: Add Branches to the Page
 
@@ -362,7 +369,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
             | Name | Value  |
             | --- |  --- |
-            | P16_ORDER | &P17\_ORDER\_ID. |
+            | P16_ORDER_ID | &P17\_ORDER\_ID. |
 
         - For Clear Cache - enter **16**.
         - Click **OK**.
@@ -405,7 +412,7 @@ In this task, you will create a dynamic action to:
             </copy>
             ```
         ![Property Editor for Dynamic Actions](./images/da-properties.png " ")  
-        
+
 4. Navigate to **Refresh** Action.
     - Under Identification section:
         - For Action - select **Execute JavaScript Code**
