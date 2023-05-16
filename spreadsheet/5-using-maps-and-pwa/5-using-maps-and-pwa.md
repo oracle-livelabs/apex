@@ -38,11 +38,11 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
  ![Page to Copy dialog](images/copy-page-2.png " ")  
 
-4. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
+5. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
 
     ![Navigation menu dialog](images/copy-page-3.png " ")   
 
-5. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
+6. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
 
     ![New names table is displayed in the dialog](images/copy-page-4.png " ")
 
@@ -50,13 +50,9 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
 
 ## **Task 2**: Adding a Map Region
-1. The newly created Page 6, **NYC Highschools Map** opens in the Page Designer. In the Rendering pane, select the **Search** region. Now, in the property editor, navigate to *Source > Filtered Region* and select the **Nyc Highschools** region.
-    ![Page Designer view](images/search-filtered-region.png " ")
-    
+1. The newly created Page 6, **NYC Highschools Map** opens in the Page Designer. In the Rendering pane, navigate to Body and select the **Nyc Highschools** region. In the Property Editor, change the type to **Map**.
 
-1. In the Rendering pane, navigate to Body and select the **Nyc Highschools** region. In the Property Editor, change the type to **Map**.
     ![Page Designer view](images/select-map-type.png " ")
-
 
 2. To customize a map region, you need to add layers. Under Layers, click on **New**.
   In the property editor, perform the following:
@@ -238,4 +234,4 @@ You now know how to embed a maps in your application and to install a Progressiv
 ## **Acknowledgements**
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, April 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023

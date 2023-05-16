@@ -4,24 +4,16 @@
 
 In this lab, you create regions that will represent APEX features as well as serve as page content containers: Regions with page items and buttons nested inside of them.
 
-The first region will be a **FORM** region and the second will be a
-**CARDS** region. The idea is that the **FORM** region will present a UI
-that will enable users to choose an image file from their device (or
-take a picture on mobile) and enter an associated comment for the post.
+The first region will be a **FORM** region and the second will be a **CARDS** region. The idea is that the **FORM** region will present a UI that will enable users to choose an image file from their device (or take a picture on mobile) and enter an associated comment for the post.
 
-The **CARDS** region will show photos or images in a grid arrangement as
-they get posted into the **SM\_POSTS** table by way of the **FORM**
-region. The cards region will serve as our scaffold for other features
-such as displaying the post comment, reaction counts, as well as buttons
-for reacting/liking a post and enabling a user to delete their own
-posts.
+The **CARDS** region will show photos or images in a grid arrangement as they get posted into the **SM\_POSTS** table by way of the **FORM** region. The cards region will serve as our scaffold for other features such as displaying the post comment, reaction counts, as well as buttons for reacting/liking a post and enabling a user to delete their own posts.
 
 Estimated Time: 15 minutes
 
 ## Prerequisite
 
-    - All previous labs 1-4 are executed.
-    - If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
+  - All previous labs 1-4 are executed.
+  - If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
 
 ## **Task 1**: Add a Form Region
 
@@ -49,7 +41,7 @@ created from the script. Therefore, in the **Source** section, specify the **Tab
 table as "fields" in the form (visible on the left in the tree view and
 in the layout view).
 
-4. Run the app and sign-in to see what it looks like!
+4. Save and Run the app and sign-in to see what it looks like!
 
     ![The app homepage](images/run-app.png "")
 
@@ -81,15 +73,11 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
     ![Rendering tree with page items](images/delete-page-items.png "")
 
-    **If you made a mistake**, you can easily re-sync all the Region Page
-items back and repeat the process. If you need to do this, *right click*
-on the **Post** tree entry, and choose Synchronize Page Items, and then
-carefully delete those that we don't want.
+    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. If you need to do this, *right click* on the **Post** tree entry, and choose Synchronize Page Items, and then carefully delete those that we don't want.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 
-2. Next, we want to change some parameters of the remaining page items on
-the form. For the **P1\_POST\_COMMENT** item, update the following:
+2. Next, we want to change some parameters of the remaining page items on the form. For the **P1\_POST\_COMMENT** item, update the following:
     - For **Type**, choose **Text Field**.
     - For **Label**, enter **Post**.
 
@@ -100,23 +88,18 @@ the form. For the **P1\_POST\_COMMENT** item, update the following:
 
     ![Updated app is displayed](images/updated-app.png "")
 
-4. Moving on, the **Lat** and **Lon** items don't need to be seen, so we'll
-hide them next.
-    In Page Designer, multi-select both **P1\_LAT** and **P1\_LON** and change
-the type to **Hidden**.
+4. Moving on, the **Lat** and **Lon** items don't need to be seen, so we'll hide them next. In Page Designer, multi-select both **P1\_LAT** and **P1\_LON** and change the type to **Hidden**.
 
     ![Rendering tree](images/lat-lon.png "")
 
-    For the sake of keeping things organized, let's move them under the
-*P1\_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
-
+    For the sake of keeping things organized, let's move them under the *P1\_ID* page item that was already hidden (they should still be multi-selected so you can just drag them up).
     ![Rendering tree](images/updated-tree.png "")
 
 5. Next, we want to configure the **P1\_FILE\_BLOB** page item:
 
     - Change the **Type** to **File Browse...**
     - Set the **Label** to **Photo**
-    - Under **Settings**, for **Display As**, select **Block Dropzone** 
+    - Under **Settings**, for **Display As**, select **Block Dropzone**
     - For **Dropzone Title**, enter "**Share a photo..**"
     - For **Storage Type**, select **BLOB column specified in Item Source attribute**
 
@@ -135,7 +118,7 @@ set:
 
     Ok, that was a bunch of changes!
 
-6. Let's save and run and see how it looks. 
+6. Let's save and run and see how it looks.
 
     ![Running app is displayed](images/updated-app-2.png)
 
@@ -147,37 +130,35 @@ from view when the page is loaded. We will then adjust some other
 settings, and then create a button that will be used to make
 this form visible to the user as a modal form.
 
-1. First, we want to move the **P1\_POST\_COMMENT** page item under the
-**P1\_FILE\_BLOB** item to improve the UX such that the user will expect to
-specify the photo first, and then add a comment. To do this, simply drag
-the **P1\_POST\_COMMENT** item to underneath the **P1\_FILE\_BLOB** item:
+1. First, we want to move the **P1\_POST\_COMMENT** page item under the **P1\_FILE\_BLOB** item to improve the UX such that the user will expect to specify the photo first, and then add a comment. To do this, simply drag the **P1\_POST\_COMMENT** item to underneath the **P1\_FILE\_BLOB** item:
 
     ![Rendering tree with page items is displayed](images/post-page-items.png "")
 
 2. Next, click on **Posts** in the rendering tree, so that we have that **Form** region selected. Focus your attention to setting the attributes for the region on the right:
 
-    1.  In the **Region** > **Layout** section, change the **Position**
+    a) In the **Region** > **Layout** section, change the **Position**
     to **Dialogs, Drawers and Popups**.
-        
-        ![Property editor](images/post-property-1.png "")
 
-    2.  In the **Appearance** section, change the **Template** to **Inline Dialog**
+    ![Property editor](images/post-property-1.png "")
 
-        ![Property editor](images/post-property-2.png "")
+    b)  In the **Appearance** section, change the **Template** to **Inline Dialog**
 
-    3.  Next, click on the **Template Options** button so that we can customize some options.
+    ![Property editor](images/post-property-2.png "")
 
-        ![Property editor](images/post-property-3.png "")
+    c)  Next, click on the **Template Options** button so that we can customize some options.
 
-    4.  Then, set the options to match the following:
-        - Check **Auto Height** 
-        - Set **Size** to **None**
-        - Set **Heading Level** to **H1**
+    ![Property editor](images/post-property-3.png "")
 
-        ![Property editor](images/post-property-4.png "")
+    d)  Then, set the options to match the following:
+      - Check **Auto Height**
 
-    That should complete what we need to configure for the Post form region
-itself.
+      - Set **Size** to **None**
+
+      - Set **Heading Level** to **H1**
+
+  ![Property editor](images/post-property-4.png "")
+
+  That should complete what we need to configure for the Post form region itself.
 
 3. Let's save and run the app.
 
@@ -195,8 +176,7 @@ button!
 
     ![Rendering tree](images/create-button.png "")
 
-2. Set the **Button Name** to **ADD\_POST** and press enter. You will
-see the Label is automatically set to '**Add Post**'.
+2. Set the **Button Name** to **ADD\_POST** and press enter. You will see the Label is automatically set to '**Add Post**'.
 
     Configure the following other attributes on this button as follows:
 
@@ -214,48 +194,37 @@ see the Label is automatically set to '**Add Post**'.
 
     ![Button attributes](images/button-attributes.png "")
 
-3. To make this button open the Post region (which is an inline dialog), we
-simply need to create an on-click **Dynamic Action**. 
-    To do this, right-click on the button in the rendering tree, and choose **Create Dynamic Action**.
+3. To make this button open the Post region (which is an inline dialog), we simply need to create an on-click **Dynamic Action**. To do this, right-click on the button in the rendering tree, and choose **Create Dynamic Action**.
 
     ![create dynamic action option](images/create-da.png "")
 
-4. You now see a couple of sub-entries under the button, one is
-green and titled **New** (this is the Dynamic Action, aka DA) and
-another beneath that one, in red, titled **Show** -- which is actually a
-default TRUE action (in the event that we defined a condition to be
-evaluated on the DA, which we didn't do here)-- we just need to
-configure a few more attributes.
+4. You now see a couple of sub-entries under the button, one is green and titled **New** (this is the Dynamic Action, aka DA) and another beneath that one, in red, titled **Show** -- which is actually a default TRUE action (in the event that we defined a condition to be evaluated on the DA, which we didn't do here)-- we just need to configure a few more attributes.
 
     ![dynamic action tree](images/da-tree.png "")
 
 5. Follow the next steps to configure the attributes:
 
-    1.  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
+    a)  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
 
-        ![Name the dynamic action](images/da-name.png)
+    ![Name the dynamic action](images/da-name.png)
 
-    2.  Select the other entry, that is under True so that we can configure
+    b)  Select the other entry, that is under True so that we can configure
     it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
 
-        ![Action options for a dynamic action](images/da-action.png)
+    ![Action options for a dynamic action](images/da-action.png)
 
-    3.  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
+    c)  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
 
-        ![Affected elements in property editor](images/affected-elements.png)
+    ![Affected elements in property editor](images/affected-elements.png)
 
-    That almost completes the **Form** region. Click **Save and Run**! You will
-now see the **+Add Post** button and nothing else, until you click it,
-and then the in-line dialog opens with the Post **form**.
+    That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
     ![Running app](images/run-app-2.png)
 
 
 ## **Task 5**: Create a Save Button
 
-1. We now need a button for the user to *actually SAVE the post*
-they make. To do this, right click on the **Body > Post** region in
-the tree, and click **Create Button**
+1. We now need a button for the user to *actually SAVE the post* they make. To do this, right click on the **Body > Post** region in the tree, and click **Create Button**
 
     ![Create button option in rendering tree](images/create-button-2.png)
 
@@ -268,7 +237,9 @@ the tree, and click **Create Button**
     - Appearance > Hot: **ON**
 
     - Template options:
+
         - Size: **Large**
+
         - Width: **Stretch**
 
     ![Button attributes in property editor](images/configure-button.png)
@@ -283,11 +254,10 @@ the tree, and click **Create Button**
 
     ![Button attributes in property editor](images/configure-button-2.png)
 
-3. To enable the form to be able to save the new post data, we need another
-Dynamic Action and then a page process that does the work.
+3. To enable the form to be able to save the new post data, we need another Dynamic Action and then a page process that does the work.
 
   Right-click on the **SAVE** button and choose **Create Dynamic Action**.
-    
+
     ![Create dynamic action](images/create-da-2.png)
 
 4.  Set the **Name** to **Submit post**.
@@ -297,10 +267,10 @@ Dynamic Action and then a page process that does the work.
 5.  To prevent users from posting blank rows, under **Client-side Condition**, we need to set type as **Javascript expression**.
 
 6.  Paste this javascript into the Javascript Expression box:
-    
+
     ```
     <copy>
-    apex.item('P1_FILE_BLOB').value.length>0 || 
+    apex.item('P1_FILE_BLOB').value.length>0 ||
     apex.item('P1_POST_COMMENT').value.length>0
     </copy>
     ```
@@ -309,8 +279,7 @@ Dynamic Action and then a page process that does the work.
 
 
 
-7. Click on the **True action** (beneath the Submit post tree entry)
-which is initially set to **Show,** and set the following attributes:
+7. Click on the **True action** (beneath the Submit post tree entry) which is initially set to **Show,** and set the following attributes:
 
     - Identification > Action: **Submit Page**
 
@@ -325,20 +294,17 @@ which is initially set to **Show,** and set the following attributes:
 In response to a user clicking the Post button, we need to configure our
 page with a process for the Form:
 
-1. Click the **Processing** tab (this is also known as the
-    Server-Side Processing section), and then select the **Processing**
-    entry in the list (which is actually another tree and will grow in
-    length as you add more server-side processes):
+1. Click the **Processing** tab (this is also known as the Server-Side Processing section), and then select the **Processing** entry in the list (which is actually another tree and will grow in length as you add more server-side processes):
 
     ![Processing tab](images/processing.png)
 
 2.  Right-click on the **Processing** entry and choose **Create Process**.
 
-3.  Update the **Identification > Name** to be **Insert Post**.
+3.  Set the **Form Region** to the **Post** region.
 
-4.  Change the **Type** to be **Form - Automatic Row Processing(DML)**
+4.  Update the **Identification > Name** to be **Insert Post**.
 
-5.  Set the **Form Region** to the **Post** region.
+5.  Change the **Type** to be **Form - Automatic Row Processing(DML)**
 
 6.  Set the **Success Message > Success Message** to be **Posted!**
 
@@ -346,8 +312,7 @@ page with a process for the Form:
 
     ![Property Editor](images/process-attributes.png)
 
-    The form will now insert records into the **SM\_POSTS** table, but we
-won't be able to see them on the page until we complete the next lab.
+    The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
 7. However, you can run the app and select an image file (or take a
 picture on mobile), add a comment and click the Post button to have a
@@ -358,5 +323,5 @@ record inserted anyway.
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
