@@ -25,7 +25,7 @@ In this lab, you will:
 
     ![App builder home page](images/go-create-app.png " ")
 
-3.  Click **New Application**.
+2.  Click **New Application**.
 
     ![Create Application options](./images/new-app.png " ")
 
@@ -234,4 +234,4 @@ You now know how to create an application with a number of different page types 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

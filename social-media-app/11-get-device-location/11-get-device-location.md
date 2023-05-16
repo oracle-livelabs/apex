@@ -33,14 +33,14 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
    - Set the Region > Source > Location to **Local Database** (new properties will be shown underneath).
    - Set the Source > Type to **SQL Query**
 
-9. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the SQL Query text area:
+7. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the SQL Query text area:
 
       ```
       <copy>
-         select distinct lat, lon, created_by, apex_util.get_since(created) as since from 
+         select distinct lat, lon, created_by, apex_util.get_since(created) as since from
          (
-         select lat, lon, created_by, created from SM_POSTS 
-         union 
+         select lat, lon, created_by, created from SM_POSTS
+         union
          select lat, lon, created_by, created from SM_REACTIONS
          )
       </copy>
@@ -48,13 +48,13 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
       ![Page designer](images/update-region.png)
 
-10. Next, update the following properties:
+8. Next, update the following properties:
    - In the **Appearance** section, change the **Template** to **Inline Dialog**.
-   - Set the **Advanced > Static ID** to be **map**. This ID will be used by our javascript to actually open this region in the next task. 
+   - Set the **Advanced > Static ID** to be **map**. This ID will be used by our javascript to actually open this region in the next task.
 
    ![Page designer](images/appearance.png)
 
-11. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties. 
+9. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
    - Set Layer > Identification > Name to **Locations**
    - Change Source > Location to **Region Source**
    - Scroll down to Column Mapping and change Geometry Column Data Type to **Longitude/Latitude**
@@ -71,13 +71,13 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
       ```
    ![Page designer](images/tooltip.png)
 
-12. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the *Attributes* tab and change the following properties:
+10. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the *Attributes* tab and change the following properties:
    - Map > Height to **300** pixels
    - Under Controls > Options, check the **Mousewheel zoom**
 
    ![Page designer](images/attributes.png)
 
-13. Save your changes! Remember, you won’t see this region on your app yet as it’s a hidden region until we build the button and add code to open it. 
+11. Save your changes! Remember, you won’t see this region on your app yet as it’s a hidden region until we build the button and add code to open it.
 
    ![Page designer](images/save.png)
 
@@ -109,13 +109,13 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 ## Task 3: Create Dynamic Action to open Map Region
 
-Now, it’s time to update our javascript on the page so that the Target you specified above can open the map region. 
+Now, it’s time to update our javascript on the page so that the Target you specified above can open the map region.
 
 1. Click on the **Edit Page 1** button in the upper right of the current page.
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Now that we’re back in Page Designer editing Page 1, and we have the **Page 1: Timeline** Rendering tree entry already selected, we can scroll through the properties on the right side down to the *Javascript > Execute When Page Loads* property and update it. 
+2. Now that we’re back in Page Designer editing Page 1, and we have the **Page 1: Timeline** Rendering tree entry already selected, we can scroll through the properties on the right side down to the *Javascript > Execute When Page Loads* property and update it.
    The easiest way to do this is to delete everything in that box (select all, delete) and copy and paste this block of javascript back into it. Note: There is code for the delete button in here, but we haven’t completed that yet in this workshop.
 
       ```
@@ -148,25 +148,25 @@ Now, it’s time to update our javascript on the page so that the Target you spe
 
    ![Dynamic Actions Tab](images/create-da.png)
 
-3. You should now see the new Dynamic Action as New/Show.
+4. You should now see the new Dynamic Action as New/Show.
 
    ![Dynamic Actions Tab](images/new-da.png)
 
-4. On the right side with **New** selected, edit the following:
+5. On the right side with **New** selected, edit the following:
    - Identification> Name to be **action-open-map**
    - Set the Custom Event to also be **action-open-map**
    - And the Selection Type to **JavaScript Expression** with the actual JavaScript Expression as **document**
 
    ![Property Editor](images/action-open-map.png)
 
-5. The last part of this is to configure the dynamic action itself that is currently set to Show.
+6. The last part of this is to configure the dynamic action itself that is currently set to Show.
    - Click on the tree entry and change the Identification > Action to **Open Region**
    - Set the Selection Type to **Region**
    - Set the Region to **Post and Like Locations** (which is what we named our region)
 
    ![Property Editor](images/open-region.png)
 
-6. That completes the configuration of this button. **Save and Run** the app!
+7. That completes the configuration of this button. **Save and Run** the app!
 
    ![Property Editor](images/run-app.png)
 
@@ -176,5 +176,5 @@ Now, it’s time to update our javascript on the page so that the Target you spe
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, March 2023
