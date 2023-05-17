@@ -65,8 +65,8 @@ The Data Load wizard has created a new table and populated that table with the r
 
 6. In the Create Application page, review the pages listed.
   Click the **Edit** button for **Nyc Highschools Search** and **Nyc Highschools Report** pages to review more details and update the names to the following:
-  - NYC Highschools Search
-  - NYC Highschools Report
+    - NYC Highschools Search
+    - NYC Highschools Report
 
  Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
 
@@ -87,9 +87,9 @@ The Data Load wizard has created a new table and populated that table with the r
     ![Image showing the Application Login Screen](images/sign-in.png " ")
 
 3.  Explore the application a little.
-  - Click **Dashboard** (in the home menu or the navigation menu) to view the charts created.
-  - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
-  - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
+    - Click **Dashboard** (in the home menu or the navigation menu) to view the charts created.
+    - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
+    - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
 
   ![Image displaying the new application home page](images/new-app.png " ")
 

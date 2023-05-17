@@ -98,7 +98,7 @@ It would be beneficial to see additional details related to the project.
     *{Note: You can adjust the size of the columns and even sort the columns displayed in the Popup LOV.}*
 
 ## Task 2: Defining a Cascading List Of Values
-If you review the Milestones select list you will notice that all milestones are listed. The listed values should be restricted to only those that are associated with the selected project. In order to do this, you need to define Milestones (**P8\_MILESTONE_ID**) as a _Cascading LOV_. This requires specifying the Parent Item (**P8\_PROJECT_ID**) within the Milestone LOV, and also creating a new list of values statement that utilizes the Parent Item to limit the Milestones returned.
+If you review the Milestones select list you will notice that all milestones are listed. The listed values should be restricted to only those that are associated with the selected project. In order to do this, you need to define Milestones (**P8\_MILESTONE\_ID**) as a _Cascading LOV_. This requires specifying the Parent Item (**P8\_PROJECT\_ID**) within the Milestone LOV, and also creating a new list of values statement that utilizes the Parent Item to limit the Milestones returned.
 
 1. Return to the development environment.
 2. Within Page Designer, with Page 8 selected, in the Page Designer toolbar, click **Shared Components**.
