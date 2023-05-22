@@ -12,7 +12,7 @@ Estimated Time: 55 minutes
 * Create an application on the new data structures
 * Refine the application
 
-*{Note: This lab assumes you are using Oracle APEX 20.2.}*
+*{Note: This lab assumes you are using Oracle APEX 23.1}*
 
 ### Labs
 
@@ -49,5 +49,4 @@ Estimated Time: 55 minutes
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
-
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
