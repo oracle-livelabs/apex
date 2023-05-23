@@ -244,7 +244,7 @@ At this stage you have created a list of SQL statements. However, you first need
 
     ![](images/results.png " ")
 
-    *{Note: If you do not see 223 statements processed then return to Quick SQL and click _Generate SQL_, resave the script and then run it again. If you do not see 217 successful, then review the errors displayed in Feedback within the results.}*
+    *{Note: If you do not see 223 statements processed then return to Quick SQL and click _Generate SQL_, resave the script and then run it again. If you do not see 223 successful, then review the errors displayed in Feedback within the results.}*
 
 ## **Summary**
 You now know how to utilize Quick SQL to build complex data structures, complete with sample data.
