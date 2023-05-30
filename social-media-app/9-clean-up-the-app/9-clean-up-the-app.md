@@ -18,14 +18,10 @@ In this lab, you will:
 
 ## Task 1: Add CSS to the page
 
-When we have liked a post we should see the Heart in RED. Also, if we
-are using this app on a small screen (like a mobile device) it would be
-better if the Add Post button was relocated to the bottom right of the
-Screen. We can do this with 2 small blocks of Inline CSS on the page
-level.
+When we have liked a post we should see the Heart in RED. Also, if we are using this app on a small screen (like a mobile device) it would be better if the Add Post button was relocated to the bottom right of the Screen. We can do this with 2 small blocks of Inline CSS on the page level.
 
 1.  Select **Page 1: Timeline** from the Rendering Tree and then in the Property Editor, proceed
-    to scroll down to the **CSS > Inline**. 
+    to scroll down to the **CSS > Inline**.
 
 2.  Copy and paste the following CSS into the **Inline** box:
 
@@ -64,7 +60,7 @@ level.
     ![Property Editor](images/appearance.png)
 
 4. Voila! We have arrived at a working and significantly functional low-code APEX
-application.
+application. Save and Run the application.
 
     ![Running app](images/run-app.png)
 
@@ -75,5 +71,5 @@ application.
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

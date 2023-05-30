@@ -56,5 +56,5 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

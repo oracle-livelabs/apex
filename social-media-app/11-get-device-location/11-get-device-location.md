@@ -43,14 +43,14 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
     - Set the Region > Source > Location to **Local Database** (new properties will be shown underneath).
     - Set the Source > Type to **SQL Query**
 
-9. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the SQL Query text area:
+7. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the SQL Query text area:
 
       ```
       <copy>
-         select distinct lat, lon, created_by, apex_util.get_since(created) as since from 
+         select distinct lat, lon, created_by, apex_util.get_since(created) as since from
          (
-         select lat, lon, created_by, created from SM_POSTS 
-         union 
+         select lat, lon, created_by, created from SM_POSTS
+         union
          select lat, lon, created_by, created from SM_REACTIONS
          )
       </copy>
@@ -87,7 +87,7 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
     ![Page designer](images/attributes.png)
 
-13. Save your changes! Remember, you won’t see this region on your app yet as it’s a hidden region until we build the button and add code to open it. 
+11. Save your changes! Remember, you won’t see this region on your app yet as it’s a hidden region until we build the button and add code to open it.
 
    ![Page designer](images/save.png)
 
@@ -119,13 +119,13 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 ## Task 3: Create Dynamic Action to open Map Region
 
-Now, it’s time to update our javascript on the page so that the Target you specified above can open the map region. 
+Now, it’s time to update our javascript on the page so that the Target you specified above can open the map region.
 
 1. Click on the **Edit Page 1** button in the upper right of the current page.
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Now that we’re back in Page Designer editing Page 1, and we have the **Page 1: Timeline** Rendering tree entry already selected, we can scroll through the properties on the right side down to the *Javascript > Execute When Page Loads* property and update it. 
+2. Now that we’re back in Page Designer editing Page 1, and we have the **Page 1: Timeline** Rendering tree entry already selected, we can scroll through the properties on the right side down to the *Javascript > Execute When Page Loads* property and update it.
    The easiest way to do this is to delete everything in that box (select all, delete) and copy and paste this block of javascript back into it. Note: There is code for the delete button in here, but we haven’t completed that yet in this workshop.
 
       ```
@@ -158,7 +158,7 @@ Now, it’s time to update our javascript on the page so that the Target you spe
 
    ![Dynamic Actions Tab](images/create-da.png)
 
-3. You should now see the new Dynamic Action as New/Show.
+4. You should now see the new Dynamic Action as New/Show.
 
    ![Dynamic Actions Tab](images/new-da.png)
 
@@ -176,7 +176,7 @@ Now, it’s time to update our javascript on the page so that the Target you spe
 
     ![Property Editor](images/open-region.png)
 
-6. That completes the configuration of this button. **Save and Run** the app!
+7. That completes the configuration of this button. **Save and Run** the app!
 
     ![Property Editor](images/run-app.png)
 
@@ -188,5 +188,5 @@ Now, it’s time to update our javascript on the page so that the Target you spe
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, March 2023
