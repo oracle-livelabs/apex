@@ -83,7 +83,7 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 You have now improved the Movie Details page further by displaying a list of cast members along with the movie header and overview. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
 

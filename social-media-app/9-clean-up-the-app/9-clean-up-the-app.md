@@ -6,7 +6,17 @@ In this lab, you will do the final touch up of the app to improve the aesthetics
 
 Estimated Time: 5 minutes
 
-## **Task 1**: Add CSS to the page
+### Objectives
+
+In this lab, you will:
+- Improve the aesthetics by using custom CSS
+- Enhance the appearance of a page item declaratively
+
+### Prerequisites
+
+- Completion of workshop through Lab 8
+
+## Task 1: Add CSS to the page
 
 When we have liked a post we should see the Heart in RED. Also, if we
 are using this app on a small screen (like a mobile device) it would be
@@ -37,7 +47,7 @@ level.
     ```
     ![Property Editor](images/css.png)
 
-## **Task 2**: Clean up the File Browse Page Item
+## Task 2: Clean up the File Browse Page Item
 
 1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, remove the Page Item **Label** from the **File Browse** Page Item by changing the following:
     - Change **Appearance > Template** to **Hidden**
@@ -60,6 +70,8 @@ application.
 
 
     Send the URL to your mobile and try it out!
+
+    You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 
