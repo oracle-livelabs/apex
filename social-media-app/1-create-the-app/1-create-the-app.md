@@ -1,8 +1,10 @@
 # Create an APEX Application
 
-In this lab, you will learn to create a blank APEX application that will be used to build the Social Media App.
+
 
 ## Introduction
+In this lab, you will learn to create a blank APEX application that will be used to build the Social Media App.
+
 Now that you are logged into your workspace, you can start creating APEX applications. In this lab, you build a simple application for the Social Media App. Keep in mind that APEX is great for a variety of apps, from simple ones like this to large, sophisticated apps based on local database objects, REST enabled SQL objects, and even REST APIs.
 
 While APEX developers spend the majority of their time in the **App Builder**, you should also investigate the following:
@@ -14,7 +16,17 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 
 Estimated Time: 5 minutes
 
-## **Task 1**: Creating the APEX app
+### Objectives
+
+In this lab, you will:
+- Create a new APEX application
+- Run your application
+
+### Prerequisites
+
+- An Oracle APEX workspace
+
+## Task 1: Creating the APEX app
 
 1. From your APEX workspace homepage, click **Create Application**.
 
@@ -25,25 +37,25 @@ Estimated Time: 5 minutes
 3. You are now viewing the **Create An Application** Page, with View
 Blueprint tab selected. Update the following information:
 
-- *Name*: **APEX Social Media**
+    - *Name*: **APEX Social Media**
 
-- In *Pages* section, Edit the Home Page Name: **Timeline**
+    - In *Pages* section, Edit the Home Page Name: **Timeline**
 
-- In *Features* section, enable the **Install Progressive Web App** checkbox.
+    - In *Features* section, enable the **Install Progressive Web App** checkbox.
 
     !["Create App wizard"](images/app-details.png "")
 
 Click **Create Application**.
 
-4. We now have 3 pages in our APEX application.
-- The Global page (which we won't be using in this lab),
-- The Timeline page (which is where we'll be doing all of our work in this lab),
-- The Login Page, which is the default configured to use your workspace account credentials.
+4. We now have 3 pages in our APEX application. 
+    - The Global page (which we won't be using in this lab), 
+    - The Timeline page (which is where we'll be doing all of our work in this lab), 
+    - The Login Page, which is the default configured to use your workspace account credentials.
 
     !["The pages in the app"](images/pages.png "")
 
 
-## **Task 2**: Run the App and Sign-in
+## Task 2: Run the App and Sign-in
 
 1. Run the application.
 
@@ -57,14 +69,15 @@ Click **Create Application**.
 
     ![First outlook of the app](images/app-running.png "")
 
-## **Task 3**: Observations
+## Task 3: Observations
 
 1. We currently have the side navigation enabled in our app. To open the navigation menu, click on the hamburger menu at the top left of the screen. We will be working to change a few settings to tailor things to our purpose.
 
-![Navigation menu of the app](images/app-nav.png "")
+   ![Navigation menu of the app](images/app-nav.png "")
 
-Next, we'll go back to the APEX Builder and
-create the APEX social Media data model.
+Next, we'll go back to the APEX Builder and create the APEX social Media data model.
+
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

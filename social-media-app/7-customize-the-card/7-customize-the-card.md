@@ -6,7 +6,17 @@ In this lab, you will learn to customize the card in order to add a reaction but
 
 Estimated Time: 5 minutes
 
-## **Task 1** : Create a Like Button
+### Objectives
+
+In this lab, you will:
+- Create a Like button for the user to react to a post
+- Create a Delete button to delete a post
+
+### Prerequisites
+
+- Completion of workshop through Lab 6
+
+## Task 1 : Create a Like Button
 
 The **Like** button will display the current count of likes next to a heart
 icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their
@@ -50,7 +60,7 @@ clicking it again will remove the like.
 error because we haven't added that code to the app to make it work.
 Since we are creating another button, we'll do that after the next step.
 
-## **Task 2** : Create a Delete Button
+## Task 2: Create a Delete Button
 
 Similar to the previous task, we want to create another button that will be used for Deleting posts. We'll add a condition to this
 button that only displays for posts that belong to the logged in user:
@@ -88,7 +98,7 @@ button that only displays for posts that belong to the logged in user:
 
     ![Property Editor](images/button-action.png)
 
-## **Task 3** : Add Javascript to the Page for the Card Buttons
+## Task 3: Add Javascript to the Page for the Card Buttons
 
 In this task we will provide the APEX page with the custom javascript
 that will be invoked by the "URL link" from the Cards button link
@@ -176,6 +186,7 @@ almost there!
 
     ![Running app](images/run-app.png)
 
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

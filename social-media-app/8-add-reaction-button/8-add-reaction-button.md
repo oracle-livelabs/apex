@@ -6,7 +6,18 @@ Up until now the Like and Delete buttons are available on the Cards (conditional
 
 Estimated Time: 5 minutes
 
-## **Task 1** : Create a Dynamic Action with a Custom **action-like** Event
+### Objectives
+
+In this lab, you will:
+- Create Dynamic Actions for Like and Delete buttons
+- Associate the Like and Delete buttons with custom events
+
+
+### Prerequisites
+
+- Completion of workshop through Lab 7
+
+## Task 1 : Create a Dynamic Action with a Custom **action-like** Event
 
 1. From the Rendering pane, navigate to the **Dynamic Actions** tab.
 
@@ -35,7 +46,7 @@ Estimated Time: 5 minutes
 
     ![Property Editor](images/js-expression.png)
 
-## **Task 2** : Creating the True Actions for the Like Button
+## Task 2 : Creating the True Actions for the Like Button
 
 We need to configure the True actions for the action-like Dynamic Action. We need to perform two actions: one for updating the UI on the client with either one more or one less like (JavaScript), and another to actually invoke the database work necessary to record the desired state for the user, for the corresponding post (PL/SQL).
 
@@ -98,14 +109,15 @@ We need to configure the True actions for the action-like Dynamic Action. We nee
 
     ![Code Editor](images/plsql-code.png)
 
-7. We need to configure one last thing on this action. This code block needs to receive the Page Item values from our form. This is handled by providing a list of the **Page Items to Submit** to the Server.
-
-Paste this CSV list of Page Items into the box under the **PL/SQL Code** property.
-
+7. We need to configure one last thing on this action. This code block
+needs to receive the Page Item values from our form. 
+This is handled by providing a list of the **Page Items to Submit** to the Server.
+Paste the below list of Page Items into the box under the **PL/SQL Code** property.
+    
     ```
-    <copy>
+     <copy>
         P1_ACTION_ID,P1_LAT,P1_LON
-    </copy>
+     </copy>
     ```
     ![Property Editor](images/item-to-submit.png)
 
@@ -126,7 +138,7 @@ Paste this CSV list of Page Items into the box under the **PL/SQL Code** propert
 
     As other users use your app (which we haven't configured any yet), each Reaction for each Post by every user will create a distinct record in this table.
 
-## **Task 3**: Create a Dynamic Action with a custom action-delete event
+## Task 3: Create a Dynamic Action with a custom action-delete event
 
 **Note**: Task 3 and Task 4 can be considered optional – they only enable the user to delete their own post, and are very similar to the previous 2 tasks.
 
@@ -151,7 +163,7 @@ Paste this CSV list of Page Items into the box under the **PL/SQL Code** propert
     ![Property Editor](images/true-property-editor.png)
 
 
-## **Task 4**: Create the Delete Button True Actions
+## Task 4: Create the Delete Button True Actions
 
 We now need to configure the True actions for the action-delete Dynamic Action. There are actually 3 actions desired here: one for a confirmation, another to actually invoke the database work necessary to delete the desired post (PL/SQL) and the last one that updates the UI on the client by removing the deleted post (much simpler than was necessary for the action-like).
 
@@ -223,6 +235,8 @@ We now need to configure the True actions for the action-delete Dynamic Action. 
 11. Besides the post being removed from your screen, you can navigate to **SQL Workshop > Object Browser** and also confirm that there is no data left in the table (assuming that there was only the one post prior).
 
     ![SQL Commands page](images/verify-object-browser.png)
+
+    You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

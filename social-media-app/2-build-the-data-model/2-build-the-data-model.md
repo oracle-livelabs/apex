@@ -7,7 +7,18 @@ In this lab, you will create the database objects and data required for the app.
 
 Estimated Time: 5 minutes
 
-## **Task 1**: Data Model review and QuickSQL
+### Objectives
+
+In this lab, you will:
+- Review the Data Model
+- Create database objects
+- Create table constraints
+
+### Prerequisites
+
+- Completion of workshop through Lab 1
+
+## Task 1: Review the Data Model and Generate DDL using QuickSQL
 
 1. Our application data model will consist of 2 tables:
     - A table for the **POSTS**
@@ -33,7 +44,7 @@ the developer on the left side.
 
 
 
-## **Task 2**: Create Database Objects
+## Task 2: Create Database Objects
 
 1. Copy and paste the below **Quick SQL** model into the left side, and then click the **Generate SQL**
 button.
@@ -71,7 +82,7 @@ code.
 
     ![Save confirmation message](images/confirm-save.png "")
 
-## **Task 3**: Run script to create Database Objects
+## Task 3: Run script to create Database Objects
 
 1. Now that we have saved the script, we need to **Review and Run** the
 script to actually do the work of building the database objects that our
@@ -116,6 +127,8 @@ Since we prefer that Users react to a post one time only, we need to add a const
     ![Add constraint wizard](images/add-constraint.png)
 
 4.  Click **Apply** to create the Constraint.
+
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

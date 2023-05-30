@@ -8,7 +8,17 @@ goals.
 
 Estimated Time: 10 minutes
 
-## **Task 1**: Create a Cards Region
+### Objectives
+
+In this lab, you will:
+- Create the Cards region to display the posts
+- Configure the attributes of the Cards region to maych our design
+
+### Prerequisites
+
+- Completion of workshop through Lab 5
+
+## Task 1: Create a Cards Region
 
 1. Navigate to the Rendering Tree and right-click on **Body**, and
 choose **Create Region**.   
@@ -76,7 +86,7 @@ section:
 which columns from the query results will be used on which parts of the
 CARDS themselves.
 
-## **Task 2**: Configure the Attributes of the Cards Region
+## Task 2: Configure the Attributes of the Cards Region
 
 1. In the Property Editor, select the **Attributes** tab, and make
 the following changes:
@@ -128,6 +138,7 @@ comment text:
 
     ![Running app](images/run-app.png)
 
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

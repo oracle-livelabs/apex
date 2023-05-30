@@ -322,7 +322,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/about-page-designer.html)  
 

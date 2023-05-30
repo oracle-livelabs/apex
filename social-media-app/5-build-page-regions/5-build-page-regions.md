@@ -10,12 +10,19 @@ The **CARDS** region will show photos or images in a grid arrangement as they ge
 
 Estimated Time: 15 minutes
 
-## Prerequisite
+### Objectives
+
+In this lab, you will:
+- Create and Configure a Form Region
+- Customize components on the page
+- Create Buttons for actions such as Post and Save
+
+### Prerequisites
 
   - All previous labs 1-4 are executed.
   - If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
 
-## **Task 1**: Add a Form Region
+## Task 1: Add a Form Region
 
 1. In the Rendering tree, Right-click on **Body**, and then choose **Create Region**.
 
@@ -45,7 +52,7 @@ in the layout view).
 
     ![The app homepage](images/run-app.png "")
 
-## **Task 2**: Clean up and configure the Form UI Page Components
+## Task 2: Clean up and configure the Form UI Page Components
 
 1. We now have a form that labels the columns as input fields that supports
 keyboard entry, but it doesn't save anything yet and needs some tweaking.
@@ -122,7 +129,7 @@ set:
 
     ![Running app is displayed](images/updated-app-2.png)
 
-## **Task 3**: Rearrange and Customize Few Components
+## Task 3: Rearrange and Customize Few Components
 
 Initially, the form should not be visible to the user. We are going to change from settings on the region
 itself, so that it is in a different page position where it'll be hidden
@@ -136,25 +143,18 @@ this form visible to the user as a modal form.
 
 2. Next, click on **Posts** in the rendering tree, so that we have that **Form** region selected. Focus your attention to setting the attributes for the region on the right:
 
-    a) In the **Region** > **Layout** section, change the **Position**
+    - In the **Region** > **Layout** section, change the **Position**
     to **Dialogs, Drawers and Popups**.
 
-    ![Property editor](images/post-property-1.png "")
+    -  In the **Appearance** section, change the **Template** to **Inline Dialog**
 
-    b)  In the **Appearance** section, change the **Template** to **Inline Dialog**
+    -  Next, click on the **Template Options** button so that we can customize some options.
 
-    ![Property editor](images/post-property-2.png "")
+    -  Then, set the options to match the following:
+        - Check **Auto Height** 
+        - Set **Size** to **None**
+        - Set **Heading Level** to **H1**
 
-    c)  Next, click on the **Template Options** button so that we can customize some options.
-
-    ![Property editor](images/post-property-3.png "")
-
-    d)  Then, set the options to match the following:
-      - Check **Auto Height**
-
-      - Set **Size** to **None**
-
-      - Set **Heading Level** to **H1**
 
   ![Property editor](images/post-property-4.png "")
 
@@ -170,7 +170,7 @@ button!
 
     ![Running app is displayed](images/updated-app-3.png "")
 
-## **Task 4**: Create a Button to Open the Post Dialog with a Dynamic Action
+## Task 4: Create a Button to Open the Post Dialog with a Dynamic Action
 
 1. Right-click on **Components** in the **Rendering Tree**, and choose **Create Button**.
 
@@ -204,16 +204,16 @@ button!
 
 5. Follow the next steps to configure the attributes:
 
-    a)  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
+    -  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
 
     ![Name the dynamic action](images/da-name.png)
 
-    b)  Select the other entry, that is under True so that we can configure
+    -  Select the other entry, that is under True so that we can configure
     it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
 
     ![Action options for a dynamic action](images/da-action.png)
 
-    c)  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
+    -  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
 
     ![Affected elements in property editor](images/affected-elements.png)
 
@@ -222,7 +222,7 @@ button!
     ![Running app](images/run-app-2.png)
 
 
-## **Task 5**: Create a Save Button
+## Task 5: Create a Save Button
 
 1. We now need a button for the user to *actually SAVE the post* they make. To do this, right click on the **Body > Post** region in the tree, and click **Create Button**
 
@@ -289,7 +289,7 @@ button!
 
     ![Property editor](images/da2-action.png)
 
-## **Task 6**: Configure the Submit Process to Insert a New Record into the Table
+## Task 6: Configure the Submit Process to Insert a New Record into the Table
 
 In response to a user clicking the Post button, we need to configure our
 page with a process for the Form:
@@ -320,6 +320,7 @@ record inserted anyway.
 
     ![Running app](images/run-app-3.png)
 
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 
