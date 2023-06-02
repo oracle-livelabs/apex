@@ -49,7 +49,7 @@ This concludes this task. You may now **proceed to the next task.**
 ## Task 1: Write a Password Hashing Function
 Now that we have an application created, we're going to move on to creating the necessary Database objects for our custom authentication scheme.
 
-In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built-in **DBMS CRYPTO** interface and its **SHA-256** hash. In order to use this interface, you must grant the schema being used for this APEX application access to it. You can do so by running the following code snippet from the database that your APEX instance is running on in **Database Actions** > **SQL**, replacing 'schema_name' with your schema. If you don't which schema you're using, refer to the screenshot in step 2 of this Task (in the top-right corner).
+In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built-in **DBMS CRYPTO** interface and its **SHA-256** hash. In order to use this interface, you must grant the schema being used for this APEX application access to it. You can do so by running the following code snippet from the database that your APEX instance is running on in **Database Actions** > **SQL** (while logged in as the administrator), replacing 'schema_name' with your schema. If you don't which schema you're using, refer to the screenshot in step 2 of this Task (in the top-right corner).
 
 ```
 <copy>
@@ -105,7 +105,7 @@ All of your users’ authentication credentials and user information needs to be
 
 4. If you don't want usernames and/or emails to be repeated (which is often the desired restriction), we need to create a few **Constraints**. Navigate to the **Constraints** tab and click **+ Create**.
 
- 	![Navidate to Constraints tab](./images/constraints-tab.png)
+ 	![Navigate to Constraints tab](./images/constraints-tab.png)
 
 5. Give the constraint a **Name** and select **Unique** from the dropdown for the **Constraint Type**. Then select the **USERNAME** column from the dropdown and click **Apply**. Repeat this process (steps 4 & 5) for the **EMAIL** column.
 
