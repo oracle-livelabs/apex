@@ -69,7 +69,7 @@ The SHA-256 (Secure Hashing Algorithm 256) is a one-way, unkeyed cryptographic f
 
     ```
 		<copy>
-		create or replace FUNCTION "MD5_ENCRYPTION" (pwdIn in varchar2)
+		create or replace FUNCTION "SH256_ENCRYPTION" (pwdIn in varchar2)
 		return varchar2 is encrypted varchar2(32) := '';
 
 		BEGIN
@@ -128,7 +128,7 @@ All of your users’ authentication credentials and user information needs to be
 	<copy>
 	:new.username := upper(:new.username);
 	:new.email := lower(:new.email);
-	:new.password := md5_encryption(:new.password);
+	:new.password := sh256_encryption(:new.password);
 	</copy>
 	```
 
@@ -222,7 +222,7 @@ The authentication function is the function called at login. It takes in a usern
 	    from user_creds  
 	    where username = uc_username or email = lc_email;
 	--if the passwords match return true, otherwise return false
-	    select md5_encryption(p_password) into encrypted_pwd from dual;
+	    select sh256_encryption(p_password) into encrypted_pwd from dual;
 
 	    if retrieved_pwd = encrypted_pwd then
 	        return true;
