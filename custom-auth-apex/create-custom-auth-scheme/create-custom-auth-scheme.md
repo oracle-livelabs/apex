@@ -292,12 +292,12 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/understanding-authentication.html#GUID-144A774D-2B05-4BE5-9550-6951EE0B536B) in Oracle APEX
-* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/creating-an-authentication-scheme.html#GUID-093A9521-FDEB-432A-891D-791ED402C333) in Oracle APEX
-* [Custom Authentication](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/preconfigured-authentication-schemes.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267) in Oracle APEX
-* [Triggers](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeutl/managing-triggers.html#GUID-2054B50C-53E6-4C92-9334-A055AF653177) in Oracle APEX
-* [DBMS_CRYPTO Interface](https://docs.oracle.com/en/database/oracle/oracle-database/21/arpls/DBMS_CRYPTO.html#GUID-4B200807-A740-4A2E-8828-AC0CFF6127D5)
-* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/application-express/21.2/htmdb/providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271) in Oracle APEX
+* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/understanding-authentication.html) in Oracle APEX
+* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-an-authentication-scheme.html#GUID-093A9521-FDEB-432A-891D-791ED402C333) in Oracle APEX
+* [Custom Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267) in Oracle APEX
+* [Triggers](https://docs.oracle.com/en/database/oracle/apex/23.1/aeutl/managing-triggers.html) in Oracle APEX
+* [DBMS_CRYPTO Interface](https://docs.oracle.com/en/database/oracle/oracle-database/23/arpls/DBMS_CRYPTO.html)
+* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271) in Oracle APEX
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
