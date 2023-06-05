@@ -16,13 +16,13 @@ In this lab, you will:
 ### Prerequisites
 - Completion of workshop through Lab 1  
 - A TMDB API key  
-- The <a href="files/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
+- The <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
 
 
 ## Task 1: Import the REST Catalog
 You will use a REST Source Catalog that contains predefined services to create REST data sources. Using a REST Catalog will greatly simplify the process of creating REST sources to get data from TMDB API because all you will need to do is import the catalog, select the sources you want to use, and update the web credential associated with the sources.
 
-1. Download the TMDB REST Source Catalog by clicking <a href="files/tmdb_catalog.sql" download>here</a>.
+1. Download the TMDB REST Source Catalog by clicking <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>here</a>.
 
 2. In the App Builder tab in your browser, click **Export/Import** on the Movies Watchlist application home page.
 
@@ -127,22 +127,22 @@ When you created the REST data sources from the REST Catalog, a new Web Credenti
 
 You now know how to create REST data sources from a REST Catalog in Oracle APEX and will be able to get data from The Movie Database to use for your application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/managing-REST-data-sources.html)  
+- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
 
 - [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 2 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab-2.sql) to download a copy of the app at the end of Lab 2.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-2-231.sql) to download a copy of the app at the end of Lab 2.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 - You will be prompted for the Credentials for Movies web credential that was set up in this lab. You can see in the screenshot below that Credentials for Movies does not already exist in your workspace.  
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID or Client Secret values for Credentials for Movies](images/blank-credentials.png " ")  
 
 - Within the Credentials for Movies row:
 
@@ -152,7 +152,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -160,7 +160,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023

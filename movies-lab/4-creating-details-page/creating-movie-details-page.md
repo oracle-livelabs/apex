@@ -22,11 +22,9 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
 1. In the toolbar at the top of the Page Designer, click the **Create** button (3 buttons left of the Save button) and select **Page**. 
 
-    ![Close-up of Create menu in Page Designer](images/create-page.png " ")
-
     * Click **Form**.
 
-    ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-form.png " ")
+    ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-page.png " ")
 
     * Page Number: **3**
     
@@ -40,7 +38,7 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
     * Click **Next**.
 
-    ![Create Page wizard on the Create a Form step to set the page and data source attributes](images/create-form-attributes.png " ")
+    ![Create Page wizard on the Create a Form step to set the page and data source attributes](images/create-form.png " ")
 
     * Select **ID (Number)** as the Primary Key Column 1 value.
 
@@ -191,9 +189,7 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 6. Click on the **movie\_id** parameter.
 
-    * You will see that its Type is Static Value, and the Static Value is 505, which the id of a single movie and is the default used to set up the REST source.
-
-    * Change the Type from Static Value to **Item**.
+    * Change the Type from REST Source Default to **Item**.
 
     * In the Item field, enter **P3\_ID**.
 
@@ -267,23 +263,23 @@ To be able to view the details of any movie you click on on the Movie Search pag
 
 You have now set up the Movie Details page and set it up to open for any card that is selected from the Movie Search page. You may now **proceed to the next lab**.
 
-## Resources 
+## Learn More
 
-- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/creating-dialog-pages.html)  
+- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-dialog-pages.html)  
 
 - [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 4 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab-4.sql) to download a copy of the app at the end of Lab 4.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-4-231.sql) to download a copy of the app at the end of Lab 4.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 - You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
 *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")  
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -293,7 +289,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -301,7 +297,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023
