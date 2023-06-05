@@ -5,7 +5,17 @@ In this lab, you will take advantage of the low code development by customizing 
 
 Estimated Time: 5 minutes
 
-## **Task 1**: Remove the Navigation Menu
+### Objectives
+
+In this lab, you will:
+- Customize the Application Homepage
+- Learn to remove the Navigation Menu and Breadcrumb Region
+
+### Prerequisites
+
+- Completion of workshop through Lab 3
+
+## Task 1: Remove the Navigation Menu
 
 1. The first thing we want to do is configure the page to not show any
 navigation menu. We do this by ensuring that the top-level rendering
@@ -19,7 +29,7 @@ the List option at the default of *Do not show the Navigation Menu List*.
 
     ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
 
-## **Task 2**: Remove the Breadcrumb Region
+## Task 2: Remove the Breadcrumb Region
 
 Since our app is going to be a Single Page Application, we do not need or want a breadcrumb bar at the top of the page. Let us go ahead and delete the one that got created by default.
 
@@ -77,6 +87,8 @@ In this task, you will learn to download and import a starter app. If you follow
     ![Install app screen](images/run-app.png)
 
     Now, continue Lab 5.
+
+    You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 

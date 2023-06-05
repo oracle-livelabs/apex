@@ -202,7 +202,7 @@ You will need a table to store some basic movie information in addition to the u
 
 You now know how to use Quick SQL to define new tables, and create application items and processes to store information and at specific points in your app. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 

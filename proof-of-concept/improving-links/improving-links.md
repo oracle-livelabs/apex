@@ -61,6 +61,8 @@ In a similar fashion to how you modified the To Dos report, you need to update t
   </copy>
     ```
 
+    Click **OK**.
+
     ![](images/set-sql.png " ")
 
 3. The URL column within the report needs to be updated.
@@ -77,12 +79,12 @@ In a similar fashion to how you modified the To Dos report, you need to update t
 
         Click **OK**
 
-    ![](images/update-url.png " ")
+        ![](images/update-url.png " ")
 
     - Link > Link Attributes - enter **target="_blank"**    
     *{Note: Click on Help (middle pane) to review examples.}*
 
-    ![](images/update-url2.png " ")
+        ![](images/update-url2.png " ")
 
 4. Time to review the page.
 

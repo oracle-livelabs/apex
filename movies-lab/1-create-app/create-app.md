@@ -130,7 +130,7 @@ In this lab, you will:
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
 

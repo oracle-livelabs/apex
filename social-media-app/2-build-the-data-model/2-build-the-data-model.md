@@ -7,15 +7,25 @@ In this lab, you will create the database objects and data required for the app.
 
 Estimated Time: 5 minutes
 
-## **Task 1**: Data Model review and QuickSQL
+### Objectives
 
-1. Our application data model will consist of 2 tables: 
-- A table for the **POSTS** 
-- A table for the **REACTIONS** on the posts.
+In this lab, you will:
+- Review the Data Model
+- Create database objects
+- Create table constraints
+
+### Prerequisites
+
+- Completion of workshop through Lab 1
+
+## Task 1: Review the Data Model and Generate DDL using QuickSQL
+
+1. Our application data model will consist of 2 tables:
+    - A table for the **POSTS**
+    - A table for the **REACTIONS** on the posts.
 
     These tables will have a primary key in each and a foreign key relationship linking **REACTIONS** to **POSTS**.
-There will also be a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with ***SM\_*** (short for ***S***ocial ***M***edia) as shown in the following 
-model:
+    There will also be a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with **SM\_** (short for**S**ocial **M**edia) as shown in the following model:
 
     ![ER diagram of the data model](images/data-model.png "")
 
@@ -23,7 +33,7 @@ model:
 
     ![Naviagtion to Quick SQL from Toolbar](images/navigate-quick-sql.png "")
 
-3. The **Quick SQL** page is displayed. 
+3. The **Quick SQL** page is displayed.
 The left side of this page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. The Help button has all the documentation for this shorthand.
 
     The right side of this page is where **Quick SQL** will generate the DDL
@@ -34,10 +44,10 @@ the developer on the left side.
 
 
 
-## **Task 2**: Create Database Objects
+## Task 2: Create Database Objects
 
 1. Copy and paste the below **Quick SQL** model into the left side, and then click the **Generate SQL**
-button. 
+button.
     **Note**: It is very important that the tabbing be maintained so that all the objects get generated.
 
     ```
@@ -70,9 +80,9 @@ code.
 
     ![Quick SQL Save dialog](images/name-quick-sql.png "")
 
-    ![Save confirmation message](images/confirm-save.png "") 
+    ![Save confirmation message](images/confirm-save.png "")
 
-## **Task 3**: Run script to create Database Objects
+## Task 3: Run script to create Database Objects
 
 1. Now that we have saved the script, we need to **Review and Run** the
 script to actually do the work of building the database objects that our
@@ -100,7 +110,7 @@ app will use.
 Since we prefer that Users react to a post one time only, we need to add a constraint to the *SM_REACTIONS* table. This will facilitate the proper functioning of a database operation later in this workshop.
 
 
-1.  From your APEX workspace homepage, click **SQL Workshop** and then right click **Object Browser**, and choose  **Open link in new tab** in order to open SQL Workshop in a new browser tab. 
+1.  From your APEX workspace homepage, click **SQL Workshop** and then right click **Object Browser**, and choose  **Open link in new tab** in order to open SQL Workshop in a new browser tab.
 
 2.  On the left side, select the Table **SM_REACTIONS**. In the main panel, click on the **Constraints** tab.
 
@@ -116,9 +126,11 @@ Since we prefer that Users react to a post one time only, we need to add a const
 
     ![Add constraint wizard](images/add-constraint.png)
 
-4.  Click **Next** and then **Finish** to create the Constraint.
+4.  Click **Apply** to create the Constraint.
+
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

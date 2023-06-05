@@ -5,9 +5,19 @@ In this lab, you will get acquainted with the developer tools where the APEX dev
 
 Estimated Time: 5 minutes
 
+### Objectives
+
+In this lab, you will:
+- Familiarize with the APEX Developer Toolbar
+- Acquaint yourself with the Page Designer
+
+### Prerequisites
+
+- Completion of workshop through Lab 2
+
 **NOTE: You can skip to [LAB 4](?lab=4-customize-app-homepage) if you are already familiar with the APEX developer tools**
 
-## **Task 1**: The APEX Developer Toolbar
+## Task 1: The APEX Developer Toolbar
 
 1. Switch back to the tab where the app is running, and notice the APEX
 Developer toolbar at the bottom.
@@ -21,7 +31,7 @@ that we can begin making our changes and get our application built out.
 
     ![Buttons on the developer toolbar](images/edit-page1.png "")
 
-## **Task 2** : Get acquainted with APEX Page Designer
+## Task 2: Get acquainted with APEX Page Designer
 
 Welcome to APEX Page Designer! This is the APEX interface by which the
 majority of all the APEX developer magic happens!
@@ -38,7 +48,7 @@ bit more about these later.
 
     ![The Page designer is displayed](images/pd-left.png)
 
-This first section is a tree-view of the components that are on the page
+    This first section is a tree-view of the components that are on the page
 and may contain nested feature-nodes with more parts within each
 component -- these can be expanded or collapsed which will be useful as
 this tree content grows. Most listed entries here can be dragged and
@@ -51,7 +61,7 @@ bottom:
 
     ![The layout and gallery pane is displayed](images/pd-middle.png)
 
-The top section is the page **Layout** tab, but notice that it also has
+    The top section is the page **Layout** tab, but notice that it also has
 other tabs within: **Page Search** and **Help**
 
 **Take a moment to click each to see how they look.**
@@ -89,6 +99,7 @@ default with the wrench button at the top right of Page Designer:
 
     ![Page designer settings](images/pd-reset.png "")
 
+You may now **proceed to the next lab**
 
 ## **Acknowledgements**
 
