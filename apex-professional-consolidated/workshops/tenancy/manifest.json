@@ -1,0 +1,15 @@
+{
+  "workshoptitle": "Get Started with Oracle APEX",
+  "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+      {
+        "title": "Links to Hands-on Labs",
+        "filename": "../../introduction.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}
