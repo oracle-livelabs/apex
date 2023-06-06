@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you will create the database objects and data required for the app. To do so, you will be introduced to the **SQL Workshop** component of APEX where you will build the database objects using **Quick SQL**, run SQL scripts and view the data using the Object Browser.
+In this lab, you create the database objects required for the app. To do so, you are introduced to the **SQL Workshop** component of APEX where you build the database objects using **Quick SQL**, run SQL scripts and view the data using the Object Browser.
 
 Estimated Time: 5 minutes
 
@@ -20,23 +20,23 @@ In this lab, you will:
 
 ## Task 1: Review the Data Model and Generate DDL using QuickSQL
 
-1. Our application data model will consist of 2 tables:
+1. Our application data model consists of TWO tables:
     - A table for the **POSTS**
     - A table for the **REACTIONS** on the posts.
 
-    These tables will have a primary key in each and a foreign key relationship linking **REACTIONS** to **POSTS**.
-    There will also be a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with **SM\_** (short for**S**ocial **M**edia) as shown in the following model:
+    These tables each have a primary key and a foreign key relationship linking **REACTIONS** to **POSTS**.
+    There is also a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with **SM\_** (short for**S**ocial **M**edia) as shown in the following model:
 
     ![ER diagram of the data model](images/data-model.png "")
 
-2. To achieve this, we will create the database objects for our application using **QuickSQL** in **SQL Workshop**.
+2. To achieve this, we create the database objects for our application using **QuickSQL**. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
 
     ![Naviagtion to Quick SQL from Toolbar](images/navigate-quick-sql.png "")
 
-3. The **Quick SQL** page is displayed.
-The left side of this page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. The Help button has all the documentation for this shorthand.
+    The **Quick SQL** page is displayed.
+The left side of the page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. To learn more about the shorthand notation, you can click on the **Help** button at the top.
 
-    The right side of this page is where **Quick SQL** will generate the DDL
+    The right side of the page is where **Quick SQL** will generate the DDL
 (Database Definition Language) script based on the shorthand entered by
 the developer on the left side.
 
@@ -46,9 +46,8 @@ the developer on the left side.
 
 ## Task 2: Create Database Objects
 
-1. Copy and paste the below **Quick SQL** model into the left side, and then click the **Generate SQL**
-button.
-    **Note**: It is very important that the tabbing be maintained so that all the objects get generated.
+1. Copy and paste the below **Quick SQL** model into the left side, and click **Generate SQL**.
+    **Note**: It is very important to maintain the tabbing so that all the objects get generated.
 
     ```
     <copy>
@@ -69,8 +68,8 @@ button.
     </copy>
     ```
 
-2. In this case, we have used APEX **Quick SQL** shorthand that will be used to generate the SQL
-script that we will run to build the database objects. This could be
+2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL
+script that we will run to build the database objects. This could also be
 done manually through APEX Object Browser or even by manually typed
 code.
 
@@ -82,11 +81,10 @@ code.
 
     ![Save confirmation message](images/confirm-save.png "")
 
-## Task 3: Run script to create Database Objects
+## Task 3: Run the script to create Database Objects
 
 1. Now that we have saved the script, we need to **Review and Run** the
-script to actually do the work of building the database objects that our
-app will use.
+script.
 
     ![Quick SQL action buttons](images/review-run.png "")
 
@@ -96,8 +94,7 @@ app will use.
 
     ![Run button is displayed at the top right](images/run-qsql.png)
 
-3. We can review the summary of what will happen next, and then click
-***Run Now:***
+3. Review the summary and then click ***Run Now***.s
 
     ![Run now button is displayed](images/run-now.png)
 
@@ -105,7 +102,7 @@ app will use.
 
     ![Results of the execution is displayed](images/sql-processed.png)
 
-## **Task 4**: Create a Custom Table Constraint
+## Task 4: Create a Custom Table Constraint
 
 Since we prefer that Users react to a post one time only, we need to add a constraint to the *SM_REACTIONS* table. This will facilitate the proper functioning of a database operation later in this workshop.
 
@@ -130,7 +127,7 @@ Since we prefer that Users react to a post one time only, we need to add a const
 
 You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
