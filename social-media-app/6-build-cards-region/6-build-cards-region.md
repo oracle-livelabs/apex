@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn to create the CARDS region that can query the data
-the way we need it, and configure the region attributes to suit our
-goals.
+In this lab, you learn to create the CARDS region to display the posts and configure the region attributes.
 
 Estimated Time: 10 minutes
 
@@ -12,7 +10,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 - Create the Cards region to display the posts
-- Configure the attributes of the Cards region to maych our design
+- Configure the attributes of the Cards region to match our design
 
 ### Prerequisites
 
@@ -33,14 +31,9 @@ choose **Create Region**.
 
     ![Property Editor](images/title-type.png)
 
-    - Under Source, for Type select **SQL Query**.
 
-3.  Clear the **SQL Query** that was automatically put into the SQL
-    Query box. The attributes should look like the following:
-
-
-4.  Copy and paste the following **SQL** statement into that box and
-    *tab out* of it
+3.  Under Source, for Type select **SQL Query**. Enter the following **SQL Query** into the SQL
+    Query box:
 
     ```
     <copy>
@@ -69,22 +62,19 @@ choose **Create Region**.
     </copy>
     ```
 
-    And this is the final configuration for the **Region** tab:
-
     ![SQL expression in editor](images/sql-code.png)
 
-5. Scroll down on the list of Region attributes to the **Appearance**
-section:
+5. Scroll down in the Property Editor to the **Appearance** section:
 
-    - In the Appearance > CSS Classes box, put **t-Chat**
+    - In the Appearance > CSS Classes box, enter **t-Chat**
 
-    - Under **Advanced** section, for **Static ID** specify **timeline**.
+    - In Advanced > Static ID, enter **timeline**.
 
     ![Property editor](images/appearance.png)
 
-    We're not quite done with this region yet. We have to configure
-which columns from the query results will be used on which parts of the
-CARDS themselves.
+    We are not done with this region yet! We have to configure
+which columns from the query results will be used in which parts of the
+CARDS.
 
 ## Task 2: Configure the Attributes of the Cards Region
 
@@ -108,7 +98,7 @@ the following changes:
     ![Attributes in Property Editor](images/attributes-2.png)
 
     And finally (for this Region), scroll down to the Media section, and set
-these attributes:
+the following attributes:
 
     - Source: **BLOB column**
 
@@ -127,20 +117,18 @@ these attributes:
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-    These attributes should look like this:
-
     ![Attributes in Property Editor](images/attributes-3.png)
 
-2. And this completes the region. Click **Save and Run**.
+2. Now, the region is completely configured. Click **Save and Run**.
 
-    If you made a post earlier you should now see your image and your
-comment text:
+    If you made a post earlier, you should now see your image and your
+comment text!
 
     ![Running app](images/run-app.png)
 
 You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

@@ -322,7 +322,7 @@ record inserted anyway.
 
 You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
  - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

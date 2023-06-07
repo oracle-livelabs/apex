@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop, and then create an APEX workspace accordingly. Continue reading further to learn which is the best service for you!
+Oracle APEX is a low-code application platform for Oracle Database. Oracle Application Development (APEX Service), Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop, and then create an APEX workspace accordingly. Continue reading further to learn which is the best service for you!
 
 If you already have an APEX 23.1 Workspace provisioned, you can skip this lab.
 
@@ -264,7 +264,7 @@ At this point, you know how to create an APEX Workspace and you are ready to sta
 
 You may now **proceed to the next lab**.
 
-## **Acknowledgements**
+## Acknowledgements
 
  - **Author** - Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Arabella Yao, Jaden McElvey

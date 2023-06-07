@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-In this workshop, you create a Social Media Application where you can post pictures, like your friends' pictures and delete your pictures if required. You can download the app on your mobile just like other social media apps. This workshop will give you a great exposure to what a developer can do with Oracle  APEX using Low-Code and relatively simple approaches!
+In this workshop, you create a Social Media Application where you can POST pictures, LIKE your friends' pictures and DELETE your pictures if required. You can download the app on your mobile just like other social media apps. This workshop will give you a great exposure to what a developer can do with Oracle  APEX using Low-Code and relatively simple approaches!
 
-When the users log into the app, they can post pictures by selecting and uploading from their local device along with adding a comment. The users can also scroll and see what their friends have posted, like their pictures and keep count of the number of likes on each picture.
+When the users log into the app, they can post pictures by selecting and uploading from their local device along with adding a comment. The users can also scroll and see what their friends have posted, LIKE their pictures and keep count of the number of LIKES on each picture.
 
 Although the end result is a simple app to get started, you can continue to expand it's features by implementing Push Notifications, adding comments on friends' pictures and so on. 
 
@@ -12,7 +12,7 @@ Estimated Workshop Time: 60 minutes
 
 ### Objectives
 
-* Obtain a APEX free development environment
+* Obtain a FREE Oracle APEX workspace
 * Build your first app in APEX
 * Build a Cards Region
 * Customize the App using Dynamic Actions and custom CSS
