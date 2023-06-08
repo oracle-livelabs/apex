@@ -305,7 +305,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
 You now know how to filter data using a Faceted Search and sort data with a select list. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Intro to Faceted Search](https://www.youtube.com/watch?v=xsA9SCFHDDI)  
 
