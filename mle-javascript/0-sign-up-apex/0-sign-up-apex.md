@@ -26,19 +26,7 @@ To determine which release of Oracle Application Express you are currently runni
   ![](images/version.png)
 
 ### Where to Run the Lab
-You can run this lab in Oracle Database 23c with APEX 23.1 installed. This includes the new APEX Application Development Service and the "Always Free" Oracle Autonomous Database.
-
-Below are steps on how to sign up for either an *APEX Application Development* Service, an *Oracle Autonomous Database* cloud service or *apex.oracle.com* service.
-- The Always Free APEX Application Development Service is ideal for Oracle APEX Development. You can upgrade it with a flexible paid option that allows to concentrate your efforts on APEX development without worrying about the database management. It provides 1 OCPU and 20 GB and can be extended as needed once upgraded to a paid service.
-- The Always Free Oracle Autonomous Database option is ideal for learning about the Oracle Database and APEX, and provides 1 OCPU and 20 GB of compressed storage. This service can also be utilized for production applications, and can readily be upgraded to a paid service as necessary.
-
-***Note that this lab depends on In-Database JavaScript feature of the Oracle Database 21c which is currently available in four regions only. Please make sure to create a cloud account having one of the followings as the home region:***
-
-- *Germany Central (Frankfurt)*
-- *US East (Ashburn)*
-- *US West (Phoenix)*
-- *UK South (London)*
-
+You can run this lab in Oracle Database 23c with APEX 23.1 installed.
 Click one of the options below to proceed.
 
 ## **Option 1**: Oracle APEX Application Development Service
