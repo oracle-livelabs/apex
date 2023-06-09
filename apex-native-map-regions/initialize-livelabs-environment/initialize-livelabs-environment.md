@@ -90,7 +90,7 @@ Access to the compute instance by SSH protocol through the terminal is optional.
     ```
     ![SSH into compute instance](./images/ssh.png " ")
 
-If you are unable to SSH into the compute instance, check out the **Need Help?** from the menu on the left for troubleshooting tips.
+    If you are unable to SSH into the compute instance, check out the **Need Help?** from the menu on the left for troubleshooting tips.
 
 You may now **proceed to the next lab**.
 
