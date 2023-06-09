@@ -68,14 +68,16 @@ Access to the compute instance by SSH protocol through the terminal is optional.
 
     ![Compute Instance](https://oracle-livelabs.github.io/common/images/console/compute-instances.png " ")
 
-2. Once uploading is finished, you can run the command below - remember to replace the **<privatekeyname>** with your own.
+2. Once uploading is finished, you can run the command below - remember to replace the **&lt;privatekeyname&gt;** with your own.
     ```nohighlight
     <copy>
     ls
     </copy>
     ```
     ```nohighlight
+    <copy>
     mkdir ~/.ssh
+    </copy>
     mv <privatekeyname> ~/.ssh
     chmod 600 ~/.ssh/<privatekeyname>
     ls ~/.ssh
@@ -83,7 +85,7 @@ Access to the compute instance by SSH protocol through the terminal is optional.
 
     ![Verify SSH key](https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/images/upload-key-finished.png " ")
 
-3.  For the Secure Shell (SSH) replace the **&lt;sshkeyname&gt;** with the name of your SSH private key and **<Your Compute Instance Public IP Address>** with your IP address.
+3.  For the Secure Shell (SSH) replace the **&lt;sshkeyname&gt;** with the name of your SSH private key and **&lt;Your Compute Instance Public IP Address&gt;** with your IP address.
 
     ```text
     ssh -i ~/.ssh/<sshkeyname> opc@<Your Compute Instance Public IP Address>

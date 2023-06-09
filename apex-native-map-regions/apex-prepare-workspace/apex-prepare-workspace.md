@@ -50,7 +50,7 @@ This lab assumes:
 
 5. Name the workspace 'WTFC' and click Next. Workspace ID and Description are optional.
 
-    ![enter WTFC for the workspace name](images/create-WTFC-workspace.png)
+    ![enter WTFC for the workspace name](images/create-wtfc-workspace.png)
 
 7. Set *Re-use existing schema?* to Yes. Click the menu icon next to schema name and select HOL23C from the drop-down list of schemas. Leave the default for space quota and password. Click Next.
 
@@ -75,7 +75,7 @@ This lab assumes:
 
 
 2.  Log back in as the **admin** user  you just created, supplying **WTFC** as the workspace name.
-    ![log back in](images/apex-WTFC-login.png)
+    ![log back in](images/apex-wtfc-login.png)
 
 3. Since this is the first time you'll be using the APEX workspace, you will be prompted to change the password.
 
@@ -98,7 +98,7 @@ This lab assumes:
 
 7.  Select **Change Application ID** and supply **301** (or other application ID of your choice). Leave all other options and click **Install Application**.
 
-    ![Install the application](images/apex-import-WTFC-application.png)
+    ![Install the application](images/apex-import-wtfc-application.png)
 
 
 You may now proceed to the next lab.
