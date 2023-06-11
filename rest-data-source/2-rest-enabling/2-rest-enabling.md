@@ -225,5 +225,4 @@ This completes Lab 2. You now know how to REST enable database objects include a
 
  - **Author/Contributors** -  Salim Hlayel, Principal Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Salim Hlayel, Principal Product Manager, November 2020
-
+ - **Last Updated By/Date** - Ankita Beri ,Product Manager, June 2023
