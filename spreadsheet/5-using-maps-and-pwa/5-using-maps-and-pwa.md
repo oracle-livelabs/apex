@@ -6,7 +6,7 @@ In this lab, you learn to add a map region to the search page in order to visual
 Estimated Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Add a Map Region and Install PWA](videohub:1_i6brjyuv)
+[Add a Map Region and Install PWA](videohub:1_18wjf2xx)
 
 ## **Task 1**: Creating a Copy of an Existing Page
 In order to implement the map, we will copy the existing **NYC Highschools Search** page and modify the new page to include the Map region.
