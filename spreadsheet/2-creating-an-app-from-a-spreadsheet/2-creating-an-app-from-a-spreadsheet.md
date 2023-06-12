@@ -15,7 +15,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create an App from a Spreadsheet](videohub:1_0paduqmw)
+[Create an App from a Spreadsheet](videohub:1_9jbxjzh8)
 
 ## **Task 1**: Loading the Highschool data  
 
@@ -68,7 +68,7 @@ The Data Load wizard has created a new table and populated that table with the r
     - NYC Highschools Search
     - NYC Highschools Report
 
- Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
+    Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
 
     ![Image showing the Create Application Page](images/create-application.png " ")
 
@@ -91,7 +91,7 @@ The Data Load wizard has created a new table and populated that table with the r
     - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
     - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
 
-  ![Image displaying the new application home page](images/new-app.png " ")
+    ![Image displaying the new application home page](images/new-app.png " ")
 
 ## **Summary**
 
