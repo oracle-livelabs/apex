@@ -63,7 +63,7 @@ In a normal development environment, rather than in a lab, at this point you wou
 
     - **Authentication Required:** Disabled/Grayed out
 
-    ![](images/discover.png " ")
+  ![](images/discover.png " ")
 
 8. On the Preview dialog, click **Create REST Data Source**.
 
@@ -98,7 +98,7 @@ Given the URL Endpoint used above, the **Create REST Data Source** operation det
 
   Click **Create**.
 
-    ![](images/put-update.png " ")
+    ![](images/update-put.png " ")
 
 5. On REST EMP Source page, click **Add Operation**.
 
@@ -109,6 +109,8 @@ Given the URL Endpoint used above, the **Create REST Data Source** operation det
 
    Click **Create**.
 
+    ![](images/delete-delete.png " ")
+    ![](images/all-ops.png " ")
 
 
 ## **Summary**

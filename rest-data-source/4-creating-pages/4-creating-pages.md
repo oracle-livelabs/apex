@@ -14,7 +14,7 @@ Estimated Time: 15 minutes
 
     ![](images/create-rpt.png " ")
 
-2. In the Create Report with Form dialog, for Page Attributes, enter the following.
+2. In Interactive Report dialog, for Page Attributes, enter the following.
     - **Name:** enter **Employees**
     - **Include Form Page:** Enable
     - **Form Page Name:** enter **Maintain Employee**
@@ -49,7 +49,7 @@ The default column order will not be optimal when the page is generated. You can
 
     ![](images/go-columns.png " ")
 
-5. On the Select Columns dialog, shuffle the columns such that EMPNO, ENAME, and DEPTNO are the first three columns, by selecting the columns and using the **Top** arrow.
+5. On the Select Columns dialog, shuffle the columns such that ENAME, and DEPTNO are the first two columns, by selecting the columns and using the **Top** arrow.
     Click **Apply**.
 
     ![](images/set-columns.png " ")
@@ -182,7 +182,7 @@ The form page for editing records also needs some improvement.
 1. On the Employees report page, find **TURNER**, and click the edit icon.
 
     On the Maintain Employee dialog, click **Delete**.
-    On the delete confirmation dialog, click **Ok**.
+    On the delete confirmation dialog, click **Delete**.
 
     ![](images/delete.png " ")
 
@@ -197,4 +197,4 @@ This completes Lab 4. You now know how to utilize a REST endpoint to develop a r
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

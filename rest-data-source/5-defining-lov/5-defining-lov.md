@@ -190,7 +190,7 @@ Similarly, the Employees report shows numerical values rather than names.
     Select a department.        
     Select a manager.
 
-    ![](images/runtime-form.png " ")
+    ![](images/runtime-for.png " ")
 
 ## **Summary**
 This completes Lab 5 and the workshop. You now know how to define List of Values against REST endpoints and then utilize those within an application.
@@ -207,4 +207,4 @@ This completes Lab 5 and the workshop. You now know how to define List of Values
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

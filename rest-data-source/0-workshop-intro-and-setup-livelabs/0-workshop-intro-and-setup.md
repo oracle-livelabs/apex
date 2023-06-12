@@ -12,7 +12,7 @@ Estimated Time: 45 minutes
 * Define REST Data Sources against REST endpoints
 * Build an application utilizing REST Data Sources
 
-*Note: This lab assumes you are using Oracle APEX 20.2.*
+*Note: This lab assumes you are using Oracle APEX 23.1.*
 
 ### Labs
 
