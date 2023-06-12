@@ -97,7 +97,6 @@ This lab assumes:
     ![Import f106 sql file](images/apex-f106-import-2.png)
 
 7.  Select **Change Application ID** and supply **301** (or other application ID of your choice). Leave all other options and click **Install Application**.
-
     ![Install the application](images/apex-import-wtfc-application-0.png)
 
 
