@@ -36,7 +36,7 @@ This lab assumes you have:
     http://localhost:8080
     </copy>
     ```
-    ![Login using credentials](images/apex-wtfc-login.png)
+    ![Login using credentials](images/apex-wtfc-login-0.png)
 
 3. The APEX development environment opens. Select the App Builder option.
 
@@ -44,7 +44,7 @@ This lab assumes you have:
 
 4. Within the App Builder tool, choose the application named WTFC that you previously imported.
 
-    ![choose application](images/choose-wtfc.png)
+    ![choose application](images/choose-wtfc-0.png)
 
 ## Task 2: Explore advanced features of APEX Native Map Regions
 
