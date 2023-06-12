@@ -1,15 +1,18 @@
 # Introduction
 
-## **What is APEX?**
-Oracle APEX is the world's most popular low-code application development platform. It enables you to build scalable and secure enterprise apps with world-class features 20X faster with 100X less code. These apps can be deployed anywhere - cloud or on-premises
+## About this Workshop
 
-Using APEX, developers can quickly develop and deploy compelling apps that solve real problems and provide immediate value. You don't need to be an expert in a vast array of technologies to deliver sophisticated solutions. Focus on solving the problem and let APEX take care of the rest.
+In this workshop, you create a Social Media Application where you can POST pictures, LIKE your friends' pictures and DELETE your pictures if required. You can download the app on your mobile just like other social media apps. This workshop will give you a great exposure to what a developer can do with Oracle  APEX using Low-Code and relatively simple approaches!
 
-Estimated Time: 60 minutes
+When the users log into the app, they can post pictures by selecting and uploading from their local device along with adding a comment. The users can also scroll and see what their friends have posted, LIKE their pictures and keep count of the number of LIKES on each picture.
+
+Although the end result is a simple app to get started, you can continue to expand it's features by implementing Push Notifications, adding comments on friends' pictures and so on. 
+
+Estimated Workshop Time: 60 minutes
 
 ### Objectives
 
-* Obtain a APEX free development environment
+* Obtain a FREE Oracle APEX workspace
 * Build your first app in APEX
 * Build a Cards Region
 * Customize the App using Dynamic Actions and custom CSS
@@ -43,7 +46,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
 
-## Learn More - *Useful Links*
+## Learn More
 
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
 - [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)

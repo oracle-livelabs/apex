@@ -388,7 +388,7 @@ Before you test the buttons you just implemented, you will add badges to the Mov
     
 You now know how to use SQL commands in Page Designer regions and processes to get, store, update, and delete data from your tables. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-buttons.html) 
 
