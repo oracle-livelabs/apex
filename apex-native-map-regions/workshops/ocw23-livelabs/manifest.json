@@ -3,12 +3,12 @@
     "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
         {
-            "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
-        },
-        {
             "title": "Introduction",
             "filename": "/apex-native-map-regions/introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
             "title": "Lab 1: Initialize the LiveLab Environment",

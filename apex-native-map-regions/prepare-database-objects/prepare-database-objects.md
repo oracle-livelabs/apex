@@ -92,7 +92,7 @@ This lab assumes you have:
 
     ![Opening file](images/file-open.png)
 
-3. First, we will create the tables that will contain the geopspatial data our APEX application will be using.
+3. First, we will create the tables that will contain the geospatial data our APEX application will be using.
 
     - Open the file named **create_tables.sql** by clicking on the File -> Open icon.
     - Click the button that shows a document with the small green play button on it to run the whole script.
