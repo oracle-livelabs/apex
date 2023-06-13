@@ -4,7 +4,7 @@
     "tutorials": [
         {
             "title": "Introduction",
-            "filename": "/apex-native-map-regions/introduction/introduction.md"
+            "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -12,23 +12,23 @@
         },
         {
             "title": "Lab 1: Initialize the LiveLab Environment",
-            "filename": "/apex-native-map-regions/initialize-livelabs-environment/initialize-livelabs-environment.md"
+            "filename": "../../initialize-livelabs-environment/initialize-livelabs-environment.md"
         },
         {
             "title": "Lab 2: Change Password and Start ORDS",
-            "filename": "/apex-native-map-regions/change_pw/change_pw.md"
+            "filename": "../../change_pw/change_pw.md"
         },
         {
             "title": "Lab 3: Create and Prepare APEX Workspace",
-            "filename": "/apex-native-map-regions/apex-prepare-workspace/apex-prepare-workspace.md"
+            "filename": "../../apex-prepare-workspace/apex-prepare-workspace.md"
         },
         {
             "title": "Lab 4: Prepare Database Objects",
-            "filename": "/apex-native-map-regions/prepare-database-objects/prepare-database-objects.md"
+            "filename": "../../prepare-database-objects/prepare-database-objects.md"
         },
         {
             "title": "Lab 5: Explore Native Map Region Capabilities",
-            "filename": "/apex-native-map-regions/explore-native-map-regions/explore-native-map-regions.md"
+            "filename": "../../explore-native-map-regions/explore-native-map-regions.md"
         },
         {
             "title": "Need Help?",
