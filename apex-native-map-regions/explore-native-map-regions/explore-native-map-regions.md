@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will explore and experiment with features of the APEX Native Map Region using the preconfigured APEX application imported in the previous lab step.
+In this lab, you will explore and experiment with features of the APEX Native Map Region using the preconfigured APEX application imported in the previous lab step.
 
 Estimated Time: 20 minutes
 
@@ -12,7 +12,7 @@ Estimated Time: 20 minutes
 
 ### Objectives
 Learn how to:
-- Visualize geospatial data stored a database table's SDO_GEOMETRY column
+- Visualize geospatial data stored in a database table's SDO_GEOMETRY column
 - Use APEX and SQL to perform simple analysis of geospatial data
 
 ### Prerequisites
@@ -36,7 +36,7 @@ This lab assumes you have:
     http://localhost:8080
     </copy>
     ```
-    ![Login using credentials](images/apex-wtfc-login.png)
+    ![Login using credentials](images/apex-wtfc-login-0.png)
 
 3. The APEX development environment opens. Select the App Builder option.
 
@@ -44,7 +44,7 @@ This lab assumes you have:
 
 4. Within the App Builder tool, choose the application named WTFC that you previously imported.
 
-    ![choose application](images/choose-wtfc.png)
+    ![choose application](images/choose-wtfc-0.png)
 
 ## Task 2: Explore advanced features of APEX Native Map Regions
 
@@ -60,7 +60,7 @@ This lab assumes you have:
 
     ![Connect APEX session](images/app-301-hol23c-login.png)
 
-4. A map of the top 450 most disadvantaged communities (DACs) in the USA state of Wisconsin are displayed using the APEX Native Map Region's capability to show multiple aspects mapping data as *Extruded Polygons.*  Explore the map to understand these features:
+4. A map of the top 450 most disadvantaged communities (DACs) in the USA state of Wisconsin is displayed using the APEX Native Map Region's capability to show multiple aspects mapping data as *Extruded Polygons.*  Explore the map to understand these features:
 
     - Move around the map and hover over a few of the DACs displayed. You can use the +/- keys or CTL and your mouse wheel to increase or decrease the scale of the map, just as if it were a Google Maps or MapQuest web interface.
 
@@ -85,7 +85,7 @@ This lab assumes you have:
 
     ![Explore main NMR region](images/charging-points.png)
 
-7. Now click on the Attributes tab the right-hand pane. Several additional parameters can be set here:
+7. Now click on the Attributes tab in the right-hand pane. Several additional parameters can be set here:
 
     - First, note the chosen *map style.* We are using the *OpenStreetMap Bright* option for normal display and have selected *OpenStreetMap Dark* for dark mode viewing for devices like tablets and smart phones that offer that viewing capability. If you want to experiment with these settings, feel free to choose a different set of map styles or modify the maximum map height in pixels to see the impact on your map.
 
@@ -105,7 +105,7 @@ This lab assumes you have:
 
     ![Run page](images/apex-run-page-button.png)
 
-3. Again, since we are using database authentication to execute this applications, supply **hol23c** for the application login and the **database** password that you reset in prior labs to access the application.
+3. Again, since we are using database authentication to execute this application, supply **hol23c** for the application login and the **database** password that you reset in prior labs to access the application.
 
     ![Connect APEX session](images/app-301-hol23c-login.png)
 
@@ -117,7 +117,7 @@ This lab assumes you have:
 
     ![Page200-01](images/stevens-point.png)
 
-    - Try changing the Minimum Distance to a different, but larger, value and then clicking on the Refactor button. For example, this is how the map displays with a 350m value. Note that now one *additional* charger is now displayed.
+    - Try changing the Minimum Distance to a different, but larger, value and then clicking on the Refactor button. For example, this is how the map displays with a 350m value. Note that one *additional* charger is now displayed.
 
     ![Page200-01](images/change-min.png)
 
@@ -146,7 +146,7 @@ This lab assumes you have:
 
     - The code in the *green box* pulls together information from the CHARGING\_POINTS and DOT\_DISADVANTAGE\_LAYERS database tables. Note the use of the **+ INDEX** optimizer hint to force the Oracle database to use the two spatial indexes for these tables when retrieving data.
 
-    - The code in the *blue box* gathers data from only the DOT\_DISADVANTAGE\_LAYERS table, but note that it isolates this result set to only the 450 most disadvantaged DACs in Wisconsin. This fulfills federal government requirements to insure that the 40% least advantaged DACs in the state are covered. (As there are approximately 1100 DACs in Wisconsin, 450 / 1100 = 40.9% minimum coverage.)
+    - The code in the *blue box* gathers data from only the DOT\_DISADVANTAGE\_LAYERS table, but note that it isolates this result set to only the 450 most disadvantaged DACs in Wisconsin. This fulfills federal government requirements to ensure that the 40% least advantaged DACs in the state are covered. (As there are approximately 1100 DACs in Wisconsin, 450 / 1100 = 40.9% minimum coverage.)
 
     - The WHERE clause in the *gold box* is what ties these two result sets together. It uses the built-in Oracle Spatial function named **SDO\_WITHIN\_DISTANCE** to find only those charging points within the DACs that have been selected through the code in the blue box, but also uses the value supplied in the **P200\_MINIMUM\_DISTANCE** page variable to limit the displayed charging points.
 

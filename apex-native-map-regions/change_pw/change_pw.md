@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will reset the password for the **hol23c** user in the Oracle Database and then start up **Oracle REST Data Services** (ORDS), which will be needed to start up **Oracle Application Express** (APEX) and other applications.
+In this lab, you will reset the password for the **hol23c** user in the Oracle Database and then start up **Oracle REST Data Services** (ORDS), which will be needed to start up **Oracle Application Express** (APEX) and other applications.
 
 Estimated Time: 5 minutes
 
@@ -68,7 +68,7 @@ This lab assumes you have:
 
     ![Change to PDB](images/alter-session1.png " ")
 
-5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *new\_password\_here* to your new password. Throughout this workshop, we will use the **Welcome123** password.
+5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *new\_password\_here* with your new password. Throughout this workshop, we will use the **Welcome123** password.
 
     ```
     <copy>alter user hol23c identified by </copy>[new_password_here];
