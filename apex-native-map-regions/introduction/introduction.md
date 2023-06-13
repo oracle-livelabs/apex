@@ -1,7 +1,7 @@
 # Introduction
 
 ## About this Workshop
-This LiveLab session focuses on a real-world business problem: how to strategically place battery-electric vehicle (EV) charging stations to conform to federal government guidelines to insure that least 40% of the least-advantaged areas of the U.S. State of Wisconsin are guaranteed their share of public funding for rebuilding the nation's electrical infrastructure.
+This LiveLab session focuses on a real-world business problem: how to strategically place battery-electric vehicle (EV) charging stations to conform to federal government guidelines to ensure that at least 40% of the least-advantaged areas of the U.S. State of Wisconsin are guaranteed their share of public funding for rebuilding the nation's electrical infrastructure.
 
 We will be using publicly-available data to plot which potential and existing EV chargers will satisfy the target of serving the 40% disadvantaged communities (DACs) based on data compiled through the US Department of Transportation (DOT). DACs are individual census tracts which contain between 1000 - 7000 people, so they vary dramatically in size based on population; a large city like Milwaukee, WI will have dozens of DACs, while a smaller community like Stevens Point, WI will have only a handful.
 

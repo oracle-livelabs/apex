@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab you will create a new APEX workspace and import an APEX application as a starting point for learning how to leverage the APEX Native Map Region against geospatial data.
+In this lab, you will create a new APEX workspace and import an APEX application as a starting point for learning how to leverage the APEX Native Map Region against geospatial data.
 
 Estimated Time: 10 minutes.
 
