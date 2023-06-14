@@ -27,7 +27,7 @@ Estimated Time: 55 minutes
 
 ### **Let's Get Started!**
 
-- Click on **Sign Up for a Free Trial** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Sign up for an APEX Workspace**.
+- Click on **Get Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Defining new Data Structures**.
 
 *Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
 

@@ -47,4 +47,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
