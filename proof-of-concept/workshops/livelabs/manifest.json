@@ -3,12 +3,12 @@
   "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
     {
-      "title": "Introduction",
-      "filename": "../../intro/intro.md"
-    },
-    {
         "title": "Getting Started",
         "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Introduction",
+      "filename": "../../intro/intro.md"
     },
     {
       "title": "Lab 1: Defining New Data Structures",
