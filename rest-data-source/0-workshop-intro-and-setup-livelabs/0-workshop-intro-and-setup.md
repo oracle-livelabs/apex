@@ -34,8 +34,6 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 [Click here](files/restdatasource-app.sql) to download the completed application.
 
-*Note: when importing the application change the Base URL to match your server URL and your workspace name*
-    ![](images/base_url.png " ")
 
 ## Learn More - Useful Links
 
