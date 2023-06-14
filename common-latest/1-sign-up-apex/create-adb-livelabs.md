@@ -14,6 +14,8 @@ In this lab, you will:
 - Provision a new Autonomous Transaction Processing database.
 - Create an APEX workspace.
 
+Watch the video below for a quick walk-through of the lab.
+[Create an App from a Spreadsheet](videohub:1_rcmsmco3)
 
 ## Task 1: Create an ATP instance
 

@@ -15,7 +15,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create an App from a Spreadsheet](videohub:1_0paduqmw)
+[Create an App from a Spreadsheet](videohub:1_9jbxjzh8)
 
 ## **Task 1**: Loading the Highschool data  
 
