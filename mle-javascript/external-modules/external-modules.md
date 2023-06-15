@@ -10,7 +10,72 @@ You will utilize the following three external JavaScrip libraries/modules:
 
 Estimated Lab Time: 20 minutes
 
-## Task 1: Email Validation
+## Task 1: Importing JavaScript Modules and Creating MLE Evnironment
+
+1. Navigate to SQL Workshop => Object Browser
+
+    ![](images/0-0-1-object-browser.png " ")
+
+2. Right click on the MLE Modules - JavaScript => Create MLE Module - JavaScript
+
+    ![](images/0-0-2-create-module.png " ")
+
+3. Enter the following values
+
+    Name => VALIDATOR
+
+    URL => https://cdn.jsdelivr.net/npm/validator@13.9.0/+esm
+
+    ![](images/0-0-2-create-module-validator.png " ")
+
+4. Repeat the last step to import the qrcode module 
+
+    Name => QRCODE
+
+    URL => https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/+esm
+
+    ![](images/0-0-2-create-module-qrcode.png " ")
+
+5. Repeat the last step to import the qrcode module 
+
+    Name => MARKED
+
+    URL => https://cdn.jsdelivr.net/npm/marked@5.0.2/+esm
+
+    ![](images/0-0-2-create-module-marked.png " ")
+
+6. Right click on MLE Environments => Create MLE Environment 
+    
+    Name your Environment TEST
+
+    ![](images/0-0-3-create-env.png " ")
+
+7. Click on TEST environment
+    
+    - Click + Add Import
+    - Select Module Owner, Module Name and click Create
+
+    ![](images/0-0-3-create-env-modules.png " ")
+
+8. Repeat the previous step to add all the three Modules to the MLE Environment 
+
+    ![](images/0-0-3-create-env-modules-all.png " ")
+
+9. Navigate to App Builder => Click on your Application "Project Tasks" 
+
+    ![](images/0-0-4-apex.png " ")
+
+10. Click "Edit Application Definition" 
+
+    ![](images/0-0-4-apex-definitions.png " ")
+
+11. Go to Security => Database Session
+    
+    Select TEST MLE environment to assign to this APEX App.
+
+    ![](images/0-0-4-apex-definitions-mle.png " ")
+
+## Task 2: Email Validation
 
 1. In the top of the **Page Designer** type **5** and click **Go** button to start editing Page 5
 
@@ -38,7 +103,7 @@ Estimated Lab Time: 20 minutes
 
     ![](images/20-email-validation3.png " ")
 
-## Task 2: QR Code Generation
+## Task 3: QR Code Generation
 Next you will utilize the QR Code Generation JavaScript module to generate QR Code for the URL page item.
 
 1. Right click on **QR Code** sub region and click on **Create Page Item** menu item
@@ -142,7 +207,7 @@ Next you will utilize the QR Code Generation JavaScript module to generate QR Co
 
     ![](images/29-test-qr.png " ")
 
-## Task 3: Markdown Conversion to HTML
+## Task 4: Markdown Conversion to HTML
 The final step is to create a Project Details page item. The poge item will save the project details for the task in Markdown format. 
 
 Then you will use the Markdown module to generate and preview the details in HTML.
