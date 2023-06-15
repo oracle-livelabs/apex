@@ -75,7 +75,118 @@ Estimated Lab Time: 20 minutes
 
     ![](images/0-0-4-apex-definitions-mle.png " ")
 
-## Task 2: Email Validation
+## Task 2: Preparing the Form
+
+1. Let's add an email column to project_tasks table
+
+    Copy and run the following code in **SQL Commands**:
+
+    ```
+    <copy>
+    alter table project_tasks add (email varchar(255), url varchar2(255), project_details varchar2(4000));
+    </copy>
+    ```
+
+    ![](images/1-add-columns.png " ")
+
+2. Navigate to **Page 5** in **Page Designer**
+
+    ![](images/2-project-task-form.png " ")
+
+3. Right click on **Items** and click the **Create Page Item** menu item
+
+    ![](images/3-create-email.png " ")
+
+4. Set the property values for the new item as the following:
+    
+    **Name** => **P5_EMAIL**
+    
+    **Form Region** => **Project Task**
+    
+    **Column** => **EMAIL**
+
+    **Data Type** => **VARCHAR2**
+
+    ![](images/4-set-email-item.png " ")
+
+5. Select P5_STATUS and set the property values as the following:
+
+    **Sequence** => **35**
+    
+    **Start New Row** => **Disabled**    
+
+    ![](images/5-status-item.png " ")
+
+6. Click on **P5\_END\_DATE** and hold the **Control** Key and click on **P5_BUDGET**. Both items will be selected now. Update the **Start New Row** value to **disabled**.
+
+    ![](images/6-start-date-budget.png " ")
+
+7. Select P5_EMAIL and update the property values as the following:
+
+    **Sequence** => **75**
+
+    **Start New Row** => **Disabled**
+
+    ![](images/7-email-item.png " ")
+
+8. Right click on **Project Task** form region and click on **Create Sub Region** menu item
+
+    ![](images/8-selector-region.png " ")
+
+9. Update the property values for the new Sub Region as the following:
+
+    **Title** => **Display Selectors** 
+    
+    **Type** => **Region Display Selectors**
+
+    ![](images/9-selector-region2.png " ")
+
+
+10. Right click on **Display Selectors** Sub Region and click on the **Create Sub Region** menu item. 
+        
+    ![](images/9-selector-region-sub1.png " ")
+
+11. Call the new Sub Region **Main** and set the **Template** to **Blank with Attributes**
+    
+    ![](images/9-selector-region-sub1-details.png " ")
+
+12. Right click on the **Main** region and click on **Duplicate** menu item and name the new region **QR Code**
+
+    Repeat the process and by right clicking on the **Main** region and create another duplicate called **Markdown Details** this time
+
+    ![](images/9-selector-region-sub2.png " ")
+
+    You should have 3 sub regions under the Display Selectors region now
+
+    ![](images/9-selector-region-sub3.png " ")
+
+13. Click on **P5\_ID** page item and hold the **Shift** key and then click on **P5\_BUDGET** item
+
+    Drag and Drop the selected items and place them under the **Main** region
+
+    ![](images/9-selector-region-sub-drag.png " ")
+
+14. Select the Display Selectors region and set the property valuse to the following:
+
+    **Template** => **Tabs Container**
+
+    Click on **Template Options** and set the followings:
+
+    Enable **Remember Active Tab** attribute
+
+    **Tabs Size** => **Large**
+
+    Click on **Save** button
+
+    ![](images/10-selector-region.png " ")
+
+15. Navigate to Project Tasks Report page in the application. 
+
+    Click on the edit icon of the first row and observe the new design for the form page
+
+    ![](images/11-page-5.png " ")
+
+## Task 3: Email Validation
 
 1. In the top of the **Page Designer** type **5** and click **Go** button to start editing Page 5
 
@@ -103,7 +214,7 @@ Estimated Lab Time: 20 minutes
 
     ![](images/20-email-validation3.png " ")
 
-## Task 3: QR Code Generation
+## Task 4: QR Code Generation
 Next you will utilize the QR Code Generation JavaScript module to generate QR Code for the URL page item.
 
 1. Right click on **QR Code** sub region and click on **Create Page Item** menu item
@@ -207,7 +318,7 @@ Next you will utilize the QR Code Generation JavaScript module to generate QR Co
 
     ![](images/29-test-qr.png " ")
 
-## Task 4: Markdown Conversion to HTML
+## Task 5: Markdown Conversion to HTML
 The final step is to create a Project Details page item. The poge item will save the project details for the task in Markdown format. 
 
 Then you will use the Markdown module to generate and preview the details in HTML.
