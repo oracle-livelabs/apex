@@ -377,14 +377,14 @@ Then you will use the Markdown module to generate and preview the details in HTM
 
     ```
     <copy>
-    const { parse, setOptions } = await import("marked");
+    const { marked } = await import('marked');
 
     // library-specific options
-    setOptions({
+    marked.setOptions({
         headerIds: false
     });
 
-    apex.env.P5_PROJECT_DETAILS_HTML = parse(apex.env.P5_PROJECT_DETAILS);
+    apex.env.P5_PROJECT_DETAILS_HTML = marked(apex.env.P5_PROJECT_DETAILS);
     </copy>
     ```
     
