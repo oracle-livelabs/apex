@@ -174,8 +174,8 @@ Next you will utilize the QR Code Generation JavaScript module to generate QR Co
 
     ```
     <copy>
-    // calling our custom requireModule function
-    const qrcode = requireModule('qrcode');
+    // importing the qrcode Module
+    const { default: qrcode } = await import ("qrcode");
 
     // library specific options
     const code = qrcode(0, 'L');
@@ -266,14 +266,14 @@ Then you will use the Markdown module to generate and preview the details in HTM
 
     ```
     <copy>
-    const marked = requireModule('marked');
+    const { parse, setOptions } = await import("marked");
 
     // library-specific options
-    marked.setOptions({
+    setOptions({
         headerIds: false
     });
 
-    apex.env.P5_PROJECT_DETAILS_HTML = marked(apex.env.P5_PROJECT_DETAILS);
+    apex.env.P5_PROJECT_DETAILS_HTML = parse(apex.env.P5_PROJECT_DETAILS);
     </copy>
     ```
     
