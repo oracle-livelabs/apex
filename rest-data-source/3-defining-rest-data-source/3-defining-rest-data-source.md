@@ -63,7 +63,7 @@ In a normal development environment, rather than in a lab, at this point you wou
 
     - **Authentication Required:** Disabled/Grayed out
 
-    ![](images/discover.png " ")
+  ![](images/discover.png " ")
 
 8. On the Preview dialog, click **Create REST Data Source**.
 
@@ -98,6 +98,8 @@ Given the URL Endpoint used above, the **Create REST Data Source** operation det
 
   Click **Create**.
 
+    ![](images/update-put.png " ")
+
 5. On REST EMP Source page, click **Add Operation**.
 
     In the REST Source Operation page, enter the following.
@@ -107,7 +109,8 @@ Given the URL Endpoint used above, the **Create REST Data Source** operation det
 
    Click **Create**.
 
-![](images/all-operations.png " ")
+    ![](images/delete-delete.png " ")
+    ![](images/all-ops.png " ")
 
 
 ## **Summary**
@@ -117,5 +120,4 @@ This completes Lab 3. You now know how to define a REST Data Source within an ap
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
-
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
