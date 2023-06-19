@@ -1,9 +1,9 @@
 {
-  "workshoptitle": "Get Started with Oracle APEX",
+  "workshoptitle": "Oracle APEX Hands-On Labs Guide",
   "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
       {
-        "title": "Links to Hands-on Labs",
+        "title": "Oracle APEX Hands-On Labs",
         "filename": "../../introduction.md"
       },
       {
