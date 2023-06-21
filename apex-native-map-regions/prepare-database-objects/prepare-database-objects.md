@@ -1,4 +1,4 @@
-# Lab 4: Prepare Database Objects
+# Prepare Database Objects
 
 ## Introduction
 
