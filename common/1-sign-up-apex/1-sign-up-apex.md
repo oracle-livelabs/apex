@@ -39,14 +39,13 @@ Below are steps on how to sign up for either an *APEX Application Development* S
 
 For conducting labs in this workshop, either service can be utilized.
 
-*Note*: Except for the Spreadsheet lab, Building a Shopping Cart App and Movies Watchlist App workshops, which have been updated to use APEX 22.1, the remaining APEX workshops currently contain steps/screenshots for 21.2 or earlier. While we are working hard to update the workshops to 22.1 (the latest release), you can continue to refer to the steps in the workshop. Some of the steps may differ.
 
 Click one of the options below to proceed.
 
 ## **Option 1**: APEX Service
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
-In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX.
+In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
 
 1.  Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
