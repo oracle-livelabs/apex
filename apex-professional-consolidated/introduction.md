@@ -1,12 +1,14 @@
 # Introduction
 
-This Workshop provides a consolidated list of Hands-on Labs to get started with Oracle APEX. Through these labs, you will learn to develop fully functional Responsive APEX Apps such as Online Shopping Cart application, Projects and Tasks Management, Human Workflows. We have carefully crafted the Hands-on Labs to facilitate your complete learning of APEX, covering every aspect from beginning to end.
+This workshop provides a consolidated list of Hands-on Labs to help you gain practical knowledge of building apps using Oracle APEX. Through these labs, you learn to develop fully functional Responsive APEX Apps such as Online Shopping Cart, Projects and Tasks Management, and  Human Workflows applications. We have carefully crafted the Hands-on Labs to facilitate your complete learning of APEX, covering every concept  from beginning to end. Once you complete these labs, you gain a solid understanding of Oracle APEX concepts and are confident of building apps.
+
 
 *Note: This workshop assumes you are using Oracle APEX 23.1.*
 
 ### Objectives:
 - Strengthen your APEX concepts by running the Hands-on Labs
 - Links to access all 19 Hands-on Labs
+- Prepare for the Oracle APEX Cloud Developer Professional Certification Exam
 
 
 ## Oracle APEX Hands-On Labs Links
