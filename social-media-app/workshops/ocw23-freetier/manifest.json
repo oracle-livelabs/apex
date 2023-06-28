@@ -45,8 +45,8 @@
     },
     {
       "title": "Need Help?",
-      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "description": "LiveLabs help during Cloud World",
+      "filename":"https://github.com/oracle-livelabs/common/blob/main/support/ocwsupportlab/ocwsupportlab.md"
     }
   ]
 }
