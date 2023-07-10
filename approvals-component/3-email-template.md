@@ -11,6 +11,8 @@ Estimated Time: 5 minutes
 In this lab, you will:
 - Create an Email Template
 
+## Task 1: Create an Email Template:
+
 To define an email template:
 
 1. Navigate to the Shared Components page:
