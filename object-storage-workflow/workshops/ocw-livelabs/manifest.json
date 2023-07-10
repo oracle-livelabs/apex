@@ -1,0 +1,51 @@
+{
+  "workshoptitle": "APEX low-code workflow with Object Storage",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Create Autonomous Instance",
+        "filename": "../../1-create-autonomous/create-autonomous.md"
+      },
+      {
+        "title": "Lab 2: Create APEX Application with Task Definition",
+          "filename": "../../2-create-APEX-application/2-create-APEX-application.md"
+      },
+      {
+        "title": "Lab 3: Create REST Data Source",
+        "filename": "../../3-create-rest-data-source/create-REST-Source.md"
+      },
+      {
+        "title": "Lab 4: Create Form Page",
+        "filename": "../../4-create-form/create-form.md"
+      },
+      {
+        "title": "Lab 5: Upload File to Object Storage",
+        "filename": "../../5-upload-file/upload-file.md"
+      },
+      {
+        "title": "Lab 6: Task Details",
+        "filename": "../../6-task-details/Task Details.md"
+      },
+      {
+        "title": "Lab 7: Download Object Storage File",
+        "filename": "../../7-download-file/download-file.md"
+      },
+      {
+        "title": "Lab 8: Clean Up",
+        "filename": "../../8-clean-up/clean-up.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}
