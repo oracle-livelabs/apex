@@ -1,32 +1,17 @@
-#  Extend Application Capabilities
+# Create an Expense Tracker Application
 
 ## Introduction
 
-In this workshop, you will create an application that allows you to manage expenses using the approvals component. To explain the concepts and terms associated with Approval Management in APEX, we take the example of the Expense Tracker Application.
+In this lab, you will learn to create an APEX Application named Expense Tracker and database objects using SQL script containing an Employee details table and Expense request table. Also, you will learn to make end users in your APEX application.
 
-To apply for an expense, an employee logs into the application and submits an expense request filling in the Type (Accommodation/Conference/Internet/ Miscellaneous Expenses) and Estimated Expenses. The task could be assigned to multiple potential owners, and then they can perform possible actions (Request information/Delegate/Release/Change Priority).
-
-If the expense cost is more than 50000, then the Expense request, once approved by the immediate manager, will go to the next manager and so on, depending on the Expense amount. This is a typical use case for a multi-level approval.
-
-Also, Deadlines and Expiration are set for a task. The potential owner will get an Email before 5 mins of task expiration. If the task is not approved or rejected before the expiry, then the task could be tagged as Expired.
-
-Estimated Time: 1 hour
+Estimated Time: 10 minutes
 
 ### Objectives
+
 In this lab, you will:
-- Obtain a free development environment
-- Learn how to create a SQL Script
-- Learn how to create a Task definition
-- Learn how to create a Page to submit Expense
-- Learn how to create a Unified Task List
-- Learn how to create Users
-- Learn how to create an Email Template
-- Learn how to Request Information/ Delegate/ Release
-- Learn how to set deadlines and expiration
-
-### Downloads
-
-**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
+- Create the Application
+- Create SQL Script
+- Add Users
 
 
 ## Task 1: Create the Application
@@ -140,5 +125,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
    - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala, Product Manager
-   - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+   - **Contributor** - Roopesh Thokala, Senior Product Manager
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

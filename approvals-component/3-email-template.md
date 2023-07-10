@@ -1,4 +1,7 @@
 # Create an Email Template  
+
+## Introduction
+
 In this lab, you will create an Email Template to add for before expiry action in the task definition.
 
 Estimated Time: 5 minutes
@@ -81,5 +84,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 - **Author** - Ankita Beri, Product Manager
-- **Contributor** - Roopesh Thokala, Product Manager
+- **Contributor** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

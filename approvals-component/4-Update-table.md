@@ -1,5 +1,8 @@
 
 # Delegate Expense Request
+
+## Introduction
+
 In this lab, you will add a new column (HR Manager) in the employee details table and insert two new employees (Sophie and Robin) as HR managers. Next, we will update the task definition and add further actions for requesting more information and delegating the request to the potential owner.
 
 Estimated Time: 10 minutes
@@ -272,9 +275,9 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
 ## **Summary**
 You now know how to update table, add potential owners to delegate and request more information while applying for an request.
- 
+
 
 ## Acknowledgments
 - **Author** - Ankita Beri, Product Manager
-- **Contributor** - Roopesh Thokala, Product Manager
+- **Contributor** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023   
