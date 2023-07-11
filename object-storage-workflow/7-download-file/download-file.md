@@ -2,15 +2,17 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace
+In this lab, you will create a new hidden page with a process to download a file from Object Storage.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 [Video Tutorial](youtube:XRwbswu0jEk)
 
 ## Task 1: Download Script
 
 1. Create a new blank page
+
+    ***NOTE: REPLACE SCREENSHOT FOR MODAL PAGE***
 
     ![Create Blank Page](images/new-blank-page.png)
 
@@ -71,7 +73,7 @@ Estimated Lab Time: 10 minutes
         sys.htp.init;
         IF l_content_type IS NOT NULL THEN
             sys.owa_util.mime_header(trim(l_content_type), false);
-        END IF;
+        END IF;S
 
         -- Extract filename from object name and set HTTP headers
         l_filename := substr(:P14_OBJECT_NAME, instr(:P14_OBJECT_NAME, '/')+1);
@@ -113,7 +115,7 @@ Estimated Lab Time: 10 minutes
 
     ![View Task](images/final-test-3.png)
 
-5. Congratulations on completing the lab! You have successfully created an APEX application that enables users to log in, upload local files to object storage, and initiate a workflow process for project leads to review. Project leads can efficiently review and access uploaded files, take necessary actions on tasks, and download the files as needed. Well done on your achievement!
+**Congratulations on completing the lab! You have successfully created an APEX application that enables users to log in, upload local files to object storage, and initiate a workflow process for project leads to review file(s). Project leads can review and take necessary actions on tasks, and download the files as needed. Well done on your achievement!**
 
 ## Acknowledgements
 

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace.
+In this lab, you will create an APEX application based on available sample data. You will then create a "Task Definition" for assigning requests to the project lead. Finally you will create an object storage bucket in the OCI console to hold uploaded files.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 15 minutes
 
 [Video Tutorial](youtube:XRwbswu0jEk)  ***UPDATE FILE!***
 
@@ -38,6 +38,7 @@ Estimated Lab Time: 10 minutes
 
     ![Blueprint Information](images/create-application-2.png)
 
+    ***Note: Deselect all features***
     ![Deselect Access Control](images/create-application-3.png)
 
     ![Application Loading](images/create-application-4.png)
@@ -80,7 +81,7 @@ Estimated Lab Time: 10 minutes
 
     ![Create Task Definition](images/task-definition-3.png)
 
-3. To proceed, it is necessary to establish a task detail page in the APEX application. This page will serve as the central location for all relevant task information that the approval team can review before making any decisions. Fortunately, APEX streamlines this process by automatically generating a task detail page if one doesn't already exist.
+3. To proceed, we will create a task detail page in the APEX application. This page will serve as the central location for all relevant task information that the approval team can review before making any decisions. Fortunately, APEX streamlines this process by automatically generating a task detail page if one doesn't already exist.
 
     ![Create Task Detail Page](images/create-task-detail.png)
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace
+In this lab, you will create a new APEX form so that our users can select a file, and initiate the approval task.
 
 Estimated Lab Time: 5 minutes
 
@@ -20,11 +20,11 @@ Estimated Lab Time: 5 minutes
 
     ![Enter Form Details](images/enter-form-details.png)
 
+    ***Note: If the page number does not default to 11, change it to 11.***
+
     ![Form Primary Key](images/form-pk.png)
 
 3. Page 11 is now created. Add two-page items to this page. A text field to hold our requestor's username, and a file browser to upload the local file.
-
-    ***Note: If the page number does not default to 11, change it to 11.***
 
     ![Create page item](images/create-new-items.png)
 
@@ -88,7 +88,7 @@ Estimated Lab Time: 5 minutes
 
 16. Finally set the parameter that was created earlier to hold the file name of the uploaded file.
 
-    >***Note:*** Currently, testing is not possible as certain pages and sample users for the three project leads need to be set up in order to view the tasks.
+    ***Note: Currently, testing is not possible as certain pages and sample users for the three project leads need to be set up in order to view the tasks.***
 
     ![Set Parameter](images/set-parameter.png)
 

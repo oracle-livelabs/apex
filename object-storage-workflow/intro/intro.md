@@ -19,7 +19,7 @@ In this lab, you will:
 | # | Module | Est. Time |
 | --- | --- | --- |
 | - | [Getting Started](?lab=1-sign-up-apex) | 5 min |
-| 1 | [Create Autonomous Database](?lab=create-autonomous) | 10 min |
+| 1 | [Create Autonomous Database](?lab=create-autonomous) | 15 min |
 | 2 | [Create Application](?lab=create-APEX-application) | 10 min |
 | 3 | [Create REST Data Source](?lab=create-REST-Source) | 10 min |
 | 4 | [Create Form](?lab=create-form) | 5 min |

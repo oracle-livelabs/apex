@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace.
+In this lab, you will create a web credentails, and establish a REST Data Source to object storage. 
 
 Estimated Lab Time: 10 minutes
 
@@ -64,11 +64,11 @@ Estimated Lab Time: 10 minutes
      </copy>
     ```
 
-    ***Note:The URL endpoint will vary for each tenancy and each region.Please see documentation here for [Object Storage API](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/ListObjects)***
+    ***Note:The URL endpoint will vary for each tenancy and each region. Please see documentation here for [Object Storage API](https://docs.oracle.com/en-us/iaas/api/#/en/objectstorage/20160918/Object/ListObjects)***
 
     ![Rest Data Source Details](images/data-source-name.png)
 
-4. APEX will split the URL and create New remote server. Leave Base URL and Service URL Path as is.
+4. APEX will split the URL and create new remote server. Leave Base URL and Service URL Path as is.
 
     ![Remote Server](images/remote-server.png)
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace
+In this lab, you will create new APEX pages to view task(s) ***Initiated by Me*** and ***My Approvals***. You will run an SQL script to create 3 sample users to represent the project leads in our dataset and to be used in testing. Finally we will use PL/SQL to call our previously created OCI bucket URL, and upload a file into it.
 
 Estimated Lab Time: 10 minutes
 
@@ -154,7 +154,7 @@ Estimated Lab Time: 10 minutes
                 l_request_filename := REPLACE(l_project, ' ', '') || '/' || REPLACE(l_request_filename, ' ', '_');
                 
                 -- Build the URL for the object storage REST API request
-                l_request_url := :G_BASE_URL || '/b/' || 'OCW23' || '/o/' || APEX_UTIL.URL_ENCODE(l_request_filename); --Change Bucket name (OCW23), if required
+                l_request_url := :G_BASE_URL || '/b/' || 'OCW23' || '/o/' || APEX_UTIL.URL_ENCODE(l_request_filename); --Change Bucket name (OCW23), if required.
                 
                 -- Make a PUT request to upload the file to object storage using the REST API
                 l_response := apex_web_service.make_rest_request(p_url => l_request_url, p_http_method => 'PUT', p_body_blob => l_request_object, p_credential_static_id => 'OCI_AUTH');
@@ -174,7 +174,7 @@ Estimated Lab Time: 10 minutes
      </copy>
     ```
 
-    ***Note: Drag new process above assign to project lead***
+    ***Note: Drag new process above assign to project lead. In line 31, "G\_Base\_URL is a substitution string we will need to establish.***
     ![Upload to Object Storage](images/new-name.png)
 
     ![Pl/SQL Upload Code](images/plsql-upload.png)

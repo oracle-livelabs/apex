@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace
+In this lab, you will create a application substitution string, and alter the task details page that was created previously.
 
 Estimated Lab Time: 10 minutes
 
@@ -10,9 +10,9 @@ Estimated Lab Time: 10 minutes
 
 ## Task 1: Task Details
 
-1. In line 31 of the code, there is a substitution string called "G_BASE_URL". An application definition needs to be created for it. To accomplish this, navigate to the **Application Definition** section
+1. In line 31 of the code, there is a substitution string called "G\_BASE\_URL". An application definition needs to be created for it. To accomplish this, navigate to the **Application Definition** section
 
-    ***Note: Instead of hard coding the value, it is recommended to create a substitution variable for "G_BASE_URL" since it will be reused later. This will ensure easier management and flexibility.***
+    ***Note: Instead of hard coding the value, it is recommended to create a substitution variable for "G\_BASE\_URL" since it will be reused later. This will ensure easier management and flexibility.***
 
     ![Navigate to Application Definition](images/g-base-url.png)
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace
+In this lab, you will terminate and delete the created ATP instance and Object Storage bucket.
 
 Estimated Lab Time: 5 minutes
 
