@@ -2,11 +2,11 @@
 
 This workshop provides a comprehensive guide on how to set up an Autonomous Transaction Processing Database, create an APEX application, and leverage Object Storage APIs in Oracle Cloud. In the labs, you will learn how to develop a web application that enables users to upload a sample project file to Object Storage and initiate a task for the project lead to complete. Additionally, you will walkthrough how to enable the project lead to download and review the project file and subsequently take action on their assigned task.
 
-Estimated time: 75 minutes
+Estimated Workshop Duration: 75 minutes
 
 *Note: This lab assumes you are using Oracle APEX 23.1.*
 
-### Objectives
+## Objectives
 
 In this lab, you will:
 
@@ -14,19 +14,19 @@ In this lab, you will:
 - Create application task & workflow
 - Upload/Download from Object Storage
 
-### Labs
+## Labs
 
 | # | Module | Est. Time |
 | --- | --- | --- |
 | - | [Getting Started](?lab=1-sign-up-apex) | 5 min |
-| 1 | [Create Autonomous Database](?lab=create-autonomous) | 15 min |
-| 2 | [Create Application](?lab=create-APEX-application) | 10 min |
-| 3 | [Create REST Data Source](?lab=create-REST-Source) | 10 min |
-| 4 | [Create Form](?lab=create-form) | 5 min |
-| 5 | [Upload File](?lab=upload-file) | 10 min |
-| 6 | [Task Details](?lab=task-details) | 10 min |
-| 7 | [Download File](?lab=download-file) | 5 min |
-| 8 | [Clean Up](?lab=clean-up) | 5 min |
+| 1 | [Create autonomous database](?lab=create-autonomous) | 15 min |
+| 2 | [Create application](?lab=create-APEX-application) | 10 min |
+| 3 | [Create REST data source](?lab=create-REST-Source) | 10 min |
+| 4 | [Create form](?lab=create-form) | 5 min |
+| 5 | [Upload file](?lab=upload-file) | 10 min |
+| 6 | [Task details](?lab=task-details) | 10 min |
+| 7 | [Download file](?lab=download-file) | 5 min |
+| 8 | [Clean up](?lab=clean-up) | 5 min |
 
 ## Oracle APEX
 
@@ -39,7 +39,7 @@ Using APEX, developers can quickly develop and deploy compelling apps that solve
 - [Click here](?lab=1-sign-up-apex) or select **Getting Started** from the menu on the left to start the workshop and set up an Oracle APEX workspace.
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
 
-### Downloads
+### **Downloads**
 
 - [Click here](ADD LATER) to download the completed application.
 
