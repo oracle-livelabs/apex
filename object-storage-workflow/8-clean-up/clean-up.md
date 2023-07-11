@@ -52,5 +52,5 @@ Congratulations! You have completed this workshop!
 
 ## Acknowledgements
 
-- **Author** - Shayne Jayawardene
-- **Last Updated By/Date** - Shayne Jayawardene, May 2023
+- **Created By/Date** - Shayne Jayawardene, January 2023
+- **Last Updated By/Date** - Shayne Jayawardene, July 2023

@@ -4,7 +4,7 @@
 
 You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace.
 
->**Note: If you have completed the "Get Started" Lab and/or already have an autonomous database instance, complete task 2 in this lab and then proceed to lab 2.**
+>**Note: If you already have an autonomous database instance or APEX workspace, complete task 2 in this lab and then proceed to lab 2.**
 
 Estimated Time: 10 minutes
 
