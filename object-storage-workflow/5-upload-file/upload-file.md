@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create new APEX pages to view task(s) **Initiated by Me** and **My Approvals**. You will run an SQL script to create 3 sample users to represent the project leads in our dataset and to be used in testing. Finally we will use PL/SQL to call our previously created OCI bucket URL, and upload a file into it.
+In this lab, you will create new APEX pages to view task(s) and implement the upload procedure.
 
 Estimated Time: 10 minutes
 
@@ -12,9 +12,9 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Build a web application
-- Create application task & workflow
-- Upload/Download from Object Storage
+- Create **Unified Task List** pages
+- Create sample users
+- Create Pl/SQL process
 
 ### Prerequisites
 
@@ -74,15 +74,13 @@ To complete this lab, you need to have the following:
             p_last_name     => 'Beatie',               -- Specifies the last name for the user
             p_web_password  => v_password,            -- Specifies the web password for the user
             p_change_password_on_first_use  => 'N');
-      
         APEX_UTIL.CREATE_USER (
             p_user_name     => 'Bernard',
             p_email_address => 'bernard.jackman@example.com',
             p_first_name    => 'Bernard',
             p_last_name     => 'Jackman',
-            p_web_password      => v_password,
+            p_web_password  => v_password,
             p_change_password_on_first_use  => 'N');
-        
         APEX_UTIL.CREATE_USER (
             p_user_name                     => 'Miyazaki',
             p_email_address                 => 'miyazaki.yokohama@example.com',
@@ -110,7 +108,7 @@ To complete this lab, you need to have the following:
 
     ![Test Task Creation](images/test-task-creation.png " ")
 
-4. The task created by APEX_USE should now appear under the "My Requests" tab. After that, sign out and sign back in with Lucille (Project lead for Configure Web Environment).
+4. The task created by APEX_USER should now appear under the "My Requests" tab. After that, sign out and sign back in with Lucille (Project lead for Configure Web Environment).
 
     ![Sign Out](images/logout-user.png " ")
 
@@ -150,10 +148,8 @@ To complete this lab, you need to have the following:
         BEGIN
         -- Get the list of selected files from the file browser item
         l_selected := apex_util.string_to_table(:P11_FILEBROWSER, ':');
-        
         -- Get the name of the current project
         l_project := :P11_NAME;
-        
         -- If at least one file is selected in the file browser item
         IF :P11_FILEBROWSER IS NOT NULL THEN
             -- Loop through the selected files
@@ -163,16 +159,12 @@ To complete this lab, you need to have the following:
                 SELECT blob_content, filename INTO l_request_object, l_request_filename
                 FROM apex_application_temp_files
                 WHERE name = l_selected(i);
-                
                 -- Modify the filename to include the project name and replace spaces with underscores
                 l_request_filename := REPLACE(l_project, ' ', '') || '/' || REPLACE(l_request_filename, ' ', '_');
-                
                 -- Build the URL for the object storage REST API request
                 l_request_url := :G_BASE_URL || '/b/' || 'OCW23' || '/o/' || APEX_UTIL.URL_ENCODE(l_request_filename); --Change Bucket name (OCW23), if required.
-                
                 -- Make a PUT request to upload the file to object storage using the REST API
                 l_response := apex_web_service.make_rest_request(p_url => l_request_url, p_http_method => 'PUT', p_body_blob => l_request_object, p_credential_static_id => 'OCI_AUTH');
-                
             EXCEPTION
                 -- Handle the case where no data is found for the specified file name
                 WHEN NO_DATA_FOUND THEN
@@ -185,7 +177,7 @@ To complete this lab, you need to have the following:
             END LOOP;
         END IF;
         END;
-     </copy>
+         </copy>
     ```
 
     >**Note: Drag new process above assign to project lead. In line 31, "G\_Base\_URL is a substitution string we will need to establish.**
