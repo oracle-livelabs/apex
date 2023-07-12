@@ -1,4 +1,4 @@
-# Lab 3: Create and Prepare APEX Workspace
+# Create and Prepare APEX Workspace
 
 ## Introduction
 

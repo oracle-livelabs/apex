@@ -1,4 +1,4 @@
-# Lab 5: Explore Native Map Region Capabilities
+# Explore Native Map Region Capabilities
 
 ## Introduction
 

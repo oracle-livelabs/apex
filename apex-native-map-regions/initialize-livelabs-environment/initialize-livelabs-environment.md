@@ -1,4 +1,4 @@
-# Lab 1: Initialize the LiveLab Environment
+# Initialize the LiveLab Environment
 
 ## Introduction
 This lab will show you how to log in to your pre-created compute instance running on Oracle Cloud.

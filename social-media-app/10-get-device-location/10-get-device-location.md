@@ -59,8 +59,8 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
       ![Page designer](images/update-region.png)
 
 10. Next, update the following properties:
-    - In the **Appearance** section, change the **Template** to **Inline Dialog**.
-    - Set the **Advanced > Static ID** to **map**. This ID will be used by our javascript to actually open this region in the next task. 
+    - Appearance > Template : **Inline Dialog**.
+    - Advanced > Static ID : **map**. The static ID will be used by our javascript to actually open the map region in the next task. 
 
     ![Page designer](images/appearance.png)
 
@@ -120,14 +120,13 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 ## Task 3: Create Dynamic Action to open Map Region
 
-Now, it’s time to update our javascript on the page so that the Target you specified above can open the map region.
+In this task, we update our javascript on the page so that the Target you specified above can open the map region.
 
 1. Click on the **Edit Page 1** button in the upper right of the current page.
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Now that we are back in Page Designer editing Page 1, and we have the **Page 1: Timeline** Rendering tree entry already selected, scroll through the properties to the **Javascript > Execute When Page Loads** property and update it.
-   The easiest way to do this is to delete everything in that box and copy and paste the following block of javascript.
+2. Page 1 is now open in the Page Designer. Ensure that **Page 1: Timeline** is already selected in the Rendering tree. In the Property Editor, go to the **Javascript > Execute When Page Loads** property and update the script by replacing it with the following script:
 
       ```
       <copy>
@@ -155,7 +154,7 @@ Now, it’s time to update our javascript on the page so that the Target you spe
       ![Property Editor](images/js-expression.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
-   In the Rendering Tree, click the **Dynamic Actions** tab. Right click on the *Custom* branch, and choose **Create Dynamic Action**.
+   In the Rendering Tree, click the **Dynamic Actions** tab. Right click on the **Custom** branch, and choose **Create Dynamic Action**.
 
    ![Dynamic Actions Tab](images/create-da.png)
 
@@ -164,27 +163,56 @@ Now, it’s time to update our javascript on the page so that the Target you spe
    ![Dynamic Actions Tab](images/new-da.png)
 
 4. On the right side with **New** selected, edit the following:
-    - Identification> Name to **action-open-map**
-    - Set the Custom Event to **action-open-map**
-    - And the Selection Type to **JavaScript Expression** with the actual JavaScript Expression as **document**
+    - Identification > Name : **action-open-map**
+    - Set the Custom Event : **action-open-map**
+    - Selection Type : **JavaScript Expression**
+    - JavaScript Expression : **document**
 
    ![Property Editor](images/action-open-map.png)
 
-5. The last part of this is to configure the dynamic action itself that is currently set to **Show**.
-    - Click on the tree entry and change the Identification > Action to **Open Region**
-    - Set the Selection Type to **Region**
-    - Set the Region to **Post and Like Locations**
+5. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**.
+In the Property Editor:
+    - Identification > Action : **Open Region**
+    - Selection Type : **Region**
+    - Region : **Post and Like Locations**
 
     ![Property Editor](images/open-region.png)
 
-7. That completes the configuration of this button. **Save and Run** the app!
+7. That completes the configuration of this button. Click **Save**. Before we run the app, we need to add another dynamic action to get the device location.
 
-    ![Property Editor](images/run-app.png)
+   ![Page Designer Toolbar](images/save2.png)
+    
+
+## Task 4: Create Dynamic Action to get Device Location
+
+In this final task, we create another dynamic action to get the device location of the user. 
+
+1. From the Dynamic Actions tab, under Events right-click **Page Load** and select **Create Dynamic Action**.
+
+   ![Dynamic Actions tab in the Page Designer](images/create-da2.png)
+
+2. In the Property Editor, for Identification > Name, enter a name such as **Get Device Location**.
+
+   ![Dynamic Actions tab in the Page Designer](images/da-name.png)
+
+3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, edit the following:
+      - Action : **Get Current Position**
+   
+      Under Settings:
+      - Return Type : **Latitude and Longitude**
+      - Latitude Item: **P1_LAT**
+      - Longitude Item: **P1_LON**
+
+      ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
+   
+
+4. Let us see how the Map is displayed in the app. Click **Save and Run**.
+
+   ![App running in the browser](images/run-app.png)
 
     **Note**: No pins will likely be visible on this map unless you permit the location to be used before you post or like your post. If others were to use your app, their locations would show up too!
 
-    ![Property Editor](images/other-users.png)
-
+   ![Map opened in the app](images/other-users.png)
 
 ## Acknowledgements
 

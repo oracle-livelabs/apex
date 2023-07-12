@@ -1,4 +1,4 @@
-# Lab 2: Change Password and Start Oracle REST Data Services (ORDS)
+# Change Password and Start Oracle REST Data Services (ORDS)
 
 ## Introduction
 
