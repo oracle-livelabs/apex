@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you will add a new column (HR Manager) in the employee details table and insert two new employees (Sophie and Robin) as HR managers. Next, we will update the task definition and add further actions for requesting more information and delegating the request to the potential owner.
+In this lab, you add a new column (HR Manager) in the employee details table and insert two new employees (Sophie and Robin) as HR managers. Next, we will update the task definition and add further actions for requesting more information and delegating the request to the potential owner.
 
 Estimated Time: 10 minutes
 

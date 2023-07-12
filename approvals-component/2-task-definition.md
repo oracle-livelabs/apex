@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to create a task definition to configure task parameters, participants, actions, and due dates for an expense request. Moreover, you will create a form page to Submit an Expense request and add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
+In this lab, you learn to create a task definition to configure task parameters, participants, actions, and due dates for an expense request. Moreover, you will create a form page to Submit an Expense request and add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
 
 Estimated Time: 10 minutes
 

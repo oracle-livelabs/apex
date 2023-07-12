@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create an Email Template to add for before expiry action in the task definition.
+In this lab, you create an Email Template to add for before expiry action in the task definition.
 
 Estimated Time: 5 minutes
 

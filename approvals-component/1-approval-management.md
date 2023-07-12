@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to create an APEX Application named Expense Tracker and database objects using SQL script containing an Employee details table and Expense request table. Also, you will learn to make end users in your APEX application.
+In this lab, you learn to create an APEX Application named Expense Tracker and database objects using SQL script containing an Employee details table and Expense request table. Also, you will learn to make end users in your APEX application.
 
 Estimated Time: 10 minutes
 
@@ -14,7 +14,7 @@ In this lab, you will:
 - Add Users
 
 
-## Task 1: Create the Application
+## Task 1: Create an Application
 In this lab, you create a new application named Expense Tracker.
 
 1. If you have not already logged into your Oracle APEX workspace, sign in using the workspace name, email, and password you signed up with.
@@ -39,7 +39,7 @@ In this lab, you create a new application named Expense Tracker.
 
     ![Select New Application ](images/create-application-expense-tracker.png " ")
 
-## Task 2: Create a SQL Script
+## Task 2: Create SQL Script
 In this lab, you create database objects using SQL Script.
 
 1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
@@ -55,6 +55,7 @@ In this lab, you create database objects using SQL Script.
 4. Enter the SQL statements.
 
    Copy the code below and paste it into  the code editor:
+
       ```
       <copy>
       CREATE TABLE "EMPLOYEE_DETAILS"
