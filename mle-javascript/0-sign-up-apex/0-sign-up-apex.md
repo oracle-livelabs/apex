@@ -35,7 +35,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
 
 1.  Download the VirtualBox Appliance from this link: [https://www.oracle.com/database/technologies/databaseappdev-vm.html](https://www.oracle.com/database/technologies/databaseappdev-vm.html)
 
-2. Follow the steps to import the VirtualBox Appliance as descriped in the previous link.
+2. Follow the steps to import the VirtualBox Appliance as described in the previous link.
 
 3. Once the import process is complete start your newly imported Virtual Machine.
 
@@ -51,7 +51,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
 
     ![](images/download_apex_23.1.png " ")
 
-6. Unzip the apex_23.1.zip and when asked the replace the files anser with "A"
+6. Unzip the apex_23.1.zip and when asked the replace the files answer with "A"
 
     ```
     <copy>

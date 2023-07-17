@@ -80,7 +80,7 @@ Estimated Lab Time: 15 minutes
 
     **Language** => **JavaScript (MLE)**
 
-    **JavaScrtipt Expression** to the following code:
+    **JavaScript Expression** to the following code:
 
     ```
     apex.env.P5_STATUS !== "Closed"

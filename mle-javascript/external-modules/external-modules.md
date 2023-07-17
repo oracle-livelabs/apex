@@ -10,7 +10,7 @@ You will utilize the following three external JavaScrip libraries/modules:
 
 Estimated Lab Time: 20 minutes
 
-## Task 1: Importing JavaScript Modules and Creating MLE Evnironment
+## Task 1: Importing JavaScript Modules and Creating MLE Environment
 
 1. Navigate to SQL Workshop => Object Browser
 
@@ -166,7 +166,7 @@ Estimated Lab Time: 20 minutes
 
     ![](images/9-selector-region-sub-drag.png " ")
 
-14. Select the Display Selectors region and set the property valuse to the following:
+14. Select the Display Selectors region and set the property values to the following:
 
     **Template** => **Tabs Container**
 
@@ -319,7 +319,7 @@ Next you will utilize the QR Code Generation JavaScript module to generate QR Co
     ![](images/29-test-qr.png " ")
 
 ## Task 5: Markdown Conversion to HTML
-The final step is to create a Project Details page item. The poge item will save the project details for the task in Markdown format. 
+The final step is to create a Project Details page item. The page item will save the project details for the task in Markdown format. 
 
 Then you will use the Markdown module to generate and preview the details in HTML.
 

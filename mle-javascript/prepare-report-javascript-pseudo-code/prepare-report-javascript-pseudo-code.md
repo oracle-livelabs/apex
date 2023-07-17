@@ -196,7 +196,7 @@ Now that we have completed testing the pseudo code. Let's navigate to **Project 
     </copy>
     ```
 
-    **Display Extra Valus** => **Disabled**
+    **Display Extra Value** => **Disabled**
 
     **Display Null Value** => **Enabled**
 
