@@ -13,7 +13,7 @@ Estimated Lab Time: 15 minutes
 
     Right click on **Processing** and click on **Create Process** menu item
     
-    ![](images/1-create-process.png " ")
+    ![create-process](images/1-create-process.png " ")
 
 2. Set the following values for the property values of the new process:
 
@@ -44,7 +44,7 @@ Estimated Lab Time: 15 minutes
 
     *Note: The above code now uses apex.env.P4\_PROJECT to pass the values from the P4\_PROJECT page item to the JavaScript code.*
 
-    ![](images/2-javascript-process.png " ")
+    ![javascript-process](images/2-javascript-process.png " ")
 
 3. Update the **When Button Pressed** property in the **Server-side Condition** with **Extend\_Project\_Tasks**
 
@@ -52,13 +52,13 @@ Estimated Lab Time: 15 minutes
 
     Click on **Save and Run Page** button to view your page.
 
-    ![](images/3-process-condition.png " ")
+    ![process-condition](images/3-process-condition.png " ")
 
 4. Select the **Email Integration** project from the project's select list. 
    
    If you click on **Extend Project Tasks** button you will notice that the tasks with non closed status will be extended.
 
-    ![](images/4-extend-tasks.png " ")
+    ![extend-tasks](images/4-extend-tasks.png " ")
 
 ## Task 2: Add JavaScript Validation to Form
 
@@ -66,13 +66,13 @@ Estimated Lab Time: 15 minutes
 
     Click on **Edit Page 5** in the developer toolbar
 
-    ![](images/5-edit-page-5.png " ")
+    ![edit-page-5](images/5-edit-page-5.png " ")
 
 2. Select **Processing** tab and then right click on **Validating**. 
 
     Click on **Create Validation** menu item.
 
-    ![](images/6-create-validation.png " ")
+    ![create-validation](images/6-create-validation.png " ")
 
 3. In the Property Editor, under Validation, select / enter the following:
 
@@ -92,7 +92,7 @@ Estimated Lab Time: 15 minutes
 
     Click the **Save** button.
 
-    ![](images/7-complete-validation.png " ")
+    ![complete-validation](images/7-complete-validation.png " ")
 
 4. Navigate back to Project Tasks Report and click on the edit icon of the **Complete plan** task.
     
@@ -100,7 +100,7 @@ Estimated Lab Time: 15 minutes
 
     You will receive now the error message that you specified earlier protecting the record from getting updated.
 
-    ![](images/8-test-validation.png " ")
+    ![test-validation](images/8-test-validation.png " ")
 
 
 ## **Summary**

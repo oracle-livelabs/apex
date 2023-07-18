@@ -16,14 +16,14 @@ To determine which release of Oracle APEX you are currently running, do one of t
 * View the release number on the Workspace home page:
     - Sign in to Oracle APEX. The Workspace home page appears. The current release version displays in bottom right corner.
 
-    ![](images/release-number.png " ")
-    ![](images/release-number2.png " ")
+    ![release-number](images/release-number.png " ")
+    ![release-number2](images/release-number2.png " ")
 
 * View the About APEX page:
     - Sign in to Oracle APEX. The Workspace home page appears.
     - Click the Help menu at the top of the page and select About. The About APEX page appears.
 
-  ![](images/version.png)
+  ![version](images/version.png)
 
 ### Where to Run the Lab
 You can run this lab in Oracle Database 23c with APEX 23.1 installed.
@@ -49,7 +49,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
     </copy>
     ```
 
-    ![](images/download_apex_23.1.png " ")
+    ![download_apex_23.1](images/download_apex_23.1.png " ")
 
 6. Unzip the apex_23.1.zip and when asked the replace the files answer with "A"
 
@@ -58,7 +58,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
     unzip apex_23.1.zip
     </copy>
     ```
-    ![](images/unzip_apex_23.1.png " ")
+    ![unzip_apex_23.1](images/unzip_apex_23.1.png " ")
 
 7. Move inside the APEX folder and run the following commands to connect to Oracle Database, change the container to FREEPDB1 and install Oracle APEX 23.1
 
@@ -71,7 +71,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
     @apexins.sql SYSAUX SYSAUX TEMP /i/
     </copy>
     ```
-    ![](images/install_apex_23.1.png " ")
+    ![install_apex_23.1](images/install_apex_23.1.png " ")
 
 8. Once the installation is complete, replace the APEX images files with the files for the new version:
 
@@ -83,7 +83,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
 
 9. The Oracle APEX 23.1 is installed and ready to be used. You can now exit the SQL Command Line by typing "Exit"
 
-    ![](images/exit_sql.png " ")
+    ![exit_sql](images/exit_sql.png " ")
 
 10. Open your browser in the Host Machine and visit the link: [localhost:8080/ords](localhost:8080/ords)
 
@@ -94,7 +94,7 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
 
 12. Go to Manage Workspaces => Create Workspace
 
-    ![](images/create_workspace.png)
+    ![create_workspace](images/create_workspace.png)
 
 13. In the Create Workspace dialog, enter the following:
 
@@ -106,16 +106,16 @@ You need to have [VirtualBox](https://www.oracle.com/virtualization/technologies
 
     Click **Create Workspace**.
 
-    ![](images/create-workspace.png " ")
+    ![create-workspace](images/create-workspace.png " ")
 
 14. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
-    ![](images/log-out-from-admin.png " ")
+    ![log-out-from-admin](images/log-out-from-admin.png " ")
 
 15. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
-    ![](images/log-in-to-workspace.png " ")
+    ![log-in-to-workspace](images/log-in-to-workspace.png " ")
 
 ## **Summary**
 
