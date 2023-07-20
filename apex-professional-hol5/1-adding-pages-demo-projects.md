@@ -29,7 +29,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Add Interactive Grid to Demo Projects Application.
 In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You already created the **Demo Projects** application in HOL-3. Now, you create an **Interactive Grid** in the **Demo Projects** application.
@@ -42,22 +42,28 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
     ![](./images/create-page11.png " ")
 
-3. For Create a Page: Select Page Type - Select **Component** and then select **Interactive Grid**.
+3. For Create a Page:
+   Select Page Type - Select **Component** and then select **Interactive Grid**.
 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
-   Under **Page Definition**:
-    - For Page Number, enter **4**.
+
+    - Under **Page Definition**:
+
+        - For Page Number, enter **4**.
+
     - For Page Name, enter **Project Tasks**  
 
-  Under **Data Source**:
-    - For **Table/View Name**, Select **DEMO_PROJECTS**.
+        - Under **Data Source**:
 
-  Under **Navigation**
-    - For **Breadcrumb**, Set it to **No**.
+        - For **Table/View Name**, Select **DEMO_PROJECTS**.
 
-  Click **Create Page**.
+    - Under **Navigation**
+
+        - For **Breadcrumb**, Set it to **No**.
+
+    Click **Create Page**.
 
     ![](./images/create-ig-2.png " ")
 
@@ -72,20 +78,25 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
     ![](./images/create-sf-page11.png " ")
 
-2. For Create a Page: Select Page Type - Under **Component** tab, select **Smart Filters**.
+2. For Create a Page:
+   Select Page Type - Under **Component** tab, select **Smart Filters**.
 
     ![](./images/create-sf-page12.png " ")
 
 3. For **Create Smart Filters**, enter the following:
-   Under **Page Definition**:
-    - For **Page Number**, enter **8**
+    - Under **Page Definition**:
+
+        - For **Page Number**, enter **8**
+
     - For **Name**, enter **Project Tasks Search**  
 
-   Under **Data Source**:
-    - For **Table/View Name**, enter **DEMO_PROJECTS**  
+       - Under **Data Source**:
 
-   Under **Navigation**
-      - For **Breadcrumb**, Set it to **No**.
+       - For **Table/View Name**, enter **DEMO_PROJECTS**  
+
+   - Under **Navigation**
+
+       - For **Breadcrumb**, Set it to **No**.
 
    Click **Next**.
 
@@ -109,4 +120,4 @@ You now know how to create interactive grid and smart filters. You may now **pro
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

@@ -17,7 +17,7 @@ Estimated Time: 15 minutes
 
 * Create **Validations**, **Processes** and **Branches** to manage the Shopping Cart
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.1.*
 
 ## Learn More - *Useful Links*
 

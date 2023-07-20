@@ -30,7 +30,7 @@ In this lab, you will:
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create application wizard the icon and color of the icon will be a random selecti�on so most likely will not be the same color or icon that they see in the screenshot.
+1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create application wizard the icon and color of the icon will be a random selection so most likely will not be the same color or icon that they see in the screenshot.
 
     ![Name the application](./images/name-the-application1.png " ")
 
@@ -201,4 +201,4 @@ You now know how to create an application with a number of different page types 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
