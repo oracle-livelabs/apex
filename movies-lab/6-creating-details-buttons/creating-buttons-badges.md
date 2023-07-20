@@ -388,7 +388,7 @@ Before you test the buttons you just implemented, you will add badges to the Mov
     
 You now know how to use SQL commands in Page Designer regions and processes to get, store, update, and delete data from your tables. You may now **proceed to the next lab**.
 
-## Learn More
+## Resources
 
 - [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-buttons.html) 
 
@@ -399,7 +399,7 @@ You now know how to use SQL commands in Page Designer regions and processes to g
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 6 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-6-231.sql) to download a copy of the app at the end of Lab 6.
+- [Click here](./files/lab-6.sql) to download a copy of the app at the end of Lab 6.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -427,4 +427,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, August 2022

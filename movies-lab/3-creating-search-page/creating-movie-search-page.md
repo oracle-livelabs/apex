@@ -234,7 +234,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
 7. Click on the **query** parameter.
 
-    * You will see that its Type is REST Source Default, which is using the default value from the used in the URL to set up the REST source.
+    * You will see that its Type is Static Value, and the Static Value is harry potter, which is the default used in the URL to set up the REST source.
 
     * Change the Type from Static Value to **Item**.
 
@@ -244,7 +244,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
     ![Page 2 open in Page Designer editing the Searched Movies region query parameter](images/searched-query.png " ")
 
-## Task 4: Link Movie Search to Watchlist Page
+## Task 4: Link Add Movie to Movie Search
 The last task in this lab is linking the Movie Search page to the My Watchlist page. A modal dialog page like Movie Search can only be run on by launching it from another page, so you will create a button on the Watchlist page that will open the Search page.
 
 1. Go to page 1 by clicking the down arrow in the page navigation on the Page Designer toolbar.
@@ -322,7 +322,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
-## Learn More
+## Resources
 
 - [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/about-page-designer.html)  
 
@@ -341,7 +341,7 @@ You now know how to create a page in your APEX application and add components to
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 3 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-3-231.sql) to download a copy of the app at the end of Lab 3.
+- [Click here](./files/lab-3.sql) to download a copy of the app at the end of Lab 3.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -369,4 +369,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, August 2022

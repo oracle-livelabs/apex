@@ -18,25 +18,21 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/online-shopping-cart-4.sql) and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**, **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** and **[Enhancing your application using Computations, Processes and Validations](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3534)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/online-shopping-cart-4.sql) and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**, **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** and **Enhancing your application using Computations, Processes and Validations** workshops.
 
 ## Task 1: Add Dynamic Actions
 In this task, you will create a dynamic actions to:
 - Update the badge and icon shown in the navigation bar after the customer has added / edited / removed a product from the shopping cart.
 - Refresh the shopping cart region.
 
-1. Go to **Shopping Cart** page (Page No 16) in the page designer.
-
-     ![](./images/open-page-16.png " ")
-
-2. Navigate to **Dynamic Actions** tab (left pane).
+1. Navigate to **Dynamic Actions** tab (left pane).
 
      ![](./images/navigate-to-dynamic-action.png " ")  
 
-3. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
      ![](./images/create-dynamic-action1.png " ")  
-4. In the Property Editor, enter the following:    
+3. In the Property Editor, enter the following:    
     - Under Identification section:
         - For Name - enter **Update Shopping Cart Header**
     - Under When section:        
@@ -55,9 +51,8 @@ In this task, you will create a dynamic actions to:
 
   ![](./images/create-da2.png " ")
 
-5. Navigate to **Refresh** Action.
+4. Navigate to **Refresh** Action.
     - Under Identification section:
-        - For Name - enter **Update Badge & Icon**
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
         - For Code - enter the following JavaScript Code:
@@ -74,22 +69,21 @@ In this task, you will create a dynamic actions to:
 
   ![](./images/create-da3.png " ")
 
-6. Create a second action. In the Dynamic Actions tab (left pane), navigate to **True** under **Update Shopping Cart Header** Dynamic Action.
+5. Create a second action. In the Dynamic Actions tab (left pane), navigate to **True** under **Update Shopping Cart Header** Dynamic Action.
 
      ![](./images/create-2da.png " ")
-7. In the Property Editor, enter the following:  
+6. In the Property Editor, enter the following:  
     - Under Identification section:
-        - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
     - Under Affected Elements section:          
         - For Selection Type - select **Region**
         - For Region - select **Shopping Cart**          
-8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Update Badge & Icon** action.
-9. Right-click  **Update Badge & Icon** action and click **Create Opposite Action**.
+7. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Execute JavaScript Code** action.
+8. Right-click  **Execute JavaScript Code** action and click **Create Opposite Action**.
 
      ![](./images/create-opp-action.png " ")
 
-10. Navigate to **Update Badge & Icon** Action under the False heading.
+9. Navigate to **Execute JavaScript Code** Action under the False heading.
     - Under Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
@@ -107,19 +101,16 @@ In this task, you will create a dynamic actions to:
 
     ![](./images/create-opp-action2.png " ")
 
-11. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action.
+10. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action.
 
     ![](./images/create-false-action.png " ")
 
-12. In the Property Editor, enter the following:  
+11. In the Property Editor, enter the following:  
     - Under Identification section:
-        - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
     - Under Affected Elements section:          
         - For Selection Type - select **Region**
-        - For Region - select **Shopping Cart**
-
-13. Click **Save**.
+        - For Region - select **Shopping Cart**    
 
 ## Task 2: Format Products Image Size
 
@@ -197,10 +188,10 @@ In this Task, you call the *manage\_orders.add_product* procedure that will add 
 
   ![](./images/create-process22.png " ")  
 
-    - Under Server-side Condition section:
-        - For When Button Pressed - select **Add**
+ - Under Server-side Condition section:
+   - For When Button Pressed - select **Add**
 
-4. Click **Save.**
+  Click **Save.**
 
 ## Task 5: Create a Process to Edit Products in the Shopping Cart
 In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove a product from the shopping cart and add it again with the updated quantity.
@@ -304,7 +295,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
     - Under Settings section:
         - For Items to Return - enter **P17\_SHOPPING\_CART\_ITEMS,P17\_PRODUCT\_ID,P17\_ACTION,P17\_QUANTITY**
 
-4. Click **Save.**
+    Click **Save.**
 
     ![](./images/create-close-dialog.png " ")
 
@@ -328,10 +319,10 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 ## Summary
 
-You now know how to add dynamic actions, Computations and Process to an APEX page. You may now **proceed to the next lab**.
+You now know how to customize and enhance the APEX page. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, May 2022

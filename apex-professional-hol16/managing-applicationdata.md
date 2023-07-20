@@ -52,32 +52,25 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     ![Save Schema Attributes](images/save-schema-attributes.png " ")
 
-7. Now, click **Enabled Objects** in the left Navigation Menu and then select **Create AutoREST Object** button.
+7. Now, Select **Object Browser** under **SQL Workshop**.
 
-  ![Navigate to Object browser](images/select-enabled-objects.png " ")
+    ![Navigate to Object browser](images/navigate-to-object-browser.png " ")
 
-8. Under **AutoREST Enable Object**, select the following and click **Create**.  
+8. Under **Tables**, select **EMP_1** and then click on **REST**.  
 
-    - Set **Object Type** to **TABLE**.
+   Under REST Attributes:
 
-    - Select **EMP_1** for **Object**
+    - Set **REST Enable Object** to **Yes**.
 
-    - Copy the **Full URL** and paste it in your Note pad.
+    - Set **Authorization Required** to **No**.  
 
     Then Click **Apply**.
 
-    ![Select Rest](images/create-autorest-object.png " ")  
+    ![Select Rest](images/select-rest.png " ")
 
-    ![Select Rest](images/autorest-object-created.png " ")
+9. You need to copy the **RESTful URI** and paste it in your Note pad.
 
-9. Now, please change the Copied URL and replace **ords** with **pls/apex** and Workspace Name with your Actual Workspace name as shown below.
-
-    Copied URL:
-    https://apex.oracle.com/ords/wksp_apexhandsonlabs/emp34/
-
-    Updated URL:
-    https://apex.oracle.com/pls/apex/apex_handson_labs/emp_1/
-
+    ![Copy Rest URL](images/copy-url1.png " ")
 
 ## Task 2: Create an application and Integrate Application Data from REST Data Source
 
@@ -187,4 +180,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022

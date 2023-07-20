@@ -29,7 +29,7 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/demo-projects-2.sql) and import it into your workspace. To run the app, please run the steps described in **Hands-on-lab-01** and **Hands-on-Lab-02**.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](files/demo-projects2.sql) and import it into your workspace. To run the app, please run the steps described in **Hands-on-lab-01** and **Hands-on-Lab-02**.
 
 
 ## Task 1: Manage and Customize Interactive Grid as a Developer
@@ -131,4 +131,4 @@ You now know how to Manage and Customise the Interactive Grid as a developer. Yo
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2022

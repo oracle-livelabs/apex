@@ -8,7 +8,7 @@ Estimated Time: 10 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Enhance Smart Filters
 
@@ -19,12 +19,12 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
     ![Navigate to Demo Projects Application](./images/select-projects-app.png " ")
 
-2. Now, you run the application using **Run Application** icon. If prompted, enter your workspace username and password and click Sign In.
+2. Now, you run the application using **Run Application** icon.
 
     ![Run Application](images/run-application.png " ")
 
-3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.      
-**Note** that your page number might be different.
+3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.
+  **Note** that your page number might be different.
 
     ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
 
@@ -34,7 +34,7 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
     ![Edit Filter](images/edit-filter1.png " ")
 
-5. Click **Save and Run Page** in the upper right corner.
+5. Click **Save and Run Page** in the upper right corner. If prompted, enter your workspace username and password and click Sign In.
 The revised page appears.
 
     ![Show edit Filter](images/show-edit-filter1.png " ")
@@ -71,4 +71,4 @@ You now know how to create smart filters and customize them. You may now **proce
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, May 2022

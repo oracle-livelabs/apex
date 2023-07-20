@@ -21,15 +21,19 @@ Business logic in APEX applications can be written using PL/SQL, Oracle's proced
 Create specification and body for the package.
 
 1. Navigate to **SQL Workshop**, click **Object Browser**.
-2. Navigate to the **Packages** on the left side, Right click on it and Select **Create Package**.
+2. Navigate to the + button on the right side, and click **Package**.
 
     ![Create Package1](./images/create-package1.png " ")
 
-3. For Package Name, enter **MANAGE_ORDERS** and click **Create Package**.
+3. Select **Specification** and click **Next**.
+
+    ![Create Package Specification1](./images/create-package-specification4.png " ")
+
+4. For Package Name, enter **MANAGE_ORDERS** and click **Next**.
 
     ![Create package name1](./images/create-package-name1.png " ")
 
-4. Select **Specification** and replace the contents of the code editor with the following:
+5. For Specification, replace the contents of the code editor with the following:
 
     ```
     <copy>
@@ -72,10 +76,12 @@ Create specification and body for the package.
     END manage_orders;
     </copy>
     ```
-5. Click **Save and Compile** to save the changes.
-    ![Create Package Specification1](./images/create-package-specification4.png " ")
 
-6. Navigate to the body part of the package by clicking on the Body tab and replace the contents of the code editor with the following:
+6. Click **Create Package Specification**.
+
+    ![Create package specificaton2](./images/create-package-specification2.png " ")
+
+7. Navigate to the body part of the package by clicking on the Body tab and replace the contents of the code editor with the following:
 
     ```
     <copy>
@@ -229,7 +235,7 @@ Create specification and body for the package.
     </copy>
     ```
 
-7. Click **Save & Compile**.
+8. Click **Save & Compile**.
 
     ![Save & Compile Package](./images/create-package-body2.png " ")
 
@@ -242,4 +248,4 @@ You now know how to create a package to manage the shopping cart. In the followi
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

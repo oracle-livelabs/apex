@@ -12,7 +12,7 @@ Estimated Time: 55 minutes
 * Create an application on the new data structures
 * Refine the application
 
-*{Note: This lab assumes you are using Oracle APEX 23.1}*
+*{Note: This lab assumes you are using Oracle APEX 20.2.}*
 
 ### Labs
 
@@ -27,7 +27,7 @@ Estimated Time: 55 minutes
 
 ### **Let's Get Started!**
 
-- Click on **Get Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Defining new Data Structures**.
+- Click on **Sign Up for a Free Trial** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Sign up for an APEX Workspace**.
 
 *Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
 
@@ -49,4 +49,5 @@ Estimated Time: 55 minutes
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
+

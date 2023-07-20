@@ -40,12 +40,12 @@ As you can see, it's hard to find the products and it would be beneficial to see
     In the Developer Toolbar click **Edit Page 1**.
 
     ![Products page in the application](./images/dev-toolbar.png " ")
-
+    
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
     Once in the App Builder click **1 - Products**.
 
     ![App Builder home page](./images/alt-app-builder.png " ")
-
+    
     You should now be in Page Designer with **Page 1: Products** loaded.
 
 
@@ -64,7 +64,7 @@ As you can see, it's hard to find the products and it would be beneficial to see
     ![Property Editor](./images/enhance-facet.png " ")    
 
 ## Task 3: Enhance the Cards Region
-
+    
 1.  In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
     - For SQL Query - enter the following SQL code:
 
@@ -103,9 +103,9 @@ As you can see, it's hard to find the products and it would be beneficial to see
         - Click **Template Options**. For Style - select **Style A**
     ![Property Editor](./images/template-options.png " ")  
         - Click **Ok**
-
+        
 2. Click **Attributes** and apply the following changes:
-
+    
     - Under Appearance section:
         - For Layout - select **Grid**
         - For Grid Columns - select **Auto**
@@ -156,7 +156,7 @@ Customers need a way to shop the products, so in this task you will add an actio
             | Name | Value |
             | --- | --- |
             | P18\_PRODUCT\_ID | &PRODUCT_ID. |
-
+             
         - For Clear Cache, enter **18**
         - Click **Ok**.
 
@@ -265,4 +265,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

@@ -8,7 +8,7 @@ If you review the **NYC Highschools Search** page, you can check and uncheck var
 Estimated Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Improve the Faceted Search](videohub:1_66hdojc7)
+[Improve the Faceted Search](videohub:1_ph68ji7e)
 
 ## **Task 1**: Enhancing the Safe Facet
 Reviewing the facets, you will notice that **Safe** is down the page and you can choose multiple range values from a checkbox group.
@@ -46,14 +46,15 @@ Reviewing the facets, you will notice that **Safe** is down the page and you can
 
 5. In the runtime environment, click one of the **Safe** ranges. Review how the counts on the other facets are updated based on your selection. Also notice how you can still select one of the other **Safe** ranges or click **Clear**, within the **Safe** facet, to clear your selection and again show all the counts for all the safety ranges.
 
- ![](images/runtime-safe.png " ")
 
+    ![](images/runtime-safe.png " ")
+    
 *Note*: As an optional step, you can follow the same steps in **STEP 1** to customize the **Attendance Rate** facet.   
 
 6. You can view each of the facets and their respective counts as a chart. To view the chart, click on the context menu next to the **Borough** facet and select **Show Chart**. A chart dialog window is displayed with the Borough names on the X-axis and the count on the Y-axis.
 
     ![](images/facet-show-chart.png " ")
-
+    
     ![](images/facet-chart.png " ")
 
 
@@ -76,9 +77,9 @@ Reviewing the facets, you will notice that **Safe** is down the page and you can
 1. Some facets may have multiple values to choose from and becomes difficult for the end user to scroll and select the values. APEX 22.1 introduces a new filter feature for facets which provides a search bar to search and filter facet values.
 
   Click the context menu (three dots) next to the facet name **Method**. Select **Filter**.
-
+  
   ![](images/filter-facet.png " ")  
-
+  
 2. A search filter is displayed below the facet name. Type **Transf** in the text box and all the facet values that contain the substring will be displayed. You can then select the checkbox for **Transfer** to be filtered in the report.
 
   ![](images/search-facet.png " ")  
@@ -91,4 +92,4 @@ You now know how to enhance a faceted search page and modify the properties on a
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn
- - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2022

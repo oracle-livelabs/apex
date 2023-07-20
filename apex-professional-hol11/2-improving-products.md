@@ -16,7 +16,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-5.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Navigate to Products Page.
 
@@ -158,7 +158,7 @@ Customers need a way to shop the products, so in this task you will add an actio
             | --- | --- |
             | P17\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - For Clear Cache, enter **17**
+        - For Clear Cache, enter **18**
         - Click **Ok**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
@@ -223,7 +223,7 @@ In this task, you will create two dynamic actions:
 
             ```
             <copy>
-            parseInt(this.data.P17_SHOPPING_CART_ITEMS) > 0
+            parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
             </copy>
             ```
             ![Define Dynamic Action2](./images/create-2-da2.png " ")
@@ -283,4 +283,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, November 2022

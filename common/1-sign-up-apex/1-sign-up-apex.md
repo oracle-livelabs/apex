@@ -39,13 +39,14 @@ Below are steps on how to sign up for either an *APEX Application Development* S
 
 For conducting labs in this workshop, either service can be utilized.
 
+*Note*: Except for the Spreadsheet lab, Building a Shopping Cart App and Movies Watchlist App workshops, which have been updated to use APEX 22.1, the remaining APEX workshops currently contain steps/screenshots for 21.2 or earlier. While we are working hard to update the workshops to 22.1 (the latest release), you can continue to refer to the steps in the workshop. Some of the steps may differ.
 
 Click one of the options below to proceed.
 
 ## **Option 1**: APEX Service
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
-In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
+In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX.
 
 1.  Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
@@ -176,31 +177,28 @@ In this part, you will create an Oracle APEX Application Development Service tri
       ![Autonomous Database Details page](images/status-available.png " ")
   
   9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
-    Click the **Apex Instance URL** provided on the ATP overview screen.
-    
-    ![Open APEX instance](images/apex-instance.png " ")
-    
-  10. Now, click **Launch APEX**
-   
-    ![Launch APEX instance](images/launch-apex-inst.png " ")
-   
+  
+      Click the **Tools** tab.
+      Click **Open APEX**.
+  
+      ![Autonomous Database Details page](images/click-apex.png " ")
   
       *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
   
-  11. Enter the password for the Administration Services and click **Sign In to Administration**.     
+  10. Enter the password for the Administration Services and click **Sign In to Administration**.     
       The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
   
       ![Administration Services login page](images/log-in-as-admin.png " ")
   
-  12. Click **Create Workspace**.
+  11. Click **Create Workspace**.
   
       ![Create Workspace page](images/welcome-create-workspace.png " ")
   
-  13. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+  11. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
   
     ![Choose type of schema](images/choose-schema.png " ")
     
-  14. In the Create Workspace dialog, enter the following:
+  12. In the Create Workspace dialog, enter the following:
   
       | Property | Value |
       | --- | --- |

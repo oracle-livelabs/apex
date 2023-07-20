@@ -149,8 +149,8 @@ This region will list the items that have been added temporarily to the shopping
 3. In the Property Editor, enter the following:
     - For Title - enter **Shopping Cart**
     - Under Source section:
-      - For Type - select **SQL Query**
-      - For SQL Query - enter the following SQL Query:
+     - For Type - select **SQL Query**
+     - For SQL Query - enter the following SQL Query:
 
         ```
             <copy>
@@ -174,16 +174,16 @@ This region will list the items that have been added temporarily to the shopping
 4. Click on **Attributes** and enter the following:
 
     - Under Appearance section:
-        - For Layout \- select **Horizontal (Row)**
+      - For Layout \- select **Horizontal (Row)**
     - Under Title section:
-        - For Column \- select **NAME**
+      - For Column \- select **NAME**
 
     - Under Subtitle section:
-        - For Column - select **BRAND**    
+      - For Column - select **BRAND**    
 
     - Under Body section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+      - Set Advanced Formatting to **On**
+      - For HTML Expression - enter the following:
 
        ```
         <copy>
@@ -209,16 +209,13 @@ This region will list the items that have been added temporarily to the shopping
        - For BLOB Column - select **PRODUCT_IMAGE**  
 
 
-  ![](./images/change-attributes12.png " ")
+    ![](./images/change-attributes12.png " ")
 
-  - Under Messages section:
+    - Under Messages section:
        - For When No Data Found - enter: **Your shopping cart is empty!**
 
-       - For No Data Found Icon: **fa-cart-empty**
-
-  - Under Card section:
+    - Under Card section:
       - For Primary Key Column 1 - select **ITEM**
-
 
  ![](./images/change-attributes13.png " ")
 
@@ -261,13 +258,11 @@ Create a Modal Page to add products to the cart.
 
 2. Select **Blank Page** and click **Next**.
 
-  ![](./images/create-blank-page11.png " ")
+  ![](./images/create-modal-dialog12.png " ")
 
 3. Enter the following and click **Create Page**.
   - Page Number - enter 17
-
   - For Name - enter **Add to Cart**
-
   - For Page Mode - select **Modal Dialog**  
 
   Click **Create Page**.
@@ -286,7 +281,6 @@ This region allows users to review the details of the product, such as brand, pr
     - For Title, enter **Product**
     - Under Source section:
      - For Type - select **SQL Query**
-
      - For SQL Query - enter the following SQL Code:
 
       ```
@@ -337,11 +331,9 @@ This region allows users to review the details of the product, such as brand, pr
 
   ![](./images/change-cards-attributes11.png " ")
 
-  - Under Secondary Body section:
-
-      - Set Advanced Formatting to **On**.
-
-      - For HTML Expression - enter the following:
+  - Under Secondary Body section:    
+        - Set Advanced Formatting to **On**.
+        - For HTML Expression - enter the following:
 
          ```
          <copy>
@@ -376,8 +368,8 @@ This region lets users read the customer reviews for this product.
 3. In the Property Editor, enter the following:
     - For Title - enter **Customer Reviews**
     - Under Source section:
-        - For **Type** - select **SQL Query**
-        - For **SQL Query** - enter the following SQL Code:
+     - For **Type** - select **SQL Query**
+     - For **SQL Query** - enter the following SQL Code:
 
      ```
             <copy>
@@ -399,11 +391,11 @@ This region lets users read the customer reviews for this product.
 4. Click **Attributes** and enter the following:
 
     - Under Appearance section:
-        - For Layout - select **Horizontal (Row)**
+     - For Layout - select **Horizontal (Row)**
 
     - Under Title section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+     - Set Advanced Formatting to **On**
+     - For HTML Expression - enter the following:
 
      ```
             <copy>
@@ -443,7 +435,7 @@ This region lets users read the customer reviews for this product.
 
    ![](./images/create-fs-page13.png " ")
 
-4. For Facet Selection, Select **Display as** option as **Cards**, Click Refresh and Leave the remaining options to default and click **Next**.
+4. For Facet Selection, Select **Display as** option as **Cards**, Leave the remaining options to default and click **Next**.
 
     ![](./images/create-fs-page14.png " ")
 
@@ -462,5 +454,5 @@ You now know how to create an Application item, Application process, Faceted sea
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022

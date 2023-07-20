@@ -13,7 +13,7 @@ Customers will be able to:
 - Proceed to checkout
 
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 22.2.*
 
 Estimated Time: 20 minutes
 

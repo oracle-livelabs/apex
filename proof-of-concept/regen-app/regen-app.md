@@ -52,7 +52,7 @@ The Create Application Wizard allows developers to load previously generated app
 
 1. From the App Builder home page, open the **App Builder** menu and then click **Create**.
 
-    ![](images/go-create-app1.png " ")
+    ![](images/go-create-app.png " ")
 
 2. On the Create an Application page, click **New Application**.
 
@@ -111,4 +111,5 @@ You now know how to utilize the blueprint to load a previous application definit
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Anoosha Pilli, Product Manager, DB Product Management, June 2020
+

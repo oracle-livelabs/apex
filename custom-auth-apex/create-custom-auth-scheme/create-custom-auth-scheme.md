@@ -49,15 +49,9 @@ This concludes this task. You may now **proceed to the next task.**
 ## Task 1: Write a Password Hashing Function
 Now that we have an application created, we're going to move on to creating the necessary Database objects for our custom authentication scheme.
 
-In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built-in **DBMS CRYPTO** interface and its **SHA-256** hash. In order to use this interface, you must grant the schema being used for this APEX application access to it. You can do so by running the following code snippet from the database that your APEX instance is running on in **Database Actions** > **SQL** (while logged in as the administrator), replacing 'schema_name' with your schema. If you don't which schema you're using, refer to the screenshot in step 2 of this Task (in the top-right corner).
+In order to keep end users’ credentials secure, it is important to implement a password hashing function so that your developers and DBAs cannot simply read an end user’s password directly from a database table. This function takes in a raw password string and produces a unidirectional hash of the password using Oracle Database’s built-in **DBMS OBFUSCATION TOOLKIT** and its **MD5** hash.
 
-```
-<copy>
-grant execute on dbms_crypto to schema_name;
-</copy>
-```
-
-The SHA-256 (Secure Hashing Algorithm 256) is a one-way, unkeyed cryptographic function that accepts a message of any length as input and returns a 256-bit long hash output. There are other hashing algorithms available that can be used here in place of SHA-256, however this algorithm is widely accepted as one of the most commonly used and best hashing algorithms. *For more information on the **DBMS_ CRYPTO** interface, see the [**Learn More**](#LearnMore) section at the end of this lab.*
+The MD5 (message-digest) hashing algorithm is a one-way cryptographic function that accepts a message of any length as input and returns a fixed-length digest value as output. There are other hashing algorithms available that can be used here in place of MD5. There are also other ways of writing the below hashing function that still makes use of both the **DBMS OBFUSCATION TOOLKIT** and the MD5 hash, but with variations to the *input* to the MD5 hash. *For more information on the **DBMS_ OBFUSCATION_TOOLKIT**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
 
 1. Navigate to the SQL Code Editor by clicking the dropdown arrow next to **SQL Workshop** and selecting **SQL Commands**.
 
@@ -69,12 +63,12 @@ The SHA-256 (Secure Hashing Algorithm 256) is a one-way, unkeyed cryptographic f
 
     ```
 		<copy>
-		create or replace FUNCTION "SH256_ENCRYPTION" (pwdIn in varchar2)
+		create or replace FUNCTION "MD5_ENCRYPTION" (pwdIn in varchar2)
 		return varchar2 is encrypted varchar2(32) := '';
 
 		BEGIN
-		    encrypted := DBMS_CRYPTO.HASH(UTL_I18N.STRING_TO_RAW(pwdIn, 'AL32UTF8'), DBMS_CRYPTO.HASH_SH256);
-		    return encrypted;
+    		encrypted := DBMS_OBFUSCATION_TOOLKIT.MD5(input => UTL_I18N.STRING_TO_RAW(pwdIn, 'AL32UTF8'));
+    		return encrypted;
 		END;
 		</copy>
     ```
@@ -89,85 +83,73 @@ All of your users’ authentication credentials and user information needs to be
 
 	![Object Browser](./images/object-browser.png)
 
-2. Click **Table**.
+2. In the top-right corner of the screen, click the ![+ icon](./images/plus-icon.png) icon and click **Table**.
 
-	![Create table from Object Browser](./images/object-browser-create-table.png)
+3. Give it a **Table Name** and add the **Columns** shown in the screenshot below. Then click **Next**.
 
-3. Give it a **Table Name** and add the **Columns** shown in the screenshot below by double-clicking cells to edit and clicking the **Add Column** button. Use the dropdown to select the **Data Type** and use the checkboxes for **Not Null** and **Primary Key** accordingly. When complete, click **Create Table**.
-
-	> **Note:** If you're interested in seeing the SQL code associated with creating the table, click on the **Preview SQL** button before proceeding. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. To do so, you can simply copy & paste the code into **SQL Workshop &gt; SQL Commands** and run the code to create the same table that we've created here.*
+	> **Note:** Feel free to change the **Column Names** to your liking as well as the **Precision** and **Scale**. We recommend keeping the **Data Type**, **Not Null**, and **Identity** information as shown. The **ACCOUNT_STATUS** column is optional. This "flag" will be used later to implement the additional functionality discussed in Lab 3.
 
 	![Creating the user credentials table](./images/user-creds-table.png)
 
-	This table will now appear in your **Object Browser**. Feel free to explore the different Database Objects that have been created for this table by clicking on different tabs seen below the table name (see screenshot below).
+4. Select **Populated by Identity column** for the **Primary Key** and leave the **Primary Key Constraint Name** as is. From the dropdown, select the **USER_ID** column as the **Primary Key**. Then click **Next**.
+
+	![Primary Key settings for user credentials table](./images/primary-key.png)
+
+5. Because we don't have any other tables in our APEX Workspace at this time, we cannot set up any foreign keys. You can simply click **Next** on this page.
+
+6. If you don't want usernames and/or emails to be repeated (which is often the desired restriction), we need to create a **Unique Constraint**. Next to **Constraint Type** select **Unique** and double-click on the desired column where it says **Key Column(s)**. After double-clicking the desired column, it will move to the box on the right (see screenshot below). Give the constraint a **Name** and then click **Add** in the top-right.
+
+ 	![Adding a uniqueness constraint to the usernames column](./images/unique-username.png)
+
+7. Before clicking **Next**, create any additional constraints that you would like by repeating step 6. Ensure all your constraints appear in the table in the top-left corner (see screenshot below). Once all of your desired constraints have been created and properly added to this table, then click **Next**.
+
+	![Ensure constraints have been added before proceeding](./images/constraints-added.png)
+
+8. If you're interested in seeing the SQL code associated with creating the table, click on the ![Arrow icon next to SQL](./images/arrow-icon.png) icon next to **SQL**. Feel free to copy the SQL code and save it to a local notepad if you're interested in reviewing it later or in replicating this table in another APEX Workspace. Then click **Create Table**.
+
+	*To use the SQL Code to replicate this table in another workspace, you can simply copy & paste the code into **SQL Workshop &gt; SQL Commands** and run the code to create the same table that we've created here.*
+
+	![Create table](./images/create-table.png)
+
+	This table will now appear in your **Object Browser**. Feel free to explore the different Database Objects that have been created for this table (**Indexes**, **Constraints**, etc.) by clicking on different tabs seen below the table name (see screenshot below).
 
 	![User credentials table](./images/user-creds-final-table.png)
 
-4. If you don't want usernames and/or emails to be repeated (which is often the desired restriction), we need to create a few **Constraints**. Navigate to the **Constraints** tab and click **+ Create**.
-
- 	![Navigate to Constraints tab](./images/constraints-tab.png)
-
-5. Give the constraint a **Name** and select **Unique** from the dropdown for the **Constraint Type**. Then select the **USERNAME** column from the dropdown and click **Apply**. Repeat this process (steps 4 & 5) for the **EMAIL** column.
-
-	![Create a unique username constraint](./images/unique-username-constraint.png)
-
-
-6. Now that we have the user credentials table created with our desired constraints, we need to create a couple of **Triggers** for this table. Navigate to the **Triggers** tab and click **Create** (see screenshot below).
+9. Now that we have the user credentials table created, we need to create a couple of **Triggers** for this table. Navigate to the **Triggers** tab and click **Create** (see screenshot below).
 
 	*For more information on **Triggers**, see the [**Learn More**](#LearnMore) section at the end of this lab.*
 
-	![Navigate to triggers tab](./images/triggers-tab.png)
+	![Creating Triggers](./images/create-triggers.png)
 
-7. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) before inserting the password. Ensure the **Table** is our user credentials table, give the Trigger a **Trigger Name**, and select "Before" as the **Firing Point**. Then click **Create Trigger**.
+10. Every time a new user is created, we want to ensure their password is encrypted before storing it. To do so, we will create a Trigger that calls our password hashing function (from [Task 1](#Task1:WriteaPasswordHashingFunction)) before inserting the password. Give the Trigger a **Name**, select "BEFORE" as the **Firing Point**, and select "insert" for **Options**. Copy and paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for encrypting the password before inserting it into the table](./images/encrypt-before-insert-trigger.png)
-
-8. Notice we've only given the Trigger a name and said when to run ("Before"). Now we need to actually write the logic for the trigger. Where it says "null", copy & paste the code snippet below.
 
 	```
 	<copy>
 	:new.username := upper(:new.username);
 	:new.email := lower(:new.email);
-	:new.password := sh256_encryption(:new.password);
+	:new.password := md5_encryption(:new.password);
 	</copy>
 	```
 
-	![Copy & paste the trigger body](./images/paste-trigger-body.png)
+11. Finally, click **Create Trigger**.
 
-9. Let's take a look at the line after "before" in the above screenshot. This indicates that this trigger should run before any insert, update, or deletion within our user credentials table. This isn't necessarily our desired functionality. We only want to encrypt a user's password when they're first added to the table so let's get rid of "or update or delete".  Now click **Save and Compile** and ensure you get a success message.
-
- 	![Make edits to the ENCRYPT_BEFORE_INSERT trigger and save & compile](./images/encrypt-before-insert-trigger-edits.png)
-
-10. We also want to ensure that the user's password is encrypted if they were ever to go back and reset/update their password. Create a Trigger that calls the password hashing function before any updates are made on the password. Repeat steps 6 through 8. When copying & pasting the code snippet in step 8, only keep the last line (starting with ":new.password").
+12. We also want to ensure that the user's password is encrypted if they were ever to go back and reset/update their password. Create a Trigger that calls the password hashing function before any updates are made on the password. Repeat steps 9 through 11, but for the **Firing Point**, select "update of", and for **Column**, select "PASSWORD" from the dropdown. Because this only pertains to updates on the password, we just need the last line in the code snippet above (starting with ":new.password") for the **Trigger Body**. The final Trigger should look like the one in the screenshot below.
 
 	![Trigger for encrypting the password once a user updates their password](./images/encrypt-before-update-trigger.png)
 
-11. As the trigger is configured right now, it is set to run whenever there's an insert, update, or deletion in the table, but that would mean the password is also encrypted again when a user tries to change their email, which we do NOT want to happen. Thus, we need to change the line after "before" to the code snippet below. Remember to **Save and Compile** when done.
-
-	```
-	<copy>
-	update of "PASSWORD" on "USER_CREDS"
-	</copy>
-	```
-
-	![Change the line after "before" in the trigger](./images/encrypt-before-update-trigger-edits.png)
-
-12. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
+13. If you added the optional **ACCOUNT_STATUS** flag back in step 3, we also need to create a Trigger that initially sets this value to 0, signifying a disabled account until the user activates their account via email. This account activation functionality will be implemented later on in [Lab 3: Implementing Additional Functionality](?lab=implement-additional-functionality). To create this Trigger, click on the **Triggers** tab of your user credentials table and click **Create**. Give the Trigger a **Name** and set the **Firing Point** as "BEFORE". From the dropdown, select "insert" for the **Options**. Copy & paste the code snippet below into the **Trigger Body** and then click **Next**.
 
 	![Trigger for initially disabling a user's account](./images/disable-account-trigger.png)
 
 	```
 	<copy>
-	create or replace trigger "INITIALLY_DISABLE_ACCOUNT"
-	before
-	insert on "USER_CREDS"
-	for each row
-	begin
-	    :new.account_status := 0;
-	end;
-	/
+	:new.account_status := 0;
 	</copy>
 	```
+
+14. Finally, click **Create Trigger**.
 
 This concludes this task. You may now **proceed to the next task.**
 
@@ -222,7 +204,7 @@ The authentication function is the function called at login. It takes in a usern
 	    from user_creds  
 	    where username = uc_username or email = lc_email;
 	--if the passwords match return true, otherwise return false
-	    select sh256_encryption(p_password) into encrypted_pwd from dual;
+	    select md5_encryption(p_password) into encrypted_pwd from dual;
 
 	    if retrieved_pwd = encrypted_pwd then
 	        return true;
@@ -292,13 +274,13 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/understanding-authentication.html) in Oracle APEX
-* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-an-authentication-scheme.html#GUID-093A9521-FDEB-432A-891D-791ED402C333) in Oracle APEX
-* [Custom Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267) in Oracle APEX
-* [Triggers](https://docs.oracle.com/en/database/oracle/apex/23.1/aeutl/managing-triggers.html) in Oracle APEX
-* [DBMS_CRYPTO Interface](https://docs.oracle.com/en/database/oracle/oracle-database/23/arpls/DBMS_CRYPTO.html)
-* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271) in Oracle APEX
+* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/understanding-authentication.html#GUID-144A774D-2B05-4BE5-9550-6951EE0B536B) in Oracle APEX
+* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/creating-an-authentication-scheme.html#GUID-093A9521-FDEB-432A-891D-791ED402C333) in Oracle APEX
+* [Custom Authentication](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/preconfigured-authentication-schemes.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267) in Oracle APEX
+* [Triggers](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeutl/managing-triggers.html#GUID-2054B50C-53E6-4C92-9334-A055AF653177) in Oracle APEX
+* [DBMS OBFUSCATION TOOLKIT](https://docs.oracle.com/cd/E11882_01/appdev.112/e40758/d_obtool.htm#ARPLS028)
+* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/application-express/21.2/htmdb/providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271) in Oracle APEX
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, June 2023
+* **Last Updated By/Date** - Ana Beyer, February 2023

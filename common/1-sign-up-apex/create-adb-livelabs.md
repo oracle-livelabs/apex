@@ -24,60 +24,55 @@ In this lab, you will:
 Note: You can also directly access your Autonomous Data Warehouse or Autonomous Transaction Processing service in the Quick Actions section of the dashboard.
 
 3. Select **Autonomous Transaction Processing**.
-  ![Cloud homepage](images/database-atp.png  " ")
- 
 
-1. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
+  ![Cloud Dashboard](https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/images/console/database-atp.png " ")
+
+4. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
     ![Compartment drop down list](images/livelabs-compartment.png " ")
-2. You can see your current default region in the top, right hand corner of the page.
+5. You can see your current default region in the top, right hand corner of the page.
 
-3. Click **Create Autonomous Database**.
+6. Click **Create Autonomous Database**.
 
-4. Double check that you are using the compartment assigned to you
-5. Select **Transaction Processing** as the workload.
-6. Leave all the settings at their default values.
-7.  Use **```SecretPassw0rd```** for the ADMIN password
-8.  Select **License Included **, then click **Create Autonomous Database**.
+  ![Region drop down list](images/region.png " ")
 
-9.  Check the following screenshot to verify your settings:
+7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
 
-    ![Create Autonomous Database page](images/create-atp-full.png " ")
+  ![Create Autonomous Database page](images/atp-settings-1.png " ")
+  ![Create Autonomous Database page](images/atp-settings-2.png " ")
+  ![Create Autonomous Database page](images/atp-settings-3.png " ")
 
-After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
+8. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
 
 Continue when the status changes from:
 
-  ![Autonomous Database Details page](images/status-provisioning.png =50%x*)
+  ![Autonomous Database Details page](images/status-provisioning.png " ")
 
 to:
 
-  ![Autonomous Database Details page](images/status-available.png =50%x*)
+  ![Autonomous Database Details page](images/status-available.png " ")
   
 ## Task 2: Create a APEX workspace
 
 1. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
 
-    Click the **Apex Instance URL** provided on the ATP overview screen.
-    
-    ![Open APEX instance](images/apex-instance.png " ")
+    Click the **Tools** tab.
+    Click **Open APEX**.
 
-2. Now, click **Launch APEX**
+    ![Autonomous Database Details page](images/click-apex.png " ")
 
-    ![Launch APEX instance](images/launch-apex-inst.png " ")
-   
 
-3. Enter the password for the Administration Services and click **Sign In to Administration**.     
+2. Enter the password for the Administration Services and click **Sign In to Administration**.     
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
 
     ![Administration Services login page](images/log-in-as-admin.png " ")
 
-4. Click **Create Workspace**.
+3. Click **Create Workspace**.
 
     ![Create Workspace page](images/welcome-create-workspace.png " ")
 
-5. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+4. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
-    ![Choose type of schema](images/choose-schema.png " ")
+  ![Choose type of schema](images/choose-schema.png " ")
   
 5. In the Create Workspace dialog, enter the following:
 

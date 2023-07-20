@@ -1,42 +1,33 @@
 # Customize the App Homepage
 
 ## Introduction
-In this lab, you take advantage of the low code development by customizing the Social Media App declaratively. You  learn to navigate and modify the application and page properties.
+In this lab, you will take advantage of the low code development by customizing the Social Media App declaratively. You will learn to navigate and modify the application and page properties.
 
 Estimated Time: 5 minutes
 
-### Objectives
+## **Task 1**: Remove the Navigation Menu
 
-In this lab, you will:
-- Customize the Application Homepage
-- Learn to remove the Navigation Menu and Breadcrumb Region
-
-### Prerequisites
-
-- Completion of workshop through Lab 3
-
-## Task 1: Remove the Navigation Menu
-
-1. As a first step, we want to remove the Navigation menu from the page. To do this, select **Page 1: Timeline** in the Rendering Tree. 
+1. The first thing we want to do is configure the page to not show any
+navigation menu. We do this by ensuring that the top-level rendering
+tree entry is selected on the left section (**Page 1: Timeline**), and
+then by looking at the Page details on the right. Look for the **Navigation Menu** section in the list.
 
     ![Page designer is seen](images/property-editor-nav.png "")
 
-2. In the Property Editor:
-    - Go to the **Navigation Menu** section
-    - Toggle **Override User Interface Level**: ON
-    - List: **Do not show the Navigation Menu List**
+2. We want to click the switch **Override User Interface Level** and leave
+the List option at the default of *Do not show the Navigation Menu List*.
 
     ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
 
-## Task 2: Remove the Breadcrumb Region
+## **Task 2**: Remove the Breadcrumb Region
 
-Since our app is a Single Page Application, we do not need a breadcrumb bar at the top of the page. Let us go ahead and delete the default Breadcrumb.
+Since our app is going to be a Single Page Application, we do not need or want a breadcrumb bar at the top of the page. Let us go ahead and delete the one that got created by default.
 
 1. In the Rendering Tree, navigate to Components > Breadcrumb Bar. Right-click on **APEX Social Media**, and select **Delete**.
 
     ![Rendering Tree in Page Designer](images/breadcrumb-delete.png "")
 
-    Observe how the tree reflects after the breadcrumb was deleted.
+2. Observe how the tree reflects after the breadcrumb was deleted.
 
     ![Rendering Tree in Page Designer](images/after-breadcrumb-delete.png "")
 
@@ -44,11 +35,12 @@ Since our app is a Single Page Application, we do not need a breadcrumb bar at t
 
     ![Save and Run button](images/save-and-run.png "")
 
-    **Once you are signed in, your app should look like this:**
+    **Once you are signed in (if you weren't already), your app should look
+like this:**
 
     ![The update app after the changes](images/updated-app.png "")
 
-    **Note:** We will repeat this process of iterating over the app development: Make
+    **Note:** This will be our process of iterating over the app development: Make
 changes, Save and Run and review the effects of our changes.
 
     With the navigation list and the breadcrumb removed, we have a nice
@@ -86,9 +78,7 @@ In this task, you will learn to download and import a starter app. If you follow
 
     Now, continue Lab 5.
 
-    You may now **proceed to the next lab**
-
-## Acknowledgements
+## **Acknowledgements**
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023

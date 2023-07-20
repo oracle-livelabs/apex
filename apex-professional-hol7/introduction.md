@@ -15,7 +15,7 @@ Estimated Time: 40 minutes
 * Customise the Interactive Grid page you have have in **Project Tasks** Application as a **Developer**.
 * Customise the Interactive Grid page you have have in **Project Tasks** Application as an **End-user**.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 22.2.*
 
 ## Learn More - *Useful Links*
 

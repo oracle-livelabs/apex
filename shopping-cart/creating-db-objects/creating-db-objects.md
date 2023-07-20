@@ -25,14 +25,14 @@ In this lab, you will:
 Create specification and body for the package.
 
 1. Navigate to **SQL Workshop**, click **Object Browser**.
-2. Navigate to the **Packages** on the left side, Right click on it  and Select **Create Package**.
+2. Navigate to the + button on the right side, and click **Package**.
 
     ![Object Browser](./images/create-package.png " ")
 
-4. For Package Name, enter **MANAGE_ORDERS** and click **Create Package**.
+3. Select **Specification** and click **Next**.
 
+4. For Package Name, enter **MANAGE_ORDERS** and click **Next**.
     ![Create Package details](./images/create-package2.png " ")
-
 5. For Specification, enter the following:
 
     ```
@@ -77,9 +77,10 @@ Create specification and body for the package.
     </copy>
     ```
 
-   Click **Save and Compile**
+6. Click **Create Package Specification**.
+    ![Create Package page](./images/create-specification.png " ")
 
-6. Navigate to body part of the package by clicking on Body tab and enter the following:
+7. Navigate to body part of the package by clicking on Body tab and enter the following:
 
     ```
     <copy>
@@ -233,7 +234,7 @@ Create specification and body for the package.
     </copy>
     ```
 
-7. Click **Save & Compile**.
+8. Click **Save & Compile**.
 
     ![New Package details page](./images/create-body.png " ")
 
@@ -244,4 +245,4 @@ You now know how to create a package to manage the shopping cart. In the followi
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022

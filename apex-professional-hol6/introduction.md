@@ -13,7 +13,7 @@ Estimated Time: 35 minutes
 * Customise the Interactive Report page you have in **Sample Reports** Application as a **Developer**.
 * Customise the Interactive Report page you have in **Sample Reports** Application as an **End-user**.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 22.2.*
 
 ## Learn More - *Useful Links*
 

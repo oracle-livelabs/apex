@@ -549,10 +549,10 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 ## Learn More
 
 * [Setting up an Approved Sender in the OCI Console](https://blogs.oracle.com/apex/post/sending-email-from-your-oracle-apex-app-on-autonomous-database) for an APEX app
-* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/adding-new-a-page-to-an-app.html) in Oracle APEX
-* [Managing Buttons](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-buttons.html) in Oracle APEX
-* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/managing-dynamic-actions.html#GUID-93732CF5-42AD-4400-B1B9-5F6AA3D80715) in Oracle APEX
+* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/adding-database-app-pages.html#GUID-0BCE05D2-A757-476D-B46C-F823D822FF3B) in Oracle APEX
+* [Managing Buttons](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/creating-buttons.html) in Oracle APEX
+* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/application-express/19.2/htmdb/managing-dynamic-actions.html#GUID-93732CF5-42AD-4400-B1B9-5F6AA3D80715) in Oracle APEX
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, June 2023
+* **Last Updated By/Date** - Ana Beyer, February 2023

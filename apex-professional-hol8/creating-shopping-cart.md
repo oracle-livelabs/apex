@@ -103,7 +103,6 @@ In this lab, you will:
 
      ![](./images/create-button2.png " ")
 
-    Click Save.
 
 ## Task 2: Add Items and Buttons
 In this task, you will create four-page items:
@@ -199,4 +198,4 @@ You now know how to create Page Items and Page buttons. You may now **proceed to
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022

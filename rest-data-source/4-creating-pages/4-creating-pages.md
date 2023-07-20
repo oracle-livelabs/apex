@@ -10,23 +10,39 @@ Estimated Time: 15 minutes
 1. Return to the Application Home Page.     
     Click **Create Page**.
 
-    On the Create a Page dialog, click **Interactive Report**.
+    On the Create a Page dialog, click **Report**.
 
     ![](images/create-rpt.png " ")
 
-2. In Interactive Report dialog, for Page Attributes, enter the following.
-    - **Name:** enter **Employees**
-    - **Include Form Page:** Enable
+2. On the Create Page dialog, click **Report and Form**.
+
+    ![](images/rpt-with-form.png " ")
+
+3. In the Create Report with Form dialog, for Page Attributes, enter the following.
+    - **Report Page Name:** enter **Employees**
     - **Form Page Name:** enter **Maintain Employee**
     - **Form Page Mode:** click **Modal Dialog**
-    - **Data Source:** Select REST Data Source
-    - **REST Data Source:** Select REST EMP Source
+    - **Breadcrumb:** select **Breadcrumb**
 
     Click **Next**.
 
     ![](images/set-page.png " ")
 
-3. On Interactive Report dialog, for Primary Key Column, select **EMPNO (Number)** and Click **Create**.
+4. On the Navigation Menu dialog, click **Create a new navigation menu entry**.     
+    Click **Next**.
+
+    ![](images/set-nav.png " ")
+
+5. On the Data Source dialog, enter the following.
+    - **Data Source:** click **REST Data Source**
+    - **REST Data Source:** select **REST EMP Source**
+
+    Click **Next**.
+
+    ![](images/set-data-source.png " ")
+
+6. On the Form Page dialog, for Primary Key Column, select **EMPNO (Number)**.      
+    Click **Create**.
 
     ![](images/set-pk.png " ")
 
@@ -49,7 +65,7 @@ The default column order will not be optimal when the page is generated. You can
 
     ![](images/go-columns.png " ")
 
-5. On the Select Columns dialog, shuffle the columns such that ENAME, and DEPTNO are the first two columns, by selecting the columns and using the **Top** arrow.
+5. On the Select Columns dialog, shuffle the columns such that EMPNO, ENAME, and DEPTNO are the first three columns, by selecting the columns and using the **Top** arrow.
     Click **Apply**.
 
     ![](images/set-columns.png " ")
@@ -136,7 +152,7 @@ The form page for editing records also needs some improvement.
 
 1. Navigate back to the Runtime environment.
 
-    ![](images/runtime1.png " ")
+    ![](images/runtime.png " ")
 
 2. Refresh the browser.
 
@@ -176,13 +192,14 @@ The form page for editing records also needs some improvement.
 
 2. On the Employees report page, review BLAKE's **Deptno** and **Sal**.
 
+    ![](images/show-update.png " ")
 
 ## Task 6: Delete a Record
 
 1. On the Employees report page, find **TURNER**, and click the edit icon.
 
     On the Maintain Employee dialog, click **Delete**.
-    On the delete confirmation dialog, click **Delete**.
+    On the delete confirmation dialog, click **Ok**.
 
     ![](images/delete.png " ")
 
@@ -197,4 +214,5 @@ This completes Lab 4. You now know how to utilize a REST endpoint to develop a r
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+ - **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
+

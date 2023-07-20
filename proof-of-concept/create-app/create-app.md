@@ -34,6 +34,9 @@ In this lab you will build an interactive application on the data structures you
     ![](images/app-from-script.png " ")
 
 3.  On the Create an Application page, for Name enter **Quick Projects**.
+    Click **Appearance**.    
+    For Theme Style, select **Vita-Slate**.     
+    Click **Save Changes**
 
     ![](images/name-app.png " ")
 
@@ -72,4 +75,5 @@ You now know how to utilize the Create Application wizard directly from SQL Scri
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Anoosha Pilli, Product Manager, DB Product Management, June 2020
+

@@ -24,11 +24,6 @@ In this lab, you will:
 - Learn how to Request Information/ Delegate/ Release
 - Learn how to set deadlines and expiration
 
-### Downloads
-
-**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
-
-
 ## Task 1: Create the Application
 In this lab, you create a new application named Expense Tracker.
 
@@ -171,12 +166,6 @@ To create a task definition:
 
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
 
-    ![Click Task Definition](images/click-task-definition.png " ")
-
-    - Click on the task definition - **Expense Request** to continue editing.
-
-    ![Click on Expense Request](images/select-expense-request.png " ")
-
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
@@ -220,18 +209,11 @@ To create a task definition:
      | ESTIMATED\_COST | Estimated Cost | String |
      | EXPENSE\_STATUS | Expense Status | String |
      | EXPENSE\_TYPE | Expense Type | String |
-     | REQ\_ID | Req Id | String |
+     | EXPENSE\_TYPE | Req Id | String |
 
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
-     - Click **Apply Changes**.
-
-10. Click on the task definition - **Expense Request** to continue editing.
-
-  ![Click on Expense Request](images/select-expense-request.png " ")
-
-
-11. Under **Actions** Section, Click **Add Action** button
+10. Under **Actions** Section, Click **Add Action** button
 
      ![Task Definition Actions Create](images/task-definition-actions0.png " ")
 
@@ -266,9 +248,9 @@ To create a task definition:
     ```
     - Click **Create** to save Create Event Action.
 
-      ![Task Definition Action - create1](images/task-definition-create-action.png " ")
+    ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-12. To Add the next action, Click **Add Action** button.
+11. To Add the next action, Click **Add Action** button.
 
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
@@ -334,7 +316,7 @@ To create a task definition:
 
        ![Task Definition - Approved action created](images/task-definition-approved-code0.png " ")
 
-13. Again, Click  **Add Actions** button.
+12. Again, Click  **Add Actions** button.
 
     ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
@@ -449,8 +431,6 @@ Add a page to Submit an Expense request.
     ![New Expense request region source](images/submit-expense-region-details.png " ")
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
-
-  ![Create Page Item - P3_EXPENSE_TYPE](images/create-page-item.png " ")
 
     - For Name - Enter **P3\_EXPENSE\_TYPE**
 
@@ -970,5 +950,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
    - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala, Product Manager
-   - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+   - **Contributor** - Roopesh Thokala , Product Manager
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
+
