@@ -23,7 +23,7 @@ In the Runtime environment navigate to To Dos and notice that the report include
 
     In the Developer Toolbar click **Edit Page 9**.
 
-    ![](images/dev-toolbar.png " ")
+    ![](images/dev-toolbar2.png " ")
 
     You should now be in Page Designer with **Page 9: To Dos** loaded.
 
@@ -116,14 +116,16 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
 2. From the application home page, click **Shared Components**.
 
-    ![](images/go-shared.png " ")
+    ![](images/go-shared1.png " ")
 
 3. From Shared Components, under Other Components, click **List of Values**.
 
 4. From the List of Values page, click **HOL_TASKS.NAME**.
 
 5. In the List of Values page, enter the following:
+
     - Source > Source Type - click **SQL Query**
+
     - Source > SQL Query - enter the following -
 
         ```
@@ -137,7 +139,9 @@ This same LOV is used on the Links form page so we can reuse it there as well.
         ```
 
     - Column Mapping > Return - select **ID**
+
     - Column Mapping > Display - select **NAME**
+
     - Column Mapping > Default Sort - select **NAME**
 
     ![](images/set-lov.png " ")
@@ -156,9 +160,10 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     In the List of Values toolbar, click **Apply Changes**.
 
-5. On the To Do form page you will need to update the item type for Task.
+6. On the To Do form page you will need to update the item type for Task.
 
     From Shared Components, within the breadcrumbs, click **Application xxxxx**.  
+
     From the application home page, in the list of pages, click **10 - To Dos**.
 
     ![](images/go-page10.png " ")
@@ -168,26 +173,28 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![](images/set-task-lov.png " ")   
 
-7. In the Page Designer toolbar, click **Save**.
+8. In the Page Designer toolbar, click **Save**.
 
-8. Time to review the completed form page.    
+9. Time to review the completed form page.    
 
-    Navigate to the runtime environment tab or browser.     
-    Navigate to **To Dos** and refresh the page.     
-    Click the edit icon for a To Do.
+    - Navigate to the runtime environment tab or browser.
 
-    For Task, click the down arrow to display the Task Popup LOV.     
-    Enter in a search term and hit [Enter].
+    - Navigate to **To Dos** and refresh the page.   
+
+    - Click the edit icon for a To Do.
+
+    - For Task, click the down arrow to display the Task Popup LOV.     
+
+    - Enter in a search term and hit [Enter].
 
     ![](images/form-runtime.png " ")    
 
 ## **Summary**
 
-You now know how to enhance report and list of value queries to display related details. [
+You now know how to enhance report and list of value queries to display related details.
 
 ## **Acknowledgments**
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
-
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

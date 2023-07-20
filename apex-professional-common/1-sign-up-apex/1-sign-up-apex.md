@@ -4,7 +4,7 @@
 
 Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), and Autonomous Transaction Processing (ATP) are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizens, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop and then create an APEX workspace accordingly.
 
-If you already have an APEX 22.2 Workspace provisioned, you can skip this lab.
+If you already have an APEX 23.1 Workspace provisioned, you can skip this lab.
 
 Estimated Time: 5 minutes
 <!--
@@ -27,13 +27,14 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
 * View the About APEX page:
     - Sign in to Oracle APEX. The Workspace home page appears.
+
     - Click the Help menu at the top of the page and select About. The About APEX page appears.
 
   ![APEX Details](images/version.png)
 
 ### Where to Run the Lab
 
-You can run this lab in any Oracle Database with APEX 22.2 installed. This includes the APEX Application Development Service, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 22.2 is installed), on a third-party cloud provider where APEX 22.2 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 22.2.
+You can run this lab in any Oracle Database with APEX 23.1 installed. This includes the APEX Application Development Service, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 23.1 is installed), on a third-party cloud provider where APEX 23.1 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 23.1.
 
 Below are steps on how to sign up for an *APEX Application Development* Service, or for an *Oracle Autonomous Database* cloud service or *apex.oracle.com* service.
 - On the other hand, **apex.oracle.com** is also a free service; however, it is only designated for development purposes, and running production apps is not allowed. For conducting labs in this workshop, any of these options can be utilized.
@@ -102,7 +103,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
 8. On the APEX Workspace log in page, enter SecretPassw0rd for the password, check the Remember workspace and username checkbox, and then click Sign In.
 
-  ![Sign In](images/login-to-workspace1.png " ")  
+  ![Sign In](images/login-to-workspace.png " ")  
 
 9. You should now be in the APEX Builder.
 
@@ -290,4 +291,4 @@ You may now **proceed to the next lab**.
 ## **Acknowledgements**
 
  - **Author** -  Roopesh Thokala, Product Manager
- - **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

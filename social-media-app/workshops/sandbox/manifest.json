@@ -8,7 +8,7 @@
     },
     {
       "title": "Sign Up for an APEX Workspace",
-      "filename": "../../../common/1-sign-up-apex/create-adb-livelabs.md"
+      "filename": "../../../common-latest/1-sign-up-apex/create-adb-livelabs.md"
     },
     {
       "title": "Lab 1: Create an APEX App",
@@ -49,7 +49,7 @@
     },
     {
       "title": "Lab 10: Create a Map Region [OPTIONAL]",
-      "filename": "../../11-get-device-location/11-get-device-location.md"
+      "filename": "../../10-get-device-location/10-get-device-location.md"
     },
     {
       "title": "Need Help?",
