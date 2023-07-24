@@ -28,7 +28,7 @@ It would be beneficial to see additional details related to the project.
 
     In the Developer Toolbar click **Edit Page 8**.
 
-    ![](images/dev-toolbar.png " ")
+    ![](images/dev-toolbar1.png " ")
 
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
     Once in the App Builder click **8 - Task**.
@@ -71,7 +71,8 @@ It would be beneficial to see additional details related to the project.
     ![](images/add-columns.png " ")
 
     Click **Apply Changes**.    
-    *{Note: You will be returned to Page Designer with Page 8 selected.}*
+
+  *{Note: You will be returned to Page Designer with Page 8 selected.}*
 
 5. In order for the extra display values to be visible, you need to update the page item to be a Popup LOV, instead of a Select List.
 
@@ -153,9 +154,12 @@ If you review the Milestones select list you will notice that all milestones are
     In the Rendering tree (left pane), click **P8\_MILESTONE_ID**
 
     In the Property Editor (right pane), enter the following:
+
     - List of Values - select **HOL_MILESTONES.NAME PAGE 8**
-    - Cascading LOV Parent Item(s) - select **P8\_PROJECT_ID**  
-    *{Note: It is imperative to indicate the Parent Item otherwise the value for the selected project will not be set and the Milestones LOV would return no values.}
+
+    - Cascading LOV Parent Item(s) - select **P8\_PROJECT_ID**
+
+  *{Note: It is imperative to indicate the Parent Item otherwise the value for the selected project will not be set and the Milestones LOV would return no values.}
 
     Click **Save**.
 
@@ -163,16 +167,15 @@ If you review the Milestones select list you will notice that all milestones are
 
 3. Time to test the Milestones item.
 
-
-    Navigate to the runtime environment tab or browser.     
-    Navigate to **Tasks** and refresh the page.     
-    Click the edit icon for a Task and then click the selector on **Milestone** to review the Cascading LOV.
+    - Navigate to the runtime environment tab or browser.     
+    - Navigate to **Tasks** and refresh the page.     
+    - Click the edit icon for a Task and then click the selector on **Milestone** to review the Cascading LOV.
 
     ![](images/new-milestone-lov.png " ")    
 
-    *{Note: There will regularly be numbers listed instead of a name for the Milestone item. This is due to the fact that when the sample data was created it randomly selected both projects and milestones. The sample data generator does not review each foreign key relationship to determine if the associated table is also a child table of a second foreign key column in the same table.*,
+  *{Note: There will regularly be numbers listed instead of a name for the Milestone item. This is due to the fact that when the sample data was created it randomly selected both projects and milestones. The sample data generator does not review each foreign key relationship to determine if the associated table is also a child table of a second foreign key column in the same table.*,
 
-    *To correct this sample data issue, simply select one of the names from the available list, as these represent the milestones associated with the selected project.}*
+  *To correct this sample data issue, simply select one of the names from the available list, as these represent the milestones associated with the selected project.}*
 
 4. The easiest way to see what happens when there is no project selected is to create a new Task.
 
@@ -192,5 +195,4 @@ You now know how to utilize different types of list of values, to display additi
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Anoosha Pilli, Product Manager, DB Product Management, June 2020
-
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May  2023
