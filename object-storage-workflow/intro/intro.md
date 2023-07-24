@@ -6,6 +6,8 @@ Estimated Workshop Duration: 75 minutes
 
 *Note: This lab assumes you are using Oracle APEX 23.1.*
 
+[Full lab walkthrough](videohub:1_77gs65t8)
+
 ## Objectives
 
 In this lab, you will:

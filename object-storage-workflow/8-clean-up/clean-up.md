@@ -6,7 +6,7 @@ In this lab, you will terminate and delete the created ATP instance and Object S
 
 Estimated Time: 5 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)
+[Lab 8](videohub:1_1f7sq4dl)
 
 ### Objectives
 

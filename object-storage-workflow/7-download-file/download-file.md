@@ -5,7 +5,7 @@
 In this lab, complete the steps to download file from the Object Storage bucket.
 Estimated Time: 5 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)
+[Lab 7](videohub:1_u1wvhgy7)
 
 ### Objectives
 

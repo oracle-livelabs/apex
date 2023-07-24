@@ -6,7 +6,7 @@ In this lab, you will create a REST data source
 
 Estimated Time: 10 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)  **UPDATE FILE!**
+[Lab 3](videohub:1_3a51s6yl)
 
 ### Objectives
 

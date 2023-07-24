@@ -6,7 +6,7 @@ In this lab, you will create a new APEX form so that our users can select a file
 
 Estimated Time: 5 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)  **UPDATE FILE!**
+[Lab 4](videohub:1_s49lbxb4)
 
 ### Objectives
 

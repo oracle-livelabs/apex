@@ -8,7 +8,7 @@ You will get started by creating an autonomous database, collecting user and ten
 
 Estimated Time: 10 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)  **VIDEO UPDATE FILE!**
+[Lab 1](videohub:1_oiov76r9)
 
 ### Objectives
 

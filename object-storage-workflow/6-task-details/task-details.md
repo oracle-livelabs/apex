@@ -6,7 +6,7 @@ In this lab, upload objects to Object Storage, and alter page details.
 
 Estimated Time: 10 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)
+[Lab 6](videohub:1_k4k81m34)
 
 ### Objectives
 

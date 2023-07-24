@@ -6,7 +6,7 @@ In this lab, you will begin to create an APEX application using sample data.
 
 Estimated Time: 15 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)  **UPDATE FILE!**
+[Lab 2](videohub:1_wubl4ys4)
 
 ### Objectives
 

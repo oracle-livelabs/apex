@@ -6,7 +6,7 @@ In this lab, you will create new APEX pages to view task(s) and implement the up
 
 Estimated Time: 10 minutes
 
-[Video Tutorial](youtube:XRwbswu0jEk)  **UPDATE FILE!**
+[Lab 5](videohub:1_563cepqi)
 
 ### Objectives
 
