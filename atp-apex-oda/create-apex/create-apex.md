@@ -37,7 +37,7 @@ In this lab, you will:
 
 ## Task 1: Create APEX Workspace
 
-1. In this part of the workshop we are creating an APEX workspace. From the Autonomous Database Home page go to **Tools** section and select **Oracle Application Express** area.
+1. In this part of the workshop we are creating an APEX workspace. From the Autonomous Database Home page go to **Tool configuration** section and copy the url from the **Oracle Application Express** area and open in a separate browser window.
 
     ![APEX access from ATP Dashboard](./images/apex_workspace1_new.png)
 
