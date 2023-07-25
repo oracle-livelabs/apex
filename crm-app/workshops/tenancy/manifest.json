@@ -3,7 +3,7 @@
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../introduction.md"
+        "filename": "../../intro/Introduction.md"
       },
       {
         "title": "Get Started",
@@ -11,11 +11,11 @@
       },
       {
         "title": "Lab 1: Create an APEX Application using Quick SQL",
-        "filename": "../../1-Quick-sql.md"
+        "filename": "../../1-Quick-sql/1-Quick-sql.md"
       },
       {
-        "title": "Lab 2: Create Opportunity Heat Map",
-        "filename": "../../2-task-definition.md"
+        "title": "Lab 2: Create Faceted Search Page",
+        "filename": "../../2-faceted-search/2-faceted-search.md"
       },
       {
         "title": "Lab 3: Global Search",
