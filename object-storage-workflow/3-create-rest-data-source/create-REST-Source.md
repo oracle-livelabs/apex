@@ -25,9 +25,9 @@ To complete this lab, you need to have the following:
 
 1. Navigate to workspace utilities. Click on Web Credentials and click create.
 
-    ![Navigate APEX Home](images/Navigate-APEX-home.png " ")
+    ![Navigate APEX Home](images/navigate-apex-home.png " ")
 
-    ![Navigate APEX Builder](images/Navigate-App-Builder.png " ")
+    ![Navigate APEX Builder](images/navigate-app-builder.png " ")
 
     ![Navigate Workspace Utilities](images/workspace-utilities.png " ")
 
@@ -116,7 +116,7 @@ To complete this lab, you need to have the following:
 
 10. Before we proceed, let's have a quick refresher on the front-end UI. We will be adding an action button that redirects users to a modal dialog. In this dialog, users will be able to select their file and initiate the approval task.
 
-    ![Runtime environment](images/front-end-UI.png " ")
+    ![Runtime environment](images/front-end-ui.png " ")
 
 You may now **proceed to the next lab**.
 
