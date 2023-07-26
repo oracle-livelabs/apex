@@ -10,6 +10,9 @@ The **CARDS** region will show photos or images in a grid arrangement as they ge
 
 Estimated Time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_myqq59w2)
+
 ### Objectives
 
 In this lab, you will:

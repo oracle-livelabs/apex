@@ -6,6 +6,9 @@ In this lab, you will learn to customize the card in order to add a reaction but
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_53khevkr)
+
 ### Objectives
 
 In this lab, you will:

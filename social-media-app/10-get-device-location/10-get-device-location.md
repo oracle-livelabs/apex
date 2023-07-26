@@ -5,6 +5,9 @@ In this lab, you will enable the app to get the device location which will be op
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_xrycy2p7)
+
 ### Objectives
 
 In this lab, you will:
