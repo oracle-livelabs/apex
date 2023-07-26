@@ -22,8 +22,8 @@ In this lab, you will learn how to:
 | --- | --- | --- |
 | 1 | [Initialize the LiveLab Environment](?lab=initalize_livelabs_environment) | 10 min |
 | 2 | [Change Password and Start ORDS](?lab=change_pw) | 5 min |
-| 3 | [Create and Prepare APEX Workspace](?lab=apex-prepare-workspace) | 10 min |
-| 4 | [Prepare Database Objects](?lab=prepare-database-objects) | 10 min |
+| 3 | [Prepare Database Objects](?lab=prepare-database-objects) | 10 min |
+| 4 | [Create and Prepare APEX Workspace](?lab=apex-prepare-workspace) | 10 min |
 | 5 | [Explore Native Map Region Capabilities](?lab=explore-native-map-regions) | 20 min |
 {: title="Labs with Times"}
 

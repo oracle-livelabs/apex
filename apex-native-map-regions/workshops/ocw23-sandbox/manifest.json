@@ -19,12 +19,12 @@
             "filename": "../../change_pw/change_pw.md"
         },
         {
-            "title": "Lab 3: Create and Prepare APEX Workspace",
-            "filename": "../../apex-prepare-workspace/apex-prepare-workspace.md"
+            "title": "Lab 3: Prepare Database Objects",
+            "filename": "../../prepare-database-objects/prepare-database-objects.md"
         },
         {
-            "title": "Lab 4: Prepare Database Objects",
-            "filename": "../../prepare-database-objects/prepare-database-objects.md"
+            "title": "Lab 4: Create and Prepare APEX Workspace",
+            "filename": "../../apex-prepare-workspace/apex-prepare-workspace.md"
         },
         {
             "title": "Lab 5: Explore Native Map Region Capabilities",
