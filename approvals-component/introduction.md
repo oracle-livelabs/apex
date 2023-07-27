@@ -13,8 +13,8 @@ Further, a task can have a Deadline and an Expiration date. The potential owner 
 Estimated Time: 1 hour
 
 ### Objectives
-In this lab, you will:
-- Obtain a free APEX development environment
+In this workshop, you will:
+- Learn to create a free APEX development environment
 - Identify the various components and terminology of Approvals Management in APEX
 - Examine a Task definition and a Unified Task List
 - Create an Expense Tracker App to manage expenses

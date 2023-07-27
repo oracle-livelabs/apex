@@ -2,15 +2,15 @@
 
 ## Introduction
 
-In this lab, you learn to create an APEX Application named Expense Tracker and database objects using SQL script containing an Employee details table and Expense request table. Also, you will learn to make end users in your APEX application.
+In this lab, you learn to create a new APEX Application called Expense Tracker. You create two database tables: **EMPLOYEE\_DETAILS** table that consists of all the employee details; an **EMP\_EXPENSE\_REQUEST** table that is used to store expense report details submitted by an employee. Finally, you also learn to add new users to your APEX application.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Create the Application
-- Create SQL Script
+- Create an APEX Application
+- Create and run SQL Script
 - Add Users
 
 
@@ -40,7 +40,7 @@ In this lab, you create a new application named Expense Tracker.
     ![Select New Application ](images/create-application-expense-tracker.png " ")
 
 ## Task 2: Create SQL Script
-In this lab, you create database objects using SQL Script.
+In this lab, you create database objects using SQL Scripts.
 
 1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
 
@@ -54,7 +54,7 @@ In this lab, you create database objects using SQL Script.
 
 4. Enter the SQL statements.
 
-   Copy the code below and paste it into  the code editor:
+   Copy the code below and paste it into the code editor:
 
       ```
       <copy>
@@ -83,7 +83,7 @@ In this lab, you create database objects using SQL Script.
       </copy>
       ```
 
-5. Click **Run and Run Now**. Now you can see that SQL statements run successfully.
+5. Click **Save and Run Now**. Now you can see that SQL statements run successfully.
 
   ![Run SQL Script](./images/script.png " ")
 
@@ -104,13 +104,13 @@ In this lab, you create database objects using SQL Script.
 
 3. Specify the following attributes:
 
-     - For a List of Email Addresses: Enter **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
+     - List of Email Addresses: **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
 
-     - For Usernames : Select **Exclude @ domain as part of the username**
+     - Usernames : Select **Exclude @ domain as part of the username**
 
-     - For password and Confirm Password: Enter a password of your wish
+     - For password and Confirm Password: Enter a password of your choice
 
-4. Click **Next** and **Create Valid Users**
+4. Click **Next** and **Create Valid Users**.
 
    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
@@ -120,7 +120,7 @@ In this lab, you create database objects using SQL Script.
 
 
 ## **Summary**
-You now know how to create an application ,SQL script and add users.
+You now know how to create an application, run a SQL script and add users.
 
 You may now **proceed to the next lab**.   
 
