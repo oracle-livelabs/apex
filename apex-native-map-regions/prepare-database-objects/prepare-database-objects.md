@@ -1,4 +1,4 @@
-# Prepare Database Objects
+# Set Up Your Environment
 
 ## Introduction
 
@@ -55,12 +55,9 @@ This lab assumes you have:
     $ <copy>rm -rf apex-mapping.zip</copy>
     ```
 
-    <!-- ![Remaining zip file removed](images/remove-zip.png) -->
-
-
 ## Task 2: Open SQL Developer
 
-1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer.
+1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer. 
 
     ```
     $ <copy>cd /opt/sqldeveloper/</copy>
@@ -92,9 +89,9 @@ This lab assumes you have:
 
     ![Opening file](images/file-open.png)
 
-3. First, we will create the tables that will contain the geospatial data our APEX application will be using.
+3. First, we will create the tables that will contain the geopspatial data our APEX application will be using.
 
-    - Open the file named **create_tables.sql** by clicking on the File -> Open icon.
+    - Open the file named **create_tables.sql** by clicking on the File ... Open icon.
     - Click the button that shows a document with the small green play button on it to run the whole script.
     - If it asks you to select a connection in a popup window, choose **hol23c_freepdb1** from the drop down and then click OK.
 
@@ -104,38 +101,35 @@ This lab assumes you have:
 
 4. Next, we'll populate the **CHARGING_POINTS** table with relevant geospatial data on available and potential charging points in the State of Wisconsin.
 
-    - Open the file named **populate\_charging\_points.sql** by clicking on the File -> Open icon.
-    - Select the **hol23c_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
+    - Open the file named **populate\_charging\_points.sql** by clicking on the File ... Open icon.
+    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
     - Then either click on the Run Script button or simply hit F5 to run the script. It should take approximately 10 seconds or less to complete.
 
     ![Populate CHARGING_POINTS Table](./images/populate_charging_points.png)
 
 5. Next, we'll populate the **DOT\_DISADVANTAGE\_LAYERS** table with statistical and geospatial data across census tracts in several Midwestern USA states.
 
-    - Open the file named **populate\_dot\_disadvantage\_layers.sql** by clicking on the File -> Open icon.
-    - Select the **hol23c_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
+    - Open the file named **populate\_dot\_disadvantage\_layers.sql** by clicking on the File ... Open icon.
+    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
     - Then either click on the Run Script button or simply hit F5 to run the script. It should take approximately 90 seconds or less to complete.
 
     ![Populate DOT_DISADVANTAGE_LAYERS Table](./images/populate_dot_disadvantage_layers.png)
 
 6. Finally, we'll create primary key constraints and indexes for these tables, as well as two spatial indexes on the contents of their SDO_GEOMETRY columns.
 
-    - Open the file named **create\_indexes\_and\_constraints.sql** by clicking on the File -> Open icon.
-    - Select the **hol23c_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
+    - Open the file named **create\_indexes\_and\_constraints.sql** by clicking on the File ... Open icon.
+    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
     - Then either click on the Run Script button or simply hit F5 to run the script.
 
     ![Create Primary Key Constraints and Spatial Indexes](./images/create_indexes_and_constraints.png)
 
-7. Your schema setup is now complete.
-
-You may now proceed to the next lab.
+7. Your schema setup is now complete. You may proceed to the next lab.
 
 ## Learn More
 - [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html#GUID-464C045C-FBDF-417A-A20B-037D294B3BDA)
-- [Oracle Spatial Database](https://www.oracle.com/database/spatial/)
-- [Oracle APEX](https://apex.oracle.com/en/)
+- [Indexing and Querying Spatial Data](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/indexing-querying-spatial-data.html)
 
 ## Acknowledgements
-* **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
-* **Contributors** - Hope Fisher, Program Manager, Database Product Management
-* **Last Updated By/Date** - Hope Fisher, June 2023
+* **Author** - Kaylien Phan, William Masdon, Jim Czuprynski
+* **Contributors** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
+* **Last Updated By/Date** - Jim Czuprynski, June 2023
