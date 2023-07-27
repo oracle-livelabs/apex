@@ -25,7 +25,7 @@ To complete this lab, you need to have the following:
 
 1. Navigate to workspace utilities. Click on Web Credentials and click create.
 
-    ![Navigate APEX Home](images/navigate-apex-home.png " ")
+    ![Navigate APEX Home](images/navigate-home.png " ")
 
     ![Navigate APEX Builder](images/navigate-app-builder.png " ")
 
