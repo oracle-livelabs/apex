@@ -27,7 +27,7 @@ To complete this lab, you need to have the following:
 
     ![Navigate APEX Home](images/navigate-home.png " ")
 
-    ![Navigate APEX Builder](images/navigate-app-builder.png " ")
+    ![Navigate APEX Builder](images/navigate-builder.png " ")
 
     ![Navigate Workspace Utilities](images/workspace-utilities.png " ")
 

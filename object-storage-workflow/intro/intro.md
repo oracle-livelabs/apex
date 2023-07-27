@@ -28,7 +28,7 @@ In this lab, you will:
 | --- | --- | --- |
 | - | [Getting Started](?lab=1-sign-up-apex) | 5 min |
 | 1 | [Create autonomous database](?lab=create-autonomous) | 15 min |
-| 2 | [Create application](?lab=create-apex-application) | 10 min |
+| 2 | [Create application](?lab=create-application) | 10 min |
 | 3 | [Create REST data source](?lab=create-rest-source) | 10 min |
 | 4 | [Create form](?lab=create-form) | 5 min |
 | 5 | [Upload file](?lab=upload-file) | 10 min |
