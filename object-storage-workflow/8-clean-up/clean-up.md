@@ -42,7 +42,7 @@ To Complete this lab, you need to have the following:
 
     ![Object Storage](images/navigate-bucket.png " ")
 
-    ![OCW23 Bucket](images/click-ocw23.png " ")
+    ![OCW23 Bucket](images/ocw23-click.png " ")
 
     ![Click Delete](images/delete-bucket-1.png " ")
 
