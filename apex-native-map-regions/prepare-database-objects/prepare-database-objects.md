@@ -55,9 +55,12 @@ This lab assumes you have:
     $ <copy>rm -rf apex-mapping.zip</copy>
     ```
 
+    <!-- ![Remaining zip file removed](images/remove-zip.png) -->
+
+
 ## Task 2: Open SQL Developer
 
-1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer. 
+1. From an open Terminal Window, navigate to the correct directory to open SQL Developer, and then run the command to start up SQL Developer.
 
     ```
     $ <copy>cd /opt/sqldeveloper/</copy>
@@ -68,7 +71,7 @@ This lab assumes you have:
 
     ![Command to start SQL](images/start-sqldeveloper.png)
 
-3. On the left side menu, you'll see **hol23c_freepdb1** underneath Oracle Connections. Double click it to open the connection.
+3. On the left side menu, you'll see **hol23c\_freepdb1** underneath Oracle Connections. Double click it to open the connection.
 
 
     ![Open the connection](images/hol23c-connection.png)
@@ -83,47 +86,34 @@ This lab assumes you have:
 
     From the left-side panel, you can view information about the different database components within the HOL23C schema. Expand the hol23c_freepdb1 node on the tree view to see tables, indexes, and other objects. If you click into the **tables** node, you'll note that there are no tables present yet.
 
-    ![SQL Developer Features](images/explore-sqldeveloper.png)
+   ![SQL Developer Features](images/explore-sqldeveloper.png)
 
 2. Click File -> Open and navigate to the **/home/oracle/examples/apex-mapping** folder.
 
-    ![Opening file](images/file-open.png)
+   ![Opening file](images/file-open.png)
 
-3. First, we will create the tables that will contain the geopspatial data our APEX application will be using.
+3. We will now build and populate all of the database objects needed to demonstrate the features of JRDVs.
 
-    - Open the file named **create_tables.sql** by clicking on the File ... Open icon.
+    - Open the file named **create\_tables.sql** by clicking on the *File ... Open* icon.
     - Click the button that shows a document with the small green play button on it to run the whole script.
-    - If it asks you to select a connection in a popup window, choose **hol23c_freepdb1** from the drop down and then click OK.
+    - If it asks you to select a connection in a popup window, choose **hol23c\_freepdb1** from the drop down and then click OK.
 
     ![Create tables](./images/create_tables.png)
 
-    You should see that the tables have been proactively dropped (if they had existed) and were then created.
-
-4. Next, we'll populate the **CHARGING_POINTS** table with relevant geospatial data on available and potential charging points in the State of Wisconsin.
-
-    - Open the file named **populate\_charging\_points.sql** by clicking on the File ... Open icon.
-    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
-    - Then either click on the Run Script button or simply hit F5 to run the script. It should take approximately 10 seconds or less to complete.
-
-    ![Populate CHARGING_POINTS Table](./images/populate_charging_points.png)
-
-5. Next, we'll populate the **DOT\_DISADVANTAGE\_LAYERS** table with statistical and geospatial data across census tracts in several Midwestern USA states.
-
-    - Open the file named **populate\_dot\_disadvantage\_layers.sql** by clicking on the File ... Open icon.
-    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
     - Then either click on the Run Script button or simply hit F5 to run the script. It should take approximately 90 seconds or less to complete.
 
-    ![Populate DOT_DISADVANTAGE_LAYERS Table](./images/populate_dot_disadvantage_layers.png)
+4. Browse through the script output from the file's execution. You should see that:
 
-6. Finally, we'll create primary key constraints and indexes for these tables, as well as two spatial indexes on the contents of their SDO_GEOMETRY columns.
+    - Two tables have been proactively dropped (if they had already existed).
+    - Two tables have been created.
+    - The first SQL script, **populate\_charging\_points.sql,** loaded table CHARGING\_POINTS because its GC\_GEOMETRY column's datatype (SDO\_GEOMETRY) requires special handling during population.
+    - The second SQL script, **populate\_dot\_disadvantage\_layers.sql,** loaded table DOT\_DISADVANTAGE\_LAYERS separately because its GEOM column's datatype also requires special handling.
+    - Primary key constraints and corresponding indexes were created for both tables.
+    - Finally, two special domain indexes of type MDSYS.SPATIAL\_INDEX\_V2 were created on the two SDO\_GEOMETRY columns' contents. We will leverage these indexes later in this lab.
 
-    - Open the file named **create\_indexes\_and\_constraints.sql** by clicking on the File ... Open icon.
-    - Select the **hol23c\_free** database from the drop-down list in the upper-right-hand corner of the window  to connect to your PDB.
-    - Then either click on the Run Script button or simply hit F5 to run the script.
+   ![Create tables](./images/database-objects-created.png)
 
-    ![Create Primary Key Constraints and Spatial Indexes](./images/create_indexes_and_constraints.png)
-
-7. Your schema setup is now complete. You may proceed to the next lab.
+5. Your schema setup is now complete. You may proceed to the next lab.
 
 ## Learn More
 - [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html#GUID-464C045C-FBDF-417A-A20B-037D294B3BDA)
@@ -132,4 +122,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - Kaylien Phan, William Masdon, Jim Czuprynski
 * **Contributors** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc.
-* **Last Updated By/Date** - Jim Czuprynski, June 2023
+* **Last Updated By/Date** - Jim Czuprynski, July 2023
