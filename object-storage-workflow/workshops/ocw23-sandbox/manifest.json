@@ -16,11 +16,11 @@
       },
       {
         "title": "Lab 2: Create application with task definition",
-          "filename": "../../2-create-apex-application/create-APEX-application.md"
+          "filename": "../../2-create-apex-application/create-apex-application.md"
       },
       {
         "title": "Lab 3: Create REST data source",
-        "filename": "../../3-create-rest-data-source/create-REST-Source.md"
+        "filename": "../../3-create-rest-data-source/create-rest-source.md"
       },
       {
         "title": "Lab 4: Create form page",
