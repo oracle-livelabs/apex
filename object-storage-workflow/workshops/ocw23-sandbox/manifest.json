@@ -12,35 +12,35 @@
       },
       {
         "title": "Lab 1: Create autonomous instance",
-        "filename": "../../1-create-autonomous/create-autonomous.md"
+        "filename": "../../create-autonomous/create-autonomous.md"
       },
       {
         "title": "Lab 2: Create application with task definition",
-          "filename": "../../2-create-application/create-application.md"
+          "filename": "../../create-application/create-application.md"
       },
       {
         "title": "Lab 3: Create REST data source",
-        "filename": "../../3-create-rest-data-source/create-rest-source.md"
+        "filename": "../../create-rest-data-source/create-rest-source.md"
       },
       {
         "title": "Lab 4: Create form page",
-        "filename": "../../4-create-form/create-form.md"
+        "filename": "../../create-form/create-form.md"
       },
       {
         "title": "Lab 5: Upload file to Object Storage",
-        "filename": "../../5-upload-file/upload-file.md"
+        "filename": "../../upload-file/upload-file.md"
       },
       {
         "title": "Lab 6: Alter task details",
-        "filename": "../../6-task-details/task-details.md"
+        "filename": "../../task-details/task-details.md"
       },
       {
         "title": "Lab 7: Download Object Storage file",
-        "filename": "../../7-download-file/download-file.md"
+        "filename": "../../download-file/download-file.md"
       },
       {
         "title": "Lab 8: Clean up",
-        "filename": "../../8-clean-up/clean-up.md"
+        "filename": "../../clean-up/clean-up.md"
       },
       {
         "title": "Need Help?",
