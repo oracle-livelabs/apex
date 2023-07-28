@@ -83,7 +83,7 @@ In this lab, you create database objects using SQL Scripts.
       </copy>
       ```
 
-5. Click **Save and Run Now**. Now you can see that SQL statements run successfully.
+5. Click **Run**. A dialog appears, click **Run Now**. Now you can see that SQL statements run successfully.
 
   ![Run SQL Script](./images/script.png " ")
 
