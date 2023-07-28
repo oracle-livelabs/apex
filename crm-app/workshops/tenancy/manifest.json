@@ -11,7 +11,7 @@
       },
       {
         "title": "Lab 1: Create an APEX Application using Quick SQL",
-        "filename": "../../1-quick-sql/1-sql-script.md"
+        "filename": "../../1-sql-script/1-sql-script.md"
       },
       {
         "title": "Lab 2: Create Faceted Search Page",
@@ -19,7 +19,7 @@
       },
       {
         "title": "Lab 3: Global Search",
-        "filename": "../../3-global-search/global-search.md"
+        "filename": "../../3-global-search/3-global-search.md"
       },
 
       {
