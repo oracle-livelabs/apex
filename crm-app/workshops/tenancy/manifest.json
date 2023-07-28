@@ -11,7 +11,7 @@
       },
       {
         "title": "Lab 1: Create an APEX Application using Quick SQL",
-        "filename": "../../1-Quick-sql/1-Quick-sql.md"
+        "filename": "../../1-quick-sql/1-sql-script.md"
       },
       {
         "title": "Lab 2: Create Faceted Search Page",
@@ -19,12 +19,9 @@
       },
       {
         "title": "Lab 3: Global Search",
-        "filename": "../../3-email-template.md"
+        "filename": "../../3-global-search/global-search.md"
       },
-      {
-        "title": "Lab 4: Manage Task Definitions",
-        "filename": "../../4-Update-table.md"
-      },
+
       {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
