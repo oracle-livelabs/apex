@@ -16,14 +16,14 @@ To determine which release of Oracle APEX you are currently running, do one of t
 * View the release number on the Workspace home page:
     - Sign in to Oracle APEX. The Workspace home page appears. The current release version displays in bottom right corner.
 
-    ![release-number](images/release-number.png " ")
-    ![release-number2](images/release-number2.png " ")
+    ![release-number](../0-sign-up-apex/images/release-number.png " ")
+    ![release-number2](../0-sign-up-apex/images/release-number2.png " ")
 
 * View the About APEX page:
     - Sign in to Oracle APEX. The Workspace home page appears.
     - Click the Help menu at the top of the page and select About. The About APEX page appears.
 
-  ![version](images/version.png)
+  ![version](../0-sign-up-apex/images/version.png)
 
 ### Where to Run the Lab
 You can run this lab in Oracle Database 23c with APEX 23.1 installed.
@@ -33,7 +33,7 @@ Click one of the options below to proceed.
 
 In order to use APEX in LiveLabs Sandbox, you need to first start ORDS. The following command will run ORDS in the background of your terminal. Do not close the terminal window or the ORDS server will stop.
 
-1. Run the following command in the terminal
+1. Run the following command in the terminal to start **ORDS**
 
     ```
     <copy>
@@ -41,15 +41,42 @@ In order to use APEX in LiveLabs Sandbox, you need to first start ORDS. The foll
     </copy>
     ```
 
-    Copy the above command and paste it in the Clipboard section of the Sandbox by clicking the paste icon in the noVNC toolbar
+    Copy the above command and paste it in the Clipboard section of the Sandbox by clicking the paste icon in the noVNC toolbar.
+    Use the Clipboard section for further copy and paste in the upcoming steps.
 
     ![copy-and-paste](images/copy-and-paste.png)
 
-2. Open Activities -> Google Chrome -> New Window
+2. To import external JavaScript modules we need to allow accessing some hosts. 
+    While the terminal is open, copy the following command and paste it in the terminal, then hit **Enter**:
+
+    ```
+    <copy>
+    sudo gedit /etc/hosts
+    </copy>
+    ```
+    ![edit-hosts](images/edit-hosts.png)
+
+    Enter the following line in the last line in **gedit** editor.
+    
+    ```
+    <copy>
+    151.101.141.229 jsdelivr.map.fastly.net cdn.jsdelivr.net
+    </copy>
+    ```
+
+    ![copy-and-paste-host](images/copy-and-paste-host.png)
+    
+    Close the editor and save the changes by clicking **Save** button.
+
+    ![save-hosts](images/save-hosts.png)
+
+    *Note: Don't close the Terminal window so **ORDS** will not be shutdown.
+
+3. Open Activities -> Google Chrome -> New Window
 
     ![activities-chrome](images/activities-chrome.png)
 
-3. Go to this URL and wait for the screen to load.
+4. Go to this URL and wait for the screen to load.
 
     ```
     <copy>
@@ -59,46 +86,46 @@ In order to use APEX in LiveLabs Sandbox, you need to first start ORDS. The foll
 
     ![admin-services](images/admin-services.png)
 
-4. Login as ADMIN with the password Welcome123# and reset it to as you please.
+5. Login as ADMIN with the password Welcome123# and reset it to as you please.
 
     ![login-details](images/login-details.png)
 
-5. You can see the welcome screen for APEX now.
+6. You can see the welcome screen for APEX now.
 
     ![welcome-screen-apex2](images/welcome-screen-apex2.png)
 
-6. Click create workspace
+7. Click create workspace
 
     ![workspace-name](images/workspace-name.png)
 
 
-7. Name the workspace 'HOL23C' and click Next
+8. Name the workspace 'HOL23C' and click Next
 
     ![workspace-name2](images/workspace-name2.png)
 
-8. Set reuse existing schema to Yes. Click the menu icon next to schema name and select HOL23C. Leave the default for space quota and password. Click next.
+9. Set reuse existing schema to Yes. Click the menu icon next to schema name and select HOL23C. Leave the default for space quota and password. Click next.
 
     ![schema-info](images/schema-info.png)
 
-9. Admin username: admin, password: Welcome123#, email: your email.
+10. Admin username: admin, password: Welcome123#, email: your email.
 
     ![admin-password-email](images/admin-password-email.png)
 
-10. Review the output then click Create workspace.
+11. Review the output then click Create workspace.
 
     ![create-workspace](images/create-workspace.png)
 
-11. Success! Now click done.
+12. Success! Now click done.
 
     ![done](images/done.png)
 
-12. Click the profile icon, then click **Sign out**
+13. Click the profile icon, then click **Sign out**
     
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
     ![log-out-from-admin](images/log-out-from-admin.png)
 
-13. On the APEX Workspace log in page, enter the workspace name, the password you have entered previously, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+14. On the APEX Workspace log in page, enter the workspace name, the password you have entered previously, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
     ![log-in-to-workspace](images/log-in-to-workspace.png)
 
