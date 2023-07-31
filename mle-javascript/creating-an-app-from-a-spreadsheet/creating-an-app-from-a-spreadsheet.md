@@ -14,25 +14,25 @@ Estimated Lab Time: 5 minutes
 1.  From your APEX workspace home page, click **App Builder**.
 2.  Click **Create a New App**.
 
-    ![](images/create-a-new-app.png " ")
+    ![create-a-new-app](images/create-a-new-app.png " ")
 
 3.  Click **From a File**.
 
-    ![](images/from-a-file.png " ")
+    ![from-a-file](images/from-a-file.png " ")
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
 4.  Within the Load Data wizard, click the **Copy and Paste** option at the top.
 
-    ![](images/copy-paste.png " ")
+    ![copy-paste](images/copy-paste.png " ")
 
 5. Select **Project and Tasks** from the sample data set list and then click **Next**.
 
-    ![](images/copy-paste-projects-tasks.png " ")
+    ![copy-paste-projects-tasks](images/copy-paste-projects-tasks.png " ")
 
 6.  Review the parsed data. Enter **PROJECT_TASKS** for Table Name and Click **Load Data**.
 
-    ![](images/new-table-name.png " ")
+    ![new-table-name](images/new-table-name.png " ")
 
     After clicking **Load Data** you will see a spinner until the wizard finishes loading the data. Continue to Part 2 at that point.
 
@@ -42,7 +42,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
 1.  In the Load Data dialog, verify that 73 rows have been loaded into the **PROJECT_TASKS** table, then click **Create Application**.
 
-    ![](images/create-application-wizard.png " ")
+    ![create-application-wizard](images/create-application-wizard.png " ")
 
 [//]: # (click **Create Application**. )
 [//]: # (images/continue-to-create-application-wizard.png " ")
@@ -53,8 +53,8 @@ The Data Load wizard has created a new table and populated that table with the r
 
     Click **Check All** for Features, and then click **Create Application**.
 
-    ![](images/name-for-application.png " ")
-    ![](images/create-application.png " ")
+    ![name-for-application](images/name-for-application.png " ")
+    ![create-application](images/create-application.png " ")
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
@@ -62,20 +62,20 @@ The Data Load wizard has created a new table and populated that table with the r
 
 1.  Click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
-    ![](images/run-application.png " ")
+    ![run-application](images/run-application.png " ")
 
 2.  Enter your user credentials and click **Sign In**.
 
     *Note: Use the same Username and Password you used to sign into the APEX Workspace.*
 
-    ![](images/sign-in.png " ")
+    ![sign-in](images/sign-in.png " ")
 
 3. Click on the navigation menu icon to expand the navigation menu
-    ![](images/new-app-expand-nav.png " ")
+    ![new-app-expand-nav](images/new-app-expand-nav.png " ")
 
 4.  Explore the application a little. Click **Dashboard** (in the home menu or the navigation menu) to view the charts created. Click **Project Tasks Search**, in the navigation menu, to play with the faceted search. Click **Project Tasks Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page. Next, navigate to the **Calendar** page and review the data displayed (*Note: You may need to scroll back several months to see data*). Finally, review the options available under **Administration**.
 
-    ![](images/new-app.png " ")
+    ![new-app](images/new-app.png " ")
 
 ## **Summary**
 
