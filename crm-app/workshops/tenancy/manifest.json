@@ -14,12 +14,20 @@
         "filename": "../../1-sql-script/1-sql-script.md"
       },
       {
-        "title": "Lab 2: Create Faceted Search Page",
+        "title": "Lab 2: Improve the Form",
+        "filename": "../../form-edits/form-edits.md"
+      },
+      {
+        "title": "Lab 3: Create Faceted Search Page",
         "filename": "../../2-faceted-search/2-faceted-search.md"
       },
       {
-        "title": "Lab 3: Global Search",
+        "title": "Lab 4: Create Search Configurations",
         "filename": "../../3-global-search/3-global-search.md"
+      },
+      {
+        "title": "Lab 5: Create a Heat Map",
+        "filename": "../../4-heat-map/heat-map.md"
       },
 
       {

@@ -63,12 +63,67 @@ In this lab, you will:
 
   ![Create Page](images/select-range.png " ")
 
-  ## **Summary**
+## Task 3: Add Mini-Dashboard
 
-  You now know how to create and edit Faceted Search page.
+1. From developer toolbar, Select Edit Page 24.
+In bottom middle in Layout pane, Click Region button and  Drag </> Static Content to top of page directly under Breadcrumb REGION BODY and release mouse.
 
-  You may now **proceed to the next lab**.   
+    ![Create Page](images/drag-drop.png " ")
 
-  ## Acknowledgments
+2. In right details pane, under Identification, For Title : Type **Dashboard** and scroll down to Advanced section, For Static ID, Type **Dash**
+
+    ![Create Page](images/dashboard.png " ")
+
+3. In left render pane, Select Search.
+In right details pane at the top to the right of Region, Click Attributes.
+
+ In Settings section ,For Show Charts : Select **Selector** and
+For Charts Selector : Type **#Dash**
+
+    ![Create Page](images/search.png " ")
+
+4. In left render pane, Select Facets.
+Hold Control key on keyboard & Select P24_PRODUCT, P24_PROBABILITY, P24_STAGE
+
+ In right details pane, scroll down to Advanced section:
+Enable **Show Chart Initially**
+
+   ![Create Page](images/page-items.png " ")
+
+5. Click Save & Run to view mini dashboard.
+
+   ![Create Page](images/run-time.png " ")
+
+## Task 4: Add Actionable Link
+
+1. Click Edit page 24
+In left render pane, under Search Results, Click to expand Columns
+and Select PRODUCT.
+
+ In right details pane, in Identification section, Change Type to Link
+
+ ![Create Page](images/search-results.png " ")
+
+2. Under Link section, Click button No Link Defined.
+   In Link Builder – Target dialog
+   - For Page : Select 5
+   - For Clear Cache : Select 5
+   - For Set Items : For Name : Select P5_ID and For Value : Select ID
+
+ Click Ok
+
+    ![Create Page](images/link-builder.png " ")
+
+3. Click Save & Run button and Select any link from the Product column in the runtime environment.
+
+    ![Actionable Link](images/link-runtime.png " ")
+
+## **Summary**
+
+You now know how to create and edit Faceted Search page.
+
+You may now **proceed to the next lab**.   
+
+## Acknowledgments
      - **Author** - Ankita Beri, Product Manager
      - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
