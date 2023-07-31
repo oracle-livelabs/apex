@@ -103,7 +103,7 @@ In order to use APEX in LiveLabs Sandbox, you need to first start ORDS. The foll
 
     ![workspace-name2](images/workspace-name2.png)
 
-9. Set reuse existing schema to Yes. Click the menu icon next to schema name and select HOL23C. Leave the default for space quota and password. Click next.
+9. Set **Re-use existing schema** to No. Enter Schema Name (e.g. salim) and password. Click **Next** button.
 
     ![schema-info](images/schema-info.png)
 
