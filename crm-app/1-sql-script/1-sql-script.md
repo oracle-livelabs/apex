@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn to create an APEX application using Quick SQL, which quickly develops a script for simple tables and views.
+In this lab, you learn to create an APEX application using Quick SQL , which quickly develops a script for simple tables and views.
 Quick SQL provides a quick way to generate the SQL required to create a relational data model from an indented text document.
 
 Estimated Time: 10 minutes
@@ -13,7 +13,7 @@ In this lab, you will:
 - Create Quick SQL script from an indented text document.
 - Create an APEX application using SQL Script.
 
-## Task 1: Create Quick Sql
+## Task 1: Implement Quick SQL Script
 
 1. Login into your Workspace
 
@@ -29,19 +29,19 @@ In this lab, you will:
    ```
    <copy>
    #apex: true, auditcols: true
-DM_customer
- customername vc50 /nn
- address vc50 /nn
- city vc50 /nn
- state vc8 /nn
- zip num /nn
- primarycontact vc50 /nn
- email vc50
- phone num
- latitude num
- longitude num
- salesrep vc30
- DM_oppty /references DM_customer
+   DM_customer
+    customername vc50 /nn
+    address vc50 /nn
+    city vc50 /nn
+    state vc8 /nn
+    zip num /nn
+    primarycontact vc50 /nn
+    email vc50
+    phone num
+    latitude num
+    longitude num
+    salesrep vc30
+   DM_oppty /references DM_customer
      product vc30 /nn
      value num
      is_qualfied_yn /check Y, N
@@ -61,30 +61,29 @@ DM_customer
      DM_COMMENTS /references DM_oppty
         note vc4000 /nn
 
-DM_STATUS_LOOKUP /insert 3
- status vc30 /values SUSPECT, PROSPECT, CUSTOMER
-DM_TYPE_LOOKUP /insert 4
- type vc30 /values HOT, WARM, COLD, DEAD
-DM_TERM_LOOKUP /insert 3
- term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
-DM_STAGE_LOOKUP /insert 4
- stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
-DM_ACTIVITY_LOOKUP /insert 5
- activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
-DM_PRODUCT_LOOKUP /insert 8
- product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
-DM_salesrep
- salesrep vc50
- salesrep_phone vc50
- salesrep_email vc50
- photo file
+     DM_STATUS_LOOKUP /insert 3
+     status vc30 /values SUSPECT, PROSPECT, CUSTOMER
+     DM_TYPE_LOOKUP /insert 4
+     type vc30 /values HOT, WARM, COLD, DEAD
+     DM_TERM_LOOKUP /insert 3
+     term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
+     DM_STAGE_LOOKUP /insert 4
+     stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
+     DM_ACTIVITY_LOOKUP /insert 5
+     activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
+     DM_PRODUCT_LOOKUP /insert 8
+     product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
+   DM_salesrep
+     salesrep vc50
+     salesrep_phone vc50
+     salesrep_email vc50
+     photo file
 
-view DM_customer_oppty DM_customer DM_oppty
-view DM_oppty_COMMENTS DM_oppty DM_COMMENTS
-view DM_activity_oppty DM_activity DM_oppty
-view DM_salesrep_customer_oppty DM_customer DM_oppty DM_salesrep
-view DM_salesrep_customer_oppty_activity_notes DM_customer DM_oppty DM_activity DM_comments DM_salesrep
-
+   view DM_customer_oppty DM_customer DM_oppty
+   view DM_oppty_COMMENTS DM_oppty DM_COMMENTS
+   view DM_activity_oppty DM_activity DM_oppty
+   view DM_salesrep_customer_oppty DM_customer DM_oppty DM_salesrep
+   view DM_salesrep_customer_oppty_activity_notes DM_customer DM_oppty DM_activity DM_comments DM_salesrep
   </copy>
   ```
 4. In the SQL (left pane) toolbar, Click Generate SQL then in the SQL (right pane) toolbar, click Save SQL Script.
@@ -168,7 +167,7 @@ view DM_salesrep_customer_oppty_activity_notes DM_customer DM_oppty DM_activity 
 
     ![Preview Customer Table](images/preview-cust-table.png " ")
 
- /*Repeat the same steps to load data for tables DM_oppty, DM_activity, DM_comments, DM_salesrep.*/ 
+ /*Repeat the same steps to load data for tables DM_oppty, DM_activity, DM_comments, DM_salesrep.*/
 
 
 

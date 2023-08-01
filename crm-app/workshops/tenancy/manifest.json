@@ -26,8 +26,12 @@
         "filename": "../../3-global-search/3-global-search.md"
       },
       {
-        "title": "Lab 5: Create a Heat Map",
+        "title": "Lab 5: Create an Opportunity Heat Map",
         "filename": "../../4-heat-map/heat-map.md"
+      },
+      {
+        "title": "Lab 6: Approvals Component ",
+        "filename": "../../approvals-component/approvals-component.md"
       },
 
       {

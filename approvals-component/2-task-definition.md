@@ -70,6 +70,16 @@ In this lab, you will:
     ```
     ![Task Definition Settings](images/task-definition-settings.png " ")
 
+7. Under **Deadline** Section:
+
+   - For Due On Type : Select **Interval**
+
+   - For Due On Interval : Enter **PT3M**
+
+   - For Expiration Policy : Select **Expiry**
+
+   ![deadline](images/deadline.png " ")
+
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
     - Click Add Row.
