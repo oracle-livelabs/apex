@@ -6,6 +6,9 @@ In this lab, you will do the final touch up of the app to improve the aesthetics
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_gu1lhbr3)
+
 ### Objectives
 
 In this lab, you will:
