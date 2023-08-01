@@ -113,6 +113,7 @@ To complete this lab, you need to have the following:
     ![Sign Out](images/logout-user.png " ")
 
     >**Note: The password default will be APEX_PASS1! set by the SQL Script. If you receive an authorization error "Access denied by security check" you will need to add the user "Lucille" as a contributor under Shared Components -> Access Control -> Add new user role assignment**
+
     ![Sing in Lucille](images/login-lucille.png " ")
 
 5. In the **My Approvals** tab, a task assigned by APEX\_USER will be visible. Clicking on the task title will provide more details. Do not approve this task, it will be used later to view and download the file that will be uploaded in the next few steps.
@@ -181,6 +182,7 @@ To complete this lab, you need to have the following:
     ```
 
     >**Note: Drag new process above assign to project lead. In line 31, "G\_Base\_URL is a substitution string we will need to establish.**
+
     ![Upload to Object Storage](images/new-name.png " ")
 
     ![Pl/SQL Upload Code](images/plsql-upload.png " ")

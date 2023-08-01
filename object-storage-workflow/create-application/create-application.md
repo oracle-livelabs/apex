@@ -53,7 +53,7 @@ To complete this lab, you need to have the following:
 
     ![Blueprint Information](images/create-application-2.png " ")
 
-    >**Note: Deselect all features**
+    >**Note: De-select all features**
 
     ![Deselect Access Control](images/create-application-3.png " ")
 
@@ -141,7 +141,7 @@ To complete this lab, you need to have the following:
 
     ![Add Sample File](images/add-sample-file.png " ")
 
-5. To upload a file, simply click on the **Upload** button and select any file from your computer. If you don't have a file to upload, don't worry – you can use one of the samples provided.
+5. To upload a file, simply click on the **Upload** button and select any file from your computer.
 
     ![Upload Sample File](images/upload-file.png " ")
 

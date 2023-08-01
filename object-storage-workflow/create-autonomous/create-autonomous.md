@@ -50,7 +50,7 @@ To complete this lab, you need to have the following:
 
     ![View Autonomous Database](images/oci-autonomous-database-2.png " ")
 
-6. Configure the required parameters for the instance, such as the display name name, password, and workload type **MAY NEED TO CHANGE SC TO 21C**
+6. Configure the required parameters for the instance, such as the display name name, password, and workload type
 
     >**Note: Database Password must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the username "admin".**
 

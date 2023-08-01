@@ -3,6 +3,7 @@
 ## Introduction
 
 In this lab, complete the steps to download file from the Object Storage bucket.
+
 Estimated Time: 5 minutes
 
 [Lab 7](videohub:1_u1wvhgy7)
@@ -24,8 +25,6 @@ To complete this lab, you need to have the following:
 ## Task 1: Download Script
 
 1. Create a new blank page
-
-    ***NOTE: REPLACE SCREENSHOT FOR MODAL PAGE***
 
     ![Create Blank Page](images/new-blank-page.png " ")
 

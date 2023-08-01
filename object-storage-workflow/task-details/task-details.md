@@ -120,7 +120,7 @@ To complete this lab, you need to have the following:
 
     ![Add Post Processing Query](images/add-post-processing.png " ")
 
-12. Save all the changes made so far, as it's now time to create a hidden page responsible for processing the download of the object storage file.S
+12. Save all the changes made so far, as it's now time to create a hidden page responsible for processing the download of the object storage file.
 
     ![Save Changes](images/save-p10-changes.png " ")
 
