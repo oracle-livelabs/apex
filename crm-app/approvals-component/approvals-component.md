@@ -9,7 +9,7 @@ To begin, participants will design a task definition, where they can configure v
 Estimated Time: 15 minutes
 
 
-## Task 1: Create a task definition:
+## Task 1: Create a Task Definition
 
 1. In the **App Builder**, navigate to **CRM APP** application  and select **shared components**.
 
@@ -251,7 +251,7 @@ Estimated Time: 15 minutes
      ![Task Definition - Update Status](images/on-expiry.png " ")        
 
 
-## Task 2: Create a Page to Apply for Expense
+## Task 2: Create a Page to Submit an Activity
 Add a page to Submit an Expense request.
 
 1. Click **Application ID**, Application home page appears.
