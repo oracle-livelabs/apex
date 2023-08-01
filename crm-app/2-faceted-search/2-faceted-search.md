@@ -1,6 +1,6 @@
 # Create Faceted Search Page
 
-In this lab, you learn to create a Faceted Search Page. A faceted search page will display and filter Opportunity data using an intuitive experience.
+In this lab, you will be guided through the process of creating a Faceted Search Page. The faceted search page will provide an intuitive and user-friendly experience to display and filter Opportunity data. This functionality allows users to easily explore and refine the data by applying various filters, making it convenient to access the specific information they need. The Faceted Search Page is designed to enhance the user's interaction with the Opportunity data, providing a seamless and efficient search experience.
 
 Estimated Time: 10 minutes
 

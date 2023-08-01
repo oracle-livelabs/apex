@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn to create an OPPTY HEAT MAP to view opportunity data on a map.
+In this lab, you will gain knowledge on how to generate an OPPTY HEAT MAP, which allows you to view opportunity data represented on a map.
 
-Heat Maps are used to visualize the point density. The more points that are clustered together, the more intense the color becomes. Use this option to visualize the spatial distribution of population or incidents.
+Heat Maps are graphical tools employed to visualize point density. As more points are grouped closely together, the color intensity increases, providing a clear representation of spatial distribution in terms of population or incidents. This option is particularly useful for understanding the concentration of opportunities in specific geographical areas.
 
 Estimated Time: 5 minutes
 

@@ -1,6 +1,8 @@
 # Create Search Configuration
 
-In this lab, you learn to create Search Configurations and Search page. Search Configuration allows you to add declarative searches to an application and then a search page that displays the search results.
+In this lab, you will be introduced to creating a global search page using Search Configurations and the Search page feature in Oracle APEX. The lab will involve working with a view that combines data from various database objects such as customers, opportunities, sales representatives, activities, and comments.
+
+The Search Configuration feature enables you to incorporate declarative searches into your application, and then you can design a dedicated search page that showcases the search results. This functionality provides a streamlined way to search across multiple data entities, making it easier for users to access information about customers, opportunities, sales representatives, activities, and comments from a single point of access.
 
 Estimated Time: 10 minutes
 

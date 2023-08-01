@@ -1,17 +1,13 @@
-# Add Task Definition
+# Implement Human Workflow
 
 ## Introduction
 
-In this lab, you learn to create a task definition to configure task parameters, participants, actions, and due dates for an activity request. Moreover, you create a form page to Submit an Activity request and add a Unified Task list page to see the submitted activity request list by a requestor and the Approval list with completed or expired status tag.
+In this lab, you will create a workflow that tracks interactions and assigns tasks to team members by utilizing the approvals component.
+
+To begin, participants will design a task definition, where they can configure various task parameters, assign participants, specify actions, and set due dates for activity requests. Additionally, a form page will be created to allow users to submit activity requests. Moreover, a Unified Task list page will be added, displaying the submitted activity requests by requestors, along with an Approval list that indicates completed or expired status tags. This will enable efficient management of the CRM workflow within the application.
 
 Estimated Time: 15 minutes
 
-### Objectives
-
-In this lab, you will:
-- Create Task Definition
-- Create Page to apply Expense
-- Create Unified Task Lists
 
 ## Task 1: Create a task definition:
 
