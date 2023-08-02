@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will create a workflow that tracks interactions and assigns tasks to team members by utilizing the approvals component.
+In this lab, you create a workflow that tracks interactions and assigns tasks to team members by utilizing the approvals component.
 
-To begin, participants will design a task definition, where they can configure various task parameters, assign participants, specify actions, and set due dates for activity requests. Additionally, a form page will be created to allow users to submit activity requests. Moreover, a Unified Task list page will be added, displaying the submitted activity requests by requestors, along with an Approval list that indicates completed or expired status tags. This will enable efficient management of the CRM workflow within the application.
+To begin with, you design a task definition, where you can configure various task parameters, assign participants, specify actions, and set due dates for activity requests. Additionally, you create a form page to allow users to submit activity requests. Finally, you add a Unified Task list page that displays the submitted activity requests by requestors, along with an Approval list that indicates completed or expired status tags. This enables an efficient management of the CRM workflow within the application.
 
 Estimated Time: 15 minutes
 

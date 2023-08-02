@@ -1,13 +1,14 @@
 # Create Faceted Search Page
 
-In this lab, you will be guided through the process of creating a Faceted Search Page. The faceted search page will provide an intuitive and user-friendly experience to display and filter Opportunity data. This functionality allows users to easily explore and refine the data by applying various filters, making it convenient to access the specific information they need. The Faceted Search Page is designed to enhance the user's interaction with the Opportunity data, providing a seamless and efficient search experience.
+In this lab, you create a faceted search page that provides an intuitive and user-friendly experience to display and filter Opportunity data. This functionality allows users to easily explore and refine the data by applying various filters, making it convenient to access the specific information they need.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Create Faceted Search page using DM_oppty table.
+- Create Faceted Search page using **DM_OPPTY** table.
+- Create a Mini Dashboard at the top of the page using Charts.
 
 ## Task 1: Create Faceted Search Page
 
@@ -21,7 +22,7 @@ In this lab, you will:
 
 3. In Create Faceted Search wizard:
     - For Name - Type Faceted Search
-    - For Table / View Name - Select **DM_OPPTY**  
+    - For Table / View Name - Select **DM\_OPPTY**  
   Click Next.
 
     ![Create Page](images/faceted-search-wizard2.png " ")
@@ -83,7 +84,7 @@ For Charts Selector : Type **#Dash**
     ![Create Page](images/search.png " ")
 
 4. In left render pane, Select Facets.
-Hold Control key on keyboard & Select P24_PRODUCT, P24_PROBABILITY, P24_STAGE
+Hold Control key on keyboard & Select P24\_PRODUCT, P24\_PROBABILITY, P24\_STAGE
 
  In right details pane, scroll down to Advanced section:
 Enable **Show Chart Initially**

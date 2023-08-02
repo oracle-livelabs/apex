@@ -1,20 +1,20 @@
 # CRM application
 
 ## Introduction
-
-In order to examine and comprehend how to create a fundamental CRM application utilising the Oracle APEX development platform, an introduction to a CRM (Customer Relationship Management) lab with Oracle APEX entails setting up a hands-on learning environment. Participants will be able to build a useful CRM system in the lab and gain hands-on experience with APEX capabilities for data modelling, user interface design, data entry, reporting, global search and other tasks.
+Customer Relationship Management is an integral part of any business/ organisation. In this workshop, you learn to create a fundamental CRM application using Oracle APEX. Through building this app, you gain hands-on experience with APEX capabilities for data modelling, user interface design, data entry, reporting, global search and other tasks.
 
 
 Estimated Time: 2 hour
 
 ### Objectives
-In this lab, you will:
-- Learn how to Implement a Quick SQL Script
-- Learn how to Create an Application using Script
-- Learn how to Edit Forms using developer toolbaar
-- Learn how to Create a Faceted Search Page
-- Learn how to Create a Search Configuration Page
-- Learn how to Implement Approvals Component
+In this workshop, you will:
+- Build user friendly forms to maintain customer data.
+- Create a Faceted Search report to analyse opportunity data.
+- Enhance Search in the app using Search Configuration.
+- Implement Heat Map in APEX to Calculate the distance between opportunity
+- Manage tasks using Approvals Component.
+- Configure Email Automation.
+
 
 
 
