@@ -1,4 +1,3 @@
-
 # Delegate Expense Request
 
 ## Introduction
