@@ -14,7 +14,7 @@ In this lab, you will:
 - Update Task Definition
 - Add Deadline and Expiration for an Expense Request
 
-## Task 1: Update the EMPLOYEE\_DETAILS table
+## Task 1: Update the EMPLOYEE_DETAILS table
 
 1. Navigate to SQL Workshop and click **SQL Commands**.
 
