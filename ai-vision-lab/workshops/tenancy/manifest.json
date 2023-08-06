@@ -1,37 +1,29 @@
 {
-  "workshoptitle": "Build a CRM Application using Oracle APEX",
+  "workshoptitle": "AI Vision",
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../intro/Introduction.md"
+        "filename": "../../Introduction/Introduction.md"
       },
       {
         "title": "Get Started",
         "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Create an APEX Application using Quick SQL",
-        "filename": "../../1-sql-script/1-sql-script.md"
+        "title": "Lab 1: Configure OCI API Keys",
+        "filename": "../../1-configure-oci/1-configure-oci.md"
       },
       {
-        "title": "Lab 2: Improve the Form",
-        "filename": "../../form-edits/form-edits.md"
+        "title": "Lab 2: Import and Edit Social Media App ",
+        "filename": "../../2-import-app/2-import-app.md"
       },
       {
-        "title": "Lab 3: Create Faceted Search Page",
-        "filename": "../../2-faceted-search/2-faceted-search.md"
+        "title": "Lab 3: Integrate OCI Vision with Oracle APEX",
+        "filename": "../../3-integrate-oci-vision/3-integrate-oci-vision.md"
       },
       {
         "title": "Lab 4: Create Search Configurations",
-        "filename": "../../3-global-search/3-global-search.md"
-      },
-      {
-        "title": "Lab 5: Create an Opportunity Heat Map",
-        "filename": "../../4-heat-map/heat-map.md"
-      },
-      {
-        "title": "Lab 6: Approvals Component ",
-        "filename": "../../approvals-component/approvals-component.md"
+        "filename": "../../4-run-app/4-run-app.md"
       },
 
       {
