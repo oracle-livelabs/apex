@@ -1,7 +1,7 @@
-# Running the Application
+# Run the Application
 
 
-## TASK 1 : Running the Application
+## TASK 1 : Run the Application
 
 To run the application and perform the AI Search on the uploaded images. Please do the following steps.
 

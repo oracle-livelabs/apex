@@ -1,4 +1,4 @@
-# Integrating OCI Vision with Oracle APEX
+# Integrate OCI Vision with Oracle APEX
 
 ## Introduction
 
@@ -6,8 +6,7 @@ OCI Vision can classify images into thousands of categories to simplify common d
 
 In this lab, you will use the Image Classification Module of Oracle AI Vision services.
 
-## TASK 1: Preparing Request for calling AI Vision Services using APEX Web Service:
-
+## Task 1: Prepare Request for calling AI Vision Services using APEX Web Service:
 
 Using Vision, you can upload images to detect and classify objects in them. If you have lots of images, you can process them in batch using asynchronous API endpoints. Vision's features are thematically split between Document AI for document-centric images, and Image Analysis for object and scene-based images. Pretrained models and custom models are supported.
 
@@ -40,7 +39,7 @@ Where CompartmentId is the OCID of your Compartment and data contains the inform
 
 
 
-## TASK 2: Calling AI Vision Services from Oracle APEX:
+## Task 2: Call AI Vision Services from Oracle APEX:
 
 
 1. On the Workspace home page, click the App Builder icon. Select APEX Social Media application. On the Application home page, click Page 1 - Timeline.
