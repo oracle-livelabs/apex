@@ -12,11 +12,19 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 1. Navigate to the application home page and Click Shared components.
 
+   ![Click Timeline](images/sm-shared-comp.png " ")
+
 2. Click REST Data Sources under Data Sources.
+
+   ![Click Timeline](images/rest-data-sources.png " ")
 
 3. Click Create.
 
+   ![Click Timeline](images/rest-data-source-create.png " ")
+
 4. Select From scratch and Click Next.
+
+   ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source:
    For Rest Data Source Type : Select** Oracle Cloud Infrastructure (OCI)**
@@ -27,7 +35,11 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
    Click **Next**.
 
+   ![Click Timeline](images/create-rest-data.png " ")
+
 6. Under Create REST Data Source - Remote Server, Click **Next**.
+
+   ![Click Timeline](images/remote-server.png " ")
 
 7. Under Authentication, Enable Authentication Required and Select the newly created **apex_ai_cred** web credentials.
 
@@ -194,7 +206,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
   ```
 
 13. Click **Save**
-    
+
 
 ## **Summary**
 You now know how to Prepare Request for calling AI Vision Services using APEX Web Service.
