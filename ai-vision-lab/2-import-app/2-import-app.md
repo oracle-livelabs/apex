@@ -2,7 +2,7 @@
 
 In this lab, you explore the integration of a Social Media application with OCI AI vision.
 
-You can download the Catchup Scripts of the Social Media Application here.
+You can download the Catchup Scripts of the Social Media Application [here](files/APEX_Social_Media_HOL_FINAL.zip).
 
 ## Task 1: Import the Social Media application
 

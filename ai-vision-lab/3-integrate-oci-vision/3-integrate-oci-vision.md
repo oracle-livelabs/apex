@@ -37,8 +37,6 @@ For Analysing Image, we have to send the Request Parameters in the JSON format m
 Where CompartmentId is the OCID of your Compartment and data contains the information of the Image that we are going to analyze.
 
 
-
-
 ## Task 2: Call AI Vision Services from Oracle APEX:
 
 
