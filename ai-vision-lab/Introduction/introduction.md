@@ -1,6 +1,6 @@
-# Build AI-Powered Image Search into your Oracle APEX App
+# Introduction
 
-## Introduction
+## About this Workshop
 
 In today's data-driven world, the ability to extract valuable insights from visual content has become a game-changer for businesses across industries. Artificial Intelligence (AI) has made significant strides in the field of computer vision, enabling machines to understand and interpret visual data with remarkable accuracy.
 

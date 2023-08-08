@@ -294,6 +294,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
     ![Click Timeline](images/after-logo-page-item.png " ")
 
 2. In the property editor, Enter the following:
+
    Under Identification:
 
     - For Name: Enter **P1\_AI\_SEARCH**

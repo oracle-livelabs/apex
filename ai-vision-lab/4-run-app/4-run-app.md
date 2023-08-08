@@ -4,7 +4,7 @@
 
 In this lab, you run APEX Social Media application and perform the AI Search on the uploaded images.
 
-## TASK 1 : Run the Application
+## Task 1 : Run the Application
 
 1. Login to the application using the credentials created under Manage Users and Groups.
 
