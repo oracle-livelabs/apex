@@ -64,41 +64,37 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     - For Request Body Template: Copy and paste below JSON
 
-```
-<copy>
-{
-  "compartmentId": "#COMPARTMENT_ID#",
-   "image": {
-    "source": "INLINE",
-    "data": "#FILE_DATA#"
-  },
-  "features": [
-    {
-      "featureType": "#FEATURE_TYPE#",
-      "maxResults": 5
-    }
-  ]
-}
-<copy>
-```
+    ```
+   <copy>
+      {
+         "compartmentId": "#COMPARTMENT_ID#",
+         "image": {
+         "source": "INLINE",
+         "data": "#FILE_DATA#"
+       },
+      "features": [
+      {
+         "featureType": "#FEATURE_TYPE#",
+         "maxResults": 5
+      }
+      ]
+      }
+    <copy>
+     ```
 
-   ![Click Timeline](images/edit-post.png " ")
+    ![Click Timeline](images/edit-post.png " ")
 
-   ![Click Timeline](images/post.png " ")
+    ![Click Timeline](images/post.png " ")
 
 11. Under Operations Parameter, Click **Synchronize with Body** to auto-create substitutions strings in the request body template as operation parameters. Then, Click **OK**.
 
    ![Click Timeline](images/synchronize.png " ")
 
-12. Click **Apply Changes**.
+12. Select Operations Parameter Tab and Click **Add Parameter**
 
-   ![Click Timeline](images/operation-changes.png " ")
+   ![Click Timeline](images/operations-param.png " ")
 
-13. Select Operations Tab and Click **Add Parameter**
-
-   ![Click Timeline](images/parameters.png " ")
-
-14. Under Edit REST Data Source Parameter:
+13. Under Edit REST Data Source Parameter:
 
     - For Type: Select **Request or Response Body**
 
@@ -110,7 +106,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/response.png " ")
 
-15. Under Edit REST Data Source Parameter:
+14. Under Edit REST Data Source Parameter:
 
     - For Type: Select **HTTP Header**
 
@@ -126,7 +122,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/content-type.png " ")
 
-16. Click **Apply Changes**
+15. Click **Apply Changes**
 
     ![Click Timeline](images/parameter-changes.png " ")
 
@@ -158,11 +154,11 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/response-page-item.png " ")
 
-3. Navigate to Processing Tab (left pane) and Right click on Processing Tab or Processes and click Create Process.
+5. Navigate to Processing Tab (left pane) and Right click on Processing Tab or Processes and click Create Process.
 
    ![Click Timeline](images/processing.png " ")
 
-3. In the Property Editor, Enter the following:
+6. In the Property Editor, Enter the following:
    Under Identification section:
 
     - For Name : Enter **Analyze Image**
@@ -173,18 +169,19 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - Enable **Execute in Background**
 
-   ![Click Timeline](images/processing.png " ")
+    ![Click Timeline](images/analyze-image.png " ")
 
-4. Right click on the Analyze Image Process you just created and Select Add Child Process.
+7. Right click on the Analyze Image Process you just created and Select Add Child Process.
 
+    ![Click Timeline](images/add-child-process1.png " ")
 
-5. In the Property Editor, Enter the following:
+8. In the Property Editor, Enter the following:
 
    Under Identification section:
 
     - For Name : Enter **Invoke REST Data Source**
 
-    - For Action : Select **Invoke API**
+    - For Type : Select **Invoke API**
 
     - For Execution Chain : Select **Analyze Image**.
 
@@ -196,10 +193,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - For Operation : Select **POST**
 
-6. Expand parameters under **Invoke REST Data Source** process.
+    ![Click Timeline](images/child-process1.png " ")
 
-
-7. Click **COMPARTMENT_ID** and Enter the following:
+6. Click **COMPARTMENT_ID** and Enter the following:
 
    Under Value :
 
@@ -209,6 +205,8 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    *Note: If you are using the root compartment enter the tenancy OCID from the configuration preview file generated during API Key creation.If you are using a different compartment, you can find the corresponding compartment OCID from OCI Console.*
 
+   ![Click Timeline](images/compartment-id.png " ")
+
 8. Click **FEATURE_TYPE** and Enter the following:
 
    Under Value :
@@ -217,7 +215,10 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - For Value: Enter **IMAGE_CLASSIFICATION**.
 
+    ![Click Timeline](images/feature-type.png " ")
+
 9. Click **FILE_DATA** and Enter the following:
+
    Under Value:
 
    - For Type: Select SQL Query(Return Single Value)
@@ -227,19 +228,26 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
    ```
    <copy>
    select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
-  from SM_posts
- where ID = :P1_ID;
-  <copy>
-```
+   from SM_posts
+   where ID = :P1_ID;
+   <copy>
+   ```
+
+   ![Click Timeline](images/file-data.png " ")
 
 10. Click **RESPONSE** and Enter the following:
+
     - Under Parameter: Disable **Ignore Output**
 
     Under Value :
 
     - For Item: Select **P1\_RESPONSE**
 
+    ![Click Timeline](images/response-param.png " ")
+
 11. Right click on the Analyze Image Process and Select Add Child Process.
+
+    ![Click Timeline](images/create-process2.png " ")
 
 12. In the Property Editor,Enter the following:
 
@@ -268,14 +276,76 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
     )
    WHERE
     ID = :P1_ID;
- <copy>
-  ```
+   <copy>
+   ```
+
+   ![Click Timeline](images/parse-response.png " ")
 
 13. Click **Save**
 
+## Task 3: Enhance Timeline Region to include AI Search
+In this task, you create a page item P1\_AI\_SEARCH using which the end user can enter the search terms and search through the images.
+
+1. Go To Rendering tab, right click on the After Logo section and select **Create Page Item**.
+
+    ![Click Timeline](images/after-logo-page-item.png " ")
+
+2. In the property editor, Enter the following:
+   Under Identification:
+
+   - For Name: Enter **P1\_AI\_SEARCH**
+
+   Under Label:
+
+   - For Label : Enter **AI Search**
+
+   Under Settings:
+
+   - Enable Submit when Enter pressed
+
+   Under Appearance:
+
+   - For Width : Enter **100**
+
+   ![Click Timeline](images/ai-search-page-item.png " ")
+
+3. Select Timeline region, In the property editor, Enter the following:
+   Under Source:
+
+   - For SQL Query: Copy and paste the below SQL query in the code Editor
+
+    ```
+    <copy>
+    select
+    p.id,
+    p.created_by AS user_name,
+    p.post_comment AS comment_text,
+    p.file_blob,
+    p.file_mime,    
+    apex_util.get_since(p.created) post_date,
+    (
+        select count(*) from SM_REACTIONS smr
+        where smr.post_id=p.id
+    ) as REACTIONS,
+    (
+        select 'user-has-liked' from SM_REACTIONS smr
+        where smr.post_id=p.id and created_by=UPPER(:APP_USER)
+    ) USER_REACTION_CSS
+    from SM_POSTS p
+    where (:P1_AI_SEARCH IS NOT NULL AND upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%'))OR :P1_AI_SEARCH IS NULL
+    order by p.created desc;
+   <copy>
+   ```
+
+   - For Page items to Submit: Select **P1\_AI\_SEARCH**
+
+   ![Click Timeline](images/timeline-query.png " ")
+
+4. Click **Save and Run**.
+
 
 ## **Summary**
-You now know how to Prepare Request for calling AI Vision Services using APEX Web Service.
+You now know how to integrate OCI AI Vision into Oracle APEX through a REST API Call.
 
 You may now **proceed to the next lab**.   
 
