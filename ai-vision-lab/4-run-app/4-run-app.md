@@ -2,8 +2,7 @@
 
 ## Introduction
 
-In this lab, you run the application and perform the AI Search on the uploaded images.
-
+In this lab, you run APEX Social Media application and perform the AI Search on the uploaded images.
 
 ## TASK 1 : Run the Application
 

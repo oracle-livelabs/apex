@@ -197,7 +197,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/child-process1.png " ")
 
-6. Click **COMPARTMENT\_ID** and Enter the following:
+9. Click **COMPARTMENT\_ID** and Enter the following:
 
    Under Value :
 
@@ -209,7 +209,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/compartment-id.png " ")
 
-8. Click **FEATURE_TYPE** and Enter the following:
+10. Click **FEATURE_TYPE** and Enter the following:
 
    Under Value :
 
@@ -219,7 +219,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/feature-type.png " ")
 
-9. Click **FILE_DATA** and Enter the following:
+11. Click **FILE_DATA** and Enter the following:
 
    Under Value:
 
@@ -237,7 +237,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/file-data.png " ")
 
-10. Click **RESPONSE** and Enter the following:
+12. Click **RESPONSE** and Enter the following:
 
     - Under Parameter: Disable **Ignore Output**
 
@@ -247,11 +247,11 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/response-param.png " ")
 
-11. Right click on the Analyze Image Process and Select Add Child Process.
+13. Right click on the Analyze Image Process and Select Add Child Process.
 
     ![Click Timeline](images/create-process2.png " ")
 
-12. In the Property Editor,Enter the following:
+14. In the Property Editor,Enter the following:
 
     Under Identification :
 
@@ -284,7 +284,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/parse-response.png " ")
 
-13. Click **Save**
+15. Click **Save**
 
 ## Task 3: Enhance Timeline Region to include AI Search
 In this task, you create a page item P1\_AI\_SEARCH using which the end user can enter the search terms and search through the images.
@@ -314,8 +314,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
 
 3. Select Timeline region, In the property editor, Enter the following:
    Under Source:
-
-   - For SQL Query: Copy and paste the below SQL query in the code Editor
+    - For SQL Query: Copy and paste the below SQL query in the code Editor
 
     ```
     <copy>
@@ -339,10 +338,9 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
     order by p.created desc;
    <copy>
    ```
+    - For Page items to Submit: Select **P1\_AI\_SEARCH**
 
-   - For Page items to Submit: Select **P1\_AI\_SEARCH**
-
-   ![Click Timeline](images/timeline-query.png " ")
+    ![Click Timeline](images/timeline-query.png " ")
 
 4. Click **Save and Run**.
 
