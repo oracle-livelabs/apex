@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create a REST data source
+In this lab, you will create a REST data source to view files inside of Object Storage.
 
 Estimated Time: 10 minutes
 
@@ -43,17 +43,17 @@ To complete this lab, you need to have the following:
 
 ## Task 2: Create REST Data Source
 
-1. Use the search to navigate to create a new REST Data Source. It is also possible to navigate here via Shared Components
+1. Use the search to navigate to create a new REST Data Source. It is also possible to navigate here via Shared Components.
 
     ![Navigate to Rest Data Source](images/nav-rest-data-source.png " ")
 
-2. Create new REST Data Source from scratch
+2. Create new REST Data Source from scratch.
 
     ![Choose create REST Data Source](images/create-rest.png " ")
 
     ![Data Source from Scratch](images/from-scratch.png " ")
 
-3. Set the REST Data Source type as OCI, give it an appropriate name, and enter your URL Endpoint. This URL endpoint will return a list of all object in the specified namespace and bucket name
+3. Set the REST Data Source type as OCI, give it an appropriate name, and enter your URL Endpoint. This URL endpoint will return a list of all object in the specified namespace and bucket name.
 
     ```text
      <copy>
@@ -69,7 +69,7 @@ To complete this lab, you need to have the following:
      </copy>
     ```
 
-    Here is the URL example endpoint for this environment
+    Here is the URL example endpoint for this environment.
 
     ```text
      <copy>
