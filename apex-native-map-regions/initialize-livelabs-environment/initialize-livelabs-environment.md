@@ -88,7 +88,7 @@ Access to the compute instance by SSH protocol through the terminal is optional.
 3.  For the Secure Shell (SSH) replace the **&lt;sshkeyname&gt;** with the name of your SSH private key and **&lt;Your Compute Instance Public IP Address&gt;** with your IP address.
 
     ```text
-    ssh -i ~/.ssh/<sshkeyname> opc@<Your Compute Instance Public IP Address>
+    <copy>ssh -i ~/.ssh/<sshkeyname> opc@<Your Compute Instance Public IP Address></copy> 
     ```
     ![SSH into compute instance](./images/ssh.png " ")
 

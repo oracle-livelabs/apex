@@ -68,7 +68,7 @@ This lab assumes you have:
 
     ![Change to PDB](images/alter-session1.png " ")
 
-5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *new\_password\_here* with your new password. Throughout this workshop, we will use the **Welcome123** password.
+5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *[new\_password\_here]* with your new password. Throughout this workshop, we will use the **Welcome123** password.
 
     ```
     <copy>alter user hol23c identified by </copy>[new_password_here];
@@ -119,7 +119,7 @@ This lab assumes you have:
 
     ![Verify ORDS](images/confirm_ords.png)
 
-You may now proceed to the next lab.
+You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Kaylien Phan and William Masdon, Product Managers, Database Product Management
