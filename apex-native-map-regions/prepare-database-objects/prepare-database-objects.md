@@ -19,6 +19,9 @@ This lab assumes you have:
 - Oracle Database 23c Free Developer Release
 - Completed all previous labs successfully
 
+Watch the video below for a quick walk through of the lab.
+[Prepare APEX workspace](videohub:1_jxcqa47n)
+
 ## Task 1: Download the schema creation and population scripts
 
 1. Click Activities in the upper left corner, then click Terminal. Select File -> New Tab since ORDS is running in your current Terminal tab.
@@ -113,7 +116,9 @@ This lab assumes you have:
 
    ![Create tables](./images/database-objects-created.png)
 
-5. Your schema setup is now complete. You may proceed to the next lab.
+5. Your schema setup is now complete.
+
+You may now **proceed to the next lab.**
 
 ## Learn More
 - [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html#GUID-464C045C-FBDF-417A-A20B-037D294B3BDA)
