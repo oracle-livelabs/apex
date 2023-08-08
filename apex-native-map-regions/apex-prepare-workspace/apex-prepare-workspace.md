@@ -71,7 +71,7 @@ Watch the video below for a quick walk through of the lab.
 
 
 2.  Log back in as the **admin** user  you just created, supplying **WTFC** as the workspace name.
-    ![log back in](images/apex-WTFC-login.png)
+    ![log back in](images/apex-wtfc-login.png)
 
 3. Since this is the first time you'll be using the APEX workspace, you will be prompted to change the password. *Be sure to retain it somewhere safe!*
     ![password change](images/apex-change-admin-password.png)
