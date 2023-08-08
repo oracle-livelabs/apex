@@ -24,11 +24,11 @@ To complete this lab, you need to have the following:
 
 ## Task 1: Create Form
 
-1. Return to page 3 and create a new modal form page for our end users
+1. Return to page 3 and create a new modal form page for our end users.
 
     ![Create new Modal Page](images/create-new-page.png " ")
 
-2. Select Form and enter the source details
+2. Select Form and enter the source details.
 
     ![Select Form](images/select-form.png " ")
 
@@ -44,7 +44,7 @@ To complete this lab, you need to have the following:
 
     ![Requestor Page Item](images/requestor-item.png " ")
 
-4. Add one more for the file upload
+4. Add one more for the file upload.
 
     ![File Upload Page Item](images/file-upload-item.png " ")
 
@@ -52,13 +52,13 @@ To complete this lab, you need to have the following:
 
     ![Navigate to Page 3](images/save-changes.png " ")
 
-6. On page 3, create action as shown
+6. On page 3, create action as shown.
 
     ![Create Page Action](images/create-action.png " ")
 
     ![Set Button Target](images/set-button-target.png " ")
 
-7. Set the details of the link as shown
+7. Set the details of the link as shown.
 
     ![Set Link Details](images/set-link-details.png " ")
 
@@ -68,25 +68,25 @@ To complete this lab, you need to have the following:
 
     ![Project File Upload](images/new-modal-page.png " ")
 
-9. Return to Page 11
+9. Return to Page 11.
 
     ![Page 11](images/page-11.png " ")
 
-10. Hide all the page items we do not wish to display to our end users. You can multi-select and set type to hidden
+10. Hide all the page items we do not wish to display to our end users. You can multi-select and set type to hidden.
 
     ![Hide unwanted page items](images/hide-page-items.png " ")
 
-11. Default the requestor to the current logged in user
+11. Default the requestor to the current logged in user.
 
     ![Default Requestor](images/default-requestor.png " ")
 
     ![Set Default User](images/requestor-app-user.png " ")
 
-12. Save and run from page 3 or refresh the browser and check how the form looks now
+12. Save and run from page 3 or refresh the browser and check how the form looks now.
 
     ![Modal Page Update](images/modal-page-update.png " ")
 
-13. We can also change the text of the "Save" button from Apply Changes to "Submit"
+13. We can also change the text of the "Save" button from Apply Changes to "Submit".
 
     ![New Submit Button](images/submit-button.png " ")
 

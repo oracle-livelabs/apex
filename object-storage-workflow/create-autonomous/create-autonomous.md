@@ -4,7 +4,7 @@
 
 You will get started by creating an autonomous database, collecting user and tenancy OCIDs, and creating a APEX workspace.
 
->**Note: If you already have an autonomous database instance or APEX workspace, complete task 2 in this lab and then proceed to lab 2.**
+>**Note: If you already have an APEX workspace, complete task 2 in this lab and then proceed to lab 2.**
 
 Estimated Time: 10 minutes
 
@@ -50,7 +50,7 @@ To complete this lab, you need to have the following:
 
     ![View Autonomous Database](images/oci-autonomous-database-2.png " ")
 
-6. Configure the required parameters for the instance, such as the display name name, password, and workload type
+6. Configure the required parameters for the instance, such as the display name name, password, and workload type.
 
     >**Note: Database Password must be 12 to 30 characters and contain at least one uppercase letter, one lowercase letter, and one number. The password cannot contain the double quote (") character or the username "admin".**
 
@@ -100,13 +100,13 @@ To complete this lab, you need to have the following:
 
     ![New Schema](images/new-schema-2.png " ")
 
-3. Enter new workspace credentials
+3. Enter new workspace credentials.
 
-    >**Note: This step involves creating a workspace to serve as a container for the applications, as well as a database user that will serve as the administrator for this new workspace.**
+    >**Note: This step involves creating a workspace to serve as a container for the application, as well as a database user that will serve as the administrator for this new workspace.**
 
     ![Enter Workspace Credentials](images/workspace-credentials.png " ")
 
-4. Click on the link to log out of the admin workspace
+4. Click on the link to log out of the admin workspace.
 
     ![Logout Admin Workspace](images/logout-workspace.png " ")
 

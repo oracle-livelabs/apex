@@ -25,19 +25,19 @@ To complete this lab, you need to have the following:
 
 ## Task 1: Create APEX Application
 
-1. Log into the newly created workspace using the credentials for the user that was just created
+1. Log into the newly created workspace using the credentials for the user that was just created.
 
     ![Login Development Workspace](images/login-workspace.png " ")
 
-2. You have now reached the home page of the development workspace! The next step is to acquire some sample data and utilize that data to create a starter application
+2. You have now reached the home page of the development workspace! The next step is to acquire some sample data and utilize that data to create a starter application.
 
     ![Workspace Home](images/workspace-home.png " ")
 
-3. Go to the **Sample Data Sets** section
+3. Go to the **Sample Data Sets** section.
 
     ![Navigate to Sample Dataset](images/sample-dataset.png " ")
 
-4. Select the **Project Data** sample data set and follow the wizard
+4. Select the **Project Data** sample data set and follow the wizard.
 
     ![Select Projects](images/project-data-1.png " ")
 
@@ -45,7 +45,7 @@ To complete this lab, you need to have the following:
 
     ![Install Dataset](images/project-data-3.png " ")
 
-5. Click **Create Application** and deselect all features from the Features section
+5. Click **Create Application** and deselect all features from the Features section.
 
     >**Note: While these features are important for any new application, to maintain simplicity, choose to deselect them at this time. These features can be added at a later time. To read more about APEX application features, click [here](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/managing-feature-pages.html)**
 
@@ -61,7 +61,7 @@ To complete this lab, you need to have the following:
 
 6. You may want to take a few minutes to explore the application that has been created using the sample dataset. This lab leverages the application as a foundation for showcasing how to upload and download files to and from object storage, and how to establish a task approval process.
 
-    >**Note:** You can click on the **Run Application** button to view the application. The credentials were created earlier (Example Username: APEX_USER)
+    >**Note:** You can click on the **Run Application** button to view the application. The credentials were created earlier (Example Username: APEX_USER).
 
     ![Explore Application](images/explore-app-1.png " ")
 
@@ -69,7 +69,7 @@ To complete this lab, you need to have the following:
 
     ![Application Home Page](images/explore-app-2.png " ")
 
-7. Back in the original browser tab, navigate to the object browser
+7. Back in the original browser tab, navigate to the object browser.
 
     ![Object Browser](images/nav-object-browser.png " ")
 
@@ -79,7 +79,7 @@ To complete this lab, you need to have the following:
 
 ## Task 2: Task Definition
 
-1. Visit **Shared Components** by returning to the home page by clicking on the APEX logo, and then access the newly created application by clicking on its icon
+1. Visit **Shared Components** by returning to the home page by clicking on the APEX logo, and then access the newly created application by clicking on its icon.
 
     ![Navigate Workspace Home](images/nav-workspace-home.png " ")
 
@@ -89,7 +89,7 @@ To complete this lab, you need to have the following:
 
     ![Shared Components](images/nav-shared-components.png " ")
 
-2. Next, establish a new task definition and enter the necessary details, as illustrated below
+2. Next, establish a new task definition and enter the necessary details, as illustrated below.
 
     ![Create Definition](images/task-definition-1.png " ")
 
@@ -127,11 +127,11 @@ To complete this lab, you need to have the following:
 
     ![Oracle Cloud Object Storage](images/oci-obj-storage.png " ")
 
-2. Select the APEXHOL compartment and click "Create Bucket"
+2. Select the APEXHOL compartment and click "Create Bucket".
 
     ![Create OCI Bucket](images/create-bucket.png " ")
 
-3. Enter your bucket details. Add the bucket name as **OCW23**, and leave the rest as defualt.
+3. Enter your bucket details. Add the bucket name as **OCW23**, and leave the rest as default.
 
     >**Note: If a bucket name other than "OCW23" is selected, please take note of it as it will be referenced later on.**
 
@@ -145,7 +145,7 @@ To complete this lab, you need to have the following:
 
     ![Upload Sample File](images/upload-file.png " ")
 
-6. Click upload, once the file is selected
+6. Click upload, once the file is selected.
 
     ![Select File to Upload](images/click-upload.png " ")
 
