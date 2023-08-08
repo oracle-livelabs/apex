@@ -8,6 +8,9 @@ While the end result is a simple version of a movies watchlist application, you 
 
 Estimated Workshop Time: 2 hours
 
+Watch the video below for a quick walk-through of the workshop.
+[Walkthrough video of the entire workshop](videohub:1_vdi0shy5)
+
 *Note: This lab assumes you are using Oracle APEX 23.1.*
 
 ### Objectives

@@ -5,6 +5,8 @@ There are a few more additions you can make to your app to really pull it all to
 
 Estimated Lab Time: 5 minutes
 
+[Improve the UI](videohub:1_kam4afxs)
+
 ### Objectives
 In this lab, you will:  
 - Add a Get Started region to the My Watchlist page.  

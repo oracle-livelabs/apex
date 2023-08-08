@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create an Email Template to add for before expiry action in the task definition.
+In this lab, you create an Email Template in the task definition. The email needs to be sent to the reviewer before an action expires.
 
 Estimated Time: 5 minutes
 
@@ -11,7 +11,7 @@ Estimated Time: 5 minutes
 In this lab, you will:
 - Create an Email Template
 
-## Task 1: Create an Email Template:
+## Task 1: Create an Email Template
 
 To define an email template:
 
@@ -23,11 +23,11 @@ To define an email template:
 
     - On the Application home page, click **Shared Components**.
 
-2. Under User Interface Components, select Email Templates.
+2. Under User Interface Components, select **Email Templates**.
 
    ![Select email template ](./images/email-template-sc-page.png " ")
 
-3. On the Email Templates page, click Create Email Template.
+3. On the Email Templates page, click **Create Email Template**.
    The Details page appears.
 
    ![click Create Email Template](./images/email-template-create-button.png " ")

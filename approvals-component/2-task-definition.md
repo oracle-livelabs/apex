@@ -2,24 +2,25 @@
 
 ## Introduction
 
-In this lab, you learn to create a task definition to configure task parameters, participants, actions, and due dates for an expense request. Moreover, you will create a form page to Submit an Expense request and add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
+Every approval management scenario needs its own kind of task. The kind of information that the task should carry, the users who will be approving the task are unique to every type of task. These configuration elements of a task are contained in a template known as the Task Definition.
+In this lab, you learn to create a Task Definition to configure task parameters, participants, actions, and due dates for an expense request. Thereafter, you will create a form page to Submit an Expense request and add a Unified Task list page to see the submitted expense requests and the Approval list (approved or rejected) by the approver.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Create Task Definition
-- Create Page to apply Expense
+- Create a Task Definition
+- Create a Page to submit Expense
 - Create Unified Task Lists
 
 ### Prerequisites
 
 - Completion of workshop through Lab 1
 
-## Task 1: Create a task definition:
+## Task 1: Create a Task Definition:
 
-1. In the **App Builder**, navigate to **Expense Tracker** application  and select **shared components**.
+1. In the **App Builder**, navigate to **Expense Tracker** application and select **Shared Components**.
 
    ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
@@ -37,11 +38,9 @@ In this lab, you will:
 
     - For Subject - Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
 
-    - For Static ID - Enter **EXPENSE_REQUEST**
+    - For Static ID - Enter **EXPENSE\_REQUEST**
 
     - For Priority - Select **2-High**
-
-  Leave Business Administrator and Potential owner blank for now.
 
 5. Click **Create**.
 
@@ -155,15 +154,15 @@ In this lab, you will:
 
     Specify the following:
 
-    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
+    - Name: Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
-    - For Type - Select Execute Code
+    - Type: **Execute Code**
 
-    - On Event - Select **Complete**
+    - On Event: **Complete**
 
-    - For Outcome : Select **Approved**
+    - Outcome : **Approved**
 
-    - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into the code editor:
 
       ```
       <copy>
@@ -215,7 +214,7 @@ In this lab, you will:
 
        ![Task Definition - Approved action created](images/task-definition-approved-code0.png " ")
 
-13. Again, Click  **Add Actions** button.
+13. Again, Click **Add Actions** button.
 
     ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
@@ -260,14 +259,14 @@ In this lab, you will:
      ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
 
 
-## Task 2: Create a Page to Apply for Expense
+## Task 2: Create a Page to Submit Expense
 Add a page to Submit an Expense request.
 
-1. Click **Application ID**, Application home page appears.
+1. Click **Application ID**. Application home page appears.
 
    ![Application Home Page](images/application-id.png " ")
 
-2. Click **Create**, create page wizard appears.
+2. Click **Create**. The create page wizard appears.
 
     ![Click create on Application home page](images/application-create-page.png " ")
 
@@ -279,29 +278,29 @@ Add a page to Submit an Expense request.
 
    Under **Page Definition** Section:
 
-    - For Page Number - Type 3
+    - Page Number: **3**
 
-    - For Name - Enter **Apply for Expense**
+    - Name: **Apply for Expense**
 
-    - For Page Mode   - Select Normal
+    - Page Mode: **Normal**
 
    Under **Navigation** Section:
 
-    - For Use Breadcrumb - Select On
+    - Use Breadcrumb: **ON**
 
-    - For Breadcrumb Parent Entry - Select Home(Page 1)
+    - Breadcrumb Parent Entry: **Home(Page 1)**
 
-    - For Use Navigation - Select On
+    - Use Navigation: **ON**
 
-    - For Navigation Preference - Select **Create a new Entry**
+    - Navigation Preference: **Create a new Entry**
 
-    - For Icon  - Enter **fa-file-o**
+    - Icon: **fa-file-o**
 
    Click **Create Page**.
 
    ![Blank page definition](images/application-blank-page-details.png " ")
 
-5. In the left pane, select the Rendering tab. Right-click **Body** , select **Create Region**.
+5. In the left pane, select the Rendering tab. Right-click **Body**, select **Create Region**.
 
    ![Create create to apply an expense](images/submit-expense-region.png " ")
 
@@ -309,15 +308,15 @@ Add a page to Submit an Expense request.
 
    Under **Identification** section:
 
-    - For Title: Enter **New Expense Request**
+    - Title: **New Expense Request**
 
-    - For Type: Select **Form**
+    - Type: **Form**
 
    Under **Source** section:
 
-    - For Type: Select **SQL Query**
+    - Type: **SQL Query**
 
-    - For SQL query: Copy the code below and paste it into  the code editor:
+    - For SQL query, copy the code below and paste it into the code editor:
 
     ```
      <copy>
@@ -329,7 +328,7 @@ Add a page to Submit an Expense request.
     ```
     ![New Expense request region source](images/submit-expense-region-details.png " ")
 
-7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
+7. Now, right-click the region (**New Expense Request**) and select **Create Page Item**.
 
   ![Create Page Item - P3_EXPENSE_TYPE](images/create-page-item.png " ")
 
@@ -354,27 +353,27 @@ Add a page to Submit an Expense request.
 
    ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
 
-8. Right-click region (**New Expense Request**) and select Create Page Item.
+8. Right-click region (**New Expense Request**) and select **Create Page Item**.
 
     - For Name - Enter **P3\_ESTIMATED\_COST**
 
     - For Type - Select Number Field
 
-9. Select the **P3\_EMPNO** page item and enable the primary key under **Source** section and Click **Save** to apply changes.
+9. Select the **P3\_EMPNO** page item and enable the primary key under **Source** section and click **Save** to apply changes.
 
     ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
 
-10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
+10. On the Rendering tab, under Pre-Rendering, right-click **Before Header** and click **Create Process**.
 
     ![Create rendering process1](images/submit-expense-process.png " ")
 
     In the Property Editor, enter the following:
 
-    - For Name - Type **Fetch Employee Details for User**
+    - Name: **Fetch Employee Details for User**
 
-    - For Type - Select Execute code
+    - Type: **Execute code**
 
-    - For PL/SQL Code - Enter the following PL/SQL code:
+    - For PL/SQL Code, Enter the following PL/SQL code:
 
         ```
         <copy>
@@ -383,7 +382,7 @@ Add a page to Submit an Expense request.
         ```
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
-    - For Sequence - Enter 5
+    - Sequence: 5
 
     ![Create rendering process2](images/submit-expense-fetch.png " ")
 
@@ -518,8 +517,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 
 ## **Summary**
-You now know how to create a task definition, Create Page to apply Expense
-and Create Unified Task Lists.
+You now know how to create a task definition, create a page to submit an expense and create Unified Task Lists.
 
 You may now **proceed to the next lab**.   
 
