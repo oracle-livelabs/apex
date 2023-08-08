@@ -2,7 +2,7 @@
 
 ## Introduction
 
-OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items that need attention, such as overgrowth near a power line. Developers can also identify and localise objects in images to automate counting of common items, such as packages and vehicles.
+OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items that need attention, such as anomaly in X-Ray. Developers can also identify and localise objects in images to automate counting of common items, such as packages and vehicles.
 
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyse and index the images uploaded by the user.
 
@@ -27,14 +27,16 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
    ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source, Enter the following attributes:
+    - For Rest Data Source Type : Select ** Oracle Cloud Infrastructure (OCI)**
 
-   - For Rest Data Source Type : Select** Oracle Cloud Infrastructure (OCI)**
-   - For Name : Enter **OCI Vision**
-   - For URL Endpoint : Enter https://vision.aiservice.us-ashburn-1.oci.oraclecloud.com/20220125/actions/analyzeImage
+    - For Name : Enter **OCI Vision**
 
-   *Note: URL Endpoint may differ based on your OCI tenancy*
+    - For URL Endpoint : Enter https://vision.aiservice.us-ashburn-1.oci.oraclecloud.com/20220125/actions/analyzeImage
 
-   Click **Next**.
+*Note: URL Endpoint may differ based on your OCI tenancy. Refer to the below link for more details.
+https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125/*
+
+Click **Next**.
 
    ![Click Timeline](images/create-rest-data.png " ")
 
@@ -44,9 +46,9 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 7. Under Authentication,
 
-   - For Authentication : Enable **Authentication Required**  
+    - For Authentication : Enable **Authentication Required**  
 
-   - For Credentials: Select **apex_ai_cred**
+    - For Credentials: Select **apex\_ai\_cred**
 
 
 8. Click REST Source Manually.
@@ -59,7 +61,6 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
    ![Click Timeline](images/select-oci-vision.png " ")
 
 10. Select Operations Tab and Click Edit icon for the POST operation and Enter the following:
-
     - For Database Operation: Select **-Not Mapped-**
 
     - For Request Body Template: Copy and paste below JSON
@@ -76,8 +77,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
       {
          "featureType": "#FEATURE_TYPE#",
          "maxResults": 5
-      }
-      ]
+         }
+        ]
       }
     <copy>
      ```
@@ -148,9 +149,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    Under Identification:
 
-   - For Name: Enter **P1\_RESPONSE**
+    - For Name: Enter **P1\_RESPONSE**
 
-   - For Type : Select **Hidden**
+    - For Type : Select **Hidden**
 
    ![Click Timeline](images/response-page-item.png " ")
 
@@ -159,13 +160,14 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
    ![Click Timeline](images/processing.png " ")
 
 6. In the Property Editor, Enter the following:
-   Under Identification section:
+
+  Under Identification section:
 
     - For Name : Enter **Analyze Image**
 
     - For Type : Select **Execution Chain**
 
-   Under Settings:
+  Under Settings:
 
     - Enable **Execute in Background**
 
@@ -195,13 +197,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/child-process1.png " ")
 
-6. Click **COMPARTMENT_ID** and Enter the following:
+6. Click **COMPARTMENT\_ID** and Enter the following:
 
    Under Value :
 
-   - For Type: Select **Static Value**
+    - For Type: Select **Static Value**
 
-   - For Value: Enter the Compartment ID.
+    - For Value: Enter the Compartment ID.
 
    *Note: If you are using the root compartment enter the tenancy OCID from the configuration preview file generated during API Key creation.If you are using a different compartment, you can find the corresponding compartment OCID from OCI Console.*
 
@@ -221,9 +223,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    Under Value:
 
-   - For Type: Select SQL Query(Return Single Value)
+    - For Type: Select **SQL Query(Return Single Value)**
 
-   - For SQL Query: Copy and paste it in the SQL Code editor:
+    - For SQL Query: Copy and paste it in the SQL Code editor:
 
    ```
    <copy>
@@ -257,7 +259,8 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    Under Source:
 
-  - For PL/SQL : Copy and paste it in the PL/SQL Code editor:
+    - For PL/SQL : Copy and paste it in the PL/SQL Code editor:
+
   ```
   <copy>
   UPDATE SM_POSTS
@@ -293,19 +296,19 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
 2. In the property editor, Enter the following:
    Under Identification:
 
-   - For Name: Enter **P1\_AI\_SEARCH**
+    - For Name: Enter **P1\_AI\_SEARCH**
 
    Under Label:
 
-   - For Label : Enter **AI Search**
+    - For Label : Enter **AI Search**
 
    Under Settings:
 
-   - Enable Submit when Enter pressed
+    - Enable Submit when Enter pressed
 
    Under Appearance:
 
-   - For Width : Enter **100**
+    - For Width : Enter **100**
 
    ![Click Timeline](images/ai-search-page-item.png " ")
 
