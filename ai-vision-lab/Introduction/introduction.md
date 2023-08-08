@@ -10,6 +10,7 @@ Estimated Time: 1 hour
 
 ### Objectives
 In this workshop, you:
+
 - Configure OCI API keys
 - Leverage OCI vision USING Social media app
 - Integrate OCI vision with Oracle APEX
