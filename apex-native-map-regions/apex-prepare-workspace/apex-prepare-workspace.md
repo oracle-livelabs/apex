@@ -4,11 +4,7 @@
 
 In this lab you will create a new APEX workspace and import an APEX application as a starting point for learning how to leverage the APEX Native Map Region against geospatial data.
 
-Estimated Time: 10 minutes.
-
-<!-- Watch the video below for a quick walk through of the lab. -->
-
-<!-- update video link. Previous iteration: [](youtube:XnE1yw2k5IU) -->
+Estimated Time: 10 minutes
 
 ### Objectives
 Learn how to:
@@ -19,6 +15,10 @@ Learn how to:
 This lab assumes:
 - You have already finished all prior labs
 - You have ORDS running so you can open APEX
+
+Watch the video below for a quick walk through of the lab.
+
+[Prepare APEX workspace](videohub:1_bt8ykjd7)
 
 ## Task 1: Login and create APEX workspace
 
@@ -69,8 +69,9 @@ This lab assumes:
 1. In the upper right corner, click the ADMIN icon and then click Sign out.
     ![sign out from admin](images/apex-admin-logout.png)
 
+
 2.  Log back in as the **admin** user  you just created, supplying **WTFC** as the workspace name.
-    ![log back in](images/apex-wtfc-login.png)
+    ![log back in](images/apex-WTFC-login.png)
 
 3. Since this is the first time you'll be using the APEX workspace, you will be prompted to change the password. *Be sure to retain it somewhere safe!*
     ![password change](images/apex-change-admin-password.png)
@@ -97,7 +98,20 @@ This lab assumes:
 
     ![sign out from admin](images/apex-dev-logout.png)
 
-9. You have now completed this lab.
+9. Just one final thing must be configured for APEX Native Map Regions to work properly: We need to inform APEX where to retrieve the standard Oracle base map images. To do that, we need to add the IP address and host name to our configuration's **/etc/hosts** file. Copy this command to a terminal window prompt and then execute it:
+    ```
+    <copy>sudo sh -c 'echo "173.223.146.112 elocation.oracle.com" >> /etc/hosts'</copy>
+    ```
+    You can validate the proper line has been added to /etc/hosts by issuing this command from a terminal window:
+
+    ```
+    <copy>cat /etc/hosts</copy>
+    ```
+    ![Check /etc/hosts configuration](images/post-cat-etc-hosts.png)
+
+10. You have now completed this lab.
+
+You may now **proceed to the next lab.**
 
 ## Learn More
 * [Oracle APEX 23.1: Workspace and Application Administration](https://docs.oracle.com/en/database/oracle/apex/23.1/aeadm/workspace-and-application-administration.html#GUID-853F40E1-F360-4CE9-8DC1-FC111A825D14)
