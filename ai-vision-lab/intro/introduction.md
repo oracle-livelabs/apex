@@ -16,11 +16,12 @@ In this workshop, you will:
 
 ###Prerequisites for Building this App:
 
-- An Oracle Cloud Infrastructure account. If you don't already have an Oracle cloud account, you can signup for a 30-day free trial account. More about it here: https://www.oracle.com/in/cloud/free/
+- An Oracle Cloud Infrastructure account. If you don't have an Oracle cloud account yet, you can signup for a 30-day free trial account. Learn more at: https://www.oracle.com/in/cloud/free/
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services)
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy
+
 If you are using a Free Tier account, then it is likely that you already have all the necessary privileges
 
 
