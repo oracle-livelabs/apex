@@ -66,14 +66,14 @@ To create web credentials in Oracle APEX:
 
     - **Authentication Type**: Oracle Cloud Infrastructure (OCI)
 
-    - **OCI User ID**: <OCID of the Oracle Cloud user Account>. You can find this in the Configuration File Preview generated during API Key creation.
+    - **OCI User ID**: \<OCID of the Oracle Cloud user Account\>. You can find this in the Configuration File Preview generated during API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: <API Key>. Remove the header, footer, and carriage returns.
+    - **OCI Private Key**: \<API Key\>. Remove the header, footer, and carriage returns.
 
-    - **OCI Tenancy ID**: <OCID for the Tenancy>
+    - **OCI Tenancy ID**: \<OCID for the Tenancy\>
 
-    - **OCI Public Key Fingerprint**: <Fingerprint ID>
+    - **OCI Public Key Fingerprint**: \<Fingerprint ID\>
 
    ![Click App Builder](images/web-creds.png " ")
 
