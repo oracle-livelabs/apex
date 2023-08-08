@@ -4,7 +4,7 @@
 
 In this lab, you learn how to configure OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
 
-OCI API keys consist of two parts: a public key and a private key. You use the Console to generate the private/public key pair. You can upload the public key if you already have a key pair.
+OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair. 
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -18,17 +18,17 @@ To Generate API Keys using OCI Console:
 
     ![Profile Menu](images/profile.png " ")
 
-3. In the Resources section at the bottom left, click API Keys and then click Add API Key.
+3. In the Resources section at the bottom left, click **API Keys** and then click **Add API Key**.
 
     ![Add API Key](images/api-keys.png " ")
 
 4. The Add API Key dialog displays. Select **Generate API Key Pair** to create a new key pair.
 
-5. Click Download Private Key and save it to your local device. You do not need to download the public key.
+5. Click **Download Private Key** and save it to your local device. You do not need to download the public key.
 
    *Note: You will use this private key while configuring web credentials in Oracle APEX later in this workshop.*
 
-6. Click Add.
+6. Click **Add**.
 
     ![Profile Menu](images/add-api-key.png " ")
 
@@ -62,18 +62,18 @@ To create web credentials in Oracle APEX:
 
 5. Please enter the following details using the configuration file details you copied before and the API Key.
 
-    - Name: apex_ai_cred
+    - **Name**: apex\_ai\_cred
 
-    - Authentication Type: Oracle Cloud Infrastructure (OCI)
+    - **Authentication Type**: Oracle Cloud Infrastructure (OCI)
 
-    - OCI User ID: OCID of the Oracle Cloud user Account. You can find this in the Configuration File Preview generated during API Key creation.
-    Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaal6p4vtvg6ykzv426wxb4cwvgfrw6ztfpti2elpkali6wj3v23yla**
+    - **OCI User ID**: <OCID of the Oracle Cloud user Account>. You can find this in the Configuration File Preview generated during API Key creation.
+    Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - OCI Private Key: API Key with the header, footer, and carriage returns removed
+    - **OCI Private Key**: <API Key>. Remove the header, footer, and carriage returns.
 
-    - OCI Tenancy ID: OCID for the Tenancy
+    - **OCI Tenancy ID**: <OCID for the Tenancy>
 
-    - OCI Public Key Fingerprint: Fingerprint ID
+    - **OCI Public Key Fingerprint**: <Fingerprint ID>
 
    ![Click App Builder](images/web-creds.png " ")
 
