@@ -46,7 +46,7 @@ Watch the video below for a quick walk through of the lab.
 
 5. Name the workspace 'WTFC' and click Next.
 
-    ![enter WTFC for the workspace name](images/create-WTFC-workspace.png)
+    ![enter WTFC for the workspace name](images/create-wtfc-workspace.png)
 
 6. Set *Re-use existing schema?* to Yes. Click the menu icon next to schema name and select HOL23C from the drop-down list of schemas. Leave the default for space quota and password. Click Next.
 
