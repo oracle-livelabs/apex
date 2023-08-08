@@ -5,6 +5,9 @@ In this lab, you take advantage of the low code development by customizing the S
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_bgxyfanv)
+
 ### Objectives
 
 In this lab, you will:

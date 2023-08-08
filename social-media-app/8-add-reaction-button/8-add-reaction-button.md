@@ -6,6 +6,9 @@ Until now, the Like and Delete buttons are available on the Cards. However, clic
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_9eyiszwb)
+
 ### Objectives
 
 In this lab, you will:

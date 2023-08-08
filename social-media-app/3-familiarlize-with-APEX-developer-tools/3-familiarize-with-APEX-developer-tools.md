@@ -5,6 +5,7 @@ In this lab, you acquaint yourself with the developer tools where the APEX devel
 
 Estimated Time: 5 minutes
 
+
 ### Objectives
 
 In this lab, you will:

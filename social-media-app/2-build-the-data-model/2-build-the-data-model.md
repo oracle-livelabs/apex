@@ -7,6 +7,9 @@ In this lab, you create the database objects required for the app. To do so, you
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_i2wy8qzr)
+
 ### Objectives
 
 In this lab, you will:
