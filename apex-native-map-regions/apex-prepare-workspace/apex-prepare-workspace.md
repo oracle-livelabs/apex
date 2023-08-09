@@ -109,7 +109,8 @@ Watch the video below for a quick walk through of the lab.
     ```
     ![Check /etc/hosts configuration](images/post-cat-etc-hosts.png)
 
-10. You have now completed this lab.
+10. You have completed this lab.
+
 
 You may now **proceed to the next lab.**
 
