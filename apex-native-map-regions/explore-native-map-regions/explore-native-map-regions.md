@@ -21,7 +21,7 @@ This lab assumes you have:
 - Completed all previous labs successfully
 - ORDS still running so that you can open APEX
 
-    > Note: If you have closed ORDS, repeat the steps in Lab 2 to reopen it
+    > **Note:** If you have closed ORDS, repeat the steps in Lab 2 to reopen it
 
 Watch the video below for a quick walk through of the lab.
 [Prepare APEX workspace](videohub:1_afr7ooim)
