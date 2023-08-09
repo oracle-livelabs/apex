@@ -111,6 +111,7 @@ Watch the video below for a quick walk through of the lab.
 
 10. You have completed this lab.
 
+
 You may now **proceed to the next lab.**
 
 ## Learn More

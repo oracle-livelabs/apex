@@ -26,6 +26,9 @@ This lab assumes you have:
 Watch the video below for a quick walk through of the lab.
 [Prepare APEX workspace](videohub:1_afr7ooim)
 
+Watch the video below for a quick walk through of the lab.
+[Prepare APEX workspace](videohub:1_afr7ooim)
+
 ## Task 1: Open sample APEX Native Map Regions application
 
 1. Open Activities -> Google Chrome
