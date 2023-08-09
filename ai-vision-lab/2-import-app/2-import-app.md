@@ -1,10 +1,13 @@
-# Import the Social Media Application:
+# Import the Social Media Application
+
+## Introduction
 
 In this lab, you explore the integration of a Social Media application with OCI AI vision.
 
 You can download the catch up scripts of the Social Media Application [here](files/APEX_Social_Media_HOL_FINAL.zip).
 
-## Task 1: Import the Social Media application
+
+## Task 1: Import the Social Media Application
 
 1. On the Workspace home page, click the **App Builder** icon.
    On the App Builder home page, click **Import**.
@@ -13,8 +16,11 @@ You can download the catch up scripts of the Social Media Application [here](fil
 
 2. The Import dialog displays. Download the Export File of the APEX Social Medial Application and then perform the following steps.
     - Drag and drop, or navigate to the file.
+
     - File Type: Indicate the type of export file to be imported. Select **Application, Page, or Component Export**.
+
     - File Character Set: Verify that the File Character Set is correct.
+
     - Click **Next**.
    The export file is imported.
 
@@ -28,20 +34,23 @@ You can download the catch up scripts of the Social Media Application [here](fil
 
     ![Click Import](images/install-app2.png " ")
 
-5. Install Supporting Objects - This option only appears if the Export includes supporting objects.
-To continue and install supporting objects:
-   - **Install Supporting Objects**: ON
-   - Click **Next**.
+5. Install Supporting Objects - This option only appears if the  Export includes supporting objects.
+
+   To continue and install supporting objects:
+
+     - **Install Supporting Objects**: ON
+
+     - Click **Next**.
 
     ![Click Import](images/install-app1.png " ")
 
-7. Click **Install**.
+6. Click **Install**.
 
     ![Click Import](images/install-app.png " ")
 
    The export is installed.
 
- 8. Click **Edit Application**.
+7. Click **Edit Application**.
 
    ![Click Import](images/edit-app.png " ")
 
