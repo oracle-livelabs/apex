@@ -2,9 +2,10 @@
 
 ## About this Workshop
 
-**Community Contributed Workshop**
 ![Logo](images/zdc-logo.png)
-**Author** - Jim Czuprynski - Oracle ACE Director, Zero Defect Computing, Inc.
+**Community Contributed Workshop**
+
+- **Author:** _Jim Czuprynski - Oracle ACE Director, Zero Defect Computing, Inc._
 
 This LiveLab session focuses on a real-world business problem: how to strategically place battery-electric vehicle (EV) charging stations to conform to federal government guidelines to ensure that at least 40% of the least-advantaged areas of the U.S. State of Wisconsin are guaranteed their share of public funding for rebuilding the nation's electrical infrastructure.
 
