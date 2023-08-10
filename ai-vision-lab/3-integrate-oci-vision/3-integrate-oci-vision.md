@@ -26,17 +26,14 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
    ![Click Timeline](images/rest-method.png " ")
 
-5. Under Create REST Data Source, enter the following attributes:
+5. Under Create REST Data Source, enter the following attributes and Click **Next**.
     - **Rest Data Source Type**: Select ** Oracle Cloud Infrastructure (OCI)**
 
     - **Name**: Enter **OCI Vision**
 
     - **URL Endpoint**: https://vision.aiservice.us-ashburn-1.oci.oraclecloud.com/20220125/actions/analyzeImage
 
-*Note: URL Endpoint may differ based on your OCI tenancy. Refer to the below link for more details.
-https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125/*
-
-Click **Next**.
+    *Note: URL Endpoint may differ based on your OCI tenancy. Refer to the below link for more details*- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
 
    ![Click Timeline](images/create-rest-data.png " ")
 
@@ -66,7 +63,7 @@ Click **Next**.
     - **Request Body Template**: Copy and paste below JSON
 
     ```
-   <copy>
+    <copy>
       {
          "compartmentId": "#COMPARTMENT_ID#",
          "image": {
@@ -74,7 +71,7 @@ Click **Next**.
          "data": "#FILE_DATA#"
        },
       "features": [
-         {
+      {
             "featureType": "#FEATURE_TYPE#",
             "maxResults": 5
          }
@@ -141,7 +138,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/select-timeline.png " ")
 
-3. Right click **Timeline** region under Body and click **Create Page Item**.
+3. Right click **Timeline** region under Rendering Pane and click **Create Page Item**.
 
    ![Click Timeline](images/create-page-item.png " ")
 
@@ -227,13 +224,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - **SQL Query**: Copy and paste the below code in the SQL Code editor:
 
-   ```
-   <copy>
-   select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
-   from SM_posts
-   where ID = :P1_ID;
-   <copy>
-   ```
+      ```
+      <copy>
+      select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
+       from SM_posts
+       where ID = :P1_ID;
+      <copy>
+      ```
 
    ![Click Timeline](images/file-data.png " ")
 
@@ -249,7 +246,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 13. Right click on the **Analyze Image** Process and Select **Add Child Process**.
 
-    ![Click Timeline](images/create-process2.png " ")
+    ![Click Timeline](images/add-child-process1.png " ")
 
 14. In the Property Editor,Enter the following:
 
@@ -257,14 +254,14 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - For **Name** : Parse the Response
 
-   Under Source:
+    Under Source:
 
-    - For **PL/SQL** : Copy and paste the below code in the PL/SQL Code editor:
+    - For **PL/SQL Code** : Copy and paste the below code in the PL/SQL Code editor:
 
-  ```
-  <copy>
-  UPDATE SM_POSTS
-  SET
+    ```
+    <copy>
+    UPDATE SM_POSTS
+    SET
     AI_OUTPUT = (
         SELECT
             LISTAGG(obj_name, ',') WITHIN GROUP(
@@ -276,11 +273,11 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
                 COLUMNS
                     obj_name VARCHAR2 ( 100 ) PATH '$.name[*]'
             )
-    )
-   WHERE
-    ID = :P1_ID;
-   <copy>
-   ```
+      )
+     WHERE
+     ID = :P1_ID;
+     <copy>
+     ```
 
    ![Click Timeline](images/parse-response.png " ")
 
