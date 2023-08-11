@@ -7,6 +7,10 @@
         "filename": "../../intro/intro.md"
       },
       {
+        "title": "Get Started",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      },
+      {
         "title": "Lab 1: Create autonomous instance",
         "filename": "../../create-autonomous/create-autonomous.md"
       },

@@ -34,7 +34,7 @@ To complete this lab, you need to have the following:
 
 2. Add a static substitution string representing the base part of the object storage URL, including the tenancy namespace from earlier.
 
-    >**Note: The URL will follow this structure for Ashburn region: https://objectstorage.us-ashburn-1.oraclecloud.com/n/{tenancy-name}. Similarly, for Pheonix region: <https://objectstorage.us-pheonix-1.oraclecloud.com/n/{tenancy-name}>.**
+    >**Note: The URL will follow this structure for Ashburn region: <https://objectstorage.us-ashburn-1.oraclecloud.com/n/{tenancy-name}>. Similarly, for Pheonix region: <https://objectstorage.us-pheonix-1.oraclecloud.com/n/{tenancy-name}>.**
 
     ![Static Substitution String](images/static-substitution.png " ")
 
