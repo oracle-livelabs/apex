@@ -26,6 +26,7 @@ In this lab, you will:
 
 | # | Module | Est. Time |
 | --- | --- | --- |
+| - |  [Get Started](?lab=cloud-login) | 5 min |
 | 1 | [Create autonomous database](?lab=create-autonomous) | 15 min |
 | 2 | [Create application](?lab=create-application) | 10 min |
 | 3 | [Create REST data source](?lab=create-rest-source) | 10 min |
