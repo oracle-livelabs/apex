@@ -27,10 +27,7 @@ If you are using a Free Tier account, then it is likely that you already have al
 
 *Note: This workshop assumes you are using Oracle APEX 23.1.*
 
-## Learn More - *Useful Links*
-
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+## Acknowledgments
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Co-Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
