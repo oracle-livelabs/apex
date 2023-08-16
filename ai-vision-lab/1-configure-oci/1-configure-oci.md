@@ -6,7 +6,7 @@ In this lab, you learn how to configure OCI API keys. In Oracle Cloud Infrastruc
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair.
 
-## Objectives
+### Objectives
 In this lab, you:
 
 - Generate API Keys using OCI Console
