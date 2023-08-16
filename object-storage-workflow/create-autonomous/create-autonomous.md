@@ -80,7 +80,7 @@ To complete this lab, you need to have the following:
 
     ![View Configuration File](images/configuration-file.png " ")
 
-5. Navigate back to the ATP instance that was created and into **OCW2023-ATP** and then click on **Tools**
+5. Navigate back to the ATP instance that was created and into **OCW2023-ATP** and then click on **Tool Configuration**. Copy the provided link into a new browser tab.
 
     ![Autonomous Databases](images/autonomous-databases.png " ")
 
