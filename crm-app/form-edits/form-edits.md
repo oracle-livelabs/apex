@@ -59,7 +59,7 @@ In the Property Editor (right pane), deselect Layout > Start New Row.
    ![App Builder](images/oppty-toggle-off1.png " ")
 
 
-## **Summary**
+## Summary
 
 You now know how to enhance forms in an APEX application.
 

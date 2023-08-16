@@ -526,7 +526,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
     ![Click create page ](./images/utl-my-requests.png " ")
 
 
-## **Summary**
+## Summary
 You now know how to create a task definition, create a page to submit an expense and create Unified Task Lists.
 
 You may now **proceed to the next lab**.   

@@ -117,7 +117,7 @@ In this lab, you create database objects using SQL Scripts.
 
    ![Users created](./images/users-created.png " ")  
 
-## Summary
+## **Summary**
 
 You now know how to create an application, run a SQL script and add users.
 
