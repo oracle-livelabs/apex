@@ -16,9 +16,11 @@ In this lab, you run the APEX Social Media application and perform AI Search on 
 
     ![Click Timeline](images/add-post.png " ")
 
+ You can see that now the image is posted. Also, click on the information icon to view the AI response.    
+
     ![Click Timeline](images/posted.png " ")
 
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches and displays all the images that contain the corresponding search term. In the following example, the app displays all the images containing a 'Flower'.
+4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches and displays all the images that contain the corresponding search term. In the following example, the app displays all the images containing a 'Sky'.
 
     ![Click Timeline](images/search-result.png " ")
 
