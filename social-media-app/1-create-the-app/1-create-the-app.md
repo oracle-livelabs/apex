@@ -16,6 +16,9 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_a6bi2e62)
+
 ### Objectives
 
 In this lab, you will:

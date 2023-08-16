@@ -1,28 +1,27 @@
-
 # Delegate Expense Request
 
 ## Introduction
 
-In this lab, you add a new column (HR Manager) in the employee details table and insert two new employees (Sophie and Robin) as HR managers. Next, we will update the task definition and add further actions for requesting more information and delegating the request to the potential owner.
+In this lab, you add a new column (HR Manager) in the *EMPLOYEE\_DETAILS* table and insert two new employees (Sophie and Robin) as HR managers. Next, you update the task definition and add further actions for requesting more information and delegating the request to the potential owner.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Update Table Employee Details
+- Update the table definition and insert new data
 - Update Task Definition
 - Add Deadline and Expiration for an Expense Request
 
-## Task 1: Update Table Employee Details
+## Task 1: Update the EMPLOYEE_DETAILS table
 
-1. Navigate to SQL Workshop and click SQL Commands
+1. Navigate to SQL Workshop and click **SQL Commands**.
 
-2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table and Execute the command one by one.
+2. Copy and Paste the commands below into the Script Editor to update the **EMPLOYEE\_DETAILS** table and execute the command one by one.
 
-   Note: The steps to create and populate the table EMPLOYEE\_DETAILS are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.
+   Note: The steps to create and populate the table EMPLOYEE\_DETAILS are shared in Lab 1: TASK 2. Ensure that you have the table created and populated before running the commands below.
 
-   Add a new column HR\_MGR (HR Manager) to the existing Employee table EMPLOYEE\_DETAILS and update the existing Employee records as shown below:
+   Add a new column HR\_MGR (HR Manager) to the existing EMPLOYEE\_DETAILS table and update the existing Employee records as shown below:
     ```
     <copy>
     insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
@@ -39,18 +38,18 @@ In this lab, you will:
 
     ![SQL Commands](./images/sql-commands.png " ")
 
-    NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
+    NOTE: Don't forget to create two new Users, SOPHIE and ROBIN, using the Manage Users And Groups menu option under Workspace Administration as done in Lab 1: Task 3.
 
 ## Task 2: Update Task Definition
 We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
 
-1. Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
+1. Navigate to App Builder, select **Expense Tracker application**. Click Shared Components → Workflows and Automations → Task Definitions and select the **Expense Request Task Definition**.
 
     ![Edit Expense Request](./images/edit-td.png " ")
 
     ![Click Task definition - Expense request](./images/edit-td-name.png " ")
 
-2. Under **Actions** - Edit **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
+2. Under **Actions** - Edit **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**.
 
     Copy the code below and replace it into the code editor:
 
@@ -99,7 +98,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ```
     Click **Apply Changes**
 
-3. **Under Participants** Section - Click Add Row
+3. **Under Participants** section, click **Add Row**.
 
     - For Participant Type - Select Potential Owner
 
@@ -120,7 +119,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
     Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
 
-4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
+4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with more than 1(>1) potential owner(s).
 
     Under **Actions** Section: Click **Add Actions**
 
@@ -174,7 +173,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 ## Task 3: Add Deadline and Expiration for an Expense Request
 Add deadline and expiration events in actions for expense requests.
 
-Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
+Navigate to App Builder, Select **Expense Tracker application**. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
 
 1. Under **Deadline** Section:
 
@@ -198,7 +197,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
     - For Name - Enter **BEFORE\_EXPIRY**
 
-    - For Type - Select Send Email
+    - For Type - Select **Send Email**
 
     - On Event - Select **Before Expire**
 
@@ -222,7 +221,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
 3. Click the **Set Placeholder Values** button beside the email template.
 
-   Add a Column or Value for mentioned Placeholders and Click **Save** to add placeholders.
+   Add a Column or Value for mentioned Placeholders and click **Save** to add placeholders.
 
    | Placeholder|  Column or Value  |
    | --- |  --- |
@@ -249,7 +248,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
     - For Success Message - Enter 'Task Expired Successfully'
 
-    - For Code: Copy the code below and paste it into  the code editor:
+    - For Code: Copy the code below and paste it into the code editor:
 
     ```
     <copy>
@@ -262,7 +261,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
-  Note: In order to expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
+  Note: In order to expire a task manually, create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
 
     ```
     <copy>
@@ -274,7 +273,7 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
-You now know how to update table, add potential owners to delegate and request more information while applying for an request.
+You now know how to update a table, add potential owners to delegate and request more information while applying for a request.
 
 
 ## Acknowledgments

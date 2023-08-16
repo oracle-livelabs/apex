@@ -5,6 +5,8 @@ This next lab is optional, but it would be fun and informative if a user were ab
 
 Estimated Lab Time: 5 minutes
 
+[Add Cast List to Movie Details Page](videohub:1_b96xa2op)
+
 ### Objectives
 In this lab, you will:  
 - Use the Movie Cast REST data source to add Cast Cards the Movie Details page.

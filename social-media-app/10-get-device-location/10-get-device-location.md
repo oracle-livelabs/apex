@@ -5,6 +5,9 @@ In this lab, you will enable the app to get the device location which will be op
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_xrycy2p7)
+
 ### Objectives
 
 In this lab, you will:
@@ -76,7 +79,7 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
     - Copy and paste this expression into HTML Expression box:
       ```
       <copy>
-      &WHO. @ &SINCE.
+      &CREATED_BY. @ &SINCE.
       </copy>
       ```
     ![Page designer](images/tooltip.png)
@@ -204,9 +207,12 @@ In this final task, we create another dynamic action to get the device location 
       - Longitude Item: **P1_LON**
 
       ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
-   
 
-4. Let us see how the Map is displayed in the app. Click **Save and Run**.
+4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
+
+      ![Page Designer](images/value-protected.png)
+
+5. Let us see how the Map is displayed in the app. Click **Save and Run**.
 
    ![App running in the browser](images/run-app.png)
 
@@ -217,4 +223,4 @@ In this final task, we create another dynamic action to get the device location 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, March 2023
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2023
