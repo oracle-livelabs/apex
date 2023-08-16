@@ -27,7 +27,9 @@ If you are using a Free Tier account, then it is likely that you already have al
 
 *Note: This workshop assumes you are using Oracle APEX 23.1.*
 
+
 ## Acknowledgment
+
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
