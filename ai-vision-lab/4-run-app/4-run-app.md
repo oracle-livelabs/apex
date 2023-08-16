@@ -4,6 +4,11 @@
 
 In this lab, you run the APEX Social Media application and perform AI Search on the uploaded images.
 
+## Objectives
+In this lab, you:
+
+- Run the Application
+
 ## Task 1 : Run the Application
 
 1. Login to the application. The username and password is the same as your APEX workspace user credentials.

@@ -6,6 +6,13 @@ OCI Vision can classify images into thousands of categories to simplify common d
 
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyse and index the images uploaded by the user.
 
+## Objectives
+In this lab, you:
+
+- Configure OCI Vision REST API as REST Data Source
+- Invoke the OCI Vision REST Data Source through a Page Process
+- Enhance Timeline Region to include AI Search
+
 ## Task 1: Configure OCI Vision REST API as REST Data Source
 
 In this task, you create a REST Data Source with OCI vision REST API as the endpoint.
