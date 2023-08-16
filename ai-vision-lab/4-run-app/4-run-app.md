@@ -24,7 +24,7 @@ In this lab, you run the APEX Social Media application and perform AI Search on 
 
     ![Click Timeline](images/search-result.png " ")
 
-## **Summary**
+## Summary
 You now know how to post an image and search for images using AI search.
 
 ## Acknowledgments

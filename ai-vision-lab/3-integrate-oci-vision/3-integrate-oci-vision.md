@@ -343,7 +343,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
 4. Click **Save and Run**.
 
 
-## **Summary**
+## Summary
 You now know how to integrate OCI AI Vision into Oracle APEX through a REST API Call.
 
 You may now **proceed to the next lab**.   

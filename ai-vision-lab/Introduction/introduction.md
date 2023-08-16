@@ -8,14 +8,14 @@ In this workshop, you learn how OCI Vision is used to enhance the Oracle APEX So
 
 Estimated Time: 1 hour
 
-### Objectives
+## Objectives
 In this workshop, you:
 
 - Configure OCI API keys
 - Leverage OCI vision USING Social media app
 - Integrate OCI vision with Oracle APEX
 
-### Prerequisites for Building this App:
+## Prerequisites for Building this App:
 
 - An Oracle Cloud Infrastructure account. If you don't already have an Oracle cloud account, you can signup for a 30-day free trial account. More about it here: https://www.oracle.com/in/cloud/free/
 

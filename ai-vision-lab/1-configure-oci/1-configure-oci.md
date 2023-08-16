@@ -4,7 +4,7 @@
 
 In this lab, you learn how to configure OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
 
-OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair. 
+OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -79,7 +79,7 @@ To create web credentials in Oracle APEX:
 
 5. Click Create.
 
-## **Summary**
+## Summary
 
 You now know how to generate API Keys using OCI console. Also, you know how to create web credentials in Oracle APEX.
 

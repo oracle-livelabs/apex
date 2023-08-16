@@ -4,7 +4,7 @@
 
 In this lab, you explore the integration of a Social Media application with OCI AI vision.
 
-You can download the catch up scripts of the Social Media Application [here](files/APEX_Social_Media_HOL_FINAL.zip).
+You can download the catch up scripts of the Social Media Application [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/APEX_Social_Media_HOL_FINAL.zip).
 
 
 ## Task 1: Import the Social Media Application
@@ -103,7 +103,7 @@ To Add a new column to the SM\_POSTS Table:
 
    ![Click Import](images/ai-output-column.png " ")
 
-## **Summary**
+## Summary
 You now know how to import the Oracle APEX application, change the authentication type, and add a new column.
 
 You may now **proceed to the next lab**.   
