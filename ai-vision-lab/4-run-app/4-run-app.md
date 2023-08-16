@@ -4,6 +4,8 @@
 
 In this lab, you run the APEX Social Media application and perform AI Search on the uploaded images.
 
+Estimated Time: 5 Minutes
+
 ### Objectives
 In this lab, you:
 
@@ -32,7 +34,7 @@ In this lab, you:
 ## Summary
 You now know how to post an image and search for images using AI search.
 
-## Acknowledgments
+## Acknowledgment
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023

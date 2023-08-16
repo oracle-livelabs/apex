@@ -6,6 +6,8 @@ OCI Vision can classify images into thousands of categories to simplify common d
 
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyse and index the images uploaded by the user.
 
+Estimated Time: 20 Minutes
+
 ### Objectives
 In this lab, you:
 
@@ -355,7 +357,7 @@ You now know how to integrate OCI AI Vision into Oracle APEX through a REST API 
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgments
+## Acknowledgment
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023

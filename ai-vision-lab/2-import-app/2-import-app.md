@@ -6,6 +6,8 @@ In this lab, you explore the integration of a Social Media application with OCI 
 
 You can download the catch up scripts of the Social Media Application [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/APEX_Social_Media_HOL_FINAL.zip).
 
+Estimated Time: 15 Minutes
+
 ### Objectives
 In this lab, you:
 
@@ -115,7 +117,7 @@ You now know how to import the Oracle APEX application, change the authenticatio
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgments
+## Acknowledgment
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
