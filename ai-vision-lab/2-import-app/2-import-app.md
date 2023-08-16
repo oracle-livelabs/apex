@@ -104,6 +104,7 @@ To Add a new column to the SM\_POSTS Table:
    ![Click Import](images/ai-output-column.png " ")
 
 ## Summary
+
 You now know how to import the Oracle APEX application, change the authentication type, and add a new column.
 
 You may now **proceed to the next lab**.   

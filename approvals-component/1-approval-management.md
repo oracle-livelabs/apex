@@ -13,7 +13,6 @@ In this lab, you will:
 - Create and run SQL Script
 - Add Users
 
-
 ## Task 1: Create an Application
 In this lab, you create a new application named Expense Tracker.
 
@@ -118,8 +117,8 @@ In this lab, you create database objects using SQL Scripts.
 
    ![Users created](./images/users-created.png " ")  
 
+## Summary
 
-## **Summary**
 You now know how to create an application, run a SQL script and add users.
 
 You may now **proceed to the next lab**.   

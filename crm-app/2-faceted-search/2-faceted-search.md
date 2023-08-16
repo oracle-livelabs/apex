@@ -1,5 +1,7 @@
 # Create Faceted Search Page
 
+## Introduction
+
 In this lab, you create a faceted search page that provides an intuitive and user-friendly experience to display and filter Opportunity data. This functionality allows users to easily explore and refine the data by applying various filters, making it convenient to access the specific information they need.
 
 Estimated Time: 10 minutes
@@ -119,12 +121,12 @@ and Select PRODUCT.
 
     ![Actionable Link](images/link-runtime.png " ")
 
-## **Summary**
+## Summary
 
 You now know how to create and edit Faceted Search page.
 
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-     - **Author** - Ankita Beri, Product Manager
-     - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+- **Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

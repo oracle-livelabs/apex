@@ -8,7 +8,6 @@ To begin with, you design a task definition, where you can configure various tas
 
 Estimated Time: 15 minutes
 
-
 ## Task 1: Create a Task Definition
 
 1. In the **App Builder**, navigate to **CRM APP** application  and select **shared components**.
@@ -554,7 +553,7 @@ Add a Unified Task list page to see the submitted activity request list by a req
     ![Click create page ](./images/utl-intiated-by-me.png " ")
 
 
-## **Summary**
+## Summary
 You now know how to create a task definition, Create Page to apply for Activity
 and Create Unified Task Lists.
 

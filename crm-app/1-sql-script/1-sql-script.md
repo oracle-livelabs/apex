@@ -4,7 +4,7 @@
 
 In this lab, you gain hands-on experience in building an APEX application using Quick SQL. Quick SQL offers an efficient approach to rapidly develop the SQL code required for creating simple tables and views within your APEX application.
 
-The script will encompass multiple tables and views, including customer, opportunity, sales representatives, activity, and comments, to construct a comprehensive CRM data model. 
+The script will encompass multiple tables and views, including customer, opportunity, sales representatives, activity, and comments, to construct a comprehensive CRM data model.
 By utilizing this feature, you can swiftly establish the essential database structure to support the CRM functionalities, making the process of creating the CRM data model a seamless and time-effective endeavor.
 
 Estimated Time: 10 minutes
@@ -173,12 +173,12 @@ In this lab, you will:
 
 
 
-## **Summary**
+## Summary
 
 You now know how to utilize the Create Application wizard directly from SQL Scripts to create the first cut of your application.
 
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-   - **Author** - Ankita Beri, Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+- **Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

@@ -1,5 +1,7 @@
 # Improve the Form
 
+## Introduction
+
 In this lab, you enhance the **Customer** and **Opportunity** forms to make it more user friendly for the sales person to maintain the customer and opportunity data.
 
 To do this, you make use of the developer toolbar and page designer.
@@ -9,7 +11,7 @@ Estimated Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-- Enhance Customer and Opportunity Form 
+- Enhance Customer and Opportunity Form
 
 ## Task 1: Enhancing the Customer Form
 

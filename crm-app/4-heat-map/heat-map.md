@@ -59,7 +59,7 @@ Estimated Time: 5 minutes
 
    ![App Builder](images/map-distance.png " ")
 
-## **Summary**
+## Summary
 
 You now know how to create a heat map.
 

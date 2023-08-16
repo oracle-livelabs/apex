@@ -173,7 +173,7 @@ view DM_salesrep_customer_oppty_activity_notes DM_customer DM_oppty DM_activity 
 
 
 
-## **Summary**
+## Summary
 
 You now know how to utilize the Create Application wizard directly from SQL Scripts to create the first cut of your application.
 
