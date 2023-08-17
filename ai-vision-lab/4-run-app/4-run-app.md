@@ -4,6 +4,8 @@
 
 In this lab, you run the APEX Social Media application and perform AI Search on the uploaded images.
 
+Estimated Time: 5 Minutes
+
 ### Objectives
 In this lab, you:
 
