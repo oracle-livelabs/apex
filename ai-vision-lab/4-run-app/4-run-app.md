@@ -34,7 +34,7 @@ In this lab, you:
 ## Summary
 You now know how to post an image and search for images using AI search.
 
-## Acknowledgment
+## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023

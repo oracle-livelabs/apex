@@ -117,7 +117,7 @@ You now know how to import the Oracle APEX application, change the authenticatio
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgment
+## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager

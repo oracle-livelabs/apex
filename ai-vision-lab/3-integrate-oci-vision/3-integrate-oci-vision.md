@@ -357,7 +357,7 @@ You now know how to integrate OCI AI Vision into Oracle APEX through a REST API 
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgment
+## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023

@@ -93,7 +93,7 @@ You now know how to generate API Keys using OCI console. Also, you know how to c
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgment
+## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
