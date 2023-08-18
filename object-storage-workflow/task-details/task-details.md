@@ -24,7 +24,7 @@ To complete this lab, you need to have the following:
 
 ## Task 1: Task Details
 
-1. In line 31 of the code, there is a substitution string called "G\_BASE\_URL". An application definition needs to be created for it. To accomplish this, navigate to the **Application Definition** section.
+1. In the code, there is a substitution string called "G\_BASE\_URL". An application definition needs to be created for it. To accomplish this, navigate to the **Application Definition** section.
 
     >**Note: Instead of hard coding the value, it is recommended to create a substitution variable for "G\_BASE\_URL" since it will be reused later. This will ensure easier management and flexibility.**
 
@@ -103,7 +103,7 @@ To complete this lab, you need to have the following:
 
     ![Modify Page Item Source](images/modify-query-source.png " ")
 
-11. Next, navigate back to the object store classic report that was just created and add a post-processing query.
+11. Next, navigate back to the object storage classic report that was just created and add a post-processing query.
 
     ![Classic Report Changes](images/classic-report-changes-1.png " ")
 

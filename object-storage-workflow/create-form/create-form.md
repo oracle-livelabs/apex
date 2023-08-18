@@ -13,7 +13,7 @@ Estimated Time: 5 minutes
 In this lab, you will:
 
 - Create APEX form page
-- ALter page details
+- Alter page details
 - Create link between pages
 
 ### Prerequisites
