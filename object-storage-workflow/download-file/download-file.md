@@ -110,7 +110,9 @@ To complete this lab, you need to have the following:
 
     ![Set Link Icon](images/set-link-icon.png " ")
 
-4. Finally, it's time to perform a comprehensive test. The application should be accessed by logging in with the user **Lucille** to view the original task that was created for uploading to object storage earlier.
+4. Finally, it's time to perform a comprehensive test. Log into the application with 'APEX_USER' and upload a new project file, as done before. Then access the application by logging in with the user **Lucille** to view this task that was just created.
+
+    >**Note: You may also see the previously uploaded file in a previous task that was used for testing.**
 
     ![Login Lucille](images/final-test-1.png " ")
 

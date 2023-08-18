@@ -41,6 +41,10 @@ In this lab, you will:
 - [Click here](?lab=1-sign-up-apex) or select **Getting Started** from the menu on the left to start the workshop and set up an Oracle APEX workspace.
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
 
+### **Sample Files**
+
+- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jyHA4nclWcTaekNIdpKPq3u2gsLb00v_1mmRKDIuOEsp--D6GJWS_tMrqGmb85R2/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
+
 ## Learn More
 
 - [Oracle APEX](https://apex.oracle.com/en/)
