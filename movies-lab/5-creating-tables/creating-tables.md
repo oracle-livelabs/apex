@@ -6,7 +6,7 @@ Up to this point, most of the work has revolved around implementing REST data so
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create Users and Watchlist Tables](videohub:1_u9hl1p4v)
+[Create Users and Watchlist Tables](videohub:1_rrs5gczn)
 
 ### Objectives
 In this lab, you will:  
@@ -202,7 +202,7 @@ You will need a table to store some basic movie information in addition to the u
 
 You now know how to use Quick SQL to define new tables, and create application items and processes to store information and at specific points in your app. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 
@@ -211,7 +211,7 @@ You now know how to use Quick SQL to define new tables, and create application i
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 5 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab-5.sql) to download a copy of the app at the end of Lab 5.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-5-231.sql) to download a copy of the app at the end of Lab 5.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -239,4 +239,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023

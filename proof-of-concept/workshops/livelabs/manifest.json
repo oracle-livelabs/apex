@@ -4,16 +4,11 @@
 	"tutorials": [
     {
         "title": "Getting Started",
-        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
     },
     {
       "title": "Introduction",
       "filename": "../../intro/intro.md"
-    },
-    {
-        "title": "Create an APEX Workspace",
-        "filename": "../../../common/create-apex-workspace/create-apex-workspace.md",
-        "type": "livelabs"
     },
     {
       "title": "Lab 1: Defining New Data Structures",

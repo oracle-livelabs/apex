@@ -5,6 +5,8 @@ There are a few more additions you can make to your app to really pull it all to
 
 Estimated Lab Time: 5 minutes
 
+[Improve the UI](videohub:1_kam4afxs)
+
 ### Objectives
 In this lab, you will:  
 - Add a Get Started region to the My Watchlist page.  
@@ -138,7 +140,7 @@ You can put a couple finishing touches on your app UI by modifying the Applicati
 
 You have now completed your Movies Watchlist application and can search for movies and add them to your watchlist. However, there are many ways to continue to add functionality to and customize your application. You can check out the Resources section in this lab to learn about different ways you can enhance your app, including components that you can implement and API requests you can make to get additional data.
 
-## Resources
+## Learn More
 - [Universal Theme Components](https://apex.oracle.com/pls/apex/apex_pm/r/ut/components)  
 
 - [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)  
@@ -146,7 +148,7 @@ You have now completed your Movies Watchlist application and can search for movi
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab-9.sql) to download a copy of the completed app.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-9-231.sql) to download a copy of the completed app.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -174,4 +176,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023

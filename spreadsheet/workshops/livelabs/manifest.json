@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Building an App from a Spreadsheet using Oracle APEX",
+  "workshoptitle": "Converting your Spreadsheet into a Cloud App using Oracle APEX",
   "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
     {
@@ -13,7 +13,7 @@
     },
     {
       "title": "Sign Up for an APEX Workspace",
-      "filename": "../../../common/1-sign-up-apex/create-adb-livelabs.md"
+      "filename": "../../../common-latest/1-sign-up-apex/create-adb-livelabs.md"
     },
     {
       "title": "Lab 1: Create an App from a Spreadsheet",
