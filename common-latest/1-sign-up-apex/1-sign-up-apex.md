@@ -43,7 +43,7 @@ For conducting labs in this workshop, either service can be utilized.
 
 Click one of the options below to proceed.
 
-## **Option 1**: APEX Service
+## Option 1: APEX Service
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
 In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
@@ -122,7 +122,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
   ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
 
-## **Option 2**: Autonomous Database in Oracle Cloud
+## Option 2: Autonomous Database in Oracle Cloud
 
   In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous Transaction Processing* database. The final step in the process is to provision Oracle APEX.
 
@@ -217,7 +217,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
       ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
 
-## **Option 3**: apex.oracle.com
+## Option 3: apex.oracle.com
 Signing up for apex.oracle.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
 
 1. Go to [https://apex.oracle.com](https://apex.oracle.com.).
@@ -252,7 +252,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
     ![APEX Builder homepage](images/apex-builder.png " ")
 
 
-## **Summary**
+## Summary
 
 At this point, you know how to create an APEX Workspace and you are ready to start building amazing apps, fast.
 
