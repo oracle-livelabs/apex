@@ -26,7 +26,7 @@ In this lab, you will:
 
 | # | Module | Est. Time |
 | --- | --- | --- |
-| - | [Getting Started](?lab=1-sign-up-apex) | 5 min |
+| - |  [Get Started](?lab=cloud-login) | 5 min |
 | 1 | [Create autonomous database](?lab=create-autonomous) | 15 min |
 | 2 | [Create application](?lab=create-application) | 10 min |
 | 3 | [Create REST data source](?lab=create-rest-source) | 10 min |
@@ -40,6 +40,10 @@ In this lab, you will:
 
 - [Click here](?lab=1-sign-up-apex) or select **Getting Started** from the menu on the left to start the workshop and set up an Oracle APEX workspace.
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
+
+### **Sample Files**
+
+- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jyHA4nclWcTaekNIdpKPq3u2gsLb00v_1mmRKDIuOEsp--D6GJWS_tMrqGmb85R2/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
 
 ## Learn More
 
