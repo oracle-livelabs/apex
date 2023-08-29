@@ -30,54 +30,54 @@ In this lab, you will:
    <copy>
    #apex: true, auditcols: true
 DM_customer
- customername vc50 /nn
- address vc50 /nn
- city vc50 /nn
- state vc8 /nn
- zip num /nn
- primarycontact vc50 /nn
- email vc50
- phone num
- latitude num
- longitude num
- salesrep vc30
- DM_oppty /references DM_customer
-     product vc30 /nn
-     value num
-     is_qualfied_yn /check Y, N
-     probability num
-     status vc30 /nn /values SUSPECT, PROSPECT, CUSTOMER
-     type vc30 /nn /values HOT, WARM, COLD, DEAD
-     term vc30 /nn /values MEDIUM TERM, SHORT TERM, LONG TERM
-     stage vc30 /nn /values QUALIFY, DEVELOP, PROPOSE, CLOSE
-     close_date
-     description
-     profile
-     DM_activity /references DM_oppty
-         activity vc30 /nn /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
-         is_complete_yn /check Y, N
-         completed_date
-         description
-     DM_COMMENTS /references DM_oppty
-        note vc4000 /nn
+    customername vc50 /nn
+    address vc50 /nn
+    city vc50 /nn
+    state vc8 /nn
+    zip num /nn
+    primarycontact vc50 /nn
+    email vc50
+    phone num
+    latitude num
+    longitude num
+    salesrep vc30
+    DM_oppty /references DM_customer
+        product vc30 /nn
+        value num
+        is_qualfied_yn /check Y, N
+        probability num
+        status vc30 /nn /values SUSPECT, PROSPECT, CUSTOMER
+        type vc30 /nn /values HOT, WARM, COLD, DEAD
+        term vc30 /nn /values MEDIUM TERM, SHORT TERM, LONG TERM
+        stage vc30 /nn /values QUALIFY, DEVELOP, PROPOSE, CLOSE
+        close_date
+        description
+        profile
+        DM_activity /references DM_oppty
+            activity vc30 /nn /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
+            is_complete_yn /check Y, N
+            completed_date
+            description
+        DM_COMMENTS /references DM_oppty
+           note vc4000 /nn
 
 DM_STATUS_LOOKUP /insert 3
- status vc30 /values SUSPECT, PROSPECT, CUSTOMER
+    status vc30 /values SUSPECT, PROSPECT, CUSTOMER
 DM_TYPE_LOOKUP /insert 4
- type vc30 /values HOT, WARM, COLD, DEAD
+    type vc30 /values HOT, WARM, COLD, DEAD
 DM_TERM_LOOKUP /insert 3
- term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
+    term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
 DM_STAGE_LOOKUP /insert 4
- stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
+    stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
 DM_ACTIVITY_LOOKUP /insert 5
- activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
+    activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
 DM_PRODUCT_LOOKUP /insert 8
- product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
+    product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
 DM_salesrep
- salesrep vc50
- salesrep_phone vc50
- salesrep_email vc50
- photo file
+    salesrep vc50
+    salesrep_phone vc50
+    salesrep_email vc50
+    photo file
 
 view DM_customer_oppty DM_customer DM_oppty
 view DM_oppty_COMMENTS DM_oppty DM_COMMENTS
