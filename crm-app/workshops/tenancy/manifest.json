@@ -15,23 +15,23 @@
       },
       {
         "title": "Lab 2: Improve the Form",
-        "filename": "../../form-edits/form-edits.md"
+        "filename": "../../2-form-edits/2-form-edits.md"
       },
       {
         "title": "Lab 3: Create Faceted Search Page",
-        "filename": "../../2-faceted-search/2-faceted-search.md"
+        "filename": "../../3-faceted-search/3-faceted-search.md"
       },
       {
         "title": "Lab 4: Create Search Configurations",
-        "filename": "../../3-global-search/3-global-search.md"
+        "filename": "../../4-global-search/4-global-search.md"
       },
       {
         "title": "Lab 5: Create an Opportunity Heat Map",
-        "filename": "../../4-heat-map/heat-map.md"
+        "filename": "../../5-heat-map/4-heat-map.md"
       },
       {
-        "title": "Lab 6: Approvals Component ",
-        "filename": "../../approvals-component/approvals-component.md"
+        "title": "Lab 6: Implement Human Workflow ",
+        "filename": "../../6-approvals-component/6-approvals-component.md"
       },
 
       {
