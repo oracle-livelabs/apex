@@ -208,6 +208,6 @@ You now know how to create a dashboard using create page wizard
 You may now **proceed to the next lab**.
 
 ## Acknowledgments
-- **Author** - Ankita Beri, Product Manager
-- **Contributor** -
+- **Author** - Tom Edwards - Director of Application Development Business Development, Ankita Beri - Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023

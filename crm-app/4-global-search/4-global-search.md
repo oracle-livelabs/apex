@@ -62,7 +62,7 @@ Click Next.
 
      ![Shared Component](images/sc-link.png " ")
 
-## Task 1: Create a Search Page
+## Task 2: Create a Search Page
 In this task, you create a search page by running the Create Page Wizard.
 
 1. Click Application n/

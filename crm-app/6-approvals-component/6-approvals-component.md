@@ -282,7 +282,7 @@ Estimated Time: 15 minutes
      ![Task Definition - Update Status](images/on-expiry.png " ")        
 
 
-## Task 2: Create a Page to Submit an Activity
+## Task 3: Create a Page to Submit an Activity
 Add a page to Submit an Expense request.
 
 1. Click **Application ID**, Application home page appears.
@@ -545,7 +545,7 @@ Add a page to Submit an Expense request.
 
 21. Click **Save**.
 
-## Task 3: Create Unified Task Lists
+## Task 4: Create Unified Task Lists
 Add a Unified Task list page to see the submitted activity request list by a requestor and the Completed list by the sale Representative.
 
 1. Select Create (+) on the toolbar in the Page Designer and then Click **Page** to create a Unified Task List page.
@@ -586,12 +586,11 @@ Add a Unified Task list page to see the submitted activity request list by a req
 
 
 ## Summary
-You now know how to create a task definition, Create Page to apply for Activity
-and Create Unified Task Lists.
+You now know how to create a task definition, Create Page to apply for Activity and Create Unified Task Lists.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgments
-- **Author** - Ankita Beri, Product Manager
-- **Contributor** -
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2023
+- **Author** - Tom Edwards - Director of Application Development Business Development, Ankita Beri - Product Manager
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
