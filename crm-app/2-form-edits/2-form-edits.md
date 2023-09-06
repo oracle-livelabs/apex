@@ -66,5 +66,5 @@ You now know how to enhance forms in an APEX application.
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-- **Author** - Ankita Beri, Product Manager
+- **Author** - Tom Edwards - Director of Application Development Business Development, Ankita Beri - Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2023

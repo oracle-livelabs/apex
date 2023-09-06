@@ -63,19 +63,19 @@ In this lab, you will:
     DM_COMMENTS /references DM_oppty
         note vc4000 /nn
 
-  DM_STATUS_LOOKUP /insert 3
+    DM_STATUS_LOOKUP /insert 3
      status vc30 /values SUSPECT, PROSPECT, CUSTOMER
-  DM_TYPE_LOOKUP /insert 4
+    DM_TYPE_LOOKUP /insert 4
      type vc30 /values HOT, WARM, COLD, DEAD
-  DM_TERM_LOOKUP /insert 3
+    DM_TERM_LOOKUP /insert 3
      term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
-  DM_STAGE_LOOKUP /insert 4
+    DM_STAGE_LOOKUP /insert 4
      stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
-  DM_ACTIVITY_LOOKUP /insert 5
+    DM_ACTIVITY_LOOKUP /insert 5
      activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
-  DM_PRODUCT_LOOKUP /insert 8
+    DM_PRODUCT_LOOKUP /insert 8
      product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
-  DM_salesrep
+   DM_salesrep
      salesrep vc50
      salesrep_phone vc50
      salesrep_email vc50
@@ -175,10 +175,6 @@ In this lab, you will:
  [**activity.csv**](files/activity.csv)
  [**comments.csv**](files/comments.csv)
 
-
-
-
-
 ## Summary
 
 You now know how to utilize the Create Application wizard directly from SQL Scripts to create the first cut of your application.
@@ -186,5 +182,6 @@ You now know how to utilize the Create Application wizard directly from SQL Scri
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-- **Author** - Ankita Beri, Product Manager
+- **Author** - Tom Edwards - Director of Application Development Business Development, Ankita Beri - Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
