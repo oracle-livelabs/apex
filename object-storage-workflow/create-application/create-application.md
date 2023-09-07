@@ -105,7 +105,7 @@ To complete this lab, you need to have the following:
 
     ![Task Definition Created](images/task-created.png " ")
 
-5. Scroll down to add a new **Participant** For the Potential Owner, enter a **SQL Query** with a value as shown.
+5. Scroll down to add a new **Participant** For the Potential Owner, enter a **SQL Query** with a value as shown. This query will assign the newly created task to the project lead found in the EBA\_PROJECTS table.
 
     ```SQL
      <copy>
@@ -117,7 +117,7 @@ To complete this lab, you need to have the following:
 
     ![Potential Owner Value](images/add-task-participant-2.png " ")
 
-6. Additionally, a parameter can be added to the task to store the name of the file that has been uploaded by the user to the object storage upon creation. Once complete **Apply Changes** and return to the OCI console.
+6. An additional parameter can be added to the task to store the name of the file that has been uploaded by the user to the object storage bucket. Once complete **Apply Changes** and return to the OCI console.
 
     ![Add Task Parameter](images/add-parameter.png " ")
 
