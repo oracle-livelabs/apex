@@ -6,7 +6,7 @@ Up to this point, most of the work has revolved around implementing REST data so
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create Users and Watchlist Tables](videohub:1_u9hl1p4v)
+[Create Users and Watchlist Tables](videohub:1_rrs5gczn)
 
 ### Objectives
 In this lab, you will:  

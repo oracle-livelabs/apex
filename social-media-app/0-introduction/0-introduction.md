@@ -10,6 +10,9 @@ Although the end result is a simple app to get started, you can continue to expa
 
 Estimated Workshop Time: 60 minutes
 
+Watch the video below for a quick walk-through of the workshop.
+[Create an APEX App](videohub:1_zeopb0u9)
+
 ### Objectives
 
 * Obtain a FREE Oracle APEX workspace
