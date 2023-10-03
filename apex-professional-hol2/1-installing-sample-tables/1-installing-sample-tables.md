@@ -49,4 +49,4 @@ You now know how to install sample tables and views from Sample Datasets. You ma
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

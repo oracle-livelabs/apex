@@ -16,7 +16,7 @@ Estimated Time: 5 minutes
 
     ![](images/create-a-new-app.png " ")
 
-3.  Click **From a File**.
+3.  Click **Create App From a File**.
 
     ![](images/from-a-file.png " ")
 
@@ -49,18 +49,15 @@ The Data Load wizard has created a new table and populated that table with the r
 
 [//]: # (Remove Steps 2 and 3)
 2. In the Object Browser, review the table structure.   
-    In the Table toolbar, click **Create App**.
+    In the Table toolbar, click **More** then Click **Create App**.
 
-    ![](images/object-browser.png " ")
+    ![](images/object-browser4.png " ")
 
-3. On the Create Application page, click **Create App**.
-
-2. In the Create Application page, review the pages listed. Click the **Edit** button for a page to review more details.
+3. In the Create Application page, review the pages listed. Click the **Edit** button for a page to review more details.
 
     Click **Check All** for Features, and then click **Create Application**.
 
     ![](images/name-for-application.png " ")
-    ![](images/create-application.png " ")
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
@@ -68,7 +65,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
 1.  Click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
-    ![](images/run-application.png " ")
+    ![](images/run-application4.png " ")
 
 2.  Enter your user credentials and click **Sign In**.
 
@@ -89,6 +86,5 @@ You now know how to create an application from a spreadsheet by either dragging 
 
 ## **Acknowledgements**
 
- - **Author** -  Salim Hlayel, Principal Product Manager 
- - **Last Updated By/Date** - Salim Hlayel, Principal Product Manager, November 2020
-
+ - **Author** -  Salim Hlayel, Principal Product Manager
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

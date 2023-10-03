@@ -9,6 +9,7 @@ Estimated Time: 15 minutes
 ### Objectives
 
 - Create database objects using Quick SQL
+- Load data using Data Generator
 - Load data using Data Workshop page.
 
 ## Task 1: Create database objects using Quick SQL
@@ -39,52 +40,77 @@ Estimated Time: 15 minutes
 
 3. Review the shorthand code. How many tables will be created and how are they related? What types of columns and constraints will be created for the tables? Note that the **Help** button provides details on the shorthand syntax along with several examples of its usage.
 
-    When ready, in the Quick SQL (left pane) toolbar, click **Generate SQL**.
+    When ready, in the Quick SQL (left pane) toolbar, click **Review and Run**.
 
    ![Generate SQL1](./images/generate-sql1.png " ")
 
-4. Review the SQL that is generated in the right-hand pane, then click **Settings** to make some changes to the resulting code.
+4. Review the SQL that is generated in the right-hand pane, then for Script Name enter **Employee Department Details**, and click **Run**.  
 
-   It is important to save the SQL Shorthand as a script so that it can be run in your database.
-   In the SQL (right pane) toolbar, click **Save SQL Script**.  
+   ![Generated SQL1](images/save-sql-scripts1.png " ")
 
-   ![Generated SQL1](images/generated-sql1.png " ")
-
-5. In the Save Script dialog, for Script Name enter **Employee Department Details**, and click **Save Script**.
-
-    ![Save SQL Script1](images/save-sql-scripts1.png " ")
-
-6. Now that you saved the script you can run it to create the specified database objects.
-
-    In the SQL (right pane) toolbar, click **Review and Run**.
-
-    ![Review and Run Quick SQL](images/review-and-run1.png " ")
-
-7.  In the Script Editor page toolbar, click **Run**.
-
-    ![Run Script1](images/running-scripts1.png " ")
-
-8. On the Run Script page, click **Run Now**.
+5. On the Run Script page, click **Run Now**.
 
     ![Run Now](images/run-now1.png " ")
 
-9. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
+6. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 
     ![SQL Script Results](images/results.png " ")
 
-10. To view the database objects that were created, click the arrow  **'⌄'** in the **SQL Workshop** tab and then select **Object Browser**.
+7. To view the database objects that were created, click the arrow  **'⌄'** in the **SQL Workshop** tab and then select **Object Browser**.
 
-    ![Select Object Browser1](images/navigate-to-object-browser1.png " ")
+    ![Select Object Browser1](images/navigate-to-object-browser4.png " ")
 
-11. Select the **EMPLOYEES** table and review its columns.
+8. Select the **EMPLOYEES** table and then Click the **Data** tab to see the data that was loaded.
 
     ![Select Departments table](images/select-departments-table.png " ")
 
-12. Click the **Data** tab to see the data that was loaded.
+## Task 2: Load data using the Data Generator
 
-    ![View department table](images/view-departments-table-data1.png " ")
+In this task, you learn to Use the Data Generator utility to create Blueprints and generate sample data in the Employee table.
 
-## Task 2: Load data using the Data Workshop Utility
+1. On the Workspace home page, click SQL Workshop, Select Utilities and then Click Data Generator.
+
+    ![Select Data generator](images/select-data-generator.png " ")
+
+2. On the Data Generator home page, click the Create Blueprint button
+
+    ![Create Blueprint](images/create-blueprint.png " ")
+
+3. Click Use Existing Tables.
+
+    ![Click Use Existing Tables](images/use-existing-tables.png " ")
+
+4. Under Select from list tab , Choose an existing table in your workspace schema to base the blueprint on.
+
+    - For Blueprint Name - **Emp_Details**.
+
+    - For List of tables -  Check **Employees**  
+
+    ![Check Table Employee](images/check-table-employee.png " ")
+
+5. Click **Create Blueprint**.
+
+6. Click **Preview Data** to preview data for the Employee table and columns.
+
+    ![Click Preview Data](images/click-preview-data.png " ")
+
+7. Click **Generate Data**.    
+
+    ![Click Generate Data](images/click-generate-data.png " ")
+
+8. In Generate Blueprint Data dialog, for Action Select **Insert into Database** and click **Insert Data**.
+
+    ![Insert Data](images/insert-data.png " ")
+
+9. To see newly generated data in the Employees table, close the Generate Blueprint dialog and, navigate to **SQL workshop** and Select **Object browser**.    
+
+    ![Object browser](images/object-browser6.png " ")
+
+10. Select **Data** tab under Employees table, 50 new rows are added in the employees table.    
+
+    ![Employees data](images/employees-data.png " ")
+
+## Task 3: Load data using the Data Workshop Utility
 
 In this step, you will learn how to create a table and Load data using the Data Workshop utility.
 
@@ -128,4 +154,4 @@ This completes the Lab. At this point, you know how to use Quick SQL to generate
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Product Manager
 * **Contributors** - Ankita Beri, Product Manager
-* **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+* **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
