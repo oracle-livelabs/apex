@@ -6,6 +6,9 @@ In this lab, you learn to create the CARDS region to display the posts and confi
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_cmdi0d57)
+
 ### Objectives
 
 In this lab, you will:

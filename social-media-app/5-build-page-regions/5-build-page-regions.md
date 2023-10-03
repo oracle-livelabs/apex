@@ -10,6 +10,9 @@ The **CARDS** region will show photos or images in a grid arrangement as they ge
 
 Estimated Time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_myqq59w2)
+
 ### Objectives
 
 In this lab, you will:
@@ -141,7 +144,7 @@ this form visible to the user as a modal form.
 
     ![Rendering tree with page items is displayed](images/post-page-items.png "")
 
-2. Next, click on **Posts** in the rendering tree, so that we have that **Form** region selected. Focus your attention to setting the attributes for the region on the right:
+2. Next, click on **Post** in the rendering tree, so that we have that **Form** region selected. Focus your attention to setting the attributes for the region on the right:
 
     - In the **Region** > **Layout** section, change the **Position**
     to **Dialogs, Drawers and Popups**.
@@ -213,7 +216,7 @@ button!
 
     ![Action options for a dynamic action](images/da-action.png)
 
-    -  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Posts**.
+    -  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Post**.
 
     ![Affected elements in property editor](images/affected-elements.png)
 
@@ -300,11 +303,11 @@ page with a process for the Form:
 
 2.  Right-click on the **Processing** entry and choose **Create Process**.
 
-3.  Set the **Form Region** to the **Post** region.
+3.  Update the **Identification > Name** to be **Insert Post**.
 
-4.  Update the **Identification > Name** to be **Insert Post**.
+4.  Change the **Type** to be **Form - Automatic Row Processing(DML)**
 
-5.  Change the **Type** to be **Form - Automatic Row Processing(DML)**
+5.  Set the **Form Region** to the **Post** region.
 
 6.  Set the **Success Message > Success Message** to be **Posted!**
 
