@@ -17,7 +17,7 @@ Estimated Time: 10 minutes
 
     ![Create Application](images/create-app1.png " ")
 
-3.  Click **From a File**.
+3.  Select **Create App From a File**.
 
     ![Create application from a file](images/from-a-file1.png " ")
 
@@ -33,7 +33,7 @@ Estimated Time: 10 minutes
 
 6.  Review the parsed data. Enter **DEMO_PROJECTS** for Table Name and Click **Load Data**.
 
-    ![Select Demo_projects table](images/new-table-name.png " ")
+    ![Select Demo_projects table](images/new-table-name1.png " ")
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 
@@ -49,7 +49,7 @@ The Data Load wizard has created a new table and populated that table with the r
     - Demo Projects Search  
     - Demo Projects Report  
     - Calendar
-   
+
    On the Create Application page, Click on **Edit** button next to **Demo Projects Search**.
 
     ![Edit Demo Projects Search](images/delete-pages.png " ")
@@ -68,7 +68,47 @@ The Data Load wizard has created a new table and populated that table with the r
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
-## Task 3: Configure Progressive Web App Attributes
+## Task 3: Loading an Application Blueprint  
+
+In this task, you learn to load Demo Projects application Blueprint. You can Load an application blueprint by running the Create Application Wizard and clicking the Load Blueprint link at the top of the Create Application Wizard.
+
+1. First, you delete Demo Projects application. Select **Demo Projects** application on workspace homepage.
+
+    ![Select Demo demo projects](images/demo-projects.png " ")
+
+2. Click **Edit Application Definition**
+
+    ![Edit Application Definition](images/edit-app-definition.png " ")
+
+3. Click **Delete** to delete the application.
+
+    ![Edit Application Definition](images/delete-demo-projects.png " ")
+
+4. On Confirm Delete dialog, Click **Permanently Delete Now**.
+
+   ![Delete Permanently](images/delete-app.png " ")
+
+5. To restore back the application using Blueprint, Click **Create** on Workspace homepage.
+
+    ![Click Create](images/blueprint-create.png " ")
+
+6. Select **Use Create App Wizard**.
+
+    ![Click Use create App wizard](images/blueprint-create-app-wizard.png " ")
+
+7. At the top of the page, Click **Load Blueprint**.
+
+    ![Click Load Blueprint](images/load-blueprint.png " ")
+
+8. Select Demo Projects **Load** to load a new Blueprint.
+
+   ![Click Load ](images/load-blueprint-button.png " ")
+
+9. Click **Create Application**.
+
+    ![Click Create Application ](images/create-demo-projects.png " ")
+
+## Task 4: Configure Progressive Web App Attributes
 
 1. Navigate to the Edit Application Definition page. From the Application home page, you can access the Edit Application Definition page using **Shared Components**.
 
@@ -79,7 +119,7 @@ The Data Load wizard has created a new table and populated that table with the r
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
 
-3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
+3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes** and Click **Apply Changes**.
 
     ![PWA Definition](images/navigate-to-pwa.png " ")
 
@@ -102,6 +142,6 @@ The Data Load wizard has created a new table and populated that table with the r
 You now know how to create an application from a spreadsheet by either dragging and dropping a file or loading sample data for training purposes.
 
 ## Acknowledgements
- - **Author** -  Roopesh Thokala, Product Manager
+ - **Author** -  Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager.
  - **Contributors** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

@@ -15,7 +15,7 @@ Estimated Time: 25 minutes
 * Create an application from Spreadsheet.
 * Configure Progressive Web application.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

@@ -53,7 +53,7 @@ A dashboard page is a great way to show important information using various char
     * Type – select **Sum**
     * Value Column – select **TOTAL_SALES**.
 
-    ![Add Chart1](./images/chart1.png " ")
+    ![Add Chart1](./images/chart11.png " ")
 
 4. Click Chart 2, and enter the following:
 
@@ -64,7 +64,7 @@ A dashboard page is a great way to show important information using various char
     * Type – select **Sum**
     * Value Column – select **TOTAL_SALES**.
 
-    ![Add Chart2](./images/chart2.png " ")
+    ![Add Chart2](./images/chart22.png " ")
 
 5. Click Chart 3, and enter the following:
 
@@ -75,7 +75,7 @@ A dashboard page is a great way to show important information using various char
     * Type – select **Count**
     * Value Column – select **ORDER_ID**.
 
-    ![Add Chart3](./images/chart3.png " ")    
+    ![Add Chart3](./images/chart33.png " ")    
 
 6. Click Chart 4, and enter the following:
 
@@ -86,7 +86,7 @@ A dashboard page is a great way to show important information using various char
     * Type – select **Column Value**
     * Value Column – select **AVG_RATING**.
 
-    ![Add Chart4](./images/chart4.png " ")  
+    ![Add Chart4](./images/chart44.png " ")  
 
 7. Click Advanced and check **Set as Administration Page**.
 
@@ -146,8 +146,6 @@ A dashboard page is a great way to show important information using various char
     - Page Name - enter **Manage Products**
     - Table - select **PRODUCTS**
 
-    ![Add report page](./images/add-report-page.png " ")
-
 <!--
 4. Expand Lookup columns, and enter the following:
 
@@ -162,7 +160,7 @@ A dashboard page is a great way to show important information using various char
 
 5. Click **Add Page**.
 
-  ![Add page](./images/add-page1.png " ")
+  ![Add page](./images/add-report-page.png " ")
 
 ## Task 7: Set Features
 
@@ -183,7 +181,7 @@ Now that you have added all the pages, it is time to generate the app and review
 2. Once the application is created, you will find the new app on the application home page.
 Click **Run Application**.
 
-    ![Run application](./images/run-application.png " ")
+    ![Run application](./images/run-application11.png " ")
 
 ## Task 9: Run the Application
 
@@ -199,6 +197,6 @@ You now know how to create an application with a number of different page types 
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
