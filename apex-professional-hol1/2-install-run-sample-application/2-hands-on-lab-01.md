@@ -20,7 +20,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     - The login page appears. Enter the Workspace name, username, and password. Click **Sign In**.  
 
-  ![Workspace Login](images/login-to-workspace2.png " ")
+  ![Workspace Login](images/login-to-workspace.png " ")
 
 2. The **Workspace** home page appears. Click **App Builder**.
 
@@ -58,17 +58,17 @@ This lab covers installing and running a sample application.
 
   ![Install Sample Reporting](images/install-sample-app.png " ")
 
-3. On the Install Application page, click the **Install Application** Button.
+3. On the Install Application page, observe that your app is currently installing.
 
-   ![Install Application](images/install-app.png " ")
+   ![Install Application](images/installing-sample-app.png " ")
 
-4. You can now see that the application is installed. Run the application by selecting **Run Application**.
-
+4. You can now see that the application is installed. Run the application by selecting **Run Application** Button.
+x
    ![Run Application](images/click-run-application.png " ")
 
 5. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
 
-   ![Sign In Sample App](images/run-application1.png " ")
+   ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
 6. You now see the Sample Reporting application home page. In your Runtime environment under **Developer Toolbar**, click **Home** to return to the home page of the APEX development environment.
 
@@ -84,11 +84,13 @@ This lab covers installing and running a sample application.
    ![View Reports](images/display-as-report1.png " ")
 
 ## Summary
-You now know how to Navigate through the major Components of Oracle APEX
-and Install and run a packaged application . You may now **proceed to the next lab**.
+You have now learned how to navigate the major components of Oracle APEX, install, and run a packaged application. You are now ready to **proceed to the next lab**.
+
+## What's next
+In the next hands-on lab, you'll gain practical experience in utilizing SQL Workshop. You'll explore tasks such as installing a Sample Dataset, extending existing table­s by adding new columns, populating new columns, creating lookup tables, developing Package­s, and utilizing various utilities such as Quick SQL, Data Workshop, and Data Generator.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Oct 2023

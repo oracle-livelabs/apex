@@ -12,15 +12,7 @@ Customers will find the following details of the order:
 
 Estimated Time: 15 minutes
 
-<!--
-Once you have finished the workshop and updated all the products as described in the steps, your page will look like the following image:
-![](./images/orders-page.png " ")
 
-
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:qskWwkxJmcM)
--->
 ### Objectives
 In this lab, you will:
 - Navigate and Review the Page Designer panes.
@@ -69,7 +61,7 @@ Create a Normal Page to review the Order that customer has made.
     - Breadcrumb - Set to **No**
     - Navigation - Set to **Yes**
   Click **Create Page**.
-  ![Click Create Page](./images/create-blank-page12.png " ")
+  ![Click Create Page](./images/create-blank-page1.png " ")
 
 
 ## Task 3: Add a Region
@@ -84,18 +76,41 @@ Add a region to the page to display order details.
     - For Title - enter **Thank you for your order!**
     - For Template - select **Content Block**
     - For Template Options - Click on the rectangular area next to the Template Options label to open the Template Options dialog. In the Dialog page, Check **Show Region Icon** and click **Ok**.
-    ![Define Template Options](images/create-static-region13.png " ")
+    ![Define Template Options](images/create-static-region2.png " ")
     - For Icon, enter **fa-heart**
 
-        ![Define Icon](images/create-static-region14.png " ")
+        ![Define Icon](images/create-static-region3.png " ")
 
-## Task 4: Add Items to the Page
+## Task 4: Lock and Unlock Pages
+Prevent conflicts during application development by locking pages in your application. By locking a page, you prevent other developers from editing it. You can lock a page on the Application home page, Page Locks page, and in Page Designer.
+
+The Page Lock button on the Page Designer toolbar indicates whether a page is locked. If the page is unlocked, the Page Lock button displays as an unlocked padlock.
+
+1. To lock a page in Page Designer, On the Page Designer toolbar, click the Page Unlocked button.
+
+  ![Define Icon](images/lock-a-page1.png " ")
+
+2. Enter a comment in the **Comment** field. Click **Lock**.When a page is locked, the Page Lock button displays as a **locked padlock**.
+
+  ![Define Icon](images/lock-a-page2.png " ")
+
+3. To unlock a page in Page Designer, If a page is locked, the Page Lock button displays as a locked padlock.
+
+  ![Define Icon](images/unlock-a-page1.png " ")
+
+4. On the Page Designer toolbar, click the **Page locked by you** button. If the page has been locked by another user the Lock button appears in red. You cannot unlock a page locked by another user. Click Unlock.
+
+  ![Define Icon](images/unlock-a-page2.png " ")
+
+
+
+## Task 5: Add Items to the Page
 Add a hidden item used to store the order ID without the user's being able to see it.
 
 1. In the Rendering tree (left pane), click on the **Thank you for your order!** region to select it.
 2. Right-click the region and click **Create Page Item**.
 
-    ![Create Page Item](images/create-page-item11.png " ")
+    ![Create Page Item](images/create-page-item1.png " ")
 
 3. In the property editor, set the name and type as follows:
 
@@ -103,29 +118,29 @@ Add a hidden item used to store the order ID without the user's being able to se
     | --- |  --- |
     | P15_ORDER | Hidden |
 
-    ![Define Page Item](./images/create-page-item12.png " ")    
+    ![Define Page Item](./images/create-page-item2.png " ")    
 
-## Task 5: Add Static Content Region
+## Task 6: Add Static Content Region
 Add a region to contain Order details and items.
 
 1. In the Rendering tree (left pane), click on **Thank you for your order!** region.
 2. Right click the region and click **Create Sub Region**.
 
-    ![Create Sub Region](./images/create-sub-region11.png " ")
+    ![Create Sub Region](./images/create-sub-region1.png " ")
 
 3. In the Property Editor, enter the following:
     - For Title - enter the expression (including the period) **Order: &P15_ORDER.**
     - For Type - select **Static Content**  
 
-  ![Define Sub Region](./images/create-sub-region12.png " ")
+  ![Define Sub Region](./images/create-sub-region2.png " ")
 
-## Task 6: Add Order Details Region
+## Task 7: Add Order Details Region
 Add a region to display Order details.
 
 1. In the Rendering tree (left pane), navigate to the **Order: &P15_ORDER.** region.
 2. Right click the region and click **Create Sub Region**.
 
-    ![Create Sub Region2](./images/create-sub-region21.png " ")
+    ![Create Sub Region2](./images/create-sub-region11.png " ")
 
 3. In the Property Editor, enter the following:
     - For Title - enter **Order Details**
@@ -148,7 +163,7 @@ Add a region to display Order details.
             WHERE  order_id = :P15_ORDER
             </copy>
             ```
-      ![Define Sub Region2](./images/create-sub-region22.png " ")
+      ![Define Sub Region2](./images/create-sub-region12.png " ")
 
 4. Click **Attributes**.
 
@@ -163,15 +178,15 @@ Add a region to display Order details.
             <b> Total: </b>&TOTAL.    
             </copy>
             ```
-      ![Define Attributes](./images/create-sub-region4.png " ")
+      ![Define Attributes](./images/create-sub-region13.png " ")
 
-## Task 7: Add Items Region
+## Task 8: Add Items Region
 Add a region to display items in the order.
 
 1. In the Rendering tree (left pane), navigate to the **Order: &P15_ORDER.** region.
 2. Right-click the region and click **Create Sub Region**.
 
-    ![Add Region Items](./images/create-sub-region31.png " ")
+    ![Add Region Items](./images/create-sub-region21.png " ")
 3. In the Property Editor, enter the following:
     - For Title - enter **Items**
     - For Type - select **Cards**
@@ -193,7 +208,7 @@ Add a region to display items in the order.
             AND  order_id = :P15_ORDER
             </copy>
             ```
-    ![Define Region](./images/create-sub-region32.png " ")
+    ![Define Region](./images/create-sub-region22.png " ")
 
 4. Click **Attributes** and do the following:
 
@@ -211,7 +226,7 @@ Add a region to display items in the order.
             </copy>
             ```
 
-    ![Define Attributes](./images/create-sub-region33.png " ")
+    ![Define Attributes](./images/create-sub-region23.png " ")
 
     - Under Media section:
         - For Source - select **BLOB Column**   
@@ -223,8 +238,7 @@ Add a region to display items in the order.
     - Under Card:
         - For Primary Key Column - Select **ITEM**.
 
-    ![Select Primary Key](./images/create-sub-region34.png " ")
-
+    ![Select Primary Key](./images/create-sub-region24.png " ")
 
 5. Click **Save**.
 
@@ -232,8 +246,12 @@ Add a region to display items in the order.
 
 You now know how to add a new page to your existing APEX Application and add regions to define the page's content using the Page Designer. You may now **proceed to the next lab**.
 
+## What's next
+
+In the next hands-on lab, you learn how to create and develop various types of reports, including Interactive Grids, Smart Filters, Cards, and Faceted Searches.
+
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2023
