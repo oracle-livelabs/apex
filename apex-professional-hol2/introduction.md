@@ -12,9 +12,9 @@ Estimated Time: 50 minutes
 * Add new columns to the existing Products table, Populate the new columns and Create lookup tables.
 * Create a package to manage the Shopping Cart.
 * Create database objects using Quick SQL.
-* Load data using Data Workshop page.
+* Load data using Data generator and Data Workshop page.
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

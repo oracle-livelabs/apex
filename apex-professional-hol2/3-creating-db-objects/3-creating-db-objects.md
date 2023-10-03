@@ -6,7 +6,7 @@ In this lab, you learn to create database objects to use in your APEX applicatio
 
 To manage items in the cart, you use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeapi/APEX_COLLECTION.html), which enable you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 <!--
 Watch the video below for a quick walk through of the lab.
 
@@ -240,6 +240,6 @@ You now know how to create a package to manage the shopping cart. In the followi
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
