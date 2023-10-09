@@ -123,7 +123,7 @@ In this task, you learn to load Demo Projects application Blueprint. You can Loa
 
     ![PWA Definition](images/navigate-to-pwa.png " ")
 
-## Task 4: Run and Explore the New App
+## Task 5: Run and Explore the New App
 
 1.  Navigate back to **DEMO\_PROJECTS** application and then click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
@@ -136,6 +136,7 @@ In this task, you learn to load Demo Projects application Blueprint. You can Loa
     ![Sign In](images/sign-in3.png " ")
 
 3. Click on the **Install App** Icon on Top Right of the page to install Application to your local System.
+
     ![Click on Install App](images/install-app1.png " ")
 
 ## Summary

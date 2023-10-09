@@ -17,7 +17,7 @@ Reviewing the facets, you will notice that **Safe** is down the page and you can
 
     In the Developer Toolbar click **Page 3**.
 
-    ![Image displaying the developer toolbar](images/dev-toolbar.png " ")
+    ![Image displaying the developer toolbar](images/dev-toolbar1.png " ")
 
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window. Once in the App Builder click **3 - NYC Highschools Search**.
 
@@ -42,7 +42,7 @@ Reviewing the facets, you will notice that **Safe** is down the page and you can
 
 4. At the top right of the page click **Save and Run Page** to save the changes made to the facets and review the app.
 
-    ![](images/run-app.png " ")   
+    ![](images/run-app1.png " ")   
 
 5. In the runtime environment, click one of the **Safe** ranges. Review how the counts on the other facets are updated based on your selection. Also notice how you can still select one of the other **Safe** ranges or click **Clear**, within the **Safe** facet, to clear your selection and again show all the counts for all the safety ranges.
 
@@ -91,4 +91,4 @@ You now know how to enhance a faceted search page and modify the properties on a
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn
- - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
