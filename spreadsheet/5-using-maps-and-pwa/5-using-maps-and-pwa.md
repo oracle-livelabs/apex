@@ -19,7 +19,7 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window. Once in the App Builder click **3 - NYC Highschools Search**.
 
-    ![App Builder home page](images/alt-app-builder.png " ")
+    ![App Builder home page](images/alt-app-builder1.png " ")
 
 
 2. To create a page similar to the existing page, click the + icon next to the redo button at the top right corner. Select **Page as Copy**.

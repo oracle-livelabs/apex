@@ -10,7 +10,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
 
 Estimated Time: 5 minutes
 
@@ -22,7 +22,7 @@ Watch the video below for a quick walk-through of the lab.
 1.  From your APEX workspace home page, click **App Builder**.
 2.  Click **Create a New App**.
 
-    ![Image showing Create a New App option](images/create-a-new-app.png " ")
+    ![Image showing Create a New App option](images/create-a-new-app1.png " ")
 
 3.  Click **Create App from a File**.
 
