@@ -25,21 +25,21 @@ Note: You can also directly access your Autonomous Data Warehouse or Autonomous 
 
 3. Select **Autonomous Transaction Processing**.
   ![Cloud homepage](images/database-atp.png  " ")
- 
 
-1. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
+
+4. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
     ![Compartment drop down list](images/livelabs-compartment.png " ")
-2. You can see your current default region in the top, right hand corner of the page.
+5. You can see your current default region in the top, right hand corner of the page.
 
-3. Click **Create Autonomous Database**.
+6. Click **Create Autonomous Database**.
 
-4. Double check that you are using the compartment assigned to you
-5. Select **Transaction Processing** as the workload.
-6. Leave all the settings at their default values.
-7.  Use **```SecretPassw0rd```** for the ADMIN password
-8.  Select **License Included **, then click **Create Autonomous Database**.
+7. Double check that you are using the compartment assigned to you
+8. Select **Transaction Processing** as the workload.
+9. Leave all the settings at their default values.
+10.  Use **```SecretPassw0rd```** for the ADMIN password
+11.  Select **License Included **, then click **Create Autonomous Database**.
 
-9.  Check the following screenshot to verify your settings:
+12.  Check the following screenshot to verify your settings:
 
     ![Create Autonomous Database page](images/create-atp-full.png " ")
 
@@ -52,19 +52,19 @@ Continue when the status changes from:
 to:
 
   ![Autonomous Database Details page](images/status-available.png =50%x*)
-  
+
 ## Task 2: Create a APEX workspace
 
 1. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
 
     Click the **Apex Instance URL** provided on the ATP overview screen.
-    
+
     ![Open APEX instance](images/apex-instance.png " ")
 
 2. Now, click **Launch APEX**
 
     ![Launch APEX instance](images/launch-apex-inst.png " ")
-   
+
 
 3. Enter the password for the Administration Services and click **Sign In to Administration**.     
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
@@ -78,7 +78,7 @@ to:
 5. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
     ![Choose type of schema](images/choose-schema.png " ")
-  
+
 5. In the Create Workspace dialog, enter the following:
 
     | Property | Value |
@@ -86,11 +86,10 @@ to:
     | Workspace Name | DEMO |
     | Workspace Username | DEMO |
     | Workspace Password | **`SecretPassw0rd`** |
-    
 
-    Click **Create Workspace**.
+Click **Create Workspace**.
 
-    ![Create Workspace dialog](images/create-workspace.png " ")
+  ![Create Workspace dialog](images/create-workspace.png " ")
 
 6. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
@@ -100,14 +99,14 @@ to:
 7. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
-    
+
 
 ## **Summary**
-    
+
   At this point, you know how to create an APEX Workspace and you are ready to start building amazing apps, fast.
-    
+
   You may now **proceed to the next lab**.
-    
+
 ## **Acknowledgements**
 - **Author** - Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, September 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
