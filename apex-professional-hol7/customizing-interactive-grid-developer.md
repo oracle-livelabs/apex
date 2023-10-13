@@ -90,36 +90,37 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![](./images/rearrange-column12.png " ")
 
-5. Click **Page n** in the runtime developer toolbar. You want to make **ID** Column as **Primary Key**. This will help you to make the Interactive Grid editable.
-
-    ![](./images/define-primary-key.png " ")
-
-6. You want to ensure that end users can save Public interactive grids. You want to exclude HTML from the download formats available to end users.
+5. You want to ensure that end users can save Public interactive grids. You want to exclude HTML from the download formats available to end users.
     a) Under Rendering, select the **Project Tasks** Interactive Grid region.
-
-    ![](./images/select-project-tasks11.png " ")
 
     b) In the property editor, select **Attributes** , then navigate to **Enable Users To**. Click **Save Public Report** to enable the feature. Under **Download**, deselect the **HTML** check box.
 
     ![](./images/enbale-public-reports11.png " ")
 
-7. Convert this read only interactive grid in to an **Editable interactive grid**. Then, reset the pagination as Page type displaying the total row count.  
+6. Convert this read only interactive grid in to an **Editable interactive grid**. Then, reset the pagination as Page type displaying the total row count.  
 
     a) Under Rendering, select the **Project Tasks** Interactive Grid region.
 
     b) In the property editor, navigate to **Attributes** and then navigate to Edit. Click **Enabled**, to turn on the feature.
-       Also Under **Pagination**, select **Page** for Type.
+
+    Also Under **Pagination**, select **Page** for Type.
 
     ![](./images/edit-enabled11.png " ")
 
-8. Delete the column groups in the interactive grid. Under Rendering > Project Tasks Interactive Grid > Column Groups. Select **Schedule**, **Project Breakdown** and **Project Financing**, right-click and click **Delete**.
+7. Delete the column groups in the interactive grid. Under Rendering > Project Tasks Interactive Grid > Column Groups. Select **Schedule**, **Project Breakdown** and **Project Financing**, right-click and click **Delete**.
 
     ![](./images/delete-column-group11.png " ")
 
-9. Suppose you want to display the ID column and exclude the ID column from DML operations. Under **Page Rendering > Project Tasks** Interactive Grid, expand Columns and select **ID**.
+8. Suppose you want to display the ID column and exclude the ID column from DML operations. Under **Page Rendering > Project Tasks** Interactive Grid, expand Columns and select **ID**.
 
-    Navigate to **Identification** and Set Type to **Display Only**, then Navigate to **Source** and Click on **Query Only** to enable.
-    Click **Save and Run Page**.
+   Under **Identification** Section:
+   - For Type :Select **Display Only**
+
+   Under **Heading** Section:
+   - For Heading : Enter **ID**
+
+  Click **Save and Run Page**.
+
     ![](./images/set-id-col-attributes11.png " ")
 
 
@@ -131,4 +132,4 @@ You now know how to Manage and Customise the Interactive Grid as a developer. Yo
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

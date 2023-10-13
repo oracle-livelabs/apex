@@ -28,7 +28,7 @@ In this lab, you:
 
     ![](images/navigate-to-sr.png " ")
 
-    ![](images/run-application.png " ")
+    ![](images/run-application11.png " ")
 
 3. In the **navigation menu** or in the **Cards Region**, click **Interactive Report**.
 
@@ -229,12 +229,12 @@ In this lab, you:
     ![](images/select-pivot.png " ")
 
     b)  In the Pivot dialog enter / select:  
-        - Pivot Columns: **Assigned To**
-        - Row Columns: **Project**
-        - Functions: **Sum**
-        - Column: **Cost** and **Budget**
-        - Label: **Total Cost** and **Total Budget**
-        - Set **Sum** to **Yes**.
+       - Pivot Columns: **Assigned To**
+       - Row Columns: **Project**
+       - Functions: **Sum**
+       - Column: **Cost** and **Budget**
+       - Label: **Total Cost** and **Total Budget**
+       - Set **Sum** to **Yes**.
       Click **Apply**.
 
     ![](images/create-pivot1.png " ")
@@ -294,4 +294,4 @@ You now know how to Manage and Customise the Interactive report as an End-User. 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

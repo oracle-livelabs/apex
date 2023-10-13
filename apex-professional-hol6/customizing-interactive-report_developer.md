@@ -53,15 +53,11 @@ In this lab, you edit an interactive report in page designer and customize it fo
 
     ![](images/enable-rpp.png " ")
 
-    ![](images/enable-rpp1.png " ")
-
 5. You want to disable the Email in the Download option of the Actions menu. In the property editor, navigate to Download. Deselect **Send as Email** download format.
-
-    ![](images/disable-email1.png " ")
 
 6. You want to enable the **Excel** and **PDF** formats in the Download option of the **Actions** menu. In the property editor, navigate to Download. Select **Excel** and **PDF** download formats.
 
-    ![](images/enable-downloads2.png " ")
+    ![](images/disable-email1.png " ")
 
 7. Now that you finished the customization for end users, click **Save** and **Run Page**.
 
@@ -105,4 +101,4 @@ You now know how to Manage and Customise the Interactive report as a developer. 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
