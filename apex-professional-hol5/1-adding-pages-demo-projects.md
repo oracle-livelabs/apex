@@ -49,19 +49,19 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
 4. For Page Attributes, enter the following:
 
-    - Under **Page Definition**:
+   Under **Page Definition**:
 
-        - For Page Number, enter **4**.
+        - For Page Number : Enter **4**.
 
-    - For Page Name, enter **Project Tasks**  
+        - For Page Name : Enter **Project Tasks**  
 
-        - Under **Data Source**:
+   Under **Data Source**:
 
-        - For **Table/View Name**, Select **DEMO_PROJECTS**.
+        - For **Table/View Name** : Select **DEMO_PROJECTS**.
 
-    - Under **Navigation**
+   Under **Navigation**
 
-        - For **Breadcrumb**, Set it to **No**.
+        - For **Breadcrumb** : Set it to **No**.
 
     Click **Create Page**.
 
@@ -83,20 +83,21 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
     ![](./images/create-sf-page12.png " ")
 
-3. For **Create Smart Filters**, enter the following:
-    - Under **Page Definition**:
+3. For **Create Smart Filters**, Enter the following:
 
-        - For **Page Number**, enter **8**
+   Under **Page Definition**:
 
-    - For **Name**, enter **Project Tasks Search**  
+      - For **Page Number**: Enter **8**
 
-       - Under **Data Source**:
+      - For **Name**: Enter **Project Tasks Search**  
 
-       - For **Table/View Name**, enter **DEMO_PROJECTS**  
+   Under **Data Source**:
 
-   - Under **Navigation**
+      - For **Table/View Name** : Select **DEMO_PROJECTS**  
 
-       - For **Breadcrumb**, Set it to **No**.
+   Under **Navigation**:
+
+      - For **Breadcrumb**: Set it to **No**.
 
    Click **Next**.
 
@@ -120,4 +121,4 @@ You now know how to create interactive grid and smart filters. You may now **pro
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

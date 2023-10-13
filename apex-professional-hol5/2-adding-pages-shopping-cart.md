@@ -75,8 +75,10 @@ This process is needed to refresh the number of items in the Shopping Cart, whic
     ![](./images/click-app-process11.png " ")
 
 3. Click **Create** and enter the following:
-    - For Name - enter **Initialize Shopping Cart Header**
-    - For Process Point - select **On Load: Before Header (page template header)**
+
+    - For Name : Enter **Initialize Shopping Cart Header**
+
+    - For Process Point : Select **On Load: Before Header (page template header)**
 
   ![](./images/create-app-process11.png " ")
 
@@ -128,12 +130,12 @@ The shopping cart page allows users to review and edit the products in the cart,
 
 4. For Create Blank Page, enter the following:
     Under **Page Definition**
-    - Page Number - enter **16**
-    - For Name - enter **Shopping Cart**
+    - Page Number : Enter **16**
+    - For Name : Type **Shopping Cart**
 
     Under **Navigation**
-    - For Breadcrumb - Set as **No**
-    - For Navigation - Set as **No**
+    - For Breadcrumb : Set as **No**
+    - For Navigation : Set as **No**
 
    Click **Create Page**.
  ![](./images/create-blank-page21.png " ")
@@ -147,10 +149,10 @@ This region will list the items that have been added temporarily to the shopping
     ![](./images/create-cards11.png " ")
 
 3. In the Property Editor, enter the following:
-    - For Title - enter **Shopping Cart**
+    - For Title : Enter **Shopping Cart**
     - Under Source section:
-      - For Type - select **SQL Query**
-      - For SQL Query - enter the following SQL Query:
+      - For Type : Select **SQL Query**
+      - For SQL Query : Enter the following SQL Query:
 
         ```
             <copy>
@@ -173,17 +175,23 @@ This region will list the items that have been added temporarily to the shopping
 
 4. Click on **Attributes** and enter the following:
 
-    - Under Appearance section:
-        - For Layout \- select **Horizontal (Row)**
-    - Under Title section:
-        - For Column \- select **NAME**
+  Under Appearance section:
 
-    - Under Subtitle section:
-        - For Column - select **BRAND**    
+      - For Layout \- select **Horizontal (Row)**
 
-    - Under Body section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+  Under Title section:
+
+      - For Column \- select **NAME**
+
+  Under Subtitle section:
+
+      - For Column - select **BRAND**    
+
+  Under Body section:
+
+      - Set Advanced Formatting to **On**
+
+      - For HTML Expression - enter the following:
 
        ```
         <copy>
@@ -193,9 +201,11 @@ This region will list the items that have been added temporarily to the shopping
 
      ![](./images/change-attributes11.png " ")
 
-    - Under Secondary Body section:
-       - Set Advanced Formatting to **On**
-       - For HTML Expression - enter the following:
+  Under Secondary Body section:
+
+      - Set Advanced Formatting to **On**
+
+      - For HTML Expression - enter the following:
 
      ```
             <copy>
@@ -204,20 +214,24 @@ This region will list the items that have been added temporarily to the shopping
             </copy>
      ```
 
-    - Under Media section:
-       - For Source - select **BLOB Column**
-       - For BLOB Column - select **PRODUCT_IMAGE**  
+   Under Media section:
+
+     - For Source - select **BLOB Column**
+
+     - For BLOB Column - select **PRODUCT_IMAGE**  
 
 
   ![](./images/change-attributes12.png " ")
 
-  - Under Messages section:
-       - For When No Data Found - enter: **Your shopping cart is empty!**
+Under Messages section:
 
-       - For No Data Found Icon: **fa-cart-empty**
+  - For When No Data Found - enter: **Your shopping cart is empty!**
 
-  - Under Card section:
-      - For Primary Key Column 1 - select **ITEM**
+  - For No Data Found Icon: **fa-cart-empty**
+
+Under Card section:
+
+  - For Primary Key Column 1 - select **ITEM**
 
 
  ![](./images/change-attributes13.png " ")
@@ -233,15 +247,15 @@ This action allows customers to open a page to edit a particular item in the sho
 3. In the Property Editor, enter the following:
     - For Label - enter **Edit**
     - For Target - click **No Link Defined**:
-      - For Page - enter **17**  
+    - For Page - enter **17**  
         *{Note: Page 17 wil be created in the next lab}*
-      - Set items as follows:
+    - Set items as follows:
 
           | Name             |  Value       |
           | ---              |  ---         |
           | P17\_PRODUCT\_ID | &PRODUCT_ID. |
 
-      - Click **Ok**.
+    - Click **Ok**.
     - For Display Type - select **Text with Icon**
     - For Icon - enter **fa-cart-edit**
 
@@ -261,7 +275,7 @@ Create a Modal Page to add products to the cart.
 
 2. Select **Blank Page** and click **Next**.
 
-  ![](./images/create-blank-page11.png " ")
+  ![](./images/create-blank-page16.png " ")
 
 3. Enter the following and click **Create Page**.
   - Page Number - enter 17
@@ -271,6 +285,7 @@ Create a Modal Page to add products to the cart.
   - For Page Mode - select **Modal Dialog**  
 
   Click **Create Page**.
+
   ![](./images/create-modal-dialog13.png " ")
 
 
@@ -279,12 +294,16 @@ Create a Modal Page to add products to the cart.
 This region allows users to review the details of the product, such as brand, price, description, and more.
 
 1. In the new modal page created, navigate to the **Gallery Menu**.
+
 2. Drag a **Cards** region and drop it to the Content Body section.
 
      ![](./images/drag-navigation-menu11.png " ")  
+
 3. In the Property Editor, enter the following:
     - For Title, enter **Product**
-    - Under Source section:
+
+     Under Source section:
+
      - For Type - select **SQL Query**
 
      - For SQL Query - enter the following SQL Code:
@@ -315,29 +334,32 @@ This region allows users to review the details of the product, such as brand, pr
     ![](./images/create-cards-region11.png " ")
 
     - For Template Options - check **Use Template Defaults**
-      - For **Style** - select **Style C**
-      - Click **Ok**
+    - For **Style** - select **Style C**
+    - Click **Ok**
+
     ![](./images/create-cards-region12.png " ")
-
-
 
 4. Click **Attributes** and enter the following:
 
-  - Under Appearance section:
+   Under Appearance section:
+
       - For Layout: select **Float**
 
-  - Under Title section:
+   Under Title section:
+
       - For Column - select **PRODUCT_NAME**
 
-  - Under Subtitle section:
+   Under Subtitle section:
+
       - For Column - select **BRAND**
 
-  - Under Body section:
+   Under Body section:
+
       - For Column - select **DESCRIPTION**
 
   ![](./images/change-cards-attributes11.png " ")
 
-  - Under Secondary Body section:
+  Under Secondary Body section:
 
       - Set Advanced Formatting to **On**.
 
@@ -349,7 +371,8 @@ This region allows users to review the details of the product, such as brand, pr
          </copy>
          ```   
 
-  - Under Media section:
+  Under Media section:
+
     - For Source - select **BLOB Column**
     - For BLOB Column - select **PRODUCT_IMAGE**
     - For Position - select **First**
@@ -360,8 +383,9 @@ This region allows users to review the details of the product, such as brand, pr
    ![](./images/change-cards-attributes12.png " ")
 
 
-  - Under Card section:
-      - For Primary Key Column 1 - select **PRODUCT_ID**    
+   Under Card section:
+
+  - For Primary Key Column 1 - select **PRODUCT_ID**    
 
    ![](./images/change-cards-attributes13.png " ")
 
@@ -375,7 +399,8 @@ This region lets users read the customer reviews for this product.
 
 3. In the Property Editor, enter the following:
     - For Title - enter **Customer Reviews**
-    - Under Source section:
+
+     Under Source section:
         - For **Type** - select **SQL Query**
         - For **SQL Query** - enter the following SQL Code:
 
@@ -391,19 +416,19 @@ This region lets users read the customer reviews for this product.
             </copy>
       ```
 
-    - Under Appearance section:
+    Under Appearance section:
       - For Template - select **Standard**
 
     ![](./images/create-cards-region22.png " ")
 
 4. Click **Attributes** and enter the following:
 
-    - Under Appearance section:
-        - For Layout - select **Horizontal (Row)**
+   Under Appearance section:
+      - For Layout - select **Horizontal (Row)**
 
-    - Under Title section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+    Under Title section:
+      - Set Advanced Formatting to **On**
+      - For HTML Expression - enter the following:
 
      ```
             <copy>
@@ -413,7 +438,7 @@ This region lets users read the customer reviews for this product.
       ```  
 
       ![](./images/create-cards-region23.png " ")
-    - Under Messages:
+     Under Messages:
      - For When No Data Found - enter **There are no customer reviews yet.**
 
       ![](./images/create-cards-region24.png " ")
@@ -463,4 +488,4 @@ You now know how to create an Application item, Application process, Faceted sea
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Roopesh Thokala, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
