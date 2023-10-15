@@ -480,11 +480,13 @@ This region lets users read the customer reviews for this product.
 
   ![](./images/create-fs-page15.png " ")
 
-## Task 10: Add the Products Page.
-
 ## Summary
 
 You now know how to create an Application item, Application process, Faceted search page and Cards page. You may now **proceed to the next lab**.
+
+## What's next
+
+In the next hands-on lab, you learn how to customise Interactive Report as a developer and an end-user.
 
 ## Acknowledgments
 

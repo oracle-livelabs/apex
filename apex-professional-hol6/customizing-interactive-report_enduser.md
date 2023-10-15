@@ -290,6 +290,10 @@ You want to reset the **Primary Report** back to the default settings and remove
 
 You now know how to Manage and Customise the Interactive report as an End-User. You may now **proceed to the next lab**.
 
+## What's next
+
+In the next hands-on lab, you learn how to customise Interactive Grid as a developer and an end-user.
+
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager

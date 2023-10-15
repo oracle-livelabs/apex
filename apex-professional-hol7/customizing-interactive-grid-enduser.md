@@ -155,6 +155,10 @@ Click the **Start Date** column header and then click **Hide**.
 
 You now know how to Manage and Customise the Interactive report as an End-User. You may now **proceed to the next lab**.
 
+## What's next
+
+In the next hands-on lab, you learn how to create page items and page buttons.
+
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager

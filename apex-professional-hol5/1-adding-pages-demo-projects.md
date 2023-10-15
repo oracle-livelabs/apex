@@ -3,29 +3,13 @@
 ## Introduction
 
 In this lab,
-  - You navigate to **Demo Projects Application** and create an **Interactive Grid** and **Smart Filters** Pages.
-
-<!--
-Customers will be able to:
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
+  - You navigate to **Demo Projects Application** and create an **Interactive Grid**, **Smart Filters** and **Content Row** Pages.
 
 Estimated Time: 20 minutes
-
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:Cvl9xMAqnm8)
-
--->
-Estimated Time: 20 minutes
-
 
 ### Objectives
 In this lab, you will:
-- Create Pages to Search and Edit the Projects and Tasks in **Demo Projects** Application.
+- Create Pages to Search and Edit the Projects, Tasks and Project Task status in **Demo Projects** Application.
 
 ### Downloads
 
@@ -114,6 +98,7 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
     ![](./images/create-sf-page16.png " ")
 
 ## Task 3: Add Content Row to Demo Projects Application.  
+In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Content Row is a Classic Report template that is suitable for displaying most types of content. This report features a column for selection such as a checkbox or radio button, an icon, title and description, miscellaneous attributes, and actions.
 
 1. Navigate to Create button and click Page.
 
@@ -152,33 +137,31 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
    Under **Settings**:
 
-   - For Overline : Select **PROJECT**
+     - For Overline : Select **PROJECT**
 
-   - For Title : Select **TASK_/NAME**
+     - For Title : Select **TASK_/NAME**
 
-   - For Description : Enter **Task Assigned To: &ASSIGNED_/TO.**
+     - For Description : Enter **Task Assigned To: &ASSIGNED_/TO.**
 
-   - For Miscellaneous: Enter **Cost: &cost.**
+     - For Miscellaneous: Enter **Cost: &cost.**
 
     ![](./images/cr-attributes.png " ")
 
     ![](./images/cr-attributes1.png " ")
 
-   - Enable **Display Avatar** and **Display Badge**
+     - Enable **Display Avatar** and **Display Badge**
 
    Under **Avatar**:
 
-    - For Icon : Enter **fa-tasks**
+     - For Icon : Enter **fa-tasks**
 
   Under **Badge**:
 
-   - For Label : Select **PROJECT**
+     - For Label : Select **PROJECT**
 
-   - For Value : Select **STATUS**
+     - For Value : Select **STATUS**
 
-   - For State : Select **ASSIGNED_/TO**
-
-   - For Icon : Enter **fa-square**
+     - For State : Select **ASSIGNED_/TO**
 
   ![](./images/cr-attributes2.png " ")
 
@@ -198,11 +181,9 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
     ![](./images/cr-run-page.png " ")
 
-
-
 ## Summary
 
-You now know how to create interactive grid ,smart filters and Content row report. You may now **proceed to the next lab**.
+You now know how to create interactive grid ,smart filters and Content row pages. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
