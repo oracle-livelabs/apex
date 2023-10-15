@@ -113,9 +113,96 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
 
     ![](./images/create-sf-page16.png " ")
 
+## Task 3: Add Content Row to Demo Projects Application.  
+
+1. Navigate to Create button and click Page.
+
+    ![](./images/cr-page-8.png " ")
+
+2. For Create a Page, Select **Blank Page**.
+
+    ![](./images/cr-blank-page.png " ")
+
+3. For **Create a Blank Page**:
+
+    - For Name: Enter **Project Task Status**
+    - Leave the remaining details to defaults.
+    - Click **Create Page**.
+
+   ![](./images/cr-create-page.png " ")
+
+4. Under Page Rendering, Right Click Body and Select **Create Region**.
+
+    ![](./images/cr-create-region.png " ")
+
+5. In the Property Editor, Enter the following:  
+    Under **Identification**:
+
+      - For Title : Enter **Project Task Status**
+
+      - For Page : Select **Content Row**
+
+    Under **Source**:
+
+      - For Table Source : Select **DEMO_/PROJECTS**
+
+      ![](./images/cr-region-details.png " ")
+
+6. Click on Attributes and Enter the following:
+
+   Under **Settings**:
+
+   - For Overline : Select **PROJECT**
+
+   - For Title : Select **TASK_/NAME**
+
+   - For Description : Enter **Task Assigned To: &ASSIGNED_/TO.**
+
+   - For Miscellaneous: Enter **Cost: &cost.**
+
+    ![](./images/cr-attributes.png " ")
+
+    ![](./images/cr-attributes1.png " ")
+
+   - Enable **Display Avatar** and **Display Badge**
+
+   Under **Avatar**:
+
+    - For Icon : Enter **fa-tasks**
+
+  Under **Badge**:
+
+   - For Label : Select **PROJECT**
+
+   - For Value : Select **STATUS**
+
+   - For State : Select **ASSIGNED_/TO**
+
+   - For Icon : Enter **fa-square**
+
+  ![](./images/cr-attributes2.png " ")
+
+7. Click **Save**
+
+8. Click **Shared Components** Tab, Select **Navigation Menu** then **Edit Component**.
+
+   ![](./images/cr-navigation.png " ")
+
+9. Click Edit for **Project Task Status** and for **Image/Class**, enter **fa-layout-list-left** and Click Apply Changes.
+
+   ![](./images/cr-navigation-edit.png " ")
+
+   ![](./images/cr-report-icon.png " ")
+
+10. Click **Run Application**.
+
+    ![](./images/cr-run-page.png " ")
+
+
+
 ## Summary
 
-You now know how to create interactive grid and smart filters. You may now **proceed to the next lab**.
+You now know how to create interactive grid ,smart filters and Content row report. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
