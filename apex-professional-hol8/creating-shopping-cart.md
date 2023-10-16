@@ -26,21 +26,24 @@ In this lab, you will:
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
 
-    ![](./images/click-app-builder.png " ")
+    ![Click App Builder](./images/click-app-builder.png " ")
 
-    ![](./images/navigate-to-osa.png " ")
+    ![Navigate to Online Shopping Cart Application](./images/navigate-to-osa.png " ")
 
 
 2. Now you select **Shopping Cart** under **Page Icons**.
 
-    ![](./images/select-shopping-cart-page.png " ")
+    ![Select Shopping Cart Page](./images/select-shopping-cart-page.png " ")
 
 3. Drag a **Static Content** region and drop it to the right of the Shopping Cart region to create a second region of content.
 
-    ![](./images/drag-drop-static-content.png " ")
+    ![Drag and Drop Static Content Region](./images/drag-drop-static-content.png " ")
 
 4. In the Property Editor, enter the following:
     - For Title - enter **Order Information**
+
+    ![Input Title for Static content region](./images/select-title-for-region.png " ")
+
 5. Navigate to the **Order Information** (left pane) region.
 
 6. Right-click the **Order Information** region and click **Create Page Item**.
@@ -93,7 +96,10 @@ In this lab, you will:
     | Proceed | Proceed to Checkout | Create | Text | On | |
     | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
 
-    ![](./images/create-button1.png " ")
+    | Create Proceed Button                          |  Create Clear Button                            |
+    | ----------------------------------- | ----------------------------------- |
+    | ![Create Proceed Button](./images/create-button1.png " ") | ![Create Clear Button](./images/create-clear-button.png " ") |
+
 
      Under Server-side Condition:
     | Button Name | Type  | Item  |
@@ -101,7 +107,7 @@ In this lab, you will:
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
 
-     ![](./images/create-button2.png " ")
+     ![Add Server Side condition to Buttons](./images/create-button2.png " ")
 
     Click Save.
 
