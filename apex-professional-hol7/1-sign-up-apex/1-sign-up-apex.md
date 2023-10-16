@@ -130,7 +130,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
 
-    ![](https://raw.githubusercontent.com/oracle/learning-library/master/common/images/console/database-atp.png " ")
+    ![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
     From the Cloud Dashboard, select the **Navigation Menu** in the upper left
 
