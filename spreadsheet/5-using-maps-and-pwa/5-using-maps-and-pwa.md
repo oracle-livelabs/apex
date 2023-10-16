@@ -19,7 +19,7 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window. Once in the App Builder click **3 - NYC Highschools Search**.
 
-    ![App Builder home page](images/alt-app-builder.png " ")
+    ![App Builder home page](images/alt-app-builder1.png " ")
 
 
 2. To create a page similar to the existing page, click the + icon next to the redo button at the top right corner. Select **Page as Copy**.
@@ -59,7 +59,6 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     - For Name, enter **Schools**
     - For Source > Location, select **Region Source**. This indicates that the layer fetches the data from it's parent region (Nyc Highschools) whose source is the local database table *NYC_HIGHSCHOOLS*.   
 
-    ![](images/school-layer.png " ")   
 
 3. In order to display the points on the map, you need to provide the coordinates. In the Property Editor, go to the **Column Mapping** group. Enter the following values:
 
@@ -69,7 +68,7 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     |Longitude Column         |Longitude        |
     |Latitude Column         |Latitude        |
 
-    ![Property Editor view](images/column-mapping.png " ")   
+    ![Property Editor view](images/school-layer.png " ")   
 
 4. Click on **Save**. Later, click on **Application \<n\>** at the top to navigate to the application home page.
 
@@ -122,7 +121,7 @@ APEX allows customization of the map in a declarative way. In this step, you wil
     ![NYC Highschool Map page is displayed](images/show-tooltip.png " ")
 
 4. Now, you will customize the map by adding a condition such that the value of the *GRADUATION_RATE* will determine the pin color. To do so, click **Page 6** in the developer toolbar to edit the page.
-    ![Developer Toolbar is displayed](images/edit-page-6.png " ")
+    ![Developer Toolbar is displayed](images/edit-page-6-1.png " ")
 
 5. In the Rendering tree, navigate to **Nyc Highschools** under Body. In the Property Editor, under Source, select **Local Database** for Location and **SQL Query** for Type. Click on the Code Editor button next to SQL Query.
    ![Page Designer view](images/maps-sql-query.png " ")
@@ -161,12 +160,14 @@ APEX allows customization of the map in a declarative way. In this step, you wil
 
 7. Select **Schools** layer in the Rendering pane. In the Property Editor, do the following:
     - For **Name**, enter **Schools - Red**
-    - Under **Row Assignment**,
-        - For **Column**, select **PIN_COLOR**
-        - For **Value for this Layer**, enter **red**
-    - Under **Appearance**, for Fill Color enter **&PIN_COLOR.**
 
-    ![Page Designer view](images/edit-schools.png " ")
+    - Under **Row Assignment**:
+
+        - For **Column** : Select **PIN_COLOR**
+
+        - For **Value for this Layer** : Enter **red**
+
+    - Under **Appearance**, for Fill Color enter **&PIN_COLOR.**
 
     ![Page Designer view](images/schools-red.png " ")
 
@@ -234,4 +235,4 @@ You now know how to embed a maps in your application and to install a Progressiv
 ## **Acknowledgements**
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
