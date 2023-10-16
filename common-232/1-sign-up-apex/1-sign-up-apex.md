@@ -68,30 +68,30 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
 
-    ![APEX instance page](images/navigate-to-APEX-service.png " ")
+    ![APEX instance page](images/navigate-to-apex-service.png " ")
 
 4. At the top of the APEX Instances page, click the **Create APEX Service** button.
 
-    ![APEX instance page](images/create-APEX-service.png " ")
+    ![APEX instance page](images/create-apex-service.png " ")
 
 5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
 
-    ![Create instance page](images/APEX-service-settings-1.png " ")
-    ![Create instance page](images/APEX-service-settings-2.png " ")
-    ![Create instance page](images/APEX-service-settings-3.png " ")
+    ![Create instance page](images/apex-service-settings-1.png " ")
+    ![Create instance page](images/apex-service-settings-2.png " ")
+    ![Create instance page](images/apex-service-settings-3.png " ")
 
 6. The APEX Instances Details displays again.
 
   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
 
-  ![Provisioning status](images/APEX-logo-orange.png " ")
-  ![Available status](images/APEX-logo-green.png " ")
+  ![Provisioning status](images/apex-logo-orange.png " ")
+  ![Available status](images/apex-logo-green.png " ")
 
 7. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
 
     On the APEX Instance Details, click Launch APEX.
 
-    ![APEX instance page](images/launch-APEX.png " ")
+    ![APEX instance page](images/launch-apex.png " ")
 
 8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
   The password is the same as the one entered for the ADMIN user when creating the APEX service: **```SecretPassw0rd```**
