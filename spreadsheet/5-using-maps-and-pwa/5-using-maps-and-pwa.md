@@ -8,6 +8,15 @@ Estimated Time: 10 minutes
 Watch the video below for a quick walk-through of the lab.
 [Add a Map Region and Install PWA](videohub:1_18wjf2xx)
 
+Objectives
+In this lab, you will:
+ - Create a Copy of an Existing page
+ - Add and Enhance a map region
+ - Install Progressive Web App
+
+Prerequisites
+ - Completion of workshop through Lab 3
+
 ## **Task 1**: Creating a Copy of an Existing Page
 In order to implement the map, we will copy the existing **NYC Highschools Search** page and modify the new page to include the Map region.
 
