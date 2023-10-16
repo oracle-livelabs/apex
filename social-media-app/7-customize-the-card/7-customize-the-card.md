@@ -19,7 +19,7 @@ In this lab, you will:
 
 - Completion of workshop through Lab 6
 
-## Task 1 : Create a Like Button
+## Task 1: Create a Like Button
 
 The **Like** button will display the current count of likes next to a heart
 icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their
