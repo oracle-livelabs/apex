@@ -199,10 +199,15 @@ In this task, you will create four-page items:
 
 ## Summary
 
-You now know how to create Page Items and Page buttons. You may now **proceed to the next lab**.
+In this hands-on lab, You learned how to create new Page Items and Buttons for Shopping Cart and Add to Cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
+
+## Whats Next
+
+In the next Lab, you understand how to create validations in APEX to ensure data integrity. Then you also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement dynamic Actions for seamless cart management and navigation.
+
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, May 2023
