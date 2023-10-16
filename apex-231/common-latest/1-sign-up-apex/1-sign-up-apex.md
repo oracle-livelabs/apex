@@ -261,5 +261,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
  - **Author** - Apoorva Srinivas, Senior Product Manager
- - **Contributors** - Salim Hlayel, Arabella Yao, Jaden McElvey
  - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
