@@ -85,7 +85,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 7. After the completion of the deployment process, click **Launch APEX** to launch APEX Administrative Services.
 
-    ![Deployment Process Complete Screen](images/launch-apex.png " ")
+    ![Deployment Process Complete Screen](images/launch-apex-change.png " ")
 
 
 8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
