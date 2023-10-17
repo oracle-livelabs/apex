@@ -17,6 +17,14 @@ Estimated Time: 5 minutes
 Watch the video below for a quick walk-through of the lab.
 [Create an App from a Spreadsheet](videohub:1_9jbxjzh8)
 
+Objectives
+In this lab, you will:
+ - Create a new APEX application using spreadsheet
+ - Run your application
+
+Prerequisites
+ - An Oracle APEX workspace
+
 ## **Task 1**: Loading the Highschool data  
 
 1.  From your APEX workspace home page, click **App Builder**.
