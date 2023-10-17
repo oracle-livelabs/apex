@@ -6,7 +6,7 @@ In this lab, you will set up a new page that displays the details of a single mo
 Estimated Lab Time: 20 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create the Movie Details Page](videohub:1_0ri1dc4r)
+[Create the Movie Details Page](videohub:1_k3bn0l55)
 
 ### Objectives
 In this lab, you will:  
@@ -263,7 +263,7 @@ To be able to view the details of any movie you click on on the Movie Search pag
 
 You have now set up the Movie Details page and set it up to open for any card that is selected from the Movie Search page. You may now **proceed to the next lab**.
 
-## Resources 
+## Learn More
 
 - [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-dialog-pages.html)  
 

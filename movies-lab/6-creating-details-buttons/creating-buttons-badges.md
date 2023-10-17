@@ -6,7 +6,7 @@ In the previous lab, you did the backend work to set up tables and application i
 Estimated Lab Time: 25 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Implement Buttons and Badges](videohub:1_otl3rw96)
+[Implement Buttons and Badges](videohub:1_72lhu5y9)
 
 ### Objectives
 In this lab, you will:  
@@ -388,7 +388,7 @@ Before you test the buttons you just implemented, you will add badges to the Mov
     
 You now know how to use SQL commands in Page Designer regions and processes to get, store, update, and delete data from your tables. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-buttons.html) 
 

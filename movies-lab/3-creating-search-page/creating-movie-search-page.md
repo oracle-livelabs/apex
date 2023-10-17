@@ -6,7 +6,7 @@ You will create and set up the Movie Search page so that you can view popular mo
 Estimated Lab Time: 20 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create the Movie Search Page](videohub:1_stfhi958)
+[Create the Movie Search Page](videohub:1_x3bb4sv0)
 
 ### Objectives
 In this lab, you will:   
@@ -322,7 +322,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/about-page-designer.html)  
 

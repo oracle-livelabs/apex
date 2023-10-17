@@ -9,7 +9,7 @@ You will also need to sign up for an account on The Movie Database and obtain an
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create the Application](videohub:1_w4o026xl)
+[Create the Application](videohub:1_wnfxin31)
 
 ### Objectives
 In this lab, you will:  
@@ -130,7 +130,7 @@ In this lab, you will:
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
 

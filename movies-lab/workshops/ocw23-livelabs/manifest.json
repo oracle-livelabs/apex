@@ -13,7 +13,7 @@
       },
       {
         "title": "Sign Up for an APEX Workspace",
-        "filename": "../../../common/1-sign-up-apex/create-adb-livelabs.md"
+        "filename": "../../../common-latest/1-sign-up-apex/create-adb-livelabs.md"
       },
       {
         "title": "Lab 1: Create the Application",
@@ -24,19 +24,19 @@
           "filename": "../../2-creating-rest-sources/creating-rest-sources.md"
       },
       {
-        "title": "Lab 3: Create the Search Page",
+        "title": "Lab 3: Create the Movie Search Page",
         "filename": "../../3-creating-search-page/creating-movie-search-page.md"
       },
       {
-        "title": "Lab 4: Create the Details Page",
+        "title": "Lab 4: Create the Movie Details Page",
         "filename": "../../4-creating-details-page/creating-movie-details-page.md"
       },
       {
-        "title": "Lab 5: Create Local Tables",
+        "title": "Lab 5: Create Users and Watchlist Tables",
         "filename": "../../5-creating-tables/creating-tables.md"
       },
       {
-        "title": "Lab 6: Implement Buttons and Badges",
+        "title": "Lab 6: Implement Movie Details Buttons and Movie Search Badges",
         "filename": "../../6-creating-details-buttons/creating-buttons-badges.md"
       },
       {
@@ -47,6 +47,11 @@
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      },
+      {
+        "title": "Oracle CloudWorld 2023 - Support",
+        "description": "LiveLabs help during Cloud World",
+        "filename":"https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
       }
     ]
 }

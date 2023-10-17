@@ -5,6 +5,8 @@ This next lab is optional, but it would be fun and informative if a user were ab
 
 Estimated Lab Time: 5 minutes
 
+[Add Cast List to Movie Details Page](videohub:1_b96xa2op)
+
 ### Objectives
 In this lab, you will:  
 - Use the Movie Cast REST data source to add Cast Cards the Movie Details page.
@@ -83,7 +85,7 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 You have now improved the Movie Details page further by displaying a list of cast members along with the movie header and overview. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
 

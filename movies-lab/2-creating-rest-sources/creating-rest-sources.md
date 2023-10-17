@@ -6,7 +6,7 @@ This lab will walk you through how to create REST Data Sources that you will use
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create REST Data Sources](videohub:1_czyj8k85)
+[Create REST Data Sources](videohub:1_lfhqcopc)
 
 ### Objectives
 In this lab, you will:  
@@ -127,7 +127,7 @@ When you created the REST data sources from the REST Catalog, a new Web Credenti
 
 You now know how to create REST data sources from a REST Catalog in Oracle APEX and will be able to get data from The Movie Database to use for your application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
 

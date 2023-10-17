@@ -8,6 +8,7 @@ Once you have finished the workshop and updated all the products as described in
 ![The completed application snapshot](./images/creating-ac.png " ")
 
 Customers will be able to:
+
 - Review the product details
 - Add, edit, or remove the product from the shopping cart
 - Read the customer reviews
@@ -28,24 +29,35 @@ In this lab, you will:
 - Create a page that allows users to add and edit products in the Shopping Cart
 
 ## Task 1: Create a Modal Page
+
 Create a Modal Page to add products to the cart.
 
 1. Navigate to Create button and click **Page**.
      ![Toolbar in the page designer](./images/create-modal-page.png " ")  
+
 2. Select **Blank Page** and click **Next**.
 3. Enter the following and click **Next**.
+
     - Page Number - enter **18**
+
     - For Name - enter **Add to Cart**
+
     - For Page Mode - select **Modal Dialog**
+
 4. Click **Create Page**.
+
       ![Create Page wizard](./images/add-to-cart-page.png " ")
 
 ## Task 2: Add Cards Region for Product Details
+
 This region allows users to review the details of the product, such as brand, price, description, and more.
 
 1. In the new modal page created, navigate to the **Gallery Menu**.
+
 2. Drag a **Cards** region and drop it to the Content Body section.
-     ![Gallery menu in the Page Designer](./images/create-cards.png " ")  
+
+     ![Gallery menu in the Page Designer](./images/create-cards1.png " ")
+
 3. In the Property Editor, enter the following:
     - For Title, enter **Product**
     - Under Source section:
@@ -81,7 +93,6 @@ This region allows users to review the details of the product, such as brand, pr
         ![Property Editor](./images/template-options.png " ")
 
 4. Click **Attributes** and enter the following:
-     
 
     - Under Appearance section:
         - For Layout - select **Float**
@@ -98,7 +109,7 @@ This region allows users to review the details of the product, such as brand, pr
     - Under Secondary Body section:    
         - Set Advanced Formatting to **On**.
         - For HTML Expression - enter the following:
-            
+
             ```
             <copy>
             Price: &UNIT_PRICE.
@@ -111,18 +122,25 @@ This region allows users to review the details of the product, such as brand, pr
         - For Position - select **First**
         - For Appearance - select **Auto**
         - For Sizing - select **Fit**
+
           ![Property Editor](./images/attributes3.png " ")
     - Under Card section:
-        - For Primary Key Column 1 - select **PRODUCT_ID**    
+        - For Primary Key Column 1 - select **PRODUCT_ID**
+
           ![Property Editor](./images/attributes4.png " ")
-          
+
 ## Task 3: Add Cards Region for Customer Reviews
+
 This region lets users read the customer reviews for a product.
 
 1. Navigate to the **Gallery Menu**.
+
 2. Drag a **Cards** region and drop it to the Content Body section under the **Product** region.
+
      ![cards region in Content](./images/create-cards2.png " ")  
+
 3. In the Property Editor, enter the following:
+
     - For Title - enter **Customer Reviews**
     - Under Source section:
         - For **Type** - select **SQL Query**
@@ -142,15 +160,16 @@ This region lets users read the customer reviews for a product.
     - Under Appearance section:
         - For Template - select **Standard**
         ![properties](./images/cr-properties.png " ")
+        
 4. Click **Attributes** and enter the following:
-       
+
     - Under Appearance section:
         - For Layout - select **Horizontal (Row)**
 
     - Under Title section:
         - Set Advanced Formatting to **On**
         - For HTML Expression - enter the following:
-            
+
             ```
             <copy>
             <b>Review:</b> &REVIEW. <br>
@@ -161,7 +180,7 @@ This region lets users read the customer reviews for a product.
     - Under Messages:
         - For When No Data Found - enter **There are no customer reviews yet.**
      ![attributes](./images/cr-attributes.png " ")
-     
+
 ## Task 4: Add Items and Buttons
 In this task, you will create four-page items:
 - **PRODUCT_ID**: To get the product ID
@@ -261,7 +280,7 @@ In this task, you will create four-page items:
 In this Task, you will call the *manage\_orders.add_product* procedure that will add the product temporarily in the APEX collection.
 
 1. In the Rendering tree (left pane), navigate to **Processing** tab.  
-        
+
 2. Right click **Processing** and click **Create Process**.
      ![Processing Tab in the Page Designer](./images/create-process.png " ")   
 3. In the Property Editor, enter the following:
@@ -283,7 +302,7 @@ In this Task, you will call the *manage\_orders.add_product* procedure that will
 
     - Under Server-side Condition section:
         - For When Button Pressed - select **Add**
-    
+
     ![Property Editor](./images/create-process2.png " ")      
 
 ## Task 7: Add Process to Edit Products in the Shopping Cart
@@ -311,7 +330,7 @@ In this Task, you will call the *manage\_orders.remove\_product* and *manage\_or
 
     - Under Server-side Condition section:
         - For When Button Pressed, select **Edit**
-      
+
     ![Property Editor](./images/edit-process.png " ")
 
 ## Task 8: Add Process to Delete Products from the Shopping Cart
@@ -337,9 +356,9 @@ In this Task, you will call the *manage\_orders.remove\_product* to remove the p
 
     - Under Server-side Condition section:
         - For When Button Pressed - select **Delete**    
-        
+
       ![Property Editor](./images/delete-process.png " ")
-      
+
 ## Task 9: Add Process to Calculate the Shopping Cart Items
 In this task, you will call the *manage\_orders.get\_quantity* to get the total of products in the shopping cart.
 
@@ -364,16 +383,16 @@ After the customer has taken action (add/edit/delete) about the product, the mod
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
-     
+
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Name - enter **Close Dialog**
         - For Type - select **Close Dialog**
     - Under Settings section:
         - For Items to Return - enter **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY**
-      
+
     ![Property Editor](./images/close-dialog.png " ")  
-      
+
 ## Task 11: Enhance the Modal Page
 
 1. Navigate to **Rendering** tab (left pane).
@@ -389,7 +408,7 @@ After the customer has taken action (add/edit/delete) about the product, the mod
      ![Property Editor](./images/enhance-modal.png " ")     
 
 4. Click **Save**.
-    
+
     ![Save button in Page Designer](./images/save-page.png " ")
 
 
@@ -399,4 +418,4 @@ You now know how to customize and enhance an APEX page. You may now **proceed to
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

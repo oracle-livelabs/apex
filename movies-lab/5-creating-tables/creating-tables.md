@@ -6,7 +6,7 @@ Up to this point, most of the work has revolved around implementing REST data so
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create Users and Watchlist Tables](videohub:1_u9hl1p4v)
+[Create Users and Watchlist Tables](videohub:1_rrs5gczn)
 
 ### Objectives
 In this lab, you will:  
@@ -202,7 +202,7 @@ You will need a table to store some basic movie information in addition to the u
 
 You now know how to use Quick SQL to define new tables, and create application items and processes to store information and at specific points in your app. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 

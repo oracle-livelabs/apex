@@ -71,7 +71,7 @@ In this lab, you will:
         <copy>atpworkshop</copy>
         ```
 
-3. Make sure you select **Transaction Processing** and **Shared Infrastructure**.
+3. Make sure you select **Transaction Processing** and **Serverless Infrastructure**.
 
     ![ATP Creation](./images/atp_creation_1_2.png)
 

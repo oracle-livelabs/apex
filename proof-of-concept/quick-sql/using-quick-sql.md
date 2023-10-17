@@ -79,7 +79,7 @@ Quick SQL provides an easy way to generate the SQL required to create a relation
 So far you have defined some basic tables and used the defaults, however, there are numerous directives and data types you can add to the shorthand to improve the SQL generated.
 
 1. Click **Help**   
-    Click **Table Directives**
+   Click **Table Directives**
 
     ![](images/table-directives.png " ")
 
@@ -157,6 +157,8 @@ You can define numerous settings to further improve the generated SQL. You can c
 
     ![](images/settings.png " ")
 
+    ![](images/settings1.png " ")
+
     The generated SQL has changed markedly. The table names are updated, there are additional columns, and updated triggers.
 
     ![](images/post-settings.png " ")
@@ -213,12 +215,11 @@ You can define numerous settings to further improve the generated SQL. You can c
     view project_tasks projects tasks
     </copy>
     ```
+  Click **Generate SQL**
 
-    Click **Generate SQL**
+  ![](images/copy-paste.png " ")
 
-    ![](images/copy-paste.png " ")
-
-    *{Note: The full shorthand defines all of the required settings. It also includes additional columns on many of the tables, and additional directives and data types. There is also a view defined.}*
+  *{Note: The full shorthand defines all of the required settings. It also includes additional columns on many of the tables, and additional directives and data types. There is also a view defined.}*
 
 ## Task 7: Implement the Script
 At this stage you have created a list of SQL statements. However, you first need to save the statements as a script file and then run the script. This will create the database objects and insert the data.
@@ -238,12 +239,12 @@ At this stage you have created a list of SQL statements. However, you first need
 
 4. On the Run Script page, click **Run Now**.
 
-    ![](images/lcdlab2step7part4.png " ")
+    ![](images/run-now.png " ")
 5. The Script Results page will be displayed listing the statements processed, successful, and with errors.
 
     ![](images/results.png " ")
 
-    *{Note: If you do not see 217 statements processed then return to Quick SQL and click _Generate SQL_, resave the script and then run it again. If you do not see 217 successful, then review the errors displayed in Feedback within the results.}*
+    *{Note: If you do not see 223 statements processed then return to Quick SQL and click _Generate SQL_, resave the script and then run it again. If you do not see 223 successful, then review the errors displayed in Feedback within the results.}*
 
 ## **Summary**
 You now know how to utilize Quick SQL to build complex data structures, complete with sample data.
@@ -252,4 +253,4 @@ You now know how to utilize Quick SQL to build complex data structures, complete
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Salim Hlayel, Principle Product Manager, November 2020
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
