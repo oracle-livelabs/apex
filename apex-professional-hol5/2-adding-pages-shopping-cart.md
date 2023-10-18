@@ -333,8 +333,12 @@ This region allows users to review the details of the product, such as brand, pr
 
     ![](./images/create-cards-region11.png " ")
 
+    Under Appearance Section:
+
     - For Template Options - check **Use Template Defaults**
+
     - For **Style** - select **Style C**
+
     - Click **Ok**
 
     ![](./images/create-cards-region12.png " ")

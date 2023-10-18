@@ -24,7 +24,7 @@ In this lab, you will:
 
     ![Create an Application](images/create-app.png " ")
 
-3.  Click **New Application**.
+3.  Click **Use Create App Wizard**.
 
     ![New Application](./images/click-new-application.png " ")
 
@@ -185,7 +185,7 @@ Click **Run Application**.
 
 ## Task 9: Run the Application
 
-1. Enter your user credentials. Click **Sign In**.
+1. Enter your Credentials. Click **Sign In**.
 
     ![Online shopping application Sign In](./images/sign-in2.png " ")
 

@@ -32,22 +32,21 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
-
    Under **Page Definition**:
 
-        - For Page Number : Enter **4**.
+    - For Page Number : Enter **4**.
 
-        - For Page Name : Enter **Project Tasks**  
+    - For Page Name : Enter **Project Tasks**  
 
    Under **Data Source**:
 
-        - For **Table/View Name** : Select **DEMO_PROJECTS**.
+    - For **Table/View Name** : Select **DEMO_PROJECTS**.
 
    Under **Navigation**
 
-        - For **Breadcrumb** : Set it to **No**.
+    - For **Breadcrumb** : Set it to **No**.
 
-    Click **Create Page**.
+   Click **Create Page**.
 
     ![](./images/create-ig-2.png " ")
 
@@ -109,7 +108,7 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
     ![](./images/cr-blank-page.png " ")
 
 3. For **Create a Blank Page**:
-
+    - For Page Number: Enter **3**
     - For Name: Enter **Project Task Status**
     - Leave the remaining details to defaults.
     - Click **Create Page**.
@@ -125,11 +124,11 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
       - For Title : Enter **Project Task Status**
 
-      - For Page : Select **Content Row**
+      - For Type : Select **Content Row**
 
     Under **Source**:
 
-      - For Table Source : Select **DEMO_/PROJECTS**
+      - For Table Source : Select **DEMO\_PROJECTS**
 
       ![](./images/cr-region-details.png " ")
 
@@ -139,11 +138,11 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
      - For Overline : Select **PROJECT**
 
-     - For Title : Select **TASK_/NAME**
+     - For Title : Select **TASK\_NAME**
 
-     - For Description : Enter **Task Assigned To: &ASSIGNED_/TO.**
+     - For Description : Enter **Task Assigned To: &ASSIGNED\_TO.**
 
-     - For Miscellaneous: Enter **Cost: &cost.**
+     - For Miscellaneous: Enter **Cost: &COST.**
 
     ![](./images/cr-attributes.png " ")
 
@@ -161,7 +160,7 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
      - For Value : Select **STATUS**
 
-     - For State : Select **ASSIGNED_/TO**
+     - For State : Select **ASSIGNED\_TO**
 
   ![](./images/cr-attributes2.png " ")
 

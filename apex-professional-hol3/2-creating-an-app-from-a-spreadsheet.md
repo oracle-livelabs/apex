@@ -13,13 +13,13 @@ Estimated Time: 10 minutes
 
 1.  From your APEX workspace home page, click **App Builder**.
 
-2.  Click **Create a New App**.
+2.  Click **Create**.
 
     ![Create Application](images/create-app1.png " ")
 
 3.  Select **Create App From a File**.
 
-    ![Create application from a file](images/from-a-file1.png " ")
+    ![Create application from a file](images/from-a-file.png " ")
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
@@ -33,7 +33,7 @@ Estimated Time: 10 minutes
 
 6.  Review the parsed data. Enter **DEMO_PROJECTS** for Table Name and Click **Load Data**.
 
-    ![Select Demo_projects table](images/new-table-name1.png " ")
+    ![Select Demo_projects table](images/new-table-name.png " ")
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 

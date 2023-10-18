@@ -58,7 +58,7 @@ Estimated Time: 15 minutes
 
 7. To view the database objects that were created, click the arrow  **'⌄'** in the **SQL Workshop** tab and then select **Object Browser**.
 
-    ![Select Object Browser1](images/navigate-to-object-browser4.png " ")
+    ![Select Object Browser](images/navigate-to-object-browser5.png " ")
 
 8. Select the **EMPLOYEES** table and then Click the **Data** tab to see the data that was loaded.
 
