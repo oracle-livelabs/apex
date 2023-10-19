@@ -24,15 +24,15 @@
       "filename": "../../lab-1-provision-adw/provision.md"
     },
     {
-      "title": "Lab 2: Create Data Science Notebook",
+      "title": "Lab 2: Create an OCI Data Science Notebook",
       "filename": "../../lab-2-data-science-setup/data-science-setup.md"
     },
     {
-      "title": "Lab 3: Setup the Data Science Notebook",
+      "title": "Lab 3: Create and Trigger a Job",
       "filename": "../../lab-3-data-science/data-science.md"
     },
     {
-      "title": "Lab 4: Creating the APEX Application",
+      "title": "Lab 4: Build and Launch APEX",
       "filename": "../../lab-4-apex/apex.md"
     },
     {
