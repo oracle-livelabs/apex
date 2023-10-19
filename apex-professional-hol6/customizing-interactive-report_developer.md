@@ -19,12 +19,25 @@ In this lab, you:
 ## Task 1: Customize an Interactive report as a Developer
 
 In this lab, you edit an interactive report in page designer and customize it for end users.
-1. First, view the Interactive Report in page designer. In the Developer Toolbar,
+
+1. On the Workspace home page, click the App Builder icon. Select **Sample Reporting** Application.
+
+    ![Select Sample Reporting](images/sample-reporting.png " ")
+
+2. Click **Run Application**.
+
+    ![Run Sample Reporting](images/run-sample-reporting.png " ")
+
+3. Select **Interactive Report**.
+
+    ![Click Interactive Report](images/select-sample-reporting.png " ")
+
+4. First, view the Interactive Report in page designer. In the Developer Toolbar,
    click **Edit Page \<n\>**.
 
     ![](images/click-page1.png " ")  
 
-2. When the end users click an edit icon for a specified row, they should be directed to a page which shows the column values for that row. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to single row view.
+5. When the end users click an edit icon for a specified row, they should be directed to a page which shows the column values for that row. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to single row view.
     a) Under Rendering, navigate to **Projects** Interactive Report and then on the Property Editor select **Attributes**. Under **Link**, for **Link Column**, select **Link to Single Row View**. Click **Save and Run Page**.
 
     ![](images/change-srw.png " ")
@@ -37,7 +50,7 @@ In this lab, you edit an interactive report in page designer and customize it fo
 
     ![](images/view-srw2.png " ")
 
-3. The current pagination type of the interactive report is **Row Ranges X to Y**. Suppose you want to always show your end users the total number of rows in the report as part of the pagination display. In the Developer Toolbar, click **Edit Page \<n\>**.  
+6. The current pagination type of the interactive report is **Row Ranges X to Y**. Suppose you want to always show your end users the total number of rows in the report as part of the pagination display. In the Developer Toolbar, click **Edit Page 1**.  
 
     a) Under Rendering, navigate to **Projects** Interactive Report and select **Attributes** in the **Property Editor**.  
 
@@ -45,7 +58,7 @@ In this lab, you edit an interactive report in page designer and customize it fo
 
     ![](images/change-pagination.png " ")
 
-4. You want to customize the display of the Search Bar. End users should be able to select the display of desired number of rows per page.  
+7. You want to customize the display of the Search Bar. End users should be able to select the display of desired number of rows per page.  
     In the property editor, locate **Search Bar** under **Attributes**. Perform the following:
 
     - Enable Rows Per Page Selector.
@@ -53,23 +66,23 @@ In this lab, you edit an interactive report in page designer and customize it fo
 
     ![](images/enable-rpp.png " ")
 
-5. You want to disable the Email in the Download option of the Actions menu. In the property editor, navigate to Download. Deselect **Send as Email** download format.
+8. You want to disable the Email in the Download option of the Actions menu. In the property editor, navigate to Download. Deselect **Send as Email** download format.
 
-6. You want to enable the **Excel** and **PDF** formats in the Download option of the **Actions** menu. In the property editor, navigate to Download. Select **Excel** and **PDF** download formats.
+9. You want to enable the **Excel** and **PDF** formats in the Download option of the **Actions** menu. In the property editor, navigate to Download. Select **Excel** and **PDF** download formats.
 
     ![](images/disable-email1.png " ")
 
-7. Now that you finished the customization for end users, click **Save** and **Run Page**.
+10. Now that you finished the customization for end users, click **Save** and **Run Page**.
 
-8. Notice that the **row selector** and the **New pagination type** are available on the report.
+11. Notice that the **row selector** and the **New pagination type** are available on the report.
 
     ![](images/run-ir13.png " ")
 
-9. Select **Actions** > **Report** > **Save Report**.
+12. Select **Actions** > **Report** > **Save Report**.
 
     ![](images/save-report2.png " ")
 
-10. The Save Report dialog displays. Notice that the **Public** check box is now available. Perform the following:
+13. The Save Report dialog displays. Notice that the **Public** check box is now available. Perform the following:
 
     - For Save, select **As Named Report**
     - For **Name**, enter **Projects Public Report**
@@ -79,19 +92,19 @@ In this lab, you edit an interactive report in page designer and customize it fo
 
     ![](images/save-report4.png " ")
 
-11. This report is now saved as a public report for all users and is available in the Reports drop down list.
+14. This report is now saved as a public report for all users and is available in the Reports drop down list.
 
     ![](images/view-public-report.png " ")
 
-12. Click **Actions** > **Download**.
+15. Click **Actions** > **Download**.
 
-13. Notice that the **Excel** and **PDF** formats are available. Click **Close** icon.
+16. Notice that the **Excel** and **PDF** formats are available. Click **Close** icon.
 
     ![](images/view-download1.png " ")
 
     ![](images/save-report5.png " ")
 
-14. From the Reports drop down list, select **Primary Report**.
+17. From the Reports drop down list, select **Primary Report**.
 
 ## Summary
 
@@ -99,6 +112,5 @@ You now know how to Manage and Customise the Interactive report as a developer. 
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

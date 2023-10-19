@@ -45,11 +45,9 @@ In this lab, you:
     ![](images/select-columns1.png " ")
 
     c) You can reorder the displayed columns using the arrows on the far right.
-       Select **Status** in the Display in Report group and click the Down arrow once. Then, click **Apply**.
+    Select **Status** in the Display in Report group and click the Down arrow once. Then, click **Apply**.
 
     ![](images/select-columns3.png " ")
-
-    ![](images/select-columns2.png " ")
 
     d) The interactive report is displayed with the changes made in the above steps.
 
@@ -63,9 +61,10 @@ In this lab, you:
 
     b) For Filter Type, Select the following:
 
-    - For **Column**, select **Cost**
-    - For **Operator**, select **<=**
-    - For **Expression**, enter **2000**   
+    - For **Column**: Select **Cost**
+    - For **Operator**: Select **<=**
+    - For **Expression**: Enter **2000**
+
     Then, click **Apply**.
 
     ![](images/create-filter1.png " ")
@@ -76,9 +75,10 @@ In this lab, you:
 
    d) In the Filter Dialog, select the following:
 
-    - For Column, select **Project**
-    - For Operator, select **=**
-    - From the Expression list, select **Bug Tracker**
+    - For Column: Select **Project**
+    - For Operator: Select **=**
+    - From the Expression list: Select **Bug Tracker**
+
     Click **Apply**.
 
     ![](images/create-filter2.png " ")
@@ -127,8 +127,9 @@ In this lab, you:
     ![](images/select-compute1.png " ")
 
     b) The Compute dialog appears.  
-       - For Column Label, enter **Cost with Tax**.  
-       - For Computation Expression, click **Cost** under Columns alias. Click *1.05 under Keypad.  
+      - For Column Label: Enter **Cost with Tax**.  
+      - For Computation Expression: Click **Cost** under Columns alias. Click *1.05 under Keypad.
+
       Click **Apply**.
 
     ![](images/create-compute1.png " ")
@@ -157,10 +158,21 @@ In this lab, you:
 
     ![](images/select-highlight.png " ")
 
-    b) In the Highlight dialog, enter **Cost less than or equals 500** for Name.  
-       Select **Green** for Background Color and **Black** for Text Color.  
-       For Highlight Condition: Select **Cost** column, and **<=** Operator. Enter  **500** for Expression.  
-       Click **Apply**.
+    b) In the Highlight dialog,
+
+       - For **Name**: Enter **Cost less than or equals 500**
+
+       - For **Background Color**: Enter **#d0f1cc**
+
+       - For **Text Color**: Enter **#0000000**
+
+       - For **Column**: Select **Cost**
+
+       - For **Operator**: Select **<=**
+
+       - For **Expression**: Enter **500**
+
+      Click **Apply**.
 
     ![](images/create-highlight1.png " ")  
 
@@ -171,13 +183,11 @@ In this lab, you:
 
 11. Now, You want to control the number of rows to display in your **Interactive Report** page.
 
-    a) Select **Actions** > **Format** > **Rows Per Page** > **50**.
+    a) Select **Actions** > **Format** > **Rows Per Page** > **5**.
 
     ![](images/select-rpp.png " ")
 
-    b) Notice that the **Rows Per Page** in your Interactive Report is now **1-50**.
-
-    ![](images/run-ir8.png " ")
+    b) Notice that the **Rows Per Page** in your Interactive Report is now **1-5**.
 
 12. In your interactive report, you want to include a Chart to display the Average **Cost** for each **Project**. Your interactive report should include both the Report and Chart views to toggle.
 
@@ -186,10 +196,11 @@ In this lab, you:
     ![](images/select-chart1.png " ")
 
     b) In the Chart dialog, select / enter the following:  
-      • Chart Type: **Bar**  
-      • Label: **Project**  
-      • Value: **Cost**  
-      • Function: **Average**  
+      - For Chart Type: Select **Bar**  
+      - For Label: Select **Project**  
+      - For Value: Select **Cost**  
+      - For Function: Select **Average**  
+
       Click **Apply**.
 
     ![](images/create-chart1.png " ")
@@ -205,12 +216,13 @@ In this lab, you:
     ![](images/select-groupby.png " ")    
 
     b) In the Group By dialog enter / select the following:  
-      • Group By Column: **Project**  
-      • Function: **Sum**  
-      • Column: **Budget**  
-      • Label: **Total Budget**  
-      • Format Mask: Select **$5,324.10** from the Format Mask list of example formats.
-      Make sure you enable Sum and click **Apply**.
+      - For Group By Column: Select **Project**  
+      - For Function: Select **Sum**  
+      - For Column: Select **Budget**  
+      - For Label: Enter **Total Budget**  
+      - For Format Mask: Select **$5,324.10** from the Format Mask list of example formats.
+
+      Make sure you **Enable Sum** and click **Apply**.
 
     ![](images/create-groupby.png " ")   
 
@@ -229,12 +241,13 @@ In this lab, you:
     ![](images/select-pivot.png " ")
 
     b)  In the Pivot dialog enter / select:  
-       - Pivot Columns: **Assigned To**
-       - Row Columns: **Project**
-       - Functions: **Sum**
-       - Column: **Cost** and **Budget**
-       - Label: **Total Cost** and **Total Budget**
+       - For Pivot Columns: Select **Assigned To**
+       - For Row Columns: Select **Project**
+       - For Functions: Select **Sum**
+       - For Column: Select **Cost** and **Budget**
+       - For Label: Select **Total Cost** and **Total Budget**
        - Set **Sum** to **Yes**.
+
       Click **Apply**.
 
     ![](images/create-pivot1.png " ")
@@ -296,6 +309,6 @@ In the next hands-on lab, you learn how to customise Interactive Grid as a devel
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Contributor** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
