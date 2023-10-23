@@ -1,6 +1,6 @@
 {
     "workshoptitle": "Manage Offensive Behavior Using AI Language, Speech, and Video with Oracle APEX",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "help": "piotr.kurzynoga@oracle.com",
     "include": {
         "adb-goto-service-body.md":"https://oracle-livelabs.github.io/common/building-blocks/tasks/adb/goto-service-body.md",
         "adb-provision-body.md":"https://oracle-livelabs.github.io/common/building-blocks/tasks/adb/provision-body.md"
