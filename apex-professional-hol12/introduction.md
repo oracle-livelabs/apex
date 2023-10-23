@@ -12,7 +12,7 @@ Estimated Time: 10 minutes
 
 * Create and Customize a **Form**.
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

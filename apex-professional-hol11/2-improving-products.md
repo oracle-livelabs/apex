@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to improve the Products page by adding new facets and customizing the cards.
+In this lab, you learn how to improve the Products page by adding new facets and customizing the cards.
 
 
 *Please note that customer can quickly identify the products that already have been added to the shopping cart.*

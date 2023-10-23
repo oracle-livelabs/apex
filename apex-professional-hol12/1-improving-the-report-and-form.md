@@ -1,7 +1,7 @@
 # Create and Use Forms
 
 ## Introduction
-In this lab, you will learn how to Create and Customize a Form and then you will link the form to an Interactive Report
+In this lab, you learn how to Create and Customize a Form and then you link the form to an Interactive Report
 
 Estimated Time: 20 minutes
 
@@ -44,22 +44,11 @@ Estimated Time: 20 minutes
 
 ## Task 2: Link a Report to a Form
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application** and run **Application**. From the runtime application, navigate to the **Manage Products** page in **Page Designer**.
-
-    Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
-    *{Note: End users who log directly into the app will not see this toolbar.}*
-
-    In the Developer Toolbar click **Page 14**.
-
-    ![Navigate To Administration](./images/navigate-to-mp1.png " ")
+1. Navigate to the **Page Designer**. Then, Click **Page 14**
 
     ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
 
-2. In the Rendering tree (left pane), navigate to **Products**.
-
-    ![Navigate to Products in page designer](./images/linking-a-form1.png " ")
-
-3. In the Property Editor (right pane), click **Attributes** and do the following:
+2. In the Rendering tree (left pane), navigate to **Products**. Click **Attributes** and do the following:
 
     - Under **Link**:
       -   For Link Column - select **Link to a Custom Target**
@@ -78,9 +67,9 @@ Estimated Time: 20 minutes
 
     ![Link a column](./images/linking-a-form2.png " ")
 
-4. Click **Save** and then reload the **Manage Products** page in the runtime environment.
+3. Click **Save** and then run the application. Navigate to the **Manage Products** page in the runtime environment.
 
-5. Now, In the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
+4. Now, In the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
 
   ![Click Pencil icon](./images/refresh-manage-products.png " ")
 
@@ -88,7 +77,7 @@ Estimated Time: 20 minutes
 
 ## Task 3: Enhance the Form
 
-1.  Navigate to the **Page 21** in the **App Builder**. Then Click on **P21\_PRODUCT\_NAME** in the Rendering Tree. Now, change the Identification Type to **Text Field** in the Property Editor.
+1.  Navigate to the **Page 21** in the **App Builder**.
 
     ![Navigate to Page 21](images/navigate-to-page21.png " ")
 
@@ -116,8 +105,12 @@ Estimated Time: 20 minutes
 
 You now know how to Create and Customize a Form and then link the form to an Interactive Report. You may now **proceed to the next lab**.
 
+## What's next
+
+In the next lab, you learn how to make some pages publicly accessible, allowing users to access specific pages in your application without requiring them to log in.
+
 ## Acknowledgements
 
- - **Author/Contributors** -  Roopesh Thokala, Product Manager
+ - **Author/Contributors** -  Roopesh Thokala, Senior Product Manager
  - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
