@@ -5,9 +5,11 @@
 This Hands-on Lab is a collection of Nine tasks. After completing this lab, your application will enable customers to:
 
 - Dynamic Actions to manage the Shopping Cart
+- Update the badge and icon shown in the navigation bar after the customer has added / edited / removed a product from the shopping cart
+- Refresh the shopping cart region
 - Review the product details
+- Review the items added to the Shopping Cart.
 - Add, edit, or remove the product from the shopping cart
-- Read the customer reviews
 
 Estimated Time: 20 minutes
 
@@ -27,16 +29,13 @@ In this task, you will create a dynamic actions to:
 
 1. Go to **Shopping Cart** page (Page No 16) in the page designer.
 
-     ![](./images/open-page-16.png " ")
+     ![Open Page 16](./images/open-page-16.png " ")
 
-2. Navigate to **Dynamic Actions** tab (left pane).
+2. Navigate to **Dynamic Actions** tab (left pane). Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![](./images/navigate-to-dynamic-action.png " ")  
+     ![Create a Dynamic Action](./images/create-dynamic-action1.png " ")  
 
-3. Right-click **Dialog Closed** and click **Create Dynamic Action**.
-
-     ![](./images/create-dynamic-action1.png " ")  
-4. In the Property Editor, enter the following:    
+3. In the Property Editor, enter the following:    
     - Under Identification section:
         - For Name - enter **Update Shopping Cart Header**
     - Under When section:        
@@ -53,9 +52,9 @@ In this task, you will create a dynamic actions to:
             </copy>
             ```
 
-  ![](./images/create-da2.png " ")
+  ![Add Dynamic Action Properties](./images/create-da2.png " ")
 
-5. Navigate to **Refresh** Action.
+4. Navigate to **Refresh** Action.
     - Under Identification section:
         - For Name - enter **Update Badge & Icon**
         - For Action - select **Execute JavaScript Code**
@@ -72,24 +71,25 @@ In this task, you will create a dynamic actions to:
             </copy>
             ```
 
-  ![](./images/create-da3.png " ")
+  ![Add a True Action](./images/create-da3.png " ")
 
-6. Create a second action. In the Dynamic Actions tab (left pane), navigate to **True** under **Update Shopping Cart Header** Dynamic Action.
+5. Create a second action. In the Dynamic Actions tab (left pane), navigate to **True** under **Update Shopping Cart Header** Dynamic Action.
 
-     ![](./images/create-2da.png " ")
-7. In the Property Editor, enter the following:  
+     ![Create Second True Action](./images/create-2da.png " ")
+
+6. In the Property Editor, enter the following:  
     - Under Identification section:
         - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
     - Under Affected Elements section:          
         - For Selection Type - select **Region**
         - For Region - select **Shopping Cart**          
-8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Update Badge & Icon** action.
-9. Right-click  **Update Badge & Icon** action and click **Create Opposite Action**.
+7. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Update Badge & Icon** action.
+8. Right-click  **Update Badge & Icon** action and click **Create Opposite Action**.
 
-     ![](./images/create-opp-action.png " ")
+     ![Create Opposite or False Action](./images/create-opp-action.png " ")
 
-10. Navigate to **Update Badge & Icon** Action under the False heading.
+9. Navigate to **Update Badge & Icon** Action under the False heading.
     - Under Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
@@ -105,13 +105,13 @@ In this task, you will create a dynamic actions to:
             </copy>
             ```
 
-    ![](./images/create-opp-action2.png " ")
+    ![Create a False Action](./images/create-opp-action2.png " ")
 
-11. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action.
+10. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action.
 
-    ![](./images/create-false-action.png " ")
+    ![Create a second False Action](./images/create-false-action.png " ")
 
-12. In the Property Editor, enter the following:  
+11. In the Property Editor, enter the following:  
     - Under Identification section:
         - For Name - enter **Refresh Shopping Cart region**
         - For Action - select **Refresh**
@@ -119,7 +119,9 @@ In this task, you will create a dynamic actions to:
         - For Selection Type - select **Region**
         - For Region - select **Shopping Cart**
 
-13. Click **Save**.
+    ![Add Properties to the second False Action](./images/create-false-action1.png " ")
+
+12. Click **Save**.
 
 ## Task 2: Format Products Image Size
 
@@ -137,7 +139,7 @@ In this task, you will create a dynamic actions to:
             </copy>
             ```
 
-  ![](./images/inline-css.png " ")             
+  ![Add Inline CSS to the Page](./images/inline-css.png " ")             
 
 3. Click **Save**.
 
@@ -145,12 +147,12 @@ In this task, you will create a dynamic actions to:
 ## Task 3: Add Computation to Calculate the Number of Items for a Product
 1. Navigate to **Page Finder** and click on **File symbol**. Then in the popup  **Page Finder**, Select **Page 17**.
 
-    ![](./images/navigate-to-page17.png " ")
+    ![Navigate to Page 17](./images/navigate-to-page17.png " ")
 
 2. In the Rendering tree (left pane), expand the **Pre-Rendering**.
 3. Right-click **Before Regions** and click **Create Computation**.
 
-     ![](./images/create-computation1.png " ")  
+     ![Create a Computation](./images/create-computation1.png " ")  
 
 4. In the Property Editor, enter the following:
     - Under Identification section:
@@ -165,18 +167,18 @@ In this task, you will create a dynamic actions to:
         </copy>
         ```
 
-    ![](./images/create-computation2.png " ")          
+    ![Add Properties to the Computation](./images/create-computation2.png " ")          
 
 ## Task 4: Create a Process to Add Products to the Shopping Cart
 In this Task, you call the *manage\_orders.add_product* procedure that will add a product temporarily in the APEX collection.
 
 1. In the Rendering tree (left pane), navigate to **Processing** tab.  
 
-     ![](./images/navigate-to-sc1.png " ")    
+     ![Navigate to Processing Tab](./images/navigate-to-sc1.png " ")    
 
 2. Right click **Processing** and click **Create Process**.
 
-     ![](./images/create-process21.png " ")   
+     ![Create Page Process](./images/create-process21.png " ")   
 
 3. In the Property Editor, enter the following:
     - For Name - enter **Add product**
@@ -195,7 +197,7 @@ In this Task, you call the *manage\_orders.add_product* procedure that will add 
         </copy>
         ```
 
-  ![](./images/create-process22.png " ")  
+  ![Add Properties to Page Process](./images/create-process22.png " ")  
 
     - Under Server-side Condition section:
         - For When Button Pressed - select **Add**
@@ -208,7 +210,7 @@ In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
 
-  ![](./images/navigate-to-sc2.png " ")
+  ![Navigate to Processing Tab](./images/navigate-to-sc2.png " ")
 
 3. In the Property Editor, enter the following:
     - For Name - enter **Edit product**
@@ -233,7 +235,7 @@ In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.
 
     Click **Save.**
 
-  ![](./images/create-process31.png " ")
+  ![Create Second Page process](./images/create-process31.png " ")
 
 ## Task 6: Create a Process to Delete Products from the Shopping Cart
 In this Task, you call the *manage\_orders.remove\_product* to remove a product from the shopping cart.
@@ -241,7 +243,7 @@ In this Task, you call the *manage\_orders.remove\_product* to remove a product 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
 
-     ![](./images/right-click-process3.png " ")  
+     ![Navigate to Processing Tab and Create Page Process](./images/right-click-process3.png " ")  
 
 3. In the Property Editor, enter the following:
     - For Name - enter **Delete product**
@@ -264,7 +266,7 @@ In this Task, you call the *manage\_orders.remove\_product* to remove a product 
 
         Click **Save.**
 
-  ![](./images/create-process41.png " ")
+  ![Create Third Page process](./images/create-process41.png " ")
 
 
 
@@ -273,7 +275,9 @@ In this task, you call the *manage\_orders.get\_quantity* to get the total numbe
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click  **Create Process**.
-     ![](./images/create-process-cart.png " ")  
+
+     ![Create Page Process](./images/create-process-cart.png " ")  
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Calculate Shopping Cart Items**
     - For Type - select **Execute Code**
@@ -288,7 +292,7 @@ In this task, you call the *manage\_orders.get\_quantity* to get the total numbe
         ```
 
   Click **Save.**
-![](./images/create-process51.png " ")
+![Create Fourth Page process](./images/create-process51.png " ")
 
 
 ## Task 8: Create a Process to Close the Modal Page
@@ -296,7 +300,7 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 1. In the **Processing** tab.    
 2. Right click **Processing** and click **Create Process**.
-     ![](./images/create-process-cart.png " ")  
+     ![Create Page process](./images/create-process-cart.png " ")  
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Name - enter **Close Dialog**
@@ -306,15 +310,14 @@ After the customer has taken an action (add/edit/delete) about the product, the 
 
 4. Click **Save.**
 
-    ![](./images/create-close-dialog.png " ")
+    ![Create Close Dialog Process](./images/create-close-dialog.png " ")
 
 ## Task 9: Enhance the Modal Page
 
 1. Navigate to **Rendering** tab (left pane).
 
-     ![](./images/rendering-tab.png " ")  
-
 2. In the rendering tree, select the root node in the component tree **Page 17: Add to Cart**
+
 3. In the Property Editor, do the following changes:
     - Under Identification section:
         For Title, enter **Manage Your Cart**
@@ -322,16 +325,20 @@ After the customer has taken an action (add/edit/delete) about the product, the 
         - For Width, enter **600**
         - For Height, enter **600**
 
-  ![](./images/enhance-modal.png " ")     
+  ![Enhance the Modal Page](./images/enhance-modal.png " ")     
 
 4. Click **Save**.
 
 ## Summary
 
-You now know how to add dynamic actions, Computations and Process to an APEX page. You may now **proceed to the next lab**.
+In this comprehensive hands-on lab, you master Dynamic Actions for efficient shopping cart management, including real-time badge and icon updates in the navigation bar. The lab also covers how to refresh the shopping cart region, review product details, and manage items in the cart through adding, editing, or removing products, creating a seamless and responsive user experience. You now know how to add dynamic actions, Computations and Process to an APEX page. You may now **proceed to the next lab**.
+
+## Whats Next:
+
+In the next lab, you focus on enhancing the Demo Projects application by customizing the Smart Filters page for tailored user experiences. You also work on improving both the Faceted Search and Cards region for better data interaction. Additionally, the integration of Dynamic Actions will add interactivity and efficiency to the page, optimizing the application's functionality.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2023
