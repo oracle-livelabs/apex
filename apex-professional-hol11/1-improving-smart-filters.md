@@ -39,7 +39,7 @@ The revised page appears.
 
     ![Show edit Filter](images/show-edit-filter1.png " ")
 
-6. Navigate back to **Page Designer**. Now, you set Budget filter as a input field that can be filtered, allowing you to input values and dynamically select the filter criteria.
+6. Navigate back to **Page Designer - Page 8** . Now, you set Budget filter as a input field that can be filtered, allowing you to input values and dynamically select the filter criteria.
 
 7. In the Rendering tree (left pane), under Search, within filters, select **P19\_BUDGET**.
 
@@ -51,9 +51,9 @@ The revised page appears.
 
     ![Enhance Facets](./images/enhance-facet1.png " ")
 
- Click **Save and Run**.
+  Click **Save and Run**.
 
- 8. In runtime environment, Select the **Budget** filter in the search bar. Select **greater than** and Enter **6000** in the input field. The results appear with budget greater than 6000.
+8. In runtime environment, Select the **Budget** filter in the search bar. Select **greater than** and Enter **6000** in the input field. The results appear with budget greater than 6000.
 
     ![Enhance Facets](./images/enhance-facet2.png " ")
 
