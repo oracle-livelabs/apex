@@ -121,7 +121,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
   Click **Save and Run Page**.
 
-    ![](./images/set-id-col-attributes11.png " ")
+    ![](./images/set-id-col-attributes111.png " ")
 
 
 ## Summary

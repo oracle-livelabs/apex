@@ -104,15 +104,6 @@ Unit price is not a common search criteria, so you want to put this facet at the
 
 2. Click **Attributes** and apply the following changes:
 
-    ![Edit Attributes](./images/change-attributes1.png " ")
-
-    - Under Appearance section:
-        - For Layout - select **Grid**
-        - For Grid Columns - select **Auto**
-
-    - Under Title section:
-        -   For Column - select **PRODUCT_NAME**
-
     - Under Subtitle section:
         - Set Advanced Formatting to **On**
         - For HTML Expression - enter the following:
@@ -138,7 +129,8 @@ Unit price is not a common search criteria, so you want to put this facet at the
         -   For Primary Key Column 1 - select **PRODUCT_ID**
 
       Click **Save.**
-        ![Add Primary key](./images/change-attributes2.png " ")        
+
+    ![Add Primary key](./images/change-attributes1.png " ")        
 
 ## Task 5: Create Actions
 Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
@@ -169,7 +161,6 @@ In this task, you will create two dynamic actions:
 - To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
 
 1. Navigate to **Dynamic Actions** tab (left pane).
-     ![Navigate to Dynamic Actions](./images/navigate-to-da.png " ")  
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
@@ -213,10 +204,12 @@ In this task, you will create two dynamic actions:
 6. In the Property Editor, enter the following:    
     - Under Identification section:
         - For Name - enter **Update Shopping Cart Header**
+
     - Under When section:        
         - For Event - select **Dialog Closed**
         - For Selection Type - select **Region**
-        - For Region - select **Search Results**     
+        - For Region - select **Search Results**
+
     - Under Client-side Condition:
         - For Type - select **JavaScript expression**
         - For JavaScript Expression, enter the following:
@@ -279,8 +272,12 @@ In this task, you will create two dynamic actions:
 
 You now know how to enhance faceted search and cards region. You may now **proceed to the next lab**.
 
+## What's next
+
+In the next lab, you learn how to Create and Customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
+
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

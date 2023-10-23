@@ -1,7 +1,7 @@
 # Improve Smart Filters
 
 ## Introduction
-In this lab, you will gain an insight into the abilities of Smart Filters, and learn how to add **New Filters** and Edit existing Filters
+In this lab, you gain an insight into the abilities of Smart Filters, and learn how to add **New Filters** and Edit existing Filters.
 
 Estimated Time: 10 minutes
 
@@ -21,7 +21,7 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
 
 2. Now, you run the application using **Run Application** icon. If prompted, enter your workspace username and password and click Sign In.
 
-    ![Run Application](images/run-application.png " ")
+    ![Run Application](images/run-application1.png " ")
 
 3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.      
 **Note** that your page number might be different.
@@ -58,7 +58,7 @@ Filters map to specific database column. When creating a new filter, you can cre
     - Under **List of Values**:
       - For Type, Select **Distinct Values**.
 
-  ![Create Filter2](images/create-filter1.png " ")
+  ![Create Filter2](images/create-filter10.png " ")
 
 3. Click **Save and Run Page** in the upper right corner. If prompted, enter your workspace username and password and click Sign In.
 The revised page appears.
@@ -69,6 +69,6 @@ You now know how to create smart filters and customize them. You may now **proce
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
