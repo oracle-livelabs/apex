@@ -98,7 +98,7 @@ The shopping cart page allows users to review and edit the products in the cart.
 
 1. Click on Application Home.  ***The ID of your application may vary***.
 
-    ![Page designer view](./images/create-page.png " ")
+    ![Page designer view](./images/create-page1.png " ")
 
 2. Click **Create Page**.    
 

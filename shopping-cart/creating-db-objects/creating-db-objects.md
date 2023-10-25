@@ -79,6 +79,8 @@ Create specification and body for the package.
 
    Click **Save and Compile**
 
+   ![New Package details page](./images/create-specification.png " ")
+
 6. Navigate to body part of the package by clicking on Body tab and enter the following:
 
     ```
@@ -244,4 +246,4 @@ You now know how to create a package to manage the shopping cart. In the followi
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
