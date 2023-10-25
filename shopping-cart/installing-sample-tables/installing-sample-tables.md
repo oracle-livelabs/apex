@@ -27,7 +27,7 @@ In this lab, you will:
 
 3. On the **Customer Orders** row, click Install.
 
-    ![Sample Datasets page](./images/select-sample-dataset.png " ")
+    ![Sample Datasets page](./images/select-sample.png " ")
 
 4. Click **Next**.
 
