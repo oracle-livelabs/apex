@@ -15,13 +15,9 @@ In this lab, you will:
 
 To define an email template:
 
-1. Navigate to the Shared Components page:
+1. Click Shared Components icon.
 
-    - On the Workspace home page, click **App Builder**.
-
-    - Select an **Expense Tracker** application.
-
-    - On the Application home page, click **Shared Components**.
+   ![Shared components ](./images/sc.png " ")
 
 2. Under User Interface Components, select **Email Templates**.
 
@@ -87,4 +83,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Ankita Beri, Product Manager
 - **Contributor** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
