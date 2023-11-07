@@ -33,9 +33,9 @@ In this Lesson, you will set the products page as Home page and then you will re
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
 
-    ![App Builder](images/navigate-to-osa1.png " ")
+    ![App Builder](images/navigate-to-osa11.png " ")
 
-    ![Online Shopping Application](images/navigate-to-osa2.png " ")
+    ![Online Shopping Application](images/navigate-to-osa22.png " ")
 
 2. Now, select **Shared Components**.
 
@@ -53,8 +53,6 @@ In this Lesson, you will set the products page as Home page and then you will re
 Navigate to **Shared Components**.
 
     ![Click on Application Id](./images/navigate-to-sc2.png " ")
-
-    ![Navigate to Shared components](./images/navigate-to-sc3.png " ")
 
 6. Under **Navigation**, Select **Navigation Menu**.
 
@@ -83,7 +81,7 @@ Follow these steps for the four listed pages:
 
     In the Developer Toolbar click **Edit Page 19**.
 
-    ![Navigate to Page 19](./images/navigate-to-page19.png " ")
+    ![Navigate to Page 19](./images/navigate-to-page191.png " ")
 
 2. Within Page Designer, in the Rendering tree (left pane), navigate to  **Page 19: Products**.
 
@@ -136,7 +134,7 @@ Add a new navigation bar entry to allow:
     ![Click Shared Components icon](./images/click-sc-icon1.png " ")
 2. Under Navigation, click **Navigation Bar List**.
 
-    ![Navigation Bar List](./images/navigation-bar.png " ")
+    ![Navigation Bar List](./images/navigation-bar01.png " ")
 
 3. Click **Navigation Bar**.
 
@@ -148,7 +146,7 @@ Add a new navigation bar entry to allow:
 
 5. In the **List Entry** page, enter the following and click **Create List Entry**.
 
-    ![Create Entry](./images/create-entry2.png " ")
+    ![Create Entry](./images/create-entry21.png " ")
 
     - For Sequence - enter **1**
     - For Image/Class - **&SHOPPING\_CART\_ICON.**
@@ -163,7 +161,7 @@ Add a new navigation bar entry to allow:
 
 7. Click **Create List Entry**.
 
-    ![Create List Entry](./images/create-entry3.png " ")
+    ![Create List Entry](./images/create-entry31.png " ")
 
 8. Click the **Pencil Icon** before **&APP_USER.**
 
@@ -199,4 +197,4 @@ You now know how to set page as public and manage Navigation bar and Navigation 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri,  Senior Product Manager, October 2023

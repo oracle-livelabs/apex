@@ -28,26 +28,20 @@ In this lab, you create a new application named Expense Tracker.
 
     ![Click Application Homepage Create Button](images/create-new-application.png " ")
 
-4. Click **New Application**
+4. For Name: Enter **Expense Tracker** and Click **Create Application**
 
     ![Select New Application ](images/click-new-application.png " ")
-
-5. In the Create an Application wizard, set Name to **Expense Tracker**.
-
-6. Click **Create Application** to create your app and go to the application home page.
-
-    ![Select New Application ](images/create-application-expense-tracker.png " ")
 
 ## Task 2: Create SQL Script
 In this lab, you create database objects using SQL Scripts.
 
 1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
 
-    ![Select Sql Workshop](./images/sql-workshop.png " ")
+    ![Select Sql Workshop](./images/sql-workshop11.png " ")
 
 2. Click **Create**. The Script Editor appears.
 
-    ![Create SQL Scripts](./images/create-sql-scripts.png " ")
+    ![Create SQL Scripts](./images/create-sql-scripts1.png " ")
 
 3. In the Script Name, enter a name for the script - **Employee details and Expense status**
 
@@ -115,8 +109,6 @@ In this lab, you create database objects using SQL Scripts.
 
    ![Click validate users](./images/create-valid-users.png " ")
 
-   ![Users created](./images/users-created.png " ")  
-
 ## **Summary**
 
 You now know how to create an application, run a SQL script and add users.
@@ -126,4 +118,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
    - **Author** - Ankita Beri, Product Manager
    - **Contributor** - Roopesh Thokala, Senior Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

@@ -19,7 +19,9 @@ Estimated Time: 15 minutes
 
 * Enhance the Navigation Bar
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+* Configure Search 
+
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 
