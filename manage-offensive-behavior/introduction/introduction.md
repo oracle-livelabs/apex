@@ -55,7 +55,7 @@ The workshop aims to build two use cases.
 
 ### APEX
 * **Workspace:** is a virtual private database which enables multiple users to work within the same APEX installation while keeping their objects, data and applications private
-* **ORDS:** is a Java EE-based alternative for Oracle HTTP server which allows a great deal of functionality including command line based deployment and configuration, enhanced security and most importantly RESTful Web Services.
+* **ORDS:** is a Java application that enables developers with SQL and database skills to develop REST APIs for the Oracle Database, the Oracle Database 12c JSON Document store, and the Oracle NoSQL Database. Any application developer can use these APIs from any language environment, without installing and maintaining client drivers, in the same way they access other external services using the most widely used API technology: REST.
 
 ### OCI Data Science
 
