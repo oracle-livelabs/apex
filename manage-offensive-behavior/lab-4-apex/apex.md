@@ -26,6 +26,7 @@ Before you start in APEX, let’s download the pre-built application first.
 1. Go to the GitHub repository https://github.com/phantompete/ocw_las_vegas
 2. Download the application by clicking on **OffensiveBehavior_Template.zip**
 3. Following, click on the **Download raw file** button
+4. **(Optional)** You can also build the application from scratch by following the **APEX Step by Step Guide** available in the repository
 
 ![lab_4_img_1](images/lab_4_img_1.JPG)
 
