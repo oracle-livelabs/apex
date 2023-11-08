@@ -49,21 +49,21 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
 1. Navigate to App Builder.
 
-   ![App Builder](./images/app-builder11.png " ")
+    ![App Builder](./images/app-builder11.png " ")
 
-2. select **Expense Tracker application**.
+2. Select **Expense Tracker application**.
 
-   ![Expense Tracker](./images/expense-tracker2.png " ")
+    ![Expense Tracker](./images/expense-tracker2.png " ")
 
-3. Select Shared Components
+3. Select Shared Components.
 
-   ![Shared Component](./images/sc2.png " ")
+    [Shared Component](./images/sc2.png " ")
 
-4. Under Workflows and Automations, Select Task Definitions and
+4. Under Workflows and Automations, Select **Task Definitions**.
 
-   ![Edit Expense Request](./images/edit-td.png " ")
+    ![Edit Expense Request](./images/edit-td.png " ")
 
-5. select the **Expense Request** Task Definition.
+5. Select the **Expense Request** Task Definition.
 
     ![Click Task definition - Expense request](./images/edit-td-name.png " ")
 
@@ -122,11 +122,11 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
 7. **Under Participants** section, click **Add Row**.
 
-    - For Participant Type - Select Potential Owner
+    - For Participant Type: Select **Potential Owner**
 
-    - For Value Type - Select SQL Query
+    - For Value Type: Select **SQL Query**
 
-    - For Value -  Copy the code below and  paste it into the code editor:
+    - For Value: Copy the code below and  paste it into the code editor:
 
     ```
     <copy>
@@ -140,17 +140,18 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
     **Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.**
 
-8. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with more than 1(>1) potential owner(s).
+## Task 3: Add Delegate, Request Info and Expire Events for an Expense Request
+ We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to add operations like Claim, Release, and Delegate that can be performed on tasks with more than 1(>1) potential owner(s).
 
-    Under **Actions** Section: Click **Add Actions**
+1. Under **Actions** Section: Click **Add Actions**
 
-    - For Name - Enter **DELEGATE\_EXPENSE\_REQUEST**
+    - For Name: Enter **DELEGATE\_EXPENSE\_REQUEST**
 
-    - For Type - Select Execute Code
+    - For Type: Select Execute Code
 
-    - On Event - Select **Delegate**
+    - On Event: Select **Delegate**
 
-    - For Success Message - Enter **Request Delegated Successfully**
+    - For Success Message: Enter **Request Delegated Successfully**
 
     - For Code: Copy the code below and paste it into  the code editor:
 
@@ -167,15 +168,15 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
     ![Add action - delegate details](./images/td-delegate.png " ")
 
-9. Again click **Add Actions** to request information.
+2. Again click **Add Actions** to request information.
 
-    - For Name - Enter **REQUEST\_MORE\_INFO**
+    - For Name: Enter **REQUEST\_MORE\_INFO**
 
-    - For Type - Select Execute Code
+    - For Type: Select Execute Code
 
-    - On Event - Select **Request Information**
+    - On Event: Select **Request Information**
 
-    - For Success Message - Enter **Information Requested Successfully**
+    - For Success Message: Enter **Information Requested Successfully**
 
     - For Code: Copy the code below and paste it into  the code editor:
     ```
@@ -191,34 +192,30 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
   ![Add Request Info details and click Create](./images/td-request-info.png " ")
 
-## Task 3: Add Before Expire Event for an Expense Request
-Add deadline and expiration events in actions for expense requests.
-
-1. Under the **Actions** Section - click **Add Actions**
-
+3. Under the **Actions** Section - click **Add Actions**
    Specify the following attributes:
 
-    - For Name - Enter **BEFORE\_EXPIRY**
+    - For Name: Enter **BEFORE\_EXPIRY**
 
-    - For Type - Select **Send Email**
+    - For Type: Select **Send Email**
 
-    - On Event - Select **Before Expire**
+    - On Event: Select **Before Expire**
 
-    - For Before Expire Interval - Enter **PT25M**
+    - For Before Expire Interval: Enter **PT25M**
 
-    - For Success Message - Enter **Task will expire in 5 minutes**
+    - For Success Message: Enter **Task will expire in 5 minutes**
 
    Under **Send Email Settings** Section:
 
-    - For From - Enter the Email address of your wish
+    - For From: Enter the Email address of your wish
 
-    - For To - Enter the Email address of your wish
+    - For To: Enter the Email address of your wish
 
-    - For Email Template - Select **BEFORE EXPENSE EXPIRY EMAIL**
+    - For Email Template: Select **BEFORE EXPENSE EXPIRY EMAIL**
 
     ![Add Action - Before Expire](./images/td-6-action.png " ")
 
-2. Click the **Set Placeholder Values** button beside the email template.
+4. Click the **Set Placeholder Values** button beside the email template.
 
    Add a Column or Value for mentioned Placeholders and click **Save** to add placeholders.
 
@@ -229,21 +226,21 @@ Add deadline and expiration events in actions for expense requests.
    | EMP\_NAME | &EMP_NAME. |
    | APPROVAL\_URL | Paste the Login URL of your Expense Tracker Application |
 
-3. Click **Create** to save an action.
+5. Click **Create** to save an action.
 
    ![Create action before expiry](./images/td-before-email.png " ")
 
-4. To add Expire event, click on **Add Actions** and specify the following attributes:
+6. To add Expire event, click on **Add Actions** and specify the following attributes:
 
-    - For Name - Enter **TASK_EXPIRED**
+    - For Name: Enter **TASK_EXPIRED**
 
-    - For Type - Select Execute Code
+    - For Type: Select Execute Code
 
-    - For Execution Sequence - 70
+    - For Execution Sequence: 70
 
-    - On Event - Select **Expire**
+    - On Event: Select **Expire**
 
-    - For Success Message - Enter 'Task Expired Successfully'
+    - For Success Message: Enter **Task Expired Successfully**
 
     - For Code: Copy the code below and paste it into the code editor:
 

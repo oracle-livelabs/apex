@@ -10,11 +10,11 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 - Create an APEX Application
-- Create and run SQL Script
+- Create and Run SQL Script
 - Add Users
 
 ## Task 1: Create an Application
-In this lab, you create a new application named Expense Tracker.
+In this lab, you create a new application named **Expense Tracker**.
 
 1. If you have not already logged into your Oracle APEX workspace, sign in using the workspace name, email, and password you signed up with.
 
@@ -35,19 +35,17 @@ In this lab, you create a new application named Expense Tracker.
 ## Task 2: Create SQL Script
 In this lab, you create database objects using SQL Scripts.
 
-1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
+1. At the top of the application home page, click **SQL Workshop** and then Select **SQL Scripts**.
 
-    ![Select Sql Workshop](./images/sql-workshop11.png " ")
+    ![Select Sql Workshop](./images/sql-workshop1.png " ")
 
-2. Click **Create**. The Script Editor appears.
+2. Click **Create**.
 
-    ![Create SQL Scripts](./images/create-sql-scripts1.png " ")
+    ![Create SQL Scripts](./images/create-sql-scripts.png " ")
 
-3. In the Script Name, enter a name for the script - **Employee details and Expense status**
+3. For Script Name: Enter **Employee details and Expense status**
 
-4. Enter the SQL statements.
-
-   Copy the code below and paste it into the code editor:
+4. Copy and Paste below code into the code editor and Click **Run**.
 
       ```
       <copy>
@@ -76,13 +74,15 @@ In this lab, you create database objects using SQL Scripts.
       </copy>
       ```
 
-5. Click **Run**. A dialog appears, click **Run Now**. Now you can see that SQL statements run successfully.
+     ![Run SQL Script](./images/script.png " ")
 
-  ![Run SQL Script](./images/script.png " ")
+5. On the Run Script page, click Run Now.
 
-  ![Run Now Sql Script](./images/click-run-now.png " ")
+     ![Run Now Sql Script](./images/click-run-now.png " ")
 
-  ![SQL Script Created](./images/sql-script-created.png " ")
+6. The Script Results page will be displayed listing the statements processed, successful, and with errors.
+
+     ![SQL Script Created](./images/sql-script-created.png " ")
 
 ## Task 3: Add Users
    In this lab, you create users for multi-level management.
@@ -95,13 +95,13 @@ In this lab, you create database objects using SQL Scripts.
 
      ![Create Multiple Users](./images/create-users.png " ")
 
-3. Specify the following attributes:
+3. Enter the following attributes:
 
-     - List of Email Addresses: **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
+    - For List of Email Addresses: Enter **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
 
-     - Usernames : Select **Exclude @ domain as part of the username**
+    - For Usernames: Select **Exclude @ domain as part of the username**
 
-     - For password and Confirm Password: Enter a password of your choice
+    - For password and Confirm Password: Enter a password of your choice.
 
 4. Click **Next** and **Create Valid Users**.
 

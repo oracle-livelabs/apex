@@ -28,11 +28,11 @@ In this lab, you will:
 
    ![Expense Tracker](images/expense-tracker.png " ")
 
-3. In the **App Builder**, navigate to **Expense Tracker** application and select **Shared Components**.
+3. Select **Shared Components**.
 
    ![Task Definition in Shared Components](images/task-definition-sc.png " ")
 
-4. Under Workflows and Automations, select **Task Definitions**.
+4. Under Workflows and Automations, Select **Task Definitions**.
 
    ![Select Task Definition](images/task-definition.png " ")
 
@@ -40,36 +40,35 @@ In this lab, you will:
 
    ![Create Task Definition](images/task-definition-create.png " ")
 
-6. Specify the task definition name and define the metadata.
+6. Specify the task definition attributes and Click **Create**.
 
-    - For Name - Enter **Expense Request**
+    - For Name: Enter **Expense Request**
 
-    - For Subject - Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
+    - For Type: Select **My Approvals**
 
-    - For Static ID - Enter **EXPENSE\_REQUEST**
+    - For Subject: Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
 
-    - For Priority - Select **2-High**
+    - For Priority : Select **2-High**
 
-7. Click **Create**.
+    ![Click Create on Task Definition page](images/task-definition-details.png " ")
 
-   ![Click Create on Task Definition page](images/task-definition-details.png " ")
+7. Under **Settings** Section:
 
-
-8. Under **Settings** Section:
-
-    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
+    - For Task details Page Number - Click on **Create Task Details Page** button and Click **OK**
 
     ![Click Task Definition](images/click-task-definition.png " ")
 
     ![Click Task Definition](images/click-task-definition1.png " ")
 
-    - Click on the task definition - **Expense Request** to continue editing.
+8. Click on the task definition - **Expense Request** to continue editing.
 
-    ![Click on Expense Request](images/select-expense-request.png " ")
+     ![Click on Expense Request](images/select-expense-request.png " ")
 
-    - For Actions Source - Select SQL Query.
+    Under Settings, Specify the following:
 
-    - For Actions SQL query - Copy the code below and paste it into  the code editor:
+    - For Actions Source: Select **SQL Query**.
+
+    - For Actions SQL query: Copy the code below and paste it into  the code editor:
 
     ```
     <copy>
@@ -77,27 +76,28 @@ In this lab, you will:
     where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
     </copy>
     ```
+
     ![Task Definition Settings](images/task-definition-settings.png " ")
 
-9. Under **Deadline** Section:
+10. Under **Deadline** Section, Enter the following:
 
-   - For Due On Type : Select **Interval**
+    - For Due On Type: Select **Interval**
 
-   - For Due On Interval : Enter **PT30M**
+    - For Due On Interval: Enter **PT30M**
 
-   - For Expiration Policy : Select **Expiry**
+    - For Expiration Policy: Select **Expiry**
 
-   ![deadline](images/deadline1.png " ")
+    ![deadline](images/deadline1.png " ")
 
-10. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
+11. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
     - Click Add Row.
 
-    - For Participant Type - Select **Potential Owner**
+    - For Participant Type: Select **Potential Owner**
 
-    - For Value Type - Select **SQL Query**
+    - For Value Type: Select **SQL Query**
 
-    - For Value - Copy the code below and paste it into  the code editor
+    - For Value: Copy the code below and paste it into  the code editor
 
     ```
     <copy>
@@ -109,11 +109,11 @@ In this lab, you will:
 
     ![Task Definition Participants](images/task-definition-participants0.png " ")
 
-11. Click on the task definition - **Expense Request** to continue editing.
+12. Click on the task definition - **Expense Request** to continue editing.
 
     ![Click on Expense Request](images/task-definition-created.png " ")
 
-12. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
+13. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
      | Static ID |  Label  | Data Type
      | --- |  --- | --- |
@@ -122,28 +122,25 @@ In this lab, you will:
      | EXPENSE\_TYPE | Expense Type | String |
      | REQ\_ID | Req Id | String |
 
-     ![Task Definition Parameters](images/task-definition-parameters.png " ")
-
      - Click **Apply Changes**.
 
-13. Click on the task definition - **Expense Request** to continue editing.
+     ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
-  ![Click on Expense Request](images/select-expense-request1.png " ")
+14. Click on the task definition - **Expense Request** to continue editing.
 
+     ![Click on Expense Request](images/select-expense-request1.png " ")
 
-14. Under **Actions** Section, Click **Add Action** button
-
-     ![Task Definition Actions Create](images/task-definition-actions0.png " ")
+15. Under **Actions** Section, Click **Add Action** button
 
     Specify the following:
 
-    - For Name - Enter **CREATE\_EXPENSE\_REPORT\_ENTRY**
+     - For Name: Enter **CREATE\_EXPENSE\_REPORT\_ENTRY**
 
-    - For Type - Select Execute Code
+     - For Type: Select Execute Code
 
-    - On Event - Select Create
+     - On Event: Select Create
 
-    - For Code: Copy the code below and paste it into  the code editor:
+     - For Code: Copy the code below and paste it into  the code editor:
 
     ```
         <copy>
@@ -164,25 +161,25 @@ In this lab, you will:
     end;
     </copy>
     ```
-    - Click **Create** to save Create Event Action.
+     - Click **Create** to save Create Event Action.
+
+      ![Task Definition Actions Create](images/task-definition-actions0.png " ")
 
       ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-15. To Add the next action, Click **Add Action** button.
-
-    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
+16. To Add the next action, Click **Add Action** button.
 
     Specify the following:
 
-    - Name: Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
+     - Name: Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
-    - Type: **Execute Code**
+     - Type:  Select **Execute Code**
 
-    - On Event: **Complete**
+     - On Event: Select **Complete**
 
-    - Outcome : **Approved**
+     - Outcome : Select **Approved**
 
-    - For Code: Copy the code below and paste it into the code editor:
+     - For Code: Copy the code below and paste it into the code editor:
 
       ```
       <copy>
@@ -230,21 +227,21 @@ In this lab, you will:
 
     - Click **Create** to add action.
 
+       ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
+
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-16. Again, Click **Add Actions** button.
-
-    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+17. Again, Click **Add Actions** button.
 
     Specify the following:
 
-    - For Name - Enter **UPDATE\_REQUEST\_STATUS**
+    - For Name: Enter **UPDATE\_REQUEST\_STATUS**
 
-    - For Type - Select Execute Code
+    - For Type: Select Execute Code
 
-    - On Event - Select **Complete**
+    - On Event: Select **Complete**
 
-    - For Outcome  - Select **Rejected**
+    - For Outcome: Select **Rejected**
 
     - For Code: Copy the code below and paste it into  the code editor:
 
@@ -270,6 +267,8 @@ In this lab, you will:
 
     - Click **Create** and **Apply Changes**
 
+     ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
+
      ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
 
      ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
@@ -278,11 +277,11 @@ In this lab, you will:
 ## Task 2: Create a Page to Submit Expense
 Add a page to Submit an Expense request.
 
-1. Click **Application ID**. Application home page appears.
+1. Click **Application ID**.
 
    ![Application Home Page](images/application-id.png " ")
 
-2. Click **Create**. The create page wizard appears.
+2. Click **Create**.
 
     ![Click create on Application home page](images/application-create-page.png " ")
 
@@ -294,13 +293,13 @@ Add a page to Submit an Expense request.
 
    Under **Page Definition** Section:
 
-    - Page Number: Enter **3**
+    - For Page Number: Enter **3**
 
-    - Name: Enter **Apply for Expense**
+    - For Name: Enter **Apply for Expense**
 
    Under **Navigation** Section:
 
-    - Breadcrumb Parent Entry: Select **Home(Page 1)**
+    - For Breadcrumb Parent Entry: Select **Home(Page 1)**
 
    Click **Create Page**.
 
@@ -314,15 +313,15 @@ Add a page to Submit an Expense request.
 
    Under **Identification** section:
 
-    - Title: Enter **New Expense Request**
+    - For Title: Enter **New Expense Request**
 
-    - Type:  Select **Form**
+    - For Type: Select **Form**
 
    Under **Source** section:
 
-    - Type: Select **SQL Query**
+    - For Type: Select **SQL Query**
 
-    - For SQL query, copy the code below and paste it into the code editor:
+    - For SQL query: Copy the code below and paste it into the code editor:
 
     ```
      <copy>
@@ -338,15 +337,15 @@ Add a page to Submit an Expense request.
 
   ![Create Page Item - P3_EXPENSE_TYPE](images/create-page-item1.png " ")
 
-    - For Name - Enter **P3\_EXPENSE\_TYPE**
+     - For Name: Enter **P3\_EXPENSE\_TYPE**
 
-    - For Type - Select, **Select List**
+     - For Type: Select, **Select List**
 
     Under **List of Values** section:
 
-    - For Type - Select **Static values**
+     - For Type: Select **Static values**
 
-    - For Static Values - Enter below list and click **OK**
+     - For Static Values: Enter below list and click **OK**
 
     | Display Value |  Return Value  |
     | --- |  --- |
@@ -355,15 +354,15 @@ Add a page to Submit an Expense request.
     | Conference | Conference |
     | Misc. Expenses | Misc. Expenses |
 
-    - For Null Display Value - Enter **--Select Expense Type--**
+     - For Null Display Value: Enter **--Select Expense Type--**
 
    ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
 
-8. Right-click region (**New Expense Request**) and select **Create Page Item**.
+8. Right-click region (**New Expense Request**) and Select **Create Page Item**.
 
-    - For Name - Enter **P3\_ESTIMATED\_COST**
+     - For Name: Enter **P3\_ESTIMATED\_COST**
 
-    - For Type - Select Number Field
+     - For Type: Select **Number Field**
 
     ![Update Page item type ](images/number-field.png " ")
 
@@ -377,18 +376,18 @@ Add a page to Submit an Expense request.
 
     In the Property Editor, enter the following:
 
-    - Name: **Fetch Employee Details for User**
+     - For Name: **Fetch Employee Details for User**
 
-    - Type: **Execute code**
+     - For Type: **Execute code**
 
-    - For PL/SQL Code, Enter the following PL/SQL code:
+     - For PL/SQL Code: Enter the following PL/SQL code:
 
         ```
         <copy>
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-    - Sequence: Enter '1'
+     - Sequence: Enter '1'
 
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
@@ -400,17 +399,17 @@ Add a page to Submit an Expense request.
 
     In the Property Editor, enter the following:
 
-     - For Name - Type **Submit Expense request**
+      - For Name: Enter **Submit Expense request**
 
-     - For Type - Select **Human Task - Create**
+      - For Type: Select **Human Task - Create**
 
     Under **Settings** Section:
 
-     - For Definition - Select **Expense request**
+      - For Definition: Select **Expense request**
 
-     - For Details Primary key Element: Select **P3\_EMPNO**
+      - For Details Primary key Element: Select **P3\_EMPNO**
 
-     - For Success Message: Type **Expense Request submitted successfully**
+      - For Success Message: Type **Expense Request submitted successfully**
 
     ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
@@ -418,31 +417,31 @@ Add a page to Submit an Expense request.
 
     a) For  Estimated Cost, enter the following:
 
-       - For Type - Select ITEM
+       - For Type: Select ITEM
 
-       - For Value - Select **P3\_ESTIMATED\_COST**
+       - For Value: Select **P3\_ESTIMATED\_COST**
 
     ![Process parameters1](images/submit-expense-report-cost.png " ")
 
     b) For  Expense Status, enter the following:
 
-       - For Type - Select Static Value
+       - For Type: Select Static Value
 
-       - For Value - Type **PENDING**
+       - For Value: Type **PENDING**
 
      ![Process parameters2](images/submit-expense-status.png " ")
 
     c) For  Expense Type, enter the following:
 
-       - For Type - Select ITEM
+       - For Type: Select ITEM
 
-       - For Value - Select **P3\_EXPENSE\_TYPE**
+       - For Value: Select **P3\_EXPENSE\_TYPE**
 
      ![Process parameters3](images/submit-expense-report-type.png " ")
 
     d) For  Request ID, enter the following:
 
-       - For Type - Select NULL
+       - For Type: Select NULL
 
     ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
@@ -454,11 +453,11 @@ Add a page to Submit an Expense request.
 
     In the Property Editor, enter the following:
 
-      - For Button Name - Type **SUBMIT_REQUEST**
+       - For Button Name: Enter **SUBMIT_REQUEST**
 
-      - For Position - Select **Edit**
+       - For Position: Select **Edit**
 
-      - For Hot - **Enable**
+       - For Hot: **Enable**
 
     ![Button details](images/submit-expense-button-details.png " ")
 
@@ -466,7 +465,7 @@ Add a page to Submit an Expense request.
 
     Under **Server-Side Condition** Section:
 
-    - For When Button Pressed : Select **SUBMIT_REQUEST**
+       - For When Button Pressed: Select **SUBMIT_REQUEST**
 
     ![Submit button](images/submit-expense-submit-button.png " ")
 
@@ -489,11 +488,11 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
 4. Specify the following page attributes:
 
-    - For Page Number - Enter **4**
+     - For Page Number: Enter **4**
 
-    - For Name - Enter **My Approvals**
+     - For Name: Enter **My Approvals**
 
-    - For Report Context - Select **My Tasks**
+     - For Report Context: Select **My Tasks**
 
     Click **Create Page**.
 
@@ -503,21 +502,21 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
     ![Crete Unified Task List2](./images/utl-page-created.png " ")
 
-6. Click **Create** button. Create Application wizard appears.
+6. Click **Create**.
 
     ![Click create on application home page](./images/utl-create-page1.png " ")
 
-7. Under Components, Select Unified Task List and click **Next**
+7. Under Components, Select **Unified Task List**.
 
     ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
 
 8. Specify the following page attributes:
 
-    - For Page Number - Enter **6**
+     - For Page Number: Enter **6**
 
-    - For Name - Enter **My Expense Requests**
+     - For Name: Enter **My Expense Requests**
 
-    - For Report Context - Select **Initiated by Me**
+     - For Report Context: Select **Initiated by Me**
 
     Click **Create Page**.
 
