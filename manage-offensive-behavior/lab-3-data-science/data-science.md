@@ -36,14 +36,13 @@ In this lab, you will:
 * 2. You download the **Autonomous Database wallet** and upload the wallet to the **'job _artifacts/wallet** folder
 * 3. You add the the **Log Group OCID** to the notebook
 * 4. You will change 'password', 'wallet_ name', and 'compartment_ id _input' in the main.py file. In Lab 1, you extracted the Compartment OCID.
-
-![lab_3_img_1](images/lab_3_img_1.JPG)
+  ![lab_3_img_1](images/lab_3_img_1.JPG)
 
 Example of changed parameters in the main.py file
-![lab_3_img_4](images/lab_3_img_4.JPG)
+  ![lab_3_img_4](images/lab_3_img_4.JPG)
 
 Example of inputs to Run your first Job
-![lab_3_img_5](images/lab_3_img_5.JPG) 
+  ![lab_3_img_5](images/lab_3_img_5.JPG) 
 
 ## Task 2: Retrieve OCIDS
 
@@ -54,14 +53,12 @@ After finishing the notebooks and successfully running your first Job, you need 
 1. To get the Project OCID, go back to Oracle Cloud. 
 2. Go to **Data Science**. See steps 1-6 in Lab 2.
 3. In your Project, you will see **OCID**, click on **Copy** just next to OCID to copy the entire OCID. Make sure to paste it locally.
-
-![lab_3_img_3](images/lab_3_img_2.JPG)
+  ![lab_3_img_3](images/lab_3_img_2.JPG)
 
 4. Next, click on **Jobs** in the left menu
 5. Click on **ocw_ my_ first_job** or when you renamed the Job during creation, click on the name
 6. In the Job, you will see **OCID**. Click on **Copy** next to the OCID and paste the full OCID locally
-
-![lab_3_img_3](images/lab_3_img_3.JPG)
+  ![lab_3_img_3](images/lab_3_img_3.JPG)
 
 You may now **proceed to the next lab.**
 
