@@ -10,11 +10,10 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 *The video below is an example of the final result when all steps have been performed*
 
-[![manage_behaviour](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_tNvQuZeY0U)](https://www.youtube.com/watch?v=_tNvQuZeY0U)
+[![video_1](images/video.jpg)](files/Media1.mp4)
 
 ### Objectives
 
-<video src='/files/Media1.mp4' />
 
 In this workshop, you will follow multiple labs. For each lab, the individual steps are outlines below.
 
