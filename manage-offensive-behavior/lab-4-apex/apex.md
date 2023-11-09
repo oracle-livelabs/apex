@@ -59,7 +59,7 @@ In this task, you will add/update your own API Key, credentials to APEX. This wi
 5. Select **OCI_API** from the list
   ![lab_4_img_6](images/lab_4_img_6.JPG)
 
-##
+#####
 
 7. Enter the credentials from the created API key as required, these are:
 * User OCID
