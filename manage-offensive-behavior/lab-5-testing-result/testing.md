@@ -17,7 +17,7 @@ In this lab, you will:
 
 1.	Step into your Application and click **Run Application**
 2.	Enter a YouTube URL. Please note:
-* Use a YouTube video with English speakers
+* Use a YouTube video with English speakers.
 * Do not use any YouTube video with restrictions (e.g,, Age restricted video). This will fail.
 * Press Enter after pasting the Video URL.
 
@@ -30,9 +30,9 @@ In this lab, you will:
 ## Task 2: Video Analysis
 
 1. Enter a YouTube URL. Make sure to refresh the page before you start.
-2. Select **Video** in the **Analysis Type**
-3. Upload a .jpg image. This image is, for example, a **selfie** of the person you a trying to detect in the video. The algorithm will use that image to find the person in the image in the video.
-4. Click on **Analyze** and following on **status**
+2. Select **Video** in the **Analysis Type**.
+3. Upload a .jpg image. This image is, for example, a **selfie** of the person you are trying to detect in the video. The algorithm will use that image to find the person in the video.
+4. Click on **Analyze** and then on **status** to see the progress of the data science job.
 
 
 ## Acknowledgements
