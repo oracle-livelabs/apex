@@ -48,8 +48,8 @@ The workshop aims to build two use cases.
 * **Use case 1:** Detect offensive language in the YouTube video. This use case focuses on the spoken text.
 * **Use case 2:** Detect a particular person in the YouTube video. This use cases focuses on the persons in the video.
 
-![intro_1](images/intro_1.jpg)
-![intro_2](images/intro_2.jpg)
+   ![intro_1](images/intro_1.jpg)
+   ![intro_2](images/intro_2.jpg)
 
 ## Services used in the Workshop
 
