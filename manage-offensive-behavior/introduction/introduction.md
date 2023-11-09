@@ -15,6 +15,7 @@ Estimated Workshop Time: 1 hour 45 minutes
 </video>
 
 
+https://github.com/phantompete/apex/edit/main/manage-offensive-behavior/introduction/files/Media1.mp4
 
 ### Objectives
 
