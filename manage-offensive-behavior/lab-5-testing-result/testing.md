@@ -25,7 +25,7 @@ In this lab, you will:
 4.	Click **Analyze**, and wait for 2 seconds
 5.	Click on **Status**
 
-![lab_5_img_1](images/lab_5_img_1.JPG)
+  ![lab_5_img_1](images/lab_5_img_1.JPG)
 
 ## Task 2: Video Analysis
 
