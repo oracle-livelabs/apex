@@ -10,7 +10,10 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 *The video below is an example of the final result when all steps have been performed*
 
-[![video_1](images/video.jpg)](files/Media1.mp4)
+<video width="320" height="240" controls>
+  <source src="files/Media1.mp4" type="video/mp4">
+</video>
+
 
 
 ### Objectives
