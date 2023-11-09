@@ -1,4 +1,4 @@
-# Get started - Configuring the prerequisites
+# Provision and Setup the Environment
 
 ## Introduction
 
