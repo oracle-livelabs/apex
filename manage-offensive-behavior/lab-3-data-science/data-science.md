@@ -39,11 +39,7 @@ In this lab, you will:
   ![lab_3_img_1](images/lab_3_img_1.JPG)
 
 The below are two example screenshots of the changed parameters and inputs to run your first Job.
-* Example 1. Example of changed parameters in the main.py file
     ![lab_3_img_4](images/lab_3_img_4.JPG)
-
-
-* Example 2. Example of inputs to Run your first Job
     ![lab_3_img_5](images/lab_3_img_5.JPG) 
 
 ## Task 2: Retrieve OCIDS
