@@ -14,6 +14,8 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 ### Objectives
 
+<video src='/files/Media1.mp4' />
+
 In this workshop, you will follow multiple labs. For each lab, the individual steps are outlines below.
 
 **Lab 1.**
