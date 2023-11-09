@@ -10,12 +10,7 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 *The video below is an example of the final result when all steps have been performed*
 
-<video width="320" height="240" controls>
-  <source src="files/Media1.mp4" type="video/mp4">
-</video>
-
-
-https://github.com/phantompete/apex/edit/main/manage-offensive-behavior/introduction/files/Media1.mp4
+[![manage_behaviour](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D_tNvQuZeY0U)](https://www.youtube.com/watch?v=_tNvQuZeY0U)
 
 ### Objectives
 
