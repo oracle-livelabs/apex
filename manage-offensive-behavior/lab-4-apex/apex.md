@@ -42,9 +42,9 @@ Next, you will import the pre-built APEX application (the .zip file) into APEX.
 11.	In APEX, go to **App Builder**
 12.	Go to **Import**
 13.	Drag & Drop the just downloaded .zip file into the dropzone
-14.	Press **Next** until the application is imported and installed
-  ![lab_4_img_3](images/lab_4_img_3.JPG)
-  ![lab_4_img_4](images/lab_4_img_4.JPG)
+    ![lab_4_img_3](images/lab_4_img_3.JPG)
+15.	Press **Next** until the application is imported and installed
+    ![lab_4_img_4](images/lab_4_img_4.JPG)
 
 ## Task 2: Add your API Key to APEX
 
