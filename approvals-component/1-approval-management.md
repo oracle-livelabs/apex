@@ -97,7 +97,7 @@ In this lab, you create database objects using SQL Scripts.
 
 3. Enter the following attributes:
 
-    - For List of Email Addresses: Enter **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
+    - For List of Email Addresses: Enter **MATT@email.com, JANE@email.com, CLARA@email.com, JOHN@email.com**
 
     - For Usernames: Select **Exclude @ domain as part of the username**
 

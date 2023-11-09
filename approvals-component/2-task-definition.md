@@ -18,7 +18,7 @@ In this lab, you will:
 
 - Completion of workshop through Lab 1
 
-## Task 1: Create a Task Definition:
+## Task 1: Create a Task Definition
 
 1. Navigate to **App Builder**.
 
@@ -44,7 +44,7 @@ In this lab, you will:
 
     - For Name: Enter **Expense Request**
 
-    - For Type: Select **My Approvals**
+    - For Type: Select **Approval Task**
 
     - For Subject: Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
 
@@ -79,17 +79,17 @@ In this lab, you will:
 
     ![Task Definition Settings](images/task-definition-settings.png " ")
 
-10. Under **Deadline** Section, Enter the following:
+9. Under **Deadline** Section, Enter the following:
 
     - For Due On Type: Select **Interval**
 
     - For Due On Interval: Enter **PT30M**
 
-    - For Expiration Policy: Select **Expiry**
+    - For Expiration Policy: Select **Expire**
 
     ![deadline](images/deadline1.png " ")
 
-11. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
+10. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
     - Click Add Row.
 
@@ -109,11 +109,11 @@ In this lab, you will:
 
     ![Task Definition Participants](images/task-definition-participants0.png " ")
 
-12. Click on the task definition - **Expense Request** to continue editing.
+11. Click on the task definition - **Expense Request** to continue editing.
 
     ![Click on Expense Request](images/task-definition-created.png " ")
 
-13. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
+12. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
 
      | Static ID |  Label  | Data Type
      | --- |  --- | --- |
@@ -126,11 +126,11 @@ In this lab, you will:
 
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
-14. Click on the task definition - **Expense Request** to continue editing.
+13. Click on the task definition - **Expense Request** to continue editing.
 
      ![Click on Expense Request](images/select-expense-request1.png " ")
 
-15. Under **Actions** Section, Click **Add Action** button
+14. Under **Actions** Section, Click **Add Action** button
 
     Specify the following:
 
@@ -167,7 +167,7 @@ In this lab, you will:
 
       ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-16. To Add the next action, Click **Add Action** button.
+15. To Add the next action, Click **Add Action** button.
 
     Specify the following:
 
@@ -231,7 +231,7 @@ In this lab, you will:
 
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-17. Again, Click **Add Actions** button.
+16. Again, Click **Add Actions** button.
 
     Specify the following:
 
@@ -281,7 +281,7 @@ Add a page to Submit an Expense request.
 
    ![Application Home Page](images/application-id.png " ")
 
-2. Click **Create**.
+2. Click **Create Page**.
 
     ![Click create on Application home page](images/application-create-page.png " ")
 
@@ -363,6 +363,8 @@ Add a page to Submit an Expense request.
      - For Name: Enter **P3\_ESTIMATED\_COST**
 
      - For Type: Select **Number Field**
+
+    ![Update Page item type ](images/create-page-item1.png " ")
 
     ![Update Page item type ](images/number-field.png " ")
 
@@ -478,7 +480,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
   ![Click Application ID](./images/utl-appid.png " ")
 
-2. Click **Create**.
+2. Click **Create Page**.
 
    ![Click create on Application home page](./images/utl-create-page.png " ")
 
@@ -502,7 +504,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 
     ![Crete Unified Task List2](./images/utl-page-created.png " ")
 
-6. Click **Create**.
+6. Click **Create Page**.
 
     ![Click create on application home page](./images/utl-create-page1.png " ")
 

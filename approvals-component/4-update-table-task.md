@@ -40,7 +40,7 @@ In this lab, you will:
 
     ![SQL Commands](./images/sql-commands2.png " ")
 
-    **NOTE: Don't forget to create two new Users, SOPHIE and ROBIN, using the Manage Users And Groups menu option under Workspace Administration as done in Lab 1: Task 3.**
+    *NOTE: Don't forget to create two new Users, SOPHIE (SOPHIE@email.com) and ROBIN (ROBIN@email.com), using the Manage Users And Groups menu option under Workspace Administration as done in Lab 1: Task 3.*
 
     ![Create Users](./images/create-users1.png " ")
 
@@ -68,6 +68,8 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ![Click Task definition - Expense request](./images/edit-td-name.png " ")
 
 6. Under **Actions** - Edit **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**.
+
+    ![Actions - Expense request](./images/edit-actions.png " ")
 
     Copy the code below and paste it into the code editor:
 
@@ -116,8 +118,6 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ```
     Click **Apply Changes**
 
-    ![Actions - Expense request](./images/edit-actions.png " ")
-
     ![Code - Expense request](./images/edit-code.png " ")
 
 7. **Under Participants** section, click **Add Row**.
@@ -143,7 +143,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 ## Task 3: Add Delegate, Request Info and Expire Events for an Expense Request
  We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to add operations like Claim, Release, and Delegate that can be performed on tasks with more than 1(>1) potential owner(s).
 
-1. Under **Actions** Section: Click **Add Actions**
+1. Under **Actions** Section: Click **Add Action**
 
     - For Name: Enter **DELEGATE\_EXPENSE\_REQUEST**
 
@@ -168,7 +168,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
     ![Add action - delegate details](./images/td-delegate.png " ")
 
-2. Again click **Add Actions** to request information.
+2. Again click **Add Action** to request information.
 
     - For Name: Enter **REQUEST\_MORE\_INFO**
 
@@ -192,7 +192,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
   ![Add Request Info details and click Create](./images/td-request-info.png " ")
 
-3. Under the **Actions** Section - click **Add Actions**
+3. Under the **Actions** Section - click **Add Action**
    Specify the following attributes:
 
     - For Name: Enter **BEFORE\_EXPIRY**
@@ -253,7 +253,42 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ```
     - Click **Create** to add action.
 
-  ![Add Action - Task expired](./images/task_expired-action.png " ")
+    ![Add Action - Task expired](./images/task_expired-action.png " ")
+
+## Task 4: Running and exploring the new app
+In this task, you run and explore the Expense Tracker application. You submit use case of a multi-level approval with the expense cost more than 50000, the Expense request once approved by the immediate manager, will go to the next manager and so on (JOHN -> CLARA -> JANE -> MATT).
+
+1. Click Run. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
+
+     ![Run App](./images/run-app-td.png " ")
+
+2. Login with username - JOHN
+
+     ![Login with JOHN](./images/run-app-td.png " ")
+
+3. Navigate to **Apply for Expense** and submit the request.
+
+     ![Submit Request](./images/john-submit-req.png " ")
+
+4. Now, Navigate to **My Expense Requests** to see John's expense request.
+
+     ![My Expense Requests](./images/my-expense-requests.png " ")
+
+5. Now, Login with username - CLARA. Then, Navigate to **My Approvals** to Approve John's request.
+
+     ![My Expense Requests](./images/clara-approve.png " ")
+
+6. Login with username - JANE. Then, Navigate to **My Approvals** to Approve John's request.
+
+     ![My Expense Requests](./images/jane-approve.png " ")
+
+7. Login with username - MATT. Then, Navigate to **My Approvals** to Approve John's request.
+
+     ![My Expense Requests](./images/matt-approve.png " ")
+
+8. Again, Login with username - JOHN to see completed request.
+
+     ![My Expense Requests](./images/john-completed-req.png " ")
 
 ## **Summary**
 You now know how to update a table, add potential owners to delegate and request more information while applying for a request.
