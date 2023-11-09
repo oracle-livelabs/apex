@@ -12,7 +12,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
 
 Estimated Time: 5 minutes
 
@@ -52,9 +52,9 @@ Blueprint tab selected. Update the following information:
 
 Click **Create Application**.
 
-4. We now have three pages in our APEX application. 
-    - The Global page (which we will not be using in this lab), 
-    - The Timeline page (which is the primary page we will be working on in this lab), 
+4. We now have three pages in our APEX application.
+    - The Global page (which we will not be using in this lab),
+    - The Timeline page (which is the primary page we will be working on in this lab),
     - The Login Page, which is the default page configured to use your workspace account credentials.
 
     !["The pages in the app"](images/pages.png "")

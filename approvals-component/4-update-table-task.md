@@ -1,4 +1,4 @@
-# Delegate Expense Request
+# Manage Task Definitions
 
 ## Introduction
 
@@ -11,7 +11,8 @@ Estimated Time: 10 minutes
 In this lab, you will:
 - Update the table definition and insert new data
 - Update Task Definition
-- Add Before Expire event for an Expense Request
+- Add multiple events for an Expense Request
+- Run and Explore an application
 
 ## Task 1: Update the EMPLOYEE_DETAILS table
 
@@ -256,7 +257,7 @@ We will further extend the Expense Tracker Application to see how tasks could be
     ![Add Action - Task expired](./images/task_expired-action.png " ")
 
 ## Task 4: Running and exploring the new app
-In this task, you run and explore the Expense Tracker application. You submit use case of a multi-level approval with the expense cost more than 50000, the Expense request once approved by the immediate manager, will go to the next manager and so on (JOHN -> CLARA -> JANE -> MATT).
+In this task, you run and explore the Expense Tracker application. You submit a use case of a multi-level approval with an expense cost of more than 50000; an approved expense request will progress through a sequence of managers, starting with JOHN, then CLARA, then JANE, and finally MATT.
 
 1. Click Run. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
@@ -264,7 +265,7 @@ In this task, you run and explore the Expense Tracker application. You submit us
 
 2. Login with username - JOHN
 
-     ![Login with JOHN](./images/run-app-td.png " ")
+     ![Login with JOHN](./images/login-john.png " ")
 
 3. Navigate to **Apply for Expense** and submit the request.
 
