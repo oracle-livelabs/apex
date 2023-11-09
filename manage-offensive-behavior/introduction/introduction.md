@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop covers the integration of OCI Data Science & AI Services in combination with the APEX running on the Autonomous Database. In this workshop, you will build an interesting use-case that allows you to analyze YouTube videos, transcribing them to text and understanding how offensive or hateful the videos are. Additionally, you can also detect a person's presence in the Video and understand how long they are visible for.
+This workshop covers the integration of OCI Data Science & AI Services in combination with APEX running on the Autonomous Database. In this workshop, you will build an interesting use-case that allows you to analyze YouTube videos, transcribing them to text and understanding how offensive or hateful the videos are. Additionally, you can also detect a person's presence in the Video and understand how long they are visible for.
 
 The workshop integrates different Oracle Cloud services to detect and manage offensive behaviour in YouTube videos.
 
