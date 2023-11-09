@@ -55,9 +55,10 @@ In this task, you will add/update your own API Key, credentials to APEX. This wi
 3. Go to **Web Credentials**
 4. Select **OCI_API** from the list
   ![lab_4_img_5](images/lab_4_img_5.JPG)
+
   ![lab_4_img_6](images/lab_4_img_6.JPG)
 
-5. Enter the credentials from the created API key as required, these are:
+6. Enter the credentials from the created API key as required, these are:
 * User OCID
 * Full Private Key
 * Tenancy OCID
