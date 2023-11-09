@@ -38,13 +38,12 @@ In this lab, you will:
 * 4. You will change 'password', 'wallet_ name', and 'compartment_ id _input' in the main.py file. In Lab 1, you extracted the Compartment OCID.
   ![lab_3_img_1](images/lab_3_img_1.JPG)
 
-Example of changed parameters in the main.py file
-![lab_3_img_4](images/lab_3_img_4.JPG)
+* **Example of changed parameters in the main.py file**
+    ![lab_3_img_4](images/lab_3_img_4.JPG)
 
 
-
-Example of inputs to Run your first Job
-![lab_3_img_5](images/lab_3_img_5.JPG) 
+* **Example of inputs to Run your first Job**
+    ![lab_3_img_5](images/lab_3_img_5.JPG) 
 
 ## Task 2: Retrieve OCIDS
 
