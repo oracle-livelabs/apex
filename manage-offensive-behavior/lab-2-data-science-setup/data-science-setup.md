@@ -29,9 +29,8 @@ In this lab, you will:
 4. Select **Create Project**. You can name the Project to your own liking
 5. Click on **Create**. This will create a project.
 6. Step inside the project
-
-![lab_2_img_1](images/lab_2_img_1.JPG)
-![lab_2_img_6](images/lab_2_img_6.JPG)
+  ![lab_2_img_1](images/lab_2_img_1.JPG)
+  ![lab_2_img_6](images/lab_2_img_6.JPG)
 
 7.	Click **Create Notebook**
 8.	You can use all default settings, only change the name to **myfirstnotebook**
@@ -40,14 +39,12 @@ In this lab, you will:
 11.	Leave Block storage size empty
 12.	Click on **Create**
 13.	This may take a few minutes, when the notebook is **Active**, click on the name of the notebook to access the main page
-
-![lab_2_img_2](images/lab_2_img_2.JPG)
+  ![lab_2_img_2](images/lab_2_img_2.JPG)
 
 14.	Click on **Open** to open the notebook
 15.	When you are prompted to log in, log in with your Oracle Cloud credentials
 16.	The page as shown in the screenshot below should appear
-
-![lab_2_img_3](images/lab_2_img_3.JPG)
+  ![lab_2_img_3](images/lab_2_img_3.JPG)
 
 ## Task 2: Clone Repository and run notebook
 
@@ -62,9 +59,8 @@ In this lab, you will:
 
 * **Create a custom Conda environment.** In a custom conda environment, we can install any PyPI package we need in order to run the Job. You will install several packages, like DeepFace and PyTube
 * **Publish the custom Conda environment.** In order to use the custom Conda, you will publish it to Object Storage. That way, when triggering the Job, the Job can 'pull' the custom Conda environment from Object Storage
-
-![lab_2_img_4](images/lab_2_img_4.JPG)
-![lab_2_img_5](images/lab_2_img_5.JPG)
+  ![lab_2_img_4](images/lab_2_img_4.JPG)
+  ![lab_2_img_5](images/lab_2_img_5.JPG)
 
 You may now **proceed to the next lab.**
 
