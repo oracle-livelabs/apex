@@ -51,6 +51,9 @@ The workshop aims to build two use cases.
    ![intro_1](images/intro_1.jpg)
    ![intro_2](images/intro_2.jpg)
 
+## Prerequisites
+* An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported
+
 ## Services used in the Workshop
 
 ### APEX
