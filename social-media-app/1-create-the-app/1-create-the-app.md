@@ -48,7 +48,7 @@ Blueprint tab selected. Update the following information:
 
     - In *Features* section, check the **Install Progressive Web App** option.
 
-Click **Create Application**.
+  Click **Create Application**.
 
      !["Create App wizard"](images/app-details.png "")
 

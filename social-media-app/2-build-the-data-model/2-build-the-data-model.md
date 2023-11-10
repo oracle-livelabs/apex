@@ -48,7 +48,8 @@ the developer on the left side.
 ## Task 2: Create Database Objects
 
 1. Copy and paste the below **Quick SQL** model into the left side, and click **Review and Run**.
-    **Note**: It is very important to maintain the tabbing so that all the objects get generated.
+
+    *Note: It is very important to maintain the tabbing so that all the objects get generated.*
 
     ```
     <copy>
@@ -71,14 +72,13 @@ the developer on the left side.
 
     ![Review and Run](images/review-run.png "")
 
-2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL script that we will run to build the database objects. This could also be done manually through APEX Object Browser or even by manually typed
-code.
+2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL script that we will run to build the database objects. This could also be done manually through APEX Object Browser or even by manually typed code.
 
  Save SQL Script with a name **db objects** and Click **Run**
 
     ![Save the Quick SQL script](images/save-quick-sql.png "")
 
-3. Review the summary and then click **Run Now**.s
+3. Review the summary and then click **Run Now**.
 
     ![Run now button is displayed](images/run-now.png)
 
