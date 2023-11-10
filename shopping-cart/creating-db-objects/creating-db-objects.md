@@ -33,7 +33,7 @@ Create specification and body for the package.
 
     ![Create Package details](./images/create-package2.png " ")
 
-5. For Specification, enter the following:
+5. For Specification, copy and replace the Specification code:
 
     ```
     <copy>
@@ -81,7 +81,7 @@ Create specification and body for the package.
 
    ![New Package details page](./images/create-specification.png " ")
 
-6. Navigate to body part of the package by clicking on Body tab and enter the following:
+6. Navigate to body part of the package by clicking on Body tab. Copy and replace the Body code:
 
     ```
     <copy>

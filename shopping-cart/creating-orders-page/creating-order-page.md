@@ -34,7 +34,7 @@ Create a Normal Page to review the Order that customer has made.
 
     ![App Builder home page](./images/create-page.png " ")
 
-2. Select **Blank Page** and click **Next**.
+2. Select **Blank Page**.
 
     ![create page wizard](./images/create-blank-page111.png " ")
 

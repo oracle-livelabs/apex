@@ -104,9 +104,9 @@ The shopping cart page allows users to review and edit the products in the cart.
 
     ![Application home page.](./images/create-page2.png " ")
 
-3. Select **Blank Page** and click **Next**.
+3. Select **Blank Page**.
 
-4. Enter the following and click **Next**.
+4. Enter the following:
     - Page Number - enter **17**
     - For Name - enter **Shopping Cart**
     - For Page Mode - select **Normal**
@@ -441,7 +441,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
     - Navigate to Target attribute and click **No Link Defined**
 
-        - For Type - select **Page in this application**
+        - For Type - select **Page or URL (Redirect)**
 
         - For Page - enter **1**
 
