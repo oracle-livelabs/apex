@@ -36,17 +36,17 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 4.	Release/drop the Map region to the gold area inside this region.
 
    ![Layout pane](images/drag-n-drop.png)
-   
+
    In the rendering tree, you should see it appear like this:
 
    ![Page designer](images/after-drop.png)
 
-6. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. Update the following information:
+5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. Update the following information:
     - Name: **Post and Like Locations**
     - Set the Region > Source > Location to **Local Database** (new properties will be shown underneath).
     - Set the Source > Type to **SQL Query**
 
-7. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the **SQL Query** text area:
+6. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the **SQL Query** text area:
 
       ```
       <copy>
@@ -61,13 +61,13 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
       ![Page designer](images/update-region.png)
 
-10. Next, update the following properties:
+7. Next, update the following properties:
     - Appearance > Template : **Inline Dialog**.
-    - Advanced > Static ID : **map**. The static ID will be used by our javascript to actually open the map region in the next task. 
+    - Advanced > Static ID : **map**. The static ID will be used by our javascript to actually open the map region in the next task.
 
     ![Page designer](images/appearance.png)
 
-11. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties. 
+8. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
     - Set Layer > Identification > Name to **Locations**
     - Change Source > Location to **Region Source**
     - Scroll down to Column Mapping and change Geometry Column Data Type to **Longitude/Latitude**
@@ -84,13 +84,13 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
       ```
     ![Page designer](images/tooltip.png)
 
-12. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
+9. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
     - Map > Height to **300** pixels
     - Under Controls > Options, check **Mousewheel zoom** option
 
     ![Page designer](images/attributes.png)
 
-11. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
+10. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 
    ![Page designer](images/save.png)
 
@@ -116,7 +116,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
     - For name, enter **Map**
     - For Target, enter **#action$open-map**
     - For Icon, enter **fa-map**
-    
+
     Click **Apply Changes**
 
     ![Navigation Bar List page](images/add-entry.png)
@@ -159,7 +159,7 @@ In this task, we update our javascript on the page so that the Target you specif
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
    In the Rendering Tree, click the **Dynamic Actions** tab. Right click on the **Custom** branch, and choose **Create Dynamic Action**.
 
-   ![Dynamic Actions Tab](images/create-da.png)
+   ![Dynamic Actions Tab](images/create-da4.png)
 
 4. You should now see the new Dynamic Action as New/Show.
 
@@ -184,11 +184,11 @@ In the Property Editor:
 7. That completes the configuration of this button. Click **Save**. Before we run the app, we need to add another dynamic action to get the device location.
 
    ![Page Designer Toolbar](images/save2.png)
-    
+
 
 ## Task 4: Create Dynamic Action to get Device Location
 
-In this final task, we create another dynamic action to get the device location of the user. 
+In this final task, we create another dynamic action to get the device location of the user.
 
 1. From the Dynamic Actions tab, under Events right-click **Page Load** and select **Create Dynamic Action**.
 
@@ -200,7 +200,7 @@ In this final task, we create another dynamic action to get the device location 
 
 3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, edit the following:
       - Action : **Get Current Position**
-   
+
       Under Settings:
       - Return Type : **Latitude and Longitude**
       - Latitude Item: **P1_LAT**
@@ -223,4 +223,4 @@ In this final task, we create another dynamic action to get the device location 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
