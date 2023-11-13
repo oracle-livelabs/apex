@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Remove the Navigation Menu
 
-1. As a first step, we want to remove the Navigation menu from the page. To do this, select **Page 1: Timeline** in the Rendering Tree. 
+1. As a first step, we want to remove the Navigation menu from the page. To do this, select **Page 1: Timeline** in the Rendering Tree.
 
     ![Page designer is seen](images/property-editor-nav.png "")
 
@@ -51,11 +51,9 @@ Since our app is a Single Page Application, we do not need a breadcrumb bar at t
 
     ![The update app after the changes](images/updated-app.png "")
 
-    **Note:** We will repeat this process of iterating over the app development: Make
-changes, Save and Run and review the effects of our changes.
+    **Note:** We will repeat this process of iterating over the app development: Make changes, Save and Run and review the effects of our changes.
 
-    With the navigation list and the breadcrumb removed, we have a nice
-clean slate to proceed with.
+    With the navigation list and the breadcrumb removed, we have a nice clean slate to proceed with.
 
     Switch back to your browser tab with **Page Designer**.
 
@@ -73,25 +71,21 @@ In this task, you will learn to download and import a starter app. If you follow
 
     ![Import dialog](images/drag-and-drop.png)
 
-4. Click **Next** to confirm import.
-
-    ![Import dialog](images/import-confirm.png)
-
-5. Accept the defaults and click **Install Application**. Click **Next**.
+4. Accept the defaults and click **Install Application**.
 
     ![Install app screen](images/install-app.png)
 
-    ![Install app screen](images/supporting-objects.png)
+5. Click **Install Supporting Objects**.
 
-6. Click **Install**. Once you get a success message, click **Run Application**.
+    ![Install app screen](images/install-support.png)
 
-    ![Install app screen](images/run-app.png)
+6. Click **Run Application**.
 
-    Now, continue Lab 5.
+    ![Install app screen](images/run-app2.png)
 
     You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023

@@ -58,7 +58,7 @@ When we Like a post, we should be able to see the Heart in RED. Also, if we are 
     ![Template Options Dialog](images/stretch-form.png)
 
 3.  And finally, under Appearance:
-    - For CSS Classes, enter **file-upload** 
+    - For CSS Classes, enter **file-upload**
     - For icon select **fa-camera-retro**
 
     ![Property Editor](images/appearance.png)
@@ -75,4 +75,4 @@ When we Like a post, we should be able to see the Heart in RED. Also, if we are 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

@@ -8,7 +8,7 @@
       },
       {
         "title": "Get Started",
-        "filename": "../../../common/1-sign-up-apex/1-sign-up-apex.md"
+        "filename": "../common-232/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
         "title": "Lab 1: Install a Sample Dataset",
@@ -25,7 +25,7 @@
       {
         "title": "Lab 4: Create the Application",
         "filename": "../../create-app/create-app.md"
-      },     
+      },
       {
         "title": "Lab 5: Create the Order Page",
         "filename": "../../creating-orders-page/creating-order-page.md"

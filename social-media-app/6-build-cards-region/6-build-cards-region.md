@@ -46,20 +46,20 @@ choose **Create Region**.
         p.post_comment AS comment_text,
         p.file_blob,
         p.file_mime,
-        
+
         apex_util.get_since(p.created) post_date,
 
         (
-            select count(*) from SM_REACTIONS smr 
+            select count(*) from SM_REACTIONS smr
             where smr.post_id=p.id
         ) as REACTIONS,
 
         (
-            select 'user-has-liked' from SM_REACTIONS smr 
+            select 'user-has-liked' from SM_REACTIONS smr
             where smr.post_id=p.id and created_by=:APP_USER
         ) USER_REACTION_CSS
 
-        from SM_POSTS p 
+        from SM_POSTS p
 
         order by p.created desc
     </copy>
@@ -133,5 +133,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023
