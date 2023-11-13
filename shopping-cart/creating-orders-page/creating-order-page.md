@@ -34,9 +34,9 @@ Create a Normal Page to review the Order that customer has made.
 
     ![App Builder home page](./images/create-page.png " ")
 
-2. Select **Blank Page** and click **Next**.
+2. Select **Blank Page**.
 
-    ![create page wizard](./images/create-blank-page11.png " ")
+    ![create page wizard](./images/create-blank-page111.png " ")
 
 3. Enter the following and click **Next**.
 
@@ -66,11 +66,12 @@ Add a region to the page to display order details.
 
     - For Template - select **Content Block**
 
+    - For Icon, enter **fa-heart**
+
     - For Template Options - check **Show Region Icon** and click **Ok**
 
         ![Property Editor](./images/template-options.png " ")
 
-    - For Icon, enter **fa-heart**
 
 ## Task 3: Add Items to the Page
 Add a hidden item to store the order ID without the user being able to see it.
@@ -191,13 +192,12 @@ Add a region to display items in the order.
             </copy>
             ```
           ![Property Editor](./images/sub-region-fields3.png " ")
+
 4. Click **Attributes** and do the following:
 
     - Under Title section:
 
         - For Column - select **PRODUCT**    
-
-         ![Attributes tab in the property editor](./images/attributes2.png " ")
 
     - Under Secondary Body:
 
@@ -211,6 +211,7 @@ Add a region to display items in the order.
             <b>Unit Price: </b>&UNIT_PRICE.    
             </copy>
             ```
+        ![Attributes tab in the property editor](./images/attributes2.png " ")
 
     - Under Media section:
         - For Source - select **BLOB Column**   
@@ -219,12 +220,10 @@ Add a region to display items in the order.
         - For Appearance - select **Auto**  
         - For Sizing - select **Fit**   
 
-        ![Attributes tab in the property editor](./images/attributes3.png " ")
-
     - Under Card:
         - For Primary Key Column 1 - select **ITEM**    
 
-        ![Attributes tab in the property editor](./images/attributes4.png " ")
+        ![Attributes tab in the property editor](./images/attributes3.png " ")
 
 5. Click **Save**.
 
@@ -234,4 +233,4 @@ You now know how to add a new page to your existing APEX Application and add reg
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

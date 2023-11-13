@@ -25,9 +25,9 @@ In this workshop, you:
 If you are using a Free Tier account, then it is likely that you already have all the necessary privileges
 
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

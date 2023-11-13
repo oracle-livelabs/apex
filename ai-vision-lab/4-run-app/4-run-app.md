@@ -37,4 +37,4 @@ You now know how to post an image and search for images using AI search.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

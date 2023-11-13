@@ -6,7 +6,7 @@ In this workshop, you create a Social Media Application where you can POST pictu
 
 When the users log into the app, they can post pictures by selecting and uploading from their local device along with adding a comment. The users can also scroll and see what their friends have posted, LIKE their pictures and keep count of the number of LIKES on each picture.
 
-Although the end result is a simple app to get started, you can continue to expand it's features by implementing Push Notifications, adding comments on friends' pictures and so on. 
+Although the end result is a simple app to get started, you can continue to expand it's features by implementing Push Notifications, adding comments on friends' pictures and so on.
 
 Estimated Workshop Time: 60 minutes
 
@@ -21,7 +21,7 @@ Watch the video below for a quick walk-through of the workshop.
 * Customize the App using Dynamic Actions and custom CSS
 * Add Maps region, get device location, and install PWA
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ### Labs
 
@@ -60,4 +60,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## **Acknowledgements**
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

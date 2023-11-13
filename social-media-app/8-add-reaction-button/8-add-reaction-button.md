@@ -15,7 +15,6 @@ In this lab, you will:
 - Create Dynamic Actions for Like and Delete buttons
 - Associate the Like and Delete buttons with custom events
 
-
 ### Prerequisites
 
 - Completion of workshop through Lab 7
@@ -33,7 +32,7 @@ In this lab, you will:
 
 2.  Right-click the **Events** entry and choose **Create Dynamic Action**.
 
-    ![Right-click options](images/create-da.png)
+    ![Right-click options](images/create-da1.png)
 
 3.  A **New** Dynamic Action has been created with a **True action** defaulted to **Show**. Change the Name to **action-like**.
 
@@ -53,7 +52,7 @@ In this lab, you will:
 
 ## Task 2: Creating the True Actions for the Like Button
 
-We need to configure the True actions for the **action-like** Dynamic Action. We need to perform two actions: 
+We need to configure the True actions for the **action-like** Dynamic Action. We need to perform two actions:
     - Update the UI on the client with either one more or one less Like (JavaScript)
     - Invoke the database work necessary to record the desired state for the user, for the corresponding post (PL/SQL).
 
@@ -117,7 +116,7 @@ We need to configure the True actions for the **action-like** Dynamic Action. We
 
 7. We need to configure one last thing on this action. The code block needs to receive the Page Item values from our form. This is handled by providing a list of the **Page Items to Submit** to the Server.
 Paste the below list of Page Items into the **Items to Submit** property.
-    
+
     ```
      <copy>
         P1_ACTION_ID,P1_LAT,P1_LON
@@ -148,11 +147,11 @@ Paste the below list of Page Items into the **Items to Submit** property.
 
 1. First, we want to be sure that we are looking at the **Dynamic Actions** tab. If not, select it so that we can add a new Dynamic action.
 
-    ![Dynamic Actions tab](images/da-tab.png)
+    ![Dynamic Actions tab](images/da-tab1.png)
 
 2. Right-click the **Custom** entry and choose **Create Dynamic Action**.
 
-    ![Dynamic Actions tree](images/create-da-2.png)
+    ![Dynamic Actions tree](images/create-da-3.png)
 
 3. You will now see that a New Dynamic Action has been created with a **True** action defaulted to **Show**.
 
@@ -160,7 +159,7 @@ Paste the below list of Page Items into the **Items to Submit** property.
 
 4. Update the following attributes in the Property Editor:
     - Name: **action-delete**
-    - When > Event: **Custom** 
+    - When > Event: **Custom**
     - When > Custom Event: **action-delete**. This is once again an important detail because the Javascript on our page identifies this Dynamic Action by the Custom Event name.
     - Finally, set When -> Selection Type to **JavaScript Expression** and for Javascript Expression, enter **document**.
 
@@ -169,10 +168,10 @@ Paste the below list of Page Items into the **Items to Submit** property.
 
 ## Task 4: Create the Delete Button True Actions
 
-We need to configure the True actions for the action-delete Dynamic Action. 
-There are actually 3 actions desired here: 
+We need to configure the True actions for the action-delete Dynamic Action.
+There are actually 3 actions desired here:
     - Confirm deletion
-    - Invoke the database work necessary to delete the desired post (PL/SQL) 
+    - Invoke the database work necessary to delete the desired post (PL/SQL)
     - Update the UI on the client by removing the deleted post
 
 1. Navigate to the **True Action > Show** button and set the following properties:
@@ -204,7 +203,7 @@ There are actually 3 actions desired here:
     ```
 
     This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
-    
+
 
 6. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Enter the following Page Item name into **Items to Submit** field:
 
@@ -249,4 +248,4 @@ There are actually 3 actions desired here:
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, March 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
