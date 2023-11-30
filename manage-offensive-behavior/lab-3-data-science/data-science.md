@@ -57,6 +57,7 @@ After finishing the notebooks and successfully running your first Job, you need 
 5. Click on **ocw_ my_ first_job** or when you renamed the Job during creation, click on the name
 6. In the Job, you will see **OCID**. Click on **Copy** next to the OCID and paste the full OCID locally
   ![lab_3_img_3](images/lab_3_img_3.JPG)
+  ![lab_3_img_6](images/lab_3_img_6.JPG)
 
 You may now **proceed to the next lab.**
 
