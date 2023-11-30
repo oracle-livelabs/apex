@@ -50,7 +50,7 @@ In this lab, you will:
 
 1. Click on the **Git** tab on the left
 2. Click on **Clone a Repository**
-3. Add https://github.com/phantompete/ocw_las_vegas.git
+3. Add https://github.com/phantompete/Offensive_Behavior_Lab.git
 4. Click **Clone**. A new, ocw_las _vegas_ repository should appear in the directory on the left
 5. Step inside the **ocw_las _vegas folder**
 6. Open the first notebook: **1_prep _ocw_v1.ipnyb**
