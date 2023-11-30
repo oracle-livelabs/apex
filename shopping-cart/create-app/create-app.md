@@ -25,7 +25,7 @@ In this lab, you will:
 
     ![App builder home page](images/go-create-app.png " ")
 
-2.  Click **New Application**.
+2.  Click **Use Create App Wizard**.
 
     ![Create Application options](./images/new-app.png " ")
 
@@ -48,6 +48,8 @@ In this lab, you will:
 A dashboard page is a great way to show important information using various charts. When you installed the Sample Dataset, it also created a number of views, which join data from various tables. These views are ideal as the basis for the dashboard charts.
 
 1. In the Create Application wizard, click **Add Page**.
+
+    ![Add Page](./images/add-page.png " ")
 
 2. Click **Dashboard**.
 
@@ -124,7 +126,9 @@ A dashboard page is a great way to show important information using various char
 
     Click **Add Page**.
 
-    ![Add Page wizard](./images/fs-page.png " ")  
+    ![Add Page wizard](./images/fs-page.png " ")
+
+    ![Add Page wizard](./images/fs-page1.png " ")  
 
 ## Task 5: Delete Original Home Page
 
@@ -215,7 +219,7 @@ Now that you have added all the pages, it is time to generate the app and review
 2. Once the application is created, you will find the new app on the application home page.
 Click **Run Application**.
 
-    ![Application home page](./images/run-app.png " ")
+    ![Application home page](./images/run-app12.png " ")
 
 ## Task 11: Run the Application
 
@@ -234,4 +238,4 @@ You now know how to create an application with a number of different page types 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

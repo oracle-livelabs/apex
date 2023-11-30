@@ -44,7 +44,7 @@ As you can see, it's hard to find the products and it would be beneficial to see
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
     Once in the App Builder click **1 - Products**.
 
-    ![App Builder home page](./images/alt-app-builder.png " ")
+    ![App Builder home page](./images/alt-app-builder1.png " ")
 
     You should now be in Page Designer with **Page 1: Products** loaded.
 
@@ -101,7 +101,7 @@ As you can see, it's hard to find the products and it would be beneficial to see
         ```
     - Under Appearance section:
         - Click **Template Options**. For Style - select **Style A**
-    ![Property Editor](./images/template-options.png " ")  
+    ![Property Editor](./images/template-options10.png " ")  
         - Click **Ok**
 
 2. Click **Attributes** and apply the following changes:
@@ -143,9 +143,10 @@ As you can see, it's hard to find the products and it would be beneficial to see
 Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
 
 1. Navigate to **Search Results** (left pane).
+
 2. On Actions, right-click **Create Action**.
 
-    ![Rendering Tree in Page Designer](./images/create-action.png " ")
+    ![Rendering Tree in Page Designer](./images/create-action10.png " ")
 
 3. In the Property Editor (right pane), enter the following:
     -   For Type - select **Full Card**
@@ -170,7 +171,9 @@ In this task, you will create two dynamic actions:
 1. Navigate to **Dynamic Actions** tab (left pane).
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
-     ![Dynamic Actions Tab](./images/create-da.png " ")  
+
+     ![Dynamic Actions Tab](./images/create-da10.png " ")
+
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Name - enter **Show Success Message**
@@ -178,7 +181,9 @@ In this task, you will create two dynamic actions:
         - For Event - select **Dialog Closed**
         - For Selection Type - select **Region**
         - For Region - select **Search Results**
+
         ![Property Editor](./images/success-da.png " ")
+
 4. Navigate to **Refresh** Action.
     - Under Identification section:
         - For Action - select **Execute JavaScript Code**
@@ -200,9 +205,12 @@ In this task, you will create two dynamic actions:
             }
             </copy>
             ```
+        ![Property Editor](./images/success-da2.png " ")
 
-5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.  
+5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+
      ![Dynamic Actions Tab](./images/create-da4.png " ")
+
 6. In the Property Editor, enter the following:    
     - Under Identification section:
         - For Name - enter **Update Shopping Cart Header**
@@ -236,8 +244,12 @@ In this task, you will create two dynamic actions:
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
             </copy>
             ```
+            ![Property editor](./images/update-cart-da2.png " ")
+
 8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic action.
+
 9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
+
      ![Dynamic Actions Tab](./images/create-opposite-action.png " ")
 
 10. Navigate to **Execute JavaScript Code** Action.
@@ -256,6 +268,7 @@ In this task, you will create two dynamic actions:
             </copy>
             ```
 11. Click **Save and Run Page** to view your updated **Products** page.
+
       ![Toolbar in the Page Designer](./images/updated-products.png " ")
 
 
@@ -265,4 +278,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
