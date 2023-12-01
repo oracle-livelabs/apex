@@ -26,27 +26,27 @@ In this lab, you will:
 
 1.	Go to **Oracle.cloud.com** and Log in using your tenancy and credentials
 2.	In all the following steps, make sure you are working in the correct compartment you have rights to work in
-    ![lab_1_img_1](images/lab_1_img_1.JPG)
+    ![lab_1_img_1_console_login](images/lab_1_img_1_console_login.JPG)
 
 First, we’ll create an Autonomous Database. This database will be used to store all results and will run APEX on top of it. 
 3. Go to the hamburger menu, click on **Oracle Database**
 4. Click on **Autonomous Database**
 5. Click **Create Autonomous Database**. Make sure to be in the correct compartment when you do so
 6. Leave the Display name and Database name as is
-   ![lab_1_img_2](images/lab_1_img_2.JPG)
+   ![lab_1_img_2_autonomous_database](images/lab_1_img_2_autonomous_database.JPG)
 
 7. Select **Transaction Processing** under **Workload Type**
 8. Select 1 OCPU and 1 TB. Feel free to increase the size of the database if needed
 9. Enter your password twice. Note down the password locally, you will need this password
 10. Choose **Secure access from everywhere** in the **Access Type** option
 11. Click on **Create Autonomous Database**. This will take several minutes
-    ![lab_1_img_3](images/ATP_Workload_Type.png)
+    ![lab_1_img_3_workload_type](images/lab_1_img_3_workload_type.png)
 
 12. When the Autonomous Database becomes **'Active'**, click on the display name to open the overview page
 13. In the overview page, click on **'Database Connection'** and download the Database Wallet by clicking **'Download Wallet'**, save it for later you will need it in **Lab 3**
-    ![lab_1_img_10](images/Download_wallet.png)
+    ![lab_1_img_4_download_wallet](images/lab_1_img_4_download_wallet.png)
 14. In the overview page, click on **'Database Actions'** and following on **'SQL**'. Note. When clicking on 'Database Actions', please wait to fully load the list of actions
-    ![lab_1_img_9](images/lab_1_img_9.JPG)
+    ![lab_1_img_5_database_actions](images/lab_1_img_5_database_actions.JPG)
 
 15. A new page should open, displaying a **SQL worksheet.** Note. By following these steps, you should be logged in as Admin automatically. If prompted to log in, log in in with your Admin credentials
 16. In the SQL Worksheet, please copy the below **PL/SQL statement** and click on **Run Script**. This script will create a new user (i.e., schema) in the database including all needed permissions, you can always create the Database User and APEX Workspace/User through the wizard. 
@@ -103,8 +103,8 @@ Second, you will create an API Key. This API Key is needed to authenticate yours
 7. Important. Change the last line to key _ file = ./private _ key.pem. See an example config file with the made changes below
 8. Important. In OCI Data Science, you have to rename the private key file to **private_key.pem**
 9. Click on **Close** to close the window. You can review the API Key by click on the three dots on the right of it and select **View Configuration File**
-    ![lab_1_img_4](images/lab_1_img_4.JPG)
-    ![lab_1_img_7](images/lab_1_img_7.JPG)
+    ![lab_1_img_6_api_key](images/lab_1_img_6_api_key.JPG)
+    ![lab_1_img_7_api_key_config](images/lab_1_img_7_api_key_config.JPG)
 
 ## Task 3: Create a Log Group
 
@@ -116,7 +116,7 @@ Third, you will create Log Group. Eventually, each Job that you will run, will c
 4. Add a Name to your Log Group and click **Create**
 5. Step inside the Log Group and search for **OCID**. Copy the entire OCID. You will need this later
 The OCID starts with **ocid1.loggroup.oc1.**
-    ![lab_1_img_5](images/lab_1_img_5.JPG)
+    ![lab_1_img_8_log_group](images/lab_1_img_8_log_group.JPG)
 
 ## Task 4: Create an Object Storage Bucket
 
@@ -130,7 +130,7 @@ Next, you will create an Object Storage bucket. This bucket will be used to stor
 3.	Make sure to be in the correct compartment.
 4.	Click on **Create Bucket**
 5.	Change the bucket name to **ocw_root** and click **Create**
-    ![lab_1_img_6](images/lab_1_img_6.JPG)
+    ![lab_1_img_9_object_storage](images/lab_1_img_9_object_storage.JPG)
 
 ## Task 5: Get the Compartment OCID
 
@@ -141,7 +141,7 @@ Lastly, you will retrieve the Compartment OCID of the compartment you are workin
 3.	Search for your compartment you are working in
 4.	Hover over the OCID in the 3rd column belonging to your compartment, and click **Copy** 
 5.	Paste the OCID locally 
-    ![lab_3_img_4](images/lab_1_img_8.JPG)
+    ![lab_1_img_10_compartment_ocid](images/lab_1_img_10_compartment_ocid.JPG)
 
 You may now **proceed to the next lab.**
 

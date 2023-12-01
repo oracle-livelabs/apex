@@ -10,7 +10,7 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 *The video below is an example of the final result when all steps have been performed*
 
-[![video_1](images/video.png)](https://www.youtube.com/watch?v=_tNvQuZeY0U)
+[![video_1](images/demo_video.png)](https://www.youtube.com/watch?v=_tNvQuZeY0U)
 
 ### Objectives
 
@@ -48,8 +48,8 @@ The workshop aims to build two use cases.
 * **Use case 1:** Detect offensive language in the YouTube video. This use case focuses on the spoken text.
 * **Use case 2:** Detect a particular person in the YouTube video. This use cases focuses on the persons in the video.
 
-   ![intro_1](images/intro_1.jpg)
-   ![intro_2](images/intro_2.jpg)
+   ![use_case_1](images/use_case_1.jpg)
+   ![use_case_2](images/use_case_2.jpg)
 
 ## Prerequisites
 * An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported
