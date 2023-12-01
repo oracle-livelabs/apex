@@ -27,7 +27,7 @@ Before you start in APEX, let’s download the pre-built application first.
 2. Download the application by clicking on **OffensiveBehavior_Template.zip**
 3. Following, click on the **Download raw file** button
 4. **(Optional)** You can also build the application from scratch by following the **APEX Step by Step Guide** available in the repository
-  ![lab_4_img_1](images/lab_4_img_1.JPG)
+  ![lab_4_img_1_github_contents](images/lab_4_img_1_github_contents.JPG)
 
 
 4. Go back to Oracle Cloud and go to your Autonomous Database you provisioned in the first lab
@@ -35,17 +35,17 @@ Before you start in APEX, let’s download the pre-built application first.
 6. In the overview page, click on **Tool configuration** and copy the Access URL under the Oracle APEX row
 7. Open the **Access URL** in a new tab in, for example, Chrome
 8. Log in using the **user name and password** you created in Lab 1
-  ![lab_4_img_2](images/lab_4_img_2.JPG)
+  ![lab_4_img_2_autonomous_apex](images/lab_4_img_2_autonomous_apex.JPG)
 
 Next, you will import the pre-built APEX application (the .zip file) into APEX.
 
 11.	In APEX, go to **App Builder**
 12.	Go to **Import**
 13.	Drag & Drop the just downloaded .zip file into the dropzone
-    ![lab_4_img_3](images/lab_4_img_3.JPG)
+    ![lab_4_img_3_apex_builder](images/lab_4_img_3_apex_builder.JPG)
    	
 15.	Press **Next** until the application is imported and installed
-    ![lab_4_img_4](images/lab_4_img_4.JPG)
+    ![lab_4_img_4_apex_import](images/lab_4_img_4_apex_import.JPG)
 
 ## Task 2: Add your API Key to APEX
 
@@ -54,10 +54,10 @@ In this task, you will add/update your own API Key, credentials to APEX. This wi
 1. Go back to **App Builder**
 2. Go to **Workspace Utilities**
 3. Go to **Web Credentials**
-  ![lab_4_img_5](images/lab_4_img_5.JPG)
+  ![lab_4_img_5_workspace_utilities](images/lab_4_img_5_workspace_utilities.JPG)
 
 5. Select **OCI_API** from the list
-  ![lab_4_img_6](images/lab_4_img_6.JPG)
+  ![lab_4_img_6_web_credentials](images/lab_4_img_6_web_credentials1.JPG)
 
 #####
 
@@ -70,7 +70,7 @@ In this task, you will add/update your own API Key, credentials to APEX. This wi
 6.	When done, press **Apply Changes**
 
 Note: Whenever you make a change the OCI Private Key needs to be re-added.
-![lab_4_img_6](images/lab_4_img_7.JPG)
+![lab_4_img_7_web_credentials2](images/lab_4_img_7_web_credentials2.JPG)
 
 ## Task 3: Change your Data Sources
 
@@ -94,8 +94,8 @@ In this task, you will configure the data sources. These are used e.g., when you
 Note. Compartment OCID, Job OCID, and Project OCID can be found using Lab 3.
 
 See below for an example of BUCKET_NAME and replacing the static value with the Bucket Name.
-![lab_4_img_6](images/lab_4_img_8.JPG)
-![lab_4_img_6](images/lab_4_img_9.JPG)
+![lab_4_img_8_api_process](images/lab_4_img_8_api_process.JPG)
+![lab_4_img_9_api_process_parameters](images/lab_4_img_9_api_process_parameters.JPG)
 
 9.	Save and run the application when done.
 
