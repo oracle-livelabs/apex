@@ -93,9 +93,27 @@ The Theme Roller dialog appears displaying the styles for your application. You 
 
 1. To import theme styles:
      - From the Additional Options menu, select Import. A File Browser appears.
-     - Navigate to the appropriate file to set to set the custom CSS code, variable style changes, add classes and LESS compilation configuration to be applied to the current theme style.
 
-     ![Preferences Changed](images/preferences-changed.png " ")  
+     You can download the theme style json file from **[here](files/vita-new.json)** and import it into your application.
+
+     ![Preferences Changed](images/theme-import.png " ")
+
+     - Navigate to the downloaded file to set to set the custom CSS code, variable style changes, add classes and LESS compilation configuration to be applied to the current theme style.
+
+     ![Preferences Changed](images/file-import.png " ")
+
+     ![Preferences Changed](images/file-imported.png " ")
+
+2. To export theme styles:
+   From the Additional Options menu, select Export.This option exports the current style configuration into a JSON file.
+
+     ![Preferences Changed](images/export-file.png " ")
+
+3. To reset theme styles:
+   From the Additional Options menu, select Reset.
+   This option reverts any unsaved theme style changes.
+
+     ![Preferences Changed](images/reset-file.png " ")
 
 ## Summary
 
@@ -105,4 +123,4 @@ You now know how to use the Theme Roller to save a new Theme Style. You may now 
 
   - **Author** - Roopesh Thokala, Product Manager
   - **Contributor** - Ankita Beri, Product Manager
-  - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+  - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

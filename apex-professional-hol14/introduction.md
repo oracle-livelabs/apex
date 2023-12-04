@@ -13,7 +13,7 @@ Estimated Time: 15 minutes
 * Using Theme roller to save a new Theme Style.
 
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 
