@@ -74,6 +74,7 @@ Your customers don't need to log in the app to shop the products, so let's set t
 - Page 15: Order Information
 - Page 16: Shopping Cart
 - Page 17: Add to Cart
+- Page 18: Search Customer Order Product Details
 
 Follow these steps for the four listed pages:
 
@@ -97,7 +98,7 @@ Follow these steps for the four listed pages:
 
     ![Navigate to Page finder](./images/navigate-to-page-finder.png " ")
 
-5. Similarly, repeat steps 2-4 for **Page 16: Shopping Cart** and **Page 17: Add to Cart**.
+5. Similarly, repeat steps 2-4 for **Page 16: Shopping Cart**, **Page 17: Add to Cart** and **Page 18: Search Customer Order Product Details**.
 
 ## Task 3: Remove the Navigation Menu
 Since the home page is the Products page and this is a public access page, we do not need a navigation menu.

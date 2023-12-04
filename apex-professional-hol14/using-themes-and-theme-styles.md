@@ -38,7 +38,7 @@ In this hands-on lab, you use the Theme Roller to save a Theme Style. Then, you 
 2. The current Theme Style is **Vita**. Under **Global Colors**, click the color swatch to select new colors.
 To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
 
-  Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As**.
+  Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
 
   ![Change Color](images/change-color.png " ")
 
@@ -87,6 +87,15 @@ Notice that the new Theme Style you saved is displayed under Theme Style list. C
 11. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
 
     ![Preferences Changed](images/preferences-changed.png " ")
+
+## Task 2: Import and Export Theme Styles
+The Theme Roller dialog appears displaying the styles for your application. You can export and import style changes directly from Theme Roller by selecting the following options from the Additional Options menu: Import, Export, and Reset.
+
+1. To import theme styles:
+     - From the Additional Options menu, select Import. A File Browser appears.
+     - Navigate to the appropriate file to set to set the custom CSS code, variable style changes, add classes and LESS compilation configuration to be applied to the current theme style.
+
+     ![Preferences Changed](images/preferences-changed.png " ")  
 
 ## Summary
 

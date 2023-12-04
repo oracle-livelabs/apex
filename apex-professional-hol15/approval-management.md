@@ -633,7 +633,7 @@ Add a Unified Task list page to see the submitted expense request list by a requ
     Click **Create Page**.
 
     ![Click create page ](./images/utl-my-requests.png " ")
-    
+
 ## Task 7: Create an Email Template  
 Add an Email Template to add for before expiry action in the task definition.
 
@@ -941,7 +941,7 @@ You now essentially have a scenario where there can be more than one potential o
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
 
-## Task 10: Run and Explore the new app  
+## Task 11: Run and Explore the new app  
 
 In this task, you run and explore the Expense Tracker application. You submit a use case of a multi-level approval with an expense cost of more than 50000; an approved expense request will progress through a sequence of managers, starting with JOHN, then CLARA, then JANE, and finally MATT.
 
