@@ -11,9 +11,9 @@ Estimated Time: 1 hour
 ### Objectives
 In this workshop, you:
 
-- Configure OCI API keys
-- Leverage OCI vision USING Social media app
-- Integrate OCI vision with Oracle APEX
+- Update the Social Media App to include AI-Powered Search
+- Make use of the OCI API keys for integration with APEX
+- Integrate APEX with OCI Vision Service using REST Data Sources
 
 ### Prerequisites for Building this App:
 
