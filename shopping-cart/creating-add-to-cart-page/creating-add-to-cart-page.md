@@ -90,7 +90,7 @@ This region allows users to review the details of the product, such as brand, pr
     - For Template Options - click **Use Template Defaults**
         - For **Style** - select **Style C**
         - Click **Ok**
-        ![Property Editor](./images/template-options.png " ")
+        ![Property Editor](./images/template-options2.png " ")
 
 4. Click **Attributes** and enter the following:
 
@@ -160,7 +160,7 @@ This region lets users read the customer reviews for a product.
     - Under Appearance section:
         - For Template - select **Standard**
         ![properties](./images/cr-properties.png " ")
-        
+
 4. Click **Attributes** and enter the following:
 
     - Under Appearance section:
@@ -191,14 +191,19 @@ In this task, you will create four-page items:
 
 1. Navigate to the **Gallery Menu**.
 2. Drag a **Static Content** region and drop it to the **Dialog Footer**.
-     ![Gallery menu in the Page Designer](./images/create-sc.png " ")  
+
+     ![Gallery menu in the Page Designer](./images/create-sc10.png " ")  
 
 3. In the Property Editor, enter the following:
     - For Title - enter **Buttons Bar**
     - For Template - select **Buttons Container**
+
     ![Property Editor](./images/sc-properties.png " ")
+
 4. In the Rendering tree (left pane), navigate to **Buttons Bar** region.
+
 5. Right-click the **Buttons Bar** region and click  **Create Page Item**.
+
      ![Rendering Tree](./images/create-page-item2.png " ")
 6. Create four items as follows. In the Property Editor, do the following:
 
@@ -228,9 +233,14 @@ In this task, you will create four-page items:
     - Set Display Extra Values to **Off**
     - Set Display Null Value to **Off**
 
+     ![Rendering Tree](./images/quantity-select-list.png " ")
+
 7. Navigate to **Buttons Bar** region (left side).
+
 8. Right-click the region and click **Create Button**.
-     ![Rendering Tree](./images/create-button.png " ")
+
+     ![Rendering Tree](./images/create-button10.png " ")
+
 9. Create three buttons as follows:
 
     | Name | Label | Button Position |Button Template | Hot |
@@ -259,9 +269,13 @@ In this task, you will create four-page items:
     ![Property Editor](./images/delete-button.png " ")
 
 ## Task 5: Add Computation to Calculate the Number of Items for a Product
+
 1. In the Rendering tree (left pane), expand the **Pre-Rendering**.
+
 2. Right-click **Before Regions** and click **Create Computation**.
+
      ![Rendering Tree](./images/computation.png " ")    
+
 3. In the Property Editor, enter the following:
     - Under Identification section:
         - For Item Name - select **P18_QUANTITY**
@@ -282,7 +296,9 @@ In this Task, you will call the *manage\_orders.add_product* procedure that will
 1. In the Rendering tree (left pane), navigate to **Processing** tab.  
 
 2. Right click **Processing** and click **Create Process**.
-     ![Processing Tab in the Page Designer](./images/create-process.png " ")   
+
+     ![Processing Tab in the Page Designer](./images/create-process10.png " ")   
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Add product**
     - For Type - select **Execute Code**
@@ -303,13 +319,15 @@ In this Task, you will call the *manage\_orders.add_product* procedure that will
     - Under Server-side Condition section:
         - For When Button Pressed - select **Add**
 
-    ![Property Editor](./images/create-process2.png " ")      
+    ![Property Editor](./images/create-process20.png " ")      
 
 ## Task 7: Add Process to Edit Products in the Shopping Cart
 In this Task, you will call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove the product from the shopping cart and add it again with the updated quantity.
 
-1. In the **Processing** tab.    
+1. In the **Processing** tab.   
+
 2. Right click **Processing** and click **Create Process**.
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Edit product**
     - For Type - select **Execute Code**
@@ -337,7 +355,9 @@ In this Task, you will call the *manage\_orders.remove\_product* and *manage\_or
 In this Task, you will call the *manage\_orders.remove\_product* to remove the product from the shopping cart.
 
 1. In the **Processing** tab.    
+
 2. Right click **Processing** and click **Create Process**.
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Delete product**
     - For Type - select **Execute Code**
@@ -362,9 +382,12 @@ In this Task, you will call the *manage\_orders.remove\_product* to remove the p
 ## Task 9: Add Process to Calculate the Shopping Cart Items
 In this task, you will call the *manage\_orders.get\_quantity* to get the total of products in the shopping cart.
 
-1. In the **Processing** tab.    
+1. In the **Processing** tab.
+
 2. Right click **Processing** and click  **Create Process**.
+
      ![Processing Tab in the Page Designer](./images/create-process-cart.png " ")  
+
 3. In the Property Editor, enter the following:
     - For Name - enter **Calculate Shopping Cart Items**
     - For Type - select **Execute Code**
@@ -381,7 +404,8 @@ In this task, you will call the *manage\_orders.get\_quantity* to get the total 
 ## Task 10: Add Process to Close the Modal Page
 After the customer has taken action (add/edit/delete) about the product, the modal page will close and continue the shopping process.
 
-1. In the **Processing** tab.    
+1. In the **Processing** tab.  
+
 2. Right click **Processing** and click **Create Process**.
 
 3. In the Property Editor, enter the following:
@@ -396,15 +420,18 @@ After the customer has taken action (add/edit/delete) about the product, the mod
 ## Task 11: Enhance the Modal Page
 
 1. Navigate to **Rendering** tab (left pane).
+
      ![Rendering Tab in Page Designer](./images/rendering-tab.png " ")  
 
 2. Navigate to **Page 18: Add to Cart**
+
 3. In the Property Editor, do the following changes:
     - Under Identification section:
         For Title, enter **Manage your Cart**
     - Under Dialog section:
         - For Width, enter **600**
         - For Height, enter **600**
+
      ![Property Editor](./images/enhance-modal.png " ")     
 
 4. Click **Save**.
@@ -418,4 +445,4 @@ You now know how to customize and enhance an APEX page. You may now **proceed to
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

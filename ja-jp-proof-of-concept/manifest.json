@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "Oracle Autonomous Cloud ServicesでPoCを構築する",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "はじめに",
+        "filename": "../ja-jp-existing-tables/sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "紹介",
+        "filename": "intro/intro.md"
+      },
+      {
+        "title": "ラボ1: 新しいデータ構造の定義",
+        "filename": "quick-sql/using-quick-sql.md"
+      },
+      {
+        "title": "ラボ2: アプリの構築",
+          "filename": "create-app/create-app.md"
+      },
+      {
+        "title": "ラボ3: アプリの再生成",
+        "filename": "regen-app/regen-app.md"
+      },
+      {
+        "title": "ラボ4: タスクの改善",
+        "filename": "improving-tasks/improving-tasks.md"
+      },
+      {
+        "title": "ラボ5: To Dosの改善",
+        "filename": "improving-todos/improving-todos.md"
+      },
+      {
+        "title": "ラボ6: リンクの改善",
+        "filename": "improving-links/improving-links.md"
+      },
+      {
+        "title": "ヘルプ",
+        "description": "一般的な問題の解決策とライブ・ヘルプを受けるための手順",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}

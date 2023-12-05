@@ -1,7 +1,5 @@
 # Create an APEX Application
 
-
-
 ## Introduction
 In this lab, you learn to create a blank APEX application that will be used to build the Social Media App.
 
@@ -12,7 +10,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
 
 Estimated Time: 5 minutes
 
@@ -33,7 +31,9 @@ In this lab, you will:
 
 1. From your APEX workspace homepage, click **Create Application**.
 
-2. Select **New Application**
+    !["Create Application"](images/create-app1.png "")
+
+2. Select **Use Create App Wizard**
 
     !["Create App options"](images/create-app.png "")
 
@@ -48,13 +48,13 @@ Blueprint tab selected. Update the following information:
 
     - In *Features* section, check the **Install Progressive Web App** option.
 
-    !["Create App wizard"](images/app-details.png "")
+  Click **Create Application**.
 
-Click **Create Application**.
+     !["Create App wizard"](images/app-details.png "")
 
-4. We now have three pages in our APEX application. 
-    - The Global page (which we will not be using in this lab), 
-    - The Timeline page (which is the primary page we will be working on in this lab), 
+4. We now have three pages in our APEX application.
+    - The Global page (which we will not be using in this lab),
+    - The Timeline page (which is the primary page we will be working on in this lab),
     - The Login Page, which is the default page configured to use your workspace account credentials.
 
     !["The pages in the app"](images/pages.png "")
@@ -64,7 +64,7 @@ Click **Create Application**.
 
 1. Run the application.
 
-    ![Application home page](images/run-app.png "")
+    ![Application home page](images/run-app1.png "")
 
 2. To sign in to the application, use your workspace username and password.
 
@@ -86,5 +86,4 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Contributor(s)** - Ankita Beri, Product Manager, May 2023
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

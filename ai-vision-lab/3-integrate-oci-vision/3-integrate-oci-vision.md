@@ -21,7 +21,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 1. Navigate to the application home page and Click **Shared Components**.
 
-   ![Click Timeline](images/sm-shared-comp.png " ")
+   ![Click Timeline](images/sm-shared-comp1.png " ")
 
 2. Under Data Sources, click **REST Data Sources**.
 
@@ -29,14 +29,14 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 3. Click **Create**.
 
-   ![Click Timeline](images/rest-data-source-create.png " ")
+   ![Click Timeline](images/rest-data-source-create1.png " ")
 
 4. Select **From scratch** and Click **Next**.
 
    ![Click Timeline](images/rest-method.png " ")
 
-5. Under Create REST Data Source, enter the following attributes and Click **Next**.
-    - **Rest Data Source Type**: Select ** Oracle Cloud Infrastructure (OCI)**
+5. In the Create REST Data Source wizard, enter the following attributes and Click **Next**.
+    - **Rest Data Source Type**: Select **Oracle Cloud Infrastructure (OCI)**
 
     - **Name**: Enter **OCI Vision**
 
@@ -46,11 +46,11 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
    ![Click Timeline](images/create-rest-data.png " ")
 
-6. Under Create REST Data Source - Remote Server, click **Next**.
+6. In the Create REST Data Source - Remote Server wizard, click **Next**.
 
    ![Click Timeline](images/remote-server.png " ")
 
-7. Under Authentication,
+7. In the Authentication wizard,
 
     - For Authentication: Enable **Authentication Required**  
 
@@ -66,10 +66,10 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
    ![Click Timeline](images/select-oci-vision.png " ")
 
-10. Select Operations Tab and click **Edit icon** for the POST operation and enter the following:
+10. Select **Operations** Tab and click **Edit icon** for the POST operation. Enter the following:
     - **Database Operation**: -Not Mapped-
 
-    - **Request Body Template**: Copy and paste below JSON
+    - **Request Body Template**: Copy and paste the below JSON code
 
     ```
     <copy>
@@ -88,50 +88,67 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
       }
     <copy>
      ```
+      In the above JSON code:
+      - **CompartmentId** - is the OCID of your Compartment.
+      - **Image** - section contains the details of an Image to Analyze.
+      - **features** - section contains the type of image analysis requested.
 
     ![Click Timeline](images/edit-post.png " ")
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operations Parameter, click **Synchronize with Body** to auto-create substitutions strings in the request body template as operation parameters. Then, click **OK**.
 
-   ![Click Timeline](images/synchronize.png " ")
+11. Select Operations Parameter Tab and click **Add Parameter**
+      ![Click Timeline](images/add-parameter.png " ")
 
-12. Select Operations Parameter Tab and click **Add Parameter**
-
-   ![Click Timeline](images/operations-param.png " ")
+12. Under Edit REST Data Source Parameter:
+    - **Type**: Request or Response Body
+    - **Name**: COMPARTMENT_ID
+    - **Direction**: In
+    Click **Add and Add Another**
+    ![Click Timeline](images/add-parameter.png " ")
 
 13. Under Edit REST Data Source Parameter:
-
     - **Type**: Request or Response Body
-
-    - **Name**: RESPONSE
-
-    - **Direction**: Out
-
+    - **Name**: FILE_DATA
+    - **Direction**: In
     Click **Add and Add Another**
 
+14. Under Edit REST Data Source Parameter:
+    - **Type**: Request or Response Body
+    - **Name**: FEATURE_TYPE
+    - **Direction**: In
+    Click **Add and Add Another**
+   ![Click Timeline](images/operations-param.png " ")
+
+15. Under Edit REST Data Source Parameter:
+    - **Type**: Request or Response Body
+    - **Name**: RESPONSE
+    - **Direction**: Out
+    Click **Add and Add Another**
     ![Click Timeline](images/response.png " ")
 
-14. Under Edit REST Data Source Parameter:
-
+16. Under Edit REST Data Source Parameter:
     - **Type**: HTTP Header
-
     - **Name**: Content-Type
-
     - **Direction**: In
-
     - **Default value**: application/json
-
     - **Static**: ON
-
     Click **Add Parameter**.
-
     ![Click Timeline](images/content-type.png " ")
 
-15. Click **Apply Changes**.
+17. Click **Apply Changes**.
+    
+      ![Click Timeline](images/parameter-changes.png " ")
 
-    ![Click Timeline](images/parameter-changes.png " ")
+
+
+
+
+
+
+
+
 
 
 ## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
@@ -141,15 +158,15 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 1. Navigate to Application Homepage by clicking on the Application ID.
 
-   ![Click Timeline](images/click-app-id.png " ")
+   ![Click Timeline](images/click-app-id1.png " ")
 
 2. Click **1-Timeline** page.  
 
-   ![Click Timeline](images/select-timeline.png " ")
+   ![Click Timeline](images/select-timeline1.png " ")
 
 3. Right click **Timeline** region under Rendering Pane and click **Create Page Item**.
 
-   ![Click Timeline](images/create-page-item.png " ")
+   ![Click Timeline](images/create-page-item2.png " ")
 
 4. In the Property Editor, Enter the following:
 
@@ -159,7 +176,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - **Type**: Hidden
 
-   ![Click Timeline](images/response-page-item.png " ")
+   ![Click Timeline](images/response-page-item1.png " ")
 
 5. Navigate to Processing Tab (left pane) and right click on Processing Tab or Processes and click **Create Process**.
 
@@ -175,13 +192,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
   Under Settings:
 
-    - Enable **Execute in Background**.
+    - Enable **Run in Background**.
 
-    ![Click Timeline](images/analyze-image.png " ")
+    ![Click Timeline](images/analyze-image1.png " ")
 
 7. Right click on the **Analyze Image** Process you just created and select **Add Child Process**.
 
-    ![Click Timeline](images/add-child-process1.png " ")
+    ![Click Timeline](images/add-child-process11.png " ")
 
 8. In the Property Editor, enter the following:
 
@@ -201,7 +218,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - **Operation**: POST
 
-    ![Click Timeline](images/child-process1.png " ")
+    ![Click Timeline](images/child-process11.png " ")
 
 9. Click **COMPARTMENT\_ID** and enter the following:
 
@@ -255,7 +272,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 13. Right click on the **Analyze Image** Process and Select **Add Child Process**.
 
-    ![Click Timeline](images/add-child-process1.png " ")
+    ![Click Timeline](images/add-child-process12.png " ")
 
 14. In the Property Editor,Enter the following:
 
@@ -297,7 +314,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
 
 1. Go to the Rendering tab, right click on the **After Logo** section and select **Create Page Item**.
 
-    ![Click Timeline](images/after-logo-page-item.png " ")
+    ![Click Timeline](images/after-logo-page-item1.png " ")
 
 2. In the property editor, enter the following:
 
@@ -317,7 +334,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
 
     - For Width : Enter **100**
 
-   ![Click Timeline](images/ai-search-page-item.png " ")
+   ![Click Timeline](images/ai-search-page-item1.png " ")
 
 3. Select **Timeline** region, in the property editor, enter the following:
    Under Source:
@@ -347,7 +364,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
    ```
     - For Page items to Submit: Select **P1\_AI\_SEARCH**
 
-    ![Click Timeline](images/timeline-query.png " ")
+    ![Click Timeline](images/timeline-query1.png " ")
 
 4. Click **Save and Run**.
 
@@ -360,4 +377,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

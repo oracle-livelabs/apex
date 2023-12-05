@@ -98,15 +98,15 @@ The shopping cart page allows users to review and edit the products in the cart.
 
 1. Click on Application Home.  ***The ID of your application may vary***.
 
-    ![Page designer view](./images/create-page.png " ")
+    ![Page designer view](./images/create-page1.png " ")
 
 2. Click **Create Page**.    
 
     ![Application home page.](./images/create-page2.png " ")
 
-3. Select **Blank Page** and click **Next**.
+3. Select **Blank Page**.
 
-4. Enter the following and click **Next**.
+4. Enter the following:
     - Page Number - enter **17**
     - For Name - enter **Shopping Cart**
     - For Page Mode - select **Normal**
@@ -246,7 +246,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
 5. Right-click the **Order Information** region and click **Create Page Item**.
 
-    ![Rendering Tree](./images/create-item.png " ")
+    ![Rendering Tree](./images/create-item1.png " ")
 6. Create five items as follows:
 
 
@@ -275,9 +275,14 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     - Set Display Extra Values - to **Off**
     - For Null Display Value - enter **- Select a Store -**
 
+     ![Select store](./images/select-store.png " ")
+
 7. Navigate to the **Order Information** (left pane) region.
+
 8. Right-click the **Order Information** region  and click **Create Button**.
-     ![Rendering Tree](./images/create-button.png " ")  
+
+     ![Rendering Tree](./images/create-button1.png " ")
+
 9. Create two buttons as follows:
 
     | Button Name | Label  | Position | Button Template | Hot | Icon |
@@ -286,6 +291,10 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
     {: title="Details of the 2 Buttons"}
 
+     ![Button properties in the Property Editor](./images/proceed-button.png " ")
+
+     ![Button properties in the Property Editor](./images/clear-button.png " ")
+
      Under Server-side Condition:
     | Button Name | Type  | Item |
     | --- |  --- | --- |
@@ -293,7 +302,9 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     {: title="Server Side Condition for the 2 Buttons"}
 
-     ![Button properties in the Property Editor](./images/buttons.png " ")      
+     ![Button properties in the Property Editor](./images/buttons.png " ")   
+
+     ![Button properties in the Property Editor](./images/clear-server.png " ")    
 
 ## Task 7: Add Validations to the Page
 
@@ -430,7 +441,7 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
     - Navigate to Target attribute and click **No Link Defined**
 
-        - For Type - select **Page in this application**
+        - For Type - select **Page or URL (Redirect)**
 
         - For Page - enter **1**
 
@@ -439,6 +450,8 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
         - Click **OK**
 
     - For When Button Pressed, select **Clear**
+
+     ![Button behaviour in the Property Editor](./images/branch-details1.png " ")
 
 ## Task 11: Add Dynamic Actions
 In this task, you will create a dynamic action to:
@@ -453,7 +466,7 @@ In this task, you will create a dynamic action to:
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da2.png " ")  
+     ![Dynamic Actions Tab](./images/create-da21.png " ")  
 
 3. In the Property Editor, enter the following:
 
@@ -549,6 +562,8 @@ In this task, you will create a dynamic action to:
 
 14. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action. Right-click on **False** and select **Create FALSE Action**.
 
+    ![False Action](./images/false-action.png " ")
+
 15. In the Property Editor, enter the following:
 
     - Under Identification section:
@@ -559,7 +574,9 @@ In this task, you will create a dynamic action to:
 
         - For Selection Type - select **Region**
 
-        - For Region - select **Shopping Cart**    
+        - For Region - select **Shopping Cart**  
+
+    ![False Action](./images/false-action1.png " ")  
 
 ## Task 12: Format Products Image Size
 
@@ -583,7 +600,7 @@ In this task, you will create a dynamic action to:
 
 3. Click **Save**.
 
-
+## Summary
 
 You now know how to add validations, processes, branches, and dynamic actions to your APEX page. You may now **proceed to the next lab**.
 
@@ -591,4 +608,4 @@ You now know how to add validations, processes, branches, and dynamic actions to
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
