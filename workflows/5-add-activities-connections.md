@@ -488,27 +488,164 @@ At this point the workflow needs to raise an Invoice Request for the patient to 
 
 5. In the **Left Pane**, select **Doctor Name** under **Raise Invoice Request** and change the following in the **Property Editor**.
     - Under Parameter, Set Direction to **Out**.
-    - Under Value, for **Item**, Select  **Version Variable** -> **FEE** using the Item Picker.
+    - Under Value, Select **Type** as **Static Value** and then set **Static Value** as **&DNAME.**
+
+    ![Configure Doctor Name](./images/config-doctor-name.png " ")
+
+6. Similarly, Set the remaining parameters under **Raise Invoice Request** as follows:
+    - Set **Fees** as Item Picker -> Version Variable -> **FEE**
+    - Set **Patient Name** as Item Picker -> Workflow Parameter -> **PATIENT_NAME**
+
+7. Click on **Save** button to save the changes.
 
 
-18. **Configure Update Fees Activity:**
-    - Add an Invoke API activity to update consultation fees.
-    - Set parameters for the Update Fees procedure.
+## Task 17: Add a Timeout Connection for the Invoice Request completion.
 
-19. **Configure Send Invoice Email Activity:**
-    - Add a Send E-Mail activity to notify the patient about the confirmed appointment and fees.
-    - Set To, Subject, and Body Plain Text attributes.
+1. Click on the 3 Dots at the top right corner of the **Raise Invoice Request** Activity to open the Context Menu and Select **Create Connection**.
 
-20. **Save Workflow Model:**
-    - Save the workflow model state by clicking the Save button.
+    ![create timeout connection](./images/create-timeout-connection.png " ")
 
-Congratulations! You have successfully completed the hands-on lab for building a Doctor Appointment Workflow. In the next section, you will create pages in the application that will utilize this workflow.
+2. Now, click on the newly created Connection and then in the Property Editor do the following changes.
+    - Under **Identification**,
+        - set the Name to **Invoice Incomplete**
+        - Set the Type to Timeout
+    - Under **Activity**
+        - Make sure that From is set as **Raise Invoice Request**.
+        - set To as **No Appointment Email**
+  ![Configure timeout connection](./images/configure-timeout-prop.png " ")
+
+3. Re-adjust the Workflow Diagram to make the diagram more aesthetic.
+
+  ![readjusting workflow diagram](./images/workflow-diagram.png " ")
+
+
+## Task 18: Update Status of the Workflow
+
+Once the Patient confirms the invoice / makes the payment , the Appointment record status needs to be updated to PAID .
+
+1. For that, Drag and Drop an **Invoke API** activity on the Connection between the **Raise Invoice Request** and **Complete Appointment** activities.
+
+2. In the Property Editor, do the following changes.
+    - Under Identification, Inout **Name** as **Update Appointment**.
+    - Under Settings,
+        - select Package as **EBA_DEMO_WF_DOC_APT**.
+        - set **Procedure or function** to **UPDATE_APPOINTMENT**.
+
+    ![create and config Update appointment](./images/create-config-update-app.png " ")
+
+3. The procedure **UPDATE_APPOINTMENT** will update the Status in the **APPOINTMENT** Table record to **PAID**.
+
+4. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Appointment** has 3 Parameters, highlighted in RED to show that they are required. Set the Parameters for the Invoke API activity by clicking on them in the Workflow Tree
+
+5. In the **Left Pane**, select **p_booking_id** under **Update Appointment** and change the following in the **Property Editor**.
+    - Under Parameter, Set Direction to **In**.
+    - Under Value, Select **Type** as **Item** and then set **Item** as Version Variable **BOOKING_ID**
+
+    ![config booking id](./images/config-booking-id.png " ")
+
+
+6. Similarly, Set the remaining parameters under **Update Appointment** as follows:
+    - Set **p_status** to **Static** Value -> **PAID**
+    - Set **p_fees** to **API Default**
+
+
+## Task 19: Final steps
+
+Going back to our flowchart, at this point the Workflow waits for the appointment to happen and after that it raises a Feedback Request for the Patient. If the feedback is not received within a specific period, the Workflow is Completed without Feedback , else a Thank You Email is sent to the Patient.
+
+1. From the Activities Palette , drag a **Wait** Activity and drop it on the connection between the **Update Appointment** and the **Complete Appointment** activities.
+
+2. In the Property Editor,
+    - Under Identification, Set Name to **Wait Before Requesting Feedback**
+    - Under Settings,
+        - Set **Timeout Type** as **SQL Query**
+        - For **SQL Query**, enter the following SQL Code
+
+        ```
+        <copy>
+            select schedule
+            from appointment
+            where booking_id = :BOOKING_ID
+        </copy>
+        ```
+    ![create and config wait activity](./images/create-config-wait-activity.png " ")
+
+3. From the Activities Palette , drag a **Human Task - Create** Activity and drop it on the connection between the **Wait Activity** and the **Complete Appointment** activities.
+
+4. In the Property Editor
+    - Under **Identification**, Set Name to **Request For Feedback**
+    - Under **Settings**,
+        - set **Definition** to **Feedback Request**
+        - set **Detail Primary Key Item** to **BOOKING_ID**
+    - Under Deadline,
+        - set **Due On Type** to **Interval**
+        - **Interval** to **PT24H** (this implies that the Workflow will wait at most 24 hours for the feedback activity to be completed )
+
+  ![create and conf feedback](./images/create-conf-feedback.png " ")
+
+5. In the Rendering Tree, select **Booking Id** under **Request For Feedback** and change the following in the **Property Editor**.
+    - Under Value, Select **Type** as **Item** and then set **Item** as Version Variable **BOOKING_ID**
+
+    ![config booking id](./images/set-feedback-params.png " ")
+
+6. Drag a **Workflow End** Activity from the **Activity Palette** and drop it on the Diagram area to the left of the **Raise Feedback Request** activity.
+
+7. In the Property Editor, under itentification, set Name to **End Without Feedback**.
+
+    ![create and config workflow end](./images/create-config-worflow-end.png " ")
+
+8. Draw a Connection from the **Raise Feedback Request** to the **End Without Feedback** Activity.
+
+    ![draw final connection](./images/draw-final-connection.png " ")
+
+9. Notice that the connection is in RED and this is because an activity cannot have more than one outgoing connection of type Normal.
+
+10. Click on the Connection and then in the Property Editor,
+    - Under Identification,
+        - set the Name to **No Feedback Received**
+        - Set the Type to **Timeout**
+
+    ![draw final connection](./images/no-feedback.png " ")
+
+*Tech Tip: Connections of type Timeout can only be added to an activity if the activity has Due On Type and value populated in the Deadline section of the Property Editor*
+
+11. Finally, Drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Raise Feedback** Request and **Complete Appointment** End Activity.
+
+12. In the Property Editor.
+    - Under Identification, Set the Name to **Send Thank You Note To Patient**
+    - Under Settings,
+        - Set the **To** property in the Settings to **&PATIENT_EMAIL.**
+        - Set the **Subject** to **Thank You!**
+        - Set the **Body Plain Text** as shown below
+
+        ```
+        <copy>
+        Dear &PATIENT_NAME. ,
+
+        Thank you for your feedback regarding your recent appointment with Dr. &DNAME.
+        We hope to keep serving you in the future!
+
+        Regards,
+        Management Team,
+        ABC Hospital Pvt Ltd.
+
+        </copy>
+        ```
+
+    ![create and config send email](./images/create-config-send-email.png " ")
+
+13. Save the changes by clicking the **Save** button.
+
+14. At this point our Appointment Workflow model is **Complete!**
+
+
+You have successfully completed the hands-on lab for building a Doctor Appointment Workflow. In the next section, you will create pages in the application that will utilize this workflow.
 
 
 ## **Summary**
-You have successfully created Human Task definitions for the Doctor Appointment Workflow using the Approvals Component. In the next section, we will integrate these tasks into the workflow to complete the design process.
+You have successfully created and configures the workflow for Docto's Appointment Made Easy application.
 
 ## Acknowledgments
-- **Author** - Roopesh Thokala, Senior Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   

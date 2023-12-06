@@ -9,7 +9,7 @@ In this Lab, you learn how to implement an efficient system to schedule and mana
 - Identify the key participants in the organization that are involved in this business process.
 
 
-# Note: In APEX Workflow terminology - we refer to an executable step as an Activity and a sequence/condition as a Connection.
+*Note: In APEX Workflow terminology - we refer to an executable step as an Activity and a sequence/condition as a Connection.*
 
 Estimated Time: 10 minutes
 
