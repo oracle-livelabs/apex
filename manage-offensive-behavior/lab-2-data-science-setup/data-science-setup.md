@@ -51,7 +51,7 @@ In this lab, you will:
 1. Click on the **Git** tab on the left
 2. Click on **Clone a Repository**
 3. Add https://github.com/phantompete/Offensive_Behavior_Lab.git
-4. Click **Clone**. A new, /Offensive_Behavior_Lab/ repository should appear in the directory on the left
+4. Click **Clone**. A new, Offensive_Behavior_Lab repository should appear in the directory on the left
 5. Step inside the **Offensive_Behavior_Lab**
 6. Open the first notebook: **1_prep _ocw_v1.ipnyb**
 7. When prompted for **Select Kernel**, just click on **Select**
