@@ -10,7 +10,7 @@ Estimated Workshop Time: 1 hour 45 minutes
 
 *The video below is an example of the final result when all steps have been performed*
 
-[](youtube:_tNvQuZeY0U)
+[](youtube:tNvQuZeY0U)
 
 ### Objectives
 
