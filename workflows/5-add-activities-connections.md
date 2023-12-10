@@ -643,7 +643,7 @@ You have successfully completed the hands-on lab for building a Doctor Appointme
 
 
 ## **Summary**
-You have successfully created and configures the workflow for Docto's Appointment Made Easy application.
+You have successfully created and configures the workflow for Doctor's Appointment Made Easy application.
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff.
