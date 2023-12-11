@@ -7,11 +7,12 @@ In this hands-on lab, you will learn the process of creating a Doctor Appointmen
 ## Objectives
 
 In this lab, You will learn how to
-- Create the Workflow
-- Modify the Workflow details
-- Define Workflow Data
-- Add Workflow Variables
+  - Create the Workflow
+  - Modify the Workflow details
+  - Define Workflow Data
+  - Add Workflow Variables
 
+Estimated Time: 20 minutes
 
 ## Task 1: Create the Workflow
 
@@ -36,11 +37,11 @@ To create a Workflow:
 
 ## Task 2: Modify Workflow Details
 
-1. Change the Workflow Name to **Doctor Appointment** and set the Static ID to **DOC_APPT**.
+1. Change the Workflow Name to **Doctor Appointment** and then in the Property editor, under **Advanced**,set the Static ID to **DOC_APPT**.
 
   ![Change the Workflow name and Static ID](./images/change-workflow-name.png " ")
 
-2. Now, change the Workflow Name and Modify the **Workflow Version** from **New** to **1.0**.
+2. Now change the Workflow Name by clicking on New[Dev] and modify the **Workflow Version** from **New** to **1.0**.
 
   ![Change the Workflow Version](./images/create-workflow-version.png " ")
 
@@ -56,7 +57,7 @@ To create a Workflow:
   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
 
-5. The Workflow now contain just the Start and the End activities. Save the Workflow by clicking the **Save** button at the top right corner.
+5. The Workflow now contain just the Start and the End activities. Connect the Start and End activities and then save the Workflow by clicking the **Save** button at the top right corner.
 
   ![Changes saved successfully](./images/save-workflow.png " ")
 
@@ -82,7 +83,7 @@ To create a Workflow:
   | Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
   | Send E-Mail            | Sends an Email based on the Email settings.                                                                             | Yes                                                    |
   | Human Task - Create    | Creates an Approval or Action Task based on the Task Definition specified. Once the task is created, the activity and workflow go into the Waiting state until the task is completed/approved/rejected by its owner/errors out/expires. | No                                                     |
-  | Wait                   | Denotes a deliberate pause in the workflow execution. At runtime, the workflow pauses execution when it encounters a Wait Activity. A Wait Activity can have timeout specifications. When the specified time has elapsed, the workflow resumes execution. A Wait Activity can also be interrupted by calling apex_workflow.continue_activity() passing the Static ID of the Wait Activity and the Workflow Instance ID as parameters. | No                                                     |
+  | Wait                   | Denotes a deliberate pause in the workflow execution. At runtime, the workflow pauses execution when it encounters a Wait Activity. A Wait Activity can have timeout specifications. When the specified time has elapsed, the workflow resumes execution. A Wait Activity can also be interrupted by calling apex\_workflow.continue\_activity() passing the Static ID of the Wait Activity and the Workflow Instance ID as parameters. | No                                                     |
   | Switch                 | Denotes a fork or conditional branching in a workflow execution. After adding a switch activity, the developer must define branches or connections out of the switch activities with the appropriate conditions specified. | Yes                                                    |
   | Workflow Start         | Denotes the Start of a workflow. A workflow model must have exactly one Start Activity.                                   | Yes                                                    |
   | Workflow End           | Denotes the End of a workflow. Depending on the End State attribute of this activity, the Workflow is either Completed or Terminated. | Yes                                                    |
@@ -113,7 +114,7 @@ If we look back at the flow chart depicting the business logic, the appointment 
 1. The inputs to the workflow will be the patient details. In workflow terminlogy, these are called Workflow Parameters
 
 2. You will define the following parameters for the Doctor Appointment Workflow.
-   PATIENT_NAME, PATIENT_AGE, PATIENT_EMAIL, PROBLEM, REQUEST_DATE
+   PATIENT\_NAME, PATIENT\_AGE, PATIENT\_EMAIL, PROBLEM, REQUEST\_DATE
 
 3. To create Workflow Parameters, Right-click on the Doctor Appointment Workflow in the Tree and then click **Create Parameter**.
 
@@ -132,6 +133,8 @@ If we look back at the flow chart depicting the business logic, the appointment 
     - For REQUEST_DATE, select Data Type as Timestamp with Time Zone. Under Application Format Masks, set the Session State Format Mask as **DD-MON-YYYY HH24:MI:SS**.
 
       ![Add and Configure Request Date Parameter](./images/add-param-date.png " ")
+
+    -  For PATIENT_EMAIL & PROBLEM, leave it to default.
 
 ## Task 6: Use the parameters in the Workflow Subject
 
@@ -190,14 +193,17 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
         ![Create Booking ID Variable](./images/create-bookingid-variable.png " ")
 
-4. Similarly create variable **AVAILABILITY** with Data Type **BOOLEAN**. In the **Application Format Masks** section, specify **AVAILABLE** as the **True Value** and **BUSY** as the **False** value and also set Value -> Type as **Null**.
+4. Similarly create variable **AVAILABILITY** with Data Type **BOOLEAN**.
+
+5. In the **Application Format Masks** section, specify **AVAILABLE** as the **True Value** and **BUSY** as the **False** value and also set Value -> Type as **Null**.
+
   ![Create Availability Variable](./images/configure-availability.png " ")
 
-5. Also, Create variable **FEE** with Data Type **NUMBER**, and Set Value -> Type as **Static Value** with the **Static Value** as **0**.
+6. Also, Create variable **FEE** with Data Type **NUMBER**, and Set Value -> Type as **Static Value** with the **Static Value** as **0**.
 
   ![Create Fee Variable](./images/create-variable-fee.png " ")
 
-6. Click **Save**.
+7. Click **Save**.
 
 ## What's Next
 

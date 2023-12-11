@@ -13,6 +13,7 @@ In this lab, you will learn how to create Human Tasks to
 - Raise Invoice Request For Patient
 - Raise Feedback Request For Patient
 
+Estimated Time: 20 minutes
 
 ## Task 1. Creating Task Definition for Appointment Request
 

@@ -4,7 +4,7 @@
 
 Oracle APEX is a low-code application platform for Oracle Database. Oracle Application Development (APEX Service), Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop, and then create an APEX workspace accordingly. Continue reading further to learn which is the best service for you!
 
-If you already have an APEX 23.1 Workspace provisioned, you can skip this lab.
+If you already have an APEX 23.2 Workspace provisioned, you can skip this lab.
 
 Estimated Time: 5 minutes
 
@@ -99,7 +99,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 10. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
   ![Choose type of schema](images/choose-schema.png " ")
-    
+
 10. In the Create Workspace dialog, enter the following:
 
     | Property | Value |

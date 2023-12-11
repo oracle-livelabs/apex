@@ -9,21 +9,22 @@ In this lab, you will design the Doctor Appointments Made Easy application using
 ### Objectives
 
 In this lab, you :
-- Create Doctor Appointment made Easy Application.
+- Create Doctor Appointments made Easy Application.
 - Create Application users
 - Install Sample dataset
 
+Estimated Time: 20 minutes
 
 ## Prerequisites
 1. Access to Oracle APEX.
 2. Ensure that users (doctors, patients, and hospital staff) are created using the Manage Users And Groups menu option under Workspace Administration. To create these users follow the the instructions specified in Step 1.
 
-### Step 1: Create Application Users
-In this lab, you create users for Doctor Appointment made Easy Application.
+## Task 1: Create Application Users
+In this lab, you create users for Doctor Appointments made Easy Application.
 
-1. Navigate to **Workspace Administration** by clicking Administration icon on Application home page and select **Manage Users and Group** from the dropdown list.
+1. Navigate to **Workspace Administration** by clicking **Administration icon** on Application home page and select **Manage Users and Group** from the dropdown list.
 
-  ![Manage Users and Group](./images/manage-users-and-groups.png " ")
+  ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
 2. Click **Create Multiple Users**
 
@@ -54,17 +55,15 @@ In this lab, you create users for Doctor Appointment made Easy Application.
   - For password and Confirm Password: **Enter a password of your wish**
 
    Click **Next**
+   ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-  ![Create Multiple Users - details](./images/create-multiple-users.png " ")
-
-
-4. And then, Click **Create Valid Users**
+5. And then, Click **Create Valid Users**
 
 ![Click validate users](./images/create-valid-users.png " ")
 
-5. Users are now created in your Workspace.
+6. Users are now created in your Workspace.
 
-### Step 2: Create the Doctor Appointments Made Easy Application
+## Task 2: Create the Doctor Appointments Made Easy Application
 
 1. Navigate to **App Builder**.
   ![Select App Builder](./images/select-app-builder.png " ")
@@ -78,7 +77,7 @@ In this lab, you create users for Doctor Appointment made Easy Application.
 
 4. Click **Create Application**.
 
-### Step 3: Sample Table and Sample Data
+## Task 3: Sample Table and Sample Data
 
 1. Install the dataset.
 
@@ -198,7 +197,7 @@ In this lab, you create users for Doctor Appointment made Easy Application.
   ![Click create SQL Scripts](./images/click-run-now.png " ")
   ![Click create SQL Scripts](./images/create-tables-output.png " ")
 
-### Step 4: Create Package Spec and Package Body
+## Task 4: Create Package Spec and Package Body
 
 1. Navigate back to **SQL Workshop** and click **SQL Scripts**.
 
@@ -207,7 +206,7 @@ In this lab, you create users for Doctor Appointment made Easy Application.
 2. Click **Create**.
   ![Click create SQL Scripts](./images/click-create2.png " ")
 
-3. Copy and paste the provided commands to create a package spec named **eba_demo_wf_doc_apt.sql**.
+3. Copy and paste the provided commands to create a package spec named **eba\_demo\_wf\_doc\_apt.sql**.
 
     ```
     <copy>
@@ -256,7 +255,7 @@ In this lab, you create users for Doctor Appointment made Easy Application.
   ![Click create SQL Scripts](./images/click-run-now1.png " ")
 
 
-6. Repeat steps 2-4 to create a package body named **eba_demo_wf_doc_apt.plb**.
+6. Repeat steps 2-3 to create a package body named **eba\_demo\_wf\_doc\_apt.plb**.
 
     ```
     <copy>
