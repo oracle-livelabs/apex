@@ -16,7 +16,7 @@ Estimated Time: 10 minutes
 ### Objectives
 
 In this lab, you will:
-- Identify Business steps required to create Doctor Appointment made Easy Application.
+- Identify Business steps required to create Doctor Appointments made Easy Application.
 
 
 Welcome to our hands-on lab where we will create an APEX Application called "Doctor Appointments Made Easy"

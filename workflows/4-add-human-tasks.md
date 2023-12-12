@@ -15,7 +15,7 @@ In this lab, you will learn how to create Human Tasks to
 
 Estimated Time: 20 minutes
 
-## Task 1. Creating Task Definition for Appointment Request
+## Task 1. Create Task Definition for Appointment Request
 
 1. Navigate to **Shared Components**.
 
@@ -32,19 +32,21 @@ Estimated Time: 20 minutes
 
 4. In the Create Task Definition Wizard, enter the following details and Click **Create**.
     - For **Name**, enter **Appointment Request**.
-    - For **Subject**, enter **Appointment for &PATIENT_NAME. on &APPOINTMENT_DATE.**
+    - For **Subject**, enter **Appointment for &PATIENT\_NAME. on &APPOINTMENT\_DATE.**
     - Set **Priority** to **3-Medium**.
 
     ![Creating Task Definition](./images/create-task-definition.png " ")
 
-3. In the Edit Task Definition page, notice that the Task Details Page Number is empty. Click on the **Create Task Details** Page button to generate the details page for this task. You get a popup dialog asking if the next available page number should be used. Click **OK**. You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
+5. In the Edit Task Definition page, notice that the Task Details Page Number is empty. Click on the **Create Task Details** Page button to generate the details page for this task. You get a popup dialog asking if the next available page number should be used. Click **OK**. You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
     ![Creating Task Details page](./images/create-task-details-page.png " ")
     ![Creating Task Details page confirm](./images/create-task-details-page1.png " ")
 
   You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
-4. In the Task Definitions Page, Click **Appointment Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor records.
+6. In the Task Definitions Page, Click **Appointment Request** and then in the **Appointment Request** task definition, under settings,
+    - For Actions Source, select **SQL Query**
+    - Under **Actions SQL Query**, Copy and paste the below SQL Query
 
     ```
     <copy>
@@ -55,13 +57,18 @@ Estimated Time: 20 minutes
     ![Select Appoint Request](./images/select-appt-request.png " ")
     ![Configure Actions Source](./images/enter-actions-source.png " ")
 
+    This step ties our task to the system of records, in this case, the doctor records.
+
   *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
 
-5. Navigate to Participants Section, and add Task Participants with Participant Type as **Potential Owner** and Value Type as **Expression**. In the Value field, enter **:DNAME** (where **DNAME** refers to the DNAME column in the DOCTOR Table).
+7. In the **Appointment Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
+    - Set Participant Type as **Potential Owner**
+    - Set Value Type as **Expression**.
+    - Set the Value field to enter **:DNAME** (where **DNAME** refers to the DNAME column in the DOCTOR Table).
 
   ![Add Potential owner to the Task](./images/add-task-participant.png " ")
 
-6. Under Task Parameters, Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
+8. Under Task Parameters, Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
 
     | Parameter Name     |
     |--------------------|
@@ -70,7 +77,6 @@ Estimated Time: 20 minutes
     | PATIENT_NAME       |
 
   ![Add Task Parameters](./images/add-task-parameters.png " ")
-
 
 Similarly, now create the task definitions for the Invoice Request and Feedback Request Tasks to be raised for the patient.
 
@@ -81,7 +87,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
     ![Click Create](./images/click-create-task-def.png " ")
 
 2. In the Create Task Definition Wizard, enter the following details and Click **Create**.
-    - For **Name**, enter **Appointment Request**.
+    - For **Name**, enter **Invoice Request**.
     - For **Type**, select **Actions Task**.
     - For **Subject**, enter **Invoice for &PATIENT_USERNAME. for consultation on &SCHEDULE.**
     - Set **Priority** to **3-Medium**.
@@ -108,7 +114,10 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
   *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
 
-5. Navigate to Participants Section, and add Task Participants with Participant Type as **Potential Owner** and Value Type as **Static**. In the Value field, enter **&PATIENT_USERNAME.**.
+5. In the **Invoice Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
+    - Set Participant Type as **Potential Owner**
+    - Set Value Type as **Static**.
+    - Set the Value field to enter **&PATIENT_USERNAME.**
 
   ![Add Potential owner to the Task](./images/add-invoice-participant.png " ")
 
@@ -155,7 +164,10 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
   *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
 
-5. Navigate to Participants Section, and add Task Participants with Participant Type as **Potential Owner** and Value Type as **Static**. In the Value field, enter **&PATIENT_USERNAME.**.
+5. In the **Feedback Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
+    - Set Participant Type as **Potential Owner**
+    - Set Value Type as **Static**.
+    - Set the Value field to enter **&PATIENT_USERNAME.**
 
   ![Add Potential owner to the Task](./images/add-feedback-participant.png " ")
 
