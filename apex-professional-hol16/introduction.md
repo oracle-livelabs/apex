@@ -17,7 +17,7 @@ In this lab, you will:
 Estimated Time: 30 minutes
 
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

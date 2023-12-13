@@ -13,7 +13,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Implement Social Sign In(Facebook) Authentication in Online Shopping Cart Application.
 
- In this hands-on lab, you create a Social Sign-in authentication scheme to enable Facebook Authentication. You test the authentication scheme.
+ In this hands-on lab, you create a Social Sign-in authentication scheme to enable Facebook Authentication.
 
  1. Log in to Facebook’s developer [console](https://developers.facebook.com/). Login to the Meta for Developers using your **Facebook Credentials** and then select **My Apps**.
 
@@ -211,6 +211,17 @@ In this task, you create an **Authorization Scheme** to ensure only people enter
 16. Since your name is not **Authorized User**, verify the access denied message is displayed.
 
     ![Not Authorised to view](images/login2.png " ")
+
+## Task 4: Implement Social Sign In(Google) Authentication in Expense Tracker Application.
+
+ 1. Log in to Google's developer [console](https://console.developers.google.com).
+
+   ![Click My Apps](images/click-myapps.png " ")
+
+   *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
+
+2.
+
 
 ## Summary
 You now know how to create a Social Sign-in authentication scheme to enable Facebook Authentication
