@@ -13,11 +13,13 @@ In this lab, you will learn how to
   - Modify the Task Details page
   - Create the Feedback page and View appointment workflows page
 
+Estimated Time: 20 minutes
+
 ## Task 1: Create the New Appointments Page:
 
 Now that the Workflow is created, let us create the Page which will be used by the Hospital Staff to Submit a New Appointment.
 
-1. Navigate to your application by clicking on **Application <number>**. Alternatively, you can also navigate by click the App Builder icon fro your workspace and then select **Doctor Appointments Made Easy!** Application.
+1. Navigate to your application by clicking on **Application ID <number>**. Alternatively, you can also navigate by click the App Builder icon fro your workspace and then select **Doctor Appointments Made Easy!** Application.
 
     ![navigate to doctors app made easy](./images/click-app-builder.png " ")
 
@@ -26,13 +28,11 @@ Now that the Workflow is created, let us create the Page which will be used by t
     ![click create page](./images/create-page.png " ")
 
 3. For Create a Page:
-   Select Page Type - Select **Component** and then select **Blank Page**.
-
+   - select Page Type - under **Component** and then select **Blank Page**.
     ![select blank page](./images/select-blank-page.png " ")
 
 4. For Page Attributes, enter the following:
     - For Page Name, enter **New Appointment**  
-        - Under **Data Source**:
     - Under **Navigation**
         - For **Breadcrumb**, Set it to **Yes**.
         - For **Breadcrumb Parent Entry** select **Home (Page 1)**
@@ -44,7 +44,7 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
     ![Create a region](./images/create-region1.png " ")
 
-6. In the Property Editor, under identification, Change the Title to **Patient Appointment details**.
+6. In the Property Editor, under identification, Change the Title to **Patient Appointment Details**.
 
      ![Create a region](./images/configure-static-content.png " ")
 
@@ -54,14 +54,17 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
 8. Select the newly created item in the Rendering Tree and then in the property editor do the following changes.
     - Under Identification,
-        - Change the name to **P5_NAME**
-        - Set Type as **Text Field**
+        - Change the **Name** to **P5_NAME**
+        - Set **Type** as **Text Field**
 
     ![Create page item](./images/create-name-item.png " ")
 
-9. Similarly create the Items **P5_EMAIL**, **P5_DESC**, **P5_APPT_DATE**, **P5_DOC** and **P5_AGE** under **Patient Appointment details** Region.
+9. Similarly create the Items **P5\_EMAIL**, **P5\_DESC**, **P5\_APPT\_DATE**, **P5\_DOC** and **P5\_AGE** under **Patient Appointment details** Region.
 
-10. For **P5_EMAIL**, in the property editor, set the type as **Text Field** and under settings, change the **Subtype** to **E-Mail**.
+10. For **P5\_EMAIL**, in the property editor,
+    - set the type as **Text Field**
+    - under settings,
+        - change the **Subtype** to **E-Mail**.
 
     ![Create page item](./images/create-email-item.png " ")
 
@@ -85,7 +88,7 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
     ![create desc item](./images/create-desc-item.png " ")
 
-12. For **P5_APPT_DATE**, in the property Editor perform the following changes.
+12. For **P5\_APPT\_DATE**, in the property Editor perform the following changes.
       - Under Identification,
           - Set Type as **Date Picker**
       - Set the Label as **Appointment Date**
@@ -93,8 +96,13 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
       ![create Appt Date item](./images/create-appt-date-item.png " ")
 
-13. For the **P5_DOC** Page Item, specify the type as **POP LOV** and specify the **List Of Values** using the following SQL Query
-
+13. For the **P5_DOC** Page Item, In the property editor perform the following steps.
+      - Under Identification,
+          - specify the type as **Popup LOV**
+      - Set the Label as **Doctor**
+      - Under List of Values,
+          - Set the **Type** as **SQL Query** and then specify the **List Of Values** using the following SQL Query
+      - Under **Cascading List of Values**, Set the Parent Item(s) as **P5\_DESC** using the Item Picker.
     ```
     <copy>
       select dname from doctor where specialization = :P5_DESC
@@ -104,7 +112,7 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
 14. Similarly, create **P5_AGE** as **Text field**.
 
-15. Now, right click on **Patient Appointment details** and click **Create Button**.
+15. Now, right click on **Patient Appointment Details** and click **Create Button**.
 
   ![create button](./images/create-button.png " ")
 
@@ -126,7 +134,7 @@ Now that the Workflow is created, let us create the Page which will be used by t
 
 3. Select the newly created Page Process and then in the property editor, do the following changes.
       - Under Identification,
-          - Set the **name** as **Doctor Appointment Workflow**.
+          - Set the **Name** as **Doctor Appointment Workflow**.
           - Set the **Type** as **Workflow**.
       - Under Settings,
           - Set the **Type** as **Start**
@@ -137,15 +145,15 @@ Now that the Workflow is created, let us create the Page which will be used by t
       ![create workflow process](./images/create-workflow-process.png " ")
 
 
-4. Now, set Parameters for the Workflow Page Process. Under **Submit Appointment Workflow** in the Processing section, Click on **Patient Age** and in the **Property Editor**, under Value, Set type as **Item** and **Item** value to **P5_AGE**
-
+4. Now, set Parameters for the Workflow Page Process. Under **Submit Appointment Workflow** in the Processing section, Click on **Patient Age** and in the **Property Editor**,
+    - under Value, Set type as **Item** and **Item** value to **P5_AGE**
       ![create workflow process](./images/configure-process-param.png " ")
 
 5. Similarly, Set the remaining parameters under **Submit Appointment Workflow** as follows:
-         - Set **Patient Email** as Item **P5_EMAIL**
-         - Set **Patient Name** as Item **P5_NAME**
-         - Set **Problem** as Item **P5_DESC**
-         - Set **Request Date** as Item **P5_APPT_DATE**
+    - Set **Patient Email** as Item **P5\_EMAIL**
+    - Set **Patient Name** as Item **P5\_NAME**
+    - Set **Problem** as Item **P5\_DESC**
+    - Set **Request Date** as Item **P5\_APPT\_DATE**
 
 6. Click **Save** to save the changes.
 
@@ -164,7 +172,7 @@ Go to the Application Home and click on Create Page. In the Create Page Wizard, 
 
    ![Select Unified Task List](./images/select-unified-tasks.png " ")
 
-4. Specify the following page attributes:
+3. Specify the following page attributes:
 
     - For Page Number - Type 6
 
@@ -180,17 +188,17 @@ Go to the Application Home and click on Create Page. In the Create Page Wizard, 
 
     ![create patient tasks](./images/create-patient-tasks.png " ")   
 
-5. Our application has 1 entry point for Doctors. Doctors need to log in to approve or reject appointment requests. For this we will create a Doctor Tasks page. This will also be a Unified Task List page for Doctors to act on the tasks assigned to them.
+4. Our application has 1 entry point for Doctors. Doctors need to log in to approve or reject appointment requests. For this we will create a Doctor Tasks page. This will also be a Unified Task List page for Doctors to act on the tasks assigned to them.
 
-6. To create another Unified Task list page, Again, Click Application ID on the top left corner of the page designer. Application Home page appears.
+5. To create another Unified Task list page, Again, Click Application ID on the top left corner of the page designer. Application Home page appears.
 
-7. Click **Create** button. Create Application wizard appears.
+6. Click **Create** button. Create Application wizard appears.
 
-8. Under Components, Select Unified Task List and click **Next**
+7. Under Components, Select Unified Task List and click **Next**
 
     ![Select Unified Task List](./images/select-unified-tasks1.png " ")
 
-9. Specify the following page attributes:
+8. Specify the following page attributes:
 
     - For Page Number - Type 7
 
@@ -214,7 +222,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
   ![select appointment request](./images/select-appointment-req.png " ")
 
-3. In the **Task Definition Editor**, note the page number in the Task Details URL (f?p=&APP_ID.:2:&SESSION.::&DEBUG.:RP,2:P2_TASK_ID:&TASK_ID.). This points to Page 2.
+3. In the **Task Definition Editor**, note the page number in the Task Details URL (f?p=&APP\_ID.:2:&SESSION.::&DEBUG.:RP,2:P2\_TASK\_ID:&TASK\_ID.). This points to Page 2.
 
   ![select appointment request](./images/configure-task-def.png " ")
 
@@ -222,7 +230,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
   ![navigate to page 2](./images/navigate-to-page-2.png " ")
 
-5. Now, change the **Page Name** and **Title** of Page two to **Appointment Request Details**.
+5. Now, change the **Page Name** and **Title** of Page 2 to **Appointment Request Details**.
 
   ![change title page2](./images/change-title-page2.png " ")
 
@@ -234,7 +242,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
 9. Navigate to your Application home page and click **Page 3**.
 
-10. Now, change the **Page Name** and **Title** of Page two to **Invoice Details**.
+10. Now, change the **Page Name** and **Title** of Page 3 to **Invoice Details**.
 
   ![change title page2](./images/change-title-page3.png " ")
 
@@ -252,7 +260,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
 14. Navigate to the **Feedback Request** Task Definition from Shared Components and similarly check the page number for the Task Details. The **Feedback Request** Task Definition points to Page 8.
 
-15. Navigate to your Application home page and click **Page 3**. And then, change the **Page Name** and **Title** of Page two to **Feedback Details**.
+15. Navigate to your Application home page and click **Page 4**. And then, change the **Page Name** and **Title** of Page 4 to **Feedback Details**.
 
   ![change details title](./images/change-feedback-title.png " ")
 
@@ -260,17 +268,17 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
   ![delete developer info](./images/delete-feedback-devinf.png " ")
 
-12. In the rendering Tree, click **Details** region and then modify the Title of **Details Classic Report** region to **View Invoice**.
+17. In the rendering Tree, click **Details** region and then modify the Title of **Details Classic Report** region to **View Appointment Details**.
 
   ![change details title](./images/edit-details-region.png " ")
 
-13. In the Details Page, the patient should be able to fill up a Feedback form and submit it. On submission it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows.
+18. In the Details Page, the patient should be able to fill up a Feedback form and submit it. On submission it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows.
 
-12. In the rendering tree, right click on **View Appointment Details** and click **Create Region Below**.
+19. In the rendering tree, right click on **View Appointment Details** and click **Create Region Below**.
 
   ![create region below](./images/create-region-below.png " ")
 
-13. Select the newly created region in the Rendering Tree and then in the property editor do the following changes.
+20. Select the newly created region in the Rendering Tree and then in the property editor do the following changes.
     - Under Identification,
         - Change the title to **Your Feedback**
         - Set Type as **Form**
@@ -279,28 +287,28 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
         - For Where Clause, set it as Below
           ```
           <copy>
-          booking_id = :P8_BOOKING_ID
+          booking_id = :P4_BOOKING_ID
           </copy>
           ```
     ![configure feedback](./images/configure-feedback.png " ")
 
-14. In the Rendering Tree, select the Page Items **P8_FEE** and **P8_WORKFLOW_ID** and then change the Identification Type as **Hidden** in the Property Editor.
+21. In the Rendering Tree, select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID** and then change the Identification Type as **Hidden** in the Property Editor.
 
   ![set items as hidden](./images/set-items-to-hidden.png " ")
 
-15. In the rendering Tree, select **P8_SCHEDULE** and then in the property editor, under **Appearance**, set format mask to **DD-MON-YYYY HH24:MI:SS**.
+22. In the rendering Tree, select **P4_SCHEDULE** and then in the property editor, under **Appearance**, set format mask to **DD-MON-YYYY HH24:MI:SS**.
 
    ![set items as hidden](./images/update-schedule-item.png " ")
 
-16. Now, create two new page items under **Your Feedback** region.
+23. Now, create two new page items under **Your Feedback** region.
 
-17. In the Rendering tree, right click on **Your Feedback** or **Region Body** under that and click **Create Page Item**.
+24. In the Rendering tree, right click on **Your Feedback** or **Region Body** under that and click **Create Page Item**.
 
   ![create page item](./images/create-page-item1.png " ")
 
-18. Select the newly created page item in the Rendering Tree and then in the property editor do the following changes.
+25. Select the newly created page item in the Rendering Tree and then in the property editor do the following changes.
     - Under Identification,
-        - Change the name to **P8_RATING**
+        - Change the name to **P4_RATING**
         - Set Type as **Radio Group**
     - Under List of Values,
         - For Type, select **Static Values**
@@ -315,25 +323,25 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
     ![create page item](./images/configure-rating.png " ")
 
-19. Similarly, create a new item **P8_FEEDBACK** and set the type as **Rich Text Editor**.
+26. Similarly, create a new item **P4_FEEDBACK** and set the type as **Rich Text Editor**.
 
     ![create page item](./images/configure-feedback1.png " ")
 
-20. Click **Save** to save the changes.
+27. Click **Save** to save the changes.
 
-21. In the Pre-Rendering section, add a new Process above the **Initialize Form Feedback Details** Process and name it **Populate Booking Details** in Feedback Form.
+28. In the Pre-Rendering section, add a new Process above the **Initialize Form Feedback Details** Process and name it **Populate Booking Details in Feedback Form**.
 
-22. Select the **Populate Booking Details** and in the Property Editor, set the Process Type as **Execute Code** and enter the following code in the PL/SQL Code section.
+29. Select the **Populate Booking Details** and in the Property Editor, set the Process Type as **Execute Code** and enter the following code in the PL/SQL Code section.
 
     ```
     <copy>
     begin
 
-    select booking_id into :P8_BOOKING_ID
+    select booking_id into :P4_BOOKING_ID
     from appointment where booking_id = (select
          param_value
     from apex_task_parameters
-    where task_id = :P8_TASK_ID and param_static_id = 'BOOKING_ID');
+    where task_id = :P4_TASK_ID and param_static_id = 'BOOKING_ID');
 
     end;
     </copy>
@@ -341,11 +349,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
     ![create page item](./images/configure-pre-rendering.png " ")
 
-23. In the **Left Pane**, navigate to the **Processing Tab**.
+30. In the **Left Pane**, navigate to the **Processing Tab**.
 
-24. In the **Processing Tab**, add a new Process after the **Claim process**.
+31. In the **Processing Tab**, add a new Process after the **Claim process** and name the newly created process as **Save Feedback**.
 
-25. In the Property editor, set the type as **Execute Code** and then in the PL/SQL section enter the following.
+32. In the Property editor, set the type as **Execute Code** and then in the PL/SQL section enter the following.
 
     ```
     <copy>
@@ -359,11 +367,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
           created_at,
           updated_at)
       values
-          (:P8_PATIENT_USERNAME,
-          :P8_DOCTOR_NO,
-          to_timestamp_tz(:P8_SCHEDULE,'DD-MON-YYYY HH24:MI:SS'),
-          :P8_FEEDBACK,
-          :P8_RATING,
+          (:P4_PATIENT_USERNAME,
+          :P4_DOCTOR_NO,
+          to_timestamp_tz(:P4_SCHEDULE,'DD-MON-YYYY HH24:MI:SS'),
+          :P4_FEEDBACK,
+          :P4_RATING,
           systimestamp,
           systimestamp);
     end;
@@ -372,11 +380,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request a
 
     ![create page process](./images/save-feedback.png " ")
 
-26. In Server Side Condition, set **When Button Pressed** as **COMPLETE**.
+33. In Server Side Condition, set **When Button Pressed** as **COMPLETE**.
 
     ![when button pressed](./images/button-press.png " ")
 
-27. Click **Save** to save the changes.
+34. Click **Save** to save the changes.
 
 
 ## Task 5: Create the Patient Appointments And Feedbacks Page
@@ -391,7 +399,7 @@ Now, you need to create a View Only page where a patient can log in to view thei
 
    ![Select Unified Task List](./images/create-blank-page1.png " ")
 
-4. Specify the following page attributes:
+3. Specify the following page attributes:
 
     - For Page Number - Type 8
 
@@ -403,39 +411,36 @@ Now, you need to create a View Only page where a patient can log in to view thei
 
     ![create patient tasks](./images/configure-patient-apps.png " ")   
 
-5. In Page Designer of the newly created page, right click on Body and click **Create Region**.
+4. In Page Designer of the newly created page, right click on Body and click **Create Region**.
 
   ![create patient tasks](./images/create-region2.png " ")
 
-6. In the new Region, go to Property Editor and change the name to Appointments. Change the Type to Comments (under Theme Components).
+5. In the new Region, go to Property Editor and change the name to Appointments. Change the Type to Comments (under Theme Components).
   - Under Identification,
       - Change the title to **Appointments**
       - Set Type as **Comments**
   - Under Source,
       - Set the Table Name to **APPOINTMENT**
       - Set the **Where Clause** to the below text.
-
       ```
       <copy>
       patient_username=:APP_USER
       </copy>
       ```
+  - Under Appearance, set the Template as **Collapsible**
+  ![create patient tasks](./images/configure-appointments1.png " ")
 
-      ![create patient tasks](./images/configure-appointments1.png " ")
-
-7. In the Rendering Tree, select **Appointments** and then in the Property editor,
-    - Under **settings**,
+6. In the Rendering Tree, select **Appointments** and then in the Property editor, select **Attributes** tab and then do the following changes.
+    - Under **Settings**,
         - Set **Comment Text** to **STATUS**.
-        - Set **USER_NAME** as **DOCTOR_EMAIL**
-        - SET **Date** as **Schedule**
-
+        - Set **User Name** as **DOCTOR\_EMAIL**
+        - SET **Date** as **SCHEDULE**
     ![create patient tasks](./images/configure-attr.png " ")
 
-8. In the rendering tree, right click on **Appointments Region**, and then click **Create Region Below**.
-
+7. In the rendering tree, right click on **Appointments Region**, and then click **Create Region Below**.
     ![create patient tasks](./images/create-region-below1.png " ")
 
-9. In the property editor,
+8. In the property editor,
     - Under Identification,
         - Change title to **Feedbacks**
         - Change the Type to **Comments**.
@@ -455,20 +460,20 @@ Now, you need to create a View Only page where a patient can log in to view thei
         from PATIENT_FEEDBACK, DOCTOR
        where PATIENT_NAME=:APP_USER
         and DOCTOR_NO = DNO
-      </copy>
-      ```
+        </copy>
+        ```
 
       ![configure feedbacks](./images/configure-feedbacks.png " ")
 
-10. In the Rendering Tree, select **Feedbacks** and then in the Property editor,
+9. In the Rendering Tree, select **Feedbacks** and then in the Property editor, select **Attributes** tab and then do the following changes.
     - Under **settings**,
         - Set **Comment Text** to **FEEDBACK**.
-        - Set **USER_NAME** as **DNAME**
+        - Set **User Name** as **DNAME**
         - SET **Date** as **APPOINTMENT**
 
     ![configure feedbacks attr](./images/configure-feedbacks1.png " ")
 
-11. Click **Save** to Save the changes.
+10. Click **Save** to Save the changes.
 
 
 ## Task 6: Create the View Appointment Workflows Page
@@ -478,7 +483,6 @@ Finally, we need the page that the Hospital Management Staff will use the monito
 We use the Workflow Console and Details pages with **Initiated By Me** report context which allows a logged in user to view all Workflows Initiated by him or her.
 
 *Tech Tips: The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When you configure the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs.*
-
 
 1. To create the Workflow Console and Details pages, On the Application home page, select Create Page.
 
@@ -492,13 +496,14 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
         - Select **Report Context** to **Initiated By Me**.
         - For the Workflow Details page, set the Form Page name as **Appointment Workflow Details**
     - Under **Navigation**
-            - For **Breadcrumb**, Set it to **Yes**.
-            - For **Breadcrumb Parent Entry** select **Home (Page 1)**
+        - For **Breadcrumb**, Set it to **Yes**.
+        - For **Breadcrumb Parent Entry** select **Home (Page 1)**
+        - Set **Parent Region Menu Entry** as **Home**.
 
     ![configure feedbacks attr](./images/config-workflow-console.png " ")
+4. Click **Create Page**.
 
-4. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
-
+5. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
 
 ## Summary

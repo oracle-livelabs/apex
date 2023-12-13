@@ -204,7 +204,9 @@ Re-adjust the Workflow Diagram to make the diagram more aesthetic.
 
 4. In the **Left Pane**, select **Appointment Date** under **Raise Appointment Request** and change the following in the **Property Editor**.
 
-    - Under Value, Set Type as **Item** and for **Item**, Select **REQUEST_DATE** using the Item Picker.
+    - Under Value,
+        - Set Type as **Item** and for **Item**,
+        - Set **Item** as **REQUEST_DATE** using the Item Picker.
 
     ![Set Request Date Param](./images/set-params-app-req.png " ")
 
@@ -251,8 +253,7 @@ In this task, you will learn how to manage appointment requests using a Switch A
    - Under Identification, Change the name to **Appointment Approved?**
    - Under Switch, Set the **Type** as **Check Workflow Variable**.
    - Under **Compare**, for **Compare Variable**, Select **TASK_OUTCOME** from the item picker.
-
-  ![Adding a new switch activity](./images/config-switch-activity.png " ")
+   ![Adding a new switch activity](./images/config-switch-activity.png " ")
 
 4. In the Workflow Designer, Detatch the end of the arrow connecting the **Raise Appointment** Request and the **Complete Appointment** activities and attach it to the **Appointment Approved?** activity.
 
@@ -263,6 +264,7 @@ In this task, you will learn how to manage appointment requests using a Switch A
           - Set the Value to **REJECTED**.
   ![reconfigure connection](./images/reconnecting-arrow.png " ")
 
+6. Click **Save**.
 
 ## Task 12: Add Invoke API for Confirm Appointment
 
@@ -274,7 +276,7 @@ In this task, you will learn how to manage appointment requests using a Switch A
     - Under Identification
         - Change the Name to **Confirm Appointment**.
     - In the Settings section,
-        - Select the Package Name as **EBA_DEMO_WF_DOC_APT**
+        - Select the Package Name as **EBA\_DEMO\_WF\_DOC\_APT**
         - For Function, select **CONFIRM_APPOINTMENT**.
 
   ![Configure Confirm Appointment](./images/configure-invoke-api.png " ")
@@ -287,11 +289,11 @@ In this task, you will learn how to manage appointment requests using a Switch A
     ![Configure function result](./images/select-function-result.png " ")
 
 6. Similarly, Set the remaining parameters under **Confirm Appointment** as follows:
-    - Set **p_doctor_id** as Static value **&DNO.**
-    - Set **p_request_date** as the **REQUEST_DATE** Workflow Parameter . Set the Format Mask to **DD-MON-YYYY HH24:MI:SS**
-    - Set **p_doctor_email** as Static value **&DOC_EMAIL.**
-    - Set **p_patient_email** as **Item Picker** -> **Workflow Parameter** -> **PATIENT_EMAIL**
-    - Set **p_workflow_id** as **&APEX$WORKFLOW_ID.**
+    - Set **p\_doctor\_id** as Static value **&DNO.**
+    - Set **p\_request\_date** as the **REQUEST_DATE** Workflow Parameter . Set the Format Mask to **DD-MON-YYYY HH24:MI:SS**
+    - Set **p\_doctor\_email** as Static value **&DOC_EMAIL.**
+    - Set **p\_patient\_email** as **Item Picker** -> **Workflow Parameter** -> **PATIENT\_EMAIL**
+    - Set **p\_workflow\_id** as **&APEX$WORKFLOW_ID.**
 
 *Tip APEX$WORKFLOW_ID is a substitution string that hold the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows, in the soon-to-be-released App Builder Documentation Guide.*
 
@@ -311,8 +313,6 @@ In this task, you will learn how to manage appointment requests using a Switch A
 
 10. Save The workflow model by clicking the **Save** button.
 
-In this lab, The next step in the business logic is to check if this is a followup visit for the patient. If this is patient returning in less than a  week, the visit is considered to be a followup and is free of charge, otherwise a charge of 500 is levied.
-
 ## Task 13: Add the Switch Activity for followup-check
 
 In this Task, The next step in the business logic is to check if this is a followup visit for the patient. If this is patient returning in less than a  week, the visit is considered to be a followup and is free of charge, otherwise a charge of 500 is levied.
@@ -325,15 +325,13 @@ Detach the connection from the Confirm Appointment Activity and re-attach it to 
 
 1. To add a Switch Activity, Open the workflow diagram in the workflow editor.
 
-2. Drag and drop a **Switch Activity** to the left of the **Confirm Appointment** Activity.
+2. Drag and drop a **Switch Activity** below the **Confirm Appointment** Activity.
 
   ![Adding a new switch activity](./images/create-new-switch-activity.png " ")
 
 3. Select the Switch Activity you just created and then in the Property Editor, configure the following:
-
-  - Under Identification, Change the name to **Free Consultation?**
-  - Under Switch, Set the **Type** as **True False Check**.
-
+    - Under Identification, Change the name to **Free Consultation?**
+    - Under Switch, Set the **Type** as **True False Check**.
   ![Adding a new switch activity](./images/config-switch-activity2.png " ")
 
 4. Now, detach the connection from the Confirm Appointment Activity and re-attach it to this Switch Activity.
@@ -407,13 +405,13 @@ The next step is to establish connections for Free Consultation branches with ac
     - Under Identification
         - Change the Name to **Update Fees**.
     - In the Settings section,
-        - Select the Package Name as **EBA_DEMO_WF_DOC_APT**
+        - Select the Package Name as **EBA\_DEMO\_WF\_DOC\_APT**
         - For Function, select **UPDATE_FEES**.
     This procedure will update the Cosultation Fee (FEE) in the APPOINTMENT Table record and also populate the Workflow Variable FEE.
 
     ![Drag and Drop Invoke API Activity](./images/configure-update-fees.png " ")
 
-3. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Fees** function has 3 Parameters, highlighted in RED to show that they are required.
+3. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Fees** function has 5 Parameters, highlighted in RED to show that they are required.
 
 4. In the **Left Pane**, select **Function Result** under **Update Fees** and change the following in the **Property Editor**.
     - Under Parameter, Set Direction to **Out**.
@@ -422,10 +420,10 @@ The next step is to establish connections for Free Consultation branches with ac
     ![Configure Function Result Var](./images/configure-function-result.png " ")
 
 5. Similarly, Set the remaining parameters under **Confirm Appointment** as follows:
-    - Set **p_booking_id** to **Item**-> Version Variable **BOOKING_ID**.
-    - Set **p_doctor_id** to Static Value -> **&DNO.**
-    - Set **p_request_date** to **Item** -> Workflow Parameter **REQUEST_DATE**
-    - Set **p_patient_name** to **Item** -> Workflow Parameter **PATIENT_NAME**
+    - Set **p\_booking\_id** to **Item**-> Version Variable **BOOKING_ID**.
+    - Set **p\_doctor\_id** to Static Value -> **&DNO.**
+    - Set **p\_request\_date** to **Item** -> Workflow Parameter **REQUEST_DATE**
+    - Set **p\_patient\_name** to **Item** -> Workflow Parameter **PATIENT_NAME**
 
 6. From the Activities Palette, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
 
@@ -534,16 +532,16 @@ Once the Patient confirms the invoice / makes the payment , the Appointment reco
 2. In the Property Editor, do the following changes.
     - Under Identification, Inout **Name** as **Update Appointment**.
     - Under Settings,
-        - select Package as **EBA_DEMO_WF_DOC_APT**.
+        - select Package as **EBA\_DEMO\_WF\_DOC\_APT**.
         - set **Procedure or function** to **UPDATE_APPOINTMENT**.
 
     ![create and config Update appointment](./images/create-config-update-app.png " ")
 
 3. The procedure **UPDATE_APPOINTMENT** will update the Status in the **APPOINTMENT** Table record to **PAID**.
 
-4. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Appointment** has 3 Parameters, highlighted in RED to show that they are required. Set the Parameters for the Invoke API activity by clicking on them in the Workflow Tree
+4. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Appointment** has Parameters, highlighted in RED to show that they are required. Set the Parameters for the Invoke API activity by clicking on them in the Workflow Tree
 
-5. In the **Left Pane**, select **p_booking_id** under **Update Appointment** and change the following in the **Property Editor**.
+5. In the **Left Pane**, select **p\_booking\_id** under **Update Appointment** and change the following in the **Property Editor**.
     - Under Parameter, Set Direction to **In**.
     - Under Value, Select **Type** as **Item** and then set **Item** as Version Variable **BOOKING_ID**
 
@@ -594,13 +592,13 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     ![config booking id](./images/set-feedback-params.png " ")
 
-6. Drag a **Workflow End** Activity from the **Activity Palette** and drop it on the Diagram area to the left of the **Raise Feedback Request** activity.
+6. Drag a **Workflow End** Activity from the **Activity Palette** and drop it on the Diagram area to the left of the **Request for Feedback** activity.
 
 7. In the Property Editor, under itentification, set Name to **End Without Feedback**.
 
     ![create and config workflow end](./images/create-config-worflow-end.png " ")
 
-8. Draw a Connection from the **Raise Feedback Request** to the **End Without Feedback** Activity.
+8. Draw a Connection from the **Request for Feedback** to the **End Without Feedback** Activity.
 
     ![draw final connection](./images/draw-final-connection.png " ")
 
