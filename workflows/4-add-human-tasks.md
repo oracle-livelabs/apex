@@ -186,6 +186,6 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 You have successfully created Human Task definitions for the Doctor Appointment Workflow using the Approvals Component. In the next section, we will integrate these tasks into the workflow to complete the design process.
 
 ## Acknowledgments
-- **Author** - Roopesh Thokala, Senior Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   

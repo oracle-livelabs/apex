@@ -216,6 +216,6 @@ Now you're ready to proceed to the next section where you'll learn how to add Hu
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-- **Author** -  Roopesh Thokala, Senior Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, November 2023   

@@ -510,6 +510,6 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 You have successfully created a comprehensive Oracle APEX application for managing doctor appointments with workflows, task lists, and feedback features.
 
 ## Acknowledgments
-- **Author** - Roopesh Thokala, Senior Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   

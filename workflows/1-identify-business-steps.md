@@ -64,6 +64,6 @@ You now know how to create an application, run a SQL script and add users.
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-   - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala, Senior Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+   - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+   - **Contributor** -
+   - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, June 2023

@@ -182,6 +182,6 @@ In this hands-on lab, you learned how to:
 - Monitor the progress of initiated workflows.
 
 ## Acknowledgments
-- **Author** - Roopesh Thokala, Senior Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   
