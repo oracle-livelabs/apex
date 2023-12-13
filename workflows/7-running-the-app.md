@@ -2,18 +2,15 @@
 
 ## Introduction
 
-In this lab, you will run and understand the behaviour of the **Doctor Appointments Made Easy!** application through hands-on activities. You also perform various tasks to understand the workflow and automation implemented in the application.
+In this lab, you will run and understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You also perform various tasks to understand the workflow and automation implemented in the application.
 
 ## Objective:
 
-- Demonstrate the behaviour of the "Doctor Appointments Made Easy!" application through hands-on activities.
-
+- Demonstrate the behavior of the "Doctor Appointments Made Easy!" application through hands-on activities.
 
 ### Task 1: Setting Automatic Timezone for the Application
 
-To demonstrate the behavior of the application, we will use automatic timezone setup. This will ensure that the appointment dates and times are honored with respect to the End User's timezone.
-
-, Go to the Application Home Page -> Shared Components-> Globalization and turn on the Automatic Time Zone.
+To demonstrate the application's behavior, we will use an automatic timezone setup. This will ensure that the appointment dates and times are honored with respect to the End User's timezone.
 
 1. To do this, Navigate to the Application Home Page and then go to Shared Components -> Globalization.
 
@@ -36,9 +33,9 @@ To demonstrate the behavior of the application, we will use automatic timezone s
 4. Save the changes by clicking on Apply Changes.
 
 ### Task 3: Booking an Appointment
-From Application Home Page, click on Run Application.
+From the Application Home Page, click on Run Application.
 
-Log In as STEVE (Hospital Staff). Clck on New Appointment to Book a New Appointment for Rajesh. Select the Problem from the drop down as Psychiatric.
+Log In as STEVE (Hospital Staff). Click on New Appointment to Book a New Appointment for Rajesh. Select the problem from the drop-down menu as Psychiatric.
 
 1. From the Application Home Page, click on Run Application.
 
@@ -88,7 +85,7 @@ Log In as STEVE (Hospital Staff). Clck on New Appointment to Book a New Appointm
 
 Log back in as STEVE (Hospital Staff) and click on Monitor Appointment Workflows to monitor the progress of the workflow.
 
-Observe that the Workflow has progressed further and is now waiting at the Raise Invoice Request activity. This activity is waiting for the patient RAJESH to confirm and pay the invoice. Also observe that the Workflow Variables: Approver, Fee , and TaskOutcome are correctly set.
+Observe that the Workflow has progressed further and is now waiting at the Raise Invoice Request activity. This activity is waiting for the patient, RAJESH, to confirm and pay the invoice. Also, observe that the Workflow Variables: Approver, Fee, and TaskOutcome are correctly set.
 
 1. Log in as **STEVE** (Hospital Staff).
 2. Click on **Monitor Appointment Workflows**.
@@ -108,7 +105,7 @@ Observe that the Workflow has progressed further and is now waiting at the Raise
 
 3. Log out and log back in as STEVE to monitor the workflow.
 
-4. Observe that the workflow has now completed the Raise Invoice Request and Update Appointment Activities.
+4. Observe that the workflow has completed the Raise Invoice Request and Update Appointment Activities.
 
 5. Click on the next page button below the Activities.
 
@@ -116,16 +113,16 @@ Observe that the Workflow has progressed further and is now waiting at the Raise
 
 ### Task 8: Feedback Process
 
-On the next page, observe that the Workflow is now waiting for the Wait Before Requesting Feedback activity to complete. Recall that the Wait activity has a timeout setting which elapeses once the Appointment Time is reached.
+On the next page, observe that the Workflow is now waiting for the Wait Before Requesting Feedback activity to complete. Recall that the Wait activity has a timeout setting which elapses once the Appointment Time is reached.
 
 
 1. On the next page, observe that the workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
 
-2. Recall that the **Wait activity** has a timeout setting which elapses once the Appointment Time is reached.
+2. Recall that the **Wait activity** has a timeout setting that elapses once the Appointment Time is reached.
 
   ![wait for appointment](./images/wait-for-feedback.png " ")
 
-3. At this point we wait for the appointment time to elapse, and check back again once that happens. This is what is observed.
+3. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
 
   ![wait for appointment1](./images/wait-for-appt1.png " ")
 
@@ -151,7 +148,7 @@ Log out and log back in as STEVE to monitor the workflow. Observe that the Workf
 
 ### Task 11: Email Confirmation
 
-Check the inbox of the mail id used for the patient.
+Check the inbox of the mail ID used for the patient.
 
 You will find a Thank You Email.
 
@@ -159,22 +156,22 @@ You will find a Thank You Email.
 
   ![thank you email](./images/thank-you-email.png " ")
 
-2. Log in as RAJESH and verify the Feedback entered successfully.
+2. Log in as RAJESH and verify the Feedback was entered successfully.
 
   ![wait for feedback](./images/rajesh-feedback-check.png " ")
 
-## Additional Scenarios to Try:
+## Additional Scenarios to Try
 1. **Double Booking:** As a Hospital Staff, try to book 2 appointments for the same time for 2 different patients with the same doctor. Observe the workflow termination for the second patient.
 
 2. **Doctor Rejects Appointment:** As a Doctor, reject an appointment request. Observe the workflow termination for the patient.
 
 3. **Appointment Within 7 Days:** As a Hospital Staff, try to book an appointment for the same patient with the same doctor within 7 days of the last appointment. Observe the calculated consultation fees.
 
-4. **Delay in Invoice Response:** As a patient, after receiving an Invoice Request, do not act on the task. Observe the workflow termination and receive a No Appointment Email after 1 day.
+4. **Delay in Invoice Response:** As a patient, after receiving an Invoice Request, do not act on the task. Observe the workflow termination and receive a No Appointment Email after one day.
 
-5. **Delay in Feedback Response:** As a patient, after receiving a Feedback Request, do not act on the task. Observe the workflow completion and no Thank You Note after 12 hours.
+5. **Delay in Feedback Response:** As a patient, after receiving a Feedback Request, do not act on the task. Observe the workflow completion, and no Thank You Note after 12 hours.
 
-## Summary:
+## Summary
 In this hands-on lab, you learned how to:
 - Automate business processes using APEX Workflow.
 - Define workflow activities, variables, parameters, additional data, and connections.
@@ -184,4 +181,4 @@ In this hands-on lab, you learned how to:
 ## Acknowledgments
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   

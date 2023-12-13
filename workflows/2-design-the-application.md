@@ -9,7 +9,7 @@ In this lab, you will design the Doctor Appointments Made Easy application using
 ### Objectives
 
 In this lab, you :
-- Create Doctor Appointments made Easy Application.
+- Create the APEX Application.
 - Create Application users
 - Install Sample dataset
 
@@ -17,12 +17,12 @@ Estimated Time: 20 minutes
 
 ## Prerequisites
 1. Access to Oracle APEX.
-2. Ensure that users (doctors, patients, and hospital staff) are created using the Manage Users And Groups menu option under Workspace Administration. To create these users follow the the instructions specified in Step 1.
+2. Ensure that users (doctors, patients, and hospital staff) are created using the Manage Users And Groups menu option under Workspace Administration. To create these users, follow the the instructions specified in Step 1.
 
 ## Task 1: Create Application Users
 In this lab, you create users for Doctor Appointments made Easy Application.
 
-1. Navigate to **Workspace Administration** by clicking **Administration icon** on Application home page and select **Manage Users and Group** from the dropdown list.
+1. Navigate to **Workspace Administration** by clicking the **Administration icon** on the Application home page and select **Manage Users and Group** from the dropdown list.
 
   ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
@@ -332,7 +332,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
                           and doctor_no        = p_doctor_id
                           and schedule         >= to_timestamp_tz(p_request_date,'DD-MON-YYYY HH24:MI:SS') - 7
                           and status           = 'PAID');
-        -- update the appointment table to reflect the revised fee for the consultation
+        -- Update the appointment table to reflect the revised fee for the consultation
         update_appointment(
             p_booking_id    => p_booking_id,
             p_fee           => l_fee);
@@ -376,11 +376,14 @@ In this lab, you create users for Doctor Appointments made Easy Application.
 In the next section, you create the Doctor Appointment Workflow, connecting various functionalities such as checking availability, confirming appointments, updating fees, and more.
 
 ## Summary
-You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointment made Easy Application and then added Application users, created Sample Datasets, and a Package.
+You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointment made Easy Application, and then added Application users, created Sample Datasets, and a Package.
 
-You may now **proceed to the next lab**.   
+### What's Next
+In the next lab, you will learn how to create a Workflow using Oracle APEX.
+
+You may now **proceed to the next Lab**.
 
 ## Acknowledgments
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023

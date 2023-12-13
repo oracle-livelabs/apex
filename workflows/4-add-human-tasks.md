@@ -1,12 +1,12 @@
-# Add Human Tasks to Workflow
+# Add Human Tasks to the Workflow
 
 ## Introduction
 
 In this hands-on lab, we will explore the process of creating Human Tasks using the Approvals Component in Oracle APEX. Human Tasks are essential steps in our Doctor Appointment Workflow, requiring manual approval, rejection, or completion by either the Doctor or Patient. Specifically, we will focus on tasks such as **Send Appointment Request To Doctor**, **Raise Invoice Request For Patient**, and **Raise Feedback Request For Patient**.
 
-These steps therefore correspond to Human Task Activities. Before using them in the workflow, we use the Approvals Component to create the task definitions as follows.
+These steps, therefore, correspond to Human Task Activities. Before using them in the workflow, we use the Approvals Component to create the task definitions as follows.
 
-## Objectives
+### Objectives
 
 In this lab, you will learn how to create Human Tasks to
 - Sending Appointment Request To Doctor
@@ -15,7 +15,7 @@ In this lab, you will learn how to create Human Tasks to
 
 Estimated Time: 20 minutes
 
-## Task 1. Create Task Definition for Appointment Request
+## Task 1: Create Task Definition for Appointment Request
 
 1. Navigate to **Shared Components**.
 
@@ -44,7 +44,7 @@ Estimated Time: 20 minutes
 
   You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
-6. In the Task Definitions Page, Click **Appointment Request** and then in the **Appointment Request** task definition, under settings,
+6. In the Task Definitions Page, Click **Appointment Request**, and then in the **Appointment Request** task definition, under settings,
     - For Actions Source, select **SQL Query**
     - Under **Actions SQL Query**, Copy and paste the below SQL Query
 
@@ -57,9 +57,9 @@ Estimated Time: 20 minutes
     ![Select Appoint Request](./images/select-appt-request.png " ")
     ![Configure Actions Source](./images/enter-actions-source.png " ")
 
-    This step ties our task to the system of records, in this case, the doctor records.
+    This step ties our task to the system of records, in this case, the doctor's records.
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
+  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
 
 7. In the **Appointment Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
     - Set Participant Type as **Potential Owner**
@@ -80,7 +80,7 @@ Estimated Time: 20 minutes
 
 Similarly, now create the task definitions for the Invoice Request and Feedback Request Tasks to be raised for the patient.
 
-## Task 2. Creating Task Definitions for Invoice Request
+## Task 2: Creating Task Definitions for Invoice Requests
 
 1. Navigate to **Shared Components**, Under **Workflows and Automations**, select **Task Definitions**. Then click **Create**.
 
@@ -101,7 +101,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
   You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
-4. In the Task Definitions Page, Click **Invoice Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor records.
+4. In the Task Definitions Page, Click **Invoice Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor's records.
 
     ```
     <copy>
@@ -112,7 +112,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
     ![Select Invoice Request](./images/select-invoice-request.png " ")
     ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
+  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
 
 5. In the **Invoice Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
     - Set Participant Type as **Potential Owner**
@@ -132,7 +132,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
   ![Add Task Parameters](./images/add-invoice-parameters.png " ")
 
 
-## Task 3. Creating Task Definitions for Feedback Request
+## Task 3: Creating Task Definitions for Feedback Request
 
 1. Navigate to **Shared Components**, Under **Workflows and Automations**, select **Task Definitions**. Then click **Create**.
 
@@ -152,7 +152,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
   You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
-4. In the Task Definitions Page, Click **Feedback Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor records.
+4. In the Task Definitions Page, Click **Feedback Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor's records.
 
     ```
     <copy>
@@ -162,7 +162,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
     ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the employee number of the Doctor)*.
+  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
 
 5. In the **Feedback Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
     - Set Participant Type as **Potential Owner**
@@ -181,11 +181,16 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
   ![Add Task Parameters](./images/add-feedback-parameter.png " ")
 
 
+## Summary
 
-## **Summary**
 You have successfully created Human Task definitions for the Doctor Appointment Workflow using the Approvals Component. In the next section, we will integrate these tasks into the workflow to complete the design process.
+
+### What's Next
+In the next lab, you will continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, November 2023   
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   

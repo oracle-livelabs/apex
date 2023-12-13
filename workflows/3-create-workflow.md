@@ -4,7 +4,7 @@
 
 In this hands-on lab, you will learn the process of creating a Doctor Appointment Workflow using Oracle APEX.
 
-## Objectives
+### Objectives
 
 In this lab, You will learn how to
   - Create the Workflow
@@ -205,17 +205,17 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 7. Click **Save**.
 
-## What's Next
-
-Now you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
-
 ## Summary
 
+In this lab, you learned the process of creating a Doctor Appointment Workflow using Oracle APEX.
 
+### What's Next
+Now you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
 
 You may now **proceed to the next lab**.   
+
 
 ## Acknowledgments
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
-- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, November 2023   
+- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, December 2023   
