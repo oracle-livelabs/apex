@@ -1,4 +1,4 @@
-# Manage REST data, Use Approvals and Unified Tasks Lists
+# Manage REST data
 
 ## Introduction
 
@@ -29,7 +29,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
      INCREMENT BY 1 START WITH 8000 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOT NULL ENABLE,
     "EMP_NAME" VARCHAR2(10),
     "MGR" NUMBER(4,0),
-    CONSTRAINT "EMP_1_PK" PRIMARY KEY ("EMPNO"))
+    CONSTRAINT "EMP_1_PK" PRIMARY KEY ("EMPNO"));
     insert into emp_1(empno, emp_name, mgr) values (10, 'JOHN', 30);
     insert into emp_1(empno, emp_name, mgr) values (20, 'CLARA',30);
     insert into emp_1(empno, emp_name, mgr) values (30, 'JANE', 40);
@@ -64,7 +64,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     - Copy the **Full URL** and paste it in your Note pad.
 
-    Then Click **Apply**.
+    Then Click **Create**.
 
     ![Select Rest](images/create-autorest-object.png " ")  
 
@@ -81,7 +81,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
 ## Task 2: Create an application and Integrate Application Data from REST Data Source
 
-In this Lab, you create a **New Application** and then consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
+In this task, you create a **New Application** and then consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
 
 1. Log in to the first Workspace, where we have already created multiple applications.
 
@@ -95,64 +95,58 @@ In this Lab, you create a **New Application** and then consume the **REST Data S
 
     ![Create New Application](images/create-new-app1.png " ")
 
-4. Under **Create an Application**, select **New Application**.
+4. For **Name** - Enter **Leave Request Approval** and click **Create Application**.
 
-    ![Click New Application](images/click-new-application.png " ")
+    ![Click New Application](images/click-new-application1.png " ")
 
-5. Enter the following and click **Create Application**.
-
-    - For **Name** - Enter **Leave Request Approval**
-
-    ![Enter Application name](images/create-an-application1.png " ")
-
-6. Navigate to **Shared Components** and then Select **REST Data Sources**.
+5. Navigate to **Shared Components** and then Select **REST Data Sources**.
 
     ![Click shared components](images/click-shared-components.png " ")
 
     ![Click REST Data Sources](images/select-rest-ds.png " ")
 
-7. Under **REST Data Sources**, Click **Create** button.
+6. Under **REST Data Sources**, Click **Create**.
 
     ![Click on Create](images/click-on-create.png " ")
 
-8. Under **Create REST Data Source - Method**, Leave the settings to default and select **Next**.
+7. Under **Create REST Data Source - Method**, Leave the settings to default and Click **Next**.
 
     ![Click next button](images/click-next-button.png " ")
 
-9.  Under **Create REST Data Source**, Enter the following and click **Next**.
+8.  Under **Create REST Data Source**, Enter the following and click **Next**.
 
-    - For **REST Data Source Type** - select **Oracle REST Data Services**
+       - For **REST Data Source Type** : select **Oracle REST Data Services**
 
-    - For Name - Enter **Employee Details API**
+       - For Name : Enter **Employee Details API**
 
-    - For URL Endpoint - Enter the URI we **copied** in **Task 1**
+       - For URL Endpoint : Enter the URI you **copied** in **Task 1**
 
     ![Enter REST Data Source name and URL endpoint](images/create-rds1.png " ")
 
-10. Now, under **Create REST Data Source - Remote Server** leave all fields to **Default** and then click **Next**.
+9. Now, Under **Create REST Data Source - Remote Server** leave all fields to **Default** and Click **Next**.
 
     ![Define Remote Server](images/create-rds2.png " ")
 
-11. For Authentication, Set **Authentication Required** to **No**. Click **Discover**.
+10. For Authentication, Set **Authentication Required** to **No**. Click **Discover**.
 
     ![Click Discover](images/create-rds3.png " ")
 
-12. Click on the button **Create REST Data Source**.
+11. Click **Create REST Data Source**.
 
     ![Click REST Data Source](images/create-rds4.png " ")
 
 ## Task 3: Synchronise Data from REST Data Sources to a Local Table.
 
-In this lab, you will **Synchronise data** from the **REST Data source** you have created in Task 2 to a **Local table**.
+In this task, you **Synchronise data** from the **REST Data source** you created in Task 2 to a **Local table**.
 
 **Data Synchronisation** feature enables developers to automatically sync the contents of a local table with the data from an external REST service. Basically, APEX invokes the REST Service defined in the REST Data Source, downloads all data and Synchronise to a local table.
 
-1. Now that you have created a **REST Data Source**, Under **REST Data Sources** select **No** under **Synchronised** column for **Employee Details API**.
+1. Now that you have created a **REST Data Source**, Under **REST Data Sources** Select **No** under **Synchronised** column for **Employee Details API**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync.png " ")
 
 2. **Synchronisation** is not configured yet. In this step, you provide the name of a new table or an existing table.
-In this example, select New Table for Synchronise To and enter **EMP_1** for Table Name. Then, click **Save**.
+Select **New Table** for Synchronise To and enter **EMP_1** for Table Name and Click **Save**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync1.png " ")
 
@@ -166,11 +160,17 @@ In this example, select New Table for Synchronise To and enter **EMP_1** for Tab
 
     ![Select Synchronisation Schedule icon](images/create_rest_data_sync3.png " ")
 
-6. The Interval Builder dialog displays. In this example, for Frequency select **Minutely** and enter **10** for Interval. Then, click **Set Execution Interval**.
+6. The Interval Builder dialog displays.
+
+     - For Frequency : Select **Minutely**
+
+     - For Interval : Enter **10**  
+
+    click **Set Execution Interval**.
 
     ![Set Execution Interval](images/create_rest_data_sync4.png " ")
 
-7. You are now ready to test the data synchronisation. Click **Save and Run**.
+7. You are ready to test the data synchronisation. Click **Save and Run**.
 
     ![Click Save and Run](images/create_rest_data_sync5.png " ")
 
@@ -179,7 +179,7 @@ In this example, select New Table for Synchronise To and enter **EMP_1** for Tab
     ![data synchronisation is triggered](images/create_rest_data_sync6.png " ")
 
 ## Summary
-You now know how to login into a remote database, create a database table and then **Register a schema with RESTful Services**. Also how to create a **New Application** , consume the **REST Data Source** and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
+You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. Also, you learned how to create a **New Application** , consume the **REST Data Source**, and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
 
 You may now **proceed to the next lab**.
 
@@ -187,4 +187,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2023

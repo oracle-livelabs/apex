@@ -93,15 +93,45 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operations Parameter, click **Synchronize with Body** to auto-create substitutions strings in the request body template as operation parameters. Then, click **OK**.
+11. Select Operations Parameter Tab and click **Add Parameter**
 
-   ![Click Timeline](images/synchronize.png " ")
+   ![Click Timeline](images/add-parameter.png " ")
 
-12. Select Operations Parameter Tab and click **Add Parameter**
+12. Under Edit REST Data Source Parameter:
+
+    - **Type**: Request or Response Body
+
+    - **Name**: COMPARTMENT_ID
+
+    - **Direction**: In
+
+    Click **Add and Add Another**
+
+    ![Click Timeline](images/add-parameter.png " ")
+
+13. Under Edit REST Data Source Parameter:
+
+    - **Type**: Request or Response Body
+
+    - **Name**: FILE_DATA
+
+    - **Direction**: In
+
+    Click **Add and Add Another**
+
+14. Under Edit REST Data Source Parameter:
+
+    - **Type**: Request or Response Body
+
+    - **Name**: FEATURE_TYPE
+
+    - **Direction**: In
+
+    Click **Add and Add Another**
 
    ![Click Timeline](images/operations-param.png " ")
 
-13. Under Edit REST Data Source Parameter:
+15. Under Edit REST Data Source Parameter:
 
     - **Type**: Request or Response Body
 
@@ -113,7 +143,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/response.png " ")
 
-14. Under Edit REST Data Source Parameter:
+16. Under Edit REST Data Source Parameter:
 
     - **Type**: HTTP Header
 
@@ -129,7 +159,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/content-type.png " ")
 
-15. Click **Apply Changes**.
+17. Click **Apply Changes**.
 
     ![Click Timeline](images/parameter-changes.png " ")
 
