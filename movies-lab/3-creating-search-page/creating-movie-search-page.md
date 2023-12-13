@@ -6,7 +6,7 @@ You will create and set up the Movie Search page so that you can view popular mo
 Estimated Lab Time: 20 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create the Movie Search Page](videohub:1_stfhi958)
+[Create the Movie Search Page](videohub:1_x3bb4sv0)
 
 ### Objectives
 In this lab, you will:   
@@ -91,6 +91,8 @@ To start, you will create the Movie Search page and do a little page setup befor
         ```
 
     * The above code styles the movie poster images to all be the same size. It also adds some styling for the Cards region badge attribute that will be used in a later lab, to place it in the top right of a card. Finally, it adds some styling for the movie rating that you will display on the Card along with the movie title and poster.
+
+8. Click the **Save** button to save your changes.
 
     ![Page 2 open in Page Designer with the properties in the property editor updated to reflect the values from steps 6 and 7](images/page-properties.png " ")
 
@@ -296,7 +298,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
     * Identification → Action: **Submit Page**
 
-9. Click the green Save and Run button at the top right of the Page Designer.
+9. Click the **Save and Run** button at the top right of the Page Designer.
 
     ![Page 1 open in Page Designer editing the Dynamic Action action associated with Refresh on Dialog Closed](images/da-action.png " ")
 
@@ -322,26 +324,26 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/about-page-designer.html)  
+- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/about-page-designer.html)  
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-cards.html)  
+- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-cards.html)  
 
 - [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)  
 
-- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-dialog-pages.html)  
+- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/creating-dialog-pages.html)  
 
 - [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/) 
 
 - [Intro to Dynamic Actions Video](https://www.youtube.com/watch?v=hpcYevCC-Ow)  
 
-- [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-dynamic-actions.html) 
+- [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-dynamic-actions.html) 
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 3 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-3-231.sql) to download a copy of the app at the end of Lab 3.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-3-232.sql) to download a copy of the app at the end of Lab 3.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -369,4 +371,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, November 2023

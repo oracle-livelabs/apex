@@ -1,0 +1,31 @@
+{
+  "workshoptitle": "JavaScript for APEX Developers",
+  "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+    {
+      "title": "紹介",
+      "filename": "0-workshop-intro-and-setup/0-workshop-intro-and-setup.md"
+    },
+    {
+      "title": "APEX Workspaceのサインアップ",
+      "filename": "../ja-jp-existing-tables/sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "ラボ1: JavaScriptの基礎",
+      "filename": "1-javascript-basics/1-javascript-basics.md"
+    },
+    {
+      "title": "ラボ2: APEXアプリにJavaScriptを追加する",
+      "filename": "2-adding-javascript-to-apex-apps/2-adding-javascript-to-apex-apps.md"
+    },
+    {
+      "title": "ラボ3: DOMとjQueryの操作",
+      "filename": "3-working-with-the-dom-and-jquery/3-working-with-the-dom-and-jquery.md"
+    },
+    {
+      "title": "ヘルプ",
+      "description": "一般的な問題の解決策とライブ・ヘルプを受けるための手順",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

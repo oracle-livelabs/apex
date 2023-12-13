@@ -27,7 +27,7 @@ In this lab, you will:
 
 3. On the **Customer Orders** row, click Install.
 
-    ![Sample Datasets page](./images/Select-Sample-Dataset.png " ")
+    ![Sample Datasets page](./images/select-sample.png " ")
 
 4. Click **Next**.
 
@@ -50,9 +50,9 @@ In this lab, you will:
 
 2. Click **Object Browser**.
 
-    ![SQL Workshop home page](./images/object-browser.png " ")
+    ![SQL Workshop home page](./images/object-browser66.png " ")
 
-3. Click the new tables and the various tabs, such as Data, Constraints, and so forth, to review the table details.
+3. Click on tables to view different tables and then you will see various tabs, such as Data, Constraints, and so forth, to review the table details.
 
     ![Object Browser](./images/explore-tables.png " ")
 
@@ -61,4 +61,4 @@ This completes Lab 1. You now know how to install a sample dataset. You may now 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

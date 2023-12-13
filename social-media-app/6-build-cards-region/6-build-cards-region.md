@@ -2,13 +2,24 @@
 
 ## Introduction
 
-In this lab, you learn to create the CARDS region that can query the data
-the way we need it, and configure the region attributes to suit our
-goals.
+In this lab, you learn to create the CARDS region to display the posts and configure the region attributes.
 
 Estimated Time: 10 minutes
 
-## **Task 1**: Create a Cards Region
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_cmdi0d57)
+
+### Objectives
+
+In this lab, you will:
+- Create the Cards region to display the posts
+- Configure the attributes of the Cards region to match our design
+
+### Prerequisites
+
+- Completion of workshop through Lab 5
+
+## Task 1: Create a Cards Region
 
 1. Navigate to the Rendering Tree and right-click on **Body**, and
 choose **Create Region**.   
@@ -23,14 +34,9 @@ choose **Create Region**.
 
     ![Property Editor](images/title-type.png)
 
-    - Under Source, for Type select **SQL Query**.
 
-3.  Clear the **SQL Query** that was automatically put into the SQL
-    Query box. The attributes should look like the following:
-
-
-4.  Copy and paste the following **SQL** statement into that box and
-    *tab out* of it
+3.  Under Source, for Type select **SQL Query**. Enter the following **SQL Query** into the SQL
+    Query box:
 
     ```
     <copy>
@@ -40,43 +46,40 @@ choose **Create Region**.
         p.post_comment AS comment_text,
         p.file_blob,
         p.file_mime,
-        
+
         apex_util.get_since(p.created) post_date,
 
         (
-            select count(*) from SM_REACTIONS smr 
+            select count(*) from SM_REACTIONS smr
             where smr.post_id=p.id
         ) as REACTIONS,
 
         (
-            select 'user-has-liked' from SM_REACTIONS smr 
+            select 'user-has-liked' from SM_REACTIONS smr
             where smr.post_id=p.id and created_by=:APP_USER
         ) USER_REACTION_CSS
 
-        from SM_POSTS p 
+        from SM_POSTS p
 
         order by p.created desc
     </copy>
     ```
 
-    And this is the final configuration for the **Region** tab:
-
     ![SQL expression in editor](images/sql-code.png)
 
-5. Scroll down on the list of Region attributes to the **Appearance**
-section:
+5. Scroll down in the Property Editor to the **Appearance** section:
 
-    - In the Appearance > CSS Classes box, put **t-Chat**
+    - In the Appearance > CSS Classes box, enter **t-Chat**
 
-    - Under **Advanced** section, for **Static ID** specify **timeline**.
+    - In Advanced > Static ID, enter **timeline**.
 
     ![Property editor](images/appearance.png)
 
-    We're not quite done with this region yet. We have to configure
-which columns from the query results will be used on which parts of the
-CARDS themselves.
+    We are not done with this region yet! We have to configure
+which columns from the query results will be used in which parts of the
+CARDS.
 
-## **Task 2**: Configure the Attributes of the Cards Region
+## Task 2: Configure the Attributes of the Cards Region
 
 1. In the Property Editor, select the **Attributes** tab, and make
 the following changes:
@@ -98,7 +101,7 @@ the following changes:
     ![Attributes in Property Editor](images/attributes-2.png)
 
     And finally (for this Region), scroll down to the Media section, and set
-these attributes:
+the following attributes:
 
     - Source: **BLOB column**
 
@@ -117,19 +120,18 @@ these attributes:
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-    These attributes should look like this:
-
     ![Attributes in Property Editor](images/attributes-3.png)
 
-2. And this completes the region. Click **Save and Run**.
+2. Now, the region is completely configured. Click **Save and Run**.
 
-    If you made a post earlier you should now see your image and your
-comment text:
+    If you made a post earlier, you should now see your image and your
+comment text!
 
     ![Running app](images/run-app.png)
 
+You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023

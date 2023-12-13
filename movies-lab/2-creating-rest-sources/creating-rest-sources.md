@@ -6,7 +6,7 @@ This lab will walk you through how to create REST Data Sources that you will use
 Estimated Lab Time: 10 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create REST Data Sources](videohub:1_czyj8k85)
+[Create REST Data Sources](videohub:1_lfhqcopc)
 
 ### Objectives
 In this lab, you will:  
@@ -127,16 +127,16 @@ When you created the REST data sources from the REST Catalog, a new Web Credenti
 
 You now know how to create REST data sources from a REST Catalog in Oracle APEX and will be able to get data from The Movie Database to use for your application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
+- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-REST-data-sources.html)  
 
 - [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 2 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-2-231.sql) to download a copy of the app at the end of Lab 2.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-2-232.sql) to download a copy of the app at the end of Lab 2.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -163,4 +163,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, November 2023

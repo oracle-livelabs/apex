@@ -117,13 +117,17 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
     ![](images/welcome-create-workspace.png " ")
 
-10. In the Create Workspace dialog, enter the following:
+10. In the Create Workspace dialog, choose **New Schema**.
+
+    ![](images/click-new-schema.png " ")
+
+11. In the Create Workspace dialog, enter the following:
 
     | Property | Value |
     | --- | --- |
     | Database User | DEMO |
-    | Password | **`SecretPassw0rd`** |
     | Workspace Name | DEMO |
+    | Password | **`SecretPassw0rd`** |
 
     Click **Create Workspace**.
 

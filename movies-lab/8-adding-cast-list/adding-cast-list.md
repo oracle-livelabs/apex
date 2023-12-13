@@ -5,6 +5,8 @@ This next lab is optional, but it would be fun and informative if a user were ab
 
 Estimated Lab Time: 5 minutes
 
+[Add Cast List to Movie Details Page](videohub:1_b96xa2op)
+
 ### Objectives
 In this lab, you will:  
 - Use the Movie Cast REST data source to add Cast Cards the Movie Details page.
@@ -83,16 +85,16 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 You have now improved the Movie Details page further by displaying a list of cast members along with the movie header and overview. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
+- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-REST-data-sources.html)  
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-cards.html)  
+- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-cards.html)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through this lab and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-8-231.sql) to download a copy of the app at the end of this lab.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-8-232.sql) to download a copy of the app at the end of this lab.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -120,4 +122,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, November 2023

@@ -21,6 +21,7 @@ In a similar fashion to how you modified the To Dos report, you need to update t
 1. From the runtime application, navigate to the Links report page, and then navigate to Page Designer.
 
     In the Developer Toolbar click **Edit Page11**.
+
     ![](images/edit-page11.png " ")
 
     You should now be in Page Designer with **Page 11: Links** loaded.
@@ -30,7 +31,8 @@ In a similar fashion to how you modified the To Dos report, you need to update t
 
     Within Page Designer, in the Rendering tree (left pane), click **Links**.
 
-    In the Property Editor (right pane), for Source > Type, select **SQL Query**.   
+    In the Property Editor (right pane), for Source > Type, select **SQL Query**.
+
     *{Note: The SQL Query will be populated. The SQL statement selects all of the columns from the HOL_LINKS table.}*
 
     For Source > SQL Query, enter the following:
@@ -61,65 +63,73 @@ In a similar fashion to how you modified the To Dos report, you need to update t
   </copy>
     ```
 
-    ![](images/set-sql.png " ")
+    Click **OK**.
+
+    ![](images/set-sql1.png " ")
 
 3. The URL column within the report needs to be updated.
 
     In Page Designer, in the Rendering tree (left pane), under the Links region, expand **Columns**.
 
     In the list of columns, click **URL**.
+
     In the Property Editor (right pane), enter the following:
+
     - Identification > Type - select **Link**
+
     - Link > Target - click **No Link Defined**, and enter the following -
+
         - Target > Type - select **URL**
-        - Target > URL - enter **#URL#**.   
-        *{Note: This will link to the value in the URL column.}*    
 
-        Click **OK**
+        - Target > URL - enter **#URL#**.  
 
-    ![](images/update-url.png " ")
+   *Note: This will link to the value in the URL column.*    
+
+      Click **OK**
+
+      ![](images/update-url.png " ")
 
     - Link > Link Attributes - enter **target="_blank"**    
     *{Note: Click on Help (middle pane) to review examples.}*
 
-    ![](images/update-url2.png " ")
+        ![](images/update-url2.png " ")
 
 4. Time to review the page.
 
     In the Page Designer toolbar, click **Save and Run**
 
-    ![](images/run-report.png " ")
+    ![](images/run-report1.png " ")
 
     *{Note: The URL column is now a link. Clicking on one of the links will bring up a new page, however, the URL is not properly formed as it is missing the hypertext transfer protocol (http or https), and the value is a fictious site address.}*
 
-4. The new columns are placed as the last columns in the report, however, they should be moved to be the first columns.
+5. The new columns are placed as the last columns in the report, however, they should be moved to be the first columns.
 
     In the runtime environment, in the Links report menu, click **Actions**.       
     In the dropdown, select **Columns**.
 
-    ![](images/go-columns.png " ")
+    ![](images/go-columns1.png " ")
 
 6. In the Select Columns dialog, click **Project**.        
     Hold down the [Shift] key, and click **Milestone**.     
     In the options on the right of the dialog, click **Top**.        
     Click **Apply**.
 
-    ![](images/select-columns.png " ")
+    ![](images/select-columns1.png " ")
 
 7. You need to save the revised report layout so others will see the new and improved column placement.
 
     In the runtime environment, in the To Dos report menu, click **Actions**.       
     In the dropdown, select **Report**, and then click **Save Report**.
 
-    ![](images/go-save.png " ")
+    ![](images/go-save1.png " ")
 
 8. In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.
 
-    ![](images/go-default.png " ")
+    ![](images/go-default1.png " ")
 
 9. In the Save Default Report dialog, click **Apply**.     
 
-    ![](images/set-default.png " ")
+    ![](images/set-default1.png " ")
 
     *{Note: You want to save the report as Primary so that it displayed as you see it now to end users when they navigate to the page.}*
 
@@ -129,15 +139,15 @@ If you review the Links form page, by clicking an edit icon on the report, you w
 1. From the runtime environment, in the Developer Toolbar, click **Edit Page 12**.
 ![](images/edit-page12.png " ")
 
-7. Within Page Designer, in the Rendering tree (left pane), click **P12\_TASK_ID**.  
+2. Within Page Designer, in the Rendering tree (left pane), click **P12\_TASK_ID**.  
     In the Property Editor (right pane), for Identification > Type, select **Popup LOV**.
 
     In the Page Designer toolbar, click **Save**.
 
-    ![](images/set-task-lov.png " ")   
+    ![](images/set-task-lov1.png " ")   
 
 
-8. Time to review the completed form page.    
+3. Time to review the completed form page.    
 
     Navigate to the runtime environment tab or browser.     
     Navigate to **Links** and refresh the page.     
@@ -149,7 +159,7 @@ If you review the Links form page, by clicking an edit icon on the report, you w
     For URL enter [https://apex.oracle.com](https://apex.oracle.com)     
     Click **Apply Changes**.
 
-    ![](images/form-runtime.png " ")    
+    ![](images/form-runtime1.png " ")    
 
     On the Links report page, click the URL for the record you just updated.    
     It should bring up the main APEX site in a new browser tab or window.
@@ -170,5 +180,4 @@ You now know how to change a URL value to be a link to a separate browser tab or
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Anoosha Pilli, Product Manager, DB Product Management, June 2020
-
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

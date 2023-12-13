@@ -6,7 +6,7 @@ Now that you have implemented functionality to find movies and add them to a tab
 Estimated Lab Time: 25 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Implement the Watchlist Page](videohub:1_2xjo60jy)
+[Implement the Watchlist Page](videohub:1_g0oio0jt)
 
 ### Objectives
 In this lab, you will:  
@@ -305,7 +305,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
 You now know how to filter data using a Faceted Search and sort data with a select list. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
 - [Intro to Faceted Search](https://www.youtube.com/watch?v=xsA9SCFHDDI)  
 
@@ -318,7 +318,7 @@ You now know how to filter data using a Faceted Search and sort data with a sele
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 7 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-7-231.sql) to download a copy of the app at the end of Lab 7.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-7-232.sql) to download a copy of the app at the end of Lab 7.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -346,4 +346,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, November 2023

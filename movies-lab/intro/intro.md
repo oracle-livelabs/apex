@@ -8,7 +8,10 @@ While the end result is a simple version of a movies watchlist application, you 
 
 Estimated Workshop Time: 2 hours
 
-*Note: This lab assumes you are using Oracle APEX 23.1.*
+Watch the video below for a quick walk-through of the workshop.
+[Walkthrough video of the entire workshop](videohub:1_vdi0shy5)
+
+*Note: This lab assumes you are using Oracle APEX 23.2.*
 
 ### Objectives
 In this lab, you will:  
@@ -41,9 +44,9 @@ In this lab, you will:
 
 ### Downloads
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/movies-watchlist-231.sql) to download the completed application.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/movies-watchlist-232.sql) to download the completed application.
 
-## Learn More - *Useful Links*
+## Learn More
 
 - [The Movie Database](https://www.themoviedb.org/)
 - [The Movie Database API](https://developers.themoviedb.org/3/)

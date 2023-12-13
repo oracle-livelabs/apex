@@ -10,23 +10,31 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 22.1.
- 
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
+
 Estimated Time: 5 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Create an App from a Spreadsheet](videohub:1_0paduqmw)
+[Create an App from a Spreadsheet](videohub:1_9jbxjzh8)
+
+Objectives
+In this lab, you will:
+ - Create a new APEX application using spreadsheet
+ - Run your application
+
+Prerequisites
+ - An Oracle APEX workspace
 
 ## **Task 1**: Loading the Highschool data  
 
 1.  From your APEX workspace home page, click **App Builder**.
 2.  Click **Create a New App**.
 
-    ![Image showing Create a New App option](images/create-a-new-app.png " ")
+    ![Image showing Create a New App option](images/create-a-new-app1.png " ")
 
-3.  Click **From a File**.
+3.  Click **Create App from a File**.
 
-    ![Image showing the various options to create an application](images/from-a-file.png " ")
+    ![Image showing the various options to create an application](images/from-a-file1.png " ")
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
@@ -46,35 +54,31 @@ The Data Load wizard has created a new table and populated that table with the r
 
 1.  In the Load Data dialog, verify that 427 rows have been loaded into the **NYC_HIGHSCHOOLS** table, then click **View Table**.
 
-    ![Image showing the success message of Load Data and options to View Table or Create Application](images/continue-to-view-object.png " ")
+    ![Image showing the success message of Load Data and options to View Table or Create Application](images/continue-to-view-object1.png " ")
 
 
 2. In the Object Browser, review the table structure.   
-    In the Table toolbar, click **Create App**.
+    In the Table toolbar, click  **More** and select **Create App**.
 
-    ![Image showing the table in the Object Browser](images/object-browser.png " ")
-
-3. On the Create Application page, click **Create App**.
+    ![Image showing the table in the Object Browser](images/object-browser3.png " ")
 
 3. On the Create Application page, enter the Name as **NYC Highschools** and click the application icon.
-   ![Image showing the Create Application Page](images/name-for-application.png " ")
-   
+   ![Image showing the Create Application Page](images/name-for-application1.png " ")
+
 4. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](files/nyc-highschools.png).
   ![Image showing the Choose Application Icon wizard](images/custom-app-icon.png " ")
-  
+
 5. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/edit-and-save-icon.png " ")
 
-7. In the Create Application page, review the pages listed.
+6. In the Create Application page, review the pages listed.
   Click the **Edit** button for **Nyc Highschools Search** and **Nyc Highschools Report** pages to review more details and update the names to the following:
-  - NYC Highschools Search
-  - NYC Highschools Report
-  
+    - NYC Highschools Search
+    - NYC Highschools Report
 
-    Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
+ Click the checkbox for **Install Progressive Web App** for Features, and then click **Create Application**. You will learn about Progressive Web App in *Lab 4* of this workshop.
 
-    ![Image showing the Create Application Page](images/verify-app-details.png " ")
-    ![Image showing the Create Application Page](images/create-application.png " ")
+    ![Image showing the Create Application Page](images/create-application1.png " ")
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
@@ -82,21 +86,20 @@ The Data Load wizard has created a new table and populated that table with the r
 
 1.  Click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
 
-    ![Image showing the App Builder console](images/run-application.png " ")
+    ![Image showing the App Builder console](images/run-application1.png " ")
 
 2.  Enter your user credentials and click **Sign In**. Notice the custom application icon displayed at the top.
 
     *Note: Use the same Username and Password you used to sign into the APEX Workspace.*
 
-    ![Image showing the Application Login Screen](images/sign-in.png " ")
+    ![Image showing the Application Login Screen](images/sign-in1.png " ")
 
 3.  Explore the application a little.
-  - Click **Dashboard** (in the home menu or the navigation menu) to view the charts created.
-  - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
-  - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
-  Finally, review the options available under **Administration**.
+    - Click **Dashboard** (in the home menu or the navigation menu) to view the charts created.
+    - Click **NYC Highschools Search**, in the navigation menu, to play with the faceted search.
+    - Click **NYC Highschools Report** to view an interactive report, then click the edit icon for a record to display the details in an editable "form" page.
 
-    ![Image displaying the new application home page](images/new-app.png " ")
+  ![Image displaying the new application home page](images/new-app.png " ")
 
 ## **Summary**
 
@@ -106,4 +109,4 @@ You now know how to create an application from a spreadsheet by dragging and dro
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

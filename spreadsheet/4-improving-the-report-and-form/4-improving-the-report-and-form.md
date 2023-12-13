@@ -6,7 +6,16 @@ In this lab, you will gain an insight into the abilities of Interactive Reports,
 Estimated Time: 20 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Improve the Report and Form](videohub:1_vqxp92k7)
+[Improve the Report and Form](videohub:1_8a2fxcml)
+
+Objectives
+In this lab, you will:
+ - Enhance Interactive Report
+ - Improve  the Form
+ - Enhance UX of the Form
+
+Prerequisites
+ - Completion of workshop through Lab 2
 
 ## **Task 1**: Enhancing the Interactive Report
 The **NYC Highschools Report** page utilizes an Interactive Report to display the records. Interactive Reports are exceedingly powerful, as they allow _*end users*_ to modify what data is displayed, and various display characteristics. For this report, you will add a column break, a computational column, an aggregate, a chart, then order the data and save the report for everyone to see.
@@ -17,7 +26,7 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
 2. The report displays all the columns in the table. Customize the report by choosing only selected columns in a report. Click **Actions** and select **Columns**.
 
-      ![](images/select-columns.png " ")
+      ![Interactive Report Columns](images/select-columns.png " ")
 
 3. In the Select Columns dialog, select the columns that you want to hide from the report by selecting a column and clicking on the left-chevron (<) in order to move it to the **Do Not Display** section. Or, double-click on a column in order to move it to the **Do Not Display** section. Hide the following columns:
     - Dbn
@@ -29,17 +38,17 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
     Click **Apply**.
 
-    ![](images/do-not-display-columns.png " ")
+  ![Interactive Report Select Columns](images/do-not-display-columns.png " ")
 
 4. The interactive report is displayed by hiding the selected columns from the previous step. Click the **Neighborhood** column heading, and then select **Control Break**.
 
-    ![](images/col-break.png " ")
+    ![Interactive Report Control Break](images/col-break.png " ")
 
 5. You can add a computational column, where a new column is defined based on a computation against one more existing columns in the report. Columns are selected within the computation using a letter associated with each column.
 
     At the top of the report, click **Actions**, select **Data**, and then select **Compute**.
 
-    ![](images/go-compute.png " ")
+    ![Interactive Report Compute](images/go-compute.png " ")
 
 6. On Compute, enter the following and click **Apply**.
 
@@ -49,17 +58,17 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
     | Format Mask | **5,234.10** |
     | Computation Expression | **M / L** |
 
-    ![](images/set-compute.png " ")
+    ![Interactive Report Computation](images/set-compute.png " ")
 
     This adds a new column **Application to Seat Ratio** to your interactive report.
 
 7. To calculate the average Application to Seat Ratio in each Neighborhood, click **Actions**, select **Data**, and then select **Aggregate**.
 
-    ![](images/go-aggregate.png " ")
+    ![Interactive Report Aggregate](images/go-aggregate.png " ")
 
 8. On Aggregate, for Column select **Application to Seat Ratio**, for Function select **Average**, then click **Apply**.
 
-    ![](images/set-aggregate.png " ")
+    ![Interactive Report Aggregate](images/set-aggregate.png " ")
 
 9. Even though you can see the average Application to Seat Ratio for each Neighborhood, it would be much easier to view the average on a chart to get an overall picture of the neighborhoods which have the best High Schools.
 
@@ -74,17 +83,17 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
     | Function | **Average** |
     | Orientation | **Horizontal** |
 
-    ![](images/set-chart.png " ")
+    ![Interactive Report Chart settings](images/set-chart.png " ")
 
     After you click **Apply**, the chart will be displayed. Hover over individual bars to view the neighborhood and the average. Toggle between the report view and chart view using the icons at the top of the report.
 
-    ![](images/view-chart.png " ")
+    ![Interactive Report Chart](images/view-chart.png " ")
 
 11. You want to ensure that all of the records are ordered in the ascending order of School Name and descending order of seats, within each neighborhood.
 
     At the top of the report, click the **View Report** icon. Click **Actions**, select **Data**, and then select **Sort**.
 
-    ![](images/go-sort.png " ")
+    ![Interactive Report Sort](images/go-sort.png " ")
 
 12. In the Sort dialog, select the following and click **Apply**.
 
@@ -92,9 +101,9 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
     | --- | --- | --- |
     | School Name | Ascending | Default |
     | Seats | Descending | Nulls Always Last |
-    | Graduation Date | Descending | Default |
+    | Graduation Rate | Descending | Default |
 
-    ![](images/set-sort.png " ")
+    ![Interactive Report Sorting](images/set-sort.png " ")
 
 13. Now that you have made all of these modifications to the Interactive Report, it is important to save the report layout. End users have the ability to save either *Private Reports*, only they can view, or *Public Reports*, that other end users can also view. *{Note - As a developer you can remove the ability for _end users_ to save Public Reports by going to the report attributes in Page Designer.}*
 
@@ -106,20 +115,18 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
     *Note - End users can save Private and Public reports, however, only developers (who have run the app from the App Builder) can save the Primary and Alternative reports.*
 
-    ![](images/save-report.png " ")
-
+    ![Interactive Report Save report](images/save-report.png " ")
 
     On Save Default Report, select **Alternative**, for Name enter **Best Schools**, and click **Apply**.
 
-
-    ![](images/save-alternative.png " ")
+   ![Interactive Report Save report](images/save-alternative.png " ")
 
     A new select list will be displayed at the top of the report which lists all of the saved reports available to the user.
 
 15. To go back to how the end user will see the report when they first access the report, at the top of the report, select **1. Primary Report**. Click **Actions**, select **Report** and then select **Reset**.
 
-    ![](images/reset-primary.png " ")
-    
+    ![Interactive Report Reset](images/reset-primary.png " ")
+
 16. Click **Apply** to confirm reset. The changes you have made to the report will be reset and the original report will be displayed.
     ![Confirm reset report](images/apply-reset.png " ")
 
@@ -130,7 +137,7 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
 1. In the Runtime environment, on the **NYC Highschools Report** page, click the **edit icon** for any record.
 
-    ![](images/view-form.png " ")
+    ![Edit NYC Highschool report](images/view-form.png " ")
 
     The modal form page for the selected record will be displayed.
 
@@ -142,18 +149,18 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
     In Page Designer, with Page 5 loaded, within Layout (middle pane), click **P5\_ATTENDANCE\_RATE** and continue to hold the mouse down. Drag the item up and to the right, until it is directly after **P5\_GRADUATION\_RATE**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
 
-    ![](images/drag-attendance-rate.png " ")
+    ![drag and drop page items](images/drag-attendance-rate.png " ")
 
 4. As an alternative to using drag-and-drop you can also reposition items using attributes in the Property Editor.
 
     In Page Designer, within Layout (or the Rendering tree in the left pane), select **P5\_COLLEGE\_CAREER\_RATE**. In the Property Editor (right pane), deselect Layout > Start New Row.
 
-    ![](images/move-career-rate.png " ")
+    ![move career rate](images/move-career-rate.png " ")
 
     *Note - As soon as you deselect Start New Row, the item will move to be on the same line as the item above, within Layout.*
 
 
-4. To limit the data entry for an item, one of the simplest techniques is to convert a text item (which allows any data to be entered) into a select list.
+5. To limit the data entry for an item, one of the simplest techniques is to convert a text item (which allows any data to be entered) into a select list.
 
     In Page Designer, within the Rendering tree (left pane), select **P5\_BOROUGH**. In the Property Editor (right pane), enter the following.
 
@@ -164,9 +171,6 @@ By default, the form pages generated by the Create Application Wizard are modal 
     | | Display Extra Values | Uncheck |
     | | Null Display Value | Type in **- Select Borough -** |
 
-    ![](images/set-status1.png " ")
-    ![](images/set-status2.png " ")
-
     For List of Values > SQL Query enter the following code
 
     ```
@@ -175,68 +179,66 @@ By default, the form pages generated by the Create Application Wizard are modal 
     order by 1</copy>
     ```
 
-    ![](images/set-status3.png " ")
+    ![Update Borough attributes](images/set-status1.png " ")
 
 6. It is important to save your changes before testing.
 
     In Page Designer, within the toolbar (at the top), click **Save**.
 
-    ![](images/pd-save.png " ")
+    ![Save changes](images/pd-save.png " ")
 
     *Note - If you press Save and Run in the toolbar a message will be displayed, rather than the page being run. This is expected behavior, as modal pages can not be run directly from Page Designer.*
 
-    ![](images/save-error.png " ")
+    ![save error](images/save-error.png " ")
 
 
-6. Navigate back to the runtime environment and refresh the browser, or click **Cancel** on the modal page to return to the **NYC Highschools Report** page.
+7. Navigate back to the runtime environment and refresh the browser, or click **Cancel** on the modal page to return to the **NYC Highschools Report** page.
 
 
 8. On the Project Tasks Report page, click the edit icon for any record.
 
     Review the improved layout and click on **Borough** to see the list of available values.
 
-    ![](images/updated-form.png " ")
+    ![Updated form](images/updated-form.png " ")
 
 ## **Task 3**: (OPTIONAL) Enhancing the UX of the Form
 In the previous task, you explored a few options to enhance the form. In this task, we further enhance the user experience of the form by splitting the form fields into multiple tabs. Currently, observe that the form contains a number of fields and the user needs to scroll through the form to view all the fields.
 
 1. In the Runtime environment, on the **NYC Highschools Report** page, click the **edit icon** for any record.
 
-    ![](images/edit-record.png " ")
+    ![Edit record](images/edit-record.png " ")
 
     The modal form page for the selected record will be displayed.
 
 2. In the Developer Toolbar, at the bottom of the screen, click **Edit Page 5**.
- 
-    ![](images/edit-page-5.png " ")
+
+    ![Edit page 5](images/edit-page-5.png " ")
 
     *Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
-    
+
 3. Click **Nyc Highschool** in the rendering tree. In the Property Editor, navigate to **Appearance** and for Template select **Tabs Container**.
 
-    ![](images/tab-container.png " ")
+    ![Tab Container](images/tab-container.png " ")
 
 4. To create a tab, right-click on **Nyc Highschool** and select **Create Sub Region**. Create 4 Sub Regions with the following values for **Title**:
     - General Information
     - Metrics
     - Location
     - Other Course Details
-    
-    ![](images/create-sub-region.png " ")
-    
-    ![](images/sub-region-title.png " ")
-  
+
+    ![Create sub region](images/create-sub-region.png " ")
+
 5. In the Property Editor for each Sub Region, perform the following step:
     - Navigate to **Appearance**
     - Select **Template Options**
     - For **Header**, select **Hidden but accessible**
-    
-    ![](images/template-option.png " ")
-    
-    ![](images/hide-header.png " ")
-  
+
+    ![Template option](images/template-option.png " ")
+
+    ![hidden but accessible](images/hide-header.png " ")
+
 6. The Sub Regions created represents the different tabs. Drag and drop the form fields into their respective Sub Region as mentioned in the table.
-    
+
     | Sub Region Title | Form Fields |
     |----------|----------|
     | **General Information** | P5\_BOROUGH <br> P5\_SCHOOL\_NAME <br> P5\_NEIGHBORHOOD <br> P5\_INTEREST <br> P5\_METHOD |
@@ -244,19 +246,19 @@ In the previous task, you explored a few options to enhance the form. In this ta
     | **Location** | P5\_LATITUDE <br> P5\_LONGITUDE |
     | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |  
 
-    ![](images/drag-and-drop-fields.png " ")
+    ![drag and drop fields](images/drag-and-drop-fields.png " ")
 
 7. Click **Save** to save your changes. Go to the runtime application and refresh the application. On the **NYC Highschools Report** page, click the **edit icon** for any record.
   Click on various tabs to view the form fields.
-  
-    ![](images/enhanced-form.png " ")
-    
+
+    ![Enhanced form](images/enhanced-form.png " ")
+
 
 ## **Summary**
- 
+
 You now know how _end-users_ can define custom reports using Interactive Reports, and you can easily improve form pages.
 
 ## **Acknowledgements**
 
  - **Author/Contributors** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
