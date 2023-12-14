@@ -76,7 +76,8 @@ Note:
 
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
-    ```apex.actions.add([{
+    ```
+        apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
             apex.items.P1_ACTION_ID.value = args.id;
@@ -107,7 +108,8 @@ Note:
     }
 }
  
-]);```
+]);
+```
 
     ![Property Editor](images/exec-js.png " ")
 
@@ -134,8 +136,10 @@ Note:
         - Share Type: **File(s)**
         - File(s) Source: **SQL Query**
         - SQL Query: 
-            ```SELECT FILE_BLOB, FILE_NAME, FILE_MIME 
-FROM SM_POSTS WHERE ID = :P1_ACTION_ID;```
+            ```
+                SELECT FILE_BLOB, FILE_NAME, FILE_MIME 
+                FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
+            ```
         - Items to Submit: **P1\_ACTION\_ID**
 
     ![Property Editor](images/true-action-share.png " ")
@@ -185,9 +189,11 @@ To create an Automation, navigate to Shared Components and under Workflows and A
     ![Create Automations wizard](images/notification-auto.png " ")
 
 6. For Source Type, select **SQL Query** and enter the following SQL statement in the code box:
-    ```SELECT r.id, p.created_by as post_owner, r.created_by as liked_by 
+    ```
+        SELECT r.id, p.created_by as post_owner, r.created_by as liked_by 
         from SM_POSTS p, SM_REACTIONS r 
-        where p.id (+) = r.post_id and r.notified = 'N'```
+        where p.id (+) = r.post_id and r.notified = 'N'
+    ```
 
     Click **Create**.
 
@@ -219,7 +225,9 @@ To create an Automation, navigate to Shared Components and under Workflows and A
     - Name: **Update Reactions Table**
     - Type: **Execute Code**
     - Code: 
-        ```Update SM_POSTS set NOTIFIED = 'Y' WHERE ID = :ID;```
+        ```
+        update SM_POSTS set NOTIFIED = 'Y' WHERE ID = :ID;
+        ```
 
     Click **Create**.
 
