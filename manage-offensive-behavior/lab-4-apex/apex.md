@@ -55,7 +55,7 @@ In this task, you will add/update your own API Key, credentials to APEX. This wi
 2. Go to **Workspace Utilities**
 3. Go to **Web Credentials**
   ![lab_4_img_5_workspace_utilities](images/lab_4_img_5_workspace_utilities.JPG)
-
+  
 4. Select **OCI_API** from the list
   ![lab_4_img_6_web_credentials](images/lab_4_img_6_web_credentials1.JPG)
 
@@ -81,11 +81,11 @@ In this task, you will configure the data sources. These are used e.g., when you
 5.	Expand **CreateJobRun**
 6.	Expand **Parameters**
 7.	Configure the Parameters as required. These are:
-  * BUCKET_NAME. This your Object Storage Bucket Name
-  * BUCKET_NAMESPACE:. This is the namespace of Object Storage
-  * Comparmentid. This is the Compartment OCID
-  * Jobid. This is the Job OCID
-  * Projected. This is the Project OCID
+  * BUCKET_NAME - This your Object Storage Bucket Name
+  * BUCKET_NAMESPACE - This is the namespace of Object Storage
+  * Comparmenttid - This is the Compartment OCID
+  * Jobid - This is the Data Science Job OCID
+  * Projectid - This is the Data Science Project OCID
 
 8. Search for the **Static Value** box. You will see (e.g., for Bucket name) **Enter your bucket name here**
 
