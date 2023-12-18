@@ -44,7 +44,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     *Note: URL Endpoint may differ based on your OCI tenancy. Refer to the below link for more details*- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
 
-   ![Click Timeline](images/create-rest-data.png " ")
+   ![Click Timeline](images/create-rest-data1.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
@@ -99,45 +99,43 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 12. Under Edit REST Data Source Parameter:
 
-    - **Type**: Request or Response Body
+       - **Type**: Request or Response Body
 
-    - **Name**: COMPARTMENT_ID
+       - **Name**: COMPARTMENT_ID
 
-    - **Direction**: In
+       - **Direction**: In
 
     Click **Add and Add Another**
 
-    ![Click Timeline](images/add-parameter.png " ")
+    ![Click Timeline](images/add-comp.png " ")
 
 13. Under Edit REST Data Source Parameter:
 
-    - **Type**: Request or Response Body
+       - **Type**: Request or Response Body
 
-    - **Name**: FILE_DATA
+       - **Name**: FILE_DATA
 
-    - **Direction**: In
+       - **Direction**: In
 
     Click **Add and Add Another**
 
 14. Under Edit REST Data Source Parameter:
 
-    - **Type**: Request or Response Body
+       - **Type**: Request or Response Body
 
-    - **Name**: FEATURE_TYPE
+       - **Name**: FEATURE_TYPE
 
-    - **Direction**: In
+       - **Direction**: In
 
     Click **Add and Add Another**
 
-   ![Click Timeline](images/operations-param.png " ")
-
 15. Under Edit REST Data Source Parameter:
 
-    - **Type**: Request or Response Body
+       - **Type**: Request or Response Body
 
-    - **Name**: RESPONSE
+       - **Name**: RESPONSE
 
-    - **Direction**: Out
+       - **Direction**: Out
 
     Click **Add and Add Another**
 
@@ -145,15 +143,15 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 16. Under Edit REST Data Source Parameter:
 
-    - **Type**: HTTP Header
+       - **Type**: HTTP Header
 
-    - **Name**: Content-Type
+       - **Name**: Content-Type
 
-    - **Direction**: In
+       - **Direction**: In
 
-    - **Default value**: application/json
+       - **Default value**: application/json
 
-    - **Static**: ON
+       - **Static**: ON
 
     Click **Add Parameter**.
 
@@ -171,7 +169,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 1. Navigate to Application Homepage by clicking on the Application ID.
 
-   ![Click Timeline](images/click-app-id1.png " ")
+   ![Click Timeline](images/click-app-id11.png " ")
 
 2. Click **1-Timeline** page.  
 
@@ -318,7 +316,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
      <copy>
      ```
 
-   ![Click Timeline](images/parse-response.png " ")
+   ![Click Timeline](images/parse-response1.png " ")
 
 15. Click **Save**
 
@@ -377,7 +375,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
    ```
     - For Page items to Submit: Select **P1\_AI\_SEARCH**
 
-    ![Click Timeline](images/timeline-query1.png " ")
+    ![Click Timeline](images/timeline-query11.png " ")
 
 4. Click **Save and Run**.
 

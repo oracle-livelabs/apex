@@ -216,11 +216,50 @@ In this task, you create an **Authorization Scheme** to ensure only people enter
 
  1. Log in to Google's developer [console](https://console.developers.google.com).
 
-   ![Click My Apps](images/click-myapps.png " ")
+   ![Click My Apps](images/agree-continue.png " ")
 
    *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
 
-2.
+2. Click Create Project.
+
+    ![Click My Apps](images/create-project1.png " ")
+
+3. On New Project Screen, For Project Name : Enter **APEX Social SignIn** and Click **Create**.
+
+    ![Click My Apps](images/new-project1.png " ")
+
+4. Click on OAuth consent screen (from left side menu) and Select **External** and Click **Create**
+
+    ![Click My Apps](images/external.png " ")
+
+5. On OAuth consent screen, Enter the following:
+    - For **Application name**: Type **Expense Tracker**
+    - For **User support email** : Enter your Email Address
+    - For **Application Homepage link** : Enter your Application Homepage link
+
+    ![Click My Apps](images/oauth-consent-screen.png " ")
+
+    ![Click My Apps](images/oauth-consent-screen1.png " ")
+
+
+6.
+
+
+
+On OAuth consent screen, Type APEX Social Authentication in Application name
+
+
+
+7) Type apex.oracle.com in Authorized domains
+
+8) Copy you Apex application home page link and paste in Application Homepage link
+
+i.e https://apex.oracle.com/pls/apex/apexlessons/r/apex-google-authentication/home
+
+9) Press Save button
+
+
+
 
 
 ## Summary
