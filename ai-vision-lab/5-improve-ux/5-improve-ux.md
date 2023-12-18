@@ -4,11 +4,13 @@
 
 In this lab, you improve the user experience of the Social Media App by including an APEX 23.2 new item called Image Upload that allows the user to crop images before uploading. You also implement a 'Share' button where a user can share the uploaded images to other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Social Media App where a user receives a notification on their device whenever a user likes the image. You also learn to add Shortcuts and Screenshots to the pwa app.
 
+Estimated Time: 30 minutes
+
 ### Objectives
 
 In this lab, you:
 
-- Update the 'Add Post' dialog to include Image Upload item
+- Update the 'Add Post' dialog to include the Image Upload item
 - Implement the 'Share' button
 - Enable Push Notifications
 - Add Shortcuts to the pwa app
@@ -64,6 +66,8 @@ Note:
             - Type: **URL**
             - URL: **#action$share?id=&ID.**
 
+            Click **Ok**.
+
     ![Property Editor](images/button-share.png " ")
 
     ![Property Editor](images/target-url.png " ")
@@ -77,6 +81,7 @@ Note:
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
     ```
+    <copy>
         apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
@@ -109,6 +114,7 @@ Note:
 }
  
 ]);
+</copy>
 ```
 
     ![Property Editor](images/exec-js.png " ")
@@ -137,8 +143,10 @@ Note:
         - File(s) Source: **SQL Query**
         - SQL Query: 
             ```
+            <copy>
                 SELECT FILE_BLOB, FILE_NAME, FILE_MIME 
                 FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
+            </copy>
             ```
         - Items to Submit: **P1\_ACTION\_ID**
 
@@ -184,15 +192,18 @@ To create an Automation, navigate to Shared Components and under Workflows and A
     - Execution Schedule: **Custom**
     - Frequency: **Minutely**
     - Interval: **2**
+    
     Click **Next**.
 
     ![Create Automations wizard](images/notification-auto.png " ")
 
 6. For Source Type, select **SQL Query** and enter the following SQL statement in the code box:
     ```
+    <copy>
         SELECT r.id, p.created_by as post_owner, r.created_by as liked_by 
         from SM_POSTS p, SM_REACTIONS r 
         where p.id (+) = r.post_id and r.notified = 'N'
+    </copy>
     ```
 
     Click **Create**.
@@ -226,7 +237,9 @@ To create an Automation, navigate to Shared Components and under Workflows and A
     - Type: **Execute Code**
     - Code: 
         ```
-        update SM_POSTS set NOTIFIED = 'Y' WHERE ID = :ID;
+        <copy>
+        update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
+        </copy>
         ```
 
     Click **Create**.
@@ -277,7 +290,7 @@ To create an Automation, navigate to Shared Components and under Workflows and A
 
 Note: 
 - If you are unable to see the Push Notifications, ensure that the DND option is disabled in your system and your browser has necessary permissions to send notifications.
-- View the compatibility matrix of Push Notifications: https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications
+- View the compatibility matrix of Push Notifications [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
 
 ## Task 4: Add Shortcuts for the PWA app
 
@@ -285,7 +298,7 @@ Note:
 
     ![Shared Components page](images/pwa.png " ")    
 
-2. Scroll down to Shortcuts and click **Enable for All Sessions**. In the popup window, confirm by clicking **Enable for All Sessions**.
+2. Scroll down to Shortcuts and click **Enable for All Sessions**. In the popup window, confirm by clicking **Enable for All Sessions**. Note: This option does not work in *apex.oracle.com* instance.
 
     ![PWA page](images/enable-for-all.png " ")  
 
@@ -306,7 +319,7 @@ Note:
 
     You will see how the shortcut looks after completing Task 5. Similarly, you can add multiple shortcuts each pointing to a different page in your app.
 
-## Task 5: Enhance the PWA by adding Screenshots
+## Task 5: Enhance the PWA install experience with Screenshots
 
 The Oracle APEX Progressive Web App screenshots are used for promotional purposes when users are prompted to install the Progressive Web App.
 
@@ -318,7 +331,7 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![PWA page](images/add-screenshot-image.png " ") 
 
-3. Repeat step 3 to add as many screenshots as you like and click **Apply Changes**.
+3. Repeat steps 1-2 to add as many screenshots as you like and click **Apply Changes**.
 
     ![PWA page](images/apply-changes.png " ") 
 
@@ -336,5 +349,13 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
     ![System dock](images/view-shortcut.png " ") 
 
 **Note:** 
-- View the compatibility matrix for the **Screenshots**: https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation
-- View the compatibility matrix for the **Shortcuts**: https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon
+- View the compatibility matrix for the **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
+- View the compatibility matrix for the **Shortcuts** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon)
+
+## Summary
+In this lab, you learnt to enhance the Social Media app with mobile features such as Cropping and Sharing Images, Push Notifications, and add the latest pwa features like Shortcuts and Screenshots.
+
+## Acknowledgments
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Co-Author** - Toufiq Mohammed, Senior Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, December 2023

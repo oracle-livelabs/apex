@@ -14,6 +14,8 @@ In this lab, you will:
 - Provision a new Autonomous Transaction Processing database.
 - Create an APEX workspace.
 
+Watch the video below for a quick walk-through of the lab.
+[Create an App from a Spreadsheet](videohub:1_rcmsmco3)
 
 ## Task 1: Create an ATP instance
 
@@ -27,19 +29,19 @@ Note: You can also directly access your Autonomous Data Warehouse or Autonomous 
   ![Cloud homepage](images/database-atp.png  " ")
 
 
-4. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
+1. Use the List Scope drop-down menu to select a compartment. If you are using a LiveLabs environment, be sure to select the compartment provided by the environment from the List Scope drop-down menu.
     ![Compartment drop down list](images/livelabs-compartment.png " ")
-5. You can see your current default region in the top, right hand corner of the page.
+2. You can see your current default region in the top, right hand corner of the page.
 
-6. Click **Create Autonomous Database**.
+3. Click **Create Autonomous Database**.
 
-7. Double check that you are using the compartment assigned to you
-8. Select **Transaction Processing** as the workload.
-9. Leave all the settings at their default values.
-10.  Use **```SecretPassw0rd```** for the ADMIN password
-11.  Select **License Included **, then click **Create Autonomous Database**.
+4. Double check that you are using the compartment assigned to you
+5. Select **Transaction Processing** as the workload.
+6. Leave all the settings at their default values.
+7.  Use **```SecretPassw0rd```** for the ADMIN password
+8.  Select **License Included **, then click **Create Autonomous Database**.
 
-12.  Check the following screenshot to verify your settings:
+9.  Check the following screenshot to verify your settings:
 
     ![Create Autonomous Database page](images/create-atp-full.png " ")
 
@@ -87,9 +89,10 @@ to:
     | Workspace Username | DEMO |
     | Workspace Password | **`SecretPassw0rd`** |
 
-Click **Create Workspace**.
 
-  ![Create Workspace dialog](images/create-workspace.png " ")
+    Click **Create Workspace**.
+
+    ![Create Workspace dialog](images/create-workspace.png " ")
 
 6. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
@@ -109,4 +112,4 @@ Click **Create Workspace**.
 
 ## **Acknowledgements**
 - **Author** - Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
