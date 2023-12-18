@@ -93,7 +93,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Select Operations Parameter Tab and click **Add Parameter**
+11. Select Operation Parameters Tab and click **Add Parameter**
 
    ![Click Timeline](images/add-parameter.png " ")
 
@@ -159,7 +159,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 17. Click **Apply Changes**.
 
-    ![Click Timeline](images/parameter-changes.png " ")
+    ![Click Timeline](images/parameter-changes1.png " ")
 
 
 ## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
