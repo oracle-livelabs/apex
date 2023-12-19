@@ -68,19 +68,19 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
 
-    ![APEX instance page](images/navigate-to-apex-service.png " ")
+    ![APEX instance page](images/navigate-apex-service.png " ")
 
 4. At the top of the APEX Instances page, click the **Create APEX Service** button.
 
-    ![APEX instance page](images/create-apex-service.png " ")
+    ![APEX instance page](images/create-as-button.png " ")
 
 5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
 
-    ![Create instance page](images/apex-service-settings-1.png " ")
+    ![Create instance page](images/as-settings-1.png " ")
 
-    ![Create instance page](images/apex-service-settings-2.png " ")
+    ![Create instance page](images/as-settings-2.png " ")
 
-    ![Create instance page](images/APEX-service-settings-3.png " ")
+    ![Create instance page](images/as-settings-3.png " ")
 
 6. The APEX Instances Details displays again.
 
