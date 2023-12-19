@@ -44,7 +44,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     *Note: URL Endpoint may differ based on your OCI tenancy. Refer to the below link for more details*- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
 
-   ![Click Timeline](images/create-rest-data1.png " ")
+   ![Click Timeline](images/create-rest-data.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
@@ -158,8 +158,6 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     ![Click Timeline](images/content-type.png " ")
 
 17. Click **Apply Changes**.
-
-    ![Click Timeline](images/parameter-changes1.png " ")
 
 
 ## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
