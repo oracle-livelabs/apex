@@ -99,4 +99,4 @@ You may now *proceed to the next lab*.
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributor** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead)
- - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
