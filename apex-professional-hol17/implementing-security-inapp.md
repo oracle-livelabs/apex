@@ -33,7 +33,7 @@ Estimated Time: 20 minutes
 
 5. In OAuth consent screen, Enter the following:
 
-     - For **Application name**: Type **Expense Tracker**
+     - For **Application name**: Enter your Application Name
 
      - For **User support email** : Enter your Email Address
 
