@@ -6,7 +6,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 Application security is very important for the majority of applications. You must ensure that users enter valid credentials, generally username and password (Authentication), and that the logged-in user has appropriate rights within the application (Authorization).
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 Estimated Time: 20 minutes
 
