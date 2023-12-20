@@ -17,8 +17,6 @@ Estimated Time: 20 minutes
 
  1. Log in to Google's developer [console](https://console.developers.google.com).
 
-   ![Click My Apps](images/agree-continue.png " ")
-
    *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
 
 2. Click Create Project.
