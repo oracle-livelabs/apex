@@ -24,7 +24,7 @@ Prerequisites
 
 2. From the compartment drop-down menu select the Compartment where your Oracle APEX service resource is provisioned. If there were a long list of databases, you could filter the list by the State of the databases (Available, Stopped, Terminated, etc).
     ![APEX instances page](images/compartment.png " ")
-    
+
 3. From the databases displayed, click Display Name of the APEX instance you wish to terminate.    
 In this lab, we are terminating the available **DEMOAPEX** Oracle APEX service instance. Click **DEMOAPEX**.
 

@@ -93,45 +93,71 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operations Parameter, click **Synchronize with Body** to auto-create substitutions strings in the request body template as operation parameters. Then, click **OK**.
+11. Select Operation Parameters Tab and click **Add Parameter**
 
-   ![Click Timeline](images/synchronize.png " ")
+   ![Click Timeline](images/add-parameter.png " ")
 
-12. Select Operations Parameter Tab and click **Add Parameter**
+12. Under Edit REST Data Source Parameter:
 
-   ![Click Timeline](images/operations-param.png " ")
+       - **Type**: Request or Response Body
+
+       - **Name**: COMPARTMENT_ID
+
+       - **Direction**: In
+
+    Click **Add and Add Another**
+
+    ![Click Timeline](images/add-comp.png " ")
 
 13. Under Edit REST Data Source Parameter:
 
-    - **Type**: Request or Response Body
+       - **Type**: Request or Response Body
 
-    - **Name**: RESPONSE
+       - **Name**: FILE_DATA
 
-    - **Direction**: Out
+       - **Direction**: In
+
+    Click **Add and Add Another**
+
+14. Under Edit REST Data Source Parameter:
+
+       - **Type**: Request or Response Body
+
+       - **Name**: FEATURE_TYPE
+
+       - **Direction**: In
+
+    Click **Add and Add Another**
+
+15. Under Edit REST Data Source Parameter:
+
+       - **Type**: Request or Response Body
+
+       - **Name**: RESPONSE
+
+       - **Direction**: Out
 
     Click **Add and Add Another**
 
     ![Click Timeline](images/response.png " ")
 
-14. Under Edit REST Data Source Parameter:
+16. Under Edit REST Data Source Parameter:
 
-    - **Type**: HTTP Header
+       - **Type**: HTTP Header
 
-    - **Name**: Content-Type
+       - **Name**: Content-Type
 
-    - **Direction**: In
+       - **Direction**: In
 
-    - **Default value**: application/json
+       - **Default value**: application/json
 
-    - **Static**: ON
+       - **Static**: ON
 
     Click **Add Parameter**.
 
     ![Click Timeline](images/content-type.png " ")
 
-15. Click **Apply Changes**.
-
-    ![Click Timeline](images/parameter-changes.png " ")
+17. Click **Apply Changes**.
 
 
 ## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
@@ -141,7 +167,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 1. Navigate to Application Homepage by clicking on the Application ID.
 
-   ![Click Timeline](images/click-app-id1.png " ")
+   ![Click Timeline](images/click-app-id11.png " ")
 
 2. Click **1-Timeline** page.  
 
@@ -288,7 +314,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
      <copy>
      ```
 
-   ![Click Timeline](images/parse-response.png " ")
+   ![Click Timeline](images/parse-response1.png " ")
 
 15. Click **Save**
 
@@ -347,7 +373,7 @@ In this task, you create a page item P1\_AI\_SEARCH using which the end user can
    ```
     - For Page items to Submit: Select **P1\_AI\_SEARCH**
 
-    ![Click Timeline](images/timeline-query1.png " ")
+    ![Click Timeline](images/timeline-query11.png " ")
 
 4. Click **Save and Run**.
 

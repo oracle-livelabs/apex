@@ -11,13 +11,13 @@ Estimated Time: 1 hour
 ### Objectives
 In this workshop, you:
 
-- Configure OCI API keys
-- Leverage OCI vision USING Social media app
-- Integrate OCI vision with Oracle APEX
+- Update the Social Media App to include AI-Powered Search
+- Make use of the OCI API keys for integration with APEX
+- Integrate APEX with OCI Vision Service using REST Data Sources
 
 ### Prerequisites for Building this App:
 
-- An Oracle Cloud Infrastructure account. If you don't already have an Oracle cloud account, you can signup for a 30-day free trial account. More about it here: https://www.oracle.com/in/cloud/free/
+- A paid Oracle Cloud Infrastructure account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. More about it here: https://www.oracle.com/in/cloud/free/
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services)
 
