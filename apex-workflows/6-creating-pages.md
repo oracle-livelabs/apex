@@ -24,12 +24,11 @@ Now that the Workflow is created let us create the Page that the Hospital Staff 
     ![navigate to doctors app made easy](./images/click-app-builder.png " ")
 
 2. Click **Create Page**.
-
     ![click create page](./images/create-page.png " ")
 
 3. For Create a Page:
    - select Page Type - under **Component** and then select **Blank Page**.
-    ![select blank page](./images/select-blank-page.png " ")
+   ![select blank page](./images/select-blank-page.png " ")
 
 4. For Page Attributes, enter the following:
     - For Page Name, enter **New Appointment**  
@@ -102,12 +101,12 @@ Now that the Workflow is created let us create the Page that the Hospital Staff 
       - Set the Label as **Doctor**
       - Under List of Values,
           - Set the **Type** as **SQL Query** and then specify the **List Of Values** using the following SQL Query
+          ```
+          <copy>
+            select dname from doctor where specialization = :P5_DESC
+          </copy>
+          ```
       - Under **Cascading List of Values**, Set the Parent Item(s) as **P5\_DESC** using the Item Picker.
-    ```
-    <copy>
-      select dname from doctor where specialization = :P5_DESC
-    </copy>
-    ```
     ![create Appt Date item](./images/create-doc-item.png " ")
 
 14. Similarly, create **P5_AGE** as **Text field**.
@@ -118,7 +117,7 @@ Now that the Workflow is created let us create the Page that the Hospital Staff 
 
 16. Select the newly created button, and then in the property editor, do the following changes.
       - Under Identification, Set the name as **Submit**.
-      - Under Settings, for Position, Select **Create**.
+      - Under Layout, for Position, Select **Create**.
       - Under Appearance, set **Hot** to **Yes**.
 
   ![configure button](./images/create-button1.png " ")
@@ -192,7 +191,7 @@ Go to the Application Home and click on Create Page. In the Create Page Wizard, 
 
 5. To create another Unified Task list page, Again Click Application ID on the top left corner of the page designer. Application Home page appears.
 
-6. Click **Create** button. Create Application wizard appears.
+6. Click **Create Page** button. Create Application wizard appears.
 
 7. Under Components, Select Unified Task List and click **Next**
 
@@ -258,7 +257,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
 13. Click the **Save** Button to save your changes.
 
-14. Navigate to the **Feedback Request** Task Definition from Shared Components and similarly check the page number for the Task Details. The **Feedback Request** Task Definition points to Page 8.
+14. Navigate to the **Feedback Request** Task Definition from Shared Components and similarly check the page number for the Task Details. The **Feedback Request** Task Definition points to Page 4.
 
 15. Navigate to your Application home page and click **Page 4**. And then, change the **Page Name** and **Title** of Page 4 to **Feedback Details**.
 
@@ -514,7 +513,7 @@ In the next lab, you will run and understand the behaviour of the **Doctor Appoi
 
 
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   

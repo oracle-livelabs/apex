@@ -178,7 +178,7 @@ In this hands-on lab, you learned how to:
 - Start a new workflow through a Page Process.
 - Monitor the progress of initiated workflows.
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   

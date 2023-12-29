@@ -14,7 +14,7 @@ Estimated Time: 45 minutes
 
 Now that we have defined the Approval and Action tasks let us go back to the Doctor Appointment Workflow and resume from where we left off.
 
-1. In the App Builder, navigate to **Doctors Appointment Made Easy!** application and then select **Shared Components**.
+1. In the App Builder, navigate to **Doctors Appointments Made Easy!** application and then select **Shared Components**.
 
 2. Under Workflows and Automations, Select **Workflows**.
 
@@ -245,6 +245,7 @@ Re-adjust the Workflow Diagram to make the diagram more aesthetic.
 In this task, you will learn how to manage appointment requests using a Switch Activity in a workflow. The Appointment Request Task can result in two outcomes: APPROVED or REJECTED. In case it is **APPROVED**, we create an entry in the **APPOINTMENT table** with details of the appointment and the status set to **CONFIRMED**. In case it is **REJECTED** we send a **No Appointment Mail** to the patient.
 
 1. To add a Switch Activity, Open the workflow diagram in the workflow editor.
+
 2. Drag and drop a **Switch Activity** to the left of the **Raise Appointment Request** Activity.
 
   ![Adding a new switch activity](./images/add-switch-activity.png " ")
@@ -293,7 +294,8 @@ In this task, you will learn how to manage appointment requests using a Switch A
     - Set **p\_request\_date** as the **REQUEST_DATE** Workflow Parameter . Set the Format Mask to **DD-MON-YYYY HH24:MI:SS**
     - Set **p\_doctor\_email** as Static value **&DOC_EMAIL.**
     - Set **p\_patient\_email** as **Item Picker** -> **Workflow Parameter** -> **PATIENT\_EMAIL**
-    - Set **p\_workflow\_id** as **&APEX$WORKFLOW_ID.**
+    - Set **p\_workflow\_id** as Static value **&APEX$WORKFLOW_ID.**
+    - Set **p\_patient\_name** to **Workflow Parameter** **PATIENT_NAME** using Item Picker.
 
 *Tip APEX$WORKFLOW_ID is a substitution string that hold the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the soon-to-be-released App Builder Documentation Guide.*
 
@@ -491,7 +493,6 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 4. In the **Rendering Tree**, notice some Fields marked in Red. The **Raise Invoice Request** has 3 Parameters, highlighted in RED, to show that they are required.
 
 5. In the **Left Pane**, select **Doctor Name** under **Raise Invoice Request** and change the following in the **Property Editor**.
-    - Under Parameter, Set Direction to **Out**.
     - Under Value, Select **Type** as **Static Value** and then set **Static Value** as **&DNAME.**
 
     ![Configure Doctor Name](./images/config-doctor-name.png " ")
@@ -550,7 +551,7 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
 6. Similarly, Set the remaining parameters under **Update Appointment** as follows:
     - Set **p_status** to **Static** Value -> **PAID**
-    - Set **p_fees** to **API Default**
+    - Set **p_fee** to **API Default**
 
 
 ## Task 20: Final steps
@@ -613,7 +614,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
 *Tech Tip: Connections of type Timeout can only be added to an activity if the activity has Due On Type and value populated in the Deadline section of the Property Editor*
 
-11. Finally, Drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Raise Feedback** Request and **Complete Appointment** End Activity.
+11. Finally, Drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Request for Feedback** and **Complete Appointment** End Activity.
 
 12. In the Property Editor.
     - Under Identification, Set the Name to **Send Thank You Note To Patient**
@@ -651,7 +652,7 @@ In the next section, you will create pages in the application that will utilize 
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   

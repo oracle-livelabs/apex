@@ -22,7 +22,7 @@ Estimated Time: 20 minutes
 ## Task 1: Create Application Users
 In this lab, you create users for Doctor Appointments made Easy Application.
 
-1. Navigate to **Workspace Administration** by clicking the **Administration icon** on the Application home page and select **Manage Users and Group** from the dropdown list.
+1. Navigate to **Workspace Administration** by clicking the **Administration icon** on the Application home page and select **Manage Users and Groups** from the dropdown list.
 
   ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
@@ -45,16 +45,23 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     |                | RAJESH    |
     | Hospital Staff | STEVE     |
 
-
 4. Specify the following attributes:
-
   - For a List of Email Addresses: Enter **Email IDs of the Users**
-
+    | List of Email Addresses |
+    | --------- |
+    | ROBERT@oracle.com    |
+    | ANACHATT@oracle.com  |
+    | JANE@oracle.com      |
+    | BO@oracle.com        |
+    | PAT@oracle.com       |
+    | MARTIN@oracle.com    |
+    | SUSIE@oracle.com     |
+    | DARYL@oracle.com     |
+    | RAJESH@oracle.com    |
+    | STEVE@oracle.com     |
   - For Usernames : Select **Exclude @ domain as part of the username**
-
   - For password and Confirm Password: **Enter a password of your wish**
-
-   Click **Next**
+  Click **Next**
    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. And then, Click **Create Valid Users**
@@ -246,7 +253,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     </copy>
     ```
 
-4. For Script Name, enter **Create Package Body** and Click **Run**.
+4. For Script Name, enter **Create Package Spec** and Click **Run**.
 
     ![Click create SQL Scripts](./images/create-package-spec.png " ")
 
@@ -376,14 +383,14 @@ In this lab, you create users for Doctor Appointments made Easy Application.
 In the next section, you create the Doctor Appointment Workflow, connecting various functionalities such as checking availability, confirming appointments, updating fees, and more.
 
 ## Summary
-You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointment made Easy Application, and then added Application users, created Sample Datasets, and a Package.
+You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointments Made Easy Application, and then added Application users, created Sample Datasets, and a Package.
 
 ### What's Next
 In the next lab, you will learn how to create a Workflow using Oracle APEX.
 
 You may now **proceed to the next Lab**.
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023

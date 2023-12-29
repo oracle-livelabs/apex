@@ -18,7 +18,7 @@ Estimated Time: 20 minutes
 
 To create a Workflow:
 
-1. In the App Builder, navigate to **Doctors Appointment Made Easy!** application and then select **Shared Components**.
+1. In the App Builder, navigate to **Doctor Appointments Made Easy!** application and then select **Shared Components**.
 
   ![Navigate to Application](./images/navigate-to-application.png " ")
   ![Click Shared Components](./images/click-shared-components.png " ")
@@ -129,8 +129,8 @@ If we look back at the flow chart depicting the business logic, the appointment 
 
 5. Similarly add the rest of the Parameters.
     - For PATIENT_AGE Parameter, select Data Type as Number.
-
-    - For REQUEST_DATE, select Data Type as Timestamp with Time Zone. Under Application Format Masks, set the Session State Format Mask as **DD-MON-YYYY HH24:MI:SS**.
+    - For REQUEST_DATE, select Data Type as Timestamp with Time Zone.
+    - Under Application Format Masks, set the Session State Format Mask as **DD-MON-YYYY HH24:MI:SS**.
 
       ![Add and Configure Request Date Parameter](./images/add-param-date.png " ")
 
@@ -195,7 +195,11 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 4. Similarly create variable **AVAILABILITY** with Data Type **BOOLEAN**.
 
-5. In the **Application Format Masks** section, specify **AVAILABLE** as the **True Value** and **BUSY** as the **False** value and also set Value -> Type as **Null**.
+5. And then,
+    - under the **Application Format Masks** section,
+      - specify the **True Value** as **AVAILABLE**
+      - and **BUSY** as the **False** value
+    - Under Value, set Type as **Null**.
 
   ![Create Availability Variable](./images/configure-availability.png " ")
 
@@ -215,7 +219,7 @@ Now you're ready to proceed to the next section where you'll learn how to add Hu
 You may now **proceed to the next lab**.   
 
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, December 2023   

@@ -70,11 +70,11 @@ Estimated Time: 20 minutes
 
 8. Under Task Parameters, Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
 
-    | Parameter Name     |
-    |--------------------|
-    | APPOINTMENT_DATE   |
-    | PATIENT_DESC       |
-    | PATIENT_NAME       |
+    | Parameter Name     |   Label    |
+    |--------------------|------------|
+    | APPOINTMENT_DATE   | Appointment Date |
+    | PATIENT_DESC       | Consultation Form|
+    | PATIENT_NAME       | Patient name |
 
   ![Add Task Parameters](./images/add-task-parameters.png " ")
 
@@ -88,7 +88,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
 2. In the Create Task Definition Wizard, enter the following details and Click **Create**.
     - For **Name**, enter **Invoice Request**.
-    - For **Type**, select **Actions Task**.
+    - For **Type**, select **Action Task**.
     - For **Subject**, enter **Invoice for &PATIENT_USERNAME. for consultation on &SCHEDULE.**
     - Set **Priority** to **3-Medium**.
 
@@ -101,20 +101,22 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
   You will find that the Task Details Page Number is replaced by the Task Details Page URL containing the link to the generated Details Page.
 
-4. In the Task Definitions Page, Click **Invoice Request** and then configure the Action Source by selecting **SQL Query** and providing the following SQL statement. This step ties our task to the system of records, in this case, the doctor's records.
-
-    ```
-    <copy>
-    select * from appointment where BOOKING_ID = :APEX$TASK_PK
-    </copy>
-    ```
+4. In the Task Definitions Page, Click **Invoice Request** and then in the **Task Definition: Invoice Request**, configure the following,
+    - Under Settings,
+        - For Actions Source, Select **SQL query**,
+        - For **Actions SQL Query**, provide the following SQL statement. This step ties our task to the system of records, in this case, the doctor's records.
+        ```
+        <copy>
+        select * from appointment where BOOKING_ID = :APEX$TASK_PK
+        </copy>
+        ```
 
     ![Select Invoice Request](./images/select-invoice-request.png " ")
     ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
 
   *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
 
-5. In the **Invoice Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
+5. In the **Invoice Request** Task Definition, navigate to **Participants** Section, and then under **Participants**,
     - Set Participant Type as **Potential Owner**
     - Set Value Type as **Static**.
     - Set the Value field to enter **&PATIENT_USERNAME.**
@@ -190,7 +192,7 @@ In the next lab, you will continue building the Doctor Appointment Workflow, foc
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
 - **Contributor** -
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   
