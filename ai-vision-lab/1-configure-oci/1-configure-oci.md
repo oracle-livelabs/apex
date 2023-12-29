@@ -7,7 +7,7 @@ In this lab, you learn how to configure OCI API keys. In Oracle Cloud Infrastruc
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair.
 
 
-Estimated Time: 20 Minutes
+Estimated Time: 10 Minutes
 
 ### Objectives
 In this lab, you:
@@ -61,13 +61,17 @@ To create web credentials in Oracle APEX:
 
    ![Click App Builder](images/app-builder1.png " ")
 
-3. Click Workspace Utilities.
+3. Click **Workspace Utilities**.
 
    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
-4. Click Web Credentials.
+4. Click **Web Credentials**.
 
    ![Click Web Credentials](images/sc-web-creds.png " ")
+
+4. Click **Create**.
+
+   ![Create Web Credentials](images/create-wc.png " ")
 
 5. Please enter the following details using the configuration file details you copied before and the API Key.
 
@@ -86,7 +90,7 @@ To create web credentials in Oracle APEX:
 
    ![Click App Builder](images/web-creds.png " ")
 
-5. Click Create.
+5. Click **Create**.
 
 ## Summary
 
@@ -97,4 +101,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, December 2023

@@ -28,7 +28,6 @@ The first table you need to create is the movie\_users table. It is very simple,
     ```
     <copy>
     movie_users
-        id /pk
         username /unique
     ```
 
@@ -148,8 +147,7 @@ You will need a table to store some basic movie information in addition to the u
 
     ```
     <copy>
-    watchlist
-        id /pk
+    watchlist /unique movie_id, user_id
         movie_id
         user_id /fk movie_users
         watched_yn
@@ -159,7 +157,6 @@ You will need a table to store some basic movie information in addition to the u
         release_date
         runtime num
         vote_average num
-        movie_id, user_id /unique
     ```
 
 	* Note the /unique directive in the last line of the Quick SQL code. In the movie\_users table, you created a unique key by using the /unique directive for the username column. This prevents the same user from getting put into the table more than once by making sure the username is always unique. In the watchlist table, the unique key actually comes from two different columns: movie\_id and user\_id. A single user cannot add the same movie to the watchlist table more than once. Unique keys are extremely helpful when it comes to maintaining the integrity of the data in your local tables.
