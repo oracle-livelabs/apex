@@ -61,8 +61,8 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     | STEVE@oracle.com     |
   - For Usernames : Select **Exclude @ domain as part of the username**
   - For password and Confirm Password: **Enter a password of your wish**
-  Click **Next**
-   ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+  - Click **Next**
+  ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. And then, Click **Create Valid Users**
 
