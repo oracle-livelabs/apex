@@ -4,11 +4,11 @@
 
 In this lab, you will run and understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You also perform various tasks to understand the workflow and automation implemented in the application.
 
-## Objective:
+## Objective
 
 - Demonstrate the behavior of the "Doctor Appointments Made Easy!" application through hands-on activities.
 
-### Task 1: Setting Automatic Timezone for the Application
+## Task 1: Setting Automatic Timezone for the Application
 
 To demonstrate the application's behavior, we will use an automatic timezone setup. This will ensure that the appointment dates and times are honored with respect to the End User's timezone.
 
@@ -20,7 +20,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 3. Save the changes by clicking on Apply Changes.
 
-### Task 2: Setting the APP_EMAIL Substitution String
+## Task 2: Setting the APP_EMAIL Substitution String
 1. Go to the Application Home Page.
 2. Click on Edit Application Definition.
 
@@ -32,7 +32,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 4. Save the changes by clicking on Apply Changes.
 
-### Task 3: Booking an Appointment
+## Task 3: Booking an Appointment
 From the Application Home Page, click on Run Application.
 
 Log In as STEVE (Hospital Staff). Click on New Appointment to Book a New Appointment for Rajesh. Select the problem from the drop-down menu as Psychiatric.
@@ -59,7 +59,7 @@ Log In as STEVE (Hospital Staff). Click on New Appointment to Book a New Appoint
 
   ![appointment created](./images/appoint-created.png " ")
 
-### Task 4: Monitoring the Workflow
+## Task 4: Monitoring the Workflow
 
 1. Click on **Monitor Appointment Workflows** from the Application Home Page.
 
@@ -72,7 +72,7 @@ Log In as STEVE (Hospital Staff). Click on New Appointment to Book a New Appoint
   ![navigate to doctors app made easy](./images/monitor-appts.png " ")
 
 
-### Task 5: Approving the Appointment Request
+## Task 5: Approving the Appointment Request
 1. Log in as ANACHATT, who is a Doctor in this workflow.
 2. Click on "Doctor Tasks."
 
@@ -81,7 +81,7 @@ Log In as STEVE (Hospital Staff). Click on New Appointment to Book a New Appoint
 3. Click on "Approve" to approve the appointment request.
 
 
-### Task 6: Progressing the Workflow
+## Task 6: Progressing the Workflow
 
 Log back in as STEVE (Hospital Staff) and click on Monitor Appointment Workflows to monitor the progress of the workflow.
 
@@ -95,7 +95,7 @@ Observe that the Workflow has progressed further and is now waiting at the Raise
 
 4. Note the correctly set Workflow Variables.
 
-### Task 7: Completing the Workflow
+## Task 7: Completing the Workflow
 
 1. Log in as **RAJESH**.
 
@@ -111,7 +111,7 @@ Observe that the Workflow has progressed further and is now waiting at the Raise
 
   ![check appointment workflow](./images/check-appt-workflow.png " ")
 
-### Task 8: Feedback Process
+## Task 8: Feedback Process
 
 On the next page, observe that the Workflow is now waiting for the Wait Before Requesting Feedback activity to complete. Recall that the Wait activity has a timeout setting which elapses once the Appointment Time is reached.
 
@@ -126,7 +126,7 @@ On the next page, observe that the Workflow is now waiting for the Wait Before R
 
   ![wait for appointment1](./images/wait-for-appt1.png " ")
 
-### Task 9: Patient Feedback
+## Task 9: Patient Feedback
 
 1. Now that the Feedback Request has been raised,  log out and log back in as RAJESH, the patient.
 
@@ -136,7 +136,7 @@ On the next page, observe that the Workflow is now waiting for the Wait Before R
 
   ![wait for feedback](./images/check-feedback-form.png " ")
 
-### Task 10: Workflow Completion
+## Task 10: Workflow Completion
 Log out and log back in as STEVE to monitor the workflow. Observe that the Workflow is now Completed.
 
 
@@ -146,7 +146,7 @@ Log out and log back in as STEVE to monitor the workflow. Observe that the Workf
 
    ![wait for feedback](./images/observe-workflow-completed.png " ")
 
-### Task 11: Email Confirmation
+## Task 11: Email Confirmation
 
 Check the inbox of the mail ID used for the patient.
 
