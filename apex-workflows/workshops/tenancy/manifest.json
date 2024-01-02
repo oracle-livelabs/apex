@@ -1,5 +1,6 @@
 {
   "workshoptitle": "Simplify Business Process Management Using APEX Workflow",
+  "help": "livelabs-help-apex_us@oracle.com",
     "tutorials": [
       {
         "title": "Introduction",
@@ -11,31 +12,31 @@
       },
       {
         "title": "Lab 1: Identify Business Steps",
-        "filename": "../../1-identify-business-steps.md"
+        "filename": "../../identify-business-steps/1-identify-business-steps.md"
       },
       {
         "title": "Lab 2: Create Task Definition",
-        "filename": "../../2-design-the-application.md"
+        "filename": "../../design-the-application/2-design-the-application.md"
       },
       {
         "title": "Lab 3: Create Workflow",
-        "filename": "../../3-create-workflow.md"
+        "filename": "../../create-workflow/3-create-workflow.md"
       },
       {
         "title": "Lab 4: Add and Manage Task Definitions",
-        "filename": "../../4-add-human-tasks.md"
+        "filename": "../../add-human-tasks/4-add-human-tasks.md"
       },
       {
         "title": "Lab 5: Add Activities and Connections",
-        "filename": "../../5-add-activities-connections.md"
+        "filename": "../../add-activities-connection/5-add-activities-connections.md"
       },
       {
         "title": "Lab 6: Creating Workflow Pages",
-        "filename": "../../6-creating-pages.md"
+        "filename": "../../create-pages/6-creating-pages.md"
       },
       {
         "title": "Lab 7: Running the Application",
-        "filename": "../../7-running-the-app.md"
+        "filename": "../../running-the-app/7-running-the-app.md"
       },
       {
         "title": "Need Help?",
