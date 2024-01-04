@@ -30,10 +30,15 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
     "EMP_NAME" VARCHAR2(10),
     "MGR" NUMBER(4,0),
     CONSTRAINT "EMP_1_PK" PRIMARY KEY ("EMPNO"));
+
+    Begin
     insert into emp_1(empno, emp_name, mgr) values (10, 'JOHN', 30);
     insert into emp_1(empno, emp_name, mgr) values (20, 'CLARA',30);
     insert into emp_1(empno, emp_name, mgr) values (30, 'JANE', 40);
     insert into emp_1(empno, emp_name, mgr) values (40, 'MATT', null);
+    commit;
+    end;
+
     </copy>
     ```
     ![Create Table](images/create-table1.png " ")
@@ -70,50 +75,33 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     ![Select Rest](images/autorest-object-created.png " ")
 
-9. Now, please change the Copied URL and replace **ords** with **pls/apex** and Workspace Name with your Actual Workspace name as shown below.
+## Task 2: Integrate Application Data from REST Data Source
 
-    Copied URL:
-    https://apex.oracle.com/ords/wksp_apexhandsonlabs/emp34/
-
-    Updated URL:
-    https://apex.oracle.com/pls/apex/apex_handson_labs/emp_1/
-
-
-## Task 2: Create an application and Integrate Application Data from REST Data Source
-
-In this task, you create a **New Application** and then consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
+In this task, you will consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
 
 1. Log in to the first Workspace, where we have already created multiple applications.
 
     ![Login to first Workspace](images/login-to-workspace1.png " ")
 
-2. Select **App Builder** under Workspace Home Page.
-
-    ![Select App Builder](images/select-app-builder1.png " ")
-
-3. Now select **Create** button to create a new application.
+2. Select **Sample Reporting**.
 
     ![Create New Application](images/create-new-app1.png " ")
 
-4. For **Name** - Enter **Leave Request Approval** and click **Create Application**.
-
-    ![Click New Application](images/click-new-application1.png " ")
-
-5. Navigate to **Shared Components** and then Select **REST Data Sources**.
+3. Navigate to **Shared Components** and then Select **REST Data Sources**.
 
     ![Click shared components](images/click-shared-components.png " ")
 
     ![Click REST Data Sources](images/select-rest-ds.png " ")
 
-6. Under **REST Data Sources**, Click **Create**.
+4. Under **REST Data Sources**, Click **Create**.
 
-    ![Click on Create](images/click-on-create.png " ")
+    ![Click on Create](images/click-on-create1.png " ")
 
-7. Under **Create REST Data Source - Method**, Leave the settings to default and Click **Next**.
+5. Under **Create REST Data Source - Method**, Leave the settings to default and Click **Next**.
 
     ![Click next button](images/click-next-button.png " ")
 
-8.  Under **Create REST Data Source**, Enter the following and click **Next**.
+6.  Under **Create REST Data Source**, Enter the following and click **Next**.
 
        - For **REST Data Source Type** : select **Oracle REST Data Services**
 
@@ -123,15 +111,15 @@ In this task, you create a **New Application** and then consume the **REST Data 
 
     ![Enter REST Data Source name and URL endpoint](images/create-rds1.png " ")
 
-9. Now, Under **Create REST Data Source - Remote Server** leave all fields to **Default** and Click **Next**.
+7. Now, Under **Create REST Data Source - Remote Server** leave all fields to **Default** and Click **Next**.
 
-    ![Define Remote Server](images/create-rds2.png " ")
+    ![Define Remote Server](images/create-rds21.png " ")
 
-10. For Authentication, Set **Authentication Required** to **No**. Click **Discover**.
+8. For Authentication, Set **Authentication Required** to **No**. Click **Discover**.
 
     ![Click Discover](images/create-rds3.png " ")
 
-11. Click **Create REST Data Source**.
+9. Click **Create REST Data Source**.
 
     ![Click REST Data Source](images/create-rds4.png " ")
 
@@ -143,43 +131,120 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
 1. Now that you have created a **REST Data Source**, Under **REST Data Sources** Select **No** under **Synchronised** column for **Employee Details API**.
 
-    ![Create REST Data Synchronisation](images/create_rest_data_sync.png " ")
+    ![Create REST Data Synchronisation](images/create_rest_data_sync11.png " ")
 
 2. **Synchronisation** is not configured yet. In this step, you provide the name of a new table or an existing table.
-Select **New Table** for Synchronise To and enter **EMP_1** for Table Name and Click **Save**.
 
-    ![Create REST Data Synchronisation](images/create_rest_data_sync1.png " ")
+   Select **Existing Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
 
-3. The synchronisation table is not created yet. You can view the SQL that is used to create the table. Click **Show SQL**.
+    ![Create REST Data Synchronisation](images/create_rest_data_sync12.png " ")
 
-4. Under Table Status, click **Create Table**. The table **EMP_1** is now ready for synchronisation. Notice the message **The synchronisation table exists and matches the Data Profile**.
+3. You will define a **synchronisation schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronisation schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
 
-    ![Click Create Table](images/create_rest_data_sync2.png " ")
+    ![Select Synchronisation Schedule icon](images/create_rest_data_sync31.png " ")
 
-5. You will define a **synchronisation schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronisation schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
-
-    ![Select Synchronisation Schedule icon](images/create_rest_data_sync3.png " ")
-
-6. The Interval Builder dialog displays.
+4. The Interval Builder dialog displays.
 
      - For Frequency : Select **Minutely**
 
      - For Interval : Enter **10**  
 
-    click **Set Execution Interval**.
+    Click **Set Execution Interval**.
 
     ![Set Execution Interval](images/create_rest_data_sync4.png " ")
 
-7. You are ready to test the data synchronisation. Click **Save and Run**.
+5. You are ready to test the data synchronisation. Click **Save and Run**.
 
-    ![Click Save and Run](images/create_rest_data_sync5.png " ")
+    ![Click Save and Run](images/create_rest_data_sync51.png " ")
 
-8. You can see that **the data synchronisation is triggered**.
+6. You can see that **the data synchronisation is triggered**.
 
-    ![data synchronisation is triggered](images/create_rest_data_sync6.png " ")
+    ![data synchronisation is triggered](images/create_rest_data_sync61.png " ")
+
+## Task 4: Load Data using Data loading Definitions
+
+A Data Load Definition is comprised of a Data Load Definition, Data Profile, and Data Profile Columns. Data can be loaded either to an existing table in your schema or to a collection. You can define SQL Expression, SQL Query, Lookups, or Transformation Rules for each data profile column. These definitions are used in the Native Data Loading page process type.
+
+In this task, you Create a Data Load Definition in Shared Components and then Create a Data Loading Page Using the Create Page Wizard in the **Sample Reporting** application.
+
+1. Navigate to Shared Components.
+
+    ![Click Save and Run](images/dld_sc.png " ")
+
+2. Under Data Sources, Select **Data Load Definitions**.
+
+    ![Click Save and Run](images/dld_sc1.png " ")
+
+3. Select **Create**.
+
+    ![Click Save and Run](images/dld-create.png " ")
+
+4. In Create Data Load - Method, Click **Next**.
+
+    ![Click Save and Run](images/dld-method.png " ")
+
+5. In **Create Data Load**, Enter the following:
+
+      - For Name : Enter **Data loading**
+
+      - For Table Name : Select **EMP**
+
+   Click **Next**.
+
+    ![Click Save and Run](images/dld-load.png " ")
+
+6. Download the .xlsx  file from **[here](files/emp.xlsx)** and Upload it then Click **Next**.
+
+    ![Click Save and Run](images/dld-sample-data.png " ")
+
+7. Navigate to **SQL Workshop** and Select **Object Browser**.
+
+    ![Click Save and Run](images/ob.png " ")
+
+8. Under Tables, Select Table **EMP** and Click **Data** to view the loaded data using .xlxs file.
+
+    ![Click Save and Run](images/loaded-data.png " ")
+
+9. Now, Navigate to **App Builder** and Select **Sample Reporting** application.
+
+    ![Click Save and Run](images/create-page-dl.png " ")
+
+10. Click **Create Page**.
+
+    ![Click Save and Run](images/select-create-page.png " ")
+
+11. Select **Data Loading**.
+
+    ![Click Save and Run](images/data-loading-page.png " ")
+
+12. For Page Definition:
+
+    -  Name :**Data Loading**
+
+    For Data Load Attributes:
+
+    - Data Load : Select **Data Loading**
+
+    Click **Create Page**.
+
+    ![Click Save and Run](images/create-page-dl1.png " ")
+
+13. Click **Save and Run Page**.
+
+    ![Click Save and Run](images/save-run-page.png " ")
+
+14. The new Data Load page appears.
+
+    ![Click Save and Run](images/data-load-page-appears.png " ")
+
+15. Upload a sample file. Drag and Drop a file or click Choose File. A Preview page appears.
+
+    ![Click Save and Run](images/preview.png " ")
+
+16. Click Load Data. The sample data is loaded into the target table with Merge loading method.
 
 ## Summary
-You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. Also, you learned how to create a **New Application** , consume the **REST Data Source**, and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
+You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. You learned how to consume the **REST Data Source**, and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**. Also, you learned how to create data load definitions in shared components, along with creating a data loading page.
 
 You may now **proceed to the next lab**.
 
