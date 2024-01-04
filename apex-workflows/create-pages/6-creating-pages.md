@@ -31,8 +31,9 @@ Now that the Workflow is created let us create the Page that the Hospital Staff 
     ![click create page](./images/create-page.png " ")
 
 3. For Create a Page:
-   - select Page Type - under **Component** and then select **Blank Page**.
+    - select Page Type - under **Component** and then select **Blank Page**.
     ![select blank page](./images/select-blank-page.png " ")
+    
 4. For Page Attributes, enter the following:
     - For Page Name, enter **New Appointment**  
     - Under **Navigation**
