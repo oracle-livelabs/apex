@@ -14,6 +14,10 @@ In this lab, You will learn how to
 
 Estimated Time: 20 minutes
 
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
+
 ## Task 1: Create the Workflow
 
 To create a Workflow:

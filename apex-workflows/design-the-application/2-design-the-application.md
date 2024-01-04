@@ -15,7 +15,7 @@ In this lab, you :
 
 Estimated Time: 20 minutes
 
-## Prerequisites
+### Prerequisites
 1. Access to Oracle APEX.
 2. Ensure that users (doctors, patients, and hospital staff) are created using the Manage Users And Groups menu option under Workspace Administration. To create these users, follow the the instructions specified in Step 1.
 
@@ -377,10 +377,6 @@ In this lab, you create users for Doctor Appointments made Easy Application.
 8. Click **Run Now**.
 
   ![Click create SQL Scripts](./images/click-run-now2.png " ")
-
-### What's Next
-
-In the next section, you create the Doctor Appointment Workflow, connecting various functionalities such as checking availability, confirming appointments, updating fees, and more.
 
 ## Summary
 You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointments Made Easy Application, and then added Application users, created Sample Datasets, and a Package.

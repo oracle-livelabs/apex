@@ -4,11 +4,15 @@
 
 In this hands-on lab, you will continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
-### Objectives:
+### Objectives
 In this lab, You will
 - create and configure the workflow for Doctor's Appointment Made Easy! Application.
 
 Estimated Time: 45 minutes
+
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
 
 ## Task 1: Navigate to Workflow Designer
 

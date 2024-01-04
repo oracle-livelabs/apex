@@ -15,6 +15,10 @@ In this lab, you will learn how to
 
 Estimated Time: 20 minutes
 
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
+
 ## Task 1: Create the New Appointments Page
 
 Now that the Workflow is created let us create the Page that the Hospital Staff will use to Submit a New Appointment.

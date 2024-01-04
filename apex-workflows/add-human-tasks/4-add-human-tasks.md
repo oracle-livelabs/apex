@@ -15,6 +15,10 @@ In this lab, you will learn how to create Human Tasks to
 
 Estimated Time: 20 minutes
 
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
+
 ## Task 1: Create Task Definition for Appointment Request
 
 1. Navigate to **Shared Components**.
