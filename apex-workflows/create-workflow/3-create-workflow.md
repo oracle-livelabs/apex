@@ -49,7 +49,7 @@ To create a Workflow:
 
   ![Change the Workflow Version](./images/create-workflow-version.png " ")
 
-*Note: You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future blogs in this series.*
+> **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future blogs in this series._
 
 3. The Workflow cannot be saved yet as the there are validation errors. Click on the error icon (Yellow exclamation mark) to see the error.
 
@@ -65,7 +65,7 @@ To create a Workflow:
 
   ![Changes saved successfully](./images/save-workflow.png " ")
 
-*Note: A workflow model cannot be saved until its validation errors have been fixed.*
+> **Note:** _A workflow model cannot be saved until its validation errors have been fixed.._
 
 6. The changes are saved successfully.
 
@@ -167,7 +167,8 @@ In addition to the input parameters, the Workflow also needs information about t
 
 3. Click **Save**.
 
-*Note: Now the values of all columns of the DOCTOR table will be available as Bind Variables or Substitution Strings at all points and by all activities during the execution of this Workflow.*
+> **Note:** _Now the values of all columns of the DOCTOR table will be available as Bind Variables or Substitution Strings at all points and by all activities during the execution of this Workflow._
+
 
 ## Task 8: Add Workflow Variables
 
