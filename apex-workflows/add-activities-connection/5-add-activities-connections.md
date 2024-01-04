@@ -4,11 +4,15 @@
 
 In this hands-on lab, you will continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
-### Objectives:
+### Objectives
 In this lab, You will
 - create and configure the workflow for Doctor's Appointment Made Easy! Application.
 
 Estimated Time: 45 minutes
+
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
 
 ## Task 1: Navigate to Workflow Designer
 
@@ -49,7 +53,7 @@ Now that we have defined the Approval and Action tasks let us go back to the Doc
 
     ![Configure Function Result Var](./images/configure-function-resultvar.png " ")
 
-  *Note that the Item Picker in the Workflow Designer allows you to select Workflow Parameters, Version Variables, and Activity Variables. You may also reference Additional Workflow Data by using the Substitution String Syntax.*
+  > **Note:** _The Item Picker in the Workflow Designer allows you to select Workflow Parameters, Version Variables, and Activity Variables. You may also reference Additional Workflow Data by using the Substitution String Syntax._
 
 6. In the **Rendering Tree**, select **p\_doctor\_id** under **Compute Doctor Availability** and change the following in the **Property Editor**.
     - Under Parameter, Set Direction to **In**.
@@ -90,8 +94,7 @@ Based on the Doctor's availability, the workflow needs to branch conditionally. 
 
     ![create Doctor available activity](./images/configure-doctor-available.png " ")
 
-  *Note that the Switch Type is defaulted to True False Check. Switch Activity can be of 4 types. You will learn about the different Switch types in the soon-to-be-released 23.2 App Builder Documentation Guide.*
-
+  > **Note:** _The Switch Type is defaulted to True False Check. Switch Activity can be of 4 types. You will learn about the different Switch types in the soon-to-be-released 23.2 App Builder Documentation Guide._
 
 ## Task 4: Create Conditional Connections(Branches) and No Appointment Mail Activity
 
@@ -184,7 +187,8 @@ Re-adjust the Workflow Diagram to make the diagram more aesthetic.
 
   ![Check Variables](./images/check-variables.png " ")
 
-*Note: The developer can choose to set the Human Task properties Approver and TaskOutcome to these Workflow Variables. At runtime, when the Human Task activity has been completed, i.e., when the actual owner of the task has approved, rejected, or completed the task, the approver and the task outcome values are saved into the Workflow Variables and can be used later by other workflow activities. Alternatively, the developer can choose to ignore the outcome and approver details and, in that case, delete those auto-generated Workflow variables and leave the corresponding Task attributes empty.*
+> **Note:** _The developer can choose to set the Human Task properties Approver and TaskOutcome to these Workflow Variables. At runtime, when the Human Task activity has been completed, i.e., when the actual owner of the task has approved, rejected, or completed the task, the approver and the task outcome values are saved into the Workflow Variables and can be used later by other workflow activities. Alternatively, the developer can choose to ignore the outcome and approver details and, in that case, delete those auto-generated Workflow variables and leave the corresponding Task attributes empty._
+
 
 
 ## Task 10: Configure Raise Appointment Request Parameters
@@ -297,7 +301,8 @@ In this task, you will learn how to manage appointment requests using a Switch A
     - Set **p\_workflow\_id** as Static value **&APEX$WORKFLOW_ID.**
     - Set **p\_patient\_name** to **Workflow Parameter** **PATIENT_NAME** using Item Picker.
 
-*Tip APEX$WORKFLOW_ID is a substitution string that hold the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the soon-to-be-released App Builder Documentation Guide.*
+> **Tip:** _APEX$WORKFLOW_ID is a substitution string that hold the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the soon-to-be-released App Builder Documentation Guide._
+
 
 7. Now, click on the **Appointment Approved?** activity and draw an arrow to the **Confirm Appointment activity**.
 
@@ -612,7 +617,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     ![draw final connection](./images/no-feedback.png " ")
 
-*Tech Tip: Connections of type Timeout can only be added to an activity if the activity has Due On Type and value populated in the Deadline section of the Property Editor*
+> **Tech Tip:** _Connections of type Timeout can only be added to an activity if the activity has Due On Type and value populated in the Deadline section of the Property Editor._
 
 11. Finally, Drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Request for Feedback** and **Complete Appointment** End Activity.
 

@@ -4,9 +4,15 @@
 
 In this lab, you will run and understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You also perform various tasks to understand the workflow and automation implemented in the application.
 
-## Objective
+### Objectives
 
 - Demonstrate the behavior of the "Doctor Appointments Made Easy!" application through hands-on activities.
+
+Estimated Time: 20 minutes
+
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
 
 ## Task 1: Setting Automatic Timezone for the Application
 

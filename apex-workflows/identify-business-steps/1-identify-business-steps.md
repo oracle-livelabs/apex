@@ -8,14 +8,20 @@ In this Lab, you learn how to implement an efficient system to schedule and mana
 - Identify the sequences and conditions that govern the execution of these steps.
 - Identify the key participants in the organization that are involved in this business process.
 
-*Note: In APEX Workflow terminology - we refer to an executable step as an Activity and a sequence/condition as a Connection.*
+> **Note:** _In APEX Workflow terminology - we refer to an executable step as an Activity and a sequence/condition as a Connection._
 
-Estimated Time: 10 minutes
 
 ### Objectives
 
 In this Lab, you will:
 - Identify Business steps required to create Doctor Appointments Made Easy Application.
+
+Estimated Time: 10 minutes
+
+
+### Prerequisites
+1. Access to Oracle APEX.
+
 
 Welcome to our hands-on Lab, where we will create an APEX Application called "Doctor Appointments Made Easy."
 

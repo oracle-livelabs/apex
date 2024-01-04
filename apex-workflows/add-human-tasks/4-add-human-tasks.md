@@ -15,6 +15,10 @@ In this lab, you will learn how to create Human Tasks to
 
 Estimated Time: 20 minutes
 
+### Prerequisites
+1. Access to Oracle APEX.
+2. Ensure that you have completed the Previous labs.
+
 ## Task 1: Create Task Definition for Appointment Request
 
 1. Navigate to **Shared Components**.
@@ -59,7 +63,7 @@ Estimated Time: 20 minutes
 
     This step ties our task to the system of records, in this case, the doctor's records.
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
+  > **Note:** _APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
 7. In the **Appointment Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
     - Set Participant Type as **Potential Owner**
@@ -114,7 +118,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
     ![Select Invoice Request](./images/select-invoice-request.png " ")
     ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
+  > **Note:** _APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
 5. In the **Invoice Request** Task Definition, navigate to **Participants** Section, and then under **Participants**,
     - Set Participant Type as **Potential Owner**
@@ -164,7 +168,7 @@ Similarly, now create the task definitions for the Invoice Request and Feedback 
 
     ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
 
-  *Note: APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)*.
+  > **Note:** _APEX$TASK_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
 5. In the **Feedback Request** Task Definition, navigate to **Participants** Section, and then under add Task Participants,
     - Set Participant Type as **Potential Owner**
