@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Hands-on-lab, you will add Calendars, Charts, Tree pages and Maps to Demo Projects application and to Online Shopping Application.
+In this Hands-on-lab, you add Calendars, Charts, Tree pages and Maps to Demo Projects application and to Online Shopping Application.
 
 Estimated Time: 20 minutes
 
@@ -26,7 +26,7 @@ Estimated Time: 20 minutes
 
     ![Select Calender](images/create-calendar-page2.png " ")
 
-4.  In the **Create Calendar** enter the following and click **Next**.
+4.  In the **Create Calendar**, Enter the following:
 
     Under **Page Definition**:
     - For **Name**, Enter **Calendar**.
@@ -34,19 +34,22 @@ Estimated Time: 20 minutes
     Under **Data Source**:
     - For **Table/View Name**, select **DEMO_PROJECTS**.
 
-    Under **Navigation**:
-    - For **Breadcrumb** and **Navigation**, Set it to **Yes**.
+    Click **Next**.
 
     ![Create Calender](images/create-calendar-page3.png " ")
 
-5. In the **Create Calendar** page, enter the following and click **Create Page**.
+5. In the **Create Calendar** page, Enter the following:
     - For **Display Column**, enter **TASK_NAME**.
     - For **Start Date Column**, enter **START_DATE**.
     - For **End Date Column**, enter **END_DATE**.
 
+    Click **Create Page**
+
     ![Create Calender2](images/create-calendar-page4.png " ")
 
 6. Click **Save** and **Run Page**. Log in to the application with your credentials.
+
+    ![Click Edit Page](images/save-run.png " ")
 
 7. In the Developer Toolbar, click **Edit Page \<n\>**.
 
@@ -58,9 +61,9 @@ Estimated Time: 20 minutes
 
 9. In the Template Options dialog, input the following:
 
-    - Header - select **Hidden but accessible**  
+    - Header : Select **Hidden but accessible**  
 
-    - Style - select **Remove UI Decoration**  
+    - Style : Select **Remove UI Decoration**  
 
     Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
 
@@ -68,56 +71,64 @@ Estimated Time: 20 minutes
 
 ## Task 2: Create a Form page on DEMO_PROJECTS Tables.
 
-In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the next labs, you will link the form to the Calendar Page.
+In this Lab, you create a Form Page on DEMO_PROJECTS Tables, then in the next labs, you link the form to the Calendar Page.
 
-1. Navigate to **App Builder** and in the **Home Page**, click **Demo Projects**. application. Then, click **Create Page**.
+1. Navigate to Create(+) in the page designer and Select **Page**.
 
  ![Click Create Page](images/create-form-page1.png " ")
 
-2. Select **Form** page type.
+2. Select **Form**.
 
   ![Select Form](images/create-form-page2.png " ")
 
-3. In the **Create Form** enter the following and click **Next**.
+3. In the **Create Form**, Enter the following:
 
     Under **Page Definition**:
+
     - For **Page Number**, Enter **9**.
+
     - For **Name**, Enter **Form on Projects**.
+
     - For **Page Mode**, Select **Modal Dialog**.
 
   Under **Data Source**:
+
     - For **Table/View Name**, select **DEMO_PROJECTS**.
+
+   Click **Next**.
 
   ![Select Modal Dialog](images/create-form-page3.png " ")
 
-4. In the **Create Form** page, enter the following and click **Create Page**.
+4. In the **Create Form** page, Enter the following:
+
     - For **Primary Key Column 1**, Select **ID (Number)**.
+
+    Click **Create Page**.
 
     ![Click Create page](images/create-form-page4.png " ")
 
 ## Task 3: Customize the Calendar Page.
 
-In this lab, You will link the form page you created in Task 2 with the Calendar page.
+In this lab, You link the form page you created in Task 2 with the Calendar page.
 
-1. Navigate to **Calendar** in the runtime environment and then click **Page <n>**
+1. Navigate to Page Finder in the Page Designer and Select Page **5**.
 
   ![Navigate to Calender](images/customizing-calendar1.png " ")
 
 2. You need to add the **Create** and **View / Edit** links. In the Rendering tree, locate and select the **Calendar** region. In the **Property Editor**, Click **Attributes**. Then, Under Settings, Select **ID** for **Primary Key** and then locate **Create Link** and click **No Link Defined**.
 
-  ![Customize calender in page designer](images/customizing-calendar2.png " ")
-
 3. In the Link Builder – Create Link dialog, select **9** for Page, and enter **9** for **Clear Cache**. Click **OK**.
-
-  ![Edit Calender](images/customizing-calendar3.png " ")  
 
 4. In the Property Editor, locate **View/Edit Link** and click **No Link Defined**.
 
 5. In the Link Builder – View / Edit Link dialog, input the following:
-    - Page - select **9**
-    - Name - select **P9_ID**
-    - Value - select **ID** or enter **&ID**.
-    - Clear Cache - enter **9**  
+    - For Page : Select **9**
+
+    - For Name : Select **P9_ID**
+
+    - For Value : Select **ID** or Enter **&ID**.
+
+    - For Clear Cache : Enter **9**  
 
   Click **OK**.
 
@@ -126,7 +137,9 @@ In this lab, You will link the form page you created in Task 2 with the Calendar
 6. You can enable calendar drag and drop by using the component attribute **Drag and Drop**. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs a SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events primary key value as well as the new start and new end timestamp.  
 
     Under **Settings**:
+
     - For **Drag and Drop**, Set it to **Yes**.
+
     - For **Drag and Drop PL/SQL Code**, Copy and paste the below code.
     ```
     <copy>
@@ -141,15 +154,19 @@ In this lab, You will link the form page you created in Task 2 with the Calendar
     ![Enable drag nad drop](images/customizing-calendar5.png " ")  
 
 7. Click **Save** and **Run Page**.
-Notice that you can now drag and drop tasks in the calendar. In the Developer Toolbar, click **Application< n >**.
+Notice that you can now drag and drop tasks in the calendar.
 
     ![Customized Calender](images/customized-calendar1.png " ")
+
+    ![Customized Calender](images/customized-calendar7.png " ")
+
+    ![Customized Calender](images/customized-calendar8.png " ")
 
 ## Task 4: Create and Customize a Tree Page.
 
 In this hands-on lab, you create the **Employee** Tree by first creating a **blank page** and then adding a **Tree region**.
 
-1. First, create a blank page in the **Demo Projects** application. In the application home page, click **Create Page**.
+1. First, create a blank page in the **Demo Projects** application. In the page Designer, Navigate to Create **(+)** and Select **Page**.
 
   ![Click Create Page](images/create-tree1.png " ")
 
@@ -165,13 +182,18 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
 
   ![Create Region](images/create-tree4.png " ")
 
-5. In the property editor, enter the following:  
+5. In the property editor, enter the following:
+
     Under **Identification**:
+
     - For **Name**, Enter **Tree**
+
     - For **Type**, Select **Tree**
 
     Under **Source**:
+
     - For **Type**, Select **SQL Query**
+
     - For **Sql Query**, Copy the following code and paste it.
 
     ```
@@ -231,4 +253,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2023
