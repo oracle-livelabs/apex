@@ -223,6 +223,7 @@ To create an Automation, navigate to Shared Components and under Workflows and A
     - Type: **Send Push Notification**
     - To: **&POST\_OWNER.**
     - Title: **&LIKED\_BY. liked your post.**
+    
     Click **Apply Changes**.
 
     ![Edit Action page](images/send-notification.png " ")

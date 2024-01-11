@@ -86,15 +86,15 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
 
-  ![Provisioning status](images/apex-logo-orange.png " ")
+  ![Provisioning status](images/status-orange.png " ")
 
-  ![Available status](images/apex-logo-green.png " ")
+  ![Available status](images/status-green.png " ")
 
 7. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
 
     On the APEX Instance Details, click Launch APEX.
 
-    ![APEX instance page](images/launch-apex.png " ")
+    ![APEX instance page](images/launch-apex-workspace.png " ")
 
 8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
   The password is the same as the one entered for the ADMIN user when creating the APEX service: **```SecretPassw0rd```**
