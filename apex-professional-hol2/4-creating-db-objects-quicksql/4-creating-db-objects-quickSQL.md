@@ -4,13 +4,17 @@
 
 Memorizing the SQL to create and maintain database objects can be difficult. However, there are tools that can generate the code for you based on a shorthand syntax or a graphical user interface. In this lab, you will create database objects using Quick SQL and then view the objects in Database Actions. Then you will then use Data Workshop page to load data from a file into your workspace.
 
-Estimated Time: 15 minutes
+### Precap
+
+In the previous hands-on-workshop, you acquired knowledge on signing up for either the APEX Application Development Service, the Oracle Autonomous Database cloud service, or the apex.oracle.com service. Additionally, you successfully installed and ran a packaged application.
 
 ### Objectives
 
 - Create database objects using Quick SQL
 - Load data using Data Generator
 - Load data using Data Workshop page.
+
+Estimated Time: 15 minutes
 
 ## Task 1: Create database objects using Quick SQL
 
@@ -150,6 +154,9 @@ In this step, you will learn how to create a table and Load data using the Data 
 
 ## Summary
 This completes the Lab. At this point, you know how to use Quick SQL to generate database objects using a SQL shorthand. You also know how to use Data Workshop utility to load data.
+
+## What's next
+In the upcoming hands-on workshop, you'll be tasked with developing a database application utilizing pre-existing tables. This involves incorporating various pages such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
 
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager
