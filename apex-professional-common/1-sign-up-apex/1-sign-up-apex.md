@@ -216,19 +216,19 @@ In this part, you will create an Oracle APEX Application Development Service tri
 1.  Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
 2.  Once the Signup process is complete, you will be logged in automatically to the Oracle Cloud Infrastructure (OCI) Console.
-  -  In case you have closed the browser, you can always refer to the **Get Started Now with Oracle Cloud** email that you should have received to login to OCI Console.   
-  Make a note of your **Username**, **Password**, and **Cloud Account Name**.
+    -  In case you have closed the browser, you can always refer to the **Get Started Now with Oracle Cloud** email that you should have received to login to OCI Console.   
+    Make a note of your **Username**, **Password**, and **Cloud Account Name**.
 
     ![Oracle Cloud login page](images/get-started-email.png " ")
 
-  - Alternatively, you can login to your Oracle Cloud account by accessing the following URL from your browser:       
-  [https://cloud.oracle.com](https://cloud.oracle.com)
+    - Alternatively, you can login to your Oracle Cloud account by accessing the following URL from your browser:       
+    [https://cloud.oracle.com](https://cloud.oracle.com)
 
-  Enter your **Cloud Account Name** in the input field and click the **Next** button.
+     Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
     ![Cloud login](images/enter-oracle-cloud-account-name.png " ")
 
-  Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
+     Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
 
     ![Cloud login](images/enter-user-name-and-password.png " ")
 
@@ -250,17 +250,17 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 6. The APEX Instances Details displays again.
 
-When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
+   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
 
-  ![Provisioning status](images/apex-logo-orange.png " ")
+   ![Provisioning status](images/apex-logo-orange.png " ")
 
-  ![Available status](images/apex-logo-green.png " ")
+   ![Available status](images/apex-logo-green.png " ")
 
 7. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
 
-On the APEX Instance Details, click Launch APEX.
+   On the APEX Instance Details, click Launch APEX.
 
-  ![APEX instance page](images/launch-apex.png " ")
+   ![APEX instance page](images/launch-apex.png " ")
 
 8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
 The password is the same as the one entered for the ADMIN user when creating the APEX service: **```SecretPassw0rd```**
@@ -269,19 +269,19 @@ The password is the same as the one entered for the ADMIN user when creating the
 
 9. Click **Create Workspace**.
 
-  ![Create Workspace](images/welcome-create-workspace.png " ")
+   ![Create Workspace](images/welcome-create-workspace.png " ")
 
 10. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
-  ![Choose type of schema](images/choose-schema.png " ")
+   ![Choose type of schema](images/choose-schema.png " ")
 
 11. In the Create Workspace dialog, enter the following:
 
-        | Property | Value |
-        | --- | --- |
-        | Workspace Name | DEMO |
-        | Workspace Username | DEMO |
-        | Workspace Password | **`SecretPassw0rd`** |
+    | Property | Value |
+    | --- | --- |
+    | Workspace Name | DEMO |
+    | Workspace Username | DEMO |
+    | Workspace Password | **`SecretPassw0rd`** |
 
     Click **Create Workspace**.
 
