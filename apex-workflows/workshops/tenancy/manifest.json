@@ -7,8 +7,8 @@
         "filename": "../../introduction.md"
       },
       {
-        "title": "Get Started",
-        "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
+              "title": "Get Started",
+              "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
         "title": "Lab 1: Identify Business Steps",
@@ -31,11 +31,11 @@
         "filename": "../../add-activities-connection/5-add-activities-connections.md"
       },
       {
-        "title": "Lab 6: Creating Workflow Pages",
+        "title": "Lab 6: Create Workflow Pages",
         "filename": "../../create-pages/6-creating-pages.md"
       },
       {
-        "title": "Lab 7: Running the Application",
+        "title": "Lab 7: Run the Application",
         "filename": "../../running-the-app/7-running-the-app.md"
       },
       {
