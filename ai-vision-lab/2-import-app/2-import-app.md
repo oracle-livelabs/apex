@@ -23,7 +23,7 @@ In this lab, you:
 
     ![Click Import](images/import0.png " ")
 
-2. The Import dialog displays. Download the Export File of the APEX Social Medial Application and then perform the following steps.
+2. The Import dialog displays. Download and extract the Export Zip File of the APEX Social Media Application and then perform the following steps.
     - Drag and drop, or navigate to the file.
 
     - File Type: Indicate the type of export file to be imported. Select **Application, Page, or Component Export**.
