@@ -1,4 +1,4 @@
-# Designing the Doctor Appointments Made Easy Application
+# Design the Doctor Appointments Made Easy Application
 
 ## Introduction
 
