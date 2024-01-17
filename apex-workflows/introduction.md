@@ -16,7 +16,7 @@ In the First release of APEX Workflow, you can harness the following capabilitie
 
 Estimated Time: 155 minutes
 
-## Simplifying Business Process Management with Workflow
+## Simplify Business Process Management with Workflow
 
 The primary objective of Workflow is to simplify and automate the management of intricate business logic by breaking it down into simple, repeatable steps. In this blog series, we showcase the utility of APEX Workflow through a real-world use case prevalent in the healthcare industry.
 
