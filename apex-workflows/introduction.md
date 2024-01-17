@@ -1,4 +1,4 @@
-# Build Doctor Appointments Made Easy using Oracle APEX
+# Build a Doctor Appointments Made Easy App using Oracle APEX
 
 # Introduction
 
