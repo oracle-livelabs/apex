@@ -12,7 +12,7 @@ Estimated Time: 1 hour
 In this workshop, you:
 
 - Enhance Social Media App with AI-Powered Search.
-- Integrate APEX and OCI using secure API keys.
+- Integrate APEX and OCI using API keys.
 - Seamlessly link APEX with OCI Vision Service through REST Data Sources.
 
 ### Prerequisites for Building this App:

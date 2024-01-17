@@ -357,6 +357,5 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 In this lab, you learnt to enhance the Social Media app with mobile features such as Cropping and Sharing Images, Push Notifications, and add the latest pwa features like Shortcuts and Screenshots.
 
 ## Acknowledgments
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Co-Author** - Toufiq Mohammed, Senior Product Manager
+- **Author** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, December 2023
