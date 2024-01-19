@@ -49,8 +49,8 @@ In this task, you make use of the Image Upload item that allows user to crop ima
 
 In this task, you add a Share button that allows a user to share the post via email, or other apps.
 Note: 
-- On macOS, the Share will not work on Chrome and Firefox browsers. Use Edge or Safari browsers instead. 
-- On Windows, the Share will not work on Edge browser. Use Chrome, Edge or Safari browsers instead.
+- On macOS, Share will NOT work on Chrome and Firefox browsers. Use Edge or Safari browsers. 
+- On Windows, Share will NOT work on Edge browser. Use Chrome, Edge or Safari browsers.
 
 1. Navigate to the Timeline page. Under the **Timeline** region, right-click **Actions** and select **Create Action**.
 
@@ -153,7 +153,7 @@ Note:
     ![Property Editor](images/true-action-share.png " ")
 
 
-8. **Save the Run** the page. You can see a Share button for each post. Clicking on the Share button will open a context menu to choose the app where you want to share. In this example, choose Mail and the post is attached as an image in an email draft with an associated text.
+8. **Save the Run** the page. You can see a Share button for each post. Click on **Share** to open a context menu and choose the app you want to share with. In this example, choose **Mail** and the post is attached as an image in an email draft with an associated text.
 
     ![App output](images/run-app-share.png " ")
 
@@ -171,7 +171,7 @@ In this task, you enable the Push Notifications for the Social Media App wherein
     - Column: **NOTIFIED**
     - Data Type: **VARCHAR2**
     - Length: **1**
-    - Deafult: **'N'**  (By default all rows in the SM_REACTIONS will have the default value 'N' to indicate that the user has not yet been notified.)
+    - Deafult: **'N'**  (By default, all rows in the SM\_REACTIONS will have the default value 'N' to indicate that the user has not yet been notified.)
 
     Click **Apply**.
 
