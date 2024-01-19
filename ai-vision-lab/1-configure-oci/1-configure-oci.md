@@ -1,10 +1,10 @@
-# Configure OCI API keys
+# Configure the OCI API keys
 
 ## Introduction
 
-In this lab, you learn how to configure OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
+In this lab, you learn how to configure the OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
 
-OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the Console to generate the Private/Public key pair.
+OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
 
 
 Estimated Time: 10 Minutes
@@ -17,31 +17,31 @@ In this lab, you:
 
 ## Task 1: Generate API Keys using OCI Console
 
-To Generate API Keys using OCI Console:
+To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Open the Profile menu and click Profile hyperlink.
+2. Click on the Profile icon at the top-right corner and select your Profile hyperlink.
 
     ![Profile Menu](images/profile.png " ")
 
-3. In the Resources section at the bottom left, click **API Keys** and then click **Add API Key**.
+3. Under Resources section at the bottom-left, select **API Keys** and then click **Add API Key**.
 
     ![Add API Key](images/api-keys.png " ")
 
-4. The Add API Key dialog displays. Select **Generate API Key Pair** to create a new key pair.
+4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
 5. Click **Download Private Key** and save it to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring web credentials in Oracle APEX later in this workshop.*
+   *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
     ![Profile Menu](images/add-api-key.png " ")
 
-7. The key is added, and the Configuration File Preview is displayed. Copy and paste the configuration file snippet from the text box. You will use this information in Oracle APEX Web Credentials.
+7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box. You will use this information in Oracle APEX Web Credentials.
 
     ![Profile Menu](images/configuration-preview.png " ")
 
@@ -57,7 +57,7 @@ To create web credentials in Oracle APEX:
 
    ![Login into your APEX account](images/apex-login.png " ")
 
-2. On the Workspace home page, click App Builder.
+2. On the Workspace home page, click **App Builder**.
 
    ![Click App Builder](images/app-builder1.png " ")
 
@@ -94,7 +94,7 @@ To create web credentials in Oracle APEX:
 
 ## Summary
 
-You now know how to generate API Keys using OCI console. Also, you know how to create web credentials in Oracle APEX.
+You now know how to generate API Keys using OCI console. Furthermore, you know how to create web credentials in Oracle APEX.
 
 You may now **proceed to the next lab**.   
 
