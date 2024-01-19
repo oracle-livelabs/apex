@@ -1,4 +1,4 @@
-# Designing the Doctor Appointments Made Easy Application
+# Design the Doctor Appointments Made Easy Application
 
 ## Introduction
 
@@ -46,7 +46,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     | Hospital Staff | STEVE     |
 
 4. Specify the following attributes:
-  - For a List of Email Addresses: Enter **Email IDs of the Users**
+    - For a List of Email Addresses: Enter **Email IDs of the Users**
     | List of Email Addresses |
     | --------- |
     | ROBERT@oracle.com    |
@@ -59,15 +59,13 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     | DARYL@oracle.com     |
     | RAJESH@oracle.com    |
     | STEVE@oracle.com     |
-  - For Usernames : Select **Exclude @ domain as part of the username**
-  - For password and Confirm Password: **Enter a password of your wish**
-  - Click **Next**
-  ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+    - For Usernames : Select **Exclude @ domain as part of the username**
+    - For password and Confirm Password: **Enter a password of your wish**
+    - Click **Next**
+    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. And then, Click **Create Valid Users**
-
-![Click validate users](./images/create-valid-users.png " ")
-
+  ![Click validate users](./images/create-valid-users.png " ")
 6. Users are now created in your Workspace.
 
 ## Task 2: Create the Doctor Appointments Made Easy Application
@@ -79,8 +77,8 @@ In this lab, you create users for Doctor Appointments made Easy Application.
   ![Click create](./images/click-create.png " ")
 
 3. Under **Create an Application**,
-   - For Name, enter **Doctor Appointments Made Easy!**
-   ![Create an Application](./images/create-an-application.png " ")
+    - For Name, enter **Doctor Appointments Made Easy!**
+      ![Create an Application](./images/create-an-application.png " ")
 
 4. Click **Create Application**.
 

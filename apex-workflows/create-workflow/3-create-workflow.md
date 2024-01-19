@@ -1,4 +1,4 @@
-# Creating a Doctor Appointment Workflow
+# Create a Doctor Appointment Workflow
 
 ## Introduction
 

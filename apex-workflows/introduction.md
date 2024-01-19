@@ -1,6 +1,6 @@
-# Build Doctor Appointments Made Easy using Oracle APEX
+# Build a Doctor Appointments Made Easy App using Oracle APEX
 
-# Introduction
+## Introduction
 
 APEX Workflow is a fresh addition to the larger APEX ecosystem, offering fundamental workflow capabilities for APEX Developers.
 
@@ -14,7 +14,9 @@ In the First release of APEX Workflow, you can harness the following capabilitie
 - Workflow Console: Monitor and administer workflows efficiently.
 - Workflow Runtime (Engine): Execute workflows seamlessly.
 
-# Simplifying Business Process Management with Workflow
+Estimated Time: 155 minutes
+
+## Simplify Business Process Management with Workflow
 
 The primary objective of Workflow is to simplify and automate the management of intricate business logic by breaking it down into simple, repeatable steps. In this blog series, we showcase the utility of APEX Workflow through a real-world use case prevalent in the healthcare industry.
 
@@ -42,3 +44,8 @@ In this workshop, you will:
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+- **Contributor** -
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023

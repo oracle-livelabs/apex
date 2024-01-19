@@ -68,7 +68,7 @@ Now that we have defined the Approval and Action tasks let us go back to the Doc
     - Under Value,
         - For **Type**, Select **Item**.
         - For **Item**, Select  **Workflow Parameter** -> **REQUEST_DATE** using the Item Picker.
-        - For **Format Mask**, select **DD-MON-YYYY HH:24:MI:SS**.
+        - For **Format Mask**, select **DD-MON-YYYY HH24:MI:SS**.
 
     ![Configure p_request_date Var](./images/conf-request-dt.png " ")
 
