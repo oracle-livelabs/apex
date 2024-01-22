@@ -2,19 +2,18 @@
 
 ## Introduction
 
-In this Hands-on-lab, you will Manage and Customise the Interactive report in the **Sample Reports** application as an **End-user**.
+In this hands-on lab, you will Manage and Customise the Interactive report in the **Sample Reports** application as an **End-user**.
 
 Estimated Time: 20 minutes
-
 
 ### Objectives
 
 In this lab, you:
-- Customise the Interactive Report page you have in **Sample Reports** Application as an **End-user**.
+- Customise your Interactive Report page in **Sample Reports** Application as an **End-user**.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/sample-reporting-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/sample-reporting-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Customize an Interactive report as an end-user.
 
@@ -34,13 +33,13 @@ In this lab, you:
 
     ![](images/click-ir.png " ")
 
-4. Suppose that you do not want to display the **Start Date** and **End Date** columns in the report. Also, you want the **Status** column to display just after the **Assigned To** column. Perform the following steps:  
+4. Suppose you avoid displaying the report's **Start Date** and **End Date** columns. Also, you want the **Status** column to show just after the **Assigned To** column. Perform the following steps:  
 
     a) Click Actions and select Columns.
 
     ![](images/select-columns.png " ")
 
-    b) The **Select Columns** dialog appears. The columns on the right are displayed, and the columns on the left are hidden. Select **Start Date** and **End Date** in **Display in Report group**, and move the selected columns into the **Do Not Display** list by clicking the left arrow **<**.
+    b) The **Select Columns** dialog appears. The columns on the right are displayed, and those on the left are hidden. Select **Start Date** and **End Date** in **Display in Report group**, and move the selected columns into the **Do Not Display** list by clicking the left arrow **<**.
 
     ![](images/select-columns1.png " ")
 
@@ -53,7 +52,7 @@ In this lab, you:
 
     ![](images/run-ir1.png " ")
 
-5. Next, let's say you want to filter the report results. First, you want to filter the report to display rows which meet the criteria **Cost <= 2000**. Within these filtered results, you then create another filter to display rows with **Project is Bug Tracker**. Perform the following steps:  
+5. Next, let's say you want to filter the report results. First, you want to filter the report to display rows which meet the criteria **Cost <= 2000**. Within these filtered results, you create another filter to show rows with **Project is Bug Tracker**. Perform the following steps:  
 
     a) Click Actions and select Filter.
 
@@ -69,7 +68,7 @@ In this lab, you:
 
     ![](images/create-filter1.png " ")
 
-   c) Next, add the second filter on the **Project** column. Click the **Actions** menu and select **Filter**.
+   c) Next, add the second filter to the **Project** column. Click the **Actions** menu and select **Filter**.
 
     ![](images/select-filter2.png " ")
 
@@ -85,12 +84,12 @@ In this lab, you:
 
     ![](images/run-ir2.png " ")
 
-   e) Notice that two filters are applied. Fewer rows are displayed because only the rows that meet both the filter criteria are disaplyed. You can remove each filter by clicking the Remove Filter icon, next to the filter you want to remove.  
-   Click the **Remove Filter** icon next to both the filters
+   e) Notice that two filters are applied. Fewer rows are displayed because only the rows that meet the filter criteria are displayed. You can remove each filter by clicking the Remove Filter icon next to the filter you want to remove.  
+   Click the **Remove Filter** icon next to both filters.
 
     ![](images/delete-filter1.png " ")
 
-6. Now imagine you want to sort the report on the **Cost** column.
+6. Now, imagine you want to sort the report on the **Cost** column.
 
     a) Select **Actions** > **Data** > **Sort**.
 
@@ -112,15 +111,15 @@ In this lab, you:
 
     ![](images/select-aggregate.png " ")
 
-    b) In the **Aggregate** dialog, select **Sum** for Function, **Available Budget** for Column. Click **Apply** to add the aggregation at the end of the last column of the report
+    b) In the **Aggregate** dialog, select **Sum** for Function, **Available Budget** for Column. Click **Apply** to add the aggregation at the end of the last Column of the report
 
     ![](images/create-aggregate1.png " ")
 
-    c) The aggregate function is applied on the column. Notice that the sum of **Available Budget** is displayed at the end of the report under the column. Navigate till the last page to view the sum.
+    c) The aggregate function is applied to the Column. Notice that the sum of **Available Budget** is displayed at the end of the report under the Column. Navigate to the last page to view the sum.
 
     ![](images/run-ir3.png " ")
 
-8. In the report, suppose you want to include **Cost** calculated with tax. The computation you want to make is **Cost * 1.05**. You create a computed column in the interactive report.
+8. In the report, you want to include **Cost** calculated with tax. The computation you want to make is **Cost * 1.05**. You create a computed column in the interactive report.
 
     a) Select **Actions** > **Data** > **Compute**.
 
@@ -134,7 +133,7 @@ In this lab, you:
 
     ![](images/create-compute1.png " ")
 
-    c) The new computed column **Cost with Tax** now appears in the report.
+    c) The new computed Column **Cost with Tax** now appears in the report.
 
     ![](images/run-ir5.png " ")
 
@@ -148,11 +147,11 @@ In this lab, you:
 
     ![](images/create-cb1.png " ")  
 
-    c) The control break is now applied. Notice that the aggregation that you created in a previous step appears at the end of each control break.
+    c) The control break is now applied. Notice that the aggregation you created in a previous step appears at the end of each control break.
 
     ![](images/run-ir6.png " ")  
 
-10. Let's say, you want to highlight those rows with **Cost** value less than or equal to **500**. You add the highlighting to rows while continuing with the control break that you created in the previous step.
+10. Let's say you want to highlight those rows with **Cost** value less than or equal to **500**. You add the highlighting to rows while continuing with the control break you created in the previous step.
 
     a) Select **Actions** > **Format** > **Highlight**.
 
@@ -176,12 +175,12 @@ In this lab, you:
 
     ![](images/create-highlight1.png " ")  
 
-   c) Notice that the rows that meet the condition are highlighted in Green color.
+   c) Notice that the rows that meet the condition are highlighted in green.
 
     ![](images/run-ir7.png " ")    
 
 
-11. Now, You want to control the number of rows to display in your **Interactive Report** page.
+11. Now, You want to control the number of rows displayed on your **Interactive Report** page.
 
     a) Select **Actions** > **Format** > **Rows Per Page** > **5**.
 
@@ -195,7 +194,7 @@ In this lab, you:
 
     ![](images/select-chart1.png " ")
 
-    b) In the Chart dialog, select / enter the following:  
+    b) In the Chart dialog, select/enter the following:  
       - For Chart Type: Select **Bar**  
       - For Label: Select **Project**  
       - For Value: Select **Cost**  
@@ -215,7 +214,7 @@ In this lab, you:
 
     ![](images/select-groupby.png " ")    
 
-    b) In the Group By dialog enter / select the following:  
+    b) In the Group By dialog, enter/select the following:  
       - For Group By Column: Select **Project**  
       - For Function: Select **Sum**  
       - For Column: Select **Budget**  
@@ -226,7 +225,7 @@ In this lab, you:
 
     ![](images/create-groupby.png " ")   
 
-    c) The Group By report is created. You also see the sum of the Budget. Notice that the icon for View Group By is also added.
+    c) The Group By report is created. You also see the sum of the Budget. Notice that the icon for View Group By has also been added.
 
     ![](images/run-ir10.png " ")
 
@@ -240,7 +239,7 @@ In this lab, you:
 
     ![](images/select-pivot.png " ")
 
-    b)  In the Pivot dialog enter / select:  
+    b)  In the Pivot dialog, enter/select:  
        - For Pivot Columns: Select **Assigned To**
        - For Row Columns: Select **Project**
        - For Functions: Select **Sum**
@@ -252,7 +251,7 @@ In this lab, you:
 
     ![](images/create-pivot1.png " ")
 
-    c) The Pivot report is displayed, and a View Pivot icon is created next to Actions button.
+    c) The Pivot report is displayed, and a View Pivot icon is created next to the Actions button.
 
     ![](images/run-ir12.png " ")
 
@@ -267,13 +266,13 @@ In this lab, you:
     ![](images/save-report1.png " ")
 
 16. A drop-down list automatically appears with the report you just created being selected. You can view the default primary report.
-You want to reset the **Primary Report** back to the default settings and remove any customizations that you have made so far.  
+You want to reset the **Primary Report** back to the default settings and remove any customizations you have made.  
 
-    a) Select **Primary Report** from the Reports drop down list. The primary report is now displayed. You can make any changes to this report and it will not be reflected in the 'My Private Report' private report you just created.
+    a) Select **Primary Report** from the Reports drop-down list. The primary report is now displayed. You can make any changes to this report, which will not be reflected in the 'My Private Report' private report you just created.
 
     ![](images/nav-primary-report.png " ")
 
-    b) To restore the primary report back to its default settings, Select **Actions** > **Report** > **Reset**.
+    b) select **Actions** > **Report** > **Reset**to restore the primary report to its default settings.
 
     ![](images/reset-report.png " ")
 
@@ -281,7 +280,7 @@ You want to reset the **Primary Report** back to the default settings and remove
 
     ![](images/apply-reset.png " ")
 
-    d) From the Reports drop down list, select **My Private Report**.
+    d) From the Reports drop-down list, select **My Private Report**.
 
     ![](images/nav-to-priv.png " ")
 
@@ -311,4 +310,4 @@ In the next hands-on lab, you learn how to customise Interactive Grid as a devel
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
