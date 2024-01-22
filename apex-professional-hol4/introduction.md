@@ -19,7 +19,7 @@ Estimated Time: 15 minutes
 * Navigate and Review the Page Designer panes.
 * Create a page to review the items that customer just bought.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 22.2.*
 
 ## Learn More - *Useful Links*
 
