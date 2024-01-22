@@ -48,6 +48,7 @@ Unit price is not a common search criteria, so you want to put this facet at the
 
     ![Reorder Facets](./images/reorder-facets.png " ")
 
+
 ## Task 3: Enhance the Faceted Search
 
 1. In the Rendering tree (left pane), navigate to **Search**.

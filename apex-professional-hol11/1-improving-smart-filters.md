@@ -24,9 +24,10 @@ The **Project Tasks Search** page utilizes Smart Filters to display the records.
     ![Run Application](images/run-application1.png " ")
 
 3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.      
-**Note** that your page number might be different.
 
-    ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
+  **Note** that your page number might be different.
+
+  ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
 
 4. Now, Update **P8\_PROJECT**, Change type to **Radio Group** and enable the **Client-Side Filtering** attribute.  
    In the Rendering tab, select the P8_PROJECT filter (if not already selected).
@@ -43,15 +44,17 @@ The revised page appears.
 
 7. In the Rendering tree (left pane), under Search, within filters, select **P19\_BUDGET**.
 
-  - Under Identification Section:
+   - Under Identification Section:
+
       - For Type : Select **Input Field**
 
-  - Under Settings Section:
+   - Under Settings Section:
+
       - For **User can Choose Operator** : Enable **Yes**
 
     ![Enhance Facets](./images/enhance-facet1.png " ")
 
-  Click **Save and Run**.
+     Click **Save and Run**.
 
 8. In runtime environment, Select the **Budget** filter in the search bar. Select **greater than** and Enter **6000** in the input field. The results appear with budget greater than 6000.
 
@@ -72,11 +75,14 @@ Filters map to specific database column. When creating a new filter, you can cre
 
 2. Select the new filter and edit the following filter attributes in the Property Editor:
     - Under **Identification**:
-      - For Name, Enter **P8\_TASK_NAME**.
-      - For Type,  Select **Checkbox Group**.
+
+      - For Name: Enter **P8\_TASK_NAME**.
+
+      - For Type: Select **Checkbox Group**.
 
     - Under **List of Values**:
-      - For Type, Select **Distinct Values**.
+
+      - For Type: Select **Distinct Values**.
 
   ![Create Filter2](images/create-filter10.png " ")
 
@@ -91,4 +97,4 @@ You now know how to create smart filters and customize them. You may now **proce
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

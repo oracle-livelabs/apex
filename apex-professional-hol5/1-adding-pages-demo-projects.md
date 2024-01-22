@@ -26,12 +26,12 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
     ![](./images/create-page11.png " ")
 
-3. For Create a Page:
-   Select Page Type - Select **Component** and then select **Interactive Grid**.
+3. For Page Type - Select **Interactive Grid**.
 
     ![](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
+
    Under **Page Definition**:
 
     - For Page Number : Enter **4**.
@@ -55,14 +55,13 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
     ![](./images/view-interactive-grid11.png " ")
 
 ## Task 2: Add Smart Filters to Demo Projects Application.
-In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You already created the **Demo Projects** application in HOL-3. Now, you will create a Smart Filters in the Demo Projects application.
+In this lab, you create a Smart Filters report on the DEMO_PROJECTS table.
 
-1. Navigate to Create button and click **Page**.
+1. Navigate to Create (+ icon) and Select **Page**.
 
     ![](./images/create-sf-page11.png " ")
 
-2. For Create a Page:
-   Select Page Type - Under **Component** tab, select **Smart Filters**.
+2. For Page Type - Select **Smart Filters**.
 
     ![](./images/create-sf-page12.png " ")
 
@@ -97,9 +96,9 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You a
     ![](./images/create-sf-page16.png " ")
 
 ## Task 3: Add Content Row to Demo Projects Application.  
-In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Content Row is a Classic Report template that is suitable for displaying most types of content. This report features a column for selection such as a checkbox or radio button, an icon, title and description, miscellaneous attributes, and actions.
+In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Content Row is a Classic Report template that is suitable for displaying most types of content. This report features a column for selection such as a checkbox or radio button, an icon, title and description, miscellaneous attributes, and actions.
 
-1. Navigate to Create button and click Page.
+1. Navigate to Create button (+ icon) and Select **Page**.
 
     ![](./images/cr-page-8.png " ")
 
@@ -136,9 +135,9 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
    Under **Settings**:
 
-     - For Overline : Select **PROJECT**
+     - For Overline : Enter **&PROJECT.**
 
-     - For Title : Select **TASK\_NAME**
+     - For Title : Enter **&TASK\_NAME.**
 
      - For Description : Enter **Task Assigned To: &ASSIGNED\_TO.**
 
@@ -154,7 +153,7 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
      - For Icon : Enter **fa-tasks**
 
-  Under **Badge**:
+   Under **Badge**:
 
      - For Label : Select **PROJECT**
 
@@ -166,11 +165,11 @@ In this lab, you create a **Content Row** report on the DEMO_/PROJECTS table. Co
 
 7. Click **Save**
 
-8. Click **Shared Components** Tab, Select **Navigation Menu** then **Edit Component**.
+8. Under **Shared Components** Tab, Select **Navigation Menu** then **Edit Component**.
 
    ![](./images/cr-navigation.png " ")
 
-9. Click Edit for **Project Task Status** and for **Image/Class**, enter **fa-layout-list-left** and Click Apply Changes.
+9. Click Edit icon for **Project Task Status** and for **Image/Class**, enter **fa-layout-list-left** and Click Apply Changes.
 
    ![](./images/cr-navigation-edit.png " ")
 

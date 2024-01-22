@@ -71,11 +71,11 @@ Now, in the search bar, click the **magnifying glass** and select **Task Name** 
 
     ![](./images/control-break1.png " ")
 
-10. The control break is now applied. You want to highlight rows that meet a      condition. Select Actions > Format > Highlight.
+10. The control break is now applied. You want to highlight rows that meet a condition. Select **Actions > Format > Highlight**.
 
     ![](./images/highlight1.png " ")
 
-11. In the Highlight dialog, enter the following:
+11. In the Highlight dialog, Enter the following:
 
     - Name: Enter **Project Costing greater than 800**
     - Background Color: Click Colors and select **Yellow**.

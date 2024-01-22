@@ -35,7 +35,7 @@ Estimated Time: 10 minutes
 
     ![Select Demo_projects table](images/new-table-name.png " ")
 
-    After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
+    After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data.
 
 ## Task 2: Create an application
 
@@ -68,7 +68,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
     When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
 
-## Task 3: Loading an Application Blueprint  
+## Task 3: Load Application Blueprint  
 
 In this task, you learn to load Demo Projects application Blueprint. You can Load an application blueprint by running the Create Application Wizard and clicking the Load Blueprint link at the top of the Create Application Wizard.
 

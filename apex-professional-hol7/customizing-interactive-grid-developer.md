@@ -46,15 +46,15 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
     ![](./images/click-page11.png " ")
 
 3. Add column group headers to the interactive grid as:
-    - Project Breakdown: Project, Task_Name columns
-    - Schedule: Start\_Date, End\_Date columns
-    - Project Financing: Cost, Budget columns  
+    - **Project Breakdown**: Project, Task_Name columns
+    - **Schedule**: Start\_Date, End\_Date columns
+    - **Project Financing**: Cost, Budget columns  
 
     a) In the page designer, under Components > Body, navigate to **Project Tasks** Interactive Grid region and right-click **Column Groups**. Select **Create Column Group**.
 
     ![](./images/create-column-group11.png " ")
 
-    b) In the Property Editor, enter **Project Breakdown** for Heading.
+    b) In the Property Editor, Enter **Project Breakdown** for Heading.
 
     ![](./images/create-column-group1.png " ")
 
@@ -130,6 +130,6 @@ You now know how to Manage and Customise the Interactive Grid as a developer. Yo
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
