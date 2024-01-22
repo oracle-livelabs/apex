@@ -16,7 +16,7 @@ Customers will be able to:
 
 Estimated Time: 20 minutes
 
-Watch the video below for a quick walk through of the lab.
+Watch the video below for a quick walkthrough of the lab.
 
 [](youtube:Cvl9xMAqnm8)
 -->
@@ -25,31 +25,30 @@ Estimated Time: 20 minutes
 
 ### Objectives
 In this lab, you:
-- Customise the Interactive Grid page you have created in **Demo Projects** Application both as an **End-user**.
+- Customize the Interactive Grid page you created in the **Demo Projects** Application as an **End-user**.
 
 ## Task 1: Customize Interactive Grid as an end-user.
 In this lab, you use and customize the display of your interactive grid. You also edit an editable interactive grid.
 
-1. Notice that the interactive grid is editable now. You see the Edit, Save, and Add Row buttons. Also, the pagination type that you have set is displayed now. Perform a non-case-sensitive search for ‘**server**’ on the entire interactive grid.  
+1. Notice that the interactive grid is editable now. You see the Edit, Save, and Add Row buttons. Also, the pagination type that you have set is displayed now. Perform a non-case-sensitive search for '**server**' on the interactive grid.  
 To do this, enter **server** in the search bar text area and click **Go**.
 
     ![](./images/search1.png " ")
 
 2. Remove the filter by clicking the **X** icon.  
-Now, in the search bar, click the **magnifying glass** and select **Task Name** column.
+In the search bar, click the **magnifying glass** and select the **Task Name** column.
 
     ![](./images/search2.png " ")
 
-3. Enter **server** in the text area and click **Go**. Notice that the search is now restricted only to the **Task Name** column.
+3. Enter **server** in the text area and click **Go**. The search is now restricted to the **Task Name** column.
 
     ![](./images/search3.png " ")
 
-4. Remove the filter by clicking the **X** icon. You want to update the Cost for the Project with Id 1. Click the field and replace the existing value with **500**.
+4. Remove the filter by clicking the **X** icon. You want to update the Cost for the Project with ID 1. Click the field and replace the existing value with **500**.
 
     ![](./images/search4.png " ")
 
-5. The changes are not saved yet. Click the **Save** button.  
-    The changes are saved now.
+5. The changes have yet to be saved. Click the **Save** button.
 
     ![](./images/search5.png " ")
 
@@ -57,7 +56,7 @@ Now, in the search bar, click the **magnifying glass** and select **Task Name** 
 
     ![](./images/single-row-view.png " ")
 
-7. You are now in the single row view of the project with Id **2**. Replace the existing value for Budget with **9000** and click **Save**. Then, click **Report View**.  
+7. You are now in the single-row View of the project with ID **2**. Replace the existing value for Budget with **9000** and click **Save**. Then, click **Report View**.  
 
     ![](./images/single-row1.png " ")  
 
@@ -87,7 +86,7 @@ Now, in the search bar, click the **magnifying glass** and select **Task Name** 
     Click **Save**.
     ![](./images/highlight2.png " ")
 
-12. Notice the rows with cost greater than 800 are highlighted.
+12. Notice the rows with a cost greater than 800 are highlighted.
 
     ![](./images/highlight3.png " ")
 
@@ -99,17 +98,17 @@ Now, in the search bar, click the **magnifying glass** and select **Task Name** 
 
     ![](./images/save-report.png " ")
 
-15. Notice that the Primary interactive grid and the interactive grid you saved now are available in the Reports drop down list.  
-You want to return back to the Primary interactive grid. Click **Primary Report** in the Reports drop down list.
+15. Notice that the primary interactive grid and the interactive grid you saved are now available in the Reports drop-down list.  
+You want to return to the Primary interactive grid. Click **Primary Report** in the Reports drop-down list.
 
     ![](./images/select-primary-report.png " ")
 
-16. You want to make few more customizations and save the interactive grid as another Private report. You do not want the **Start Date**, **End Date**, and **Assigned To** columns to be displayed in the report.
+16. You want to customize more and save the interactive grid as another Private report. You do not want the **Start Date**, **End Date**, and **Assigned To** columns to be displayed in the report.
 Click the **Start Date** column header and then click **Hide**.
 
     ![](./images/hide-column1.png " ")
 
-    Similarly perform the same step for **End Date** and **Assigned To** column.
+    Similarly, perform the same step for the **End Date** and **Assigned To** columns.
 
 17. You want to add a chart to the interactive grid. Select **Actions** > **Chart**.
 
@@ -132,7 +131,7 @@ Click the **Start Date** column header and then click **Hide**.
 
     ![](./images/save-report2.png " ")
 
-21. The report is now saved under Private in the Reports drop down list. Click the **Grid** icon.
+21. The report is now saved under Private in the Reports drop-down list. Click the **Grid** icon.
 
     ![](./images/select-grid-icon.png " ")
 
@@ -140,7 +139,7 @@ Click the **Start Date** column header and then click **Hide**.
 
     ![](./images/download-report.png " ")
 
-23. Note that the **HTML** download option is no longer available. Select **Excel** and click **Download**.
+23. the **HTML** download option is no longer available. Select **Excel** and click **Download**.
 
     ![](./images/download-report1.png " ")
 
@@ -150,14 +149,14 @@ Click the **Start Date** column header and then click **Hide**.
 
 ## Summary
 
-You now know how to Manage and Customise the Interactive report as an End-User. You may now **proceed to the next lab**.
+You now know how to Manage and Customize the Interactive report as an End-User. You may now **proceed to the next lab**.
 
 ## What's next
 
-In the next hands-on lab, you learn how to create page items and page buttons.
+In the next hands-on lab, you will learn how to create page items and page buttons.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
