@@ -20,15 +20,15 @@ You create an interactive grid on the **DEMO_PROJECTS** table in this lab. You a
 
 1. On the Workspace home page, click the App Builder icon. Select **Demo Projects** Application.
 
-    ![](./images/select-demo-projects-app1.png " ")
+    ![App Builder](./images/select-demo-projects-app1.png " ")
 
 2. Click **Create Page**.
 
-    ![](./images/create-page11.png " ")
+    ![Create Page](./images/create-page11.png " ")
 
 3. For Page Type - Select **Interactive Grid**.
 
-    ![](./images/create-ig-1.png " ")
+    ![Interactive Grid](./images/create-ig-1.png " ")
 
 4. For Page Attributes, enter the following:
 
@@ -48,22 +48,22 @@ You create an interactive grid on the **DEMO_PROJECTS** table in this lab. You a
 
    Click **Create Page**.
 
-    ![](./images/create-ig-2.png " ")
+    ![Page Attributes](./images/create-ig-2.png " ")
 
 5. Now that you have created an **Interactive Grid** Page, you can view the page by clicking **Save** and **Run Page** on the top Right.
 
-    ![](./images/view-interactive-grid11.png " ")
+    ![Save and Run Page](./images/view-interactive-grid11.png " ")
 
 ## Task 2: Add Smart Filters to Demo Projects Application.
 In this lab, you create a Smart Filters report on the DEMO_PROJECTS table.
 
 1. Navigate to Create (+ icon) and Select **Page**.
 
-    ![](./images/create-sf-page11.png " ")
+    ![Select Page](./images/create-sf-page11.png " ")
 
 2. For Page Type - Select **Smart Filters**.
 
-    ![](./images/create-sf-page12.png " ")
+    ![Smart Filters](./images/create-sf-page12.png " ")
 
 3. For **Create Smart Filters**, Enter the following:
 
@@ -83,28 +83,28 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table.
 
    Click **Next**.
 
-  ![](./images/create-sf-page13.png " ")
+  ![Create Smart Filters](./images/create-sf-page13.png " ")
 
 4. For **Select the Filters** page:
     - Leave the remaining details to defaults.
     - Click **Create Page**.
 
-    ![](./images/create-sf-page14.png " ")
+    ![Select the Filters](./images/create-sf-page14.png " ")
 
 5. Now that you have created a **Smart Filters** Page, You can view the Page by Clicking **Save and Run Page**
 
-    ![](./images/create-sf-page16.png " ")
+    ![Save and Run Page](./images/create-sf-page16.png " ")
 
 ## Task 3: Add Content Row to Demo Projects Application.  
 You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Content Row is a Classic Report template suitable for displaying most types of content. This report features a column for selection, such as a checkbox or radio button, an icon, a title and description, miscellaneous attributes, and actions.
 
 1. Navigate to Create button (+ icon) and Select **Page**.
 
-    ![](./images/cr-page-8.png " ")
+    ![Select Page](./images/cr-page-8.png " ")
 
 2. For Create a Page, Select **Blank Page**.
 
-    ![](./images/cr-blank-page.png " ")
+    ![Blank Page](./images/cr-blank-page.png " ")
 
 3. For **Create a Blank Page**:
     - For Page Number: Enter **3**
@@ -112,11 +112,11 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
     - Leave the remaining details to defaults.
     - Click **Create Page**.
 
-   ![](./images/cr-create-page.png " ")
+   ![Blank Page](./images/cr-create-page.png " ")
 
 4. Under Page Rendering, Right-click Body and Select **Create Region**.
 
-    ![](./images/cr-create-region.png " ")
+    ![Create Region](./images/cr-create-region.png " ")
 
 5. In the Property Editor, Enter the following:  
     Under **Identification**:
@@ -129,7 +129,7 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
       - For Table Source: Select **DEMO\_PROJECTS**
 
-      ![](./images/cr-region-details.png " ")
+      ![Create Region](./images/cr-region-details.png " ")
 
 6. Click on Attributes and Enter the following:
 
@@ -143,9 +143,9 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
      - For Miscellaneous: Enter **Cost: &COST.**
 
-    ![](./images/cr-attributes.png " ")
+    ![Attributes](./images/cr-attributes.png " ")
 
-    ![](./images/cr-attributes1.png " ")
+    ![Attributes](./images/cr-attributes1.png " ")
 
      - Enable **Display Avatar** and **Display Badge**
 
@@ -161,23 +161,23 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
      - For State: Select **ASSIGNED\_TO**
 
-  ![](./images/cr-attributes2.png " ")
+  ![Attributes](./images/cr-attributes2.png " ")
 
 7. Click **Save**
 
 8. Under **Shared Components** Tab, Select **Navigation Menu** then **Edit Component**.
 
-   ![](./images/cr-navigation.png " ")
+   ![Navigation Menu](./images/cr-navigation.png " ")
 
 9. Click Edit icon for **Project Task Status** and for **Image/Class**, enter **fa-layout-list-left** and Click Apply Changes.
 
-   ![](./images/cr-navigation-edit.png " ")
+   ![Navigation Menu](./images/cr-navigation-edit.png " ")
 
-   ![](./images/cr-report-icon.png " ")
+   ![Navigation Menu](./images/cr-report-icon.png " ")
 
 10. Click **Run Application**.
 
-    ![](./images/cr-run-page.png " ")
+    ![Run Application](./images/cr-run-page.png " ")
 
 ## Summary
 You now know how to create interactive grid, smart filters and Content row pages. You may now **proceed to the next lab**.
