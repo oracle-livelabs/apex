@@ -17,17 +17,16 @@ In this lab, you:
 
     ![Click Timeline](images/social-media-login.png " ")
 
-2. Click **Add Post** Button available on the Navigation Bar.
+2. Click **Add Post** on the Navigation Bar.
 
-3. Drag and Drop the image from your local system or use the Choose File button to upload image from your local system. Then, Click **Post**.
+3. Drag and Drop the image from your local system or use the Choose File button to upload image from your local system. Then, click **Post**.
 
     ![Click Timeline](images/add-post.png " ")
 
- You can see that now the image is posted. Also, click on the information icon to view the AI response.    
+The image is posted on your timeline. 
 
-    ![Click Timeline](images/posted.png " ")
-
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches and displays all the images that contain the corresponding search term. In the following example, the app displays all the images containing a 'Sky'.
+4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches and displays all the images that contain the corresponding search term. 
+In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images that has sky in them.
 
     ![Click Timeline](images/search-result.png " ")
 

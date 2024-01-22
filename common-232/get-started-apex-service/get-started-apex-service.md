@@ -88,3 +88,8 @@ In this part, you will create an Oracle APEX Application Development Service tri
 12. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
   ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
+
+  ## **Acknowledgements**
+
+   - **Author** -  Apoorva Srinivas, Senior Product Manager
+   - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
