@@ -177,7 +177,7 @@ Add a region to display Order details.
             <b> Total: </b>&TOTAL.    
             </copy>
             ```
-      ![Define Attributes](./images/create-sub-region13.png " ")
+      ![Define Attributes](./images/create-sub-region23.png " ")
 
 ## Task 8: Add Items Region
 Add a region to display items in the Order.
@@ -247,7 +247,7 @@ You now know how to add a new page to your existing APEX Application and add reg
 ## What's next
 In the next hands-on lab, you learn how to create and develop various reports, including Interactive Grids, Smart Filters, Cards, and Faceted Searches.
 
-## Acknowledgments
+## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024

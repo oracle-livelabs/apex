@@ -180,11 +180,9 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
     ![](./images/cr-run-page.png " ")
 
 ## Summary
-
 You now know how to create interactive grid, smart filters and Content row pages. You may now **proceed to the next lab**.
 
-## Acknowledgments
-
+## Acknowledgements
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

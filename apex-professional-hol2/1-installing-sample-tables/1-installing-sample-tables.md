@@ -45,7 +45,7 @@ In this lab, you will:
 ## Summary
 You now know how to install sample tables and views from Sample Datasets. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - Ankita Beri, Product Manager

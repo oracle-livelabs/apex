@@ -200,7 +200,7 @@ Click **Run Application**.
 
 You can now create an application with several page types based on existing database objects. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
