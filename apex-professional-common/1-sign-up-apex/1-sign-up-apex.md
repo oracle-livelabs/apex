@@ -156,7 +156,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![Autonomous Database Details page](images/status-provisioning.png " ")
 
-          to:
+    to
 
     ![Autonomous Database Details page](images/status-available.png " ")
 
@@ -246,7 +246,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     ![Create instance page](images/apex-service-settings-2.png " ")
 
-    ![Create instance page](images/APEX-service-settings-3.png " ")
+    ![Create instance page](images/apex-service-settings-3.png " ")
 
 6. The APEX Instances Details displays again.
 
