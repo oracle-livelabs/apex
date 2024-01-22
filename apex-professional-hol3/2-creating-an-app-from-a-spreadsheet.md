@@ -3,15 +3,15 @@
 In this lab, you will learn how to create an APEX application using data imported from a spreadsheet.
 
 ## Introduction
-In this lab, you build a simple application based on a spreadsheet. Keep in mind that APEX is great for a variety of apps, from simple ones like this to large, sophisticated apps based on local database objects, REST enabled SQL objects, and even REST APIs.
+In this lab, you build a simple application based on a spreadsheet. Remember that APEX is great for various apps, from simple ones like this to large, sophisticated apps based on local database objects, REST-enabled SQL objects, and even REST APIs.
 
 While APEX developers spend the majority of their time in the App Builder, you should also investigate the SQL Workshop, where you can create and maintain database objects, Team Development, where you can track large APEX development projects, and the App Gallery, which contains numerous productivity and sample apps that can be installed within minutes.
 
 Estimated Time: 10 minutes
 
-## Task 1: Load Projects data  
+## Task 1: Load Project data  
 
-1.  From your APEX workspace home page, click **App Builder**.
+1. From your APEX workspace home page, click **App Builder**.
 
 2.  Click **Create**.
 
@@ -21,9 +21,9 @@ Estimated Time: 10 minutes
 
     ![Create application from a file](images/from-a-file.png " ")
 
-    When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
+    When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, copy and paste CSV data or load sample data.
 
-4.  Within the Load Data wizard, click the **Choose File** button.
+4. click the Load Data Wizard's **Choose File** button.
 
     ![Choose file](images/choose-file.png " ")
 
@@ -31,7 +31,7 @@ Estimated Time: 10 minutes
 
     ![select demo_projects file](images/select-demo-projects.png " ")
 
-6.  Review the parsed data. Enter **DEMO_PROJECTS** for Table Name and Click **Load Data**.
+6. Review the parsed data. Enter **DEMO_PROJECTS** for Table Name and Click **Load Data**.
 
     ![Select Demo_projects table](images/new-table-name.png " ")
 
@@ -39,22 +39,22 @@ Estimated Time: 10 minutes
 
 ## Task 2: Create an application
 
-The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
+The Data Load wizard has created a new table and populated that table with the records from the sample data. Now, you can create an app based on this new table.
 
-1. In the Load Data dialog, verify that 70 rows have been loaded into the **DEMO_PROJECTS** table, then click **Create Application**.
+1. verify that 70 rows have been loaded into the **DEMO_PROJECTS** table in the Load Data dialogue, then click **Create Application**.
 
     ![Data loaded into Demo_projects](images/data-loaded.png " ")
 
-2. Now you are going to remove the below Pages from the Create Application Page.  
+2. You will remove the pages below from the Create Application page.  
     - Demo Projects Search  
     - Demo Projects Report  
     - Calendar
 
-   On the Create Application page, Click on **Edit** button next to **Demo Projects Search**.
+   On the Create Application page, Click the **Edit** button next to the **Demo Projects Search**.
 
     ![Edit Demo Projects Search](images/delete-pages.png " ")
 
-3. In the Add Faceted Search Page, Click on **Delete** Button and then Confirm it by Clicking **OK**.
+3. Click on the **Delete** Button in the Add Faceted Search Page and then Confirm it by Clicking **OK**.
 
     ![Click Delete](images/delete-page1.png " ")
 
@@ -66,13 +66,13 @@ The Data Load wizard has created a new table and populated that table with the r
 
     ![Create application2](images/create-application2.png " ")
 
-    When the wizard finishes creating the application, you will be redirected to the application's home page in the App Builder.
+    When the wizard finishes creating the Application, you will be redirected to the Application's home page in the App Builder.
 
 ## Task 3: Load Application Blueprint  
 
-In this task, you learn to load Demo Projects application Blueprint. You can Load an application blueprint by running the Create Application Wizard and clicking the Load Blueprint link at the top of the Create Application Wizard.
+In this task, you learn to load the Demo Projects application Blueprint. You can Load an application blueprint by running the Create Application Wizard and clicking the Load Blueprint link at the top of the Create Application Wizard.
 
-1. First, you delete Demo Projects application. Select **Demo Projects** application on workspace homepage.
+1. First, you delete the Demo Projects application. Select **Demo Projects** Application on the workspace homepage.
 
     ![Select Demo demo projects](images/demo-projects.png " ")
 
@@ -84,11 +84,11 @@ In this task, you learn to load Demo Projects application Blueprint. You can Loa
 
     ![Edit Application Definition](images/delete-demo-projects.png " ")
 
-4. On Confirm Delete dialog, Click **Permanently Delete Now**.
+4. Click **Permanently Delete Now**on the Confirm Delete dialogue.
 
    ![Delete Permanently](images/delete-app.png " ")
 
-5. To restore back the application using Blueprint, Click **Create** on Workspace homepage.
+5. To restore the Application using Blueprint, Click **Create** on the Workspace homepage.
 
     ![Click Create](images/blueprint-create.png " ")
 
@@ -110,11 +110,11 @@ In this task, you learn to load Demo Projects application Blueprint. You can Loa
 
 ## Task 4: Configure Progressive Web App Attributes
 
-1. Navigate to the Edit Application Definition page. From the Application home page, you can access the Edit Application Definition page using **Shared Components**.
+1. Navigate to the Edit Application Definition page. You can access the Edit Application Definition page from the Application home page using **Shared Components**.
 
     ![Select Shared Components](images/navigate-to-shared-components1.png " ")
 
-2. In the Shared Components page, under User Interface, Select **Progressive Web App**.
+2. Select **Progressive Web App**under User Interface on the Shared Components page.
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
@@ -125,24 +125,27 @@ In this task, you learn to load Demo Projects application Blueprint. You can Loa
 
 ## Task 5: Run and Explore the New App
 
-1.  Navigate back to **DEMO\_PROJECTS** application and then click **Run Application**. This will open the runtime application in a new browser tab, allowing you to see how end users will view the app.
+1.  Navigate back to **DEMO\_PROJECTS** application and then click **Run Application**. This will open the runtime Application in a new browser tab, allowing you to see how end users will view the app.
 
     ![Run Application](images/run-application1.png " ")
 
-2.  Enter your user credentials and click **Sign In**.
+2. Enter your user credentials and click **Sign In**.
 
     *Note: Use the same Username and Password you used to sign into the APEX Workspace.*
 
     ![Sign In](images/sign-in3.png " ")
 
-3. Click on the **Install App** Icon on Top Right of the page to install Application to your local System.
+3. Click on the **Install App** Icon on the Top Right of the page to install the Application to your local System.
 
     ![Click on Install App](images/install-app1.png " ")
 
 ## Summary
-You now know how to create an application from a spreadsheet by either dragging and dropping a file or loading sample data for training purposes.
+You now know how to create a spreadsheet application by dragging and dropping a file or loading sample data for training purposes.
+
+## What's next
+In the next hands-on lab, you learn to Navigate and Review the Page Designer panes. You know how to create a normal page, add a region, sub-region, and page items, and lock and unlock pages.
 
 ## Acknowledgements
  - **Author** -  Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager.
  - **Contributors** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

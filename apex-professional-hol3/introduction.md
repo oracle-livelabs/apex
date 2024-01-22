@@ -1,10 +1,10 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
-### Precap
-In the preceding hands-on workshop, you gained knowledge on installing sample tables. You acquired skills in appending new columns to pre-existing tables, filling the new columns with data, and generating lookup tables. Additionally, you were assigned the task of crafting a package. Finally, you mastered the creation of database objects through Quick SQL, loading data with the Data Generator, and employing the Data Workshop page for data loading.
+### Recap
+In the preceding hands-on workshop, you gained knowledge on installing sample tables. You acquired skills in appending new columns to pre-existing tables, filling the new columns with data, and generating lookup tables. Additionally, you were assigned the task of crafting a package. Finally, you mastered creating database objects through Quick SQL, loading data with the Data Generator, and employing the Data Workshop page for data loading.
 
 In this lab, you will create a database application based on existing tables. Then, You will create an application from a Spreadsheet.
 
@@ -12,7 +12,7 @@ Estimated Time: 25 minutes
 
 ### Objectives
 
-* Create an application using the tables and data that you already have installed.
+* Create an application using the tables and data you have installed.
 * Create a Database application from a file.
 * Create an application from Spreadsheet.
 * Configure Progressive Web application.

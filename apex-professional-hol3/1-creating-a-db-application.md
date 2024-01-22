@@ -8,13 +8,13 @@ In this lab, you will create a database application based on existing tables.
 
 Estimated Time: 15 minutes
 
-<!--Watch the video below for a quick walk through of the lab.
+<!--Watch the video below for a quick lab walkthrough.
 
 [](youtube:ssUKy-bZGUw)-->
 
 ### Objectives
 
-- Create an application using the tables and data that you already have installed.
+- Create an application using the tables and data you have installed.
 - Create a Database application from a file.
 
 ## Task 1: Create an Application based on Existing Tables.
@@ -31,15 +31,15 @@ Estimated Time: 15 minutes
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name enter **Online Shopping Application**.
+1. In the Create Application wizard, for Name, enter **Online Shopping Application**.
 
-   *Note that, in the create application wizard the icon and color of the icon will be a random selection so most likely will not be the same color or icon that they see in the screenshot.*
+   *Note that the icon and colour in the create application wizard will be randomly selected, so they will most likely not be the same color or icon they see in the screenshot.*
 
     ![Name the application](./images/name-the-application1.png " ")
 
 ## Task 3: Add the Dashboard Page
 
-A dashboard page is a great way to show important information using various charts. When you installed the Sample Dataset, it also created a number of views, which join data from various tables. These views are ideal as the basis for the dashboard charts.
+A dashboard page is a great way to show critical information using various charts. Installing the Sample Dataset also created several views, which join data from multiple tables. These views are ideal as the basis for the dashboard charts.
 
 1. In the Create Application wizard, click **Add Page**.
 
@@ -58,7 +58,7 @@ A dashboard page is a great way to show important information using various char
 
     ![Add Chart1](./images/chart11.png " ")
 
-4. Click Chart 2, Enter the following:
+4. Click Chart 2; enter the following:
 
     * For Chart Type – Select **Pie**
     * For Chart Name – Enter **Top 5 Stores**
@@ -69,7 +69,7 @@ A dashboard page is a great way to show important information using various char
 
     ![Add Chart2](./images/chart22.png " ")
 
-5. Click Chart 3, Enter the following:
+5. Click Chart 3; enter the following:
 
     * For Chart Type – Select **Pie**
     * For Chart Name – Enter **Order Status**
@@ -95,7 +95,7 @@ A dashboard page is a great way to show important information using various char
 
   ![Set as Administration Page](./images/set-as-admin-page.png " ")
 
-   *Note - Setting a page as Administration Page will make that only certain users can run the page. In this case, only users with Administration Rights will be able to run the Dashboard page, which means that this page will require authentication.*
+   *Note - Setting a page as an Administration Page will ensure that only certain users can run the page. In this case, only users with Administration Rights can run the Dashboard page, which means this page will require authentication.*
 
 8. Click **Add Page**.
 
@@ -146,8 +146,8 @@ A dashboard page is a great way to show important information using various char
     ![Select interactive report](./images/select-ir-report.png " ")
 
 3. On the Report Page, enter the following:
-    - For Page Name : Enter **Manage Products**
-    - For Table : Select **PRODUCTS**
+    - For Page Name: Enter **Manage Products**
+    - For Table: Select **PRODUCTS**
 
 <!--
 4. Expand Lookup columns, and enter the following:
@@ -167,7 +167,7 @@ A dashboard page is a great way to show important information using various char
 
 ## Task 7: Set Features
 
-Features are a set of optional application capabilities in Oracle APEX that you can include in your new application. Access Control enables role-based user authorization with a single click.
+Features are a set of optional application capabilities in Oracle APEX that you can include in your new Application. Access Control enables role-based user authorization with a single click.
 
 1. Under **Features** section, check **Install Progressive Web App** and **Access Control**.
 
@@ -175,13 +175,13 @@ Features are a set of optional application capabilities in Oracle APEX that you 
 
 ## Task 8: Finish Creating the Application
 
-Now that you have added all the pages, it is time to create the app and review it.
+Now that you have added all the pages, it is time to create and review the app.
 
-1. Scroll to the bottom of the page, and click **Create Application**.
+1. Scroll to the bottom of the page and click **Create Application**.
 
     ![Click create application](./images/click-create-application.png " ")
 
-2. Once the application is created, you will find the new app on the application home page.
+2. Once the Application is created, you will find the new app on the application home page.
 Click **Run Application**.
 
     ![Run application](./images/run-application11.png " ")
@@ -192,16 +192,16 @@ Click **Run Application**.
 
     ![Online shopping application Sign In](./images/sign-in2.png " ")
 
-    The new application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
+    The new Application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
 
     ![Online shopping application Sign In](./images/sign-in31.png " ")
 
 ## Summary
 
-You now know how to create an application with a number of different page types based on existing database objects. You may now **proceed to the next lab**.
+You can now create an application with several page types based on existing database objects. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2023
