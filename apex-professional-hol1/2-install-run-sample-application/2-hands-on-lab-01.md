@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this lab, you will navigate through the major components of Oracle APEX. This lab also covers installing and running a sample application.
+In this lab, you will navigate the significant components of Oracle APEX. This lab also covers installing and running a sample application.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 In this lab, you will:
-- Navigate through the major Components of Oracle APEX
+- Navigate through the significant Components of Oracle APEX
 - Install and run a packaged application
 
 ## Task 1: Major Components of APEX
@@ -42,7 +42,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     ![Gallery](images/gallery.png " ")
 
-6. The Gallery Page displays a collection of starter Applications, Sample Applications and Custom Applications that you can install in your workspace.
+6. The Gallery Page displays a collection of starter Applications, Sample Applications and Custom Applications that you can install in your Workspace.
 
    ![Sample Applications](images/gallery-page2.png " ")
 
@@ -54,11 +54,11 @@ This lab covers installing and running a sample application.
 
    ![Click Sample Apps](images/gallery-page3.png " ")
 
-2. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install** Button.
+2. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box, navigate to **Sample Reporting**, and click the **Install** Button.
 
   ![Install Sample Reporting](images/install-sample-app.png " ")
 
-3. On the Install Application page, observe that your app is currently installing.
+3. On the Install Application page, observe that your app is currently installed.
 
    ![Install Application](images/installing-sample-app.png " ")
 
@@ -84,7 +84,7 @@ x
    ![View Reports](images/display-as-report1.png " ")
 
 ## Summary
-You have now learned how to navigate the major components of Oracle APEX, install, and run a packaged application. You are now ready to **proceed to the next lab**.
+You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
 
 ## What's next
 In the next hands-on lab, you'll gain practical experience in utilizing SQL Workshop. You'll explore tasks such as installing a Sample Dataset, extending existing table­s by adding new columns, populating new columns, creating lookup tables, developing Package­s, and utilizing various utilities such as Quick SQL, Data Workshop, and Data Generator.

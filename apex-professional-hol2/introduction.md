@@ -1,10 +1,12 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
-### Precap
-In the last hand-on-labs, you learnt how to create an APEX Workspace and how to Navigate through the major Components of Oracle APEX and Install and run a packaged application.
+### Recap
+In the last hands-on, you learned how to create an APEX Workspace, navigate the major components of Oracle APEX, and install and run a packaged application.
+
+Estimated Time: 50 minutes
 
 ### Objectives
 
@@ -13,9 +15,7 @@ In the last hand-on-labs, you learnt how to create an APEX Workspace and how to 
 * Add new columns to the existing Products table, Populate the new columns and Create lookup tables.
 * Create a package to manage the Shopping Cart.
 * Create database objects using Quick SQL.
-* Load data using Data generator and Data Workshop page.
-
-Estimated Time: 50 minutes
+* Load data using the Data generator and Data Workshop page.
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 

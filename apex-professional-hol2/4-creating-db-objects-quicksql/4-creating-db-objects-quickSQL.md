@@ -2,19 +2,14 @@
 
 ## Introduction
 
-Memorizing the SQL to create and maintain database objects can be difficult. However, there are tools that can generate the code for you based on a shorthand syntax or a graphical user interface. In this lab, you will create database objects using Quick SQL and then view the objects in Database Actions. Then you will then use Data Workshop page to load data from a file into your workspace.
-
-### Precap
-
-In the previous hands-on-workshop, you acquired knowledge on signing up for either the APEX Application Development Service, the Oracle Autonomous Database cloud service, or the apex.oracle.com service. Additionally, you successfully installed and ran a packaged application.
-
-### Objectives
-
-- Create database objects using Quick SQL
-- Load data using Data Generator
-- Load data using Data Workshop page.
+Memorizing the SQL to create and maintain database objects can be difficult. However, some tools can generate the code based on a shorthand syntax or a graphical user interface. In this Lab, you will create database objects using Quick SQL and then view the objects in Database Actions. You will then use the Data Workshop page to load data from a file into your workspace.
 
 Estimated Time: 15 minutes
+
+### Objectives
+- Create database objects using Quick SQL
+- Load data using Data Generator
+- Load data using the Data Workshop page.
 
 ## Task 1: Create database objects using Quick SQL
 
@@ -42,13 +37,13 @@ Estimated Time: 15 minutes
     ```
     *Note that the Indentation from the code you copied should be similar to the one we have in the screenshot below*
 
-3. Review the shorthand code. How many tables will be created and how are they related? What types of columns and constraints will be created for the tables? Note that the **Help** button provides details on the shorthand syntax along with several examples of its usage.
+3. Review the shorthand code. You can see how Numerous tables are created and how they are related. What types of columns and constraints will be created for the tables? Note that the **Help** button details the shorthand syntax and several examples of its usage.
 
     When ready, in the Quick SQL (left pane) toolbar, click **Review and Run**.
 
    ![Generate SQL1](./images/generate-sql1.png " ")
 
-4. Review the SQL that is generated in the right-hand pane, then for Script Name enter **Employee Department Details**, and click **Run**.  
+4. Review the SQL generated in the right-hand pane, then for Script Name, enter **Employee Department Details**, and click **Run**.  
 
    ![Generated SQL1](images/save-sql-scripts1.png " ")
 
@@ -60,11 +55,11 @@ Estimated Time: 15 minutes
 
     ![SQL Script Results](images/results.png " ")
 
-7. To view the database objects that were created, click the arrow  **'⌄'** in the **SQL Workshop** tab and then select **Object Browser**.
+7. To view the created database objects, click the arrow  **'⌄'** in the **SQL Workshop** tab and then select **Object Browser**.
 
     ![Select Object Browser](images/navigate-to-object-browser5.png " ")
 
-8. Select the **EMPLOYEES** table and then Click the **Data** tab to see the data that was loaded.
+8. Select the **EMPLOYEES** table and then Click the **Data** tab to see the loaded data.
 
     ![Select Departments table](images/select-departments-table.png " ")
 
@@ -84,7 +79,7 @@ In this task, you learn to Use the Data Generator utility to create Blueprints a
 
     ![Click Use Existing Tables](images/use-existing-tables.png " ")
 
-4. Under Select from list tab , Choose an existing table in your workspace schema to base the blueprint on.
+4. Under the Select from List tab, choose an existing table in your workspace schema on which to base the blueprint.
 
     - For Blueprint Name - **Emp_Details**.
 
@@ -102,15 +97,15 @@ In this task, you learn to Use the Data Generator utility to create Blueprints a
 
     ![Click Generate Data](images/click-generate-data.png " ")
 
-8. In Generate Blueprint Data dialog, for Action Select **Insert into Database** and click **Insert Data**.
+8. In the Generate Blueprint Data dialog, for Action, Select **Insert into Database** and click **Insert Data**.
 
     ![Insert Data](images/insert-data.png " ")
 
-9. To see newly generated data in the Employees table, close the Generate Blueprint dialog and, navigate to **SQL workshop** and Select **Object browser**.    
+9. To see newly generated data in the Employees table, close the Generate Blueprint dialog, navigate to **SQL workshop**, and select **Object browser**.    
 
     ![Object browser](images/object-browser6.png " ")
 
-10. Select **Data** tab under Employees table, 50 new rows are added in the employees table.    
+10. Select the **Data** tab under the Employees table; 50 new rows are added to the Employees table.    
 
     ![Employees data](images/employees-data.png " ")
 
@@ -134,13 +129,13 @@ In this step, you will learn how to create a table and Load data using the Data 
 
    ![Select file](images/select-appropriate-file1.png " ")
 
-  *Note: If the uploaded XLSX file contains multiple worksheets, Load Data wizard picks the first sheet by default. To load another sheet, pick it from the Select Sheet select list. The First lines contains headers checkbox works similar to CSV files. The same is true for the Configure dialog, the behaviour is the same as it is for CSV files. Uploading XLSX files is limited to 20MB for each file.*
+  *Note: If the uploaded XLSX file contains multiple worksheets, the Load Data wizard picks the first sheet by default. To load another sheet, pick it from the Select Sheet select list. The First line contains a headers checkbox that works similarly to CSV files. The same is true for the Configure dialog; the behaviour is the same as for CSV files. Uploading XLSX files is limited to 20MB for each File.*
 
-5. Under **Load Data**, Edit the Table Name field and provide an appropriate name. In this lab, you will set the Table Name as **Projects**. Then Click **Load Data**
+5. Under **Load Data**, Edit the Table Name field and provide an appropriate name. You will set the Table Name in this Lab as **Projects**. Then Click **Load Data**
 
    ![Load data](images/load-data1.png " ")
 
-6. Once Data Loading is finished, a success message is displayed. If some rows cannot be loaded to the target table, they will be stored to the error table and error table is displayed. Then click **View Table**.
+6. Once Data Loading is finished, a success message is displayed. If some rows are not loaded to the target table, then they will be stored in the error table, and the error table will be displayed. Then click **View Table**.
 
    ![Data loaded successfully](images/data-loaded-successfully.png " ")
 
@@ -148,17 +143,17 @@ In this step, you will learn how to create a table and Load data using the Data 
 
     ![Select table Projects](images/navigate-to-table1.png " ")
 
-8. Click the **Data** tab to see the data that was loaded.
+8. Click the **Data** tab to see the loaded data.
 
     ![View table Projects](images/view-projects-table-data1.png " ")
 
 ## Summary
-This completes the Lab. At this point, you know how to use Quick SQL to generate database objects using a SQL shorthand. You also know how to use Data Workshop utility to load data.
+You know how to use Quick SQL to generate database objects using a SQL shorthand. You also learn how to use the Data Workshop utility to load data.
 
 ## What's next
-In the upcoming hands-on workshop, you'll be tasked with developing a database application utilizing pre-existing tables. This involves incorporating various pages such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
+You can develop a database application utilizing pre-existing tables in the upcoming hands-on workshop. It incorporates various pages, such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
 
 ## Acknowledgements
 * **Author** - Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager
 * **Contributors** - Ankita Beri, Product Manager
-* **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+* **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
