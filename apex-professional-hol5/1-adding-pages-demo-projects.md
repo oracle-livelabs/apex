@@ -13,10 +13,10 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Add Interactive Grid to Demo Projects Application.
-In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You already created the **Demo Projects** application in HOL-3. Now, you create an **Interactive Grid** in the **Demo Projects** application.
+You create an interactive grid on the **DEMO_PROJECTS** table in this lab. You already created the **Demo Projects** application in HOL-3. Now, you create an **Interactive Grid** in the **Demo Projects** application.
 
 1. On the Workspace home page, click the App Builder icon. Select **Demo Projects** Application.
 
@@ -34,9 +34,9 @@ In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You 
 
    Under **Page Definition**:
 
-    - For Page Number : Enter **4**.
+    - For Page Number: Enter **4**.
 
-    - For Page Name : Enter **Project Tasks**  
+    - For Page Name: Enter **Project Tasks**  
 
    Under **Data Source**:
 
@@ -96,7 +96,7 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table.
     ![](./images/create-sf-page16.png " ")
 
 ## Task 3: Add Content Row to Demo Projects Application.  
-In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Content Row is a Classic Report template that is suitable for displaying most types of content. This report features a column for selection such as a checkbox or radio button, an icon, title and description, miscellaneous attributes, and actions.
+You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Content Row is a Classic Report template suitable for displaying most types of content. This report features a column for selection, such as a checkbox or radio button, an icon, a title and description, miscellaneous attributes, and actions.
 
 1. Navigate to Create button (+ icon) and Select **Page**.
 
@@ -114,20 +114,20 @@ In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Con
 
    ![](./images/cr-create-page.png " ")
 
-4. Under Page Rendering, Right Click Body and Select **Create Region**.
+4. Under Page Rendering, Right-click Body and Select **Create Region**.
 
     ![](./images/cr-create-region.png " ")
 
 5. In the Property Editor, Enter the following:  
     Under **Identification**:
 
-      - For Title : Enter **Project Task Status**
+      - For Title: Enter **Project Task Status**
 
-      - For Type : Select **Content Row**
+      - For Type: Select **Content Row**
 
     Under **Source**:
 
-      - For Table Source : Select **DEMO\_PROJECTS**
+      - For Table Source: Select **DEMO\_PROJECTS**
 
       ![](./images/cr-region-details.png " ")
 
@@ -135,9 +135,9 @@ In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Con
 
    Under **Settings**:
 
-     - For Overline : Enter **&PROJECT.**
+     - For Overline: Enter **&PROJECT.**
 
-     - For Title : Enter **&TASK\_NAME.**
+     - For Title: Enter **&TASK\_NAME.**
 
      - For Description : Enter **Task Assigned To: &ASSIGNED\_TO.**
 
@@ -151,15 +151,15 @@ In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Con
 
    Under **Avatar**:
 
-     - For Icon : Enter **fa-tasks**
+     - For Icon: Enter **fa-tasks**
 
    Under **Badge**:
 
-     - For Label : Select **PROJECT**
+     - For Label: Select **PROJECT**
 
-     - For Value : Select **STATUS**
+     - For Value: Select **STATUS**
 
-     - For State : Select **ASSIGNED\_TO**
+     - For State: Select **ASSIGNED\_TO**
 
   ![](./images/cr-attributes2.png " ")
 
@@ -181,10 +181,10 @@ In this lab, you create a **Content Row** report on the DEMO_PROJECTS table. Con
 
 ## Summary
 
-You now know how to create interactive grid ,smart filters and Content row pages. You may now **proceed to the next lab**.
+You now know how to create interactive grid, smart filters and Content row pages. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
