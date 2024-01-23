@@ -9,17 +9,18 @@ In this lab, you will learn how to make some pages publicly accessible.
 Estimated Time: 15 minutes
 
 ### Objectives
+* Configure Search Configurations
+
+* Create Standard Search Page
 
 * Set the following pages as public pages:
-      - Products
-      - Shopping Cart
-      - Order Information
+    - Products
+    - Shopping Cart
+    - Order Information
 
 * Disable the Navigation Menu
 
 * Enhance the Navigation Bar
-
-* Configure Search 
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 

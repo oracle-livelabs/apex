@@ -29,7 +29,7 @@ In this lab, you will:
 
 ## Task 1: Set Products page as the Home Page.
 
-In this Lesson, you will set the products page as Home page and then you will remove the **Home** page under Navigation Menu.
+In this task, you will set the products page as Home page and then you will remove the **Home** page under Navigation Menu.
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
 
@@ -54,7 +54,7 @@ Navigate to **Shared Components**.
 
     ![Click on Application Id](./images/navigate-to-sc2.png " ")
 
-6. Under **Navigation**, Select **Navigation Menu**.
+6. Under **Navigation and Search**, Select **Navigation Menu**.
 
     ![Navigate to Navigation Menu](./images/select-navigation-menu.png " ")
 
@@ -94,11 +94,11 @@ Follow these steps for the four listed pages:
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and select **Page 15** from Dialog Page. Repeat steps 2-4.
+4. Navigate to Page Finder and select **Page 15** from Dialog Page. Repeat steps 2-3.
 
     ![Navigate to Page finder](./images/navigate-to-page-finder.png " ")
 
-5. Similarly, repeat steps 2-4 for **Page 16: Shopping Cart**, **Page 17: Add to Cart** and **Page 18: Search Customer Order Product Details**.
+5. Similarly, repeat steps 2-3 for **Page 16: Shopping Cart**, **Page 17: Add to Cart** and **Page 18: Search Customer Order Product Details**.
 
 ## Task 3: Remove the Navigation Menu
 Since the home page is the Products page and this is a public access page, we do not need a navigation menu.
@@ -191,11 +191,9 @@ Add a new navigation bar entry to allow:
 You now know how to enhance and mantain both navigation menu and navigation bar. You may now **proceed to the next lab**.-->
 
 ## Summary
-
 You now know how to set page as public and manage Navigation bar and Navigation menu. You may now **proceed to the next lab**.
 
 ## Acknowledgments
-
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri,  Senior Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri,  Senior Product Manager, January 2024

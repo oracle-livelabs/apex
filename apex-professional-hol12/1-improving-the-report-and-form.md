@@ -67,7 +67,7 @@ Estimated Time: 20 minutes
 
     ![Link a column](./images/linking-a-form2.png " ")
 
-3. Click **Save** and then run the application. Navigate to the **Manage Products** page in the runtime environment.
+3. Click **Save** and then run the application. Navigate to **Administration** > **Manage Products** page in the runtime environment.
 
 4. Now, In the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
 
@@ -77,7 +77,7 @@ Estimated Time: 20 minutes
 
 ## Task 3: Enhance the Form
 
-1.  Navigate to the **Page 21** in the **App Builder**.
+1.  Navigate to the **Page 21** in the **Page Designer**.
 
     ![Navigate to Page 21](images/navigate-to-page21.png " ")
 
@@ -93,7 +93,7 @@ Estimated Time: 20 minutes
 
   ![Enhance form2](images/enhance-form2.png " ")
 
-4. You now need to Focus on **First item on Page**.  In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to Navigation and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
+4. You now need to Focus on **First item on Page**.  In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to Navigation Menu and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
 
   ![Enhance form3](images/enhance-form3.png " ")
 
@@ -102,15 +102,12 @@ Estimated Time: 20 minutes
   ![Enhanced Form](images/enhanced-form.png " ")
 
 ## Summary
-
 You now know how to Create and Customize a Form and then link the form to an Interactive Report. You may now **proceed to the next lab**.
 
 ## What's next
-
 In the next lab, you learn how to make some pages publicly accessible, allowing users to access specific pages in your application without requiring them to log in.
 
 ## Acknowledgements
-
  - **Author/Contributors** -  Roopesh Thokala, Senior Product Manager
  - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

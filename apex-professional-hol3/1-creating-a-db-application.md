@@ -130,13 +130,13 @@ A dashboard page is a great way to show critical information using various chart
     - PRODUCT_REVIEWS
     - STORES
 
-  ![](./images/edit-multiple-reports.png " ")
+  ![Administration Pages](./images/edit-multiple-reports.png " ")
 
 2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
 
 3. Click **Save Changes**.
 
-    ![](./images/set-as-admin-page2.png " ")
+    ![Administration Pages](./images/set-as-admin-page2.png " ")
 
 ## Task 6: Add Manage Products Page
 
@@ -197,11 +197,9 @@ Click **Run Application**.
     ![Online shopping application Sign In](./images/sign-in31.png " ")
 
 ## Summary
-
 You can now create an application with several page types based on existing database objects. You may now **proceed to the next lab**.
 
 ## Acknowledgements
-
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
