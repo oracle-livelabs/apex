@@ -33,7 +33,7 @@ To Generate the API Keys using OCI Console:
 
 4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
-5. Click **Download Private Key** and save it to your local device. You do not need to download the public key.
+5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
    *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
@@ -41,17 +41,17 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/add-api-key.png " ")
 
-7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box. You will use this information in Oracle APEX Web Credentials.
+7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information for creating Oracle APEX Web Credentials.
 
     ![Profile Menu](images/configuration-preview.png " ")
 
 ## Task 2: Create Web Credentials in Oracle APEX
 
-Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services.
+Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
 
-Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible in all applications.
+Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible to all applications.
 
-To create web credentials in Oracle APEX:
+To create a Web Credential in Oracle APEX:
 
 1. Login into your Oracle APEX workspace.
 
@@ -65,30 +65,32 @@ To create web credentials in Oracle APEX:
 
    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
-4. Click **Web Credentials**.
+4. Select **Web Credentials**.
 
    ![Click Web Credentials](images/sc-web-creds.png " ")
 
-4. Click **Create**.
+5. Click **Create**.
 
    ![Create Web Credentials](images/create-wc.png " ")
 
-5. Please enter the following details using the configuration file details you copied before and the API Key.
+6. Enter the following details using the configuration file you copied in the previous task.
 
     - **Name**: apex\_ai\_cred
 
     - **Authentication Type**: Oracle Cloud Infrastructure (OCI)
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find this in the Configuration File Preview generated during API Key creation.
+    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Enter the API Key. Remove the header, footer, and carriage returns.
+    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key. 
 
-    - **OCI Tenancy ID**: Enter OCID for the Tenancy.
+      ![Private key file](images/private-key.png " ")
 
-    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID.
+    - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
-   ![Click App Builder](images/web-creds.png " ")
+    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+
+   ![Web Credentials page](images/web-creds.png " ")
 
 5. Click **Create**.
 
