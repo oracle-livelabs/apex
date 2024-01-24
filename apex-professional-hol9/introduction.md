@@ -5,9 +5,8 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 This Hands-on Lab is a collection of six tasks. After completing this lab, your application will enable customers to:
 
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
+- Create validations on the Page Items.
+- Create a Page process to create the Order
 - Clear the shopping cart
 - Proceed to checkout
 
@@ -17,7 +16,7 @@ Estimated Time: 15 minutes
 
 * Create **Validations**, **Processes** and **Branches** to manage the Shopping Cart
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

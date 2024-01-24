@@ -6,9 +6,11 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 This Hands-on Lab is a collection of Nine tasks. After completing this lab, your application will enable customers to:
 
 - Dynamic Actions to manage the Shopping Cart
+- Update the badge and icon shown in the navigation bar after the customer has added / edited / removed a product from the shopping cart
+- Refresh the shopping cart region
 - Review the product details
+- Review the items added to the Shopping Cart.
 - Add, edit, or remove the product from the shopping cart
-- Read the customer reviews
 
 Estimated Time: 20 minutes
 
@@ -18,7 +20,7 @@ Estimated Time: 20 minutes
 * Create Dynamic actions to the Shopping Carts Page.
 * Adding Computations and Page Process to the Add to Cart Page.
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 
