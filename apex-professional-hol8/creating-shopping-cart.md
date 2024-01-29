@@ -19,7 +19,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/hol7-lab1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 
 ## Task 1: Add Items and Buttons to the Page
@@ -198,16 +198,13 @@ In this task, you will create four-page items:
     ![](./images/create-danger-button.png " ")
 
 ## Summary
-
 In this hands-on lab, You learned how to create new Page Items and Buttons for Shopping Cart and Add to Cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
 
 ## Whats Next
-
 In the next Lab, you understand how to create validations in APEX to ensure data integrity. Then you also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement dynamic Actions for seamless cart management and navigation.
 
 
 ## Acknowledgments
-
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, May 2023
+- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, January 2024
