@@ -138,7 +138,7 @@ In this Task, you will create a dynamic action to:
             </copy>
             ```
 
-  ![Add Inline CSS to the Page](./images/inline-css.png " ")             
+  ![Add Inline CSS to the Page](./images/inline-css.png.png " ")             
 
 3. Click **Save**.
 
@@ -171,9 +171,7 @@ In this Task, you will create a dynamic action to:
 ## Task 4: Create a Process to Add Products to the Shopping Cart
 In this Task, you call the *manage\_orders.add_product* procedure that temporarily adds a product to the APEX collection.
 
-1. In the Rendering tree (left pane), navigate to **Processing** tab.  
-
-     ![Navigate to Processing Tab](./images/navigate-to-sc1.png " ")    
+1. In the Rendering tree (left pane), navigate to **Processing** tab.   
 
 2. Right click **Processing** and click **Create Process**.
 

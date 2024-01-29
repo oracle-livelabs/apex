@@ -1,13 +1,13 @@
 # Create and Use Forms
 
 ## Introduction
-In this lab, you learn how to Create and Customize a Form and then you link the form to an Interactive Report
+In this lab, you learn how to Create and Customize a Form, and then you link the Form to an Interactive Report.
 
 Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-7.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don't worry! You can download the Demo application from **[here](files/hol11-lab1.sql)** , Online shopping Application from **[here](files/hol11-lab2.sql)**and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Create a Product Details Form
 
@@ -81,28 +81,28 @@ Estimated Time: 20 minutes
 
     ![Navigate to Page 21](images/navigate-to-page21.png " ")
 
-2. Items can readily be moved using drag-and-drop within Layout. If required you can also drag new components like regions, items, and buttons into the Layout pane from the Gallery, located directly below it.
+2. Items can readily be moved using drag-and-drop within Layout. You can also drag new components like regions, items, and buttons into the Layout pane from the Gallery, located directly below it.
 
-  In Page Designer, with **Page 21** loaded, within Layout (middle pane), click **P21\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item up and to the right, until it is directly after **P21\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+  In Page Designer, with **Page 21** loaded, within Layout (middle pane), click **P21\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P21\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
 
  ![Enhance form1](images/enhance-form1.png " ")
 
-3. As an alternative to using drag-and-drop you can also reposition items using attributes in the Property Editor.
+3. As an alternative to drag-and-drop, you can also reposition items using attributes in the Property Editor.
 
   In Page Designer, within Layout (or the Rendering tree in the left pane), select **P21\_IMAGE\_CHARSET**. In the Property Editor (right pane), **Under Layout > Start New Row**.
 
   ![Enhance form2](images/enhance-form2.png " ")
 
-4. You now need to Focus on **First item on Page**.  In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to Navigation Menu and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
+4. You now need to Focus on **First item on Page**. In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to the Navigation Menu and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
 
   ![Enhance form3](images/enhance-form3.png " ")
 
-5. Now that you have customized the Form. You can reload **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
+5. Now that you have customized the Form. You can reload the **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
 
   ![Enhanced Form](images/enhanced-form.png " ")
 
 ## Summary
-You now know how to Create and Customize a Form and then link the form to an Interactive Report. You may now **proceed to the next lab**.
+You now know how to Create and Customize a Form and then link the Form to an Interactive Report. You may now **proceed to the next lab**.
 
 ## What's next
 In the next lab, you learn how to make some pages publicly accessible, allowing users to access specific pages in your application without requiring them to log in.
