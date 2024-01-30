@@ -25,7 +25,7 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-8.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/hol12-.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Set the Products page as the Home Page.
 
@@ -145,15 +145,19 @@ Add a new navigation bar entry to allow:
 
     ![Click Create Entry](./images/create-entry1.png " ")
 
-5. In the **List Entry** page, enter the following and click **Create List Entry**.
-
-    ![Create Entry](./images/create-entry21.png " ")
+5. In the **List Entry** page, enter the following:
 
     - For Sequence - enter **1**
+
     - For Image/Class - **&SHOPPING\_CART\_ICON.**
+
     - For List Entry Label - **Shopping Cart**
+
     - For Page - select **16**
+
     - For Clear cache - enter **16**
+
+    ![Create Entry](./images/create-entry21.png " ")
 
 6. Scroll under **User Defined Attributes** and enter the following:
 
@@ -164,17 +168,33 @@ Add a new navigation bar entry to allow:
 
     ![Create List Entry](./images/create-entry31.png " ")
 
-8. Click the **Pencil Icon** before **&APP_USER.**
+8. Click **Create Entry** again.
+
+9. In the **List Entry** page, enter the following:
+
+    - For Sequence - enter **2**
+
+    - For Image/Class - **fa-search**
+
+    - For List Entry Label - **Search**
+
+    - For Page - select **18**
+
+    - For Clear cache - enter **18**
+
+10. Click **Create List Entry**.
+
+11. Click the **Pencil Icon** before **&APP_USER.**
 
     ![Edit &APP_USER.](./images/click-app-user.png " ")
 
-9. Under Authorization, for Authorization Scheme, select **Administration Rights**.
+12. Under Authorization, for Authorization Scheme, select **Administration Rights**.
 
-10. Click **Apply Changes**.
+13. Click **Apply Changes**.
 
     ![Set Admin Rights](./images/set-admin-rights.png " ")
 
-11. Click **Create Entry**  and enter the following:
+14. Click **Create Entry**  and enter the following:
 
     ![Click Create Entry2](./images/create-entry11.png " ")
 
@@ -183,7 +203,7 @@ Add a new navigation bar entry to allow:
     - For List Entry Label - enter **Administration**
     - For Page - select **10000**
 
-12. Click **Create List Entry**.
+15. Click **Create List Entry**.
 
     ![Create List Entry2](./images/create-entry12.png " ")
 
@@ -195,7 +215,6 @@ You now know how to set a page as public and manage the Navigation bar and Navig
 
 ## What's Next
 In the upcoming hands-on lab, you will learn to Use a Theme roller to save a new Theme Style and how to import/export the theme styles.
-
 
 ## Acknowledgements
 - **Author** - Roopesh Thokala, Product Manager
