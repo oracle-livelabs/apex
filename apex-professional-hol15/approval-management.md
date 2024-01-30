@@ -26,7 +26,7 @@ In this lab, you will:
 
 ### Downloads
 
-**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
+**[Click Here](files/hol15.sql)** to download the completed application.
 
 
 ## Task 1: Create the Application
@@ -239,7 +239,7 @@ In this task, you create a task definition to configure task parameters, partici
 
      ![Click on Expense Request](images/select-expense-request1.png " ")
 
-14. Under **Actions** Section, Click **Add Action** button
+14. Under **Actions** Section, Click **Add Action**.
 
     Specify the following:
 
@@ -276,7 +276,7 @@ In this task, you create a task definition to configure task parameters, partici
 
       ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-15. To Add the next action, Click **Add Action** button.
+15. To Add the next action, Under **Actions** Section, Click **Add Action**.
 
     Specify the following:
 
@@ -340,7 +340,7 @@ In this task, you create a task definition to configure task parameters, partici
 
        ![Task Definition - Approved](images/task-definition-approved-action.png " ")
 
-16. Again, Click **Add Actions** button.
+16. Again, Under **Actions** Section, Click **Add Actions**.
 
     Specify the following:
 
@@ -521,6 +521,8 @@ Add a page to Submit an Expense request.
 
       - For Details Primary key Element: Select **P3\_EMPNO**
 
+    Under **Success Message** Section:
+
       - For Success Message: Type **Expense Request submitted successfully**
 
     ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
@@ -553,7 +555,7 @@ Add a page to Submit an Expense request.
 
     d) For  Request ID, enter the following:
 
-       - For Type: Select NULL
+       - For Type: Select Null
 
     ![Process parameters4](images/submit-expense-report-reqid.png " ")
 
@@ -638,11 +640,12 @@ Add a Unified Task list page to see the submitted expense request list by a requ
 Add an Email Template to add for before expiry action in the task definition.
 
 To define an email template:
-1. Click Shared Components icon.
+
+1. Click Shared Components icon on the top right-corner.
 
    ![Select email template ](./images/sc.png " ")
 
-2. Under User Interface Components, Select **Email Templates**.
+2. Under User Interface, Select **Email Templates**.
 
    ![Select email template ](./images/email-template-sc-page.png " ")
 
@@ -662,7 +665,7 @@ To define an email template:
      </copy>
      ```
 
-    *Note: For substitution strings with the #STRING_NAME# format. You can pass in values for these strings using the Placeholder Values dialog for the Process in Page Designer or the APEX_MAIL API.
+    > **Note:** _For substitution strings with the #STRING\_NAME# format. You can pass in values for these strings using the Placeholder Values dialog for the Process in Page Designer or the APEX_MAIL API._
 
 5. Under **HTML Format**:
 
@@ -705,7 +708,7 @@ To define an email template:
 
 2. Copy and Paste the below commands into the Script Editor and run it one by one to update the **EMPLOYEE\_DETAILS** table
 
-   *Note: The steps to create and populate the table EMPLOYEE\_DETAILS are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.*  
+   > **Note:** _The steps to create and populate the table EMPLOYEE\_DETAILS are shared in TASK 2. Ensure that you have that table created and populated before running the commands below._  
 
    Add a new column HR\_MGR (HR Manager) to the existing Employee table EMPLOYEE\_DETAILS and update the existing Employee records as shown below:
     ```
@@ -724,7 +727,7 @@ To define an email template:
 
     ![SQL Commands](./images/sql-commands2.png " ")
 
-    *NOTE: Don't forget to create two new Users, SOPHIE (SOPHIE@email.com) and ROBIN (ROBIN@email.com), using the Manage Users And Groups menu option under Workspace Administration as done in Lab 1: Task 3.*
+    > **Note:** _ Don't forget to create two new Users, SOPHIE (SOPHIE@email.com) and ROBIN (ROBIN@email.com), using the Manage Users And Groups menu option under Workspace Administration as done in Lab 1: Task 3._
 
     ![Create Users](./images/create-users1.png " ")
 
@@ -822,13 +825,13 @@ We will further extend the Expense Tracker Application to see how tasks could be
 
     ![Add participant](./images/td-participants-add-row.png " ")  
 
-    *Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.*
+    > **Note:** _Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie._
 
 ## Task 10: Add Delegate, Request Info and Expire Events for an Expense Request   
 
 You now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
 
-1. Under **Actions** Section: Click **Add Actions**
+1. Click **Expense Tracker** to continue editing. Under **Actions** Section: Click **Add Action**
 
     - For Name: Enter **DELEGATE\_EXPENSE\_REQUEST**
 
@@ -853,7 +856,7 @@ You now essentially have a scenario where there can be more than one potential o
 
     ![Add action - delegate details](./images/td-delegate.png " ")
 
-2. Again click **Add Actions** to request information.
+2. Again, Under Actions Section: click **Add Action** to request information.
 
     - For Name: Enter **REQUEST\_MORE\_INFO**
 
@@ -916,7 +919,7 @@ You now essentially have a scenario where there can be more than one potential o
 
    ![Create action before expiry](./images/td-before-email.png " ")
 
-6. To add Expire event, click on **Add Actions** and specify the following attributes:
+6. To add Expire event, Under Actions Section: Click **Add Action** and specify the following attributes:
 
     - For Name: Enter **TASK_EXPIRED**
 
@@ -926,7 +929,7 @@ You now essentially have a scenario where there can be more than one potential o
 
     - On Event - Select **Expire**
 
-    - For Success Message: Enter **Task Expired Successfully**
+    - For Success Message: Enter **Task Expired**
 
     - For Code: Copy the code below and paste it into  the code editor:
 
@@ -940,6 +943,8 @@ You now essentially have a scenario where there can be more than one potential o
     - Click **Create** to add action.
 
   ![Add Action - Task expired](./images/task_expired-action.png " ")
+
+  7. Click **Apply Changes**
 
 ## Task 11: Run and Explore the new app  
 
@@ -961,15 +966,15 @@ In this task, you run and explore the Expense Tracker application. You submit a 
 
      ![My Expense Requests](./images/my-expense-requests.png " ")
 
-5. Now, Login with username - CLARA. Then, Navigate to **My Approvals** to Approve John's request.
+5. Now, Login with username - CLARA. Then, Navigate to **My Approvals** to Approve John's request. Click **Claim** then **Approve**.
 
      ![My Expense Requests](./images/clara-approve.png " ")
 
-6. Login with username - JANE. Then, Navigate to **My Approvals** to Approve John's request.
+6. Login with username - JANE. Then, Navigate to **My Approvals** to Approve John's request. Click **Claim** then **Approve**.
 
      ![My Expense Requests](./images/jane-approve.png " ")
 
-7. Login with username - MATT. Then, Navigate to **My Approvals** to Approve John's request.
+7. Login with username - MATT. Then, Navigate to **My Approvals** to Approve John's request. Click **Claim** then **Approve**.
 
      ![My Expense Requests](./images/matt-approve.png " ")
 
@@ -978,12 +983,13 @@ In this task, you run and explore the Expense Tracker application. You submit a 
      ![My Expense Requests](./images/john-completed-req.png " ")
 
 
-## **Summary**
-You now know how to manage Approval Components.
+## Summary
+You now know how to manage Approval Components. You may now **proceed to the next lab**.
 
-You may now **proceed to the next lab**.   
+## What's Next
+During the upcoming hands-on session, you will acquire the skill to enable a Remote Database schema. The lab will guide you through creating an application and integrating application data from a REST Data Source. Additionally, you will learn the process of synchronizing data from REST Data Sources.
 
-## Acknowledgments
-   - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala, Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+## Acknowledgements
+- **Author** - Ankita Beri, Product Manager
+- **Contributor** - Roopesh Thokala, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
