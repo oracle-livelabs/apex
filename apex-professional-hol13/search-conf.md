@@ -64,15 +64,13 @@ In this lab, you will:
 
 9. Under Column Mapping:
 
-     - For Subtitle Column: Select **ITEM**
+     - For Subtitle Column: Select **ITEMS**
 
    Click **Apply Changes**.
 
    ![App Builder](images/column-mapping.png " ")
 
 10. Create a second search configuration that maps to the **PRODUCT_REVIEWS** table:
-
-     Click the **Search Configurations** breadcrumb to return to the Search Configurations page.
 
     Click **Create** on the Search Configurations page.
 
@@ -128,12 +126,14 @@ To create a search page by running the Create Page Wizard:
 
     ![App Builder](images/select-seach-conf.png " ")
 
-    > **Note:** _Note: In the Rendering tab, notice the page item, P18_SEARCH and the Search Results region. P18_SEARCH is the search field which enables users to submit search terms. The Search Results region contains the search results and two Search Sources, which map to search configurations maintained in Shared Components. You can further refine and control the search display and behavior by editing attributes in the Property Editor._
+    > **Note:** _Note: In the Rendering tab, notice the page item, P18\_SEARCH and the Search Results region. P18\_SEARCH is the search field which enables users to submit search terms. The Search Results region contains the search results and two Search Sources, which map to search configurations maintained in Shared Components. You can further refine and control the search display and behavior by editing attributes in the Property Editor._
 
 5. Click Save and Run Page.
 
+    ![App Builder](images/sc-search.png " ")
+
 ## Summary
-You now know how to create a Standard Search Page and create search configurations. You may now **proceed to the next lab**.
+You now know how to create a Standard Search Page and Search Configurations. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 - **Author** - Ankita Beri, Product Manager

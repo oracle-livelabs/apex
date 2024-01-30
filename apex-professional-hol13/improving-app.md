@@ -164,9 +164,9 @@ Add a new navigation bar entry to allow:
     - For 1. Badge Value - enter  **&SHOPPING\_CART\_ITEMS.**
     - For 2. List Item CSS Classes - enter **js-shopping-cart-item**
 
-7. Click **Create List Entry**.
-
     ![Create List Entry](./images/create-entry31.png " ")
+
+7. Click **Create List Entry**.
 
 8. Click **Create Entry** again.
 
@@ -196,13 +196,13 @@ Add a new navigation bar entry to allow:
 
 14. Click **Create Entry**  and enter the following:
 
+     - For Sequence - enter **5**
+     - For Image/Class - enter **fa-wrench**
+     - For List Entry Label - enter **Administration**
+     - For Page - select **10000**
+
     ![Click Create Entry2](./images/create-entry11.png " ")
-
-    - For Sequence - enter **5**
-    - For Image/Class - enter **fa-wrench**
-    - For List Entry Label - enter **Administration**
-    - For Page - select **10000**
-
+    
 15. Click **Create List Entry**.
 
     ![Create List Entry2](./images/create-entry12.png " ")
