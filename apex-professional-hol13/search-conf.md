@@ -32,7 +32,7 @@ In this lab, you will:
 
     ![App Builder](images/search-configurations.png " ")
 
-5. Create the first search configuration that maps to the **CUSTOMER_ORDER_PRODUCTS** table: On the Search Configurations page, click **Create**.
+5. Create the first search configuration that maps to the **CUSTOMER\_ORDER\_PRODUCTS** table: On the Search Configurations page, click **Create**.
 
     ![App Builder](images/create-search-configurations.png " ")
 
@@ -46,25 +46,25 @@ In this lab, you will:
 
    ![App Builder](images/search-conf1.png " ")
 
-7. For Table/View Name: Select **CUSTOMER_ORDER_PRODUCT** and click **Next**.
+7. For Table/View Name: Select **CUSTOMER\_ORDER\_PRODUCTS** and Click **Next**.
 
    ![App Builder](images/search-conf2.png " ")
 
 8. Column Mapping:
 
-   - For Primary Key Column: Select **ORDER\_ID**
+     - For Primary Key Column: Select **ORDER\_ID**
 
-   - For Title Column: Select **FULL\_NAME**
+     - For Title Column: Select **FULL\_NAME**
 
-   - For Description Column: Select **ORDER\_STATUS**
+     - For Description Column: Select **ORDER\_STATUS**
 
-   Click **Create Search Configuration**.
+    Click **Create Search Configuration**.
 
-   ![App Builder](images/search-conf3.png " ")
+    ![App Builder](images/search-conf3.png " ")
 
 9. Under Column Mapping:
 
-   - For Subtitle Column: Select **ITEM**
+     - For Subtitle Column: Select **ITEM**
 
    Click **Apply Changes**.
 
@@ -72,15 +72,15 @@ In this lab, you will:
 
 10. Create a second search configuration that maps to the **PRODUCT_REVIEWS** table:
 
-  Click the **Search Configurations** breadcrumb to return to the Search Configurations page.
+     Click the **Search Configurations** breadcrumb to return to the Search Configurations page.
 
-  Click **Create** on the Search Configurations page.
+    Click **Create** on the Search Configurations page.
 
 11. On the Create Search Configuration modal dialog page, Enter the following details:
 
-    - For Name: Enter **Search Product Reviews**.
+     - For Name: Enter **Search Product Reviews**.
 
-    - For Search Type: Select **Standard**
+     - For Search Type: Select **Standard**
 
     Click **Next**.
 
@@ -92,11 +92,11 @@ In this lab, you will:
 
 13. Column Mapping:
 
-   - For Primary Key Column: Select **PRODUCT\_NAME**
+     - For Primary Key Column: Select **PRODUCT\_NAME**
 
-   - For Title Column: Select **PRODUCT\_NAME**
+     - For Title Column: Select **PRODUCT\_NAME**
 
-   - For Description Column: Select **REVIEW**
+     - For Description Column: Select **REVIEW**
 
    Click **Create Search Configuration**.
 
@@ -120,9 +120,9 @@ To create a search page by running the Create Page Wizard:
     ![App Builder](images/select-search-page.png " ")
 
 4. Under Page Definition, Enter the following:
-    - For Page Number: Enter *18*
-    - For Name: Enter **Search Customer Order Product Details**
-    - For Search Configurations: Select the search configurations to be used by this page - **Search Customer Order Products and Search Product Reviews**
+     - For Page Number: Enter *18*
+     - For Name: Enter **Search Customer Order Product Details**
+     - For Search Configurations: Select the search configurations to be used by this page - **Search Customer Order Products and Search Product Reviews**
 
     Click **Create Page**.
 

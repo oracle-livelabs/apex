@@ -116,11 +116,9 @@ The Theme Roller dialog appears displaying the styles for your application. You 
      ![Preferences Changed](images/reset-file.png " ")
 
 ## Summary
-
 You now know how to use the Theme Roller to save a new Theme Style. You may now **proceed to the next lab**.
 
-## Acknowledgments
-
-  - **Author** - Roopesh Thokala, Product Manager
-  - **Contributor** - Ankita Beri, Product Manager
-  - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Contributor** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
