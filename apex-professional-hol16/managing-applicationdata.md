@@ -133,15 +133,19 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
 2. **Synchronization** is not configured yet. In this step, you provide the name of a new or existing table.
 
-   Select **Existing Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
+   Select **New Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
 
-    ![Create REST Data Synchronisation](images/create_rest_data_sync12.png " ")
+    ![Create REST Data Synchronisation](images/create_rest_data_sync122.png " ")
 
-3. You will define a **synchronization schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronization schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
+3. Under Table Status, click **Create Table**. The table EMP_1 is now ready for synchronization. Notice the message: The synchronization table exists and matches the Data Profile.
+
+    ![Create REST Data Synchronisation](images/create_rest_data_sync123.png " ")
+
+4. You will define a **synchronization schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronization schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
 
     ![Select Synchronisation Schedule icon](images/create_rest_data_sync31.png " ")
 
-4. The Interval Builder dialog displays.
+5. The Interval Builder dialog displays.
 
      - For Frequency: Select **Minutely**
 
@@ -151,17 +155,17 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
     ![Set Execution Interval](images/create_rest_data_sync4.png " ")
 
-5. You are ready to test the data synchronization. Click **Save and Run**.
+6. You are ready to test the data synchronization. Click **Save and Run**.
 
     ![Click Save and Run](images/create_rest_data_sync51.png " ")
 
-6. You can see that **the data synchronisation is triggered**.
+7. You can see that **the data synchronisation is triggered**.
 
     ![data synchronisation is triggered](images/create_rest_data_sync61.png " ")
 
 ## Task 4: Load Data using Data loading Definitions
 
-A Data Load Definition comprises a Data Load Definition, Data Profile, and Data Profile Columns. Data can be loaded to an existing table in your schema or a collection. For each data profile column, you can define SQL Expression, SQL Query, Lookups, or Transformation Rules. These definitions are used in the Native Data Loading page process type.
+A Data Load Definition comprises a Data Load Definition, Data Profile, and Data Profile Columns. The Data can be loaded to an existing table in your schema or a collection. For each data profile column, you can define SQL Expression, SQL Query, Lookups, or Transformation Rules. These definitions are used in the Native Data Loading page process type.
 
 In this task, you Create a Data Load Definition in Shared Components and then Create a Data Loading Page Using the Create Page Wizard in the **Sample Reporting** application.
 
@@ -185,37 +189,41 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 
       - For Name: Enter **Data loading**
 
-      - For Table Name: Select **EMP**
+      - For Table Name: Select **EBA_DEMO_IR_EMP**
 
    Click **Next**.
 
-    ![Click Save and Run](images/dld-load.png " ")
+    ![Click Save and Run](images/dld-load1.png " ")
 
 6. Download the .xlsx  file from **[here](files/emp.xlsx)** and Upload it then Click **Next**.
 
     ![Click Save and Run](images/dld-sample-data.png " ")
 
-7. Navigate to **SQL Workshop** and Select **Object Browser**.
+7. Click **Create Data Load**
+
+    ![Click Save and Run](images/create-dl.png " ")
+
+8. Navigate to **SQL Workshop** and Select **Object Browser**.
 
     ![Click Save and Run](images/ob.png " ")
 
-8. Under Tables, Select Table **EMP** and Click **Data** to view the loaded data using .xlxs file.
+9. Under Tables, Select Table **EMP_DEMO_IR_EMP** and Click **Data** to view the loaded data using .xlxs file.
 
-    ![Click Save and Run](images/loaded-data.png " ")
+    ![Click Save and Run](images/loaded-data1.png " ")
 
-9. Now, Navigate to **App Builder** and Select **Sample Reporting** application.
+10. Now, Navigate to **App Builder** and Select **Sample Reporting** application.
 
     ![Click Save and Run](images/create-page-dl.png " ")
 
-10. Click **Create Page**.
+11. Click **Create Page**.
 
     ![Click Save and Run](images/select-create-page.png " ")
 
-11. Select **Data Loading**.
+12. Select **Data Loading**.
 
     ![Click Save and Run](images/data-loading-page.png " ")
 
-12. For Page Definition:
+13. For Page Definition:
 
     -  Name :**Data Loading**
 
@@ -227,19 +235,19 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 
     ![Click Save and Run](images/create-page-dl1.png " ")
 
-13. Click **Save and Run Page**.
+14. Click **Save and Run Page**.
 
     ![Click Save and Run](images/save-run-page.png " ")
 
-14. The new Data Load page appears.
+15. The new Data Load page appears.
 
     ![Click Save and Run](images/data-load-page-appears.png " ")
 
-15. Upload a sample file. Drag and Drop a file or click Choose File. A Preview page appears.
+16. Upload a sample file. Drag and Drop a file or click Choose File. A Preview page appears.
 
     ![Click Save and Run](images/preview.png " ")
 
-16. Click Load Data. The sample data is loaded into the target table with the Merge loading method.
+17. Click Load Data. The sample data is loaded into the target table with the Merge loading method.
 
 ## Summary
 You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. You learned how to consume the **REST Data Source**and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**. Also, you learned how to create data load definitions in shared components, along with creating a data loading page.
@@ -247,10 +255,10 @@ You now know how to log in to a remote database, create a database table, and th
 You may now **proceed to the next lab**.
 
 ## What's Next
-In the upcoming hands-on lab, you will learn to Implement Social sign-In (Google) in the online shopping application.
+In the upcoming hands-on lab, you will learn to Implement Social sign-in (Google) in the online shopping application.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
