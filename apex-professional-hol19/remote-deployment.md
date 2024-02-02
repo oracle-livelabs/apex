@@ -27,17 +27,15 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
     ![Login to new workspace you created](images/login-to-dev.png " ")
 
-2. Navigate to **Gallery** by clicking **Gallery** button at the top.
+2. Once you Navigate to Gallery, Click **Sample Apps**.
 
-    ![Navigate to Gallery](images/navigate-to-gallery.png " ")
+    ![Click Sample Apps](images/gallery-page3.png " ")
 
-3. Once you Navigate to Gallery, Click **Sample Apps**.
-
-4. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install** Button.
+3. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install** Button.
 
     ![Install Sample Reporting](images/install-sample-app.png " ")
 
-4. Note that you application status is currently under **Installing** phase.
+4. On the Install Application page, click the **Install Application** Button.
 
     ![Install Application](images/install-app.png " ")
 
@@ -59,6 +57,8 @@ In this Lab, You will install a **Sample Application** in a new workspace you cr
 
 9. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are displayed along with their icons and report format.
    ![View Icons](images/display-as-icons1.png " ")
+
+   ![View Reports](images/display-as-report1.png " ")
 
 ## Task 2: Configure the Target System.
 
@@ -115,33 +115,20 @@ Your application is now ready for deployment. Perform the following steps:
 
   ![Add Deployment Server](images/perform-rd1.png " ")
 
-6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX_HANDSON_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.  
+6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (WS_APEXUAT in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.  
 For **Endpoint URL**, paste the base URL copied from the deployment instance in the previous step(**Task 4**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click Next.
 
   ![Paste the file URL which you Copied](images/perform-rd2.png " ")
 
-7. In the **Create REST Enabled SQL Service - Authentication** wizard, perform the following steps.
-    - For Credential Name, Enter **Credential for APEX_TARGET**.
-    - For Username, provide the workspace associated **Schema Name**. In this example, enter **wksp_apexhandsontarget**.
-    - For Password and Verify Password, enter your Schema Password.
-   Click **Create**.
+7. Enter **UAT Cred** for Credential Name, select **Basic Authentication** for Authentication Type, and turn off the **Store Credentials switch**. Click **Create**.
 
   ![Select Basic Authentication and click next](images/perform-rd3.png " ")
 
-8. Now you see a message that REST Enabled SQL Service has been created.
+8. Now you see a message that REST Enabled SQL Service has been created. From the Deployment Server select list, choose the one that you just created. Enter the values for **Client ID** and **Client Secret** and click **Next**. In this example, you use **Basic Authentication**. Therefore, enter the **Database user name** (deployment schema) for Client ID and the corresponding password for Client Secret. Then, Click **Next**.
 
-  ![Select Basic Authentication and click next](images/connection-successful.png " ")
+  ![Define Remote Deployment attributes and click next](images/perform-rd4.png " ")
 
-
-9. From the Deployment Server select list, choose the one that you just created.
-
-  ![Define Remote Deployment attributes and click next](images/select-deployment-server.png " ")
-
-10. Click **Next**.
-
-  ![Define Remote Deployment attributes and click next](images/click-next.png " ")
-
-11. The Remote Deployment Options page appears.
+9. The Remote Deployment Options page appears.
 
     - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
     - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
@@ -161,10 +148,10 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
 
 ## Summary
 
-You now know how to deploy your Application from Development to Target.
+You now know how to deploy your Application from Development to UAT.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
+- **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, Jan 2024
+- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
