@@ -6,8 +6,6 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 ### Recap
 During the last session, you activated the Remote Database Schema. Moreover, you incorporated application data from a REST Data Source and successfully synchronized it with another application utilizing REST Data Sources. Furthermore, you gained expertise in crafting Data Load definitions and creating a Data Loading page.
 
-Application security is very important for the majority of applications. You must ensure that users enter valid credentials, generally username and password (Authentication), and that the logged-in user has appropriate rights within the application (Authorization).
-
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 Estimated Time: 20 minutes

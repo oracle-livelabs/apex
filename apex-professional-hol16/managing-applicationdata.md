@@ -137,7 +137,7 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync122.png " ")
 
-3. Under Table Status, click **Create Table**. The table EMP_1 is now ready for synchronization. Notice the message: The synchronization table exists and matches the Data Profile.
+3. Under Table Status, click **Create Table**. The table EMP_1 is now ready for synchronization.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync123.png " ")
 
@@ -207,7 +207,7 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 
     ![Click Save and Run](images/ob.png " ")
 
-9. Under Tables, Select Table **EMP_DEMO_IR_EMP** and Click **Data** to view the loaded data using .xlxs file.
+9. Under Tables, Select Table **EMP\_DEMO\_IR\_EMP** and Click **Data** to view the loaded data using .xlxs file.
 
     ![Click Save and Run](images/loaded-data1.png " ")
 

@@ -32,11 +32,23 @@ Estimated Time: 20 minutes
 
 5. In the OAuth consent screen, Enter the following:
 
-     - For **Application name**: Enter your Application Name
+   Under **App Information** Section:
 
-     - For **User support email** : Enter your Email Address
+      - For Application name: Enter your **Application Name**
 
-     - For **Application Homepage link** : Enter your Application Homepage link
+      - For User support email: Enter your **Email Address**
+
+   Under **App Domain** Section:
+
+      - For Application Homepage link: Enter your **Application Homepage link**
+
+   Under **Authorized domains** Section:
+
+      - Click **+ADD DOMAIN** and add your Authorized domain. For example, I added oracle.com
+
+   Under **Developer contact information** Section:
+
+     - For Email addresses: Enter your **Email Address**
 
     ![Click My Apps](images/oauth-consent-screen.png " ")
 
@@ -88,10 +100,10 @@ Estimated Time: 20 minutes
 
 14. In the **Web Credentials** enter the following and click **Create**.
     Under **Attributes**:
-    - For **Name**, Enter **Google SignIn**
-    - For **Authentication Type**, select **OAuth2 Client Credentials Flow**.
-    - For **Client ID or Username**, Enter the **APP ID** you copied in **Step 10**.
-    - For **Client Secret or Password** and **Verify Client Secret or Password**, Enter the **App Secret** you copied in **Step 10**.
+    - For Name: Enter **Google SignIn**
+    - For Authentication Type: sSelect **OAuth2 Client Credentials Flow**.
+    - For Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
+    - For Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
@@ -121,11 +133,11 @@ Estimated Time: 20 minutes
     - For **Scheme Type**, select **Social Sign-In**.  
 
     Under **Settings**:
-    - For **Credential Store**, Enter **Google SignIn**.
-    - For **Authentication Provider**, select **Google**.
-    - For **Scope**, Enter **profile,email**.
-    - For **Username**, Enter **name**.
-    - Additional User Attributes, Enter **email, name**
+    - For Credential Store: Enter **Google SignIn**.
+    - For Authentication Provider: Select **Google**.
+    - For Scope: Enter **profile,email**.
+    - For Username: Enter **name**.
+    - Additional User Attributes: Enter **email, name**
 
     Click **Create Authentication Scheme**
 
@@ -165,6 +177,5 @@ You now know how to create a Social Sign-in authentication scheme to enable Goog
 In the next hands-on lab, you will learn to create and customize a Calendar page, a Tree page and a Map page with a custom background.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
+- **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

@@ -111,7 +111,7 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 
     ![Navigate to App Builder](images/select-app-builder.png " ")
 
-    ![Select Import](images/Select-Import.png " ")
+    ![Select Import](images/select-import.png " ")
 
 3. Under **Import**, click **Drag and Drop**.
 
@@ -127,23 +127,19 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 
     ![Click Install Application](images/install-app1.png " ")
 
-6. For **Supporting Objects**, Set **Install Supporting Objects** to **yes** and then click **Next**.
+6. In the **Application Installed Wizard**, Click **Install Supporting Objects**.
 
     ![Click Next](images/install-so1.png " ")
 
-7. Click **Install**.
-
-    ![Click Install](images/install-app2.png " ")
-
-8. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application** to review the **Database Objects**.
+7. You will now see that **Your application's supporting objects have been installed**. Click **Edit Application** to review the **Database Objects**.
 
     ![Application installed , Click Edit Application](images/install-app3.png " ")
 
-9. Click on the Arrow mark next to **SQL Workshop** and then click **Object Browser**.
+8. Click on the Arrow mark next to **SQL Workshop** and then click **Object Browser**.
 
     ![Navigate to Object Browser](images/object-browser1.png " ")
 
-10. Select **DEMO\_PROJECTS** table and then click **Data**. Verify the Data in the table **DEMO\_PROJECTS**.
+9. Select **DEMO\_PROJECTS** table and then click **Data**. Verify the Data in the table **DEMO\_PROJECTS**.
 
     ![Navigate to DEMP_PROJECTS to view data](images/object-browser2.png " ")
 
@@ -153,6 +149,6 @@ You now know how to create Installation scripts and Data Packages to export Data
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, Jan 2024
