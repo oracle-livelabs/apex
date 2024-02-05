@@ -2,17 +2,17 @@
 
 ## Introduction
 
-Oracle APEX allows you to build robust, feature-rich applications against remote, web, and REST data sources. In this lab, you login into a remote database, create a database table and then **Register a schema with RESTful Services**. You will then create a **New Application** and then consume the **REST Data Source** we created. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronization**.
+Oracle APEX allows you to build robust, feature-rich applications against remote, web, and REST data sources. In this lab, you log into a remote database, create a database table and then **Register a schema with RESTful Services**. You will then create a **New Application** and consume the **REST Data Source** we created. Then, you will **Synchronize** the Data from the REST Data Source to the Local Database table using **REST Data Synchronization**.
 
 Estimated Time: 20 minutes
 
 ## Task 1: Enable Remote Database schema to Oracle REST Data Services.
 
-Before starting this lab, you need to Provision a new **APEX instance** or **Workspace**.
+Before starting this lab, you must provide a new **APEX instance** or **Workspace**.
 
-In this hands-on lab, you will login to New Remote APEX workspace, create a Table and then **Register Schema with ORDS**.
+In this hands-on lab, you will log in to the New Remote APEX workspace, create a Table and then **Register Schema with ORDS**.
 
-1. Login to the new Workspace you created.
+1. log in to the new Workspace you created.
 
     ![Login to New Workspace](images/login-to-new-workspace.png " ")
 
@@ -20,7 +20,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     ![Select SQL Commands](images/select-sql-commands.png " ")
 
-3. Now, Copy the below statements and execute them one by one.
+3. Now, copy the statements below and execute them individually.
     ```
     <copy>
     CREATE TABLE "EMP_1"
@@ -49,15 +49,15 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     ![Navigate to RESTful Services](images/navigate-to-rest.png " ")
 
-5. Click on the button **Register Schema with ORDS**.
+5. Click **Register Schema with ORDS**.
 
     ![Register Scheme with ORDS](images/register-schema-with-ords.png " ")
 
-6. In the next window, leave the Attributes to default and then click **Save Schema Attributes**.
+6. In the next window, leave the Attributes to default and click **Save Schema Attributes**.
 
     ![Save Schema Attributes](images/save-schema-attributes.png " ")
 
-7. Now, click **Enabled Objects** in the left Navigation Menu and then select **Create AutoREST Object** button.
+7. Now, click **Enabled Objects** in the left Navigation Menu and then select **Create AutoREST Object**.
 
   ![Navigate to Object browser](images/select-enabled-objects.png " ")
 
@@ -67,7 +67,7 @@ In this hands-on lab, you will login to New Remote APEX workspace, create a Tabl
 
     - Select **EMP_1** for **Object**
 
-    - Copy the **Full URL** and paste it in your Note pad.
+    - Copy the **Full URL** and paste it into your Note pad.
 
     Then Click **Create**.
 
@@ -83,9 +83,7 @@ In this task, you will consume the **REST Data Source** we created in the previo
 
     ![Login to first Workspace](images/login-to-workspace1.png " ")
 
-2. Select **Sample Reporting**.
-
-    ![Create New Application](images/create-new-app1.png " ")
+2. Select **Sample Reporting** Application.
 
 3. Navigate to **Shared Components** and then Select **REST Data Sources**.
 
@@ -105,9 +103,9 @@ In this task, you will consume the **REST Data Source** we created in the previo
 
        - For **REST Data Source Type** : select **Oracle REST Data Services**
 
-       - For Name : Enter **Employee Details API**
+       - For Name: Enter **Employee Details API**
 
-       - For URL Endpoint : Enter the URI you **copied** in **Task 1**
+       - For URL Endpoint: Enter the URI you **copied** in **Task 1**
 
     ![Enter REST Data Source name and URL endpoint](images/create-rds1.png " ")
 
@@ -127,43 +125,47 @@ In this task, you will consume the **REST Data Source** we created in the previo
 
 In this task, you **Synchronise data** from the **REST Data source** you created in Task 2 to a **Local table**.
 
-**Data Synchronisation** feature enables developers to automatically sync the contents of a local table with the data from an external REST service. Basically, APEX invokes the REST Service defined in the REST Data Source, downloads all data and Synchronise to a local table.
+**Data Synchronisation** feature enables developers to automatically sync the contents of a local table with the data from an external REST service. APEX invokes the REST Service defined in the REST Data Source, downloads all data and synchronizes to a local table.
 
 1. Now that you have created a **REST Data Source**, Under **REST Data Sources** Select **No** under **Synchronised** column for **Employee Details API**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync11.png " ")
 
-2. **Synchronisation** is not configured yet. In this step, you provide the name of a new table or an existing table.
+2. **Synchronization** is not configured yet. In this step, you provide the name of a new or existing table.
 
-   Select **Existing Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
+   Select **New Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
 
-    ![Create REST Data Synchronisation](images/create_rest_data_sync12.png " ")
+    ![Create REST Data Synchronisation](images/create_rest_data_sync122.png " ")
 
-3. You will define a **synchronisation schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronisation schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
+3. Under Table Status, click **Create Table**. The table EMP_1 is now ready for synchronization.
+
+    ![Create REST Data Synchronisation](images/create_rest_data_sync123.png " ")
+
+4. You will define a **synchronization schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronization schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
 
     ![Select Synchronisation Schedule icon](images/create_rest_data_sync31.png " ")
 
-4. The Interval Builder dialog displays.
+5. The Interval Builder dialog displays.
 
-     - For Frequency : Select **Minutely**
+     - For Frequency: Select **Minutely**
 
-     - For Interval : Enter **10**  
+     - For Interval: Enter **10**  
 
     Click **Set Execution Interval**.
 
     ![Set Execution Interval](images/create_rest_data_sync4.png " ")
 
-5. You are ready to test the data synchronisation. Click **Save and Run**.
+6. You are ready to test the data synchronization. Click **Save and Run**.
 
     ![Click Save and Run](images/create_rest_data_sync51.png " ")
 
-6. You can see that **the data synchronisation is triggered**.
+7. You can see that **the data synchronisation is triggered**.
 
     ![data synchronisation is triggered](images/create_rest_data_sync61.png " ")
 
 ## Task 4: Load Data using Data loading Definitions
 
-A Data Load Definition is comprised of a Data Load Definition, Data Profile, and Data Profile Columns. Data can be loaded either to an existing table in your schema or to a collection. You can define SQL Expression, SQL Query, Lookups, or Transformation Rules for each data profile column. These definitions are used in the Native Data Loading page process type.
+A Data Load Definition comprises a Data Load Definition, Data Profile, and Data Profile Columns. The Data can be loaded to an existing table in your schema or a collection. For each data profile column, you can define SQL Expression, SQL Query, Lookups, or Transformation Rules. These definitions are used in the Native Data Loading page process type.
 
 In this task, you Create a Data Load Definition in Shared Components and then Create a Data Loading Page Using the Create Page Wizard in the **Sample Reporting** application.
 
@@ -185,71 +187,78 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 
 5. In **Create Data Load**, Enter the following:
 
-      - For Name : Enter **Data loading**
+      - For Name: Enter **Data loading**
 
-      - For Table Name : Select **EMP**
+      - For Table Name: Select **EBA_DEMO_IR_EMP**
 
    Click **Next**.
 
-    ![Click Save and Run](images/dld-load.png " ")
+    ![Click Save and Run](images/dld-load1.png " ")
 
 6. Download the .xlsx  file from **[here](files/emp.xlsx)** and Upload it then Click **Next**.
 
     ![Click Save and Run](images/dld-sample-data.png " ")
 
-7. Navigate to **SQL Workshop** and Select **Object Browser**.
+7. Click **Create Data Load**
+
+    ![Click Save and Run](images/create-dl.png " ")
+
+8. Navigate to **SQL Workshop** and Select **Object Browser**.
 
     ![Click Save and Run](images/ob.png " ")
 
-8. Under Tables, Select Table **EMP** and Click **Data** to view the loaded data using .xlxs file.
+9. Under Tables, Select Table **EMP\_DEMO\_IR\_EMP** and Click **Data** to view the loaded data using .xlxs file.
 
-    ![Click Save and Run](images/loaded-data.png " ")
+    ![Click Save and Run](images/loaded-data1.png " ")
 
-9. Now, Navigate to **App Builder** and Select **Sample Reporting** application.
+10. Now, Navigate to **App Builder** and Select **Sample Reporting** application.
 
     ![Click Save and Run](images/create-page-dl.png " ")
 
-10. Click **Create Page**.
+11. Click **Create Page**.
 
     ![Click Save and Run](images/select-create-page.png " ")
 
-11. Select **Data Loading**.
+12. Select **Data Loading**.
 
     ![Click Save and Run](images/data-loading-page.png " ")
 
-12. For Page Definition:
+13. For Page Definition:
 
     -  Name :**Data Loading**
 
     For Data Load Attributes:
 
-    - Data Load : Select **Data Loading**
+    - Data Load: Select **Data Loading**
 
     Click **Create Page**.
 
     ![Click Save and Run](images/create-page-dl1.png " ")
 
-13. Click **Save and Run Page**.
+14. Click **Save and Run Page**.
 
     ![Click Save and Run](images/save-run-page.png " ")
 
-14. The new Data Load page appears.
+15. The new Data Load page appears.
 
     ![Click Save and Run](images/data-load-page-appears.png " ")
 
-15. Upload a sample file. Drag and Drop a file or click Choose File. A Preview page appears.
+16. Upload a sample file. Drag and Drop a file or click Choose File. A Preview page appears.
 
     ![Click Save and Run](images/preview.png " ")
 
-16. Click Load Data. The sample data is loaded into the target table with Merge loading method.
+17. Click Load Data. The sample data is loaded into the target table with the Merge loading method.
 
 ## Summary
-You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. You learned how to consume the **REST Data Source**, and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**. Also, you learned how to create data load definitions in shared components, along with creating a data loading page.
+You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. You learned how to consume the **REST Data Source**and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**. Also, you learned how to create data load definitions in shared components, along with creating a data loading page.
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## What's Next
+In the upcoming hands-on lab, you will learn to Implement Social sign-in (Google) in the online shopping application.
 
-- **Author** - Roopesh Thokala, Product Manager
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

@@ -19,28 +19,31 @@ In this lab, you will:
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/hol7-lab1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 
 ## Task 1: Add Items and Buttons to the Page
 
 1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
 
-    ![](./images/click-app-builder.png " ")
+    ![Click App Builder](./images/click-app-builder.png " ")
 
-    ![](./images/navigate-to-osa.png " ")
+    ![Navigate to Online Shopping Cart Application](./images/navigate-to-osa.png " ")
 
 
 2. Now you select **Shopping Cart** under **Page Icons**.
 
-    ![](./images/select-shopping-cart-page.png " ")
+    ![Select Shopping Cart Page](./images/select-shopping-cart-page.png " ")
 
 3. Drag a **Static Content** region and drop it to the right of the Shopping Cart region to create a second region of content.
 
-    ![](./images/drag-drop-static-content.png " ")
+    ![Drag and Drop Static Content Region](./images/drag-drop-static-content.png " ")
 
 4. In the Property Editor, enter the following:
     - For Title - enter **Order Information**
+
+    ![Input Title for Static content region](./images/select-title-for-region.png " ")
+
 5. Navigate to the **Order Information** (left pane) region.
 
 6. Right-click the **Order Information** region and click **Create Page Item**.
@@ -93,7 +96,10 @@ In this lab, you will:
     | Proceed | Proceed to Checkout | Create | Text | On | |
     | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
 
-    ![](./images/create-button1.png " ")
+    | Create Proceed Button                          |  Create Clear Button                            |
+    | ----------------------------------- | ----------------------------------- |
+    | ![Create Proceed Button](./images/create-button1.png " ") | ![Create Clear Button](./images/create-clear-button.png " ") |
+
 
      Under Server-side Condition:
     | Button Name | Type  | Item  |
@@ -101,7 +107,7 @@ In this lab, you will:
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
 
-     ![](./images/create-button2.png " ")
+     ![Add Server Side condition to Buttons](./images/create-button2.png " ")
 
     Click Save.
 
@@ -192,11 +198,13 @@ In this task, you will create four-page items:
     ![](./images/create-danger-button.png " ")
 
 ## Summary
+In this hands-on lab, You learned how to create new Page Items and Buttons for Shopping Cart and Add to Cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
 
-You now know how to create Page Items and Page buttons. You may now **proceed to the next lab**.
+## Whats Next
+In the next Lab, you understand how to create validations in APEX to ensure data integrity. Then you also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement dynamic Actions for seamless cart management and navigation.
+
 
 ## Acknowledgments
-
-- **Author** - Roopesh Thokala, Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, January 2024

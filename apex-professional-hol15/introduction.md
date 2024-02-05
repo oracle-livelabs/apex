@@ -6,12 +6,6 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In this workshop, you will create an application that allows you to manage expenses using the approvals component. To explain the concepts and terms associated with Approval Management in APEX, we take the example of the Expense Tracker Application.
 
-To apply for an expense, an employee logs into the application and submits an expense request filling in the Type (Accommodation/Conference/Internet/ Miscellaneous Expenses) and total Expenses. The task could be assigned to multiple potential owners, and then they can perform possible actions (Request information/Delegate/Release/Change Priority).
-
-If the expense cost is more than 50000, then the Expense request, once approved by the immediate manager, will go to the next manager and so on, depending on the Expense amount. This is a typical use case for a multi-level approval.
-
-Also, Deadlines and Expiration are set for a task. The potential owner will get an Email before 5 mins of task expiration. If the task is not approved or rejected before the expiry, then the task could be tagged as Expired.
-
 Estimated Time: 1 hour
 
 ### Objectives
