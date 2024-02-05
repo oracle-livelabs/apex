@@ -8,9 +8,9 @@ Estimated Time: 15 minutes
 
 ### Objectives
 
-* Obtain a APEX free development environment
-* Navigate through the major Components of Oracle APEX
-* Install and run a packaged application
+* Obtain a free APEX development environment.
+* Navigate through the major Components of Oracle APEX.
+* Install and run a Packaged Application.
 
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
