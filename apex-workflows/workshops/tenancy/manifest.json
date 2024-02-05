@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Simplify Business Process Management Using APEX Workflow",
+  "workshoptitle": "Simplify Business Process Management Using APEX Workflows",
   "help": "livelabs-help-apex_us@oracle.com",
     "tutorials": [
       {
@@ -7,15 +7,15 @@
         "filename": "../../introduction.md"
       },
       {
-              "title": "Get Started",
-              "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
+        "title": "Get Started",
+        "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
         "title": "Lab 1: Identify Business Steps",
         "filename": "../../identify-business-steps/1-identify-business-steps.md"
       },
       {
-        "title": "Lab 2: Create Task Definition",
+        "title": "Lab 2: Design the Application",
         "filename": "../../design-the-application/2-design-the-application.md"
       },
       {
@@ -23,7 +23,7 @@
         "filename": "../../create-workflow/3-create-workflow.md"
       },
       {
-        "title": "Lab 4: Add and Manage Task Definitions",
+        "title": "Lab 4: Add Human Tasks to the Workflow",
         "filename": "../../add-human-tasks/4-add-human-tasks.md"
       },
       {
