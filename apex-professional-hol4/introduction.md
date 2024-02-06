@@ -1,26 +1,27 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser.
 
-### Recap
-In the last hands-on labs, you learned to create an application using the tables and data you have installed. Also, you Created a Database application from a file, Created an application from a Spreadsheet and Configured a Progressive Web application.
+In this workshop, you explore and review the Page Designer in APEX. Then, you create a new page in the Online Shopping Application that allows customers to view the details of their recent order.
 
-In this lab, you open the home page in page designer, navigate through and review the page designer panes. Then, you create a new page that allow customers to view the details of their recent order.
-
-Customers will find the following details of the order:
+Once the page is created, customers will be able to view the following details of the order in the app:
 - Order number
 - Order date
 - Status
 - Total price
 - Quantity and price of the items.
 
+### Recap
+In the preceding workshop, you learned to create an application using the tables and data you have installed. Also, you created a Database application from a file, created an application from a Spreadsheet and configured a Progressive Web application.
+
+
 Estimated Time: 15 minutes
 
 ### Objectives
-
+In this workshop, you will:
 * Navigate and Review the Page Designer panes.
-* Create a page to review the items that customer just bought.
+* Create a page to review the items that the customer bought.
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 

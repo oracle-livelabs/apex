@@ -151,7 +151,7 @@ In this step, you will learn how to create a table and Load data using the Data 
 ## Summary
 You know how to use Quick SQL to generate database objects using a SQL shorthand. You also learn how to use the Data Workshop utility to load data.
 
-## What's next
+## What's Next?
 You will develop a database application utilizing pre-existing tables in the upcoming hands-on workshop. It incorporates various pages, such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
 
 ## Acknowledgements

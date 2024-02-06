@@ -146,7 +146,7 @@ In this task, you learn to delete and restore the Demo Projects application Blue
 ## Summary
 You now know how to create a spreadsheet application by dragging and dropping a file or loading sample data for training purposes.
 
-## What's next
+## What's Next?
 In the next workshop, you learn to Navigate and Review the Page Designer panes. You know how to create a normal page, add a region, sub-region, and page items, and lock and unlock pages.
 
 ## Acknowledgements

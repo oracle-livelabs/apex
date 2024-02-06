@@ -86,7 +86,7 @@ This lab covers installing and running a sample application.
 ## Summary
 You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
 
-## What's next
+## What's Next?
 In the next hands-on lab, you'll gain practical experience in utilizing SQL Workshop. You'll explore tasks such as installing a Sample Dataset, extending existing table­s by adding new columns, populating new columns, creating lookup tables, developing Package­s, and utilizing various utilities such as Quick SQL, Data Workshop, and Data Generator.
 
 ## Acknowledgements
