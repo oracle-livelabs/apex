@@ -1,13 +1,17 @@
 # Create an App from a Spreadsheet
 
-In this lab, you will learn how to create an APEX application using data imported from a spreadsheet.
-
-## Introduction
-In this lab, you build a simple application based on a spreadsheet. Remember that APEX is great for various apps, from simple ones like this to large, sophisticated apps based on local database objects, REST-enabled SQL objects, and even REST APIs.
+In this lab, you build a simple application based on a spreadsheet. Remember that APEX is great for various apps, from simple ones to large, sophisticated apps based on local database objects, REST-enabled SQL objects, and even REST APIs.
 
 While APEX developers spend the majority of their time in the App Builder, you should also investigate the SQL Workshop, where you can create and maintain database objects, Team Development, where you can track large APEX development projects, and the App Gallery, which contains numerous productivity and sample apps that can be installed within minutes.
 
 Estimated Time: 10 minutes
+
+### Objectives
+In this lab, you will:
+- Create an application from a spreadsheet.
+- Restore a Deleted Application.
+- Configure Progressive Web App.
+
 
 ## Task 1: Load Project data  
 
@@ -21,40 +25,40 @@ Estimated Time: 10 minutes
 
     ![Create application from a file](images/from-a-file.png " ")
 
-    When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, copy and paste CSV data or load sample data.
+    When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on the data. Alternatively, you can copy and paste CSV data or load sample data.
 
-4. click the Load Data Wizard's **Choose File** button.
+4. In the Load Data Wizard, click **Choose File**.
 
     ![Choose file](images/choose-file.png " ")
 
-5. Download and select [**demo_projects.csv**](files/demo_projects.csv) file from your local System
+5. Download and select [**demo_projects.csv**](files/demo_projects.csv) file from your local system.
 
     ![select demo_projects file](images/select-demo-projects.png " ")
 
-6. Review the parsed data. Enter **DEMO_PROJECTS** for Table Name and Click **Load Data**.
+6. Review the parsed data. For Table Name, enter **DEMO_PROJECTS** and click **Load Data**.
 
     ![Select Demo_projects table](images/new-table-name.png " ")
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data.
 
-## Task 2: Create an application
+## Task 2: Create an Application
 
-The Data Load wizard has created a new table and populated that table with the records from the sample data. Now, you can create an app based on this new table.
+The Data Load wizard has created a new table and populated that table with the records from the sample data spreadsheet. Now, you can create an app based on this new table.
 
-1. verify that 70 rows have been loaded into the **DEMO_PROJECTS** table in the Load Data dialogue, then click **Create Application**.
+1. Verify that 70 rows have been loaded into the **DEMO_PROJECTS** table in the Load Data dialogue. Then, click **Create Application**.
 
     ![Data loaded into Demo_projects](images/data-loaded.png " ")
 
-2. You will remove the pages below from the Create Application page.  
+2. From the Create Application page, we will remove the following pages:  
     - Demo Projects Search  
     - Demo Projects Report  
     - Calendar
 
-   On the Create Application page, Click the **Edit** button next to the **Demo Projects Search**.
+   On the Create Application page, click **Edit** next to the **Demo Projects Search**.
 
     ![Edit Demo Projects Search](images/delete-pages.png " ")
 
-3. Click on the **Delete** Button in the Add Faceted Search Page and then Confirm it by Clicking **OK**.
+3. Click **Delete** in the Add Faceted Search Page and then Confirm it by Clicking **OK**.
 
     ![Click Delete](images/delete-page1.png " ")
 
@@ -62,7 +66,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
     Repeat the steps for **Demo Projects Report** and **Calendar**.
 
-4. Then click **Create Application**.
+4. Click **Create Application**.
 
     ![Create application2](images/create-application2.png " ")
 
@@ -70,13 +74,13 @@ The Data Load wizard has created a new table and populated that table with the r
 
 ## Task 3: Load Application Blueprint  
 
-In this task, you learn to load the Demo Projects application Blueprint. You can Load an application blueprint by running the Create Application Wizard and clicking the Load Blueprint link at the top of the Create Application Wizard.
+In this task, you learn to delete and restore the Demo Projects application Blueprint. 
 
 1. First, you delete the Demo Projects application. Select **Demo Projects** Application on the workspace homepage.
 
     ![Select Demo demo projects](images/demo-projects.png " ")
 
-2. Click **Edit Application Definition**
+2. Click **Edit Application Definition**.
 
     ![Edit Application Definition](images/edit-app-definition.png " ")
 
@@ -84,11 +88,11 @@ In this task, you learn to load the Demo Projects application Blueprint. You can
 
     ![Edit Application Definition](images/delete-demo-projects.png " ")
 
-4. Click **Permanently Delete Now**on the Confirm Delete dialogue.
+4. Click **Permanently Delete Now** in the Confirm Delete dialog window.
 
    ![Delete Permanently](images/delete-app.png " ")
 
-5. To restore the Application using Blueprint, Click **Create** on the Workspace homepage.
+5. To restore the Application using Blueprint, click **Create** on the Workspace homepage.
 
     ![Click Create](images/blueprint-create.png " ")
 
@@ -96,11 +100,11 @@ In this task, you learn to load the Demo Projects application Blueprint. You can
 
     ![Click Use create App wizard](images/blueprint-create-app-wizard.png " ")
 
-7. At the top of the page, Click **Load Blueprint**.
+7. At the top of the page, click **Load Blueprint**.
 
     ![Click Load Blueprint](images/load-blueprint.png " ")
 
-8. Select Demo Projects **Load** to load a new Blueprint.
+8. Select **Load** in the Demo Projects row.
 
    ![Click Load ](images/load-blueprint-button.png " ")
 
@@ -110,16 +114,16 @@ In this task, you learn to load the Demo Projects application Blueprint. You can
 
 ## Task 4: Configure Progressive Web App Attributes
 
-1. Navigate to the Edit Application Definition page. You can access the Edit Application Definition page from the Application home page using **Shared Components**.
+1. Navigate to **Shared Components** from the Application homepage.
 
     ![Select Shared Components](images/navigate-to-shared-components1.png " ")
 
-2. Select **Progressive Web App**under User Interface on the Shared Components page.
+2. Under User Interface, select **Progressive Web App**.
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
 
-3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes** and Click **Apply Changes**.
+3.Toggle **Installable** to **ON** and click **Apply Changes**.
 
     ![PWA Definition](images/navigate-to-pwa.png " ")
 
@@ -143,7 +147,7 @@ In this task, you learn to load the Demo Projects application Blueprint. You can
 You now know how to create a spreadsheet application by dragging and dropping a file or loading sample data for training purposes.
 
 ## What's next
-In the next hands-on lab, you learn to Navigate and Review the Page Designer panes. You know how to create a normal page, add a region, sub-region, and page items, and lock and unlock pages.
+In the next workshop, you learn to Navigate and Review the Page Designer panes. You know how to create a normal page, add a region, sub-region, and page items, and lock and unlock pages.
 
 ## Acknowledgements
  - **Author** -  Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager.
