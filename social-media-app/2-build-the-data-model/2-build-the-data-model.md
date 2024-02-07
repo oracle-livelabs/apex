@@ -53,7 +53,7 @@ the developer on the left side.
 
     ```
     <copy>
-    # prefix: "sm_"
+    # prefix: "sm"
     # apex: true
     posts /auditcols
         post_comment vc4000

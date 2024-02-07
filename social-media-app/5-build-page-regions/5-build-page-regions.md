@@ -128,7 +128,6 @@ set:
 
     ![Property Editor](images/property-editor1.png "")
 
-    Ok, that was a bunch of changes!
 
 6. Let's save and run and see how it looks.
 
