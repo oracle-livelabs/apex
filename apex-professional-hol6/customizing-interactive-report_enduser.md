@@ -317,7 +317,7 @@ In this lab, you:
 
 You now know how to Manage and Customise the Interactive report as an End User. You may now **proceed to the next workshop**.
 
-## What's next
+## What's Next?
 
 In the next workshop, you learn how to customise Interactive Grid as a developer and an end user.
 
