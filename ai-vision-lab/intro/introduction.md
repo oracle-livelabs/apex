@@ -11,9 +11,16 @@ Estimated Time: 1 hour
 ### Objectives
 In this workshop, you:
 
+- Create a REST Data Source in APEX based on the OCI Vision REST Endpoint.
+- Invoke the OCI Vision REST Data Source using the Invoke API page process type.
+- Enhance the App to include the results from OCI Vision and make the images searchable.
+- Make the app mobile ready by enabling PWA and other mobile friendly features.
+
+<!---
 - Enhance Social Media App with AI-Powered Search.
 - Integrate APEX with OCI using API keys.
 - Seamlessly link APEX with OCI Vision Service through REST Data Sources.
+--->
 
 ### Prerequisites for Building this App:
 
