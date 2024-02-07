@@ -2,7 +2,7 @@
 # Add Cards and Faceted search page to the Shopping Cart Application
 
 In this lab, you add features to the Online Shopping Application to update items in the cart. You also create pages to view all the Products in the store and the product details.
-  
+
 <!--
 Customers will be able to:
 - Review the items in the shopping cart
@@ -22,14 +22,14 @@ Estimated Time: 20 minutes
 In this lab, you will:
 - Create Application Items and Application Process
 - Cards pages to view Product Details and Customer Reviews
-- Create a Faceted Search page to list the products 
+- Create a Faceted Search page to list the products
 
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-2.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
-1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** 
-2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** 
+Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol4.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
+1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 
 ## Task 1: Create Application Items
@@ -470,8 +470,8 @@ This region lets users read the customer reviews for this product.
 
    ![Add the Products Page](./images/create-fs-page13.png " ")
 
-4. For Facet Selection, select the **Display as** option as **Cards**. 
-  
+4. For Facet Selection, select the **Display as** option as **Cards**.
+
   Click **Refresh**. Accept the remaining default options, and click **Next**.
 
     ![Add the Products Page](./images/create-fs-page14.png " ")

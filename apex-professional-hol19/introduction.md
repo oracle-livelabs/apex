@@ -5,10 +5,11 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 Oracle APEX allows developers to create Progressive Web Apps (PWAs) that can be easily installed on any desktop or mobile device, offering users a more native app experience. This application is a valuable reference for developers looking to incorporate key PWA features into their applications, helping them create more engaging and user-friendly apps.
 
-### Recap
-You learned to create and customize Calendars and Trees in the last hands-on lab. Also, you implemented a Map Page with a custom Background and added an entry to the Navigation Bar.
 
 In this lab, You will make the **Demo Projects** app installable on any device. You also implement a 'Share' button where a user can share the uploaded images with other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Demo Projects App. You also learn to add Shortcuts and Screenshots to the PWA app.
+
+### Recap
+You learned to create and customize Calendars and Trees in the last hands-on lab. Also, you implemented a Map Page with a custom Background and added an entry to the Navigation Bar.
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 

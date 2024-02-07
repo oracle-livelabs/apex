@@ -143,7 +143,7 @@ Estimated Time: 20 minutes
 You now know how to manage Map pages. You may now **proceed to the next lab**.
 
 ## What's Next
-In the upcoming hands-on lab, you will learn to Create Installation Scripts and Data Packages. Also, you gain insights into how to Export Applications with supporting Objects and use Remote Deployment to deploy your Application.
+In the upcoming hands-on lab, you will learn to Implement the 'Share' button, Enable Push Notifications, and Add Shortcuts to the PWA app. Also, you will learn to Include screenshots to be displayed while installing the PWA app and Enable Push Notifications. Additionally you learn how to configure Push Notifications.
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
