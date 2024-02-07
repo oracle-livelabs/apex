@@ -1,16 +1,19 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser.
+
+In this workshop, you learn to obtain an APEX workspace. Once you have an APEX workspace provisioned, you explore the components like App Builder, SQL Workshop and Gallery in APEX. Later, you also learn to install a Sample Reporting App from the Gallery and run the App.
 
 Estimated Time: 15 minutes
 
 
 ### Objectives
 
-* Obtain a APEX free development environment
-* Navigate through the major Components of Oracle APEX
-* Install and run a packaged application
+In this workshop, you will:
+* Obtain a free APEX development environment.
+* Navigate through the major Components of Oracle APEX.
+* Install and run a Packaged Application.
 
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*

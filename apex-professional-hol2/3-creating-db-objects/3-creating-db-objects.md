@@ -1,7 +1,5 @@
 # Create a Database Package for Business Logic
 
-## Introduction
-
 In this lab, you learn to create database objects for your APEX application. This Package contains functions and procedures to add products to the cart, remove products, create an order, clear the cart, and more.
 
 To manage items in the cart, you use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeapi/APEX_COLLECTION.html), which enables you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session.
@@ -14,14 +12,14 @@ Watch the video below for a quick walkthrough of the lab.
 -->
 ### Objectives
 
-Business logic in APEX applications can be written using PL/SQL, Oracle's procedural language extension to SQL. PL/SQL offers a handy program unit called a "package" that lets you cleanly separate the API signatures for reusable procedures and functions from their implementation. In this lab, you will:
+Business logic in APEX applications can be written using PL/SQL, Oracle's procedural language extension to SQL. PL/SQL offers a handy program unit called a "package" that lets you separate the API signatures for reusable procedures and functions from their implementation in a clean manner. In this lab, you will:
 - Create a package to manage the Shopping Cart.
 
 ## Task 1: Create the Package
 Create specifications and a body for the Package.
 
 1. Navigate to **SQL Workshop**, click **Object Browser**.
-2. Navigate to the **Packages** on the left side, Right click on it and Select **Create Package**.
+2. Navigate to the **Packages** on the left side, right-click on it and select **Create Package**.
 
     ![Create Package1](./images/create-package1.png " ")
 
@@ -75,7 +73,7 @@ Create specifications and a body for the Package.
 5. Click **Save and Compile** to save the changes.
     ![Create Package Specification1](./images/create-package-specification4.png " ")
 
-6. Navigate to the body part of the Package by clicking on the Body tab and replace the contents of the code editor with the following:
+6. Navigate to the body part of the Package by clicking on the **Body** tab and replace the contents of the code editor with the following:
 
     ```
     <copy>
