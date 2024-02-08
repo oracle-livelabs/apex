@@ -46,7 +46,7 @@ Estimated Time: 20 minutes
     - Name: **P16\_CUSTOMER\_EMAIL**
     - Type: **Text Field**
     - Label: **Email Address**
-    - Validation > Value Required: Toggle the button to **Off**.
+    - Validation > Value Required: **Disable** the toggle button
 
     ![](./images/create-page-item2.png " ")
 
@@ -71,7 +71,7 @@ Estimated Time: 20 minutes
         from STORES
         </copy>
         ```
-    - Display Extra Values: Toggle the button to **Off**
+    - Display Extra Values: **Disable** the toggle button
     - Null Display Value: **- Select a Store -**
 
     ![](./images/create-store-item.png " ")
@@ -157,8 +157,8 @@ In this task, you will create four-page items:
             {: title="Display and Return Values"}
 
     - Click **OK**.
-    - Display Extra Values: oggle the button to **Off**
-    - Display Null Value: Toggle the button to **Off**
+    - Display Extra Values: **Disable** the toggle button
+    - Display Null Value: **Disable** the toggle button
 
     ![](./images/create-quantity-column1.png " ")
 

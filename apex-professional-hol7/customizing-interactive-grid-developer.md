@@ -82,7 +82,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
     a) In the Rendering tree, select the **Project Tasks** Interactive Grid region.
 
     b) In the property editor, select **Attributes**, and perform the following steps: 
-        - Enable Users To > **Save Public Report**: Toggle the button to **ON**.
+        - Enable Users To > **Save Public Report**: **Enable** the toggle button
         - Under **Download**, deselect the **HTML** check box.
 
     ![save Public interactive grids](./images/enbale-public-reports11.png " ")
@@ -92,7 +92,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
     a) Under Rendering, select the **Project Tasks** Interactive Grid region.
 
     b) In the property editor, navigate to **Attributes** and perform the following steps:
-        - Edit > Enabled: Toggle the button to **ON**
+        - Edit > Enabled: **Enable** the toggle button
         - Pagination > Type: **Page**
 
     ![Editable interactive grid](./images/edit-enabled11.png " ")

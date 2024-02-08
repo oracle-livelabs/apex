@@ -232,7 +232,7 @@ In this lab, you:
       - Column: **Budget**  
       - Label: **Total Budget**  
       - Format Mask: **$5,324.10** (Expand the Select List to view the Format Mask list of example formats.)
-      - Sum: Toggle the button to **ON**
+      - Sum: **Enable** the toggle button
 
       Click **Apply**.
 
@@ -258,7 +258,7 @@ In this lab, you:
        - Functions: **Sum**
        - Column: **Cost** and **Budget**
        - Label: **Total Cost** and **Total Budget**
-       - Sum: Toggle the button to **ON**.
+       - Sum: **Enable** the toggle button
 
       Click **Apply**.
 

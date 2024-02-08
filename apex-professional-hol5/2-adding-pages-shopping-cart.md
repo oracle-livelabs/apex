@@ -138,9 +138,9 @@ The shopping cart page allows users to review and edit the products in the cart.
 
   - Under **Navigation**:
 
-      - Use Breadcrumb: Toggle the button to **OFF**
+      - Use Breadcrumb: **Disable** the toggle button
 
-      - Use Navigation: Toggle the button to **OFF**
+      - Use Navigation: **Disable** the toggle button
 
    Click **Create Page**.
 
@@ -189,7 +189,7 @@ This region will list the items added temporarily to the shopping cart.
 
    - Under Body:
 
-      - Advanced Formatting: Toggle the button to **ON**
+      - Advanced Formatting: **Enable** the toggle button
 
       - HTML Expression: Enter the following:
 
@@ -203,7 +203,7 @@ This region will list the items added temporarily to the shopping cart.
 
   - Under Secondary Body:
 
-      - Advanced Formatting: Toggle the button to **ON**
+      - Advanced Formatting: **Enable** the toggle button
 
       - HTML Expression: Enter the following:
 
@@ -358,7 +358,7 @@ This region allows users to review the product details, such as brand, price, de
 
    - Under Secondary Body:
 
-      - Advanced Formatting: Toggle the button to **ON**
+      - Advanced Formatting: **Enable** the toggle button
 
       - HTML Expression: Enter the following:
 
@@ -426,7 +426,7 @@ This region lets users read the customer reviews for this product.
 
     - Under Title:
 
-        - Advanced Formatting: Toggle the button to **ON**
+        - Advanced Formatting: **Enable** the toggle button
 
         - HTML Expression: Enter the following:
 
@@ -464,7 +464,7 @@ This region lets users read the customer reviews for this product.
 
     - Data Source > Table/View Name: **PRODUCTS**
 
-    - Navigation > Use Breadcrumb: Toggle the button to **OFF**
+    - Navigation > Use Breadcrumb: **Disable** the toggle button
 
   Click **Next**.
 

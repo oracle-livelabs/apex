@@ -58,8 +58,8 @@ You can change the size of each pane by selecting the dividers and sliding them 
     - Name: **Order Information**  
 
     - Under Navigation:
-        - Use Breadcrumb: Toggle the button to **OFF**
-        - Use Navigation: Toggle the button to **ON**
+        - Use Breadcrumb: **Disable** the toggle button
+        - Use Navigation: **Enable** the toggle button
   Click **Create Page**.
   ![Click Create Page](./images/create-blank-page1.png " ")
 
@@ -166,7 +166,7 @@ Add a region to display Order details.
 3. Click **Attributes**.
 
     -  Search for the **Secondary Body** in the filter and enter/select the following:
-        - Advanced Formatting: Toggle the button to **On**
+        - Advanced Formatting: **Enable** the toggle button
         - HTML Expression:
 
             ```
@@ -213,7 +213,7 @@ Add a region to display items in the Order.
     - Title > Column: **PRODUCT**    
 
     - Under Secondary Body:
-        - Advanced Formatting: Toggle the button to **ON**
+        - Advanced Formatting: **Enable** the toggle button
         - HTML Expression:
 
             ```

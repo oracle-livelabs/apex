@@ -63,7 +63,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
     
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
-    - Rows Per Page Selector: Toggle the button to **ON**
+    - Rows Per Page Selector: **Enable** the toggle button
     - Maximum Rows Per Page: **10**
 
     ![Rows Per Page Selector](images/enable-rpp.png " ")
@@ -73,7 +73,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
     In the property editor, do the following:
     - Under Download:
         - Formats: Enable **Excel** and **PDF** checkboxes
-        - Send as Email: Toggle the button to **ON**
+        - Send as Email: **Enable** the toggle button
 
     ![Download](images/disable-email1.png " ")
 

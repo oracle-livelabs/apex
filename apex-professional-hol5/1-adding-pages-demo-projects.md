@@ -39,7 +39,7 @@ You create an interactive grid on the **DEMO_PROJECTS** table in this lab. You a
 
     - Data Source > Table/View Name: **DEMO_PROJECTS**
 
-    - Navigation > Use Breadcrumb: Toggle the button to **OFF**
+    - Navigation > Use Breadcrumb: **Disable** the toggle button
 
    Click **Create Page**.
 
@@ -70,7 +70,7 @@ In this lab, you create a Smart Filters report on the DEMO_PROJECTS table.
 
    - Data Source > Table/View Name: **DEMO_PROJECTS**  
 
-   - Navigation > Use Breadcrumb: Toggle the button to **OFF**.
+   - Navigation > Use Breadcrumb: **Disable** the toggle button
 
    Click **Next**.
 
@@ -133,8 +133,8 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
         ![Attributes](./images/cr-attributes1.png " ")
 
-        - Display Avatar: Toggle the button to **ON**
-        - Display Badge: Toggle the button to **ON**
+        - Display Avatar: **Enable** the toggle button
+        - Display Badge: **Enable** the toggle button
 
     - Avatar > Icon: **fa-tasks**
 
