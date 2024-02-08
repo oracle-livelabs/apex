@@ -115,14 +115,17 @@ Your application is now ready for deployment. Perform the following steps:
 
   ![Add Deployment Server](images/perform-rd1.png " ")
 
-6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX_HANDSON_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.  
+6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX\_HANDSON\_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.  
 For **Endpoint URL**, paste the base URL copied from the deployment instance in the previous step(**Task 4**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click Next.
 
   ![Paste the file URL which you Copied](images/perform-rd2.png " ")
 
 7. In the **Create REST Enabled SQL Service - Authentication** wizard, perform the following steps.
-    - For Credential Name, Enter **Credential for APEX_TARGET**.
+
+    - For Credential Name, Enter **Credential for APEX\_TARGET**.
+
     - For Username, provide the workspace associated **Schema Name**. In this example, enter **wksp_apexhandsontarget**.
+
     - For Password and Verify Password, enter your Schema Password.
    Click **Create**.
 
@@ -144,7 +147,9 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
 11. The Remote Deployment Options page appears.
 
     - Under **Deploy Application**: Set **Build Status Override** to **Run and Build Application**.
+
     - Under **Export Preferences**: For **Export Supporting Object Definitions**, select **Yes and Install on Import Automatically**.
+
     - Under **Deployment Overrides**: In this example, even though the application does not yet exist on the target system, turn the **Overwrite Existing Application option** **On** so that you can preserve the application ID, and enable this application for future overwrites.
 
     After making the above selections, click **Deploy**.
@@ -160,11 +165,9 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
     ![Login into your remote APEX Instance](images/perform-rd7.png " ")
 
 ## Summary
-
 You now know how to deploy your Application from Development to Target.
 
 ## Acknowledgments
-
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, Jan 2024

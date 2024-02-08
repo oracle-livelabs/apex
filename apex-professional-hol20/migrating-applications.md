@@ -51,15 +51,11 @@ In this lab, you will:
 
     ![Define Script Attributes](images/create-script2.png " ")
 
-8. Now set the following attributes and then click **Next**.
-
-    - For **Table Options**, Select the **Checkbox**.
+8. Now, set the following attributes and then click **Next**.
 
     - For **Object**, Select and Move the tables **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** to the right side.
 
     ![Set Attributes and click next](images/create-script3.png " ")
-
-    *Note: that it might take 5 to 10 seconds or more, please wait.*
 
 9. You will now see the **Scripts** created. Click **Create**.
 
@@ -71,7 +67,7 @@ In this lab, you will:
 
 11. Under **Script Attributes**, Select the following and click **Next**.
 
-    - For **Name**, select **data.sql**
+    - For **Name**, select **data.sql** (Script Name should be Unique)
 
     - For **Tables**, ensure **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
 

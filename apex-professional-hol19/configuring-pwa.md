@@ -45,16 +45,15 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
      ![click add screenshot](images/click-add-screenshot.png " ")
 
-3. Click **Upload a Screenshot**in the PWA screenshot wizard.
+3. Click **Upload a Screenshot** in the PWA screenshot wizard.
 
-      ![click upload Screenshot](images/upload-screenshot.png " ")
+     ![click upload Screenshot](images/upload-screenshot.png " ")
 
-  > **Note:** _You can download the images by clicking on the links below
+  > **Note:** You can download the images by clicking on the links below
   [**app-screenshot-1.png**](images/app-screenshot-1.png)
   [**app-screenshot-2.csv**](images/app-screenshot-2.png)
-  _
 
-4. From your local system, select the Screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system. And then, Click **Create**
+4. From your local system, select the Screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system. And then, Click **Create**.
 
     ![select app screenshot one](images/select-app-screenshot1.png " ")
 
