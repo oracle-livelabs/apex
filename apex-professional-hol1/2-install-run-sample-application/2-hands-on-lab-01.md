@@ -69,7 +69,7 @@ This lab covers installing and running a sample application.
 
    ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
-6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom. 
+6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom.
    Click **Home** to return to the home page of the APEX application development environment.
 
    ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
@@ -78,7 +78,7 @@ This lab covers installing and running a sample application.
 
    ![Navigate App Builder](images/navigate-to-app-builder.png " ")
 
-8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are correspomndingly  displayed along with their icons and in the report format.
+8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are correspondingly displayed along with their icons and in the report format.
    ![View Icons](images/display-as-icons1.png " ")
 
    ![View Reports](images/display-as-report1.png " ")

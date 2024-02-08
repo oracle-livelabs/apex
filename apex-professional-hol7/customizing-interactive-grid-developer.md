@@ -12,9 +12,9 @@ Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don’t worry! You can download the application from [here](files/demo-projects-2.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
-1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** 
-2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** 
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol5-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Manage and Customize Interactive Grid as a Developer
 This lab uses the **Demo Projects** application. In this lab, you customize the **Interactive Grid** for end users. You create column groups, set pagination type, and set the report downloadable formats that should be available for end users. You also enable end users to save the report as Public interactive grids and convert a read-only interactive grid to an editable interactive grid.
@@ -44,16 +44,16 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     c) Repeat the above two steps **a** and **b** to create column groups: **Schedule** and **Project Financing**.
 
-    d) Now that you have created column groups, you need to assign columns to them. 
-    
+    d) Now that you have created column groups, you need to assign columns to them.
+
     Expand **Columns** in the rendering tree and select **Project** and **Task_Name** columns.
 
     e) In the property editor, under **Layout**, select **Project Breakdown** for Group.
 
     ![Add column group headers](./images/select-project-breakdown11.png " ")
 
-    f) Then, in thee rendering tree, select **Start\_Date** and **End\_Date** columns. 
-    
+    f) Then, in thee rendering tree, select **Start\_Date** and **End\_Date** columns.
+
     In the property editor, under **Layout**, select **Schedule** for Group.
 
     ![Add column group headers](./images/select-schedule-group11.png " ")
@@ -97,16 +97,16 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![Editable interactive grid](./images/edit-enabled11.png " ")
 
-7. Delete the column groups in the interactive grid. 
+7. Delete the column groups in the interactive grid.
 
     Navigate to Rendering > Project Tasks Interactive Grid > Column Groups. Select **Schedule**, **Project Breakdown** and **Project Financing**, right-click and select **Delete**.
 
     ![Column Groups](./images/delete-column-group11.png " ")
 
-8. Suppose you want to display the ID column and exclude the ID column from DML operations. 
+8. Suppose you want to display the ID column and exclude the ID column from DML operations.
 
-    In the rendering tree, navigate to **Project Tasks > Columns > ID**. 
-    
+    In the rendering tree, navigate to **Project Tasks > Columns > ID**.
+
     In the Property Editor, enter/select the following:
 
     - Identification > Type: **Display Only**
