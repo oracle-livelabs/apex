@@ -11,9 +11,9 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/sample-reporting-1.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
-1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** 
-2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** 
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Customize an Interactive report as an End User
 
@@ -102,8 +102,8 @@ In this lab, you:
     c. Select the following in Row 1:
 
     - Column: **Cost**
-    - Direction: **Descending** 
-        
+    - Direction: **Descending**
+
      Click **Apply**.
 
     ![Sort](images/create-sort2.png " ")
@@ -117,10 +117,10 @@ In this lab, you:
     ![Aggregate](images/select-aggregate.png " ")
 
     b. In the **Aggregate** dialog, select the following:
-        
-    - Function: **Sum** 
-    - Column: **Available Budget**. 
-    
+
+    - Function: **Sum**
+    - Column: **Available Budget**.
+
     Click **Apply** to add the aggregation at the end of the last Column of the report.
 
     ![Aggregate](images/create-aggregate1.png " ")
@@ -137,8 +137,8 @@ In this lab, you:
 
     b. The Compute dialog appears. Enter/select the following:
       - Column Label: **Cost with Tax**.  
-      - Computation Expression: 
-            - Under Columns alias, click **Cost** 
+      - Computation Expression:
+            - Under Columns alias, click **Cost**
             - Under Keypad, click *1.05
 
       Click **Apply**.
@@ -278,7 +278,7 @@ In this lab, you:
 
     ![Save Report](images/save-report1.png " ")
 
-16. A drop-down list automatically appears with the report you just created being selected. 
+16. A drop-down list automatically appears with the report you just created being selected.
 
     You want to reset the Default **Primary Report** back to the default settings and remove any customizations you have made. To do so, perform the following:
 
@@ -295,7 +295,7 @@ In this lab, you:
     ![Reset](images/apply-reset.png " ")
 
 
-17. You want to download the customized report as a CSV. 
+17. You want to download the customized report as a CSV.
 
     a. From the Reports drop-down list, select **My Private Report**.
 

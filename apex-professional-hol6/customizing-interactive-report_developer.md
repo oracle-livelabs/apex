@@ -11,9 +11,9 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/sample-reporting-1.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
-1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** 
-2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** 
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Customize an Interactive Report as a Developer
 
@@ -36,9 +36,9 @@ In this lab, you edit an interactive report in Page Designer and customize it as
     ![Edit page](images/click-page1.png " ")  
 
 5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to a single-row view.
-    
-    a. Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**. 
-    
+
+    a. Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
+
     Click **Save and Run**.
 
     ![Link to Single Row View](images/change-srw.png " ")
@@ -60,7 +60,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
     ![Pagination](images/change-pagination.png " ")
 
 7. You want to customize the display of the Search Bar. End users should be able to select the display of the desired number of rows per page.  
-    
+
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
     - Rows Per Page Selector: Toggle the button to **ON**
@@ -68,7 +68,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
     ![Rows Per Page Selector](images/enable-rpp.png " ")
 
-8. You want to enable the **Excel** and **PDF** download formats and disable **Send as Email** formats in the Download option. 
+8. You want to enable the **Excel** and **PDF** download formats and disable **Send as Email** formats in the Download option.
 
     In the property editor, do the following:
     - Under Download:
