@@ -127,7 +127,7 @@ Add a region to contain Order details and items.
 
     ![Create Sub Region](./images/create-sub-region1.png " ")
 
-3. In the Property Editor, enter/select the following:
+2. In the Property Editor, enter/select the following:
     - Title: **Order: &P15_ORDER.** (including the period)
     - Type: **Static Content**  
 
@@ -208,7 +208,7 @@ Add a region to display items in the Order.
             ```
     ![Define Region](./images/create-sub-region22.png " ")
 
-4. Click **Attributes** and edit/select the following:
+3. Click **Attributes** and edit/select the following:
 
     - Title > Column: **PRODUCT**    
 
@@ -236,7 +236,7 @@ Add a region to display items in the Order.
 
     ![Select Primary Key](./images/create-sub-region24.png " ")
 
-5. Click **Save**.
+4. Click **Save**.
 
 ## Summary
 You now know how to add a new page to your existing APEX Application and add regions to define the page's content using the Page Designer. You may now **proceed to the next workshop**.
