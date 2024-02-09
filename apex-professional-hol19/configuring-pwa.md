@@ -81,6 +81,8 @@ Users can long-press on the home screen app icon on touch-enabled devices to acc
 
 By providing these shortcuts, Oracle APEX enhances the user experience and makes it easier for users to access the pages they need within the PWA quickly.
 
+> **Note:** _An APEX application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before configuring shortcuts, click either Enable for Public Sessions or Enable for All Sessions._
+
 1. Scroll down to **Shortcuts** and click **Enable for All Sessions**. Confirm by clicking **Enable for All Sessions ** in the popup window.
 > **Note:** _This option does not work in *apex.oracle.com* instance._
 
@@ -125,15 +127,15 @@ In this task, you add a Share button that allows a user to share the post via em
 
 2. In the Property Editor, update the following properties:
 
-    Under Identification:
+   Under Identification:
 
-        - For Label: Enter**Share**
+      - For Label: Enter **Share**
 
-    - Under Appearance:
+   Under Appearance:
 
-        - Set Hot to **Yes**
+      - Set Hot to **Yes**
 
-        - For Icon: Enter **fa-share-alt**
+      - For Icon: Enter **fa-share-alt**
 
       ![configure Share](images/configure-share.png " ")
 
@@ -146,19 +148,20 @@ In this task, you add a Share button that allows a user to share the post via em
       ![configure Dynamic Action](images/configure-da.png " ")
 
 5. Under **True Action**, select **show** and then in the Property editor configure the following:
-    Under Identification:
+
+  Under Identification:
 
       - Set Action to **Share**.
 
-    Under Settings:
+  Under Settings:
 
       - For Title: **Share Dashboard Page**
 
       - For Text: **Sharing the Dashboard Page to the World!**.
 
-      Click **Save**.
+  Click **Save**.
 
-       ![configure Dynamic Action](images/configure-da1.png " ")
+      ![configure Dynamic Action](images/configure-da1.png " ")
 
 ## Task 5: Configure Meta Tags
 

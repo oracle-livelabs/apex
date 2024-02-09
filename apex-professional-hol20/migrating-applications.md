@@ -87,7 +87,11 @@ In this lab, you will:
 
     ![Select Export and click Next](images/export-app1.png " ")
 
-15. In the **Export Application** page, Under **Export Preferences**, select **Yes and Install on Import Automatically** and Click **Export**.
+15. In the **Export Application** page, Under **Export Preferences**
+
+    - Select **Yes and Install on Import Automatically**
+
+    Click **Export**.
 
     ![Select Yes and Install on Import Automatically](images/export-app2.png " ")
 
@@ -98,6 +102,8 @@ In this lab, you will:
 ## Task 2: Import Application into the Target Workspace and Verify Database Objects.
 
 In this Lab, You will login into a new workspace or the Workspace you created in previous labs and import the application along with Supporting objects.
+
+> **Note:**_In this task, Please use different environments for creating the target and the main workspace_
 
 1. Log in to the Target **Workspace**.
 
