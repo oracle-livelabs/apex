@@ -63,6 +63,7 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
 
     ![Configure p_request_id Var](./images/configure-p-requestdt.png " ")
 
+
 5. In the Rendering Pane, under **Compute Doctor Availability**, select **p\_request\_date**. 
 
     In the Property Editor, enter/select the following:
@@ -71,6 +72,7 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
         - Type: **Item**.
         - Item: **Workflow Parameter > REQUEST_DATE**
         - Format Mask: **DD-MON-YYYY HH24:MI:SS**
+
 
     ![Configure p_request_date Var](./images/conf-request-dt.png " ")
 
