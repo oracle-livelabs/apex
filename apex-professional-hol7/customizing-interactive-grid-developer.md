@@ -81,8 +81,8 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 5. You want to ensure end users can save Public interactive grids. You want to exclude HTML from the download formats available to end users.
     a) In the Rendering tree, select the **Project Tasks** Interactive Grid region.
 
-    b) In the property editor, select **Attributes**, and perform the following steps: 
-        - Enable Users To > **Save Public Report**: **Enable** the toggle button
+    b) In the property editor, select **Attributes**, and perform the following steps:
+        - Enable Users To > **Save Public Report**: Toggle the button to **ON**.
         - Under **Download**, deselect the **HTML** check box.
 
     ![save Public interactive grids](./images/enbale-public-reports11.png " ")
@@ -92,7 +92,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
     a) Under Rendering, select the **Project Tasks** Interactive Grid region.
 
     b) In the property editor, navigate to **Attributes** and perform the following steps:
-        - Edit > Enabled: **Enable** the toggle button
+        - Edit > Enabled: Toggle the button to **ON**
         - Pagination > Type: **Page**
 
     ![Editable interactive grid](./images/edit-enabled11.png " ")

@@ -27,7 +27,7 @@ In this lab, you will:
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol4.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol4.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
 1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
@@ -138,9 +138,9 @@ The shopping cart page allows users to review and edit the products in the cart.
 
   - Under **Navigation**:
 
-      - Use Breadcrumb: **Disable** the toggle button
+      - Use Breadcrumb: Toggle the button to **OFF**
 
-      - Use Navigation: **Disable** the toggle button
+      - Use Navigation: Toggle the button to **OFF**
 
    Click **Create Page**.
 
@@ -189,7 +189,7 @@ This region will list the items added temporarily to the shopping cart.
 
    - Under Body:
 
-      - Advanced Formatting: **Enable** the toggle button
+      - Advanced Formatting: Toggle the button to **ON**
 
       - HTML Expression: Enter the following:
 
@@ -203,7 +203,7 @@ This region will list the items added temporarily to the shopping cart.
 
   - Under Secondary Body:
 
-      - Advanced Formatting: **Enable** the toggle button
+      - Advanced Formatting: Toggle the button to **ON**
 
       - HTML Expression: Enter the following:
 
@@ -358,7 +358,7 @@ This region allows users to review the product details, such as brand, price, de
 
    - Under Secondary Body:
 
-      - Advanced Formatting: **Enable** the toggle button
+      - Advanced Formatting: Toggle the button to **ON**
 
       - HTML Expression: Enter the following:
 
@@ -426,7 +426,7 @@ This region lets users read the customer reviews for this product.
 
     - Under Title:
 
-        - Advanced Formatting: **Enable** the toggle button
+        - Advanced Formatting: Toggle the button to **ON**
 
         - HTML Expression: Enter the following:
 
@@ -464,7 +464,7 @@ This region lets users read the customer reviews for this product.
 
     - Data Source > Table/View Name: **PRODUCTS**
 
-    - Navigation > Use Breadcrumb: **Disable** the toggle button
+    - Navigation > Use Breadcrumb: Toggle the button to **OFF**
 
   Click **Next**.
 
