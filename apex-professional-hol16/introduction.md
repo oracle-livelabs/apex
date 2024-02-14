@@ -3,10 +3,10 @@
 ## **What is APEX?**
 Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON), and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
+In this hands-on lab, you will log in to the New Remote APEX workspace, create a Table, and then **Register Schema with ORDS**.
+
 ### Recap
 In the previous hands-on lab, you obtained knowledge about Approval components. You acquired the ability to generate a Task definition and a Unified Task List page. You incorporated various types of events into your task definition. Furthermore, you gained proficiency in crafting an SQL script, designing an email template, and managing Oracle APEX account users.
-
-In this hands-on lab, you will log in to the New Remote APEX workspace, create a Table, and then **Register Schema with ORDS**.
 
 Estimated Time: 30 minutes
 

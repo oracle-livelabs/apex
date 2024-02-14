@@ -9,7 +9,6 @@ In this workshop, you create Validations, Computations, and Processes in order t
 ### Recap
 In the previous workshop, you learned how to add page buttons and items to a page.
 
-
 Estimated Time: 15 minutes
 
 ### Objectives
