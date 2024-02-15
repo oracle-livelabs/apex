@@ -42,7 +42,7 @@ For conducting labs in this workshop, either service can be utilized.
 
 Click one of the options below to proceed.
 
-## **Option 1**: APEX Service
+## Option 1: APEX Service
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
 In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
@@ -66,7 +66,15 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
         ![Cloud login](images/enter-user-name-and-password.png " ")
 
-3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
+3. Based on the Multi-factor authentication setup for your account, provide authentication to sign into the account. For example, click Allow on the app or enter your authentication code and click Verify based on the authentication setup. For more details, refer the [Managing Multifactor Authentication documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/usingmfa.html).
+
+  ![Cloud login verification](images/sso-multi-factor-authentication.png " ")
+
+  ![Cloud login verification](images/sso2-multi-factor-authentication.png " ")
+
+3. After Verification you will be signed into Oracle Cloud.
+
+  From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
 
     ![APEX instance page](images/navigate-apex-service.png " ")
 
@@ -130,7 +138,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
   ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
 
-## **Option 2**: Autonomous Database in Oracle Cloud
+## Option 2: Autonomous Database in Oracle Cloud
 
   In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous Transaction Processing* database. The final step in the process is to provision Oracle APEX.
 
@@ -152,7 +160,14 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
       ![log in page for Oracle Cloud account](images/enter-user-name-and-password.png " ")
 
-  5. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
+  5. Based on the Multi-factor authentication setup for your account, provide authentication to sign into the account. For example, click Allow on the app or enter your authentication code and click Verify based on the authentication setup. For more details, refer the [Managing Multifactor Authentication documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/usingmfa.html).
+
+      ![Cloud login verification](images/sso-multi-factor-authentication.png " ")
+
+      ![Cloud login verification](images/sso2-multi-factor-authentication.png " ")
+
+
+  5. After Verification you will be signed into Oracle Cloud. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
 
       From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
 
@@ -275,4 +290,4 @@ You may now **proceed to the next lab**.
 
  - **Author** - Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Arabella Yao, Jaden McElvey
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, February 2024
