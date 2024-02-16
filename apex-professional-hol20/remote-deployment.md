@@ -167,7 +167,7 @@ For **Endpoint URL**, paste the base URL copied from the deployment instance in 
 ## Summary
 You now know how to deploy your Application from Development to Target.
 
-## Acknowledgments
+## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, Jan 2024

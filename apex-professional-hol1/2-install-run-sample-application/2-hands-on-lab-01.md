@@ -69,7 +69,7 @@ This lab covers installing and running a sample application.
 
    ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
-6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom. 
+6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom.
    Click **Home** to return to the home page of the APEX application development environment.
 
    ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")

@@ -62,7 +62,7 @@ Note:
 - If you cannot see the Push Notifications, ensure that the DND option is turned off in your system and your browser has the necessary permissions to send notifications.
 - View the compatibility matrix of Push Notifications [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
 
-## Task 2: Creating a Page with reports for Push Notifications Views
+## Task 2: Create a Page with reports for Push Notifications Views
 
 No matter the approach you opt for in sending push notifications, it is crucial (especially for the APEX engine) to possess the ability to recognize users who have subscribed to this feature. This recognition is essential for meaningful use of page processes or the API. APEX provides two distinct views to analyse records, revealing the subscribers to push notifications within your application and the notifications currently in the queue.
 

@@ -6,7 +6,7 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 ### Recap
 In the last hands-on lab, you learned how to add page buttons and items to a page.
 
-This Hands-on Lab is a collection of six tasks. After completing this lab, your application will enable customers to:
+In this workshop, you create Validations, Computations, and Processes in order to implement features such as validating email, name, and son on. You also implement processes to clear the cart and create an order in the Online Shopping App.
 
 - Create validations on the Page Items.
 - Create a Page process to create the Order

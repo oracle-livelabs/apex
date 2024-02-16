@@ -52,7 +52,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 7. Under Authentication,
 
-    - **Authentication Required**: Toggle the button to **ON** 
+    - **Authentication Required**: Toggle the button to **ON**
 
     - **Credentials**: apex\_ai\_cred
 

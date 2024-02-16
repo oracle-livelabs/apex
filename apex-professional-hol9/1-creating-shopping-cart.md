@@ -1,6 +1,6 @@
 # Add Validations and Processes to the Shopping Cart Page
 
-## Introduction
+This lab is a collection of six tasks.  After completing this lab, your application will enable customers to:
 
 This Hands-on Lab is a collection of six tasks.  After completing this lab, your application will enable customers to:
 
@@ -13,8 +13,8 @@ Estimated Time: 15 minutes
 
 
 ### Objectives
-In this lab, you will:
-- Create Validations, Processes and Branches to manage the Shopping Cart
+In this lab, you:
+- Create Validations, Processes and Branches to manage the Shopping Cart.
 
 ### Downloads
 
@@ -31,13 +31,13 @@ In this lab, you will:
 
     ![Select Online Shopping Cart App](./images/click-app-builder1.png " ")
 
-2. Now you select **Shopping Cart** under **Page Icons**.
+2. Then, select **Online Shopping Application**.
 
     ![Navigate to Shopping Cart Page](./images/navigate-to-shopping-cart-page.png " ")
 
 3.  In the Rendering tree (left pane), click the **Processing** tab.
 
-4. Over **Validating**, right-click **Create Validation**.
+    ![Navigate to Shopping Cart Page](./images/navigate-to-shopping-cart-page.png " ")
 
      ![Create a Validation](./images/create-validation1.png " ")  
 
@@ -45,19 +45,16 @@ In this lab, you will:
 
     ![Customise Validation](./images/create-validation2.png " ")
 
-    | Name |  Type (under Validation) | Item |
-    | --- |  --- | --- |
-    | Validate Name | Item is NOT NULL | P16\_CUSTOMER\_FULLNAME |
-    | Validate Email | Item is NOT NULL | P16\_CUSTOMER\_EMAIL |
-    | Validate Store | Item is NOT NULL | P16_STORE |
+6.  Create three validations for the following items: **Name**, **Email**, and **Store**.
 
-    Under Error:
+    ![Customise Validation](./images/create-validation2.png " ")
 
-    | Error Message | Display Location | Associated Item |
-    | --- |  --- | --- |
-    | Please enter your name | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
-    | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL |
-    | Please select a store | Inline with Field and in Notification | P16_STORE |
+    | Name |  Validation > Type | Validation > Item  | Error Message | Display Location | Associated Item |
+    | --- |  --- | --- | --- |  --- | --- |
+    | Validate Name | Item is NOT NULL | P16\_CUSTOMER\_FULLNAME | Please enter your name | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
+    | Validate Email | Item is NOT NULL | P16\_CUSTOMER\_EMAIL | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL |
+    | Validate Store | Item is NOT NULL | P16_STORE | Please select a store | Inline with Field and in Notification | P16_STORE |
+    {: title="Validation Properties"}
 
      ![Customise Validation](./images/create-validation3.png " ")
 
@@ -68,7 +65,8 @@ In this lab, you will:
     | ---   |  --- |
     | Validate Name  | Proceed |
     | Validate Email | Proceed |
-    | Validate Store | Proceed |   
+    | Validate Store | Proceed |
+    {: title="Server-side Conditions"}
 
      ![Customise Validation](./images/create-validation4.png " ")       
 
@@ -91,8 +89,7 @@ In this lab, you will:
 
      ![Create and Configure Invoke API Process](./images/create-process2.png " ")  
 
-    - For Success Message, enter **Order successfully created: &P16\_ORDER\_ID.**
-    - Under Server-side condition, for When Button Pressed, select **Proceed**
+     ![Create and Configure Invoke API Process](./images/create-process2.png " ")  
 
 
 4. On the **Processing** tab (left pane), Expand the Process **Checkout**. Under **Parameters**, Click **p_customer**.
@@ -155,14 +152,13 @@ Click Save.
 
 ## Task 4: Add Branches to the Page
 
-1. On the **Processing** tab (left pane).
-2. Right-click **After Processing** and click **Create Branch**.
+1. In the **Processing** tab (left pane), right-click **After Processing** and select **Create Branch**.
 
      ![Create a Branch](./images/create-branch1.png " ")  
 
 3.  In the Property Editor, enter the following:  
 
-    - For Name - enter **Go to Orders**
+    - Name: **Go to Orders**
 
     - Navigate to the Target attribute and click **No Link Defined**.
         - For Type - select **Page in this application**
@@ -172,9 +168,11 @@ Click Save.
           | Name | Value  |
           | --- |  --- |
           | P16\_ORDER\_ID | &P16\_ORDER\_ID. |
+          {: title="List of Taregt Item(s)"}
 
-        - For Clear Cache - enter **16**.
-        - Click **OK**.
+        - Clear Cache: **16**.
+
+        Click **OK**.
 
     - Under the Server-side condition, for When Button Pressed, select **Proceed**.
 
@@ -191,7 +189,7 @@ Click Save.
         - For Clear Cache - enter **1**
         - Click **OK**
 
-    - Under Server-side condition, for When Button Pressed, select **Clear**
+    - Server-side condition > When Button Pressed: **Clear**
 
     ![Configure Branch](./images/create-branch3.png " ")
 

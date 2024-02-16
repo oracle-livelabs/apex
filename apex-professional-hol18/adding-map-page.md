@@ -145,7 +145,7 @@ You now know how to manage Map pages. You may now **proceed to the next lab**.
 ## What's Next
 In the upcoming hands-on lab, you will learn to Implement the 'Share' button, Enable Push Notifications, and Add Shortcuts to the PWA app. Also, you will learn to Include screenshots to be displayed while installing the PWA app and Enable Push Notifications. Additionally you learn how to configure Push Notifications.
 
-## Acknowledgments
+## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

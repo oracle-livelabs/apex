@@ -149,7 +149,7 @@ In this Lab, You will login into a new workspace or the Workspace you created in
 
 You now know how to create Installation scripts and Data Packages to export Database objects along with Data. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager

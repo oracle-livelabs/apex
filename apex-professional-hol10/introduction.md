@@ -6,7 +6,11 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 ### Recap
 In the last hands-on lab, you practised creating validations on the Page Items and adding Page processes with types like Invoke API, Clear and a branch to a page.
 
-This Hands-on Lab is a collection of Nine tasks. After completing this lab, your application will enable customers to:
+In this workshop, you implement features to update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart, refresh the shopping cart region, review the product details, and the items added to the Shopping Cart. You also implement the feature to add, edit, or remove the product from the shopping cart.
+
+
+### Recap
+In the last hands-on lab, you practised creating validations on the Page Items and adding Page processes with types like Invoke API, Clear and a branch to a page.
 
 - Dynamic Actions to manage the Shopping Cart
 - Update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart

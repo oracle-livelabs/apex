@@ -1,4 +1,4 @@
-# Add Computations, Dynamic Actions and Processes.
+# Add Computations, Dynamic Actions and Processes
 
 ## Introduction
 This Hands-on Lab is a collection of Nine tasks. After completing this lab, your application will enable customers to:
@@ -42,8 +42,8 @@ In this Task, you will create a dynamic action to:
         - For Selection Type - select **Region**
         - For Region - select **Shopping Cart**     
     - Under Client-side Condition:
-        - For Type - select **JavaScript expression**
-        - For JavaScript Expression, enter the following:
+        - Type: **JavaScript expression**
+        - JavaScript Expression: enter the following:
 
             ```
             <copy>
@@ -148,8 +148,8 @@ In this Task, you will create a dynamic action to:
 
     ![Navigate to Page 17](./images/navigate-to-page17.png " ")
 
-2. In the Rendering tree (left pane), expand the **Pre-Rendering**.
-3. Right-click **Before Regions** and click **Create Computation**.
+2. In the Rendering tree (left pane), expand **Pre-Rendering**.
+3. Right-click **Before Regions** and select **Create Computation**.
 
      ![Create a Computation](./images/create-computation1.png " ")  
 
@@ -157,8 +157,8 @@ In this Task, you will create a dynamic action to:
     - Under the Identification section:
         - For Item Name - select **P17_QUANTITY**
     - Under Computation:
-        - For Type - select **Function Body**
-        - For PL/SQL Function Body - enter the following PL/SQL Code:
+        - Type: **Function Body**
+        - PL/SQL Function Body: enter the following PL/SQL Code:
 
         ```
         <copy>
@@ -173,7 +173,7 @@ In this Task, you call the *manage\_orders.add_product* procedure that temporari
 
 1. In the Rendering tree (left pane), navigate to **Processing** tab.   
 
-2. Right click **Processing** and click **Create Process**.
+     ![Create Page Process](./images/create-process21.png " ")   
 
      ![Create Page Process](./images/create-process21.png " ")   
 
@@ -202,17 +202,16 @@ In this Task, you call the *manage\_orders.add_product* procedure that temporari
 4. Click **Save.**
 
 ## Task 5: Create a Process to Edit Products in the Shopping Cart
-In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove a product from the shopping cart and add it again with the updated quantity.
+In this task, you call the *manage\_orders.remove\_product* and *manage\_orders.add\_product* procedures to remove a product from the shopping cart and add it again with the updated quantity.
 
-1. In the **Processing** tab.    
-2. Right click **Processing** and click **Create Process**.
+1. In the **Processing** tab, right-click **Processing** and select **Create Process**.
 
   ![Navigate to Processing Tab](./images/navigate-to-sc2.png " ")
 
-3. In the Property Editor, enter the following:
-    - For Name - enter **Edit product**
-    - For Type - select **Execute Code**
-    - For PL/SQL Code - enter the following PL/SQL code:
+2. In the Property Editor, enter/select the following:
+    - Name: **Edit product**
+    - Type: **Execute Code**
+    - PL/SQL Code: Enter the following PL/SQL code:
 
         ```
         <copy>
@@ -235,10 +234,9 @@ In this Task, you call the *manage\_orders.remove\_product* and *manage\_orders.
   ![Create Second Page process](./images/create-process31.png " ")
 
 ## Task 6: Create a Process to Delete Products from the Shopping Cart
-In this Task, you call the *manage\_orders.remove\_product* to remove a product from the shopping cart.
+In this task, you call the *manage\_orders.remove\_product* to remove a product from the shopping cart.
 
-1. In the **Processing** tab.    
-2. Right click **Processing** and click **Create Process**.
+1. In the **Processing** tab, right-click **Processing** and select **Create Process**.
 
      ![Navigate to Processing Tab and Create Page Process](./images/right-click-process3.png " ")  
 
@@ -261,7 +259,7 @@ In this Task, you call the *manage\_orders.remove\_product* to remove a product 
     - Under the Server-side Condition section:
         - For When Button Pressed - select **Delete**   
 
-        Click **Save.**
+    Click **Save.**
 
   ![Create Third Page process](./images/create-process41.png " ")
 
@@ -305,13 +303,18 @@ After the customer has taken Action (add/edit/delete) about the product, the mod
     - Under Settings section:
         - For Items to Return - enter **P17\_SHOPPING\_CART\_ITEMS,P17\_PRODUCT\_ID,P17\_ACTION,P17\_QUANTITY**
 
-4. Click **Save.**
+2. In the Property Editor, enter/select the following:
+    - Under Identification:
+        - Name: **Close Dialog**
+        - Type: **Close Dialog**
+    - Under Settings:
+        - Items to Return: **P17\_SHOPPING\_CART\_ITEMS, P17\_PRODUCT\_ID, P17\_ACTION, P17\_QUANTITY**
 
     ![Create Close Dialog Process](./images/create-close-dialog.png " ")
 
 ## Task 9: Enhance the Modal Page
 
-1. Navigate to **Rendering** tab (left pane).
+1. Navigate to the **Rendering** tab (left pane).
 
 2. In the rendering tree, select the root node in the component tree **Page 17: Add to Cart**
 

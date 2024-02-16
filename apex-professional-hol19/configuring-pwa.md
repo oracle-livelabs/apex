@@ -84,17 +84,18 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 > **Note:** _An APEX application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before configuring shortcuts, click either Enable for Public Sessions or Enable for All Sessions._
 
 1. Scroll down to **Shortcuts** and click **Enable for All Sessions**. Confirm by clicking **Enable for All Sessions ** in the popup window.
-> **Note:** _This option does not work in *apex.oracle.com* instance._
+
+    > **Note:** _This option does not work in *apex.oracle.com* instance._
 
     ![enable for all sessions](images/enable-for-all-sessions.png " ")
 
     ![confirm dialog](images/confirm-dialog.png " ")
 
-3. Click **Add Shortcut**.
+2. Click **Add Shortcut**.
 
     ![click add shortcut](images/add-shortcut.png " ")  
 
-4. In the Add Shortcut dialog:
+3. In the Add Shortcut dialog:
 
     - For Name: Enter **Dashboard**
 
@@ -108,7 +109,7 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 
       ![select dashboard page](images/upload-an-icon1.png " ")
 
-5. Click **Create**.
+4. Click **Create**.
 
     Similarly, you can add multiple shortcuts, each pointing to a different page in your app.
 
