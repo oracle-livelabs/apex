@@ -24,8 +24,6 @@ Estimated Time: 45 minutes
 | 4 | [Creating Pages](?lab=lab-4-creating-pages) | 15 minutes |
 | 5 | [Defining a List of Values](?lab=lab-5-defining-list-values) | 10 minutes |
 
-**To log issues**, click here to go to the [github oracle repository](https://github.com/oracle/learning-library/issues/new) issue submission form.
-
 ### **Let's Get Started!**
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.

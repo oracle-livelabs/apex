@@ -27,11 +27,15 @@ In this lab, you will:
 
 ## Task 1: Add a Form Region
 
-1. In the Rendering tree, Right-click on **Body**, and then choose **Create Region**.
+1. On Application home page, Navigate to Page **1-Timeline**.
 
-    ![Rendering Tree options are displayed](images/create-region.png "")
+    ![Navigate to Timeline](images/nav-timeline.png "")
 
-2. You see a New region in the Rendering Tree, and at
+2. In the Rendering tree, Right-click on **Body**, and then choose **Create Region**.
+
+    ![Rendering Tree options are displayed](images/create-region1.png "")
+
+3. You see a New region in the Rendering Tree, and at
 the same time it will be shown in the **Layout** section (in the
 middle). In the Property Editor, you will see a **Region** tab and
 parameters. Enter the following:
@@ -42,26 +46,22 @@ parameters. Enter the following:
 
     ![Form types select list](images/form-types.png "")
 
-3. The **Form Region** will be tied to the **SM\_POSTS** table that we
-created from the script. Therefore, in the **Source** section, specify the **Table Name** as **SM_POSTS**.
+4. The **Form Region** will be tied to the **SM\_POSTS** table that we created from the script. Therefore, in the **Source** section, specify the **Table Name** as **SM_POSTS**.
 
     ![Page Designer view](images/form-source.png "")
 
-    You will see that APEX has populated the available columns from our
-table as "fields" in the form (visible on the left in the tree view and
-in the layout view).
+    You will see that APEX has populated the available columns from our table as "fields" in the form (visible on the left in the tree view and in the layout view).
 
-4. Save and Run the app and sign-in to see what it looks like!
+5. Save and Run the app and sign-in to see what it looks like!
 
-    ![The app homepage](images/run-app.png "")
+    ![The app homepage](images/run-app3.png "")
 
 ## Task 2: Clean up and configure the Form UI Page Components
 
 1. We now have a form that labels the columns as input fields that supports
 keyboard entry, but it doesn't save anything yet and needs some tweaking.
 
-    These columns resulted in page items being placed on the page inside
-that form region. The form doesn't need some of them, and a couple of them need to have their type changed.
+    These columns resulted in page items being placed on the page inside that form region. The form doesn't need some of them, and a couple of them need to have their type changed.
 
     Click on each of these listed page items one at a time, and press the delete key to remove them. Alternatively, you can control+click each and then delete them all in one motion.
 
@@ -77,7 +77,7 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
     - **P1\_UPDATED**
 
-    ![Rendering tree with page items](images/page-items.png "")
+    ![Rendering tree with page items](images/page-items1.png "")
 
     The tree of columns in that Post Form region will look like this:
 
@@ -96,7 +96,7 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
 3. Run the app again and see the results of our changes so far!
 
-    ![Updated app is displayed](images/updated-app.png "")
+    ![Updated app is displayed](images/updated-app1.png "")
 
 4. Moving on, the **Lat** and **Lon** items don't need to be seen, so we'll hide them next. In Page Designer, multi-select both **P1\_LAT** and **P1\_LON** and change the type to **Hidden**.
 
@@ -107,9 +107,9 @@ that form region. The form doesn't need some of them, and a couple of them need 
 
 5. Next, we want to configure the **P1\_FILE\_BLOB** page item:
 
-    - Change the **Type** to **File Browse...**
+    - Change the **Type** to **File Upload**
     - Set the **Label** to **Photo**
-    - Under **Settings**, for **Display As**, select **Block Dropzone**
+    - Under **Display**, for **Display As**, select **Block Dropzone**
     - For **Dropzone Title**, enter "**Share a photo..**"
     - For **Storage Type**, select **BLOB column specified in Item Source attribute**
 
@@ -126,7 +126,12 @@ set:
 
     ![Property Editor](images/property-editor.png "")
 
+    ![Property Editor](images/property-editor1.png "")
+
+<<<<<<< HEAD
     Ok, that was a bunch of changes!
+=======
+>>>>>>> upstream/main
 
 6. Let's save and run and see how it looks.
 
@@ -154,7 +159,7 @@ this form visible to the user as a modal form.
     -  Next, click on the **Template Options** button so that we can customize some options.
 
     -  Then, set the options to match the following:
-        - Check **Auto Height** 
+        - Check **Auto Height**
         - Set **Size** to **None**
         - Set **Heading Level** to **H1**
 
@@ -166,10 +171,7 @@ this form visible to the user as a modal form.
 3. Let's save and run the app.
 
     *You'll quickly notice that there isn't much to see* - but that's okay!
-Now that we've changed the form region to be an inline dialog, it will
-be hidden on page load. Inline Dialogs need to be opened by a button
-click (or custom javascript is an option, too), so we need to create a
-button!
+Now that we've changed the form region to be an inline dialog, it will be hidden on page load. Inline Dialogs need to be opened by a button click (or custom javascript is an option, too), so we need to create a button!
 
     ![Running app is displayed](images/updated-app-3.png "")
 
@@ -177,7 +179,7 @@ button!
 
 1. Right-click on **Components** in the **Rendering Tree**, and choose **Create Button**.
 
-    ![Rendering tree](images/create-button.png "")
+    ![Rendering tree](images/create-button1.png "")
 
 2. Set the **Button Name** to **ADD\_POST** and press enter. You will see the Label is automatically set to '**Add Post**'.
 
@@ -317,9 +319,7 @@ page with a process for the Form:
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
-7. However, you can run the app and select an image file (or take a
-picture on mobile), add a comment and click the Post button to have a
-record inserted anyway.
+7. However, you can run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
 
     ![Running app](images/run-app-3.png)
 
@@ -328,4 +328,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

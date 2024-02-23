@@ -19,30 +19,24 @@ In this lab, you will:
 
 - Completion of workshop through Lab 6
 
-## Task 1 : Create a Like Button
+## Task 1: Create a Like Button
 
-The **Like** button will display the current count of likes next to a heart
-icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their
-like to the post. If the user has already liked the post, the effect of
-clicking it again will remove the like. 
+The **Like** button will display the current count of likes next to a heart icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their like to the post. If the user has already liked the post, the effect of clicking it again will remove the like.
 
-1.  In the Rendering Tree: 
-    - Under the **Timeline** Cards Region, right-click on **Actions** 
+1.  In the Rendering Tree:
+    - Under the **Timeline** Cards Region, right-click on **Actions**
     - Choose **Create Action**
 
-2.  You will see a new sub-entry item titled **Button** and you can
-    select it to see the properties on the right.
+2.  You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
 
 3.  In the Property Editor:
-    - For Identification > Label, enter **&REACTIONS.** (including the period). 
-    
-        This is called APEX string substitution syntax, and it will render the count of reactions as
-    the Label for this button, on each post. 
+    - For Identification > Label, enter **&REACTIONS.** (including the period).
+
+        This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
         Note: The **REACTIONS** column is defined in the query for this CARDS Region.
-    - Set the Link > Type to **Redirect to URL**. 
-    
-        We need the LIKE button to have a URL that can be linked to
-    javascript later, so that the database operation can be performed.
+    - Set the Link > Type to **Redirect to URL**.
+
+        We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
     - For Target > URL, enter **#action$like?id=&ID.** (including the period), and click **OK**.
     - Under Appearance,
         - For Display Type, select **Text with Icon**
@@ -68,8 +62,8 @@ Similar to the previous task, we create another button that will be used for Del
 
     - Link > Type: **Redirect to URL**
 
-    - Target > URL: **#action$delete?id=&ID.** 
-    
+    - Target > URL: **#action$delete?id=&ID.**
+
     - Click **OK**
 
     - Under Appearance:
@@ -81,25 +75,17 @@ Similar to the previous task, we create another button that will be used for Del
         - For Language, select **PL/SQL**
         - For **PL/SQL expression**, enter **:USER\_NAME=:APP\_USER**
 
-        This Server-side condition controls whether or not this **button** shows for a card.
-        The expression will compare the query column value returned to
-    the currently signed-in APEX user. The colon-prefixed "variable"
-    syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates
-    to true (for each row or Card) then APEX will render the **Button**,
-    otherwise the button is not visible.
+        This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
 
         ![Property Editor](images/button-action.png)
 
 ## Task 3: Add Javascript to the Page for the Card Buttons
 
-In this task, we will provide the APEX page with the custom javascript
-that will be invoked by the "URL" from the Cards button target link, to the Dynamic actions that we will create in Lab 8.
+In this task, we will provide the APEX page with the custom javascript that will be invoked by the "URL" from the Card button target link, to the Dynamic actions that we will create in Lab 8.
 
-1.  Select the **Page 1: Timeline** entry in the **Rendering Tree**
-    and review the attributes for the **Page 1:Timeline** in the Property editor
-    on the right. 
+1.  Select the **Page 1: Timeline** entry in the **Rendering Tree** and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2.  Under the Javascript section, enter the following javascript code:
+2.  Under the Javascript section, For: **Execute when Page loads** ,enter the following javascript code:
 
     ```
     <copy>
@@ -124,51 +110,37 @@ that will be invoked by the "URL" from the Cards button target link, to the Dyna
     Open the Code Editor to see the entire script.
 
     ![Property Editor](images/code-editor.png)
-    
+
     ![Code Editor](images/js-code-2.png)
 
-    Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created
-yet.
+    Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created yet.
 
     ![code editor](images/js-code-3.png)
 
-    We need this Page Item **P1\_ACTION\_ID** to be on the page so that this
-javascript can store the particular CARD ID when a user clicks
-either buttons, which in turn, will execute either the **like** or the
-**delete** operations from the URL link targets. 
+    We need this Page Item **P1\_ACTION\_ID** to be on the page so that this javascript can store the particular CARD ID when a user clicks either buttons, which in turn, will execute either the **like** or the **delete** operations from the URL link targets.
 
-    This is a design pattern using a single APEX Javascript API call (on page load) with an
-array of multiple code blocks as parameters. Each respective javascript
-block will then in-turn call a custom event, which we willl configure our
-Dynamic Actions to respond to in the next task.
+    This is a design pattern using a single APEX Javascript API call (on page load) with an array of multiple code blocks as parameters. Each respective javascript block will then in-turn call a custom event, which we will configure our Dynamic Actions to respond to in the next task.
 
+3.  To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
 
+    ![Create page item option](images/create-page-item4.png)
 
-4.  To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
-
-    ![Create page item option](images/create-page-item.png)
-
-5. In the Property Editor:
+4. In the Property Editor:
     - Rename the Identification > Name as **P1\_ACTION\_ID**
-    
-    Note: APEX will set **Page Item** > **Name** by default with the Prefix of
-    **P** and the **Page Number** followed by an underscore (**\_**),
-    and **NEW**; in this case, as **P1\_NEW**.
+
+    Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.
 
     - Type: **Hidden**
     - Settings > Value Protected: **OFF**
-    
+
     ![Property Editor](images/value-protected.png)
 
-8. Now, let's go back and select the **Page 1: Timeline** Rendering Tree
-entry, and open up the code editor again to see the javascript we copied
-and pasted earlier. The code editor looks clean with no concerns!
+8. Now, let's go back and select the **Page 1: Timeline** Rendering Tree entry, and open up the code editor again to see the javascript we copied and pasted earlier. The code editor looks clean with no concerns!
 
     ![code editor](images/code-editor-2.png)
-  
 
-9. **Save and Run** the page to see how the app is shaping up. Functionally, we're
-almost there!
+
+9. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
     ![Running app](images/run-app.png)
 
@@ -176,5 +148,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita BeriProduct Manager, November 2023
