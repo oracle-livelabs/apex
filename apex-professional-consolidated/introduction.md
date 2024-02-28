@@ -12,7 +12,6 @@ Through these labs, you will:
 - Gain expertise by building APEX Apps for different use cases
 - Prepare for the Oracle APEX Cloud Developer Professional Certification Exam
 
-
 ## Oracle APEX Hands-On Labs Links
 
 | Oracle APEX Hands-On Lab Title    | Description | Duration |
@@ -35,8 +34,8 @@ Through these labs, you will:
 | [16. Managing Application Data](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3582&p210_wec=&session=114113796090571)  | In this lab, you login to the New Remote APEX workspace, create a Table, and then Register a new Schema with ORDS. | 30 Minutes |
 | [17. Implementing Security in your Application](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3578&p210_wec=&session=108753226205988)  | In this lab, you learn how to implement Authentication and Authorization in Oracle APEX. <br>Application security is very important for the majority of applications. You must ensure that users enter valid credentials, generally username and password (Authentication), and that the logged-in user has appropriate rights within the application (Authorization). | 20 Minutes |
 | [18. Adding Additional Pages to your Application](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3579&p210_wec=&session=101389313807534)| In this lab, you add Calendars, Charts, Tree pages, and Maps to Demo Projects and Online Shopping applications. | 40 Minutes |
-| [19. Migrating Application Development Between Environments](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3580&p210_wec=&session=100396748637275) | In this lab, you create Installation scripts and Data Packages to export Database objects along with Data. Then you export the DEMO PROJECTS Application along with supporting objects and import it into another workspace.<br> <br>In the second part of the lab, you will be using Remote Deployment to deploy your Application from Development to UAT. | 20 Minutes |
-
+| [19. Enhance the Applications using Progressive Web Application](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3907&p210_wec=&session=117447918490865) | In this lab, You will make the Demo Projects app installable on any device. You also implement a 'Share' button where a user can share the uploaded images with other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Demo Projects App. You also learn to add Shortcuts and Screenshots to the PWA app.| 35 Minutes |
+| [20. Migrating Application Development Between Environments](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3580&p210_wec=&session=1321024421140) | In this lab, you create Installation scripts and Data Packages to export Database objects along with Data. Then you export the DEMO PROJECTS Application along with supporting objects and import it into another workspace.<br> <br>In the second part of the lab, you will be using Remote Deployment to deploy your Application from Development to UAT. | 20 Minutes |
 
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
@@ -50,7 +49,7 @@ Through these labs, you will:
 - [External Site + Slack](http://apex.world)
 
 
-## Acknowledgments
-
+## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, June 2023
+- **Last Updated By/Date** - Ankita Beri ,Product Manager, Jan 2024
+
