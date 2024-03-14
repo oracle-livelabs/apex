@@ -13,6 +13,7 @@ In this lab, you will:
 - Create an application using the tables and data you have installed.
 - Create a Database application from a file.
 
+
 ## Task 1: Create an Application based on Existing Tables
 
 1. In the App Builder menu, click **App Builder**.
@@ -163,7 +164,7 @@ A dashboard page is a great way to show critical information using various chart
 
 ## Task 7: Enable Features
 
-Features are a set of optional application capabilities in Oracle APEX that you can include in your new Application. 
+Features are a set of optional application capabilities in Oracle APEX that you can include in your new Application.
 
 1. Under **Features** section, check **Install Progressive Web App** and **Access Control**.
     Progressive Web Apps (PWAs) can be easily installed on any desktop or mobile device, offering users a more native app experience. Access Control enables role-based user authorization with a single click.
