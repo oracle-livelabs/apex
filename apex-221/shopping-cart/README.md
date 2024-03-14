@@ -46,7 +46,7 @@ Estimated Time: 90 minutes
 
 ### Downloads
 
-- [Download the completed application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Zj4e0yI2vy8IJhU1uanEjpi7CX7kj4xLWG_dHkcpkox0OX1bu6KWPYNzk8MLZJBb/n/c4u04/b/developer-library/o/shoppingcart-app.sql).
+- [Download the completed application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/shopping-cart-app.sql).
 - [Download images for your application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/clothing-images.zip).
 
 ## Learn More - *Useful Links*
