@@ -36,4 +36,4 @@ In this workshop, you:
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, February 2024
