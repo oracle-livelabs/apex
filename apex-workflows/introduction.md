@@ -39,7 +39,7 @@ In this workshop, you will:
 
 ### Downloads
 
-[Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/7PbnOCDkEZFCd4F6Fx_84Ejf-SpBcNqXNfdcR2ofekt76Sr4t4GyTMC9v1vCl1ez/n/c4u04/b/livelabsfiles/o/doctors-app-made-easydoctors-app-made-easy.sql) to download the completed application.
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
 
 
 ## Learn More - *Useful Links*
