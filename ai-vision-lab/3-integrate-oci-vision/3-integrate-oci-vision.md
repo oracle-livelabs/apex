@@ -4,6 +4,8 @@
 
 OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items that need attention, such as anomaly in an X-Ray. Developers can also identify and localise objects in images to automate counting of common items, such as packages and vehicles.
 
+Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
+
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyse and index the images uploaded by the user.
 
 Estimated Time: 20 Minutes

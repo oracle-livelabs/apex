@@ -37,6 +37,11 @@ In this workshop, you will:
 
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 
+### Downloads
+
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
+
+
 ## Learn More - *Useful Links*
 
 - [APEX Workflows](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599)
