@@ -24,7 +24,7 @@ In this workshop, you:
 
 ### Prerequisites for Building this App:
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: https://www.oracle.com/in/cloud/free/
+- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it [here](https://www.oracle.com/in/cloud/free/).
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
