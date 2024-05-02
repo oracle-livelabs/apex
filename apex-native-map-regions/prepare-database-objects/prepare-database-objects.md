@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Before we can begin using APEX to visualize and analyze our geospatial data, we must first create and populate tables and other database objects containing our data sources. This lab assumes that you have already installed the Oracle Database 23c Free Developer Release and configured and installed ORDS on a pluggable database.
+Before we can begin using APEX to visualize and analyze our geospatial data, we must first create and populate tables and other database objects containing our data sources. This lab assumes that you have already installed the Oracle Database 23ai Free Developer Release and configured and installed ORDS on a pluggable database.
 
 Estimated Time: 10 minutes
 
@@ -16,7 +16,7 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-- Oracle Database 23c Free Developer Release
+- Oracle Database 23ai Free Developer Release
 - Completed all previous labs successfully
 
 Watch the video below for a quick walk through of the lab.
