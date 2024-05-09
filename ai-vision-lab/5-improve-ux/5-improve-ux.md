@@ -357,4 +357,4 @@ You now know how to enhance the Social Media app with mobile features such as Cr
 
 ## Acknowledgments
 - **Author** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023S
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

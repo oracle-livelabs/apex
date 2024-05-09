@@ -4,7 +4,7 @@
 
 Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start with, you will need to decide on the service you are going to use for this workshop, and then create an APEX workspace accordingly. Continue reading further to learn which is the best service for you!
 
-If you already have an APEX 23.2 Workspace provisioned, you can skip this lab.
+If you already have an APEX 24.1 Workspace provisioned, you can skip this lab.
 
 Estimated Time: 5 minutes
 
@@ -30,7 +30,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
   ![About APEX page](images/version.png)
 
 ### Where to Run the Lab
-You can run this lab in any Oracle Database with APEX 23.2 installed. This includes the new APEX Application Development Service, the Oracle Autonomous Database, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 23.2 is installed), on a third party cloud provider where APEX 23.2 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 23.2.
+You can run this lab in any Oracle Database with APEX 24.1 installed. This includes the new APEX Application Development Service, the Oracle Autonomous Database, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 24.1 is installed), on a third party cloud provider where APEX 24.2 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 24.1.
 
 Below are steps on how to sign up for either an *APEX Application Development* Service, an *Oracle Autonomous Database* cloud service or *apex.oracle.com* service.
 - The APEX Application Development Service is great if you would like to go with a flexible paid option that allows to concentrate your efforts on APEX development without worrying about the database management. It provides 1 OCPU and 1 TB and can be extended as needed.
@@ -47,7 +47,7 @@ Oracle Application Development (APEX Service) is a low cost Oracle Cloud service
 
 In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
 
-1. [Click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize for various OCI services. 
+1. [Click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize for various OCI services.
 
 2.  Once the Signup process is complete, you will be logged in automatically to the Oracle Cloud Infrastructure (OCI) Console.
     -  In case you have closed the browser, you can always refer to the **Get Started Now with Oracle Cloud** email that you should have received to login to OCI Console.   
@@ -72,17 +72,17 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Cloud login verification](images/sso2-multi-factor-authentication.png " ")
 
-3. After Verification you will be signed into Oracle Cloud.
+4. After Verification you will be signed into Oracle Cloud.
 
   From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
 
     ![APEX instance page](images/navigate-apex-service.png " ")
 
-4. At the top of the APEX Instances page, click the **Create APEX Service** button.
+5. At the top of the APEX Instances page, Select your Compartment and click the **Create APEX Service** button.
 
     ![APEX instance page](images/create-as-button.png " ")
 
-5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
+6. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
 
     ![Create instance page](images/as-settings-1.png " ")
 
@@ -90,7 +90,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     ![Create instance page](images/as-settings-3.png " ")
 
-6. The APEX Instances Details displays again.
+7. The APEX Instances Details displays again.
 
   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
 
@@ -98,25 +98,25 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Available status](images/status-green.png " ")
 
-7. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
+8. Before using a new APEX Service, you must set up your APEX Service instance by completing two tasks: create an initial APEX workspace and create an APEX user account.
 
     On the APEX Instance Details, click **Launch APEX**.
 
     ![APEX instance page](images/launch-apex-workspace.png " ")
 
-8. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
+9. The Administration Services Sign In page appears. Enter the password for the Administration Services and click **Sign In to Administration**.
   The password is the same as the one entered for the ADMIN user when creating the APEX service: **```SecretPassw0rd```**
   ![APEX instance admin login page](images/log-in-as-admin.png " ")
 
-9. Click **Create Workspace**.
+10. Click **Create Workspace**.
 
   ![Create Workspace](images/welcome-create-workspace.png " ")
 
-10. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+11. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
   ![Choose type of schema](images/choose-schema.png " ")
 
-10. In the Create Workspace dialog, enter the following:
+12. In the Create Workspace dialog, enter the following:
 
     | Property | Value |
     | --- | --- |
@@ -128,12 +128,12 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Create Workspace dialog](images/create-workspace.png " ")
 
-11. On the APEX Instance Administration page, click the **DEMO** link in the success message.         
+13. On the APEX Instance Administration page, click the **DEMO** link in the success message.         
   *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
   ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-12. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+14. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
   ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
@@ -167,23 +167,23 @@ In this part, you will create an Oracle APEX Application Development Service tri
       ![Cloud login verification](images/sso2-multi-factor-authentication.png " ")
 
 
-  5. After Verification you will be signed into Oracle Cloud. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
+  6. After Verification you will be signed into Oracle Cloud. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
 
       From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
 
       ![Cloud Dashboard](images/database-atp.png " ")
 
-  6. Click **Create Autonomous Database**.
+  7. Click **Create Autonomous Database**.
 
       ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
 
-  7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
+  8. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
 
       ![Create Autonomous Database page](images/atp-settings-1.png " ")
       ![Create Autonomous Database page](images/atp-settings-2.png " ")
       ![Create Autonomous Database page](images/atp-settings-3.png " ")
 
-  8. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
+  9. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
 
       Continue when the status changes from:
 
@@ -193,32 +193,32 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
       ![Autonomous Database Details page](images/status-available.png " ")
 
-  9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
+  10. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
     Click the **Apex Instance URL** provided on the ATP overview screen.
 
     ![Open APEX instance](images/apex-instance.png " ")
 
-  10. Now, click **Launch APEX**
+  11. Now, click **Launch APEX**
 
     ![Launch APEX instance](images/launch-apex-inst.png " ")
 
 
       *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
 
-  11. Enter the password for the Administration Services and click **Sign In to Administration**.     
+  12. Enter the password for the Administration Services and click **Sign In to Administration**.     
       The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
 
       ![Administration Services login page](images/log-in-as-admin.png " ")
 
-  12. Click **Create Workspace**.
+  13. Click **Create Workspace**.
 
       ![Create Workspace page](images/welcome-create-workspace.png " ")
 
-  13. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+  14. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
     ![Choose type of schema](images/choose-schema.png " ")
 
-  14. In the Create Workspace dialog, enter the following:
+  15. In the Create Workspace dialog, enter the following:
 
       | Property | Value |
       | --- | --- |
@@ -231,12 +231,12 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
   ![Create Workspace dialog](images/create-workspace.png " ")
 
-  13. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
+  16. In the APEX Instance Administration page, click the **DEMO** link in the success message.         
       *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
       ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-  14. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+  17. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
       ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
