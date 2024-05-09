@@ -8,7 +8,7 @@ Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol5-lab-2.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol5-lab-2.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
 1. **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 2. **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
@@ -52,12 +52,12 @@ Estimated Time: 20 minutes
 
 8. Create four page items as follows:
 
-    | Name |  Type  | Label  | Template | Value Required |
-    | --- |  --- | --- | --- | --- |
-    | P16\_CUSTOMER\_FULLNAME | Text Field | Full Name | Optional - Floating | Off |  
-    | P16\_ORDER\_ID | Hidden |  | | |
-    | P16\_CUSTOMER\_ID | Hidden |  | | |
-    | P16_STORE | Select List | Store | Optional - Floating | Off |
+    | Name                    | Type        | Label     | Template            | Value Required |
+    | ----------------------- | ----------- | --------- | ------------------- | -------------- |
+    | P16\_CUSTOMER\_FULLNAME | Text Field  | Full Name | Optional - Floating | Off            |
+    | P16\_ORDER\_ID          | Hidden      |           |                     |                |
+    | P16\_CUSTOMER\_ID       | Hidden      |           |                     |                |
+    | P16_STORE               | Select List | Store     | Optional - Floating | Off            |
     {: title="List of Page Items to be created"}
 
     For **P16\_STORE** item, in the property editor, navigate to List of Values group, and enter/select the following:
@@ -83,23 +83,23 @@ Estimated Time: 20 minutes
 
 11. Create two buttons as follows:
 
-    | Button Name | Label  | Button Position | Button Template | Hot | Icon |
-    | --- |  --- | --- | --- | --- | --- |
-    | Proceed | Proceed to Checkout | Create | Text | On | |
-    | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
+    | Button Name | Label               | Button Position | Button Template | Hot | Icon          |
+    | ----------- | ------------------- | --------------- | --------------- | --- | ------------- |
+    | Proceed     | Proceed to Checkout | Create          | Text            | On  |               |
+    | Clear       | Clear Shopping Cart | Change          | Text with Icon  | Off | fa-cart-empty |
     {: title="List of Buttons to be created"}
 
-    | Create Proceed Button                          |  Create Clear Button                            |
-    | ----------------------------------- | ----------------------------------- |
+    | Create Proceed Button                                     | Create Clear Button                                          |
+    | --------------------------------------------------------- | ------------------------------------------------------------ |
     | ![Create Proceed Button](./images/create-button1.png " ") | ![Create Clear Button](./images/create-clear-button.png " ") |
     {: title="Screenshot references to create Buttons"}
 
 
      Under Server-side Condition:
-    | Button Name | Type  | Item  |
-    | --- |  --- | --- |
-    | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
-    | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
+    | Button Name | Type             | Item                  |
+    | ----------- | ---------------- | --------------------- |
+    | Proceed     | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
+    | Clear       | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     {: title="Server-side conditions for Buttons"}
 
      ![Add Server Side condition to Buttons](./images/create-button2.png " ")
@@ -134,12 +134,12 @@ In this task, you will create four-page items:
 
 6. Create four items as follows. In the Property Editor, edit the following:
 
-    | Name |  Type  | Label  | Template |
-    | ---  |  ---   | ---    | --- |
-    | P17_ACTION | Hidden |
-    | P17\_PRODUCT\_ID | Hidden |
-    | P17_SHOPPING\_CART\_ITEMS | Hidden |
-    | P17_QUANTITY | Select List | Quantity | Required |
+    | Name                      | Type        | Label    | Template |
+    | ------------------------- | ----------- | -------- | -------- |
+    | P17_ACTION                | Hidden      |
+    | P17\_PRODUCT\_ID          | Hidden      |
+    | P17_SHOPPING\_CART\_ITEMS | Hidden      |
+    | P17_QUANTITY              | Select List | Quantity | Required |
     {: title="Page Items' properties"}
 
     For **P17_QUANTITY** item, in the property editor, enter/select the following:
@@ -147,13 +147,13 @@ In this task, you will create four-page items:
         - Type: **Static Values**
         - Static Values: **Display1, Display2** and enter the following:
 
-            | Display Value |  Return Value  |
-            | --- |  --- |
-            | 1 | 1 |
-            | 2 | 2 |
-            | 3 | 3 |
-            | 4 | 4 |
-            | 5 | 5 |
+            | Display Value | Return Value |
+            | ------------- | ------------ |
+            | 1             | 1            |
+            | 2             | 2            |
+            | 3             | 3            |
+            | 4             | 4            |
+            | 5             | 5            |
             {: title="Display and Return Values"}
 
     - Click **OK**.
@@ -167,21 +167,21 @@ In this task, you will create four-page items:
 
 8. Create three buttons as follows:
 
-    | Name | Label | Button Position |Button Template | Hot |
-    | ---  | ---   | ---             | --- | ---             |
-    | Add          | Add to Cart | Next |Text  |  On  |  On |
-    | Edit         | Update Quantity| Create   |Text  |  On | |
-    | Delete       | Remove from Cart | Edit   |Text  |  Off |
+    | Name   | Label            | Button Position | Button Template | Hot |
+    | ------ | ---------------- | --------------- | --------------- | --- |
+    | Add    | Add to Cart      | Next            | Text            | On  | On |
+    | Edit   | Update Quantity  | Create          | Text            | On  |    |
+    | Delete | Remove from Cart | Edit            | Text            | Off |
     {: title="Buttons to be created"}
 
     ![](./images/create-button4.png " ")
 
      Under Server-side Condition section:
-    | Name | Type | Item |
-    | ---  | ---   | ---             |
-    | Add  | Item is zero | P17_QUANTITY |
-    | Edit         | Item is NOT zero | P17_QUANTITY |
-    | Delete       | Item is NOT zero | P17_QUANTITY |
+    | Name   | Type             | Item         |
+    | ------ | ---------------- | ------------ |
+    | Add    | Item is zero     | P17_QUANTITY |
+    | Edit   | Item is NOT zero | P17_QUANTITY |
+    | Delete | Item is NOT zero | P17_QUANTITY |
     {: title="Server-side conditions for Buttons}
 
       ![](./images/enable-server-side.png " ")    

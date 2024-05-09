@@ -18,7 +18,7 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out on trying the previous labs?  Don't worry!  You can download the application from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/CSv7IOyvydHG3smC6R5EGtI3gc1vA3t-68MnKgq99ivKAbwNf8BVnXVQ2V3H2ZnM/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol8.sql) and import it into your workspace.  To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs?  Don't worry!  You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol8.sql) and import it into your workspace.  To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 
 ## Task 1: Create Validations on the Page
@@ -101,12 +101,12 @@ In this lab, you:
   ![Configure Invoke API Process](./images/create-invoke-api1.png " ")
 
 5. Repeat the Above steps for the other parameters **p_customer_email**,**p_store**,**p_order_id**,**p_customer_id**. Set the Item Names as follows.
-    | Parameter Name  | When Button Pressed |
-    | ---   |  --- |
-    | p_customer_email | P16_CUSTOMER_EMAIL |
-    | p_store | P16_STORE |
-    | p_order_id | P16_ORDER_ID |   
-    | p_customer_id | P16_CUSTOMER_ID |
+    | Parameter Name   | When Button Pressed |
+    | ---------------- | ------------------- |
+    | p_customer_email | P16_CUSTOMER_EMAIL  |
+    | p_store          | P16_STORE           |
+    | p_order_id       | P16_ORDER_ID        |
+    | p_customer_id    | P16_CUSTOMER_ID     |
 
     ![Configure Invoke API Process](./images/create-invoke-api2.png " ")
 
@@ -165,8 +165,8 @@ Click Save.
         - For Page - enter **16**
         - For Set Items - enter:
 
-          | Name | Value  |
-          | --- |  --- |
+          | Name           | Value            |
+          | -------------- | ---------------- |
           | P16\_ORDER\_ID | &P16\_ORDER\_ID. |
           {: title="List of Taregt Item(s)"}
 
