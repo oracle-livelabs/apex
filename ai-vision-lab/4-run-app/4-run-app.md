@@ -25,7 +25,7 @@ In this lab, you:
 
 The image is now posted on your timeline. Similarly, add as many posts as you would like.
 
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term. 
+4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term.
 In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images that has sky in them.
 
     ![Click Timeline](images/search-result.png " ")
@@ -36,4 +36,4 @@ You now know how to post an image and search for images using AI search.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

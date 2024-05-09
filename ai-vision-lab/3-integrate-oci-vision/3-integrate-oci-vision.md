@@ -95,31 +95,29 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operation Parameters, click **Add Parameter**.
+11. Under Operation Parameters, click **Synchronize with body**.
 
-   ![Click Timeline](images/add-parameter.png " ")
+    ![Click Timeline](images/add-parameter.png " ")
 
-12. In the **Edit REST Data Source Parameter** wizard, add the following 5 parameters one after the other:
-
-   |   | Type | Name | Direction | Default Value | Static |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | Request or Response Body| COMPARTMENT_ID | In |
-   | 2 | Request or Response Body| FILE_DATA | In |
-   | 3 | Request or Response Body| FEATURE_TYPE | In |
-   | 4 | Request or Response Body| RESPONSE | Out |
-   | 5| HTTP Header| Content-Type | In | application/json | ON
-   {: title="POST Operation Parameters"}
-
+12. Under Operation Parameters, Click **Add Parameter.
 
     ![Click Timeline](images/add-comp.png " ")
 
+13. In the **Edit REST Data Source Parameter** dialog, add the following 2 parameters one after the other:
+
+   |   | Type | Name | Direction | Default Value | Static |
+   |---|-------|------|----------| --------------| ------ |
+   | 1 | Request or Response Body| RESPONSE | Out |
+   | 2 | HTTP Header| Content-Type | In | application/json | ON
+   {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/response.png " ")
 
-
     ![Click Timeline](images/content-type.png " ")
 
-17. Click **Apply Changes**.
+14. Click **Apply Changes**.
+
+    ![Click Timeline](images/apply-changes.png " ")
 
 
 ## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
@@ -348,4 +346,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

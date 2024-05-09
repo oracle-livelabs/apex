@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you import the Social Media application into your APEX workspace. You will use this imported app to integrate with the OCI Vision service.
+In this lab, you import the Social Media application into your APEX workspace. You use this imported app to integrate with the OCI Vision service.
 
 You can download the Social Media Application [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/APEX_Social_Media_HOL_FINAL.zip).
 
@@ -19,6 +19,8 @@ In this lab, you:
 
 1. On the Workspace home page, click the **App Builder** icon.
    On the App Builder home page, click **Import**.
+
+    ![Click Import](images/app-builder.png " ")
 
     ![Click Import](images/import0.png " ")
 
@@ -46,7 +48,6 @@ In this lab, you:
 5. Click **Edit Application**.
 
    ![Click Import](images/edit-app1.png " ")
-
 
 
 ## Task 2: Add a Column to the Table using Object Browser
@@ -85,4 +86,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023   
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024   

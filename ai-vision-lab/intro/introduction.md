@@ -31,9 +31,9 @@ In this workshop, you:
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, February 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
