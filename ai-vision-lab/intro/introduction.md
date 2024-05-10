@@ -4,7 +4,7 @@
 
 In today's data-driven world, the ability to extract valuable insights from visual content has become a game-changer for businesses across industries. Artificial Intelligence (AI) has made significant strides in the field of computer vision, enabling machines to understand and interpret visual data with remarkable accuracy.
 
-In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI Vision for the classification of images. By integrating OCI Vision with Oracle APEX, businesses can tap into the power of visual intelligence, transforming their data analysis capabilities and revolutionizing user experiences.
+In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI Vision for the classification and text detection of images. By integrating OCI Vision with Oracle APEX, businesses can tap into the power of visual intelligence, transforming their data analysis capabilities and revolutionizing user experiences.
 
 Estimated Time: 1 hour
 
@@ -12,7 +12,7 @@ Estimated Time: 1 hour
 In this workshop, you:
 
 - Create a REST Data Source in APEX based on the OCI Vision REST Endpoint.
-- Invoke the OCI Vision REST Data Source using the Invoke API page process type.
+- Invoke the OCI Vision REST Data Source for Image Classification and Text Detection using the Invoke API Page Process Type.
 - Enhance the App to include the results from OCI Vision and make the images searchable.
 - Make the app mobile ready by enabling PWA and other mobile friendly features.
 
