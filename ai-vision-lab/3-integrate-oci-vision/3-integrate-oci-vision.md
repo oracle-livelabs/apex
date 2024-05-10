@@ -2,11 +2,11 @@
 
 ## Introduction
 
-OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items that need attention, such as anomaly in an X-Ray. Developers can also identify and localise objects in images to automate counting of common items, such as packages and vehicles.
+OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items needing attention, such as X-ray anomalies. Developers can also identify and localize objects in images to automate counting common items, such as packages and vehicles.
 
 Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
 
-In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyse and index the images uploaded by the user.
+In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyze and index the images and images with text uploaded by the user.
 
 Estimated Time: 20 Minutes
 
@@ -14,7 +14,8 @@ Estimated Time: 20 Minutes
 In this lab, you:
 
 - Configure OCI Vision REST API as REST Data Source
-- Invoke the OCI Vision REST Data Source through a Page Process
+- Invoke the OCI Vision REST Data Source for Image Classification
+- Invoke the OCI Vision REST Data Source for Text Detection
 - Enhance Timeline Region to include AI Search
 
 ## Task 1: Configure OCI Vision REST API as REST Data Source
@@ -60,7 +61,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 
 8. Click **REST Source Manually**.
-   REST data source is successfully created. The next step to configure the POST operation parameters for this REST Data Source.
+   The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
    ![Click Timeline](images/rest-data-authentication.png " ")
 
@@ -68,10 +69,10 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
    ![Click Timeline](images/select-oci-vision.png " ")
 
-10. Select Operations Tab and click **Edit icon** for the POST operation and enter the following:
+10. Select the Operations tab, click **Edit icon** for the POST operation and enter the following:
     - **Database Operation**: -Not Mapped-
 
-    - **Request Body Template**: Copy and paste JSON given below.
+    - **Request Body Template**: Copy and paste the JSON given below.
 
     ```
     <copy>
@@ -103,7 +104,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/add-comp.png " ")
 
-13. In the **Edit REST Data Source Parameter** dialog, add the following 2 parameters one after the other:
+13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
    |   | Type | Name | Direction | Default Value | Static |
    |---|-------|------|----------| --------------| ------ |
@@ -120,12 +121,12 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     ![Click Timeline](images/apply-changes.png " ")
 
 
-## Task 2: Invoke the OCI Vision REST Data Source through a Page Process
+## Task 2: Invoke the OCI Vision REST Data Source for Image Classification
 
-In this task, you create a page process to invoke the OCI Vision REST Data Source implemented in the previous task.
+In this task, you create a page process to invoke the OCI Vision REST Data Source for image classification implemented in the previous task.
 
 
-1. Navigate to the application homepage by clicking on the **Application ID**.
+1. Navigate to the application homepage by clicking the **Application ID**.
 
    ![Click Timeline](images/click-app-id11.png " ")
 
@@ -173,7 +174,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    Under Identification section:
 
-    - **Name**: Invoke REST Data Source
+    - **Name**: Image Classification
 
     - **Type**: Invoke API
 
@@ -197,7 +198,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - **Value**: Enter the Compartment ID.
 
-   *Note: If you are using the root compartment, enter the tenancy OCID from the configuration preview file generated during API Key creation. If you are using a different compartment, you can find the corresponding compartment OCID from OCI Console.*
+   *Note: If using the root compartment, enter the tenancy OCID from the configuration preview file generated during API Key creation. If you use a different compartment, you can find the corresponding compartment OCID from the OCI Console.*
 
    ![Click Timeline](images/compartment-id.png " ")
 
@@ -247,11 +248,11 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     Under Identification :
 
-    - For **Name** : Parse the Response
+    - For **Name** : Parse Image Classification Response
 
     Under Source:
 
-    - For **PL/SQL Code** : Copy and paste the below code in the PL/SQL Code editor:
+    - For **PL/SQL Code**: Copy and paste the below code in the PL/SQL Code editor:
 
     ```
     <copy>
@@ -278,8 +279,77 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 15. Click **Save**.
 
-## Task 3: Enhance Timeline Region to include AI Search
-In this task, you create a search bar where the end user can enter the search terms and search through the images.
+## Task 3: Invoke the OCI Vision REST Data Source for Text Detection
+
+In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
+
+1. Under Processing, Right-click **Image Classification** and Select **Duplicate**. Drag and drop it under Parse Image classification Response.
+
+    ![Click Timeline](images/duplicated1.png " ")
+
+    ![Click Timeline](images/drag1.png " ")
+
+2. In the Property Editor, enter the following:
+
+   Under Identification:
+
+    - **Name**: Text Detection
+
+   ![Click Timeline](images/text-detection.png " ")
+
+3. Under Parameters, Click **FEATURE_TYPE** and enter the following:
+
+   Under Value :
+
+    - **Type**: Static Value
+
+    - **Value**: TEXT_DETECTION
+
+    ![Click Timeline](images/feature-type1.png " ")
+
+4. Right click on the **Parse Image classification Response** child process and select **Duplicate**.Drag and drop it under Text Detection.
+
+    ![Click Timeline](images/duplicate2.png " ")
+
+    ![Click Timeline](images/drag2.png " ")
+
+5. In the Property Editor, enter the following:
+
+    Under Identification :
+
+    - For **Name** : Parse Text Detection Response
+
+    Under Source:
+
+    - For **PL/SQL Code**: Update the below code in the PL/SQL Code editor:
+
+    ```
+    <copy>
+    UPDATE SM_POSTS
+    SET
+    AI_OUTPUT_TD = (
+        SELECT
+            LISTAGG(obj_name, ',') WITHIN GROUP(
+            ORDER BY
+                obj_name
+            )
+        FROM
+            JSON_TABLE ( :P1_RESPONSE, '$.imageText.words[*]'
+                COLUMNS
+                    obj_name VARCHAR2 ( 100 ) PATH'$.text[*]'
+            )
+      )
+     WHERE
+     ID = :P1_ID;
+     <copy>
+     ```
+
+     ![Click Timeline](images/parse-text.png " ")
+
+6. Click **Save**.
+
+## Task 4: Enhance Timeline Region to include AI Search
+In this task, you create a search bar where the end user can enter the search terms and search through the images and texts.
 
 1. Go to the Rendering tab, right-click **After Logo** and select **Create Page Item**.
 
@@ -293,7 +363,7 @@ In this task, you create a search bar where the end user can enter the search te
 
    Under Label:
 
-    - For Label : Enter **AI Search**
+    - For Label: Enter **AI Search**
 
    Under Settings:
 
@@ -301,13 +371,13 @@ In this task, you create a search bar where the end user can enter the search te
 
    Under Appearance:
 
-    - For Width : Enter **100**
+    - For Width: Enter **100**
 
    ![Click Timeline](images/ai-search-page-item1.png " ")
 
-3. Select **Timeline** region, in the property editor, enter the following:
+3. Select the **Timeline** region in the property editor and enter the following:
    Under Source:
-    - For **SQL Query**: Copy and paste the below SQL query in the code Editor
+    - For **SQL Query**: Copy and paste the below SQL query in the Code Editor
 
     ```
     <copy>
@@ -317,17 +387,20 @@ In this task, you create a search bar where the end user can enter the search te
     p.post_comment AS comment_text,
     p.file_blob,
     p.file_mime,    
-    apex_util.get_since(p.created) post_date,
+      apex_util.get_since(p.created) post_date,
     (
-        select count(*) from SM_REACTIONS smr
-        where smr.post_id=p.id
+    select count(*) from SM_REACTIONS smr
+    where smr.post_id=p.id
     ) as REACTIONS,
     (
-        select 'user-has-liked' from SM_REACTIONS smr
-        where smr.post_id=p.id and created_by=UPPER(:APP_USER)
+    select 'user-has-liked' from SM_REACTIONS smr
+    where smr.post_id=p.id and created_by=UPPER(:APP_USER)
     ) USER_REACTION_CSS
     from SM_POSTS p
-    where (:P1_AI_SEARCH IS NOT NULL AND upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%'))OR :P1_AI_SEARCH IS NULL
+    where (:P1_AI_SEARCH IS NOT NULL AND
+    (upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%') OR upper(ai_output_td) like upper('%'||:P1_AI_SEARCH||'%')
+    )
+    )OR :P1_AI_SEARCH IS NULL
     order by p.created desc;
    <copy>
    ```

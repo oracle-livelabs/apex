@@ -290,4 +290,4 @@ You may now **proceed to the next lab**.
 
  - **Author** - Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Arabella Yao, Jaden McElvey
- - **Last Updated By/Date** - Ankita Beri, Product Manager, February 2024
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

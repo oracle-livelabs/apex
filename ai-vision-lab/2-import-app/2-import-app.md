@@ -76,6 +76,17 @@ To Add a new column to the SM\_POSTS Table:
 
    ![Click Import](images/ai-output-column.png " ")
 
+4. Click **Add Column** again and enter the following:
+
+    - **Column**: AI_OUTPUT_TD
+    - **Data Type**: VARCHAR2
+    - **Length**: 4000
+
+    Click **Apply**.
+
+   ![Click Import](images/ai-output-td-column.png " ")
+
+
 ## Summary
 
 You now know how to import an Oracle APEX application, add a new column to a table.
