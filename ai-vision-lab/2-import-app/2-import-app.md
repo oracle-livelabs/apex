@@ -68,7 +68,7 @@ To Add a new column to the SM\_POSTS Table:
 3. The Add Column wizard is displayed. Configure the Add Column attributes. At a minimum, enter a column name and select a type. Depending upon the column type, specify whether the column requires precision, scale, a default value, or is nullable. For more details on an attribute, see field-level Help.
 
    Enter the following:
-      - **Column**: AI_OUTPUT
+      - **Column**: AI\_OUTPUT
       - **Data Type**: VARCHAR2
       - **Length**: 1000
 
@@ -76,15 +76,15 @@ To Add a new column to the SM\_POSTS Table:
 
    ![Click Import](images/ai-output-column.png " ")
 
-4. Click **Add Column** again and enter the following:
+4. Click **Add Column** and enter the following:
 
-    - **Column**: AI_OUTPUT_TD
+    - **Column**: AI\_OUTPUT\_TD
     - **Data Type**: VARCHAR2
     - **Length**: 4000
 
     Click **Apply**.
 
-   ![Click Import](images/ai-output-td-column.png " ")
+   ![Add Column](images/ai-output-td-column.png " ")
 
 
 ## Summary

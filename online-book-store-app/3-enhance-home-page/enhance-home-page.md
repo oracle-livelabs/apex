@@ -240,8 +240,8 @@ In this lab, you will:
 
     ![App builder home page](images/review-fs.png " ")
 
-4. Fill in the below details
-    Page No: 18
+4. On Create Page dialog, enter the following details:
+    - Page No: 18
     Name: Book Details
     Page Mode: Modal Dialog
     Click Create Page

@@ -280,7 +280,6 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 15. Click **Save**.
 
 ## Task 3: Invoke the OCI Vision REST Data Source for Text Detection
-
 In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
 
 1. Under Processing, Right-click **Image Classification** and Select **Duplicate**. Drag and drop it under Parse Image classification Response.
