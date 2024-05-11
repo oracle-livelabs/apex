@@ -100,7 +100,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/add-parameter.png " ")
 
-12. Under Operation Parameters, Click **Add Parameter.
+12. Under Operation Parameters, Click **Add Parameter**.
 
     ![Click Timeline](images/add-comp.png " ")
 
@@ -154,7 +154,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 6. In the Property Editor, enter the following:
 
-  Under Identification section:
+  Under Identification:
 
     - **Name**: Analyze Image
 
@@ -172,7 +172,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 8. In the Property Editor, enter the following:
 
-   Under Identification section:
+   Under Identification:
 
     - **Name**: Image Classification
 
@@ -180,7 +180,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - **Execution Chain**: Analyze Image
 
-   Under Settings Section:
+   Under Settings:
 
     - **Type**: REST Source
 
@@ -236,7 +236,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     Under Value :
 
-    - For **Item**: Select **P1\_RESPONSE**
+    - **Item**: Select **P1\_RESPONSE**
 
     ![Click Timeline](images/response-param.png " ")
 
@@ -248,11 +248,11 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     Under Identification :
 
-    - For **Name** : Parse Image Classification Response
+    - **Name** : Parse Image Classification Response
 
     Under Source:
 
-    - For **PL/SQL Code**: Copy and paste the below code in the PL/SQL Code editor:
+    - **PL/SQL Code**: Copy and paste the below code in the PL/SQL Code editor:
 
     ```
     <copy>
@@ -316,11 +316,11 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
     Under Identification :
 
-    - For **Name** : Parse Text Detection Response
+    - **Name** : Parse Text Detection Response
 
     Under Source:
 
-    - For **PL/SQL Code**: Update the below code in the PL/SQL Code editor:
+    - **PL/SQL Code**: Update the below code in the PL/SQL Code editor:
 
     ```
     <copy>
@@ -358,11 +358,11 @@ In this task, you create a search bar where the end user can enter the search te
 
    Under Identification:
 
-    - For Name: Enter **P1\_AI\_SEARCH**
+    - Name: Enter **P1\_AI\_SEARCH**
 
    Under Label:
 
-    - For Label: Enter **AI Search**
+    - Label: Enter **AI Search**
 
    Under Settings:
 
@@ -370,13 +370,13 @@ In this task, you create a search bar where the end user can enter the search te
 
    Under Appearance:
 
-    - For Width: Enter **100**
+    - Width: Enter **100**
 
    ![Click Timeline](images/ai-search-page-item1.png " ")
 
 3. Select the **Timeline** region in the property editor and enter the following:
    Under Source:
-    - For **SQL Query**: Copy and paste the below SQL query in the Code Editor
+    - **SQL Query**: Copy and paste the below SQL query in the Code Editor
 
     ```
     <copy>
@@ -403,7 +403,7 @@ In this task, you create a search bar where the end user can enter the search te
     order by p.created desc;
    <copy>
    ```
-    - For Page items to Submit: Select **P1\_AI\_SEARCH**
+    - Page items to Submit: Select **P1\_AI\_SEARCH**
 
     ![Click Timeline](images/timeline-query11.png " ")
 
