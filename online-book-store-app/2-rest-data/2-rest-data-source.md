@@ -45,11 +45,11 @@ In this lab, you will:
 
 7. On Create REST Data Source :
 
-     - For REST Data Source Type : Select **Simple HTTP**
+     - REST Data Source Type : Select **Simple HTTP**
 
-     - For Name  : Enter **Books API**
+     - Name  : Enter **Books API**
 
-     - For URL Endpoint: Copy and paste below API
+     - URL Endpoint: Copy and paste below API
 
      https://raw.githubusercontent.com/pankaj-2407/BookStore/main/data.json
 

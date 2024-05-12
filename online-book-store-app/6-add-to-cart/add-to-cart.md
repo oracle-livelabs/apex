@@ -14,23 +14,23 @@ In this lab, you will:
 - Create Application Computations
 
 ## Task 1: Create a Package to manage orders
-In this task, you create a package named **OBS_MANAGE_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
+In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
 
-**Procedure add_book**: Adds a book to a collection named "BOOKS" along with its quantity.
+**Procedure add\_book**: Adds a book to a collection named "BOOKS" along with its quantity.
 
-**Procedure remove_book**: Removes a book from the "BOOKS" collection based on its ID.
+**Procedure remove\_book**: Removes a book from the "BOOKS" collection based on its ID.
 
-**Procedure add_to_wishlist**: Inserts a book into the wishlist table for a specified user.
+**Procedure add\_to\_wishlist**: Inserts a book into the wishlist table for a specified user.
 
-**Procedure remove_from_wishlist**: Removes a book from the wishlist of a specified user.
+**Procedure remove\_from\_wishlist**: Removes a book from the wishlist of a specified user.
 
-**Function get_quantity**: Retrieves the total number of items in the "BOOKS" collection.
+**Function get\_quantity**: Retrieves the total number of items in the "BOOKS" collection.
 
-**Function book_exists**: Checks if a book exists in the "BOOKS" collection and returns its quantity.
+**Function book\_exists**: Checks if a book exists in the "BOOKS" collection and returns its quantity.
 
-**Procedure clear_cart**: Clears all items from the "BOOKS" collection.
+**Procedure clear\_cart**: Clears all items from the "BOOKS" collection.
 
-**Procedure create_order**: Creates a new order by inserting data into the orders table and order items table based on the items in the "BOOKS" collection. It also deletes the "BOOKS" collection after order creation.
+**Procedure create\_order**: Creates a new order by inserting data into the orders table and order items table based on the items in the "BOOKS" collection. It also deletes the "BOOKS" collection after order creation.
 
 
 1. Under SQL Developer, Click **Object Browser**.
@@ -41,22 +41,21 @@ In this task, you create a package named **OBS_MANAGE_ORDERS**, contains procedu
 
    ![App builder home page](images/create-pack1.png " ")
 
-3. In Create Package dialog, For Name: Enter **OBS_MANAGE_ORDERS** and Click **Create Package**.
+3. In Create Package dialog, For Name: Enter **OBS\_MANAGE\_ORDERS** and Click **Create Package**.
 
    ![App builder home page](images/pack-name.png " ")
 
 4. Under Specification, Copy and paste below code:
 
-   ```
-   <copy>
+     ```
+     <copy>
    create or replace PACKAGE OBS_MANAGE_ORDERS
-AS
+   AS
   --------------------------------------------------------------
   create procedure for add a book temporarily
   PROCEDURE add_book (
     p_book  IN NUMBER,
     p_quantity IN NUMBER);
-    --p_quantity IN NUMBER);
   --------------------------------------------------------------
   create procedure for remove a book temporarily
   PROCEDURE remove_book (
@@ -66,8 +65,7 @@ AS
     PROCEDURE add_to_wishlist (
     p_book_id IN NUMBER,
     p_user_id IN NUMBER);
-
-    -------------------------------------------------------------create procedure for remove a book from wishlist
+  -------------------------------------------------------------create procedure for remove a book from wishlist
     PROCEDURE remove_from_wishlist (
     p_book_id IN NUMBER,
     p_user_id IN NUMBER);
@@ -89,7 +87,7 @@ AS
     p_user_id    IN VARCHAR2,
     p_order_id   OUT obs_orders.order_id%TYPE);
  END OBS_MANAGE_ORDERS;
-/
+  /
     </copy>
      ```
 
@@ -114,11 +112,12 @@ AS
    p_n001 => p_book,
    p_n002 => p_quantity);
    END add_book;
-  PROCEDURE remove_book (p_book IN NUMBER)
-  IS
-  l_id NUMBER;
-  BEGIN
-  IF apex_collection.Collection_exists (p_collection_name => 'BOOKS') and book_exists(p_book) > 0
+
+   PROCEDURE remove_book (p_book IN NUMBER)
+   IS
+   l_id NUMBER;
+   BEGIN
+   IF apex_collection.Collection_exists (p_collection_name => 'BOOKS') and book_exists(p_book) > 0
    THEN
     SELECT seq_id
     INTO  l_id
@@ -128,21 +127,24 @@ AS
     apex_collection.delete_member(p_collection_name => 'BOOKS', p_seq => l_id );
    END IF;
   END remove_book;
+
   PROCEDURE add_to_wishlist (p_book_id IN NUMBER, p_user_id  IN NUMBER)
- is
-BEGIN
+  is
+  BEGIN
   INSERT INTO obs_wishlist (book_id, user_id) VALUES (p_book_id, p_user_id);
-END add_to_wishlist;
+  END add_to_wishlist;
+
   PROCEDURE remove_from_wishlist (p_book_id IN NUMBER, p_user_id  IN NUMBER)
- is
-BEGIN
-  delete from obs_wishlist where user_id = p_user_id and book_id = p_book_id;
-END remove_from_wishlist;
+  is
+  BEGIN
+   delete from obs_wishlist where user_id = p_user_id and book_id = p_book_id;
+  END remove_from_wishlist;
+
   FUNCTION get_quantity
- RETURN NUMBER
- IS
+  RETURN NUMBER
+  IS
   l_items NUMBER := 0;
- BEGIN
+  BEGIN
    IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
    THEN
     SELECT count(n001)
@@ -151,12 +153,13 @@ END remove_from_wishlist;
     WHERE collection_name = 'BOOKS';
    END IF;
    RETURN l_items;
- END get_quantity;
+  END get_quantity;
+
   FUNCTION book_exists(p_book IN NUMBER)
- RETURN NUMBER
- IS
+  RETURN NUMBER
+  IS
   l_quantity NUMBER;
- BEGIN
+  BEGIN
    IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
    THEN
     SELECT a.n002
@@ -180,9 +183,10 @@ END remove_from_wishlist;
    THEN
     apex_collection.truncate_collection(p_collection_name => 'BOOKS');
    END IF;
- END clear_cart;  
+ END clear_cart;
+
 PROCEDURE create_order (p_user_id  IN VARCHAR2,
-             p_order_id  OUT obs_orders.order_id%TYPE)
+                        p_order_id  OUT obs_orders.order_id%TYPE)
  IS
  BEGIN
      INSERT INTO obs_orders
@@ -255,10 +259,10 @@ Application items can be set using computations, processes, or by passing values
 
    | Name |  
    | --- |
-   | CART_TOTAL |
-   | SHOPPING_CART_ITEMS |
-   | SHOPPING_CART_ICON |
-   | USER_ID |
+   | CART\_TOTAL |
+   | SHOPPING\_CART\_ITEMS |
+   | SHOPPING\_CART\_ICON |
+   | USER\_ID |
    | USERNAME |
 
    Click **Create Application item**.
@@ -290,9 +294,9 @@ This application process is used to dynamically update the shopping cart icon an
 
        - Point: **On Load: Before Header (page template header)**
 
-   Click **Next**.
+       Click **Next**.
 
-   ![App builder home page](images/app-process-next.png " ")
+       ![App builder home page](images/app-process-next.png " ")
 
 5. Enter the following:
 
@@ -347,13 +351,12 @@ Application computations are used to set the value of a single page or applicati
   - Computation Type: SQL Query (return single value)
 
   - Computation: Copy and paste below code
-  ```
-  <copy>
-  SELECT U.USER_ID
-  FROM obs_USERS U
-  WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
-  </copy>
-  ```
+     ```
+     <copy>
+     SELECT U.USER_ID FROM obs_USERS U
+     WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
+    </copy>
+     ```
   Click **Create Computation**.
 
   ![App builder home page](images/create-comp.png " ")
@@ -376,13 +379,12 @@ Application computations are used to set the value of a single page or applicati
       - Computation Type: SQL Query (return single value)
 
       - Computation: Copy and paste below code
-  ```
-  <copy>
-  SELECT U.USERNAME
-  FROM OBS_USERS U
-  WHERE U.USER_ID=:USER_ID
-  </copy>
-  ```
+       ```
+       <copy>
+       SELECT U.USERNAME FROM OBS_USERS U
+       WHERE U.USER_ID=:USER_ID
+       </copy>
+        ```
   Click **Create Computation**.
 
   ![App builder home page](images/create-comp2.png " ")

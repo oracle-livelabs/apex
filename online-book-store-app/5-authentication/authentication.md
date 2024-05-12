@@ -13,13 +13,13 @@ In this lab, you will:
 - Create Custom Authentication
 
 ## Task 1: Create a Package
-In this package named **OBS_AUTH**, you are going to implement the following functionalities:
+In this package named **OBS\_AUTH**, you are going to implement the following functionalities:
 
-**FUNCTION HASH_PASSWORD**: This function calculates a hashed password using the provided email, password, and a salt. It utilizes the apex_util.get_hash function to generate the hash.
+**FUNCTION HASH\_PASSWORD**: This function calculates a hashed password using the provided email, password, and a salt. It utilizes the apex_util.get_hash function to generate the hash.
 
-**FUNCTION AUTHENTICATE_USER**: This function authenticates a user by verifying their provided username and password against stored credentials in the database. It retrieves the email associated with the provided username, checks if the user exists, hashes the provided password, and compares it with the stored hashed password. If the passwords match, it sets the authentication result to success and sets the authenticated username in a global variable.
+**FUNCTION AUTHENTICATE\_USER**: This function authenticates a user by verifying their provided username and password against stored credentials in the database. It retrieves the email associated with the provided username, checks if the user exists, hashes the provided password, and compares it with the stored hashed password. If the passwords match, it sets the authentication result to success and sets the authenticated username in a global variable.
 
-**PROCEDURE POST_AUTH**: This procedure is invoked after successful authentication. It sets the authenticated user using the username stored in the global variable.
+**PROCEDURE POST\_AUTH**: This procedure is invoked after successful authentication. It sets the authenticated user using the username stored in the global variable.
 
 The code also includes error handling to manage exceptions and set appropriate authentication results.
 
@@ -31,7 +31,7 @@ The code also includes error handling to manage exceptions and set appropriate a
 
    ![App builder home page](images/package.png " ")
 
-3. In Create Package dialog, For Name: Enter **OBS_AUTH** and Click **Create Package**.
+3. In Create Package dialog, For Name: Enter **OBS\_AUTH** and Click **Create Package**.
 
    ![App builder home page](images/package-name.png " ")
 
@@ -43,14 +43,14 @@ The code also includes error handling to manage exceptions and set appropriate a
    FUNCTION AUTHENTICATE_USER
      (p_username in varchar2,
       p_password in varchar2)
-    return boolean ;
+   return boolean ;
 
-    FUNCTION HASH_PASSWORD
+   FUNCTION HASH_PASSWORD
       (p_email in varchar2,
       p_password  in varchar2)
-    return varchar2;
+   return varchar2;
 
-    procedure post_auth;
+   procedure post_auth;
     end "OBS_AUTH";
     /
     </copy>
@@ -65,84 +65,78 @@ The code also includes error handling to manage exceptions and set appropriate a
    ```
    <copy>
    create or replace package body "OBS_AUTH" as
-    g_username varchar2(1000) := null;
-    FUNCTION HASH_PASSWORD
+   g_username varchar2(1000) := null;
+   FUNCTION HASH_PASSWORD
       (p_email in varchar2,
-      p_password  in varchar2)
-    return varchar2
-    is
+       p_password  in varchar2)
+   return varchar2
+   is
       encrp_password varchar2(255) := '';
-    begin
-        encrp_password := apex_util.get_hash(apex_t_varchar2 (
+  begin
+      encrp_password := apex_util.get_hash(apex_t_varchar2 (
                             p_password||p_email||'SALT' ), false);
-        return  encrp_password;
+  return  encrp_password;
+  end hash_password;
 
-    end hash_password;
-
-    FUNCTION AUTHENTICATE_USER
+  FUNCTION AUTHENTICATE_USER
       (p_username in varchar2,
-      p_password in varchar2)
+       p_password in varchar2)
     return boolean
     is
       l_email       obs_users.email%type;
-
       l_password        obs_users.password%type;
       l_hashed_password varchar2(1000);
       l_count           number;
       l_username   obs_users.username%type := lower(p_username);
     begin
         apex_debug.error('l_email:'||l_email);
-
         begin
             select email, username into l_email, l_username from obs_users where email = l_username;
-
         exception
             when no_data_found then
                 select email into l_email from obs_users where username = l_username;
         end;
-apex_debug.error('l_email:'||l_email);
+        apex_debug.error('l_email:'||l_email);
 
     -- First, check to see if the user exists
-        select count(*) into l_count from obs_users
-          where lower(email) = lower(l_email);
+    select count(*) into l_count from obs_users where lower(email) = lower(l_email);
 
-          apex_debug.error('l_count:'||l_count);
-        if l_count > 0 then
-              -- Hash the password provided
-              apex_debug.error('p_password:'||p_password);
-              apex_debug.error('l_email:'||l_email);
-              l_hashed_password := hash_password(lower(l_email), p_password);
-                            -- Get the stored password
-              select password into l_password from obs_users where  lower(email)  = l_email;
-        --   apex_debug.error('l_password:'||l_password);
+    apex_debug.error('l_count:'||l_count);
+    if l_count > 0 then
 
-          apex_debug.error('l_password:'||l_password);
-          apex_debug.error('l_hashed_password:'||l_hashed_password);
+    -- Hash the password provided
+    apex_debug.error('p_password:'||p_password);
+    apex_debug.error('l_email:'||l_email);
+    l_hashed_password := hash_password(lower(l_email), p_password);
 
-              -- Compare the two, and if there is a match, return TRUE
-              if l_hashed_password = l_password then
+    -- Get the stored password
+    select password into l_password from obs_users where  lower(email)  = l_email;
+    --  apex_debug.error('l_password:'||l_password);
+        apex_debug.error('l_password:'||l_password);
+        apex_debug.error('l_hashed_password:'||l_hashed_password;
 
-                  APEX_UTIL.SET_AUTHENTICATION_RESULT(0);
-                  g_username := l_username;
-                  return true;
+    -- Compare the two, and if there is a match, return TRUE
+    if l_hashed_password = l_password then
+    APEX_UTIL.SET_AUTHENTICATION_RESULT(0);
+    g_username := l_username;
+      return true;
               else
-
-                  APEX_UTIL.SET_AUTHENTICATION_RESULT(4);
-                  return false;
-              end if;
-        else
-
-              APEX_UTIL.SET_AUTHENTICATION_RESULT(1);
-              return false;
-        end if;
-        return true;
-    exception
+      APEX_UTIL.SET_AUTHENTICATION_RESULT(4);
+      return false;
+      end if;
+              else
+      APEX_UTIL.SET_AUTHENTICATION_RESULT(1);
+      return false;
+      end if;
+      return true;
+      exception
         when others then
-            -- We don't know what happened so log an unknown internal error
-            APEX_UTIL.SET_AUTHENTICATION_RESULT(7);
-            APEX_UTIL.SET_CUSTOM_AUTH_STATUS(SQLERRM);
-            return false;
+    -- We don't know what happened so log an unknown internal error
+      APEX_UTIL.SET_AUTHENTICATION_RESULT(7);
+      APEX_UTIL.SET_CUSTOM_AUTH_STATUS(SQLERRM);
+      return false;
     end authenticate_user;
+
     procedure post_auth
     is
     begin
@@ -160,13 +154,13 @@ apex_debug.error('l_email:'||l_email);
    ![App builder home page](images/pack-body.png " ")
 
 ## Task 2: Create a Trigger
-This trigger ensures that before inserting or updating a record in the **OBS_USERS** table, certain operations are performed to maintain data integrity and security, such as ensuring consistent case sensitivity for email and username and hashing passwords for storage.
+This trigger ensures that before inserting or updating a record in the **OBS\_USERS** table, certain operations are performed to maintain data integrity and security, such as ensuring consistent case sensitivity for email and username and hashing passwords for storage.
 
 1. Right-click Trigger and click **Create Trigger**.
 
    ![App builder home page](images/trg.png " ")
 
-2. In Create Trigger dialog, For Table: Select **OBS_USERS** and Click **Create Trigger**.
+2. In Create Trigger dialog, For Table: Select **OBS\_USERS** and Click **Create Trigger**.
 
    ![App builder home page](images/trg-name.png " ")
 
@@ -223,15 +217,15 @@ In this task, you will learn to create custom authentication.
 
       - Schema Type: **Custom**
 
-   - Under Settings > Authentication Function Name: **OBS_AUTH.AUTHENTICATE_USER**
+   - Under Settings > Authentication Function Name: **OBS\_AUTH.AUTHENTICATE\_USER**
 
-   Click **Create Authentication Scheme**.
+     Click **Create Authentication Scheme**.
 
-   ![App builder home page](images/auth-created.png " ")
+    ![App builder home page](images/auth-created.png " ")
 
 7. Click **Custom Authentication** and update the following:
 
-    - Login Processing > Post-Authentication Procedure Name : **OBS_AUTH.POST_AUTH**
+    - Login Processing > Post-Authentication Procedure Name : **OBS\_AUTH.POST\_AUTH**
 
      Click **Apply Changes**.
 

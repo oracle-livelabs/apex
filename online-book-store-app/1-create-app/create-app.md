@@ -65,7 +65,8 @@ In this lab, you create a simple application with one click called **Online Book
 
 2.  Copy and paste the given code in the Quick SQL column and Click **Review and Run**.
 
-    //
+     ```
+    <copy>
     OBS_Users
       user_id num /pk
       username  /nn /unique
@@ -122,6 +123,8 @@ In this lab, you create a simple application with one click called **Online Book
       wishlist_id num /pk
       user_id num /fk OBS_Users /cascade
       book_id num /fk OBS_Books /cascade
+      </copy>
+       ```
 
     ![Create Application wizard](./images/review-run.png " ")
 
@@ -130,9 +133,11 @@ In this lab, you create a simple application with one click called **Online Book
     ![Create Application wizard](./images/script-name.png " ")
 
 4. Due to some bug, Add below code into the script under OBS table:
-
+    ```
+   <copy>
    available_yn     varchar2(4000 char)  default 'Y' not null,
-
+   </copy>
+    ```
    ![Create Application wizard](./images/edit-code.png " ")
 
 5. Review the summary and Click **Run Now**.
