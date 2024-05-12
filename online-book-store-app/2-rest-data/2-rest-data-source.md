@@ -130,7 +130,6 @@ In this task, you create Faceted Search page which will display list of the book
     ![App builder home page](images/fs-view.png " ")
 
 
-
 ## Summary
 
 You now know how to Extract data using REST Data Source and Enable Data Synchronization. Also, you know how to Create a Faceted Search Page. You may now **proceed to the next lab**.

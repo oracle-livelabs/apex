@@ -17,13 +17,17 @@ In this lab, you will:
 1. Go to the Application Home Page and then click on Page 10 - Search Books.
 
 2. Select **P10_AUTHOR** facet under Search Region.
+
     - Under Layout Section: For Sequence: Enter **10**
 
     ![App builder home page](images/fs-author.png " ")
 
 3. Now, Select **P10_PRICE** facet under Search Region.
+
     - Under Layout Section → For Sequence: Enter **20**
+
     - Under Settings Section → For Select Multiple: **Toggle Off**
+
     - Under List of Value Section → Type : Enter **- Select -**
 
     ![App builder home page](images/fs-price.png " ")
@@ -64,8 +68,6 @@ In this lab, you will:
    - For Name: Enter **P10_SEARCH_PAGE_ITEM**
    - For Label: Enter **Search**
    - For Type: Select **Text field with Autocomplete**
-
-
 
   Under List of Values Section:
    - For Type: Select **SQL Query**
@@ -238,61 +240,139 @@ In this lab, you will:
 
 3. Select **Blank Page**.
 
-    ![App builder home page](images/review-fs.png " ")
+    ![App builder home page](images/blank-page.png " ")
 
-4. On Create Page dialog, enter the following details:
-    - Page No: 18
-    Name: Book Details
-    Page Mode: Modal Dialog
-    Click Create Page
+4. On Create Blank Page dialog, enter the following details:
+     - Page No: 18
+     - Name: Book Details
+     - Page Mode: Modal Dialog
 
-    ![App builder home page](images/review-fs.png " ")
+    Click **Create Page**
 
-    On Page 18 Page Designer, Click on Page 18: Book Details in the Rendering Pane
-     Under security in the right pane → Authentication: Page is Public
-    Right-click on the Dialog Footer in the left pane and create a region.
+    ![App builder home page](images/blank-page-details.png " ")
 
-    Under Identification → Name: Buttons Bar
+5. Under Rendering Pane, Click **Page 18: Book Details** and update the following:
+    - Under security:
 
-    Under Appearance → Template: Buttons Container
+       - Authentication: Page is Public
 
-    Right-click on the Buttons Bar and create a page item
+    ![App builder home page](images/authentication-bp.png " ")
 
-    Under Identification -> Name: P18_BOOK_ID and  Type: Hidden
+6. In the left pane, Right-click **Dialog Footer** and click **Create Region**.
 
-    Right-click on P18_BOOK_ID and create a duplicate
+     ![App builder home page](images/region-bp.png " ")
 
-    Change the name to P18_BOOK_IMAGE.
-    Click on P18_BOOK_IMAGE and create a computation.
+7. In the Property Editor, update the following properties:
 
-    Under Execution → Point: Before Header
+    - Identification > Name: **Buttons Bar**
 
-    Under Computation → Type  SQL Query (return single value)
+    - Appearance > Template: **Buttons Container**
 
-    SQL Query = select book_image from obs_books where book_id= :P18_BOOK_ID
+     ![App builder home page](images/region-details-bp.png " ")
 
-    Right-click on P18_BOOK_ID and create a duplicate
+8. Right-click **Buttons Bar** and Click **Create Page Item**.
 
-    Change the name to P18_BUY_LINKS.
-    Click on P18_BUY_LINKS and create a computation.
+    ![App builder home page](images/page-item-bp.png " ")
 
-    Under Execution → Point: Before Header
+9. In the Property Editor, update the following properties:
 
-    Under Computation → Type  SQL Query (return single value)
+   - Under Identification:
 
-    SQL Query = select BUY_LINKS from obs_books where book_id= :P18_BOOK_ID
+      - Name: P18_BOOK_ID
 
-    Click on Content Body and create a region
-    Under Identification →  Title:  IMAGE DISPLAY and Type: Static Content
-    Under Appearance → Template: Image
-    Under Image → File URL: &P18_BOOK_IMAGE.
+      - Type: Hidden
 
-     Click on Content Body and create another region
-    Under Identification →  Title: Book Information and Type: Classic Report
-    Under Source → Type: SQL Query
+10. Right-click **P18_BOOK_ID** and Select **Duplicate**.
 
-    SQL Query:
-    select BOOK_ID,
+    ![App builder home page](images/duplicate-bp.png " ")
+
+11. Update Name to **P18_BOOK_IMAGE**.
+
+    ![App builder home page](images/duplicate-details-bp.png " ")
+
+12. Right-click P18_BOOK_IMAGE and Select **Create Computation**.
+
+    ![App builder home page](images/computation-bp.png " ")
+
+13. In the Property Editor, update the following properties:
+
+    - Execution > Point: **Before Header**
+
+    - Under Computation:
+
+       - Type: SQL Query (return single value)
+
+       - SQL Query: Copy and paste below code into the code editor
+
+       ```
+       <copy>
+        select book_image from obs_books where book_id= :P18_BOOK_ID
+        </copy>
+         ```
+
+    ![App builder home page](images/book-image-computation.png " ")
+
+14. Right-click **P18_BOOK_ID** and Select **Duplicate**.
+
+15. Update Name to **P18_BUY_LINKS**.
+
+    ![App builder home page](images/page-item-buy-links.png " ")
+
+16. Right-click P18_BUY_LINKS and Select **Create Computation**.
+
+17. In the Property Editor, update the following properties:
+
+    - Execution > Point: Before Header
+
+    - Under Computation:
+
+       - Type: SQL Query (return single value)
+
+       - SQL Query: Copy and paste below code into the code editor
+
+       ```
+       <copy>
+        select BUY_LINKS from obs_books where book_id= :P18_BOOK_ID
+        </copy>
+         ```
+
+    ![App builder home page](images/buy-links-computation.png " ")    
+
+18. In the left pane, Right-Click **Content Body** and Select **Create Region**.
+
+      ![App builder home page](images/create-region1.png " ")
+
+19. In the Property Editor, update the following properties:
+
+    - Under Identification:
+
+        - Title: **IMAGE DISPLAY**
+
+        - Type: **Static Content**
+
+    - Appearance > Template: **Image**
+
+    - Image > File URL: **&P18_BOOK_IMAGE.**
+
+    ![App builder home page](images/region-details1.png " ")
+
+20. Right_Click **Content Body** and Select **Create Region**. In the Property Editor, update the following properties:
+
+     - Under Identification:
+
+         - Title: **Book Information**
+
+         - Type: **Classic Report**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and paste below code into the code Editor
+
+        ```
+        <copy>    
+        select BOOK_ID,
            Round(PRICE,2) as price,
            TITLE,
            AUTHOR,
@@ -301,51 +381,113 @@ In this lab, you will:
            CONTRIBUTOR,
            DESCRIPTION,
            ROUND(Price*((100- Discount)/100),2) as new_price
-      from OBS_BOOKS
-     where BOOK_ID=:P18_BOOK_ID
+        from OBS_BOOKS
+        where BOOK_ID=:P18_BOOK_ID
+       </copy>
+       ```
 
-    Under Appearance → Template: Blank with Attributes
+    - Under Appearance > Template: **Blank with Attributes**
 
-    Under Layout → Disable Start New Row button.
-    Click on Attributes
-    Under Appearance → Template: Value Attribute Pairs - Column
-    Under Pagination:
-    Type : No Pagination (Show All Rows)
-    Open columns below Book Information →
-    Arrange the order → BOOK_ID,TITLE,DESCRIPTION,AUTHOR,CONTRIBUTOR,PUBLISHER,PRICE,DISCOUNT,NEW_PRICE
-    Change the Type of BOOK_ID and NEW_PRICE to Hidden Column.
-    Click on the PRICE
-    Under Column Formatting
-    HTML Expression:
-    <strike>₹#PRICE#</strike> ₹#NEW_PRICE#
-    Click on the DISCOUNT
-    Under Column Formatting
-    HTML Expression:
-    <span style="color: green;">#DISCOUNT#% Off</span>
-    Click on Book Information and create a button
-    Name: Buy_Link
-    Position: next
-    Appearance: Text with icon
-    Style: Display as link
-    icon:fa-box-arrow-in-ne
-    Under Behavior
-    Action: Redirect to URL
-    Target: javascript:window.open('&P18_BUY_LINKS.','_blank');
-    Click on Save.
-    Go to Page 10: Search Books
-    Under Search Results in the rendering tab, right-click on Action and click Create Action.
-    Under Identification→ Type: Full Card
-    Under Link→ Type: Redirect to a page in this Application
-    Click on Target
-    Page: 18
-    Name
+    - Under Layout > Disable **Start New Row**
 
-    Value
+    ![App builder home page](images/book-info.png " ")
 
-    P18_BOOK_ID
+    ![App builder home page](images/book-info-details.png " ")
 
-    &BOOK_ID.
 
-    Clear Cache: 18
-    click ok
-    Click on Save and Run.
+21. In the right pane, Click **Attributes**. In the Property Editor, update the following properties:
+
+    - Appearance > Template: **Value Attribute Pairs-Column**
+
+    - Pagination > Type: **No Pagination (Show All Rows)**
+
+    ![App builder home page](images/book-info-save.png " ")
+
+22. Under **Book Information** region, Select **BOOK_ID**, **NEW_PRICE** and change **Type** to Hidden.
+
+       ![App builder home page](images/bookid-hidden.png " ")
+
+23. Select **PRICE** and update the following:
+
+     - Column Formatting > HTML Expression: <strike>₹#PRICE#</strike> ₹#NEW_PRICE#
+
+    ![App builder home page](images/price-html.png " ")
+
+24. Select **DISCOUNT** and update the following:
+
+     - Column Formatting > HTML Expression: <span style="color:green;">#DISCOUNT#% Off</span>
+
+    ![App builder home page](images/discount-html.png " ")
+
+25. Right-click **Book Information** and Select **Create Button**.
+
+      ![App builder home page](images/book-info-button.png " ")
+
+26. In the Property Editor, update the following properties:
+
+     - Identification > Name: **BUY_LINK**
+
+     - Layout > Position: **Next**
+
+     - Under Appearance:
+
+          - Button Template: **Text with icon**
+
+          - Template Options > Style: **Display as link**
+
+          - Icon: **fa-box-arrow-in-ne**
+
+    ![App builder home page](images/buy-link-button.png " ")
+
+    - Under Behavior:
+
+         - Action: Redirect to URL
+
+         - Target > URL: javascript:window.open('&P18_BUY_LINKS.','_blank');
+
+    Click **Save**.
+
+      ![App builder home page](images/buy-link-builder.png " ")
+
+27. In the page designer toolbar, Select Page selector and click **10**.
+
+    ![App builder home page](images/navigate-to-10.png " ")
+
+28. In the left pane, Under Search Results region, Right-click Action and Select **Create Action**.
+
+    ![App builder home page](images/create-action.png " ")        
+
+29. In the Property Editor, update the following properties:
+
+    - Identification > Type: **Full Card**
+
+    - Under Link:
+
+        - Type: **Redirect to a page in this Application**
+
+        - Click **Target**
+
+            - Page: **18**
+
+            - Name: **P18_BOOK_ID** / Value: **&BOOK_ID.**
+
+            - Clear Cache: 18
+
+            Click **OK**
+
+    ![App builder home page](images/action-details.png " ")
+
+30. Click **Save and Run**.
+
+    ![App builder home page](images/action-review.png " ")
+
+    ![App builder home page](images/buy-link-review.png " ")
+
+## Summary
+
+You've learned how to enhance the faceted search page, integrate Global Search using a page item, improve the Cards region, activate sorting options, and include a link for purchasing books. Ready to move on to the next lab!
+
+## Acknowledgements
+
+- **Author**: Ankita Beri, Product Manager
+- **Last Updated By/Date**: Ankita Beri, Product Manager, May 2024
