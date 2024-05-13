@@ -16,25 +16,28 @@ In this lab, you will:
 ## Task 1: Improve Faceted Search
 1. Go to the Application Home Page and then click on Page 10 - Search Books.
 
-2. Select **P10_AUTHOR** facet under Search Region.
+2. Select **P10\_AUTHOR** facet under Search Region.
 
-    - Under Layout Section: For Sequence: Enter **10**
+    - Layout > Sequence: **10**
 
     ![App builder home page](images/fs-author.png " ")
 
-3. Now, Select **P10_PRICE** facet under Search Region.
+3. Now, Select **P10\_PRICE** facet under Search Region.
 
-    - Under Layout Section → For Sequence: Enter **20**
+    - Layout > Sequence: **20**
 
-    - Under Settings Section → For Select Multiple: **Toggle Off**
+    - Settings > Select Multiple: **Toggle Off**
 
-    - Under List of Value Section → Type : Enter **- Select -**
+    - List of Value > Type :**- Select -**
 
     ![App builder home page](images/fs-price.png " ")
 
-4. Select **P10_DISCOUNT** facet under Search Region.
-    - Under Layout Section: For Sequence: Enter **30**
-    - Under List of Values: For Type: Select **Static Values**
+4. Select **P10\_DISCOUNT** facet under Search Region.
+
+    - Layout > Sequence: **30**
+
+    - List of Values> Type: **Static Values**
+
        - Click on Static Values: Enter the following
 
        | Display Value |  Return Value  |
@@ -45,17 +48,19 @@ In this lab, you will:
        | >80 | 80 |
        {: title="Static Values"}
 
-       - Under Actions section: Disable Chart   
+       - Actions Menu > Chart: **Toggle Off**   
 
     ![App builder home page](images/fs-discount.png " ")
 
-5. Select **P10_CATEGORY** facet under Search Region.
-    - Under Layout Section: For Sequence: Enter **40**
-    - Under Actions Menu
+5. Select **P10\_CATEGORY** facet under Search Region.
+
+    - Layout > Sequence: **40**
+
+    - Actions Menu > Chart: **Toggle Off**
 
     ![App builder home page](images/fs-cateogory.png " ")
 
-6. Click Save and Run.
+6. Click **Save and Run**.
 
    ![App builder home page](images/fs-review.png " ")
 
@@ -65,12 +70,15 @@ In this lab, you will:
 
      ![App builder home page](images/fs-page-item.png " ")
 
-   - For Name: Enter **P10_SEARCH_PAGE_ITEM**
-   - For Label: Enter **Search**
-   - For Type: Select **Text field with Autocomplete**
+   - Name: **P10\_SEARCH\_PAGE\_ITEM**
 
-  Under List of Values Section:
-   - For Type: Select **SQL Query**
+   - Label: **Search**
+
+   - Type: **Text field with Autocomplete**
+
+  Under List of Values:
+
+   - Type: **SQL Query**
 
    - Copy and paste the code in **SQL Query**:
 
@@ -90,29 +98,36 @@ In this lab, you will:
 
     ![App builder home page](images/fs-search-item.png " ")
 
-2. Select **P10_SEARCH** page item under Search region.
-    Under Settings Section:
-    - For Input Field: Select **External Page Item**
-    - For External Page Item: Select **P10_SEARCH_PAGE_ITEM**
+2. Select **P10\_SEARCH** page item under Search region.
 
-    Under Source Section:
-    - For Database Columns:  Enter **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
+    Under Settings:
 
-  ![App builder home page](images/fs-search-attributes.png " ")
+    - Input Field: **External Page Item**
+
+    - External Page Item: **P10_SEARCH_PAGE_ITEM**
+
+    Under Source:
+
+    - Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
+
+    ![App builder home page](images/fs-search-attributes.png " ")
 
 
-3. Drag and drop **P10_SEARCH_PAGE_ITEM** page item just above the Button Bar.
+3. Drag and drop **P10\_SEARCH\_PAGE\_ITEM** page item just above the Button Bar.
 
     ![App builder home page](images/fs-drag.png " ")
 
-4. Click on save and run.
+4. Click **Save and Run**.
 
 ## Task 3: Enhance the Cards region
 
 1. Select **Search Results** Region and Enter the following:
-    Under Source Section:
-    - For Type: Select **SQL Query**
-    - For SQL Query: Copy and paste the below code
+
+    Under Source:
+
+    - Type: **SQL Query**
+
+    - SQL Query: Copy and paste the below code
 
     ```
     <copy>
@@ -136,26 +151,28 @@ In this lab, you will:
 
        ![App builder home page](images/search-results.png " ")
 
-2. Under Appearance Section:  
+2. Under Appearance:  
+
    Select **Template Options** and enter the following:
-    - For Style :Select  Style C and Click **OK**
+
+    -  Style: Style C and Click **OK**
 
     ![App builder home page](images/template-options.png " ")
 
 3. Select Attributes (For the Search Results Region) and enter the following:
 
-    Under Appearance Section:
-    - For Grid Columns: Select **4 columns**
+    Under Appearance:
+    - Grid Columns: **4 columns**
 
-    Under Card Section:
-    - For Primary Key: Enter **BOOK_ID**
+    Under Card:
+    -  Primary Key: **BOOK_ID**
 
-    Under Title Section:
-    - For CSS Classes: Enter **book-title**
+    Under Title:
+    - CSS Classes: **book-title**
 
-    Under Body Section:
+    Under Body:
     - **Enable** Advanced Formatting
-    - For HTML expression: Enter the following
+    - HTML expression: Enter the following
 
     ```
     <copy>
@@ -174,16 +191,16 @@ In this lab, you will:
 
       ![App builder home page](images/search-results-attributes.png " ")
 
-    Under Media Section:
-    - For Source: Select **Image URL**
-    - For URL: Enter **&BOOK_IMAGE.**
-    - For Image Description: Enter **&DESCRIPTION.**
+    Under Media:
+    - Source: **Image URL**
+    - URL: **&BOOK_IMAGE.**
+    - Image Description: **&DESCRIPTION.**
 
     ![App builder home page](images/image-atrributes.png " ")
 
 4. Select **Page 10: Search Books** and enter the following:
-    Under CSS Section:
-    - For Inline: Enter the following
+    Under CSS:
+    - Inline: Enter the following
 
     ```
     <copy>
@@ -204,8 +221,8 @@ In this lab, you will:
 
 1. Select **Search Results** region and enter the following:
 
-    Under Order By Section:
-    - For Type: Select **Item**
+    Under Order By:
+    - Type: **Item**
     - Click **Order by item** and enter the following:
 
     | Clause |  Key | Display |
@@ -218,13 +235,13 @@ In this lab, you will:
 
     ![App builder home page](images/order-by-item.png " ")
 
-3. Select P10_ORDER_BY under Results Region and enter the following:
+3. Select P10\_ORDER\_BY under Results Region and enter the following:
 
-    Under Default Section:
-    - For Type: Select **Static**
-    - For Static Value: TITLE
+    Under Default:
+    - Type: Select **Static**
+    - Static Value: TITLE
 
-5. Click on Save and run.
+5. Click **Save and run**.
 
     ![App builder home page](images/review-fs.png " ")
 
@@ -278,19 +295,19 @@ In this lab, you will:
 
    - Under Identification:
 
-      - Name: P18_BOOK_ID
+      - Name: P18\_BOOK\_ID
 
       - Type: Hidden
 
-10. Right-click **P18_BOOK_ID** and Select **Duplicate**.
+10. Right-click **P18\_BOOK\_ID** and Select **Duplicate**.
 
     ![App builder home page](images/duplicate-bp.png " ")
 
-11. Update Name to **P18_BOOK_IMAGE**.
+11. Update Name to **P18\_BOOK\_IMAGE**.
 
     ![App builder home page](images/duplicate-details-bp.png " ")
 
-12. Right-click P18_BOOK_IMAGE and Select **Create Computation**.
+12. Right-click P18\_BOOK\_IMAGE and Select **Create Computation**.
 
     ![App builder home page](images/computation-bp.png " ")
 
@@ -312,13 +329,13 @@ In this lab, you will:
 
     ![App builder home page](images/book-image-computation.png " ")
 
-14. Right-click **P18_BOOK_ID** and Select **Duplicate**.
+14. Right-click **P18\_BOOK\_ID** and Select **Duplicate**.
 
-15. Update Name to **P18_BUY_LINKS**.
+15. Update Name to **P18\_BUY\_LINKS**.
 
     ![App builder home page](images/page-item-buy-links.png " ")
 
-16. Right-click P18_BUY_LINKS and Select **Create Computation**.
+16. Right-click P18\_BUY\_LINKS and Select **Create Computation**.
 
 17. In the Property Editor, update the following properties:
 
@@ -352,7 +369,7 @@ In this lab, you will:
 
     - Appearance > Template: **Image**
 
-    - Image > File URL: **&P18_BOOK_IMAGE.**
+    - Image > File URL: **&P18\_BOOK\_IMAGE.**
 
     ![App builder home page](images/region-details1.png " ")
 
@@ -409,13 +426,23 @@ In this lab, you will:
 
 23. Select **PRICE** and update the following:
 
-     - Column Formatting > HTML Expression: <strike>₹#PRICE#</strike> ₹#NEW_PRICE#
+     - Column Formatting > HTML Expression:
+     ```
+     <copy>
+     <strike>₹#PRICE#</strike> ₹#NEW_PRICE#
+     </copy>
+      ```
 
     ![App builder home page](images/price-html.png " ")
 
 24. Select **DISCOUNT** and update the following:
 
-     - Column Formatting > HTML Expression: <span style="color:green;">#DISCOUNT#% Off</span>
+     - Column Formatting > HTML Expression:
+     ```
+     <copy>
+     <span style="color:green;">#DISCOUNT#% Off</span>
+     </copy>
+      ```
 
     ![App builder home page](images/discount-html.png " ")
 
@@ -425,7 +452,7 @@ In this lab, you will:
 
 26. In the Property Editor, update the following properties:
 
-     - Identification > Name: **BUY_LINK**
+     - Identification > Name: **BUY\_LINK**
 
      - Layout > Position: **Next**
 
@@ -443,9 +470,13 @@ In this lab, you will:
 
          - Action: Redirect to URL
 
-         - Target > URL: javascript:window.open('&P18_BUY_LINKS.','_blank');
-
-    Click **Save**.
+         - Target > URL:
+         ```
+         <copy>
+          javascript:window.open('&P18_BUY_LINKS.','_blank');
+          </copy>
+           ```
+       Click **Save**.
 
       ![App builder home page](images/buy-link-builder.png " ")
 
@@ -469,7 +500,7 @@ In this lab, you will:
 
             - Page: **18**
 
-            - Name: **P18_BOOK_ID** / Value: **&BOOK_ID.**
+            - Name: **P18\_BOOK\_ID** / Value: **&BOOK_ID.**
 
             - Clear Cache: 18
 
