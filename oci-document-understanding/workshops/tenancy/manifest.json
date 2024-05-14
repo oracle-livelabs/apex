@@ -1,0 +1,34 @@
+{
+  "workshoptitle": "Empower your Oracle APEX App with OCI Document Understanding",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Configure OCI API Keys",
+        "filename": "../../1-configure-oci/1-configure-oci.md"
+      },
+      {
+        "title": "Lab 2: Setup Tasks for Application Deployment ",
+        "filename": "../../2-install-scripts/2-install-scriptsp.md"
+      },
+      {
+        "title": "Lab 3: Integrate OCI Document Understanding with Oracle APEX",
+        "filename": "../../3-create-apllication/3-create-application.md"
+      },
+      {
+        "title": "Lab 4: Develop an Invoice Tracker and Invoice Analysis Page",
+        "filename": "../../4-additional-pages/4-additional-pages.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}

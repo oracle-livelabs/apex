@@ -60,7 +60,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     - **Credentials**: apex\_ai\_cred
 
 
-8. Click **REST Source Manually**.
+8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
    ![Click Timeline](images/rest-data-authentication.png " ")
