@@ -11,13 +11,20 @@ Estimated Time: 1 hour
 ### Objectives
 In this workshop, you:
 
+- Create a REST Data Source in APEX based on the OCI Vision REST Endpoint.
+- Invoke the OCI Vision REST Data Source using the Invoke API page process type.
+- Enhance the App to include the results from OCI Vision and make the images searchable.
+- Make the app mobile ready by enabling PWA and other mobile friendly features.
+
+<!---
 - Enhance Social Media App with AI-Powered Search.
 - Integrate APEX with OCI using API keys.
 - Seamlessly link APEX with OCI Vision Service through REST Data Sources.
+--->
 
 ### Prerequisites for Building this App:
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: https://www.oracle.com/in/cloud/free/
+- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
@@ -29,4 +36,4 @@ In this workshop, you:
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, February 2024

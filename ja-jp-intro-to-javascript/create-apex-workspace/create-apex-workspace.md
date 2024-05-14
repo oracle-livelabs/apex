@@ -92,6 +92,6 @@ You may now *proceed to the next lab*.
 
 ## **Acknowledgements**
 
- - **Author/Contributors** -  David Peake, Consulting Member of Technical Staff | Arabella Yao, Product Manager Intern, Database Management, June 2020
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
-
+ - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
+ - **Contributor** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead)
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023

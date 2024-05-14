@@ -82,7 +82,7 @@ To create a Web Credential in Oracle APEX:
     - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key. 
+    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
       ![Private key file](images/private-key.png " ")
 

@@ -1,36 +1,33 @@
-# Design the Doctor Appointments Made Easy Application
+# Design the 'Doctor Appointments Made Easy!' Application
 
 ## Introduction
 
-Hands-on Lab:
-
-In this lab, you will design the Doctor Appointments Made Easy application using Oracle APEX. The application will streamline the doctor appointment process, allowing seamless interactions between doctors, patients, and hospital staff.
+In this lab, you design the 'Doctor Appointments Made Easy!' application using Oracle APEX. The application will streamline the doctor appointment process, allowing seamless interactions between doctors, patients, and hospital staff.
 
 ### Objectives
 
-In this lab, you :
-- Create the APEX Application.
+In this lab, you:
+- Create the APEX Application
 - Create Application users
-- Install Sample dataset
+- Install the Sample Dataset
 
 Estimated Time: 20 minutes
 
 ### Prerequisites
-1. Access to Oracle APEX.
-2. Ensure that users (doctors, patients, and hospital staff) are created using the Manage Users And Groups menu option under Workspace Administration. To create these users, follow the the instructions specified in Step 1.
+- Access to Oracle APEX.
 
 ## Task 1: Create Application Users
-In this lab, you create users for Doctor Appointments made Easy Application.
+In this lab, you create users for 'Doctor Appointments made Easy!' Application.
 
-1. Navigate to **Workspace Administration** by clicking the **Administration icon** on the Application home page and select **Manage Users and Groups** from the dropdown list.
+1. On the Application home page, click the **Administration icon** and select **Manage Users and Groups** from the dropdown list.
 
   ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
-2. Click **Create Multiple Users**
+2. Click **Create Multiple Users**.
 
   ![Create Multiple Users](./images/create-users.png " ")
 
-3. Under **Create multiple Users**, create the following users:
+3. You will create the following users for the application:
 
     | Persona        | User Name |
     | -------------- | --------- |
@@ -44,31 +41,38 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     |                | DARYL     |
     |                | RAJESH    |
     | Hospital Staff | STEVE     |
+    {: title="List of Users to Create in the Application"}
 
-4. Specify the following attributes:
-    - For a List of Email Addresses: Enter **Email IDs of the Users**
-    | List of Email Addresses |
-    | --------- |
-    | ROBERT@oracle.com    |
-    | ANACHATT@oracle.com  |
-    | JANE@oracle.com      |
-    | BO@oracle.com        |
-    | PAT@oracle.com       |
-    | MARTIN@oracle.com    |
-    | SUSIE@oracle.com     |
-    | DARYL@oracle.com     |
-    | RAJESH@oracle.com    |
-    | STEVE@oracle.com     |
-    - For Usernames : Select **Exclude @ domain as part of the username**
-    - For password and Confirm Password: **Enter a password of your wish**
-    - Click **Next**
+ In the **Create multiple Users** wizard, specify the following attributes:
+    - For a List of Email Addresses: Enter **Email IDs of the Users** given in the table below.
+
+    ```
+    <copy>
+      
+      ROBERT@yourdomain.com    
+      ANACHATT@yourdomain.com   
+      JANE@yourdomain.com       
+      BO@yourdomain.com         
+      PAT@yourdomain.com       
+      MARTIN@yourdomain.com     
+      SUSIE@yourdomain.com     
+      DARYL@yourdomain.com     
+      RAJESH@yourdomain.com    
+      STEVE@yourdomain.com   
+      </copy>
+      ```
+    
+    - For Usernames: Select **Exclude @ domain as part of the username**
+    - For Password and Confirm Password: **Enter a password**
+    - Click **Next**.
+    
     ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
-5. And then, Click **Create Valid Users**
+5. Click **Create Valid Users**.
   ![Click validate users](./images/create-valid-users.png " ")
-6. Users are now created in your Workspace.
+ Users are now created in your Workspace.
 
-## Task 2: Create the Doctor Appointments Made Easy Application
+## Task 2: Create the 'Doctor Appointments Made Easy!' Application
 
 1. Navigate to **App Builder**.
   ![Select App Builder](./images/select-app-builder.png " ")
@@ -76,17 +80,16 @@ In this lab, you create users for Doctor Appointments made Easy Application.
 2. Click **Create**.
   ![Click create](./images/click-create.png " ")
 
-3. Under **Create an Application**,
-    - For Name, enter **Doctor Appointments Made Easy!**
+3. In the Create an Application wizard, for Name, enter **Doctor Appointments Made Easy!**.
+
       ![Create an Application](./images/create-an-application.png " ")
 
 4. Click **Create Application**.
 
-## Task 3: Sample Table and Sample Data
+## Task 3: Install Sample Data
+   In this task, you install a Sample Dataset using a SQL Script.
 
-1. Install the dataset.
-
-2. Navigate to **SQL Workshop** and click **SQL Scripts**.
+1. Navigate to **SQL Workshop** and click **SQL Scripts**.
   ![Click SQL Scripts](./images/click-sql-scripts.png " ")
 
 3. Click **Create**.
@@ -195,23 +198,23 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     (60, 'MARTIN', 'RENOLOGY','MS','martin@abc.com');
     </copy>
     ```
-5. For Script Name, enter **Create DB Tables** and Click **Run**.
+5. For Script Name, enter **Create DB Tables** and click **Run**.
   ![Click create SQL Scripts](./images/create-db-tables.png " ")
 
-6. Click **Run Now**.
+6. Click **Run Now**. The statements are processed and the sample tables and data are created.
   ![Click create SQL Scripts](./images/click-run-now.png " ")
   ![Click create SQL Scripts](./images/create-tables-output.png " ")
 
 ## Task 4: Create Package Spec and Package Body
 
-1. Navigate back to **SQL Workshop** and click **SQL Scripts**.
+1. Navigate to **SQL Workshop** and click **SQL Scripts**.
 
   ![Click create SQL Scripts](./images/click-sql-scripts1.png " ")
 
 2. Click **Create**.
   ![Click create SQL Scripts](./images/click-create2.png " ")
 
-3. Copy and paste the provided commands to create a package spec named **eba\_demo\_wf\_doc\_apt.sql**.
+3. Copy and paste the code snippet to create a package spec named **eba\_demo\_wf\_doc\_apt.sql**.
 
     ```
     <copy>
@@ -251,7 +254,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     </copy>
     ```
 
-4. For Script Name, enter **Create Package Spec** and Click **Run**.
+4. For Script Name, enter **Create Package Spec** and click **Run**.
 
     ![Click create SQL Scripts](./images/create-package-spec.png " ")
 
@@ -368,7 +371,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
     </copy>
     ```
 
-7. For Script Name, enter **Create Package Body** and Click **Run**.
+7. For Script Name, enter **Create Package Body** and click **Run**.
 
     ![Click create SQL Scripts](./images/create-pckage-body.png " ")
 
@@ -377,7 +380,7 @@ In this lab, you create users for Doctor Appointments made Easy Application.
   ![Click create SQL Scripts](./images/click-run-now2.png " ")
 
 ## Summary
-You have successfully completed the initial steps for designing the Doctor Appointments Made Easy application. You created Doctor Appointments Made Easy Application, and then added Application users, created Sample Datasets, and a Package.
+You have successfully completed the initial steps for designing the 'Doctor Appointments Made Easy!' application. You first created a 'Doctor Appointments Made Easy!' Application, and then added Application users, created Sample Datasets, and a Package.
 
 ### What's Next
 In the next lab, you will learn how to create a Workflow using Oracle APEX.

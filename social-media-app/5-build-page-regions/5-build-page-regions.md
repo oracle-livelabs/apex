@@ -128,7 +128,10 @@ set:
 
     ![Property Editor](images/property-editor1.png "")
 
+<<<<<<< HEAD
     Ok, that was a bunch of changes!
+=======
+>>>>>>> upstream/main
 
 6. Let's save and run and see how it looks.
 
