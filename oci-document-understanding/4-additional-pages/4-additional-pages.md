@@ -2,9 +2,7 @@
 
 ## Introduction
 
-In this lab, you create a APEX application named **Automatic Invoice Handling** using Create APP Wizard. Furthermore, you will set up a REST Data Source to interact with OCI Doc Understanding. Additionally, you will enhance the home page to facilitate invoice uploading and document processing and analysis.
-
-OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents
+This lab guides you through creating an application process to download a file from a URL stored in the database. Additionally, you'll develop two new pages for invoice tracking and invoice analysis.
 
 Estimated Time: 10 Minutes
 
@@ -12,7 +10,7 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create an Application Process
-- Create an Invoice Tracker using Cards
+- Develop an Invoice Tracking page using Cards
 - Create an Invoice Analysis page
 
 ## Task 1: Create an Application Process
@@ -25,26 +23,24 @@ In this lab, you:
 
    ![Application Processes](images/application-process2.png " ")
 
-3. Click Create.
+3. Click **Create**.
 
    ![Application Processes](images/process-create.png " ")
 
-4. For Identification:
+4. Under Identification:
 
-   - Name: **DISPLAY_PDF**
+    - Name: **DISPLAY_PDF**
 
-   - On Point: **AJAX Callback: Run this application process when requested by page process**
+    - On Point: **AJAX Callback: Run this application process when requested by page process**
 
    Click **Next**.
 
    ![Application Processes](images/process-identification.png " ")
 
-5. For Source:
+5. Source > Code: Copy and Paste below code into the code editor:
 
-   - Code: Copy and Paste below code into the code editor:
-
-    ```
-    <copy>
+     ```
+     <copy>
     declare
      l_blob blob;
      l_url varchar2(255);
@@ -62,8 +58,8 @@ In this lab, you:
     wpg_docload.download_file(l_blob);
 
     END;
-    <copy>
-    ```
+     <copy>
+     ```
     Click **Next**.
 
     ![Application Processes](images/process-source.png " ")
@@ -72,7 +68,7 @@ In this lab, you:
 
     ![Application Processes](images/process-created.png " ")
 
-## Task 2: Create an Invoice Tracker using Cards
+## Task 2: Develop an Invoice Tracking page using Cards
 
 1. Navigate to **Application ID**.
 
@@ -88,15 +84,15 @@ In this lab, you:
 
 4. Enter the following details:
 
-   - Page Definition > Name: **Invoice Tracker**
+    - Page Definition > Name: **Invoice Tracker**
 
-   - Data Source > Source Type: **SQL Query**
+    - Data Source > Source Type: **SQL Query**
 
-   - Enter a SQL SELECT Statement: Copy and paste the below code:
+    - Enter a SQL SELECT Statement: Copy and paste the below code:
 
-   ```
-   <copy>
-   select a.ID,
+    ```
+    <copy>
+    select a.ID,
        a.FILE_NAME,
        a.MIME_TYPE,
        a.OBJECT_STORAGE_URL,
@@ -112,19 +108,19 @@ In this lab, you:
         end card_color,
        a.DOC_AI_JSON,
        b.FIELD_VALUE
-    from INV_UPLOAD a, DOCAI_RESPONSE b where a.ID = b.DOCUMENT_ID and b.FIELD_LABEL = 'InvoiceTotal'
-    <copy>
-    ```
+      from INV_UPLOAD a, DOCAI_RESPONSE b where a.ID = b.DOCUMENT_ID and b.FIELD_LABEL = 'InvoiceTotal'
+     <copy>
+     ```
 
-    Click **Next**.
+     Click **Next**.
 
     ![Application Processes](images/cards-detail.png " ")
 
 5. Under Card Attributes:
 
-   - Title Column: **FILE_NAME (Varchar2)**
+    - Title Column: **FILE_NAME (Varchar2)**
 
-   - Body Column: **CREATED_BY (Varchar2)**
+    - Body Column: **CREATED_BY (Varchar2)**
 
    Click **Create Page**.
 
@@ -132,27 +128,27 @@ In this lab, you:
 
 6. In the left pane, select **Invoice Tracker** region and Under **Attributes**, enter the following:
 
-   - Under Card:
+    - Under Card:
 
-      - CSS Classes: **&CARD\_COLOR.!ATTR.**
+       - CSS Classes: **&CARD\_COLOR.!ATTR.**
 
-      - Primary Key Column 1: **ID**
+       - Primary Key Column 1: **ID**
 
-  - Subtitle > Column: **STATUS**
+    - Subtitle > Column: **STATUS**
 
-  - Under Secondary Body:
+    - Under Secondary Body:
 
-      - Advanced Formatting: **Toggle On**
+       - Advanced Formatting: **Toggle On**
 
-      - HTML Expression: **Invoice Total Amount: &FIELD\_VALUE.**
+       - HTML Expression: **Invoice Total Amount: &FIELD\_VALUE.**
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
 7. In the property editor, Under Source, Select **Order By Item** and enter the following:
 
-    |   | Clause | Key | Display |
-    |---|-----------|--------------|--------------|
-    | 1 | "CREATED" desc| CREATED | Created |
+      | Clause | Key | Display |
+      |-----------|--------------|--------------|
+      | "CREATED" desc| CREATED | Created |
 
     Click **OK**.
 
@@ -162,7 +158,7 @@ In this lab, you:
 
 ## Task 3: Create an Invoice Analysis page
 
-1. Navigate to Create(+) in Page Designer toolbar and Select **Page**.
+1. Navigate to Create(+) in Page Designer toolbar and select **Page**.
 
    ![Application Processes](images/create-blank-page.png " ")
 
@@ -170,17 +166,17 @@ In this lab, you:
 
    ![Application Processes](images/blank-page1.png " ")
 
-3. On Create Page dialog, Enter the following:
+3. On Create Page dialog, enter the following:
 
-   - Page Definition > Name: **Invoice Analysis**
+    - Page Definition > Name: **Invoice Analysis**
 
-   - Navigation > Use Breadcrumb: **Toggle Off**
+    - Navigation > Use Breadcrumb: **Toggle Off**
 
    Click **Create Page**.
 
    ![Application Processes](images/create-blank-page1.png " ")
 
-4. Right-Click body, Select **Create Page Item**.
+4. In the left pane, Right-click Body, select **Create Page Item**.
 
     ![Application Processes](images/create-page-item3.png " ")
 
@@ -201,18 +197,18 @@ In this lab, you:
 
 7. In the Property Editor, enter the following details:
 
-   - Indentification > Name: **Prepare URL**
+    - Indentification > Name: **Prepare URL**
 
-   - Source > PL/SQL Code: Copy and paste the below code into code editor:
+    - Source > PL/SQL Code: Copy and paste the below code into code editor:
 
-   ```
-   <copy>
-   :P4_URL:= APEX_PAGE.GET_URL(P_Page => 4,
+    ```
+    <copy>
+     :P4_URL:= APEX_PAGE.GET_URL(P_Page => 4,
                                p_request => 'APPLICATION_PROCESS=DISPLAY_PDF',
                                P_PLAIN_URL => True
                             );
-    <copy>
-     ```
+     <copy>
+      ```
 
     ![Application Processes](images/prepare-url.png " ")
 
@@ -222,18 +218,18 @@ In this lab, you:
 
 9. In the Property Editor, enter the following details:
 
-   - Indentification > Name: **Uploaded File**
+    - Indentification > Name: **Uploaded File**
 
-   - Source > HTML Code: Copy and paste the below code into code editor:
+    - Source > HTML Code: Copy and paste the below code into code editor:
 
-   ```
-  <copy>
-  :P4_URL:= APEX_PAGE.GET_URL(P_Page => 4,
-                           p_request => 'APPLICATION_PROCESS=DISPLAY_PDF',
-                           P_PLAIN_URL => True
-                           );
-  <copy>
-   ```
+    ```
+   <copy>
+   <p align="center">
+   <iframe src="&P4_URL."  width="100%" height="500">
+   </iframe>
+   </p>
+   <copy>
+    ```
 
    ![Application Processes](images/uploaded-file.png " ")
 

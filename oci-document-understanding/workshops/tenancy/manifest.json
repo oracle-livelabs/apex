@@ -11,19 +11,23 @@
       },
       {
         "title": "Lab 1: Configure OCI API Keys",
-        "filename": "../../1-configure-oci/1-configure-oci.md"
+        "filename": "../../1-configure-oci-keys/1-configure-oci-keys.md"
       },
       {
         "title": "Lab 2: Setup Tasks for Application Deployment ",
-        "filename": "../../2-install-scripts/2-install-scriptsp.md"
+        "filename": "../../2-install-scripts/2-install-scripts.md"
       },
       {
         "title": "Lab 3: Integrate OCI Document Understanding with Oracle APEX",
-        "filename": "../../3-create-apllication/3-create-application.md"
+        "filename": "../../3-create-application/3-create-application.md"
       },
       {
         "title": "Lab 4: Develop an Invoice Tracker and Invoice Analysis Page",
         "filename": "../../4-additional-pages/4-additional-pages.md"
+      },
+      {
+        "title": "Lab 5: Implement Invoice Approval Requests Using Approvals Component",
+        "filename": "../../5-approval-comp/5-approval-comp.md"
       },
       {
         "title": "Need Help?",
