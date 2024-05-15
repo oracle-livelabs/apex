@@ -4,7 +4,7 @@
 
 This lab guides you through creating an application process to download a file from a URL stored in the database. Additionally, you'll develop two new pages for invoice tracking and invoice analysis.
 
-Estimated Time: 10 Minutes
+Estimated Time: 15 Minutes
 
 ### Objectives
 In this lab, you:
