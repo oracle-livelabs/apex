@@ -1,6 +1,5 @@
 {
-  "workshoptitle": "Empower your Oracle APEX App with OCI Document Understanding",
-    "tutorials": [
+  "workshoptitle": "Automate Invoice handling using Oracle APEX and OCI Document Understanding": [
       {
         "title": "Introduction",
         "filename": "../../intro/introduction.md"

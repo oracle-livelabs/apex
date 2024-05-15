@@ -110,24 +110,14 @@ In this lab, you:
 
     ```
     <copy>
-    {
-    "compartmentId": "#COMPARTMENT_ID#",
-    "document": {
-    "namespaceName": "#NAMESPACE_NAME#",
-    "bucketName": "#BUCKET_NAME#",
-    "objectName": "#OBJECT_NAME#",
-    "source": "OBJECT_STORAGE"
-    },
-    "features": [
-    {
-    "featureType": "#FEATURE_TYPE#"
-    },
-    {
-    "featureType": "DOCUMENT_CLASSIFICATION",
-    "maxResults": 5
-     }
-     ]
-    }
+    { "compartmentId" : "#COMPARTMENT_ID#",
+    "document" : { "namespaceName" : "#NAMESPACE_NAME#",
+    "bucketName" : "#BUCKET_NAME#",
+    "objectName" : "#OBJECT_NAME#",
+    "source" : "OBJECT_STORAGE" },
+    "features" : [ { "featureType" : "#FEATURE_TYPE#" },
+    { "featureType" : "DOCUMENT_CLASSIFICATION",
+    "maxResults" : 5 } ] }
     <copy>
      ```
 
@@ -185,7 +175,7 @@ In this lab, you:
 
       - Type: **Form**
 
-   - Source > Table Name: **INV_UPLOAD**
+   - Source > Table Name: **INV\_UPLOAD**
 
      ![Create Region](images/form.png " ")
 
@@ -223,7 +213,7 @@ In this lab, you:
 
     - Under Identification:
 
-        - Name: **PI\_FILE\BLOB**
+        - Name: **PI\_FILE\_BLOB**
 
         - Type: **File Upload**
 
@@ -259,6 +249,7 @@ In this lab, you:
 
     ![create-button](images/btn-details.png " ")
 
+
 13. In Processing tab, right-click Processing and Select **Create Process**.
 
     ![create process](images/create-process6.png " ")
@@ -273,11 +264,13 @@ In this lab, you:
 
     ![create process](images/process-invoice.png " ")
 
-15. Right-click **Process Invoice** and select **Add Child Process**.
+## Task 4: Create Processes to upload Invoice to Object Storage and Automate DML
+
+1. Right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process](images/add-child-process.png " ")
 
-16. In the Property Editor, enter the following details:
+2. In the Property Editor, enter the following details:
 
     - Under Identification:
 
@@ -293,7 +286,7 @@ In this lab, you:
 
    ![Add Child Process details](images/upload-to-storage.png " ")
 
-17. Under **Upload to Object Storage** process, expand Parameters and enter the following details:
+3. Under **Upload to Object Storage** process, expand Parameters and enter the following details:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
@@ -305,11 +298,11 @@ In this lab, you:
 
     ![Add Child Process details](images/param-file-content.png " ")
 
-18. Right-click **Process Invoice** and select **Add Child Process**.
+4. Right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-19. In the Property Editor, enter the following details:
+5. In the Property Editor, enter the following details:
 
     - Under Identification:
 
@@ -321,11 +314,13 @@ In this lab, you:
 
     ![Add Child Process details](images/automatic-dml.png " ")
 
-20. Right-click **Process Invoice** and select **Add Child Process**.
+## Task 5: Integrate Document Understanding API and Parse the Response
+
+1. Right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-21. In the Property Editor, enter the following details:
+2. In the Property Editor, enter the following details:
 
      - Under Identification:
 
@@ -343,7 +338,7 @@ In this lab, you:
 
     ![Add Child Process details](images/integrate-doc.png " ")
 
-22. Under **Integrate Document Understanding API** process, expand Parameters and select **OBJECT\_NAME**, enter the following:
+3. Under **Integrate Document Understanding API** process, expand Parameters and select **OBJECT\_NAME**, enter the following:
 
      - Under Value:
 
@@ -353,7 +348,7 @@ In this lab, you:
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
-23. Select **RESPONSE**, enter the following:
+4. Select **RESPONSE**, enter the following:
 
     - Parameter > Ignore Ouput: **Toggle off**
 
@@ -362,11 +357,11 @@ In this lab, you:
 
   ![Add Child Process details](images/doc-response.png " ")
 
-24. Right-click **Process Invoice** and select **Add Child Process**.
+5. Right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process2.png " ")
 
-25. In the Property Editor, enter the following details:
+6. In the Property Editor, enter the following details:
 
     - Identification > Name: **Parse the Response**
 
@@ -401,4 +396,13 @@ In this lab, you:
 
     ![Add Child Process details](images/parse-response.png " ")
 
-26. Click **Save**.
+7. Click **Save**.
+
+## Summary
+You've gained the skills to create database objects using SQL Scripts, create multiple application users, and set up web credentials.
+
+You're now ready to move on to the next lab!
+
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

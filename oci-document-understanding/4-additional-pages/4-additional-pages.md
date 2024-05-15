@@ -41,23 +41,30 @@ In this lab, you:
 
      ```
      <copy>
-    declare
-     l_blob blob;
-     l_url varchar2(255);
-     l_mime_type varchar2(50);
-    begin
+     declare l_blob blob;
+ l_url varchar2(255);
+ l_mime_type varchar2(50);
+ begin
+ select
+   MIME_TYPE,
+   object_storage_url into l_mime_type,
+   l_url
+ from
+   INV_UPLOAD
+ where
+   ID = : P3_ID;
+ l_blob := apex_web_service.make_rest_request_b (
+   p_url => l_url, p_http_method => 'GET',
+   p_credential_static_id => 'APEX_OCI_AI_CRED'
+ );
+ owa_util.mime_header(l_mime_type, false);
+ htp.p(
+   'Content-Length: ' || dbms_lob.getlength(l_blob)
+ );
+ owa_util.http_header_close;
+ wpg_docload.download_file(l_blob);
+ END;
 
-    select MIME_TYPE, object_storage_url into l_mime_type, l_url from INV_UPLOAD where ID = :P4_ID;
-    l_blob := apex_web_service.make_rest_request_b
-    (p_url                  => l_url,
-    p_http_method          => 'GET',
-    p_credential_static_id => 'APEX_OCI_AI_CRED');
-    owa_util.mime_header(l_mime_type,false);
-    htp.p('Content-Length: ' || dbms_lob.getlength(l_blob));
-    owa_util.http_header_close;  
-    wpg_docload.download_file(l_blob);
-
-    END;
      <copy>
      ```
     Click **Next**.
@@ -84,6 +91,8 @@ In this lab, you:
 
 4. Enter the following details:
 
+    - Page Definition > Page Number: **2**
+
     - Page Definition > Name: **Invoice Tracker**
 
     - Data Source > Source Type: **SQL Query**
@@ -92,23 +101,26 @@ In this lab, you:
 
     ```
     <copy>
-    select a.ID,
-       a.FILE_NAME,
-       a.MIME_TYPE,
-       a.OBJECT_STORAGE_URL,
-       a.CREATED,
-       a.CREATED_BY,
-       a.UPDATED,
-       a.UPDATED_BY,
-       a.STATUS,
-       case when a.STATUS = 'Pending Approval' then
-        'u-color-24'
-            when a.STATUS = 'Approved' then
-        'u-color-20'
-        end card_color,
-       a.DOC_AI_JSON,
-       b.FIELD_VALUE
-      from INV_UPLOAD a, DOCAI_RESPONSE b where a.ID = b.DOCUMENT_ID and b.FIELD_LABEL = 'InvoiceTotal'
+    select
+  a.ID,
+  a.FILE_NAME,
+  a.MIME_TYPE,
+  a.OBJECT_STORAGE_URL,
+  a.CREATED,
+  a.CREATED_BY,
+  a.UPDATED,
+  a.UPDATED_BY,
+  a.STATUS,
+  case when a.STATUS = 'Pending Approval' then 'u-color-24' when a.STATUS = 'Approved' then 'u-color-20' end card_color,
+  a.DOC_AI_JSON,
+  b.FIELD_VALUE
+from
+  INV_UPLOAD a,
+  DOCAI_RESPONSE b
+where
+  a.ID = b.DOCUMENT_ID
+  and b.FIELD_LABEL = 'InvoiceTotal'
+
      <copy>
      ```
 
@@ -169,6 +181,8 @@ In this lab, you:
 
 3. On Create Page dialog, enter the following:
 
+    - Page Definition > Page Number: **3**
+
     - Page Definition > Name: **Invoice Analysis**
 
     - Navigation > Use Breadcrumb: **Toggle Off**
@@ -205,11 +219,11 @@ In this lab, you:
 
     ```
     <copy>
-     :P4_URL:= APEX_PAGE.GET_URL(P_Page => 4,
-                               p_request => 'APPLICATION_PROCESS=DISPLAY_PDF',
-                               P_PLAIN_URL => True
-                            );
-     <copy>
+    :P3_URL := APEX_PAGE.GET_URL(
+    P_Page => 3, p_request => 'APPLICATION_PROCESS=DISPLAY_PDF',
+    P_PLAIN_URL => True
+    );
+    <copy>
       ```
 
     ![Application Processes](images/prepare-url.png " ")
@@ -227,7 +241,7 @@ In this lab, you:
     ```
    <copy>
    <p align="center">
-   <iframe src="&P4_URL."  width="100%" height="500">
+   <iframe src="&P3_URL."  width="100%" height="500">
    </iframe>
    </p>
    <copy>
@@ -263,7 +277,7 @@ In this lab, you:
        end as
        FIELD_VALUE,
        LABEL_SCORE
-       from DOCAI_RESPONSE where DOCUMENT_ID = :P4_ID and FIELD_VALUE <> '#';
+       from DOCAI_RESPONSE where DOCUMENT_ID = :P3_ID and FIELD_VALUE <> '#';
        <copy>
         ```
 

@@ -61,7 +61,7 @@ To create a Bucket using OCI Console, Login into your OCI Account.
 
 4. Enter the following:
 
-    - Name: **OCIDocAI**
+    - Bucket Name: **OCIDocAI**
 
     - Default Storage Tier: **Standard**
 
@@ -69,4 +69,15 @@ To create a Bucket using OCI Console, Login into your OCI Account.
 
     ![Select Bucket](images/bucket-details.png " ")
 
+5. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information for uploading Invoice to OCI Object Storage using Invoke API.
+
     ![Select Bucket](images/bucket-created.png " ")
+
+## Summary
+You now know how to generate API Keys and create Bucket using OCI console.
+
+You may now proceed to the next lab.
+
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
