@@ -86,6 +86,7 @@ In this lab, you:
       | FILE\_NAME | File Name | String |
       | ID | id | String |
       | OBJECT\_STORAGE\_URL | Object Storage URL | String |
+      {: title="Task Definition Parameters"}
 
      - Click **Apply Changes**.
 
@@ -181,6 +182,7 @@ In this lab, you:
     | File Name| Item | P1\_FILE\_NAME |
     | id | Item | P1\_ID |
     | Object Storage URL | Item | P1\_OBJECT\_STORAGE\_URL |
+    {: title="Human Task-Create Parameters"}
 
     ![Create Process](./images/file-name.png " ")
 
@@ -209,11 +211,11 @@ In this lab, you:
 
     - Under Page Definition:
 
-       - Page Number: **5**
+        - Page Number: **5**
 
-       - Name: Enter **Initiated By Me**
+        - Name: Enter **Initiated By Me**
 
-       - Report Context: **Initiated By Me**
+        - Report Context: **Initiated By Me**
 
     - Navigation > Use Breadcrumb: **Toggle Off**
 

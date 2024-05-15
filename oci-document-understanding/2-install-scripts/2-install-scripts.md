@@ -208,11 +208,11 @@ In this lab, you:
 
    ![Script Name](./images/script-name.png " ")
 
-3. On the Run Script page, click **Run Now**.
+4. On the Run Script page, click **Run Now**.
 
     ![Run Now](images/run-now.png " ")
 
-4. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
+5. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 
     ![SQL Script Results](images/successful.png " ")
 
@@ -230,23 +230,24 @@ To create multiple user accounts simultaneously:
    ![Create Multiple Users](images/create-multiple-users.png " ")
 
 3. Enter the following details:
-   - List of Email Addresses: **MATT@gmail.com, JANE@gmail.com, CLARA@gmail.com, JOHN@gmail.com**
 
-   - Usernames: **Exclude @ domain as part of the username**
+    - List of Email Addresses: **MATT@gmail.com, JANE@gmail.com, CLARA@gmail.com, JOHN@gmail.com**
 
-   Under Password:
+    - Usernames: **Exclude @ domain as part of the username**
 
-     - Password: Specify a password
+    Under Password:
 
-     - Confirm Password: Enter the password again.
+      - Password: Specify a password
 
-   Click **Next**.
+      - Confirm Password: Enter the password again.
 
-   ![Create Multiple Users](images/create-users-next.png " ")
+    Click **Next**.
+
+    ![Create Multiple Users](images/create-users-next.png " ")
 
 4. Click **Create Valid Users**.
 
-   ![Create Valid User](images/create-valid-users.png " ")
+    ![Create Valid User](images/create-valid-users.png " ")
 
 ## Task 3: Create Web Credentials in Oracle APEX
 
@@ -274,20 +275,20 @@ To create a Web Credential in Oracle APEX:
 
 6. Enter the following details using the configuration file you copied in the previous task.
 
-    - **Name**: APEX\_OCI\_AI\_CRED
+    - Name: **APEX\_OCI\_AI\_CRED**
 
-    - **Authentication Type**: OCI Native Authentication
+    - Authentication Type: **OCI Native Authentication**
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    - OCI User ID: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
+    - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
       ![Private key file](images/private-key.png " ")
 
-    - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
+    - OCI Tenancy ID: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
-    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+    - OCI Public Key Fingerprint: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
    ![Web Credentials page](images/web-creds-details.png " ")
 

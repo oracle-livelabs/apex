@@ -130,27 +130,28 @@ In this lab, you:
 
     - Under Card:
 
-       - CSS Classes: **&CARD\_COLOR.!ATTR.**
+        - CSS Classes: **&CARD\_COLOR.!ATTR.**
 
-       - Primary Key Column 1: **ID**
+        - Primary Key Column 1: **ID**
 
     - Subtitle > Column: **STATUS**
 
     - Under Secondary Body:
 
-       - Advanced Formatting: **Toggle On**
+        - Advanced Formatting: **Toggle On**
 
-       - HTML Expression: **Invoice Total Amount: &FIELD\_VALUE.**
+        - HTML Expression: **Invoice Total Amount: &FIELD\_VALUE.**
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
 7. In the property editor, Under Source, Select **Order By Item** and enter the following:
 
       | Clause | Key | Display |
-      |-----------|--------------|--------------|
+      |--------|-----|---------|
       | "CREATED" desc| CREATED | Created |
+      {: title="Order By Item"}
 
-    Click **OK**.
+     Click **OK**.
 
     ![Application Processes](images/invoice-tracker-order.png " ")
 
@@ -183,9 +184,10 @@ In this lab, you:
 5. Create the following two page items one after the other.
 
      |   | Name | Type |
-     |---|-----------|--------------|
+     |---|------|------|
      | 1 | P3\_ID| Hidden |
      | 2 | P3\_URL| Hidden |
+     {: title="Page Items"}
 
      ![Application Processes](images/page-item-id.png " ")
 
@@ -241,15 +243,15 @@ In this lab, you:
 
     - Under Identification:
 
-       - Name: **Generated Output**
+        - Name: **Generated Output**
 
-       - Type: **Interactive Report**
+        - Type: **Interactive Report**
 
     - Under Source:
 
-       - Type: **SQL Query**
+        - Type: **SQL Query**
 
-       - SQL Query: Copay and Paste the below code into the code editor:
+        - SQL Query: Copay and Paste the below code into the code editor:
 
        ```
        <copy>
@@ -271,11 +273,11 @@ In this lab, you:
 
     - Under Appearance:
 
-       - Page Mode: **Model Dialog**
+        - Page Mode: **Model Dialog**
 
-       - Page Template: **Modal Dialog**
+        - Page Template: **Modal Dialog**
 
-       - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and Click **OK**.
+        - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and Click **OK**.
 
     ![Application Processes](images/modal-dialog.png " ")
 
@@ -319,7 +321,7 @@ In this lab, you:
 
     - Link > Target: **No Link Defined**
 
-       - Target > Page: **2**
+        - Target > Page: **2**
 
          Click **OK**.
 

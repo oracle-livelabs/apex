@@ -51,7 +51,7 @@ In this lab, you:
 
 8. For Name: Enter **Automatic Invoice Handling**
    Under Features:
-    - Check **Install Progressive web App and Feedback**
+    - Check **Install Progressive web App** and **Feedback**
 
       Click **Create Application**.
 
@@ -74,11 +74,11 @@ In this lab, you:
    ![Click Timeline](images/rest-next.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
-    - **Rest Data Source Type**: Oracle Cloud Infrastructure (OCI)
+    - Rest Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
-    - **Name**: Document Understanding API
+    - Name: **Document Understanding API**
 
-    - **URL Endpoint**: https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument
+    - URL Endpoint: https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument
 
     **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
 
@@ -90,9 +90,9 @@ In this lab, you:
 
 7. Under Authentication,
 
-    - **Authentication Required**: Toggle the button to **ON**
+    - Authentication Required: Toggle **ON**
 
-    - **Credentials**: apex\_oci\_ai\_cred
+    - Credentials: **apex\_oci\_ai\_cred**
 
 
 8. Click **Create REST Source Manually**.
@@ -106,7 +106,7 @@ In this lab, you:
 
 10. Under Operations tab, click **Edit icon** for the POST operation and enter the following:
 
-    - **Request Body Template**: Copy and paste the JSON given below.
+    - Request Body Template: Copy and paste the JSON given below.
 
     ```
     <copy>
@@ -187,11 +187,11 @@ In this lab, you:
 
    - Source > Table Name: **INV_UPLOAD**
 
-   ![Create Region](images/form.png " ")
+     ![Create Region](images/form.png " ")
 
-6. Select :P1\_FILE\_NAME, Press (Command+Down Arrow) till :P1\_DOC\_AI\_JSON and in the property editor, update type to **Hidden**.
+6. Select **:P1\_FILE\_NAME**, Press (Command+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
 
-   ![hidden items](images/all-hidden.png " ")
+     ![hidden items](images/all-hidden.png " ")
 
 7. Right-click **Upload Your Invoice** region in the left pane and select **Create Page item**.
 
@@ -245,17 +245,17 @@ In this lab, you:
 
 12. In the property editor, enter the following details:
 
-    - Under Identification:
+     - Under Identification:
 
-       - Button Name: **Process_Document**
+        - Button Name: **Process_Document**
 
-       - Label: **Process Document**
+        - Label: **Process Document**
 
-    - Layout > Slot: **Create**
+     - Layout > Slot: **Create**
 
-    - Behavior > Database Action: **SQL INSERT action**
+     - Behavior > Database Action: **SQL INSERT action**
 
-    Click **Save**.
+     Click **Save**.
 
     ![create-button](images/btn-details.png " ")
 
@@ -280,12 +280,16 @@ In this lab, you:
 16. In the Property Editor, enter the following details:
 
     - Under Identification:
+
         - Name: **Upload to Object Storage**
+
         - Type: **Invoke API**
 
     - Under Storage:
+
         - Type: **PL/SQL Procedure or Funcation**
-        - Procedure or Function: **UPLOAD_FILE**
+
+        - Procedure or Function: **UPLOAD\_FILE**
 
    ![Add Child Process details](images/upload-to-storage.png " ")
 
@@ -293,10 +297,10 @@ In this lab, you:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
-    | 1 | p_file_content| item | PI_FILE_BLOB |
-    | 2 | p_static_id| item | P1_CRED_STATIC_ID |
-    | 3 | p_namespace| item | P1_NAMESPACE_NAME |
-    | 4 | p_bucket| item | P1_BUCKET_NAME |
+    | 1 | p\_file\_content| item | PI\_FILE\_BLOB |
+    | 2 | p\_static\_id| item | P1\_CRED\_STATIC\_ID |
+    | 3 | p\_namespace| item | P1\_NAMESPACE_NAME |
+    | 4 | p\_bucket| item | P1\_BUCKET\_NAME |
     {: title="Upload to Object Storage Parameters"}
 
     ![Add Child Process details](images/param-file-content.png " ")
@@ -323,29 +327,29 @@ In this lab, you:
 
 21. In the Property Editor, enter the following details:
 
-    - Under Identification:
+     - Under Identification:
 
-       - Name: **Integrate Document Understanding API**
+        - Name: **Integrate Document Understanding API**
 
-       - Type: **Invoke API**
+        - Type: **Invoke API**
 
-    - Under Settings:
+     - Under Settings:
 
-       - Type: **REST Source**
+        - Type: **REST Source**
 
-       - REST Source: **Document Understanding API**
+        - REST Source: **Document Understanding API**
 
-       - Operation: **POST**
+        - Operation: **POST**
 
     ![Add Child Process details](images/integrate-doc.png " ")
 
 22. Under **Integrate Document Understanding API** process, expand Parameters and select **OBJECT\_NAME**, enter the following:
 
-    - Under Value:
+     - Under Value:
 
-       - Type: **Item**
+        - Type: **Item**
 
-       - Item: **P1\_FILA\_NAME**
+        - Item: **P1\_FILA\_NAME**
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
