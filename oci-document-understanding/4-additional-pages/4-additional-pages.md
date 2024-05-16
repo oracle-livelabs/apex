@@ -243,9 +243,9 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     - Source > HTML Code: Copy and paste the below code into the code editor:
 
     ```
-   <copy>
-   <p align="center">
-   <iframe src="&P3_URL."  width="100%" HEIGHT = "500" > </IFRAME > </p>
+    <copy>
+    <p align="center">
+    <iframe src="&P3_URL."  width="100%" HEIGHT = "500" > </iframe> </p>
    <copy>
     ```
 
