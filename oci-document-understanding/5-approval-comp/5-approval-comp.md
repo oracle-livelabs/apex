@@ -261,7 +261,7 @@ In this lab, you:
        param_value,
        'Check the Comparision' Link_to
     from apex_task_parameters
-    where task_id = :P8_TASK_ID
+    where task_id = :P4_TASK_ID
     and is_visible = 'Y'
     and upper(param_label)= 'ID';
     </copy>
