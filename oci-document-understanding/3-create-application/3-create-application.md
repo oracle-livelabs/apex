@@ -169,13 +169,13 @@ In this lab, you:
 
 5. In the property editor, Enter the following details:
 
-   - Under Identification:
+    - Under Identification:
 
-      - Name: **Upload Your Invoice**
+       - Name: **Upload Your Invoice**
 
-      - Type: **Form**
+       - Type: **Form**
 
-   - Source > Table Name: **INV\_UPLOAD**
+    - Source > Table Name: **INV\_UPLOAD**
 
      ![Create Region](images/form.png " ")
 
@@ -229,11 +229,17 @@ In this lab, you:
 
     ![hidden items](images/file-blob.png " ")
 
-11. In the left pane, right-click **Upload Your Invoice** region and select **Create Button**.
+11. Select **P1_STATUS** and update the following:
+
+    - Source > Query Only: **Toggle On**
+
+    ![Create Process](./images/query-only.png " ")
+
+12. In the left pane, right-click **Upload Your Invoice** region and select **Create Button**.
 
   ![create-button](images/create-btn.png " ")
 
-12. In the property editor, enter the following details:
+13. In the property editor, enter the following details:
 
      - Under Identification:
 
@@ -250,17 +256,17 @@ In this lab, you:
     ![create-button](images/btn-details.png " ")
 
 
-13. In Processing tab, right-click Processing and Select **Create Process**.
+14. In Processing tab, right-click Processing and Select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
-14. In the property editor, enter the following details:
+15. In the property editor, enter the following details:
 
-    - Under Identification:
+     - Under Identification:
 
-        - Name: **Process Invoice**
+         - Name: **Process Invoice**
 
-        - Type: **Execution Chain**
+         - Type: **Execution Chain**
 
     ![create process](images/process-invoice.png " ")
 
