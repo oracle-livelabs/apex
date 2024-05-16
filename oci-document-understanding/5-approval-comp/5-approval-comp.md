@@ -9,7 +9,7 @@ Estimated Time: 15 Minutes
 In this lab, you:
 
 - Create a Task Definition
-- Develop a Process to Fetch Employee details and and manage human-task approval
+- Develop a Process to Fetch Employee details and manage human-task approval
 - Create Unified Task Lists
 
 ## Task 1: Create a Task Definition
@@ -18,7 +18,7 @@ In this lab, you:
 
    ![Task Definition in Shared Components](images/sc-8.png " ")
 
-2. Under Workflows and Automations, Select **Task Definitions**.
+2. Under Workflows and Automation, Select **Task Definitions**.
 
    ![Select Task Definition](images/task-def.png " ")
 
@@ -160,7 +160,7 @@ END;
 
 16. Click **Apply Changes**.
 
-## Task 2: Create Process to Fetch Employee details
+## Task 2: Create a Process to Fetch Employee details
 
 1. Navigate to **Application ID**.
 
@@ -176,7 +176,7 @@ END;
 
 4. In the Property Editor, enter the following details:
 
-    - Indentification > Name: **Fetch Employee Details**
+    - Identification > Name: **Fetch Employee Details**
 
     - Source > PL/SQL Code: Copy and paste the below code into the code editor:
 
@@ -216,7 +216,7 @@ WHERE
 
       ![Create Process](./images/submit-invoice.png " ")
 
-7. Under **Submit Invoice** process, update the following parameters:
+7. Under the **Submit Invoice** process, update the following parameters:
 
     | Parameter |  Value > Item | Value > Item
     | --- |  --- | --- |
@@ -286,7 +286,7 @@ WHERE
 
     ![Select Unified Task List](./images/navigate-to-task-details.png " ")
 
-8. Under Page Rendering tab, Select **Details** region and update the following:
+8. Under the Page Rendering tab, Select **Details** region and update the following:
 
     - Source > SQL Query: Copy and replace the below code into the code editor:
 
@@ -322,7 +322,7 @@ WHERE
     ![Select Unified Task List](./images/link-to.png " ")
 
 ## Summary
-You now know how to create a Task Definition for Invoice Approval Requests. Additionally, you learned how to set up processes to fetch employee details and manage human-task approval. Furthermore, you created two unified task list pages: one for initiated tasks and another for tasks assigned to you.
+You now know how to create a Task Definition for Invoice Approval Requests. Additionally, you learned how to set up processes to fetch employee details and manage human-task approval. Furthermore, you created two unified task list pages: one for initiated tasks and another for assigned tasks.
 
 ## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager

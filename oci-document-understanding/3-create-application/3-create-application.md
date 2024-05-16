@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you create a APEX application named **Automatic Invoice Handling** using Create APP Wizard. Furthermore, you will set up a REST Data Source to interact with OCI Doc Understanding. Additionally, you will enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create APP Wizard. You also set up a REST Data Source to interact with OCI Doc Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
 
-OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents
+OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
 
 Estimated Time: 10 Minutes
 
@@ -36,7 +36,7 @@ In this lab, you:
 
    ![Set Icon](images/set-icon.png " ")
 
-5. In Choose Application Icon dialog, Select any Color and icon of your choice, and then click **Save Icon**.
+5. In the Choose Application Icon dialog, Select any Color and icon, then click **Save Icon**.
 
    ![Save Icon](images/save-icon.png " ")
 
@@ -109,7 +109,7 @@ In this lab, you:
 
    ![Click Timeline](images/doc-under.png " ")
 
-10. Under Operations tab, click **Edit icon** for the POST operation and enter the following:
+10. Under the Operations tab, click **Edit icon** for the POST operation and enter the following:
 
     - Request Body Template: Copy and paste the JSON given below.
 
@@ -180,7 +180,7 @@ In this lab, you:
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
-4. Right-Click Body and Select **Create Region**.
+4. Right-click Body and Select **Create Region**.
 
    ![Create Region](images/create-region.png " ")
 
@@ -204,14 +204,14 @@ In this lab, you:
 
    ![hidden items](images/create-page-item.png " ")
 
-8. Now, add the following eight page items one after the other:
+8. Now, add the following eight-page items one after the other:
 
    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
    |---|-------|------|----------| --------------| ------ |
    | 1 | P1\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment ID
    | 2 | P1\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
    | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
-   | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter Bucket Name which you copied while creating a Bucket |
+   | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket |
    | 5 | P1\_FEATURE\_TYPE| Hidden | Static | KEY\_VALUE\_EXTRACTION |
    | 6 | P1\_REGION| Hidden | Static | us-ashburn-1 |
    | 7 | P1\_RESPONSE| Hidden |  |  | CLOB
@@ -273,7 +273,7 @@ In this lab, you:
     ![create-button](images/btn-details.png " ")
 
 
-14. In Processing tab, right-click Processing and Select **Create Process**.
+14. In the Processing tab, right-click Processing and Select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
@@ -289,7 +289,7 @@ In this lab, you:
 
 16. Click **Save**.
 
-## Task 4: Create Processes to upload Invoice to Object Storage and Automate DML
+## Task 4: Create Processes to upload Invoices to Object Storage and Automate DML
 
 1. Right-click **Process Invoice** and select **Add Child Process**.
 
@@ -377,7 +377,7 @@ In this lab, you:
 
 4. Select **RESPONSE**, enter the following:
 
-    - Parameter > Ignore Ouput: **Toggle off**
+    - Parameter > Ignore Output: **Toggle off**
 
     - Value > Item: **PI\_RESPONSE**
 
@@ -426,7 +426,7 @@ In this lab, you:
 7. Click **Save**.
 
 ## Summary
-You have now learned how to create an application by invoking OCI Document Understanding using a REST data source. You enhanced the home page to enable invoice uploads and document processing. Additionally, you created processes to upload invoices to Object Storage and automate DML operations, and you integrated the Document Understanding API to parse responses. 
+You have now learned how to create an application by invoking OCI Document Understanding using a REST data source. You enhanced the home page to enable invoice uploads and document processing. Additionally, you created processes to upload invoices to Object Storage and automate DML operations, and you integrated the Document Understanding API to parse responses.
 
 You're now ready to move on to the next lab!
 

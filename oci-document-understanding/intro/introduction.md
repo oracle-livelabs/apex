@@ -22,6 +22,8 @@ In this workshop, you:
 - Configure the Automatic Row Processing to Insert a New Record into the Table
 - Invoke the REST Data Source through a page process
 - Parse the response and store the information in the database
+- Develop an Invoice Tracking and Invoice Analysis page
+- Implement Invoice Approval Requests Using Approvals Component
 
 <!---
 - Enhance Social Media App with AI-Powered Search.

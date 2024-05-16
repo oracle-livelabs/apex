@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In this lab, you will run set of SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
+In this lab, you will run SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
 
 Furthermore, you'll discover how to create multiple accounts in a single operation.
 
-Moreover, you'll configure Web credentials to authenticate connections to external REST services or REST Enabled SQL services from APEX.
+Moreover, you'll configure Web credentials to authenticate connections to external REST services or REST-enabled SQL services from APEX.
 
 Estimated Time: 10 Minutes
 
@@ -222,11 +222,11 @@ END UPLOAD_FILE;
     ![SQL Script Results](images/successful.png " ")
 
 ## Task 2: Create Multiple Application Users
-Workspace administrators can create new user accounts one at a time, or create multiple accounts in a single operation.
+Workspace administrators can create new user accounts one at a time or create multiple accounts in a single operation.
 
-To create multiple user accounts simultaneously:
+To create multiple users accounts simultaneously:
 
-1. At the top of the Workspace home page, Under Administration and Click **Manage Users and Groups**.
+1. At the top of the Workspace home page, under Administration, click **Manage Users and Groups**.
 
    ![Administration](images/manage-users.png " ")
 
@@ -256,9 +256,9 @@ To create multiple user accounts simultaneously:
 
 ## Task 3: Create Web Credentials in Oracle APEX
 
-Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
+Web credentials authenticate the connection to external REST services or REST-enabled SQL services from APEX.
 
-Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible to all applications.
+Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. They are stored at the workspace level and, therefore, visible to all applications.
 
 To create a Web Credential in Oracle APEX:
 
@@ -286,7 +286,7 @@ To create a Web Credential in Oracle APEX:
 
     - Authentication Type: **OCI Native Authentication**
 
-    - OCI User ID: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    - OCI User ID: Enter the OCID of the Oracle Cloud user Account. The OCID is in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
     - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.

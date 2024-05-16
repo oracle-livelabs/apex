@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab guides you through creating an application process to download a file from a URL stored in the database. Additionally, you'll develop two new pages for invoice tracking and invoice analysis.
+This lab guides you through creating an application process to download a file from a URL stored in the database. You'll also develop two new pages for invoice tracking and analysis.
 
 Estimated Time: 15 Minutes
 
@@ -162,7 +162,7 @@ WHERE
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
-7. In the property editor, select **Region** tab. Under Source, Select **Order By Item** and enter the following:
+7. In the property editor, select the **Region** tab. Under Source, Select **Order By Item** and enter the following:
 
       | Clause | Key | Display |
       |--------|-----|---------|
@@ -176,7 +176,7 @@ WHERE
 8. Click **Save**.
 
 ## Task 3: Create an Invoice Analysis page
-In this task, you create an Invoice Analysis page featuring the Cards Region, which displays extracted fields from the uploaded image or PDF file in an organized manner. Clicking on a card brings up a Pop-up Dialog page where you will find a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
+In this task, you create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
 1. Navigate to Create(+) in Page Designer toolbar and select **Page**.
 
@@ -186,7 +186,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region, wh
 
    ![Application Processes](images/blank-page1.png " ")
 
-3. On Create Page dialog, enter the following:
+3. On the Create Page dialog, enter the following:
 
     - Page Definition > Page Number: **3**
 
@@ -198,11 +198,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region, wh
 
    ![Application Processes](images/create-blank-page1.png " ")
 
-4. In the left pane, Right-click Body, select **Create Page Item**.
+4. In the left Pane, Right-click Body, and select **Create Page Item**.
 
     ![Application Processes](images/create-page-item3.png " ")
 
-5. Create the following two page items one after the other.
+5. Create the following two-page items, one after the other.
 
      |   | Name | Type |
      |---|------|------|
@@ -220,9 +220,9 @@ In this task, you create an Invoice Analysis page featuring the Cards Region, wh
 
 7. In the Property Editor, enter the following details:
 
-    - Indentification > Name: **Prepare URL**
+    - Identification > Name: **Prepare URL**
 
-    - Source > PL/SQL Code: Copy and paste the below code into code editor:
+    - Source > PL/SQL Code: Copy and paste the below code into the code editor:
 
     ```
     <copy>
@@ -232,7 +232,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region, wh
 
     ![Application Processes](images/prepare-url.png " ")
 
-8. In the left pane, Right-click Body and Select **Create Region**.
+8. In the left Pane, Right-click Body and Select **Create Region**.
 
     ![Application Processes](images/create-region4.png " ")
 
@@ -240,7 +240,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region, wh
 
     - Indentification > Name: **Uploaded File**
 
-    - Source > HTML Code: Copy and paste the below code into code editor:
+    - Source > HTML Code: Copy and paste the below code into the code editor:
 
     ```
    <copy>
@@ -307,7 +307,7 @@ WHERE
 
 13. Click **Save**.
 
-14. In Page Designer toolbar, select Page Selector and Navigate to **Page 2: Invoice Tracker**.
+14. In the Page Designer toolbar, select Page Selector and Navigate to **Page 2: Invoice Tracker**.
 
    ![Application Processes](images/navigate-to-2.png " ")
 
@@ -331,7 +331,7 @@ WHERE
 
 17. Click **Save**.
 
-18. In Page Designer toolbar, select Page Selector and Navigate to **Page 1: Home**.
+18. In the Page Designer toolbar, select Page Selector and Navigate to **Page 1: Home**.
 
    ![Application Processes](images/navigate-to-home.png " ")
 
@@ -356,7 +356,7 @@ WHERE
     ![Application Processes](images/save-changes.png " ")
 
 ## Summary
-You now know how to create an application process and have learned to develop an Invoice Tracking and Invoice Analysis page. This page features a Cards Region that displays extracted fields from the uploaded image or PDF in an organized manner. Clicking on a card opens a Pop-up Dialog page, providing a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
+You now know how to create an application process and have learned to develop an Invoice Tracking and Invoice Analysis page. This page features a Cards Region that displays extracted fields from the uploaded image or PDF in an organized manner. Clicking on a card opens a Pop-up Dialog page, clearly comparing your uploaded PDF and the output from OCI Document Understanding.
 
 You're now ready to move on to the next lab!
 
