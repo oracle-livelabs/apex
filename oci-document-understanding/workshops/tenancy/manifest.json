@@ -2,7 +2,7 @@
   "workshoptitle": "Automate Invoice handling using Oracle APEX and OCI Document Understanding": [
       {
         "title": "Introduction",
-        "filename": "../../intro/introduction.md"
+        "filename": "../../introduction/introduction.md"
       },
       {
         "title": "Get Started",
