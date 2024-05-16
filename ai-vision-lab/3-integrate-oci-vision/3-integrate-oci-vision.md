@@ -96,9 +96,11 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operation Parameters, click **Synchronize with body**.
+11. Under Operation Parameters, click **Synchronize with body** and click **OK**.
 
     ![Click Timeline](images/add-parameter.png " ")
+
+    ![Click Timeline](images/synchronize-click-ok.png " ")
 
 12. Under Operation Parameters, Click **Add Parameter**.
 

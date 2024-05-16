@@ -30,7 +30,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
   ![About APEX page](images/version.png)
 
 ### Where to Run the Lab
-You can run this lab in any Oracle Database with APEX 24.1 installed. This includes the new APEX Application Development Service, the Oracle Autonomous Database, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 24.1 is installed), on a third party cloud provider where APEX 24.2 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 24.1.
+You can run this lab in any Oracle Database with APEX 24.1 installed. This includes the new APEX Application Development Service, the Oracle Autonomous Database, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 24.1 is installed), on a third party cloud provider where APEX 24.1 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 24.1.
 
 Below are steps on how to sign up for either an *APEX Application Development* Service, an *Oracle Autonomous Database* cloud service or *apex.oracle.com* service.
 - The APEX Application Development Service is great if you would like to go with a flexible paid option that allows to concentrate your efforts on APEX development without worrying about the database management. It provides 1 OCPU and 1 TB and can be extended as needed.

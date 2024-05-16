@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you improve the user experience of the Social Media App by including an APEX 23.2 new item called Image Upload that allows the user to crop images before uploading. You also implement a 'Share' button where a user can share the uploaded images to other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Social Media App where a user receives a notification on their device whenever a user likes the image. You also learn to add Shortcuts and Screenshots to the pwa app.
+In this lab, you improve the user experience of the Social Media App by including an APEX 23.2 new item called Image Upload that allows the user to crop images before uploading. You also implement a 'Share' button where a user can share the uploaded images to other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Social Media App where a user receives a notification on their device whenever a user likes the image. You also learn to add Shortcuts and Screenshots to the PWA app.
 
 Estimated Time: 30 minutes
 
@@ -13,8 +13,8 @@ In this lab, you:
 - Implement the crop image feature while adding a new post
 - Add a 'Share' button to share the post using other apps
 - Enable Push Notifications
-- Add Shortcuts to the pwa app
-- Include screenshots to be displayed while installing the pwa app
+- Add Shortcuts to the PWA app
+- Include screenshots to be displayed while installing the PWA app
 
 ## Task 1: Add the Image Upload item
 
