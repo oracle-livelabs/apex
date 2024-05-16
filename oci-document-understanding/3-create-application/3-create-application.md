@@ -171,9 +171,9 @@ In this lab, you:
 
     - Under Identification:
 
-       - Name: **Upload Your Invoice**
+        - Name: **Upload Your Invoice**
 
-       - Type: **Form**
+        - Type: **Form**
 
     - Source > Table Name: **INV\_UPLOAD**
 
@@ -193,8 +193,8 @@ In this lab, you:
    |---|-------|------|----------| --------------| ------ |
    | 1 | P1\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment ID
    | 2 | P1\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
-   | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | idmypotriwr1 |
-   | 4 | P1\_BUCKET\_NAME| Hidden | Static | OCIDocAI |
+   | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
+   | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter Bucket Name which you copied while creating a Bucket |
    | 5 | P1\_FEATURE\_TYPE| Hidden | Static | KEY\_VALUE\_EXTRACTION |
    | 6 | P1\_REGION| Hidden | Static | us-ashburn-1 |
    | 7 | P1\_RESPONSE| Hidden |  |  | CLOB
@@ -350,7 +350,7 @@ In this lab, you:
 
         - Type: **Item**
 
-        - Item: **P1\_FILA\_NAME**
+        - Item: **P1\_FILE\_NAME**
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
