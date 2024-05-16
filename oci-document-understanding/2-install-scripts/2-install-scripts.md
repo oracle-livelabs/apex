@@ -193,7 +193,7 @@ BEGIN
                             || '/b/'
                             || P_BUCKET
                             || '/o/'
-                            || APEX_UTIL.URL_ENCODE(P_FILE_NAME);
+                            || P_FILE_NAME;
 
     APEX_WEB_SERVICE.G_REQUEST_HEADERS(1).NAME := 'Content-Type';
     APEX_WEB_SERVICE.G_REQUEST_HEADERS(1).VALUE := P_MIME_TYPE;

@@ -14,6 +14,7 @@ In this lab, you:
 - Create an Invoice Analysis page
 
 ## Task 1: Create an Application Process
+In this task, you create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter ':P3_ID'.
 
 1. Navigate to **Shared Components**
 
@@ -41,29 +42,30 @@ In this lab, you:
 
      ```
      <copy>
-     declare l_blob blob;
-l_url varchar2(255);
-l_mime_type varchar2(50);
-begin
-select
-  MIME_TYPE,
-  object_storage_url into l_mime_type,
-  l_url
-from
-  INV_UPLOAD
-where
-  ID = : P3_ID;
-l_blob := apex_web_service.make_rest_request_b (
-  p_url => l_url, p_http_method => 'GET',
-  p_credential_static_id => 'APEX_OCI_AI_CRED'
-);
-owa_util.mime_header(l_mime_type, false);
-htp.p(
-  'Content-Length: ' || dbms_lob.getlength(l_blob)
-);
-owa_util.http_header_close;
-wpg_docload.download_file(l_blob);
-END;
+     DECLARE
+    L_BLOB      BLOB;
+    L_URL       VARCHAR2(255);
+    L_MIME_TYPE VARCHAR2(50);
+  BEGIN
+    SELECT
+        MIME_TYPE,
+        OBJECT_STORAGE_URL
+    INTO
+        L_MIME_TYPE,
+        L_URL
+    FROM
+        INV_UPLOAD
+    WHERE
+        ID = :P3_ID;
+
+    L_BLOB := APEX_WEB_SERVICE.MAKE_REST_REQUEST_B(P_URL => L_URL, P_HTTP_METHOD => 'GET', P_CREDENTIAL_STATIC_ID => 'APEX_OCI_AI_CRED'
+    );
+
+    OWA_UTIL.MIME_HEADER(L_MIME_TYPE, FALSE);
+    HTP.P('Content-Length: ' || DBMS_LOB.GETLENGTH(L_BLOB));
+    OWA_UTIL.HTTP_HEADER_CLOSE;
+    WPG_DOCLOAD.DOWNLOAD_FILE(L_BLOB);
+  END;
      <copy>
      ```
     Click **Next**.
@@ -75,6 +77,7 @@ END;
     ![Application Processes](images/process-created.png " ")
 
 ## Task 2: Develop an Invoice Tracking page using Cards
+In this task, you create an Invoice Tracking page featuring the Cards Region, which displays the uploaded image or PDF file.
 
 1. Navigate to **Application ID**.
 
@@ -100,26 +103,30 @@ END;
 
     ```
     <copy>
-    select
-  a.ID,
-  a.FILE_NAME,
-  a.MIME_TYPE,
-  a.OBJECT_STORAGE_URL,
-  a.CREATED,
-  a.CREATED_BY,
-  a.UPDATED,
-  a.UPDATED_BY,
-  a.STATUS,
-  case when a.STATUS = 'Pending Approval' then 'u-color-24' when a.STATUS = 'Approved' then 'u-color-20' end card_color,
-  a.DOC_AI_JSON,
-  b.FIELD_VALUE
-from
-  INV_UPLOAD a,
-  DOCAI_RESPONSE b
-where
-  a.ID = b.DOCUMENT_ID
-  and b.FIELD_LABEL = 'InvoiceTotal'
-
+    SELECT
+    A.ID,
+    A.FILE_NAME,
+    A.MIME_TYPE,
+    A.OBJECT_STORAGE_URL,
+    A.CREATED,
+    A.CREATED_BY,
+    A.UPDATED,
+    A.UPDATED_BY,
+    A.STATUS,
+    CASE
+        WHEN A.STATUS = 'Pending Approval' THEN
+            'u-color-24'
+        WHEN A.STATUS = 'Approved'         THEN
+            'u-color-20'
+    END CARD_COLOR,
+    A.DOC_AI_JSON,
+    B.FIELD_VALUE
+FROM
+    INV_UPLOAD     A,
+    DOCAI_RESPONSE B
+WHERE
+        A.ID = B.DOCUMENT_ID
+    AND B.FIELD_LABEL = 'InvoiceTotal'
      <copy>
      ```
 
@@ -155,7 +162,7 @@ where
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
-7. In the property editor, Under Source, Select **Order By Item** and enter the following:
+7. In the property editor, select **Region** tab. Under Source, Select **Order By Item** and enter the following:
 
       | Clause | Key | Display |
       |--------|-----|---------|
@@ -169,6 +176,7 @@ where
 8. Click **Save**.
 
 ## Task 3: Create an Invoice Analysis page
+In this task, you create an Invoice Analysis page featuring the Cards Region, which displays extracted fields from the uploaded image or PDF file in an organized manner. Clicking on a card brings up a Pop-up Dialog page where you will find a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
 
 1. Navigate to Create(+) in Page Designer toolbar and select **Page**.
 
@@ -218,10 +226,7 @@ where
 
     ```
     <copy>
-    :P3_URL := APEX_PAGE.GET_URL(
-    P_Page => 3, p_request => 'APPLICATION_PROCESS=DISPLAY_PDF',
-    P_PLAIN_URL => True
-    );
+    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);:P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
     <copy>
       ```
 
@@ -240,15 +245,13 @@ where
     ```
    <copy>
    <p align="center">
-   <iframe src="&P3_URL."  width="100%" height="500">
-   </iframe>
-   </p>
+   <iframe src="&P3_URL."  width="100%" HEIGHT = "500" > </IFRAME > </p>
    <copy>
     ```
 
    ![Application Processes](images/uploaded-file.png " ")
 
-10. Right-Click Uploaded File region, Select **Create Region Below**.
+10. Right-Click **Uploaded File** region, select **Create Region Below**.
 
     ![Application Processes](images/create-region-below.png " ")
 
@@ -268,15 +271,23 @@ where
 
        ```
        <copy>
-       select ID,
-       DOCUMENT_ID,
-       regexp_replace(FIELD_LABEL, '([A-Z])', ' \1' ) FIELD_LABEL,
-       case when FIELD_LABEL like '%Date%' then TO_CHAR(to_timestamp(FIELD_VALUE, 'YYYY-MM-DD"T"HH24:MI:SS.FF3"Z"'), 'DD-MON-YYYY')
-       else FIELD_VALUE
-       end as
-       FIELD_VALUE,
-       LABEL_SCORE
-       from DOCAI_RESPONSE where DOCUMENT_ID = :P3_ID and FIELD_VALUE <> '#';
+       SELECT
+    ID,
+    DOCUMENT_ID,
+    REGEXP_REPLACE(FIELD_LABEL, '([A-Z])', ' \1') FIELD_LABEL,
+    CASE
+        WHEN FIELD_LABEL LIKE '%Date%' THEN
+            TO_CHAR(TO_TIMESTAMP(FIELD_VALUE, 'YYYY-MM-DD"T"HH24:MI:SS.FF3"Z"'),
+                    'DD-MON-YYYY')
+        ELSE
+            FIELD_VALUE
+    END                                           AS FIELD_VALUE,
+    LABEL_SCORE
+FROM
+    DOCAI_RESPONSE
+WHERE
+        DOCUMENT_ID = :P3_ID
+    AND FIELD_VALUE <> '#';
        <copy>
         ```
 
@@ -288,7 +299,7 @@ where
 
         - Page Mode: **Model Dialog**
 
-        - Page Template: **Modal Dialog**
+        - Dialog Template: **Modal Dialog**
 
         - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and Click **OK**.
 
@@ -300,7 +311,7 @@ where
 
    ![Application Processes](images/navigate-to-2.png " ")
 
-15. Under Invoice Tracker region, Right-click Action and select **Create Action**.
+15. Under **Invoice Tracker** region, Right-click **Actions** and select **Create Action**.
 
    ![Application Processes](images/creation-action2.png " ")
 
@@ -343,3 +354,12 @@ where
 21. Click **Save**.
 
     ![Application Processes](images/save-changes.png " ")
+
+## Summary
+You now know how to create an application process and have learned to develop an Invoice Tracking and Invoice Analysis page. This page features a Cards Region that displays extracted fields from the uploaded image or PDF in an organized manner. Clicking on a card opens a Pop-up Dialog page, providing a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
+
+You're now ready to move on to the next lab!
+
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

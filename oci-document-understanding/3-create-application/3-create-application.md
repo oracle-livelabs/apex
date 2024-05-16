@@ -14,6 +14,9 @@ In this lab, you:
 - Create an Application
 - Invoke OCI Doc Understanding using Rest Data Source
 - Enhance Home Page to Upload Invoices and Process the document
+- Create Processes to upload Invoice to Object Storage and Automate DML
+- Integrate Document Understanding API and Parse the Response
+
 
 ## Task 1: Create an Application
 
@@ -112,14 +115,26 @@ In this lab, you:
 
     ```
     <copy>
-    { "compartmentId" : "#COMPARTMENT_ID#",
-    "document" : { "namespaceName" : "#NAMESPACE_NAME#",
-    "bucketName" : "#BUCKET_NAME#",
-    "objectName" : "#OBJECT_NAME#",
-    "source" : "OBJECT_STORAGE" },
-    "features" : [ { "featureType" : "#FEATURE_TYPE#" },
-    { "featureType" : "DOCUMENT_CLASSIFICATION",
-    "maxResults" : 5 } ] }
+    {
+    "compartmentId" : "#COMPARTMENT_ID#",
+    "document" :
+        {
+            "namespaceName" : "#NAMESPACE_NAME#",
+            "bucketName" : "#BUCKET_NAME#",
+            "objectName" : "#OBJECT_NAME#",
+            "source" : "OBJECT_STORAGE"
+        },
+    "features" :
+        [
+            {
+                "featureType" : "#FEATURE_TYPE#"
+            },
+          {
+                "featureType" : "DOCUMENT_CLASSIFICATION",
+                "maxResults" : 5
+            }
+        ]
+     }
     <copy>
      ```
 
@@ -215,7 +230,7 @@ In this lab, you:
 
     - Under Identification:
 
-        - Name: **PI\_FILE\_BLOB**
+        - Name: **P1\_FILE\_BLOB**
 
         - Type: **File Upload**
 
@@ -411,7 +426,7 @@ In this lab, you:
 7. Click **Save**.
 
 ## Summary
-You've gained the skills to create database objects using SQL Scripts, create multiple application users, and set up web credentials.
+You have now learned how to create an application by invoking OCI Document Understanding using a REST data source. You enhanced the home page to enable invoice uploads and document processing. Additionally, you created processes to upload invoices to Object Storage and automate DML operations, and you integrated the Document Understanding API to parse responses. 
 
 You're now ready to move on to the next lab!
 

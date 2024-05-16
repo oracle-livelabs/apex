@@ -28,9 +28,9 @@ In this lab, you:
 
 4. Specify the task definition attributes and Click **Create**.
 
-    - For Name: Enter **Invoice Approval Request**
+    - Name: **Invoice Approval Request**
 
-    - For Subject: Enter **Employee Request of &EMP\_NAME.**
+    - Subject: **Employee Request of &EMP\_NAME.**
 
     ![Click Create on Task Definition page](images/task-def-details.png " ")
 
@@ -54,8 +54,16 @@ In this lab, you:
 
     ```
     <copy>
-    select e.empno, e.emp_name, m.emp_name as mgr_name from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
-    where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
+    SELECT
+    E.EMPNO,
+    E.EMP_NAME,
+    M.EMP_NAME AS MGR_NAME
+FROM
+    EMPLOYEE_DETAILS E,
+    EMPLOYEE_DETAILS M
+WHERE
+        M.EMPNO (+) = E.MGR
+    AND E.EMPNO = :APEX$TASK_PK
     </copy>
     ```
 
@@ -71,13 +79,30 @@ In this lab, you:
 
      ```
      <copy>
-     select upper(EMP_NAME) from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where upper(EMP_NAME)=upper(:APP_USER)))
+     SELECT
+    UPPER(EMP_NAME)
+FROM
+    EMPLOYEE_DETAILS
+WHERE
+    EMPNO = (
+        SELECT
+            MGR
+        FROM
+            EMPLOYEE_DETAILS
+        WHERE
+            EMPNO = (
+                SELECT
+                    EMPNO
+                FROM
+                    EMPLOYEE_DETAILS
+                WHERE
+                    UPPER(EMP_NAME) = UPPER(:APP_USER)
+            )
+    )
      </copy>
      ```
 
-     - Click **Apply Changes**.
-
-    ![Task Definition Participants](images/participants.png " ")
+     ![Task Definition Participants](images/participants.png " ")
 
 8. Under Parameters, Click **Add Row** and enter the three parameters one after the other:
 
@@ -104,7 +129,7 @@ In this lab, you:
 
      - Name: **On Approval**
 
-     - On Event: **Create**
+     - On Event: **Complete**
 
      - Outcome: **Approval**
 
@@ -114,18 +139,26 @@ In this lab, you:
 
     ```
     <copy>
-    declare
-       l_req_id number;
-    begin
-    --   if :APP_USER = :EMP_NAME then --this is the original initiator
-   l_req_id := :ID;
+    DECLARE
+    L_REQ_ID NUMBER;
+BEGIN
+--   if :APP_USER = :EMP_NAME then --this is the original initiator
+    L_REQ_ID := :ID;
+    UPDATE INV_UPLOAD
+    SET
+        STATUS = 'Approved'
+    WHERE
+        ID = L_REQ_ID;
 
-    Update INV_UPLOAD set Status = 'Approved' where ID = l_req_id;
-    end;
+END;
     </copy>
     ```
 
+    Click **Create**.
+
      ![Click on Expense Request](images/add-action-create.png " ")
+
+16. Click **Apply Changes**.
 
 ## Task 2: Create Process to Fetch Employee details
 
@@ -137,7 +170,7 @@ In this lab, you:
 
    ![Home - 1](./images/home1.png " ")
 
-3. In the left pane, under Pre-Rendering, Right-click Before Header and click **Create Process**.
+3. In the left pane, under **Pre-Rendering**, Right-click **Before Header** and click **Create Process**.
 
    ![Create Process](./images/create-process3.png " ")
 
@@ -149,13 +182,21 @@ In this lab, you:
 
     ```
     <copy>
-    select empno into :P1_EMP_NO from employee_details where upper(emp_name)=upper(:APP_USER);
+    SELECT
+    EMPNO
+INTO :P1_EMP_NO
+FROM
+    EMPLOYEE_DETAILS
+WHERE
+    UPPER(EMP_NAME) = UPPER(:APP_USER);
     </copy>
     ```
 
+    - Execution > Sequence: **1**
+
     ![Create Process](./images/fetch-emp-details.png " ")
 
-5. Navigate to Processing tab, Right-click processing and select **Create Process**.
+5. Navigate to Processing tab, Right-click **Processing** and select **Create Process**.
 
     ![Create Process](./images/create-process4.png " ")
 
@@ -251,13 +292,16 @@ In this lab, you:
 
     ```
     <copy>
-    select upper(param_label) param_label,
-       param_value,
-       'Check the Comparision' Link_to
-    from apex_task_parameters
-    where task_id = :P4_TASK_ID
-    and is_visible = 'Y'
-    and upper(param_label)= 'ID';
+    SELECT
+    UPPER(PARAM_LABEL)      PARAM_LABEL,
+    PARAM_VALUE,
+    'Check the Comparision' LINK_TO
+FROM
+    APEX_TASK_PARAMETERS
+WHERE
+        TASK_ID = :P4_TASK_ID
+    AND IS_VISIBLE = 'Y'
+    AND UPPER(PARAM_LABEL) = 'ID';
     </copy>
     ```
 
@@ -276,3 +320,10 @@ In this lab, you:
     Click **Save**.
 
     ![Select Unified Task List](./images/link-to.png " ")
+
+## Summary
+You now know how to create a Task Definition for Invoice Approval Requests. Additionally, you learned how to set up processes to fetch employee details and manage human-task approval. Furthermore, you created two unified task list pages: one for initiated tasks and another for tasks assigned to you.
+
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
