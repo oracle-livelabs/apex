@@ -188,13 +188,7 @@ In this lab, you:
 
     ![Create Process](./images/id-submit-inv.png " ")
 
-8. In the rendering pane, Under Upload Your Invoice, Select P1_STATUS and update the following:
-
-    - Source > Query Only: **Toggle On**
-
-    ![Create Process](./images/query-only.png " ")
-
-9. Click **Save**.
+8. Click **Save**.
 
 
 ## Task 3: Create Unified Task Lists

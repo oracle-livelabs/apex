@@ -213,6 +213,8 @@ To create a Web Credential in Oracle APEX:
 
     - Name: **APEX\_OCI\_AI\_CRED**
 
+    - Static ID: **APEX\_OCI\_AI\_CRED**
+
     - Authentication Type: **OCI Native Authentication**
 
     - OCI User ID: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
@@ -226,7 +228,7 @@ To create a Web Credential in Oracle APEX:
 
     - OCI Public Key Fingerprint: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds-details.png " ")
+   ![Web Credentials page](images/web-creds1.png " ")
 
 5. Click **Create**.
 

@@ -42,29 +42,28 @@ In this lab, you:
      ```
      <copy>
      declare l_blob blob;
- l_url varchar2(255);
- l_mime_type varchar2(50);
- begin
- select
-   MIME_TYPE,
-   object_storage_url into l_mime_type,
-   l_url
- from
-   INV_UPLOAD
- where
-   ID = : P3_ID;
- l_blob := apex_web_service.make_rest_request_b (
-   p_url => l_url, p_http_method => 'GET',
-   p_credential_static_id => 'APEX_OCI_AI_CRED'
- );
- owa_util.mime_header(l_mime_type, false);
- htp.p(
-   'Content-Length: ' || dbms_lob.getlength(l_blob)
- );
- owa_util.http_header_close;
- wpg_docload.download_file(l_blob);
- END;
-
+l_url varchar2(255);
+l_mime_type varchar2(50);
+begin
+select
+  MIME_TYPE,
+  object_storage_url into l_mime_type,
+  l_url
+from
+  INV_UPLOAD
+where
+  ID = : P3_ID;
+l_blob := apex_web_service.make_rest_request_b (
+  p_url => l_url, p_http_method => 'GET',
+  p_credential_static_id => 'APEX_OCI_AI_CRED'
+);
+owa_util.mime_header(l_mime_type, false);
+htp.p(
+  'Content-Length: ' || dbms_lob.getlength(l_blob)
+);
+owa_util.http_header_close;
+wpg_docload.download_file(l_blob);
+END;
      <copy>
      ```
     Click **Next**.
