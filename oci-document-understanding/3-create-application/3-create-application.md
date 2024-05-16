@@ -45,15 +45,17 @@ In this lab, you:
 
     - Appearance > Theme Style: **Redwood Light**
 
-    Click **Redwood Light**.
+    Click **Save Changes**.
 
     ![Redwood Light](images/redwood-light.png " ")
 
-8. For Name: Enter **Automatic Invoice Handling**
-   Under Features:
-    - Check **Install Progressive web App** and **Feedback**
+8. Enter the following details:
 
-      Click **Create Application**.
+    - Name: **Automatic Invoice Handling**
+
+    - Features: Check **Install Progressive web App** and **Feedback**
+
+    Click **Create Application**.
 
     ![Automatic Invoice Handling](images/create-application.png " ")
 
@@ -92,7 +94,7 @@ In this lab, you:
 
     - Authentication Required: Toggle **ON**
 
-    - Credentials: **apex\_oci\_ai\_cred**
+    - Credentials: **APEX\_OCI\_AI\_CRED**
 
 
 8. Click **Create REST Source Manually**.
@@ -159,7 +161,7 @@ In this lab, you:
 
    ![1-Home](images/home-page.png " ")
 
-3. Under Breadcrumb bar, Update Name: **Process Your Invoice**.
+3. Under Breadcrumb bar, Select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
@@ -179,11 +181,11 @@ In this lab, you:
 
      ![Create Region](images/form.png " ")
 
-6. Select **:P1\_FILE\_NAME**, Press (Command+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
+6. Select **:P1\_FILE\_NAME**, Press (Shift+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
 
      ![hidden items](images/all-hidden.png " ")
 
-7. Right-click **Upload Your Invoice** region in the left pane and select **Create Page item**.
+7. Right-click **Upload Your Invoice** region and select **Create Page item**.
 
    ![hidden items](images/create-page-item.png " ")
 
@@ -225,7 +227,7 @@ In this lab, you:
 
     - Under Storage:
 
-       - File Type: **image/jpeg,image/png,application/pdf**
+        - File Type: **image/jpeg,image/png,application/pdf**
 
     ![hidden items](images/file-blob.png " ")
 
@@ -270,6 +272,8 @@ In this lab, you:
 
     ![create process](images/process-invoice.png " ")
 
+16. Click **Save**.
+
 ## Task 4: Create Processes to upload Invoice to Object Storage and Automate DML
 
 1. Right-click **Process Invoice** and select **Add Child Process**.
@@ -284,9 +288,9 @@ In this lab, you:
 
         - Type: **Invoke API**
 
-    - Under Storage:
+    - Under Settings:
 
-        - Type: **PL/SQL Procedure or Funcation**
+        - Type: **PL/SQL Procedure or Function**
 
         - Procedure or Function: **UPLOAD\_FILE**
 
@@ -319,6 +323,8 @@ In this lab, you:
         - Form Region: **Upload Your Invoice**
 
     ![Add Child Process details](images/automatic-dml.png " ")
+
+6. Click **Save**.
 
 ## Task 5: Integrate Document Understanding API and Parse the Response
 
