@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Empower your Oracle APEX App with AI-Powered Image Search",
+  "workshoptitle": "Automate Invoice handling using Oracle APEX and OCI Document Understanding",
     "tutorials": [
       {
         "title": "Introduction",
@@ -14,20 +14,20 @@
         "filename": "../../1-configure-oci-keys/1-configure-oci-keys.md"
       },
       {
-        "title": "Lab 2: Import and Edit Social Media App ",
-        "filename": "../../2-import-app/2-import-app.md"
+        "title": "Lab 2: Setup Tasks for Application Deployment",
+        "filename": "../../2-install-scripts/2-install-scripts.md"
       },
       {
-        "title": "Lab 3: Integrate OCI Vision with Oracle APEX",
-        "filename": "../../3-integrate-oci-vision/3-integrate-oci-vision.md"
+        "title": "Lab 3: Integrate OCI Document Understanding with Oracle APEX",
+        "filename": "../../3-create-application/3-create-application.md"
       },
       {
-        "title": "Lab 4: Run the Application",
-        "filename": "../../4-run-app/4-run-app.md"
+        "title": "Lab 4: Develop an Invoice Tracker and Invoice Analysis Page",
+        "filename": "../../4-additional-pages/4-additional-pages.md"
       },
       {
-        "title": "Lab 5: Enhance the app with Mobile Features",
-        "filename": "../../5-improve-ux/5-improve-ux.md"
+        "title": "Lab 5: Implement Invoice Approval Requests Using Approvals Component",
+        "filename": "../../5-approval-comp/5-approval-comp.md"
       },
       {
         "title": "Need Help?",
