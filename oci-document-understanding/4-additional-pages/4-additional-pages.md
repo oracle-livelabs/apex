@@ -230,7 +230,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     <copy>
       ```
 
-    ![Application Processes](images/prepare-url.png " ")
+    ![Application Processes](images/prepare-url1.png " ")
 
 8. In the left Pane, Right-click Body and Select **Create Region**.
 
