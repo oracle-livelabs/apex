@@ -281,7 +281,7 @@ In this lab, you:
 
     ![Select Unified Task List](./images/my-approvals.png " ")
 
-7. On the Page Designer toolbar, Select Page **4** from Page Selector.
+7. On the Page Designer toolbar, Navigate to your **Task Details** Page.
 
     ![Select Unified Task List](./images/navigate-to-task-details.png " ")
 
