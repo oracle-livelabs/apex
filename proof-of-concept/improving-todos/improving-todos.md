@@ -47,7 +47,7 @@ In the Runtime environment navigate to Project Task To Dos and notice that the r
 
     >Prompt:  
 
-    >Write a query to retrieve details from the EBA_PROJECT_TASK_TODOS table, including associated project and milestone names, by using subqueries to join the EBA_PROJECTS, EBA_PROJECT_TASKS, and EBA_PROJECT_MILESTONES tables.
+    >Write a query to retrieve details from the EBA\_PROJECT\_TASK_TODOS table, including associated project and milestone names, by using subqueries to join the EBA\_PROJECTS, EBA\_PROJECT\_TASKS, and EBA\_PROJECT\_MILESTONES tables.
 
     ![enter prompt1](images/enter-prompt1.png " ")
 
@@ -112,7 +112,7 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![select lov](images/select-lov.png " ")
 
-3. From the List of Values page, click **EBA_PROJECTS_TASKS.NAME**.
+3. From the List of Values page, click **EBA\_PROJECTS\_TASKS.NAME**.
 
     ![select tasks lov](images/select-tasks-lov.png " ")
 
@@ -124,7 +124,7 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     >Prompt:  
 
-    >Write a query that retrieves id and name from the EBA_PROJECT_TASKS table, including the associated project and milestone names, by using subqueries to join EBA_PROJECTS and EBA_PROJECT_MILESTONES tables
+    >Write a query that retrieves id and name from the EBA\_PROJECT\_TASKS table, including the associated project and milestone names, by using subqueries to join EBA\_PROJECTS and EBA\_PROJECT\_MILESTONES tables
 
     ![enter prompt 2](images/enter-prompt2.png " ")
 

@@ -119,8 +119,8 @@ If you review the Milestones select list you will notice that all milestones are
 4. From the List of Values page, click **Copy**.
 
     In the Copy List of Values dialog enter the following:
-    - Copy List of Values - select **EBA_PROJECT_MILESTONES.NAME - Dynamic**
-    - New List of Values Name - enter **EBA_PROJECT_MILESTONES.NAME PAGE 8**
+    - Copy List of Values - select **EBA\_PROJECT\_MILESTONES.NAME - Dynamic**
+    - New List of Values Name - enter **EBA\_PROJECT\_MILESTONES.NAME PAGE 8**
 
     Click **Copy**.
 
@@ -128,7 +128,7 @@ If you review the Milestones select list you will notice that all milestones are
 
 5. Now the new LOV needs to be customized.
 
-    In the report for List of Values, click **EBA_PROJECT_MILESTONES.NAME PAGE 8**  
+    In the report for List of Values, click **EBA\_PROJECT\_MILESTONES.NAME PAGE 8**  
 
     ![](images/select-lov-page8.png " ")
 
@@ -158,7 +158,7 @@ If you review the Milestones select list you will notice that all milestones are
 
     In the Property Editor (right pane), enter the following:
 
-    - List of Values - select **EBA_PROJECT_MILESTONES.NAME PAGE 8**
+    - List of Values - select **EBA\_PROJECT\_MILESTONES.NAME PAGE 8**
 
     - Cascading LOV Parent Item(s) - select **P8\_PROJECT_ID**
 

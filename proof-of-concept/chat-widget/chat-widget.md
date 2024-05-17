@@ -72,7 +72,7 @@ Add three hidden items to store the project ID, project name and project details
 
     | Name |  Type  |
     | --- |  --- |
-    | P13_PROJECT_ID | Hidden |
+    | P13\_PROJECT\_ID | Hidden |
 
     ![Property Editor](./images/create-project-id-item.png " ")    
 
@@ -80,8 +80,8 @@ Add three hidden items to store the project ID, project name and project details
 
     | Name |  Type  |
     | --- |  --- |
-    | P13_PROJECT_NAME | Hidden |
-    | P13_PROJECT_DETAILS | Hidden |
+    | P13\_PROJECT\_NAME | Hidden |
+    | P13\_PROJECT\_DETAILS | Hidden |
 
 ## Task 4: Add a Region
 
@@ -112,7 +112,7 @@ Add a region to the page to display the Chat Widget.
 
 2. In the Property Editor, enter the following:
 
-    - Identification > Item Name: **P13_PROJECT_DETAILS**
+    - Identification > Item Name: **P13\_PROJECT\_DETAILS**
 
     - Under Computation
       - Type: **SQL Query(return single value)**
@@ -146,7 +146,7 @@ Add a region to the page to display the Chat Widget.
 
 5. In the Property Editor, enter the following:
 
-    - Identification > Item Name: **P13_PROJECT_NAME**
+    - Identification > Item Name: **P13\_PROJECT\_NAME**
 
     - Under Computation
       - Type: **SQL Query(return single value)**
@@ -195,7 +195,7 @@ In this task, you will create a dynamic action to:
         - Service: **Application Default**
         - System Prompt: copy and paste the following:
             > _Use the instructions below to answer all the questions.
-            >&P13_PROJECT_DETAILS._
+            >&P13\_PROJECT\_DETAILS._
 
         - Welcome Message: copy and paste the following:
             > Hello, welcome to the Chat Widget. Feel free to ask any questions about the selected project.
@@ -227,7 +227,7 @@ In this task, you will create a dynamic action to:
     - Under Link > Target: Click **No Link Defined** and configure the following:
         - Target > Page: **13**
         - Under Set Items:
-            - Page: P13_PROJECT_ID
+            - Page: P13\_PROJECT\_ID
             - Value: &ID.
         - Clear / Reset > Clear Cache: **13**
 
