@@ -18,7 +18,7 @@ In this lab, you:
 
    ![Task Definition in Shared Components](images/sc-8.png " ")
 
-2. Under **Workflows and Automation**, Select **Task Definitions**.
+2. Under **Workflows and Automations**, Select **Task Definitions**.
 
    ![Select Task Definition](images/task-def.png " ")
 
@@ -68,7 +68,7 @@ In this lab, you:
 
     ![Task Definition Settings](images/action-source.png " ")
 
-7. Under **Participants**, Click **Add** and enter the following:
+7. Under **Participants**, Click **Add Row** and enter the following:
 
      - Participant Type: **Potential Owner**
 
@@ -165,7 +165,7 @@ In this lab, you:
 
     ![Click Application ID](./images/app-id8.png " ")
 
-2. Select **Home - 1** page.
+2. Select **1 - Home** page.
 
    ![Home - 1](./images/home1.png " ")
 

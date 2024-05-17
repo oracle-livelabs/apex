@@ -149,7 +149,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
     - Under Card:
 
-        - CSS Classes: **&CARD\_COLOR.!ATTR.**
+        - CSS Classes: **&CARD\_COLOR. !ATTR.**
 
         - Primary Key Column 1: **ID**
 
@@ -217,7 +217,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
      ![Application Processes](images/page-item-url.png " ")
 
-6. Under **Pre-Rendering**, Right-Click **Before Header** and select **Process**.
+6. Under **Pre-Rendering**, Right-Click **Before Header** and select **Create Process**.
 
     ![Application Processes](images/create-before-header.png " ")
 
@@ -270,7 +270,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
         - Type: **SQL Query**
 
-        - SQL Query: Copay and Paste the below code into the code editor:
+        - SQL Query: Copy and Paste the below code into the code editor:
 
        ```
        <copy>
@@ -292,7 +292,9 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
             DOCUMENT_ID = :P3_ID
             AND FIELD_VALUE <> '#';
        <copy>
+
         ```
+       - Layout > Start New Row: **Toggle Off**  
 
       ![Application Processes](images/generated-output.png " ")
 
@@ -300,7 +302,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     - Under Appearance:
 
-        - Page Mode: **Model Dialog**
+        - Page Mode: **Modal Dialog**
 
         - Dialog Template: **Modal Dialog**
 
@@ -344,7 +346,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
 20. In the Property Editor, enter the following details:
 
-    - Identification > Type: **Redirect to Page 2**
+    - Identification > Name: **Redirect to Page 2**
 
     - Link > Target: **No Link Defined**
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create APP Wizard. You also set up a REST Data Source to interact with OCI Doc Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Doc Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
 
 OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
 
@@ -12,7 +12,7 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create an Application
-- Invoke OCI Doc Understanding using Rest Data Source
+- Invoke OCI Doc Understanding using REST Data Source
 - Enhance Home Page to Upload Invoices and Process the document
 - Create Processes to upload Invoice to Object Storage and Automate DML
 - Integrate Document Understanding API and Parse the Response
@@ -56,13 +56,13 @@ In this lab, you:
 
     - Name: **Automatic Invoice Handling**
 
-    - Features: Check **Install Progressive web App** and **Feedback**
+    - Features: Check **Install Progressive Web App** and **Feedback**
 
     Click **Create Application**.
 
     ![Automatic Invoice Handling](images/create-application.png " ")
 
-## Task 2: Invoke OCI Doc Understanding using Rest Data Source
+## Task 2: Invoke OCI Doc Understanding using REST Data Source
 
 1. Click **Shared Components**.
 
@@ -320,6 +320,7 @@ In this lab, you:
     | 2 | p\_static\_id| item | P1\_CRED\_STATIC\_ID |
     | 3 | p\_namespace| item | P1\_NAMESPACE_NAME |
     | 4 | p\_bucket| item | P1\_BUCKET\_NAME |
+    | 5 | p\_region| item | P1\_REGION |
     {: title="Upload to Object Storage Parameters"}
 
     ![Add Child Process details](images/param-file-content.png " ")
@@ -380,7 +381,7 @@ In this lab, you:
 
     - Parameter > Ignore Output: **Toggle off**
 
-    - Value > Item: **PI\_RESPONSE**
+    - Value > Item: **P1\_RESPONSE**
 
 
   ![Add Child Process details](images/doc-response.png " ")
