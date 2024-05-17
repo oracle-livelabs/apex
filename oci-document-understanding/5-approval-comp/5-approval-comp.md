@@ -18,7 +18,7 @@ In this lab, you:
 
    ![Task Definition in Shared Components](images/sc-8.png " ")
 
-2. Under Workflows and Automation, Select **Task Definitions**.
+2. Under **Workflows and Automation**, Select **Task Definitions**.
 
    ![Select Task Definition](images/task-def.png " ")
 
@@ -46,7 +46,7 @@ In this lab, you:
 
      ![Click on Expense Request](images/invoice-req-app.png " ")
 
-    Under Settings, Specify the following:
+    Under Settings:
 
     - Actions Source: **SQL Query**.
 
@@ -55,21 +55,20 @@ In this lab, you:
     ```
     <copy>
     SELECT
-    E.EMPNO,
-    E.EMP_NAME,
-    M.EMP_NAME AS MGR_NAME
-FROM
-    EMPLOYEE_DETAILS E,
-    EMPLOYEE_DETAILS M
-WHERE
+      E.EMPNO,
+      E.EMP_NAME,
+      M.EMP_NAME AS MGR_NAME
+    FROM
+    EMPLOYEE_DETAILS E, EMPLOYEE_DETAILS M
+    WHERE
         M.EMPNO (+) = E.MGR
-    AND E.EMPNO = :APEX$TASK_PK
+        AND E.EMPNO = :APEX$TASK_PK
     </copy>
     ```
 
     ![Task Definition Settings](images/action-source.png " ")
 
-7. Under Participants, Click **Add** and enter the following:
+7. Under **Participants**, Click **Add** and enter the following:
 
      - Participant Type: **Potential Owner**
 
@@ -80,12 +79,12 @@ WHERE
      ```
      <copy>
      SELECT
-    UPPER(EMP_NAME)
-FROM
-    EMPLOYEE_DETAILS
-WHERE
-    EMPNO = (
-        SELECT
+        UPPER(EMP_NAME)
+     FROM
+     EMPLOYEE_DETAILS
+     WHERE
+       EMPNO = (
+       SELECT
             MGR
         FROM
             EMPLOYEE_DETAILS
@@ -97,14 +96,14 @@ WHERE
                     EMPLOYEE_DETAILS
                 WHERE
                     UPPER(EMP_NAME) = UPPER(:APP_USER)
-            )
-    )
-     </copy>
-     ```
+                    )
+                 )
+      </copy>
+      ```
 
      ![Task Definition Participants](images/participants.png " ")
 
-8. Under Parameters, Click **Add Row** and enter the three parameters one after the other:
+8. Under **Parameters**, Click **Add Row** and enter the three parameters one after the other:
 
       | Static ID |  Label  | Data Type
       | --- |  --- | --- |
@@ -131,7 +130,7 @@ WHERE
 
      - On Event: **Complete**
 
-     - Outcome: **Approval**
+     - Outcome: **Approved**
 
      - Success Message: **Approved!**
 
@@ -141,8 +140,8 @@ WHERE
     <copy>
     DECLARE
     L_REQ_ID NUMBER;
-BEGIN
---   if :APP_USER = :EMP_NAME then --this is the original initiator
+    BEGIN
+    --   if :APP_USER = :EMP_NAME then --this is the original initiator
     L_REQ_ID := :ID;
     UPDATE INV_UPLOAD
     SET
@@ -150,7 +149,7 @@ BEGIN
     WHERE
         ID = L_REQ_ID;
 
-END;
+    END;
     </copy>
     ```
 
@@ -184,11 +183,11 @@ END;
     <copy>
     SELECT
     EMPNO
-INTO :P1_EMP_NO
-FROM
-    EMPLOYEE_DETAILS
-WHERE
-    UPPER(EMP_NAME) = UPPER(:APP_USER);
+      INTO :P1_EMP_NO
+    FROM
+      EMPLOYEE_DETAILS
+    WHERE
+      UPPER(EMP_NAME) = UPPER(:APP_USER);
     </copy>
     ```
 
@@ -196,7 +195,7 @@ WHERE
 
     ![Create Process](./images/fetch-emp-details.png " ")
 
-5. Navigate to Processing tab, Right-click **Processing** and select **Create Process**.
+5. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
 
     ![Create Process](./images/create-process4.png " ")
 
@@ -234,7 +233,7 @@ WHERE
 
 ## Task 3: Create Unified Task Lists
 
-1. On Page Designer toolbar, Navigate to **Create(+)** and select **Page**.
+1. On Page Designer toolbar, Navigate to **Create(+ v)** and select **Page**.
 
     ![Click Application ID](./images/page3.png " ")
 
@@ -286,28 +285,28 @@ WHERE
 
     ![Select Unified Task List](./images/navigate-to-task-details.png " ")
 
-8. Under the Page Rendering tab, Select **Details** region and update the following:
+8. Under the **Page Rendering** tab, Select **Details** region and update the following:
 
     - Source > SQL Query: Copy and replace the below code into the code editor:
 
     ```
     <copy>
     SELECT
-    UPPER(PARAM_LABEL)      PARAM_LABEL,
-    PARAM_VALUE,
-    'Check the Comparision' LINK_TO
-FROM
-    APEX_TASK_PARAMETERS
-WHERE
+      UPPER(PARAM_LABEL)      PARAM_LABEL,
+      PARAM_VALUE,
+      'Check the Comparision' LINK_TO
+    FROM
+      APEX_TASK_PARAMETERS
+    WHERE
         TASK_ID = :P4_TASK_ID
-    AND IS_VISIBLE = 'Y'
-    AND UPPER(PARAM_LABEL) = 'ID';
+        AND IS_VISIBLE = 'Y'
+        AND UPPER(PARAM_LABEL) = 'ID';
     </copy>
     ```
 
     ![Select Unified Task List](./images/details.png " ")
 
-9. Under Details region, Select **LINK_TO** column and update the following:
+9. Under **Details** region, Select **LINK_TO** column and update the following:
 
     - Identification > Type: **LINK**
 

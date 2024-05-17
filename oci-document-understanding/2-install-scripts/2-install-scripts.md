@@ -22,7 +22,7 @@ In this lab, you:
 
     ![Select Quick SQL](images/sql_script.png " ")
 
-2. Click **SQL Scripts**.
+2. Click **Create**.
 
     ![Select Quick SQL](images/create-quick-sql.png " ")
 
@@ -209,7 +209,7 @@ END UPLOAD_FILE;
      </copy>
     ```
 
-4. For Script Name: Enter **Application Scripts** and Click **Run**.
+4. For **Script Name**: Enter **Application Scripts** and Click **Run**.
 
    ![Script Name](./images/script-name.png " ")
 
@@ -248,7 +248,7 @@ To create multiple users accounts simultaneously:
 
     Click **Next**.
 
-    ![Create Multiple Users](images/create-users-next.png " ")
+    ![Create Multiple Users](images/create-users-next1.png " ")
 
 4. Click **Create Valid Users**.
 

@@ -40,7 +40,7 @@ In this lab, you:
 
    ![Save Icon](images/save-icon.png " ")
 
-6. After Name, Select **Set Appearance** icon.
+6. Next to **Name**, Select **Set Appearance** icon.
 
    ![Set Appearance](images/set-appearance.png " ")
 
@@ -66,7 +66,7 @@ In this lab, you:
 
 1. Click **Shared Components**.
 
-2. Under Data Sources, click **REST Data Sources**.
+2. Under **Data Sources**, click **REST Data Sources**.
 
    ![Click Timeline](images/rest-data-source2.png " ")
 
@@ -79,6 +79,7 @@ In this lab, you:
    ![Click Timeline](images/rest-next.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
+
     - Rest Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
     - Name: **Document Understanding API**
@@ -109,7 +110,7 @@ In this lab, you:
 
    ![Click Timeline](images/doc-under.png " ")
 
-10. Under the Operations tab, click **Edit icon** for the POST operation and enter the following:
+10. Under the **Operations**, click **Edit icon** for the **POST** operation and enter the following:
 
     - Request Body Template: Copy and paste the JSON given below.
 
@@ -146,7 +147,7 @@ In this lab, you:
 
     ![Click Timeline](images/synchronize-ok.png " ")
 
-11. Under Operation Parameters, Click **Add Parameter**.
+11. Under **Operation Parameters**, Click **Add Parameter**.
 
     ![Click Timeline](images/add-parameter.png " ")
 
@@ -176,11 +177,11 @@ In this lab, you:
 
    ![1-Home](images/home-page.png " ")
 
-3. Under Breadcrumb bar, Select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
+3. Under **Breadcrumb bar**, Select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
-4. Right-click Body and Select **Create Region**.
+4. Right-click **Body** and Select **Create Region**.
 
    ![Create Region](images/create-region.png " ")
 
@@ -204,7 +205,7 @@ In this lab, you:
 
    ![hidden items](images/create-page-item.png " ")
 
-8. Now, add the following eight-page items one after the other:
+8. Now, add the following Eight page items one after the other:
 
    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
    |---|-------|------|----------| --------------| ------ |
@@ -213,7 +214,7 @@ In this lab, you:
    | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
    | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket |
    | 5 | P1\_FEATURE\_TYPE| Hidden | Static | KEY\_VALUE\_EXTRACTION |
-   | 6 | P1\_REGION| Hidden | Static | us-ashburn-1 |
+   | 6 | P1\_REGION| Hidden | Static | Enter your Region. e.g. us-ashburn-1 |
    | 7 | P1\_RESPONSE| Hidden |  |  | CLOB
    | 8 | P1\_EMP\_NO| Hidden |  |  |
    {: title="Upload your Invoice Page Items"}
@@ -222,7 +223,7 @@ In this lab, you:
 
    ![hidden items](images/response-item.png " ")
 
-9. Under Upload your Invoice region, Right-click P1\_ID and select **Create Page Item Below**.
+9. Under **Upload your Invoice** region, Right-click **P1\_ID** and select **Create Page Item Below**.
 
    ![hidden items](images/create-page-item-below.png " ")
 
@@ -273,7 +274,7 @@ In this lab, you:
     ![create-button](images/btn-details.png " ")
 
 
-14. In the Processing tab, right-click Processing and Select **Create Process**.
+14. In the Processing tab, right-click **Processing** and Select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 

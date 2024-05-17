@@ -20,7 +20,7 @@ In this task, you create an application process to retrieve the URL and MIME typ
 
    ![Shared Components](images/sc-7.png " ")
 
-2. Under Application Logic, select **Application Processes**
+2. Under **Application Logic**, select **Application Processes**
 
    ![Application Processes](images/application-process2.png " ")
 
@@ -43,31 +43,32 @@ In this task, you create an application process to retrieve the URL and MIME typ
      ```
      <copy>
      DECLARE
-    L_BLOB      BLOB;
-    L_URL       VARCHAR2(255);
-    L_MIME_TYPE VARCHAR2(50);
-  BEGIN
-    SELECT
+       L_BLOB      BLOB;
+       L_URL       VARCHAR2(255);
+       L_MIME_TYPE VARCHAR2(50);
+     BEGIN
+      SELECT
         MIME_TYPE,
         OBJECT_STORAGE_URL
-    INTO
+      INTO
         L_MIME_TYPE,
         L_URL
-    FROM
+      FROM
         INV_UPLOAD
-    WHERE
+      WHERE
         ID = :P3_ID;
 
-    L_BLOB := APEX_WEB_SERVICE.MAKE_REST_REQUEST_B(P_URL => L_URL, P_HTTP_METHOD => 'GET', P_CREDENTIAL_STATIC_ID => 'APEX_OCI_AI_CRED'
+      L_BLOB := APEX_WEB_SERVICE.MAKE_REST_REQUEST_B(P_URL => L_URL, P_HTTP_METHOD => 'GET', P_CREDENTIAL_STATIC_ID => 'APEX_OCI_AI_CRED'
     );
 
-    OWA_UTIL.MIME_HEADER(L_MIME_TYPE, FALSE);
-    HTP.P('Content-Length: ' || DBMS_LOB.GETLENGTH(L_BLOB));
-    OWA_UTIL.HTTP_HEADER_CLOSE;
-    WPG_DOCLOAD.DOWNLOAD_FILE(L_BLOB);
-  END;
+      OWA_UTIL.MIME_HEADER(L_MIME_TYPE, FALSE);
+      HTP.P('Content-Length: ' || DBMS_LOB.GETLENGTH(L_BLOB));
+      OWA_UTIL.HTTP_HEADER_CLOSE;
+      WPG_DOCLOAD.DOWNLOAD_FILE(L_BLOB);
+     END;
      <copy>
      ```
+
     Click **Next**.
 
     ![Application Processes](images/process-source.png " ")
@@ -121,10 +122,10 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
     END CARD_COLOR,
     A.DOC_AI_JSON,
     B.FIELD_VALUE
-FROM
+    FROM
     INV_UPLOAD     A,
     DOCAI_RESPONSE B
-WHERE
+    WHERE
         A.ID = B.DOCUMENT_ID
     AND B.FIELD_LABEL = 'InvoiceTotal'
      <copy>
@@ -162,7 +163,7 @@ WHERE
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
-7. In the property editor, select the **Region** tab. Under Source, Select **Order By Item** and enter the following:
+7. In the property editor, select the **Region** tab. Under **Source**, Select **Order By Item** and enter the following:
 
       | Clause | Key | Display |
       |--------|-----|---------|
@@ -178,7 +179,7 @@ WHERE
 ## Task 3: Create an Invoice Analysis page
 In this task, you create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
-1. Navigate to Create(+) in Page Designer toolbar and select **Page**.
+1. Navigate to Create **(+ v)** in Page Designer toolbar and select **Page**.
 
    ![Application Processes](images/create-blank-page.png " ")
 
@@ -194,9 +195,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     - Navigation > Use Breadcrumb: **Toggle Off**
 
+    - Navigation > Use Navigation: **Toggle Off**
+
    Click **Create Page**.
 
-   ![Application Processes](images/create-blank-page1.png " ")
+   ![Application Processes](images/create-blank-page11.png " ")
 
 4. In the left Pane, Right-click Body, and select **Create Page Item**.
 
@@ -214,7 +217,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
      ![Application Processes](images/page-item-url.png " ")
 
-6. Under Pre-Rendering, Right-Click **Before Header** and select **Process**.
+6. Under **Pre-Rendering**, Right-Click **Before Header** and select **Process**.
 
     ![Application Processes](images/create-before-header.png " ")
 
@@ -226,13 +229,15 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ```
     <copy>
-    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);:P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
+    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
+
+    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
     <copy>
       ```
 
     ![Application Processes](images/prepare-url1.png " ")
 
-8. In the left Pane, Right-click Body and Select **Create Region**.
+8. In the left Pane, Right-click **Body** and Select **Create Region**.
 
     ![Application Processes](images/create-region4.png " ")
 
@@ -240,14 +245,14 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     - Indentification > Name: **Uploaded File**
 
-    - Source > HTML Code: Copy and paste the below code into the code editor:
+    - Source > HTML Code: Copy and paste the below HTML code into the code editor:
 
     ```
     <copy>
     <p align="center">
     <iframe src="&P3_URL."  width="100%" HEIGHT = "500" > </iframe> </p>
-   <copy>
-    ```
+    <copy>
+      ```
 
    ![Application Processes](images/uploaded-file.png " ")
 
@@ -272,22 +277,22 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
        ```
        <copy>
        SELECT
-    ID,
-    DOCUMENT_ID,
-    REGEXP_REPLACE(FIELD_LABEL, '([A-Z])', ' \1') FIELD_LABEL,
-    CASE
+          ID,
+          DOCUMENT_ID,
+          REGEXP_REPLACE(FIELD_LABEL, '([A-Z])', ' \1') FIELD_LABEL,
+        CASE
         WHEN FIELD_LABEL LIKE '%Date%' THEN
             TO_CHAR(TO_TIMESTAMP(FIELD_VALUE, 'YYYY-MM-DD"T"HH24:MI:SS.FF3"Z"'),
                     'DD-MON-YYYY')
         ELSE
             FIELD_VALUE
-    END                                           AS FIELD_VALUE,
-    LABEL_SCORE
-FROM
-    DOCAI_RESPONSE
-WHERE
-        DOCUMENT_ID = :P3_ID
-    AND FIELD_VALUE <> '#';
+            END AS FIELD_VALUE,
+        LABEL_SCORE
+        FROM
+            DOCAI_RESPONSE
+        WHERE
+            DOCUMENT_ID = :P3_ID
+            AND FIELD_VALUE <> '#';
        <copy>
         ```
 
@@ -307,7 +312,7 @@ WHERE
 
 13. Click **Save**.
 
-14. In the Page Designer toolbar, select Page Selector and Navigate to **Page 2: Invoice Tracker**.
+14. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 2: Invoice Tracker**.
 
    ![Application Processes](images/navigate-to-2.png " ")
 
@@ -331,11 +336,11 @@ WHERE
 
 17. Click **Save**.
 
-18. In the Page Designer toolbar, select Page Selector and Navigate to **Page 1: Home**.
+18. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 1: Home**.
 
    ![Application Processes](images/navigate-to-home.png " ")
 
-19. Under Processing, Right-click After Processing and select **Create Branch**.
+19. Under **Processing**, Right-click **After Processing** and select **Create Branch**.
 
    ![Application Processes](images/create-branch.png " ")
 

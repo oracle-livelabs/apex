@@ -184,8 +184,7 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
     apex_collection.truncate_collection(p_collection_name => 'BOOKS');
    END IF;
  END clear_cart;
-
-PROCEDURE create_order (p_user_id  IN VARCHAR2,
+ PROCEDURE create_order (p_user_id  IN VARCHAR2,
                         p_order_id  OUT obs_orders.order_id%TYPE)
  IS
  BEGIN
