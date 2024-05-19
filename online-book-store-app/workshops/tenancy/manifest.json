@@ -30,6 +30,14 @@
         "filename": "../../6-add-to-cart/add-to-cart.md"
       },
       {
+        "title": "Lab 7: Enhance Book Details Page",
+        "filename": "../../7-enhance-book-details/7-enhance-book-details.md"
+      },
+      {
+        "title": "Lab 8: Create Shopping Cart Page",
+        "filename": "../../8-create-shop-cart/8-create-shop-cart.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
