@@ -232,7 +232,7 @@ To create multiple users accounts simultaneously:
 
    ![Create Multiple Users](images/create-multiple-users.png " ")
 
-3. Enter the following details:
+3.  Enter/select the following details:
 
     - List of Email Addresses: **MATT@xyz.com, JANE@xyz.com, CLARA@xyz.com, JOHN@xyz.com**
 
@@ -264,19 +264,19 @@ To create a Web Credential in Oracle APEX:
 
    ![Click App Builder](images/app-build5.png " ")
 
-3. Click **Workspace Utilities**.
+2. Click **Workspace Utilities**.
 
    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
-4. Select **Web Credentials**.
+3. Select **Web Credentials**.
 
    ![Click Web Credentials](images/web-credentials.png " ")
 
-5. Click **Create**.
+4. Click **Create**.
 
    ![Create Web Credentials](images/create-web-creds.png " ")
 
-6. Enter the following details using the configuration file you copied in the previous task.
+5.  Enter/select the following details using the configuration file you copied in the previous task.
 
     - Name: **APEX\_OCI\_AI\_CRED**
 
@@ -289,7 +289,7 @@ To create a Web Credential in Oracle APEX:
 
     - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
-      ![Private key file](images/private-key.png " ")
+    ![Private key file](images/private-key.png " ")
 
     - OCI Tenancy ID: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
@@ -297,7 +297,7 @@ To create a Web Credential in Oracle APEX:
 
    ![Web Credentials page](images/web-creds1.png " ")
 
-5. Click **Create**.
+6. Click **Create**.
 
    ![Web Credentials page](images/web-creds-created.png " ")
 

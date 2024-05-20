@@ -1,4 +1,4 @@
-# Configure the OCI API keys
+# Configure OCI API Keys and a Bucket
 
 ## Introduction
 
@@ -45,7 +45,7 @@ To Generate the API Keys using OCI Console:
     ![Profile Menu](images/configuration-preview.png " ")
 
 ## Task 2: Create a Bucket in OCI Object Storage
-To create a Bucket using OCI Console, Login into your OCI Account.
+To create a Bucket using OCI Console, login to your OCI Account.
 
 1. To access the Object Storage service, click on the menu icon **(☰)** at the top-left corner.
 
@@ -59,7 +59,7 @@ To create a Bucket using OCI Console, Login into your OCI Account.
 
    ![Select Bucket](images/create-bucket.png " ")
 
-4. Enter the following:
+4.  Enter/select the following:
 
     - Bucket Name: **OCIDocAI**
 

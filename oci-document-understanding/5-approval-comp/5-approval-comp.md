@@ -26,7 +26,7 @@ In this lab, you:
 
    ![Create Task Definition](images/task-def-create.png " ")
 
-4. Specify the task definition attributes and Click **Create**.
+4. Enter/select the task definition attributes and Click **Create**.
 
     - Name: **Invoice Approval Request**
 
@@ -68,7 +68,7 @@ In this lab, you:
 
     ![Task Definition Settings](images/action-source.png " ")
 
-7. Under **Participants**, Click **Add Row** and enter the following:
+7. Under **Participants**, Click **Add Row** and Enter/select the following:
 
      - Participant Type: **Potential Owner**
 
@@ -101,7 +101,7 @@ In this lab, you:
       </copy>
       ```
 
-     ![Task Definition Participants](images/participants.png " ")
+    ![Task Definition Participants](images/participants.png " ")
 
 8. Under **Parameters**, Click **Add Row** and enter the three parameters one after the other:
 
@@ -114,7 +114,7 @@ In this lab, you:
 
      - Click **Apply Changes**.
 
-     ![Task Definition Parameters](images/parameters.png " ")
+    ![Task Definition Parameters](images/parameters.png " ")
 
 10. Click **Invoice Approval Request** to continue editing.
 
@@ -124,7 +124,7 @@ In this lab, you:
 
     ![Click on Expense Request](images/add-action.png " ")
 
-15. Enter the following details:
+15. Enter/select the following details:
 
      - Name: **On Approval**
 
@@ -173,7 +173,7 @@ In this lab, you:
 
    ![Create Process](./images/create-process3.png " ")
 
-4. In the Property Editor, enter the following details:
+4. In the Property Editor, Enter/select the following details:
 
     - Identification > Name: **Fetch Employee Details**
 
@@ -199,7 +199,7 @@ In this lab, you:
 
     ![Create Process](./images/create-process4.png " ")
 
-6. In the property editor, enter the following details:
+6. In the property editor, Enter/select the following details:
 
     - Under Identification:
 
@@ -213,7 +213,7 @@ In this lab, you:
 
         - Details Primary key item: **P1\_EMP\_NO**
 
-      ![Create Process](./images/submit-invoice.png " ")
+    ![Create Process](./images/submit-invoice.png " ")
 
 7. Under the **Submit Invoice** process, update the following parameters:
 
@@ -241,7 +241,7 @@ In this lab, you:
 
     ![Select Unified Task List](./images/unified-task-list.png " ")
 
-3. Specify the following page attributes:
+3. Enter/select the following page attributes:
 
     - Under Page Definition:
 
@@ -255,7 +255,7 @@ In this lab, you:
 
          Click **Create Page**.
 
-      ![Click Create Page](./images/initiated-by-me.png " ")
+    ![Click Create Page](./images/initiated-by-me.png " ")
 
 4. In Page Designer toolbar, Navigate to **Create(+)** and select **Page**.
 
@@ -265,7 +265,7 @@ In this lab, you:
 
     ![Select Unified Task List](./images/unified-task-list.png " ")
 
-6. Specify the following page attributes:
+6. Enter/select the following page attributes:
 
     - Under Page Definition:
 

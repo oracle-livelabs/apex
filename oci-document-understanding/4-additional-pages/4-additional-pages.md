@@ -92,7 +92,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
    ![Application Processes](images/card.png " ")
 
-4. Enter the following details:
+4. Enter/select the following details:
 
     - Page Definition > Page Number: **2**
 
@@ -145,7 +145,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
    ![Application Processes](images/cards-attributes.png " ")
 
-6. In the left pane, select **Invoice Tracker** region and Under **Attributes**, enter the following:
+6. In the left pane, select **Invoice Tracker** region and Under **Attributes**, Enter/select the following:
 
     - Under Card:
 
@@ -163,7 +163,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
     ![Application Processes](images/invoice-tracker-attributes.png " ")
 
-7. In the property editor, select the **Region** tab. Under **Source**, Select **Order By Item** and enter the following:
+7. In the property editor, select the **Region** tab. Under **Source**, Select **Order By Item** and Enter/select the following:
 
       | Clause | Key | Display |
       |--------|-----|---------|
@@ -187,7 +187,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Application Processes](images/blank-page1.png " ")
 
-3. On the Create Page dialog, enter the following:
+3. On the Create Page dialog, Enter/select the following:
 
     - Page Definition > Page Number: **3**
 
@@ -221,7 +221,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Application Processes](images/create-before-header.png " ")
 
-7. In the Property Editor, enter the following details:
+7. In the Property Editor, Enter/select the following details:
 
     - Identification > Name: **Prepare URL**
 
@@ -241,16 +241,19 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Application Processes](images/create-region4.png " ")
 
-9. In the Property Editor, enter the following details:
+9. In the Property Editor, Enter/select the following details:
 
     - Indentification > Name: **Uploaded File**
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
-
-    <p align="center">
-    <iframe src="&P4_URL."  width="100%" height="500">
-    </iframe>
-    </p>
+    ```
+    <copy>
+     <p align="center">
+     <iframe src="&P4_URL."  width="100%" height="500">
+     </iframe>
+     </p>
+    <copy>
+      ```
 
    ![Application Processes](images/uploaded-file.png " ")
 
@@ -258,7 +261,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Application Processes](images/create-region-below.png " ")
 
-11. In the Property Editor, enter the following details:
+11. In the Property Editor, Enter/select the following details:
 
     - Under Identification:
 
@@ -296,7 +299,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
         ```
        - Layout > Start New Row: **Toggle Off**  
 
-      ![Application Processes](images/generated-output.png " ")
+    ![Application Processes](images/generated-output.png " ")
 
 12. In the left Pane, select **Page 3: Invoice Analysis** and update the following:
 
@@ -320,7 +323,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Application Processes](images/creation-action2.png " ")
 
-16. In the Property Editor, enter the following details:
+16. In the Property Editor, Enter/select the following details:
 
     - Identification > Type: **Full Card**
 
@@ -344,7 +347,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Application Processes](images/create-branch.png " ")
 
-20. In the Property Editor, enter the following details:
+20. In the Property Editor, Enter/select the following details:
 
     - Identification > Name: **Redirect to Page 2**
 

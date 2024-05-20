@@ -15,14 +15,10 @@ Estimated Time: 1 hour
 ### Objectives
 In this workshop, you:
 
-- Add API Keys in OCI Console
-- Create Web Credentials in Oracle APEX
-- Create REST Data Source in your APEX App based on OCI Document Understanding REST APIs
+- Create an APEX app
 - Upload Invoice to OCI Object Storage using Invoke API
-- Configure the Automatic Row Processing to Insert a New Record into the Table
-- Invoke the REST Data Source through a page process
-- Parse the response and store the information in the database
-- Develop an Invoice Tracking and Invoice Analysis page
+- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type
+- Parse the response and display the result
 - Implement Invoice Approval Requests Using Approvals Component
 
 <!---
@@ -43,7 +39,7 @@ In this workshop, you:
 *Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ### Downloads
-Click here (to be linked) to download the completed application. **Note**: Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Vision REST Data Source for Image Classification and Text Detection.
+Click here (to be linked) to download the completed application. **Note**: Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Document Understanding REST Data Source.
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager

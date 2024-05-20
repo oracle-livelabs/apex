@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Doc Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Doucment Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
 
 OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
 
@@ -44,7 +44,7 @@ In this lab, you:
 
    ![Set Appearance](images/set-appearance.png " ")
 
-7. Update the following:
+7.  Enter/select the following:
 
     - Appearance > Theme Style: **Redwood Light**
 
@@ -52,7 +52,7 @@ In this lab, you:
 
     ![Redwood Light](images/redwood-light.png " ")
 
-8. Enter the following details:
+8.  Enter/select the following details:
 
     - Name: **Automatic Invoice Handling**
 
@@ -78,7 +78,7 @@ In this lab, you:
 
    ![Click Timeline](images/rest-next.png " ")
 
-5. Under Create REST Data Source, enter the following attributes and click **Next**.
+5. Under Create REST Data Source,  Enter/select the following attributes and click **Next**.
 
     - Rest Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
@@ -185,7 +185,7 @@ In this lab, you:
 
    ![Create Region](images/create-region.png " ")
 
-5. In the property editor, Enter the following details:
+5. In the property editor,  Enter/select the following details:
 
     - Under Identification:
 
@@ -195,7 +195,7 @@ In this lab, you:
 
     - Source > Table Name: **INV\_UPLOAD**
 
-     ![Create Region](images/form.png " ")
+    ![Create Region](images/form.png " ")
 
 6. Select **:P1\_FILE\_NAME**, Press (Shift+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
 
@@ -227,7 +227,7 @@ In this lab, you:
 
    ![hidden items](images/create-page-item-below.png " ")
 
-10. In the property editor, enter the following details:
+10. In the property editor,  Enter/select the following details:
 
     - Under Identification:
 
@@ -257,7 +257,7 @@ In this lab, you:
 
   ![create-button](images/create-btn.png " ")
 
-13. In the property editor, enter the following details:
+13. In the property editor,  Enter/select the following details:
 
      - Under Identification:
 
@@ -278,7 +278,7 @@ In this lab, you:
 
     ![create process](images/create-process6.png " ")
 
-15. In the property editor, enter the following details:
+15. In the property editor,  Enter/select the following details:
 
      - Under Identification:
 
@@ -296,7 +296,7 @@ In this lab, you:
 
     ![Add Child Process](images/add-child-process.png " ")
 
-2. In the Property Editor, enter the following details:
+2. In the Property Editor,  Enter/select the following details:
 
     - Under Identification:
 
@@ -329,7 +329,7 @@ In this lab, you:
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-5. In the Property Editor, enter the following details:
+5. In the Property Editor, Enter/select the following details:
 
     - Under Identification:
 
@@ -349,7 +349,7 @@ In this lab, you:
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-2. In the Property Editor, enter the following details:
+2. In the Property Editor, Enter/select the following details:
 
      - Under Identification:
 
@@ -377,7 +377,7 @@ In this lab, you:
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
-4. Select **RESPONSE**, enter the following:
+4. Select **RESPONSE**, Enter/select the following:
 
     - Parameter > Ignore Output: **Toggle off**
 
@@ -390,7 +390,7 @@ In this lab, you:
 
     ![Add Child Process details](images/add-child-process2.png " ")
 
-6. In the Property Editor, enter the following details:
+6. In the Property Editor, Enter/select the following details:
 
     - Identification > Name: **Parse the Response**
 
