@@ -316,7 +316,7 @@ In this lab, you:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
-    | 1 | p\_file\_content| item | PI\_FILE\_BLOB |
+    | 1 | p\_file\_content| item | P1\_FILE\_BLOB |
     | 2 | p\_static\_id| item | P1\_CRED\_STATIC\_ID |
     | 3 | p\_namespace| item | P1\_NAMESPACE_NAME |
     | 4 | p\_bucket| item | P1\_BUCKET\_NAME |
