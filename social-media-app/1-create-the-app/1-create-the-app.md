@@ -31,11 +31,11 @@ In this lab, you will:
 
 1. From your APEX workspace homepage, click **Create Application**.
 
-    !["Create Application"](images/create-app1.png "")
+    !["Create Application"](images/create-app1.png " ")
 
 2. Select **Use Create App Wizard**
 
-    !["Create App options"](images/create-app.png "")
+    !["Create App options"](images/create-app.png " ")
 
 3. You are now viewing the **Create An Application** Page, with View
 Blueprint tab selected. Update the following information:
@@ -48,16 +48,16 @@ Blueprint tab selected. Update the following information:
 
     - In *Features* section, check the **Install Progressive Web App** option.
 
-  Click **Create Application**.
+    Click **Create Application**.
 
-     !["Create App wizard"](images/app-details.png "")
+    !["Create App wizard"](images/app-details.png " ")
 
 4. We now have three pages in our APEX application.
     - The Global page (which we will not be using in this lab),
     - The Timeline page (which is the primary page we will be working on in this lab),
     - The Login Page, which is the default page configured to use your workspace account credentials.
 
-    !["The pages in the app"](images/pages.png "")
+    !["The pages in the app"](images/pages.png " ")
 
 
 ## Task 2: Run the App and Sign-in
