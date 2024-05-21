@@ -1,7 +1,7 @@
 # APEX + Server-Side JavaScript
 
 ## **Introduction**
-In this workshop you will use In-Database JavaScript feature available in Oracle Database 23c. You will create a quick application from a Spreadsheet and then extend the application using Server-Side JavaScript instead of PL/SQL.
+In this workshop you will use In-Database JavaScript feature available in Oracle Database 23ai. You will create a quick application from a Spreadsheet and then extend the application using Server-Side JavaScript instead of PL/SQL.
 Next, you will learn how to load external JavaScript modules and leverage some of the useful libraries in your APEX application. 
 
 Estimated Workshop Time: 55 minutes
@@ -14,7 +14,7 @@ Estimated Workshop Time: 55 minutes
 * Extending APEX Application Using JavaScript
 * Use External Modules
 
-*Note: This workshop assumes you are using Oracle Database 23c and Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle Database 23ai and Oracle APEX 23.1.*
 
 ### Labs
 
