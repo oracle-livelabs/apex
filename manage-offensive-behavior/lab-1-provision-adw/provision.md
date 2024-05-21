@@ -150,4 +150,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * [Bob Peulen](https://www.linkedin.com/in/bobpeulen/), Data Science and ML Specialist
 * [Piotr Kurzynoga](https://www.linkedin.com/in/piotr-kurzynoga/), Data Development Specialist
-* **Last Updated By/Date** - Bob Peulen, November 2023
+* **Last Updated By/Date** - Piotr Kurzynoga, May 2024
