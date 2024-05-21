@@ -4,6 +4,8 @@
 
 In this lab, you will build an interactive Project Management application using the AI-driven Create Application wizard on the sample dataset you have data structures you built in the previous lab.
 
+Estimated Time: 15 minutes
+
 ### Objectives
 - Create an application using the AI-driven Create Application wizard and with the sample datasets from the previous Lab
 
@@ -26,21 +28,25 @@ In this lab, you will build an interactive Project Management application using 
 
     !["Click create app using Gen AI"](images/click-create-app-wizard.png "")
 
-4. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below.
+4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Refresh Cache** and then click **Accept**.
+
+     ![Refresh Cache](images/refresh-cache.png "")
+
+5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below.
 
     >Prompt 1:
     >Create an application with Projects, Milestones, Status, Tasks, To Dos, Links, and Comments. Also, enable all the Features
 
     !["first prompt"](images/prompt1.png "")
 
-5. Now, we need to remove Form/Edit Pages from the AI-suggested pages and then convert all the Interactive Report Pages to Interactive Report with a Form.
+6. Now, we need to remove Form/Edit Pages from the AI-suggested pages and then convert all the Interactive Report Pages to Interactive Report with a Form.
     >Prompt 2:
     >Remove all the Form pages and convert all the Interactive Report pages to Interactive Report with a Form
 
     !["second prompt"](images/prompt2.png "")
     !["second prompt"](images/prompt2_1.png "")
 
-6. Similarly, you need to set the Milestones Page as an Interactive Grid and then Make the Project Dashboard page the Homepage.
+7. Similarly, you need to set the Milestones Page as an Interactive Grid and then Make the Project Dashboard page the Homepage.
     >Prompt 3:
     Set Milestones Page as Interactive Grid
 
@@ -51,14 +57,14 @@ In this lab, you will build an interactive Project Management application using 
 
     !["fourth prompt"](images/prompt4.png "")
 
-7. Then, You need to add a few more Interactive reports with Form pages to track Tasks, To Dos and Link.
+8. Then, You need to add a few more Interactive reports with Form pages to track Tasks, To Dos and Link.
 
     >Prompt 5:
-    Add pages for Tasks, To Dos, and Links utilizing the tables EBA_PROJECT_TASKS, EBA_PROJECT_TASK_TODOS, and EBA_PROJECT_TASK_LINKS. These pages will be of the page type Interactive Reports with a Form
+    Add pages for Tasks, To Dos, and Links utilizing the tables EBA\_PROJECT\_TASKS, EBA\_PROJECT\_TASK\_TODOS, and EBA\_PROJECT\_TASK\_LINKS. These pages will be of the page type Interactive Reports with a Form
 
     !["fifth prompt"](images/prompt5.png "")
 
-8. Finally, set the Project Dashboard Page as a Cards region and click **Create Application**.
+9. Finally, set the Project Dashboard Page as a Cards region and click **Create Application**.
 
     >Prompt 6:
     Set the Project Dashboard page as Cards Region
@@ -67,15 +73,15 @@ In this lab, you will build an interactive Project Management application using 
 
 > **Note:** _The pages might differ based on the prompt. Make sure that you have **Project Dashboard page defined as Cards Region**, **Project Tasks to-dos, and Links pages created as Interactive report with a Form** by giving appropriate prompts_
 
-9. On the Create an Application page, click **Appearance** Icon.
+10. On the Create an Application page, click **Appearance** Icon.
 
     ![select appearance](images/click-appearance.png " ")
 
-10. In the Appearance Wizard, Select **Redwood Light** and then click **Save Changes**.
+11. In the Appearance Wizard, Select **Redwood Light** and then click **Save Changes**.
 
     ![select redwood light theme](images/select-redwood-light.png " ")
 
-11. Make sure that all the Features are enabled by default and then click **Create Application**.
+12. Make sure that all the Features are enabled by default and then click **Create Application**.
 
     ![click create application](images/click-create-applciation.png " ")
 

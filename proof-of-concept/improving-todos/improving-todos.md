@@ -66,33 +66,33 @@ In the Runtime environment navigate to Project Task To Dos and notice that the r
 
     ![run application](images/run-app.png " ")
 
-4. In the runtime environment, in the Project Tasks Todos report menu, click **Actions**. In the dropdown, select **Columns**.
+8. In the runtime environment, in the Project Tasks Todos report menu, click **Actions**. In the dropdown, select **Columns**.
 
     ![click actions](images/click-actions.png " ")
 
-5. In the Select Columns dialog, select **Project Name** and **Milestone Name** from the Left side or **Do Not Display** side and move them to **Display in Report**.   
+9. In the Select Columns dialog, select **Project Name** and **Milestone Name** from the Left side or **Do Not Display** side and move them to **Display in Report**.   
 
     ![move columns](images/move-columns.png " ")
 
-6. In the Select Columns dialog, click **Project Name**.        
+10. In the Select Columns dialog, click **Project Name**.        
     Hold down the [Shift] key, and click **Milestone Name**.     
     In the options on the right of the dialog, click **Top**.        
     Click **Apply**.
 
     ![change position](images/change-position.png " ")
 
-6. You need to save the revised report layout so others will see the new and improved column placement.
+11. You need to save the revised report layout so others will see the new and improved column placement.
 
     In the runtime environment, in the To Dos report menu, click **Actions**.       
     In the dropdown, select **Report**, and then click **Save Report**.
 
     ![save report](images/save-report.png " ")
 
-7.  In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.
+12.  In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.
 
     ![save as default](images/save-as-default.png " ")
 
-8. In the Save Default Report dialog, click **Apply**.     
+13. In the Save Default Report dialog, click **Apply**.     
 
     ![save default](images/save-default.png " ")
     > **Note:** _You want to save the report as Primary so that it displayed as you see it now to end users when they navigate to the page_
@@ -120,7 +120,7 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![select sql query](images/select-sql-query.png " ")
 
-4. To retrieve the Project name and Milestone Name from the respective tables, copy and paste the below prompt in your AI Assistant and click **Enter**.
+5. To retrieve the Project name and Milestone Name from the respective tables, copy and paste the below prompt in your AI Assistant and click **Enter**.
 
     >Prompt:  
 
@@ -128,15 +128,15 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![enter prompt 2](images/enter-prompt2.png " ")
 
-5. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**. Then, click **Validate** in your Code Editor Toolbar. If the query doesn't throw any errors, click **Apply Changes**.
+6. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**. Then, click **Validate** in your Code Editor Toolbar. If the query doesn't throw any errors, click **Apply Changes**.
 
     ![generated sql](images/generated-sql1.png " ")
 
-6. In the Code Editor toolbar, click **Validate**. If the SQL is validated successfully, then click **OK**.
+7. In the Code Editor toolbar, click **Validate**. If the SQL is validated successfully, then click **OK**.
 
     ![validate code](images/validate-code.png " ")
 
-7. In the List of Values page, enter the following:
+8. In the List of Values page, enter the following:
 
     - Column Mapping > Return - select **ID**
 
@@ -149,10 +149,10 @@ This same LOV is used on the Links form page so we can reuse it there as well.
     To display the extra columns, click **Select Columns**
 
     On the Select Additional Display Columns, performing the following actions:     
-    - Move **PROJECT (Varchar2)** to the right pane             
-    - Move **MILESTONE (Varchar2)** to the right pane   
+    - Move **PROJECT_NAME (Varchar2)** to the right pane             
+    - Move **MILESTONE_NAME (Varchar2)** to the right pane   
     - Move **NAME (Varchar2)** to be below Milestone in the right pane    
-    > **Note:** _The ID column must be included in the list, however, it will be marked as Visible = _No_ so will not be displayed_
+    > **Note:** The ID column must be included in the list, however, it will be marked as Visible = No so will not be displayed
 
     Click **Update**.
 
@@ -162,28 +162,28 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![click apply changes](images/click-apply-changes.png " ")
 
-6. On the Project Task Todo form page you will need to update the item type for Task.
+9. On the Project Task Todo form page you will need to update the item type for Task.
 
     From Shared Components, within the breadcrumbs, click **Application xxxxx**.
 
     ![click application](images/click-app.png " ")
 
-    From the application home page, in the list of pages, click **10 - To Dos**.
+    From the application home page, in the list of pages, click **XX - Project Task Todo**.
 
     ![go to page 10](images/go-to-page10.png " ")
 
-7. Within Page Designer, in the Rendering tree (left pane), click **P10\_TASK_ID**.  
+10. Within Page Designer, in the Rendering tree (left pane), click **P10\_TASK_ID**.  
     In the Property Editor (right pane), for Identification > Type, select **Popup LOV**.
 
     ![set task lov](images/set-task-lov.png " ")   
 
-8. In the Page Designer toolbar, click **Save**.
+11. In the Page Designer toolbar, click **Save**.
 
-9. Time to review the completed form page.    
+12. Time to review the completed form page.    
 
     - Navigate to the runtime environment tab or browser.
 
-    - Navigate to **To Dos** and refresh the page.   
+    - Navigate to **Project Task Todo** and refresh the page.   
 
     - Click the edit icon for a To Do.
 

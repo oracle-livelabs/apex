@@ -44,7 +44,7 @@ In a similar fashion to how you modified the Project Tasks Todos report, you nee
 
     >Prompt:  
 
-    >Write a query to retrieve details from the EBA\_PROJECT\_TASK\_TODOS table, including associated project and milestone names, by using subqueries to join the EBA\_PROJECTS, EBA\_PROJECT\_TASKS, and EBA\_PROJECT\_MILESTONES tables.
+    >Write a query to retrieve details from the EBA\_PROJECT\_TASK\_LINKS table, including associated project and milestone names, by using subqueries to join the EBA\_PROJECTS, EBA\_PROJECT\_TASKS, and EBA\_PROJECT\_MILESTONES tables.
 
     ![enter prompt1](images/enter-prompt1.png " ")
 

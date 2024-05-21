@@ -45,17 +45,17 @@ In this task, you will configure the Generative AI Service that the Project Mana
 
     ![create page wizard](./images/create-blank-page.png " ")
 
-3. Enter the following and click **Next**.
+4. Enter the following and click **Next**.
 
   - Under Page Definition
-    - Page Number: **13**
     - Name: **Inline Assistant**
     - Page Mode: **Modal Dialog**
 
-  - Under Navigation, deselect **Breadcrumb** and **Navigation**.
-
   Click **Create Page**.
     ![create page wizard](./images/create-blank-page1.png " ")
+
+    > **Note:** _Note the newly created page number. You will be using this page number in the upcoming steps. In this case my Page Number is 13_
+
 
 ## Task 3: Add Items to the Page
 
@@ -66,7 +66,6 @@ Add three hidden items to store the project ID, project name and project details
 2. In the Rendering tree (left pane), Right-click on Content Body and click **Create Page Item**.
 
     ![Rendering Tree](./images/create-item.png " ")
-
 
 3. In the property editor, set the name and type as follows:
 

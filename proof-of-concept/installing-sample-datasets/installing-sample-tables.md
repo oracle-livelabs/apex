@@ -40,7 +40,7 @@ In this lab, you will:
     - Under Indentification
       - AI Providier: **Open AI**
       - Name: **OpenAI Service**
-    - Settings > Use App Builder: **Toggle On**
+    - Settings > Used by App Builder: **Toggle On**
     - Credentials > API Key: **Enter the API Key you procured from OpenAI**
     - Advanced > AI Model: **gpt-4-turbo**
 
