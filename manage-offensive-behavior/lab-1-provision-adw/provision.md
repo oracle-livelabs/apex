@@ -48,7 +48,9 @@ First, we’ll create an Autonomous Database. This database will be used to stor
 14. In the overview page, click on **'Database Actions'** and following on **'SQL**'. Note. When clicking on 'Database Actions', please wait to fully load the list of actions
     ![lab_1_img_5_database_actions](images/lab_1_img_5_database_actions.JPG)
 
-15. A new page should open, displaying a **SQL worksheet.** Note. By following these steps, you should be logged in as Admin automatically. If prompted to log in, log in in with your Admin credentials
+15. A new landing page should open, proceed to the **SQL worksheet.** Note. By following these steps, you should be logged in as Admin automatically. If prompted to log in, log in in with your Admin credentials
+    ![lab_1_img_10_newlanding](images/lab_1_img_10_newlanding.png)
+
 16. In the SQL Worksheet, please copy the below **PL/SQL statement** and click on **Run Script**. This script will create a new user (i.e., schema) in the database including all needed permissions, you can always create the Database User and APEX Workspace/User through the wizard. 
 
     ```
@@ -148,4 +150,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 * [Bob Peulen](https://www.linkedin.com/in/bobpeulen/), Data Science and ML Specialist
 * [Piotr Kurzynoga](https://www.linkedin.com/in/piotr-kurzynoga/), Data Development Specialist
-* **Last Updated By/Date** - Bob Peulen, November 2023
+* **Last Updated By/Date** - Piotr Kurzynoga, May 2024
