@@ -68,7 +68,7 @@ Estimated time: 30 minutes
 
       ![](images/image4.png " ")
 
-5.  Download the Data Pump Export File [Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/expdp_alpha121.dmp).
+5.  Download the Data Pump Export File [Here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/expdp_alpha121.dmp).
 
 6.  Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 

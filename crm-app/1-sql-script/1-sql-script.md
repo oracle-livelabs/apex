@@ -43,37 +43,37 @@ In this lab, you will:
     latitude num
     longitude num
     salesrep vc30
-   DM_oppty /references DM_customer
-     product vc30 /nn
-     value num
-     is_qualfied_yn /check Y, N
-     probability num
-     status vc30 /nn /values SUSPECT, PROSPECT, CUSTOMER
-     type vc30 /nn /values HOT, WARM, COLD, DEAD
-     term vc30 /nn /values MEDIUM TERM, SHORT TERM, LONG TERM
-     stage vc30 /nn /values QUALIFY, DEVELOP, PROPOSE, CLOSE
-     close_date
-     description
-     profile
-     DM_activity /references DM_oppty
-         activity vc30 /nn /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
-         is_complete_yn /check Y, N
-         completed_date
-         description
-     DM_COMMENTS /references DM_oppty
+    DM_oppty /references DM_customer
+    product vc30 /nn
+    value num
+    is_qualfied_yn /check Y, N
+    probability num
+    status vc30 /nn /values SUSPECT, PROSPECT, CUSTOMER
+    type vc30 /nn /values HOT, WARM, COLD, DEAD
+    term vc30 /nn /values MEDIUM TERM, SHORT TERM, LONG TERM
+    stage vc30 /nn /values QUALIFY, DEVELOP, PROPOSE, CLOSE
+    close_date
+    description
+    profile
+    DM_activity /references DM_oppty
+    activity vc30 /nn /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
+    is_complete_yn /check Y, N
+    completed_date
+    description
+    DM_COMMENTS /references DM_oppty
         note vc4000 /nn
 
-     DM_STATUS_LOOKUP /insert 3
+    DM_STATUS_LOOKUP /insert 3
      status vc30 /values SUSPECT, PROSPECT, CUSTOMER
-     DM_TYPE_LOOKUP /insert 4
+    DM_TYPE_LOOKUP /insert 4
      type vc30 /values HOT, WARM, COLD, DEAD
-     DM_TERM_LOOKUP /insert 3
+    DM_TERM_LOOKUP /insert 3
      term vc30 /values MEDIUM TERM, SHORT TERM, LONG TERM
-     DM_STAGE_LOOKUP /insert 4
+    DM_STAGE_LOOKUP /insert 4
      stage vc30 /values QUALIFY, DEVELOP, PROPOSE, CLOSE
-     DM_ACTIVITY_LOOKUP /insert 5
+    DM_ACTIVITY_LOOKUP /insert 5
      activity vc30 /values IN-PERSON MEETING, ZOOM MEETING, PRESENTATION, EMAIL, PHONE CALL
-     DM_PRODUCT_LOOKUP /insert 8
+    DM_PRODUCT_LOOKUP /insert 8
      product vc40 /values WIDGETS, SPROCKETS, SPOKES, WIDGETS, COG WHEELS, GEARS, GRADER MACHINE, CHAIN MODULES
    DM_salesrep
      salesrep vc50
@@ -155,7 +155,7 @@ In this lab, you will:
 
     ![Load Data](images/cust-load-data.png " ")
 
-3. Upload Customer.csv file
+3. Upload [**customer.csv**](files/customer.csv)
 
     ![load data file](images/load-data-file.png " ")
 
@@ -169,9 +169,11 @@ In this lab, you will:
 
     ![Preview Customer Table](images/preview-cust-table.png " ")
 
- /*Repeat the same steps to load data for tables DM_oppty, DM_activity, DM_comments, DM_salesrep.*/
-
-
+ *Repeat the same steps to load data for tables DM_oppty, DM_activity, DM_comments, DM_salesrep.*
+ [**oppty.csv**](files/oppty.csv)
+ [**salesrep.csv**](files/salesrep.csv)
+ [**activity.csv**](files/activity.csv)
+ [**comments.csv**](files/comments.csv)
 
 ## Summary
 
@@ -180,5 +182,6 @@ You now know how to utilize the Create Application wizard directly from SQL Scri
 You may now **proceed to the next lab**.   
 
 ## Acknowledgments
-- **Author** - Ankita Beri, Product Manager
+- **Author** - Tom Edwards - Director of Application Development Business Development, Ankita Beri - Product Manager
+- **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023

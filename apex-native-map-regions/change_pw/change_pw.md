@@ -15,7 +15,7 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-* Oracle Database 23c Free Developer Release
+* Oracle Database 23ai Free Developer Release
 * A terminal or console access to the database
 
 ## Task 1: Resetting database user password
@@ -48,7 +48,7 @@ This lab assumes you have:
 
 
     Connected to:
-    Oracle Database 23c Free, Release 23.0.0.0.0 - Developer-Release
+    Oracle Database 23ai Free, Release 23.0.0.0.0 - Developer-Release
     Version 23.2.0.0.0
 
     SQL>
@@ -87,7 +87,7 @@ This lab assumes you have:
 
     ```
     SQL> <copy>exit</copy>
-    Disconnected from Oracle Database 23c Free, Release 23.0.0.0.0 - Developer-Release
+    Disconnected from Oracle Database 23ai Free, Release 23.0.0.0.0 - Developer-Release
     Version 23.2.0.0.0
     [FREE:oracle@hol23cfdr:~]$
     ```
