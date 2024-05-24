@@ -32,13 +32,13 @@ In this lab, you will:
 
     ![App builder home page](images/fs-price.png " ")
 
-4. Select **P10\_DISCOUNT** facet under Search Region.
+4. Select **P10\_DISCOUNT** facet under Search Region, enter/select the following:
 
     - Layout > Sequence: **30**
 
     - List of Values> Type: **Static Values**
 
-       - Click on Static Values: Enter the following
+        - Click on Static Values: Enter the following
 
        | Display Value |  Return Value  |
        | --- |  --- |
@@ -66,21 +66,25 @@ In this lab, you will:
 
 ## Task 2: Integrate Global Search
 
-1. Under Rendering tab, Right-click on Body and Select **Page Item**. Enter the following:
+1. Under Rendering tab, Right-click on Body and Select **Page Item**.
 
      ![App builder home page](images/fs-page-item.png " ")
 
-   - Name: **P10\_SEARCH\_PAGE\_ITEM**
+2. In the Property Editor, enter/select the following:
 
-   - Label: **Search**
+    - Under Identification:
 
-   - Type: **Text field with Autocomplete**
+       - Name: **P10\_SEARCH\_PAGE\_ITEM**
 
-  Under List of Values:
+       - Type: **Text field with Autocomplete**
 
-   - Type: **SQL Query**
+   - Label > Lable: **Search**
 
-   - Copy and paste the code in **SQL Query**:
+   - Under List of Values:
+
+       - Type: **SQL Query**
+
+       - SQL Query: Copy and paste the below code:
 
     ```
     <copy>
@@ -98,36 +102,36 @@ In this lab, you will:
 
     ![App builder home page](images/fs-search-item.png " ")
 
-2. Select **P10\_SEARCH** page item under Search region.
+3. Select **P10\_SEARCH** page item under Search region.
 
-    Under Settings:
+    - Under Settings:
 
-    - Input Field: **External Page Item**
+        - Input Field: **External Page Item**
 
-    - External Page Item: **P10_SEARCH_PAGE_ITEM**
+        - External Page Item: **P10_SEARCH_PAGE_ITEM**
 
-    Under Source:
+    - Under Source:
 
-    - Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
+        - Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
 
     ![App builder home page](images/fs-search-attributes.png " ")
 
 
-3. Drag and drop **P10\_SEARCH\_PAGE\_ITEM** page item just above the Button Bar.
+4. Drag and drop **P10\_SEARCH\_PAGE\_ITEM** page item just above the Button Bar.
 
     ![App builder home page](images/fs-drag.png " ")
 
-4. Click **Save and Run**.
+5. Click **Save and Run**.
 
 ## Task 3: Enhance the Cards region
 
-1. Select **Search Results** Region and Enter the following:
+1. Select **Search Results** Region and Enter/select the following:
 
-    Under Source:
+    - Under Source:
 
-    - Type: **SQL Query**
+       - Type: **SQL Query**
 
-    - SQL Query: Copy and paste the below code
+       - SQL Query: Copy and paste the below code
 
     ```
     <copy>
@@ -153,26 +157,25 @@ In this lab, you will:
 
 2. Under Appearance:  
 
-   Select **Template Options** and enter the following:
+   Select **Template Options** and enter/select the following:
 
-    -  Style: Style C and Click **OK**
+    -  Style: **Style C** and Click **OK**
 
     ![App builder home page](images/template-options.png " ")
 
-3. Select Attributes (For the Search Results Region) and enter the following:
+3. In the Property Editor, under **Attributes** (For the Search Results Region) and enter/select the following:
 
-    Under Appearance:
-    - Grid Columns: **4 columns**
+    - Appearance > Grid Columns: **4 columns**
 
-    Under Card:
-    -  Primary Key: **BOOK_ID**
+    - Under Card > Primary Key: **BOOK_ID**
 
-    Under Title:
-    - CSS Classes: **book-title**
+    - Title > CSS Classes: **book-title**
 
-    Under Body:
-    - **Enable** Advanced Formatting
-    - HTML expression: Enter the following
+    - Under Body:
+
+        - Advanced Formatting: **Toggle On**
+
+        - HTML expression: Copy and Paste the below HTML code:
 
     ```
     <copy>
@@ -191,16 +194,19 @@ In this lab, you will:
 
       ![App builder home page](images/search-results-attributes.png " ")
 
-    Under Media:
-    - Source: **Image URL**
-    - URL: **&BOOK_IMAGE.**
-    - Image Description: **&DESCRIPTION.**
+    - Under Media:
+
+        - Source: **Image URL**
+
+        - URL: **&BOOK_IMAGE.**
+
+        - Image Description: **&DESCRIPTION.**
 
     ![App builder home page](images/image-atrributes.png " ")
 
-4. Select **Page 10: Search Books** and enter the following:
-    Under CSS:
-    - Inline: Enter the following
+4. Select **Page 10: Search Books** region and enter the following into the property editor:
+
+    - CSS > Inline: Copy and Paste the below HTML Code:
 
     ```
     <copy>
@@ -219,10 +225,12 @@ In this lab, you will:
 
 ## Task 4: Activate Sorting options
 
-1. Select **Search Results** region and enter the following:
+1. Select **Search Results** region and enter/select the following:
 
     Under Order By:
+
     - Type: **Item**
+
     - Click **Order by item** and enter the following:
 
     | Clause |  Key | Display |
@@ -237,9 +245,11 @@ In this lab, you will:
 
 3. Select P10\_ORDER\_BY under Results Region and enter the following:
 
-    Under Default:
-    - Type: Select **Static**
-    - Static Value: TITLE
+    - Under Default:
+
+       - Type: Select **Static**
+
+       - Static Value: TITLE
 
 5. Click **Save and run**.
 
@@ -259,9 +269,12 @@ In this lab, you will:
 
     ![App builder home page](images/blank-page.png " ")
 
-4. On Create Blank Page dialog, enter the following details:
-     - Page No: 18
-     - Name: Book Details
+4. On Create Blank Page dialog, enter/select the following details:
+
+     - Page No: **18**
+
+     - Name: **Book Details**
+
      - Page Mode: Modal Dialog
 
     Click **Create Page**
@@ -269,9 +282,8 @@ In this lab, you will:
     ![App builder home page](images/blank-page-details.png " ")
 
 5. Under Rendering Pane, Click **Page 18: Book Details** and update the following:
-    - Under security:
 
-       - Authentication: Page is Public
+    - Security > Authentication: **Page is Public**
 
     ![App builder home page](images/authentication-bp.png " ")
 
@@ -279,7 +291,7 @@ In this lab, you will:
 
      ![App builder home page](images/region-bp.png " ")
 
-7. In the Property Editor, update the following properties:
+7. In the Property Editor, enter/select the following properties:
 
     - Identification > Name: **Buttons Bar**
 
@@ -291,7 +303,7 @@ In this lab, you will:
 
     ![App builder home page](images/page-item-bp.png " ")
 
-9. In the Property Editor, update the following properties:
+9. In the Property Editor, enter/select the following properties:
 
    - Under Identification:
 
@@ -311,7 +323,7 @@ In this lab, you will:
 
     ![App builder home page](images/computation-bp.png " ")
 
-13. In the Property Editor, update the following properties:
+13. In the Property Editor, enter/select the following properties:
 
     - Execution > Point: **Before Header**
 
@@ -339,11 +351,11 @@ In this lab, you will:
 
 17. In the Property Editor, update the following properties:
 
-    - Execution > Point: Before Header
+    - Execution > Point: **Before Header**
 
     - Under Computation:
 
-       - Type: SQL Query (return single value)
+       - Type: **SQL Query (return single value)**
 
        - SQL Query: Copy and paste below code into the code editor
 
@@ -359,7 +371,7 @@ In this lab, you will:
 
       ![App builder home page](images/create-region1.png " ")
 
-19. In the Property Editor, update the following properties:
+19. In the Property Editor, enter/select the following properties:
 
     - Under Identification:
 
@@ -373,7 +385,7 @@ In this lab, you will:
 
     ![App builder home page](images/region-details1.png " ")
 
-20. Right_Click **Content Body** and Select **Create Region**. In the Property Editor, update the following properties:
+20. Right_Click **Content Body** and Select **Create Region**. In the Property Editor, enter/select the following properties:
 
      - Under Identification:
 
@@ -450,7 +462,7 @@ In this lab, you will:
 
       ![App builder home page](images/book-info-button.png " ")
 
-26. In the Property Editor, update the following properties:
+26. In the Property Editor, enter/select the following properties:
 
      - Identification > Name: **BUY\_LINK**
 
@@ -484,11 +496,11 @@ In this lab, you will:
 
     ![App builder home page](images/navigate-to-10.png " ")
 
-28. In the left pane, Under Search Results region, Right-click Action and Select **Create Action**.
+28. In the left pane, Under **Search Results** region, Right-click **Actions** and Select **Create Action**.
 
     ![App builder home page](images/create-action.png " ")        
 
-29. In the Property Editor, update the following properties:
+29. In the Property Editor, enter/select the following properties:
 
     - Identification > Type: **Full Card**
 

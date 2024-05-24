@@ -60,7 +60,7 @@ The code also includes error handling to manage exceptions and set appropriate a
 
    ![App builder home page](images/pack-spec.png " ")
 
-5. Under Body, Copy and paste below code:
+5. Under **Body**, Copy and paste below code:
 
    ```
    <copy>
@@ -166,9 +166,26 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
 
 3. In the code editor, copy and paste the below code and click **Save and Compile**.
 
+     ```
+     <copy>
+     create or replace trigger "OBS_USERS_T"
+     before
+     insert or update on "OBS_USERS"
+     for each row
+     begin
+     :new.email := lower(:new.email);
+     :new.username := lower(:new.username);
+     if :new.password is NOT NULL AND (:OLD.PASSWORD != :new.password or :OLD.PASSWORD is NULL ) then
+     :new.password := obs_auth.hash_password(lower(:new.email), :new.password);
+     end if;
+     end;
+     /
+     </copy>
+     ```
+
    ![App builder home page](images/trg-code.png " ")
 
-4. Expand Tables and select **OBS_USERS**. Under Data, Click **Insert Row** and update the following:
+4. Expand Tables and select **OBS_USERS**. Under **Data**, Click **Insert Row** and enter/select the following:
 
   - USER_ID: 1
 
@@ -209,7 +226,7 @@ In this task, you will learn to create custom authentication.
 
    ![App builder home page](images/auth-next.png " ")
 
-6. Update the following properties:
+6. Enter/select the following properties:
 
    - Under Name:
 

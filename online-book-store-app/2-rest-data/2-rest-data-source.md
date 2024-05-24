@@ -31,7 +31,7 @@ In this lab, you will:
 
     ![App builder home page](images/select-sc.png " ")
 
-4. Under **Data Sources**, select REST Data Sources.
+4. Under **Data Sources**, select **REST Data Sources**.
 
     ![App builder home page](images/rest-data-source.png " ")
 
@@ -43,11 +43,11 @@ In this lab, you will:
 
     ![App builder home page](images/rds-next1.png " ")
 
-7. On Create REST Data Source :
+7. On Create REST Data Source, enter/select the following:
 
-     - REST Data Source Type : Select **Simple HTTP**
+     - REST Data Source Type : **Simple HTTP**
 
-     - Name  : Enter **Books API**
+     - Name  : **Books API**
 
      - URL Endpoint: Copy and paste below API
 
@@ -57,11 +57,11 @@ In this lab, you will:
 
     ![App builder home page](images/rds-name.png " ")
 
-8. On Create REST Data Source - Remote Server wizard, leave as default and Click **Next**.
+8. On **Create REST Data Source - Remote Server** wizard, leave as default and Click **Next**.
 
     ![App builder home page](images/rds-next2.png " ")
 
-9. On Create REST Data Source - Settings wizard, leave as default and Click **Next**.
+9. On **Create REST Data Source - Settings** wizard, leave as default and Click **Next**.
 
     ![App builder home page](images/rds-next3.png " ")
 
@@ -79,19 +79,19 @@ In this lab, you will:
 
     ![App builder home page](images/click-no.png " ")
 
-2. Under **Details**, enter the following:
+2. Under **Details**, enter/select the following:
 
-    - For Local Table Owner : Select **OBS_APP**
+    - Local Table Owner : **OBS\_APP**
 
-    - For Synchronize to : Select **Existing Table**
+    - Synchronize to : **Existing Table**
 
-    - For Table Name: Select **OBS_BOOKS**
+    - Table Name: **OBS\_BOOKS**
 
     Click **Save**.
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, For Synchronization Type: Select **Replace** and Click **Save and Run**.
+3. Now, For **Synchronization Type**: Select **Replace** and Click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 
@@ -106,11 +106,14 @@ In this task, you create Faceted Search page which will display list of the book
 
    ![App builder home page](images/fs.png " ")
 
-3. In the Create Faceted Search Page dialog:
+3. In the Create Faceted Search Page dialog, enter/select the following:
 
-    - Page Number: Enter **10**
-    - Name: Enter **Search Books**
-    - Table/View Name: Select **OBS_BOOKS**
+    - Page Number: **10**
+
+    - Name: **Search Books**
+
+    - Table/View Name: **OBS_BOOKS**
+
     - Use Breadcrumb: Toggle **Off**
 
    Click **Next**.
