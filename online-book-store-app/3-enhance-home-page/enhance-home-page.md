@@ -16,13 +16,13 @@ In this lab, you will:
 ## Task 1: Improve Faceted Search
 1. Go to the Application Home Page and then click on Page 10 - Search Books.
 
-2. Select **P10\_AUTHOR** facet under Search Region.
+2. Under **Search** Region, Select **P10\_AUTHOR** facet and update the following:
 
     - Layout > Sequence: **10**
 
     ![App builder home page](images/fs-author.png " ")
 
-3. Now, Select **P10\_PRICE** facet under Search Region.
+3. Now, Select **P10\_PRICE** facet and update the following:
 
     - Layout > Sequence: **20**
 
@@ -32,7 +32,7 @@ In this lab, you will:
 
     ![App builder home page](images/fs-price.png " ")
 
-4. Select **P10\_DISCOUNT** facet under Search Region, enter/select the following:
+4. Select **P10\_DISCOUNT** facet, enter/select the following:
 
     - Layout > Sequence: **30**
 
@@ -52,7 +52,7 @@ In this lab, you will:
 
     ![App builder home page](images/fs-discount.png " ")
 
-5. Select **P10\_CATEGORY** facet under Search Region.
+5. Select **P10\_CATEGORY** facet, enter/select the following:
 
     - Layout > Sequence: **40**
 
@@ -66,7 +66,7 @@ In this lab, you will:
 
 ## Task 2: Integrate Global Search
 
-1. Under Rendering tab, Right-click on Body and Select **Page Item**.
+1. In the left pane, Right-click **Body** and Select **Page Item**.
 
      ![App builder home page](images/fs-page-item.png " ")
 
@@ -102,7 +102,7 @@ In this lab, you will:
 
     ![App builder home page](images/fs-search-item.png " ")
 
-3. Select **P10\_SEARCH** page item under Search region.
+3. Select **P10\_SEARCH** page item, enter/select the following:
 
     - Under Settings:
 
@@ -227,11 +227,11 @@ In this lab, you will:
 
 1. Select **Search Results** region and enter/select the following:
 
-    Under Order By:
+    - Under Order By:
 
-    - Type: **Item**
+        - Type: **Item**
 
-    - Click **Order by item** and enter the following:
+        - Click **Order by item** and enter the following:
 
     | Clause |  Key | Display |
     | --- |  --- | --- |
@@ -243,7 +243,7 @@ In this lab, you will:
 
     ![App builder home page](images/order-by-item.png " ")
 
-3. Select P10\_ORDER\_BY under Results Region and enter the following:
+3. Select **P10\_ORDER\_BY** and enter the following:
 
     - Under Default:
 
@@ -269,7 +269,7 @@ In this lab, you will:
 
     ![App builder home page](images/blank-page.png " ")
 
-4. On Create Blank Page dialog, enter/select the following details:
+4. On **Create Blank Page** dialog, enter/select the following details:
 
      - Page No: **18**
 
@@ -512,7 +512,7 @@ In this lab, you will:
 
             - Page: **18**
 
-            - Name: **P18\_BOOK\_ID** / Value: **&BOOK_ID.**
+            - Name: **P18\_BOOK\_ID** and Value: **&BOOK_ID.**
 
             - Clear Cache: 18
 

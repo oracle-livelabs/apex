@@ -20,7 +20,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![App builder home page](images/go-create-app.png " ")
 
-2. Click Create or Create a New App.
+2. Click **Create** or **Create a New App**.
 
     ![Create Application options](./images/new-app.png " ")
 
@@ -32,7 +32,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/sc-icon.png " ")
 
-5. Under User Interface, Select **User Interface Attributes**.
+5. Under **User Interface**, Select **User Interface Attributes**.
 
     ![Create Application wizard](./images/user-interface.png " ")
 
@@ -132,7 +132,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/script-name.png " ")
 
-4. Due to some bug, Add below code into the script under OBS table:
+4. Due to some bug, on line 37, copy and replace below code into the script under OBS table:
     ```
    <copy>
    available_yn     varchar2(4000 char)  default 'Y' not null,

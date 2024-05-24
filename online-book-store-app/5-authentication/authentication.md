@@ -228,13 +228,13 @@ In this task, you will learn to create custom authentication.
 
 6. Enter/select the following properties:
 
-   - Under Name:
+    - Under Name:
 
-      - Name: **Custom Authentication**
+       - Name: **Custom Authentication**
 
-      - Schema Type: **Custom**
+       - Schema Type: **Custom**
 
-   - Under Settings > Authentication Function Name: **OBS\_AUTH.AUTHENTICATE\_USER**
+    - Under Settings > Authentication Function Name: **OBS\_AUTH.AUTHENTICATE\_USER**
 
      Click **Create Authentication Scheme**.
 
