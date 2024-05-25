@@ -38,7 +38,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         - Sequence: **4**
 
-        - Image/Class: **&SHOPPING_CART_ICON.**
+        - Image/Class: **&SHOPPING\_CART\_ICON.**
 
         - List Entry Label: **Shopping Cart**
 
@@ -50,7 +50,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     - Under List Entry:
 
-        - Badge Value: **&SHOPPING_CART_ITEMS.**
+        - Badge Value: **&SHOPPING\_CART\_ITEMS.**
 
         - List Item CSS Classes: **js-shopping-cart-item**
 
@@ -79,19 +79,19 @@ In this task, you develop a new page in the application to display the shopping 
 
     - Under Identification:
 
-       - Name: **Shopping Cart**
+        - Name: **Shopping Cart**
 
-       - Page Number: **17**
+        - Page Number: **17**
 
     - Under Navigation:
 
-       - Use Breadcrumb: **Toggle Off**
+        - Use Breadcrumb: **Toggle Off**
 
-       - Use Navigation: **Toggle Off**
+        - Use Navigation: **Toggle Off**
 
-     Click **Create Page**.
+        Click **Create Page**.
 
-     ![close dialog](images/create-blank-page9.png " ")
+    ![close dialog](images/create-blank-page9.png " ")
 
 5. In the left pane, Right-click **Body** and select **Create Region**.
 
@@ -254,6 +254,8 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/no-of-books.png " ")
 
+17. Click **Save**.
+
 ## Task 3: Implement Page Interactions
 In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastle, you set up processes to handle cart operations, such as removing items and clearing the cart.
 
@@ -307,29 +309,29 @@ In this task, you create buttons for removing items from the cart and proceeding
 
 6. In the Property Editor, enter/select the following:
 
-     - Under Identification:
+    - Under Identification:
 
-          - Button Name: **Clear**
+        - Button Name: **Clear**
 
-          - Label: **Clear Shopping Cart**
+        - Label: **Clear Shopping Cart**
 
-     - Layout > Position: **Change**
+    - Layout > Position: **Change**
 
-     - Under Appearance:
+    - Under Appearance:
 
-          - Button Template: **Text with Icon**
+        - Button Template: **Text with Icon**
 
-          - Template Options: Click **Template Options** 
+        - Template Options: Click **Template Options** 
 
-               - Size: **Small**
+            - Size: **Small**
 
-               - Type: **Danger**
+            - Type: **Danger**
 
-               - Style: **Remove UI Decoration**
+            - Style: **Remove UI Decoration**
 
-                   Click **OK**
+            Click **OK**
 
-          - Icon: **fa-cart-empty**
+        - Icon: **fa-cart-empty**
 
     ![close dialog](images/clear-btn.png " ")
 
@@ -337,35 +339,35 @@ In this task, you create buttons for removing items from the cart and proceeding
 
 8. In the Property Editor, enter/select the following:
 
-     - Under Identification:
+    - Under Identification:
 
-          - Button Name: **Proceed**
+        - Button Name: **Proceed**
 
-          - Label: **Proceed to Purchase**
+        - Label: **Proceed to Purchase**
 
-     - Layout > Position: **Create**
+    - Layout > Position: **Create**
 
-     - Under Appearance:
+    - Under Appearance:
 
-          - Hot: **Toggle On**
+        - Hot: **Toggle On**
 
-          - Template Options: Click **Template Options** 
+        - Template Options: Click **Template Options** 
 
-               - Size: **Small**
+            - Size: **Small**
 
-               - Type: **Success**
+            - Type: **Success**
 
-                   Click **OK**
+            Click **OK**
 
-      - Under Sever-side Condition:
+    - Under Sever-side Condition:
 
-           - Type: **Item is NOT NULL**
+        - Type: **Item is NOT NULL**
 
-           - Item: **SHOPPING\_CART\_ITEMS**
+        - Item: **SHOPPING\_CART\_ITEMS**
 
-      ![close dialog](images/proceed-btn.png " ")  
+    ![close dialog](images/proceed-btn.png " ")  
 
-      ![close dialog](images/proceed-btn1.png " ")  
+    ![close dialog](images/proceed-btn1.png " ")  
 
 9. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
 
@@ -431,6 +433,8 @@ In this task, you create buttons for removing items from the cart and proceeding
       | p\_order\_id | Item | P17\_ORDER\_ID |
 
     ![close dialog](images/user-id.png " ")
+
+15. Click **Save**.
 
 ## Task 4: Integrate Backend Processes  
 In this task, you create page processes to invoke PL/SQL procedures to manage cart actions and handle order creation and use server-side conditions and parameters to ensure smooth and secure cart management.

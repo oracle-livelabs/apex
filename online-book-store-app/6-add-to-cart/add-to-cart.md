@@ -1,4 +1,4 @@
-# Set Up Shopping Cart Functionality
+# Set Up Add to Cart Functionality
 
 ## Introduction
 This lab provides detailed instructions on enhancing the Book Details page in a application to manage shopping cart functionalities. It involves creating a package to handle orders, setting up application items and processes, and configuring page elements to allow users to add and remove books from their cart, update cart quantities, and dynamically reflect these changes on the user interface. The steps include creating necessary backend procedures and functions, setting up computations and processes, and updating the user interface components accordingly.
@@ -33,6 +33,7 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
 
 **Procedure create\_order**: Creates a new order by inserting data into the orders table and order items table based on the items in the "BOOKS" collection. It also deletes the "BOOKS" collection after order creation.
 
+To Create a Package:
 
 1. Under SQL Developer, Click **Object Browser**.
 
@@ -233,7 +234,7 @@ END OBS_MANAGE_ORDERS;
 ## Task 2: Create Application items
 In this task, you define application items to store session state information such as cart total, shopping cart items, and user details.
 
-Application items can be set using computations, processes, or by passing values on a URL.
+To create Application items:
 
 1. On the Workspace home page, click **App Builder**.
 
@@ -272,6 +273,8 @@ Application items can be set using computations, processes, or by passing values
 ## Task 3: Create Application processes
 In this task, you implement application processes to run PL/SQL code at specific points to update the shopping cart item count dynamically.
 
+To create Application Processes:
+
 1. Click **Shared Components**.
 
    ![App builder home page](images/app-item-5.png " ")
@@ -302,20 +305,21 @@ In this task, you implement application processes to run PL/SQL code at specific
 
     ```
     <copy>
-   -- Initialize shopping cart navigation bar to show appropriate icon and count
-   DECLARE
-    l_cnt NUMBER := obs_manage_orders.get_quantity;
-   BEGIN
-    IF l_cnt > 0 THEN
+     -- Initialize shopping cart navigation bar to show  appropriate icon and count
+     DECLARE
+     l_cnt NUMBER := obs_manage_orders.get_quantity;
+     BEGIN
+     IF l_cnt > 0 THEN
         :SHOPPING_CART_ITEMS := l_cnt;
         :SHOPPING_CART_ICON := 'fa-cart-full';
-    ELSE
+     ELSE
         :SHOPPING_CART_ITEMS := '';
         :SHOPPING_CART_ICON := 'fa-cart-empty';
-    END IF;
-   END;
-      </copy>
-      ```
+     END IF;
+     END;
+    </copy>
+    ```
+
     Click **Next**.
 
     ![App builder home page](images/app-process-source.png " ")
@@ -327,7 +331,7 @@ In this task, you implement application processes to run PL/SQL code at specific
 ## Task 4: Create Application computations
 In this task, you set up computations to determine user-related information upon authentication.
 
-Application computations are used to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.
+To create Application computations:
 
 1. Click **Shared Components**.
 
@@ -355,40 +359,43 @@ Application computations are used to set the value of a single page or applicati
        <copy>
        SELECT U.USER_ID FROM obs_USERS U
        WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
-      </copy>
+       </copy>
        ```
-     Click **Create Computation**.
 
-     ![App builder home page](images/create-comp.png " ")
+    Click **Create Computation**.
+
+    ![App builder home page](images/create-comp.png " ")
 
 5. Click **Create**.
 
-     ![App builder home page](images/app-comp2.png " ")
+    ![App builder home page](images/app-comp2.png " ")
 
 6. Enter/select the following:
 
-   - Under Item:
+    - Under Item:
 
-      - Sequence: **20**
+        - Sequence: **20**
 
-      - Computation Item: **USERNAME**
+        - Computation Item: **USERNAME**
 
-   - Frequency > Computation Point: **After Authentication**
+    - Frequency > Computation Point: **After Authentication**
 
-   - Under Computation:
+    - Under Computation:
 
-      - Computation Type: **SQL Query (return single value)**
+        - Computation Type: **SQL Query (return single value)**
 
-      - Computation: Copy and paste below code
-       ```
-       <copy>
-       SELECT U.USERNAME FROM OBS_USERS U
-       WHERE U.USER_ID=:USER_ID
-       </copy>
+        - Computation: Copy and paste below code:
+
         ```
-  Click **Create Computation**.
+        <copy>
+        SELECT U.USERNAME FROM OBS_USERS U
+        WHERE U.USER_ID=:USER_ID
+        </copy>
+        ```
 
-  ![App builder home page](images/create-comp2.png " ")
+    Click **Create Computation**.
+
+    ![App builder home page](images/create-comp2.png " ")
 
 ## Task 5: Set Up Book Details Page
 In this task, you enhance the Book Details page by enabling the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface reflects the current state (whether a book is in the cart or not). This involves creating hidden page items, setting up computations and SQL queries, configuring buttons with server-side conditions, and defining processes to interact with the backend API for managing cart operations.
@@ -444,12 +451,12 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
          - Display Null Value: **Toggle Off**
 
-      ![Quantity Page Item](images/book-in-cart-comp.png " ")
+    ![Quantity Page Item](images/book-in-cart-comp.png " ")
 
 
 6. Right-click **P18\_BOOK\_IN\_CART** and Click **Create Computation**.
 
-     ![reate Computation](images/book-in-cart-comp.png " ")
+    ![reate Computation](images/book-in-cart-comp.png " ")
 
 7. In the Property editor, enter/select the following:
 
@@ -524,7 +531,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
 12.  Navigate to the **Processing** tab. Right-click **Processing** and Click **Create Process**.
 
-        ![Processing](images/create-process1.png " ")
+    ![Processing](images/create-process1.png " ")
 
 13. In the Property Editor, update the following:
 
@@ -536,9 +543,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Settings:
 
-        - Package: **OBS_MANAGE_ORDERS**
+        - Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **ADD_BOOK**
+        - Procedure or Function: **ADD\_BOOK**
 
     - Server-side Condition > When button pressed: **Add_to_cart**
 
@@ -567,11 +574,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Settings
 
-        - Package: **OBS_MANAGE_ORDERS**
+        - Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **REMOVE_BOOK**
+        - Procedure or Function: **REMOVE\_BOOK**
 
-    - Server-side Condition > When button pressed: **Remove_from_cart**
+    - Server-side Condition > When button pressed: **Remove\_from\_cart**
 
     ![Delete Product](images/delete-product.png " ")
 
