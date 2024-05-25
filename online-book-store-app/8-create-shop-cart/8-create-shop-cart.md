@@ -1,19 +1,20 @@
-# Create Shopping Cart
+# Create and Manage a Shopping Cart
 
 ## Introduction
-In this lab, you will create a package with procedures and functions that collectively manage the process of adding, removing, and processing orders and wishlist items within the database application. Additionally, you will learn to create application items, processes, and computations. Moreover, you will create processes to invoke these procedures and functions.
+In this lab, you learn to create and manage a shopping cart within an Oracle APEX application. The lab includes adding navigation bar entry, creating a shopping cart page, implementing various interactive components, and integrating backend processes to handle cart operations and checkout procedures. This exercise will demonstrate the comprehensive capabilities of APEX for building dynamic web applications with a strong emphasis on database interaction and user interface design.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 In this lab, you will:
 
-- Create a Package to manage process of adding, removing, and processing orders and wishlist items.
-- Create Application Items
+- Create a Navigation Bar Entry
+- Build a Shopping Cart Page
 - Create Application processes
 - Create Application Computations
 
-## Task 1: Create Navigation Bar
+## Task 1: Create a Navigation Bar Entry
+In this task, you add an entry to the navigation bar that displays the shopping cart icon and item count dynamically.
 
 1. Navigate to **Shared Components**.
 
@@ -59,7 +60,8 @@ In this lab, you will:
 
     ![close dialog](images/nav-create-list-entry1.png " ")
 
-## Task 2: Create Shopping Cart page
+## Task 2: Build a Shopping Cart Page
+In this task, you develop a new page in the application to display the shopping cart with book details, quantities, and prices. Additionally, you implement SQL queries to fetch cart data and display it in a user-friendly format.
 
 1. Navigate to **Application ID**.
 
@@ -252,11 +254,14 @@ In this lab, you will:
 
     ![close dialog](images/no-of-books.png " ")
 
-17. Right-click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
+## Task 3: Implement Page Interactions
+In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastle, you set up processes to handle cart operations, such as removing items and clearing the cart.
+
+1. Right-click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
 
     ![close dialog](images/create-comp9.png " ")
 
-18. In the Property Editor, enter the following:
+2. In the Property Editor, enter the following:
 
     - Under Computation:
 
@@ -276,9 +281,9 @@ In this lab, you will:
 
           ![close dialog](images/comp-no-of-books.png " ")
 
-18.  Right-click **P17\_TOTAL** and select **Create Computation**.
+3.  Right-click **P17\_TOTAL** and select **Create Computation**.
 
-18. In the Property Editor, enter the following:
+4. In the Property Editor, enter/select the following:
 
     - Under Computation:
 
@@ -296,11 +301,11 @@ In this lab, you will:
 
           ![close dialog](images/comp-total.png " ")
 
-21. Right-click **Order Information** and select **Create Button**.
+5. Right-click **Order Information** and select **Create Button**.
 
     ![close dialog](images/create-btn9.png " ")
 
-22. In the Property Editor, enter the following:
+6. In the Property Editor, enter/select the following:
 
      - Under Identification:
 
@@ -328,9 +333,9 @@ In this lab, you will:
 
     ![close dialog](images/clear-btn.png " ")
 
-23. Right-click **Order Information** and select **Create Button**.
+7. Right-click **Order Information** and select **Create Button**.
 
-24. In the Property Editor, enter the following:
+8. In the Property Editor, enter/select the following:
 
      - Under Identification:
 
@@ -360,13 +365,13 @@ In this lab, you will:
 
       ![close dialog](images/proceed-btn.png " ")  
 
-      ![close dialog](images/proceed-btn1.png " ")     
+      ![close dialog](images/proceed-btn1.png " ")  
 
-25. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
+9. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/create-process9.png " ")  
 
-26. In the Property Editor, enter the following:
+10. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -388,17 +393,17 @@ In this lab, you will:
 
       ![close dialog](images/remove-from-cart-process.png " ")     
 
-27. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
+11. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
 
      - p\_book > Item: **P17\_BOOK\_ID**
 
     ![close dialog](images/remove-p-book.png " ")
 
-28. Right-click **Processing** and select **Create Process**.
+12. Right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/create-process9.png " ")  
 
-29. In the Property Editor, enter the following:
+13. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -416,22 +421,25 @@ In this lab, you will:
 
      - Server-side Condition > When Button Pressed: **Proceed**
 
-     ![close dialog](images/checkout-param.png " ")
+    ![close dialog](images/checkout-param.png " ")
 
-30. Under **Checkout** process, expand **Parameters** and update the following:
+14. Under **Checkout** process, expand **Parameters** and update the following:
 
       | Parameter       |  Type   | Item |
       | --------------- |  ------ | --------------- |
       | p\_user\_id | Item | USER\_ID |
       | p\_order\_id | Item | P17\_ORDER\_ID |
 
-      ![close dialog](images/user-id.png " ")
+    ![close dialog](images/user-id.png " ")
 
-31. Right-click **Processing** and select **Create Process**.
+## Task 4: Integrate Backend Processes  
+In this task, you create page processes to invoke PL/SQL procedures to manage cart actions and handle order creation and use server-side conditions and parameters to ensure smooth and secure cart management.
+
+1. Right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/create-process9.png " ")
 
-32. In the Property Editor, enter the following:
+2. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -449,11 +457,11 @@ In this lab, you will:
 
      ![close dialog](images/clear-sho-cart-process.png " ")
 
-33. Right-click **Processing** and select **Create Branch**.
+3. Right-click **Processing** and select **Create Branch**.
 
      ![close dialog](images/create-branch9.png " ")
 
-34. In the Property Editor, enter the following:
+4. In the Property Editor, enter the following:
 
      - Identification > Name: **Go To Books**
 
@@ -470,11 +478,11 @@ In this lab, you will:
 
      ![close dialog](images/go-to-books.png " ")
 
-35. Right-click **Processing** and select **Create Branch**.
+5. Right-click **Processing** and select **Create Branch**.
 
      ![close dialog](images/create-branch9.png " ")
 
-36. In the Property Editor, enter the following:
+6. In the Property Editor, enter the following:
 
      - Identification > Name: **Go To Orders**
 
@@ -491,7 +499,7 @@ In this lab, you will:
 
      ![close dialog](images/go-to-orders.png " ")
 
-37. Click **Save and Run**.
+7. Click **Save and Run**.
 
 ## Task 3: Run an Application
 
@@ -512,8 +520,9 @@ In this lab, you will:
     ![close dialog](images/view-shopping-cart.png " ")
 
 ## Summary
+In this lab, you successfully integrated a shopping cart feature into an Oracle APEX application. You created a navigation bar entry for the shopping cart, developed a detailed shopping cart page, and implemented interactive elements for managing cart items. Additionally, you set up backend processes to handle cart operations and order creation, demonstrating how to leverage APEX's capabilities for building dynamic, database-driven web applications. This hands-on experience enhanced your skills in PL/SQL, SQL queries, and APEX page design and process integration.
 
-You've learned how to create package, application items, application process and application computations. Ready to move on to the next lab!
+You are now ready to move on to the next lab!
 
 ## Acknowledgements
 

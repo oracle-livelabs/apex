@@ -1,9 +1,9 @@
-# Add to Cart
+# Set Up Shopping Cart Functionality
 
 ## Introduction
-In this lab, you will create a package with procedures and functions that collectively manage the process of adding, removing, and processing orders and wishlist items within the database application. Additionally, you will learn to create application items, processes, and computations. Moreover, you will create processes to invoke these procedures and functions.
+This lab provides detailed instructions on enhancing the Book Details page in a application to manage shopping cart functionalities. It involves creating a package to handle orders, setting up application items and processes, and configuring page elements to allow users to add and remove books from their cart, update cart quantities, and dynamically reflect these changes on the user interface. The steps include creating necessary backend procedures and functions, setting up computations and processes, and updating the user interface components accordingly.
 
-Estimated Time: 15 minutes
+Estimated Time: 25 minutes
 
 ### Objectives
 In this lab, you will:
@@ -12,6 +12,7 @@ In this lab, you will:
 - Create Application Items
 - Create Application processes
 - Create Application Computations
+- Set Up Book Details Page
 
 ## Task 1: Create a Package to manage orders
 In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
@@ -230,7 +231,7 @@ END OBS_MANAGE_ORDERS;
    ![App builder home page](images/pack-body1.png " ")
 
 ## Task 2: Create Application items
-In this task, you create application items which will be used while creating add to cart page. Application items do not display, but are used to maintain session state.
+In this task, you define application items to store session state information such as cart total, shopping cart items, and user details.
 
 Application items can be set using computations, processes, or by passing values on a URL.
 
@@ -269,9 +270,7 @@ Application items can be set using computations, processes, or by passing values
    ![App builder home page](images/app-item-detail.png " ")
 
 ## Task 3: Create Application processes
-In this task, you create application process to run a block of PL/SQL logic at a specific point from multiple pages of an application.
-
-This application process is used to dynamically update the shopping cart icon and item count displayed in a user interface based on the number of items in the shopping cart retrieved.
+In this task, you implement application processes to run PL/SQL code at specific points to update the shopping cart item count dynamically.
 
 1. Click **Shared Components**.
 
@@ -299,10 +298,10 @@ This application process is used to dynamically update the shopping cart icon an
 
 5. Enter the following:
 
-   - Source > Code: Copy and paste the below code.
+    - Source > Code: Copy and paste the below code.
 
-   ```
-   <copy>
+    ```
+    <copy>
    -- Initialize shopping cart navigation bar to show appropriate icon and count
    DECLARE
     l_cnt NUMBER := obs_manage_orders.get_quantity;
@@ -317,8 +316,7 @@ This application process is used to dynamically update the shopping cart icon an
    END;
       </copy>
       ```
-
-     Click **Next**.
+    Click **Next**.
 
     ![App builder home page](images/app-process-source.png " ")
 
@@ -327,7 +325,9 @@ This application process is used to dynamically update the shopping cart icon an
     ![App builder home page](images/create-process.png " ")
 
 ## Task 4: Create Application computations
-In this task, you create Application Computation. Application computations are used to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.
+In this task, you set up computations to determine user-related information upon authentication.
+
+Application computations are used to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.
 
 1. Click **Shared Components**.
 
@@ -357,13 +357,13 @@ In this task, you create Application Computation. Application computations are u
        WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
       </copy>
        ```
-    Click **Create Computation**.
+     Click **Create Computation**.
 
-    ![App builder home page](images/create-comp.png " ")
+     ![App builder home page](images/create-comp.png " ")
 
 5. Click **Create**.
 
-   ![App builder home page](images/app-comp2.png " ")
+     ![App builder home page](images/app-comp2.png " ")
 
 6. Enter/select the following:
 
@@ -390,9 +390,246 @@ In this task, you create Application Computation. Application computations are u
 
   ![App builder home page](images/create-comp2.png " ")
 
-## Summary
+## Task 5: Set Up Book Details Page
+In this task, you enhance the Book Details page by enabling the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface reflects the current state (whether a book is in the cart or not). This involves creating hidden page items, setting up computations and SQL queries, configuring buttons with server-side conditions, and defining processes to interact with the backend API for managing cart operations.
 
-You've learned how to create package, application items, application process and application computations. Ready to move on to the next lab!
+1. Click **Application ID**.
+
+    ![Application ID](images/app-build3.png " ")
+
+2. On the Workspace home page, Select **18: Book Details** page.
+
+    ![18: Book Details](images/page-18.png " ")
+
+3. In the left pane, Right-click **Buttons Bar** and click **Create Page Item**.
+
+    ![Create Page Item](images/create-button1.png " ")
+
+4. Create the following three page items, one after the other:
+
+      | Name            |  Type   |
+      | --------------- |  ------ |
+      | P18\_SHOPPING\_CART_ITEMS | Hidden |
+      | P18\_BOOK\_IN\_CART | Hidden |
+      | P18\_QUANTITY | Select List  |
+
+    ![Page Items](images/shop-cart-btn.png " ")
+
+5. In the Property Editor, enter/select the following:
+
+    - Appearance > Template: **Required - Floating**
+
+    - Under List of Values:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below code:
+
+        ```
+        <copy>
+            WITH list_of_numbers(Num) AS (
+              SELECT 1
+              FROM dual
+              UNION ALL
+              SELECT Num+1
+              FROM list_of_numbers
+              WHERE Num < (SELECT book_quantity FROM obs_books WHERE book_id = :P18_BOOK_ID)
+            )
+
+            SELECT Num as d, Num as r
+            FROM list_of_numbers;
+        </copy>
+        ```
+         - Display Extra Values: **Toggle Off**
+
+         - Display Null Value: **Toggle Off**
+
+      ![Quantity Page Item](images/book-in-cart-comp.png " ")
+
+
+6. Right-click **P18\_BOOK\_IN\_CART** and Click **Create Computation**.
+
+     ![reate Computation](images/book-in-cart-comp.png " ")
+
+7. In the Property editor, enter/select the following:
+
+    - Under Computation:
+
+        - Type: **Function Body**
+
+        - PL/SQL Function Body: Copy and paste the below code:
+
+        ```
+        <copy>
+               RETURN obs_manage_orders.book_exists(p_book => :P18_BOOK_ID);
+               </copy>
+               ```
+
+    ![Computation](images/quantity.png " ")
+
+    ![Computation](images/quantity-source.png " ")
+
+
+8.  In the left pane, Right-click **Buttons Bar** and Click **Create Button**.
+
+    ![Create Button](images/create-button4.png " ")
+
+9. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Add\_to\_Cart**
+
+        - Label: **Add To Cart**
+
+    - Layout > Position: **Next**
+
+    - Appearance > Hot: **Toggle Off**
+
+    - Under Server-Side Condition:
+
+        - Type: **Item is zero**
+
+        - Item: **P18\_BOOK\_IN\_CART**
+
+    ![Add To Cart](images/add-to-cart-btn.png " ")
+
+10. Right-click **Buttons Bar** and Click **Create Button**.
+
+11. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Remove\_from\_Cart**
+
+        - Label: **Remove From Cart**
+
+    - Layout > Position: **Edit**
+
+        - Appearance > Click **Template Options**
+
+            - Type: **Danger**
+
+            - Spacing Right: **Large**
+
+            Click **OK**.
+
+    - Under Server-Side Condition:
+
+        - Type: **Item is NOT zero**
+
+        - Item: **P18\_BOOK\_IN\_CART**
+
+    ![Remove From Cart](images/remove-from-cart.png " ")
+
+12.  Navigate to the **Processing** tab. Right-click **Processing** and Click **Create Process**.
+
+        ![Processing](images/create-process1.png " ")
+
+13. In the Property Editor, update the following:
+
+    - Under Identification:
+
+        - Name: **Add product**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **OBS_MANAGE_ORDERS**
+
+        - Procedure or Function: **ADD_BOOK**
+
+    - Server-side Condition > When button pressed: **Add_to_cart**
+
+    ![Add to cart](images/add-process.png " ")
+
+14. Expand the Parameters of **Add Product** and enter the following:
+
+      | Parameter |  Type   | Item |
+      | --------- |  ------ | ---- |
+      | p\_book | Item | P18\_BOOK\_ID |
+      | p\_quantity | Item | P18\_QUANTITY |
+
+    ![Add Product Parameter](images/add-process-book.png " ")
+
+    ![Add Product Parameter](images/add-process-quantity.png " ")
+
+15. Right-click **Processing** and Click **Create Process**.
+
+16. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Delete product**
+
+        - Type: **Invoke API**
+
+    - Under Settings
+
+        - Package: **OBS_MANAGE_ORDERS**
+
+        - Procedure or Function: **REMOVE_BOOK**
+
+    - Server-side Condition > When button pressed: **Remove_from_cart**
+
+    ![Delete Product](images/delete-product.png " ")
+
+17. Expand the Parameter of **Delete Product** and enter the following:
+
+      | Parameter |  Type   | Item |
+      | --------- |  ------ | ---- |
+      | p\_book | Item | P18\_BOOK\_ID |
+
+    ![Delete Product Parameter](images/delete-pro-pram.png " ")
+
+18. Right-click **Processing** and Click **Create Process**.
+
+19. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Calculate Shopping Cart Items**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **OBS\_MANAGE\_ORDERS**
+
+        - Procedure or Function: **GET\_QUANTITY**
+
+    - Server-side Condition > When button pressed: **Remove\_from\_cart**
+
+    ![Calculate Shopping Cart Items](images/cal-item-process.png " ")
+
+20. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
+
+     | Parameter |  Type   | Item |
+     | --------- |  ------ | ---- |
+     | Function Result | Item | P18\_SHOPPING\_CART\_ITEMS |
+
+    ![Calculate Shopping Cart Items Parameter ](images/cal-item-func.png " ")
+
+21. Right-click **Processing** and Click **Create Process**.
+
+22. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Close Dialog**
+
+        - Type: **Close Dialog**
+
+    - Under Settings > Item to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
+
+    ![close dialog](images/close-dialog.png " ")
+
+21. Click **Save**.
+
+
+## Summary
+In this lab, you have learned how to enhance the Book Details page by creating a package to manage shopping cart functionalities, defining application items to store session state information, implementing application processes to run PL/SQL code at specific points, and setting up computations to determine user-related information. These steps enable the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface dynamically reflects the current state of the cart. You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
