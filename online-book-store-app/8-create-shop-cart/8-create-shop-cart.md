@@ -95,7 +95,7 @@ In this task, you develop a new page in the application to display the shopping 
 
 5. In the left pane, Right-click **Body** and select **Create Region**.
 
-     ![close dialog](images/create-region17.png " ")
+    ![close dialog](images/create-region17.png " ")
 
 6. In the Property Editor, enter the following:
 
@@ -133,9 +133,9 @@ In this task, you develop a new page in the application to display the shopping 
         </copy>
         ```
 
-     ![close dialog](images/create-region-details.png " ")
+    ![close dialog](images/create-region-details.png " ")
 
-  7. In the right pane, select **Attributes** and enter the following:
+7. In the right pane, select **Attributes** and enter the following:
 
     - Under Settings
 
@@ -281,7 +281,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Settings > Send On Page Submit: **Toggle off**
 
-          ![close dialog](images/comp-no-of-books.png " ")
+    ![close dialog](images/comp-no-of-books.png " ")
 
 3.  Right-click **P17\_TOTAL** and select **Create Computation**.
 
@@ -301,7 +301,7 @@ In this task, you create buttons for removing items from the cart and proceeding
           </copy>
           ```
 
-          ![close dialog](images/comp-total.png " ")
+    ![close dialog](images/comp-total.png " ")
 
 5. Right-click **Order Information** and select **Create Button**.
 
@@ -393,7 +393,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
          - Value: **REMOVE\_FROM\_CART**
 
-      ![close dialog](images/remove-from-cart-process.png " ")     
+    ![close dialog](images/remove-from-cart-process.png " ")     
 
 11. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
 
@@ -459,11 +459,11 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Server-side Condition > When Button Pressed: **Clear**
 
-     ![close dialog](images/clear-sho-cart-process.png " ")
+    ![close dialog](images/clear-sho-cart-process.png " ")
 
 3. Right-click **Processing** and select **Create Branch**.
 
-     ![close dialog](images/create-branch9.png " ")
+    ![close dialog](images/create-branch9.png " ")
 
 4. In the Property Editor, enter the following:
 
@@ -480,11 +480,11 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Server-side Condition > When Button Pressed: **Clear**
 
-     ![close dialog](images/go-to-books.png " ")
+    ![close dialog](images/go-to-books.png " ")
 
 5. Right-click **Processing** and select **Create Branch**.
 
-     ![close dialog](images/create-branch9.png " ")
+    ![close dialog](images/create-branch9.png " ")
 
 6. In the Property Editor, enter the following:
 
@@ -501,11 +501,11 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Server-side Condition > When Button Pressed: **Proceed**
 
-     ![close dialog](images/go-to-orders.png " ")
+    ![close dialog](images/go-to-orders.png " ")
 
 7. Click **Save and Run**.
 
-## Task 3: Run an Application
+## Task 5: Run an Application
 
 1. Navigate to **Search Books** and Select any book of your choice to buy.
 
