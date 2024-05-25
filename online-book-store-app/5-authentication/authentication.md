@@ -230,9 +230,9 @@ In this task, you will learn to create custom authentication.
 
     - Under Name:
 
-       - Name: **Custom Authentication**
+        - Name: **Custom Authentication**
 
-       - Schema Type: **Custom**
+        - Schema Type: **Custom**
 
     - Under Settings > Authentication Function Name: **OBS\_AUTH.AUTHENTICATE\_USER**
 

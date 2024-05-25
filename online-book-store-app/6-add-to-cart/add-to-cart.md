@@ -45,7 +45,7 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
 
    ![App builder home page](images/pack-name.png " ")
 
-4. Under Specification, Copy and paste below code:
+4. Under **Specification**, Copy and paste below code:
 
      ```
      <copy>
@@ -88,17 +88,17 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
     p_order_id   OUT obs_orders.order_id%TYPE);
  END OBS_MANAGE_ORDERS;
   /
-    </copy>
-     ```
+     </copy>
+      ```
 
    Click **Save and Compile**.
 
    ![App builder home page](images/pack-spec1.png " ")
 
-5. Under Body, Copy and paste below code:
+5. Under **Body**, Copy and paste below code:
 
-   ```
-   <copy>
+    ```
+    <copy>
    create or replace PACKAGE BODY OBS_MANAGE_ORDERS
    AS
    PROCEDURE add_book (p_book IN NUMBER,p_quantity in number)
@@ -222,8 +222,8 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
  END create_order;  
 END OBS_MANAGE_ORDERS;
 /
-   </copy>
-   ```
+    </copy>
+    ```
 
    Click **Save and Compile**.
 
@@ -277,7 +277,7 @@ This application process is used to dynamically update the shopping cart icon an
 
    ![App builder home page](images/app-item-5.png " ")
 
-2. Under Application Logic, select Application Processes.
+2. Under **Application Logic**, select **Application Processes**.
 
    ![App builder home page](images/app-process.png " ")
 
@@ -285,7 +285,7 @@ This application process is used to dynamically update the shopping cart icon an
 
    ![App builder home page](images/app-process-create.png " ")
 
-4. Enter the following:
+4. Enter/select the following:
 
    - Under Identification:
 
@@ -295,7 +295,7 @@ This application process is used to dynamically update the shopping cart icon an
 
        Click **Next**.
 
-       ![App builder home page](images/app-process-next.png " ")
+    ![App builder home page](images/app-process-next.png " ")
 
 5. Enter the following:
 
@@ -315,10 +315,10 @@ This application process is used to dynamically update the shopping cart icon an
         :SHOPPING_CART_ICON := 'fa-cart-empty';
     END IF;
    END;
-   </copy>
-   ```
+      </copy>
+      ```
 
-   Click **Next**.
+     Click **Next**.
 
     ![App builder home page](images/app-process-source.png " ")
 
@@ -327,7 +327,7 @@ This application process is used to dynamically update the shopping cart icon an
     ![App builder home page](images/create-process.png " ")
 
 ## Task 4: Create Application computations
-Application computations are used to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.
+In this task, you create Application Computation. Application computations are used to set the value of a single page or application-level item. Application computations run at the same point across multiple pages in an application.
 
 1. Click **Shared Components**.
 
@@ -339,43 +339,45 @@ Application computations are used to set the value of a single page or applicati
 
    ![App builder home page](images/app-comp-create.png " ")
 
-4. Enter the following:
+4. Enter/select the following:
 
    - Item > Computation Item: **USER_ID**
 
    - Frequency > Computation Point: **After Authentication**
 
-  Under Computation:
+   - Under Computation:
 
-  - Computation Type: SQL Query (return single value)
+       - Computation Type: **SQL Query (return single value)**
 
-  - Computation: Copy and paste below code
-     ```
-     <copy>
-     SELECT U.USER_ID FROM obs_USERS U
-     WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
-    </copy>
-     ```
-  Click **Create Computation**.
+       - Computation: Copy and paste below code:
 
-  ![App builder home page](images/create-comp.png " ")
+       ```
+       <copy>
+       SELECT U.USER_ID FROM obs_USERS U
+       WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
+      </copy>
+       ```
+    Click **Create Computation**.
+
+    ![App builder home page](images/create-comp.png " ")
 
 5. Click **Create**.
 
    ![App builder home page](images/app-comp2.png " ")
 
-6. Enter the following:
+6. Enter/select the following:
+
    - Under Item:
 
-     - Sequence: **20**
+      - Sequence: **20**
 
-     - Computation Item: **USERNAME**
+      - Computation Item: **USERNAME**
 
    - Frequency > Computation Point: **After Authentication**
 
    - Under Computation:
 
-      - Computation Type: SQL Query (return single value)
+      - Computation Type: **SQL Query (return single value)**
 
       - Computation: Copy and paste below code
        ```
