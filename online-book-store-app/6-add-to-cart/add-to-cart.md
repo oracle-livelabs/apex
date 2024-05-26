@@ -39,7 +39,7 @@ To Create a Package:
 
    ![App builder home page](images/ob2.png " ")
 
-2. Right-Click Packages and Select **Package**.
+2. Right-Click Packages and Select **Create Package**.
 
    ![App builder home page](images/create-pack1.png " ")
 
@@ -297,7 +297,7 @@ To create Application Processes:
 
        Click **Next**.
 
-    ![App builder home page](images/app-process-next.png " ")
+  ![App builder home page](images/app-process-next.png " ")
 
 5. Enter the following:
 
@@ -322,7 +322,7 @@ To create Application Processes:
 
     Click **Next**.
 
-    ![App builder home page](images/app-process-source.png " ")
+  ![App builder home page](images/app-process-source.png " ")
 
 6. Click **Create Process**.
 
@@ -364,7 +364,7 @@ To create Application computations:
 
     Click **Create Computation**.
 
-    ![App builder home page](images/create-comp.png " ")
+  ![App builder home page](images/create-comp.png " ")
 
 5. Click **Create**.
 
@@ -395,7 +395,7 @@ To create Application computations:
 
     Click **Create Computation**.
 
-    ![App builder home page](images/create-comp2.png " ")
+  ![App builder home page](images/create-comp2.png " ")
 
 ## Task 5: Set Up Book Details Page
 In this task, you enhance the Book Details page by enabling the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface reflects the current state (whether a book is in the cart or not). This involves creating hidden page items, setting up computations and SQL queries, configuring buttons with server-side conditions, and defining processes to interact with the backend API for managing cart operations.
@@ -451,8 +451,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
          - Display Null Value: **Toggle Off**
 
-    ![Quantity Page Item](images/book-in-cart-comp.png " ")
-
+  ![Quantity Page Item](images/book-in-cart-comp.png " ")
 
 6. Right-click **P18\_BOOK\_IN\_CART** and Click **Create Computation**.
 
@@ -472,10 +471,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
                </copy>
                ```
 
-    ![Computation](images/quantity.png " ")
+  ![Computation](images/quantity.png " ")
 
-    ![Computation](images/quantity-source.png " ")
-
+  ![Computation](images/quantity-source.png " ")
 
 8.  In the left pane, Right-click **Buttons Bar** and Click **Create Button**.
 
@@ -499,7 +497,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Item: **P18\_BOOK\_IN\_CART**
 
-    ![Add To Cart](images/add-to-cart-btn.png " ")
+  ![Add To Cart](images/add-to-cart-btn.png " ")
 
 10. Right-click **Buttons Bar** and Click **Create Button**.
 
@@ -633,6 +631,120 @@ In this task, you enhance the Book Details page by enabling the addition and rem
     ![close dialog](images/close-dialog.png " ")
 
 21. Click **Save**.
+
+## Task 6: Add Shopping Cart to Navigation Bar list
+In this task, you create a navigation bar entry that displays a shopping cart icon, links to page 17, and shows a badge with the number of items in the shopping cart.
+
+1. Navigate to **Shared Component**.
+
+    ![close dialog](images/sc-9.png " ")
+
+2. Under **Navigation and Search**, click **Navigation Bar List**.
+
+    ![close dialog](images/nav-bar-list.png " ")
+
+3. Click **Navigation Bar**
+
+    ![close dialog](images/nav-bar.png " ")
+
+4. Click **Create Entry**.
+
+    ![close dialog](images/nav-create-entry.png " ")
+
+5. Enter/select the following:
+
+    - Under Entry:
+
+        - Sequence: **4**
+
+        - Image/Class: **&SHOPPING_CART_ICON.**
+
+        - List Entry Label: **Shopping Cart**
+
+    - Under Target:
+
+        - Page: **17**
+
+        - Clear Cache: **17**
+
+    - Badge Value: **&SHOPPING_CART_ITEMS.**
+
+    - List Item CSS Classes: **js-shopping-cart-item**
+
+     Click **Create List Entry**.
+
+  ![close dialog](images/nav-create-list-entry.png " ")
+
+  ![close dialog](images/nav-create-list-entry1.png " ")
+
+## Task 7: Create a Dynamic Action to Update Shopping Cart Header
+ In this task, you create a dynamic action that updates the shopping cart icon and badge based on the number of items in the cart. When the dialog is closed, if there are items in the cart, the cart icon will display the number of items. If the cart is empty, the icon will show as empty and the badge will be cleared.
+
+1. Click **Application ID**.
+
+2. Click **Page 10 - Search Books**.
+
+3. In the left pane, Right-click **Results** region and click **Create Dynamic Action**.
+
+    ![close dialog](images/cart-create-dynamic.png " ")
+
+4. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Update Shopping Cart Header**
+
+    -  When > Event: **Dialog Closed**
+
+    - Under Client-side Condition:
+
+        - Type: **JavaScript Expression**
+
+        - JavaScript expression:Copy and paste the below code:
+
+        ```
+        <copy>
+        parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
+        </copy>
+        ```
+
+  ![close dialog](images/update-shop-cart-header.png " ")
+
+5. Click **TRUE** action, In the Property Editor, enter/select the following:
+
+    - Indentification > Action: Execute JavaScript Code.
+
+    - Setting > Code: Copy and paste the below code:
+
+    ```
+    <copy>
+    // Update Badge Text
+    apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+    // Update Icon
+    apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+    </copy>
+    ```
+
+  ![close dialog](images/true-action.png " ")
+
+6. Right-click **False** action and click **Create FALSE Action**.
+
+    ![close dialog](images/false-action.png " ")
+
+7. In the Property Editor, enter/select the following:
+
+    - Action: Execute JavaScript Code.
+    - Setting > Code: Copy and paste the below code:
+    ```
+    <copy>
+    // Update Badge Text
+    apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
+    // Update Icon
+    apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+    </copy>
+    ```
+
+  ![close dialog](images/false-action-details.png " ")
+
+8. Click **Save**.
 
 
 ## Summary
