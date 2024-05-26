@@ -1,20 +1,19 @@
-# Create Additional Pages
+# Create and Manage Wishlist Functionality
 
 ## Introduction
-In this lab, you will create a package with procedures and functions that collectively manage the process of adding, removing, and processing orders and wishlist items within the database application. Additionally, you will learn to create application items, processes, and computations. Moreover, you will create processes to invoke these procedures and functions.
+This lab provides step-by-step instructions on how to create and manage a wishlist feature in Oracle APEX. You will learn to create a new page for the wishlist, add interactive components, and integrate navigation elements. The process includes creating dynamic regions, defining actions, and setting up processes for adding and removing items from the wishlist. Additionally, you will enhance the navigation bar to include a wishlist link for easy access.
 
-Estimated Time: 5 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 In this lab, you will:
 
-- Create My Books Page.
-- Develop My Wishlist Page.
+- Create a Wishlist Page.
+- Add Dynamic Actions to refresh the wishlist content and handle interactions such as adding and removing items.
+- Create Buttons to add and remove books from the wishlist, including the necessary backend processes.
+- Update Navigation Bar to include a link to the wishlist page.
 
-
-
-
-## Task 3: Create My Wishlist page
+## Task 1: Create My Wishlist page
 
 1. On Page Designer toolbar, Navigate to (+ v) and Select **Page**.
 
@@ -225,3 +224,183 @@ In this lab, you will:
     ![close dialog](images/user-id-param.png " ")
 
 16. Click **Save**.
+
+## Task 2: Add Wishlist Management Buttons on Page 18
+
+1. Navigate to Page **18**.
+
+2. In the left pane, Right-click **Buttons Bar** and click **Create Button**.
+
+3. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Add\_to\_Wishlist**
+
+        - Label: **Add to Wishlist**
+
+    - Layout > Position: **Next**
+
+    - Under Appearance:
+
+        - Button Template: **Text with Icon**
+
+        - HOT: **Toggle On**
+
+        - Template Options: Click **Use Template Defaults**
+
+            - Type: Primary
+
+            - Style: Simple
+
+            Click Ok
+
+        - Icon: **fa-heart-o**
+
+    - Under Server-side Condition:
+
+        - Type: **No rows returned**
+
+        - SQL Query: Copy and Paste the below code:
+    ```
+    <copy>
+    select * from obs_wishlist where user_id =  :user_id  AND
+    book_id = :P18_BOOK_ID
+    </copy>
+    ```
+
+    - Under Security > Authorization Scheme: **Must Not Be Public User**
+
+4. Right-click **Buttons Bar** and click **Create Button**.
+
+5. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Remove\_from\_Wishlist**
+
+        - Label: **Remove from Wishlist**
+
+    - Under Layout > Position: **Next**
+
+    - Under Appearance:
+
+        - Button Template: **Text with Icon** 
+
+        - Icon: **fa-heart**
+
+    - Under Behavior > Database Action: **SQL DELETE Action**
+
+    - Under Server-side Condition:
+
+        - Type: **Rows returned**
+
+        - SQL Query: Copy and Paste the below code:
+    ```
+    <copy>
+    select * from obs_wishlist where user_id = :user_id
+    AND book_id = :P18_BOOK_ID
+    </copy>
+    ```
+
+    - Under Security > Authorization Scheme: **Must Not Be Public User**
+
+6. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
+
+7. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Add to Wishlist**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **OBS\_MANAGE\_ORDERS**
+
+        - Procedure or Function: **ADD\_TO\_WISHLIST**
+
+    - Under Success Message > **Successfully added to Wishlist!**
+
+    - Under Error Message: **Error adding to Wishlist!**
+
+    - Under Server-side Condition > When button pressed: **Add\_to\_Wishlist**
+
+8. Under **Add to Wishlist**, expand parameters and enter/select the following:
+
+    - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+
+    - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
+
+9. Right-click **Processing** and Click **Create Process**.
+
+10. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Remove from Wishlist**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **OBS\_MANAGE\_ORDERS**
+
+        - Procedure or Function: **REMOVE\_FROM\_WISHLIST**
+
+    - Under Server-side condition > When button pressed: **Remove\_from\_Wishlist**
+
+11. Under **Remove From Whislist**, expand parameters and enter/select the following:
+
+    - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+
+    - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
+
+12. Click Save.
+
+## Task 3: Create an entry in Navigation Bar List
+
+1. Navigate to **Shared Component**.
+
+    ![close dialog](images/sc-4.png " ")
+
+2. Under Navigation and Search, click **Navigation Bar List**.
+
+    ![close dialog](images/nav-bar-list1.png " ")
+
+3. Click **Navigation Bar**.
+
+    ![close dialog](images/nav-bar1.png " ")
+
+4. Click **Create Entry**.
+
+    ![close dialog](images/create-entery.png " ")
+
+5. Enter/select the following:
+
+    - Under Entry:
+
+        - Sequence: **2**
+
+        - Image/Class: **fa-heart**
+
+        - List Entry Label: **My Wishlist**
+
+    - Target > Page: **14**
+
+      Click **Create List Entry**.
+
+  ![close dialog](images/my-wishlist-nav.png " ")
+
+6. Click Save and Run.
+
+## Summary
+In this lab, you successfully created a wishlist page. You designed a dynamic region to display books in the wishlist, added buttons for managing the wishlist, and implemented backend processes to handle wishlist modifications. Furthermore, you updated the navigation bar to include a link to the wishlist, ensuring easy access for users. This comprehensive exercise demonstrates how to integrate advanced functionalities into an Oracle APEX application, enhancing its usability and interactivity.
+
+You are now ready to move on to the next lab!
+
+## Acknowledgements
+
+- **Author**: Ankita Beri, Product Manager
+- **Last Updated By/Date**: Ankita Beri, Product Manager, May 2024
