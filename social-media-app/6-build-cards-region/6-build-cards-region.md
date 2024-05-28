@@ -29,17 +29,19 @@ choose **Create Region**.
 2. Update the following attributes in the Property Editor:
 
     - Under Identification:
-         - For Title, enter **Timeline**
-         - For Type, select **Cards**
 
-    ![Property Editor](images/title-type.png)
+         - Name: **Timeline**
 
+         - Type: **Cards**
 
-3.  Under Source, for Type select **SQL Query**. Enter the following **SQL Query** into the SQL
-    Query box:
+    - Under Source:
 
-    ```
-    <copy>
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below code:
+
+       ```
+       <copy>
         select
         p.id,
         p.created_by AS user_name,
@@ -62,16 +64,16 @@ choose **Create Region**.
         from SM_POSTS p
 
         order by p.created desc
-    </copy>
-    ```
+       </copy>
+       ```
 
-    ![SQL expression in editor](images/sql-code.png)
+    ![Property Editor](images/title-type.png)
 
-5. Scroll down in the Property Editor to the **Appearance** section:
+3. Scroll down in the Property Editor to the **Appearance** section:
 
-    - In the Appearance > CSS Classes box, enter **t-Chat**
+    - Appearance > CSS Classes box: **t-Chat**
 
-    - In Advanced > Static ID, enter **timeline**.
+    - Advanced > Static ID: **timeline**.
 
     ![Property editor](images/appearance.png)
 
@@ -113,10 +115,9 @@ the following attributes:
 
     - Sizing: **Cover**
 
-    - CSS Classes: enter **selectDisable**
+    - CSS Classes: **selectDisable**
 
-    - Copy and paste **&COMMENT_TEXT.** (including the period!)
-    into the **Image Description** box
+    - Image Description: **&COMMENT_TEXT.** (including the period!)
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
@@ -124,8 +125,7 @@ the following attributes:
 
 2. Now, the region is completely configured. Click **Save and Run**.
 
-    If you made a post earlier, you should now see your image and your
-comment text!
+    If you made a post earlier, you should now see your image and your comment text!
 
     ![Running app](images/run-app.png)
 
@@ -134,4 +134,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024

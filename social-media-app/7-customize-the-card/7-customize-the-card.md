@@ -24,26 +24,33 @@ In this lab, you will:
 The **Like** button will display the current count of likes next to a heart icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their like to the post. If the user has already liked the post, the effect of clicking it again will remove the like.
 
 1.  In the Rendering Tree:
+
     - Under the **Timeline** Cards Region, right-click on **Actions**
+
     - Choose **Create Action**
 
 2.  You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
 
 3.  In the Property Editor:
-    - For Identification > Label, enter **&REACTIONS.** (including the period).
+    - Identification > Label: **&REACTIONS.** (including the period).
 
         This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
-        Note: The **REACTIONS** column is defined in the query for this CARDS Region.
-    - Set the Link > Type to **Redirect to URL**.
+        *Note: The REACTIONS column is defined in the query for this CARDS Region.*
+
+    -  Link > Type: **Redirect to URL**.
 
         We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
-    - For Target > URL, enter **#action$like?id=&ID.** (including the period), and click **OK**.
-    - Under Appearance,
-        - For Display Type, select **Text with Icon**
-        - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period). The **USER\_REACTION\_CSS** column
-    is defined in the query for this CARDS region
-        - For the **CSS Classes** property, enter **js-heart-button** which will be used by our Dynamic
-    Action JavaScript later.
+
+    - Target > URL: **#action$like?id=&ID.** (including the period), and click **OK**.
+
+    - Under Appearance:
+
+        - Display Type: **Text with Icon**
+
+        - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period).
+        The **USER\_REACTION\_CSS** column is defined in the query for this CARDS region
+
+        - **CSS Classes**: **js-heart-button** (which will be used by our Dynamic Action JavaScript later.)
 
     ![Property Editor](images/button-properties.png)
 
@@ -56,6 +63,7 @@ Similar to the previous task, we create another button that will be used for Del
 1.  In the Rendering tree, right-click **Timeline > Actions**, and choose **Create Action**.
 
 2.  In the Property Editor, update the following attributes:
+
     - Action > Label: **Delete**.
 
     - Layout > Position: **Secondary** (This ensures that the button is displayed on the right side of the card)
@@ -67,13 +75,16 @@ Similar to the previous task, we create another button that will be used for Del
     - Click **OK**
 
     - Under Appearance:
-        - For Display Type, select **Icon**
-        - For Icon, enter **fa-trash-o**
+
+        - Display Type: **Icon**
+
+        - Icon: **fa-trash-o**
 
     - Under Server-side condition:
-        - For Type, select **Expression**
-        - For Language, select **PL/SQL**
-        - For **PL/SQL expression**, enter **:USER\_NAME=:APP\_USER**
+
+        - Type: **Expression**
+
+        - PL/SQL expression: **:USER\_NAME=:APP\_USER**
 
         This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
 
@@ -126,11 +137,13 @@ In this task, we will provide the APEX page with the custom javascript that will
     ![Create page item option](images/create-page-item4.png)
 
 4. In the Property Editor:
+
     - Rename the Identification > Name as **P1\_ACTION\_ID**
 
-    Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.
+     *Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.
 
     - Type: **Hidden**
+
     - Settings > Value Protected: **OFF**
 
     ![Property Editor](images/value-protected.png)
@@ -149,4 +162,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita BeriProduct Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
