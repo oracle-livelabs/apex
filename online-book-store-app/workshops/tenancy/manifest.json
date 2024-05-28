@@ -42,6 +42,10 @@
         "filename": "../../9-add-user/9-add-user.md"
       },
       {
+        "title": "Lab 10: Create and Manage Administration",
+        "filename": "../../10-admin-page/10-admin-page.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
