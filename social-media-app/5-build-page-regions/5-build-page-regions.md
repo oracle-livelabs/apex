@@ -37,8 +37,8 @@ In this lab, you will:
 
 3. You see a New region in the Rendering Tree, and at
 the same time it will be shown in the **Layout** section (in the
-middle). In the Property Editor, you will see a **Region** tab and
-parameters. Enter the following:
+middle). In the Property Editor, you will see a **Region** tab and parameters. Enter/select the following:
+    -  For **Name**, enter **Post**
     - For **Title**, enter **Post**
     - For **Type**, select **Form**
 
@@ -128,10 +128,7 @@ set:
 
     ![Property Editor](images/property-editor1.png "")
 
-<<<<<<< HEAD
     Ok, that was a bunch of changes!
-=======
->>>>>>> upstream/main
 
 6. Let's save and run and see how it looks.
 
@@ -151,7 +148,7 @@ this form visible to the user as a modal form.
 
 2. Next, click on **Post** in the rendering tree, so that we have that **Form** region selected. Focus your attention to setting the attributes for the region on the right:
 
-    - In the **Region** > **Layout** section, change the **Position**
+    - In the **Region** > **Layout** section, change the **Slot**
     to **Dialogs, Drawers and Popups**.
 
     -  In the **Appearance** section, change the **Template** to **Inline Dialog**
@@ -171,7 +168,7 @@ this form visible to the user as a modal form.
 3. Let's save and run the app.
 
     *You'll quickly notice that there isn't much to see* - but that's okay!
-Now that we've changed the form region to be an inline dialog, it will be hidden on page load. Inline Dialogs need to be opened by a button click (or custom javascript is an option, too), so we need to create a button!
+    Now that we've changed the form region to be an inline dialog, it will be hidden on page load. Inline Dialogs need to be opened by a button click (or custom javascript is an option, too), so we need to create a button!
 
     ![Running app is displayed](images/updated-app-3.png "")
 
@@ -237,7 +234,7 @@ Now that we've changed the form region to be an inline dialog, it will be hidden
 
     - Button Name: **Save**
 
-    - Layout > Position: **Next**
+    - Layout > Slot: **Next**
 
     - Appearance > Hot: **ON**
 
@@ -290,7 +287,7 @@ Now that we've changed the form region to be an inline dialog, it will be hidden
 
     - Settings > Request/Button name: **Save**
 
-    - Ensure **Show processing** is **ON**
+    - Ensure **Show processing** is **Toggle On**
 
     ![Property editor](images/da2-action.png)
 
@@ -311,7 +308,7 @@ page with a process for the Form:
 
 5.  Set the **Form Region** to the **Post** region.
 
-6.  Set the **Success Message > Success Message** to be **Posted!**
+6.  Set the **Success Message** > Success Message: **Posted!**
 
     The attributes should look like this:
 
@@ -328,4 +325,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
