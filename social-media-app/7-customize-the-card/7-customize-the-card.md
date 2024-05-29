@@ -29,9 +29,12 @@ The **Like** button will display the current count of likes next to a heart icon
 
     - Choose **Create Action**
 
+    ![Create Action](images/create-action-s.png)
+
 2.  You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
 
-3.  In the Property Editor:
+3.  In the Property Editor, enter/select the following:
+
     - Identification > Label: **&REACTIONS.** (including the period).
 
         This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
@@ -47,8 +50,7 @@ The **Like** button will display the current count of likes next to a heart icon
 
         - Display Type: **Text with Icon**
 
-        - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period).
-        The **USER\_REACTION\_CSS** column is defined in the query for this CARDS region
+        - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period). The **USER\_REACTION\_CSS** column is defined in the query for this CARDS region
 
         - **CSS Classes**: **js-heart-button** (which will be used by our Dynamic Action JavaScript later.)
 
@@ -88,7 +90,7 @@ Similar to the previous task, we create another button that will be used for Del
 
         This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
 
-        ![Property Editor](images/button-action.png)
+    ![Property Editor](images/button-action1.png)
 
 ## Task 3: Add Javascript to the Page for the Card Buttons
 
@@ -144,9 +146,9 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     - Type: **Hidden**
 
-    - Settings > Value Protected: **OFF**
+    - Settings > Value Protected: **Toggle Off**
 
-    ![Property Editor](images/value-protected.png)
+  ![Property Editor](images/value-protected1.png)
 
 8. Now, let's go back and select the **Page 1: Timeline** Rendering Tree entry, and open up the code editor again to see the javascript we copied and pasted earlier. The code editor looks clean with no concerns!
 

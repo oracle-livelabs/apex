@@ -24,7 +24,7 @@ In this lab, you will:
 1. Navigate to the Rendering Tree and right-click on **Body**, and
 choose **Create Region**.   
 
-    ![Create region option](images/create-region.png)
+    ![Create region option](images/create-region-s.png)
 
 2. Update the following attributes in the Property Editor:
 
@@ -67,7 +67,7 @@ choose **Create Region**.
        </copy>
        ```
 
-    ![Property Editor](images/title-type.png)
+  ![Property Editor](images/title-type1.png)
 
 3. Scroll down in the Property Editor to the **Appearance** section:
 
@@ -75,7 +75,7 @@ choose **Create Region**.
 
     - Advanced > Static ID: **timeline**.
 
-    ![Property editor](images/appearance.png)
+  ![Property editor](images/appearance1.png)
 
     We are not done with this region yet! We have to configure
 which columns from the query results will be used in which parts of the
@@ -92,7 +92,7 @@ the following changes:
 
     - Subtitle > Column: **POST_DATE**
 
-    ![Attributes in Property Editor](images/attributes-1.png)
+  ![Attributes in Property Editor](images/attributes-11.png)
 
     - Body > Column: **COMMENT_TEXT**
 
@@ -100,7 +100,7 @@ the following changes:
 
     - Icon Column: **USER_NAME**
 
-    ![Attributes in Property Editor](images/attributes-2.png)
+  ![Attributes in Property Editor](images/attributes-21.png)
 
     And finally (for this Region), scroll down to the Media section, and set
 the following attributes:
@@ -121,11 +121,11 @@ the following attributes:
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-    ![Attributes in Property Editor](images/attributes-3.png)
+  ![Attributes in Property Editor](images/attributes-31.png)
 
 2. Now, the region is completely configured. Click **Save and Run**.
 
-    If you made a post earlier, you should now see your image and your comment text!
+     If you made a post earlier, you should now see your image and your comment text!
 
     ![Running app](images/run-app.png)
 
