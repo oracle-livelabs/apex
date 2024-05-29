@@ -33,7 +33,7 @@ In this lab, you will:
 
 2. In the Rendering tree, Right-click on **Body**, and then choose **Create Region**.
 
-    ![Rendering Tree options are displayed](images/create-region12.png "")
+    ![Rendering Tree options are displayed](images/create-region1.png "")
 
 3. You see a New region in the Rendering Tree, and at
 the same time it will be shown in the **Layout** section (in the
@@ -96,7 +96,7 @@ keyboard entry, but it doesn't save anything yet and needs some tweaking.
 
     - Label: **Post**
 
-  ![Options available for Type is displayed](images/post-type.png "")
+   ![Options available for Type is displayed](images/post-type.png "")
 
 3. Run the app again and see the results of our changes so far!
 
@@ -135,9 +135,9 @@ keyboard entry, but it doesn't save anything yet and needs some tweaking.
 
         - Maximum File Size: **10000**
 
-    ![Property Editor](images/property-editor.png "")
+  ![Property Editor](images/property-editor.png "")
 
-    ![Property Editor](images/property-editor1.png "")
+  ![Property Editor](images/property-editor1.png "")
 
     Ok, that was a bunch of changes!
 
@@ -172,8 +172,7 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
         Click **OK**.
 
-
-  ![Property editor](images/post-property-4.png "")
+   ![Property editor](images/post-property-4.png "")
 
   That should complete what we need to configure for the Post form region itself.
 
@@ -220,13 +219,13 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     -  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
 
-    ![Name the dynamic action](images/da-name.png)
+   ![Name the dynamic action](images/da-name.png)
 
     -  Select the other entry, that is under True so that we can configure it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
 
     -  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Post**.
 
-    ![Affected elements in property editor](images/affected-elements.png)
+   ![Affected elements in property editor](images/affected-elements.png)
 
     That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
@@ -261,7 +260,7 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     The attributes should look this:
 
-    ![Button attributes in property editor](images/configure-button-2.png)
+  ![Button attributes in property editor](images/configure-button-21.png)
 
 3. To enable the form to be able to save the new post data, we need another Dynamic Action and then a page process that does the work.
 
