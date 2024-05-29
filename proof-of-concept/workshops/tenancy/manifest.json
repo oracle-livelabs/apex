@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Building a Proof-of-Concept for Oracle Autonomous Cloud Services",
+  "workshoptitle": "Smart Project Management App with AI-Assisted Development in Oracle APEX",
     "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
       {
@@ -11,7 +11,7 @@
         "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Congfigure AI Service and Define New Data Structures",
+        "title": "Lab 1: Configure AI Service and Define New Data Structures",
         "filename": "../../installing-sample-datasets/installing-sample-tables.md"
       },
       {

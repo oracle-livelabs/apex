@@ -10,13 +10,13 @@ Estimated Time: 15 minutes
 - Improve the Projects List of Values
 - Update the Task Form page
 
-### What Do You Need?
+### What You will Need
 
 - An Oracle Cloud paid account, a LiveLabs account or free trial.
 - An APEX application
 
 ## Task 1: Improving the Projects List of Values.
-In the Runtime environment navigate to Project Tasks with Form page and then click the edit icon on any record to bring up the Project Task form page. Click the select list for Project to see how the project records are displayed.
+In the Runtime environment, navigate to Project Tasks with Form page and then click the edit icon on any record to bring up the Project Task form page. Click the select list for Project to see how the project records are displayed.
 
 ![](images/project-task-form-page.png " ")
 
@@ -32,8 +32,8 @@ It would be beneficial to see additional details related to the project.
 
     ![](images/click-edit-page8.png " ")
 
-    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
-    Once in the App Builder click **8 - Task**.
+    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.
+    Once in the App Builder click **8 - Project Task**.
 
     ![](images/click-page8.png " ")
 

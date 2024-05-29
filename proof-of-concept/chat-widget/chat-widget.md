@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to create and Open an AI Assistant to your Project Management Suite application. You will be using the ew "Open AI Assistant" Dynamic Action to open AI Assistant
+In this lab, you learn how to create an AI Assistant chatbot /chat widget? for your Project Management Suite application. You will be using the new "Open AI Assistant" Dynamic Action to open the AI Assistant chat widget.
 
 Estimated Time: 15 minutes
 

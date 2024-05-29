@@ -2,14 +2,14 @@
 
 ## Introduction
 
-In this lab, you will build an interactive Project Management application using the AI-driven Create Application wizard on the sample dataset you have data structures you built in the previous lab.
+In this lab, you build an interactive Project Management application using the AI-driven Create Application wizard. You will make use of the Sample Dataset you installed in the previous lab.
 
 Estimated Time: 15 minutes
 
 ### Objectives
-- Create an application using the AI-driven Create Application wizard and with the sample datasets from the previous Lab
+- Create an application using the AI-driven Create Application wizard with the sample datasets installed in the previous Lab
 
-### What Do You Need?
+### What You will Need
 
 - An Oracle Cloud paid account, or free trial.
 - Project Data installed from Sample dataset.

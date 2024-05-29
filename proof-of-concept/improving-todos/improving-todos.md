@@ -11,7 +11,7 @@ Estimated Time: 10 minutes
 - Use APEX Assistant in the code Editor
 - Update the applications To Dos section
 
-### What Do You Need?
+### What You will Need
 
 * An Oracle Cloud paid account, a LiveLabs account or free trial.
 * An APEX Workspace and application

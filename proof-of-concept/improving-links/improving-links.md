@@ -8,10 +8,10 @@ Estimated Time: 5 minutes
 
 ### Objectives
 - Improve the Projects List of Values
-- Use APEX Assistant in the code Editor
-- Update the Links section of you application
+- Use APEX Assistant to generate SQL in the code Editor
+- Update the Links section of your application
 
-### What Do You Need?
+### What You will Need
 
 - An Oracle Cloud paid account, a LiveLabs account or free trial.
 - An APEX Workspace and application

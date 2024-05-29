@@ -1,14 +1,15 @@
-# Building a Proof-of-Concept for Oracle Autonomous Cloud Services
+# Smart Project Management App with AI-Assisted Development in Oracle APEX
 
 ## Introduction
-In this lab you will build a dynamic application using modern Oracle APEX AI Assistant. You will start by installing a sample project management dataset, then create an initial application with the help of an AI Assistant, demonstrating how AI can accelerate development. Next, you will customize your application the lowcode way, making quick adjustments using pre-built components. You will also enhance your application by writing SQL queries with APEX Assistant, simplifying complex query construction. Finally, you'll implement an AI chat assistant using Dynamic Actions and Chat Widget, creating a responsive chat interface for real-time user engagement. By the end of this lab, you'll have practical experience in using AI and APEX to efficiently build and customize powerful applications.
+
+In this lab, you will build a dynamic application using Oracle APEX AI Assistant. You will start by installing a sample project management dataset, then create an initial application with the help of an AI Assistant, demonstrating how AI can accelerate development. Next, you will customize your application the lowcode way, making quick adjustments using pre-built components. You will also enhance your application by writing SQL queries with APEX Assistant, simplifying complex query construction. Finally, you will implement an AI chat assistant using Dynamic Actions and Chat Widget, creating a responsive chat interface for real-time user engagement. By the end of this lab, you'll have practical knowledge in using AI with APEX to efficiently build and customize powerful applications.
 
 Estimated Time: 55 minutes
 
 ### Lab Objectives
 
 * Obtain a free development environment
-* Install Sample dataset
+* Install a Sample dataset
 * Create an application on the new data structures using AI Assistant
 * Refine the application by generating SQL with AI APEX assistant
 * Create an AI Chat Assistant to inquire about the Project.
@@ -17,7 +18,7 @@ Estimated Time: 55 minutes
 
 ### **Let's Get Started!**
 
-- Click on **Get Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Defining new Data Structures**.
+- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Define New Data Structures**.
 
 *Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
 

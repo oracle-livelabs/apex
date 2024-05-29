@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of project status, projects, project milestones, tasks, to Dos, task links, project comments used to manage the Project efficiently. Then, you will learn how to create Generative AI Services that you will use to create the Application, generate SQL queries and build a Chatbot. Make sure you have a secure key to access Open AI or Cohere GenAI Services.
+In this lab, you learn to install sample tables and views from Sample Datasets. This particular sample dataset is a collection of project status, projects, project milestones, tasks, To-Dos, task links, project comments used to manage the Projects efficiently. Then, you learn how to configure Generative AI Services that you will use to create the Application, generate SQL queries and build a Chatbot. Make sure you have a secure key to access Open AI or Cohere GenAI Services.
 
 Estimated Time: 15 minutes
 
@@ -11,7 +11,7 @@ In this lab, you will:
 - Install a sample dataset into your Oracle APEX Workspace
 - Create/Configure Generative AI Services into your APEX Workspace
 
-### What Do You Need?
+### What You will Need
 - Signup and Get access for one of the supported Generative AI Services like OpenAI or Cohere.
 - An Oracle Cloud paid account, or free trial.
 - An APEX Workspace and application
