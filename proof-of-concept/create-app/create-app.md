@@ -28,7 +28,7 @@ Estimated Time: 15 minutes
 
     !["Click create app using Gen AI"](images/click-create-app-wizard.png "")
 
-4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Refresh Cache** and then click **Accept**.
+4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
 
      ![Refresh Cache](images/refresh-cache.png "")
 

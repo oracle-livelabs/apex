@@ -51,7 +51,7 @@ It would be beneficial to see additional details related to the project.
 
     ![](images/update-lov.png " ")
 
-    > **Note:** _The List of Values > Type is a _Shared Component_ so you will need to edit the appropriate shared component_  
+    > **Note:** The List of Values > Type is a **Shared Component** so you will need to edit the appropriate shared component
 
 3. The left pane will change to the Shared Components tab, with the appropriate List of Values highlighted.
 
@@ -90,7 +90,7 @@ It would be beneficial to see additional details related to the project.
 
     ![](images/set-as-popuplov.png " ")
 
-    > **Note:** _If you click _Run and Save_ instead of _Save_ the page will be saved but a warning will be displayed as this page is a modal page and cannot be run directly from Page Designer_  
+    > **Note:** If you click _Run and Save_ instead of **Save** the page will be saved but a warning will be displayed as this page is a modal page and cannot be run directly from Page Designer
 
 8. Time to review the improved Project item!
 
@@ -139,7 +139,7 @@ If you review the Milestones select list you will notice that all milestones are
     </copy>
     ```   
 
-    > **Note:** _This will restrict the milestones returned based on the current value selected for the project item, _P8\_PROJECT\_ID_  
+    > **Note:** This will restrict the milestones returned based on the current value selected for the project item, P8\_PROJECT\_ID
 
     Click **Apply Changes**.
 
