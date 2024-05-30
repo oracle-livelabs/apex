@@ -507,6 +507,7 @@ After the customer has taken action (add/edit/delete) about the product, the mod
 
     ![Save button in Page Designer](./images/save-page.png " ")
 
+## Summary
 
 You now know how to customize and enhance an APEX page. You may now **proceed to the next lab**.
 

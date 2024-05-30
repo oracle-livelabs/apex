@@ -338,6 +338,7 @@ In this task, you will create two dynamic actions:
 
       ![Toolbar in the Page Designer](./images/updated-products.png " ")
 
+## Summary
 
 You now know how to enhance faceted search and cards region. You may now **proceed to the next lab**.
 
