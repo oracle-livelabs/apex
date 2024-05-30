@@ -24,13 +24,10 @@ In this lab, you will:
 - Improve both Faceted Search and Cards region
 - Add Dynamic Actions to the page
 
-
-## Task 1: Reorder Facets
+## Task 1: Create and Reorder Facets
 
 The **Products** page is where your customers can explore the products and select what they wish to buy.
 As you can see, it's hard to find the products and it would be beneficial to see additional details related to the products.
-
-![Products Page in the application](./images/products-page-org.png " ")
 
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
 
@@ -39,7 +36,7 @@ As you can see, it's hard to find the products and it would be beneficial to see
 
     In the Developer Toolbar click **Edit Page 1**.
 
-    ![Products page in the application](./images/dev-toolbar.png " ")
+    ![Products page in the application](./images/dev-toolbar-s.png " ")
 
     Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
     Once in the App Builder click **1 - Products**.
@@ -48,25 +45,41 @@ As you can see, it's hard to find the products and it would be beneficial to see
 
     You should now be in Page Designer with **Page 1: Products** loaded.
 
+2. In the left pane, under **Search** region, right-click **Facets** and click **Create Facet**.
 
-2. Unit price is not a common search criteria, so you want to put this facet at the bottom.
+    ![App Builder home page](./images/facets1.png " ")
+
+3. Create the following three Facets one after the other:
+
+    | Name             |  Type   | Label | List of Values > Type | List of Values | Database Column |
+    | ---------------  |  ------ |-----| ---------  | ------ | ------ |
+    | P1\_DEPARTMENT\_ID | Checkbox Group | Department |Shared Component | DEPARTMENT\_LOOKUP.DEPARTMENT | DEPARTMENT\_ID |
+    | P1\_COLOR\_ID | Checkbox Group | Color | Shared Component | COLOR\_LOOKUP.COLOR | COLOR\_ID |
+    | P1\_CLOTHING\_ID | Checkbox Group | Clothing |Shared Component | CLOTHING\_LOOKUP.CLOTHING | CLOTHING\_ID |
+
+    ![App Builder home page](./images/facets3.png " ")
+
+4. Unit price is not a common search criteria, so you want to put this facet at the bottom.
     In the Rendering tree (left pane), under Search, within Facets, click and hold **P1\_UNIT\_PRICE** and drag it down until it is under **P1\_COLOR\_ID**, then release the mouse. Reorder the facets to display as in this image.
 
-    ![Rendering tree in the Page Designer](./images/reorder-facet.png " ")
+    ![Rendering tree in the Page Designer](./images/reorder-facet-1.png " ")
 
 ## Task 2: Enhance the Faceted Search
 
 1. In the Rendering tree (left pane), navigate to **Search**.
-2. In the Property Editor (right pane), click **Attributes** and do the following:
-    -   For Total Row Count Label - enter **Total Products**
-    -   For Show Charts - select **No**
 
-    ![Property Editor](./images/enhance-facet.png " ")    
+2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
+    -  Total Row Count Label: **Total Products**
+
+    -  Show Charts: **No**
+
+  ![Property Editor](./images/enhance-facet.png " ")    
 
 ## Task 3: Enhance the Cards Region
 
 1.  In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
-    - For SQL Query - enter the following SQL code:
+
+    - SQL Query: Enter the following SQL code:
 
         ```
         <copy>
@@ -99,23 +112,36 @@ As you can see, it's hard to find the products and it would be beneficial to see
             json_table (m.product_details, '$' columns ( brand varchar2(4000) path '$.brand') ) b
         </copy>
         ```
-    - Under Appearance section:
-        - Click **Template Options**. For Style - select **Style A**
-    ![Property Editor](./images/template-options10.png " ")  
-        - Click **Ok**
+
+    ![Property Editor](./images/search-results-s.png " ")  
+
+    - Under Appearance:
+
+        - Click **Template Options**. For Style - select **Style A**  
+
+        - Click **Ok**.
+
+    ![Property Editor](./images/template-options10.png " ")
 
 2. Click **Attributes** and apply the following changes:
 
-    - Under Appearance section:
-        - For Layout - select **Grid**
-        - For Grid Columns - select **Auto**
-        ![Attributes Tab of the Property Editor](./images/attributes1.png " ")
-    - Under Title section:
-        -   For Column - select **PRODUCT_NAME**
+    - Under Appearance:
 
-    - Under Subtitle section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+        - Layout: **Grid**
+
+        - Grid Columns: **Auto**
+
+  ![Attributes Tab of the Property Editor](./images/attributes1.png " ")
+
+    - Under Title:
+
+        -  Column: **PRODUCT_NAME**
+
+    - Under Subtitle:
+
+        - Advanced Formatting: **Toggle On**
+
+        - HTML Expression: Enter the following:
 
             ```
             <copy>
@@ -127,17 +153,25 @@ As you can see, it's hard to find the products and it would be beneficial to see
             </copy>
             ```
 
-    - Under Media section:
-        -   For Source - select **BLOB Column**
-        -   For BLOB Column - select **PRODUCT_IMAGE**
-        -   For Position - select **First**
-        -   For Appearance - select **Widescreen**
-        -   For Sizing - select **Fit**
-        ![Attributes Tab of the Property Editor](./images/attributes2.png " ")
-    - Under Card section:
-        -   For Primary Key Column 1 - select **PRODUCT_ID**
+    - Under Media:
 
-        ![Attributes Tab of the Property Editor](./images/attributes3.png " ")       
+        -  Source: **BLOB Column**
+
+        -   BLOB Column: **PRODUCT_IMAGE**
+
+        -   Position: **First**
+
+        -   Appearance: **Widescreen**
+
+        -    Sizing: **Fit**
+
+  ![Attributes Tab of the Property Editor](./images/attributes2.png " ")
+
+    - Under Card:
+
+        - Primary Key Column 1: **PRODUCT_ID**
+
+ ![Attributes Tab of the Property Editor](./images/attributes3.png " ")       
 
 ## Task 4: Create Actions
 Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
@@ -146,22 +180,27 @@ Customers need a way to shop the products, so in this task you will add an actio
 
 2. On Actions, right-click **Create Action**.
 
-    ![Rendering Tree in Page Designer](./images/create-action10.png " ")
+    ![Rendering Tree in Page Designer](./images/create-action10-s.png " ")
 
-3. In the Property Editor (right pane), enter the following:
-    -   For Type - select **Full Card**
-    -   For Target - Click **No Link Defined** and do the following:
-        - For Page - enter **18**.
+3. In the Property Editor (right pane), enter/select the following:
+
+    - Type: **Full Card**
+
+    - Target: Click **No Link Defined** and do the following:
+
+        - Page: **18**.
+
         - For Set Items, enter:
 
             | Name | Value |
             | --- | --- |
             | P18\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - For Clear Cache, enter **18**
-        - Click **Ok**.
+        - Clear Cache: **18**
 
-    ![Property Editor](./images/full-card.png " ")
+        - Click **OK**.
+
+  ![Property Editor](./images/full-card.png " ")
 
 ## Task 6: Add Dynamic Actions
 In this task, you will create two dynamic actions:
@@ -172,23 +211,33 @@ In this task, you will create two dynamic actions:
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da10.png " ")
+     ![Dynamic Actions Tab](./images/create-da10-s.png " ")
 
-3. In the Property Editor, enter the following:
-    - Under Identification section:
-        - For Name - enter **Show Success Message**
-    - Under When section:
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**
+3. In the Property Editor, enter/select the following:
 
-        ![Property Editor](./images/success-da.png " ")
+    - Under Identification:
+
+        - Name: **Show Success Message**
+
+    - Under When:
+
+        - Event: **Dialog Closed**
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
+
+  ![Property Editor](./images/success-da.png " ")
 
 4. Navigate to **Refresh** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+
+    - Under Identification:
+
+        - Action: **Execute JavaScript Code**
+
+    - Under Settings:   
+
+        - Code: Enter the following JavaScript Code:
 
             ```
             <copy>    
@@ -205,35 +254,48 @@ In this task, you will create two dynamic actions:
             }
             </copy>
             ```
-        ![Property Editor](./images/success-da2.png " ")
+
+  ![Property Editor](./images/success-da2.png " ")
 
 5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da4.png " ")
+     ![Dynamic Actions Tab](./images/create-da4-s.png " ")
 
-6. In the Property Editor, enter the following:    
-    - Under Identification section:
-        - For Name - enter **Update Shopping Cart Header**
-    - Under When section:        
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**     
+6. In the Property Editor, enter/select the following:  
+
+    - Under Identification > Name: **Update Shopping Cart Header**
+
+    - Under When:     
+
+        - Event: **Dialog Closed**
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
+
     - Under Client-side Condition:
-        - For Type - select **JavaScript expression**
-        - For JavaScript Expression, enter the following:
+
+        - Type: **JavaScript expression**
+
+        - JavaScript Expression: Enter the following:
 
             ```
             <copy>
             parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
             </copy>
             ```
-            ![Property editor](./images/update-cart-da.png " ")
+
+  ![Property editor](./images/update-cart-da.png " ")
 
 7. Navigate to **Refresh** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+
+    - Under Identification:
+
+        - Action: **Execute JavaScript Code**
+
+    - Under Settings:     
+
+        - Code: Enter the following JavaScript Code:
 
             ```
             <copy>
@@ -244,19 +306,24 @@ In this task, you will create two dynamic actions:
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
             </copy>
             ```
-            ![Property editor](./images/update-cart-da2.png " ")
+
+  ![Property editor](./images/update-cart-da2.png " ")
 
 8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic action.
 
 9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
 
-     ![Dynamic Actions Tab](./images/create-opposite-action.png " ")
+     ![Dynamic Actions Tab](./images/create-opposite-action-s.png " ")
 
 10. Navigate to **Execute JavaScript Code** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+
+    - Under Identification:
+
+        - Action: **Execute JavaScript Code**
+
+    - Under Settings:
+
+        - Code: Enter the following JavaScript Code:
 
             ```
             <copy>
@@ -278,4 +345,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
