@@ -32,7 +32,7 @@ To Generate the API Keys using OCI Console:
 
 4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
-5. Click ** Download Private Key **. A *.pem* file will be saved to your local device. You do not need to download the public key.
+5. Click **Download Private Key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
    *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 

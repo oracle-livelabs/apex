@@ -80,7 +80,7 @@ In this lab, you:
 
 5. Under Create REST Data Source,  Enter/select the following attributes and click **Next**.
 
-    - Rest Data Source Type: **Oracle Cloud Infrastructure (OCI)**
+    - REST Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
     - Name: **Document Understanding API**
 
