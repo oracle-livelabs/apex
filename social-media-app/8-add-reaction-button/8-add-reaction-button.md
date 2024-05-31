@@ -216,9 +216,8 @@ There are actually 3 actions desired here:
 
     ```
     <copy>
-       delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
-
-       delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+    delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
+    delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
     </copy>
     ```
 
@@ -260,7 +259,7 @@ There are actually 3 actions desired here:
 
 7. We should now be able to delete our own post. **Save and Run** to try it out!
 
-    ![App is dispalyed](images/run-app.png)
+    ![App is dispalyed](images/run-app-11.png)
 
 8. Besides the post being removed from your screen, you can navigate to **SQL Workshop > Object Browser** and also confirm that there is no data left in the table **SM_POSTS**(assuming that there was only the one post in the app).
 

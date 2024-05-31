@@ -69,7 +69,7 @@ When we Like a post, we should be able to see the Heart in RED. Also, if we are 
 
 4. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app-12.png)
 
 
   You can also send the URL to your mobile and try it out!

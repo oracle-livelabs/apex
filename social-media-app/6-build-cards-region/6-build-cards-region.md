@@ -127,7 +127,7 @@ the following attributes:
 
      If you made a post earlier, you should now see your image and your comment text!
 
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app1.png)
 
 You may now **proceed to the next lab**
 
