@@ -129,10 +129,6 @@ In this lab, you:
         [
             {
                 "featureType" : "#FEATURE_TYPE#"
-            },
-          {
-                "featureType" : "DOCUMENT_CLASSIFICATION",
-                "maxResults" : 5
             }
         ]
      }
