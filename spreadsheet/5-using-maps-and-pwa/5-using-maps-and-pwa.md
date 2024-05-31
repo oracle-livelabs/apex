@@ -120,7 +120,7 @@ APEX allows customization of the map in a declarative way. In this step, you wil
       ```
       <copy>
       <strong>&SCHOOL_NAME.</strong><br>
-      Borough: &BOROUGH.<br
+      Borough: &BOROUGH.<br>
       </copy>
       ```
 
