@@ -140,7 +140,7 @@ This region will list the items that have been added temporarily to the shopping
 
 1. In the new page created, navigate to the **Gallery Menu**.
 
-2. Drag a **Cards** region and drop it to the Content Body section.
+2. Drag a **Cards** region and drop it to the **Body** section.
 
     ![Page Designer](./images/create-cards-s.png " ")
 
@@ -294,7 +294,7 @@ This action allows customers to open a page to edit a particular item in the sho
 
 5. Right-click the **Order Information** region and click **Create Page Item**.
 
-    ![Rendering Tree](./images/create-item1.png " ")
+    ![Rendering Tree](./images/create-item1-s.png " ")
 
 6. Create five items as follows:
 
