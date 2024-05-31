@@ -82,7 +82,7 @@ Blueprint tab selected. Update the following information:
 
    ![Navigation menu of the app](images/app-nav.png "")
 
-Next, we will go back to the APEX Workspace and create the APEX social Media data model.
+Next, we will go back to the APEX Workspace and create the APEX Social Media data model.
 
 You may now **proceed to the next lab**
 

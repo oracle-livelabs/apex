@@ -198,7 +198,7 @@ There are actually 3 actions desired here:
 
     - Message: **You are about to delete this post. Are you sure?**
 
-    ![Property Editor](images/delete-confirm-dialog.png)
+  ![Property Editor](images/delete-confirm-dialog.png)
 
 2. Next, we need to add another True Action to do the database work and delete the post record from the table.	Right-click on the **True** title within the action-delete Dynamic Action and select **Create TRUE action**.
 
@@ -216,7 +216,9 @@ There are actually 3 actions desired here:
 
     ```
     <copy>
-        delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+       delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
+
+       delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
     </copy>
     ```
 
@@ -253,7 +255,8 @@ There are actually 3 actions desired here:
         $('[data-id='+apex.items.P1_ACTION_ID.value+']').remove();
     </copy>
     ```
-    ![Property Editor](images/code-s.png)
+
+  ![Property Editor](images/code-s.png)
 
 7. We should now be able to delete our own post. **Save and Run** to try it out!
 

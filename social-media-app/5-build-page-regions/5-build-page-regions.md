@@ -45,9 +45,7 @@ middle). In the Property Editor, you will see a **Region** tab and parameters. E
 
     - Type:  **Form**
 
-    ![Property editor is displayed](images/form-properties.png "")
-
-    ![Form types select list](images/form-types.png "")
+  ![Form types select list](images/form-types.png "")
 
 4. The **Form Region** will be tied to the **SM\_POSTS** table that we created from the script. Therefore, in the **Source** section, specify the **Table Name** as **SM_POSTS**.
 
@@ -193,7 +191,7 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     Configure the following other attributes on this button as follows:
 
-    - Layout > Position:  **After Logo**
+    - Layout > Slot:  **After Logo**
 
     - Appearance > Button Template: **Text with Icon**
 
@@ -205,7 +203,7 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     The button configuration should look like this:
 
-    ![Button attributes](images/button-attributes1.png "")
+  ![Button attributes](images/button-attributes1.png "")
 
 3. To make this button open the Post region (which is an inline dialog), we simply need to create an on-click **Dynamic Action**. To do this, right-click on the button in the rendering tree, and choose **Create Dynamic Action**.
 
@@ -291,7 +289,7 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     - Settings > Request/Button name: **Save**
 
-    ![Property editor](images/da2-action.png)
+  ![Property editor](images/da2-action.png)
 
 ## Task 6: Configure the Submit Process to Insert a New Record into the Table
 
@@ -317,13 +315,13 @@ page with a process for the Form:
 
     - Success Message > Success Message: **Posted!**
 
-    ![Property Editor](images/process-attributes.png)
+  ![Property Editor](images/process-attributes.png)
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
 4. However, you can run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
 
-    ![Running app](images/run-app-3.png)
+    ![Running app](images/run-app-31.png)
 
 You may now **proceed to the next lab**
 
