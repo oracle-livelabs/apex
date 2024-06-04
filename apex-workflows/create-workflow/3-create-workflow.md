@@ -60,14 +60,20 @@ To create a Workflow:
 
   ![Check Errors in the Page](./images/check-workflow-errors.png " ")
 
-4. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
+4. Under **outgoing**, select **New** and update the following:
+
+    - Activity > To: **End**
+
+   ![Check Errors in the Page](./images/set-end.png " ")
+
+5. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
 
   ![Delete activity using Tree](./images/delete-activity-tree.png " ")
 
   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
 
-5. The Workflow now contains just the Start and the End activities. Connect the Start and End activities and then click the **Save** button at the top right corner.
+6. The Workflow now contains just the Start and the End activities. Connect the Start and End activities and then click the **Save** button at the top right corner.
 
   ![Changes saved successfully](./images/save-workflow.png " ")
 
@@ -127,15 +133,15 @@ You will define the following parameters for the Doctor Appointment Workflow:
 
 2. This adds a Parameter with a label "New" in the Workflow tree. In the Property Editor, enter/select the following:
 
-    - Label: **Patient Name**
-
     - Static ID: **PATIENT_NAME**
+
+    - Label: **Patient Name**
 
     - Data Type: **VARCHAR2**
 
   ![Configure Patient Name Parameter](./images/create-param-patient-name.png " ")
 
-3. Similarly, add the following Parameters given in the table below.
+3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
   |Static ID | Label | Data Type | Application Format Masks > Session State Format Mask |
   |----------|-------|-------------|----------|
@@ -145,7 +151,7 @@ You will define the following parameters for the Doctor Appointment Workflow:
   | PROBLEM | Problem | Varchar2 |       |
   {: title="List of Parameters to be Created"}
 
-      ![Add and Configure Request Date Parameter](./images/add-param-date.png " ")
+
 
 ## Task 5: Use the parameters in the Workflow Subject
 
@@ -175,7 +181,7 @@ In addition to the input parameters, the Workflow also needs information about t
 
     - Column Mapping > Primary Key Column: **DNAME**
 
-    ![Set Table Name](./images/add-additional-data.png " ")
+  ![Set Table Name](./images/add-additional-data.png " ")
 
 3. Click **Save**.
 
@@ -202,7 +208,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
     ![Create Variable](./images/create-variable.png " ")
 
-3. A new variable with Name **New** gets created in the tree. Click on it and enter/select the following in the Property Editor:
+3. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **BOOKING_ID**
 
@@ -212,25 +218,37 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
     - Value > Type: **Null**. This is because we know that the Booking ID only gets generated later in the workflow after the appointment is confirmed, so it needs to be initialized to null.
 
-        ![Create Booking ID Variable](./images/create-bookingid-variable.png " ")
+  ![Create Booking ID Variable](./images/create-bookingid-variable.png " ")
 
-4. Similarly, create a variable called **AVAILABILITY**. Enter/Select the following in the Property Editor:
-    - Data Type: **BOOLEAN**
-    - Value > Type: **Null**
+4. Similarly, create a variable called **AVAILABILITY**. In the Property Editor, Enter/Select the following:
+
+    - Identification > Static ID: **AVAILABILITY**
+
+    - Label > Label: **Availability**
+
+    - Variable > Data Type: **BOOLEAN**
+
     - Under Application Format Masks:
-        - True Value: **AVAILABLE**
-        - False Value: **BUSY**
 
+        - True Value: **AVAILABLE**
+
+        - False Value: **BUSY**
 
   ![Create Availability Variable](./images/configure-availability.png " ")
 
-6. Finally, create a variable **FEE**. Enter/Select the following in the Property Editor:
+6. Finally, create a variable **FEES**. In the Property Editor, Enter/Select the following:
 
-    - Data Type: **NUMBER**
+    - Identification > Static ID: **FEES**
+
+    - Label > Label: **Fees**
+
+    - Variable > Data Type: **NUMBER**
 
     - Under Value:
-      - Type: **Static Value**
-      - Static Value: **0**
+
+        - Type: **Static Value**
+
+        - Static Value: **0**
 
   ![Create Fee Variable](./images/create-variable-fee.png " ")
 
