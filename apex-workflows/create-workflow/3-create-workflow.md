@@ -7,6 +7,7 @@ In this lab, you learn the process of creating a Doctor Appointment Workflow usi
 ### Objectives
 
 In this lab, you learn how to:
+
   - Create a Workflow
   - Modify the Workflow details
   - Define Workflow Data
@@ -21,9 +22,10 @@ Estimated Time: 20 minutes
 
 To create a Workflow:
 
-1. In the App Builder, navigate to **Doctor Appointments Made Easy!** application and then select **Shared Components**.
+1. In the App Builder, navigate to **Doctor Appointments Made Easy!** application and select **Shared Components**.
 
   ![Navigate to Application](./images/navigate-to-application.png " ")
+
   ![Click Shared Components](./images/click-shared-components.png " ")
 
 2. Under Workflows and Automations, select **Workflows**.
@@ -41,24 +43,27 @@ To create a Workflow:
 ## Task 2: Modify Workflow Details
 
 1. With Doctor Appointment selected in the rendering tree, enter/select the following in the Property editor:
+
     - Identification > Name: **Doctor Appointment**
+
     - Advanced > Static ID: **DOC_APPT**
 
     ![Change the Workflow name and Static ID](./images/change-workflow-name.png " ")
 
-2. Now, select **New[Dev]** in the left pane, and in the property editor, for Workflow Version enter **1.0**.
+2. In the left pane, select **New[Dev]** and in the property editor, for Workflow Version enter **1.0**.
 
   ![Change the Workflow Version](./images/create-workflow-version.png " ")
 
 > **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
 
-3. The Workflow cannot be saved yet as the there are validation errors. Click on the **error icon (Yellow exclamation mark)** to see the error.
+3. The Workflow cannot be saved yet as there are validation errors. Click on the **error icon (Yellow exclamation mark)** to see the error.
 
   ![Check Errors in the Page](./images/check-workflow-errors.png " ")
 
-4. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click on the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and you can choose **Delete** from the options provided.
+4. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
 
   ![Delete activity using Tree](./images/delete-activity-tree.png " ")
+
   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
 
@@ -74,7 +79,7 @@ To create a Workflow:
 
 ## Task 3: Familiarize with Workflow Elements
 
-1. At this stage, let's explore the fundamental elements and terminology of a workflow. We have introduced the notions of Activities and Connections in the Workflow. Now, let's take a moment to understand the different types of workflow elements and terms such as Activities, Connections, and Connection Types.
+1. At this stage, let's explore the fundamental elements and terminology of a workflow. You have introduced the notions of Activities and Connections in the Workflow. Now, let's take a moment to understand the different types of workflow elements and terms such as Activities, Connections, and Connection Types.
 
 2. Refer to the Activity Palette at the bottom in the Designer for a list of activity types.
 
@@ -95,7 +100,7 @@ To create a Workflow:
   {: title="List of Activity Types"}
 
 
-  
+
   | Connection Type | Description                                                                                                        |
   |------------------|--------------------------------------------------------------------------------------------------------------------|
   | Normal           | Connects two activities in the workflow. No conditions. Not applicable for Switch Activities                         |
@@ -107,26 +112,30 @@ To create a Workflow:
 
 ## Task 4: Add Inputs to the Doctor Appointments Workflow
 
-In this lab, we explore various aspects of workflow data using the example of a medical appointment application that we are building. We will focus on understanding parameters, variables, activity variables, and additional data.
+In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
 Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the Hospital Staff submitting patient details to the system, marking the commencement of the workflow.
 
 The inputs to the workflow will be the patient details. In workflow terminlogy, these are called **Workflow Parameters**.
-You will define the following parameters for the Doctor Appointment Workflow: 
+
+You will define the following parameters for the Doctor Appointment Workflow:
    PATIENT\_NAME, PATIENT\_AGE, PATIENT\_EMAIL, PROBLEM, REQUEST\_DATE
 
-1. To create Workflow Parameters, right-click on the **Doctor Appointment** Workflow in the tree and select **Create Parameter**.
+1. To create Workflow Parameters, right-click **Doctor Appointment** Workflow in the tree and select **Create Parameter**.
 
   ![Create Parameter](./images/create-parameter.png " ")
 
 2. This adds a Parameter with a label "New" in the Workflow tree. In the Property Editor, enter/select the following:
+
     - Label: **Patient Name**
+
     - Static ID: **PATIENT_NAME**
+
     - Data Type: **VARCHAR2**
 
   ![Configure Patient Name Parameter](./images/create-param-patient-name.png " ")
 
-3. Similarly, add the Parameters given in the table below.
+3. Similarly, add the following Parameters given in the table below.
 
   |Static ID | Label | Data Type | Application Format Masks > Session State Format Mask |
   |----------|-------|-------------|----------|
@@ -142,24 +151,28 @@ You will define the following parameters for the Doctor Appointment Workflow:
 
 The Workflow has a Title field which is a descriptive title for the Workflow and shows up in the Workflow Console that the Hospital Staff will eventually use to monitor the progress of the appointment process. The Title supports using workflow parameter static IDs as substitution strings.
 
-1. To set the Workflow Title, select **Doctor Appointment** Workflow in the Rendering Tree on the left.
+1. To set the Workflow Title, in the left pane, select **Doctor Appointment** Workflow.
 
 2. In the Property Editor, change the Title to **Doctor Appointment Workflow for patient &PATIENT_NAME**.
 
     ![Change Workflow Title](./images/change-workflow-title.png " ")
 
-3. Click **Save** to save your changes.
+3. Click **Save**.
 
 ## Task 6: Add Additional Data to the Workflow
 
 In addition to the input parameters, the Workflow also needs information about the available doctors based on the patient's problem. An understanding of the appointment process tells us that all activities of the workflow need the doctor data.
 
-1. To define Additional Data, click on the **Workflow Version 1.0[Dev]** in the rendering tree.
+1. To define Additional Data, in the rendering tree, click **Workflow Version 1.0[Dev]**.
 
 2. In the Property Editor, enter/select the following:
-    - Under 'Additional Data':
+
+    - Under Additional Data:
+
         - Type: **Table/View**
+
         - Table Name: **DOCTOR**
+
     - Column Mapping > Primary Key Column: **DNAME**
 
     ![Set Table Name](./images/add-additional-data.png " ")
@@ -173,7 +186,7 @@ In addition to the input parameters, the Workflow also needs information about t
 
 **Why Parameters and Additional Data are not enough?!**
 
-The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next. 
+The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
 As an example, consider the following business scenario:
 
@@ -183,15 +196,20 @@ When an appointment is confirmed, the Booking ID for the appointment is carried 
 
 Data such as Availability, Booking ID and Fee need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
-1. Right-click on **1.0 [DEV]** (workflow version) in the Rendering Tree.
+1. In the Rendering tree, Right-click **1.0 [DEV]** (workflow version).
 
 2. Select **Create Variable**.
+
     ![Create Variable](./images/create-variable.png " ")
 
 3. A new variable with Name **New** gets created in the tree. Click on it and enter/select the following in the Property Editor:
+
     - Identification > Static ID: **BOOKING_ID**
+
     - Label > Label: **Booking ID**
+
     - Variable > Data Type: **NUMBER**
+
     - Value > Type: **Null**. This is because we know that the Booking ID only gets generated later in the workflow after the appointment is confirmed, so it needs to be initialized to null.
 
         ![Create Booking ID Variable](./images/create-bookingid-variable.png " ")
@@ -199,18 +217,18 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 4. Similarly, create a variable called **AVAILABILITY**. Enter/Select the following in the Property Editor:
     - Data Type: **BOOLEAN**
     - Value > Type: **Null**
-    - Under 'Application Format Masks':
+    - Under Application Format Masks:
         - True Value: **AVAILABLE**
-        - False Value: **BUSY** 
-    
+        - False Value: **BUSY**
+
 
   ![Create Availability Variable](./images/configure-availability.png " ")
 
-6. Finally, create a variable **FEE**. Enter/Select the following in the Property Editor: 
+6. Finally, create a variable **FEE**. Enter/Select the following in the Property Editor:
 
     - Data Type: **NUMBER**
 
-    - Under 'Value':
+    - Under Value:
       - Type: **Static Value**
       - Static Value: **0**
 

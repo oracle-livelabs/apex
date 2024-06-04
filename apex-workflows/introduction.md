@@ -35,7 +35,7 @@ In this workshop, you will:
 - Create Pages for the APEX application
 
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ### Downloads
 
