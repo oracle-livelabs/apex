@@ -14,12 +14,13 @@ In this lab, you:
 Estimated Time: 20 minutes
 
 ### Prerequisites
+
 - Access to Oracle APEX.
 
 ## Task 1: Create Application Users
-In this lab, you create users for 'Doctor Appointments made Easy!' Application.
+In this task, you create multiple users for **Doctor Appointments made Easy!** Application.
 
-1. On the Application home page, click the **Administration icon** and select **Manage Users and Groups** from the dropdown list.
+1. On the Application home page, click **Administration icon** and select **Manage Users and Groups**.
 
   ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
@@ -43,12 +44,12 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
     | Hospital Staff | STEVE     |
     {: title="List of Users to Create in the Application"}
 
- In the **Create multiple Users** wizard, specify the following attributes:
-    - For a List of Email Addresses: Enter **Email IDs of the Users** given in the table below.
+4. In the **Create multiple Users** dialog, enter/select the following attributes:
 
-    ```
-    <copy>
-      
+    - List of Email Addresses: Copy and Paste the below email addresses
+
+      ```
+      <copy>  
       ROBERT@yourdomain.com    
       ANACHATT@yourdomain.com   
       JANE@yourdomain.com       
@@ -61,41 +62,47 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
       STEVE@yourdomain.com   
       </copy>
       ```
-    
-    - For Usernames: Select **Exclude @ domain as part of the username**
-    - For Password and Confirm Password: **Enter a password**
-    - Click **Next**.
-    
-    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+
+    - Usernames: **Exclude @ domain as part of the username**
+
+    - Password and Confirm Password: **Enter a password**
+
+      Click **Next**.
+
+  ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. Click **Create Valid Users**.
+
   ![Click validate users](./images/create-valid-users.png " ")
- Users are now created in your Workspace.
 
 ## Task 2: Create the 'Doctor Appointments Made Easy!' Application
 
 1. Navigate to **App Builder**.
+
   ![Select App Builder](./images/select-app-builder.png " ")
 
 2. Click **Create**.
+
   ![Click create](./images/click-create.png " ")
 
-3. In the Create an Application wizard, for Name, enter **Doctor Appointments Made Easy!**.
+3. In the **Create an Application** dialog, for Name: Enter **Doctor Appointments Made Easy!** and Click **Create Application**.
 
       ![Create an Application](./images/create-an-application.png " ")
 
-4. Click **Create Application**.
-
 ## Task 3: Install Sample Data
-   In this task, you install a Sample Dataset using a SQL Script.
+
+In this task, you install a Sample Dataset using a SQL Script.
 
 1. Navigate to **SQL Workshop** and click **SQL Scripts**.
+
   ![Click SQL Scripts](./images/click-sql-scripts.png " ")
 
 3. Click **Create**.
+
   ![Click create SQL Scripts](./images/click-create1.png " ")
 
-4. Copy and paste the SQL commands into the Script Editor to create tables for Doctor, Appointment, and Patient Feedback, along with sequences.
+4. **Copy and paste** the below SQL commands into the Script Editor to create tables for Doctor, Appointment, and Patient Feedback, along with sequences.
+
     ```
     <copy>
         begin
@@ -177,7 +184,6 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
     /
     ALTER TRIGGER "PATIENT_FEEDBACK_T" ENABLE;
 
-
     -- insert doc data
     insert into doctor values
     (10, 'ROBERT', 'ONCOLOGY','MS','robert@abc.com');
@@ -198,11 +204,14 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
     (60, 'MARTIN', 'RENOLOGY','MS','martin@abc.com');
     </copy>
     ```
-5. For Script Name, enter **Create DB Tables** and click **Run**.
+5. For Script Name: Enter **Create DB Tables** and click **Run**.
+
   ![Click create SQL Scripts](./images/create-db-tables.png " ")
 
 6. Click **Run Now**. The statements are processed and the sample tables and data are created.
+
   ![Click create SQL Scripts](./images/click-run-now.png " ")
+
   ![Click create SQL Scripts](./images/create-tables-output.png " ")
 
 ## Task 4: Create Package Spec and Package Body
@@ -212,9 +221,10 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
   ![Click create SQL Scripts](./images/click-sql-scripts1.png " ")
 
 2. Click **Create**.
+
   ![Click create SQL Scripts](./images/click-create2.png " ")
 
-3. Copy and paste the code snippet to create a package spec named **eba\_demo\_wf\_doc\_apt.sql**.
+3. **Copy and paste** the code snippet to create a package specification, named **eba\_demo\_wf\_doc\_apt.sql**.
 
     ```
     <copy>
@@ -254,7 +264,7 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
     </copy>
     ```
 
-4. For Script Name, enter **Create Package Spec** and click **Run**.
+4. For Script Name: Enter **Create Package Spec** and click **Run**.
 
     ![Click create SQL Scripts](./images/create-package-spec.png " ")
 
@@ -371,7 +381,7 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
     </copy>
     ```
 
-7. For Script Name, enter **Create Package Body** and click **Run**.
+7. For Script Name: Enter **Create Package Body** and click **Run**.
 
     ![Click create SQL Scripts](./images/create-pckage-body.png " ")
 
@@ -380,7 +390,7 @@ In this lab, you create users for 'Doctor Appointments made Easy!' Application.
   ![Click create SQL Scripts](./images/click-run-now2.png " ")
 
 ## Summary
-You have successfully completed the initial steps for designing the 'Doctor Appointments Made Easy!' application. You first created a 'Doctor Appointments Made Easy!' Application, and then added Application users, created Sample Datasets, and a Package.
+You have successfully completed the initial steps for designing the **Doctor Appointments Made Easy!** application. You first created an Application, and then added Application users, created Sample Datasets, and a Package.
 
 ### What's Next
 In the next lab, you will learn how to create a Workflow using Oracle APEX.
@@ -389,5 +399,4 @@ You may now **proceed to the next Lab**.
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Contributor** -
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
