@@ -20,7 +20,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create Task Definition for Appointment Request
 
-1. In the Page Designer, navigate to **Shared Components**.
+1. Navigate to **Shared Components**.
 
    ![Navigate to Shared Components](./images/navigate-to-shared-components.png " ")
 
@@ -45,7 +45,7 @@ Estimated Time: 20 minutes
 
   ![Creating Task Definition](./images/create-task-definition.png " ")
 
-5. In the Task Definition page, notice that the Task Details Page Number is empty. Click **Create Task Details Page** button to generate the details page for this task.
+5. Under **Settings** notice that the Task Details Page Number is empty. Click **Create Task Details Page** button to generate the details page for this task.
 
   You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
@@ -53,11 +53,11 @@ Estimated Time: 20 minutes
 
     ![Creating Task Details page confirm](./images/create-task-details-page1.png " ")
 
-6. In the Task Definitions Page, click **Appointment Request**.
+6. In the Task Definitions Page, select **Appointment Request**.
 
     ![Select Appoint Request](./images/select-appt-request.png " ")
 
-7. In the **Appointment Request** task definition page, under **Settings**, enter/select the following:
+7.  Under **Settings**, enter/select the following:
 
     - Actions Source: **SQL Query**.
 
@@ -75,7 +75,7 @@ Estimated Time: 20 minutes
 
   > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
-8. In the **Appointment Request** Task Definition, navigate to **Participants** section, and click **Add Row**. Enter the following details:
+8. Navigate to **Participants** tab, and click **Add Row**. Enter/select the following details:
 
     - Participant Type: **Potential Owner**
 
@@ -115,7 +115,7 @@ Estimated Time: 20 minutes
 
   ![Creating Task Definition](./images/create-invoice-request.png " ")
 
-3. In the Task Definition page, notice that the Task Details Page Number is empty. Click **Create Task Details Page**  to generate the details page for this task.
+3. Under **Settings**, notice that the Task Details Page Number is empty. Click **Create Task Details Page**  to generate the details page for this task.
 
   You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
@@ -123,7 +123,8 @@ Estimated Time: 20 minutes
 
     ![Creating Task Details page confirm](./images/create-task-details2.png " ")
 
-4. In the Task Definitions Page, click **Invoice Request** to open the task definition in edit mode and enter/select the following:
+4. Select **Invoice Request** to open the task definition in edit mode and enter/select the following:
+
     - Under Settings:
 
         - Actions Source: **SQL query**,
@@ -141,7 +142,7 @@ Estimated Time: 20 minutes
 
   > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
-5. Now, Navigate to **Participants** tab, and enter/select the following:
+5. Now, Navigate to **Participants**, and enter/select the following:
 
     - Participant Type: **Potential Owner**
 
@@ -151,7 +152,7 @@ Estimated Time: 20 minutes
 
   ![Add Potential owner to the Task](./images/add-invoice-participant.png " ")
 
-6. Navigate to **Parameters** tab. Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
+6. Navigate to **Parameters**. Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
 
     | Static ID     | Label |
     |---------------|---------|
@@ -189,7 +190,7 @@ Estimated Time: 20 minutes
 
     ![Creating Task Details page](./images/create-task-details-page31.png " ")
 
-4. In the Task Definitions Page, click **Feedback Request** and enter/select the following:
+4. Select **Feedback Request** and enter/select the following:
 
     - Under Settings:
 
@@ -209,7 +210,7 @@ Estimated Time: 20 minutes
 
   > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
-5. Navigate to **Participants** tab, and enter/select the following values:
+5. Navigate to **Participants**, and enter/select the following values:
 
     - Participant Type: **Potential Owner**
 
