@@ -233,7 +233,7 @@ At this point, check the Variables in your Workflow Tree. You will notice there 
 
         - Definition: **Appointment Request**
 
-        - Detail Primary Key: **DNO** (Doctor No. from the DOCTOR table)
+        - Detail Primary Key Item: **DNO** (Doctor No. from the DOCTOR table)
 
         - Outcome: **Workflow Variables > TASK_OUTCOME**
 
