@@ -204,9 +204,11 @@ Estimated Time: 20 minutes
     </copy>
     ```
 
+  ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
+  
   ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query1.png " ")
 
-  ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
+
 
   > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 

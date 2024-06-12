@@ -19,7 +19,7 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
 
 1. Navigate to **Shared Components**.
 
-   ![Navigate to Shared Components](./images/navigate-to-shared-componets.png " ")
+   ![Navigate to Shared Components](./images/navigate-to-shared-components.png " ")
 
 2. Under **Workflows and Automations**, select **Workflows**.
 
@@ -248,7 +248,7 @@ At this point, check the Variables in your Workflow Tree. You will notice there 
     |Parameter | Type | Item|
     |---------|--------|------------|
     | Appointment Date | Item | REQUEST_DATE |
-    | Consultation For | Item | PROBLEM |
+    | Consultation Form | Item | PROBLEM |
     | Patient Name | Item | PATIENT_NAME |
 
   ![Set Request Date Param](./images/set-params-app-req.png " ")
@@ -288,7 +288,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
     - Identification > Name: **Appointment Approved?**
 
-    - Switch, > Type: **Check Workflow Variable**
+    - Switch > Type: **Check Workflow Variable**
 
     - Compare > Compare Variable: **TASK_OUTCOME**
 
@@ -482,7 +482,7 @@ The next step is to establish connections for Free Consultation branches with ac
 
 4. In the Left Pane, select **Update Fees > Function Result**. In the Property Editor, enter/select the following:
 
-    - Value > Item > Version Variables: **FEE**
+    - Value > Item > Version Variables: **FEES**
 
   ![Configure Function Result Var](./images/configure-function-result.png " ")
 
@@ -550,7 +550,7 @@ The next step is to establish connections for Free Consultation branches with ac
 
 At this point, the workflow needs to raise an Invoice Request for the patient to confirm.
 
-1. From the Activities Palette, drag and drop a **Human Task - Create** Activity and place it next to the **Complete Appointment End** Activity.
+1. From the Activities Palette, drag and drop a **Human Task - Create** Activity and place it between **Update Fees** and **Complete Appointment End** Activity.
 
      ![draw conn to end activity](./images/create-human-task-inv.png " ")
 
@@ -615,7 +615,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
         - Type: **Timeout**
 
-    - Under Activity > To: **No Appointment Email**
+    - Under Activity > To: **No Appointment Mail**
 
   ![Configure timeout connection](./images/configure-timeout-prop.png " ")
 

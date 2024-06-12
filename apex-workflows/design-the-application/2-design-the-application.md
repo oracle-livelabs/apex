@@ -273,7 +273,7 @@ In this task, you install a Sample Dataset using a SQL Script.
   ![Click create SQL Scripts](./images/click-run-now1.png " ")
 
 
-6. Repeat steps 2-3 to create a package body named **eba\_demo\_wf\_doc\_apt.plb**.
+6. Repeat steps 1-2 to create a package body named **eba\_demo\_wf\_doc\_apt.plb**.
 
     ```
     <copy>

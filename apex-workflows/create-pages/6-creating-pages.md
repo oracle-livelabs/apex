@@ -22,7 +22,7 @@ Estimated Time: 20 minutes
 
 Now that the Workflow is created, let us create the Page that the Hospital Staff will use to Submit a New Appointment.
 
-1. Navigate to your application by clicking on **Application ID <number>**. Alternatively, you can also navigate by clicking the App Builder icon for your workspace and selecting **Doctor Appointments Made Easy!** Application.
+1. Navigate to **Application ID <number>**. Alternatively, you can also navigate by clicking the App Builder icon for your workspace and selecting **Doctor Appointments Made Easy!** Application.
 
     ![navigate to doctors app made easy](./images/click-app-builder1.png " ")
 
@@ -44,7 +44,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
   ![Configure blank page](./images/create-blank-page12.png " ")
 
-5. In the Page Designer, right-click on body and select **Create Region**.
+5. In the Page Designer, right-click **Body** and select **Create Region**.
 
     ![Create a region](./images/create-region13.png " ")
 
@@ -151,11 +151,11 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
 1. In the Left Pane, navigate to the **Processing** Tab.
 
-2. In the Processing Tab, right-click on **Processing** and select **Create Process**.
+2. In the **Processing** Tab, right-click on **Processing** and select **Create Process**.
 
   ![create page process](./images/click-create-process.png " ")
 
-3. Select the newly created Page Process, and then in the property editor, enter/select the following:
+3. In the property editor, enter/select the following:
 
       - Under Identification:
 
@@ -494,7 +494,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
       - Under Source:
 
-          - Table Name:**APPOINTMENT**
+          - Table Name: **APPOINTMENT**
 
           - **Where Clause**: Enter the below code:
           ```
@@ -537,17 +537,17 @@ Now, you need to create a View Only page where patients can log in to view their
         - SQL Query: copy and paste the below SQL.
         ```
         <copy>
-        select ID,
-             PATIENT_NAME,
-             'DR.' || DNAME as DNAME,
-             APPOINTMENT,
-             FEEDBACK,
-             RATING,
-             CREATED_AT,
-             UPDATED_AT
-        from PATIENT_FEEDBACK, DOCTOR
+       select ID,
+       PATIENT_NAME,
+       'DR.' || DNAME as DNAME,
+       APPOINTMENT,
+       FEEDBACK,
+       RATING,
+       CREATED_AT,
+       UPDATED_AT
+       from PATIENT_FEEDBACK, DOCTOR
        where PATIENT_NAME=:APP_USER
-        and DOCTOR_NO = DNO
+       and DOCTOR_NO = DNO
         </copy>
         ```
 
