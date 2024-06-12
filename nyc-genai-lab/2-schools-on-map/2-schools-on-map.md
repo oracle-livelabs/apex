@@ -53,7 +53,7 @@ In this lab, you will:
 
     ![Page designer](images/school-layer-2.png =40%x*)
 
-5. In the rendering tree, under Map, right-click and select **Create Layer**.
+5. In the rendering tree, under Map, right-click **Layers** and select **Create Layer**.
     ![Page designer](images/new-layer-2.png =40%x*)
 
 6. In the property editor, enter/select the following:
@@ -246,7 +246,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
     ![Page Designer](images/search-results-source.png ' ') 
 
-2. For SQL Query, enter the following and click **OK**:
+2. For SQL Query, replace the code by copying and pasting the following SQL query:
     ```
     <copy>
     select ID,
@@ -266,7 +266,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
     from HIGHSCHOOLS
     </copy>
     ```
-
+    Click **OK**.
     ![Page Designer](images/search-results-sql.png ' ') 
 
 3. In the rendering tree, right-click **Facets** and select **Create Facet**.
@@ -307,12 +307,11 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
         ![Page Designer](images/items-submit.png ' ') 
 
 6. Rearrange the facets in the rendering tree by dragging and dropping, so that the facets are in the sequence as follows:
-    - P1_SEARCH, 
     - P1_SEARCH
     - P1_INTEREST
     - P1_DISTANCE
     - P1_BOROUGH
-    - P1_ATTENDANCE_RATE
+    - P1\_ATTENDANCE\_RATE
     - P1_SAFE
     - P1_METHOD
 

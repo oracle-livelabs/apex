@@ -50,6 +50,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     ![App home page](images/create-blank-page.png ' ') 
 
 2. In the Create Blank page dialog, enter/select the following:
+    - Page Number: **3**
     - Name: **Learn More**
     - Page Mode: **Modal Dialog**
 
@@ -67,7 +68,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     
     ![Page Designer](images/name-chat.png ' ')
 
-    - Under Appearance** > **Template Options:
+    - Under Appearance > Template Options:
         - Header: **Hidden**
         
         Click **OK**.
@@ -187,11 +188,11 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 3. In the Property Editor, enter/select the following:
 
-    - Type: Button
-    - Label: Learn More
-    - Layout > Position: Secondary
+    - Type: **Button**
+    - Label: **Learn More**
+    - Layout > Position: **Secondary**
     - Under Link > Target, click Link Builder - Target:
-        - Page: 3
+        - Page: **3**
         - Set Items:
         
             |Name | Value|
@@ -205,8 +206,10 @@ To use the Generative AI service in APEX, you need to first configure it at the 
         - Display Type: **Text with Icon**
         - Icon: **fa-question-square-o**
 
-
+    
     Finally, click **Save**.
+
+    ![Page Designer](images/learn-more-button.png ' ')
 
 
 ## Summary

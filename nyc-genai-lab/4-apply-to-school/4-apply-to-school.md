@@ -21,23 +21,25 @@ In this lab, you will:
 
 1. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
 
+    ![Navigation bar menu](images/nav-quick-sql.png ' ') 
+
 2. In the Quick SQL editor, copy and paste the following short hand syntax:
 
     ```
     <copy>
 
     NYC_SCHOOLS_APPS
-    PARENT_USER vc255 /nn,
-    PARENT_NAME vc255 /nn,
-    PARENT_EMAIL vc255 /nn,
-    STUDENT_NAME vc255 /nn,
-    STUDENT_EMAIL vc255,
-    LETTER vc4000 /nn,
-    DISPOSITION vc16 DEFAULT 'PENDING' /nn,
-    SCHOOL_ID num /fk HIGH_SCHOOLS,
-    CREATED date /default SYSDATE /nn,
-    UPDATED date,
-    UPDATED_BY vc255
+        PARENT_USER vc255 /nn
+        PARENT_NAME vc255 /nn
+        PARENT_EMAIL vc255 /nn
+        STUDENT_NAME vc255 /nn
+        LETTER vc4000 /nn
+        DISPOSITION vc16 DEFAULT 'PENDING' /nn
+        SCHOOL_ID num /fk HIGHSCHOOLS
+        CREATED date /default SYSDATE /nn
+        UPDATED date
+        UPDATED_BY vc255
+
     </copy>
     ```
     ![SQL Commands Page](images/quick-sql.png ' ') 
@@ -45,6 +47,14 @@ In this lab, you will:
 3. Click **Review and Run**.
     ![SQL Commands Page](images/review-run.png ' ') 
 
+4. For Script Name, enter **NYC_SCHOOLS_APPS_TABLE** and click **Run**.
+    ![SQL Commands Page](images/script-name.png ' ') 
+
+5. Click **Run Now**.
+    ![SQL Commands Page](images/run-now.png ' ') 
+
+6. The summary displays that the statements were processed successfully and the table was created.
+    ![SQL Commands Page](images/success.png ' ') 
 
 ## Task 2: Create a Form Page
 
@@ -55,9 +65,10 @@ Let us create a new Form page for school application.
     ![Create page wizard](images/create-form.png ' ')
 
 2. In the Create Form wizard, enter/select the following:
+    - Page Number: **7**
     - Name: **Apply to School**
     - Page Mode: **Drawer**
-    - Table/View Name: **NYC_SCHOOLS_APPS**
+    - Table/View Name: **NYC\_SCHOOLS\_APPS**
 
     Click **Next**.
 
@@ -69,20 +80,19 @@ Let us create a new Form page for school application.
 
 
 4. In the Rendering tree, select the following page items under Region Body:
-    - P7_PARENT_USER
+    - P7\_SCHOOL\_ID
+    - P7\_PARENT\_USER
     - P7_LETTER
     - P7_DISPOSITION
-    - P7_SCHOOL_ID
     - P7_CREATED
     - P7_UPDATED
-    - P7_UPDATED_BY
-    - P7_TASK_ID
+    - P7\_UPDATE\_BY
 
     In the Property Editor, select Type as **Hidden**.
 
     ![Page Designer](images/type-hidden.png ' ')
 
-5. In the Rendering Tree, select the page item **P7_PARENT_NAME**. In the Property Editor, enter/select the following:
+5. In the Rendering Tree, select the page item **P7\_PARENT\_NAME**. In the Property Editor, enter/select the following:
 
     - Type: **Display Only**
     - Under Default:
@@ -99,7 +109,7 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/parent-name.png ' ')
 
-6. Now, select the page item **P7_PARENT_USER**. In the Property Editor, enter/select the following:
+6. Now, select the page item **P7\_PARENT\_USER**. In the Property Editor, enter/select the following:
     - Under Default:
         - Type: **Expression**
         - PL/SQL Expression - **:APP_USER**
@@ -114,7 +124,7 @@ Let us create a new Form page for school application.
     ![Page Designer](images/disposition.png ' ') 
 
 
-8. Select the page item **P7_PARENT_EMAIL**. In the Property Editor, enter/select the following:
+8. Select the page item **P7\_PARENT\_EMAIL**. In the Property Editor, enter/select the following:
     - Type: **Display Only**
     - Under Default:
         - Type: **SQL Query (return single value)**
@@ -126,7 +136,7 @@ Let us create a new Form page for school application.
         ```
     ![Page Designer](images/parent-email.png ' ') 
 
-9. In the left pane, right-click **P7_STUDENT_NAME**, and select **Create Button Below**.   
+9. In the left pane, right-click **P7\_STUDENT\_NAME**, and select **Create Button Below**.   
     ![Page Designer](images/create-button-below.png ' ') 
 
 10. In the Property Editor, enter/select the following:
@@ -140,7 +150,13 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/create-item-below.png ' ')
 
-12. In the left pane, select **P7_EMAIL**. In the Property Editor, change the Type to **Rich Text Editor**. Then, right-click **P7_EMAIL** and select **Create Computation**.
+12. In the Property Editor, enter/select the following:
+    - Name: **P7\_EMAIL**
+    - Type: **Rich Text Editor**
+
+     ![Page Designer](images/p7-email.png ' ')
+
+12. In the left pane, right-click **P7\_LETTER** and select **Create Computation**.
 
     ![Page Designer](images/create-computation.png ' ')
 
@@ -159,7 +175,7 @@ Let us create a new Form page for school application.
 
 
 15. In the Property Editor, enter/select the following:
-    - Name: **P7_FINAL_PROMPT**
+    - Name: **P7\_FINAL\_PROMPT**
     - Type: **Hidden**
 
     ![Page Designer](images/final-prompt-name.png ' ')
@@ -232,7 +248,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
     - Under Settings:
         - Package: **APEX_AI**
         - Procedure or Function: **GENERATE**
-    - Success Message: **Application Sent**
+    - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
 
     ![Processing tab in Page Designer](images/child-gen-letter.png ' ')
 
@@ -242,11 +258,11 @@ In this task, we create a process execution chain to first prepare a prompt and 
 7. Select **p_prompt**. In the Property Editor, edit/select the following:
     - Under Value:
         - Type: **Item**
-        - Item: **P7_FINAL_PROMPT**
+        - Item: **P7\_FINAL\_PROMPT**
 
     ![Processing tab in Page Designer](images/param-2.png ' ')
 
-8. Select **p_service_static_id**. In the Property Editor, edit/select the following:
+8. Select **p\_service\_static\_id**. In the Property Editor, edit/select the following:
     - Under Value:
         - Type: **Static Value**
         - Item: **open_ai**
@@ -256,6 +272,12 @@ In this task, we create a process execution chain to first prepare a prompt and 
 9. Drag and drop the parent process, **Generate Letter** to the top.
 
     ![Processing tab in Page Designer](images/drag-to-top.png ' ')
+
+10. In the left pane, select **Process form Apply to School**. In the Property Editor, enter/select the following:
+    - Success Message: **Application Sent**
+    - Server-side Condition > When Button Pressed: **Create**
+
+     ![Processing tab in Page Designer](images/success-msg.png ' ')
 
 10. Create a branch to reload the page once the application is submitted. Right-click **After Processing** and select **Create Branch**.
 
@@ -277,6 +299,8 @@ In this task, we create a process execution chain to first prepare a prompt and 
     - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
 
     ![Processing tab in Page Designer](images/reload-page.png ' ')
+
+12. Click **Save**.
 
 
 ## Task 4: Create the Apply Button
@@ -333,6 +357,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
         - Clear Cache: **7**
 
         Click **OK**.
+    - Appearance > Hot: Enable the Toggle Button to **ON**.
     - Under Server-side Condition:
         - Type: **Item is NULL**
         - Item: **APPLICATION_STATUS**
