@@ -25,7 +25,7 @@ Estimated Time: 55 minutes
 
 ### Downloads
 
-[Click here](./files/proofofconcept-app.sql) to download the completed application.
+**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/ZhBoo0yj7BKED2XfPqHNRZUQ6XEkLHHWIhZqK_N1o3-OQ5iDT90kvFoqs6ri0ouW/n/c4u04/b/livelabsfiles/o/labfiles/poc-lab-scripts.sql)** to download the completed application.
 
 ## Learn More - *Useful Links*
 
