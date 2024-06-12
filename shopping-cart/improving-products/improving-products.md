@@ -60,7 +60,8 @@ As you can see, it's hard to find the products and it would be beneficial to see
     ![App Builder home page](./images/facets3.png " ")
 
 4. Unit price is not a common search criteria, so you want to put this facet at the bottom.
-    In the Rendering tree (left pane), under Search, within Facets, click and hold **P1\_UNIT\_PRICE** and drag it down until it is under **P1\_COLOR\_ID**, then release the mouse. Reorder the facets to display as in this image.
+    In the Rendering tree (left pane), under Search, within Facets, click and hold **P1\_COLOR\_ID** and drag it down until it is under **P1\_CLOTHING\_ID**, then release the mouse. Also, drag **P1\_UNIT\_PRICE** under **P1\_CLOTHING\_ID**.
+    Reorder the facets to display as in this image.
 
     ![Rendering tree in the Page Designer](./images/reorder-facet-1.png " ")
 
