@@ -145,6 +145,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
 
 

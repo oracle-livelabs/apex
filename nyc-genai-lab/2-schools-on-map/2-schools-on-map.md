@@ -5,7 +5,7 @@ In this lab, you learn to create a Map region and display the schools as points 
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 <!-- Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_a6bi2e62) -->

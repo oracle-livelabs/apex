@@ -6,7 +6,7 @@ In the previous labs, you went through detailed steps to configure and use Gener
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
-Estimated Time: 20 minutes
+Estimated Time: 5 minutes
 
 <!-- Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_a6bi2e62) -->

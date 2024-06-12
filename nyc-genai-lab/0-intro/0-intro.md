@@ -17,24 +17,25 @@ You can read more about these models from the [documentation](https://docs.oracl
 
 This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop an "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them in making an informed decision about whether a specific school is the ideal fit for their child.
 
-Estimated Time: 45 minutes
+Estimated Time: 60 minutes
 
-### Objectives
+### **Objectives**
 
-* Build a conversational chat widget using GenAI
-* Use NL2SQL to generate queries 
-* Implement map regions
+* Implement Faceted Search for Cards and Map Regions to filter and serach for the best school.
+* Build a conversational chatbot using Generative AI to ask questions about a school.
+* Generate Email using Generative AI to apply to a school.
 
 *Note: This workshop assumes you are using Oracle APEX 24.1.*
 
-### Labs
+### **Labs**
 
 | Module | Est. Time |
 | --- | --- |
-| [Creating an APEX application](?lab=1-create-app) | 5 minutes |
-| [Improving the Faceted Search](?lab=lab-2-improve-faceted-search) | 10 minutes |
-| [Improving the Report and Form](?lab=lab-3-improve-report-form) | 20 minutes |
-| [Adding Maps and PWA](?lab=lab-4-add-map-region-install-pwa) | 10 minutes |
+| [Creating an APEX application](?lab=1-create-app) | 10 minutes |
+| [Visualize Schools on a Map](?lab=2-schools-on-map) | 10 minutes |
+| [Build conversation Inquiry using Generative AI](?lab=3-using-genai) | 20 minutes |
+| [Generate Email to Apply to a School](?lab=4-apply-to-school) | 15 minutes |
+| [Run the Application](?lab=5-run-app) | 5 minutes |
 
 Total estimated time: 60 minutes
 
@@ -42,7 +43,7 @@ Total estimated time: 60 minutes
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
-### Downloads
+### **Downloads**
 
 [Click here]() to download the completed application. Configure the Generative AI service in order to use the application export. Refer to **Lab 3: Task 1** for steps to configure your Generative AI service.
 
@@ -58,4 +59,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## **Acknowledgements**
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
