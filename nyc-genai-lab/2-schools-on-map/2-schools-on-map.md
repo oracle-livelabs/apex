@@ -328,3 +328,15 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 8. Click **Save and Run** page to see how the app looks.
 
     ![Page Designer](images/save-and-run.png ' ') 
+
+
+## Summary
+
+You now know how to map a Faceted Search to a Map region. You also learned to filter the schools based on spatial distance.
+
+You may now **proceed to the next lab**.   
+
+## Acknowledgments
+
+ - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
