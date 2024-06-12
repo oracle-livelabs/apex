@@ -20,37 +20,50 @@ In this lab, you will:
 ## Task 1: Run the Application
 
 1. From the Page Designer, click **Save and Run** to run the application. Or, you can also navigate to the application homepage and click **Run Application**.
+    ![Page Designer](images/save-and-run.png ' ')
 
 2. Login to your application using your APEX account.
+    ![App login screen](images/login.png ' ')
 
-3. You can see the Faceted Search page where the schools are listed as cards. Apply facets to filter the schools. Select the following facets under Interest:
+## Task 2: Explore the App Features
+1. You can see the Faceted Search page where the schools are listed as cards. Apply facets to filter the schools. Select the following facets under Interest:
     - **Science & Math**
     - **Computer Science & Technology**
 
-4. Switch to the Maps tab to display the schools on a map. 
+    ![Search and Apply page in the running app](images/apply-facet.png ' ')
+
+2. Switch to the Maps tab to display the schools on a map. 
     - Apply facet for Distance: **Less than 5 Miles**
     - Apply another facet for Borough: **Manhattan**
     The search narrows down to 15 schools.
+    ![Maps tab in the running app](images/map.png ' ')
 
+3. Switch to the Cards tab again. For the **Young Women's Leadership School (TYWLS)** school, click **Learn More**. An AI Assistant Chat Interface dialog is displayed.
 
-5. Switch to the Cards tab again. For the **Young Women's Leadership School (TYWLS)** school, click **Learn More**. An AI Assistant Chat Interface dialog is displayed.
+    ![search schools tab](images/learn-more.png ' ')
 
-
-6. You can ask questions about the school in natural language and get appropriate responses. Some example prompts are provided below:
+4. You can ask questions about the school in natural language and get appropriate responses. Some example prompts are provided below:
     - What advanced placement courses are taught at this school? 
     - What language courses are taught here?
 
     Review the responses and close the dialog.
+
+    ![AI chat bot](images/chat.png ' ')
     
 
-7. Let's say, as a parent, I am happy with the school and would like to apply. Click **Apply**.
+5. Let's say, as a parent, I am happy with the school and would like to apply. Click **Apply** for *Young Women's Leadership School (TYWLS)* school.
+    ![cards page](images/apply.png ' ')
 
-8. A drawer opens up for the Application. For Student Name, enter **Joe**. And click **Generate Email**. This invokes the Gen AI service to generate an email for you.
+6. An Apply to School drawer opens up for editing. For Student Name, enter **Joe**. And click **Generate Email**. This invokes the Gen AI service to generate an email for you.
+    ![apply to school drawer](images/student-name.png ' ')
 
 
-9. Review the generated email and make modifications if needed. Finally click **Send Application**.
+
+7. Review the generated email and make modifications if needed. Finally click **Send Application**.
+    ![apply to school drawer](images/generate-letter.png ' ')
     
-10. The application was successfully submitted.
+8. The application was successfully submitted.
+    ![app homepage](images/apply-sent.png ' ')
 
 
 ## Summary
