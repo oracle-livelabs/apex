@@ -47,7 +47,7 @@ In this lab, you will:
 3. Click **Review and Run**.
     ![SQL Commands Page](images/review-run.png ' ') 
 
-4. For Script Name, enter **NYC_SCHOOLS_APPS_TABLE** and click **Run**.
+4. For Script Name, enter **NYC\_SCHOOLS\_APPS\_TABLE** and click **Run**.
     ![SQL Commands Page](images/script-name.png ' ') 
 
 5. Click **Run Now**.
@@ -291,7 +291,8 @@ In this task, we create a process execution chain to first prepare a prompt and 
         
             |Name | Value|
             |------|------|
-            |&P7\_STUDENT\_NAME.| &P7\_SCHOOL\_ID. |
+            |P7\_STUDENT\_NAME | &P7\_STUDENT\_NAME.|
+            |P7\_SCHOOL\_ID| &P7\_SCHOOL\_ID. |
             {: title="Set Item name and value"}
 
         - Success Message: Disable the Toggle Button to **OFF**.

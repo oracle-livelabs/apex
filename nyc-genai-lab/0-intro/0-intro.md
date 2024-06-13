@@ -21,7 +21,7 @@ Estimated Time: 60 minutes
 
 ### **Objectives**
 
-* Implement Faceted Search for Cards and Map Regions to filter and serach for the best school.
+* Implement Faceted Search for Cards and Map Regions to filter and search for the best school.
 * Build a conversational chatbot using Generative AI to ask questions about a school.
 * Generate Email using Generative AI to apply to a school.
 
