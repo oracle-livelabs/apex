@@ -45,7 +45,13 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### **Downloads**
 
-[Click here]() to download the completed application. Configure the Generative AI service in order to use the application export. Refer to **Lab 3: Task 1** for steps to configure your Generative AI service.
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-genai-app.sql.zip) to download the completed application zip file and unzip it.
+2. Import the **nyc-genai-app.sql** file into your workspace by following the steps in the Install Application wizard.
+3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Generative AI**.   
+4. Edit the **Open AI** service. For Credential, select **Create New** and for API Key, enter your Open AI API key. 
+5. All set. Now run the application and see it in action!
+
 
 ## Learn More - *Useful Links*
 
