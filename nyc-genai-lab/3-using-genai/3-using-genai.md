@@ -68,10 +68,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     
     ![Page Designer](images/name-chat.png ' ')
 
-    - Under Appearance > Template Options:
-        - Header: **Hidden**
-        
-        Click **OK**.
+    - Appearance > Template: **Blank with Attributes**
 
     - Advanced > Static ID: **chat**
 
