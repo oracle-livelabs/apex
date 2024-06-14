@@ -72,13 +72,6 @@ To create a Workflow:
 
   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
-
->6. The Workflow now contains just the Start and the End activities. Connect the Start and End activities and then click the **Save** button at the top right corner.._
-
-  >![Changes saved successfully](./images/save-workflow.png " ")._
-
-> **Note:** _A workflow model cannot be saved until its validation errors have been fixed.._
-
 6. The changes are saved successfully.
 
   ![Check Errors in the Page](./images/changes-saved.png " ")

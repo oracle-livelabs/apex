@@ -572,7 +572,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
   ![draw conn to end activity](./images/config-raise-inv.png " ")
 
-3. Then, detach the two connections from **Update Fees** and **Send Invoice Mail To Patient activities** and attach them to the **Raise Invoice Request** activity.
+3. Then, detach the connection from **Send Invoice Mail To Patient activities** and attach them to the **Raise Invoice Request** activity.
 
      ![draw conn to raise inv](./images/draw-connections-inv.png " ")
 
