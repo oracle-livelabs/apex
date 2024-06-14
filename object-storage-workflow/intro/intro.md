@@ -24,17 +24,17 @@ In this lab, you will:
 
 ### Labs
 
-| # | Module | Est. Time |
-| --- | --- | --- |
-| - |  [Get Started](?lab=cloud-login) | 5 min |
-| 1 | [Create autonomous database](?lab=create-autonomous) | 15 min |
-| 2 | [Create application](?lab=create-application) | 10 min |
-| 3 | [Create REST data source](?lab=create-rest-source) | 10 min |
-| 4 | [Create form](?lab=create-form) | 5 min |
-| 5 | [Upload file](?lab=upload-file) | 10 min |
-| 6 | [Task details](?lab=task-details) | 10 min |
-| 7 | [Download file](?lab=download-file) | 5 min |
-| 8 | [Clean up](?lab=clean-up) | 5 min |
+| #   | Module                                               | Est. Time |
+| --- | ---------------------------------------------------- | --------- |
+| -   | [Get Started](?lab=cloud-login)                      | 5 min     |
+| 1   | [Create autonomous database](?lab=create-autonomous) | 15 min    |
+| 2   | [Create application](?lab=create-application)        | 10 min    |
+| 3   | [Create REST data source](?lab=create-rest-source)   | 10 min    |
+| 4   | [Create form](?lab=create-form)                      | 5 min     |
+| 5   | [Upload file](?lab=upload-file)                      | 10 min    |
+| 6   | [Task details](?lab=task-details)                    | 10 min    |
+| 7   | [Download file](?lab=download-file)                  | 5 min     |
+| 8   | [Clean up](?lab=clean-up)                            | 5 min     |
 
 ### **Let's Get Started!**
 
@@ -43,7 +43,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### **Sample Files**
 
-- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jyHA4nclWcTaekNIdpKPq3u2gsLb00v_1mmRKDIuOEsp--D6GJWS_tMrqGmb85R2/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
+- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
 
 ## Learn More
 

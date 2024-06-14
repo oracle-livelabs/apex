@@ -10,7 +10,11 @@
         "filename": "../../../apex-professional-common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Improve Application",
+        "title": "Lab 1: Create Standard Search Configurations",
+        "filename": "../../search-conf.md"
+      },
+      {
+        "title": "Lab 2: Improve Application",
         "filename": "../../improving-app.md"
       },
       {

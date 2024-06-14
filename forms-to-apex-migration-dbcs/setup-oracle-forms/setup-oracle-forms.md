@@ -231,7 +231,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 9. If all goes well, you should now see a linux desktop in your VNC window.
 
 ## Task 3: Copy the SQL Scripts, Shell Scripts and Sample Forms files to your development system
-1. We have sample forms and sample database scripts that can be downloaded from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
+1. We have sample forms and sample database scripts that can be downloaded from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
 
 2. Unzip the files and Copy the files over to your development system from your local Desktop
 
