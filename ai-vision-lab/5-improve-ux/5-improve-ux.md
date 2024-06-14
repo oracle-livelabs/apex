@@ -25,13 +25,16 @@ In the Property Editor, for Identification -> Type, select **Image Upload**.
 
     ![Page Designer view of the Timeline page](images/image-upload.png " ")
 
-2. In the Property editor, update the following:
-    - Under Display, for Display As: Select **Block Dropzone**
-    - Under Cropping, toggle **Allow Cropping** to ON.
+2. In the Property editor, enter/select the following:
+
+    - Display > Display As: **Block Dropzone**
+
+    - Cropping > Allow Cropping**: **Toggle On**
 
     ![Property Editor](images/allow-crop.png " ")
 
 3. Click **Save and Run** to test the changes.
+
     ![Page Designer](images/save-and-run.png " ")
 
 4. Click **Add Post**. An Image Upload dialog opens. Choose an image or drag-and-drop the image. You will now be able to crop the image and click on **Apply Changes**. Once ready, click on **Post** to post the image to your Timeline.
@@ -40,8 +43,8 @@ In the Property Editor, for Identification -> Type, select **Image Upload**.
 
     ![Image upload dialog window](images/crop-image.png " ")
 
-
 5. The new image now appears on your Social Media Timeline.
+
     ![App output](images/sm-timeline.png " ")
 
 
@@ -51,6 +54,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
 **Note**:
 - On macOS, Share will **NOT** work on Chrome and Firefox browsers. Use Edge or Safari browsers.
+
 - On Windows, Share will **NOT** work on Edge browser. Use Chrome, Edge or Safari browsers.
 
 1. Navigate to the Timeline page. Under the **Timeline** region, right-click **Actions** and select **Create Action**.
@@ -58,24 +62,34 @@ In this task, you add a Share button that allows a user to share the post via em
     ![Page Designer](images/create-action1.png " ")
 
 2. In the Property Editor, update the following properties:
+
     - Under Identification:
+
         - **Type**: Button
+
         - **Label**: Share
+
     - Under Link:
+
         - **Type**: Redirect to URL
+
         - Target:
+
             - **Type**: URL
+
             - **URL**: #action$share?id=&ID.
 
             Click **Ok**.
 
-    ![Property Editor](images/button-share.png " ")
+  ![Property Editor](images/button-share.png " ")
 
-3. In the Property Editor, under the Appearance group, update the following properties:
+3. In the Property Editor, under the **Appearance** group, update the following properties:
+
     - **Display Type**: Icon
+
     - **Icon**: fa-share-alt
 
-    ![Property Editor](images/change-icon.png " ")
+  ![Property Editor](images/change-icon.png " ")
 
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
@@ -124,24 +138,37 @@ In this task, you add a Share button that allows a user to share the post via em
     ![Dynamic Actions tab](images/custom-da.png " ")
 
 
-6. In the Property Editor, update the following properties:
+6. In the Property Editor, enter/select the following properties:
+
     - Identification > Name: **action-share**
+
     - Under When:
+
         - Event: **Custom**
+
         - Custom Event: **action-share**
+
         - Selection Type: **Javascript Expression**
+
         - Javascript Expression: **document**
 
-    ![Property Editor](images/action-share.png " ")
+  ![Property Editor](images/action-share.png " ")
 
 7. In the left pane, under **action-share**, click on the **True** action. Now, in the property editor, update the following properties:
+
     - **Identification > Action**: Share
+
     - Under Settings:
-        - **Title**: Image Shared on Social Media App
-        - **Text**: &APP_USER. is sharing a file.
-        - **Share Type**: File(s)
-        - **File(s) Source**: SQL Query
-        - **SQL Query**:
+
+        - Title: **Image Shared on Social Media App**
+
+        - Text: **&APP_USER. is sharing a file.**
+
+        - Share Type: **File(s)**
+
+        - File(s) Source: **SQL Query**
+
+        - SQL Query:
             ```
             <copy>
                 SELECT FILE_BLOB, FILE_NAME, FILE_MIME
@@ -167,14 +194,18 @@ In this task, you enable Push Notifications for the Social Media App. Whenever a
     ![Object Browser](images/add-columnq.png " ")
 
 2. In the Add Column wizard, enter the following information:
-    - **Column**: NOTIFIED
-    - **Data Type**: VARCHAR2
-    - **Length**: 1
-    - **Deafult**: 'N'  (By default, all rows in the SM\_REACTIONS will have the default value 'N' to indicate that the user has not yet been notified.)
+
+    - Column: **NOTIFIED**
+
+    - Data Type: **VARCHAR2**
+
+    - Length: **1**
+
+    - Deafult: **'N'** (By default, all rows in the SM\_REACTIONS will have the default value 'N' to indicate that the user has not yet been notified.)
 
     Click **Apply**.
 
-    ![add column wizardr](images/new-column.png " ")
+  ![add column wizardr](images/new-column.png " ")
 
 3. The next step is to create an Automation. This automation will frequently check if there has been any update to the SM\_POSTS table and will trigger the Push Notification accordingly.
 To create an Automation, navigate to **Shared Components** and under Workflows and Automations, click **Automations**.
@@ -185,16 +216,21 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     ![Automations home page](images/create-automation.png " ")
 
-5. In the Create Automation wizard, enter the following:
-    - **Name**: Notification
-    - **Type**: Scheduled
-    - **Execution Schedule**: Custom
-    - **Frequency**: Minutely
-    - **Interval**: 2
+5. In the Create Automation wizard, enter/select the following:
+
+    - Name: **Notification**
+
+    - Type: **Scheduled**
+
+    - Execution Schedule: **Custom**
+
+    - Frequency: **Minutely**
+
+    - Interval: **2**
 
     Click **Next**.
 
-    ![Create Automations wizard](images/notification-auto.png " ")
+  ![Create Automations wizard](images/notification-auto.png " ")
 
 6. For **Source Type**, select **SQL Query** and enter the following SQL statement in the code box:
     ```
@@ -218,14 +254,18 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
     ![Create Automations page](images/edit-action.png " ")
 
 9. In the Edit Action page, update the following informations:
-    - **Name**: Send Push Notification
-    - **Type**: Send Push Notification
-    - **To**: &POST\_OWNER.
-    - **Title**: &LIKED\_BY. liked your post.
+
+    - Name: **Send Push Notification**
+
+    - Type: **Send Push Notification**
+
+    - To: **&POST\_OWNER.**
+
+    - Title: **&LIKED\_BY. liked your post.**
 
     Click **Apply Changes**.
 
-    ![Edit Action page](images/send-notification.png " ")
+  ![Edit Action page](images/send-notification.png " ")
 
 10. Click **Add Action** to add a second action.
 
@@ -234,7 +274,9 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 11. In the Edit Action page, update the following:
 
     - Name: **Update Reactions Table**
+
     - Type: **Execute Code**
+
     - Code:
         ```
         <copy>
@@ -308,14 +350,17 @@ Note:
 
     ![PWA page](images/add-shortcut.png " ")  
 
-4. In the Add Shortcut dialog, enter the following:
-    - **Name**: Timeline
-    - **Target URL**: *Select the Timeline page*
-    - **Upload an icon**: *Upload an icon for the shortcut*
+4. In the Add Shortcut dialog, enter/select the following:
+
+    - Name: Timeline
+
+    - Target URL: *Select the Timeline page*
+
+    - Upload an icon: *Upload an icon for the shortcut*
 
     Click **Create**.
 
-    ![PWA page](images/add-shortcut-images.png " ")
+  ![PWA page](images/add-shortcut-images.png " ")
 
     You will see how the shortcut looks after completing Task 5. Similarly, you can add multiple shortcuts, each pointing to a different page in your app.
 
@@ -339,12 +384,13 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![PWA page](images/save-and-run-pwa.png " ")
 
-4. Click **Install App** to install as pwa. A popup window displays the screenshots and a message to confirm the install of the app. Follow the on-screen instructions to install the app.
+5. Click **Install App** to install as pwa. A popup window displays the screenshots and a message to confirm the install of the app. Follow the on-screen instructions to install the app.
+
     ![App Home page](images/install-app.png " ")
 
     ![App Home page](images/install-app-ss.png " ")
 
-5. Once the pwa is installed, right-click on the app icon in your taskbar/dock and view the shortcut called **Timeline** that we created earlier. Clicking on the shortcut will directly open the corresponding page in the app.
+6. Once the pwa is installed, right-click on the app icon in your taskbar/dock and view the shortcut called **Timeline** that we created earlier. Clicking on the shortcut will directly open the corresponding page in the app.
 
     ![System dock](images/view-shortcut.png " ")
 
