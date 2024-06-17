@@ -24,7 +24,7 @@ In this lab, you:
 
 2. Click **Create**.
 
-    ![Select Quick SQL](images/create-quick-sql.png " ")
+    ![Create Quick SQL](images/create-quick-sql.png " ")
 
 3. Copy the following SQL code and paste it into the code editor:
 

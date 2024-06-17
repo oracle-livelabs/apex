@@ -68,15 +68,15 @@ In this lab, you:
 
 2. Under **Data Sources**, click **REST Data Sources**.
 
-   ![Click Timeline](images/rest-data-source2.png " ")
+   ![Click REST Data Sources](images/rest-data-source2.png " ")
 
 3. Click **Create**.
 
-   ![Click Timeline](images/create-rest.png " ")
+   ![Click Create](images/create-rest.png " ")
 
 4. Select **From scratch** and click **Next**.
 
-   ![Click Timeline](images/rest-next.png " ")
+   ![Click From scratch](images/rest-next.png " ")
 
 5. Under Create REST Data Source,  Enter/select the following attributes and click **Next**.
 
@@ -88,11 +88,11 @@ In this lab, you:
 
     **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
 
-   ![Click Timeline](images/rest-general.png " ")
+   ![Create REST Data Sources](images/rest-general.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
-   ![Click Timeline](images/rest-remote.png " ")
+   ![Create REST Data Source - Remote Server](images/rest-remote.png " ")
 
 7. Under Authentication,
 
@@ -104,11 +104,11 @@ In this lab, you:
 8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-   ![Click Timeline](images/rest-authen.png " ")
+   ![Click Create REST Source Manually](images/rest-authen.png " ")
 
 9. On the REST Data Sources page, click **Document Understanding API**.
 
-   ![Click Timeline](images/doc-under.png " ")
+   ![Click Document Understanding API](images/doc-under.png " ")
 
 10. Under the **Operations**, click **Edit icon** for the **POST** operation and enter the following:
 
@@ -137,15 +137,15 @@ In this lab, you:
 
     Click **Synchronize with Body** and then Click **OK**.
 
-    ![Click Timeline](images/edit-post.png " ")
+    ![edit post](images/edit-post.png " ")
 
-    ![Click Timeline](images/synchronize.png " ")
+    ![Synchronize with Body](images/synchronize.png " ")
 
-    ![Click Timeline](images/synchronize-ok.png " ")
+    ![Synchronize with Body Ok](images/synchronize-ok.png " ")
 
 11. Under **Operation Parameters**, Click **Add Parameter**.
 
-    ![Click Timeline](images/add-parameter.png " ")
+    ![Click Add Parameter](images/add-parameter.png " ")
 
 12. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 

@@ -71,7 +71,7 @@ In this task, you create an application process to retrieve the URL and MIME typ
 
     Click **Next**.
 
-    ![Application Processes](images/process-source.png " ")
+    ![Click Next](images/process-source.png " ")
 
 6. Click **Create Process**.
 
@@ -82,15 +82,15 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
 1. Navigate to **Application ID**.
 
-   ![Application Processes](images/app-id5.png " ")
+   ![Click Application ID](images/app-id5.png " ")
 
 2. Click **Create Page**.
 
-   ![Application Processes](images/cards-create-page.png " ")
+   ![Click Create Page](images/cards-create-page.png " ")
 
 3. Under Component, select **Cards**.
 
-   ![Application Processes](images/card.png " ")
+   ![Select Cards](images/card.png " ")
 
 4. Enter/select the following details:
 
@@ -133,7 +133,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
      Click **Next**.
 
-    ![Application Processes](images/cards-detail.png " ")
+    ![Invoice Tracker](images/cards-detail.png " ")
 
 5. Under Card Attributes:
 
@@ -143,7 +143,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
    Click **Create Page**.
 
-   ![Application Processes](images/cards-attributes.png " ")
+   ![Card Attributes](images/cards-attributes.png " ")
 
 6. In the left pane, select **Invoice Tracker** region and Under **Attributes**, Enter/select the following:
 
@@ -161,7 +161,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
         - HTML Expression: **Invoice Total Amount: &FIELD\_VALUE.**
 
-    ![Application Processes](images/invoice-tracker-attributes.png " ")
+    ![Invoice Tracker attributes](images/invoice-tracker-attributes.png " ")
 
 7. In the property editor, select the **Region** tab. Under **Source**, Select **Order By Item** and Enter/select the following:
 
@@ -172,7 +172,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
      Click **OK**.
 
-    ![Application Processes](images/invoice-tracker-order.png " ")
+    ![Order By Item](images/invoice-tracker-order.png " ")
 
 8. Click **Save**.
 
@@ -181,11 +181,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
 1. Navigate to Create **(+ v)** in Page Designer toolbar and select **Page**.
 
-   ![Application Processes](images/create-blank-page.png " ")
+   ![Click Page](images/create-blank-page.png " ")
 
 2. Select **Blank Page**.
 
-   ![Application Processes](images/blank-page1.png " ")
+   ![Select Blank Page](images/blank-page1.png " ")
 
 3. On the Create Page dialog, Enter/select the following:
 
@@ -199,11 +199,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    Click **Create Page**.
 
-   ![Application Processes](images/create-blank-page11.png " ")
+   ![Invoice Analysis](images/create-blank-page11.png " ")
 
 4. In the left Pane, Right-click Body, and select **Create Page Item**.
 
-    ![Application Processes](images/create-page-item3.png " ")
+    ![Create Page Item](images/create-page-item3.png " ")
 
 5. Create the following two-page items, one after the other.
 
@@ -213,13 +213,13 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
      | 2 | P3\_URL| Hidden |
      {: title="Page Items"}
 
-     ![Application Processes](images/page-item-id.png " ")
+     ![Page item ID](images/page-item-id.png " ")
 
-     ![Application Processes](images/page-item-url.png " ")
+     ![Page Item URL](images/page-item-url.png " ")
 
 6. Under **Pre-Rendering**, Right-Click **Before Header** and select **Create Process**.
 
-    ![Application Processes](images/create-before-header.png " ")
+    ![Create Process](images/create-before-header.png " ")
 
 7. In the Property Editor, Enter/select the following details:
 
@@ -235,11 +235,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     <copy>
       ```
 
-    ![Application Processes](images/prepare-url1.png " ")
+    ![Preapare URL](images/prepare-url1.png " ")
 
 8. In the left Pane, Right-click **Body** and Select **Create Region**.
 
-    ![Application Processes](images/create-region4.png " ")
+    ![Create Region](images/create-region4.png " ")
 
 9. In the Property Editor, Enter/select the following details:
 
@@ -258,11 +258,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
      <copy>
       ```
 
-   ![Application Processes](images/uploaded-file.png " ")
+   ![Upload File](images/uploaded-file.png " ")
 
 10. Right-Click **Uploaded File** region, select **Create Region Below**.
 
-    ![Application Processes](images/create-region-below.png " ")
+    ![Create REgion Below](images/create-region-below.png " ")
 
 11. In the Property Editor, Enter/select the following details:
 
@@ -302,7 +302,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
         ```
        - Layout > Start New Row: **Toggle Off**  
 
-    ![Application Processes](images/generated-output.png " ")
+    ![Generate Output](images/generated-output.png " ")
 
 12. In the left Pane, select **Page 3: Invoice Analysis** and update the following:
 
@@ -314,17 +314,17 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
         - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and Click **OK**.
 
-    ![Application Processes](images/modal-dialog.png " ")
+    ![Modal Dialog](images/modal-dialog.png " ")
 
 13. Click **Save**.
 
 14. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 2: Invoice Tracker**.
 
-   ![Application Processes](images/navigate-to-2.png " ")
+   ![Page 2: Invoice Tracker](images/navigate-to-2.png " ")
 
 15. Under **Invoice Tracker** region, Right-click **Actions** and select **Create Action**.
 
-   ![Application Processes](images/creation-action2.png " ")
+   ![Create Action](images/creation-action2.png " ")
 
 16. In the Property Editor, Enter/select the following details:
 
@@ -338,17 +338,17 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
           Click **OK**.
 
-   ![Application Processes](images/full-card.png " ")
+   ![Full Card](images/full-card.png " ")
 
 17. Click **Save**.
 
 18. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 1: Home**.
 
-   ![Application Processes](images/navigate-to-home.png " ")
+   ![Page 1: Home](images/navigate-to-home.png " ")
 
 19. Under **Processing**, Right-click **After Processing** and select **Create Branch**.
 
-   ![Application Processes](images/create-branch.png " ")
+   ![Create Branch](images/create-branch.png " ")
 
 20. In the Property Editor, Enter/select the following details:
 
@@ -360,11 +360,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
          Click **OK**.
 
-    ![Application Processes](images/branch-details.png " ")
+    ![Redirect to Page 2](images/branch-details.png " ")
 
 21. Click **Save**.
 
-    ![Application Processes](images/save-changes.png " ")
+    ![Click Save](images/save-changes.png " ")
 
 ## Summary
 You now know how to create an application process and have learned to develop an Invoice Tracking and Invoice Analysis page. This page features a Cards Region that displays extracted fields from the uploaded image or PDF in an organized manner. Clicking on a card opens a Pop-up Dialog page, clearly comparing your uploaded PDF and the output from OCI Document Understanding.
