@@ -1,11 +1,11 @@
 # Visualize Schools on a Map
 
 ## Introduction
-In this lab, you learn to create a Map region and display the schools as points on the map. You learn to customize and filter the results on the map based on the faceted search results. 
+In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter the results on the map based on the faceted search results. 
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 <!-- Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_a6bi2e62) -->
@@ -53,7 +53,7 @@ In this lab, you will:
 
     ![Page designer](images/school-layer-2.png =40%x*)
 
-5. In the rendering tree, under Map, right-click and select **Create Layer**.
+5. In the rendering tree, under Map, right-click **Layers** and select **Create Layer**.
     ![Page designer](images/new-layer-2.png =40%x*)
 
 6. In the property editor, enter/select the following:
@@ -246,7 +246,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
     ![Page Designer](images/search-results-source.png ' ') 
 
-2. For SQL Query, enter the following and click **OK**:
+2. For SQL Query, replace the code by copying and pasting the following SQL query:
     ```
     <copy>
     select ID,
@@ -266,7 +266,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
     from HIGHSCHOOLS
     </copy>
     ```
-
+    Click **OK**.
     ![Page Designer](images/search-results-sql.png ' ') 
 
 3. In the rendering tree, right-click **Facets** and select **Create Facet**.
@@ -307,12 +307,11 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
         ![Page Designer](images/items-submit.png ' ') 
 
 6. Rearrange the facets in the rendering tree by dragging and dropping, so that the facets are in the sequence as follows:
-    - P1_SEARCH, 
     - P1_SEARCH
     - P1_INTEREST
     - P1_DISTANCE
     - P1_BOROUGH
-    - P1_ATTENDANCE_RATE
+    - P1\_ATTENDANCE\_RATE
     - P1_SAFE
     - P1_METHOD
 
@@ -328,3 +327,15 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 8. Click **Save and Run** page to see how the app looks.
 
     ![Page Designer](images/save-and-run.png ' ') 
+
+
+## Summary
+
+You now know how to map a Faceted Search to a Map region. You also learned to filter the schools based on spatial distance.
+
+You may now **proceed to the next lab**.   
+
+## Acknowledgments
+
+ - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
