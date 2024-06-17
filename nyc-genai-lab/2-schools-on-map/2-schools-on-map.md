@@ -1,7 +1,7 @@
 # Visualize Schools on a Map
 
 ## Introduction
-In this lab, you learn to create a Map region and display the schools as points on the map. You learn to customize and filter the results on the map based on the faceted search results. 
+In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter the results on the map based on the faceted search results. 
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 

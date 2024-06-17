@@ -1,7 +1,7 @@
 # Build conversation Inquiry about schools using Generative AI
 
 ## Introduction
-In this lab, you learn to build conversation Inquiry about schools using Generative AI wherein a user can ask questions about a school and the chat widget uses GenAI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the Open AI Assistant.
+In this lab, you learn to build conversation Inquiry about schools using Generative AI wherein a user can ask questions about a school and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
@@ -13,8 +13,8 @@ Estimated Time: 20 minutes
 ### Objectives
 
 In this lab, you will:
-- Enable Gen AI in your workspace
-- Build a AI chatbot using GenAI
+- Configure a Generative AI service in your workspace
+- Build a conversational chatbot using Generative AI
 
 ## Task 1: Configure Generative AI Service
 To use the Generative AI service in APEX, you need to first configure it at the workspace level.
@@ -211,7 +211,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Summary
 
-You now know how configure Generative AI service in your APEX workspace. You also learnt to build an AI Chatbot using Generative AI.
+You now know how configure Generative AI service in your APEX workspace. You also learnt to build a conversational Chatbot using Generative AI.
 
 You may now **proceed to the next lab**.   
 

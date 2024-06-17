@@ -1,7 +1,7 @@
 # Generate Email to Apply to a School using Gen AI
 
 ## Introduction
-In this lab, you allow the parent to apply to a school they are interested in. The letter for application is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
+In this lab, you configure an option for the parent to apply to a school they are interested in. The letter for application is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
 
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
@@ -14,7 +14,7 @@ Estimated Time: 15 minutes
 ### Objectives
 
 In this lab, you will:
-- Use Invoke API process to invoke the Gen AI service
+- Use Invoke API process to invoke the Generative AI service using the APEX_AI PL/SQL API
 - Generate email for applying to a school
 
 ## Task 1: Create a Table to store the Applications

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In the previous labs, you went through detailed steps to configure and use Generative AI in a Highschool Application that will enable parents to choose the best highschool for their kids. Now, it is finally time to see the completed app in action.
+In the previous labs, you went through detailed steps to configure and use Generative AI in a Highschool Application that will enable parents to choose the best highschool for their child. Now, it is finally time to see the completed app in action.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
