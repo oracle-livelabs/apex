@@ -1,7 +1,7 @@
 # Create an APEX Application
 
 ## Introduction
-In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table created using the spreadsheet. You learn learn to modify the layout an theme of the application.
+In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table created using the spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
@@ -14,7 +14,8 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 - Create a new APEX application
-- Run your application
+- Configure a Cards region
+- Customize the app theme using Theme Roller
 
 ### Prerequisites
 
@@ -33,7 +34,7 @@ In this lab, you will:
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
-4.  Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xsls](files/nyc_high_schools.xsls) file on to the dialog window.
+4.  Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx) file on to the dialog window.
 
     ![Image showing a wizard to upload a file](images/drag-and-drop.png " ")
 
@@ -64,6 +65,8 @@ The Data Load wizard has created a new table and populated that table with the r
   Click the **Edit** button for **Highschools Search** and update the following:
     - Page Name: **Search and Apply** 
     - For Page Type, choose **Cards** toggle button.
+
+    ![Edit App page](images/app-edit.png " ")
     ![Edit Page wizard](images/edit-page-name.png " ")
 
 6.  For the Cards properties, select the following:
@@ -83,10 +86,10 @@ The Data Load wizard has created a new table and populated that table with the r
 
     ![Confirm Delete dialog](images/confirm-delete.png " ")
 
-11. Repeat Step 10 to delete the **Highschools Report** page.
+9. Repeat Steps 7 and 8 to delete the **Highschools Report** page.
     ![Delete page wizard](images/delete-report.png " ")
 
-12. In the Create Application wizard, under Features, check the following checkboxes:
+10. In the Create Application wizard, under Features, check the following checkboxes:
     - **Install Progressive Web App**
     - **Push Notifications** 
     
@@ -103,7 +106,7 @@ In this task, we configure the Cards region to display the information that we n
 1. Navigate to **Search and Apply** page.
     ![Application Home Page](images/select-page.png " ")
 
-2. In the rendering tree, select **Search Results** card region. In the property editor, select the following:
+2. In the rendering tree, select **Search Results** card region. In the property editor, switch to the **Attributes** tab and select the following:
     - Title > Column: **SCHOOL_NAME**
     - Subtitle > Column: **INTEREST**
     - Secondary Body > Column: **BOROUGH**
@@ -143,6 +146,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
 
 
