@@ -145,7 +145,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Action: **Open AI Assistant**
     - Under Generative AI:
         - Service: **Open AI**
-        - System Propmt: 
+        - System Prompt: 
         ```
         <copy>
         Use the below context to answer all questions:
