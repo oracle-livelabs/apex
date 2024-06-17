@@ -246,15 +246,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     - Indentification > Name: **Uploaded File**
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
-
-     ```
-     <copy>
+   
      <p align= "center">
      <iframe src = "&P4_URL."  width = "100%" height = "500">
      </iframe>
      </p>
-     <copy>
-     ```
 
    ![Upload File](images/uploaded-file.png " ")
 
