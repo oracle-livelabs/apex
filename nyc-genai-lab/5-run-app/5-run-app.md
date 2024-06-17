@@ -70,7 +70,6 @@ In this lab, you will:
 
 You now know how to run the app and explore the Gen AI features of the app. 
 
-You may now **proceed to the next lab**.   
 
 ## Acknowledgments
 

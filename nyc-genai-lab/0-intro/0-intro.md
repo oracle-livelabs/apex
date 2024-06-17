@@ -27,7 +27,7 @@ Estimated Time: 60 minutes
 
 *Note: This workshop assumes you are using Oracle APEX 24.1.*
 
-### **Labs**
+## **Labs**
 
 | Module | Est. Time |
 | --- | --- |
@@ -43,7 +43,7 @@ Total estimated time: 60 minutes
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
-### **Downloads**
+## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-genai-app.sql.zip) to download the completed application zip file and unzip it.
@@ -62,7 +62,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## **Acknowledgements**
+## Acknowledgements
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
