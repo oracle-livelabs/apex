@@ -139,7 +139,7 @@ keyboard entry, but it doesn't save anything yet and needs some tweaking.
 
     Ok, that was a bunch of changes!
 
-6. Let's save and run and see how it looks.
+6. Click **Save and Run** and see how it looks.
 
     ![Running app is displayed](images/updated-app-2.png)
 
