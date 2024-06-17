@@ -10,7 +10,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
 Estimated Time: 5 minutes
 
@@ -109,4 +109,4 @@ You now know how to create an application from a spreadsheet by dragging and dro
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

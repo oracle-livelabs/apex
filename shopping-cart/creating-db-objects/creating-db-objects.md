@@ -77,11 +77,11 @@ Create specification and body for the package.
     </copy>
     ```
 
-   Click **Save and Compile**
+6. Click **Save and Compile**
 
    ![New Package details page](./images/create-specification.png " ")
 
-6. Navigate to body part of the package by clicking on Body tab. Copy and replace the Body code:
+7. Navigate to body part of the package by clicking on Body tab. Copy and replace the Body code:
 
     ```
     <copy>
@@ -235,15 +235,17 @@ Create specification and body for the package.
     </copy>
     ```
 
-7. Click **Save & Compile**.
+8. Click **Save & Compile**.
 
     ![New Package details page](./images/create-body.png " ")
 
 While you don't have to understand the code to complete the workshop successfully, know that the functions and procedures you've defined in this lab are using a built-in feature of Oracle APEX to handle the user's shopping cart by managing a collection of product id and quantity values specific to the current user, and automatically create new row in the **Customers** table during order creation if it's the first time the user is placing an order.
+
+## Summary
 
 You now know how to create a package to manage the shopping cart. In the following labs, you will call these procedures and functions when it is required. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

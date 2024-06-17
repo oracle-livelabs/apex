@@ -10,7 +10,7 @@ While APEX developers spend the majority of their time in the **App Builder**, y
 - **Team Development**: where you can track large APEX development projects.
 - **Gallery**: which contains numerous productivity and sample apps that can be installed within minutes.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 23.2.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
 Estimated Time: 5 minutes
 
@@ -43,7 +43,9 @@ Blueprint tab selected. Update the following information:
     - Name: **APEX Social Media**
 
     - In the *Pages* section:
+
         - Click **Edit** next to Home page
+
         - Update the Home Page Name: **Timeline**
 
     - In *Features* section, check the **Install Progressive Web App** option.
@@ -80,10 +82,10 @@ Blueprint tab selected. Update the following information:
 
    ![Navigation menu of the app](images/app-nav.png "")
 
-Next, we will go back to the APEX Workspace and create the APEX social Media data model.
+Next, we will go back to the APEX Workspace and create the APEX Social Media data model.
 
 You may now **proceed to the next lab**
 
 ## Acknowledgements
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

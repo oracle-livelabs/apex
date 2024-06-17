@@ -88,4 +88,4 @@ In this task, you will learn to download and import a starter app. If you follow
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024

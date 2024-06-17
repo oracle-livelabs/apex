@@ -220,29 +220,27 @@ In the previous task, you explored a few options to enhance the form. In this ta
 
     ![Tab Container](images/tab-container.png " ")
 
-4. To create a tab, right-click on **Nyc Highschool** and select **Create Sub Region**. Create 4 Sub Regions with the following values for **Title**:
+4. To create a tab, right-click on **Nyc Highschool** and select **Create Sub Region**. Create 4 Sub Regions with the following values for **Name**:
     - General Information
     - Metrics
     - Location
     - Other Course Details
 
-    ![Create sub region](images/create-sub-region.png " ")
+  ![Create sub region](images/create-sub-region.png " ")
 
 5. In the Property Editor for each Sub Region, perform the following step:
     - Navigate to **Appearance**
     - Select **Template Options**
     - For **Header**, select **Hidden but accessible**
 
-    ![Template option](images/template-option.png " ")
-
-    ![hidden but accessible](images/hide-header.png " ")
+  ![Template option](images/template-option.png " ")
 
 6. The Sub Regions created represents the different tabs. Drag and drop the form fields into their respective Sub Region as mentioned in the table.
 
-    | Sub Region Title | Form Fields |
+    | Sub Region Name | Form Fields |
     |----------|----------|
     | **General Information** | P5\_BOROUGH <br> P5\_SCHOOL\_NAME <br> P5\_NEIGHBORHOOD <br> P5\_INTEREST <br> P5\_METHOD |
-    | **Metrics** | P5\_TOTAL\_STUDENTS <br> P5\_GRADUATION\_RATE <br> P5\_ATTENDANCE\_RATE <br> P5\_COLLEGE\_CAREER\_RATE <br> P5\_SEATS <br> P5\_APPLICANTS <br> P5\_SAFE |
+    | **Metrics** | P5\_TOTAL\_STUDENTS <br> P5\_GRADUATION\_RATE <br> P5\_ATTENDANCE\_RATE <br> P5\_COLLEGE\_CAREER\_RATE <br> P5\_SAFE<br> P5\_SEATS <br> P5\_APPLICANTS |
     | **Location** | P5\_LATITUDE <br> P5\_LONGITUDE |
     | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |  
 
@@ -261,4 +259,4 @@ You now know how _end-users_ can define custom reports using Interactive Reports
 ## **Acknowledgements**
 
  - **Author/Contributors** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
