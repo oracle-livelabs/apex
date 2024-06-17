@@ -257,6 +257,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
        ```
 
     *Note: There is an extra space in iFrame. Please remove the space after copying the code*
+    
    ![Upload File](images/uploaded-file.png " ")
 
 10. Right-Click **Uploaded File** region, select **Create Region Below**.
