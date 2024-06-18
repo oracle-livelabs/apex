@@ -17,7 +17,7 @@ In this lab, you will:
 - Use Invoke API process to invoke the Generative AI service using the APEX_AI PL/SQL API
 - Generate email for applying to a school
 
-## Task 1: Create a Table to store the Applications
+## Task 1: Create a Table to Store the Applications
 
 1. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
 
