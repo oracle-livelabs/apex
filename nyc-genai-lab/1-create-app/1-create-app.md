@@ -21,7 +21,7 @@ In this lab, you will:
 
 - An Oracle APEX workspace
 
-## Task 1: Load the Highschool data 
+## Task 1: Load the Highschool Data 
 
 1.  From your APEX workspace home page, click **App Builder**.
 2.  Click **Create a New App**.
@@ -44,7 +44,7 @@ In this lab, you will:
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at that point.
 
-## Task 2: Create an application
+## Task 2: Create an Application
 
 The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
 

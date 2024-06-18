@@ -1,4 +1,4 @@
-# Build conversation Inquiry about schools using Generative AI
+# Build a Conversational Inquiry about Schools using Generative AI
 
 ## Introduction
 In this lab, you learn to build conversation Inquiry about schools using Generative AI wherein a user can ask questions about a school and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
