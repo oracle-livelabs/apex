@@ -175,7 +175,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Task 5: Create Action to Launch the Chat
 
-1. Naviagte to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
+1. Navigate to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
 
     ![Page Designer Dynamic Actions](images/goto-page1.png ' ')
 
