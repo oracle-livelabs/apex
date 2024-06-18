@@ -22,7 +22,7 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
 1. From the runtime application, go to the search page by clicking **NYC Highschools Search**. Assuming that you ran this app from the APEX App Builder, a Developer Toolbar is displayed at the bottom of the screen. *Note - End users who log directly into the app will not see this toolbar.*
 
-    In the Developer Toolbar click **Page 3**.
+    In the Developer Toolbar, click **Page 3**.
 
     ![Image displaying the developer toolbar](images/nyc-search-page-edit.png " ")
 
@@ -31,27 +31,25 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     ![App Builder home page](images/alt-app-builder1.png " ")
 
 
-2. To create a page similar to the existing page, click the + icon next to the redo button at the top right corner. Select **Page as Copy**.
+2. To create a page similar to the existing page, click the + icon next to the redo button at the top right corner. Select **Copy Page**.
 
     ![Page designer toolbar](images/page-as-copy.png " ")   
 
-3. A Copy Page dialog appears. For Create a page as a Copy of, select **Page in this application** and click **Next**.
+3. For Page to Copy, enter/select the following:
 
-    ![Copy Page dialog](images/copy-page-1.png " ")   
+    - New Page Name: **NYC Highschools Map**
 
-4. For Page to Copy, enter the following:
-    - For New Page Name, enter **NYC Highschools Map**
-    - For Breadcrumb, select the Breadcrumb option
-    - For Entry Name - accept the default value or enter **NYC Highschools Map**
-    Accept the default values for other fields and click **Next**.
+    - Breadcrumb: **Breadcrumb**
 
-    ![Page to Copy dialog](images/copy-page-2.png " ")  
+     Click **Next**.
 
-5. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
+  ![Page to Copy dialog](images/copy-page-2.png " ")  
+
+4. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
 
     ![Navigation menu dialog](images/copy-page-3.png " ")   
 
-6. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
+5. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
 
     ![New names table is displayed in the dialog](images/copy-page-4.png " ")
 
@@ -65,8 +63,8 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
 2. To customize a map region, you need to add layers. Under Layers, click on **New**.
   In the property editor, perform the following:
-    - For Name, enter **Schools**
-    - For Source > Location, select **Region Source**. This indicates that the layer fetches the data from it's parent region (Nyc Highschools) whose source is the local database table *NYC_HIGHSCHOOLS*.   
+    - Name: **Schools**
+    - Source > Location: **Region Source**. This indicates that the layer fetches the data from it's parent region (Nyc Highschools) whose source is the local database table *NYC_HIGHSCHOOLS*.   
 
 
 3. In order to display the points on the map, you need to provide the coordinates. In the Property Editor, go to the **Column Mapping** group. Enter the following values:
@@ -114,25 +112,30 @@ APEX allows customization of the map in a declarative way. In this step, you wil
     ![Developer Toolbar is displayed](images/edit-page-6.png " ")
 
 2. In the Rendering tree, navigate to **Nyc Highschools** under Body and select the **Schools** layer.   
-  In the Property Editor, do the following:
-     - Under Tooltip, toggle the button to switch on **Advanced Formatting**.
-     - In the **HTML Expression** text area, enter the following HTML snippet:
+  In the Property Editor, enter/select the following:
+
+     - Tooltip > Advanced Formatting: **Toggle On**.
+
+     - **HTML Expression**: Enter the following HTML snippet:
       ```
       <copy>
       <strong>&SCHOOL_NAME.</strong><br>
-      Borough: &BOROUGH.<br
+      Borough: &BOROUGH.<br>
       </copy>
       ```
 
-    ![Page Designer view](images/add-tooltip.png " ")
+  ![Page Designer view](images/add-tooltip.png " ")
 
 3. Click **Save and Run Page**. The NYC Highschools Map is displayed. Hover over a pin in the map to display the custom tooltip. The tooltip displays the Highschool name and the Borough name.
+
     ![NYC Highschool Map page is displayed](images/show-tooltip.png " ")
 
 4. Now, you will customize the map by adding a condition such that the value of the *GRADUATION_RATE* will determine the pin color. To do so, click **Page 6** in the developer toolbar to edit the page.
-    ![Developer Toolbar is displayed](images/edit-page-6-1.png " ")
+
+    ![Developer Toolbar is displayed](images/edit-page-6.png " ")
 
 5. In the Rendering tree, navigate to **Nyc Highschools** under Body. In the Property Editor, under Source, select **Local Database** for Location and **SQL Query** for Type. Click on the Code Editor button next to SQL Query.
+
    ![Page Designer view](images/maps-sql-query.png " ")
 
 6. In the Code Editor, modify the SQL query to add a CASE statement to determine the color based on the value of *GRADUATION_RATE*. Replace the query with the following query:
@@ -165,36 +168,42 @@ APEX allows customization of the map in a declarative way. In this step, you wil
         </copy>
       ```
   Click **OK**.
+
   ![Code Editor in the Property Editor](images/code-editor.png " ")
 
 7. Select **Schools** layer in the Rendering pane. In the Property Editor, do the following:
-    - For **Name**, enter **Schools - Red**
 
-    - Under **Row Assignment**:
+    - Identification > Name: **Schools - Red**
 
-        - For **Column** : Select **PIN_COLOR**
+    - Under Row Assignment:
 
-        - For **Value for this Layer** : Enter **red**
+        - Column: **PIN_COLOR**
 
-    - Under **Appearance**, for Fill Color enter **&PIN_COLOR.**
+        - Value for this Layer **red**
 
-    ![Page Designer view](images/schools-red.png " ")
+    - Appearance > Fill Color: **&PIN_COLOR.**
+
+  ![Page Designer view](images/schools-red.png " ")
 
 8. In the Rendering Pane, right-click on **Schools - Red** and select **Duplicate**. In the Property Editor, do the following:
-    - For **Name**, enter **Schools - Green**
-    - Under **Row Assignment**, for **Value for this Layer**, enter **green**
 
-    ![Rendering Tree](images/red-duplicate.png " ")
+    - Identification > Name: **Schools - Green**
 
-    ![Property Editor](images/schools-green.png " ")
+    - Row Assignment > Value for this Layer: **green**
+
+  ![Rendering Tree](images/red-duplicate.png " ")
+
+  ![Property Editor](images/schools-green.png " ")
 
 9. In the Rendering Pane, right-click on **Schools - Green** and select **Duplicate**. In the Property Editor, do the following:
-    - For **Name**, enter **Schools - Yellow**
-    - Under **Row Assignment**, for **Value for this Layer**, enter **yellow**
 
-    ![Rendering Tree](images/green-duplicate.png " ")
+    - Identification > Name: **Schools - Yellow**
 
-    ![Property Editor](images/schools-yellow.png " ")
+    - Row Assignment > Value for this Layer: **yellow**
+
+  ![Rendering Tree](images/green-duplicate.png " ")
+
+  ![Property Editor](images/schools-yellow.png " ")
 
 10. Click **Save and Run** page. The **NYC Highschools Map** displays different colors for the pins.
     - The schools with a Graduation rate between 0-50 are displayed in **red**
@@ -244,4 +253,4 @@ You now know how to embed a maps in your application and to install a Progressiv
 ## **Acknowledgements**
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
