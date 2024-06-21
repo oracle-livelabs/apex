@@ -21,7 +21,7 @@ Watch the video below for a quick walk-through of the workshop.
 * Customize the App using Dynamic Actions and custom CSS
 * Add Maps region, get device location, and install PWA
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ### Labs
 
@@ -60,4 +60,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## **Acknowledgements**
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

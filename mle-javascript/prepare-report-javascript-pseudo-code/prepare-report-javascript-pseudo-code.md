@@ -31,7 +31,7 @@ Reviewing the above requirement, we can test the In-Database JavaScript code usi
 
     ![query-table](images/1-query-table.png " ")
 
-4. Examine the following code. The code is utilizing the DBMS_MLE package in Oracle Database 23c. The package will allow developers to switch the context from PL/SQL to JavaScript.
+4. Examine the following code. The code is utilizing the DBMS_MLE package in Oracle Database 23ai. The package will allow developers to switch the context from PL/SQL to JavaScript.
    
    It will allow them as well to evaluate and run In-Database JavaScript code.
    Copy the code.

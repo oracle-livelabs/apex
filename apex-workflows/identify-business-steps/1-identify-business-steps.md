@@ -70,5 +70,4 @@ You may now **proceed to the next Lab**.
 
 ## Acknowledgements
    - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-   - **Contributor** -
    - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023

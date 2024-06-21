@@ -23,11 +23,11 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click on the Profile icon at the top-right corner and select your Profile hyperlink.
+2. Click **My Profile** at the top-right corner.
 
     ![Profile Menu](images/profile.png " ")
 
-3. Under Resources section at the bottom-left, select **API Keys** and then click **Add API Key**.
+3. Under Resources at the bottom-left, select **API Keys** and  click **Add API Key**.
 
     ![Add API Key](images/api-keys.png " ")
 
@@ -77,7 +77,7 @@ To create a Web Credential in Oracle APEX:
 
     - **Name**: apex\_ai\_cred
 
-    - **Authentication Type**: Oracle Cloud Infrastructure (OCI)
+    - **Authentication Type**: OCI Native Authentication
 
     - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
@@ -103,4 +103,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, December 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

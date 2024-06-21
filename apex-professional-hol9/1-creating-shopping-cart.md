@@ -49,11 +49,11 @@ In this lab, you:
 
     ![Customise Validation](./images/create-validation2.png " ")
 
-    | Name           | Validation > Type | Validation > Item       | Error Message                   | Display Location                      | Associated Item         |
-    | -------------- | ----------------- | ----------------------- | ------------------------------- | ------------------------------------- | ----------------------- |
-    | Validate Name  | Item is NOT NULL  | P16\_CUSTOMER\_FULLNAME | Please enter your name          | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
-    | Validate Email | Item is NOT NULL  | P16\_CUSTOMER\_EMAIL    | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL    |
-    | Validate Store | Item is NOT NULL  | P16_STORE               | Please select a store           | Inline with Field and in Notification | P16_STORE               |
+    | Name |  Validation > Type | Validation > Item  | Error Message | Display Location | Associated Item |
+    | --- |  --- | --- | --- |  --- | --- |
+    | Validate Name | Item is NOT NULL | P16\_CUSTOMER\_FULLNAME | Please enter your name | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
+    | Validate Email | Item is NOT NULL | P16\_CUSTOMER\_EMAIL | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL |
+    | Validate Store | Item is NOT NULL | P16_STORE | Please select a store | Inline with Field and in Notification | P16_STORE |
     {: title="Validation Properties"}
 
      ![Customise Validation](./images/create-validation3.png " ")
@@ -61,11 +61,11 @@ In this lab, you:
      These validations only apply when the user proceeds to checkout; let's create that condition.
      Under Server-side Condition, set the following:
 
-    | Name           | When Button Pressed |
-    | -------------- | ------------------- |
-    | Validate Name  | Proceed             |
-    | Validate Email | Proceed             |
-    | Validate Store | Proceed             |
+    | Name  | When Button Pressed |
+    | ---   |  --- |
+    | Validate Name  | Proceed |
+    | Validate Email | Proceed |
+    | Validate Store | Proceed |
     {: title="Server-side Conditions"}
 
      ![Customise Validation](./images/create-validation4.png " ")       
