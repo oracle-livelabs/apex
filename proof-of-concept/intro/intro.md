@@ -1,41 +1,31 @@
-# Building a Proof-of-Concept for Oracle Autonomous Cloud Services
+# Smart Project Management App with AI-Assisted Development in Oracle APEX
 
 ## Introduction
-This workshop starts with a napkin design of data structures we would like to use for a proof-of-concept. Using Quick SQL you will quickly define the data structures and utilize various table and column directives to better define the tables and also create some dummy data. You will then be creating an application based on the new tables. Lastly, you will be updating some of the generated components to improve the initial app.
+
+In this lab, you will build a dynamic application using Oracle APEX AI Assistant. You will start by installing a sample project management dataset, then create an initial application with the help of an AI Assistant, demonstrating how AI can accelerate development. Next, you will customize your application the lowcode way, making quick adjustments using pre-built components. You will also enhance your application by writing SQL queries with APEX Assistant, simplifying complex query construction. Finally, you will implement an AI chat assistant using Dynamic Actions and Chat Widget, creating a responsive chat interface for real-time user engagement. By the end of this lab, you'll have practical knowledge in using AI with APEX to efficiently build and customize powerful applications.
 
 Estimated Time: 55 minutes
 
 ### Lab Objectives
 
 * Obtain a free development environment
-* Define new tables and views
-* Create an application on the new data structures
-* Refine the application
+* Install a Sample dataset
+* Create an application on the new data structures using AI Assistant
+* Refine the application by generating SQL with AI APEX assistant
+* Create an AI Chat Assistant to inquire about the Project.
 
-*{Note: This lab assumes you are using Oracle APEX 23.1}*
-
-### Labs
-
-| Lab # | Lab | Est. Time |
-| --- | --- | --- |
-| 1 | Define New Data Structures | 15 minutes |
-| 2 | Create the Application | 5 minutes |
-| 3 | Regenerate the Application | 5 minutes |
-| 4 | Improve Tasks | 15 minutes |
-| 5 | Improve To Dos | 10 minutes |
-| 6 | Improve Links | 5 minutes |
+*{Note: This lab assumes you are using Oracle APEX 24.1}*
 
 ### **Let's Get Started!**
 
-- Click on **Get Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Defining new Data Structures**.
+- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Define New Data Structures**.
 
 *Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)***
 
-- If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
 
 ### Downloads
 
-[Click here](./files/proofofconcept-app.sql) to download the completed application.
+**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/ZhBoo0yj7BKED2XfPqHNRZUQ6XEkLHHWIhZqK_N1o3-OQ5iDT90kvFoqs6ri0ouW/n/c4u04/b/livelabsfiles/o/labfiles/poc-lab-scripts.sql)** to download the completed application.
 
 ## Learn More - *Useful Links*
 
@@ -49,4 +39,4 @@ Estimated Time: 55 minutes
 
 - **Author** - Salim Hlayel, Principle Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, May 2024

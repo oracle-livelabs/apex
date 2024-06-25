@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Build innovative Q&A interface powered by OCI Generative AI with Oracle APEX",
+  "workshoptitle": "Build an Innovative Q&A Interface Powered by Generative AI with Oracle APEX",
   "help": "livelabs-help-apex_us@oracle.com",
 	"tutorials": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "title": "Get Started",
-      "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
+      "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
     },
     {
       "title": "Lab 1: Create an APEX App",
@@ -16,15 +16,15 @@
     },
     {
 
-      "title": "Lab 2: Visualize schools on a Map",
+      "title": "Lab 2: Visualize Schools on a Map",
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
     {
-      "title": "Lab 3: Build conversational Inquiry using Generative AI",
+      "title": "Lab 3: Build a Conversational Inquiry using Generative AI",
       "filename": "../../3-using-genai/3-using-genai.md"
     },
     {
-      "title": "Lab 4: Apply to a School",
+      "title": "Lab 4: Generate Email to Apply to a School using Gen AI",
       "filename": "../../4-apply-to-school/4-apply-to-school.md"
     },
     {
