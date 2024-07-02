@@ -27,7 +27,9 @@ In this lab, you will:
 2. Enter/select the following in the property editor:
     - Name: **Map** 
     - Type: **Map** 
-    - Source > Table Name: **HIGHSCHOOLS**
+    - Under Source:
+        - Location: **Local Database**
+        - Table Name: **HIGHSCHOOLS**
     - Layout > Start New Row: Disable the toggle button to **OFF**
 
     ![Page designer](images/map-region-1.png =40%x*)
@@ -63,7 +65,7 @@ In this lab, you will:
         - SQL Query: 
             ```
             <copy>
-            SELECT 40.748817 AS LATITUDE, -73.985428 AS LONGTITUDE FROM DUAL;
+            SELECT 40.748817 AS LATITUDE, -73.985428 AS LONGITUDE FROM DUAL;
             </copy>
             ```
     ![Page designer](images/curr-position.png =40%x*)
