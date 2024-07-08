@@ -119,7 +119,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
         ' The below are Public Schools Athletic League (PSAL) sports for boys: '||PSAL_SPORTS_BOYS || chr(10) ||chr(13)||
         ' The below are Public Schools Athletic League (PSAL) sports for girls : '||PSAL_SPORTS_GIRLS || chr(10) ||chr(13)||
         ' Other facilities in this school : '||addtl_info1 || chr(10) ||chr(13)||
-        ' The following academic oppurtunities are available : '||academic_opportunities || chr(10)||chr(13)
+        ' The following academic opportunities are available : '||academic_opportunities || chr(10)||chr(13)
  
          as prompt_context
  
