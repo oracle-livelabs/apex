@@ -1,7 +1,7 @@
 # Mapping Oracle Forms components to APEX [Study]
 
 ## Introduction
-This Lab is about understanding how to map Forms components to the most appropriate APEX components to achieve the same functionality. This Lab aims to provide guidelines on how Oracle Forms modules compare with those found in APEX. It is important to note that mapping components from one service to another will only sometimes be a direct 1:1 relation.
+This lab focuses on understanding how to map Oracle Forms components to the most appropriate APEX components to achieve similar functionality. The lab provides guidelines for comparing Oracle Forms modules with those in APEX, noting that mapping may not always be a direct 1:1 relation.
 
 ## Task 1: Examine Form's Component
 
@@ -82,3 +82,10 @@ Visual attributes are the font, color, and pattern properties you can set for fo
 
 15. **Windows**:
 The window in Forms is the container for all visual objects that comprise the application, including canvases. Windows maps to a page in APEX since the page holds all of the visual objects for an application.
+
+## Summary
+This LiveLab provides comprehensive guidelines for mapping various Oracle Forms components to APEX, ensuring functionality is retained or improved during modernization.
+
+## Acknowledgements
+- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

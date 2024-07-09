@@ -34,7 +34,7 @@ In Forms, Master Detail blocks highlight relationships between data blocks. In A
 Any block in Forms not associated with a database table or view is a non-database block. These blocks usually hold menus, lists, buttons, and other components. In APEX, we define these components based on their type. For example, the page designer defines buttons, while shared components define navigation menus.
 
 
-## Task 2: AnalyzingAnalyzing Sample Forms
+## Task 2: Analyzing Sample Forms
 To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the Customer's form. Download the Sample Forms
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
@@ -113,3 +113,10 @@ We start by reviewing the existing components in the form to analyze which can b
 5. **Program Units**: The customer form contains seven program units. However, we cannot map them in our APEX app because either APEX handles them natively during form creation or they are not applicable.
 
       ![Program Units](images/program-units.png " ")
+
+## Summary
+This LiveLab provides a comprehensive approach to understanding and migrating Oracle Forms components to Oracle APEX, ensuring a smooth modernization process by leveraging APEX's native capabilities and customization options.
+
+## Acknowledgements
+- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

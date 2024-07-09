@@ -1,11 +1,15 @@
 # Create the APEX Application
 
-This Lab focuses on the creation of the APEX Application. To do this you use the Create Application Wizard.
+In this lab, you will create an Oracle APEX application using the Create Application Wizard. This process will help you transition from Oracle Forms to APEX by creating a modern web application interface for your database objects.
 
-Prior to creating the APEX Application, a quick recap about what we’ve already have:
+Before we begin, let's recap what we have set up so far:
 
-- An Always-Free Autonomous Database
--	An APEX Workspace with database objects already loaded.
+ - An Always-Free Autonomous Database
+ - An APEX Workspace with the necessary database objects already loaded
+
+The goal of this lab is to guide you through the steps to create an APEX application with various types of pages such as faceted search, interactive reports, and master-detail pages. This will showcase the flexibility and power of APEX in building sophisticated web applications with ease.
+
+By the end of this lab, you will have an APEX application with multiple pages, each demonstrating different features and functionalities, ready to be enhanced further in subsequent labs.
 
 ## Task 1: Create an Application
 
@@ -23,7 +27,7 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
     ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-5. Since you will create a new application, Enter name: **Modernization** and leave App Icon and Appearance with default values. Click **Add Page**.
+5. Since you will create a new application, Enter the name **Modernization** and leave the App Icon and Appearance with default values. Click **Add Page**.
 
     ![Add Page](images/add-page1.png " ")
 
@@ -61,7 +65,7 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
   ![interactive report](images/add-report-page.png " ")
 
-10.	On Create Application wizard, add another page for ORDERS table, by clicking **Add Page** as done previously and select **Master Detail**.
+10.	On the Create Application wizard, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
 
     ![master detail](images/master-detail.png " ")
 
@@ -78,7 +82,7 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
     ![master detail](images/add-master-detail-page.png " ")
 
-12.	The Create Application page has three Pages added: two for Customers table and one, as Master-Detail, for Orders and Items.
+12.	The Create Application page has three new Pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
 
     Let’s add another Page for Orders, again click **Add Page** and select **Faceted Search**.
 
@@ -121,7 +125,7 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
     ![application](images/master-detail5.png " ")
 
-3. Previously you created a master detail page in stacked style for Orders and Items, now you will create another type of Master Detail page in Side-by-Side style. For that, click **Side-by-Side** and click **Next**.
+3. Previously, you created a master detail page for Orders and Items in a stacked style. Now, you will create another type of Master Detail page in a Side-by-Side style. For that, click **Side-by-Side** and click **Next**.
 
     ![application](images/create-master-detail1.png " ")
 
@@ -149,11 +153,11 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
   ![application](images/create-master-detail3.png " ")
 
-6. Page Designer is shown. You can use Page Designer to maintain and enhance pages within an APEX app. Page Designer is a full featured Integrated Development Environment (IDE) that includes a toolbar and multiple panes:
+6. Page Designer is shown. Page Designer can maintain and enhance pages within an APEX app. Page Designer is a full featured Integrated Development Environment (IDE) that includes a toolbar and multiple panes:
 
     - **Left Pane**: Includes four tabs that display as a tree: Rendering, Dynamic Actions, Processing, and Shared Components.
 
-    - **Central Pane**: Includes five tabs: Layout, Component View, Messages, Page Search, and Help.
+    - **Central Pane**: This pane includes five tabs: Layout, Component View, Messages, Page Search, and Help.
 
     - **Right Pane**: Displays the Property Editor. Use the Property Editor to update attributes for the selected component.
 
@@ -165,7 +169,7 @@ Prior to creating the APEX Application, a quick recap about what we’ve already
 
     -	**Left vertical Panel**: here S_ORD Master table primary and secondary display columns (DATE_ORDERED, PAYMENT_TYPE) are displayed.
 
-    - **Upper Horizontal Panel**: here other S_ORD Master table details are displayed, when chosen the primary and secondary columns accordingly.
+    - **Upper Horizontal Panel**: Here, other S_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
 
     - **Lower Horizontal Panel**: here S_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
 
@@ -233,10 +237,14 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     ![application](images/edit-drill.png " ")
 
-7. If you click on the arrows under the “Form on S_ORD” panel you can navigate through Master Orders table rows and corresponding Order Items Detail rows are displayed accordingly.
+7. If you click on the arrows under the “Form on S_ORD” panel, you can navigate through the Master Orders table rows, and corresponding Order Items Detail rows are displayed accordingly.
 
     ![application](images/view-drill.png " ")
 
 ## Summary
-Now you have created the APEX application with multiple report example scenarios for Customer, Orders and Order Items tables.
+You have now created the APEX application with multiple report example scenarios for the Customer, Orders, and Order Items tables.
 In the next lab you will undertake Oracle Forms functionalities enhancement steps in APEX.
+
+## Acknowledgements
+- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
