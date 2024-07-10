@@ -115,7 +115,7 @@ We start by reviewing the existing components in the form to analyze which can b
       ![Program Units](images/program-units.png " ")
 
 ## Summary
-This LiveLab provides a comprehensive approach to understanding and migrating Oracle Forms components to Oracle APEX, ensuring a smooth modernization process by leveraging APEX's native capabilities and customization options.
+This Lab provides a comprehensive approach to understanding and migrating Oracle Forms components to Oracle APEX, ensuring a smooth modernization process by leveraging APEX's native capabilities and customization options.
 
 ## Acknowledgements
 - **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager

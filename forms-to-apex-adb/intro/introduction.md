@@ -2,11 +2,11 @@
 
 ## About this Workshop
 
-Welcome to our Oracle Forms to Oracle APEX Transition Workshop! This hands-on workshop is designed to equip you with the knowledge and skills necessary to modernize your legacy Oracle Forms applications using Oracle APEX. Whether you are new to APEX or looking to refine your skills, this workshop will provide valuable insights and practical experience. Throughout the workshop, you will learn to understand the fundamental differences and similarities between Oracle Forms and APEX, and how to map components from one to the other.
+Welcome to our Oracle Forms to Oracle APEX Transition Workshop! This hands-on workshop will equip you with the knowledge and skills to modernize your legacy Oracle Forms applications using Oracle APEX. Whether new to APEX or looking to refine your skills, this workshop will provide valuable insights and practical experience. Throughout the workshop, you will learn to understand the fundamental differences and similarities between Oracle Forms and APEX and how to map components from one to the other.
 
-You will also analyze and extract crucial business logic from your existing Oracle Forms applications, set up the necessary database infrastructure to support your APEX applications, and use the Create Application Wizard to develop a web-based application. Additionally, you will learn best practices and advanced techniques to enhance the functionality and user experience of your APEX applications.
+You will also analyze and extract crucial business logic from your existing Oracle Forms applications, set up the necessary database infrastructure to support your APEX applications and use the Create Application Wizard to develop a web-based application. Additionally, you will learn best practices and advanced techniques to enhance your APEX applications' functionality and user experience.
 
-By the end of this workshop, you will be well-prepared to transform your Oracle Forms applications into powerful, user-friendly APEX application, leveraging modern web technologies to enhance performance and usability. Join us as we explore the exciting possibilities of APEX and take your applications to the next level!
+By the end of this workshop, you will be well-prepared to transform your Oracle Forms applications into powerful, user-friendly APEX applications, leveraging modern web technologies to enhance performance and usability. Join us as we explore the exciting possibilities of APEX and take your applications to the next level!
 
 Estimated Time: 1 hour
 
