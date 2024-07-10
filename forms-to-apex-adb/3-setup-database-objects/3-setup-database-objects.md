@@ -6,7 +6,7 @@ In this lab, you will create database objects that will be utilized by the APEX 
 ## Download Sample Scripts
 To create database objects, you need to download the following two files:
 -	[Forms_conversion_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/forms_conversion_ddl.sql) as sample DDL script.
--	Forms_conversion_data_insert.sql as sample data insert script.
+-	Forms\_conversion\_data\_insert.sql as sample data insert script.
 Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://apex.oracle.com/go/sample-forms)
 
 ## Task 1: Create Database Objects in APEX Workspace
@@ -17,7 +17,7 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
 
     ![SQL Scripts](images/sql-scripts.png " ")
 
-3. Click ** Upload **. Now upload the previously downloaded scripts one after the other into the file(**forms_conversion_ddl.sql** and **forms_conversion_data_insert.sql**) and Click **Upload**.
+3. Click ** Upload **. Now upload the previously downloaded scripts one after the other into the file(**forms\_conversion\_ddl.sql** and **forms\_conversion\_data\_insert.sql**) and Click **Upload**.
 
     ![Upload SQL Scripts](images/upload-script.png " ")
 
@@ -25,7 +25,7 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
 
     ![Data Insert File](images/data-insert-file.png " ")
 
-4.	The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms_conversion_ddl.sql** script level, Click the orange arrow under the label **Run** and then **Run Now** to confirm.
+4.	The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_conversion\_ddl.sql** script level, Click the orange arrow under the label **Run** and then **Run Now** to confirm.
 
     ![Data Insert File](images/run-ddl.png " ")
 
@@ -36,7 +36,7 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
     ![Data Insert File](images/successful-ddl.png " ")
 
 
-6.	Now click **SQL Scripts** again and run the second script to populate the tables, **forms_conversion_data_insert.sql** under **Run** label and then **Run Now**.
+6.	Now click **SQL Scripts** again and run the second script to populate the tables, **forms\_conversion\_data\_insert.sql** under **Run** label and then **Run Now**.
 
     ![Data Insert File](images/run-data-insert.png " ")
 
@@ -48,7 +48,7 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
 
     *Note: Check this population script in advance as probably a proper date format setting (i.e., “MM/DD/YYYY” instead of DD/MM/YYYY”) would be needed to load data without errors.*
 
-8. Navigate to **SQL Workshop** and select **Object browser** to view the tables and the created objects. On the right tab, under Table, click **S_CUSTOMER**.
+8. Navigate to **SQL Workshop** and select **Object browser** to view the tables and the created objects. On the right tab, under Table, click **S\_CUSTOMER**.
 
     ![Data Insert File](images/object-browser.png " ")
 

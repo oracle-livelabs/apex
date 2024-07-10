@@ -12,7 +12,6 @@ The goal of this lab is to guide you through the steps to create an APEX applica
 By the end of this lab, you will have an APEX application with multiple pages, each demonstrating different features and functionalities, ready to be enhanced further in subsequent labs.
 
 ## Task 1: Create an Application
-
 1. First, login into your APEX workspace.
 
 2. Click **App Builder**.
