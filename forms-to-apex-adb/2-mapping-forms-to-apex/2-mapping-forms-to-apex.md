@@ -84,7 +84,7 @@ Visual attributes are the font, color, and pattern properties you can set for fo
 The window in Forms is the container for all visual objects that comprise the application, including canvases. Windows maps to a page in APEX since the page holds all of the visual objects for an application.
 
 ## Summary
-This LiveLab provides comprehensive guidelines for mapping various Oracle Forms components to APEX, ensuring functionality is retained or improved during modernization.
+This lab provides comprehensive guidelines for mapping various Oracle Forms components to APEX, ensuring functionality is retained or improved during modernization.
 
 ## Acknowledgements
 - **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
