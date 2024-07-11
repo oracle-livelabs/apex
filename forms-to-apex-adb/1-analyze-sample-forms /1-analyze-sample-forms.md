@@ -39,24 +39,23 @@ To put the previous guidelines into perspective, let's see how we can analyze th
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
 
-1. **Data Blocks**:
-Five data blocks, including **S\_CUSTOMER1** and **S\_CUSTOMER**, are associated with the **S\_CUSTOMER** table. The **S\_CUSTOMER** block is editable and allows CRUD operations, so you can map it into the Form item in APEX to enable the same operations. However, the **S\_CUSTOMER1** block isn't editable, so you can't handle it the same way.
+1. **Data Blocks**: Five data blocks, including **S\_CUSTOMER1** and **S\_CUSTOMER**, are associated with the **S\_CUSTOMER** table. The **S\_CUSTOMER** block is editable and allows CRUD operations, so you can map it into the Form item in APEX to enable the same operations. However, the **S\_CUSTOMER1** block isn't editable, so you can't handle it the same way.
 
-The remaining three blocks **(CONTROL, NAV\_CONTROL, NAVIGATOR)** are non-database blocks that handle navigation in Forms and control the tree region, which isn't applicable in APEX.
+    The remaining three blocks **(CONTROL, NAV\_CONTROL, NAVIGATOR)** are non-database blocks that handle navigation in Forms and control the tree region, which isn't applicable in APEX.
 
-![Blocks](images/data-blocks.png " ")
+    ![Blocks](images/data-blocks.png " ")
 
-2. **Triggers**: The Customer's form contains multiple triggers, but we are now mainly focused on the triggers associated with the S_CUSTOMER block.
+2. **Triggers**: The Customer's form contains multiple triggers, but we are now mainly focused on the triggers associated with the S\_CUSTOMER block.
 
-The first trigger is **POST\_QUERY**. This trigger isn't translatable into APEX, as APEX automatically incorporates the trigger logic in the form's creation process. This is where the form items are initialized. Initialization options include initializing the form region items or retrieving data from the region source using the primary key value(s).
+    The first trigger is **POST\_QUERY**. This trigger isn't translatable into APEX, as APEX automatically incorporates the trigger logic in the form's creation process. This is where the form items are initialized. Initialization options include initializing the form region items or retrieving data from the region source using the primary key value(s).
 
-The second trigger is **WHEN-MOUSE-DOUBLECLICK**. This trigger executes the procedure EDIT_TEXTITEM, which invokes a pop-up window editor for the COMMENTS column. When mapping to APEX, we can ignore this trigger since APEX will automatically initialize this COMMENTS column in the form.
+    The second trigger is **WHEN-MOUSE-DOUBLECLICK**. This trigger executes the procedure EDIT\_TEXTITEM, which invokes a pop-up window editor for the COMMENTS column. When mapping to APEX, we can ignore this trigger since APEX will automatically initialize this COMMENTS column in the form.
 
 3. **LOVs**: There is only one list of values created which is **SALES\_REP\_LOV** executing the above SQL statement.
 
-![LOVs](images/lovs.png " ")
+    ![LOVs](images/lovs.png " ")
 
-![LOVs SQL Query](images/sql-query.png " ")
+    ![LOVs SQL Query](images/sql-query.png " ")
 
     In APEX, the LOV is created automatically with the form's creation. However, it may not display the intended values as in the SQL query.
 
@@ -98,7 +97,7 @@ The second trigger is **WHEN-MOUSE-DOUBLECLICK**. This trigger executes the proc
 
     -	Click **Create**.
 
-  You have created the message and need to update the shortcut in the APEX Form.
+You have created the message and need to update the shortcut in the APEX Form.
 
     -	Go to the **Customers** Form page.
 
