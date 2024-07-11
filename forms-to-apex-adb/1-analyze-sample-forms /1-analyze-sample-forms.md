@@ -5,7 +5,7 @@ This Lab analyses your current forms environment and identifies the important bu
 
 *Note: This Lab assumes you have an Oracle Forms setup in your environment.*
 
-## Task 1: Analyzing Forms Business Logic
+## Task 1: Analyze Forms Business Logic
 To modernize from Oracle Forms to APEX, you must understand the current business logic of your forms and where they are implemented. This is key for deciding how to adapt them to the APEX environment. The rule of thumb is always to push as much business logic as possible into the Oracle Database.
 
 For example, the business logic in Oracle Forms resides in the Triggers and Program Units. You can incorporate this logic into Oracle APEX as SQL or PL/SQL code that invokes database packages, procedures, or functions. The same applies to database objects, which do not need alteration when transitioning from Forms to APEX.
@@ -40,23 +40,23 @@ To put the previous guidelines into perspective, let's see how we can analyze th
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
 
 1. **Data Blocks**:
- Five data blocks, including **S_CUSTOMER1** and **S_CUSTOMER**, are associated with the **S_CUSTOMER** table. The **S_CUSTOMER** block is editable and allows CRUD operations, so you can map it into the Form item in APEX to enable the same operations. However, the **S_CUSTOMER1** block isn't editable, so you can't handle it the same way.
+    Five data blocks, including **S\_CUSTOMER1** and **S\_CUSTOMER**, are associated with the **S\_CUSTOMER** table. The **S\_CUSTOMER** block is editable and allows CRUD operations, so you can map it into the Form item in APEX to enable the same operations. However, the **S\_CUSTOMER1** block isn't editable, so you can't handle it the same way.
 
-    The remaining three blocks **(CONTROL, NAV_CONTROL, NAVIGATOR)** are non-database blocks that handle navigation in Forms and control the tree region, which isn't applicable in APEX.
+    The remaining three blocks **(CONTROL, NAV\_CONTROL, NAVIGATOR)** are non-database blocks that handle navigation in Forms and control the tree region, which isn't applicable in APEX.
 
-    ![Data Blocks](images/data-blocks.png " ")
+  ![Data Blocks](images/data-blocks.png " ")
 
 2. **Triggers**: The Customer's form contains multiple triggers, but we are now mainly focused on the triggers associated with the S_CUSTOMER block.
 
-    The first trigger is **POST_QUERY**. This trigger isn't translatable into APEX, as APEX automatically incorporates the trigger logic in the form's creation process. This is where the form items are initialized. Initialization options include initializing the form region items or retrieving data from the region source using the primary key value(s).
+    The first trigger is **POST\_QUERY**. This trigger isn't translatable into APEX, as APEX automatically incorporates the trigger logic in the form's creation process. This is where the form items are initialized. Initialization options include initializing the form region items or retrieving data from the region source using the primary key value(s).
 
     The second trigger is **WHEN-MOUSE-DOUBLECLICK**. This trigger executes the procedure EDIT_TEXTITEM, which invokes a pop-up window editor for the COMMENTS column. When mapping to APEX, we can ignore this trigger since APEX will automatically initialize this COMMENTS column in the form.
 
-3. **LOVs**: There is only one list of values created which is **SALES_REP_LOV** executing the above SQL statement.
+3. **LOVs**: There is only one list of values created which is **SALES\_REP\_LOV** executing the above SQL statement.
 
-    ![LOVs](images/lovs.png " ")
+![LOVs](images/lovs.png " ")
 
-    ![LOVs SQL Query](images/sql-query.png " ")
+![LOVs SQL Query](images/sql-query.png " ")
 
     In APEX, the LOV is created automatically with the form's creation. However, it may not display the intended values as in the SQL query.
 
@@ -74,7 +74,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
   ![LOVs SQL Query](images/sales-rep-lovs.jpg " ")
 
-4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
+4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
     To customize the display message in Oracle APEX, follow the following steps:
 
@@ -90,7 +90,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
     -	Click Next.
 
-    -	For Name, enter **DELETE_ALERT**.
+    -	For Name, enter **DELETE\_ALERT**.
 
     - For Type, select **Text with JavaScript Escaped Single Quotes**.
 
@@ -104,15 +104,15 @@ We start by reviewing the existing components in the form to analyze which can b
 
     -	In the left pane, click the page name.
 
-    - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb_delete_message='"DELETE_ALERT"';
+    - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb_delete_message='"DELETE\_ALERT"';
 
-  The second, **CONFIRM_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
+  The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
 
   ![Alerts](images/alerts.png " ")
 
 5. **Program Units**: The customer form contains seven program units. However, we cannot map them in our APEX app because either APEX handles them natively during form creation or they are not applicable.
 
-      ![Program Units](images/program-units.png " ")
+  ![Program Units](images/program-units.png " ")
 
 ## Summary
 This Lab provides a comprehensive approach to understanding and migrating Oracle Forms components to Oracle APEX, ensuring a smooth modernization process by leveraging APEX's native capabilities and customization options.
