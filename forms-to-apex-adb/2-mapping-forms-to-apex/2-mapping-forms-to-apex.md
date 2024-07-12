@@ -3,6 +3,15 @@
 ## Introduction
 This lab focuses on understanding how to map Oracle Forms components to the most appropriate APEX components to achieve similar functionality. The lab provides guidelines for comparing Oracle Forms modules with those in APEX, noting that mapping may not always be a direct 1:1 relation.
 
+Estimated Time: 10 Minutes
+
+### Objectives
+In this lab, you:
+
+- Understand how to map Oracle Forms components to Oracle APEX components effectively.
+
+- Examine various Oracle Forms modules.
+
 ## Task 1: Examine Form's Component
 
 There are three main approaches to take when mapping modules from Forms to APEX:
@@ -57,7 +66,7 @@ In Forms, Object Groups are used to share components between multiple forms. The
     ![Object Groups](images/object-groups.png " ")
 
 9. **Parameters**:
-A parameter is a variable whose value can be set at runtime. Parameters are beneficial for modifying SELECT statements and setting PL/SQL variables at runtime. In APEX, this can be mapped to the [SET_PARAMETER](https://docs.oracle.com/en/database/oracle/apex/24.1/aeapi/SET_PARAMETER-Procedure.html) Procedure in the APEX_INSTANCE_ADMIN package, which provides utilities for managing an Oracle APEX runtime environment.
+A parameter is a variable whose value can be set at runtime. Parameters are beneficial for modifying SELECT statements and setting PL/SQL variables at runtime. In APEX, this can be mapped to the [SET_PARAMETER](https://docs.oracle.com/en/database/oracle/apex/24.1/aeapi/SET_PARAMETER-Procedure.html) Procedure in the APEX\_INSTANCE\_ADMIN package, which provides utilities for managing an Oracle APEX runtime environment.
 
 10. **Program Units**:
 As discussed in Lab 1, Program Units implement business logic in Forms, which can be incorporated into APEX as a PL/SQL package, [page process, computation, or validation](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/managing-computations-validations-and-processes.html).

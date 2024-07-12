@@ -3,6 +3,11 @@
 ## Introduction
 In this lab, you will create database objects that will be utilized by the APEX environment. The lab involves downloading and running SQL scripts to set up the necessary database schema and populate it with sample data. These steps are foundational for creating an APEX application that leverages these database objects.
 
+Estimated Time: 10 Minutes
+
+### Objectives
+- Upload and run the provided SQL scripts in the SQL Workshop to create database schema and insert sample data.
+
 ## Download Sample Scripts
 To create database objects, you need to download the following two files:
 -	[Forms_conversion_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/forms_conversion_ddl.sql) as sample DDL script.
@@ -34,7 +39,6 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
 5.	Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see “Statements Processed,” “Successful,” and “With Errors).
 
     ![Data Insert File](images/successful-ddl.png " ")
-
 
 6.	Now click **SQL Scripts** again and run the second script to populate the tables, **forms\_conversion\_data\_insert.sql** under **Run** label and then **Run Now**.
 

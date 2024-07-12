@@ -11,6 +11,15 @@ The goal of this lab is to guide you through the steps to create an APEX applica
 
 By the end of this lab, you will have an APEX application with multiple pages, each demonstrating different features and functionalities, ready to be enhanced further in subsequent labs.
 
+Estimated Time: 15 Minutes
+
+### Objectives
+In this lab, you:
+- Create an Oracle APEX application using the Create Application Wizard.
+- Add multiple types of pages such as faceted search, interactive reports, and master-detail pages to the APEX application.
+- Manage and enhance application pages.
+
+
 ## Task 1: Create an Application
 1. First, login into your APEX workspace.
 
@@ -40,7 +49,7 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
     - Page Name: **Customer Faceted Search**
 
-    - Table: **S_CUSTOMER**
+    - Table: **S\_CUSTOMER**
 
     - **Check** the **Include Form** checkbox
 
@@ -48,7 +57,7 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
   ![faceted search](images/add-faceted-search-page.png " ")
 
-8. On Create Application page, click **Add Page** to add another page for Customers table (S_CUSTOMER) and select **Interactive Report**.
+8. On Create Application page, click **Add Page** to add another page for Customers table (S\_CUSTOMER) and select **Interactive Report**.
 
     ![interactive report](images/interactive-report.png " ")
 
@@ -56,7 +65,7 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
     - Page Name: **Customer – Interactive Report**
 
-    - Table or View: **S_CUSTOMER**
+    - Table or View: **S\_CUSTOMER**
 
     - **Check** the **Include Form** checkbox
 
@@ -73,9 +82,9 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
     - Select **Stacked** as Master Detail layout page.
 
-    - Table: **S_ORD**
+    - Table: **S\_ORD**
 
-    - Detail Table: **S_ITEM**
+    - Detail Table: **S\_ITEM**
 
     Click **Add Page**.
 
@@ -91,7 +100,7 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
     - Page Name: **Orders Faceted Search**
 
-    - Table: **S_ORD**
+    - Table: **S\_ORD**
 
     Click **Add Page**.
 
@@ -140,13 +149,13 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
 5. Next, on the **Create Master Detail** dialog, enter the following:
 
-    - Master Table: **S_ORD**
+    - Master Table: **S\_ORD**
 
-    - Primary Display Column: **DATE_ORDERED (Date)**
+    - Primary Display Column: **DATE\_ORDERED (Date)**
 
-    - Secondary Display Column: **PAYMENT_TYPE (Varchar2)**
+    - Secondary Display Column: **PAYMENT\_TYPE (Varchar2)**
 
-    - Detail Table: **S_ITEM**
+    - Detail Table: **S\_ITEM**
 
     Click **Create Page**
 
@@ -166,11 +175,11 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
     And here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
 
-    -	**Left vertical Panel**: here S_ORD Master table primary and secondary display columns (DATE_ORDERED, PAYMENT_TYPE) are displayed.
+    -	**Left vertical Panel**: here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
 
-    - **Upper Horizontal Panel**: Here, other S_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
+    - **Upper Horizontal Panel**: Here, other S\_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
 
-    - **Lower Horizontal Panel**: here S_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
+    - **Lower Horizontal Panel**: here S\_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
 
   ![application](images/orders-side.png " ")
 
@@ -198,7 +207,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     - Name: **Orders – Drill Down**
 
-    - Table/View Name: **S_ORD**
+    - Table/View Name: **S\_ORD**
 
     - Navigation > Breadcrumb Parent Entry:  **No parent entry**
 
@@ -214,15 +223,15 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     - Name: **Order Items – Drill Down**
 
-    - Table/View Name: **S_ITEM**
+    - Table/View Name: **S\_ITEM**
 
     Click **Next**.
 
   ![application](images/drill-down4.png " ")
 
-    - Primary Key Column 1: **ITEM_ID**
+    - Primary Key Column 1: **ITEM\_ID**
 
-    - Master Detail Foreign Key: **ID ->ORD_ID**
+    - Master Detail Foreign Key: **ID ->ORD\_ID**
 
     Click **Create Page**.
 
@@ -236,7 +245,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     ![application](images/edit-drill.png " ")
 
-7. If you click on the arrows under the “Form on S_ORD” panel, you can navigate through the Master Orders table rows, and corresponding Order Items Detail rows are displayed accordingly.
+7. If you click on the arrows under the “Form on S\_ORD” panel, you can navigate through the Master Orders table rows, and corresponding Order Items Detail rows are displayed accordingly.
 
     ![application](images/view-drill.png " ")
 

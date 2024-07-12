@@ -10,7 +10,7 @@ To modernize from Oracle Forms to APEX, you must understand the current business
 
 For example, the business logic in Oracle Forms resides in the Triggers and Program Units. You can incorporate this logic into Oracle APEX as SQL or PL/SQL code that invokes database packages, procedures, or functions. The same applies to database objects, which do not need alteration when transitioning from Forms to APEX.
 
-However, in Oracle Forms, business logic is also intertwined with user interface items such as go_item, set_item_property, etc. In this case, separating and pushing logic to the database is impossible. In some cases, pushing the business logic of the triggers and program units into the database might be challenging.
+However, in Oracle Forms, business logic is also intertwined with user interface items such as go\_item, set\_item\_property, etc. In this case, separating and pushing logic to the database is impossible. In some cases, pushing the business logic of the triggers and program units into the database might be challenging.
 
 Analyze and map the logic to the appropriate APEX component. The APEX environment natively handles multiple events and logic blocks through processes, computations, and validations. Understand how these components work and the customizations you can apply to them. This understanding prevents you from rewriting code and business logic that APEX's components can handle automatically.
 
@@ -35,6 +35,7 @@ Any block in Forms not associated with a database table or view is a non-databas
 
 
 ## Task 2: Analyze Sample Forms
+
 To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the Customer's form. Download the Sample Forms
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
@@ -103,7 +104,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
     -	In the left pane, click the page name.
 
-    - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb_delete_message='"DELETE\_ALERT"';
+    - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
 
   The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
 

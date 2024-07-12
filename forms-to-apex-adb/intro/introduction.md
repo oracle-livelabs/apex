@@ -18,7 +18,7 @@ In this workshop, you:
 - Build APEX Application
 - Enhance APEX Application
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### **Let's Get Started!**
 

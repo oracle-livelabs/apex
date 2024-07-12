@@ -5,20 +5,21 @@ After following the guidelines in the previous labs on best practices to moderni
 
 In this lab, you will build on the business logic analysis performed on the “Customers’ form” in Lab 1. After migrating and enhancing the business logic, it’s time to modernize the application within APEX.
 
-You will make the following enhancements to the Customers component:
-- Configure Credit Rating to use a Static LOV.
--	Customize the Customer Form.
-- Customize the Faceted Search.
-- Customize the Interactive Report.
+Estimated Time: 15 Minutes
 
-You will also further improve the application through enhancing the following components:
--	Navigation Menu
--	Authentication Scheme
--	UI Enhancements
+### Objectives
+In this lab, you:
 
-## Task 1: Configure Credit Rating to use a Static LOV
+- Configure List of Values
+- Define and organize facets for the Faceted Search page to filter data effectively.
+- Define and personalize the Interactive Report views, allowing end-users to interact with and save their report configurations.
+- Create and organize navigation menu entries for Customers and Orders, and assign appropriate parent list entries to make the menu cleaner and more user-friendly.
+- Disable authentication to make the application publicly accessible, suitable for a public-facing application.
 
-1. The table ** S_CUSTOMER ** has a column named ** CREDIT_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
+
+## Task 1: Configure List of Values
+
+1. The table ** S\_CUSTOMER ** has a column named ** CREDIT\_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![App Builder](images/constraint.png " ")
 
@@ -46,7 +47,7 @@ You will also further improve the application through enhancing the following co
 
 7.	Under Name and Type, enter/select the following:
 
-    - Name: **S_CUSTOMER.CREDIT_RATING**  
+    - Name: **S\_CUSTOMER.CREDIT\_RATING**  
 
     - Type: **Static**.
 
@@ -70,7 +71,7 @@ You will also further improve the application through enhancing the following co
 9. Click **Create** to create another list of values.
 
 
-10. For Name: Enter **SALES_REP_LOV** and Click **Next**.
+10. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
 
     ![App Builder](images/sales-rep-lov.png " ")
 
@@ -113,7 +114,7 @@ To use the list of values previously created:
 
     ![App Builder](images/sequence-items.png " ")
 
-4.	In the left pane, select **PX_CREDIT_RATING**. In the Property Editor, update the following:
+4.	In the left pane, select **PX\_CREDIT\_RATING**. In the Property Editor, update the following:
 
     - Identification > Type: **Radio Group**
 
@@ -123,7 +124,7 @@ To use the list of values previously created:
 
         - Type: **Shared Component**
 
-        - List of Values: **S_CUSTOMER.CREDIT_RATING**
+        - List of Values: **S\_CUSTOMER.CREDIT\_RATING**
 
         - Display Extra Values: **Toggle Off**
 
@@ -148,19 +149,19 @@ You can define which facets to filter the data. Some are defined automatically, 
 
 | NAME |	TYPE |	LABEL |	LIST OF VALUES TYPE |	LIST OF VALUES |
 |----- | ----- | ----- | -------------------- | -------------- |
-|PX_CITY |	Checkbox Group |	City |	Distinct Values |	  |
-| PX_NAME	| Checkbox Group |	Name |	Distinct Values	|   |
-| PX_SALES_REP_ID	| Checkbox Group |Sales Rep	| Shared Component|	SALES_REP_LOV|
+|PX\_CITY |	Checkbox Group |	City |	Distinct Values |	  |
+| PX\_NAME	| Checkbox Group |	Name |	Distinct Values	|   |
+| PX\_SALES\_REP\_ID	| Checkbox Group |Sales Rep	| Shared Component|	SALES\_REP\_LOV|
 
 4.	Now organize the facets in the following order:
     |Facets|
     |------|
-	  |PX_CREDIT_RATING|
-	  |PX_REGION_ID|
-    |	PX_COUNTRY |
-    | PX_CITY |
-    | PX_NAME |
-    | PX_SALES_REP_ID |
+	  |PX\_CREDIT\_RATING|
+	  |PX\_REGION\_ID|
+    |	PX\_COUNTRY |
+    | PX\_CITY |
+    | PX\_NAME |
+    | PX\_SALES\_REP\_ID |
 
     ![App Builder](images/sequence.png " ")
 
