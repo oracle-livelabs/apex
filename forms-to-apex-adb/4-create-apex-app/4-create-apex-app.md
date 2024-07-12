@@ -137,13 +137,13 @@ In this lab, you:
 
     ![application](images/create-master-detail1.png " ")
 
-4. On Create Master Detail dialog, enter/select the following:
+4. On **Create Master Detail** dialog, enter/select the following:
 
     - Page Definition > Master Detail Page Name: **Orders – Side by Side**
 
     - Navigation > Breadcrumb Parent Entry: **Home (Page 1)**
 
-    Click Next:
+    Click **Next**.
 
   ![application](images/create-master-detail2.png " ")
 
@@ -157,7 +157,7 @@ In this lab, you:
 
     - Detail Table: **S\_ITEM**
 
-    Click **Create Page**
+    Click **Create Page**.
 
   ![application](images/create-master-detail3.png " ")
 
@@ -175,11 +175,11 @@ In this lab, you:
 
     And here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
 
-    -	**Left vertical Panel**: here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
+    -	**Left vertical Panel**: Here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
 
     - **Upper Horizontal Panel**: Here, other S\_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
 
-    - **Lower Horizontal Panel**: here S\_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
+    - **Lower Horizontal Panel**: Here S\_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
 
   ![application](images/orders-side.png " ")
 
@@ -191,7 +191,7 @@ In this lab, you:
 ## Task 3: Create Drill-down Master Detail Page
 In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
 
-1.	Navigate back to Page Designer, Select Create **(v)** and click **Create Page**.
+1.	Navigate back to Page Designer, Select Create **(+ v)** and click **Create Page**.
 
     ![application](images/create-page2.png " ")
 
@@ -199,11 +199,11 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     ![application](images/master-detail5.png " ")
 
-3. For Master Detail style, select **Drill Down**.
+3. For **Master Detail style**, select **Drill Down**.
 
     ![application](images/drill-down.png " ")
 
-4. On Create Master Detail dialogs, enter/select the following:
+4. On **Create Master Detail** dialogs, enter/select the following:
 
     - Name: **Orders – Drill Down**
 
@@ -215,7 +215,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
   ![application](images/drill-down2.png " ")
 
-    - Form Navigation Order: **ID**
+    - Form Navigation Order: **ID (Number)**
 
     Click **Next**.
 
@@ -229,7 +229,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
   ![application](images/drill-down4.png " ")
 
-    - Primary Key Column 1: **ITEM\_ID**
+    - Primary Key Column 1: **ITEM\_ID (Number)**
 
     - Master Detail Foreign Key: **ID ->ORD\_ID**
 
@@ -237,7 +237,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
   ![application](images/drill-down5.png " ")
 
-5. Run the page by clicking the green arrow button on right upper side.
+5. **Run** the page by clicking the green arrow button on right upper side.
 
     ![application](images/run-drill.png " ")
 
