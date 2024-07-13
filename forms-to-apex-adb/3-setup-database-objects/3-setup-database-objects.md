@@ -10,9 +10,11 @@ Estimated Time: 10 Minutes
 
 ## Download Sample Scripts
 To create database objects, you need to download the following two files:
--	[Forms_conversion_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/forms_conversion_ddl.sql) as sample DDL script.
--	Forms\_conversion\_data\_insert.sql as sample data insert script.
-Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://apex.oracle.com/go/sample-forms)
+
+-	[Forms_conversion_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_ddl.sql) as sample DDL script.
+
+-	[Forms_conversion_data_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_data_insert.sql) as sample data insert script.
+
 
 ## Task 1: Create Database Objects in APEX Workspace
 
@@ -22,7 +24,7 @@ Download the Sample Forms: [https://apex.oracle.com/go/sample-forms](https://ape
 
     ![SQL Scripts](images/sql-scripts.png " ")
 
-3. Click ** Upload **. Now upload the previously downloaded scripts one after the other into the file(**forms\_conversion\_ddl.sql** and **forms\_conversion\_data\_insert.sql**) and Click **Upload**.
+3. Click **Upload**. Now upload the previously downloaded scripts one after the other into the file(**forms\_conversion\_ddl.sql** and **forms\_conversion\_data\_insert.sql**) and Click **Upload**.
 
     ![Upload SQL Scripts](images/upload-script.png " ")
 

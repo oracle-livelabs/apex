@@ -19,7 +19,7 @@ In this lab, you:
 
 ## Task 1: Configure List of Values
 
-1. The table ** S\_CUSTOMER ** has a column named ** CREDIT\_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
+1. The table **S\_CUSTOMER** has a column named ** CREDIT\_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![App Builder](images/constraint.png " ")
 
