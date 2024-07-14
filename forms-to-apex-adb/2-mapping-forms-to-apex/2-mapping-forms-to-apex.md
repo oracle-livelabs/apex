@@ -96,5 +96,5 @@ The window in Forms is the container for all visual objects that comprise the ap
 This lab provides comprehensive guidelines for mapping various Oracle Forms components to APEX, ensuring functionality is retained or improved during modernization.
 
 ## Acknowledgements
-- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

@@ -11,9 +11,9 @@ Estimated Time: 10 Minutes
 ## Download Sample Scripts
 To create database objects, you need to download the following two files:
 
--	[Forms_conversion_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_ddl.sql) as sample DDL script.
+-	[Forms\_conversion\_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_ddl.sql) as sample DDL script.
 
--	[Forms_conversion_data_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_data_insert.sql) as sample data insert script.
+-	[Forms\_conversion\_data\_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_data_insert.sql) as sample data insert script.
 
 
 ## Task 1: Create Database Objects in APEX Workspace
@@ -58,13 +58,13 @@ To create database objects, you need to download the following two files:
 
     ![Data Insert File](images/object-browser.png " ")
 
-    ![Data Insert File](images/customer-data.png " ")
-
 9. The screenshot below shows the details of the Table created, from the table column structure to the populated data, from the triggers to the created constraints.
+
+    ![Data Insert File](images/customer-data.png " ")
 
 ## Summary
 Now that the workspace has been populated with database objects and data content, we can proceed to the next lab creating an APEX Application using these database objects.
 
 ## Acknowledgements
-- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
