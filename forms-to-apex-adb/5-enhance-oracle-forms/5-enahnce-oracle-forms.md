@@ -21,29 +21,29 @@ In this lab, you:
 
 1. The table **S\_CUSTOMER** has a column named ** CREDIT\_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
 
-    ![App Builder](images/constraint.png " ")
+    ![constraint](images/constraint.png " ")
 
 2. To create the list of values, Click **App Builder** and select your application: **Modernization**.
 
     ![App Builder](images/app-builder1.png " ")
 
-    ![App Builder](images/modernization.png " ")
+    ![modernization](images/modernization.png " ")
 
 3. Click **Shared Components**.
 
-    ![App Builder](images/shared-comps.png " ")
+    ![Shared Components](images/shared-comps.png " ")
 
 4. Under **Other Components**, Click **List of Values**.
 
-    ![App Builder](images/lov1.png " ")
+    ![List of Values](images/lov1.png " ")
 
 5. Click **Create**.
 
-    ![App Builder](images/create-lov.png " ")
+    ![Create List of Values](images/create-lov.png " ")
 
 6. Create List of Values from Scratch and Click **Next**.
 
-    ![App Builder](images/scratch-lov.png " ")
+    ![Create List of Values](images/scratch-lov.png " ")
 
 7.	Under Name and Type, enter/select the following:
 
@@ -53,7 +53,7 @@ In this lab, you:
 
     Click **Next**.
 
-    ![App Builder](images/credit-rate-lov.png " ")
+    ![Create List of Values](images/credit-rate-lov.png " ")
 
 8. Enter the following Display Values and Return Values:
 
@@ -66,14 +66,13 @@ In this lab, you:
 
 	Click **Create List of Values**.
 
-  ![App Builder](images/values-lov.png " ")
+  ![Create List of Values](images/values-lov.png " ")
 
 9. Click **Create** to create another list of values.
 
-
 10. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
 
-    ![App Builder](images/sales-rep-lov.png " ")
+    ![Create List of Values](images/sales-rep-lov.png " ")
 
 11. Under **List of Values Source**, enter/select the following:
 
@@ -92,7 +91,7 @@ In this lab, you:
 
     Click **Next**.
 
-    ![App Builder](images/sql-query.png " ")
+    ![Create List of Values](images/sql-query.png " ")
 
 ## Task 2: Customize the Customer Form
 
@@ -253,7 +252,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
 	   Click **Create and Create Another**.
 
-  ![App Builder](images/cust-nav.png " ")
+     ![App Builder](images/cust-nav.png " ")
 
 6. Enter/select the following:
 
@@ -269,7 +268,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
   	Click **Create List Entry**.
 
-  ![App Builder](images/order-nav.png " ")
+    ![App Builder](images/order-nav.png " ")
 
 7. Customers and Orders entries are created and now you need to define the Parent List Entry for the rest of the entries. In the Desktop Navigation Menu, go to the Customer and Order options to select the proper parent entry.
 

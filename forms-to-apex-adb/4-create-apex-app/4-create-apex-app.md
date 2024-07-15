@@ -17,7 +17,8 @@ Estimated Time: 15 Minutes
 In this lab, you:
 - Create an Oracle APEX application using the Create Application Wizard.
 - Add multiple types of pages such as faceted search, interactive reports, and master-detail pages to the APEX application.
-- Manage and enhance application pages.
+- Manage and enhance application pages.   
+
 
 ## Task 1: Create an Application
 1. First, login into your APEX workspace.
