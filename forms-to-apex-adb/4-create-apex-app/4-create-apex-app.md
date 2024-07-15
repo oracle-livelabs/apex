@@ -19,7 +19,6 @@ In this lab, you:
 - Add multiple types of pages such as faceted search, interactive reports, and master-detail pages to the APEX application.
 - Manage and enhance application pages.
 
-
 ## Task 1: Create an Application
 1. First, login into your APEX workspace.
 
@@ -39,13 +38,13 @@ In this lab, you:
 
     ![Add Page](images/add-page1.png " ")
 
- *Note: Default App Icon could be different in your environment: for simplicity just accept the default.*
+ *Note: Default App Icon could be different in your environment, for simplicity just accept the default.*
 
 6. Select **Faceted Search**.
 
     ![faceted search](images/faceted-search1.png " ")
 
-7. For add Faceted Search Page enter/ select the following:
+7. For add Faceted Search Page, enter/ select the following:
 
     - Page Name: **Customer Faceted Search**
 
@@ -115,9 +114,7 @@ In this lab, you:
 
     ![Run application](images/run-application.png " ")
 
-2. Enter the credentials.
-
-3.	The home page includes a link to the pages created previously. You can edit this page as you need. Click on the hamburger menu on the top to explore all the pages.
+2. Enter the credentials. The home page includes a link to the pages created previously. You can edit this page as you need. Click on the hamburger menu on the top to explore all the pages.
 
     ![application](images/application.png " ")
 
@@ -147,7 +144,7 @@ In this lab, you:
 
   ![application](images/create-master-detail2.png " ")
 
-5. Next, on the **Create Master Detail** dialog, enter the following:
+5. Next, on the **Create Master Detail** dialog, enter/select the following:
 
     - Master Table: **S\_ORD**
 
@@ -171,9 +168,7 @@ In this lab, you:
 
   ![application](images/panes.png " ")
 
-7. Now **Run** this page clicking the green play button at the top right of Page Designer.
-
-    And here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
+7. Now **Run** this page clicking the green play button at the top right of Page Designer and here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
 
     -	**Left vertical Panel**: Here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
 
@@ -191,7 +186,7 @@ In this lab, you:
 ## Task 3: Create Drill-down Master Detail Page
 In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
 
-1.	Navigate back to Page Designer, Select Create **(+ v)** and click **Create Page**.
+1.	Navigate back to Page Designer, Select **(+ v)** and click **Page**.
 
     ![application](images/create-page2.png " ")
 
@@ -254,5 +249,5 @@ You have now created the APEX application with multiple report example scenarios
 In the next lab you will undertake Oracle Forms functionalities enhancement steps in APEX.
 
 ## Acknowledgements
-- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

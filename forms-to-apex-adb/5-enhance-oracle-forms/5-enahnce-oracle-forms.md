@@ -102,7 +102,7 @@ Once the page is created, you can make the changes you need. Select a different 
 
 To use the list of values previously created:
 
-1.	Navigate to Application ID and select your application.
+1.	Navigate to **Application ID** and select your application.
 
     ![App Builder](images/nav-app-id.png " ")
 
@@ -137,7 +137,7 @@ To use the list of values previously created:
 ## Task 3: Customize the Faceted Search
 You can define which facets to filter the data. Some are defined automatically, but you can create or delete them as needed. You can also drag and drop facets to change their display order.
 
-1. From the Page designer, Navigate to the Faceted Search Page.
+1. From the Page designer, Navigate to the **Customer Faceted Search**.
 
     ![App Builder](images/nav-to-search.png " ")
 
@@ -147,11 +147,14 @@ You can define which facets to filter the data. Some are defined automatically, 
 
 3. Create the following three facets one after the other:
 
-| NAME |	TYPE |	LABEL |	LIST OF VALUES TYPE |	LIST OF VALUES |
-|----- | ----- | ----- | -------------------- | -------------- |
-|PX\_CITY |	Checkbox Group |	City |	Distinct Values |	  |
-| PX\_NAME	| Checkbox Group |	Name |	Distinct Values	|   |
-| PX\_SALES\_REP\_ID	| Checkbox Group |Sales Rep	| Shared Component|	SALES\_REP\_LOV|
+    | NAME |	TYPE |	LABEL |	LIST OF VALUES TYPE |	LIST OF VALUES |
+    |----- | ----- | ----- | -------------------- | -------------- |
+    |PX\_CITY |	Checkbox Group |	City |	Distinct Values |	  |
+    | PX\_NAME	| Checkbox Group |	Name |	Distinct Values	|   |
+    | PX\_SALES\_REP\_ID	| Checkbox Group |Sales Rep	| Shared Component|	SALES\_REP\_LOV|
+    {: title="Facets"}
+
+    ![App Builder](images/sales-rep-lov1.png " ")
 
 4.	Now organize the facets in the following order:
     |Facets|
@@ -162,19 +165,20 @@ You can define which facets to filter the data. Some are defined automatically, 
     | PX\_CITY |
     | PX\_NAME |
     | PX\_SALES\_REP\_ID |
+    {: title="Reorder Facets"}
 
     ![App Builder](images/sequence.png " ")
 
 5.	Click Save.
 
 ## Task 4: Customize the Interactive Report
-In this task, you will define how end-users can interact with and personalize their report views using Oracle APEX's Interactive Reports. Interactive Reports offer a powerful way to present data, allowing both developers and end-users to tailor the reports to their needs. Developers can define primary or alternative reports, while end-users can save private reports for their individual use.
+In this task, you will define how end-users can interact with and personalize their report views using Oracle APEX Interactive Reports. Interactive Reports offer a powerful way to present data, allowing both developers and end-users to tailor the reports to their needs. Developers can define primary or alternative reports, while end-users can save private reports for their individual use.
 
-1.	Run the application as a developer.
+1.	**Run** the application as a developer.
 
     ![App Builder](images/run-app2.png " ")
 
-2.	Navigate to Customer Interactive Report.
+2.	Navigate to **Customer Interactive Report**.
 
     ![App Builder](images/cust-interactive-report.png " ")
 
@@ -194,11 +198,15 @@ In this task, you will define how end-users can interact with and personalize th
 
 6.	Click **Actions** and select Click **Format** > **Control Break**.
 
+    ![App Builder](images/control-break.png " ")
+
 7.	For Column, select the column **Name** and Click **Apply**.
+
+    ![App Builder](images/control-break-name.png " ")
 
 8. 	To save the primary report, Click **Actions** > **Report** > **Save Report**.
 
-    ![App Builder](images/save-report.png " ")
+    ![App Builder](images/save-report1.png " ")
 
 10.	For Save, select **As Named Report**.
 
@@ -229,7 +237,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
 4.	Click **Create Entry**.
 
-    ![App Builder](images/nav-menu3.png " ")
+    ![App Builder](images/create-entry.png " ")
 
 5. Enter/select the following:
 
@@ -241,15 +249,15 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
        - List Entry Label: **Customers**
 
-   - Target > Target type: **No Target**
+    - Target > Target type: **No Target**
 
-	Click **Create and Create Another**.
+	   Click **Create and Create Another**.
 
   ![App Builder](images/cust-nav.png " ")
 
 6. Enter/select the following:
 
-   - Under Entry:
+    - Under Entry:
 
        - Sequence: **20**
 
@@ -257,7 +265,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
        - List Entry Label: **Orders**
 
-   - Target > Target type: **No Target**
+    - Target > Target type: **No Target**
 
   	Click **Create List Entry**.
 
@@ -322,5 +330,5 @@ Since this application is intended to be public, we will disable the authenticat
 In this lab, you enhanced the functionalities of Oracle Forms using APEX. Building on the business logic analysis from Lab 1, you modernized the application by configuring the Credit Rating with a Static LOV, customizing the Customer Form, Faceted Search, and Interactive Report. Additionally, you improved the Navigation Menu and Authentication Scheme, and make various UI enhancements. These steps demonstrate how to leverage Oracle APEX to create a more user-friendly and functional application.
 
 ## Acknowledgements
-- **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
