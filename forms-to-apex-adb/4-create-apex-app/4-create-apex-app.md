@@ -188,7 +188,7 @@ In this lab, you:
 
     ![application](images/orders-side2.png " ")
 
-## Task 3: Create Drill-down Master Detail Page
+## Task 4: Create Drill-down Master Detail Page
 
 In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
 

@@ -244,7 +244,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
 5. Enter/select the following:
 
-   - Under Entry:
+    - Under Entry:
 
        - Sequence: **15**
 
@@ -252,9 +252,9 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
        - List Entry Label: **Customers**
 
-   - Target > Target type: **No Target**
+    - Target > Target type: **No Target**
 
-    Click **Create and Create Another**.
+     Click **Create and Create Another**.
 
      ![App Builder](images/cust-nav.png " ")
 
@@ -270,9 +270,9 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
     - Target > Target type: **No Target**
 
-   Click **Create List Entry**.
+     Click **Create List Entry**.
 
-    ![App Builder](images/order-nav.png " ")
+     ![App Builder](images/order-nav.png " ")
 
 7. Customers and Orders entries are created and now you need to define the Parent List Entry for the rest of the entries. In the Desktop Navigation Menu, go to the Customer and Order options to select the proper parent entry.
 

@@ -40,7 +40,7 @@ To create database objects, you need to download the following two files:
 
     ![Data Insert File](images/run-now-ddl.png " ")
 
-5. Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see “Statements Processed,” “Successful,” and “With Errors).
+5. Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see "Statements Processed", "Successful" and "With Errors").
 
     ![Data Insert File](images/successful-ddl.png " ")
 
