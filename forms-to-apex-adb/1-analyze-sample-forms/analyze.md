@@ -6,6 +6,14 @@ This Lab analyses your current forms environment and identifies the important bu
 
 *Note: This Lab assumes you have an Oracle Forms setup in your environment.*
 
+Estimated Time: 10 Minutes
+
+### Objectives
+
+In this lab, you:
+
+- Understand the current business logic in Oracle Forms and how to map it to Oracle APEX components.
+
 ## Task 1: Analyze Forms Business Logic
 
 To modernize from Oracle Forms to APEX, you must understand the current business logic of your forms and where they are implemented. This is key for deciding how to adapt them to the APEX environment. The rule of thumb is always to push as much business logic as possible into the Oracle Database.

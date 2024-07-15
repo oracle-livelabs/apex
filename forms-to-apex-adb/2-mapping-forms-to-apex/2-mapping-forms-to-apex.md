@@ -6,7 +6,7 @@ This lab focuses on understanding how to map Oracle Forms components to the most
 
 Estimated Time: 10 Minutes
 
-## Objectives
+### Objectives
 
 In this lab, you:
 

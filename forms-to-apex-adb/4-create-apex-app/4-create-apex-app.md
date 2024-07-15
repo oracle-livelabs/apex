@@ -1,5 +1,7 @@
 # Create the APEX Application
 
+## Introduction
+
 In this lab, you will create an Oracle APEX application using the Create Application Wizard. This process will help you transition from Oracle Forms to APEX by creating a modern web application interface for your database objects.
 
 Before we begin, let's recap what we have set up so far:
@@ -13,7 +15,7 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
 Estimated Time: 15 Minutes
 
-## Objectives
+### Objectives
 
 In this lab, you:
 

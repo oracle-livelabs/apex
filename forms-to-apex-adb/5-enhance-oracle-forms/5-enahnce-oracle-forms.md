@@ -8,7 +8,7 @@ In this lab, you will build on the business logic analysis performed on the “C
 
 Estimated Time: 15 Minutes
 
-## Objectives
+### Objectives
 
 In this lab, you:
 

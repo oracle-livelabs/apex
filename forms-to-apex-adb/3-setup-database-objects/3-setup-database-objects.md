@@ -6,11 +6,11 @@ In this lab, you will create database objects that will be utilized by the APEX 
 
 Estimated Time: 10 Minutes
 
-## Objectives
+### Objectives
 
 - Upload and run the provided SQL scripts in the SQL Workshop to create database schema and insert sample data.
 
-## Download Sample Scripts
+### Download Sample Scripts
 
 To create database objects, you need to download the following two files:
 
