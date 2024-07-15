@@ -1,13 +1,15 @@
 # Enhance Oracle Forms functionalities using APEX
 
 ## Introduction
+
 After following the guidelines in the previous labs on best practices to modernize Forms in APEX, Let’s see how you can further enhance the applications created with APEX’s functionalities.
 
 In this lab, you will build on the business logic analysis performed on the “Customers’ form” in Lab 1. After migrating and enhancing the business logic, it’s time to modernize the application within APEX.
 
 Estimated Time: 15 Minutes
 
-### Objectives
+## Objectives
+
 In this lab, you:
 
 - Configure List of Values
@@ -16,10 +18,9 @@ In this lab, you:
 - Create and organize navigation menu entries for Customers and Orders, and assign appropriate parent list entries to make the menu cleaner and more user-friendly.
 - Disable authentication to make the application publicly accessible, suitable for a public-facing application.
 
-
 ## Task 1: Configure List of Values
 
-1. The table **S\_CUSTOMER** has a column named ** CREDIT\_RATING ** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
+1. The table **S\_CUSTOMER** has a column named **CREDIT\_RATING** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![constraint](images/constraint.png " ")
 
@@ -45,9 +46,9 @@ In this lab, you:
 
     ![Create List of Values](images/scratch-lov.png " ")
 
-7.	Under Name and Type, enter/select the following:
+7. Under Name and Type, enter/select the following:
 
-    - Name: **S\_CUSTOMER.CREDIT\_RATING**  
+    - Name: **S\_CUSTOMER.CREDIT\_RATING**
 
     - Type: **Static**.
 
@@ -59,14 +60,14 @@ In this lab, you:
 
     | Display Value | Return Value |
     |---------------|--------------|
-    |Excellent      |	EXCELLENT |
-    |Good           |	GOOD |
+    |Excellent      | EXCELLENT |
+    |Good           | GOOD |
     | Poor          | POOR |
     {: title="List of Values"}
 
-	Click **Create List of Values**.
+   Click **Create List of Values**.
 
-  ![Create List of Values](images/values-lov.png " ")
+   ![Create List of Values](images/values-lov.png " ")
 
 9. Click **Create** to create another list of values.
 
@@ -101,11 +102,11 @@ Once the page is created, you can make the changes you need. Select a different 
 
 To use the list of values previously created:
 
-1.	Navigate to **Application ID** and select your application.
+1. Navigate to **Application ID** and select your application.
 
     ![App Builder](images/nav-app-id.png " ")
 
-2.	Select **3 - Customer**.
+2. Select **3 - Customer**.
 
     ![App Builder](images/select-cust.png " ")
 
@@ -113,7 +114,7 @@ To use the list of values previously created:
 
     ![App Builder](images/sequence-items.png " ")
 
-4.	In the left pane, select **PX\_CREDIT\_RATING**. In the Property Editor, update the following:
+4. In the left pane, select **PX\_CREDIT\_RATING**. In the Property Editor, update the following:
 
     - Identification > Type: **Radio Group**
 
@@ -129,38 +130,39 @@ To use the list of values previously created:
 
         - Display Null Value: **Toggle Off**
 
-	 Click **Save**.
+  Click **Save**.
 
    ![App Builder](images/credit-rate-radio.png " ")
 
 ## Task 3: Customize the Faceted Search
+
 You can define which facets to filter the data. Some are defined automatically, but you can create or delete them as needed. You can also drag and drop facets to change their display order.
 
 1. From the Page designer, Navigate to the **Customer Faceted Search**.
 
     ![App Builder](images/nav-to-search.png " ")
 
-2.	In the left pane, under **Search**, Right-click **Facets** and click **Create Facet**.
+2. In the left pane, under **Search**, Right-click **Facets** and click **Create Facet**.
 
     ![App Builder](images/create-facets.png " ")
 
 3. Create the following three facets one after the other:
 
-    | NAME |	TYPE |	LABEL |	LIST OF VALUES TYPE |	LIST OF VALUES |
+    | NAME | TYPE | LABEL | LIST OF VALUES TYPE | LIST OF VALUES |
     |----- | ----- | ----- | -------------------- | -------------- |
-    |PX\_CITY |	Checkbox Group |	City |	Distinct Values |	  |
-    | PX\_NAME	| Checkbox Group |	Name |	Distinct Values	|   |
-    | PX\_SALES\_REP\_ID	| Checkbox Group |Sales Rep	| Shared Component|	SALES\_REP\_LOV|
+    |PX\_CITY | Checkbox Group | City | Distinct Values |   |
+    | PX\_NAME | Checkbox Group | Name | Distinct Values |   |
+    | PX\_SALES\_REP\_ID | Checkbox Group |Sales Rep | Shared Component| SALES\_REP\_LOV|
     {: title="Facets"}
 
     ![App Builder](images/sales-rep-lov1.png " ")
 
-4.	Now organize the facets in the following order:
+4. Now organize the facets in the following order:
     |Facets|
     |------|
-	  |PX\_CREDIT\_RATING|
-	  |PX\_REGION\_ID|
-    |	PX\_COUNTRY |
+   |PX\_CREDIT\_RATING|
+   |PX\_REGION\_ID|
+    | PX\_COUNTRY |
     | PX\_CITY |
     | PX\_NAME |
     | PX\_SALES\_REP\_ID |
@@ -168,56 +170,58 @@ You can define which facets to filter the data. Some are defined automatically, 
 
     ![App Builder](images/sequence.png " ")
 
-5.	Click Save.
+5. Click Save.
 
 ## Task 4: Customize the Interactive Report
+
 In this task, you will define how end-users can interact with and personalize their report views using Oracle APEX Interactive Reports. Interactive Reports offer a powerful way to present data, allowing both developers and end-users to tailor the reports to their needs. Developers can define primary or alternative reports, while end-users can save private reports for their individual use.
 
-1.	**Run** the application as a developer.
+1. **Run** the application as a developer.
 
     ![App Builder](images/run-app2.png " ")
 
-2.	Navigate to **Customer Interactive Report**.
+2. Navigate to **Customer Interactive Report**.
 
     ![App Builder](images/cust-interactive-report.png " ")
 
-3.	Click **Actions** and select **Columns**.
+3. Click **Actions** and select **Columns**.
 
     ![App Builder](images/actions.png " ")
 
-4.	Move the columns **Comments, Region, Zip Code** from **Display in Report** region to **Do Not Display** region. There are two ways to do it:
-    -	Go to the column and double click on the column.
+4. Move the columns **Comments, Region, Zip Code** from **Display in Report** region to **Do Not Display** region. There are two ways to do it:
+    - Go to the column and double click on the column.
     - Click the column and remove it by clicking the icon Remove (<).
 
     ![App Builder](images/do-not-display.png " ")
 
-5.	In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and Click **Apply**.
+5. In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and Click **Apply**.
 
     ![App Builder](images/credit-rating.png " ")
 
-6.	Click **Actions** and select Click **Format** > **Control Break**.
+6. Click **Actions** and select Click **Format** > **Control Break**.
 
     ![App Builder](images/control-break.png " ")
 
-7.	For Column, select the column **Name** and Click **Apply**.
+7. For Column, select the column **Name** and Click **Apply**.
 
     ![App Builder](images/control-break-name.png " ")
 
-8. 	To save the primary report, Click **Actions** > **Report** > **Save Report**.
+8. To save the primary report, Click **Actions** > **Report** > **Save Report**.
 
     ![App Builder](images/save-report1.png " ")
 
-10.	For Save, select **As Named Report**.
+9. For Save, select **As Named Report**.
 
     ![App Builder](images/as-named-report.png " ")
 
-11.	For Default Report Type, select **Primary** and	Click **Apply**.
+10. For Default Report Type, select **Primary** and Click **Apply**.
 
     ![App Builder](images/primary-apply.png " ")
 
 *Note: Please remember that the value "X" in "PX_ITEM" depends on the APEX page you're working on.*
 
 ## Task 5: Enhance Navigation Menu
+
 In this lab, you will learn how to manage the navigation menu in an APEX application. By default, an APEX application includes a Navigation Menu, which can be displayed either on the side or across the top of the application. This menu is customizable, and you also have the option to remove it entirely if desired.
 
 For this task, you will focus on cleaning up the navigation menu by creating two new entries: one for Customers and another for Orders. Follow the steps outlined below to add these new entries to the Navigation Menu.
@@ -234,7 +238,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
     ![App Builder](images/nav-menu3.png " ")
 
-4.	Click **Create Entry**.
+4. Click **Create Entry**.
 
     ![App Builder](images/create-entry.png " ")
 
@@ -248,9 +252,9 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
        - List Entry Label: **Customers**
 
-    - Target > Target type: **No Target**
+   - Target > Target type: **No Target**
 
-	   Click **Create and Create Another**.
+    Click **Create and Create Another**.
 
      ![App Builder](images/cust-nav.png " ")
 
@@ -266,25 +270,26 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
     - Target > Target type: **No Target**
 
-  	Click **Create List Entry**.
+   Click **Create List Entry**.
 
     ![App Builder](images/order-nav.png " ")
 
 7. Customers and Orders entries are created and now you need to define the Parent List Entry for the rest of the entries. In the Desktop Navigation Menu, go to the Customer and Order options to select the proper parent entry.
 
-8.	Click each Customer entries. For Parent list entry, select **Customers** and click **Apply Changes**.
+8. Click each Customer entries. For Parent list entry, select **Customers** and click **Apply Changes**.
 
     ![App Builder](images/parent-list.png " ")
 
     ![App Builder](images/customers-nav.png " ")
 
-9.	Click each Order entries.	For Parent List Entry, select **Orders** and click **Apply Changes**.
+9. Click each Order entries. For Parent List Entry, select **Orders** and click **Apply Changes**.
 
 10. Finally, the Menu looks cleaner and easy to use.
 
     ![App Builder](images/menu.png " ")
 
 ## Task 6: Set Authentication Scheme
+
 In this lab, you will learn how to disable authentication in an APEX application. Authentication is the process of verifying each user's identity before they can access your application. This typically involves entering a username and password, but can also include the use of digital certificates or secure keys.
 
 Since this application is intended to be public, we will disable the authentication feature. Follow these steps to turn off authentication:
@@ -305,17 +310,17 @@ Since this application is intended to be public, we will disable the authenticat
 
     ![App Builder](images/sratch-next.png " ")
 
-5.	Under Name, enter/select the following:
+5. Under Name, enter/select the following:
 
     - Name: **No Authentication**
 
     - Scheme Type: **No Authentication**
 
-	Click **Create Authentication Scheme**.
+     Click **Create Authentication Scheme**.
 
     ![App Builder](images/no-authentication.png " ")
 
-6.	Click **No Authentication**.
+6. Click **No Authentication**.
 
     ![App Builder](images/click-no-authen.png " ")
 
@@ -326,8 +331,10 @@ Since this application is intended to be public, we will disable the authenticat
     ![App Builder](images/ok-current-scheme.png " ")
 
 ## Summary
+
 In this lab, you enhanced the functionalities of Oracle Forms using APEX. Building on the business logic analysis from Lab 1, you modernized the application by configuring the Credit Rating with a Static LOV, customizing the Customer Form, Faceted Search, and Interactive Report. Additionally, you improved the Navigation Menu and Authentication Scheme, and make various UI enhancements. These steps demonstrate how to leverage Oracle APEX to create a more user-friendly and functional application.
 
 ## Acknowledgements
+
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

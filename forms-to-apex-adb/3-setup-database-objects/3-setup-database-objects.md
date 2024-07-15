@@ -1,20 +1,22 @@
 # Setup the Database objects
 
 ## Introduction
+
 In this lab, you will create database objects that will be utilized by the APEX environment. The lab involves downloading and running SQL scripts to set up the necessary database schema and populate it with sample data. These steps are foundational for creating an APEX application that leverages these database objects.
 
 Estimated Time: 10 Minutes
 
-### Objectives
+## Objectives
+
 - Upload and run the provided SQL scripts in the SQL Workshop to create database schema and insert sample data.
 
 ## Download Sample Scripts
+
 To create database objects, you need to download the following two files:
 
--	[Forms\_conversion\_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_ddl.sql) as sample DDL script.
+- [Forms\_conversion\_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_ddl.sql) as sample DDL script.
 
--	[Forms\_conversion\_data\_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_data_insert.sql) as sample data insert script.
-
+- [Forms\_conversion\_data\_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms_conversion_data_insert.sql) as sample data insert script.
 
 ## Task 1: Create Database Objects in APEX Workspace
 
@@ -32,17 +34,17 @@ To create database objects, you need to download the following two files:
 
     ![Data Insert File](images/data-insert-file.png " ")
 
-4.	The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_conversion\_ddl.sql** script level, Click the orange arrow under the label **Run** and then **Run Now** to confirm.
+4. The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_conversion\_ddl.sql** script level, Click the orange arrow under the label **Run** and then **Run Now** to confirm.
 
     ![Data Insert File](images/run-ddl.png " ")
 
     ![Data Insert File](images/run-now-ddl.png " ")
 
-5.	Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see “Statements Processed,” “Successful,” and “With Errors).
+5. Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see “Statements Processed,” “Successful,” and “With Errors).
 
     ![Data Insert File](images/successful-ddl.png " ")
 
-6.	Now click **SQL Scripts** again and run the second script to populate the tables, **forms\_conversion\_data\_insert.sql** under **Run** label and then **Run Now**.
+6. Now click **SQL Scripts** again and run the second script to populate the tables, **forms\_conversion\_data\_insert.sql** under **Run** label and then **Run Now**.
 
     ![Data Insert File](images/run-data-insert.png " ")
 
@@ -63,8 +65,10 @@ To create database objects, you need to download the following two files:
     ![Data Insert File](images/customer-data.png " ")
 
 ## Summary
+
 Now that the workspace has been populated with database objects and data content, we can proceed to the next lab creating an APEX Application using these database objects.
 
 ## Acknowledgements
+
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

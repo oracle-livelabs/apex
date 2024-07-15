@@ -4,8 +4,8 @@ In this lab, you will create an Oracle APEX application using the Create Applica
 
 Before we begin, let's recap what we have set up so far:
 
- - An Always-Free Autonomous Database
- - An APEX Workspace with the necessary database objects already loaded
+- An Always-Free Autonomous Database
+- An APEX Workspace with the necessary database objects already loaded
 
 The goal of this lab is to guide you through the steps to create an APEX application with various types of pages such as faceted search, interactive reports, and master-detail pages. This will showcase the flexibility and power of APEX in building sophisticated web applications with ease.
 
@@ -13,14 +13,16 @@ By the end of this lab, you will have an APEX application with multiple pages, e
 
 Estimated Time: 15 Minutes
 
-### Objectives
+## Objectives
+
 In this lab, you:
+
 - Create an Oracle APEX application using the Create Application Wizard.
 - Add multiple types of pages such as faceted search, interactive reports, and master-detail pages to the APEX application.
-- Manage and enhance application pages.   
-
+- Manage and enhance application pages.
 
 ## Task 1: Create an Application
+
 1. First, login into your APEX workspace.
 
 2. Click **App Builder**.
@@ -55,7 +57,7 @@ In this lab, you:
 
      Click **Add Page**.
 
-  ![faceted search](images/add-faceted-search-page.png " ")
+   ![faceted search](images/add-faceted-search-page.png " ")
 
 8. On Create Application page, click **Add Page** to add another page for Customers table (S\_CUSTOMER) and select **Interactive Report**.
 
@@ -71,13 +73,13 @@ In this lab, you:
 
     Click **Add Page**.
 
-  ![interactive report](images/add-report-page.png " ")
+    ![interactive report](images/add-report-page.png " ")
 
-10.	On the Create Application wizard, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
+10. On the Create Application wizard, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
 
     ![master detail](images/master-detail.png " ")
 
-11.	For Add Master Detail Page, enter/select the following:
+11. For Add Master Detail Page, enter/select the following:
     - Page Name: **Orders – Stacked**
 
     - Select **Stacked** as Master Detail layout page.
@@ -90,13 +92,13 @@ In this lab, you:
 
     ![master detail](images/add-master-detail-page.png " ")
 
-12.	The Create Application page has three new Pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
+12. The Create Application page has three new Pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
 
     Let’s add another Page for Orders, again click **Add Page** and select **Faceted Search**.
 
     ![Faceted Search](images/faceted-search2.png " ")
 
-13.	On Add Faceted Search Page, enter/select the following:
+13. On Add Faceted Search Page, enter/select the following:
 
     - Page Name: **Orders Faceted Search**
 
@@ -106,11 +108,12 @@ In this lab, you:
 
     ![Faceted Search](images/add-faceted-search-page2.png " ")
 
-16.	Under Features, Check **Install Progressive Web App**, **Feedback** and **About Page** and Click **Create Application**.
+16. Under Features, Check **Install Progressive Web App**, **Feedback** and **About Page** and Click **Create Application**.
 
     ![create application](images/create-application.png " ")
 
 ## Task 2: Run the Application
+
 1. Now let’s run the application from the current page as a developer. Click **Run Application** icon.
 
     ![Run application](images/run-application.png " ")
@@ -171,7 +174,7 @@ In this lab, you:
 
 7. Now **Run** this page clicking the green play button at the top right of Page Designer and here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
 
-    -	**Left vertical Panel**: Here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
+    - **Left vertical Panel**: Here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
 
     - **Upper Horizontal Panel**: Here, other S\_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
 
@@ -183,11 +186,11 @@ In this lab, you:
 
     ![application](images/orders-side2.png " ")
 
-
 ## Task 3: Create Drill-down Master Detail Page
+
 In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
 
-1.	Navigate back to Page Designer, Select **(+ v)** and click **Page**.
+1. Navigate back to Page Designer, Select **(+ v)** and click **Page**.
 
     ![application](images/create-page2.png " ")
 
@@ -209,13 +212,13 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     Click **Next**.
 
-  ![application](images/drill-down2.png " ")
+   ![application](images/drill-down2.png " ")
 
     - Form Navigation Order: **ID (Number)**
 
     Click **Next**.
 
-  ![application](images/drill-down3.png " ")
+   ![application](images/drill-down3.png " ")
 
     - Name: **Order Items – Drill Down**
 
@@ -223,7 +226,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     Click **Next**.
 
-  ![application](images/drill-down4.png " ")
+   ![application](images/drill-down4.png " ")
 
     - Primary Key Column 1: **ITEM\_ID (Number)**
 
@@ -231,7 +234,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     Click **Create Page**.
 
-  ![application](images/drill-down5.png " ")
+   ![application](images/drill-down5.png " ")
 
 5. **Run** the page by clicking the green arrow button on right upper side.
 
@@ -246,9 +249,11 @@ In this task, you will create another Master-Detail style page for Orders with *
     ![application](images/view-drill.png " ")
 
 ## Summary
+
 You have now created the APEX application with multiple report example scenarios for the Customer, Orders, and Order Items tables.
 In the next lab you will undertake Oracle Forms functionalities enhancement steps in APEX.
 
 ## Acknowledgements
+
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

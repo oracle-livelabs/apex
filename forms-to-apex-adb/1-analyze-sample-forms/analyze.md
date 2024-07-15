@@ -1,11 +1,13 @@
 # Analyze the Sample Forms [Study]
 
 ## Introduction
+
 This Lab analyses your current forms environment and identifies the important business logic. The first part of the Lab provides an overview guide on understanding forms modules and how they compare to APEX modules. The second part provides the sample forms used in this live Lab.
 
 *Note: This Lab assumes you have an Oracle Forms setup in your environment.*
 
 ## Task 1: Analyze Forms Business Logic
+
 To modernize from Oracle Forms to APEX, you must understand the current business logic of your forms and where they are implemented. This is key for deciding how to adapt them to the APEX environment. The rule of thumb is always to push as much business logic as possible into the Oracle Database.
 
 For example, the business logic in Oracle Forms resides in the Triggers and Program Units. You can incorporate this logic into Oracle APEX as SQL or PL/SQL code that invokes database packages, procedures, or functions. The same applies to database objects, which do not need alteration when transitioning from Forms to APEX.
@@ -16,12 +18,12 @@ Analyze and map the logic to the appropriate APEX component. The APEX environmen
 
 You can add business logic to Forms through the PL/SQL attached libraries, which you can usually call from form modules. When mapping to APEX, add this logic as an application-level process that can be called from any application's pages. Additionally, you may find a plug-in to install that achieves the purpose of your business logic and extends your application's functionality. Plug-ins are available on:
 
--	[apex.oracle.com](https://apex.oracle.com/en/solutions/apps/)
--	[apex.world](https://apex.world/ords/f?p=100:700)
+- [apex.oracle.com](https://apex.oracle.com/en/solutions/apps/)
+- [apex.world](https://apex.world/ords/f?p=100:700)
 
 Understanding how the mappings work on Data Blocks is also essential. In Forms, you can map Data Blocks into pages and page regions in APEX. There are different types of data blocks on Forms:
 
-1.	**Single Record Blocks**:
+1. **Single Record Blocks**:
 In Forms, you may use a single record block for data queries and modifying returned records. In APEX, you generally map Oracle Forms blocks that are insertable, updatable, and have a primary key to an Interactive Report with a form or an editable Interactive Grid. The Edit link on the Interactive Report allows access to a specific record for updating or deleting, and the interactive report lets you query the entries. An editable interactive grid lets you change several rows simultaneously without navigating to another form page.
 
 2. **Tabular Forms**:
@@ -32,7 +34,6 @@ In Forms, Master Detail blocks highlight relationships between data blocks. In A
 
 4. **Non-Database Block**:
 Any block in Forms not associated with a database table or view is a non-database block. These blocks usually hold menus, lists, buttons, and other components. In APEX, we define these components based on their type. For example, the page designer defines buttons, while shared components define navigation menus.
-
 
 ## Task 2: Analyze Sample Forms
 
@@ -68,11 +69,11 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - Under **Other Components**, Click **List of Values**.
 
-    -	Click the list of values and update the Name and SQL Query.
+    - Click the list of values and update the Name and SQL Query.
 
     *Note: Remember that you can define additional display columns for item types that support multiple display columns.*
 
-  ![LOVs SQL Query](images/sales-rep-lovs.jpg " ")
+   ![LOVs SQL Query](images/sales-rep-lovs.jpg " ")
 
 4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
@@ -84,39 +85,39 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - Under **Other Components**, Click **Shortcuts**.
 
-    -	Click **Create**.
+    - Click **Create**.
 
-    -	Create Shortcut **From Scratch**.
+    - Create Shortcut **From Scratch**.
 
-    -	Click Next.
+    - Click Next.
 
-    -	For Name, enter **DELETE\_ALERT**.
+    - For Name, enter **DELETE\_ALERT**.
 
     - For Type, select **Text with JavaScript Escaped Single Quotes**.
 
     - For a Shortcut, enter the original message.
 
-    -	Click **Create**.
+    - Click **Create**.
 
     You have created the message and need to update the shortcut in the APEX Form.
 
-    -	Go to the **Customers** Form page.
+    - Go to the **Customers** Form page.
 
-    -	In the left pane, click the page name.
+    - In the left pane, click the page name.
 
     - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
 
-  The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
-
+    The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
   ![Alerts](images/alerts.png " ")
 
 5. **Program Units**: The customer form contains seven program units. However, we cannot map them in our APEX app because either APEX handles them natively during form creation or they are not applicable.
-
   ![Program Units](images/program-units.png " ")
 
 ## Summary
+
 This Lab provides a comprehensive approach to understanding and migrating Oracle Forms components to Oracle APEX, ensuring a smooth modernization process by leveraging APEX's native capabilities and customization options.
 
 ## Acknowledgements
+
 - **Author** - Monica Godoy, Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

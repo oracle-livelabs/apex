@@ -10,8 +10,10 @@ By the end of this workshop, you will be well-prepared to transform your Oracle 
 
 Estimated Time: 1 hour
 
-### Objectives
+## Objectives
+
 In this workshop, you:
+
 - Understand Oracle Forms and Oracle APEX
 - Analyze and Extract Business Logic
 - Create Database Objects
@@ -38,5 +40,5 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## **Acknowledgements**
 
- - **Author** - Monica Godoy, Senior Principal Product Manager; Ankita Beri, Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+- **Author** - Monica Godoy, Senior Principal Product Manager; Ankita Beri, Product Manager;
+- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

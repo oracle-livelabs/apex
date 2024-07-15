@@ -1,11 +1,13 @@
 # Mapping Oracle Forms components to APEX [Study]
 
 ## Introduction
+
 This lab focuses on understanding how to map Oracle Forms components to the most appropriate APEX components to achieve similar functionality. The lab provides guidelines for comparing Oracle Forms modules with those in APEX, noting that mapping may not always be a direct 1:1 relation.
 
 Estimated Time: 10 Minutes
 
-### Objectives
+## Objectives
+
 In this lab, you:
 
 - Understand how to map Oracle Forms components to Oracle APEX components effectively.
@@ -15,9 +17,10 @@ In this lab, you:
 ## Task 1: Examine Form's Component
 
 There are three main approaches to take when mapping modules from Forms to APEX:
--	Discard Forms component/item.
--	Move the component's logic into the database.
--	Recreate components as an APEX item.
+
+- Discard Forms component/item.
+- Move the component's logic into the database.
+- Recreate components as an APEX item.
 
 In the following sections, we will examine each of Form's components to determine how they best map into APEX.
 
@@ -27,7 +30,7 @@ You can also map alerts into [Dynamic Actions](https://docs.oracle.com/en/databa
 
   Another native approach for initiating alerts is to enable the [Confirmation option on buttons](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E).
 
-   ![Alerts](images/alerts.png " ")
+    ![Alerts](images/alerts.png " ")
 
 2. **Blocks**:
 Blocks will usually correspond to a region type in APEX. As discussed in Lab 1, blocks are either associated with a database object or not. The block type and the data source type are what determine what [region type](https://docs.oracle.com/en/database/oracle/apex/24.1/aeacc/regions.html) we map to in APEX. For example, if in Forms, we have a report based on a view, this can be mapped to an Interactive Report region with data source view.
@@ -93,8 +96,10 @@ Visual attributes are the font, color, and pattern properties you can set for fo
 The window in Forms is the container for all visual objects that comprise the application, including canvases. Windows maps to a page in APEX since the page holds all of the visual objects for an application.
 
 ## Summary
+
 This lab provides comprehensive guidelines for mapping various Oracle Forms components to APEX, ensuring functionality is retained or improved during modernization.
 
 ## Acknowledgements
+
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
