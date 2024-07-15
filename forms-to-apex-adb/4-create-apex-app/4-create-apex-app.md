@@ -108,9 +108,9 @@ In this lab, you:
 
     ![Faceted Search](images/add-faceted-search-page2.png " ")
 
-16. Under Features, Check **Install Progressive Web App**, **Feedback** and **About Page** and Click **Create Application**.
+14. Under Features, Check **Install Progressive Web App**, **Feedback** and **About Page** and Click **Create Application**.
 
-    ![create application](images/create-application.png " ")
+    ![create application](images/create-app1.png " ")
 
 ## Task 2: Run the Application
 
