@@ -12,8 +12,6 @@ In this lab, you:
 
 - Understand how to map Oracle Forms components to Oracle APEX components effectively.
 
-- Examine various Oracle Forms modules.
-
 ## Task 1: Examine Form's Component
 
 There are three main approaches to take when mapping modules from Forms to APEX:
