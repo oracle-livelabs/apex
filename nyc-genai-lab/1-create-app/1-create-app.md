@@ -89,6 +89,9 @@ The Data Load wizard has created a new table and populated that table with the r
 9. Repeat Steps 7 and 8 to delete the **Highschools Report** page.
     ![Delete page wizard](images/delete-report.png " ")
 
+10. Repeat Steps 7 and 8 to delete the **Dashboard** page.
+    ![Delete page wizard](images/delete-dashboard.png " ")
+
 10. In the Create Application wizard, under Features, check the following checkboxes:
     - **Install Progressive Web App**
     - **Push Notifications** 
