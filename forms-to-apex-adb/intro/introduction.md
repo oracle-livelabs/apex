@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-Welcome to our Oracle Forms to Oracle APEX Transition Workshop! This hands-on workshop will equip you with the knowledge and skills to modernize your legacy Oracle Forms applications using Oracle APEX. Whether new to APEX or looking to refine your skills, this workshop will provide valuable insights and practical experience. Throughout the workshop, you will learn to understand the fundamental differences and similarities between Oracle Forms and APEX and how to map components from one to the other.
+Welcome to our Oracle Forms to Oracle APEX Transition Workshop! This hands-on workshop will equip you with the knowledge and skills to modernize your legacy Oracle Forms applications using Oracle APEX. Whether you are new to APEX or looking to refine your skills, this workshop will provide valuable insights and practical experience. Throughout the workshop, you will learn to understand the fundamental differences and similarities between Oracle Forms and APEX and how to map components from one to the other.
 
 You will also analyze and extract crucial business logic from your existing Oracle Forms applications, set up the necessary database infrastructure to support your APEX applications and use the Create Application Wizard to develop a web-based application. Additionally, you will learn best practices and advanced techniques to enhance your APEX applications' functionality and user experience.
 
@@ -16,9 +16,7 @@ In this workshop, you:
 
 - Understand Oracle Forms and Oracle APEX
 - Analyze and Extract Business Logic
-- Create Database Objects
-- Build APEX Application
-- Enhance APEX Application
+- Implement Oracle Forms functionalities using APEX
 
 *Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 

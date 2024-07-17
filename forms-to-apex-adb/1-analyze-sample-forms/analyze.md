@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This Lab analyses your current forms environment and identifies the important business logic. The first part of the Lab provides an overview guide on understanding forms modules and how they compare to APEX modules. The second part provides the sample forms used in this live Lab.
+This Lab analyses your current Forms environment and identifies the important business logic. The first part of the Lab provides an overview guide on understanding forms modules and how they compare to APEX modules. The second part provides the sample forms used in this live Lab.
 
 *Note: This Lab assumes you have an Oracle Forms setup in your environment.*
 
