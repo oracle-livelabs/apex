@@ -294,6 +294,8 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
         | 15 - 20 miles | 15\|20     |
         | >=20 miles    | 20\|       |
 
+        - Sort at Runtime: Enable the Toggle button to **ON**.
+        
         Click **OK**.
 
         ![Page Designer](images/static-values.png ' ')

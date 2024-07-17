@@ -106,10 +106,44 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Execution > Point: **Before Regions**
     - Under Computation:
         - Type: **SQL Query (Single Return Value)**
-        - SQL Query: 
+        - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
 
-        ```
-        <copy>
+    ![Page Designer](images/compute-sql.png =40%x*)
+
+6. In the Code Editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. Enter the following prompt in the chat box and click **Send**:
+    ```
+    <copy>
+        Help me create a query that returns only one column concatenating the following information for the HIGHSCHOOLS table:
+
+        Please post the description of the column and the value, for example:
+
+        'Overview of the school : '|| OVERVIEW_PARAGRAPH ||chr(10) || chr(13)||
+
+
+        Overview of the school,
+        Language Courses, 
+        Advanced Placement Courses,
+        Diversity in Admission Policy,
+        extra curricular activities ,
+        Public Schools Athletic League (PSAL) sports for boys,
+        Public Schools Athletic League (PSAL) sports for girls, 
+        facilities, 
+        Academic opportunities 
+
+        filtering by the id of the school
+
+    </copy>
+    ```
+    ![Page Designer](images/enter-prompt.png ' ')
+
+7. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**. 
+
+    ![Page Designer](images/insert-query.png ' ')
+
+8. The SQL query is inserted into the Code Editor. Replace *your\_school\_id* with **:P3\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
+
+    ```
+    <copy>
         SELECT
         'Overview of the school : '|| OVERVIEW_PARAGRAPH ||chr(10) || chr(13)||
         'The following Language Courses are taught here : '||LANGUAGE_CLASSES||chr(10) || chr(13)||
@@ -125,11 +159,14 @@ To use the Generative AI service in APEX, you need to first configure it at the 
  
         FROM HIGHSCHOOLS WHERE id = :P3_SCHOOL_ID;
         
-        </copy>
-        ```
+    </copy>
+    ```
 
-    ![Page Designer](images/compute-sql.png ' ')
+    ![Page Designer](images/edit-validate.png ' ')
 
+9. If the validation is successful, click **OK**.
+
+    ![Page Designer](images/success-ok.png ' ')
 
 ## Task 4: Create a Dynamic Action for Chat Widget
 
