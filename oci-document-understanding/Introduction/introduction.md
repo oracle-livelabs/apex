@@ -44,7 +44,7 @@ In this workshop, you:
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Foci-doc-understanding.sql) to download the completed application. **Note** : Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Vision REST Data Source for Image Classification and Text Detection.
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Foci-doc-understanding.sql) to download the completed application. **Note** : Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Document Understanding.
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
