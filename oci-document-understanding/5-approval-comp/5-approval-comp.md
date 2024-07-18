@@ -1,4 +1,5 @@
 # Implement Invoice Approval Requests Using Approvals Component
+
 ## Introduction
 
 This lab will walk you through creating a Task Definition for Invoice Approval Requests. Additionally, you'll set up two processes to fetch employee details and manage human-task approval. Furthermore, you'll create two unified task list pages—one for initiated tasks and another for tasks assigned to you.
@@ -6,6 +7,7 @@ This lab will walk you through creating a Task Definition for Invoice Approval R
 Estimated Time: 15 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create a Task Definition
@@ -230,7 +232,6 @@ In this lab, you:
 
 8. Click **Save**.
 
-
 ## Task 3: Create Unified Task Lists
 
 1. On Page Designer toolbar, Navigate to **Create(+ v)** and select **Page**.
@@ -321,8 +322,10 @@ In this lab, you:
     ![Select Unified Task List](./images/link-to.png " ")
 
 ## Summary
+
 You now know how to create a Task Definition for Invoice Approval Requests. Additionally, you learned how to set up processes to fetch employee details and manage human-task approval. Furthermore, you created two unified task list pages: one for initiated tasks and another for assigned tasks.
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
