@@ -1,4 +1,4 @@
-# Build conversation Inquiry about schools using Generative AI
+# Build a Conversational Inquiry about Schools using Generative AI
 
 ## Introduction
 In this lab, you learn to build conversation Inquiry about schools using Generative AI wherein a user can ask questions about a school and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
@@ -106,10 +106,44 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Execution > Point: **Before Regions**
     - Under Computation:
         - Type: **SQL Query (Single Return Value)**
-        - SQL Query: 
+        - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
 
-        ```
-        <copy>
+    ![Page Designer](images/compute-sql.png =40%x*)
+
+6. In the Code Editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. Enter the following prompt in the chat box and click **Send**:
+    ```
+    <copy>
+        Help me create a query that returns only one column concatenating the following information for the HIGHSCHOOLS table:
+
+        Please post the description of the column and the value, for example:
+
+        'Overview of the school : '|| OVERVIEW_PARAGRAPH ||chr(10) || chr(13)||
+
+
+        Overview of the school,
+        Language Courses, 
+        Advanced Placement Courses,
+        Diversity in Admission Policy,
+        extra curricular activities ,
+        Public Schools Athletic League (PSAL) sports for boys,
+        Public Schools Athletic League (PSAL) sports for girls, 
+        facilities, 
+        Academic opportunities 
+
+        filtering by the id of the school
+
+    </copy>
+    ```
+    ![Page Designer](images/enter-prompt.png ' ')
+
+7. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**. 
+
+    ![Page Designer](images/insert-query.png ' ')
+
+8. The SQL query is inserted into the Code Editor. Replace *your\_school\_id* with **:P3\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
+
+    ```
+    <copy>
         SELECT
         'Overview of the school : '|| OVERVIEW_PARAGRAPH ||chr(10) || chr(13)||
         'The following Language Courses are taught here : '||LANGUAGE_CLASSES||chr(10) || chr(13)||
@@ -119,17 +153,20 @@ To use the Generative AI service in APEX, you need to first configure it at the 
         ' The below are Public Schools Athletic League (PSAL) sports for boys: '||PSAL_SPORTS_BOYS || chr(10) ||chr(13)||
         ' The below are Public Schools Athletic League (PSAL) sports for girls : '||PSAL_SPORTS_GIRLS || chr(10) ||chr(13)||
         ' Other facilities in this school : '||addtl_info1 || chr(10) ||chr(13)||
-        ' The following academic oppurtunities are available : '||academic_opportunities || chr(10)||chr(13)
+        ' The following academic opportunities are available : '||academic_opportunities || chr(10)||chr(13)
  
          as prompt_context
  
         FROM HIGHSCHOOLS WHERE id = :P3_SCHOOL_ID;
         
-        </copy>
-        ```
+    </copy>
+    ```
 
-    ![Page Designer](images/compute-sql.png ' ')
+    ![Page Designer](images/edit-validate.png ' ')
 
+9. If the validation is successful, click **OK**.
+
+    ![Page Designer](images/success-ok.png ' ')
 
 ## Task 4: Create a Dynamic Action for Chat Widget
 
@@ -175,7 +212,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Task 5: Create Action to Launch the Chat
 
-1. Naviagte to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
+1. Navigate to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
 
     ![Page Designer Dynamic Actions](images/goto-page1.png ' ')
 
@@ -218,4 +255,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024

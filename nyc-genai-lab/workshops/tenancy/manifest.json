@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Build innovative Q&A interface powered by Generative AI with Oracle APEX",
+  "workshoptitle": "Build an Innovative Q&A Interface Powered by Generative AI with Oracle APEX",
   "help": "livelabs-help-apex_us@oracle.com",
 	"tutorials": [
     {
@@ -16,11 +16,11 @@
     },
     {
 
-      "title": "Lab 2: Visualize schools on a Map",
+      "title": "Lab 2: Visualize Schools on a Map",
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
     {
-      "title": "Lab 3: Build conversational Inquiry using Generative AI",
+      "title": "Lab 3: Build a Conversational Inquiry using Generative AI",
       "filename": "../../3-using-genai/3-using-genai.md"
     },
     {
