@@ -34,13 +34,13 @@ To create database objects, you need to download the following two files:
 
     ![Data Insert File](images/data-insert-file.png " ")
 
-4. The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_conversion\_ddl.sql** script level, Click the orange arrow under the label **Run** and then **Run Now** to confirm.
+4. The two scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_conversion\_ddl.sql** script level, Click the arrow under the label **Run** and then **Run Now** to confirm.
 
     ![Data Insert File](images/run-ddl.png " ")
 
     ![Data Insert File](images/run-now-ddl.png " ")
 
-5. Object creation Script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see "Statements Processed", "Successful" and "With Errors").
+5. Object creation script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see "Statements Processed", "Successful" and "With Errors").
 
     ![Data Insert File](images/successful-ddl.png " ")
 
@@ -56,11 +56,11 @@ To create database objects, you need to download the following two files:
 
     *Note: Check this population script in advance as probably a proper date format setting (i.e., “MM/DD/YYYY” instead of DD/MM/YYYY”) would be needed to load data without errors.*
 
-8. Navigate to **SQL Workshop** and select **Object browser** to view the tables and the created objects. On the right tab, under Table, click **S\_CUSTOMER**.
+8. Navigate to **SQL Workshop** and select **Object Browser** to view the tables and the created objects. On the right tab, under Table, click **S\_CUSTOMER**.
 
     ![Data Insert File](images/object-browser.png " ")
 
-9. The screenshot below shows the details of the Table created, from the table column structure to the populated data, from the triggers to the created constraints.
+9. The screenshot below shows the details of the table created, from the table column structure to the populated data, from the triggers to the created constraints.
 
     ![Data Insert File](images/customer-data.png " ")
 

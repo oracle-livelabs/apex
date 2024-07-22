@@ -2,7 +2,7 @@
 
 ## Introduction
 
-After following the guidelines in the previous labs on best practices to modernize Forms in APEX, Let’s see how you can further enhance the applications created with APEX’s functionalities.
+After following the guidelines in the previous labs on best practices to modernize Forms in APEX, let’s see how you can further enhance the applications created with APEX’s functionalities.
 
 In this lab, you will build on the business logic analysis performed on the “Customers’ form” in Lab 1. After migrating and enhancing the business logic, it’s time to modernize the application within APEX.
 

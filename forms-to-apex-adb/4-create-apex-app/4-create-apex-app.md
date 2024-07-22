@@ -39,7 +39,7 @@ In this lab, you:
 
     ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-5. Since you will create a new application, Enter the name **Modernization** and leave the App Icon and Appearance with default values. Click **Add Page**.
+5. Since you will create a new application, enter the name **Modernization** and leave the App Icon and Appearance with default values. Click **Add Page**.
 
     ![Add Page](images/add-page1.png " ")
 
@@ -49,7 +49,7 @@ In this lab, you:
 
     ![faceted search](images/faceted-search1.png " ")
 
-7. For add Faceted Search Page, enter/ select the following:
+7. For Add Faceted Search Page, enter/ select the following:
 
     - Page Name: **Customer Faceted Search**
 
@@ -94,7 +94,7 @@ In this lab, you:
 
     ![master detail](images/add-master-detail-page.png " ")
 
-12. The Create Application page has three new Pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
+12. The Create Application page has three new pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
 
     Let’s add another Page for Orders, again click **Add Page** and select **Faceted Search**.
 

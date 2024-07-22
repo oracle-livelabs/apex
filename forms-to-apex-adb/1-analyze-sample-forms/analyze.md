@@ -63,9 +63,9 @@ We start by reviewing the existing components in the form to analyze which can b
 
 3. **LOVs**: There is only one list of values created which is **SALES\_REP\_LOV** executing the above SQL statement.
 
-    ![LOVs](images/lovs.png " ")
+    ![LOVs](images/lovs1.png " ")
 
-    ![LOVs SQL Query](images/sql-query.png " ")
+    ![LOVs SQL Query](images/sql-query1.png " ")
 
     In APEX, the LOV is created automatically with the form's creation. However, it may not display the intended values as in the SQL query.
 
@@ -81,7 +81,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
     *Note: Remember that you can define additional display columns for item types that support multiple display columns.*
 
-   ![LOVs SQL Query](images/sales-rep-lovs.jpg " ")
+   ![LOVs SQL Query](images/sales-rep-lovs1.jpg " ")
 
 4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
@@ -116,10 +116,10 @@ We start by reviewing the existing components in the form to analyze which can b
     - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
 
     The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
-  ![Alerts](images/alerts.png " ")
+  ![Alerts](images/alerts1.png " ")
 
 5. **Program Units**: The customer form contains seven program units. However, we cannot map them in our APEX app because either APEX handles them natively during form creation or they are not applicable.
-  ![Program Units](images/program-units.png " ")
+  ![Program Units](images/program-units1.png " ")
 
 ## Summary
 
