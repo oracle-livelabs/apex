@@ -9,6 +9,7 @@ OCI API keys have two parts: a **Public key** and a **Private key**. You use the
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Generate API Keys using OCI Console
@@ -59,7 +60,7 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
    ![Select Bucket](images/create-bucket.png " ")
 
-4.  Enter/select the following:
+4. Enter/select the following:
 
     - Bucket Name: **OCIDocAI**
 
@@ -74,10 +75,12 @@ To create a Bucket using OCI Console, login to your OCI Account.
     ![Select Bucket](images/bucket-created.png " ")
 
 ## Summary
+
 You now know how to generate API Keys and create Bucket using the OCI console.
 
 You may now proceed to the next lab.
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

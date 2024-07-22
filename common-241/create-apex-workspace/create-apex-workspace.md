@@ -7,9 +7,11 @@ Oracle Application Express (APEX) is a feature of Oracle Database, including the
 Estimated Time: 5 minutes
 
 ### What is an APEX Workspace?
+
 An APEX Workspace is a logical domain where you define APEX applications. Each workspace is associated with one or more database schemas (database users) which are used to store the database objects, such as tables, views, packages, and more. These database objects are generally what APEX applications are built on top of.
 
 ### Where to Run the Lab
+
 This lab is designed for a [a LiveLabs environment](http://bit.ly/golivelabs). If you haven't already done so, reserve an environment to run this workshop.
 
 ## Task 1: Create an APEX Workspace on an Autonomous Transaction Processing instance
@@ -58,7 +60,7 @@ In this step, you will create an *Autonomous Transaction Processing* database an
 
     ![](images/click-apex.png " ")
 
-6. Enter the password for the Administration Services and click **Sign In to Administration**.     
+6. Enter the password for the Administration Services and click **Sign In to Administration**.
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
 
     ![](images/log-in-as-admin.png " ")
@@ -79,7 +81,7 @@ In this step, you will create an *Autonomous Transaction Processing* database an
 
     ![](images/create-workspace.png " ")
 
-9.  In the APEX Instance Administration page, click the **DEMO** link in the success message.         
+9. In the APEX Instance Administration page, click the **DEMO** link in the success message.
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
     ![](images/log-out-from-admin.png " ")
@@ -87,7 +89,6 @@ In this step, you will create an *Autonomous Transaction Processing* database an
 10. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
 
     ![](images/log-in-to-workspace.png " ")
-
 
 ## Summary
 
@@ -97,6 +98,6 @@ You may now *proceed to the next lab*.
 
 ## Acknowledgements
 
- - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
- - **Contributor** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead)
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Author/Contributors** -  Salim Hlayel, Principle Product Manager
+- **Contributor** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead)
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
