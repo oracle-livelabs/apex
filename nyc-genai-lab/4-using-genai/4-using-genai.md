@@ -1,7 +1,7 @@
 # Build a Conversational Inquiry about Schools using Generative AI
 
 ## Introduction
-In this lab, you learn to build conversation Inquiry about schools using Generative AI wherein a user can ask questions about a school and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
+In this lab, you learn to build a conversational inquiry about schools using Generative AI wherein a user can ask questions about a school in chat and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
@@ -16,6 +16,7 @@ In this lab, you will:
 - Configure a Generative AI service in your workspace
 - Build a conversational chatbot using Generative AI
 
+
 ## Task 1: Configure Generative AI Service
 To use the Generative AI service in APEX, you need to first configure it at the workspace level.
 
@@ -27,20 +28,33 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Workspace Utilities page](images/select-genai.png ' ') 
 
-3. Click **Create** to configure a Gen AI service.
+3. Click **Create** to configure a Generative AI Service.
 
      ![Gen AI services page](images/create-genai.png ' ') 
 
-4. In this workshop, you use Open AI as the AI provider. Enter/select the following:
+4. In this workshop, you use OCI Generative AI Service as the AI provider. Enter/select the following:
+
+    - AI Provider: **OCI Generative AI Service**
+    - Name: **OCI Gen AI**
+    - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Lab 3.
+    - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
+    - Model ID: **cohere.command-r-16k** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
+    - Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
+    - Credentials: **apex\_ai\_cred**
+    
+    Click **Create**.
+
+    <!--In this workshop, you use Open AI as the AI provider. Enter/select the following:
 
     - AI Provider: **Open AI**
     - Name: **Open AI**
     - Used by App Builder: Enable the toggle button to **ON**
     - API Key: Enter your Open AI API key. To signup for an Open AI key, visit [platform.openai.com](https://platform.openai.com/)
     
-    Click **Create**.
+    Click **Create**. -->
 
-    ![Gen AI services page](images/open-ai-details.png ' ') 
+
+    ![Gen AI services page](images/oci-gen-ai-details.png ' ') 
 
 
 ## Task 2: Create the Chat Page
@@ -181,7 +195,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 3. Under True action, select **Show**. In the Property Editor, enter/select the following:
     - Action: **Open AI Assistant**
     - Under Generative AI:
-        - Service: **Open AI**
+        - Service: **OCI Gen AI**
         - System Prompt: 
         ```
         <copy>
