@@ -265,7 +265,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
 8. Select **p\_service\_static\_id**. In the Property Editor, edit/select the following:
     - Under Value:
         - Type: **Static Value**
-        - Item: **open_ai**
+        - Item: **LOWCODE**
 
     ![Processing tab in Page Designer](images/param-3.png ' ')
 
