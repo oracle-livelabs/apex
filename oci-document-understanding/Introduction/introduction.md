@@ -54,13 +54,15 @@ If you are stuck or the App is not working as expected, you can download and ins
 3. Once the application is installed,
     - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
 
-    - Next, Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage and then On Page 1, update the page item static values in “Upload Your Invoice” process:
-        - P1_COMPARTMENT_ID
-        - P1_NAMESPACE_NAME
-        - P1_BUCKET_NAME
-        - P1_REGION
+    - Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage.
 
-    - Lastly, Follow Lab 2 > Task 2 to add multiple users.
+    - Follow Lab 2 > Task 2 to add multiple users.
+
+    - Follow Lab 3 > Task 3 > Step 8 and update the following page item static values one after the other:
+        - P1\_COMPARTMENT\_ID
+        - P1\_NAMESPACE\_NAME
+        - P1\_BUCKET\_NAME
+        - P1\_REGION
 
 4. All set. Now, run the application and see it in action!
 
