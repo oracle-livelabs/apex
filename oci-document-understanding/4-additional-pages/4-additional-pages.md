@@ -7,6 +7,7 @@ This lab guides you through creating an application process to download a file f
 Estimated Time: 15 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create an Application Process
@@ -14,6 +15,7 @@ In this lab, you:
 - Create an Invoice Analysis page
 
 ## Task 1: Create an Application Process
+
 In this task, you create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter ':P3_ID'.
 
 1. Navigate to **Shared Components**
@@ -78,6 +80,7 @@ In this task, you create an application process to retrieve the URL and MIME typ
     ![Application Processes](images/process-created.png " ")
 
 ## Task 2: Develop an Invoice Tracking page using Cards
+
 In this task, you create an Invoice Tracking page featuring the Cards Region, which displays the uploaded image or PDF file.
 
 1. Navigate to **Application ID**.
@@ -177,6 +180,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 8. Click **Save**.
 
 ## Task 3: Create an Invoice Analysis page
+
 In this task, you create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
 1. Navigate to Create **(+ v)** in Page Designer toolbar and select **Page**.
@@ -247,6 +251,12 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
 
+    ```
+   <p align="center">
+       <iframe src="&P4_URL." width="100%" height="500">
+       </iframe>
+   </p>
+   ```
 
     ```
    <p align="center">
@@ -254,7 +264,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
        </iframe>
    </p>
    ```
-   
+
    ![Upload File](images/uploaded-file.png " ")
 
 10. Right-Click **Uploaded File** region, select **Create Region Below**.
@@ -297,7 +307,8 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
        <copy>
 
         ```
-       - Layout > Start New Row: **Toggle Off**  
+
+       - Layout > Start New Row: **Toggle Off**
 
     ![Generate Output](images/generated-output.png " ")
 
@@ -364,10 +375,12 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     ![Click Save](images/save-changes.png " ")
 
 ## Summary
+
 You now know how to create an application process and have learned to develop an Invoice Tracking and Invoice Analysis page. This page features a Cards Region that displays extracted fields from the uploaded image or PDF in an organized manner. Clicking on a card opens a Pop-up Dialog page, clearly comparing your uploaded PDF and the output from OCI Document Understanding.
 
 You're now ready to move on to the next lab!
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

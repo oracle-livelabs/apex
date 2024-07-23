@@ -9,6 +9,7 @@ OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for 
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create an Application
@@ -16,7 +17,6 @@ In this lab, you:
 - Enhance Home Page to Upload Invoices and Process the document
 - Create Processes to upload Invoice to Object Storage and Automate DML
 - Integrate Document Understanding API and Parse the Response
-
 
 ## Task 1: Create an Application
 
@@ -44,7 +44,7 @@ In this lab, you:
 
    ![Set Appearance](images/set-appearance.png " ")
 
-7.  Enter/select the following:
+7. Enter/select the following:
 
     - Appearance > Theme Style: **Redwood Light**
 
@@ -52,7 +52,7 @@ In this lab, you:
 
     ![Redwood Light](images/redwood-light.png " ")
 
-8.  Enter/select the following details:
+8. Enter/select the following details:
 
     - Name: **Automatic Invoice Handling**
 
@@ -84,9 +84,9 @@ In this lab, you:
 
     - Name: **Document Understanding API**
 
-    - URL Endpoint: https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument
+    - URL Endpoint: <https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument>
 
-    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
+    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
    ![Create REST Data Sources](images/rest-general.png " ")
 
@@ -99,7 +99,6 @@ In this lab, you:
     - Authentication Required: Toggle **ON**
 
     - Credentials: **APEX\_OCI\_AI\_CRED**
-
 
 8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
@@ -269,7 +268,6 @@ In this lab, you:
 
     ![create-button](images/btn-details.png " ")
 
-
 14. In the Processing tab, right-click **Processing** and Select **Create Process**.
 
     ![create process](images/create-process6.png " ")
@@ -379,7 +377,6 @@ In this lab, you:
 
     - Value > Item: **P1\_RESPONSE**
 
-
   ![Add Child Process details](images/doc-response.png " ")
 
 5. Right-click **Process Invoice** and select **Add Child Process**.
@@ -424,10 +421,12 @@ In this lab, you:
 7. Click **Save**.
 
 ## Summary
+
 You have now learned how to create an application by invoking OCI Document Understanding using a REST data source. You enhanced the home page to enable invoice uploads and document processing. Additionally, you created processes to upload invoices to Object Storage and automate DML operations, and you integrated the Document Understanding API to parse responses.
 
 You're now ready to move on to the next lab!
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
