@@ -45,7 +45,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
     - Follow Lab 3 > Task 1 and Configure OCI Vision REST API as REST Data Source using your URL endpoint.
 
-    - Follow Lab 3 > Task 2 > Step 9, Update COMPARTMENT_ID parameter under Image Classification and Text Detection child process with your Compartment ID from your OCI console.
+    - Follow Lab 3, Update COMPARTMENT_ID parameter under Image Classification and Text Detection child process with your Compartment ID from your OCI console.
 
 4. All set. Now, run the application and see it in action!
 
