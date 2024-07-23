@@ -16,7 +16,7 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Create an APEX app
+- Create an APEX application
 - Upload Invoice to OCI Object Storage using Invoke API
 - Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type
 - Parse the response and display the result
@@ -38,7 +38,7 @@ In this workshop, you:
 
 *Note: This workshop assumes you are using Oracle APEX 24.1.*
 
-### Downloads
+## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
@@ -48,14 +48,24 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 3. Once the application is installed,
     - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
-    - Next, Follow Lab 2 > Task 2 to add multiple users.
-    - Lastly, Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage and then On Page 1, update the page item static values in “Upload Your Invoice” process:
-        - P1_COMPARTMENT_ID
-        - P1_NAMESPACE_NAME
-        - P1_BUCKET_NAME
-        - P1_REGION
+
+    - Next, Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage and then On Page 1, update the page item static values in “Upload Your Invoice” process:
+        - P1\_COMPARTMENT\_ID
+        - P1\_NAMESPACE\_NAME
+        - P1\_BUCKET\_NAME
+        - P1\_REGION
+    - Lastly, Follow Lab 2 > Task 2 to add multiple users.
 
 4. All set. Now, run the application and see it in action!
+
+## Learn More - *Useful Links*
+
+- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+- [APEX on Autonomous](https://apex.oracle.com/autonomous)
+- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+- [Community](https://apex.oracle.com/community)
+- [External Site + Slack](http://apex.world)
 
 ## Acknowledgments
 
