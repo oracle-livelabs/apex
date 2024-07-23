@@ -1,11 +1,11 @@
 # Create an APEX Application
 
 ## Introduction
-In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table created using the spreadsheet. Later, you learn to modify the pages and the theme of the application.
+In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 <!-- Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_a6bi2e62) -->
@@ -15,7 +15,7 @@ Estimated Time: 10 minutes
 In this lab, you will:
 - Create a new APEX application
 - Configure a Cards region
-- Customize the app theme using Theme Roller
+- Customize the application theme using Theme Roller
 
 ### Prerequisites
 
@@ -149,6 +149,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
 
 
