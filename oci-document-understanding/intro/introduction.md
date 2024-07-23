@@ -40,7 +40,22 @@ In this workshop, you:
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Foci-doc-understanding.sql) to download the completed application. **Note** : Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Document Understanding.
+If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application zip file and unzip it.
+
+2. Import the **automate-invoice-handling-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+3. Once the application is installed,
+    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+    - Next, Follow Lab 2 > Task 2 to add multiple users.
+    - Lastly, Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage and then On Page 1, update the page item static values in “Upload Your Invoice” process:
+        - P1_COMPARTMENT_ID
+        - P1_NAMESPACE_NAME
+        - P1_BUCKET_NAME
+        - P1_REGION
+
+4. All set. Now, run the application and see it in action!
 
 ## Acknowledgments
 

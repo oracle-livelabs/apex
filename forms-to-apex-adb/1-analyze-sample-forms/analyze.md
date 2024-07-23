@@ -81,7 +81,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
     *Note: Remember that you can define additional display columns for item types that support multiple display columns.*
 
-   ![LOVs SQL Query](images/sales-rep-lovs1.jpg " ")
+   ![LOVs SQL Query](images/sales-rep-lovs1.png " ")
 
 4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
