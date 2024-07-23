@@ -20,16 +20,20 @@
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
     {
-      "title": "Lab 3: Build a Conversational Inquiry using Generative AI",
-      "filename": "../../3-using-genai/3-using-genai.md"
+      "title": "Lab 3: Configure the OCI API Keys",
+      "filename": "../../3-configure-oci/3-configure-oci.md"
     },
     {
-      "title": "Lab 4: Generate Email to Apply to a School using Gen AI",
-      "filename": "../../4-apply-to-school/4-apply-to-school.md"
+      "title": "Lab 4: Build a Conversational Inquiry using Generative AI",
+      "filename": "../../4-using-genai/4-using-genai.md"
     },
     {
-      "title": "Lab 5: Run the Application",
-      "filename": "../../5-run-app/5-run-app.md"
+      "title": "Lab 5: Generate Email to Apply to a School using Gen AI",
+      "filename": "../../5-apply-to-school/5-apply-to-school.md"
+    },
+    {
+      "title": "Lab 6: Run the Application",
+      "filename": "../../6-run-app/6-run-app.md"
     },
     {
       "title": "Need Help?",

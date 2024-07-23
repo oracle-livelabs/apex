@@ -31,11 +31,12 @@ Estimated Time: 60 minutes
 
 | Module | Est. Time |
 | --- | --- |
-| [Creating an APEX application](?lab=1-create-app) | 10 minutes |
+| [Creating an APEX application](?lab=1-create-app) | 5 minutes |
 | [Visualize Schools on a Map](?lab=2-schools-on-map) | 10 minutes |
-| [Build conversation Inquiry using Generative AI](?lab=3-using-genai) | 20 minutes |
-| [Generate Email to Apply to a School](?lab=4-apply-to-school) | 15 minutes |
-| [Run the Application](?lab=5-run-app) | 5 minutes |
+| [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
+| [Build conversation Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
+| [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
+| [Run the Application](?lab=6-run-app) | 5 minutes |
 
 Total estimated time: 60 minutes
 
@@ -46,10 +47,10 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-genai-app.sql.zip) to download the completed application zip file and unzip it.
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.sql.zip) to download the completed application zip file and unzip it.
 2. Import the **nyc-genai-app.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Generative AI**.   
-4. Edit the **Open AI** service. For Credential, select **Create New** and for API Key, enter your Open AI API key. 
+4. Edit the **OCI Gen AI** service. Enter the **Compartment ID**. For Credential, select **Create New** and enter the OCI API Key details. 
 5. All set. Now, run the application and see it in action!
 
 
