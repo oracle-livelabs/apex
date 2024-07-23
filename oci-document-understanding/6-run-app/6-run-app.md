@@ -7,6 +7,7 @@ In this lab, you will run the Automatic Invoice Handling application and perform
 Estimated Time: 2 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Run the Application
@@ -42,8 +43,10 @@ In this lab, you:
     ![Task Definition in Shared Components](images/my-approvals1.png " ")
 
 ## Summary
+
 You now know how to run the Automatic Invoice Handling application and obtain results using Oracle APEX and OCI Document Understanding for uploaded invoices.
 
 ## Acknowledgements
+
 - **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

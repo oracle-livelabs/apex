@@ -26,11 +26,14 @@ Watch the video below for a quick walk-through of the lab.
 [Create the shopping cart page](videohub:1_3n85gmue)
 
 ### Objectives
+
 In this lab, you will:
+
 - Create a page to list the products in the Shopping Cart
 - Create Application Items, Application Processes, and Dynamic Actions to manage the Shopping Cart
 
 ## Task 1: Create Application Items
+
 These items are needed to count the number of items in the shopping cart and the icon to display in the Navigation Bar.
 
 1. Click on **Shared Components**
@@ -188,7 +191,7 @@ This region will list the items that have been added temporarily to the shopping
 
     - Under Subtitle:
 
-        - Column: **BRAND**   
+        - Column: **BRAND**
 
     ![Attributes tab of the Page Designer](./images/attributes2.png " ")
 
@@ -394,9 +397,9 @@ This action allows customers to open a page to edit a particular item in the sho
     | Validate Name  | Proceed |
     | Validate Email | Proceed |
     | Validate Store | Proceed |
-    {: title="Server-side Conditions"}   
+    {: title="Server-side Conditions"}
 
-     ![Validation attributes in the Page Designer](./images/button-condition.png " ")       
+     ![Validation attributes in the Page Designer](./images/button-condition.png " ")
 
 ## Task 8: Add Process to Create the Order
 
@@ -404,7 +407,7 @@ This action allows customers to open a page to edit a particular item in the sho
 
 2. Right-click **Processing** and click **Create Process**.
 
-    ![Property Editor](./images/create-process-p.png " ")  
+    ![Property Editor](./images/create-process-p.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -420,8 +423,8 @@ This action allows customers to open a page to edit a particular item in the sho
                                         p_customer_email => :P17_CUSTOMER_EMAIL,
                                         p_store          => :P17_STORE,
                                         p_order_id       => :P17_ORDER_ID,
-                                        p_customer_id    => :P17_CUSTOMER_ID);   
-        END;                                    
+                                        p_customer_id    => :P17_CUSTOMER_ID);
+        END;
         </copy>
         ```
 
@@ -461,9 +464,9 @@ This action allows customers to open a page to edit a particular item in the sho
 
 2. Right-click **After Processing** and click **Create Branch**.
 
-     ![Processing Tab in the Page Designer](./images/create-branch-b.png " ")  
+     ![Processing Tab in the Page Designer](./images/create-branch-b.png " ")
 
-3. In the Property Editor, enter/select the following:  
+3. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Go to Orders**
 
@@ -475,7 +478,7 @@ This action allows customers to open a page to edit a particular item in the sho
 
             | Name | Value  |
             | --- |  --- |
-            | P16\_ORDER\_ID | &P17\_ORDER\_ID. |
+            | P16\_ORDER | &P17\_ORDER\_ID. |
 
         - Clear Cache: **16**.
 
