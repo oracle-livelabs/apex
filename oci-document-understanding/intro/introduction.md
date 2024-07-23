@@ -16,7 +16,7 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Create an APEX app
+- Create an APEX application
 - Upload Invoice to OCI Object Storage using Invoke API
 - Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type
 - Parse the response and display the result
@@ -36,11 +36,39 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-### Downloads
+## Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Foci-doc-understanding.sql) to download the completed application. **Note** : Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Document Understanding.
+If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application zip file and unzip it.
+
+2. Import the **automate-invoice-handling-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+3. Once the application is installed,
+    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+
+    - Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage.
+
+    - Follow Lab 2 > Task 2 to add multiple users.
+
+    - Follow Lab 3 > Task 3 > Step 8 and update the following page item static values one after the other:
+        - P1\_COMPARTMENT\_ID
+        - P1\_NAMESPACE\_NAME
+        - P1\_BUCKET\_NAME
+        - P1\_REGION
+
+4. All set. Now, run the application and see it in action!
+
+## Learn More - *Useful Links*
+
+- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+- [APEX on Autonomous](https://apex.oracle.com/autonomous)
+- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+- [Community](https://apex.oracle.com/community)
+- [External Site + Slack](http://apex.world)
 
 ## Acknowledgments
 

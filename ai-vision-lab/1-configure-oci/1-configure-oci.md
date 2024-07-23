@@ -98,9 +98,10 @@ To create a Web Credential in Oracle APEX:
 
 You now know how to generate API Keys using OCI console. Furthermore, you know how to create web credentials in Oracle APEX.
 
-You may now **proceed to the next lab**.   
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
+
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

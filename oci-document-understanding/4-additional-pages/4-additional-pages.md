@@ -257,14 +257,6 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
        </iframe>
    </p>
    ```
-
-    ```
-   <p align="center">
-       <iframe src="&P4_URL." width="100%" height="500">
-       </iframe>
-   </p>
-   ```
-
    ![Upload File](images/uploaded-file.png " ")
 
 10. Right-Click **Uploaded File** region, select **Create Region Below**.
@@ -305,7 +297,6 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
             DOCUMENT_ID = :P3_ID
             AND FIELD_VALUE <> '#';
        <copy>
-
         ```
 
        - Layout > Start New Row: **Toggle Off**
