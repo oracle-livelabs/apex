@@ -50,7 +50,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.sql.zip) to download the completed application zip file and unzip it.
 2. Import the **nyc-genai-app.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Generative AI**.   
-4. Edit the **OCI Gen AI** service. Enter the **Compartment ID**. For Credential, select **Create New** and enter the OCI API Key details. 
+4. Edit the **OCI Gen AI** service. Enter the **Compartment ID**. For Credential, select **Create New** and enter the OCI API Key details. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key.
 5. All set. Now, run the application and see it in action!
 
 
