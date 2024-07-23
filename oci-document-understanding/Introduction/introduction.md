@@ -42,7 +42,7 @@ In this workshop, you:
 
 *Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-### Downloads
+## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 

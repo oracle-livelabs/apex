@@ -30,14 +30,36 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
+*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+## Downloads
 
-### Downloads
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Fai-vision.sql) to download the completed application. **Note**: Once you've imported the application, remember to generate web credentials and input your own OCI account information when utilizing the OCI Vision REST Data Source for Image Classification and Text Detection.
+If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) to download the completed application zip file and unzip it.
+
+2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+3. Once the application is installed,
+    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+
+    - Follow Lab 3 > Task 1 and Configure OCI Vision REST API as REST Data Source using your URL endpoint.
+
+    - Follow Lab 3 > Task 2 > Step 9, Update COMPARTMENT_ID parameter under Image Classification and Text Detection child process with your Compartment ID from your OCI console.
+
+4. All set. Now, run the application and see it in action!
+
+## Learn More - *Useful Links*
+
+- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+- [APEX on Autonomous](https://apex.oracle.com/autonomous)
+- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+- [Community](https://apex.oracle.com/community)
+- [External Site + Slack](http://apex.world)
 
 
 ## Acknowledgments
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Product Manager
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
