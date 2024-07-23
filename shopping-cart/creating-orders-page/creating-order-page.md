@@ -40,11 +40,17 @@ Create a Normal Page to review the Order that customer has made.
 
 3. Enter the following and click **Next**.
 
-    - Page Number - enter **16**
+    - Under Page Definition:
 
-    - Name - enter **Order Information**
+        - Page Number: **16**
 
-    - Under Navigation, deselect **Breadcrumb** and **Navigation**.
+        - Name: **Order Information**
+
+    - Under Navigation
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
 
 4. Click **Create Page**.
 
@@ -58,19 +64,21 @@ Add a region to the page to display order details.
 
 2. Drag a **Static Content** region and drop it to the Body section.
 
-    ![Gallery menu in Page Designer](./images/create-static.png " ")
+    ![Gallery menu in Page Designer](./images/create-static-s.png " ")
 
-3. In the Property Editor, enter the following:
+3. In the Property Editor, Enter/select the following:
 
-    - For Title - enter **Thank you for your order!**
+    - Identification > Name: **Thank you for your order!**
 
-    - For Template - select **Content Block**
+    - Under Appearance:
 
-    - For Icon, enter **fa-heart**
+        - Template: **Content Block**
 
-    - For Template Options - check **Show Region Icon** and click **Ok**
+        - Template Options > Use Template Defaults:   Check **Show Region Icon** and click **Ok**
 
-        ![Property Editor](./images/template-options.png " ")
+        -  Icon: **fa-heart**  
+
+  ![Property Editor](./images/template-options-s.png " ")
 
 
 ## Task 3: Add Items to the Page
@@ -80,7 +88,7 @@ Add a hidden item to store the order ID without the user being able to see it.
 
 2. Right-click the region and click **Create Page Item**.
 
-    ![Rendering Tree](./images/create-item.png " ")
+    ![Rendering Tree](./images/create-item-s.png " ")
 
 3. In the property editor, set the name and type as follows:
 
@@ -89,7 +97,7 @@ Add a hidden item to store the order ID without the user being able to see it.
     | P16_ORDER | Hidden |
     {: title="Page Item values"}
 
-    ![Property Editor](./images/order-item.png " ")    
+    ![Property Editor](./images/order-item-s.png " ")    
 
 ## Task 4: Add Static Content Region
 Add a region to contain Order details and items.
@@ -98,15 +106,17 @@ Add a region to contain Order details and items.
 
 2. Right click the region and click **Create Sub Region**.
 
-    ![Rendering Tree](./images/create-sub-region.png " ")
+    ![Rendering Tree](./images/create-sub-region2-s.png " ")
 
-3. In the Property Editor, enter the following:
+3. In the Property Editor, Enter/select the following:
 
-    - For Title - enter the expression (including the period) **Order: &P16_ORDER.**
+    - Under Identification:
 
-    - For Type - select **Static Content**
+        - Name: **Order: &P16_ORDER.** (including the period)
 
-    ![Property editor](./images/sub-region-fields.png " ")
+        - Type: **Static Content**
+
+  ![Property editor](./images/sub-region-fields-s.png " ")
 
 ## Task 5: Add Order Details Region
 Add a region to display Order details.
@@ -114,15 +124,21 @@ Add a region to display Order details.
 1. In the Rendering tree (left pane), navigate to the **Order: &P16_ORDER.** region.
 
 2. Right click the region and click **Create Sub Region**.
-    ![Rendering tree (left pane) of Page designer](./images/create-sub-region2.png " ")
+    ![Rendering tree (left pane) of Page designer](./images/create-sub-region2-s.png " ")
 
 3. In the Property Editor, enter the following:
 
-    - For Title - enter **Order Details**
-    - For Type - select **Cards**
-    - Under Source section:
-        - For Type - select **SQL Query**
-        - For SQL Query - enter the following SQL Query:
+    - Under Identification:
+
+        - Name: **Order Details**
+
+        - Type: **Cards**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query - enter the following SQL Query:
 
             ```
             <copy>
@@ -138,13 +154,16 @@ Add a region to display Order details.
             WHERE  order_id = :P16_ORDER
             </copy>
             ```
-        ![Property editor](./images/sub-region-fields2.png " ")    
+
+  ![Property editor](./images/sub-region-fields2-s.png " ")    
 
 4. Click **Attributes**.
 
-    -  Search for Secondary Body in the filter and do the following:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter:
+    -  Under Secondary Body and enter/select the following:
+
+        - Advanced Formatting: **Toggle On**
+
+        - HTML Expression: Copy and Paste the following code:
 
             ```
             <copy>
@@ -154,7 +173,7 @@ Add a region to display Order details.
             </copy>
             ```
 
-          ![Attributes tab of Property editor](./images/attributes.png " ")
+  ![Attributes tab of Property editor](./images/attributes-s.png " ")
 
 ## Task 6: Add Items Region
 Add a region to display items in the order.
@@ -163,19 +182,21 @@ Add a region to display items in the order.
 
 2. Right-click the region and click **Create Sub Region**.
 
-    ![Rendering Tree](./images/create-sub-region3.png " ")
+    ![Rendering Tree](./images/create-sub-region3-s.png " ")
 
 3. In the Property Editor, enter the following:
 
-    - For Title - enter **Items**
+    - Under Identification:
 
-    - For Type - select **Cards**
+        - Name: **Items**
 
-    - Under Source section:
+        - Type: **Cards**
 
-        - For Type - select **SQL Query**
+    - Under Source:
 
-        - For SQL Query - enter the following SQL Query:
+        - Type: **SQL Query**
+
+        - SQL Query - enter the following SQL Query:
 
             ```
             <copy>
@@ -191,19 +212,20 @@ Add a region to display items in the order.
             AND  order_id = :P16_ORDER
             </copy>
             ```
-          ![Property Editor](./images/sub-region-fields3.png " ")
 
-4. Click **Attributes** and do the following:
+  ![Property Editor](./images/sub-region-fields3-s.png " ")
 
-    - Under Title section:
+4. In the Property editor, Click **Attributes** and enter/select the following:
 
-        - For Column - select **PRODUCT**    
+    - Under Title:
+
+        - Column: **PRODUCT**    
 
     - Under Secondary Body:
 
-        - Set Advanced Formatting to **On**
+        - Advanced Formatting: **Toggle On**
 
-        - For HTML Expression - enter:
+        - HTML Expression: enter the following code:
 
             ```
             <copy>
@@ -211,26 +233,34 @@ Add a region to display items in the order.
             <b>Unit Price: </b>&UNIT_PRICE.    
             </copy>
             ```
-        ![Attributes tab in the property editor](./images/attributes2.png " ")
 
-    - Under Media section:
-        - For Source - select **BLOB Column**   
-        - For BLOB Column - select **PRODUCT_IMAGE**  
-        - For Position - select **Body**  
-        - For Appearance - select **Auto**  
-        - For Sizing - select **Fit**   
+  ![Attributes tab in the property editor](./images/attributes2-s.png " ")
+
+    - Under Media:
+
+        - Source: **BLOB Column**   
+
+        - BLOB Column: **PRODUCT_IMAGE**  
+
+        - Position: **Body**  
+
+        - Appearance: **Auto**  
+
+        - Sizing : **Fit**   
 
     - Under Card:
-        - For Primary Key Column 1 - select **ITEM**    
 
-        ![Attributes tab in the property editor](./images/attributes3.png " ")
+        - Primary Key Column 1: **ITEM**    
+
+  ![Attributes tab in the property editor](./images/attributes3-s.png " ")
 
 5. Click **Save**.
 
+## Summary
 
 You now know how to add a new page to your existing APEX Application and add regions to define the page's content using the Page Designer. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

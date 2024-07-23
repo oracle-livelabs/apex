@@ -17,7 +17,7 @@ Estimated Time: 20 minutes
 
 To demonstrate the application's behavior, we will use an automatic timezone setup. This will ensure that the appointment dates and times are in sync with the End User's timezone.
 
-1. To do this, navigate to the Application Home Page and then go to **Shared Components > Globalization**.
+1. To do this, navigate to the Application Home Page and then go to **Shared Components > Globalization > Globalization Attributes**.
 
 2. Toggle the **Automatic Time Zone** button to ON.
 
@@ -44,7 +44,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
    ![login to the application](./images/login-to-app.png " ")
 
-3. Click **New Appointment** to book an appointment for **Rajesh**.
+3. Click **New Appointment** to book an appointment for **RAJESH**.
 
    ![create appointment](./images/create-appointment.png " ")
 
@@ -52,7 +52,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 5. Choose **ANACHATT** as the available doctor.
 
-6. Fill in the **Age** (example: 45) and click **Book Appointment**.
+6. Fill in the **Age** (example: 45) and click **Submit**.
 
   ![create an appointment](./images/create-appointment1.png " ")
 
@@ -67,7 +67,9 @@ To demonstrate the application's behavior, we will use an automatic timezone set
   ![navigate to doctors app made easy](./images/monitor-appt.png " ")
 
 2. Click on the **Doctor Appointment Workflow for Patient Rajesh** entry and observe the Workflow Details Popup.
+
     - Workflow is waiting at "Raise Appointment Request" Activity.
+
     - Observe Workflow Parameters.
 
     ![navigate to doctors app made easy](./images/monitor-appts.png " ")
@@ -75,6 +77,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 ## Task 5: Approve the Appointment Request
 1. Log in as **ANACHATT**, who is a Doctor in this workflow.
+
 2. Select **Doctor Tasks** from the left navigation menu.
 
     ![navigate to doctors app made easy](./images/login-as-annchatt.png " ")

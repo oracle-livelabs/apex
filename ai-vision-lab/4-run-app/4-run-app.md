@@ -11,9 +11,9 @@ In this lab, you:
 
 - Run the Application
 
-## Task 1 : Run the Application
+## Task 1: Run the Application
 
-1. Login to the application. The username and password is the same as your APEX workspace user credentials.
+1. Login to the application. The username and password are the same as your APEX workspace user credentials.
 
     ![Click Timeline](images/social-media-login.png " ")
 
@@ -23,17 +23,22 @@ In this lab, you:
 
     ![Click Timeline](images/add-post.png " ")
 
-The image is now posted on your timeline. Similarly, add as many posts as you would like.
+The image has been posted on your timeline. Similarly, add as many posts as you would like.
 
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term. 
-In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images that has sky in them.
+4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term.
 
-    ![Click Timeline](images/search-result.png " ")
+ In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images with the sky for image classification.
+
+    ![Click Timeline](images/img-class.png " ")
+
+ In the following example, for text detection, when you enter 'Bengaluru' in the AI Search Field, the app displays all the images with the text 'Bengaluru'.
+
+    ![Click Timeline](images/text-detect.png " ")
 
 ## Summary
-You now know how to post an image and search for images using AI search.
+You now know how to post an image and search for images and images with text using AI search.
 
 ## Acknowledgments
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

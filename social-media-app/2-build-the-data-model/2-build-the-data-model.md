@@ -107,13 +107,15 @@ Since we prefer that Users react to a post one time only, we need to add a const
     | Unique column 1 | **POST_ID** |
     | Unique column 2 | **CREATED_BY** |
 
-    ![Add constraint wizard](images/add-constraint.png)
+    ![Add constraint wizard](images/add-constraint1.png)
 
 4.  Click **Apply** to create the Constraint.
+
+    ![Add constraint wizard](images/add-constraint.png)
 
 You may now **proceed to the next lab**
 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

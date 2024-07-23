@@ -14,7 +14,7 @@ Estimated Time: 45 minutes
 * Add Maps region and install PWA
 * Link pages
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ### Labs
 
@@ -47,4 +47,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
  - **Author** - Apoorva Srinivas, Senior Product Manager
  - **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
- - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

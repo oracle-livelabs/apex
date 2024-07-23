@@ -35,7 +35,7 @@ In this workshop, you will:
 - Create Pages for the APEX application
 
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.*
 
 ### Downloads
 
@@ -52,4 +52,4 @@ In this workshop, you will:
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

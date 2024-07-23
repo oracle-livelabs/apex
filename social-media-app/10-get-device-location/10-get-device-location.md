@@ -27,24 +27,27 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
 2. Ensure that your component drawer is open below the layout section, and click **Regions** tab.
 
-   ![Gallery menu](images/region-map.png)
+   ![Gallery menu](images/layout-pane-s.png)
 
 3. Click the **Map** Region in the component drawer and drag slowly and carefully into the Dialogs, Drawers and Popups region in the Layout section as shown. Notice that as you do this, things will adjust to show you where you can drop it.
 
-   ![Layout pane](images/show-drag-drop.png)
+   ![Layout pane](images/show-drag-drop-s.png)
 
 4.	Release/drop the Map region to the gold area inside this region.
 
-   ![Layout pane](images/drag-n-drop.png)
+   ![Layout pane](images/drag-n-drop-s.png)
 
    In the rendering tree, you should see it appear like this:
 
    ![Page designer](images/after-drop.png)
 
 5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. Update the following information:
+
     - Name: **Post and Like Locations**
-    - Set the Region > Source > Location to **Local Database** (new properties will be shown underneath).
-    - Set the Source > Type to **SQL Query**
+
+    - Source > Location: **Local Database** (new properties will be shown underneath).
+
+    - Source > Type: **SQL Query**
 
 6. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the **SQL Query** text area:
 
@@ -59,30 +62,37 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
       </copy>
       ```
 
-      ![Page designer](images/update-region.png)
+      ![Page designer](images/update-region-s.png)
 
 7. Next, update the following properties:
+
     - Appearance > Template : **Inline Dialog**.
+
     - Advanced > Static ID : **map**. The static ID will be used by our javascript to actually open the map region in the next task.
 
     ![Page designer](images/appearance.png)
 
 8. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
-    - Set Layer > Identification > Name to **Locations**
-    - Change Source > Location to **Region Source**
+
+    - Layer > Identification > Name to **Locations**
+
+    - Source > Location to **Region Source**
+
     - Scroll down to Column Mapping and change Geometry Column Data Type to **Longitude/Latitude**
+
     - Set the Longitude Column to be **LON** and the Latitude Column to be **LAT**
 
     ![Page designer](images/lat-lon.png)
 
     - And now we will configure a tooltip for each map point. Under Tooltip, toggle Advanced Formatting to **ON**.
+
     - Copy and paste this expression into HTML Expression box:
       ```
       <copy>
       &CREATED_BY. @ &SINCE.
       </copy>
       ```
-    ![Page designer](images/tooltip.png)
+    ![Page designer](images/tooltip-s.png)
 
 9. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
     - Map > Height to **300** pixels
@@ -103,7 +113,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 2. In the Navigation and Search section, click **Navigation Bar List**.
 
-   ![Shared Components page](images/nav-bar-list.png)
+   ![Shared Components page](images/nav-bar-list-s.png)
 
 3. Our app only has one of these, so drill into its’ configuration by clicking on the **Navigation Bar entry** in the report under the **Name** column.
 
@@ -112,10 +122,14 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the **Add Entry** button to add a new row in the list.
 
 5. In the new blank row:
-    - For Sequence, enter number **15**
-    - For name, enter **Map**
-    - For Target, enter **#action$open-map**
-    - For Icon, enter **fa-map**
+
+    - Sequence: **15**
+
+    - Name: **Map**
+
+    - Target: **#action$open-map**
+
+    - Icon: **fa-map**
 
     Click **Apply Changes**
 
@@ -166,17 +180,24 @@ In this task, we update our javascript on the page so that the Target you specif
    ![Dynamic Actions Tab](images/new-da.png)
 
 4. On the right side with **New** selected, edit the following:
+
     - Identification > Name : **action-open-map**
-    - Set the Custom Event : **action-open-map**
+
+    - Custom Event : **action-open-map**
+
     - Selection Type : **JavaScript Expression**
+
     - JavaScript Expression : **document**
 
    ![Property Editor](images/action-open-map.png)
 
 5. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**.
 In the Property Editor:
+
     - Identification > Action : **Open Region**
+
     - Selection Type : **Region**
+
     - Region : **Post and Like Locations**
 
     ![Property Editor](images/open-region.png)
@@ -202,8 +223,11 @@ In this final task, we create another dynamic action to get the device location 
       - Action : **Get Current Position**
 
       Under Settings:
+
       - Return Type : **Latitude and Longitude**
+
       - Latitude Item: **P1_LAT**
+
       - Longitude Item: **P1_LON**
 
       ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
@@ -223,4 +247,4 @@ In this final task, we create another dynamic action to get the device location 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

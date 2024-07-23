@@ -23,7 +23,7 @@ In this lab, you will:
 1. Log into your workspace.
 2. From your APEX workspace home page, as shown below, select the down-arrow to the right of  **SQL Workshop**, then click the arrow to the right of  **Utilities**, and choose **Sample Datasets**.
 
-    ![Workspace home page](./images/navigate-sample-dataset.png " ")
+    ![Workspace home page](./images/navigate-sample-dataset-s.png " ")
 
 3. On the **Customer Orders** row, click Install.
 
@@ -32,15 +32,15 @@ In this lab, you will:
 4. Click **Next**.
 
    *The schema name defaults to your current schema so will be different from the schema name shown below.*
-    ![Install Sample Dataset wizard](./images/manage-sample-dataset.png " ")
+    ![Install Sample Dataset wizard](./images/manage-sample-dataset-s.png " ")
 
 5. Click **Install Dataset**.
 
-    ![Install Sample Dataset wizard](./images/load-sample-dataset.png " ")
+    ![Install Sample Dataset wizard](./images/load-sample-dataset-s.png " ")
 
 6. Click **Exit**.
 
-    ![Install Sample Dataset wizard](./images/load-sample-dataset-results.png " ")
+    ![Install Sample Dataset wizard](./images/load-sample-dataset-results-s.png " ")
 
 >**Note:** You do NOT want to click Create Application, as you will manually create an application later.
 
@@ -56,9 +56,11 @@ In this lab, you will:
 
     ![Object Browser](./images/explore-tables.png " ")
 
+## Summary
+
 This completes Lab 1. You now know how to install a sample dataset. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

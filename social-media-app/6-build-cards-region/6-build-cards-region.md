@@ -24,22 +24,24 @@ In this lab, you will:
 1. Navigate to the Rendering Tree and right-click on **Body**, and
 choose **Create Region**.   
 
-    ![Create region option](images/create-region.png)
+    ![Create region option](images/create-region-s.png)
 
 2. Update the following attributes in the Property Editor:
 
     - Under Identification:
-         - For Title, enter **Timeline**
-         - For Type, select **Cards**
 
-    ![Property Editor](images/title-type.png)
+         - Name: **Timeline**
 
+         - Type: **Cards**
 
-3.  Under Source, for Type select **SQL Query**. Enter the following **SQL Query** into the SQL
-    Query box:
+    - Under Source:
 
-    ```
-    <copy>
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below code:
+
+       ```
+       <copy>
         select
         p.id,
         p.created_by AS user_name,
@@ -62,18 +64,18 @@ choose **Create Region**.
         from SM_POSTS p
 
         order by p.created desc
-    </copy>
-    ```
+       </copy>
+       ```
 
-    ![SQL expression in editor](images/sql-code.png)
+  ![Property Editor](images/title-type1.png)
 
-5. Scroll down in the Property Editor to the **Appearance** section:
+3. Scroll down in the Property Editor to the **Appearance** section:
 
-    - In the Appearance > CSS Classes box, enter **t-Chat**
+    - Appearance > CSS Classes box: **t-Chat**
 
-    - In Advanced > Static ID, enter **timeline**.
+    - Advanced > Static ID: **timeline**.
 
-    ![Property editor](images/appearance.png)
+  ![Property editor](images/appearance1.png)
 
     We are not done with this region yet! We have to configure
 which columns from the query results will be used in which parts of the
@@ -90,7 +92,7 @@ the following changes:
 
     - Subtitle > Column: **POST_DATE**
 
-    ![Attributes in Property Editor](images/attributes-1.png)
+  ![Attributes in Property Editor](images/attributes-11.png)
 
     - Body > Column: **COMMENT_TEXT**
 
@@ -98,7 +100,7 @@ the following changes:
 
     - Icon Column: **USER_NAME**
 
-    ![Attributes in Property Editor](images/attributes-2.png)
+  ![Attributes in Property Editor](images/attributes-21.png)
 
     And finally (for this Region), scroll down to the Media section, and set
 the following attributes:
@@ -113,25 +115,23 @@ the following attributes:
 
     - Sizing: **Cover**
 
-    - CSS Classes: enter **selectDisable**
+    - CSS Classes: **selectDisable**
 
-    - Copy and paste **&COMMENT_TEXT.** (including the period!)
-    into the **Image Description** box
+    - Image Description: **&COMMENT_TEXT.** (including the period!)
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-    ![Attributes in Property Editor](images/attributes-3.png)
+  ![Attributes in Property Editor](images/attributes-31.png)
 
 2. Now, the region is completely configured. Click **Save and Run**.
 
-    If you made a post earlier, you should now see your image and your
-comment text!
+     If you made a post earlier, you should now see your image and your comment text!
 
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app1.png)
 
 You may now **proceed to the next lab**
 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, November 2023
+ - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024

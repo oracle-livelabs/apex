@@ -37,7 +37,6 @@ Through these labs, you will:
 | [19. Enhance the Applications using Progressive Web Application](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3907&p210_wec=&session=117447918490865) | In this lab, You will make the Demo Projects app installable on any device. You also implement a 'Share' button where a user can share the uploaded images with other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Demo Projects App. You also learn to add Shortcuts and Screenshots to the PWA app.| 35 Minutes |
 | [20. Migrating Application Development Between Environments](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3580&p210_wec=&session=1321024421140) | In this lab, you create Installation scripts and Data Packages to export Database objects along with Data. Then you export the DEMO PROJECTS Application along with supporting objects and import it into another workspace.<br> <br>In the second part of the lab, you will be using Remote Deployment to deploy your Application from Development to UAT. | 20 Minutes |
 
-
 *Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
@@ -52,4 +51,3 @@ Through these labs, you will:
 ## Acknowledgements
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri ,Product Manager, Jan 2024
-
