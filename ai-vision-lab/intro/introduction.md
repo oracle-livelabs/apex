@@ -9,6 +9,7 @@ In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI
 Estimated Time: 1 hour
 
 ### Objectives
+
 In this workshop, you:
 
 - Create a REST Data Source in APEX based on the OCI Vision REST Endpoint.
@@ -45,7 +46,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
     - Follow Lab 3 > Task 1 and Configure OCI Vision REST API as REST Data Source using your URL endpoint.
 
-    - Follow Lab 3 > Task 2 and Task 3, Update COMPARTMENT_ID parameter under Image Classification and Text Detection child process with your Compartment ID from your OCI console.
+    - Follow Lab 3 > Task 2 and Task 3. Update the COMPARTMENT_ID parameter under the Image Classification and Text Detection child process with your Compartment ID from your OCI console.
 
 4. All set. Now, run the application and see it in action!
 
@@ -57,7 +58,6 @@ If you are stuck or the App is not working as expected, you can download and ins
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
-
 
 ## Acknowledgments
 
