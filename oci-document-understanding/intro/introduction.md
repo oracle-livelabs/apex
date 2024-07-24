@@ -59,7 +59,7 @@ If you are stuck or the App is not working as expected, you can download and ins
         - P1\_BUCKET\_NAME
         - P1\_REGION
 
-4. All set. Now, run the application and see it in action!
+4. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 
