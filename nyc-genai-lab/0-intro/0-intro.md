@@ -50,14 +50,14 @@ If you are stuck or the App is not working as expected, you can download and ins
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file.
 2. Import the **labfiles_nyc-gen-ai-app.zip** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**. 
-4. Edit the **apex_ai_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key. 
+4. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key. 
      ![Web Credentials page](images/edit-web-cred.png " ")
 5. Navigate to **App Builder > Workspace Utilities > Generative AI**. Edit the **OCI Gen AI** service. 
     - Enter the **Compartment ID**. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved while creating your OCI API Key.
-    - For Credential, select **apex_ai_cred**.
+    - For Credential, select **apex\_ai\_cred**.
     - Click **Apply Changes**.
     ![Generative AI page](images/edit-oci-genai.png " ")
-6. All set. Now, run the application and see it in action!
+6. All set. Now, run the application and see it in action! Follow the lab: [Run the Application](?lab=6-run-app) to run the app.
 
 
 ## Learn More - *Useful Links*
