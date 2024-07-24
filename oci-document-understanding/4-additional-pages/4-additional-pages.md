@@ -252,11 +252,13 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     - Source > HTML Code: Enter the below HTML code into the code editor:
 
     ```
-   <p align="center">
-       <iframe src="&P4_URL." width="100%" height="500">
-       </iframe>
-   </p>
-   ```
+    <copy>
+    <p align="center">
+      <iframe src="&P4_URL." width="100%"  height="500"></iframe>
+    </p>
+   </copy>
+    ```
+
    ![Upload File](images/uploaded-file.png " ")
 
 10. Right-Click **Uploaded File** region, select **Create Region Below**.
