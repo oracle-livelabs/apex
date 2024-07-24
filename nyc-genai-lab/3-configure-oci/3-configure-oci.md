@@ -6,9 +6,9 @@ In this workshop, you use OCI Generative AI as the AI provider to build a conver
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair. 
 
-Note: The OCI account must have the OCI Generative AI Service enabled.
+Note: OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm).
 
-If you already have an OCI key pair, skip this lab.
+
 
 Estimated Time: 10 Minutes
 
@@ -19,6 +19,8 @@ In this lab, you:
 - Create Web Credentials in Oracle APEX
 
 ## Task 1: Generate API Keys using OCI Console
+
+Note: If you already have an OCI key pair, you may skip this task.
 
 To Generate the API Keys using OCI Console:
 
