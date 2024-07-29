@@ -93,10 +93,7 @@ In this lab, you:
     Click **Add Page**.
 
     ![master detail](images/add-master-detail-page.png " ")
-
-12. The Create Application page has three new pages: two for the Customers table and one, as Master-Detail, for Orders and Items.
-
-    Let’s add another Page for Orders, again click **Add Page** and select **Faceted Search**.
+12. Add a new form for the S_ORD table. Click **Add Page** and select **Faceted Search**.
 
     ![Faceted Search](images/faceted-search2.png " ")
 
@@ -257,5 +254,5 @@ In the next lab you will undertake Oracle Forms functionalities enhancement step
 
 ## Acknowledgements
 
-- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

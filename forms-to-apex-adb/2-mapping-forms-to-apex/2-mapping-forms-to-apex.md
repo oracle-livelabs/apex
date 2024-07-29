@@ -99,5 +99,5 @@ This lab provides comprehensive guidelines for mapping various Oracle Forms comp
 
 ## Acknowledgements
 
-- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

@@ -20,33 +20,43 @@ In this lab, you:
 
 ## Task 1: Configure List of Values
 
-1. The table **S\_CUSTOMER** has a column named **CREDIT\_RATING** with a check constraint. The column can only contain the following values: **EXCELLENT, GOOD, POOR**. Creating a list of values is important to prevent end-users from entering invalid options.
+There are five lists of values that can be useful in the Faceted Search Page and Orders Page:
+
+- **S_CUSTOMER.CREDIT_RATING**: The table S_CUSTOMER has a column named CREDIT_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![constraint](images/constraint.png " ")
 
-2. To create the list of values, Click **App Builder** and select your application: **Modernization**.
+- **SALES_REP_LOV**: A dynamic list of values based on the S_EMP table.
+
+- **S_CUSTOMER.NAME**: A dynamic list of values based on the S_CUSTOMER table. This List of Values has already been created.
+
+- **S_ORD.PAYMENT_TYPE**: A static list of values using the following values: CASH, CREDIT, CHECK
+
+- **S_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
+
+1. To create the list of values, Click **App Builder** and select your application: **Modernization**.
 
     ![App Builder](images/app-builder1.png " ")
 
     ![modernization](images/modernization.png " ")
 
-3. Click **Shared Components**.
+2. Click **Shared Components**.
 
     ![Shared Components](images/shared-comps.png " ")
 
-4. Under **Other Components**, Click **List of Values**.
+3. Under **Other Components**, Click **List of Values**.
 
     ![List of Values](images/lov1.png " ")
 
-5. Click **Create**.
+4. Click **Create**.
 
     ![Create List of Values](images/create-lov.png " ")
 
-6. Create List of Values from Scratch and Click **Next**.
+5. Create List of Values from Scratch and Click **Next**.
 
     ![Create List of Values](images/scratch-lov.png " ")
 
-7. Under Name and Type, enter/select the following:
+6. Under Name and Type, enter/select the following:
 
     - Name: **S\_CUSTOMER.CREDIT\_RATING**
 
@@ -56,7 +66,7 @@ In this lab, you:
 
     ![Create List of Values](images/credit-rate-lov.png " ")
 
-8. Enter the following Display Values and Return Values:
+7. Enter the following Display Values and Return Values:
 
     | Display Value | Return Value |
     |---------------|--------------|
@@ -69,13 +79,13 @@ In this lab, you:
 
    ![Create List of Values](images/values-lov.png " ")
 
-9. Click **Create** to create another list of values.
+8. Click **Create** to create another list of values.
 
-10. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
+9. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
 
     ![Create List of Values](images/sales-rep-lov.png " ")
 
-11. Under **List of Values Source**, enter/select the following:
+10. Under **List of Values Source**, enter/select the following:
 
     - Source Type: **SQL Query**
 
@@ -93,6 +103,61 @@ In this lab, you:
     Click **Next**.
 
     ![Create List of Values](images/sql-query.png " ")
+
+11. Click **Create** to create another list of values.
+
+    ![Create List of Values](images/create-lov-pay.png " ")
+
+12. Create List of Values **from Scratch** and Click **Next**.
+
+    ![Create List of Values](images/lov-scratch-next.png " ")
+
+13. Enter/Select the following and click **Next**.
+
+    - Name: **S_ORD.PAYMENT_TYPE**
+
+    - Type: **Static**
+
+    ![Create List of Values](images/name-static-next.png " ")
+
+14. Enter the following **Display Value** and **Return Value** and Click **Create List of Values**.
+
+    | Display Value | Return Value |
+    |---------------|--------------|
+    |CASH           | CASH         |
+    |CREDIT         | CREDIT       |
+    |CHECK          | CHECK        |
+    {: title="List of Values"}
+
+    ![Create List of Values](images/display-return-create.png " ")
+
+15. Click **Create** to create another list of values.
+
+    ![Create List of Values](images/lov-product.png " ")
+
+16. Create List of Values from Scratch and Click **Next**.
+
+    ![Create List of Values](images/lov-scratch-next.png " ")
+
+17. Enter/select the following and click **Next**.
+
+    - Name: **S_PRODUCT.NAME**
+
+    - Type: **Dynamic**
+
+    ![Create List of Values](images/name-dynamic-next.png " ")
+
+18. Under List of Values Source, enter the following and click Next.
+
+    - Source Type: Table
+
+    - Table / View Name: **S_PRODUCT**
+
+    ![Create List of Values](images/product-next.png " ")
+
+19. Click **Create**.
+
+    ![Create List of Values](images/create-product-lov.png " ")
 
 ## Task 2: Customize the Customer Form
 
@@ -336,5 +401,5 @@ In this lab, you enhanced the functionalities of Oracle Forms using APEX. Buildi
 
 ## Acknowledgements
 
-- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
 - **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
