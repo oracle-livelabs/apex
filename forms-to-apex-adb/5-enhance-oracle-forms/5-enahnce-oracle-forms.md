@@ -22,17 +22,17 @@ In this lab, you:
 
 There are five lists of values that can be useful in the Faceted Search Page and Orders Page:
 
-- **S_CUSTOMER.CREDIT_RATING**: The table S_CUSTOMER has a column named CREDIT_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
+- **S\_CUSTOMER.CREDIT\_RATING**: The table S_CUSTOMER has a column named CREDIT_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![constraint](images/constraint.png " ")
 
-- **SALES_REP_LOV**: A dynamic list of values based on the S_EMP table.
+- **SALES\_REP\_LOV**: A dynamic list of values based on the S_EMP table.
 
-- **S_CUSTOMER.NAME**: A dynamic list of values based on the S_CUSTOMER table. This List of Values has already been created.
+- **S\_CUSTOMER.NAME**: A dynamic list of values based on the S_CUSTOMER table. This List of Values has already been created.
 
 - **S_ORD.PAYMENT_TYPE**: A static list of values using the following values: CASH, CREDIT, CHECK
 
-- **S_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
+- **S\_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
 
 1. To create the list of values, Click **App Builder** and select your application: **Modernization**.
 
@@ -114,7 +114,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 13. Enter/Select the following and click **Next**.
 
-    - Name: **S_ORD.PAYMENT_TYPE**
+    - Name: **S\_ORD.PAYMENT\_TYPE**
 
     - Type: **Static**
 
@@ -141,7 +141,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 17. Enter/select the following and click **Next**.
 
-    - Name: **S_PRODUCT.NAME**
+    - Name: **S\_PRODUCT.NAME**
 
     - Type: **Dynamic**
 
@@ -151,7 +151,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     - Source Type: Table
 
-    - Table / View Name: **S_PRODUCT**
+    - Table / View Name: **S\_PRODUCT**
 
     ![Create List of Values](images/product-next.png " ")
 
