@@ -265,7 +265,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
 8. Select **p\_service\_static\_id**. In the Property Editor, edit/select the following:
     - Under Value:
         - Type: **Static Value**
-        - Item: **open_ai**
+        - Item: **LOWCODE**  (This is the Static ID of the OCI Gen AI service we created in Lab 4. You can verify the Static ID by navigating to **Workspace Utilities > Generative AI > OCI Gen AI**)
 
     ![Processing tab in Page Designer](images/param-3.png ' ')
 
@@ -406,5 +406,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
 

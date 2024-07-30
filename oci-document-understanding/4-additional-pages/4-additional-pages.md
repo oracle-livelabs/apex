@@ -131,7 +131,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
     WHERE
         A.ID = B.DOCUMENT_ID
     AND B.FIELD_LABEL = 'InvoiceTotal'
-     <copy>
+     </copy>
      ```
 
      Click **Next**.
@@ -236,7 +236,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
 
     :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
-    <copy>
+    </copy>
       ```
 
     ![Preapare URL](images/prepare-url1.png " ")
@@ -252,18 +252,12 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     - Source > HTML Code: Enter the below HTML code into the code editor:
 
     ```
-   <p align="center">
-       <iframe src="&P4_URL." width="100%" height="500">
-       </iframe>
-   </p>
-   ```
-
+    <copy>
+    <p align="center">
+      <iframe src="&P4_URL." width="100%"  height="500"></iframe>
+    </p>
+    </copy>
     ```
-   <p align="center">
-       <iframe src="&P4_URL." width="100%" height="500">
-       </iframe>
-   </p>
-   ```
 
    ![Upload File](images/uploaded-file.png " ")
 
@@ -304,8 +298,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
         WHERE
             DOCUMENT_ID = :P3_ID
             AND FIELD_VALUE <> '#';
-       <copy>
-
+       </copy>
         ```
 
        - Layout > Start New Row: **Toggle Off**
