@@ -3,7 +3,7 @@
 ## About this Workshop
 From precisely summarizing intricate data to crafting context-aware responses, Generative AI stands at the forefront of a technological shift, promising to redefine how we navigate and leverage knowledge in our day-to-day interactions. With the introduction of AI assisted development in Oracle APEX, enabling your applications with generative AI capabilities has never been easier.
 
-In this workshop, you learn to bring generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code Platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
+In this workshop, you learn to bring generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
 
 <!-- ## What is OCI Generative AI service?
 
@@ -34,7 +34,7 @@ Estimated Time: 60 minutes
     - Germany Central (Frankfurt)
     - UK South (London)
 
-- This workshop makes use of OCI Generative AI Service. OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm).
+- This workshop makes use of OCI Generative AI Service. OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
@@ -51,7 +51,7 @@ Estimated Time: 60 minutes
 | [Creating an APEX application](?lab=1-create-app) | 5 minutes |
 | [Visualize Schools on a Map](?lab=2-schools-on-map) | 10 minutes |
 | [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
-| [Build conversation Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
+| [Build Conversation Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
 | [Run the Application](?lab=6-run-app) | 5 minutes |
 
@@ -63,9 +63,10 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads
 
-If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file.
-2. Import the **labfiles_nyc-gen-ai-app.zip** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **labfiles_nyc-gen-ai-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**. 
 4. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key. 
      ![Web Credentials page](images/edit-web-cred.png " ")
