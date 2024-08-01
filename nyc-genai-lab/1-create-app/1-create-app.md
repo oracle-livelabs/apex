@@ -3,7 +3,7 @@
 ## Introduction
 In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1
 
 Estimated Time: 5 minutes
 

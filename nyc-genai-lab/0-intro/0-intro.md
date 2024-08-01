@@ -26,7 +26,7 @@ Estimated Time: 60 minutes
 * Build a conversational chatbot using Generative AI to ask questions about a school.
 * Generate Email using Generative AI to apply to a school.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.1.2*
 
 ## Prerequisites
 - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
