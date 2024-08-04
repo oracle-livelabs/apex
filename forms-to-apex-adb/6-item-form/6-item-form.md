@@ -2,9 +2,7 @@
 
 ## Introduction
 
-After following the guidelines in the previous labs on best practices to modernize Forms in APEX, let’s see how you can further enhance the applications created with APEX’s functionalities.
-
-In this lab, you will build on the business logic analysis performed on the “Customers’ form” in Lab 1. After migrating and enhancing the business logic, it’s time to modernize the application within APEX.
+In this lab, you will learn how to create a form for managing items, ensure proper validation of user inputs, implement dynamic actions to enhance user interaction, and create processes to automate backend tasks. By completing these tasks, you will gain hands-on experience in building a functional and user-friendly application interface using Oracle APEX.
 
 Estimated Time: 15 Minutes
 
@@ -12,11 +10,9 @@ Estimated Time: 15 Minutes
 
 In this lab, you:
 
-- Configure List of Values
-- Define and organize facets for the Faceted Search page to filter data effectively.
-- Define and personalize the Interactive Report views, allowing end-users to interact with and save their report configurations.
-- Create and organize navigation menu entries for Customers and Orders, and assign appropriate parent list entries to make the menu cleaner and more user-friendly.
-- Disable authentication to make the application publicly accessible, suitable for a public-facing application.
+- Configure the form to interact with the S_ITEM table.
+- Implement a dynamic action to automatically set the product price based on the selected product ID.
+- Develop a process to automate the retrieval of the item ID.
 
 ## Task 1: Create the Items Form
 
@@ -24,7 +20,11 @@ In this lab, you:
 
 2. Click **Create Page**.
 
+    ![App Builder](images/create-form-page.png " ")
+
 3. Select **Form**.
+
+    ![App Builder](images/select-form.png " ")
 
 4. On Create page wizard, enter/select the following:
 
@@ -36,84 +36,107 @@ In this lab, you:
 
    - Table/View Name: **S_ITEM**
 
+   Click **Next**.
+
+   ![App Builder](images/create-form-next.png " ")
+
 5. Click **Create Page**.
+
+    ![App Builder](images/create-page.png " ")
 
 ## Task 2: Create Validations
 
 The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, and QUANTITY. You must ensure that end-users enter or select a value for these items.
 
-1. In the first pane, find the Items Region and expand the items.
-While holding down the Ctrl key, click the items: P8_PRODUCT_ID, P8_PRICE, and P8_QUANTITY. Apply the following changes:
+1. In the left pane, select **Items - Details** region and expand the columns. While holding down the Ctrl key, click the columns: P8\_PRODUCT\_ID, P8\_PRICE, and P8\_QUANTITY.
 
-2. Under the Appearance section,
-For Template, set to Required - Floating.
-Under the Validation section,
-For Value Required, set to On.
+2. In the property editor, apply the following changes:
+
+    - Appearance > Template: **Required - Floating**
+
+    - Validation > Value Required: **Toggle On**
+
+   ![App Builder](images/select-items.png " ")
 
 ## Task 3: Create a Dynamic Action
 
-1. Navigate to the product_id item, right-click on it, and select Create Dynamic Action.
+1. Navigate to **Item - Details** region, select **P11\_PRODUCT\_ID**, right-click and select **Create Dynamic Action**.
 
-Under the Identification section,
-For Name, enter Get Product Price
+    ![App Builder](images/create-dynamic-actions.png " ")
 
-Navigate to the Show action,  and enter/select the following:
-Under the Identification section,
+2. In the property editor, Under Identification > Name: Enter **Get Product Price**.
 
-For Action, select Set Value
+    ![App Builder](images/get-product-price.png " ")
 
-Under the Settings section,
-For Set Type, select PL/SQL Function Body
+3. Navigate to the **Show** action,  and enter/select the following:
 
-For PL/SQL Function Body, enter:
-return PKG_MODERNIZATION.F_GET_PRODUCT_PRICE(p_product_id => :P8_PRODUCT_ID);
+    - Identification > Action: **Set Value**
 
-For Items to submit, select P8_PRODUCT_ID
+    - Under Settings:
 
-Under the Affected Elements section,
-For Selection Type, select Item(s)
+        - Set Type: PL/SQL Function Body
 
-For Item(s), select P8_PRICE
+        - PL/SQL Function Body: Copy and paste the below code:
 
-Create a Process 
-Navigate to the Processing pane and right-click on Processes.
+         ```
+         <copy>
+         return PKG_MODERNIZATION.F_GET_PRODUCT_PRICE(p_product_id => :P8_PRODUCT_ID);
+         </copy>
+        ```
 
-Under the Identification section, 
+        - Items to submit: **P11_PRODUCT_ID**
 
-For Name, enter Get Item Id
+    - Affected Elements > Item(s): **P11\_PRICE**
 
-For Type, select Invoke API
+    ![App Builder](images/set-value.png " ")
 
-Under the Server-side Condition section,
-For Type, select Item is NULL
-For Item,  select P8_ITEM_ID
+## Task 4: Create a Process 
 
-Under the Settings section,
-For Package, select PKG_MODERNIZATION
+1. Navigate to the **Processing** tab and right-click **Processes** and select **Create Process**.
 
-For Procedure or Function, select F_GET_ITEM_ID
+    ![App Builder](images/create-process.png " ")
 
-In the first pane, navigate to Parameters, and click on Function Result,
+2. In the property editor, enter/select the following:
 
-Under the Value section,
-For Item, select P8_ITEM_ID
+    - Under Identification: 
 
-In the first pane, navigate to Parameters, and click on p_ord_id,
+        - Name: **Get Item Id**
 
-Under the Value section,
+        - Type: **Invoke API**
 
-For Type, select Item
-For Item, select P8_ORD_ID
+    - Under the Server-side Condition:
 
-This new process should be the first process to be executed, thus make sure that the order of the processes is the following:
+        - Type: **Item is NULL**
 
-Get Item Id
-Process form
-Close Dialog
-If you need to organize them, drag and drop them to the position you need.
+        - Item: **P11\_ITEM\_ID**
 
-Lastly, organize the items in the layout by dragging and dropping the items as you prefer:
+    - Under the Settings:
 
+        - Package: **PKG\_MODERNIZATION**
 
+        - Procedure or Function: **F\_GET\_ITEM\_ID**
 
-6. Click Save.
+   ![App Builder](images/get-item-id.png " ")
+
+3. Under **Get Item Id** process, navigate to **Parameters**, and click **Function Result**, update the following:
+
+    - Value > Item: **P11\_ITEM\_ID**
+
+   ![App Builder](images/function-result.png " ")
+
+4. This new process should be the first process to be executed, drag and drop it before **Process from Item - Details**.
+
+    ![App Builder](images/drag-process.png " ")
+
+5. Lastly, organize the items in the layout by dragging and dropping the items as you prefer and Click **Save**.
+
+    ![App Builder](images/drag-item.png " ")
+
+## Summary
+
+In this lab, you created a functional form for managing items in Oracle APEX by configuring it to interact with the 'S_ITEM' table. You implemented necessary validations to ensure required fields are completed by users and created a dynamic action to automatically set the product price based on the selected product ID using PL/SQL. Additionally, you developed a process to automate the retrieval of the item ID, ensuring it runs conditionally when the item ID is null. These tasks enhanced our skills in building user-friendly and efficient application interfaces.
+
+## Acknowledgements
+
+- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
+- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
