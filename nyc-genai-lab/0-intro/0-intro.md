@@ -51,7 +51,7 @@ Estimated Time: 60 minutes
 | [Creating an APEX application](?lab=1-create-app) | 5 minutes |
 | [Visualize Schools on a Map](?lab=2-schools-on-map) | 10 minutes |
 | [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
-| [Build Conversation Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
+| [Build a Conversational Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
 | [Run the Application](?lab=6-run-app) | 5 minutes |
 
