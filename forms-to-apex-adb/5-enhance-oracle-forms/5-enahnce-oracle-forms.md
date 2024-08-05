@@ -22,7 +22,7 @@ In this lab, you:
 
 There are five lists of values that can be useful in the Faceted Search Page and Orders Page:
 
-- **S\_CUSTOMER.CREDIT\_RATING**: The table S_CUSTOMER has a column named CREDIT_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
+- **S\_CUSTOMER.CREDIT\_RATING**: The table S\CUSTOMER has a column named CREDIT\_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
 
     ![constraint](images/constraint.png " ")
 
@@ -30,7 +30,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 - **S\_CUSTOMER.NAME**: A dynamic list of values based on the S_CUSTOMER table. This List of Values has already been created.
 
-- **S_ORD.PAYMENT_TYPE**: A static list of values using the following values: CASH, CREDIT, CHECK
+- **S\_ORD.PAYMENT\_TYPE**: A static list of values using the following values: CASH, CREDIT, CHECK
 
 - **S\_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
 
@@ -50,7 +50,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 4. Click **Create**.
 
-    ![Create List of Values](images/create-lov.png " ")
+    ![Create List of Values](images/create-lov1.png " ")
 
 5. Create List of Values from Scratch and Click **Next**.
 
@@ -81,11 +81,15 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 8. Click **Create** to create another list of values.
 
-9. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
+9. Create List of Values **from Scratch** and Click **Next**.
+
+    ![Create List of Values](images/lov-scratch-next.png " ")
+
+10. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
 
     ![Create List of Values](images/sales-rep-lov.png " ")
 
-10. Under **List of Values Source**, enter/select the following:
+11. Under **List of Values Source**, enter/select the following:
 
     - Source Type: **SQL Query**
 
@@ -93,26 +97,31 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ```
     <copy>
-    select Distinct e.FIRST_NAME ||' '|| e.LAST_NAME AS d,
-       e.id as r
-    from s_emp e, s_customer c
-    where e.id = c.sales_rep_id;
+    select S_EMP.ID as ID,
+       S_EMP.FIRST_NAME ||' '|| S_EMP.LAST_NAME as FULL_NAME,
+       S_EMP.FIRST_NAME ,
+       S_EMP.LAST_NAME
+     from S_EMP S_EMP
+     where title = 'Sales Representative'
     <copy>
     ```
-
     Click **Next**.
 
-    ![Create List of Values](images/sql-query.png " ")
+    ![Create List of Values](images/sql-query1.png " ")
 
-11. Click **Create** to create another list of values.
+12. Click **Create**.
 
-    ![Create List of Values](images/create-lov-pay.png " ")
+    ![Create List of Values](images/create-sales-lov.png " ")
 
-12. Create List of Values **from Scratch** and Click **Next**.
+13. Click **Create** to create another list of values.
+
+    ![Create List of Values](images/create-lov-pay1.png " ")
+
+14. Create List of Values **from Scratch** and Click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 
-13. Enter/Select the following and click **Next**.
+15. Enter/Select the following and click **Next**.
 
     - Name: **S\_ORD.PAYMENT\_TYPE**
 
@@ -120,7 +129,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/name-static-next.png " ")
 
-14. Enter the following **Display Value** and **Return Value** and Click **Create List of Values**.
+16. Enter the following **Display Value** and **Return Value** and Click **Create List of Values**.
 
     | Display Value | Return Value |
     |---------------|--------------|
@@ -131,15 +140,15 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/display-return-create.png " ")
 
-15. Click **Create** to create another list of values.
+17. Click **Create** to create another list of values.
 
-    ![Create List of Values](images/lov-product.png " ")
+    ![Create List of Values](images/lov-product1.png " ")
 
-16. Create List of Values from Scratch and Click **Next**.
+18. Create List of Values from Scratch and Click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 
-17. Enter/select the following and click **Next**.
+19. Enter/select the following and click **Next**.
 
     - Name: **S\_PRODUCT.NAME**
 
@@ -147,7 +156,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/name-dynamic-next.png " ")
 
-18. Under List of Values Source, enter the following and click Next.
+20. Under List of Values Source, enter the following and click Next.
 
     - Source Type: Table
 
@@ -155,7 +164,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/product-next.png " ")
 
-19. Click **Create**.
+21. Click **Create**.
 
     ![Create List of Values](images/create-product-lov.png " ")
 
@@ -169,17 +178,17 @@ To use the list of values previously created:
 
 1. Navigate to **Application ID** and select your application.
 
-    ![App Builder](images/nav-app-id.png " ")
+    ![App Builder](images/nav-app-id1.png " ")
 
 2. Select **3 - Customer**.
 
-    ![App Builder](images/select-cust.png " ")
+    ![App Builder](images/1.png " ")
 
 3. Organize items by dragging and dropping them.
 
     ![App Builder](images/sequence-items.png " ")
 
-4. In the left pane, select **PX\_CREDIT\_RATING**. In the Property Editor, update the following:
+4. In the left pane, select **P3\_CREDIT\_RATING**. In the Property Editor, update the following:
 
     - Identification > Type: **Radio Group**
 
@@ -195,7 +204,7 @@ To use the list of values previously created:
 
         - Display Null Value: **Toggle Off**
 
-  Click **Save**.
+    Click **Save**.
 
    ![App Builder](images/credit-rate-radio.png " ")
 
@@ -209,15 +218,15 @@ You can define which facets to filter the data. Some are defined automatically, 
 
 2. In the left pane, under **Search**, Right-click **Facets** and click **Create Facet**.
 
-    ![App Builder](images/create-facets.png " ")
+    ![App Builder](images/create-facets1.png " ")
 
 3. Create the following three facets one after the other:
 
     | NAME | TYPE | LABEL | LIST OF VALUES TYPE | LIST OF VALUES |
     |----- | ----- | ----- | -------------------- | -------------- |
-    |PX\_CITY | Checkbox Group | City | Distinct Values |   |
-    | PX\_NAME | Checkbox Group | Name | Distinct Values |   |
-    | PX\_SALES\_REP\_ID | Checkbox Group |Sales Rep | Shared Component| SALES\_REP\_LOV|
+    |P2\_CITY | Checkbox Group | City | Distinct Values |   |
+    | P2\_NAME | Checkbox Group | Name | Distinct Values |   |
+    | P2\_SALES\_REP\_ID | Checkbox Group |Sales Rep | Shared Component| SALES\_REP\_LOV|
     {: title="Facets"}
 
     ![App Builder](images/sales-rep-lov1.png " ")
@@ -225,12 +234,12 @@ You can define which facets to filter the data. Some are defined automatically, 
 4. Now organize the facets in the following order:
     |Facets|
     |------|
-   |PX\_CREDIT\_RATING|
-   |PX\_REGION\_ID|
-    | PX\_COUNTRY |
-    | PX\_CITY |
-    | PX\_NAME |
-    | PX\_SALES\_REP\_ID |
+    |P2\_CREDIT\_RATING|
+    |P2\_REGION\_ID|
+    | P2\_COUNTRY |
+    | P2\_CITY |
+    | P2\_NAME |
+    | P2\_SALES\_REP\_ID |
     {: title="Reorder Facets"}
 
     ![App Builder](images/sequence.png " ")
@@ -247,43 +256,41 @@ In this task, you will define how end-users can interact with and personalize th
 
 2. Navigate to **Customer Interactive Report**.
 
-    ![App Builder](images/cust-interactive-report.png " ")
+    ![App Builder](images/cust-interactive-report1.png " ")
 
 3. Click **Actions** and select **Columns**.
 
-    ![App Builder](images/actions.png " ")
+    ![App Builder](images/actions1.png " ")
 
 4. Move the columns **Comments, Region, Zip Code** from **Display in Report** region to **Do Not Display** region. There are two ways to do it:
     - Go to the column and double click on the column.
     - Click the column and remove it by clicking the icon Remove (<).
 
-    ![App Builder](images/do-not-display.png " ")
+    ![App Builder](images/do-not-display1.png " ")
 
 5. In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and Click **Apply**.
 
-    ![App Builder](images/credit-rating.png " ")
+    ![App Builder](images/credit-rating1.png " ")
 
 6. Click **Actions** and select Click **Format** > **Control Break**.
 
-    ![App Builder](images/control-break.png " ")
+    ![App Builder](images/control-break1.png " ")
 
 7. For Column, select the column **Name** and Click **Apply**.
 
-    ![App Builder](images/control-break-name.png " ")
+    ![App Builder](images/control-break-name1.png " ")
 
 8. To save the primary report, Click **Actions** > **Report** > **Save Report**.
 
-    ![App Builder](images/save-report1.png " ")
+    ![App Builder](images/save-report11.png " ")
 
-9. For Save, select **As Named Report**.
+9. For Save, select **As Default Report Settings**.
 
-    ![App Builder](images/as-named-report.png " ")
+    ![App Builder](images/as-named-report1.png " ")
 
 10. For Default Report Type, select **Primary** and Click **Apply**.
 
-    ![App Builder](images/primary-apply.png " ")
-
-*Note: Please remember that the value "X" in "PX_ITEM" depends on the APEX page you're working on.*
+    ![App Builder](images/primary-apply1.png " ")
 
 ## Task 5: Enhance Navigation Menu
 
