@@ -28,7 +28,7 @@ In this lab, you:
 
 4. On Create page wizard, enter/select the following:
 
-   - Page Number: **11**
+   - Page Number: **13**
 
    - Name: **Item - Details**
 
@@ -46,9 +46,9 @@ In this lab, you:
 
 ## Task 2: Create Validations
 
-The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, and QUANTITY. You must ensure that end-users enter or select a value for these items.
+The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE, and QUANTITY. You must ensure that end-users enter or select a value for these items.
 
-1. In the left pane, select **Items - Details** region and expand the columns. While holding down the Ctrl key, click the columns: P8\_PRODUCT\_ID, P8\_PRICE, and P8\_QUANTITY.
+1. In the left pane, select **Items - Details** region and expand the columns. While holding down the Ctrl key, click the columns: P13\_PRODUCT\_ID, P13\_PRICE, and P13\_QUANTITY.
 
 2. In the property editor, apply the following changes:
 
@@ -60,7 +60,7 @@ The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, a
 
 ## Task 3: Create a Dynamic Action
 
-1. Navigate to **Item - Details** region, select **P11\_PRODUCT\_ID**, right-click and select **Create Dynamic Action**.
+1. Navigate to **Item - Details** region, select **P13\_PRODUCT\_ID**, right-click and select **Create Dynamic Action**.
 
     ![App Builder](images/create-dynamic-actions.png " ")
 
@@ -84,13 +84,13 @@ The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, a
          </copy>
         ```
 
-        - Items to submit: **P11_PRODUCT_ID**
+        - Items to submit: **P13\_PRODUCT\_ID**
 
-    - Affected Elements > Item(s): **P11\_PRICE**
+    - Affected Elements > Item(s): **P13\_PRICE**
 
     ![App Builder](images/set-value.png " ")
 
-## Task 4: Create a Process 
+## Task 4: Create a Process
 
 1. Navigate to the **Processing** tab and right-click **Processes** and select **Create Process**.
 
@@ -98,7 +98,7 @@ The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, a
 
 2. In the property editor, enter/select the following:
 
-    - Under Identification: 
+    - Under Identification:
 
         - Name: **Get Item Id**
 
@@ -134,7 +134,7 @@ The S_ITEM table requires six columns: ID, ORD_ID, ITEM_ID, PRODUCT_ID, PRICE, a
 
 ## Summary
 
-In this lab, you created a functional form for managing items in Oracle APEX by configuring it to interact with the 'S_ITEM' table. You implemented necessary validations to ensure required fields are completed by users and created a dynamic action to automatically set the product price based on the selected product ID using PL/SQL. Additionally, you developed a process to automate the retrieval of the item ID, ensuring it runs conditionally when the item ID is null. These tasks enhanced our skills in building user-friendly and efficient application interfaces.
+In this lab, you created a functional form for managing items in Oracle APEX by configuring it to interact with the 'S\_ITEM' table. You implemented necessary validations to ensure required fields are completed by users and created a dynamic action to automatically set the product price based on the selected product ID using PL/SQL. Additionally, you developed a process to automate the retrieval of the item ID, ensuring it runs conditionally when the item ID is null. These tasks enhanced our skills in building user-friendly and efficient application interfaces.
 
 ## Acknowledgements
 
