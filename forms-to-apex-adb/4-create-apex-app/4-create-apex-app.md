@@ -51,7 +51,7 @@ In this lab, you:
 
 7. For Add Faceted Search Page, enter/ select the following:
 
-    - Page Name: **Customer Faceted Search**
+    - Page Name: **Customer - Faceted Search**
 
     - Table: **S\_CUSTOMER**
 
@@ -59,9 +59,9 @@ In this lab, you:
 
      Click **Add Page**.
 
-   ![faceted search](images/add-faceted-search-page.png " ")
+   ![faceted search](images/add-faceted-search-page1.png " ")
 
-8. On Create Application page, click **Add Page** to add another page for Customers table (S\_CUSTOMER) and select **Interactive Report**.
+8. On Create an Application page, click **Add Page** to add another page for Customers table (S\_CUSTOMER) and select **Interactive Report**.
 
     ![interactive report](images/interactive-report.png " ")
 
@@ -75,9 +75,9 @@ In this lab, you:
 
     Click **Add Page**.
 
-    ![interactive report](images/add-report-page.png " ")
+    ![interactive report](images/add-report-page1.png " ")
 
-10. On the Create Application wizard, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
+10. On the Create an Application page, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
 
     ![master detail](images/master-detail.png " ")
 
@@ -99,29 +99,29 @@ In this lab, you:
 
 13. On Add Faceted Search Page, enter/select the following:
 
-    - Page Name: **Orders Faceted Search**
+    - Page Name: **Orders - Faceted Search**
 
     - Table: **S\_ORD**
 
     Click **Add Page**.
 
-    ![Faceted Search](images/add-faceted-search-page2.png " ")
+    ![Faceted Search](images/add-faceted-search-page21.png " ")
 
-14. Under Features, Check **Install Progressive Web App**, **Feedback** and **About Page** and Click **Create Application**.
+14. Under Features, Check **Install Progressive Web App** and Click **Create Application**.
 
-    ![create application](images/create-app1.png " ")
+    ![create application](images/create-app11.png " ")
 
 ## Task 2: Run the Application
 
 1. Now let’s run the application from the current page as a developer. Click **Run Application** icon.
 
-    ![Run application](images/run-application.png " ")
+    ![Run application](images/run-application1.png " ")
 
 2. Enter the credentials. The home page includes a link to the pages created previously. You can edit this page as you need. Click on the hamburger menu on the top to explore all the pages.
 
-    ![application](images/application.png " ")
+    ![application](images/application1.png " ")
 
-    ![application](images/app-form.png " ")
+    ![application](images/app-form1.png " ")
 
 ## Task 3: Create Side-by-Side Master Detail Page
 
@@ -189,7 +189,7 @@ In this lab, you:
 
 In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
 
-1. Navigate back to Page Designer, Select **(+ v)** and click **Page**.
+1. Navigate back to Page Designer, Navigate to **(+ v)** from page designer toolbar and click **Page**.
 
     ![application](images/create-page2.png " ")
 
@@ -241,7 +241,7 @@ In this task, you will create another Master-Detail style page for Orders with *
 
 6. The Master Detail Order Items Drill Down shows up in the Home menu pane and the report with Master Orders records. If you try to click on the edit icon of a specific Orders record you see the Drill-Down display of the Master-Detail report page.
 
-    ![application](images/edit-drill.png " ")
+    ![application](images/edit-drill1.png " ")
 
 7. If you click on the arrows under the “Form on S\_ORD” panel, you can navigate through the Master Orders table rows, and corresponding Order Items Detail rows are displayed accordingly.
 
