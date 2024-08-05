@@ -56,17 +56,17 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
     - Validation > Value Required: **Toggle On**
 
-   ![App Builder](images/select-items.png " ")
+   ![App Builder](images/select-items1.png " ")
 
 ## Task 3: Create a Dynamic Action
 
 1. Navigate to **Item - Details** region, select **P13\_PRODUCT\_ID**, right-click and select **Create Dynamic Action**.
 
-    ![App Builder](images/create-dynamic-actions.png " ")
+    ![App Builder](images/create-dynamic-actions1.png " ")
 
 2. In the property editor, Under Identification > Name: Enter **Get Product Price**.
 
-    ![App Builder](images/get-product-price.png " ")
+    ![App Builder](images/get-product-price1.png " ")
 
 3. Navigate to the **Show** action,  and enter/select the following:
 
@@ -80,7 +80,7 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
          ```
          <copy>
-         return PKG_MODERNIZATION.F_GET_PRODUCT_PRICE(p_product_id => :P8_PRODUCT_ID);
+         return PKG_MODERNIZATION.F_GET_PRODUCT_PRICE(p_product_id => :P13_PRODUCT_ID);
          </copy>
         ```
 
@@ -88,13 +88,13 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
     - Affected Elements > Item(s): **P13\_PRICE**
 
-    ![App Builder](images/set-value.png " ")
+    ![App Builder](images/set-value1.png " ")
 
 ## Task 4: Create a Process
 
 1. Navigate to the **Processing** tab and right-click **Processes** and select **Create Process**.
 
-    ![App Builder](images/create-process.png " ")
+    ![App Builder](images/create-process1.png " ")
 
 2. In the property editor, enter/select the following:
 
@@ -104,31 +104,31 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
         - Type: **Invoke API**
 
-    - Under the Server-side Condition:
-
-        - Type: **Item is NULL**
-
-        - Item: **P11\_ITEM\_ID**
-
     - Under the Settings:
 
         - Package: **PKG\_MODERNIZATION**
 
         - Procedure or Function: **F\_GET\_ITEM\_ID**
 
-   ![App Builder](images/get-item-id.png " ")
+    - Under the Server-side Condition:
+
+        - Type: **Item is NULL**
+
+        - Item: **P13\_ITEM\_ID**
+
+   ![App Builder](images/get-item-id1.png " ")
 
 3. Under **Get Item Id** process, navigate to **Parameters**, and click **Function Result**, update the following:
 
-    - Value > Item: **P11\_ITEM\_ID**
+    - Value > Item: **P13\_ITEM\_ID**
 
-   ![App Builder](images/function-result.png " ")
+   ![App Builder](images/function-result1.png " ")
 
 4. This new process should be the first process to be executed, drag and drop it before **Process from Item - Details**.
 
-    ![App Builder](images/drag-process.png " ")
+    ![App Builder](images/drag-process1.png " ")
 
-5. Lastly, organize the items in the layout by dragging and dropping the items as you prefer and Click **Save**.
+5. Lastly, navigate to **Rendering** tab, organize the items in the layout by dragging and dropping the items as per your preference and Click **Save**.
 
     ![App Builder](images/drag-item.png " ")
 
