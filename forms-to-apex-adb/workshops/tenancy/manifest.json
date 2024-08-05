@@ -30,6 +30,18 @@
         "filename": "../../5-enhance-oracle-forms/5-enahnce-oracle-forms.md"
       },
       {
+        "title": "Lab 6: Create the Items Form",
+        "filename": "../../6-item-form/6-item-form.md"
+      },
+      {
+        "title": "Lab 7: Enhance Order Faceted Search Page",
+        "filename": "../../7-enhance-order-faceted/7-enhance-order-faceted.md"
+      },
+      {
+        "title": "Lab 8: Enhance Order Form Page",
+        "filename": "../../8-enhance-order-form/7-enhance-order-form.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
