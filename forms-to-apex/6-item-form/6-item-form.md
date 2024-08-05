@@ -28,15 +28,15 @@ In this lab, you:
 
 4. On Create page wizard, enter/select the following:
 
-   - Page Number: **13**
+    - Page Number: **13**
 
-   - Name: **Item - Details**
+    - Name: **Item - Details**
 
-   - Page Mode: **Drawer**
+    - Page Mode: **Drawer**
 
-   - Table/View Name: **S_ITEM**
+    - Table/View Name: **S_ITEM**
 
-   Click **Next**.
+    Click **Next**.
 
    ![App Builder](images/create-form-next.png " ")
 
@@ -74,7 +74,7 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
     - Under Settings:
 
-        - Set Type: PL/SQL Function Body
+        - Set Type: **PL/SQL Function Body**
 
         - PL/SQL Function Body: Copy and paste the below code:
 
@@ -130,7 +130,7 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
 5. Lastly, navigate to **Rendering** tab, organize the items in the layout by dragging and dropping the items as per your preference and Click **Save**.
 
-    ![App Builder](images/drag-item.png " ")
+    ![App Builder](images/drag-item1.png " ")
 
 ## Summary
 
