@@ -38,17 +38,17 @@ Since order filled is not a key facet search, let's remove it by following these
 
     ![App Builder](images/page-finder-7.png " ")
 
-2. In the left pane, select **Search** region. Right-click **P7_ORDER_FILLED** and click **Delete**.
+2. In the left pane, select **Search** region. Right-click **P7\_ORDER\_FILLED** and click **Delete**.
 
     ![App Builder](images/delete-facet.png " ")
 
-3. Now, Navigate to the **Orders Report** region. In the property editor, update the following:
+3. Now, Navigate to the **Ord** region. In the property editor, update the following:
 
     - Identification > Name: **Orders Report**
 
     - Under Appearance:
 
-        - Click **Template Options** : Header > Visible: **Default**
+        - Click **Template Options** : Header > **Visible: Default**
 
         Click **OK**.
 
@@ -62,11 +62,11 @@ Since order filled is not a key facet search, let's remove it by following these
 
         - Target > click **No Link Defined**
 
-             - Page: **8**
+             - Page: **9**
 
-             - Set Items > Name: **P8_ID**, Value: **#ID#**
+             - Set Items > Name: **P9\_ID**, Value: **#ID#**
 
-             - Clear Cache: **8**
+             - Clear Cache: **9**
 
              Click **OK**.
 
@@ -90,11 +90,11 @@ Since order filled is not a key facet search, let's remove it by following these
 
         - Target: click **No Link Defined**
 
-            - Page: 8
+            - Page: **9**
 
-            - Set Items > Name: **P8_ID**, Value: **&P8_ID.**
+            - Set Items > Name: **P9\_ID**, Value: **&P9\_ID.**
 
-            - Clear Cache: **8**
+            - Clear Cache: **9**
 
             Click **OK**.
 
