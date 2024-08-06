@@ -46,6 +46,10 @@
         "filename": "../../10-admin-page/10-admin-page.md"
       },
       {
+        "title": "Lab 11: Automation",
+        "filename": "../../11-automation/11-automation.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

@@ -9,16 +9,20 @@ In this lab, you create a new application named **Online Bookstore**. Next, you 
 Estimated Time: 5 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Create an APEX Application
+
 - Load Quick SQL
 
 ## Task 1: Create an Application
+
 In this lab, you create a simple application with one click called **Online Bookstore**. This option creates an application which contains only a Global Page, Home page, and Login page.
 
 1. On the Workspace home page, click the App Builder.
 
-    ![App builder home page](images/go-create-app.png " ")
+   ![App builder home page](./images/go-create-app.png " ")
 
 2. Click **Create** or **Create a New App**.
 
@@ -63,9 +67,9 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/quick-sql.png " ")
 
-2.  Copy and paste the given code in the Quick SQL column and Click **Review and Run**.
+2. Copy and paste the given code in the Quick SQL column and Click **Review and Run**.
 
-     ```
+    ```
     <copy>
     OBS_Users
       user_id num /pk
@@ -123,8 +127,8 @@ In this lab, you create a simple application with one click called **Online Book
       wishlist_id num /pk
       user_id num /fk OBS_Users /cascade
       book_id num /fk OBS_Books /cascade
-      </copy>
-       ```
+    </copy>
+    ```
 
     ![Create Application wizard](./images/review-run.png " ")
 
