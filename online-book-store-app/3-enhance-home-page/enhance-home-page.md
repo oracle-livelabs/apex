@@ -42,10 +42,10 @@ In this lab, you will:
 
        | Display Value |  Return Value  |
        | --- |  --- |
-       | <20  | 20|
-       | 20 - 50 | 20|50 |
-       | 50 - 80 | 50|80 |
-       | >80 | 80 |
+       | <20  | \|20 |
+       | 20 - 50 | 20\|50 |
+       | 50 - 80 | 50\|80 |
+       | >80 | 80\| |
        {: title="Static Values"}
 
        - Actions Menu > Chart: **Toggle Off**   
@@ -66,7 +66,7 @@ In this lab, you will:
 
 ## Task 2: Integrate Global Search
 
-1. In the left pane, Right-click **Body** and Select **Page Item**.
+1. In the left pane, Right-click **Body** and Select **Create Page Item**.
 
      ![App builder home page](images/fs-page-item.png " ")
 
@@ -78,9 +78,9 @@ In this lab, you will:
 
        - Type: **Text field with Autocomplete**
 
-   - Label > Lable: **Search**
+    - Label > Label: **Search**
 
-   - Under List of Values:
+    - Under List of Values:
 
        - Type: **SQL Query**
 
@@ -108,7 +108,7 @@ In this lab, you will:
 
         - Input Field: **External Page Item**
 
-        - External Page Item: **P10_SEARCH_PAGE_ITEM**
+        - External Page Item: **P10\_SEARCH\_PAGE\_ITEM**
 
     - Under Source:
 
@@ -227,19 +227,17 @@ In this lab, you will:
 
 1. Select **Search Results** region and enter/select the following:
 
-    - Under Order By:
+    - Under Sources:
 
-        - Type: **Item**
+        - Order By Item: Click **No Order by item** and enter the following:
 
-        - Click **Order by item** and enter the following:
+            | Clause |  Key | Display |
+            | --- |  --- | --- |
+            | "TITLE"asc  | TITLE| Title |
+            | "NEW\_PRICE"asc | NEW\_PRICE | Price|
+            | "DISCOUNT"desc| DISCOUNT | Discount |
 
-    | Clause |  Key | Display |
-    | --- |  --- | --- |
-    | "TITLE"asc  | TITLE| Title |
-    | "PRICE"asc | PRICE | Price|
-    | "DISCOUNT"desc| DISCOUNT | Discount |
-
-2. Click OK
+        - Click OK
 
     ![App builder home page](images/order-by-item.png " ")
 
@@ -293,7 +291,7 @@ In this lab, you will:
 
 7. In the Property Editor, enter/select the following properties:
 
-    - Identification > Name: **Buttons Bar**
+    - Identification > Title: **Buttons Bar**
 
     - Appearance > Template: **Buttons Container**
 

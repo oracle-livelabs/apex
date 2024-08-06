@@ -1,18 +1,21 @@
 # Create REST data source
 
 ## Introduction
-In this lab, you learn to extract data from REST data sources  while also enabling synchronization. Next, you learn to create  a Faceted Search Page  to serve as the primary landing page in Online BookStore Application.
+
+In this lab, you learn to extract data from REST data sources  while also enabling synchronization. Next, you learn to create  a Faceted Search Page  to serve as the primary landing page in Online Bookstore Application.
 
 REST Data Sources enable developers to access to Representational State Transfer (REST) services or generic JSON data feeds in applications and use the data in Oracle APEX components.
 
 Data Synchronization enables developers to automatically sync the contents of a local table with the data from a REST service.
 
-A faceted search page displays and filters data using an intuitive experience users recognize from ecommerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.
+A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.
 
 Estimated Time: 10 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Extract data using REST Data Source
 - Enable Data Synchronization
 - Create a Faceted Search Page
@@ -23,7 +26,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-app-builder.png " ")
 
-2. Select **Online BookStore** Application.
+2. Select **Online Bookstore** Application.
 
     ![App builder home page](images/select-app.png " ")
 
@@ -81,7 +84,7 @@ In this lab, you will:
 
 2. Under **Details**, enter/select the following:
 
-    - Local Table Owner : **OBS\_APP**
+    - Local Table Owner : **Select your workspace name**
 
     - Synchronize to : **Existing Table**
 
@@ -96,6 +99,7 @@ In this lab, you will:
     ![App builder home page](images/click-replace.png " ")
 
 ## Task 3: Create a Faceted Search Page
+
 In this task, you create Faceted Search page which will display list of the books with their titles and authors.
 
 1. Go to **Online Bookstore** application. Click **Create Page**.
@@ -122,7 +126,7 @@ In this task, you create Faceted Search page which will display list of the book
 
 4. For Display as, Select **Cards** and Click **Refresh** to refresh the column statistics to provide better recommendations.
 
-    Select the facets to include in the report.**(Price, Author, Category and Discount)** and Click **Next**.
+    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)** and Click **Next**.
 
     ![App builder home page](images/fs-cards.png " ")
 
@@ -130,8 +134,9 @@ In this task, you create Faceted Search page which will display list of the book
 
     ![App builder home page](images/fs-create-page.png " ")
 
-    ![App builder home page](images/fs-view.png " ")
+6. Click **Save and Run**.
 
+    ![App builder home page](images/fs-view.png " ")
 
 ## Summary
 

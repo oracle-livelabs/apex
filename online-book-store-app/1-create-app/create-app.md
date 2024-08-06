@@ -28,7 +28,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application options](./images/new-app.png " ")
 
-3. For Name, Enter **Online BookStore** and click **Create application**.
+3. For Name, Enter **Online Bookstore** and click **Create application**.
 
     ![Create Application wizard](./images/create-app1.png " ")
 
@@ -53,7 +53,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     In this lab, I have selected an icon from the library with color red.
 
-    After making all changes, Click **Save**.
+    After making all changes, Click **Save Icon**.
 
     ![Create Application wizard](./images/edit-icon.png " ")
 
@@ -104,7 +104,7 @@ In this lab, you create a simple application with one click called **Online Book
       order_id num /pk
       user_id num /fk OBS_Users /cascade
       order_no
-      order_datetime date
+      order_datetime timestamp
       payment_id
       razorpay_id
 
@@ -132,7 +132,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/review-run.png " ")
 
-3. Enter Script Name - **OBS TABLES** and Click **Run**.
+3. Enter Script Name - **OBS Tables** and Click **Run**.
 
     ![Create Application wizard](./images/script-name.png " ")
 
