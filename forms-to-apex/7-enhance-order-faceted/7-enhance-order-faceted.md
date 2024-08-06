@@ -70,7 +70,7 @@ Since order filled is not a key facet search, let's remove it by following these
 
              Click **OK**.
 
-     ![App Builder](images/link-id.png " ")
+     ![App Builder](images/orders-report1.png " ")
 
 5. Right-click **Orders Report** region and select **Create Button**.
 
@@ -98,9 +98,13 @@ Since order filled is not a key facet search, let's remove it by following these
 
             Click **OK**.
 
-    ![App Builder](images/link-button.png " ")
+    ![App Builder](images/link-button1.png " ")
 
 7. Click **Save**.
+
+## Summary
+
+In this lab, you learned how to enhance the Orders Faceted Search Page by removing non-essential facets and improving the overall functionality and appearance.Additionally, you configured the ID column to act as a link to another page and created a button for easy navigation to the order creation page.
 
 ## Acknowledgements
 
