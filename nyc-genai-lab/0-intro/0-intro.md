@@ -64,7 +64,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## Downloads
 
 If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file.
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/nyc-gen-ai-app.zip) to download the completed application zip file.
 2. Import the **labfiles_nyc-gen-ai-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**. 
