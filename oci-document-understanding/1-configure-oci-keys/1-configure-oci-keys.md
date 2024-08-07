@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn how to configure the OCI API keys and Create Buckets in OCI Object Storage. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs, and a bucket refers to a logical container used to store and manage data objects within an Object Storage service.
+In this lab, you learn how to configure the OCI API keys and create buckets in OCI object storage. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs, and a bucket refers to a logical container used to store and manage data objects within an Object Storage service.
 
 OCI API keys have two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
 
