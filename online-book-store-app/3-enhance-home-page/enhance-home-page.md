@@ -1,12 +1,15 @@
 # Enhance the Home Page
 
 ## Introduction
+
 During this lab, you'll refine the faceted search page and its card section. Additionally, you'll discover how to integrate a Global search page item into the faceted search page for book searches. You'll also gain expertise in enabling sorting functionality on the search page. Lastly, you'll explore creating a hyperlink that redirects users to an Amazon page.
 
 Estimated Time: 25 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Improve Faceted Search
 - Integrate Global Search
 - Enhance the Cards region
@@ -14,6 +17,7 @@ In this lab, you will:
 - Include a link for purchasing Books
 
 ## Task 1: Improve Faceted Search
+
 1. Go to the Application Home Page and then click on Page 10 - Search Books.
 
 2. Under **Search** Region, Select **P10\_AUTHOR** facet and update the following:
@@ -74,19 +78,19 @@ In this lab, you will:
 
     - Under Identification:
 
-       - Name: **P10\_SEARCH\_PAGE\_ITEM**
+        - Name: **P10\_SEARCH\_PAGE\_ITEM**
 
-       - Type: **Text field with Autocomplete**
+        - Type: **Text field with Autocomplete**
 
-    - Label > Label: **Search**
+    - Under Label > Label: **Search**
 
     - Under List of Values:
 
-       - Type: **SQL Query**
+        - Type: **SQL Query**
 
-       - SQL Query: Copy and paste the below code:
+        - SQL Query: Copy and paste the below code:
 
-    ```
+     ```
     <copy>
     SELECT title FROM obs_books
     Union
@@ -129,11 +133,11 @@ In this lab, you will:
 
     - Under Source:
 
-       - Type: **SQL Query**
+        - Type: **SQL Query**
 
-       - SQL Query: Copy and paste the below code
+        - SQL Query: Copy and paste the below code
 
-    ```
+        ```
     <copy>
        select BOOK_ID,
        ROUND(PRICE,2) as PRICE,
@@ -153,13 +157,13 @@ In this lab, you will:
        </copy>
        ```
 
-       ![App builder home page](images/search-results.png " ")
+    ![App builder home page](images/search-results.png " ")
 
-2. Under Appearance:  
+2. Under Appearance:
 
    Select **Template Options** and enter/select the following:
 
-    -  Style: **Style C** and Click **OK**
+    - Style: **Style C** and Click **OK**
 
     ![App builder home page](images/template-options.png " ")
 
@@ -169,7 +173,7 @@ In this lab, you will:
 
     - Under Card > Primary Key: **BOOK_ID**
 
-    - Title > CSS Classes: **book-title**
+    - Under Title > CSS Classes: **book-title**
 
     - Under Body:
 
@@ -177,22 +181,22 @@ In this lab, you will:
 
         - HTML expression: Copy and Paste the below HTML code:
 
-    ```
-    <copy>
-    <div>
-    <b>Author:</b> &AUTHOR.
-    </div>
-    <div >
-     <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
-     </div>
-     <div >
-     <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
-     </div>
-     </div>
-     </copy>
-      ```
+        ```
+        <copy>
+        <div>
+        <b>Author:</b> &AUTHOR.
+        </div>
+        <div >
+        <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
+        </div>
+        <div >
+        <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
+        </div>
+        </div>
+        </copy>
+        ```
 
-      ![App builder home page](images/search-results-attributes.png " ")
+    ![App builder home page](images/search-results-attributes.png " ")
 
     - Under Media:
 
@@ -208,18 +212,18 @@ In this lab, you will:
 
     - CSS > Inline: Copy and Paste the below HTML Code:
 
-    ```
-    <copy>
-    .book-title {
-        font-size: 14px;
-        margin: auto;
-        text-align: center;
-        font-weight: bold;
-     }
-     </copy>
-      ```
+        ```
+        <copy>
+        .book-title {
+            font-size: 14px;
+            margin: auto;
+            text-align: center;
+            font-weight: bold;
+            }
+            </copy>
+            ```
 
-      ![App builder home page](images/search-books-inline.png " ")
+    ![App builder home page](images/search-books-inline.png " ")
 
 5. Click **Save**.
 
@@ -229,15 +233,13 @@ In this lab, you will:
 
     - Under Sources:
 
-        - Order By Item: Click **No Order by item** and enter the following:
+        - Order By Item: Click **No Order by item** and enter the following and click OK:
 
-            | Clause |  Key | Display |
-            | --- |  --- | --- |
-            | "TITLE"asc  | TITLE| Title |
-            | "NEW\_PRICE"asc | NEW\_PRICE | Price|
-            | "DISCOUNT"desc| DISCOUNT | Discount |
-
-        - Click OK
+        | Clause |  Key | Display |
+        | --- |  --- | --- |
+        | "TITLE"asc  | TITLE| Title |
+        | "NEW\_PRICE"asc | NEW\_PRICE | Price|
+        | "DISCOUNT"desc| DISCOUNT | Discount |
 
     ![App builder home page](images/order-by-item.png " ")
 
@@ -273,7 +275,7 @@ In this lab, you will:
 
      - Name: **Book Details**
 
-     - Page Mode: Modal Dialog
+     - Page Mode: **Modal Dialog**
 
     Click **Create Page**
 
@@ -291,11 +293,11 @@ In this lab, you will:
 
 7. In the Property Editor, enter/select the following properties:
 
-    - Identification > Title: **Buttons Bar**
+    - Under Identification > Title: **Buttons Bar**
 
-    - Appearance > Template: **Buttons Container**
+    - Under Appearance > Template: **Buttons Container**
 
-     ![App builder home page](images/region-details-bp.png " ")
+    ![App builder home page](images/region-details-bp.png " ")
 
 8. Right-click **Buttons Bar** and Click **Create Page Item**.
 
@@ -303,11 +305,11 @@ In this lab, you will:
 
 9. In the Property Editor, enter/select the following properties:
 
-   - Under Identification:
+    - Under Identification:
 
-      - Name: P18\_BOOK\_ID
+        - Name: P18\_BOOK\_ID
 
-      - Type: Hidden
+        - Type: Hidden
 
 10. Right-click **P18\_BOOK\_ID** and Select **Duplicate**.
 
@@ -323,15 +325,15 @@ In this lab, you will:
 
 13. In the Property Editor, enter/select the following properties:
 
-    - Execution > Point: **Before Header**
+    - Under Execution > Point: **Before Header**
 
     - Under Computation:
 
-       - Type: SQL Query (return single value)
+        - Type: SQL Query (return single value)
 
-       - SQL Query: Copy and paste below code into the code editor
+        - SQL Query: Copy and paste below code into the code editor
 
-       ```
+            ```
        <copy>
         select book_image from obs_books where book_id= :P18_BOOK_ID
         </copy>
@@ -345,23 +347,23 @@ In this lab, you will:
 
     ![App builder home page](images/page-item-buy-links.png " ")
 
-16. Right-click P18\_BUY\_LINKS and Select **Create Computation**.
+16. Right-click **P18\_BUY\_LINKS** and Select **Create Computation**.
 
 17. In the Property Editor, update the following properties:
 
-    - Execution > Point: **Before Header**
+    - Under Execution > Point: **Before Header**
 
     - Under Computation:
 
-       - Type: **SQL Query (return single value)**
+        - Type: **SQL Query (return single value)**
 
-       - SQL Query: Copy and paste below code into the code editor
+        - SQL Query: Copy and paste below code into the code editor
 
-       ```
-       <copy>
-        select BUY_LINKS from obs_books where book_id= :P18_BOOK_ID
-        </copy>
-         ```
+            ```
+            <copy>
+            select BUY_LINKS from obs_books where book_id= :P18_BOOK_ID
+            </copy>
+            ```
 
     ![App builder home page](images/buy-links-computation.png " ")    
 
@@ -413,11 +415,11 @@ In this lab, you will:
        </copy>
        ```
 
-    - Under Appearance > Template: **Blank with Attributes**
+    ![App builder home page](images/book-info.png " ")
 
     - Under Layout > Disable **Start New Row**
 
-    ![App builder home page](images/book-info.png " ")
+    - Under Appearance > Template: **Blank with Attributes**
 
     ![App builder home page](images/book-info-details.png " ")
 
@@ -430,7 +432,7 @@ In this lab, you will:
 
     ![App builder home page](images/book-info-save.png " ")
 
-22. Under **Book Information** region, Select **BOOK_ID**, **NEW_PRICE** and change **Type** to Hidden.
+22. Under **Book Information** region, Select **BOOK\_ID**, **NEW\_PRICE** and change **Type** to Hidden Column.
 
        ![App builder home page](images/bookid-hidden.png " ")
 
@@ -462,9 +464,9 @@ In this lab, you will:
 
 26. In the Property Editor, enter/select the following properties:
 
-     - Identification > Name: **BUY\_LINK**
+     - Under Identification > Name: **BUY\_LINK**
 
-     - Layout > Position: **Next**
+     - Under Layout > Slot: **Next**
 
      - Under Appearance:
 

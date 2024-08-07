@@ -1,11 +1,13 @@
 # Create and Manage a Shopping Cart
 
 ## Introduction
+
 In this lab, you learn to create and manage a shopping cart within an Oracle APEX application. The lab includes adding navigation bar entry, creating a shopping cart page, implementing various interactive components, and integrating backend processes to handle cart operations and checkout procedures. This exercise will demonstrate the comprehensive capabilities of APEX for building dynamic web applications with a strong emphasis on database interaction and user interface design.
 
 Estimated Time: 15 minutes
 
 ### Objectives
+
 In this lab, you will:
 
 - Create a Navigation Bar Entry
@@ -14,6 +16,7 @@ In this lab, you will:
 - Create Application Computations
 
 ## Task 1: Create a Navigation Bar Entry
+
 In this task, you add an entry to the navigation bar that displays the shopping cart icon and item count dynamically.
 
 1. Navigate to **Shared Components**.
@@ -101,7 +104,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     - Under Identification:
 
-        - Title: **Shopping Cart**
+        - Name: **Shopping Cart**
 
         - Type: **Content Row**
 
@@ -158,7 +161,11 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **Image**
 
-        - Image: **&BOOK_IMAGE.**
+        - Image >
+
+            - Source: **URL**
+
+            - URL: **&BOOK_IMAGE.**
 
         - Shape: **No shape**
 
@@ -170,7 +177,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-region-att1.png " ")
 
-8. In Page Rendering, under **Shopping Cart** region, Right-click **Actions** and select **Create Actions**.
+8. In Page Rendering, under **Shopping Cart** region, Right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/create-action9.png " ")
 
@@ -209,9 +216,9 @@ In this task, you develop a new page in the application to display the shopping 
 
 12. Select **Page 17: Shopping Cart** and enter the following:
 
-    -  Under Execute when Page loads: Copy and Paste the below code:
+    -  Under **Execute when Page Loads**: Copy and Paste the below code:
 
-    ```
+     ```
     <copy>
     apex.actions.add([{
     name: "remove-cart",
@@ -230,7 +237,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/page-load.png " ")
 
-13. Right-click **Body** and Select **Create Region**.
+13. Right-Click **Body** and Select **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 
@@ -238,11 +245,11 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/order-info.png " ")
 
-15. Right-click **Order Information** and select **Create Page Item**.
+15. Right-Click **Order Information** and select **Create Page Item**.
 
     ![close dialog](images/order-page-item.png " ")
 
-16. Create the following two page items:
+16. Create the following three page items:
 
     | Name            |  Type   | Label |
     | --------------- |  ------ | --------------- |
@@ -257,7 +264,8 @@ In this task, you develop a new page in the application to display the shopping 
 17. Click **Save**.
 
 ## Task 3: Implement Page Interactions
-In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastle, you set up processes to handle cart operations, such as removing items and clearing the cart.
+
+In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastly, you set up processes to handle cart operations, such as removing items and clearing the cart.
 
 1. Right-click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
 
@@ -267,7 +275,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     - Under Computation:
 
-        - Type: **SQL Query ( returning single value)**
+        - Type: **SQL Query (return single value)**
 
         - SQL Query: Copy and Paste the below code:
 
@@ -283,13 +291,13 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/comp-no-of-books.png " ")
 
-3.  Right-click **P17\_TOTAL** and select **Create Computation**.
+3. Right-click **P17\_TOTAL** and select **Create Computation**.
 
 4. In the Property Editor, enter/select the following:
 
     - Under Computation:
 
-        - Type: **SQL Query ( returning single value)**
+        - Type: **SQL Query (return single value)**
 
         - SQL Query: Copy and Paste the below code:
 
@@ -315,7 +323,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Label: **Clear Shopping Cart**
 
-    - Layout > Position: **Change**
+    - Layout > Slot: **Change**
 
     - Under Appearance:
 
@@ -345,7 +353,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Label: **Proceed to Purchase**
 
-    - Layout > Position: **Create**
+    - Layout > Slot: **Create**
 
     - Under Appearance:
 
@@ -359,7 +367,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
             Click **OK**
 
-    - Under Sever-side Condition:
+    - Under Server-side Condition:
 
         - Type: **Item is NOT NULL**
 
@@ -383,9 +391,9 @@ In this task, you create buttons for removing items from the cart and proceeding
 
      - Under Settings: 
 
-         - Package Name: **OBS\_MANAGE\_ORDERS**
+         - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function Name: **REMOVE\_BOOK**
+         - Procedure/Function: **REMOVE\_BOOK**
 
      - Under Server-side Condition:
 
@@ -453,15 +461,15 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Under Settings: 
 
-         - Package Name: **OBS\_MANAGE\_ORDERS**
+         - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function Name: **CLEAR\_CART**
+         - Procedure/Function: **CLEAR\_CART**
 
      - Server-side Condition > When Button Pressed: **Clear**
 
     ![close dialog](images/clear-sho-cart-process.png " ")
 
-3. Right-click **Processing** and select **Create Branch**.
+3. Right-Click **After Processing** and select **Create Branch**.
 
     ![close dialog](images/create-branch9.png " ")
 
@@ -482,7 +490,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/go-to-books.png " ")
 
-5. Right-click **Processing** and select **Create Branch**.
+5. Right-Click **After Processing** and select **Create Branch**.
 
     ![close dialog](images/create-branch9.png " ")
 
@@ -493,7 +501,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
      - Behavior > Target: Click **No Defined Link**
           - Page: 16
 
-          - Set Items > Name: **P17\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
+          - Set Items > Name: **P16\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
 
           - Clear Cache: **16**
 

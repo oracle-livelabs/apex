@@ -1,11 +1,13 @@
 # Customize Application Theme
 
 ## Introduction
+
 During this lab, you learn how to customize theme of Online Book Store Application using theme roller. Theme Roller is a live CSS editor that enables you to quickly change the theme style, colors, rounded corners and other application attributes.
 
 Estimated Time: 2 minutes
 
 ### Objectives
+
 In this lab, you will:
 
 - Update Theme of the Application using Theme Roller
@@ -22,11 +24,11 @@ In this lab, you will:
 
 3. Update the following:
 
-    - Theme > Select Theme: **Redwood Light**
+    - Under Theme > Select Theme: **Redwood Light**
 
-    - Redwood Options > Layout: **Floating**
+    - Under Redwood Options > Layout: **Floating**
 
-    - Appearance: Update all the options to **Dark**.
+    - Under Appearance > Update all the options to **Dark**.
 
     Click **Save**
 

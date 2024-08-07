@@ -1,11 +1,13 @@
 # Set Up Add to Cart Functionality
 
 ## Introduction
-This lab provides detailed instructions on enhancing the Book Details page in a application to manage shopping cart functionalities. It involves creating a package to handle orders, setting up application items and processes, and configuring page elements to allow users to add and remove books from their cart, update cart quantities, and dynamically reflect these changes on the user interface. The steps include creating necessary backend procedures and functions, setting up computations and processes, and updating the user interface components accordingly.
+
+This lab provides detailed instructions on enhancing the Book Details page in an application to manage shopping cart functionalities. It involves creating a package to handle orders, setting up application items and processes, and configuring page elements to allow users to add and remove books from their cart, update cart quantities, and dynamically reflect these changes on the user interface. The steps include creating necessary backend procedures and functions, setting up computations and processes, and updating the user interface components accordingly.
 
 Estimated Time: 25 minutes
 
 ### Objectives
+
 In this lab, you will:
 
 - Create a Package to manage process of adding, removing, and processing orders and wishlist items.
@@ -15,6 +17,7 @@ In this lab, you will:
 - Set Up Book Details Page
 
 ## Task 1: Create a Package to manage orders
+
 In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
 
 **Procedure add\_book**: Adds a book to a collection named "BOOKS" along with its quantity.
@@ -51,45 +54,46 @@ To Create a Package:
 
      ```
      <copy>
-   create or replace PACKAGE OBS_MANAGE_ORDERS
-   AS
-  --------------------------------------------------------------
-  create procedure for add a book temporarily
-  PROCEDURE add_book (
-    p_book  IN NUMBER,
-    p_quantity IN NUMBER);
-  --------------------------------------------------------------
-  create procedure for remove a book temporarily
-  PROCEDURE remove_book (
-    p_book IN NUMBER);
-  --------------------------------------------------------------
-  create procedure for add a book in wishlist
-    PROCEDURE add_to_wishlist (
-    p_book_id IN NUMBER,
-    p_user_id IN NUMBER);
-  -------------------------------------------------------------create procedure for remove a book from wishlist
-    PROCEDURE remove_from_wishlist (
-    p_book_id IN NUMBER,
-    p_user_id IN NUMBER);
-  --------------------------------------------------------------
-  create function to get the number of items in the shopping cart
-  FUNCTION Get_quantity
-  RETURN NUMBER;
-  --------------------------------------------------------------
- create procedure for validate if a book exists in the shopping cart
-  FUNCTION book_exists(
-    p_book IN NUMBER)
-  RETURN NUMBER;
-  ------------------------------------------------------------
-  create procedure for clear the cart
-  PROCEDURE clear_cart;
-  --------------------------------------------------------------
-  create procedure to insert orders
-  PROCEDURE create_order (
-    p_user_id    IN VARCHAR2,
-    p_order_id   OUT obs_orders.order_id%TYPE);
- END OBS_MANAGE_ORDERS;
-  /
+    create or replace PACKAGE OBS_MANAGE_ORDERS
+       AS
+       
+      -- create procedure for add a book temporarily
+      PROCEDURE add_book (
+        p_book  IN NUMBER,
+        p_quantity IN NUMBER);
+
+      -- create procedure for remove a book temporarily
+      PROCEDURE remove_book (
+        p_book IN NUMBER);
+     
+      -- create procedure for add a book in wishlist
+        PROCEDURE add_to_wishlist (
+        p_book_id IN NUMBER,
+        p_user_id IN NUMBER);
+
+      -- create procedure for remove a book from wishlist
+      PROCEDURE remove_from_wishlist (
+        p_book_id IN NUMBER,
+        p_user_id IN NUMBER);
+     
+     -- create function to get the number of items in the shopping cart
+      FUNCTION Get_quantity
+      RETURN NUMBER;
+      
+     -- create procedure for validate if a book exists in the shopping cart
+      FUNCTION book_exists(
+        p_book IN NUMBER)
+      RETURN NUMBER;
+      
+     -- create procedure for clear the cart
+      PROCEDURE clear_cart;
+
+     -- create procedure to insert orders
+      PROCEDURE create_order (
+        p_user_id    IN VARCHAR2,
+        p_order_id   OUT obs_orders.order_id%TYPE);
+     END OBS_MANAGE_ORDERS;
+      /
      </copy>
       ```
 
@@ -232,6 +236,7 @@ END OBS_MANAGE_ORDERS;
    ![App builder home page](images/pack-body1.png " ")
 
 ## Task 2: Create Application items
+
 In this task, you define application items to store session state information such as cart total, shopping cart items, and user details.
 
 To create Application items:
@@ -240,7 +245,7 @@ To create Application items:
 
    ![App builder home page](images/app-build2.png " ")
 
-2. Select **Online BookStore** application.
+2. Select **Online Bookstore** application.
 
    ![App builder home page](images/obs-app.png " ")
 
@@ -258,7 +263,7 @@ To create Application items:
 
 6. Add the following five application items one after the other:
 
-   | Name |  
+   | Name |
    | --- |
    | CART\_TOTAL |
    | SHOPPING\_CART\_ITEMS |
@@ -289,21 +294,21 @@ To create Application Processes:
 
 4. Enter/select the following:
 
-   - Under Identification:
+    - Under Identification:
 
-       - Name: **Initialize Shopping Cart Info**
+        - Name: **Initialize Shopping Cart Info**
 
-       - Point: **On Load: Before Header (page template header)**
+        - Point: **On Load: Before Header (page template header)**
 
        Click **Next**.
 
-  ![App builder home page](images/app-process-next.png " ")
+    ![App builder home page](images/app-process-next.png " ")
 
 5. Enter the following:
 
     - Source > Code: Copy and paste the below code.
 
-    ```
+        ```
     <copy>
      -- Initialize shopping cart navigation bar to show  appropriate icon and count
      DECLARE
@@ -329,6 +334,7 @@ To create Application Processes:
     ![App builder home page](images/create-process.png " ")
 
 ## Task 4: Create Application computations
+
 In this task, you set up computations to determine user-related information upon authentication.
 
 To create Application computations:
@@ -345,17 +351,17 @@ To create Application computations:
 
 4. Enter/select the following:
 
-   - Item > Computation Item: **USER_ID**
+    - Item > Computation Item: **USER_ID**
 
-   - Frequency > Computation Point: **After Authentication**
+    - Frequency > Computation Point: **After Authentication**
 
-   - Under Computation:
+    - Under Computation:
 
-       - Computation Type: **SQL Query (return single value)**
+        - Computation Type: **SQL Query (return single value)**
 
-       - Computation: Copy and paste below code:
+        - Computation: Copy and paste below code:
 
-       ```
+        ```
        <copy>
        SELECT U.USER_ID FROM obs_USERS U
        WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
@@ -404,7 +410,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Application ID](images/app-build3.png " ")
 
-2. On the Workspace home page, Select **18: Book Details** page.
+2. On the Workspace home page, Select **18 - Book Details** page.
 
     ![18: Book Details](images/page-18.png " ")
 
@@ -449,7 +455,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
         ```
          - Display Extra Values: **Toggle Off**
 
-         - Display Null Value: **Toggle Off**
+         - Display Null Values: **Toggle Off**
 
   ![Quantity Page Item](images/book-in-cart-comp.png " ")
 
@@ -483,13 +489,13 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Identification:
 
-        - Name: **Add\_to\_Cart**
+        - Button Name: **Add\_to\_Cart**
 
         - Label: **Add To Cart**
 
-    - Layout > Position: **Next**
+    - Under Layout > Slot: **Next**
 
-    - Appearance > Hot: **Toggle Off**
+    - Under Appearance > Hot: **Toggle On**
 
     - Under Server-Side Condition:
 
@@ -505,19 +511,19 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Identification:
 
-        - Name: **Remove\_from\_Cart**
+        - Button Name: **Remove\_from\_Cart**
 
         - Label: **Remove From Cart**
 
-    - Layout > Position: **Edit**
+    - Under Layout > Slot: **Edit**
 
-        - Appearance > Click **Template Options**
+    - Under Appearance > Click **Template Options**
 
-            - Type: **Danger**
+        - Type: **Danger**
 
-            - Spacing Right: **Large**
+        - Spacing Right: **Large**
 
-            Click **OK**.
+        Click **OK**.
 
     - Under Server-Side Condition:
 
@@ -545,7 +551,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Procedure or Function: **ADD\_BOOK**
 
-    - Server-side Condition > When button pressed: **Add_to_cart**
+    - Server-side Condition > When button pressed: **Add\_to\_cart**
 
     ![Add to cart](images/add-process.png " ")
 
@@ -604,8 +610,6 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Procedure or Function: **GET\_QUANTITY**
 
-    - Server-side Condition > When button pressed: **Remove\_from\_cart**
-
     ![Calculate Shopping Cart Items](images/cal-item-process.png " ")
 
 20. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
@@ -626,7 +630,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Type: **Close Dialog**
 
-    - Under Settings > Item to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
+    - Under Settings > Items to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
 
     ![close dialog](images/close-dialog.png " ")
 
@@ -635,7 +639,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 ## Task 6: Add Shopping Cart to Navigation Bar list
 In this task, you create a navigation bar entry that displays a shopping cart icon, links to page 17, and shows a badge with the number of items in the shopping cart.
 
-1. Navigate to **Shared Component**.
+1. Navigate to **Shared Components**.
 
     ![close dialog](images/sc-9.png " ")
 
@@ -657,7 +661,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
         - Sequence: **4**
 
-        - Image/Class: **&SHOPPING_CART_ICON.**
+        - Image/Class: **&SHOPPING\_CART\_ICON.**
 
         - List Entry Label: **Shopping Cart**
 
@@ -667,7 +671,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
         - Clear Cache: **17**
 
-    - Badge Value: **&SHOPPING_CART_ITEMS.**
+    - Badge Value: **&SHOPPING\_CART\_ITEMS.**
 
     - List Item CSS Classes: **js-shopping-cart-item**
 
@@ -714,7 +718,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     - Setting > Code: Copy and paste the below code:
 
-    ```
+        ```
     <copy>
     // Update Badge Text
     apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
@@ -725,7 +729,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
   ![close dialog](images/true-action.png " ")
 
-6. Right-click **False** action and click **Create FALSE Action**.
+6. Right-Click on **False** action and click **Create FALSE Action**.
 
     ![close dialog](images/false-action.png " ")
 
