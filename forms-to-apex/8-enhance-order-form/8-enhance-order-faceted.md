@@ -10,7 +10,7 @@ Estimated Time: 5 Minutes
 
 In this lab, you:
 
-- Enhance the Orders Form Page with hidden fields, validation, and layout improvements.
+- Enhance the orders form page with hidden fields, validation, and layout improvements.
 - Create a validation to ensure correct order and ship dates.
 - Add an interactive report for order items.
 - Implement dynamic actions to refresh the report.
@@ -63,13 +63,13 @@ In this lab, you:
 
 ## Task 2: Create Validations
 
-In this task, you will create a validation in the Orders Form to validate that the ship date is not happening before the order date.
+In this task, you will create a validation in the orders form to validate that the ship date is not happening before the order date.
 
-1. Go to the Processing tab in the left pane. Right-click Validating and select Create Validation.
+1. Go to the **Processing** tab in the left pane. Right-click **Validating** and select **Create Validation**.
 
  ![App Builder](images/create-validation.png " ")
 
-2. In the Property editor, enter/select the following:
+2. In the property editor, enter/select the following:
 
     - Identification > Name: **Validate Order Dates**
 
@@ -97,7 +97,7 @@ In this task, you will create a validation in the Orders Form to validate that t
 
  ![App Builder](images/create-sub-region.png " ")
 
-2. In the Property Editor, enter/select the following:
+2. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -124,7 +124,7 @@ In this task, you will create a validation in the Orders Form to validate that t
  ![App Builder](images/server-side.png " ")
 
 3. Expand the columns for the **Items** region.
-Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the type to **Hidden**.
+Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the type to **Hidden**.
 
  ![App Builder](images/item-columns-hidden.png " ")
 
@@ -158,9 +158,9 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
             - Clear Cache: **10**
 
- Click **OK**.
+    Click **OK**.
 
- ![App Builder](images/add-item-btn.png " ")
+    ![App Builder](images/add-item-btn.png " ")
 
 6. Select **Items** region, navigate to the **Attributes** pane and enter/select the following:
 
@@ -174,18 +174,18 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
             - Set Item as follows:
 
- | Name | Value |
- | ---- | ----- |
- | P10\_ORD\_ID | #ORD_ID#  |
- | P10\_ITEM\_ID| #ITEM_ID# |
+    | Name | Value |
+    | ---- | ----- |
+    | P10\_ORD\_ID | #ORD_ID#  |
+    | P10\_ITEM\_ID| #ITEM_ID# |
 
             - Clear cache: **10**
 
- Click **OK**.
+    Click **OK**.
 
- ![App Builder](images/attributes.png " ")
+    ![App Builder](images/attributes.png " ")
 
-7. Under **Items** region, click **PRODUCT_ID** Column and enter/select the following:
+7. Under **Items** region, click **PRODUCT_ID** column and enter/select the following:
 
     - Identification > Type: **Plain Text (based on List of Values)**
 
@@ -193,7 +193,7 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     - Heading > Heading: **Product**
 
- ![App Builder](images/product-id.png " ")
+    ![App Builder](images/product-id.png " ")
 
 8. Click **Save**.
 
@@ -213,13 +213,13 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
         - Region > **Items**
 
- ![App Builder](images/refresh.png " ")
+    ![App Builder](images/refresh.png " ")
 
 3. Click **Refresh** action and select the following:
 
     - Affected Elements > Region: **Items**
 
- ![App Builder](images/refresh1.png " ")
+    ![App Builder](images/refresh1.png " ")
 
 4. Click **Save**.
 
@@ -235,21 +235,21 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
             - Page: **7**
 
- Click **OK**.
+    Click **OK**.
 
- ![App Builder](images/redirect-to-7.png " ")
+    ![App Builder](images/redirect-to-7.png " ")
 
 2. Click **Save**.
 
 ## Task 6: Run the Application
 
-1. Run the Application and go to the Orders - Faceted Search. Click any ID of the orders created.
+1. Run the application and go to the **Orders - Faceted Search** page. Click any **ID** of the orders created.
 
- ![App Builder](images/edit-order.png " ")
+    ![App Builder](images/edit-order.png " ")
 
 2. Click **Actions**. Select **Data > Compute**.
 
- ![App Builder](images/compute1.png " ")
+    ![App Builder](images/compute1.png " ")
 
 3. Enter/select the following:
 
@@ -259,39 +259,39 @@ Hold the Ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     - Computation Expression: **D*E**
 
- Click **Apply**.
+    Click **Apply**.
 
- ![App Builder](images/compute-apply1.png " ")
+    ![App Builder](images/compute-apply1.png " ")
 
- ![App Builder](images/item-total.png " ")
+    ![App Builder](images/item-total.png " ")
 
-3. Click **Actions** Menu. Select **Data > Aggregate**
+3. Click **Actions** menu. Select **Data > Aggregate**
 
     - Function: **Sum**
 
     - Column: **Item Total**
 
- Click **Apply**.
+    Click **Apply**.
 
- ![App Builder](images/aggregate.png " ")
+    ![App Builder](images/aggregate.png " ")
 
- ![App Builder](images/sum-total.png " ")
+    ![App Builder](images/sum-total.png " ")
 
- ![App Builder](images/item-total-sum.png " ")
+    ![App Builder](images/item-total-sum.png " ")
 
-4. Click **Actions** Menu. Select **Report > Save Report**
+4. Click **Actions** menu. Select **Report > Save Report**
 
     - Default Report Type: **Primary**
 
- Click **Apply**.
+    Click **Apply**.
 
- ![App Builder](images/save-report-item.png " ")
+    ![App Builder](images/save-report-item.png " ")
 
- ![App Builder](images/apply-save.png " ")
+    ![App Builder](images/apply-save.png " ")
 
 ## Summary
 
-In this lab, we enhanced the Orders Form Page. You converted the payment type selection into a visually appealing Radio Group and created validations to ensure the ship date is not before the order date. Additionally, you added an interactive report for items, a dynamic action to refresh the report and configure buttons for better navigation and functionality.
+In this lab, we enhanced the orders form page. You converted the payment type selection into a visually appealing radio group and created validations to ensure the ship date is not before the order date. Additionally, you added an interactive report for items, a dynamic action to refresh the report and configure buttons for better navigation and functionality.
 
 ## Acknowledgements
 

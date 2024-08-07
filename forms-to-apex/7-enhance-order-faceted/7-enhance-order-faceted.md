@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Let's recap what you have built so far for the Orders form. In Lab 4, you created a Faceted Search + Classic Report Page, and in this lab, you will enhance that page and link it to the recent items page you created.
+Let's recap what you have built so far for the orders form. In Lab 4, you created a faceted search and classic report, and in this lab, you will enhance that page and link it to the recent items page you created.
 
 Please note that other options you can create are available in the wizard:
 
@@ -18,14 +18,14 @@ Estimated Time: 5 Minutes
 
 In this lab, you:
 
-- Remove an unnecessary facet from the Orders Faceted Search page.
-- Rename and customize the Orders Report region.
+- Remove an unnecessary facet from the orders faceted search page.
+- Rename and customize the orders report region.
 - Configure the ID column to link to the Order Details page.
-- Create a button to facilitate creating new orders and link it to the Order Details page.
+- Create a button to facilitate creating new orders and link it to the order details page.
 
 ## Task 1: Enhance the Orders Faceted Search Page
 
-The Faceted Search Page was created with four facets:
+The faceted search page was created with four facets:
 
 - Sales Representative
 - Customer
@@ -34,7 +34,7 @@ The Faceted Search Page was created with four facets:
 
 Since order filled is not a key facet search, let's remove it by following these steps:
 
-1. Navigate to the Page Finder and select the **Orders Faceted Search**.
+1. Navigate to the page finder and select the **Orders Faceted Search**.
 
  ![App Builder](images/page-finder-7.png " ")
 
@@ -42,7 +42,7 @@ Since order filled is not a key facet search, let's remove it by following these
 
  ![App Builder](images/delete-facet.png " ")
 
-3. Now, Navigate to the **Ord** region. In the property editor, update the following:
+3. Now, navigate to the **Ord** region. In the property editor, update the following:
 
     - Identification > Name: **Orders Report**
 
@@ -54,7 +54,7 @@ Since order filled is not a key facet search, let's remove it by following these
 
  ![App Builder](images/orders-report.png " ")
 
-4. Expand the columns of the Orders Report region. Click the **ID** column and update the following:
+4. Expand the columns of the orders report region. Click the **ID** column and update the following:
 
     - Identification > Type: **Link**
 
@@ -104,7 +104,7 @@ Since order filled is not a key facet search, let's remove it by following these
 
 ## Summary
 
-In this lab, you learned how to enhance the Orders Faceted Search Page by removing non-essential facets and improving the overall functionality and appearance. Additionally, you configured the ID column to act as a link to another page and created a button for easy navigation to the order creation page.
+In this lab, you learned how to enhance the orders faceted search page by removing non-essential facets and improving the overall functionality and appearance. Additionally, you configured the ID column to act as a link to another page and created a button for easy navigation to the order creation page.
 
 ## Acknowledgements
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This Lab analyses your current Forms environment and identifies the important business logic. The first part of the Lab provides an overview guide on understanding forms modules and how they compare to APEX modules. The second part provides the sample forms used in this live Lab.
+This Lab analyses your current Forms environment and identifies the important business logic. The first part of the Lab provides an overview guide on understanding forms modules and how they compare to APEX modules. The second part provides the sample forms used in this live lab.
 
 *Note: This Lab assumes you have an Oracle Forms setup in your environment.*
 
@@ -18,7 +18,7 @@ In this lab, you:
 
 To modernize from Oracle Forms to APEX, you must understand the current business logic of your forms and where they are implemented. This is key for deciding how to adapt them to the APEX environment. The rule of thumb is always to push as much business logic as possible into the Oracle Database.
 
-For example, the business logic in Oracle Forms resides in the Triggers and Program Units. You can incorporate this logic into Oracle APEX as SQL or PL/SQL code that invokes database packages, procedures, or functions. The same applies to database objects, which do not need alteration when transitioning from Forms to APEX.
+For example, the business logic in Oracle Forms resides in the triggers and program units. You can incorporate this logic into Oracle APEX as SQL or PL/SQL code that invokes database packages, procedures, or functions. The same applies to database objects, which do not need alteration when transitioning from Forms to APEX.
 
 However, in Oracle Forms, business logic is also intertwined with user interface items such as go\_item, set\_item\_property, etc. In this case, separating and pushing logic to the database is impossible. In some cases, pushing the business logic of the triggers and program units into the database might be challenging.
 
@@ -29,23 +29,23 @@ You can add business logic to Forms through the PL/SQL attached libraries, which
 - [apex.oracle.com](https://apex.oracle.com/en/solutions/apps/)
 - [apex.world](https://apex.world/ords/f?p=100:700)
 
-Understanding how the mappings work on Data Blocks is also essential. In Forms, you can map Data Blocks into pages and page regions in APEX. There are different types of data blocks on Forms:
+Understanding how the mappings work on data blocks is also essential. In Forms, you can map data blocks into pages and page regions in APEX. There are different types of data blocks on Forms:
 
 1. **Single Record Blocks**:
-In Forms, you may use a single record block for data queries and modifying returned records. In APEX, you generally map Oracle Forms blocks that are insertable, updatable, and have a primary key to an Interactive Report with a form or an editable Interactive Grid. The Edit link on the Interactive Report allows access to a specific record for updating or deleting, and the interactive report lets you query the entries. An editable interactive grid lets you change several rows simultaneously without navigating to another form page.
+In Forms, you may use a single record block for data queries and modifying returned records. In APEX, you generally map Oracle Forms blocks that are insertable, updatable, and have a primary key to an interactive report with a form or an editable Interactive Grid. The edit link on the interactive report allows access to a specific record for updating or deleting, and the interactive report lets you query the entries. An editable interactive grid lets you change several rows simultaneously without navigating to another form page.
 
 2. **Tabular Forms**:
-Tabular Forms blocks in Forms map to an Interactive Grid in APEX, allowing you to edit each item later as needed (select list, text field, number field, etc.).
+Tabular Forms blocks in Forms map to an interactive grid in APEX, allowing you to edit each item later as needed (select list, text field, number field, etc.).
 
 3. **Master Detail Blocks**:
-In Forms, Master Detail blocks highlight relationships between data blocks. In APEX, you can map this through the Master Detail region. The child region represents the "detail," and the parent region represents the "master," which can be a page region such as an interactive grid. Both regions connect through the foreign key relationship between the columns. You can define several child relationships deep and any number of child relationships wide.
+In Forms, master detail blocks highlight relationships between data blocks. In APEX, you can map this through the master detail region. The child region represents the "detail," and the parent region represents the "master," which can be a page region such as an interactive grid. Both regions connect through the foreign key relationship between the columns. You can define several child relationships deep and any number of child relationships wide.
 
 4. **Non-Database Block**:
 Any block in Forms not associated with a database table or view is a non-database block. These blocks usually hold menus, lists, buttons, and other components. In APEX, we define these components based on their type. For example, the page designer defines buttons, while shared components define navigation menus.
 
 ## Task 2: Analyze Sample Forms
 
-To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the Customer's form. Download the Sample Forms
+To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the customer's form. Download the Sample Forms.
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
 
@@ -75,15 +75,15 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - Click **Shared Components**.
 
-    - Under **Other Components**, Click **List of Values**.
+    - Under **Other Components**, click **List of Values**.
 
-    - Click the list of values and update the Name and SQL Query.
+    - Click the list of values and update the name and SQL Query.
 
     *Note: Remember that you can define additional display columns for item types that support multiple display columns.*
 
    ![LOVs SQL Query](images/sales-rep-lovs1.png " ")
 
-4. **Alerts**: We have two alerts in the Customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
+4. **Alerts**: We have two alerts in the customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
     To customize the display message in Oracle APEX, follow the following steps:
 
@@ -95,7 +95,7 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - Click **Create**.
 
-    - Create Shortcut **From Scratch**.
+    - Create shortcut **From Scratch**.
 
     - Click Next.
 
@@ -103,23 +103,25 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - For Type, select **Text with JavaScript Escaped Single Quotes**.
 
-    - For a Shortcut, enter the original message.
+    - For a shortcut, enter the original message.
 
     - Click **Create**.
 
     You have created the message and need to update the shortcut in the APEX Form.
 
-    - Go to the **Customers** Form page.
+    - Go to the **Customers** form page.
 
     - In the left pane, click the page name.
 
-    - Navigate to Property Editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
+    - Navigate to property editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
 
-    The second, **CONFIRM\_REVERT**, is handled natively by APEX through the Warn on Unsaved Changes property, which can warn users when navigating away from the page with unsaved changes.
-  ![Alerts](images/alerts1.png " ")
+    The second, **CONFIRM\_REVERT**, is handled natively by APEX through the warn on unsaved changes property, which can warn users when navigating away from the page with unsaved changes.
+
+    ![Alerts](images/alerts1.png " ")
 
 5. **Program Units**: The customer form contains seven program units. However, we cannot map them in our APEX app because either APEX handles them natively during form creation or they are not applicable.
-  ![Program Units](images/program-units1.png " ")
+
+    ![Program Units](images/program-units1.png " ")
 
 ## Summary
 

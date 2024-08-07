@@ -26,7 +26,7 @@ In this lab, you:
 
     ![App Builder](images/select-form.png " ")
 
-4. On Create page wizard, enter/select the following:
+4. On create page wizard, enter/select the following:
 
     - Page Number: **13**
 
@@ -64,7 +64,7 @@ The S_ITEM table requires six columns: ID, ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE
 
     ![App Builder](images/create-dynamic-actions1.png " ")
 
-2. In the property editor, Under Identification > Name: Enter **Get Product Price**.
+2. In the property editor, under Identification > Name: enter **Get Product Price**.
 
     ![App Builder](images/get-product-price1.png " ")
 

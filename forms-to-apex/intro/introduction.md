@@ -14,9 +14,9 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Understand Oracle Forms and Oracle APEX
-- Analyze and Extract Business Logic
-- Implement Oracle Forms functionalities using APEX
+- Understand Oracle Forms and Oracle APEX.
+- Analyze and Extract Business Logic.
+- Implement Oracle Forms functionalities using APEX.
 
 *Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 

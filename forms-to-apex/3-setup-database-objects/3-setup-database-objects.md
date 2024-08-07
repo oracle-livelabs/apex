@@ -38,7 +38,7 @@ To create database objects, you need to download the following three files:
 
     ![Data Insert File](images/pkg.png " ")
 
-4. The three scripts are now uploaded to the SQL Scripts Workspace page. You need to run them to create and populate the database objects. At the **forms\_ddl.sql** script level, Click the run arrow under the label **Run** and then **Run Now** to confirm.
+4. The three scripts are now uploaded to the SQL Scripts workspace page. You need to run them to create and populate the database objects. At the **forms\_ddl.sql** script level, click the run arrow under the label **Run** and then **Run Now** to confirm.
 
     ![Data Insert File](images/run-forms-ddl.png " ")
 
@@ -66,7 +66,7 @@ To create database objects, you need to download the following three files:
 
     ![Data Insert File](images/run-now-pkg.png " ")
 
-9. Navigate to **SQL Workshop** and select **Object Browser** to view the tables and the created objects. On the right tab, under Table, click **S\_CUSTOMER**.
+9. Navigate to **SQL Workshop** and select **Object Browser** to view the tables and the created objects. On the right tab, under **Table**, click **S\_CUSTOMER**.
 
     ![Data Insert File](images/navigate-object.png " ")
 
@@ -76,7 +76,7 @@ To create database objects, you need to download the following three files:
 
 ## Summary
 
-Now that the workspace has been populated with database objects and data content, we can proceed to the next lab creating an APEX Application using these database objects.
+Now that the workspace has been populated with database objects and data content, we can proceed to the next lab creating an APEX application using these database objects.
 
 ## Acknowledgements
 

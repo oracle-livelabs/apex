@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create an Oracle APEX application using the Create Application Wizard. This process will help you transition from Oracle Forms to APEX by creating a modern web application interface for your database objects.
+In this lab, you will create an Oracle APEX application using the create application wizard. This process will help you transition from Oracle Forms to APEX by creating a modern web application interface for your database objects.
 
 Before we begin, let's recap what we have set up so far:
 
@@ -19,19 +19,19 @@ Estimated Time: 15 Minutes
 
 In this lab, you:
 
-- Create an Oracle APEX application using the Create Application Wizard.
+- Create an Oracle APEX application using the create application wizard.
 - Add multiple types of pages such as faceted search, interactive reports, and master-detail pages to the APEX application.
 - Manage and enhance application pages.
 
 ## Task 1: Create an Application
 
-1. First, login into your APEX workspace.
+1. First, log in into your APEX workspace.
 
 2. Click **App Builder**.
 
     ![App Builder](images/app-builder.png " ")
 
-3. On App Builder page, click **Create a New App**.
+3. On app builder page, click **Create a New App**.
 
     ![Create a New App](images/create-new-app.png " ")
 
@@ -39,7 +39,7 @@ In this lab, you:
 
     ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-5. Since you will create a new application, enter the name **Modernization** and leave the App Icon and Appearance with default values. Click **Add Page**.
+5. Since you will create a new application, enter the name **Modernization** and leave the app icon and appearance with default values. Click **Add Page**.
 
     ![Add Page](images/add-page1.png " ")
 
@@ -49,7 +49,7 @@ In this lab, you:
 
     ![faceted search](images/faceted-search1.png " ")
 
-7. For Add Faceted Search Page, enter/ select the following:
+7. For add faceted search page, enter/ select the following:
 
     - Page Name: **Customer - Faceted Search**
 
@@ -61,11 +61,11 @@ In this lab, you:
 
    ![faceted search](images/add-faceted-search-page1.png " ")
 
-8. On Create an Application page, click **Add Page** to add another page for Customers table (S\_CUSTOMER) and select **Interactive Report**.
+8. On create an application page, click **Add Page** to add another page for customers table (S\_CUSTOMER) and select **Interactive Report**.
 
     ![interactive report](images/interactive-report.png " ")
 
-9. For the Add Report Page, enter/select the following:
+9. For the add report page, enter/select the following:
 
     - Page Name: **Customer – Interactive Report**
 
@@ -77,11 +77,12 @@ In this lab, you:
 
     ![interactive report](images/add-report-page1.png " ")
 
-10. On the Create an Application page, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
+10. On the create an application page, add another page for the ORDERS table by clicking **Add Page** as done previously and selecting **Master Detail**.
 
     ![master detail](images/master-detail.png " ")
 
-11. For Add Master Detail Page, enter/select the following:
+11. For add master detail page, enter/select the following:
+
     - Page Name: **Orders – Stacked**
 
     - Select **Stacked** as Master Detail layout page.
@@ -93,11 +94,12 @@ In this lab, you:
     Click **Add Page**.
 
     ![master detail](images/add-master-detail-page.png " ")
+
 12. Add a new form for the S_ORD table. Click **Add Page** and select **Faceted Search**.
 
     ![Faceted Search](images/faceted-search2.png " ")
 
-13. On Add Faceted Search Page, enter/select the following:
+13. On Add faceted search page, enter/select the following:
 
     - Page Name: **Orders - Faceted Search**
 
@@ -107,7 +109,7 @@ In this lab, you:
 
     ![Faceted Search](images/add-faceted-search-page21.png " ")
 
-14. Under Features, Check **Install Progressive Web App** and Click **Create Application**.
+14. Under features, check **Install Progressive Web App** and click **Create Application**.
 
     ![create application](images/create-app11.png " ")
 
@@ -125,15 +127,15 @@ In this lab, you:
 
 ## Task 3: Create Side-by-Side Master Detail Page
 
-1. Go back to the Application Builder to create a new page for Orders. Click **Create Page**.
+1. Go back to the application builder to create a new page for orders. Click **Create Page**.
 
     ![application](images/create-page1.png " ")
 
-2. On Create a Page dialog, select **Master Detail**.
+2. On create a page dialog, select **Master Detail**.
 
     ![application](images/master-detail5.png " ")
 
-3. Previously, you created a master detail page for Orders and Items in a stacked style. Now, you will create another type of Master Detail page in a Side-by-Side style. For that, click **Side-by-Side** and click **Next**.
+3. Previously, you created a master detail page for orders and items in a stacked style. Now, you will create another type of master detail page in a side-by-side style. For that, click **Side-by-Side** and click **Next**.
 
     ![application](images/create-master-detail1.png " ")
 
@@ -167,29 +169,29 @@ In this lab, you:
 
     - **Central Pane**: This pane includes five tabs: Layout, Component View, Messages, Page Search, and Help.
 
-    - **Right Pane**: Displays the Property Editor. Use the Property Editor to update attributes for the selected component.
+    - **Right Pane**: Displays the property editor. Use the property editor to update attributes for the selected component.
 
   ![application](images/panes.png " ")
 
-7. Now **Run** this page clicking the green play button at the top right of Page Designer and here you see the other Master-Detail layout, other than Stacked one, in which three panel are displayed:
+7. Now **Run** this page clicking the green play button at the top right of page Designer and here you see the other master-detail layout, other than stacked one, in which three panel are displayed:
 
-    - **Left vertical Panel**: Here S\_ORD Master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
+    - **Left vertical Panel**: Here S\_ORD master table primary and secondary display columns (DATE\_ORDERED, PAYMENT\_TYPE) are displayed.
 
-    - **Upper Horizontal Panel**: Here, other S\_ORD Master table details are displayed, when the primary and secondary columns are chosen accordingly.
+    - **Upper Horizontal Panel**: Here, other S\_ORD master table details are displayed, when the primary and secondary columns are chosen accordingly.
 
     - **Lower Horizontal Panel**: Here S\_ITEM detail table items are displayed and which displayed values are referenced accordingly to the related Order ID.
 
   ![application](images/orders-side.png " ")
 
-8. If you click on a key element on Left Vertical Panel (example: 9/18/2007 CHECK) you get the details, in a single page, of Orders master table and Order Items detail one.
+8. If you click on a key element on left vertical panel (example: 9/18/2007 CHECK) you get the details, in a single page, of orders master table and order items detail one.
 
     ![application](images/orders-side2.png " ")
 
 ## Task 4: Create Drill-down Master Detail Page
 
-In this task, you will create another Master-Detail style page for Orders with **Drill Down** layout.
+In this task, you will create another master-detail style page for orders with **Drill Down** layout.
 
-1. Navigate back to Page Designer, Navigate to **(+ v)** from page designer toolbar and click **Page**.
+1. Navigate back to page designer, navigate to **(+ v)** from page designer toolbar and click **Page**.
 
     ![application](images/create-page2.png " ")
 
@@ -239,11 +241,11 @@ In this task, you will create another Master-Detail style page for Orders with *
 
     ![application](images/run-drill.png " ")
 
-6. The Master Detail Order Items Drill Down shows up in the Home menu pane and the report with Master Orders records. If you try to click on the edit icon of a specific Orders record you see the Drill-Down display of the Master-Detail report page.
+6. The master detail order items drill down shows up in the home menu pane and the report with master orders records. If you try to click on the edit icon of a specific orders record you see the drill-down display of the master-detail report page.
 
     ![application](images/edit-drill1.png " ")
 
-7. If you click on the arrows under the “Form on S\_ORD” panel, you can navigate through the Master Orders table rows, and corresponding Order Items Detail rows are displayed accordingly.
+7. If you click on the arrows under the “Form on S\_ORD” panel, you can navigate through the Master orders table rows, and corresponding order items detail rows are displayed accordingly.
 
     ![application](images/view-drill.png " ")
 

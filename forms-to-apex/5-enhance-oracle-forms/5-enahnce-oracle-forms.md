@@ -13,14 +13,14 @@ Estimated Time: 15 Minutes
 In this lab, you:
 
 - Configure List of Values
-- Define and organize facets for the Faceted Search page to filter data effectively.
-- Define and personalize the Interactive Report views, allowing end-users to interact with and save their report configurations.
-- Create and organize navigation menu entries for Customers and Orders, and assign appropriate parent list entries to make the menu cleaner and more user-friendly.
+- Define and organize facets for the faceted search page to filter data effectively.
+- Define and personalize the interactive report views, allowing end-users to interact with and save their report configurations.
+- Create and organize navigation menu entries for customers and orders, and assign appropriate parent list entries to make the menu cleaner and more user-friendly.
 - Disable authentication to make the application publicly accessible, suitable for a public-facing application.
 
 ## Task 1: Configure List of Values
 
-There are five lists of values that can be useful in the Faceted Search Page and Orders Page:
+There are five lists of values that can be useful in the faceted search page and orders Page:
 
 - **S\_CUSTOMER.CREDIT\_RATING**: The table S\CUSTOMER has a column named CREDIT\_RATING with a check constraint. The column can only contain the following values: EXCELLENT, GOOD, POOR. Creating a list of values is important to prevent end-users from entering invalid options.
 
@@ -34,7 +34,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 - **S\_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
 
-1. To create the list of values, Click **App Builder** and select your application: **Modernization**.
+1. To create the list of values, click **App Builder** and select your application: **Modernization**.
 
     ![App Builder](images/app-builder1.png " ")
 
@@ -44,7 +44,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Shared Components](images/shared-comps.png " ")
 
-3. Under **Other Components**, Click **List of Values**.
+3. Under **Other Components**, click **List of Values**.
 
     ![List of Values](images/lov1.png " ")
 
@@ -52,11 +52,11 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/create-lov1.png " ")
 
-5. Create List of Values from Scratch and Click **Next**.
+5. Create list of values from scratch and click **Next**.
 
     ![Create List of Values](images/scratch-lov.png " ")
 
-6. Under Name and Type, enter/select the following:
+6. Under **Name and Type**, enter/select the following:
 
     - Name: **S\_CUSTOMER.CREDIT\_RATING**
 
@@ -66,7 +66,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/credit-rate-lov.png " ")
 
-7. Enter the following Display Values and Return Values:
+7. Enter the following display values and return values:
 
     | Display Value | Return Value |
     |---------------|--------------|
@@ -81,11 +81,11 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
 8. Click **Create** to create another list of values.
 
-9. Create List of Values **from Scratch** and Click **Next**.
+9. Create list of values **from Scratch** and click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 
-10. For Name: Enter **SALES\_REP\_LOV** and Click **Next**.
+10. For Name: enter **SALES\_REP\_LOV** and click **Next**.
 
     ![Create List of Values](images/sales-rep-lov.png " ")
 
@@ -117,11 +117,11 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/create-lov-pay1.png " ")
 
-14. Create List of Values **from Scratch** and Click **Next**.
+14. Create list of values **from Scratch** and click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 
-15. Enter/Select the following and click **Next**.
+15. Enter/select the following and click **Next**.
 
     - Name: **S\_ORD.PAYMENT\_TYPE**
 
@@ -129,7 +129,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/name-static-next.png " ")
 
-16. Enter the following **Display Value** and **Return Value** and Click **Create List of Values**.
+16. Enter the following **Display Value** and **Return Value** and click **Create List of Values**.
 
     | Display Value | Return Value |
     |---------------|--------------|
@@ -144,7 +144,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/lov-product1.png " ")
 
-18. Create List of Values from Scratch and Click **Next**.
+18. Create list of values from scratch and click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 
@@ -156,7 +156,7 @@ There are five lists of values that can be useful in the Faceted Search Page and
 
     ![Create List of Values](images/name-dynamic-next.png " ")
 
-20. Under List of Values Source, enter the following and click Next.
+20. Under list of values Source, enter the following and click **Next**.
 
     - Source Type: Table
 
@@ -188,7 +188,7 @@ To use the list of values previously created:
 
     ![App Builder](images/sequence-items.png " ")
 
-4. In the left pane, select **P3\_CREDIT\_RATING**. In the Property Editor, update the following:
+4. In the left pane, select **P3\_CREDIT\_RATING**. In the property editor, update the following:
 
     - Identification > Type: **Radio Group**
 
@@ -212,11 +212,11 @@ To use the list of values previously created:
 
 You can define which facets to filter the data. Some are defined automatically, but you can create or delete them as needed. You can also drag and drop facets to change their display order.
 
-1. From the Page designer, Navigate to the **Customer Faceted Search**.
+1. From the page designer, navigate to the **Customer Faceted Search**.
 
     ![App Builder](images/nav-to-search.png " ")
 
-2. In the left pane, under **Search**, Right-click **Facets** and click **Create Facet**.
+2. In the left pane, under **Search**, right-click **Facets** and click **Create Facet**.
 
     ![App Builder](images/create-facets1.png " ")
 
@@ -248,7 +248,7 @@ You can define which facets to filter the data. Some are defined automatically, 
 
 ## Task 4: Customize the Interactive Report
 
-In this task, you will define how end-users can interact with and personalize their report views using Oracle APEX Interactive Reports. Interactive Reports offer a powerful way to present data, allowing both developers and end-users to tailor the reports to their needs. Developers can define primary or alternative reports, while end-users can save private reports for their individual use.
+In this task, you will define how end-users can interact with and personalize their report views using Oracle APEX Interactive Reports. Interactive reports offer a powerful way to present data, allowing both developers and end-users to tailor the reports to their needs. Developers can define primary or alternative reports, while end-users can save private reports for their individual use.
 
 1. **Run** the application as a developer.
 
@@ -268,41 +268,41 @@ In this task, you will define how end-users can interact with and personalize th
 
     ![App Builder](images/do-not-display1.png " ")
 
-5. In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and Click **Apply**.
+5. In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and click **Apply**.
 
     ![App Builder](images/credit-rating1.png " ")
 
-6. Click **Actions** and select Click **Format** > **Control Break**.
+6. Click **Actions** and select click **Format** > **Control Break**.
 
     ![App Builder](images/control-break1.png " ")
 
-7. For Column, select the column **Name** and Click **Apply**.
+7. For column, select the column **Name** and click **Apply**.
 
     ![App Builder](images/control-break-name1.png " ")
 
-8. To save the primary report, Click **Actions** > **Report** > **Save Report**.
+8. To save the primary report, click **Actions** > **Report** > **Save Report**.
 
     ![App Builder](images/save-report11.png " ")
 
-9. For Save, select **As Default Report Settings**.
+9. For save, select **As Default Report Settings**.
 
     ![App Builder](images/as-named-report1.png " ")
 
-10. For Default Report Type, select **Primary** and Click **Apply**.
+10. For default report type, select **Primary** and click **Apply**.
 
     ![App Builder](images/primary-apply1.png " ")
 
 ## Task 5: Enhance Navigation Menu
 
-In this lab, you will learn how to manage the navigation menu in an APEX application. By default, an APEX application includes a Navigation Menu, which can be displayed either on the side or across the top of the application. This menu is customizable, and you also have the option to remove it entirely if desired.
+In this lab, you will learn how to manage the navigation menu in an APEX application. By default, an APEX application includes a navigation menu, which can be displayed either on the side or across the top of the application. This menu is customizable, and you also have the option to remove it entirely if desired.
 
-For this task, you will focus on cleaning up the navigation menu by creating two new entries: one for Customers and another for Orders. Follow the steps outlined below to add these new entries to the Navigation Menu.
+For this task, you will focus on cleaning up the navigation menu by creating two new entries: one for Customers and another for Orders. Follow the steps outlined below to add these new entries to the navigation menu.
 
 1. Navigate to **Shared Components**.
 
     ![App Builder](images/shared-comps2.png " ")
 
-2. Under **Navigation and Search**, Click **Navigation Menu**.
+2. Under **Navigation and Search**, click **Navigation Menu**.
 
     ![App Builder](images/nav-menu2.png " ")
 
@@ -346,17 +346,17 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
      ![App Builder](images/order-nav.png " ")
 
-7. Customers and Orders entries are created and now you need to define the Parent List Entry for the rest of the entries. In the Desktop Navigation Menu, go to the Customer and Order options to select the proper parent entry.
+7. Customers and orders entries are created and now you need to define the parent list entry for the rest of the entries. In the desktop navigation menu, go to the Customer and Order options to select the proper parent entry.
 
-8. Click each Customer entries. For Parent list entry, select **Customers** and click **Apply Changes**.
+8. Click each customer entries. For parent list entry, select **Customers** and click **Apply Changes**.
 
     ![App Builder](images/parent-list.png " ")
 
     ![App Builder](images/customers-nav.png " ")
 
-9. Click each Order entries. For Parent List Entry, select **Orders** and click **Apply Changes**.
+9. Click each order entries. For parent List Entry, select **Orders** and click **Apply Changes**.
 
-10. Finally, the Menu looks cleaner and easy to use.
+10. Finally, the menu looks cleaner and easy to use.
 
     ![App Builder](images/menu.png " ")
 
@@ -370,7 +370,7 @@ Since this application is intended to be public, we will disable the authenticat
 
     ![App Builder](images/shared-comp3.png " ")
 
-2. Under **Security**, Click **Authentication Schemes**.
+2. Under **Security**, click **Authentication Schemes**.
 
     ![App Builder](images/authentication-scheme.png " ")
 
@@ -378,7 +378,7 @@ Since this application is intended to be public, we will disable the authenticat
 
     ![App Builder](images/create-authen.png " ")
 
-4. For Create Scheme, select: **Based on a pre-configured scheme from the gallery** and Click **Next**.
+4. For **Create Scheme**, select: **Based on a pre-configured scheme from the gallery** and click **Next**.
 
     ![App Builder](images/sratch-next.png " ")
 
@@ -404,7 +404,7 @@ Since this application is intended to be public, we will disable the authenticat
 
 ## Summary
 
-In this lab, you enhanced the functionalities of Oracle Forms using APEX. Building on the business logic analysis from Lab 1, you modernized the application by configuring the Credit Rating with a Static LOV, customizing the Customer Form, Faceted Search, and Interactive Report. Additionally, you improved the Navigation Menu and Authentication Scheme, and make various UI enhancements. These steps demonstrate how to leverage Oracle APEX to create a more user-friendly and functional application.
+In this lab, you enhanced the functionalities of Oracle Forms using APEX. Building on the business logic analysis from Lab 1, you modernized the application by configuring the credit rating with a static LOV, customizing the customer form, faceted search, and interactive report. Additionally, you improved the navigation menu and authentication scheme, and make various UI enhancements. These steps demonstrate how to leverage Oracle APEX to create a more user-friendly and functional application.
 
 ## Acknowledgements
 
