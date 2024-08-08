@@ -1299,9 +1299,9 @@ Right-Click **Processing** and select **Create Process**.
 
     - Under Settings:
 
-        - Package: **APEX_AUTHENTICATION**
+        - Package: **APEX\_AUTHENTICATION**
 
-        - Procedure or Function: **SEND_LOGIN_USERNAME_COOKIE**
+        - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
     - Under Server-side Condition > When Button Pressed: **Google**
 

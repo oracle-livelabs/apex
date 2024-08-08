@@ -50,6 +50,18 @@
         "filename": "../../11-onboarding/11-onboarding.md"
       },
       {
+        "title": "Lab 12: Push Notification",
+        "filename": "../../12-push-notification/12-push-notification.md"
+      },
+      {
+        "title": "Lab 13: AI Vision",
+        "filename": "../../13-ai-vision/13-ai-vision.md"
+      },
+      {
+        "title": "Lab 14: Razorpay Payment Integration",
+        "filename": "../../14-razorpay-payement-integration/14-razorpay-payement-integration.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
