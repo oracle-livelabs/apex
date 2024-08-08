@@ -1,0 +1,1068 @@
+# Improve User Onboarding
+
+## Introduction
+
+## Task 1: Creating Email Verification for Forgot Password - Page 100002
+
+Create the forgot password Page
+
+1. Navigate to Application Home Page.
+
+2. Click **Create Page**.
+
+   ![close dialog](images/create-page-email.png " ")
+
+3. Click **Blank Page**.
+
+    ![close dialog](images/blank-page-email.png " ")
+
+4. Enter/select the following:
+
+    - Page Number: **100002**
+
+    - Name: **Email Verification for Forgot Password**
+
+    - Use Breadcrumb: **Toggle Off**
+
+    - Use Navigation: **Toggle Off**
+
+    Click **Create Page**.
+
+    ![close dialog](images/email-page-details.png " ")
+
+5. In the property editor, update the following:
+
+     - Under Security > Authentication: **Page is Public**
+
+    ![close dialog](images/page-public.png " ")
+
+6. Right-Click **Body** and select **Create Region**.
+
+    ![close dialog](images/create-region-email.png " ")
+
+7. In the property editor, enter/select the following:
+
+    - Under Identification > Title: **Reset Password**
+
+    ![close dialog](images/reset-pass.png " ")
+
+8. Right-Click **Reset Password** region and select **Create Page Item**.
+
+    ![close dialog](images/create-page-item-email.png " ")
+
+9. In the property editor, enter/select the following:
+
+    - Under Identification > Name: **EMAIL**
+
+10. Right-Click **EMAIL** and select **Create Validation**.
+
+    ![close dialog](images/create-validation-email.png " ")
+
+11. In the property editor, enter/select the following:
+
+    - Under Identification > Name: **Valid Email Address**
+
+    - Under Validation:
+
+        - Type: **Item matches Regular Expression**
+
+        - Item: **EMAIL**
+
+        - Regular Expression : **^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$**
+
+    - Under Error:
+
+        - Error Message: **Invalid Email Address!**
+
+        - Associated Item: **-Select-**
+
+    ![close dialog](images/valid-email.png " ")
+
+12. Right-Click **Validations** and select **Create Validation**. In the property editor, enter/select the following:
+
+     - Under Identification > Name: **Email Validation**
+
+     - Under Validation:
+
+        - Type: **Rows returned**
+
+        - SQL Query: Copy and Paste the below query:
+
+        ```
+        <copy>
+        select u.email from obs_users u  where u.email = lower(:EMAIL)
+        </copy>
+         ```
+
+     - Under Error > Error Message: **No Account Found!**
+
+     - Under Server-side Condition > Type: **Inline Validation Errors NOT displayed**
+
+    ![close dialog](images/email-validation.png " ")
+
+13. Right-Click **EMAIL** and select **Create Button Below**.
+
+    ![close dialog](images/create-button-below.png " ")
+
+14. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Send**
+
+        - Label: **Send Reset Password Link**
+
+    - Under Appearance > Template Options: Click **Use Template Defaults**
+
+        - Type: **Primary**
+
+        Click **OK**
+
+    ![close dialog](images/send-btn.png " ")
+
+15. Navigate the **Processing** tab, Right-Click **Processing** and select **Create Process**.
+
+    ![close dialog](images/create-process-email.png " ")
+
+16. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Send Verification Email**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **APEX_MAIL**
+
+        - Procedure or Function: **SEND**
+
+    - Server-side Condition > When Button Pressed: **Send**
+
+    - Success Message > Success Message: **Reset Password Link sent to your email address**.
+
+    ![close dialog](images/send-verification-email-process.png " ")
+
+17. Under **Send Verification Email** process, expand **Parameters** and update the following:
+
+    - **p\_to**:
+
+        - Under Value:
+
+             - Type: **Item**
+
+             - Item: **EMAIL**
+
+    ![close dialog](images/p-to.png " ")
+
+    - **p\_from**:
+
+        - Under Value:
+
+            - Type: **Static Value**
+
+            - Static Value: **noreply.obs@oracle.com**
+
+    ![close dialog](images/p-from.png " ")
+
+    - **p\_body**:
+
+        - Under Value:
+
+            - Type: **Static Value**
+
+            - Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
+
+    ![close dialog](images/p-body.png " ")
+
+    - **p\_body\_html**:
+
+        - Under Value:
+
+            - Type: **Function Body**
+
+            - PL/SQL Function Body: Copy and Paste the below code:
+
+            ```
+            <copy>
+            declare
+                v_url  varchar2(1000);
+            begin
+                v_url := apex_util.host_url || APEX_PAGE.GET_URL (
+                        p_page   => 100003,
+                        p_items  => 'P100003_EMAIL',
+                        p_values =>  :EMAIL);
+
+                return '<html><body>' || utl_tcp.crlf ||
+
+                            '<p>Please open the link to Reset Password for your account' || utl_tcp.crlf ||
+                            '<p><a href="'|| v_url ||'">
+                                <b> Reset Password </b></a></p>'|| utl_tcp.crlf ||
+                            '<p>Sincerely,<br />' || utl_tcp.crlf ||
+                            'The Online book store Team<br />' || utl_tcp.crlf ||
+
+                            '</body></html>';
+
+            end;
+            </copy>
+            ```
+
+    ![close dialog](images/p-body-html.png " ")
+
+    - **p\_subj**:
+
+        - Under Value > Type: **API Default**
+
+        - Under Comments > Comments: **Reset Password**
+
+    ![close dialog](images/p-subt.png " ")
+
+18. Right-Click **After Processing** and select **Create Branch**.
+
+    ![close dialog](images/create-branch-email.png " ")
+
+19. In the property editor, enter/select the following:
+
+    - Under Identification > Name: **Go To Login Page**
+
+    - Under Behavior:
+        - Target: Click **No Link Defined**
+
+            - Page: **9999**
+
+            Click **OK**.
+
+    ![close dialog](images/go-to-login.png " ")
+
+20. Click **Save**.
+
+    Update the Login Page
+
+21. Navigate to Page - 9999.
+
+    ![close dialog](images/login-9999.png " ")
+
+22. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
+
+    ![close dialog](images/create-btn-login.png " ")
+
+23. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Forgot_Password**
+
+        - Label: **Forgot Password**
+
+    - Under Appearance > Template options: Click **Use Template Defaults**
+        - Size: Small
+
+        - Type: Danger
+
+        - Width: Stretch
+
+        - Spacing Top: Small
+
+          Click **OK**.
+
+    - Under Behaviour:
+
+        - Action: **Redirect to page in this application**
+
+        - Target: Click **No Link Defined**
+
+            - Page: **100002**
+
+            - Clear Cache: **100002**
+
+            Click **OK**.
+
+  ![close dialog](images/forgot-pass-btn.png " ")
+
+  ![close dialog](images/forgot-pass-link.png " ")
+
+24. Click **LOGIN** and update the following:
+
+    - Under Appearance > Template options: Click **Use Template Defaults**
+
+        - Type: **Success**
+
+          Click **OK**.
+
+  ![close dialog](images/login-btn.png " ")
+
+25. Click **Save**. 
+
+
+## Task 2: Creating  Reset Password - Page 100003
+
+1. Navigate to the Application Home Page.
+
+2. Click **Create Page**.
+
+    ![close dialog](images/create-page-email.png " ")
+
+3. Select **Blank Page**.
+
+    ![close dialog](images/blank-page-email.png " ")
+
+4. Enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **100003**
+
+        - Name: **Reset Password**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle off**
+
+        - Use Navigation: **Toggle Off**
+
+       Click **Create Page**.
+
+    ![close dialog](images/create-reset-pass.png " ")
+
+5. In the Property editor, update the following:
+
+    - Under Security > Authentication: **Page is Public**
+
+    ![close dialog](images/rest-page-public.png " ")
+
+6. In the left pane, Right-Click **Body** and select **Create Region**.
+
+   ![close dialog](images/create-region-reset.png " ")
+
+7. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Update Current User**
+
+        - Type: **Form**
+
+    - Source > Table Name: **OBS_USERS**
+
+    ![close dialog](images/update-current-user1.png " ")
+
+8. Under **Update Current User** region, Delete all page items except **P100003\_USER\_ID**, **P100003\_EMAIL** and **P100003\_PASSWORD**.
+
+   ![close dialog](images/del-username.png " ")
+
+   ![close dialog](images/delete-all.png " ")
+
+9. Select **P100003\_EMAIL** and update the following:
+
+    - Under Identification > Type: **Display Only**
+
+    - Under Source > Primary Key: **Toggle On**
+
+    - Under Security > Session State Protection: **Unrestricted**
+
+    ![close dialog](images/email-display.png " ")
+
+    ![close dialog](images/email-restricted.png " ")
+
+10. Select **P100003\_PASSWORD** and update the following:
+
+    - Identification > Type: **Password**
+
+    ![close dialog](images/pass-type.png " ")
+
+11. Right-Click **P100003\_PASSWORD** and select **Create Validation**.
+
+    ![close dialog](images/pass-validation.png " ")
+
+12. In the Property editor, enter/select the following:
+
+    - Under Identification > Name: **Not Null Validation**
+
+    - Under Validation:
+
+        - Type: **Function Body (Returning Boolean)**
+
+        - PL/SQL Function Body: Copy and Paste the below code:
+
+         ```
+        <copy>
+        if :P100003_Password is not NULL then
+          return true;
+        else
+          return false;
+        end if;
+       </copy>
+        ```
+
+        - Under Error > Error Message: **Password field should have some value**
+
+    ![close dialog](images/not-null-valid.png " ")
+
+13. Right-Click **Update Current User** and select **Create Page Item**.
+
+    ![close dialog](images/page-item-reset.png " ")
+
+14. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **P100003\_CONFIRM\_PASSWORD**
+
+        - Type: **Password**
+
+    ![close dialog](images/confirm-pass-reset.png " ")
+
+15. Right-Click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
+
+    ![close dialog](images/create-val-con.png " ")
+
+16. In the Property editor, enter/select the following:
+
+    - Under Identification > Name: Not Null Validation
+
+    - Under Validation:
+
+        - Type: **Function Body (Returning Boolean)**
+
+        - PL/SQL Function Body: Copy and Paste the below code:
+
+        ```
+        <copy>
+        if :P100003_CONFIRM_PASSWORD is not NULL then
+          return true;
+        else
+          return false;
+        end if;
+        </copy>
+       ```
+
+    - Under Error > Error Message: **Password field should have some value**
+
+    ![close dialog](images/not-null-cf.png " ")
+
+17. Again, Right-Click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
+
+18. In the Property editor, enter/select the following:
+
+    - Under Identification > Name: **Compare Passwords**
+
+    - Under Validation:
+
+        - Type: **Function Body (Returning Boolean)**
+
+        - PL/SQL Function Body: Copy and Paste the below code:
+
+            ```
+            <copy>
+            begin
+             if :P100003_Password = :P100003_CONFIRM_PASSWORD then
+                return true;
+             else
+                return false;
+             end if;
+            end;
+            </copy>
+           ```
+
+    - Under Error > Error Message: **Confirm Password is not same as Password entered above**
+
+    ![close dialog](images/compare-pass-valid.png " ")
+
+19. Right-Click **Update Current User** region and select **Create Sub-Region**.
+
+    ![close dialog](images/sub-region-reset.png " ")
+
+20. In the Property editor, enter/select the following:
+
+    - Under Identification > Title: **Buttons**
+
+    - Under Layout:
+
+        - Position: **Region Body**
+
+    - Under Appearance:
+
+        - Template: **Buttons Container**
+
+        - Template option: **Use Template Options**
+
+            - Style: **Remove UI Decoration**
+
+            Click **OK**.
+
+    ![close dialog](images/button-reset.png " ")
+
+21. Right-Click **Buttons** and select **Create Button**.
+
+    ![close dialog](images/create-btn-reset.png " ")
+
+22. In the Property editor, enter/select the following:
+
+    - Under Identification > Button Name: **CANCEL**
+
+    - Under Layout > Position: **Close**
+
+    - Under Behavior:
+
+        - Action: **Redirect to page in this Application**
+
+        - Target: **No Link Defined**
+
+            - Page: **15010**
+
+            - Clear Cache: **100003**
+
+            Click **OK**.
+
+    ![close dialog](images/cancel-reset.png " ")
+
+23. Right-Click **CANCEL** and select **Create Dynamic Action**.
+
+    ![close dialog](images/create-dyn-act-reset.png " ")
+
+24. In the Property editor, enter/select the following:
+
+    - Under Identification > Name: **Cancel Dialog**
+
+    - Under When > Event: **Click**
+
+    ![close dialog](images/canel-dialog-reset.png " ")
+
+25. Right-Click **Buttons** and select **Create Button**.
+
+26. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **SAVE**
+
+        - Label: **Apply Changes**
+
+    - Under Layout > Position: **Next**
+
+    - Under Appearance > Hot: **Toggle On**
+
+    - Under Behavior > Database Action: **SQL UPDATE action**
+
+    ![close dialog](images/save-btn-reset.png " ")
+
+27. Navigate to the **Processing** tab, Right-Click **Processing** and Select **Create Process**.
+
+    ![close dialog](images/create-process-reset.png " ")
+
+28. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Process from Update current user**
+
+        - Type: **Form - Automatic Row Processing (DML)**
+
+        - Form Region: **Update current user**
+
+    - Success Message > Success Message: **Updated Profile details successfully!**
+
+    ![close dialog](images/current-user-process.png " ")
+
+29. Right-click **After Processing** and click **Create Branch**.
+
+    ![create-branch](images/<name>.png " ")
+
+30. In the property editor, enter/select the following:
+
+    - Under Identification > Name: **Go to My Profile**
+
+    - Under Behavior > Target: Click **No Link Defined**
+
+         - Page: **12**
+
+         - Clear Cache: **1**
+
+         Click **OK**
+
+    ![branch-link](images/<name>.png " ")
+
+31. Click **Save**.
+
+32. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
+
+    ![user-create-page](images/<name>.png " ")
+
+33. Click **Blank Page**.
+
+    ![user-blank-page](images/<name>.png " ")
+
+34. Enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **12**
+
+        - Name: **LOGIN_HOME**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle off**
+
+        - Use Navigation: **Toggle Off**
+
+       Click **Create Page**.
+
+    ![Login Home Page Create](images/<name>.png " ")
+
+35. Right Click **Before Header** under **Pre-rendering** and click **Create Branch**
+    - Under Behavior > Target: Click **No Link Defined**
+
+         - Page: **1**
+
+         Click **OK**
+
+    ![branch-link](images/<name>.png " ")
+
+36. Click **Save**.
+
+## Task 3: Creating Email Verification for User SignUp - Page 100001
+
+Create the user signup Page
+
+1. Navigate to Application Home Page.
+
+2. Click **Create Page**.
+
+   ![create-page-user-signup](images/<name>.png " ")
+
+3. Choose **Form Page**.
+
+    ![form-page-user-signup](images/<name>.png " ")
+
+4. Enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **100001**
+
+        - Name: **Email Verification for User SignUp**
+
+    - Under Data Source:
+
+        - Table/View Name: **OBS\_UNVERIFIED\_USERS**
+
+    - Under Navigation::
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+    Click **Next**.
+
+    - Under Branch Pages:
+
+        - Branch Here on Submit: 9999
+
+        - Cancel and Go To Page: 9999
+
+    Click **Create Page**.
+
+    ![user-signup-page-details](images/<name>.png " ")
+
+5. In the property editor, update the following:
+
+     - Under Security > Authentication: **Page is Public**
+
+    ![page-public](images/<name>.png " ")
+
+6. Delete two buttons named **DELETE** and **SAVE** under **Email Verification for User SignUp** region.
+
+    ![delete-buttons](images/<name>.png " ")
+
+7. Right-Click **P100001\_EMAIL** and select **Create Validation**.
+
+    ![create-validation](images/<name>.png " ")
+
+8. In the property editor, enter/select the following:
+
+    - Under Identification > Name: **If Email Already Present**
+
+    - Under Validation:
+
+        - Type: **No Rows returned**
+
+        - SQL Query: Copy and Paste the below query:
+
+        ```
+        <copy>
+        select email from obs_users where email = lower(:P100001_EMAIL)
+        </copy>
+         ```
+
+    - Under Error:
+
+        - Error Message: **Account already existed for this email ID.**
+
+    - Under Server-side Condition:
+
+        - Type: **Inline Validation Errors NOT displayed**
+
+    ![valid-email](images/<name>.png " ")
+
+9. Select **Create** Button
+
+    - Under Identification > Label: **Send SignUp Email**
+
+10. Navigate the **Processing** tab, Select **Process form Email Verification for User SignUp** under **processes** under **Processing**.
+
+    ![select-process](images/<name>.png " ")
+
+11. In the property editor, enter/select the following:
+
+    - Under Success Message > Success Message: **Email Sent**
+
+    ![success-message](images/<name>.png " ")
+
+12. Right-Click **Processing** and select **Create Process**.
+
+    ![create-process](images/<name>.png " ")
+
+13. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Send Verification Email**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **APEX_MAIL**
+
+        - Procedure or Function: **SEND**
+
+    - Server-side Condition > When Button Pressed: **CREATE**
+
+    ![send-verification-email-process](images/<name>.png " ")
+
+14. Under **Send Verification Email** process, expand **Parameters** and update the following:
+
+    - **p\_to**:
+
+        - Under Value:
+
+             - Type: **Item**
+
+             - Item: **P100001\_EMAIL**
+
+    ![p-to](images/<name>.png " ")
+
+    - **p\_from**:
+
+        - Under Value:
+
+            - Type: **Static Value**
+
+            - Static Value: **noreply.obs@oracle.com**
+
+    ![p-from](images/<name>.png " ")
+
+    - **p\_body**:
+
+        - Under Value:
+
+            - Type: **Static Value**
+
+            - Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
+
+    ![p-body](images/<name>.png " ")
+
+    - **p\_body\_html**:
+
+        - Under Value:
+
+            - Type: **Function Body**
+
+            - PL/SQL Function Body: Copy and Paste the below code:
+
+            ```
+            <copy>
+            declare
+            l_url varchar2(1000);
+            begin
+            l_url := apex_util.host_url || APEX_PAGE.GET_URL (
+            p_page  => 10000,
+            p_items => 'P10000_EMAIL',
+            p_values => :P100001_EMAIL);
+
+            return '<html><body>' || utl_tcp.crlf ||
+            '<p>Please open the link to create your account' || utl_tcp.crlf ||
+            '<p><a href="'|| l_url ||'">
+            <b> Setup your account </b></a></p>'|| utl_tcp.crlf ||
+            '<p>Sincerely,<br />' || utl_tcp.crlf ||
+            'The Online book store Team<br />' || utl_tcp.crlf ||
+            '</body></html>';
+
+            end;
+            </copy>
+            ```
+
+    ![p-body-html](images/<name>.png " ")
+
+    - **p\_subj**:
+
+        - Under Value > Type: **API Default**
+
+        - Under Comments > Comments: **Set up your online bookstore account**.
+
+    ![p-subt](images/<name>.png " ")
+
+15. Click **Save**.
+
+    Update the Login Page
+
+16. Navigate to Page - 9999.
+
+    ![login-9999](images/<name>.png " ")
+
+17. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
+
+    ![create-btn-login](images/<name>.png " ")
+
+18. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **SignUp**
+
+        - Label: **New here? SignUp**
+
+    - Under Appearance > Template options: Click **Use Template Defaults**
+        - Size: Small
+
+        - Style: Display as Link
+
+          Click **OK**.
+
+    - Under Behavior:
+
+        - Action: **Redirect to page in this application**
+
+        - Target: Click **No Link Defined**
+
+            - Page: **100001**
+
+            Click **OK**.
+
+    ![image](images/<name>.png " ")
+
+19. Click **Save**.
+
+## Task 4: Creating  SignUp - Page 100000
+
+1. Navigate to the Application Home Page.
+
+2. Click **Create Page**.
+
+    ![create-page](images/<name>.png " ")
+
+3. Choose **Form Page**.
+
+    ![form-page-signup](images/<name>.png " ")
+
+4. Enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **10000**
+
+        - Name: **SignUp**
+
+    - Under Data Source:
+
+        - Table/View Name: **OBS\_USERS**
+
+    - Under Navigation::
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+    Click **Next**.
+
+    - Under Branch Pages:
+
+        - Branch Here on Submit: **10**
+
+        - Cancel and Go To Page: **10**
+
+    Click **Create Page**.
+
+    ![signup-page-details](images/<name>.png " ")
+
+5. In the Property editor, update the following:
+
+    - Under Security > Authentication: **Page is Public**
+
+    ![page-public](images/<name>.png " ")
+
+6. Under Update SignUp region, Delete page items **P10000\_MIME\_TYPE** and **P10000\_PICTURE\_URL**.
+
+7. Select P10000\_USERNAME, P10000\_FULL\_NAME and P10000\_PASSWORD and in the Property editor, enter/select the following:
+
+    - Under Identification > Type: **Text Field**
+
+8. Select P10000\_EMAIL and in the Property editor, enter/select the following:
+
+    - Under Identification > Type: **Display Only**
+
+9. Select P10000\_FULL\_NAME and in the Property editor, enter/select the following:
+
+    - Under Validation > Value Required: **Toggle On**
+
+10. Select P10000\_PROFILE\_PIC and in the Property editor, enter/select the following:
+
+    - Under Identification > Type: **Image Upload**
+
+    - Under Storage > MIME Type Column
+: **MIME_TYPE**
+
+11. Select P10000\_IS\_ADMIN and in the Property editor, enter/select the following:
+
+    - Under Identification > Type: **Hidden**
+
+12. Right-Click **SignUp** and select **Create Button**
+
+13. In the Property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Cancel**
+
+    - Under Layout
+
+        - Slot: **Close**
+
+    - Under Behavior
+
+        - Action: **Submit Page**
+
+14. Select **Create** button and update the label.
+
+    - Under Identification:
+
+        - Label: SignUp
+
+15. Navigate the **Processing** tab, Select **Process form SignUp** under **processes** under **Processing**.
+
+16. In the property editor, enter/select the following:
+
+    - Under Settings:
+
+        - Prevent Lost Updates: **Toggle Off**
+
+        - Lock Row: **No**
+
+17. Right-Click **Processing** and select **Create Process**.
+
+18. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Remove from unverified user table**
+
+    - Under Sources
+
+        - PL/SQL Code: Copy and Paste the below code:
+
+        ```
+        <copy>
+        delete from obs_unverified_users where email= lower(:P10000_EMAIL);
+        </copy>
+         ```
+
+19. Right-Click **Processing** and select **Create Process**.
+
+20. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Set Username Cookie**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **APEX_AUTHENTICATION**
+
+        - Procedure or Function: **SEND_LOGIN_USERNAME_COOKIE**
+
+    - Server-side Condition > When Button Pressed: **CREATE**
+
+21. Under **Set Username Cookie** process, expand **Parameters** and update the following:
+
+    - Delete **p\_cookie\_name**
+
+    - Select **p\_username**:
+
+        - Under Value:
+
+            - Type: **Expression**
+
+            - PL/SQL Expression: **lower(:P10000_EMAIL)**
+
+    - Select **p\_consent**:
+
+        - Under Value:
+
+            - Type: **API Default**
+
+22. Right-Click **Processing** and select **Create Process**.
+
+23. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Login**
+
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Package: **APEX_AUTHENTICATION**
+
+        - Procedure or Function: **LOGIN**
+
+24. Under **Set Username Cookie** process, expand **Parameters** and update the following:
+
+    - Select **p\_username**:
+
+        - Under Value:
+
+            - Type: **Item**
+
+            - Item: **P10000_EMAIL**
+
+25. Right-Click **Processing** and select **Create Process**.
+
+26. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Clear Page(s) Cache**
+
+        - Type: **Clear Session State**
+
+    - Under Server-side Condition:
+
+        - When Button pressed: **Create**
+
+27. Click **Save**.
+
+## Summary
+
+In this lab....
+
+You are now ready to move on to the next lab!
+
+## Acknowledgements
+
+- **Author**: Pankaj Goyal, Member Technical Staff
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024

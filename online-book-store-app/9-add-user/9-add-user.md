@@ -1,11 +1,13 @@
 # Create and Manage User Profile Pages
 
 ## Introduction
+
 This lab focuses on guiding you through creating and managing user profile pages. The tasks will cover various aspects of page creation, customization, and linking, as well as using SQL queries, RESTful services, and form handling. By the end of this lab, you will have developed a fully functional user profile page that includes personal details, book lists, and functionalities for updating profiles and resetting passwords.
 
 Estimated Time: 20 minutes
 
 ### Objectives
+
 - Create a User Profile Page
 - Add Navigation bar Entries to include links to the user profile and other pages.
 - Create and manage forms to update user details and reset passwords.
@@ -13,6 +15,7 @@ Estimated Time: 20 minutes
 
 
 ## Task 1: Creating a Profile Page with a Book List
+
 This task provides step-by-step instructions for creating a profile page displaying a book list. The profile page will be built from scratch, starting with a blank page and adding a series of regions and sub-regions to effectively organize and display the data. By following these steps, you will learn how to configure page properties, create regions for content display, and integrate an SQL query to populate the book list dynamically. This process will culminate in a user-friendly interface where users can view their book details and purchase links directly from their profile page.
 
 1. Navigate to Application ID.
@@ -69,7 +72,7 @@ This task provides step-by-step instructions for creating a profile page display
 
             Click **OK**.
 
-  ![close dialog](images/profile-region-details.png " ")        
+  ![close dialog](images/profile-region-details.png " ")
 
 8. Right-click **My Details** and click **Create Sub Region**.
 
@@ -117,9 +120,9 @@ This task provides step-by-step instructions for creating a profile page display
 
             Click **OK**.
 
-    ![close dialog](images/profile-my-books.png " ")  
+    ![close dialog](images/profile-my-books.png " ")
 
-    ![close dialog](images/profile-template.png " ")        
+    ![close dialog](images/profile-template.png " ")
 
 10. Navigate to **Attributes**, enter/select the following:
 
@@ -266,8 +269,8 @@ In this task, you set up entries for authenticated and public users, create a lo
 
 9. Click **Save**.
 
-
 ## Task 3: Create and Configure the Update Current User Page
+
 In this task, you will learn how to create and configure a page to update the current user's profile within an application. You will have a functional "Update Current User" page that allows users to update their profile details, including username, email, and profile picture.
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
@@ -288,8 +291,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
      Click **Create Page**.
 
-  ![close dialog](images/update-current-user.png " ")
-
+    ![close dialog](images/update-current-user.png " ")
 
 4. In the property editor, Under **Navigation** > Warn on Unsaved Changes: **Toggle Off**
 
@@ -323,14 +325,12 @@ In this task, you will learn how to create and configure a page to update the cu
 
 9. Click **P26\_EMAIL**, Under Identification > Type: **Display Only** 
 
-
 10. Select **P26\_USERNAME** and **P26\_FULL\_NAME**, Under Identification > Type: **Text Field**.
 
     ![close dialog](images/username-textfield.png " ")
- 
+
 11. Select **P26\_PASSWORD** and **P26\_IS\_ADMIN**, Under Identification > Type: **Hidden**.
 
- 
 12. Select **P26_PROFILE_PIC** and enter/select the following:
 
     - Identification > Type: **Image Upload**
@@ -343,11 +343,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Aspect Ratio: **1:1**
 
-   ![close dialog](images/profile-pic.png " ")      
+    ![close dialog](images/profile-pic.png " ")
 
 13. Right-click **Region Body** and click **Create Region**.
 
-   ![close dialog](images/create-region-user.png " ")
+    ![close dialog](images/create-region-user.png " ")
 
 14. In the property editor, enter/select the following:
 
@@ -447,15 +447,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Success Message > Success Message: **Profile Details Updated Successfully!**
 
-   ![close dialog](images/update-current-user-proceess.png " ")
+    ![close dialog](images/update-current-user-proceess.png " ")
 
 26. Right-click **Processing** and click **Create Process**.
 
 27. In the property editor, enter/select the following:
 
-    - Identification > Name: **Change Username** 
+    - Under Identification > Name: **Change Username** 
 
-    -  Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
+    - Under Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
 
     ![close dialog](images/change-username-process.png " ")
 
@@ -475,7 +475,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         Click **OK**.
 
-    ![close dialog](images/go-to-my-profile.png " ")    
+    ![close dialog](images/go-to-my-profile.png " ")
 
 30. Click **Save**.
 
@@ -527,12 +527,12 @@ In this task, you will learn how to create and configure a page to update the cu
 
     ![close dialog](images/edit-profile-btn.png " ")
 
-    ![close dialog](images/edit-profile-redirect.png " ")         
+    ![close dialog](images/edit-profile-redirect.png " ")
 
 34. Click **Save**.
 
-
 ## Task 4: Create and Configure the Reset Password Page
+
 This task provides a comprehensive step-by-step process for creating and configuring an application's "Reset Password" page. The page will be designed as a modal dialog featuring a form allowing users to reset their passwords securely.
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
@@ -553,11 +553,11 @@ This task provides a comprehensive step-by-step process for creating and configu
 
      Click **Create Page**.
 
-  ![close dialog](images/blank-page27.png " ")     
+    ![close dialog](images/blank-page27.png " ")
 
 4. Right-click **Content Body** and click **Create Region**.
 
-    ![close dialog](images/create-region27.png " ")   
+    ![close dialog](images/create-region27.png " ")
 
 5. In the property editor, enter/select the following:
 
@@ -571,26 +571,26 @@ This task provides a comprehensive step-by-step process for creating and configu
 
      - Appearance > Template: **Blank with Attributes**
 
-    ![close dialog](images/form27.png " ")   
+    ![close dialog](images/form27.png " ")
 
 6. Under **Reset Password** region, expand columns and
 delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
-    ![close dialog](images/delete-27.png " ")   
+    ![close dialog](images/delete-27.png " ")
 
 7. Click **P27_EMAIL** and Under Identification > Type: **Display Only**.
 
-    ![close dialog](images/email27.png " ")   
+    ![close dialog](images/email27.png " ")
 
 8. Click **P27\_USER\_ID** and Under Source > Query Only: **Toggle Off**.
 
-    ![close dialog](images/userid27.png " ")   
+    ![close dialog](images/userid27.png " ")
 
 9. Right-click **Reset Password** and click **Create Page Item**.
 
     ![close dialog](images/page-item27.png " ")
 
-10. In the property editor, enter/select the following:   
+10. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -598,7 +598,7 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Type: **Password**
 
-    ![close dialog](images/new-pass.png " ")   
+    ![close dialog](images/new-pass.png " ")
 
 11. Right-click **P27\_NEW\_PASSWORD** and click **Create  Validation**.
 
@@ -612,7 +612,7 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Type: **Function Body (returning Boolean)**
 
-        - PL/SQL Function Body : 
+        - PL/SQL Function Body :
 
         ```
         <copy>
@@ -708,7 +708,7 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
             Click **OK**.
 
-    ![close dialog](images/btn-link.png " ")        
+    ![close dialog](images/btn-link.png " ")
 
 21. Right-click **CANCEL** and click **Create Dynamic Action**.
 
@@ -748,13 +748,13 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Item: **P27\_EMAIL**
 
-    ![close dialog](images/save-btn27.png " ")  
+    ![close dialog](images/save-btn27.png " ")
 
-    ![close dialog](images/save-btn271.png " ")  
+    ![close dialog](images/save-btn271.png " ")
 
 26. Navigate to **Processing** tab, Right-click **Processing** and **Create Process**.
 
-    ![close dialog](images/create-process27.png " ")  
+    ![close dialog](images/create-process27.png " ")
 
 27. In the property editor, enter/select the following:
 
@@ -770,11 +770,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
     - Success Message > Success Message: **Reset Password Successfully!**
 
-   ![close dialog](images/change-pass.png " ")  
+   ![close dialog](images/change-pass.png " ")
 
 28. Right-click **After Processing** and click **Create Branch**.
 
-    ![close dialog](images/create-branch27.png " ")  
+    ![close dialog](images/create-branch27.png " ")
 
 29. In the property editor, enter/select the following:
 
@@ -788,7 +788,7 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
          Click **OK**
 
-    ![close dialog](images/branch-link.png " ")       
+    ![close dialog](images/branch-link.png " ")
 
 30. Click **Save**.
 
@@ -1022,6 +1022,7 @@ Application Computation, navigate back to the shared component and Under **Appli
 23. Click **Save**.
 
 ## Summary
+
 In this lab, you have learned to create a robust user profile page in Oracle APEX. You navigated through various tasks, including page creation, SQL query integration, form handling, and RESTful services setup. You also customized the application's Navigation and enhanced the user experience by adding interactive elements. Following these steps, you have developed a comprehensive understanding of managing user profiles in Oracle APEX, a crucial aspect of building modern web applications.
 
 You are now ready to move on to the next lab!

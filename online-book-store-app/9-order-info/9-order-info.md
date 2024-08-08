@@ -1,16 +1,19 @@
 # Create Book Order Information Page
 
 ## Introduction
+
 In this lab, you will learn how to create and manage an "Order Information" page and a "My Books" page within Oracle APEX. These pages will display relevant order details and a list of purchased books, respectively. By the end of this lab, you will have a functional interface that allows users to view their order information and their purchased books seamlessly.
 
 Estimated Time: 15 minutes
 
 ### Objectives
+
 In this lab, you will:
 
 - Create an Order Information Page.
 
 ## Task 1: Create an Order Information Page
+
 In this task, you will set up a new page for displaying order information. Furthermore, you will add regions and sub-regions to structure the order details. Lastly, you configure SQL queries to fetch and display order data.
 
 1. On Page Designer toolbar, Navigate to (+ v) and Select **Page**.
@@ -69,7 +72,7 @@ In this task, you will set up a new page for displaying order information. Furth
 
          - Type: **Hidden**
 
-    ![close dialog](images/order-id1.png " ")         
+    ![close dialog](images/order-id1.png " ")
 
 8. Right-click **Thank You for purchasing!** and select **Create Sub Region**.
 
@@ -122,7 +125,7 @@ In this task, you will set up a new page for displaying order information. Furth
 
      | Column Name       |  Type   |
      | ---------- |  ------ |
-     | USER\_ID | Hidden |  
+     | USER\_ID | Hidden |
      | ORDER\_ID |Hidden |
      | PAYMENT\_ID | Hidden|
 
@@ -130,7 +133,7 @@ In this task, you will set up a new page for displaying order information. Furth
 
      | Column Name       |  Heading   |
      | ---------- |  ------ |
-     | TOTAL | Total Amount |  
+     | TOTAL | Total Amount |
      | ADDED_DATE | Purchased Date |
      | ADDED_TIME | Purchased Time|
 
@@ -327,7 +330,7 @@ In this task, you set up a new page for displaying a list of books purchased by 
 
        Click **OK**.
 
-    ![close dialog](images/order-by-item3.png " ")   
+    ![close dialog](images/order-by-item3.png " ")
 
 6. In the Property Editor, navigate to **Attributes** and enter/ select the following:
 
@@ -361,9 +364,9 @@ In this task, you set up a new page for displaying a list of books purchased by 
           </copy>
           ```
 
-     ![close dialog](images/my-books-att.png " ")  
+     ![close dialog](images/my-books-att.png " ")
 
-     ![close dialog](images/my-books-save.png " ")        
+     ![close dialog](images/my-books-save.png " ")
 
 7. **Save and Run** the Application.
 
