@@ -1132,51 +1132,51 @@ Create the user signup Page
 
     ![Click My Apps](images/creds-created.png " ")
 
-11. Login to your APEX workspace and click **Workspace Utilities**.
+11. Login into your Oracle APEX workspace.
 
-    ![Select Workspace utilities](images/select-workspace-utilities.png " ")
+12. On the Workspace home page, click **App Builder**.
 
-12. Under **Workspace Utilities**, Select **Web Credentials**.
+13. Click **Workspace Utilities**.
 
-    ![Select Web Credentials](images/select-web-credentials.png " ")
+14. Select **Web Credentials**.
 
-13. Click **Create**.
+15. Click **Create**.
 
-    ![Click Create](images/click-create.png " ")
+16. In the **Web Credentials** enter the following and click **Create**.
 
-14. In the **Web Credentials** enter the following and click **Create**.
-    Under **Attributes**:
-    - Name: Enter **Google Authentication**
-    - Static Id: **Google_Authentication**
-    - Authentication Type: Select **OAuth2 Client Credentials Flow**.
-    - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-    - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
+    - Under **Attributes**:
+
+        - Name: Enter **Google Authentication**
+        - Static Id: **Google_Authentication**
+        - Authentication Type: Select **OAuth2 Client Credentials Flow**.
+        - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
+        - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
 
     Click Create
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
-15. Navigate to **App Builder** and select **Online Bookstore Application**.
+17. Navigate to **App Builder** and select **Online Bookstore Application**.
 
     ![Navigate to Online bookstore application](images/navigate-to-osa.png " ")
 
-16. Click **Shared Components**.
+18. Click **Shared Components**.
 
     ![Select Shared Components](images/select-shared-components.png " ")
 
-17. Under **Security**, Select **Authentication Schemes**.
+19. Under **Security**, Select **Authentication Schemes**.
 
     ![Select Authentication Schemes](images/select-authentication.png " ")
 
-18. In the **Authentication Schemes** page, click **Create**.
+20. In the **Authentication Schemes** page, click **Create**.
 
     ![Click Create](images/click-create2.png " ")
 
-19. Under **Create Authentication Scheme** Page, leave the settings to default and click **Next**.
+21. Under **Create Authentication Scheme** Page, leave the settings to default and click **Next**.
 
     ![Create Authentication Scheme](images/create-auth1.png " ")
 
-20. In the **Authentication Scheme**, Enter the following:
+22. In the **Authentication Scheme**, Enter the following:
     Under **Name**:
     - Name: **Google**.
     - Scheme Type: **Social Sign-In**.
@@ -1192,11 +1192,11 @@ Create the user signup Page
 
     ![Define Authentication](images/create-auth2.png " ")
 
-21. Notice that a new **Authentication Scheme** you created is displayed. Click **Google**.
+23. Notice that a new **Authentication Scheme** you created is displayed. Click **Google**.
 
     ![Authentication scheme displayed](images/create-auth3.png " ")
 
-22. In the Property editor, enter/select the following:
+24. In the Property editor, enter/select the following:
 
     - Under Login Processing:
 
@@ -1206,9 +1206,9 @@ Create the user signup Page
 
     Click on Apply Changes
 
-23. Navigate to the **SQL Workshop** > **Object Browser** > **Package** > **OBS\_AUTH** 
+25. Navigate to the **SQL Workshop** > **Object Browser** > **Package** > **OBS\_AUTH** 
 
-24. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click Save and Continue.
+26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click Save and Continue.
 
     - Specification: **procedure google\_post\_authenticate;**
 
@@ -1244,15 +1244,15 @@ Create the user signup Page
         </copy>
         ```
 
-25. Navigate to Page - 9999.
+27. Navigate to Page - 9999.
 
-26. In the rendering tab,Select Page Item **P9999_USERNAME**
+28. In the rendering tab,Select Page Item **P9999_USERNAME**
 
     - Under Appearance > Value Placeholder: **Email Address or Username**
 
-27. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
+29. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
 
-28. In the Property editor, enter/select the following:
+30. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -1286,10 +1286,10 @@ Create the user signup Page
 
             Click **OK**.
 
-29. Navigate the **Processing** tab,
+31. Navigate the **Processing** tab,
 Right-Click **Processing** and select **Create Process**.
 
-30. In the property editor, enter/select the following:
+32. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -1305,13 +1305,13 @@ Right-Click **Processing** and select **Create Process**.
 
     - Under Server-side Condition > When Button Pressed: **Google**
 
-31. Select Login Process
+33. Select Login Process
 
-32. In the property editor, enter/select the following:
+34. In the property editor, enter/select the following:
 
     - Under Server-side Condition > When Button Pressed: **LOGIN**
 
-33. Click **Save**.
+35. Click **Save**.
 
 ## Summary
 
