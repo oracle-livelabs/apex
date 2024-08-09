@@ -187,7 +187,9 @@ Let us create a new Form page for school application.
 17. Select the **CREATE** button. In the Property editor, enter/select the following:
 
     - Label: **Send Application**
-    - Appearance > Icon: **fa-send-o**
+    - Appearance:
+        - Button Template: **Text with Icon**
+        - Icon: **fa-send-o**
 
     ![Page Designer](images/edit-create.png ' ')
 

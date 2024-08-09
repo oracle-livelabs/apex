@@ -199,6 +199,6 @@ You now know how to enhance report and list of value queries using APEX Assistan
 
 ## **Acknowledgments**
 
-- **Author** - Salim Hlayel, Principle Product Manager; Roopesh Thokala, Senior Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - Oracle LiveLabs Team (Robbie Ruppel, Functional Lead; Marilyn Isabella Kessinger, QA Intern; Arabella Yao, Product Manager Intern)
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, May 2024
