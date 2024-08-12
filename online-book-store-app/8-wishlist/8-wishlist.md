@@ -57,38 +57,39 @@ In this lab, you will:
 
     - Under Source:
 
-        - Type: **QL Query**
+        - Type: **SQL Query**
 
         - SQL Query: Copy and Paste the below code into the code editor:
 
+            ```
+            <copy>
+            SELECT
+            oi.book_id,
+            bi.author,
+            bi.book_image,
+            bi.title,
+            bi.description,
+            bi.discount,
+            Round(bi.price,2) as price,
+            ROUND(bi.price * ((100 - bi.discount) / 100), 2) as new_price
+                FROM obs_wishlist oi, obs_books bi
+                WHERE oi.user_id = :USER_ID AND oi.book_id(+) = bi.book_id;
+        </copy>
         ```
-        <copy>
-        SELECT
-          oi.book_id,
-          bi.author,
-          bi.book_image,
-          bi.title,
-          bi.description,
-          bi.discount,
-          Round(bi.price,2) as price,
-          ROUND(bi.price * ((100 - bi.discount) / 100), 2) as new_price
-       FROM obs_wishlist oi, obs_books bi
-       WHERE oi.user_id = :USER_ID AND oi.book_id(+) = bi.book_id;
-       </copy>
-       ```
+
+        - **Order By Item**: Enter/select the following:
+
+            | Clause     |  Key   | Display |
+            | ---------- |  ------ | ------ |
+            | "TITLE"asc | TITLE |  Title |
+            | "PRICE"asc | PRICE | Price |
+
+            Click **OK**.
+
 
     ![close dialog](images/wishlist-my-books.png " ")
 
-       - **Order By Item**: Enter/select the following:
-
-       | Clause     |  Key   | Display |
-       | ---------- |  ------ | ------ |
-       | "TITLE"asc | TITLE |  Title |
-       | "PRICE"asc | RICE | Price |
-
-       Click **OK**.
-
-    ![close dialog](images/wishlist-order-by-item.png " ")  
+    ![close dialog](images/wishlist-order-by-item.png " ")
 
 6. In the Property Editor, navigate to **Attributes** and enter/ select the following:
 
@@ -126,11 +127,11 @@ In this lab, you will:
 
         - Image Description: **&DESCRIPTION.**
 
-    ![close dialog](images/wishlist-att.png " ")  
+    ![close dialog](images/wishlist-att.png " ")
 
-    ![close dialog](images/wishlist-att1.png " ")     
+    ![close dialog](images/wishlist-att1.png " ")
 
-7. Under **My Books** region, Right-click **Actions** and click **Create Action**.
+7. Under **My Books** region, Right-Click **Actions** and click **Create Action**.
 
     ![close dialog](images/wishlist-action.png " ")
 
@@ -150,7 +151,7 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-action-details.png " ")
 
-9. Right-click **My Books** region and click **Create Page Item**.
+9. Right-Click **My Books** region and click **Create Page Item**.
 
     ![close dialog](images/wishtlist-page-item.png " ")
 
@@ -166,11 +167,11 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-book-id.png " ")
 
-10. Right-click **My Books** region and click **Create Dynamic Action**.
+11. Right-Click **My Books** region and click **Create Dynamic Action**.
 
     ![close dialog](images/wishlist-dynamic-action.png " ")
 
-11. In the Property editor, enter/select the following:
+12. In the Property editor, enter/select the following:
 
     - Identification > Name: **Refresh**
 
@@ -178,9 +179,9 @@ In this lab, you will:
 
     ![close dialog](images/refresh.png " ")
 
-12. Select **TRUE** action and enter/select the following:
+13. Select **TRUE** action and enter/select the following:
 
-    - Identification > Name: **Refresh**
+    - Identification > Action: **Refresh**
 
     - Under Affected Elements:
 
@@ -190,11 +191,11 @@ In this lab, you will:
 
     ![close dialog](images/refresh-action.png " ")
 
-13. Navigate to **Processing** tab, Right-click **Processing** and click **Create Process**.
+14. Navigate to **Processing** tab, Right-Click **Processing** and click **Create Process**.
 
     ![close dialog](images/wishlist-create-process.png " ")
 
-14. In the Property editor, enter/select the following:
+15. In the Property editor, enter/select the following:
 
      - Under Identification:
 
@@ -216,7 +217,7 @@ In this lab, you will:
 
       ![close dialog](images/remove-from-wishlist.png " ")
 
-15. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
+16. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
 
      | Parameter     |  Type   | Item |
      | ---------- |  ------ | ------ |
@@ -225,13 +226,13 @@ In this lab, you will:
 
     ![close dialog](images/user-id-param.png " ")
 
-16. Click **Save**.
+17. Click **Save**.
 
 ## Task 2: Add Wishlist Management Buttons on Page 18
 
 1. Navigate to Page **18**.
 
-2. In the left pane, Right-click **Buttons Bar** and click **Create Button**.
+2. In the left pane, Right-Click **Buttons Bar** and click **Create Button**.
 
 3. In the Property Editor, enter/select the following:
 
@@ -241,7 +242,7 @@ In this lab, you will:
 
         - Label: **Add to Wishlist**
 
-    - Layout > Position: **Next**
+    - Layout > Slot: **Next**
 
     - Under Appearance:
 
@@ -263,17 +264,17 @@ In this lab, you will:
 
         - Type: **No rows returned**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and Paste the below code into the code editor:
     ```
     <copy>
-    select * from obs_wishlist where user_id =  :user_id  AND
+    select * from obs_wishlist where user_id = :user_id AND
     book_id = :P18_BOOK_ID
     </copy>
     ```
 
     - Under Security > Authorization Scheme: **Must Not Be Public User**
 
-4. Right-click **Buttons Bar** and click **Create Button**.
+4. Right-Click **Buttons Bar** and click **Create Button**.
 
 5. In the Property Editor, enter/select the following:
 
@@ -283,7 +284,7 @@ In this lab, you will:
 
         - Label: **Remove from Wishlist**
 
-    - Under Layout > Position: **Next**
+    - Under Layout > Slot: **Next**
 
     - Under Appearance:
 
@@ -321,11 +322,11 @@ In this lab, you will:
 
         - Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **ADD\_TO\_WISHLIST**
+        - Procedure or Function: **ADD\_TO\_WISHLIST**
 
-    - Under Success Message > **Successfully added to Wishlist!**
+    - Under Success Message > Success Message: **Successfully added to Wishlist!**
 
-    - Under Error Message: **Error adding to Wishlist!**
+    - Under Error Message > Error Message: **Error adding to Wishlist!**
 
     - Under Server-side Condition > When button pressed: **Add\_to\_Wishlist**
 
@@ -335,7 +336,7 @@ In this lab, you will:
 
     - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
 
-9. Right-click **Processing** and Click **Create Process**.
+9. Right-Click **Processing** and Click **Create Process**.
 
 10. In the Property Editor, enter/select the following:
 
@@ -349,7 +350,7 @@ In this lab, you will:
 
         - Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **REMOVE\_FROM\_WISHLIST**
+        - Procedure or Function: **REMOVE\_FROM\_WISHLIST**
 
     - Under Server-side condition > When button pressed: **Remove\_from\_Wishlist**
 
@@ -359,7 +360,9 @@ In this lab, you will:
 
     - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
 
-12. Click Save.
+12. Drag and drop **Close Dialog** after **Remove from Wishlist** Process.
+
+13. Click Save.
 
 ## Task 3: Create an entry in Navigation Bar List
 
