@@ -25,7 +25,7 @@ In this lab, you:
 
 ## Task 1: Create an Application
 
-1. First, log in into your APEX workspace.
+1. First, log in to your APEX workspace.
 
 2. Click **App Builder**.
 

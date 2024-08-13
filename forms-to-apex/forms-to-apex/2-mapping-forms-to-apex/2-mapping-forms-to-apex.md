@@ -32,7 +32,7 @@ Another native approach for initiating alerts is to enable the [Confirmation opt
     ![Alerts](images/alerts.png " ")
 
 2. **Blocks**:
-Blocks will usually correspond to a region type in APEX. As discussed in Lab 1, blocks are either associated with a database object or not. The block type and the data source type are what determine what [region type](https://docs.oracle.com/en/database/oracle/apex/24.1/aeacc/regions.html) we map to in APEX. For example, if in Forms, we have a report based on a view, this can be mapped to an interactive report region with data source view.
+Blocks will usually correspond to a region type in APEX. As discussed in Lab 1, blocks are either associated with a database object or not. The block type and the data source type determine which region type [region type](https://docs.oracle.com/en/database/oracle/apex/24.1/aeacc/regions.html) we map to in APEX. For example, if in Forms, we have a report based on a view, this can be mapped to an interactive report region with data source view.
 
     ![Blocks](images/blocks1.png " ")
 

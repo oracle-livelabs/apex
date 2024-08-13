@@ -22,13 +22,13 @@ To create database objects, you need to download the following three files:
 
 ## Task 1: Create Database Objects in APEX Workspace
 
-1. Login into your APEX Workspace.
+1. Log in to your APEX Workspace.
 
-2. On APEX Workspace, Click **SQL Workshop** and select **SQL Scripts**.
+2. On APEX Workspace, click **SQL Workshop** and select **SQL Scripts**.
 
     ![SQL Scripts](images/sql-scripts.png " ")
 
-3. Click **Upload**. Now upload the previously downloaded scripts one after the other into the file(**forms\_ddl.sql**, **forms\_data\_insert.sql** and **pkg_modernization.sql**) and Click **Upload**.
+3. Click **Upload**. Now upload the previously downloaded scripts one after the other into the file(**forms\_ddl.sql**, **forms\_data\_insert.sql** and **pkg_modernization.sql**) and click **Upload**.
 
     ![Upload SQL Scripts](images/upload-script.png " ")
 
@@ -45,10 +45,11 @@ To create database objects, you need to download the following three files:
     ![Data Insert File](images/run-now-forms-ddl.png " ")
 
 5. Object creation script output is visible on the page after execution. You can see the total number of statements executed and the total number of errors encountered (see "Statements Processed", "Successful" and "With Errors").
-
-    ![Data Insert File](images/sql-script.png " ")
+    ![Data Insert File](images/scripts.png " ")
 
 6. Now click **SQL Scripts** and run the second script to populate the tables, **forms\_data\_insert.sql** under **Run** label and then **Run Now**.
+
+     ![Data Insert File](images/sql-script.png " ")
 
     ![Data Insert File](images/run-data-insertt.png " ")
 

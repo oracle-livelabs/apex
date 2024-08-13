@@ -85,13 +85,12 @@ You can define which facets to filter the data. Some are defined automatically, 
     ![App Builder](images/sales-rep-lov1.png " ")
 
 4. Now organize the facets in the following order:
-     - Facets
-        - P2\_CREDIT\_RATING
-        - P2\_REGION\_ID
-        - P2\_COUNTRY
-        - P2\_CITY
-        - P2\_NAME
-        - P2\_SALES\_REP\_ID
+    - P2\_CREDIT\_RATING
+    - P2\_REGION\_ID
+    - P2\_COUNTRY
+    - P2\_CITY
+    - P2\_NAME
+    - P2\_SALES\_REP\_ID
 
     ![App Builder](images/sequence.png " ")
 
@@ -156,7 +155,7 @@ In this task, you will define how end-users can interact with and personalize th
 
 9. For column, select the column **Name** and click **Apply**.
 
-    ![App Builder](images/control-break-name1.png " ")
+    ![App Builder](images/control-break-name.png " ")
 
 10. To save the primary report, click **Actions** > **Report** > **Save Report**.
 
@@ -226,17 +225,15 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
 7. Customers and orders entries are created and now you need to define the parent list entry for the rest of the entries. In the desktop navigation menu, go to the Customer and Order options to select the proper parent entry.
 
-8. Click each customer entries. For parent list entry, select **Customers** and click **Apply Changes**.
+8. Click each customer entries. For **Parent List Entry**, select **Customers** and click **Apply Changes**.
 
     ![App Builder](images/parent-list.png " ")
 
     ![App Builder](images/customers-nav.png " ")
 
+9. Click each order entries. For **Parent List Entry**, select **Orders** and click **Apply Changes**.
+
     ![App Builder](images/orders-nav.png " ")
-
-9. Click each order entries. For parent List Entry, select **Orders** and click **Apply Changes**.
-
-    ![App Builder](images/edit-cust.png " ")
 
 10. The **Orders Form** entry is unnecessary, click on the entry and delete it.
 
