@@ -15,55 +15,7 @@ In this lab, you will:
 - Create Application processes
 - Create Application Computations
 
-## Task 1: Create a Navigation Bar Entry
-
-In this task, you add an entry to the navigation bar that displays the shopping cart icon and item count dynamically.
-
-1. Navigate to **Shared Components**.
-
-    ![close dialog](images/sc-9.png " ")
-
-2. Under **Navigation and Search**, select **Navigation Bar List**.
-
-   ![close dialog](images/nav-bar-list.png " ")
-
-3. Click **Navigation Bar**.
-
-   ![close dialog](images/nav-bar.png " ")
-
-4. Click **Create Entry**.
-
-   ![close dialog](images/nav-create-entry.png " ")
-
-5. Enter the following:
-
-    - Under Entry:
-
-        - Sequence: **4**
-
-        - Image/Class: **&SHOPPING\_CART\_ICON.**
-
-        - List Entry Label: **Shopping Cart**
-
-    - Under Target:
-
-        - Page: **17**
-
-        - Clear Cache: **17**
-
-    - Under List Entry:
-
-        - Badge Value: **&SHOPPING\_CART\_ITEMS.**
-
-        - List Item CSS Classes: **js-shopping-cart-item**
-
-    Click **Create List Entry**.
-
-    ![close dialog](images/nav-create-list-entry.png " ")
-
-    ![close dialog](images/nav-create-list-entry1.png " ")
-
-## Task 2: Build a Shopping Cart Page
+## Task 1: Build a Shopping Cart Page
 
 In this task, you develop a new page in the application to display the shopping cart with book details, quantities, and prices. Additionally, you implement SQL queries to fetch cart data and display it in a user-friendly format.
 
@@ -264,7 +216,7 @@ In this task, you develop a new page in the application to display the shopping 
 
 17. Click **Save**.
 
-## Task 3: Implement Page Interactions
+## Task 2: Implement Page Interactions
 
 In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastly, you set up processes to handle cart operations, such as removing items and clearing the cart.
 
@@ -445,7 +397,8 @@ In this task, you create buttons for removing items from the cart and proceeding
 
 15. Click **Save**.
 
-## Task 4: Integrate Backend Processes  
+## Task 3: Integrate Backend Processes
+
 In this task, you create page processes to invoke PL/SQL procedures to manage cart actions and handle order creation and use server-side conditions and parameters to ensure smooth and secure cart management.
 
 1. Right-click **Processing** and select **Create Process**.
@@ -514,7 +467,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 7. Click **Save and Run**.
 
-## Task 5: Build Order Information Page
+## Task 4: Build Order Information Page
 
 1. Navigate to **Application ID**.
 
@@ -556,13 +509,13 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Title: **Thank You for purchasing!**
 
-        - Under Appearance:
+    - Under Appearance:
 
-            - Template: **Content Block**
+        - Template: **Content Block**
 
-            - Template Options > Select Show Region Icon
+        - Template Options > Select Show Region Icon
 
-            Click **OK**
+        Click **OK**
 
 7. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Page Item**.
 
@@ -705,7 +658,139 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 22. Click **Save and Run**.
 
-## Task 6: Run an Application
+## Task 5: Add My Books to Navigation Bar List
+
+In this task, you add an entry to the navigation bar that displays the shopping cart icon and item count dynamically.
+
+1. Navigate to **Shared Components**.
+
+    ![close dialog](images/sc-9.png " ")
+
+2. Under **Navigation and Search**, select **Navigation Bar List**.
+
+   ![close dialog](images/nav-bar-list.png " ")
+
+3. Click **Navigation Bar**.
+
+   ![close dialog](images/nav-bar.png " ")
+
+4. Click **Create Entry**.
+
+   ![close dialog](images/nav-create-entry.png " ")
+
+5. Enter the following:
+
+    - Under Entry:
+
+        - Sequence: **3**
+
+        - Image/Class: **fa-book**
+
+        - List Entry Label: **My Books**
+
+    - Under Target:
+
+        - Page: **20**
+
+    Click **Create List Entry**.
+
+## Task 6: Build My Books Page
+
+1. Navigate to **Application ID**.
+
+2. Click **Create Page**.
+
+3. Select **Blank Page**.
+
+4. In Create Blank Page dialog, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **My Books**
+
+        - Page Number: **20**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+        Click **Create Page**.
+
+5. In the left pane, Right-Click **Body** and select **Create Region**.
+
+6. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **My books**
+
+        - Type: **Cards**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below query:
+
+        ```
+        <copy>
+        select  distinct
+            oi.book_id as book_id,
+            bi.book_image as book_image,
+            bi.buy_links as buy_links,
+            bi.title as title,
+            Round(oi.price,2) as price,
+            bi.description as description,
+            bi.discount,
+            sum(oi.quantity) OVER (PARTITION BY oi.book_id) AS quantity,
+            Round((oi.price * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS total_price,
+            Round((oi.price *((100- oi.discount)/100) * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS new_total_price
+        from obs_order_items oi, obs_books bi, obs_orders o
+        where o.order_id = oi.order_id and o.user_id = :USER_ID
+            and oi.book_id(+) = bi.book_id;
+        </copy>
+         ```
+
+7. Navigate to **Attributes**, enter/select the following:
+
+    - Under Appearance > Layout: **Float**
+
+    - Under Card > Primary key column 1: **BOOK\_ID**.
+
+    - Under Title > Column: **Title**
+
+    - Under Secondary Body:
+
+        - Enable advanced formatting: **Toggle On**
+
+        - HTML Expression: Copy and Paste the below HTML Code:
+
+        ```
+        <copy>
+        <b>Purchased total : </b> <strike>&TOTAL_PRICE. Rs </strike> &NEW_TOTAL_PRICE. Rs
+        <br>
+        <b>Quantity is: </b>&QUANTITY.
+        </copy>
+         ```
+
+    - Under Media:
+
+        - Enable advanced formatting: **Toggle On**
+
+        - HTML Expression: Copy and Paste the below HTML Code:
+
+        ```
+        <copy>
+        <a href="&BUY_LINKS." target="_blank">
+        <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
+        </copy>
+         ```
+
+8. Click **Save and Run**.
+
+## Task 7: Run an Application
 
 1. Navigate to **Search Books** and Select any book of your choice to buy.
 
