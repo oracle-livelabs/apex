@@ -158,5 +158,5 @@ You now know how to create an application along with editing an icon of the appl
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, March 2024
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024

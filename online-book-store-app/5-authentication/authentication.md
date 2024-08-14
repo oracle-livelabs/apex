@@ -185,13 +185,11 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
 
 4. Expand Tables and select **OBS_USERS**. Under **Data**, Click **Insert Row** and enter/select the following:
 
-  - USER_ID: 1
-
-  - USERNAME: user01
-
-  - EMAIL: user01@xyz.com
-
-  - PASSWORD: secretPassword
+      - USER_ID: **1**
+      - USERNAME: **user01**
+      - EMAIL: **user01@xyz.com**
+      - PASSWORD: **secretPassword**
+      - IS\_ADMIN: **Y**
 
   Click Create.
 
@@ -267,5 +265,6 @@ In this task, you will learn to create custom authentication.
 You've gained knowledge on creating database objects such as packages and triggers. Additionally, you learned to develop a custom authentication scheme and implement it as the current authentication scheme. Ready to move on to the next lab!
 
 ## Acknowledgements
-- **Author**: Ankita Beri, Product Manager
-- **Last Updated By/Date**: Ankita Beri, Product Manager, May 2024
+
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024

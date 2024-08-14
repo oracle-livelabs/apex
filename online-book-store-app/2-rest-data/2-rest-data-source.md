@@ -144,5 +144,5 @@ You now know how to Extract data using REST Data Source and Enable Data Synchron
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2024
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024

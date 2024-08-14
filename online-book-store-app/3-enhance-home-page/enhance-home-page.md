@@ -532,5 +532,5 @@ You've learned how to enhance the faceted search page, integrate Global Search u
 
 ## Acknowledgements
 
-- **Author**: Ankita Beri, Product Manager
-- **Last Updated By/Date**: Ankita Beri, Product Manager, May 2024
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
