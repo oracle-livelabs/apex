@@ -7,6 +7,7 @@ In this lab, you will create an administration page with specific settings, incl
 Estimated Time: 20 minutes
 
 ### Objectives
+
 - Create an Administration Page to manage various administrative tasks.
 - Add Navigation Entries to integrate the administration page into the application's navigation bar for easy access.
 - Configure Authorization Schemes to implement and apply security measures to control access to the administration page.
@@ -243,7 +244,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     Click **Create Page**.
 
-  ![close dialog](images/create-page-details.png " ")  
+    ![close dialog](images/create-page-details.png " ")
 
 5. Navigate to **PAGE 40: Books Information**, in the property editor and enter/select the following:
 

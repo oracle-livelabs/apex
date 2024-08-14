@@ -469,7 +469,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 ## Task 4: Build Order Information Page
 
-1. Navigate to **Application ID**.
+1. Navigate to the application homepage by clicking the **Application ID**.
 
     ![close dialog](images/app-id9.png " ")
 
@@ -507,13 +507,15 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     - Under Identification:
 
-        - Title: **Thank You for purchasing!**
+        - Name: **Thank You for purchasing!**
 
     - Under Appearance:
 
         - Template: **Content Block**
 
-        - Template Options > Select Show Region Icon
+        - Template Options: Click **Use Template Defaults**
+
+            - Select Show Region Icon
 
         Click **OK**
 
@@ -527,21 +529,19 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Type: **Hidden**
 
-9. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Subregion**.
+9. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Sub Region**.
 
 10. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Name: **Order Id: &P16\_ORDER\_ID.**
 
-        - Title: **Order Id: &P16\_ORDER\_ID.**
-
-11. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Subregion**.
+11. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
 
 12. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
-        - Title: **Order Details**
+        - Name: **Order Details**
 
         - Type: **Classic Report**
 
@@ -573,27 +573,27 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 13. Under **Order Details**, expand **Columns**. 
 
-14. Select **user\_id**, **order\_id** and **payment\_id**, Under Identification > Type: **Hidden**.
+14. Select **ORDER\_ID**, **USER\ID** and **payment\_ID**, Under Identification > Type: **Hidden**.
 
-15. Select **Amount**, Under Heading > Heading: **Total Amount**
+15. Select **TOTAL**, Under Heading > Heading: **Total Amount**
 
-16. Select **Added\_Date**, Under Heading > Heading: **Purchased Date**
+16. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
 
-17. Select **Added\_Time**, Under Heading > Heading: **Purchased Time**
+17. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
 
-18. Navigate to **Attributes**, enter/select the following:
+18. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
 
-    - Under Appearance > Template: **Value Attribute Pair - Column**
+    - Under Appearance > Template: **Value Attribute Pairs - Column**
 
-    - Under Pagination > Type: **No Pagination (show All rows)**.
+    - Under Pagination > Type: **No Pagination (Show All Rows)**.
 
-19. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Subregion**.
+19. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
 
 20. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
-        - Title: **Items**
+        - Name: **Items**
 
         - Type: **Cards**
 
@@ -630,7 +630,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     - Under Secondary Body:
 
-        - Enable advanced formatting: **Toggle On**
+        - Advanced Formatting: **Toggle On**
 
         - HTML Expression: Copy and Paste the below HTML Code:
 
@@ -643,7 +643,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     - Under Media:
 
-        - Enable advanced formatting: **Toggle On**
+        - Advanced Formatting:: **Toggle On**
 
         - HTML Expression: Copy and Paste the below HTML Code:
 
@@ -696,7 +696,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
 ## Task 6: Build My Books Page
 
-1. Navigate to **Application ID**.
+1. Navigate to the application homepage by clicking the **Application ID**.
 
 2. Click **Create Page**.
 
@@ -724,7 +724,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     - Under Identification:
 
-        - Title: **My books**
+        - Name: **My Books**
 
         - Type: **Cards**
 
@@ -771,7 +771,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     - Under Secondary Body:
 
-        - Enable advanced formatting: **Toggle On**
+        - Advanced Formatting: **Toggle On**
 
         - HTML Expression: Copy and Paste the below HTML Code:
 
@@ -785,7 +785,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     - Under Media:
 
-        - Enable advanced formatting: **Toggle On**
+        - Advanced Formatting: **Toggle On**
 
         - HTML Expression: Copy and Paste the below HTML Code:
 
