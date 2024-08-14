@@ -220,7 +220,7 @@ In this task, you develop a new page in the application to display the shopping 
 
 In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastly, you set up processes to handle cart operations, such as removing items and clearing the cart.
 
-1. Right-click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
+1. Right-Click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
 
     ![close dialog](images/create-comp9.png " ")
 
@@ -244,7 +244,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/comp-no-of-books.png " ")
 
-3. Right-click **P17\_TOTAL** and select **Create Computation**.
+3. Right-Click **P17\_TOTAL** and select **Create Computation**.
 
 4. In the Property Editor, enter/select the following:
 
@@ -256,9 +256,9 @@ In this task, you create buttons for removing items from the cart and proceeding
 
           ```
           <copy>
-          select sum(a.n002)
-          from apex_collections a, obs_books b
-          where collection_name = 'BOOKS' and b.book_id(+) = a.n001
+        SELECT ROUND(SUM(b.price * ((100 - b.discount) / 100) * a.n002), 0)
+        FROM apex_collections a, obs_books b
+        WHERE collection_name = 'BOOKS' AND b.book_id(+) = a.n001;
           </copy>
           ```
 
