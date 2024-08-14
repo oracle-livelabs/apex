@@ -753,6 +753,14 @@ In this task, you add an entry to the navigation bar that displays the shopping 
         </copy>
          ```
 
+        - Order By Item: Click **No Order by item** and enter the following and click OK:
+
+        | Clause |  Key | Display |
+        | --- |  --- | --- |
+        | "TITLE"asc  | TITLE| Title |
+        | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
+        | "QUANTITY"asc| QUANTITY | Quantity |
+
 7. Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Layout: **Float**

@@ -243,7 +243,7 @@ In this lab, you will:
 
     ![App builder home page](images/order-by-item.png " ")
 
-3. Select **P10\_ORDER\_BY** and enter the following:
+2. Select **P10\_ORDER\_BY** and enter the following:
 
     - Under Default:
 
@@ -251,7 +251,7 @@ In this lab, you will:
 
        - Static Value: TITLE
 
-5. Click **Save and run**.
+3. Click **Save and run**.
 
     ![App builder home page](images/review-fs.png " ")
 
