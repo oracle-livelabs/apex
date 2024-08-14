@@ -64,6 +64,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
     ![close dialog](images/nav-create-list-entry1.png " ")
 
 ## Task 2: Build a Shopping Cart Page
+
 In this task, you develop a new page in the application to display the shopping cart with book details, quantities, and prices. Additionally, you implement SQL queries to fetch cart data and display it in a user-friendly format.
 
 1. Navigate to **Application ID**.
@@ -96,7 +97,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-blank-page9.png " ")
 
-5. In the left pane, Right-click **Body** and select **Create Region**.
+5. In the left pane, Right-Click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region17.png " ")
 
@@ -513,7 +514,198 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 7. Click **Save and Run**.
 
-## Task 5: Run an Application
+## Task 5: Build Order Information Page
+
+1. Navigate to **Application ID**.
+
+    ![close dialog](images/app-id9.png " ")
+
+2. Click **Create Page**.
+
+    ![close dialog](images/create-page9.png " ")
+
+3. Select **Blank Page**.
+
+    ![close dialog](images/blank-page9.png " ")
+
+4. In Create Blank Page dialog, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Order Information**
+
+        - Page Number: **16**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+        Click **Create Page**.
+
+    ![close dialog](images/create-blank-page9.png " ")
+
+5. In the left pane, Right-Click **Body** and select **Create Region**.
+
+    ![close dialog](images/create-region17.png " ")
+
+6. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Thank You for purchasing!**
+
+        - Under Appearance:
+
+            - Template: **Content Block**
+
+            - Template Options > Select Show Region Icon
+
+            Click **OK**
+
+7. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Page Item**.
+
+8. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **P16\_ORDER\_ID**
+
+        - Type: **Hidden**
+
+9. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Subregion**.
+
+10. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Order Id: &P16\_ORDER\_ID.**
+
+11. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Subregion**.
+
+12. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Order Details**
+
+        - Type: **Classic Report**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below query:
+
+        ```
+        <copy>
+        SELECT 'Transaction Successful' as transaction_status,
+            o.order_id,
+            o.user_id,
+            o.payment_id,
+            SUM(i.price* ((100-i.discount)/100) * i.quantity) AS total,
+            sum(i.quantity) AS quantity,
+            TO_CHAR(i.added_date, 'DD MON YYYY') as added_date,
+            TO_CHAR(i.added_time, 'HH12:MI:SS AM') || ' IST'  AS added_time
+
+        FROM   obs_orders o
+        LEFT JOIN obs_order_items i
+        ON o.order_id = i.order_id
+        WHERE  o.order_id = :P16_ORDER_ID
+
+        GROUP BY o.order_id, o.user_id,o.payment_id, i.added_date,i.added_time;
+        </copy>
+         ```
+
+13. Under **Order Details**, expand **Columns**. 
+
+14. Select **user\_id**, **order\_id** and **payment\_id**, Under Identification > Type: **Hidden**.
+
+15. Select **Amount**, Under Heading > Heading: **Total Amount**
+
+16. Select **Added\_Date**, Under Heading > Heading: **Purchased Date**
+
+17. Select **Added\_Time**, Under Heading > Heading: **Purchased Time**
+
+18. Navigate to **Attributes**, enter/select the following:
+
+    - Under Appearance > Template: **Value Attribute Pair - Column**
+
+    - Under Pagination > Type: **No Pagination (show All rows)**.
+
+19. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Subregion**.
+
+20. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Items**
+
+        - Type: **Cards**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and Paste the below query:
+
+        ```
+        <copy>
+        SELECT  b.title,
+                o.book_id,
+                o.price,
+                (o.price) Subtotal,
+                b.book_image,
+                b.buy_links,
+                o.quantity,
+            o.price*((100-b.discount)/100) *o.quantity as total_price
+        FROM   obs_order_items o,
+            obs_books b
+        WHERE  b.book_id = o.book_id
+        AND    o.order_id = :P16_ORDER_ID
+        </copy>
+         ```
+
+21. Navigate to **Attributes**, enter/select the following:
+
+    - Under Appearance > Layout: **Float**
+
+    - Under Card > Primary key column 1: **BOOK_ID**.
+
+    - Under Title > Column: **Title**
+
+    - Under Secondary Body:
+
+        - Enable advanced formatting: **Toggle On**
+
+        - HTML Expression: Copy and Paste the below HTML Code:
+
+        ```
+        <copy>
+        <b>Purchased Price: </b>&TOTAL_PRICE. Rs <br>
+        <b>Quantity : </b> &QUANTITY.
+        </copy>
+         ```
+
+    - Under Media:
+
+        - Enable advanced formatting: **Toggle On**
+
+        - HTML Expression: Copy and Paste the below HTML Code:
+
+        ```
+        <copy>
+        <a href="&BUY_LINKS." target="_blank">
+        <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
+        </copy>
+         ```
+
+        - Position: **First**
+
+22. Click **Save and Run**.
+
+## Task 6: Run an Application
 
 1. Navigate to **Search Books** and Select any book of your choice to buy.
 
@@ -527,11 +719,12 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/click-shopping-cart.png " ")
 
-5. Now, you see the shopping cart page.
+4. Now, you see the shopping cart page.
 
     ![close dialog](images/view-shopping-cart.png " ")
 
 ## Summary
+
 In this lab, you successfully integrated a shopping cart feature into an Oracle APEX application. You created a navigation bar entry for the shopping cart, developed a detailed shopping cart page, and implemented interactive elements for managing cart items. Additionally, you set up backend processes to handle cart operations and order creation, demonstrating how to leverage APEX's capabilities for building dynamic, database-driven web applications. This hands-on experience enhanced your skills in PL/SQL, SQL queries, and APEX page design and process integration.
 
 You are now ready to move on to the next lab!
