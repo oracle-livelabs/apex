@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this workshop, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you will use the keys provided in "Your OCI GenAI key". 
+In this workshop, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you will use the keys provided in the lab [Your OCI GenAI key](?lab=tut3253). 
 
 Note: OCI Generative AI service is available in limited regions. If you are using your own cloud tenancy, check to see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions). 
 
@@ -13,6 +13,8 @@ In this lab, you:
 
 - Create Web Credentials in Oracle APEX
 
+## Prerequisites
+- Download the zip file from [Your OCI GenAI key](?lab=tut3253)
 
 ## Task 1: Create Web Credentials in Oracle APEX
 
@@ -48,7 +50,7 @@ To create a Web Credential in Oracle APEX:
 
     - **Authentication Type**: OCI Native Authentication
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the zip folder you downloaded as part os prerequisites.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
     - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
