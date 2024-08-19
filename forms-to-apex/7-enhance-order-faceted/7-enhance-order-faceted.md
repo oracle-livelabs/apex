@@ -46,7 +46,11 @@ Since order filled is not a key facet search, let's remove it by following these
 
     - Identification > Name: **Orders Report**
 
-    - Under Source > Type: Copy and paste below SQL query
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and paste the below SQL query
 
     ```
     <copy>
@@ -72,7 +76,9 @@ Since order filled is not a key facet search, let's remove it by following these
 
         Click **OK**.
 
-    ![App Builder](images/order-report-region.png " ")
+    ![App Builder](images/ords-report.png " ")
+
+    ![App Builder](images/order-report-region1.png " ")
 
 4. Expand the columns of the **Orders Report** region. Click the **ID** column and update the following:
 

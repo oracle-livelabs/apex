@@ -25,8 +25,6 @@ In this lab, you:
 
     ![App Builder](images/total-hidden.png " ")
 
-    ![App Builder](images/order-filled-hidden.png " ")
-
 3. While holding down the Ctrl key, select the items: **P6\_DATE\_ORDERED, P6\_DATE\_SHIPPED, P6\_SALES\_REP\_ID and P6\_PAYMENT\_TYPE** and in the property editor, update the following:
 
     - Appearance > Template: **Required-Floating**
