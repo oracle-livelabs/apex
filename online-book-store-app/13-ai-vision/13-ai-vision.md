@@ -198,7 +198,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 16. Click Page **10 - Search Books**
 
-17. Select **P10\_SEARCH** under **Facets**
+17. In the rendering tab, select **P10\_SEARCH** under **Facets**
 
 18. Enter/Select the following:
 
@@ -208,7 +208,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 ## Task 4: Create Automation
 
-1. Navigate to Shared Components and under **Workflows and Automations**, click **Automations**.
+1. Navigate to **Shared Components** and under **Workflows and Automations**, click **Automations**.
 
 2. Click **Create**.
 
@@ -316,17 +316,13 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 8. Navigate to the application home page and click Page **50 - Edit Book Details**
 
-9. Navigate to the **Processing** tab, Right-Click **Processing** and Select **Create Process**.
+9. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
 10. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Name: **Call OCI Vision Automation**
 
-        - Name: **Call OCI Vision Automation**
-
-    - Under Source:
-
-        - PL/SQL Code: Copy and Paste the below code:
+    - Under Source > PL/SQL Code: Copy and Paste the below code:
 
         ```
         <copy>
@@ -362,7 +358,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 4. Click **Create Trigger**
 
-5. Copy and Paste the below code:
+5. Replace the existing code with the below code:
 
     ```
     <copy>
