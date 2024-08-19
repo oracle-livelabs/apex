@@ -102,6 +102,8 @@ Since order filled is not a key facet search, let's remove it by following these
 
     - Appearance > Format Mask: **FML999G999G999G999G990D00**
 
+    ![App Builder](images/total-column.png " ")
+
 6. Right-click **Orders Report** region and select **Create Button**.
 
     ![App Builder](images/create-btn.png " ")
