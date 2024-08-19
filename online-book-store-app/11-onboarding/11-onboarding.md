@@ -18,15 +18,19 @@ Create the forgot password Page
 
 4. Enter/select the following:
 
-    - Page Number: **100002**
+    - Under Page Definition:
 
-    - Name: **Email Verification for Forgot Password**
+        - Page Number: **100002**
 
-    - Use Breadcrumb: **Toggle Off**
+        - Name: **Email Verification for Forgot Password**
 
-    - Use Navigation: **Toggle Off**
+    - Under Navigation:
 
-    Click **Create Page**.
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+       Click **Create Page**.
 
     ![close dialog](images/email-page-details.png " ")
 
@@ -36,17 +40,17 @@ Create the forgot password Page
 
     ![close dialog](images/page-public.png " ")
 
-6. Right-Click **Body** and select **Create Region**.
+6. Right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region-email.png " ")
 
 7. In the property editor, enter/select the following:
 
-    - Under Identification > Title: **Reset Password**
+    - Under Identification > Name: **Reset Password**
 
     ![close dialog](images/reset-pass.png " ")
 
-8. Right-Click **Reset Password** region and select **Create Page Item**.
+8. Right-click **Reset Password** region and click **Create Page Item**.
 
     ![close dialog](images/create-page-item-email.png " ")
 
@@ -54,7 +58,7 @@ Create the forgot password Page
 
     - Under Identification > Name: **EMAIL**
 
-10. Right-Click **EMAIL** and select **Create Validation**.
+10. Right-click **EMAIL** and click **Create Validation**.
 
     ![close dialog](images/create-validation-email.png " ")
 
@@ -78,7 +82,7 @@ Create the forgot password Page
 
     ![close dialog](images/valid-email.png " ")
 
-12. Right-Click **Validations** and select **Create Validation**. In the property editor, enter/select the following:
+12. Right-click **Validations** and select **Create Validation**. In the property editor, enter/select the following:
 
      - Under Identification > Name: **Email Validation**
 
@@ -90,7 +94,7 @@ Create the forgot password Page
 
         ```
         <copy>
-        select u.email from obs_users u  where u.email = lower(:EMAIL)
+        select u.email from obs_users u  where u.email = lower(:EMAIL);
         </copy>
          ```
 
@@ -100,7 +104,7 @@ Create the forgot password Page
 
     ![close dialog](images/email-validation.png " ")
 
-13. Right-Click **EMAIL** and select **Create Button Below**.
+13. Right-click **EMAIL** and click **Create Button Below**.
 
     ![close dialog](images/create-button-below.png " ")
 
@@ -120,7 +124,7 @@ Create the forgot password Page
 
     ![close dialog](images/send-btn.png " ")
 
-15. Navigate the **Processing** tab, Right-Click **Processing** and select **Create Process**.
+15. Navigate the **Processing** tab, right-click **Processing** and click **Create Process**.
 
     ![close dialog](images/create-process-email.png " ")
 
@@ -138,9 +142,9 @@ Create the forgot password Page
 
         - Procedure or Function: **SEND**
 
-    - Server-side Condition > When Button Pressed: **Send**
+    - Under Success Message > Success Message: **Reset Password Link sent to your email address**.
 
-    - Success Message > Success Message: **Reset Password Link sent to your email address**.
+    - Under Server-side Condition > When Button Pressed: **Send**
 
     ![close dialog](images/send-verification-email-process.png " ")
 
@@ -218,7 +222,7 @@ Create the forgot password Page
 
     ![close dialog](images/p-subt.png " ")
 
-18. Right-Click **After Processing** and select **Create Branch**.
+18. Right-click **After Processing** and select **Create Branch**.
 
     ![close dialog](images/create-branch-email.png " ")
 
@@ -266,7 +270,7 @@ Create the forgot password Page
 
           Click **OK**.
 
-    - Under Behaviour:
+    - Under Behavior:
 
         - Action: **Redirect to page in this application**
 
@@ -278,11 +282,11 @@ Create the forgot password Page
 
             Click **OK**.
 
-  ![close dialog](images/forgot-pass-btn.png " ")
+    ![close dialog](images/forgot-pass-btn.png " ")
 
-  ![close dialog](images/forgot-pass-link.png " ")
+    ![close dialog](images/forgot-pass-link.png " ")
 
-24. Click **LOGIN** and update the following:
+24. Click **LOGIN** button and update the following:
 
     - Under Appearance > Template options: Click **Use Template Defaults**
 
@@ -290,24 +294,19 @@ Create the forgot password Page
 
           Click **OK**.
 
-  ![close dialog](images/login-btn.png " ")
+    ![close dialog](images/login-btn.png " ")
 
 25. Click **Save**. 
 
-
 ## Task 2: Creating  Reset Password - Page 100003
 
-1. Navigate to the Application Home Page.
+1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
-2. Click **Create Page**.
-
-    ![close dialog](images/create-page-email.png " ")
-
-3. Select **Blank Page**.
+2. Click **Blank Page**.
 
     ![close dialog](images/blank-page-email.png " ")
 
-4. Enter/select the following:
+3. Enter/select the following:
 
     - Under Page Definition:
 
@@ -317,7 +316,7 @@ Create the forgot password Page
 
     - Under Navigation:
 
-        - Use Breadcrumb: **Toggle off**
+        - Use Breadcrumb: **Toggle Off**
 
         - Use Navigation: **Toggle Off**
 
@@ -325,35 +324,35 @@ Create the forgot password Page
 
     ![close dialog](images/create-reset-pass.png " ")
 
-5. In the Property editor, update the following:
+4. In the Property editor, update the following:
 
     - Under Security > Authentication: **Page is Public**
 
     ![close dialog](images/rest-page-public.png " ")
 
-6. In the left pane, Right-Click **Body** and select **Create Region**.
+5. In the left pane, right-click **Body** and click **Create Region**.
 
    ![close dialog](images/create-region-reset.png " ")
 
-7. In the Property editor, enter/select the following:
+6. In the Property editor, enter/select the following:
 
     - Under Identification:
 
-        - Title: **Update Current User**
+        - Name: **Update Current User**
 
         - Type: **Form**
 
-    - Source > Table Name: **OBS_USERS**
+    - Under Source > Table Name: **OBS_USERS**
 
     ![close dialog](images/update-current-user1.png " ")
 
-8. Under **Update Current User** region, Delete all page items except **P100003\_USER\_ID**, **P100003\_EMAIL** and **P100003\_PASSWORD**.
+7. Under **Update Current User** region, Delete all page items except **P100003\_USER\_ID**, **P100003\_EMAIL** and **P100003\_PASSWORD**.
 
    ![close dialog](images/del-username.png " ")
 
    ![close dialog](images/delete-all.png " ")
 
-9. Select **P100003\_EMAIL** and update the following:
+8. Select **P100003\_EMAIL** and update the following:
 
     - Under Identification > Type: **Display Only**
 
@@ -365,17 +364,17 @@ Create the forgot password Page
 
     ![close dialog](images/email-restricted.png " ")
 
-10. Select **P100003\_PASSWORD** and update the following:
+9. Select **P100003\_PASSWORD** and update the following:
 
-    - Identification > Type: **Password**
+    - Under Identification > Type: **Password**
 
     ![close dialog](images/pass-type.png " ")
 
-11. Right-Click **P100003\_PASSWORD** and select **Create Validation**.
+10. Right-click **P100003\_PASSWORD** and click **Create Validation**.
 
     ![close dialog](images/pass-validation.png " ")
 
-12. In the Property editor, enter/select the following:
+11. In the Property editor, enter/select the following:
 
     - Under Identification > Name: **Not Null Validation**
 
@@ -388,22 +387,22 @@ Create the forgot password Page
          ```
         <copy>
         if :P100003_Password is not NULL then
-          return true;
+            return true;
         else
-          return false;
+            return false;
         end if;
        </copy>
         ```
 
-        - Under Error > Error Message: **Password field should have some value**
+        - Under Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/not-null-valid.png " ")
 
-13. Right-Click **Update Current User** and select **Create Page Item**.
+12. Right-click **Update Current User** and click **Create Page Item**.
 
     ![close dialog](images/page-item-reset.png " ")
 
-14. In the Property editor, enter/select the following:
+13. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -413,13 +412,13 @@ Create the forgot password Page
 
     ![close dialog](images/confirm-pass-reset.png " ")
 
-15. Right-Click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
+14. Right-click **P100003\_CONFIRM\_PASSWORD** and click **Create Validation**.
 
     ![close dialog](images/create-val-con.png " ")
 
-16. In the Property editor, enter/select the following:
+15. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: Not Null Validation
+    - Under Identification > Name: **Not Null Validation1**
 
     - Under Validation:
 
@@ -430,20 +429,20 @@ Create the forgot password Page
         ```
         <copy>
         if :P100003_CONFIRM_PASSWORD is not NULL then
-          return true;
+            return true;
         else
-          return false;
+            return false;
         end if;
         </copy>
        ```
 
-    - Under Error > Error Message: **Password field should have some value**
+    - Under Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/not-null-cf.png " ")
 
-17. Again, Right-Click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
+16. Again, right-click **P100003\_CONFIRM\_PASSWORD** and click **Create Validation**.
 
-18. In the Property editor, enter/select the following:
+17. In the Property editor, enter/select the following:
 
     - Under Identification > Name: **Compare Passwords**
 
@@ -465,17 +464,17 @@ Create the forgot password Page
             </copy>
            ```
 
-    - Under Error > Error Message: **Confirm Password is not same as Password entered above**
+    - Under Error > Error Message: **Confirm Password is not same as Password entered above.**
 
     ![close dialog](images/compare-pass-valid.png " ")
 
-19. Right-Click **Update Current User** region and select **Create Sub-Region**.
+18. Right-click **Update Current User** region and click **Create Sub-Region**.
 
     ![close dialog](images/sub-region-reset.png " ")
 
-20. In the Property editor, enter/select the following:
+19. In the Property editor, enter/select the following:
 
-    - Under Identification > Title: **Buttons**
+    - Under Identification > Name: **Buttons**
 
     - Under Layout:
 
@@ -493,21 +492,21 @@ Create the forgot password Page
 
     ![close dialog](images/button-reset.png " ")
 
-21. Right-Click **Buttons** and select **Create Button**.
+20. Right-click **Buttons** and click **Create Button**.
 
     ![close dialog](images/create-btn-reset.png " ")
 
-22. In the Property editor, enter/select the following:
+21. In the Property editor, enter/select the following:
 
     - Under Identification > Button Name: **CANCEL**
 
-    - Under Layout > Position: **Close**
+    - Under Layout > Slot: **Close**
 
     - Under Behavior:
 
         - Action: **Redirect to page in this Application**
 
-        - Target: **No Link Defined**
+        - Target: Click **No Link Defined**
 
             - Page: **15010**
 
@@ -517,11 +516,11 @@ Create the forgot password Page
 
     ![close dialog](images/cancel-reset.png " ")
 
-23. Right-Click **CANCEL** and select **Create Dynamic Action**.
+22. Right-click **CANCEL** and click **Create Dynamic Action**.
 
     ![close dialog](images/create-dyn-act-reset.png " ")
 
-24. In the Property editor, enter/select the following:
+23. In the Property editor, enter/select the following:
 
     - Under Identification > Name: **Cancel Dialog**
 
@@ -529,9 +528,9 @@ Create the forgot password Page
 
     ![close dialog](images/canel-dialog-reset.png " ")
 
-25. Right-Click **Buttons** and select **Create Button**.
+24. Right-click **Buttons** and click **Create Button**.
 
-26. In the Property editor, enter/select the following:
+25. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -539,7 +538,7 @@ Create the forgot password Page
 
         - Label: **Apply Changes**
 
-    - Under Layout > Position: **Next**
+    - Under Layout > Slot: **Next**
 
     - Under Appearance > Hot: **Toggle On**
 
@@ -547,11 +546,11 @@ Create the forgot password Page
 
     ![close dialog](images/save-btn-reset.png " ")
 
-27. Navigate to the **Processing** tab, Right-Click **Processing** and Select **Create Process**.
+26. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
     ![close dialog](images/create-process-reset.png " ")
 
-28. In the Property editor, enter/select the following:
+27. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -565,11 +564,11 @@ Create the forgot password Page
 
     ![close dialog](images/current-user-process.png " ")
 
-29. Right-click **After Processing** and click **Create Branch**.
+28. Right-click **After Processing** and click **Create Branch**.
 
     ![create-branch](images/<name>.png " ")
 
-30. In the property editor, enter/select the following:
+29. In the property editor, enter/select the following:
 
     - Under Identification > Name: **Go to My Profile**
 
@@ -583,17 +582,17 @@ Create the forgot password Page
 
     ![branch-link](images/<name>.png " ")
 
-31. Click **Save**.
+30. Click **Save**.
 
-32. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
+31. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
     ![user-create-page](images/<name>.png " ")
 
-33. Click **Blank Page**.
+32. Click **Blank Page**.
 
     ![user-blank-page](images/<name>.png " ")
 
-34. Enter/select the following:
+33. Enter/select the following:
 
     - Under Page Definition:
 
@@ -603,7 +602,7 @@ Create the forgot password Page
 
     - Under Navigation:
 
-        - Use Breadcrumb: **Toggle off**
+        - Use Breadcrumb: **Toggle Off**
 
         - Use Navigation: **Toggle Off**
 
@@ -611,32 +610,28 @@ Create the forgot password Page
 
     ![Login Home Page Create](images/<name>.png " ")
 
-35. Right Click **Before Header** under **Pre-rendering** and click **Create Branch**
+34. Right-click **Before Header** under **Pre-rendering** and click **Create Branch**
     - Under Behavior > Target: Click **No Link Defined**
 
-         - Page: **1**
+         - Page: **10**
 
          Click **OK**
 
     ![branch-link](images/<name>.png " ")
 
-36. Click **Save**.
+35. Click **Save**.
 
 ## Task 3: Creating Email Verification for User SignUp - Page 100001
 
-Create the user signup Page
+Create the user signUp Page
 
-1. Navigate to Application Home Page.
+1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
-2. Click **Create Page**.
-
-   ![create-page-user-signup](images/<name>.png " ")
-
-3. Choose **Form Page**.
+2. Choose **Form Page**.
 
     ![form-page-user-signup](images/<name>.png " ")
 
-4. Enter/select the following:
+3. Enter/select the following:
 
     - Under Page Definition:
 
@@ -658,29 +653,29 @@ Create the user signup Page
 
     - Under Branch Pages:
 
-        - Branch Here on Submit: 9999
+        - Branch Here on Submit: **9999**
 
-        - Cancel and Go To Page: 9999
+        - Cancel and Go To Page: **9999**
 
     Click **Create Page**.
 
     ![user-signup-page-details](images/<name>.png " ")
 
-5. In the property editor, update the following:
+4. In the property editor, update the following:
 
      - Under Security > Authentication: **Page is Public**
 
     ![page-public](images/<name>.png " ")
 
-6. Delete two buttons named **DELETE** and **SAVE** under **Email Verification for User SignUp** region.
+5. Delete two buttons named **DELETE** and **SAVE** under **Email Verification for User SignUp** region.
 
     ![delete-buttons](images/<name>.png " ")
 
-7. Right-Click **P100001\_EMAIL** and select **Create Validation**.
+6. Right-click **P100001\_EMAIL** and click **Create Validation**.
 
     ![create-validation](images/<name>.png " ")
 
-8. In the property editor, enter/select the following:
+7. In the property editor, enter/select the following:
 
     - Under Identification > Name: **If Email Already Present**
 
@@ -692,7 +687,7 @@ Create the user signup Page
 
         ```
         <copy>
-        select email from obs_users where email = lower(:P100001_EMAIL)
+        select email from obs_users where email = lower(:P100001_EMAIL);
         </copy>
          ```
 
@@ -706,25 +701,21 @@ Create the user signup Page
 
     ![valid-email](images/<name>.png " ")
 
-9. Select **Create** Button
+8. Select **CREATE** Button under **Email Verification for User SignUp** region and update the following:
 
     - Under Identification > Label: **Send SignUp Email**
 
-10. Navigate the **Processing** tab, Select **Process form Email Verification for User SignUp** under **processes** under **Processing**.
-
-    ![select-process](images/<name>.png " ")
-
-11. In the property editor, enter/select the following:
+9. Navigate to **Processing** tab, Select **Process form Email Verification for User SignUp** under **processes** under **Processing** and update the following:
 
     - Under Success Message > Success Message: **Email Sent**
 
     ![success-message](images/<name>.png " ")
 
-12. Right-Click **Processing** and select **Create Process**.
+10. Right-click **Processing** and click **Create Process**.
 
     ![create-process](images/<name>.png " ")
 
-13. In the property editor, enter/select the following:
+11. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -742,7 +733,7 @@ Create the user signup Page
 
     ![send-verification-email-process](images/<name>.png " ")
 
-14. Under **Send Verification Email** process, expand **Parameters** and update the following:
+12. Under **Send Verification Email** process, expand **Parameters** and update the following:
 
     - **p\_to**:
 
@@ -814,19 +805,19 @@ Create the user signup Page
 
     ![p-subt](images/<name>.png " ")
 
-15. Click **Save**.
+13. Click **Save**.
 
     Update the Login Page
 
-16. Navigate to Page - 9999.
+14. Navigate to Page - 9999.
 
     ![login-9999](images/<name>.png " ")
 
-17. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
+15. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
 
     ![create-btn-login](images/<name>.png " ")
 
-18. In the Property editor, enter/select the following:
+16. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -835,9 +826,10 @@ Create the user signup Page
         - Label: **New here? SignUp**
 
     - Under Appearance > Template options: Click **Use Template Defaults**
-        - Size: Small
 
-        - Style: Display as Link
+        - Size: **Small**
+
+        - Style: **Display as Link**
 
           Click **OK**.
 
@@ -853,7 +845,7 @@ Create the user signup Page
 
     ![image](images/<name>.png " ")
 
-19. Click **Save**.
+17. Click **Save**.
 
 ## Task 4: Creating  SignUp - Page 100000
 
@@ -928,7 +920,7 @@ Create the user signup Page
 
     - Under Identification > Type: **Hidden**
 
-12. Right-Click **SignUp** and select **Create Button**
+12. Right-click **SignUp** and select **Create Button**
 
 13. In the Property editor, enter/select the following:
 
@@ -960,7 +952,7 @@ Create the user signup Page
 
         - Lock Row: **No**
 
-17. Right-Click **Processing** and select **Create Process**.
+17. Right-click **Processing** and select **Create Process**.
 
 18. In the property editor, enter/select the following:
 
@@ -978,7 +970,7 @@ Create the user signup Page
         </copy>
          ```
 
-19. Right-Click **Processing** and select **Create Process**.
+19. Right-click **Processing** and select **Create Process**.
 
 20. In the property editor, enter/select the following:
 
@@ -1014,7 +1006,7 @@ Create the user signup Page
 
             - Type: **API Default**
 
-22. Right-Click **Processing** and select **Create Process**.
+22. Right-click **Processing** and select **Create Process**.
 
 23. In the property editor, enter/select the following:
 
@@ -1040,7 +1032,7 @@ Create the user signup Page
 
             - Item: **P10000_EMAIL**
 
-25. Right-Click **Processing** and select **Create Process**.
+25. Right-click **Processing** and select **Create Process**.
 
 26. In the property editor, enter/select the following:
 
@@ -1287,7 +1279,7 @@ Create the user signup Page
             Click **OK**.
 
 31. Navigate the **Processing** tab,
-Right-Click **Processing** and select **Create Process**.
+Right-click **Processing** and select **Create Process**.
 
 32. In the property editor, enter/select the following:
 

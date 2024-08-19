@@ -134,7 +134,13 @@ In this task, you create Faceted Search page which will display list of the book
 
     ![App builder home page](images/fs-create-page.png " ")
 
-6. Click **Save and Run**.
+6. Navigate to **Shared Component** and Click **User Interface Attributes** under **User Interface**.
+
+7. Under Attributes, Select **Home URL**: **10 Search Books**.
+
+8. Click **Apply Changes**.
+
+9. Click **Run**.
 
     ![App builder home page](images/fs-view.png " ")
 

@@ -49,7 +49,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-blank-page9.png " ")
 
-5. In the left pane, Right-Click **Body** and select **Create Region**.
+5. In the left pane, right-click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region17.png " ")
 
@@ -130,7 +130,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-region-att1.png " ")
 
-8. In Page Rendering, under **Shopping Cart** region, Right-click **Actions** and select **Create Action**.
+8. In Page Rendering, under **Shopping Cart** region, right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/create-action9.png " ")
 
@@ -190,7 +190,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/page-load.png " ")
 
-13. Right-Click **Body** and Select **Create Region**.
+13. Right-click **Body** and Select **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 
@@ -198,7 +198,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/order-info.png " ")
 
-15. Right-Click **Order Information** and select **Create Page Item**.
+15. Right-click **Order Information** and select **Create Page Item**.
 
     ![close dialog](images/order-page-item.png " ")
 
@@ -220,7 +220,7 @@ In this task, you develop a new page in the application to display the shopping 
 
 In this task, you create buttons for removing items from the cart and proceeding to checkout. Next, you add computations to dynamically calculate the total number of books and the grand total price. Lastly, you set up processes to handle cart operations, such as removing items and clearing the cart.
 
-1. Right-Click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
+1. Right-click **P17\_NO\_OF\_BOOKS** and select **Create Computation**.
 
     ![close dialog](images/create-comp9.png " ")
 
@@ -244,7 +244,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/comp-no-of-books.png " ")
 
-3. Right-Click **P17\_TOTAL** and select **Create Computation**.
+3. Right-click **P17\_TOTAL** and select **Create Computation**.
 
 4. In the Property Editor, enter/select the following:
 
@@ -330,7 +330,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/proceed-btn1.png " ")  
 
-9. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
+9. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/create-process9.png " ")  
 
@@ -423,7 +423,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/clear-sho-cart-process.png " ")
 
-3. Right-Click **After Processing** and select **Create Branch**.
+3. Right-click **After Processing** and select **Create Branch**.
 
     ![close dialog](images/create-branch9.png " ")
 
@@ -444,7 +444,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/go-to-books.png " ")
 
-5. Right-Click **After Processing** and select **Create Branch**.
+5. Right-click **After Processing** and select **Create Branch**.
 
     ![close dialog](images/create-branch9.png " ")
 
@@ -499,7 +499,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/create-blank-page9.png " ")
 
-5. In the left pane, Right-Click **Body** and select **Create Region**.
+5. In the left pane, right-click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region17.png " ")
 
@@ -519,7 +519,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         Click **OK**
 
-7. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Page Item**.
+7. In the left pane, right-click **Thank You for purchasing!** and select **Create Page Item**.
 
 8. In the Property Editor, enter/select the following:
 
@@ -529,13 +529,13 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Type: **Hidden**
 
-9. In the left pane, Right-Click **Thank You for purchasing!** and select **Create Sub Region**.
+9. In the left pane, right-click **Thank You for purchasing!** and select **Create Sub Region**.
 
 10. In the Property Editor, enter/select the following:
 
     - Under Identification > Name: **Order Id: &P16\_ORDER\_ID.**
 
-11. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+11. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
 
 12. In the Property Editor, enter/select the following:
 
@@ -587,7 +587,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     - Under Pagination > Type: **No Pagination (Show All Rows)**.
 
-19. In the left pane, Right-Click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+19. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
 
 20. In the Property Editor, enter/select the following:
 
@@ -718,7 +718,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         Click **Create Page**.
 
-5. In the left pane, Right-Click **Body** and select **Create Region**.
+5. In the left pane, right-click **Body** and select **Create Region**.
 
 6. In the Property Editor, enter/select the following:
 

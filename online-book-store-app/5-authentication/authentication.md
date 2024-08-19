@@ -152,7 +152,7 @@ The code also includes error handling to manage exceptions and set appropriate a
 
 This trigger ensures that before inserting or updating a record in the **OBS\_USERS** table, certain operations are performed to maintain data integrity and security, such as ensuring consistent case sensitivity for email and username and hashing passwords for storage.
 
-1. Right-Click Trigger and click **Create Trigger**.
+1. Right-click Trigger and click **Create Trigger**.
 
    ![App builder home page](images/trg.png " ")
 
@@ -262,6 +262,7 @@ In this task, you will learn to create custom authentication.
     - Password: secretPassword
 
 ## Summary
+
 You've gained knowledge on creating database objects such as packages and triggers. Additionally, you learned to develop a custom authentication scheme and implement it as the current authentication scheme. Ready to move on to the next lab!
 
 ## Acknowledgements

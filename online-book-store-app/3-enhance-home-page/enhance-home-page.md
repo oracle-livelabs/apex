@@ -70,7 +70,7 @@ In this lab, you will:
 
 ## Task 2: Integrate Global Search
 
-1. In the left pane, Right-click **Body** and Select **Create Page Item**.
+1. In the left pane, right-click **Body** and Select **Create Page Item**.
 
      ![App builder home page](images/fs-page-item.png " ")
 
@@ -287,7 +287,7 @@ In this lab, you will:
 
     ![App builder home page](images/authentication-bp.png " ")
 
-6. In the left pane, Right-click **Dialog Footer** and click **Create Region**.
+6. In the left pane, right-click **Dialog Footer** and click **Create Region**.
 
      ![App builder home page](images/region-bp.png " ")
 
@@ -367,7 +367,7 @@ In this lab, you will:
 
     ![App builder home page](images/buy-links-computation.png " ")    
 
-18. In the left pane, Right-Click **Content Body** and Select **Create Region**.
+18. In the left pane, right-click **Content Body** and Select **Create Region**.
 
       ![App builder home page](images/create-region1.png " ")
 
@@ -496,9 +496,9 @@ In this lab, you will:
 
     ![App builder home page](images/navigate-to-10.png " ")
 
-28. In the left pane, Under **Search Results** region, Right-click **Actions** and Select **Create Action**.
+28. In the left pane, Under **Search Results** region, right-click **Actions** and Select **Create Action**.
 
-    ![App builder home page](images/create-action.png " ")        
+    ![App builder home page](images/create-action.png " ")
 
 29. In the Property Editor, enter/select the following properties:
 

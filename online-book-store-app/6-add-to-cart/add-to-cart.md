@@ -42,7 +42,7 @@ To Create a Package:
 
    ![App builder home page](images/ob2.png " ")
 
-2. Right-Click Packages and Select **Create Package**.
+2. Right-click Packages and Select **Create Package**.
 
    ![App builder home page](images/create-pack1.png " ")
 
@@ -414,7 +414,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![18: Book Details](images/page-18.png " ")
 
-3. In the left pane, Right-click **Buttons Bar** and click **Create Page Item**.
+3. In the left pane, right-click **Buttons Bar** and click **Create Page Item**.
 
     ![Create Page Item](images/create-button1.png " ")
 
@@ -481,7 +481,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
   ![Computation](images/quantity-source.png " ")
 
-8.  In the left pane, Right-click **Buttons Bar** and Click **Create Button**.
+8.  In the left pane, right-click **Buttons Bar** and Click **Create Button**.
 
     ![Create Button](images/create-button4.png " ")
 
@@ -688,7 +688,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
 2. Click **Page 10 - Search Books**.
 
-3. In the left pane, Right-click **Results** region and click **Create Dynamic Action**.
+3. In the left pane, right-click **Results** region and click **Create Dynamic Action**.
 
     ![close dialog](images/cart-create-dynamic.png " ")
 
@@ -729,7 +729,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
   ![close dialog](images/true-action.png " ")
 
-6. Right-Click on **False** action and click **Create FALSE Action**.
+6. Right-click on **False** action and click **Create FALSE Action**.
 
     ![close dialog](images/false-action.png " ")
 

@@ -43,7 +43,7 @@ In this lab, you will:
 
    ![close dialog](images/wishlist-create-page.png " ")
 
-4. In the left pane, Right-click **Body** and Select **Create Region**.
+4. In the left pane, right-click **Body** and Select **Create Region**.
 
     ![close dialog](images/wishlist-create-region.png " ")
 
@@ -131,7 +131,7 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-att1.png " ")
 
-7. Under **My Books** region, Right-Click **Actions** and click **Create Action**.
+7. Under **My Books** region, right-click **Actions** and click **Create Action**.
 
     ![close dialog](images/wishlist-action.png " ")
 
@@ -151,14 +151,14 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-action-details.png " ")
 
-9. Right-Click **My Books** region and click **Create Page Item**.
+9. Right-click **My Books** region and click **Create Page Item**.
 
     ![close dialog](images/wishtlist-page-item.png " ")
 
 10. In the Property editor, enter/select the following:
 
     - Under Identification
-     
+
         - Name: **P14\_BOOK\_ID**
 
         - Type: **Hidden**
@@ -167,7 +167,7 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-book-id.png " ")
 
-11. Right-Click **My Books** region and click **Create Dynamic Action**.
+11. Right-click **My Books** region and click **Create Dynamic Action**.
 
     ![close dialog](images/wishlist-dynamic-action.png " ")
 
@@ -191,7 +191,7 @@ In this lab, you will:
 
     ![close dialog](images/refresh-action.png " ")
 
-14. Navigate to **Processing** tab, Right-Click **Processing** and click **Create Process**.
+14. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
     ![close dialog](images/wishlist-create-process.png " ")
 
@@ -232,7 +232,7 @@ In this lab, you will:
 
 1. Navigate to Page **18**.
 
-2. In the left pane, Right-Click **Buttons Bar** and click **Create Button**.
+2. In the left pane, right-click **Buttons Bar** and click **Create Button**.
 
 3. In the Property Editor, enter/select the following:
 
@@ -274,7 +274,7 @@ In this lab, you will:
 
     - Under Security > Authorization Scheme: **Must Not Be Public User**
 
-4. Right-Click **Buttons Bar** and click **Create Button**.
+4. Right-click **Buttons Bar** and click **Create Button**.
 
 5. In the Property Editor, enter/select the following:
 
@@ -308,7 +308,7 @@ In this lab, you will:
 
     - Under Security > Authorization Scheme: **Must Not Be Public User**
 
-6. Navigate to **Processing** tab, Right-click **Processing** and select **Create Process**.
+6. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
 7. In the Property Editor, enter/select the following:
 
@@ -336,7 +336,7 @@ In this lab, you will:
 
     - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
 
-9. Right-Click **Processing** and Click **Create Process**.
+9. Right-click **Processing** and Click **Create Process**.
 
 10. In the Property Editor, enter/select the following:
 

@@ -40,9 +40,9 @@ In this task, you will set up a new page for displaying order information. Furth
 
     Click **Create Page**.
 
-  ![close dialog](images/order-info-details.png " ")
+    ![close dialog](images/order-info-details.png " ")
 
-4. In the left pane, Right-click **Body** and Select **Create Region**.
+4. In the left pane, right-click **Body** and Select **Create Region**.
 
     ![close dialog](images/order-info-region.png " ")
 
@@ -147,7 +147,7 @@ In this task, you will set up a new page for displaying order information. Furth
 
     ![close dialog](images/order-details-attributes.png " ")
 
-14. In the left pane, Right-click **Order Id: &P16\_ORDER\_ID.** region and select **Create Sub Region**.
+14. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** region and select **Create Sub Region**.
 
     ![close dialog](images/order-sub-region3.png " ")
 
@@ -281,7 +281,7 @@ In this task, you set up a new page for displaying a list of books purchased by 
 
    ![close dialog](images/my-books-page.png " ")
 
-4. In the left pane, Right-click **Body** and Select **Create Region**.
+4. In the left pane, right-click **Body** and Select **Create Region**.
 
     ![close dialog](images/my-books-region.png " ")
 

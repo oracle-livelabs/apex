@@ -99,7 +99,7 @@ update Image/Class: **fa-table**. Click **Apply Changes**.
 
     ![close dialog](images/edit-page-15000.png " ")
 
-14. Right-Click **Body** and click **Create Region**.
+14. Right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region-15000.png " ")
 
@@ -255,7 +255,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/left-side-colum.png " ")
 
-5. Right-Click **Body** and click **Create Region**.
+5. Right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region-info.png " ")
 
@@ -279,7 +279,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/update-book-info.png " ")
 
-7. Right-Click **Body** and click **Create Region**.
+7. Right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region-info1.png " ")
 
@@ -303,7 +303,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/search-region-real.png " ")
 
-9. Right-Click **Search** and click **Create Page Item**.
+9. Right-click **Search** and click **Create Page Item**.
 
     ![close dialog](images/create-page-item-search.png " ")
 
@@ -327,7 +327,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/search-page-item.png " ")
 
-11. Right-Click **Body** and click **Create Region**.
+11. Right-click **Body** and click **Create Region**.
 
 12. In the property editor, enter/select the following:
 
@@ -389,7 +389,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/master-record-details.png " ")
 
-14. Right-Click **P40_SEARCH** and click **Create Dynamic Action**.
+14. Right-click **P40_SEARCH** and click **Create Dynamic Action**.
 
     ![close dialog](images/search-dynamic-action1.png " ")
 
@@ -425,7 +425,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/true-refresh.png " ")
 
-17. Right-Click **TRUE** and click **Create TRUE Action**.
+17. Right-click **TRUE** and click **Create TRUE Action**.
 
     ![close dialog](images/true-action-info.png " ")
 
@@ -435,7 +435,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/cancel-event.png " ")
 
-19. Right-Click **Body** and Click **Create Region**.
+19. Right-click **Body** and Click **Create Region**.
 
     ![close dialog](images/create-region-info-4.png " ")
 
@@ -502,7 +502,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/rows-returned.png " ")
 
-24. Right-Click **object\_det** and **text\_det** and click **Delete**.
+24. Right-click **object\_det** and **text\_det** and click **Delete**.
 
     ![close dialog](images/del-object.png " ")
 
@@ -527,7 +527,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/available-y-n.png " ")
 
-26. Right-Click **Body** and click **Create Page Item**.
+26. Right-click **Body** and click **Create Page Item**.
 
     ![close dialog](images/create-page-itme-info.png " ")
 
@@ -543,7 +543,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/id-hidden.png " ")
 
-28. Right-Click **Book Details** and click **Create Dynamic Action**.
+28. Right-click **Book Details** and click **Create Dynamic Action**.
 
     ![close dialog](images/create-dyn-act.png " ")
 
@@ -571,7 +571,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/refresh-book-details.png " ")
 
-31. Right-Click **Book Details** and Click **Create Button**.
+31. Right-click **Book Details** and Click **Create Button**.
 
     ![close dialog](images/create-button-info.png " ")
 
@@ -615,7 +615,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/edit-btn-link.png " ")
 
-33. Right-Click **Update Book Information** region and click **Create Button**.
+33. Right-click **Update Book Information** region and click **Create Button**.
 
     ![close dialog](images/create-button-info1.png " ")
 
@@ -657,7 +657,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/reset-link.png " ")
 
-35. Right-Click **Reset** button and click **Duplicate**.
+35. Right-click **Reset** button and click **Duplicate**.
 
     ![close dialog](images/duplicate-reset.png " ")
 
@@ -739,7 +739,7 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/chained-off.png " ")
 
-6. In the left pane, under **Edit Book Details** region, Right-Click **P50\_OBJECT\_DET** and  **P50\_TEXT\_DET** and click **Delete**.
+6. In the left pane, under **Edit Book Details** region, right-click **P50\_OBJECT\_DET** and  **P50\_TEXT\_DET** and click **Delete**.
 
     ![close dialog](images/delete-obj.png " ")
 
@@ -757,7 +757,7 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/ava-y-n.png " ")
 
-9. Right-Click **Book Details** and click **Create Page Item**.
+9. Right-click **Book Details** and click **Create Page Item**.
 
     ![close dialog](images/create-page-item-book.png " ")
 
