@@ -4,7 +4,7 @@
 
 This lab focuses on understanding how to map Oracle Forms components to the most appropriate APEX components to achieve similar functionality. The lab provides guidelines for comparing Oracle Forms modules with those in APEX, noting that mapping may not always be a direct 1:1 relation.
 
-Estimated Time: 10 Minutes
+Estimated Time: 5 Minutes
 
 ### Objectives
 
@@ -25,14 +25,14 @@ In the following sections, we will examine each of Form's components to determin
 1. **Alerts**:
 You can store an alert message as a text message in shared components in an APEX application. Text messages allow you to build translatable text strings with substitution variables that PL/SQL packages, procedures, and functions can call.
 
-You can also map alerts into [Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/managing-dynamic-actions.html#GUID-7E564715-E963-44AA-B620-5FFB5EFA62EE), which execute to display an alert dialog and message when an event occurs.
+    You can also map alerts into [Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/managing-dynamic-actions.html#GUID-7E564715-E963-44AA-B620-5FFB5EFA62EE), which execute to display an alert dialog and message when an event occurs.
 
-Another native approach for initiating alerts is to enable the [Confirmation option on buttons](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E).
+    Another native approach for initiating alerts is to enable the [Confirmation option on buttons](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/creating-buttons.html#GUID-F6DA76D1-2020-4930-8D26-12D0A3497C8E).
 
     ![Alerts](images/alerts.png " ")
 
 2. **Blocks**:
-Blocks will usually correspond to a region type in APEX. As discussed in Lab 1, blocks are either associated with a database object or not. The block type and the data source type determine which region type [region type](https://docs.oracle.com/en/database/oracle/apex/24.1/aeacc/regions.html) we map to in APEX. For example, if in Forms, we have a report based on a view, this can be mapped to an interactive report region with data source view.
+Blocks will usually correspond to a region type in APEX. As discussed in Lab 1, blocks are either associated with a database object or not. The block type and the data source type determine which [region type](https://docs.oracle.com/en/database/oracle/apex/24.1/aeacc/regions.html) we map to in APEX. For example, if in Forms, we have a report based on a view, this can be mapped to an interactive report region with data source view.
 
     ![Blocks](images/blocks1.png " ")
 

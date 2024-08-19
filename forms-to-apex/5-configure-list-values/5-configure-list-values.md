@@ -16,7 +16,7 @@ You will create five lists of values that will be useful in the Faceted Search P
 
 - **S\_PRODUCT.NAME**: A dynamic list of values based on the S_PRODUCT table.
 
-Estimated Time: 15 Minutes
+Estimated Time: 5 Minutes
 
 ### Objectives
 

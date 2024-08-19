@@ -4,7 +4,7 @@
 
 After following the guidelines in the previous labs on best practices to modernize Forms in APEX, you will learn how to enhance pages in your app, the navigation menu, and the authentication scheme.
 
-Estimated Time: 15 Minutes
+Estimated Time: 10 Minutes
 
 ### Objectives
 
@@ -137,29 +137,29 @@ In this task, you will define how end-users can interact with and personalize th
 
     ![App Builder](images/actions1.png " ")
 
-6. Move the columns **Comments, Region, Zip Code** from **Display in Report** region to **Do Not Display** region. There are two ways to do it:
+6. Move the columns **Comments, State, Zip Code** from **Display in Report** region to **Do Not Display** region. There are two ways to do it:
 
     - Go to the column and double click on the column.
 
     - Click the column and remove it by clicking the icon Remove (<).
 
-    ![App Builder](images/do-not-display1.png " ")
+    ![App Builder](images/do-not-display.png " ")
 
 7. In **Display in Report** region, select the column **Credit Rating**. Click the icon Up **(↑)** to move it up to the second place and click **Apply**.
 
-    ![App Builder](images/credit-rating1.png " ")
+    ![App Builder](images/credit-rating.png " ")
 
 8. Click **Actions** and select click **Format** > **Control Break**.
 
-    ![App Builder](images/control-break1.png " ")
+    ![App Builder](images/control-break.png " ")
 
-9. For column, select the column **Name** and click **Apply**.
+9. For column, select the column **Region** and click **Apply**.
 
-    ![App Builder](images/control-break-name.png " ")
+    ![App Builder](images/control-break-name2.png " ")
 
 10. To save the primary report, click **Actions** > **Report** > **Save Report**.
 
-    ![App Builder](images/save-report11.png " ")
+    ![App Builder](images/save-report.png " ")
 
 11. For save, select **As Default Report Settings**.
 
@@ -167,7 +167,7 @@ In this task, you will define how end-users can interact with and personalize th
 
 12. For default report type, select **Primary** and click **Apply**.
 
-    ![App Builder](images/primary-apply1.png " ")
+    ![App Builder](images/primary-apply12.png " ")
 
 ## Task 4: Enhance Navigation Menu
 

@@ -4,7 +4,7 @@
 
 In this lab, you will create database objects that will be utilized by the APEX environment. The lab involves downloading and running SQL scripts to set up the necessary database schema and populate it with sample data. These steps are foundational for creating an APEX application that leverages these database objects.
 
-Estimated Time: 10 Minutes
+Estimated Time: 5 Minutes
 
 ### Objectives
 
@@ -14,11 +14,11 @@ Estimated Time: 10 Minutes
 
 To create database objects, you need to download the following three files:
 
-- [Forms\_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fforms_ddl.sql) as sample DDL script.
+- [labfiles\_forms\_ddl.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fforms_ddl.sql) as sample DDL script.
 
-- [Forms\_data\_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fforms_data_insert.sql) as sample data insert script.
+- [labfiles\_forms\_data\_insert.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fforms_data_insert.sql) as sample data insert script.
 
-- [pkg_modernization.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fpkg_modernization.sql) as a package script.
+- [labfiles\_pkg\_modernization.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fpkg_modernization.sql) as a package script.
 
 ## Task 1: Create Database Objects in APEX Workspace
 

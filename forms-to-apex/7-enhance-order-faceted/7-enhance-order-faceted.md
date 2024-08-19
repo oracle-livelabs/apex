@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Let's recap what you have built so far for the orders form. In Lab 4, you created a faceted search and classic report, and in this lab, you will enhance that page and link it to orders page you created.
+Let's recap what you have built so far for the orders form. In Lab 4, you created a faceted search and a form page to manage the orders. In this lab, you will enhance these pages and link it to the orders page you created.
 
 Please note that other options you can create are available in the wizard:
 
@@ -46,6 +46,26 @@ Since order filled is not a key facet search, let's remove it by following these
 
     - Identification > Name: **Orders Report**
 
+    - Under Source > Type: Copy and paste below SQL query
+
+    ```
+    <copy>
+    SELECT id,
+       customer_id,
+       date_ordered,
+       date_shipped,
+       sales_rep_id,
+       (SELECT Sum(i.price * i.quantity)
+        FROM   s_ord o
+               JOIN s_item i
+                 ON o.id = i.ord_id
+        WHERE  o.id = s_ord.id) TOTAL,
+       payment_type,
+       order_filled
+       FROM   s_ord;
+    </copy>
+    ```
+
     - Under Appearance:
 
         - Click **Template Options** : Header > **Visible: Default**
@@ -72,11 +92,15 @@ Since order filled is not a key facet search, let's remove it by following these
 
     ![App Builder](images/link.png " ")
 
-5. Right-click **Orders Report** region and select **Create Button**.
+5. Click the **TOTAL** column and update the following:
+
+    - Appearance > Format Mask: **FML999G999G999G999G990D00**
+
+6. Right-click **Orders Report** region and select **Create Button**.
 
     ![App Builder](images/create-btn.png " ")
 
-6. In the property editor, enter/select the following:
+7. In the property editor, enter/select the following:
 
     - Identification > Button Name: **NEW_ORDER**
 
@@ -100,7 +124,7 @@ Since order filled is not a key facet search, let's remove it by following these
 
     ![App Builder](images/redirect-btn1.png " ")
 
-7. Click **Save**.
+8. Click **Save**.
 
 ## Summary
 

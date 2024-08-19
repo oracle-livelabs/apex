@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to create a form for managing items, ensure proper validation of user inputs, implement dynamic actions to enhance user interaction, and create processes to automate backend tasks. By completing these tasks, you will gain hands-on experience in building a functional and user-friendly application interface using Oracle APEX.
 
-Estimated Time: 15 Minutes
+Estimated Time: 10 Minutes
 
 ### Objectives
 
