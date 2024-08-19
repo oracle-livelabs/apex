@@ -849,17 +849,13 @@ Create the user signUp Page
 
 ## Task 4: Creating  SignUp - Page 100000
 
-1. Navigate to the Application Home Page.
+1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
-2. Click **Create Page**.
-
-    ![create-page](images/<name>.png " ")
-
-3. Choose **Form Page**.
+2. Choose **Form Page**.
 
     ![form-page-signup](images/<name>.png " ")
 
-4. Enter/select the following:
+3. Enter/select the following:
 
     - Under Page Definition:
 
@@ -889,72 +885,52 @@ Create the user signUp Page
 
     ![signup-page-details](images/<name>.png " ")
 
-5. In the Property editor, update the following:
+4. In the Property editor, update the following:
 
     - Under Security > Authentication: **Page is Public**
 
     ![page-public](images/<name>.png " ")
 
-6. Under Update SignUp region, Delete page items **P10000\_MIME\_TYPE** and **P10000\_PICTURE\_URL**.
+5. Under Update SignUp region, Delete page items **P10000\_MIME\_TYPE** and **P10000\_PICTURE\_URL**.
 
-7. Select P10000\_USERNAME, P10000\_FULL\_NAME and P10000\_PASSWORD and in the Property editor, enter/select the following:
+6. Select **P10000\_USERNAME**, **P10000\_PASSWORD**, **P10000\_FULL\_NAME** and update the following:
 
     - Under Identification > Type: **Text Field**
 
-8. Select P10000\_EMAIL and in the Property editor, enter/select the following:
+7. Select **P10000\_EMAIL** and in the Property editor update the following:
 
     - Under Identification > Type: **Display Only**
 
-9. Select P10000\_FULL\_NAME and in the Property editor, enter/select the following:
+8. Select **P10000\_FULL\_NAME** and in the Property editor, enter/select the following:
 
     - Under Validation > Value Required: **Toggle On**
 
-10. Select P10000\_PROFILE\_PIC and in the Property editor, enter/select the following:
+9. Select **P10000\_PROFILE\_PIC** and in the Property editor, enter/select the following:
 
     - Under Identification > Type: **Image Upload**
 
     - Under Storage > MIME Type Column
 : **MIME_TYPE**
 
-11. Select P10000\_IS\_ADMIN and in the Property editor, enter/select the following:
+10. Select **P10000\_IS\_ADMIN** and in the Property editor update the following:
 
     - Under Identification > Type: **Hidden**
 
-12. Right-click **SignUp** and select **Create Button**
+11. Select **CREATE** button and under Identification update the label: **SignUp**
 
-13. In the Property editor, enter/select the following:
+12. Navigate to **Processing** tab, Select **Process form SignUp** under **processes** under **Processing**.
 
-    - Under Identification:
-
-        - Button Name: **Cancel**
-
-    - Under Layout
-
-        - Slot: **Close**
-
-    - Under Behavior
-
-        - Action: **Submit Page**
-
-14. Select **Create** button and update the label.
-
-    - Under Identification:
-
-        - Label: SignUp
-
-15. Navigate the **Processing** tab, Select **Process form SignUp** under **processes** under **Processing**.
-
-16. In the property editor, enter/select the following:
+13. In the property editor, enter/select the following:
 
     - Under Settings:
 
         - Prevent Lost Updates: **Toggle Off**
 
-        - Lock Row: **No**
+        - Lock Row: Select **No**
 
-17. Right-click **Processing** and select **Create Process**.
+14. Right-click **Processing** and click **Create Process**.
 
-18. In the property editor, enter/select the following:
+15. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -970,9 +946,9 @@ Create the user signUp Page
         </copy>
          ```
 
-19. Right-click **Processing** and select **Create Process**.
+16. Right-click **Processing** and select **Create Process**.
 
-20. In the property editor, enter/select the following:
+17. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -982,13 +958,13 @@ Create the user signUp Page
 
     - Under Settings:
 
-        - Package: **APEX_AUTHENTICATION**
+        - Package: **APEX\_AUTHENTICATION**
 
-        - Procedure or Function: **SEND_LOGIN_USERNAME_COOKIE**
+        - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
     - Server-side Condition > When Button Pressed: **CREATE**
 
-21. Under **Set Username Cookie** process, expand **Parameters** and update the following:
+18. Under **Set Username Cookie** process, expand **Parameters** and update the following:
 
     - Delete **p\_cookie\_name**
 
@@ -1006,9 +982,9 @@ Create the user signUp Page
 
             - Type: **API Default**
 
-22. Right-click **Processing** and select **Create Process**.
+19. Right-click **Processing** and select **Create Process**.
 
-23. In the property editor, enter/select the following:
+20. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -1022,7 +998,7 @@ Create the user signUp Page
 
         - Procedure or Function: **LOGIN**
 
-24. Under **Set Username Cookie** process, expand **Parameters** and update the following:
+21. Under **Login** process, expand **Parameters** and update the following:
 
     - Select **p\_username**:
 
@@ -1032,9 +1008,9 @@ Create the user signUp Page
 
             - Item: **P10000_EMAIL**
 
-25. Right-click **Processing** and select **Create Process**.
+22. Right-click **Processing** and select **Create Process**.
 
-26. In the property editor, enter/select the following:
+23. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -1044,9 +1020,9 @@ Create the user signUp Page
 
     - Under Server-side Condition:
 
-        - When Button pressed: **Create**
+        - When Button pressed: **CREATE**
 
-27. Click **Save**.
+24. Click **Save**.
 
 ## Task 5: Login with Google
 
@@ -1130,7 +1106,7 @@ Create the user signUp Page
 
 13. Click **Workspace Utilities**.
 
-14. Select **Web Credentials**.
+14. Click **Web Credentials**.
 
 15. Click **Create**.
 
@@ -1140,9 +1116,10 @@ Create the user signUp Page
 
         - Name: Enter **Google Authentication**
         - Static Id: **Google_Authentication**
-        - Authentication Type: Select **OAuth2 Client Credentials Flow**.
+        - Authentication Type: Select **OAuth2 Client Credentials**.
         - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-        - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
+        - Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
+        - Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
 
     Click Create
 
@@ -1156,7 +1133,7 @@ Create the user signUp Page
 
     ![Select Shared Components](images/select-shared-components.png " ")
 
-19. Under **Security**, Select **Authentication Schemes**.
+19. Under **Security**, click **Authentication Schemes**.
 
     ![Select Authentication Schemes](images/select-authentication.png " ")
 
@@ -1198,7 +1175,7 @@ Create the user signUp Page
 
     Click on Apply Changes
 
-25. Navigate to the **SQL Workshop** > **Object Browser** > **Package** > **OBS\_AUTH** 
+25. Navigate to the **SQL Workshop** > **Object Browser** > **Package** > **OBS\_AUTH**
 
 26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click Save and Continue.
 
@@ -1238,7 +1215,7 @@ Create the user signUp Page
 
 27. Navigate to Page - 9999.
 
-28. In the rendering tab,Select Page Item **P9999_USERNAME**
+28. In the rendering tab, Select Page Item **P9999_USERNAME**
 
     - Under Appearance > Value Placeholder: **Email Address or Username**
 
@@ -1254,7 +1231,7 @@ Create the user signUp Page
 
     - Under Appearance:
 
-        - Button Template: Text with Icon
+        - Button Template: **Text with Icon**
 
         - Template options: Click **Use Template Defaults**
 
@@ -1278,8 +1255,7 @@ Create the user signUp Page
 
             Click **OK**.
 
-31. Navigate the **Processing** tab,
-Right-click **Processing** and select **Create Process**.
+31. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
 32. In the property editor, enter/select the following:
 
@@ -1297,9 +1273,9 @@ Right-click **Processing** and select **Create Process**.
 
     - Under Server-side Condition > When Button Pressed: **Google**
 
-33. Select Login Process
+33. Drag and drop **Login with Google** process to the above of **Clear Page(s) Cache** process.
 
-34. In the property editor, enter/select the following:
+34. Select Login Process and update the following:
 
     - Under Server-side Condition > When Button Pressed: **LOGIN**
 
