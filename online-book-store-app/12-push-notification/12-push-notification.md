@@ -32,13 +32,13 @@
 
 6. Click Page **50 - Edit Book Details**
 
-7. Right-Click on **P50\_AVAILABILITY** under **Edit Book Details** region and Click **Duplicate**
+7. Right-click on **P50\_AVAILABILITY** under **Edit Book Details** region and click **Duplicate**
 
 8. In the Property editor, enter/select the following:
 
     - Under Identification:
 
-        - Name: **P5\_AVAILABILITY\_OLD**
+        - Name: **P50\_AVAILABILITY\_OLD**
 
         - Type: **Hidden**
 
@@ -50,7 +50,7 @@
 
          - Item: **P50_AVAILABILITY**
 
-9. Navigate to the **Processing** tab, Right-Click **Processing** and Select **Create Process**.
+9. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
 10. In the Property editor, enter/select the following:
 
