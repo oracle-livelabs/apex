@@ -27,7 +27,8 @@
         - Name: Enter **Razorpay API**
         - Authentication Type: Select **Basic Authentication**.
         - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-        - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 2**.
+        - Client Secret or Password: Enter the **App Secret** you copied in **Step 2**.
+        - Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 2**.
 
     Click Create
 
@@ -78,7 +79,7 @@
     </copy>
     ```
 
-12. Under Operation Parameters, click **Synchronize with body** and click **OK**.
+12. Under Operation Parameters, click **Generate**, click **Synchronize with body** and click **OK**.
 
 13. Under Operation Parameters, Click **Add Parameter**.
 
@@ -172,7 +173,7 @@
 
 2. Click Page **17 - Shopping Cart**
 
-3. Right-Click **Order Information** and Create the following three page items, one after the other:
+3. Right-click **Order Information** and Create the following three page items, one after the other:
 
       | Name            |  Type   |
       | --------------- |  ------ |
@@ -180,119 +181,103 @@
       | P17\_PAYMENT\_ID | Hidden |
       | P17\_RESPONSE | Hidden  |
 
-4. Select **Proceed** button, Under Behavior > Action: **Defined by Dynamic Action**.
+4. Select **Proceed** button, Under Behavior update Action: **Defined by Dynamic Action**.
 
-5. Right-Click on **Proceed** button and select **Create Dynamic Action**
+5. Right-click on **Proceed** button and click **Create Dynamic Action**
 
 6. Enter/select the following:
 
-    - Under Identification:
-
-        - Name: **run_pay**
+    - Under Identification > Name: **run_pay**
 
 7. Click on true action
 
 8. Enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Action: **Submit Page**
 
-        - Action: **Submit Page**
-
-    - Under Settings:
-
-        - Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
+    - Under Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
 
 9. Navigate to the **Dynamic Actions** Tab
 
-10. Right-Click on **Page Load** and select **Create Dynamic Action**
+10. Right-click on **Page Load** and click **Create Dynamic Action**
 
 11. Enter/select the following:
 
-    - Under Identification:
-
-        - Name: **Invoke Razorpay**
+    - Under Identification > Name: **Invoke Razorpay**
 
 12. Click on true action
 
 13. Enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Action: **Execute Javascript Code**
 
-        - Action: **Execute Javascript Code**
+    - Under Settings > Code: Copy and Paste the below code
 
-        - Under Settings:
+        ```
+        <copy>
+        // Options for the Razorpay checkout
+        var razorpayId = "&P17_RAZORPAY_ORDER_ID.";
+            var amount = apex.item('P17_TOTAL').getValue();
+            var options = {
+                "key": "<Enter they key>", // Your Razorpay test key
+                "amount": amount*100, // Amount in paise (e.g., 50000 paise = Rs 500)
+                "name": "Payment Page", // Name of the payment receiver
+                "description": "Transaction", // Description of the payment
+                "order_id": razorpayId, // Your custom order ID
 
-            - Code: Copy and Paste the below code
+                // Handler function to be executed after successful payment
+                "handler": function(response) {
+                    console.log(response)
+                    // Set values in Apex items for the response data
+                    apex.item("P17_PAYMENT_ID").setValue(response.razorpay_payment_id);
+                    apex.item("P17_RAZORPAY_ORDER_ID").setValue(response.razorpay_order_id);
+                    apex.page.submit({
+                        request : "Proceed",
+                        showWait :true
+                    }
+                        );
+                },
+                // Pre-filled customer information
+                "prefill": {
+                    "name": "",
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+                },
+                // Additional notes for the payment
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                // Custom theme color for the Razorpay checkout window
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
 
-            ```
-            <copy>
-            // Options for the Razorpay checkout
-            var razorpayId = "&P17_RAZORPAY_ORDER_ID.";
-             var amount = apex.item('P17_TOTAL').getValue();
-             var options = {
-                 "key": "< Enter they key>", // Your Razorpay test key
-                 "amount": amount*100, // Amount in paise (e.g., 50000 paise = Rs 500)
-                 "name": "Payment Page", // Name of the payment receiver
-                 "description": "Transaction", // Description of the payment
-                 "order_id": razorpayId, // Your custom order ID
- 
-                 // Handler function to be executed after successful payment
-                 "handler": function(response) {
-                     console.log(response)
-                     // Set values in Apex items for the response data
-                     apex.item("P17_PAYMENT_ID").setValue(response.razorpay_payment_id);
-                     apex.item("P17_RAZORPAY_ORDER_ID").setValue(response.razorpay_order_id);
-                     apex.page.submit({
-                         request : "Proceed",
-                         showWait :true
-                     }
-                         );                       
-                 },
-                 // Pre-filled customer information
-                 "prefill": {
-                     "name": "",
-                     "email": "test@example.com",
-                     "contact": "9999999999"
-                 },
-                 // Additional notes for the payment
-                 "notes": {
-                     "address": "Razorpay Corporate Office"
-                 },
-                 // Custom theme color for the Razorpay checkout window
-                 "theme": {
-                     "color": "#3399cc"
-                 }
-             };
- 
-             // Create a new Razorpay instance and open the checkout window
-             var rzp1 = new Razorpay(options);
-             rzp1.on('payment.failed', function(response) {
-                 // Handle the case where payment fails
-                 // For example, you can show an error message to the user
-             });
- 
-             rzp1.open();
-            </copy>
-            ```
-            **Note: Replace < Enter they key> in the above code with the key ID you saved in Task 1.
+            // Create a new Razorpay instance and open the checkout window
+            var rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function(response) {
+                // Handle the case where payment fails
+                // For example, you can show an error message to the user
+            });
 
-        - Under Client-side Condition:
+            rzp1.open();
+        </copy>
+        ```
+        **Note: Replace < Enter they key> in the above code with the key ID you saved in Task 1.
 
-            - Type: **Item is not null**
+    - Under Client-side Condition:
 
-            - Item: **P17\_RAZORPAY\_ORDER\_ID**
+        - Type: **Item is not null**
 
-14. Right-Click **true** and select **Create TRUE Action**
+        - Item: **P17\_RAZORPAY\_ORDER\_ID**
+
+14. Right-click **true** and select **Create TRUE Action**
 
 15. Enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Action: **Execute Server-side Code**
 
-        - Action: **Execute Server-side Code**
-
-    - Under Settings:
-
-        - PL/SQL Code: Copy and Paste the below code
+    - Under Settings > PL/SQL Code: Copy and Paste the below code
 
         ```
         <copy>
@@ -300,7 +285,7 @@
         </copy>
         ```
 
-16. Navigate the **Processing** tab, Right-Click **Processing** and select **Create Process**.
+16. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
 17. In the property editor, enter/select the following:
 
@@ -346,17 +331,13 @@
 
         - Under Value > Item: P17\_RESPONSE
 
-19. Right-Click **Processing** and select **Create Process**.
+19. Right-click **Processing** and click **Create Process**.
 
 20. In the property editor, enter/select the following:
 
-    - Under Identification:
+    - Under Identification > Name: **Parse  Razorpay\_order\_id**
 
-        - Name: **Parse  Razorpay\_order\_id**
-
-    - Under Source:
-
-        - PL/SQL Code: Copy and Paste the below code
+    - Under Source > PL/SQL Code: Copy and Paste the below code
 
         ```
         <copy>
@@ -371,7 +352,9 @@
 
         - Value: **CREATE\_RAZOR\_PAY\_ORDER**
 
-21. Under **Create Order** process, expand **Parameters** and update the following:
+21. Right-click **Checkout** process, click **Synchronize Parameters**.
+
+22. Under **Checkout** process, expand **Parameters** and update the following:
 
     - **p\_user\_id**:
 
@@ -403,13 +386,11 @@
 
             - Item: **P17\_RAZORPAY\_ORDER\_ID**
 
-22. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
+23. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
 
-23. In the property editor, enter/select the following:
+24. In the property editor, enter/select the following:
 
-    - Under JavaScript:
-
-        - File URLs: Copy and Paste the below code
+    - Under JavaScript > File URLs: Copy and Paste the below code
 
         ```
         <copy>
@@ -417,12 +398,7 @@
         </copy>
         ```
 
-24. Click **Save**.
-
-<!-- ## Task 5: Update the Order Information Page
-
-1. Navigate to Page - 18. -->
-
+25. Click **Save**.
 
 ## Summary
 
