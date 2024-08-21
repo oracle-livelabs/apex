@@ -34,7 +34,7 @@ In this lab, you will build the list of values needed to help you accelerate the
 
     ![Shared Components](images/shared-comps.png " ")
 
-3. Under **Other Components**, click **List of Values**.
+3. Under **Other Components**, click **Lists of Values**.
 
     ![List of Values](images/lov1.png " ")
 
