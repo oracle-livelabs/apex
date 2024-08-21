@@ -6,26 +6,22 @@
       "title": "Introduction",
       "filename": "../../0-intro/0-intro.md"
     },
-   {
-    "title": "Get Started",
-    "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
-  },
-  {
-    "title": "Your OCI GenAI key",
-    "filename": "https://oracle-livelabs.github.io/common/labs/ocw24/tut3253.md"
- },
+    {
+      "title": "Get Started",
+      "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+    },
     {
       "title": "Lab 1: Create an APEX App",
       "filename": "../../1-create-app/1-create-app.md"
     },
     {
+
       "title": "Lab 2: Visualize Schools on a Map",
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
-
     {
-      "title": "Lab 3: Create the Web Credentials",
-      "filename": "../../3-configure-oci/3-configure-oci-ocw24.md"
+      "title": "Lab 3: Configure the OCI API Keys",
+      "filename": "../../3-configure-oci/3-configure-oci.md"
     },
     {
       "title": "Lab 4: Build a Conversational Inquiry using Generative AI",
