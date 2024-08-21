@@ -3,32 +3,40 @@
 ## Introduction
 
 ## Task 1: Create Web Credential
-
+<!-- 
 1. Log in to Razorpay [console](https://dashboard.razorpay.com/app/website-app-settings/api-keys).
 
-     *Note: ---*
+     *Note: ---* -->
 
-2. You will get the Key ID and Key secret. Save these IDs. We will use them later.
+1. Log in to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
 
-3. Login into your Oracle APEX workspace.
+2. Select the mode Test from (Test or Live) for which we generate the API key.
 
-4. On the Workspace home page, click **App Builder**.
+    *Note: Test Mode: The test mode is a simulation mode that you can use to test your integration flow. Your customers will not be able to make payments in this mode.
 
-5. Click **Workspace Utilities**.
+3. Navigate to **Account & Settings** → API Keys (under Website and app settings) → Generate Key to generate key for the selected mode.
 
-6. Select **Web Credentials**.
+4. The **Key Id** and **Key Secret** appear on a pop-up page. Save these IDs. We will use them later.
 
-7. Click **Create**.
+5. Login into your Oracle APEX workspace.
 
-8. In the **Web Credentials** enter the following and click **Create**.
+6. On the Workspace home page, click **App Builder**.
+
+7. Click **Workspace Utilities**.
+
+8. Select **Web Credentials**.
+
+9. Click **Create**.
+
+10. In the **Web Credentials** enter the following and click **Create**.
 
     - Under **Attributes**:
 
         - Name: Enter **Razorpay API**
         - Authentication Type: Select **Basic Authentication**.
-        - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-        - Client Secret or Password: Enter the **App Secret** you copied in **Step 2**.
-        - Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 2**.
+        - Client ID or Username: Enter the **Key Id** you copied in **Step 4**.
+        - Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
+        - Verify Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
 
     Click Create
 
