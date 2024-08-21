@@ -71,8 +71,6 @@ In this lab, you:
 
     - Table or View: **S\_CUSTOMER**
 
-    - Enable **Include Form**
-
     Click **Add Page**.
 
     ![interactive report](images/add-report-page1.png " ")

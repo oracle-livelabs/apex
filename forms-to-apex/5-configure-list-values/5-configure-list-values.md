@@ -109,7 +109,7 @@ In this lab, you will build the list of values needed to help you accelerate the
 
     ![Create List of Values](images/create-lov-pay1.png " ")
 
-14. Create list of values **from Scratch** and click **Next**.
+14. Create list of values **From Scratch** and click **Next**.
 
     ![Create List of Values](images/lov-scratch-next.png " ")
 

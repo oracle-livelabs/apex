@@ -93,13 +93,13 @@ We start by reviewing the existing components in the form to analyze which can b
 
     - Click **Shared Components**.
 
-    - Under **Other Components**, Click **Shortcuts**.
+    - Under **Other Components**, click **Shortcuts**.
 
     - Click **Create**.
 
     - Create shortcut **From Scratch**.
 
-    - Click Next.
+    - Click **Next**.
 
     - For Name, enter **DELETE\_ALERT**.
 

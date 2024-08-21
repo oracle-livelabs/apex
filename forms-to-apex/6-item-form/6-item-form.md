@@ -44,9 +44,9 @@ In this lab, you:
 
 5. Under Primary Key:
 
-    - Primary Key Column 1: **ITEM\_ID (Number)**
+    - Primary Key Column 1: **ORD\_ID (Number)**
 
-    - Primary Key Column 2: **ORD\_ID (Number)**
+    - Primary Key Column 2: **ITEM\_ID (Number)**
 
      Click **Create Page**.
 

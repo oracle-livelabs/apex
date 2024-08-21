@@ -17,7 +17,7 @@ In this lab, you:
 
 ## Task 1: Customize the Customer Form
 
-When the wizard creates a form, an item is automatically created for each column in the table. Depending on the column type, it creates a Text Field, Text area, Date Picker, or Number Field item.
+When the wizard creates a form, an item is automatically created for each column in the table. Depending on the column type, it creates a Text Field, Text Area, Date Picker, or Number Field item.
 
 Once the page is created, you can make the changes you need. Select a different type of element, edit the label and more. Moreover, you can organize items by dragging and drop them.
 
@@ -149,7 +149,7 @@ In this task, you will define how end-users can interact with and personalize th
 
     ![App Builder](images/credit-rating.png " ")
 
-8. Click **Actions** and select click **Format** > **Control Break**.
+8. Click **Actions** and select **Format** > **Control Break**.
 
     ![App Builder](images/control-break.png " ")
 

@@ -68,7 +68,7 @@ In Forms, object groups are used to share components between multiple forms. The
     ![Object Groups](images/object-groups.png " ")
 
 9. **Parameters**:
-A parameter is a variable whose value can be set at runtime. Parameters are beneficial for modifying SELECT statements and setting PL/SQL variables at runtime. In APEX, this can be mapped to the [SET_PARAMETER](https://docs.oracle.com/en/database/oracle/apex/24.1/aeapi/SET_PARAMETER-Procedure.html) Procedure in the APEX\_INSTANCE\_ADMIN package, which provides utilities for managing an Oracle APEX runtime environment.
+A parameter is a variable whose value can be set at runtime. Parameters are beneficial for modifying SELECT statements and setting PL/SQL variables at runtime. In APEX, this can be mapped to the [SET_PARAMETER](https://docs.oracle.com/en/database/oracle/apex/24.1/aeapi/SET_PARAMETER-Procedure.html) procedure in the APEX\_INSTANCE\_ADMIN package, which provides utilities for managing an Oracle APEX runtime environment.
 
 10. **Program Units**:
 As discussed in Lab 1, program units implement business logic in Forms, which can be incorporated into APEX as a PL/SQL package, [page process, computation, or validation](https://docs.oracle.com/en/database/oracle/apex/24.1/htmdb/managing-computations-validations-and-processes.html).
