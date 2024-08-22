@@ -234,8 +234,6 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     ```
     <copy>
     :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
-
-    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
     </copy>
       ```
 
