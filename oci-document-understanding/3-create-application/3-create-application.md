@@ -1,8 +1,8 @@
-# Integrate OCI Document Understanding with Oracle APEX
+# Invoke OCI Doc Understanding using REST Data Sources
 
 ## Introduction
 
-In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Doucment Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Document Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
 
 OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
 
@@ -13,14 +13,14 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create an Application
-- Invoke OCI Doc Understanding using REST Data Source
+- Invoke OCI Document Understanding using REST Data Sources
 - Enhance Home Page to Upload Invoices and Process the document
 - Create Processes to upload Invoice to Object Storage and Automate DML
 - Integrate Document Understanding API and Parse the Response
 
 ## Task 1: Create an Application
 
-1. On the workspace home page, Select **App Builder**.
+1. On the workspace home page, select **App Builder**.
 
    ![Click App Builder](images/app-build6.png " ")
 
@@ -32,15 +32,15 @@ In this lab, you:
 
    ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-4. Before Name, Select **Set Icon**.
+4. Before Name, select **Set Icon**.
 
    ![Set Icon](images/set-icon.png " ")
 
-5. In the Choose Application Icon dialog, Select any Color and icon, then click **Save Icon**.
+5. In the Choose Application Icon dialog, select any color and icon, then click **Save Icon**.
 
    ![Save Icon](images/save-icon.png " ")
 
-6. Next to **Name**, Select **Set Appearance** icon.
+6. Next to **Name**, select **Set Appearance** icon.
 
    ![Set Appearance](images/set-appearance.png " ")
 
@@ -134,7 +134,7 @@ In this lab, you:
     <copy>
      ```
 
-    Click **Synchronize with Body** and then Click **OK**.
+    Click **Synchronize with Body** and then click **OK**.
 
     ![edit post](images/edit-post.png " ")
 
@@ -142,7 +142,7 @@ In this lab, you:
 
     ![Synchronize with Body Ok](images/synchronize-ok.png " ")
 
-11. Under **Operation Parameters**, Click **Add Parameter**.
+11. Under **Operation Parameters**, click **Add Parameter**.
 
     ![Click Add Parameter](images/add-parameter.png " ")
 
@@ -172,11 +172,11 @@ In this lab, you:
 
    ![1-Home](images/home-page.png " ")
 
-3. Under **Breadcrumb bar**, Select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
+3. Under **Breadcrumb Bar**, select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
-4. Right-click **Body** and Select **Create Region**.
+4. Right-click **Body** and select **Create Region**.
 
    ![Create Region](images/create-region.png " ")
 
@@ -196,11 +196,11 @@ In this lab, you:
 
      ![hidden items](images/all-hidden.png " ")
 
-7. Right-click **Upload Your Invoice** region and select **Create Page item**.
+7. Right-click **Upload Your Invoice** region and select **Create Page Item**.
 
    ![hidden items](images/create-page-item.png " ")
 
-8. Now, add the following Eight page items one after the other:
+8. Now, add the following eight page items one after the other:
 
    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
    |---|-------|------|----------| --------------| ------ |
@@ -218,7 +218,7 @@ In this lab, you:
 
    ![hidden items](images/response-item.png " ")
 
-9. Under **Upload your Invoice** region, Right-click **P1\_ID** and select **Create Page Item Below**.
+9. Under **Upload your Invoice** region, right-click **P1\_ID** and select **Create Page Item Below**.
 
    ![hidden items](images/create-page-item-below.png " ")
 
@@ -268,7 +268,7 @@ In this lab, you:
 
     ![create-button](images/btn-details.png " ")
 
-14. In the Processing tab, right-click **Processing** and Select **Create Process**.
+14. In the Processing tab, right-click **Processing** and select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
