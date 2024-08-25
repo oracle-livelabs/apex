@@ -11,6 +11,7 @@ Moreover, you'll configure Web credentials to authenticate connections to extern
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create database objects using SQL Scripts
@@ -18,7 +19,8 @@ In this lab, you:
 - Create Web Credentials
 
 ## Task 1: Create database objects using SQL Scripts
-1. Login into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and Select **SQL Scripts**.
+
+1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and Select **SQL Scripts**.
 
     ![Select Quick SQL](images/sql_script.png " ")
 
@@ -207,7 +209,7 @@ In this lab, you:
      </copy>
     ```
 
-4. For **Script Name**: Enter **Application Scripts** and Click **Run**.
+4. For **Script Name**: Enter **Application Scripts** and click **Run**.
 
    ![Script Name](./images/script-name.png " ")
 
@@ -220,6 +222,7 @@ In this lab, you:
     ![SQL Script Results](images/successful.png " ")
 
 ## Task 2: Create Multiple Application Users
+
 Workspace administrators can create new user accounts one at a time or create multiple accounts in a single operation.
 
 To create multiple users accounts simultaneously:
@@ -232,7 +235,7 @@ To create multiple users accounts simultaneously:
 
    ![Create Multiple Users](images/create-multiple-users.png " ")
 
-3.  Enter/select the following details:
+3. Enter/select the following details:
 
     - List of Email Addresses: **MATT@xyz.com, JANE@xyz.com, CLARA@xyz.com, JOHN@xyz.com**
 
@@ -276,7 +279,7 @@ To create a Web Credential in Oracle APEX:
 
    ![Create Web Credentials](images/create-web-creds.png " ")
 
-5.  Enter/select the following details using the configuration file you copied in the previous task.
+5. Enter/select the following details using the configuration file you copied in the previous task.
 
     - Name: **APEX\_OCI\_AI\_CRED**
 
@@ -302,10 +305,12 @@ To create a Web Credential in Oracle APEX:
    ![Web Credentials page](images/web-creds-created.png " ")
 
 ## Summary
+
 You've gained the skills to create database objects using SQL Scripts, create multiple application users, and set up web credentials.
 
 You're now ready to move on to the next lab!
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

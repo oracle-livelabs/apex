@@ -1,26 +1,26 @@
-# Integrate OCI Document Understanding with Oracle APEX
+# Invoke OCI Doc Understanding using REST Data Sources
 
 ## Introduction
 
-In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Doucment Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Document Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
 
 OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
 
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create an Application
-- Invoke OCI Doc Understanding using REST Data Source
+- Invoke OCI Document Understanding using REST Data Sources
 - Enhance Home Page to Upload Invoices and Process the document
 - Create Processes to upload Invoice to Object Storage and Automate DML
 - Integrate Document Understanding API and Parse the Response
 
-
 ## Task 1: Create an Application
 
-1. On the workspace home page, Select **App Builder**.
+1. On the workspace home page, select **App Builder**.
 
    ![Click App Builder](images/app-build6.png " ")
 
@@ -32,19 +32,19 @@ In this lab, you:
 
    ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-4. Before Name, Select **Set Icon**.
+4. Before Name, select **Set Icon**.
 
    ![Set Icon](images/set-icon.png " ")
 
-5. In the Choose Application Icon dialog, Select any Color and icon, then click **Save Icon**.
+5. In the Choose Application Icon dialog, select any color and icon, then click **Save Icon**.
 
    ![Save Icon](images/save-icon.png " ")
 
-6. Next to **Name**, Select **Set Appearance** icon.
+6. Next to **Name**, select **Set Appearance** icon.
 
    ![Set Appearance](images/set-appearance.png " ")
 
-7.  Enter/select the following:
+7. Enter/select the following:
 
     - Appearance > Theme Style: **Redwood Light**
 
@@ -52,7 +52,7 @@ In this lab, you:
 
     ![Redwood Light](images/redwood-light.png " ")
 
-8.  Enter/select the following details:
+8. Enter/select the following details:
 
     - Name: **Automatic Invoice Handling**
 
@@ -84,9 +84,9 @@ In this lab, you:
 
     - Name: **Document Understanding API**
 
-    - URL Endpoint: https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument
+    - URL Endpoint: <https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument>
 
-    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
+    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
    ![Create REST Data Sources](images/rest-general.png " ")
 
@@ -99,7 +99,6 @@ In this lab, you:
     - Authentication Required: Toggle **ON**
 
     - Credentials: **APEX\_OCI\_AI\_CRED**
-
 
 8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
@@ -135,7 +134,7 @@ In this lab, you:
     <copy>
      ```
 
-    Click **Synchronize with Body** and then Click **OK**.
+    Click **Synchronize with Body** and then click **OK**.
 
     ![edit post](images/edit-post.png " ")
 
@@ -143,7 +142,7 @@ In this lab, you:
 
     ![Synchronize with Body Ok](images/synchronize-ok.png " ")
 
-11. Under **Operation Parameters**, Click **Add Parameter**.
+11. Under **Operation Parameters**, click **Add Parameter**.
 
     ![Click Add Parameter](images/add-parameter.png " ")
 
@@ -173,11 +172,11 @@ In this lab, you:
 
    ![1-Home](images/home-page.png " ")
 
-3. Under **Breadcrumb bar**, Select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
+3. Under **Breadcrumb Bar**, select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
-4. Right-click **Body** and Select **Create Region**.
+4. Right-click **Body** and select **Create Region**.
 
    ![Create Region](images/create-region.png " ")
 
@@ -197,11 +196,11 @@ In this lab, you:
 
      ![hidden items](images/all-hidden.png " ")
 
-7. Right-click **Upload Your Invoice** region and select **Create Page item**.
+7. Right-click **Upload Your Invoice** region and select **Create Page Item**.
 
    ![hidden items](images/create-page-item.png " ")
 
-8. Now, add the following Eight page items one after the other:
+8. Now, add the following eight page items one after the other:
 
    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
    |---|-------|------|----------| --------------| ------ |
@@ -219,7 +218,7 @@ In this lab, you:
 
    ![hidden items](images/response-item.png " ")
 
-9. Under **Upload your Invoice** region, Right-click **P1\_ID** and select **Create Page Item Below**.
+9. Under **Upload your Invoice** region, right-click **P1\_ID** and select **Create Page Item Below**.
 
    ![hidden items](images/create-page-item-below.png " ")
 
@@ -269,8 +268,7 @@ In this lab, you:
 
     ![create-button](images/btn-details.png " ")
 
-
-14. In the Processing tab, right-click **Processing** and Select **Create Process**.
+14. In the Processing tab, right-click **Processing** and select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
@@ -379,7 +377,6 @@ In this lab, you:
 
     - Value > Item: **P1\_RESPONSE**
 
-
   ![Add Child Process details](images/doc-response.png " ")
 
 5. Right-click **Process Invoice** and select **Add Child Process**.
@@ -424,10 +421,12 @@ In this lab, you:
 7. Click **Save**.
 
 ## Summary
+
 You have now learned how to create an application by invoking OCI Document Understanding using a REST data source. You enhanced the home page to enable invoice uploads and document processing. Additionally, you created processes to upload invoices to Object Storage and automate DML operations, and you integrated the Document Understanding API to parse responses.
 
 You're now ready to move on to the next lab!
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
