@@ -13,6 +13,7 @@ Estimated Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
+
 - Create a new APEX application
 - Configure a Cards region
 - Customize the application theme using Theme Roller
@@ -21,24 +22,27 @@ In this lab, you will:
 
 - An Oracle APEX workspace
 
-## Task 1: Load the Highschool Data 
+## Task 1: Load the Highschool Data
 
-1.  From your APEX workspace home page, click **App Builder**.
-2.  Click **Create a New App**.
+1. From your APEX workspace home page, click **App Builder**.
+
+    ![Image showing clicking an App Builder](images/click-app-builder.png " ")
+
+2. Click **Create a New App**.
 
     ![Image showing Create a New App option](images/new-app.png " ")
 
-3.  Click **Create App from a File**.
+3. Click **Create App From a File**.
 
     ![Image showing the various options to create an application](images/from-a-file.png " ")
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
-4.  Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx) file on to the dialog window.
+4. Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx) file on to the dialog window.
 
     ![Image showing a wizard to upload a file](images/drag-and-drop.png " ")
 
-5.  Review the parsed data. Set Table Name to **HIGHSCHOOLS** and click **Load Data**. Note: You can configure what columns to load from the spreadsheet by clicking the **Configure** button.
+5. Review the parsed data. Set Table Name to **HIGHSCHOOLS** and click **Load Data**. Note: You can configure what columns to load from the spreadsheet by clicking the **Configure** button.
 
     ![Image showing the Load Data wizard](images/new-table-name.png " ")
 
@@ -48,7 +52,7 @@ In this lab, you will:
 
 The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
 
-1.  In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then click **Create Application**.
+1. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then click **Create Application**.
 
     ![Image showing the success message of Load Data and options to View Table or Create Application](images/create-app-table.png " ")
 
@@ -63,21 +67,20 @@ The Data Load wizard has created a new table and populated that table with the r
 
 5. In the Create Application page, review the pages listed by default.
 
-  Click the **Edit** button for **Highschools Search** and update the following:
-    - Page Name: **Search and Apply** 
+   Click the **Edit** button for **Highschools Search** and update the following:
+    - Page Name: **Search and Apply**
     - For Page Type, choose **Cards** toggle button.
 
     ![Edit App page](images/app-edit.png " ")
     ![Edit Page wizard](images/edit-page-name.png " ")
 
-6.  For the Cards properties, select the following:
+6. For the Cards properties, select the following:
     - Title Column: **SCHOOL_NAME**
     - Body Column: **NEIGHBORHOOD**
     - Expand Advanced section and check the **Set as Home Page** box
 
     Click **Save Changes**.
     ![Edit Page wizard](images/cards-columns.png " ")
-
 
 7. Next, we delete the pages that we no longer need. Click **Edit** next to the Home page.
     ![Edit Page wizard](images/edit-home.png " ")
@@ -93,11 +96,11 @@ The Data Load wizard has created a new table and populated that table with the r
 10. Repeat Steps 7 and 8 to delete the **Dashboard** page.
     ![Delete page wizard](images/delete-dashboard.png " ")
 
-10. In the Create Application wizard, under Features, check the following checkboxes:
+11. In the Create Application wizard, under Features, check the following checkboxes:
     - **Install Progressive Web App**
-    - **Push Notifications** 
-    
-    Click **Create Application**. 
+    - **Push Notifications**
+
+    Click **Create Application**.
 
     ![Image showing the Create Application Page](images/create-final-app.png " ")
 
@@ -110,7 +113,7 @@ In this task, we configure the Cards region to display the information that we n
 1. Navigate to **Search and Apply** page.
     ![Application Home Page](images/select-page.png " ")
 
-2. In the Rendering Tree, under Body, select **Search Results** region. 
+2. In the Rendering Tree, under Body, select **Search Results** region.
 
    In the Property Editor, enter/select the following:
     - Under Source:
@@ -134,7 +137,7 @@ In this task, we configure the Cards region to display the information that we n
         from HIGHSCHOOLS
         </copy>
         ```
-    
+
         ![Page Designer](images/update-sql1.png " ")
 
         ![Page Designer](images/update-sql2.png =60%x*)
@@ -142,28 +145,24 @@ In this task, we configure the Cards region to display the information that we n
     - Advanced > Static ID: **S\_SEARCH\_RESULTS**
         ![Page Designer](images/search-static.png =40%x*)
 
-2. Switch to the **Attributes** tab and select the following:
+3. Switch to the **Attributes** tab and select the following:
     - Title > Column: **SCHOOL_NAME**
     - Subtitle > Column: **LOCATION**
     - Body:
         - Advanced Formatting: Enable the Toggle Button to **ON**.
-        - HTML Expression: 
+        - HTML Expression:
         ```
         <copy>
-
         <div class="a-CardView-mainContent">
-        <strong>&INTEREST.</strong><br />
-        <small>&TOTAL_STUDENTS_DISP. Students &middot; &ATTENDANCE_RATE.% Attendance &middot; &GRADUATION_RATE.% Grad</small>
+            <strong>&INTEREST.</strong><br />
+            <small>&TOTAL_STUDENTS_DISP. Students · &ATTENDANCE_RATE.% Attendance · &GRADUATION_RATE.% Grad</small>
         </div>
-
         </copy>
         ```
 
         ![Page Designer](images/edit-cards.png =40%x*)
 
-
-
-3. Click **Save and Run** page.
+4. Click **Save and Run** page.
     ![Page Designer](images/run-app.png " ")
 
     ![App login screen](images/login.png =40%x*)
@@ -172,10 +171,10 @@ In this task, we configure the Cards region to display the information that we n
 
 ## Task 4: Improve the UI
 
-1. Click **Edit Page 1** from the Develpoer Toolbar. 
+1. Click **Edit Page 1** from the Developer Toolbar.
     ![App is displayed](images/edit1.png " ")
 
-2. In the Rendering Tree, select **Search**. 
+2. In the Rendering Tree, select **Search**.
 
     In the Property Editor, switch to the **Attributes** tab and enter the following:
         - Total Row Count Label: **Schools:**
@@ -191,22 +190,22 @@ In this task, we configure the Cards region to display the information that we n
 
 4. Under Body > Button Bar, right-click **RESET** and select **Delete**.
 
-    ![Page Designer](images/reset-del.png " ") 
+    ![Page Designer](images/reset-del.png " ")
 
-5. Locate **P1\_ORDER\_BY** page item and drag and drop it under Button Bar. 
-    ![Page Designer](images/move-order-by.png " ") 
+5. Locate **P1\_ORDER\_BY** page item and drag and drop it under Button Bar.
+    ![Page Designer](images/move-order-by.png " ")
 
-6. In the Property Editor, enter/select the following: 
-    - Slot: **Next**
+6. In the Property Editor, enter/select the following:
+    - Layout > Slot: **Next**
     - Under Appearance:
         - Template: **Hidden**
         - Icon: **fa-sort-amount-desc**
-        
+
     - Advanced > CSS Classes: **no-item-ui**
 
     ![Page Designer](images/order-by-properties.png " ")
-    - List of Values: 
-    
+    - List of Values > Static Values:
+
     |Display Value | Return Value|
     |---------------|------------|
     |Total Students| TOTAL\_STUDENTS|

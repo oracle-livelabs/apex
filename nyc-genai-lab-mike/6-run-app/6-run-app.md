@@ -14,6 +14,7 @@ Estimated Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
+
 - Run the application
 - Explore the various features of the app
 
@@ -26,13 +27,14 @@ In this lab, you will:
     ![App login screen](images/login.png ' ')
 
 ## Task 2: Explore the App Features
+
 1. You can see the Faceted Search page where the schools are listed as cards. Apply facets to filter the schools. Select the following facets under Interest:
     - **Science & Math**
     - **Computer Science & Technology**
 
     ![Search and Apply page in the running app](images/apply-facet.png ' ')
 
-2. Switch to the Maps tab to display the schools on a map. 
+2. Switch to the Maps tab to display the schools on a map.
     - Apply facet for Distance: **Less than 5 Miles**
     - Apply another facet for Borough: **Manhattan**
     The search narrows down to 15 schools.
@@ -43,13 +45,13 @@ In this lab, you will:
     ![search schools tab](images/learn-more.png ' ')
 
 4. In the chat dialog, select the suggestion chip **Provide an overview of the school**. You can ask questions about the school in natural language and get appropriate responses. Some example prompts are provided below:
-    - What advanced placement courses are taught at this school? 
+
     - What language courses are taught here?
+    - What advanced placement courses are taught at this school?
 
     Review the responses and close the dialog.
 
     ![AI chat bot](images/chat.png ' ')
-    
 
 5. Let's say, as a parent, I am happy with the school and would like to apply. Click **Apply** for *Manhattan Center for Science and Mathematics* school.
     ![cards page](images/apply.png ' ')
@@ -57,17 +59,16 @@ In this lab, you will:
 6. An Apply to School drawer opens up for editing. For Student Name, enter **Joe**. And click **Generate Email**. This invokes the Gen AI service to generate an email for you.
     ![apply to school drawer](images/student-name.png ' ')
 
-
-
 7. Review the generated email and make modifications if needed. Finally click **Send Application**.
     ![apply to school drawer](images/generate-letter.png ' ')
-    
+
 8. The application was successfully submitted.
     ![app homepage](images/apply-sent.png ' ')
 
 9. You can explore more about NYC Highschools by asking generic questions about any school using the **Ask a Question** button. 
 
     Click **Ask a Question**. An AI chat dialog opens with a welcome message. Type the following question:
+
     ```
     <copy>
         What are the top 3 reasons to choose a highschool in New York city?
@@ -79,8 +80,7 @@ In this lab, you will:
 
 ## Summary
 
-You now know how to run the app and explore the Gen AI features of the app. 
-
+You now know how to run the app and explore the Gen AI features of the app.
 
 ## Acknowledgments
 
