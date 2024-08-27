@@ -6,6 +6,8 @@ In this workshop, you use OCI Generative AI as the AI provider to build a conver
 
 Note: OCI Generative AI service is available in limited regions. If you are using your own cloud tenancy, check to see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions). 
 
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+
 Estimated Time: 10 Minutes
 
 ### Objectives

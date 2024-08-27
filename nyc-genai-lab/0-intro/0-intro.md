@@ -1,6 +1,7 @@
 # Introduction
 
 ## About this Workshop
+
 From precisely summarizing intricate data to crafting context-aware responses, Generative AI stands at the forefront of a technological shift, promising to redefine how we navigate and leverage knowledge in our day-to-day interactions. With the introduction of AI assisted development in Oracle APEX, enabling your applications with generative AI capabilities has never been easier.
 
 In this workshop, you learn to bring generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
@@ -29,10 +30,13 @@ Estimated Time: 60 minutes
 *Note: This workshop assumes you are using Oracle APEX 24.1.2*
 
 ## Prerequisites
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+
+- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+
     - US Midwest (Chicago)
     - Germany Central (Frankfurt)
     - UK South (London)
+    - Brazil East (Sao Paulo)
 
 - This workshop makes use of OCI Generative AI Service. OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
@@ -64,19 +68,26 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 ## Downloads
 
 If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/nyc-gen-ai-app.zip) to download the completed application zip file.
-2. Import the **labfiles_nyc-gen-ai-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+2. Import the **nyc-gen-ai-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-3. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**. 
-4. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key. 
+
+4. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**.
+
+5. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key.
+
      ![Web Credentials page](images/edit-web-cred.png " ")
-5. Navigate to **App Builder > Workspace Utilities > Generative AI**. Edit the **OCI Gen AI** service. 
+6. Navigate to **App Builder > Workspace Utilities > Generative AI**. Edit the **OCI Gen AI** service.
+
     - Enter the **Compartment ID**. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved while creating your OCI API Key.
     - For Credential, select **apex\_ai\_cred**.
     - Click **Apply Changes**.
     ![Generative AI page](images/edit-oci-genai.png " ")
-6. All set. Now, run the application and see it in action! Follow the lab: [Run the Application](?lab=6-run-app) to run the app.
 
+7. All set. Now, run the application and see it in action! Follow the lab: [Run the Application](?lab=6-run-app) to run the app.
 
 ## Learn More - *Useful Links*
 
