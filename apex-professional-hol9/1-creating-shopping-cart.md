@@ -18,7 +18,7 @@ In this lab, you:
 
 ### Downloads
 
-- Did you miss out on trying the previous labs?  Don't worry!  You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol8.sql) and import it into your workspace.  To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs?  Don't worry!  You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol8.sql) and import it into your workspace.  To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 
 ## Task 1: Create Validations on the Page
@@ -49,11 +49,11 @@ In this lab, you:
 
     ![Customise Validation](./images/create-validation2.png " ")
 
-    | Name |  Validation > Type | Validation > Item  | Error Message | Display Location | Associated Item |
-    | --- |  --- | --- | --- |  --- | --- |
-    | Validate Name | Item is NOT NULL | P16\_CUSTOMER\_FULLNAME | Please enter your name | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
-    | Validate Email | Item is NOT NULL | P16\_CUSTOMER\_EMAIL | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL |
-    | Validate Store | Item is NOT NULL | P16_STORE | Please select a store | Inline with Field and in Notification | P16_STORE |
+    | Name           | Validation > Type | Validation > Item       | Error Message                   | Display Location                      | Associated Item         |
+    | -------------- | ----------------- | ----------------------- | ------------------------------- | ------------------------------------- | ----------------------- |
+    | Validate Name  | Item is NOT NULL  | P16\_CUSTOMER\_FULLNAME | Please enter your name          | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
+    | Validate Email | Item is NOT NULL  | P16\_CUSTOMER\_EMAIL    | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL    |
+    | Validate Store | Item is NOT NULL  | P16_STORE               | Please select a store           | Inline with Field and in Notification | P16_STORE               |
     {: title="Validation Properties"}
 
      ![Customise Validation](./images/create-validation3.png " ")
@@ -61,11 +61,11 @@ In this lab, you:
      These validations only apply when the user proceeds to checkout; let's create that condition.
      Under Server-side Condition, set the following:
 
-    | Name  | When Button Pressed |
-    | ---   |  --- |
-    | Validate Name  | Proceed |
-    | Validate Email | Proceed |
-    | Validate Store | Proceed |
+    | Name           | When Button Pressed |
+    | -------------- | ------------------- |
+    | Validate Name  | Proceed             |
+    | Validate Email | Proceed             |
+    | Validate Store | Proceed             |
     {: title="Server-side Conditions"}
 
      ![Customise Validation](./images/create-validation4.png " ")       

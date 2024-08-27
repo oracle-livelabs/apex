@@ -2,13 +2,13 @@
 
 If you enjoyed this LiveLabs workshop, here are some others you might like...
 
-- [Building an App from a Spreadsheet using Oracle APEX](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=631)
+- [Building an App from a Spreadsheet using Oracle APEX](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=631)
 
-- [Low Code Development Oracle APEX on Autonomous Database](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=554)
+- [Low Code Development Oracle APEX on Autonomous Database](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=554)
 
-- [Build a Starter Online Shopping App using Oracle APEX!](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=848)
+- [Build a Starter Online Shopping App using Oracle APEX!](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=848)
 
-... and so many [more](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/home)!
+... and so many [more](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/home)!
 
 ## Acknowledgements
 * **Author** - Ana Beyer, Cloud Engineer, Oracle
