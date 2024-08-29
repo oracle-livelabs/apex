@@ -4,7 +4,7 @@ Welcome to the **Introduction to JavaScript for APEX Developers** hands-on labs!
 
 ## Access the labs using the web interface
 
-[Click here](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=60) to use our easy to navigate HTML format.
+[Click here](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=60) to use our easy to navigate HTML format.
 
 ## Access the labs on the repo
 

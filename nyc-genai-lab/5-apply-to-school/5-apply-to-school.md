@@ -1,10 +1,10 @@
 # Generate Email to Apply to a School using Gen AI
 
 ## Introduction
+
 In this lab, you configure an option for the parent to apply to a school they are interested in. The letter for application is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
 
-
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
 
 Estimated Time: 15 minutes
 
@@ -14,6 +14,7 @@ Estimated Time: 15 minutes
 ### Objectives
 
 In this lab, you will:
+
 - Use Invoke API process to invoke the Generative AI service using the APEX_AI PL/SQL API
 - Generate email for applying to a school
 
@@ -21,7 +22,7 @@ In this lab, you will:
 
 1. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
 
-    ![Navigation bar menu](images/nav-quick-sql.png ' ') 
+    ![Navigation bar menu](images/nav-quick-sql.png ' ')
 
 2. In the Quick SQL editor, copy and paste the following short hand syntax:
 
@@ -65,10 +66,12 @@ Let us create a new Form page for school application.
     ![Create page wizard](images/create-form.png ' ')
 
 2. In the Create Form wizard, enter/select the following:
-    - Page Number: **7**
-    - Name: **Apply to School**
-    - Page Mode: **Drawer**
-    - Table/View Name: **NYC\_SCHOOLS\_APPS**
+    - Under **Page Definition**
+        - Page Number: **7**
+        - Name: **Apply to School**
+        - Page Mode: **Drawer**
+    - Under **Data Source**
+        - Table/View Name: **NYC\_SCHOOLS\_APPS**
 
     Click **Next**.
 
@@ -77,7 +80,6 @@ Let us create a new Form page for school application.
 3. Accept the Primary Key Column 1's default value as ID (Number) and click **Create Page**.
 
     ![Create page wizard](images/create-page.png ' ')
-
 
 4. In the Rendering tree, select the following page items under Region Body:
     - P7\_SCHOOL\_ID
@@ -94,14 +96,14 @@ Let us create a new Form page for school application.
 
 5. In the Rendering Tree, select the page item **P7\_PARENT\_NAME**. In the Property Editor, enter/select the following:
 
-    - Type: **Display Only**
+    - Identification > Type: **Display Only**
     - Under Default:
         - Type: **SQL Query (return single value)**
         - SQL Query (return single value):
         ```
         <copy>
-        select initcap(first_name) || ' ' || initcap(last_name) 
-        from APEX_WORKSPACE_APEX_USERS 
+        select initcap(first_name) || ' ' || initcap(last_name)
+        from APEX_WORKSPACE_APEX_USERS
         where user_name=:APP_USER;
 
         </copy>
@@ -114,18 +116,17 @@ Let us create a new Form page for school application.
         - Type: **Expression**
         - PL/SQL Expression - **:APP_USER**
 
-   ![Page Designer](images/parent-user.png ' ') 
+   ![Page Designer](images/parent-user.png ' ')
 
 7. Select the page item **P7_DISPOSITION**. In the Property Editor, enter/select the following:
     - Under Default:
         - Type: **Static**
         - Static Value: **APPLIED**
 
-    ![Page Designer](images/disposition.png ' ') 
-
+    ![Page Designer](images/disposition.png ' ')
 
 8. Select the page item **P7\_PARENT\_EMAIL**. In the Property Editor, enter/select the following:
-    - Type: **Display Only**
+    - Identification > Type: **Display Only**
     - Under Default:
         - Type: **SQL Query (return single value)**
         - SQL Query (return single value):
@@ -134,15 +135,16 @@ Let us create a new Form page for school application.
         select email from APEX_WORKSPACE_APEX_USERS where user_name=:APP_USER;
         </copy>
         ```
-    ![Page Designer](images/parent-email.png ' ') 
+    ![Page Designer](images/parent-email.png ' ')
 
-9. In the left pane, right-click **P7\_STUDENT\_NAME**, and select **Create Button Below**.   
-    ![Page Designer](images/create-button-below.png ' ') 
+9. In the left pane, right-click **P7\_STUDENT\_NAME**, and select **Create Button Below**.
+    ![Page Designer](images/create-button-below.png ' ')
 
 10. In the Property Editor, enter/select the following:
 
-    - Name: GENERATE_LETTER
-    - Label: Generate Letter
+    - Under Identification:
+        - Button Name: **GENERATE_LETTER**
+        - Label: **Generate Letter**
 
     ![Page Designer](images/generate-letter.png ' ')
 
@@ -151,16 +153,17 @@ Let us create a new Form page for school application.
     ![Page Designer](images/create-item-below.png ' ')
 
 12. In the Property Editor, enter/select the following:
-    - Name: **P7\_EMAIL**
-    - Type: **Rich Text Editor**
+    - Under Identification:
+        - Name: **P7\_EMAIL**
+        - Type: **Rich Text Editor**
 
      ![Page Designer](images/p7-email.png ' ')
 
-12. In the left pane, right-click **P7\_LETTER** and select **Create Computation**.
+13. In the left pane, right-click **P7\_LETTER** and select **Create Computation**.
 
     ![Page Designer](images/create-computation.png ' ')
 
-13. With the computation selected, enter/select the following in the Property Editor:
+14. With the computation selected, enter/select the following in the Property Editor:
 
     - Execution > Point: **After Submit**
     - Under Computation:
@@ -169,25 +172,24 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/computation-details.png ' ')
 
-14. Now that we edited the page items, let's add one last page item for sending a final prompt to the Gen AI service. In the Rendering Tree, right-click **Apply to School** form region and select **Create Page Item**.
+15. Now that we edited the page items, let's add one last page item for sending a final prompt to the Gen AI service. In the Rendering Tree, right-click **Apply to School** form region and select **Create Page Item**.
 
     ![Page Designer](images/create-final-prompt.png ' ')
 
-
-15. In the Property Editor, enter/select the following:
-    - Name: **P7\_FINAL\_PROMPT**
-    - Type: **Hidden**
+16. In the Property Editor, enter/select the following:
+    - Under Identification:
+        - Name: **P7\_FINAL\_PROMPT**
+        - Type: **Hidden**
 
     ![Page Designer](images/final-prompt-name.png ' ')
 
-16. Delete the buttons that we no longer need. Select **CANCEL**, **DELETE**, and **SAVE**. Right-click and select **Delete**.
+17. Delete the buttons that we no longer need. Select **CANCEL**, **DELETE**, and **SAVE**. Right-click and select **Delete**.
     ![Page Designer](images/delete-buttons.png ' ')
 
+18. Select the **CREATE** button. In the Property editor, enter/select the following:
 
-17. Select the **CREATE** button. In the Property editor, enter/select the following:
-
-    - Label: **Send Application**
-    - Appearance:
+    - Identification > Label: **Send Application**
+    - Under Appearance:
         - Button Template: **Text with Icon**
         - Icon: **fa-send-o**
 
@@ -203,15 +205,16 @@ In this task, we create a process execution chain to first prepare a prompt and 
 
 2. In the Property Editor, enter/select the following:
 
-    - Name: **Generate Letter**
-    - Type: **Execution Chain**
+    - Under Identification:
+        - Name: **Generate Letter**
+        - Type: **Execution Chain**
 
     ![Processing tab in Page Designer](images/execute-chain.png ' ')
 
-
 3. Right-click on **Generate Letter** and select **Add Child Process**. In the Property Editor, enter/select the following:
-    - Name: **Prepare Prompt**
-    - Type: **Execute Code**
+    - Under Identification:
+        - Name: **Prepare Prompt**
+        - Type: **Execute Code**
     - Source > PL/SQL Code:
     ```
     <copy>
@@ -224,11 +227,11 @@ In this task, we create a process execution chain to first prepare a prompt and 
             q'[
     As a parent of a kid who is seeking admission to a school, write an E-mail applying to a school.
     Use the below info.
-    
+
     Parent Name : ]'|| :P7_PARENT_NAME||chr(10)||chr(13) ||q'[
     Applicant Name : ]'|| :P7_STUDENT_NAME||chr(10)||chr(13) ||q'[
     School Name : ]'|| initcap(L_SCHOOL_NAME)||chr(10)||chr(13);
-    
+
     :P7_FINAL_PROMPT := L_PROMPT;
     END;
     </copy>
@@ -236,8 +239,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
 
     ![Processing tab in Page Designer](images/prepare-prompt.png ' ')
 
-     - Under Server-side Condition:
-        - When Button Pressed: **GENERATE_LETTER**
+     - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
 
     ![Processing tab in Page Designer](images/server-condition.png ' ')
 
@@ -245,8 +247,9 @@ In this task, we create a process execution chain to first prepare a prompt and 
     ![Processing tab in Page Designer](images/add-child.png ' ')
 
 5. In the Property Editor, enter/select the following:
-    - Name: **Generative AI - Generate Letter**
-    - Type: **Invoke API**
+    - Under Identification:
+        - Name: **Generative AI - Generate Letter**
+        - Type: **Invoke API**
     - Under Settings:
         - Package: **APEX_AI**
         - Procedure or Function: **GENERATE**
@@ -267,7 +270,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
 8. Select **p\_service\_static\_id**. In the Property Editor, edit/select the following:
     - Under Value:
         - Type: **Static Value**
-        - Item: **LOWCODE**  (This is the Static ID of the OCI Gen AI service we created in Lab 4. You can verify the Static ID by navigating to **Workspace Utilities > Generative AI > OCI Gen AI**)
+        - Item: **oci\_gen\_ai**  (This is the Static ID of the OCI Gen AI service we created in Lab 4. You can verify the Static ID by navigating to **Workspace Utilities > Generative AI > OCI Gen AI**)
 
     ![Processing tab in Page Designer](images/param-3.png ' ')
 
@@ -276,21 +279,21 @@ In this task, we create a process execution chain to first prepare a prompt and 
     ![Processing tab in Page Designer](images/drag-to-top.png ' ')
 
 10. In the left pane, select **Process form Apply to School**. In the Property Editor, enter/select the following:
-    - Success Message: **Application Sent**
-    - Server-side Condition > When Button Pressed: **Create**
+    - Success Message > Success Message: **Application Sent**
+    - Server-side Condition > When Button Pressed: **CREATE**
 
      ![Processing tab in Page Designer](images/success-msg.png ' ')
 
-10. Create a branch to reload the page once the application is submitted. Right-click **After Processing** and select **Create Branch**.
+11. Create a branch to reload the page once the application is submitted. Right-click **After Processing** and select **Create Branch**.
 
     ![Processing tab in Page Designer](images/create-branch.png ' ')
 
-11. In the Property Editor, enter/select the following:
-    - Name: **reload page**
-    - Target: Link-Builder Target:
-        - Page: **7**
+12. In the Property Editor, enter/select the following:
+    - Identification > Name: **reload page**
+    - Behavior > Target: Click **No Link Defined**
+        - Target > Page: **7**
         - Set Items:
-        
+
             |Name | Value|
             |------|------|
             |P7\_STUDENT\_NAME | &P7\_STUDENT\_NAME.|
@@ -303,8 +306,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
 
     ![Processing tab in Page Designer](images/reload-page.png ' ')
 
-12. Click **Save**.
-
+13. Click **Save**.
 
 ## Task 4: Create the Apply Button
 
@@ -312,47 +314,52 @@ In this task, we create a process execution chain to first prepare a prompt and 
 
     ![Processing tab in Page Designer](images/nav-page-1.png ' ')
 
-2. In the Rendering Tree, under Tabs-Parent, select **Search Results**. In the Property Editor, under Source, edit the SQL Query as follows:
+2. In the Rendering Tree, select **Search Results** region. In the Property Editor, under Source, replace the existing SQL Query with the below query:
     ```
     <copy>
     select ID,
-       BOROUGH,
-       SCHOOL_NAME,
-       NEIGHBORHOOD,
-       INTEREST,
-       METHOD,
-       ATTENDANCE_RATE,
-       SAFE,
-      sdo_geom.sdo_distance(
-          sdo_geometry(2001, 4326, sdo_point_type(longitude, latitude, null), null, null),
-          sdo_geometry(2001, 4326, sdo_point_type(-73.985428, 40.748817, null), null, null),
-          0.01,
-          'unit=MILE'
-        ) DISTANCE,
-        (select DISPOSITION
-                from nyc_schools_apps where school_id=hs.id and parent_user=:APP_USER fetch first 1 rows only)
-                APPLICATION_STATUS,
-            (select case DISPOSITION WHEN 'APPLIED' then 'u-success' else null end
-                from nyc_schools_apps where school_id=hs.id and parent_user=:APP_USER fetch first 1 rows only)
-                DISPOSITION_CSS
-        from HIGHSCHOOLS hs
-
+        BOROUGH,
+        NEIGHBORHOOD || ', ' || BOROUGH as LOCATION ,
+        SCHOOL_NAME,
+        NEIGHBORHOOD,
+        INTEREST,
+        METHOD,
+        ATTENDANCE_RATE,
+        GRADUATION_RATE,
+        SCHOOL_SPORTS,
+        TOTAL_STUDENTS,
+        to_char(TOTAL_STUDENTS,'999G999G999G999G999') as total_students_disp,
+        SAFE,
+        sdo_geom.sdo_distance(
+            sdo_geometry(2001, 4326, sdo_point_type(longitude, latitude, null), null, null),
+            sdo_geometry(2001, 4326, sdo_point_type(-73.985428, 40.748817, null), null, null),
+            0.01,
+            'unit=MILE'
+            ) DISTANCE,
+            (select DISPOSITION
+                    from nyc_schools_apps where school_id=hs.id and parent_user=:APP_USER fetch first 1 rows only)
+                    APPLICATION_STATUS,
+                (select case DISPOSITION WHEN 'APPLIED' then 'u-success' else null end
+                    from nyc_schools_apps where school_id=hs.id and parent_user=:APP_USER fetch first 1 rows only)
+                    DISPOSITION_CSS
+            from HIGHSCHOOLS hs
     </copy>
     ```
 
     ![Page Designer](images/edit-sql.png ' ')
 
-
 3. In the left pane, under Search Results, right-click **Actions** and select **Create Action**.
     ![Page Designer](images/create-action.png ' ')
 
 4. In the Property Editor, enter/select the following:
-    - Type: **Button**
-    - Label: **Apply**
-    - Target: Link Builder - Target
+    - Under Identification:
+        - Type: **Button**
+        - Label: **Apply**
+    - Layout > Position: **Secondary**
+    - Under Link > Target: Link Builder - Target
         - Page: **7**
         - Set Items:
-        
+
             |Name | Value|
             |------|------|
             |P7\_SCHOOL\_ID| &ID. |
@@ -380,7 +387,7 @@ In this task, we create a process execution chain to first prepare a prompt and 
     ![Page Designer](images/create-da.png ' ')
 
 7. In the Property Editor, enter/select the following dynamic action properties:
-    - Name: **Refresh Region After Application Sent**
+    - Identification > Name: **Refresh Region After Application Sent**
     - Under When:
         - Event: **Dialog Closed**
         - Selection Type: **Region**
@@ -389,10 +396,10 @@ In this task, we create a process execution chain to first prepare a prompt and 
         ![Page Designer](images/refresh-region-da.png ' ')
 
 8. For the True Action, select **Show** and edit the following properties:
-    - Action: Refresh
+    - Identification > Action: **Refresh**
     - Under Affected Elements:
-        - Selection Type: Region
-        - Region: Search Results
+        - Selection Type: **Region**
+        - Region: **Search Results**
 
         ![Page Designer](images/refresh-true.png ' ')
 
@@ -408,5 +415,6 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Contributing Author** - Pankaj Goyal, Member Technical Staff
  - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
 
