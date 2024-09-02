@@ -4,7 +4,7 @@
 
 Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), and Autonomous Transaction Processing (ATP) are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizens, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop and then create an APEX workspace accordingly.
 
-If you already have an APEX 24.2 Workspace provisioned, you can skip this lab.
+If you already have an APEX 24.2 workspace provisioned, you can skip this lab.
 
 Estimated Time: 5 minutes
 <!--
@@ -23,17 +23,17 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
 - View the release number on the Workspace home page:
 
-  - Sign in to Oracle APEX. The Workspace home page appears. The current release version is displayed in the bottom right corner.
+  - Sign in to Oracle APEX. The workspace home page appears. The current release version is displayed in the bottom right corner.
 
     ![APEX Home Page](./images/release-number.png " ")
 
     ![APEX Release Number](./images/release-number2.png " ")
 
-- View the About APEX page:
+- View the about APEX page:
 
-  - Sign in to Oracle APEX. The Workspace home page appears.
+  - Sign in to Oracle APEX. The workspace home page appears.
 
-  - Click the Help menu at the top of the page and select About. The About APEX page appears.
+  - Click the help menu at the top of the page and select **About**. The about APEX page appears.
 
     ![APEX Details](images/version.png)
 
@@ -41,7 +41,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
 You can run this lab in any Oracle Database with APEX 24.2 installed. This includes the APEX Application Development Service, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 24.2 is installed), on a third-party cloud provider where APEX 24.2 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 24.2.
 
-Below are steps on how to sign up for an *APEX Application Development* Service, or for an *Oracle Autonomous Database* cloud service or *apex.oracle.com* service.
+Below are steps on how to sign up for an **APEX Application Development** Service, or for an **Oracle Autonomous Database** cloud service or **apex.oracle.com** service.
 
 - On the other hand, **apex.oracle.com** is also a free service; however, it is only designated for development purposes, and running production apps is not allowed. For conducting labs in this workshop, any of these options can be utilized.
 
@@ -140,7 +140,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 5. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
 
-    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Transaction Processing**.
+    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Database**.
 
    ![Cloud Dashboard](images/database-atp.png " ")
 
@@ -210,7 +210,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-16. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+16. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
@@ -222,28 +222,28 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 1. Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
-2. Once the Signup process is complete, you will be logged in automatically to the Oracle Cloud Infrastructure (OCI) Console.
+2. Once the Sign up process is complete, you will be logged in automatically to the Oracle Cloud Infrastructure (OCI) Console.
+
     - In case you have closed the browser, you can always refer to the **Get Started Now with Oracle Cloud** email that you should have received to login to OCI Console.
     Make a note of your **Username**, **Password**, and **Cloud Account Name**.
 
     ![Oracle Cloud login page](images/get-started-email.png " ")
 
     - Alternatively, you can login to your Oracle Cloud account by accessing the following URL from your browser:
-    [https://cloud.oracle.com](https://cloud.oracle.com)
-
-     Enter your **Cloud Account Name** in the input field and click the **Next** button.
+    [https://cloud.oracle.com](https://cloud.oracle.com).
+    Enter your **Cloud Account Name** in the input field and click the **Next** button.
 
     ![Cloud login](images/enter-oracle-cloud-account-name.png " ")
 
-     Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
+    - Enter your **User Name** and **Password** in the input fields, and click **Sign In**.
 
     ![Cloud login](images/enter-user-name-and-password.png " ")
 
-3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**. The APEX Instances page appears.
+3. From the Cloud Dashboard, click on the hamburger menu on the upper-left corner. From the navigation menu, select **Developer Services** and then **APEX Application Development** or **APEX Instances**.
 
     ![APEX instance page](images/navigate-to-apex-service.png " ")
 
-4. At the top of the APEX Instances page, click the **Create APEX Service** button.
+4. At the top of the APEX Instances page, click the **Create APEX Service**.
 
     ![APEX instance page](images/create-apex-service.png " ")
 
