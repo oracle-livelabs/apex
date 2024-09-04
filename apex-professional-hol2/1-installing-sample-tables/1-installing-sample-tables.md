@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Create Customer Orders Tables
 
-1. Log into your workspace. If you are already logged in, click on the **APEX** Logo in the upper left-hand corner of the page to return to the APEX workspace home page.
+1. Log in to your workspace. If you are already logged in, click on the **APEX** Logo in the upper left-hand corner of the page to return to the APEX workspace home page.
 
 2. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, then select **Utilities > Sample Datasets**.
 
@@ -30,7 +30,7 @@ In this lab, you will:
 
     ![Sample Datasets](images/install-sample-dataset1.png " ")
 
-4. Accept the default settings and then click **Next**.
+4. Accept the default settings and click **Next**.
 
    *The schema name defaults to your current schema and, hence, will differ from the schema name shown below.*
 

@@ -6,7 +6,7 @@ Since many products will share the same colors, clothing type, and department, t
 
 Estimated Time: 10 minutes
 
-### Objectives
+## Objectives
 
 In this lab, you will:
 
