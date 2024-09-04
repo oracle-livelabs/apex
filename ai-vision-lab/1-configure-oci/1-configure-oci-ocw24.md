@@ -2,11 +2,12 @@
 
 ## Introduction
 
-In this workshop, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you will use the keys provided in the lab [Your OCI GenAI key](?lab=tut3253). 
+In this lab, you learn to create web credentials in Oracle APEX using the OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs. 
 
-Note: OCI Generative AI service is available in limited regions. If you are using your own cloud tenancy, check to see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions). 
+Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible to all applications.
+
 
 Estimated Time: 10 Minutes
 
@@ -16,13 +17,12 @@ In this lab, you:
 - Create Web Credentials in Oracle APEX
 
 ## Prerequisites
-- Download the zip file from [Your OCI GenAI key](?lab=tut3253)
+- Download the zip file from [Your OCI API key](?lab=hol3318)
+
 
 ## Task 1: Create Web Credentials in Oracle APEX
 
-Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
 
-Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible to all applications.
 
 To create a Web Credential in Oracle APEX:
 
@@ -69,10 +69,12 @@ To create a Web Credential in Oracle APEX:
 
 ## Summary
 
-You now know how to create web credentials in Oracle APEX.
+You know how to create web credentials in Oracle APEX.
 
-You may now **proceed to the next lab**.   
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Co-Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
