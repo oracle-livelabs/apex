@@ -16,9 +16,9 @@ In this lab, you will:
 
 ## Task 1: Create database objects using Quick SQL
 
-1. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, then select **Utilities > Quick SQL**.
+1. From the APEX workspace home page, select the down arrow next to SQL Workshop, then select **Utilities > Quick SQL**.
 
-   ![Select Quick SQL](images/navigate-to-quicksql1.png " ")
+    ![Select Quick SQL](images/navigate-to-quicksql1.png " ")
 
 2. Copy the following SQL shorthand code and paste it into the left pane in Quick SQL.
 
@@ -41,19 +41,19 @@ In this lab, you will:
 
     *Note that the Indentation from the code you copied should be similar to the one we have in the screenshot below*
 
-3. Review the shorthand code. You can see how Numerous tables are created and how they are related, and what types of columns and constraints will be created for the tables. Note that the **Help** button provides details of the shorthand syntax and several examples of its usage.
+3. Review the shorthand code to see how it creates numerous tables, columns, and constraints. The **Help** button details the shorthand syntax and several usage examples.
 
-    When ready, in the Quick SQL toolbar, click **Review and Run**.
+    When ready, click **Review and Run** in the Quick SQL toolbar.
 
-   ![Generate SQL1](./images/generate-sql1.png " ")
+    ![Generate SQL1](./images/generate-sql1.png " ")
 
-4. In the code editor, replace forward slash with semi-colon at the end emp_v view to run the script without errors.
+4. In the code editor, replace the forward slash(/) at the end of the **emp_v** view with a semicolon to run the script without errors.
 
     ![Generate SQL1](./images/bug.png " ")
 
 5. Review the SQL generated in the right-hand pane. For **Script Name**, enter **Employee Department Details**, and click **Run**.
 
-   ![Generated SQL1](images/save-sql-scripts1.png " ")
+    ![Generated SQL1](images/save-sql-scripts1.png " ")
 
 6. On the Run Script page, click **Run Now**.
 
@@ -63,7 +63,7 @@ In this lab, you will:
 
     ![SQL Script Results](images/results.png " ")
 
-8. To view the created database objects, click the down arrow next to **SQL Workshop** tab and select **Object Browser**.
+8. To view the created database objects, click the down arrow next to the **SQL Workshop** tab and select **Object Browser**.
 
     ![Select Object Browser](images/navigate-to-object-browser5.png " ")
 
@@ -93,7 +93,7 @@ In this task, you learn to use the data generator utility to create blueprints a
 
     - In the List of tables, check **Employees**.
 
-       Click **Create Blueprint**.
+    Click **Create Blueprint**.
 
     ![Check Table Employee](images/check-table-employee.png " ")
 
@@ -109,11 +109,11 @@ In this task, you learn to use the data generator utility to create blueprints a
 
     - Action: **Insert into Database**
 
-        Click **Insert Data**.
+     Click **Insert Data**.
 
     ![Insert Data](images/insert-data.png " ")
 
-8. To see newly generated data in the Employees table, close the Generate Blueprint dialog, navigate to **SQL workshop**, and select **Object browser**.
+8. To see newly generated data in the Employees table, close the Generate Blueprint dialog, navigate to SQL workshop, and select Object browser.
 
     ![Object browser](images/object-browser6.png " ")
 
@@ -125,9 +125,9 @@ In this task, you learn to use the data generator utility to create blueprints a
 
 In this step, you will learn how to create a table and load data using the Data Workshop utility.
 
-1. On the Workspace home page, click down arrow next to **SQL Workshop** and select **Utilities > Data Workshop**.
+1. On the Workspace home page, click the down arrow next to SQL Workshop and select Utilities > Data Workshop.
 
-   ![Select Data Workshop](images/navigate-to-data-workshop1.png " ")
+    ![Select Data Workshop](images/navigate-to-data-workshop1.png " ")
 
 2. Select **Load Data**.
 
@@ -139,17 +139,17 @@ In this step, you will learn how to create a table and load data using the Data 
 
 4. Download [projects.csv](files/projects.csv) and select the file.
 
-   ![Select file](images/select-appropriate-file1.png " ")
+    ![Select file](images/select-appropriate-file1.png " ")
 
-   *Note: If the uploaded XLSX file contains multiple worksheets, the Load Data wizard picks the first sheet by default. To load another sheet, pick it from the Select Sheet select list. The First line contains a headers checkbox that works similarly to CSV files. The same is true for the Configure dialog; the behavior is the same as for CSV files. Uploading XLSX files is limited to 20MB for each File.*
+    *Note: If the uploaded XLSX file contains multiple worksheets, the Load Data wizard picks the first sheet by default. To load another sheet, pick it from the Select Sheet select list. The First line contains a headers checkbox that works similarly to CSV files. The same is true for the Configure dialog; the behavior is the same as for CSV files. Uploading XLSX files is limited to 20MB for each File.*
 
 5. Under **Load Data**, for Table Name, enter **PROJECTS** and click **Load Data**.
 
-   ![Load data](images/load-data1.png " ")
+    ![Load data](images/load-data1.png " ")
 
-6. Once Data Loading is finished, a success message is displayed. If some rows are not loaded to the target table, then they will be stored in the error table, and the error table will be displayed. Click **View Table**.
+6. After Data Loading finishes, the system displays a success message. If any rows fail to load into the target table, they are stored in the error table and displayed in the error table. Click View Table to review the details.
 
-   ![Data loaded successfully](images/data-loaded-successfully.png " ")
+    ![Data loaded successfully](images/data-loaded-successfully.png " ")
 
 7. Under Tables, select **PROJECTS** and click **Columns** tab to review its columns.
 
@@ -165,7 +165,7 @@ You know how to use Quick SQL to generate database objects using a SQL shorthand
 
 ## What's Next?
 
-You will develop a database application utilizing pre-existing tables in the upcoming hands-on workshop. It incorporates various pages, such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
+In the upcoming hands-on workshop, you will develop a database application utilizing pre-existing tables. It incorporates various pages, such as a dashboard, multiple reports, and an administration page. Additionally, you'll be creating an application through a spreadsheet. Furthermore, you'll gain insights into loading an application using a blueprint and configuring attributes for a Progressive Web App.
 
 ## Acknowledgements
 

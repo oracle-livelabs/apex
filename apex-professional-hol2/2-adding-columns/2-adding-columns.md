@@ -1,8 +1,8 @@
 # Add columns to the products table
 
-The **PRODUCTS** table includes columns such as image, price, and details. But there are other characteristics that customers would appreciate knowing about a  product, such as color, type of clothing, and department. In this lab, you will add these columns to the Products table.
+The **PRODUCTS** table includes columns such as image, price, and details. However, customers would appreciate knowing other characteristics about a product, such as color, type of clothing, and department. In this lab, you will add these columns to the Products table.
 
-Since many products will share the same colors, clothing type, and department, to avoid data redundancy, it is best practice to create three additional tables to store the unique values of color, type, and department data. Instead of creating these three tables by yourself, you'll use the **Create Lookup Table** feature.
+Since many products will share the same colors, clothing type, and department, it is best practice to create three additional tables to store the unique values of color, type, and department data to avoid data redundancy. Instead of creating these three tables, you'll use the **Create Lookup Table** feature.
 
 Estimated Time: 10 minutes
 
@@ -32,7 +32,7 @@ In this lab, you will:
 
     - Length: **200**
 
-      Click **Apply**.
+     Click **Apply**.
 
     ![Add Column - Colors](images/add-color-column.png " ")
 
@@ -44,7 +44,7 @@ In this lab, you will:
 
     - Length: **200**
 
-        Click **Apply**.
+     Click **Apply**.
 
     ![Add Column Department2](images/add-department-column2.png " ")
 
@@ -56,7 +56,7 @@ In this lab, you will:
 
     - Length: **200**
 
-        Click **Apply**.
+     Click **Apply**.
 
     ![Add column Clothing2](images/add-clothing-column2.png " ")
 
@@ -134,7 +134,7 @@ In this task, you will extract and populate specific information from existing d
 
 ## Task 3: Create Lookup Tables
 
-Since multiple products may have the same values for color, department, and clothing, you can create a lookup table for each column to avoid repetition and make updates easier. A lookup table stores the value of the available colors, departments, or clothing in a single place, and then each product can reference the value from the lookup table.
+Since multiple products may have the same color, department, and clothing values, you can create a lookup table for each column to avoid repetition and make updates easier. A lookup table stores the value of the available colors, departments, or clothing in a single place, and then each product can reference the value from the lookup table.
 
 You create lookup tables in this lab based on the three new columns. After you create a lookup table, the PRODUCTS table can reference the new color, clothing type, and department lookup value by its new numeric primary key value in the lookup table.
 
@@ -142,7 +142,7 @@ You create lookup tables in this lab based on the three new columns. After you c
 
     ![Object Browser](./images/navigate-to-object-browser2.png " ")
 
-2. Under **Tables**, select **PRODUCTS**. Then, navigate to **More** and select **Create Lookup Table** .
+2. Under **Tables**, select **PRODUCTS**. Then, navigate to **More** and select **Create Lookup Table**.
 
     ![Create lookup table1](./images/create-lookup-tables1.png " ")
 
@@ -183,7 +183,7 @@ You create lookup tables in this lab based on the three new columns. After you c
 
 ## Summary
 
-You now know how to add new columns to your existing tables, create lookup tables for reference information, and create and run a SQL script to populate your tables. You may now **proceed to the next lab**.
+You now know how to add new columns to your existing tables, create lookup tables for reference information, and create and run an SQL script to populate your tables. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
