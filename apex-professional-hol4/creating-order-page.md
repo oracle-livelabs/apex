@@ -2,7 +2,8 @@
 
 ## Introduction
 
-In this lab, you open the home page in Page Designer, navigate through and review the page Designer panes. Then, you create a new page allowing customers to view their recent order details.
+In this lab, you open the home page in Page Designer, navigate through and review the Page Designer panes. Then, you create a new page allowing customers to view their recent order details.
+
 Customers will be able to view the following details of the Order:
 
 - Order number
@@ -13,7 +14,7 @@ Customers will be able to view the following details of the Order:
 
 Estimated Time: 15 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -79,7 +80,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 ## Task 3: Add a Region
 
-Add a region to the page to display order details.
+In this task, you will add a region to the page to display order details.
 
 1. In the newly created page, navigate to the **Gallery Menu** at the bottom, showing Regions, Items, and Buttons categories and ensure that **Regions** tab is selected.
 
@@ -141,15 +142,15 @@ Add a hidden item used to store the order ID that is not visible to the end user
 
     - Under Identification:
 
-        - Name: **P15_ORDER**
+        - Name: **P16_ORDER**
 
         - Type: **Hidden**
 
     ![Define Page Item](./images/create-page-item2.png " ")
 
-## Task 6: Add Static Content Region
+## Task 6: Add Dynamic Content Region
 
-Add a region to contain Order details and items.
+In this task, you will add a region to display mostly purchased products along with their prices.
 
 1. In the Rendering tree (left pane), right-click on the **Thank you for your Order!** region and select **Create Sub Region**.
 
@@ -157,49 +158,129 @@ Add a region to contain Order details and items.
 
 2. In the Property editor, enter/select the following:
 
-    - Title: **Order: &P15_ORDER.** (including the period)
+    - Under Identification:
+
+        - Name: **Mostly Purchased Products**
+
+        - Title: **Mostly Purchased Products**
+
+        - Type: **Dynamic Content**
+
+    - Under Source:
+
+        - Language: **PL/SQL**
+
+        - PL/SQL Function Body returning a CLOB: Copy and paste below code in the code editor:
+
+        ```
+        <copy>
+        DECLARE
+            L_RESULT CLOB := '<h4>Mostly Purchased Products:</h4>';
+        BEGIN
+            L_RESULT := L_RESULT || '<ul>';
+        FOR L_EMP IN (
+            SELECT
+                PO.PRODUCT_NAME,
+                PO.ORDER_COUNT,
+                P.UNIT_PRICE,
+                P.PRODUCT_IMAGE
+        FROM
+                 PRODUCT_ORDERS PO
+            JOIN PRODUCTS P ON PO.PRODUCT_NAME = P.PRODUCT_NAME
+        WHERE
+                PO.ORDER_STATUS = 'COMPLETE'
+            AND ROWNUM <= 5
+        ORDER BY
+            PO.ORDER_COUNT DESC
+        ) LOOP
+        L_RESULT := L_RESULT
+                    || '<li><strong>'
+                    || APEX_ESCAPE.HTML(L_EMP.PRODUCT_NAME)
+                    || '</strong>'
+                    || ' - '
+                    || APEX_ESCAPE.HTML(L_EMP.UNIT_PRICE)
+                    || '</li>';
+            END LOOP;
+            L_RESULT := L_RESULT || '</ul>';
+            RETURN L_RESULT;
+        END;
+        ```
+        </copy>
+
+    ![Define Sub Region](./images/create-sub-region21.png " ")
+
+## Task 7: Add Static Content Region
+
+In this task, you will add a sub-region to display order and items details.
+
+1. In the Rendering tree (left pane), right-click on the **Thank you for your Order!** region and select **Create Sub Region**.
+
+    ![Create Sub Region](./images/create-sub-region11.png " ")
+
+2. In the Property editor, enter/select the following:
+
+    - Title: **Order: &P16_ORDER.** (including the period)
 
     - Type: **Static Content**
 
     ![Define Sub Region](./images/create-sub-region2.png " ")
 
-## Task 7: Add Order Details Region
+## Task 8: Add Order Details Region
 
 Add a region to display Order details.
 
-1. In the Rendering tree (left pane), right-click on the **Order: &P15_ORDER.** region and select **Create Sub Region**.
+1. In the Rendering tree (left pane), right-click on the **Order: &P16_ORDER.** region and select **Create Sub Region**.
 
     ![Create Sub Region2](./images/create-sub-region11.png " ")
 
 2. In the Property Editor, enter/select the following:
-    - Title: **Order Details**
-    - Type: **Cards**
+
+    - Under Identification:
+
+        - Title: **Order Details**
+
+        - Type: **Cards**
+
     - Under Source:
+
         - Type: **SQL Query**
+
         - SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
-            SELECT o.order_id,
-                o.order_datetime,
-                o.customer_id,
-                o.order_status,
-                o.store_id,
-                (SELECT Sum(unit_price * quantity)
-                    FROM   order_items i
-                    WHERE  i.order_id = o.order_id) total
-            FROM   orders o
-            WHERE  order_id = :P15_ORDER
+            SELECT
+                O.ORDER_ID,
+                O.ORDER_DATETIME,
+                O.CUSTOMER_ID,
+                O.ORDER_STATUS,
+                O.STORE_ID,
+          (
+            SELECT
+                SUM(UNIT_PRICE * QUANTITY)
+            FROM
+                ORDER_ITEMS I
+            WHERE
+                I.ORDER_ID = O.ORDER_ID
+          ) TOTAL
+            FROM
+                ORDERS O
+            WHERE
+                ORDER_ID = :P16_ORDER
             </copy>
             ```
 
+        - Page Items to Submit: **&P16_ORDER.**
+
     ![Define Sub Region2](./images/create-sub-region12.png " ")
 
-3. Click **Attributes**.
+3. Click **Attributes** and enter/select the following:
 
-    -  Search for the **Secondary Body** in the filter and enter/select the following:
-        - Advanced Formatting: Toggle the button to **On**
-        - HTML Expression:
+    - Under **Secondary Body**:
+
+        - Advanced Formatting: Toggle **On**
+
+        - HTML Expression: Copy and paste the below HTML expression in the code editor:
 
             ```
             <copy>
@@ -211,45 +292,59 @@ Add a region to display Order details.
 
     ![Define Attributes](./images/create-sub-region23.png " ")
 
-## Task 8: Add Items Region
+## Task 9: Add Items Region
 
 Add a region to display items in the Order.
 
-1. In the Rendering tree (left pane), right-click on **Order: &P15_ORDER.** region and select **Create Sub Region**.
+1. In the Rendering tree (left pane), right-click on **Order: &P16_ORDER.** region and select **Create Sub Region**.
 
-    ![Add Region Items](./images/create-sub-region21.png " ")
+    ![Add Region Items](./images/create-sub-region211.png " ")
 
 2. In the Property Editor, enter/select the following:
-    - Title: **Items**
-    - Type: **Cards**
+
+    - Under Identification:
+
+        - Title: **Items**
+
+        - Type: **Cards**
+
     - Under Source:
+
         - Type: **SQL Query**
+
         - SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
-            SELECT  o.line_item_id                Item,
-                    p.product_name                Product,
-                    o.unit_price,
-                    o.quantity,
-                    ( o.unit_price * o.quantity ) Subtotal,
-                    p.product_image
-            FROM   order_items o,
-                products p
-            WHERE  p.product_id = o.product_id
-            AND  order_id = :P15_ORDER
+            SELECT
+                 O.LINE_ITEM_ID                ITEM,
+                 P.PRODUCT_NAME                PRODUCT,
+                 O.UNIT_PRICE,
+                 O.QUANTITY,
+               ( O.UNIT_PRICE * O.QUANTITY ) SUBTOTAL,
+                 P.PRODUCT_IMAGE
+            FROM
+                ORDER_ITEMS O,
+                PRODUCTS    P
+            WHERE
+                P.PRODUCT_ID = O.PRODUCT_ID
+                AND ORDER_ID = :P16_ORDER
             </copy>
             ```
 
+        - Page Items to Submit: **&P16_ORDER.**
+
     ![Define Region](./images/create-sub-region22.png " ")
 
-3. Click **Attributes** and edit/select the following:
+3. Click **Attributes** and enter/select the following:
 
     - Title > Column: **PRODUCT**
 
     - Under Secondary Body:
-        - Advanced Formatting: Toggle the button to **ON**
-        - HTML Expression:
+
+        - Advanced Formatting: Toggle **ON**
+
+        - HTML Expression: Copy and paste the below HTML expression in the code editor:
 
             ```
             <copy>

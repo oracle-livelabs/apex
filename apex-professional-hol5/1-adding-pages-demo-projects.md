@@ -4,8 +4,10 @@ In this lab, you create an Interactive Grid, Smart Filters and Content Row Pages
 
 Estimated Time: 20 minutes
 
-### Objectives
+## Objectives
+
 In this lab, you will:
+
 - Create Pages to Search and Edit the Projects, Tasks and Project Task status in **Demo Projects** Application.
 
 ### Downloads
@@ -106,7 +108,7 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
     ![Create Region](./images/cr-create-region.png " ")
 
-5. In the Property Editor, enter/select the following:  
+5. In the Property Editor, enter/select the following:
     - Under Identification:
 
         - Title: **Project Task Status**
@@ -158,7 +160,6 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
 
    ![Navigation Menu](./images/cr-navigation-edit.png " ")
 
-
 10. For Image/Class, enter **fa-layout-list-left**. Click A**pply Changes**.
     ![Navigation Menu](./images/cr-report-icon.png " ")
 
@@ -167,9 +168,11 @@ You create a **Content Row** report in this lab on the DEMO_PROJECTS table. Cont
     ![Run Application](./images/cr-run-page.png " ")
 
 ## Summary
+
 You now know how to create Interactive Grid, Smart Filters and Content Row pages. You may now **proceed to the next lab**.
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
