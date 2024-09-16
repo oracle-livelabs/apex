@@ -4,15 +4,18 @@ In this hands-on lab, you will Manage and Customize the Interactive report in th
 
 Estimated Time: 15 minutes
 
-### Objectives
+## Objectives
 
 In this lab, you:
+
 - Customize your Interactive Report page in **Sample Reports** Application both as a **Developer**.
 
 ### Downloads
 
 - Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+
 1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
 2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Customize an Interactive Report as a Developer
@@ -33,7 +36,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
 4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Edit Page \<n\>**.
 
-    ![Edit page](images/click-page1.png " ")  
+    ![Edit page](images/click-page1.png " ")
 
 5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to a single-row view.
 
@@ -51,15 +54,15 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
     ![Report View](images/view-srw2.png " ")
 
-6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Edit Page 1**.  
+6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Edit Page 1**.
 
-    a. In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.  
+    a. In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.
 
     b. Under Pagination, for Type, select **Row Ranges X to Y of Z**.
 
     ![Pagination](images/change-pagination.png " ")
 
-7. You want to customize the display of the Search Bar. End users should be able to select the display of the desired number of rows per page.  
+7. You want to customize the display of the Search Bar. End users should be able to select the display of the desired number of rows per page.
 
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
@@ -71,9 +74,12 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 8. You want to enable the **Excel** and **PDF** download formats and disable **Send as Email** formats in the Download option.
 
     In the property editor, do the following:
+
     - Under Download:
-        - Formats: Enable **Excel** and **PDF** checkboxes
-        - Send as Email: Toggle the button to **ON**
+
+        - Formats: Enable **Excel** and **PDF**
+
+        - Send as Email: Toggle **OFF**
 
     ![Download](images/disable-email1.png " ")
 
@@ -90,8 +96,10 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 12. The Save Report dialog displays. Notice that the **Public** check box is now available. Enter/select the following:
 
     - Save(Only displayed for developers): **As Named Report**
+
     - Name: **Projects Public Report**
-    - Enable the **Public** checkbox
+
+    - Enable **Public**
 
     Click **Apply**.
 
@@ -117,5 +125,5 @@ You now know how to Manage and Customize the Interactive report as a developer. 
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
