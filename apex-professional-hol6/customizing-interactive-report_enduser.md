@@ -117,7 +117,7 @@ In this lab, you customize and use an interactive report as an end user.
 
     ![Sort](images/create-sort2.png " ")
 
-    d. The report is now sorted in the **Descending** order of **Cost**.
+    **d.** The report is now sorted in the **Descending** order of **Cost**.
 
 7. Create an aggregation against the **Available Budget** column. You want to display the sum of the **Available Budget**. Perform the following:
 

@@ -1,9 +1,12 @@
 # Customize Interactive Grid as an End-user
 
-### Objectives
+## Objectives
+
 In this lab, you customize:
-  - **Project Tasks** page we Created in Workshop 5 (**Developing Reports**).
-  - **Interactive Grid** Page as an end user.
+
+- **Project Tasks** page you created in workshop 5 (**Developing Reports**).
+
+- **Interactive Grid** Page as an end user.
 
 <!--
 Customers will be able to:
@@ -23,15 +26,15 @@ Watch the video below for a quick walkthrough of the lab.
 Estimated Time: 20 minutes
 
 ## Task 1: Customize Interactive Grid as an end-user.
+
 In this lab, you customize the display of your interactive grid. You also edit an editable interactive grid.
 
-1. Notice that the interactive grid is editable now. You see the Edit, Save, and Add Row buttons. Also, the pagination type that you have set is displayed now. Perform a non-case-sensitive search for '**server**' on the interactive grid.  
+1. Notice that the interactive grid is editable now. You see the Edit, Save, and Add Row buttons. Also, the pagination type that you have set is displayed now. Perform a non-case-sensitive search for '**server**' on the interactive grid.
 To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/search1.png " ")
 
-2. Remove the filter by clicking the **X** icon.  
-In the search bar, click the **magnifying glass** and select the **Task Name** column.
+2. Remove the filter by clicking the **X** icon. In the search bar, click the **magnifying glass** and select the **Task Name** column.
 
     ![Customize Interactive Grid](./images/search2.png " ")
 
@@ -43,7 +46,7 @@ In the search bar, click the **magnifying glass** and select the **Task Name** c
 
     ![Customize Interactive Grid](./images/search4.png " ")
 
-5. The changes have yet to be saved. Click the **Save** button.
+5. The changes have yet to be saved. Click the **Save**.
 
     ![Customize Interactive Grid](./images/search5.png " ")
 
@@ -51,15 +54,15 @@ In the search bar, click the **magnifying glass** and select the **Task Name** c
 
     ![Customize Interactive Grid](./images/single-row-view.png " ")
 
-7. You are now in the single-row View for the project with ID **2**. Replace the existing value for Budget with **9000** and click **Save**. 
+7. You are now in the single-row View for the project with ID **2**. Replace the existing value for Budget with **9000** and click **Save**.
 
-    Then, click **Report View**.  
+    Then, click **Report View**.
 
-    ![Customize Interactive Grid](./images/single-row1.png " ")  
+    ![Customize Interactive Grid](./images/single-row1.png " ")
 
     The row now displays **9000** for Budget.
 
-8. You want to create a control break on the Project column. 
+8. You want to create a control break on the Project column.
 
     Click **Actions > Format > Control Break**.
 
@@ -69,7 +72,7 @@ In the search bar, click the **magnifying glass** and select the **Task Name** c
 
     ![Customize Interactive Grid](./images/control-break1.png " ")
 
-10. The control break is now applied. You want to highlight rows that meet a condition. 
+10. The control break is now applied. You want to highlight rows that meet a condition.
 
     Select **Actions > Format > Highlight**.
 
@@ -78,13 +81,19 @@ In the search bar, click the **magnifying glass** and select the **Task Name** c
 11. In the Highlight dialog, enter/select the following:
 
     - Name: **Project Costing greater than 800**
+
     - Background Color: Click Colors and select **Yellow**.
+
     - Text Color: Click Colors and select **Red**.
+
     - Column: **Cost**
+
     - Operator: **greater than or equals**
-    - Value: **800**  
+
+    - Value: **800**
 
     Click **Save**.
+
     ![Customize Interactive Grid](./images/highlight2.png " ")
 
 12. Notice the rows with a cost greater than 800 are highlighted.
@@ -98,15 +107,18 @@ In the search bar, click the **magnifying glass** and select the **Task Name** c
     ![Customize Interactive Grid](./images/save-grid1.png " ")
 
 14. In the Report – Save As dialog, enter/select the following:
-    - Type: **Private** 
-    - Name: **My Private Report** 
-    
+
+    - Type: **Private**
+
+    - Name: **My Private Report**
+
     Click **Save**.
 
     ![Customize Interactive Grid](./images/save-report.png " ")
 
-15. Notice that the primary interactive grid and the interactive grid you saved are now available in the Reports drop-down list.  
-You want to return to the Primary interactive grid. Click **Primary Report** (Default) in the Reports drop-down list.
+15. Notice that the primary interactive grid and the interactive grid you saved are now available in the Reports drop-down list.
+
+    You want to return to the Primary interactive grid. Click **Primary Report** (Default) in the Reports drop-down list.
 
     ![Customize Interactive Grid](./images/select-primary-report.png " ")
 
@@ -118,37 +130,40 @@ You want to return to the Primary interactive grid. Click **Primary Report** (De
 
     Similarly, perform the same step to hide the **End Date** and **Assigned To** columns.
 
-17. You want to add a chart to the interactive grid. 
-
-    Select **Actions** > **Chart**.
+17. You want to add a chart to the interactive grid.
+Select **Actions** > **Chart**.
 
     ![Customize Interactive Grid](./images/chart1.png " ")
 
-18. In the Chart dialog, select the following:
+18. In the Chart dialog, enter/select the following:
 
     - Type: **Bar**
+
     - Label: **Project**
+
     - Value: **Cost**
-    - Aggregation: **Sum**  
-    
+
+    - Aggregation: **Sum**
+
     Click **Save**.
+
     ![Customize Interactive Grid](./images/chart2.png " ")
 
-19. The chart is displayed. You want to save the customization made to the interactive grid. 
-
-    Select **Actions** > **Report** > **Save As**.
+19. The chart is displayed. You want to save the customization made to the interactive grid. Select **Actions** > **Report** > **Save As**.
 
     ![Customize Interactive Grid](./images/save-report1.png " ")
 
 20. In the Report – Save As dialog, enter/select the following:
-    - Type: **Private** 
-    - Name: **My Custom Report** 
-    
+
+    - Type: **Private**
+
+    - Name: **My Custom Report**
+
     Click **Save**.
 
     ![Customize Interactive Grid](./images/save-report2.png " ")
 
-21. The report is now saved under Private in the Reports drop-down list. Click the **Grid** icon.
+21. The report is now saved under Private in the reports drop-down list. Click the **Grid** icon.
 
     ![Customize Interactive Grid](./images/select-grid-icon.png " ")
 
@@ -156,7 +171,7 @@ You want to return to the Primary interactive grid. Click **Primary Report** (De
 
     ![Customize Interactive Grid](./images/download-report.png " ")
 
-23. the **HTML** download option is no longer available. Select **Excel** and click **Download**.
+23. The **HTML** download option is no longer available. Select **Excel** and click **Download**.
 
     ![Customize Interactive Grid](./images/download-report1.png " ")
 
@@ -165,12 +180,14 @@ You want to return to the Primary interactive grid. Click **Primary Report** (De
     ![Customize Interactive Grid](./images/downloaded-report.png " ")
 
 ## Summary
+
 You now know how to Manage and Customize the Interactive report as an End User. You may now **proceed to the next workshop**.
 
 ## What's Next?
+
 In the next workshop, you will learn how to create page items and page buttons.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

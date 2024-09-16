@@ -40,25 +40,25 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
 5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to a single-row view.
 
-    a. Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
+    **a.** Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
 
     Click **Save and Run**.
 
     ![Link to Single Row View](images/change-srw.png " ")
 
-    b.  In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
+    **b.**  In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
 
     ![Primary Report](images/view-srw1.png " ")
 
-    c. The single-row view is displayed. Click **Report View** to return to the report.
+    **c.** The single-row view is displayed. Click **Report View** to return to the report.
 
     ![Report View](images/view-srw2.png " ")
 
 6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Edit Page 1**.
 
-    a. In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.
+    **a.** In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.
 
-    b. Under Pagination, for Type, select **Row Ranges X to Y of Z**.
+    **b.** Under Pagination, for Type, select **Row Ranges X to Y of Z**.
 
     ![Pagination](images/change-pagination.png " ")
 

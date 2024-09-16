@@ -1,23 +1,24 @@
 # Introduction
 
 ## **What is APEX?**
+
 Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser.
 
-In this workshop, you customize the **Project Tasks** Application. You learn to customise an Interactive Grid as a Developer and an End User.
-
+In this workshop, you customize the **Project Tasks** Application. You learn to customize an Interactive Grid as a Developer and an End User.
 
 ### Recap
-In preceding workshop, you learned to Customise the Interactive Report as a Developer as well as an End User.
 
+In preceding workshop, you learned to Customize the Interactive Report as a Developer as well as an End User.
 
-Estimated Time: 40 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
-* Customise the Interactive Grid page you have have in **Project Tasks** Application as a **Developer**.
-* Customise the Interactive Grid page you have have in **Project Tasks** Application as an **End-user**.
+- Customize the Interactive Grid page you have have in **Project Tasks** Application as a **Developer**.
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+- Customize the Interactive Grid page you have have in **Project Tasks** Application as an **End-user**.
+
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ## Learn More - *Useful Links*
 
