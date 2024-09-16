@@ -236,7 +236,7 @@ This region will list the items added temporarily to the shopping cart.
 
         - BLOB Column: **PRODUCT_IMAGE**
 
-        ![Add a Cards Region](./images/change-attributes12.png " ")
+    ![Add a Cards Region](./images/change-attributes12.png " ")
 
     - Under Messages:
 
@@ -360,7 +360,7 @@ This region allows users to review the product details, such as brand, price, de
                 )
             B
         WHERE
-            PRODUCT_ID = :P18_PRODUCT_ID      
+            PRODUCT_ID = :P18_PRODUCT_ID
     </copy>
     ```
 
@@ -372,7 +372,7 @@ This region allows users to review the product details, such as brand, price, de
 
         Click **OK**.
 
-        ![Add Cards Region](./images/create-cards-region12.png " ")
+    ![Add Cards Region](./images/create-cards-region12.png " ")
 
 3. Click **Attributes** and enter/select the following:
 
