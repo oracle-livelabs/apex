@@ -174,6 +174,8 @@ In this task, you create a **Content Row** report with selection support on the 
 
     - Label > Label: **Check All**
 
+    - Layout > Start New Row: Toggle **Off**
+
     ![Create election Support](./images/cr-page-item-detail1.png " ")
 
 10. Right-click **Selection Support** region and click **Create Page Item**.
@@ -234,7 +236,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
         - Type: **Multiple Selection**
 
-        - Current Selection Page Item: **P3\_SELECTED\_ID**
+        - Current Selection Page Item: **P3\_SELECTION\_ID**
 
         - Select All Page Item: **P3\_SELECT\_ALL**
 
@@ -322,9 +324,11 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Save and Run](./images/save-run.png " ")
 
-23. To update the status of the Project Tasks, select any status from select list and check the rows which you want to update then click **Update** button.
+23. To update the status of the Project Tasks, select any status from the list, check the rows you want to update, and then click the **Update** button.
 
     ![Run Application](./images/cr-run-page.png " ")
+
+    ![Run Application](./images/cr-run-page1.png " ")
 
 ## Summary
 
