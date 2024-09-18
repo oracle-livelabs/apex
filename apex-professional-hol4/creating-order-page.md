@@ -2,25 +2,25 @@
 
 ## Introduction
 
-In this lab, you open the home page in Page Designer, navigate through and review the Page Designer panes. Then, you create a new page allowing customers to view their recent order details.
-
-Customers will be able to view the following details of the Order:
-
-- Order number
-- Order date
-- Status
-- Total price
-- Quantity and price of the items.
-
-Estimated Time: 15 minutes
+In this lab, you will explore the Oracle APEX Page Designer and create a new page in an online shopping application that displays recent order details. This hands-on exercise will guide you through navigating the Page Designer interface, creating and organizing different regions, and adding content to the new page. By the end of this lab, you will be able to allow customers to view their order details, including the order number, date, status, total price, and item-specific information.
 
 ### Objectives
 
 In this lab, you will:
 
-- Navigate and Review the Page Designer panes.
+- Navigate through and review the Page Designer panes.
 
-- Create a page to review the items that the customer just bought.
+- Create a blank page to display order information.
+
+- Add regions for static and dynamic content.
+
+- Display order details such as order date, status, total, and item-specific details.
+
+- Add regions to display additional information like frequently purchased products.
+
+- Lock and unlock pages to manage concurrent editing.
+
+Estimated Time: 15 minutes
 
 ### Downloads
 
@@ -31,6 +31,8 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Navigate and Review the Page Designer panes
+
+In this task, you will open your APEX application in the Page Designer and familiarize yourself with its key components, including the left, central, and right panes.
 
 1. In the App Builder, run the **Online Shopping Application**.
     You are now in the application runtime environment. Use the developer toolbar to navigate to the Home page.
@@ -57,6 +59,8 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 ## Task 2: Create a Blank Page for Order Information
 
+You will create a new blank page titled Order Information where you will display customer order details. This page will later include regions and items to display the necessary data.
+
 1. On the **Create a Page** dialog, select **Blank Page**.
 
     ![Select Blank Page](./images/select-blank-page1.png " ")
@@ -80,7 +84,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 ## Task 3: Add a Region
 
-In this task, you will add a region to the page to display order details.
+After creating the page, you'll add a Static Content region to display a thank you message for the customer's order. You'll also learn how to customize the region's appearance with icons and templates.
 
 1. In the newly created page, navigate to the **Gallery Menu** at the bottom, showing Regions, Items, and Buttons categories and ensure that **Regions** tab is selected.
 
@@ -110,9 +114,7 @@ In this task, you will add a region to the page to display order details.
 
 ## Task 4: Lock and Unlock Pages
 
-Prevent conflicts during application development by locking pages in your application. By locking a page, you prevent other developers from editing it. You can lock a page on the Application home page, Page Locks page, and in Page Designer.
-
-The Page Lock button on the Page Designer toolbar indicates whether a page is locked. The Page Lock button displays as an unlocked padlock if the page is unlocked.
+To prevent conflicts during development, this task will teach you how to lock and unlock pages, ensuring that multiple developers can work on the application without interference.
 
 1. To lock a page in Page Designer, click the **Page Unlocked icon** on the Page Designer toolbar.
 
@@ -132,7 +134,7 @@ The Page Lock button on the Page Designer toolbar indicates whether a page is lo
 
 ## Task 5: Add Items to the Page
 
-Add a hidden item used to store the order ID that is not visible to the end user.
+You'll add a hidden item to store the order ID, which will be used to query the relevant order details for display on the page.
 
 1. In the Rendering tree (left pane), right-click on **Thank you for your Order!** and select **Create Page Item**.
 
@@ -150,7 +152,7 @@ Add a hidden item used to store the order ID that is not visible to the end user
 
 ## Task 6: Add Dynamic Content Region
 
-In this task, you will add a region to display mostly purchased products along with their prices.
+In this task, you will add a region to display a list of Mostly Purchased Products, using PL/SQL code to dynamically generate content.
 
 1. In the Rendering tree (left pane), right-click on the **Thank you for your Order!** region and select **Create Sub Region**.
 
@@ -211,7 +213,7 @@ In this task, you will add a region to display mostly purchased products along w
 
 ## Task 7: Add Static Content Region
 
-In this task, you will add a sub-region to display order and items details.
+In this task, you will create a sub-region to display the order number and other static information based on the order ID.
 
 1. In the Rendering tree (left pane), right-click on the **Thank you for your Order!** region and select **Create Sub Region**.
 
@@ -227,7 +229,7 @@ In this task, you will add a sub-region to display order and items details.
 
 ## Task 8: Add Order Details Region
 
-Add a region to display Order details.
+You will add a Cards Region to display the key details of the customer's order, including the order date, status, and total price.
 
 1. In the Rendering tree (left pane), right-click on the **Order: &P16_ORDER.** region and select **Create Sub Region**.
 
@@ -294,7 +296,7 @@ Add a region to display Order details.
 
 ## Task 9: Add Items Region
 
-Add a region to display items in the Order.
+Lastly, you'll create a region to show the individual items in the order, including their quantity, unit price, and subtotal, using an SQL query to retrieve the data.
 
 1. In the Rendering tree (left pane), right-click on **Order: &P16_ORDER.** region and select **Create Sub Region**.
 

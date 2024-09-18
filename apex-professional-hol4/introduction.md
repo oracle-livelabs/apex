@@ -18,8 +18,6 @@ Once the page is created, customers will be able to view the following details o
 
 In the preceding workshop, you learned to create an application using your installed tables and data. Also, you created a Database application from a file, created an application from a Spreadsheet and configured a Progressive Web application.
 
-Estimated Time: 15 minutes
-
 ### Objectives
 
 In this workshop, you will:
@@ -28,7 +26,9 @@ In this workshop, you will:
 
 - Create a page to review the items that the customer bought.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+Estimated Time: 15 minutes
+
+> **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
 
 ## Learn More - *Useful Links*
 

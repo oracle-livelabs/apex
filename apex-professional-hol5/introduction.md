@@ -18,17 +18,17 @@ Later, in the **Online Shopping Cart Application**, you will create:
 
 In the previous workshop, you learned to navigate and review the Page Designer panes. You acquired the skills to construct a normal page, incorporate regions, sub-regions, and page items, and manage the locking and unlocking of pages.
 
-Estimated Time: 20 minutes
-
 ### Objectives
 
 In this workshop, you will:
 
-- Create Pages to Search and Edit the Projects and Tasks in the **Demo Projects** Application.
+- Create pages to search and edit the Projects and Tasks in the **Demo Projects** Application.
 
 - Create a Page to list the products in the **Shopping Cart** Application.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+Estimated Time: 20 minutes
+
+> **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
 
 ## Learn More - *Useful Links*
 
