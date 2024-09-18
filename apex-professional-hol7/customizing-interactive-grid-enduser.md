@@ -1,44 +1,32 @@
 # Customize Interactive Grid as an End-user
 
+In this lab, you will learn how to customize and manage an interactive grid as an end-user. You will perform tasks like searching, updating data, applying control breaks, highlighting specific rows, and saving grid customizations. Additionally, you will explore adding charts and downloading the interactive grid in various formats.
+
 ## Objectives
 
-In this lab, you customize:
+In this lab, you will:
 
-- **Project Tasks** page you created in workshop 5 (**Developing Reports**).
+- Perform searches and filter data within an interactive grid.
+- Edit and save changes to rows in an editable grid.
+- Apply control breaks, highlight rows based on conditions, and hide specific columns.
+- Create and save customized reports, including charts, and download them in different formats.
 
-- **Interactive Grid** Page as an end user.
+Estimated Time: 10 minutes
 
-<!--
-Customers will be able to:
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
+## Task 1: Customize Interactive Grid as an end-user
 
-Estimated Time: 20 minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[](youtube:Cvl9xMAqnm8)
--->
-
-Estimated Time: 20 minutes
-
-## Task 1: Customize Interactive Grid as an end-user.
-
-In this lab, you customize the display of your interactive grid. You also edit an editable interactive grid.
+In this task, you customize the display of your interactive grid and edit an editable interactive grid.
 
 1. Notice that the interactive grid is editable now. You see the Edit, Save, and Add Row buttons. Also, the pagination type that you have set is displayed now. Perform a non-case-sensitive search for '**server**' on the interactive grid.
 To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/search1.png " ")
 
-2. Remove the filter by clicking the **X** icon. In the search bar, click the **magnifying glass** and select the **Task Name** column.
+2. Remove the filter by clicking the **X** icon. Click the **magnifying glass** in the search bar and select the **Task Name** column.
 
     ![Customize Interactive Grid](./images/search2.png " ")
 
-3. Enter **server** in the text area and click **Go**. The search is now restricted to the **Task Name** column.
+3. Enter **server** in the text area and click **Go**. The search is restricted to the **Task Name** column.
 
     ![Customize Interactive Grid](./images/search3.png " ")
 
@@ -68,7 +56,7 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/set-control-break.png " ")
 
-9. In the Control Break dialog, for Column enter **Project** and click **Save**.
+9. In the Control Break dialog, for Column, enter **Project** and click **Save**.
 
     ![Customize Interactive Grid](./images/control-break1.png " ")
 
@@ -100,7 +88,7 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/highlight3.png " ")
 
-13. You want to save the changes made to the interactive grid. 
+13. You want to save the changes made to the interactive grid.
 
     Select **Actions** > **Report** > **Save As**.
 
@@ -118,13 +106,13 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
 15. Notice that the primary interactive grid and the interactive grid you saved are now available in the Reports drop-down list.
 
-    You want to return to the Primary interactive grid. Click **Primary Report** (Default) in the Reports drop-down list.
+    You want to return to the Primary interactive grid. Click **Primary Report** (Default) in the reports drop-down list.
 
     ![Customize Interactive Grid](./images/select-primary-report.png " ")
 
-16. You want to customize more and save the interactive grid as another Private report. You do not want the **Start Date**, **End Date**, and **Assigned To** columns to be displayed in the report.
+16. You want to customize more and save the interactive grid as another private report. You do not want the **Start Date**, **End Date**, and **Assigned To** columns to be displayed in the report.
 
-    Click the **Start Date** column header and then select **Hide** from the context menu.
+    Click the **Start Date** column header and select **Hide** from the context menu.
 
     ![Customize Interactive Grid](./images/hide-column1.png " ")
 
@@ -171,7 +159,7 @@ Select **Actions** > **Chart**.
 
     ![Customize Interactive Grid](./images/download-report.png " ")
 
-23. The **HTML** download option is no longer available. Select **Excel** and click **Download**.
+23. The HTML download option is no longer available. Select Excel and click "Download."
 
     ![Customize Interactive Grid](./images/download-report1.png " ")
 
@@ -185,7 +173,7 @@ You now know how to Manage and Customize the Interactive report as an End User. 
 
 ## What's Next?
 
-In the next workshop, you will learn how to create page items and page buttons.
+In the next workshop, you will learn how to create page items and buttons.
 
 ## Acknowledgements
 

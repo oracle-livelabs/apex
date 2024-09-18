@@ -1,14 +1,19 @@
 # Customize Interactive Grid as a Developer
 
+In this lab, you will learn how to customize and manage an interactive grid for end users using the **Demo Projects** application. You will create column groups, set pagination types, and control report download formats. Additionally, you will enable users to save public interactive grids and convert a read-only grid into an editable one. By the end, you will understand how to effectively manage grid settings and configurations to enhance user experience.
+
 ## Objectives
 
-In this lab, you customize:
+In this lab, you will:
 
-- **Project Tasks** page we Created in Workshop 5 (**Developing Reports**).
+- Create and manage column groups in an interactive grid.
+- Rearrange columns and organize grid layout for optimal user experience.
+- Enable users to save public interactive grid reports and customize downloadable formats.
+- Convert a read-only interactive grid into an editable one.
+- Modify pagination settings and display the total row count in the grid.
+- Exclude specific columns from DML operations and configure them for display-only purposes.
 
-- **Interactive Grid** Page as a developer.
-
-Estimated Time: 20 minutes
+Estimated Time: 10 minutes
 
 ### Downloads
 
@@ -20,7 +25,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Manage and Customize Interactive Grid as a Developer
 
-This lab uses the **Demo Projects** application. In this lab, you customize the **Interactive Grid** for end users. You create column groups, set pagination type, and set the report downloadable formats that should be available for end users. You also enable end users to save the report as Public interactive grids and convert a read-only interactive grid to an editable interactive grid.
+In this task, you customize the Interactive Grid for end users. You create column groups, set pagination type, and set the report downloadable formats that should be available for end users. You also enable end users to save the report as **Public** interactive grids and convert a read-only interactive grid to an editable one.
 
 1. Navigate to **App Builder** and run the **Demo Projects** application.
 
@@ -28,11 +33,11 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![App Builder](./images/run-demo-projects-app.png " ")
 
-2. In the navigation menu, click **Projects Tasks**. To customize this interactive grid for your end users, in the Developer Toolbar, click **Page 4**.
+2. In the navigation menu, click Projects Tasks. In the Developer Toolbar, click Page 4 to customize this interactive grid for your end users.
 
     ![Edit Page 4](./images/click-page.png " ")
 
-3. Add the following column group headers to the interactive grid as:
+3. Add the following column group headers to the interactive grid:
 
     - **Project Breakdown**: Project, Task_Name columns
 
@@ -53,15 +58,15 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![Add column group headers](./images/reate-column-group1.png " ")
 
-    **b)** Now that you have created column groups, you need to assign columns to them. Expand **Columns** in the rendering tree and select **PROJECT** and **TASK_NAME** columns.
+    **b)** Now that you have created column groups, you must assign them columns. Expand **Columns** in the rendering tree and select **PROJECT** and **TASK_NAME** columns.
 
-    In the property editor, under **Layout**, select **Project Breakdown** for group.
+    In the property editor, under **Layout**, select **Project Breakdown** for the group.
 
     ![Add column group headers](./images/create-column-group2.png " ")
 
     **c)** Then, in thee rendering tree, select **START\_DATE** and **END\_DATE** columns.
 
-    In the property editor, under **Layout**, select **Schedule** for Group.
+    In the property editor, under **Layout**, select **Schedule** for the group.
 
     ![Add column group headers](./images/select-schedule-group11.png " ")
 
@@ -86,6 +91,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
     ![Add column group headers](./images/rearrange-column12.png " ")
 
 5. You want to ensure end users can save Public interactive grids. You want to exclude HTML from the download formats available to end users.
+
     **a)** In the Rendering tree, select the **Project Tasks** Interactive Grid region.
 
     **b)** In the property editor, select **Attributes**, and perform the following steps:
@@ -96,7 +102,7 @@ This lab uses the **Demo Projects** application. In this lab, you customize the 
 
     ![save Public interactive grids](./images/enbale-public-reports11.png " ")
 
-6. Convert this read-only interactive grid into an **Editable interactive grid**. Then, reset the pagination as Page type displaying the total row count.
+6. Convert this read-only interactive grid into an **Editable interactive grid**. Then, reset the pagination as page type, displaying the total row count.
 
     **a)** Under Rendering, select the **Project Tasks** Interactive Grid region.
 
