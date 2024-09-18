@@ -1,24 +1,32 @@
 # Create and Use Page-Level Items and Buttons
 
-In this lab, you create new Page Items and Buttons in the Shopping Cart and Add to Cart pages we created in **Lab 2: Developing Reports** Workshop.
+In this lab, you will learn how to add new items and buttons to a shopping cart page in an online shopping application. You will create and configure page items like customer details, product information, and buttons to manage the shopping cart. This enables users to review, modify, and interact with their cart seamlessly and intuitively.
 
 ## Objectives
 
-- Learn how to create and configure Page Items and Buttons in Oracle APEX for managing shopping cart functionality, such as viewing, editing, and clearing items.
+By the end of this lab, you will be able to:
 
-- Implement server-side conditions to enable dynamic button visibility based on user interactions, enhancing the overall user experience.
+- Add static content regions and create page items to capture order information.
+
+- Create and configure buttons to manage the shopping cart.
+
+- Implement server-side conditions to control button visibility based on user actions.
+
+- Add and configure hidden fields to store and manipulate shopping cart data.
 
 Estimated Time: 15 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol5-lab-2.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
+- Did you miss out on trying the previous labs? Don’t worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol5-lab-2.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
 
 1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Add Items and Buttons to display Order Information
+
+In this task, you will enhance the functionality of the Shopping Cart page in an online shopping application. By adding new page items and buttons, such as "Proceed to Checkout" and "Clear Shopping Cart," users can manage their shopping experience more efficiently. You will also create fields to capture customer details like email, full name, and store selection, streamlining the checkout process and improving the user interface.
 
 1. Navigate to the **App Builder** and click **Online Shopping Application**.
 
@@ -50,7 +58,7 @@ Estimated Time: 15 minutes
 
     ![Create Email Address](./images/create-address.png " ")
 
-7. Create four page items one after the other:
+7. Create four-page items one after the other:
 
     | Name                    | Type        | Label     |
     | ----------------------- | ----------- | --------- |
@@ -71,7 +79,7 @@ Estimated Time: 15 minutes
         ```
         <copy>
         select STORE_NAME as d,
-               STORE_ID as r
+        STORE_ID as r
         from STORES
         order by 1
         </copy>
@@ -99,7 +107,7 @@ Estimated Time: 15 minutes
 
     ![Create Clear Button](./images/create-clear-button.png " ") |
 
-11. Under Server-side Condition, update as follow:
+11. Under Server-side Condition, update as follows:
 
     | Button Name | Type             | Item                  |
     | ----------- | ---------------- | --------------------- |
@@ -127,11 +135,11 @@ In this task, you will create four-page items:
 
 1. From the page designer, click the **Page Finder** icon and select **Page 18**.
 
-      ![Select Page 18](./images/select-page-17.png " ")
+    ![Select Page 18](./images/select-page-17.png " ")
 
 2. Drag a **Static Content** region and drop it to the **Dialog Footer**.
 
-     ![Dialog footer](./images/create-static-content1.png " ")
+    ![Dialog footer](./images/create-static-content1.png " ")
 
 3. In the property editor, enter/select the following:
 
@@ -143,7 +151,7 @@ In this task, you will create four-page items:
 
 4. Right-click the **Buttons Bar** region and click **Create Page Item**.
 
-     ![Create Page Item](./images/create-page-item3.png " ")
+    ![Create Page Item](./images/create-page-item3.png " ")
 
 5. Create four items as follows. In the Property Editor, edit the following:
 
@@ -163,14 +171,14 @@ In this task, you will create four-page items:
 
         - Static Values: Enter the following:
 
-            | Display Value | Return Value |
-            | ------------- | ------------ |
-            | 1             | 1            |
-            | 2             | 2            |
-            | 3             | 3            |
-            | 4             | 4            |
-            | 5             | 5            |
-            {: title="Display and Return Values"}
+        | Display Value | Return Value |
+        | ------------- | ------------ |
+        | 1             | 1            |
+        | 2             | 2            |
+        | 3             | 3            |
+        | 4             | 4            |
+        | 5             | 5            |
+        {: title="Display and Return Values"}
 
         - Click **OK**.
 
@@ -180,11 +188,11 @@ In this task, you will create four-page items:
 
     ![Select quantity](./images/create-quantity-column1.png " ")
 
-7. Navigate to **Buttons Bar** region (left side). Right-click and select **Create Button**.
+7. Navigate to the Buttons Bar region (left side). Right-click and select "Create Button."
 
     ![Create Button](./images/create-button3.png " ")
 
-8. Create three buttons one after the other as follows:
+8. Create three buttons, one after the other, as follows:
 
     | Name   | Label            | Slot | Hot |
     | ------ | ---------------- | --------------- | --- |
@@ -195,18 +203,18 @@ In this task, you will create four-page items:
 
     ![Create three buttons](./images/create-button4.png " ")
 
-9. Under Server-side Condition, update as follow:
+9. Under Server-side Condition, update as follows:
 
     | Name   | Type             | Item         |
     | ------ | ---------------- | ------------ |
-    | Add    | Item is zero     | P17_QUANTITY |
-    | Edit   | Item is NOT zero | P17_QUANTITY |
-    | Delete | Item is NOT zero | P17_QUANTITY |
+    | Add    | Item is zero     | P18_QUANTITY |
+    | Edit   | Item is NOT zero | P18_QUANTITY |
+    | Delete | Item is NOT zero | P18_QUANTITY |
     {: title="Server-side conditions for Buttons}
 
     ![Update server-side condition](./images/enable-server-side.png " ")
 
-10. For **Delete** button, in the property editor, enter/select the following:
+10. For the **Delete** button in the property editor, enter/select the following:
 
     - Under Appearance section > Template Options:
 
@@ -218,19 +226,19 @@ In this task, you will create four-page items:
 
         Click **OK**.
 
-     ![create danger button](./images/create-danger-button.png " ")
+    ![create danger button](./images/create-danger-button.png " ")
 
 11. Click **Save**.
 
 ## Summary
 
-In this lab, you learned how to create new Page Items and Buttons for Shopping Cart and Add to Cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
+In this lab, you learned how to create new page items and buttons for the shopping cart and add to cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
 
-## Whats Next?
+## What's Next?
 
-In the next workshop, you understand how to create validations in APEX to ensure data integrity. Then you also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement Dynamic Actions for seamless cart management and navigation.
+In the next workshop, you will understand how to create validations in APEX to ensure data integrity. Then, you will also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement Dynamic Actions for seamless cart management and navigation.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** -  Roopesh Thokala, Senior Product Manager, September 2024
+- **Last Updated By/Date** -  Ankita Beri, Product Manager, September 2024

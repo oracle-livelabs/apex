@@ -18,7 +18,7 @@ In the preceding workshop, you learned to customize the Interactive Report as a 
 
 Estimated Time: 20 minutes
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2._
 
 ## Learn More - *Useful Links*
 
