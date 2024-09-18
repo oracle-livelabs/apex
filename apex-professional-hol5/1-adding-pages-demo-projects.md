@@ -1,14 +1,18 @@
 # Add Pages to the Demo Projects application
 
-In this lab, you create an Interactive Grid, Smart Filters and Content Row Pages in the Demo Projects Application.
-
-Estimated Time: 20 minutes
+In this lab, you will learn how to create different page types in the Demo Projects application, including Interactive Grid, Smart Filters, and Content Row pages. These pages allow users to search, filter, and manage project tasks and statuses. This hands-on experience will give you insight into how to effectively build and customize Oracle APEX applications to meet various business needs.
 
 ## Objectives
 
-In this lab, you will:
+By the end of this lab, you will be able to:
 
-- Create Pages to Search and Edit the Projects, Tasks and Project Task status in **Demo Projects** Application.
+- Create an Interactive Grid to search and edit project tasks.
+
+- Implement Smart Filters to allow efficient filtering of project tasks.
+
+- Design a Content Row page to display task details with selection and action capabilities.
+
+Estimated Time: 20 minutes
 
 ### Downloads
 
@@ -20,7 +24,7 @@ Stuck or Missed out on completing the previous labs? Don’t worry! You can down
 
 ## Task 1: Add Interactive Grid to Demo Projects Application
 
-You create an interactive grid on the **DEMO_PROJECTS** table in this lab. You already created the **Demo Projects** application in **Workshop 3: Use SQL Workshop**. Now, you create an **Interactive Grid** in the **Demo Projects** application.
+In this task, you will create an Interactive Grid to display and manage tasks from the DEMO_PROJECTS table. An Interactive Grid allows users to interact with the data by sorting, filtering, and updating records directly within the grid.
 
 1. On the Workspace home page, click the App Builder icon and select **Demo Projects** application.
 

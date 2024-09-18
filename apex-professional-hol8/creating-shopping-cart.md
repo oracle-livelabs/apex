@@ -60,13 +60,13 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
 7. Create four-page items one after the other:
 
-    | Name                    | Type        | Label     |
-    | ----------------------- | ----------- | --------- |
-    | P17\_CUSTOMER\_FULLNAME | Text Field  | Full Name |
-    | P17\_ORDER\_ID          | Hidden      |           |
-    | P17\_CUSTOMER\_ID       | Hidden      |           |
-    | P17_STORE               | Select List | Store     |
-    {: title="List of Page Items to be created"}
+        | Name                    | Type        | Label     |
+        | ----------------------- | ----------- | --------- |
+        | P17\_CUSTOMER\_FULLNAME | Text Field  | Full Name |
+        | P17\_ORDER\_ID          | Hidden      |           |
+        | P17\_CUSTOMER\_ID       | Hidden      |           |
+        | P17_STORE               | Select List | Store     |
+        {: title="List of Page Items to be created"}
 
 8. Select **P17\_STORE**. In the property editor, enter/select the following:
 
@@ -105,7 +105,7 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     ![Create Proceed Button](./images/create-button1.png " ")
 
-    ![Create Clear Button](./images/create-clear-button.png " ") |
+    ![Create Clear Button](./images/create-clear-button.png " ")
 
 11. Under Server-side Condition, update as follows:
 

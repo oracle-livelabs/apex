@@ -1,32 +1,22 @@
-<!--# Create the shopping cart page -->
 # Add Cards and Faceted search page to the Shopping Cart Application
 
-In this lab, you add features to the Online Shopping Application to update items in the cart. You also create pages to view all the Products in the store and the product details.
+In this lab, you'll extend the functionality of the Online Shopping Application by adding features to the shopping cart, product pages, and a faceted search page. Customers can review items in the cart, edit quantities, remove products, and proceed to checkout. You'll also create pages allowing users to view product details and customer reviews, enhancing the application's user experience.
 
-<!--
-Customers will be able to:
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Proceed to checkout
-
-Estimated Time: 20 minutes
-
-Watch the video below for a quick walkthrough of the lab.
-
-[](youtube:Cvl9xMAqnm8)-->
-
-Estimated Time: 20 minutes
+The tasks will guide you through the process of adding dynamic functionality to your application using Oracle APEX components such as Cards and Application Processes.
 
 ## Objectives
 
-In this lab, you will:
+By the end of this lab, you will:
 
-- Create Application Items and Application Process
+- Create application items and processes for managing the shopping cart.
 
-- Cards pages to view Product Details and Customer Reviews
+- Design Card regions to display product details and customer reviews.
 
-- Create a Faceted Search page to list the products
+- Implement a faceted search page to list and filter products.
+
+- Set up actions to edit cart items and handle checkout processes.
+
+Estimated Time: 20 minutes
 
 ### Downloads
 
@@ -38,7 +28,7 @@ Stuck or Missed out on completing the previous labs? Don’t worry! You can down
 
 ## Task 1: Create Application Items
 
-These items are needed to count the number of items in the shopping cart and the icon to display in the Navigation Bar.
+In this task, you will create two application items that help display and update the shopping cart icon and count in the navigation bar.
 
 1. Navigate to **App Builder** and select **Online Shopping Application**.
 
@@ -72,7 +62,7 @@ These items are needed to count the number of items in the shopping cart and the
 
 ## Task 2: Create Application Process
 
-An Application Process is needed to refresh the number of items in the shopping cart, shown in the navigation bar.
+You'll create an application process to initialize and update the shopping cart, ensuring that the correct number of items and icon are shown in the navigation bar.
 
 1. Click **Shared Components**.
 
@@ -117,7 +107,7 @@ An Application Process is needed to refresh the number of items in the shopping 
 
 ## Task 3: Create a Blank Page for Checkout
 
-The shopping cart page allows users to review and edit the products in the cart. Also, users can create an order or clear the shopping cart.
+This task walks you through creating a blank page for the shopping cart, where users can review, edit, or clear items and proceed to checkout.
 
 1. Click **Application ID**.  ***The ID of your application may vary***.
 
@@ -151,7 +141,7 @@ The shopping cart page allows users to review and edit the products in the cart.
 
 ## Task 4: Add a Cards Region
 
-This region will list the items added temporarily to the shopping cart.
+Here, you'll design a Cards region to display items in the shopping cart, including details like product image, price, and quantity.
 
 1. Navigate to gallery and drag a **Cards** region and drop it to the  **Body** section.
 
@@ -250,7 +240,7 @@ This region will list the items added temporarily to the shopping cart.
 
 ## Task 5: Add an Action to the Shopping Cart
 
-The action we add in this task allows customers to open a page to edit a particular item in the shopping cart.
+In this task, you will add an "Edit" action button that allows users to edit the items in their cart.
 
 1. In the **Rendering tree** (left pane), navigate to**Shopping Cart** > **Actions**.
 
@@ -288,7 +278,7 @@ The action we add in this task allows customers to open a page to edit a particu
 
 ## Task 6: Create a Modal Page
 
-Create a Modal Page to add products to the cart.
+You'll create a modal page that enables users to add products to the cart through a pop-up interface.
 
 1. Navigate to **+** icon and select **Page**.
 
@@ -312,7 +302,7 @@ Create a Modal Page to add products to the cart.
 
 ## Task 7: Add Cards Region for Product Details
 
-This region allows users to review the product details, such as brand, price, description, and more.
+This task helps you create a Cards region that shows detailed product information like name, brand, and price on the product page.
 
 1. Navigate to the **Gallery Menu**. Drag a **Cards** region and drop it in the Content Body section.
 
@@ -418,7 +408,7 @@ This region allows users to review the product details, such as brand, price, de
 
 ## Task 8: Add Cards Region for Customer Reviews
 
-This region lets users read the customer reviews for this product.
+You'll add another Cards region to display customer reviews for the selected product, helping customers make informed decisions.
 
 1. Navigate to the **Gallery Menu**. Drag a **Cards** region and drop it to the Content Body section under **Product** region.
 
@@ -479,7 +469,9 @@ This region lets users read the customer reviews for this product.
 
 4. Click **Save**.
 
-## Task 9: Add the Products Page.
+## Task 9: Add the Products Page
+
+The final task will guide you in creating a faceted search page that lists products, allowing users to filter and browse through the available products easily.
 
 1. On the **Page Designer** toolbar, navigate to **(+ V)** icon and select **Page**.
 
