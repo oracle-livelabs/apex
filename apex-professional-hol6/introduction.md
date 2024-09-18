@@ -2,15 +2,13 @@
 
 ## **What is APEX?**
 
-Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser.
+Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizens, and application developers can create enterprise apps 20X faster with 100X less code-without learning complex web technologies with just a browser.
 
-In this workshop, you manage and customize the Interactive report in the Sample Reports application both as a **Developer** and as an **End user**.
+In this workshop, you will manage and customize the Interactive report in the Sample Reports application as both a Developer and an end user.
 
 ### Recap
 
-In the previous workshop, you learned to add interactive grid, Smart filters, and Content row to an application. Additionally, you learned to create application items and application processes. Moreover, you created a variety of pages and added an action.
-
-Estimated Time: 35 minutes
+In the previous workshop, you learned to add an interactive grid, Smart filters, and Content row to an application. You also learned to create application items and processes, create a variety of pages, and add an action.
 
 ### Objectives
 
@@ -20,7 +18,9 @@ In this workshop, you will:
 
 - Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+Estimated Time: 15 minutes
+
+ > **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
 
 ## Learn More - *Useful Links*
 

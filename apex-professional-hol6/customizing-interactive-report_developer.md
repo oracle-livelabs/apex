@@ -1,14 +1,22 @@
 # Customize Interactive Report as a Developer
 
-In this hands-on lab, you will Manage and Customize the Interactive report in the **Sample Reports** application as a **Developer**.
-
-Estimated Time: 15 minutes
+In this hands-on lab, as a developer, you will learn how to manage and customize the Interactive Report within the Sample Reports application. Interactive Reports offer robust and flexible reporting features, enabling end users to manipulate the data displayed according to their preferences. As a developer, you'll explore key customization options to enhance the user experience, such as modifying the report layout, configuring download formats, and controlling the display of key elements.
 
 ## Objectives
 
-In this lab, you:
+By the end of this lab, you will be able to:
 
-- Customize your Interactive Report page in **Sample Reports** Application both as a **Developer**.
+- Customize the Interactive Report layout and links.
+
+- Modify pagination settings and display row ranges.
+
+- Enable and configure download formats for Excel and PDF.
+
+- Control visibility of report features like the search bar and rows per page selector.
+
+- Save and manage reports for end users.
+
+Estimated Time: 15 minutes
 
 ### Downloads
 
@@ -20,9 +28,9 @@ In this lab, you:
 
 ## Task 1: Customize an Interactive Report as a Developer
 
-In this lab, you edit an interactive report in Page Designer and customize it as a Developer for end users.
+In this task, you will customize the Interactive Report within the Sample Reports application. You will modify the report’s link column, pagination, search bar, and download options to optimize the end-user experience.
 
-1. On the Workspace home page, click **App Builder**. Select **Sample Reporting** Application.
+1. On the Workspace home page, click App Builder. Select the Sample Reporting Application.
 
     ![Select Sample Reporting](images/sample-reporting.png " ")
 
@@ -46,7 +54,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
     ![Link to Single Row View](images/change-srw.png " ")
 
-    **b.**  In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
+    **b.** In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
 
     ![Primary Report](images/view-srw1.png " ")
 
@@ -67,6 +75,7 @@ In this lab, you edit an interactive report in Page Designer and customize it as
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
     - Rows Per Page Selector: Toggle the button to **ON**
+
     - Maximum Rows Per Page: **10**
 
     ![Rows Per Page Selector](images/enable-rpp.png " ")
