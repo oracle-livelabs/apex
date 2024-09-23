@@ -105,8 +105,8 @@ In this lab, you create a simple application with one click called **Online Book
       user_id num /fk OBS_Users /cascade
       order_no
       order_datetime timestamp
-      payment_id
-      razorpay_id
+      payment_id vc
+      razorpay_id vc
 
     OBS_Order_Items
       Order_item_id num /pk

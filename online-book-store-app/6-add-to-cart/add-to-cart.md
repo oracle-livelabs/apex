@@ -428,9 +428,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Page Items](images/shop-cart-btn.png " ")
 
-5. In the Property Editor, enter/select the following:
+5. Select P18\_QUANTITY and update the following:
 
-    - Appearance > Template: **Required - Floating**
+    - Appearance > Template: **Required**
 
     - Under List of Values:
 
@@ -637,6 +637,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 21. Click **Save**.
 
 ## Task 6: Add Shopping Cart to Navigation Bar list
+
 In this task, you create a navigation bar entry that displays a shopping cart icon, links to page 17, and shows a badge with the number of items in the shopping cart.
 
 1. Navigate to **Shared Components**.
@@ -659,7 +660,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     - Under Entry:
 
-        - Sequence: **4**
+        - Sequence: **10**
 
         - Image/Class: **&SHOPPING\_CART\_ICON.**
 
@@ -682,6 +683,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
   ![close dialog](images/nav-create-list-entry1.png " ")
 
 ## Task 7: Create a Dynamic Action to Update Shopping Cart Header
+
  In this task, you create a dynamic action that updates the shopping cart icon and badge based on the number of items in the cart. When the dialog is closed, if there are items in the cart, the cart icon will display the number of items. If the cart is empty, the icon will show as empty and the badge will be cleared.
 
 1. Click **Application ID**.

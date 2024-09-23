@@ -571,25 +571,27 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
         </copy>
          ```
 
-13. Under **Order Details**, expand **Columns**. 
+13. Under **Order Details**, expand **Columns**.
 
-14. Select **ORDER\_ID**, **USER\ID** and **payment\_ID**, Under Identification > Type: **Hidden**.
+14. Select **ORDER\_ID**, **USER\_ID** and **payment\_ID**, Under Identification > Type: **Hidden**.
 
-15. Select **TOTAL**, Under Heading > Heading: **Total Amount**
+15. Select **payment\_ID**, Under Settings > Value Protected: **Toggle OFF**.
 
-16. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
+16. Select **TOTAL**, Under Heading > Heading: **Total Amount**
 
-17. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
+17. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
 
-18. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
+18. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
+
+19. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Template: **Value Attribute Pairs - Column**
 
     - Under Pagination > Type: **No Pagination (Show All Rows)**.
 
-19. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+20. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
 
-20. In the Property Editor, enter/select the following:
+21. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -620,7 +622,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
         </copy>
          ```
 
-21. Navigate to **Attributes**, enter/select the following:
+22. Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Layout: **Float**
 
@@ -656,7 +658,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Position: **First**
 
-22. Click **Save and Run**.
+23. Click **Save and Run**.
 
 ## Task 5: Add My Books to Navigation Bar List
 
@@ -682,7 +684,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     - Under Entry:
 
-        - Sequence: **3**
+        - Sequence: **8**
 
         - Image/Class: **fa-book**
 

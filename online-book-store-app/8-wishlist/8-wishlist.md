@@ -386,7 +386,7 @@ In this lab, you will:
 
     - Under Entry:
 
-        - Sequence: **2**
+        - Sequence: **6**
 
         - Image/Class: **fa-heart**
 
@@ -396,11 +396,12 @@ In this lab, you will:
 
       Click **Create List Entry**.
 
-  ![close dialog](images/my-wishlist-nav.png " ")
+    ![close dialog](images/my-wishlist-nav.png " ")
 
 6. Click Save and Run.
 
 ## Summary
+
 In this lab, you successfully created a wishlist page. You designed a dynamic region to display books in the wishlist, added buttons for managing the wishlist, and implemented backend processes to handle wishlist modifications. Furthermore, you updated the navigation bar to include a link to the wishlist, ensuring easy access for users. This comprehensive exercise demonstrates how to integrate advanced functionalities into an Oracle APEX application, enhancing its usability and interactivity.
 
 You are now ready to move on to the next lab!

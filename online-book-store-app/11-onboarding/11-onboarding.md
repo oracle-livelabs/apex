@@ -897,30 +897,30 @@ Create the user signUp Page
 
     - Under Identification > Type: **Text Field**
 
-7. Select **P10000\_EMAIL** and in the Property editor update the following:
+7. Select **P10000\_EMAIL** and under Identification update Type: **Display Only**
 
-    - Under Identification > Type: **Display Only**
+8. Select **P10000\_PASSWORD** and under Identification update Type: **Password**
 
-8. Select **P10000\_FULL\_NAME** and in the Property editor, enter/select the following:
+9. Select **P10000\_FULL\_NAME** and in the Property editor, enter/select the following:
 
     - Under Validation > Value Required: **Toggle On**
 
-9. Select **P10000\_PROFILE\_PIC** and in the Property editor, enter/select the following:
+10. Select **P10000\_PROFILE\_PIC** and in the Property editor, enter/select the following:
 
     - Under Identification > Type: **Image Upload**
 
     - Under Storage > MIME Type Column
 : **MIME_TYPE**
 
-10. Select **P10000\_IS\_ADMIN** and in the Property editor update the following:
+11. Select **P10000\_IS\_ADMIN** and in the Property editor update the following:
 
     - Under Identification > Type: **Hidden**
 
-11. Select **CREATE** button and under Identification update the label: **SignUp**
+12. Select **CREATE** button and under Identification update the label: **SignUp**
 
-12. Navigate to **Processing** tab, Select **Process form SignUp** under **processes** under **Processing**.
+13. Navigate to **Processing** tab, Select **Process form SignUp** under **processes** under **Processing**.
 
-13. In the property editor, enter/select the following:
+14. In the property editor, enter/select the following:
 
     - Under Settings:
 
@@ -928,9 +928,9 @@ Create the user signUp Page
 
         - Lock Row: Select **No**
 
-14. Right-click **Processing** and click **Create Process**.
+15. Right-click **Processing** and click **Create Process**.
 
-15. In the property editor, enter/select the following:
+16. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -946,9 +946,9 @@ Create the user signUp Page
         </copy>
          ```
 
-16. Right-click **Processing** and select **Create Process**.
+17. Right-click **Processing** and select **Create Process**.
 
-17. In the property editor, enter/select the following:
+18. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -964,7 +964,7 @@ Create the user signUp Page
 
     - Server-side Condition > When Button Pressed: **CREATE**
 
-18. Under **Set Username Cookie** process, expand **Parameters** and update the following:
+19. Under **Set Username Cookie** process, expand **Parameters** and update the following:
 
     - Delete **p\_cookie\_name**
 
@@ -982,9 +982,9 @@ Create the user signUp Page
 
             - Type: **API Default**
 
-19. Right-click **Processing** and select **Create Process**.
+20. Right-click **Processing** and select **Create Process**.
 
-20. In the property editor, enter/select the following:
+21. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -998,7 +998,7 @@ Create the user signUp Page
 
         - Procedure or Function: **LOGIN**
 
-21. Under **Login** process, expand **Parameters** and update the following:
+22. Under **Login** process, expand **Parameters** and update the following:
 
     - Select **p\_username**:
 
@@ -1008,9 +1008,9 @@ Create the user signUp Page
 
             - Item: **P10000_EMAIL**
 
-22. Right-click **Processing** and select **Create Process**.
+23. Right-click **Processing** and select **Create Process**.
 
-23. In the property editor, enter/select the following:
+24. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -1022,7 +1022,7 @@ Create the user signUp Page
 
         - When Button pressed: **CREATE**
 
-24. Click **Save**.
+25. Click **Save**.
 
 ## Task 5: Login with Google
 

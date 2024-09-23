@@ -152,7 +152,7 @@ In this task, you will add a navigation bar entry for the administration page. A
 
     - Under Entry:
 
-        - Sequence: **1**
+        - Sequence: **2**
 
         - Image/Class: **fa-user-wrench**
 
@@ -325,6 +325,8 @@ In this task, you'll create a page to manage book information. Start by navigati
 
         - Value Placeholder: **Search here**
 
+    - Under Layout > Position: **Left Column**
+
     ![close dialog](images/search-page-item.png " ")
 
 11. Right-click **Body** and click **Create Region**.
@@ -360,8 +362,14 @@ In this task, you'll create a page to manage book information. Start by navigati
             (substr("AUTHOR", 1, 50)||( case when length("AUTHOR") > 50 then '...' else '' end )) LIST_AUTHOR,
             (substr("CATEGORY", 1, 50)||( case when length("CATEGORY") > 50 then '...' else '' end )) LIST_CATEGORY,
             null LIST_BADGE
-        from "OBS_BOOKS" x
-        order by "TITLE"
+            from "OBS_BOOKS" x
+            where (:P40_SEARCH is null
+                or upper(x."TITLE") like '%'||upper(:P40_SEARCH)||'%'
+                or upper(x."DESCRIPTION") like '%'||upper(:P40_SEARCH)||'%'
+                or upper(x."AUTHOR") like '%'||upper(:P40_SEARCH)||'%'
+                or upper(x."CATEGORY") like '%'||upper(:P40_SEARCH)||'%'
+            )
+            order by "TITLE"
         </copy>
          ```
 

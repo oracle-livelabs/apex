@@ -201,6 +201,8 @@ In this task, you set up entries for authenticated and public users, create a lo
 
         - Sequence: **20**
 
+        - Image/Class: Remove **fa-user**
+
         - List Entry Label: **&USERNAME.**
 
     - Conditions > Condition Type: **User is Authenticated(not public)**
