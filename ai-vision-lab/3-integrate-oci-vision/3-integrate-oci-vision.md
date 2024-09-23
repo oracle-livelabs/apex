@@ -4,7 +4,7 @@
 
 OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items needing attention, such as X-ray anomalies. Developers can also identify and localize objects in images to automate counting common items, such as packages and vehicles.
 
-Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
+Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
 
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyze and index the images and images with text uploaded by the user.
 
@@ -108,10 +108,10 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-   |   | Type | Name | Direction | Default Value | Static |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | Request or Response Body| RESPONSE | Out |
-   | 2 | HTTP Header| Content-Type | In | application/json | ON
+   |     | Type                     | Name         | Direction | Default Value    | Static |
+   | --- | ------------------------ | ------------ | --------- | ---------------- | ------ |
+   | 1   | Request or Response Body | RESPONSE     | Out       |
+   | 2   | HTTP Header              | Content-Type | In        | application/json | ON     |
    {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/response.png " ")

@@ -16,5 +16,5 @@ Welcome to the Low Code Development with Oracle Autonomous Database hands-on lab
 
 ## Access the Labs Using Our Web Interface
 **Click the image to use our easy to navigate HTML format:**
-[![Low Code Development Workshop](images/low-code-workshop.png " ")](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=634)
+[![Low Code Development Workshop](images/low-code-workshop.png " ")](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=634)
 
