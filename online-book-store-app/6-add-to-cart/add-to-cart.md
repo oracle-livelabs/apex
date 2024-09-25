@@ -404,6 +404,7 @@ To create Application computations:
   ![App builder home page](images/create-comp2.png " ")
 
 ## Task 5: Set Up Book Details Page
+
 In this task, you enhance the Book Details page by enabling the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface reflects the current state (whether a book is in the cart or not). This involves creating hidden page items, setting up computations and SQL queries, configuring buttons with server-side conditions, and defining processes to interact with the backend API for managing cart operations.
 
 1. Click **Application ID**.

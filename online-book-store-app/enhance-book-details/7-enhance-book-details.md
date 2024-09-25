@@ -1,11 +1,13 @@
 # Enhance Book Details Page
 
 ## Introduction
+
 In this lab, you will create a package with procedures and functions that collectively manage the process of adding, removing, and processing orders and wishlist items within the database application. Additionally, you will learn to create application items, processes, and computations. Moreover, you will create processes to invoke these procedures and functions.
 
 Estimated Time: 15 minutes
 
 ### Objectives
+
 In this lab, you will:
 
 - Create a Package to manage process of adding, removing, and processing orders and wishlist items.

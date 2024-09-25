@@ -36,7 +36,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/sc-icon.png " ")
 
-5. Under **User Interface**, Select **User Interface Attributes**.
+5. Under **User Interface**, select **User Interface Attributes**.
 
     ![Create Application wizard](./images/user-interface.png " ")
 
@@ -51,15 +51,17 @@ In this lab, you create a simple application with one click called **Online Book
 
     - **Select an icon from the library**: Select the icon color and then the icon.
 
-    In this lab, I have selected an icon from the library with color red.
+    In this lab, I uploaded an icon from my device. After uploading, it can be adjusted or cropped.
 
-    After making all changes, Click **Save Icon**.
+    After making all changes, click **Save Icon**.
 
+    ![Create Application wizard](./images/upload-icon.png " ")
     ![Create Application wizard](./images/edit-icon.png " ")
 
-8. To view application, Click **Run** and Enter your credentials to login.
+8. To view the application, click **Run** and enter your workspace credentials to log in.
 
      ![Create Application wizard](./images/run-app.png " ")
+     ![Create Application wizard](./images/login-app.png " ")
 
 ## Task 2: Load Quick SQL
 
@@ -67,7 +69,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/quick-sql.png " ")
 
-2. Copy and paste the given code in the Quick SQL column and Click **Review and Run**.
+2. Copy and paste the given code in the Quick SQL column and click **Review and Run**.
 
     ```
     <copy>
@@ -132,29 +134,21 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/review-run.png " ")
 
-3. Enter Script Name - **OBS Tables** and Click **Run**.
+3. Enter Script Name - **OBS Tables** and click **Run**.
 
     ![Create Application wizard](./images/script-name.png " ")
 
-4. Due to some bug, on line 37, copy and replace below code into the script under OBS table:
-    ```
-   <copy>
-   available_yn     varchar2(4000 char)  default 'Y' not null,
-   </copy>
-    ```
-   ![Create Application wizard](./images/edit-code.png " ")
-
-5. Review the summary and Click **Run Now**.
+4. Review the summary and click **Run Now**.
 
    ![Create Application wizard](./images/run-now.png " ")
 
-6. We can see that 11 statements were run successfully.
+5. We can see that 11 statements were run successfully.
 
    ![Create Application wizard](./images/results.png " ")
 
 ## Summary
 
-You now know how to create an application along with editing an icon of the application. Also, you now know how to load a Quick SQL using shorthand syntax.You may now **proceed to the next lab**.
+You now know how to create an application along with editing an icon of the application. Also, you now know how to load a Quick SQL using shorthand syntax. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

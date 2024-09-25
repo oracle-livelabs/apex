@@ -59,39 +59,75 @@ In this lab, you will:
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below code into the code editor:
+        - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
 
-            ```
-            <copy>
-            SELECT
-            oi.book_id,
-            bi.author,
-            bi.book_image,
-            bi.title,
-            bi.description,
-            bi.discount,
-            Round(bi.price,2) as price,
-            ROUND(bi.price * ((100 - bi.discount) / 100), 2) as new_price
-                FROM obs_wishlist oi, obs_books bi
-                WHERE oi.user_id = :USER_ID AND oi.book_id(+) = bi.book_id;
-        </copy>
-        ```
+    ![Page Designer](images/compute-sql.png =40%x*)
 
-        - **Order By Item**: Enter/select the following:
+6. In the Code Editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
 
-            | Clause     |  Key   | Display |
-            | ---------- |  ------ | ------ |
-            | "TITLE"asc | TITLE |  Title |
-            | "PRICE"asc | PRICE | Price |
+    Enter the following prompt in the chat box and click **Send**:
 
-            Click **OK**.
+    ```
+    <copy>
+    Help me create a query that returns some column from obs_wishlist and obs_books tables.
 
+    book_id,
+    author,
+    book_image.
+    title ,
+    description,
+    discount,
+    price
 
-    ![close dialog](images/wishlist-my-books.png " ")
+    Calculate new_price after discount as well and round price and new_price by 2 decimal digits and filtering id of the user
+    </copy>
+    ```
 
-    ![close dialog](images/wishlist-order-by-item.png " ")
+    ![Page Designer](images/enter-prompt.png ' ')
 
-6. In the Property Editor, navigate to **Attributes** and enter/ select the following:
+7. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**.
+
+    ![Page Designer](images/insert-query.png ' ')
+
+8. The SQL query is inserted into the Code Editor. Make sure *your user\_id* is **:USER\_ID**. Click **Validate**. The SQL query should look like the following:
+
+    ```
+    <copy>
+    SELECT 
+        ow.book_id,
+        ob.author,
+        ob.book_image,
+        ob.title,
+        ob.description,
+        ob.discount,
+        ROUND(ob.price, 2) AS price,
+        ROUND(ob.price * ((100 - ob.discount) / 100), 2) AS new_price
+    FROM 
+        obs_wishlist ow
+    JOIN 
+        obs_books ob ON ow.book_id = ob.book_id
+    WHERE 
+        ow.user_id = :USER_ID;
+
+    </copy>
+    ```
+
+    ![Page Designer](images/edit-validate.png ' ')
+
+9. If the validation is successful, click **OK**.
+
+    ![Page Designer](images/success-ok.png ' ')
+
+10. Under Source > **Order By Item**: Enter/select the following:
+
+    | Clause     |  Key   | Display |
+    | ---------- |  ------ | ------ |
+    | "TITLE"asc | TITLE |  Title |
+    | "PRICE"asc | PRICE | Price |
+
+    Click **OK**.
+
+11. In the Property Editor, navigate to **Attributes** and enter/ select the following:
 
     - Appearance > Grid Columns: **5 Columns**
 
@@ -131,11 +167,11 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-att1.png " ")
 
-7. Under **My Books** region, right-click **Actions** and click **Create Action**.
+12. Under **My Books** region, right-click **Actions** and click **Create Action**.
 
     ![close dialog](images/wishlist-action.png " ")
 
-8. In the Property Editor, enter/select the following:
+13. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Full Card**
 
@@ -151,11 +187,11 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-action-details.png " ")
 
-9. Right-click **My Books** region and click **Create Page Item**.
+14. Right-click **My Books** region and click **Create Page Item**.
 
     ![close dialog](images/wishtlist-page-item.png " ")
 
-10. In the Property editor, enter/select the following:
+15. In the Property editor, enter/select the following:
 
     - Under Identification
 
@@ -167,11 +203,11 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-book-id.png " ")
 
-11. Right-click **My Books** region and click **Create Dynamic Action**.
+16. Right-click **My Books** region and click **Create Dynamic Action**.
 
     ![close dialog](images/wishlist-dynamic-action.png " ")
 
-12. In the Property editor, enter/select the following:
+17. In the Property editor, enter/select the following:
 
     - Identification > Name: **Refresh**
 
@@ -179,7 +215,7 @@ In this lab, you will:
 
     ![close dialog](images/refresh.png " ")
 
-13. Select **TRUE** action and enter/select the following:
+18. Select **TRUE** action and enter/select the following:
 
     - Identification > Action: **Refresh**
 
@@ -191,11 +227,11 @@ In this lab, you will:
 
     ![close dialog](images/refresh-action.png " ")
 
-14. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+19. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
     ![close dialog](images/wishlist-create-process.png " ")
 
-15. In the Property editor, enter/select the following:
+20. In the Property editor, enter/select the following:
 
      - Under Identification:
 
@@ -217,7 +253,7 @@ In this lab, you will:
 
       ![close dialog](images/remove-from-wishlist.png " ")
 
-16. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
+21. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
 
      | Parameter     |  Type   | Item |
      | ---------- |  ------ | ------ |
@@ -226,7 +262,7 @@ In this lab, you will:
 
     ![close dialog](images/user-id-param.png " ")
 
-17. Click **Save**.
+22. Click **Save**.
 
 ## Task 2: Add Wishlist Management Buttons on Page 18
 

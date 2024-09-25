@@ -142,6 +142,26 @@ In this task, you develop a new page in the application to display the shopping 
 
          - Template: **Button**
 
+         - Label: **-**
+
+    - Under Link:
+
+        - Type: **Redirect to URL**
+
+        - Targe: **#action$decrease-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+
+        Click **OK**.
+
+    ![close dialog](images/primary-action.png " ")
+
+10. In the Property Editor, enter the following:
+
+    - Under Identification:
+
+         - Position: **Primary Actions**
+
+         - Template: **Button**
+
          - Label: **Remove**
 
     - Under Link:
@@ -152,22 +172,49 @@ In this task, you develop a new page in the application to display the shopping 
 
         Click **OK**.
 
+    - Under Appearance:
+
+        - Display Type: **Icon**
+
+        - Icon: **fa-trash**
+
     ![close dialog](images/primary-action.png " ")
 
-10. Right-click **Shopping Cart** region and select **Create Page Item**.
+11. In the Property Editor, enter the following:
+
+    - Under Identification:
+
+         - Position: **Primary Actions**
+
+         - Template: **Button**
+
+         - Label: **+**
+
+    - Under Link:
+
+        - Type: **Redirect to URL**
+
+        - Targe: **#action$increase-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+
+        Click **OK**.
+
+    ![close dialog](images/primary-action.png " ")
+
+12. Right-click **Shopping Cart** region and select **Create Page Item**.
 
     ![close dialog](images/create-page-item9.png " ")
 
-11. Create the following page item:
+13. Create the following page items:
 
     | Name            |  Type   | Value Protected |
     | --------------- |  ------ | --------------- |
     | P17\_BOOK\_ID | Hidden | Toggle Off |
+    | P17\_QUANTITY | Hidden | Toggle Off |
 
 
     ![close dialog](images/book-id.png " ")
 
-12. Select **Page 17: Shopping Cart** and enter the following:
+14. Select **Page 17: Shopping Cart** and enter the following:
 
     -  Under **Execute when Page Loads**: Copy and Paste the below code:
 
@@ -176,29 +223,112 @@ In this task, you develop a new page in the application to display the shopping 
     apex.actions.add([{
     name: "remove-cart",
     action: (event, element, args) => {
-        apex.page.submit({
-            request: "REMOVE_FROM_CART",
-            set: {
-                "P17_BOOK_ID": args.id
-            },
-            showWait: true,
-        });
-      }
+        apex.page.submit( {
+        request: "REMOVE_FROM_CART",
+        set: {
+        "P17_BOOK_ID": args.id
+        },
+        showWait: true,
+    } );
+        }
     }]);
+
+    apex.actions.add([
+    {
+        name: "increase-cart",
+        action: (event, element, args) => {
+        apex.page.submit({
+            request: "INCREASE_CART",
+            set: {
+            "P17_BOOK_ID": args.id,
+            "P17_QUANTITY": args.quantity
+            },
+            showWait: true
+        });
+        }
+    }
+    ]);
+
+    apex.actions.add([
+    {
+        name: "decrease-cart",
+        action: (event, element, args) => {
+        apex.page.submit({
+            request: "DECREASE_CART",
+            set: {
+            "P17_BOOK_ID": args.id,
+            "P17_QUANTITY": args.quantity
+            },
+            showWait: true
+        });
+        }
+    }
+    ]);
     </copy>
     ```
 
     ![close dialog](images/page-load.png " ")
 
-13. Right-click **Body** and Select **Create Region**.
+    Update OBS\_MANAGE\_ORDERS Package
+
+15. Click **SQL Workshop** and navigate to **Object Browser**.
+
+16. In the object tree, expand **Packages** and select **OBS\_MANAGE\_ORDERS** package.
+
+17. Under **Specification**, add the below two procedures after  **remove\_book** procedure with the below code:
+
+     ```
+     <copy>
+    PROCEDURE increase_book_in_cart (
+    p_book IN NUMBER,
+    p_quantity in number);
+
+    PROCEDURE decrease_book_in_cart (
+    p_book IN NUMBER,
+    p_quantity in number);
+     </copy>
+      ```
+
+   Click **Save and Compile**.
+
+18. Under **Body**, Copy and paste below code after **remove\_book** procedure:
+
+    ```
+    <copy>
+    PROCEDURE increase_book_in_cart ( p_book IN NUMBER,p_quantity in number)
+        IS
+    BEGIN
+        remove_book(p_book);
+        add_book(p_book,p_quantity+1);
+    END increase_book_in_cart;
+
+    PROCEDURE decrease_book_in_cart ( p_book IN NUMBER,p_quantity in number)
+        IS
+    BEGIN
+        IF  p_quantity = 1
+        Then
+        remove_book(p_book);
+        Else
+            remove_book(p_book);
+        add_book(p_book,p_quantity-1);
+        end if;
+    END decrease_book_in_cart;
+    </copy>
+    ```
+
+   Click **Save and Compile**.
+
+    Again, Navigate back to Page 17:
+
+19. Right-click **Body** and Select **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 
-14. For Name: **Order Information**
+20. For Name: **Order Information**
 
     ![close dialog](images/order-info.png " ")
 
-15. Right-click **Order Information** and select **Create Page Item**.
+21. Right-click **Order Information** and select **Create Page Item**.
 
     ![close dialog](images/order-page-item.png " ")
 
@@ -364,9 +494,73 @@ In this task, you create buttons for removing items from the cart and proceeding
 
 12. Right-click **Processing** and select **Create Process**.
 
-    ![close dialog](images/create-process9.png " ")  
-
 13. In the Property Editor, enter the following:
+
+     - Under Identification: 
+
+         - Name: **Increase Cart by 1**
+
+         - Type: **Invoke API**  
+
+     - Under Settings: 
+
+         - Package: **OBS\_MANAGE\_ORDERS**
+
+         - Procedure/Function: **INCREASE\_BOOK\_IN\_CART**
+
+     - Under Server-side Condition:
+
+         - Type: **Request=Value**
+
+         - Value: **INCREASE\_CART**
+
+    ![close dialog](images/remove-from-cart-process.png " ")
+
+14. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
+
+     - p\_book > Item: **P17\_BOOK\_ID**
+
+     - p\_quantity > Item: **P17\_QUANTITY**
+
+    ![close dialog](images/remove-p-book.png " ")
+
+15. Right-click **Processing** and select **Create Process**.
+
+16. In the Property Editor, enter the following:
+
+     - Under Identification: 
+
+         - Name: **Decrease Cart by 1**
+
+         - Type: **Invoke API**  
+
+     - Under Settings: 
+
+         - Package: **OBS\_MANAGE\_ORDERS**
+
+         - Procedure/Function: **DECREASE\_BOOK\_IN\_CART**
+
+     - Under Server-side Condition:
+
+         - Type: **Request=Value**
+
+         - Value: **DECREASE\_CART**
+
+    ![close dialog](images/remove-from-cart-process.png " ")
+
+17. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
+
+     - p\_book > Item: **P17\_BOOK\_ID**
+
+     - p\_quantity > Item: **P17\_QUANTITY**
+
+    ![close dialog](images/remove-p-book.png " ")
+
+18. Right-click **Processing** and select **Create Process**.
+
+    ![close dialog](images/create-process9.png " ")
+
+19. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -386,7 +580,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/checkout-param.png " ")
 
-14. Under **Checkout** process, expand **Parameters** and update the following:
+20. Under **Checkout** process, expand **Parameters** and update the following:
 
       | Parameter       |  Type   | Item |
       | --------------- |  ------ | --------------- |
@@ -395,7 +589,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/user-id.png " ")
 
-15. Click **Save**.
+21. Click **Save**.
 
 ## Task 3: Integrate Backend Processes
 
