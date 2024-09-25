@@ -177,5 +177,5 @@ In the next workshop, you will learn how to create page items and buttons.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Senior Product Manager
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
