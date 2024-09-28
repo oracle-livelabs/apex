@@ -64,33 +64,44 @@ Unit price is not a standard search criterion, so you want to put this facet at 
     - For SQL Query - enter the following SQL code:
         ```
         <copy>
-        SELECT "PRODUCT_ID",
-            "PRODUCT_NAME",
-            "UNIT_PRICE",
-            "PRODUCT_DETAILS",
-            "PRODUCT_IMAGE",
-            "IMAGE_MIME_TYPE",
-            "IMAGE_FILENAME",
-            "IMAGE_CHARSET",
-            "IMAGE_LAST_UPDATED",
-            "COLOR_ID",
-            (
-                    SELECT l1."COLOR"
-                    FROM   "COLOR_LOOKUP" l1
-                    WHERE  l1."COLOR_ID" = m." COLOR_ID") "COLOR_ID_L$1",
-            "DEPARTMENT_ID",
-            (
-                    SELECT l2."DEPARTMENT"
-                    FROM   "DEPARTMENT_LOOKUP" l2
-                    WHERE  l2."DEPARTMENT_ID" = m." DEPARTMENT_ID") "DEPARTMENT_ID_L$2",
-            "CLOTHING_ID",
-            (
-                    SELECT l3."CLOTHING"
-                    FROM   "CLOTHING_LOOKUP" l3
-                    WHERE  l3."CLOTHING_ID" = m." CLOTHING_ID") "CLOTHING_ID_L$3",
-            b.brand
-        FROM "PRODUCTS" m,
-            json_table (m.product_details, '$' columns ( brand varchar2(4000) path '$.brand') ) b
+        SELECT 
+    "PRODUCT_ID",
+    "PRODUCT_NAME",
+    "UNIT_PRICE",
+    "PRODUCT_DETAILS",
+    "PRODUCT_IMAGE",
+    "IMAGE_MIME_TYPE",
+    "IMAGE_FILENAME",
+    "IMAGE_CHARSET",
+    "IMAGE_LAST_UPDATED",
+    "COLOR_ID",
+    (
+        SELECT l1."COLOR"
+        FROM "COLOR_LOOKUP" l1
+        WHERE l1."COLOR_ID" = m."COLOR_ID"
+    ) "COLOR_ID_L$1",
+    "DEPARTMENT_ID",
+    (
+        SELECT l2."DEPARTMENT"
+        FROM "DEPARTMENT_LOOKUP" l2
+        WHERE l2."DEPARTMENT_ID" = m."DEPARTMENT_ID"
+    ) "DEPARTMENT_ID_L$2",
+    "CLOTHING_ID",
+    (
+        SELECT l3."CLOTHING"
+        FROM "CLOTHING_LOOKUP" l3
+        WHERE l3."CLOTHING_ID" = m."CLOTHING_ID"
+    ) "CLOTHING_ID_L$3",
+    b.brand
+FROM 
+    "PRODUCTS" m,
+    json_table(
+        m.product_details, 
+        '$' columns ( 
+            brand varchar2(4000) path '$.brand'
+        )
+    ) b;
+
         </copy>
         ```
 
