@@ -68,7 +68,7 @@ In this task, you create an application process to retrieve the URL and MIME typ
       OWA_UTIL.HTTP_HEADER_CLOSE;
       WPG_DOCLOAD.DOWNLOAD_FILE(L_BLOB);
      END;
-     <copy>
+     </copy>
      ```
 
     Click **Next**.
@@ -166,7 +166,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
     ![Invoice Tracker attributes](images/invoice-tracker-attributes.png " ")
 
-7. In the property editor, select the **Region** tab. Under **Source**, Select **Order By Item** and Enter/select the following:
+7. In the property editor, select the **Region** tab. Under **Source**, select **Order By Item** and enter/select the following:
 
       | Clause | Key | Display |
       |--------|-----|---------|
@@ -191,7 +191,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Select Blank Page](images/blank-page1.png " ")
 
-3. On the Create Page dialog, Enter/select the following:
+3. On the Create Page dialog, enter/select the following:
 
     - Page Definition > Page Number: **3**
 
@@ -205,7 +205,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Invoice Analysis](images/create-blank-page11.png " ")
 
-4. In the left Pane, Right-click Body, and select **Create Page Item**.
+4. In the left Pane, right-click **Body**, and select **Create Page Item**.
 
     ![Create Page Item](images/create-page-item3.png " ")
 
@@ -221,7 +221,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
      ![Page Item URL](images/page-item-url.png " ")
 
-6. Under **Pre-Rendering**, Right-Click **Before Header** and select **Create Process**.
+6. Under **Pre-Rendering**, right-click **Before Header** and select **Create Process**.
 
     ![Create Process](images/create-before-header.png " ")
 
@@ -234,18 +234,16 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     ```
     <copy>
     :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
-
-    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3, P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
     </copy>
       ```
 
     ![Preapare URL](images/prepare-url1.png " ")
 
-8. In the left Pane, Right-click **Body** and Select **Create Region**.
+8. In the left pane, right-click **Body** and select **Create Region**.
 
     ![Create Region](images/create-region4.png " ")
 
-9. In the Property Editor, Enter/select the following details:
+9. In the property editor, enter/select the following details:
 
     - Indentification > Name: **Uploaded File**
 
@@ -254,14 +252,14 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     ```
     <copy>
     <p align="center">
-      <iframe src="&P4_URL." width="100%"  height="500"></iframe>
+      <iframe src="&P3_URL." width="100%"  height="500"></iframe>
     </p>
     </copy>
     ```
 
    ![Upload File](images/uploaded-file.png " ")
 
-10. Right-Click **Uploaded File** region, select **Create Region Below**.
+10. Right-click **Uploaded File** region, select **Create Region Below**.
 
     ![Create Region Below](images/create-region-below.png " ")
 
@@ -323,11 +321,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Page 2: Invoice Tracker](images/navigate-to-2.png " ")
 
-15. Under **Invoice Tracker** region, Right-click **Actions** and select **Create Action**.
+15. Under **Invoice Tracker** region, right-click **Actions** and select **Create Action**.
 
    ![Create Action](images/creation-action2.png " ")
 
-16. In the Property Editor, Enter/select the following details:
+16. In the property editor, enter/select the following details:
 
     - Identification > Type: **Full Card**
 
@@ -343,15 +341,15 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
 17. Click **Save**.
 
-18. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 1: Home**.
+18. In the Page Designer toolbar, select **Page Selector** and navigate to **Page 1: Home**.
 
    ![Page 1: Home](images/navigate-to-home.png " ")
 
-19. Under **Processing**, Right-click **After Processing** and select **Create Branch**.
+19. Under **Processing**, right-click **After Processing** and select **Create Branch**.
 
    ![Create Branch](images/create-branch.png " ")
 
-20. In the Property Editor, Enter/select the following details:
+20. In the property editor, enter/select the following details:
 
     - Identification > Name: **Redirect to Page 2**
 
