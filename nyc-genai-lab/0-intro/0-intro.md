@@ -27,7 +27,7 @@ Estimated Time: 60 minutes
 * Build a conversational chatbot using Generative AI to ask questions about a school.
 * Generate Email using Generative AI to apply to a school.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.2*
+*Note: This workshop assumes you are using Oracle APEX 24.1.2 or later.*
 
 ## Prerequisites
 
