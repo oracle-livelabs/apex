@@ -87,7 +87,7 @@ Estimated Time: 20 minutes
 
 9. Under **Parameters**, add the below Parameters by clicking **Add Row** and then, click **Apply Changes** to save the Task Definition.
 
-    | Parameter Name     |   Label    |
+    | Static ID     |   Label    |
     |--------------------|------------|
     | APPOINTMENT_DATE   | Appointment Date |
     | PATIENT_DESC       | Consultation Form|
@@ -174,7 +174,7 @@ Estimated Time: 20 minutes
 
     - Name: **Feedback Request**
 
-    - Type: **Actions Task**
+    - Type: **Action Task**
 
     - Subject: **Feedback for Consultation on &SCHEDULE.**
 
@@ -205,7 +205,7 @@ Estimated Time: 20 minutes
     ```
 
   ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
-  
+
   ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query1.png " ")
 
 

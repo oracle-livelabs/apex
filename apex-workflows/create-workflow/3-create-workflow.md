@@ -72,7 +72,7 @@ To create a Workflow:
 
   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
-6. The changes are saved successfully.
+6. Click **Save**. The changes are saved successfully.
 
   ![Check Errors in the Page](./images/changes-saved.png " ")
 
@@ -195,7 +195,7 @@ When an appointment is confirmed, the Booking ID for the appointment is carried 
 
 Data such as Availability, Booking ID and Fee need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
-1. In the Rendering tree, Right-click **1.0 [DEV]** (workflow version).
+1. In the Rendering tree, right-click **1.0 [DEV]** (workflow version).
 
 2. Select **Create Variable**.
 
