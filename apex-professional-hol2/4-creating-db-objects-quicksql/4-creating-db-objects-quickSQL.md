@@ -125,7 +125,7 @@ In this task, you learn to use the data generator utility to create blueprints a
 
 In this step, you will learn how to create a table and load data using the Data Workshop utility.
 
-1. On the Workspace home page, click the down arrow next to SQL Workshop and select Utilities > Data Workshop.
+1. On the Workspace home page, click the down arrow next to SQL Workshop and select **Utilities > Data Workshop**.
 
     ![Select Data Workshop](images/navigate-to-data-workshop1.png " ")
 

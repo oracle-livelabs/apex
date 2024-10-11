@@ -9,54 +9,57 @@ In this Lab, you learn how to improve the Products page by adding new facets and
 Estimated Time: 20 minutes
 
 ### Objectives
+
 In this Lab, you will:
+
 - Improve both Faceted Search and Cards region
+
 - Add Dynamic Actions to the page
 
 ### Downloads
 
 - Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Navigate to the Products Page.
+## Task 1: Navigate to the Products Page
 
 In this Lab, you will be using an Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where customers can explore the products and select what they wish to buy.
 As you can see, it's hard to find the products, and it would be beneficial to see additional details related to the products.
 
-
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
 
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
-    *{Note: End users who log directly into the app will not see this toolbar.}*
+    
+    > **Note:** _End users who log directly into the app will not see this toolbar._
 
     In the Developer Toolbar, click **Page 19**.
 
     ![Navigate to page 19](./images/navigate-to-page19.png " ")
 
-    Alternatively, you can also manually navigate back to the APEX App Builder tab in your browser by selecting the appropriate browser tab or window.   
+    Alternatively, you can also manually navigate back to the APEX App Builder tab in your browser by selecting the appropriate browser tab or window.
     Once in the App Builder, click **19 - Products**.
 
     ![19 - Products](./images/alt-app-builder.png " ")
 
     You should now be in Page Designer with **Page 19: Products** loaded.
 
-
 ## Task 2: Reorder Facets
+
 Unit price is not a standard search criterion, so you want to put this facet at the bottom.
 
-1. In the Rendering tree (left pane), under Search, within Facets, click and hold **P19\_UNIT\_PRICE** and drag it down until it is under **P19\_CLOTHING\_ID**, then release the mouse.
+1. In the Rendering tree (left pane), under **Search** region, within Facets, click and hold **P19\_UNIT\_PRICE** and drag it down until it is under **P19\_CLOTHING\_ID**, then release the mouse.
 
     ![Reorder Facets](./images/reorder-facets.png " ")
-
 
 ## Task 3: Enhance the Faceted Search
 
 1. In the Rendering tree (left pane), navigate to **Search**.
 2. In the Property Editor (right pane), click **Attributes** and do the following:
-    -   For Total Row Count Label - enter **Total Products**
-    -   For Show Charts - select **No**
 
+    -  Total Row Count Label > **Total Products**
 
-  ![Change faceted search](./images/change-faceted-search-attr.png " ")    
+    -  Show Charts: **No**
+
+  ![Change faceted search](./images/change-faceted-search-attr.png " ")
 
 ## Task 4: Enhance the Cards Region
 
@@ -141,9 +144,12 @@ FROM
 
       Click **Save.**
 
-    ![Add Primary key](./images/change-attributes1.png " ")        
+    ![Add Primary key](./images/change-attributes1.png " ") 
+
+    ![Add Primary key](./images/change-attributes2.png " ")        
 
 ## Task 5: Create Actions
+
 Customers need a way to shop for products, so in this task, you will add an action to allow customers to learn more about the product.
 
 1. Navigate to **Search Results** (left pane).
@@ -175,7 +181,8 @@ In this task, you will create two dynamic actions:
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![Create Dynamic Actions](./images/create-da1.png " ")  
+     ![Create Dynamic Actions](./images/create-da1.png " ")
+
 3. In the Property Editor, enter the following:
     - Under the Identification section:
         - For Name - enter **Show Success Message**
@@ -184,7 +191,7 @@ In this task, you will create two dynamic actions:
         - For Selection Type - select **Region**
         - For Region - select **Search Results**
 
-      ![Show success Message](./images/create-da2.png " ")
+      ![Show success Message](./images/create-da02.png " ")
 
 4. Navigate to **Refresh** Action.
     - Under the Identification section:
@@ -207,7 +214,7 @@ In this task, you will create two dynamic actions:
             }
             </copy>
             ```
-            ![Navigate to Refresh action](./images/create-da3.png " ")
+            ![Navigate to Refresh action](./images/create-da03.png " ")
 
 5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.  
 
@@ -241,7 +248,7 @@ In this task, you will create two dynamic actions:
             ```
             <copy>
             // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P17_SHOPPING_CART_ITEMS);
+            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
 
             // Update Icon
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');

@@ -152,7 +152,7 @@ You create lookup tables in this lab based on the three new columns. After you c
 
     *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-4. To create **Department** lookup table, navigate back to the **Products** table. Click **More** and select **Create Lookup Table**.
+4. To create **Department** lookup table, navigate back to the **PRODUCTS** table. Click **More** and select **Create Lookup Table**.
 
     ![Create Lookup Table2](./images/create-lookup-tables1.png " ")
 
@@ -162,7 +162,7 @@ You create lookup tables in this lab based on the three new columns. After you c
 
     *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-6. To create **Clothing** lookup table, navigate back to the **Products** table. Click **More** and select **Create Lookup Table**.
+6. To create **Clothing** lookup table, navigate back to the **PRODUCTS** table. Click **More** and select **Create Lookup Table**.
 
     ![Create Lookup Table3](./images/create-lookup-tables3.png " ")
 
@@ -172,7 +172,7 @@ You create lookup tables in this lab based on the three new columns. After you c
 
     *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-8. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID, respectively, and their data type is changed to NUMBER. Also, there are new tables containing the values of the products:
+8. The columns COLOR, DEPARTMENT, and CLOTHING in the **PRODUCTS** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID, respectively, and their data type is changed to NUMBER. Also, there are new tables containing the values of the products:
     - COLOR_LOOKUP
     - DEPARTMENT_LOOKUP
     - CLOTHING_LOOKUP

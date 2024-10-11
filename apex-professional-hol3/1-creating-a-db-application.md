@@ -110,7 +110,7 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
     ![Add Chart4](./images/chart44.png " ")
 
-7. Under **Advanced**, enable **Set as Administration Page** and Click **Add Page**.
+7. Under **Advanced**, enable **Set as Administration Page** and click **Add Page**.
 
     ![Set as Administration Page](./images/set-as-admin-page.png " ")
 

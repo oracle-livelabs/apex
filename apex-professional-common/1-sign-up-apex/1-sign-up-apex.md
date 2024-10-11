@@ -80,11 +80,11 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     ![Get started for free](images/get-started.png " ")
 
-3. Under Free APEX Workspace, Click Free Sign Up.
+3. Under Free APEX Workspace, click **Free Sign Up**.
 
     ![Request a free workspace](images/request-workspace.png " ")
 
-4. On the Request a Workspace page, enter your Identification details – First Name, Last Name, Email, Workspace.
+4. On the Request a Workspace page, enter your identification details – First Name, Last Name, Email, Workspace.
 
     *Note: For workspace, enter a unique name, such as first initial and last name.*
 
@@ -98,7 +98,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     *Note: If you don’t get an email go back to Step 3 and make sure to enter your email correctly.*
 
-    Within the email body, **click Create Workspace**.
+    Within the email body, click **Create Workspace**.
 
     ![email from Oracle APEX](images/create-aoc-workspace.png " ")
 
@@ -247,7 +247,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
     ![APEX instance page](images/create-apex-service.png " ")
 
-5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX Service**.
+5. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create APEX service**.
 
     ![Create instance page](images/apex-service-settings-1.png " ")
 
@@ -298,7 +298,7 @@ The password is the same as the one entered for the ADMIN user when creating the
 
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-13. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
+13. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 

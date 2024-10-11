@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Create Customer Orders Tables
 
-1. Log in to your workspace. If you are already logged in, click on the **APEX** Logo in the upper left-hand corner of the page to return to the APEX workspace home page.
+1. Log in to your workspace. If you are already logged in, click on the **APEX** logo in the upper left-hand corner of the page to return to the APEX workspace home page.
 
 2. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, then select **Utilities > Sample Datasets**.
 

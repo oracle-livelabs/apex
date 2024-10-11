@@ -19,7 +19,7 @@ In this workshop, you will:
 - Create an application using the tables and data you have installed.
 - Create a Database application from a file.
 - Create an application from Spreadsheet.
-- Configure Progressive Web application.
+- Configure Progressive Web Application.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 

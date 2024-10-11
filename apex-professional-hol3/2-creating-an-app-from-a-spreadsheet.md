@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Load Project data
 
-1. On your APEX workspace home page, click **App Builder** and Click **Create**.
+1. On your APEX workspace home page, select **App Builder** and click **Create**.
 
     ![Create Application](images/create-app1.png " ")
 
@@ -80,7 +80,7 @@ The Data Load wizard has created a new table and populated that table with the r
 
 In this task, you learn to delete and restore the Demo Projects application using Oracle APEX's load blueprint feature.
 
-1. First, delete the **Demo Projects** application. Then, select the **Demo Projects** application on the workspace home page.
+1. Select the **Demo Projects** application on the workspace home page.
 
     ![Select Demo demo projects](images/demo-projects.png " ")
 
