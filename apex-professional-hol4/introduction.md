@@ -16,7 +16,7 @@ Once the page is created, customers will be able to view the following details o
 
 ### Recap
 
-In the preceding workshop, you learned to create an application using your installed tables and data. Also, you created a Database application from a file, created an application from a Spreadsheet and configured a Progressive Web application.
+In the preceding workshop, you learned to create an application using your installed tables and data. Also, you created a Database application from a file, created an application from a Spreadsheet and configured a Progressive Web Application.
 
 ### Objectives
 

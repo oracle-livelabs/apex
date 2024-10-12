@@ -24,7 +24,7 @@ Estimated Time: 15 minutes
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from **[here](fhttps://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol3-lab1.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol3-lab1.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
 
 1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
@@ -40,7 +40,7 @@ In this task, you will open your APEX application in the Page Designer and famil
 
     **Note**: If you are NOT on the Home page, then the Developer Toolbar will show the current page number, and clicking *Page xx* will navigate to the page xx instead of Page 1.
 
-    ![Click Page 1](images/click-page-1.png " ")
+    ![Click Page 1](images/click-page-11.png " ")
 
 2. The Page Designer is displayed on Page 1. Page Designer has three main panes: the **Left**, **Central**, and **Right** Panes.
     You can change the size of each pane by selecting the dividers and sliding them left or right. Change the size of the grid layout and gallery by sliding the divider between them up and down.
@@ -49,7 +49,7 @@ In this task, you will open your APEX application in the Page Designer and famil
 
 3. On the page designer, you can invoke help on any attribute by clicking **Help** icon on the toolbar. Select a component and then select an attribute in the property editor to display help on that attribute.
 
-    For example, in the screenshot below, select **Online Shopping Application** in the rendering tree on the left and then select **Sequence > Layout** in the property editor on the right. Click **Help** and the help text for **Sequence** is displayed.
+    For example, in the screenshot below, select **Online Shopping Application** in the rendering tree on the left and then select **Layout > Sequence** in the property editor on the right. Click **Help** and the help text for **Sequence** is displayed.
 
     ![Page Designer](images/navigate-through-page2.png " ")
 
@@ -162,9 +162,9 @@ In this task, you will add a region to display a list of Mostly Purchased Produc
 
     - Under Identification:
 
-        - Name: **Mostly Purchased Products**
+        - Name: **Top 5 Products**
 
-        - Title: **Mostly Purchased Products**
+        - Title: **Top 5 Products**
 
         - Type: **Dynamic Content**
 
@@ -177,7 +177,7 @@ In this task, you will add a region to display a list of Mostly Purchased Produc
         ```
         <copy>
         DECLARE
-            L_RESULT CLOB := '<h4>Mostly Purchased Products:</h4>';
+            L_RESULT CLOB := '<h4>Top 5 Products:</h4>';
         BEGIN
             L_RESULT := L_RESULT || '<ul>';
         FOR L_EMP IN (
@@ -233,7 +233,7 @@ You will add a Cards Region to display the key details of the customer's order, 
 
 1. In the Rendering tree (left pane), right-click on the **Order: &P16_ORDER.** region and select **Create Sub Region**.
 
-    ![Create Sub Region2](./images/create-sub-region11.png " ")
+    ![Create Sub Region2](./images/create-sub-region111.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -272,7 +272,7 @@ You will add a Cards Region to display the key details of the customer's order, 
             </copy>
             ```
 
-        - Page Items to Submit: **&P16_ORDER.**
+        - Page Items to Submit: **P16_ORDER**
 
     ![Define Sub Region2](./images/create-sub-region12.png " ")
 
