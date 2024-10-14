@@ -1,4 +1,4 @@
-# Improve the product page
+# Improve the Product Page
 
 ## Introduction
 
@@ -119,7 +119,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
         </copy>
         ```
 
-        ![Change SQL Query](./images/change-sql-query.png " ")
+    ![Change SQL Query](./images/change-sql-query.png " ")
 
     - Under Appearance:
 
@@ -150,6 +150,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
             ```
 
     - Under Media:
+
         - Source: **BLOB Column**
 
         - BLOB Column: **PRODUCT_IMAGE**
@@ -336,10 +337,6 @@ In this task, you will create two dynamic actions:
 ## Summary
 
 You now know how to enhance faceted search and cards region. You may now **proceed to the next Lab**.
-
-## What's next
-
-In the next Lab, you learn how to Create and Customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
 
 ## Acknowledgements
 
