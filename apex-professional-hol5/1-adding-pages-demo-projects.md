@@ -124,7 +124,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     - Identification > Name: **Selection Support**
 
-    - Appearance > Template Options: Click **Use Template Options**
+    - Appearance > Template Defaults: Click **Use Template Options**
 
         - Common > Header: **Hidden**
 

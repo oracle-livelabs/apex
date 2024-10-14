@@ -28,7 +28,7 @@ As you can see, it's hard to find the products, and it would be beneficial to se
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
 
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
-    
+
     > **Note:** _End users who log directly into the app will not see this toolbar._
 
     In the Developer Toolbar, click **Page 19**.
@@ -52,75 +52,92 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 ## Task 3: Enhance the Faceted Search
 
-1. In the Rendering tree (left pane), navigate to **Search**.
-2. In the Property Editor (right pane), click **Attributes** and do the following:
+1. In the Rendering tree (left pane), navigate to **Search** region.
 
-    -  Total Row Count Label > **Total Products**
+2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
 
-    -  Show Charts: **No**
+    - Under Settings:
 
-  ![Change faceted search](./images/change-faceted-search-attr.png " ")
+        - Total Row Count Label: **Total Products**
+
+        - Show Charts: **No**
+
+    ![Change faceted search](./images/change-faceted-search-attr.png " ")
 
 ## Task 4: Enhance the Cards Region
 
-1. In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
-    - For SQL Query - enter the following SQL code:
+1. In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
+
         ```
         <copy>
-        SELECT 
-    "PRODUCT_ID",
-    "PRODUCT_NAME",
-    "UNIT_PRICE",
-    "PRODUCT_DETAILS",
-    "PRODUCT_IMAGE",
-    "IMAGE_MIME_TYPE",
-    "IMAGE_FILENAME",
-    "IMAGE_CHARSET",
-    "IMAGE_LAST_UPDATED",
-    "COLOR_ID",
-    (
-        SELECT l1."COLOR"
-        FROM "COLOR_LOOKUP" l1
-        WHERE l1."COLOR_ID" = m."COLOR_ID"
-    ) "COLOR_ID_L$1",
-    "DEPARTMENT_ID",
-    (
-        SELECT l2."DEPARTMENT"
-        FROM "DEPARTMENT_LOOKUP" l2
-        WHERE l2."DEPARTMENT_ID" = m."DEPARTMENT_ID"
-    ) "DEPARTMENT_ID_L$2",
-    "CLOTHING_ID",
-    (
-        SELECT l3."CLOTHING"
-        FROM "CLOTHING_LOOKUP" l3
-        WHERE l3."CLOTHING_ID" = m."CLOTHING_ID"
-    ) "CLOTHING_ID_L$3",
-    b.brand
-FROM 
-    "PRODUCTS" m,
-    json_table(
-        m.product_details, 
-        '$' columns ( 
-            brand varchar2(4000) path '$.brand'
-        )
-    ) b;
-
+        SELECT
+            "PRODUCT_ID",
+            "PRODUCT_NAME",
+            "UNIT_PRICE",
+            "PRODUCT_DETAILS",
+            "PRODUCT_IMAGE",
+            "IMAGE_MIME_TYPE",
+            "IMAGE_FILENAME",
+            "IMAGE_CHARSET",
+            "IMAGE_LAST_UPDATED",
+            "COLOR_ID",
+            (
+                SELECT
+                    L1."COLOR"
+                FROM
+                    "COLOR_LOOKUP" L1
+                WHERE
+                    L1."COLOR_ID" = M."COLOR_ID"
+            ) "COLOR_ID_L$1",
+            "DEPARTMENT_ID",
+            (
+                SELECT
+                    L2."DEPARTMENT"
+                FROM
+                    "DEPARTMENT_LOOKUP" L2
+                WHERE
+                    L2."DEPARTMENT_ID" = M."DEPARTMENT_ID"
+            ) "DEPARTMENT_ID_L$2",
+            "CLOTHING_ID",
+            (
+                SELECT
+                    L3."CLOTHING"
+                FROM
+                    "CLOTHING_LOOKUP" L3
+                WHERE
+                    L3."CLOTHING_ID" = M."CLOTHING_ID"
+            ) "CLOTHING_ID_L$3",
+            B.BRAND
+        FROM
+            "PRODUCTS" M,
+            JSON_TABLE ( M.PRODUCT_DETAILS, '$'
+                    COLUMNS (
+                        BRAND VARCHAR2 ( 4000 ) PATH '$.brand'
+                    )
+                )
+            B;
         </copy>
         ```
 
         ![Change SQL Query](./images/change-sql-query.png " ")
 
-    - Under the Appearance section:
-        - Click **Template Options**. For Style - select **Style A**
+    - Under Appearance:
 
-      ![Edit Template options](./images/template-options.png " ")  
-        - Click **Ok**
+        - Click **Use Template Defaults**.
 
-2. Click **Attributes** and apply the following changes:
+        - Common > Style: **Style A**
 
-    - Under Subtitle section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+        - Click **OK**
+
+    ![Edit Template options](./images/template-options.png " ")
+
+2. In the Property Editor, navigate to **Attributes** and enter/select the following:
+
+    - Under Subtitle:
+
+        - Set Advanced Formatting: **Toggle On**
+
+        - HTML Expression: Enter the following:
 
             ```
             <copy>
@@ -132,49 +149,61 @@ FROM
             </copy>
             ```
 
-    - Under Media section:
-        -   For Source - select **BLOB Column**
-        -   For BLOB Column - select **PRODUCT_IMAGE**
-        -   For Position - select **First**
-        -   For Appearance - select **Widescreen**
-        -   For Sizing - select **Fit**
+    - Under Media:
+        - Source: **BLOB Column**
 
-    - Under Card section:
-        -   For Primary Key Column 1 - select **PRODUCT_ID**
+        - BLOB Column: **PRODUCT_IMAGE**
 
-      Click **Save.**
+        - Position: **First**
 
-    ![Add Primary key](./images/change-attributes1.png " ") 
+        - Appearance: **Widescreen**
 
-    ![Add Primary key](./images/change-attributes2.png " ")        
+        - Sizing: **Fit**
+
+    - Card > Primary Key Column 1: **PRODUCT_ID**
+
+3. Click **Save**.
+
+    ![Add Primary key](./images/change-attributes1.png " ")
+
+    ![Add Primary key](./images/change-attributes2.png " ")
 
 ## Task 5: Create Actions
 
 Customers need a way to shop for products, so in this task, you will add an action to allow customers to learn more about the product.
 
 1. Navigate to **Search Results** (left pane).
-2. On Actions, right-click **Create Action**.
+
+2. Right-click **Actions**, click **Create Action**.
 
     ![Create Action](./images/create-action1.png " ")
 
-3. In the Property Editor (right pane), enter the following:
-    -   For Type - select **Full Card**
-    -   For Target - Click **No Link Defined** and do the following:
-        - For Page - enter **17**.
-        - For Set Items, enter:
+3. In the Property Editor (right pane), enter/select the following:
+
+    - Identification > Type: **Full Card**
+
+    - Link > Target: Click **No Link Defined**
+
+        - Page: **18**
+
+        - Set Items:
 
             | Name             | Value        |
             | ---------------- | ------------ |
-            | P17\_PRODUCT\_ID | &PRODUCT_ID. |
+            | P18\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - For Clear Cache, enter **17**
-        - Click **Ok**.
+        - Clear Cache: **18**
+
+        - Click **OK**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
 
 ## Task 6: Add Dynamic Actions
+
 In this task, you will create two dynamic actions:
+
 - To show a success message when a product is added/edited/removed from the shopping cart
+
 - To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
 
 1. Navigate to the **Dynamic Actions** tab (left pane).
@@ -183,26 +212,34 @@ In this task, you will create two dynamic actions:
 
      ![Create Dynamic Actions](./images/create-da1.png " ")
 
-3. In the Property Editor, enter the following:
-    - Under the Identification section:
-        - For Name - enter **Show Success Message**
-    - Under When section:
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**
+3. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Show Success Message**
+
+    - Under Execution:
+
+        - Type: **Debounce**
+
+        - Time: **400**
+
+    - Under When:
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
 
       ![Show success Message](./images/create-da02.png " ")
 
-4. Navigate to **Refresh** Action.
-    - Under the Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+4. Navigate to **Refresh** Action and update the following:
+
+    - Identification > Action: **Execute JavaScript Code**
+
+    - Settings > Code: Enter the following JavaScript Code:
 
             ```
-            <copy>    
-            var productAction   = this.data.P17_ACTION,
-                productQuantity = this.data.P17_QUANTITY,
+            <copy>
+            var productAction   = this.data.P18_ACTION,
+                productQuantity = this.data.P18_QUANTITY,
                 productCard$  = apex.jQuery("#message_" + this.data.P17_PRODUCT_ID);
 
             if (productAction === 'ADD') {
@@ -214,36 +251,48 @@ In this task, you will create two dynamic actions:
             }
             </copy>
             ```
-            ![Navigate to Refresh action](./images/create-da03.png " ")
 
-5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.  
+    ![Navigate to Refresh action](./images/create-da03.png " ")
 
-     ![Create Dynamic Action2](./images/create-2-da1.png " ")
-6. In the Property Editor, enter the following:    
-    - Under the Identification section:
-        - For Name - enter **Update Shopping Cart Header**
+5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-    - Under When section:        
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**
+    ![Create Dynamic Action2](./images/create-2-da1.png " ")
+
+6. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Update Shopping Cart Header**
+
+    - Under Execution:
+
+        - Type: **Throttle**
+
+        - Time: **400**
+
+    - Under When:
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
 
     - Under Client-side Condition:
-        - For Type - select **JavaScript expression**
-        - For JavaScript Expression, enter the following:
+
+        - Type: **JavaScript expression**
+
+        - JavaScript Expression: Enter the following:
 
             ```
             <copy>
-            parseInt(this.data.P17_SHOPPING_CART_ITEMS) > 0
+            parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
             </copy>
             ```
-            ![Define Dynamic Action2](./images/create-2-da2.png " ")
+
+    ![Define Dynamic Action2](./images/create-2-da2.png " ")
 
 7. Navigate to **Refresh** Action.
-    - Under the Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+
+    - Identification > Action: **Execute JavaScript Code**
+
+    - Settings > Code: Enter the following JavaScript Code:
 
             ```
             <copy>
@@ -254,31 +303,29 @@ In this task, you will create two dynamic actions:
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
             </copy>
             ```
-            ![Navigate to Refresh](./images/create-2-da3.png " ")
 
-8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic Action.
-9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
+    ![Navigate to Refresh](./images/create-2-da3.png " ")
+
+8. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
 
      ![Create Opposite Action](./images/create-2-opp-action.png " ")
 
-10. Navigate to **Execute JavaScript Code** Action.
-    - Under the Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+9. In the Property Editor, update the following:
+    - Settings > Code: Enter the following JavaScript Code:
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
+         ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
 
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
-            </copy>
-            ```
-            ![Javascript Code](./images/create-2-opp-action1.png " ")
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+        </copy>
+        ```
 
-11. Click **Save and Run Page**.
+    ![Javascript Code](./images/create-2-opp-action1.png " ")
+
+10. Click **Save and Run Page**.
 
 ## Task 7: Run the Products Page
 
@@ -287,12 +334,14 @@ In this task, you will create two dynamic actions:
    ![Products Page](./images/products-page.png " ")
 
 ## Summary
+
 You now know how to enhance faceted search and cards region. You may now **proceed to the next Lab**.
 
 ## What's next
+
 In the next Lab, you learn how to Create and Customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

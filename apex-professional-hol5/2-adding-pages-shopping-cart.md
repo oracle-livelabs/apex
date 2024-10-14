@@ -149,7 +149,7 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Title: **Shopping Cart**
+    - Identification > Name: **Shopping Cart**
 
     - Under Source:
 
@@ -242,7 +242,7 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
 In this task, you will add an "Edit" action button that allows users to edit the items in their cart.
 
-1. In the **Rendering tree** (left pane), navigate to**Shopping Cart** > **Actions**.
+1. In the **Rendering tree** (left pane), navigate to **Shopping Cart** > **Actions**.
 
 2. Right-click **Actions** and click **Create Action**.
 
@@ -280,7 +280,7 @@ In this task, you will add an "Edit" action button that allows users to edit the
 
 You'll create a modal page that enables users to add products to the cart through a pop-up interface.
 
-1. Navigate to **+** icon and select **Page**.
+1. On the **Page Designer** toolbar, navigate to **(+ V)** icon and select **Page**.
 
     ![Create a Modal Page](./images/create-modal-dialog11.png " ")
 
@@ -310,7 +310,7 @@ This task helps you create a Cards region that shows detailed product informatio
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Title: **Product**
+    - Identification > Name: **Product**
 
     - Under Source:
 
@@ -353,6 +353,8 @@ This task helps you create a Cards region that shows detailed product informatio
             PRODUCT_ID = :P18_PRODUCT_ID
     </copy>
     ```
+
+    - Page Items to Submit: **P18\_PRODUCT\_ID**
 
     ![Add Cards Region](./images/create-cards-region11.png " ")
 
@@ -420,25 +422,27 @@ You'll add another Cards region to display customer reviews for the selected pro
 
     - Under Source:
 
-      - Type: **SQL Query**
+        - Type: **SQL Query**
 
-      - SQL Query: Enter the following SQL Code:
+        - SQL Query: Enter the following SQL Code:
 
-    ```
-    <copy>
-    SELECT
-        M.RATING,
-        M.REVIEW
-    FROM
-        PRODUCTS        P,
-        PRODUCT_REVIEWS M
-    WHERE
-        P.PRODUCT_NAME = M.PRODUCT_NAME
-        AND P.PRODUCT_ID = :P18_PRODUCT_ID
-    ORDER BY
-        M.RATING DESC
-    </copy>
-    ```
+        ```
+        <copy>
+        SELECT
+            M.RATING,
+            M.REVIEW
+        FROM
+            PRODUCTS        P,
+            PRODUCT_REVIEWS M
+        WHERE
+            P.PRODUCT_NAME = M.PRODUCT_NAME
+            AND P.PRODUCT_ID = :P18_PRODUCT_ID
+        ORDER BY
+            M.RATING DESC
+        </copy>
+        ```
+
+        - Page Items to Submit: **P18\_PRODUCT\_ID**
 
     - Appearance > Template: **Standard**
 
