@@ -89,7 +89,7 @@ Estimated Time: 5 minutes
 
         - Page: **15**
 
-        - Set Items > Name: **P18\_PRODUCT\_ID**, Value: **PRODUCT\_ID**
+        - Set Items > Name: **P15\_PRODUCT\_ID**, Value: **PRODUCT\_ID**
 
         - Clear Cache: **15**
 
