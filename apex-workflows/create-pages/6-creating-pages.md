@@ -392,7 +392,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     - Identification > Name: **Populate Booking Details in Feedback Form**
 
-    - Section Name: Source > PL/SQL Code: Enter the following code:
+    - Source > PL/SQL Code: Enter the following code:
 
     ```
     <copy>

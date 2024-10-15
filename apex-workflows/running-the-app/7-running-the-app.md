@@ -46,17 +46,22 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 3. Click **New Appointment** to book an appointment for **RAJESH**.
 
-   ![create appointment](./images/create-appointment.png " ")
+   ![select new appointment](./images/select-new-appt.png " ")
 
-4. Select **Psychiatric** from the problem dropdown.
+4. In the New Appointment Page, enter/select the following:
 
-5. Choose **ANACHATT** as the available doctor.
+      - Name: **RAJESH**
+      - Email: **Enter Email ID**
+      - Problem: **Psychiatric**
+      - Appointment Date: **Select date and time using Date Picker**
+      - Doctor: **ANACHATT**
+      - Age:**Input Age**
 
-6. Fill in the **Age** (example: 45) and click **Submit**.
+    Click **Book Appointment**.
 
   ![create an appointment](./images/create-appointment1.png " ")
 
-7. Verify the success message.
+5. Verify the success message.
 
   ![appointment created](./images/appoint-created.png " ")
 
@@ -74,8 +79,8 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
     ![navigate to doctors app made easy](./images/monitor-appts.png " ")
 
-
 ## Task 5: Approve the Appointment Request
+
 1. Log in as **ANACHATT**, who is a Doctor in this workflow.
 
 2. Select **Doctor Tasks** from the left navigation menu.

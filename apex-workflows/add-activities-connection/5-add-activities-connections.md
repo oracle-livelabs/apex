@@ -491,9 +491,9 @@ The next step is to establish connections for Free Consultation branches with ac
      |Parameter | Value |
     |---------|--------|
     |p\_doctor\_id| Static Value > **&DNO.**|
-    |p\_request\_date| Workflow Parameters > **REQUEST_DATE**|
-    |p\_booking\_id|Version Variables > **BOOKING_ID**|
-    |p\_patient\_name| Workflow Parameters > **PATIENT\_NAME**|
+    |p\_request\_date| Item > Workflow Parameters > **REQUEST_DATE**|
+    |p\_booking\_id| Item > Version Variables > **BOOKING_ID**|
+    |p\_patient\_name| Item > Workflow Parameters > **PATIENT\_NAME**|
 
 6. From the Activities Palette, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
 
