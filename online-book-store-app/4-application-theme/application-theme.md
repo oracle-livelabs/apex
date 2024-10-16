@@ -14,11 +14,11 @@ In this lab, you will:
 
 ## Task 1: Update Theme of the Application
 
-1. In the runtime view, Select **Customize** from the developer toolbar.
+1. In the runtime view, click **Customize** from the developer toolbar.
 
    ![App builder home page](images/customize.png " ")
 
-2. Select **Theme Roller**.
+2. Click **Theme Roller**.
 
    ![App builder home page](images/theme-roller.png " ")
 

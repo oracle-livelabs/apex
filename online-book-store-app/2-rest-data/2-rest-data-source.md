@@ -28,7 +28,7 @@ In this lab, you will:
 
 2. Select **Online Bookstore** Application.
 
-    ![App builder home page](images/select-app.png " ")
+    ![App builder home page](images/select-obs-app.png " ")
 
 3. Click **Shared Components**.
 
@@ -60,11 +60,11 @@ In this lab, you will:
 
     ![App builder home page](images/rds-name.png " ")
 
-8. On **Create REST Data Source - Remote Server** wizard, leave as default and Click **Next**.
+8. On **Create REST Data Source - Remote Server** wizard, leave as default and click **Next**.
 
     ![App builder home page](images/rds-next2.png " ")
 
-9. On **Create REST Data Source - Settings** wizard, leave as default and Click **Next**.
+9. On **Create REST Data Source - Settings** wizard, leave as default and click **Next**.
 
     ![App builder home page](images/rds-next3.png " ")
 
@@ -94,7 +94,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, For **Synchronization Type**: Select **Replace** and Click **Save and Run**.
+3. Now, For **Synchronization Type**: select **Replace** and click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 
@@ -124,7 +124,7 @@ In this task, you create Faceted Search page which will display list of the book
 
    ![App builder home page](images/fs-next.png " ")
 
-4. For Display as, Select **Cards** and Click **Refresh** to refresh the column statistics to provide better recommendations.
+4. For Display as, select **Cards** and click **Refresh** to refresh the column statistics to provide better recommendations.
 
     Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)** and Click **Next**.
 
@@ -134,14 +134,26 @@ In this task, you create Faceted Search page which will display list of the book
 
     ![App builder home page](images/fs-create-page.png " ")
 
-6. Navigate to **Shared Component** and Click **User Interface Attributes** under **User Interface**.
+6. Navigate to **Shared Component** and click **User Interface Attributes** under **User Interface**.
 
-7. Under Attributes, Select **Home URL**: **10 Search Books**.
+    ![Shared Component](images/nav-sc.png " ")
+
+    ![User Interface Attributes](images/select-user-interface.png " ")
+
+7. Under Attributes, select **Home URL**: **10 Search Books**.
+
+    ![Home URL](images/select-home-url.png " ")
 
 8. Click **Apply Changes**.
 
+    ![Apply Changes](images/apply-changes.png " ")
+
 9. Click **Run**.
 
+    ![App builder home page](images/click-run.png " ")
+
+10. Enter your workspace credentials for sign-in.
+    ![App builder home page](images/sign-in.png " ")
     ![App builder home page](images/fs-view.png " ")
 
 ## Summary
