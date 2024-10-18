@@ -35,9 +35,9 @@ In this task, you develop a new page in the application to display the shopping 
 
     - Under Identification:
 
-        - Name: **Shopping Cart**
-
         - Page Number: **17**
+
+        - Name: **Shopping Cart**
 
     - Under Navigation:
 
@@ -49,7 +49,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-blank-page9.png " ")
 
-5. In the left pane, right-click **Body** and select **Create Region**.
+5. In the left pane, right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region17.png " ")
 
@@ -65,7 +65,7 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below code into the code editor:
+        - SQL Query: Copy and paste the below code into the code editor:
 
         ```
         <copy>
@@ -95,18 +95,18 @@ In this task, you develop a new page in the application to display the shopping 
 
     - Under Settings
 
-          - Title: **&TITLE.**
+        - Title: **&TITLE.**
 
-          - Description: Copy and Paste the below code:
-          ```
-          <copy>
-          &DESCRIPTION.
-          </br></br>
-          <b>Quantity:</b> &QUANTITY. </br>
-          <b>Price:</b> <strike> ₹&TOTAL_PRICE.</strike> ₹&NEW_TOTAL_PRICE.
-          <span style="color: green;">&DISCOUNT.% Off</span>
-          </copy>
-          ```
+        - Description: Copy and Paste the below code:
+        ```
+        <copy>
+        &DESCRIPTION.
+        </br></br>
+        <b>Quantity:</b> &QUANTITY. </br>
+        <b>Price:</b> <strike> ₹&TOTAL_PRICE.</strike> ₹&NEW_TOTAL_PRICE.
+        <span style="color: green;">&DISCOUNT.% Off</span>
+        </copy>
+        ```
 
          - Display Avatar: **Toggle On**
 
@@ -128,9 +128,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-region-att.png " ")
 
-    ![close dialog](images/create-region-att1.png " ")
-
-8. In Page Rendering, under **Shopping Cart** region, right-click **Actions** and select **Create Action**.
+8. In Page Rendering, under **Shopping Cart** region, right-click **Actions** and click **Create Action**.
 
     ![close dialog](images/create-action9.png " ")
 
@@ -148,13 +146,17 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **Redirect to URL**
 
-        - Targe: **#action$decrease-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+        - Target > URL: **#action$decrease-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
 
         Click **OK**.
 
-    ![close dialog](images/primary-action.png " ")
+    ![close dialog](images/primary-action-decrease.png " ")
 
-10. In the Property Editor, enter the following:
+10. Right-click **Actions** and click **Create Action**.
+
+    ![close dialog](images/create-action10.png " ")
+
+11. In the Property Editor, enter the following:
 
     - Under Identification:
 
@@ -180,7 +182,11 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/primary-action.png " ")
 
-11. In the Property Editor, enter the following:
+12. Right-click **Actions** and click **Create Action**.
+
+    ![close dialog](images/create-action11.png " ")
+
+13. In the Property Editor, enter the following:
 
     - Under Identification:
 
@@ -198,13 +204,13 @@ In this task, you develop a new page in the application to display the shopping 
 
         Click **OK**.
 
-    ![close dialog](images/primary-action.png " ")
+    ![close dialog](images/primary-action-increase.png " ")
 
-12. Right-click **Shopping Cart** region and select **Create Page Item**.
+14. Right-click **Shopping Cart** region and click **Create Page Item**.
 
     ![close dialog](images/create-page-item9.png " ")
 
-13. Create the following page items:
+15. Create the following page items:
 
     | Name            |  Type   | Value Protected |
     | --------------- |  ------ | --------------- |
@@ -214,9 +220,9 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/book-id.png " ")
 
-14. Select **Page 17: Shopping Cart** and enter the following:
+    ![close dialog](images/quantity1.png " ")
 
-    -  Under **Execute when Page Loads**: Copy and Paste the below code:
+16. Click **Page 17: Shopping Cart** and under **Execute when Page Loads**: Copy and paste the below code:
 
      ```
     <copy>
@@ -271,68 +277,85 @@ In this task, you develop a new page in the application to display the shopping 
 
     Update OBS\_MANAGE\_ORDERS Package
 
-15. Click **SQL Workshop** and navigate to **Object Browser**.
+17. Click **Save**
 
-16. In the object tree, expand **Packages** and select **OBS\_MANAGE\_ORDERS** package.
+    ![close dialog](images/save4.png " ")
 
-17. Under **Specification**, add the below two procedures after  **remove\_book** procedure with the below code:
+18. Click **SQL Workshop** and navigate to **Object Browser**.
 
-     ```
-     <copy>
-    PROCEDURE increase_book_in_cart (
-    p_book IN NUMBER,
-    p_quantity in number);
+    ![close dialog](images/obj-browser.png " ")
 
-    PROCEDURE decrease_book_in_cart (
-    p_book IN NUMBER,
-    p_quantity in number);
-     </copy>
-      ```
+19. In the object tree, expand **Packages** and click **OBS\_MANAGE\_ORDERS** package.
 
-   Click **Save and Compile**.
-
-18. Under **Body**, Copy and paste below code after **remove\_book** procedure:
+20. Under **Specification**, add the below two procedures after  **remove\_book** procedure with the below code:
 
     ```
     <copy>
-    PROCEDURE increase_book_in_cart ( p_book IN NUMBER,p_quantity in number)
-        IS
+    PROCEDURE increase_book_in_cart (
+        p_book     IN NUMBER,
+        p_quantity IN NUMBER
+    );
+
+    PROCEDURE decrease_book_in_cart (
+        p_book     IN NUMBER,
+        p_quantity IN NUMBER
+    );
+    </copy>
+    ```
+
+    Click **Save and Compile**.
+
+    ![close dialog](images/package-spec1.png " ")
+
+21. Under **Body**, Copy and paste below code after **remove\_book** procedure:
+
+    ```
+    <copy>
+    PROCEDURE increase_book_in_cart (
+        p_book     IN NUMBER,
+        p_quantity IN NUMBER
+    ) 
+    IS
     BEGIN
         remove_book(p_book);
-        add_book(p_book,p_quantity+1);
+        add_book(p_book, p_quantity + 1);
     END increase_book_in_cart;
 
-    PROCEDURE decrease_book_in_cart ( p_book IN NUMBER,p_quantity in number)
-        IS
+    PROCEDURE decrease_book_in_cart (
+        p_book     IN NUMBER,
+        p_quantity IN NUMBER
+    ) 
+    IS
     BEGIN
-        IF  p_quantity = 1
-        Then
-        remove_book(p_book);
-        Else
+        IF p_quantity = 1 THEN
             remove_book(p_book);
-        add_book(p_book,p_quantity-1);
-        end if;
+        ELSE
+            remove_book(p_book);
+            add_book(p_book, p_quantity - 1);
+        END IF;
     END decrease_book_in_cart;
     </copy>
     ```
 
    Click **Save and Compile**.
 
+    ![close dialog](images/package-body1.png " ")
+
     Again, Navigate back to Page 17:
 
-19. Right-click **Body** and Select **Create Region**.
+22. Right-click **Body** and click **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 
-20. For Name: **Order Information**
+23. For Name: **Order Information**
 
     ![close dialog](images/order-info.png " ")
 
-21. Right-click **Order Information** and select **Create Page Item**.
+24. Right-click **Order Information** and click **Create Page Item**.
 
     ![close dialog](images/order-page-item.png " ")
 
-16. Create the following three page items:
+25. Create the following three page items:
 
     | Name            |  Type   | Label |
     | --------------- |  ------ | --------------- |
@@ -344,7 +367,11 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/no-of-books.png " ")
 
-17. Click **Save**.
+    ![close dialog](images/total.png " ")
+
+26. Click **Save**.
+
+    ![close dialog](images/save9.png " ")
 
 ## Task 2: Implement Page Interactions
 

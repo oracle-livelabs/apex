@@ -169,11 +169,11 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
      insert or update on "OBS_USERS"
      for each row
      begin
-     :new.email := lower(:new.email);
-     :new.username := lower(:new.username);
-     if :new.password is NOT NULL AND (:OLD.PASSWORD != :new.password or :OLD.PASSWORD is NULL ) then
-     :new.password := obs_auth.hash_password(lower(:new.email), :new.password);
-     end if;
+      :new.email := lower(:new.email);
+      :new.username := lower(:new.username);
+      if :new.password is NOT NULL AND (:OLD.PASSWORD != :new.password or :OLD.PASSWORD is NULL) then
+       :new.password := obs_auth.hash_password(lower(:new.email), :new.password);
+      end if;
      end;
      /
      </copy>
@@ -213,11 +213,11 @@ In this task, you will learn to create custom authentication.
 
    ![App builder home page](images/sc.png " ")
 
-4. Under Security, Select **Authentication Schemes**.
+4. Under Security, click **Authentication Schemes**.
 
    ![App builder home page](images/authen-sch.png " ")
 
-5. Click **Create** and then **Next**.
+5. Click **Create** and then click **Next**.
 
    ![App builder home page](images/authen-create.png " ")
 
@@ -247,19 +247,21 @@ In this task, you will learn to create custom authentication.
 
    ![App builder home page](images/auth-add-proc.png " ")
 
-8. Again, Click **Custom Authentication**.
+8. Again, click **Custom Authentication**.
 
    ![App builder home page](images/cust-auth1.png " ")
 
-9. Click **Make Current Scheme** and then Click **OK**.
+9. Click **Make Current Scheme** and click **OK**.
 
    ![App builder home page](images/make-current.png " ")
-
-   ![App builder home page](images/make-current-ok.png " ")
 
 10. Run the application using the below credentials.
     - Username: user01
     - Password: secretPassword
+
+   ![App builder home page](images/run-app1.png " ")
+   ![App builder home page](images/enter-login-cred.png " ")
+
 
 ## Summary
 

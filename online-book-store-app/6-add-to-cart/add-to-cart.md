@@ -38,62 +38,62 @@ In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains proce
 
 To Create a Package:
 
-1. Under SQL Developer, Click **Object Browser**.
+1. Under SQL Workshop, click **Object Browser**.
 
    ![App builder home page](images/ob2.png " ")
 
-2. Right-click Packages and Select **Create Package**.
+2. Right-click Packages and click **Create Package**.
 
    ![App builder home page](images/create-pack1.png " ")
 
-3. In Create Package dialog, For Name: Enter **OBS\_MANAGE\_ORDERS** and Click **Create Package**.
+3. In the Create Package dialog, for Name: enter **OBS\_MANAGE\_ORDERS** and click **Create Package**.
 
    ![App builder home page](images/pack-name.png " ")
 
-4. Under **Specification**, Copy and paste below code:
+4. Under **Specification**, copy and paste below code:
 
      ```
      <copy>
     create or replace PACKAGE OBS_MANAGE_ORDERS
-       AS
-       
-      -- create procedure for add a book temporarily
-      PROCEDURE add_book (
-        p_book  IN NUMBER,
-        p_quantity IN NUMBER);
+        AS
 
-      -- create procedure for remove a book temporarily
-      PROCEDURE remove_book (
-        p_book IN NUMBER);
-     
-      -- create procedure for add a book in wishlist
-        PROCEDURE add_to_wishlist (
-        p_book_id IN NUMBER,
-        p_user_id IN NUMBER);
+        -- create procedure for add a book temporarily
+        PROCEDURE add_book (
+        p_book IN NUMBER,
+        p_quantity IN NUMBER);
 
-      -- create procedure for remove a book from wishlist
-      PROCEDURE remove_from_wishlist (
-        p_book_id IN NUMBER,
-        p_user_id IN NUMBER);
-     
-     -- create function to get the number of items in the shopping cart
-      FUNCTION Get_quantity
-      RETURN NUMBER;
-      
-     -- create procedure for validate if a book exists in the shopping cart
-      FUNCTION book_exists(
-        p_book IN NUMBER)
-      RETURN NUMBER;
-      
-     -- create procedure for clear the cart
-      PROCEDURE clear_cart;
+        -- create procedure for remove a book temporarily
+        PROCEDURE remove_book (
+        p_book IN NUMBER);
 
-     -- create procedure to insert orders
-      PROCEDURE create_order (
-        p_user_id    IN VARCHAR2,
-        p_order_id   OUT obs_orders.order_id%TYPE);
-     END OBS_MANAGE_ORDERS;
-      /
+        -- create procedure for add a book in wishlist
+        PROCEDURE add_to_wishlist (
+        p_book_id IN NUMBER,
+        p_user_id IN NUMBER);
+
+        -- create procedure for remove a book from wishlist
+        PROCEDURE remove_from_wishlist (
+        p_book_id IN NUMBER,
+        p_user_id IN NUMBER);
+
+        -- create function to get the number of items in the shopping cart
+        FUNCTION Get_quantity
+        RETURN NUMBER;
+
+        -- create procedure for validate if a book exists in the shopping cart
+        FUNCTION book_exists(
+        p_book IN NUMBER)
+        RETURN NUMBER;
+
+        -- create procedure for clear the cart
+        PROCEDURE clear_cart;
+
+        -- create procedure to insert orders
+        PROCEDURE create_order (
+        p_user_id  IN VARCHAR2,
+        p_order_id  OUT obs_orders.order_id%TYPE);
+        END OBS_MANAGE_ORDERS;
+        /
      </copy>
       ```
 
@@ -101,133 +101,135 @@ To Create a Package:
 
    ![App builder home page](images/pack-spec1.png " ")
 
-5. Under **Body**, Copy and paste below code:
+5. Under **Body**, copy and paste below code:
 
     ```
     <copy>
-   create or replace PACKAGE BODY OBS_MANAGE_ORDERS
-   AS
-   PROCEDURE add_book (p_book IN NUMBER,p_quantity in number)
-   IS
-   BEGIN
-   IF NOT apex_collection.collection_exists (p_collection_name => 'BOOKS') and  book_exists(p_book) = 0
-   THEN
-    apex_collection.create_collection(p_collection_name => 'BOOKS');
-   END IF;
-   apex_collection.add_member(p_collection_name => 'BOOKS',
-   p_n001 => p_book,
-   p_n002 => p_quantity);
-   END add_book;
+    CREATE OR REPLACE PACKAGE BODY OBS_MANAGE_ORDERS
+    AS
+    PROCEDURE add_book (p_book IN NUMBER, p_quantity IN NUMBER)
+    IS
+    BEGIN
+        IF NOT apex_collection.collection_exists(p_collection_name => 'BOOKS') AND book_exists(p_book) = 0
+        THEN
+            apex_collection.create_collection(p_collection_name => 'BOOKS');
+        END IF;
 
-   PROCEDURE remove_book (p_book IN NUMBER)
-   IS
-   l_id NUMBER;
-   BEGIN
-   IF apex_collection.Collection_exists (p_collection_name => 'BOOKS') and book_exists(p_book) > 0
-   THEN
-    SELECT seq_id
-    INTO  l_id
-    FROM  apex_collections a
-    WHERE collection_name = 'BOOKS'
-       AND a.n001 = p_book;
-    apex_collection.delete_member(p_collection_name => 'BOOKS', p_seq => l_id );
-   END IF;
-  END remove_book;
+        apex_collection.add_member(
+            p_collection_name => 'BOOKS',
+            p_n001           => p_book,
+            p_n002           => p_quantity
+        );
+    END add_book;
 
-  PROCEDURE add_to_wishlist (p_book_id IN NUMBER, p_user_id  IN NUMBER)
-  is
-  BEGIN
-  INSERT INTO obs_wishlist (book_id, user_id) VALUES (p_book_id, p_user_id);
-  END add_to_wishlist;
+    PROCEDURE remove_book (p_book IN NUMBER)
+    IS
+        l_id NUMBER;
+    BEGIN
+        IF apex_collection.collection_exists(p_collection_name => 'BOOKS') AND book_exists(p_book) > 0
+        THEN
+            SELECT seq_id
+            INTO   l_id
+            FROM   apex_collections a
+            WHERE  collection_name = 'BOOKS'
+            AND    a.n001 = p_book;
 
-  PROCEDURE remove_from_wishlist (p_book_id IN NUMBER, p_user_id  IN NUMBER)
-  is
-  BEGIN
-   delete from obs_wishlist where user_id = p_user_id and book_id = p_book_id;
-  END remove_from_wishlist;
+            apex_collection.delete_member(p_collection_name => 'BOOKS', p_seq => l_id);
+        END IF;
+    END remove_book;
 
-  FUNCTION get_quantity
-  RETURN NUMBER
-  IS
-  l_items NUMBER := 0;
-  BEGIN
-   IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
-   THEN
-    SELECT count(n001)
-    INTO  l_items
-    FROM  apex_collections a
-    WHERE collection_name = 'BOOKS';
-   END IF;
-   RETURN l_items;
-  END get_quantity;
+    PROCEDURE add_to_wishlist (p_book_id IN NUMBER, p_user_id IN NUMBER)
+    IS
+    BEGIN
+        INSERT INTO obs_wishlist (book_id, user_id)
+        VALUES (p_book_id, p_user_id);
+    END add_to_wishlist;
 
-  FUNCTION book_exists(p_book IN NUMBER)
-  RETURN NUMBER
-  IS
-  l_quantity NUMBER;
-  BEGIN
-   IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
-   THEN
-    SELECT a.n002
-    INTO  l_quantity
-    FROM  apex_collections a
-    WHERE collection_name = 'BOOKS'
-       AND a.n001 = p_book;
-    RETURN l_quantity;
-   ELSE
-    RETURN 0;
-   END IF;
- EXCEPTION
-  WHEN OTHERS THEN
-       RETURN 0;
- END book_exists;
+    PROCEDURE remove_from_wishlist (p_book_id IN NUMBER, p_user_id IN NUMBER)
+    IS
+    BEGIN
+        DELETE FROM obs_wishlist 
+        WHERE user_id = p_user_id 
+        AND book_id = p_book_id;
+    END remove_from_wishlist;
 
- PROCEDURE clear_cart
- IS
- BEGIN
-   IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
-   THEN
-    apex_collection.truncate_collection(p_collection_name => 'BOOKS');
-   END IF;
- END clear_cart;
- PROCEDURE create_order (p_user_id  IN VARCHAR2,
-                        p_order_id  OUT obs_orders.order_id%TYPE)
- IS
- BEGIN
-     INSERT INTO obs_orders
-         (order_datetime,
-         user_id)
-   VALUES   (SYSDATE,
-         p_user_id)
-   returning order_id INTO p_order_id;
-   IF apex_collection.collection_exists (p_collection_name => 'BOOKS')
-   THEN
-    INSERT INTO obs_order_items
-          (order_id,
-          seq_no,
-          book_id,
-          price,
-          quantity,
-          discount,
-          added_date,
-          added_time)
-    SELECT p_order_id,
-       seq_id,
-       b.book_id,
-       b.price,
-       n002,
-       b.discount,
-       Sysdate,
-       SYSTIMESTAMP AT TIME ZONE 'Asia/Kolkata' AS added_time
-    FROM  apex_collections a,
-       obs_books b
-    WHERE collection_name = 'BOOKS'
-       AND b.book_id = a.n001;
-   END IF;
-   apex_collection.delete_collection(p_collection_name => 'BOOKS');
- END create_order;  
-END OBS_MANAGE_ORDERS;
-/
+    FUNCTION get_quantity
+    RETURN NUMBER
+    IS
+        l_items NUMBER := 0;
+    BEGIN
+        IF apex_collection.collection_exists(p_collection_name => 'BOOKS')
+        THEN
+            SELECT COUNT(n001)
+            INTO   l_items
+            FROM   apex_collections a
+            WHERE  collection_name = 'BOOKS';
+        END IF;
+
+        RETURN l_items;
+    END get_quantity;
+
+    FUNCTION book_exists(p_book IN NUMBER)
+    RETURN NUMBER
+    IS
+        l_quantity NUMBER;
+    BEGIN
+        IF apex_collection.collection_exists(p_collection_name => 'BOOKS')
+        THEN
+            SELECT a.n002
+            INTO   l_quantity
+            FROM   apex_collections a
+            WHERE  collection_name = 'BOOKS'
+            AND    a.n001 = p_book;
+
+            RETURN l_quantity;
+        ELSE
+            RETURN 0;
+        END IF;
+    EXCEPTION
+        WHEN OTHERS THEN
+            RETURN 0;
+    END book_exists;
+
+    PROCEDURE clear_cart
+    IS
+    BEGIN
+        IF apex_collection.collection_exists(p_collection_name => 'BOOKS')
+        THEN
+            apex_collection.truncate_collection(p_collection_name => 'BOOKS');
+        END IF;
+    END clear_cart;
+
+    PROCEDURE create_order (p_user_id IN VARCHAR2, p_order_id OUT obs_orders.order_id%TYPE)
+    IS
+    BEGIN
+        INSERT INTO obs_orders (order_datetime, user_id)
+        VALUES (SYSDATE, p_user_id)
+        RETURNING order_id INTO p_order_id;
+
+        IF apex_collection.collection_exists(p_collection_name => 'BOOKS')
+        THEN
+            INSERT INTO obs_order_items (
+                order_id, seq_no, book_id, price, quantity, discount, added_date, added_time
+            )
+            SELECT p_order_id,
+                    seq_id,
+                    b.book_id,
+                    b.price,
+                    n002,
+                    b.discount,
+                    SYSDATE,
+                    SYSTIMESTAMP AT TIME ZONE 'Asia/Kolkata' AS added_time
+            FROM   apex_collections a, obs_books b
+            WHERE  collection_name = 'BOOKS'
+            AND    b.book_id = a.n001;
+        END IF;
+
+        apex_collection.delete_collection(p_collection_name => 'BOOKS');
+    END create_order;
+
+    END OBS_MANAGE_ORDERS;
+    /
     </copy>
     ```
 
@@ -241,19 +243,19 @@ In this task, you define application items to store session state information su
 
 To create Application items:
 
-1. On the Workspace home page, click **App Builder**.
+1. Navigate to Workspace home page by clicking **App Builder**.
 
    ![App builder home page](images/app-build2.png " ")
 
-2. Select **Online Bookstore** application.
+2. Click **Online Bookstore** application.
 
-   ![App builder home page](images/obs-app.png " ")
+   ![App builder home page](images/obs-app1.png " ")
 
 3. On the Application home page, click **Shared Components**.
 
-    ![App builder home page](images/sc.png " ")
+    ![App builder home page](images/sc1.png " ")
 
-4. Under Application Logic, select **Application Items**.
+4. Under Application Logic, click **Application Items**.
 
     ![App builder home page](images/app-items.png " ")
 
@@ -276,6 +278,7 @@ To create Application items:
    ![App builder home page](images/app-item-detail.png " ")
 
 ## Task 3: Create Application processes
+
 In this task, you implement application processes to run PL/SQL code at specific points to update the shopping cart item count dynamically.
 
 To create Application Processes:
@@ -284,7 +287,7 @@ To create Application Processes:
 
    ![App builder home page](images/app-item-5.png " ")
 
-2. Under **Application Logic**, select **Application Processes**.
+2. Under **Application Logic**, click **Application Processes**.
 
    ![App builder home page](images/app-process.png " ")
 
@@ -341,7 +344,9 @@ To create Application computations:
 
 1. Click **Shared Components**.
 
-2. Under Application Logic, select **Application Computations**.
+    ![App builder home page](images/sc2.png " ")
+
+2. Under Application Logic, click **Application Computations**.
 
    ![App builder home page](images/app-comp1.png " ")
 
@@ -363,14 +368,15 @@ To create Application computations:
 
         ```
        <copy>
-       SELECT U.USER_ID FROM obs_USERS U
-       WHERE (U.USERNAME) = lower(:APP_USER) or (U.EMAIL) = lower(:APP_USER);
+        SELECT U.USER_ID
+       FROM   obs_USERS U
+       WHERE  LOWER(U.USERNAME) = LOWER(:APP_USER) OR LOWER(U.EMAIL) = LOWER(:APP_USER);
        </copy>
        ```
 
     Click **Create Computation**.
 
-  ![App builder home page](images/create-comp.png " ")
+    ![App builder home page](images/create-comp1.png " ")
 
 5. Click **Create**.
 
@@ -394,7 +400,8 @@ To create Application computations:
 
         ```
         <copy>
-        SELECT U.USERNAME FROM OBS_USERS U
+        SELECT U.USERNAME
+        FROM OBS_USERS U
         WHERE U.USER_ID=:USER_ID
         </copy>
         ```
@@ -411,15 +418,19 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Application ID](images/app-build3.png " ")
 
-2. On the Workspace home page, Select **18 - Book Details** page.
+2. On the Workspace home page, click **Online Bookstore** application.
+
+    ![Application ID](images/app.png " ")
+
+3. On the Application home page, click **18 - Book Details** page.
 
     ![18: Book Details](images/page-18.png " ")
 
-3. In the left pane, right-click **Buttons Bar** and click **Create Page Item**.
+4. In the left pane, right-click **Buttons Bar** and click **Create Page Item**.
 
-    ![Create Page Item](images/create-button1.png " ")
+    ![Create Page Item](images/create-page-item1.png " ")
 
-4. Create the following three page items, one after the other:
+5. Create the following three page items, one after the other:
 
       | Name            |  Type   |
       | --------------- |  ------ |
@@ -427,9 +438,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
       | P18\_BOOK\_IN\_CART | Hidden |
       | P18\_QUANTITY | Select List  |
 
-    ![Page Items](images/shop-cart-btn.png " ")
+    ![Page Items](images/shop-cart-page-item.png " ")
 
-5. Select P18\_QUANTITY and update the following:
+6. Select P18\_QUANTITY and update the following:
 
     - Appearance > Template: **Required**
 
@@ -458,13 +469,13 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
          - Display Null Values: **Toggle Off**
 
-  ![Quantity Page Item](images/book-in-cart-comp.png " ")
+    ![Quantity Page Item](images/quantity.png " ")
 
-6. Right-click **P18\_BOOK\_IN\_CART** and Click **Create Computation**.
+7. Right-click **P18\_BOOK\_IN\_CART** and click **Create Computation**.
 
-    ![reate Computation](images/book-in-cart-comp.png " ")
+    ![create Computation](images/book-in-cart-comp.png " ")
 
-7. In the Property editor, enter/select the following:
+8. In the Property editor, enter/select the following:
 
     - Under Computation:
 
@@ -478,15 +489,13 @@ In this task, you enhance the Book Details page by enabling the addition and rem
                </copy>
                ```
 
-  ![Computation](images/quantity.png " ")
+    ![Computation](images/book-in-cart-comp-details.png " ")
 
-  ![Computation](images/quantity-source.png " ")
-
-8.  In the left pane, right-click **Buttons Bar** and Click **Create Button**.
+9. In the left pane, right-click **Buttons Bar** and click **Create Button**.
 
     ![Create Button](images/create-button4.png " ")
 
-9. In the Property Editor, enter/select the following:
+10. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -504,11 +513,13 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Item: **P18\_BOOK\_IN\_CART**
 
-  ![Add To Cart](images/add-to-cart-btn.png " ")
+    ![Add To Cart](images/add-to-cart-btn.png " ")
 
-10. Right-click **Buttons Bar** and Click **Create Button**.
+11. Right-click **Buttons Bar** and click **Create Button**.
 
-11. In the Property Editor, enter/select the following:
+    ![Create Button](images/create-button5.png " ")
+
+12. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -518,7 +529,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Layout > Slot: **Edit**
 
-    - Under Appearance > Click **Template Options**
+    - Under Appearance > **Template Options** > Click **Use Template Defaults**
 
         - Type: **Danger**
 
@@ -534,11 +545,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Remove From Cart](images/remove-from-cart.png " ")
 
-12.  Navigate to the **Processing** tab. Right-click **Processing** and Click **Create Process**.
+13. Navigate to the **Processing** tab. Right-click **Processing** and click **Create Process**.
 
     ![Processing](images/create-process1.png " ")
 
-13. In the Property Editor, update the following:
+14. In the Property Editor, update the following:
 
     - Under Identification:
 
@@ -556,7 +567,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Add to cart](images/add-process.png " ")
 
-14. Expand the Parameters of **Add Product** and enter the following:
+15. Expand the Parameters of **Add Product** and enter the following:
 
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
@@ -567,9 +578,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Add Product Parameter](images/add-process-quantity.png " ")
 
-15. Right-click **Processing** and Click **Create Process**.
+16. Right-click **Processing** and click **Create Process**.
 
-16. In the Property Editor, enter/select the following:
+    ![Processing](images/create-process2.png " ")
+
+17. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -587,7 +600,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Delete Product](images/delete-product.png " ")
 
-17. Expand the Parameter of **Delete Product** and enter the following:
+18. Expand the Parameter of **Delete Product** and enter the following:
 
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
@@ -595,9 +608,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Delete Product Parameter](images/delete-pro-pram.png " ")
 
-18. Right-click **Processing** and Click **Create Process**.
+19. Right-click **Processing** and click **Create Process**.
 
-19. In the Property Editor, enter/select the following:
+    ![Processing](images/create-process3.png " ")
+
+20. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -613,7 +628,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Calculate Shopping Cart Items](images/cal-item-process.png " ")
 
-20. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
+21. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
 
      | Parameter |  Type   | Item |
      | --------- |  ------ | ---- |
@@ -621,9 +636,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Calculate Shopping Cart Items Parameter ](images/cal-item-func.png " ")
 
-21. Right-click **Processing** and Click **Create Process**.
+22. Right-click **Processing** and click **Create Process**.
 
-22. In the Property Editor, enter/select the following:
+    ![Processing](images/create-process4.png " ")
+
+23. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -635,7 +652,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![close dialog](images/close-dialog.png " ")
 
-21. Click **Save**.
+24. Click **Save**.
+
+    ![close dialog](images/save-page.png " ")
 
 ## Task 6: Add Shopping Cart to Navigation Bar list
 
@@ -689,9 +708,13 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
 1. Click **Application ID**.
 
+    ![close dialog](images/app-id1.png " ")
+
 2. Click **Page 10 - Search Books**.
 
-3. In the left pane, right-click **Results** region and click **Create Dynamic Action**.
+    ![close dialog](images/page10.png " ")
+
+3. In the left pane, right-click **Search Results** region and click **Create Dynamic Action**.
 
     ![close dialog](images/cart-create-dynamic.png " ")
 
@@ -713,7 +736,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
         </copy>
         ```
 
-  ![close dialog](images/update-shop-cart-header.png " ")
+    ![close dialog](images/update-shop-cart-header.png " ")
 
 5. Click **TRUE** action, In the Property Editor, enter/select the following:
 
@@ -730,7 +753,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
     </copy>
     ```
 
-  ![close dialog](images/true-action.png " ")
+    ![close dialog](images/true-action.png " ")
 
 6. Right-click on **False** action and click **Create FALSE Action**.
 
@@ -749,12 +772,14 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
     </copy>
     ```
 
-  ![close dialog](images/false-action-details.png " ")
+    ![close dialog](images/false-action-details.png " ")
 
 8. Click **Save**.
 
+    ![close dialog](images/save2.png " ")
 
 ## Summary
+
 In this lab, you have learned how to enhance the Book Details page by creating a package to manage shopping cart functionalities, defining application items to store session state information, implementing application processes to run PL/SQL code at specific points, and setting up computations to determine user-related information. These steps enable the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface dynamically reflects the current state of the cart. You are now ready to move on to the next lab!
 
 ## Acknowledgements
