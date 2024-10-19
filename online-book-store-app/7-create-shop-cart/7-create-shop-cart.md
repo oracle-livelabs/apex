@@ -387,7 +387,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Type: **SQL Query (return single value)**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and paste the below code:
 
           ```
           <copy>
@@ -397,11 +397,11 @@ In this task, you create buttons for removing items from the cart and proceeding
           </copy>
           ```
 
-        - Settings > Send On Page Submit: **Toggle off**
-
     ![close dialog](images/comp-no-of-books.png " ")
 
 3. Right-click **P17\_TOTAL** and select **Create Computation**.
+
+    ![close dialog](images/create-comp10.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -411,13 +411,13 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - SQL Query: Copy and Paste the below code:
 
-          ```
-          <copy>
-        SELECT ROUND(SUM(b.price * ((100 - b.discount) / 100) * a.n002), 0)
-        FROM apex_collections a, obs_books b
-        WHERE collection_name = 'BOOKS' AND b.book_id(+) = a.n001;
-          </copy>
-          ```
+            ```
+            <copy>
+            SELECT ROUND(SUM(b.price * ((100 - b.discount) / 100) * a.n002), 0)
+            FROM apex_collections a, obs_books b
+            WHERE collection_name = 'BOOKS' AND b.book_id(+) = a.n001;
+            </copy>
+            ```
 
     ![close dialog](images/comp-total.png " ")
 
@@ -439,7 +439,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Button Template: **Text with Icon**
 
-        - Template Options: Click **Template Options** 
+        - Template Options: Click **Use Template Options, Left** 
 
             - Size: **Small**
 
@@ -454,6 +454,8 @@ In this task, you create buttons for removing items from the cart and proceeding
     ![close dialog](images/clear-btn.png " ")
 
 7. Right-click **Order Information** and select **Create Button**.
+
+    ![close dialog](images/btn1.png " ")
 
 8. In the Property Editor, enter/select the following:
 
@@ -483,15 +485,17 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Item: **SHOPPING\_CART\_ITEMS**
 
-    ![close dialog](images/proceed-btn.png " ")  
+    ![close dialog](images/proceed-btn.png " ")
 
-    ![close dialog](images/proceed-btn1.png " ")  
+## Task 3: Integrate Backend Processes
 
-9. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+In this task, you create page processes to invoke PL/SQL procedures to manage cart actions and handle order creation and use server-side conditions and parameters to ensure smooth and secure cart management.
 
-    ![close dialog](images/create-process9.png " ")  
+1. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
-10. In the Property Editor, enter the following:
+    ![close dialog](images/create-process9.png " ")
+
+2. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -511,17 +515,19 @@ In this task, you create buttons for removing items from the cart and proceeding
 
          - Value: **REMOVE\_FROM\_CART**
 
-    ![close dialog](images/remove-from-cart-process.png " ")     
+    ![close dialog](images/remove-from-cart-process.png " ")
 
-11. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
+3. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
 
-     - p\_book > Item: **P17\_BOOK\_ID**
+     - Under Value > Item: **P17\_BOOK\_ID**
 
     ![close dialog](images/remove-p-book.png " ")
 
-12. Right-click **Processing** and select **Create Process**.
+4. Right-click **Processing** and select **Create Process**.
 
-13. In the Property Editor, enter the following:
+    ![close dialog](images/create-process10.png " ")
+
+5. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -541,19 +547,22 @@ In this task, you create buttons for removing items from the cart and proceeding
 
          - Value: **INCREASE\_CART**
 
-    ![close dialog](images/remove-from-cart-process.png " ")
+    ![close dialog](images/remove-from-cart-process1.png " ")
 
-14. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
+6. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
 
      - p\_book > Item: **P17\_BOOK\_ID**
 
      - p\_quantity > Item: **P17\_QUANTITY**
 
-    ![close dialog](images/remove-p-book.png " ")
+    ![close dialog](images/remove-p-book1.png " ")
+    ![close dialog](images/remove-p-book2.png " ")
 
-15. Right-click **Processing** and select **Create Process**.
+7. Right-click **Processing** and select **Create Process**.
 
-16. In the Property Editor, enter the following:
+    ![close dialog](images/create-process11.png " ")
+
+8. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -573,21 +582,22 @@ In this task, you create buttons for removing items from the cart and proceeding
 
          - Value: **DECREASE\_CART**
 
-    ![close dialog](images/remove-from-cart-process.png " ")
+    ![close dialog](images/remove-from-cart-process2.png " ")
 
-17. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
+9. Under **Decrease Cart by 1** process, expand **Parameters** and enter the following.
 
      - p\_book > Item: **P17\_BOOK\_ID**
 
      - p\_quantity > Item: **P17\_QUANTITY**
 
-    ![close dialog](images/remove-p-book.png " ")
+    ![close dialog](images/remove-p-book3.png " ")
+    ![close dialog](images/remove-p-quantity.png " ")
 
-18. Right-click **Processing** and select **Create Process**.
+10. Right-click **Processing** and select **Create Process**.
 
-    ![close dialog](images/create-process9.png " ")
+    ![close dialog](images/create-process12.png " ")
 
-19. In the Property Editor, enter the following:
+11. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -607,7 +617,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/checkout-param.png " ")
 
-20. Under **Checkout** process, expand **Parameters** and update the following:
+12. Under **Checkout** process, expand **Parameters** and update the following:
 
       | Parameter       |  Type   | Item |
       | --------------- |  ------ | --------------- |
@@ -615,18 +625,13 @@ In this task, you create buttons for removing items from the cart and proceeding
       | p\_order\_id | Item | P17\_ORDER\_ID |
 
     ![close dialog](images/user-id.png " ")
+    ![close dialog](images/order-id1.png " ")
 
-21. Click **Save**.
+13. Right-click **Processing** and select **Create Process**.
 
-## Task 3: Integrate Backend Processes
+    ![close dialog](images/create-process13.png " ")
 
-In this task, you create page processes to invoke PL/SQL procedures to manage cart actions and handle order creation and use server-side conditions and parameters to ensure smooth and secure cart management.
-
-1. Right-click **Processing** and select **Create Process**.
-
-    ![close dialog](images/create-process9.png " ")
-
-2. In the Property Editor, enter the following:
+14. In the Property Editor, enter the following:
 
      - Under Identification: 
 
@@ -644,16 +649,16 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/clear-sho-cart-process.png " ")
 
-3. Right-click **After Processing** and select **Create Branch**.
+15. Right-click **After Processing** and select **Create Branch**.
 
-    ![close dialog](images/create-branch9.png " ")
+    ![close dialog](images/create-branch14.png " ")
 
-4. In the Property Editor, enter the following:
+16. In the Property Editor, enter the following:
 
      - Identification > Name: **Go To Books**
 
-     - Behavior > Target: Click **No Defined Link**
-          - Page: 10
+     - Behavior > Target: Click **No Link Defined**
+          - Page: **10**
 
           - Set Items > Name: **P17\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
 
@@ -665,16 +670,16 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/go-to-books.png " ")
 
-5. Right-click **After Processing** and select **Create Branch**.
+17. Right-click **After Processing** and select **Create Branch**.
 
-    ![close dialog](images/create-branch9.png " ")
+    ![close dialog](images/create-branch15.png " ")
 
-6. In the Property Editor, enter the following:
+18. In the Property Editor, enter the following:
 
      - Identification > Name: **Go To Orders**
 
-     - Behavior > Target: Click **No Defined Link**
-          - Page: 16
+     - Behavior > Target: Click **No Link Defined**
+          - Page: **16**
 
           - Set Items > Name: **P16\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
 
@@ -686,17 +691,19 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/go-to-orders.png " ")
 
-7. Click **Save and Run**.
+19. Click **Save and Run**.
+
+    ![close dialog](images/save-1.png " ")
 
 ## Task 4: Build Order Information Page
 
-1. Navigate to the application homepage by clicking the **Application ID**.
+1. Navigate to Application Home Page by clicking **Application ID**.
 
-    ![close dialog](images/app-id9.png " ")
+    ![close dialog](images/app-id10.png " ")
 
 2. Click **Create Page**.
 
-    ![close dialog](images/create-page9.png " ")
+    ![close dialog](images/create-page10.png " ")
 
 3. Select **Blank Page**.
 
@@ -706,9 +713,8 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     - Under Identification:
 
-        - Name: **Order Information**
-
         - Page Number: **16**
+        - Name: **Order Information**
 
     - Under Navigation:
 
@@ -718,11 +724,11 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         Click **Create Page**.
 
-    ![close dialog](images/create-blank-page9.png " ")
+    ![close dialog](images/create-blank-page10.png " ")
 
 5. In the left pane, right-click **Body** and select **Create Region**.
 
-    ![close dialog](images/create-region17.png " ")
+    ![close dialog](images/create-region18.png " ")
 
 6. In the Property Editor, enter/select the following:
 
@@ -734,13 +740,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Template: **Content Block**
 
-        - Template Options: Click **Use Template Defaults**
+        - Template Options: Click **Use Template Defaults, Large**
 
-            - Select Show Region Icon
+            - Select **Show Region Icon**
 
         Click **OK**
 
+    ![close dialog](images/region-prop.png " ")
+
 7. In the left pane, right-click **Thank You for purchasing!** and select **Create Page Item**.
+
+    ![close dialog](images/create-page-item.png " ")
 
 8. In the Property Editor, enter/select the following:
 
@@ -750,13 +760,21 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Type: **Hidden**
 
+     ![close dialog](images/page-item-prop.png " ")
+
 9. In the left pane, right-click **Thank You for purchasing!** and select **Create Sub Region**.
+
+     ![close dialog](images/create-sub-region.png " ")
 
 10. In the Property Editor, enter/select the following:
 
     - Under Identification > Name: **Order Id: &P16\_ORDER\_ID.**
 
+    ![close dialog](images/sub-region-prop.png " ")
+
 11. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+
+    ![close dialog](images/create-sub-region1.png " ")
 
 12. In the Property Editor, enter/select the following:
 
@@ -770,7 +788,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below query:
+        - SQL Query: Copy and paste the below query:
 
         ```
         <copy>
@@ -792,27 +810,41 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
         </copy>
          ```
 
+    ![close dialog](images/sub-region-prop1.png " ")
+
 13. Under **Order Details**, expand **Columns**.
 
-14. Select **ORDER\_ID**, **USER\_ID** and **payment\_ID**, Under Identification > Type: **Hidden**.
+    ![close dialog](images/expand-col.png " ")
 
-15. Select **payment\_ID**, Under Settings > Value Protected: **Toggle OFF**.
+14. Select **ORDER\_ID**, **USER\_ID** and **PAYMENT\_ID**, Under Identification > Type: **Hidden**.
 
-16. Select **TOTAL**, Under Heading > Heading: **Total Amount**
+    ![close dialog](images/items-hide.png " ")
 
-17. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
+15. Select **TOTAL**, Under Heading > Heading: **Total Amount**
 
-18. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
+    ![close dialog](images/total-heading.png " ")
 
-19. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
+16. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
+
+    ![close dialog](images/added-date-heading.png " ")
+
+17. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
+
+    ![close dialog](images/added-time-heading.png " ")
+
+18. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Template: **Value Attribute Pairs - Column**
 
     - Under Pagination > Type: **No Pagination (Show All Rows)**.
 
-20. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+    ![close dialog](images/order-details-attributes.png " ")
 
-21. In the Property Editor, enter/select the following:
+19. In the left pane, right-click **Order Id: &P16\_ORDER\_ID.** and select **Create Sub Region**.
+
+    ![close dialog](images/create-sub-region2.png " ")
+
+20. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -824,7 +856,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below query:
+        - SQL Query: Copy and paste the below query:
 
         ```
         <copy>
@@ -843,19 +875,21 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
         </copy>
          ```
 
-22. Navigate to **Attributes**, enter/select the following:
+    ![close dialog](images/sub-region-prop2.png " ")
+
+21. Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Layout: **Float**
 
     - Under Card > Primary key column 1: **BOOK_ID**.
 
-    - Under Title > Column: **Title**
+    - Under Title > Column: **TITLE**
 
     - Under Secondary Body:
 
         - Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and Paste the below HTML Code:
+        - HTML Expression: Copy and paste the below HTML Code:
 
         ```
         <copy>
@@ -868,7 +902,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Advanced Formatting:: **Toggle On**
 
-        - HTML Expression: Copy and Paste the below HTML Code:
+        - HTML Expression: Copy and paste the below HTML Code:
 
         ```
         <copy>
@@ -879,7 +913,9 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - Position: **First**
 
-23. Click **Save and Run**.
+    ![close dialog](images/sub-region-prop-attr.png " ")
+
+22. Click **Save**.
 
 ## Task 5: Add My Books to Navigation Bar List
 
@@ -887,19 +923,19 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
 1. Navigate to **Shared Components**.
 
-    ![close dialog](images/sc-9.png " ")
+    ![close dialog](images/shared-comp.png " ")
 
 2. Under **Navigation and Search**, select **Navigation Bar List**.
 
-   ![close dialog](images/nav-bar-list.png " ")
+   ![close dialog](images/navi-bar-list.png " ")
 
 3. Click **Navigation Bar**.
 
-   ![close dialog](images/nav-bar.png " ")
+   ![close dialog](images/navi-bar.png " ")
 
 4. Click **Create Entry**.
 
-   ![close dialog](images/nav-create-entry.png " ")
+   ![close dialog](images/navi-create-entry1.png " ")
 
 5. Enter the following:
 
@@ -917,21 +953,27 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     Click **Create List Entry**.
 
+    ![close dialog](images/navi-entry-details.png " ")
+
 ## Task 6: Build My Books Page
 
-1. Navigate to the application homepage by clicking the **Application ID**.
+1. Click **Application ID**.
+
+    ![close dialog](images/app-id2.png " ")
 
 2. Click **Create Page**.
 
+     ![close dialog](images/create-page1.png " ")
+
 3. Select **Blank Page**.
+
+     ![close dialog](images/blank-page.png " ")
 
 4. In Create Blank Page dialog, enter/select the following:
 
     - Under Identification:
-
-        - Name: **My Books**
-
         - Page Number: **20**
+        - Name: **My Books**
 
     - Under Navigation:
 
@@ -941,7 +983,11 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         Click **Create Page**.
 
+     ![close dialog](images/page-details.png " ")
+
 5. In the left pane, right-click **Body** and select **Create Region**.
+
+    ![close dialog](images/create-region.png " ")
 
 6. In the Property Editor, enter/select the following:
 
@@ -955,7 +1001,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below query:
+        - SQL Query: Copy and paste the below query:
 
         ```
         <copy>
@@ -984,50 +1030,49 @@ In this task, you add an entry to the navigation bar that displays the shopping 
         | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
         | "QUANTITY"asc| QUANTITY | Quantity |
 
+    ![close dialog](images/region-details.png " ")
+
 7. Navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Layout: **Float**
 
     - Under Card > Primary key column 1: **BOOK\_ID**.
 
-    - Under Title > Column: **Title**
+    - Under Title > Column: **TITLE**
 
     - Under Secondary Body:
 
         - Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and Paste the below HTML Code:
+        - HTML Expression: Copy and paste the below HTML Code:
 
         ```
         <copy>
-        <b>Purchased total : </b> <strike>&TOTAL_PRICE. Rs </strike> &NEW_TOTAL_PRICE. Rs
+        <b>Quantity: </b>&QUANTITY.
         <br>
-        <b>Quantity is: </b>&QUANTITY.
+        <b>Purchased Total: </b> <strike>&#8377;&TOTAL_PRICE.</strike> &#8377;&NEW_TOTAL_PRICE.
+        <br>
+        <b>Discount: </b><span style="color: green;">&DISCOUNT.% Off</span>
         </copy>
          ```
 
     - Under Media:
 
-        - Advanced Formatting: **Toggle On**
+        - Source: **Image URL**
 
-        - HTML Expression: Copy and Paste the below HTML Code:
+        - URL: **&BOOK_IMAGE.**
 
-        ```
-        <copy>
-        <a href="&BUY_LINKS." target="_blank">
-        <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
-        </copy>
-         ```
+    ![close dialog](images/region-details-att.png " ")
 
 8. Click **Save and Run**.
 
 ## Task 7: Run an Application
 
-1. Navigate to **Search Books** and Select any book of your choice to buy.
+1. Navigate to **Search Books** and select any book of your choice to buy.
 
     ![close dialog](images/search-books.png " ")
 
-2. Click **Add to Cart**.
+2. Select **Quantity** and click **Add to Cart**.
 
     ![close dialog](images/click-add-to-cart.png " ")
 
@@ -1035,9 +1080,14 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     ![close dialog](images/click-shopping-cart.png " ")
 
-4. Now, you see the shopping cart page.
+4. Now, you see the shopping cart page, click **Proceed to Purchase** button.
 
     ![close dialog](images/view-shopping-cart.png " ")
+
+5. Now, you see the order details page, On the Navigation bar list, select **My Books** to check all the purchased books.
+
+    ![close dialog](images/order-details.png " ")
+    ![close dialog](images/view-purchased-books.png " ")
 
 ## Summary
 

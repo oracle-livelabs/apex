@@ -680,7 +680,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     - Under Entry:
 
-        - Sequence: **10**
+        - Sequence: **9**
 
         - Image/Class: **&SHOPPING\_CART\_ICON.**
 
@@ -698,7 +698,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
      Click **Create List Entry**.
 
-  ![close dialog](images/nav-create-list-entry.png " ")
+  ![close dialog](images/nav-create-list-entry0.png " ")
 
   ![close dialog](images/nav-create-list-entry1.png " ")
 

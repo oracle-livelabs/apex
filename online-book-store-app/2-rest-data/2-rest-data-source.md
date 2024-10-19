@@ -26,7 +26,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-app-builder.png " ")
 
-2. Select **Online Bookstore** Application.
+2. Click **Online Bookstore** Application.
 
     ![App builder home page](images/select-obs-app.png " ")
 
@@ -34,7 +34,7 @@ In this lab, you will:
 
     ![App builder home page](images/select-sc.png " ")
 
-4. Under **Data Sources**, select **REST Data Sources**.
+4. Under **Data Sources**, click **REST Data Sources**.
 
     ![App builder home page](images/rest-data-source.png " ")
 
@@ -42,7 +42,7 @@ In this lab, you will:
 
     ![App builder home page](images/rds-create.png " ")
 
-6. On Create REST Data Source - Method, Click **Next**.
+6. On Create REST Data Source - Method, click **Next**.
 
     ![App builder home page](images/rds-next1.png " ")
 
@@ -78,7 +78,7 @@ In this lab, you will:
 
 ## Task 2: Enable Data Synchronization
 
-1. After creating REST Data Source, Click **No** to enable Synchronization.
+1. After creating REST Data Source, click **No** to enable Synchronization.
 
     ![App builder home page](images/click-no.png " ")
 
@@ -94,7 +94,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, For **Synchronization Type**: select **Replace** and click **Save and Run**.
+3. Now, for **Synchronization Type**: select **Replace** and click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 

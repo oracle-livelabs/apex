@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Improve Faceted Search
 
-1. Go to the Application Home Page and click on **Page 10 - Search Books**.
+1. Go to the Application Home Page and click **Page 10 - Search Books**.
 
 2. Under **Search** region, select **P10\_AUTHOR** facet and update the following:
 
