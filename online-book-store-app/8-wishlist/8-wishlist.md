@@ -17,13 +17,13 @@ In this lab, you will:
 
 ## Task 1: Create My Wishlist page
 
-1. On Page Designer toolbar, Navigate to (+ v) and Select **Page**.
+1. Navigate to your application homepage by clicking **Application ID**.
 
-    ![close dialog](images/create-page-wishlist.png " ")
+    ![close dialog](images/app-id3.png " ")
 
-2. Select **Blank Page**.
+2. Click **Create Page** and select **Blank Page**.
 
-    ![close dialog](images/order-info-blank.png " ")
+    ![close dialog](images/create-blank-page1.png " ")
 
 3. In Create Blank Page dialog, enter/select the following:
 
@@ -41,11 +41,11 @@ In this lab, you will:
 
     Click **Create Page**.
 
-   ![close dialog](images/wishlist-create-page.png " ")
+   ![close dialog](images/page-details1.png " ")
 
-4. In the left pane, right-click **Body** and Select **Create Region**.
+4. In the left pane, right-click **Body** and select **Create Region**.
 
-    ![close dialog](images/wishlist-create-region.png " ")
+    ![close dialog](images/wishlist-create-reg.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -61,9 +61,11 @@ In this lab, you will:
 
         - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
 
-    ![Page Designer](images/compute-sql.png =40%x*)
+    ![Page Designer](images/compute-sql1.png)
 
 6. In the Code Editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
+
+    ![Page Designer](images/enter-prompt1.png ' ')
 
     Enter the following prompt in the chat box and click **Send**:
 
@@ -93,7 +95,7 @@ In this lab, you will:
 
     ```
     <copy>
-    SELECT 
+    SELECT
         ow.book_id,
         ob.author,
         ob.book_image,
@@ -102,11 +104,11 @@ In this lab, you will:
         ob.discount,
         ROUND(ob.price, 2) AS price,
         ROUND(ob.price * ((100 - ob.discount) / 100), 2) AS new_price
-    FROM 
+    FROM
         obs_wishlist ow
-    JOIN 
+    JOIN
         obs_books ob ON ow.book_id = ob.book_id
-    WHERE 
+    WHERE
         ow.user_id = :USER_ID;
 
     </copy>
@@ -118,7 +120,7 @@ In this lab, you will:
 
     ![Page Designer](images/success-ok.png ' ')
 
-10. Under Source > **Order By Item**: Enter/select the following:
+10. Under Source > **Order By Item**: enter/select the following:
 
     | Clause     |  Key   | Display |
     | ---------- |  ------ | ------ |
@@ -126,6 +128,8 @@ In this lab, you will:
     | "PRICE"asc | PRICE | Price |
 
     Click **OK**.
+
+    ![Page Designer](images/order-by-item1.png ' ')
 
 11. In the Property Editor, navigate to **Attributes** and enter/ select the following:
 
@@ -135,23 +139,25 @@ In this lab, you will:
 
     - Title > Column: **TITLE**
 
+    ![close dialog](images/wishlist-att.png " ")
+
     - Under Body:
 
         - Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and Paste the below HTML code:
+        - HTML Expression: Copy and paste the below HTML code:
         ```
        <copy>
        <div>
-       <b>Author:</b> &AUTHOR.
+        <b>Author:</b> &AUTHOR.
        </div>
 
        <div>
-       <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
+        <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
        </div>
 
        <div >
-       <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
+        <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
        </div>
        </copy>
        ```
@@ -163,11 +169,9 @@ In this lab, you will:
 
         - Image Description: **&DESCRIPTION.**
 
-    ![close dialog](images/wishlist-att.png " ")
-
     ![close dialog](images/wishlist-att1.png " ")
 
-12. Under **My Books** region, right-click **Actions** and click **Create Action**.
+12. Under **My Books** region, right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/wishlist-action.png " ")
 
@@ -187,7 +191,7 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-action-details.png " ")
 
-14. Right-click **My Books** region and click **Create Page Item**.
+14. Right-click **My Books** region and select **Create Page Item**.
 
     ![close dialog](images/wishtlist-page-item.png " ")
 
@@ -203,9 +207,9 @@ In this lab, you will:
 
     ![close dialog](images/wishlist-book-id.png " ")
 
-16. Right-click **My Books** region and click **Create Dynamic Action**.
+16. Right-click **My Books** region and select **Create Dynamic Action**.
 
-    ![close dialog](images/wishlist-dynamic-action.png " ")
+    ![close dialog](images/wishlist-dynamic-action1.png " ")
 
 17. In the Property editor, enter/select the following:
 
@@ -213,7 +217,7 @@ In this lab, you will:
 
     - When > Event: **Dialog Closed**
 
-    ![close dialog](images/refresh.png " ")
+    ![close dialog](images/refresh1.png " ")
 
 18. Select **TRUE** action and enter/select the following:
 
@@ -225,11 +229,13 @@ In this lab, you will:
 
         - Region: **My Books**
 
-    ![close dialog](images/refresh-action.png " ")
+    ![close dialog](images/refresh-action1.png " ")
 
-19. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+19. Click **Save**.
 
-    ![close dialog](images/wishlist-create-process.png " ")
+<!-- 19. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+
+    ![close dialog](images/wishlist-create-process1.png " ")
 
 20. In the Property editor, enter/select the following:
 
@@ -239,7 +245,7 @@ In this lab, you will:
 
         - Type: **Invoke API**
           
-     - Under Settings : 
+     - Under Settings: 
 
         - Package Name: **OBS\_MANAGE\_ORDERS**
 
@@ -251,7 +257,7 @@ In this lab, you will:
 
         - Value: **REMOVE\_FROM\_WISHLIST**
 
-      ![close dialog](images/remove-from-wishlist.png " ")
+      ![close dialog](images/remove-from-wishlist1.png " ")
 
 21. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
 
@@ -260,15 +266,18 @@ In this lab, you will:
      | p\_book\_id | Item |  P14\_BOOK\_ID |
      | p\_user\_id| Item | USER\_ID |
 
-    ![close dialog](images/user-id-param.png " ")
-
-22. Click **Save**.
+    ![close dialog](images/book-id-param1.png " ")
+    ![close dialog](images/user-id-param1.png " ") -->
 
 ## Task 2: Add Wishlist Management Buttons on Page 18
 
 1. Navigate to Page **18**.
 
+    ![close dialog](images/nav-to-page-18.png " ")
+
 2. In the left pane, right-click **Buttons Bar** and click **Create Button**.
+
+    ![close dialog](images/create-button1.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -276,7 +285,7 @@ In this lab, you will:
 
         - Button Name: **Add\_to\_Wishlist**
 
-        - Label: **Add to Wishlist**
+        - Label: **Add To Wishlist**
 
     - Layout > Slot: **Next**
 
@@ -284,15 +293,15 @@ In this lab, you will:
 
         - Button Template: **Text with Icon**
 
-        - HOT: **Toggle On**
+        - Hot: **Toggle On**
 
         - Template Options: Click **Use Template Defaults**
 
-            - Type: Primary
+            - Type: **Primary**
 
-            - Style: Simple
+            - Style: **Simple**
 
-            Click Ok
+            Click **Ok**
 
         - Icon: **fa-heart-o**
 
@@ -300,7 +309,7 @@ In this lab, you will:
 
         - Type: **No rows returned**
 
-        - SQL Query: Copy and Paste the below code into the code editor:
+        - SQL Query: Copy and paste the below code into the code editor:
     ```
     <copy>
     select * from obs_wishlist where user_id = :user_id AND
@@ -310,7 +319,11 @@ In this lab, you will:
 
     - Under Security > Authorization Scheme: **Must Not Be Public User**
 
-4. Right-click **Buttons Bar** and click **Create Button**.
+    ![close dialog](images/button1-prop.png " ")
+
+4. Right-click **Buttons Bar** and select **Create Button**.
+
+    ![close dialog](images/create-button2.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -318,23 +331,25 @@ In this lab, you will:
 
         - Button Name: **Remove\_from\_Wishlist**
 
-        - Label: **Remove from Wishlist**
+        - Label: **Remove From Wishlist**
 
     - Under Layout > Slot: **Next**
 
     - Under Appearance:
 
-        - Button Template: **Text with Icon** 
+        - Button Template: **Text with Icon**
 
         - Icon: **fa-heart**
 
     - Under Behavior > Database Action: **SQL DELETE Action**
 
+    ![close dialog](images/create-button2-prop1.png " ")
+
     - Under Server-side Condition:
 
         - Type: **Rows returned**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and paste the below code:
     ```
     <copy>
     select * from obs_wishlist where user_id = :user_id
@@ -344,7 +359,11 @@ In this lab, you will:
 
     - Under Security > Authorization Scheme: **Must Not Be Public User**
 
-6. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+    ![close dialog](images/create-button2-prop2.png " ")
+
+6. Navigate to **Processing** tab, right-click **Processes** and select **Create Process**.
+
+    ![close dialog](images/create-process1.1.png " ")
 
 7. In the Property Editor, enter/select the following:
 
@@ -366,13 +385,21 @@ In this lab, you will:
 
     - Under Server-side Condition > When button pressed: **Add\_to\_Wishlist**
 
+    ![close dialog](images/process1-details.png " ")
+
 8. Under **Add to Wishlist**, expand parameters and enter/select the following:
 
     - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
 
+    ![close dialog](images/process1-para1.png " ")
+
     - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
 
-9. Right-click **Processing** and Click **Create Process**.
+    ![close dialog](images/process1-para2.png " ")
+
+9. Right-click **Processes** and select **Create Process**.
+
+    ![close dialog](images/create-process1.2.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -390,33 +417,38 @@ In this lab, you will:
 
     - Under Server-side condition > When button pressed: **Remove\_from\_Wishlist**
 
-11. Under **Remove From Whislist**, expand parameters and enter/select the following:
+    ![close dialog](images/process2-details.png " ")
+
+11. Under **Remove from Wishlist**, expand parameters and enter/select the following:
 
     - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
-
+    ![close dialog](images/process2-para1.png " ")
     - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
+    ![close dialog](images/process2-para2.png " ")
 
-12. Drag and drop **Close Dialog** after **Remove from Wishlist** Process.
+12. Select **Close Dialog** process and update **Sequence**: **100** under **Execution**.
 
-13. Click Save.
+    ![close dialog](images/process-update.png " ")
+
+13. Click **Save**.
 
 ## Task 3: Create an entry in Navigation Bar List
 
 1. Navigate to **Shared Component**.
 
-    ![close dialog](images/sc-4.png " ")
+    ![close dialog](images/sc-5.png " ")
 
 2. Under Navigation and Search, click **Navigation Bar List**.
 
-    ![close dialog](images/nav-bar-list1.png " ")
+    ![close dialog](images/nav-bar-list-wish.png " ")
 
 3. Click **Navigation Bar**.
 
-    ![close dialog](images/nav-bar1.png " ")
+    ![close dialog](images/nav-bar-wish.png " ")
 
 4. Click **Create Entry**.
 
-    ![close dialog](images/create-entery.png " ")
+    ![close dialog](images/create-wishlist-nav-entry.png " ")
 
 5. Enter/select the following:
 
@@ -433,8 +465,6 @@ In this lab, you will:
       Click **Create List Entry**.
 
     ![close dialog](images/my-wishlist-nav.png " ")
-
-6. Click Save and Run.
 
 ## Summary
 
