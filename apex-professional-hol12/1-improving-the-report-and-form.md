@@ -1,9 +1,10 @@
 # Create and Use Forms
 
 ## Introduction
+
 In this lab, you learn how to Create and Customize a Form, and then you link the Form to an Interactive Report.
 
-Estimated Time: 20 minutes
+Estimated Time: 5 minutes
 
 ### Downloads
 
@@ -11,103 +12,113 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create a Product Details Form
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
+1. Navigate to the **App Builder**. Click **Online Shopping Application**.
 
     ![App Builder](images/navigate-to-osa1.png " ")
 
     ![Online Shopping Application](images/navigate-to-osa2.png " ")
 
-2. Now, click Create Page.
+2. Now, click **Create Page**.
 
     ![Create Page](images/create-form1.png " ")
 
-3. For Create a Page: Select Page Type - Select **Component** and then select **Form**.
+3. select **Form**.
 
     ![Create Form](images/create-form2.png " ")
 
-4. For Page Attributes, enter the following:
-  Under **Page Definition**:
-    - For Page Number, enter **21**.
-    - For Page Name, enter **Product Details**
-    - For Page Mode, select **Modal Dialog**
+4. For page attributes, enter/select the following:
 
-  Under **Data Source**:
-    - For **Table/View Name**, Select **PRODUCTS**.
+    - Under Page Definition:
 
-  Click **Next.**
+        - Page Number: **15**.
 
-  ![Define Form](./images/create-form3.png " ")
+        - Name: **Product Details**
 
-5. Under Primary key, for Primary Key Column1 - Ensure the **PRODUCT_ID** is selected as the primary key. Then click **Create Page**.
+        - Page Mode: **Modal Dialog**
 
-  ![Define Primary key](./images/create-form4.png " ")
+    - Data Source > Table/View Name: **PRODUCTS**.
+
+    Click **Next.**
+
+    ![Define Form](./images/create-form3.png " ")
+
+5. For **Primary Key Column1**, ensure the **PRODUCT_ID** is selected and click **Create Page**.
+
+    ![Define Primary key](./images/create-form4.png " ")
 
 ## Task 2: Link a Report to a Form
 
-1. Navigate to the **Page Designer**. Then, Click **Page 14**
+1. From **Page Designer** toolbar, navigate to page finder and select **Page 14**
 
     ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
 
-2. In the Rendering tree (left pane), navigate to **Products**. Click **Attributes** and do the following:
+2. In the **Rendering** tab (left pane), navigate to **Products**. Click **Attributes** and update the following:
 
     - Under **Link**:
-      -   For Link Column - select **Link to a Custom Target**
-      -   Click **No Link Defined** Button and do the following in the popup  
-        - For Page - enter **21**.  
-        - For Set Items, enter:
+
+        - Link Column: **Link to a Custom Target**
+
+        - Click **No Link Defined** and enter/select the following:
+
+            - Page: **15**.
+
+            - Set Items:
 
             | Name             | Value        |
             | ---------------- | ------------ |
-            | P21\_PRODUCT\_ID | #PRODUCT_ID# |
+            | P15\_PRODUCT\_ID | #PRODUCT_ID# |
 
-        - For Clear Cache, enter **21**  
-        - Click **Ok**.
+            - Clear Cache: **15**
 
-    Click **Save.**      
+            - Click **OK**.
 
     ![Link a column](./images/linking-a-form2.png " ")
 
-3. Click **Save** and then run the application. Navigate to **Administration** > **Manage Products** page in the runtime environment.
+3. Click **Save** and run the application. Navigate to **Administration** > **Manage Products** page in the runtime environment.
 
-4. Now, In the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
+4. Now, in the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
 
-  ![Click Pencil icon](./images/refresh-manage-products.png " ")
+    ![Click Pencil icon](./images/refresh-manage-products.png " ")
 
-  ![View Product Details](./images/refresh-manage-products1.png " ")
+    ![View Product Details](./images/refresh-manage-products1.png " ")
 
 ## Task 3: Enhance the Form
 
-1.  Navigate to the **Page 21** in the **Page Designer**.
+1. Navigate to the **Page 15** in the **Page Designer**.
 
-    ![Navigate to Page 21](images/navigate-to-page21.png " ")
+    ![Navigate to Page 15](images/navigate-to-page21.png " ")
 
 2. Items can readily be moved using drag-and-drop within Layout. You can also drag new components like regions, items, and buttons into the Layout pane from the Gallery, located directly below it.
 
-  In Page Designer, with **Page 21** loaded, within Layout (middle pane), click **P21\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P21\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+    In Page Designer, with **Page 15** loaded, within Layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
 
- ![Enhance form1](images/enhance-form1.png " ")
+    ![Enhance form1](images/enhance-form1.png " ")
 
 3. As an alternative to drag-and-drop, you can also reposition items using attributes in the Property Editor.
 
-  In Page Designer, within Layout (or the Rendering tree in the left pane), select **P21\_IMAGE\_CHARSET**. In the Property Editor (right pane), **Under Layout > Start New Row**.
+    In Page Designer, within Layout (or the Rendering tab in the left pane), select **P15\_DEPARTMENT\_ID** and **P15\_CLOTHING\_ID** In the Property Editor (right pane), Under Layout, toggle off **Start New Row**.
 
-  ![Enhance form2](images/enhance-form2.png " ")
+    ![Enhance form2](images/enhance-form2.png " ")
 
-4. You now need to Focus on **First item on Page**. In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to the Navigation Menu and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
+4. Select **P15\_COLOR\_ID, P15\_DEPARTMENT\_ID and P15\_CLOTHING\_ID** and update **Name** as following:
 
-  ![Enhance form3](images/enhance-form3.png " ")
+5. You now need to Focus on **First item on Page**. In **Page Rendering**(Left Pane), Select **Page 15: Product Details**. Then, In the **Property Editor**, Scroll down to the Navigation Menu and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
 
-5. Now that you have customized the Form. You can reload the **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
+   ![Enhance form3](images/enhance-form3.png " ")
 
-  ![Enhanced Form](images/enhanced-form.png " ")
+6. Now that you have customized the Form. You can reload the **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
+
+   ![Enhanced Form](images/enhanced-form.png " ")
 
 ## Summary
+
 You now know how to Create and Customize a Form and then link the Form to an Interactive Report. You may now **proceed to the next lab**.
 
 ## What's next
+
 In the next lab, you learn how to make some pages publicly accessible, allowing users to access specific pages in your application without requiring them to log in.
 
 ## Acknowledgements
- - **Author/Contributors** -  Roopesh Thokala, Senior Product Manager
- - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author/Contributors** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
