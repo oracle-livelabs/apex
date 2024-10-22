@@ -291,7 +291,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
 1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
 
-    ![close dialog](images/user-create-page.png " ")
+    ![close dialog](images/10-3-user-create-page.png " ")
 
 2. Click **Blank Page**.
 
@@ -311,11 +311,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
 4. In the property editor, under **Navigation** > Warn on Unsaved Changes: **Toggle Off**
 
-    ![close dialog](images/warn-on-change.png " ")
+    ![close dialog](images/10-3-warn-on-change.png " ")
 
 5. Right-click **Content Body** and select **Create Region**.
 
-    ![close dialog](images/user-create-region.png " ")
+    ![close dialog](images/10-3-user-create-region1.png " ")
 
 6. In the property editor, enter/select the following:
 
@@ -329,23 +329,27 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Appearance > Template: **Blank with Attributes**
 
-   ![close dialog](images/current-user-form.png " ")
+   ![close dialog](images/10-3-current-user-form.png " ")
 
-7. Under **Update Current User**, expand **Columns**. Right-click **P26\_MIME\_TYPE** and **P26\_PICTURE\_URL** and select **Delete**.
+7. Under **Update Current User**, expand **Columns**. Select **P26\_MIME\_TYPE** and **P26\_PICTURE\_URL**, right-click and select **Delete**.
 
-    ![close dialog](images/delete-mime.png " ")
+    ![close dialog](images/10-3-delete-col.png " ")
 
 8. Select **P26\_USER\_ID**, Under Source > Query Only: **Toggle Off**.
 
-    ![close dialog](images/user-id-query-only.png " ")
+    ![close dialog](images/10-3-user-id.png " ")
 
 9. Select **P26\_EMAIL**, under Identification > Type: **Display Only** 
 
+    ![close dialog](images/10-3-email.png " ")
+
 10. Select **P26\_USERNAME** and **P26\_FULL\_NAME**, under Identification > Type: **Text Field**.
 
-    ![close dialog](images/username-textfield.png " ")
+    ![close dialog](images/10-3-username-fullname.png " ")
 
 11. Select **P26\_PASSWORD** and **P26\_IS\_ADMIN**, under Identification > Type: **Hidden**.
+
+    ![close dialog](images/10-3-password-isadmin.png " ")
 
 12. Select **P26\_PROFILE\_PIC** and enter/select the following:
 
@@ -359,11 +363,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Aspect Ratio: **1:1**
 
-    ![close dialog](images/profile-pic.png " ")
+    ![close dialog](images/10-3-profile-pic.png " ")
 
 13. Right-click **Content Body** and select **Create Region**.
 
-    ![close dialog](images/create-region-user.png " ")
+    ![close dialog](images/10-3-create-region-user.png " ")
 
 14. In the property editor, enter/select the following:
 
@@ -371,41 +375,43 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Appearance > Template: **Buttons Container**
 
-    ![close dialog](images/create-region-buttons.png " ")
+    ![close dialog](images/10-3-create-region-buttons.png " ")
 
 15. Right-click **Buttons** and select **Create Button**.
 
-    ![close dialog](images/create-btn-region.png " ")
+    ![close dialog](images/10-3-create-btn-region.png " ")
 
 16. In the property editor, enter/select the following:
 
-    - Under Identification > Button Name: **CANCEL**
+    - Under Identification:
+        - Button Name: **CANCEL**
+        - Label: **Cancel**
 
     - Under Layout > Slot: **Close**
 
     - Under Behavior > Action: **Defined by Dynamic Action**
 
-    ![close dialog](images/cancel-btn.png " ")
+    ![close dialog](images/10-3-cancel-btn.png " ")
 
 17. Right-click **CANCEL** and select **Create Dynamic Action**.
 
-    ![close dialog](images/dynamic-action1.png " ")
+    ![close dialog](images/10-3-dynamic-action1.png " ")
 
 18. In the property editor, enter/select the following:
 
     - Under Identification > Name: **Cancel Dialog**
 
-    ![close dialog](images/cancel-dialog.png " ")
+    ![close dialog](images/10-3-cancel-dialog.png " ")
 
 19. Select **TRUE** Action, enter/select the following:
 
     - Under Identification > Action: **Cancel Dialog**
 
-    ![close dialog](images/cancel-dialog-true.png " ")
+    ![close dialog](images/10-3-cancel-dialog-true.png " ")
 
 20. Right-click **Buttons** and select **Create Button**.
 
-    ![close dialog](images/create-btn2.png " ")
+    ![close dialog](images/10-3-create-btn2.png " ")
 
 21. In the property editor, enter/select the following:
 
@@ -427,13 +433,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Item: **P26\_USER\_ID**
 
-    ![close dialog](images/save-btn.png " ")
-
-    ![close dialog](images/save-btn-server.png " ")
+    ![close dialog](images/10-3-save-btn.png " ")
 
 22. Right-click **SAVE** and select **Create Duplicate**
 
-    ![close dialog](images/duplicate-btn.png " ")
+    ![close dialog](images/10-3-duplicate-btn.png " ")
 
 23. In the property editor, enter/select the following:
 
@@ -447,9 +451,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Server-side Condition > Type: **ITEM IS NULL**
 
+    ![close dialog](images/10-3-create-btn-details.png " ")
+
 24. Navigate to **Processing** tab and right-click **Processing** and select **Create Process**.
 
-    ![close dialog](images/create-process26.png " ")
+    ![close dialog](images/10-3-create-process1.png " ")
 
 25. In the property editor, enter/select the following:
 
@@ -463,9 +469,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Success Message > Success Message: **Profile Details Updated Successfully!**
 
-    ![close dialog](images/update-current-user-proceess.png " ")
+    ![close dialog](images/10-3-update-current-user-proceess.png " ")
 
 26. Right-click **Processing** and select **Create Process**.
+
+     ![close dialog](images/10-3-create-proceess.png " ")
 
 27. In the property editor, enter/select the following:
 
@@ -473,11 +481,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
 
-    ![close dialog](images/change-username-process.png " ")
+    ![close dialog](images/10-3-change-username-process.png " ")
 
 28. Right-click **After Processing** and select **Create Branch**
 
-    ![close dialog](images/create-branch26.png " ")
+    ![close dialog](images/10-3-create-branch26.png " ")
 
 29. In the property editor, enter/select the following:
 
@@ -491,33 +499,35 @@ In this task, you will learn how to create and configure a page to update the cu
 
         Click **OK**.
 
-    ![close dialog](images/go-to-my-profile.png " ")
+    ![close dialog](images/10-3-go-to-my-profile.png " ")
 
 30. Click **Save**.
 
 31. Navigate to page **15010**.
 
-    ![close dialog](images/navigate-to-15010.png " ")
+    ![close dialog](images/10-3-navigate-to-15010.png " ")
 
 32. Right-click **My details** and select **Create Button**.
 
-    ![close dialog](images/create-btn15.png " ")
+    ![close dialog](images/10-3-create-btn15.png " ")
 
 33. In the property editor, enter/select the following:
 
-    - Under Identification > Button Name: **EDIT_PROFILE**
+    - Under Identification:
+        - Button Name: **EDIT_PROFILE**
+        - Label: **Edit Profile**
 
     - Under Layout:
 
-        - Start New Row: **Toggle off**
+        - Start New Row: **Toggle Off**
 
-        - New Column: **Toggle off**
+        - New Column: **Toggle Off**
 
     - Under Appearance:
 
         - Button template: **Text with Icon**
 
-        - Template Options: Click **Use Template Options**
+        - Template Options: Click **Use Template Defaults**
 
             - Size: **large**
 
@@ -547,9 +557,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
             Click **OK**.
 
-    ![close dialog](images/edit-profile-btn.png " ")
+    ![close dialog](images/10-3-edit-profile-btn.png " ")
 
-    ![close dialog](images/edit-profile-redirect.png " ")
+    ![close dialog](images/10-3-edit-profile-redirect.png " ")
 
 34. Click **Save**.
 
