@@ -567,9 +567,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
 This task provides a comprehensive step-by-step process for creating and configuring an application's "Reset Password" page. The page will be designed as a modal dialog featuring a form allowing users to reset their passwords securely.
 
-1. On page designer toolbar, Navigate to **(+ v)** and select **Page**.
+1. On page designer toolbar, navigate to **(+ v)** and select **Page**.
 
-    ![close dialog](images/create-page27.png " ")
+    ![close dialog](images/10-4-create-page.png " ")
 
 2. Click **Blank Page**.
 
@@ -589,7 +589,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 4. Right-click **Content Body** and select **Create Region**.
 
-    ![close dialog](images/create-region27.png " ")
+    ![close dialog](images/10-4-create-region1.png " ")
 
 5. In the property editor, enter/select the following:
 
@@ -603,24 +603,23 @@ This task provides a comprehensive step-by-step process for creating and configu
 
      - Under Appearance > Template: **Blank with Attributes**
 
-    ![close dialog](images/form27.png " ")
+    ![close dialog](images/10-4-form-details.png " ")
 
-6. Under **Reset Password** region, expand columns and
-delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
+6. Under **Reset Password** region, expand columns and select all columns except **P27\_USER\_ID** and **P27\_EMAIL**, right-click and select **delete**
 
-    ![close dialog](images/delete-27.png " ")
+    ![close dialog](images/10-4-delete.png " ")
 
 7. Select **P27_EMAIL** and under Identification > Type: **Display Only**.
 
-    ![close dialog](images/email27.png " ")
+    ![close dialog](images/10-4-email.png " ")
 
 8. Select **P27\_USER\_ID** and under Source > Query Only: **Toggle Off**.
 
-    ![close dialog](images/userid27.png " ")
+    ![close dialog](images/10-4-userid.png " ")
 
 9. Right-click **Reset Password** and select **Create Page Item**.
 
-    ![close dialog](images/page-item27.png " ")
+    ![close dialog](images/10-4-page-item.png " ")
 
 10. In the property editor, enter/select the following:
 
@@ -630,11 +629,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Type: **Password**
 
-    ![close dialog](images/new-pass.png " ")
+    ![close dialog](images/10-4-new-pass.png " ")
 
 11. Right-click **P27\_NEW\_PASSWORD** and select **Create  Validation**.
 
-    ![close dialog](images/new-pass-val.png " ")
+    ![close dialog](images/10-4-new-pass-val.png " ")
 
 12. In the property editor, enter/select the following:
 
@@ -658,9 +657,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
      - Under Error > Error Message: **Password must have some value**.
 
-    ![close dialog](images/new-pass-val1.png " ")
+    ![close dialog](images/10-4-new-pass-val1.png " ")
 
 13. Right-click **Reset Password** and select **Create Page Item**.
+
+    ![close dialog](images/10-4-reset-pass.png " ")
 
 14. In the property editor, enter/select the following:
 
@@ -676,9 +677,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Column: **PASSWORD**
 
-    ![close dialog](images/confirm-pass.png " ")
+    ![close dialog](images/10-4-confirm-pass.png " ")
 
 15. Right-click **P27\_CONFIRM\_NEW\_PASSWORD** and select **Create Validation**.
+
+    ![close dialog](images/10-4-confirm-pass-val1.png " ")
 
 16. In the property editor, enter/select the following:
 
@@ -703,11 +706,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
     - Under Error > Error Message: **Confirm Password and Password must be same.**
 
-    ![close dialog](images/confirm-pass-val.png " ")
+    ![close dialog](images/10-4-confirm-pass-val.png " ")
 
-17. Right-click **Region Body** and select **Create Region**.
+17. Right-click **Content Body** and select **Create Region**.
 
-    ![close dialog](images/create-region271.png " ")
+    ![close dialog](images/10-4-create-region271.png " ")
 
 18. In the property editor, enter/select the following:
 
@@ -715,11 +718,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
     - Under Appearance > Template: **Buttons Container**
 
-    ![close dialog](images/button-region.png " ")
+    ![close dialog](images/10-4-button-region.png " ")
 
 19. Right-click **Buttons** and select **Create Button**.
 
-    ![close dialog](images/create-btn27.png " ")
+    ![close dialog](images/10-4-create-btn27.png " ")
 
 20. In the property editor, enter/select the following:
 
@@ -739,25 +742,26 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
             Click **OK**.
 
-    ![close dialog](images/btn-link.png " ")
+    ![close dialog](images/10-4-btn-link.png " ")
 
 21. Right-click **CANCEL** and select **Create Dynamic Action**.
 
-    ![close dialog](images/dynamic-action.png " ")
+    ![close dialog](images/10-4-dynamic-action.png " ")
 
 22. In the property editor, enter/select the following:
 
     - Under Identification > Name: **Cancel Dialog**
 
-    ![close dialog](images/dyn-name.png " ")
+    ![close dialog](images/10-4-dyn-name.png " ")
 
 23. Select **TRUE** Action, enter/select the following:
 
     - Under Identification > Action: **Cancel Dialog**
 
-    ![close dialog](images/true-action27.png " ")
+    ![close dialog](images/10-4-true-action27.png " ")
 
 24. Right-click **Buttons** and select **Create Button**.
+    ![close dialog](images/10-4-create-button2.png " ")
 
 25. In the property editor, enter/select the following:
 
@@ -779,13 +783,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Item: **P27\_EMAIL**
 
-    ![close dialog](images/save-btn27.png " ")
-
-    ![close dialog](images/save-btn271.png " ")
+    ![close dialog](images/10-4-save-btn27.png " ")
 
 26. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
-    ![close dialog](images/create-process27.png " ")
+    ![close dialog](images/10-4-create-process27.png " ")
 
 27. In the property editor, enter/select the following:
 
@@ -801,11 +803,11 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
     - Under Success Message > Success Message: **Reset Password Successfully!**
 
-    ![close dialog](images/change-pass.png " ")
+    ![close dialog](images/10-4-change-pass.png " ")
 
 28. Right-click **After Processing** and select **Create Branch**.
 
-    ![close dialog](images/create-branch27.png " ")
+    ![close dialog](images/10-4-create-branch27.png " ")
 
 29. In the property editor, enter/select the following:
 
@@ -819,17 +821,17 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
          Click **OK**
 
-    ![close dialog](images/branch-link.png " ")
+    ![close dialog](images/10-4-branch-link.png " ")
 
 30. Click **Save**.
 
 31. Navigate to page **15010**.
 
-    ![close dialog](images/navigate-to-profile.png " ")
+    ![close dialog](images/10-4-navigate-to-profile1.png " ")
 
 32. Right-click **My details** and select **Create Button**.
 
-    ![close dialog](images/create-btn-pro.png " ")
+    ![close dialog](images/10-4-create-btn-pro.png " ")
 
 33. In the property editor, enter/select the following:
 
@@ -853,6 +855,8 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
         - Icon: **fa-pencil-square-o**
 
+    ![close dialog](images/10-4-change-pass-pro.png " ")
+
     - Under Behavior:
 
         - Action: **Redirect to Page in this Application**
@@ -871,13 +875,9 @@ delete all items except **P27\_USER\_ID** and **P27\_EMAIL**
 
             Click **OK**.
 
-    ![close dialog](images/change-pass-pro.png " ")
-
-    ![close dialog](images/change-pass-link.png " ")
+    ![close dialog](images/10-4-change-pass-link.png " ")
 
 34. Click **Save**.
-
-    ![close dialog](images/review-change-pass.png " ")
 
 ## Task 5: Show Profile Pic using RESTful Services
 
