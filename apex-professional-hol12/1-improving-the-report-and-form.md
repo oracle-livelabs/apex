@@ -68,9 +68,9 @@ Once the product form is created, you need to link it to an existing interactive
 
             - Set Items:
 
-    | Name             | Value        |
-    | ---------------- | ------------ |
-    | P15\_PRODUCT\_ID | #PRODUCT_ID# |
+           | Name             | Value        |
+           | ---------------- | ------------ |
+           | P15\_PRODUCT\_ID | #PRODUCT_ID# |
 
             - Clear Cache: **15**
 
@@ -96,7 +96,7 @@ After linking the Form to the report, it's time to enhance its usability and app
 
 2. Items can readily be moved using drag-and-drop within the layout. You can also drag new components like regions, items, and buttons from the Gallery into the Layout pane directly below it.
 
- In Page Designer, with **Page 15** loaded, within the layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+    In Page Designer, with **Page 15** loaded, within the layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
 
     ![Enhance form1](images/enhance-form1.png " ")
 
