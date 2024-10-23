@@ -885,19 +885,19 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
 1. Navigate to **SQL Workshop** and select **RESTful Services**.
 
-    ![close dialog](images/restful-services.png " ")
+    ![close dialog](images/10-5-restful-services.png " ")
 
-2. Click Register Schema with ORDS.
+2. Click **Register Schema with ORDS**.
 
-    ![close dialog](images/register-schema.png " ")
+    ![close dialog](images/10-5-register-schema.png " ")
 
 3. Click **Save Schema Attributes**.
 
-    ![close dialog](images/save-schema.png " ")
+    ![close dialog](images/10-5-save-schema.png " ")
 
-4. From the left pane, select **Modules** and select **Create Module**.
+4. From the left pane, select **Modules** and click **Create Module**.
 
-    ![close dialog](images/create-module.png " ")
+    ![close dialog](images/10-5-create-module.png " ")
 
 5. Under **Module Definition**, enter/select the following:
 
@@ -907,59 +907,61 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
     Click **Create Module**.
 
-    ![close dialog](images/create-module1.png " ")
+    ![close dialog](images/10-5-create-module1.png " ")
 
-6. Under **Resource Templates**, select **Create Template**.
+6. Under **Resource Templates**, click **Create Template**.
 
-    ![close dialog](images/create-template.png " ")
+    ![close dialog](images/10-5-create-template.png " ")
 
-7. For **Uri template**, enter **profile_pic/:id** and select **Create Template**.
+7. For **URI Template**, enter **profile_pic/:id** and click **Create Template**.
 
-    ![close dialog](images/create-template1.png " ")
+    ![close dialog](images/10-5-create-template1.png " ")
 
 8. Under **Resource Handlers**, click **Create Handler** and enter/select the following:
 
-    - Under Resource Handler > Source type: **media resource**
+    - Under Resource Handler > Source type: **Media Resource**
 
     - Under Source > Code: Copy and paste the following code:
 
-    ```
-    <copy>
-    select mime_type, profile_pic from obs_users where user_id = :id
-    </copy>
-    ```
+        ```
+        <copy>
+        select mime_type, profile_pic from obs_users where user_id = :id
+        </copy>
+        ```
    Click **Create Handler**.
 
-   ![close dialog](images/create-handler.png " ")
+   ![close dialog](images/10-5-create-handler.png " ")
 
-   ![close dialog](images/create-handler1.png " ")
+   ![close dialog](images/10-5-create-handler1.png " ")
 
 9. Copy the **Full URL** and replace the id with user\_id to use in the next lab.
 
+    ![close dialog](images/10-5-copy-url.png " ")
+
 10. As of now, you have created RESful services. Now, you will create an Application Item. To do so, navigate to shared Components. Click **App Builder > Online Bookstore > Shared Components**.
 
-    ![close dialog](images/app-builder-rest.png " ")
+    ![close dialog](images/10-5-app-builder-rest.png " ")
 
-    ![close dialog](images/obs-app1.png " ")
+    ![close dialog](images/10-5-obs-app1.png " ")
 
-    ![close dialog](images/sc-rest.png " ")
+    ![close dialog](images/10-5-sc-rest.png " ")
 
-11. Under Application Logic, select **Application Items** and click **Create**.
+11. Under Application Logic, click **Application Items** and click **Create**.
 
-     ![close dialog](images/app-items-rest.png " ")
+     ![close dialog](images/10-5-app-items-rest.png " ")
 
-     ![close dialog](images/app-item-create-rest.png " " )
+     ![close dialog](images/10-5-app-item-create-rest.png " " )
 
 12. For Name: enter **PICTURE\_URL** and click **Create Application Item**.
 
-    ![close dialog](images/create-app-item-rest.png " " )
+    ![close dialog](images/10-5-create-app-item-rest.png " " )
 
 13. Now, you will create an Application Computation. To create an
-Application Computation, navigate back to the shared component and Under **Application Logic**, click **Application Computations**.
+Application Computation, navigate back to the shared component and under **Application Logic**, click **Application Computations**.
 
-    ![close dialog](images/sc-rest1.png " " )
+    ![close dialog](images/10-5-sc-rest1.png " " )
 
-    ![close dialog](images/app-comp-rest.png " " )
+    ![close dialog](images/10-5-app-comp-rest.png " " )
 
 14. Click **Create** and enter/select the following:
 
@@ -976,25 +978,25 @@ Application Computation, navigate back to the shared component and Under **Appli
         ```
         <copy>
         select case when picture_url is not null and profile_pic is null then picture_url
-             else 'https://apex.oracle.com/pls/apex/<workspace name>/images/profile_pic/' || user_id
-              end case
-            from obs_users where user_id = :user_id;
+        else 'https://apex.oracle.com/pls/apex/<workspace name>/images/profile_pic/' || user_id
+        end case
+        from obs_users where user_id = :user_id;
         </copy>
         ```
 
-    *Note: For the else statement in the above code, paste the URL you copied in the above task*
+    *Note: For the else statement in the above code, paste the URL you copied in the above task till **..profile_pic/***
 
     Click **Create Computation**.
 
-    ![close dialog](images/create-app-comp-rest.png " " )
+    ![close dialog](images/10-5-create-app-comp-rest.png " " )
 
-    ![close dialog](images/create-comp-rest.png " " )
+    ![close dialog](images/10-5-create-comp-rest.png " " )
 
-15. Now, you will update the navigation bar list to add badge value. Navigate to shared components and select **Navigation Bar List**.
+15. Now, you will update the navigation bar list to add badge value. Navigate to shared components and click **Navigation Bar List**.
 
-    ![close dialog](images/sc-rest2.png " " )
+    ![close dialog](images/10-5-sc-rest2.png " " )
 
-    ![close dialog](images/nav-bar-list-rest.png " " )
+    ![close dialog](images/10-5-nav-bar-list-rest.png " " )
 
 16. Click **Navigation Bar** and click edit icon of **&USERNAME.** and update the following:
 
@@ -1007,34 +1009,36 @@ Application Computation, navigate back to the shared component and Under **Appli
     ```
 
     Click **Apply Changes**.
+    ![close dialog](images/10-5-nav-bar-rest.png " " )
+    ![close dialog](images/10-5-edit-username-rest.png " " )
 
-    ![close dialog](images/edit-username-rest.png " " )
-
-    ![close dialog](images/badge-value.png " " )
+    ![close dialog](images/10-5-badge-value.png " " )
 
 17. Next, you will update my profile page to display my profile picture on the page. Navigate to page **15010**.
 
-    ![close dialog](images/edit-page-15010.png " " )
+    ![close dialog](images/10-5-edit-page-15010.png " " )
 
 18. Select **My Details** region, right-click **Region Body** and select **Create Region**.
 
-    ![close dialog](images/create-region-15010.png " " )
+    ![close dialog](images/10-5-create-region-15010.png " " )
 
 19. Enter/select the following:
 
-    - Under Identification > Title: **Profile Photo**
+    - Under Identification > Name: **Profile Photo**
 
     - Under Appearance > Template: **Blank with Attributes**
 
-    ![close dialog](images/profile-photo.png " " )
+    ![close dialog](images/10-5-profile-photo.png " " )
 
 20. Right-click **Profile Photo** region and select **Create Page Item**.
 
-    ![close dialog](images/page-item-pro.png " " )
+    ![close dialog](images/10-5-page-item-pro.png " " )
 
 21. In the property editor, enter/select the following:
 
-    - Under Identification > Type: **Display Image**
+    - Under Identification:
+        - Name: **PROFILE_DISPLAY**
+        - Type: **Display Image**
 
     - Under Label > Label: Keep it empty
 
@@ -1048,21 +1052,18 @@ Application Computation, navigate back to the shared component and Under **Appli
 
         - Type: **Item**
 
-        - Item: **PICTURE\_URL** (under Application).
+        - Item: **PICTURE\_URL**
 
-    ![close dialog](images/display-img.png " " )
+    ![close dialog](images/10-5-display-img.png " " )
 
-    ![close dialog](images/display-img-source.png " " )
+    ![close dialog](images/10-5-display-img-source.png " " )
 
-22. Select **My Books** region in the property editor, and enter/select the following:
-
+22. Select **My Books** region and enter/select the following:
     - Under Layout:
-
-        - Sequence: **21**
-
+        - Sequence: **40**
         - Slot: **Region Body**
 
-    ![close dialog](images/my-books-update.png " " )
+    ![close dialog](images/10-5-my-books-update.png " " )
 
 23. Click **Save**.
 
