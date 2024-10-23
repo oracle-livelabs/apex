@@ -125,25 +125,27 @@ update Image/Class: **fa-table**. Click **Apply Changes**.
 
 16. Click **Save**.
 
-## Task 2: Add Navigation Entries
+## Task 2: Configure Navigation Bar Entries for Administration
 
 In this task, you will add a navigation bar entry for the administration page. Additionally, apply an authorization scheme to restrict access to users with administration rights.
 
-1. Navigate to Shared Components.
+1. Navigate to **Shared Components**.
 
-    ![close dialog](images/sc-admin-2.png " ")
+    ![close dialog](images/11-2-sc-admin-2.png " ")
 
 2. Under **Navigation and Search**, click **Navigation Bar List**
 
-    ![close dialog](images/nav-bar-admin.png " ")
+    ![close dialog](images/11-2-nav-bar-admin.png " ")
 
-    ![close dialog](images/nav-bar-admin1.png " ")
+3. Click **Navigation Bar** and click **Create Entry**.
 
-3. Click **Navigation Bar** and Click **Create Entry**.
+    ![close dialog](images/11-2-nav-bar-admin1.png " ")
 
-    ![close dialog](images/create-entry-admin.png " ")
+4. Click **Create Entry**.
 
-4. Enter/select the following:
+    ![close dialog](images/11-2-create-entry-admin.png " ")
+
+5. Enter/select the following:
 
     - Under Entry:
 
@@ -163,9 +165,9 @@ In this task, you will add a navigation bar entry for the administration page. A
 
     Click **Create List Entry**.
 
-  ![close dialog](images/create-entry-admin1.png " ")
+  ![close dialog](images/11-2-create-entry-admin1.png " ")
 
-  ![close dialog](images/authorization-admin.png " ")
+  ![close dialog](images/11-2-authorization-admin.png " ")
 
 ## Task 3: Configure Authorization Scheme
 
@@ -173,21 +175,21 @@ In this task, you will update the authorization scheme to ensure that only users
 
 1. Navigate to **Shared Components**.
 
-    ![close dialog](images/sc-admin3.png " ")
+    ![close dialog](images/11-3-sc-admin3.png " ")
 
-2. Under **Security**, Click **Authorization Schemes**.
+2. Under **Security**, click **Authorization Schemes**.
 
-    ![close dialog](images/autho-schemes.png " ")
+    ![close dialog](images/11-3-autho-schemes.png " ")
 
 3. Click **Administration Rights**.
 
-    ![close dialog](images/click-admin-rights.png " ")
+    ![close dialog](images/11-3-click-admin-rights.png " ")
 
 4. Under the Authorization Scheme, update the following:
 
     - Schema Type: **Exists SQL Query**
 
-    - SQL Query: Copy and Paste the below code:
+    - SQL Query: Copy and paste the below code:
 
     ```
     <copy>
@@ -198,9 +200,10 @@ In this task, you will update the authorization scheme to ensure that only users
 
     Click **Apply Changes**.
 
-    ![close dialog](images/admin-rights.png " ")
+    ![close dialog](images/11-3-admin-rights.png " ")
 
 5. Navigate to **Page 15000: Administration** by clicking **Edit Page 15000**..
+    ![close dialog](images/11-3-nav-15000.png " ")
 
 6. In the Property editor, enter/select the following:
 
@@ -210,7 +213,7 @@ In this task, you will update the authorization scheme to ensure that only users
 
         - Deep Linking: **Disabled**
 
-    ![close dialog](images/autho-scheme.png " ")
+    ![close dialog](images/11-3-autho-scheme.png " ")
 
 7. Click **Save**.
 
