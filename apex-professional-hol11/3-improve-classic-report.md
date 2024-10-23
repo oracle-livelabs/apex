@@ -18,8 +18,6 @@ In this lab, you will:
 
 - Adjust column settings, such as setting PRODUCT_ID as a clickable link.
 
-- Hide unnecessary columns (e.g., IMAGE_NAME_TYPE, IMAGE_FILENAME) for a cleaner layout.
-
 Estimated Time: 5 minutes
 
 ### Downloads
@@ -129,21 +127,21 @@ Estimated Time: 5 minutes
 
     ![Navigate to Manage Products](./images/product-image.png " ")
 
-6. Select **IMAGE_NAME_TYPE, IMAGE_FILENAME, IMAGE_CHARSET, IMAGE_LAST_UPDATED** and change type to **Hidden**.
+6. Navigate to **Reset** button and update the following:
 
-    ![Navigate to Manage Products](./images/hidden-columns1.png " ")
+    - Under Identification:
 
-7. Navigate to **CREATE** button and update the following:
+        - Button Name: **Create**
 
-    - Under Layout:
+        - Label: **Create**
 
-        - Region: **Breadcrumb**
+    - Layout > Slot: **CREATE**
 
-        - Slot: **CREATE**
+    - Appearance > Hot: **Toggle On**
 
-     ![Navigate to Manage Products](./images/create-slot.png " ")
+    ![Navigate to Manage Products](./images/create-btn.png " ")
 
-8. Click **Save**.
+7. Click **Save**.
 
 ## Summary
 
