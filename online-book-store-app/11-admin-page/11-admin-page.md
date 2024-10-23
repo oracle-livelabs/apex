@@ -19,17 +19,14 @@ Estimated Time: 20 minutes
 
 This task guides you through creating an administration page for managing books and user roles. You will start by navigating to the Application Home Page to create a blank page named "Administration." Next, you will set up a new list in Shared Components, adding entries for managing books and user roles and customizing their icons. Finally, using the Media List template, you'll configure the Administration page to display this list.
 
-1. Navigate to the Application Home Page.
+1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
+    ![close dialog](images/11-1create-page-admin.png " ")
 
-2. Click **Create Page**.
-
-    ![close dialog](images/create-page-admin.png " ")
-
-3. Click **Blank Page**.
+2. Click **Blank Page**.
 
     ![close dialog](images/blank-page-admin.png " ")
 
-4. Enter/select the following:
+3. Enter/select the following:
 
     - Under Identification:
 
@@ -45,24 +42,23 @@ This task guides you through creating an administration page for managing books 
 
     Click **Create Page**.
 
-   ![close dialog](images/admin-page.png " ")
+   ![close dialog](images/11-1-admin-page.png " ")
 
-5. Navigate to **Shared Components**.
+4. Navigate to **Shared Components**.
 
-   ![close dialog](images/sc-admin.png " ")
+   ![close dialog](images/11-1-sc-admin.png " ")
 
-6. Under **Navigation and Search**,select **Lists** and
-Click **Create**.
+5. Under **Navigation and Search**, click **Lists** and click **Create**.
 
-    ![close dialog](images/lists-admin.png " ")
+    ![close dialog](images/11-1-lists-admin.png " ")
 
-    ![close dialog](images/create-list-admin.png " ")
+    ![close dialog](images/11-1-create-list-admin.png " ")
 
-7. For Name: Enter **Administration** and click **Next**.
+6. For Name: enter **Administration** and click **Next**.
 
-    ![close dialog](images/create-list-name.png " ")
+    ![close dialog](images/11-1-create-list-name.png " ")
 
-8. For Query or Static Values, enter/select the following:
+7. For Query or Static Values, enter/select the following:
 
     | List Entry Label | Target Page ID or custom URL |
     | ---------- |  ------ |
@@ -71,39 +67,39 @@ Click **Create**.
 
     Click **Next**.
 
-    ![close dialog](images/create-list-itmes.png " ")
+    ![close dialog](images/11-1-create-list-itmes.png " ")
 
-9. Click Create List.
+8. Click **Create List**.
 
     ![close dialog](images/create-list.png " ")
 
-10. Click **Administration**.
+9. Click **Administration**.
 
-    ![close dialog](images/click-admin-list.png " ")
+    ![close dialog](images/11-1-click-admin-list.png " ")
 
-11. Click **Edit** Icon for **Manage Books Information** and
+10. Click **Edit** Icon for **Manage Books Information** and
 update Image/Class: **fa-database-file**. Click **Apply Changes**.
 
-    ![close dialog](images/edit-manage-book.png " ")
+    ![close dialog](images/11-1-edit-manage-book.png " ")
 
-    ![close dialog](images/enter-icon.png " ")
+    ![close dialog](images/11-1-enter-icon.png " ")
 
-12. Click **Edit** Icon for **Users Role** and
+11. Click **Edit** Icon for **Users Role** and
 update Image/Class: **fa-table**. Click **Apply Changes**.
 
-    ![close dialog](images/edit-user.png " ")
+    ![close dialog](images/11-1-edit-user.png " ")
 
-    ![close dialog](images/enter-user-icon.png " ")
+    ![close dialog](images/11-1-enter-user-icon.png " ")
 
-13. Navigate to Page Number: 15000 by clicking **Edit Page 15000**.
+12. Navigate to **Page Number: 15000** by clicking **Edit Page 15000**.
 
-    ![close dialog](images/edit-page-15000.png " ")
+    ![close dialog](images/11-1-edit-page-15000.png " ")
 
-14. Right-click **Body** and click **Create Region**.
+13. Right-click **Body** and select **Create Region**.
 
-    ![close dialog](images/create-region-15000.png " ")
+    ![close dialog](images/11-1-create-region-15000.png " ")
 
-15. In the Property editor, enter/select the following:
+14. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -113,22 +109,21 @@ update Image/Class: **fa-table**. Click **Apply Changes**.
 
     - Source > List: **Administration**
 
-    ![close dialog](images/add-list.png " ")
+    ![close dialog](images/11-1-add-list.png " ")
 
-16. Navigate to **Attributes** and enter/select the following:
+15. Navigate to **Attributes** and enter/select the following:
 
     - Under Appearance:
 
         - List Template: **Media List**
 
-        - Template Options > Click Use Template Defaults :
-            - Check **Apply Theme Colors**
+        - Template Options > Click **Use Template Defaults** > Check **Apply Theme Colors**
 
         Click **OK**.
 
-    ![close dialog](images/list-att.png " ")
+    ![close dialog](images/11-1-list-att.png " ")
 
-17. Click **Save**.
+16. Click **Save**.
 
 ## Task 2: Add Navigation Entries
 
