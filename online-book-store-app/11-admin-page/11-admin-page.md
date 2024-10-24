@@ -887,20 +887,19 @@ In this task, you modify the user role update form for enhanced usability and fu
 
 1. Navigate to Page **29**.
 
-    ![close dialog](images/nav-to-29.png " ")
+    ![close dialog](images/11-7-nav-to-29.png " ")
 
 2. Select **Page 29: Update Users Role**, In the property editor, Under Navigation > Warn on Unsaved Changes: **Toggle Off**.
 
-    ![close dialog](images/warn-off.png " ")
+    ![close dialog](images/11-7-warn-off.png " ")
 
-3. In the left pane, Select **P29\_USER\_ID, P29\_PASSWORD, P29\_PROFILE\_PIC, P29\_MIME\_TYPE, P29\_PICTURE\_URL** and
-under Identification update Type: **Hidden**.
+3. In the left pane,select **P29\_PASSWORD**, **P29\_PROFILE\_PIC**, **P29\_MIME\_TYPE**, **P29\_PICTURE\_URL** and update Identification > Type: **Hidden**.
 
-    ![close dialog](images/pass-hidden.png " ")
+    ![close dialog](images/11-7-pass-hidden.png " ")
 
-4. Select **P29\_USERNAME, P29\_FULL\_NAME, P29\_IS\_ADMIN** and under Identification update Type: **Text Field**.
+4. Select **P29\_USERNAME, P29\_FULL\_NAME, P29\_IS\_ADMIN** and update Identification > Type: **Text Field**.
 
-    ![close dialog](images/username-text.png " ")
+    ![close dialog](images/11-7-username-text.png " ")
 
 5. Under **Buttons** Region, Select **Delete** and enter/select the following:
 
@@ -914,11 +913,12 @@ under Identification update Type: **Hidden**.
 
             Click **OK**.
 
-  ![close dialog](images/delete-button.png " ")
+    ![close dialog](images/11-7-delete-button.png " ")
 
 6. Click **Save**.
 
 ## Summary
+
 This lab provided comprehensive instructions for setting up and managing an application's administration interface. It included tasks for creating an administration page, adding necessary navigation entries, configuring authorization schemes, and managing book information and user roles. The lab ensured that users could effectively navigate and perform administrative tasks within the application.
 
 You are now ready to move on to the next lab!
