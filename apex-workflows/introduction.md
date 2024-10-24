@@ -61,4 +61,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024

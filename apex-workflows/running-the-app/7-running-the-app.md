@@ -71,7 +71,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
   ![navigate to doctors app made easy](./images/monitor-appt.png " ")
 
-2. Click on the **Doctor Appointment Workflow for Patient Rajesh** entry and observe the Workflow Details Popup.
+2. Click on the **Workflow for Patient Rajesh** entry and observe the Workflow Details Popup.
 
     - Workflow is waiting at "Raise Appointment Request" Activity.
 
@@ -110,7 +110,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 3. Log out and log back in as **STEVE** to monitor the workflow. Observe that the workflow has completed the Raise Invoice Request and Update Appointment Activities.
 
-5. Click on the **Next Page** button below the Activities.
+4. Click on the **Next Page** button below the Activities.
 
   ![check appointment workflow](./images/check-appt-workflow.png " ")
 
@@ -146,7 +146,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 ## Task 11: Verify Email Confirmation
 
-1. Check the inbox of the patient's email for a 'Thank You' email.
+1. Check the inbox of the patient's email for a 'Thank You!' email.
 
   ![thank you email](./images/thank-you-email.png " ")
 
@@ -174,4 +174,4 @@ In this hands-on lab, you learned how to:
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023   
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024   
