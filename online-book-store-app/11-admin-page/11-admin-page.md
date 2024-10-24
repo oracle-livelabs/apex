@@ -827,9 +827,9 @@ In this task, you will develop a form for detailed editing of book records.
 
 In this task, you will create pages for viewing and updating user roles using interactive reports and forms.
 
-1. On the Page Designer toolbar, Navigate to (+ v) and click **Page**.
+1. On the Page Designer toolbar, Navigate to **(+ v)** and select **Page**.
 
-    ![close dialog](images/create-page-role.png " ")
+    ![close dialog](images/11-6-create-page-role.png " ")
 
 2. Select **Interactive Report**.
 
@@ -853,7 +853,7 @@ In this task, you will create pages for viewing and updating user roles using in
 
     Click **Next**
 
-   ![close dialog](images/inter-report-details.png " ")
+   ![close dialog](images/11-6-inter-report-details.png " ")
 
 4. Click **Create Page**.
 
@@ -861,25 +861,25 @@ In this task, you will create pages for viewing and updating user roles using in
 
 5. Click **Save and Run**.
 
-    ![close dialog](images/save-run.png " ")
+    ![close dialog](images/11-6-save-run.png " ")
 
 6. Click **Actions** and select **Columns**.
 
-    ![close dialog](images/columns.png " ")
+    ![close dialog](images/11-6-columns.png " ")
 
 7. Select **Choose Password, Profile Pic, Mime Type and Picture URL** and move them to the **Do Not Display** section. Click **Apply**.
 
-    ![close dialog](images/don-notdisplay.png " ")
+    ![close dialog](images/11-6-don-notdisplay.png " ")
 
 8. Click **Actions** > **Report** > **Save Report**: Under Save, select **As Default Report Settings**. Click **Apply**.
 
-    ![close dialog](images/save-report.png " ")
+    ![close dialog](images/11-6-save-report.png " ")
 
-    ![close dialog](images/default-report.png " ")
+    ![close dialog](images/11-6-default-report.png " ")
 
 9. Under **Save Default Report**, select **Primary** and click **Apply**.
 
-    ![close dialog](images/primary-apply.png " ")
+    ![close dialog](images/11-6-primary-apply.png " ")
 
 ## Task 7: Customize User Role Update Form
 
