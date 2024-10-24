@@ -10,10 +10,12 @@ Watch the video below for a quick walkthrough of the lab.
 [](youtube:lwQ3lvul9iE)
 -->
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
+
 In this lab, you will:
+
 - Set the following pages as public pages:
     - Products
     - Shopping Cart
@@ -35,11 +37,11 @@ In this task, you will set the products page as  Homepage, then remove the **Hom
 
     ![App Builder](images/navigate-to-osa11.png " ")
 
-    ![Online Shopping Application](images/navigate-to-osa22.png " ")
+    ![Online Shopping Application](images/click-online-shopping.png " ")
 
 2. Now, select **Shared Components**.
 
-    ![Select Shared Components](images/navigate-t-sc1.png " ")
+    ![Select Shared Components](images/sc-shared-comps.png " ")
 
 3. Under User Interface, click **User Interface Attributes**.
 
@@ -49,16 +51,16 @@ In this task, you will set the products page as  Homepage, then remove the **Hom
 
     ![Change Home Page](./images/change-home-page.png " ")
 
-5. Since you have changed the **Home Page** to **Products** page. You must now remove the **Home** Page under the Navigation Menu.  
+5. Since you have changed the **Home Page** to **Products** page. You must now remove the **Home** Page under the Navigation Menu.
 Navigate to **Shared Components**.
 
-    ![Click on Application Id](./images/navigate-to-sc2.png " ")
+    ![Click on Application Id](./images/navigate-to-sc21.png " ")
 
 6. Under **Navigation and Search**, Select **Navigation Menu**.
 
     ![Navigate to Navigation Menu](./images/select-navigation-menu.png " ")
 
-7. Select **Navigation Menu**, then select **Pencil Icon** before **Home**.
+7. Select **Navigation Menu**, then select **Home**.
 
     ![Click on Navigation Menu](./images/select-navigation-menu1.png " ")
 
@@ -88,7 +90,7 @@ Follow these steps for the four listed pages:
 
     In the Property Editor (right pane), apply the following change:
     - Under the Security section:
-        - For Authentication - select **Page Is Public**  
+        - For Authentication - select **Page Is Public**
 
       ![Edit Authentication as Public](./images/edit-page19.png " ")
 
@@ -100,7 +102,10 @@ Follow these steps for the four listed pages:
 
 5. Similarly, repeat steps 2-3 for **Page 16: Shopping Cart**, **Page 17: Add to Cart** and **Page 18: Search Customer Order Product Details**.
 
+ ![Navigate to Page finder](./images/edit-page17.png " ")
+
 ## Task 3: Remove the Navigation Menu
+
 Since the home page is the Products page and this is a public access page, we do not need a navigation menu.
 In this task, you will turn off displaying the navigation menu.
 
@@ -110,11 +115,11 @@ In this task, you will turn off displaying the navigation menu.
 
    Alternatively, if you are in the App Builder, click Shared Components.
 
-   ![Click on Shared Components](./images/navigate-t-sc1.png " ")
+   ![Click on Shared Components](./images/sc-shared-comps.png " ")
 
 2. Under User Interface, click **User Interface Attributes**.
 
-    ![Select User Interface Attributes](./images/select-uia1.png " ")
+    ![Select User Interface Attributes](./images/select-uia.png " ")
 
 3. Click **Navigation Menu**.
 
@@ -127,7 +132,9 @@ In this task, you will turn off displaying the navigation menu.
 ## Task 4: Enhance the Navigation Bar List
 
 Add a new navigation bar entry to allow:
+
 - Customers to go directly to the Shopping Cart
+
 - Administrators to log in and access the administration page
 
 1. Click the Shared Components icon at the top right.
