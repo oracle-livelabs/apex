@@ -47,7 +47,7 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
 
   ![Drag and Drop Invoke API Activity](./images/configure-compute-availability.png " ")
 
-    In the Rendering Tree, notice that there are some Fields marked in Red. The **CHECK_AVAILABILITY** function has 3 Parameters, highlighted in RED, to show that they are required.
+    In the rendering tree, notice that there are some fields marked in **Red**. The **CHECK_AVAILABILITY** function has 3 parameters, highlighted in RED, to show that they are required.
 
 3. Under **Compute Doctor Availability**, expand **Parameters** and Select **Function Result**, in the Property Editor, enter/select the following:
 
@@ -215,7 +215,7 @@ At this point, check the Variables in your Workflow Tree. You will notice there 
 
 1. The two Variables created are:
 
-    - **TaskOutcome** with a static Id **TASK_OUTCOME**.
+    - **TaskOutcome** with a Static ID **TASK_OUTCOME**.
 
     - **Approver** with Static ID **APPROVER**.
 
@@ -241,7 +241,7 @@ At this point, check the Variables in your Workflow Tree. You will notice there 
 
   ![Check Variables](./images/configure-request-appointment.png " ")
 
-3. In the Rendering Tree, notice that there are some Fields marked in Red. The **Raise Appointment Request** function has 3 Parameters, highlighted in RED, to show that they are required.
+3. In the rendering tree, notice that there are some fields marked in **Red**. The **Raise Appointment Request** function has 3 Parameters, highlighted in RED, to show that they are required.
 
 4. In the Rendering Tree, under **Raise Appointment Request**, update the following parameters one after the other:
 
@@ -330,7 +330,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
   ![Configure Confirm Appointment](./images/configure-invoke-api.png " ")
 
-3. In the Rendering Tree, notice some Fields marked in Red. The **Confirm Appointment** function has several Parameters, highlighted in RED, to show that they are required.
+3. In the rendering tree, notice some fields marked in Red. The **Confirm Appointment** function has several Parameters, highlighted in RED, to show that they are required.
 
 4. In the Left Pane, select **Confirm Appointment > Function Result** and in the **Property Editor**, enter/select the following:
 
@@ -343,10 +343,10 @@ In this task, you learn to manage appointment requests using a Switch Activity i
     |Parameter | Value | Format Mask|
     |---------|--------|------------|
     |p\_doctor\_id|Static Value: **&DNO.**||
-    |p\_request\_date|Workflow Parameters: **REQUEST_DATE**|DD-MON-YYYY HH24:MI:SS|
+    |p\_request\_date|Item > Workflow Parameters: **REQUEST_DATE**|DD-MON-YYYY HH24:MI:SS|
     |p\_doctor\_email| Static Value: **&DOC_EMAIL.**||
-    |p\_patient\_name| Workflow Parameters: **PATIENT_NAME**||
-    |p\_patient\_email| Workflow Parameters: **PATIENT\_EMAIL**||
+    |p\_patient\_name|Item > Workflow Parameters: **PATIENT_NAME**||
+    |p\_patient\_email|Item > Workflow Parameters: **PATIENT\_EMAIL**||
     |p\_workflow\_id| Static Value: **&APEX$WORKFLOW_ID.**||
 
 > **Note:** _APEX$WORKFLOW\_ID is a substitution string that holds the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the App Builder Documentation Guide._
@@ -478,7 +478,7 @@ The next step is to establish connections for Free Consultation branches with ac
 
   ![Drag and Drop Invoke API Activity](./images/configure-update-fees.png " ")
 
-3. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Fees** function has 5 Parameters, highlighted in RED to show that they are required.
+3. In the rendering tree, notice that there are some fields marked in Red. The **Update Fees** function has 5 Parameters, highlighted in RED to show that they are required.
 
 4. In the Left Pane, select **Update Fees > Function Result**. In the Property Editor, enter/select the following:
 
@@ -491,9 +491,9 @@ The next step is to establish connections for Free Consultation branches with ac
      |Parameter | Value |
     |---------|--------|
     |p\_doctor\_id| Static Value > **&DNO.**|
-    |p\_request\_date| Workflow Parameters > **REQUEST_DATE**|
-    |p\_booking\_id|Version Variables > **BOOKING_ID**|
-    |p\_patient\_name| Workflow Parameters > **PATIENT\_NAME**|
+    |p\_request\_date| Item > Workflow Parameters > **REQUEST_DATE**|
+    |p\_booking\_id| Item > Version Variables > **BOOKING_ID**|
+    |p\_patient\_name| Item > Workflow Parameters > **PATIENT\_NAME**|
 
 6. From the Activities Palette, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
 
@@ -576,7 +576,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
      ![draw conn to raise inv](./images/draw-connections-inv.png " ")
 
-4. In the Rendering Tree, notice some Fields marked in Red. The **Raise Invoice Request** has 3 Parameters, highlighted in RED, to show that they are required.
+4. In the rendering tree, notice some fields marked in Red. The **Raise Invoice Request** has 3 Parameters, highlighted in RED, to show that they are required.
 
 5. In the Left Pane, select **Raise Invoice Request > Doctor Name**. In the Property Editor, enter/select the following:
 
@@ -643,7 +643,7 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
 3. The procedure **UPDATE_APPOINTMENT** will update the Status in the *APPOINTMENT* table record to **PAID**.
 
-4. In the Rendering Tree, notice that there are some Fields marked in Red. The **Update Appointment** has Parameters, highlighted in RED to show that they are required. Set the Parameters for the Invoke API activity by clicking on them in the Workflow Tree.
+4. In the rendering tree, notice that there are some fields marked in Red. The **Update Appointment** has Parameters, highlighted in RED to show that they are required. Set the parameters for the Invoke API activity by clicking on them in the Workflow Tree.
 
 5. In the Left Pane, select **Update Appointment > p\_booking\_id**. In the Property Editor, enter/select the following:
 
@@ -651,13 +651,15 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
   ![config booking id](./images/config-booking-id.png " ")
 
-6. Similarly, set the remaining parameters under **Update Appointment** as follows:
+6. Similarly, set the parameter p_status under **Update Appointment** as follows:
 
     - For **p_status**, under Value:
 
         - Type: **Static Value**
 
         - Static Value: **PAID**
+
+  ![set p status](./images/set-p-status.png " ")
 
 ## Task 20: Final steps
 
@@ -783,4 +785,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024   
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024
