@@ -36,15 +36,15 @@ In this task, you will focus on customizing the existing Smart Filters in the **
 
 3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.
 
-   > **Note:** _Note** that your page number might be different._
+    > **Note:** _Note that your page number might be different._
 
-   ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
+    ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
 
 4. Under **Search** region, select **P8\_PROJECT** and enter/select the following:
 
     - Identification > Type: **Radio Group**
 
-    - List Entries > Client-side Filtering: **Toggle On**
+    - List Entries > Client-Side Filtering: **Toggle On**
 
     ![Edit Filter](images/edit-filter1.png " ")
 
@@ -130,4 +130,4 @@ You now know how to customize existing filters and create new ones for the Proje
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
