@@ -68,8 +68,8 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 1. In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
 
-        ```
-        <copy>
+    ```
+    <copy>
         SELECT
             "PRODUCT_ID",
             "PRODUCT_NAME",
@@ -88,7 +88,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                     "COLOR_LOOKUP" L1
                 WHERE
                     L1."COLOR_ID" = M."COLOR_ID"
-            ) "COLOR_ID_L$1",
+            ) "COLOR_ID",
             "DEPARTMENT_ID",
             (
                 SELECT
@@ -97,7 +97,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                     "DEPARTMENT_LOOKUP" L2
                 WHERE
                     L2."DEPARTMENT_ID" = M."DEPARTMENT_ID"
-            ) "DEPARTMENT_ID_L$2",
+            ) "DEPARTMENT_ID",
             "CLOTHING_ID",
             (
                 SELECT
@@ -106,7 +106,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                     "CLOTHING_LOOKUP" L3
                 WHERE
                     L3."CLOTHING_ID" = M."CLOTHING_ID"
-            ) "CLOTHING_ID_L$3",
+            ) "CLOTHING_ID",
             B.BRAND
         FROM
             "PRODUCTS" M,
@@ -116,8 +116,8 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                     )
                 )
             B;
-        </copy>
-        ```
+    </copy>
+    ```
 
     ![Change SQL Query](./images/change-sql-query.png " ")
 
@@ -139,15 +139,15 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
         - HTML Expression: Enter the following:
 
-            ```
-            <copy>
+        ```
+        <copy>
             <small>&BRAND.</small><br />
             <b class="u-success-text u-pullRight" id="message_&PRODUCT_ID.">
             {if QUANTITY/} &QUANTITY. in cart {endif/}
             </b>
             <b>$&UNIT_PRICE.</b>
-            </copy>
-            ```
+        </copy>
+        ```
 
     - Under Media:
 
@@ -328,7 +328,23 @@ In this task, you will create two dynamic actions:
 
 10. Click **Save and Run Page**.
 
-## Task 7: Run the Products Page
+## Task 7: Synchronize Facets
+
+In this task, you will synchronize the facets.
+
+1. Under **Search** region, right-click **Facets** and click **Synchronize Facets**
+
+    ![Javascript Code](./images/sync-facets.png " ")
+
+2. Now, select **P19\_PRODUCT\_IMAGE, P19\_IMAGE\_MIME\_TYPE, P19\_IMAGE_FILENAME, P19\_IMAGE_CHARSET,P19\_IMAGE_LAST_UPDATED,P19_BRAND**, right-click and click **Delete**.
+
+    ![Javascript Code](./images/delete-facets.png " ")
+
+3. Select **P19\_PRODUCT\_ID, P19\_PRODUCT\_NAME and P19\_PRODUCT\_DETAILS**. In the Property Editor, under **Appearance**, for **Display** select **Add Filter Dialog**.
+
+     ![Javascript Code](./images/add-filter-dialog.png " ")
+
+## Task 8: Run the Products Page
 
 1. After running the products page, your page will look like the following image:
 
@@ -341,4 +357,4 @@ You now know how to enhance faceted search and cards region. You may now **proce
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
