@@ -328,23 +328,7 @@ In this task, you will create two dynamic actions:
 
 10. Click **Save and Run Page**.
 
-## Task 7: Synchronize Facets
-
-In this task, you will synchronize the facets.
-
-1. Under **Search** region, right-click **Facets** and click **Synchronize Facets**
-
-    ![Javascript Code](./images/sync-facets.png " ")
-
-2. Now, select **P19\_PRODUCT\_IMAGE, P19\_IMAGE\_MIME\_TYPE, P19\_IMAGE\_FILENAME, P19\_IMAGE\_CHARSET,P19\_IMAGE\_LAST\_UPDATED, P19\_BRAND**, right-click and click **Delete**.
-
-    ![Javascript Code](./images/delete-facets.png " ")
-
-3. Select **P19\_PRODUCT\_ID, P19\_PRODUCT\_NAME and P19\_PRODUCT\_DETAILS**. In the Property Editor, under **Appearance**, for **Display** select **Add Filter Dialog**.
-
-     ![Javascript Code](./images/add-filter-dialog.png " ")
-
-## Task 8: Run the Products Page
+## Task 7: Run the Products Page
 
 1. After running the products page, your page will look like the following image:
 
