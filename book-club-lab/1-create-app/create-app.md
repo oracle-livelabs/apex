@@ -2,21 +2,19 @@
 
 ## Introduction
 
-You will get started by creating a skeleton application and you will add to it in each lab until you have built a full application that allows you to create and manage a personal list of movies you have watched or want to watch.
+You will get started by creating a skeleton application and you will add to it in each lab until you have built a full application that allows you to create and manage a personal list of books you have read or want to read.
 
-You will also need to sign up for an account on The Movie Database and obtain an API Key. A TMDB API Key is required for this tutorial, as authentication is needed to get data from The Movie Database API.
+You will also need to sign up for an account on Google Books and obtain an API Key. A Google Books API Key is required for this tutorial, as authentication is needed to get data from the Google Books API.
 
 Estimated Lab Time: 10 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Create the Application](videohub:1_wnfxin31)
 
 ### Objectives
 In this lab, you will:  
 - Create a new application.  
 - Edit the appearance and theme of your application.  
 - Run your application.  
-- Sign up for a TMDB API key.
+- Sign up for a Google Books API key.
 
 ### Prerequisites
 - An Oracle APEX workspace
@@ -39,33 +37,34 @@ In this lab, you will:
 
     ![Create an Application page with the Use Create App Wizard list item highlighted](images/new-application-edit.png " ")
 
-5. In the Create an Application wizard, set Name to **Movies Watchlist**.
+5. In the Create an Application wizard, set Name to **Book Club**.
 
-6. Open the Choose Application Icon dialog by clicking on the icon to the left of the Name field.
+6. On the Create Application page, click the application icon.
+   ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
-    * Select the red color swatch (fifth from the left) and the smiley face icon.
+7. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/book-club-logo.png).
+  ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
-    * Click **Save Icon**.
+8. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
+    ![Image showing an icon editor in Choose Application Icon wizard](images/crop-and-save-icon.png " ")
 
-    ![Choose Application Icon dialog with the fifth color swatch and Smiley icon selected](images/choose-icon.png " ")
-
-7. In the Pages section of the Create Application wizard, click the **Edit** button next to Home.
+9. In the Pages section of the Create Application wizard, click the **Edit** button next to Home.
 
     ![Close-up of the Pages section of the Create an Application wizard](images/edit-home-page.png " ")
 
-    * In the dialog, set Page Name: **My Watchlist**
+    * In the dialog, set Page Name: **My Library**
 
     * Click the **Set Icon** button.
 
-        - In the Select Icon dialog, search for **film**.
+        - In the Select Icon dialog, search for **book**.
 
-        - Click the film icon that has the play button in the middle.
+        - Click the book icon.
 
     * Click **Save Changes**.
 
     ![Select icon dialog over top Add Blank Page dialog, with film icon selected](images/home-page-changes.png " ")
 
-8. Click **Create Application** to create your app and go to the application home page.
+10. Click **Create Application** to create your app and go to the application home page.
 
     ![Highlighted Create Application button on Create an Application page](images/create-app.png " ")
 
@@ -73,13 +72,13 @@ In this lab, you will:
 
 1. On your application home page, click **Run Application**.
 
-    ![Movies Watchlist app home with Run Application button highlighted](images/run-app.png " ")
+    ![Book Club app home with Run Application button highlighted](images/run-app.png " ")
 
 2. On the sign in page that opens in a new tab in your browser, enter your username and password that you used to sign in to your workspace.
 
 3. Click **Sign In**.
 
-    ![Movies Watchlist runtime application sign-in page](images/app-sign-in.png " ")
+    ![Book Club runtime application sign-in page](images/app-sign-in.png " ")
 
 ## Task 3: Update the Theme of the App
 
@@ -90,64 +89,42 @@ In this lab, you will:
 
     ![Close-up of developer toolbar in runtime application with the Customize menu open](images/dev-toolbar.png " ")
 
-3. Within the Theme Roller, you can modify many different aspects of the application UI. You will use it right now to update the color scheme.
+3. Within the Theme Roller, you can modify many different aspects of the application UI. 
 
-4. Under the **Theme** section, click on the Select Theme select box and choose **Vita - Dark**.
+2. In the Theme Roller dialog, enter/select the following: 
+    - Select Theme: **Redwood Light**
+    - Under Redwood Options:
+        - Pillar: **Lilac**
+    - Under Appearance:
+        - Header: **Dark**
+        - Navigation: **Dark**
+        - Body Header: **Dark**
 
-4. Click on **Global Colors** to expand the section.
+    ![Application page in runtime with Theme roller dialog open](images/theme-roller.png =50%x*)
 
-    * Copy the HEX color code: **C74634**
+3. Click **Save As**. In the dialog, for Style Name, enter **Redwood Light Custom**. Finally, click **Save**.
+    ![Theme Roller Save as](images/theme-save.png =50%x*)
 
-    * Click on the color swatch next to **Primary Accent** and paste the HEX code in the Hex text box.
+    ![App with redwood light theme](images/redwood-light.png " ")
+    
+    You have successfully customized the application theme.
 
-    ![Theme Roller dialog open with the Theme and Global Colors sections expanded and the color picker open](images/theme-roller.png " ")
 
-    * Click on the color swatch next to **Body Accent** and paste the HEX code **312D2A** in the Hex text box.
 
-    * The other color swatches automatically updated to variations of the Header Accent color.
+## Task 4: Sign up for a Google Books API Key
 
-    * Click **Save As**.
+1. Go to [Google Cloud](https://console.cloud.google.com/apis/credentials) to sign up for a free account.
 
-    * Style Name: **Movies - Dark**
+2. Once registered, follow the [Using the API](https://developers.google.com/books/docs/v1/using#APIKey) instructions on Google Books API site. You will need to create a credential. If you are prompted to create a project for the key first, name the project **Book Club**. Click **Create Credentials** then select **API Key** from the dropdown menu.
 
-    * Click **Save**.
-
-    * Close the Theme Roller window.
-
-    ![Theme Roller Save As popup](images/save-theme.png " ")
-
-5. You have now updated the color scheme of your app.
-
-## Task 4: Sign up for a TMDB API Key
-
-1. Go to [The Movie Database (TMDB)](https://www.themoviedb.org/signup) to sign up for a free account.
-
-2. Once registered, follow the [Getting Started](https://developers.themoviedb.org/3/getting-started/introduction) instructions on TMDB Developer site. You will need to enter some of your app and contact information:
-
-    ![The Movie Database API key sign-up page](images/api-key-signup-edit.png " ")
+    ![The Movie Database API key sign-up page](images/google-api-key.png " ")
 
 3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
-## Learn More
-
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/application-builder-concepts.html)
-
-- [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
-
-- [The Movie Database](https://www.themoviedb.org/)
-
-- [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
-
-## Stuck? Download the Application Here
-Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 1 and follow the instructions below to import it into your Oracle APEX workspace.  
-
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-1-241.sql) to download a copy of the app at the end of Lab 1.
-
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, June 2024
+- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Last Updated By/Date** - Maddie Thompson, November 2024
