@@ -336,7 +336,7 @@ In this task, you will synchronize the facets.
 
     ![Javascript Code](./images/sync-facets.png " ")
 
-2. Now, select **P19\_PRODUCT\_IMAGE, P19\_IMAGE\_MIME\_TYPE, P19\_IMAGE_FILENAME, P19\_IMAGE_CHARSET,P19\_IMAGE_LAST_UPDATED,P19_BRAND**, right-click and click **Delete**.
+2. Now, select **P19\_PRODUCT\_IMAGE, P19\_IMAGE\_MIME\_TYPE, P19\_IMAGE\_FILENAME, P19\_IMAGE\_CHARSET,P19\_IMAGE\_LAST\_UPDATED, P19\_BRAND**, right-click and click **Delete**.
 
     ![Javascript Code](./images/delete-facets.png " ")
 
