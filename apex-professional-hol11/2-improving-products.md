@@ -80,7 +80,6 @@ Unit price is not a standard search criterion, so you want to put this facet at 
             "IMAGE_FILENAME",
             "IMAGE_CHARSET",
             "IMAGE_LAST_UPDATED",
-            "COLOR_ID",
             (
                 SELECT
                     L1."COLOR"
@@ -89,7 +88,6 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                 WHERE
                     L1."COLOR_ID" = M."COLOR_ID"
             ) "COLOR_ID",
-            "DEPARTMENT_ID",
             (
                 SELECT
                     L2."DEPARTMENT"
@@ -98,7 +96,6 @@ Unit price is not a standard search criterion, so you want to put this facet at 
                 WHERE
                     L2."DEPARTMENT_ID" = M."DEPARTMENT_ID"
             ) "DEPARTMENT_ID",
-            "CLOTHING_ID",
             (
                 SELECT
                     L3."CLOTHING"
