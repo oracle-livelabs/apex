@@ -185,11 +185,9 @@ A well-structured navigation bar can improve the overall user experience. In thi
 
      - Page: **10000**
 
-    ![Click Create Entry2](./images/create-entry11.png " ")
+    ![Click Create Entry2](./images/create-entry12.png " ")
 
 13. Click **Create List Entry**.
-
-    ![Create List Entry2](./images/create-entry12.png " ")
 
 14. Run the application and view the changes.
 

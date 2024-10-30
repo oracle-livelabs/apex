@@ -32,13 +32,13 @@ In this task, you will create a form that displays product details. This Form wi
 
     - Under Page Definition:
 
-        - Page Number: **15**.
+        - Page Number: **15**
 
         - Name: **Product Details**
 
         - Page Mode: **Modal Dialog**
 
-    - Data Source > Table/View Name: **PRODUCTS**.
+    - Data Source > Table/View Name: **PRODUCTS**
 
     Click **Next.**
 
@@ -64,7 +64,7 @@ Once the product form is created, you need to link it to an existing interactive
 
         - Click **No Link Defined** and enter/select the following:
 
-            - Page: **15**.
+            - Page: **15**
 
             - Set Items:
 
