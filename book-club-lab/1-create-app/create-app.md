@@ -40,7 +40,6 @@ In this lab, you will:
 5. In the Create an Application wizard, set Name to **Book Club**.
 
 6. On the Create Application page, click the application icon.
-   ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
 7. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/book-club-logo.png).
   ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
@@ -96,8 +95,8 @@ In this lab, you will:
     - Under Redwood Options:
         - Pillar: **Lilac**
     - Under Appearance:
-        - Header: **Dark**
-        - Navigation: **Dark**
+        - Header: **Pillar**
+        - Navigation: **Pillar**
         - Body Header: **Dark**
 
     ![Application page in runtime with Theme roller dialog open](images/theme-roller.png =50%x*)
@@ -120,6 +119,8 @@ In this lab, you will:
     ![The Movie Database API key sign-up page](images/google-api-key.png " ")
 
 3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
+
+    ![Google Books API Key Credentials page](images/copy-api-key.png " ")
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
