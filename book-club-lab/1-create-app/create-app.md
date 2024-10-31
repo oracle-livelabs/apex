@@ -14,7 +14,6 @@ In this lab, you will:
 - Create a new application.  
 - Edit the appearance and theme of your application.  
 - Run your application.  
-- Sign up for a Google Books API key.
 
 ### Prerequisites
 - An Oracle APEX workspace
@@ -108,19 +107,6 @@ In this lab, you will:
     
     You have successfully customized the application theme.
 
-
-
-## Task 4: Sign up for a Google Books API Key
-
-1. Go to [Google Cloud](https://console.cloud.google.com/apis/credentials) to sign up for a free account.
-
-2. Once registered, follow the [Using the API](https://developers.google.com/books/docs/v1/using#APIKey) instructions on Google Books API site. You will need to create a credential. If you are prompted to create a project for the key first, name the project **Book Club**. Click **Create Credentials** then select **API Key** from the dropdown menu.
-
-    ![The Movie Database API key sign-up page](images/google-api-key.png " ")
-
-3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
-
-    ![Google Books API Key Credentials page](images/copy-api-key.png " ")
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 

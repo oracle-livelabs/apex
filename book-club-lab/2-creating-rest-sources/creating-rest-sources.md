@@ -8,14 +8,28 @@ Estimated Lab Time: 10 minutes
 
 ### Objectives
 In this lab, you will:  
+- Sign up for a Google Books API key.
 - Create REST data sources using Google Books API.  
 
 ### Prerequisites
 - Completion of workshop through Lab 1  
-- A Google Books API key  
 
 
-## Task 1: Create REST Data Source
+## Task 1: Sign up for a Google Books API Key
+
+1. Go to [Google Cloud](https://console.cloud.google.com/apis/credentials) to sign up for a free account.
+
+2. Once registered, follow the [Using the API](https://developers.google.com/books/docs/v1/using#APIKey) instructions on Google Books API site. You will need to create a credential. If you are prompted to create a project for the key first, name the project **Book Club**. Click **Create Credentials** then select **API Key** from the dropdown menu.
+
+    ![The Movie Database API key sign-up page](images/google-api-key.png " ")
+
+3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
+
+    ![Google Books API Key Credentials page](images/copy-api-key.png " ")
+
+
+
+## Task 2: Create REST Data Source
 
 1. Return to the App Builder home by clicking **App Builder** in the APEX navigation bar or the App Builder tile on APEX home page.
 

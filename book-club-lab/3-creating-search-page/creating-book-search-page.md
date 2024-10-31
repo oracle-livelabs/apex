@@ -56,7 +56,7 @@ To start, you will create the Book Search page and do a little page setup before
 
         .thumbnail {
             margin: 12px 0 12px 12px;
-        } 
+        }
 
         .published, .categories {
             font-size: 14px;
@@ -144,7 +144,7 @@ In this step, you will start to add content to your app using the REST data sour
 
     ![Page 2 open in Page Designer with Context Menu open over the rendering pane](images/create-region.png " ")
 
-2. Set the following properties:  
+2. Set the following properties:
 
     * Identification → Name: **Placeholder Books**
 
@@ -158,11 +158,11 @@ In this step, you will start to add content to your app using the REST data sour
 
     * Local Post Processing → Type: **SQL Query**
 
-    * Local Post Processing → SQL Query: 
+    * Local Post Processing → SQL Query:
 
         ```
         <copy>
-        select 
+        select
             ID,
             ETAG,
             KIND,
@@ -200,11 +200,11 @@ In this step, you will start to add content to your app using the REST data sour
 
     * Card → Primary Key Column 1: **ID**
 
-    * Title → Column: **VOLUMEINFO_TITLE**
+    * Title → Column: **VOLUMEINFO\_TITLE**
 
     * Title → CSS Classes: **title**
 
-    * Subtitle → Column: **VOLUMEINFO_AUTHORS_CLEAN**
+    * Subtitle → Column: **VOLUMEINFO\_AUTHORS\_CLEAN**
 
     * Subtitle → CSS Classes: **subtitle**
 
@@ -219,7 +219,7 @@ In this step, you will start to add content to your app using the REST data sour
         &lt;div style="margin-top: -8px;">
             &lt;span class="fa u-hot-text report-star-rating" data-rating="&VOLUMEINFO_AVERAGERATING." title="&VOLUMEINFO_AVERAGERATING." aria-hidden-"true">&lt;/span>&lt;span class="u-VisuallyHidden">&VOLUMEINFO_AVERAGERATING.&lt;/span>&lt;span class="ratings-count" data-count="&VOLUMEINFO_RATINGSCOUNT."> &VOLUMEINFO_RATINGSCOUNT. ratings&lt;/span>&lt;/span>
             &lt;br>
-            &lt;span title="Published" class="published"> &PUBLISHED_YEAR.   &lt;/span>&middot; 
+            &lt;span title="Published" class="published"> &PUBLISHED_YEAR.   &lt;/span>&middot;
             &lt;span title="Categories" class="categories">  &VOLUMEINFO_CATEGORIES_CLEAN.   &lt;/span>
             &lt;br>
         &lt;/div>
@@ -230,7 +230,7 @@ In this step, you will start to add content to your app using the REST data sour
 
     * Media → Source: **Image URL**
 
-    * Media → URL: **&VOLUMEINFO_IMAGELINKS_THUMBNAIL.**
+    * Media → URL: **&VOLUMEINFO\_IMAGELINKS\_THUMBNAIL.**
 
     * Media → Position: **First**
 
@@ -309,7 +309,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
         - Type: **Item is NULL**
 
-        - Item: **P2_SEARCH**
+        - Item: **P2\_SEARCH**
 
     * Now you are displaying the Placeholder Books region based on a condition. If the P2_SEARCH item is NULL, then the region will display. You will create an opposite condition for the Searched Books region.
 
@@ -321,7 +321,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
         - Type: **Item is NOT NULL**
 
-        - Item: **P2_SEARCH**
+        - Item: **P2\_SEARCH**
 
     * Now, you are only displaying Searched Books if the P2_SEARCH item is NOT NULL (has a value).
 
@@ -333,7 +333,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
     * Value → Type: **Item**
 
-    * Value → Item: **P2_SEARCH**
+    * Value → Item: **P2\_SEARCH**
 
     ![Page 2 open in Page Designer editing the Searched Books region properties](images/search-parameter-properties.png " ")
 
@@ -372,13 +372,13 @@ You now know how to create a page in your APEX application and add components to
 
 ## Learn More
 
-- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/about-page-designer.html)  
+- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/about-page-designer.html)
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-cards.html)  
+- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-cards.html)
 
-- [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)  
+- [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)
 
-- [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/) 
+- [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)
 
 
 ## Acknowledgements
