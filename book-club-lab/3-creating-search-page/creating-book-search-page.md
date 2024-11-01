@@ -242,7 +242,7 @@ In this step, you will start to add content to your app using the REST data sour
 
         ![Page 2 open in Page Designer editing the second half of the Placeholder Books region attributes](images/placeholder-region-attributes-2.png " ")
 
-4. You also need to create a Cards region to display the searched books. It will be almost exactly like the Popular Movies region, with a few minor changes.
+4. You also need to create a Cards region to display the searched books. It will be almost exactly like the Placeholder Books region, with a few minor changes.
 
 5. Right click on the Placeholder Books region in the rendering pane and select **Duplicate** to create a copy of the region.
 
@@ -265,7 +265,7 @@ In this step, you will start to add content to your app using the REST data sour
 8. Click the **Save** button to save your changes.
 
 ## Task 3: Add the Search Bar
-The final region that needs to be added to the Movie Search page is the search bar, which will allow a user to search for books. Additionally, both the Placeholder and Searched book regions are currently displaying at the same time on the Book Search page. You want to only show one at a time based on the condition that the Searched Books region displays only if the search bar page item has a value. If the search bar has no value, the page will only display the Placeholder Movies region.
+The final region that needs to be added to the Book Search page is the search bar, which will allow a user to search for books. Additionally, both the Placeholder and Searched book regions are currently displaying at the same time on the Book Search page. You want to only show one at a time based on the condition that the Searched Books region displays only if the search bar page item has a value. If the search bar has no value, the page will only display the Placeholder Books region.
 
 1. Right click on Breadcrumb Bar position in the rendering pane and select **Create Region**.
 
@@ -279,7 +279,7 @@ The final region that needs to be added to the Movie Search page is the search b
 
     ![Page 2 open in Page Designer with the Context Menu open over the rendering pane](images/create-page-item.png " ")
 
-    * Identification → Name: **P2_SEARCH**
+    * Identification → Name: **P2\_SEARCH**
 
     * Appearance → Template: **Hidden**
 

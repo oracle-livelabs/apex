@@ -1,385 +1,384 @@
-# Create the Book Search Page
+# Create the Book Details Page
 
 ## Introduction
-You will create and set up the Book Search page so that you can view books and search for a book of your choice. The search functionality must be built out before the library even though the My Library page is the home page of the application. On the Book Search page you will create regions that display the data from the REST source you created in the previous lab, and you will implement a search bar that lets you search for books.
+In this lab, you will set up a new page that displays the details of a single book. When you click on a specific book from the Book Search page and, eventually, the My Library page, the details for that book will be retrieved from the Google Books API and shown in the Book Details page.
 
 Estimated Lab Time: 20 minutes
 
 
 ### Objectives
 In this lab, you will:
-- Create a new page.
-- Link the Google Books REST data source to the new page.
-- Set up search functionality to allow a user to search for a book.
+- Create a new page, Book Details.
+- Use the Google Books REST source to display data on the Book Details page.
+- Connect the Book Details page to the Book Search page.
 
 ### Prerequisites
-- Completion of workshop through Lab 2
+- Completion of workshop through Lab 3
 
-## Task 1: Create the Book Search Page
-To start, you will create the Book Search page and do a little page setup before adding content to display book data.
+## Task 1: Create the Book Details Page
+You will start by creating a new page, Book Details, which contains a Form. While this form will not display in the final Book Details page, it will hold the Book Details data needed to display content in other regions on the page.
 
-1. In the Book Club application home, click the **Create Page** button just underneath Export/Import.
+1. In the toolbar at the top of the Page Designer, click the **Create** button (3 buttons left of the Save button) and select **Page**.
 
-2. In the Create a Page wizard, click **Blank Page**.
+    * Click **Form**.
 
-    ![Create a Page wizard dialog overlaying the Book Club application home](images/create-search-page.png " ")
+    ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-page.png " ")
 
-3. Set the following page attributes:
+    * Page Number: **3**
 
-    * Page Number: **2**
+    * Name: **Book Details**
 
-    * Name: **Book Search**
+    * Data Source: **REST Data Source**
 
-    * Icon: **fa-search**
+    * REST Data Source: **Google Books API**
 
-    * Click **Create Page** to create and go to the new page.
+    * Use Navigation: **off**
 
-    ![Create Blank Page dialog with page attributes set to values in step 3](images/create-blank-page.png " ")
+    * Click **Next**.
 
-4. The Page Designer in APEX is broken up into a few different panes: the rendering pane on the left, the layout pane in the middle, and the properties pane on the right. On your new page, make sure that **Page 2: Book Search** is selected in the rendering pane.
+    ![Create Page wizard on the Create a Form step to set the page and data source attributes](images/create-form.png " ")
 
-5. In the CSS property group, you will also add some custom CSS to style some of the items on the page.
+    * Select **ID (Varchar2)** as the Primary Key Column 1 value.
 
-    * Copy the code below and paste it in the **Inline** property code box:
+    * Click **Create Page**.
 
-        ```
-        <copy>
-        /* Updating book title size to make it more prominent */
-        .title {
-            font-size: 20px;
-            line-height: 1.5;
-        }
+    ![Create Page wizard on the Create a Form step to set the form primary key](images/create-form-pk.png " ")
 
-        .subtitle {
-            font-size: 18px;
-        }
+    * You should now be on page 3, the **Book Details** page.
 
-        .thumbnail {
-            margin: 12px 0 12px 12px;
-        }
+2. Make sure **Page 3: Book Details** is selected in the rendering pane on the left.
 
-        .published, .categories {
-            font-size: 14px;
-        }
+3. In the **CSS** property group, paste the code below and into the **Inline** CSS code editor:
 
-        .ratings-count {
-            font-size: 12px;
-            color: gray;
-            margin-left: 4px;
-        }
+    ```
+    <copy>
+    /* Customize Book Header Card */
+    .book-header-card.a-CardView {
+        /* Increase the font sizes for book name and tag line */
+        --a-cv-title-font-size: 24px;
+        --a-cv-subtitle-font-size: 16px;
 
-        /* if no ratings exist for book, do not display */
-        .ratings-count[data-count=""] {
-            display: none;
-        }
+        /* Add additional spacing around the header content */
+        --ut-cv-subtitle-margin: 16px 0 0 0;
+        display: flex;
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
 
-        * align star rating icon with text next to it */
-        .fa-star, .fa {
-            vertical-align: middle;
-        }
+    /* position badge next to Book Title */
+    .a-CardView-badge {
+        margin-inline-start: var(--a-cv-header-item-spacing-x, 8px);
+        position: absolute;
+        top: 20px;
+    }
 
-        /* Update default width of images */
-        .a-CardView-items--row .has-media {
-            grid-template-columns: minmax(32px,102px) minmax(0,var(--a-cv-icon-spacer,44px)) 1fr minmax(0,auto);
-        }
+    .a-CardView-header {
+        align-items:flex-start;
+    }
 
-        /* rating stars */
-        .u-hot-text {
-            color: var(--rw-dark-body-title-background-color);
-        }
+    /* make Book Cover image larger */
+    .thumbnail {
+        border-radius: var(--a-cv-border-radius);
+        box-shadow: var(--a-cv-state-shadow, var(--a-cv-type-shadow, var(--a-cv-shadow, none)));
+        margin-right: 16px;
+        height: 250px;
+        width: 175px;
+    }
 
-        .report-star-rating {
-            white-space: nowrap;
-        }
+    .subtitle {
+        font-size: 20px;
+        line-height: 1.5;
+    }
 
-        .report-star-rating[data-rating*="0"]::before {
-            content: "\f006\f006\f006\f006\f006";
-        }
+    .fa-star, .fa {
+        vertical-align: middle;
+    }
 
-        .report-star-rating[data-rating*="1"]::before {
-            content: "\f005\f006\f006\f006\f006";
-        }
+    .categories {
+        font-size: 18px;
+    }
 
-        .report-star-rating[data-rating*="2"]::before {
-            content: "\f005\f005\f006\f006\f006";
-        }
+    .ratings-count {
+        font-size: 12px;
+        color: gray;
+        margin-left: 4px;
+    }
 
-        .report-star-rating[data-rating*="3"]::before {
-            content: "\f005\f005\f005\f006\f006";
-        }
+    .ratings-count[data-count=""] {
+    display: none;
+    }
 
-        .report-star-rating[data-rating*="4"]::before {
-            content: "\f005\f005\f005\f005\f006";
-        }
+    .published, .pages {
+        color: #4e4e4e;
+    }
 
-        .report-star-rating[data-rating="5"]::before {
-            content: "\f005\f005\f005\f005\f005";
-        }
+    .preview-link {
+        font-size: 14px;
+        padding-top: 12px;
+    }
 
-        .report-star-rating[data-rating=""]::before {
-            content: "\f006\f006\f006\f006\f006";
-        }
+    /* rating stars */
 
-        .report-star-rating[data-rating=""]::after {
-            font-size: 12px;
-            color: gray;
-            font-family: inherit !important;
-            font-style: italic;
-            content: "Not rated yet";
-            vertical-align: middle;
-            margin-left: 8px;
-        }
-        ```
+    .u-hot-text {
+        color: var(--rw-dark-body-title-background-color);
+    }
 
-    * The above code styles the book cover images to all be the same size. It also adds some styling for the book rating that you will display on the Card along with the book title, authors, categories and cover image.
+    .report-star-rating {
+    white-space: nowrap;
+    }
 
-6. Click the **Save** button to save your changes.
+    .report-star-rating[data-rating*="0"]::before {
+    content: "\f006\f006\f006\f006\f006";
+    }
 
-    ![Page 2 open in Page Designer with the properties in the property editor updated to reflect the values from steps 6 and 7](images/page-properties.png " ")
+    .report-star-rating[data-rating*="1"]::before {
+    content: "\f005\f006\f006\f006\f006";
+    }
 
-## Task 2: Set up Searched Books
-In this step, you will start to add content to your app using the REST data source you set up in Lab 2. First, you will create a region to display placeholder books for when a user has not searched for any books. Then you will create a similar region that displays a list of books based on a search query.
+    .report-star-rating[data-rating*="2"]::before {
+    content: "\f005\f005\f006\f006\f006";
+    }
 
-1. In the rendering pane of Page Designer, right click on Content Body and select **Create Region**.
+    .report-star-rating[data-rating*="3"]::before {
+    content: "\f005\f005\f005\f006\f006";
+    }
 
-    ![Page 2 open in Page Designer with Context Menu open over the rendering pane](images/create-region.png " ")
+    .report-star-rating[data-rating*="4"]::before {
+    content: "\f005\f005\f005\f005\f006";
+    }
 
-2. Set the following properties:
+    .report-star-rating[data-rating="5"]::before {
+    content: "\f005\f005\f005\f005\f005";
+    }
 
-    * Identification → Name: **Placeholder Books**
+    .report-star-rating[data-rating=""]::before {
+    content: "\f006\f006\f006\f006\f006";
+    }
 
-    * Identification → Title: **Placeholder Books**
+    .report-star-rating[data-rating=""]::after {
+    font-size: 12px;
+    color: gray;
+    font-family: inherit !important;
+    font-style: italic;
+    content: "Not rated yet";
+    vertical-align: middle;
+    margin-left: 8px;
+    }
+    ```
 
-    * Identification → Type: **Cards**
+    * The CSS above will style the page header you are going to create. While the original layout and format of the Cards region type can get you pretty far, a little CSS goes a long way in rounding out the entire look of a component or page.
 
-    * Source → Location: **REST Source**
+    ![Page 3 open in Page Designer with the CSS property group visible in the Page property editor](images/details-page-css.png " ")
 
-    * Source → REST Source: **Google Books API**
+## Task 2: Create the Header and Overview
+You can use the value stored in the P3\_ID page item in the Book Details form to specify which book to get the details for. Then you can utilize a few columns from the Google Books REST source to create a nice header that includes the book cover, title, authors, categories, rating, number of ratings, number of pages, publisher and published year. In addition to the header, you will add a region to display the overview of the book formatted in a way that is easy to read.
 
-    * Local Post Processing → Type: **SQL Query**
+1. You will first need to hide all the Book page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
 
-    * Local Post Processing → SQL Query:
+    * To select all items, click on the first item under the Book Details region, P3\_ID, and then hold shift and click on the last item, P3\_VOLUMEINFO\_PANELIZATIONSUMMARY\_CONTAINSIMAGEBUBBLES.
 
-        ```
-        <copy>
-        select
-            ID,
-            ETAG,
-            KIND,
-            VOLUMEINFO_TITLE,
-            REPLACE(REPLACE(REPLACE(VOLUMEINFO_AUTHORS, '["', ''), '"]', ''), '"', ' ') as VOLUMEINFO_AUTHORS_CLEAN,
-            VOLUMEINFO_INFOLINK,
-            VOLUMEINFO_LANGUAGE,
-            VOLUMEINFO_SUBTITLE,
-            VOLUMEINFO_PAGECOUNT,
-            VOLUMEINFO_PRINTTYPE,
-            VOLUMEINFO_PUBLISHER,
-            REPLACE(REPLACE(VOLUMEINFO_CATEGORIES, '["', ''), '"]', '') as VOLUMEINFO_CATEGORIES_CLEAN,
-            VOLUMEINFO_IMAGELINKS_THUMBNAIL,
-            VOLUMEINFO_IMAGELINKS_SMALLTHUMBNAIL,
-            VOLUMEINFO_DESCRIPTION,
-            VOLUMEINFO_PREVIEWLINK,
-            VOLUMEINFO_RATINGSCOUNT,
-            VOLUMEINFO_AVERAGERATING,
-            SUBSTR(VOLUMEINFO_PUBLISHEDDATE, 1, 4) AS PUBLISHED_YEAR,
-            VOLUMEINFO_CONTENTVERSION,
-            VOLUMEINFO_MATURITYRATING,
-            VOLUMEINFO_INDUSTRYIDENTIFIERS
-        from #APEX$SOURCE_DATA#
-        where VOLUMEINFO_AVERAGERATING is not null
-        order by VOLUMEINFO_AVERAGERATING desc
-        ```
+    * In the Page Items editing pane, set Type: **Hidden**
 
-        - This will format the array columns (Authors, Categories) by removing the square brackets. It also formats the Published Date column to display only the year.
+    ![Page 3 open in Page Designer with all Book Details form items selected and their type set to Hidden in the Property Editor](images/hide-items.png " ")
 
-    ![Page 2 open in Page Designer editing the Placeholder Books region properties](images/placeholder-region-properties.png " ")
+2. Since we aren't entering details into the form, we don't need the Cancel button that was added by default. Under Close, right click on **CANCEL** button and click **Delete**.
 
-3. Select the **Placeholder Books** region in the left rendering pane. Click the **Attributes** tab at the top of the properties pane on the right of Page Designer. This is where you can select what data will display on each book card.
+    * We'll add a button to navigate back to the previous page later.
 
-    * Appearance → Layout: **Horizontal (Row)**
+    ![Page 3 open in Page Designer with Cancel button menu open and Delete selected](images/delete-cancel-button.png " ")
 
-    * Card → Primary Key Column 1: **ID**
+3. To start creating the header for the Book Details page, right click on Content Body and select **Create Region**.
 
-    * Title → Column: **VOLUMEINFO\_TITLE**
+    * Set the following:
 
-    * Title → CSS Classes: **title**
+        - Title: **Header**
 
-    * Subtitle → Column: **VOLUMEINFO\_AUTHORS\_CLEAN**
+        - Type: **Cards**
 
-    * Subtitle → CSS Classes: **subtitle**
+        - Source → Location: **REST Source**
 
-    * Body → Advanced Formatting: **on**
+        - Source → REST Source: **Google Books API**
 
-        - In your Cards region, you will show the average book rating as star icons. Including multiple columns or custom text is not built-in to an attribute, but you can use Advanced Formatting to replace it with an HTML expression.
+        - Local Post Processing → Type: **SQL Query**
 
-    * Body → HTML Expression:
+        - Local Post Processing → replace the existing SQL query with the following:
 
-        ```
-        <copy>
-        &lt;div style="margin-top: -8px;">
-            &lt;span class="fa u-hot-text report-star-rating" data-rating="&VOLUMEINFO_AVERAGERATING." title="&VOLUMEINFO_AVERAGERATING." aria-hidden-"true">&lt;/span>&lt;span class="u-VisuallyHidden">&VOLUMEINFO_AVERAGERATING.&lt;/span>&lt;span class="ratings-count" data-count="&VOLUMEINFO_RATINGSCOUNT."> &VOLUMEINFO_RATINGSCOUNT. ratings&lt;/span>&lt;/span>
+            ```
+            <copy>
+            select ID,
+                ETAG,
+                KIND,
+                VOLUMEINFO_TITLE,
+                REPLACE(REPLACE(REPLACE(VOLUMEINFO_AUTHORS, '["', ''), '"]', ''), '"', ' ') as VOLUMEINFO_AUTHORS_CLEAN,
+                VOLUMEINFO_INFOLINK,
+                VOLUMEINFO_LANGUAGE,
+                VOLUMEINFO_SUBTITLE,
+                VOLUMEINFO_PAGECOUNT,
+                VOLUMEINFO_PRINTTYPE,
+                VOLUMEINFO_PUBLISHER,
+                REPLACE(REPLACE(VOLUMEINFO_CATEGORIES, '["', ''), '"]', '') as VOLUMEINFO_CATEGORIES_CLEAN,
+                VOLUMEINFO_IMAGELINKS_THUMBNAIL,
+                VOLUMEINFO_IMAGELINKS_SMALLTHUMBNAIL,
+                VOLUMEINFO_DESCRIPTION,
+                VOLUMEINFO_PREVIEWLINK,
+                VOLUMEINFO_RATINGSCOUNT,
+                VOLUMEINFO_READINGMODES_TEXT,
+                VOLUMEINFO_READINGMODES_IMAGE,
+                VOLUMEINFO_AVERAGERATING,
+                SUBSTR(VOLUMEINFO_PUBLISHEDDATE, 1, 4) AS PUBLISHED_YEAR,
+                VOLUMEINFO_CONTENTVERSION,
+                VOLUMEINFO_MATURITYRATING,
+                VOLUMEINFO_INDUSTRYIDENTIFIERS
+            from #APEX$SOURCE_DATA#
+            where ID = :P3_ID
+            ```
+
+        - The above query is a simplified version of the original query because you only need a few columns for the header. It also converts PUBLISHEDDATE into year format and removes the punctuation from the array columns (AUHORS, CATEGORIES).
+
+        - Appearance → Template: **Blank with Attributes**
+
+        ![Page 3 open in Page Designer with Property Editor open on editing the Header region properties](images/header-region-attributes.png " ")
+
+4. Click on the **Attributes** tab at the top of the Header region Property Editor.
+
+    * Set the following:
+
+        - Appearance → Layout: **Horizontal (Row)**
+
+        - Card → CSS Classes: **book-header-card**
+
+        - Card → Primary Key Column 1: **ID**
+
+        - Title → Advanced Formatting: **on**
+
+        - Title → HTML Expression:
+
+            ```
+            <copy>
+            &lt;span class="a-CardView-title">&VOLUMEINFO_TITLE.&lt;/span>
+            &lt;span class="a-CardView-badge &BADGE_COLOR.">&BADGE_LABEL.&lt;/span>
             &lt;br>
-            &lt;span title="Published" class="published"> &PUBLISHED_YEAR.   &lt;/span>&middot;
-            &lt;span title="Categories" class="categories">  &VOLUMEINFO_CATEGORIES_CLEAN.   &lt;/span>
+            &lt;span class="subtitle"> &VOLUMEINFO_AUTHORS_CLEAN. &lt;/span>
+            &lt;br>&lt;br>
+            &lt;span class="fa fa-lg u-hot-text report-star-rating" data-rating="&VOLUMEINFO_AVERAGERATING." title="&VOLUMEINFO_AVERAGERATING." aria-hidden-"true">&lt;/span><span class="u-VisuallyHidden">&VOLUMEINFO_AVERAGERATING.&lt;/span>&lt;span class="ratings-count" data-count="&VOLUMEINFO_RATINGSCOUNT."> &VOLUMEINFO_RATINGSCOUNT. ratings&lt;/span>&lt;/span>
+            &lt;br>&lt;br>
+            &lt;span class="categories">&VOLUMEINFO_CATEGORIES_CLEAN.&lt;/span> 
+            &lt;br>&lt;br>
+            &lt;span class="published">Published &PUBLISHED_YEAR.  &middot;  &VOLUMEINFO_PUBLISHER.&lt;/span>
             &lt;br>
-        &lt;/div>
-        ```
-        *Note: In the HTML Expression, the &NAME. syntax is used to create a substitution string for the column values for each book. To learn more, check out the Resources section at the end of this lab.*
+            &lt;span class="pages">&VOLUMEINFO_PAGECOUNT. pages&lt;/span>
+            &lt;br>
+            &lt;div class="preview-link">&lt;a href="&VOLUMEINFO_PREVIEWLINK." target="_blank">Preview Book&lt;/a>&lt;/div>
+            ```
 
-        ![Page 2 open in Page Designer editing the first half of the Placeholder Books region attributes](images/placeholder-region-attributes-1.png " ")
+        - Subtitle → Advanced Formatting: **on**
 
-    * Media → Source: **Image URL**
+        - Subtitle → HTML Expression:
 
-    * Media → URL: **&VOLUMEINFO\_IMAGELINKS\_THUMBNAIL.**
+            ```
+            <copy>
+            &lt;div class="preview-link">Preview Book&lt;/div>
+            ```
 
-    * Media → Position: **First**
+            *Note: We are only putting the Preview Book link in the Subtitle section because later we will create a card action type of Subtitle that will open a modal containing the book preview when the subtitle content is clicked.*
 
-    * Media → Appearance: **Square**
+        - Icon and Badge → Icon Source: **Image URL**
 
-    * Media → Sizing: **Cover**
+        - Icon and Badge → Image URL: **&VOLUMEINFO\_IMAGELINKS\_THUMBNAIL.**
 
-    * Media → CSS Classes: **thumbnail**
+        - Icon and Badge → Icon CSS Classes: **thumbnail**
 
-        ![Page 2 open in Page Designer editing the second half of the Placeholder Books region attributes](images/placeholder-region-attributes-2.png " ")
+        ![Page 3 open in Page Designer with Property Editor open on editing the Header region attributes](images/header-attributes.png " ")
 
-4. You also need to create a Cards region to display the searched books. It will be almost exactly like the Popular Movies region, with a few minor changes.
 
-5. Right click on the Placeholder Books region in the rendering pane and select **Duplicate** to create a copy of the region.
+5. In order to get the details for a specific book selected from the Search page, you have to update the **q** parameter that is part of the call to the Google Books API. When you look at the Details and Header regions in the rendering pane, you can see that under each is a Parameters section, just like there was for Placeholder and Searched Books on the Book Search page.
 
-6. Set the following properties:
+6. Expand the **Parameters** section under the **Book Details** region.
 
-    * Identification → Name: **Searched Books**
+7. Click on the **q** parameter.
 
-    * Identification → Title: **Searched Books**
+    * Change the Type from REST Source Default to **Item**.
 
-7. You also need to set the pagination attributes for the Searched Books region, because you are getting all the search results at one time. Within Searched Books, set the following Pagination properties in Searched Books region Attributes tab:
+    * In the Item field, enter **P3\_ID**.
 
-    * Type: **Page**
+    ![Page 3 open in Page Designer with Property Editor open on editing the q parameter](images/book-id-parameter.png " ")
 
-    * Show Total Count: **on**
+8. Follow steps 6 and 7 to update the q parameter for the **Header** region.
 
-    * Cards per page: **15**
+9. Finally, you will add a region to display the book Overview to go along with the nice header containing the book details.
 
-    ![Close-up of the Pagination property group in the Searched Books region attributes](images/searched-books-pagination.png " ")
+10. In the rendering pane on the left, right click on Content Body and select **Create Region**.
 
-8. Click the **Save** button to save your changes.
+11. Set the following properties:
 
-## Task 3: Add the Search Bar
-The final region that needs to be added to the Movie Search page is the search bar, which will allow a user to search for books. Additionally, both the Placeholder and Searched book regions are currently displaying at the same time on the Book Search page. You want to only show one at a time based on the condition that the Searched Books region displays only if the search bar page item has a value. If the search bar has no value, the page will only display the Placeholder Movies region.
+    * Identification → Title: **Overview**
 
-1. Right click on Breadcrumb Bar position in the rendering pane and select **Create Region**.
+    * Source → HTML Code: **&P3\_VOLUMEINFO\_DESCRIPTION.**
 
-    * Identification → Title: **Search Bar**
+    * Appearance → Template: **Content Block**
 
-    * Appearance → Template: **Blank with Attributes**
+    * Appearance → Template Options:
 
-    ![Page 2 open in Page Designer editing the Search Bar region properties](images/search-bar.png " ")
+        - Region Title: **Small**
 
-2. Right click on the new Search Bar region and select **Create Page Item**.
-
-    ![Page 2 open in Page Designer with the Context Menu open over the rendering pane](images/create-page-item.png " ")
-
-    * Identification → Name: **P2_SEARCH**
-
-    * Appearance → Template: **Hidden**
-
-    * Appearance → open the Template Options dialog:
-
-        - Select **Stretch Form Item**
-
-        - Size: **X Large**
-
-        - Bottom Margin: **Medium**
-
-        - Left Margin: **Large**
-
-        - Right Margin: **Large**
+        - Top Margin: **Medium**
 
         - Click **Ok**.
 
-    * Appearance → Icon: **fa-search**
+        ![Page 3 open in Page Designer with Property Editor open on editing the Overview region](images/overview.png " ")
 
-    * Appearance → Value Placeholder: **Search for a book...**
+12. Click **Save**.
 
-    ![Page 2 open in Page Designer editing the P2_SEARCH item with the Template Options dialog open](images/search-item.png " ")
+## Task 3: Connect the Details Page to the Search Page
+To be able to view the details of any book you click on on the Book Search page, you can link the Details page to the Search page. However, in order to get the details for the specific book you clicked on, you have to pass some data from the Search page to the Details page.
 
-3. Click on the **Placeholder Books** region.
+1. Navigate to page **2: Book Search** by clicking the down arrow in the page navigation on the Page Designer toolbar.
 
-    * Scroll down to Server-Side Condition in the properties pane.
+2. On the Book Search page, you can see in the rendering pane that both Placeholder Books and Searched Books have an **Actions** section underneath them.
 
-        - Type: **Item is NULL**
+3. Right click on **Actions** underneath Placeholder Movies and select **Create Action**.
 
-        - Item: **P2\_SEARCH**
+    ![Close up of rendering pane with Cards Action context menu open on Page 2 in Page Designer ](images/create-action.png " ")
 
-    * Now you are displaying the Placeholder Books region based on a condition. If the P2_SEARCH item is NULL, then the region will display. You will create an opposite condition for the Searched Books region.
+    * Identification → Type: **Full Card**
 
-    ![Close-up of the Server-side Condition property group for the Popular Movies region](images/placeholder-ssc.png " ")
+    * The Link section is where you can connect page 3 to page 2 by redirecting the user to a new page.
 
-4. Click on the **Searched Books** region.
+    * Click on **No Link Defined** next to Target to open the Link Builder dialog.
 
-    * Scroll down to Server-Side Condition.
+        - Page: **3**
 
-        - Type: **Item is NOT NULL**
+        - You also need to set the value of the ID item on page 3 (P3\_ID) so that the Book Details page has the ID of the book that was clicked on.
 
-        - Item: **P2\_SEARCH**
+        - Set Items:
 
-    * Now, you are only displaying Searched Books if the P2_SEARCH item is NOT NULL (has a value).
+            - Name: **P3\_ID**  |  Value: **&ID.**
 
-5. In order to actually search for a book, you have to edit the query parameter that is submitted with a call to the Google Books API. A search query is required, otherwise you will not get any results back. When you look at the two Cards regions in the rendering pane, you can see that underneath Searched Books there is a **Parameters** section.
+            - Name: **P3\_PREVIOUS\_PAGE\_ID**  |  Value: **2**
 
-6. Expand the section and you will see **q** listed as a parameter. This is what you will link to the P2_SEARCH page item in order to control the search.
+            *Note: You can also use the buttons next to the name and value fields to browse items that you can pass values to. Notice that the options for Name all come from the Book Details page (P3), because that is the item you want to set. The options for Value are the columns from the Book Search data source because this is the what you are getting from page 2 and passing to page 3.*
 
-7. Click on the **q** parameter. You will see that its Type is REST Source Default, which is using the default value from the used in the URL to set up the REST source. Change the values to the following:
+            *Note: P3_PREVIOUS_PAGE_ID doesn't appear when browsing items because we haven't created it yet so you'll need to type it in manually. We will create that page item in the next lab.*
 
-    * Value → Type: **Item**
+        - Click **Ok**.
 
-    * Value → Item: **P2\_SEARCH**
+        ![Link Builder Target dialog for Placeholder Books Full Card action open over Page 2 in Page Designer](images/card-action.png " ")
 
-    ![Page 2 open in Page Designer editing the Searched Books region properties](images/search-parameter-properties.png " ")
+4. Follow step 3 for the **Searched Books** region to create a Full Card action that redirects to page 3.
 
-8. Now let's do the same thing for the Placeholder Books region. In the left rendering pane under the **Placeholder Books** region, expand the **Parameters** section and click on the **q** parameter.
+5. Click **Save**.
 
-9. At the bottom of the properties pane on the right of Page Designer, set the following for the **q** parameter:
+6. Refresh the page where your application is running.
 
-    * Value → Type: **Static Value**
+7. Test the Book Details page by opening the Book Search page then clicking on a book of choice to see the details.
 
-    * Value → Static Value: **subject:fiction**
+    ![Book Details dialog page open in runtime application](images/details-page-live.png " ")
 
-        - The Google Books API requires a parameter, which can be either a search term or one of the other predefined parameters such as ISBN or subject. Here we are going to display books of a certain genre.
-
-    ![Page 2 open in Page Designer editing the Placeholder Books region properties](images/placeholder-parameter-properties.png " ")
-
-10. Click the **Save and Run** button at the top right of the Page Designer.
-
-11. You should only see the search bar and the list of placeholder (fiction) books.
-
-    ![Page 2 of Book Club at runtime displaying placeholder (fiction) books](images/placeholder-books.png " ")
-
-12. Type "harry potter" in the search bar and hit Enter (Return on Mac).
-
-    * You should get results for books with the search term "harry potter" in the title.
-
-    ![Page 2 of Book Club at runtime displaying search results for Harry Potter books](images/harry-potter.png " ")
-
-13. Delete "harry potter" from the search bar and press Enter (Return on Mac). The placeholder books should reappear.
-
-14. In the Development Bar at the bottom of the page, click **Page 2** to return to editing Page 2 in Page Designer.
-
-	![Close-up of the developer toolbar at the bottom of the page at runtime of Book Club](images/dev-toolbar.png " ")
-
-
-You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
+You have now set up the Book Details page and set it up to open for any card that is selected from the Book Search page. You may now **proceed to the next lab**.
 
 ## Learn More
-
-- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/about-page-designer.html)
-
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-cards.html)
-
-- [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)
-
-- [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)
-
 
 ## Acknowledgements
 
