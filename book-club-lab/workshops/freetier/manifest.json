@@ -19,15 +19,15 @@
           "filename": "../../2-creating-rest-sources/creating-rest-sources.md"
       },
       {
-        "title": "Lab 3: Create the Movie Search Page",
-        "filename": "../../3-creating-search-page/creating-movie-search-page.md"
+        "title": "Lab 3: Create the Book Search Page",
+        "filename": "../../3-creating-search-page/creating-book-search-page.md"
       },
       {
-        "title": "Lab 4: Create the Movie Details Page",
-        "filename": "../../4-creating-details-page/creating-movie-details-page.md"
+        "title": "Lab 4: Create the Book Details Page",
+        "filename": "../../4-creating-details-page/creating-book-details-page.md"
       },
       {
-        "title": "Lab 5: Create Users and Watchlist Tables",
+        "title": "Lab 5: Create Users and Library Tables",
         "filename": "../../5-creating-tables/creating-tables.md"
       },
       {
@@ -35,8 +35,8 @@
         "filename": "../../6-creating-details-buttons/creating-buttons-badges.md"
       },
       {
-        "title": "Lab 7: Implement the Watchlist Page",
-        "filename": "../../7-implementing-watchlist-page/implementing-watchlist-page.md"
+        "title": "Lab 7: Implement the Library Page",
+        "filename": "../../7-implementing-library-page/implementing-library-page.md"
       },
       {
         "title": "Optional Lab: Add Cast List to Movie Details Page",
