@@ -1,28 +1,27 @@
 # Oracle APEX Hands-On Lab
 
-## Create a Movies Watchlist
+## Create a Book Club Application 
 
 ## Overview
-In this workshop, you will build a mobile-friendly Movie Watchlist app that you and your friends can use to search for movies and add them to your own personal movie watchlists.  
+In this workshop, you will create an application that allows you and your friends to search for books and create personal libraries. You will use the Google Books API), which is a database that contains a large amount of data about a vast number of books. Google Books has an extensive API that you will access in this workshop to search for books, and get book details.
 
-The app will source data from [The Movie Database (TMDB)](https://www.themoviedb.org/), an online community-based database with metadata for thousands of movies and TV shows, and an extensive API.  
+When individual users log into the app, the home page will display their own unique library. They can add books to their library by searching for a specific books of their choice. After adding books to their list, users can mark them as read, rate the book, and post reviews.
 
-The workshop is organized into a total of ten labs, with the last two being optional. First, you will get your APEX environment and set up an API key on TMDB. Then, you will create REST Data Sources in APEX to connect to TMDB, and begin developing!  
+While the end result is a simple version of a books library application, you can continue to build it out far past what this workshop takes you through, using many of the same concepts you will learn. There are also a lot of features in Oracle APEX that you can use to allow users to rate books they have watched, make comments on books, and more.
 
-It will take about two hours to complete the workshop, but your time may vary depending on your experience with APEX. If you get stuck, don't worry! At the end of each lab, you will find an app export that will get you across the finish line.  
+It will take about two hours to complete the workshop, but your time may vary depending on your experience with APEX. If you get stuck, don't worry! At the end of each lab, you will find an app export that will get you across the finish line. 
 
-Upon completing this workshop, you will have your very own simple movies watchlist app that is fun and easy to use! From there, you can continue to enhance this app by applying the concepts and techniques you learned. For example, you can use the Star Rating item to rate a movie once its been watched, or show which streaming providers have the movie using TMDB's rich API. The possibilities are endless, and you'll be fully prepared for your next movie night!  
 
 ### Lab Objectives
 In this lab, you will:  
 - Obtain a free development environment.  
-- Learn how to create REST data sources.  
+- Learn how to create a REST data source.  
 - Learn how to create local tables.  
 - Learn how to use application items and processes.  
 - Learn how to create a page to view data from a REST source.  
 - Learn how to create a page to view data from a local table.  
-- Learn how to search for movies.  
-- Learn how to manage a list of movies.
+- Learn how to search for books.  
+- Learn how to manage a list of books.
 
 Estimated Workshop Time: 2 hours
 
@@ -34,15 +33,16 @@ Estimated Workshop Time: 2 hours
 | --- | --- | --- |
 | - | [Getting Started](?lab=signing-up.md) | 5 min |
 | 1 | [Create the Application](?lab=create-app) | 5 min |
-| 2 | [Create REST Data Sources](?lab=creating-rest-sources) | 15 min |
-| 3 | [Create the Movie Search Page](?lab=creating-movie-search-page) | 20 min |
-| 4 | [Create the Movie Details Page](?lab=creating-movie-details-page) | 10 min |
-| 5 | [Create Local Tables](?lab=creating-tables) | 10 min |
-| 6 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 15 min |
-| 7 | [Implement the Watchlist Page](?lab=implementing-watchlist-page) | 20 min |
-| 8 | [Improve the Movie Details Page](?lab=improving-details-page) | 10 min |
-| 9 | [Add Cast List (Optional)](?lab=adding-cast-list) | 10 min |
-| 10 | [Improve the Watchlist Page (Optional)](?lab=improving-watchlist-page) | 5 min |
+| 2 | [Create REST Data Source](?lab=creating-rest-sources) | 15 min |
+| 3 | [Create the Book Search Page](?lab=creating-book-search-page) | 20 min |
+| 4 | [Create the Book Details Page](?lab=creating-book-details-page) | 10 min |
+| 5 | [Create the Preview Book Page](?lab=creating-preview-book-page) | 10 min |
+| 6 | [Create Local Tables](?lab=creating-tables) | 10 min |
+| 7 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 15 min |
+| 8 | [Implement the Library Page](?lab=implementing-library-page) | 20 min |
+| 9 | [Improve the Movie Details Page](?lab=improving-details-page) | 10 min |
+| 10 | [Add Cast List (Optional)](?lab=adding-cast-list) | 10 min |
+| 11 | [Improve the Watchlist Page (Optional)](?lab=improving-watchlist-page) | 5 min |
 
 ### **Let's Get Started!**
 
@@ -55,8 +55,7 @@ Estimated Workshop Time: 2 hours
 
 ## Learn More - *Useful Links*
 
-- [The Movie Database](https://www.themoviedb.org/)
-- [The Movie Database API](https://developers.themoviedb.org/3/)
+- [The Google Books API](https://developers.google.com/books/docs/overview)
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
 - [APEX Service](https://apex.oracle.com/en/platform/apex-service/)
 - [APEX Collateral](https://apex.oracle.com)
@@ -66,6 +65,6 @@ Estimated Workshop Time: 2 hours
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Additional Contributors** - Kay Jasanya, Shakeeb Rahman, Steve Muench, Monica Godoy, Eli Feuerstein, Carlos Maciel, Dalia Vazquez
-- **Last Updated By/Date** - Paige Hanssen, March 2022
+- **Author** - Maddie Thompson
+- **Additional Contributors** - Sakthi Gopinath
+- **Last Updated By/Date** - Maddie Thompson, November 2024

@@ -1,6 +1,6 @@
 # Introduction
 ## About this Workshop
-In this workshop, you will create an application that allows you and your friends to search for books and create personal libraries. You will use the [Google Books API)](https://developers.google.com/books/docs/v1/using), which is a database that contains a large amount of data about a vast number of books. Google Books has an extensive API that you will access in this workshop to search for books, and get book details.
+In this workshop, you will create an application that allows you and your friends to search for books and create personal libraries. You will use the [Google Books API](https://developers.google.com/books/docs/v1/using), which is a database that contains a large amount of data about a vast number of books. Google Books has an extensive API that you will access in this workshop to search for books, and get book details.
 
 When individual users log into the app, the home page will display their own unique library. They can add books to their library by searching for a specific books of their choice. After adding books to their list, users can mark them as read, rate the book, and post reviews.
 
@@ -13,7 +13,7 @@ Estimated Workshop Time: 2 hours
 ### Objectives
 In this lab, you will:  
 - Obtain a free development environment.  
-- Learn how to create REST data sources.  
+- Learn how to create a REST data source.  
 - Learn how to create local tables.  
 - Learn how to use application items and processes.  
 - Learn how to create a page to view data from a REST source.  
@@ -28,10 +28,11 @@ In this lab, you will:
 | 2   | [Create REST Data Sources](?lab=creating-rest-sources)           | 10 min    |
 | 3   | [Create the Search Page](?lab=creating-book-search-page)        | 20 min    |
 | 4   | [Create the Details Page](?lab=creating-book-details-page)      | 20 min    |
-| 5   | [Create Local Tables](?lab=creating-tables)                      | 10 min    |
-| 6   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
-| 7   | [Implement the Library Page](?lab=implementing-library-page) | 25 min    |
-| 8   | [Create APEX Collections for Ratings](?lab=adding-cast-list)                | 5 min     |
+| 5   | [Create the Preview Book Page](?lab=creating-preview-book-page) | 10 min    |
+| 6   | [Create Local Tables](?lab=creating-tables)                      | 10 min    |
+| 7   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
+| 8   | [Implement the Library Page](?lab=implementing-library-page) | 25 min    |
+| 9   | [Create APEX Collections for Ratings](?lab=adding-cast-list)                | 5 min     |
 | -   | [Implement Discussion Forum (Optional)](?lab=improving-watchlist-page)       | 5 min     |
 
 ### **Let's Get Started!**
@@ -42,7 +43,6 @@ In this lab, you will:
 ## Learn More
 
 - [Google Books API](https://developers.google.com/books/docs/v1/using)
-- [Google Cloud API Credentials](https://developers.google.com/books/docs/v1/using)
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
 - [APEX Service](https://apex.oracle.com/en/platform/apex-service/)
 - [APEX Collateral](https://apex.oracle.com)
