@@ -145,7 +145,7 @@ You will need a table to store some basic book information in addition to the us
     ```
     <copy>
     library /unique book_id, user_id
-        book_id
+        book_id vc
         user_id /fk book_users
         read_yn
         read_date date
@@ -158,7 +158,7 @@ You will need a table to store some basic book information in addition to the us
         ratings_count num
         pages num
         thumbnail
-        published_date
+        published
     ```
 
 	* Note the /unique directive in the last line of the Quick SQL code. In the book\_users table, you created a unique key by using the /unique directive for the username column. This prevents the same user from getting put into the table more than once by making sure the username is always unique. In the library table, the unique key actually comes from two different columns: book\_id and user\_id. A single user cannot add the same book to the library table more than once. Unique keys are extremely helpful when it comes to maintaining the integrity of the data in your local tables.

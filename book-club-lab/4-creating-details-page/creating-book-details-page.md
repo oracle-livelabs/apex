@@ -329,7 +329,21 @@ You can use the value stored in the P3\_ID page item in the Book Details form to
 
         ![Page 3 open in Page Designer with Property Editor open on editing the Overview region](images/overview.png " ")
 
-12. Click **Save**.
+12. Since Book Details is a common page (can be navigated from both the Book Search page and the My Library page), we will need to create a page item to hold the previous page value so the Back button we create later on knows where to redirect the user.
+
+13. Right click on the **Book Details** region in the rendering pane and select **Create Page Item**.
+
+    ![Close up of rendering pane with Book Details region context menu open on Page 2 in Page Designer ](images/create-page-item.png " ")
+
+14. Set the following properties:
+
+    * Identification → Name: **P3\_PREVIOUS\_PAGE\_ID**
+
+    * Identification → Type: **Hidden**
+
+    ![Page 3 open in Page Designer with Property Editor open on editing the new page item](images/page-item-properties.png " ")
+
+15. Click **Save**.
 
 ## Task 3: Connect the Details Page to the Search Page
 To be able to view the details of any book you click on on the Book Search page, you can link the Details page to the Search page. However, in order to get the details for the specific book you clicked on, you have to pass some data from the Search page to the Details page.
