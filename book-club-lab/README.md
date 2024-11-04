@@ -36,7 +36,7 @@ Estimated Workshop Time: 2 hours
 | 2 | [Create REST Data Source](?lab=creating-rest-sources) | 15 min |
 | 3 | [Create the Book Search Page](?lab=creating-book-search-page) | 20 min |
 | 4 | [Create the Book Details Page](?lab=creating-book-details-page) | 10 min |
-| 5 | [Create the Preview Book Page](?lab=creating-preview-book-page) | 10 min |
+| 5 | [Create the Preview Book Page](?lab=creating-book-preview-page) | 10 min |
 | 6 | [Create Local Tables](?lab=creating-tables) | 10 min |
 | 7 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 15 min |
 | 8 | [Implement the Library Page](?lab=implementing-library-page) | 20 min |

@@ -5,7 +5,6 @@ In this lab, you will set up a new page that displays allows you to preview any 
 
 Estimated Lab Time: 10 minutes
 
-
 ### Objectives
 In this lab, you will:
 - Create a new page, Preview Book.
@@ -165,6 +164,8 @@ To be able to view the preview of a book you click on from the Book Details page
 4. Click **Save**.
 
 You now know how to create a modal page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
+
+## Learn More
 
 ## Acknowledgements
 
