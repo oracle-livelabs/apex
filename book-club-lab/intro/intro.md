@@ -28,7 +28,7 @@ In this lab, you will:
 | 2   | [Create REST Data Sources](?lab=creating-rest-sources)           | 10 min    |
 | 3   | [Create the Search Page](?lab=creating-book-search-page)        | 20 min    |
 | 4   | [Create the Details Page](?lab=creating-book-details-page)      | 20 min    |
-| 5   | [Create the Preview Page](?lab=creating-preview-book-page)      | 10 min    |
+| 5   | [Create the Preview Page](?lab=creating-book-preview-page)      | 10 min    |
 | 6   | [Create Local Tables](?lab=creating-tables)                      | 10 min    |
 | 7   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
 | 8   | [Implement the Library Page](?lab=implementing-library-page) | 25 min    |
