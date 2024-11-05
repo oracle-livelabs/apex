@@ -6,25 +6,157 @@ In this lab, you use the Theme Roller to save a new Theme Style. Then, you enabl
 
 Estimated Time: 10 minutes
 
-<!--
-Watch the video below for a quick walkthrough of the lab.
-
-[](youtube:lwQ3lvul9iE)
-
 ### Objectives
+
 In this lab, you will:
+
 - Set the following pages as public pages:
-    - Products
-    - Shopping Cart
-    - Order Information
+  - Products
+  - Shopping Cart
+  - Order Information
 
 - Disable the Navigation Menu
 
-- Enhance the Navigation Bar -->
+- Enhance the Navigation Bar
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/hol14.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.  
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/hol14.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+
+## Task 1: Use Themes and Theme Styles
+
+In this hands-on lab, you save a Theme Style by using the Theme Roller. Then, you enable end users to apply this style while running the application.
+
+1. Navigate to **App Builder** and then run the **Demo Projects**. In the Developer Toolbar, click **Customize** and then select **Theme Roller**.
+
+    ![Click Customize in Developer Toolbar](images/navigate-to-theme-roller.png " ")
+
+    ![Click Customize in Developer Toolbar](images/select-theme-roller.png " ")
+
+2. Under **Theme Roller**, enter/select the following:
+
+    - Select Theme**: **Redwood Light**
+
+    - Redwood Options > Layout: **Floating**
+
+    - Under **Appearance**:
+
+      - Header: **Dark**
+
+      - Body Header: **Dark**
+
+      - Body Background: **Dark**
+
+      Click **Save As**.
+
+    ![Select Theme to Redwood Light](images/change-theme.png " ")
+
+3. Click **Save**.
+
+    ![Select Theme to Redwood Light](images/click-save-as.png " ")
+
+## Task 2: Create Plug-in
+
+1. In **Demo Projects** application, navigate to **Shared Components**.
+
+    ![Select Theme to Redwood Light](images/sc-plugin.png " ")
+
+2. Under **Other Components**, select **Plug-ins**.
+
+    ![Select Theme to Redwood Light](images/plug-ins.png " ")
+
+3. Click **Create**.
+
+    ![Select Theme to Redwood Light](images/click-create.png " ")
+
+4. Under **Create Plug-in**, click **Next**.
+
+    ![Select Theme to Redwood Light](images/click-next.png " ")
+
+5. Enter/select the following:
+
+    - Under Name:
+
+        - Name: **Hero**
+
+        - Type: **Template Component**
+
+    - Under Templates:
+
+        - Available As: Check **Region Only**
+
+        - Partial: Copy and paste the following:
+
+        ```
+        <copy>
+        <div class="c-Hero #APEX$COMPONENT_CSS_CLASSES#" id="#APEX$DOM_ID#">
+           {if BACKDROP_VIDEO/}
+           <div class="c-Hero-video">#BACKDROP_VIDEO#</div>
+           {endif/}
+           <div class="c-Hero-body">
+           {if OVERLINE/}
+           <div class="c-Hero-overline">#OVERLINE#</div>
+           {endif/}
+           <h1 class="c-Hero-title">#APEX$TITLE#</h1>
+           {if DESCRIPTION/}
+           <div class="c-Hero-description">#DESCRIPTION#</div>
+           {endif/}
+           {if SEARCH/}
+           <div class="c-HeroSearch" role="search">
+           <div class="c-HeroSearch-input">#SEARCH#</div>
+           {if CATEGORY/}
+           <div class="c-HeroSearch-category">#CATEGORY#</div>
+           {endif/}
+           <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
+           {if ACTION/}
+           <div class="c-HeroSearch-action">#ACTION#</div>
+           {endif/}
+           </div>
+         {endif/}
+         </div>
+        </div>
+       ```
+       </copy>
+
+    ![Select Theme to Redwood Light](images/create-plug-in.png " ")
+
+6. Click **Create Plug-in**.
+
+## Task 3: Enhance Template Component
+
+1. Navigate to **Hero** plug-in, under **Custom Attributes** , delete all the attributes one after the other.
+
+    ![Select Theme to Redwood Light](images/delete-attributes.png " ")
+
+2. First, select **Action** and click **Delete** and  confirm by clicking **OK**.
+
+    ![Select Theme to Redwood Light](images/click-delete-action.png " ")
+
+    ![Select Theme to Redwood Light](images/delete-OK.png " ")
+
+3. Now, delete all the attributes. After deleting, click **Add Attribute**.
+
+    ![Select Theme to Redwood Light](images/add-attribute.png " ")
+
+4. Enter/select the following:
+
+    - Name > Static ID: **OVERLINE**
+
+    - Settings > Type: **Text**
+
+    Click **Create and Create Another**.
+
+    ![Select Theme to Redwood Light](images/overline-attribute.png " ")
+
+5. Enter/select the following:
+
+    - Name > Static ID: **DESCRIPTION**
+
+    - Settings > Type: **Textarea**
+
+    Click **Create**.
+
+     ![Select Theme to Redwood Light](images/description-attribute.png " ")
 
 
 ## Task 1: Use Themes and Theme Styles
@@ -38,7 +170,7 @@ In this hands-on lab, you save a Theme Style by using the Theme Roller. Then, yo
 2. The current Theme Style is **Vita**. Under **Global Colors**, click the color swatch to select new colors.
 To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
 
-  Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
+     Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
 
     ![Change Color](images/change-color.png " ")
 
@@ -46,7 +178,7 @@ To edit a specific component, expand a group and select new colors or styling of
 
     ![Select Theme to Redwood Light](images/change-theme.png " ")
 
-4. For Theme Attributes, enter the following:  
+4. For Theme attributes, enter/select the following:  
     Under **Redwood Options**:
       - For Layout: Select **Floating**.  
 
