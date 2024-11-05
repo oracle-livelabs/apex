@@ -258,7 +258,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 
 7. You also need to create a Cards region to display the books marked as read. It will be almost exactly like the Want to Read books region, with a few minor changes.
 
-8. Right click on the Want to Read region in the rendering pane and select **Duplicate** to create a copy of the region.
+8. Right click on the **Want to Read** region in the rendering pane and select **Duplicate** to create a copy of the region.
 
 9. Set the following properties:
 
@@ -299,7 +299,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 
         ![Page 1 open in Page Designer with the Read region open in Property Editor](images/read.png " ")
 
-10. Go to the Attributes tab of your new Read region so we can add another attribute (Read Date) to the cards:
+10. Go to the Attributes tab of your new Read region so we can add another attribute, Read Date, to the cards:
 
     * Body → HTML Expression:
 
@@ -319,7 +319,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 11. Click the **Save** button to save your changes.
 
 ## Task 3: Connect the Library to the Book Details Page
-In this step, you are going to connect the My Library page to the Book Details page to allow a user to view details for any book on the list, as well as remove a book from their list or mark a book as "Read."
+In this step, you are going to connect the My Library page to the Book Details page to allow a user to view details for any book in their library, as well as remove a book from their library or mark a book as "Read."
 
 1. In the rendering pane, right click on the Actions section underneath the Want to Read region and select **Create Action**.
 
@@ -347,14 +347,14 @@ In this step, you are going to connect the My Library page to the Book Details p
 
 4. Save and run the page.
 
-    ![Watchlist Cards region on the My Watchlist page in the runtime application](images/library-runtime.png " ")
+    ![Library Cards region on the My Library page in the runtime application](images/library-runtime.png " ")
 
 5. On the tab where the app is running, click on a book in your library. The Book Details page should appear with information about that specific book. Note that you are able to remove a book or mark it as read, but you cannot add the book because it is already in your library. When clicked, the back button should take you back to the Library page.
 
 *Note: If you have not added any books to your library, the page will say "No data found." Make sure to add books to your library so that you can view them on the Library page!*
 
 ## Task 4: Create a Get Started Region
-When a user logs into the Book Club app for the first time, they will not have any movies and the My Library page will be blank. It would be helpful if there were a welcome message to assist users in getting started if there are no books on the page.
+When a user logs into the Book Club app for the first time, they will not have any books and the My Library page will be blank. It would be helpful if there were a welcome message to assist users in getting started if there are no books on the page.
 
 1. In the rendering pane, right click on Body and select **Create Region**.
 

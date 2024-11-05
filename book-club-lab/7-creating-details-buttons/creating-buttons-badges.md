@@ -101,7 +101,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
     * Click the button next to Target to open the Link Builder → Target dialog.
 
-        - Page: **&P3_PREVIOUS_PAGE_ID.**
+        - Page: **&P3\_PREVIOUS\_PAGE\_ID.**
 
         - Click **Ok**.
 
@@ -400,7 +400,7 @@ Before you test the buttons you just implemented, you will add badges to the Boo
             where ads.ID = :P3_ID
         ```
 
-    - We already referenced the BADGE_LABEL and BADGE_COLOR columns in the HTML Expression for the Title slot, so nothing more needs to be done here.
+    - We already referenced the BADGE\_LABEL and BADGE\_COLOR columns in the HTML Expression for the Title slot, so nothing more needs to be done here.
 
     ![Page 3 open in Page Designer with the Local Post Processing properties open in Property Editor](images/header-lpp.png " ")
 
