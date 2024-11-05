@@ -48,7 +48,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
     ![Create a region](./images/create-region13.png " ")
 
-6. In the Property Editor, for Identification > Title, enter **Patient Appointment Details**.
+6. In the Property Editor, for Identification > Title: enter **Patient Appointment Details**.
 
      ![Create a region](./images/configure-static-content.png " ")
 
@@ -56,7 +56,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
      ![Create page item](./images/create-page-item13.png " ")
 
-8. Create the following Six Page Items one after the other:
+8. Create the following six Page Items one after the other:
     - **P5\_NAME**
     - **P5\_EMAIL**
     - **P5\_DESC**
@@ -64,13 +64,13 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
     - **P5\_DOC**
     - **P5\_AGE**
 
-9. For **P5\_EMAIL**, in the property editor, Select the following:
+9. For **P5\_EMAIL**, in the property editor, select the following:
 
     - Settings > Subtype: **E-Mail**
 
   ![Create page item](./images/create-email-item.png " ")
 
-10. For **P5_DESC**, in the property Editor, Enter/select the following:
+10. For **P5_DESC**, in the Property Editor, enter/select the following:
 
       - Identification > Type: **Select List**
 
@@ -128,7 +128,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
     ![create Appt Date item](./images/create-doc-item1.png " ")
 
-13. Similarly, Select **P5_AGE** and update label to **Age**.
+13. Similarly, select **P5_AGE** and update label to **Age**.
 
     ![create Appt Date item](./images/page-item-age.png " ")
 
@@ -280,11 +280,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
   ![change title page2](./images/change-title-page3.png " ")
 
-10. In the rendering tree, navigate to **Invoice Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
+10. In the Rendering Tree, navigate to **Invoice Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
 
   ![delete developer info](./images/delete-developer-info1.png " ")
 
-11. In the rendering tree, select **Details** classic report region. In the Property editor, edit the Title to **View Invoice**.
+11. In the Rendering Tree, select **Details** classic report region. In the Property Editor, edit the Name to **View Invoice**.
 
   ![change details title](./images/change-details-title.png " ")
 
@@ -303,7 +303,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
   ![change details title](./images/change-feedback-title.png " ")
 
-15. In the rendering tree, navigate to **Feedback Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
+15. In the Rendering Tree, navigate to **Feedback Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
 
   ![delete developer info](./images/delete-feedback-devinf.png " ")
 
@@ -313,7 +313,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
 17. In the Details Page, the patient should be able to fill out a Feedback form and submit it. On submission, it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows:
 
-  In the rendering tree, right click on **View Appointment Details** and click **Create Region Below**.
+  In the rendering tree, right-click on **View Appointment Details** and click **Create Region Below**.
 
   ![create region below](./images/create-region-below13.png " ")
 
@@ -327,9 +327,9 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     - Under Source:
 
-        - Table: **APPOINTMENT**
+        - Table Name: **APPOINTMENT**
 
-        - Where:
+        - Where Clause:
           ```
           <copy>
           booking_id = :P4_BOOKING_ID
@@ -338,11 +338,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
   ![configure feedback](./images/configure-feedback.png " ")
 
-19. In the Rendering Tree, select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID**. In the Property Editor, for Identification > Type, select **Hidden**.
+19. In the Rendering Tree, select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID**. In the Property Editor, for Identification > Type: select **Hidden**.
 
   ![set items as hidden](./images/set-items-to-hidden.png " ")
 
-20. In the rendering Tree, select **P4_SCHEDULE** and then in the property editor, for Appearance > Format Mask, select **DD-MON-YYYY HH24:MI:SS**.
+20. In the Rendering Tree, select **P4_SCHEDULE** and then in the property editor, for Appearance > Format Mask: enter **DD-MON-YYYY HH24:MI:SS**.
 
    ![set items as hidden](./images/update-schedule-item.png " ")
 
@@ -384,7 +384,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
 24. Click **Save**.
 
-25. In the Pre-Rendering section, add a new Process above the **Initialize Form Feedback Details** Process.
+25. In the Pre-Rendering section, under Pre-Rendering, right-click **Before Header** and click **Create Process**.
 
     ![create page item](./images/configure-pre-rendering-process.png " ")
 
@@ -392,7 +392,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     - Identification > Name: **Populate Booking Details in Feedback Form**
 
-    -  PL/SQL Code: Enter the following code:
+    - Source > PL/SQL Code: Enter the following code:
 
     ```
     <copy>
@@ -408,6 +408,8 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
     </copy>
     ```
 
+    - Sequence: Enter **1**
+
     ![create page item](./images/configure-pre-rendering.png " ")
 
 27. In the **Left Pane**, navigate to the **Processing Tab**.
@@ -422,7 +424,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     - Type: **Execute Code**
 
-    - PL/SQL code: enter the following code snippet:
+    - PL/SQL code: Enter the following code snippet:
 
     ```
     <copy>
@@ -496,7 +498,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
           - Table Name: **APPOINTMENT**
 
-          - **Where Clause**: Enter the below code:
+          - Where Clause: Enter the below code:
           ```
           <copy>
           patient_username=:APP_USER
@@ -526,7 +528,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     - Under Identification:
 
-        - Title: **Feedbacks**
+        - Name: **Feedbacks**
 
         - Type: **Comments**
 
@@ -534,7 +536,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
         - Type: **SQL Query**
 
-        - SQL Query: copy and paste the below SQL.
+        - SQL Query: copy and paste the below SQL query.
         ```
         <copy>
        select ID,
@@ -610,4 +612,4 @@ In the next lab, you will understand the behaviour of the **Doctor Appointments 
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024   
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024
