@@ -19,7 +19,7 @@ You will create a new page, Preview Book, which contains a Form. While this form
 
 1. In the toolbar at the top of the Page Designer, click the **Create** button (3 buttons left of the Save button) and select **Page**.
 
-* Click **Form**.
+    * Click **Form**.
 
     ![Create a Page wizard overlaying Page 2 in Page Designer](images/create-page.png " ")
 
@@ -57,6 +57,7 @@ You will create a new page, Preview Book, which contains a Form. While this form
         height: 500px;
     }
     ```
+
     ![Page 4 open in Page Designer with the CSS property group visible in the Page property editor](images/preview-page-css.png " ")
 
 4. Like we did previously for the Book Details page, you will first need to hide all the book page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
@@ -106,26 +107,24 @@ In this step, you will add a region to display the viewer from the Google Books 
 
             ```
             <copy>
-            <html>
-            <head>
-                <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-                <title>Google Books Embedded Viewer API Example</title>
-                <script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
-                <script type="text/javascript">
+            &lt;html>
+            &lt;head>
+                &lt;meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+                &lt;title>Google Books Embedded Viewer API Example&lt;/title>
+                &lt;script type="text/javascript" src="https://www.google.com/books/jsapi.js">&lt;/script>
+                &lt;script type="text/javascript">
                 google.books.load();
-
                 function initialize() {
                     var viewer = new google.books.DefaultViewer(document.getElementById('viewerCanvas'));
                     viewer.load($v( "P4_ID" ));
                 }
-
                 google.books.setOnLoadCallback(initialize);
-                </script>
-            </head>
-            <body>
-                <div id="viewerCanvas"></div>
-            </body>
-            </html>
+                &lt;/script>
+            &lt;/head>
+            &lt;body>
+                &lt;div id="viewerCanvas"></div>
+            &lt;/body>
+            &lt;/html>
             ```
 
             ![Page 4 open in Page Designer with Property Editor open on editing the Embedded Viewer region properties](images/viewer-region-properties.png " ")
@@ -164,8 +163,6 @@ To be able to view the preview of a book you click on from the Book Details page
 4. Click **Save**.
 
 You now know how to create a modal page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
-
-## Learn More
 
 ## Acknowledgements
 

@@ -374,7 +374,7 @@ To be able to view the details of any book you click on on the Book Search page,
 
             *Note: You can also use the buttons next to the name and value fields to browse items that you can pass values to. Notice that the options for Name all come from the Book Details page (P3), because that is the item you want to set. The options for Value are the columns from the Book Search data source because this is the what you are getting from page 2 and passing to page 3.*
 
-            *Note: P3_PREVIOUS_PAGE_ID doesn't appear when browsing items because we haven't created it yet so you'll need to type it in manually. We will create that page item in the next lab.*
+            *Note: P3\_PREVIOUS\_PAGE\_ID doesn't appear when browsing items because we haven't created it yet so you'll need to type it in manually. We will create that page item in the next lab.*
 
         - Click **Ok**.
 
