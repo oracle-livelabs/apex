@@ -13,7 +13,6 @@ In this lab, you:
 - Enable Push Notifications
 - Learn how to configure Push Notifications
 
-
 ## Task 1: Enable Push Notifications
 
 1. 1. Navigate to the **Demo Projects** Application.
@@ -44,11 +43,11 @@ In this lab, you:
 
 7. Progressive Web App is updated. Now, **Save and Run** the page.
 
-    ![Push Notifications settings page](images/save-and-run.png " ")    
+    ![Push Notifications settings page](images/save-and-run.png " ")
 
 8. In the Demo Projects App, click on your username at the top-right corner and select **Settings**.
 
-    ![App output](images/click-username.png " ")  
+    ![App output](images/click-username.png " ")
 
 9. Push Notifications are turned off by default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
@@ -58,13 +57,15 @@ In this lab, you:
 
 10. Push Notifications is now enabled for the username.
 
-Note:
-- If you cannot see the Push Notifications, ensure that the DND option is turned off in your system and your browser has the necessary permissions to send notifications.
-- View the compatibility matrix of Push Notifications [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
+    *Note:*
+
+    - If you cannot see the Push Notifications, ensure that the DND option is turned off in your system and your browser has the necessary permissions to send notifications.
+
+    - View the compatibility matrix of Push Notifications [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
 
 ## Task 2: Create a Page with reports for Push Notifications Views
 
-No matter the approach you opt for in sending push notifications, it is crucial (especially for the APEX engine) to possess the ability to recognize users who have subscribed to this feature. This recognition is essential for meaningful use of page processes or the API. APEX provides two distinct views to analyse records, revealing the subscribers to push notifications within your application and the notifications currently in the queue.
+No matter the approach you opt for in sending push notifications, it is crucial (especially for the APEX engine) to possess the ability to recognize users who have subscribed to this feature. This recognition is essential for meaningful use of page processes or the API. APEX provides two distinct views to analyze records, revealing the subscribers to push notifications within your application and the notifications currently in the queue.
 
 1. Navigate to the Demo Projects Application by clicking **Application ID** in the top left of the application.
 
@@ -96,9 +97,9 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
 6. In the Rendering Tree, select the Rendering tab. Right-click **Body**and select **Create Region**.
 
-   ![Create create region](images/click-create-region.png " ")
+    ![Create create region](images/click-create-region.png " ")
 
-6. In the Property Editor, edit the appropriate attributes:
+7. In the Property Editor, edit the appropriate attributes:
    Under **Identification**:
 
       - For Title: Enter **PWA Views**
@@ -111,11 +112,11 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![Configure pwa views region](images/configure-pwa-views.png " ")
 
-7. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
+8. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
 
     ![create sub region](images/create-sub-region1.png " ")
 
-8. In the Property Editor, edit the appropriate attributes:
+9. In the Property Editor, edit the appropriate attributes:
     Under **Identification**:
 
       - For Title: Enter **Push Notifications Subscriptions**
@@ -128,11 +129,11 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![configure subscriptions](images/configure-subscriptions.png " ")
 
-9. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
+10. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
 
     ![create sub region 2](images/create-sub-region2.png " ")
 
-10. In the Property Editor, edit the following:
+11. In the Property Editor, edit the following:
 
     Under **Identification**:
 
@@ -146,7 +147,7 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![configure subscriptions](images/configure-push-queue.png " ")
 
-11. You can view the page by clicking **Save** and **Run Page** on the top Right.
+12. You can view the page by clicking **Save** and **Run Page** on the top Right.
 
 ## Task 3: Create Page Processes to send Push notifications
 
@@ -219,16 +220,19 @@ For users seeking more control over the appearance and content of their push not
 
       - For Static Value: Enter **Welcome to Push Notifications**.
 
-      ![configure subscriptions](images/config-apex-pwa-param.png " ")      
+    ![configure subscriptions](images/config-apex-pwa-param.png " ")      
 
 6. Click **Save**
 
 ## Summary
+
 You learned to enhance the **Demo Projects** app with push notifications in this lab.
 
 ## What's Next
+
 In the upcoming hands-on lab, you will learn to Create Installation Scripts and Data Packages. Also, you gain insights into how to Export Applications with supporting Objects and use Remote Deployment to deploy your Application.
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024

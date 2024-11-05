@@ -19,17 +19,17 @@ In this lab, you:
 
 1. Navigate to the **Demo Projects** App.
 
-  ![select the application](images/select-demo-projects.png " ")
+    ![select the application](images/select-demo-projects.png " ")
 
 2. In the App Builder, select **shared components**.
 
-   ![Select Shared Components](images/navigate-to-shared-components.png " ")
+    ![Select Shared Components](images/navigate-to-shared-components.png " ")
 
-2. In the Shared Components, under User Interface, Select **Progressive Web App**.
+3. In the Shared Components, under User Interface, Select **Progressive Web App**.
 
-   ![Select Progressive Web App](images/navigate-to-pwa.png " ")
+    ![Select Progressive Web App](images/navigate-to-pwa.png " ")
 
-3. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
+4. Now, Navigate to **Progressive Web App** and Then Set **Installable** to **Yes**.
 
    ![Set Installable to Yes](images/set-installable-yes.png " ")
 
@@ -49,9 +49,9 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
      ![click upload Screenshot](images/upload-screenshot.png " ")
 
-  > **Note:** You can download the images by clicking on the links below
-  [**app-screenshot-1.png**](images/app-screenshot-1.png)
-  [**app-screenshot-2.csv**](images/app-screenshot-2.png)
+    *You can download the images by clicking on the links below:*
+    - [**app-screenshot-1.png**](images/app-screenshot-1.png)
+    - [**app-screenshot-2.csv**](images/app-screenshot-2.png).
 
 4. From your local system, select the Screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system. And then, Click **Create**.
 
@@ -59,19 +59,19 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![click create screenshot](images/click-create-screenshot.png " ")
 
-
 5. Repeat steps 2-4 to add as many screenshots as possible. In this case, add **app-screenshot-2**, which you downloaded earlier.
 
      ![add app screenshot two](images/add-screenshot-2.png " ")
 
-4. Click **Apply Changes**.
+6. Click **Apply Changes**.
 
      ![click apply changes](images/click-apply-changes.png " ")
 
+    *Note:*
 
-**Note:**
-  - View the compatibility matrix for the **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
-  - View the compatibility matrix for the **Shortcuts** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon)
+    - *View the compatibility matrix for the* **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
+
+    - *View the compatibility matrix for the* **Shortcuts** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon)
 
 ## Task 3: Add Shortcuts for the PWA app
 
@@ -83,7 +83,7 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 
 > **Note:** _An APEX application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before configuring shortcuts, click either Enable for Public Sessions or Enable for All Sessions._
 
-1. Scroll down to **Shortcuts** and click **Enable for All Sessions**. Confirm by clicking **Enable for All Sessions ** in the popup window.
+1. Scroll down to **Shortcuts** and click **Enable for All Sessions**. Confirm by clicking **Enable for All Sessions** in the popup window.
 
     > **Note:** _This option does not work in *apex.oracle.com* instance._
 
@@ -93,7 +93,7 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 
 2. Click **Add Shortcut**.
 
-    ![click add shortcut](images/add-shortcut.png " ")  
+    ![click add shortcut](images/add-shortcut.png " ")
 
 3. In the Add Shortcut dialog:
 
@@ -126,7 +126,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
     ![create button](images/create-button.png " ")
 
-2. In the Property Editor, update the following properties:
+3. In the Property Editor, update the following properties:
 
    Under Identification:
 
@@ -140,15 +140,15 @@ In this task, you add a Share button that allows a user to share the post via em
 
       ![configure Share](images/configure-share.png " ")
 
-3. In the **Rendering Tree**, right click on **Share** button and click **Create Dynamic Action**.
+4. In the **Rendering Tree**, right click on **Share** button and click **Create Dynamic Action**.
 
       ![Create Dynamic Action](images/create-da.png " ")
 
-4. Select the Newly created Dynamic action, and then, under-identification, set **Name** to **Share Page**in the Property Editor.
+5. Select the Newly created Dynamic action, and then, under-identification, set **Name** to **Share Page**in the Property Editor.
 
       ![configure Dynamic Action](images/configure-da.png " ")
 
-5. Under **True Action**, select **show** and then in the Property editor configure the following:
+6. Under **True Action**, select **show** and then in the Property editor configure the following:
 
   Under Identification:
 
@@ -167,7 +167,6 @@ In this task, you add a Share button that allows a user to share the post via em
 ## Task 5: Configure Meta Tags
 
 Meta tags are information about a web page that allows other systems to read a summary of the page content. Sharing APEX pages is more convenient when the content of that page can be previewed on other social media platforms. APEX allows the definition of meta tags for **public-facing** APEX pages directly from Page Designer.
-
 
 1. In Page Designer, Select **Page 2 : Dashboard** and then in the Property Editor, Under **Security**, Set Authentication as **Page is Public**.
 
@@ -188,8 +187,10 @@ Meta tags are information about a web page that allows other systems to read a s
 4. Click **Save**.
 
 ## Summary
+
 In this lab, you learned to enhance the **Demo Projects** app with mobile features like Sharing Pages and add the latest PWA features like Shortcuts and Screenshots.
 
 ## Acknowledgements
+
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
