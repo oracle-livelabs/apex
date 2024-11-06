@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Use Themes and Theme Styles",
+  "workshoptitle": "Use Themes, Theme Styles and implement Plug-ins",
     "tutorials": [
       {
         "title": "Introduction",
@@ -10,8 +10,12 @@
         "filename": "../../../apex-professional-common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Use Themes and Theme Styles",
+        "title": "Lab 1: Create a Template Component Plug-in",
         "filename": "../../using-themes-and-theme-styles.md"
+      },
+      {
+        "title": "Lab 2: Use Themes and Theme Styles",
+        "filename": "../../import-export-theme.md"
       },
       {
         "title": "Need Help?",
