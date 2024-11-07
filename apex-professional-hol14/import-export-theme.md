@@ -4,20 +4,22 @@
 
 In this lab, you use the Theme Roller to save a new Theme Style. Then, you enable end users to apply this style while running the application.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ## Task 1: Use Themes and Theme Styles
 
-In this hands-on lab, you save a Theme Style by using the Theme Roller. Then, you enable end users to apply this style while running the application.
+In this task, you save a Theme Style by using the Theme Roller. Then, you enable end users to apply this style while running the application.
 
 1. Navigate to **App Builder** and then run the **Online Shopping Application**. In the Developer Toolbar, click **Customize** and then select **Theme Roller**.
 
-   ![Click Customize in Developer Toolbar](images/navigate-to-theme-roller.png " ")
+    ![Click Customize in Developer Toolbar](images/run-online-shop.png " ")
+
+    ![Click Customize in Developer Toolbar](images/navigate-to-theme.png " ")
 
 2. The current Theme Style is **Vita**. Under **Global Colors**, click the color swatch to select new colors.
-To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
+    To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
 
-     Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
+    Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
 
     ![Change Color](images/change-color.png " ")
 
@@ -40,7 +42,7 @@ Notice that the new Theme Style you saved is displayed under the Theme Style lis
 
     ![Click Customize Link](images/select-customize1.png " ")
 
-7. Users can specify their Theme Style while running the application using the Customize dialogue. Select the Theme Style **Vita** and click Apply Changes.
+7. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Vita** and click **Apply Changes**.
 
     ![Customize](images/customize1.png " ")
 
@@ -50,7 +52,7 @@ Notice that the new Theme Style you saved is displayed under the Theme Style lis
 
 ## Task 2: Import and Export Theme Styles
 
-The Theme Roller dialog appears, displaying the styles for your application. You can export and import style changes directly from Theme Roller by selecting the following options from the Additional Options menu: Import, Export, and Reset.
+The Theme Roller dialog appears, displaying the styles for your application. You can export and import style changes directly from Theme Roller by selecting the following options from the additional options menu: Import, Export, and Reset.
 
 1. To import theme styles:
      - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
@@ -81,12 +83,7 @@ The Theme Roller dialog appears, displaying the styles for your application. You
 
 In this lab, you applied a new theme style and created a custom "Hero" plug-in as a template component, enhancing the appearance and interactivity of your Oracle APEX application. Testing the application confirmed that the component integrated smoothly, giving you experience designing and deploying custom UI components. You may now proceed to the next lab.
 
-## What's Next
-
-In the upcoming practical session, you will build a new application called Expense Tracker. Throughout this workshop, you will gain proficiency in establishing a multi-level approval management system. Specifically, you will learn to create task definitions and a Unified Task List page. Additionally, you will incorporate various events into your task definitions, such as delegating the request, requesting information, and managing expiration. Furthermore, you will learn to create email templates, set up Oracle APEX account users, and utilize SQL scripts.
-
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
-
