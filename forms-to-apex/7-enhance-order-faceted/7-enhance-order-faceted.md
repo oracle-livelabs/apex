@@ -10,7 +10,7 @@ Please note that other options you can create are available in the wizard:
 - Option 2 - Master Detail - Side by Side
 - Option 3 - Master Detail - Drill Down
 
-Run this [Sample App](http://bit.ly/ModernizingFormsToAPEX%C2%A0) to see the above options.
+Run this [Sample App](https://apex.oracle.com/go/forms2apex-app) to see the above options.
 
 Estimated Time: 5 Minutes
 
