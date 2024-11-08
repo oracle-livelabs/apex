@@ -32,7 +32,7 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
 2. Under **Theme Roller**, enter/select the following:
 
-    - Select Theme**: **Redwood Light**
+    - Select Theme: **Redwood Light**
 
     - Redwood Options > Layout: **Floating**
 
@@ -133,7 +133,7 @@ In this task, you will customize the "Hero" plug-in by adding attributes. These 
 
     ![Select Theme to Redwood Light](images/click-delete-action.png " ")
 
-    ![Select Theme to Redwood Light](images/delete-OK.png " ")
+    ![Select Theme to Redwood Light](images/delete-ok.png " ")
 
 3. Now, delete all the attributes. After deleting, click **Add Attribute**.
 
@@ -249,7 +249,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/update-drag.png " ")
 
-10. Select **P3_SELECTION_ID** and drag it under the **Project Task Status** region.
+10. Select **P3\_SELECTION\_ID** and drag it under the **Project Task Status** region.
 
     ![Select Theme to Redwood Light](images/selection-id-drag.png " ")
 
