@@ -43,7 +43,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
     - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
     - Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
-    - Credentials: **apex\_ai\_cred**
+    - Credential: **apex\_ai\_cred**
 
     Click **Create**.
 
