@@ -49,7 +49,7 @@ In this lab, you will:
 - If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
 
 
-## Downloads
+### Downloads
 
 - [Click here](./files/book-club.sql) to download the completed application.
 - [Download the Application icon](./images/book-club-icon.png)
