@@ -37,10 +37,19 @@ In this workshop, you will:
 
 *Note: This workshop assumes you are using Oracle APEX 24.1.*
 
-### Downloads
+## Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
 
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
+
+2. Import the **doctors-app-made-easy.sql** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. Once the application is installed, follow Lab 2 > Task 1 to create application users.
+
+5. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 
@@ -52,4 +61,4 @@ In this workshop, you will:
 
 ## Acknowledgements
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024
