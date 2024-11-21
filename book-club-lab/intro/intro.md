@@ -55,7 +55,7 @@ In this lab, you will:
 - [Download the Application icon](./images/book-club-icon.png)
 
 
-## Learn More
+### Learn More
 
 - [Google Books API](https://developers.google.com/books/docs/v1/using)
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
