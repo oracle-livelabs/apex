@@ -45,7 +45,7 @@ In this lab, you will:
     *Note: This will remove the top navigation bar containing the user menu and replace it with our Navigation List. We will add the user menu back next.*
 
 ## Task 2: Add Entries to the Navigation Bar List
-Now we will add the user menu to the top navigation bar so the user can log out.
+Now we will add the user menu to the top navigation bar so the user is able to log out.
 
 1. Navigate back to the application home page and click **Shared Components**.
 
@@ -123,7 +123,7 @@ Now we will add the user menu to the top navigation bar so the user can log out.
 
     ![My Library page open at runtime with updated navigation](images/nav-runtime.png " ")
 
-You now know how to update the your application navigation style.
+You now know how to update the navigation style of an application.
 
 ## Acknowledgements
 

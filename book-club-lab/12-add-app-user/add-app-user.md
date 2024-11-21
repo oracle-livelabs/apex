@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This next lab is optional, but it would be nice to test the rate and review functionality with additional users so you can see posts under the Community Reviews section as well as the My Review section.
+This next lab is optional, but it would be nice to test the rate and review functionality with an additional user so you can see posts under the Community Reviews section as well as the My Review section.
 
 Estimated Lab Time: 5 minutes
 
@@ -11,7 +11,6 @@ Estimated Lab Time: 5 minutes
 In this lab, you will:
 - Create a new application user.
 - Log in to the application as the new user.
-- Search for the book you previously posted a review for under your account.
 - Post a review as the new user.
 
 ### Prerequisites
@@ -62,7 +61,7 @@ Now we will log in to the application as the newly created user and create a boo
 
     ![Book Club runtime application sign-in page](images/app-sign-in.png " ")
 
-4. Notice the My Library page is empty since this is the first time the new user as logged in to the application.
+4. Notice the My Library page is empty since this is the first time the new user has logged in to the application.
 
     ![My Library page open at runtime](images/library-runtime.png " ")
 
@@ -82,7 +81,7 @@ Now we will log in to the application as the newly created user and create a boo
 
     ![Rate Book page in runtime application showing filled out form fields](images/rate-book-runtime.png " ")
 
-    * You should see your new book review post listed first with the edit and delete buttons both available.
+    * You should see your new book review post listed first with the edit and delete buttons both enabled.
 
     ![Book Details page in runtime application showing book review post](images/reviews-runtime.png " ")
 
