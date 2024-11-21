@@ -1077,15 +1077,15 @@ Create the user signUp Page
 
      *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
 
-2. Click Create Project.
+2. Click **CREATE PROJECT**.
 
     ![Click My Apps](images/create-project1.png " ")
 
-3. In the New Project Screen, For Project Name: Enter **OBS Application** and Click **Create**.
+3. In the New Project Screen, For Project Name: Enter **OBS Application** and click **CREATE**.
 
     ![Click My Apps](images/new-project1.png " ")
 
-4. Click the OAuth consent screen (from the left side menu), Select **External**, and Click **Create**
+4. Click the OAuth consent screen (from the left side menu), select **External**, and click **CREATE**
 
     ![Click My Apps](images/external.png " ")
 
@@ -1093,7 +1093,7 @@ Create the user signUp Page
 
    Under **App Information** Section:
 
-      - For Application name: Enter your **Application Name**
+      - For Application name: **Online Bookstore**
 
       - For User support email: Enter your **Email Address**
 
@@ -1113,17 +1113,17 @@ Create the user signUp Page
 
     ![Click My Apps](images/oauth-consent-screen1.png " ")
 
-   Click **Save and Continue**.
+   Click **SAVE and CONTINUE**.
 
-6. In Scopes, leave everything as default and Click **Save and Continue**.
+6. In Scopes, leave everything as default and click **SAVE and CONTINUE**.
 
     ![Click My Apps](images/scopes.png " ")
 
-7. In Test users, leave everything as default and Click **Save and Continue**.
+7. In Test users, leave everything as default and click **SAVE and CONTINUE**.
 
     ![Click My Apps](images/test-users.png " ")
 
-8. Click **Credentials** (from left side menu). Now Click **+Create Credentials** and select **OAuth client ID**.
+8. Click **Credentials** (from left side menu). Now click **+Create Credentials** and select **OAuth client ID**.
 
     ![Click My Apps](images/create-creds.png " ")
 
@@ -1133,15 +1133,15 @@ Create the user signUp Page
 
      - For Name: Enter **Online Bookstore Authentication**
 
-   Under Authorized redirect URLs, Click **+Add URl**
+   Under Authorized redirect URIs, click **+Add URl**
 
      - For URls 1: Enter https://apex.oracle.com/pls/apex/apex_authentication.callback
 
-     Click **Create**.
+     Click **CREATE**.
 
     ![Click My Apps](images/create-creds1.png " ")
 
-10. You will get the Client ID and Client secret. Save these IDs. We will use them later.
+10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
 
     ![Click My Apps](images/creds-created.png " ")
 
@@ -1149,11 +1149,19 @@ Create the user signUp Page
 
 12. On the Workspace home page, click **App Builder**.
 
+    ![Click My Apps](images/12-5-12-app-builder.png " ")
+
 13. Click **Workspace Utilities**.
+
+    ![Click My Apps](images/12-5-13-workspace-utilities.png " ")
 
 14. Click **Web Credentials**.
 
+    ![Click My Apps](images/12-5-14-web-cred.png " ")
+
 15. Click **Create**.
+
+    ![Click My Apps](images/12-5-15-create.png " ")
 
 16. In the **Web Credentials** enter the following and click **Create**.
 
@@ -1163,10 +1171,10 @@ Create the user signUp Page
         - Static Id: **Google_Authentication**
         - Authentication Type: Select **OAuth2 Client Credentials**.
         - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-        - Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
-        - Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
+        - Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
+        - Verify Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
 
-    Click Create
+    Click **Create**
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
@@ -1206,7 +1214,7 @@ Create the user signUp Page
 
     ![Define Authentication](images/create-auth2.png " ")
 
-23. Notice that a new **Authentication Scheme** you created is displayed. Click **Google**.
+23. Notice that a new **Authentication Scheme** you created is displayed. Click **GOOGLE**.
 
     ![Authentication scheme displayed](images/create-auth3.png " ")
 
@@ -1218,11 +1226,15 @@ Create the user signUp Page
 
         - Switch in Session: **Enabled**
 
-    Click on Apply Changes
+    Click on **Apply Changes**
+
+    ![Authentication scheme displayed](images/12-5-24-google1.png " ")
 
 25. Navigate to the **SQL Workshop** > **Object Browser** > **Package** > **OBS\_AUTH**
 
-26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click Save and Continue.
+     ![Authentication scheme displayed](images/12-5-25-nav-obj-browser.png " ")
+
+26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click **Save and Continue**.
 
     - Specification: **procedure google\_post\_authenticate;**
 
@@ -1258,13 +1270,22 @@ Create the user signUp Page
         </copy>
         ```
 
-27. Navigate to Page - 9999.
+    ![Authentication scheme displayed](images/12-5-26-spec.png " ")
+    ![Authentication scheme displayed](images/12-5-26-body.png " ")
+
+27. Navigate to Application home page and select **9999 - Login Page**.
+
+    ![Authentication scheme displayed](images/12-5-27-login-page.png " ")
 
 28. In the rendering tab, Select Page Item **P9999_USERNAME**
 
     - Under Appearance > Value Placeholder: **Email Address or Username**
 
+    ![Click My Apps](images/12-5-28-username-placeholder.png " ")
+
 29. Under **Online Bookstore** region, right-click **Next** and select **Create Button**.
+
+    ![Click My Apps](images/12-5-29-button-google.png " ")
 
 30. In the Property editor, enter/select the following:
 
@@ -1272,17 +1293,15 @@ Create the user signUp Page
 
         - Button Name: **Google**
 
-        - Label: **Login with Google Account**
+        - Label: **Login/Signup with Google Account**
 
-    - Under Appearance:
+    - Under Appearance > Template options: Click **Use Template Defaults**
 
-        - Button Template: **Text with Icon**
+        - Size: **Large**
 
-        - Template options: Click **Use Template Defaults**
+        Click **OK**.
 
-            - Size: Large
-
-          Click **OK**.
+    ![Click My Apps](images/12-5-30-google-prop1.png " ")
 
     - Under Behavior:
 
@@ -1290,17 +1309,17 @@ Create the user signUp Page
 
         - Target: Click **No Link Defined**
 
-            - Under Target:
+            - Under Target > Page: **12**
 
-                - Page: **12**
-
-            - Under Advanced:
-
-                - Request: **APEX_AUTHENTICATION=GOOGLE**
+            - Under Advanced > Request: **APEX_AUTHENTICATION=GOOGLE**
 
             Click **OK**.
 
-31. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+    ![Click My Apps](images/12-5-30-google-prop2.png " ")
+
+31. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+
+    ![Click My Apps](images/12-5-31-process.png " ")
 
 32. In the property editor, enter/select the following:
 
@@ -1316,15 +1335,19 @@ Create the user signUp Page
 
         - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
+    - Under Execution > Sequence: **25**
+
     - Under Server-side Condition > When Button Pressed: **Google**
+    
+    ![Click My Apps](images/12-5-32-process-details.png " ")
 
-33. Drag and drop **Login with Google** process to the above of **Clear Page(s) Cache** process.
-
-34. Select Login Process and update the following:
+33. Select Login Process and update the following:
 
     - Under Server-side Condition > When Button Pressed: **LOGIN**
 
-35. Click **Save**.
+    ![Click My Apps](images/12-5-33-login-button.png " ")
+
+34. Click **Save**.
 
 ## Summary
 
