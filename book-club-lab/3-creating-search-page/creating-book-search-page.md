@@ -244,7 +244,7 @@ In this step, you will start to add content to your app using the REST data sour
 
 4. You also need to create a Cards region to display the searched books. It will be almost exactly like the Placeholder Books region, with a few minor changes.
 
-5. Right click on the Placeholder Books region in the rendering pane and select **Duplicate** to create a copy of the region.
+5. Right-click on the Placeholder Books region in the rendering pane and select **Duplicate** to create a copy of the region.
 
 6. Set the following properties:
 
@@ -311,7 +311,7 @@ The final region that needs to be added to the Book Search page is the search ba
 
         - Item: **P2\_SEARCH**
 
-    * Now you are displaying the Placeholder Books region based on a condition. If the P2_SEARCH item is NULL, then the region will display. You will create an opposite condition for the Searched Books region.
+    * Now you are displaying the Placeholder Books region based on a condition. If the P2\_SEARCH item is NULL, then the region will display. You will create an opposite condition for the Searched Books region.
 
     ![Close-up of the Server-side Condition property group for the Popular Movies region](images/placeholder-ssc.png " ")
 
@@ -323,7 +323,7 @@ The final region that needs to be added to the Book Search page is the search ba
 
         - Item: **P2\_SEARCH**
 
-    * Now, you are only displaying Searched Books if the P2_SEARCH item is NOT NULL (has a value).
+    * Now, you are only displaying Searched Books if the P2\_SEARCH item is NOT NULL (has a value).
 
 5. In order to actually search for a book, you have to edit the query parameter that is submitted with a call to the Google Books API. A search query is required, otherwise you will not get any results back. When you look at the two Cards regions in the rendering pane, you can see that underneath Searched Books there is a **Parameters** section.
 
@@ -337,7 +337,7 @@ The final region that needs to be added to the Book Search page is the search ba
 
     ![Page 2 open in Page Designer editing the Searched Books region properties](images/search-parameter-properties.png " ")
 
-8. Now let's do the same thing for the Placeholder Books region. In the left rendering pane under the **Placeholder Books** region, expand the **Parameters** section and click on the **q** parameter.
+8. Now do the same thing for the Placeholder Books region. In the left rendering pane under the **Placeholder Books** region, expand the **Parameters** section and click on the **q** parameter.
 
 9. At the bottom of the properties pane on the right of Page Designer, set the following for the **q** parameter:
 
@@ -367,7 +367,6 @@ The final region that needs to be added to the Book Search page is the search ba
 
 	![Close-up of the developer toolbar at the bottom of the page at runtime of Book Club](images/dev-toolbar.png " ")
 
-
 You now know how to create a page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
 ## Learn More
@@ -380,8 +379,7 @@ You now know how to create a page in your APEX application and add components to
 
 - [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)
 
-
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

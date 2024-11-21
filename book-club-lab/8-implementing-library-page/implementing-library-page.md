@@ -32,7 +32,7 @@ Adding tabs will allow a user to filter through books in their library to make i
 
         ![My Library region open in Property Editor on Page 1 in Page Designer](images/header-region.png " ")
 
-3. Right click on the Breadcrumb Bar position in the rendering tree and select **Create Region**.
+3. Right-click on the Breadcrumb Bar position in the rendering tree and select **Create Region**.
 
 4. Set the following properties for the new region:
 
@@ -52,7 +52,7 @@ Adding tabs will allow a user to filter through books in their library to make i
 
 
 ## Task 2: Create the Library Cards
-Now you will start to build out the page by first adding a Cards region so that users can view their personal list of books. It will be similar to the Cards regions on the Book Search page, but the source will not be a REST data source. The books will be organized into two regions: Want to Read and Read. The tabs we created in the last task will allow users to easily switch between the views.
+Now you will start to build out the page by first adding a Cards region so that users can view their personal list of books. It will be similar to the Cards regions on the Book Search page, but the source will not be a REST data source. The books will be organized into two regions: Want to Read and Read. The tabs you created in the last task will allow users to easily switch between the views.
 
 1. In the rendering pane, click on **Page 1: My Library**.
 
@@ -163,7 +163,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 
     ![Page 1 open in Page Designer with Page CSS properties in Property Editor](images/library-css.png " ")
 
-4. Right click on the Body position in the rendering tree and select **Create Region**.
+4. Right-click on the Body position in the rendering tree and select **Create Region**.
 
 5. Set the following properties for the new region:
 
@@ -242,7 +242,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 
     * Icon and Badge → Badge Column: **BADGE\_LABEL**
 
-    * Icon and Badge → Badge CSS Classess: **&BADGE\_COLOR.**
+    * Icon and Badge → Badge CSS Classes: **&BADGE\_COLOR.**
 
     * Media → Source: **Image URL**
 
@@ -258,7 +258,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 
 7. You also need to create a Cards region to display the books marked as read. It will be almost exactly like the Want to Read books region, with a few minor changes.
 
-8. Right click on the **Want to Read** region in the rendering pane and select **Duplicate** to create a copy of the region.
+8. Right-click on the **Want to Read** region in the rendering pane and select **Duplicate** to create a copy of the region.
 
 9. Set the following properties:
 
@@ -321,7 +321,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 ## Task 3: Connect the Library to the Book Details Page
 In this step, you are going to connect the My Library page to the Book Details page to allow a user to view details for any book in their library, as well as remove a book from their library or mark a book as "Read."
 
-1. In the rendering pane, right click on the Actions section underneath the Want to Read region and select **Create Action**.
+1. In the rendering pane, right-click on the Actions section underneath the Want to Read region and select **Create Action**.
 
 2. Set the following properties:
 
@@ -415,7 +415,7 @@ When a user logs into the Book Club app for the first time, they will not have a
 
         ![Close-up of Want to Read region server-side condition](images/want-to-read-ssc.png " ")
 
-7. Now we'll do the same for the Read region. Click on the **Read** region.
+7. Now you'll do the same for the Read region. Click on the **Read** region.
 
 8. In Server-side Condition:
 
@@ -435,9 +435,10 @@ When a user logs into the Book Club app for the first time, they will not have a
 
     ![My Library page in runtime application showing the Get Started region and no movie cards](images/get-started-runtime.png " ")
 
+
 You now know how to define page content using tables and organize page content using tabs. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

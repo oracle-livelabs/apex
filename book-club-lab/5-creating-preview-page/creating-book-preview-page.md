@@ -60,15 +60,15 @@ You will create a new page, Preview Book, which contains a Form. While this form
 
     ![Page 4 open in Page Designer with the CSS property group visible in the Page property editor](images/preview-page-css.png " ")
 
-4. Like we did previously for the Book Details page, you will first need to hide all the book page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
+4. Like you did previously for the Book Details page, you will first need to hide all the book page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
 
-    * To select all items, click on the first item under the Preview Book region, P4\_ID, and then hold shift and click on the last item, P4\_VOLUMEINFO\_PANELIZATIONSUMMARY\_CONTAINSIMAGEBUBBLES.
+    * To select all items, click on the first item under the Preview Book region, **P4\_ID**, and then hold shift and click on the last item, **P4\_VOLUMEINFO\_PANELIZATIONSUMMARY\_CONTAINSIMAGEBUBBLES**.
 
     * In the Page Items editing pane, set Type: **Hidden**
 
     ![Page 4 open in Page Designer with all Preview Book form items selected and their type set to Hidden in the Property Editor](images/hide-items.png " ")
 
-5. Since we aren't entering details into the form, we don't need the Cancel button that was added by default. Under Close, right click on **Buttons** region under Dialog Footer in the rendering pane and click **Delete**.
+5. Since the user isn't entering details into the form, you don't need the Cancel button that was added by default. Under Close, right click on **Buttons** region under Dialog Footer in the rendering pane and click **Delete**.
 
     ![Page 4 open in Page Designer with Button region context menu open and Delete selected](images/delete-button-region.png " ")
 
@@ -97,7 +97,7 @@ You will create a new page, Preview Book, which contains a Form. While this form
 ## Task 2: Set up Embedded Viewer Region
 In this step, you will add a region to display the viewer from the Google Books Embedded Viewer API.
 
-1. Right click on Content Body and select **Create Region**.
+1. Right-click on Content Body and select **Create Region**.
 
     * Set the following:
 
@@ -138,7 +138,7 @@ To be able to view the preview of a book you click on from the Book Details page
 
 2. On the Book Details page, you can see in the rendering pane that the Header region has an **Actions** section underneath it.
 
-3. Right click on **Actions** underneath Header and select **Create Action**.
+3. Right-click on **Actions** underneath Header and select **Create Action**.
 
     ![Close up of rendering pane with Cards Action context menu open on Page 3 in Page Designer ](images/create-action.png " ")
 
@@ -162,9 +162,16 @@ To be able to view the preview of a book you click on from the Book Details page
 
 4. Click **Save**.
 
-You now know how to create a modal page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
+5. Refresh the page where your application is running.
+
+6. Test the Preview Book page by clicking on a book card then clicking the **Preview Book** link on the Book Details page.
+
+    ![Page 4 of Book Club at runtime displaying book preview dialog over Book Details page](images/preview-book-runtime.png " ")
+
+
+You now know how to create a modal dialog page in your APEX application and add components to define content in Page Designer. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

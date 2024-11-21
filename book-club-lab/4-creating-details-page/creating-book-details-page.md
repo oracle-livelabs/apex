@@ -177,15 +177,15 @@ You can use the value stored in the P3\_ID page item in the Book Details form to
 
 1. You will first need to hide all the Book page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
 
-    * To select all items, click on the first item under the Book Details region, P3\_ID, and then hold shift and click on the last item, P3\_VOLUMEINFO\_PANELIZATIONSUMMARY\_CONTAINSIMAGEBUBBLES.
+    * To select all items, click on the first item under the Book Details region, **P3\_ID**, and then hold shift and click on the last item, **P3\_VOLUMEINFO\_PANELIZATIONSUMMARY\_CONTAINSIMAGEBUBBLES**.
 
     * In the Page Items editing pane, set Type: **Hidden**
 
     ![Page 3 open in Page Designer with all Book Details form items selected and their type set to Hidden in the Property Editor](images/hide-items.png " ")
 
-2. Since we aren't entering details into the form, we don't need the Cancel button that was added by default. Under Close, right click on **CANCEL** button and click **Delete**.
+2. Since the user won't be entering details into the form, you don't need the Cancel button that was added by default. Under Close, right click on **CANCEL** button and click **Delete**.
 
-    * We'll add a button to navigate back to the previous page later.
+    * You'll add a button to navigate back to the previous page later.
 
     ![Page 3 open in Page Designer with Cancel button menu open and Delete selected](images/delete-cancel-button.png " ")
 
@@ -309,7 +309,7 @@ You can use the value stored in the P3\_ID page item in the Book Details form to
 
 9. Finally, you will add a region to display the book Overview to go along with the nice header containing the book details.
 
-10. In the rendering pane on the left, right click on Content Body and select **Create Region**.
+10. In the rendering pane on the left, right-click on Content Body and select **Create Region**.
 
 11. Set the following properties:
 
@@ -329,9 +329,9 @@ You can use the value stored in the P3\_ID page item in the Book Details form to
 
         ![Page 3 open in Page Designer with Property Editor open on editing the Overview region](images/overview.png " ")
 
-12. Since Book Details is a common page (can be navigated from both the Book Search page and the My Library page), we will need to create a page item to hold the previous page value so the Back button we create later on knows where to redirect the user.
+12. Since Book Details is a common page (can be navigated from both the Book Search page and the My Library page), you will need to create a page item to hold the previous page value so the Back button we create later on knows where to redirect the user.
 
-13. Right click on the **Book Details** region in the rendering pane and select **Create Page Item**.
+13. Right-click on the **Book Details** region in the rendering pane and select **Create Page Item**.
 
     ![Close up of rendering pane with Book Details region context menu open on Page 2 in Page Designer ](images/create-page-item.png " ")
 
@@ -352,7 +352,7 @@ To be able to view the details of any book you click on on the Book Search page,
 
 2. On the Book Search page, you can see in the rendering pane that both Placeholder Books and Searched Books have an **Actions** section underneath them.
 
-3. Right click on **Actions** underneath Placeholder Movies and select **Create Action**.
+3. Right-click on **Actions** underneath Placeholder Movies and select **Create Action**.
 
     ![Close up of rendering pane with Cards Action context menu open on Page 2 in Page Designer ](images/create-action.png " ")
 
@@ -374,7 +374,7 @@ To be able to view the details of any book you click on on the Book Search page,
 
             *Note: You can also use the buttons next to the name and value fields to browse items that you can pass values to. Notice that the options for Name all come from the Book Details page (P3), because that is the item you want to set. The options for Value are the columns from the Book Search data source because this is the what you are getting from page 2 and passing to page 3.*
 
-            *Note: P3\_PREVIOUS\_PAGE\_ID doesn't appear when browsing items because we haven't created it yet so you'll need to type it in manually. We will create that page item in the next lab.*
+            *Note: P3\_PREVIOUS\_PAGE\_ID doesn't appear when browsing items because you haven't created it yet so you'll need to type it in manually. You will create that page item in the next lab.*
 
         - Click **Ok**.
 
@@ -392,9 +392,7 @@ To be able to view the details of any book you click on on the Book Search page,
 
 You have now set up the Book Details page and set it up to open for any card that is selected from the Book Search page. You may now **proceed to the next lab**.
 
-## Learn More
-
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

@@ -40,9 +40,8 @@ Estimated Workshop Time: 2 hours
 | 6 | [Create Local Tables](?lab=creating-tables) | 10 min |
 | 7 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 15 min |
 | 8 | [Implement the Library Page](?lab=implementing-library-page) | 20 min |
-| 9 | [Improve the Movie Details Page](?lab=improving-details-page) | 10 min |
-| 10 | [Add Cast List (Optional)](?lab=adding-cast-list) | 10 min |
-| 11 | [Improve the Watchlist Page (Optional)](?lab=improving-watchlist-page) | 5 min |
+| 9   | [Create the Book Review Form & Table](?lab=creating-review-form)  | 20 min     |
+| 10  | [Implement Ratings & Reviews](?lab=implementing-ratings-and-reviews)  | 20 min     |
 
 ### **Let's Get Started!**
 

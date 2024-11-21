@@ -24,7 +24,7 @@ In this lab, you will:
 
 3. Click on the **Book Details** page.
 
-4. Right click on the **Breadcrumb** region in the rendering pane and select **Create Button**.
+4. Right-click on the **Breadcrumb** region in the rendering pane and select **Create Button**.
 
     ![Close up of rendering pane with Breadcrumb region context menu open on Page 2 in Page Designer ](images/create-back-button.png " ")
 
@@ -48,7 +48,7 @@ In this lab, you will:
 
     ![Page 3 open in Page Designer with Property Editor open on editing the Back button](images/back-button-properties.png " ")
 
-6. Right click the Breadcrumb region and select **Create Button**.
+6. Right-click the Breadcrumb region and select **Create Button**.
 
     * Identification → Button Name: **ADD\_TO\_LIBRARY**
 
@@ -62,7 +62,7 @@ In this lab, you will:
 
     ![Page 3 open in Page Designer with the ADD_TO_LIBRARY button properties open in the Property Editor](images/add-button.png " ")
 
-7. Right click the Breadcrumb region and select **Create Button**.
+7. Right-click the Breadcrumb region and select **Create Button**.
 
     * Identification → Button Name: **REMOVE\_FROM\_LIBRARY**
 
@@ -74,7 +74,7 @@ In this lab, you will:
 
     ![Page 3 open in Page Designer with the REMOVE_FROM_LIBRARY button properties open in the Property Editor](images/remove-button.png " ")
 
-8. Right click the Breadcrumb region and select **Create Button**.
+8. Right-click the Breadcrumb region and select **Create Button**.
 
     * Identification → Button Name: **MARK\_READ**
 
@@ -125,7 +125,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
     ![Close-up of tabs at the top of the rendering pane in Page Designer with the third tab highlighted](images/processing-tab.png " ")
 
-6. Right click on Processing and select **Create Process**.
+6. Right-click on Processing and select **Create Process**.
 
     ![Close-up of processing tab in Page Designer with the processing context menu open and Create Process highlighted](images/create-process.png " ")
 
@@ -175,7 +175,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
     ![Close-up of the Add book process properties set in step 6](images/add-process.png " ")
 
-7. Right click on Processing and select **Create Process**.
+7. Right-click on Processing and select **Create Process**.
 
     * Identification → Name: **Remove book**
 
@@ -190,7 +190,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
     * Server-side Condition → When Button Pressed: **REMOVE\_FROM\_LIBRARY**
 
-8. Right click on Processing and select **Create Process**.
+8. Right-click on Processing and select **Create Process**.
 
     * Identification → Name: **Update book**
 
@@ -434,5 +434,5 @@ You now know how to use SQL commands in Page Designer regions and processes to g
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

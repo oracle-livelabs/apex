@@ -191,5 +191,5 @@ You now know how to use Quick SQL to define new tables, and create application i
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

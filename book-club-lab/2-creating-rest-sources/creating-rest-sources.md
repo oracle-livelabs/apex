@@ -27,8 +27,6 @@ In this lab, you will:
 
     ![Google Books API Key Credentials page](images/copy-api-key.png " ")
 
-
-
 ## Task 2: Create REST Data Source
 
 1. Return to the App Builder home by clicking **App Builder** in the APEX navigation bar or the App Builder tile on APEX home page.
@@ -106,5 +104,5 @@ You now know how to create a REST Data Source in Oracle APEX and will be able to
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024

@@ -32,8 +32,8 @@ In this lab, you will:
 | 6   | [Create Local Tables](?lab=creating-tables)                      | 10 min    |
 | 7   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
 | 8   | [Implement the Library Page](?lab=implementing-library-page) | 25 min    |
-| 9   | [Create APEX Collections for Ratings](?lab=adding-cast-list)                | 5 min     |
-| -   | [Implement Discussion Forum (Optional)](?lab=improving-watchlist-page)       | 5 min     |
+| 9   | [Create the Book Review Form & Table](?lab=creating-review-form)  | 20 min     |
+| 10  | [Implement Ratings & Reviews](?lab=implementing-ratings-and-reviews)  | 20 min     |
 
 ### **Let's Get Started!**
 
@@ -52,5 +52,5 @@ In this lab, you will:
 
 ## Acknowledgements
 
-- **Author** - Maddie Thompson, Sakthi Gopinath
+- **Author** - Maddie Thompson
 - **Last Updated By/Date** - Maddie Thompson, November 2024
