@@ -185,7 +185,7 @@ In this lab, you will:
         r.rating,
         r.full_name,
         r.pace,
-        apex_util.get_since(r.created) as post_date,
+        apex_util.get_since(r.updated) as post_date,
         r.mood,
         REGEXP_SUBSTR(r.mood, '[^:]+', 1, 1) as MOOD1,
         REGEXP_SUBSTR(r.mood, '[^:]+', 1, 2) as MOOD2,
@@ -525,7 +525,7 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     * Settings → Items to Submit: **P3\_ACTION\_ID**
 
-    *Note: The code block needs to receive the Page Item value for the P3_ACTION_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server.*
+    *Note: The code block needs to receive the Page Item value for the P3\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server.*
 
     ![Page 3 open in Page Designer with Property Editor open editing action-delete dynamic action's second TRUE action properties](images/da-true-2.png " ")
 
@@ -573,6 +573,10 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     ![Rate Book page in runtime application](images/rate-form-runtime.png " ")
 
+    * You can test out the form field validations by selecting more than 6 mood checkboxes or by leaving the star rating empty. You should receive both an inline error notification and an error popup message upon clicking the Post button.
+
+    ![Rate Book page in runtime application showing form validation error](images/validation-error-runtime.png " ")
+
 13. Fill out the form details then click the **Post** button.
 
     * The dialog should close and you should see a success message in the top right of the screen and your review post at the bottom.
@@ -585,9 +589,13 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     * The form submit button should say Save instead of Post.
 
-    * You should be able to update values and save accordingly.
-
     ![Rate Book page in runtime application showing book review post](images/edit-review-runtime.png " ")
+
+    * Update some values and click **Save**.
+
+    * The review post's values should update accordingly and a success message should appear in the top right corner of the page.
+
+    ![Rate Book page in runtime application showing book review post](images/edited-review-runtime.png " ")
 
 15. Now test out the delete functionality by clicking the delete icon button on your review post.
 

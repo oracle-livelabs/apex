@@ -3,7 +3,7 @@
 ## Introduction
 In the previous lab, you did the backend work to set up tables and application items. In this lab, you will be creating Add, Remove, Read, and Back buttons that will control the flow between the Book Search and Book Details page, as well as the data stored in the library table. You will also add a badge to the Cards on the Book Search and Book Details pages to have a visual cue for books that a user has already marked as added or read.
 
-Estimated Lab Time: 25 minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 In this lab, you will:  

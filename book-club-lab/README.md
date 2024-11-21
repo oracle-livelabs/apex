@@ -3,14 +3,13 @@
 ## Create a Book Club Application 
 
 ## Overview
-In this workshop, you will create an application that allows you and your friends to search for books and create personal libraries. You will use the Google Books API), which is a database that contains a large amount of data about a vast number of books. Google Books has an extensive API that you will access in this workshop to search for books, and get book details.
+In this workshop, you will create an application that allows you and your friends to search for books and create personal libraries. You will use the [Google Books API](https://developers.google.com/books/docs/v1/using), which is a database that contains a large amount of data about a vast number of books. Google Books has an extensive API that you will access in this workshop to search for books, and get book details.
 
 When individual users log into the app, the home page will display their own unique library. They can add books to their library by searching for a specific books of their choice. After adding books to their list, users can mark them as read, rate the book, and post reviews.
 
-While the end result is a simple version of a books library application, you can continue to build it out far past what this workshop takes you through, using many of the same concepts you will learn. There are also a lot of features in Oracle APEX that you can use to allow users to rate books they have watched, make comments on books, and more.
+While the end result is a simple version of a books library application, you can continue to build it out far past what this workshop takes you through, using many of the same concepts you will learn.
 
-It will take about two hours to complete the workshop, but your time may vary depending on your experience with APEX. If you get stuck, don't worry! At the end of each lab, you will find an app export that will get you across the finish line. 
-
+It will take about two and a half hours to complete the workshop, but your time may vary depending on your experience with APEX. If you get stuck, don't worry! At the end of each lab, you will find an app export that will get you across the finish line.
 
 ### Lab Objectives
 In this lab, you will:  
@@ -20,12 +19,13 @@ In this lab, you will:
 - Learn how to use application items and processes.  
 - Learn how to create a page to view data from a REST source.  
 - Learn how to create a page to view data from a local table.  
-- Learn how to search for books.  
-- Learn how to manage a list of books.
+- Learn how to implement button actions.
+- Learn how to populate database tables with form input data.
+- Learn how to customize an app using various APEX features as well as custom CSS.
 
-Estimated Workshop Time: 2 hours
+Estimated Workshop Time: 2.5 hours
 
-*Note: This lab assumes you are using Oracle APEX 21.2.*
+*Note: This lab assumes you are using Oracle APEX 24.1.*
 
 ### Lab Modules
 
@@ -33,15 +33,16 @@ Estimated Workshop Time: 2 hours
 | --- | --- | --- |
 | - | [Getting Started](?lab=signing-up.md) | 5 min |
 | 1 | [Create the Application](?lab=create-app) | 5 min |
-| 2 | [Create REST Data Source](?lab=creating-rest-sources) | 15 min |
+| 2 | [Create REST Data Source](?lab=creating-rest-sources) | 10 min |
 | 3 | [Create the Book Search Page](?lab=creating-book-search-page) | 20 min |
-| 4 | [Create the Book Details Page](?lab=creating-book-details-page) | 10 min |
+| 4 | [Create the Book Details Page](?lab=creating-book-details-page) | 20 min |
 | 5 | [Create the Preview Book Page](?lab=creating-book-preview-page) | 10 min |
 | 6 | [Create Local Tables](?lab=creating-tables) | 10 min |
-| 7 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 15 min |
+| 7 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 20 min |
 | 8 | [Implement the Library Page](?lab=implementing-library-page) | 20 min |
 | 9   | [Create the Book Review Form & Table](?lab=creating-review-form)  | 20 min     |
 | 10  | [Implement Ratings & Reviews](?lab=implementing-ratings-and-reviews)  | 20 min     |
+| 11  | [Update App Navigation (Optional)](?lab=update-navigation)  | 5 min     |
 
 ### **Let's Get Started!**
 

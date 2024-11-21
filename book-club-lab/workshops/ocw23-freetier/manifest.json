@@ -47,8 +47,12 @@
         "filename": "../../9-creating-review-form/creating-review-form.md"
       },
       {
-        "title": "Lab 10: Implementing Ratings & Reviews",
+        "title": "Lab 10: Implement Ratings & Reviews",
         "filename": "../../10-implementing-ratings/implementing-ratings-and-reviews.md"
+      },
+      {
+        "title": "Optional Lab: Update App Navigation",
+        "filename": "../../11-update-navigation/update-navigation.md"
       },
       {
         "title": "Need Help?",

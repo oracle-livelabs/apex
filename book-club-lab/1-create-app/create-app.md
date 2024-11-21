@@ -6,14 +6,13 @@ You will get started by creating a skeleton application and you will add to it i
 
 You will also need to sign up for an account on Google Books and obtain an API Key. A Google Books API Key is required for this tutorial, as authentication is needed to get data from the Google Books API.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 
 ### Objectives
 In this lab, you will:  
 - Create a new application.  
 - Edit the appearance and theme of your application.
-- Update the application navigation.
 - Run your application.  
 
 ### Prerequisites
@@ -108,113 +107,7 @@ In this lab, you will:
     
     You have successfully customized the application theme.
 
-## Task 4: Update the App Navigation
-
-1. Since there will only be two pages in the nav menu, we're going to update the app navigation to be a simple top navigation bar instead of the default side drawer menu.
-
-2. Navigate to the application home page and click **Edit Application Definition**.
-
-    ![App home page with Edit Application Definition button highlighted](images/app-definition.png " ")
-
-3. Click the **User Interface** tab and set the following:
-
-    * Logo → Logo: **Image and Text**
-
-    * Logo → Image URL: **#APP_FILES#icons/app-icon-512.png**
-
-    * Logo → Text: **Book Club**
-
-    * Navigation Menu → Display Navigation: **off**
-
-    * Navigation Bar → Navigation Bar List: **Navigation Menu**
-
-    * Navigation Bar → List Template: **Navigation Bar**
-
-    * Click **Apply Changes**
-
-    ![Edit Application Definition page open with User Interface - Logo attributes being edited](images/edit-user-interface-1.png " ")
-
-    ![Edit Application Definition page open with User Interface - Navigation Menu/Bar attributes being edited](images/edit-user-interface-2.png " ")
-
-    *Note: This will remove the top navigation bar containing the user menu and replace it with our Navigation List. We will add the user menu back next.*
-
-4. Now we will add the user menu to the top navigation bar so the user can log out.
-
-5. Navigate back to the application home page and click **Shared Components**.
-
-    ![App home page with Shared Components tab button highlighted](images/shared-components.png " ")
-
-6. Under Navigation and Search, click **Navigation Bar List**.
-
-    ![Shared Components page open with Navigation Bar List link highlighted](images/nav-bar-list.png " ")
-
-7. Click on the **Navigation Menu** entry to edit the list.
-
-    ![Navigation Bar List page open with entry highlighted](images/nav-menu-list.png " ")
-
-8. Click **Create Entry** button.
-
-    ![Navigation Menu List page open with Create Entry button highlighted](images/create-entry.png " ")
-
-9. Set the following properties for the new List Entry:
-
-    * Entry → Image/Class: **fa-user**
-
-    * Entry → List Entry Label: **&APP_USER.**
-
-    * Target → Target Type: **URL**
-
-    * Target → URL Target: **#**
-
-    * User Defined Attributes → List Item CSS Classes: **has-username**
-
-    * Click **Create and Create Another**
-
-    ![List Entry page open with edited properties](images/list-entry-1-1.png " ")
-
-    ![List Entry page open with edited properties](images/list-entry-1-2.png " ")
-
-10. Set the following properties for the new List Entry:
-
-    * Entry → Parent List Entry: **&APP_USER.**
-
-    * Entry → List Entry Label: **---**
-
-    * Target → Target Type: **URL**
-
-    * Target → URL Target: **separator**
-
-    * Conditions → Condition Type: **User is Authenticated (not public)**
-
-    * Click **Create and Create Another**
-
-    ![List Entry page open with edited properties](images/list-entry-2.png " ")
-
-11. Set the following properties for the new List Entry:
-
-    * Entry → Parent List Entry: **&APP_USER.**
-
-    * Entry → Image/Class: **fa-sign-out**
-
-    * Entry → List Entry Label: **Sign Out**
-
-    * Target → Target Type: **URL**
-
-    * Target → URL Target: **&LOGOUT_URL.**
-
-    * Conditions → Condition Type: **User is Authenticated (not public)**
-
-    * Click **Create List Entry**
-
-    ![List Entry page open with edited properties](images/list-entry-3.png " ")
-
-12. Click **Apply Changes**.
-
-    ![List:Navigation Menu page open with Apply Changes button highlighted](images/apply-changes.png " ")
-
-13. Run the application to see the updated navigation bar.
-
-You now know how to create, run, and update the theme/navigation of an application. You may now **proceed to the next lab**.
+You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

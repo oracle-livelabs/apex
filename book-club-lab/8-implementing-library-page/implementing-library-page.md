@@ -3,7 +3,7 @@
 ## Introduction
 Now that you have implemented functionality to find books and add them to a table, you will set up the My Library page to display each book in that table, which is the final piece of base functionality you will need to complete this app.
 
-Estimated Lab Time: 25 minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 In this lab, you will:  
