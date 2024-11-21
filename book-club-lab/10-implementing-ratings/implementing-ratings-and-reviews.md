@@ -10,7 +10,6 @@ In this lab, you will:
 - Implement a Rate Book button that opens the new form page created in the last lab.
 - Create a cards region on the Book Details page to display book reviews.
 - Implement card actions to enable users to edit or delete their post.
-- Create additional users to test out the new functionality.
 
 ### Prerequisites
 - Completion of workshop through Lab 9
@@ -149,7 +148,7 @@ In this lab, you will:
 
     ![Page 3 open in Page Designer with Page CSS properties in Property Editor](images/details-css.png " ")
 
-4. Right-click on the Body position in the rendering tree and select **Create Region**:
+4. Right-click on the Body position in the rendering tree and select **Create Region**.
 
     * Identification → Name: **Community Ratings & Reviews**
 
@@ -233,7 +232,7 @@ In this lab, you will:
 
         ![Close-up of the My Review region Server-side condition properties](images/my-review-ssc.png " ")
 
-6. Go to the Attributes tab of your new My Review region to customize your Review card.
+6. Go to the **Attributes** tab of your new **My Review** region to customize your Review card.
 
     * Appearance → Layout: **Horizontal (Row)**
 
@@ -269,7 +268,7 @@ In this lab, you will:
         &lt;span class="&BADGE_COLOR. pace">&BADGE_LABEL.&lt;/span>
         ```
 
-    ![Page 3 open in Page Designer with the My Review region attributes open in Property Editor](images/my-review-attributes-1.png " ")
+    ![Page 3 open in Page Designer with the My Review region attributes open in Property Editor](images/my-review-region-attributes-1.png " ")
 
     * Icon and Badge → Icon Source: **Initials**
 
@@ -277,7 +276,7 @@ In this lab, you will:
 
     * Icon and Badge → Icon CSS Classes: **u-color-13**
 
-    ![Page 3 open in Page Designer with the My Review region attributes open in Property Editor](images/my-review-attributes-2.png " ")
+    ![Page 3 open in Page Designer with the My Review region attributes open in Property Editor](images/my-review-region-attributes-2.png " ")
 
 7. You also need to create a Cards region to display other user's reviews. It will be almost exactly like the My Review region, with a few minor changes.
 
@@ -387,21 +386,21 @@ In this task, you will provide the APEX page with the custom javascript that wil
 
     ![Page 3 open in Page Designer with Property Editor open on editing page javascript](images/page-js.png " ")
 
-    Notice that the code references a Page Item, P3_ACTION_ID with a squiggly underline, which you have not created yet.
+    Notice that the code references a Page Item, P3\_ACTION\_ID with a squiggly underline, which you have not created yet.
 
     ![Close-up of the Execute when Page Loads JavaScript Code Editor](images/page-js-code.png " ")
 
-    You need this Page Item P3_ACTION_ID to be on the page so that this javascript can store the particular CARD ID when a user clicks the delete button, which in turn, will execute the delete operation from the URL link targets.
+    You need this Page Item P3\_ACTION\_ID to be on the page so that this javascript can store the particular CARD ID when a user clicks the delete button, which in turn, will execute the delete operation from the URL link targets.
 
     This is a design pattern using a single APEX Javascript API call (on page load) with an array of multiple code blocks as parameters. Each respective javascript block will then in-turn call a custom event, which we will configure our Dynamic Actions to respond to in the next task.
 
-3. To create and configure P3_ACTION_ID Page Item, right-click on the **My Review** Sub Region in the Rendering Tree and select **Create Page Item**.
+3. To create and configure P3\_ACTION\_ID Page Item, right-click on the **My Review** Sub Region in the Rendering Tree and select **Create Page Item**.
 
     ![Close-up of rendering tree in Page Designer with My Review sub region context menu open and Create Page Item highlighted](images/create-page-item.png " ")
 
 4. Set the following properties:
 
-    * Identification → Name: **P3_ACTION_ID**
+    * Identification → Name: **P3\_ACTION\_ID**
 
     * Identification → Type: **Hidden**
 
@@ -412,7 +411,7 @@ In this task, you will provide the APEX page with the custom javascript that wil
 ## Task 4: Create Card Buttons
 In this task, you will add two buttons to the My Review card that enable the user to either edit or delete their review post. Since you've already added a condition to the My Review card sub region, the card we are adding buttons to will only display when the post belongs to the logged in user.
 
-1. Right-click on **Actions** underneath the My Review sub region and select **Create Action**:
+1. Right-click on **Actions** underneath the My Review sub region and select **Create Action**.
 
     ![Close up of rendering pane with Cards Action context menu open on Page 3 in Page Designer ](images/create-action.png " ")
 
@@ -440,7 +439,7 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     ![Close-up of the Edit card action properties](images/edit-properties-2.png " ")
 
-2. Right-click on **Actions** underneath the My Review sub region and select **Create Action**:
+2. Right-click on **Actions** underneath the My Review sub region and select **Create Action**.
 
     * Identification → Label: **Delete**
 
@@ -542,8 +541,6 @@ In this task, you will add two buttons to the My Review card that enable the use
         $('[data-id='+apex.items.P3_ACTION_ID.value+']').remove();
         ```
 
-    * Settings → Items to Submit: **P3\_ACTION\_ID**
-
     ![Page 3 open in Page Designer with Property Editor open editing action-delete dynamic action's third TRUE action properties](images/da-true-3.png " ")
 
 8. Finally, you want to show a success message, similar to what you have for when a post is created or updated. Right-click on the **True** entry under the **action-delete** custom event, and select **Create TRUE Action**:
@@ -563,13 +560,15 @@ In this task, you will add two buttons to the My Review card that enable the use
 
 9. Click **Save**.
 
-10. Refresh the page where your application is running.
+## Task 6: Run the Application
 
-11. Add a book to your library and mark it as read so the **Rate Book** button appears.
+1. Refresh the page where your application is running.
+
+2. Add a book to your library and mark it as read so the **Rate Book** button appears.
 
     ![Book Details page in runtime application showing the Rate Book button](images/details-runtime.png " ")
 
-12. Test the Rate Book page by clicking the Rate Book button to open the form page.
+3. Test the Rate Book page by clicking the Rate Book button to open the form page.
 
     ![Rate Book page in runtime application](images/rate-form-runtime.png " ")
 
@@ -577,13 +576,13 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     ![Rate Book page in runtime application showing form validation error](images/validation-error-runtime.png " ")
 
-13. Fill out the form details then click the **Post** button.
+4. Fill out the form details then click the **Post** button.
 
     * The dialog should close and you should see a success message in the top right of the screen and your review post at the bottom.
 
     ![Book Details page in runtime application showing book review post](images/reviews-runtime.png " ")
 
-14. Test out the edit functionality by clicking the edit icon button on your review post.
+5. Test out the edit functionality by clicking the edit icon button on your review post.
 
     * The Rate Book dialog page should open with your previously saved values populated in the form fields.
 
@@ -591,13 +590,13 @@ In this task, you will add two buttons to the My Review card that enable the use
 
     ![Rate Book page in runtime application showing book review post](images/edit-review-runtime.png " ")
 
-    * Update some values and click **Save**.
+    * Update some values then click **Save**.
 
     * The review post's values should update accordingly and a success message should appear in the top right corner of the page.
 
     ![Rate Book page in runtime application showing book review post](images/edited-review-runtime.png " ")
 
-15. Now test out the delete functionality by clicking the delete icon button on your review post.
+6. Now test out the delete functionality by clicking the delete icon button on your review post.
 
     * A confirmation dialog should appear.
 
@@ -608,7 +607,7 @@ In this task, you will add two buttons to the My Review card that enable the use
     ![Book Details page in runtime application showing delete book review post](images/deleted-review-runtime.png " ")
 
 
-You have now completed your Book Club application and can search for books, add them to your library, and write reviews. However, there are many ways to continue to add functionality to and customize your application.
+You have now completed your Book Club application and can search for books, add them to your library, and write reviews.
 
 ## Acknowledgements
 

@@ -55,6 +55,10 @@
         "filename": "../../11-update-navigation/update-navigation.md"
       },
       {
+        "title": "Optional Lab: Create a New App User to Test Functionality",
+        "filename": "../../12-add-app-user/add-app-user.md"
+      },
+      {
         "title": "Oracle CloudWorld 2022 - Get Help",
         "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
 }

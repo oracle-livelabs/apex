@@ -1,7 +1,7 @@
 # Create the Book Review Form and Table
 
 ## Introduction
-In this lab, you will create a form page for users to review a book and a table to store the review data. You will also create form field validations and implement form buttons.
+In this lab, you will create a form dialog page for users to review a book as well as a table to store the review data. You will also create form field validations and implement form buttons.
 
 Estimated Lab Time: 20 minutes
 
@@ -18,7 +18,8 @@ In this lab, you will:
 - Completion of workshop through Lab 8
 
 ## Task 1: Create the Application Item and Computation
-To obtain a user's full name, you will use an application computation. The computation uses :APP_USER to retrieve the current user's first and last name, then concatenates the two. You will create an application item to store this value.
+You are going to display a user's name and initials on their book review post instead of their username/email. To obtain a user's full name, you will use an application computation. The computation uses :APP\_USER to retrieve the current user's first and last name, then concatenates the two. You will create an application item to store this value.
+
 *Note: You are going to store this value in the Reviews table later on so you can display the user's name and initials when they post a book review.*
 
 1. Click on **App Builder** in the top APEX toolbar.
@@ -65,7 +66,7 @@ To obtain a user's full name, you will use an application computation. The compu
 8. You have now set up an application item that computes and stores the current user's full name.
 
 ## Task 2: Create the Reviews Table
-First you'll need to create a Reviews table to store book reviews. The table will have a foreign key, book\_id, that will link it to the Library table and allow different users to write a review for a specified book.
+First you'll need to create a Reviews table to store book reviews. The table will have an index, book\_id, that will link it to the Library table and allow different users to write a review for a specified book.
 
 1. In the Page Designer tab in your browser, click the down arrow next to SQL Workshop in the APEX navigation bar, hover over Utilities, and select **Quick SQL**. 
 
@@ -94,15 +95,15 @@ First you'll need to create a Reviews table to store book reviews. The table wil
 
 5. Click **Run Now**. You should see a success page with 2 statements successfully processed.
 
-    ![SQL Scripts Results page showing 2 statements processed, 2 successful, and 0 errors](images/posts-success.png " ")
+    ![SQL Scripts Results page showing 2 statements processed, 2 successful, and 0 errors](images/reviews-success.png " ")
 
-6. Now you'll need to add an index to the Reviews table on the BOOK_ID column since you'll be passing that value from the Library table.
+6. Now you'll need to add an index to the Reviews table on the BOOK\_ID column since you'll be passing that value from the Library table.
 
 7. Click the down arrow next to SQL Workshop in the APEX navigation bar and select **Object Browser**.
 
 8. On the left side, select the **REVIEWS** table.
 
-9. Click on **BOOK_ID** then click **Modify Column**.
+9. Click on **BOOK\_ID** then click **Modify Column**.
 
     * Semantics: **Byte**
 
@@ -118,7 +119,7 @@ First you'll need to create a Reviews table to store book reviews. The table wil
 
     * Index Name: **REVIEWS_FK**
 
-    * Index Column 1: **BOOK_ID (VARCHAR2)**
+    * Index Column 1: **BOOK\_ID (VARCHAR2)**
 
     * Click **Create Index**
 
@@ -450,7 +451,7 @@ In this task you will create a simple card in the Dialog header that contains th
 
         ![Page 5 open in Page Designer with Property Editor open on editing the Book Header region](images/header-region.png " ")
 
-3. Click on the Attributes tab of your new Book Header region to customize the book overview card.
+3. Click on the **Attributes** tab of your new Book Header region to customize the book overview card.
 
     * Appearance → Layout: **Horizontal (Row)**
 
@@ -524,7 +525,7 @@ In this task you will create a simple card in the Dialog header that contains th
 
     ![Page 5 open in Page Designer with the UPDATE button properties open in the Property Editor](images/update-button.png " ")
 
-## Task 7: Implement Button Actions
+## Task 7: Implement Form Button Actions
 
 1. At the top of the rendering pane, click the **Processing** tab.
 

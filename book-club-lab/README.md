@@ -22,6 +22,7 @@ In this lab, you will:
 - Learn how to implement button actions.
 - Learn how to populate database tables with form input data.
 - Learn how to customize an app using various APEX features as well as custom CSS.
+- Learn how to create additional application users.
 
 Estimated Workshop Time: 2.5 hours
 
@@ -43,15 +44,19 @@ Estimated Workshop Time: 2.5 hours
 | 9   | [Create the Book Review Form & Table](?lab=creating-review-form)  | 20 min     |
 | 10  | [Implement Ratings & Reviews](?lab=implementing-ratings-and-reviews)  | 20 min     |
 | 11  | [Update App Navigation (Optional)](?lab=update-navigation)  | 5 min     |
+| 12  | [Create a New App User to Test Functionality (Optional)](?lab=add-app-user)  | 5 min     |
 
 ### **Let's Get Started!**
 
 - [Click here](?lab=signing-up) or select **Getting Started** from the menu on the left to start the workshop and set up an Oracle APEX workspace.
-- If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
+- If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./intro/images/menu-button.png)) at the top of the page.
 
-### Downloads
 
-- [Click here](./intro/files/movies-watchlist.sql) to download the completed application.
+## Downloads
+
+- [Click here](./files/book-club.sql) to download the completed application.
+- [Download the Application icon](./intro/images/book-club-icon.png)
+
 
 ## Learn More - *Useful Links*
 

@@ -1,7 +1,7 @@
 # Create the Preview Book Page
 
 ## Introduction
-In this lab, you will set up a new page that displays allows you to preview any book using the Google Books Embedded Viewer API. This API allows you to embed the book content directly into your application.
+In this lab, you will set up a new page that displays the preview of a book using the Google Books Embedded Viewer API. This API allows you to embed the book content directly into your application.
 
 Estimated Lab Time: 10 minutes
 

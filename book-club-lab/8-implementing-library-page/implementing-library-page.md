@@ -1,7 +1,7 @@
 # Implement the Library Page
 
 ## Introduction
-Now that you have implemented functionality to find books and add them to a table, you will set up the My Library page to display each book in that table, which is the final piece of base functionality you will need to complete this app.
+Now that you have implemented functionality to find books and add them to a table, you will set up the My Library page to display each book in the library table, which is the final piece of base functionality you will need to complete this app.
 
 Estimated Lab Time: 20 minutes
 
@@ -9,7 +9,7 @@ Estimated Lab Time: 20 minutes
 In this lab, you will:  
 - Create tabs to display the categories of Library books (read, want to read).
 - Create cards to display Library books.  
-- Connect the Book Details page to open details directly from My Library. 
+- Connect the Book Details page to Library page. 
 - Create a Get Started region.
 
 ### Prerequisites
@@ -18,7 +18,7 @@ In this lab, you will:
 ## Task 1: Create a Tabs Region
 Adding tabs will allow a user to filter through books in their library to make it easier to explore books they want to read and books they've already read.
 
-1. In the Page Designer tab in your browser, navigate to page 1 of your application.
+1. In the Page Designer tab in your browser, navigate to **Page 1: My Library**.
 
 2. In the rendering pane under Breadcrumb Bar, click on the **Book Club** region and set the following:
 
@@ -321,7 +321,7 @@ Now you will start to build out the page by first adding a Cards region so that 
 ## Task 3: Connect the Library to the Book Details Page
 In this step, you are going to connect the My Library page to the Book Details page to allow a user to view details for any book in their library, as well as remove a book from their library or mark a book as "Read."
 
-1. In the rendering pane, right-click on the Actions section underneath the Want to Read region and select **Create Action**.
+1. In the rendering pane, right-click on the **Actions** section underneath the **Want to Read** region and select **Create Action**.
 
 2. Set the following properties:
 
@@ -351,7 +351,7 @@ In this step, you are going to connect the My Library page to the Book Details p
 
 5. On the tab where the app is running, click on a book in your library. The Book Details page should appear with information about that specific book. Note that you are able to remove a book or mark it as read, but you cannot add the book because it is already in your library. When clicked, the back button should take you back to the Library page.
 
-*Note: If you have not added any books to your library, the page will say "No data found." Make sure to add books to your library so that you can view them on the Library page!*
+    *Note: If you have not added any books to your library, the page will say "No data found." Make sure to add books to your library so that you can view them on the Library page!*
 
 ## Task 4: Create a Get Started Region
 When a user logs into the Book Club app for the first time, they will not have any books and the My Library page will be blank. It would be helpful if there were a welcome message to assist users in getting started if there are no books on the page.

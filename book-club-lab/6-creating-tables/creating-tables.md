@@ -123,7 +123,7 @@ To store data within the book\_users database, you will use an application proce
 
 8. You have now set up an application item that keeps track of the current user's ID and added a process to store a user in the book\_users table.
 
-9. To initialize the user id for your movies app, you will need to sign out of your app in the tab in your browser where your app is running and sign back in.
+9. To initialize the user id for your book club app, you will need to sign out of your app in the tab in your browser where your app is running and sign back in.
 
 10. On the My Library page of your app, click the button at the top right of the screen where your username is displayed and click Sign Out.
 

@@ -105,7 +105,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
         - Click **Ok**.
 
-    ![BACK button Link Builder Target dialog open on Page 3 in Page Designer](images/back-behavior.png " ")
+        ![BACK button Link Builder Target dialog open on Page 3 in Page Designer](images/back-behavior.png " ")
 
 2. Click on **ADD\_TO\_LIBRARY**.
 
@@ -282,7 +282,7 @@ To accomplish this, you are going to use Server-Side Conditions, like you did fo
 ## Task 4: Add Badges to Book Search & Detail Cards
 Before you test the buttons you just implemented, you will add badges to the Book Search and Detail pages so that you have a visual cue of what has been added and marked as read. You also need to update the Full Card action for both the Placeholder Books and Searched Books regions to give the P3\_PREVIOUS\_PAGE\_ID page item a value so that the Back button on the Book Details page will go back to the correct page.
 
-1. Navigate to page 2 in your Book Club application and click on the **Placeholder Books** region.
+1. Navigate to **Page 2: Book Search** in your Book Club application and click on the **Placeholder Books** region.
 
     * Scroll down to the **Local Post Processing** property group and replace the existing SQL Query with the query below:
 
@@ -325,7 +325,7 @@ Before you test the buttons you just implemented, you will add badges to the Boo
             ON l.book_id = ads.ID
         ```
 
-        - The above code extends the books data that gets returned from the REST data source by joining the REST data source with the library table to add two columns: BADGE\_LABEL and BADGE\_COLOR. For the BADGE\_LABEL column, each book in the Placeholder Books list has the value 'Read' (books in the LIBRARY table that are marked as Read), 'Wamt to Read' (books in the LIBRARY table that are not marked as Read), or NULL (books that are not in the LIBRARY table). Similarly, the BADGE\_COLOR list contains values 'u-success' or NULL, based on whether or not a book is in the LIBRARY table and not marked as Read.
+        - The above code extends the books data that gets returned from the REST data source by joining the REST data source with the library table to add two columns: BADGE\_LABEL and BADGE\_COLOR. For the BADGE\_LABEL column, each book in the Placeholder Books list has the value 'Read' (books in the LIBRARY table that are marked as Read), 'Want to Read' (books in the LIBRARY table that are not marked as Read), or NULL (books that are not in the LIBRARY table). Similarly, the BADGE\_COLOR list contains values 'u-success' or NULL, based on whether or not a book is in the LIBRARY table and not marked as Read.
 
         ![Page 2 open in Page Designer with the Local Post Processing properties open in Property Editor](images/placeholder-lpp.png " ")
 
@@ -355,7 +355,7 @@ Before you test the buttons you just implemented, you will add badges to the Boo
 
 4. Now we will similarly add badges to the Book header card on the Book Details page.
 
-5. Navigate to page 3: Book Details in your Book Club application and click on the **Header** region.
+5. Navigate to **Page 3: Book Details** in your Book Club application and click on the **Header** region.
 
 6. Scroll down to the **Local Post Processing** property group and replace the existing SQL Query with the query below:
 
@@ -410,15 +410,15 @@ Before you test the buttons you just implemented, you will add badges to the Boo
 
     ![Book Details page with the Back and Add to Library buttons at the top](images/add-runtime.png " ")
 
-    * Click the Add to Library button and you will see the Added label on the book you added. You should also see the the Back, Remove From Library, and Mark as Read buttons.
+    * Click the **Add to Library** button and you will see the Added label on the book you added. You should also see the the Back, Remove From Library, and Mark as Read buttons.
 
     ![Book Details page in the runtime application with the Added label on the book Card and Back, Remove from Library and Mark as Read buttons at the top](images/added.png " ")
 
-    * Click the Mark as Read button and you will see the Read label on the book you just marked as read.
+    * Click the **Mark as Read** button and you will see the Read label on the book you just marked as read.
 
     ![Book Details page in the runtime application with the Read label on the book Card](images/read.png " ")
 
-    * Click the Back button and you will see the Read label still on the book you just marked as read on the Book Search page.
+    * Click the **Back** button and you will see the Read label still on the book you just marked as read on the Book Search page.
 
     ![Book Search page in the runtime application with the Read label on the book Card](images/read-search.png " ")
     
