@@ -59,7 +59,7 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
 7. Now, click **Enabled Objects** in the left Navigation Menu and then select **Create AutoREST Object**.
 
-  ![Navigate to Object browser](images/select-enabled-objects.png " ")
+    ![Navigate to Object browser](images/select-enabled-objects.png " ")
 
 8. Under **AutoREST Enable Object**, select the following and click **Create**.  
 
@@ -250,15 +250,16 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 17. Click Load Data. The sample data is loaded into the target table with the Merge loading method.
 
 ## Summary
+
 You now know how to log in to a remote database, create a database table, and then **Register a schema with RESTful Services**. You learned how to consume the **REST Data Source**and **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**. Also, you learned how to create data load definitions in shared components, along with creating a data loading page.
 
 You may now **proceed to the next lab**.
 
 ## What's Next
+
 In the upcoming hands-on lab, you will learn to Implement Social sign-in (Google) in the online shopping application.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
