@@ -6,13 +6,13 @@ Oracle APEX allows you to build robust, feature-rich applications against remote
 
 Estimated Time: 20 minutes
 
-## Task 1: Enable Remote Database schema to Oracle REST Data Services.
+## Task 1: Enable Remote Database schema to Oracle REST Data Services
 
 Before starting this lab, you must provide a new **APEX instance** or **Workspace**.
 
 In this hands-on lab, you will log in to the New Remote APEX workspace, create a Table and then **Register Schema with ORDS**.
 
-1. log in to the new Workspace you created.
+1. Log in to the new workspace you created.
 
     ![Login to New Workspace](images/login-to-new-workspace.png " ")
 
@@ -21,6 +21,7 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
     ![Select SQL Commands](images/select-sql-commands.png " ")
 
 3. Now, copy the statements below and execute them individually.
+
     ```
     <copy>
     CREATE TABLE "EMP_1"
@@ -38,14 +39,14 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
     insert into emp_1(empno, emp_name, mgr) values (40, 'MATT', null);
     commit;
     end;
-
     </copy>
     ```
+
     ![Create Table](images/create-table1.png " ")
 
     ![Insert into Table](images/insert-into-table.png " ")  
 
-4. Select **RESTful Services** under **SQL Workshop**.
+4. Navigate to **SQL Workshop**, select **RESTful Services**
 
     ![Navigate to RESTful Services](images/navigate-to-rest.png " ")
 
@@ -53,23 +54,23 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
     ![Register Scheme with ORDS](images/register-schema-with-ords.png " ")
 
-6. In the next window, leave the Attributes to default and click **Save Schema Attributes**.
+6. In the next window, leave the attributes to default and click **Save Schema Attributes**.
 
     ![Save Schema Attributes](images/save-schema-attributes.png " ")
 
-7. Now, click **Enabled Objects** in the left Navigation Menu and then select **Create AutoREST Object**.
+7. Now, click **Enabled Objects** in the left navigation menu and select **Create AutoREST Object**.
 
     ![Navigate to Object browser](images/select-enabled-objects.png " ")
 
-8. Under **AutoREST Enable Object**, select the following and click **Create**.  
+8. Under **AutoREST Enable Object**, enter/select the following and click **Create**.
 
-    - Set **Object Type** to **TABLE**.
+    - Object Type: **TABLE**.
 
-    - Select **EMP_1** for **Object**
+    - Object : **EMP_1**
 
     - Copy the **Full URL** and paste it into your Note pad.
 
-    Then Click **Create**.
+     Click **Create**.
 
     ![Select Rest](images/create-autorest-object.png " ")  
 
@@ -77,43 +78,43 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
 ## Task 2: Integrate Application Data from REST Data Source
 
-In this task, you will consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the Data from REST Data Source to the Local Database table using **REST Data Synchronisation**.
+In this task, you will consume the **REST Data Source** we created in the previous task. Then, you will **Synchronise** the data from REST Data Source to the local database table using **REST Data Synchronisation**.
 
-1. Log in to the first Workspace, where we have already created multiple applications.
+1. Log in to the first workspace, where we have already created multiple applications.
 
     ![Login to first Workspace](images/login-to-workspace1.png " ")
 
-2. Select **Sample Reporting** Application.
+2. Select **Sample Reporting** application.
 
-3. Navigate to **Shared Components** and then Select **REST Data Sources**.
+3. Navigate to **Shared Components** and select **REST Data Sources**.
 
     ![Click shared components](images/click-shared-components.png " ")
 
     ![Click REST Data Sources](images/select-rest-ds.png " ")
 
-4. Under **REST Data Sources**, Click **Create**.
+4. Under **REST Data Sources**, click **Create**.
 
     ![Click on Create](images/click-on-create1.png " ")
 
-5. Under **Create REST Data Source - Method**, Leave the settings to default and Click **Next**.
+5. Under **Create REST Data Source - Method**, leave the settings to default and click **Next**.
 
     ![Click next button](images/click-next-button.png " ")
 
-6.  Under **Create REST Data Source**, Enter the following and click **Next**.
+6. Under **Create REST Data Source**, enter/select the following and click **Next**.
 
-       - For **REST Data Source Type** : select **Oracle REST Data Services**
+    - REST Data Source Type: **Oracle REST Data Services**
 
-       - For Name: Enter **Employee Details API**
+    - Name: **Employee Details API**
 
-       - For URL Endpoint: Enter the URI you **copied** in **Task 1**
+    - URL Endpoint: Paste the URL you **copied** in **Task 1**
 
     ![Enter REST Data Source name and URL endpoint](images/create-rds1.png " ")
 
-7. Now, Under **Create REST Data Source - Remote Server** leave all fields to **Default** and Click **Next**.
+7. Now, under **Create REST Data Source - Remote Server** leave all fields to **Default** and click **Next**.
 
     ![Define Remote Server](images/create-rds21.png " ")
 
-8. For Authentication, Set **Authentication Required** to **No**. Click **Discover**.
+8. Set **Authentication Required** to **No**. Click **Discover**.
 
     ![Click Discover](images/create-rds3.png " ")
 
@@ -121,35 +122,35 @@ In this task, you will consume the **REST Data Source** we created in the previo
 
     ![Click REST Data Source](images/create-rds4.png " ")
 
-## Task 3: Synchronise Data from REST Data Sources to a Local Table.
+## Task 3: Synchronise Data from REST Data Sources to a Local Table
 
 In this task, you **Synchronise data** from the **REST Data source** you created in Task 2 to a **Local table**.
 
 **Data Synchronisation** feature enables developers to automatically sync the contents of a local table with the data from an external REST service. APEX invokes the REST Service defined in the REST Data Source, downloads all data and synchronizes to a local table.
 
-1. Now that you have created a **REST Data Source**, Under **REST Data Sources** Select **No** under **Synchronised** column for **Employee Details API**.
+1. Now that you have created a **REST Data Source**, under **REST Data Sources**, select **No** under **Synchronised** column for **Employee Details API**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync11.png " ")
 
 2. **Synchronization** is not configured yet. In this step, you provide the name of a new or existing table.
 
-   Select **New Table** for Synchronise To and Select **EMP_1** for Table Name and Click **Save**.
+   Select **New Table** for **Synchronise To** and Select **EMP_1** for **Table Name** and Click **Save**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync122.png " ")
 
-3. Under Table Status, click **Create Table**. The table EMP_1 is now ready for synchronization.
+3. Under **Table Status**, click **Create Table**. The table EMP_1 is now ready for synchronization.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync123.png " ")
 
-4. You will define a **synchronization schedule** now. In the Synchronisation Schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronization schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
+4. You will define a **synchronization schedule** now. In the Synchronisation schedule field, you can use the Database Scheduler calendaring syntax to define repeating synchronization schedules, such as "every Tuesday and Friday at 4:00 p.m." or "the second Wednesday of every month." This calendaring syntax can be provided manually. Click the **Schedule Builder Button** next to **Synchronisation Schedule**.
 
     ![Select Synchronisation Schedule icon](images/create_rest_data_sync31.png " ")
 
-5. The Interval Builder dialog displays.
+5. The Interval Builder dialog displays. Enter/select the following
 
-     - For Frequency: Select **Minutely**
+     - Frequency: **Minutely**
 
-     - For Interval: Enter **10**  
+     - Interval: **10**  
 
     Click **Set Execution Interval**.
 
@@ -163,7 +164,78 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
     ![data synchronisation is triggered](images/create_rest_data_sync61.png " ")
 
-## Task 4: Load Data using Data loading Definitions
+## Task 4:  Hierarchical REST Data Source
+
+1. Navigate to **Sample Reporting** application.
+
+    ![data synchronisation is triggered](images/sample-report-app.png " ")
+
+2. Select **Shared Components**.
+
+    ![data synchronisation is triggered](images/sam-rep-sc.png " ")
+
+3. Under **Data Sources**, select **REST Data Sources**.
+
+    ![data synchronisation is triggered](images/rest-data-source.png " ")
+
+4. Click **Create**.
+
+    ![data synchronisation is triggered](images/click-create-rest.png " ")
+
+5. Under **Create REST Data Source - Method**, leave as default and click **Next**.
+
+    ![data synchronisation is triggered](images/click-nect-rest.png " ")
+
+6. Under **Create REST Data Source**, enter/select the following:
+
+    - Name: **Google Books**
+
+    - URL Endpoint: **https://www.googleapis.com/books/v1/volumes?q=search+terms**
+
+    Click **Next**.
+
+    ![data synchronisation is triggered](images/google-books-api.png " ")
+
+7. Under **Create REST Data Source - Remote Server**, leave as default and click **Next**.
+
+    ![data synchronisation is triggered](images/api-next.png " ")
+
+8. Under **Create REST Data Source - Settings**, leave as default and click **Next**.
+
+    ![data synchronisation is triggered](images/pagination-next.png " ")
+
+9. Click **Create REST Source Manually**.
+
+    ![data synchronisation is triggered](images/click-create-rest-manually.png " ")
+
+10. Navigate to your application ID.
+
+    ![data synchronisation is triggered](images/navi-to-appid.png " ")
+
+11. Click **Create Page**.
+
+    ![data synchronisation is triggered](images/click-create-page1.png " ")
+
+12. Select **Blank Page**.
+
+    ![data synchronisation is triggered](images/click-blank-apge.png " ")
+
+13. Enter/select the following:
+
+    - Page Number: **16**
+
+    - Name: **Google Books**
+
+    Click **Create Page**.
+
+    ![data synchronisation is triggered](images/google-books-page.png " ")
+
+14. Right-click **Body**, click **Create Region**.
+
+    ![data synchronisation is triggered](images/create-region-books.png " ")
+
+
+## Task 5: Load Data using Data loading Definitions
 
 A Data Load Definition comprises a Data Load Definition, Data Profile, and Data Profile Columns. The Data can be loaded to an existing table in your schema or a collection. For each data profile column, you can define SQL Expression, SQL Query, Lookups, or Transformation Rules. These definitions are used in the Native Data Loading page process type.
 
@@ -225,7 +297,7 @@ In this task, you Create a Data Load Definition in Shared Components and then Cr
 
 13. For Page Definition:
 
-    -  Name :**Data Loading**
+    - Name :**Data Loading**
 
     For Data Load Attributes:
 
