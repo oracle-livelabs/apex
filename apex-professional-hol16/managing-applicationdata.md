@@ -150,7 +150,7 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
      - Frequency: **Minutely**
 
-     - Interval: **10**  
+     - Interval: **10**
 
     Click **Set Execution Interval**.
 
@@ -234,6 +234,27 @@ In this task, you **Synchronise data** from the **REST Data source** you created
 
     ![data synchronisation is triggered](images/create-region-books.png " ")
 
+15. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Google Books**
+
+        - Type: **Interactive Report**
+
+    - Under Source:
+
+        - Location: **REST Source**
+
+        - REST Source: **Google Books**
+
+    - Data Profile > Nested Rows: **2.VOLUMEINFO_AUTHORS**
+
+    ![data synchronisation is triggered](images/google-book-region.png " ")
+
+16. Click **Save and Run**.
+
+    ![data synchronisation is triggered](images/google-book-report.png " ")
 
 ## Task 5: Load Data using Data loading Definitions
 
