@@ -296,6 +296,10 @@ Estimated Time: 20 minutes
 
     ![Define Authentication](images/auth-create.png " ")
 
+## Task 3: Enable Multiple Authentication in Online Shopping Application
+
+1. In your **Online Shopping Application**
+
 ## Summary
 
 You now know how to create a Social Sign-in authentication scheme to enable Google Authentication. You may now **proceed to the next lab**.
