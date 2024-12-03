@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Application security is very important for the majority of applications. You must ensure that users enter valid credentials. Generally, username and password (Authentication) and the logged-in user has appropriate rights within the application (Authorization).
+In modern web applications, ensuring security is a critical requirement. Oracle APEX provides a robust framework for implementing authentication and authorization mechanisms to safeguard applications from unauthorized access. In this lab, you will learn to implement social sign-in options, specifically using Oracle Identity Access Management (IAM) and Google Authentication, to allow users to securely log in to the Online Shopping Application. Additionally, you will explore how to enable multiple authentication schemes for flexibility and convenience.
+
+This hands-on lab demonstrates how to integrate these features step-by-step, ensuring a secure and user-friendly experience for application users.
 
 Estimated Time: 20 minutes
 
@@ -10,7 +12,135 @@ Estimated Time: 20 minutes
 
 - Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Implement Social Sign In(Google) Authentication in Online Shopping Application
+## Task 1: Configure Oracle IAM Authentication in Online Shopping Application
+
+1. Log in to your Oracle cloud console.
+
+2. Navigate to **Identity & Security**.
+
+    ![Define Authentication](images/identity-security.png " ")
+
+3. Under **Identity**, select **Domains**.
+
+    ![Define Authentication](images/select-domains.png " ")
+
+4. Select your **Domain**.
+
+    ![Define Authentication](images/select-domain.png " ")
+
+5. Under **Identity Domain**, navigate to **Integrated applications** and click **Add application**.
+
+    ![Define Authentication](images/add-application.png " ")
+
+6. Select **Confidential Application** and click **Launch Workflow**.
+
+    ![Define Authentication](images/select-confidential.png " ")
+
+7. Enter a **Name** for your application and click **Next**.
+
+    ![Define Authentication](images/click-next.png " ")
+
+8. Select **Authorization code** as the **Allowed Grant Type** and click **Next**.
+
+9. For **Redirect URL**, enter: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+
+10. For **Post-logout redirect URL**, enter: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
+
+11. Click **Next**.
+
+    ![Define Authentication](images/confidential-details.png " ")
+
+12. Under **Configure policy**, leave as default and click **Finish**.
+
+    ![Define Authentication](images/add-confidential.png " ")
+
+13. Click **Edit application** and select **Enforce grant as Authorization** under **Authentication and Authorization** (This will be used later to control access to the Oracle APEX application).
+
+    ![Define Authentication](images/edit-app.png " ")
+
+    ![Define Authentication](images/enforce-grants.png " ")
+
+14. Click **Activate** and **Activate application**.
+
+    ![Define Authentication](images/click-activate.png " ")
+
+    ![Define Authentication](images/activate-app.png " ")
+
+15. Copy the *Client ID* and *Client secret* which we will use in the configuration on Oracle APEX.
+
+    ![Define Authentication](images/copy-clientid.png " ")
+
+16. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
+
+17. Select **Web Credentials**.
+
+    ![Define Authentication](images/select-web-creds.png " ")
+
+18. Under **Web Credentials**, click **Create**.
+
+    ![Define Authentication](images/create-web-creds.png " ")
+
+19. Enter/select the following information:
+
+    - Name: **OCI IAM Credentials**
+
+    - Authentication Type: **Basic Authentication**
+
+    - Client ID or Username: Enter Client ID copied in **step 15**.
+
+    - Client Secret or Password: Enter Client Secret copied in **step 15**.
+
+    - Verify Client Secret or Password: Enter Client Secret copied in **step 15**.
+
+    Click **Create**.
+
+    ![Define Authentication](images/iam-creds.png " ")
+
+20. Assign a user to this application. Navigate back to your Oracle cloud console, select **Users** and click **Assign users**.
+
+    ![Define Authentication](images/add-users.png " ")
+
+    ![Define Authentication](images/assign-users.png " ")
+
+21. Also, under **Groups**, assign the group to the user you created.
+
+22. Add a user *First name, Last name and Email* and click **Assign**.
+
+    ![Define Authentication](images/assign-groups.png " ")
+
+23. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
+
+24. Click **Shared Components**. Under Security, click **Authentication Schemes**.
+
+    ![Define Authentication](images/shared-comp-auth.png " ")
+
+    ![Define Authentication](images/select-auth-scheme.png " ")
+
+25. Click **Create**.
+
+    ![Define Authentication](images/create-auth.png " ")
+
+26. Enter/select the following information:
+
+    - Name: **OCI IAM Authentication Scheme**
+
+    - Scheme Type: **Social Sign-In**
+
+    - Credential Store: **OCI IAM Credentials**
+
+    - Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: https://[idcs-service-url]/.well-known/openid-configuration/.
+
+    - Scope: **profile, email, groups**
+
+    - Username: **#sub#**
+
+    - Additional User Attributes: **groups**
+
+    Click **Create Authentication Scheme**.
+
+    ![Define Authentication](images/auth-create.png " ")
+
+## Task 2: Implement Social Sign In(Google) Authentication in Online Shopping Application
 
  You create a Social Sign-in authentication scheme in this hands-on lab to enable Google Authentication.
 
@@ -168,141 +298,129 @@ Estimated Time: 20 minutes
 
     ![Check username on the top of the Navigation Bar](images/run-app3.png " ")
 
-## Task 2: Implement Social Sign In(IAM) Authentication in Online Shopping Application
-
-1. Log in to your Oracle cloud console.
-
-2. Navigate to **Identity & Security**.
-
-    ![Define Authentication](images/identity-security.png " ")
-
-3. Under **Identity**, select **Domains**.
-
-    ![Define Authentication](images/select-domains.png " ")
-
-4. Select your **Domain**.
-
-    ![Define Authentication](images/select-domain.png " ")
-
-5. Under **Identity Domain**, navigate to **Integrated applications** and click **Add application**.
-
-    ![Define Authentication](images/add-application.png " ")
-
-6. Select **Confidential Application** and click **Launch Workflow**.
-
-    ![Define Authentication](images/select-confidential.png " ")
-
-7. Enter a **Name** for your application and click **Next**.
-
-    ![Define Authentication](images/click-next.png " ")
-
-8. Select **Authorization code** as the **Allowed Grant Type** and click **Next**.
-
-9. For **Redirect URL**, enter: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
-
-10. For **Post-logout redirect URL**, enter: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
-
-11. Click **Next**.
-
-    ![Define Authentication](images/confidential-details.png " ")
-
-12. Under **Configure policy**, leave as default and click **Finish**.
-
-    ![Define Authentication](images/add-confidential.png " ")
-
-13. Click **Edit application** and select **Enforce grant as Authorization** under **Authentication and Authorization** (This will be used later to control access to the Oracle APEX application).
-
-    ![Define Authentication](images/edit-app.png " ")
-
-    ![Define Authentication](images/enforce-grants.png " ")
-
-14. Click **Activate** and **Activate application**.
-
-    ![Define Authentication](images/click-activate.png " ")
-
-    ![Define Authentication](images/activate-app.png " ")
-
-15. Copy the *Client ID* and *Client secret* which we will use in the configuration on Oracle APEX.
-
-    ![Define Authentication](images/copy-clientid.png " ")
-
-16. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
-
-17. Select **Web Credentials**.
-
-    ![Define Authentication](images/select-web-creds.png " ")
-
-18. Under **Web Credentials**, click **Create**.
-
-    ![Define Authentication](images/create-web-creds.png " ")
-
-19. Enter/select the following information:
-
-    - Name: **OCI IAM Credentials**
-
-    - Authentication Type: **Basic Authentication**
-
-    - Client ID or Username: Enter Client ID copied in **step 15**.
-
-    - Client Secret or Password: Enter Client Secret copied in **step 15**.
-
-    - Verify Client Secret or Password: Enter Client Secret copied in **step 15**.
-
-    Click **Create**.
-
-    ![Define Authentication](images/iam-creds.png " ")
-
-20. Assign a user to this application. Navigate back to your Oracle cloud console, select **Users** and click **Assign users**.
-
-    ![Define Authentication](images/add-users.png " ")
-
-    ![Define Authentication](images/assign-users.png " ")
-
-21. Also, under **Groups**, assign the group to the user you created.
-
-22. Add a user *First name, Last name and Email* and click **Assign**.
-
-    ![Define Authentication](images/assign-groups.png " ")
-
-23. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
-
-24. Click **Shared Components**. Under Security, click **Authentication Schemes**.
-
-    ![Define Authentication](images/shared-comp-auth.png " ")
-
-    ![Define Authentication](images/select-auth-scheme.png " ")
-
-25. Click **Create**.
-
-    ![Define Authentication](images/create-auth.png " ")
-
-26. Enter/select the following information:
-
-    - Name: **OCI IAM Authentication Scheme**
-
-    - Scheme Type: **Social Sign-In**
-
-    - Credential Store: **OCI IAM Credentials**
-
-    - Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: https://[idcs-service-url]/.well-known/openid-configuration/.
-
-    - Scope: **profile, email, groups**
-
-    - Username: **#sub#**
-
-    - Additional User Attributes: **groups**
-
-    Click **Create Authentication Scheme**.
-
-    ![Define Authentication](images/auth-create.png " ")
-
 ## Task 3: Enable Multiple Authentication in Online Shopping Application
 
-1. In your **Online Shopping Application**
+Providing multiple authentication options improves the flexibility and usability of your application. In this task, you will enhance the Online Shopping Application's login page by implementing a multi-authentication approach. Users will be able to choose between IAM authentication and Google sign-in. You will also customize the login page with buttons for each authentication type and apply styling for a polished user experience.
+
+1. In your **Online Shopping Application**, navigate to **9999 - Login Page**.
+
+    ![Define Authentication](images/login-page.png " ")
+
+2. Right-click **Online Shopping Application** region, select **Create Sub-region**.
+
+    ![Define Authentication](images/create-sub-region.png " ")
+
+3. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Multi Authentication**
+
+    - Appearance > Template Options: Click **Use Template Defaults**
+
+        - Header: **Hidden**
+
+        - Click **OK**
+
+    ![Define Authentication](images/create-0btn2.png " ")
+
+4. Right-click **Multi Authentication** sub-region, click **Create Button**.
+
+    ![Define Authentication](images/create-btn1.png " ")
+
+5. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **IAM_Login**
+
+        - Label: **IAM Authentication**
+
+    - Under Appearance:
+
+        - Button Template: **Text with Icon**
+
+        - Template Options > Use Template Defaults: Width > **Stretch**
+
+        - Click **OK**
+
+    - Under Behavior:
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: Click **No Linked Defined**
+
+            - Target > Page: **10000**
+
+            - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=IAM**
+
+            - Click **OK**
+
+        - Icon: **fa-oracle-o**
+
+    ![Define Authentication](images/iam-btn.png " ")
+
+6. Right-click **Multi Authentication** sub-region, click **Create Button**.
+
+7. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Google_SignIn**
+
+        - Label: **Google Sign In**
+
+    - Layout > Start New Row: **Toggle Off**
+
+    - Under Appearance:
+
+        - Button Template: **Text with Icon**
+
+        - Template Options > Use Template Defaults: Width > **Stretch**
+
+        - Click **OK**
+
+    - Under Behavior:
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: Click **No Linked Defined**
+
+            - Target > Page: **10000**
+
+            - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
+
+            - Click **OK**
+
+        - Icon: **fa-google**
+
+    ![Define Authentication](images/google-btn1.png " ")
+
+    ![Define Authentication](images/google-btn2.png " ")
+
+8. Navigate to **Page 9999: Login Page**, update the following:
+
+    - Inline: Copy and paste the below CSS
+
+    ```
+    <copy>
+    span.t-Icon.t-Icon--left.fa.fa-oracle-o {
+    color: red;
+    }
+    span.t-Icon.t-Icon--left.fa.fa-google {
+    color: mediumslateblue;
+    }
+    </copy>
+    ```
+
+    ![Define Authentication](images/inline-css1.png " ")
+
+9. Click **Save and Run**.
+
+    ![Define Authentication](images/multi-auth1.png " ")
 
 ## Summary
 
-You now know how to create a Social Sign-in authentication scheme to enable Google Authentication. You may now **proceed to the next lab**.
+In this lab, you have successfully implemented secure authentication mechanisms for your Oracle APEX application
+You now know how to create a Social Sign-in authentication scheme to enable Google and IAM Authentication. You may now **proceed to the next lab**.
 
 ## What's Next
 
