@@ -6,9 +6,15 @@
 
 1. Navigate to **App Builder** and select **Online Bookstore Application**.
 
+    ![Click My Apps](images/13-1-1-app.png " ")
+
 2. Click **Shared Components**.
 
-3. Click **Progressive Web App** under **User Interface**.
+    ![Click My Apps](images/13-1-2-sc.png " ")
+
+3. Select **Progressive Web App** under **User Interface**.
+
+    ![Click My Apps](images/13-1-3-user-interface.png " ")
 
 4. Enter/Select the following:
 
@@ -18,23 +24,42 @@
 
         - Installable: **Toggle On**
 
+    ![Click My Apps](images/13-1-4-1-installable.png " ")
+
     - Under Push Notifications:
 
         - Enable Push Notifications: **Toggle On**
 
-        - Credentials: Click **+ Generate Credentials** and select **Generate Credentials** in the confirm dialog window.
+        - Credentials: Click **+ Generate Credentials** and click **Generate Credentials** in the confirm dialog window.
 
         - Settings Page: Click **+ Settings Page** and click **Create** in the **Create Push Notifications Settings Page** dialog window
 
-        Click **Apply Changes**
+    ![Click My Apps](images/13-1-4-2-Credentials.png " ")
+    ![Click My Apps](images/13-1-4-3-Credentials1.png " ")
+    ![Click My Apps](images/13-1-4-4-Settings.png " ")
+    ![Click My Apps](images/13-1-4-5-Settings1.png " ")
+
+    Click **Apply Changes**
+
+    ![Click My Apps](images/13-1-4-5-apply-changes.png " ")
 
 5. Navigate to the application homepage by clicking the **Application ID**.
 
-6. Click Page **50 - Edit Book Details**
+    ![Click My Apps](images/13-1-5-appid.png " ")
 
-7. Right-click on **P50\_AVAILABILITY** under **Edit Book Details** region and click **Duplicate**
+6. Select Page **50 - Edit Book Details**
 
-8. In the Property editor, enter/select the following:
+    ![Click My Apps](images/13-1-6-page50.png " ")
+
+7. Select **P50\_AVAILABILITY\_YN** and update the name to **P50\_AVAILABILITY**.
+
+    ![Click My Apps](images/13-1-7-avai-item.png " ")
+
+8. Right-click on **P50\_AVAILABILITY** under **Edit Book Details** region and select **Duplicate**.
+
+    ![Click My Apps](images/13-1-8-avai-item-dup.png " ")
+
+9. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -50,9 +75,13 @@
 
          - Item: **P50_AVAILABILITY**
 
-9. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+    ![Click My Apps](images/13-1-9-avai-item-dup-details.png " ")
 
-10. In the Property editor, enter/select the following:
+10. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+
+    ![Click My Apps](images/13-1-10-process.png " ")
+
+11. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -84,17 +113,66 @@
 
         end if;
 
-        end loop;apex_pwa.push_queue;
+        end loop;
+
+        apex_pwa.push_queue;
         </copy>
          ```
 
-11. Drag and Drop **Push Notification** process before **Close Dialog** process.
+    - Under Execution > Sequence: **20**
 
-12. Progressive Web App is updated. Now, **Save and Run** the page.
+    ![Click My Apps](images/13-1-11-process-details.png " ")
 
-13. In the Online Bookstore App, click on your username at the top-right corner and select **Settings**.
+12. Click **Save**.
 
-14. Push Notifications is disabled by Default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
+Progressive Web App is updated.
+
+## Task 2: Configure Navigation Bar Entries for Settings Page of Push Notification
+
+1. Navigate to **Shared Components**.
+
+    ![close dialog](images/13-1-sc-admin-2.png " ")
+
+2. Under **Navigation and Search**, click **Navigation Bar List**
+
+    ![close dialog](images/13-2-nav-bar-admin.png " ")
+
+3. Click **Navigation Bar**.
+
+    ![close dialog](images/13-2-nav-bar-admin1.png " ")
+
+4. Click **Create Entry**.
+
+5. Enter/select the following:
+
+    - Under Entry:
+
+        - Parent List Entry: **&USERNAME.**
+        
+        - Sequence: **1**
+
+        - Image/Class: **fa-gear**
+
+        - List Entry Label: **Settings**
+
+    - Under Target:
+
+        - Page: **20000**
+
+    Click **Create List Entry**.
+
+    ![close dialog](images/13-2-create-entry-admin.png " ")
+
+## Task 3: Enable Push Notification from the UI
+
+1. In the Online Bookstore App, click on your username at the top-right corner and select **Settings**.
+
+    ![close dialog](images/13-2-6-settings.png " ")
+
+2. Push Notifications is disabled by Default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
+
+    ![close dialog](images/13-2-6-settings1.png " ")
+    ![close dialog](images/13-2-6-settings2.png " ")
 
 ## Summary
 
