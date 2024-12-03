@@ -14,21 +14,21 @@ Estimated Time: 20 minutes
 
 1. Navigate to **App Builder**, click **Online Shopping Application**.
 
-  ![Navigate to App Builder](images/create-map1.png " ")
+    ![Navigate to App Builder](images/create-map1.png " ")
 
-  ![Select Online shopping application](images/create-map2.png " ")
+    ![Select Online shopping application](images/create-map2.png " ")
 
 2. On the application home page, click **Create Page**.
 
-  ![Click Create page](images/create-map3.png " ")
+    ![Click Create page](images/create-map3.png " ")
 
 3. Select **Map**.
 
-  ![Select Map](images/create-map4.png " ")
+    ![Select Map](images/create-map4.png " ")
 
 4. In the **Create Map** enter the following and click **Next**.
 
-    Under **Page Definition**:
+    - Under Page Definition:
     - For **Page Number**, Enter **20**.
     - For **Name**, Enter **Store Locations Map**.
 
@@ -140,12 +140,14 @@ Estimated Time: 20 minutes
   ![Map navigation displayed](images/run-map2.png " ")  
 
 ## Summary
+
 You now know how to manage Map pages. You may now **proceed to the next lab**.
 
 ## What's Next
+
 In the upcoming hands-on lab, you will learn to Implement the 'Share' button, Enable Push Notifications, and Add Shortcuts to the PWA app. Also, you will learn to Include screenshots to be displayed while installing the PWA app and Enable Push Notifications. Additionally you learn how to configure Push Notifications.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
