@@ -76,7 +76,7 @@ Estimated Time: 5 minutes
 
    ![Navigate to Shared components](images/customise-map1.png " ")
 
-10. In the **Shared Components** page, Under **Other Components**, select **Map Backgrounds**.
+10. Under **Other Components**, select **Map Backgrounds**.
 
     ![Navigate to navigation bar list](images/map-back.png " ")
 
@@ -84,7 +84,7 @@ Estimated Time: 5 minutes
 
     ![Navigate to navigation bar list](images/map-back-create.png " ")
 
-12. Under Create Map Background, enter/select the following:
+12. Under **Create Map Background**, enter/select the following:
 
       - Name: **WMS**
 
@@ -96,7 +96,7 @@ Estimated Time: 5 minutes
 
      ![Navigate to navigation bar list](images/map-back-create1.png " ")
 
-13. Select **Edit Page 20** in the top right corner.
+13. Click **Edit Page 20** in the top right corner.
 
     ![Navigate to navigation bar list](images/map-back-create2.png " ")
 
