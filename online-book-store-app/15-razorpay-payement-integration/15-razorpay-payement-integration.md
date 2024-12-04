@@ -3,12 +3,8 @@
 ## Introduction
 
 ## Task 1: Create Web Credential
-<!-- 
-1. Log in to Razorpay [console](https://dashboard.razorpay.com/app/website-app-settings/api-keys).
 
-     *Note: ---* -->
-
-1. Log in to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
+1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
 
 2. Select the mode Test from (Test or Live) for which we generate the API key.
 
@@ -18,17 +14,23 @@
 
 4. The **Key Id** and **Key Secret** appear on a pop-up page. Save these IDs. We will use them later.
 
-5. Login into your Oracle APEX workspace.
+5. Login into your Oracle APEX workspace and on the workspace home page, click **App Builder**.
 
-6. On the Workspace home page, click **App Builder**.
+    ![Click Timeline](images/15-1-5-app-builder.png " ")
 
-7. Click **Workspace Utilities**.
+6. Click **Workspace Utilities**.
 
-8. Select **Web Credentials**.
+    ![Click Timeline](images/15-1-6-ws-utilities.png " ")
 
-9. Click **Create**.
+7. Select **Web Credentials**.
 
-10. In the **Web Credentials** enter the following and click **Create**.
+    ![Click Timeline](images/15-1-7-webcred.png " ")
+
+8. Click **Create**.
+
+    ![Click Timeline](images/15-1-8-webcred-create.png " ")
+
+9. In the **Web Credentials** enter the following and click **Create**.
 
     - Under **Attributes**:
 
@@ -38,41 +40,59 @@
         - Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
         - Verify Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
 
-    Click Create
+    Click **Create**.
+
+    ![Click Timeline](images/15-1-9-details.png " ")
 
 ## Task 2: Create Rest Data Source
 
 1. Navigate to the application home page and click **Shared Components**.
 
+    ![Click Timeline](images/15-2-1-sc.png " ")
+
 2. Under Data Sources, click **REST Data Sources**.
+
+    ![Click Timeline](images/15-2-2-rds.png " ")
 
 3. Click **Create**.
 
+    ![Click Timeline](images/15-2-3-create.png " ")
+
 4. Select **From scratch** and click **Next**.
+
+    ![Click Timeline](images/15-2-4-next.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
 
     - Name: **Razorpay API**
 
-    - URL Endpoint: https://api.razorpay.com/v1/orders
+    - URL Endpoint: **https://api.razorpay.com/v1/orders**
+
+    ![Click Timeline](images/15-2-5-details.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
+    ![Click Timeline](images/15-2-6-next.png " ")
+
 7. Under Create REST Data Source - Settings, click **Next**.
 
-8. Under Authentication,
+    ![Click Timeline](images/15-2-7-next.png " ")
 
-    - **Authentication Required**: **Toggle On**
+8. Under Authentication, select the following below and click **Create REST Source Manually**.
 
-    - **Credentials**: **Razorpay API**
+    - Authentication Required: **Toggle On**
 
-9. Click **Create REST Source Manually**.
+    - Credentials: **Razorpay API**
+
+    ![Click Timeline](images/15-2-8-auth.png " ")
 
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-10. On the REST Data Sources page, click **Razorpay API**.
+9. On the REST Data Sources page, click **Razorpay API**.
 
-11. Select the Operations tab, click **Edit icon** for the POST operation and enter the following:
+    ![Click Timeline](images/15-2-9-open-rds.png " ")
+
+10. Select the Operations tab, click **Edit icon** for the POST operation and enter the following:
 
     - **Database Operation**: -Not Mapped-
 
@@ -87,11 +107,16 @@
     </copy>
     ```
 
-12. Under Operation Parameters, click **Generate**, click **Synchronize with body** and click **OK**.
+    ![Click Timeline](images/15-2-10-edit-post.png " ")
+    ![Click Timeline](images/15-2-10-post-details.png " ")
 
-13. Under Operation Parameters, Click **Add Parameter**.
+11. Under Operation Parameters, click **Synchronize with body** and click **OK**.
 
-14. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
+    ![Click Timeline](images/15-2-11-sync.png " ")
+
+12. Under Operation Parameters, click **Add Parameter**.
+
+13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
    |   | Type | Name | Direction | Default Value | Static |
    |---|-------|------|----------| --------------| ------ |
@@ -99,15 +124,24 @@
    | 2 | HTTP Header| Content-Type | In | application/json | ON
    {: title="POST Operation Parameters"}
 
-15. Click **Apply Changes**.
+    ![Click Timeline](images/15-2-13-add-para1.png " ")
+    ![Click Timeline](images/15-2-13-add-para2.png " ")
+
+14. Click **Apply Changes**.
+
+    ![Click Timeline](images/15-2-14-apply-changes.png " ")
 
 ## Task 3: Update OBS\_MANAGE\_ORDERS Package Codes
 
-1. Click **SQL Workshop** and navigate to **Object Browser**.
+1. Expand **SQL Workshop** and navigate to **Object Browser**.
+
+     ![Click Timeline](images/15-3-1-obj-brow.png " ")
 
 2. In the object tree, expand **Packages** and select **OBS\_MANAGE\_ORDERS** package.
 
-3. Under **Specification**, Replace copy of procedure **create\_order** with the below code:
+     ![Click Timeline](images/15-3-2-manage-orders-package.png " ")
+
+3. Under **Specification**, Replace procedure **create\_order** with the below code:
 
      ```
      <copy>
@@ -122,7 +156,9 @@
 
    Click **Save and Compile**.
 
-5. Under **Body**, Copy and paste below code:
+     ![Click Timeline](images/15-3-3-manage-orders-package-pecification.png " ")
+
+4. Under **Body**, Replace procedure **create\_order** with the below code:
 
     ```
     <copy>
@@ -174,6 +210,8 @@
     ```
 
    Click **Save and Compile**.
+
+     ![Click Timeline](images/15-3-4-manage-orders-package-body.png " ")
 
 ## Task 4: Integrate Payment Gateway in Shopping Cart Page
 
