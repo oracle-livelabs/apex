@@ -6,10 +6,13 @@ In this lab, you design the 'Doctor Appointments Made Easy!' application using O
 
 ### Objectives
 
-In this lab, you:
-- Create the APEX Application
-- Create Application users
-- Install the Sample Dataset
+In this lab, you will:
+
+- Create the APEX Application.
+
+- Create Application users.
+
+- Install the Sample Dataset.
 
 Estimated Time: 20 minutes
 
@@ -18,15 +21,16 @@ Estimated Time: 20 minutes
 - Access to Oracle APEX.
 
 ## Task 1: Create Application Users
-In this task, you create multiple users for **Doctor Appointments made Easy!** Application.
+
+In this task, you create multiple users for **Doctor Appointments made Easy!** application.
 
 1. On the Application home page, click **Administration icon** and select **Manage Users and Groups**.
 
-  ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
+   ![Manage Users and Groups](./images/manage-users-and-groups.png " ")
 
 2. Click **Create Multiple Users**.
 
-  ![Create Multiple Users](./images/create-users.png " ")
+   ![Create Multiple Users](./images/create-users.png " ")
 
 3. You will create the following users for the application:
 
@@ -42,6 +46,7 @@ In this task, you create multiple users for **Doctor Appointments made Easy!** A
     |                | DARYL     |
     |                | RAJESH    |
     | Hospital Staff | STEVE     |
+    | Admin          | PATRICK   |
     {: title="List of Users to Create in the Application"}
 
 4. In the **Create multiple Users** dialog, enter/select the following attributes:
@@ -49,17 +54,18 @@ In this task, you create multiple users for **Doctor Appointments made Easy!** A
     - List of Email Addresses: Copy and Paste the below email addresses
 
       ```
-      <copy>  
-      ROBERT@yourdomain.com    
-      ANACHATT@yourdomain.com   
-      JANE@yourdomain.com       
-      BO@yourdomain.com         
-      PAT@yourdomain.com       
-      MARTIN@yourdomain.com     
-      SUSIE@yourdomain.com     
-      DARYL@yourdomain.com     
-      RAJESH@yourdomain.com    
-      STEVE@yourdomain.com   
+      <copy>
+      ROBERT@yourdomain.com
+      ANACHATT@yourdomain.com
+      JANE@yourdomain.com
+      BO@yourdomain.com
+      PAT@yourdomain.com
+      MARTIN@yourdomain.com
+      SUSIE@yourdomain.com
+      DARYL@yourdomain.com
+      RAJESH@yourdomain.com
+      STEVE@yourdomain.com
+      PATRICK@yourdomain.com
       </copy>
       ```
 
@@ -69,21 +75,21 @@ In this task, you create multiple users for **Doctor Appointments made Easy!** A
 
       Click **Next**.
 
-  ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. Click **Create Valid Users**.
 
-  ![Click validate users](./images/create-valid-users.png " ")
+    ![Click validate users](./images/create-valid-users.png " ")
 
 ## Task 2: Create the 'Doctor Appointments Made Easy!' Application
 
 1. Navigate to **App Builder**.
 
-  ![Select App Builder](./images/select-app-builder.png " ")
+   ![Select App Builder](./images/select-app-builder.png " ")
 
 2. Click **Create**.
 
-  ![Click create](./images/click-create.png " ")
+   ![Click create](./images/click-create.png " ")
 
 3. In the **Create an Application** dialog, for Name: Enter **Doctor Appointments Made Easy!** and Click **Create Application**.
 
@@ -95,13 +101,13 @@ In this task, you install a Sample Dataset using a SQL Script.
 
 1. Navigate to **SQL Workshop** and click **SQL Scripts**.
 
-  ![Click SQL Scripts](./images/click-sql-scripts.png " ")
+   ![Click SQL Scripts](./images/click-sql-scripts.png " ")
 
-3. Click **Create**.
+2. Click **Create**.
 
-  ![Click create SQL Scripts](./images/click-create1.png " ")
+   ![Click create SQL Scripts](./images/click-create1.png " ")
 
-4. **Copy and paste** the below SQL commands into the Script Editor to create tables for Doctor, Appointment, and Patient Feedback, along with sequences.
+3. **Copy and paste** the below SQL commands into the Script Editor to create tables for Doctor, Appointment, and Patient Feedback, along with sequences.
 
     ```
     <copy>
@@ -202,32 +208,33 @@ In this task, you install a Sample Dataset using a SQL Script.
 
     insert into doctor values
     (60, 'MARTIN', 'RENOLOGY','MS','martin@abc.com');
-    </copy>
-    ```
-5. For Script Name: Enter **Create DB Tables** and click **Run**.
+   </copy>
+   ```
 
-  ![Click create SQL Scripts](./images/create-db-tables.png " ")
+4. For Script Name: Enter **Create DB Tables** and click **Run**.
 
-6. Click **Run Now**. The statements are processed and the sample tables and data are created.
+   ![Click create SQL Scripts](./images/create-db-tables.png " ")
 
-  ![Click create SQL Scripts](./images/click-run-now.png " ")
+5. Click **Run Now**. The statements are processed and the sample tables and data are created.
 
-  ![Click create SQL Scripts](./images/create-tables-output.png " ")
+   ![Click create SQL Scripts](./images/click-run-now.png " ")
+
+   ![Click create SQL Scripts](./images/create-tables-output.png " ")
 
 ## Task 4: Create Package Spec and Package Body
 
 1. Navigate to **SQL Workshop** and click **SQL Scripts**.
 
-  ![Click create SQL Scripts](./images/click-sql-scripts1.png " ")
+   ![Click create SQL Scripts](./images/click-sql-scripts1.png " ")
 
 2. Click **Create**.
 
-  ![Click create SQL Scripts](./images/click-create2.png " ")
+   ![Click create SQL Scripts](./images/click-create2.png " ")
 
 3. **Copy and paste** the code snippet to create a package specification, named **eba\_demo\_wf\_doc\_apt.sql**.
 
-    ```
-    <copy>
+   ```
+   <copy>
     set define '^' verify off
     prompt ...eba_demo_wf_doc_apt
     create or replace package eba_demo_wf_doc_apt authid current_user as
@@ -270,8 +277,7 @@ In this task, you install a Sample Dataset using a SQL Script.
 
 5. Click **Run Now**.
 
-  ![Click create SQL Scripts](./images/click-run-now1.png " ")
-
+   ![Click create SQL Scripts](./images/click-run-now1.png " ")
 
 6. Repeat steps 1-2 to create a package body named **eba\_demo\_wf\_doc\_apt.plb**.
 
@@ -317,7 +323,7 @@ In this task, you install a Sample Dataset using a SQL Script.
            patient_email,
            doctor_email,
            status,
-           workflow_id)   
+           workflow_id)
        values (
            p_patient_name,
            p_doctor_id,
@@ -387,16 +393,19 @@ In this task, you install a Sample Dataset using a SQL Script.
 
 8. Click **Run Now**.
 
-  ![Click create SQL Scripts](./images/click-run-now2.png " ")
+    ![Click create SQL Scripts](./images/click-run-now2.png " ")
 
 ## Summary
+
 You have successfully completed the initial steps for designing the **Doctor Appointments Made Easy!** application. You first created an Application, and then added Application users, created Sample Datasets, and a Package.
 
 ### What's Next
+
 In the next lab, you will learn how to create a Workflow using Oracle APEX.
 
 You may now **proceed to the next Lab**.
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -27,6 +27,7 @@ Stay tuned for a journey into the world of streamlined business process manageme
 ### Objectives
 
 In this workshop, you will:
+
 - Identify the manual and automated steps of your business process
 - Create the APEX application
 - Create the Doctor Appointment Workflow
@@ -34,13 +35,11 @@ In this workshop, you will:
 - Add Activities and Connections to the Workflow
 - Create Pages for the APEX application
 
-
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ### Downloads
 
 [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
-
 
 ## Learn More - *Useful Links*
 
@@ -51,5 +50,6 @@ In this workshop, you will:
 - [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
