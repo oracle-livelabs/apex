@@ -36,7 +36,7 @@ To create a Workflow:
 
    ![Navigate to Application](./images/select-workflows.png " ")
 
-3. In the Workflows Page, click **Create**.
+3. In the **Workflows** Page, click **Create**.
 
    ![Click Create workflow](./images/click-create-workflow.png " ")
 
@@ -77,8 +77,6 @@ To create a Workflow:
    ![Check Errors in the Page](./images/set-end.png " ")
 
 6. Click **Save**. The changes are saved successfully.
-
-   ![Check Errors in the Page](./images/changes-saved.png " ")
 
 ## Task 3: Familiarize with Workflow Elements
 
@@ -126,25 +124,23 @@ You will define the following parameters for the Doctor Appointment Workflow:
 
 2. This adds a Parameter with a label "New" in the Workflow tree. In the Property Editor, enter/select the following:
 
-    - Static ID: **PATIENT_NAME**
+    - Identification > Static ID: **PATIENT_NAME**
 
-    - Label: **Patient Name**
+    - Label > Label: **Patient Name**
 
-    - Data Type: **VARCHAR2**
-
-  ![Configure Patient Name Parameter](./images/create-param-patient-name.png " ")
+    ![Configure Patient Name Parameter](./images/create-param-patient-name.png " ")
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Application Format Masks > Session State Format Mask |
-  |----------|-------|-------------|----------|
-  | PATIENT_AGE | Patient Age | Number |    |
-  | REQUEST_DATE | Request Date | Timestamp | DD-MON-YYYY HH24:MI:SS |
-  | PATIENT_EMAIL | Patient Email | Varchar2 |     |
-  | PROBLEM | Problem | Varchar2 |       |
-  {: title="List of Parameters to be Created"}
+   |Static ID | Label | Data Type | Display Format Masks > Session State Format Mask |
+   |----------|-------|-------------|----------|
+   | PATIENT_AGE | Patient Age | Number |    |
+   | REQUEST_DATE | Request Date | Timestamp | DD-MON-YYYY HH24:MI:SS |
+   | PATIENT_EMAIL | Patient Email | Varchar2 |     |
+   | PROBLEM | Problem | Varchar2 |       |
+   {: title="List of Parameters to be Created"}
 
-
+4. Click **Save**.
 
 ## Task 5: Use the parameters in the Workflow Subject
 
@@ -152,7 +148,7 @@ The Workflow has a Title field which is a descriptive title for the Workflow and
 
 1. To set the Workflow Title, in the left pane, select **Doctor Appointment** Workflow.
 
-2. In the Property Editor, change the Title to **Workflow for patient &PATIENT_NAME**.
+2. In the Property Editor, change the Title to **Workflow for patient &PATIENT_NAME.**
 
     ![Change Workflow Title](./images/change-workflow-title1.png " ")
 
@@ -162,7 +158,7 @@ The Workflow has a Title field which is a descriptive title for the Workflow and
 
 In addition to the input parameters, the Workflow also needs information about the available doctors based on the patient's problem. An understanding of the appointment process tells us that all activities of the workflow need the doctor data.
 
-1. To define Additional Data, in the rendering tree, click **Workflow Version 1.0[Dev]**.
+1. To define Additional Data, under **Doctor Appointment** workflow, click **1.0[Dev]**.
 
 2. In the Property Editor, enter/select the following:
 
@@ -174,12 +170,11 @@ In addition to the input parameters, the Workflow also needs information about t
 
     - Column Mapping > Primary Key Column: **DNAME**
 
-  ![Set Table Name](./images/add-additional-data.png " ")
+   ![Set Table Name](./images/add-additional-data.png " ")
 
 3. Click **Save**.
 
 > **Note:** _Now, all the columns' values of the DOCTOR table will be available as Bind Variables or Substitution Strings at all points and by all activities during the execution of this Workflow._
-
 
 ## Task 7: Add Workflow Variables
 
@@ -195,25 +190,11 @@ When an appointment is confirmed, the Booking ID for the appointment is carried 
 
 Data such as Availability, Booking ID and Fee need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
-1. In the Rendering tree, Right-click **1.0 [DEV]** (workflow version).
-
-2. Select **Create Variable**.
+1. Under **Doctor Appointment** workflow, right-click **1.0 [DEV]** (workflow version) and select **Create Variable**.
 
     ![Create Variable](./images/create-variable.png " ")
 
-3. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
-
-    - Identification > Static ID: **BOOKING_ID**
-
-    - Label > Label: **Booking ID**
-
-    - Variable > Data Type: **NUMBER**
-
-    - Value > Type: **Null**. This is because we know that the Booking ID only gets generated later in the workflow after the appointment is confirmed, so it needs to be initialized to null.
-
-  ![Create Booking ID Variable](./images/create-bookingid-variable.png " ")
-
-4. Similarly, create a variable called **AVAILABILITY**. In the Property Editor, Enter/Select the following:
+2. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **AVAILABILITY**
 
@@ -227,9 +208,9 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
         - False Value: **BUSY**
 
-  ![Create Availability Variable](./images/configure-availability.png " ")
+   ![Create Booking ID Variable](./images/create-available.png " ")
 
-6. Finally, create a variable **FEES**. In the Property Editor, Enter/Select the following:
+3. Create a variable **FEES**. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **FEES**
 
@@ -243,20 +224,31 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
         - Static Value: **0**
 
-  ![Create Fee Variable](./images/create-variable-fee.png " ")
+   ![Create Fee Variable](./images/create-variable-fee.png " ")
 
-7. Click **Save**.
+4. Similarly, create the following variables one after the other:
+
+    | Static ID | Label | Data Type |
+    | --------- | ----- | --------- |
+    | APPROVER  | Approver | VARCHAR2 |
+    | ID  | ID | NUMBER |
+    | TASK_STATUS  | Sub Task Status | VARCHAR2 |
+    | TASK_OUTCOME  | TaskOutcome | VARCHAR2 |
+    {: title="List of Variables to be Created"}
+
+5. Click **Save**.
 
 ## Summary
 
 In this lab, you learned the process of creating a Doctor Appointment Workflow using Oracle APEX.
 
 ### What's Next
+
 Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
 
-You may now **proceed to the next lab**.   
-
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** -  Ankita Beri, Product Manager, June 2024   
+- **Last Updated By/Date** -  Ankita Beri, Product Manager, December 2024

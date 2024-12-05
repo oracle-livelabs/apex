@@ -9,6 +9,7 @@ The above steps correspond to Human Task Activities. Before using them in the wo
 ### Objectives
 
 In this lab, you will learn how to create Human Tasks to:
+
 - Send Appointment Request To Doctor
 - Raise Invoice Request For Patient
 - Raise Feedback Request For Patient
@@ -16,6 +17,7 @@ In this lab, you will learn how to create Human Tasks to:
 Estimated Time: 20 minutes
 
 ### Prerequisites
+
 - All the previous Labs have been completed.
 
 ## Task 1: Create Task Definition for Appointment Request
@@ -30,8 +32,7 @@ Estimated Time: 20 minutes
 
 3. Click **Create**.
 
-  ![Click Create](./images/click-create-approvals.png " ")
-
+   ![Click Create](./images/click-create-approvals.png " ")
 
 4. In the **Create Task Definition** dialog, enter/select the following details:
 
@@ -43,7 +44,7 @@ Estimated Time: 20 minutes
 
     Click **Create**.
 
-  ![Creating Task Definition](./images/create-task-definition.png " ")
+   ![Creating Task Definition](./images/create-task-definition.png " ")
 
 5. Under **Settings** notice that the Task Details Page Number is empty. Click **Create Task Details Page** button to generate the details page for this task.
 
@@ -53,7 +54,7 @@ Estimated Time: 20 minutes
 
     ![Creating Task Details page confirm](./images/create-task-details-page1.png " ")
 
-6. In the Task Definitions Page, select **Appointment Request**.
+6. In the **Task Definitions** page, select **Appointment Request**.
 
     ![Select Appoint Request](./images/select-appt-request.png " ")
 
@@ -61,7 +62,7 @@ Estimated Time: 20 minutes
 
     - Actions Source: **SQL Query**.
 
-    - Actions SQL Query: copy and paste the below SQL Query:
+    - Actions SQL Query: Copy and paste the below SQL Query:
 
       ```
       <copy>
@@ -69,11 +70,11 @@ Estimated Time: 20 minutes
       </copy>
       ```
 
-  ![Configure Actions Source](./images/enter-actions-source.png " ")
+    ![Configure Actions Source](./images/enter-actions-source.png " ")
 
     This step ties our task to the system of records, in this case, the doctor's records.
 
-  > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
+    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
 8. Navigate to **Participants** tab, and click **Add Row**. Enter/select the following details:
 
@@ -83,9 +84,9 @@ Estimated Time: 20 minutes
 
     - Value: **:DNAME** (where **DNAME** refers to the DNAME column in the DOCTOR Table).
 
-  ![Add Potential owner to the Task](./images/add-task-participant.png " ")
+    ![Add Potential owner to the Task](./images/add-task-participant.png " ")
 
-9. Under **Parameters**, add the below Parameters by clicking **Add Row** and then, click **Apply Changes** to save the Task Definition.
+9. Under **Parameters**, add the below Parameters by clicking **Add Row**.
 
     | Parameter Name     |   Label    |
     |--------------------|------------|
@@ -94,8 +95,9 @@ Estimated Time: 20 minutes
     | PATIENT_NAME       | Patient name |
     {: title="List of Parameters to be added for the Task Definition"}
 
-  ![Add Task Parameters](./images/add-task-parameters.png " ")
+    ![Add Task Parameters](./images/add-task-parameters.png " ")
 
+10. Click **Apply Changes**.
 
 ## Task 2: Create Task Definitions for Invoice Requests
 
@@ -113,7 +115,7 @@ Estimated Time: 20 minutes
 
     Click **Create**.
 
-  ![Creating Task Definition](./images/create-invoice-request.png " ")
+   ![Creating Task Definition](./images/create-invoice-request.png " ")
 
 3. Under **Settings**, notice that the Task Details Page Number is empty. Click **Create Task Details Page**  to generate the details page for this task.
 
@@ -136,13 +138,13 @@ Estimated Time: 20 minutes
         </copy>
         ```
 
-  ![Select Invoice Request](./images/select-invoice-request.png " ")
+    ![Select Invoice Request](./images/select-invoice-request.png " ")
 
-  ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
+    ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
 
-  > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
+    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
-5. Now, Navigate to **Participants**, and enter/select the following:
+5. Now, navigate to **Participants**, and enter/select the following:
 
     - Participant Type: **Potential Owner**
 
@@ -150,9 +152,9 @@ Estimated Time: 20 minutes
 
     - Value: **&PATIENT_USERNAME.**
 
-  ![Add Potential owner to the Task](./images/add-invoice-participant.png " ")
+    ![Add Potential owner to the Task](./images/add-invoice-participant.png " ")
 
-6. Navigate to **Parameters**. Add the below Parameters by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
+6. Navigate to **Parameters** tab. Add the below Parameters by clicking **Add Row**.
 
     | Static ID     | Label |
     |---------------|---------|
@@ -161,8 +163,9 @@ Estimated Time: 20 minutes
     | PATIENT\_NAME       | Patient Name |
     {: title="List of Task Parameters to be added"}
 
-  ![Add Task Parameters](./images/add-invoice-parameters.png " ")
+    ![Add Task Parameters](./images/add-invoice-parameters.png " ")
 
+7. Click **Apply Changes**.
 
 ## Task 3: Create Task Definitions for Feedback Request
 
@@ -180,15 +183,14 @@ Estimated Time: 20 minutes
 
     Click **Create**.
 
-  ![Creating Task Definition](./images/create-feedback-request.png " ")
+   ![Creating Task Definition](./images/create-feedback-request.png " ")
 
 3. Under **Settings**, notice that the Task Details Page Number is empty. Click **Create Task Details Page** to generate the details page for this task.
-
- You get a popup dialog asking if the next available page number should be used. Click **OK**.
+You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
     ![Creating Task Details page](./images/create-task-details-page3.png " ")
 
-    ![Creating Task Details page](./images/create-task-details-page31.png " ")
+   ![Creating Task Details page](./images/create-task-details-page31.png " ")
 
 4. Select **Feedback Request** and enter/select the following:
 
@@ -204,13 +206,11 @@ Estimated Time: 20 minutes
     </copy>
     ```
 
-  ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
-  
-  ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query1.png " ")
+    ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query.png " ")
 
+    ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query1.png " ")
 
-
-  > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
+    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
 
 5. Navigate to **Participants**, and enter/select the following values:
 
@@ -220,27 +220,30 @@ Estimated Time: 20 minutes
 
     - Value: **&PATIENT_USERNAME.**
 
-  ![Add Potential owner to the Task](./images/add-feedback-participant.png " ")
+    ![Add Potential owner to the Task](./images/add-feedback-participant.png " ")
 
-6. Under **Parameters**, add the below Parameter by clicking **Add Row** and then click **Apply Changes** to save the Task Definition.
+6. Under **Parameters**, add the below Parameter by clicking **Add Row**.
 
     | Static ID    | Label |
     |--------------|--------|
     | BOOKING_ID   | Booking Id |
     {: title="List of Task Parameter(s) to be added"}
 
-  ![Add Task Parameters](./images/add-feedback-parameter.png " ")
+    ![Add Task Parameters](./images/add-feedback-parameter.png " ")
 
+7. Click **Apply Changes**.
 
 ## Summary
 
 You have successfully created Human Task definitions for the Doctor Appointment Workflow using the Approvals Component. In the next section, we will integrate these tasks into the workflow to complete the design process.
 
-### What's Next
+## What's Next
+
 In the next lab, you continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024   
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
