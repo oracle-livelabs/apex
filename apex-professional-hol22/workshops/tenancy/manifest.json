@@ -12,18 +12,22 @@
       },
       {
         "title": "Lab 1: Identify Business Steps",
-        "filename": "../../identify-business-steps/1-identify-business-steps.md"
+        "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
       },
       {
         "title": "Lab 2: Design the Application",
-        "filename": "../../design-the-application/2-design-the-application.md"
+        "filename": "../../2-design-the-application/2-design-the-application.md"
       },
       {
-        "title": "Lab 3: Create Workflow",
-        "filename": "../../create-workflow/3-create-workflow.md"
+        "title": "Lab 3: Create Calculate Fees Workflow",
+        "filename": "../../3-calculate-fees-workflow/3-calculate-fees-workflow.md"
       },
       {
-        "title": "Lab 4: Add Human Tasks to the Workflow",
+        "title": "Lab 4: Create Doctor's Appointment Workflow",
+        "filename": "../../4-doc-appointment-workflow/4-doc-appointment-workflow.md"
+      },
+      {
+        "title": "Lab 5: Add Human Tasks to the Workflow",
         "filename": "../../add-human-tasks/4-add-human-tasks.md"
       },
       {
