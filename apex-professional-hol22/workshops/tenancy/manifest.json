@@ -23,7 +23,7 @@
         "filename": "../../3-calculate-fees-workflow/3-calculate-fees-workflow.md"
       },
       {
-        "title": "Lab 4: Create Doctor's Appointment Workflow",
+        "title": "Lab 4: Create Doctor Appointment Workflow",
         "filename": "../../4-doc-appointment-workflow/4-doc-appointment-workflow.md"
       },
       {
@@ -35,11 +35,15 @@
         "filename": "../../6-calculate-fees-activities/6-calculate-fees-activities.md"
       },
       {
-        "title": "Lab 6: Create Workflow Pages",
+        "title": "Lab 7: Add Doctor Appointment workflow Activities and Connections ",
+        "filename": "../../7-doc-aapt-activities/7-doc-aapt-activities.md"
+      },
+      {
+        "title": "Lab 8: Create Workflow Pages",
         "filename": "../../create-pages/6-creating-pages.md"
       },
       {
-        "title": "Lab 7: Run the Application",
+        "title": "Lab 9: Run the Application",
         "filename": "../../running-the-app/7-running-the-app.md"
       },
       {
