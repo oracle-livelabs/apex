@@ -233,8 +233,8 @@ In this task, you install a Sample Dataset using a SQL Script.
 
 3. **Copy and paste** the code snippet to create a package specification, named **eba\_demo\_wf\_doc\_apt.sql**.
 
-   ```
-   <copy>
+    ```
+    <copy>
     set define '^' verify off
     prompt ...eba_demo_wf_doc_apt
     create or replace package eba_demo_wf_doc_apt authid current_user as

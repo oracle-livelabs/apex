@@ -8,14 +8,18 @@ In this lab, you learn the process of creating a Doctor Appointment Workflow usi
 
 In this lab, you learn how to:
 
-  - Create a Workflow
-  - Modify the Workflow details
-  - Define Workflow Data
-  - Add Workflow Variables
+- Create a Workflow
+
+- Modify the Workflow details
+
+- Define Workflow Data
+
+- Add Workflow Variables
 
 Estimated Time: 20 minutes
 
 ### Prerequisites
+
 - All the previous Labs have been completed.
 
 ## Task 1: Create the Workflow
@@ -24,17 +28,17 @@ To create a Workflow:
 
 1. In the App Builder, navigate to **Doctor Appointments Made Easy!** application and select **Shared Components**.
 
-  ![Navigate to Application](./images/navigate-to-application.png " ")
+   ![Navigate to Application](./images/navigate-to-application.png " ")
 
-  ![Click Shared Components](./images/click-shared-components.png " ")
+   ![Click Shared Components](./images/click-shared-components.png " ")
 
-2. Under Workflows and Automations, select **Workflows**.
+2. Under **Workflows and Automations**, select **Workflows**.
 
-  ![Navigate to Application](./images/select-workflows.png " ")
+   ![Navigate to Application](./images/select-workflows.png " ")
 
 3. In the Workflows Page, click **Create**.
 
-  ![Click Create workflow](./images/click-create-workflow.png " ")
+   ![Click Create workflow](./images/click-create-workflow.png " ")
 
 4. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
 
@@ -42,7 +46,7 @@ To create a Workflow:
 
 ## Task 2: Modify Workflow Details
 
-1. With Doctor Appointment selected in the rendering tree, enter/select the following in the Property editor:
+1. Select **New** and in the Property Editor, enter/select the following:
 
     - Identification > Name: **Doctor Appointment**
 
@@ -50,31 +54,31 @@ To create a Workflow:
 
     ![Change the Workflow name and Static ID](./images/change-workflow-name.png " ")
 
-2. In the left pane, select **New[Dev]** and in the property editor, for Workflow Version enter **1.0**.
+2. Select **New[Dev]** and in the property editor, for Workflow Version enter **1.0**.
 
-  ![Change the Workflow Version](./images/create-workflow-version.png " ")
+   ![Change the Workflow Version](./images/create-workflow-version.png " ")
 
-> **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
+   > **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
 
 3. The Workflow cannot be saved yet as there are validation errors. Click on the **error icon (Yellow exclamation mark)** to see the error.
 
-  ![Check Errors in the Page](./images/check-workflow-errors.png " ")
+   ![Check Errors in the Page](./images/check-workflow-errors.png " ")
 
-4. Under **outgoing**, select **New** and update the following:
+4. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
+
+   ![Delete activity using Tree](./images/delete-activity-tree.png " ")
+
+   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
+
+5. Navigate to **Start**. Under **Outgoing**, select **New** and select the following:
 
     - Activity > To: **End**
 
    ![Check Errors in the Page](./images/set-end.png " ")
 
-5. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
+6. Click **Save**. The changes are saved successfully.
 
-  ![Delete activity using Tree](./images/delete-activity-tree.png " ")
-
-  ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
-
-6. The changes are saved successfully.
-
-  ![Check Errors in the Page](./images/changes-saved.png " ")
+   ![Check Errors in the Page](./images/changes-saved.png " ")
 
 ## Task 3: Familiarize with Workflow Elements
 
@@ -83,7 +87,6 @@ To create a Workflow:
 2. Refer to the Activity Palette at the bottom in the Designer for a list of activity types.
 
   ![Check activities palette](./images/activities-palette.png " ")
-
 
   | Activity Type         | Description                                                                                                              | Blocks the workflow engine until execution completes? |
   |------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -98,8 +101,6 @@ To create a Workflow:
   | Workflow End           | Denotes the End of a workflow. Depending on the End State attribute of this activity, the Workflow is either Completed or Terminated. | Yes                                                    |
   {: title="List of Activity Types"}
 
-
-
   | Connection Type | Description                                                                                                        |
   |------------------|--------------------------------------------------------------------------------------------------------------------|
   | Normal           | Connects two activities in the workflow. No conditions. Not applicable for Switch Activities                         |
@@ -107,7 +108,6 @@ To create a Workflow:
   | Error            | Allows for efficient error management within the workflow without letting it go into a state of exception. Not applicable for Switch activities.                                      |
   | Switch connections | Connections leading out of a Switch Activity. They are conditional in nature.                                      |
   {: title="List of Connection Types"}
-
 
 ## Task 4: Add Inputs to the Doctor Appointments Workflow
 
@@ -122,7 +122,7 @@ You will define the following parameters for the Doctor Appointment Workflow:
 
 1. To create Workflow Parameters, right-click **Doctor Appointment** Workflow in the tree and select **Create Parameter**.
 
-  ![Create Parameter](./images/create-parameter.png " ")
+   ![Create Parameter](./images/create-parameter.png " ")
 
 2. This adds a Parameter with a label "New" in the Workflow tree. In the Property Editor, enter/select the following:
 

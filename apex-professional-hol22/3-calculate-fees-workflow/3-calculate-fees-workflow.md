@@ -74,7 +74,7 @@ To create a Workflow:
 
    ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
-5. Navigate to **Start**. Under **outgoing**, select **New** and select the following:
+5. Navigate to **Start**. Under **Outgoing**, select **New** and select the following:
 
     - Activity > To: **End**
 
