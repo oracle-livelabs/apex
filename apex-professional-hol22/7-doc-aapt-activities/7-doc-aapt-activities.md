@@ -277,12 +277,13 @@ At this point, check the **Variables** in your workflow tree. You will notice th
 
 ## Task 11: Handle the Task Outcome
 
-In this task, you learn to manage appointment requests using a Switch Activity in a workflow. The Appointment Request Task can result in two outcomes: APPROVED or REJECTED.
+In this task, you learn to manage appointment requests using a Switch activity in a workflow. The Appointment Request Task can result in two outcomes: APPROVED or REJECTED.
 
 - In case it is **APPROVED**, we create an entry in the **APPOINTMENT** table with details of the appointment and set the status to **CONFIRMED**.
+
 - In case it is **REJECTED**, we send a **No Appointment Mail** to the patient.
 
-1. To add a Switch Activity, open the workflow diagram in the workflow editor.
+1. To add a Switch activity, open the workflow diagram in the workflow editor.
 
 2. Drag and drop a **Switch Activity** to the left of the **Raise Appointment Request** Activity.
 
@@ -298,7 +299,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
     ![Adding a new switch activity](./images/config-switch-activity.png " ")
 
-4. In the Workflow Designer, detatch the end of the arrow connecting between the **Raise Appointment Request** and the **Complete Appointment** activities and attach it to the **Appointment Approved?** activity.
+4. In the Workflow designer, detatch the end of the arrow connecting between the **Raise Appointment Request** and the **Complete Appointment** activities and attach it to the **Appointment Approved?** activity.
 
     ![reconfigure connection](./images/reconnecting-arrow1.png " ")
 
@@ -318,7 +319,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
 ## Task 12: Add Invoke API for Confirm Appointment
 
-1. From the Activities Palette, drag an **Invoke API** Activity into the Diagram Builder area and drop it below the **Appointment Approved?** activity.
+1. From the Activities palette, drag an **Invoke API** Activity into the Diagram Builder area and drop it below the **Appointment Approved?** activity.
 
     ![Drag and Drop Invoke API Activity](./images/drag-drop-invoke-api2.png " ")
 
@@ -332,15 +333,15 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
         - Procedure or Function: **CONFIRM_APPOINTMENT**
 
-  ![Configure Confirm Appointment](./images/configure-invoke-api.png " ")
+    ![Configure Confirm Appointment](./images/configure-invoke-api.png " ")
 
-3. In the Rendering Tree, notice some Fields marked in Red. The **Confirm Appointment** function has several Parameters, highlighted in RED, to show that they are required.
+3. Under **Rendering** tab, notice some fields marked in Red. The **Confirm Appointment** function has several Parameters, highlighted in RED, to show that they are required.
 
-4. In the Left Pane, select **Confirm Appointment > Function Result** and in the **Property Editor**, enter/select the following:
+4. Navigate to **Confirm Appointment** activity and select **Function Result** parameter. In the **Property Editor**, enter/select the following:
 
-    - Value > Item: **Version Variables > BOOKING_ID**
+    - Value > Item: **Version Variables > ID**
 
-  ![Configure function result](./images/select-function-result.png " ")
+    ![Configure function result](./images/select-function-result.png " ")
 
 5. Similarly, set the remaining parameters under **Confirm Appointment** as follows:
 
@@ -353,8 +354,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
     |p\_patient\_email| Workflow Parameters: **PATIENT\_EMAIL**||
     |p\_workflow\_id| Static Value: **&APEX$WORKFLOW_ID.**||
 
-> **Note:** _APEX$WORKFLOW\_ID is a substitution string that holds the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the App Builder Documentation Guide._
-
+    > **Note:** _APEX$WORKFLOW\_ID is a substitution string that holds the ID of the workflow instance while it runs. You will learn more about the available substitution strings for Workflows in the App Builder Documentation Guide._
 
 6. Now, click the **Appointment Approved?** activity and draw an arrow to the **Confirm Appointment activity**.
 
@@ -368,7 +368,7 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
         - Value: **APPROVED**
 
-  ![reconfigure connection](./images/reconfigure-connection.png " ")
+    ![reconfigure connection](./images/reconfigure-connection.png " ")
 
 8. To be able to save the model at this point, we need to get rid of validation errors. Create a **Connection** from **Confirm Appointment** to **Complete Appointment** End activity.
 
@@ -376,262 +376,51 @@ In this task, you learn to manage appointment requests using a Switch Activity i
 
 9. Click **Save** to save the workflow model.
 
-## Task 13: Add the Switch Activity for followup-check
+## Task 13: Add Invoke Workflow
 
-The next step in the business logic is to check if the appointment is a follow-up visit for the patient. If this is a patient returning in less than a week, the visit is considered to be a follow-up and is free of charge, otherwise, a charge of 500 is levied.
+1. From the Activities palette, drag an **Invoke Workflow** Activity into the Diagram Builder area and drop it below the **Confirm Appointment** activity.
 
-1. Open the workflow diagram in the workflow editor.
-
-2. Drag and drop a **Switch Activity** below the **Confirm Appointment** Activity.
-
-  ![Adding a new switch activity](./images/create-new-switch-activity.png " ")
-
-3. Select the Switch Activity you just created, and then in the Property Editor, enter/select the following:
-
-    - Identification > Name: **Free Consultation?**
-
-  ![Adding a new switch activity](./images/config-switch-activity2.png " ")
-
-4. Now, detach the connection from the **Confirm Appointment** Activity and re-attach it to this **Switch** Activity.
-
-  ![Adding a new switch activity](./images/config-switch-activity3.png " ")
-
-## Task 14: Create Activity Variable for Free Consultation
-The Switch condition's outcome should be based on a calculation of the number of days since the patient's last visit to the same doctor. To store the calculation result, we will create an Activity Variable for the **Free Consultation?** Activity.
-
-> *Points to Note:*
-
->- **Workflow Activity variables** are specific/local to the execution of a workflow activity. These variables may be referenced:                                        
-    - During Activity execution.
-    - During the evaluation of a Switch condition.
-    - During the evaluation of any Timeout or Error-handling routes defined for the activity.
-- Unlike **Workflow Variables**, they cannot be referenced by other activities of the workflow once the activity execution is completed.
-
-
-1. To create an Activity Variable, right-click on the **Free Consultation?** activity in the Workflow Tree and select **Create Activity Variable**.
-
-  ![adding activity variable](./images/create-activity-variable.png " ")
-
-2. Select the New activity variable, and in the Property Editor, enter/select the following:
-
-    - Identification > Static ID: **FREE**
-
-    - Label > Label: **Free**
-
-    - Under Value:
-
-        - Type: **Function Body**
-
-        - PL/SQL Function Body: Enter the following code:
-        ```
-       <copy>
-      declare
-      l_free number := 1;
-      begin
-        select 1 into l_free from dual
-         where exists (select patient_username
-          from appointment
-         where patient_username = :PATIENT_NAME
-           and  doctor_no = :DNO
-           and  schedule >= to_timestamp_tz(:REQUEST_DATE,'DD-MON-YYYY HH24:MI:SS') - 7
-           and status = 'PAID');
-       return 1;
-      exception
-        when others then
-        return 0;
-      end;
-       </copy>
-       ```
-
-  ![Configure ](./images/configure-free-variable.png " ")
-
-
-## Task 15: Configure the 'Free Consultation Switch Activity'
-
-1. In the Rendering Tree, select **Free Consultation?** activity.
+    ![Drag and Drop Invoke Workflow Activity](./images/add-invoke-workflow.png " ")
 
 2. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Check Appointment Fee**
+
+    - Under Settings:
+
+        - Definition > **Calculate Fees**
+
+        - Details Primary Key Item: **ID**
+
+    ![Drag and Drop Invoke Workflow Activity](./images/conf-invoke-workflow.png " ")
+
+## Task 14: Configure Switch Activity for Approved Appointment
+
+1. From the Activities palette, drag an **Switch** Activity into the Diagram Builder area and drop it below the **Check Appointment Fee** activity.
+
+    ![Drag and Drop Switch Activity](./images/add-switch.png " ")
+
+2. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Approved?**
 
     - Under Condition:
 
         - Condition Type: **Workflow Variable = Value**
 
-        - Workflow Variable > Activity Variables: **FREE**
+        - Workflow Variable > Version Variables: **TASK_STATUS**
 
-        - Value: **1**
+        - Value: **APPROVED**
 
-  ![Configure Free consultation](./images/configure-free-consultation.png " ")
+    ![Drag and Drop Invoke Workflow Activity](./images/approved-details.png " ")
 
-## Task 16: Create the 'Update Fees' and 'Send Invoice Email to Patient' Activities
-
-The next step is to establish connections for Free Consultation branches with activities such as Updating Fees and sending invoice Email to Patients.
-
-1. From the Activities Palette, drag an **Invoke API** Activity into the Diagram Builder area and drop it below the **Free Consultation?** activity.
-
-2. Click the newly added **Invoke API** and in the Property Editor, enter/select the following:
-
-    - Identification > Name: **Update Fees**
-
-    - Under Settings:
-
-        - Package: **EBA\_DEMO\_WF\_DOC\_APT**
-
-        - Procedure or Function: **UPDATE_FEES**
-
-        This procedure will update the Consultation Fee (FEE) in the APPOINTMENT Table record and also populate the Workflow Variable FEE.
-
-  ![Drag and Drop Invoke API Activity](./images/configure-update-fees.png " ")
-
-3. In the **Rendering Tree**, notice that there are some Fields marked in Red. The **Update Fees** function has 5 Parameters, highlighted in RED to show that they are required.
-
-4. In the Left Pane, select **Update Fees > Function Result**. In the Property Editor, enter/select the following:
-
-    - Value > Item > Version Variables: **FEES**
-
-  ![Configure Function Result Var](./images/configure-function-result.png " ")
-
-5. Similarly, configure the remaining parameters under **Confirm Appointment** as follows:
-
-     |Parameter | Value |
-    |---------|--------|
-    |p\_doctor\_id| Static Value > **&DNO.**|
-    |p\_request\_date| Workflow Parameters > **REQUEST_DATE**|
-    |p\_booking\_id|Version Variables > **BOOKING_ID**|
-    |p\_patient\_name| Workflow Parameters > **PATIENT\_NAME**|
-
-6. From the Activities Palette, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
-
-7. In the Property Editor, enter/select the following:
-
-    - Identification > Name: **Send Invoice Email To Patient**
-
-    - Under Settings:
-
-        - To: **&PATIENT_EMAIL.**
-
-        - Subject: **Appointment Confirmed!**
-
-        - **Body Plain Text**: Enter/Replace the text with the text below:
-            ```
-            <copy>
-            Hello &PATIENT_NAME. ,
-            Your appointment for &REQUEST_DATE. with Dr. &DNAME. is confirmed, The consultation charge is Rs &FEE. .
-            An invoice has been raised for this appointment. Kindly make the required payment and confirm the same at the earliest.
-            Please note that no payment will be required if this is a follow-up consultation.
-
-            Regards,
-            Management Team
-            ABC Hospital
-            </copy>
-            ```
-
-    ![Configure No Appointment Email](./images/config-send-email.png " ")  
-
-8. Now, draw a Connection from the **Free Consultation?** activity to the **Update Fees** activity. In the Property Editor, enter/select the following:
-
-    - Identification > Name: **No**
-
-    - Condition > When: **False**
-
-    ![draw conn to update fees](./images/draw-conn1.png " ")  
-
-9. Now, draw a **Connection** from the **Free Consultation?** activity to the **Send Invoice Mail To Patient** activity. In the Property Editor, enter/select the following:
-
-    - Identification > Name: **Yes**
-
-    - Condition > When: **True**
-
-    ![draw conn to update fees](./images/draw-conn2.png " ")  
-
-10. Finally, draw Connections from **Send Invoice Mail To Patient** and **Update Fees** to the **Complete Appointment** End Activity to eliminate the Workflow Model's validation errors.
-
-    ![draw conn to end activity](./images/draw-connections.png " ")  
-
-11. Click **Save** to save the changes.
-
-
-## Task 17: Add the Invoice Request Human Task Activity
-
-At this point, the workflow needs to raise an Invoice Request for the patient to confirm.
-
-1. From the Activities Palette, drag and drop a **Human Task - Create** Activity and place it between **Update Fees** and **Complete Appointment End** Activity.
-
-     ![draw conn to end activity](./images/create-human-task-inv.png " ")
-
-2. With **Human Task - Create** selected, in the Property Editor, enter/select the following:
-
-    - Identification > Name: **Raise Invoice Request**
-
-    - Under Settings:
-
-        - Definition: **Invoice Request**
-
-        - Details Primary Key Item: **BOOKING_ID**
-
-    - Under Deadline:
-
-        - Due On Type: **Interval**
-
-        - Interval: **PT30M** (This means that if the payment is not made and the patient does not confirm the invoice within 30 minutes, then the Appointment request will be terminated.)
-
-  ![draw conn to end activity](./images/config-raise-inv.png " ")
-
-3. Then, detach the connection from **Send Invoice Mail To Patient activities** and attach them to the **Raise Invoice Request** activity.
-
-     ![draw conn to raise inv](./images/draw-connections-inv.png " ")
-
-4. In the Rendering Tree, notice some Fields marked in Red. The **Raise Invoice Request** has 3 Parameters, highlighted in RED, to show that they are required.
-
-5. In the Left Pane, select **Raise Invoice Request > Doctor Name**. In the Property Editor, enter/select the following:
-
-    - Value > Static Value: **&DNAME.**
-
-  ![Configure Doctor Name](./images/config-doctor-name.png " ")
-
-6. Similarly, set the remaining parameters under **Raise Invoice Request** as follows:
-
-    - For **Fees**, Under Value:
-
-        - Type: **Item**
-
-        - Item > Version Variables **FEES**
-
-    - For **Patient Name**, Under Value:
-
-        - Type: **Item**
-
-        - Item > Workflow Parameters: **PATIENT_NAME**
-
-7. Click **Save** to save the changes.
-
-
-## Task 18: Add a Timeout Connection for the Invoice Request Completion
-
-1. Click on the 3 Dots at the bottom-right corner of the **Raise Invoice Request** Activity to open the Context Menu and select **Create Connection**.
-
-    ![create timeout connection](./images/create-timeout-connection.png " ")
-
-2. Now, click on the newly created Connection, and then in the Property Editor, enter/select the following:
-
-    - Under Identification:
-
-        - Name: **Invoice Incomplete**
-
-        - Type: **Timeout**
-
-    - Under Activity > To: **No Appointment Mail**
-
-  ![Configure timeout connection](./images/configure-timeout-prop.png " ")
-
-3. Re-adjust the Workflow Diagram to make the diagram more aesthetic.
-
-  ![readjusting workflow diagram](./images/workflow-diagram.png " ")
-
-## Task 19: Update Status of the Workflow
+## Task 15: Update Status of the Workflow
 
 Once the Patient confirms the invoice / makes the payment, the Appointment record status needs to be updated to PAID.
 
 1. Drag and Drop an **Invoke API** activity on the Connection between the **Raise Invoice Request** and **Complete Appointment** activities.
+
+    ![create and config Update appointment](./images/add-invoke-api.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -643,7 +432,7 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
         - Procedure or Function: **UPDATE_APPOINTMENT**
 
-  ![create and config Update appointment](./images/create-config-update-app.png " ")
+   ![create and config Update appointment](./images/invoke-api-details.png " ")
 
 3. The procedure **UPDATE_APPOINTMENT** will update the Status in the *APPOINTMENT* table record to **PAID**.
 
@@ -651,9 +440,9 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
 5. In the Left Pane, select **Update Appointment > p\_booking\_id**. In the Property Editor, enter/select the following:
 
-    - Value > Item > Version Variables: **BOOKING_ID**
+    - Value > Item > Version Variables: **ID**
 
-  ![config booking id](./images/config-booking-id.png " ")
+   ![config booking id](./images/config-booking-id.png " ")
 
 6. Similarly, set the remaining parameters under **Update Appointment** as follows:
 
@@ -663,7 +452,47 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
         - Static Value: **PAID**
 
-## Task 20: Final steps
+    ![config booking id](./images/config-status.png " ")
+
+7. Now, select the **Confirm Appointment** activity and draw an arrow to the **Check Appointment Fee** activity.
+
+8. Select **Check Appointment Fee** activity and draw an arrow to the **Approved?** activity.
+
+9. Now, select **Approved?** activity and draw an arrow to the **Update Appointment** activity and in the Property Editor, update the following:
+
+    - Condition > When: **True**
+
+    ![Drag and Drop Invoke Workflow Activity](./images/add-connections.png " ")
+
+## Task 16: Add a Wait Activity
+
+1. From the Activities palette, drag an **Wait** Activity into the Diagram Builder area and drop it below the **Update Appointment** activity.
+
+    ![Drag and Drop Switch Activity](./images/add-wait.png " ")
+
+2. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Wait Before Requesting Feedback**
+
+    - Under Settings:
+
+        - Timeout Type: **SQL Query**
+
+        - SQL Query: Copy and paste the below code
+
+        ```
+        <copy>
+        select schedule from appointment where booking_id = :BOOKING_ID;
+        </copy>
+        ```
+
+    ![Drag and Drop Invoke Workflow Activity](./images/wait-details.png " ")
+
+3. Select **Update Appointment** activity and draw an arrow to the **Wait** activity.
+
+    ![Drag and Drop Invoke Workflow Activity](./images/add-wait-conn.png " ")
+
+## Task 17: Final steps
 
 Going back to our flowchart, at this point the Workflow waits for the appointment to happen and after that it raises a Feedback Request for the Patient. If the feedback is not received within a specific period, the Workflow is Completed without Feedback, else a Thank You Email is sent to the Patient.
 
@@ -687,7 +516,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
         </copy>
         ```
 
-  ![create and config wait activity](./images/create-config-wait-activity.png " ")
+    ![create and config wait activity](./images/wait-details.png " ")
 
 3. From the Activities Palette , drag a **Human Task - Create** Activity and drop it on the connection between the **Wait Activity** and the **Complete Appointment** activities.
 
@@ -699,7 +528,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
         - Definition: **Feedback Request**
 
-        - Detail Primary Key Item: **BOOKING_ID**
+        - Detail Primary Key Item: **ID**
 
     - Under Deadline:
 
@@ -707,17 +536,17 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
         - Interval: **PT24H** (This implies that the Workflow will wait for at most 24 hours for the feedback activity to be completed.)
 
-  ![create and conf feedback](./images/create-conf-feedback.png " ")
+      ![create and conf feedback](./images/req-for-feedback.png " ")
 
-5. In the Rendering Tree under **Request For Feedback**, select **Booking Id**. In the Property Editor, enter/select the following:
+5. Under **Rendering** tab, navigate to **Request For Feedback** activity, select **Booking Id**. In the Property Editor, enter/select the following:
 
     - Under Value:
 
         - Type: **Item**
 
-        - Item > Version Variables: **BOOKING_ID**
+        - Item > Version Variables: **ID**
 
-  ![config booking id](./images/set-feedback-params.png " ")
+     ![config booking id](./images/set-feedback-params.png " ")
 
 6. Drag a **Workflow End** Activity from the Activity Palette and drop it on the Diagram area to the left of the **Request for Feedback** activity.
 
@@ -735,13 +564,13 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     - Under Identification:
 
-        - Name: **No Feedback Received**
+        - Name: **No Feedback**
 
         - Type: **Timeout**
 
-    ![draw final connection](./images/no-feedback.png " ")
+    ![draw final connection](./images/add-no-feedback-conn.png " ")
 
-> **Note:** _Connections of type Timeout can only be added to an activity if the activity has 'Due On' Type and value populated in the 'Deadline' section of the Property Editor._
+    > **Note:** _Connections of type Timeout can only be added to an activity if the activity has 'Due On' Type and value populated in the 'Deadline' section of the Property Editor._
 
 11. Finally, drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Request for Feedback** and **Complete Appointment** End Activities.
 
@@ -771,20 +600,21 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
         </copy>
         ```
 
-    ![create and config send email](./images/create-config-send-email.png " ")
+    ![create and config send email](./images/add-send-email.png " ")
 
 13. Click **Save**. At this point, our Appointment Workflow model is **Complete!**.
-
 
 ## Summary
 
 You have successfully created and configured the workflow for the 'Doctor's Appointment Made Easy!' application.
 
 ### What's Next
+
 In the next section, you will create pages in the application that will utilize this workflow.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024   
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
