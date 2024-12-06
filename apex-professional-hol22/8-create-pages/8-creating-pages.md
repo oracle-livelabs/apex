@@ -22,7 +22,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create the New Appointments Page
 
-Now that the Workflow is created, let us create the Page that the Hospital Staff will use to Submit a New Appointment.
+Now that the Workflow is created, let us create the page that the hospital staff will use to create a new appointment.
 
 1. Navigate to **Application ID <number>**. Alternatively, you can also navigate by clicking the App Builder icon for your workspace and selecting **Doctor Appointments Made Easy!** Application.
 
@@ -54,7 +54,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
      ![Create a region](./images/configure-static-content.png " ")
 
-7. In the rendering pane, right-click on **Patient Appointment details** and select **Create Page Item**.
+7. Under **Rendering** tab, right-click **Patient Appointment details** and select **Create Page Item**.
 
      ![Create page item](./images/create-page-item13.png " ")
 
@@ -66,13 +66,13 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
     - **P5\_DOC**
     - **P5\_AGE**
 
-9. For **P5\_EMAIL**, in the property editor, Select the following:
+9. Select **P5\_EMAIL**, in the property editor, select the following:
 
     - Settings > Subtype: **E-Mail**
 
     ![Create page item](./images/create-email-item.png " ")
 
-10. For **P5_DESC**, in the property Editor, Enter/select the following:
+10. Select **P5_DESC**, in the Property Editor, enter/select the following:
 
       - Identification > Type: **Select List**
 
@@ -98,7 +98,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
     ![create desc item](./images/create-desc-item.png " ")
 
-11. For **P5\_APPT\_DATE**, in the property editor, enter/select the following:
+11. Select **P5\_APPT\_DATE**, in the Property Editor, enter/select the following:
 
       - Identification > Type: **Date Picker**
 
@@ -108,7 +108,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
     ![create Appt Date item](./images/create-appt-date-item.png " ")
 
-12. For the **P5_DOC** Page Item, in the property editor, enter/select the following:
+12. Select **P5_DOC**, in the Property Editor, enter/select the following:
 
       - Identification > Type: **Popup LOV**
 
@@ -130,7 +130,7 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
     ![create Appt Date item](./images/create-doc-item1.png " ")
 
-13. Similarly, Select **P5_AGE** and update label to **Age**.
+13. Similarly, select **P5_AGE** and update the **Label** to **Age**.
 
     ![create Appt Date item](./images/page-item-age.png " ")
 
@@ -150,9 +150,9 @@ Now that the Workflow is created, let us create the Page that the Hospital Staff
 
 ## Task 2: Create and Configure Page Process
 
-1. In the Left Pane, navigate to the **Processing** Tab.
+1. Navigate to the **Processing** tab.
 
-2. In the **Processing** Tab, right-click on **Processing** and select **Create Process**.
+2. Under **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![create page process](./images/click-create-process.png " ")
 
@@ -196,7 +196,7 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
     ![click page](./images/click-create-page.png " ")
 
-2. In the Create a Page dialog, under **Component**, select **Unified Task List**.
+2. Select **Unified Task List**.
 
    ![Select Unified Task List](./images/select-unified-tasks.png " ")
 
@@ -216,11 +216,11 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
 4. Our application has 1 entry point for Doctors. Doctors need to log in to approve or reject appointment requests. For this, you will create a Doctor Tasks page. This will also be a Unified Task List page for Doctors to act on the tasks assigned to them.
 
-5. To create another Unified Task list page, Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
+5. To create another Unified Task list page, click **+ (Plus) Icon** on the top-right corner of the page designer toolbar. Select **Page** from the drop-down.
 
     ![create patient tasks](./images/create-apge.png " ")
 
-6. Under Component, select **Unified Task List**.
+6. Select **Unified Task List**.
 
     ![Select Unified Task List](./images/select-unified-tasks.png " ")
 
@@ -238,7 +238,7 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
 ## Task 4: Modify the Task Details Pages
 
-Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, and Feedback Request. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
+Our Application has three Task Definitions -  Appointment Request, Invoice Request, and Feedback Request. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
 
 1. In the **Doctors Appointment Made Easy!** application, navigate to **Shared Components** and select **Task Definitions**.
 
@@ -270,7 +270,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     Navigate to **Shared Components > Task Definition > Invoice Request** and similarly check the page number for the Task Details. The **Invoice Request** Task Definition points to Page 3.
 
-8. Navigate to your Application home page and click **Page 3**.
+8. Navigate to your application home page and click **Page 3**.
 
 9. Now, update the following in the Property Editor:
 
@@ -280,11 +280,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     ![change title page2](./images/change-title-page3.png " ")
 
-10. In the rendering tree, navigate to **Invoice Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
+10. Under **Rendering** tab, navigate to **Invoice Details > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
 
     ![delete developer info](./images/delete-developer-info1.png " ")
 
-11. In the rendering tree, select **Details** classic report region. In the Property editor, edit the Title to **View Invoice**.
+11. Under **Rendering** tab, select **Details** region. In the Property editor, edit the Title to **View Invoice**.
 
     ![change details title](./images/change-details-title.png " ")
 
@@ -294,7 +294,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
 13. Navigate to **Shared Components > Task Definition > Feedback Request** and similarly check the page number for the Task Details. The **Feedback Request** Task Definition points to Page 4.
 
-14. Navigate to your Application home page and click **Page 4**.
+14. Navigate to your application home page and click **Page 4**.
     Now, update the following in the Property Editor:
 
     - Name: **Feedback Details**
@@ -303,21 +303,21 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     ![change details title](./images/change-feedback-title.png " ")
 
-15. In the rendering tree, navigate to **Feedback Details > Components > Content Body > Developer Information**. Right-click on the **Developer Information** region and click **Delete**.
+15. Under **Rendering** tab, navigate to **Feedback Details > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
 
     ![delete developer info](./images/delete-feedback-devinf.png " ")
 
-16. In the Rendering Tree, click **Details** region. In the Property Editor, for Title: Enter **View Appointment Details**.
+16. Under **Rendering** tab, click **Details** region. In the Property Editor, for Title: Enter **View Appointment Details**.
 
     ![change details title](./images/edit-details-region.png " ")
 
 17. In the Details Page, the patient should be able to fill out a Feedback form and submit it. On submission, it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows:
 
-    In the rendering tree, right click on **View Appointment Details** and click **Create Region Below**.
+    - Right click  **View Appointment Details** and click **Create Region Below**.
 
     ![create region below](./images/create-region-below13.png " ")
 
-18. Select the newly created region in the Rendering Tree, and then in the property editor, enter/select the following:
+18. Select the newly created region and in the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -338,11 +338,11 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     ![configure feedback](./images/configure-feedback.png " ")
 
-19. In the Rendering Tree, select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID**. In the Property Editor, for Identification > Type, select **Hidden**.
+19. Select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID**. In the Property Editor, for Identification > Type, select **Hidden**.
 
     ![set items as hidden](./images/set-items-to-hidden.png " ")
 
-20. In the rendering Tree, select **P4_SCHEDULE** and then in the property editor, for Appearance > Format Mask, select **DD-MON-YYYY HH24:MI:SS**.
+20. Select **P4_SCHEDULE** and then in the property editor, for Appearance > Format Mask, select **DD-MON-YYYY HH24:MI:SS**.
 
     ![set items as hidden](./images/update-schedule-item.png " ")
 
@@ -352,7 +352,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     ![create page item](./images/create-page-item11.png " ")
 
-22. Select the newly created page item in the Rendering Tree, and then in the property editor, enter/select the following:
+22. Select the newly created page item and in the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -384,7 +384,7 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
 24. Click **Save**.
 
-25. In the Pre-Rendering section, add a new Process above the **Initialize Form Feedback Details** Process.
+25. Under **Pre-Rendering**, create a new **Process** above the **Initialize Form Feedback Details** process.
 
     ![create page item](./images/configure-pre-rendering-process.png " ")
 
@@ -410,9 +410,9 @@ Our Application has 3 Task Definitions -  Appointment Request, Invoice Request, 
 
     ![create page item](./images/configure-pre-rendering.png " ")
 
-27. In the **Left Pane**, navigate to the **Processing Tab**.
+27. Navigate to the **Processing Tab**.
 
-28. In the **Processing Tab**, right-click **Processing** and add it after the **Claim process**.
+28. Right-click **Processing**, select **Create Process** and add it after the **Claim** process.
 
     ![create page item](./images/process-13.png " ")
 
@@ -463,7 +463,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![when button pressed](./images/create-page13.png " ")
 
-2. In the Create a Page dialog, select **Blank Page**.
+2. Select **Blank Page**.
 
    ![Create Page wizard](./images/create-blank-page13.png " ")
 
@@ -479,7 +479,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![create patient tasks](./images/configure-patient-apps.png " ")
 
-4. In Page Designer of the newly created page, right-click on **Body** and click **Create Region**.
+4. Right-click **Body** and click **Create Region**.
 
     ![create patient tasks](./images/create-region21.png " ")
 
@@ -506,7 +506,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![create patient tasks](./images/configure-appointments1.png " ")
 
-6. In the Rendering Tree, select **Appointments**, and then in the Property editor, select the **Attributes** tab and enter/select the following:
+6. Select **Appointments** region, and in the Property editor, under **Attributes** tab and enter/select the following:
 
     - Under Settings:
 
@@ -518,7 +518,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![create patient tasks](./images/configure-attr.png " ")
 
-7. In the rendering tree, right-click on **Appointments Region**, and then select **Create Region Below**.
+7. Right-click **Appointments Region**, and select **Create Region Below**.
 
     ![create patient tasks](./images/create-region-below1.png " ")
 
@@ -553,7 +553,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![configure feedbacks](./images/configure-feedbacks.png " ")
 
-9. In the Rendering Tree, select **Feedbacks**. In the Property editor, select the **Attributes** tab and enter/select the following:
+9. Select **Feedbacks** region. In the Property editor, under **Attributes** tab, enter/select the following:
 
     - Under Settings:
 
@@ -577,11 +577,11 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 1. To create the Workflow Console and Details pages, on the Application home page, select **Create Page**.
 
-2. Under Component, select **Workflow Console**.
+2. Select **Workflow Console**.
 
     ![configure feedbacks attr](./images/create-workflow-console.png " ")
 
-3. In the Create Workflow Console wizard:
+3. In the Create Workflow Console wizard, enter/select the following:
 
     - Under Page Definition:
 
@@ -609,7 +609,7 @@ You have successfully created a comprehensive Oracle APEX application for managi
 
 ### What's Next
 
-In the next lab, you will understand the behaviour of the **Doctor Appointments Made Easy!** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
+In the next lab, you will understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
 
 ## Acknowledgements
 
