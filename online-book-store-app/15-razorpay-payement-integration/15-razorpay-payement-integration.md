@@ -131,7 +131,7 @@
 
     ![Click Timeline](images/15-2-14-apply-changes.png " ")
 
-## Task 3: Update OBS\_MANAGE\_ORDERS Package Codes
+## Task 3: Update OBS MANAGE ORDERS Package
 
 1. Expand **SQL Workshop** and navigate to **Object Browser**.
 
@@ -217,43 +217,54 @@
 
 1. Navigate to **App Builder** and select **Online Bookstore Application**.
 
+    ![Click Timeline](images/15-4-1-select-app.png " ")
+
 2. Click Page **17 - Shopping Cart**
+
+    ![Click Timeline](images/15-4-2-page17.png " ")
 
 3. Right-click **Order Information** and Create the following three page items, one after the other:
 
-      | Name            |  Type   |
-      | --------------- |  ------ |
+      | Name            |  Type   |  Value Protected |
+      | --------------- |  ------ |  --------------- |
       | P17\_RAZORPAY\_ORDER\_ID | Hidden |
-      | P17\_PAYMENT\_ID | Hidden |
+      | P17\_PAYMENT\_ID | Hidden | Toggle OFF |
       | P17\_RESPONSE | Hidden  |
 
-4. Select **Proceed** button, Under Behavior update Action: **Defined by Dynamic Action**.
+    ![Click Timeline](images/15-4-3-create-pageitems.png " ")
+    ![Click Timeline](images/15-4-3-create-pageitems1.png " ")
+    ![Click Timeline](images/15-4-3-create-pageitems2.png " ")
+    ![Click Timeline](images/15-4-3-create-pageitems3.png " ")
 
-5. Right-click on **Proceed** button and click **Create Dynamic Action**
+4. Select **Proceed** button, under Behavior update Action: **Defined by Dynamic Action**.
 
-6. Enter/select the following:
+    ![Click Timeline](images/15-4-4-proceed-action.png " ")
 
-    - Under Identification > Name: **run_pay**
+5. Right-click on **Proceed** button and select **Create Dynamic Action**
 
-7. Click on true action
+    ![Click Timeline](images/15-4-5-proceed-create-da.png " ")
 
-8. Enter/select the following:
+6. In the property editor, under Identification update Name: **run_pay**
+
+    ![Click Timeline](images/15-4-6-da-name.png " ")
+
+7. Select true action and in the property editor, enter/select the following:
 
     - Under Identification > Action: **Submit Page**
 
     - Under Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
 
-9. Navigate to the **Dynamic Actions** Tab
+    ![Click Timeline](images/15-4-7-da-action.png " ")
 
-10. Right-click on **Page Load** and click **Create Dynamic Action**
+8. Navigate to the **Dynamic Actions** Tab and right-click on **Page Load** and select **Create Dynamic Action**
 
-11. Enter/select the following:
+    ![Click Timeline](images/15-4-8-create-da.png " ")
 
-    - Under Identification > Name: **Invoke Razorpay**
+9. In the property editor, under Identification update Name: **Invoke Razorpay**
 
-12. Click on true action
+    ![Click Timeline](images/15-4-9-da-name.png " ")
 
-13. Enter/select the following:
+10. Select true action and enter/select the following:
 
     - Under Identification > Action: **Execute Javascript Code**
 
@@ -317,9 +328,13 @@
 
         - Item: **P17\_RAZORPAY\_ORDER\_ID**
 
-14. Right-click **true** and select **Create TRUE Action**
+    ![Click Timeline](images/15-4-10-da-action.png " ")
 
-15. Enter/select the following:
+11. Right-click **true** and select **Create TRUE Action**
+
+    ![Click Timeline](images/15-4-11-true2.png " ")
+
+12. In the property editor, enter/select the following:
 
     - Under Identification > Action: **Execute Server-side Code**
 
@@ -330,10 +345,13 @@
         :P17_RAZORPAY_ORDER_ID := null;
         </copy>
         ```
+    ![Click Timeline](images/15-4-12-true2-action.png " ")
 
-16. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+13. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
-17. In the property editor, enter/select the following:
+    ![Click Timeline](images/15-4-13-processing.png " ")
+
+14. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -349,13 +367,17 @@
 
         - Operation: **POST**
 
+    - Under Execution > Sequence: **1**
+
     - Under Server-side Condition:
 
         - Type: **Request = Value**
 
         - Value: **CREATE\_RAZOR\_PAY\_ORDER**
 
-18. Under **Create Razorpay Order** process, expand **Parameters** and update the following:
+    ![Click Timeline](images/15-4-14-processing-details.png " ")
+
+15. Under **Create Razorpay Order** process, expand **Parameters** and update the following:
 
     - **Amount**:
 
@@ -371,15 +393,21 @@
         </copy>
         ```
 
+    ![Click Timeline](images/15-4-15-para1.png " ")
+
     - **RESPONSE**
 
         - Under Parameter > Ignore Output: **Toggle Off**
 
-        - Under Value > Item: P17\_RESPONSE
+        - Under Value > Item: **P17\_RESPONSE**
 
-19. Right-click **Processing** and click **Create Process**.
+    ![Click Timeline](images/15-4-15-para2.png " ")
 
-20. In the property editor, enter/select the following:
+16. Right-click **Processing** and select **Create Process**.
+
+    ![Click Timeline](images/15-4-16-create-process.png " ")
+
+17. In the property editor, enter/select the following:
 
     - Under Identification > Name: **Parse  Razorpay\_order\_id**
 
@@ -392,15 +420,21 @@
         </copy>
         ```
 
+    - Under Execution > Sequence: **2**
+
     - Under Server-side Condition:
 
         - Type: **Request = Value**
 
         - Value: **CREATE\_RAZOR\_PAY\_ORDER**
 
-21. Right-click **Checkout** process, click **Synchronize Parameters**.
+    ![Click Timeline](images/15-4-17-process-details.png " ")
 
-22. Under **Checkout** process, expand **Parameters** and update the following:
+18. Right-click **Checkout** process, click **Synchronize Parameters**.
+
+    ![Click Timeline](images/15-4-18-checout-process-sync.png " ")
+
+19. Under **Checkout** process, expand **Parameters** and update the following:
 
     - **p\_user\_id**:
 
@@ -412,9 +446,7 @@
 
     - **p\_order\_id**:
 
-        - Under Value:
-
-            - Item: **P17\_ORDER\_ID**
+        - Under Value > Item: **P17\_ORDER\_ID**
 
     - **p\_payment\_id**:
 
@@ -432,9 +464,11 @@
 
             - Item: **P17\_RAZORPAY\_ORDER\_ID**
 
-23. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
+    ![Click Timeline](images/15-4-19-param.png " ")
 
-24. In the property editor, enter/select the following:
+20. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
+
+21. In the property editor, enter/select the following:
 
     - Under JavaScript > File URLs: Copy and Paste the below code
 
@@ -444,7 +478,9 @@
         </copy>
         ```
 
-25. Click **Save**.
+    ![Click Timeline](images/15-4-21-fileurl.png " ")
+
+22. Click **Save**.
 
 ## Summary
 
