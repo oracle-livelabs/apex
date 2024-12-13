@@ -47,6 +47,10 @@
         "filename": "../../9-running-the-app/9-running-the-app.md"
       },
       {
+        "title": "Lab 10: Activate the Workflow",
+        "filename": "../../10-activate-workflow/10-activate-workflow.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

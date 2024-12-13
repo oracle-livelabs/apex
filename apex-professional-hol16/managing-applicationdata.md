@@ -44,7 +44,7 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
     ![Create Table](images/create-table1.png " ")
 
-    ![Insert into Table](images/insert-into-table.png " ")  
+    ![Insert into Table](images/insert-into-table.png " ")
 
 4. Navigate to **SQL Workshop**, select **RESTful Services**
 
@@ -72,7 +72,7 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
      Click **Create**.
 
-    ![Select Rest](images/create-autorest-object.png " ")  
+    ![Select Rest](images/create-autorest-object.png " ")
 
     ![Select Rest](images/autorest-object-created.png " ")
 
