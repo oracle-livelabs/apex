@@ -11,6 +11,7 @@ Estimated Time: 5 minutes
 In this lab, you will:
 
 - Navigate through the significant components of Oracle APEX.
+
 - Install and run a packaged application.
 
 ## Task 1: Explore the significant Components of APEX
@@ -73,7 +74,7 @@ In this task, you install and explore a **Sample Reporting** application in Orac
 
 6. Click **App Builder**.
 
-   ![Navigate App Builder](images/navigate-to-app-builder.png " ")
+   ![Navigate App Builder](images/navigate-to-app-builder1.png " ")
 
 7. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are correspondingly displayed along with their icons and in the report format.
 

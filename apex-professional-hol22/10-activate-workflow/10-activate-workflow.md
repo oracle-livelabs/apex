@@ -6,9 +6,11 @@ In this lab, you add an ADMIN participant and activate the workflow.
 
 ### Objectives
 
-- Demonstrate the behavior of the "Doctor Appointments Made Easy!" application through hands-on activities.
+- Add a Participant.
 
-Estimated Time: 20 minutes
+- Activate the Workflow.
+
+Estimated Time: 5 minutes
 
 ### Prerequisites
 

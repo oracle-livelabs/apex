@@ -63,8 +63,8 @@ We offer two types of Cloud Accounts:
 
 ### Prerequisites
 
-- Cloud account access is required but not Mandatory
-- Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email)
+- Cloud account access is required but not mandatory.
+- Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email).
 - Username
 - Password
 
@@ -84,7 +84,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     ![Request a free workspace](images/request-workspace.png " ")
 
-4. On the Request a Workspace page, enter your identification details – First Name, Last Name, Email, Workspace.
+4. On the **Request a Workspace** page, enter your identification details – **First Name, Last Name, Email, Workspace name**.
 
     *Note: For workspace, enter a unique name, such as first initial and last name.*
 
