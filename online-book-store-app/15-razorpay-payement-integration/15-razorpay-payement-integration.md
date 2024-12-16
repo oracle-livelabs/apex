@@ -2,6 +2,19 @@
 
 ## Introduction
 
+In this lab, you will learn to create and configure key components in Oracle APEX for seamless integration with external services. You will set up Web Credentials, create a REST Data Source, and integrate a Payment Gateway. These steps will enable secure communication with APIs and external systems, enhancing the functionality of your applications.
+
+Estimated Time: 15 minutes
+
+### Objectives
+
+In this lab, you will:
+
+- Create Web Credential
+- Create Rest Data Source
+- Integrate Payment Gateway
+
+
 ## Task 1: Create Web Credential
 
 1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
@@ -484,7 +497,7 @@
 
 ## Summary
 
-In this lab....
+You now know how to configure Web Credentials, create REST Data Sources, and integrate a Payment Gateway in Oracle APEX. These skills enable secure API communication and enhance application functionality.
 
 You are now ready to move on to the next lab!
 

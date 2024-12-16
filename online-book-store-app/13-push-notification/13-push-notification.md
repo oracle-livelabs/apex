@@ -2,6 +2,16 @@
 
 ## Introduction
 
+In this lab, you learn to enable push notifications.
+
+Estimated Time: 15 minutes
+
+### Objectives
+
+In this lab, you will:
+
+- Push Notification
+
 ## Task 1: Push Notification
 
 1. Navigate to **App Builder** and select **Online Bookstore Application**.
@@ -176,7 +186,7 @@ Progressive Web App is updated.
 
 ## Summary
 
-In this lab....
+You now know how to configure push notifications in Oracle APEX. This allows you to send real-time alerts and updates to users, enhancing communication and engagement.
 
 You are now ready to move on to the next lab!
 

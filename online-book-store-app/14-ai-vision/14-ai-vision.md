@@ -2,12 +2,15 @@
 
 ## Introduction
 
+In this lab, you will learn to create REST data sources, automations, and triggers in Oracle APEX. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness.
+
 ### Objectives
 
 In this lab, you:
 
-- Generate API Keys using OCI Console
-- Create Web Credentials in Oracle APEX
+- Rest Data Source
+- Create Automation
+- Create trigger
 
 ## Task 1: Integrating with Object Detection and Text Detection
 
@@ -316,7 +319,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 ## Summary
 
-In this lab....
+You now know how to configure REST data sources, set up automations, and define triggers in Oracle APEX. These skills enable you to integrate external data, automate tasks, and respond to events efficiently.
 
 You are now ready to move on to the next lab!
 

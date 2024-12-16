@@ -10,8 +10,10 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Navigation Bar Entry
 - Build a Shopping Cart Page
+- Build Order Information Page
+- Create a Navigation Bar Entry
+- Build My Books Page
 - Create Application processes
 - Create Application Computations
 

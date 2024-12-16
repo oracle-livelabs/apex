@@ -2,6 +2,26 @@
 
 ## Introduction
 
+In this workshop, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you need to configure the OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
+
+OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
+
+**Note:** OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+
+
+
+Estimated Time: 15 minutes
+
+### Objectives
+
+In this lab, you will:
+
+- Generate API Keys using OCI Console
+- Create Web Credentials in Oracle APEX
+- Configure Generative AI Service 
+- Create a Navigation Bar Entry
+
+
 ## Task 1: Generate API Keys using OCI Console
 
 To Generate the API Keys using OCI Console:
@@ -236,9 +256,9 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Summary
 
-In this lab....
+You now know how to create web credentials in Oracle APEX and configure Generative AI service in your APEX workspace. You also learnt to build a conversational Chatbot using Generative AI.
 
-You are now ready to move on to the next lab!
+You may now **proceed to the next lab**.   
 
 ## Acknowledgements
 
