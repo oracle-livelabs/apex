@@ -51,6 +51,10 @@
         "filename": "../../10-activate-workflow/10-activate-workflow.md"
       },
       {
+        "title": "Lab 11: Enhance Workflow Management (Optional)",
+        "filename": "../../11-resume-workflow/11-resume-workflow.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

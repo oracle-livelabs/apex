@@ -100,7 +100,7 @@ When a workflow is suspended and eventually variables are modified, the workflow
 
 4. The state is **Resumed**.
 
-    ![wait for feedback](./images/resumed.png " ")
+    ![wait for feedback](./images/workflow-resumed.png " ")
 
 ## Summary
 
