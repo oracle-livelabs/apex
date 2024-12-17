@@ -22,7 +22,7 @@ In this task, you go through the initial steps of logging into your Oracle APEX 
 
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-    - The login page appears. Enter the Workspace Name, Username, and Password. Click "Sign In."
+    - The login page appears. Enter your **Workspace Name, Username, and Password** and click **Sign In**.
 
    ![Workspace Login](images/login-to-workspace.png " ")
 
@@ -64,11 +64,11 @@ In this task, you install and explore a **Sample Reporting** application in Orac
 
    ![Run Application](images/click-run-application.png " ")
 
-4. Log in to the Sample Reporting application as an End User. Enter your username and Password (the same as your Workspace credentials) and click "Sign In."
+4. Log in to the **Sample Reporting** application as an End User. Enter your username and password (the same as your Workspace credentials) and click **Sign In**.
 
    ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
-5. You now see the Sample Reporting application's home page. In your Runtime environment, a Developer Toolbar appears at the bottom. Click **Home** to return to the home page of the APEX application development environment.
+5. You now see the **Sample Reporting** application's home page. In your runtime environment, a Developer Toolbar appears at the bottom. Click **Home** to return to the home page of the APEX application development environment.
 
    ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
 
@@ -93,4 +93,4 @@ In the next hands-on lab, you will gain practical experience in utilizing SQL Wo
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

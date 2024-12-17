@@ -16,7 +16,7 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Install a sample dataset into your Oracle APEX Workspace
+- Install a sample dataset into your Oracle APEX Workspace.
 
 ## Task 1: Create Customer Orders Tables
 
@@ -51,4 +51,4 @@ You now know how to install sample tables and views from Sample Datasets. You ma
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -10,13 +10,15 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Add new columns to the existing Products table
-- Populate the new columns
-- Create lookup tables
+- Add new columns to the existing Products table.
+
+- Populate the new columns.
+
+- Create lookup tables.
 
 ## Task 1: Add Columns to the Products Table
 
-1. Click **SQL Workshop** from the top navigation menu and  select **Object Browser**.
+1. Click **SQL Workshop** from the top navigation menu and select **Object Browser**.
 
     ![Object Browser](images/navigate-to-object-browser1.png " ")
 
@@ -188,4 +190,4 @@ You now know how to add new columns to your existing tables, create lookup table
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -17,9 +17,13 @@ Estimated Time: 50 minutes
 In this lab, you will:
 
 - Install a sample dataset into your Oracle APEX Workspace.
+
 - Add new columns to the existing Products table, populate the new columns and create lookup tables.
+
 - Create a package to manage the Shopping Cart.
+
 - Create database objects using Quick SQL.
+
 - Load data using the Data generator and Data Workshop page.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*

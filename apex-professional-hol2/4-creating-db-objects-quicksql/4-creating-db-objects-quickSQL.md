@@ -170,4 +170,4 @@ In the upcoming hands-on workshop, you will develop a database application utili
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
