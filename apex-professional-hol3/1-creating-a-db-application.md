@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You learn how to create a database application using existing tables in this lab. Following the guided steps, you will use the App Builder tool to build an Online Shopping Application with various pages, charts, and reports. The lab will also demonstrate how to set up an administration page, enable features like Progressive Web Apps, and implement access control for secure management. You will gain hands-on experience developing a functional, data-driven application through this lab.
+In this lab, you will learn to create a database application using existing tables in Oracle APEX. By following guided steps, you will develop an Online Shopping Application with various pages, charts, and reports. You will also implement an administration dashboard, enable features like Progressive Web Apps, and configure access control for secure management. This hands-on experience will help you understand the process of building a functional and secure data-driven application.
 
 Estimated Time: 15 minutes
 
@@ -10,11 +10,19 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create an application using the tables and data you have installed.
+- Create a database application based on existing tables.
 
-- Create a Database application from a file.
+- Add multiple pages, including dashboards, reports, and interactive pages.
+
+- Configure administration pages and enable secure access controls.
+
+- Implement Progressive Web App features.
+
+- Explore and test the completed application.
 
 ## Task 1: Create an Application based on Existing Tables
+
+This task introduces you to the App Builder in Oracle APEX. You will begin by creating a new application that serves as the foundation for the Online Shopping Application.
 
 1. On your workspace home page, navigate to **App Builder**.
 
@@ -30,6 +38,8 @@ In this lab, you will:
 
 ## Task 2: Name the Application
 
+In this task, you will name your application as Online Shopping Application and define its visual identity. The name helps identify the application in the workspace, and the wizard will automatically select an icon and color for it.
+
 1. On the **Create an Application** page, for **Name**, enter **Online Shopping Application**.
 
     *Note that the icon and color in the create application wizard will be randomly selected, and hence they might be different for you.*
@@ -38,7 +48,7 @@ In this lab, you will:
 
 ## Task 3: Add the Dashboard Page
 
-In this task, you will learn to create a dashboard. A dashboard page is a great way to show critical information using various charts. Installing the sample dataset created several views that join data from multiple tables. These views are ideal as the basis for the dashboard charts.
+Dashboards are essential for summarizing critical information using charts and visuals. In this task, you will add a dashboard to display key metrics such as product sales, store performance, order statuses, and product reviews using bar and pie charts.
 
 1. On the **Create an Application** page, click **Add Page**.
 
@@ -120,6 +130,8 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
 ## Task 4: Add Multiple Reports
 
+Reports provide detailed views of data in your application. In this task, you will add multiple report pages to display various data sets like customers, stores, and products. This allows you to organize data and make it accessible to the app's administrators.
+
 1. On the **Create an Application** page, click **Add Page**.
 
     ![Click Add Page](./images/add-page1.png " ")
@@ -143,6 +155,8 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
 ## Task 5: Set Multiple Reports as Administration Pages
 
+Not all pages should be accessible to all users. In this task, you will configure the report pages as Administration Pages, ensuring they are accessible only to authorized users with administrative privileges.
+
 1. Edit each of the following pages to set it as an Administration Page:
 
     - CLOTHING_LOOKUP
@@ -161,6 +175,8 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
     ![Administration Pages](./images/set-as-admin-page2.png " ")
 
 ## Task 6: Add Manage Products Page
+
+Interactive reports allow users to manage and analyze data dynamically. In this task, you will create a Manage Products page, enabling administrators to view and interact with product data in the database.
 
 1. On the Create an  Application page, click **Add Page**.
 
@@ -182,7 +198,7 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
 ## Task 7: Enable Features
 
-In this task, you will enable features before creating an application. Features are a set of optional application capabilities in Oracle APEX that you can include in your new application.
+Oracle APEX provides features like Progressive Web Apps (PWA) and Access Control to enhance application functionality and security. In this task, you will enable these features to make your app installable on devices and secure it with role-based access controls.
 
 1. Under **Features**, check **Install Progressive Web App** and **Access Control**.
 
@@ -192,7 +208,7 @@ In this task, you will enable features before creating an application. Features 
 
 ## Task 8: Finish Creating the Application
 
-Now that you have added all the pages, it is time to create and review the application.
+After adding all the required pages and enabling features, this task will guide you to finalize and create the application. Once completed, you will be able to run the application and review its structure.
 
 1. Scroll to the bottom of the page and click **Create Application**.
 
@@ -205,6 +221,8 @@ Click **Run Application**.
 
 ## Task 9: Explore the Application
 
+In the final task, you will explore the Online Shopping Application by signing in, navigating through the pages, and testing its features. This step ensures the application is functioning as intended.
+
 1. Enter your Credentials and click **Sign In**.
 
     ![Online shopping application Sign In](./images/sign-in2.png " ")
@@ -215,7 +233,7 @@ Click **Run Application**.
 
 ## Summary
 
-You can now create an application with several page types based on existing database objects. You may now **proceed to the next lab**.
+You have successfully created a database application in Oracle APEX using existing tables. This lab covered various aspects, including dashboards, reports, administration pages, access controls, and Progressive Web App features. With this knowledge, you can now build robust, data-driven applications tailored to your requirements. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
