@@ -36,7 +36,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ![Create Application wizard](./images/sc-icon.png " ")
 
-5. Under **User Interface**, click **User Interface Attributes**.
+5. Under **User Interface**, select **User Interface Attributes**.
 
     ![Create Application wizard](./images/user-interface.png " ")
 
