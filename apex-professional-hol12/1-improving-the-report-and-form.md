@@ -44,7 +44,7 @@ In this task, you will create a form that displays product details. This Form wi
 
     ![Define Form](./images/create-form3.png " ")
 
-5. For **Primary Key Column1**, ensure the **PRODUCT_ID** is selected and click **Create Page**.
+5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected and click **Create Page**.
 
     ![Define Primary key](./images/create-form4.png " ")
 
@@ -56,7 +56,7 @@ Once the product form is created, you need to link it to an existing interactive
 
     ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
 
-2. In the **Rendering** tab (left pane), navigate to **Products**. Click **Attributes** and update the following:
+2. In the **Rendering** tab, navigate to **Products** region. Under **Columns**, select **PRODUCT_ID** and In the Property Editor, enter/select the following:
 
     - Under **Link**:
 
@@ -123,7 +123,7 @@ After linking the Form to the report, it's time to enhance its usability and app
 
 6. You now need to focus on **First item on Page**. In **Page Rendering**(Left Pane), select **Page 15: Product Details**. In the **Property Editor**, update the following:
 
-    - Navigation Menu > Cursor Focus: **First item on page**.
+    - Navigation > Cursor Focus: **First item on page**.
 
     Click **Save**.
 

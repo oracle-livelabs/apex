@@ -10,15 +10,17 @@ Then, you will learn how to improve the Products page by adding new facets and c
 
 ### Recap
 
-In the last hands-on workshop, you learned how to add Dynamic actions, computations and page processes.
+In the last hands-on workshop, you learned how to add Dynamic Actions, Computations and Page Processes.
 
 Estimated Time: 30 minutes
 
 ### Objectives
 
-* Customize the **Smart Filters** page in the **Demo Projects** application.
-* Improve both **Faceted Search** and **Cards** region
-* Add **Dynamic Actions** to the page
+- Customize the **Smart Filters** page in the **Demo Projects** application.
+
+- Improve both **Faceted Search** and **Cards** region.
+
+- Add **Dynamic Actions** to the page
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 

@@ -42,8 +42,8 @@ Estimated Time: 5 minutes
         "PRODUCT_ID",
         "PRODUCT_NAME",
         "UNIT_PRICE",
-        "PRODUCT_DETAILS",
-        "PRODUCT_IMAGE",
+         DBMS_LOB.GETLENGTH("PRODUCT_DETAILS") AS PRODUCT_DETAILS,
+         DBMS_LOB.GETLENGTH("PRODUCT_IMAGE") AS PRODUCT_IMAGE,
         "IMAGE_MIME_TYPE",
         "IMAGE_FILENAME",
         "IMAGE_CHARSET",
@@ -87,7 +87,7 @@ Estimated Time: 5 minutes
 
         - Page: **15**
 
-        - Set Items > Name: **P15\_PRODUCT\_ID**, Value: **PRODUCT\_ID**
+        - Set Items > Name: **P15\_PRODUCT\_ID**, Value: **#PRODUCT\_ID#**
 
         - Clear Cache: **15**
 
@@ -121,7 +121,7 @@ Estimated Time: 5 minutes
 
         - Table Name: **PRODUCTS**
 
-        - BLOB Column: **PRODUCT_DETAILS**
+        - BLOB Column: **PRODUCT_IMAGE**
 
         - Primary Key Column 1: **PRODUCT_ID**
 
@@ -135,7 +135,7 @@ Estimated Time: 5 minutes
 
         - Label: **Create**
 
-    - Layout > Slot: **CREATE**
+    - Layout > Slot: **Edit**
 
     - Appearance > Hot: **Toggle On**
 

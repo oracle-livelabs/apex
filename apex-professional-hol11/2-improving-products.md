@@ -234,8 +234,8 @@ In this task, you will create two dynamic actions:
 
     - Settings > Code: Enter the following JavaScript Code:
 
-            ```
-            <copy>
+        ```
+        <copy>
             var productAction   = this.data.P18_ACTION,
                 productQuantity = this.data.P18_QUANTITY,
                 productCard$  = apex.jQuery("#message_" + this.data.P17_PRODUCT_ID);
@@ -247,8 +247,8 @@ In this task, you will create two dynamic actions:
             } else if (productAction === 'DELETE') {
                 productCard$.text("Removed from cart!");
             }
-            </copy>
-            ```
+        </copy>
+        ```
 
     ![Navigate to Refresh action](./images/create-da03.png " ")
 
@@ -292,15 +292,15 @@ In this task, you will create two dynamic actions:
 
     - Settings > Code: Enter the following JavaScript Code:
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+        ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
 
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
-            </copy>
-            ```
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+        </copy>
+        ```
 
     ![Navigate to Refresh](./images/create-2-da3.png " ")
 

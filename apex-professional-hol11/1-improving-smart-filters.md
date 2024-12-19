@@ -81,7 +81,7 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
 2. In the property editor, enter/select the following:
 
-    - Under **Identification**:
+    - Under Identification:
 
       - Name: **P8\_TASK_NAME**.
 
@@ -99,7 +99,7 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
 4. In the property editor, enter/select the following:
 
-    - Under **Identification**:
+    - Under Identification:
 
         - Name: **P8\_START_DATE**.
 
