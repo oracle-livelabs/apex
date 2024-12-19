@@ -10,18 +10,17 @@ In this lab, you learn to implement an efficient system to schedule and manage d
 
 > **Note:** _In APEX Workflow terminology, we refer to an executable step as an **Activity** and a sequence/condition as a **Connection**._
 
-
 ### Objectives
 
 In this lab, you will:
+
 - Identify Business steps required to create 'Doctor Appointments Made Easy!' Application.
 
 Estimated Time: 10 minutes
 
-
 ### Prerequisites
-1. Access to Oracle APEX.
 
+- Access to Oracle APEX.
 
 ## Breaking down the Business Logic
 
@@ -69,5 +68,7 @@ In the next lab, you will create a flowchart based on the automated steps, helpi
 You may now **proceed to the next Lab**.
 
 ## Acknowledgements
-   - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-   - **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, December 2023
+
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff; Ankita Beri, Product Manager
+
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -2,7 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn the process of creating a calculate fees Workflow using Oracle APEX.
+In this lab, you learn how to create a workflow for calculating fees using Oracle APEX. The workflow starts by checking if the consultation is free. If it is, an invoice email is sent to the patient. If not, the system updates the fees and raises an invoice request. At this point, the invoice status is checked - if it’s incomplete, it is set to "**Rejected**," and if it’s complete, it is marked as "**Approved**." This process ensures fees are handled correctly, invoices are managed efficiently, and statuses are updated based on the outcome.
+
+This workflow will be used as an **Invoke Workflow** activity within the doctor appointments workflow, allowing it to call another workflow within the same application.
 
 ### Objectives
 
@@ -201,7 +203,7 @@ In this lab, you learned the process of creating a calculate fees Workflow using
 
 ### What's Next
 
-Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
+Now, you're ready to proceed to the next section where you'll learn how to create a Doctor Appointment Workflow. Stay tuned for more hands-on guidance!
 
 You may now **proceed to the next lab**.
 

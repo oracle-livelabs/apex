@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
+In this lab, you will continue building the Calculate Fees Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
 ### Objectives
 

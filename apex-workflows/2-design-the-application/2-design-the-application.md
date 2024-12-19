@@ -91,7 +91,7 @@ In this task, you create multiple users for **Doctor Appointments made Easy!** a
 
    ![Click create](./images/click-create.png " ")
 
-3. In the **Create an Application** dialog, for Name: Enter **Doctor Appointments Made Easy!** and Click **Create Application**.
+3. In the **Create an Application** dialog, for Name: Enter **Doctor Appointments Made Easy!** and click **Create Application**.
 
       ![Create an Application](./images/create-an-application.png " ")
 
