@@ -1,12 +1,14 @@
 # Create an App from a Spreadsheet
 
+## Introduction
+
 In this lab, you build a simple application based on a spreadsheet. Remember that APEX is great for various apps, from simple ones to large, sophisticated apps based on local database objects, REST-enabled SQL objects, and even REST APIs.
 
 While APEX developers spend the majority of their time in the App Builder, you should also investigate the SQL Workshop, where you can create and maintain database objects, Team Development, where you can track large APEX development projects, and the App Gallery, which contains numerous productivity and sample apps that can be installed within minutes.
 
 Estimated Time: 10 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 

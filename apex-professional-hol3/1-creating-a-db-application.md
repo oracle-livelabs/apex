@@ -1,10 +1,12 @@
 # Create a Database application based on Existing Tables
 
+## Introduction
+
 You learn how to create a database application using existing tables in this lab. Following the guided steps, you will use the App Builder tool to build an Online Shopping Application with various pages, charts, and reports. The lab will also demonstrate how to set up an administration page, enable features like Progressive Web Apps, and implement access control for secure management. You will gain hands-on experience developing a functional, data-driven application through this lab.
 
 Estimated Time: 15 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
