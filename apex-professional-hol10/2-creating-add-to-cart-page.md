@@ -36,7 +36,7 @@ In this Task, you will create a dynamic action to:
 
 - Refresh the shopping cart region.
 
-1. Navigate to the **17 -Shopping Cart** page (Page No 17).
+1. Navigate to **Online Shopping Application** and select **17 -Shopping Cart** page (Page No 17).
 
      ![Open Page 16](./images/navigate-to-17.png " ")
 
@@ -86,15 +86,15 @@ In this Task, you will create a dynamic action to:
 
     - Settings > Code: Enter the following JavaScript Code:
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+        ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
 
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
-            </copy>
-            ```
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+        </copy>
+        ```
 
     ![Add a True Action](./images/create-da3.png " ")
 
@@ -124,15 +124,15 @@ In this Task, you will create a dynamic action to:
 
 8. Under **Settings**, update **Code** with the following javascript code:
 
-        ```
-        <copy>
-            // Update Badge Text
+    ```
+    <copy>
+        // Update Badge Text
             apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
 
-            // Update Icon
+        // Update Icon
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
-        </copy>
-        ```
+    </copy>
+    ```
 
     ![Create a False Action](./images/create-opp-action2.png " ")
 
@@ -162,14 +162,14 @@ In this Task, you will create a dynamic action to:
 
 In this task, you will add inline CSS to format the size of product images, ensuring consistent dimensions within the shopping cart.
 
-1. In the Rendering tree (left pane), navigate to **Page 17: Shopping Cart**.
+1. In the **Rendering** tab, click **Page 17: Shopping Cart**.
 
 2. In the Property Editor (right pane), enter the following:
 
     - CSS > Inline: Copy and paste the following:
 
         ```
-        <copy> 
+        <copy>
         img {
                 width: 150px;
                 height: 150px;
@@ -177,7 +177,7 @@ In this task, you will add inline CSS to format the size of product images, ensu
         </copy>
         ```
 
-    ![Add Inline CSS to the Page](./images/inline-css.png.png " ")
+    ![Add Inline CSS to the Page](./images/inline-css.png " ")
 
 3. Click **Save**.
 
@@ -345,7 +345,11 @@ In this task, you will create a process that closes the modal page after the use
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Close Dialog**
+    - Under Identification:
+
+        - Name: **Close Dialog**
+
+        - Type: **Close Dialog**
 
     - Settings > Items to Return: **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY**
 

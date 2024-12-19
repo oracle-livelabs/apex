@@ -42,7 +42,7 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     ![Drag and Drop Static Content Region](./images/drag-drop-static-content.png " ")
 
-4. In the Property Editor, for **Title** enter **Order Information**.
+4. In the Property Editor, for **Name** enter **Order Information**.
 
     ![Input Title for Static content region](./images/select-title-for-region.png " ")
 
@@ -60,13 +60,13 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
 7. Create four-page items one after the other:
 
-        | Name                    | Type        | Label     |
-        | ----------------------- | ----------- | --------- |
-        | P17\_CUSTOMER\_FULLNAME | Text Field  | Full Name |
-        | P17\_ORDER\_ID          | Hidden      |           |
-        | P17\_CUSTOMER\_ID       | Hidden      |           |
-        | P17_STORE               | Select List | Store     |
-        {: title="List of Page Items to be created"}
+    | Name                    | Type        | Label     |
+    | ----------------------- | ----------- | --------- |
+    | P17\_CUSTOMER\_FULLNAME | Text Field  | Full Name |
+    | P17\_ORDER\_ID          | Hidden      |           |
+    | P17\_CUSTOMER\_ID       | Hidden      |           |
+    | P17_STORE               | Select List | Store     |
+    {: title="List of Page Items to be created"}
 
 8. Select **P17\_STORE**. In the property editor, enter/select the following:
 
@@ -143,7 +143,7 @@ In this task, you will create four-page items:
 
 3. In the property editor, enter/select the following:
 
-    - Identification > Title: **Buttons Bar**
+    - Identification > Name: **Buttons Bar**
 
     - Appearance > Template: **Buttons Container**
 

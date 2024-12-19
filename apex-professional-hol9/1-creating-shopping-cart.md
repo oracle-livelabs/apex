@@ -60,7 +60,7 @@ In this task, you will add validations to ensure that required fields on the sho
 
     ![Navigate to Shopping Cart Page](./images/create-validation11.png " ")
 
-6. Create two more validations for the following items:  **Email**and **Store**.
+6. Create two more validations for the following items: **Email** and **Store**.
 
  | Name           | Validation > Type | Validation > Item       | Error Message                      | Associated Item         | Server-side Condition > When Button Pressed |
  | -------------- | ----------------- | ----------------------- | ------------------------------- |----------------------- | ------------- |
