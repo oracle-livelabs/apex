@@ -90,9 +90,9 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
     - Label Column: **ORDER_STATUS**
 
-    - Type: **Count**
+    - Type: **Sum**
 
-    - Value Column: **ORDER_ID**.
+    - Value Column: **ORDER_ID**
 
     ![Add Chart3](./images/chart33.png " ")
 
@@ -108,7 +108,7 @@ In this task, you will learn to create a dashboard. A dashboard page is a great 
 
     - Type: **Column Value**
 
-    - Value Column: **AVG_RATING**.
+    - Value Column: **AVG_RATING**
 
     ![Add Chart4](./images/chart44.png " ")
 
