@@ -418,7 +418,7 @@ You'll add another Cards region to display customer reviews for the selected pro
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Title: **Customer Reviews**
+    - Identification > Name: **Customer Reviews**
 
     - Under Source:
 

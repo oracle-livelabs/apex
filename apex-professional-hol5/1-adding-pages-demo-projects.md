@@ -176,7 +176,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
         - Type: **Checkbox**
 
-    - Label > Label: **Check All**
+    - Label > Label: **Select All**
 
     - Layout > Start New Row: Toggle **Off**
 

@@ -334,7 +334,7 @@ Lastly, you'll create a region to show the individual items in the order, includ
             </copy>
             ```
 
-        - Page Items to Submit: **&P16_ORDER.**
+        - Page Items to Submit: **P16_ORDER**
 
     ![Define Region](./images/create-sub-region22.png " ")
 
