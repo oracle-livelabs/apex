@@ -166,7 +166,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/sub-region.png " ")
 
-9. Right-click **Thank you for your order!** and select **Create Page Item**.
+9. Right-click **Rate your shopping experience** and select **Create Page Item**.
 
     ![Select Sql Workshop](./images/page-item1.png " ")
 
@@ -181,7 +181,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/feedback-item.png " ")
 
-11. Right-click **Thank you for your order!** and select **Create Button**.
+11. Right-click **Rate your shopping experience** and select **Create Button**.
 
     ![Select Sql Workshop](./images/create-btn-submit.png " ")
 
@@ -219,8 +219,10 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ```
     <copy>
-
-
+    UPDATE ORDERS
+    SET STAR_RATING = :P16_REVIEW,
+        FEEDBACK = :P16_FEEDBACK
+    where order_id = :P16_ORDER;
     </copy>
     ```
 
@@ -236,7 +238,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
 Email templates simplify the process of sending structured, professional messages to users. In this task, you will design a reusable template for sending product review reminders, ensuring consistent branding and communication.
 
-1. Click the shared components icon on the top right corner.
+1. Click the **Shared Components** icon on the top right corner.
 
    ![Select email template ](./images/shared-comp1.png " ")
 
@@ -254,7 +256,7 @@ Email templates simplify the process of sending structured, professional message
 
         - Template Name: **Product Review Reminder**
 
-        - Static Identifier: **PRODUCT_REVIEW_REMINDER**
+        - Static Identifier: **PRODUCT\_REVIEW\_REMINDER**
 
         - For Email Subject: **How Was Your Experience? Let Us Know!**
 
@@ -327,7 +329,7 @@ Automation is key to improving application efficiency and reducing manual effort
 
     - Source Type: **Table**
 
-    - Table/View Name: **ORDERS (table)
+    - Table/View Name: **ORDERS (table)**
 
     Click **Create**.
 
@@ -351,15 +353,17 @@ Automation is key to improving application efficiency and reducing manual effort
 
     ![Create Email Template](./images/auto-save-changes.png " ")
 
-6. Click **Product Review Reminder**.
+6. Click **Save Changes**.
+
+7. Click **Product Review Reminder**.
 
     ![Create Email Template](./images/product-review-rem.png " ")
 
-7. Navigate to **Actions** tab and edit **New Action**.
+8. Navigate to **Actions** tab and edit **New Action**.
 
     ![Create Email Template](./images/actions.png " ")
 
-8. Enter/select the following:
+9. Enter/select the following:
 
     - Action > Name: **Send E-Mail**
 
@@ -400,7 +404,7 @@ Automation is key to improving application efficiency and reducing manual effort
 
     ![Create Email Template](./images/send-email1.png " ")
 
-9. Click **Apply Changes**.
+10. Click **Apply Changes**.
 
 ## Summary
 

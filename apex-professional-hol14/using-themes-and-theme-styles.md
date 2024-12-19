@@ -175,13 +175,12 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
     | Category | CATEGORY | Check |  Select List |    |
     | Search | SEARCH | Check | Text Field |     |
     | Select All | SELECT_ALL | Check | Checkbox |    |
-    {: title= "Add Slots"}
 
     ![Select Theme to Redwood Light](images/add-slots.png " ")
 
 3. Click **Apply Changes**.
 
-4. Under **Default Slots**, for **Buttons**, select **Action**.
+4. Navigate to **Hero** plug-in. Under **Default Slots**, for **Buttons**, select **Action**.
 
 5. Under **File URLs to Load**, for **Cascading Style Sheet** enter **#PLUGIN_FILES#hero#MIN#.css**.
 
@@ -223,7 +222,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
         - Overline: **Get Started**
 
-        - Description: **Organize, prioritize, and complete tasks seamlessly**
+        - Description: **Organize, prioritize, and complete tasks seamlessly!**
 
     ![Select Theme to Redwood Light](images/add-attributes.png " ")
 
@@ -293,7 +292,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 14. Select **P3_SEARCH**, in the Property Editor, and update the following:
 
-    - Appearance > Value Placeholder: Search Project, Task Name**
+    - Appearance > Value Placeholder: **Search Project, Task Name**
 
     ![Select Theme to Redwood Light](images/search-placeholder.png " ")
 
@@ -307,7 +306,7 @@ Finally, you'll test the "Hero" plug-in and its functionality by running the app
 
     ![Select Theme to Redwood Light](images/run-page.png " ")
 
-2. On **Search** textfield type **system**, for **Update Status to**, select **Open**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, click **Update** to update the status of checked rows.
+2. On **Search** textfield type **system**, for **Update Status to**, select **Open**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, press **Enter** and click **Update** to update the status of checked rows.
 
     ![Select Theme to Redwood Light](images/select-search.png " ")
 

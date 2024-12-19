@@ -1,12 +1,14 @@
 # Add columns to the products table
 
+## Introduction
+
 The **PRODUCTS** table includes columns such as image, price, and details. However, customers would appreciate knowing other characteristics about a product, such as color, type of clothing, and department. In this lab, you will add these columns to the Products table.
 
 Since many products will share the same colors, clothing type, and department, it is best practice to create three additional tables to store the unique values of color, type, and department data to avoid data redundancy. Instead of creating these three tables, you'll use the **Create Lookup Table** feature.
 
 Estimated Time: 10 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 

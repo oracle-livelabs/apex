@@ -1,5 +1,7 @@
 # Create a Database Package for Business Logic
 
+## Introduction
+
 In this lab, you learn to create database objects for your APEX application. This package contains functions and procedures to add products to the cart, remove products, create an order, clear the cart, and more.
 
 To manage items in the cart, you use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeapi/APEX_COLLECTION.html), which enables you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session.
@@ -12,7 +14,7 @@ Watch the video below for a quick walkthrough of the lab.
 [](youtube:X8nVMCJhQic)
 -->
 
-## Objectives
+### Objectives
 
 You can write business logic in APEX applications using PL/SQL, Oracle's procedural language extension to SQL. PL/SQL offers a handy program unit called a "package" that lets you cleanly separate the API signatures for reusable procedures and functions from their implementation. In this lab, you will:
 

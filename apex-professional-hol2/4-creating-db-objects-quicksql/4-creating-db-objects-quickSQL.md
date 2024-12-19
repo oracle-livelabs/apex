@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## Task 1: Create database objects using Quick SQL
 
-1. From the APEX workspace home page, select the down arrow next to SQL Workshop, then select **Utilities > Quick SQL**.
+1. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, select **Utilities > Quick SQL**.
 
     ![Select Quick SQL](images/navigate-to-quicksql1.png " ")
 
@@ -113,7 +113,7 @@ In this task, you learn to use the data generator utility to create blueprints a
 
     ![Insert Data](images/insert-data.png " ")
 
-8. To see newly generated data in the Employees table, close the Generate Blueprint dialog, navigate to SQL workshop, and select Object browser.
+8. To see newly generated data in the Employees table, close the Generate Blueprint dialog, navigate to **SQL workshop**, and select **Object browser**.
 
     ![Object browser](images/object-browser6.png " ")
 
