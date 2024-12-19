@@ -7,8 +7,11 @@ In this lab, you will learn how to customize and manage an interactive grid as a
 In this lab, you will:
 
 - Perform searches and filter data within an interactive grid.
+
 - Edit and save changes to rows in an editable grid.
+
 - Apply control breaks, highlight rows based on conditions, and hide specific columns.
+
 - Create and save customized reports, including charts, and download them in different formats.
 
 Estimated Time: 10 minutes
@@ -42,9 +45,9 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/single-row-view.png " ")
 
-7. You are now in the single-row View for the project with ID **2**. Replace the existing value for Budget with **9000** and click **Save**.
+7. You are now in the single-row view for the project with ID **2**. Replace the existing value for Budget with **9000** and click **Save**.
 
-    Then, click **Report View**.
+    Then, click **Grid View**.
 
     ![Customize Interactive Grid](./images/single-row1.png " ")
 

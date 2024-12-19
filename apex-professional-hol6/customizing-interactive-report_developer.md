@@ -42,11 +42,11 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     ![Click Interactive Report](images/select-sample-reporting.png " ")
 
-4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Edit Page \<n\>**.
+4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Page XXX>**.
 
     ![Edit page](images/click-page1.png " ")
 
-5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to a single-row view.
+5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The Interactive Report currently has a link column to a Form Page. Modify your Interactive Report to have a link to a single-row view.
 
     **a.** Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
 
@@ -94,7 +94,7 @@ In this task, you will customize the Interactive Report within the Sample Report
 
 9. Now that you have finished the customization for end users, click **Save and Run**.
 
-10. Notice that the **row selector** and the **New pagination type** are available on the report.
+10. Notice that the **row selector** and the **new pagination type** are available on the report.
 
     ![row selector](images/run-ir13.png " ")
 
