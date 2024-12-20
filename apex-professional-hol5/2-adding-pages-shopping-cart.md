@@ -4,6 +4,8 @@ In this lab, you'll extend the functionality of the Online Shopping Application 
 
 The tasks will guide you through the process of adding dynamic functionality to your application using Oracle APEX components such as Cards and Application Processes.
 
+Estimated Time: 20 minutes
+
 ## Objectives
 
 By the end of this lab, you will:
@@ -15,8 +17,6 @@ By the end of this lab, you will:
 - Implement a faceted search page to list and filter products.
 
 - Set up actions to edit cart items and handle checkout processes.
-
-Estimated Time: 20 minutes
 
 ### Downloads
 

@@ -2,6 +2,8 @@
 
 In this lab, you will learn how to create different page types in the Demo Projects application, including Interactive Grid, Smart Filters, and Content Row pages. These pages allow users to search, filter, and manage project tasks and statuses. This hands-on experience will give you insight into how to effectively build and customize Oracle APEX applications to meet various business needs.
 
+Estimated Time: 20 minutes
+
 ## Objectives
 
 By the end of this lab, you will be able to:
@@ -11,8 +13,6 @@ By the end of this lab, you will be able to:
 - Implement Smart Filters to allow efficient filtering of project tasks.
 
 - Design a Content Row page to display task details with selection and action capabilities.
-
-Estimated Time: 20 minutes
 
 ### Downloads
 
@@ -110,13 +110,13 @@ In this task, you create a **Content Row** report with selection support on the 
 
     - Page Number: **3**
 
-    - Name: **Project Task Status**
+    - Name: **Tasks Status**
 
       Click **Create Page**.
 
     ![Blank Page](./images/cr-create-page.png " ")
 
-4. Under **Page Rendering**, right-click **Body** and select **Create Region**.
+4. Under **Rendering** tab, right-click **Body** and select **Create Region**.
 
     ![Create Region](./images/cr-create-region.png " ")
 
@@ -198,11 +198,13 @@ In this task, you create a **Content Row** report with selection support on the 
 
 12. Under **Page Rendering**, right-click **Body** and select **Create Region**.
 
+    ![Create election Support](./images/cr-region.png " ")
+
 13. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
-        - Title: **Project Task Status**
+        - Title: **Update Tasks Status**
 
         - Type: **Content Row**
 
@@ -320,13 +322,13 @@ In this task, you create a **Content Row** report with selection support on the 
 
         - Selection Type: **Region**
 
-        - Region: **Project Task Status**
+        - Region: **Update Tasks Status**
 
     ![True Action](./images/cr-true-detail.png " ")
 
 22. Click **Save and Run**.
 
-    ![Save and Run](./images/save-run.png " ")
+    ![Save and Run](./images/save-run1.png " ")
 
 23. To update the status of the Project Tasks, select any status from the list, check the rows you want to update, and then click the **Update** button.
 

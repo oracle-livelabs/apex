@@ -4,7 +4,9 @@
 
 Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code - without having to learn complex web technologies with just a browser.
 
-In this workshop, you create the starter Online Shopping Application based on existing tables. You will also create an application from a Spreadsheet.
+This hands-on labs will guide you through the process of creating applications, whether based on existing database tables or starting from spreadsheet data. By following step-by-step instructions, you’ll gain practical knowledge of Oracle APEX's powerful features and capabilities.
+
+These labs emphasize the importance of building functional and secure applications while introducing you to key features such as dashboards, interactive reports, Progressive Web App (PWA) functionality, access controls, and application blueprints.
 
 ### Recap
 
@@ -16,13 +18,17 @@ Estimated Time: 25 minutes
 
 In this workshop, you will:
 
-- Create an application using the tables and data you have installed.
+- Create database applications using existing tables and spreadsheets.
 
-- Create a Database application from a file.
+- Build dashboards, reports, and interactive pages to visualize and manage data.
 
-- Create an application from Spreadsheet.
+- Implement administration pages with secure access control for authorized users.
 
-- Configure Progressive Web Application.
+- Enable Progressive Web App (PWA) features for enhanced user experience.
+
+- Learn to restore applications using blueprints for easy customization and recovery.
+
+- Explore the structure and functionality of completed applications.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 

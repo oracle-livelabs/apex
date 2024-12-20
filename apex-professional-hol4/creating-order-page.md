@@ -4,6 +4,8 @@
 
 In this lab, you will explore the Oracle APEX Page Designer and create a new page in an online shopping application that displays recent order details. This hands-on exercise will guide you through navigating the Page Designer interface, creating and organizing different regions, and adding content to the new page. By the end of this lab, you will be able to allow customers to view their order details, including the order number, date, status, total price, and item-specific information.
 
+Estimated Time: 15 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -19,8 +21,6 @@ In this lab, you will:
 - Add regions to display additional information like frequently purchased products.
 
 - Lock and unlock pages to manage concurrent editing.
-
-Estimated Time: 15 minutes
 
 ### Downloads
 
@@ -53,7 +53,7 @@ In this task, you will open your APEX application in the Page Designer and famil
 
     ![Page Designer](images/navigate-through-page2.png " ")
 
-4. Click the **+** icon (Create) in the page designer and select **Page**.
+4. Click the **+ V** icon (Create) in the page designer and select **Page**.
 
     ![Click Page](images/create-page2.png " ")
 
@@ -76,7 +76,7 @@ You will create a new blank page titled Order Information where you will display
 
         - Use Breadcrumb: Toggle **OFF**
 
-        - Use Navigation: Toggle **ON**
+        - Use Navigation: Toggle **OFF**
 
           Click **Create Page**.
 
@@ -373,7 +373,9 @@ Lastly, you'll create a region to show the individual items in the order, includ
 
     ![Select Primary Key](./images/create-sub-region24.png " ")
 
-4. Click **Save**.
+4. Click **Save and Run**.
+
+    ![Select Primary Key](./images/save-run.png " ")
 
 ## Summary
 
