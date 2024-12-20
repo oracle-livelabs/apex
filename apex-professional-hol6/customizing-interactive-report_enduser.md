@@ -1,10 +1,12 @@
 # Customize Interactive Report as an End User
 
+## Introduction
+
 In this lab, you Manage and Customize the Interactive report in the **Sample Reports** application as an **End User**.
 
 Estimated Time: 20 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you:
 
@@ -332,7 +334,7 @@ In this lab, you customize and use an interactive report as an end user.
 
     ![Download](images/download1.png " ")
 
-    **c.** In the download dialog, select **CSV**.
+    **c.** In the Download dialog, select **CSV** and click **Download**.
 
     ![Download](images/download2.png " ")
 

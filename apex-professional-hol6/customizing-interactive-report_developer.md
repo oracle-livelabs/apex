@@ -1,8 +1,12 @@
 # Customize Interactive Report as a Developer
 
+## Introduction
+
 In this hands-on lab, as a developer, you will learn how to manage and customize the Interactive Report within the Sample Reports application. Interactive Reports offer robust and flexible reporting features, enabling end users to manipulate the data displayed according to their preferences. As a developer, you'll explore key customization options to enhance the user experience, such as modifying the report layout, configuring download formats, and controlling the display of key elements.
 
-## Objectives
+Estimated Time: 15 minutes
+
+### Objectives
 
 By the end of this lab, you will be able to:
 
@@ -16,8 +20,6 @@ By the end of this lab, you will be able to:
 
 - Save and manage reports for end users.
 
-Estimated Time: 15 minutes
-
 ### Downloads
 
 - Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
@@ -30,7 +32,7 @@ Estimated Time: 15 minutes
 
 In this task, you will customize the Interactive Report within the Sample Reports application. You will modify the report’s link column, pagination, search bar, and download options to optimize the end-user experience.
 
-1. On the Workspace home page, click App Builder. Select the Sample Reporting Application.
+1. On the Workspace home page, click **App Builder**. Select the **Sample Reporting** Application.
 
     ![Select Sample Reporting](images/sample-reporting.png " ")
 
@@ -48,7 +50,7 @@ In this task, you will customize the Interactive Report within the Sample Report
 
 5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The Interactive Report currently has a link column to a Form Page. Modify your Interactive Report to have a link to a single-row view.
 
-    **a.** Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
+    **a.** Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes** tab. For Link > Link Column, select **Link to Single Row View**.
 
     Click **Save and Run**.
 
@@ -62,9 +64,9 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     ![Report View](images/view-srw2.png " ")
 
-6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Edit Page 1**.
+6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Page 1**.
 
-    **a.** In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.
+    **a.** In the **Rendering** tab, navigate to **Projects** region and in the Property Editor, select **Attributes** tab.
 
     **b.** Under Pagination, for Type, select **Row Ranges X to Y of Z**.
 
@@ -74,7 +76,7 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
-    - Rows Per Page Selector: Toggle the button to **ON**
+    - Rows Per Page Selector: Toggle **ON**
 
     - Maximum Rows Per Page: **10**
 
@@ -82,7 +84,7 @@ In this task, you will customize the Interactive Report within the Sample Report
 
 8. You want to enable the **Excel** and **PDF** download formats and disable **Send as Email** formats in the Download option.
 
-    In the property editor, do the following:
+    In the property editor, navigate to **Attributes** tab and enter/select the following:
 
     - Under Download:
 

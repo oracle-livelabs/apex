@@ -10,6 +10,8 @@ In this workshop, you will manage and customize the Interactive report in the Sa
 
 In the previous workshop, you learned to add an Interactive Grid, Smart filters, and Content row to an application. You also learned to create application items and processes, create a variety of pages, and add an action.
 
+Estimated Time: 15 minutes
+
 ### Objectives
 
 In this workshop, you will:
@@ -17,8 +19,6 @@ In this workshop, you will:
 - Customize your Interactive Report page in **Sample Reports** Application as a **Developer**.
 
 - Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
-
-Estimated Time: 15 minutes
 
  > **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
 
