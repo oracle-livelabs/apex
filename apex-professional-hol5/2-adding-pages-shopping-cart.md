@@ -238,11 +238,15 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
     ![Add a Cards Region](./images/change-attributes13.png " ")
 
+4. Click **Save and Run**.
+
+    ![Add a Cards Region](./images/add-to-cart.png " ")
+
 ## Task 5: Add an Action to the Shopping Cart
 
 In this task, you will add an "Edit" action button that allows users to edit the items in their cart.
 
-1. In the **Rendering tree** (left pane), navigate to **Shopping Cart** > **Actions**.
+1. In the **Rendering** tab, navigate to **Shopping Cart** region.
 
 2. Right-click **Actions** and click **Create Action**.
 
@@ -518,6 +522,10 @@ The final task will guide you in creating a faceted search page that lists produ
      Click **Create Page**.
 
     ![Add the Products Page](./images/create-fs-page15.png " ")
+
+6. Click **Save and Run**.
+
+    ![Add the Products Page](./images/fs-page.png " ")
 
 ## Summary
 
