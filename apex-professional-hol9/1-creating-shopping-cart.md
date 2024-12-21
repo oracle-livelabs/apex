@@ -1,10 +1,12 @@
 # Add Validations and Processes to the Shopping Cart Page
 
+## Introduction
+
 This lab enhances a shopping cart page by adding critical validations, processes, and branching processes to manage customer orders effectively. By the end, customers can place orders seamlessly, validate required information, clear their cart, and quickly proceed to checkout. These tasks ensure the application runs smoothly and delivers an optimized user experience.
 
 Estimated Time: 15 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will:
 
@@ -36,7 +38,7 @@ In this task, you will add validations to ensure that required fields on the sho
 
     ![Navigate to Shopping Cart Page](./images/navigate-to-shopping-cart-page.png " ")
 
-4. In the Rendering tree (left pane), click the **Processing** tab. Right-click **Validating** and select **Create Validation**.
+4. Navigate to **Processing** tab. Right-click **Validating** and select **Create Validation**.
 
     ![Navigate to Shopping Cart Page](./images/create-validation.png " ")
 
@@ -137,39 +139,23 @@ In this task, you will create a process to clear the shopping cart when the cust
 
     ![Create and Configure Background Process](./images/clear-cart.png " ")
 
-3. Navigate to **Rendering** tab. Click **Clear** button and enter/select the following:
-
-    - Under Behavior:
-
-        - Action: **Redirect to Page in this Application**
-
-        - Target: Click **No Linked Defined**
-
-            - Target > Page: **1**
-
-            - Advanced > Request: **APPLICATION_PROCESS=clear\_cart**
-
-              Click **OK**.
-
-    ![Configure Child Process](./images/create-child-process2.png " ")
-
-4. Click **Proceed** button. Under **Behavior**, enable **Show Processing**.
+3. Click **Proceed** button. Under **Behavior**, enable **Show Processing**.
 
     This would avoid accidental multiple-page submissions by displaying a processing animation and temporarily disabling page interaction using the new Show Processing attribute available for page buttons.
 
     ![Configure Child Process](./images/button-processing.png " ")
 
-5. Click Save.
+4. Click **Save**.
 
-6. Navigate to **Shared Components**.
+5. Navigate to **Shared Components**.
 
     ![Configure Child Process](./images/user-interface.png " ")
 
-7. Under **User Interface**, click **User Interface Attributes**.
+6. Under **User Interface**, click **User Interface Attributes**.
 
     ![Configure Child Process](./images/auto-dismissing.png " ")
 
-8. Under **Attributes**, enable **Auto Dismiss Success Messages** and click **Apply Changes**.
+7. Under **Attributes**, enable **Auto Dismiss Success Messages** and click **Apply Changes**.
 
     By turning this new application's User Interface attribute on, all success messages in the application will be dismissed automatically.
 
@@ -181,7 +167,7 @@ In this task, you will create a process to clear the shopping cart when the cust
 
 In this task, you will create a branching process that redirects the user to the appropriate page after they submit an order. Branches ensure a smooth navigation experience by guiding users based on their actions, such as checking or viewing their order details.
 
-1. Navigate to **Edit Page 17**.
+1. In the top right corner, navigate to **Edit Page 17**.
 
     ![Navigate to page 17](./images/17-page.png " ")
 
@@ -197,22 +183,22 @@ In this task, you will create a branching process that redirects the user to the
 
         - Type: **Page in this application**
 
-        - Page: **17**
+        - Page: **16**
 
         - Set Items: Enter/select the following:
 
             | Name           | Value            |
             | -------------- | ---------------- |
-            | P17\_ORDER\_ID | &P17\_ORDER\_ID. |
+            | P16\_ORDER | &P17\_ORDER\_ID. |
             {: title="List of Taregt Item(s)"}
 
-        - Clear Cache: **17**.
+        - Clear Cache: **16**.
 
         Click **OK**.
 
     - Server-side condition > When Button Pressed: **Proceed**.
 
-    ![Configure Branch](./images/create-branch2.png " ")
+    ![Configure Branch](./images/create-branch.png " ")
 
 4. Click **Save**.
 

@@ -8,6 +8,8 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In the last hands-on lab, you learned how to add page buttons and items to a page.
 
+Estimated Time: 15 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -19,8 +21,6 @@ In this lab, you will:
 - Add branching logic to transition between pages efficiently.
 
 - Clear the shopping cart and proceed to checkout seamlessly.
-
-Estimated Time: 15 minutes
 
  > **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
 

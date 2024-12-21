@@ -4,6 +4,8 @@
 
 The lab focuses on creating dynamic actions, computations, and processes that allow customers to manage their shopping experience efficiently. You will learn to dynamically update the shopping cart interface, refresh relevant regions, and handle various shopping cart operations like adding, editing, and removing items. By the end of this lab, your application will provide a seamless and interactive shopping experience for users.
 
+Estimated Time: 20 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -21,8 +23,6 @@ In this lab, you will:
 - Format product images for a uniform appearance.
 
 - Close modal pages after shopping actions are performed.
-
-Estimated Time: 20 minutes
 
 ### Downloads
 

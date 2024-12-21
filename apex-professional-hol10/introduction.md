@@ -6,7 +6,9 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 ### Recap
 
-In the last hands-on lab, you practised creating validations on the Page Items and adding Page processes with types like Invoke API, Clear and a branch to a page.
+In the last hands-on lab, you practiced creating validations on the Page Items and adding Page processes with types like Invoke API, Clear and a branch to a page.
+
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -23,8 +25,6 @@ In this lab, you will:
 - Review the items added to the shopping cart.
 
 - Add, edit, or remove the product from the shopping cart
-
-Estimated Time: 20 minutes
 
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2_
 

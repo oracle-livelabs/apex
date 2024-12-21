@@ -1,10 +1,12 @@
 # Create and Use Page-Level Items and Buttons
 
+## Introduction
+
 In this lab, you will learn how to add new items and buttons to a shopping cart page in an online shopping application. You will create and configure page items like customer details, product information, and buttons to manage the shopping cart. This enables users to review, modify, and interact with their cart seamlessly and intuitively.
 
 Estimated Time: 15 minutes
 
-## Objectives
+### Objectives
 
 By the end of this lab, you will be able to:
 
