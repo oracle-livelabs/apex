@@ -2,6 +2,8 @@
 
 In this lab, you will learn how to add new items and buttons to a shopping cart page in an online shopping application. You will create and configure page items like customer details, product information, and buttons to manage the shopping cart. This enables users to review, modify, and interact with their cart seamlessly and intuitively.
 
+Estimated Time: 15 minutes
+
 ## Objectives
 
 By the end of this lab, you will be able to:
@@ -13,8 +15,6 @@ By the end of this lab, you will be able to:
 - Implement server-side conditions to control button visibility based on user actions.
 
 - Add and configure hidden fields to store and manipulate shopping cart data.
-
-Estimated Time: 15 minutes
 
 ### Downloads
 
@@ -58,7 +58,7 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     ![Create Email Address](./images/create-address.png " ")
 
-7. Create four-page items one after the other:
+7. Now, create four page items one after the other:
 
     | Name                    | Type        | Label     |
     | ----------------------- | ----------- | --------- |
@@ -95,7 +95,7 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     ![Create Button](./images/right-click-button.png " ")
 
-10. Create two buttons one after the other:
+10. Now, create two buttons one after the other:
 
     | Button Name | Label               | Slot | Button Template | Hot | Icon          |
     | ----------- | ------------------- | --------------- | --------------- | --- | ------------- |
@@ -111,15 +111,15 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     | Button Name | Type             | Item                  |
     | ----------- | ---------------- | --------------------- |
-    | Proceed     | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
-    | Clear       | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
+    | Proceed     | Item is NOT NULL | Application > SHOPPING\_CART\_ITEMS |
+    | Clear       | Item is NOT NULL | Application > SHOPPING\_CART\_ITEMS |
     {: title="Server-side conditions for Buttons"}
 
     ![Add Server Side condition to Buttons](./images/create-button2.png " ")
 
 12. Click **Save and Run**.
 
-    ![Add Server Side condition to Buttons](./images/shop-cart.png " ")
+    ![Add Server Side condition to Buttons](./images/shop-cart1.png " ")
 
 ## Task 2: Add Items and Buttons to Edit the Cart
 
@@ -133,7 +133,7 @@ In this task, you will create four-page items:
 
 - **SHOPPING\_CART\_ITEMS**: To get the number of items (total) in the shopping cart after an action is performed.
 
-1. From the page designer, click the **Page Finder** icon and select **Page 18**.
+1. From the page designer, click the **Page Finder** icon and select page **18**.
 
     ![Select Page 18](./images/select-page-17.png " ")
 
@@ -153,7 +153,7 @@ In this task, you will create four-page items:
 
     ![Create Page Item](./images/create-page-item3.png " ")
 
-5. Create four items as follows. In the Property Editor, edit the following:
+5. Create four items as follows. In the Property Editor, enter/select the following:
 
     | Name                      | Type        | Label    | Template |
     | ------------------------- | ----------- | -------- | -------- |
@@ -188,7 +188,7 @@ In this task, you will create four-page items:
 
     ![Select quantity](./images/create-quantity-column1.png " ")
 
-7. Navigate to the Buttons Bar region (left side). Right-click and select "Create Button."
+7. Navigate to the **Buttons Bar** region. Right-click and select **Create Button**.
 
     ![Create Button](./images/create-button3.png " ")
 
@@ -216,7 +216,7 @@ In this task, you will create four-page items:
 
 10. For the **Delete** button in the property editor, enter/select the following:
 
-    - Under Appearance section > Template Options:
+    - Under Appearance > Template Options:
 
         - Type: **Danger**
 
