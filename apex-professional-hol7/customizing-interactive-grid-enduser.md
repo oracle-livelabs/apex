@@ -1,8 +1,12 @@
 # Customize Interactive Grid as an End-user
 
+## Introduction
+
 In this lab, you will learn how to customize and manage an interactive grid as an end-user. You will perform tasks like searching, updating data, applying control breaks, highlighting specific rows, and saving grid customizations. Additionally, you will explore adding charts and downloading the interactive grid in various formats.
 
-## Objectives
+Estimated Time: 10 minutes
+
+### Objectives
 
 In this lab, you will:
 
@@ -13,8 +17,6 @@ In this lab, you will:
 - Apply control breaks, highlight rows based on conditions, and hide specific columns.
 
 - Create and save customized reports, including charts, and download them in different formats.
-
-Estimated Time: 10 minutes
 
 ## Task 1: Customize Interactive Grid as an end-user
 
@@ -37,7 +39,7 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/search4.png " ")
 
-5. The changes have yet to be saved. Click the **Save**.
+5. The changes have yet to be saved. Click **Save**.
 
     ![Customize Interactive Grid](./images/search5.png " ")
 
@@ -162,7 +164,7 @@ Select **Actions** > **Chart**.
 
     ![Customize Interactive Grid](./images/download-report.png " ")
 
-23. The HTML download option is no longer available. Select Excel and click "Download."
+23. The HTML download option is no longer available. Select **Excel** and click **Download**.
 
     ![Customize Interactive Grid](./images/download-report1.png " ")
 

@@ -1,19 +1,27 @@
 # Customize Interactive Grid as a Developer
 
+## Introduction
+
 In this lab, you will learn how to customize and manage an interactive grid for end users using the **Demo Projects** application. You will create column groups, set pagination types, and control report download formats. Additionally, you will enable users to save public interactive grids and convert a read-only grid into an editable one. By the end, you will understand how to effectively manage grid settings and configurations to enhance user experience.
 
-## Objectives
+Estimated Time: 10 minutes
+
+### Objectives
 
 In this lab, you will:
 
 - Create and manage column groups in an interactive grid.
+
 - Rearrange columns and organize grid layout for optimal user experience.
+
 - Enable users to save public interactive grid reports and customize downloadable formats.
+
 - Convert a read-only interactive grid into an editable one.
+
 - Modify pagination settings and display the total row count in the grid.
+
 - Exclude specific columns from DML operations and configure them for display-only purposes.
 
-Estimated Time: 10 minutes
 
 ### Downloads
 
@@ -92,7 +100,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
 5. You want to ensure end users can save Public interactive grids. You want to exclude HTML from the download formats available to end users.
 
-    **a)** In the Rendering tree, select the **Project Tasks** Interactive Grid region.
+    **a)** In the **Rendering** tab, select the **Project Tasks** Interactive Grid region.
 
     **b)** In the property editor, select **Attributes**, and perform the following steps:
 

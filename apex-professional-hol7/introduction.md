@@ -10,13 +10,13 @@ In this workshop, you customize the **Demo Projects** application. You learn to 
 
 In the preceding workshop, you learned to customize the Interactive Report as a Developer and an End User.
 
+Estimated Time: 20 minutes
+
 ### Objectives
 
 - Customize Interactive Grid page as a **Developer**.
 
 - Customize Interactive Grid page as an **End-user**.
-
-Estimated Time: 20 minutes
 
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2._
 
