@@ -18,8 +18,6 @@ In this lab, you will:
 
 - Display product images directly in the report for better visualization.
 
-- Create a modal form page to manage products efficiently.
-
 ### Downloads
 
 - Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/hol10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
@@ -85,7 +83,7 @@ In this lab, you will:
 
     - Link > Target: Click **No Link Defined**
 
-        - Page: **15**
+        - Page: **15** *{This page will be created in the next lab}*
 
         - Set Items > Name: **P15\_PRODUCT\_ID**, Value: **#PRODUCT\_ID#**
 
@@ -99,75 +97,7 @@ In this lab, you will:
 
     ![Navigate to Manage Products](./images/product-id-icon.png " ")
 
-4. Click **Save**.
-
-## Task 2: Create Form to Manage Products
-
-1. In the Page Designer toolbar, navigate to **+ V** icon and select **Page**.
-
-    ![Navigate to Manage Products](./images/create-manage-products.png " ")
-
-2. Select **Form**.
-
-    ![Navigate to Manage Products](./images/mp-form.png " ")
-
-3. In **Create Form** dialog, enter/select the following:
-
-    - Under Page Definition:
-
-        - Page Number: **15**
-
-        - Name: **Manage Products**
-
-    - Data Source > Table / View Name: **PRODUCTS**
-
-    - Under Navigation:
-
-        - Use Breadcrumb: Toggle **OFF**
-
-        - Use Navigation:  Toggle **OFF**
-
-    Click **Next**.
-
-    ![Navigate to Manage Products](./images/mp-create-form.png " ")
-
-4. Enter/ select the following:
-
-    - Under Branch Pages:
-
-        - Branch Here on Submit: **14**
-
-        - Cancel and Go To Page: **14**
-
-    Click **Create Page**.
-
-    ![Navigate to Manage Products](./images/mp-create-page.png " ")
-
-5. Navigate to Property Editor (right pane), update the following:
-
-    - Appearance > Page Mode: **Modal Dialog**
-
-    - Under Dialog:
-
-        - Width: **600**
-
-        - Height: **600**
-
-    ![Navigate to Manage Products](./images/modal-dialog.png " ")
-
-6. Now, navigate to **Manage Products** region (left pane). Select **P15\_IMAGE\_MIME\_TYPE** page item and hold until **P15\_IMAGE\_LAST\_UPDATED** and change type to **Hidden**.
-
-    ![Navigate to Manage Products](./images/page-items-hidden.png " ")
-
-7. Remove **Id** from the label of page items: **P15\_COLOR\_ID , P15\_DEPARTMENT\_ID , P15\_CLOTHING\_ID**.
-
-    ![Navigate to Manage Products](./images/label-change.png " ")
-
-8. From the page designer toolbar, navigate to **Page Finder** and select **14**.
-
-    ![Navigate to Manage Products](./images/nav-to-14.png " ")
-
-9. Under **Products** region, select **PRODUCT\_DETAILS** column and enter/select the following:
+4.  Select **PRODUCT\_DETAILS** column and enter/select the following:
 
     - Identification > Type: **DOWNLOAD BLOB**
 
@@ -181,7 +111,7 @@ In this lab, you will:
 
      ![Navigate to Manage Products](./images/product-details.png " ")
 
-10. Select **PRODUCT_IMAGE** column and enter/select the following:
+5. Select **PRODUCT_IMAGE** column and enter/select the following:
 
     - Identification > Type: **Display Image**
 
@@ -195,7 +125,7 @@ In this lab, you will:
 
     ![Navigate to Manage Products](./images/product-image.png " ")
 
-11. Navigate to **RESET_REPORT** button and update the following:
+6. Navigate to **RESET_REPORT** button and update the following:
 
     - Under Identification:
 
@@ -233,31 +163,7 @@ In this lab, you will:
 
     ![Navigate to Manage Products](./images/create-redirect.png " ")
 
-12. Click **Save**.
-
-## Task 3: Run the Manage Products page
-
-1. Run **Online Shopping Application**.
-
-2. Navigate to **Administration** in the application menu. Select **Manage Products**.
-
-    ![Navigate to Manage Products](./images/nav-admin.png " ")
-
-3. On the **Manage Products** page, a Classic Report is displayed.
-
-    - Perform the following actions:
-
-        - Edit Rows: Click the **Edit** pencil icon to modify an existing product.
-
-        - Add New Row: Click the **Create** button to add a new product.
-
-    ![Navigate to Manage Products](./images/classic-report.png " ")
-
-4. When you click either the Edit pencil icon or the Create button:
-
-    - The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
-
-    ![Navigate to Manage Products](./images/mp-form-dialog.png " ")
+7. Click **Save**.
 
 ## Summary
 
@@ -266,8 +172,6 @@ In this lab, you’ve learned how to:
 - Enhance a Classic Report by modifying its attributes and customizing its design.
 
 - Implement a Download BLOB feature and display product images directly in the report.
-
-- Create a modal form for managing products, providing an interactive and efficient way for users to add or edit product data.
 
 These improvements ensure a more seamless and user-friendly experience in the Manage Products page of your Online Shopping Application. You’re now ready to move on to the next lab.
 

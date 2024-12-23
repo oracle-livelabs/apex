@@ -24,8 +24,6 @@ Estimated Time: 30 minutes
 
 - Enhance Classic Reports by customizing attributes, integrating features like Download BLOB, and displaying images and dynamic links for improved data interaction.
 
-- Create interactive Forms linked with reports to enable seamless data management using modal dialogs and dynamic navigation.
-
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
