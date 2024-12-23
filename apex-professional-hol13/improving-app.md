@@ -72,14 +72,14 @@ Certain pages in your application should be publicly accessible without requirin
 
     ![Navigate to Page 19](./images/navigate-to-page191.png " ")
 
-2. In the Rendering tab (left pane), navigate to  **Page 19: Products**. In the Property Editor (right pane), update the following:
+2. In the **Rendering** tab (left pane), navigate to  **Page 19: Products**. In the Property Editor (right pane), update the following:
     - Security > Authentication: **Page Is Public**
 
       ![Edit Authentication as Public](./images/edit-page19.png " ")
 
 3. Click **Save**.
 
-4. Navigate to Page Finder and select **Page 16** and repeat steps 2-3.
+4. Navigate to **Page Finder** and select page number **16** and repeat steps 2-3.
 
     ![Navigate to Page finder](./images/navigate-to-page-finder.png " ")
 
@@ -91,11 +91,11 @@ Certain pages in your application should be publicly accessible without requirin
 
 Since the home page is now set as Products and it's publicly accessible, the navigation menu is no longer necessary. In this task, you will disable the navigation menu to create a more streamlined user interface.
 
-1. Within Page Designer, click the Shared Components icon at the top right.
+1. Within Page Designer, click the **Shared Components** icon at the top right corner.
 
     ![Click on Shared Components icon](./images/click-sc-icon.png " ")
 
-    Alternatively, if you are in the App Builder, click Shared Components.
+    Alternatively, if you are in the App Builder, click **Shared Components**.
 
    ![Click on Shared Components](./images/sc-shared-comps.png " ")
 
@@ -111,7 +111,7 @@ Since the home page is now set as Products and it's publicly accessible, the nav
 
 A well-structured navigation bar can improve the overall user experience. In this task, you will add new entries to the navigation bar to allow customers to quickly access the Shopping Cart and administrators to access the Administration Page.
 
-1. Navigate to **Shared Components** icon at the top right.
+1. Navigate to **Shared Components** icon at the top right corner.
 
     ![Click Shared Components icon](./images/click-sc-icon1.png " ")
 

@@ -44,13 +44,13 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 6. On the **Create Search Configuration** wizard, enter/select the following details:
 
-    - Name: **Search Order Details**.
+    - Name: **Search Order Details**
 
     - Search Type: **Standard**
 
      Click **Next**.
 
-   ![App Builder](images/search-conf1.png " ")
+   ![App Builder](images/search-conf.png " ")
 
 7. For **Table/View Name**: Select **CUSTOMER\_ORDER\_PRODUCTS** and click **Next**.
 
@@ -58,17 +58,17 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 8. Under **Column Mapping**, enter/select the following:
 
-     - Primary Key Column: **ORDER\_ID**
+     - Primary Key Column: **ORDER\_ID (Number)**
 
-     - Title Column: **FULL\_NAME**
+     - Title Column: **FULL\_NAME (Varchar2)**
 
-     - Description Column: **ORDER\_STATUS**
+     - Description Column: **ORDER\_STATUS (Varchar2)**
 
     Click **Create Search Configuration**.
 
     ![App Builder](images/search-conf3.png " ")
 
-9. Navigate to **Column Mapping** tab, for **Subtitle Column**, select **ITEMS** and click **Apply Changes**.
+9. Navigate to **Column Mapping** tab, for **Subtitle Column**, select **ITEMS (Varchar2)** and click **Apply Changes**.
 
    ![App Builder](images/column-mapping.png " ")
 
@@ -78,13 +78,13 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 11. On the **Create Search Configuration** wizard, enter/select the following details:
 
-     - Name: **Search Product Reviews**.
+     - Name: **Search Product Reviews**
 
      - Search Type: **Standard**
 
     Click **Next**.
 
-    ![App Builder](images/2-search-conf1.png " ")
+    ![App Builder](images/2-search-conf0.png " ")
 
 12. For **Table/View Name**, select **PRODUCT_REVIEWS** and click **Next**.
 
@@ -92,11 +92,11 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 13. Under **Column Mapping**, enter/select the following:
 
-     - Primary Key Column: **PRODUCT\_NAME**
+     - Primary Key Column: **PRODUCT\_NAME (Varchar2)**
 
-     - Title Column: **PRODUCT\_NAME**
+     - Title Column: **PRODUCT\_NAME (Varchar2)**
 
-     - Description Column: **REVIEW**
+     - Description Column: **REVIEW (Varchar2)**
 
    Click **Create Search Configuration**.
 
@@ -136,7 +136,7 @@ To create a search page by running the Create Page Wizard:
 
     > **Note:** _Note: In the Rendering tab, notice the page item, P20\_SEARCH and the Search Results region. P20\_SEARCH is the search field which enables users to submit search terms. The Search Results region contains the search results and two Search Sources, which map to search configurations maintained in Shared Components. You can further refine and control the search display and behavior by editing attributes in the Property Editor._
 
-5. Click Save and Run Page.
+5. Click **Save and Run**.
 
     ![App Builder](images/sc-search.png " ")
 

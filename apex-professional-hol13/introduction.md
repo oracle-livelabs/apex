@@ -10,7 +10,7 @@ This combined lab will walk you through the process of creating search configura
 
 ### Recap
 
-In the last hands-on workshop, you practised how to create and customize a form and link it to the report.
+In the last hands-on workshop, you practiced how to create and customize a form and link it to the report.
 
 Estimated Time: 15 minutes
 
@@ -26,7 +26,7 @@ Estimated Time: 15 minutes
 
 - Enhance the navigation bar to include important links, such as direct access to the shopping cart and the administration page.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 
