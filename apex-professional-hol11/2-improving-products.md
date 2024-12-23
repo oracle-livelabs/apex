@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Lab, you learn how to improve the Products page by adding new facets and customizing the cards.
+This lab focuses on enhancing the Products page of the Online Shopping Application. You’ll learn how to make the page more user-friendly by adding facets to improve search functionality, customizing the cards for better product presentation, and implementing dynamic actions to improve interactivity. By the end of this lab, customers will have an easier time finding products, viewing details, and managing their shopping carts.
 
 *Please note that customers can quickly identify the products already added to the shopping cart.*
 
@@ -10,11 +10,15 @@ Estimated Time: 20 minutes
 
 ### Objectives
 
-In this Lab, you will:
+In this lab, you will:
 
-- Improve both Faceted Search and Cards region
+- Rearrange and enhance search facets to improve usability.
 
-- Add Dynamic Actions to the page
+- Customize the product cards to display more relevant information.
+
+- Add dynamic actions to make the page more interactive and responsive.
+
+- Understand how different filter types contribute to an efficient search experience.
 
 ### Downloads
 
@@ -23,6 +27,7 @@ In this Lab, you will:
 ## Task 1: Navigate to the Products Page
 
 In this Lab, you will be using an Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where customers can explore the products and select what they wish to buy.
+
 As you can see, it's hard to find the products, and it would be beneficial to see additional details related to the products.
 
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
@@ -52,6 +57,8 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 ## Task 3: Enhance the Faceted Search
 
+You’ll modify the settings of the faceted search to make it more intuitive for users, such as customizing labels and hiding unnecessary elements like charts.
+
 1. In the **Rendering** tab (left pane), navigate to **Search** region.
 
 2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
@@ -65,6 +72,8 @@ Unit price is not a standard search criterion, so you want to put this facet at 
     ![Change faceted search](./images/change-faceted-search-attr.png " ")
 
 ## Task 4: Enhance the Cards Region
+
+This task focuses on updating the design and layout of the cards that display product information, ensuring they’re visually appealing and easy to read.
 
 1. In the **Rendering** tab (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
 
@@ -170,7 +179,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 ## Task 5: Create Actions
 
-Customers need a way to shop for products, so in this task, you will add an action to allow customers to learn more about the product.
+You’ll add interactive actions to the cards, such as linking to detailed product information, to make the page more functional.
 
 1. Navigate to **Search Results** (left pane).
 
@@ -333,13 +342,17 @@ In this task, you will create two dynamic actions:
 
 ## Task 7: Run the Products Page
 
+Finally, you’ll run the application to test and review all the changes made during the lab.
+
 1. After running the products page, your page will look like the following image:
 
    ![Products Page](./images/products-page.png " ")
 
 ## Summary
 
-You now know how to enhance faceted search and cards region. You may now **proceed to the next Lab**.
+By completing this lab, you’ve enhanced the Products page to make it easier for customers to find and manage products. You reordered search facets, improved the appearance of the cards, and added dynamic actions for better interactivity. These changes not only improve the visual appeal of the page but also make it more functional and user-friendly.
+
+You’re now ready to move on to the next lab and continue building on these improvements.
 
 ## Acknowledgements
 

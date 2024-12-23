@@ -16,11 +16,15 @@ Estimated Time: 30 minutes
 
 ### Objectives
 
-- Customize the **Smart Filters** page in the **Demo Projects** application.
+- Optimize Smart Filters by tailoring existing filters, introducing new ones, and enabling advanced input types like ranges, checkbox groups, and client-side filtering.
 
 - Improve both **Faceted Search** and **Cards** region.
 
 - Add **Dynamic Actions** to the page.
+
+- Enhance Classic Reports by customizing attributes, integrating features like Download BLOB, and displaying images and dynamic links for improved data interaction.
+
+- Create interactive Forms linked with reports to enable seamless data management using modal dialogs and dynamic navigation.
 
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 

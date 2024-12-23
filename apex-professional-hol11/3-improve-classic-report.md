@@ -2,23 +2,23 @@
 
 ## Introduction
 
-In this task, you will learn how to enhance a Classic Report in an Oracle APEX application by modifying its attributes and incorporating dynamic elements. Classic Reports are a powerful way to display data in a structured format, and by customizing the report, you can create an intuitive and interactive user experience. Specifically, we will enhance the Manage Products page within the Online Shopping Application by updating the SQL query, modifying column attributes, and configuring links and buttons.
+This lab focuses on enhancing a Classic Report in an Oracle APEX application. Classic Reports are a highly flexible way to present structured data, and customizing them allows you to provide a more intuitive and engaging user experience. In this lab, you’ll modify a Classic Report on the Manage Products page within the Online Shopping Application. You will improve the report's functionality by incorporating features like links, dynamic buttons, and displaying images directly in the report. Additionally, you’ll learn to create a form page for managing products and implement a Download BLOB feature for seamless file downloads.
 
-Estimated Time: 5 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Customize the Classic Report to enhance its presentation and functionality.
+- Customize the Classic Report for enhanced data presentation and usability.
 
-- Implement a Download BLOB feature for the PRODUCT_DETAILS column.
+- Configure links and buttons for navigation and interactivity.
 
-- Configure the PRODUCT_IMAGE column to display images directly within the report.
+- Add a Download BLOB feature to enable file downloads directly from the report.
 
-- Modify the SQL query to fetch additional product-related data (color, department, clothing).
+- Display product images directly in the report for better visualization.
 
-- Adjust column settings, such as setting PRODUCT_ID as a clickable link.
+- Create a modal form page to manage products efficiently.
 
 ### Downloads
 
@@ -235,13 +235,45 @@ In this lab, you will:
 
 12. Click **Save**.
 
+## Task 3: Run the Manage Products page
+
+1. Run **Online Shopping Application**.
+
+2. Navigate to **Administration** in the application menu. Select **Manage Products**.
+
+    ![Navigate to Manage Products](./images/nav-admin.png " ")
+
+3. On the **Manage Products** page, a Classic Report is displayed.
+
+    - Perform the following actions:
+
+        - Edit Rows: Click the **Edit** pencil icon to modify an existing product.
+
+        - Add New Row: Click the **Create** button to add a new product.
+
+    ![Navigate to Manage Products](./images/classic-report.png " ")
+
+4. When you click either the Edit pencil icon or the Create button:
+
+    - The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
+
+    ![Navigate to Manage Products](./images/mp-form-dialog.png " ")
+
 ## Summary
 
-You now know how to enhance classic report. You may now **proceed to the next Lab**.
+In this lab, you’ve learned how to:
+
+- Enhance a Classic Report by modifying its attributes and customizing its design.
+
+- Implement a Download BLOB feature and display product images directly in the report.
+
+- Create a modal form for managing products, providing an interactive and efficient way for users to add or edit product data.
+
+These improvements ensure a more seamless and user-friendly experience in the Manage Products page of your Online Shopping Application. You’re now ready to move on to the next lab.
 
 ## What's next
 
-In the next Lab, you learn how to Create and Customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
+In the next Lab, you learn how to create and customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
 
 ## Acknowledgements
 
