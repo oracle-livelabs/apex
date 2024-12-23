@@ -4,6 +4,8 @@
 
 In this lab, you will enhance your skills in utilizing Smart Filters within the Oracle APEX environment. Smart Filters allow users to dynamically refine data displayed in applications, providing an intuitive way to search and filter records based on various criteria. This hands-on lab will guide you through customizing existing filters and creating new ones, enabling a more robust and user-friendly application experience.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -15,8 +17,6 @@ In this lab, you will:
 - Implement filters that allow for dynamic user input and selection.
 
 - Understand the significance of each filter type in enhancing the search functionality.
-
-Estimated Time: 5 minutes
 
 ### Downloads
 
@@ -38,7 +38,7 @@ In this task, you will focus on customizing the existing Smart Filters in the **
 
     > **Note:** _Note that your page number might be different._
 
-    ![Navigate to Project Tasks Search](images/navigate-to-page8.png " ")
+    ![Navigate to Project Tasks Search](images/navigate-to-page.png " ")
 
 4. Under **Search** region, select **P8\_PROJECT** and enter/select the following:
 
@@ -51,15 +51,15 @@ In this task, you will focus on customizing the existing Smart Filters in the **
 5. Click **Save and Run Page** in the upper right corner.
 The revised page appears.
 
-    ![Show edit Filter](images/show-edit-filter1.png " ")
+    ![Show edit Filter](images/show-edit-filter.png " ")
 
 6. Navigate back to **Page Designer - Page 8** . Now, you set the Budget filter as an input field that can be filtered, allowing you to input values and dynamically select the filter criteria.
 
 7. In the **Rendering** tree (left pane), under **Search**, select **P8\_BUDGET** within filters and enter/select the following:
 
-   - Under Identification > Type: **Input Field**
+    - Under Identification > Type: **Input Field**
 
-   - Under Settings > User can Choose Operator: **Toggle On**
+    - Under Settings > User can Choose Operator: **Toggle On**
 
     ![Enhance Facets](./images/enhance-facet1.png " ")
 
@@ -67,7 +67,7 @@ The revised page appears.
 
 9. Select the **Budget** filter in the search bar in the runtime environment. Select **greater than** and enter **6000** in the input field. The results appear with a budget greater than 6000.
 
-    ![Enhance Facets](./images/enhance-facet2.png " ")
+    ![Enhance Facets](./images/enhance-facet.png " ")
 
     ![Enhance Facets](./images/enhance-facet3.png " ")
 
@@ -83,15 +83,15 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
     - Under Identification:
 
-      - Name: **P8\_TASK_NAME**.
+        - Name: **P8\_TASK_NAME**
 
-      - Type: **Checkbox Group**.
+        - Type: **Checkbox Group**
 
     - List of Values > Type: **Distinct Values**.
 
     ![Create Filter2](images/create-filter10.png " ")
 
-    ![Create Filter2](images/task-name.png " ")
+    ![Create Filter2](images/task-name1.png " ")
 
 3. Again, right-click **Filters** and select **Create Filter**.
 
@@ -101,9 +101,9 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
     - Under Identification:
 
-        - Name: **P8\_START_DATE**.
+        - Name: **P8\_START\_DATE**
 
-        - Type: **Range**.
+        - Type: **Range**
 
     - Settings > Select Multiple: **Toggle On**
 

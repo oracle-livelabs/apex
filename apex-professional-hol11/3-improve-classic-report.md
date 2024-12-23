@@ -4,6 +4,8 @@
 
 In this task, you will learn how to enhance a Classic Report in an Oracle APEX application by modifying its attributes and incorporating dynamic elements. Classic Reports are a powerful way to display data in a structured format, and by customizing the report, you can create an intuitive and interactive user experience. Specifically, we will enhance the Manage Products page within the Online Shopping Application by updating the SQL query, modifying column attributes, and configuring links and buttons.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 In this lab, you will:
@@ -17,8 +19,6 @@ In this lab, you will:
 - Modify the SQL query to fetch additional product-related data (color, department, clothing).
 
 - Adjust column settings, such as setting PRODUCT_ID as a clickable link.
-
-Estimated Time: 5 minutes
 
 ### Downloads
 
@@ -99,7 +99,75 @@ Estimated Time: 5 minutes
 
     ![Navigate to Manage Products](./images/product-id-icon.png " ")
 
-4. Now, select **PRODUCT\_DETAILS** column and enter/select the following:
+4. Click **Save**.
+
+## Task 2: Create Form to Manage Products
+
+1. In the Page Designer toolbar, navigate to **+ V** icon and select **Page**.
+
+    ![Navigate to Manage Products](./images/create-manage-products.png " ")
+
+2. Select **Form**.
+
+    ![Navigate to Manage Products](./images/mp-form.png " ")
+
+3. In **Create Form** dialog, enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **15**
+
+        - Name: **Manage Products**
+
+    - Data Source > Table / View Name: **PRODUCTS**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: Toggle **OFF**
+
+        - Use Navigation:  Toggle **OFF**
+
+    Click **Next**.
+
+    ![Navigate to Manage Products](./images/mp-create-form.png " ")
+
+4. Enter/ select the following:
+
+    - Under Branch Pages:
+
+        - Branch Here on Submit: **14**
+
+        - Cancel and Go To Page: **14**
+
+    Click **Create Page**.
+
+    ![Navigate to Manage Products](./images/mp-create-page.png " ")
+
+5. Navigate to Property Editor (right pane), update the following:
+
+    - Appearance > Page Mode: **Modal Dialog**
+
+    - Under Dialog:
+
+        - Width: **600**
+
+        - Height: **600**
+
+    ![Navigate to Manage Products](./images/modal-dialog.png " ")
+
+6. Now, navigate to **Manage Products** region (left pane). Select **P15\_IMAGE\_MIME\_TYPE** page item and hold until **P15\_IMAGE\_LAST\_UPDATED** and change type to **Hidden**.
+
+    ![Navigate to Manage Products](./images/page-items-hidden.png " ")
+
+7. Remove **Id** from the label of page items: **P15\_COLOR\_ID , P15\_DEPARTMENT\_ID , P15\_CLOTHING\_ID**.
+
+    ![Navigate to Manage Products](./images/label-change.png " ")
+
+8. From the page designer toolbar, navigate to **Page Finder** and select **14**.
+
+    ![Navigate to Manage Products](./images/nav-to-14.png " ")
+
+9. Under **Products** region, select **PRODUCT\_DETAILS** column and enter/select the following:
 
     - Identification > Type: **DOWNLOAD BLOB**
 
@@ -113,7 +181,7 @@ Estimated Time: 5 minutes
 
      ![Navigate to Manage Products](./images/product-details.png " ")
 
-5. Select **PRODUCT_IMAGE** column and enter/select the following:
+10. Select **PRODUCT_IMAGE** column and enter/select the following:
 
     - Identification > Type: **Display Image**
 
@@ -127,7 +195,7 @@ Estimated Time: 5 minutes
 
     ![Navigate to Manage Products](./images/product-image.png " ")
 
-6. Navigate to **Reset** button and update the following:
+11. Navigate to **RESET_REPORT** button and update the following:
 
     - Under Identification:
 
@@ -135,13 +203,37 @@ Estimated Time: 5 minutes
 
         - Label: **Create**
 
-    - Layout > Slot: **Edit**
+    - Layout > Slot: **Above Region [Legacy]**
 
-    - Appearance > Hot: **Toggle On**
+    - Under Appearance:
+
+        - Hot: **Toggle On**
+
+        - Template Options: Click **Use Template Defaults**
+
+            - Advanced > Width: **Stretch**
+
+            Click **OK**.
+
+    - Under Behavior:
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: Click **No Link Defined**
+
+            - Target > Page: **15**
+
+            - Set Items > Name: **P15\_PRODUCT\_ID** , Value: **#PRODUCT_ID#**
+
+            - Clear Cache: **15**
+
+            Click **OK**.
 
     ![Navigate to Manage Products](./images/create-btn.png " ")
 
-7. Click **Save**.
+    ![Navigate to Manage Products](./images/create-redirect.png " ")
+
+12. Click **Save**.
 
 ## Summary
 

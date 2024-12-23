@@ -52,7 +52,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 ## Task 3: Enhance the Faceted Search
 
-1. In the Rendering tree (left pane), navigate to **Search** region.
+1. In the **Rendering** tab (left pane), navigate to **Search** region.
 
 2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
 
@@ -66,7 +66,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
 ## Task 4: Enhance the Cards Region
 
-1. In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
+1. In the **Rendering** tab (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
 
     ```
     <copy>
@@ -118,7 +118,7 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
     ![Change SQL Query](./images/change-sql-query.png " ")
 
-    - Under Appearance:
+    - Under Appearance > Template Options:
 
         - Click **Use Template Defaults**.
 
@@ -160,11 +160,13 @@ Unit price is not a standard search criterion, so you want to put this facet at 
 
     - Card > Primary Key Column 1: **PRODUCT_ID**
 
-3. Click **Save**.
-
     ![Add Primary key](./images/change-attributes1.png " ")
 
     ![Add Primary key](./images/change-attributes2.png " ")
+
+3. Click **Save and Run**.
+
+    ![Add Primary key](./images/products-page.png " ")
 
 ## Task 5: Create Actions
 
@@ -195,6 +197,10 @@ Customers need a way to shop for products, so in this task, you will add an acti
         - Click **OK**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
+
+4. Click **Save and Run**.
+
+    ![Open Add to Cart](./images/open-cart.png " ")
 
 ## Task 6: Add Dynamic Actions
 

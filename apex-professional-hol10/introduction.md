@@ -24,7 +24,7 @@ In this lab, you will:
 
 - Review the items added to the shopping cart.
 
-- Add, edit, or remove the product from the shopping cart
+- Add, edit, or remove the product from the shopping cart.
 
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2_
 
