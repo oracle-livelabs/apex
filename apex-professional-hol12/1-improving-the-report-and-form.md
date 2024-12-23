@@ -2,9 +2,19 @@
 
 ## Introduction
 
-In this lab, you will learn how to create and customize Forms in Oracle APEX and then link the forms to a Classic Report. This will help you enhance your applications' user experience and functionality by allowing users to interact with data more effectively.
+In this lab, you will learn how to create and customize forms in Oracle APEX and link them to a Classic report. Forms enable users to view, add, and edit data effectively, enhancing the overall functionality and usability of your application. You will create a Product Details form, integrate it with a Classic Report, and enhance its layout and usability for a seamless user experience.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
+
+### Objectives
+
+By completing this lab, you will:
+
+- Create a modal dialog form to display and manage product details.
+
+- Link the form to an interactive report for seamless data editing and creation.
+
+- Enhance the form layout by organizing fields, hiding unnecessary items, and improving user interface elements.
 
 ### Downloads
 
@@ -44,27 +54,53 @@ In this task, you will create a form that displays product details. This Form wi
 
     ![Define Form](./images/create-form3.png " ")
 
-5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected and click **Create Page**.
+5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected. Enter/select the following:
 
-    ![Define Primary key](./images/create-form4.png " ")
+    - Under Branch Pages:
+
+        - Branch Here on Submit: **14**
+
+        - Cancel and Go To Page: **14**
+
+        Click **Create Page**.
+
+    ![Define Primary key](./images/mp-create-page.png " ")
 
 ## Task 2: Link a Report to a Form
 
 Once the product form is created, you need to link it to an existing interactive report. This allows users to easily edit product details directly from the report page.
 
-1. From **Page Designer** toolbar, navigate to page finder and select **Page 14**
+1. From **Page Designer** toolbar, navigate to page finder and select **14**.
 
     ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
 
-2. In the **Rendering** tab, navigate to **Products** region. Under **Columns**, select **PRODUCT_ID** and In the Property Editor, enter/select the following:
+2. In the **Rendering** tab, navigate to **RESET_REPORT** button and update the following:
 
-    - Under **Link**:
+    - Under Identification:
 
-        - Link Column: **Link to a Custom Target**
+        - Button Name: **Create**
 
-        - Click **No Link Defined** and enter/select the following:
+        - Label: **Create**
 
-            - Page: **15**
+    - Layout > Slot: **Above Region [Legacy]**
+
+    - Under Appearance:
+
+        - Hot: Toggle **On**
+
+        - Template Options: Click **Use Template Defaults**
+
+            - Advanced > Width: **Stretch**
+
+        Click **OK**.
+
+    - Under Behavior:
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: Click **No Link Defined**
+
+            - Target > Page: **15**
 
             - Set Items:
 
@@ -74,17 +110,13 @@ Once the product form is created, you need to link it to an existing interactive
 
             - Clear Cache: **15**
 
-            - Click **OK**.
+            Click **OK**.
 
-    ![Link a column](./images/linking-a-form2.png " ")
+    ![Enhance form3](images/create-btn.png " ")
 
-3. Click **Save** and run the application. Navigate to **Administration** > **Manage Products** page in the runtime environment.
+    ![Enhance form3](images/create-redirect.png " ")
 
-4. Now, in the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
-
-    ![Click Pencil icon](./images/refresh-manage-products.png " ")
-
-    ![View Product Details](./images/refresh-manage-products1.png " ")
+3. Click **Save**.
 
 ## Task 3: Enhance the Form
 
@@ -94,17 +126,33 @@ After linking the Form to the report, it's time to enhance its usability and app
 
     ![Navigate to Page 15](images/navigate-to-page21.png " ")
 
-2. Items can readily be moved using drag-and-drop within the layout. You can also drag new components like regions, items, and buttons from the Gallery into the Layout pane directly below it.
+2. Under **Products** region, select **PRODUCT_DETAILS** column and enter/select the following:
 
-    In Page Designer, with **Page 15** loaded, within the layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+    - Identification > Type: **DOWNLOAD BLOB**
 
-    ![Enhance form1](images/enhance-form1.png " ")
+    - Under BLOB Attributes:
 
-3. As an alternative to drag-and-drop, you can also reposition items using attributes in the Property Editor.
+        - Table Name: **PRODUCTS**
 
-    In Page Designer, within layout (or the Rendering tab in the left pane), select **P15\_DEPARTMENT\_ID** and **P15\_CLOTHING\_ID** In the Property Editor (right pane); under layout, toggle off **Start New Row**.
+        - BLOB Column: **PRODUCT_DETAILS**
 
-    ![Enhance form2](images/enhance-form2.png " ")
+        - Primary Key Column 1: **PRODUCT_ID**
+
+    ![Enhance form2](images/product-details.png " ")
+
+3. Select **PRODUCT_IMAGE** column and enter/select the following:
+
+    - Identification > Type: **Display Image**
+
+    - Under BLOB Attributes:
+
+        - Table Name: **PRODUCTS**
+
+        - BLOB Column: **PRODUCT_IMAGE**
+
+        - Primary Key Column 1: **PRODUCT_ID**
+
+    ![Enhance form2](images/product-image.png " ")
 
 4. Select **P15\_IMAGE\_MIME\_TYPE, P15\_IMAGE\_FILENAME, P15\_IMAGE\_CHARSET and P15\_IMAGE\_LAST\_UPDATED** and update **Type** to **Hidden**
 
@@ -121,15 +169,49 @@ After linking the Form to the report, it's time to enhance its usability and app
 
     ![Enhance form2](images/name-update.png " ")
 
-6. You now need to focus on **First item on Page**. In **Page Rendering**(Left Pane), select **Page 15: Product Details**. In the **Property Editor**, update the following:
+6. Items can readily be moved using drag-and-drop within the layout. You can also drag new components like regions, items, and buttons from the Gallery into the Layout pane directly below it.
+
+    In Page Designer, with **Page 15** loaded, within the layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+
+    ![Enhance form1](images/enhance-form1.png " ")
+
+7. As an alternative to drag-and-drop, you can also reposition items using attributes in the Property Editor.
+
+    In Page Designer, within layout (or the Rendering tab in the left pane), select **P15\_DEPARTMENT\_ID** and **P15\_CLOTHING\_ID** In the Property Editor (right pane); under layout, toggle off **Start New Row**.
+
+    ![Enhance form2](images/enhance-form2.png " ")
+
+8. You now need to focus on **First item on Page**. In **Page Rendering**(Left Pane), select **Page 15: Product Details**. In the **Property Editor**, update the following:
 
     - Navigation > Cursor Focus: **First item on page**.
 
-    Click **Save**.
-
     ![Enhance form3](images/enhance-form3.png " ")
 
-7. Now that you have customized the Form. You can reload the **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
+9. Click **Save**.
+
+## Task 4: Run the Manage Products page
+
+In this final task, you will run the application to test the integration and functionality of the Manage Products page. You will navigate to the page, test editing and adding data through the form, and validate its usability in the runtime environment.
+
+1. Run Online Shopping Application.
+
+2. Navigate to **Administration** in the application menu. Select **Manage Products**.
+
+    ![Enhanced Form](images/nav-admin.png " ")
+
+3. On the **Manage Products** page, a Classic Report is displayed.
+
+    - Perform the following actions:
+
+        - Edit Rows: Click the Edit pencil icon to modify an existing product.
+
+        - Add New Row: Click the Create button to add a new product.
+
+    ![Enhanced Form](images/classic-report.png " ")
+
+4. When you click either the Edit pencil icon or the Create button:
+
+    - The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
 
     ![Enhanced Form](images/enhanced-form1.png " ")
 
