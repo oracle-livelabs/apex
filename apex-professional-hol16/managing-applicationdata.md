@@ -382,7 +382,7 @@ In this task, you will create a Data Load Definition and use it to load data int
 
     ![Click Save and Run](images/preview.png " ")
 
-17. Click Load Data. The sample data is loaded into the target table with the Merge loading method.
+17. Click **Load Data**. The sample data is loaded into the target table with the **Merge** loading method.
 
 ## Summary
 
