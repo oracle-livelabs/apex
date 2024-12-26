@@ -82,9 +82,9 @@ In this task, you will learn how to configure a process to send automated email 
 
         - From: **&APP_EMAIL.**
 
-        - To: **&P17_CUSTOMER_EMAIL.**
+        - To: **&P17\_CUSTOMER\_EMAIL.**
 
-        - Subject: **Your Order Confirmation : &P17_ORDER_ID.**
+        - Subject: **Your Order Confirmation : &P17\_ORDER\_ID.**
 
         - Body Plain Text: Copy and paste the below text:
 
@@ -156,7 +156,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
 7. In the left pane, right-click **Thank you for your order!** region and click **Create Sub Region**.
 
-    ![Select Sql Workshop](./images/rate-your-exp.png " ")
+    ![Select Sql Workshop](./images/sub-region.png " ")
 
 8. In the Property Editor, enter/select the following:
 
@@ -164,9 +164,9 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     - Layout > Start New Row: **Toggle Off**
 
-    ![Select Sql Workshop](./images/sub-region.png " ")
+    ![Select Sql Workshop](./images/rate-your-exp.png " ")
 
-9. Right-click **Rate your shopping experience** and select **Create Page Item**.
+9. Right-click **Rate your shopping experience** region and select **Create Page Item**.
 
     ![Select Sql Workshop](./images/page-item1.png " ")
 
@@ -181,7 +181,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/feedback-item.png " ")
 
-11. Right-click **Rate your shopping experience** and select **Create Button**.
+11. Right-click **Rate your shopping experience** region and select **Create Button**.
 
     ![Select Sql Workshop](./images/create-btn-submit.png " ")
 

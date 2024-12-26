@@ -24,7 +24,7 @@ Estimated Time: 15 minutes
 
 - Save, import, export, and reset theme styles for flexible design management.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 

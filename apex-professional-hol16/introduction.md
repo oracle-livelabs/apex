@@ -17,11 +17,14 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Enable Remote Database schema.
-- Creating an application and Integrating Application Data from REST Data Source
-- Synchronize Data from REST Data Sources
-- Load Data using Data Load Definitions
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+- Creating an application and Integrating Application Data from REST Data Source.
+
+- Synchronize Data from REST Data Sources.
+
+- Load Data using Data Load Definitions.
+
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 

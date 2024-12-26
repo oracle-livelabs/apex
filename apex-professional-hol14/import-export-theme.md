@@ -16,10 +16,10 @@ In this task, you save a Theme Style by using the Theme Roller. Then, you enable
 
     ![Click Customize in Developer Toolbar](images/navigate-to-theme.png " ")
 
-2. The current Theme Style is **Vita**. Under **Global Colors**, click the color swatch to select new colors.
+2. The current Theme Style is **Vita (Current)**. Under **Global Colors**, click the color swatch to select new colors.
     To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
 
-    Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
+    Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**.
 
     ![Change Color](images/change-color.png " ")
 
@@ -48,7 +48,7 @@ Notice that the new Theme Style you saved is displayed under the Theme Style lis
 
 8. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
 
-    ![Preferences Changed](images/preferences-changed.png " ")
+    ![Preferences Changed](images/preferences-change.png " ")
 
 ## Task 2: Import and Export Theme Styles
 
@@ -56,7 +56,7 @@ The Theme Roller dialog appears, displaying the styles for your application. You
 
 1. To import theme styles:
      - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
-     - From the Additional Options menu, select Import. A File Browser appears.
+     - From the Additional Options menu, select **Import**. A File Browser appears.
 
      You can download the theme-style JSON file from [**here**](files/vita-new.json) and import it into your application.
 
@@ -69,12 +69,12 @@ The Theme Roller dialog appears, displaying the styles for your application. You
      ![Preferences Changed](images/file-imported.png " ")
 
 2. To export theme styles:
-   From the Additional Options menu, select Export. This option exports the current style configuration into a JSON file.
+   From the Additional Options menu, select **Export**. This option exports the current style configuration into a JSON file.
 
      ![Preferences Changed](images/export-file.png " ")
 
 3. To reset theme styles:
-   From the Additional Options menu, select Reset.
+   From the Additional Options menu, select **Reset**.
    This option reverts any unsaved theme style changes.
 
      ![Preferences Changed](images/reset-file.png " ")

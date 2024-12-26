@@ -89,30 +89,19 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
         ```
         <copy>
         <div class="c-Hero #APEX$COMPONENT_CSS_CLASSES#" id="#APEX$DOM_ID#">
-           {if BACKDROP_VIDEO/}
-           <div class="c-Hero-video">#BACKDROP_VIDEO#</div>
-           {endif/}
-           <div class="c-Hero-body">
-           {if OVERLINE/}
-           <div class="c-Hero-overline">#OVERLINE#</div>
-           {endif/}
-           <h1 class="c-Hero-title">#APEX$TITLE#</h1>
-           {if DESCRIPTION/}
-           <div class="c-Hero-description">#DESCRIPTION#</div>
-           {endif/}
-           {if SEARCH/}
-           <div class="c-HeroSearch" role="search">
-           <div class="c-HeroSearch-input">#SEARCH#</div>
-           {if CATEGORY/}
-           <div class="c-HeroSearch-category">#CATEGORY#</div>
-           {endif/}
-           <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
-           {if ACTION/}
-           <div class="c-HeroSearch-action">#ACTION#</div>
-           {endif/}
-           </div>
-         {endif/}
-         </div>
+        <div class="c-Hero-body">
+        {if OVERLINE/}<div class="c-Hero-overline">#OVERLINE#</div>{endif/}
+        <h1 class="c-Hero-title">#APEX$TITLE#</h1>
+        {if DESCRIPTION/}<div class="c-Hero-description">#DESCRIPTION#</div>{endif/}
+        {if SEARCH/}
+        <div class="c-HeroSearch" role="search">
+        <div class="c-HeroSearch-input">#SEARCH#</div>
+        {if CATEGORY/}<div class="c-HeroSearch-category">#CATEGORY#</div>{endif/}
+        <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
+        {if ACTION/}<div class="c-HeroSearch-action">#ACTION#</div>{endif/}
+        </div>
+        {endif/}
+        </div>
         </div>
        ```
        </copy>
@@ -192,7 +181,7 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
 
 With the plug-in configured, you will add it to the Project Task Status page as a region. This will allow you to test the component's behavior and appearance within an application page.
 
-1. Navigate to **Application ID** and select **3 - Project Task Status**.
+1. Navigate to **Application ID** and select **3 - Tasks Status**.
 
     ![Select Theme to Redwood Light](images/go-to-3.png " ")
 
@@ -242,13 +231,15 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/status.png " ")
 
+    ![Select Theme to Redwood Light](images/status1.png " ")
+
 9. Also, drag **P3\_SELECT\_ALL** and **Update** button under **Project Task** region.
 
     ![Select Theme to Redwood Light](images/select-all.png " ")
 
     ![Select Theme to Redwood Light](images/update-drag.png " ")
 
-10. Select **P3\_SELECTION\_ID** and drag it under the **Project Task Status** region.
+10. Select **P3\_SELECTION\_ID** and drag it under the **Update Tasks Status** region.
 
     ![Select Theme to Redwood Light](images/selection-id-drag.png " ")
 
@@ -256,33 +247,39 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/delete-region.png " ")
 
-12. Select **Project Task Status** region and update **SQL query** with the following:
+12. Select **Project Task Status** region and in the Property Editor, enter/select the following:
 
-    ```
-    <copy>
+    - Under Source:
+
+        - Type: **SQL query**
+
+        - SQL Query: Copy and Paste with the following code:
+
+        ```
+        <copy>
         SELECT
-        ID,
-        PROJECT,
-        TASK_NAME,
-        START_DATE,
-        END_DATE,
-        STATUS,
-        ASSIGNED_TO,
-        COST,
-        BUDGET
-    FROM
-    DEMO_PROJECTS
-    WHERE
-    ( UPPER(TASK_NAME) LIKE '%'
+            ID,
+            PROJECT,
+            TASK_NAME,
+            START_DATE,
+            END_DATE,
+            STATUS,
+            ASSIGNED_TO,
+            COST,
+            BUDGET
+            FROM
+        DEMO_PROJECTS
+        WHERE
+        ( UPPER(TASK_NAME) LIKE '%'
                             || UPPER(:P3_SEARCH)
                             || '%'
-      OR UPPER(PROJECT) LIKE '%'
+        OR UPPER(PROJECT) LIKE '%'
                              || UPPER(:P3_SEARCH)
                              || '%'
-      OR ( TASK_NAME IS NULL
+        OR ( TASK_NAME IS NULL
            AND PROJECT IS NULL ) );
-    </copy>
-    ```
+        </copy>
+        ```
 
     ![Select Theme to Redwood Light](images/update-sql.png " ")
 

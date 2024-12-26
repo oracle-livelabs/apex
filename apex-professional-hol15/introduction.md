@@ -20,7 +20,7 @@ In this lab, you will:
 
 - Automate application workflows using scheduled actions.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 
