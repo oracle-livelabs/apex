@@ -22,6 +22,8 @@ In this lab, you will:
 
 - Synchronize Data from REST Data Sources.
 
+- Work with nested JSON data, flattening hierarchical structures for better display and interaction in APEX.
+
 - Load Data using Data Load Definitions.
 
 > **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
