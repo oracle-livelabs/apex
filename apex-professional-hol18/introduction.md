@@ -8,9 +8,9 @@ In this hands-on lab, you will enhance your Oracle APEX applications by creating
 
 ### Recap
 
-In the last hands-on lab, you learned to incorporate social sign-in (Google) into the online shopping application.
+In the last hands-on lab, you learned to incorporate multi-level authentication into the online shopping application.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -28,7 +28,7 @@ In the last hands-on lab, you learned to incorporate social sign-in (Google) int
 
 - Configure pages for public access and add them to the navigation menu for enhanced usability.
 
-Estimated Time: 20 minutes
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 

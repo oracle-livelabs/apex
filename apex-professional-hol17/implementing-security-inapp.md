@@ -216,7 +216,7 @@ To run the app, please run the steps described in
 
     - Name: **APEX Social Authentication**
 
-    - Under Authorized redirect URLs, Click **+Add URl**
+    - Under Authorized redirect URLs, click **+Add URl**
 
         - URls 1: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
 
@@ -264,7 +264,7 @@ To run the app, please run the steps described in
 
     ![Select Shared Components](images/select-shared-components.png " ")
 
-18. Under **Security**, Select **Authentication Schemes**.
+18. Under **Security**, select **Authentication Schemes**.
 
     ![Select Authentication Schemes](images/select-authentication.png " ")
 

@@ -72,7 +72,7 @@ In this task, you will create a new Map page in your Oracle APEX application to 
 
     ![Click Create Page](images/create-map6.png " ")
 
-6. The Store Locations Map should be visible to the Public. Select **Page 22: Store Locations Map** in the Rendering tree to set the page as Public. In the Property Editor, navigate to **Security**, and for **Authentication**, select **Page is Public**.
+6. The Store Locations Map should be visible to the Public. Select **Page 22: Store Locations Map**, in the **Rendering** tree to set the page as **Public**. In the Property Editor, navigate to **Security**, and for **Authentication**, select **Page is Public**.
 
     ![Edit Authentication as Public](images/make-page-public.png)
 
@@ -144,7 +144,7 @@ In this task, you will create a new Map page in your Oracle APEX application to 
 
 20. For **List Entry**, enter/select the following:
 
-    - Entry > List Entry Label: **Store Locations Map**.
+    - Entry > List Entry Label: **Store Locations Map**
 
     - Under Target > Page: **22**
 

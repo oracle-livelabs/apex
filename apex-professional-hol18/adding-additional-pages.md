@@ -44,9 +44,9 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 4. In the **Create Calendar**, enter/select the following:
 
-    - Page Definition > Name **Calendar**.
+    - Page Definition > Name: **Calendar**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**.
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
 
     Click **Next**.
 
@@ -68,11 +68,11 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
     ![Click Edit Page](images/save-run.png " ")
 
-7. In the Developer Toolbar, click **Edit Page \<n\>**.
+7. In the Developer Toolbar, click **Edit Page 5**.
 
     ![Click Edit Page](images/view-page1.png " ")
 
-8. The Calendar page displays the **Region title Calendar** and has a border around the region. In the Rendering tree, navigate to **Calendar** region. In the Property Editor, enter/select the following:
+8. The Calendar page displays the Region title as Calendar and has a border around the region. In the **Rendering** tab, navigate to **Calendar** region. In the Property Editor, enter/select the following:
 
     - Appearance > Template Options: Click **Use Template Defaults**
 
@@ -80,7 +80,7 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
         - Style: **Remove UI Decoration**
 
-         Click **OK**
+         Click **OK**.
 
     ![Edit Template Options](images/edit-calendar1.png " ")
 
@@ -92,7 +92,7 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 Forms are essential for capturing user input and updating database records. In this task, you will create a Form Page for the DEMO_PROJECTS table. This form will later be linked to the Calendar to allow users to create and edit calendar events.
 
-1. Navigate to Create **(+ v)** in the page designer toolbar and select **Page**.
+1. Navigate to Page Designer toolbar, click **(+ v)** icon and select **Page**.
 
     ![Click Create Page](images/create-form-page1.png " ")
 
@@ -104,19 +104,19 @@ Forms are essential for capturing user input and updating database records. In t
 
     - Under Page Definition:
 
-        - Page Number: **9**.
+        - Page Number: **9**
 
-        - Name: **Form on Projects**.
+        - Name: **Form on Projects**
 
-        - Page Mode: **Modal Dialog**.
+        - Page Mode: **Modal Dialog**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**.
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
 
     Click **Next**.
 
    ![Select Modal Dialog](images/create-form-page3.png " ")
 
-4. Leave as default and click **Create Page**.
+4. Leave everything as default and click **Create Page**.
 
     ![Click Create page](images/create-form-page4.png " ")
 
@@ -134,23 +134,21 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
     - Under Settings:
 
-      - Primary Key Column: **ID**
+        - Primary Key Column: **ID**
 
-      - Create Link: Click **No Link Defined**.
+        - Create Link: Click **No Link Defined**.
 
-          - Page: **9**
+            - Page: **9**
 
-          - Clear Cache:**9**
+            - Clear Cache:**9**
 
-          Click **OK**
+            Click **OK**
 
-      - View/Edit Link: Click **No Link Defined**.
+    - View/Edit Link: Click **No Link Defined**.
 
         - Page: **9**
 
-        - Name: **P9_ID**
-
-        - Value : Select **ID** or Enter **&ID**.
+        - Set Items: Name: **P9_ID** and Value : Select **ID** or Enter **&ID**.
 
         - Clear Cache: **9**
 
@@ -158,7 +156,7 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
    ![Add Link](images/customizing-calendar6.png " ")
 
-4. Use the component attribute **Drag and Drop**to enable the calendar to drag and drop. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then, enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs an SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events' primary key value and the new start and end timestamp.
+4. Use the component attribute **Drag and Drop** to enable the calendar to drag and drop. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then, enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs an SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events' primary key value and the new start and end timestamp.
 
     - Under Settings:
 
