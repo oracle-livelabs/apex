@@ -36,51 +36,53 @@ Estimated Time: 20 minutes
 
     ![Define Authentication](images/select-confidential.png " ")
 
-7. Enter a **Name** for your application and click **Next**.
+7. Enter a **Name** for your application.
 
     ![Define Authentication](images/click-next.png " ")
 
-8. Select **Authorization code** as the **Allowed Grant Type** and click **Next**.
+8. Under **Authentication and authorization** , enable **Enforce grants as authorization** and click **Next**.
 
-9. For **Redirect URL**, enter: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+     [Define Authentication](images/click-next1.png " ")
 
-10. For **Post-logout redirect URL**, enter: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
+9. Under **Client configuration**, enter/select the following:
 
-11. Click **Next**.
+    - Under Authorization:
+
+        - Allowed grant types: Enable **Authorization code** (This will be used later to control access to the Oracle APEX application)
+
+        - Redirect URL**: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+
+        - Post-logout redirect URL: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
+
+    Click **Next**.
 
     ![Define Authentication](images/confidential-details.png " ")
 
-12. Under **Configure policy**, leave as default and click **Finish**.
+10. Under **Configure policy**, leave as default and click **Finish**.
 
     ![Define Authentication](images/add-confidential.png " ")
 
-13. Click **Edit application** and select **Enforce grant as Authorization** under **Authentication and Authorization** (This will be used later to control access to the Oracle APEX application).
-
-    ![Define Authentication](images/edit-app.png " ")
-
-    ![Define Authentication](images/enforce-grants.png " ")
-
-14. Click **Activate** and **Activate application**.
+11. Click **Activate** and **Activate application**.
 
     ![Define Authentication](images/click-activate.png " ")
 
     ![Define Authentication](images/activate-app.png " ")
 
-15. Copy the *Client ID* and *Client secret* which we will use in the configuration on Oracle APEX.
+12. Copy the *Client ID* and *Client secret* which we will use in the configuration on Oracle APEX.
 
     ![Define Authentication](images/copy-clientid.png " ")
 
-16. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
+13. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
 
-17. Select **Web Credentials**.
+14. Select **Web Credentials**.
 
     ![Define Authentication](images/select-web-creds.png " ")
 
-18. Under **Web Credentials**, click **Create**.
+15. Under **Web Credentials**, click **Create**.
 
     ![Define Authentication](images/create-web-creds.png " ")
 
-19. Enter/select the following information:
+16. Enter/select the following information:
 
     - Name: **OCI IAM Credentials**
 
@@ -96,33 +98,33 @@ Estimated Time: 20 minutes
 
     ![Define Authentication](images/iam-creds.png " ")
 
-20. Assign a user to this application. Navigate back to your Oracle cloud console, select **Users** and click **Assign users**.
+17. Assign a user to this application. Navigate back to your Oracle cloud console, select **Users** and click **Assign users**.
 
     ![Define Authentication](images/add-users.png " ")
 
     ![Define Authentication](images/assign-users.png " ")
 
-21. Also, under **Groups**, assign the group to the user you created.
+18. Also, under **Groups**, assign the group to the user you created.
 
-22. Add a user *First name, Last name and Email* and click **Assign**.
+19. Add a user *First name, Last name and Email* and click **Assign**.
 
     ![Define Authentication](images/assign-groups.png " ")
 
-23. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
+20. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
 
-24. Click **Shared Components**. Under Security, click **Authentication Schemes**.
+21. Click **Shared Components**. Under Security, click **Authentication Schemes**.
 
     ![Define Authentication](images/shared-comp-auth.png " ")
 
     ![Define Authentication](images/select-auth-scheme.png " ")
 
-25. Click **Create**.
+22. Click **Create**.
 
     ![Define Authentication](images/create-auth.png " ")
 
-26. Enter/select the following information:
+23. Enter/select the following information:
 
-    - Name: **OCI IAM Authentication Scheme**
+    - Name: **IAM**
 
     - Scheme Type: **Social Sign-In**
 
