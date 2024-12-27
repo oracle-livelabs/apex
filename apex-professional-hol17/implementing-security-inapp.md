@@ -254,7 +254,7 @@ Estimated Time: 20 minutes
 
 19. In the **Authentication Schemes** page, click **Create**.
 
-    ![Click Create](images/click-create2.png " ")
+    ![Click Create](images/click-create22.png " ")
 
 20. Under **Create Authentication Scheme** page, leave the settings to default and click **Next**.
 
@@ -264,41 +264,31 @@ Estimated Time: 20 minutes
 
     - Under Name:
 
-        - Name: **Google Authentication**.
+        - Name: **Google**
 
-        - Scheme Type: **Social Sign-In**.
+        - Scheme Type: **Social Sign-In**
 
     - Under Settings:
 
-        - Credential Store: **Google SignIn**.
+        - Credential Store: **Google SignIn**
 
-        - Authentication Provider: **Google**.
+        - Authentication Provider: **Google**
 
-        - Scope: **profile,email**.
+        - Scope: **profile,email**
 
-        - Username: Enter **name**.
+        - Username: **name**
 
-        - Additional User Attributes: Enter **email, name, roles**
+        - Additional User Attributes: **email, name, roles**
 
-        Click **Create Authentication Scheme**
+        Click **Create Authentication Scheme**.
 
     ![Define Authentication](images/create-auth2.png " ")
 
-22. Click **Run**.
+22. Click **Google** authentication, under **Login Processing**, select **Enabled** for **Switch in Session**. Do the same for **OCI** authentication as well.
 
-    ![Authentication scheme displayed](images/click-run.png " ")
+    ![Define Authentication](images/create-auth4.png " ")
 
-23. In the **User Interface**, click **Administration**.
-
-    ![Click Administration](images/run-app2.png " ")
-
-24. Log in to the application using your **Google Credentials**.
-
-    ![Login into Facebook](images/google-login1.png " ")
-
-25. You are now logged in to the **Online Shopping Application**. Check the user name on the top right of the **Navigation Bar**.
-
-    ![Check username on the top of the Navigation Bar](images/run-app3.png " ")
+    ![Define Authentication](images/create-auth3.png " ")
 
 ## Task 3: Enable Multiple Authentication in Online Shopping Application
 
