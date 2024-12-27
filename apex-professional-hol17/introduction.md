@@ -15,13 +15,15 @@ Estimated Time: 20 minutes
 
 ### Objectives
 
+In this lab, you will:
+
 - Configure Oracle IAM authentication for an application.
 
 - Implement Google Authentication for seamless social sign-in.
 
 - Enable multiple authentication schemes within an Oracle APEX application.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
 
 ## Learn More - *Useful Links*
 

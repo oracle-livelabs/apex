@@ -8,9 +8,25 @@ This hands-on lab demonstrates how to integrate these features step-by-step, ens
 
 Estimated Time: 20 minutes
 
+### Objectives
+
+In this lab, you will:
+
+- Configure Oracle IAM authentication for an application.
+
+- Implement Google Authentication for seamless social sign-in.
+
+- Enable multiple authentication schemes within an Oracle APEX application.
+
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+ Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace.
+
+To run the app, please run the steps described in
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Configure Oracle IAM Authentication in Online Shopping Application
 
@@ -334,6 +350,8 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Click **OK**
 
+        - Icon: **fa-oracle-o**
+
     - Under Behavior:
 
         - Action: **Redirect to Page in this Application**
@@ -342,11 +360,9 @@ Providing multiple authentication options improves the flexibility and usability
 
             - Target > Page: **10000**
 
-            - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=IAM**
+            - Advanced > Request: **APEX_AUTHENTICATION=IAM**
 
             - Click **OK**
-
-        - Icon: **fa-oracle-o**
 
     ![Define Authentication](images/iam-btn.png " ")
 
@@ -370,6 +386,8 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Click **OK**
 
+        - Icon: **fa-google**
+
     - Under Behavior:
 
         - Action: **Redirect to Page in this Application**
@@ -381,8 +399,6 @@ Providing multiple authentication options improves the flexibility and usability
             - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
 
             - Click **OK**
-
-        - Icon: **fa-google**
 
     ![Define Authentication](images/google-btn1.png " ")
 
@@ -406,6 +422,8 @@ Providing multiple authentication options improves the flexibility and usability
     ![Define Authentication](images/inline-css1.png " ")
 
 9. Click **Save and Run**.
+
+    > **Note:** _If you get reader rights error while clicking on any authentication button, navigate to **User Interface Attributes** in shared components. Select **Security** tab and update **Authorization Scheme** to **- No application authorization required -**.
 
     ![Define Authentication](images/multi-auth1.png " ")
 
