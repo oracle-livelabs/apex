@@ -16,12 +16,17 @@ Estimated Time: 20 minutes
 
 ### Objectives
 
-* Create Installation Scripts
-* Create Data Packages
-* Export application with supporting Objects.
-* Use Remote Deployment to deploy your Application.
+- Create a Working Copy of an Application.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+- Create Installation Scripts.
+
+- Create Data Packages.
+
+- Export application with supporting Objects.
+
+- Use Remote Deployment to deploy your Application.
+
+> **Note:** This workshop assumes you are using Oracle APEX 24.2.
 
 ## Learn More - *Useful Links*
 
