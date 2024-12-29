@@ -22,15 +22,15 @@ In this lab, you:
 
 1. Navigate to the **Demo Projects** Application.
 
-    ![select the application](images/select-demo-projects.png " ")
+    ![select the application](images/select-demo-projects1.png " ")
 
-2. Select **shared components**.
+2. Select **Shared Components**.
 
     ![Select Shared Components](images/navigate-to-shared-components.png " ")
 
-3. In the Shared Components, under User Interface, Select **Progressive Web App**.
+3. Under **User Interface**, select **Progressive Web App**.
 
-    ![Select Progressive Web App](images/navigate-to-pwa.png " ")
+    ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
 4. Set **Installable** to **Yes** and click **Apply Changes**.
 
@@ -52,11 +52,13 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![click upload Screenshot](images/upload-screenshot.png " ")
 
-    *You can download the images by clicking on the links below:*
-    - [**app-screenshot-1.png**](images/app-screenshot-1.png)
-    - [**app-screenshot-2.png**](images/app-screenshot-2.png).
+    > **Note:** You can download the images by clicking on the links below:
 
-4. From your local system, select the Screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system. And then, Click **Create**.
+    - [**app-screenshot-1.png**](images/app-screenshot-1.png)
+
+    - [**app-screenshot-2.png**](images/app-screenshot-2.png)
+
+4. From your local system, select the screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system and click **Create**.
 
     ![select app screenshot one](images/select-app-screenshot1.png " ")
 
@@ -70,7 +72,7 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![click apply changes](images/click-apply-changes.png " ")
 
-    *Note:*
+    > **Note:**
 
     - *View the compatibility matrix for the* **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
 
