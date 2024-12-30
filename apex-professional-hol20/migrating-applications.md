@@ -28,7 +28,7 @@ In this lab, you will:
 
 2. Select the **Demo Projects** application.
 
-    ![Navigate to Demo Projects](images/select-demo-projects.png " ")
+    ![Navigate to Demo Projects](images/select-demo-project.png " ")
 
 3. Click **Supporting Objects**.
 
@@ -42,37 +42,39 @@ In this lab, you will:
 
     ![Click Create](images/click-create.png " ")
 
-6. Select **Create from Database Object** under **Create Script**.
+6. Select **Create from Database Object**.
 
     ![Click Create from database object](images/create-script1.png " ")
 
-7. Under **Script Attributes**, select the below options and click **Next**.
+7. Under **Script Attributes**, enter/select the following:
 
-    - Name: **Database Objects**.
+    - Name: **Database Objects**
 
     - Object Type: **Table**
 
+    Click **Next**.
+
     ![Define Script Attributes](images/create-script2.png " ")
 
-8. Now, set the following attributes and then click **Next**.
-
-    - For **Object**, select and move the tables **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** to the right side.
+8. For **Object**, select and move the tables **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** to the right side.
 
     ![Set Attributes and click next](images/create-script3.png " ")
 
-9. You will now see the **Scripts** created. Click **Create**.
+9. Click **Create**.
 
-    ![Click Create](images/create-script4.png " ")
+    ![Click Create](images/click-create-scripts.png " ")
 
-10. Now, you will see that the Scripts got created and saved. You will need to include **Data** in your **Supporting Objects**. Select **Create Data Package** under **Tasks** on the right side of your page.
+10. To include data in your Supporting Objects, select **Create Data Package** under **Tasks** on the right side of your page.
 
     ![Click Create Data Package](images/select-data-packages.png " ")
 
-11. Under **Script Attributes**, select the following and click **Next**.
+11. Under **Script Attributes**, enter/select the following:
 
     - Name: **data.sql** (Script Name should be Unique)
 
     - Tables: ensure **DEMO\_PROJECTS** and **EBA\_DEMO\_IR\_EMP** are listed on the right side, and if not, select and shuttle these two tables over there.
+
+    Click **Next**.
 
     ![Define Security Attributes](images/create-data-packages.png " ")
 
@@ -80,7 +82,7 @@ In this lab, you will:
 
     ![Create Script](images/create-data-packages1.png " ")
 
-13. The Scripts are now created. Navigate back to the application and select **Export/Import**.
+13. The Scripts are now created. Navigate to the Application ID and select **Export/Import**.
 
     ![Script Created](images/navigate-to-app1.png " ")
 
@@ -90,13 +92,11 @@ In this lab, you will:
 
     ![Select Export and click Next](images/export-app1.png " ")
 
-15. In the **Export Application** page, under **Export Preferences**, select **Yes and Install on Import Automatically**
-
-16. Click **Export**.
+15. For Supporting Object Definitions, select **Yes and Install on Import Automatically** and click **Export**.
 
     ![Select Yes and Install on Import Automatically](images/export-app2.png " ")
 
-17. You will now notice that the application is downloaded as **fNNN.sql**
+16. You will now notice that the application is downloaded as **fNNN.sql**
 
     ![File downloaded](images/exported-app.png " ")
 
@@ -126,11 +126,11 @@ In this lab, you will login into a new workspace or the workspace you created in
 
     ![Click Next](images/click-next.png " ")
 
-5. Under **Install**, set **Build Status** to **Run and Build Application**. Leave the remaining settings to default and click **Install Application**.
+5. Click **Install Application**.
 
     ![Click Install Application](images/install-app1.png " ")
 
-6. In the **Application Installed Wizard**, click **Install Supporting Objects**.
+6. In the **Application Installed** wizard, click **Install Supporting Objects**.
 
     ![Click Next](images/install-so1.png " ")
 
@@ -138,7 +138,7 @@ In this lab, you will login into a new workspace or the workspace you created in
 
     ![Application installed , Click Edit Application](images/install-app3.png " ")
 
-8. Click on the Arrow mark next to **SQL Workshop** and click **Object Browser**.
+8. Navigate to **SQL Workshop** and click **Object Browser**.
 
     ![Navigate to Object Browser](images/object-browser1.png " ")
 
