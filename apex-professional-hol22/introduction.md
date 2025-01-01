@@ -10,9 +10,21 @@ In this context, Workflows entail the automation of business processes, whether 
 
 With the first release of APEX Workflows, you can harness the following capabilities:
 
-- **Visual Workflow Designer**: Craft and author workflow models with ease
-- **Workflow Console**: Monitor and administer workflows efficiently
-- **Workflow Runtime (Engine)**: Execute workflows seamlessly
+- **Visual Workflow Designer**: Craft and author workflow models with ease.
+
+- **Workflow Console**: Monitor and administer workflows efficiently.
+
+- **Workflow Runtime (Engine)**: Execute workflows seamlessly.
+
+- **Workflow Runtime**: Runtime Engine for the execution of Workflows.
+
+- **Workflow API’s**: Public API (APEX_WORKFLOW package) and SQL Views.
+
+- **Approval Component**: Feature rich Approval Component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
+
+- **Workflow Dashboard**: For overview of in-flight instances.
+
+- **Visual Workflow Diagram**: To depict progress of Workflow at runtime.
 
 Estimated Time: 2 hours 35 minutes
 
@@ -28,14 +40,21 @@ Stay tuned for a journey into the world of streamlined business process manageme
 
 In this workshop, you will:
 
-- Identify the manual and automated steps of your business process
-- Create the APEX application
-- Create the Doctor Appointment Workflow
-- Add Human Tasks to the Workflow
-- Add Activities and Connections to the Workflow
-- Create Pages for the APEX application
+- Identify the manual and automated steps of your business process.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+- Create the APEX application.
+
+- Create the Doctor Appointment Workflow.
+
+- Add Invoke Workflow.
+
+- Add Human Tasks to the Workflow.
+
+- Add Activities and Connections to the Workflow.
+
+- Create Pages for the APEX application.
+
+> **Note:** This workshop assumes you are using Oracle APEX 24.2.
 
 ### Downloads
 

@@ -593,7 +593,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
         - Dashboard Page Name: **Dashboard**
 
-        - Form Page Name: **Appointment**. This is used for the Workflow Details page.
+        - Form Page Name: **Form on Appointment**. This is used for the Workflow Details page.
 
     - Navigation > Breadcrumb Parent Entry: **Home (Page 1)**
 

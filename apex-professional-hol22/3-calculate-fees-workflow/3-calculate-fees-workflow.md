@@ -8,11 +8,11 @@ In this lab, you learn the process of creating a calculate fees Workflow using O
 
 In this lab, you learn how to:
 
-- Create a Workflow
+- Create a Workflow.
 
-- Modify the Workflow details
+- Modify the Workflow details.
 
-- Define Workflow Data
+- Define Workflow Data.
 
 - Add Workflow Variables
 
@@ -96,6 +96,7 @@ To create a Workflow:
   | Invoke API             | Invokes a procedure or function inside a PL/SQL package or an API from a REST Data Source.                              | Yes                                                    |
   | Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
   | Send E-Mail            | Sends an Email based on the Email settings.                                                                             | Yes                                                    |
+  | Invoke Workflow          | An activity that invokes another workflow in the current application.settings.                                                                             | Yes                                                    |
   | Human Task - Create    | Creates an Approval or Action Task based on the Task Definition specified. Once the task is created, the activity and workflow go into the Waiting state until the task is completed/approved/rejected by its owner/errors out/expires. | No                                                     |
   | Wait                   | Denotes a deliberate pause in the workflow execution. At runtime, the workflow pauses execution when it encounters a Wait Activity. A Wait Activity can have timeout specifications. When the specified time has elapsed, the workflow resumes execution. A Wait Activity can also be interrupted by calling apex\_workflow.continue\_activity() passing the Static ID of the Wait Activity and the Workflow Instance ID as parameters. | No                                                     |
   | Switch                 | Denotes a fork or conditional branching in a workflow execution. After adding a switch activity, the developer must define branches or connections out of the switch activities with the appropriate conditions specified. | Yes                                                    |
@@ -111,15 +112,15 @@ To create a Workflow:
   | Switch connections | Connections leading out of a Switch Activity. They are conditional in nature.                                      |
   {: title="List of Connection Types"}
 
-## Task 4: Add Inputs to the Doctor Appointments Workflow
+## Task 4: Add Inputs to the Calculate fees Workflow
 
 In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
 Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the Hospital Staff submitting patient details to the system, marking the commencement of the workflow.
 
-The inputs to the workflow will be the patient details. In workflow terminlogy, these are called **Workflow Parameters**.
+The inputs to the workflow will be the patient details. In workflow terminology, these are called **Workflow Parameters**.
 
-You will define the following parameters for the Doctor Appointment Workflow:
+You will define the following parameters for the Calculate fees Workflow:
    BOOKING\_ID,
    DNO,
    PATIENT\_NAME, PATIENT\_EMAIL, REQUEST\_DATE, STATUS
@@ -150,8 +151,6 @@ You will define the following parameters for the Doctor Appointment Workflow:
   {: title="List of Parameters to be Created"}
 
 ## Task 5: Add Workflow Variables
-
-**Why Parameters and Additional Data are not enough?!**
 
 The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
