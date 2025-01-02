@@ -52,7 +52,9 @@ The first step in the business logic is to check if the appointment is a follow-
 
 5. In the Property Editor, enter/select the following:
 
-Condition > When: True
+    - Condition > When: True
+
+    ![Adding a new switch activity](./images/config-switch-activity3.png " ")
 
 ## Task 3: Create Activity Variable for Free Consultation
 
@@ -288,6 +290,8 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 3. Select the connection between **Raise Invoice Request** and **End** activity and update the following:
 
     - Activity > To: **End**
+
+    ![Configure timeout connection](./images/configure-conn.png " ")
 
 ## Task 9: Add Execute Activity to set Status as Approved
 
