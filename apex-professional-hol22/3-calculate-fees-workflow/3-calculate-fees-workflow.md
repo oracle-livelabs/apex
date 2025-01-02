@@ -176,7 +176,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 3. Similarly, create a variable called **Fees**. In the Property Editor, enter/select the following:
 
-    - Identification > Static ID: **Fees**
+    - Identification > Static ID: **FEES**
 
     - Label > Label: **Fees**
 

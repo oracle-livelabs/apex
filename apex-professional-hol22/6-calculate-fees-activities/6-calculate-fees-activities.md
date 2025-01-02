@@ -18,7 +18,7 @@ Estimated Time: 45 minutes
 
 ## Task 1: Navigate to Workflow Designer
 
-Now that we have defined the Approval and Action tasks, let us go back to the Doctor Appointment Workflow and resume from where we left off.
+Now that we have defined the Approval and Action tasks, let us go back to the Calculate Fees Workflow and resume from where we left off.
 
 1. Navigate to **Shared Components**.
 
@@ -34,7 +34,7 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
 
 ## Task 2: Add the Switch Activity for followup-check
 
-The next step in the business logic is to check if the appointment is a follow-up visit for the patient. If this is a patient returning in less than a week, the visit is considered to be a follow-up and is free of charge, otherwise, a charge of 500 is levied.
+The first step in the business logic is to check if the appointment is a follow-up visit for the patient. If this is a patient returning in less than a week, the visit is considered to be a follow-up and is free of charge, otherwise, a charge of 500 is levied.
 
 1. Open the workflow diagram in the workflow editor.
 
@@ -48,13 +48,17 @@ The next step in the business logic is to check if the appointment is a follow-u
 
     ![Adding a new switch activity](./images/config-switch-activity2.png " ")
 
-4. Now, attach the connection from the **Start** Activity and re-attach it to this **Switch** Activity.
+4. Now, select the connection(Arrow) leading out of the Switch activity, Free Consultation?, you created in the previous task.
+
+5. In the Property Editor, enter/select the following:
+
+Condition > When: True
 
 ## Task 3: Create Activity Variable for Free Consultation
 
-The Switch condition's outcome should be based on a calculation of the number of days since the patient's last visit to the same doctor. To store the calculation result, we will create an Activity Variable for the **Free Consultation?** Activity.
+The Switch condition's outcome should be based on a calculation of the number of days since the patient's last visit to the same doctor. To store the calculation result, we will create an Activity Variable for the **Free Consultation?** activity.
 
-> *Points to Noted:*
+>**Points to Noted:**
 >- **Workflow Activity variables** are specific/local to the execution of a workflow activity. These variables may be referenced:
     - During Activity execution.
     - During the evaluation of a Switch condition.
@@ -134,7 +138,7 @@ The next step is to establish connections for Free Consultation branches with ac
 
 3. Notice, there are some fields marked in Red. The **Update Fees** function has five Parameters, highlighted in RED to show that they are required.
 
-4. Navigate to **Update Fees** activity and select **Function Result**. In the Property Editor, enter/select the following:
+4. Under **Update Fees** activity and select **Function Result** parameter. In the Property Editor, enter/select the following:
 
     - Value > Item > **Version Variables**: **FEES**
 
@@ -146,7 +150,7 @@ The next step is to establish connections for Free Consultation branches with ac
     |---------|--------|
     |p\_doctor\_id| Static Value > **&DNO.**|
     |p\_request\_date| Workflow Parameters > **REQUEST_DATE**|
-    |p\_booking\_id|Version Variables > **BOOKING_ID**|
+    |p\_booking\_id| Workflow Parameters > **BOOKING_ID**|
     |p\_patient\_name| Workflow Parameters > **PATIENT\_NAME**|
 
 6. From the **Activities Palette**, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
@@ -237,13 +241,13 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
 6. Similarly, set the remaining parameters under **Raise Invoice Request** as follows:
 
-    - For **Fees**, Under Value:
+    - For **Fees**, under Value:
 
         - Type: **Item**
 
         - Item > Version Variables **FEES**
 
-    - For **Patient Name**, Under Value:
+    - For **Patient Name**, under Value:
 
         - Type: **Item**
 
@@ -253,7 +257,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
 ## Task 7: Add Execute Activity to set Status as Rejected
 
-1. From the **Activities Palette**, drag and drop a **Execute** activity and place it beside **Raise Invoice Request** activity.
+1. From the **Activities Palette**, drag and drop an **Execute Code** activity and place it beside **Raise Invoice Request** activity.
 
 2. In the Property Editor, enter/select the following:
 
@@ -277,11 +281,17 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
         - Type: **Timeout**
 
+        - To: **Set Status to Rejected**
+
    ![Configure timeout connection](./images/configure-timeout-prop.png " ")
+
+3. Select the connection between **Raise Invoice Request** and **End** activity and update the following:
+
+    - Activity > To: **End**
 
 ## Task 9: Add Execute Activity to set Status as Approved
 
-1. From the **Activities Palette**, drag and drop a **Execute** activity and place it between **Raise Invoice Request** and **End** activity.
+1. From the **Activities Palette**, drag and drop a **Execute Code** activity and place it between **Raise Invoice Request** and **End** activity.
 
 2. In the Property Editor, enter/select the following:
 
@@ -303,7 +313,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
 ## Summary
 
-You have successfully created and configured the workflow for the 'Doctor's Appointment Made Easy!' application.
+You have successfully created and configured the Calculate Fees workflow for the 'Doctor's Appointment Made Easy!' application.
 
 ### What's Next
 
