@@ -78,36 +78,7 @@ To create a Workflow:
 
 6. Click **Save**. The changes are saved successfully.
 
-## Task 3: Familiarize with Workflow Elements
-
-1. At this stage, let's explore the fundamental elements and terminology of a workflow. You have introduced the notions of Activities and Connections in the Workflow. Now, let's take a moment to understand the different types of workflow elements and terms such as Activities, Connections, and Connection Types.
-
-2. Refer to the Activity Palette at the bottom in the Designer for a list of activity types.
-
-  ![Check activities palette](./images/activities-palette.png " ")
-
-  | Activity Type         | Description                                                                                                              | Blocks the workflow engine until execution completes? |
-  |------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-  | Execute Code           | Executes PL/SQL Code                                                                                                     | Yes                                                    |
-  | Invoke API             | Invokes a procedure or function inside a PL/SQL package or an API from a REST Data Source.                              | Yes                                                    |
-  | Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
-  | Send E-Mail            | Sends an Email based on the Email settings.                                                                             | Yes                                                    |
-  | Human Task - Create    | Creates an Approval or Action Task based on the Task Definition specified. Once the task is created, the activity and workflow go into the Waiting state until the task is completed/approved/rejected by its owner/errors out/expires. | No                                                     |
-  | Wait                   | Denotes a deliberate pause in the workflow execution. At runtime, the workflow pauses execution when it encounters a Wait Activity. A Wait Activity can have timeout specifications. When the specified time has elapsed, the workflow resumes execution. A Wait Activity can also be interrupted by calling apex\_workflow.continue\_activity() passing the Static ID of the Wait Activity and the Workflow Instance ID as parameters. | No                                                     |
-  | Switch                 | Denotes a fork or conditional branching in a workflow execution. After adding a switch activity, the developer must define branches or connections out of the switch activities with the appropriate conditions specified. | Yes                                                    |
-  | Workflow Start         | Denotes the Start of a workflow. A workflow model must have exactly one Start Activity.                                   | Yes                                                    |
-  | Workflow End           | Denotes the End of a workflow. Depending on the End State attribute of this activity, the Workflow is either Completed or Terminated. | Yes                                                    |
-  {: title="List of Activity Types"}
-
-  | Connection Type | Description                                                                                                        |
-  |------------------|--------------------------------------------------------------------------------------------------------------------|
-  | Normal           | Connects two activities in the workflow. No conditions. Not applicable for Switch Activities                         |
-  | Timeout          | If an activity has a due date specified, the timeout connection can be used to move the workflow to an alternate target activity in case the current activity execution times out. Not applicable for Switch and Wait activities.  |
-  | Error            | Allows for efficient error management within the workflow without letting it go into a state of exception. Not applicable for Switch activities.                                      |
-  | Switch connections | Connections leading out of a Switch Activity. They are conditional in nature.                                      |
-  {: title="List of Connection Types"}
-
-## Task 4: Add Inputs to the Doctor Appointments Workflow
+## Task 3: Add Inputs to the Doctor Appointments Workflow
 
 In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
@@ -142,7 +113,7 @@ You will define the following parameters for the Doctor Appointment Workflow:
 
 4. Click **Save**.
 
-## Task 5: Use the parameters in the Workflow Subject
+## Task 4: Use the parameters in the Workflow Subject
 
 The Workflow has a Title field which is a descriptive title for the Workflow and shows up in the Workflow Console that the Hospital Staff will eventually use to monitor the progress of the appointment process. The Title supports using workflow parameter static IDs as substitution strings.
 
@@ -154,7 +125,7 @@ The Workflow has a Title field which is a descriptive title for the Workflow and
 
 3. Click **Save**.
 
-## Task 6: Add Additional Data to the Workflow
+## Task 5: Add Additional Data to the Workflow
 
 In addition to the input parameters, the Workflow also needs information about the available doctors based on the patient's problem. An understanding of the appointment process tells us that all activities of the workflow need the doctor data.
 
@@ -176,7 +147,7 @@ In addition to the input parameters, the Workflow also needs information about t
 
 > **Note:** _Now, all the columns' values of the DOCTOR table will be available as Bind Variables or Substitution Strings at all points and by all activities during the execution of this Workflow._
 
-## Task 7: Add Workflow Variables
+## Task 6: Add Workflow Variables
 
 **Why Parameters and Additional Data are not enough?!**
 

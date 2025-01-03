@@ -598,7 +598,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     ![create and config send email](./images/add-send-email.png " ")
 
-12. Click **Save**. At this point, our Appointment Workflow model is **Complete!**.
+12. Click **Save**. At this point, our Appointment Workflow model is **Complete!**
 
 ## Summary
 

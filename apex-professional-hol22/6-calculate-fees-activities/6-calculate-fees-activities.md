@@ -60,7 +60,7 @@ The first step in the business logic is to check if the appointment is a follow-
 
 The Switch condition's outcome should be based on a calculation of the number of days since the patient's last visit to the same doctor. To store the calculation result, we will create an Activity Variable for the **Free Consultation?** activity.
 
->**Points to Noted:**
+>**Points to be Noted:**
 >- **Workflow Activity variables** are specific/local to the execution of a workflow activity. These variables may be referenced:
     - During Activity execution.
     - During the evaluation of a Switch condition.

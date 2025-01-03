@@ -54,7 +54,7 @@ Estimated Time: 5 minutes
 
 ## Task 2: Activate the Workflow
 
-1. On the Workflow Definition page, right-click **Calculate Fees** workflow and select **Activate** as well as click **OK** to confirm.
+1. On the Workflow Definition page, go to **Calculate Fees** workflow and under **1.0** workflow version, right-click and select **Activate** as well as click **OK** to confirm.
 
     ![wait for feedback](./images/activate-cal.png " ")
 

@@ -140,7 +140,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
 15. In the property editor, enter/select the following:
 
-      - Identification > Name: **Submit**
+      - Identification > Button Name: **Submit**
 
       - Layout > Slot: **Create**
 
@@ -210,7 +210,7 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
     - Breadcrumb Parent Entry: **Home (Page 1)**
 
-    Click **Create Page**. A unified Task List page is created.
+    Click **Create Page**.
 
     ![create patient tasks](./images/create-patient-tasks.png " ")
 
