@@ -13,10 +13,12 @@ Estimated Time: 10 minutes
 In this workshop, you will:
 
 - Obtain a free APEX development environment.
+
 - Navigate through the major Components of Oracle APEX.
+
 - Install and run a Packaged Application.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** This workshop assumes you are using Oracle APEX 24.2.
 
 ## Learn More - *Useful Links*
 

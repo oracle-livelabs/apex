@@ -10,7 +10,7 @@ In this workshop, you create the database objects required to build the **Online
 
 In the previous hands-on lab, you learned how to create an APEX Workspace, navigate the major components of Oracle APEX, and install and run a packaged application.
 
-Estimated Time: 50 minutes
+Estimated Time: 40 minutes
 
 ### Objectives
 
@@ -26,7 +26,7 @@ In this lab, you will:
 
 - Load data using the Data generator and Data Workshop page.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** This workshop assumes you are using Oracle APEX 24.2.
 
 ## Learn More - *Useful Links*
 

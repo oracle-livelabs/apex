@@ -29,39 +29,35 @@ In this Lab, you will install a **Sample Application** in a new workspace you cr
 
     ![Login to new workspace you created](images/login-to-dev.png " ")
 
-2. Navigate to **Gallery**.
+2. Navigate to **Gallery**. Under **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting**.
 
-    ![Navigate to Gallery](images/navigate-to-gallery.png " ")
+    ![Navigate to Gallery](images/gallery-page2.png " ")
 
-3. Click **Sample Apps**.
-
-4. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install**.
+3. Click **Install**.
 
     ![Install Sample Reporting](images/install-sample-app.png " ")
 
-5. Note that you application status is currently under **Installing** phase.
-
-    ![Install Application](images/install-app.png " ")
-
-6. You can now see that the application is installed. Run the application by selecting **Run Application**.
+4. You can now see that the application is installed. Run the application by selecting **Run Application**.
 
     ![Run Application](images/click-run-application.png " ")
 
-7. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
+5. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
 
-    ![Sign In Sample App](images/run-application1.png " ")
+    ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
-8. You now see the Sample Reporting application home page. In your Runtime environment, under **Developer Toolbar**, click **Home** to return to the home page of the APEX development environment.
+6. You now see the Sample Reporting application home page. In your Runtime environment, under **Developer Toolbar**, click **Home** to return to the home page of the APEX development environment.
 
     ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
 
-9. Click **App Builder**.
+7. Click **App Builder**.
 
-    ![Navigate App Builder](images/navigate-to-app-builder.png " ")
+    ![Navigate App Builder](images/navigate-to-app-builder1.png " ")
 
-10. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are displayed along with their icons and report format.
+8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are displayed along with their icons and report format.
 
     ![View Icons](images/display-as-icons1.png " ")
+
+    ![View Icons](images/display-as-report1.png " ")
 
 ## Task 2: Configure the Target System
 
