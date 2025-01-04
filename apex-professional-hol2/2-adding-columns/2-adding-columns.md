@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Add Columns to the Products Table
 
-1. Click **SQL Workshop** from the top navigation menu and select **Object Browser**.
+1. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, select **Object Browser**.
 
     ![Object Browser](images/navigate-to-object-browser1.png " ")
 

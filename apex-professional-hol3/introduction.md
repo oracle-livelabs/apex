@@ -30,7 +30,7 @@ In this workshop, you will:
 
 - Explore the structure and functionality of completed applications.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+> **Note:** This workshop assumes you are using Oracle APEX 24.2.
 
 ## Learn More - *Useful Links*
 
