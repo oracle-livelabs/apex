@@ -4,6 +4,10 @@
 
 In this lab, you learn how to configure Generative AI Services to create a data model, build an application, generate SQL queries, Generate AI-powered text, and develop a chatbot. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes project statuses, milestones, tasks, to-dos, links, and comments—tools for efficient project management.
 
+In this lab, you will explore how to use Generative AI Services to build a complete application. You will configure the Generative AI services to create a data model, generate SQL queries, produce AI-powered text, and develop a chatbot. Before starting, ensure you have a secure key to access OCI Generative AI, or OpenAI, or Cohere services.
+
+Using Generative AI, you will design a data model tailored for project management, incorporating key elements such as project statuses, milestones, tasks, task to-dos, task links, and comments. These components will provide the foundation for building an efficient and interactive project management application.
+
 Estimated Time: 15 minutes
 
 ### Objectives
@@ -116,9 +120,11 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     ![Object Browser](./images/explore-tables.png " ")
 
-This completes Lab 1. You now know how to configure Generative AI Services using Workspace Utilities and Create a Data Model using AI. You may now **proceed to the next lab**.
+## **Summary**
+
+You now know how to configure Generative AI Services using Workspace Utilities and Create a Data Model using AI. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, Jan 2025
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025

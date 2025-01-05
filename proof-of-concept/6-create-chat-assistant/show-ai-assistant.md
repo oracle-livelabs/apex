@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will use the Show AI Assistant feature to create a chatbot that provides an interactive experience for end users. Using this Chat Assistant, users can go and enquire about projects
+In this lab, you will use the Show AI Assistant feature to build a chatbot that offers an interactive experience for users. The chatbot will allow users to inquire about project details, providing a seamless way to access information.
 
 Estimated Time: 15 minutes
 
@@ -171,7 +171,7 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 
 ## **Summary**
 
-You now know how to integrate or Open AI Chat assistant in an APEX Application
+In this lab, you created an interactive chatbot using the Show AI Assistant feature. This chatbot enables users to easily inquire about project details, enhancing the user experience with quick and accessible information.
 
 ## **Learn More** - *Useful Links*
 

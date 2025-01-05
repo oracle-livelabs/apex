@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to improve the Project Task and Project Task ToDos form pages by utilizing improved list of values. You will also learn how to utilize **APEX Assistant** to generate SQL.
+In this lab, you will enhance the functionality of the Project Task and Project Task ToDos form pages by implementing improved lists of values. Additionally, you will learn how to leverage **APEX Assistant** to efficiently generate SQL queries.
 
 Estimated Time: 20 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 20 minutes
 - Update the Task Form page
 - Improve the Milestones and Task List of Values
 - Use APEX Assistant in the code Editor
-- Update the applications To Dos section
+- Update the Application To Dos section
 
 ### What You will Need
 
@@ -249,8 +249,7 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
 ## **Summary**
 
-You now know how to improve the Project Task and Project Task ToDos form pages by utilizing improved list of values that displays additional columns. You also learned how to utilize **APEX Assistant** to generate SQL.
-
+You now know how to improve the Project Task and Project Task ToDos pages by utilizing improved list of values that displays additional columns. You also learned how to utilize **APEX Assistant** to generate SQL.
 
 ## **Acknowledgments**
 

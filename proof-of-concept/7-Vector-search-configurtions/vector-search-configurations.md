@@ -2,16 +2,16 @@
 
 ## Introduction
 
-In this lab, you will learn how to create a view and configure AI attributes to build a solid foundation for AI-driven applications. You will then set up generative AI configurations and add RAG (Retrieval-Augmented Generation) sources to enhance the AI’s knowledge. Next, you will explore how to generate text with AI for various Projects.
+In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
 
-Estimated Time: 25 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
-- Create a view
-- Configure AI Attributes
-- Create AI Configurations
-- Add RAG Sources
-- Improve the Project Dashboard page and add a Generate Text with AI Feature.
+- Load ONNX Models
+- Create a Vector Provider
+- Generate Vector Embeddings
+- Create Search Configuration based on Oracle Vector Search
+- Create a Search Page
 
 ## Task 1: Create a View in Database and configure AI Attributes
 
@@ -233,7 +233,7 @@ In this task, you will create a Vector Search Page to search across your Project
 
 ## **Summary**
 
-You now know how to integrate or Open AI Chat assistant in an APEX Application
+In this lab, you loaded ONNX models into Oracle Database, created a Vector Provider, and generated vector embeddings. You then configured Oracle Vector Search for enhanced search capabilities and built a search page to leverage these embeddings for efficient and accurate search results.
 
 ## **Learn More** - *Useful Links*
 

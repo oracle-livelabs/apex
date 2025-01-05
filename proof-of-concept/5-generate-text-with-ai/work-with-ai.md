@@ -2,14 +2,14 @@
 
 ## Introduction
 
-In this lab, you will learn how to create a view and configure AI attributes to build a solid foundation for AI-driven applications. You will then set up generative AI configurations and add RAG (Retrieval-Augmented Generation) sources to enhance the AI’s knowledge. Next, you will explore how to generate text with AI for various Projects.
+In this lab, you will learn to create a view and configure AI attributes to establish a strong foundation for AI-powered applications. You will then set up generative AI configurations and integrate RAG (Retrieval-Augmented Generation) sources to expand the AI's knowledge base. Finally, you will explore how to use AI to generate text for various projects, adding dynamic capabilities to your application.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 - Create a view
 - Configure AI Attributes
-- 
+- Create AI Configurations and include RAG Sources
 - Improve the Project Dashboard page and link it to the AI Chat Page.
 
 ## Task 1: Create a View in Database and configure AI Attributes
@@ -351,7 +351,7 @@ In this task, you will modify the AI Configuration created earlier in the lab by
 
 ## **Summary**
 
-You now know how to integrate or Open AI Chat assistant in an APEX Application
+You know now how to create a view, configure AI attributes, and set up generative AI configurations to build a foundation for AI-powered applications. You also integrated RAG sources to enhance the AI's knowledge and explored text generation features to add dynamic capabilities to your projects.
 
 ## **Learn More** - *Useful Links*
 

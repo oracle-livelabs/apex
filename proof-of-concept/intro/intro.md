@@ -2,19 +2,29 @@
 
 ## Introduction
 
-In this lab, you will build a dynamic application using Oracle APEX AI Assistant. You will start by installing a sample project management dataset, then create an initial application with the help of an AI Assistant, demonstrating how AI can accelerate development. Next, you will customize your application the lowcode way, making quick adjustments using pre-built components. You will also enhance your application by writing SQL queries with APEX Assistant, simplifying complex query construction. Finally, you will implement an AI chat assistant using Dynamic Actions and Chat Widget, creating a responsive chat interface for real-time user engagement. By the end of this lab, you'll have practical knowledge in using AI with APEX to efficiently build and customize powerful applications.
+In this hands-on lab, you will build a dynamic and interactive application using Oracle APEX AI Assistant. This lab is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
+
+You will begin by creating a data model with the assistance of AI, quickly setting up the foundation for your application. Once the data model is ready, you will use the APEX Assistant to build an initial application framework, highlighting how AI can simplify and speed up the development process.
+
+Next, you will customize your application using Oracle APEX low-code features, making adjustments with pre-built components that streamline the enhancement process. You also learn how to generate SQL queries with the help of APEX Assistant, simplifying the creation of complex queries for your application.
+
+As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the Show AI Assistant feature of APEX, providing a responsive interface for real-time user interaction.
+
+Finally, you will create a search page using Oracle Vector Search, adding advanced search capabilities to your application. By the end of this lab, you will have practical experience in using AI with Oracle APEX to efficiently build, customize, and enhance feature-rich applications.
 
 Estimated Time: 55 minutes
 
 ### Lab Objectives
 
 * Obtain a free development environment
-* Install a Sample dataset
-* Create an application on the new data structures using AI Assistant
+* Create a Data Model using AI
+* Create an application on the new data structures using APEX Assistant
 * Refine the application by generating SQL with AI APEX assistant
+* Add functionality to Generate Text with AI
 * Create an AI Chat Assistant to inquire about the Project.
+* Create a Search Page based on Oracle Vector Search
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### **Let's Get Started!**
 
@@ -62,4 +72,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, May 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024

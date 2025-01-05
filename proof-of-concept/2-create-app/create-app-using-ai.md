@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you build an interactive Project Management application using the AI-driven Create Application wizard. You will make use of the Sample Dataset you generated in the previous lab.
+In this lab, you will create an interactive Project Management application using Create Application using Generative AI. The application will be built using the Sample Dataset you generated in the previous lab, providing a practical foundation for your project.
 
 Estimated Time: 15 minutes
 
