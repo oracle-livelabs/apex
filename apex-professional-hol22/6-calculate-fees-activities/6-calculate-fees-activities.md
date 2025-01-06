@@ -129,6 +129,8 @@ The next step is to establish connections for Free Consultation branches with ac
 
 1. From the **Activities Palette**, drag an **Invoke API** activity into the **Diagram Builder** area and drop it below the **Free Consultation?** activity.
 
+    ![Drag and Drop Invoke API Activity](./images/configure-update-fees1.png " ")
+
 2. Click the newly added **Invoke API** and in the Property Editor, enter/select the following:
 
     - Identification > Name: **Update Fees**
@@ -149,7 +151,7 @@ The next step is to establish connections for Free Consultation branches with ac
 
     - Value > Item > **Version Variables**: **FEES**
 
-    ![Configure Function Result Var](./images/configure-function-result.png " ")
+    ![Configure Function Result Var](./images/configure-function-resul.png " ")
 
 5. Similarly, configure the remaining parameters under **Confirm Appointment** as follows:
 
@@ -160,7 +162,11 @@ The next step is to establish connections for Free Consultation branches with ac
     |p\_booking\_id| Workflow Parameters > **BOOKING_ID**|
     |p\_patient\_name| Workflow Parameters > **PATIENT\_NAME**|
 
+    ![Configure Function Result Var](./images/doctor_id.png " ")
+
 6. From the **Activities Palette**, drag and drop a **Send E-Mail** activity next to the **Update Fees** activity.
+
+    ![Configure Function Result Var](./images/send-invoice-email.png " ")
 
 7. In the Property Editor, enter/select the following:
 
@@ -216,6 +222,8 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
 1. From the **Activities Palette**, drag and drop a **Human Task - Create** activity and place it between **Update Fees** and **Complete Appointment End** activity.
 
+    ![draw conn to end activity](./images/human-task.png " ")
+
 2. With **Human Task - Create** selected, in the Property Editor, enter/select the following:
 
     - Identification > Name: **Raise Invoice Request**
@@ -234,7 +242,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
     ![draw conn to end activity](./images/config-raise-inv.png " ")
 
-3. Then, detach the connection from **Send Invoice Mail To Patient** and **Update Fees** activities and attach them to the **Raise Invoice Request** activity.
+3. Then, detach the connection from **Send Invoice Mail To Patient** activity and attach them to the **Raise Invoice Request** activity.
 
      ![draw conn to raise inv](./images/draw-connections-inv.png " ")
 
@@ -259,6 +267,8 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
         - Type: **Item**
 
         - Item > Workflow Parameters: **PATIENT_NAME**
+
+    ![Configure Doctor Name](./images/config-patient-name.png " ")
 
 7. Click **Save** to save the changes.
 
@@ -290,17 +300,19 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
         - To: **Set Status to Rejected**
 
-   ![Configure timeout connection](./images/configure-timeout-prop.png " ")
+   ![Configure timeout connection](./images/execute1.png " ")
 
 3. Select the connection between **Raise Invoice Request** and **End** activity and update the following:
 
     - Activity > To: **End**
 
-    ![Configure timeout connection](./images/configure-conn.png " ")
+    ![Configure timeout connection](./images/onfigure-conn.png " ")
 
 ## Task 9: Add Execute Activity to set Status as Approved
 
 1. From the **Activities Palette**, drag and drop a **Execute Code** activity and place it between **Raise Invoice Request** and **End** activity.
+
+    ![Configure timeout connection](./images/execute-approved.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -308,7 +320,7 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
     - Source > PL/SQL Code: **:STATUS := 'APPROVED';**
 
-    ![Configure Doctor Name](./images/execute1.png " ")
+    ![Configure Doctor Name](./images/set-approved.png " ")
 
 3. Draw a Connection from the **Set Status to Rejected** to the **End** Activity.
 

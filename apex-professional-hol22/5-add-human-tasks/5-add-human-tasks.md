@@ -129,7 +129,7 @@ Estimated Time: 20 minutes
 
     - Under Settings:
 
-        - Actions Source: **SQL query**,
+        - Actions Source: **SQL query**
 
         - Actions SQL Query: Provide the following SQL statement:
         ```
@@ -177,7 +177,7 @@ Estimated Time: 20 minutes
 
     - Name: **Feedback Request**
 
-    - Type: **Actions Task**
+    - Type: **Action Task**
 
     - Subject: **Feedback for Consultation on &SCHEDULE.**
 

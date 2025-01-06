@@ -54,8 +54,6 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
 
 4. Under **Compute Doctor Availability**, expand **Parameters** and select **Function Result** parameter, in the Property Editor, enter/select the following:
 
-    - Parameter > Direction: **Out**
-
     - Value > Item: **Version Variables > AVAILABILITY**
 
     ![Configure Function Result Var](./images/configure-function-resultvar.png " ")
@@ -63,8 +61,6 @@ Now that we have defined the Approval and Action tasks, let us go back to the Do
     > **Note:** _The Item Picker in the Workflow Designer allows you to select Workflow Parameters, Version Variables, and Activity Variables. You may also reference Additional Workflow Data by using the Substitution String Syntax._
 
 5. Select **p\_doctor\_id** parameter and in the Property Editor, enter/select the following:
-
-    - Parameter > Direction: **In**
 
     - Under Value:
 
@@ -99,8 +95,6 @@ Based on the Doctor's availability, the workflow needs to branch conditionally. 
 2. Configure the Switch activity in the Property Editor for Doctor Availability conditions. Click the workflow activity you just placed in the workflow diagram, and then in the Property Editor, enter/select the following:
 
     - Identification > Name: **Doctor Available?**
-
-    - Switch > Type: **True False Check**
 
     - Under Condition:
 
@@ -219,9 +213,9 @@ At this point, check the **Variables** in your workflow tree. You will notice th
 
 1. The two Variables created are:
 
-    - **TaskOutcome** with a static Id **TASK_OUTCOME**.
-
     - **Approver** with Static ID **APPROVER**.
+
+    - **TaskOutcome** with a Static ID **TASK_OUTCOME**.
 
     ![Check Variables](./images/check-variables.png " ")
 
@@ -271,7 +265,9 @@ At this point, check the **Variables** in your workflow tree. You will notice th
 
     ![Edit End activity](./images/config-workflow-end.png " ")
 
-8. Create a connection from the **Raise Appointment Request** to **Complete Appointment**. Note that the validation error no longer shows up. Click **Save** to save the workflow model.
+8. Create a connection from the **Raise Appointment Request** to **Complete Appointment**. Note that the validation error no longer shows up.
+
+    Click **Save** to save the workflow model.
 
     ![Edit End activity](./images/end-connection.png " ")
 
@@ -348,7 +344,7 @@ In this task, you learn to manage appointment requests using a Switch activity i
     |Parameter | Value | Format Mask|
     |---------|--------|------------|
     |p\_doctor\_id|Static Value: **&DNO.**||
-    |p\_request\_date|Workflow Parameters: **REQUEST_DATE**|DD-MON-YYYY HH24:MI:SS|
+    |p\_request\_date|Workflow Parameters: **REQUEST_DATE**|**DD-MON-YYYY HH24:MI:SS**|
     |p\_doctor\_email| Static Value: **&DOC_EMAIL.**||
     |p\_patient\_name| Workflow Parameters: **PATIENT_NAME**||
     |p\_patient\_email| Workflow Parameters: **PATIENT\_EMAIL**||
@@ -400,6 +396,8 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
     - Value > Item: Version Variables > **TASK_STATUS**
 
+    ![Drag and Drop Invoke Workflow Activity](./images/task-status.png " ")
+
 4. Similarly, update the following parameters:
 
     |Parameter | Value |
@@ -409,6 +407,10 @@ In this task, you learn to manage appointment requests using a Switch activity i
     |Patient Email| Item: **PATIENT_EMAIL**|
     |Patient Name| Item: **PATIENT_NAME**|
     |Request Date| Item: **REQUEST_DATE**|
+
+5. Now, detach the connection from the Confirm Appointment Activity and re-attach it to this Switch Activity.
+
+    ![Drag and Drop Invoke Workflow Activity](./images/check-conn.png " ")
 
 ## Task 14: Configure Switch Activity for Approved Appointment
 
@@ -434,7 +436,7 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
 Once the Patient confirms the invoice / makes the payment, the Appointment record status needs to be updated to PAID.
 
-1. Drag and Drop an **Invoke API** activity on the Connection between the **Raise Invoice Request** and **Complete Appointment** activities.
+1. Drag and Drop an **Invoke API** activity beside **Approved?** activity.
 
     ![create and config Update appointment](./images/add-invoke-api.png " ")
 

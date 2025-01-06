@@ -46,7 +46,7 @@ To create a Workflow:
 
 ## Task 2: Modify Workflow Details
 
-1. With **New** selected in the **Rendering** tab, in the Property Editor, enter/select the following:
+1. Select **New** in the **Rendering** tab, in the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -94,7 +94,7 @@ To create a Workflow:
   |------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
   | Execute Code           | Executes PL/SQL Code                                                                                                     | Yes                                                    |
   | Invoke API             | Invokes a procedure or function inside a PL/SQL package or an API from a REST Data Source.                              | Yes                                                    |
-  | Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
+  | Send Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
   | Send E-Mail            | Sends an Email based on the Email settings.                                                                             | Yes                                                    |
   | Invoke Workflow          | An activity that invokes another workflow in the current application.settings.                                                                             | Yes                                                    |
   | Human Task - Create    | Creates an Approval or Action Task based on the Task Definition specified. Once the task is created, the activity and workflow go into the Waiting state until the task is completed/approved/rejected by its owner/errors out/expires. | No                                                     |
