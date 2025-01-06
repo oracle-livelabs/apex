@@ -432,6 +432,10 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
     ![Drag and Drop Invoke Workflow Activity](./images/approved-details.png " ")
 
+3. Create a **Connection** from **Check Appointment Fee** to **Approved?** activity.
+
+    ![Drag and Drop Invoke Workflow Activity](./images/approved-conn.png " ")
+
 ## Task 15: Update Status of the Workflow
 
 Once the Patient confirms the invoice / makes the payment, the Appointment record status needs to be updated to PAID.
@@ -472,11 +476,7 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
     ![config booking id](./images/config-status.png " ")
 
-7. Now, select the **Confirm Appointment** activity and draw an arrow to the **Check Appointment Fee** activity.
-
-8. Select **Check Appointment Fee** activity and draw an arrow to the **Approved?** activity.
-
-9. Now, select **Approved?** activity and draw an arrow to the **Update Appointment** activity and in the Property Editor, update the following:
+7. Now, select **Approved?** activity and draw an arrow to the **Update Appointment** activity and in the Property Editor, update the following:
 
     - Condition > When: **True**
 
@@ -514,7 +514,9 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
 Going back to our flowchart, at this point the Workflow waits for the appointment to happen and after that it raises a Feedback Request for the Patient. If the feedback is not received within a specific period, the Workflow is Completed without Feedback, else a Thank You Email is sent to the Patient.
 
-1. From the Activities Palette , drag a **Human Task - Create** Activity and drop it on the connection between the **Wait Activity** and the **Complete Appointment** activities.
+1. From the Activities Palette , drag a **Human Task - Create** Activity and drop it under the **Wait** Activity.
+
+    ![Drag and Drop Invoke Workflow Activity](./images/add-human.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -532,7 +534,9 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
         - Interval: **PT24H** (This implies that the Workflow will wait for at most 24 hours for the feedback activity to be completed.)
 
-      ![create and conf feedback](./images/req-for-feedback.png " ")
+    ![create and conf feedback](./images/req-for-feedback.png " ")
+
+    ![create and conf feedback](./images/req-for-feedback1.png " ")
 
 3. Under **Rendering** tab, navigate to **Request For Feedback** activity, select **Booking Id**. In the Property Editor, enter/select the following:
 
@@ -542,7 +546,7 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
         - Item > Version Variables: **ID**
 
-     ![config booking id](./images/set-feedback-params.png " ")
+    ![config booking id](./images/set-feedback-params.png " ")
 
 4. Drag a **Workflow End** Activity from the Activity Palette and drop it on the Diagram area to the left of the **Request for Feedback** activity.
 
@@ -550,11 +554,13 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     ![create and config workflow end](./images/create-config-worflow-end.png " ")
 
-6. Draw a Connection from the **Request for Feedback** to the **End Without Feedback** Activity.
+6. Draw a Connection from the **Wait Before Requesting Feedback** to the **Request For Feedback** Activity.
+
+    ![create and config workflow end](./images/wait-conn.png " ")
+
+7. Draw a Connection from the **Request for Feedback** to the **End Without Feedback** Activity.
 
     ![draw final connection](./images/draw-final-connection.png " ")
-
-7. Draw a Connection from the **Wait Before Requesting Feedback** to the **Request For Feedback** Activity.
 
 8. Notice that the connection is in RED and this is because an activity cannot have more than one outgoing connection of type Normal.
 
@@ -570,7 +576,9 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     > **Note:** _Connections of type Timeout can only be added to an activity if the activity has 'Due On' Type and value populated in the 'Deadline' section of the Property Editor._
 
-10. Finally, drag a **Send E-Mail** Activity from the Activities Palette and drop it on the connection between **Request for Feedback** and **Complete Appointment** End Activities.
+10. Finally, drag a **Send E-Mail** Activity from the Activities Palette and drop it under **Request For Feedback** Activity.
+
+    ![create and config send email](./images/add-send-email1.png " ")
 
 11. In the Property Editor, enter/select the following:
 
@@ -600,13 +608,29 @@ Going back to our flowchart, at this point the Workflow waits for the appointmen
 
     ![create and config send email](./images/add-send-email.png " ")
 
-12. Click **Save**. At this point, our Appointment Workflow model is **Complete!**
+12. Draw a Connection from the **Request for Feedback** to the **Send Thank You Note To Patient** Activity.
+
+    ![create and config send email](./images/draw-send-conn1.png " ")
+
+13. Drag a **Workflow End** Activity from the Activity Palette and drop it under the **Send Thank You Note To Patient** activity.
+
+    ![create and config send email](./images/draw-send-conn2.png " ")
+
+14. Also, Draw a Connection from the **Send Thank You Note To Patient** to the **Workflow End** Activity.
+
+    ![create and config send email](./images/draw-send-conn3.png " ")
+
+15. Lastly, Also, Draw a Connection from the **Approved?** activity to the **No Appointment Mail** Activity and in the Property Editor, under **Condition**, select **False** for **When**.
+
+    ![create and config send email](./images/draw-send-conn4.png " ")
+
+16. Click **Save**. At this point, our Appointment Workflow model is **Complete!**
 
 ## Summary
 
 You have successfully created and configured the workflow for the 'Doctor's Appointment Made Easy!' application.
 
-### What's Next
+## What's Next
 
 In the next section, you will create pages in the application that will utilize this workflow.
 
