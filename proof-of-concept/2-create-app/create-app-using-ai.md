@@ -21,32 +21,31 @@ Estimated Time: 15 minutes
     !["Click App Builder"](images/click-app-builder.png "")
 
 2. Click **Create**.
-3. 
     !["Click create App"](images/click-create-app.png "")
 
-4. In the Create an Application Page, Select **Create APP Using Generative AI**
+3. In the Create an Application Page, Select **Create APP Using Generative AI**
 
     !["Click create app using Gen AI"](images/click-create-app-ai.png "")
 
-5. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
+4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
 
      ![Refresh Cache](images/refresh-cache.png "")
 
-6. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
+5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 1:
     >Create an application with Projects, Milestones, Status, Tasks, To-Dos, Links, and Comments. Enable Progressive Web App and Feedback features.
 
     !["first prompt"](images/prompt1.png "")
 
-7. Now, we need set the Project Details page as Interactive report and convert the Milestones Page into Interactive Grid.
+6. Now, we need set the Project Details page as Interactive report and convert the Milestones Page into Interactive Grid.
 
     >Prompt 2:
     >Set the Project Details page as an Interactive Report with a Form and the Milestones page as an Interactive Grid
 
     !["second prompt"](images/prompt2.png "")
 
-8. Similarly, you need to add a new page for Project Dashboard and make it a Homepage. Also, you will be removing the exiting Home page which is marked as Welcome Page.
+7. Similarly, you need to add a new page for Project Dashboard and make it a Homepage. Also, you will be removing the exiting Home page which is marked as Welcome Page.
     >Prompt 3:
     >Add a project dashboard as a Cards page, set it as the Home page, and remove the Welcome page
 
