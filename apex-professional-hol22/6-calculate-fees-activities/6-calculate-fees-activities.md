@@ -83,22 +83,27 @@ The Switch condition's outcome should be based on a calculation of the number of
 
         - PL/SQL Function Body: Enter the following code:
         ```
-       <copy>
-      declare
-      l_free number := 1;
-      begin
-        select 1 into l_free from dual
-         where exists (select patient_username
-          from appointment
-         where patient_username = :PATIENT_NAME
-           and  doctor_no = :DNO
-           and  schedule >= to_timestamp_tz(:REQUEST_DATE,'DD-MON-YYYY HH24:MI:SS') - 7
-           and status = 'PAID');
-       return 1;
-      exception
-        when others then
-        return 0;
-      end;
+        <copy>
+        DECLARE
+            l_free NUMBER := 1;
+        BEGIN
+        SELECT 1
+        INTO   l_free
+        FROM   dual
+        WHERE  EXISTS (SELECT patient_username
+                   FROM   appointment
+                   WHERE  patient_username = :PATIENT_NAME
+                          AND doctor_no = :DNO
+                          AND schedule >= To_timestamp_tz(:REQUEST_DATE,
+                                          'DD-MON-YYYY HH24:MI:SS')
+                                          - 7
+                          AND status = 'PAID');
+
+        RETURN 1;
+        EXCEPTION
+        WHEN OTHERS THEN
+        RETURN 0;
+        END;
        </copy>
        ```
 

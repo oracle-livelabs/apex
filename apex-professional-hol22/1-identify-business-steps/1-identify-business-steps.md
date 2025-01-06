@@ -69,7 +69,7 @@ This comprehensive breakdown illustrates the significance of workflow in managin
 
 You now understand the significance of workflow in managing complex business processes, making the system efficient and responsive.
 
-### What's Next
+## What's Next
 
 In the next lab, you will create a flowchart based on the automated steps, helping us visualize the flow of the business logic and its seamless execution. Stay tuned as we dive into the practical implementation of this intuitive doctor appointment management system!
 

@@ -76,7 +76,7 @@ To create a Workflow:
 
    ![Check Errors in the Page](./images/set-end.png " ")
 
-6. Click **Save**. The changes are saved successfully.
+6. Click **Save**.
 
 ## Task 3: Add Inputs to the Doctor Appointments Workflow
 
@@ -213,7 +213,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 In this lab, you learned the process of creating a Doctor Appointment Workflow using Oracle APEX.
 
-### What's Next
+## What's Next
 
 Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
 

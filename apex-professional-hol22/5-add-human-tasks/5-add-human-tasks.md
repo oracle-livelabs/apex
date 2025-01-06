@@ -92,7 +92,7 @@ Estimated Time: 20 minutes
     |--------------------|------------|
     | APPOINTMENT_DATE   | Appointment Date |
     | PATIENT_DESC       | Consultation Form|
-    | PATIENT_NAME       | Patient name |
+    | PATIENT_NAME       | Patient Name |
     {: title="List of Parameters to be added for the Task Definition"}
 
     ![Add Task Parameters](./images/add-task-parameters.png " ")
