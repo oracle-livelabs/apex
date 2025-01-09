@@ -18,10 +18,6 @@ By the end of this lab, you will:
 
 Estimated Time: 5 minutes
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don't worry! You can download the Application from **[here](files/online-shopping-cart-12.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
-
 ## Task 1: Create a Store Details Map page with a Background and add it to the Desktop Navigation Bar
 
 In this task, you will create a new Map page in your Oracle APEX application to display store locations. The map will include geo spatial details such as longitude, latitude, and tooltips for each store. You will then customize the map’s background using a Web Map Service (WMS) and integrate it into the navigation menu

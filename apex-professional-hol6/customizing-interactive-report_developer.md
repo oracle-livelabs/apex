@@ -20,14 +20,6 @@ By the end of this lab, you will be able to:
 
 - Save and manage reports for end users.
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
-
-1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
-
-2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
-
 ## Task 1: Customize an Interactive Report as a Developer
 
 In this task, you will customize the Interactive Report within the Sample Reports application. You will modify the report’s link column, pagination, search bar, and download options to optimize the end-user experience.
@@ -44,7 +36,7 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     ![Click Interactive Report](images/select-sample-reporting.png " ")
 
-4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Page XXX>**.
+4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Page XXX**.
 
     ![Edit page](images/click-page1.png " ")
 
@@ -128,7 +120,9 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     ![Download](images/save-report5.png " ")
 
-16. From the Reports drop-down list, select **Primary Report**.
+16. From the Reports drop-down list, select **1. Primary Report**.
+
+    ![Download](images/primary-rpt.png " ")
 
 ## Summary
 

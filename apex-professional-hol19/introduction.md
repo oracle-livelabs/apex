@@ -24,7 +24,7 @@ Estimated Time: 35 minutes
 
 - Learn how to configure Push Notifications.
 
-> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
+> **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 
@@ -33,3 +33,8 @@ Estimated Time: 35 minutes
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024

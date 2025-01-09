@@ -41,7 +41,7 @@ Import them into your workspace. To run the app, please run the steps described 
 2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 
-> **Note:** This workshop assumes you are using Oracle APEX 24.2.
+> **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 

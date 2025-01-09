@@ -10,7 +10,7 @@ In this workshop, you will manage and customize the Interactive report in the Sa
 
 In the previous workshop, you learned to add an Interactive Grid, Smart filters, and Content row to an application. You also learned to create application items and processes, create a variety of pages, and add an action.
 
-Estimated Time: 15 minutes
+Estimated Time: 35 minutes
 
 ### Objectives
 
@@ -20,7 +20,24 @@ In this workshop, you will:
 
 - Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
 
- > **Note:** _Note: This workshop assumes you are using Oracle APEX 24.2_
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
+
+- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
+
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-OnlineShoppingApplication.sql)**
+
+- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-DemoProjects.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+
+
+ > **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 

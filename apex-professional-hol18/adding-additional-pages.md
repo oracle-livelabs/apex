@@ -20,10 +20,6 @@ By the end of this lab, you will be able to:
 
 Estimated Time: 15 minutes
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don't worry! You can download the Application from **[here](files/demo-projects-4.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
-
 ## Task 1: Create a Calendar
 
 Calendars provide an intuitive way to visualize date-related data, such as tasks and project timelines. In this task, you will create a Calendar Page in the Demo Projects application. You’ll also customize its appearance to match your application’s design standards.

@@ -18,16 +18,6 @@ In this lab, you will:
 
 - Enable multiple authentication schemes within an Oracle APEX application.
 
-### Downloads
-
- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace.
-
-To run the app, please run the steps described in
-
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
-
-- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
-
 ## Task 1: Configure Oracle IAM Authentication in Online Shopping Application
 
 1. Log in to your Oracle cloud console.

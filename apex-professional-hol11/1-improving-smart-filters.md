@@ -18,10 +18,6 @@ In this lab, you will:
 
 - Understand the significance of each filter type in enhancing the search functionality.
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/hol10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
-
 ## Task 1: Enhance Smart Filters
 
 In this task, you will focus on customizing the existing Smart Filters in the **Project Tasks Search** page of the **Demo Projects** application. You will learn how to modify filters to allow for better user interaction and data retrieval. Specifically, you'll enhance the existing Project and Budget filters, transforming them into more interactive components.

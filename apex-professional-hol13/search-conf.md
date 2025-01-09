@@ -16,10 +16,6 @@ In this lab, you will:
 
 - Create a Search Page using the Create Page Wizard.
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-8.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
-
 ## Task 1: Implement Standard Search Configurations
 
 In this task, you will create two search configurations, one for the CUSTOMER\_ORDER\_PRODUCTS table and the other for the PRODUCT\_REVIEWS table. These search configurations will allow you to map specific columns to the primary key, title, and description for better search results.

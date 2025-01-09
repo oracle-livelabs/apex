@@ -12,14 +12,6 @@ In this lab, you:
 
 - Customize your Interactive Report page in **Sample Reports** Application as an **End User**.
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
-
-1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
-
-2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
-
 ## Task 1: Customize an Interactive report as an End User
 
 In this lab, you customize and use an interactive report as an end user.
@@ -121,6 +113,8 @@ In this lab, you customize and use an interactive report as an end user.
 
     **d.** The report is now sorted in the **Descending** order of **Cost**.
 
+    ![Descending](images/descending.png " ")
+
 7. Create an aggregation against the **Available Budget** column. You want to display the sum of the **Available Budget**. Perform the following:
 
     **a.** Select **Actions** > **Data** > **Aggregate**.
@@ -214,6 +208,8 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** Notice that the **Rows Per Page** in your Interactive Report is now **1-5**.
 
+    ![Rows Per Page](images/select-rpp5.png " ")
+
 12. In your interactive report, you want to include a Chart to display the Average **Cost** for each **Project**. Your interactive report should include both the Report and Chart views.
 
     **a.** Select **Actions** > **Chart**.
@@ -240,7 +236,7 @@ In this lab, you customize and use an interactive report as an end user.
 
 13. Create a Group By report to display each **Project** with the **Total Budget**.
 
-    **a.** Click **View Report**. Select **Actions** > **Group By**.
+    **a.** Click **View Report Icon**. Select **Actions** > **Group By**.
 
     ![Group By](images/select-groupby.png " ")
 
@@ -254,7 +250,7 @@ In this lab, you customize and use an interactive report as an end user.
 
     - Label: **Total Budget**
 
-    - Format Mask: **$5,324.10** (Expand the Select List to view the Format Mask list of example formats.)
+    - Format Mask: **$5,234.10** (Expand the Select List to view the Format Mask list of example formats.)
 
     - Sum: Toggle the button to **ON**
 

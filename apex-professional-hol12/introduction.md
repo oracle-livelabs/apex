@@ -22,7 +22,7 @@ Estimated Time: 10 minutes
 
 - Improve user experience by adding relevant enhancements to the form.
 
-> **Note:** _This workshop assumes you are using Oracle APEX 24.2.*_
+> **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 

@@ -18,10 +18,6 @@ In this lab, you will:
 
 - Refresh the Working Copy with changes from the Main application.
 
-### Downloads
-
-- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-5.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
-
 ## Task 1: Create a Working Copy of an Application
 
 Creating a Working Copy is the first step in isolating changes. In this task, you'll learn how to create a Working Copy of an existing application, allowing you to work on updates without affecting the Main application.
