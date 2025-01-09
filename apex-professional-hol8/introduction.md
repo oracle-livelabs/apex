@@ -16,7 +16,7 @@ Once you complete this workshop, Customers will be able to:
 
 In the last hands-on lab, you learned how to customize Interactive Grid as a developer and end user.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
