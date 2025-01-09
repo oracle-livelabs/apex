@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will use the Show AI Assistant feature to build a chatbot that offers an interactive experience for users. The chatbot will allow users to inquire about project details, providing a seamless way to access information.
+In this lab, you will use the Show AI Assistant dynamic action to build a chatbot that offers an interactive experience for users. The chatbot will allow users to inquire about project details, providing a seamless way to access information.
 
 Estimated Time: 15 minutes
 

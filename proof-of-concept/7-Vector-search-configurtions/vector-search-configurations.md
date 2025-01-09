@@ -4,6 +4,8 @@
 
 In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
 
+>**Note**: This lab assumes you are using Oracle Database 23ai.
+
 Estimated Time: 15 minutes
 
 ### Objectives
@@ -86,62 +88,121 @@ In this task, you will create a Vector Provider that will be used later to set u
 
     !["vector provider created"](images/created-vector-provider.png "")
 
-## Task 3: Update view to Retrieve the Vector Embeddings for Project Data
+## Task 3: Create Table and Update View for Vector Embeddings in Project Data
 
-In this task, you will update the view created in the previous lab to transform project-related data into vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX_AI.GET_VECTOR_EMBEDDINGS** simplifies this process. You will use the **APEX_AI.GET_VECTOR_EMBEDDINGS** API to update the view.
+In this task, you will enhance the view created in the previous lab to convert project-related data into vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX_AI.GET\_VECTOR\_EMBEDDINGS** API to insert a Vector Embeddings Table in your schema and then modify the view to retrieve these vector embeddings.
 
-1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
+1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Scripts**.
 
-    !["Click SQL commands"](images/click-sql-commands1.png "")
+    !["Click SQL scripts"](images/click-sql-scripts.png "")
 
-2. In the SQL Commands Page, copy and paste the below code and click **Run**.
+2. Click **Create**.
+
+    !["Click create"](images/click-create2.png "")
+
+3. Copy and paste the below SQL commands into the Script Editor to create VECTOR\_EMBEDDINGS Table and insert Data into it and then update the Existing View.
 
     ```
     <copy>
-      CREATE OR REPLACE FORCE EDITIONABLE VIEW "PROJECT_MANAGEMENT_VW" AS 
-        SELECT
-                PP.ID              AS PROJECT_ID,
-                PT.MILESTONE_ID    AS MILESTONE_ID,
-                PTT.TASK_ID        AS TASK_ID,
-                PP.NAME            AS PROJECT_NAME,
-                PM.NAME            AS MILESTONE_TITLE,
-                PT.NAME            AS TASK_NAME,
-                PT.STATUS          AS TASK_STATUS,
-                PTT.DESCRIPTION    AS TASK_DESCRIPTION,
-                PTT.IS_DONE        AS TODO_STATUS,
-                PTL.LINKED_TASK_ID TASK_LINK_ID,
-                PC.COMMENT_TEXT    AS COMMENT_TEXT,
-                APEX_AI.GET_VECTOR_EMBEDDINGS(
-                    P_VALUE             => PP.NAME
-                            || CHR(13)
-                            || PM.NAME
-                            || CHR(13)
-                            || PT.NAME
-                            || CHR(13)
-                            || PT.STATUS
-                            || CHR(13)
-                            || PTT.DESCRIPTION
-                            || CHR(13)
-                            || PTT.IS_DONE
-                            || CHR(13)
-                            || PTL.LINKED_TASK_ID
-                            || CHR(13)
-                            || PC.COMMENT_TEXT
-                            || CHR(13),
-                    P_SERVICE_STATIC_ID => 'db_onnx_model'
-                )                  AS VECTOR_EMBEDDING
-            FROM
-                PM_PROJECTS   PP
-                LEFT JOIN PM_MILESTONES PM ON PP.ID = PM.PROJECT_ID
-                LEFT JOIN PM_TASKS      PT ON PM.ID = PT.MILESTONE_ID
-                LEFT JOIN PM_TASK_TODOS PTT ON PT.ID = PTT.TASK_ID
-                LEFT JOIN PM_TASK_LINKS PTL ON PT.ID = PTL.TASK_ID
-                LEFT JOIN PM_COMMENTS   PC ON PT.ID = PC.TASK_ID;
+        CREATE TABLE VECTOR_EMBEDDINGS (
+        PROJECT_ID       NUMBER,
+        MILESTONE_ID     NUMBER,
+        TASK_ID          NUMBER,
+        VECTOR_EMBEDDING VECTOR
+        );
+
+        /
+
+       INSERT INTO VECTOR_EMBEDDINGS (
+        PROJECT_ID,
+        MILESTONE_ID,
+        TASK_ID,
+        VECTOR_EMBEDDING
+        )
+           SELECT
+            PP.ID           AS PROJECT_ID,
+            PT.MILESTONE_ID AS MILESTONE_ID,
+            PTT.TASK_ID     AS TASK_ID,
+            APEX_AI.GET_VECTOR_EMBEDDINGS(
+                P_VALUE             => PP.NAME
+                        || CHR(13)
+                        || PM.NAME
+                        || CHR(13)
+                        || PT.NAME
+                        || CHR(13)
+                        || PT.STATUS
+                        || CHR(13)
+                        || PTT.DESCRIPTION
+                        || CHR(13)
+                        || PTT.IS_DONE
+                        || CHR(13)
+                        || PTL.LINKED_TASK_ID
+                        || CHR(13)
+                        || PC.COMMENT_TEXT
+                        || CHR(13),
+                P_SERVICE_STATIC_ID => 'db_onnx_model'
+            )               AS VECTOR_EMBEDDING
+        FROM
+            PM_PROJECTS   PP
+            LEFT JOIN PM_MILESTONES PM ON PP.ID = PM.PROJECT_ID
+            LEFT JOIN PM_TASKS      PT ON PM.ID = PT.MILESTONE_ID
+            LEFT JOIN PM_TASK_TODOS PTT ON PT.ID = PTT.TASK_ID
+            LEFT JOIN PM_TASK_LINKS PTL ON PT.ID = PTL.TASK_ID
+            LEFT JOIN PM_COMMENTS   PC ON PT.ID = PC.TASK_ID;
+
+    /
+
+    CREATE OR REPLACE FORCE EDITIONABLE VIEW "PROJECT_MANAGEMENT_VW" (
+    "PROJECT_ID",
+    "MILESTONE_ID",
+    "TASK_ID",
+    "PROJECT_NAME",
+    "MILESTONE_TITLE",
+    "TASK_NAME",
+    "TASK_STATUS",
+    "TASK_DESCRIPTION",
+    "TODO_STATUS",
+    "TASK_LINK_ID",
+    "COMMENT_TEXT",
+    "VECTOR_EMBEDDING"
+    ) AS
+    SELECT
+        PP.ID               AS PROJECT_ID,
+        PT.MILESTONE_ID     AS MILESTONE_ID,
+        PTT.TASK_ID         AS TASK_ID,
+        PP.NAME             AS PROJECT_NAME,
+        PM.NAME             AS MILESTONE_TITLE,
+        PT.NAME             AS TASK_NAME,
+        PT.STATUS           AS TASK_STATUS,
+        PTT.DESCRIPTION     AS TASK_DESCRIPTION,
+        PTT.IS_DONE         AS TODO_STATUS,
+        PTL.LINKED_TASK_ID  AS TASK_LINK_ID,
+        PC.COMMENT_TEXT     AS COMMENT_TEXT,
+        VE.VECTOR_EMBEDDING AS VECTOR_EMBEDDING
+    FROM
+        PM_PROJECTS       PP
+        LEFT JOIN PM_MILESTONES     PM ON PP.ID = PM.PROJECT_ID
+        LEFT JOIN PM_TASKS          PT ON PM.ID = PT.MILESTONE_ID
+        LEFT JOIN PM_TASK_TODOS     PTT ON PT.ID = PTT.TASK_ID
+        LEFT JOIN PM_TASK_LINKS     PTL ON PT.ID = PTL.TASK_ID
+        LEFT JOIN PM_COMMENTS       PC ON PT.ID = PC.TASK_ID
+        LEFT JOIN VECTOR_EMBEDDINGS VE ON VE.PROJECT_ID = PP.ID
+                                          AND NVL(VE.MILESTONE_ID, 0) = NVL(PT.MILESTONE_ID, 0)
+                                          AND NVL(VE.TASK_ID, 0) = NVL(PTT.TASK_ID, 0);
     </copy>
     ```
-    !["create view"](images/update-view.png "")
 
 >**Note**: The table structure and column names in your generated data model may vary. Adjust the code accordingly to match your specific table structure.
+
+4. For Script Name: Enter **Vector Embedding Objects** and click Run.
+
+    !["create db objects"](images/create-db-objects.png "")
+
+5. Click **Run Now**. The statements are processed.
+
+    !["create run now"](images/statements-processed.png "")
+
+    !["statements processed"](images/click-run-now.png "")
 
 ## Task 4: Create a Search Configuration
 
