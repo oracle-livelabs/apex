@@ -24,7 +24,7 @@ Estimated Time: 55 minutes
 * Create an AI Chat Assistant to inquire about the Project.
 * Create a Search Page based on Oracle Vector Search
 
-*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+>**Note**: This workshop assumes you are using Oracle APEX 24.2 and Oracle Database 23ai. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ### **Let's Get Started!**
 
@@ -38,7 +38,7 @@ Estimated Time: 55 minutes
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
 1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/Smart-Project-App.sql)** to download the completed application.
-2. Import the Smart-Project-App.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
+2. Import the proof-of-concept-app.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 3. Once the application is installed, follow the below steps to update the Web Credentials.
     - Click the Down Arrow next to **App Builder**, click **Workspace Utilities** and then select **All Workspace Utilities**.
         ![navigate to workspace utilities](images/navigate-to-workspace-utilities.png " ")
@@ -52,14 +52,7 @@ If you are stuck or the App is not working as expected, you can download and ins
       - For Credential Secret, Enter **Bearer YOUR_KEY**
         ![update open ai cred](images/update-openai-cred.png " ")
 
-4. Now, add the username that you will use to log in to the **Project Management Suite** to the **Access Control List**.
-5. Navigate to the **Project Management Suite** application, click **Shared Components**.
-6. In the Shared components, Under **Security**, select **Application Access Control**. In the **Application Access Control** Page, perform the following steps:
-    - Under User Role Assignments, click **Add User Role Assignment**
-    - In the User Assignment Page,
-        - For **User Name**, Enter **YOUR\_USER\_NAME**
-        - For **Application Role**, Select **Administrator**.
-        ![config user as admin](images/configure-user.png " ")
+4. To use the Vector search Capabilities of this Application, you need to perform the steps mentioned in the **Task 1** and **Task 2** of **Lab 7: Lab 7: Create a Vector Search Page using Search Configurations**.
 
 ## Learn More - *Useful Links*
 
@@ -72,4 +65,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025

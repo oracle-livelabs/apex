@@ -13,7 +13,7 @@ Estimated Time: 15 minutes
 - Create Search Configuration based on Oracle Vector Search
 - Create a Search Page
 
-## Task 1: Create a View in Database and configure AI Attributes
+## Task 1: Load ONNX Model to Oracle Database
 
 In this lab, you will create a Database View for your APEX application, containing all the necessary project-related information. This view will be used when adding RAG Sources to AI Configurations. Next, you will go to the AI Attributes page and set the Generative AI Service name to the one configured in **Lab 1**.
 
