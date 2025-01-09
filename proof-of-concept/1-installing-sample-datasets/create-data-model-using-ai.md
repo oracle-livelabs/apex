@@ -32,20 +32,20 @@ In this lab, you will:
 
     ![Select workspace utilities](./images/select-workspace-utilities.png " ")
 
-4. Under Workspace Utilities, Click **Generative AI**.
+4. Under Workspace Utilities, click **Generative AI**.
 
     ![click generative AI](./images/click-generative-ai.png " ")
 
-5. On the **Generative AI Services** page, Click **Create**.
+5. On the **Generative AI Services** page, click **Create**.
 
     ![Click create](./images/click-create.png " ")
 
-6. If AI Provider is Open AI, under **Create/Edit** Generative AI Service Page, enter the following Details.
+6. If AI Provider is Open AI, under **Create/Edit** Generative AI Service Page, enter the following details.
     - Under Identification
-      - AI Provider: **Open AI**
-      - Name: **Open AI**
+        - AI Provider: **Open AI**
+        - Name: **Open AI**
     - Settings > Used by App Builder: **Toggle On**
-    - Credentials > API Key: Typer **'Bearer ' Enter the API Key you procured from OpenAI**
+    - Credentials > API Key: Type 'Bearer **Enter the API Key you procured from OpenAI**'
     - Advanced > AI Model: **gpt-4o**
   
 >**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
@@ -54,7 +54,7 @@ In this lab, you will:
 
     ![create generative ai service](./images/create-gen-ai-service.png " ")
 
-8. Once the Connection is Successful, Click **Create**.
+8. Once the Connection is Successful, click **Create**.
 
     ![connection successfull](./images/connection-successfull-create.png " ")
 
@@ -84,7 +84,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     ![provide consent](./images/provide-consent.png " ")
 
-5. Use the **APEX Assistant** Wizard to create a Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you chose **Oracle SQL** for **SQL Format**.
+5. Use the **APEX Assistant** Wizard to create a Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
     >Prompt:
     >Create a data model with the prefix PM to manage projects, milestones, tasks, task to-dos, task links, and comments, including multiple rows of data for each table

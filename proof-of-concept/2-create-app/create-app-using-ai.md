@@ -7,7 +7,7 @@ In this lab, you will create an interactive Project Management application using
 Estimated Time: 15 minutes
 
 ### Objectives
-- Create an application using the AI-driven Create Application wizard with the Data Model created in the previous Lab
+- Create an application using the AI-driven Create Application wizard with the Data Model created in the previous lab
 
 ### What You will Need
 
@@ -23,7 +23,7 @@ Estimated Time: 15 minutes
 2. Click **Create**.
     !["Click create App"](images/click-create-app.png "")
 
-3. In the Create an Application Page, Select **Create APP Using Generative AI**
+3. In the Create an Application Page, select **Create APP Using Generative AI**
 
     !["Click create app using Gen AI"](images/click-create-app-ai.png "")
 
@@ -65,7 +65,7 @@ Estimated Time: 15 minutes
 
     ![select appearance](images/click-appearance.png " ")
 
-11. In the Appearance Wizard, Select **Redwood Light** and then click **Save Changes**.
+11. In the Appearance Wizard, select **Redwood Light** and then click **Save Changes**.
 
     ![select redwood light theme](images/select-redwood-light.png " ")
 
@@ -82,7 +82,7 @@ Estimated Time: 15 minutes
 
 2. In the runtime environment, the login page will be displayed.
 
-    Enter your **Username** and **Password** (Username should be Demo).   
+    Enter your **Username** and **Password**.   
     Click **Sign In**.
 
     The new application will be displayed.

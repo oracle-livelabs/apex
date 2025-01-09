@@ -48,6 +48,8 @@ In this lab, you will create a Database View for your APEX application, containi
     ```
     !["create view"](images/create-view.png "")
 
+    >**Note: The table structure and column names in your generated data model may vary. Adjust the code accordingly to match your specific table structure.
+
 3. Click **App Builder**.
 
     !["create view"](images/click-app-builder1.png "")
@@ -88,9 +90,9 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 4. In the Generative AI Configuration page, enter the following:
 
     - Under Identification,
-      - Name : **Summarize Project Details**
+        - Name : **Summarize Project Details**
     - Under Generative AI
-      - For System Prompt: **Analyze the provided information and generate a concise summary in a single paragraph.**
+        - For System Prompt: **Analyze the provided information and generate a concise summary in a single paragraph.**
     - Click **Create**.
 
     !["enter system prompt"](images/genai-config1.png "")
@@ -100,52 +102,52 @@ In this task, you will set up an AI configuration and then add a RAG source to i
     !["enter system prompt"](images/click-create-rag-source.png "")
 
 6. In the RAG Source Page, enter the following:
-   - Under Identification, for Name: **Project Details Query**.
-   - Under Source,
-     - For Type: **SQL Query**
-     - For SQL Query: Copy and paste the below SQL Query
-    ```
-    <copy>
-        SELECT
-            'Project Name : '
-            || PROJECT_NAME
-            || CHR(10)
-            || CHR(13)
-            || 'Milestone Title : '
-            || MILESTONE_TITLE
-            || CHR(10)
-            || CHR(13)
-            || 'Task Name : '
-            || TASK_NAME
-            || CHR(10)
-            || CHR(13)
-            || 'Task Status : '
-            || TASK_STATUS
-            || CHR(10)
-            || CHR(13)
-            || 'ToDo Title : '
-            || TASK_DESCRIPTION
-            || CHR(10)
-            || CHR(13)
-            || 'ToDo Completed : '
-            || TODO_STATUS
-            || CHR(10)
-            || CHR(13)
-            || 'Task Link : '
-            || TASK_LINK_ID
-            || CHR(10)
-            || CHR(13)
-            || 'Comment Text : '
-            || COMMENT_TEXT
-            || CHR(10)
-            || CHR(13) AS CONCATENATED_RESULT
-        FROM
-            PROJECT_MANAGEMENT_VW
-    </copy>
-    ```
+    - Under Identification, for Name: **Project Details Query**.
+    - Under Source,
+            - For Type: **SQL Query**
+            - For SQL Query: Copy and paste the below SQL Query
+                ```
+                <copy>
+                SELECT
+                    'Project Name : '
+                    || PROJECT_NAME
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Milestone Title : '
+                    || MILESTONE_TITLE
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Name : '
+                    || TASK_NAME
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Status : '
+                    || TASK_STATUS
+                    || CHR(10)
+                    || CHR(13)
+                    || 'ToDo Title : '
+                    || TASK_DESCRIPTION
+                    || CHR(10)
+                    || CHR(13)
+                    || 'ToDo Completed : '
+                    || TODO_STATUS
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Link : '
+                    || TASK_LINK_ID
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Comment Text : '
+                    || COMMENT_TEXT
+                    || CHR(10)
+                    || CHR(13) AS CONCATENATED_RESULT
+                FROM
+                    PROJECT_MANAGEMENT_VW
+                </copy>
+                ```
     - Click **Create**
-
-    !["enter system prompt"](images/config-rag-source.png "")
+    
+    !["enter system prompt"](images/config-rag-source.png "")  
 
 7. Click **Apply Changes**.
 
@@ -168,19 +170,18 @@ In this task, you will set up an AI configuration and then add a RAG source to i
     ![create page wizard](./images/create-blank-page.png " ")
 
 4. Enter the following and click **Next**.
+    - Under Page Definition
+        - Name: **Project Summary**
+        - Page Mode: **Modal Dialog**
+    - Click **Create Page**.
+  
+    ![create page wizard](./images/create-blank-page1.png " ")  
 
-  - Under Page Definition
-    - Name: **Project Summary**
-    - Page Mode: **Modal Dialog**
-  - Click **Create Page**.
-
-    ![create page wizard](./images/create-blank-page1.png " ")
-
-    > **Note:** _Note the newly created page number. You will be using this page number in the upcoming steps. In this case my Page Number is 13_
+    > **Note:** _Note the newly created page number. You will be using this page number in the upcoming steps. In this case my Page Number is 13_  
 
 5. Navigate to the newly created page and add two hidden items to store the project ID and project summary.
 
-6. In the Rendering tree (left pane), Right-click on components and click **Create Page Item**.
+6. In the Rendering tree (left pane), right-click on components and click **Create Page Item**.
 
     ![Rendering Tree](./images/create-item.png " ")
 
@@ -196,7 +197,7 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 
     | Name |  Type  |
     | --- |  --- |
-    | P13\_PROJECT\_SUMMARY | Text Area |
+    | P13\_PROJECT\_SUMMARY | Textarea |
 
     ![Property Editor](./images/create-project-summary.png " ")    
 
@@ -299,10 +300,12 @@ In this task, you will modify the AI Configuration created earlier in the lab by
             || CHR(13) AS CONCATENATED_RESULT
         FROM
             PROJECT_MANAGEMENT_VW
-        WHERE PROJECT_ID = :P13\_PROJECT\_ID;
+        WHERE PROJECT_ID = :P13_PROJECT_ID;
     </copy>
     ```
     !["update sql query"](images/update-sql-query.png "")
+
+    >**Note**: The page item P13_PROJECT_ID may vary depending on the page number created in Task 3 of this lab. Ensure that the page number in the item aligns with the page number you used.
 
 ## Task 5: Configure the Project Dashboard page
 
@@ -314,11 +317,11 @@ In this task, you will modify the AI Configuration created earlier in the lab by
 
     ![open project dashboard page](./images/navigate-to-page1.png " ")
 
-3. On the Rendering tree(left pane), Under Project Dashboard region, Right-click on Actions and click **Create Action**.
+3. On the Rendering tree(left pane), Under Project Dashboard region, right-click on Actions and click **Create Action**.
 
     ![Rendering Tree](./images/create-action.png " ")
 
-4. In the Property Editor, enter the following:
+4. In the Property Editor, enter the following and click **Ok**:
 
     - Under Identification:
         - Type: **Button**
@@ -330,21 +333,21 @@ In this task, you will modify the AI Configuration created earlier in the lab by
             - Page: P13\_PROJECT\_ID
             - Value: &ID.
         - Under Appearance:
-          - Hot: **Yes**
+            - Hot: **Toggle On**
 
     ![Configure button](./images/configure-button.png " ")
 
-## Task 8: Run the New Application
+## Task 6: Run the New Application
 
 1. In Page Designer, click **Run Application**
 
     ![running the app](images/run-page1.png " ")
 
-2. In the runtime environment, Click **View Summary** on any Card.
+2. In the runtime environment, click **View Summary** on any Card.
 
     ![click on chat assistant button](images/click-button.png " ")
 
-3. In the PopUp, note that you can see the summary of the Project.
+3. In the pop up, note that you can see the summary of the Project.
 
     ![interact with chat assistant](images/generated-text.png " ")
 
@@ -364,4 +367,4 @@ You know now how to create a view, configure AI attributes, and set up generativ
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, May 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025

@@ -32,9 +32,9 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 4. In the Generative AI Configuration page, enter the following:
 
     - Under Identification,
-      - Name : **Analyze Projects with AI**
+        - Name : **Analyze Projects with AI**
     - Under Generative AI
-      - For System Prompt: **If the question cannot be answered using the provided information, respond with "Information Not Found."**
+        - For System Prompt: **If the question cannot be answered using the provided information, respond with "Information Not Found."**
     - Click **Create**.
 
     !["enter system prompt"](images/genai-config1.png "")
@@ -44,49 +44,49 @@ In this task, you will set up an AI configuration and then add a RAG source to i
     !["enter system prompt"](images/click-create-rag-source.png "")
 
 6. In the RAG Source Page, enter the following:
-   - Under Identification, for Name: **Project Details Query**.
-   - Under Source,
-     - For Type: **SQL Query**
-     - For SQL Query: Copy and paste the below SQL Query
-    ```
-    <copy>
-        SELECT
-            'Project Name : '
-            || PROJECT_NAME
-            || CHR(10)
-            || CHR(13)
-            || 'Milestone Title : '
-            || MILESTONE_TITLE
-            || CHR(10)
-            || CHR(13)
-            || 'Task Name : '
-            || TASK_NAME
-            || CHR(10)
-            || CHR(13)
-            || 'Task Status : '
-            || TASK_STATUS
-            || CHR(10)
-            || CHR(13)
-            || 'ToDo Title : '
-            || TASK_DESCRIPTION
-            || CHR(10)
-            || CHR(13)
-            || 'ToDo Completed : '
-            || TODO_STATUS
-            || CHR(10)
-            || CHR(13)
-            || 'Task Link : '
-            || TASK_LINK_ID
-            || CHR(10)
-            || CHR(13)
-            || 'Comment Text : '
-            || COMMENT_TEXT
-            || CHR(10)
-            || CHR(13) AS CONCATENATED_RESULT
-        FROM
-            PROJECT_MANAGEMENT_VW
-    </copy>
-    ```
+    - Under Identification, for Name: **Project Details Query**.
+    - Under Source,
+        - For Type: **SQL Query**
+        - For SQL Query: Copy and paste the below SQL Query
+            ```
+            <copy>
+                SELECT
+                    'Project Name : '
+                    || PROJECT_NAME
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Milestone Title : '
+                    || MILESTONE_TITLE
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Name : '
+                    || TASK_NAME
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Status : '
+                    || TASK_STATUS
+                    || CHR(10)
+                    || CHR(13)
+                    || 'ToDo Title : '
+                    || TASK_DESCRIPTION
+                    || CHR(10)
+                    || CHR(13)
+                    || 'ToDo Completed : '
+                    || TODO_STATUS
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Task Link : '
+                    || TASK_LINK_ID
+                    || CHR(10)
+                    || CHR(13)
+                    || 'Comment Text : '
+                    || COMMENT_TEXT
+                    || CHR(10)
+                    || CHR(13) AS CONCATENATED_RESULT
+                FROM
+                    PROJECT_MANAGEMENT_VW
+            </copy>
+            ```
     - Click **Create**
 
     !["enter system prompt"](images/config-rag-source.png "")
@@ -97,7 +97,7 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 
 >**Note**: The SQL query may vary depending on the data model created in the first step. Ensure your query is error-free and retrieves all necessary details from the Project Management View. Also, we will change this SQL Query and append a Where class in the next steps.
 
-## Task 3: Create a  new Page and add Generate Text with AI dynamic action
+## Task 2: Create a  new Page and add Generate Text with AI dynamic action
 
 1. From your AI Configurations Page, click **App xxx**.
 
@@ -107,7 +107,7 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 
     ![open project dashboard page](./images/navigate-to-page1.png " ")
 
-3. On the Rendering tree(left pane), Right-click on Project Dashboard and click **Create Button**.
+3. On the Rendering tree(left pane), right-click on Project Dashboard and click **Create Button**.
 
     ![Rendering Tree](./images/click-create-button.png " ")
 
@@ -118,7 +118,7 @@ In this task, you will set up an AI configuration and then add a RAG source to i
         - Label: **Chat with AI**
 
     - Under Layout:
-        - slot: **Top of Region**
+        - Slot: **Top of Region**
         - Horizontal Alignment: Select Right
 
     ![Configure button](./images/configure-button.png " ")
@@ -156,11 +156,11 @@ In this task, you will set up an AI configuration and then add a RAG source to i
 
     ![Configure True action1](./images/configure-true-action1.png " ")
 
-## Task 8: Run the New Application
+## Task 3: Run the New Application
 
 1. In Page Designer, click **Run Application**
 
-2. In the runtime environment, Click **Chat with AI** button.
+2. In the runtime environment, click **Chat with AI** button.
 
     ![click on chat assistant button](images/click-chat-with-ai.png " ")
 

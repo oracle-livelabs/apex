@@ -72,12 +72,12 @@ In this task, you will create a Vector Provider that will be used later to set u
 4. In the Vector Provider Configuration page, enter the following:
 
     - Under Identification,
-      - Provider Type : **Database ONNX Model**
-      - Name: **DB ONNX Model**
-      - Static ID: **db_onnx_model**
+        - Provider Type : **Database ONNX Model**
+        - Name: **DB ONNX Model**
+        - Static ID: **db\_onnx\_model**
     - Under Local Embedding
-      - For ONNX Model Owner: **Select your Parsing Schema**
-      - ONNX Model Name: **DOC_MODEL**
+        - For ONNX Model Owner: **Select your Parsing Schema**
+        - ONNX Model Name: **DOC_MODEL**
     - Click **Create**.
 
     !["configure vector provider"](images/configure-vector-provider.png "")
@@ -88,7 +88,7 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 ## Task 3: Update view to Retrieve the Vector Embeddings for Project Data
 
-In this task, you will update the view that you created in the previous lab to convert the project related data into vector embeddings. Starting with APEX 24.2, a new PL/SQL API, APEX_AI.GET_VECTOR_EMBEDDINGS is available to simplify this process. You will use this APEX_AI.GET_VECTOR_EMBEDDINGS API to update the view.
+In this task, you will update the view created in the previous lab to transform project-related data into vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX_AI.GET_VECTOR_EMBEDDINGS** simplifies this process. You will use the **APEX_AI.GET_VECTOR_EMBEDDINGS** API to update the view.
 
 1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
@@ -128,7 +128,7 @@ In this task, you will update the view that you created in the previous lab to c
                             || CHR(13)
                             || PC.COMMENT_TEXT
                             || CHR(13),
-                    P_SERVICE_STATIC_ID => 'onnx_model'
+                    P_SERVICE_STATIC_ID => 'db_onnx_model'
                 )                  AS VECTOR_EMBEDDING
             FROM
                 PM_PROJECTS   PP
@@ -140,6 +140,8 @@ In this task, you will update the view that you created in the previous lab to c
     </copy>
     ```
     !["create view"](images/update-view.png "")
+
+>**Note**: The table structure and column names in your generated data model may vary. Adjust the code accordingly to match your specific table structure.
 
 ## Task 4: Create a Search Configuration
 
@@ -163,7 +165,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
     !["click create"](images/click-create1.png "")
 
-5. In the Create Search Configuration **Detail** Wizard, enter the following and click **Next**.
+5. In the Create Search Configuration Detail Wizard, enter the following and click **Next**.
     - For Name : **Projects Search - Vector**
     - Search Type: **Oracle Vector Search**
 
@@ -173,12 +175,12 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
     - Vector Provider : **DB ONNX Model**
     - Source Type: **Table**
     - Table/View Owner: **Select your Parsing Schema**
-    - Table/View Name: **PROJECT_MANAGEMENT_VW**
+    - Table/View Name: **PROJECT\_MANAGEMENT\_VW**
 
     !["vector search config"](images/search-config2.png "")
 
 7. In the Create Search Configuration **Column Mapping** Wizard, enter the following and click **Create Search Configuration**.
-    - Primary Key Column : **PROJECT_ID(Number)**
+    - Primary Key Column Column 2 : **MILESTONE_ID(Number)**
     - Vector Column: **VECTOR_EMBEDDING(Vector)**
     - Title Column: **PROJECT_NAME(Varchar2)**
     - Description Column: **TASK_DESCRIPTION(Varchar2)**
@@ -220,7 +222,7 @@ In this task, you will create a Vector Search Page to search across your Project
 
     ![create page wizard](./images/configure-search-page.png " ")
 
-## Task 8: Run the New Vector Search Page
+## Task 6: Run the New Vector Search Page
 
 1. In Page Designer of the newly created page, click **Run Application**
 

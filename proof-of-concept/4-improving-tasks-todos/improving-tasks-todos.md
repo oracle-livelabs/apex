@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will enhance the functionality of the Project Task and Project Task ToDos form pages by implementing improved lists of values. Additionally, you will learn how to leverage **APEX Assistant** to efficiently generate SQL queries.
+In this lab, you will enhance the functionality of the Project Task and Project Task To-Dos form pages by implementing improved lists of values. Additionally, you will learn how to leverage **APEX Assistant** to efficiently generate SQL queries.
 
 Estimated Time: 20 minutes
 
@@ -27,7 +27,7 @@ It would be beneficial to see additional details related to the milestone.
 1. From the runtime application, navigate to the Task form page in Page Designer. Given you ran this app from the APEX App Builder, a Developer Toolbar is displayed at the bottom of the screen.
    > **Note:** _End users who log directly into the app will not see this toolbar_
 
-2. In the Developer Toolbar, click  **Page 6**.
+2. In the Developer Toolbar, click  **Page X**.
 
     ![click edit page 6](images/click-edit-page6.png " ")
 
@@ -41,45 +41,45 @@ It would be beneficial to see additional details related to the milestone.
 3. You need to review the current List of Values used for Milestones. Within Page Designer:
     - In the Rendering tree (left pane): Click **P6\_MILESTONE\_ID**.
     - In the Property Editor (right pane),
-      - For Filter: **list**.
-      - For **List of Values**: Click **Right Arrow**
+        - For Filter: **list**.
+        - For **List of Values**: Click **Right Arrow**
   
     ![update lov](images/update-lov.png " ")
 
     > **Note:** _Entering a filter makes it much easier to find specific attributes, rather than scrolling down through a long list_  
     > **Note:** The List of Values > Type is a **Shared Component** so you will need to edit the appropriate shared component
 
-3. The left pane will change to the **Shared Components** tab, with the appropriate List of Values highlighted. In the Property Editor (right pane), click **Edit Component**.
+4. The left pane will change to the **Shared Components** tab, with the appropriate List of Values highlighted. In the Property Editor (right pane), click **Edit Component**.
 
     ![edit lov](images/edit-component-lov.png " ")
 
-4. Now to add some additional display columns. In the List of Values: PM_MILESTONES.NAME page, click **Select Columns**.
+5. Now to add some additional display columns. In the List of Values: PM_MILESTONES.NAME page, click **Select Columns**.
 
     ![select columns](images/click-select-columns.png " ")
 
-5. In the Select Additional Display Columns dialog, double-click the following columns and then click **Update**
+6. In the Select Additional Display Columns dialog, double-click the following columns and then click **Update**
     -   PROJECT_ID
     -   DUE_DATE
 
     ![add additional columns](images/add-additional-columns.png " ")
 
-6. Click **Apply Changes**.
+7. Click **Apply Changes**.
 
     ![click apply changes](images/click-apply-changes.png " ")
 
     > **Note:** _You will be returned to Page Designer with Page 6 selected_  
 
-7. In order for the extra display values to be visible, you need to update the page item to be a Popup LOV, instead of a Select List.
+8. In order for the extra display values to be visible, you need to update the page item to be a Popup LOV, instead of a Select List.
 
-8. Within Page Designer, in Layout (middle pane), click **P6\_MILESTONE\_ID**. In the Property Editor (right pane), for Identification > **Popup LOV**. Then, click **Save**.
+9. Within Page Designer, in Layout (middle pane), click **P6\_MILESTONE\_ID**. In the Property Editor (right pane), for Identification > **Popup LOV**. Then, click **Save**.
 
     ![set as popup lov](images/set-as-popuplov.png " ")
 
     > **Note:** If you click _Run and Save_ instead of **Save** the page will be saved but a warning will be displayed as this page is a modal page and cannot be run directly from Page Designer
 
-9. Time to review the improved Milestone item. Navigate to the runtime environment tab or browser. Navigate to **Task Overview** page and refresh the page.     
+10. Time to review the improved Milestone item. Navigate to the runtime environment tab or browser. Navigate to **Task Overview** page and refresh the page.     
 
-10. Click the edit icon for a Task and then click the down arrow on **Milestone** to review the new Popup LOV.
+11. Click the edit icon for a Task and then click the down arrow on **Milestone** to review the new Popup LOV.
 
     ![new milestone lov](images/new-milestone-lov.png " ")
 
@@ -95,7 +95,7 @@ In the Runtime environment navigate to **Task To Dos** page and notice that the 
 
     You should now be in Page Designer with **Page 9: Task-ToDos** loaded.
 
-2. You need to update the query defined for To Dos. Within Page Designer, in the Rendering tree (left pane), click **Project Task Todos**. In the Property Editor (right pane),  
+2. You need to update the query defined for To Dos. Within Page Designer, in the Rendering tree (left pane), click **Task Todos**. In the Property Editor (right pane),  
     - For Source: **SQL Query**.
 
     ![set SQL Query as source](images/set-sql-query.png " ")
@@ -174,7 +174,7 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![select tasks lov](images/select-tasks-lov.png " ")
 
-4. Under Source, Set the Source type as **SQL Query**. In the **SQL Query** wizard, click **APEX Assistant**.
+4. Under Source, set the Source type as **SQL Query**. In the **SQL Query** wizard, click **APEX Assistant**.
 
     ![select sql query](images/select-sql-query.png " ")
 
@@ -185,20 +185,20 @@ This same LOV is used on the Links form page so we can reuse it there as well.
 
     ![enter prompt 2](images/enter-prompt2.png " ")
 
-6. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**. Then, click **Validate** in your Code Editor Toolbar. If the query doesn't throw any errors, click **Apply Changes**.
+6. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**. 
 
     ![generated sql](images/generated-sql1.png " ")
 
-7. In the Code Editor toolbar, click **Validate**. If the SQL is validated successfully, then click **OK**.
+7. In the Code Editor toolbar, click **Validate**. If the query doesn't throw any errors, click **Apply Changes**.
 
     ![validate code](images/validate-code1.png " ")
 
-8. In the List of Values page, enter the following:
+8. Navigate to **PM\_TASKS.NAME** page from the List of Values page and then in the List of Values: PM\_TASKS.NAME page, enter the following:
 
     - Under Column Mapping,
-      - Return: **ID**
-      - Display: **NAME**
-      - Default Sort: **NAME**
+        - Return: **ID**
+        - Display: **NAME**
+        - Default Sort: **NAME**
 
     ![set list of values](images/set-lov.png " ")
 
@@ -255,4 +255,4 @@ You now know how to improve the Project Task and Project Task ToDos pages by uti
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributors** - 
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025
