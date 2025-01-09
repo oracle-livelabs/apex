@@ -36,7 +36,7 @@ In this Task, you will create a dynamic action to:
 
      ![Open Page 16](./images/navigate-to-17.png " ")
 
-2. Navigate to the **Dynamic Actions** tab (left pane). Right-click **Dialog Closed** and click **Create Dynamic Action**.
+2. Navigate to the **Dynamic Actions** tab (left pane). Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
      ![Create a Dynamic Action](./images/create-dynamic-action1.png " ")
 
@@ -94,7 +94,7 @@ In this Task, you will create a dynamic action to:
 
     ![Add a True Action](./images/create-da3.png " ")
 
-5. Under **Update Shopping Cart Header** Dynamic Action, right-click **True** and click **Create TRUE Action**.
+5. Under **Update Shopping Cart Header** Dynamic Action, right-click **True** and select **Create TRUE Action**.
 
      ![Create Second True Action](./images/create-2da.png " ")
 
@@ -104,7 +104,7 @@ In this Task, you will create a dynamic action to:
 
         - Name: **Refresh Shopping Cart region**
 
-        - Action: select **Refresh**
+        - Action: **Refresh**
 
     - Under Affected Elements:
 
@@ -114,7 +114,7 @@ In this Task, you will create a dynamic action to:
 
     ![Create Second True Action](./images/create-3da.png " ")
 
-7. Right-click  **Update Badge & Icon** action and click **Create Opposite Action**.
+7. Right-click  **Update Badge & Icon** action and select **Create Opposite Action**.
 
      ![Create Opposite or False Action](./images/create-opp-action.png " ")
 
@@ -122,11 +122,11 @@ In this Task, you will create a dynamic action to:
 
     ```
     <copy>
-        // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
+    // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
 
-        // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+    // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
     </copy>
     ```
 

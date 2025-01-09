@@ -32,7 +32,7 @@ In this task, you will focus on customizing the existing Smart Filters in the **
 
 3. Navigate to **Project Tasks Search** page and click **Page 8** in the **Developer toolbar**.
 
-    > **Note:** _Note that your page number might be different._
+    > **Note:** Note that your page number might be different.
 
     ![Navigate to Project Tasks Search](images/navigate-to-page.png " ")
 

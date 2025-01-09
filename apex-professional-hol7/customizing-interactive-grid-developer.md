@@ -26,7 +26,7 @@ In this lab, you will:
 
 In this task, you customize the Interactive Grid for end users. You create column groups, set pagination type, and set the report downloadable formats that should be available for end users. You also enable end users to save the report as **Public** interactive grids and convert a read-only interactive grid to an editable one.
 
-1. Navigate to **App Builder** and run the **Demo Projects** application.
+1. Navigate to **App Builder**, select **Demo Projects** application and click **Run Application**.
 
     ![App Builder](./images/select-demo-projects-app.png " ")
 
@@ -36,7 +36,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     ![Edit Page 4](./images/click-page.png " ")
 
-3. Add the following column group headers to the interactive grid:
+3. In the Property Editor, add the following column Group headers to the interactive grid:
 
     - **Project Breakdown**: Project, Task_Name columns
 

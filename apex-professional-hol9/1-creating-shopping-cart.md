@@ -60,11 +60,11 @@ In this task, you will add validations to ensure that required fields on the sho
 
 6. Create two more validations for the following items: **Email** and **Store**.
 
- | Name           | Validation > Type | Validation > Item       | Error Message                      | Associated Item         | Server-side Condition > When Button Pressed |
- | -------------- | ----------------- | ----------------------- | ------------------------------- |----------------------- | ------------- |
- | Validate Email | Item is NOT NULL  | P17\_CUSTOMER\_EMAIL    | Please enter your email address | P17\_CUSTOMER\_EMAIL    | Proceed |
- | Validate Store | Item is NOT NULL  | P17_STORE               | Please select a store           | P17_STORE               | Proceed |
- {: title="Validation Properties"}
+    | Name           | Validation > Type | Validation > Item       | Error Message                      | Associated Item         | Server-side Condition > When Button Pressed |
+    | -------------- | ----------------- | ----------------------- | ------------------------------- |----------------------- | ------------- |
+    | Validate Email | Item is NOT NULL  | P17\_CUSTOMER\_EMAIL    | Please enter your email address | P17\_CUSTOMER\_EMAIL    | Proceed |
+    | Validate Store | Item is NOT NULL  | P17_STORE               | Please select a store           | P17_STORE               | Proceed |
+    {: title="Validation Properties"}
 
     ![Customize Validation](./images/create-validation3.png " ")
 
@@ -74,7 +74,7 @@ In this task, you will add validations to ensure that required fields on the sho
 
 This task focuses on creating a backend process that allows users to submit their orders. You will invoke a PL/SQL package that handles order creation, ensuring the order is successfully placed with all relevant customer information.
 
-1. Navigate to **Processing** tab (left pane). Right-click **Processing** and click **Create Process**.
+1. Navigate to **Processing** tab (left pane). Right-click **Processing** and select **Create Process**.
 
     ![Create Page Process](./images/create-process1.png " ")
 
@@ -95,7 +95,8 @@ This task focuses on creating a backend process that allows users to submit thei
 
     ![Create and Configure Invoke API Process](./images/create-process2.png " ")
 
-3. Expand the **Checkout** process. Under **Parameters**, click **p_customer** and enter/select the following:
+3. Expand the **Checkout** process. Under **Parameters**, select **p_customer** and enter/select the following:
+
     - Under Value:
 
         - Type: **Item**
@@ -110,13 +111,13 @@ This task focuses on creating a backend process that allows users to submit thei
 
 In this task, you will create a process to clear the shopping cart when the customer requests it. This includes providing a success message and redirecting the user to the shopping cart page, ensuring they can start fresh.
 
-1. In the **Processing** tab, right-click **Ajax Callback** and click **Create Process**.
+1. In the **Processing** tab, right-click **Ajax Callback** and select **Create Process**.
 
     ![Create Page Process](./images/create-process12.png " ")
 
 2. In the property editor, enter/select the following:
 
-    - Identification > Name - Enter **clear_cart**.
+    - Identification > Name: **clear_cart**
 
     - Source > PL/SQL Code: Copy and paste the below code:
 
@@ -135,7 +136,7 @@ In this task, you will create a process to clear the shopping cart when the cust
 
     ![Create and Configure Background Process](./images/clear-cart.png " ")
 
-3. Click **Proceed** button. Under **Behavior**, enable **Show Processing**.
+3. Under **Rendering** tab, select **Proceed**. In the Property Editor, under **Behavior**, enable **Show Processing**.
 
     This would avoid accidental multiple-page submissions by displaying a processing animation and temporarily disabling page interaction using the new Show Processing attribute available for page buttons.
 

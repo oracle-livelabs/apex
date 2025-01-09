@@ -12,7 +12,7 @@ Then, you will learn how to improve the Products page by adding new facets and c
 
 In the last hands-on workshop, you learned how to add Dynamic Actions, Computations and Page Processes.
 
-Estimated Time: 30 minutes
+Estimated Time: 40 minutes
 
 ### Objectives
 

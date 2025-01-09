@@ -40,7 +40,7 @@ In this task, you will enhance the functionality of the Shopping Cart page in an
 
     ![Input Title for Static content region](./images/select-title-for-region.png " ")
 
-5. Right-click **Order Information** (left pane) region and click **Create Page Item**.
+5. Right-click **Order Information** (left pane) region and select **Create Page Item**.
 
     ![Create Page Item](./images/create-page-item.png " ")
 
@@ -143,7 +143,7 @@ In this task, you will create four-page items:
 
     ![Update Button](./images/create-button.png " ")
 
-4. Right-click the **Buttons Bar** region and click **Create Page Item**.
+4. Right-click the **Buttons Bar** region and select **Create Page Item**.
 
     ![Create Page Item](./images/create-page-item3.png " ")
 
@@ -174,7 +174,7 @@ In this task, you will create four-page items:
         | 5             | 5            |
         {: title="Display and Return Values"}
 
-        - Click **OK**.
+        Click **OK**.
 
     - Display Extra Values: Toggle **Off**
 

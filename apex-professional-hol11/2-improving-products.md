@@ -30,7 +30,7 @@ As you can see, it's hard to find the products, and it would be beneficial to se
 
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
 
-    > **Note:** _End users who log directly into the app will not see this toolbar._
+    > **Note:** End users who log directly into the app will not see this toolbar.
 
     In the Developer Toolbar, click **Page 19**.
 

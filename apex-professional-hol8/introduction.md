@@ -6,11 +6,11 @@ Oracle APEX is a low-code application platform for Oracle Database. APEX Applica
 
 Once you complete this workshop, Customers will be able to:
 
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
+- Review the items in the shopping cart.
+- Edit the quantity of the items.
+- Remove an item.
+- Clear the shopping cart.
+- Proceed to checkout.
 
 ### Recap
 
