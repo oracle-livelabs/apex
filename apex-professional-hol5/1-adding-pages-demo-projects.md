@@ -26,7 +26,7 @@ Stuck or Missed out on completing the previous labs? Don’t worry! You can down
 
 In this task, you will create an Interactive Grid to display and manage tasks from the DEMO_PROJECTS table. An Interactive Grid allows users to interact with the data by sorting, filtering, and updating records directly within the grid.
 
-1. On the Workspace home page, click the App Builder icon and select **Demo Projects** application.
+1. On the Workspace home page, click **App Builder** and select **Demo Projects** application.
 
     ![App Builder](./images/select-demo-projects-app1.png " ")
 
@@ -55,6 +55,8 @@ In this task, you will create an Interactive Grid to display and manage tasks fr
     ![Page Attributes](./images/create-ig-2.png " ")
 
 5. Click **Save and Run** to view the Interactive Grid page.
+
+    ![Save and Run Page](./images/save-run-tasks.png " ")
 
     ![Save and Run Page](./images/view-interactive-grid11.png " ")
 
@@ -91,6 +93,8 @@ In this lab, you create a Smart Filters page on the **DEMO_PROJECTS** table.
     ![Select the Filters](./images/create-sf-page14.png " ")
 
 5. Click **Save and Run** to view the Smart Filters page.
+
+    ![Save and Run Page](./images/create-srun.png " ")
 
     ![Save and Run Page](./images/create-sf-page16.png " ")
 
@@ -132,7 +136,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Create election Support](./images/cr-select-support.png " ")
 
-6. Right-click **Selection Support** region and click **Create Page Item**.
+6. Right-click **Selection Support** region and select **Create Page Item**.
 
     ![Create election Support](./images/cr-page-item.png " ")
 
@@ -164,7 +168,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Create election Support](./images/cr-page-item-detail.png " ")
 
-8. Right-click **Selection Support** region and click **Create Page Item**.
+8. Right-click **Selection Support** region and select **Create Page Item**.
 
     ![Create election Support](./images/cr-page-item1.png " ")
 
@@ -182,7 +186,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Create election Support](./images/cr-page-item-detail1.png " ")
 
-10. Right-click **Selection Support** region and click **Create Page Item**.
+10. Right-click **Selection Support** region and select **Create Page Item**.
 
     ![Create election Support](./images/cr-page-item2.png " ")
 
@@ -250,7 +254,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Attributes](./images/cr-attributes1.png " ")
 
-15. Right-click **Selection Support** region and click **Create Button**.
+15. Right-click **Selection Support** region and select **Create Button**.
 
     ![Create Button](./images/cr-button.png " ")
 
@@ -274,7 +278,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Create Button](./images/cr-button-details.png " ")
 
-17. Right-click **Update** button and click **Create Dynamic Action**.
+17. Right-click **Update** button and select **Create Dynamic Action**.
 
     ![Create Dynamic Action](./images/cr-dynamic-action.png " ")
 
@@ -310,7 +314,7 @@ In this task, you create a **Content Row** report with selection support on the 
 
     ![Create Dynamic Action](./images/cr-dynamic-action-details.png " ")
 
-20. Right-click **True** action and click **Create TRUE Action**.
+20. Right-click **True** action and select **Create TRUE Action**.
 
     ![True Action](./images/cr-true.png " ")
 

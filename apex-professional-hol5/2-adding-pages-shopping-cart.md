@@ -123,13 +123,13 @@ This task walks you through creating a blank page for the shopping cart, where u
 
 4. In the **Create Blank Page** wizard, enter/select the following:
 
-    - Under **Page Definition**:
+    - Under Page Definition:
 
         - Page Number: **17**
 
         - For Name: **Shopping Cart**
 
-    - Under **Navigation**:
+    - Under Navigation:
 
         - Use Breadcrumb: Toggle **OFF**
 
@@ -248,7 +248,7 @@ In this task, you will add an "Edit" action button that allows users to edit the
 
 1. In the **Rendering** tab, navigate to **Shopping Cart** region.
 
-2. Right-click **Actions** and click **Create Action**.
+2. Right-click **Actions** and select **Create Action**.
 
     ![Add an Action](./images/create-action11.png " ")
 
@@ -258,7 +258,7 @@ In this task, you will add an "Edit" action button that allows users to edit the
 
     - Target: **No Link Defined**:
 
-        - Page: **18** *{Note: Page 18 will be created in the next lab}*
+        - Page: **18** *{Note: Page 18 will be created in the next Task}*
 
         - Set items:
 
@@ -360,13 +360,13 @@ This task helps you create a Cards region that shows detailed product informatio
 
     - Page Items to Submit: **P18\_PRODUCT\_ID**
 
-    ![Add Cards Region](./images/create-cards-region11.png " ")
-
     - Under Appearance, click **Template Options**:
 
         - Style: **Style C**
 
         Click **OK**.
+
+    ![Add Cards Region](./images/create-cards-region11.png " ")
 
     ![Add Cards Region](./images/create-cards-region12.png " ")
 
@@ -515,7 +515,7 @@ The final task will guide you in creating a faceted search page that lists produ
 
      - Cards Layout: **Grid**
 
-     - Title Column: **PRODUCT_NAME**
+     - Title Column: **PRODUCT_NAME(Varchar2)**
 
      - Body Column : **- Select Column -** (to unselect the default column chosen)
 

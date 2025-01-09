@@ -22,14 +22,6 @@ In this lab, you will:
 
 - Lock and unlock pages to manage concurrent editing.
 
-### Downloads
-
-Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol3-lab1.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshops:
-
-1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
-
-2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
-
 ## Task 1: Navigate and Review the Page Designer panes
 
 In this task, you will open your APEX application in the Page Designer and familiarize yourself with its key components, including the left, central, and right panes.
@@ -130,7 +122,7 @@ To prevent conflicts during development, this task will teach you how to lock an
 
 4. Click the **Page locked by you** button on the Page Designer toolbar.  Click **Unlock**.
 
-    ![Define Icon](images/unlock-a-page2.png " ")
+    ![Define Icon](images/unlock-a-page.png " ")
 
 ## Task 5: Add Items to the Page
 
@@ -278,7 +270,7 @@ You will add a Cards Region to display the key details of the customer's order, 
 
 3. Click **Attributes** and enter/select the following:
 
-    - Under **Secondary Body**:
+    - Under Secondary Body:
 
         - Advanced Formatting: Toggle **On**
 
