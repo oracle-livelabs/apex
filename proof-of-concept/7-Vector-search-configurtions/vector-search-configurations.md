@@ -19,6 +19,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will create a Database View for your APEX application, containing all the necessary project-related information. This view will be used when adding RAG Sources to AI Configurations. Next, you will go to the AI Attributes page and set the Generative AI Service name to the one configured in **Lab 1**.
 
+Before uploading the ONNX model to your database schema, you must grant the schema the privilege to create mining models while logged in as SYS/ADMIN.
+
+Login as SYS/Admin User and execute the below command.
+
+>**Command**: GRANT create mining model TO **YourSchemaName**;  
+
+!["Grant create mining model"](images/provide-grants.png "")
+
+
 1. From your APEX workspace homepage, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
     !["select SQL Commands"](images/select-sql-commands.png "")
