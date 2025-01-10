@@ -318,4 +318,4 @@ In this lab, you loaded ONNX models into Oracle Database, created a Vector Provi
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025

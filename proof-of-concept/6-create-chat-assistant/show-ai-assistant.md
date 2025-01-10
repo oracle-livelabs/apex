@@ -184,4 +184,4 @@ In this lab, you created an interactive chatbot using the Show AI Assistant feat
 ## **Acknowledgments**
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025

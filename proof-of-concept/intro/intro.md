@@ -12,7 +12,7 @@ As you progress, you integrate AI-powered text generation into your application,
 
 Finally, you will create a search page using Oracle Vector Search, adding advanced search capabilities to your application. By the end of this lab, you will have practical experience in using AI with Oracle APEX to efficiently build, customize, and enhance feature-rich applications.
 
-Estimated Time: 55 minutes
+Estimated Time: 1 hour and 40 minutes
 
 ### Lab Objectives
 
