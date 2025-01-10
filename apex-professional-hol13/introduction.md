@@ -12,7 +12,7 @@ This combined lab will walk you through the process of creating search configura
 
 In the last hands-on workshop, you practiced how to create and customize a form and link it to the report.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 

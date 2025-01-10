@@ -77,11 +77,17 @@ In this lab, you will:
 
     - Identification > Type: **Link**
 
-    - Link > Target: Click **No Link Defined**
+    - Under Link:
+    
+        - Target: Click **No Link Defined**
 
-        - Page: **15** *{This page will be created in the next lab}*
+            - Page: **15** *{This page will be created in the next lab}*
 
-        - Set Items > Name: **P15\_PRODUCT\_ID**, Value: **#PRODUCT\_ID#**
+            - Set Items:
+        
+            | Name | Value |
+            | ---- | ---- |
+            | P15\_PRODUCT\_ID | #PRODUCT\_ID# |
 
         - Clear Cache: **15**
 
@@ -149,7 +155,9 @@ In this lab, you will:
 
             - Target > Page: **15**
 
-            - Set Items > Name: **P15\_PRODUCT\_ID** , Value: **#PRODUCT_ID#**
+            | Name | Value |
+            | ---- | ---- |
+            | P15\_PRODUCT\_ID | #PRODUCT\_ID# |
 
             - Clear Cache: **15**
 

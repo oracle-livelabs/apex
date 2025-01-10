@@ -179,7 +179,7 @@ You’ll add interactive actions to the cards, such as linking to detailed produ
 
 1. Navigate to **Search Results** (left pane).
 
-2. Right-click **Actions**, click **Create Action**.
+2. Right-click **Actions**, select **Create Action**.
 
     ![Create Action](./images/create-action1.png " ")
 
@@ -217,7 +217,7 @@ In this task, you will create two dynamic actions:
 
 1. Navigate to the **Dynamic Actions** tab (left pane).
 
-2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+2. Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
      ![Create Dynamic Actions](./images/create-da1.png " ")
 
@@ -263,7 +263,7 @@ In this task, you will create two dynamic actions:
 
     ![Navigate to Refresh action](./images/create-da03.png " ")
 
-5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+5. Create a second dynamic action. Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
     ![Create Dynamic Action2](./images/create-2-da1.png " ")
 
@@ -315,12 +315,12 @@ In this task, you will create two dynamic actions:
 
     ![Navigate to Refresh](./images/create-2-da3.png " ")
 
-8. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
+8. Right-click **Execute JavaScript Code** and select **Create Opposite Action**.
 
      ![Create Opposite Action](./images/create-2-opp-action.png " ")
 
 9. In the Property Editor, update the following:
-    - Settings > Code: Enter the following JavaScript Code:
+    - Settings > Code: Copy and Replace with the following JavaScript Code:
 
          ```
         <copy>

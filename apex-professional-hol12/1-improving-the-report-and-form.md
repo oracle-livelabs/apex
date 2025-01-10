@@ -50,69 +50,9 @@ In this task, you will create a form that displays product details. This Form wi
 
     ![Define Form](./images/create-form3.png " ")
 
-5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected. Enter/select the following:
-
-    - Under Branch Pages:
-
-        - Branch Here on Submit: **14**
-
-        - Cancel and Go To Page: **14**
-
-        Click **Create Page**.
+5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected. Click **Create Page**.
 
     ![Define Primary key](./images/mp-create-page.png " ")
-
-## Task 2: Link a Report to a Form
-
-Once the product form is created, you need to link it to an existing interactive report. This allows users to easily edit product details directly from the report page.
-
-1. From **Page Designer** toolbar, navigate to page finder and select **14**.
-
-    ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
-
-2. In the **Rendering** tab, navigate to **RESET_REPORT** button and update the following:
-
-    - Under Identification:
-
-        - Button Name: **Create**
-
-        - Label: **Create**
-
-    - Layout > Slot: **Above Region [Legacy]**
-
-    - Under Appearance:
-
-        - Hot: Toggle **On**
-
-        - Template Options: Click **Use Template Defaults**
-
-            - Advanced > Width: **Stretch**
-
-        Click **OK**.
-
-    - Under Behavior:
-
-        - Action: **Redirect to Page in this Application**
-
-        - Target: Click **No Link Defined**
-
-            - Target > Page: **15**
-
-            - Set Items:
-
-           | Name             | Value        |
-           | ---------------- | ------------ |
-           | P15\_PRODUCT\_ID | #PRODUCT_ID# |
-
-            - Clear Cache: **15**
-
-            Click **OK**.
-
-    ![Enhance form3](images/create-btn.png " ")
-
-    ![Enhance form3](images/create-redirect.png " ")
-
-3. Click **Save**.
 
 ## Task 3: Enhance the Form
 
