@@ -137,17 +137,17 @@ A well-structured navigation bar can improve the overall user experience. In thi
 
     ![Create Entry](./images/create-entry21.png " ")
 
-6. Under **User Defined Attributes** and enter the following:
+6. Under **User Defined Attributes** and enter/select the following:
 
     - Badge Value:  **&SHOPPING\_CART\_ITEMS.**
 
     - List Item CSS Classes: **js-shopping-cart-item**
 
+    Click **Create and Create Another**.
+
     ![Create List Entry](./images/create-entry31.png " ")
 
-7. Click **Create and Create Another**.
-
-8. In the **List Entry** page, enter/select the following:
+7. In the **List Entry** page, enter/select the following:
 
     - Sequence: **2**
 
@@ -159,33 +159,33 @@ A well-structured navigation bar can improve the overall user experience. In thi
 
     - Clear cache: **20**
 
-9. Click **Create List Entry**.
+    Click **Create List Entry**.
 
     ![Create List Entry](./images/create-entry4.png " ")
 
-10. Under **List Entries**, click **&APP_USER.**
+8. Under **List Entries**, click **&APP_USER.**
 
     ![Edit &APP_USER.](./images/click-app-user.png " ")
 
-11. Under **Authorization** tab, for Authorization Scheme, select **Administration Rights**. Click **Apply Changes**.
+9. Under **Authorization** tab, for Authorization Scheme, select **Administration Rights**. Click **Apply Changes**.
 
     ![Set Admin Rights](./images/set-admin-rights.png " ")
 
-12. Click **Create Entry**  and enter/select the following:
+10. Click **Create Entry**  and enter/select the following:
 
-     - Sequence: **3**
+    - Sequence: **3**
 
-     - Image/Class: **fa-wrench**
+    - Image/Class: **fa-wrench**
 
-     - List Entry Label: **Administration**
+    - List Entry Label: **Administration**
 
-     - Page: **10000**
+    - Page: **10000**
+
+    Click **Create List Entry**.
 
     ![Click Create Entry2](./images/create-entry12.png " ")
 
-13. Click **Create List Entry**.
-
-14. Run the application and view the changes.
+11. Run the application and view the changes.
 
     ![Create List Entry2](./images/run-time.png " ")
 

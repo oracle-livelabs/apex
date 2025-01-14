@@ -46,7 +46,7 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
 4. Click **Save**.
 
- ![Select Theme to Redwood Light](images/click-save-as.png " ")
+    ![Select Theme to Redwood Light](images/click-save-as.png " ")
 
 ## Task 2: Create Plug-in
 
@@ -102,9 +102,9 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
        ```
        </copy>
 
-    ![Select Theme to Redwood Light](images/create-plug-in.png " ")
-
 6. Click **Create Plug-in**.
+
+    ![Select Theme to Redwood Light](images/create-plug-in.png " ")
 
 ## Task 3: Enhance Template Component
 
@@ -161,9 +161,9 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
     | Search | SEARCH | Check | Text Field |     |
     | Select All | SELECT_ALL | Check | Checkbox |    |
 
-    ![Select Theme to Redwood Light](images/add-slots.png " ")
-
 3. Click **Apply Changes**.
+
+    ![Select Theme to Redwood Light](images/add-slots.png " ")
 
 4. Navigate to **Hero** plug-in. Under **Default Slots**, for **Buttons**, select **Action**.
 
@@ -211,7 +211,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/add-attributes.png " ")
 
-6. Right-click **Project Task** region and click **Create Page Item**.
+6. Right-click **Project Task** region and select **Create Page Item**.
 
     ![Select Theme to Redwood Light](images/create-search.png " ")
 
@@ -239,17 +239,17 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/selection-id-drag.png " ")
 
-11. Right-click **Selection Support** region and click **Delete**.
+11. Right-click **Selection Support** region and select **Delete**.
 
     ![Select Theme to Redwood Light](images/delete-region.png " ")
 
-12. Select **Project Task Status** region and in the Property Editor, enter/select the following:
+12. Select **Task Status** region and in the Property Editor, enter/select the following:
 
     - Under Source:
 
         - Type: **SQL query**
 
-        - SQL Query: Copy and Paste with the following code:
+        - SQL Query: Copy and replace with the following code:
 
         ```
         <copy>
@@ -279,7 +279,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/update-sql.png " ")
 
-13. Right-click **Breadcrumb** and click **Delete**.
+13. Right-click **Breadcrumb** and select **Delete**.
 
     ![Select Theme to Redwood Light](images/delete-breadcrumb.png " ")
 

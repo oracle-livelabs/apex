@@ -5,24 +5,23 @@
 In this lab, you will learn how to improve the Products page by adding new facets and customizing the cards.
 
 Once you have finished the workshop and updated all the products as described in the steps, your page will look like the following image:
-    ![Products page in the completed application](./images/products-page.png " ")
+
+![Products page in the completed application](./images/products-page.png " ")
 
 *Please note that customer can quickly identify the products that already have been added to the shopping cart.*
 
 Estimated Time: 20 minutes
-<!--
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:N3Kd2XuudG4)
--->
 
 Watch the video below for a quick walk-through of the lab.
 [Improve the products page](videohub:1_hjohajza)
 
 ### Objectives
+
 In this lab, you will:
-- Improve both Faceted Search and Cards region
-- Add Dynamic Actions to the page
+
+- Improve both Faceted Search and Cards region.
+
+- Add Dynamic Actions to the page.
 
 ## Task 1: Create and Reorder Facets
 
@@ -34,18 +33,18 @@ As you can see, it's hard to find the products and it would be beneficial to see
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
     *{Note: End users who log directly into the app will not see this toolbar.}*
 
-    In the Developer Toolbar click **Edit Page 1**.
+    In the Developer Toolbar click **Page 1**.
 
     ![Products page in the application](./images/dev-toolbar-s.png " ")
 
-    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
+    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.
     Once in the App Builder click **1 - Products**.
 
     ![App Builder home page](./images/alt-app-builder1.png " ")
 
     You should now be in Page Designer with **Page 1: Products** loaded.
 
-2. In the left pane, under **Search** region, right-click **Facets** and click **Create Facet**.
+2. In the left pane, under **Search** region, right-click **Facets** and select **Create Facet**.
 
     ![App Builder home page](./images/facets1.png " ")
 
@@ -67,20 +66,23 @@ As you can see, it's hard to find the products and it would be beneficial to see
 
 ## Task 2: Enhance the Faceted Search
 
-1. In the Rendering tree (left pane), navigate to **Search**.
+1. Under **Rendering** tab (left pane), navigate to **Search**.
 
 2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
-    -  Total Row Count Label: **Total Products**
 
-    -  Show Charts: **No**
+    - Under Settings:
 
-  ![Property Editor](./images/enhance-facet.png " ")    
+        - Total Row Count Label: **Total Products**
+
+        - Show Charts: **No**
+
+    ![Property Editor](./images/enhance-facet.png " ")
 
 ## Task 3: Enhance the Cards Region
 
-1.  In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
+1. Under **Rendering** tab (left pane), navigate to **Search Results** region and in the Property Editor (right pane), enter/select the following:
 
-    - SQL Query: Enter the following SQL code:
+    - SQL Query: Copy and replace the following SQL code:
 
         ```
         <copy>
@@ -114,29 +116,19 @@ As you can see, it's hard to find the products and it would be beneficial to see
         </copy>
         ```
 
-    ![Property Editor](./images/search-results-s.png " ")  
+    ![Property Editor](./images/search-results-s.png " ")
 
     - Under Appearance:
 
-        - Click **Template Options**. For Style - select **Style A**  
+        - Template Options > Use Template Options:
 
-        - Click **Ok**.
+            - Style > **Style A**
+
+        Click **OK**.
 
     ![Property Editor](./images/template-options10.png " ")
 
-2. Click **Attributes** and apply the following changes:
-
-    - Under Appearance:
-
-        - Layout: **Grid**
-
-        - Grid Columns: **Auto**
-
-  ![Attributes Tab of the Property Editor](./images/attributes1.png " ")
-
-    - Under Title:
-
-        -  Column: **PRODUCT_NAME**
+2. Navigate to **Attributes** tab and enter/select the following:
 
     - Under Subtitle:
 
@@ -156,40 +148,35 @@ As you can see, it's hard to find the products and it would be beneficial to see
 
     - Under Media:
 
-        -  Source: **BLOB Column**
+        - Source: **BLOB Column**
 
-        -   BLOB Column: **PRODUCT_IMAGE**
+        - BLOB Column: **PRODUCT_IMAGE**
 
-        -   Position: **First**
+        - Position: **First**
 
-        -   Appearance: **Widescreen**
+        - Appearance: **Widescreen**
 
-        -    Sizing: **Fit**
+    - Card > Primary Key Column 1: **PRODUCT_ID**
 
-  ![Attributes Tab of the Property Editor](./images/attributes2.png " ")
+    ![Attributes Tab of the Property Editor](./images/attributes-search-results.png " ")
 
-    - Under Card:
-
-        - Primary Key Column 1: **PRODUCT_ID**
-
- ![Attributes Tab of the Property Editor](./images/attributes3.png " ")       
+    ![Attributes Tab of the Property Editor](./images/attributes-search-results3.png " ")
 
 ## Task 4: Create Actions
+
 Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
 
-1. Navigate to **Search Results** (left pane).
-
-2. On Actions, right-click **Create Action**.
+1. Under **Search Results** region, right-click **Actions** and select **Create Action**.
 
     ![Rendering Tree in Page Designer](./images/create-action10-s.png " ")
 
-3. In the Property Editor (right pane), enter/select the following:
+2. In the Property Editor (right pane), enter/select the following:
 
     - Type: **Full Card**
 
     - Target: Click **No Link Defined** and do the following:
 
-        - Page: **18**.
+        - Page: **18**
 
         - For Set Items, enter:
 
@@ -199,76 +186,69 @@ Customers need a way to shop the products, so in this task you will add an actio
 
         - Clear Cache: **18**
 
-        - Click **OK**.
+        Click **OK**.
 
-  ![Property Editor](./images/full-card.png " ")
+    ![Property Editor](./images/full-card.png " ")
 
-## Task 6: Add Dynamic Actions
+## Task 5: Add Dynamic Actions
+
 In this task, you will create two dynamic actions:
+
 - To show a success message when a product is added/edited/removed from the shopping cart.
+
 - To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart.
 
 1. Navigate to **Dynamic Actions** tab (left pane).
 
-2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+2. Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da10-s.png " ")
+    ![Dynamic Actions Tab](./images/create-da10-s.png " ")
 
 3. In the Property Editor, enter/select the following:
 
-    - Under Identification:
-
-        - Name: **Show Success Message**
+    - Identification > Name: **Show Success Message**
 
     - Under When:
-
-        - Event: **Dialog Closed**
 
         - Selection Type: **Region**
 
         - Region: **Search Results**
 
-  ![Property Editor](./images/success-da.png " ")
+    ![Property Editor](./images/success-da.png " ")
 
 4. Navigate to **Refresh** Action.
 
-    - Under Identification:
+    - Identification > Action: **Execute JavaScript Code**
 
-        - Action: **Execute JavaScript Code**
+    - Settings > Code: Copy and paste the following JavaScript Code:
 
-    - Under Settings:   
+        ```
+        <copy>
+        var productAction   = this.data.P18_ACTION,
+        productQuantity = this.data.P18_QUANTITY,
+        productCard$  = apex.jQuery("#message_" + this.data.P18_PRODUCT_ID);
 
-        - Code: Enter the following JavaScript Code:
-
-            ```
-            <copy>    
-            var productAction   = this.data.P18_ACTION,
-                productQuantity = this.data.P18_QUANTITY,
-                productCard$  = apex.jQuery("#message_" + this.data.P18_PRODUCT_ID);
-
-            if (productAction === 'ADD') {
+        if (productAction === 'ADD') {
                 productCard$.text("Added " + productQuantity + " to cart!");
-            } else if (productAction === 'EDIT') {
+        } else if (productAction === 'EDIT') {
                 productCard$.text("Updated quantity to " + productQuantity + "!");
-            } else if (productAction === 'DELETE') {
+        } else if (productAction === 'DELETE') {
                 productCard$.text("Removed from cart!");
-            }
-            </copy>
-            ```
+         }
+        </copy>
+        ```
 
-  ![Property Editor](./images/success-da2.png " ")
+    ![Property Editor](./images/success-da2.png " ")
 
-5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+5. Create a second dynamic action. Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da4-s.png " ")
+    ![Dynamic Actions Tab](./images/create-da4-s.png " ")
 
-6. In the Property Editor, enter/select the following:  
+6. In the Property Editor, enter/select the following:
 
-    - Under Identification > Name: **Update Shopping Cart Header**
+    - Identification > Name: **Update Shopping Cart Header**
 
-    - Under When:     
-
-        - Event: **Dialog Closed**
+    - Under When:
 
         - Selection Type: **Region**
 
@@ -286,15 +266,13 @@ In this task, you will create two dynamic actions:
             </copy>
             ```
 
-  ![Property editor](./images/update-cart-da.png " ")
+    ![Property editor](./images/update-cart-da.png " ")
 
 7. Navigate to **Refresh** Action.
 
-    - Under Identification:
+    - Identification > Action: **Execute JavaScript Code**
 
-        - Action: **Execute JavaScript Code**
-
-    - Under Settings:     
+    - Under Settings:
 
         - Code: Enter the following JavaScript Code:
 
@@ -308,36 +286,33 @@ In this task, you will create two dynamic actions:
             </copy>
             ```
 
-  ![Property editor](./images/update-cart-da2.png " ")
+    ![Property editor](./images/update-cart-da2.png " ")
 
 8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic action.
 
-9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
+9. Under **Update Shopping Cart Header** dynamic action, right-click **Execute JavaScript Code** and select **Create Opposite Action**.
 
-     ![Dynamic Actions Tab](./images/create-opposite-action-s.png " ")
+    ![Dynamic Actions Tab](./images/create-opposite-action-s.png " ")
 
-10. Navigate to **Execute JavaScript Code** Action.
+10. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    - Settings > Code: Copy and replace the following JavaScript Code:
 
-        - Action: **Execute JavaScript Code**
+        ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
 
-    - Under Settings:
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+        </copy>
+        ```
 
-        - Code: Enter the following JavaScript Code:
+    ![Dynamic Actions Tab](./images/create-opposite-action1.png " ")
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
-
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
-            </copy>
-            ```
 11. Click **Save and Run Page** to view your updated **Products** page.
 
-      ![Toolbar in the Page Designer](./images/updated-products.png " ")
+    ![Toolbar in the Page Designer](./images/updated-products.png " ")
 
 ## Summary
 
@@ -345,6 +320,6 @@ You now know how to enhance faceted search and cards region. You may now **proce
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
+- **Author(s)** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

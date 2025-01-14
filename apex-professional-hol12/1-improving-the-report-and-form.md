@@ -54,7 +54,7 @@ In this task, you will create a form that displays product details. This Form wi
 
     ![Define Primary key](./images/mp-create-page.png " ")
 
-## Task 3: Enhance the Form
+## Task 2: Enhance the Form
 
 After linking the Form to the report, it's time to enhance its usability and appearance. In this task, you will rearrange the form layout, hide unnecessary items, and make the Form more intuitive for users.
 
@@ -94,7 +94,7 @@ After linking the Form to the report, it's time to enhance its usability and app
 
     ![Enhance form2](images/hide-items.png " ")
 
-5. Now, select **P15\_COLOR\_ID, P15\_DEPARTMENT\_ID and P15\_CLOTHING\_ID** and update **Name** as following:
+5. Now, select **P15\_COLOR\_ID, P15\_DEPARTMENT\_ID and P15\_CLOTHING\_ID** and update **Name** as following one after the other:
 
     | Page Item | Name |
     |-----------|------|
@@ -125,7 +125,7 @@ After linking the Form to the report, it's time to enhance its usability and app
 
 9. Click **Save**.
 
-## Task 4: Run the Manage Products page
+## Task 3: Run the Manage Products page
 
 In this final task, you will run the application to test the integration and functionality of the Manage Products page. You will navigate to the page, test editing and adding data through the form, and validate its usability in the runtime environment.
 

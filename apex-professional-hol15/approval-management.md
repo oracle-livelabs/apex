@@ -154,7 +154,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/16-shop-info.png " ")
 
-7. In the left pane, right-click **Thank you for your order!** region and click **Create Sub Region**.
+7. In the left pane, right-click **Thank you for your order!** region and select **Create Sub Region**.
 
     ![Select Sql Workshop](./images/sub-region.png " ")
 
@@ -207,7 +207,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/btn-server.png " ")
 
-13. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+13. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![Select Sql Workshop](./images/create-process-1.png " ")
 
@@ -219,10 +219,10 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ```
     <copy>
-    UPDATE ORDERS
-    SET STAR_RATING = :P16_REVIEW,
-        FEEDBACK = :P16_FEEDBACK
-    where order_id = :P16_ORDER;
+        UPDATE ORDERS
+        SET STAR_RATING = :P16_REVIEW,
+            FEEDBACK = :P16_FEEDBACK
+        where order_id = :P16_ORDER;
     </copy>
     ```
 
@@ -258,24 +258,24 @@ Email templates simplify the process of sending structured, professional message
 
         - Static Identifier: **PRODUCT\_REVIEW\_REMINDER**
 
-        - For Email Subject: **How Was Your Experience? Let Us Know!**
+        - Email Subject: **How Was Your Experience? Let Us Know!**
 
     - HTML Format > Body: Copy and paste the below HTML
 
     ```
     <copy>
     <html>
-    <body>
-    <p>Dear #CUSTOMER_NAME#,</p>
-    <p>Thank you for purchasing !</p>
-    <p>We hope you're enjoying it. Could you take a moment to rate your experience?</p>
-    <p>
-    <a href="#RATING_LINK#">Click here to rate this product</a>
-    </p>
-    <p>Thank you for your feedback!</p>
-    <p>Best regards,</p>
-    <p>Online Shopping Application</p>
-    </body>
+     <body>
+       <p>Dear #CUSTOMER_NAME#,</p>
+       <p>Thank you for purchasing !</p>
+       <p>We hope you're enjoying it. Could you take a moment to rate your experience?</p>
+       <p>
+          <a href="#RATING_LINK#">Click here to rate this product</a>
+       </p>
+       <p>Thank you for your feedback!</p>
+       <p>Best regards,</p>
+       <p>Online Shopping Application</p>
+     </body>
     </html>
     </copy>
     ```
@@ -345,15 +345,15 @@ Automation is key to improving application efficiency and reducing manual effort
 
     ```
     <copy>
-    TO_DATE(TO_CHAR(order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = SYSDATE - 1
-    AND EMAIL_FLAGGED = 'N'
-    AND STAR_RATING IS NULL
+        TO_DATE(TO_CHAR(order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = SYSDATE - 1
+        AND EMAIL_FLAGGED = 'N'
+        AND STAR_RATING IS NULL
     </copy>
     ```
 
-    ![Create Email Template](./images/auto-save-changes.png " ")
-
 6. Click **Save Changes**.
+
+    ![Create Email Template](./images/auto-save-changes.png " ")
 
 7. Click **Product Review Reminder**.
 
@@ -371,34 +371,49 @@ Automation is key to improving application efficiency and reducing manual effort
 
     ```
     <copy>
-    DECLARE
-    l_url CLOB;
+        DECLARE
+        l_url CLOB;
     BEGIN
-    for x in
-    (   SELECT
-        c.full_name,
-        c.email_address,
-        o.order_id,
-        TO_DATE(TO_CHAR(o.order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY')as order_datetime
-    FROM customers c
-    JOIN orders o ON c.customer_id = o.customer_id
-    WHERE  TO_DATE(TO_CHAR(o.order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = sysdate
-    AND o.email_flagged = 'N')
-    loop
-    l_url := 'http://' || OWA_UTIL.get_cgi_env('HTTP_HOST') ||APEX_UTIL.PREPARE_URL(
-        p_url => 'f?p=' || :APP_ID || ':16:'||:APP_SESSION||'::NO::P16_ORDER:'||apex_json.stringify( x.order_id ),
-        p_checksum_type => 'SESSION');
-    apex_mail.send (
-        p_to                 => apex_json.stringify(x.email_address),
-        p_template_static_id => 'PRODUCT_REVIEW_REMINDER',
-        p_placeholders       => '{' ||
-        '    "CUSTOMER_FULLNAME":'        || apex_json.stringify( x.full_name ) ||
-        '   ,"RATE_URL":' || apex_json.stringify( apex_mail.get_instance_url || apex_page.get_url( 16 )) ||
-        '}' );
+        FOR x IN (SELECT c.full_name,
+                     c.email_address,
+                     o.order_id,
+                     To_date(To_char(o.order_datetime, 'MM/DD/YYYY'),
+                     'MM/DD/YYYY')
+                     AS
+                              order_datetime
+              FROM   customers c
+                     join orders o
+                       ON c.customer_id = o.customer_id
+              WHERE  To_date(To_char(o.order_datetime, 'MM/DD/YYYY'),
+                     'MM/DD/YYYY')
+                     = SYSDATE
+                     AND o.email_flagged = 'N') LOOP
+        l_url := 'http://'
+                 || owa_util.Get_cgi_env('HTTP_HOST')
+                 ||apex_util.Prepare_url(p_url => 'f?p='
+                                                  || :APP_ID
+                                                  || ':16:'
+                                                  ||:APP_SESSION
+                                                  ||'::NO::P16_ORDER:'
+                                                  ||apex_json.Stringify(
+                                                    x.order_id),
+                     p_checksum_type => 'SESSION');
 
-      Update orders set email_flagged = 'Y' where order_id = x.order_id;
-    end loop;
-    end;
+        apex_mail.Send (p_to => apex_json.Stringify(x.email_address),
+        p_template_static_id => 'PRODUCT_REVIEW_REMINDER',
+        p_placeholders => '{'
+                          || '    "CUSTOMER_FULLNAME":'
+                          || apex_json.Stringify(x.full_name)
+                          || '   ,"RATE_URL":'
+                          || apex_json.Stringify(apex_mail.get_instance_url
+                                                 || apex_page.Get_url(16))
+                          || '}');
+
+            UPDATE orders
+            SET    email_flagged = 'Y'
+            WHERE  order_id = x.order_id;
+        END LOOP;
+    END; 
     </copy>
     ```
 

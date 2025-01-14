@@ -10,7 +10,7 @@ In this hands-on lab, you will log in to the New Remote APEX workspace, create a
 
 In the previous hands-on lab, you enhanced the Online Shopping Application by implementing automated email notifications, creating an interactive feedback page, and designing reusable email templates. Additionally, workflow automation was configured to send scheduled reminders, improving user engagement and streamlining operations efficiently.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 

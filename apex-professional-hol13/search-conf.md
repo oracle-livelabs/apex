@@ -80,7 +80,7 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
     Click **Next**.
 
-    ![App Builder](images/2-search-conf0.png " ")
+    ![App Builder](images/search-conf0.png " ")
 
 12. For **Table/View Name**, select **PRODUCT_REVIEWS** and click **Next**.
 
@@ -130,7 +130,7 @@ To create a search page by running the Create Page Wizard:
 
     ![App Builder](images/select-seach-conf.png " ")
 
-    > **Note:** _Note: In the Rendering tab, notice the page item, P20\_SEARCH and the Search Results region. P20\_SEARCH is the search field which enables users to submit search terms. The Search Results region contains the search results and two Search Sources, which map to search configurations maintained in Shared Components. You can further refine and control the search display and behavior by editing attributes in the Property Editor._
+    > **Note:** In the Rendering tab, notice the page item, P20\_SEARCH and the Search Results region. P20\_SEARCH is the search field which enables users to submit search terms. The Search Results region contains the search results and two Search Sources, which map to search configurations maintained in Shared Components. You can further refine and control the search display and behavior by editing attributes in the Property Editor.
 
 5. Click **Save and Run**.
 
