@@ -56,7 +56,7 @@ In this workshop, you will:
 
 ## Downloads
 
-If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+If you are stuck or the app is not working as expected, you can download and install the completed application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflows.sql)**.
 
 > **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
