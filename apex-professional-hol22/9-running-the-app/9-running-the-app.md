@@ -64,7 +64,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 7. Verify the success message.
 
-   ![appointment created](./images/appoint-created.png " ")
+   ![appointment created](./images/appoint-created1.png " ")
 
 ## Task 4: Monitor the Workflow
 
@@ -72,7 +72,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
    ![navigate to doctors app made easy](./images/monitor-appt.png " ")
 
-2. Click on the **Doctor Appointment Workflow for Patient Rajesh** entry and observe the Workflow Details Popup.
+2. Click on the **Workflow for Patient RAJESH** entry and observe the Workflow Details Popup.
 
     - Workflow is waiting at "Raise Appointment Request" Activity.
 
@@ -93,10 +93,14 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 ## Task 6: Observe the Workflow
 
 1. Log out and log in as **STEVE** (Hospital Staff).
-2. Click on **Monitor Appointment Workflows** from the left navigation menu.
-3. Observe that the workflow is waiting at **Raise Invoice Request** activity. This activity is waiting for the patient (RAJESH), to confirm and pay the invoice.
 
-    ![navigate to doctors app made easy](./images/steve-monitor-appt.png " ")
+2. Click on **Monitor Appointment Workflows** from the left navigation menu.
+
+3. Observe that there are two workflows: **Calculate Fees** and **Doctor Appointment** and it waiting at **Raise Invoice Request** activity. This activity is waiting for the patient (RAJESH), to confirm and pay the invoice.
+
+   ![navigate to doctors app made easy](./images/steve-monitor-appt-child.png " ")
+
+   ![navigate to doctors app made easy](./images/steve-monitor-appt-child.png " ")
 
 4. Note the correctly set Workflow Variables: Approver, Fee, and TaskOutcome.
 
@@ -121,7 +125,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
    ![wait for appointment](./images/wait-for-feedback.png " ")
 
-3. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
+2. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
 
   ![wait for appointment1](./images/wait-for-appt1.png " ")
 
