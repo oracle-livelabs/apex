@@ -2,19 +2,17 @@
 
 ## Introduction
 
-In this lab, you learn how to create a workflow for calculating fees using Oracle APEX. The workflow starts by checking if the consultation is free. If it is, an invoice email is sent to the patient. If not, the system updates the fees and raises an invoice request. At this point, the invoice status is checked - if it’s incomplete, it is set to "**Rejected**," and if it’s complete, it is marked as "**Approved**." This process ensures fees are handled correctly, invoices are managed efficiently, and statuses are updated based on the outcome.
-
-This workflow will be used as an **Invoke Workflow** activity within the doctor appointments workflow, allowing it to call another workflow within the same application.
+In this lab, you learn the process of creating a calculate fees Workflow using Oracle APEX.
 
 ### Objectives
 
 In this lab, you learn how to:
 
-- Create a Workflow
+- Create a Workflow.
 
-- Modify the Workflow details
+- Modify the Workflow details.
 
-- Define Workflow Data
+- Define Workflow Data.
 
 - Add Workflow Variables
 
@@ -48,7 +46,7 @@ To create a Workflow:
 
 ## Task 2: Modify Workflow Details
 
-1. With **New** selected in the **Rendering** tab, in the Property Editor, enter/select the following:
+1. Select **New** in the **Rendering** tab, in the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -82,7 +80,7 @@ To create a Workflow:
 
    ![Check Errors in the Page](./images/set-end.png " ")
 
-6. Click **Save**. The changes are saved successfully.
+6. Click **Save**.
 
 ## Task 3: Familiarize with Workflow Elements
 
@@ -96,8 +94,9 @@ To create a Workflow:
   |------------------------|--------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
   | Execute Code           | Executes PL/SQL Code                                                                                                     | Yes                                                    |
   | Invoke API             | Invokes a procedure or function inside a PL/SQL package or an API from a REST Data Source.                              | Yes                                                    |
-  | Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
+  | Send Push Notifications    | Sends push notifications using PWA                                                                                      | Yes                                                    |
   | Send E-Mail            | Sends an Email based on the Email settings.                                                                             | Yes                                                    |
+  | Invoke Workflow          | An activity that invokes another workflow in the current application.settings.                                                                             | Yes                                                    |
   | Human Task - Create    | Creates an Approval or Action Task based on the Task Definition specified. Once the task is created, the activity and workflow go into the Waiting state until the task is completed/approved/rejected by its owner/errors out/expires. | No                                                     |
   | Wait                   | Denotes a deliberate pause in the workflow execution. At runtime, the workflow pauses execution when it encounters a Wait Activity. A Wait Activity can have timeout specifications. When the specified time has elapsed, the workflow resumes execution. A Wait Activity can also be interrupted by calling apex\_workflow.continue\_activity() passing the Static ID of the Wait Activity and the Workflow Instance ID as parameters. | No                                                     |
   | Switch                 | Denotes a fork or conditional branching in a workflow execution. After adding a switch activity, the developer must define branches or connections out of the switch activities with the appropriate conditions specified. | Yes                                                    |
@@ -113,15 +112,15 @@ To create a Workflow:
   | Switch connections | Connections leading out of a Switch Activity. They are conditional in nature.                                      |
   {: title="List of Connection Types"}
 
-## Task 4: Add Inputs to the Doctor Appointments Workflow
+## Task 4: Add Inputs to the Calculate fees Workflow
 
 In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
 Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the Hospital Staff submitting patient details to the system, marking the commencement of the workflow.
 
-The inputs to the workflow will be the patient details. In workflow terminlogy, these are called **Workflow Parameters**.
+The inputs to the workflow will be the patient details. In workflow terminology, these are called **Workflow Parameters**.
 
-You will define the following parameters for the Doctor Appointment Workflow:
+You will define the following parameters for the Calculate fees Workflow:
    BOOKING\_ID,
    DNO,
    PATIENT\_NAME, PATIENT\_EMAIL, REQUEST\_DATE, STATUS
@@ -147,13 +146,11 @@ You will define the following parameters for the Doctor Appointment Workflow:
   | DNO | DNO | NUMBER |    |
   | PATIENT_EMAIL | Patient Email | VARCHAR2 |     |
   | PATIENT_NAME | Patient Name | VARCHAR2 |       |
-  | REQUEST_DATE | Request Date | VARCHAR2 |  |
+  | REQUEST_DATE | Request Date | TIMESTAMP |  |
   | STATUS       |  Status      | VARCHAR2 | Out |
   {: title="List of Parameters to be Created"}
 
 ## Task 5: Add Workflow Variables
-
-**Why Parameters and Additional Data are not enough?!**
 
 The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
@@ -179,7 +176,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 3. Similarly, create a variable called **Fees**. In the Property Editor, enter/select the following:
 
-    - Identification > Static ID: **Fees**
+    - Identification > Static ID: **FEES**
 
     - Label > Label: **Fees**
 
@@ -201,9 +198,9 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 In this lab, you learned the process of creating a calculate fees Workflow using Oracle APEX.
 
-### What's Next
+## What's Next
 
-Now, you're ready to proceed to the next section where you'll learn how to create a Doctor Appointment Workflow. Stay tuned for more hands-on guidance!
+Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
 
 You may now **proceed to the next lab**.
 

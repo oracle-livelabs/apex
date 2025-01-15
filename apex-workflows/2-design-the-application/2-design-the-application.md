@@ -73,7 +73,9 @@ In this task, you create multiple users for **Doctor Appointments made Easy!** a
 
     - Password and Confirm Password: **Enter a password**
 
-      Click **Next**.
+    Click **Next**.
+
+    > *Note:* Replace yourdomain.com with your actual domain.
 
     ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
@@ -399,7 +401,7 @@ In this task, you install a Sample Dataset using a SQL Script.
 
 You have successfully completed the initial steps for designing the **Doctor Appointments Made Easy!** application. You first created an Application, and then added Application users, created Sample Datasets, and a Package.
 
-### What's Next
+## What's Next
 
 In the next lab, you will learn how to create a Workflow using Oracle APEX.
 

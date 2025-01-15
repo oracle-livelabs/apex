@@ -92,7 +92,7 @@ Estimated Time: 20 minutes
     |--------------------|------------|
     | APPOINTMENT_DATE   | Appointment Date |
     | PATIENT_DESC       | Consultation Form|
-    | PATIENT_NAME       | Patient name |
+    | PATIENT_NAME       | Patient Name |
     {: title="List of Parameters to be added for the Task Definition"}
 
     ![Add Task Parameters](./images/add-task-parameters.png " ")
@@ -129,7 +129,7 @@ Estimated Time: 20 minutes
 
     - Under Settings:
 
-        - Actions Source: **SQL query**,
+        - Actions Source: **SQL query**
 
         - Actions SQL Query: Provide the following SQL statement:
         ```
@@ -177,7 +177,7 @@ Estimated Time: 20 minutes
 
     - Name: **Feedback Request**
 
-    - Type: **Actions Task**
+    - Type: **Action Task**
 
     - Subject: **Feedback for Consultation on &SCHEDULE.**
 

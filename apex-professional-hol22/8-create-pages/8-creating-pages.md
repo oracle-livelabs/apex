@@ -578,7 +578,7 @@ Finally, we need the page that the Hospital Management Staff will use to monitor
 
 We use the Workflow Console and Details pages with **Initiated By Me** report context, which allows a logged-in user to view all Workflows Initiated by him or her.
 
-> **Note:** _The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs._
+> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs.
 
 1. To create the Workflow Console and Details pages, on the Application home page, select **Create Page**.
 
@@ -608,11 +608,9 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 4. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
-## Task 6: Improve Navigation Menu
+## Task 7: Improve Navigation Menu
 
 1. Navigate to **Doctor Appointments Made Easy!** applications and select **Shared Components**.
-
-    ![configure feedbacks attr](./images/config-workflow-console.png " ")
 
 2. Under **Navigation and Search**, select **Navigation Menu**.
 

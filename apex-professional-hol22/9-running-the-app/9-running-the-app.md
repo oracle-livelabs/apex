@@ -18,13 +18,13 @@ Estimated Time: 20 minutes
 
 To demonstrate the application's behavior, we will use an automatic timezone setup. This will ensure that the appointment dates and times are in sync with the End User's timezone.
 
-1. To do this, navigate to the Application Home Page and click **Edit Application Definition**.
+1. To do this, navigate to the Application Home Page and then go to **Shared Components > Globalization > Globalization Attributes**.
 
-   ![navigate to doctors app made easy](./images/change-global-attr1.png " ")
+   ![navigate to doctors app made easy](./images/global-att.png " ")
 
-2. Under **Globalization** tab, toggle the **Automatic Time Zone** button to ON.
+2. Toggle the **Automatic Time Zone** button to **ON**.
 
-   ![navigate to doctors app made easy](./images/change-global-attr.png " ")
+   ![navigate to doctors app made easy](./images/global-att-on.png " ")
 
 3. Click **Apply Changes**.
 

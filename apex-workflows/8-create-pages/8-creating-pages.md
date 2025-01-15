@@ -140,7 +140,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
 15. In the property editor, enter/select the following:
 
-      - Identification > Name: **Submit**
+      - Identification > Button Name: **Submit**
 
       - Layout > Slot: **Create**
 
@@ -210,7 +210,7 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
     - Breadcrumb Parent Entry: **Home (Page 1)**
 
-    Click **Create Page**. A unified Task List page is created.
+    Click **Create Page**.
 
     ![create patient tasks](./images/create-patient-tasks.png " ")
 
@@ -424,28 +424,28 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     - PL/SQL code: enter the following code snippet:
 
-    ```
-    <copy>
-    begin
-      insert into patient_feedback (
-          patient_name,
-          doctor_no,
-          appointment,
-          feedback,
-          rating,
-          created_at,
-          updated_at)
-      values
-          (:P4_PATIENT_USERNAME,
-          :P4_DOCTOR_NO,
-          to_timestamp_tz(:P4_SCHEDULE,'DD-MON-YYYY HH24:MI:SS'),
-          :P4_FEEDBACK,
-          :P4_RATING,
-          systimestamp,
-          systimestamp);
-    end;
-    </copy>
-    ```
+        ```
+        <copy>
+        begin
+            insert into patient_feedback (
+            patient_name,
+            doctor_no,
+            appointment,
+            feedback,
+            rating,
+            created_at,
+            updated_at)
+        values
+            (:P4_PATIENT_USERNAME,
+            :P4_DOCTOR_NO,
+            to_timestamp_tz(:P4_SCHEDULE,'DD-MON-YYYY HH24:MI:SS'),
+            :P4_FEEDBACK,
+            :P4_RATING,
+            systimestamp,
+            systimestamp);
+        end;
+        </copy>
+        ```
 
     ![create page process](./images/save-feedback.png " ")
 
@@ -479,7 +479,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![create patient tasks](./images/configure-patient-apps.png " ")
 
-4. Right-click **Body** and click **Create Region**.
+4. Right-click **Body** and select **Create Region**.
 
     ![create patient tasks](./images/create-region21.png " ")
 
@@ -510,15 +510,15 @@ Now, you need to create a View Only page where patients can log in to view their
 
     - Under Settings:
 
-      - Comment Text: **STATUS**
+        - Comment Text: **STATUS**
 
-      - User Name: **DOCTOR\_EMAIL**
+        - User Name: **DOCTOR\_EMAIL**
 
-      - Date: **SCHEDULE**
+        - Date: **SCHEDULE**
 
     ![create patient tasks](./images/configure-attr.png " ")
 
-7. Right-click **Appointments Region**, and select **Create Region Below**.
+7. Right-click **Appointments** Region, and select **Create Region Below**.
 
     ![create patient tasks](./images/create-region-below1.png " ")
 
@@ -535,21 +535,26 @@ Now, you need to create a View Only page where patients can log in to view their
         - Type: **SQL Query**
 
         - SQL Query: copy and paste the below SQL.
-        ```
-        <copy>
-       select ID,
-       PATIENT_NAME,
-       'DR.' || DNAME as DNAME,
-       APPOINTMENT,
-       FEEDBACK,
-       RATING,
-       CREATED_AT,
-       UPDATED_AT
-       from PATIENT_FEEDBACK, DOCTOR
-       where PATIENT_NAME=:APP_USER
-       and DOCTOR_NO = DNO
-        </copy>
-        ```
+
+            ```
+            <copy>
+            SELECT 
+            ID,
+            PATIENT_NAME,
+            'DR.' || DNAME AS DNAME,
+            APPOINTMENT,
+            FEEDBACK,
+            RATING,
+            CREATED_AT,
+            UPDATED_AT
+            FROM 
+            PATIENT_FEEDBACK, 
+            DOCTOR
+            WHERE 
+            PATIENT_NAME = :APP_USER
+            AND DOCTOR_NO = DNO;
+            </copy>
+            ```
 
     ![configure feedbacks](./images/configure-feedbacks.png " ")
 
@@ -573,7 +578,7 @@ Finally, we need the page that the Hospital Management Staff will use to monitor
 
 We use the Workflow Console and Details pages with **Initiated By Me** report context, which allows a logged-in user to view all Workflows Initiated by him or her.
 
-> **Note:** _The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs._
+> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs.
 
 1. To create the Workflow Console and Details pages, on the Application home page, select **Create Page**.
 
@@ -593,21 +598,67 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
         - Dashboard Page Name: **Dashboard**
 
-        - Form Page Name: **Appointment**. This is used for the Workflow Details page.
+        - Form Page Name: **Form on Appointment**. This is used for the Workflow Details page.
 
     - Navigation > Breadcrumb Parent Entry: **Home (Page 1)**
 
+    Click **Create Page**.
+
     ![configure feedbacks attr](./images/config-workflow-console.png " ")
 
-4. Click **Create Page**.
+4. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
-5. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
+## Task 7: Improve Navigation Menu
+
+1. Navigate to **Doctor Appointments Made Easy!** applications and select **Shared Components**.
+
+2. Under **Navigation and Search**, select **Navigation Menu**.
+
+    ![configure feedbacks attr](./images/doc-nav-menu.png " ")
+
+3. Select **Navigation Menu**.
+
+    ![configure feedbacks attr](./images/docnav-menu1.png " ")
+
+4. Under **List Entries**, select **Home**.
+
+    ![configure feedbacks attr](./images/doc-home.png " ")
+
+5. Enter/select the following:
+
+    - Entry > List Entry Label: **DASHBOARD**
+
+    - Target > Page: **11**
+
+    Click **Apply Changes**.
+
+    ![configure feedbacks attr](./images/doc-home1.png " ")
+
+6. Under **List Entries**, select **New Appointment** and update Image/Class to **fa-desktop**. Click **Apply Changes**.
+
+    ![configure feedbacks attr](./images/doc-new-appt.png " ")
+
+    ![configure feedbacks attr](./images/fa-desktop.png " ")
+
+7. Navigate to Sequence 70 - Dashboard and click **Delete** and confirm **OK**.
+
+    ![configure feedbacks attr](./images/doc-dash.png " ")
+
+    ![configure feedbacks attr](./images/dash-delete.png " ")
+
+    ![configure feedbacks attr](./images/dash-delete-ok.png " ")
+
+8. Now, select **Patient Appointments AND Feedbacks** , **Monitor Appointment Workflows** and update Parent List Entry to **Dashboard**. Click **Apply Changes**.
+
+    ![configure feedbacks attr](./images/doc-pat.png " ")
+
+    ![configure feedbacks attr](./images/doc-parent.png " ")
 
 ## Summary
 
 You have successfully created a comprehensive Oracle APEX application for managing doctor appointments with workflows, task lists, and feedback features.
 
-### What's Next
+## What's Next
 
 In the next lab, you will understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
 

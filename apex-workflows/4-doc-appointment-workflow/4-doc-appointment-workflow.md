@@ -42,7 +42,7 @@ To create a Workflow:
 
 4. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
 
-   ![Displaying Workflow Designer](./images/workflow-designer-1.png " ")
+  ![Displaying Workflow Designer](./images/workflow-designer-1.png " ")
 
 ## Task 2: Modify Workflow Details
 
@@ -62,13 +62,13 @@ To create a Workflow:
 
 3. The Workflow cannot be saved yet as there are validation errors. Click on the **error icon (Yellow exclamation mark)** to see the error.
 
-    ![Check Errors in the Page](./images/check-workflow-errors.png " ")
+   ![Check Errors in the Page](./images/check-workflow-errors.png " ")
 
 4. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
 
-    ![Delete activity using Tree](./images/delete-activity-tree.png " ")
+   ![Delete activity using Tree](./images/delete-activity-tree.png " ")
 
-    ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
+   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
 
 5. Navigate to **Start**. Under **Outgoing**, select **New** and select the following:
 
@@ -213,7 +213,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 In this lab, you learned the process of creating a Doctor Appointment Workflow using Oracle APEX.
 
-### What's Next
+## What's Next
 
 Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
 

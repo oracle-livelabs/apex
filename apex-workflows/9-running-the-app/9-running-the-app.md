@@ -20,9 +20,11 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 1. To do this, navigate to the Application Home Page and then go to **Shared Components > Globalization > Globalization Attributes**.
 
-2. Toggle the **Automatic Time Zone** button to ON.
+   ![navigate to doctors app made easy](./images/global-att.png " ")
 
-    ![navigate to doctors app made easy](./images/change-global-attr.png " ")
+2. Toggle the **Automatic Time Zone** button to **ON**.
+
+   ![navigate to doctors app made easy](./images/global-att-on.png " ")
 
 3. Click **Apply Changes**.
 
