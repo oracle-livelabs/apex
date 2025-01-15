@@ -24,6 +24,12 @@ In this lab, you:
 
 3. Upload invoices by selecting **Select an Invoice or Receipt** and clicking **Process Document**. OCI Document Understanding will extract invoice fields from the uploaded image or PDF file.
 
+    Download the following sample invoices to upload:
+
+    - [Sample Invoice 1](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%201.pdf)
+
+    - [Sample Invoice 2](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%202.pdf)
+
     ![Task Definition in Shared Components](images/process-doc.png " ")
 
 4. After uploading, you will be redirected to the **Invoice Tracker** page, where you can view all your invoices as well as those uploaded by others.

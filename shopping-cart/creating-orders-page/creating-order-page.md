@@ -4,6 +4,7 @@
 
 In this lab, you will create a new page that will allow customers to view the details of their recent order.
 Customers will find the following details of the order:
+
 - Order number
 - Order date
 - Status
@@ -14,20 +15,18 @@ Once you have finished the workshop and updated all the products as described in
 ![Order page details in the completed application](./images/orders-page.png " ")
 
 Estimated Time: 15 minutes
-<!--
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:qskWwkxJmcM)
--->
 
 Watch the video below for a quick walk-through of the lab.
 [Create the Order Page](videohub:1_w9hncfg8)
 
 ### Objectives
+
 In this lab, you will:
+
 - Create a page to review the items that the customer recently bought.
 
 ## Task 1: Create a Normal Page - Order Information
+
 Create a Normal Page to review the Order that customer has made.
 
 1. In the **App Builder**, navigate to the *ACME Shop application* and click **Create Page**.
@@ -38,7 +37,7 @@ Create a Normal Page to review the Order that customer has made.
 
     ![create page wizard](./images/create-blank-page111.png " ")
 
-3. Enter the following and click **Next**.
+3. Enter/select the following and click **Next**.
 
     - Under Page Definition:
 
@@ -66,7 +65,7 @@ Add a region to the page to display order details.
 
     ![Gallery menu in Page Designer](./images/create-static-s.png " ")
 
-3. In the Property Editor, Enter/select the following:
+3. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Thank you for your order!**
 
@@ -76,17 +75,17 @@ Add a region to the page to display order details.
 
         - Template Options > Use Template Defaults:   Check **Show Region Icon** and click **Ok**
 
-        -  Icon: **fa-heart**  
+        - Icon: **fa-heart**
 
-  ![Property Editor](./images/template-options-s.png " ")
-
+    ![Property Editor](./images/template-options-s.png " ")
 
 ## Task 3: Add Items to the Page
+
 Add a hidden item to store the order ID without the user being able to see it.
 
-1. In the Rendering tree (left pane), navigate to the **Thank you for your order!** region.
+1. Under **Rendering** tab, navigate to the **Thank you for your order!** region.
 
-2. Right-click the region and click **Create Page Item**.
+2. Right-click the region and select **Create Page Item**.
 
     ![Rendering Tree](./images/create-item-s.png " ")
 
@@ -97,18 +96,19 @@ Add a hidden item to store the order ID without the user being able to see it.
     | P16_ORDER | Hidden |
     {: title="Page Item values"}
 
-    ![Property Editor](./images/order-item-s.png " ")    
+    ![Property Editor](./images/order-item-s.png " ")
 
 ## Task 4: Add Static Content Region
+
 Add a region to contain Order details and items.
 
-1. In the Rendering tree (left pane), navigate to the **Thank you for your order!** region.
+1. Under **Rendering** tab, navigate to the **Thank you for your order!** region.
 
-2. Right click the region and click **Create Sub Region**.
+2. Right-click the region and select **Create Sub Region**.
 
     ![Rendering Tree](./images/create-sub-region2-s.png " ")
 
-3. In the Property Editor, Enter/select the following:
+3. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -119,14 +119,16 @@ Add a region to contain Order details and items.
   ![Property editor](./images/sub-region-fields-s.png " ")
 
 ## Task 5: Add Order Details Region
+
 Add a region to display Order details.
 
-1. In the Rendering tree (left pane), navigate to the **Order: &P16_ORDER.** region.
+1. Under **Rendering** tab, navigate to the **Order: &P16_ORDER.** region.
 
-2. Right click the region and click **Create Sub Region**.
+2. Right-click the region and select **Create Sub Region**.
+
     ![Rendering tree (left pane) of Page designer](./images/create-sub-region2-s.png " ")
 
-3. In the Property Editor, enter the following:
+3. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -138,7 +140,7 @@ Add a region to display Order details.
 
         - Type: **SQL Query**
 
-        - SQL Query - enter the following SQL Query:
+        - SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
@@ -155,11 +157,11 @@ Add a region to display Order details.
             </copy>
             ```
 
-  ![Property editor](./images/sub-region-fields2-s.png " ")    
+    ![Property editor](./images/sub-region-fields2-s.png " ")
 
-4. Click **Attributes**.
+4. Navigate to **Attributes** tab and enter/select the following:
 
-    -  Under Secondary Body and enter/select the following:
+    - Under Secondary Body:
 
         - Advanced Formatting: **Toggle On**
 
@@ -169,18 +171,19 @@ Add a region to display Order details.
             <copy>
             <b> Order Placed:</b> &ORDER_DATETIME. <br>
             <b> Status: </b>&ORDER_STATUS. <br>
-            <b> Total: </b>&TOTAL.    
+            <b> Total: </b>&TOTAL.
             </copy>
             ```
 
-  ![Attributes tab of Property editor](./images/attributes-s.png " ")
+    ![Attributes tab of Property editor](./images/attributes-s.png " ")
 
 ## Task 6: Add Items Region
+
 Add a region to display items in the order.
 
-1. In the Rendering tree (left pane), navigate to the **Order: &P16_ORDER.** region.
+1. Under **Rendering** tab, navigate to the **Order: &P16_ORDER.** region.
 
-2. Right-click the region and click **Create Sub Region**.
+2. Right-click the region and select **Create Sub Region**.
 
     ![Rendering Tree](./images/create-sub-region3-s.png " ")
 
@@ -196,7 +199,7 @@ Add a region to display items in the order.
 
         - Type: **SQL Query**
 
-        - SQL Query - enter the following SQL Query:
+        - SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
@@ -213,13 +216,11 @@ Add a region to display items in the order.
             </copy>
             ```
 
-  ![Property Editor](./images/sub-region-fields3-s.png " ")
+    ![Property Editor](./images/sub-region-fields3-s.png " ")
 
-4. In the Property editor, Click **Attributes** and enter/select the following:
+4. In the Property editor, navigate to **Attributes** tab and enter/select the following:
 
-    - Under Title:
-
-        - Column: **PRODUCT**    
+    - Title > Column: **PRODUCT**
 
     - Under Secondary Body:
 
@@ -230,29 +231,27 @@ Add a region to display items in the order.
             ```
             <copy>
             <b>Quantity: </b> &QUANTITY. <br>
-            <b>Unit Price: </b>&UNIT_PRICE.    
+            <b>Unit Price: </b>&UNIT_PRICE.
             </copy>
             ```
 
-  ![Attributes tab in the property editor](./images/attributes2-s.png " ")
-
     - Under Media:
 
-        - Source: **BLOB Column**   
+        - Source: **BLOB Column**
 
-        - BLOB Column: **PRODUCT_IMAGE**  
+        - BLOB Column: **PRODUCT_IMAGE**
 
-        - Position: **Body**  
+        - Position: **Body**
 
-        - Appearance: **Auto**  
+        - Appearance: **Auto**
 
-        - Sizing : **Fit**   
+        - Sizing : **Fit**
 
-    - Under Card:
+    - Card > Primary Key Column 1: **ITEM**
 
-        - Primary Key Column 1: **ITEM**    
+    ![Attributes tab in the property editor](./images/attributes2-s.png " ")
 
-  ![Attributes tab in the property editor](./images/attributes3-s.png " ")
+    ![Attributes tab in the property editor](./images/attributes3-s.png " ")
 
 5. Click **Save**.
 
@@ -263,4 +262,4 @@ You now know how to add a new page to your existing APEX Application and add reg
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -1,110 +1,147 @@
-# Create a Database application based on Existing Tables.
+# Create a Database application based on Existing Tables
 
-In this lab, you will create a database application based on existing tables.
+## Introduction
+
+In this lab, you will learn to create a database application using existing tables in Oracle APEX. By following guided steps, you will develop an Online Shopping Application with various pages, charts, and reports. You will also implement an administration dashboard, enable features like Progressive Web Apps, and configure access control for secure management. This hands-on experience will help you understand the process of building a functional and secure data-driven application.
 
 Estimated Time: 15 minutes
 
-<!--Watch the video below for a quick lab walkthrough.
-
-[](youtube:ssUKy-bZGUw)-->
-
 ### Objectives
-In this lab, you will:
-- Create an application using the tables and data you have installed.
-- Create a Database application from a file.
 
+In this lab, you will:
+
+- Create a database application based on existing tables.
+
+- Add multiple pages, including dashboards, reports, and interactive pages.
+
+- Configure administration pages and enable secure access controls.
+
+- Implement Progressive Web App features.
+
+- Explore and test the completed application.
 
 ## Task 1: Create an Application based on Existing Tables
 
-1. In the App Builder menu, click **App Builder**.
+This task introduces you to the App Builder in Oracle APEX. You will begin by creating a new application that serves as the foundation for the Online Shopping Application.
+
+1. On your workspace home page, navigate to **App Builder**.
+
+    ![Create an Application](images/create-app1.png " ")
 
 2. Click **Create**.
 
     ![Create an Application](images/create-app.png " ")
 
-3.  Select **Use Create App Wizard**.
+3. Select **Use Create App Wizard**.
 
     ![New Application](./images/click-new-application.png " ")
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name, enter **Online Shopping Application**.
+In this task, you will name your application as Online Shopping Application and define its visual identity. The name helps identify the application in the workspace, and the wizard will automatically select an icon and color for it.
 
-   *Note that the icon and colour in the create application wizard will be randomly selected, and hence they might be different for you.*
+1. On the **Create an Application** page, for **Name**, enter **Online Shopping Application**.
+
+    *Note that the icon and color in the create application wizard will be randomly selected, and hence they might be different for you.*
 
     ![Name the application](./images/name-the-application1.png " ")
 
 ## Task 3: Add the Dashboard Page
 
-A dashboard page is a great way to show critical information using various charts. Installing the Sample Dataset created several views that join data from multiple tables. These views are ideal as the basis for the dashboard charts.
+Dashboards are essential for summarizing critical information using charts and visuals. In this task, you will add a dashboard to display key metrics such as product sales, store performance, order statuses, and product reviews using bar and pie charts.
 
-1. In the Create Application wizard, click **Add Page**.
+1. On the **Create an Application** page, click **Add Page**.
+
+    ![Click Add Page](./images/add-page.png " ")
 
 2. Select **Dashboard**.
 
     ![Add Dashboard](./images/add-dashboard-page1.png " ")
 
-3. For **Chart 1**, enter/select the following:
+3. Select **Chart 1**, and enter/select the following:
 
-    * Chart Type: **Bar**
-    * Chart Name: **Top 10 Products**
-    * Table or View: **PRODUCT_ORDERS**
-    * Label Column: **PRODUCT_NAME**
-    * Type: **Sum**
-    * Value Column: **TOTAL_SALES**
+    - Chart Type: **Bar**
+
+    - Chart Name: **Top 10 Products**
+
+    - Table or View: **PRODUCT_ORDERS**
+
+    - Label Column: **PRODUCT_NAME**
+
+    - Type: **Sum**
+
+    - Value Column: **TOTAL_SALES**
 
     ![Add Chart1](./images/chart11.png " ")
 
-4. Click **Chart 2**. Enter/select the following:
+4. Select **Chart 2**, and enter/select the following:
 
-    *  Chart Type: **Pie**
-    *  Chart Name: **Top 5 Stores**
-    *  Table or View: **STORE_ORDERS**
-    *  Label Column: **STORE_NAME**
-    *  Type: **Sum**
-    *  Value Column: **TOTAL_SALES**
+    - Chart Type: **Pie**
+
+    - Chart Name: **Top 5 Stores**
+
+    - Table or View: **STORE_ORDERS**
+
+    - Label Column: **STORE_NAME**
+
+    - Type: **Sum**
+
+    - Value Column: **TOTAL_SALES**
 
     ![Add Chart2](./images/chart22.png " ")
 
-5. Click **Chart 3**. Enter/select the following:
+5. Select **Chart 3**, and enter/select the following:
 
-    * Chart Type: **Pie**
-    * Chart Name: **Order Status**
-    * Table or View: **CUSTOMER\_ORDER\_PRODUCTS**
-    * Label Column: **ORDER_STATUS**
-    * Type: **Count**
-    * Value Column: **ORDER_ID**.
+    - Chart Type: **Pie**
 
-    ![Add Chart3](./images/chart33.png " ")    
+    - Chart Name: **Order Status**
 
-6. Click **Chart 4**, and enter/select the following:
+    - Table or View: **CUSTOMER\_ORDER\_PRODUCTS**
 
-    * Chart Type: **Bar**
-    * Chart Name: **Product Reviews**
-    * Table or View: **PRODUCT_REVIEWS**
-    * Label Column: **PRODUCT_NAME**
-    * Type: **Column Value**
-    * Value Column: **AVG_RATING**.
+    - Label Column: **ORDER_STATUS**
 
-    ![Add Chart4](./images/chart44.png " ")  
+    - Type: **Sum**
 
-7. Click **Advanced** and check **Set as Administration Page**.
+    - Value Column: **ORDER_ID**
 
-  ![Set as Administration Page](./images/set-as-admin-page.png " ")
+    ![Add Chart3](./images/chart33.png " ")
 
-   *Note - Setting a page as an Administration Page will ensure that only certain users can run the page. In this case, only users with Administration Rights can run the Dashboard page, which means this page will require authentication.*
+6. Select **Chart 4**, and enter/select the following:
 
-8. Click **Add Page**.
+    - Chart Type: **Bar**
+
+    - Chart Name: **Product Reviews**
+
+    - Table or View: **PRODUCT_REVIEWS**
+
+    - Label Column: **PRODUCT_NAME**
+
+    - Type: **Column Value**
+
+    - Value Column: **AVG_RATING**
+
+    ![Add Chart4](./images/chart44.png " ")
+
+7. Under **Advanced**, enable **Set as Administration Page** and click **Add Page**.
+
+    ![Set as Administration Page](./images/set-as-admin-page.png " ")
+
+    *Note - Setting a page as an Administration Page will ensure that only certain users can run the page. In this case, only users with Administration Rights can run the Dashboard page, which means this page will require authentication.*
 
 ## Task 4: Add Multiple Reports
 
-1. In the Create Application wizard, click **Add Page**.
-2. Click the arrow to the left of **Additional Pages** to see additional page types.
-3. Select **Multiple Reports**.
+Reports provide detailed views of data in your application. In this task, you will add multiple report pages to display various data sets like customers, stores, and products. This allows you to organize data and make it accessible to the app's administrators.
+
+1. On the **Create an Application** page, click **Add Page**.
+
+    ![Click Add Page](./images/add-page1.png " ")
+
+2. Under **Additional Pages**, select **Multiple Reports**.
 
     ![Add Multiple reports1](./images/add-multiple-reports.png " ")
 
-4. On the Create Multiple Reports Page, select the following tables:
+3. On the **Add Multiple Reports** page, select the following tables and click **Add Pages**.
+
     - CLOTHING_LOOKUP
     - COLOR_LOOKUP
     - CUSTOMERS
@@ -112,14 +149,16 @@ A dashboard page is a great way to show critical information using various chart
     - PRODUCT_REVIEWS
     - STORES
 
-5. Click **Add Pages**.
-
     ![Add Multiple reports2](./images/add-multiple-reports2.png " ")
+
     ![Add Multiple reports3](./images/add-multiple-reports3.png " ")
 
 ## Task 5: Set Multiple Reports as Administration Pages
 
+Not all pages should be accessible to all users. In this task, you will configure the report pages as Administration Pages, ensuring they are accessible only to authorized users with administrative privileges.
+
 1. Edit each of the following pages to set it as an Administration Page:
+
     - CLOTHING_LOOKUP
     - COLOR_LOOKUP
     - CUSTOMERS
@@ -127,9 +166,9 @@ A dashboard page is a great way to show critical information using various chart
     - PRODUCT_REVIEWS
     - STORES
 
-  ![Administration Pages](./images/edit-multiple-reports.png " ")
+    ![Administration Pages](./images/edit-multiple-reports.png " ")
 
-2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
+2. For each page you edit, click **Advanced** and enable **Set as Administration Page**.
 
 3. Click **Save Changes**.
 
@@ -137,67 +176,66 @@ A dashboard page is a great way to show critical information using various chart
 
 ## Task 6: Add Manage Products Page
 
-1. In the Create Application wizard, click **Add Page**.
+Interactive reports allow users to manage and analyze data dynamically. In this task, you will create a Manage Products page, enabling administrators to view and interact with product data in the database.
+
+1. On the Create an  Application page, click **Add Page**.
+
+    ![Click Add Page](./images/add-page2.png " ")
+
 2. Select **Interactive Report**.
 
     ![Select interactive report](./images/select-ir-report.png " ")
 
-3. On the Report Page, enter the following:
+3. On the **Add Report Page**, enter/select the following:
+
     - Page Name: **Manage Products**
+
     - Table: **PRODUCTS**
 
-<!--
-4. Expand Lookup columns, and enter the following:
+4. Under **Advanced**, enable **Set as Administration Page** and click **Add Page**.
 
-    - Lookup Key 1 - select **CLOTHING_ID**
-    - Display Column 1 - select **CLOTHING_LOOKUP.CLOTHING**
-    - Lookup Key 2 - select **DEPARTMENT_ID**
-    - Display Column 2 - select **DEPARTMENT\_LOOKUP.DEPARTMENT**
-    - Lookup Key 3 - select **COLOR_ID**
-    - Display Column 3 - select **COLOR_LOOKUP.COLOR**
--->
-4. Click **Advanced** and check **Set as Administration Page**.
-
-5. Click **Add Page**.
-
-  ![Add page](./images/add-report-page.png " ")
+    ![Add page](./images/add-report-page.png " ")
 
 ## Task 7: Enable Features
 
-Features are a set of optional application capabilities in Oracle APEX that you can include in your new Application.
+Oracle APEX provides features like Progressive Web Apps (PWA) and Access Control to enhance application functionality and security. In this task, you will enable these features to make your app installable on devices and secure it with role-based access controls.
 
-1. Under **Features** section, check **Install Progressive Web App** and **Access Control**.
-    Progressive Web Apps (PWAs) can be easily installed on any desktop or mobile device, offering users a more native app experience. Access Control enables role-based user authorization with a single click.
+1. Under **Features**, check **Install Progressive Web App** and **Access Control**.
 
-  ![Check Install Progressive Web App](./images/set-features.png " ")
+    *Note: Progressive Web Apps (PWAs) can be easily installed on any desktop or mobile device, offering users a more native app experience. Access Control enables role-based user authorization with a single click.*
+
+    ![Check Install Progressive Web App](./images/set-features.png " ")
 
 ## Task 8: Finish Creating the Application
 
-Now that you have added all the pages, it is time to create and review the app.
+After adding all the required pages and enabling features, this task will guide you to finalize and create the application. Once completed, you will be able to run the application and review its structure.
 
 1. Scroll to the bottom of the page and click **Create Application**.
 
     ![Click create application](./images/click-create-application.png " ")
 
-2. Once the Application is created, you will find the new app on the application home page.
+2. Once the application is created, you will find the new app on the app builder home page.
 Click **Run Application**.
 
     ![Run application](./images/run-application11.png " ")
 
 ## Task 9: Explore the Application
 
-1. Enter your Credentials. Click **Sign In**.
+In the final task, you will explore the Online Shopping Application by signing in, navigating through the pages, and testing its features. This step ensures the application is functioning as intended.
+
+1. Enter your Credentials and click **Sign In**.
 
     ![Online shopping application Sign In](./images/sign-in2.png " ")
 
-2. The new Application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
+2. A new application will be displayed. Click on the navigation menu to explore the pages you just created.
 
     ![Online shopping application Sign In](./images/sign-in31.png " ")
 
 ## Summary
-You can now create an application with several page types based on existing database objects. You may now **proceed to the next lab**.
+
+You have successfully created a database application in Oracle APEX using existing tables. This lab covered various aspects, including dashboards, reports, administration pages, access controls, and Progressive Web App features. With this knowledge, you can now build robust, data-driven applications tailored to your requirements. You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

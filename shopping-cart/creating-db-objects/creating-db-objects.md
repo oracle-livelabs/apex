@@ -8,32 +8,32 @@ To manage items in the cart, you will use [collections](https://docs.oracle.com/
 
 Estimated Time: 5 minutes
 
-<!--
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:X8nVMCJhQic)
--->
-
 Watch the video below for a quick walk-through of the lab.
 [Create Database Objects](videohub:1_pqzdfajw)
 
 ### Objectives
+
 In this lab, you will:
+
 - Create a package to manage the Shopping Cart.
 
 ## Task 1: Create the Package
+
 Create specification and body for the package.
 
 1. Navigate to **SQL Workshop**, click **Object Browser**.
-2. Navigate to the **Packages** on the left side, Right click on it  and Select **Create Package**.
+
+    ![Object Browser](./images/ob1.png " ")
+
+2. Navigate to the **Packages** on the left side, right-click on it and select **Create Package**.
 
     ![Object Browser](./images/create-package.png " ")
 
-4. For Package Name, enter **MANAGE_ORDERS** and click **Create Package**.
+3. For **Package Name**, enter **MANAGE_ORDERS** and click **Create Package**.
 
     ![Create Package details](./images/create-package2.png " ")
 
-5. For Specification, copy and replace the Specification code:
+4. Under **Specification**, copy and replace the following code:
 
     ```
     <copy>
@@ -77,11 +77,11 @@ Create specification and body for the package.
     </copy>
     ```
 
-6. Click **Save and Compile**
+5. Click **Save and Compile**
 
    ![New Package details page](./images/create-specification.png " ")
 
-7. Navigate to body part of the package by clicking on Body tab. Copy and replace the Body code:
+6. Navigate to **Body** tab. Copy and replace the following code:
 
     ```
     <copy>
@@ -235,7 +235,7 @@ Create specification and body for the package.
     </copy>
     ```
 
-8. Click **Save & Compile**.
+7. Click **Save & Compile**.
 
     ![New Package details page](./images/create-body.png " ")
 
@@ -248,4 +248,4 @@ You now know how to create a package to manage the shopping cart. In the followi
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

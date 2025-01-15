@@ -6,26 +6,22 @@ In this lab, you build an application based on the data structures you built in 
 
 Estimated Time: 15 minutes
 
-<!--
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:ssUKy-bZGUw)
--->
-
 Watch the video below for a quick walk-through of the lab.
 [Create the Application](videohub:1_4qg90epw)
 
 ### Objectives
+
 In this lab, you will:
+
 - Create an application using the tables and data that you already have installed.
 
 ## Task 1: Create an Application
 
-1. In the App Builder menu, click **App Builder** and then, click **Create**.
+1. Navigate to **App Builder** and select **Create**.
 
     ![App builder home page](images/go-create-app.png " ")
 
-2.  Click **Use Create App Wizard**.
+2. Click **Use Create App Wizard**.
 
     ![Create Application options](./images/new-app.png " ")
 
@@ -55,7 +51,7 @@ A dashboard page is a great way to show important information using various char
 
     ![Add Page wizard](./images/add-dashboard.png " ")
 
-3. Select **Chart 1**, Enter/select the following:
+3. Select **Chart 1**, enter/select the following:
 
     - Chart Type: **Bar**
 
@@ -67,11 +63,11 @@ A dashboard page is a great way to show important information using various char
 
     - Type: **Sum**
 
-    - Value Column: **TOTAL_SALES**.
+    - Value Column: **TOTAL_SALES**
 
-  ![Chart 1 wizard](./images/chart1.png " ")
+    ![Chart 1 wizard](./images/chart1.png " ")
 
-4. Select **Chart 2**, and Enter/select the following:
+4. Select **Chart 2**, enter/select the following:
 
     - Chart Type: **Pie**
 
@@ -83,11 +79,11 @@ A dashboard page is a great way to show important information using various char
 
     - Type: **Sum**
 
-    - Value Column: **TOTAL_SALES**.
+    - Value Column: **TOTAL_SALES**
 
-  ![Chart 2 wizard](./images/chart2.png " ")
+    ![Chart 2 wizard](./images/chart2.png " ")
 
-5. Select **Chart 3**, and Enterselect the following:
+5. Select **Chart 3**, enter\select the following:
 
     - Chart Type: **Pie**
 
@@ -99,11 +95,11 @@ A dashboard page is a great way to show important information using various char
 
     - Type: **Count**
 
-    - Value Column: **ORDER_ID**.
+    - Value Column: **ORDER_ID**
 
-  ![Chart 3 wizard](./images/chart3.png " ")    
+    ![Chart 3 wizard](./images/chart3.png " ")
 
-6. Select **Chart 4**, and Enter/select the following:
+6. Select **Chart 4**, enter/select the following:
 
     - Chart Type: **Bar**
 
@@ -115,27 +111,27 @@ A dashboard page is a great way to show important information using various char
 
     - Type: **Column Value**
 
-    - Value Column: **AVG_RATING**.
+    - Value Column: **AVG_RATING**
 
-  ![Chart 4 wizard](./images/chart4.png " ")  
+    ![Chart 4 wizard](./images/chart4.png " ")
 
-7. Click Advanced and check **Set as Administration Page**.
+7. Navigate to **Advanced**, check **Set as Administration Page** and Click **Add Page**.
 
     Setting a page as Administration Page will make that only certain users can run the page. In this case, only users with Administration Rights will be able to run the Dashboard page, which means that this page will require authentication.
 
     ![Advanced section in Create Application wizard](./images/set-admin.png " ")
 
-8. Click **Add Page**.
-
 ## Task 4: Add the Products Page
 
-1. In the Create Application wizard, click **Add Page**.
+1. In the **Create an Application** wizard, click **Add Page**.
+
+    ![Add Page wizard](./images/add-page-facet.png " ")
 
 2. Click **Faceted Search**.
 
     ![Add Page wizard](./images/faceted-search.png " ")
 
-3. On the Faceted Search Page, Enter/select the following:
+3. On the **Add Faceted Search Page**, enter/select the following:
 
     - Page Name: **Products**
 
@@ -149,13 +145,11 @@ A dashboard page is a great way to show important information using various char
 
     - Body Column: **- Select Column -** (to unselect the default column chosen)
 
-    - Expand Advanced Section and check **Set as Home Page**
+    ![Add Page wizard](./images/fs-page.png " ")
 
-    Click **Add Page**.
+4. Navigate to **Advanced**, check **Set as Home Page** and select **Add Page**.
 
-  ![Add Page wizard](./images/fs-page.png " ")
-
-  ![Add Page wizard](./images/fs-page1.png " ")  
+    ![Add Page wizard](./images/fs-page1.png " ")
 
 ## Task 5: Delete Original Home Page
 
@@ -163,25 +157,26 @@ Since we designated the product faceted search page as the application's home pa
 
 1. Navigate to the original page named "Home" and click **Edit**.
 
-    ![Create Application wizard](./images/edit-home.png " ")  
+    ![Create Application wizard](./images/edit-home.png " ")
 
-2. Click **Delete**.    
+2. Click **Delete**.
 
-    ![Edit page wizard](./images/delete-page.png " ")  
+    ![Edit page wizard](./images/delete-page.png " ")
 
 3. Confirm the deletion by clicking **OK** on the dialog.
 
+    ![Edit page wizard](./images/confirm-ok.png " ")
+
 ## Task 6: Add Multiple Reports
 
-1. In the Create Application wizard, click **Add Page**.
+1. In the **Create an Application** wizard, click **Add Page**.
 
-2. Click the arrow to the left of **Additional Pages** to see additional page types.
-
-3. Click **Multiple Reports**.
+2. Navigate **Additional Pages** to see additional page types and select **Multiple Reports**.
 
     ![Add Page wizard](./images/multiple-reports.png " ")
 
-3. On the Create Multiple Reports Page, select the following tables:
+3. On the **Add Multiple Reports** dialog, select the following tables:
+
     - CLOTHING_LOOKUP
     - COLOR_LOOKUP
     - CUSTOMERS
@@ -201,12 +196,11 @@ Since we designated the product faceted search page as the application's home pa
     - CUSTOMERS
     - DEPARTMENT_LOOKUP
     - PRODUCT_REVIEWS
-    - STORES  
+    - STORES
 
     ![Edit Page wizard](./images/edit-multiple-reports.png " ")
 
-
-2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
+2. For each page you edit, navigate to **Advanced** and check **Set as Administration Page**.
 
 3. Click **Save Changes**.
 
@@ -214,22 +208,21 @@ Since we designated the product faceted search page as the application's home pa
 
 ## Task 8: Add Manage Products Page
 
-1. In the Create Application wizard, click **Add Page**.
+1. In the **Create an Application** wizard, click **Add Page**.
+
 2. Click **Interactive Report**.
 
     ![Add Page wizard](./images/ir-page.png " ")
 
-3. On the Report Page, Enter/select the following:
+3. On the **Add Report Page**, enter/select the following:
 
     - Page Name: **Manage Products**
 
-    - Table: select **PRODUCTS**
+    - Table: **PRODUCTS**
 
     - Check **Include Form**
 
-4. Click **Advanced** and check **Set as Administration Page**.
-
-5. Click **Add Page**.
+4. Navigate to **Advanced**, check **Set as Administration Page** and select **Add Page**.
 
     ![Add Page wizard](./images/ir-page2.png " ")
 
@@ -260,15 +253,15 @@ Click **Run Application**.
 
     ![Application login page](./images/sign-in.png " ")
 
-
 2. The new application will be displayed. Explore the pages that you just created by clicking on the navigation menu.
 
     ![New application is displayed](./images/view-app.png " ")
 
+## Summary
 
 You now know how to create an application with a number of different page types based on existing database objects. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
