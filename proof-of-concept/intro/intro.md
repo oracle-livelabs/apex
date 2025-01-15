@@ -2,25 +2,35 @@
 
 ## Introduction
 
-In this lab, you will build a dynamic application using Oracle APEX AI Assistant. You will start by installing a sample project management dataset, then create an initial application with the help of an AI Assistant, demonstrating how AI can accelerate development. Next, you will customize your application the lowcode way, making quick adjustments using pre-built components. You will also enhance your application by writing SQL queries with APEX Assistant, simplifying complex query construction. Finally, you will implement an AI chat assistant using Dynamic Actions and Chat Widget, creating a responsive chat interface for real-time user engagement. By the end of this lab, you'll have practical knowledge in using AI with APEX to efficiently build and customize powerful applications.
+In this hands-on lab, you will build a dynamic and interactive application using Oracle APEX AI Assistant. This lab is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
 
-Estimated Time: 55 minutes
+You will begin by creating a data model with the assistance of AI, quickly setting up the foundation for your application. Once the data model is ready, you will use the APEX Assistant to build an initial application framework, highlighting how AI can simplify and speed up the development process.
+
+Next, you will customize your application using Oracle APEX low-code features, making adjustments with pre-built components that streamline the enhancement process. You also learn how to generate SQL queries with the help of APEX Assistant, simplifying the creation of complex queries for your application.
+
+As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the Show AI Assistant dynamic Action of APEX of APEX, providing a responsive interface for real-time user interaction.
+
+Finally, you will create a search page using Oracle Vector Search, adding advanced search capabilities to your application. By the end of this lab, you will have practical experience in using AI with Oracle APEX to efficiently build, customize, and enhance feature-rich applications.
+
+Estimated Time: 1 hour and 40 minutes
 
 ### Lab Objectives
 
 * Obtain a free development environment
-* Install a Sample dataset
-* Create an application on the new data structures using AI Assistant
-* Refine the application by generating SQL with AI APEX assistant
+* Create a Data Model using AI
+* Create an application on the new data structures using APEX Assistant
+* Refine the application by generating SQL using APEX assistant
+* Add functionality to Generate Text with AI
 * Create an AI Chat Assistant to inquire about the Project.
+* Create a Search Page based on Oracle Vector Search
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+>**Note**: This workshop assumes you are using Oracle APEX 24.2 and Oracle Database 23ai. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ### **Let's Get Started!**
 
-- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Define New Data Structures**.
+- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Create Data Model using AI**.
 
-*Note: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
+>**Note**: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
 
 ## Downloads
@@ -28,9 +38,9 @@ Estimated Time: 55 minutes
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
 1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/Smart-Project-App.sql)** to download the completed application.
-2. Import the Smart-Project-App.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
+2. Import the proof-of-concept-app.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 3. Once the application is installed, follow the below steps to update the Web Credentials.
-    - Click the Down Arrow next to **App Builder**, click ****Workspace Utilities** and then select **All Workspace Utilities**.
+    - Click the Down Arrow next to **App Builder**, click **Workspace Utilities** and then select **All Workspace Utilities**.
         ![navigate to workspace utilities](images/navigate-to-workspace-utilities.png " ")
 
     - Select **Web Credentials**.
@@ -42,14 +52,7 @@ If you are stuck or the App is not working as expected, you can download and ins
       - For Credential Secret, Enter **Bearer YOUR_KEY**
         ![update open ai cred](images/update-openai-cred.png " ")
 
-4. Now, add the username that you will use to log in to the **Project Management Suite** to the **Access Control List**.
-5. Navigate to the **Project Management Suite** application, click **Shared Components**.
-6. In the Shared components, Under **Security**, select **Application Access Control**. In the **Application Access Control** Page, perform the following steps:
-    - Under User Role Assignments, click **Add User Role Assignment**
-    - In the User Assignment Page,
-        - For **User Name**, Enter **YOUR\_USER\_NAME**
-        - For **Application Role**, Select **Administrator**.
-        ![config user as admin](images/configure-user.png " ")
+4. To use the Vector search Capabilities of this Application, you need to perform the steps mentioned in the **Task 1** and **Task 2** of **Lab 7: Lab 7: Create a Vector Search Page using Search Configurations**.
 
 ## Learn More - *Useful Links*
 
@@ -62,4 +65,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, May 2024
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025
