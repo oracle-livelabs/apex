@@ -78,7 +78,7 @@ Once changes are made in the Working Copy, it’s essential to identify the diff
 
 1. To compare changes between a Working Copy and the Main Application, let's make changes in the Demo Projects application.
 
-2. Navigate to **Demo Projects** applications, select **Shared Components**.
+2. Navigate to **Navigate to Demo Projects - Dev Working Copy** application, select **Shared Components**.
 
     ![Navigate to App Builder](images/dev-sc.png " ")
 
@@ -107,7 +107,7 @@ Once changes are made in the Working Copy, it’s essential to identify the diff
 
 8. As you have made the changes in your working copy, now let's compare the changes between a Working Copy and Main.
 
-9. Under **Working Copy Tasks**, select **Compare Changes**.
+9. Go to the Application Home Page, under **Working Copy Tasks**, select **Compare Changes**.
 
     ![Navigate to App Builder](images/compare-changes.png " ")
 
@@ -119,7 +119,7 @@ Once changes are made in the Working Copy, it’s essential to identify the diff
 
 After verifying your updates, you can integrate them into the Main application. This task covers the merging process, ensuring a smooth transition of changes while maintaining application stability.
 
-1. Navigate **Demo Projects** application. Under **Working Copy Tasks**, select **Merge Changes**.
+1. Navigate **Demo Projects - Dev Working Copy** application. Under **Working Copy Tasks**, select **Merge into Main**.
 
     ![Navigate to App Builder](images/merge-into-main.png " ")
 
@@ -187,7 +187,7 @@ Applications often evolve in the Main branch while you work on a Working Copy. T
 
     ![Navigate to App Builder](images/confirm-delete-entry.png " ")
 
-9. Now, navigate to **Dev** working copy, under **Working Copy Tasks**, select **Refresh Working Copy**.
+9. Go to the Application Home Page. Now, navigate to **Dev** working copy, under **Working Copy Tasks**, select **Refresh Working Copy**.
 
     ![Navigate to App Builder](images/nav-dev-copy.png " ")
 

@@ -146,7 +146,7 @@ You will define the following parameters for the Calculate fees Workflow:
   | DNO | DNO | NUMBER |    |
   | PATIENT_EMAIL | Patient Email | VARCHAR2 |     |
   | PATIENT_NAME | Patient Name | VARCHAR2 |       |
-  | REQUEST_DATE | Request Date | VARCHAR2 |  |
+  | REQUEST_DATE | Request Date | TIMESTAMP |  |
   | STATUS       |  Status      | VARCHAR2 | Out |
   {: title="List of Parameters to be Created"}
 

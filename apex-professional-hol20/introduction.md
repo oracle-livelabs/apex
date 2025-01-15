@@ -4,7 +4,7 @@
 
 Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON), and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
-In this lab, You will create Installation scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
+In this lab, you will create Installation Scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
 
 In the second part of the lab, you will be using Remote Deployment to deploy your application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
 
@@ -12,7 +12,7 @@ In the second part of the lab, you will be using Remote Deployment to deploy you
 
 In the last workshop, you learned to enable push notifications, add shortcuts to the PWA app, and include screenshots to be displayed while installing the PWA app. Also, you gain insights into Enabling Push Notifications and learn how to configure Push Notifications.
 
-Estimated Time: 20 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 

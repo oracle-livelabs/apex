@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, You will create Installation scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
+In this lab, you will create Installation Scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
 
 Estimated Time: 10 minutes
 
@@ -14,9 +14,9 @@ In this lab, you will:
 
 - Create Data Packages
 
-- Export application with supporting Objects.
+- Export application with Supporting Objects.
 
-## Task 1: Create Installation Scripts, Data packages, and Export Applications
+## Task 1: Create Installation Scripts, Data Packages, and Export Applications
 
 1. On the Workspace home page, click **App Builder**.
 
@@ -100,7 +100,7 @@ In this lab, you will:
 
 In this lab, you will login into a new workspace or the workspace you created in previous labs and import the application along with Supporting objects.
 
-> **Note:**_In this task, Please use different environments for creating the target and the main workspace_
+> **Note:**In this task, Please use different environments for creating the target and the main workspace.
 
 1. Log in to the target **Workspace**.
 
@@ -144,7 +144,7 @@ In this lab, you will login into a new workspace or the workspace you created in
 
 ## Summary
 
-You now know how to create Installation scripts and Data Packages to export Database objects along with Data. You may now **proceed to the next lab**.
+You now know how to create Installation Scripts and Data Packages to export Database objects along with Data. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

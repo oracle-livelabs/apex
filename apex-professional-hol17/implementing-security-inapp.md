@@ -48,7 +48,7 @@ In this lab, you will:
 
 8. Under **Authentication and authorization** , enable **Enforce grants as authorization** and click **Next**.
 
-     [Define Authentication](images/click-next1.png " ")
+    ![Define Authentication](images/click-next1.png " ")
 
 9. Under **Client configuration**, enter/select the following:
 
@@ -56,7 +56,7 @@ In this lab, you will:
 
         - Allowed grant types: Enable **Authorization code** (This will be used later to control access to the Oracle APEX application)
 
-        - Redirect URL**: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+        - Redirect URL: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
 
         - Post-logout redirect URL: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
 
@@ -80,6 +80,8 @@ In this lab, you will:
 
 13. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
 
+    ![Define Authentication](images/select-web-creds1.png " ")
+
 14. Select **Web Credentials**.
 
     ![Define Authentication](images/select-web-creds.png " ")
@@ -94,11 +96,11 @@ In this lab, you will:
 
     - Authentication Type: **Basic Authentication**
 
-    - Client ID or Username: Enter Client ID copied in **step 15**.
+    - Client ID or Username: Enter Client ID copied in **step 12**.
 
-    - Client Secret or Password: Enter Client Secret copied in **step 15**.
+    - Client Secret or Password: Enter Client Secret copied in **step 12**.
 
-    - Verify Client Secret or Password: Enter Client Secret copied in **step 15**.
+    - Verify Client Secret or Password: Enter Client Secret copied in **step 12**.
 
     Click **Create**.
 
@@ -117,6 +119,8 @@ In this lab, you will:
     ![Define Authentication](images/assign-groups.png " ")
 
 20. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
+
+    ![Define Authentication](images/select-online.png " ")
 
 21. Click **Shared Components**. Under Security, click **Authentication Schemes**.
 
@@ -282,9 +286,7 @@ In this lab, you will:
 
         - Scope: **profile,email**
 
-        - Username: **name**
-
-        - Additional User Attributes: **email, name, roles**
+        - Username: **email,name,roles**
 
         Click **Create Authentication Scheme**.
 
@@ -316,11 +318,11 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Header: **Hidden**
 
-        - Click **OK**
+        Click **OK**
 
     ![Define Authentication](images/create-0btn2.png " ")
 
-4. Right-click **Multi Authentication** sub-region, click **Create Button**.
+4. Right-click **Multi Authentication** sub-region, select **Create Button**.
 
     ![Define Authentication](images/create-btn1.png " ")
 
@@ -338,7 +340,7 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Template Options > Use Template Defaults: Width > **Stretch**
 
-        - Click **OK**
+        Click **OK**
 
         - Icon: **fa-oracle-o**
 
@@ -352,11 +354,13 @@ Providing multiple authentication options improves the flexibility and usability
 
             - Advanced > Request: **APEX_AUTHENTICATION=IAM**
 
-            - Click **OK**
+            Click **OK**
 
     ![Define Authentication](images/iam-btn.png " ")
 
-6. Right-click **Multi Authentication** sub-region, click **Create Button**.
+6. Right-click **Multi Authentication** sub-region, select **Create Button**.
+
+    ![Define Authentication](images/iam-btn1.png " ")
 
 7. In the Property Editor, enter/select the following:
 
@@ -374,7 +378,7 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Template Options > Use Template Defaults: Width > **Stretch**
 
-        - Click **OK**
+        Click **OK**
 
         - Icon: **fa-google**
 
@@ -388,7 +392,7 @@ Providing multiple authentication options improves the flexibility and usability
 
             - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
 
-            - Click **OK**
+            Click **OK**
 
     ![Define Authentication](images/google-btn1.png " ")
 
@@ -398,22 +402,22 @@ Providing multiple authentication options improves the flexibility and usability
 
     - Inline: Copy and paste the below CSS
 
-    ```
-    <copy>
-    span.t-Icon.t-Icon--left.fa.fa-oracle-o {
-    color: red;
-    }
-    span.t-Icon.t-Icon--left.fa.fa-google {
-    color: mediumslateblue;
-    }
-    </copy>
-    ```
+        ```
+        <copy>
+        span.t-Icon.t-Icon--left.fa.fa-oracle-o {
+        color: red;
+        }
+        span.t-Icon.t-Icon--left.fa.fa-google {
+        color: mediumslateblue;
+        }
+        </copy>
+        ```
 
     ![Define Authentication](images/inline-css1.png " ")
 
 9. Click **Save and Run**.
 
-    > **Note:** _If you get reader rights error while clicking on any authentication button, navigate to **User Interface Attributes** in shared components. Select **Security** tab and update **Authorization Scheme** to **- No application authorization required -**.
+    > **Note:** If you get reader rights error while clicking on any authentication button, navigate to **User Interface Attributes** in shared components. Select **Security** tab and update **Authorization Scheme** to **- No application authorization required**.
 
     ![Define Authentication](images/multi-auth1.png " ")
 

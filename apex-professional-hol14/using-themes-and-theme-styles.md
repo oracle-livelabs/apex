@@ -223,7 +223,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/serach.png " ")
 
-8. Now, drag **P3_STATUS** under **Project Task** region and in the Property Editor, update **Label** to **Udpate Status to**.
+8. Now, drag **P3_STATUS** under **Project Task** region and in the Property Editor, update **Label** to **Update Status to**.
 
     ![Select Theme to Redwood Light](images/status.png " ")
 
@@ -243,7 +243,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/delete-region.png " ")
 
-12. Select **Task Status** region and in the Property Editor, enter/select the following:
+12. Select **Update Task Status** region and in the Property Editor, enter/select the following:
 
     - Under Source:
 
@@ -295,9 +295,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 Finally, you'll test the "Hero" plug-in and its functionality by running the application. This will help verify that the component displays correctly and that interactive elements like search and update work as expected.
 
-1. Log in to the application and navigate to **Project Task Status**.
-
-    ![Select Theme to Redwood Light](images/run-page.png " ")
+1. Log in to the application and navigate to **Task Status**.
 
 2. On **Search** textfield type **system**, for **Update Status to**, select **Open**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, press **Enter** and click **Update** to update the status of checked rows.
 

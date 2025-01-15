@@ -11,7 +11,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Export application with supporting Objects.
+- Export application with Supporting Objects.
 
 - Use Remote Deployment to deploy your Application.
 
@@ -109,10 +109,11 @@ Your application is now ready for deployment. Perform the following steps:
 
    ![Add Deployment Server](images/perform-rd1.png " ")
 
-6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX\_HANDSON\_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.  
-For **Endpoint URL**, paste the base URL copied from the deployment instance in the previous step(**Task 4**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click Next.
+6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX\_HANDSON\_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.
 
-   ![Paste the file URL which you Copied](images/perform-rd2.png " ")
+    For **Endpoint URL**, paste the base URL copied from the deployment instance in the previous step(**Task 2**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click **Next**.
+
+    ![Paste the file URL which you Copied](images/perform-rd2.png " ")
 
 7. In the **Create REST Enabled SQL Service - Authentication** wizard, perform the following steps.
 

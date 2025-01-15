@@ -102,7 +102,7 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![Configure pwa views region](images/configure-pwa-views1.png " ")
 
-7. In the **Rendering** yab, right-click **PWA Views** and click **Create Sub Region**.
+7. In the **Rendering** yab, right-click **PWA Views** and select **Create Sub Region**.
 
     ![create sub region](images/create-sub-region1.png " ")
 
@@ -118,7 +118,7 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![configure subscriptions](images/configure-subscriptions1.png " ")
 
-9. In the **Rendering** tab, right-click **PWA Views** and click **Create Sub Region**.
+9. In the **Rendering** tab, right-click **PWA Views** and select **Create Sub Region**.
 
     ![create sub region 2](images/create-sub-region2.png " ")
 
@@ -152,7 +152,7 @@ For users seeking more control over the appearance and content of their push not
 
    ![configure subscriptions](images/run-views-page.png " ")
 
-2. Navigate to **Processing** tab. Right-click **Processing** and click **Create Process**.
+2. Navigate to **Processing** tab. Right-click **Processing** and select **Create Process**.
 
     ![configure subscriptions](images/click-create-process1.png " ")
 
@@ -174,7 +174,7 @@ For users seeking more control over the appearance and content of their push not
 
     ![configure subscriptions](images/create-push-process1.png " ")
 
-4. Navigate to **Processing** tab. Right-click **Processing** and click **Create Process**.
+4. Right-click **Processing** and select **Create Process**.
 
     ![configure subscriptions](images/create-process3.png " ")
 
@@ -182,9 +182,9 @@ For users seeking more control over the appearance and content of their push not
 
     - Under Identification:
 
-      - Title: **APEX PWA API**
+        - Title: **APEX PWA API**
 
-      - Type: **Invoke API**
+        - Type: **Invoke API**
 
     - Under Settings:
 

@@ -291,7 +291,7 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
     - Switch > Type: **Check Workflow Variable**
 
-    - Compare > Compare Variable: **TASK_OUTCOME**
+    - Compare > Compare Variable: Version Variable > **TASK_OUTCOME**
 
     ![Adding a new switch activity](./images/config-switch-activity.png " ")
 

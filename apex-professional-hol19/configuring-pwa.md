@@ -32,7 +32,7 @@ In this lab, you:
 
     ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
-4. Set **Installable** to **Yes** and click **Apply Changes**.
+4. Make sure that **Installable** is set to **Yes** and click **Apply Changes**.
 
    ![Set Installable to Yes](images/set-installable-yes.png " ")
 
@@ -52,7 +52,7 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![click upload Screenshot](images/upload-screenshot.png " ")
 
-    > **Note:** You can download the images by clicking on the links below:
+    > **Note:** You can save the images by clicking on the links below:
 
     - [**app-screenshot-1.png**](images/app-screenshot-1.png)
 
@@ -118,6 +118,8 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 
     Similarly, you can add multiple shortcuts, each pointing to a different page in your app.
 
+5. Click **Apply Changes**.
+
 ## Task 4: Add the Share Button
 
 In this task, you add a Share button that allows a user to share the post via email or other apps.
@@ -140,13 +142,13 @@ In this task, you add a Share button that allows a user to share the post via em
 
     - Under Appearance:
 
-        - Hot:Toggle **On**
+        - Hot: **Toggle On**
 
         - Icon: **fa-share-alt**
 
     ![configure Share](images/configure-share.png " ")
 
-4. In the **Rendering** tab, right-click **Share** button and click **Create Dynamic Action**.
+4. In the **Rendering** tab, right-click **Share** button and select **Create Dynamic Action**.
 
     ![Create Dynamic Action](images/create-da.png " ")
 
@@ -179,8 +181,6 @@ Meta tags are information about a web page that allows other systems to read a s
     - Advanced > Enable Meta Tags: Toggle **On**
 
     ![page is public](images/page-is-public.png " ")
-
-    ![page is public](images/enable-meta-tags.png " ")
 
 2. A new section will appear in the Page Designer under **Pre-Rendering**. Select **description** and enter the following:
 

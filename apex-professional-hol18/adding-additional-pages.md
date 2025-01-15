@@ -40,7 +40,11 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 4. In the **Create Calendar**, enter/select the following:
 
-    - Page Definition > Name: **Calendar**
+    - Under Page Definition:
+
+        Page Number: **5**
+
+        Name: **Calendar**
 
     - Data Source > Table/View Name: **DEMO_PROJECTS**
 
@@ -144,7 +148,11 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
         - Page: **9**
 
-        - Set Items: Name: **P9_ID** and Value : Select **ID** or Enter **&ID**.
+        - Set Items:
+
+            | Name | Value |
+            |----- | ----- |
+            | P9_ID | ID |
 
         - Clear Cache: **9**
 
@@ -159,16 +167,17 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
         - Drag and Drop: **Toggle On**
 
         - Drag and Drop PL/SQL Code: Copy and paste the below code.
-        ```
-        <copy>
-        begin
-        update DEMO_PROJECTS
-        set start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
-        end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
-        where ID = :APEX$PK_VALUE;
-        end;
-        </copy>
-       ```
+            ```
+            <copy>
+            begin
+                update DEMO_PROJECTS
+            set
+            start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
+            end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
+            where ID = :APEX$PK_VALUE;
+            end;
+            </copy>
+            ```
 
     ![Enable drag nad drop](images/customizing-calendar5.png " ")
 
@@ -193,7 +202,13 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
    ![Select Blank page](images/create-tree2.png " ")
 
-3. Enter **Tree Page** for **Name** and click **Create Page**.
+3. On **Create Blank Page**, enter/select the following:
+
+    - Page Number: **7**
+
+    - Name: **Tree Page**
+
+    Click **Create Page**.
 
     ![Define Page](images/create-tree3.png " ")
 

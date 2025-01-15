@@ -270,11 +270,11 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
     ![data synchronisation is triggered](images/google-books-page.png " ")
 
-14. In the **Rendering** tab, right-click **Body** and select **Create Region**.
+15. In the **Rendering** tab, right-click **Body** and select **Create Region**.
 
     ![data synchronisation is triggered](images/create-region-books.png " ")
 
-15. In the Property Editor, enter/select the following:
+16. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -290,19 +290,19 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
     ![data synchronisation is triggered](images/google-book-region1.png " ")
 
-16. Click **Save and Run**. You will see that Interactive Report does contain the nested JSON elements, but they only appear in JSON format. This is because we only created a report on a REST Data Source, as in earlier APEX versions. We did not tell APEX anything about what to do with the PO_LINEITEMS array column from the data profile, so it's being returned in JSON format.
+17. Click **Save and Run**. You will see that Interactive Report does contain the nested JSON elements, but they only appear in JSON format. This is because we only created a report on a REST Data Source, as in earlier APEX versions. We did not tell APEX anything about what to do with the PO_LINEITEMS array column from the data profile, so it's being returned in JSON format.
 
     ![data synchronisation is triggered](images/google-book-report1.png " ")
 
-17. Now, go back to Page Designer, and look up the Nested Rows attribute within the Data Profile section.
+18. Now, go back to Page Designer, and look up the Nested Rows attribute within the Data Profile section.
 
-18. Select **Purchase Orders** region, in the Property Editor, enter/select the following:
+19. Select **Purchase Orders** region, in the Property Editor, enter/select the following:
 
     - Data Profile > Nested Rows: **1. PO_LINEITEMS**
 
     ![data synchronisation is triggered](images/po-line-items.png " ")
 
-19. Click **Save and Run**. Now, watch how the region columns change. The PO_LINEITEMS column (which referenced the JSON fragment) goes away, and the individual nested columns are added now. Before running the page again, consider cleaning up some of the (unwanted) other columns, then run the page again.
+20. Click **Save and Run**. Now, watch how the region columns change. The PO_LINEITEMS column (which referenced the JSON fragment) goes away, and the individual nested columns are added now. Before running the page again, consider cleaning up some of the (unwanted) other columns, then run the page again.
 
     ![data synchronisation is triggered](images/google-book-report2.png " ")
 
@@ -368,7 +368,11 @@ In this task, you will create a Data Load Definition and use it to load data int
 
 13. In **Create Data Loading** dialog, enter/select the following:
 
-    - Page Definition > Name :**Data Loading**
+    - Under Page Definition:
+
+        - Page Number: **44**
+
+        - Name :**Data Loading**
 
     - Data Load Attributes > Data Load: **Data Loading**
 

@@ -518,7 +518,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
     ![create patient tasks](./images/configure-attr.png " ")
 
-7. Right-click **Appointments Region**, and select **Create Region Below**.
+7. Right-click **Appointments** Region, and select **Create Region Below**.
 
     ![create patient tasks](./images/create-region-below1.png " ")
 

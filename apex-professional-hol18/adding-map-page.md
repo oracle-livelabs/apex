@@ -58,11 +58,11 @@ In this task, you will create a new Map page in your Oracle APEX application to 
 
         - Geometry column Type: **Two Numeric Columns**
 
-        - Longitude Column: **LONGITUDE**
+        - Longitude Column: **LONGITUDE(Number)**
 
-        - Latitude Column: **LATITUDE**
+        - Latitude Column: **LATITUDE(Number)**
 
-        - Tooltip Column: **STORE_NAME**
+        - Tooltip Column: **STORE_NAME(Varchar2)**
 
     Click **Create Page**.
 
