@@ -56,7 +56,11 @@ In this workshop, you will:
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
+If you are stuck or the app is not working as expected, you can download and install the completed application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflows.sql)**.
+
+Import them into your workspace. To run the app, please run the steps described in the following lab:
+
+1. Follow  Lab 2: Design the Application > Task 1: Create Application Users.
 
 > **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
