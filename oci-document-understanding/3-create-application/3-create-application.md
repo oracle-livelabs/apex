@@ -148,11 +148,11 @@ In this lab, you:
 
 12. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-   |   | Type | Name | Direction | Default Value | Static |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | HTTP Header| Content-Type | In | application/json | ON
-   | 2 | Request or Response Body| RESPONSE | Out |
-   {: title="POST Operation Parameters"}
+    |   | Type | Name | Direction | Default Value | Static |
+    |---|-------|------|----------| --------------| ------ |
+    | 1 | HTTP Header| Content-Type | In | application/json | ON |
+    | 2 | Request or Response Body| RESPONSE | Out |  |  |
+    {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/content-type.png " ")
 
@@ -250,7 +250,7 @@ In this lab, you:
 
 12. In the left pane, right-click **Upload Your Invoice** region and select **Create Button**.
 
-  ![create-button](images/create-btn.png " ")
+    ![create-button](images/create-btn.png " ")
 
 13. In the property editor,  Enter/select the following details:
 
@@ -377,7 +377,7 @@ In this lab, you:
 
     - Value > Item: **P1\_RESPONSE**
 
-  ![Add Child Process details](images/doc-response.png " ")
+    ![Add Child Process details](images/doc-response.png " ")
 
 5. Right-click **Process Invoice** and select **Add Child Process**.
 

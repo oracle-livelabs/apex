@@ -1,130 +1,315 @@
-# Use Themes and Theme Styles
+# Create a Template Component Plug-in
 
 ## Introduction
 
-In this lab, you use the Theme Roller to save a new Theme Style. Then, you enable end users to apply this style while running the application.
+In this lab, you start using the Theme Roller to set a new theme style, enhancing the application's appearance with a fresh layout and color scheme. After that, you'll create a plug-in as a template component called "Hero." This custom plug-in will be a visual and interactive component, allowing dynamic headers, descriptions, and search features to be integrated within an application page.
 
 Estimated Time: 10 minutes
 
-<!--
-Watch the video below for a quick walkthrough of the lab.
-
-[](youtube:lwQ3lvul9iE)
-
 ### Objectives
-In this lab, you will:
-- Set the following pages as public pages:
-    - Products
-    - Shopping Cart
-    - Order Information
 
-- Disable the Navigation Menu
+- Apply a new theme style to the application.
 
-- Enhance the Navigation Bar -->
+- Create and configure a plug-in as a template component.
 
-### Downloads
+- Customize the plug-in with attributes and slots.
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/hol14.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.  
-
+- Integrate the plug-in within a page region to test its functionality.
 
 ## Task 1: Use Themes and Theme Styles
 
-In this hands-on lab, you save a Theme Style by using the Theme Roller. Then, you enable end users to apply this style while running the application.
+In the first task, you use the Theme Roller to apply a new theme style. This change will give your application a consistent look and feel, setting a strong visual foundation for the components you will add later.
 
-1. Navigate to **App Builder** and then run the **Online Shopping Application**. In the Developer Toolbar, click **Customize** and then select **Theme Roller**.
+1. Navigate to **App Builder** and then run the **Demo Projects**. In the Developer Toolbar, click **Customize** and then select **Theme Roller**.
 
-  ![Click Customize in Developer Toolbar](images/navigate-to-theme-roller.png " ")
+    ![Click Customize in Developer Toolbar](images/navigate-to-theme-roller.png " ")
 
-2. The current Theme Style is **Vita**. Under **Global Colors**, click the color swatch to select new colors.
-To edit a specific component, expand a group and select new colors or styling of the component you wish to edit.
+    ![Click Customize in Developer Toolbar](images/select-theme-roller.png " ")
 
-  Modify the look by specifying colors of your choice and preview the changes. Once you are done, click **Save As** and **Save**
+2. Under **Theme Roller**, enter/select the following:
 
-    ![Change Color](images/change-color.png " ")
+    - Select Theme: **Redwood Light**
 
-3. Under **Theme**, change the **Select Theme** to **Redwood Light**
+    - Redwood Options > Layout: **Floating**
+
+    - Under **Appearance**:
+
+        - Header: **Dark**
+
+        - Body Header: **Dark**
+
+        - Body Background: **Dark**
+
+3. Click **Save As**.
 
     ![Select Theme to Redwood Light](images/change-theme.png " ")
 
-4. For Theme Attributes, enter the following:  
-    Under **Redwood Options**:
-      - For Layout: Select **Floating**.  
+4. Click **Save**.
 
-    Under **Appearance**:
-      - For Header: Select **Dark**.
-      - For Body Header: Select **Dark**.
-      - For Body Background: Select **Dark**.
+    ![Select Theme to Redwood Light](images/click-save-as.png " ")
 
-    Click **Save As**.
+## Task 2: Create Plug-in
 
-  ![Edit Redwood theme](images/change-redwood-theme-options1.png " ")
+In this task, you will create a plug-in named "Hero." This plug-in will be a template component that can dynamically display headers, descriptions, and search fields, adding interactive elements to the application.
 
-5. In the Save As dialog, enter **Redwood Light (Copy_1)** for Style Name and click **Save**.
+1. In **Demo Projects** application, navigate to **Shared Components**.
 
-    ![Save Theme](images/click-save1.png " ")
+    ![Select Theme to Redwood Light](images/sc-plugin.png " ")
 
-6. Close the **Theme Roller** by clicking **X**. Click **App < n >** in the Developer Toolbar.
+2. Under **Other Components**, select **Plug-ins**.
 
-    ![Select Application ID](images/select-application.png " ")
+    ![Select Theme to Redwood Light](images/plug-ins.png " ")
 
-7. On the application home page, click **Shared Components**. Under User Interface, click **User Interface Attributes**.
+3. Click **Create**.
 
-    ![Navigate to shared Components](images/select-shared-comp.png " ")
+    ![Select Theme to Redwood Light](images/click-create.png " ")
 
-    ![Click User Interface Attributes](images/click-usa.png " ")
+4. Under **Create Plug-in**, click **Next**.
 
-8. Under **Attributes**, click **Enable End Users to Choose Theme Style**. Make sure this attribute is set to **On**.
-Notice that the new Theme Style you saved is displayed under the Theme Style list. Click **Apply Changes**.
+    ![Select Theme to Redwood Light](images/click-next.png " ")
 
-    ![Change Theme2](images/change-usa.png " ")
+5. Enter/select the following:
 
-9. Now, run the application. At the bottom of the page, click the **Customize** link.
+    - Under Name:
 
-    ![Click Customize Link](images/select-customize1.png " ")
+        - Name: **Hero**
 
-10. Users can specify their Theme Style while running the application using the Customize dialogue. Select the Theme Style **Vita** and click Apply Changes.
+        - Type: **Template Component**
 
-    ![Customize](images/customize1.png " ")
+    - Under Templates:
 
-11. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
+        - Available As: Check **Region Only**
 
-    ![Preferences Changed](images/preferences-changed.png " ")
+        - Partial: Copy and paste the following:
 
-## Task 2: Import and Export Theme Styles
-The Theme Roller dialog appears, displaying the styles for your application. You can export and import style changes directly from Theme Roller by selecting the following options from the Additional Options menu: Import, Export, and Reset.
+        ```
+        <copy>
+        <div class="c-Hero #APEX$COMPONENT_CSS_CLASSES#" id="#APEX$DOM_ID#">
+        <div class="c-Hero-body">
+        {if OVERLINE/}<div class="c-Hero-overline">#OVERLINE#</div>{endif/}
+        <h1 class="c-Hero-title">#APEX$TITLE#</h1>
+        {if DESCRIPTION/}<div class="c-Hero-description">#DESCRIPTION#</div>{endif/}
+        {if SEARCH/}
+        <div class="c-HeroSearch" role="search">
+        <div class="c-HeroSearch-input">#SEARCH#</div>
+        {if CATEGORY/}<div class="c-HeroSearch-category">#CATEGORY#</div>{endif/}
+        <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
+        {if ACTION/}<div class="c-HeroSearch-action">#ACTION#</div>{endif/}
+        </div>
+        {endif/}
+        </div>
+        </div>
+       ```
+       </copy>
 
-1. To import theme styles:
-     - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
-     - From the Additional Options menu, select Import. A File Browser appears.
+6. Click **Create Plug-in**.
 
-     You can download the theme-style JSON file from [**here**](files/vita-new.json) and import it into your application.
+    ![Select Theme to Redwood Light](images/create-plug-in.png " ")
 
-     ![Preferences Changed](images/theme-import.png " ")
+## Task 3: Enhance Template Component
 
-     - Navigate to the downloaded file to set the custom CSS code, variable style changes, add classes, and LESS compilation configuration to be applied to the current theme style.
+In this task, you will customize the "Hero" plug-in by adding attributes. These attributes, like overline and description, will allow more dynamic control over how content appears in the component.
 
-     ![Preferences Changed](images/file-import.png " ")
+1. Navigate to **Hero** plug-in, under **Custom Attributes** , delete all the attributes one after the other.
 
-     ![Preferences Changed](images/file-imported.png " ")
+    ![Select Theme to Redwood Light](images/delete-attributes.png " ")
 
-2. To export theme styles:
-   From the Additional Options menu, select Export. This option exports the current style configuration into a JSON file.
+2. First, select **Action** and click **Delete** and  confirm by clicking **OK**.
 
-     ![Preferences Changed](images/export-file.png " ")
+    ![Select Theme to Redwood Light](images/click-delete-action.png " ")
 
-3. To reset theme styles:
-   From the Additional Options menu, select Reset.
-   This option reverts any unsaved theme style changes.
+    ![Select Theme to Redwood Light](images/delete-ok.png " ")
 
-     ![Preferences Changed](images/reset-file.png " ")
+3. Now, delete all the attributes. After deleting, click **Add Attribute**.
+
+    ![Select Theme to Redwood Light](images/add-attribute.png " ")
+
+4. Enter/select the following:
+
+    - Name > Static ID: **OVERLINE**
+
+    - Settings > Type: **Text**
+
+    Click **Create and Create Another**.
+
+    ![Select Theme to Redwood Light](images/overline-attribute.png " ")
+
+5. Enter/select the following:
+
+    - Name > Static ID: **DESCRIPTION**
+
+    - Settings > Type: **Textarea**
+
+    Click **Create**.
+
+    ![Select Theme to Redwood Light](images/description-attribute.png " ")
+
+## Task 4: Add Slots in Template Component
+
+To make the "Hero" plug-in interactive, you will define slots at the Template Component level. This will allow developers to nest components inside Template Components in Page Designer.
+
+1. Navigate to **Hero** plug-in, under **Slots** tab, click **Add Slot**.
+
+    ![Select Theme to Redwood Light](images/add-slot.png " ")
+
+2. Add the following four slots one after the other:
+
+    | Name | Static Identifier | Items | Supported Items | Buttons |
+    |------|------------------ | ----- | --------------- | --------|
+    | Action | ACTION |    |      |  Check |
+    | Category | CATEGORY | Check |  Select List |    |
+    | Search | SEARCH | Check | Text Field |     |
+    | Select All | SELECT_ALL | Check | Checkbox |    |
+
+3. Click **Apply Changes**.
+
+    ![Select Theme to Redwood Light](images/add-slots.png " ")
+
+4. Navigate to **Hero** plug-in. Under **Default Slots**, for **Buttons**, select **Action**.
+
+5. Under **File URLs to Load**, for **Cascading Style Sheet** enter **#PLUGIN_FILES#hero#MIN#.css**.
+
+6. Click **Apply Changes**.
+
+    ![Select Theme to Redwood Light](images/plugin-css.png " ")
+
+## Task 5: Add Template Component Region
+
+With the plug-in configured, you will add it to the Project Task Status page as a region. This will allow you to test the component's behavior and appearance within an application page.
+
+1. Navigate to **Application ID** and select **3 - Tasks Status**.
+
+    ![Select Theme to Redwood Light](images/go-to-3.png " ")
+
+2. Right-click **Body** and select **Create Region**.
+
+    ![Select Theme to Redwood Light](images/add-region.png " ")
+
+3. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Project Task**
+
+        - Type: **Hero**
+
+    ![Select Theme to Redwood Light](images/project-task-status.png " ")
+
+4. Drag **Project Task** hero region above **Selection Support** region.
+
+    ![Select Theme to Redwood Light](images/drag-pts.png " ")
+
+5. In the Property Editor, navigate to **Attributes** tab and enter/select the following:
+
+    - Appearance > CSS Classes: **color-us-5**
+
+    - Under Settings:
+
+        - Overline: **Get Started**
+
+        - Description: **Organize, prioritize, and complete tasks seamlessly!**
+
+    ![Select Theme to Redwood Light](images/add-attributes.png " ")
+
+6. Right-click **Project Task** region and select **Create Page Item**.
+
+    ![Select Theme to Redwood Light](images/create-search.png " ")
+
+7. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **P3_SEARCH**
+
+    - Label > Label: **Search**
+
+    ![Select Theme to Redwood Light](images/serach.png " ")
+
+8. Now, drag **P3_STATUS** under **Project Task** region and in the Property Editor, update **Label** to **Update Status to**.
+
+    ![Select Theme to Redwood Light](images/status.png " ")
+
+    ![Select Theme to Redwood Light](images/status1.png " ")
+
+9. Also, drag **P3\_SELECT\_ALL** and **Update** button under **Project Task** region.
+
+    ![Select Theme to Redwood Light](images/select-all.png " ")
+
+    ![Select Theme to Redwood Light](images/update-drag.png " ")
+
+10. Select **P3\_SELECTION\_ID** and drag it under the **Update Tasks Status** region.
+
+    ![Select Theme to Redwood Light](images/selection-id-drag.png " ")
+
+11. Right-click **Selection Support** region and select **Delete**.
+
+    ![Select Theme to Redwood Light](images/delete-region.png " ")
+
+12. Select **Update Task Status** region and in the Property Editor, enter/select the following:
+
+    - Under Source:
+
+        - Type: **SQL query**
+
+        - SQL Query: Copy and replace with the following code:
+
+        ```
+        <copy>
+        SELECT
+            ID,
+            PROJECT,
+            TASK_NAME,
+            START_DATE,
+            END_DATE,
+            STATUS,
+            ASSIGNED_TO,
+            COST,
+            BUDGET
+            FROM
+        DEMO_PROJECTS
+        WHERE
+        ( UPPER(TASK_NAME) LIKE '%'
+                            || UPPER(:P3_SEARCH)
+                            || '%'
+        OR UPPER(PROJECT) LIKE '%'
+                             || UPPER(:P3_SEARCH)
+                             || '%'
+        OR ( TASK_NAME IS NULL
+           AND PROJECT IS NULL ) );
+        </copy>
+        ```
+
+    ![Select Theme to Redwood Light](images/update-sql.png " ")
+
+13. Right-click **Breadcrumb** and select **Delete**.
+
+    ![Select Theme to Redwood Light](images/delete-breadcrumb.png " ")
+
+14. Select **P3_SEARCH**, in the Property Editor, and update the following:
+
+    - Appearance > Value Placeholder: **Search Project, Task Name**
+
+    ![Select Theme to Redwood Light](images/search-placeholder.png " ")
+
+15. Click **Save and Run**.
+
+## Task 6: Run the Application
+
+Finally, you'll test the "Hero" plug-in and its functionality by running the application. This will help verify that the component displays correctly and that interactive elements like search and update work as expected.
+
+1. Log in to the application and navigate to **Task Status**.
+
+2. On **Search** textfield type **system**, for **Update Status to**, select **Open**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, press **Enter** and click **Update** to update the status of checked rows.
+
+    ![Select Theme to Redwood Light](images/select-search.png " ")
+
+3. Wohla, now you can see the updated status for checked rows.
+
+    ![Select Theme to Redwood Light](images/result-search.png " ")
 
 ## Summary
-You now know how to save a new Theme Style using the Theme Roller. You may now **proceed to the next lab**.
 
-## What's Next
-In the upcoming practical session, you will build a new application called Expense Tracker. Throughout this workshop, you will gain proficiency in establishing a multi-level approval management system. Specifically, you will learn to create task definitions and a Unified Task List page. Additionally, you will incorporate various events into your task definitions, such as delegating the request, requesting information, and managing expiration. Furthermore, you will learn to create email templates, set up Oracle APEX account users, and utilize SQL scripts.
+In this lab, you applied a new theme style and created a custom "Hero" plug-in as a template component, enhancing the appearance and interactivity of your Oracle APEX application. Testing the application confirmed that the component integrated smoothly, giving you experience designing and deploying custom UI components. You may now proceed to the next lab.
 
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024

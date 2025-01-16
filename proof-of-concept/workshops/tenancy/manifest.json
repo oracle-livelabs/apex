@@ -8,35 +8,35 @@
       },
       {
         "title": "Getting Started",
-        "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Configure AI Service and Define New Data Structures",
-        "filename": "../../installing-sample-datasets/installing-sample-tables.md"
+        "title": "Lab 1: Configure AI Service and Create Data Model using AI",
+        "filename": "../../1-installing-sample-datasets/create-data-model-using-ai.md"
       },
       {
-        "title": "Lab 2: Create the Application",
-          "filename": "../../create-app/create-app.md"
+        "title": "Lab 2: Create the Application using Generative AI",
+          "filename": "../../2-create-app/create-app-using-ai.md"
       },
       {
         "title": "Lab 3: Regenerate the Application",
-        "filename": "../../regen-app/regen-app.md"
+        "filename": "../../3-regen-app/regen-app.md"
       },
       {
-        "title": "Lab 4: Improve Tasks",
-        "filename": "../../improving-tasks/improving-tasks.md"
+        "title": "Lab 4: Improve Tasks and Task To Dos",
+        "filename": "../../4-improving-tasks-todos/improving-tasks-todos.md"
       },
       {
-        "title": "Lab 5: Improve To Dos",
-        "filename": "../../improving-todos/improving-todos.md"
+        "title": "Lab 5: Configure AI and Generate Text using AI",
+        "filename": "../../5-generate-text-with-ai/work-with-ai.md"
       },
       {
-        "title": "Lab 6: Improve Links",
-        "filename": "../../improving-links/improving-links.md"
+        "title": "Lab 6: Create an AI Chat Assitant",
+        "filename": "../../6-create-chat-assistant/show-ai-assistant.md"
       },
       {
-        "title": "Lab 7: Create an AI Chat Widget",
-        "filename": "../../chat-widget/chat-widget.md"
+        "title": "Lab 7: Create a Vector Search Page using Search Configurations",
+        "filename": "../../7-Vector-search-configurtions/vector-search-configurations.md"
       },
       {
         "title": "Need Help?",
