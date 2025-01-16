@@ -241,7 +241,7 @@ You have successfully created Human Task definitions for the Doctor Appointment 
 
 ## What's Next
 
-In the next lab, you continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
+In the next lab, you continue building the Calculates Fess Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
 You may now **proceed to the next lab**.
 

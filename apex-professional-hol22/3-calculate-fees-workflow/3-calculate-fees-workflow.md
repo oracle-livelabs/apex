@@ -198,7 +198,7 @@ In this lab, you learned the process of creating a calculate fees Workflow using
 
 ## What's Next
 
-Now, you're ready to proceed to the next section where you'll learn how to add Human Tasks to your Workflow. Stay tuned for more hands-on guidance!
+In the next lab, you will learn how to create a Doctor Appointment Workflow using Oracle APEX.
 
 You may now **proceed to the next lab**.
 

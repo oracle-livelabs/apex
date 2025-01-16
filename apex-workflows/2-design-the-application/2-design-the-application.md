@@ -403,7 +403,7 @@ You have successfully completed the initial steps for designing the **Doctor App
 
 ## What's Next
 
-In the next lab, you will learn how to create a Workflow using Oracle APEX.
+In the next lab, you will learn how to create a Calculate Fees Workflow using Oracle APEX.
 
 You may now **proceed to the next Lab**.
 
