@@ -61,6 +61,16 @@ We begin by dissecting the medical appointment business process into distinct st
 | 14      | If the patient doesn't complete the feedback request within a specified period, close the appointment request. | Automatic | Workflow |
 | 15      | If the patient provides feedback, send a 'Thank You' email to the patient and then close the appointment request. | Automatic | Workflow |
 
+This comprehensive breakdown illustrates the significance of workflow in managing complex business processes, making the system efficient and responsive.
+
+- Calculates Fees Workflow
+
+![Flow Chart for Medical Appointments](images/cal-fees-flowchart.png " ")
+
+- Doctor Appointment Workflow
+
+![Flow Chart for Medical Appointments](images/doc-appt-flowchart.png " ")
+
 ## Summary
 
 You now understand the significance of workflow in managing complex business processes, making the system efficient and responsive.
