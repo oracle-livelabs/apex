@@ -63,7 +63,13 @@ We begin by dissecting the medical appointment business process into distinct st
 
 This comprehensive breakdown illustrates the significance of workflow in managing complex business processes, making the system efficient and responsive.
 
-![Flow Chart for Medical Appointments](images/medflowchart.png " ")
+- Calculates Fees Workflow
+
+![Flow Chart for Medical Appointments](images/cal-fees-flowchart.png " ")
+
+- Doctor Appointment Workflow
+
+![Flow Chart for Medical Appointments](images/doc-appt-flowchart.png " ")
 
 ## Summary
 
