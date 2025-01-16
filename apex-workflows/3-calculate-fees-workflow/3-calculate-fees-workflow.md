@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn the process of creating a calculate fees Workflow using Oracle APEX.
+In this lab, you will create a **Calculate Fees** Workflow to manage fee calculations. You will then integrate it into the **Doctor Appointment** Workflow using the **Invoke Workflow** activity. This activity allows you to call and execute one workflow from within a parent workflow, enabling seamless integration between workflows.
 
 ### Objectives
 

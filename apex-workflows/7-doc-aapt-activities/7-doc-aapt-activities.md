@@ -374,6 +374,8 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
 ## Task 13: Add Invoke Workflow
 
+In this task, you will call **Calculate Fees** workflow using Invoke workflow activity.
+
 1. From the Activities palette, drag an **Invoke Workflow** Activity into the Diagram Builder area and drop it below the **Confirm Appointment** activity.
 
     ![Drag and Drop Invoke Workflow Activity](./images/add-invoke-workflow.png " ")
