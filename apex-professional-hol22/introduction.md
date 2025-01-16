@@ -26,7 +26,7 @@ With the first release of APEX Workflows, you can harness the following capabili
 
 - **Visual Workflow Diagram**: To depict progress of Workflow at runtime.
 
-Estimated Time: 2 hours 35 minutes
+Estimated Time: 3 hours 45 minutes
 
 ## Simplify Business Process Management with Workflows
 
