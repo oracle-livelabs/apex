@@ -10,9 +10,11 @@ The above steps correspond to Human Task Activities. Before using them in the wo
 
 In this lab, you will learn how to create Human Tasks to:
 
-- Send Appointment Request To Doctor
-- Raise Invoice Request For Patient
-- Raise Feedback Request For Patient
+- Send Appointment Request To Doctor.
+
+- Raise Invoice Request For Patient.
+
+- Raise Feedback Request For Patient.
 
 Estimated Time: 20 minutes
 

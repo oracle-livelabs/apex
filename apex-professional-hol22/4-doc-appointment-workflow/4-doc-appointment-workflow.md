@@ -8,13 +8,13 @@ In this lab, you learn the process of creating a Doctor Appointment Workflow usi
 
 In this lab, you learn how to:
 
-- Create a Workflow
+- Create a Doctor Appointment Workflow
 
-- Modify the Workflow details
+- Modify theDoctor Appointment Workflow details
 
-- Define Workflow Data
+- Define Doctor Appointment Workflow Data
 
-- Add Workflow Variables
+- Add Doctor Appointment Variables
 
 Estimated Time: 20 minutes
 

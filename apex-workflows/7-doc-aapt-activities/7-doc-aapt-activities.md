@@ -1,4 +1,4 @@
-# Add Activities and Connections
+# Add Doctor Appointment workflow Activities and Connections
 
 ## Introduction
 
@@ -8,7 +8,7 @@ In this lab, you will continue building the Doctor Appointment Workflow, focusin
 
 In this lab, you will:
 
-- Create and configure the workflow by adding activities and connections.
+- Create and configure the Doctor Appointment workflow by adding activities and connections.
 
 Estimated Time: 45 minutes
 

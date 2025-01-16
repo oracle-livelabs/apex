@@ -1,14 +1,14 @@
-# Add Activities and Connections
+# Add Calculate Fees Workflow Activities and Connections
 
 ## Introduction
 
-In this lab, you will continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
+In this lab, you will continue building the Calculate Fees Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
 ### Objectives
 
 In this lab, you will:
 
-- Create and configure the workflow by adding activities and connections.
+- Create and configure the Calculate Fees workflow by adding activities and connections.
 
 Estimated Time: 45 minutes
 
