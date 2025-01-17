@@ -74,7 +74,7 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 2. In the Workspace Utilities page, select **Vector Providers**.
 
-    !["click workspace utilities"](images/click-workspace-utilities.png "")
+    !["click workspace utilities"](images/select-vector-providers.png "")
 
 3. In the Vector Providers page, click **Create**.
 
