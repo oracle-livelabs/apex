@@ -143,7 +143,7 @@ This task focuses on updating the design and layout of the cards that display pr
 
         ```
         <copy>
-            <small>&BRAND.</small><br />
+            <small>&BRAND.</small> <br/>
             <b class="u-success-text u-pullRight" id="message_&PRODUCT_ID.">
             {if QUANTITY/} &QUANTITY. in cart {endif/}
             </b>
@@ -251,11 +251,11 @@ In this task, you will create two dynamic actions:
                 productQuantity = this.data.P18_QUANTITY,
                 productCard$  = apex.jQuery("#message_" + this.data.P17_PRODUCT_ID);
 
-            if (productAction === 'ADD') {
+               if (productAction === 'ADD') {
                 productCard$.text("Added " + productQuantity + " to cart!");
-            } else if (productAction === 'EDIT') {
+            }    else if (productAction === 'EDIT') {
                 productCard$.text("Updated quantity to " + productQuantity + "!");
-            } else if (productAction === 'DELETE') {
+            }    else if (productAction === 'DELETE') {
                 productCard$.text("Removed from cart!");
             }
         </copy>

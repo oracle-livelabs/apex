@@ -42,9 +42,9 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
     - Under Page Definition:
 
-        Page Number: **5**
+        - Page Number: **5**
 
-        Name: **Calendar**
+        - Name: **Calendar**
 
     - Data Source > Table/View Name: **DEMO_PROJECTS**
 
@@ -172,9 +172,10 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
             begin
                 update DEMO_PROJECTS
             set
-            start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
-            end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
-            where ID = :APEX$PK_VALUE;
+                start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
+                end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
+            where
+                ID = :APEX$PK_VALUE;
             end;
             </copy>
             ```

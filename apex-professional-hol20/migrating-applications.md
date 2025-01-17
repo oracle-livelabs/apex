@@ -100,7 +100,7 @@ In this lab, you will:
 
 In this lab, you will login into a new workspace or the workspace you created in previous labs and import the application along with Supporting objects.
 
-> **Note:**In this task, Please use different environments for creating the target and the main workspace.
+> **Note:** In this task, Please use different environments for creating the target and the main workspace.
 
 1. Log in to the target **Workspace**.
 

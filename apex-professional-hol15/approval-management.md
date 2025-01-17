@@ -88,29 +88,29 @@ In this task, you will learn how to configure a process to send automated email 
 
         - Body Plain Text: Copy and paste the below text:
 
-        ```
-        <copy>
-        Hello &P17_CUSTOMER_FULLNAME.,
-        We're getting your order ready to be shipped. We will notify you when it has been sent.
-        <a href="&P17_APP_ITEM_URL." target="_blank">View your order</a>
-        If you have any questions contact us at noreply@oracle.com
-        </copy>
-        ```
+            ```
+            <copy>
+            Hello &P17_CUSTOMER_FULLNAME.,
+            We're getting your order ready to be shipped. We will notify you when it has been sent.
+            <a href="&P17_APP_ITEM_URL." target="_blank">View your order</a>
+            If you have any questions contact us at noreply@oracle.com
+            </copy>
+            ```
 
         - Body HTML:Copy and paste the below text:
 
-        ```
-        <copy>
-        <html>
-        <body>
-        <p>Hello &P17_CUSTOMER_FULLNAME.,</p><br>
-        <p>We're getting your order ready to be shipped. We will notify you when it has been sent.</p><br>
-        <p><a href="&P17_APP_ITEM_URL." target="_blank">View your order</a></p><br>
-        <p>If you have any questions contact us at noreply@oracle.com</p><br>
-        </body>
-        </html>
-        </copy>
-        ```
+            ```
+            <copy>
+            <html>
+            <body>
+            <p>Hello &P17_CUSTOMER_FULLNAME.,</p><br>
+            <p>We're getting your order ready to be shipped. We will notify you when it has been sent.</p><br>
+            <p><a href="&P17_APP_ITEM_URL." target="_blank">View your order</a></p><br>
+            <p>If you have any questions contact us at noreply@oracle.com</p><br>
+            </body>
+            </html>
+            </copy>
+            ```
 
     ![Select Sql Workshop](./images/send-email.png " ")
 
@@ -262,38 +262,39 @@ Email templates simplify the process of sending structured, professional message
 
     - HTML Format > Body: Copy and paste the below HTML
 
-    ```
-    <copy>
-    <html>
-     <body>
-       <p>Dear #CUSTOMER_NAME#,</p>
-       <p>Thank you for purchasing !</p>
-       <p>We hope you're enjoying it. Could you take a moment to rate your experience?</p>
-       <p>
-          <a href="#RATING_LINK#">Click here to rate this product</a>
-       </p>
-       <p>Thank you for your feedback!</p>
-       <p>Best regards,</p>
-       <p>Online Shopping Application</p>
-     </body>
-    </html>
-    </copy>
-    ```
+        ```
+        <copy>
+        <html>
+         <body>
+           <p>Dear #CUSTOMER_NAME#,</p>
+           <p>Thank you for purchasing !</p>
+           <p>We hope you're enjoying it. Could you take a moment to rate your experience?</p>
+           <p>
+              <a href="#RATING_LINK#">Click here to rate this product</a>
+           </p>
+           <p>Thank you for your feedback!</p>
+           <p>Best regards,</p>
+           <p>Online Shopping Application</p>
+         </body>
+        </html>
+        </copy>
+        ```
 
     ![click Create Email Template](./images/product-review-reminder.png " ")
 
     - **Plain Text Format**: Copy the text below and paste it into plain text format:
-    ```
-    <copy>
-    Dear #CUSTOMER_NAME#,
-    Thank you for purchasing [Product Name]!
-    We hope you're enjoying it. Could you take a moment to rate your experience? Your feedback helps us improve and serve you better.
-    Click the link below to rate your product: #RATING_LINK#
-    Thank you for your time and input!
-    Best regards,
-    The Online Shopping App
-    </copy>
-    ```
+
+        ```
+       <copy>
+        Dear #CUSTOMER_NAME#,
+        Thank you for purchasing [Product Name]!
+        We hope you're enjoying it. Could you take a moment to rate your experience? Your feedback helps us improve and serve you better.
+        Click the link below to rate your product: #RATING_LINK#
+        Thank you for your time and input!
+        Best regards,
+        The Online Shopping App
+        </copy>
+        ```
 
     ![Create Email Template](./images/create-template.png " ")
 
@@ -343,13 +344,13 @@ Automation is key to improving application efficiency and reducing manual effort
 
     - Source > Where Clause: Copy and paste the below code:
 
-    ```
-    <copy>
-        TO_DATE(TO_CHAR(order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = SYSDATE - 1
-        AND EMAIL_FLAGGED = 'N'
-        AND STAR_RATING IS NULL
-    </copy>
-    ```
+        ```
+        <copy>
+            TO_DATE(TO_CHAR(order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = SYSDATE - 1
+            AND EMAIL_FLAGGED = 'N'
+            AND STAR_RATING IS NULL
+        </copy>
+        ```
 
 6. Click **Save Changes**.
 
@@ -369,11 +370,11 @@ Automation is key to improving application efficiency and reducing manual effort
 
     - Code > Code: Copy and paste the below code:
 
-    ```
-    <copy>
+        ```
+        <copy>
         DECLARE
-        l_url CLOB;
-    BEGIN
+            l_url CLOB;
+        BEGIN
         FOR x IN (SELECT c.full_name,
                      c.email_address,
                      o.order_id,
@@ -413,9 +414,9 @@ Automation is key to improving application efficiency and reducing manual effort
             SET    email_flagged = 'Y'
             WHERE  order_id = x.order_id;
         END LOOP;
-    END; 
-    </copy>
-    ```
+        END;
+        </copy>
+        ```
 
     ![Create Email Template](./images/send-email1.png " ")
 
