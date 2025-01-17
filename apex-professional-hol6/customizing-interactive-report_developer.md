@@ -1,25 +1,30 @@
 # Customize Interactive Report as a Developer
 
-In this hands-on lab, you will Manage and Customize the Interactive report in the **Sample Reports** application as a **Developer**.
+## Introduction
+
+In this hands-on lab, as a developer, you will learn how to manage and customize the Interactive Report within the Sample Reports application. Interactive Reports offer robust and flexible reporting features, enabling end users to manipulate the data displayed according to their preferences. As a developer, you'll explore key customization options to enhance the user experience, such as modifying the report layout, configuring download formats, and controlling the display of key elements.
 
 Estimated Time: 15 minutes
 
 ### Objectives
 
-In this lab, you:
-- Customize your Interactive Report page in **Sample Reports** Application both as a **Developer**.
+By the end of this lab, you will be able to:
 
-### Downloads
+- Customize the Interactive Report layout and links.
 
-- Did you miss out on trying the previous labs? Don't worry! You can download the application from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/apex-23-2-object-storage-files/hol6-lab1.sql) and import it into your workspace. To run the app, please run the steps described in the following workshops:
-1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
-2. **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+- Modify pagination settings and display row ranges.
+
+- Enable and configure download formats for Excel and PDF.
+
+- Control visibility of report features like the search bar and rows per page selector.
+
+- Save and manage reports for end users.
 
 ## Task 1: Customize an Interactive Report as a Developer
 
-In this lab, you edit an interactive report in Page Designer and customize it as a Developer for end users.
+In this task, you will customize the Interactive Report within the Sample Reports application. You will modify the report’s link column, pagination, search bar, and download options to optimize the end-user experience.
 
-1. On the Workspace home page, click **App Builder**. Select **Sample Reporting** Application.
+1. On the Workspace home page, click **App Builder**. Select the **Sample Reporting** Application.
 
     ![Select Sample Reporting](images/sample-reporting.png " ")
 
@@ -31,55 +36,59 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
     ![Click Interactive Report](images/select-sample-reporting.png " ")
 
-4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Edit Page \<n\>**.
+4. First, view the Interactive Report in the page designer. In the Developer Toolbar, click **Page XXX**.
 
-    ![Edit page](images/click-page1.png " ")  
+    ![Edit page](images/click-page1.png " ")
 
-5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The interactive report currently has a link column to a Form Page. Modify your interactive report to have a link to a single-row view.
+5. When the end users click an edit icon for a specific row, they should be directed to a page showing the row's column values. The Interactive Report currently has a link column to a Form Page. Modify your Interactive Report to have a link to a single-row view.
 
-    a. Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes**. For Link > Link Column, select **Link to Single Row View**.
+    **a.** Under Rendering, navigate to **Projects** Interactive Report and then, in the Property Editor select **Attributes** tab. For Link > Link Column, select **Link to Single Row View**.
 
     Click **Save and Run**.
 
     ![Link to Single Row View](images/change-srw.png " ")
 
-    b.  In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
+    **b.** In the report, ensure that **1. Primary Report** is selected in the report toolbar. Click the **edit icon** (**pencil**) for any row.
 
     ![Primary Report](images/view-srw1.png " ")
 
-    c. The single-row view is displayed. Click **Report View** to return to the report.
+    **c.** The single-row view is displayed. Click **Report View** to return to the report.
 
     ![Report View](images/view-srw2.png " ")
 
-6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Edit Page 1**.  
+6. The current pagination type of the interactive report is **Row Ranges X to Y**. Let's say you always want to show your end users the total number of rows in the report as part of the pagination display. To do so, in the Developer Toolbar, click **Page 1**.
 
-    a. In the Rendering tree, navigate to **Projects** Interactive Report and in the Property Editor, select **Attributes**.  
+    **a.** In the **Rendering** tab, navigate to **Projects** region and in the Property Editor, select **Attributes** tab.
 
-    b. Under Pagination, for Type, select **Row Ranges X to Y of Z**.
+    **b.** Under Pagination, for Type, select **Row Ranges X to Y of Z**.
 
     ![Pagination](images/change-pagination.png " ")
 
-7. You want to customize the display of the Search Bar. End users should be able to select the display of the desired number of rows per page.  
+7. You want to customize the display of the Search Bar. End users should be able to select the display of the desired number of rows per page.
 
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
-    - Rows Per Page Selector: Toggle the button to **ON**
+    - Rows Per Page Selector: Toggle **ON**
+
     - Maximum Rows Per Page: **10**
 
     ![Rows Per Page Selector](images/enable-rpp.png " ")
 
 8. You want to enable the **Excel** and **PDF** download formats and disable **Send as Email** formats in the Download option.
 
-    In the property editor, do the following:
+    In the property editor, navigate to **Attributes** tab and enter/select the following:
+
     - Under Download:
-        - Formats: Enable **Excel** and **PDF** checkboxes
-        - Send as Email: Toggle the button to **ON**
+
+        - Formats: Enable **Excel** and **PDF**
+
+        - Send as Email: Toggle **OFF**
 
     ![Download](images/disable-email1.png " ")
 
 9. Now that you have finished the customization for end users, click **Save and Run**.
 
-10. Notice that the **row selector** and the **New pagination type** are available on the report.
+10. Notice that the **row selector** and the **new pagination type** are available on the report.
 
     ![row selector](images/run-ir13.png " ")
 
@@ -90,8 +99,10 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 12. The Save Report dialog displays. Notice that the **Public** check box is now available. Enter/select the following:
 
     - Save(Only displayed for developers): **As Named Report**
+
     - Name: **Projects Public Report**
-    - Enable the **Public** checkbox
+
+    - Enable **Public**
 
     Click **Apply**.
 
@@ -109,7 +120,9 @@ In this lab, you edit an interactive report in Page Designer and customize it as
 
     ![Download](images/save-report5.png " ")
 
-16. From the Reports drop-down list, select **Primary Report**.
+16. From the Reports drop-down list, select **1. Primary Report**.
+
+    ![Download](images/primary-rpt.png " ")
 
 ## Summary
 
@@ -117,5 +130,5 @@ You now know how to Manage and Customize the Interactive report as a developer. 
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

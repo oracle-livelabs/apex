@@ -41,9 +41,9 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Static ID: **oci\_gen\_ai**
     - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Lab 3.
     - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
-    - Model ID: **meta.llama-3-70b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
+    - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
     - Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
-    - Credentials: **apex\_ai\_cred**
+    - Credential: **apex\_ai\_cred**
 
     Click **Create**.
 

@@ -1,33 +1,38 @@
 # Create a Database Package for Business Logic
 
-In this lab, you learn to create database objects for your APEX application. This Package contains functions and procedures to add products to the cart, remove products, create an order, clear the cart, and more.
+## Introduction
+
+In this lab, you learn to create database objects for your APEX application. This package contains functions and procedures to add products to the cart, remove products, create an order, clear the cart, and more.
 
 To manage items in the cart, you use [collections](https://docs.oracle.com/en/database/oracle/application-express/21.2/aeapi/APEX_COLLECTION.html), which enables you to temporarily store products currently in session state so they can be accessed, manipulated, or processed during a user's specific session.
 
 Estimated Time: 10 minutes
+
 <!--
 Watch the video below for a quick walkthrough of the lab.
 
 [](youtube:X8nVMCJhQic)
 -->
+
 ### Objectives
 
-Business logic in APEX applications can be written using PL/SQL, Oracle's procedural language extension to SQL. PL/SQL offers a handy program unit called a "package" that lets you separate the API signatures for reusable procedures and functions from their implementation in a clean manner. In this lab, you will:
+You can write business logic in APEX applications using PL/SQL, Oracle's procedural language extension to SQL. PL/SQL offers a handy program unit called a "package" that lets you cleanly separate the API signatures for reusable procedures and functions from their implementation. In this lab, you will:
+
 - Create a package to manage the Shopping Cart.
 
 ## Task 1: Create the Package
-Create specifications and a body for the Package.
 
-1. Navigate to **SQL Workshop**, click **Object Browser**.
-2. Navigate to the **Packages** on the left side, right-click on it and select **Create Package**.
+You will create a PL/SQL package to manage shopping cart operations in this task. This package, named **MANAGE_ORDERS**, includes procedures and functions to handle various aspects of the shopping cart, such as adding or removing products, checking quantities, and creating orders. Defining these operations within a package allows you to centralize and streamline cart management processes, enhancing maintainability and functionality. Follow the steps to define the package specification and body, and learn how these components will interact to manage customer orders efficiently.
+
+1. In **Object Browser**, right-click **Packages** and select **Create Package**.
 
     ![Create Package1](./images/create-package1.png " ")
 
-3. For Package Name, enter **MANAGE_ORDERS** and click **Create Package**.
+2. For Package Name, enter **MANAGE_ORDERS** and click **Create Package**.
 
     ![Create package name1](./images/create-package-name1.png " ")
 
-4. Select **Specification** and replace the contents of the code editor with the following:
+3. Select **Specification** and replace the contents of the code editor with the following:
 
     ```
     <copy>
@@ -70,10 +75,12 @@ Create specifications and a body for the Package.
     END manage_orders;
     </copy>
     ```
-5. Click **Save and Compile** to save the changes.
+
+4. Click **Save and Compile** to save the changes.
+
     ![Create Package Specification1](./images/create-package-specification4.png " ")
 
-6. Navigate to the body part of the Package by clicking on the **Body** tab and replace the contents of the code editor with the following:
+5. Navigate to the **Body** tab and replace the contents of the code editor with the following:
 
     ```
     <copy>
@@ -227,17 +234,17 @@ Create specifications and a body for the Package.
     </copy>
     ```
 
-7. Click **Save & Compile**.
+6. Click **Save & Compile**.
 
     ![Save & Compile Package](./images/create-package-body2.png " ")
 
 While you don't have to understand the code to complete the workshop successfully, know that the functions and procedures you've defined in this lab use a built-in feature of Oracle APEX to handle the user's shopping cart by managing a collection of product id and quantity values specific to the current user, and automatically create a new row in the **Customers** table during order creation if it's the first time the user is placing an order.
 
 ## Summary
+
 You now know how to create a package to manage the shopping cart. In the following labs, you will call these procedures and functions when it is required. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -2,6 +2,10 @@
   "workshoptitle": "Online Bookstore Application",
     "tutorials": [
       {
+        "title": "Introduction",
+        "filename": "../../intro/introduction.md"
+      },
+      {
         "title": "Get Started",
         "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
       },
