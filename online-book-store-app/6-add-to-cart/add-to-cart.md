@@ -42,7 +42,7 @@ To Create a Package:
 
    ![App builder home page](images/ob2.png " ")
 
-2. Right-click Packages and click **Create Package**.
+2. Right-click Packages and select **Create Package**.
 
    ![App builder home page](images/create-pack1.png " ")
 
@@ -92,8 +92,9 @@ To Create a Package:
         PROCEDURE create_order (
         p_user_id  IN VARCHAR2,
         p_order_id  OUT obs_orders.order_id%TYPE);
-        END OBS_MANAGE_ORDERS;
-        /
+
+END OBS_MANAGE_ORDERS;
+/
      </copy>
       ```
 
@@ -369,8 +370,8 @@ To create Application computations:
         ```
        <copy>
         SELECT U.USER_ID
-       FROM   obs_USERS U
-       WHERE  LOWER(U.USERNAME) = LOWER(:APP_USER) OR LOWER(U.EMAIL) = LOWER(:APP_USER);
+       FROM OBS_USERS U
+       WHERE LOWER(U.USERNAME) = LOWER(:APP_USER) OR LOWER(U.EMAIL) = LOWER(:APP_USER);
        </copy>
        ```
 
@@ -418,19 +419,15 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Application ID](images/app-build3.png " ")
 
-2. On the Workspace home page, click **Online Bookstore** application.
-
-    ![Application ID](images/app.png " ")
-
-3. On the Application home page, click **18 - Book Details** page.
+2. On the Application home page, click **18 - Book Details** page.
 
     ![18: Book Details](images/page-18.png " ")
 
-4. In the left pane, right-click **Buttons Bar** and click **Create Page Item**.
+3. In the left pane, right-click **Buttons Bar** and select **Create Page Item**.
 
     ![Create Page Item](images/create-page-item1.png " ")
 
-5. Create the following three page items, one after the other:
+4. Create the following three page items, one after the other:
 
       | Name            |  Type   |
       | --------------- |  ------ |
@@ -440,7 +437,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Page Items](images/shop-cart-page-item.png " ")
 
-6. Select P18\_QUANTITY and update the following:
+5. Select P18\_QUANTITY and update the following:
 
     - Appearance > Template: **Required**
 
@@ -471,11 +468,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Quantity Page Item](images/quantity.png " ")
 
-7. Right-click **P18\_BOOK\_IN\_CART** and click **Create Computation**.
+6. Right-click **P18\_BOOK\_IN\_CART** and select **Create Computation**.
 
     ![create Computation](images/book-in-cart-comp.png " ")
 
-8. In the Property editor, enter/select the following:
+7. In the Property editor, enter/select the following:
 
     - Under Computation:
 
@@ -491,11 +488,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Computation](images/book-in-cart-comp-details.png " ")
 
-9. In the left pane, right-click **Buttons Bar** and click **Create Button**.
+8. In the left pane, right-click **Buttons Bar** and select **Create Button**.
 
     ![Create Button](images/create-button4.png " ")
 
-10. In the Property Editor, enter/select the following:
+9. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -515,11 +512,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Add To Cart](images/add-to-cart-btn.png " ")
 
-11. Right-click **Buttons Bar** and click **Create Button**.
+10. Right-click **Buttons Bar** and select **Create Button**.
 
     ![Create Button](images/create-button5.png " ")
 
-12. In the Property Editor, enter/select the following:
+11. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -545,11 +542,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Remove From Cart](images/remove-from-cart.png " ")
 
-13. Navigate to the **Processing** tab. Right-click **Processing** and click **Create Process**.
+12. Navigate to the **Processing** tab. Right-click **Processing** and select **Create Process**.
 
     ![Processing](images/create-process1.png " ")
 
-14. In the Property Editor, update the following:
+13. In the Property Editor, update the following:
 
     - Under Identification:
 
@@ -567,7 +564,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Add to cart](images/add-process.png " ")
 
-15. Expand the Parameters of **Add Product** and enter the following:
+14. Expand the Parameters of **Add Product** and enter the following:
 
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
@@ -578,11 +575,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Add Product Parameter](images/add-process-quantity.png " ")
 
-16. Right-click **Processing** and click **Create Process**.
+15. Right-click **Processing** and select **Create Process**.
 
     ![Processing](images/create-process2.png " ")
 
-17. In the Property Editor, enter/select the following:
+16. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -600,7 +597,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Delete Product](images/delete-product.png " ")
 
-18. Expand the Parameter of **Delete Product** and enter the following:
+17. Expand the Parameter of **Delete Product** and enter the following:
 
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
@@ -608,11 +605,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Delete Product Parameter](images/delete-pro-pram.png " ")
 
-19. Right-click **Processing** and click **Create Process**.
+18. Right-click **Processing** and select **Create Process**.
 
     ![Processing](images/create-process3.png " ")
 
-20. In the Property Editor, enter/select the following:
+19. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -628,7 +625,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Calculate Shopping Cart Items](images/cal-item-process.png " ")
 
-21. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
+20. Expand the Parameter of **Calculate Shopping Cart Items** and enter the following:
 
      | Parameter |  Type   | Item |
      | --------- |  ------ | ---- |
@@ -636,11 +633,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Calculate Shopping Cart Items Parameter ](images/cal-item-func.png " ")
 
-22. Right-click **Processing** and click **Create Process**.
+21. Right-click **Processing** and select **Create Process**.
 
     ![Processing](images/create-process4.png " ")
 
-23. In the Property Editor, enter/select the following:
+22. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -652,7 +649,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![close dialog](images/close-dialog.png " ")
 
-24. Click **Save**.
+23. Click **Save**.
 
     ![close dialog](images/save-page.png " ")
 
@@ -714,7 +711,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     ![close dialog](images/page10.png " ")
 
-3. In the left pane, right-click **Search Results** region and click **Create Dynamic Action**.
+3. In the left pane, right-click **Search Results** region and select **Create Dynamic Action**.
 
     ![close dialog](images/cart-create-dynamic.png " ")
 
@@ -755,7 +752,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     ![close dialog](images/true-action.png " ")
 
-6. Right-click on **False** action and click **Create FALSE Action**.
+6. Right-click on **False** action and select **Create FALSE Action**.
 
     ![close dialog](images/false-action.png " ")
 

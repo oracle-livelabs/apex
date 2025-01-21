@@ -51,7 +51,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-blank-page9.png " ")
 
-5. In the left pane, right-click **Body** and click **Create Region**.
+5. In the left pane, right-click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region17.png " ")
 
@@ -71,23 +71,26 @@ In this task, you develop a new page in the application to display the shopping 
 
         ```
         <copy>
-        SELECT
-        b.book_id,
-        b.title,
-        b.buy_links,
-        b.price,
-        b.description,
-        b.discount,
-        b.category,
-        b.author,
-        b.book_image,
-        a.n002 as quantity,
-        b.price*((100 - b.discount)/100) as new_price,
-        ROUND(b.price*a.n002,2) as total_price,
-        ROUND(b.price*((100 - b.discount)/100)*a.n002, 2) as new_total_price
-        FROM  apex_collections a, obs_books b
-        WHERE collection_name = 'BOOKS'
-        AND b.book_id = a.n001
+SELECT
+    b.book_id,
+    b.title,
+    b.buy_links,
+    b.price,
+    b.description,
+    b.discount,
+    b.category,
+    b.author,
+    b.book_image,
+    a.n002 AS quantity,
+    b.price * ((100 - b.discount) / 100) AS new_price,
+    ROUND(b.price * a.n002, 2) AS total_price,
+    ROUND(b.price * ((100 - b.discount) / 100) * a.n002, 2) AS new_total_price
+FROM
+    apex_collections a,
+    obs_books b
+WHERE
+    collection_name = 'BOOKS'
+    AND b.book_id = a.n001;
         </copy>
         ```
 
@@ -99,7 +102,7 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Title: **&TITLE.**
 
-        - Description: Copy and Paste the below code:
+        - Description: Copy and paste the code below:
         ```
         <copy>
         &DESCRIPTION.
@@ -116,11 +119,13 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **Image**
 
-        - Image >
+        - Image:
 
             - Source: **URL**
 
             - URL: **&BOOK_IMAGE.**
+
+            Click **OK**
 
         - Shape: **No shape**
 
@@ -130,7 +135,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-region-att.png " ")
 
-8. In Page Rendering, under **Shopping Cart** region, right-click **Actions** and click **Create Action**.
+8. In Page Rendering, under **Shopping Cart** region, right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/create-action9.png " ")
 
@@ -154,7 +159,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/primary-action-decrease.png " ")
 
-10. Right-click **Actions** and click **Create Action**.
+10. Right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/create-action10.png " ")
 
@@ -172,7 +177,7 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **Redirect to URL**
 
-        - Targe: **#action$remove-cart?id=&BOOK_ID.**
+        - Target > URL: **#action$remove-cart?id=&BOOK_ID.**
 
         Click **OK**.
 
@@ -184,7 +189,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/primary-action.png " ")
 
-12. Right-click **Actions** and click **Create Action**.
+12. Right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/create-action11.png " ")
 
@@ -202,13 +207,13 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Type: **Redirect to URL**
 
-        - Targe: **#action$increase-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+        - Target > URL: **#action$increase-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
 
         Click **OK**.
 
     ![close dialog](images/primary-action-increase.png " ")
 
-14. Right-click **Shopping Cart** region and click **Create Page Item**.
+14. Right-click **Shopping Cart** region and select **Create Page Item**.
 
     ![close dialog](images/create-page-item9.png " ")
 
@@ -277,11 +282,11 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/page-load.png " ")
 
-    Update OBS\_MANAGE\_ORDERS Package
-
 17. Click **Save**
 
     ![close dialog](images/save4.png " ")
+
+    Update OBS\_MANAGE\_ORDERS Package
 
 18. Click **SQL Workshop** and navigate to **Object Browser**.
 
@@ -345,7 +350,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     Again, Navigate back to Page 17:
 
-22. Right-click **Body** and click **Create Region**.
+22. Right-click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 
@@ -353,7 +358,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/order-info.png " ")
 
-24. Right-click **Order Information** and click **Create Page Item**.
+24. Right-click **Order Information** and select **Create Page Item**.
 
     ![close dialog](images/order-page-item.png " ")
 
@@ -441,7 +446,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Button Template: **Text with Icon**
 
-        - Template Options: Click **Use Template Options, Left** 
+        - Template Options: Click **Use Template Defaults, Left** 
 
             - Size: **Small**
 
@@ -473,7 +478,7 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Hot: **Toggle On**
 
-        - Template Options: Click **Template Options** 
+        - Template Options: Click **Use Template Defaults** 
 
             - Size: **Small**
 

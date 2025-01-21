@@ -152,7 +152,7 @@ The code also includes error handling to manage exceptions and set appropriate a
 
 This trigger ensures that before inserting or updating a record in the **OBS\_USERS** table, certain operations are performed to maintain data integrity and security, such as ensuring consistent case sensitivity for email and username and hashing passwords for storage.
 
-1. Right-click **Triggers** and click **Create Trigger**.
+1. Right-click **Triggers** and select **Create Trigger**.
 
    ![App builder home page](images/trg.png " ")
 
@@ -191,7 +191,7 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
       - PASSWORD: **secretPassword**
       - IS\_ADMIN: **Y**
 
-  Click Create.
+  Click **Create**.
 
   ![App builder home page](images/create-user.png " ")
 
@@ -256,8 +256,8 @@ In this task, you will learn to create custom authentication.
    ![App builder home page](images/make-current.png " ")
 
 10. Run the application using the below credentials.
-    - Username: user01
-    - Password: secretPassword
+    - Username: **user01**
+    - Password: **secretPassword**
 
    ![App builder home page](images/run-app1.png " ")
    ![App builder home page](images/enter-login-cred.png " ")

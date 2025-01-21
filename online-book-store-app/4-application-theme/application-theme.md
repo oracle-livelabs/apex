@@ -34,7 +34,7 @@ In this lab, you will:
 
    ![App builder home page](images/save-roller.png " ")
 
-4. Style Name: **Redwood Light OBS** and Click **Save**.
+4. Style Name: **Redwood Light OBS** and click **Save**.
 
    ![App builder home page](images/save-as-roller.png " ")
 

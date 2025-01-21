@@ -1,0 +1,71 @@
+PROJECT,TASK_NAME,START_DATE,END_DATE,STATUS,ASSIGNED_TO,COST,BUDGET
+ACME Web Configuration,Identify server requirements,11/19/2021,12/06/21,Closed,John Watson,300,300
+Maintain Support Systems,HR software upgrades,12/04/21,01/01/22,On-Hold,Pam King,8000,7000
+Maintain Support Systems,Apply Billing System updates,01/07/22,01/29/2022,On-Hold,Russ Sanders,9500,7000
+ACME Web Configuration,Determine Web listener configuration(s),12/16/2021,12/17/2021,Closed,James Cassidy,100,100
+ACME Web Configuration,Specify security authentication scheme(s),01/02/22,01/04/22,Closed,John Watson,200,300
+ACME Web Configuration,"Select servers for Development, Test, Production",11/24/2021,11/26/2021,Closed,James Cassidy,200,600
+Email Integration,Complete plan,11/17/2021,12/15/2021,Closed,Mark Nile,3000,1500
+ACME Web Configuration,Configure Workspace provisioning,12/20/2021,01/04/22,Closed,John Watson,200,100
+ACME Web Configuration,Create pilot workspace,01/15/2022,02/08/22,Closed,John Watson,100,100
+ACME Web Configuration,Run installation,11/22/2021,12/12/21,Closed,James Cassidy,100,100
+Bug Tracker,Implement bug tracking software,01/05/22,01/10/22,Closed,Myra Sutcliff,100,100
+Bug Tracker,Review automated testing tools,11/25/2021,11/27/2021,On-Hold,Myra Sutcliff,2750,1500
+Train Developers,Publish development standards,12/03/21,12/13/2021,On-Hold,John Watson,1000,2000
+Train Developers,Publish links to self-study courses,12/28/2021,01/03/22,Closed,John Watson,100,100
+Train Developers,Create training workspace,12/09/21,12/11/21,Closed,James Cassidy,500,700
+Load Packaged Applications,Identify point solutions required,01/02/22,01/24/2022,Closed,John Watson,200,300
+Software Projects Tracking,Conduct project kickoff meeting,12/25/2021,01/10/22,Closed,Pam King,100,100
+Client Server Conversion,Identify pilot client server applications,12/28/2021,01/22/2022,Closed,Scott Spencer,200,200
+Public Website,Determine host server,12/18/2021,12/19/2021,Closed,Tiger Scott,200,200
+Load Packaged Applications,Install in development,12/07/21,12/13/2021,Closed,John Watson,100,100
+Public Website,Check software licenses,12/28/2021,01/25/2022,Closed,Tom Suess,100,100
+Client Server Conversion,Migrate pilot client server to web,12/03/21,12/22/2021,Closed,Scott Spencer,400,500
+Load Packaged Applications,Customize solutions,12/01/21,12/02/21,Open,John Watson,1500,4000
+Migrate Desktop Application,Identify pilot applications,11/27/2021,12/16/2021,Closed,Mark Nile,300,500
+Public Website,"Purchase additional software licenses, if needed",12/10/21,12/22/2021,On-Hold,Al Bines,300,1000
+Email Integration,Check software licenses,11/01/21,11/25/2021,Closed,Mark Nile,200,200
+Email Integration,Get RFPs for new server,11/05/21,12/03/21,Open,Mark Nile,2000,1000
+Software Projects Tracking,Customize Software Projects software,01/13/2022,02/05/22,Open,Tom Suess,600,1000
+Convert Spreadsheet,Collect mission-critical spreadsheets,11/12/21,12/04/21,Open,Pam King,2500,4000
+Convert Spreadsheet,Lock spreadsheets,11/15/2021,12/04/21,Open,Pam King,1000,800
+Convert Spreadsheet,Create web applications from spreadsheets,12/03/21,12/04/21,Open,Pam King,10000,6000
+Bug Tracker,Document quality assurance procedures,11/04/21,11/11/21,Open,Myra Sutcliff,3500,4000
+Convert Spreadsheet,Send links to previous spreadsheet owners,10/31/2021,10/31/2021,Open,Pam King,1000,1500
+Migrate Desktop Application,Migrate pilot applications to web,11/23/2021,12/07/21,Closed,Mark Nile,500,500
+Employee Satisfaction Survey,Complete questionnaire,11/20/2021,11/30/2021,On-Hold,Irene Jones,1200,800
+Discussion Forum,Identify owners,12/27/2021,01/22/2022,Closed,Hank Davis,250,300
+Maintain Support Systems,Arrange for vacation coverage,01/06/22,01/12/22,Open,Al Bines,300,500
+Client Server Conversion,Post-migration review,01/17/2022,01/25/2022,Closed,Pam King,100,100
+Client Server Conversion,Plan migration schedule,10/30/2021,11/25/2021,Closed,Pam King,100,100
+Migrate Desktop Application,Post-migration review,12/02/21,12/17/2021,Closed,Mark Nile,100,100
+Migrate Desktop Application,Plan migration schedule,11/06/21,11/27/2021,Closed,Mark Nile,600,200
+Client Server Conversion,Migrate client server apps,01/13/2022,01/22/2022,Open,Pam King,300,12000
+Discussion Forum,Install web application on production server,12/14/2021,12/29/2021,Closed,Hank Davis,100,100
+Load Packaged Applications,Implement in Production,12/03/21,12/12/21,Open,John Watson,200,1500
+Discussion Forum,Monitor participation,11/17/2021,11/28/2021,Open,Hank Davis,450,500
+Migrate Desktop Application,Migrate Desktop Applications,11/10/21,12/08/21,Open,Mark Nile,1000,8000
+Migrate Desktop Application,End-user Training,10/30/2021,11/15/2021,Open,John Watson,0,2000
+Maintain Support Systems,Investigate new Virus Protection software,11/08/21,11/26/2021,Open,Pam King,1700,1500
+Migrate Desktop Application,User acceptance testing,01/22/2022,01/29/2022,Open,Mark Nile,1500,6000
+Migrate from Legacy Server,Obtain credentials,12/13/2021,12/26/2021,Pending,James Cassidy,0,500
+Migrate from Legacy Server,Create new database connection,10/30/2021,11/25/2021,Pending,Scott Spencer,0,100
+Migrate from Legacy Server,Identify integration points,01/01/22,01/07/22,Pending,Mark Nile,0,2000
+Employee Satisfaction Survey,Review with legal,01/23/2022,02/08/22,On-Hold,Irene Jones,200,400
+Public Website,Develop web pages,11/26/2021,12/23/2021,On-Hold,Tiger Scott,800,2000
+Load Packaged Applications,Train developers / users,11/13/2021,12/06/21,Pending,John Watson,0,8000
+Email Integration,Purchase backup server,01/01/22,01/23/2022,Pending,Mark Nile,0,3000
+Employee Satisfaction Survey,Plan rollout schedule,12/15/2021,01/13/2022,On-Hold,Irene Jones,0,750
+Migrate from Legacy Server,Map data usage,11/02/21,11/05/21,Pending,Mark Nile,0,8000
+Bug Tracker,Train developers on tracking bugs,12/08/21,12/24/2021,On-Hold,Myra Sutcliff,0,2000
+Bug Tracker,Measure effectiveness of improved QA,12/09/21,01/01/22,Pending,Myra Sutcliff,0,1500
+Migrate from Legacy Server,Decommission SQL Server,12/24/2021,01/10/22,Pending,Al Bines,0,500
+Client Server Conversion,Test migrated applications,12/21/2021,01/12/22,Pending,Russ Saunders,0,6000
+Migrate from Legacy Server,Convert processes,11/06/21,11/13/2021,Pending,Pam King,0,3000
+Migrate from Legacy Server,Implement integration using Oracle,12/13/2021,12/21/2021,Pending,Mark Nile,0,1500
+Client Server Conversion,User acceptance testing,12/17/2021,01/04/22,Pending,Russ Saunders,0,2500
+Migrate from Legacy Server,Migrate table structures,11/19/2021,12/16/2021,Pending,John Watson,0,2500
+Migrate from Legacy Server,Import data,11/23/2021,12/21/2021,Pending,John Watson,0,1000
+Migrate from Legacy Server,Notify users,01/02/22,01/27/2022,Pending,Mark Nile,0,200
+Client Server Conversion,End-user Training,01/06/22,01/15/2022,Pending,Myra Sutcliff,0,2500
+Client Server Conversion,Rollout migrated clent server apps on web,01/01/22,01/28/2022,Pending,Pam King,0,500

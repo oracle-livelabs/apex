@@ -112,21 +112,23 @@ In this task, you create Faceted Search page which will display list of the book
 
 3. In the Create Faceted Search Page dialog, enter/select the following:
 
-    - Page Number: **10**
+    - Under Page Definition:
 
-    - Name: **Search Books**
+        - Page Number: **10**
 
-    - Table/View Name: **OBS_BOOKS**
+        - Name: **Search Books**
 
-    - Use Breadcrumb: Toggle **Off**
+    - Data Source > Table/View Name: **OBS_BOOKS**
 
-   Click **Next**.
+    - Navigation > Use Breadcrumb: Toggle **Off**
+
+    Click **Next**.
 
    ![App builder home page](images/fs-next.png " ")
 
 4. For Display as, select **Cards** and click **Refresh** to refresh the column statistics to provide better recommendations.
 
-    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)** and Click **Next**.
+    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)** and click **Next**.
 
     ![App builder home page](images/fs-cards.png " ")
 
