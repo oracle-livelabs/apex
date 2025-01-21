@@ -452,13 +452,13 @@ In this task, you create buttons for removing items from the cart and proceeding
 
             - Type: **Danger**
 
-            - Style: **Remove UI Decoration**
-
             Click **OK**
 
         - Icon: **fa-cart-empty**
 
     ![close dialog](images/clear-btn.png " ")
+
+    ![close dialog](images/clear-btn1.png " ")
 
 7. Right-click **Order Information** and select **Create Button**.
 
@@ -1029,7 +1029,11 @@ In this task, you add an entry to the navigation bar that displays the shopping 
         </copy>
          ```
 
-        - Order By Item: Click **No Order by item** and enter the following and click OK:
+    - Order By:
+
+        - Type: Item
+
+        - Item: Click **No Order By Item** and enter the following and click OK:
 
         | Clause |  Key | Display |
         | --- |  --- | --- |
