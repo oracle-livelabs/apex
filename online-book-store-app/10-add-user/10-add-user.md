@@ -31,7 +31,7 @@ This task provides step-by-step instructions for creating a profile page display
 
 4. Enter/select the following:
 
-    - Under Identification:
+    - Under Page Definition:
 
         - Page Number: **15010**
 
@@ -57,7 +57,7 @@ This task provides step-by-step instructions for creating a profile page display
 
 7. In the Property Editor, enter/select the following:
 
-    - Under Identification > Name: **My Details**
+    - Identification > Name: **My Details**
 
     - Under Appearance:
 
@@ -107,7 +107,7 @@ This task provides step-by-step instructions for creating a profile page display
         </copy>
         ```
 
-    - Under Layout > Start New Row: **Toggle Off**
+    - Layout > Start New Row: **Toggle Off**
 
     ![close dialog](images/profile-my-books.png " ")
 
@@ -141,7 +141,7 @@ This task provides step-by-step instructions for creating a profile page display
 
         - Type: **Image**
 
-        - Image:
+        - Image: Click **No Media Defined** and enter/select the following.
 
             - Source: **URL**
 
@@ -299,11 +299,13 @@ In this task, you will learn how to create and configure a page to update the cu
 
 3. Under Page Definition, enter/select the following:
 
-    - Page Number: **26**
+    - Under Page Definition:
 
-    - Name: **Update Current User**
+        - Page Number: **26**
 
-    - Page Mode: **Modal Dialog**
+        - Name: **Update Current User**
+
+        - Page Mode: **Modal Dialog**
 
      Click **Create Page**.
 
@@ -325,9 +327,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Type: **Form**
 
-    - Under Source > Table name: **OBS\_USERS**
+    - Source > Table name: **OBS\_USERS**
 
-    - Under Appearance > Template: **Blank with Attributes**
+    - Appearance > Template: **Blank with Attributes**
 
    ![close dialog](images/10-3-current-user-form.png " ")
 
@@ -335,7 +337,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     ![close dialog](images/10-3-delete-col.png " ")
 
-8. Select **P26\_USER\_ID**, Under Source > Query Only: **Toggle Off**.
+8. Select **P26\_USER\_ID**, under Source > Query Only: **Toggle Off**.
 
     ![close dialog](images/10-3-user-id.png " ")
 
@@ -353,15 +355,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
 12. Select **P26\_PROFILE\_PIC** and enter/select the following:
 
-    - Under Identification > Type: **Image Upload**
+    - Identification > Type: **Image Upload**
 
-    - Under Storage > Mime Type Column: **MIME_TYPE**
+    - Storage > Mime Type Column: **MIME_TYPE**
 
     - Under Cropping:
 
         - Allow Cropping: **Toggle On**
 
-        - Aspect Ratio: **1:1**
+        - Aspect Ratio: **1:1(square)**
 
     ![close dialog](images/10-3-profile-pic.png " ")
 
@@ -371,9 +373,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
 14. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Buttons**
+    - Identification > Name: **Buttons**
 
-    - Under Appearance > Template: **Buttons Container**
+    - Appearance > Template: **Buttons Container**
 
     ![close dialog](images/10-3-create-region-buttons.png " ")
 
@@ -387,9 +389,9 @@ In this task, you will learn how to create and configure a page to update the cu
         - Button Name: **CANCEL**
         - Label: **Cancel**
 
-    - Under Layout > Slot: **Close**
+    - Layout > Slot: **Close**
 
-    - Under Behavior > Action: **Defined by Dynamic Action**
+    - Behavior > Action: **Defined by Dynamic Action**
 
     ![close dialog](images/10-3-cancel-btn.png " ")
 
@@ -399,13 +401,13 @@ In this task, you will learn how to create and configure a page to update the cu
 
 18. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Cancel Dialog**
+    - Identification > Name: **Cancel Dialog**
 
     ![close dialog](images/10-3-cancel-dialog.png " ")
 
 19. Select **TRUE** Action, enter/select the following:
 
-    - Under Identification > Action: **Cancel Dialog**
+    - Identification > Action: **Cancel Dialog**
 
     ![close dialog](images/10-3-cancel-dialog-true.png " ")
 
@@ -421,11 +423,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Label: **Apply Changes**
 
-    - Under Layout > Position: **Next**
+    - Layout > Position: **Next**
 
-    - Under Appearance > Hot: **Toggle On**
+    - Appearance > Hot: **Toggle On**
 
-    - Under Behavior > Database Action: **SQL UPDATE action**
+    - Behavior > Database Action: **SQL UPDATE action**
 
     - Under Server-side Conditions:
 
@@ -447,9 +449,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Label: **Create**
 
-    - Under Behavior > Database Action: **SQL INSERT action**
+    - Behavior > Database Action: **SQL INSERT action**
 
-    - Under Server-side Condition > Type: **ITEM IS NULL**
+    - Server-side Condition > Type: **ITEM IS NULL**
 
     ![close dialog](images/10-3-create-btn-details.png " ")
 
@@ -467,7 +469,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Form Region: **Update Current User**
 
-    - Under Success Message > Success Message: **Profile Details Updated Successfully!**
+    - Success Message > Success Message: **Profile Details Updated Successfully!**
 
     ![close dialog](images/10-3-update-current-user-proceess.png " ")
 
@@ -477,9 +479,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
 27. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Change Username** 
+    - Identification > Name: **Change Username** 
 
-    - Under Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
+    - Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
 
     ![close dialog](images/10-3-change-username-process.png " ")
 
@@ -489,7 +491,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
 29. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Go To My Profile**
+    - Identification > Name: **Go To My Profile**
 
     - Under Behavior > Target: Click **No Link Defined**
 
@@ -539,6 +541,8 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Icon: **fa-pencil-square-o**
 
+    ![close dialog](images/10-3-edit-profile-btn.png " ")
+
     - Under Behavior:
 
         - Action: **Redirect to a page in this Application**
@@ -556,8 +560,6 @@ In this task, you will learn how to create and configure a page to update the cu
             - Under Clear / Reset > Clear Cache: **26**
 
             Click **OK**.
-
-    ![close dialog](images/10-3-edit-profile-btn.png " ")
 
     ![close dialog](images/10-3-edit-profile-redirect.png " ")
 
