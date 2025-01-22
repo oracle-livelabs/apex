@@ -120,14 +120,17 @@ In this lab, you will:
 
     ![Page Designer](images/success-ok.png ' ')
 
-10. Under Source > **Order By Item**: enter/select the following:
+10. Under **Order By**, enter/select the following:
 
-    | Clause     |  Key   | Display |
-    | ---------- |  ------ | ------ |
-    | "TITLE"asc | TITLE |  Title |
-    | "PRICE"asc | PRICE | Price |
+    - Type: **Item**
+    - Item: Click **No Order By Item** and enter the following:
 
-    Click **OK**.
+        | Clause     |  Key   | Display |
+        | ---------- |  ------ | ------ |
+        | "TITLE"asc | TITLE |  Title |
+        | "PRICE"asc | PRICE | Price |
+
+        Click **OK**.
 
     ![Page Designer](images/order-by-item1.png ' ')
 
@@ -275,7 +278,7 @@ In this lab, you will:
 
     ![close dialog](images/nav-to-page-18.png " ")
 
-2. In the left pane, right-click **Buttons Bar** and click **Create Button**.
+2. In the left pane, right-click **Buttons Bar** and select **Create Button**.
 
     ![close dialog](images/create-button1.png " ")
 
