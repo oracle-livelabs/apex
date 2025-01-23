@@ -42,7 +42,11 @@
         "filename": "improving-products/improving-products.md"
       },
       {
-        "title": "Lab 9: Improve the Application",
+        "title": "Lab 9: Build AI Generative text and Chat Assistant",
+        "filename": "chat-assistant/chat-assistant.md"
+      },
+      {
+        "title": "Lab 10: Improve the Application",
         "filename": "improving-app/improving-app.md"
       },
       {
