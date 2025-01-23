@@ -5,26 +5,37 @@
 
 In this workshop, you'll create a Shopping Cart application that allows managing products, customers, and  stores. The application will have two application roles:
 
-* Administrators
-    * To manage the products, customers and stores
-    * To access a dashboard to identify the top products
-* Customers
-    * To review, add, delete, or edit the number of products in the shopping cart
-    * To submit orders
+- Administrators:
+
+    - To manage the products, customers and stores.
+
+    - To access a dashboard to identify the top products.
+
+- Customers:
+
+    - To review, add, delete, or edit the number of products in the shopping cart.
+
+    - To submit orders.
 
 Estimated Workshop Time: 2 hours
 
 <if type="odbw">If you would like to watch us do the workshop, click [here](https://youtu.be/ioduhe7gHvc).</if>
 
 ### Objectives
-In this lab, you will:
-* Obtain a free development environment
-* Install a sample dataset
-* Learn how to create lookup tables
-* Learn how to create a page to list all the products
-* Learn how to manage the products
 
-*{Note: This lab assumes you are using Oracle APEX 24.1.}*
+In this lab, you will:
+
+- Obtain a free development environment.
+
+- Install a sample dataset.
+
+- Learn how to create lookup tables.
+
+- Learn how to create a page to list all the products.
+
+- Learn how to manage the products
+
+>*Note: This lab assumes you are using Oracle APEX 24.2.*
 
 ### Labs
 
@@ -69,4 +80,6 @@ In this lab, you will:
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+
+
