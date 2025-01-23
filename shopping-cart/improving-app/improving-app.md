@@ -14,8 +14,11 @@ Watch the video below for a quick walk-through of the lab.
 In this lab, you will:
 
 - Set the following pages as public pages:
+
     - Products
+
     - Shopping Cart
+
     - Order Information
 
 - Disable the Navigation Menu.
@@ -30,22 +33,21 @@ Your customers don't need to log in the app to shop the products, so let's set t
 - Page 16: Order Information
 - Page 17: Shopping Cart
 - Page 18: Add to Cart
+- Page 19: Product Search
 
 Follow these steps for the four listed pages:
 
-1. From the runtime application, navigate to the page.
+1. From the runtime application, navigate to **ACME Shop** and click **Page 1** from developer toolbar.
 
-    In the Developer Toolbar click **Page 1**.
+2. Within Page Designer, in the Rendering tree (left pane), navigate to  root node **Page 1: Products**.
 
-2. Within Page Designer, in the Rendering tree (left pane), navigate to  **Page 1: Products**.
-
-    In the Property Editor (right pane), select the following:
+3. In the Property Editor, select the following:
 
     - Under Security > Authentication: **Page Is Public**
 
-   ![Property Editor](./images/public-page.png " ")
+    ![Property Editor](./images/public-page.png " ")
 
-3. Click **Save**.
+4. Click **Save**.
 
 ## Task 2: Clean the Navigation Menu
 
@@ -81,9 +83,10 @@ Add a new navigation menu entry to allow:
 1. Navigate to **Shared Components** icon at the top right.
 
     ![Shared Components Page](./images/shared-components3.png " ")
+
 2. Under **Navigation and Search**, click **Navigation Bar List**.
 
-    ![Shared Components Page](./images/navigation-bar-s.png " ")
+    ![Shared Components Page](./images/navigation-bar.png " ")
 
 3. Click **Navigation Bar**.
 
@@ -101,7 +104,7 @@ Add a new navigation menu entry to allow:
 
     - Clear cache: **17**
 
-    ![Create Navigation entry details](./images/create-entry.png " ")
+    ![Create Navigation entry details](./images/create-entry1.png " ")
 
     ![Create Navigation entry details](./images/list-entry1.png " ")
 
@@ -111,23 +114,37 @@ Add a new navigation menu entry to allow:
 
     - List Item CSS Classes: **js-shopping-cart-item**
 
-    Click **Create List Entry**.
+    Click **Create and Create Another**.
 
     ![Create Navigation entry details](./images/list-entry2.png " ")
 
-    ![Create Navigation entry details](./images/create-entry2.png " ")
+6. Enter/select the following:
 
-6. Under **List Entries**, navigate to **&APP_USER.**
+    - Sequence: **2**
+
+    - Image/Class: **fa-search**
+
+    - List Entry Label: **Product Search**
+
+    - Page: **19**
+
+    - Clear cache: **19**
+
+    Click **Create List Entry**.
+
+    ![Create Navigation entry details](./images/create-entry3.png " ")
+
+7. Under **List Entries**, navigate to **&APP_USER.**
 
     ![Navigation Bar List](./images/edit-app-user.png " ")
 
-7. Under Authorization, for Authorization Scheme, select **Administration Rights**.
+8. Under Authorization, for Authorization Scheme, select **Administration Rights**.
 
-8. Click **Apply Changes**.
+9. Click **Apply Changes**.
 
     ![Edit Navigation list entry](./images/authorization.png " ")
 
-9. Click **Create List Entry**  and enter/select the following:
+10. Click **Create List Entry** and enter/select the following:
 
     - Sequence: **5**
 
@@ -137,11 +154,13 @@ Add a new navigation menu entry to allow:
 
     - Page: **10000**
 
-10. Click **Create List Entry**.
+11. Click **Create List Entry**.
+
+    ![Create a list enrty](./images/new-entry1.png " ")
 
     ![Create a list enrty](./images/new-entry.png " ")
 
-11. Click **Run Page** and view the updated application.
+12. Click **Run Page** and view the updated application.
 
     ![Run Page icon in the toolbar](./images/final-app.png " ")
 
