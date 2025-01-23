@@ -59,17 +59,7 @@ This task provides step-by-step instructions for creating a profile page display
 
     - Identification > Name: **My Details**
 
-    - Under Appearance:
-
-        - Template: **Content Block**
-
-        - Template Options: Click **Use Template Defaults, Large**
-
-            - Add Body Padding: **Check**
-
-            - Body Style: **Light Background**
-
-            Click **OK**.
+    - Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/profile-region-details.png " ")
 
@@ -91,21 +81,21 @@ This task provides step-by-step instructions for creating a profile page display
 
         - SQL Query: Copy and paste the below code:
 
-        ```
-        <copy>
-        select  distinct
-            oi.book_id as book_id,
-            bi.book_image as book_image,
-            bi.buy_links as buy_links,
-            bi.title as title,
-            oi.price as price,
-            bi.description as description,
-            COUNT(*) OVER (PARTITION BY oi.book_id) AS quantity
-        from obs_order_items oi, obs_books bi, obs_orders o
-        where o.order_id = oi.order_id and o.user_id = :USER_ID
-            and oi.book_id(+) = bi.book_id;
-        </copy>
-        ```
+            ```
+            <copy>
+            select  distinct
+                oi.book_id as book_id,
+                bi.book_image as book_image,
+                bi.buy_links as buy_links,
+                bi.title as title,
+                oi.price as price,
+                bi.description as description,
+                sum(quantity) OVER (PARTITION BY oi.book_id) AS quantity
+            from obs_order_items oi, obs_books bi, obs_orders o
+            where o.order_id = oi.order_id and o.user_id = :USER_ID
+                and oi.book_id(+) = bi.book_id;
+            </copy>
+            ```
 
     - Layout > Start New Row: **Toggle Off**
 
@@ -117,7 +107,7 @@ This task provides step-by-step instructions for creating a profile page display
 
         - Template Options: Click **Use Template Defaults**
 
-            - Heading font: **Alternative**
+            - Region Title: **Medium**
 
             Click **OK**.
 
@@ -299,15 +289,13 @@ In this task, you will learn how to create and configure a page to update the cu
 
 3. Under Page Definition, enter/select the following:
 
-    - Under Page Definition:
+    - Page Number: **26**
 
-        - Page Number: **26**
+    - Name: **Update Current User**
 
-        - Name: **Update Current User**
+    - Page Mode: **Modal Dialog**
 
-        - Page Mode: **Modal Dialog**
-
-     Click **Create Page**.
+    Click **Create Page**.
 
     ![close dialog](images/update-current-user.png " ")
 
@@ -585,7 +573,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     - Page Mode: **Modal Dialog**
 
-     Click **Create Page**.
+    Click **Create Page**.
 
     ![close dialog](images/blank-page27.png " ")
 
@@ -601,9 +589,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
           - Type: **Form**
 
-     - Under Source > Table name: **OBS\_USERS**
+     - Source > Table name: **OBS\_USERS**
 
-     - Under Appearance > Template: **Blank with Attributes**
+     - Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/10-4-form-details.png " ")
 
@@ -639,7 +627,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 12. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Password Not Null**
+    - Identification > Name: **Password Not Null**
 
     - Under Validation:
 
@@ -647,17 +635,17 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - PL/SQL Function Body: Copy and paste the below code:
 
-        ```
-        <copy>
-        if :P27_NEW_PASSWORD is not NULL then
-            return true;
-        else
-            return false;
-        end if;
-        </copy>
-        ```
+            ```
+            <copy>
+            if :P27_NEW_PASSWORD is not NULL then
+                return true;
+            else
+                return false;
+            end if;
+            </copy>
+            ```
 
-     - Under Error > Error Message: **Password must have some value**.
+     - Error > Error Message: **Password must have some value**.
 
     ![close dialog](images/10-4-new-pass-val1.png " ")
 
@@ -706,7 +694,7 @@ This task provides a comprehensive step-by-step process for creating and configu
         </copy>
         ```
 
-    - Under Error > Error Message: **Confirm Password and Password must be same.**
+    - Error > Error Message: **Confirm Password and Password must be same.**
 
     ![close dialog](images/10-4-confirm-pass-val.png " ")
 
@@ -716,9 +704,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 18. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Buttons**
+    - Identification > Name: **Buttons**
 
-    - Under Appearance > Template: **Buttons Container**
+    - Appearance > Template: **Buttons Container**
 
     ![close dialog](images/10-4-button-region.png " ")
 
@@ -728,9 +716,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 20. In the property editor, enter/select the following:
 
-    - Under Identification > Button Name: **CANCEL**
+    - Identification > Button Name: **CANCEL**
 
-    - Under Layout > Slot: **Close**
+    - Layout > Slot: **Close**
 
     - Under Behavior:
 
@@ -752,13 +740,13 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 22. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Cancel Dialog**
+    - Identification > Name: **Cancel Dialog**
 
     ![close dialog](images/10-4-dyn-name.png " ")
 
 23. Select **TRUE** Action, enter/select the following:
 
-    - Under Identification > Action: **Cancel Dialog**
+    - Identification > Action: **Cancel Dialog**
 
     ![close dialog](images/10-4-true-action27.png " ")
 
@@ -773,11 +761,11 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - Label: **Apply Changes**
 
-    - Under Layout > Slot: **Next**
+    - Layout > Slot: **Next**
 
-    - Under Appearance > Hot: **Toggle On**
+    - Appearance > Hot: **Toggle On**
 
-    - Under Behavior > Database Action: **SQL UPDATE Action**
+    - Behavior > Database Action: **SQL UPDATE Action**
 
     - Under Server-side Condition:
 
@@ -801,9 +789,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - Form Region: **Reset Password**
 
-    - Under Settings > Prevent Lost Updates: **Toggle Off**
+    - Settings > Prevent Lost Updates: **Toggle Off**
 
-    - Under Success Message > Success Message: **Reset Password Successfully!**
+    - Success Message > Success Message: **Reset Password Successfully!**
 
     ![close dialog](images/10-4-change-pass.png " ")
 
@@ -813,13 +801,13 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 29. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Go To My Profile**
+    - Identification > Name: **Go To My Profile**
 
     - Under Behavior > Target: Click **No Link Defined**
 
-         - Under Target > Page: **15010**
+         - Target > Page: **15010**
 
-         - Under Clear / Reset > Clear Cache: **10**
+         - Clear / Reset > Clear Cache: **10**
 
          Click **OK**
 
@@ -837,9 +825,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 33. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **CHANGE\_PASSWORD**
+    - Identification > Name: **CHANGE\_PASSWORD**
 
-    - Under Layout > Sequence: **2**
+    - Layout > Sequence: **2**
 
     - Under Appearance:
 
@@ -865,7 +853,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - Target: **No Link Defined**
 
-            - Under Target > Page: **27**
+            - Target > Page: **27**
 
             - Under Set Items:
 
@@ -873,7 +861,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
                 - Value: **&USER\_ID.**
 
-            - Under Clear / Reset > Clear Cache: **27**
+            - Clear / Reset > Clear Cache: **27**
 
             Click **OK**.
 
@@ -903,9 +891,9 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
 5. Under **Module Definition**, enter/select the following:
 
-    Module Name: **User Images**
+    - Module Name: **User Images**
 
-    Base Path: **images**
+    - Base Path: **images**
 
     Click **Create Module**.
 
@@ -921,9 +909,9 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
 8. Under **Resource Handlers**, click **Create Handler** and enter/select the following:
 
-    - Under Resource Handler > Source type: **Media Resource**
+    - Resource Handler > Source type: **Media Resource**
 
-    - Under Source > Code: Copy and paste the following code:
+    - Source > Code: Copy and paste the following code:
 
         ```
         <copy>
@@ -936,7 +924,7 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
    ![close dialog](images/10-5-create-handler1.png " ")
 
-9. Copy the **Full URL** and replace the id with user\_id to use in the next lab.
+9. Copy the **Full URL** and replace the id with user\_id to use in the step 14.
 
     ![close dialog](images/10-5-copy-url.png " ")
 
@@ -1000,15 +988,15 @@ Application Computation, navigate back to the shared component and under **Appli
 
     ![close dialog](images/10-5-nav-bar-list-rest.png " " )
 
-16. Click **Navigation Bar** and click edit icon of **&USERNAME.** and update the following:
+16. Click **Navigation Bar**, then click **&USERNAME.** to edit and update the following:
 
-    - Under User Defined Attributes > Badge value:
+    - User Defined Attributes > Badge value:
 
-    ```
-    <copy>
-    <img src="&PICTURE_URL." alt="" style="max-width: 25px; max-height: 25px; height: auto; display: block; margin: 0px; padding: 0px; border-radius:50%">
-    </copy>
-    ```
+        ```
+        <copy>
+        <img src="&PICTURE_URL." alt="" style="max-width: 25px; max-height: 25px; height: auto; display: block; margin: 0px; padding: 0px; border-radius:50%">
+        </copy>
+        ```
 
     Click **Apply Changes**.
     ![close dialog](images/10-5-nav-bar-rest.png " " )
@@ -1026,9 +1014,9 @@ Application Computation, navigate back to the shared component and under **Appli
 
 19. Enter/select the following:
 
-    - Under Identification > Name: **Profile Photo**
+    - Identification > Name: **Profile Photo**
 
-    - Under Appearance > Template: **Blank with Attributes**
+    - Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/10-5-profile-photo.png " " )
 
@@ -1039,16 +1027,18 @@ Application Computation, navigate back to the shared component and under **Appli
 21. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **PROFILE_DISPLAY**
+
         - Type: **Display Image**
 
-    - Under Label > Label: Keep it empty
+    - Label > Label: Keep it empty
 
-    - Under Settings > Based on: **Image URL stored in Page Item Value**
+    - Settings > Based on: **Image URL stored in Page Item Value**
 
-    - Under Appearance > Template: **Optional-Above**
+    - Appearance > Template: **Optional-Above**
 
-    - Under Advanced > Custom Attributes : **style="width: 40vh; height: 50vh; display: block; margin: 0 auto;"**
+    - Advanced > Custom Attributes : **style="width: 40vh; height: 50vh; display: block; margin: 0 auto;"**
 
     - Under Source:
 
@@ -1061,8 +1051,11 @@ Application Computation, navigate back to the shared component and under **Appli
     ![close dialog](images/10-5-display-img-source.png " " )
 
 22. Select **My Books** region and enter/select the following:
+
     - Under Layout:
+
         - Sequence: **40**
+
         - Slot: **Region Body**
 
     ![close dialog](images/10-5-my-books-update.png " " )
