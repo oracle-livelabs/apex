@@ -46,7 +46,11 @@
         "filename": "chat-assistant/chat-assistant.md"
       },
       {
-        "title": "Lab 10: Improve the Application",
+        "title": "Lab 10: Create a Products Vector Search Page using Search Configurations",
+        "filename": "vector-search-configurations/vector-search-configurations.md"
+      },
+      {
+        "title": "Lab 11: Improve the Application",
         "filename": "improving-app/improving-app.md"
       },
       {
