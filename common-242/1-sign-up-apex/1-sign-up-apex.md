@@ -302,13 +302,13 @@ The password is the same as the one entered for the ADMIN user when creating the
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
-## **Summary**
+## Summary
 
 At this point, you know how to create an APEX Workspace and you are ready to start building amazing apps, fast.
 
-You may now **proceed to the next lab**.
+You may now proceed to the next lab.
 
 ## **Acknowledgements**
 
-- **Author** -  Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author(s)** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

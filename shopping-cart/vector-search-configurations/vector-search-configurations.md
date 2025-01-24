@@ -247,6 +247,8 @@ In this task, you will create a Vector Search Page to search across your Product
 
     ![create page wizard](./images/search-page1.png " ")
 
+5. Navigate to the root node **Page 19: Product Search**. In the Property Editor, under **Security**, for **Authentication**, select **Page is Public**.
+
 ## Task 6: Run the New Vector Search Page
 
 1. In Page Designer of the newly created page, click **Run and Save**.
@@ -257,11 +259,11 @@ In this task, you will create a Vector Search Page to search across your Product
 
     ![click on chat assistant button](images/vector-page.png " ")
 
-## **Summary**
+## Summary
 
 In this lab, you loaded ONNX models into Oracle Database, created a Vector Provider, and generated vector embeddings. Then, you configured Oracle Vector Search for enhanced search capabilities and built a search page to leverage these embeddings for efficient and accurate search results.
 
-## **Learn More** - *Useful Links*
+## Learn More - *Useful Links*
 
 - APEX on Autonomous:   [https://apex.oracle.com/autonomous](https://apex.oracle.com/autonomous)
 - APEX Collateral:   [https://apex.oracle.com](https://apex.oracle.com)
@@ -269,7 +271,7 @@ In this lab, you loaded ONNX models into Oracle Database, created a Vector Provi
 - Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
 - External Site + Slack:   [http://apex.world](http://apex.world)
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -293,11 +293,11 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
     ![interact with chat assistant](images/chat-assistant1.png " ")
 
-## **Summary**
+## Summary
 
 You know now how to create a view, configure AI attributes, and set up generative AI configurations to build a foundation for AI-powered applications. You also integrated RAG sources to enhance the AI's knowledge and explored text generation features to add dynamic capabilities to your projects.
 
-## **Learn More** - *Useful Links*
+## Learn More - *Useful Links*
 
 - APEX on Autonomous:   [https://apex.oracle.com/autonomous](https://apex.oracle.com/autonomous)
 - APEX Collateral:   [https://apex.oracle.com](https://apex.oracle.com)
@@ -305,7 +305,7 @@ You know now how to create a view, configure AI attributes, and set up generativ
 - Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
 - External Site + Slack:   [http://apex.world](http://apex.world)
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri Product Manager, January 2025
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

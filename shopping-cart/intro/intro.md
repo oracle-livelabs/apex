@@ -1,4 +1,5 @@
 # Introduction
+
 ## About this Workshop
 
 [](youtube:6pKNt_FXP7g)
@@ -17,7 +18,7 @@ In this workshop, you'll create a Shopping Cart application that allows managing
 
     - To submit orders.
 
-Estimated Workshop Time: 2 hours
+Estimated Workshop Time: 2.5 hours
 
 <if type="odbw">If you would like to watch us do the workshop, click [here](https://youtu.be/ioduhe7gHvc).</if>
 
@@ -33,9 +34,13 @@ In this lab, you will:
 
 - Learn how to create a page to list all the products.
 
-- Learn how to manage the products
+- Learn how to manage the products.
 
->*Note: This lab assumes you are using Oracle APEX 24.2.*
+- Build AI Generative Text and Chat Assistant.
+
+- Create a Products Vector Search Page using Search Configurations.
+
+>*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### Labs
 
@@ -49,7 +54,9 @@ In this lab, you will:
 | 6 | [Create the Shopping Cart Page](?lab=6-creating-shopping-cart) | 20 min |
 | 7 | [Create the Add to Cart Page](?lab=7-creating-add-to-cart-page) | 20 min |
 | 8 | [Improve the Products Page](?lab=8-improving-products) | 20 min |
-| 9 | [Improve the Application](?lab=9-improving-app) | 10 min |<if type="odbw">
+| 9 | [Build AI Generative text and Chat Assistant](?lab=9-chat-assistant) | 20 min |
+| 10 | [Create a Products Vector Search Page using Search Configurations](?lab=10-vector-search-configurationst) | 15 min |
+| 11 | [Improve the Application](?lab=9-improving-app) | 10 min |<if type="odbw">
 | 10 | [Terminate Oracle Autonomous Database Instance](?lab=terminate-adb) | 5 min |</if>
 {: title="List of Labs in the Shopping Cart Application Workshop"}
 
@@ -65,6 +72,7 @@ In this lab, you will:
 ## Learn More - *Useful Links*
 
 - Introduction to APEX
+
     - [App Builder Concepts](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A)
     - [Page Designer](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/about-page-designer.html#GUID-F4A825A2-6BD5-4A11-8D68-B24B2B6ED18B)
     - [Shared Components](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/shared-components-page.html#GUID-2CDE44A1-E219-44BC-B983-B6780266F315)
@@ -81,5 +89,3 @@ In this lab, you will:
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
-
-
