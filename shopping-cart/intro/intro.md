@@ -66,18 +66,35 @@ In this lab, you will:
 
 ### Downloads
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Facme-shop.sql) to download the completed application. To run the app, please run the steps described in Lab 1, 2, and 3.
+- If you are stuck or the application is not working as expected, you can download and install the completed App as follows:
+
+    1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Facme-shop.sql) to download the completed application.
+
+    2. To run the application, please run the steps described in Lab 1, 2, and 3.
+
+    3. Once the application is installed, follow the below steps to create/update the **Web Credentials**.
+
+        - Click the Down Arrow next to **App Builder**, navigate to **Workspace Utilities** and select **All Workspace Utilities**.
+
+        - Select **Web Credentials** and create/update your web credentials.
+
+    4. Follow **LAB 9 > Task 1** to Configure AI Attributes which form the foundation for integrating generative AI into your application.
+
+    5. To use the **Vector Search** capabilities of this application, you need to perform the steps mentioned in **LAB 10 > Task 1, Task 2  and Task 3**.
+
 - [Download the Application icon](./images/shopping-cart-01.png)
 
 ## Learn More - *Useful Links*
 
-- Introduction to APEX
+- **Introduction to APEX**
+    - [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A)
+    - [Page Designer](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/about-page-designer.html#GUID-F4A825A2-6BD5-4A11-8D68-B24B2B6ED18B)
+    - [Shared Components](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/shared-components-page.html#GUID-2CDE44A1-E219-44BC-B983-B6780266F315)
+    - [Cards](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D)
+    - [APEX_COLLECTION API](https://docs.oracle.com/en/database/oracle/apex/24.2/aeapi/APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76)
+    - [Web Credentials](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-web-credentials.html)
+    - [Generative AI](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-generative-ai-in-apex.html#HTMDB-GUID-FDA021EF-D1A4-42AB-886F-617BE89B2557)
 
-    - [App Builder Concepts](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/application-builder-concepts.html#GUID-6D22E307-6D48-49BC-9FDC-A7D8B037E46A)
-    - [Page Designer](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/about-page-designer.html#GUID-F4A825A2-6BD5-4A11-8D68-B24B2B6ED18B)
-    - [Shared Components](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/shared-components-page.html#GUID-2CDE44A1-E219-44BC-B983-B6780266F315)
-    - [Cards](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/managing-cards.html#GUID-4B524AC4-9507-45EB-B4EA-A4D33F469B2D)
-    - [APEX_COLLECTION API](https://docs.oracle.com/en/database/oracle/application-express/21.1/aeapi/APEX_COLLECTION.html#GUID-859B488C-2628-44D7-969F-50872C685B76)
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
 - [APEX Service](https://apex.oracle.com/en/platform/apex-service/)
 - [APEX Collateral](https://apex.oracle.com)
@@ -87,5 +104,5 @@ In this lab, you will:
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
+- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

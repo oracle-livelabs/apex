@@ -32,7 +32,7 @@ In this task, you'll configure AI attributes, which form the foundation for inte
 
     - Generative AI > Service:  **Open AI**
 
-4. Click **Apply Changes**
+4. Click **Apply Changes**.
 
     !["set service as Open AI"](images/open-ai.png "")
 
@@ -171,11 +171,13 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
         - Name: **P18\_REVIEW\_SUMMARY**
 
-        - Type: **Textarea**
+        - Type: **Display Only**
 
     - Label > Label: **Review Summary**
 
-    ![create page wizard](./images/reviewsummary.png " ")
+    - Settings > Send On Page Submit: Toggle **OFF**
+
+    ![create page wizard](./images/reviewsummary1.png " ")
 
 7. Navigate to **Dynamic Action** tab, right-click **Page Load** and select **Create Dynamic Action**.
 

@@ -90,8 +90,7 @@ In this lab, you will:
 
     ![SQL Scripts page in SQL Workshop](./images/sql-scripts-s.png " ")
 
-3. For **Script Name**, enter **Populating new columns**.
-   Copy the following script and paste into the editor.
+3. For **Script Name**: Enter **Populating new columns**. Copy the following script and paste into the editor.
 
     ```
     <copy>
@@ -166,7 +165,7 @@ You will create lookup tables based on the new three columns, after you will hav
 
     >*Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-6. To create **Clothing** lookup table, navigate back to the **Products** table and Click **More**, Select **Create Lookup Table** button.
+6. To create **Clothing** lookup table, navigate back to the **Products** table and click **More**, select **Create Lookup Table** button.
 
     ![Create Lookup Column wizard](./images/lookup-table3-s.png " ")
 

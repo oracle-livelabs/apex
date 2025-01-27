@@ -93,7 +93,7 @@ This region allows users to review the details of the product, such as brand, pr
             FROM   products p,
                 json_table (p.product_details, '$' columns ( description varchar2(4000) path '$.description') ) d,
                 json_table (p.product_details, '$' columns ( brand       varchar2(4000) path '$.brand') ) b
-            WHERE  product_id = :p18_product_id
+            WHERE  product_id = :P18_PRODUCT_ID
             </copy>
             ```
 
@@ -170,7 +170,7 @@ This region lets users read the customer reviews for a product.
             FROM   products p,
                 product_reviews m
             WHERE  p.product_name = m.product_name
-                AND p.product_id = :p18_product_id
+                AND p.product_id = :P18_PRODUCT_ID
                 order by m.rating desc
             </copy>
             ```

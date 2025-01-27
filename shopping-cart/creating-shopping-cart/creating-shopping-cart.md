@@ -190,7 +190,7 @@ This region will list the items that have been added temporarily to the shopping
 
     - Under Body:
 
-        - Advanced Formatting: **Toggle Off**
+        - Advanced Formatting: Toggle **ON**
 
         - HTML Expression: Enter the following:
 
