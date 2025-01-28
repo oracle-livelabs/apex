@@ -46,7 +46,7 @@ Create the forgot password Page
 
 4. In the property editor, update the following:
 
-     - Under Security > Authentication: **Page is Public**
+     - Security > Authentication: **Page is Public**
 
     ![close dialog](images/12-1-page-public.png " ")
 
@@ -56,7 +56,7 @@ Create the forgot password Page
 
 6. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Reset Password**
+    - Identification > Name: **Reset Password**
 
     ![close dialog](images/12-1-reset-pass.png " ")
 
@@ -66,7 +66,7 @@ Create the forgot password Page
 
 8. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **EMAIL**
+    - Identification > Name: **EMAIL**
 
     ![close dialog](images/12-1-page-item-name.png " ")
 
@@ -76,7 +76,7 @@ Create the forgot password Page
 
 10. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Valid Email Address**
+    - Identification > Name: **Valid Email Address**
 
     - Under Validation:
 
@@ -100,7 +100,7 @@ Create the forgot password Page
 
 12. In the property editor, enter/select the following:
 
-     - Under Identification > Name: **Email Validation**
+     - Identification > Name: **Email Validation**
 
      - Under Validation:
 
@@ -108,15 +108,15 @@ Create the forgot password Page
 
         - SQL Query: Copy and paste the below query:
 
-        ```
-        <copy>
-        select u.email from obs_users u  where u.email = lower(:EMAIL);
-        </copy>
-         ```
+            ```
+            <copy>
+            select u.email from obs_users u  where u.email = lower(:EMAIL);
+            </copy>
+            ```
 
-     - Under Error > Error Message: **No Account Found!**
+     - Error > Error Message: **No Account Found!**
 
-     - Under Server-side Condition > Type: **Inline Validation Errors NOT displayed**
+     - Server-side Condition > Type: **Inline Validation Errors NOT displayed**
 
     ![close dialog](images/12-1-email-validation.png " ")
 
@@ -158,9 +158,9 @@ Create the forgot password Page
 
         - Procedure or Function: **SEND**
 
-    - Under Success Message > Success Message: **Reset Password Link sent to your email address**.
+    - Success Message > Success Message: **Reset Password Link sent to your email address**.
 
-    - Under Server-side Condition > When Button Pressed: **Send**
+    - Server-side Condition > When Button Pressed: **Send**
 
     ![close dialog](images/12-1-send-verification-email-process.png " ")
 
@@ -204,39 +204,41 @@ Create the forgot password Page
 
             - PL/SQL Function Body: Copy and Paste the below code:
 
-            ```
-            <copy>
-            declare
-                v_url  varchar2(1000);
-            begin
-                v_url := apex_util.host_url || APEX_PAGE.GET_URL (
-                        p_page   => 100003,
-                        p_items  => 'P100003_EMAIL',
-                        p_values =>  :EMAIL);
+                ```
+                <copy>
+                declare
+                    v_url  varchar2(1000);
+                begin
+                    v_url := apex_util.host_url || APEX_PAGE.GET_URL (
+                            p_page   => 100003,
+                            p_items  => 'P100003_EMAIL',
+                            p_values =>  :EMAIL);
 
-                return '<html><body>' || utl_tcp.crlf ||
+                    return '<html><body>' || utl_tcp.crlf ||
 
-                            '<p>Please open the link to Reset Password for your account' || utl_tcp.crlf ||
-                            '<p><a href="'|| v_url ||'">
-                                <b> Reset Password </b></a></p>'|| utl_tcp.crlf ||
-                            '<p>Sincerely,<br />' || utl_tcp.crlf ||
-                            'The Online book store Team<br />' || utl_tcp.crlf ||
+                                '<p>Please open the link to Reset Password for your account' || utl_tcp.crlf ||
+                                '<p><a href="'|| v_url ||'">
+                                    <b> Reset Password </b></a></p>'|| utl_tcp.crlf ||
+                                '<p>Sincerely,<br />' || utl_tcp.crlf ||
+                                'The Online book store Team<br />' || utl_tcp.crlf ||
 
-                            '</body></html>';
+                                '</body></html>';
 
-            end;
-            </copy>
-            ```
+                end;
+                </copy>
+                ```
 
     ![close dialog](images/12-1-p-body-html.png " ")
 
     - **p\_subj**:
 
-        - Under Value > Type: **API Default**
+        - Under Value:
 
-        - Under Comments > Comments: **Reset Password**
+            - Type: **Static Value**
 
-    ![close dialog](images/12-1-p-subt.png " ")
+            - Static Value: **Reset Password**
+
+    ![close dialog](images/12-1-17-p-subt.png " ")
 
 18. Right-click **After Processing** and select **Create Branch**.
 
@@ -244,7 +246,7 @@ Create the forgot password Page
 
 19. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Go To Login Page**
+    - Identification > Name: **Go To Login Page**
 
     - Under Behavior:
         - Target: Click **No Link Defined**
@@ -343,7 +345,7 @@ Create the forgot password Page
 
 4. In the Property editor, update the following:
 
-    - Under Security > Authentication: **Page is Public**
+    - Security > Authentication: **Page is Public**
 
     ![close dialog](images/12-2-rest-page-public.png " ")
 
@@ -359,7 +361,7 @@ Create the forgot password Page
 
         - Type: **Form**
 
-    - Under Source > Table Name: **OBS_USERS**
+    - Source > Table Name: **OBS_USERS**
 
     ![close dialog](images/12-2-update-current-user1.png " ")
 
@@ -369,27 +371,27 @@ Create the forgot password Page
 
 8. Select **P100003\_EMAIL** and update the following:
 
-    - Under Identification > Type: **Display Only**
+    - Identification > Type: **Display Only**
 
-    - Under Source > Primary Key: **Toggle On**
+    - Source > Primary Key: **Toggle On**
 
-    - Under Security > Session State Protection: **Unrestricted**
+    - Security > Session State Protection: **Unrestricted**
 
     ![close dialog](images/12-2-email-details.png " ")
 
 9. Select **P100003\_PASSWORD** and update the following:
 
-    - Under Identification > Type: **Password**
+    - Identification > Type: **Password**
 
     ![close dialog](images/12-2-pass-type.png " ")
 
-10. Right-click **P100003\_PASSWORD** and click **Create Validation**.
+10. Right-click **P100003\_PASSWORD** and select **Create Validation**.
 
     ![close dialog](images/12-2-pass-validation.png " ")
 
 11. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Not Null Validation**
+    - Identification > Name: **Not Null Validation**
 
     - Under Validation:
 
@@ -407,7 +409,7 @@ Create the forgot password Page
        </copy>
         ```
 
-        - Under Error > Error Message: **Password field should have some value.**
+        - Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/12-2-not-null-valid.png " ")
 
@@ -431,7 +433,7 @@ Create the forgot password Page
 
 15. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Not Null Validation1**
+    - Identification > Name: **Not Null Validation1**
 
     - Under Validation:
 
@@ -439,25 +441,27 @@ Create the forgot password Page
 
         - PL/SQL Function Body: Copy and paste the below code:
 
+            ```
+            <copy>
+            if :P100003_CONFIRM_PASSWORD is not NULL then
+                return true;
+            else
+                return false;
+            end if;
+            </copy>
         ```
-        <copy>
-        if :P100003_CONFIRM_PASSWORD is not NULL then
-            return true;
-        else
-            return false;
-        end if;
-        </copy>
-       ```
 
-    - Under Error > Error Message: **Password field should have some value.**
+    - Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/12-2-not-null-cf.png " ")
 
 16. Again, right-click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
+
      ![close dialog](images/12-2-con-pass-create-vald.png " ")
+
 17. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Compare Passwords**
+    - Identification > Name: **Compare Passwords**
 
     - Under Validation:
 
@@ -477,7 +481,7 @@ Create the forgot password Page
             </copy>
            ```
 
-    - Under Error > Error Message: **Confirm Password is not same as Password entered above.**
+    - Error > Error Message: **Confirm Password is not same as Password entered above.**
 
     ![close dialog](images/12-2-compare-pass-valid.png " ")
 
@@ -487,9 +491,9 @@ Create the forgot password Page
 
 19. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Buttons**
+    - Identification > Name: **Buttons**
 
-    - Under Layout > Slot: **Region Body**
+    - Layout > Slot: **Region Body**
 
     - Under Appearance:
 
@@ -509,9 +513,9 @@ Create the forgot password Page
 
 21. In the Property editor, enter/select the following:
 
-    - Under Identification > Button Name: **CANCEL**
+    - Identification > Button Name: **CANCEL**
 
-    - Under Layout > Slot: **Close**
+    - Layout > Slot: **Close**
 
     - Under Behavior:
 
@@ -533,9 +537,9 @@ Create the forgot password Page
 
 23. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Cancel Dialog**
+    - Identification > Name: **Cancel Dialog**
 
-    - Under When > Event: **Click**
+    - When > Event: **Click**
 
     ![close dialog](images/12-2-canel-dialog-reset.png " ")
 
@@ -551,17 +555,17 @@ Create the forgot password Page
 
         - Label: **Apply Changes**
 
-    - Under Layout > Slot: **Next**
+    - Layout > Slot: **Next**
 
-    - Under Appearance > Hot: **Toggle On**
+    - Appearance > Hot: **Toggle On**
 
-    - Under Behavior > Database Action: **SQL UPDATE action**
+    - Behavior > Database Action: **SQL UPDATE action**
 
     ![close dialog](images/12-2-save-btn-reset.png " ")
 
 26. Select  **Buttons** and in the Property editor, update the following:
 
-    - Under Layout > Sequence: **70**
+    - Layout > Sequence: **70**
 
     ![close dialog](images/12-2-buttons-layout.png " ")
 
@@ -589,13 +593,13 @@ Create the forgot password Page
 
 30. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Go to My Profile**
+    - Identification > Name: **Go to My Profile**
 
     - Under Behavior > Target: Click **No Link Defined**
 
          - Page: **12**
 
-         - Clear Cache: **1**
+         - Clear Cache: **10**
 
          Click **OK**
 
@@ -629,13 +633,14 @@ Create the forgot password Page
 
     ![Login Home Page Create](images/12-2-page12-details.png " ")
 
-35. Right-click **Before Header** under **Pre-rendering** and click **Create Branch**
+35. Right-click **Before Header** under **Pre-rendering** and select **Create Branch**
 
     ![branch-link](images/12-2-create-branch1.png " ")
 
 36. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Go To Home Page**
+    - Identification > Name: **Go To Home Page**
+
     - Under Behavior > Target: Click **No Link Defined**
 
          - Page: **10**
@@ -692,7 +697,7 @@ Create the user signUp Page
 
 4. In the property editor, update the following:
 
-     - Under Security > Authentication: **Page is Public**
+     - Security > Authentication: **Page is Public**
 
     ![page-public](images/12-3-page-public.png " ")
 
@@ -706,7 +711,7 @@ Create the user signUp Page
 
 7. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **If Email Already Present**
+    - Identification > Name: **If Email Already Present**
 
     - Under Validation:
 
@@ -714,27 +719,27 @@ Create the user signUp Page
 
         - SQL Query: Copy and paste the below query:
 
-        ```
-        <copy>
-        select email from obs_users where email = lower(:P100001_EMAIL);
-        </copy>
-         ```
+            ```
+            <copy>
+            select email from obs_users where email = lower(:P100001_EMAIL);
+            </copy>
+            ```
 
-    - Under Error > Error Message: **Account already existed for this email ID.**
+    - Error > Error Message: **Account already existed for this email ID.**
 
-    - Under Server-side Condition > Type: **Inline Validation Errors NOT displayed**
+    - Server-side Condition > Type: **Inline Validation Errors NOT displayed**
 
     ![valid-email](images/12-3-email-vald-prop.png " ")
 
 8. Under **Email Verification for User SignUp** region, select **CREATE** button and update the following:
 
-    - Under Identification > Label: **Send SignUp Email**
+    - Identification > Label: **Send SignUp Email**
 
     ![valid-email](images/12-3-create-button-label.png " ")
 
 9. Navigate to **Processing** tab, select **Process form Email Verification for User SignUp** under **Processing** and update the following:
 
-    - Under Success Message > Success Message: **Email Sent**
+    - Success Message > Success Message: **Email Sent**
 
     ![success-message](images/12-3-nav-process.png " ")
 
@@ -862,7 +867,7 @@ Create the user signUp Page
 
           Click **OK**.
 
-    ![image](images/12-3-signup-button-prop1.png " ")
+    ![image](images/12-3-16-signup-button-prop1.png " ")
 
     - Under Behavior:
 
