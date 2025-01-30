@@ -18,7 +18,7 @@ In this lab, you:
 
     ![Task Definition in Shared Components](images/run-application.png " ")
 
-2. Log in as one of the users you created in lab 2: Clara, John, Jane, or Matt.
+2. Log in as one of the users you created in lab 2: **Clara, John, Jane, or Matt**.
 
     ![Task Definition in Shared Components](images/login-as-john.png " ")
 
@@ -55,4 +55,4 @@ You now know how to run the Automatic Invoice Handling application and obtain re
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

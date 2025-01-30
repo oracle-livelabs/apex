@@ -48,7 +48,7 @@ In this lab, you will:
 
     ![Redwood Light](images/redwood-light.png " ")
 
-7. In Create an Application wizard, enter/select the following details:
+7. In Create an Application wizard, enter/select the following:
 
     - Name: **Automatic Invoice Handling**
 
@@ -62,7 +62,7 @@ In this lab, you will:
 
 1. Navigate to **Shared Components**.
 
-     ![Click REST Data Sources](images/shared-comps.png " ")
+     ![Click REST Data Sources](images/shared-compss.png " ")
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
@@ -86,7 +86,7 @@ In this lab, you will:
 
     Click **Next**.
 
-    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
+    >**Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
    ![Create REST Data Sources](images/rest-general.png " ")
 
@@ -180,7 +180,7 @@ In this lab, you will:
 
    ![Create Region](images/create-region.png " ")
 
-5. In the property editor, enter/select the following details:
+5. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -192,11 +192,11 @@ In this lab, you will:
 
     ![Create Region](images/form.png " ")
 
-6. Select **:P1\_FILE\_NAME**, Press (Shift+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
+6. Under **Upload Your Invoice** region, select **P1\_FILE\_NAME** page item, press (Shift+Down Arrow) till **P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
 
      ![hidden items](images/all-hidden.png " ")
 
-7. Right-click **Upload Your Invoice** region and select **Create Page Item**.
+7. In the **Rendering** tab, right-click **Upload Your Invoice** region and select **Create Page Item**.
 
    ![hidden items](images/create-page-item.png " ")
 
@@ -218,7 +218,7 @@ In this lab, you will:
 
    ![hidden items](images/response-item.png " ")
 
-9. Under **Upload your Invoice** region, right-click **P1\_ID** and select **Create Page Item Below**.
+9. Under **Upload your Invoice** region, right-click **P1\_ID** page item and select **Create Page Item Below**.
 
    ![hidden items](images/create-page-item-below.png " ")
 
@@ -248,11 +248,11 @@ In this lab, you will:
 
     ![Create Process](./images/query-only.png " ")
 
-12. In the left pane, right-click **Upload Your Invoice** region and select **Create Button**.
+12. In the **Rendering** tab, right-click **Upload Your Invoice** region and select **Create Button**.
 
     ![create-button](images/create-btn.png " ")
 
-13. In the property editor,  Enter/select the following details:
+13. In the property editor, enter/select the following:
 
      - Under Identification:
 
@@ -268,11 +268,11 @@ In this lab, you will:
 
     ![create-button](images/btn-details.png " ")
 
-14. In the Processing tab, right-click **Processing** and select **Create Process**.
+14. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
-15. In the property editor,  Enter/select the following details:
+15. In the property editor, enter/select the following details:
 
      - Under Identification:
 
@@ -286,11 +286,11 @@ In this lab, you will:
 
 ## Task 4: Create Processes to upload Invoices to Object Storage and Automate DML
 
-1. Right-click **Process Invoice** and select **Add Child Process**.
+1. In the **Processing** tab, right-click **Process Invoice** process and select **Add Child Process**.
 
     ![Add Child Process](images/add-child-process.png " ")
 
-2. In the Property Editor,  Enter/select the following details:
+2. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -306,7 +306,7 @@ In this lab, you will:
 
    ![Add Child Process details](images/upload-to-storage.png " ")
 
-3. Under **Upload to Object Storage** process, expand Parameters and enter the following details:
+3. Under **Upload to Object Storage** process, expand Parameters and enter the following:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
@@ -319,11 +319,11 @@ In this lab, you will:
 
     ![Add Child Process details](images/param-file-content.png " ")
 
-4. Right-click **Process Invoice** and select **Add Child Process**.
+4. Right-click **Process Invoice** process again and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-5. In the Property Editor, Enter/select the following details:
+5. In the Property Editor, enter/select the following details:
 
     - Under Identification:
 
@@ -339,11 +339,11 @@ In this lab, you will:
 
 ## Task 5: Integrate Document Understanding API and Parse the Response
 
-1. Right-click **Process Invoice** and select **Add Child Process**.
+1. In the **Processing** tab, right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-2. In the Property Editor, Enter/select the following details:
+2. In the Property Editor, enter/select the following details:
 
      - Under Identification:
 
@@ -371,7 +371,7 @@ In this lab, you will:
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
-4. Select **RESPONSE**, Enter/select the following:
+4. Select **RESPONSE** parameter, enter/select the following:
 
     - Parameter > Ignore Output: **Toggle off**
 
@@ -379,11 +379,11 @@ In this lab, you will:
 
     ![Add Child Process details](images/doc-response.png " ")
 
-5. Right-click **Process Invoice** and select **Add Child Process**.
+5. Right-click **Process Invoice** process and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process2.png " ")
 
-6. In the Property Editor, Enter/select the following details:
+6. In the Property Editor, enter/select the following details:
 
     - Identification > Name: **Parse the Response**
 
@@ -429,4 +429,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

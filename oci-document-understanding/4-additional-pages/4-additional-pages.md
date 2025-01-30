@@ -10,15 +10,15 @@ Estimated Time: 15 Minutes
 
 In this lab, you:
 
-- Create an Application Process
+- Create an Application Process.
 
-- Develop an Invoice Tracking page using Cards
+- Develop an Invoice Tracking page using Cards.
 
-- Create an Invoice Analysis page
+- Create an Invoice Analysis page.
 
 ## Task 1: Create an Application Process
 
-In this task, you create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter ':P3_ID'.
+In this task, you create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter 'P3_ID'.
 
 1. Navigate to **Shared Components**
 
@@ -38,9 +38,9 @@ In this task, you create an application process to retrieve the URL and MIME typ
 
     - On Point: **AJAX Callback: Run this application process when requested by page process**
 
-   Click **Next**.
+    Click **Next**.
 
-   ![Application Processes](images/process-identification.png " ")
+    ![Application Processes](images/process-identification.png " ")
 
 5. Source > Code: Copy and Paste below code into the code editor:
 
@@ -97,11 +97,13 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
    ![Select Cards](images/card.png " ")
 
-4. Enter/select the following details:
+4. Under **Create Cards** page, enter/select the following:
 
-    - Page Definition > Page Number: **2**
+    - Under Page Definition:
 
-    - Page Definition > Name: **Invoice Tracker**
+        - Page Number: **2**
+
+        - Name: **Invoice Tracker**
 
     - Data Source > Source Type: **SQL Query**
 
@@ -140,7 +142,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
     ![Invoice Tracker](images/cards-detail.png " ")
 
-5. Under Card Attributes:
+5. Under Card Attributes, enter/select the following:
 
     - Title Column: **FILE_NAME (Varchar2)**
 
@@ -150,7 +152,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
    ![Card Attributes](images/cards-attributes.png " ")
 
-6. In the left pane, select **Invoice Tracker** region and Under **Attributes**, Enter/select the following:
+6. In the **Rendering** tab, select **Invoice Tracker** region. In the Property Editor, navigate to **Attributes** tab, enter/select the following:
 
     - Under Card:
 
@@ -185,7 +187,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
 In this task, you create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
-1. Navigate to Create **(+ v)** in Page Designer toolbar and select **Page**.
+1. In the Page Designer toolbar, navigate to **(+ v)** in Page Designer toolbar and select **Page**.
 
    ![Click Page](images/create-blank-page.png " ")
 
@@ -195,9 +197,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
 3. On the Create Page dialog, enter/select the following:
 
-    - Page Definition > Page Number: **3**
+    - Under Page Definition:
 
-    - Page Definition > Name: **Invoice Analysis**
+        - Page Number: **3**
+
+        - Name: **Invoice Analysis**
 
     - Navigation > Use Breadcrumb: **Toggle Off**
 
@@ -207,7 +211,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
    ![Invoice Analysis](images/create-blank-page11.png " ")
 
-4. In the left Pane, right-click **Body**, and select **Create Page Item**.
+4. In the **Rendering** tab, right-click **Body**, and select **Create Page Item**.
 
     ![Create Page Item](images/create-page-item3.png " ")
 
@@ -227,7 +231,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Create Process](images/create-before-header.png " ")
 
-7. In the Property Editor, Enter/select the following details:
+7. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Prepare URL**
 
@@ -241,13 +245,13 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Preapare URL](images/prepare-url1.png " ")
 
-8. In the left pane, right-click **Body** and select **Create Region**.
+8. In the **Rendering** tab, right-click **Body** and select **Create Region**.
 
     ![Create Region](images/create-region4.png " ")
 
 9. In the property editor, enter/select the following details:
 
-    - Indentification > Name: **Uploaded File**
+    - Identification > Name: **Uploaded File**
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
 
@@ -265,7 +269,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Create Region Below](images/create-region-below.png " ")
 
-11. In the Property Editor, Enter/select the following details:
+11. In the Property Editor, enter/select the following details:
 
     - Under Identification:
 
@@ -305,7 +309,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     ![Generate Output](images/generated-output.png " ")
 
-12. In the left Pane, select **Page 3: Invoice Analysis** and update the following:
+12. In the **Rendering** tab, select root node **Page 3: Invoice Analysis** and enter/select the following:
 
     - Under Appearance:
 
@@ -319,15 +323,15 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
 13. Click **Save**.
 
-14. In the Page Designer toolbar, select **Page Selector** and Navigate to **Page 2: Invoice Tracker**.
+14. In the Page Designer toolbar, navigate **Page Finder** and select **Page 2: Invoice Tracker**.
 
-   ![Page 2: Invoice Tracker](images/navigate-to-2.png " ")
+    ![Page 2: Invoice Tracker](images/navigate-to-2.png " ")
 
 15. Under **Invoice Tracker** region, right-click **Actions** and select **Create Action**.
 
-   ![Create Action](images/creation-action2.png " ")
+    ![Create Action](images/creation-action2.png " ")
 
-16. In the property editor, enter/select the following details:
+16. In the property editor, enter/select the following:
 
     - Identification > Type: **Full Card**
 
@@ -339,19 +343,19 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
           Click **OK**.
 
-   ![Full Card](images/full-card.png " ")
+    ![Full Card](images/full-card.png " ")
 
 17. Click **Save**.
 
 18. In the Page Designer toolbar, select **Page Selector** and navigate to **Page 1: Home**.
 
-   ![Page 1: Home](images/navigate-to-home.png " ")
+    ![Page 1: Home](images/navigate-to-home.png " ")
 
 19. Under **Processing**, right-click **After Processing** and select **Create Branch**.
 
-   ![Create Branch](images/create-branch.png " ")
+    ![Create Branch](images/create-branch.png " ")
 
-20. In the property editor, enter/select the following details:
+20. In the property editor, enter/select the following:
 
     - Identification > Name: **Redirect to Page 2**
 
@@ -376,4 +380,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
