@@ -1,4 +1,4 @@
-# Create the shopping cart page
+# Create the Shopping Cart Page
 
 ## Introduction
 

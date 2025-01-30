@@ -1,4 +1,4 @@
-# Improve the products page
+# Improve the Products Page
 
 ## Introduction
 

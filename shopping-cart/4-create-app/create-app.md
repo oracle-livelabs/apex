@@ -1,4 +1,4 @@
-# Create the application
+# Create the Application
 
 ## Introduction
 

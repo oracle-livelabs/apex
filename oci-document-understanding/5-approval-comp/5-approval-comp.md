@@ -331,5 +331,5 @@ You now know how to create a Task Definition for Invoice Approval Requests. Addi
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

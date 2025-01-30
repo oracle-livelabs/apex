@@ -88,5 +88,5 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

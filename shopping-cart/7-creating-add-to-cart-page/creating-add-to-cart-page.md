@@ -1,4 +1,4 @@
-# Create the add to cart page
+# Create the Add to Cart Page
 
 ## Introduction
 

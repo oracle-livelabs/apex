@@ -1,4 +1,4 @@
-# Create a Database Package for Business Logic
+# Create Database Objects
 
 ## Introduction
 

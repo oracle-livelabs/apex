@@ -1,4 +1,4 @@
-# AI-Powered Text Generator and Chat Assistant for Product Reviews and Customer Enquiries
+# Build AI Generative text and Chat Assistant for Product Reviews and Customer Enquiries
 
 ## Introduction
 
@@ -15,6 +15,8 @@ Estimated Time: 20 minutes
 - Create Dynamic Actions for Text Generation using AI.
 
 - Add a chat assistant to handle product-related enquiries.
+
+>*Note: Before beginning this lab, ensure that AI is configured.*
 
 ## Task 1: Configure AI Attributes
 
@@ -143,7 +145,7 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
     !["Click App Builder"](images/summarise-appid.png "")
 
-2. Select **Page 18: Add to Cart**.
+2. Select root node **Page 18:Manage your Cart**.
 
     !["click edit application definition"](images/18-add-to-cart.png "")
 
@@ -220,6 +222,8 @@ In this task, you will set up an AI configuration and then add RAG sources to it
     | P18\_PRODUCT\_NAME | &PRODUCT_NAME. |
 
     Click **OK**.
+
+    ![create page wizard](./images/link-name.png " ")
 
 13. Click **Save**.
 

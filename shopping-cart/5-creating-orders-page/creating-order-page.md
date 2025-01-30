@@ -1,4 +1,4 @@
-# Create the order page
+# Create the Order Page
 
 ## Introduction
 

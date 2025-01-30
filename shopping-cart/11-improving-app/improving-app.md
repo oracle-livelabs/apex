@@ -1,4 +1,4 @@
-# Improve the application
+# Improve the Application
 
 ## Introduction
 
