@@ -24,7 +24,7 @@ In this lab, you will:
 
 ## Task 1: Create an Application
 
-1. On the workspace home page, click **'⌄'** next to **App Builder** and click **Create**.
+1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
 
    ![Click Create](images/create.png " ")
 
