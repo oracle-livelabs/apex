@@ -14,9 +14,11 @@ Estimated Time: 10 Minutes
 
 In this lab, you:
 
-- Create database objects using SQL Scripts
-- Create multiple Application Users
-- Create Web Credentials
+- Create database objects using SQL Scripts.
+
+- Create multiple Application Users.
+
+- Create Web Credentials.
 
 ## Task 1: Create database objects using SQL Scripts
 

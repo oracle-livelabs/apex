@@ -12,8 +12,9 @@ Estimated Time: 10 Minutes
 
 In this lab, you:
 
-- Generate API Keys using OCI Console
-- Create a Bucket in OCI Object Storage
+- Generate API Keys using OCI Console.
+
+- Create a Bucket in OCI Object Storage.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -23,7 +24,7 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click **My Profile** at the top-right corner.
+2. Click **My Profile** at the top-right corner and select **User Settings**.
 
     ![Profile Menu](images/profile.png " ")
 
@@ -35,7 +36,7 @@ To Generate the API Keys using OCI Console:
 
 5. Click **Download Private Key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
+   >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
@@ -71,7 +72,11 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
     ![Select Bucket](images/bucket-details.png " ")
 
-5. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information to upload an invoice to OCI Object Storage using Invoke API.
+5. Navigate to **OCIDocAI** Bucket.
+
+    ![Select Bucket](images/bucket.png " ")
+
+6. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information to upload an invoice to OCI Object Storage using Invoke API.
 
     ![Select Bucket](images/bucket-created.png " ")
 
@@ -84,4 +89,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
