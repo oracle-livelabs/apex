@@ -60,7 +60,7 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
 5. Click **Create**.
 
-    !["enter system prompt"](images/create-gen-ai.png "")
+    !["enter system prompt"](images/create-gen.png "")
 
 6. In the newly created Generative AI Configuration, navigate to **RAG Sources** tab and select **Create RAG Source**.
 
@@ -225,7 +225,7 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
 ## Task 4: Add a Chat Assistant for Product Enquiries
 
-1. On Page **1**, in the **Rendering** tab, right-click **Components** and select **Create Button**.
+1. On Page **1**, in the **Rendering** tab, right-click **Button Bar** and select **Create Button**.
 
     ![create page wizard](./images/create-button-enquiry.png " ")
 
@@ -242,12 +242,6 @@ In this task, you will set up an AI configuration and then add RAG sources to it
         - Hot: Toggle **On**
 
         - Icon: **fa-chatbot**
-
-    - Under Quick Actions:
-
-        - Message 1: **Products Available**
-
-        - Message 2: **Cost of Products**
 
     ![create page wizard](./images/enquiry-btn.png " ")
 
