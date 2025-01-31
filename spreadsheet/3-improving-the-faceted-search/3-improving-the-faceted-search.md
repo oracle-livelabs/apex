@@ -55,7 +55,7 @@ Reviewing the facets, you will notice that **Safe** is down the page and you can
 
 3. Currently the **Safe** facet is a checkbox group with range values. However, it is unlikely that users will want to select multiple safety percentage value, so you will convert it into a radio range group.
 
-    Continuing with **P3\_SAFE** selected, within the Property Editor (right pane), under **Settings**, toggle **ON** the **Select Multiple** button so that multiple values cannot be selected.
+    Continuing with **P3\_SAFE** selected, within the Property Editor (right pane), under **Settings**, toggle **OFF** the **Select Multiple** button so that multiple values cannot be selected.
 
     ![Update Safe facet attributes](images/set-safe.png " ")
 

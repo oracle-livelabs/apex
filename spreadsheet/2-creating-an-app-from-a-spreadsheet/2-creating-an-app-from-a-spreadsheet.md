@@ -1,4 +1,4 @@
-# CreatE an App from a Spreadsheet
+# Create an App from a Spreadsheet
 
 In this lab, you learn to create an APEX application using the data imported from a spreadsheet. You will learn to import a spreadsheet which consists of a list of High Schools in New York City. [Click here](files/nyc_high_schools.csv) to download the spreadsheet for this lab.
 

@@ -1,4 +1,4 @@
-# Use Maps and Progressive Web App
+# Add a Map Region and Install PWA
 
 ## Introduction
 
