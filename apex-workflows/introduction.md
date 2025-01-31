@@ -10,11 +10,23 @@ In this context, Workflows entail the automation of business processes, whether 
 
 With the first release of APEX Workflows, you can harness the following capabilities:
 
-- **Visual Workflow Designer**: Craft and author workflow models with ease
-- **Workflow Console**: Monitor and administer workflows efficiently
-- **Workflow Runtime (Engine)**: Execute workflows seamlessly
+- **Visual Workflow Designer**: Craft and author workflow models with ease.
 
-Estimated Time: 2 hours 35 minutes
+- **Workflow Console**: Monitor and administer workflows efficiently.
+
+- **Workflow Runtime (Engine)**: Execute workflows seamlessly.
+
+- **Workflow Runtime**: Runtime Engine for the execution of Workflows.
+
+- **Workflow API’s**: Public API (APEX_WORKFLOW package) and SQL Views.
+
+- **Approval Component**: Feature rich Approval Component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
+
+- **Workflow Dashboard**: For overview of in-flight instances.
+
+- **Visual Workflow Diagram**: To depict progress of Workflow at runtime.
+
+Estimated Time: 3 hours 45 minutes
 
 ## Simplify Business Process Management with Workflows
 
@@ -27,29 +39,30 @@ Stay tuned for a journey into the world of streamlined business process manageme
 ### Objectives
 
 In this workshop, you will:
-- Identify the manual and automated steps of your business process
-- Create the APEX application
-- Create the Doctor Appointment Workflow
-- Add Human Tasks to the Workflow
-- Add Activities and Connections to the Workflow
-- Create Pages for the APEX application
 
+- Identify the manual and automated steps of your business process.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+- Create the APEX application.
+
+- Create the Doctor Appointment Workflow.
+
+- Add Invoke Workflow.
+
+- Add Human Tasks to the Workflow.
+
+- Add Activities and Connections to the Workflow.
+
+- Create Pages for the APEX application.
 
 ## Downloads
 
-If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+If you are stuck or the app is not working as expected, you can download and install the completed application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflows.sql)**.
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/doctors-app-made-easy.sql) to download the completed application.
+Import them into your workspace. To run the app, please run the steps described in the following lab:
 
-2. Import the **doctors-app-made-easy.sql** file into your workspace. To import the app, go to **App Builder > Import**.
+1. Follow  Lab 2: Design the Application > Task 1: Create Application Users.
 
-3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-
-4. Once the application is installed, follow Lab 2 > Task 1 to create application users.
-
-5. All set. Now, run the application with the users you created and see it in action!
+> **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 
@@ -60,5 +73,6 @@ If you are stuck or the app is not working as expected, you can download and ins
 - [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
+
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, October 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

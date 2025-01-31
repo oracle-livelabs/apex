@@ -18,6 +18,10 @@
         "filename": "../../2-improving-products.md"
       },
       {
+        "title": "Lab 3: Improve Classic Report",
+        "filename": "../../3-improve-classic-report.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

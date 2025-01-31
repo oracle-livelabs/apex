@@ -10,11 +10,15 @@
         "filename": "../../../apex-professional-common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Migrate Applications",
+        "title": "Lab 1: Create a Working Copy to Merge, Refresh, or Compare",
+        "filename": "../../working-copy.md"
+      },
+      {
+        "title": "Lab 2: Migrate Applications",
         "filename": "../../migrating-applications.md"
       },
       {
-        "title": "Lab 2: Remote Deployment",
+        "title": "Lab 3: Remote Deployment",
         "filename": "../../remote-deployment.md"
       },
       {

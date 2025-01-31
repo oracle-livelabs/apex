@@ -11,7 +11,9 @@ Estimated Time: 15 Minutes
 In this lab, you:
 
 - Create an Application Process
+
 - Develop an Invoice Tracking page using Cards
+
 - Create an Invoice Analysis page
 
 ## Task 1: Create an Application Process
