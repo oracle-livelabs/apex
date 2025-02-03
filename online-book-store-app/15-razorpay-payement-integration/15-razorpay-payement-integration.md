@@ -14,7 +14,6 @@ In this lab, you will:
 - Create Rest Data Source
 - Integrate Payment Gateway
 
-
 ## Task 1: Create Web Credential
 
 1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
@@ -152,8 +151,6 @@ In this lab, you will:
 
 2. In the object tree, expand **Packages** and select **OBS\_MANAGE\_ORDERS** package.
 
-     ![Click Timeline](images/15-3-2-manage-orders-package.png " ")
-
 3. Under **Specification**, Replace procedure **create\_order** with the below code:
 
      ```
@@ -236,7 +233,7 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-2-page17.png " ")
 
-3. Right-click **Order Information** and Create the following three page items, one after the other:
+3. Right-click **Order Information** and create the following three page items, one after the other:
 
       | Name            |  Type   |  Value Protected |
       | --------------- |  ------ |  --------------- |
@@ -263,9 +260,9 @@ In this lab, you will:
 
 7. Select true action and in the property editor, enter/select the following:
 
-    - Under Identification > Action: **Submit Page**
+    - Identification > Action: **Submit Page**
 
-    - Under Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
+    - Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
 
     ![Click Timeline](images/15-4-7-da-action.png " ")
 
@@ -279,9 +276,9 @@ In this lab, you will:
 
 10. Select true action and enter/select the following:
 
-    - Under Identification > Action: **Execute Javascript Code**
+    - Identification > Action: **Execute Javascript Code**
 
-    - Under Settings > Code: Copy and Paste the below code
+    - Settings > Code: Copy and paste the below code
 
         ```
         <copy>
@@ -349,9 +346,9 @@ In this lab, you will:
 
 12. In the property editor, enter/select the following:
 
-    - Under Identification > Action: **Execute Server-side Code**
+    - Identification > Action: **Execute Server-side Code**
 
-    - Under Settings > PL/SQL Code: Copy and Paste the below code
+    - Settings > PL/SQL Code: Copy and paste the below code
 
         ```
         <copy>
@@ -380,7 +377,7 @@ In this lab, you will:
 
         - Operation: **POST**
 
-    - Under Execution > Sequence: **1**
+    - Execution > Sequence: **1**
 
     - Under Server-side Condition:
 
@@ -400,19 +397,19 @@ In this lab, you will:
 
              - PL/SQL Function Body: Copy and Paste the below code
 
-        ```
-        <copy>
-        return to_char(TO_NUMBER(:P17_TOTAL) * 100);
-        </copy>
-        ```
+                ```
+                <copy>
+                return to_char(TO_NUMBER(:P17_TOTAL) * 100);
+                </copy>
+                ```
 
     ![Click Timeline](images/15-4-15-para1.png " ")
 
     - **RESPONSE**
 
-        - Under Parameter > Ignore Output: **Toggle Off**
+        - Parameter > Ignore Output: **Toggle Off**
 
-        - Under Value > Item: **P17\_RESPONSE**
+        - Value > Item: **P17\_RESPONSE**
 
     ![Click Timeline](images/15-4-15-para2.png " ")
 
@@ -422,9 +419,9 @@ In this lab, you will:
 
 17. In the property editor, enter/select the following:
 
-    - Under Identification > Name: **Parse  Razorpay\_order\_id**
+    - Identification > Name: **Parse  Razorpay\_order\_id**
 
-    - Under Source > PL/SQL Code: Copy and Paste the below code
+    - Source > PL/SQL Code: Copy and paste the below code
 
         ```
         <copy>
@@ -433,7 +430,7 @@ In this lab, you will:
         </copy>
         ```
 
-    - Under Execution > Sequence: **2**
+    - Execution > Sequence: **2**
 
     - Under Server-side Condition:
 
@@ -483,7 +480,7 @@ In this lab, you will:
 
 21. In the property editor, enter/select the following:
 
-    - Under JavaScript > File URLs: Copy and Paste the below code
+    - JavaScript > File URLs: Copy and paste the below code
 
         ```
         <copy>
