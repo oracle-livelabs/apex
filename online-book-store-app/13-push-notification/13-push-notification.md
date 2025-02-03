@@ -24,7 +24,7 @@ In this lab, you will:
 
 3. Select **Progressive Web App** under **User Interface**.
 
-    ![Click My Apps](images/13-1-3-user-interface.png " ")
+    ![Click My Apps](images/13-1-3-user-interface1.png " ")
 
 4. Enter/Select the following:
 
@@ -61,7 +61,7 @@ In this lab, you will:
 
     ![Click My Apps](images/13-1-6-page50.png " ")
 
-7. Select **P50\_AVAILABILITY\_YN** and update the name to **P50\_AVAILABILITY**.
+7. Select **P50\_AVAILABILITY\_YN** under **Edit Book Details** region and update the name to **P50\_AVAILABILITY**.
 
     ![Click My Apps](images/13-1-7-avai-item.png " ")
 
@@ -77,7 +77,7 @@ In this lab, you will:
 
         - Type: **Hidden**
 
-    - Under Source > Form Region: **- Select -**
+    - Source > Form Region: **- Select -**
 
     - Under Default:
 
@@ -93,13 +93,9 @@ In this lab, you will:
 
 11. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    - Identification > Name: **Push Notification**
 
-        - Name: **Push Notification**
-
-     - Under Source:
-
-        - PL/SQL Code: Copy and Paste the below code:
+    - Source > PL/SQL Code: Copy and Paste the below code:
 
         ```
         <copy>
@@ -129,7 +125,7 @@ In this lab, you will:
         </copy>
          ```
 
-    - Under Execution > Sequence: **20**
+    - Execution > Sequence: **20**
 
     ![Click My Apps](images/13-1-11-process-details.png " ")
 
@@ -145,7 +141,7 @@ Progressive Web App is updated.
 
 2. Under **Navigation and Search**, click **Navigation Bar List**
 
-    ![close dialog](images/13-2-nav-bar-admin.png " ")
+    ![close dialog](images/13-2-nav-bar-admin2.png " ")
 
 3. Click **Navigation Bar**.
 
@@ -153,12 +149,14 @@ Progressive Web App is updated.
 
 4. Click **Create Entry**.
 
+    ![close dialog](images/13-2-4-navbar.png " ")
+
 5. Enter/select the following:
 
     - Under Entry:
 
         - Parent List Entry: **&USERNAME.**
-        
+
         - Sequence: **1**
 
         - Image/Class: **fa-gear**

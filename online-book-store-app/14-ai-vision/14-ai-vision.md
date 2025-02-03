@@ -24,7 +24,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 2. Under Data Sources, click **REST Data Sources**.
 
-   ![Click Timeline](images/rest-data-sources.png " ")
+   ![Click Timeline](images/rest-data-sources1.png " ")
 
 3. Click **Create**.
 
@@ -56,6 +56,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     - **Credentials**: apex\_ai\_cred
 
 8. Click **Create REST Source Manually**.
+
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
    ![Click Timeline](images/rest-data-authentication.png " ")
@@ -103,11 +104,11 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-   |   | Type | Name | Direction | Default Value | Static |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | Request or Response Body| RESPONSE | Out |
-   | 2 | HTTP Header| Content-Type | In | application/json | ON
-   {: title="POST Operation Parameters"}
+    |   | Type | Name | Direction | Default Value | Static |
+    |---|-------|------|----------| --------------| ------ |
+    | 1 | Request or Response Body| RESPONSE | Out |
+    | 2 | HTTP Header| Content-Type | In | application/json | ON
+    {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/response.png " ")
 
@@ -135,7 +136,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 1. Navigate to **Shared Components** and under **Workflows and Automations**, select **Automations**.
 
-    ![Click Timeline](images/14-2-1-automations.png " ")
+    ![Click Timeline](images/14-2-1-automations1.png " ")
+    ![Click Timeline](images/14-2-1-automations2.png " ")
 
 2. Click **Create**.
 
@@ -155,9 +157,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 5. Enter/Select the following:
 
-    - Under **Source**:
-
-        - Where Clause: **OBJECT\_DET IS NULL and BOOK\_IMAGE is NOT NULL**
+    - Source > Where Clause: **OBJECT\_DET IS NULL and BOOK\_IMAGE is NOT NULL**
 
     - Under Action Execution:
 
@@ -244,6 +244,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
         ```
     Click **Apply Changes**
 
+    ![Click Timeline](images/14-2-5-details0.png " ")
     ![Click Timeline](images/14-2-5-details1.png " ")
 
 6. Click **Save and Run**
@@ -260,9 +261,9 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 9. In the Property editor, enter/select the following:
 
-    - Under Identification > Name: **Call OCI Vision Automation**
+    - Identification > Name: **Call OCI Vision Automation**
 
-    - Under Source > PL/SQL Code: Copy and Paste the below code:
+    - Source > PL/SQL Code: Copy and Paste the below code:
 
         ```
         <copy>
@@ -270,7 +271,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
             p_static_id       => 'index-book-cover-with-oci-vision' );
         </copy>
          ```
-    - Under Execution > Sequence: **30**
+    - Execution > Sequence: **30**
 
     ![Click Timeline](images/14-2-9-process-details-calloci.png " ")
 
@@ -298,24 +299,23 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ```
     <copy>
-    create or replace trigger "OBS_BOOKS_T"
-    before
-    update  on "OBS_BOOKS"
-    for each row
-    begin
-    -- Hash the password so we are not saving clear text
-    if  :new.book_image !=  :old.book_image then
-    :new.object_det := null;
-    :new.text_det := null;
-    end if;
-    end;
+    CREATE OR REPLACE TRIGGER OBS_BOOKS_T
+    BEFORE UPDATE ON OBS_BOOKS
+    FOR EACH ROW
+    BEGIN
+    -- Reset object_det and text_det if book_image changes
+    IF :NEW.book_image != :OLD.book_image THEN
+        :NEW.object_det := NULL;
+        :NEW.text_det := NULL;
+    END IF;
+    END;
     /
     </copy>
         ```
 
 5. Click **Save and Compile**
 
-     ![Click Timeline](images/14-3-5-save-and-compile.png " ")
+     ![Click Timeline](images/14-3-5-save-and-compile1.png " ")
 
 ## Summary
 
