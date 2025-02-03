@@ -926,7 +926,7 @@ Create the user signUp Page
 
 4. In the Property editor, update the following:
 
-    - Under Security > Authentication: **Page is Public**
+    - Security > Authentication: **Page is Public**
 
     ![page-public](images/12-4-page-public.png " ")
 
@@ -936,7 +936,7 @@ Create the user signUp Page
 
 6. Select **P100000\_USERNAME**, **P100000\_PASSWORD**, **P100000\_FULL\_NAME** and update the following:
 
-    - Under Identification > Type: **Text Field**
+    - Identification > Type: **Text Field**
 
     ![page-public](images/12-4-page-items-text-field.png " ")
 
@@ -946,23 +946,25 @@ Create the user signUp Page
 
 8. Select **P100000\_PASSWORD** and in the property editor, update the following:
 
-    - Under Identification > Type: **Password**
-    - Under Appearance > Template: **Required - Floating**
-    - Under Validation > Value Required: **Toggle On**
+    - Identification > Type: **Password**
+
+    - Appearance > Template: **Required - Floating**
+
+    - Validation > Value Required: **Toggle On**
 
     ![page-public](images/12-4-password-prop.png " ")
 
 9. Select **P100000\_PROFILE\_PIC** and in the Property editor, enter/select the following:
 
-    - Under Identification > Type: **Image Upload**
+    - Identification > Type: **Image Upload**
 
-    - Under Storage > MIME Type Column: **MIME_TYPE**
+    - Storage > MIME Type Column: **MIME_TYPE**
 
     ![page-public](images/12-4-profile-pic-prop.png " ")
 
 10. Select **P100000\_IS\_ADMIN** and in the Property editor update the following:
 
-    - Under Identification > Type: **Hidden**
+    - Identification > Type: **Hidden**
 
     ![page-public](images/12-4-is-admin-prop.png " ")
 
@@ -980,13 +982,9 @@ Create the user signUp Page
 
 14. In the property editor, enter/select the following:
 
-    - Under Identification:
+    - Identification > Name: **Remove From Unverified Users Table**
 
-        - Name: **Remove From Unverified Users Table**
-
-    - Under Sources
-
-        - PL/SQL Code: Copy and paste the below code:
+    - Sources > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -1078,9 +1076,7 @@ Create the user signUp Page
 
         - Type: **Clear Session State**
 
-    - Under Server-side Condition:
-
-        - When Button pressed: **CREATE**
+    - Server-side Condition > When Button pressed: **CREATE**
 
     ![page-public](images/12-4-process3-prop.png " ")
 
@@ -1174,7 +1170,7 @@ Create the user signUp Page
 
 14. Click **Web Credentials**.
 
-    ![Click My Apps](images/12-5-14-web-cred.png " ")
+    ![Click My Apps](images/12-5-14-web-cred1.png " ")
 
 15. Click **Create**.
 
@@ -1197,7 +1193,8 @@ Create the user signUp Page
 
 17. Navigate to **App Builder** and select **Online Bookstore Application**.
 
-    ![Navigate to Online bookstore application](images/navigate-to-osa.png " ")
+    ![Navigate to Online bookstore application](images/navigate-to-osa1.png " ")
+    ![Navigate to Online bookstore application](images/navigate-to-osa2.png " ")
 
 18. Click **Shared Components**.
 
@@ -1216,16 +1213,24 @@ Create the user signUp Page
     ![Create Authentication Scheme](images/create-auth1.png " ")
 
 22. In the **Authentication Scheme**, Enter the following:
-    Under **Name**:
-    - Name: **GOOGLE**.
-    - Scheme Type: **Social Sign-In**.
 
-    Under **Settings**:
-    - Credential Store: **Google Authentication**
-    - Authentication Provider: Select **Google**
-    - Scope: **profile,email**
-    - Username: **email**
-    - Additional User Attributes: **profile,picture,email,username**
+    - Under **Name**:
+
+        - Name: **GOOGLE**.
+
+        - Scheme Type: **Social Sign-In**.
+
+    - Under **Settings**:
+
+        - Credential Store: **Google Authentication**
+
+        - Authentication Provider: Select **Google**
+
+        - Scope: **profile,email**
+
+        - Username: **email**
+
+        - Additional User Attributes: **profile,picture,email,username**
 
     Click **Create Authentication Scheme**
 
@@ -1243,7 +1248,7 @@ Create the user signUp Page
 
         - Switch in Session: **Enabled**
 
-    Click on **Apply Changes**
+    Click **Apply Changes**
 
     ![Authentication scheme displayed](images/12-5-24-google1.png " ")
 
@@ -1296,7 +1301,7 @@ Create the user signUp Page
 
 28. In the rendering tab, Select Page Item **P9999_USERNAME**
 
-    - Under Appearance > Value Placeholder: **Email Address or Username**
+    - Appearance > Value Placeholder: **Email Address or Username**
 
     ![Click My Apps](images/12-5-28-username-placeholder.png " ")
 
@@ -1326,9 +1331,9 @@ Create the user signUp Page
 
         - Target: Click **No Link Defined**
 
-            - Under Target > Page: **12**
+            - Target > Page: **12**
 
-            - Under Advanced > Request: **APEX_AUTHENTICATION=GOOGLE**
+            - Advanced > Request: **APEX_AUTHENTICATION=GOOGLE**
 
             Click **OK**.
 
@@ -1352,15 +1357,15 @@ Create the user signUp Page
 
         - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
-    - Under Execution > Sequence: **25**
+    - Execution > Sequence: **25**
 
-    - Under Server-side Condition > When Button Pressed: **Google**
-    
+    - Server-side Condition > When Button Pressed: **Google**
+
     ![Click My Apps](images/12-5-32-process-details.png " ")
 
 33. Select Login Process and update the following:
 
-    - Under Server-side Condition > When Button Pressed: **LOGIN**
+    - Server-side Condition > When Button Pressed: **LOGIN**
 
     ![Click My Apps](images/12-5-33-login-button.png " ")
 
