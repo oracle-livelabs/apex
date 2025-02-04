@@ -1,5 +1,4 @@
-# Create an AI Chat Assistant
-
+# Create Search Configurations with Oracle Vector Search
 ## Introduction
 
 In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
@@ -74,7 +73,7 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 2. In the Workspace Utilities page, select **Vector Providers**.
 
-    !["click workspace utilities"](images/click-workspace-utilities.png "")
+    !["click workspace utilities"](images/select-vector-providers.png "")
 
 3. In the Vector Providers page, click **Create**.
 
