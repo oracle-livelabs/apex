@@ -128,11 +128,11 @@ In this task, you create Faceted Search page which will display list of the book
 
 4. For Display as, select **Cards** and click **Refresh** to refresh the column statistics to provide better recommendations.
 
-    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)** and click **Next**.
+    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)**, and uncheck others before clicking **Next**.
 
     ![App builder home page](images/fs-cards.png " ")
 
-5. Click **Create Page**.
+5. We will proceed with the default Card Layout **Grid** using the default **Card Attributes**. Click **Create Page**.
 
     ![App builder home page](images/fs-create-page.png " ")
 

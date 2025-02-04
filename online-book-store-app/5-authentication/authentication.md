@@ -239,7 +239,7 @@ In this task, you will learn to create custom authentication.
 
 7. Click **Custom Authentication** and update the following:
 
-    - Login Processing > Post-Authentication Procedure Name : **OBS\_AUTH.POST\_AUTH**
+    - Login Processing > Pre-Authentication Procedure Name : **OBS\_AUTH.POST\_AUTH**
 
      Click **Apply Changes**.
 

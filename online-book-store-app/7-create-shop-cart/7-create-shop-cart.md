@@ -940,7 +940,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
    ![close dialog](images/navi-bar.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
    ![close dialog](images/navi-create-entry1.png " ")
 

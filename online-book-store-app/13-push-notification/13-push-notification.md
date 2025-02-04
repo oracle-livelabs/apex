@@ -110,17 +110,14 @@ In this lab, you will:
         if :P50_AVAILABILITY= 'Y' and :P50_AVAILABILITY_OLD= 'N' then
             apex_pwa.send_push_notification (
                     p_application_id => :app_id,
-                    p_user_name      => eachuser.username,
+                    p_user_name      => UPPER(eachuser.username),
                     p_title          => 'Book is available now',
                     p_body           => eachuser.title || ' by ' ||  eachuser.author || ' is now in stock.',
                     p_target_url     =>  apex_util.host_url || apex_page.get_url(p_page => 1,
                     p_plain_url       =>    true )
                     );
-
         end if;
-
         end loop;
-
         apex_pwa.push_queue;
         </copy>
          ```

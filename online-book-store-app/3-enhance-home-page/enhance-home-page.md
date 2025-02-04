@@ -241,13 +241,17 @@ In this lab, you will:
 
 1. Select **Search Results** region and enter/select the following:
 
-    - Order By: Click **P10\_ORDER\_BY,2 Order Bys** and enter the following and click **OK**:
+    - Order By:
 
-        | Clause |  Key | Display |
-        | --- |  --- | --- |
-        | "TITLE"asc  | TITLE| Title |
-        | "NEW\_PRICE"asc | NEW\_PRICE | Price|
-        | "DISCOUNT"desc| DISCOUNT | Discount |
+        - Type: **Item**
+
+        - Click **P10\_ORDER\_BY,2 Order Bys** and enter the following and click **OK**:
+
+            | Clause |  Key | Display |
+            | --- |  --- | --- |
+            | "TITLE"asc  | TITLE| Title |
+            | "NEW\_PRICE"asc | NEW\_PRICE | Price|
+            | "DISCOUNT"desc| DISCOUNT | Discount |
 
     ![App builder home page](images/order-by-item.png " ")
 
@@ -401,7 +405,7 @@ In this lab, you will:
 
      - Under Identification:
 
-         - Title: **Book Information**
+         - Name: **Book Information**
 
          - Type: **Classic Report**
 

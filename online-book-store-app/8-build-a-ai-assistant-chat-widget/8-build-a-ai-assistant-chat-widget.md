@@ -292,7 +292,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![close dialog](images/nav-bar1.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![close dialog](images/nav-create-entry1.png " ")
 
