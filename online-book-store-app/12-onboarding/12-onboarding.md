@@ -349,7 +349,7 @@ Create the forgot password Page
 
     ![close dialog](images/12-2-rest-page-public.png " ")
 
-5. In the left pane, right-click **Body** and click **Create Region**.
+5. In the left pane, right-click **Body** and select **Create Region**.
 
    ![close dialog](images/12-2-create-region-reset.png " ")
 
@@ -365,7 +365,7 @@ Create the forgot password Page
 
     ![close dialog](images/12-2-update-current-user1.png " ")
 
-7. Under **Update Current User** region, select all page items except **P100003\_USER\_ID**, **P100003\_EMAIL** and **P100003\_PASSWORD**, right-click and select **Delete**.
+7. Under **Update Current User** region, select all page items except **P100003\_EMAIL** and **P100003\_PASSWORD**, right-click and select **Delete**.
 
    ![close dialog](images/12-2-del-page-items.png " ")
 
@@ -377,17 +377,17 @@ Create the forgot password Page
 
     - Security > Session State Protection: **Unrestricted**
 
-    ![close dialog](images/12-2-email-details.png " ")
+    ![close dialog](images/12-2-emaildetails.png " ")
 
 9. Select **P100003\_PASSWORD** and update the following:
 
     - Identification > Type: **Password**
 
-    ![close dialog](images/12-2-pass-type.png " ")
+    ![close dialog](images/12-2-password-type.png " ")
 
 10. Right-click **P100003\_PASSWORD** and select **Create Validation**.
 
-    ![close dialog](images/12-2-pass-validation.png " ")
+    ![close dialog](images/12-2-password-validation.png " ")
 
 11. In the Property editor, enter/select the following:
 
@@ -411,11 +411,11 @@ Create the forgot password Page
 
         - Error > Error Message: **Password field should have some value.**
 
-    ![close dialog](images/12-2-not-null-valid.png " ")
+    ![close dialog](images/12-2-not-null-validation.png " ")
 
 12. Right-click **Update Current User** and select **Create Page Item**.
 
-    ![close dialog](images/12-2-page-item-reset.png " ")
+    ![close dialog](images/12-2-pageitem-reset.png " ")
 
 13. In the Property editor, enter/select the following:
 
@@ -425,15 +425,15 @@ Create the forgot password Page
 
         - Type: **Password**
 
-    ![close dialog](images/12-2-confirm-pass-reset.png " ")
+    ![close dialog](images/12-2-confirm-password-reset.png " ")
 
 14. Right-click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
 
-    ![close dialog](images/12-2-create-val-con.png " ")
+    ![close dialog](images/12-2-create-validation-con.png " ")
 
 15. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Not Null Validation1**
+    - Identification > Name: **Not Null Validation CF**
 
     - Under Validation:
 
@@ -453,11 +453,11 @@ Create the forgot password Page
 
     - Error > Error Message: **Password field should have some value.**
 
-    ![close dialog](images/12-2-not-null-cf.png " ")
+    ![close dialog](images/12-2-15-not-null-cf.png " ")
 
 16. Again, right-click **P100003\_CONFIRM\_PASSWORD** and select **Create Validation**.
 
-     ![close dialog](images/12-2-con-pass-create-vald.png " ")
+     ![close dialog](images/12-2-16-con-pass-create-vald.png " ")
 
 17. In the Property editor, enter/select the following:
 
@@ -483,11 +483,11 @@ Create the forgot password Page
 
     - Error > Error Message: **Confirm Password is not same as Password entered above.**
 
-    ![close dialog](images/12-2-compare-pass-valid.png " ")
+    ![close dialog](images/12-2-17-compare-pass-valid.png " ")
 
 18. Right-click **Update Current User** region and select **Create Sub-Region**.
 
-    ![close dialog](images/12-2-sub-region-reset.png " ")
+    ![close dialog](images/12-2-18-sub-region-reset.png " ")
 
 19. In the Property editor, enter/select the following:
 
@@ -505,11 +505,11 @@ Create the forgot password Page
 
             Click **OK**.
 
-    ![close dialog](images/12-2-button-reset.png " ")
+    ![close dialog](images/12-2-19-button-reset.png " ")
 
 20. Right-click **Buttons** and select **Create Button**.
 
-    ![close dialog](images/12-2-create-btn-reset.png " ")
+    ![close dialog](images/12-2-20-create-btn-reset.png " ")
 
 21. In the Property editor, enter/select the following:
 
@@ -529,11 +529,11 @@ Create the forgot password Page
 
             Click **OK**.
 
-    ![close dialog](images/12-2-cancel-reset.png " ")
+    ![close dialog](images/12-2-21-cancel-reset.png " ")
 
 22. Right-click **CANCEL** and select **Create Dynamic Action**.
 
-    ![close dialog](images/12-2-create-dyn-act-reset.png " ")
+    ![close dialog](images/12-2-22-create-dyn-act-reset.png " ")
 
 23. In the Property editor, enter/select the following:
 
@@ -541,11 +541,11 @@ Create the forgot password Page
 
     - When > Event: **Click**
 
-    ![close dialog](images/12-2-canel-dialog-reset.png " ")
+    ![close dialog](images/12-2-23-canel-dialog-reset.png " ")
 
 24. Right-click **Buttons** and select **Create Button**.
 
-    ![close dialog](images/12-2-create-button-save.png " ")
+    ![close dialog](images/12-2-24-create-button-save.png " ")
 
 25. In the Property editor, enter/select the following:
 
@@ -561,13 +561,13 @@ Create the forgot password Page
 
     - Behavior > Database Action: **SQL UPDATE action**
 
-    ![close dialog](images/12-2-save-btn-reset.png " ")
+    ![close dialog](images/12-2-25-save-btn-reset.png " ")
 
 26. Select  **Buttons** and in the Property editor, update the following:
 
     - Layout > Sequence: **70**
 
-    ![close dialog](images/12-2-buttons-layout.png " ")
+    ![close dialog](images/12-2-26-buttons-layout.png " ")
 
 27. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
