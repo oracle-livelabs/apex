@@ -209,7 +209,7 @@ In this task, you set up entries for authenticated and public users, create a lo
 
     ![close dialog](images/10-2-condition-type.png " ")
 
-5. Click **Create Entry**.
+5. Click **Create List Entry**.
 
     ![close dialog](images/10-2-nav-create-entry1.png " ")
 
@@ -791,9 +791,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     - Settings > Prevent Lost Updates: **Toggle Off**
 
-    - Success Message > Success Message: **Reset Password Successfully!**
+    - Success Message > Success Message: **Password Reset Completed Successfully!**
 
-    ![close dialog](images/10-4-change-pass.png " ")
+    ![close dialog](images/10-4-change-password.png " ")
 
 28. Right-click **After Processing** and select **Create Branch**.
 
@@ -955,15 +955,15 @@ Application Computation, navigate back to the shared component and under **Appli
 
 14. Click **Create** and enter/select the following:
 
-    - Under Item > Computation Item: **PICTURE\_URL**
+    - Item > Computation Item: **PICTURE\_URL**
 
-    - Under Frequency > Computation Point: **Before Header**
+    - Frequency > Computation Point: **Before Header**
 
     - Under Computation:
 
         - Computation Type: **SQL Query (return single value):**
 
-        - Code: Copy and paste the below code:
+        - Computation: Copy and paste the below code:
 
         ```
         <copy>
@@ -1071,4 +1071,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

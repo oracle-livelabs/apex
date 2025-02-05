@@ -782,4 +782,4 @@ In this lab, you have learned how to enhance the Book Details page by creating a
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

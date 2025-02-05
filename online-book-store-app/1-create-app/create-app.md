@@ -153,4 +153,4 @@ You now know how to create an application along with editing an icon of the appl
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

@@ -84,8 +84,7 @@ update Image/Class: **fa-database-file**. Click **Apply Changes**.
 
     ![close dialog](images/11-1-10-enter-icon.png " ")
 
-11. Click **Users Role** and
-update Image/Class: **fa-table**. Click **Apply Changes**.
+11. Click **User Role** and update Image/Class: **fa-table**. Click **Apply Changes**.
 
     ![close dialog](images/11-1-11-edit-user.png " ")
 
@@ -141,7 +140,7 @@ In this task, you will add a navigation bar entry for the administration page. A
 
     ![close dialog](images/11-2-nav-bar-admin1.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![close dialog](images/11-2-create-nav-entry-admin.png " ")
 
@@ -368,7 +367,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
         - Page items to submit: **P40\_SEARCH**
 
-    - Layout > Position: **Left Column**
+    - Layout > Slot: **Left Column**
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
@@ -560,7 +559,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
         - Name: **Refresh Book Details**
 
-        - Type: **Refresh**
+        - Action: **Refresh**
 
     - Under Affected Elements:
 
@@ -736,7 +735,7 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/create-page-book.png " ")
 
-5. Select **Page 50: Book Details** and update the following:
+5. Select **Page 50: Edit Book Details** and update the following:
 
     - Dialog > Chained: **Toggle Off**
 
@@ -756,23 +755,11 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/11-5-cols-update.png " ")
 
-9. Select **P50\_AVAILABILE\_YN** and enter/select the following:
-
-    - Under Identification:
-
-        - Name: **P50\_AVAILABILITY**
-
-        - Type: **SWITCH**
-
-    - Layout > Label: **Availability**
-
-    ![close dialog](images/11-5-ava-y-n.png " ")
-
-10. Right-click **Edit Book Details** and select **Create Page Item**.
+9. Right-click **Edit Book Details** and select **Create Page Item**.
 
     ![close dialog](images/11-5-create-page-item-book.png " ")
 
-11. In the property editor, enter/select the following:
+10. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -784,7 +771,7 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/11-5-response-clob.png " ")
 
-12. Rearrange the Page Items in the following order by drag and drop.
+11. Rearrange the Page Items in the following order by drag and drop.
     | Page Items   |
     | ----------   |
     | P50\_BOOK_ID  |
@@ -804,21 +791,20 @@ In this task, you will develop a form for detailed editing of book records.
 
     ![close dialog](images/11-5-reaarange1.png " ")
 
-13. Click **Save**.
+12. Click **Save**.
 
-14. Run the application and select **Adminstration** from the navigation bar.
-
+13. Run the application and log in as User01 (admin). The Administrator option is visible only with admin rights. Select **Administration** from the navigation bar.
     ![close dialog](images/11-5-14-administration.png " ")
 
-15. You can view the list which you have created.
+14. You can view the list which you have created.
 
     ![close dialog](images/11-5-15-admin-list.png " ")
 
-16. Click **Manage Books Information**. On this page, you can search for any book.
+15. Click **Manage Books Information**. On this page, you can search for any book. Select first book.
 
     ![close dialog](images/11-5-16-update-book-info-page.png " ")
 
-17. Click **Edit** to update the book details.
+16. Click **Edit** to update the book details.
 
     ![close dialog](images/11-5-book-details-drawer.png " ")
 
@@ -866,7 +852,7 @@ In this task, you will create pages for viewing and updating user roles using in
 
     ![close dialog](images/11-6-columns.png " ")
 
-7. Select **Choose Password, Profile Pic, Mime Type and Picture URL** and move them to the **Do Not Display** section. Click **Apply**.
+7. Select **Password, Profile Pic, Mime Type and Picture URL** and move them to the **Do Not Display** section. Click **Apply**.
 
     ![close dialog](images/11-6-don-notdisplay.png " ")
 
@@ -925,4 +911,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

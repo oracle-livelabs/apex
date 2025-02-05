@@ -71,7 +71,7 @@ In this lab, you will:
 
     ```
     <copy>
-    Help me create a query that returns some column from obs_wishlist and obs_books tables.
+    Help me write a query that returns the below mentioned columns from obs_wishlist and obs_books tables.
 
     book_id,
     author,
@@ -81,44 +81,41 @@ In this lab, you will:
     discount,
     price
 
-    Calculate new_price after discount as well and round price and new_price by 2 decimal digits and filtering id of the user
+    Additionally, compute the new_price after applying the discount, ensuring that both price and new_price are rounded to two decimal places while filtering the user's ID.
     </copy>
     ```
 
-    ![Page Designer](images/enter-prompt.png ' ')
+    ![Page Designer](images/9-1-6-enter-prompt.png ' ')
 
 7. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**.
 
-    ![Page Designer](images/insert-query.png ' ')
+    ![Page Designer](images/9-1-7-insert-query.png ' ')
 
 8. The SQL query is inserted into the Code Editor. Make sure *your user\_id* is **:USER\_ID**. Click **Validate**. The SQL query should look like the following:
 
     ```
     <copy>
-    SELECT
-        ow.book_id,
-        ob.author,
-        ob.book_image,
-        ob.title,
-        ob.description,
-        ob.discount,
-        ROUND(ob.price, 2) AS price,
-        ROUND(ob.price * ((100 - ob.discount) / 100), 2) AS new_price
-    FROM
-        obs_wishlist ow
-    JOIN
-        obs_books ob ON ow.book_id = ob.book_id
-    WHERE
-        ow.user_id = :USER_ID;
-
+    select 
+        wl.book_id,
+        b.author,
+        b.book_image,
+        b.title,
+        b.description,
+        b.discount,
+        round(b.price, 2)       as price,
+        round(b.price * (1 - b.discount / 100), 2) as new_price
+    from obs_wishlist wl
+    join obs_books    b
+        on wl.book_id = b.book_id
+    where wl.user_id = :USER_ID;
     </copy>
     ```
 
-    ![Page Designer](images/edit-validate.png ' ')
+    ![Page Designer](images/9-1-8-edit-validate.png ' ')
 
 9. If the validation is successful, click **OK**.
 
-    ![Page Designer](images/success-ok.png ' ')
+    ![Page Designer](images/9-1-9-success-ok.png ' ')
 
 10. Under **Order By**, enter/select the following:
 
@@ -449,7 +446,7 @@ In this lab, you will:
 
     ![close dialog](images/nav-bar-wish.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![close dialog](images/create-wishlist-nav-entry.png " ")
 
@@ -478,4 +475,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

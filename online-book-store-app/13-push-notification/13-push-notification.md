@@ -61,7 +61,13 @@ In this lab, you will:
 
     ![Click My Apps](images/13-1-6-page50.png " ")
 
-7. Select **P50\_AVAILABILITY\_YN** under **Edit Book Details** region and update the name to **P50\_AVAILABILITY**.
+7. Select **P50\_AVAILABILITY\_YN** under **Edit Book Details** region and update the following:
+
+    - Under Identification:
+
+        - Name: **P50\_AVAILABILITY**
+
+        - Label: **Availability**
 
     ![Click My Apps](images/13-1-7-avai-item.png " ")
 
@@ -95,7 +101,7 @@ In this lab, you will:
 
     - Identification > Name: **Push Notification**
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+    - Source > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -144,7 +150,7 @@ Progressive Web App is updated.
 
     ![close dialog](images/13-2-nav-bar-admin1.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![close dialog](images/13-2-4-navbar.png " ")
 
@@ -188,4 +194,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Aug 2024
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

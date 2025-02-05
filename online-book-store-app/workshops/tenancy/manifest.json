@@ -70,9 +70,15 @@
         "filename": "../../15-razorpay-payement-integration/15-razorpay-payement-integration.md"
       },
       {
+        "title": "Lab 16: [Additional] UI Enhancements",
+        "filename": "../../16-additional-ui-enhancements/16-additional-ui-enhancements.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
       }
     ]
 }
+
+
