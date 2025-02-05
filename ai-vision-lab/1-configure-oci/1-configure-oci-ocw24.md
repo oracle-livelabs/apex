@@ -8,20 +8,19 @@ Web credentials are used to authenticate connection to external REST services, o
 
 Creating Web Credentials securely stores and encrypts authentication credentials for use by Oracle APEX components and APIs. Credentials cannot be retrieved back in clear text. Credentials are stored at the workspace level and therefore are visible to all applications.
 
-
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Create Web Credentials in Oracle APEX
 
 ## Prerequisites
+
 - Download the zip file from [Your OCI API key](?lab=hol3318)
 
-
 ## Task 1: Create Web Credentials in Oracle APEX
-
 
 To create a Web Credential in Oracle APEX:
 
@@ -62,9 +61,9 @@ To create a Web Credential in Oracle APEX:
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds.png " ")
+      ![Web Credentials page](images/web-creds.png " ")
 
-5. Click **Create**.
+7. Click **Create**.
 
 ## Summary
 

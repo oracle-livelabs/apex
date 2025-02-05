@@ -73,7 +73,6 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     - Database Operation: -Not Mapped-
 
     - Request Body Template: **Copy and paste the JSON given below.**
-
     ```
     <copy>
       {
@@ -91,7 +90,6 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
       }
     <copy>
      ```
-
     ![Click Timeline](images/edit-post.png " ")
 
     ![Click Timeline](images/post.png " ")

@@ -23,7 +23,7 @@ In this workshop, you:
 - Seamlessly link APEX with OCI Vision Service through REST Data Sources.
 --->
 
-### Prerequisites for Building this App:
+### Prerequisites for Building this App
 
 - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 

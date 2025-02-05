@@ -25,7 +25,7 @@ In the Property Editor, under Identification > Type, select **Image Upload**.
 
     ![Page Designer view of the Timeline page](images/image-upload.png " ")
 
-2. In the Property editor, enter/select the following:
+2. In the Property editor, select the following:
 
     - Display > Display As: **Block Dropzone**
 
@@ -54,8 +54,7 @@ In this task, you add a Share button that allows a user to share the post via em
 **Note**:
 
 - On macOS, Share will **NOT** work on Chrome and Firefox browsers. Use Edge or Safari browsers.
-
-- On Windows, Share will **NOT** work on Edge browser. Use Chrome, Edge or Safari browsers.
+- On Windows, Share will **NOT** work on Edge browser. Use Chrome or Safari browsers.
 
 1. Navigate to the Timeline page. Under the **Timeline** region, right-click **Actions** and select **Create Action**.
 
@@ -152,7 +151,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
 7. In the left pane, under **action-share**, click on the **True** action. Now, in the property editor, update the following properties:
 
-    - **Identification > Action**: Share
+    - Identification > Action: **Share**
 
     - Under Settings:
 
@@ -276,7 +275,7 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     - Type: **Execute Code**
 
-    - Code:
+    - Code: Copy and paste the below code:
 
         ```
         <copy>
