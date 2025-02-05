@@ -6,7 +6,7 @@ In today's data-driven world, the ability to extract valuable insights from visu
 
 In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI Vision for the classification and text detection of images. By integrating OCI Vision with Oracle APEX, businesses can tap into the power of visual intelligence, transforming their data analysis capabilities and revolutionizing user experiences.
 
-Estimated Time: 1 hour
+Estimated Time: 1 hour and 20 minutes
 
 ### Objectives
 
@@ -31,7 +31,7 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Downloads
 

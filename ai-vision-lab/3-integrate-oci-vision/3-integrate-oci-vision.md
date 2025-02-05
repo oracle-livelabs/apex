@@ -112,7 +112,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     | 2   | HTTP Header              | Content-Type | In        | application/json | ON     |
     {: title="POST Operation Parameters"}
 
-    ![Click Timeline](images/response.png " ")on
+    ![Click Timeline](images/response.png " ")
 
     ![Click Timeline](images/content-type.png " ")
 14. Click **Apply Changes**.
@@ -130,7 +130,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/select-timeline1.png " ")
 
-3. Right-click **Timeline** region in the Rendering Pane and click **Create Page Item**.
+3. Right-click **Timeline** region in the Rendering Pane and Select **Create Page Item**.
 
    ![Click Timeline](images/create-page-item2.png " ")
 
@@ -160,7 +160,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/analyze-image1.png " ")
 
-7. Right click on the **Analyze Image** Process and select **Add Child Process**.
+7. Right click on the **Analyze Image** process and select **Add Child Process**.
 
     ![Click Timeline](images/add-child-process11.png " ")
 
@@ -172,8 +172,6 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
         - Type: **Invoke API**
 
-        - Execution Chain: **Analyze Image**
-
     - Under Settings:
 
         - Type: **REST Source**
@@ -184,7 +182,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/child-process11.png " ")
 
-9. Click **COMPARTMENT\_ID** and enter the following:
+9. Expand Parameters and Select **COMPARTMENT\_ID** and enter the following:
 
     - Under Value:
 
@@ -196,7 +194,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
    ![Click Timeline](images/compartment-id.png " ")
 
-10. Click **FEATURE_TYPE** and enter the following:
+10. Select **FEATURE_TYPE** and enter the following:
 
     - Under Value:
 
@@ -206,14 +204,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click Timeline](images/feature-type.png " ")
 
-11. Click **FILE_DATA** and enter the following:
+11. Select **FILE_DATA** and enter the following:
 
     - Under Value:
 
-        - Type: **SQL Query(Return Single Value)**
+        - Type: **SQL Query (Return Single Value)**
 
         - SQL Query: Copy and paste the below code in the SQL Code editor:
-
       ```
       <copy>
       select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
@@ -221,10 +218,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
        where ID = :P1_ID;
       <copy>
       ```
-
     ![Click Timeline](images/file-data.png " ")
 
-12. Click **RESPONSE** and enter the following:
+12. Select **RESPONSE** and enter the following:
 
     - Parameter > Disable **Ignore Output**
 
@@ -242,26 +238,26 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     - Source > PL/SQL Code: Copy and paste the below code in the PL/SQL Code editor:
 
-    ```
-    <copy>
-    UPDATE SM_POSTS
-    SET
-    AI_OUTPUT = (
-        SELECT
-            LISTAGG(obj_name, ',') WITHIN GROUP(
-            ORDER BY
-                obj_name
-            )
-        FROM
-            JSON_TABLE ( :P1_RESPONSE, '$.labels[*]'
-                COLUMNS
-                    obj_name VARCHAR2 ( 100 ) PATH '$.name[*]'
-            )
-      )
-     WHERE
-     ID = :P1_ID;
-     <copy>
-     ```
+        ```
+        <copy>
+        UPDATE SM_POSTS
+        SET
+        AI_OUTPUT = (
+            SELECT
+                LISTAGG(obj_name, ',') WITHIN GROUP(
+                ORDER BY
+                    obj_name
+                )
+            FROM
+                JSON_TABLE ( :P1_RESPONSE, '$.labels[*]'
+                    COLUMNS
+                        obj_name VARCHAR2 ( 100 ) PATH '$.name[*]'
+                )
+        )
+        WHERE
+        ID = :P1_ID;
+        <copy>
+        ```
 
     ![Click Timeline](images/parse-response1.png " ")
 
@@ -271,7 +267,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
 
-1. Under Processing, Right-click **Image Classification** and Select **Duplicate**. Drag and drop it under Parse Image classification Response.
+1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under **Parse Image classification Response**.
 
     ![Click Timeline](images/duplicated1.png " ")
 
@@ -279,21 +275,21 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
 2. In the Property Editor, enter the following:
 
-   - Identification > Name: **Text Detection**
+    - Identification > Name: **Text Detection**
 
-   ![Click Timeline](images/text-detection.png " ")
+        ![Click Timeline](images/text-detection.png " ")
 
-3. Under Parameters, Click **FEATURE_TYPE** and enter the following:
+3. Expand Parameters, select **FEATURE_TYPE** and enter the following:
 
-   - Under Value :
+    - Under Value :
 
         - Type: **Static Value**
 
         - Value: **TEXT_DETECTION**
 
-    ![Click Timeline](images/feature-type1.png " ")
+        ![Click Timeline](images/feature-type1.png " ")
 
-4. Right click on the **Parse Image classification Response** child process and select **Duplicate**.Drag and drop it under Text Detection.
+4. Right click on the **Parse Image classification Response** child process and select **Duplicate**. Drag and drop it after **Text Detection**.
 
     ![Click Timeline](images/duplicate2.png " ")
 
@@ -326,7 +322,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
         <copy>
         ```
 
-     ![Click Timeline](images/parse-text.png " ")
+        ![Click Timeline](images/parse-text.png " ")
 
 6. Click **Save**.
 
