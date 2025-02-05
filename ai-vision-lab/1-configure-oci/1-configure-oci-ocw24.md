@@ -23,7 +23,6 @@ In this lab, you:
 ## Task 1: Create Web Credentials in Oracle APEX
 
 
-
 To create a Web Credential in Oracle APEX:
 
 1. Login into your Oracle APEX workspace.
