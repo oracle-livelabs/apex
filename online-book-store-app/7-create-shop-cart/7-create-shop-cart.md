@@ -229,7 +229,7 @@ WHERE
 
     ![close dialog](images/quantity1.png " ")
 
-16. Click **Page 17: Shopping Cart** and under **Execute when Page Loads**: Copy and paste the below code:
+16. Click **Page 17: Shopping Cart** and under JavaScript, **Execute when Page Loads**: Copy and paste the below code:
 
      ```
     <copy>
@@ -1012,20 +1012,20 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         ```
         <copy>
-        select  distinct
-            oi.book_id as book_id,
-            bi.book_image as book_image,
-            bi.buy_links as buy_links,
-            bi.title as title,
-            Round(oi.price,2) as price,
-            bi.description as description,
-            bi.discount,
-            sum(oi.quantity) OVER (PARTITION BY oi.book_id) AS quantity,
-            Round((oi.price * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS total_price,
-            Round((oi.price *((100- oi.discount)/100) * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS new_total_price
-        from obs_order_items oi, obs_books bi, obs_orders o
-        where o.order_id = oi.order_id and o.user_id = :USER_ID
-            and oi.book_id(+) = bi.book_id;
+            select  distinct
+                oi.book_id as book_id,
+                bi.book_image as book_image,
+                bi.buy_links as buy_links,
+                bi.title as title,
+                Round(oi.price,2) as price,
+                bi.description as description,
+                bi.discount,
+                sum(oi.quantity) OVER (PARTITION BY oi.book_id) AS quantity,
+                Round((oi.price * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS total_price,
+                Round((oi.price *((100- oi.discount)/100) * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS new_total_price
+            from obs_order_items oi, obs_books bi, obs_orders o
+            where o.order_id = oi.order_id and o.user_id = :USER_ID
+                and oi.book_id(+) = bi.book_id;
         </copy>
          ```
 

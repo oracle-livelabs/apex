@@ -425,7 +425,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     ![close dialog](images/10-3-save-btn.png " ")
 
-22. Right-click **SAVE** and select **Create Duplicate**
+22. Right-click **SAVE** and select **Duplicate**
 
     ![close dialog](images/10-3-duplicate-btn.png " ")
 

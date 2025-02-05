@@ -393,7 +393,7 @@ In this lab, you will:
 
     ![close dialog](images/process1-para1.png " ")
 
-    - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
+    - p\_user\_id > under value > Type: **Item**,  Item > Application: **USER\_ID**
 
     ![close dialog](images/process1-para2.png " ")
 
@@ -423,7 +423,8 @@ In this lab, you will:
 
     - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
     ![close dialog](images/process2-para1.png " ")
-    - p\_user\_id > under value > Type: **Item**,  Item: **USER\_ID**
+
+    - p\_user\_id > under value > Type: **Item**,  Item > Application: **USER\_ID**
     ![close dialog](images/process2-para2.png " ")
 
 12. Select **Close Dialog** process and update **Sequence**: **100** under **Execution**.
