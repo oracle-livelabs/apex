@@ -17,8 +17,7 @@ In this lab, you:
 
 ## Task 1: Import the Social Media Application
 
-1. On the Workspace home page, click the **App Builder** icon.
-   On the App Builder home page, click **Import**.
+1. Navigate to the **App Builder** and click **Import**.
 
     ![Click Import](images/app-builder.png " ")
 
