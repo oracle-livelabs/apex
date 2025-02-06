@@ -8,7 +8,7 @@ Estimated Time: 10 Minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
 - Define and organize facets for the faceted search page to filter data effectively.
 - Define and personalize the interactive report views, allowing end-users to interact with and save their report configurations.
@@ -187,7 +187,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
     ![App Builder](images/nav-menu3.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![App Builder](images/create-entry.png " ")
 

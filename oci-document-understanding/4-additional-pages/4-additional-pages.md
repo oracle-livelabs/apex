@@ -317,7 +317,7 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
         - Dialog Template: **Modal Dialog**
 
-        - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and Click **OK**.
+        - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and click **OK**.
 
     ![Modal Dialog](images/modal-dialog.png " ")
 

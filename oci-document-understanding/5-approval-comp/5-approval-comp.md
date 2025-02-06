@@ -171,7 +171,7 @@ In this lab, you:
 
     ![Click Application ID](./images/app-id8.png " ")
 
-2. Select **1 - Process Your Invoice** page.
+2. Select **1 - Home** page.
 
    ![Home - 1](./images/home1.png " ")
 
@@ -319,7 +319,7 @@ In this lab, you:
 
         - Target > Page: **3**
 
-        - Set Items > Name: **P3\_ID**, Value: **#PARAM\_VALUE#** and Click **OK**.
+        - Set Items > Name: **P3\_ID**, Value: **#PARAM\_VALUE#** and click **OK**.
 
     Click **Save**.
 

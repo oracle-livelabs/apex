@@ -22,7 +22,7 @@ In this lab, you:
 
 ## Task 1: Create database objects using SQL Scripts
 
-1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and Select **SQL Scripts**.
+1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
 
     ![Select Quick SQL](images/sql_script.png " ")
 
