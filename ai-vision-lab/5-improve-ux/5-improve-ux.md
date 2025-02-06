@@ -167,8 +167,8 @@ In this task, you add a Share button that allows a user to share the post via em
 
             ```
              <copy>
-                SELECT FILE_BLOB, FILE_NAME, FILE_MIME
-                FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
+             SELECT FILE_BLOB, FILE_NAME, FILE_MIME
+             FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
              </copy>
             ```
 
@@ -233,9 +233,9 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     ```
      <copy>
-        SELECT r.id, p.created_by as post_owner, r.created_by as liked_by
-        from SM_POSTS p, SM_REACTIONS r
-        where p.id (+) = r.post_id and r.notified = 'N'
+     SELECT r.id, p.created_by as post_owner, r.created_by as liked_by
+     from SM_POSTS p, SM_REACTIONS r
+     where p.id (+) = r.post_id and r.notified = 'N'
      </copy>
     ```
 
@@ -279,7 +279,7 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
         ```
          <copy>
-        update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
+         update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
          </copy>
         ```
 

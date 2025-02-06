@@ -75,19 +75,19 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     - Request Body Template: **Copy and paste the JSON given below.**
         ```
          <copy>
-      {
-         "compartmentId": "#COMPARTMENT_ID#",
-         "image": {
-         "source": "INLINE",
-         "data": "#FILE_DATA#"
-       },
-      "features": [
-      {
-            "featureType": "#FEATURE_TYPE#",
-            "maxResults": 5
+         {
+             "compartmentId": "#COMPARTMENT_ID#",
+             "image": {
+             "source": "INLINE",
+             "data": "#FILE_DATA#"
+         },
+         "features": [
+         {
+                 "featureType": "#FEATURE_TYPE#",
+                 "maxResults": 5
+             }
+             ]
          }
-        ]
-      }
          </copy>
         ```
     ![Click Timeline](images/edit-post.png " ")
@@ -212,13 +212,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
         - SQL Query: Copy and paste the below code in the SQL Code editor:
 
-        ```
-         <copy>
-      select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
-       from SM_posts
-       where ID = :P1_ID;
-         </copy>
-        ```
+            ```
+             <copy>
+             select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
+             from SM_posts
+             where ID = :P1_ID;
+             </copy>
+            ```
     ![Click Timeline](images/file-data.png " ")
 
 12. Select **RESPONSE** and enter the following:
@@ -257,7 +257,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
         )
         WHERE
         ID = :P1_ID;
-         <copy>
+         </copy>
         ```
 
     ![Click Timeline](images/parse-response1.png " ")
@@ -304,9 +304,9 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
         ```
          <copy>
-        UPDATE SM_POSTS
-        SET
-        AI_OUTPUT_TD = (
+         UPDATE SM_POSTS
+         SET
+         AI_OUTPUT_TD = (
             SELECT
                 LISTAGG(obj_name, ',') WITHIN GROUP(
                 ORDER BY
@@ -317,10 +317,10 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
                     COLUMNS
                         obj_name VARCHAR2 ( 100 ) PATH'$.text[*]'
                 )
-        )
-        WHERE
-        ID = :P1_ID;
-         <copy>
+         )
+         WHERE
+         ID = :P1_ID;
+         </copy>
         ```
 
         ![Click Timeline](images/parse-text.png " ")
@@ -374,7 +374,7 @@ In this task, you create a search bar where the end user can enter the search te
              )
              )OR :P1_AI_SEARCH IS NULL
              order by p.created desc;
-            <copy>
+             </copy>
             ```
 
         - Page items to Submit: Select **P1\_AI\_SEARCH**
