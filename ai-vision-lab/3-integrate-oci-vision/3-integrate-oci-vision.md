@@ -243,9 +243,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
         ```
          <copy>
-        UPDATE SM_POSTS
-        SET
-        AI_OUTPUT = (
+         UPDATE SM_POSTS
+         SET
+         AI_OUTPUT = (
             SELECT
                 LISTAGG(obj_name, ',') WITHIN GROUP(
                 ORDER BY
@@ -256,9 +256,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
                     COLUMNS
                         obj_name VARCHAR2 ( 100 ) PATH '$.name[*]'
                 )
-        )
-        WHERE
-        ID = :P1_ID;
+         )
+         WHERE
+         ID = :P1_ID;
          </copy>
         ```
 
