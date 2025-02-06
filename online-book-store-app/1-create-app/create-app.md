@@ -51,12 +51,14 @@ In this lab, you create a simple application with one click called **Online Book
 
     - **Select an icon from the library**: Select the icon color and then the icon.
 
-    In this lab, I uploaded an icon from my device. After uploading, it can be adjusted or cropped.
+    In this lab, I uploaded an sample icon from my device. After uploading, it can be adjusted or cropped. Download a sample icon [here](./images/Online_Bookstore_Icon.png).
 
     After making all changes, click **Save Icon**.
 
     ![Create Application wizard](./images/upload-icon.png " ")
     ![Create Application wizard](./images/edit-icon.png " ")
+
+
 
 8. To view the application, click **Run** and enter your workspace credentials to log in.
 

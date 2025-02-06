@@ -452,7 +452,7 @@ In this lab, you will:
 
     ![Click](images/16-3-7.png " ")
 
-8. Upload the Application Icon with name **Online\_Bookstore\_Icon.png** and click **Create**
+8. Upload the Application Icon with name **Online\_Bookstore\_Icon.png** and click **Create**. Download a sample Application Icon [here](./images/Online_Bookstore_Icon.png).
 
     ![Click](images/16-3-8.png " ")
 
@@ -667,7 +667,7 @@ In this lab, you will:
 
     ![Click](images/16-6-3.png " ")
 
-4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**
+4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**. Download a sample default profile picture [here](./images/persona-male01-apex.png).
 
     ![Click](images/16-6-4.png " ")
 
