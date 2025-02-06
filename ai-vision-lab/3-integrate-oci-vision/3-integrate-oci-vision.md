@@ -115,7 +115,9 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     ![Click Timeline](images/response.png " ")
 
     ![Click Timeline](images/content-type.png " ")
+
 14. Click **Apply Changes**.
+
     ![Click Timeline](images/apply-changes.png " ")
 
 ## Task 2: Invoke the OCI Vision REST Data Source for Image Classification
