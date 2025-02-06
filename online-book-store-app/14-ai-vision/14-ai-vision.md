@@ -4,6 +4,8 @@
 
 In this lab, you will learn to create REST data sources, automations, and triggers in Oracle APEX. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness.
 
+Estimated Time: 10 minutes
+
 ### Objectives
 
 In this lab, you:

@@ -4,7 +4,7 @@
 
 In this lab, you learn to create and manage a shopping cart within an Oracle APEX application. The lab includes adding navigation bar entry, creating a shopping cart page, implementing various interactive components, and integrating backend processes to handle cart operations and checkout procedures. This exercise will demonstrate the comprehensive capabilities of APEX for building dynamic web applications with a strong emphasis on database interaction and user interface design.
 
-Estimated Time: 15 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -55,7 +55,7 @@ In this task, you develop a new page in the application to display the shopping 
 
     ![close dialog](images/create-region17.png " ")
 
-6. In the Property Editor, enter the following:
+6. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1033,7 +1033,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         - Type: Item
 
-        - Item: Click **No Order By Item** and enter the following and click OK:
+        - Item: Click **No Order By Item** and enter the following and click **OK**:
 
         | Clause |  Key | Display |
         | --- |  --- | --- |

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will learn to customize and enhance your Oracle APEX application. You will add a footer to improve branding, manage the navigation menu for a better user experience, and utilize email templates to send emails. These steps will help you create a more user-friendly and efficient application.
+In this lab, you will learn to customize and enhance your Oracle APEX application. You will add a footer to improve branding, manage the navigation menu for a better user experience, and implement a global search bar for easier access to information. Additionally, you will configure email templates for sending emails, set a default profile picture for users, and create a "My Orders" page to enhance functionality. These steps will help you build a more user-friendly and efficient application.
 
-Estimated Time: 10 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -14,7 +14,13 @@ In this lab, you will:
 
 - Manage Navigation Menu.
 
+- Global Search Bar
+
 - Use Email Templates to send Emails.
+
+- Default Profile Picture
+
+- Create My Orders Page
 
 ## Task 1 Add Built with APEX To Footer
 
@@ -52,9 +58,248 @@ In this lab, you will:
 
     ![Click](images/16-2-4.png " ")
 
-## Task 3: Use Email Templates For Sending Emails
+## Task 3: Global Search
 
 1. Navigate to the application homepage and click **Shared Component**.
+
+    ![Click](images/16-4-1.png " ")
+
+2. Click **Application Processes**.
+
+    ![Click](images/16-4-2.png " ")
+
+3. Click **Create**.
+
+    ![Click](images/16-4-3.png " ")
+
+4. Enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Redirect to Home on Search**
+
+        - Point: **On Submit: After Page Submission - After Computations and Validations**
+
+       Click **Next**.
+
+    ![Click](images/16-4-4.png " ")
+
+5. Enter the following:
+
+    - Source > Code: Copy and paste the below code.
+
+        ```
+        <copy>
+        apex_util.redirect_url(apex_page.get_url(p_page => 10));
+        </copy>
+        ```
+
+    Click **Next**.
+
+    ![Click](images/16-4-5.png " ")
+
+6. Enter the following:
+
+    - Condition Type > **Request = Expression 1**
+
+    - Expression > **SEARCH_RELOAD**
+
+    Click **Create Process**.
+
+    ![Click](images/16-4-6.png " ")
+
+7. Navigate to Application home page by clicking **Application ID**.
+
+    ![Click](images/16-4-7.png " ")
+
+8. Select page **10 - Search Books**.
+
+    ![Click](images/16-4-8.png " ")
+
+9. Under **Navigation**, update Warn on Unsaved Changes to **Toggle Off**
+
+    ![Click](images/16-4-9.png " ")
+
+10. Right-click **P10\_SEARCH\_PAGE\_ITEM** and select **Copy to other Page...**.
+
+    ![Click](images/16-4-10.png " ")
+
+11. Enter New Page: **10** and click **Next**.
+
+    ![Click](images/16-4-11.png " ")
+
+12. Enter the following:
+
+    - Item Name > **P0\_SEARCH\_PAGE\_ITEM**
+
+    - Label > **Search Books**
+
+    Click **Copy**.
+
+    ![Click](images/16-4-12.png " ")
+
+13. Right-click **P10\_SEARCH\_PAGE\_ITEM** and select **Delete**.
+
+    ![Click](images/16-4-13.png " ")
+
+14. Select **P10\_SEARCH**, under **Settings** for External Page Item: enter **P0\_SEARCH\_PAGE\_ITEM**.
+
+    ![Click](images/16-4-14.png " ")
+
+15. Navigate to **Dynamic Actions** tab, right-click **Events** and select **Create Dynamic Action**.
+
+    ![Click](images/16-4-15.png " ")
+
+16. Enter/select the following:
+
+    - Identification > Name: **Null Facets Value**
+
+    - Under When:
+
+        - Event: **After Refresh**
+
+        - Selection Type: **Region**
+
+        - Region: **Search**
+
+    ![Click](images/16-4-16.png " ")
+
+17. Select **True Action** and enter/select the following:
+
+    - Identification > Action: **Executive Server-side Code**
+
+    - Settings > PL/SQL Code: Copy and paste the following code:
+
+        ```
+        <copy>
+        :P10_SEARCH := null;
+        :P10_AUTHOR := null;
+        :P10_PRICE := null;
+        :P10_DISCOUNT := null;
+        :P10_CATEGORY := null;
+        :P0_SEARCH_PAGE_ITEM := null;
+        </copy>
+         ```
+
+    ![Click](images/16-4-17.png " ")
+
+18. Click **Save**.
+
+19. Navigate to Global Page **Page 0**.
+
+    ![Click](images/16-4-19.png " ")
+
+20. Select **P0\_SEARCH\_PAGE\_ITEM** and enter/select the following:
+
+    - Layout > Slot: **After Logo**.
+
+    - Under Appearance:
+
+        - Icon: **fa-search**
+
+        - Width: **50**
+
+    - Advanced > Custom Attributes: **style="height:45px;  margin-top: 6px;"**
+
+    ![Click](images/16-4-20.png " ")
+
+21. Navigate to **Dynamic Actions** tab, right-click **Change** and select **Create Dynamic Action**.
+
+    ![Click](images/16-4-21.png " ")
+
+22. Enter/select the following:
+
+    - Identification > Name: **SEARCH DA**
+
+    - Under When:
+
+        - Selection Type: **Item(s)**
+
+        - Region: **P0\_SEARCH\_PAGE\_ITEM**
+
+    - Under Server-side Condition:
+
+        - Type: **Current Page!=Page**
+
+        - Page: **10**
+
+    ![Click](images/16-4-22.png " ")
+
+23. Select **True Action** and enter/select the following:
+
+    - Identification > Action: **Executive Server-side Code**
+
+    - Under Settings:
+
+        - PL/SQL Code: Copy and paste the following code:
+
+            ```
+            <copy>
+            :P10_SEARCH := :P0_SEARCH_PAGE_ITEM;
+            </copy>
+            ```
+
+        - Items to Submit: **P0\_SEARCH\_PAGE\_ITEM**
+
+    ![Click](images/16-4-23.png " ")
+
+24. Right-click **True** and select **Create TRUE Action**.
+
+    ![Click](images/16-4-24.png " ")
+
+25. Enter/select the following:
+
+    - Identification > Action: **Submit Page**
+
+    - Settings > Request / Button Name: **SEARCH\_RELOAD**
+
+26. Click **Save**
+
+    ![Click](images/16-4-26.png " ")
+
+27. Navigate to **Shared Components**.
+
+    ![Click](images/16-4-27.png " ")
+
+28. Under **Navigation and Search**, select **Navigation Bar List**.
+
+    ![Click](images/16-4-28.png " ")
+
+29. Click **Navigation Bar**.
+
+    ![Click](images/16-4-29.png " ")
+
+30. Click **Create List Entry**.
+
+    ![Click](images/16-4-30.png " ")
+
+31. Enter/select the following and click **Create List Entry**.
+
+    - Under Entry:
+
+        - Sequence: **4**
+
+        - Image/Class: **fa-home**
+
+        - List Entry Label: **Home**
+
+    - Under Target:
+
+        - Page: **10**
+
+    - Under Conditions:
+
+        - Condition Type: **Current Page Is NOT in Expression 1(comma delimited list of pages)**
+
+        - Expression 1: **10**
+
+    ![Click](images/16-4-31.1.png " ")
+
+    ![Click](images/16-4-31.2.png " ")
+
+## Task 4: Use Email Templates For Sending Emails
+
+1. Navigate to the application homepage and click **Shared Components**.
 
     ![Click](images/16-3-1.png " ")
 
@@ -408,11 +653,206 @@ In this lab, you will:
 
     ![Click](images/16-3-30.png " ")
 
+## Task 5: Default Profile Picture
+
+1. Navigate to the application homepage and click **Shared Components**
+
+    ![Click](images/16-6-1.png " ")
+
+2. Click **Static Application Files** under **Files and Reports**.
+
+    ![Click](images/16-6-2.png " ")
+
+3. Click **Create File**.
+
+    ![Click](images/16-6-3.png " ")
+
+4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**
+
+    ![Click](images/16-6-4.png " ")
+
+5. Navigate to **SQL Workshop** and select **RESTful Services**.
+
+    ![Click](images/16-6-5.png " ")
+
+6. Expand **Modules** > **User Images** > **profile\_pic/:id** and select **GET**.
+
+7. Under **Source**, replace the query with the following query.
+
+    ```
+    <copy>
+    select mime_type, profile_pic from obs_users where user_id = :id and profile_pic is not null and mime_type is not null
+    union all 
+    select mime_type,FILE_CONTENT as profile_pic  from apex_application_static_files where file_name =  'persona-male01-apex.png' and 
+    not exists (select 1 from obs_users where user_id = :id and profile_pic is not null and mime_type is not null)
+    </copy>
+    ```
+
+8. Click **Apply Changes**.
+
+    ![Click](images/16-6-8.png " ")
+
+## Task 6: My Orders Page
+
+1. Navigate to the application homepage and click **Create Page**.
+
+    ![Click](images/16-5-1.png " ")
+
+2. Click **Blank Page**.
+
+    ![Click](images/16-5-2.png " ")
+
+3. Enter/select the following:
+
+    - Under Page Definition:
+
+        - Page Number: **19**
+
+        - Name: **My Orders**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+       Click **Create Page**.
+
+    ![Click](images/16-5-3.png " ")
+
+4. Right-click **Body** and select **Create Region**.
+
+    ![Click](images/16-5-4.png " ")
+
+5. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **My Orders**
+
+        - Type: **Content Row**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and paste the below code into the code editor:
+
+            ```
+            <copy>
+            SELECT 'Transaction Successful' as transaction_status,
+                o.order_id,
+                o.user_id,
+                o.payment_id,
+                to_char(Round( SUM(i.price * ((100 - i.discount) / 100) * i.quantity),0),'999G999G999G999G999G999G990') AS total,
+                SUM(i.quantity) AS quantity,
+                TO_CHAR(i.added_date, 'DD MON YYYY') as purchased_date,
+                TO_CHAR(i.added_time, 'HH12:MI:SS AM') || ' IST'  AS purchased_time,
+                i.added_time added_time
+            FROM   obs_orders o
+            LEFT JOIN obs_order_items i
+                ON o.order_id = i.order_id
+            WHERE o.user_id = :user_id
+            GROUP BY o.order_id, o.user_id, o.payment_id, i.added_date, i.added_time;
+            </copy>
+            ```
+
+    - Order By:
+
+        - Type: Item
+
+        - Item: Click **No Order By Item** and enter the following and click **OK**:
+
+            | Clause |  Key | Display |
+            | --- |  --- | --- |
+            | "ADDED_TIME" DESC  | ADDED_TIME| Date |
+            | "TOTAL" DESC | TOTAL | Amount |
+
+    ![Click](images/16-5-5.png " ")
+
+6. In the right pane, select **Attributes** and enter the following:
+
+    - Under Settings
+
+        - Overline: **&PURCHASED_DATE. <****br>**
+
+        - Title: **Order Id: &ORDER_ID. <****br>**
+
+        - Description: Copy and paste the code below:
+        ```
+        <copy>
+        Payment Id: &PAYMENT_ID. <br>
+        Total Amount: &TOTAL. <br>
+        Purchased Time: &PURCHASED_TIME. <br>
+        </copy>
+        ```
+
+    ![Click](images/16-5-6.png " ")
+
+7. In Page Rendering, under **My Orders** region, right-click **Actions** and select **Create Action**.
+
+    ![Click](images/16-5-7.png " ")
+
+8. In the Property Editor, enter the following:
+
+    - Identification > Position: **Full Row Link**
+
+    - Under Link:
+
+        - Type: **Redirect to Page in this application**
+
+        - Click **Target**
+
+            - Page: **16**
+
+            - Name: **P16\_ORDER\_ID** and Value: **&ORDER\_ID.**
+
+            Click **OK**
+
+    ![Click](images/16-5-8.png " ")
+
+9. Click **Save**.
+
+10. Navigate to **Shared Components**.
+
+    ![Click](images/16-5-10.png " ")
+
+11. Under **Navigation and Search**, select **Navigation Bar List**.
+
+    ![Click](images/16-5-11.png " ")
+
+12. Click **Navigation Bar**.
+
+    ![Click](images/16-5-12.png " ")
+
+13. Click **Create List Entry**.
+
+    ![Click](images/16-5-13.png " ")
+
+14. Enter/select the following and click **Create List Entry**.
+
+    - Under Entry:
+
+        - Parent List Entry: **&USERNAME.**
+
+        - Sequence: **27**
+
+        - Image/Class: **fa-cart-check**
+
+        - List Entry Label: **My Orders**
+
+    - Under Target:
+
+        - Page: **19**
+
+        - Clear Cache: **19**
+
+    ![Click](images/16-5-14.png " ")
+
+
 ## Summary
 
-You now know how to add a footer to your app, manage the navigation menu, and use email templates to send emails in Oracle APEX. These skills help improve user experience, branding, and communication within your application.
-
-You are now ready to move on to the next lab!
+You now know how to add a footer to your app, manage the navigation menu, implement a global search bar, configure email templates for sending emails, set a default profile picture, and create a "My Orders" page in Oracle APEX. These skills enhance user experience, improve branding, streamline navigation, and optimize communication within your application.
 
 ## Acknowledgements
 

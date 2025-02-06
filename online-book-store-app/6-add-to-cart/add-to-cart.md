@@ -331,7 +331,7 @@ To create Application Processes:
 
     Click **Next**.
 
-  ![App builder home page](images/app-process-source.png " ")
+    ![App builder home page](images/app-process-source.png " ")
 
 6. Click **Create Process**.
 
