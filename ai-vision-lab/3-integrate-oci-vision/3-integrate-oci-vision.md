@@ -73,8 +73,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     - Database Operation: -Not Mapped-
 
     - Request Body Template: **Copy and paste the JSON given below.**
-    ```
-    <copy>
+        ```
+         <copy>
       {
          "compartmentId": "#COMPARTMENT_ID#",
          "image": {
@@ -88,8 +88,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
          }
         ]
       }
-    <copy>
-     ```
+         </copy>
+        ```
     ![Click Timeline](images/edit-post.png " ")
 
     ![Click Timeline](images/post.png " ")
@@ -211,13 +211,14 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
         - Type: **SQL Query (Return Single Value)**
 
         - SQL Query: Copy and paste the below code in the SQL Code editor:
-      ```
-      <copy>
+
+        ```
+         <copy>
       select replace(replace(apex_web_service.blob2clobbase64(file_blob), chr(10),''),chr(13),'')
        from SM_posts
        where ID = :P1_ID;
-      <copy>
-      ```
+         </copy>
+        ```
     ![Click Timeline](images/file-data.png " ")
 
 12. Select **RESPONSE** and enter the following:
@@ -239,7 +240,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
     - Source > PL/SQL Code: Copy and paste the below code in the PL/SQL Code editor:
 
         ```
-        <copy>
+         <copy>
         UPDATE SM_POSTS
         SET
         AI_OUTPUT = (
@@ -256,7 +257,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
         )
         WHERE
         ID = :P1_ID;
-        <copy>
+         <copy>
         ```
 
     ![Click Timeline](images/parse-response1.png " ")
@@ -302,7 +303,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
     - Source > PL/SQL Code: Update the below code in the PL/SQL Code editor:
 
         ```
-        <copy>
+         <copy>
         UPDATE SM_POSTS
         SET
         AI_OUTPUT_TD = (
@@ -319,7 +320,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
         )
         WHERE
         ID = :P1_ID;
-        <copy>
+         <copy>
         ```
 
         ![Click Timeline](images/parse-text.png " ")
@@ -351,28 +352,28 @@ In this task, you create a search bar where the end user can enter the search te
         - SQL Query: Copy and paste the below SQL query in the Code Editor
 
             ```
-            <copy>
-            select
-            p.id,
-            p.created_by AS user_name,
-            p.post_comment AS comment_text,
-            p.file_blob,
-            p.file_mime,
-            apex_util.get_since(p.created) post_date,
-            (
-            select count(*) from SM_REACTIONS smr
-            where smr.post_id=p.id
-            ) as REACTIONS,
-            (
-            select 'user-has-liked' from SM_REACTIONS smr
-            where smr.post_id=p.id and created_by=UPPER(:APP_USER)
-            ) USER_REACTION_CSS
-            from SM_POSTS p
-            where (:P1_AI_SEARCH IS NOT NULL AND
-            (upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%') OR upper(ai_output_td) like upper('%'||:P1_AI_SEARCH||'%')
-            )
-            )OR :P1_AI_SEARCH IS NULL
-            order by p.created desc;
+             <copy>
+             select
+             p.id,
+             p.created_by AS user_name,
+             p.post_comment AS comment_text,
+             p.file_blob,
+             p.file_mime,
+             apex_util.get_since(p.created) post_date,
+             (
+             select count(*) from SM_REACTIONS smr
+             where smr.post_id=p.id
+             ) as REACTIONS,
+             (
+             select 'user-has-liked' from SM_REACTIONS smr
+             where smr.post_id=p.id and created_by=UPPER(:APP_USER)
+             ) USER_REACTION_CSS
+             from SM_POSTS p
+             where (:P1_AI_SEARCH IS NOT NULL AND
+             (upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%') OR upper(ai_output_td) like upper('%'||:P1_AI_SEARCH||'%')
+             )
+             )OR :P1_AI_SEARCH IS NULL
+             order by p.created desc;
             <copy>
             ```
 

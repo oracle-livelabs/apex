@@ -91,7 +91,7 @@ In this task, you add a Share button that allows a user to share the post via em
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
     ```
-    <copy>
+     <copy>
         apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
@@ -122,7 +122,7 @@ In this task, you add a Share button that allows a user to share the post via em
             apex.event.trigger(document, 'action-share');
             }
         }]);
-    </copy>
+     </copy>
     ```
 
     ![Property Editor](images/exec-js.png " ")
@@ -166,10 +166,10 @@ In this task, you add a Share button that allows a user to share the post via em
         - SQL Query:
 
             ```
-            <copy>
+             <copy>
                 SELECT FILE_BLOB, FILE_NAME, FILE_MIME
                 FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
-            </copy>
+             </copy>
             ```
 
         - Items to Submit: **P1\_ACTION\_ID**
@@ -232,11 +232,11 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 6. For **Source Type**, select **SQL Query** and enter the following SQL statement in the code box:
 
     ```
-    <copy>
+     <copy>
         SELECT r.id, p.created_by as post_owner, r.created_by as liked_by
         from SM_POSTS p, SM_REACTIONS r
         where p.id (+) = r.post_id and r.notified = 'N'
-    </copy>
+     </copy>
     ```
 
     Click **Create**.
@@ -278,9 +278,9 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
     - Code: Copy and paste the below code:
 
         ```
-        <copy>
+         <copy>
         update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
-        </copy>
+         </copy>
         ```
 
     Click **Create**.
