@@ -24,11 +24,11 @@ In this lab, you will:
 
 3. Update the following:
 
-    - Under Theme > Select Theme: **Redwood Light**
+    - Theme > Select Theme: **Redwood Light**
 
-    - Under Redwood Options > Layout: **Floating**
+    - Redwood Options > Layout: **Floating**
 
-    - Under Appearance > Update all the options to **Dark**.
+    - Appearance > Update all the options to **Dark**.
 
     Click **Save**
 

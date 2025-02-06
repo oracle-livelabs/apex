@@ -54,7 +54,12 @@ In this lab, you will:
 
      - URL Endpoint: Copy and paste below API
 
-     https://raw.githubusercontent.com/pankaj-2407/BookStore/main/data.json
+        ```
+        <copy>
+        https://raw.githubusercontent.com/pankaj-2407/BookStore/main/data.json
+        </copy>
+        ```
+
 
      Click **Next**.
 

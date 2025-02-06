@@ -84,7 +84,7 @@ In this lab, you will:
 
         - Type: **Text field with Autocomplete**
 
-    - Under Label > Label: **Search**
+    - Label > Label: **Search**
 
     - Under List of Values:
 
@@ -116,9 +116,7 @@ In this lab, you will:
 
         - External Page Item: **P10\_SEARCH\_PAGE\_ITEM**
 
-    - Under Source:
-
-        - Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
+    - Source > Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
 
     ![App builder home page](images/fs-search-attributes.png " ")
 
@@ -175,7 +173,7 @@ In this lab, you will:
 
     - Appearance > Grid Columns: **4 columns**
 
-    - Under Card > Primary Key: **BOOK_ID**
+    - Card > Primary Key: **BOOK_ID**
 
     - Under Title:
 
@@ -307,9 +305,9 @@ In this lab, you will:
 
 7. In the Property Editor, enter/select the following properties:
 
-    - Under Identification > Name: **Buttons Bar**
+    - Identification > Name: **Buttons Bar**
 
-    - Under Appearance > Template: **Buttons Container**
+    - Appearance > Template: **Buttons Container**
 
     ![App builder home page](images/region-details-bp.png " ")
 
@@ -341,7 +339,7 @@ In this lab, you will:
 
 13. In the Property Editor, enter/select the following properties:
 
-    - Under Execution > Point: **Before Header**
+    - Execution > Point: **Before Header**
 
     - Under Computation:
 
@@ -371,7 +369,7 @@ In this lab, you will:
 
 17. In the Property Editor, update the following properties:
 
-    - Under Execution > Point: **Before Header**
+    - Execution > Point: **Before Header**
 
     - Under Computation:
 
@@ -393,11 +391,11 @@ In this lab, you will:
 
 19. In the Property Editor, enter/select the following properties:
 
-    - Under Identification > Name: **IMAGE\_DISPLAY**
+    - Identification > Name: **IMAGE\_DISPLAY**
 
-    - Under Appearance > Template: **Image**
+    - Appearance > Template: **Image**
 
-    - Under Image > File URL: **&P18\_BOOK\_IMAGE.**
+    - Image > File URL: **&P18\_BOOK\_IMAGE.**
 
     ![App builder home page](images/region-details1.png " ")
 
@@ -433,17 +431,17 @@ In this lab, you will:
 
     ![App builder home page](images/book-info.png " ")
 
-    - Under Layout > Disable **Start New Row**
+    - Layout > Disable **Start New Row**
 
-    - Under Appearance > Template: **Blank with Attributes**
+    - Appearance > Template: **Blank with Attributes**
 
     ![App builder home page](images/book-info-details.png " ")
 
 21. In the right pane, click **Attributes**. In the Property Editor, update the following properties:
 
-    - Under Appearance > Template: **Value Attribute Pairs-Column**
+    - Appearance > Template: **Value Attribute Pairs-Column**
 
-    - Under Pagination > Type: **No Pagination (Show All Rows)**
+    - Pagination > Type: **No Pagination (Show All Rows)**
 
     ![App builder home page](images/book-info-save.png " ")
 

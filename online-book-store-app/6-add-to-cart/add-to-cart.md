@@ -480,8 +480,8 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - PL/SQL Function Body: Copy and paste the below code:
 
-        ```
-        <copy>
+            ```
+            <copy>
                RETURN obs_manage_orders.book_exists(p_book => :P18_BOOK_ID);
                </copy>
                ```
@@ -500,9 +500,9 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Label: **Add To Cart**
 
-    - Under Layout > Slot: **Next**
+    - Layout > Slot: **Next**
 
-    - Under Appearance > Hot: **Toggle On**
+    - Appearance > Hot: **Toggle On**
 
     - Under Server-Side Condition:
 
@@ -524,7 +524,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Label: **Remove From Cart**
 
-    - Under Layout > Slot: **Edit**
+    - Layout > Slot: **Edit**
 
     - Under Appearance > **Template Options** > Click **Use Template Defaults**
 
@@ -645,7 +645,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Type: **Close Dialog**
 
-    - Under Settings > Items to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
+    - Settings > Items to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
 
     ![close dialog](images/close-dialog.png " ")
 
