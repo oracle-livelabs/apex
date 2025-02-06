@@ -27,7 +27,7 @@ In this lab, you will:
 
 The **NYC Highschools Report** page utilizes an Interactive Report to display the records. Interactive Reports are exceedingly powerful, as they allow _*end users*_ to modify what data is displayed, and various display characteristics. For this report, you will add a column break, a computational column, an aggregate, a chart, then order the data and save the report for everyone to see.
 
->*Note - All of the steps below, except for saving Alternative Reports, can be performed by end users. There are many additional capabilities available to end users which are not covered below.*
+>**Note - All of the steps below, except for saving Alternative Reports, can be performed by end users. There are many additional capabilities available to end users which are not covered below.**
 
 1. In the runtime environment, select **NYC Highschools Report**.
 
@@ -249,7 +249,7 @@ In the previous task, you explored a few options to enhance the form. In this ta
     | **General Information** | P5\_BOROUGH <br> P5\_SCHOOL\_NAME <br> P5\_NEIGHBORHOOD <br> P5\_INTEREST <br> P5\_METHOD |
     | **Metrics** | P5\_TOTAL\_STUDENTS <br> P5\_GRADUATION\_RATE <br> P5\_ATTENDANCE\_RATE <br> P5\_COLLEGE\_CAREER\_RATE <br> P5\_SAFE<br> P5\_SEATS <br> P5\_APPLICANTS |
     | **Location** | P5\_LATITUDE <br> P5\_LONGITUDE |
-    | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |  
+    | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |
 
     ![drag and drop fields](images/drag-and-drop-fields.png " ")
 

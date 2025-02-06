@@ -31,13 +31,13 @@ Estimated Time: 45 minutes
 | [Improving the Report and Form](?lab=lab-3-improve-report-form) | 20 minutes |
 | [Adding Maps and PWA](?lab=lab-4-add-map-region-install-pwa) | 10 minutes |
 
-### Let's Get Started!
+### Let's Get Started
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Fspreadsheet-lab-nyc.sql) to download the completed application.
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fspreadsheet-lab-export.sql) to download the completed application.
 
 ## Learn More - *Useful Links*
 
@@ -51,4 +51,4 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 - **Author** - Apoorva Srinivas, Senior Product Manager
 - **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2025
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
