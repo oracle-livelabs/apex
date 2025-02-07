@@ -13,11 +13,12 @@ In this workshop, you will:
 - Develop an APEX Application
 - Integrate REST Data Sources
 - Customize Themes and UI
-- Implement E-commerce Features (Cart, Wishlist, Orders, Profile, etc)
 - Configure Authentication & Security
-- Integrate Payment Processing with Razorpay
+- Implement E-commerce Features (Cart, Wishlist, Orders, Profile, My Books etc)
 - Leverage AI Capabilities (RAG, AI Vision, AI Assistant)
+- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here)
 - Set Up Push Notifications
+- Integrate Payment Processing with Razorpay
 - Design and Manage Email Templates
 
 ### Prerequisites for Building this App:
