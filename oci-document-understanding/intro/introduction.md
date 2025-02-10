@@ -16,11 +16,15 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Create an APEX application
-- Upload Invoice to OCI Object Storage using Invoke API
-- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type
-- Parse the response and display the result
-- Implement Invoice Approval Requests Using Approvals Component
+- Create an APEX application.
+
+- Upload Invoice to OCI Object Storage using Invoke API.
+
+- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type.
+
+- Parse the response and display the result.
+
+- Implement Invoice Approval Requests Using Approvals Component.
 
 <!---
 - Enhance Social Media App with AI-Powered Search.
