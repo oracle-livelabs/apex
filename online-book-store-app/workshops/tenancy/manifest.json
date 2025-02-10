@@ -70,8 +70,12 @@
         "filename": "../../15-razorpay-payement-integration/15-razorpay-payement-integration.md"
       },
       {
-        "title": "Lab 16: [Additional] UI Enhancements",
+        "title": "Lab 16: UI Enhancements",
         "filename": "../../16-additional-ui-enhancements/16-additional-ui-enhancements.md"
+      },
+      {
+        "title": "Lab 17: [optional] Vector Search using Search Configurations",
+        "filename": "../../17-vector-search-configurationss/17-vector-search-configurations.md"
       },
       {
         "title": "Need Help?",

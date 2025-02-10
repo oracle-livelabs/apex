@@ -513,33 +513,36 @@ In this lab, you will:
 
 18. Enter/select the following below
 
-    - Identification > Name: **Send Email Process**
+    - Under Identification:
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+        - Name: **Send Email Process**
 
-        ```
-        <copy>
-        BEGIN
-        APEX_MAIL.SEND(
-            p_template_static_id => 'EMAILTEMPLATE',
-            p_placeholders => '{"SUBJECT":"Welcome to Online Bookstore!",
-                                "ICON_URL":"https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png",
-                                "APP_LINK":"' || :P100001_URL || '",
-                                "TARGET_HEADING":"Please click the link below to create your account:",
-                                "TARGET":"Setup your account",
-                                "TITLE":"Online Bookstore"}',
-            p_to => :P100001_EMAIL,
-            p_from => 'noreply.obs@oracle.com'
-        );
-        END;
-        </copy>
-        ```
+        - Type: **Send E-Mail**
 
-        NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
+    - Under Settings:
+
+        - From: **noreply.obs@oracle.com**
+
+        - To: **&P100001_EMAIL.**
+
+        - Email Template: **EmailTemplate**
+
+        - Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
+
+            | Placeholder     |  Item or Value   |
+            | --------------- |  ------ |
+            | SUBJECT | Welcome to Online Bookstore! |
+            | TARGET_HEADING | Please click the link below to create your account: |
+            | APP_LINK | &P100001_URL.  |
+            | TARGET | Setup your account  |
+            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
+            | TITLE | Online Bookstore  |
+
+            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
 
      - Success Message > Success Message: **SignUp Link sent to your email address.**
 
-    ![Click](images/16-3-18.png " ")
+    ![Click](images/16-3-18.1.png " ")
 
 19. Right-click **Send Verification Email** and select **Add Child Process**.
 
@@ -607,33 +610,36 @@ In this lab, you will:
 
 28. Enter/select the following below
 
-    - Identification > Name: **Send Email Process**
+    - Under Identification:
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+        - Name: **Send Email Process**
 
-        ```
-        <copy>
-        BEGIN
-        APEX_MAIL.SEND(
-            p_template_static_id => 'EMAILTEMPLATE',
-            p_placeholders => '{"SUBJECT":"Online Bookstore - Reset Password!",
-                                "ICON_URL":"https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png",
-                                "APP_LINK":"' || :P100002_URL || '",
-                                "TARGET_HEADING":"Please open the link to Reset Password for your account:",
-                                "TARGET":"Reset Password",
-                                "TITLE":"Online Bookstore"}',
-            p_to => :EMAIL,
-            p_from => 'noreply.obs@oracle.com'
-        );
-        END;
-        </copy>
-        ```
+        - Type: **Send E-Mail**
 
-        NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
+    - Under Settings:
 
-    - Success Message > Success Message: **Reset Password Link sent to your email address.**
+        - From: **noreply.obs@oracle.com**
 
-    ![Click](images/16-3-28.png " ")
+        - To: **&EMAIL.**
+
+        - Email Template: **EmailTemplate**
+
+        - Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
+
+            | Placeholder     |  Item or Value   |
+            | --------------- |  ------ |
+            | SUBJECT | Online Bookstore - Reset Password! |
+            | TARGET_HEADING | Please open the link to Reset Password for your account: |
+            | APP_LINK | &P100002_URL.  |
+            | TARGET | Reset Password  |
+            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
+            | TITLE | Online Bookstore  |
+
+            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
+
+     - Success Message > Success Message: **Reset Password Link sent to your email address.**
+
+    ![Click](images/16-3-28.1.png " ")
 
 29. Right-click **Send Verification Email** and select **Add Child Process**.
 
