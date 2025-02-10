@@ -855,6 +855,51 @@ In this lab, you will:
 
     ![Click](images/16-5-14.png " ")
 
+## Task 7: Enhance Home Page
+
+1. Navigate to the application homepage and select page **10- Search Books**.
+
+    ![Click](images/16-7-1.png " ")
+
+2. Select **SEARCH**, navigate to Attributes and under Settings update **Total Row Count Label** to **Total Books:**
+
+    ![Click](images/16-7-2.png " ")
+
+3. Drag **P10\_ORDER\_BY** and drop above **RESET** under **Button Bar**.
+
+    ![Click](images/16-7-3.png " ")
+
+4. Enter/select the following below:
+
+    - Under Appearance:
+
+        - Template: **Hidden**
+
+        - Icon: **fa-sort-amount-desc**
+
+    - Advanced > CSS Classes: **no-item-ui**
+
+    ![Click](images/16-7-4.png " ")
+
+5. Click **Save and Run**.
+
+    ![Click](images/16-7-5.png " ")
+
+6. Click **Customize** from the developer toolbar and select **Theme Roller**.
+
+    ![Click](images/16-7-6.png " ")
+
+7. Add below class in the **Custom CSS** and click Save.
+
+    ```
+    <copy>
+    .no-item-ui {
+        --a-field-input-border-width: 0px;
+        --a-field-input-background-color: transparent;
+    }
+    </copy>
+    ```
+    ![Click](images/16-7-7.png " ")
 
 ## Summary
 
