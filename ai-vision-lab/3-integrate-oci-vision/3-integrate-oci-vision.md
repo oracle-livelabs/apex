@@ -39,6 +39,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
    ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
+
     - **Rest Data Source Type**: Oracle Cloud Infrastructure (OCI)
 
     - **Name**: OCI Vision
@@ -108,11 +109,11 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-   |     | Type                     | Name         | Direction | Default Value    | Static |
-   | --- | ------------------------ | ------------ | --------- | ---------------- | ------ |
-   | 1   | Request or Response Body | RESPONSE     | Out       |
-   | 2   | HTTP Header              | Content-Type | In        | application/json | ON     |
-   {: title="POST Operation Parameters"}
+    |     | Type                     | Name         | Direction | Default Value    | Static |
+    | --- | ------------------------ | ------------ | --------- | ---------------- | ------ |
+    | 1   | Request or Response Body | RESPONSE     | Out       |
+    | 2   | HTTP Header              | Content-Type | In        | application/json | ON     |
+    {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/response.png " ")
 
@@ -121,7 +122,6 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 14. Click **Apply Changes**.
 
     ![Click Timeline](images/apply-changes.png " ")
-
 
 ## Task 2: Invoke the OCI Vision REST Data Source for Image Classification
 
@@ -282,9 +282,10 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 15. Click **Save**.
 
 ## Task 3: Invoke the OCI Vision REST Data Source for Text Detection
+
 In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
 
-1. Under Processing, Right-click **Image Classification** and Select **Duplicate**. Drag and drop it under Parse Image classification Response.
+1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under Parse Image classification Response.
 
     ![Click Timeline](images/duplicated1.png " ")
 
@@ -350,6 +351,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 6. Click **Save**.
 
 ## Task 4: Enhance Timeline Region to include AI Search
+
 In this task, you create a search bar where the end user can enter the search terms and search through the images and texts.
 
 1. Go to the Rendering tab, right-click **After Logo** and select **Create Page Item**.
@@ -358,21 +360,15 @@ In this task, you create a search bar where the end user can enter the search te
 
 2. In the property editor, enter the following:
 
-   Under Identification:
+    - Identification > Name: **P1\_AI\_SEARCH**
 
-    - Name: Enter **P1\_AI\_SEARCH**
+    - Label > Label: **AI Search**
 
-   Under Label:
-
-    - Label: Enter **AI Search**
-
-   Under Settings:
-
-    - Enable **Submit when Enter pressed**
+    - Settings > Enable **Submit when Enter pressed**
 
    Under Appearance:
 
-    - Width: Enter **100**
+    - Width: **100**
 
    ![Click Timeline](images/ai-search-page-item1.png " ")
 
@@ -387,7 +383,7 @@ In this task, you create a search bar where the end user can enter the search te
     p.created_by AS user_name,
     p.post_comment AS comment_text,
     p.file_blob,
-    p.file_mime,    
+    p.file_mime,
       apex_util.get_since(p.created) post_date,
     (
     select count(*) from SM_REACTIONS smr
@@ -411,13 +407,14 @@ In this task, you create a search bar where the end user can enter the search te
 
 4. Click **Save and Run**.
 
-
 ## Summary
+
 You now know how to integrate OCI AI Vision into Oracle APEX through a REST API Call.
 
-You may now **proceed to the next lab**.   
+You may now **proceed to the next lab**.
 
 ## Acknowledgments
+
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

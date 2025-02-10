@@ -165,14 +165,14 @@ In this task, you will create four-page items:
 
         - Static Values: Enter the following:
 
-        | Display Value | Return Value |
-        | ------------- | ------------ |
-        | 1             | 1            |
-        | 2             | 2            |
-        | 3             | 3            |
-        | 4             | 4            |
-        | 5             | 5            |
-        {: title="Display and Return Values"}
+           | Display Value | Return Value |
+           | ------------- | ------------ |
+           | 1             | 1            |
+           | 2             | 2            |
+           | 3             | 3            |
+           | 4             | 4            |
+           | 5             | 5            |
+           {: title="Display and Return Values"}
 
         Click **OK**.
 

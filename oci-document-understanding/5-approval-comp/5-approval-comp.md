@@ -16,7 +16,7 @@ In this lab, you:
 
 ## Task 1: Create a Task Definition
 
-1. Navigate to **Shared Components**.
+1. In the Page Designer toolbar, navigate to **Shared Components** icon.
 
    ![Task Definition in Shared Components](images/sc-8.png " ")
 
@@ -28,17 +28,21 @@ In this lab, you:
 
    ![Create Task Definition](images/task-def-create.png " ")
 
-4. Enter/select the task definition attributes and Click **Create**.
+4. In **Create Task Definition** page, enter/select the following:
 
     - Name: **Invoice Approval Request**
 
     - Subject: **Employee Request of &EMP\_NAME.**
 
+    Click **Create**.
+
     ![Click Create on Task Definition page](images/task-def-details.png " ")
 
-5. Under **Settings**:
+5. Navigate to **Settings** and do the following:
 
-    - Task details Page Number - Click **Create Task Details Page** and Click **OK**
+    - Task details Page Number: Click **Create Task Details Page**
+
+    Click **OK**
 
     ![Click Task Definition](images/task-create-details.png " ")
 
@@ -46,9 +50,9 @@ In this lab, you:
 
 6. Click task definition - **Invoice Approval Request** to continue editing.
 
-     ![Click on Expense Request](images/invoice-req-app.png " ")
+    ![Click on Expense Request](images/invoice-req-app.png " ")
 
-    Under Settings:
+7. Navigate to **Settings** tab, enter/select the following:
 
     - Actions Source: **SQL Query**.
 
@@ -70,7 +74,7 @@ In this lab, you:
 
     ![Task Definition Settings](images/action-source.png " ")
 
-7. Under **Participants**, click **Add Row** and enter/select the following:
+8. Under **Participants**, click **Add Row** and enter/select the following:
 
      - Participant Type: **Potential Owner**
 
@@ -105,7 +109,7 @@ In this lab, you:
 
     ![Task Definition Participants](images/participants.png " ")
 
-8. Under **Parameters**, click **Add Row** and enter the three parameters one after the other:
+9. Under **Parameters**, click **Add Row** and enter the three parameters one after the other:
 
       | Static ID |  Label  | Data Type
       | --- |  --- | --- |
@@ -122,11 +126,11 @@ In this lab, you:
 
      ![Click on Expense Request](images/invoice-req-app1.png " ")
 
-14. Under **Actions**, click **Add Action**.
+11. Under **Actions**, click **Add Action**.
 
     ![Click on Expense Request](images/add-action.png " ")
 
-15. Enter/select the following details:
+12. Enter/select the following details:
 
      - Name: **On Approval**
 
@@ -159,7 +163,7 @@ In this lab, you:
 
      ![Click on Expense Request](images/add-action-create.png " ")
 
-16. Click **Apply Changes**.
+13. Click **Apply Changes**.
 
 ## Task 2: Create a Process to Fetch Employee details
 
@@ -171,11 +175,11 @@ In this lab, you:
 
    ![Home - 1](./images/home1.png " ")
 
-3. In the left pane, under **Pre-Rendering**, right-click **Before Header** and click **Create Process**.
+3. In the **Rendering** tab, navigate to **Pre-Rendering** and right-click **Before Header**, select **Create Process**.
 
    ![Create Process](./images/create-process3.png " ")
 
-4. In the Property Editor, Enter/select the following details:
+4. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Fetch Employee Details**
 
@@ -242,7 +246,7 @@ In this lab, you:
 
     ![Select Unified Task List](./images/unified-task-list.png " ")
 
-3. Enter/select the following page attributes:
+3. In **Create Unified Task List** page, enter/select the following:
 
     - Under Page Definition:
 
@@ -254,7 +258,7 @@ In this lab, you:
 
     - Navigation > Use Breadcrumb: **Toggle Off**
 
-         Click **Create Page**.
+        Click **Create Page**.
 
     ![Click Create Page](./images/initiated-by-me.png " ")
 
@@ -266,7 +270,7 @@ In this lab, you:
 
     ![Select Unified Task List](./images/unified-task-list.png " ")
 
-6. Enter/select the following page attributes:
+6. In **Create Unified Task List** page, enter/select the following:
 
     - Under Page Definition:
 
@@ -282,11 +286,11 @@ In this lab, you:
 
     ![Select Unified Task List](./images/my-approvals.png " ")
 
-7. On the Page Designer toolbar, navigate to your **Task Details** Page.
+7. On the Page Designer toolbar, navigate to **Page Finder** and select **4 - Task Details** page.
 
     ![Select Unified Task List](./images/navigate-to-task-details.png " ")
 
-8. Under the **Page Rendering** tab, select **Details** region and update the following:
+8. Under the **Rendering** tab, select **Details** region and update the following:
 
     - Source > SQL Query: Copy and replace the below code into the code editor:
 
@@ -315,7 +319,7 @@ In this lab, you:
 
         - Target > Page: **3**
 
-        - Set Items > Name: **P3\_ID**, Value: **#PARAM\_VALUE#** and Click **OK**.
+        - Set Items > Name: **P3\_ID**, Value: **#PARAM\_VALUE#** and click **OK**.
 
     Click **Save**.
 
@@ -327,5 +331,5 @@ You now know how to create a Task Definition for Invoice Approval Requests. Addi
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -6,8 +6,8 @@ In this lab, you will create an Oracle APEX application using the create applica
 
 Before we begin, let's recap what we have set up so far:
 
-- An Always-Free Autonomous Database
-- An APEX Workspace with the necessary database objects already loaded
+- An Always-Free Autonomous Database.
+- An APEX Workspace with the necessary database objects already loaded.
 
 The goal of this lab is to guide you through the steps to create an APEX application with various types of pages such as faceted search, interactive reports and forms. This will showcase the flexibility and power of APEX in building sophisticated web applications with ease.
 
@@ -43,7 +43,7 @@ In this lab, you:
 
     ![Add Page](images/add-page1.png " ")
 
- *Note: Default App Icon could be different in your environment, for simplicity just accept the default.*
+    >*Note: Default App Icon could be different in your environment, for simplicity just accept the default.*
 
 6. Select **Faceted Search**.
 
@@ -127,4 +127,4 @@ In the next lab you will undertake Oracle Forms functionalities enhancement step
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

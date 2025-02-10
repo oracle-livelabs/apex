@@ -7,6 +7,7 @@ In this lab, you will learn to create a view and configure AI attributes to esta
 Estimated Time: 15 minutes
 
 ### Objectives
+
 - Create a view
 - Configure AI Attributes
 - Create AI Configurations and include RAG Sources

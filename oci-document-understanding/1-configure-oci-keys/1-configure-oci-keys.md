@@ -12,8 +12,9 @@ Estimated Time: 10 Minutes
 
 In this lab, you:
 
-- Generate API Keys using OCI Console
-- Create a Bucket in OCI Object Storage
+- Generate API Keys using OCI Console.
+
+- Create a Bucket in OCI Object Storage.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -23,25 +24,25 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click **My Profile** at the top-right corner.
+2. Click **My Profile** at the top-right corner and select **User settings**.
 
     ![Profile Menu](images/profile.png " ")
 
-3. Under Resources at the bottom-left, select **API Keys** and  click **Add API Key**.
+3. Under **Resources** at the bottom-left, select **API Keys** and  click **Add API key**.
 
     ![Add API Key](images/api-keys.png " ")
 
-4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
+4. The Add API key dialog is displayed. Select **Generate API key pair** to create a new key pair.
 
-5. Click **Download Private Key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
+5. Click **Download private key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
+   >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
     ![Profile Menu](images/add-api-key.png " ")
 
-7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information to create Oracle APEX Web Credentials.
+7. The key is added, and the Configuration file preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information to create Oracle APEX Web Credentials.
 
     ![Profile Menu](images/configuration-preview.png " ")
 
@@ -71,7 +72,11 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
     ![Select Bucket](images/bucket-details.png " ")
 
-5. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information to upload an invoice to OCI Object Storage using Invoke API.
+5. Navigate to **OCIDocAI** Bucket.
+
+    ![Select Bucket](images/bucket.png " ")
+
+6. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information to upload an invoice to OCI Object Storage using Invoke API.
 
     ![Select Bucket](images/bucket-created.png " ")
 
@@ -83,5 +88,5 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

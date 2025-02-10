@@ -141,4 +141,4 @@ In this lab, you learned how to enhance the orders faceted search page by removi
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
