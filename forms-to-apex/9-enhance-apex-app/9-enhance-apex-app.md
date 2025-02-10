@@ -296,4 +296,4 @@ In this lab, you learned how to enhance various aspects of your APEX app. Buildi
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -38,7 +38,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## **Acknowledgements**
+## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
 - **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
