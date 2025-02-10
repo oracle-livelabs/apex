@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
+In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create a Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will link a search bar to these responses, enabling powerful and accurate search functionality.
 
 >**Note**: This lab assumes you are using Oracle Database 23ai.
 
@@ -18,20 +18,17 @@ Estimated Time: 15 minutes
 
 ## Task 1: Load ONNX Model to Oracle Database
 
-<!-- In this lab, you will create a Database View for your APEX application, containing all the necessary project-related information. This view will be used when adding RAG Sources to AI Configurations. Next, you will go to the AI Attributes page and set the Generative AI Service name to the one configured in **Lab 1**. -->
-
 Before uploading the ONNX model to your database schema, you must grant the schema the privilege to create mining models while logged in as SYS/ADMIN.
 
 Login as SYS/Admin User and execute the below command.
 
 >**Command**: GRANT create mining model TO **YourSchemaName**;
 
-<!-- !["Grant create mining model"](images/provide-grants.png "") -->
-
+!["Grant create mining model"](images/provide-grants.png "")
 
 1. From your APEX workspace homepage, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
-    <!-- !["select SQL Commands"](images/select-sql-commands.png "") -->
+    !["select SQL Commands"](images/select-sql-commands.png "")
 
 2. In the SQL Commands Page, copy and paste the below code and click **Run**.
 
@@ -63,7 +60,7 @@ Login as SYS/Admin User and execute the below command.
         END;
     </copy>
     ```
-    <!-- !["create view"](images/load-onnx-model.png "") -->
+    !["create view"](images/load-onnx-model.png "")
 
 ## Task 2: Create Vector Provider from Workspace Utilities
 
@@ -71,15 +68,15 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 1. From your SQL Commands page, click the Down Arrow next to **App Builder** and select **Workspace Utilities**. Then click **All Workspace Utilities**.
 
-    <!-- !["Click shared components"](images/click-workspace-utilities.png "") -->
+    !["Click shared components"](images/click-workspace-utilities.png "")
 
 2. In the Workspace Utilities page, select **Vector Providers**.
 
-    <!-- !["click workspace utilities"](images/select-vector-providers.png "") -->
+    !["click workspace utilities"](images/select-vector-providers.png "")
 
 3. In the Vector Providers page, click **Create**.
 
-    <!-- !["click create"](images/click-create.png "") -->
+    !["click create"](images/click-create.png "")
 
 4. In the Vector Provider Configuration page, enter the following:
 
@@ -92,23 +89,23 @@ In this task, you will create a Vector Provider that will be used later to set u
         - ONNX Model Name: **DOC_MODEL**
     - Click **Create**.
 
-    <!-- !["configure vector provider"](images/configure-vector-provider.png "") -->
+    !["configure vector provider"](images/configure-vector-provider.png "")
 
 5. Your Vector Provider is now created.
 
-    <!-- !["vector provider created"](images/created-vector-provider.png "") -->
-
+    !["vector provider created"](images/created-vector-provider.png "")
+<!-- 
 ## Task 3: Create Table and Update View for Vector Embeddings in Project Data
 
 In this task, you will enhance the view created in the previous lab to convert project-related data into vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** API to insert a Vector Embeddings Table in your schema and then modify the view to retrieve these vector embeddings.
 
 1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Scripts**.
 
-    <!-- !["Click SQL scripts"](images/click-sql-scripts.png "") -->
+    !["Click SQL scripts"](images/click-sql-scripts.png "")
 
 2. Click **Create**.
 
-    <!-- !["Click create"](images/click-create2.png "") -->
+    !["Click create"](images/click-create2.png "")
 
 3. Copy and paste the below SQL commands into the Script Editor to create VECTOR\_EMBEDDINGS Table and insert Data into it and then update the Existing View.
 
@@ -206,13 +203,13 @@ In this task, you will enhance the view created in the previous lab to convert p
 
 4. For Script Name: Enter **Vector Embedding Objects** and click Run.
 
-    <!-- !["create db objects"](images/create-db-objects.png "") -->
+    !["create db objects"](images/create-db-objects.png "")
 
 5. Click **Run Now**. The statements are processed.
 
-    <!-- !["create run now"](images/statements-processed.png "") -->
+    !["create run now"](images/statements-processed.png "")
 
-    <!-- !["statements processed"](images/click-run-now.png "") -->
+    !["statements processed"](images/click-run-now.png "")
 
 ## Task 4: Create a Search Configuration
 
@@ -220,27 +217,27 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
 1. From the Navigation bar in your workspace, click **App Builder**.
 
-    <!-- !["Click App Builder"](images/click-app-builder.png "") -->
+    !["Click App Builder"](images/click-app-builder.png "")
 
 2. In the **App Builder** page, select your Application and then click **Shared Components**.
 
-    <!-- !["select project management app"](images/select-app.png "") -->
+    !["select project management app"](images/select-app.png "")
 
-    <!-- !["click shared components"](images/click-shared-components.png "") -->
+    !["click shared components"](images/click-shared-components.png "")
 
 3. From Shared Components, under **Navigation and Search**, click **Search Configurations**.
 
-    <!-- !["click AI Attributes"](images/select-search-config.png "") -->
+    !["click AI Attributes"](images/select-search-config.png "")
 
 4. In the Search Configurations page, click **Create**.
 
-    <!-- !["click create"](images/click-create1.png "") -->
+    !["click create"](images/click-create1.png "")
 
 5. In the Create Search Configuration Detail Wizard, enter the following and click **Next**.
     - For Name : **Projects Search - Vector**
     - Search Type: **Oracle Vector Search**
 
-    <!-- !["vector search config"](images/search-config1.png "") -->
+    !["vector search config"](images/search-config1.png "")
 
 6. In the Create Search Configuration **Source** Wizard, enter the following and click **Next**.
     - Vector Provider : **DB ONNX Model**
@@ -248,7 +245,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
     - Table/View Owner: **Select your Parsing Schema**
     - Table/View Name: **PROJECT\_MANAGEMENT\_VW**
 
-    <!-- !["vector search config"](images/search-config2.png "") -->
+    !["vector search config"](images/search-config2.png "")
 
 7. In the Create Search Configuration **Column Mapping** Wizard, enter the following and click **Create Search Configuration**.
     - Primary Key Column Column 2 : **MILESTONE_ID(Number)**
@@ -256,7 +253,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
     - Title Column: **PROJECT_NAME(Varchar2)**
     - Description Column: **TASK_DESCRIPTION(Varchar2)**
 
-    <!-- !["vector search config"](images/search-config3.png "") -->
+    !["vector search config"](images/search-config3.png "")
 
 8. In the newly created Search Configuration, navigate to  **Column Mapping** tab. Under Column Mapping:
    - For Primary Key Column2: **MILESTONE_ID(Number)** 
@@ -264,7 +261,8 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
    - Click **Apply Changes**
 
-    <!-- !["enter system prompt"](images/configure-column-mapping.png "") -->
+    !["enter system prompt"](images/configure-column-mapping.png "")
+     -->
 <!-- 
 ## Task 5: Create an Oracle Vector Search Page.
 

@@ -74,8 +74,12 @@
         "filename": "../../16-additional-ui-enhancements/16-additional-ui-enhancements.md"
       },
       {
-        "title": "Lab 17: [optional] Vector Search using Search Configurations",
-        "filename": "../../17-vector-search-configurationss/17-vector-search-configurations.md"
+        "title": "Lab 17: Enhance AI Assistant",
+        "filename": "../../17-enhance-ai-assistant/17-enhance-ai-assistant.md"
+      },
+      {
+        "title": "Lab 18: [optional] Vector Search using Search Configurations",
+        "filename": "../../18-vector-search-configurations/18-vector-search-configurations.md"
       },
       {
         "title": "Need Help?",

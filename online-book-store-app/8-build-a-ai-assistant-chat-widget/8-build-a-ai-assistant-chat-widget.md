@@ -18,7 +18,9 @@ In this lab, you will:
 
 - Generate API Keys using OCI Console
 - Create Web Credentials in Oracle APEX
-- Configure Generative AI Service 
+- Configure Generative AI Service
+- Create AI Configurations
+- Create RAG Data Sources
 - Create a Navigation Bar Entry
 
 
