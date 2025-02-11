@@ -271,7 +271,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
 
-1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under Parse Image classification Response.
+1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under **Parse Image classification Response**.
 
     ![Click Timeline](images/duplicated1.png " ")
 
