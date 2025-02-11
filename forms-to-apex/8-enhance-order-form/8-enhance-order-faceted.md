@@ -162,7 +162,8 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
               |Name | Value |
               | ---| ------ |
-              |P7\_ORD\_ID | P6\_ID  |
+              |P7\_ORD\_ID | P6\_ID |
+              {: title="Set Items"}
 
             - Clear Cache: **7**
 
@@ -186,6 +187,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
             | ---- | ----- |
             | P7\_ORD\_ID | #ORD_ID#  |
             | P7\_ITEM\_ID| #ITEM_ID# |
+            {: title="Set Items"}
 
             - Clear cache: **7**
 

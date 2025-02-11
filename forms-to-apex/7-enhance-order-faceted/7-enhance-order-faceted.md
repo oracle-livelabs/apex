@@ -92,9 +92,10 @@ Since order filled is not a key facet search, let's remove it by following these
 
             - Set Items:
 
-              |Name | Value |
-              | ---| ------ |
-              |P6\_ID | ID  |
+                |Name | Value |
+                | ---| ------ |
+                |P6\_ID | ID  |
+                {: title="Set Items"}
 
             - Clear Cache: **6**
 
