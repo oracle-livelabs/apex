@@ -2,15 +2,15 @@
 
 This workshop provides a consolidated list of Hands-on Labs to help you gain practical knowledge of building apps using Oracle APEX. Through these labs, you learn to develop fully functional and responsive APEX Apps such as Online Shopping Cart, Projects and Tasks Management, and Human Workflows applications. We have carefully crafted the Hands-on Labs to facilitate your complete learning of APEX, covering every concept from the beginning to the end. Once you complete these labs, you gain a solid understanding of Oracle APEX concepts and are confident of building apps.
 
-
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
-
-### Objectives:
+## Objectives
 
 Through these labs, you will:
-- Strengthen your APEX concepts
-- Gain expertise by building APEX Apps for different use cases
-- Prepare for the Oracle APEX Cloud Developer Professional Certification Exam
+
+- Strengthen your APEX concepts.
+
+- Gain expertise by building APEX Apps for different use cases.
+
+- Prepare for the Oracle APEX Cloud Developer Professional Certification Exam.
 
 ## Oracle APEX Hands-On Labs Links
 
@@ -36,8 +36,9 @@ Through these labs, you will:
 | [18. Adding Additional Pages to your Application](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3579&p210_wec=&session=101389313807534)                            | In this lab, you add Calendars, Charts, Tree pages, and Maps to Demo Projects and Online Shopping applications.                                                                                                                                                                                                                                                                               | 40 Minutes |
 | [19. Enhance the Applications using Progressive Web Application](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3907&p210_wec=&session=117447918490865)             | In this lab, You will make the Demo Projects app installable on any device. You also implement a 'Share' button where a user can share the uploaded images with other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Demo Projects App. You also learn to add Shortcuts and Screenshots to the PWA app.            | 35 Minutes |
 | [20. Migrating Application Development Between Environments](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3580&p210_wec=&session=1321024421140)                   | In this lab, you create Installation scripts and Data Packages to export Database objects along with Data. Then you export the DEMO PROJECTS Application along with supporting objects and import it into another workspace.<br> <br>In the second part of the lab, you will be using Remote Deployment to deploy your Application from Development to UAT.                                   | 20 Minutes |
+| [21. Implementing Business Process Automation with Workflow](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=4100)                   | In this lab, you learn to implement an efficient system to schedule and manage doctor consultations by designing an APEX Application called Doctor Appointments Made Easy!, that leverages the Workflow component to schedule and manage doctor consultations efficiently.                                  |3 hours 45 minutes |
 
-*Note: This workshop assumes you are using Oracle APEX 23.2.*
+>*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Learn More - *Useful Links*
 
@@ -47,7 +48,7 @@ Through these labs, you will:
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-
 ## Acknowledgements
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri ,Product Manager, Jan 2024
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri ,Product Manager
+- **Last Updated By/Date** - Ankita Beri ,Product Manager, Jan 2025

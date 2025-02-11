@@ -16,23 +16,25 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Add API Keys in OCI Console
-- Create Web Credentials in Oracle APEX
-- Create REST Data Source in your APEX App based on OCI Document Understanding REST APIs
-- Upload Invoice to OCI Object Storage using Invoke API
-- Configure the Automatic Row Processing to Insert a New Record into the Table
-- Invoke the REST Data Source through a page process
-- Parse the response and store the information in the database
-- Develop an Invoice Tracking and Invoice Analysis page
-- Implement Invoice Approval Requests Using Approvals Component
+- Add API Keys in OCI Console.
 
-<!---
-- Enhance Social Media App with AI-Powered Search.
-- Integrate APEX with OCI using API keys.
-- Seamlessly link APEX with OCI Vision Service through REST Data Sources.
---->
+- Create Web Credentials in Oracle APEX.
 
-### Prerequisites for Building this App:
+- Create REST Data Source in your APEX App based on OCI Document Understanding REST APIs.
+
+- Upload Invoice to OCI Object Storage using Invoke API.
+
+- Configure the Automatic Row Processing to Insert a New Record into the Table.
+
+- Invoke the REST Data Source through a page process.
+
+- Parse the response and store the information in the database.
+
+- Develop an Invoice Tracking and Invoice Analysis page.
+
+- Implement Invoice Approval Requests Using Approvals Component.
+
+### Prerequisites for Building this Application
 
 - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
@@ -40,7 +42,7 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Downloads
 
@@ -76,5 +78,5 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

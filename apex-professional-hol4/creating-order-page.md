@@ -98,7 +98,7 @@ After creating the page, you'll add a Static Content region to display a thank y
 
             - Enable **Show Region Icon**
 
-            - Click **OK**
+            Click **OK**
 
         - Icon: **fa-heart**
 

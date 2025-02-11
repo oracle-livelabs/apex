@@ -14,13 +14,15 @@ Estimated Time: 10 Minutes
 
 In this lab, you:
 
-- Create database objects using SQL Scripts
-- Create multiple Application Users
-- Create Web Credentials
+- Create database objects using SQL Scripts.
+
+- Create multiple Application Users.
+
+- Create Web Credentials.
 
 ## Task 1: Create database objects using SQL Scripts
 
-1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and Select **SQL Scripts**.
+1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
 
     ![Select Quick SQL](images/sql_script.png " ")
 
@@ -222,7 +224,7 @@ Workspace administrators can create new user accounts one at a time or create mu
 
 To create multiple users accounts simultaneously:
 
-1. At the top of the Workspace home page, under Administration, click **Manage Users and Groups**.
+1. At the top of the Workspace home page, navigate to **Administration** and select **Manage Users and Groups**.
 
    ![Administration](images/manage-users.png " ")
 
@@ -230,17 +232,17 @@ To create multiple users accounts simultaneously:
 
    ![Create Multiple Users](images/create-multiple-users.png " ")
 
-3. Enter/select the following details:
+3. On **Create Multiple Users** dialog, enter/select the following:
 
     - List of Email Addresses: **MATT@xyz.com, JANE@xyz.com, CLARA@xyz.com, JOHN@xyz.com**
 
     - Usernames: **Exclude @ domain as part of the username**
 
-    Under Password:
+    - Under Password:
 
-      - Password: Specify a password
+        - Password: Specify a password
 
-      - Confirm Password: Enter the password again.
+        - Confirm Password: Enter the password again.
 
     Click **Next**.
 
@@ -258,7 +260,7 @@ Creating Web Credentials securely stores and encrypts authentication credentials
 
 To create a Web Credential in Oracle APEX:
 
-1. On the Workspace home page, click **App Builder**.
+1. On the Workspace home page, navigate to **App Builder**.
 
    ![Click App Builder](images/app-build5.png " ")
 
@@ -307,5 +309,5 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

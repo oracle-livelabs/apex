@@ -10,63 +10,61 @@ Estimated Time: 10 Minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
-- Create an Application
-- Invoke OCI Document Understanding using REST Data Sources
-- Enhance Home Page to Upload Invoices and Process the document
-- Create Processes to upload Invoice to Object Storage and Automate DML
-- Integrate Document Understanding API and Parse the Response
+- Create an Application.
+
+- Invoke OCI Document Understanding using REST Data Sources.
+
+- Enhance Home Page to Upload Invoices and Process the document.
+
+- Create Processes to upload Invoice to Object Storage and Automate DML.
+
+- Integrate Document Understanding API and Parse the Response.
 
 ## Task 1: Create an Application
 
-1. On the workspace home page, select **App Builder**.
-
-   ![Click App Builder](images/app-build6.png " ")
-
-2. Click **Create**.
+1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
 
    ![Click Create](images/create.png " ")
 
-3. Select **Use Create App Wizard**.
+2. Select **Use Create App Wizard**.
 
    ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
-4. Before Name, select **Set Icon**.
+3. Before Name, select **Set Icon**.
 
    ![Set Icon](images/set-icon.png " ")
 
-5. In the Choose Application Icon dialog, select any color and icon, then click **Save Icon**.
+4. In the Choose Application Icon dialog, select any color and icon, then click **Save Icon**.
 
    ![Save Icon](images/save-icon.png " ")
 
-6. Next to **Name**, select **Set Appearance** icon.
+5. Next to **Name**, select **Set Appearance** icon.
 
    ![Set Appearance](images/set-appearance.png " ")
 
-7. Enter/select the following:
-
-    - Appearance > Theme Style: **Redwood Light**
-
-    Click **Save Changes**.
+6. For Theme Style, select **Redwood Light** and click **Save Changes**.
 
     ![Redwood Light](images/redwood-light.png " ")
 
-8. Enter/select the following details:
+7. In Create an Application wizard, enter/select the following:
 
     - Name: **Automatic Invoice Handling**
 
     - Features: Check **Install Progressive Web App** and **Feedback**
 
-    Click **Create Application**.
+8. Click **Create Application**.
 
     ![Automatic Invoice Handling](images/create-application.png " ")
 
 ## Task 2: Invoke OCI Doc Understanding using REST Data Source
 
-1. Click **Shared Components**.
+1. Navigate to **Shared Components**.
 
-2. Under **Data Sources**, click **REST Data Sources**.
+     ![Click REST Data Sources](images/shared-compss.png " ")
+
+2. Under **Data Sources**, select **REST Data Sources**.
 
    ![Click REST Data Sources](images/rest-data-source2.png " ")
 
@@ -78,7 +76,7 @@ In this lab, you:
 
    ![Click From scratch](images/rest-next.png " ")
 
-5. Under Create REST Data Source,  Enter/select the following attributes and click **Next**.
+5. Under Create REST Data Source, enter/select the following:
 
     - REST Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
@@ -86,7 +84,9 @@ In this lab, you:
 
     - URL Endpoint: <https://document.aiservice.us-ashburn-1.oci.oraclecloud.com/20221109/actions/analyzeDocument>
 
-    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
+    Click **Next**.
+
+    >**Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
    ![Create REST Data Sources](images/rest-general.png " ")
 
@@ -94,7 +94,7 @@ In this lab, you:
 
    ![Create REST Data Source - Remote Server](images/rest-remote.png " ")
 
-7. Under Authentication,
+7. Under Authentication, enter/select the following:
 
     - Authentication Required: Toggle **ON**
 
@@ -109,7 +109,7 @@ In this lab, you:
 
    ![Click Document Understanding API](images/doc-under.png " ")
 
-10. Under the **Operations**, click **Edit icon** for the **POST** operation and enter the following:
+10. Navigate to **Operations** tab , select **Edit icon** for the **POST** operation and enter the following:
 
     - Request Body Template: Copy and paste the JSON given below.
 
@@ -134,7 +134,7 @@ In this lab, you:
     <copy>
      ```
 
-    Click **Synchronize with Body** and then click **OK**.
+11. Click **Synchronize with Body** and then click **OK**.
 
     ![edit post](images/edit-post.png " ")
 
@@ -142,11 +142,11 @@ In this lab, you:
 
     ![Synchronize with Body Ok](images/synchronize-ok.png " ")
 
-11. Under **Operation Parameters**, click **Add Parameter**.
+12. Under **Operation Parameters**, select **Add Parameter**.
 
     ![Click Add Parameter](images/add-parameter.png " ")
 
-12. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
+13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
     |   | Type | Name | Direction | Default Value | Static |
     |---|-------|------|----------| --------------| ------ |
@@ -158,13 +158,13 @@ In this lab, you:
 
     ![Click Timeline](images/response.png " ")
 
-13. Click **Apply Changes**.
+14. Click **Apply Changes**.
 
     ![Click Timeline](images/apply-changes.png " ")
 
 ## Task 3: Enhance Home Page to Upload Invoices and Process the document
 
-1. Click **Application ID**.
+1. Navigate to **Application ID**.
 
    ![Application ID](images/app-id2.png " ")
 
@@ -172,15 +172,15 @@ In this lab, you:
 
    ![1-Home](images/home-page.png " ")
 
-3. Under **Breadcrumb Bar**, select **Automatic Invoice Handling** and update Name: **Process Your Invoice**.
+3. Under **Breadcrumb Bar**, select **Automatic Invoice Handling** region and update Name to **Process Your Invoice**.
 
    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
-4. Right-click **Body** and select **Create Region**.
+4. Under **Rendering** tab, right-click **Body** and select **Create Region**.
 
    ![Create Region](images/create-region.png " ")
 
-5. In the property editor,  Enter/select the following details:
+5. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -192,11 +192,11 @@ In this lab, you:
 
     ![Create Region](images/form.png " ")
 
-6. Select **:P1\_FILE\_NAME**, Press (Shift+Down Arrow) till **:P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
+6. Under **Upload Your Invoice** region, select **P1\_FILE\_NAME** page item, press (Shift+Down Arrow) till **P1\_DOC\_AI\_JSON** and in the property editor, update type to **Hidden**.
 
      ![hidden items](images/all-hidden.png " ")
 
-7. Right-click **Upload Your Invoice** region and select **Create Page Item**.
+7. In the **Rendering** tab, right-click **Upload Your Invoice** region and select **Create Page Item**.
 
    ![hidden items](images/create-page-item.png " ")
 
@@ -218,7 +218,7 @@ In this lab, you:
 
    ![hidden items](images/response-item.png " ")
 
-9. Under **Upload your Invoice** region, right-click **P1\_ID** and select **Create Page Item Below**.
+9. Under **Upload your Invoice** region, right-click **P1\_ID** page item and select **Create Page Item Below**.
 
    ![hidden items](images/create-page-item-below.png " ")
 
@@ -248,11 +248,11 @@ In this lab, you:
 
     ![Create Process](./images/query-only.png " ")
 
-12. In the left pane, right-click **Upload Your Invoice** region and select **Create Button**.
+12. In the **Rendering** tab, right-click **Upload Your Invoice** region and select **Create Button**.
 
     ![create-button](images/create-btn.png " ")
 
-13. In the property editor,  Enter/select the following details:
+13. In the property editor, enter/select the following:
 
      - Under Identification:
 
@@ -268,11 +268,11 @@ In this lab, you:
 
     ![create-button](images/btn-details.png " ")
 
-14. In the Processing tab, right-click **Processing** and select **Create Process**.
+14. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
-15. In the property editor,  Enter/select the following details:
+15. In the property editor, enter/select the following details:
 
      - Under Identification:
 
@@ -286,11 +286,11 @@ In this lab, you:
 
 ## Task 4: Create Processes to upload Invoices to Object Storage and Automate DML
 
-1. Right-click **Process Invoice** and select **Add Child Process**.
+1. In the **Processing** tab, right-click **Process Invoice** process and select **Add Child Process**.
 
     ![Add Child Process](images/add-child-process.png " ")
 
-2. In the Property Editor,  Enter/select the following details:
+2. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -306,7 +306,7 @@ In this lab, you:
 
    ![Add Child Process details](images/upload-to-storage.png " ")
 
-3. Under **Upload to Object Storage** process, expand Parameters and enter the following details:
+3. Under **Upload to Object Storage** process, expand Parameters and enter the following:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
@@ -319,11 +319,11 @@ In this lab, you:
 
     ![Add Child Process details](images/param-file-content.png " ")
 
-4. Right-click **Process Invoice** and select **Add Child Process**.
+4. Right-click **Process Invoice** process again and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-5. In the Property Editor, Enter/select the following details:
+5. In the Property Editor, enter/select the following details:
 
     - Under Identification:
 
@@ -339,11 +339,11 @@ In this lab, you:
 
 ## Task 5: Integrate Document Understanding API and Parse the Response
 
-1. Right-click **Process Invoice** and select **Add Child Process**.
+1. In the **Processing** tab, right-click **Process Invoice** and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-2. In the Property Editor, Enter/select the following details:
+2. In the Property Editor, enter/select the following details:
 
      - Under Identification:
 
@@ -371,7 +371,7 @@ In this lab, you:
 
     ![Add Child Process details](images/doc-object-name.png " ")
 
-4. Select **RESPONSE**, Enter/select the following:
+4. Select **RESPONSE** parameter, enter/select the following:
 
     - Parameter > Ignore Output: **Toggle off**
 
@@ -379,11 +379,11 @@ In this lab, you:
 
     ![Add Child Process details](images/doc-response.png " ")
 
-5. Right-click **Process Invoice** and select **Add Child Process**.
+5. Right-click **Process Invoice** process and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process2.png " ")
 
-6. In the Property Editor, Enter/select the following details:
+6. In the Property Editor, enter/select the following details:
 
     - Identification > Name: **Parse the Response**
 
@@ -428,5 +428,5 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager ; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

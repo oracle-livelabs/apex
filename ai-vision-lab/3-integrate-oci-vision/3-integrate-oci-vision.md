@@ -40,6 +40,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
    ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
+
     - Rest Data Source Type: **Oracle Cloud Infrastructure (OCI)**
 
     - Name: **OCI Vision**
@@ -270,7 +271,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 In this task, you duplicate the page process to invoke the OCI Vision REST Data Source for text detection.
 
-1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under **Parse Image classification Response**.
+1. Under Processing, right-click **Image Classification** and select **Duplicate**. Drag and drop it under Parse Image classification Response.
 
     ![Click Timeline](images/duplicated1.png " ")
 
@@ -350,6 +351,7 @@ In this task, you create a search bar where the end user can enter the search te
    ![Click Timeline](images/ai-search-page-item1.png " ")
 
 3. Select the **Timeline** region in the property editor and enter the following:
+
     - Under Source:
         - SQL Query: Copy and paste the below SQL query in the Code Editor
 
@@ -380,6 +382,7 @@ In this task, you create a search bar where the end user can enter the search te
             ```
 
         - Page items to Submit: Select **P1\_AI\_SEARCH**
+
 
     ![Click Timeline](images/timeline-query11.png " ")
 
