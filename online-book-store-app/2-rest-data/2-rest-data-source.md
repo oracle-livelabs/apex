@@ -2,15 +2,15 @@
 
 ## Introduction
 
-In this lab, you learn to extract data from REST data sources  while also enabling synchronization. Next, you learn to create  a Faceted Search Page  to serve as the primary landing page in Online Bookstore Application.
+In this lab, you learn to extract data from REST Data Sources while also enabling synchronization. Next, you learn to create  a Faceted Search Page  to serve as the primary landing page in Online Bookstore Application.
 
 REST Data Sources enable developers to access to Representational State Transfer (REST) services or generic JSON data feeds in applications and use the data in Oracle APEX components.
 
 Data Synchronization enables developers to automatically sync the contents of a local table with the data from a REST service.
 
-A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and report region). The report region displays search results as cards or a classic report.
+A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and a Report region). The report region displays search results as cards or a classic report.
 
-Estimated Time: 10 minutes
+Estimated Time: 6 minutes
 
 ### Objectives
 
@@ -99,7 +99,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, for **Synchronization Type**: select **Replace** and click **Save and Run**.
+3. Now, under Details for **Synchronization Type**: select **Replace** and click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 
@@ -133,11 +133,11 @@ In this task, you create Faceted Search page which will display list of the book
 
 4. For Display as, select **Cards** and click **Refresh** to refresh the column statistics to provide better recommendations.
 
-    Select the facets to include in the report.**(PRICE, AUTHOR, CATEGORY and DISCOUNT)**, and uncheck others before clicking **Next**.
+    Select the facets to include in the report **(PRICE, AUTHOR, CATEGORY and DISCOUNT)**, and uncheck others before clicking **Next**.
 
     ![App builder home page](images/fs-cards.png " ")
 
-5. We will proceed with the default Card Layout **Grid** using the default **Card Attributes**. Click **Create Page**.
+5. We will proceed with the default Card Layout **Grid** and default **Card Attributes**. Click **Create Page**.
 
     ![App builder home page](images/fs-create-page.png " ")
 

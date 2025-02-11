@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn how to create database objects(package, trigger)using Object Browser and Additionally, you'll learn how to create a Custom Authentication scheme from scratch to have complete control over your authentication interface.
+In this lab, you learn how to create database objects (package, trigger) using Object Browser and additionally, you'll learn how to create a Custom Authentication scheme from scratch to have complete control over your authentication interface.
 
 Estimated Time: 5 minutes
 
@@ -156,7 +156,7 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
 
    ![App builder home page](images/trg.png " ")
 
-2. In Create Trigger dialog, For Table: select **OBS\_USERS** and click **Create Trigger**.
+2. In Create Trigger dialog, for Table: select **OBS\_USERS** and click **Create Trigger**.
 
    ![App builder home page](images/trg-name.png " ")
 

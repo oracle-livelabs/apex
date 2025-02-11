@@ -4,7 +4,7 @@
 
 During this lab, you learn how to customize theme of Online Book Store Application using theme roller. Theme Roller is a live CSS editor that enables you to quickly change the theme style, colors, rounded corners and other application attributes.
 
-Estimated Time: 2 minutes
+Estimated Time: 1 minute
 
 ### Objectives
 

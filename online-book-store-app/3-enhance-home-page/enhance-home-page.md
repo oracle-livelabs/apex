@@ -4,7 +4,7 @@
 
 During this lab, you'll refine the faceted search page and its card section. Additionally, you'll discover how to integrate a Global search page item into the faceted search page for book searches. You'll also gain expertise in enabling sorting functionality on the search page. Lastly, you'll explore creating a hyperlink that redirects users to an Amazon page.
 
-Estimated Time: 25 minutes
+Estimated Time: 16 minutes
 
 ### Objectives
 
@@ -216,7 +216,7 @@ In this lab, you will:
 
 3. Select **Page 10: Search Books** region and enter the following into the property editor:
 
-    - CSS > Inline: Copy and Paste the below HTML Code:
+    - CSS > Inline: Copy and Paste the below CSS Code:
 
         ```
         <copy>
