@@ -87,16 +87,17 @@ In this lab, you will build the list of values needed to help you accelerate the
 
     - Enter a SQL SELECT statement: Copy and Paste the below query into the code editor:
 
-    ```
-    <copy>
-    select S_EMP.ID as ID,
-       S_EMP.FIRST_NAME ||' '|| S_EMP.LAST_NAME as FULL_NAME,
-       S_EMP.FIRST_NAME ,
-       S_EMP.LAST_NAME
-     from S_EMP S_EMP
-     where title = 'Sales Representative'
-    <copy>
-    ```
+        ```
+        <copy>
+        select S_EMP.ID as ID,
+           S_EMP.FIRST_NAME ||' '|| S_EMP.LAST_NAME as FULL_NAME,
+           S_EMP.FIRST_NAME ,
+           S_EMP.LAST_NAME
+        from S_EMP S_EMP
+        where title = 'Sales Representative'
+        <copy>
+        ```
+
     Click **Next**.
 
     ![Create List of Values](images/sql-query1.png " ")
@@ -150,9 +151,7 @@ In this lab, you will build the list of values needed to help you accelerate the
 
 20. Under list of values Source, enter the following and click **Next**.
 
-    - Source Type: Table
-
-    - Table / View Name: **S\_PRODUCT**
+    - Table / View Name: **S\_PRODUCT(table)**
 
     ![Create List of Values](images/product-next.png " ")
 

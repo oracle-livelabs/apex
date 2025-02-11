@@ -160,7 +160,9 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
             - Page: **7**
 
-            - Set Items > Name: **P7\_ORD\_ID** , Value: **&P6\_ID.**
+              |Name | Value |
+              | ---| ------ |
+              |P7\_ORD\_ID | P6\_ID  |
 
             - Clear Cache: **7**
 
@@ -174,7 +176,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
         - Link Column: **Link to Custom Target**
 
-        - Target: click **No Link Defined**
+        - Target: Click **No Link Defined**
 
             - Page: **7**
 
@@ -283,7 +285,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
 5. Click **Actions** menu. Select **Report > Save Report**
 
-    - For save, select As Default Report Settings.
+    - For save, select As **Default Report Settings**.
 
     - Default Report Type: **Primary**
 
