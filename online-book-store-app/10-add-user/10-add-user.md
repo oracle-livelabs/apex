@@ -497,14 +497,16 @@ In this task, you will learn how to create and configure a page to update the cu
 
     ![close dialog](images/10-3-navigate-to-15010.png " ")
 
-32. Right-click **My details** and select **Create Button**.
+32. Right-click **My Details** and select **Create Button**.
 
     ![close dialog](images/10-3-create-btn15.png " ")
 
 33. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Button Name: **EDIT_PROFILE**
+
         - Label: **Edit Profile**
 
     - Under Layout:
@@ -519,7 +521,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Template Options: Click **Use Template Defaults**
 
-            - Size: **large**
+            - Size: **Large**
 
             - Type: **Warning**
 
@@ -533,7 +535,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Behavior:
 
-        - Action: **Redirect to a page in this Application**
+        - Action: **Redirect to Page in this Application**
 
         - Target: **No Link Defined**
 
