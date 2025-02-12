@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Create a Package to manage process of adding, removing, and processing orders and wishlist items.
 - Create Application Items
-- Create Application processes
+- Create Application Processes
 - Create Application Computations
 - Set Up Book Details Page
 
@@ -242,7 +242,7 @@ END OBS_MANAGE_ORDERS;
 
 In this task, you define application items to store session state information such as cart total, shopping cart items, and user details.
 
-To create Application items:
+To create Application Items:
 
 1. Navigate to Workspace home page by clicking **App Builder**.
 
@@ -341,7 +341,7 @@ To create Application Processes:
 
 In this task, you set up computations to determine user-related information upon authentication.
 
-To create Application computations:
+To create Application Computations:
 
 1. Click **Shared Components**.
 
@@ -560,7 +560,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Procedure or Function: **ADD\_BOOK**
 
-    - Server-side Condition > When button pressed: **Add\_to\_cart**
+    - Server-side Condition > When button pressed: **Add\_to\_Cart**
 
     ![Add to cart](images/add-process.png " ")
 
@@ -593,11 +593,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Procedure or Function: **REMOVE\_BOOK**
 
-    - Server-side Condition > When button pressed: **Remove\_from\_cart**
+    - Server-side Condition > When button pressed: **Remove\_from\_Cart**
 
     ![Delete Product](images/delete-product.png " ")
 
-17. Expand the Parameter of **Delete Product** and enter the following:
+17. Expand the Parameters of **Delete product** and enter the following:
 
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
@@ -689,9 +689,11 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
         - Clear Cache: **17**
 
-    - Badge Value: **&SHOPPING\_CART\_ITEMS.**
+    - Under User Defined Attributes:
 
-    - List Item CSS Classes: **js-shopping-cart-item**
+        - Badge Value: **&SHOPPING\_CART\_ITEMS.**
+
+        - List Item CSS Classes: **js-shopping-cart-item**
 
      Click **Create List Entry**.
 
@@ -723,9 +725,9 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     - Under Client-side Condition:
 
-        - Type: **JavaScript Expression**
+        - Type: **JavaScript expression**
 
-        - JavaScript expression:Copy and paste the below code:
+        - JavaScript expression: Copy and paste the below code:
 
         ```
         <copy>
