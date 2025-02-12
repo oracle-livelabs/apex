@@ -8,7 +8,7 @@ OCI API keys consist of two parts: a **Public key** and a **Private key**. You u
 
 **Note:** OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-Estimated Time: 15 minutes
+Estimated Time: 13 minutes
 
 ### Objectives
 
@@ -236,7 +236,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Page Designer](images/8-5-4-details.png ' ')
 
-5. Under **RAG Sources**, click **Create RAG Sources**.
+5. Under **RAG Sources**, click **Create RAG Source**.
 
     ![Page Designer](images/8-5-5-details.png ' ')
 
@@ -303,17 +303,21 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 4. Click **Create List Entry**.
 
-    ![close dialog](images/nav-create-entry1.png " ")
+    ![close dialog](images/8-7-4-nav-create-entry1.png " ")
 
 5. Enter/select the following:
 
     - Under Entry:
 
         - Sequence: **3**
+
         - Image/Class: **fa-ai-sparkle-message**
+
         - List Entry Label: **AI Assistant**
 
-    - Under Target > Page: **2**
+    - Under Target:
+
+        - Page: **2**
 
      Click **Create List Entry**.
 

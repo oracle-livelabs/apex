@@ -671,7 +671,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
 4. Click **Create List Entry**.
 
-    ![close dialog](images/nav-create-entry.png " ")
+    ![close dialog](images/6-6-4-nav-create-entry.png " ")
 
 5. Enter/select the following:
 
