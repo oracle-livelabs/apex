@@ -33,7 +33,7 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/profile.png " ")
 
-3. Under Resources at the bottom-left, select **API keys** and  click **Add API Key**.
+3. Under Resources at the bottom-left, select **API keys** and  click **Add API key**.
 
     ![Add API Key](images/api-keys.png " ")
 
