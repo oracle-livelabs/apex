@@ -6,7 +6,7 @@ In today's data-driven world, the ability to extract valuable insights from visu
 
 In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI Vision for the classification and text detection of images. By integrating OCI Vision with Oracle APEX, businesses can tap into the power of visual intelligence, transforming their data analysis capabilities and revolutionizing user experiences.
 
-Estimated Time: 1 hour
+Estimated Time: 1 hour and 20 minutes
 
 ### Objectives
 
@@ -23,7 +23,7 @@ In this workshop, you:
 - Seamlessly link APEX with OCI Vision Service through REST Data Sources.
 --->
 
-### Prerequisites for Building this App:
+### Prerequisites for Building this App
 
 - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
@@ -31,13 +31,13 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) to download the completed application zip file and unzip it.
+1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export1.sql) to download the completed application zip file and unzip it.
 
 2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
@@ -62,4 +62,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

@@ -1,6 +1,7 @@
-# Improving the Report and Form
+# Improve Report and Form
 
 ## Introduction
+
 In this lab, you will gain an insight into the abilities of Interactive Reports, and learn how to enhance a form page.
 
 Estimated Time: 20 minutes
@@ -8,25 +9,31 @@ Estimated Time: 20 minutes
 Watch the video below for a quick walk-through of the lab.
 [Improve the Report and Form](videohub:1_8a2fxcml)
 
-Objectives
+### Objectives
+
 In this lab, you will:
- - Enhance Interactive Report
- - Improve  the Form
- - Enhance UX of the Form
 
-Prerequisites
- - Completion of workshop through Lab 2
+- Enhance Interactive Report.
 
-## **Task 1**: Enhancing the Interactive Report
+- Improve  the Form.
+
+- Enhance UX of the Form.
+
+### Prerequisites
+
+- Completion of workshop through Lab 2
+
+## Task 1: Enhance the Interactive Report
+
 The **NYC Highschools Report** page utilizes an Interactive Report to display the records. Interactive Reports are exceedingly powerful, as they allow _*end users*_ to modify what data is displayed, and various display characteristics. For this report, you will add a column break, a computational column, an aggregate, a chart, then order the data and save the report for everyone to see.
 
-*Note - All of the steps below, except for saving Alternative Reports, can be performed by end users. There are many additional capabilities available to end users which are not covered below.*
+>**Note - All of the steps below, except for saving Alternative Reports, can be performed by end users. There are many additional capabilities available to end users which are not covered below.**
 
-1. In the runtime environment, click **NYC Highschools Report**.
+1. In the runtime environment, select **NYC Highschools Report**.
 
 2. The report displays all the columns in the table. Customize the report by choosing only selected columns in a report. Click **Actions** and select **Columns**.
 
-      ![Interactive Report Columns](images/select-columns.png " ")
+    ![Interactive Report Columns](images/select-columns.png " ")
 
 3. In the Select Columns dialog, select the columns that you want to hide from the report by selecting a column and clicking on the left-chevron (<) in order to move it to the **Do Not Display** section. Or, double-click on a column in order to move it to the **Do Not Display** section. Hide the following columns:
     - Dbn
@@ -38,7 +45,7 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
     Click **Apply**.
 
-  ![Interactive Report Select Columns](images/do-not-display-columns.png " ")
+    ![Interactive Report Select Columns](images/do-not-display-columns.png " ")
 
 4. The interactive report is displayed by hiding the selected columns from the previous step. Click the **Neighborhood** column heading, and then select **Control Break**.
 
@@ -105,7 +112,9 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
     ![Interactive Report Sorting](images/set-sort.png " ")
 
-13. Now that you have made all of these modifications to the Interactive Report, it is important to save the report layout. End users have the ability to save either *Private Reports*, only they can view, or *Public Reports*, that other end users can also view. *{Note - As a developer you can remove the ability for _end users_ to save Public Reports by going to the report attributes in Page Designer.}*
+13. Now that you have made all of these modifications to the Interactive Report, it is important to save the report layout. End users have the ability to save either *Private Reports*, only they can view, or *Public Reports*, that other end users can also view.
+
+    >*{Note - As a developer you can remove the ability for _end users_ to save Public Reports by going to the report attributes in Page Designer.}*
 
     As a developer you also have the ability to save the report as the Primary (default) Report, or an Alternative Report. For this exercise you will save the report as a named Alternative Report.
 
@@ -113,7 +122,7 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 
 14. In the Save Report dialog, for Save(Only displayed for developers) select **As Default Report Settings**.
 
-    *Note - End users can save Private and Public reports, however, only developers (who have run the app from the App Builder) can save the Primary and Alternative reports.*
+    >*Note - End users can save Private and Public reports, however, only developers (who have run the app from the App Builder) can save the Primary and Alternative reports.*
 
     ![Interactive Report Save report](images/save-report.png " ")
 
@@ -130,7 +139,8 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
 16. Click **Apply** to confirm reset. The changes you have made to the report will be reset and the original report will be displayed.
     ![Confirm reset report](images/apply-reset.png " ")
 
-## **Task 2**: Enhancing the Form
+## Task 2: Enhance the Form
+
 Form pages allow end users to readily update a single record of information. It is very common for these pages to be modal pages, whereby they display over the top of the original page, and the original page is greyed out and not accessible without first closing the modal page. Advantages of modal pages include that the same page can be called from numerous other pages, they include all of the processing, validations, and so forth within the page definition, and they are user friendly and make for a very straight forward user experience.
 
 By default, the form pages generated by the Create Application Wizard are modal pages. The modal page for maintaining NYC Highschools takes up significant real estate. This could easily be improved by placing the Graduation Rate, Attendance Rate and College Career Rate on the same line. Lastly, the **Borough** allows any values to be entered, so you should restrict data entry by adding a select list of Borough Names.
@@ -143,7 +153,7 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
 2. In the Developer Toolbar, at the bottom of the screen, click **Edit Page 5**.
 
-    *Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
+    >*Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
 
 3. Items can readily be moved using drag-and-drop within Layout. If required you can also drag _new_ components (regions, items, and buttons) from the Gallery, below Layout, into the Layout.
 
@@ -157,8 +167,7 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
     ![move career rate](images/move-career-rate.png " ")
 
-    *Note - As soon as you deselect Start New Row, the item will move to be on the same line as the item above, within Layout.*
-
+    >*Note - As soon as you deselect Start New Row, the item will move to be on the same line as the item above, within Layout.*
 
 5. To limit the data entry for an item, one of the simplest techniques is to convert a text item (which allows any data to be entered) into a select list.
 
@@ -174,9 +183,8 @@ By default, the form pages generated by the Create Application Wizard are modal 
     For List of Values > SQL Query enter the following code
 
     ```
-    <copy>select distinct borough d, borough r
-    from nyc_highschools
-    order by 1</copy>
+    <copy> Select distinct borough d, borough r from nyc_highschools order by 1
+    </copy>
     ```
 
     ![Update Borough attributes](images/set-status1.png " ")
@@ -187,13 +195,11 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
     ![Save changes](images/pd-save.png " ")
 
-    *Note - If you press Save and Run in the toolbar a message will be displayed, rather than the page being run. This is expected behavior, as modal pages can not be run directly from Page Designer.*
+    >*Note - If you press Save and Run in the toolbar a message will be displayed, rather than the page being run. This is expected behavior, as modal pages can not be run directly from Page Designer.*
 
     ![save error](images/save-error.png " ")
 
-
 7. Navigate back to the runtime environment and refresh the browser, or click **Cancel** on the modal page to return to the **NYC Highschools Report** page.
-
 
 8. On the Project Tasks Report page, click the edit icon for any record.
 
@@ -201,7 +207,8 @@ By default, the form pages generated by the Create Application Wizard are modal 
 
     ![Updated form](images/updated-form.png " ")
 
-## **Task 3**: (OPTIONAL) Enhancing the UX of the Form
+## Task 3: (OPTIONAL) Enhance the UX of the Form
+
 In the previous task, you explored a few options to enhance the form. In this task, we further enhance the user experience of the form by splitting the form fields into multiple tabs. Currently, observe that the form contains a number of fields and the user needs to scroll through the form to view all the fields.
 
 1. In the Runtime environment, on the **NYC Highschools Report** page, click the **edit icon** for any record.
@@ -214,7 +221,7 @@ In the previous task, you explored a few options to enhance the form. In this ta
 
     ![Edit page 5](images/edit-page-5.png " ")
 
-    *Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
+    >*Note - If you have difficulties navigating using the Developer Toolbar, manually navigate to the browser tab for the APEX App Builder. If you are on the application home page, navigate to the page by clicking _5 - Nyc Highschool_. If already on another page in Page Designer, use the page selector in the toolbar to navigate to page 5.*
 
 3. Click **Nyc Highschool** in the rendering tree. In the Property Editor, navigate to **Appearance** and for Template select **Tabs Container**.
 
@@ -226,14 +233,14 @@ In the previous task, you explored a few options to enhance the form. In this ta
     - Location
     - Other Course Details
 
-  ![Create sub region](images/create-sub-region.png " ")
+    ![Create sub region](images/create-sub-region.png " ")
 
 5. In the Property Editor for each Sub Region, perform the following step:
     - Navigate to **Appearance**
     - Select **Template Options**
     - For **Header**, select **Hidden but accessible**
 
-  ![Template option](images/template-option.png " ")
+    ![Template option](images/template-option.png " ")
 
 6. The Sub Regions created represents the different tabs. Drag and drop the form fields into their respective Sub Region as mentioned in the table.
 
@@ -242,7 +249,7 @@ In the previous task, you explored a few options to enhance the form. In this ta
     | **General Information** | P5\_BOROUGH <br> P5\_SCHOOL\_NAME <br> P5\_NEIGHBORHOOD <br> P5\_INTEREST <br> P5\_METHOD |
     | **Metrics** | P5\_TOTAL\_STUDENTS <br> P5\_GRADUATION\_RATE <br> P5\_ATTENDANCE\_RATE <br> P5\_COLLEGE\_CAREER\_RATE <br> P5\_SAFE<br> P5\_SEATS <br> P5\_APPLICANTS |
     | **Location** | P5\_LATITUDE <br> P5\_LONGITUDE |
-    | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |  
+    | **Other Course Details** | P5\_DBN <br> P5\_LANGUAGE\_CLASSES <br> P5\_ADVANCED\_PLACEMENT\_COURSES <br> P5\_SCHOOL\_SPORTS |
 
     ![drag and drop fields](images/drag-and-drop-fields.png " ")
 
@@ -251,12 +258,11 @@ In the previous task, you explored a few options to enhance the form. In this ta
 
     ![Enhanced form](images/enhanced-form.png " ")
 
-
-## **Summary**
+## Summary
 
 You now know how _end-users_ can define custom reports using Interactive Reports, and you can easily improve form pages.
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author/Contributors** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author/Contributors** -  Apoorva Srinivas, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

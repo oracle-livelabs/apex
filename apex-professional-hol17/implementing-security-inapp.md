@@ -340,7 +340,7 @@ Providing multiple authentication options improves the flexibility and usability
 
         - Template Options > Use Template Defaults: Width > **Stretch**
 
-        Click **OK**
+        Click **OK**.
 
         - Icon: **fa-oracle-o**
 
@@ -354,7 +354,7 @@ Providing multiple authentication options improves the flexibility and usability
 
             - Advanced > Request: **APEX_AUTHENTICATION=IAM**
 
-            Click **OK**
+        Click **OK**.
 
     ![Define Authentication](images/iam-btn.png " ")
 
@@ -392,7 +392,7 @@ Providing multiple authentication options improves the flexibility and usability
 
             - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
 
-            Click **OK**
+        Click **OK**
 
     ![Define Authentication](images/google-btn1.png " ")
 
