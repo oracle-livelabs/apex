@@ -4,7 +4,7 @@
 
 In this lab, you learn to create and manage a shopping cart within an Oracle APEX application. The lab includes adding navigation bar entry, creating a shopping cart page, implementing various interactive components, and integrating backend processes to handle cart operations and checkout procedures. This exercise will demonstrate the comprehensive capabilities of APEX for building dynamic web applications with a strong emphasis on database interaction and user interface design.
 
-Estimated Time: 20 minutes
+Estimated Time: 34 minutes
 
 ### Objectives
 
@@ -455,6 +455,12 @@ In this task, you create buttons for removing items from the cart and proceeding
 
     ![close dialog](images/clear-btn.png " ")
 
+    - Under Server-side Condition:
+
+        - Type: **Item is NOT NULL**
+
+        - Item: **SHOPPING\_CART\_ITEMS**
+
     ![close dialog](images/clear-btn1.png " ")
 
 7. Right-click **Order Information** and select **Create Button**.
@@ -661,10 +667,9 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Identification > Name: **Go To Books**
 
-     - Behavior > Target: Click **No Link Defined**
-          - Page: **10**
+     - Under Behavior > Target: Click **No Link Defined**
 
-          - Set Items > Name: **P17\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
+          - Page: **10**
 
           - Clear Cache: **10**
 
@@ -672,7 +677,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
      - Server-side Condition > When Button Pressed: **Clear**
 
-    ![close dialog](images/go-to-books.png " ")
+    ![close dialog](images/7-3-16-go-to-books.png " ")
 
 17. Right-click **After Processing** and select **Create Branch**.
 
@@ -820,23 +825,23 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
     ![close dialog](images/expand-col.png " ")
 
-14. Select **ORDER\_ID**, **USER\_ID** and **PAYMENT\_ID**, Under Identification > Type: **Hidden**.
+14. Select **ORDER\_ID**, **USER\_ID** and **PAYMENT\_ID**, under Identification > Type: **Hidden**.
 
     ![close dialog](images/items-hide.png " ")
 
-15. Select **TOTAL**, Under Heading > Heading: **Total Amount**
+15. Select **TOTAL**, under Heading > Heading: **Total Amount**
 
     ![close dialog](images/total-heading.png " ")
 
-16. Select **ADDED\_DATE**, Under Heading > Heading: **Purchased Date**
+16. Select **ADDED\_DATE**, under Heading > Heading: **Purchased Date**
 
     ![close dialog](images/added-date-heading.png " ")
 
-17. Select **ADDED\_TIME**, Under Heading > Heading: **Purchased Time**
+17. Select **ADDED\_TIME**, under Heading > Heading: **Purchased Time**
 
     ![close dialog](images/added-time-heading.png " ")
 
-18. Select **Order Details**, Navigate to **Attributes**, enter/select the following:
+18. Select **Order Details**, navigate to **Attributes**, enter/select the following:
 
     - Under Appearance > Template: **Value Attribute Pairs - Column**
 
@@ -883,11 +888,11 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 21. Navigate to **Attributes**, enter/select the following:
 
-    - Under Appearance > Layout: **Float**
+    - Appearance > Layout: **Float**
 
-    - Under Card > Primary key column 1: **BOOK_ID**.
+    - Card > Primary key column 1: **BOOK_ID**.
 
-    - Under Title > Column: **TITLE**
+    - Title > Column: **TITLE**
 
     - Under Secondary Body:
 
@@ -895,25 +900,25 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
         - HTML Expression: Copy and paste the below HTML Code:
 
-        ```
-        <copy>
-        <b>Purchased Price: </b>&TOTAL_PRICE. Rs <br>
-        <b>Quantity : </b> &QUANTITY.
-        </copy>
-         ```
+            ```
+            <copy>
+            <b>Purchased Price: </b>&TOTAL_PRICE. Rs <br>
+            <b>Quantity : </b> &QUANTITY.
+            </copy>
+            ```
 
     - Under Media:
 
-        - Advanced Formatting:: **Toggle On**
+        - Advanced Formatting: **Toggle On**
 
         - HTML Expression: Copy and paste the below HTML Code:
 
-        ```
-        <copy>
-        <a href="&BUY_LINKS." target="_blank">
-        <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
-        </copy>
-         ```
+            ```
+            <copy>
+            <a href="&BUY_LINKS." target="_blank">
+            <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
+            </copy>
+            ```
 
         - Position: **First**
 
@@ -1074,7 +1079,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
 8. Click **Save and Run**.
 
-## Task 7: Run an Application
+## Task 7: Run the Application
 
 1. Navigate to **Search Books** and select any book of your choice to buy.
 

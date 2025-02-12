@@ -6,7 +6,7 @@ In this lab, you will learn how to load ONNX models into Oracle Database and cre
 
 >*Note: This lab assumes you are using Oracle Database 23ai.*
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -14,7 +14,8 @@ Estimated Time: 15 minutes
 - Create a Vector Provider
 - Generate Vector Embeddings
 - Create Search Configuration based on Oracle Vector Search
-- Link Search Bar
+- Link Vector Search to the Home Page Search.
+
 
 ## Task 1: Load ONNX Model to Oracle Database
 
@@ -102,6 +103,95 @@ In this task, you will create a Vector Provider that will be used later to set u
 5. Your Vector Provider is now created.
 
     ![Page Designer](images/18-2-5.png ' ')
+
+
+## Task 3: Create Table and Update View for Vector Embeddings in Project Data
+
+In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, **DESCRIPTION\_VECTOR**, to store description vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** API to insert a Vector Embeddings.
+
+1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
+
+    !["Page Designer"](images/18-3-1.png "")
+
+2. Create a new column in the **OBS\_BOOKS** table to store description vector embeddings. Copy and paste the SQL code below, then click **Run**.
+
+     ```
+    <copy>
+    ALTER TABLE OBS_BOOKS ADD DESCRIPTION_VECTOR VECTOR;
+    </copy>
+     ```
+
+    !["Page Designer"](images/18-3-2.png "")
+
+3. Copy and paste the SQL code below, then click **Run**
+
+    ```
+    <copy>
+    UPDATE OBS_BOOKS
+    SET DESCRIPTION_VECTOR = APEX_AI.GET_VECTOR_EMBEDDINGS(
+        P_VALUE             => DESCRIPTION,
+        P_SERVICE_STATIC_ID => 'db_onnx_model'
+    );
+    </copy>
+     ```
+
+    !["Page Designer"](images/18-3-3.png "")
+
+## Task 4: Create a Search Configuration
+
+In this task, you will set up a Search Configuration based on Oracle Vector Search.
+
+1. From the Navigation bar in your workspace, click **App Builder**.
+
+    !["Page Designer"](images/18-4-1.png "")
+
+2. In the **App Builder** page, select your Application and then click **Shared Components**.
+
+    !["Page Designer"](images/18-4-2.1.png "")
+
+    !["Page Designer"](images/18-4-2.2.png "")
+
+3. From Shared Components, under **Navigation and Search**, click **Search Configurations**.
+
+    !["Page Designer"](images/18-4-3.png "")
+
+4. In the Search Configurations page, click **Create**.
+
+    !["Page Designer"](images/18-4-4.png "")
+
+5. In the Create Search Configuration Detail Wizard, enter the following and click **Next**.
+
+    - Name : **Online Bookstore Search - Vector**
+
+    - Search Type: **Oracle Vector Search**
+
+    !["Page Designer"](images/18-4-5.png "")
+
+6. In the Create Search Configuration **Source** Wizard, enter the following and click **Next**.
+
+    - Vector Provider : **DB ONNX Model**
+
+    - Source Type: **Table**
+
+    - Table/View Owner: **Select your Parsing Schema**
+
+    - Table/View Name: **OBS\_BOOKS**
+
+    !["Page Designer"](images/18-4-6.png "")
+
+7. In the Create Search Configuration **Column Mapping** Wizard, enter the following and click **Create Search Configuration**.
+
+    - Primary Key Column Column 2 : **BOOK_ID(Number)**
+
+    - Vector Column: **DESCRIPTION_VECTOR(Vector)**
+
+    - Title Column: **TITLE(Varchar2)**
+
+    - Description Column: **DESCRIPTION(Varchar2)**
+
+    !["Page Designer"](images/18-4-7.png "")
+
+## Task 5: Link Oracle Vector Search to the Home Page Search.
 
 ## Summary
 

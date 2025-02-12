@@ -8,8 +8,6 @@ OCI API keys consist of two parts: a **Public key** and a **Private key**. You u
 
 **Note:** OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-
-
 Estimated Time: 15 minutes
 
 ### Objectives
@@ -23,7 +21,6 @@ In this lab, you will:
 - Create RAG Data Sources
 - Create a Navigation Bar Entry
 
-
 ## Task 1: Generate API Keys using OCI Console
 
 To Generate the API Keys using OCI Console:
@@ -32,17 +29,17 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click **My Profile** at the top-right corner.
+2. Click **My profile** at the top-right corner.
 
     ![Profile Menu](images/profile.png " ")
 
-3. Under Resources at the bottom-left, select **API Keys** and  click **Add API Key**.
+3. Under Resources at the bottom-left, select **API keys** and  click **Add API Key**.
 
     ![Add API Key](images/api-keys.png " ")
 
-4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
+4. The Add API key dialog is displayed. Select **Generate API key pair** to create a new key pair.
 
-5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
+5. Click **Download private key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
    *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
@@ -50,7 +47,7 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/add-api-key.png " ")
 
-7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information for creating Oracle APEX Web Credentials.
+7. The key is added, and the Configuration file preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information for creating Oracle APEX Web Credentials.
 
     ![Profile Menu](images/configuration-preview.png " ")
 
@@ -143,18 +140,28 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     ![App home page](images/create-blank-page.png ' ')
 
 2. In the Create Blank page dialog, enter/select the following:
-    - Page Number: **2**
-    - Name: **Chat Widget**
-    - Page Mode: **Modal Dialog**
+
+    - Under Page Definition:
+
+        - Page Number: **2**
+
+        - Name: **Chat Widget**
+
+        - Page Mode: **Modal Dialog**
 
     Click **Create Page**.
 
     ![create page wizard](images/learn-more.png ' ')
 
 3. With **Page 2: Chat Widget** selected in the Rendering Tree, enter/select the following in the Property Editor:
-    - Appearance > Template Options:
+
+    - Appearance > Template Options: Click **Use Teamplate Defaults**
+
         - General: Check **Remove Body Padding**
+
         - Content Padding: **Remove Padding**
+
+        Click **OK**
 
     ![create page wizard](images/learn-more-template.png ' ')
 
