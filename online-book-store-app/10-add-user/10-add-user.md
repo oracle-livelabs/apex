@@ -9,7 +9,7 @@ Estimated Time: 20 minutes
 ### Objectives
 
 - Create a User Profile Page
-- Add Navigation bar Entries to include links to the user profile and other pages.
+- Add Navigation Bar Entries to include links to the user profile and other pages.
 - Create and manage forms to update user details and reset passwords.
 - Implement RESTful Services to handle user profile pictures and integrate these services into the application.
 
@@ -123,7 +123,7 @@ This task provides step-by-step instructions for creating a profile page display
 
         - Display Badge: **Toggle On**
 
-        - Layout: **2 Column grid**
+        - Layout: **2 Column Grid**
 
         - Size: **Large**
 
@@ -201,7 +201,7 @@ In this task, you set up entries for authenticated and public users, create a lo
 
         - List Entry Label: **&USERNAME.**
 
-    - Conditions > Condition Type: **User is Authenticated(not public)**
+    - Conditions > Condition Type: **User is Authenticated (not public)**
 
     Click **Apply Changes**.
 
@@ -225,7 +225,7 @@ In this task, you set up entries for authenticated and public users, create a lo
 
     - Target > Page: **9999**
 
-    - Conditions > Condition Type: **User is the Public user (user has not authenticated)**
+    - Conditions > Condition Type: **User is the Public User (user has not authenticated)**
 
     Click **Create and Create Another**.
 
@@ -251,7 +251,7 @@ In this task, you set up entries for authenticated and public users, create a lo
 
         - Clear Cache: **15010**
 
-    - Authorization > Authorization Scheme: **Must Not be Public User**
+    - Authorization > Authorization Scheme: **Must Not Be Public User**
 
     - User Defined Attributes > List Item CSS Classes: **icon-only**
 
@@ -411,7 +411,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Label: **Apply Changes**
 
-    - Layout > Position: **Next**
+    - Layout > Slot: **Next**
 
     - Appearance > Hot: **Toggle On**
 
