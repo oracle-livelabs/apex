@@ -283,9 +283,7 @@ In this lab, you will:
 
         - List Entry Label: **Home**
 
-    - Under Target:
-
-        - Page: **10**
+    - Target > Page: **10**
 
     - Under Conditions:
 

@@ -956,9 +956,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
         - List Entry Label: **My Books**
 
-    - Under Target:
-
-        - Page: **20**
+    - Target > Page: **20**
 
     Click **Create List Entry**.
 

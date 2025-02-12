@@ -449,7 +449,7 @@ In this lab, you will:
 
 4. Click **Create List Entry**.
 
-    ![close dialog](images/create-wishlist-nav-entry.png " ")
+    ![close dialog](images/9-3-4-create-wishlist-nav-entry.png " ")
 
 5. Enter/select the following:
 

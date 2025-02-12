@@ -166,9 +166,7 @@ Progressive Web App is updated.
 
         - List Entry Label: **Settings**
 
-    - Under Target:
-
-        - Page: **20000**
+    - Target > Page: **20000**
 
     Click **Create List Entry**.
 
