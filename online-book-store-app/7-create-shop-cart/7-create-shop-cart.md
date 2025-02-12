@@ -14,7 +14,7 @@ In this lab, you will:
 - Build Order Information Page
 - Create a Navigation Bar Entry
 - Build My Books Page
-- Create Application processes
+- Create Application Processes
 - Create Application Computations
 
 ## Task 1: Build a Shopping Cart Page
@@ -71,26 +71,26 @@ In this task, you develop a new page in the application to display the shopping 
 
         ```
         <copy>
-SELECT
-    b.book_id,
-    b.title,
-    b.buy_links,
-    b.price,
-    b.description,
-    b.discount,
-    b.category,
-    b.author,
-    b.book_image,
-    a.n002 AS quantity,
-    b.price * ((100 - b.discount) / 100) AS new_price,
-    ROUND(b.price * a.n002, 2) AS total_price,
-    ROUND(b.price * ((100 - b.discount) / 100) * a.n002, 2) AS new_total_price
-FROM
-    apex_collections a,
-    obs_books b
-WHERE
-    collection_name = 'BOOKS'
-    AND b.book_id = a.n001;
+        SELECT
+            b.book_id,
+            b.title,
+            b.buy_links,
+            b.price,
+            b.description,
+            b.discount,
+            b.category,
+            b.author,
+            b.book_image,
+            a.n002 AS quantity,
+            b.price * ((100 - b.discount) / 100) AS new_price,
+            ROUND(b.price * a.n002, 2) AS total_price,
+            ROUND(b.price * ((100 - b.discount) / 100) * a.n002, 2) AS new_total_price
+        FROM
+            apex_collections a,
+            obs_books b
+        WHERE
+            collection_name = 'BOOKS'
+            AND b.book_id = a.n001;
         </copy>
         ```
 
@@ -103,6 +103,7 @@ WHERE
         - Title: **&TITLE.**
 
         - Description: Copy and paste the code below:
+
         ```
         <copy>
         &DESCRIPTION.
@@ -286,9 +287,7 @@ WHERE
 
     ![close dialog](images/save4.png " ")
 
-    Update OBS\_MANAGE\_ORDERS Package
-
-18. Click **SQL Workshop** and navigate to **Object Browser**.
+18. Update **OBS\_MANAGE\_ORDERS** Package. Click **SQL Workshop** and navigate to **Object Browser**.
 
     ![close dialog](images/obj-browser.png " ")
 
@@ -314,14 +313,14 @@ WHERE
 
     ![close dialog](images/package-spec1.png " ")
 
-21. Under **Body**, Copy and paste below code after **remove\_book** procedure:
+21. Under **Body**, copy and paste below code after **remove\_book** procedure:
 
     ```
     <copy>
     PROCEDURE increase_book_in_cart (
         p_book     IN NUMBER,
         p_quantity IN NUMBER
-    ) 
+    )
     IS
     BEGIN
         remove_book(p_book);
@@ -331,7 +330,7 @@ WHERE
     PROCEDURE decrease_book_in_cart (
         p_book     IN NUMBER,
         p_quantity IN NUMBER
-    ) 
+    )
     IS
     BEGIN
         IF p_quantity = 1 THEN
@@ -348,9 +347,7 @@ WHERE
 
     ![close dialog](images/package-body1.png " ")
 
-    Again, Navigate back to Page 17:
-
-22. Right-click **Body** and select **Create Region**.
+22. Again, navigate back to **Page 17**, right-click **Body** and select **Create Region**.
 
     ![close dialog](images/create-region9.png " ")
 

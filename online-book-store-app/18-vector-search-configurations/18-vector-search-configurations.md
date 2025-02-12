@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create a Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will link a search bar to these responses, enabling powerful and accurate search functionality.
 
->**Note**: This lab assumes you are using Oracle Database 23ai.
+>*Note: This lab assumes you are using Oracle Database 23ai.*
 
 Estimated Time: 15 minutes
 
@@ -24,11 +24,11 @@ Login as SYS/Admin User and execute the below command.
 
 >**Command**: GRANT create mining model TO **YourSchemaName**;
 
-!["Grant create mining model"](images/provide-grants.png "")
+![Page Designer](images/18-1-0.png ' ')
 
 1. From your APEX workspace homepage, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
-    !["select SQL Commands"](images/select-sql-commands.png "")
+    ![Page Designer](images/18-1-1.png ' ')
 
 2. In the SQL Commands Page, copy and paste the below code and click **Run**.
 
@@ -60,7 +60,8 @@ Login as SYS/Admin User and execute the below command.
         END;
     </copy>
     ```
-    !["create view"](images/load-onnx-model.png "")
+
+    ![Page Designer](images/18-1-2.png ' ')
 
 ## Task 2: Create Vector Provider from Workspace Utilities
 
@@ -68,32 +69,39 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 1. From your SQL Commands page, click the Down Arrow next to **App Builder** and select **Workspace Utilities**. Then click **All Workspace Utilities**.
 
-    !["Click shared components"](images/click-workspace-utilities.png "")
+    ![Page Designer](images/18-2-1.png ' ')
 
 2. In the Workspace Utilities page, select **Vector Providers**.
 
-    !["click workspace utilities"](images/select-vector-providers.png "")
+    ![Page Designer](images/18-2-2.png ' ')
 
 3. In the Vector Providers page, click **Create**.
 
-    !["click create"](images/click-create.png "")
+    ![Page Designer](images/18-2-3.png ' ')
 
 4. In the Vector Provider Configuration page, enter the following:
 
-    - Under Identification,
-        - Provider Type : **Database ONNX Model**
-        - Name: **DB ONNX Model**
-        - Static ID: **db\_onnx\_model**
-    - Under Local Embedding
-        - For ONNX Model Owner: **Select your Parsing Schema**
-        - ONNX Model Name: **DOC_MODEL**
-    - Click **Create**.
+    - Under Identification:
 
-    !["configure vector provider"](images/configure-vector-provider.png "")
+        - Provider Type : **Database ONNX Model**
+
+        - Name: **DB ONNX Model**
+
+        - Static ID: **db\_onnx\_model**
+
+    - Under Local Embedding:
+
+        - For ONNX Model Owner: **Select your Parsing Schema**
+
+        - ONNX Model Name: **DOC_MODEL**
+
+    Click **Create**.
+
+    ![Page Designer](images/18-2-4.png ' ')
 
 5. Your Vector Provider is now created.
 
-    !["vector provider created"](images/created-vector-provider.png "")
+    ![Page Designer](images/18-2-5.png ' ')
 
 ## Summary
 
