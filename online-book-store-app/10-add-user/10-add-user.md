@@ -4,7 +4,7 @@
 
 This lab focuses on guiding you through creating and managing user profile pages. The tasks will cover various aspects of page creation, customization, and linking, as well as using SQL queries, RESTful services, and form handling. By the end of this lab, you will have developed a fully functional user profile page that includes personal details, book lists, and functionalities for updating profiles and resetting passwords.
 
-Estimated Time: 20 minutes
+Estimated Time: 36 minutes
 
 ### Objectives
 
@@ -597,7 +597,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     ![close dialog](images/10-4-form-details.png " ")
 
-6. Under **Reset Password** region, expand columns and select all columns except **P27\_USER\_ID** and **P27\_EMAIL**, right-click and select **delete**
+6. Under **Reset Password** region, expand columns and select all columns except **P27\_USER\_ID** and **P27\_EMAIL**, right-click and select **Delete**
 
     ![close dialog](images/10-4-delete.png " ")
 
@@ -821,7 +821,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     ![close dialog](images/10-4-navigate-to-profile1.png " ")
 
-32. Right-click **My details** and select **Create Button**.
+32. Right-click **My Details** and select **Create Button**.
 
     ![close dialog](images/10-4-create-btn-pro.png " ")
 
@@ -837,7 +837,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - Template Options: Click **Use Template Defaults**
 
-            - Size: **large**
+            - Size: **Large**
 
             - Type: **Warning**
 
@@ -984,7 +984,7 @@ Application Computation, navigate back to the shared component and under **Appli
 
     ![close dialog](images/10-5-create-comp-rest.png " " )
 
-15. Now, you will update the navigation bar list to add badge value. Navigate to shared components and click **Navigation Bar List**.
+15. Now, you will update the navigation bar list to add badge value. Navigate to **Shared Components** and click **Navigation Bar List**.
 
     ![close dialog](images/10-5-sc-rest2.png " " )
 
