@@ -14,7 +14,7 @@ In this lab, you will:
 
 ## Task 1: Push Notification
 
-1. Navigate to **App Builder** and select **Online Bookstore Application**.
+1. Navigate to **App Builder** and select **Online Bookstore application**.
 
     ![Click My Apps](images/13-1-1-app.png " ")
 
@@ -178,7 +178,7 @@ Progressive Web App is updated.
 
     ![close dialog](images/13-2-6-settings.png " ")
 
-2. Push Notifications is disabled by Default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
+2. Push Notifications is disabled by default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
     ![close dialog](images/13-2-6-settings1.png " ")
     ![close dialog](images/13-2-6-settings2.png " ")

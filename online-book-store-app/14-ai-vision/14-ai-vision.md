@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to create REST data sources, automations, and triggers in Oracle APEX. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness.
+In this lab, you will learn to create REST Data Sources, automations, and triggers in Oracle APEX. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness.
 
 Estimated Time: 10 minutes
 
@@ -10,9 +10,9 @@ Estimated Time: 10 minutes
 
 In this lab, you:
 
-- Rest Data Source
+- Create Rest Data Source
 - Create Automation
-- Create trigger
+- Create Trigger
 
 ## Task 1: Integrating with Object Detection and Text Detection
 
@@ -37,7 +37,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
    ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
-    - **Rest Data Source Type**: Oracle Cloud Infrastructure (OCI)
+
+    - **REST Data Source Type**: Oracle Cloud Infrastructure (OCI)
 
     - **Name**: OCI Vision
 
@@ -94,13 +95,13 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/post.png " ")
 
-11. Under Operation Parameters, click **Synchronize with body** and click **OK**.
+11. Under Operation Parameters, click **Synchronize with Body** and click **OK**.
 
     ![Click Timeline](images/add-parameter.png " ")
 
     ![Click Timeline](images/synchronize-click-ok.png " ")
 
-12. Under Operation Parameters, Click **Add Parameter**.
+12. Under Operation Parameters, click **Add Parameter**.
 
     ![Click Timeline](images/add-comp.png " ")
 
@@ -253,7 +254,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/14-2-6-save.png " ")
 
-7. Navigate to the application home page and click Page **50 - Edit Book Details**
+7. Navigate to the application home page and click on page **50 - Edit Book Details**
 
     ![Click Timeline](images/14-2-7-goto-page50.png " ")
 
@@ -321,7 +322,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
 ## Summary
 
-You now know how to configure REST data sources, set up automations, and define triggers in Oracle APEX. These skills enable you to integrate external data, automate tasks, and respond to events efficiently.
+You now know how to configure REST Data Sources, set up automations, and define triggers in Oracle APEX. These skills enable you to integrate external data, automate tasks, and respond to events efficiently.
 
 You are now ready to move on to the next lab!
 
