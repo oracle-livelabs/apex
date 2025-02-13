@@ -136,7 +136,7 @@ In this task, you will add a navigation bar entry for the administration page. A
 
     ![close dialog](images/11-2-nav-bar-admin.png " ")
 
-3. Click **Navigation Bar** and click **Create Entry**.
+3. Click **Navigation Bar**.
 
     ![close dialog](images/11-2-nav-bar-admin1.png " ")
 
@@ -218,7 +218,7 @@ In this task, you will update the authorization scheme to ensure that only users
 
 ## Task 4: Manage Books Information
 
-In this task, you'll create a page to manage book information. Start by navigating to the Application Home Page and creating a new blank page with the identification details set. Then, customize the page layout and Appearance. Next, create regions for updating book information and searching for books. Configure dynamic actions to handle search functionality and refresh actions. Set up buttons for editing, resetting, and creating book entries.
+In this task, you'll create a page to manage book information. Start by navigating to the Application Home Page and creating a new blank page with the identification details set. Then, customize the page layout and appearance. Next, create regions for updating book information and searching for books. Configure dynamic actions to handle search functionality and refresh actions. Set up buttons for editing, resetting, and creating book entries.
 
 1. On Page Designer toolbar, Navigate to **(+ v)** and select **Blank Page**.
     ![close dialog](images/11-4-nav-create-page.png " ")
@@ -655,7 +655,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/11-4-reset-link.png " ")
 
-35. Right-click **Reset** button and select **Duplicate**.
+35. Right-click **RESET** button and select **Duplicate**.
 
     ![close dialog](images/11-4-duplicate-reset.png " ")
 
@@ -679,7 +679,9 @@ In this task, you'll create a page to manage book information. Start by navigati
 
             Click **OK**.
 
-    ![close dialog](images/11-4-create-btn1.png " ")
+        - Icon: Remove **fa-undo-alt**
+
+    ![close dialog](images/11-4-36-create-btn1.png " ")
 
     - Under Behavior:
 
@@ -693,7 +695,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
              Click **OK**.
 
-    ![close dialog](images/11-4-create-btn2.png " ")
+    ![close dialog](images/11-4-36-create-btn2.png " ")
 
 37. Select **Search** Region under **Body** and update Layout > Slot: **Left Column**
 

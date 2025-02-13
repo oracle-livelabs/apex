@@ -551,7 +551,10 @@ In this task, you will learn how to create and configure a page to update the cu
 
             Click **OK**.
 
-    ![close dialog](images/10-3-edit-profile-redirect.png " ")
+        - Advanced > Custom Attributes: **style="background-color: transparent;"**
+
+    <!-- ![close dialog](images/10-3-edit-profile-redirect.png " ") -->
+    ![close dialog](images/10-3-edit-profile-redirect.1.png " ")
 
 34. Click **Save**.
 
@@ -867,7 +870,10 @@ This task provides a comprehensive step-by-step process for creating and configu
 
             Click **OK**.
 
-    ![close dialog](images/10-4-change-pass-link.png " ")
+        - Advanced > Custom Attributes: **style="background-color: transparent;"**
+
+    <!-- ![close dialog](images/10-4-change-pass-link.png " ") -->
+    ![close dialog](images/10-4-change-pass-link.1.png " ")
 
 34. Click **Save**.
 
