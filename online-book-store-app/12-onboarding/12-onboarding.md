@@ -395,7 +395,7 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (Returning Boolean)**
+        - Type: **Function Body (returning Boolean)**
 
         - PL/SQL Function Body: Copy and paste the below code:
 
@@ -437,7 +437,7 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (Returning Boolean)**
+        - Type: **Function Body (returning Boolean)**
 
         - PL/SQL Function Body: Copy and paste the below code:
 
@@ -465,7 +465,7 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (Returning Boolean)**
+        - Type: **Function Body (returning Boolean)**
 
         - PL/SQL Function Body: Copy and paste the below code:
 
@@ -485,7 +485,7 @@ Create the forgot password Page
 
     ![close dialog](images/12-2-17-compare-pass-valid.png " ")
 
-18. Right-click **Update Current User** region and select **Create Sub-Region**.
+18. Right-click **Update Current User** region and select **Create Sub Region**.
 
     ![close dialog](images/12-2-18-sub-region-reset.png " ")
 
@@ -499,7 +499,7 @@ Create the forgot password Page
 
         - Template: **Buttons Container**
 
-        - Template option: **Use Template Options**
+        - Template Options: Click **Use Template Defaults**
 
             - Style: **Remove UI Decoration**
 
@@ -581,7 +581,7 @@ Create the forgot password Page
 
         - Type: **Form - Automatic Row Processing (DML)**
 
-        - Form Region: **Update current user**
+        - Form Region: **Update Current User**
 
     - Success Message > Success Message: **Updated Profile details successfully!**
 
@@ -653,7 +653,7 @@ Create the forgot password Page
 
 ## Task 3: Creating Email Verification for User SignUp - Page 100001
 
-Create the user signUp Page
+Create the User Sign Up Page
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
@@ -841,9 +841,7 @@ Create the user signUp Page
 
 13. Click **Save**.
 
-    Update the Login Page
-
-14. Navigate to Page - **9999**.
+14. Update the Login Page, navigate to Page - **9999**.
 
     ![login-9999](images/12-3-nav-page9999.png " ")
 
@@ -859,7 +857,7 @@ Create the user signUp Page
 
         - Label: **New here? SignUp**
 
-    - Under Appearance > Template options: Click **Use Template Defaults**
+    - Under Appearance > Template Options: Click **Use Template Defaults**
 
         - Size: **Small**
 
@@ -871,7 +869,7 @@ Create the user signUp Page
 
     - Under Behavior:
 
-        - Action: **Redirect to page in this application**
+        - Action: **Redirect to Page in this application**
 
         - Target: Click **No Link Defined**
 
@@ -885,7 +883,7 @@ Create the user signUp Page
 
 ## Task 4: Creating  SignUp - Page 100000
 
-1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
     ![form-page-signup](images/12-4-nav-create-page.png " ")
 
 2. Choose **Form Page**.
@@ -1094,7 +1092,7 @@ Create the user signUp Page
 
     ![Click My Apps](images/create-project1.png " ")
 
-3. In the New Project Screen, For Project Name: Enter **OBS Application** and click **CREATE**.
+3. In the New Project Screen, for Project Name: Enter **OBS Application** and click **CREATE**.
 
     ![Click My Apps](images/new-project1.png " ")
 
@@ -1102,15 +1100,15 @@ Create the user signUp Page
 
     ![Click My Apps](images/external.png " ")
 
-5. In the OAuth consent screen, Enter the following:
+5. In the OAuth consent screen, enter the following:
 
-   Under **App Information** Section:
+   Under **App information** Section:
 
-      - For Application name: **Online Bookstore**
+      - For App name: **Online Bookstore**
 
       - For User support email: Enter your **Email Address**
 
-   Under **App Domain** Section:
+   Under **App domain** Section:
 
       - For Application Homepage link: Enter your **Application Homepage link**
 
@@ -1256,11 +1254,17 @@ Create the user signUp Page
 
      ![Authentication scheme displayed](images/12-5-25-nav-obj-browser.png " ")
 
-26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and Click **Save and Continue**.
+26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and click **Save and Compile**.
 
-    - Specification: **procedure google\_post\_authenticate;**
+    - Specification: Copy and paste the code below:
 
-    - Body: paste the below code.
+        ```
+        <copy>
+        procedure google_post_authenticate;
+        </copy>
+        ```
+
+    - Body: Copy and paste the code below:
 
         ```
         <copy>
@@ -1299,7 +1303,7 @@ Create the user signUp Page
 
     ![Authentication scheme displayed](images/12-5-27-login-page.png " ")
 
-28. In the rendering tab, Select Page Item **P9999_USERNAME**
+28. In the Rendering Tab, select page item **P9999_USERNAME**
 
     - Appearance > Value Placeholder: **Email Address or Username**
 
@@ -1317,7 +1321,7 @@ Create the user signUp Page
 
         - Label: **Login/Signup with Google Account**
 
-    - Under Appearance > Template options: Click **Use Template Defaults**
+    - Under Appearance > Template Options: Click **Use Template Defaults**
 
         - Size: **Large**
 
@@ -1327,7 +1331,7 @@ Create the user signUp Page
 
     - Under Behavior:
 
-        - Action: **Redirect to page in this application**
+        - Action: **Redirect to Page in this application**
 
         - Target: Click **No Link Defined**
 

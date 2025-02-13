@@ -1079,23 +1079,31 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
 ## Task 7: Run the Application
 
-1. Navigate to **Search Books** and select any book of your choice to buy.
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/7-7-1.png " ")
+
+2. Navigate to **Search Books** and select any book of your choice to buy.
 
     ![close dialog](images/search-books.png " ")
 
-2. Select **Quantity** and click **Add to Cart**.
+3. Select **Quantity** and click **Add to Cart**.
 
     ![close dialog](images/click-add-to-cart.png " ")
 
-3. On the Navigation bar list, select **Shopping Cart**.
+4. On the Navigation bar list, select **Shopping Cart**.
 
     ![close dialog](images/click-shopping-cart.png " ")
 
-4. Now, you see the shopping cart page, click **Proceed to Purchase** button.
+5. Now, you see the shopping cart page, click **Proceed to Purchase** button.
 
     ![close dialog](images/view-shopping-cart.png " ")
 
-5. Now, you see the order details page, On the Navigation bar list, select **My Books** to check all the purchased books.
+6. Now, you see the order details page, On the Navigation bar list, select **My Books** to check all the purchased books.
 
     ![close dialog](images/order-details.png " ")
     ![close dialog](images/view-purchased-books.png " ")

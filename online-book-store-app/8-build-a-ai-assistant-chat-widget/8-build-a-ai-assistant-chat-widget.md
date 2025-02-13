@@ -321,9 +321,28 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![close dialog](images/nav-entry-details1.png " ")
 
-6. Navigate to the application's home page and run the app.
+## Task 8: Run the Application
 
-     ![close dialog](images/8-7-6-run.png " ")
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/8-8-1.png " ")
+
+2. Click **AI Assistant** entry in the navigation bar.
+
+    ![close dialog](images/8-8-2.png " ")
+
+3. Enter questions related to books available in the bookstore and click the send icon.
+
+    ![close dialog](images/8-8-3.png " ")
+
+4. Observe and analyze the responses to gain better insights.
+
+    ![close dialog](images/8-8-4.png " ")
+     <!-- ![close dialog](images/8-7-6-run.png " ") -->
 
 ## Summary
 
