@@ -777,6 +777,32 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     ![close dialog](images/save2.png " ")
 
+## Task 8: Run the Application
+
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/6-8-1.png " ")
+
+2. Click on any book, select the **Quantity**, and click **Add To Cart**.
+
+    ![close dialog](images/6-8-2.1.png " ")
+
+    ![close dialog](images/6-8-2.2.png " ")
+
+3. Observe the total item number on the shopping cart entry in the navigation bar.
+
+    ![close dialog](images/6-8-3.png " ")
+
+4. To remove a book from the cart, click on the book and then click **Remove From Cart**.
+
+    ![close dialog](images/6-8-4.1.png " ")
+
+    ![close dialog](images/6-8-4.2.png " ")
+
 ## Summary
 
 In this lab, you have learned how to enhance the Book Details page by creating a package to manage shopping cart functionalities, defining application items to store session state information, implementing application processes to run PL/SQL code at specific points, and setting up computations to determine user-related information. These steps enable the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface dynamically reflects the current state of the cart. You are now ready to move on to the next lab!

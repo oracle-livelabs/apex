@@ -103,6 +103,10 @@ In this lab, you will:
 
     ![App builder home page](images/click-replace.png " ")
 
+4. Navigate to the **Object Browser**. Expand **Tables**, select **OBS\_BOOKS**, click on **Data**, and observe the book data in this table.
+
+    ![App builder home page](images/2-2-4.png " ")
+
 ## Task 3: Create a Faceted Search Page
 
 In this task, you create Faceted Search page which will display list of the books with their titles and authors.

@@ -56,14 +56,16 @@ In this lab, you create a simple application with one click called **Online Book
     After making all changes, click **Save Icon**.
 
     ![Create Application wizard](./images/upload-icon.png " ")
+
     ![Create Application wizard](./images/edit-icon.png " ")
-
-
 
 8. To view the application, click **Run** and enter your workspace credentials to log in.
 
      ![Create Application wizard](./images/run-app.png " ")
+
      ![Create Application wizard](./images/login-app.png " ")
+
+     ![Create Application wizard](./images/home-page.png " ")
 
 ## Task 2: Load Quick SQL
 
@@ -147,6 +149,14 @@ In this lab, you create a simple application with one click called **Online Book
 5. We can see that 11 statements were run successfully.
 
    ![Create Application wizard](./images/results.png " ")
+
+6. Navigate to the **Object Browser** via the **SQL Workshop** dropdown to view all tables.
+
+   ![Create Application wizard](./images/1-2-6.png " ")
+
+7. Expand **Tables** and select any table to view its columns and other details.
+
+  ![Create Application wizard](./images/1-2-7.png " ")
 
 ## Summary
 

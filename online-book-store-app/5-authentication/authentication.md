@@ -255,13 +255,19 @@ In this task, you will learn to create custom authentication.
 
    ![App builder home page](images/make-current.png " ")
 
-10. Run the application using the below credentials.
-    - Username: **user01**
-    - Password: **secretPassword**
+10. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
 
    ![App builder home page](images/run-app1.png " ")
+
    ![App builder home page](images/enter-login-cred.png " ")
 
+11. Click the **View Password icon** to verify the password, then click **Sign In**.
+
+   ![App builder home page](images/5-3-11.png " ")
 
 ## Summary
 

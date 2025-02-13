@@ -38,7 +38,11 @@ In this lab, you will:
 
    ![App builder home page](images/save-as-roller.png " ")
 
+5. Click on the **X** of the **Theme Roller** and observe the theme.
+
    ![App builder home page](images/success-theme.png " ")
+
+   ![App builder home page](images/4-1-4.3.png " ")
 
 ## Summary
 
