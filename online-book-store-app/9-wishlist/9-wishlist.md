@@ -469,6 +469,38 @@ In this lab, you will:
 
     ![close dialog](images/my-wishlist-nav.png " ")
 
+## Task 4: Run the Application
+
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/9-4-1.png " ")
+
+2. Click on any book and click **Add To Wishlist**.
+
+    ![close dialog](images/9-4-2.1.png " ")
+
+    ![close dialog](images/9-4-2.2.png " ")
+
+3. Observe the My Wishlist page by clicking on **My Wishlist** entry in the navigation bar.
+
+    ![close dialog](images/9-4-3.1.png " ")
+
+    ![close dialog](images/9-4-3.2.png " ")
+
+4. Navigate back to the home page by clicking **Online Bookstore**.
+
+    ![close dialog](images/9-4-4.png " ")
+
+5. To remove a book from the wishlist, click on the book and then click **Remove From Wishlist**.
+
+    ![close dialog](images/9-4-5.1.png " ")
+
+    ![close dialog](images/9-4-5.2.png " ")
+
 ## Summary
 
 In this lab, you successfully created a wishlist page. You designed a dynamic region to display books in the wishlist, added buttons for managing the wishlist, and implemented backend processes to handle wishlist modifications. Furthermore, you updated the navigation bar to include a link to the wishlist, ensuring easy access for users. This comprehensive exercise demonstrates how to integrate advanced functionalities into an Oracle APEX application, enhancing its usability and interactivity.
