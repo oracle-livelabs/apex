@@ -4,7 +4,7 @@
 
 In this lab, you learn to enable push notifications.
 
-Estimated Time: 10 minutes
+Estimated Time: 6 minutes
 
 ### Objectives
 
