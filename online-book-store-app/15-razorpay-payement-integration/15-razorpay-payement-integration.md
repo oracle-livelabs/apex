@@ -18,9 +18,9 @@ In this lab, you will:
 
 1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
 
-2. Select the mode Test from (Test or Live) for which we generate the API key.
+2. Select the "Test" mode from (Test or Live) to generate the API key.
 
-    *Note: Test Mode: The test mode is a simulation mode that you can use to test your integration flow. Your customers will not be able to make payments in this mode.
+    *Note: Test Mode: The test mode is a simulation mode that you can use to test your integration flow. Your customers will not be able to make payments in this mode.*
 
 3. Navigate to **Account & Settings** → API Keys (under Website and app settings) → Generate Key to generate key for the selected mode.
 
@@ -56,7 +56,7 @@ In this lab, you will:
 
     ![Click Timeline](images/15-1-9-details.png " ")
 
-## Task 2: Create Rest Data Source
+## Task 2: Create REST Data Source
 
 1. Navigate to the application home page and click **Shared Components**.
 
@@ -98,7 +98,7 @@ In this lab, you will:
 
     ![Click Timeline](images/15-2-8-auth.png " ")
 
-   The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
+   The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
 9. On the REST Data Sources page, click **Razorpay API**.
 
@@ -151,7 +151,7 @@ In this lab, you will:
 
 2. In the object tree, expand **Packages** and select **OBS\_MANAGE\_ORDERS** package.
 
-3. Under **Specification**, Replace procedure **create\_order** with the below code:
+3. Under **Specification**, replace procedure **create\_order** with the below code:
 
      ```
      <copy>
@@ -168,7 +168,7 @@ In this lab, you will:
 
      ![Click Timeline](images/15-3-3-manage-orders-package-pecification.png " ")
 
-4. Under **Body**, Replace procedure **create\_order** with the below code:
+4. Under **Body**, replace procedure **create\_order** with the below code:
 
     ```
     <copy>
@@ -246,19 +246,15 @@ In this lab, you will:
     ![Click Timeline](images/15-4-3-create-pageitems2.png " ")
     ![Click Timeline](images/15-4-3-create-pageitems3.png " ")
 
-4. Select **Proceed** button, under Behavior update Action: **Defined by Dynamic Action**.
-
-    ![Click Timeline](images/15-4-4-proceed-action.png " ")
-
-5. Right-click on **Proceed** button and select **Create Dynamic Action**
+4. Right-click on **Proceed** button and select **Create Dynamic Action**
 
     ![Click Timeline](images/15-4-5-proceed-create-da.png " ")
 
-6. In the property editor, under Identification update Name: **run_pay**
+5. In the property editor, under Identification update Name: **run_pay**
 
     ![Click Timeline](images/15-4-6-da-name.png " ")
 
-7. Select true action and in the property editor, enter/select the following:
+6. Select **True** action and in the property editor, enter/select the following:
 
     - Identification > Action: **Submit Page**
 
@@ -266,15 +262,15 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-7-da-action.png " ")
 
-8. Navigate to the **Dynamic Actions** Tab and right-click on **Page Load** and select **Create Dynamic Action**
+7. Navigate to the **Dynamic Actions** tab and right-click on **Page Load** and select **Create Dynamic Action**
 
     ![Click Timeline](images/15-4-8-create-da.png " ")
 
-9. In the property editor, under Identification update Name: **Invoke Razorpay**
+8. In the property editor, under Identification update Name: **Invoke Razorpay**
 
     ![Click Timeline](images/15-4-9-da-name.png " ")
 
-10. Select true action and enter/select the following:
+9. Select **True** action and enter/select the following:
 
     - Identification > Action: **Execute Javascript Code**
 
@@ -340,11 +336,11 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-10-da-action.png " ")
 
-11. Right-click **true** and select **Create TRUE Action**
+10. Right-click **True** and select **Create TRUE Action**
 
     ![Click Timeline](images/15-4-11-true2.png " ")
 
-12. In the property editor, enter/select the following:
+11. In the property editor, enter/select the following:
 
     - Identification > Action: **Execute Server-side Code**
 
@@ -357,11 +353,11 @@ In this lab, you will:
         ```
     ![Click Timeline](images/15-4-12-true2-action.png " ")
 
-13. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+12. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![Click Timeline](images/15-4-13-processing.png " ")
 
-14. In the property editor, enter/select the following:
+13. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -371,7 +367,7 @@ In this lab, you will:
 
     - Under Settings:
 
-        - Type: **Rest Source**
+        - Type: **REST Source**
 
         - REST Source: **Razorpay API**
 
@@ -387,7 +383,7 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-14-processing-details.png " ")
 
-15. Under **Create Razorpay Order** process, expand **Parameters** and update the following:
+14. Under **Create Razorpay Order** process, expand **Parameters** and update the following:
 
     - **Amount**:
 
@@ -413,11 +409,11 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-15-para2.png " ")
 
-16. Right-click **Processing** and select **Create Process**.
+15. Right-click **Processing** and select **Create Process**.
 
     ![Click Timeline](images/15-4-16-create-process.png " ")
 
-17. In the property editor, enter/select the following:
+16. In the property editor, enter/select the following:
 
     - Identification > Name: **Parse  Razorpay\_order\_id**
 
@@ -440,11 +436,11 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-17-process-details.png " ")
 
-18. Right-click **Checkout** process, click **Synchronize Parameters**.
+17. Right-click **Checkout** process, click **Synchronize Parameters**.
 
     ![Click Timeline](images/15-4-18-checout-process-sync.png " ")
 
-19. Under **Checkout** process, expand **Parameters** and update the following:
+18. Under **Checkout** process, expand **Parameters** and update the following:
 
     - **p\_user\_id**:
 
@@ -476,9 +472,9 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-19-param.png " ")
 
-20. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
+19. Navigate back to the Rendering tab and select **Page 17:Shopping Cart**
 
-21. In the property editor, enter/select the following:
+20. In the property editor, enter/select the following:
 
     - JavaScript > File URLs: Copy and paste the below code
 
@@ -490,7 +486,7 @@ In this lab, you will:
 
     ![Click Timeline](images/15-4-21-fileurl.png " ")
 
-22. Click **Save**.
+21. Click **Save**.
 
 ## Summary
 
