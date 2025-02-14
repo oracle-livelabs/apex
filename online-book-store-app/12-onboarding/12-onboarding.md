@@ -1375,6 +1375,66 @@ Create the User Sign Up Page
 
 34. Click **Save**.
 
+## Task 6: Run the Application
+
+1. Run the application and click **New here? Sign Up** to create a new account.
+
+    ![Click My Apps](images/12-6-1.png " ")
+
+2. Enter your email address and click **Create**.
+
+    ![Click My Apps](images/12-6-2.1.png " ")
+
+    ![Click My Apps](images/12-6-2.2.png " ")
+
+3. Click **Setup your account**.
+
+    ![Click My Apps](images/12-6-3.png " ")
+
+4. Enter your details and click **SignUp**.
+
+    ![Click My Apps](images/12-6-4.png " ")
+
+5. You will be automatically logged in with the newly created user.
+
+    ![Click My Apps](images/12-6-5.png " ")
+
+6. To reset your password, navigate to the login page and click **Forgot Password**.
+
+    ![Click My Apps](images/12-6-6.png " ")
+
+7. Enter your email address and click **Send Reset Password Link**.
+
+    ![Click My Apps](images/12-6-7.1.png " ")
+
+    ![Click My Apps](images/12-6-7.2.png " ")
+
+8. Click **Reset Password**.
+
+    ![Click My Apps](images/12-6-8.png " ")
+
+9. Enter **Password** and **Confirm Password** and click **Apply Changes**.
+
+    ![Click My Apps](images/12-6-9.png " ")
+
+10. Password has been changed for user02. Enter your email address or username and new password to log in.
+
+    ![Click My Apps](images/12-6-10.png " ")
+
+11. To log in or sign up with a Google account, navigate to the login page and click **Login/Signup with Google Account**.
+
+    ![Click My Apps](images/12-6-11.png " ")
+
+12. Select your Google account and click **Continue**.
+
+    ![Click My Apps](images/12-6-12.1.png " ")
+
+    ![Click My Apps](images/12-6-12.2.png " ")
+
+13. You will be automatically logged in with the selected email address.
+
+    ![Click My Apps](images/12-6-13.png " ")
+
 ## Summary
 
 In this lab, you learned how to implement essential user authentication features to enhance the functionality and security of applications. Specifically, you explored how to send emails for communication or account verification, set up password reset functionality to allow users to recover their accounts, and integrate user signup and login processes using Google authentication. These skills are crucial for creating seamless and secure user experiences, ensuring users can easily access their accounts while maintaining robust security measures.
