@@ -488,6 +488,48 @@ In this lab, you will:
 
 21. Click **Save**.
 
+## Task 5: Run the Application
+
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/15-5-1.png " ")
+
+2. Click on the books, select the quantity, and click **Add to Cart**,
+
+    ![close dialog](images/15-5-2.1.png " ")
+
+    ![close dialog](images/15-5-2.2.png " ")
+
+    ![close dialog](images/15-5-2.3.png " ")
+
+    ![close dialog](images/15-5-2.4.png " ")
+
+3. On the Navigation bar list, click **Shopping Cart**.
+
+    ![close dialog](images/15-5-3.png " ")
+
+4. Click **Proceed to Purchase**.
+
+    ![close dialog](images/15-5-4.1.png " ")
+
+    ![close dialog](images/15-5-4.2.png " ")
+
+5. To complete the order, select a payment method and enter/select the dummy details.
+
+    ![close dialog](images/15-5-5.1.png " ")
+
+    ![close dialog](images/15-5-5.2.png " ")
+
+    ![close dialog](images/15-5-5.3.png " ")
+
+6. After completing the order, you will be automatically redirected to the Transaction Details page.
+
+    ![close dialog](images/15-5-6.png " ")
+
 ## Summary
 
 You now know how to configure Web Credentials, create REST Data Sources, and integrate a Payment Gateway in Oracle APEX. These skills enable secure API communication and enhance application functionality.
