@@ -1070,6 +1070,37 @@ Application Computation, navigate back to the shared component and under **Appli
 
 23. Click **Save**.
 
+## Task 6: Run the Application
+
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/10-6-1.png " ")
+
+2. Navigate to the **My Profile** page under your username.
+
+    ![close dialog](images/10-6-2.png " ")
+
+3. View all your purchased books along with their quantities under the **My Books** section.
+
+    ![close dialog](images/10-6-3.png " ")
+
+4. To update your password, click **Change Password**, enter your **New Password** and **Confirm New Password** and click **Apply Changes**.
+
+    ![close dialog](images/10-6-4.png " ")
+
+5. To update your profile details, click **Edit Profile**, make your changes and click **Apply Changes**.
+
+    For example, to update your profile picture, upload a new picture, adjust the size, click **Apply** and click **Apply Changes**.
+
+    ![close dialog](images/10-6-5.1.png " ")
+    ![close dialog](images/10-6-5.2.png " ")
+
+>*NOTE: You will receive this profile picture by default after completing Task 5 of Lab 16.*
+
 ## Summary
 
 In this lab, you have learned to create a robust user profile page in Oracle APEX. You navigated through various tasks, including page creation, SQL query integration, form handling, and RESTful services setup. You also customized the application's Navigation and enhanced the user experience by adding interactive elements. Following these steps, you have developed a comprehensive understanding of managing user profiles in Oracle APEX, a crucial aspect of building modern web applications.
