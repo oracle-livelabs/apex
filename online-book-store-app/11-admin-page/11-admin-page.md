@@ -904,6 +904,54 @@ In this task, you modify the user role update form for enhanced usability and fu
 
 6. Click **Save**.
 
+## Task 8: Run the Application
+
+1. Run the application and enter the credentials below:
+
+      - Username: **user01**
+
+      - Password: **secretPassword**
+
+    ![close dialog](images/11-8-1.png " ")
+
+2. Navigate to **Administration** page by clicking on Administration entry in the navigation bar.
+
+    ![close dialog](images/11-8-2.png " ")
+
+3. On the Administration page, to manage books information, select **Manage Books Information**.
+
+    ![close dialog](images/11-8-3.png " ")
+
+4. Select any book and click **Edit** to update its details.
+
+    ![close dialog](images/11-8-4.1.png " ")
+
+    ![close dialog](images/11-8-4.2.png " ")
+
+5. Modify the details and click **Apply Changes**.
+
+    ![close dialog](images/11-8-5.png " ")
+
+6. View the updated details of the selected book.
+
+    ![close dialog](images/11-8-6.png " ")
+
+7. To manage user details, go to the **Administration** page and select **User Role**.
+
+    ![close dialog](images/11-8-7.png " ")
+
+8. Click **Edit icon** to update the user details.
+
+    ![close dialog](images/11-8-8.png " ")
+
+9. Modify the details and click **Apply Changes**.
+
+    ![close dialog](images/11-8-9.png " ")
+
+10. View the updated details of the selected user.
+
+    ![close dialog](images/11-8-10.png " ")
+
 ## Summary
 
 This lab provided comprehensive instructions for setting up and managing an application's administration interface. It included tasks for creating an administration page, adding necessary navigation entries, configuring authorization schemes, and managing book information and user roles. The lab ensured that users could effectively navigate and perform administrative tasks within the application.
