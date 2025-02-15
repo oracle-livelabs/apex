@@ -1,4 +1,4 @@
-# Build a AI-Assistant Chat Widget
+# Build an AI-Assistant Chat Widget
 
 ## Introduction
 

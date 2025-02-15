@@ -60,7 +60,7 @@ In this lab, you will:
 
 ## Task 3: Global Search
 
-1. Navigate to the application homepage and click **Shared Component**.
+1. Navigate to the application homepage and click **Shared Components**.
 
     ![Click](images/16-4-1.png " ")
 
@@ -124,7 +124,7 @@ In this lab, you will:
 
     ![Click](images/16-4-10.png " ")
 
-11. Enter New Page: **10** and click **Next**.
+11. Enter New Page: **0** and click **Next**.
 
     ![Click](images/16-4-11.png " ")
 
@@ -287,7 +287,7 @@ In this lab, you will:
 
     - Under Conditions:
 
-        - Condition Type: **Current Page Is NOT in Expression 1(comma delimited list of pages)**
+        - Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
 
         - Expression 1: **10**
 
@@ -458,11 +458,11 @@ In this lab, you will:
 
     ![Click](images/16-3-9.png " ")
 
-10. Select Page **100001 - Email Verification for user signup**.
+10. Select Page **100001 - Email Verification for User SignUp**.
 
     ![Click](images/16-3-10.png " ")
 
-11. Right-click **body** and select **Create Page Item**.
+11. Right-click **Body** and select **Create Page Item**.
 
     ![Click](images/16-3-11.png " ")
 
@@ -564,7 +564,7 @@ In this lab, you will:
 
     ![Click](images/16-3-21.png " ")
 
-22. Right-click on body and select **Create Page Item**.
+22. Right-click on **Body** and select **Create Page Item**.
 
     ![Click](images/16-3-22.png " ")
 
