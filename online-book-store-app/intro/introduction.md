@@ -4,7 +4,7 @@
 
 Welcome to LiveLab: Online Bookstore Application, an immersive, hands-on lab series designed to equip you with the skills to build a feature-rich, AI-powered online bookstore using Oracle APEX. Through 18 structured labs, you'll gain practical experience in developing a modern e-commerce platform—covering everything from app creation and UI customization to AI-driven search, payment integration, and advanced user engagement features. Whether you're a beginner or an experienced developer, this LiveLab will guide you step by step in crafting a dynamic and intelligent online bookstore.
 
-Estimated Time: 3 hours 52 minutes
+Estimated Time: 5 hours
 
 ### Objectives
 
