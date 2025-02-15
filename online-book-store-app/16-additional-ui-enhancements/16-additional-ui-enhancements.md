@@ -941,7 +941,7 @@ In this lab, you will:
 
     ![Click](images/16-7-7.png " ")
 
-8. Observe the book sorting option.
+8. Observe the Books Number heading and the book sorting option.
 
     ![Click](images/16-7-8.png " ")
 

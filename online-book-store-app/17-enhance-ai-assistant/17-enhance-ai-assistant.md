@@ -110,6 +110,20 @@ In this lab, you will:
 
     ![Page Designer](images/17-1-10.png ' ')
 
+## Task 2: Run the Application
+
+1. Run the application and click **AI Assistant** entry in the navigation bar.
+
+    ![Page Designer](images/17-2-1.png ' ')
+
+2. Enter questions related to orders available in the bookstore and click the send icon.
+
+    ![Page Designer](images/17-2-2.png ' ')
+
+3. Observe and analyze the responses to gain better insights.
+
+    ![Page Designer](images/17-2-3.png ' ')
+
 ## Summary
 
 You now know how to create and use multiple RAG data sources in the AI Configurations.
