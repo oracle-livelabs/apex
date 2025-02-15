@@ -295,6 +295,15 @@ In this lab, you will:
 
     ![Click](images/16-4-31.2.png " ")
 
+32. Run the lab and observe the global search, which will remain visible even after you navigate to any other page.
+
+    ![Click](images/16-4-32.png " ")
+
+33. Navigate to any other page, e.g., the **My Books** page, and then return to the home page by clicking **Home** entry in the navigation bar or **Online Bookstore**.
+
+    ![Click](images/16-4-33.1.png " ")
+    ![Click](images/16-4-33.2.png " ")
+
 ## Task 4: Use Email Templates For Sending Emails
 
 1. Navigate to the application homepage and click **Shared Components**.
@@ -657,6 +666,16 @@ In this lab, you will:
 
     ![Click](images/16-3-30.png " ")
 
+31. Run the application and explore the Signup and Forgot Password functionalities.
+
+    ![Click](images/16-3-31.png " ")
+
+32. Observe the formats and UI of the emails and compare them with Lab 12 > Task 6 > Steps 3 and 8.
+
+    ![Click](images/16-3-32.1.png " ")
+
+    ![Click](images/16-3-32.2.png " ")
+
 ## Task 5: Default Profile Picture
 
 1. Navigate to the application homepage and click **Shared Components**
@@ -695,6 +714,10 @@ In this lab, you will:
 8. Click **Apply Changes**.
 
     ![Click](images/16-6-8.png " ")
+
+9. Run the application and sign up or log in with a new user. Navigate to the **My Profile** page and observe that a default profile picture and icon appear even without uploading.
+
+    ![Click](images/16-6-9.png " ")
 
 ## Task 6: My Orders Page
 
@@ -853,6 +876,24 @@ In this lab, you will:
 
     ![Click](images/16-5-14.png " ")
 
+15. Run the lab and navigate to the **My Orders** page.
+
+    ![Click](images/16-5-15.png " ")
+
+16. Sort all orders by **Date**.
+
+    ![Click](images/16-5-16.png " ")
+
+17. Sort all orders by **Amount**.
+
+    ![Click](images/16-5-17.png " ")
+
+18. Click on any order to automatically navigate to its details page.
+
+    ![Click](images/16-5-18.1.png " ")
+
+    ![Click](images/16-5-18.2.png " ")
+
 ## Task 7: Enhance Home Page
 
 1. Navigate to the application homepage and select page **10- Search Books**.
@@ -887,7 +928,7 @@ In this lab, you will:
 
     ![Click](images/16-7-6.png " ")
 
-7. Add below class in the **Custom CSS** and click Save.
+7. Add below class in the **Custom CSS** and click **Save**.
 
     ```
     <copy>
@@ -897,7 +938,12 @@ In this lab, you will:
     }
     </copy>
     ```
+
     ![Click](images/16-7-7.png " ")
+
+8. Observe the book sorting option.
+
+    ![Click](images/16-7-8.png " ")
 
 ## Summary
 
