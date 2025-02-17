@@ -4,7 +4,7 @@
 
 This lab provides step-by-step instructions on how to create and manage a wishlist feature in Oracle APEX. You will learn to create a new page for the wishlist, add interactive components, and integrate navigation elements. The process includes creating dynamic regions, defining actions, and setting up processes for adding and removing items from the wishlist. Additionally, you will enhance the navigation bar to include a wishlist link for easy access.
 
-Estimated Time: 14 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 

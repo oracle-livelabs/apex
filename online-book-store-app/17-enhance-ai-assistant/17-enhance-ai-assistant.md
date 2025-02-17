@@ -4,7 +4,7 @@
 
 In this lab, you will enhance the previous 'Build an AI-Assistant Chat Widget' lab by further refining AI configurations and integrating multiple Retrieval-Augmented Generation (RAG) data sources for improved AI responses."
 
-Estimated Time: 5 minutes
+Estimated Time: 6 minutes
 
 ### Objectives
 

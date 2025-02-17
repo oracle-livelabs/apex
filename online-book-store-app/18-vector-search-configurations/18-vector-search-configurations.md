@@ -6,7 +6,7 @@ In this lab, you will learn how to load ONNX models into Oracle Database and cre
 
 >*Note: This lab assumes you are using Oracle Database 23ai.*
 
-Estimated Time: 15 minutes
+Estimated Time: 11 minutes
 
 ### Objectives
 
@@ -105,7 +105,7 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 ## Task 3: Create Column and Update Table for Vector Embeddings
 
-In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, **DESCRIPTION\_VECTOR**, to store description vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** API to insert a Vector Embeddings.
+In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, **DESCRIPTION\_VECTOR**, to store description vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** API to insert vector embeddings.
 
 1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
@@ -179,13 +179,13 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
 7. In the Create Search Configuration **Column Mapping** Wizard, enter the following and click **Create Search Configuration**.
 
-    - Primary Key Column Column 2 : **BOOK_ID(Number)**
+    - Primary Key Column: **BOOK_ID (Number)**
 
-    - Vector Column: **DESCRIPTION_VECTOR(Vector)**
+    - Vector Column: **DESCRIPTION_VECTOR (Vector)**
 
-    - Title Column: **TITLE(Varchar2)**
+    - Title Column: **TITLE (Varchar2)**
 
-    - Description Column: **DESCRIPTION(Varchar2)**
+    - Description Column: **DESCRIPTION (Varchar2)**
 
     !["Page Designer"](images/18-4-7.png "")
 
@@ -243,7 +243,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
         - Image/Class: **fa-search-plus**
 
-        - List Entry Label: **Advanced search**
+        - List Entry Label: **Advanced Search**
 
     - Under Target:
 

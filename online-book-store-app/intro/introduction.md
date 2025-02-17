@@ -4,7 +4,7 @@
 
 Welcome to LiveLab: Online Bookstore Application, an immersive, hands-on lab series designed to equip you with the skills to build a feature-rich, AI-powered online bookstore using Oracle APEX. Through 18 structured labs, you'll gain practical experience in developing a modern e-commerce platform—covering everything from app creation and UI customization to AI-driven search, payment integration, and advanced user engagement features. Whether you're a beginner or an experienced developer, this LiveLab will guide you step by step in crafting a dynamic and intelligent online bookstore.
 
-Estimated Time: 5 hours 10 minutes
+Estimated Time: 5 hours 18 minutes
 
 ### Objectives
 
@@ -40,21 +40,21 @@ In this workshop, you will:
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 16 minutes |
 | 4 | [Customize Application Theme](?lab=application-theme) | 1 minutes |
 | 5 | [Custom Authentication](?lab=authentication) | 5 minutes |
-| 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | 18 minutes |
+| 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | 19 minutes |
 | 7 | [Create and Manage a Shopping Cart](?lab=7-create-shop-cart) | 34 minutes |
-| 8 | [Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget) | 13 minutes |
-| 9 | [Create and Manage Wishlist Functionality](?lab=9-wishlist) | 14 minutes |
-| 10 | [Create and Manage User Profile Pages](?lab=10-add-user) | 36 minutes |
-| 11 | [Create and Manage Administration](?lab=11-admin-page) | 34 minutes |
-| 12 | [Improve User Onboarding](?lab=12-onboarding) | 38 minutes |
+| 8 | [Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget) | 14 minutes |
+| 9 | [Create and Manage Wishlist Functionality](?lab=9-wishlist) | 15 minutes |
+| 10 | [Create and Manage User Profile Pages](?lab=10-add-user) | 37 minutes |
+| 11 | [Create and Manage Administration](?lab=11-admin-page) | 36 minutes |
+| 12 | [Improve User Onboarding](?lab=12-onboarding) | 40 minutes |
 | 13 | [Push Notification](?lab=13-push-notification) | 6 minutes |
-| 14 | [AI Vision](?lab=14-ai-vision) | 10 minutes |
-| 15 | [Razorpay Payment Integration](?lab=15-razorpay-payement-integration) | 20 minutes |
+| 14 | [AI Vision](?lab=14-ai-vision) | 11 minutes |
+| 15 | [Razorpay Payment Integration](?lab=15-razorpay-payement-integration) | 22 minutes |
 | 16 | [UI Enhancements](?lab=16-additional-ui-enhancements) | 35 minutes |
-| 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 5 minutes |
-| 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 15 minutes |
+| 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 6 minutes |
+| 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 11 minutes |
 
-Total estimated time: 5 hours 10 minutes
+Total estimated time: 5 hours 18 minutes
 
 ### **Let's Get Started!**
 

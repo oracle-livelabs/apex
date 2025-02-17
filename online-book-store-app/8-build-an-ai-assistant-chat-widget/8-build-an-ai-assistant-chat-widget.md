@@ -8,7 +8,7 @@ OCI API keys consist of two parts: a **Public key** and a **Private key**. You u
 
 **Note:** OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-Estimated Time: 13 minutes
+Estimated Time: 14 minutes
 
 ### Objectives
 

@@ -4,7 +4,7 @@
 
 In this lab, you will learn to create and configure key components in Oracle APEX for seamless integration with external services. You will set up Web Credentials, create a REST Data Source, and integrate a Payment Gateway. These steps will enable secure communication with APIs and external systems, enhancing the functionality of your applications.
 
-Estimated Time: 20 minutes
+Estimated Time: 22 minutes
 
 ### Objectives
 
@@ -18,9 +18,9 @@ In this lab, you will:
 
 1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
 
-2. Select the "Test" mode from (Test or Live) to generate the API key.
+2. Select the **Test** mode from (Test or Live) to generate the API key.
 
-    *Note: Test Mode: The test mode is a simulation mode that you can use to test your integration flow. Your customers will not be able to make payments in this mode.*
+    *Note: Test Mode is a simulation mode that allows you to test your integration flow without processing real payments. Once your integration is complete, switch to Live Mode, generate live mode API keys, and replace the test mode keys to start accepting customer payments.*
 
 3. Navigate to **Account & Settings** → API Keys (under Website and app settings) → Generate Key to generate key for the selected mode.
 
