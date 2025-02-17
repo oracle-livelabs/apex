@@ -6,7 +6,7 @@ In this lab, you will create a new application named **Online Bookstore**. Next,
 
 **Quick SQL** is designed to reduce the time and effort required to create SQL tables, triggers, and index structures. This tool is not designed to be a replacement for data modeling. Instead, Quick SQL is simply a quick way to develop a script for simple tables and views.
 
-Estimated Time: 5 minutes
+Estimated Time: 4 minutes
 
 ### Objectives
 

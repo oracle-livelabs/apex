@@ -4,7 +4,7 @@
 
 Welcome to LiveLab: Online Bookstore Application, an immersive, hands-on lab series designed to equip you with the skills to build a feature-rich, AI-powered online bookstore using Oracle APEX. Through 18 structured labs, you'll gain practical experience in developing a modern e-commerce platform—covering everything from app creation and UI customization to AI-driven search, payment integration, and advanced user engagement features. Whether you're a beginner or an experienced developer, this LiveLab will guide you step by step in crafting a dynamic and intelligent online bookstore.
 
-Estimated Time: 4 hours 41 minutes
+Estimated Time: 4 hours 40 minutes
 
 ### Objectives
 
@@ -35,7 +35,7 @@ In this workshop, you will:
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Create the application](?lab=create-app) | 5 minutes |
+| 1 | [Create the application](?lab=create-app) | 4 minutes |
 | 2 | [Create REST data source](?lab=2-rest-data-source) | 5 minutes |
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 15 minutes |
 | 4 | [Customize Application Theme](?lab=application-theme) | 1 minute |
@@ -54,7 +54,7 @@ In this workshop, you will:
 | 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 5 minutes |
 | 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 10 minutes |
 
-Total estimated time: 4 hours 41 minutes
+Total estimated time: 4 hours 40 minutes
 
 ### **Let's Get Started!**
 
