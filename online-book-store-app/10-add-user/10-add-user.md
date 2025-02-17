@@ -4,7 +4,7 @@
 
 This lab focuses on guiding you through creating and managing user profile pages. The tasks will cover various aspects of page creation, customization, and linking, as well as using SQL queries, RESTful services, and form handling. By the end of this lab, you will have developed a fully functional user profile page that includes personal details, book lists, and functionalities for updating profiles and resetting passwords.
 
-Estimated Time: 37 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 

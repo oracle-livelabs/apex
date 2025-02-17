@@ -6,7 +6,7 @@ In this lab, you will learn how to load ONNX models into Oracle Database and cre
 
 >*Note: This lab assumes you are using Oracle Database 23ai.*
 
-Estimated Time: 11 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

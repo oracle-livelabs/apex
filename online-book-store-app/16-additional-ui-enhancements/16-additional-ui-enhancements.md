@@ -4,7 +4,7 @@
 
 In this lab, you will learn to customize and enhance your Oracle APEX application. You will add a footer to improve branding, manage the navigation menu for a better user experience, and implement a global search bar for easier access to information. Additionally, you will configure email templates for sending emails, set a default profile picture for users, and create a "My Orders" page to enhance functionality. These steps will help you build a more user-friendly and efficient application.
 
-Estimated Time: 35 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 

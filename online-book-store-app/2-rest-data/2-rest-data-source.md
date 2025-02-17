@@ -10,7 +10,7 @@ Data Synchronization enables developers to automatically sync the contents of a 
 
 A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and a Report region). The report region displays search results as cards or a classic report.
 
-Estimated Time: 6 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 

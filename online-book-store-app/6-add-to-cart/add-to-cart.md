@@ -4,7 +4,7 @@
 
 This lab provides detailed instructions on enhancing the Book Details page in an application to manage shopping cart functionalities. It involves creating a package to handle orders, setting up application items and processes, and configuring page elements to allow users to add and remove books from their cart, update cart quantities, and dynamically reflect these changes on the user interface. The steps include creating necessary backend procedures and functions, setting up computations and processes, and updating the user interface components accordingly.
 
-Estimated Time: 19 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
