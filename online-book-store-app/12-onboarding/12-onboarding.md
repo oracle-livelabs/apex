@@ -1088,57 +1088,51 @@ Create the User Sign Up Page
 
      *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
 
-2. Click **CREATE PROJECT**.
+2. Click **CREATE PROJECT**, or navigate to an already created project and then click **New project**.
 
     ![Click My Apps](images/create-project1.png " ")
+    ![Click My Apps](images/12-5-2.png " ")
 
 3. In the New Project Screen, for Project Name: Enter **OBS Application** and click **CREATE**.
 
-    ![Click My Apps](images/new-project1.png " ")
+    ![Click My Apps](images/12-5-3.png " ")
 
-4. Click the OAuth consent screen (from the left side menu), select **External**, and click **CREATE**
+4. Click the OAuth consent screen (from the left side menu) and click **GET STARTED**
 
-    ![Click My Apps](images/external.png " ")
+    ![Click My Apps](images/12-5-4.png " ")
 
-5. In the OAuth consent screen, enter the following:
+5. Under Project Configuration, enter the following:
 
-   Under **App information** Section:
+    - Under **App information**:
 
-      - For App name: **Online Bookstore**
+        - App name: **Online Bookstore**
 
-      - For User support email: Enter your **Email Address**
+        - User support email: Enter your **Email Address**
 
-   Under **App domain** Section:
+        Click **Next**
 
-      - For Application Homepage link: Enter your **Application Homepage link**
+    ![Click My Apps](images/12-5-5.1.png " ")
 
-   Under **Authorized domains** Section:
+     - Under **Audience** > Select **External** and click **NEXT**
 
-      - Click **+ADD DOMAIN** and add your Authorized domain. For example, I added oracle.com
+    ![Click My Apps](images/12-5-5.2.png " ")
 
-   Under **Developer contact information** Section:
+    - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
-     - For Email addresses: Enter your **Email Address**
+    ![Click My Apps](images/12-5-5.3.png " ")
 
-    ![Click My Apps](images/oauth-consent-screen.png " ")
+    - Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
-    ![Click My Apps](images/oauth-consent-screen1.png " ")
+    ![Click My Apps](images/12-5-5.4.png " ")
 
-   Click **SAVE and CONTINUE**.
+6. Click **CREATE**.
 
-6. In Scopes, leave everything as default and click **SAVE and CONTINUE**.
+    ![Click My Apps](images/12-5-6.png " ")
 
-    ![Click My Apps](images/scopes.png " ")
+7. Click **CREATE OAUTH CLIENT**.
+    ![Click My Apps](images/12-5-7.png " ")
 
-7. In Test users, leave everything as default and click **SAVE and CONTINUE**.
-
-    ![Click My Apps](images/test-users.png " ")
-
-8. Click **Credentials** (from left side menu). Now click **+Create Credentials** and select **OAuth client ID**.
-
-    ![Click My Apps](images/create-creds.png " ")
-
-9. Enter the following:
+8. Enter the following:
 
      - For Application type: Select **Web Application**
 
@@ -1150,11 +1144,14 @@ Create the User Sign Up Page
 
      Click **CREATE**.
 
-    ![Click My Apps](images/create-creds1.png " ")
+    ![Click My Apps](images/12-5-8.png " ")
+
+9. Click **Online Bookstore Authentication**.
+    ![Click My Apps](images/12-5-9.png " ")
 
 10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
 
-    ![Click My Apps](images/creds-created.png " ")
+    ![Click My Apps](images/12-5-10.png " ")
 
 11. Login into your Oracle APEX workspace.
 
