@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter the results on the map based on the faceted search results.
+In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter results on the map based on faceted search results.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 10 minutes
 
@@ -35,13 +35,13 @@ In this lab, you will:
         - Location: **Local Database**
         - Table Name: **HIGHSCHOOLS**
 
-    - Layout > Start New Row: Disable the toggle button to **OFF**
+    - Layout > Start New Row: Toggle the button to turn it **OFF**
 
     ![Page designer](images/map-region-1.png =40%x*)
 
     ![Page designer](images/map-region-2.png =40%x*)
 
-3. In the rendering tree, select the new layer created under Map.
+3. In the rendering tree, select the **New** layer created under Map.
     ![Page designer](images/new-layer.png =40%x*)
 
 4. In the Property Editor, enter/select the following:
@@ -98,9 +98,9 @@ In this lab, you will:
 
 ## Task 2: Link Faceted Search to the Map Region
 
-In this task, we use Dynamic Action and custom PL/SQL code to fetch the Faceted Search region results and filter the Map region accordingly.
+In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Faceted Search region results and filter the Map region accordingly.
 
-1. Navigate to **SQL Workshop > SQL Commands**.
+1. From your page designer, navigate to **SQL Workshop > SQL Commands**.
 
     ![Page designer](images/sql-commands.png ' ')
 
@@ -228,8 +228,8 @@ In this task, we use Dynamic Action and custom PL/SQL code to fetch the Faceted 
             |Map| MAP|
              {: title="Static Values"}
 
-        - Display Extra Values: Disable the toggle button to **OFF**.
-        - Display Null Values: Disable the toggle button to **OFF**.
+        - Display Extra Values: Toggle the button to turn it **OFF**.
+        - Display Null Values: Toggle the button to turn it **OFF**.
             ![Page Designer](images/lov.png " ")
 
     - Under Default:
@@ -339,7 +339,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
     - Under Identification:
         - Name: **P1_DISTANCE**
         - Type: **Range**
-    - Settings > Select Multiple: Enable the toggle button to **ON**.
+    - Settings > Select Multiple: Toggle the button to turn it **ON**.
 
     ![Page Designer](images/distance-facet.png =40%x*)
 
@@ -354,8 +354,9 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
             | 10 - 15 miles | 10\|15     |
             | 15 - 20 miles | 15\|20     |
             | >=20 miles    | 20\|       |
+            {: title="Values for the Distance facet"}
 
-            - Sort > Sort at Runtime: Disable the Toggle button to **OFF**.
+            - Sort > Sort at Runtime: Toggle the button to turn it **OFF**.
 
         Click **OK**.
 
@@ -365,13 +366,13 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
        ![Page Designer](images/data-type-number.png =40%x*)
 
-5. Update *Page Items to Submit* property of the Map Region to include the P1_DISTANCE facet.
+5. Next, we need to update the *Page Items to Submit* property of the Map Region to include the P1_DISTANCE facet.
     Select **Map** in the rendering tree, and in the property editor, enter/update the following:
     - Source > Page Items to Submit: **P1\_SEARCH, P1\_METHOD, P1\_BOROUGH, P1\_INTEREST, P1\_ATTENDANCE_RATE ,P1\_SAFE, P1\_DISTANCE**
 
         ![Page Designer](images/items-submit.png ' ')
 
-    - Layout > Start New Row: Enable the Toggle Button to **ON**.
+    - Layout > Start New Row: Toggle the button to turn it **ON**.
 
         ![Page Designer](images/enable-start-new-row.png ' ')
 
@@ -388,8 +389,8 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
 7. Select the **Method** facet, and in the property editor, edit the following:
     - Under Advanced:
-        - Collapsible: Enable the Toggle Button to **ON**.
-        - Initially Collapsed: Enable the Toggle Button to **ON**.
+        - Collapsible: Toggle the button to turn it **ON**.
+        - Initially Collapsed: Toggle the button to turn it **ON**.
 
     ![Page Designer](images/method-collapse.png ' ')
 

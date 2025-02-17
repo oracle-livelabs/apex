@@ -17,7 +17,7 @@ In this workshop, you learn to bring generative AI capabilities based on large l
 
 You can read more about these models from the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm). -->
 
-This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop an "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them in making an informed decision about whether a specific school is the ideal fit for their child.
+This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop an "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them to make an informed decision about whether a specific school is the ideal fit for their child.
 
 Estimated Time: 60 minutes
 
@@ -27,26 +27,33 @@ Estimated Time: 60 minutes
 * Build a conversational chatbot using Generative AI to ask questions about a school.
 * Generate Email using Generative AI to apply to a school.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.2 or later.*
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ## Prerequisites
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+- An APEX workspace.
 
-    - US Midwest (Chicago)
-    - Germany Central (Frankfurt)
-    - UK South (London)
-    - Brazil East (Sao Paulo)
+- API key for the AI Provider of your choice. (OCI Generative AI, Open AI, Cohere)
 
-- This workshop makes use of OCI Generative AI Service. OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+- If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
+    - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
 
-- An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+        - US Midwest (Chicago)
+        - Germany Central (Frankfurt)
+        - UK South (London)
+        - Brazil East (Sao Paulo)
+        - Japan Central (Osaka)
 
-- The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-- An APEX 24.1.2 workspace. We recommend that you sign up for a workspace on [apex.oracle.com](https://apex.oracle.com). Refer to the [Get Started: Option 3](?lab=1-sign-up-apex#Option3:apexoraclecom) lab to sign up for a new workspace.
+    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+
+
+*Note*: 
+- This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+- The application ID in the screenshots may vary. Please ignore the application ID.
 
 ## Labs
 
@@ -57,7 +64,7 @@ Estimated Time: 60 minutes
 | [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
 | [Build a Conversational Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
-| [Run the Application](?lab=6-run-app) | 5 minutes |
+| [Run the Application](?lab=7-run-app) | 5 minutes |
 
 Total estimated time: 60 minutes
 
@@ -77,7 +84,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 4. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**.
 
-5. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key.
+5. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the Appendix lab: [Task A: Create Web Credentials in Oracle APEX](?lab=8-appendix#TaskA:CreateWebCredentialsinOracleAPEX) to create an OCI API Key.
 
      ![Web Credentials page](images/edit-web-cred.png " ")
 6. Navigate to **App Builder > Workspace Utilities > Generative AI**. Edit the **OCI Gen AI** service.

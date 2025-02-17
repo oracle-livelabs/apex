@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you configure an option for the parent to apply to a school they are interested in. The letter for application is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
+In this lab, you configure a button for the student's parent to apply to a school they are interested in. The application body letter is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 15 minutes
 
@@ -15,8 +15,8 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Use Invoke API process to invoke the Generative AI service using the APEX_AI PL/SQL API
-- Generate email for applying to a school
+- Configure an option for the student's parent to apply to a school
+- Use Generate Text with AI dynamic action to generate text for the application letter
 
 ## Task 1: Create a Table to Store the Applications
 
@@ -67,7 +67,7 @@ Let us create a new Form page for school application.
 
 2. In the Create Form wizard, enter/select the following:
     - Under **Page Definition**
-        - Page Number: **7**
+        - Page Number: **3**
         - Name: **Apply to School**
         - Page Mode: **Drawer**
     - Under **Data Source**
@@ -81,20 +81,20 @@ Let us create a new Form page for school application.
 
     ![Create page wizard](images/create-page.png ' ')
 
-4. In the Rendering tree, select the following page items under Region Body:
-    - P7\_SCHOOL\_ID
-    - P7\_PARENT\_USER
-    - P7_LETTER
-    - P7_DISPOSITION
-    - P7_CREATED
-    - P7_UPDATED
-    - P7\_UPDATE\_BY
+4. In the Rendering tree, select the following page items under Region Body at once:
+    - P3\_SCHOOL\_ID
+    - P3\_PARENT\_USER
+    - P3_LETTER
+    - P3_DISPOSITION
+    - P3_CREATED
+    - P3_UPDATED
+    - P3\_UPDATE\_BY
 
     In the Property Editor, select Type as **Hidden**.
 
     ![Page Designer](images/type-hidden.png ' ')
 
-5. In the Rendering Tree, select the page item **P7\_PARENT\_NAME**. In the Property Editor, enter/select the following:
+5. In the Rendering Tree, select the page item **P3\_PARENT\_NAME**. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Display Only**
     - Under Default:
@@ -111,21 +111,21 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/parent-name.png ' ')
 
-6. Now, select the page item **P7\_PARENT\_USER**. In the Property Editor, enter/select the following:
+6. Now, select the page item **P3\_PARENT\_USER**. In the Property Editor, enter/select the following:
     - Under Default:
         - Type: **Expression**
         - PL/SQL Expression - **:APP_USER**
 
    ![Page Designer](images/parent-user.png ' ')
 
-7. Select the page item **P7_DISPOSITION**. In the Property Editor, enter/select the following:
+7. Select the page item **P3_DISPOSITION**. In the Property Editor, enter/select the following:
     - Under Default:
         - Type: **Static**
         - Static Value: **APPLIED**
 
     ![Page Designer](images/disposition.png ' ')
 
-8. Select the page item **P7\_PARENT\_EMAIL**. In the Property Editor, enter/select the following:
+8. Select the page item **P3\_PARENT\_EMAIL**. In the Property Editor, enter/select the following:
     - Identification > Type: **Display Only**
     - Under Default:
         - Type: **SQL Query (return single value)**
@@ -137,7 +137,7 @@ Let us create a new Form page for school application.
         ```
     ![Page Designer](images/parent-email.png ' ')
 
-9. In the left pane, right-click **P7\_STUDENT\_NAME**, and select **Create Button Below**.
+9. In the left pane, right-click **P3\_STUDENT\_NAME**, and select **Create Button Below**.
     ![Page Designer](images/create-button-below.png ' ')
 
 10. In the Property Editor, enter/select the following:
@@ -154,12 +154,12 @@ Let us create a new Form page for school application.
 
 12. In the Property Editor, enter/select the following:
     - Under Identification:
-        - Name: **P7\_EMAIL**
+        - Name: **P3\_EMAIL**
         - Type: **Rich Text Editor**
 
      ![Page Designer](images/p7-email.png ' ')
 
-13. In the left pane, right-click **P7\_LETTER** and select **Create Computation**.
+13. In the left pane, right-click **P3\_LETTER** and select **Create Computation**.
 
     ![Page Designer](images/create-computation.png ' ')
 
@@ -168,11 +168,11 @@ Let us create a new Form page for school application.
     - Execution > Point: **After Submit**
     - Under Computation:
         - Type: **Item**
-        - Item Name: **P7_EMAIL**
+        - Item Name: **P3_EMAIL**
 
     ![Page Designer](images/computation-details.png ' ')
 
-15. Now that we edited the page items, let's add one last page item for sending a final prompt to the Gen AI service. In the Rendering Tree, right-click **Apply to School** form region and select **Create Page Item**.
+<!-- 15. Now that we edited the page items, let's add one last page item for sending a final prompt to the Gen AI service. In the Rendering Tree, right-click **Apply to School** form region and select **Create Page Item**.
 
     ![Page Designer](images/create-final-prompt.png ' ')
 
@@ -182,7 +182,7 @@ Let us create a new Form page for school application.
         - Type: **Hidden**
 
     ![Page Designer](images/final-prompt-name.png ' ')
-
+-->
 17. Delete the buttons that we no longer need. Select **CANCEL**, **DELETE**, and **SAVE**. Right-click and select **Delete**.
     ![Page Designer](images/delete-buttons.png ' ')
 
@@ -195,120 +195,115 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/edit-create.png ' ')
 
-## Task 3: Create a Process Execution Chain
+## Task 3: Create an AI Configuration 
+In this task, we create an AI configuration with a RAG source. This will serve as the input for the 'Generate Text with AI' dynamic action in the upcoming task.
+1. Navigate to Shared Components
+    ![Page Designer](images/nav-shared-components.png ' ')
 
-In this task, we create a process execution chain to first prepare a prompt and then invoke the Gen AI service to generate a letter of application.
+2. Under Generative AI, click AI Configurations.
 
-1. From the Rendering Tree, navigate to the Processing tab. Right-click **Processes** and select **Create Process**.
+    ![Shared Components page](images/ai-config.png ' ')
 
-    ![Processing tab in Page Designer](images/create-process.png ' ')
+3. Click **Create**.
 
-2. In the Property Editor, enter/select the following:
+4. Enter/select the following:
+    - Name: **Generate Text AI**
+    - Service: **OCI Gen AI** (If configured, you can choose the Generative AI service of your choice)
+    - System Prompt:
+        ```
+        <copy>
+        As a parent of a kid who is seeking admission to a school, write an E-mail applying to a school.
+        Use the info provided.
+        </copy>
+        ```
+    Click **Create**.
 
-    - Under Identification:
-        - Name: **Generate Letter**
-        - Type: **Execution Chain**
+    ![AI configurations page](images/ai-config-details.png ' ')
 
-    ![Processing tab in Page Designer](images/execute-chain.png ' ')
+5. Once the changes are saved, click **Create RAG Source**.
 
-3. Right-click on **Generate Letter** and select **Add Child Process**. In the Property Editor, enter/select the following:
-    - Under Identification:
-        - Name: **Prepare Prompt**
-        - Type: **Execute Code**
-    - Source > PL/SQL Code:
+    ![AI configuration details page](images/create-rag.png ' ')
+
+6. Enter/select the following:
+    - Name: **Details to Generate Email Text**
+    - Type: **Function Body**
+    - Language: **PL/SQL**
+    - Function Body Returning CLOB:
     ```
     <copy>
     DECLARE
     L_SCHOOL_NAME HIGHSCHOOLS.SCHOOL_NAME%TYPE;
     L_PROMPT CLOB;
     BEGIN
-        SELECT SCHOOL_NAME INTO L_SCHOOL_NAME FROM HIGHSCHOOLS WHERE ID = :P7_SCHOOL_ID;
+        SELECT SCHOOL_NAME INTO L_SCHOOL_NAME FROM HIGHSCHOOLS WHERE ID = :P3_SCHOOL_ID;
         L_PROMPT :=
             q'[
-    As a parent of a kid who is seeking admission to a school, write an E-mail applying to a school.
-    Use the below info.
+            Parent Name : ]'|| :P3_PARENT_NAME||chr(10)||chr(13) ||q'[
+            Applicant Name : ]'|| :P3_STUDENT_NAME||chr(10)||chr(13) ||q'[
+            School Name : ]'|| initcap(L_SCHOOL_NAME)||chr(10)||chr(13);
 
-    Parent Name : ]'|| :P7_PARENT_NAME||chr(10)||chr(13) ||q'[
-    Applicant Name : ]'|| :P7_STUDENT_NAME||chr(10)||chr(13) ||q'[
-    School Name : ]'|| initcap(L_SCHOOL_NAME)||chr(10)||chr(13);
+        return L_PROMPT;
 
-    :P7_FINAL_PROMPT := L_PROMPT;
     END;
     </copy>
     ```
+      
+      Click **Create**.
 
-    ![Processing tab in Page Designer](images/prepare-prompt.png ' ')
+    ![AI configuration details page](images/rag-details.png ' ')
 
-     - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
+7. Click **Apply Changes** in the AI Configurations page.
 
-    ![Processing tab in Page Designer](images/server-condition.png ' ')
+    ![AI configuration details page](images/apply-changes.png ' ')
 
-4. Right-click on **Generate Letter** and select **Add Child Process**.
-    ![Processing tab in Page Designer](images/add-child.png ' ')
+## Task 4: Generate Email Text using AI
 
-5. In the Property Editor, enter/select the following:
-    - Under Identification:
-        - Name: **Generative AI - Generate Letter**
-        - Type: **Invoke API**
-    - Under Settings:
-        - Package: **APEX_AI**
-        - Procedure or Function: **GENERATE**
-    - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
+In this task, we use the 'Generate Text with AI' dynamic action to generate email text using Generative AI.
 
-    ![Processing tab in Page Designer](images/child-gen-letter.png ' ')
+1. From the Generative AI Configurations page, click **Edit Page 3**.
 
-6. Let us now edit the process parameters. In the left pane, under Parameters, select **Function Result**. In the Property editor, for Value > Item, enter **P7_EMAIL**.
-    ![Processing tab in Page Designer](images/param-1.png ' ')
+    ![AI configuration details page](images/edit-page-3.png ' ')
 
-7. Select **p_prompt**. In the Property Editor, edit/select the following:
-    - Under Value:
+2. In the Rendering pane, right-click **GENERATE_LETTER** and select **Create Dynamic Action**.
+
+    ![Page Designer](images/create-gen-da.png ' ')
+
+3. In the Property Editor, for Name, enter **Generate Email Text with AI**.
+
+    ![Page Designer](images/name-da.png ' ')
+
+4. Under True, select **Show**. In the Property Editor, enter/select the following:
+    - Action: **Execute Server-side Code**
+    - Language: **PL/SQL**
+    - PL/SQL Code: **null;**
+    - Items to Submit: **P3_SCHOOL_ID,P3_PARENT_NAME,P3_STUDENT_NAME**
+
+    This True action is executed in order to submit the values of School ID, parent name and student name to the server. By doing so, we can be rest assured that the correct values are picked by the AI configuration we created in the previous task.
+
+    ![Page Designer](images/exec-server-side.png ' ')
+
+5. Select the page items **P3_SCHOOL_ID**, **P3_PARENT_NAME** and **P3_STUDENT_NAME**. In the Property Editor, under Session Stage, for Storage select **Per Session (Persistent)**.
+
+    ![Page Designer](images/change-session-state.png ' ')
+
+6. Under the Generate Email Text with AI dynamic action, right-click True and select **Create TRUE Action**.
+
+    ![Page Designer](images/create-true-action.png ' ')
+
+7. In the Property Editor, enter/select the following:
+    - Action: **Generate Text with AI**
+    - Generative AI > Configuration: **Generate Text AI**
+    - Input Calue > Type: **Only System Prompt**
+    - Use Response:
         - Type: **Item**
-        - Item: **P7\_FINAL\_PROMPT**
+        - Item: **P3_EMAIL**
 
-    ![Processing tab in Page Designer](images/param-2.png ' ')
+    ![Page Designer](images/generate-text-true-action.png ' ')
+    
+8. Click **Save**.
 
-8. Select **p\_service\_static\_id**. In the Property Editor, edit/select the following:
-    - Under Value:
-        - Type: **Static Value**
-        - Item: **oci\_gen\_ai**  (This is the Static ID of the OCI Gen AI service we created in Lab 4. You can verify the Static ID by navigating to **Workspace Utilities > Generative AI > OCI Gen AI**)
 
-    ![Processing tab in Page Designer](images/param-3.png ' ')
-
-9. Drag and drop the parent process, **Generate Letter** to the top.
-
-    ![Processing tab in Page Designer](images/drag-to-top.png ' ')
-
-10. In the left pane, select **Process form Apply to School**. In the Property Editor, enter/select the following:
-    - Success Message > Success Message: **Application Sent**
-    - Server-side Condition > When Button Pressed: **CREATE**
-
-     ![Processing tab in Page Designer](images/success-msg.png ' ')
-
-11. Create a branch to reload the page once the application is submitted. Right-click **After Processing** and select **Create Branch**.
-
-    ![Processing tab in Page Designer](images/create-branch.png ' ')
-
-12. In the Property Editor, enter/select the following:
-    - Identification > Name: **reload page**
-    - Behavior > Target: Click **No Link Defined**
-        - Target > Page: **7**
-        - Set Items:
-
-            |Name | Value|
-            |------|------|
-            |P7\_STUDENT\_NAME | &P7\_STUDENT\_NAME.|
-            |P7\_SCHOOL\_ID| &P7\_SCHOOL\_ID. |
-            {: title="Set Item name and value"}
-
-        - Success Message: Disable the Toggle Button to **OFF**.
-        - Click **OK**.
-    - Server-side Condition > When Button Pressed: **GENERATE_LETTER**
-
-    ![Processing tab in Page Designer](images/reload-page.png ' ')
-
-13. Click **Save**.
-
-## Task 4: Create the Apply Button
+## Task 5: Create the Apply Button
 
 1. Navigate to Page 1. To do so, click on the Page Finder and select **Page 1**: Search and Apply.
 
@@ -357,14 +352,14 @@ In this task, we create a process execution chain to first prepare a prompt and 
         - Label: **Apply**
     - Layout > Position: **Secondary**
     - Under Link > Target: Link Builder - Target
-        - Page: **7**
+        - Page: **3**
         - Set Items:
 
             |Name | Value|
             |------|------|
-            |P7\_SCHOOL\_ID| &ID. |
+            |P3\_SCHOOL\_ID| &ID. |
             {: title="Set Item name and value"}
-        - Clear Cache: **7**
+        - Clear Cache: **3**
 
         Click **OK**.
     - Appearance > Hot: Enable the Toggle Button to **ON**.
@@ -416,5 +411,5 @@ You may now **proceed to the next lab**.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
 
