@@ -20,6 +20,7 @@ In this workshop, you will:
 - Set Up Push Notifications
 - Integrate Payment Processing with Razorpay
 - Design and Manage Email Templates
+- Create Vector Providers, Search Configurations and Oracle Vector Search Page
 
 ### Prerequisites for Building this App:
 
