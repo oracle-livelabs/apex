@@ -11,7 +11,7 @@ Estimated Time: 22 minutes
 In this lab, you will:
 
 - Create Web Credential
-- Create Rest Data Source
+- Create REST Data Source
 - Integrate Payment Gateway
 
 ## Task 1: Create Web Credential
