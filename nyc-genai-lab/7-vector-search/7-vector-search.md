@@ -90,8 +90,8 @@ Vector providers are configured to convert text into an embedding.
 4. In the Vector Provider Details page, enter/select the following:
     - Provider Type:** Database ONNX Model**
     - Name: **DB ONNX Model**
-    - Static ID: **db_onnx_model**
-    - ONNX Model Owner: *<Select your Parsing Schema>*
+    - Static ID: **db\_onnx\_model**
+    - ONNX Model Owner: *Select your Parsing Schema*
     - ONNX Model Name: **DOC_MODEL**
 
     Click **Create**.
