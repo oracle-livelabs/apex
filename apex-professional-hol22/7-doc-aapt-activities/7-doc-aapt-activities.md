@@ -1,4 +1,4 @@
-# Add Activities and Connections
+# Add Doctor Appointment workflow Activities and Connections
 
 ## Introduction
 
@@ -8,7 +8,7 @@ In this lab, you will continue building the Doctor Appointment Workflow, focusin
 
 In this lab, you will:
 
-- Create and configure the workflow by adding activities and connections.
+- Create and configure the Doctor Appointment workflow by adding activities and connections.
 
 Estimated Time: 45 minutes
 
@@ -374,6 +374,8 @@ In this task, you learn to manage appointment requests using a Switch activity i
 
 ## Task 13: Add Invoke Workflow
 
+In this task, you will call **Calculate Fees** workflow using Invoke workflow activity.
+
 1. From the Activities palette, drag an **Invoke Workflow** Activity into the Diagram Builder area and drop it below the **Confirm Appointment** activity.
 
     ![Drag and Drop Invoke Workflow Activity](./images/add-invoke-workflow.png " ")
@@ -474,6 +476,12 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
         - Static Value: **PAID**
 
+    - For **p_fee**, under Value:
+
+        - Type: **Item**
+
+        - Item > Version Variables: **FEES**
+
     ![config booking id](./images/config-status.png " ")
 
 7. Now, select **Approved?** activity and draw an arrow to the **Update Appointment** activity and in the Property Editor, update the following:
@@ -500,7 +508,7 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
         ```
         <copy>
-        select schedule from appointment where booking_id = :BOOKING_ID;
+        select schedule from appointment where booking_id = :ID;
         </copy>
         ```
 

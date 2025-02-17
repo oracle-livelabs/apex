@@ -64,7 +64,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 7. Verify the success message.
 
-   ![appointment created](./images/appoint-created.png " ")
+   ![appointment created](./images/appoint-created1.png " ")
 
 ## Task 4: Monitor the Workflow
 
@@ -72,7 +72,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
    ![navigate to doctors app made easy](./images/monitor-appt.png " ")
 
-2. Click on the **Doctor Appointment Workflow for Patient Rajesh** entry and observe the Workflow Details Popup.
+2. Click on the **Workflow for Patient RAJESH** entry and observe the Workflow Details Popup.
 
     - Workflow is waiting at "Raise Appointment Request" Activity.
 
@@ -93,10 +93,16 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 ## Task 6: Observe the Workflow
 
 1. Log out and log in as **STEVE** (Hospital Staff).
-2. Click on **Monitor Appointment Workflows** from the left navigation menu.
-3. Observe that the workflow is waiting at **Raise Invoice Request** activity. This activity is waiting for the patient (RAJESH), to confirm and pay the invoice.
 
-    ![navigate to doctors app made easy](./images/steve-monitor-appt.png " ")
+2. Click on **Monitor Appointment Workflows** from the left navigation menu.
+
+3. Observe that there are two active workflows: **Calculate Fees** and **Doctor Appointment** and Calculate Fees workflow is waiting at **Raise Invoice Request** activity for the patient (RAJESH), to pay and confirm the invoice. Observe that there is a **To Parent Workflow** button which navigate you to the **Doctor Appointment** workflow.
+
+   ![navigate to doctors app made easy](./images/two-workflows.png " ")
+
+   ![navigate to doctors app made easy](./images/steve-monitor-appt-child.png " ")
+
+   ![navigate to doctors app made easy](./images/steve-monitor-appt-parent.png " ")
 
 4. Note the correctly set Workflow Variables: Approver, Fee, and TaskOutcome.
 
@@ -108,22 +114,21 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
    ![navigate to doctors app made easy](./images/rajesh-patient-tasks.png " ")
 
-3. Log out and log back in as **STEVE** to monitor the workflow. Observe that the workflow has completed the Raise Invoice Request and Update Appointment Activities.
+3. Log out and log back in as **STEVE** to monitor the workflow. Observe that the Calculate fees workflow has been completed. Now, Doctor Appointment workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
 
-4. Click on the **Next Page** button below the Activities.
-
-  ![check appointment workflow](./images/check-appt-workflow.png " ")
+   ![check appointment workflow](./images/check-appt-workflow.png " ")
 
 ## Task 8: Request Feedback Process
 
-1. On the next page, observe that the workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
- Recall that the Wait activity has a timeout setting that elapses once the Appointment Time is reached.
+1. As the Doctor Appointment workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
 
-   ![wait for appointment](./images/wait-for-feedback.png " ")
+   Recall that the Wait activity has a timeout setting that elapses once the Appointment Time is reached.
 
-3. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
+   ![wait for appointment](./images/check-appt-workflow2.png " ")
 
-  ![wait for appointment1](./images/wait-for-appt1.png " ")
+2. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
+
+   ![wait for appointment1](./images/wait-for-appt1.png " ")
 
 ## Task 9: Provide Patient Feedback
 
@@ -133,13 +138,13 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 3. Fill in the Feedback Details and click **Complete**.
 
-  ![wait for feedback](./images/check-feedback-form.png " ")
+  ![wait for feedback](./images/check-feedback-form1.png " ")
 
 ## Task 10: Complete the Workflow
 
 1. Log out and log back in as **STEVE** to monitor the workflow.
 
-2. Observe that the Workflow is now completed.
+2. Observe that the both the Workflows are now completed.
 
    ![wait for feedback](./images/observe-workflow-completed.png " ")
 
@@ -151,7 +156,7 @@ To demonstrate the application's behavior, we will use an automatic timezone set
 
 2. Log in as **RAJESH** and verify that the Feedback was entered successfully.
 
-  ![wait for feedback](./images/rajesh-feedback-check.png " ")
+   ![wait for feedback](./images/rajesh-feedback-check.png " ")
 
 ## [OPTIONAL] Additional Scenarios to Try
 

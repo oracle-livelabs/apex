@@ -36,7 +36,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     ![Edit Page 4](./images/click-page.png " ")
 
-3. In the Property Editor, add the following column Group headers to the interactive grid:
+3. In the Property Editor, add the following column group headers to the interactive grid:
 
     - **Project Breakdown**: Project, Task_Name columns
 

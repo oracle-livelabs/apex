@@ -10,9 +10,11 @@ The above steps correspond to Human Task Activities. Before using them in the wo
 
 In this lab, you will learn how to create Human Tasks to:
 
-- Send Appointment Request To Doctor
-- Raise Invoice Request For Patient
-- Raise Feedback Request For Patient
+- Send Appointment Request To Doctor.
+
+- Raise Invoice Request For Patient.
+
+- Raise Feedback Request For Patient.
 
 Estimated Time: 20 minutes
 
@@ -239,7 +241,7 @@ You have successfully created Human Task definitions for the Doctor Appointment 
 
 ## What's Next
 
-In the next lab, you continue building the Doctor Appointment Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
+In the next lab, you continue building the Calculates Fess Workflow, focusing on defining activities, setting parameters, and creating conditional branches.
 
 You may now **proceed to the next lab**.
 

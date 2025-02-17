@@ -77,7 +77,7 @@ In this Lab, you will enable the **Target System** to **ORDS**, and then you wil
 
    ![Click Save Schema Attributes](images/enable-ords3.png " ")
 
-5. Navigate to **SQL Workshop > Restful Services**. Expand **RESTful Data Services > Modules > oracle.example.hr > empinfo/ GET**. Copy the **Full URL** and paste it into your **Clipboard** or **Notepad**.
+5. Expand **RESTful Data Services > Modules > oracle.example.hr > empinfo/ GET**. Copy the **Full URL** and paste it into your **Clipboard** or **Notepad**.
 
    ![Copy Full URL](images/copy-url.png " ")
 
@@ -111,7 +111,9 @@ Your application is now ready for deployment. Perform the following steps:
 
 6. Enter the base URL for the **REST Enabled SQL Service** defined for your deployment server (APEX\_HANDSON\_TARGET in this example). The schema in your deployment server has already been enabled for use with ORDS RESTful Data Services in prerequisites.
 
-    For **Endpoint URL**, paste the base URL copied from the deployment instance in the previous step(**Task 2**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click **Next**.
+    - Name: **APEX_TARGET**
+
+    - **Endpoint URL**: Paste the base URL copied from the deployment instance in the previous step(**Task 2**). The base URL should include the ORDS context root and schema URL prefix. For example, https://host:8096/ords/apexstage. Then, click **Next**.
 
     ![Paste the file URL which you Copied](images/perform-rd2.png " ")
 

@@ -86,11 +86,11 @@ Users can long-press on the home screen app icon on touch-enabled devices to acc
 
 By providing these shortcuts, Oracle APEX enhances the user experience and makes it easier for users to access the pages they need within the PWA quickly.
 
-> **Note:** _An APEX application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before configuring shortcuts, click either Enable for Public Sessions or Enable for All Sessions._
+> **Note:** An APEX application can only use PWA Shortcuts if Rejoin Sessions is enabled. Before configuring shortcuts, click either Enable for Public Sessions or Enable for All Sessions.
 
 1. Scroll down to **Shortcuts** and click **Enable for All Sessions**. Confirm by clicking **Enable for All Sessions** in the popup window.
 
-    > **Note:** _This option does not work in *apex.oracle.com* instance._
+    > **Note:** This option does not work in *apex.oracle.com* instance.
 
     ![enable for all sessions](images/enable-for-all-sessions.png " ")
 

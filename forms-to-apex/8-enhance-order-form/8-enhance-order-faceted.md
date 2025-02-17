@@ -8,7 +8,7 @@ Estimated Time: 5 Minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
 - Enhance the orders form page with hidden fields, validation, and layout improvements.
 - Create a validation to ensure correct order and ship dates.
@@ -302,4 +302,4 @@ In this lab, we enhanced the orders form page. You converted the payment type se
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

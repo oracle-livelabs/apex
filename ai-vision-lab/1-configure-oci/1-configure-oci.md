@@ -6,10 +6,10 @@ In this lab, you learn how to configure the OCI API keys. In Oracle Cloud Infras
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
 
-
 Estimated Time: 10 Minutes
 
 ### Objectives
+
 In this lab, you:
 
 - Generate API Keys using OCI Console
@@ -75,24 +75,24 @@ To create a Web Credential in Oracle APEX:
 
 6. Enter the following details using the configuration file you copied in the previous task.
 
-    - **Name**: apex\_ai\_cred
+    - Name: **apex\_ai\_cred**
 
-    - **Authentication Type**: OCI Native Authentication
+    - Authentication Type: **OCI Native Authentication**
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    - OCI User ID: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
+    - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
       ![Private key file](images/private-key.png " ")
 
-    - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
+    - OCI Tenancy ID: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
-    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+    - OCI Public Key Fingerprint: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
    ![Web Credentials page](images/web-creds.png " ")
 
-5. Click **Create**.
+7. Click **Create**.
 
 ## Summary
 
@@ -104,4 +104,4 @@ You may now **proceed to the next lab**.
 
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, January 2025

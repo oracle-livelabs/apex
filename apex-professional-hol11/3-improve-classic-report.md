@@ -78,20 +78,20 @@ In this lab, you will:
     - Identification > Type: **Link**
 
     - Under Link:
-    
+
         - Target: Click **No Link Defined**
 
             - Page: **15** *{This page will be created in the next lab}*
 
             - Set Items:
-        
+
             | Name | Value |
             | ---- | ---- |
             | P15\_PRODUCT\_ID | #PRODUCT\_ID# |
 
         - Clear Cache: **15**
 
-        - Click **OK**.
+        Click **OK**.
 
     - Link > Link Text: **fa-edit**
 

@@ -50,7 +50,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
     ![Create a region](./images/create-region13.png " ")
 
-6. In the Property Editor, for Identification > Title, enter **Patient Appointment Details**.
+6. In the Property Editor, for Identification > Name, enter **Patient Appointment Details**.
 
      ![Create a region](./images/configure-static-content.png " ")
 
@@ -91,10 +91,11 @@ Now that the Workflow is created, let us create the page that the hospital staff
           | Psychiatric | PSYCHIATRY |
           | Cancer | ONCOLOGY |
           | ENT | ENT |
-          | Gastroenteric | GASTRO |
           | Cardiac | CARDIOLOGY |
           | General | GENERAL |
           {: title="Display and Return Values for List of Values"}
+
+        Click **OK**.
 
     ![create desc item](./images/create-desc-item.png " ")
 
@@ -313,7 +314,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
 17. In the Details Page, the patient should be able to fill out a Feedback form and submit it. On submission, it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows:
 
-    - Right click  **View Appointment Details** and click **Create Region Below**.
+    - Right-click  **View Appointment Details** and select **Create Region Below**.
 
     ![create region below](./images/create-region-below13.png " ")
 
@@ -348,7 +349,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
 21. Now, create two new page items under the **Your Feedback** region.
 
-    In the Rendering tree, right-click **Region Body** and click **Create Page Item**.
+    In the Rendering tree, right-click **Region Body** and select **Create Page Item**.
 
     ![create page item](./images/create-page-item11.png " ")
 
@@ -375,6 +376,8 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
         | Satisfactory | 3 |
         | Unsatisfactory | 4 |
         {: title="Display and Return Values for List of Values}
+
+    Click **OK**.
 
     ![create page item](./images/configure-rating.png " ")
 
