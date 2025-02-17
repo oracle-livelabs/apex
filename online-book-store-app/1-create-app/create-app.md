@@ -1,4 +1,4 @@
-# Create the application
+# Create an APEX application
 
 ## Introduction
 
