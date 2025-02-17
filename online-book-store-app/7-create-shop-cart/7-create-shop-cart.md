@@ -1095,7 +1095,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     ![close dialog](images/click-add-to-cart.png " ")
 
-4. On the Navigation bar list, select **Shopping Cart**.
+4. On the Navigation Bar, select **Shopping Cart**.
 
     ![close dialog](images/click-shopping-cart.png " ")
 
@@ -1103,7 +1103,7 @@ In this task, you add an entry to the navigation bar that displays the shopping 
 
     ![close dialog](images/view-shopping-cart.png " ")
 
-6. Now, you see the order details page, On the Navigation bar list, select **My Books** to check all the purchased books.
+6. Now, you see the order details page, On the Navigation Bar, select **My Books** to check all the purchased books.
 
     ![close dialog](images/order-details.png " ")
     ![close dialog](images/view-purchased-books.png " ")

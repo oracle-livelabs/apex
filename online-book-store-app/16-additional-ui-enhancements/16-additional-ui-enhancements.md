@@ -36,7 +36,7 @@ In this lab, you will:
 
     ![Click](images/16-1-3.png " ")
 
-4. Run the app.
+4. Run the application.
 
     ![Click](images/16-1-4.png " ")
 
@@ -54,7 +54,7 @@ In this lab, you will:
 
     ![Click](images/16-2-3.png " ")
 
-4. Run the app.
+4. Run the application.
 
     ![Click](images/16-2-4.png " ")
 
@@ -295,7 +295,7 @@ In this lab, you will:
 
     ![Click](images/16-4-31.2.png " ")
 
-32. Run the lab and observe the global search, which will remain visible even after you navigate to any other page.
+32. Run the application and observe the global search, which will remain visible even after you navigate to any other page.
 
     ![Click](images/16-4-32.png " ")
 
@@ -941,7 +941,7 @@ In this lab, you will:
 
     ![Click](images/16-7-7.png " ")
 
-8. Observe the Books Number heading and the book sorting option.
+8. Observe Total Books and book sorting options.
 
     ![Click](images/16-7-8.png " ")
 

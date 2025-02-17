@@ -793,7 +793,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     ![close dialog](images/6-8-2.2.png " ")
 
-3. Observe the total item number on the shopping cart entry in the navigation bar.
+3. Observe the total number of items on the shopping cart entry in the navigation bar
 
     ![close dialog](images/6-8-3.png " ")
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create a Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will link a search bar to these responses, enabling powerful and accurate search functionality.
+In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create a Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
 
 >*Note: This lab assumes you are using Oracle Database 23ai.*
 
@@ -14,7 +14,7 @@ Estimated Time: 15 minutes
 - Create a Vector Provider
 - Generate Vector Embeddings
 - Create Search Configuration based on Oracle Vector Search
-- Link Vector Search to the Home Page Search.
+- Create an Oracle Vector Search Page
 
 ## Task 1: Load ONNX Model to Oracle Database
 
@@ -189,11 +189,89 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
     !["Page Designer"](images/18-4-7.png "")
 
-## Task 5: Link Oracle Vector Search to the Home Page Search.
+## Task 5: Create an Oracle Vector Search Page
+
+1. Navigate to the application home page and click  **Create Page**.
+
+    !["Page Designer"](images/18-5-1.png "")
+
+2. Select **Search Page**.
+
+    !["Page Designer"](images/18-5-2.png "")
+
+3. Under Create Search Page wizard, enter the following:
+
+    - Under Page Definition:
+
+        - Page Number: **5**
+
+        - Name: **Books Vector Search**
+
+    - Search Configurations > Online Bookstore Search - Vector: **Toggle On**
+
+    - Under Navigation:
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+    Click **Create Page**.
+
+    !["Page Designer"](images/18-5-3.png "")
+
+4. Navigate to **Shared Components**.
+
+    !["Page Designer"](images/18-5-4.png "")
+
+5. Under **Navigation and Search**, select **Navigation Bar List**.
+
+    !["Page Designer"](images/18-5-5.png "")
+
+6. Click **Navigation Bar**.
+
+    !["Page Designer"](images/18-5-6.png "")
+
+7. Click **Create List Entry**.
+
+    !["Page Designer"](images/18-5-7.png "")
+
+8. Enter/select the following and click **Create List Entry**.
+
+    - Under Entry:
+
+        - Sequence: **2**
+
+        - Image/Class: **fa-search-plus**
+
+        - List Entry Label: **Advanced search**
+
+    - Under Target:
+
+        - Page: **5**
+
+        - Clear Cache: **5**
+
+    !["Page Designer"](images/18-5-8.1.png "")
+
+     - Under Conditions:
+
+        - Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
+
+        - Expression 1: **5**
+
+    !["Page Designer"](images/18-5-8.2.png "")
+
+9. Run the application and click **Advanced Search** entry in the navigation bar.
+
+    ![Click](images/18-5-9.png " ")
+
+10. Search for any keyword, press Enter, and observe the results of books related to that keyword.
+
+    ![Click](images/18-5-10.png " ")
 
 ## Summary
 
-In this lab, you loaded ONNX models into Oracle Database, created a Vector Provider, and generated vector embeddings. You then configured Oracle Vector Search for enhanced search capabilities and link the search to leverage these embeddings for efficient and accurate search results.
+In this lab, you loaded ONNX models into Oracle Database, created a Vector Provider, and generated vector embeddings. You then configured Oracle Vector Search for enhanced search capabilities and built a search page to leverage these embeddings for efficient and accurate search results.
 
 ## Acknowledgements
 

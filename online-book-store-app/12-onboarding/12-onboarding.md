@@ -1377,7 +1377,7 @@ Create the User Sign Up Page
 
 ## Task 6: Run the Application
 
-1. Run the application and click **New here? Sign Up** to create a new account.
+1. Run the application and click **New here? SignUp** to create a new account.
 
     ![Click My Apps](images/12-6-1.png " ")
 

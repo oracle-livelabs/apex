@@ -508,7 +508,7 @@ In this lab, you will:
 
     ![close dialog](images/15-5-2.4.png " ")
 
-3. On the Navigation bar list, click **Shopping Cart**.
+3. On the Navigation Bar, click **Shopping Cart**.
 
     ![close dialog](images/15-5-3.png " ")
 
