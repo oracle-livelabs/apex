@@ -38,7 +38,7 @@ In this workshop, you will:
 | 1 | [Create the application](?lab=create-app) | 4 minutes |
 | 2 | [Create REST data source](?lab=2-rest-data-source) | 6 minutes |
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 16 minutes |
-| 4 | [Customize Application Theme](?lab=application-theme) | 1 minutes |
+| 4 | [Customize Application Theme](?lab=application-theme) | 1 minute |
 | 5 | [Custom Authentication](?lab=authentication) | 5 minutes |
 | 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | 19 minutes |
 | 7 | [Create and Manage a Shopping Cart](?lab=7-create-shop-cart) | 34 minutes |
