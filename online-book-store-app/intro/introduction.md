@@ -89,5 +89,5 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
 - **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025
