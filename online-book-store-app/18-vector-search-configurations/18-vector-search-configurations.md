@@ -16,7 +16,7 @@ Estimated Time: 10 minutes
 - Create Search Configuration based on Oracle Vector Search
 - Create an Oracle Vector Search Page
 
-## Task 1: Load ONNX Model to Oracle Database
+## Task 1: Load the ONNX Model
 
 Before uploading the ONNX model to your database schema, you must grant the schema the privilege to create mining models while logged in as SYS/ADMIN.
 
@@ -63,7 +63,7 @@ Login as SYS/Admin User and execute the below command.
 
     ![Page Designer](images/18-1-2.png ' ')
 
-## Task 2: Create Vector Provider from Workspace Utilities
+## Task 2: Create a Vector Provider
 
 In this task, you will create a Vector Provider that will be used later to set up a Search Configuration.
 
@@ -103,7 +103,7 @@ In this task, you will create a Vector Provider that will be used later to set u
 
     ![Page Designer](images/18-2-5.png ' ')
 
-## Task 3: Create Column and Update Table for Vector Embeddings
+## Task 3: Create Vectors on Book Description
 
 In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, **DESCRIPTION\_VECTOR**, to store description vector embeddings. Starting with APEX 24.2, the new PL/SQL API **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** streamlines this process. You will utilize the **APEX\_AI.GET\_VECTOR\_EMBEDDINGS** API to insert vector embeddings.
 
