@@ -275,5 +275,5 @@ You've gained knowledge on creating database objects such as packages and trigge
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
 - **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025

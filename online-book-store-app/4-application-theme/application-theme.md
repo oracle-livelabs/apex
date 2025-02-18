@@ -50,5 +50,5 @@ You've learned how to update the theme of the application using theme roller. Re
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
+- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
 - **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025
