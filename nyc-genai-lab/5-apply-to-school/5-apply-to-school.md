@@ -183,15 +183,17 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/final-prompt-name.png ' ')
 -->
-17. Delete the buttons that we no longer need. Select **CANCEL**, **DELETE**, and **SAVE**. Right-click and select **Delete**.
+15. Delete the buttons that we no longer need. Select **CANCEL**, **DELETE**, and **SAVE**. Right-click and select **Delete**.
     ![Page Designer](images/delete-buttons.png ' ')
 
-18. Select the **CREATE** button. In the Property editor, enter/select the following:
+16. Select the **CREATE** button. In the Property editor, enter/select the following:
 
     - Identification > Label: **Send Application**
     - Under Appearance:
         - Button Template: **Text with Icon**
         - Icon: **fa-send-o**
+
+    Click **Save**.
 
     ![Page Designer](images/edit-create.png ' ')
 
@@ -225,30 +227,31 @@ In this task, we create an AI configuration with a RAG source. This will serve a
     ![AI configuration details page](images/create-rag.png ' ')
 
 6. Enter/select the following:
-    - Name: **Details to Generate Email Text**
-    - Type: **Function Body**
-    - Language: **PL/SQL**
-    - Function Body Returning CLOB:
-    ```
-    <copy>
-    DECLARE
-    L_SCHOOL_NAME HIGHSCHOOLS.SCHOOL_NAME%TYPE;
-    L_PROMPT CLOB;
-    BEGIN
-        SELECT SCHOOL_NAME INTO L_SCHOOL_NAME FROM HIGHSCHOOLS WHERE ID = :P3_SCHOOL_ID;
-        L_PROMPT :=
-            q'[
-            Parent Name : ]'|| :P3_PARENT_NAME||chr(10)||chr(13) ||q'[
-            Applicant Name : ]'|| :P3_STUDENT_NAME||chr(10)||chr(13) ||q'[
-            School Name : ]'|| initcap(L_SCHOOL_NAME)||chr(10)||chr(13);
+    - Identification > Name: **Details to Generate Email Text**
+    - Under Source:
+        - Type: **Function Body**
+        - Language: **PL/SQL**
+        - Function Body Returning CLOB:
+        ```
+        <copy>
+        DECLARE
+        L_SCHOOL_NAME HIGHSCHOOLS.SCHOOL_NAME%TYPE;
+        L_PROMPT CLOB;
+        BEGIN
+            SELECT SCHOOL_NAME INTO L_SCHOOL_NAME FROM HIGHSCHOOLS WHERE ID = :P3_SCHOOL_ID;
+            L_PROMPT :=
+                q'[
+                Parent Name : ]'|| :P3_PARENT_NAME||chr(10)||chr(13) ||q'[
+                Applicant Name : ]'|| :P3_STUDENT_NAME||chr(10)||chr(13) ||q'[
+                School Name : ]'|| initcap(L_SCHOOL_NAME)||chr(10)||chr(13);
 
-        return L_PROMPT;
+            return L_PROMPT;
 
-    END;
-    </copy>
-    ```
+        END;
+        </copy>
+        ```
       
-      Click **Create**.
+        Click **Create**.
 
     ![AI configuration details page](images/rag-details.png ' ')
 
@@ -273,16 +276,17 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
     ![Page Designer](images/name-da.png ' ')
 
 4. Under True, select **Show**. In the Property Editor, enter/select the following:
-    - Action: **Execute Server-side Code**
-    - Language: **PL/SQL**
-    - PL/SQL Code: **null;**
-    - Items to Submit: **P3_SCHOOL_ID,P3_PARENT_NAME,P3_STUDENT_NAME**
+    - Identification > Action: **Execute Server-side Code**
+    - Under Settings:
+        - Language: **PL/SQL**
+        - PL/SQL Code: **null;**
+        - Items to Submit: **P3\_SCHOOL\_ID,P3\_PARENT\_NAME,P3\_STUDENT\_NAME**
 
     This True action is executed in order to submit the values of School ID, parent name and student name to the server. By doing so, we can be rest assured that the correct values are picked by the AI configuration we created in the previous task.
 
     ![Page Designer](images/exec-server-side.png ' ')
 
-5. Select the page items **P3_SCHOOL_ID**, **P3_PARENT_NAME** and **P3_STUDENT_NAME**. In the Property Editor, under Session Stage, for Storage select **Per Session (Persistent)**.
+5. Select the page items **P3\_SCHOOL\_ID**, **P3\_PARENT\_NAME** and **P3\_STUDENT\_NAME**. In the Property Editor, under Session Stage, for Storage select **Per Session (Persistent)**.
 
     ![Page Designer](images/change-session-state.png ' ')
 
@@ -293,10 +297,10 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
 7. In the Property Editor, enter/select the following:
     - Action: **Generate Text with AI**
     - Generative AI > Configuration: **Generate Text AI**
-    - Input Calue > Type: **Only System Prompt**
+    - Input Value > Type: **Only System Prompt**
     - Use Response:
         - Type: **Item**
-        - Item: **P3_EMAIL**
+        - Item: **P3\_EMAIL**
 
     ![Page Designer](images/generate-text-true-action.png ' ')
     
@@ -370,10 +374,10 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
 
     ![Page Designer](images/apply-action.png ' ')
 
-5. In the left pane, select **Search Results**. In the Property Editor, switch to Attributes tab and edit the following:
+5. In the left pane, select **Search Results**. In the Property Editor, switch to **Attributes** tab and edit the following:
     - Under Icon and Badge:
-        - Badge Column: **APPLICATION_STATUS**
-        - Badge CSS Classes: **&DISPOSITION_CSS.**
+        - Badge Column: **APPLICATION\_STATUS**
+        - Badge CSS Classes: **&DISPOSITION\_CSS.**
 
      ![Page Designer](images/search-attributes.png ' ')
 

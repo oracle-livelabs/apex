@@ -88,7 +88,7 @@ Vector providers are configured to convert text into an embedding.
     ![Vector Providers page](images/create-vp.png ' ')
 
 4. In the Vector Provider Details page, enter/select the following:
-    - Provider Type:** Database ONNX Model**
+    - Provider Type: **Database ONNX Model**
     - Name: **DB ONNX Model**
     - Static ID: **db\_onnx\_model**
     - ONNX Model Owner: *Select your Parsing Schema*
@@ -219,7 +219,8 @@ Search Configuration contains information about a searchable data source.
 
 5. Enter/select the following:
     - Vector Provider: **DB ONNX Model**
-    - Table/View Name: **HIGH_SCHOOL_INFO**
+    - Table/View Name: **HIGH\_SCHOOL\_INFO**
+    
     Click **Next**.
 
     ![Create Search Configurations page](images/sc-detail-2.png ' ')
@@ -228,6 +229,7 @@ Search Configuration contains information about a searchable data source.
     - Primary Key Column: **ID (Number)**
     - Vector Column: **CHUNK\_V (Vector)**
     - Title Column: **CHUNK\_C (Clob)**
+    
     Click **Create Search Configuration**.
 
     ![Create Search Configurations page](images/sc-detail-3.png ' ')
@@ -273,7 +275,7 @@ In this task, we update the RAG source to use the vector we created. The Learn M
     ```
     ![RAG sources page](images/edit-rag-sql.png ' ')
 
-## Run the Application
+## Task 7: Run the Application
 
 1. From the Generative AI Configuration page, click **Run App** to see vector search in action.
 
@@ -295,7 +297,13 @@ In this task, we update the RAG source to use the vector we created. The Learn M
 
     ![App builder](images/sql-commands-3.png ' ')
 
-6. Run the following SQL command to see how the **CONTENT\_LENGTH** column shows significant decrease in the length. 
+6. Run the following SQL command to see how the **CONTENT\_LENGTH** column shows significant decrease in the length:
+
+    ```
+    <copy>
+        select * from APEX_WEBSERVICE_LOG order by request_date desc;
+    </copy>
+    ```
 
     ![SQL commands page](images/observe-length.png ' ')
 

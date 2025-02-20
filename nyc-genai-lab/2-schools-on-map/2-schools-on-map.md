@@ -59,8 +59,7 @@ In this lab, you will:
         - Primary Key Column: **ID**
     - Point Objects > Shape: **Pin Circle**
 
-    - Under Appearance:
-        - Stroke Color: **#ffffff**
+    - Appearance > Stroke Color: **#ffffff**
 
     ![Page designer](images/school-layer-2.png =40%x*)
 
@@ -343,7 +342,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
     ![Page Designer](images/distance-facet.png =40%x*)
 
-    - Under List of Values,
+    - Under List of Values:
         - Type: **Static Values**
         - Static Values:
 
@@ -362,7 +361,9 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
         ![Page Designer](images/static-values.png ' ')
 
-    - Source > Data Type: **Number**
+    - Under Source:
+        - Database Column: **DISTANCE**
+        - Data Type: **Number**
 
        ![Page Designer](images/data-type-number.png =40%x*)
 

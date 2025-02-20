@@ -178,7 +178,7 @@ In this task, we configure the Cards region to display the information that we n
 
     In the Property Editor, switch to the **Attributes** tab and enter the following:
         
-        - Total Row Count Label: **Schools:**
+    - Total Row Count Label: **Schools:**
 
     ![Page Designer](images/row-count-label.png " ")
 

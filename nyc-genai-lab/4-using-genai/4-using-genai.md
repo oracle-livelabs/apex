@@ -76,6 +76,7 @@ In this lab, you will:
     - Under Identification:
         - Name: **P2\_SCHOOL\_ID**
         - Type: **Hidden**
+        
         Click **Save**.
 
     ![Page Designer](images/school-id.png ' ')
