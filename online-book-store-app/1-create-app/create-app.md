@@ -20,7 +20,7 @@ In this lab, you will:
 
 In this lab, you create a simple application with one click called **Online Bookstore**. This option creates an application which contains only a Global Page, Home page, and Login page.
 
-1. On the Workspace home page, click the App Builder.
+1. On the Workspace home page, click the **App Builder**.
 
    ![App builder home page](./images/go-create-app.png " ")
 
@@ -69,7 +69,7 @@ In this lab, you create a simple application with one click called **Online Book
 
 ## Task 2: Load Quick SQL
 
-1. Select **SQL Workshop > Utilities > Quick SQL**.
+1. Navigate to Select **SQL Workshop** and select **Utilities > Quick SQL**.
 
     ![Create Application wizard](./images/quick-sql.png " ")
 

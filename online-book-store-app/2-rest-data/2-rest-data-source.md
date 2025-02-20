@@ -22,7 +22,7 @@ In this lab, you will:
 
 ## Task 1: Extract data using REST Data Source
 
-1. Click **App Builder** on top Navigation Bar.
+1. Click **App Builder** on the top Navigation Bar.
 
     ![App builder home page](images/click-app-builder.png " ")
 
@@ -99,7 +99,7 @@ In this lab, you will:
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, under Details for **Synchronization Type**: select **Replace** and click **Save and Run**.
+3. Now, under Details > **Synchronization Type**: Select **Replace** and click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 
@@ -145,13 +145,13 @@ In this task, you create Faceted Search page which will display list of the book
 
     ![App builder home page](images/fs-create-page.png " ")
 
-6. Navigate to **Shared Component** and click **User Interface Attributes** under **User Interface**.
+6. Navigate to **Shared Component**. Under **User Interface**, click **User Interface Attributes**.
 
     ![Shared Component](images/nav-sc.png " ")
 
     ![User Interface Attributes](images/select-user-interface.png " ")
 
-7. Under Attributes, select **Home URL**: **10 Search Books**.
+7. Under **Attributes** tab, select **Home URL**: **10 Search Books**.
 
     ![Home URL](images/select-home-url.png " ")
 
