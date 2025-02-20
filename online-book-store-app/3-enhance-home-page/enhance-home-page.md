@@ -11,7 +11,7 @@ Estimated Time: 15 minutes
 In this lab, you will:
 
 - Improve Faceted Search
-- Integrate Global Search
+- Create Search Bar
 - Enhance the Cards region
 - Activate Sorting options
 - Include a link for purchasing Books
@@ -70,9 +70,9 @@ In this lab, you will:
 
    ![App builder home page](images/fs-review.png " ")
 
-## Task 2: Integrate Global Search
+## Task 2: Create Search Bar
 
-1. In the left pane, right-click **Body** and select **Create Page Item**.
+1. Go back to the page designer, and in the left pane, right-click **Body** and select **Create Page Item**.
 
      ![App builder home page](images/fs-page-item.png " ")
 
@@ -120,8 +120,7 @@ In this lab, you will:
 
     ![App builder home page](images/fs-search-attributes.png " ")
 
-
-4. Drag and drop **P10\_SEARCH\_PAGE\_ITEM** page item just above the Button Bar.
+4. Drag and drop **P10\_SEARCH\_PAGE\_ITEM** page item just above the **Button Bar** region.
 
     ![App builder home page](images/fs-drag.png " ")
 
@@ -131,7 +130,7 @@ In this lab, you will:
 
 ## Task 3: Enhance the Cards region
 
-1. Select **Search Results** region and enter/select the following:
+1. Go back to the page designer, and select **Search Results** region and enter/select the following:
 
     - Under Source:
 
@@ -165,7 +164,9 @@ In this lab, you will:
 
     - Under Appearance > Select **Template Options** and enter/select the following:
 
-        - Style: **Style C** and click **OK**
+        - Style: **Style C**
+
+        click **OK**
 
     ![App builder home page](images/template-options.png " ")
 
@@ -214,7 +215,7 @@ In this lab, you will:
 
     ![App builder home page](images/image-atrributes.png " ")
 
-3. Select **Page 10: Search Books** region and enter the following into the property editor:
+3. Select **Page 10: Search Books** root node and enter the following into the property editor:
 
     - CSS > Inline: Copy and Paste the below CSS Code:
 
@@ -237,7 +238,7 @@ In this lab, you will:
 
 ## Task 4: Activate Sorting options
 
-1. Select **Search Results** region and enter/select the following:
+1. Go back to the page designer, and select **Search Results** region and in the Property Editor, enter/select the following:
 
     - Order By:
 
@@ -253,7 +254,7 @@ In this lab, you will:
 
     ![App builder home page](images/order-by-item.png " ")
 
-2. Select **P10\_ORDER\_BY** and enter the following:
+2. Select **P10\_ORDER\_BY** page item and  in the Property Editor, enter/select the following:
 
     - Under Default:
 
@@ -269,7 +270,7 @@ In this lab, you will:
 
 ## Task 5: Include a link for purchasing Books
 
-1. Select **Application ID**.
+1. Go back to the page designer, and select **Application ID**.
 
     ![App builder home page](images/app-id.png " ")
 
@@ -283,17 +284,19 @@ In this lab, you will:
 
 4. On **Create Blank Page** dialog, enter/select the following details:
 
-     - Page No: **18**
+     - Under Page Definition:
 
-     - Name: **Book Details**
+        - Page Number: **18**
 
-     - Page Mode: **Modal Dialog**
+        - Name: **Book Details**
+
+        - Page Mode: **Modal Dialog**
 
     Click **Create Page**
 
     ![App builder home page](images/blank-page-details.png " ")
 
-5. Under Rendering Pane, select **Page 18: Book Details** and update the following:
+5. In the left Pane, select **Page 18: Book Details** and update the following:
 
     - Security > Authentication: **Page is Public**
 
@@ -303,7 +306,7 @@ In this lab, you will:
 
      ![App builder home page](images/region-bp.png " ")
 
-7. In the Property Editor, enter/select the following properties:
+7. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Buttons Bar**
 
@@ -315,7 +318,7 @@ In this lab, you will:
 
     ![App builder home page](images/page-item-bp.png " ")
 
-9. In the Property Editor, enter/select the following properties:
+9. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -329,7 +332,7 @@ In this lab, you will:
 
     ![App builder home page](images/duplicate-bp.png " ")
 
-11. Update Name to **P18\_BOOK\_IMAGE**.
+11. In the Property Editor, update Name to **P18\_BOOK\_IMAGE**.
 
     ![App builder home page](images/duplicate-details-bp.png " ")
 
@@ -337,7 +340,7 @@ In this lab, you will:
 
     ![App builder home page](images/computation-bp.png " ")
 
-13. In the Property Editor, enter/select the following properties:
+13. In the Property Editor, enter/select the following:
 
     - Execution > Point: **Before Header**
 
@@ -359,7 +362,7 @@ In this lab, you will:
 
     ![App builder home page](images/create-dup.png " ")
 
-15. Update Name to **P18\_BUY\_LINKS**.
+15. In the Property Editor, update Name to **P18\_BUY\_LINKS**.
 
     ![App builder home page](images/page-item-buy-links.png " ")
 
@@ -367,7 +370,7 @@ In this lab, you will:
 
     ![App builder home page](images/create-comp.png " ")
 
-17. In the Property Editor, update the following properties:
+17. In the Property Editor, enter/select the following:
 
     - Execution > Point: **Before Header**
 
@@ -389,7 +392,7 @@ In this lab, you will:
 
       ![App builder home page](images/create-region1.png " ")
 
-19. In the Property Editor, enter/select the following properties:
+19. In the Property Editor, enter/select the following:
 
     - Identification > Name: **IMAGE\_DISPLAY**
 
@@ -399,7 +402,7 @@ In this lab, you will:
 
     ![App builder home page](images/region-details1.png " ")
 
-20. Right-click **Content Body** and select **Create Region**. In the Property Editor, enter/select the following properties:
+20. Right-click **Content Body** and select **Create Region**. In the Property Editor, enter/select the following:
 
      - Under Identification:
 
@@ -437,7 +440,7 @@ In this lab, you will:
 
     ![App builder home page](images/book-info-details.png " ")
 
-21. In the right pane, click **Attributes**. In the Property Editor, update the following properties:
+21. In the right pane, click **Attributes**. In the Property Editor, update the following:
 
     - Appearance > Template: **Value Attribute Pairs-Column**
 
@@ -483,7 +486,7 @@ In this lab, you will:
 
     ![App builder home page](images/create-action.png " ")
 
-28. In the Property Editor, enter/select the following properties:
+28. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Full Card**
 
@@ -517,42 +520,3 @@ You've learned how to enhance the faceted search page, integrate Global Search u
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
 - **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025
-
-<!-- 
-25. Right-click **Book Information** and click **Create Button**.
-
-      ![App builder home page](images/book-info-button.png " ")
-
-26. In the Property Editor, enter/select the following properties and click OK
-
-     - Under Identification:
-
-        - Button Name: **BUY\_LINK**
-
-        - Label: **Buy Link**
-
-     - Under Layout > Slot: **Next**
-
-     - Under Appearance:
-
-          - Button Template: **Text with icon**
-
-          - Template Options > Style: **Display as link**
-
-          - Icon: **fa-box-arrow-in-ne**
-
-    ![App builder home page](images/buy-link-button.png " ")
-
-    - Under Behavior:
-
-         - Action: Redirect to URL
-
-         - Target > URL:
-         ```
-         <copy>
-          javascript:window.open('&P18_BUY_LINKS.','_blank');
-          </copy>
-           ```
-       Click **Save**.
-
-      ![App builder home page](images/buy-link-builder.png " ") -->

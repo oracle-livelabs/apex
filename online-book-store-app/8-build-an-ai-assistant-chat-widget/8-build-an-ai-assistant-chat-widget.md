@@ -204,7 +204,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Page Designer](images/8-5-3-create.png ' ')
 
-4. Enter/select the following properties:
+4. Enter/select the following:
 
     - Under Identification:
 
@@ -240,7 +240,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Page Designer](images/8-5-5-details.png ' ')
 
-6. Enter/select the following properties:
+6. Enter/select the following:
 
     - Identification > Name: **Books**
 

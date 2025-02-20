@@ -223,7 +223,7 @@ In this task, you will learn to create custom authentication.
 
    ![App builder home page](images/auth-next.png " ")
 
-6. Enter/select the following properties:
+6. Enter/select the following:
 
     - Under Name:
 
