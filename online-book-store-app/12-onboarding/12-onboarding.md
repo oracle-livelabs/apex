@@ -14,7 +14,7 @@ In this lab, you will:
 - Reset Password/Signup
 - Login with Google
 
-## Task 1: Creating Email Verification for Forgot Password - Page 100002
+## Task 1: Creating Email Verification for Forgot Password
 
 Create the forgot password Page
 
@@ -316,7 +316,7 @@ Create the forgot password Page
 
 25. Click **Save**. 
 
-## Task 2: Creating  Reset Password - Page 100003
+## Task 2: Creating  Reset Password
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
     ![close dialog](images/12-2-blank-page-email.png " ")
@@ -651,7 +651,7 @@ Create the forgot password Page
 
 37. Click **Save**.
 
-## Task 3: Creating Email Verification for User SignUp - Page 100001
+## Task 3: Creating Email Verification for User SignUp
 
 Create the User Sign Up Page
 
@@ -881,7 +881,7 @@ Create the User Sign Up Page
 
 17. Click **Save**.
 
-## Task 4: Creating  SignUp - Page 100000
+## Task 4: Creating  SignUp
 
 1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
     ![form-page-signup](images/12-4-nav-create-page.png " ")

@@ -128,7 +128,7 @@ In this lab, you will:
 
     ![App builder home page](images/save-and-run.png " ")
 
-## Task 3: Enhance the Cards region
+## Task 3: Enhance the Cards Region
 
 1. Go back to the page designer, and select **Search Results** region and enter/select the following:
 
@@ -236,7 +236,7 @@ In this lab, you will:
 
     ![Save and Run](images/save-run.png " ")
 
-## Task 4: Activate Sorting options
+## Task 4: Activate Sorting Options
 
 1. Go back to the page designer, and select **Search Results** region and in the Property Editor, enter/select the following:
 
@@ -268,7 +268,7 @@ In this lab, you will:
 
     ![App builder home page](images/review-fs.png " ")
 
-## Task 5: Include a link for purchasing Books
+## Task 5: Include a Link for Purchasing Books
 
 1. Go back to the page designer, and select **Application ID**.
 

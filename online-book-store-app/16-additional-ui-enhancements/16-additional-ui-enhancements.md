@@ -14,7 +14,7 @@ In this lab, you will:
 
 - Manage Navigation Menu.
 
-- Global Search Bar
+- Integrate Global Search Bar
 
 - Use Email Templates to send Emails.
 
@@ -58,7 +58,7 @@ In this lab, you will:
 
     ![Click](images/16-2-4.png " ")
 
-## Task 3: Global Search
+## Task 3: Integrate Global Search
 
 1. Navigate to the application homepage and click **Shared Components**.
 

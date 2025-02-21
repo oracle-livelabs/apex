@@ -1,4 +1,4 @@
-# Create Search Configurations with Oracle Vector Search
+# Vector Search using Search Configurations
 
 ## Introduction
 

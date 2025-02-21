@@ -16,7 +16,7 @@ In this lab, you will:
 - Create Application Computations
 - Set Up Book Details Page
 
-## Task 1: Create a Package to manage orders
+## Task 1: Create a Package to Manage Orders
 
 In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
 
@@ -238,7 +238,7 @@ END OBS_MANAGE_ORDERS;
 
    ![App builder home page](images/pack-body1.png " ")
 
-## Task 2: Create Application items
+## Task 2: Create Application Items
 
 In this task, you define application items to store session state information such as cart total, shopping cart items, and user details.
 
@@ -278,7 +278,7 @@ To create Application Items:
 
    ![App builder home page](images/app-item-detail.png " ")
 
-## Task 3: Create Application processes
+## Task 3: Create Application Processes
 
 In this task, you implement application processes to run PL/SQL code at specific points to update the shopping cart item count dynamically.
 
@@ -337,7 +337,7 @@ To create Application Processes:
 
     ![App builder home page](images/create-process.png " ")
 
-## Task 4: Create Application computations
+## Task 4: Create Application Computations
 
 In this task, you set up computations to determine user-related information upon authentication.
 
@@ -653,7 +653,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![close dialog](images/save-page.png " ")
 
-## Task 6: Add Shopping Cart to Navigation Bar list
+## Task 6: Add Shopping Cart to Navigation Bar List
 
 In this task, you create a navigation bar entry that displays a shopping cart icon, links to page 17, and shows a badge with the number of items in the shopping cart.
 
