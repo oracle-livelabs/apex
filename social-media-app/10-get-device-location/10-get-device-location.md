@@ -1,6 +1,7 @@
 # [OPTIONAL] Create a Map Region
 
 ## Introduction
+
 In this lab, you will enable the app to get the device location which will be optional for end-users. If they agree, then their Location/GPS Latitude and Longitude will be acquired on page load and will populate the **P1\_LAT** and **L1\_LON** hidden page items. When users subsequently like a post or create a new post of their own, their location will be recorded and displayed on a Map.
 
 Estimated Time: 5 minutes
@@ -11,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create a Map Region
 - Retrieve the User's location and display on a Map using Dynamic Actions
 
@@ -19,6 +21,7 @@ In this lab, you will:
 - Completion of workshop through Lab 9
 
 ## Task 1: Create Map Region
+
 We are going to drag a map region item into the Dialogs, Drawers and Popups region of the Page Designer Layout section and then configure it. **Note**: This is an alternate way of placing page components on the page. You can still use the previous method of right-clicking on the tree to create a new region.
 
 1. In the Layout section, scroll down to the bottom of the page, so that you can see the Dialogs, Drawers and Popups region.
@@ -33,7 +36,7 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
    ![Layout pane](images/show-drag-drop-s.png)
 
-4.	Release/drop the Map region to the gold area inside this region.
+4. Release/drop the Map region to the gold area inside this region.
 
    ![Layout pane](images/drag-n-drop-s.png)
 
@@ -52,14 +55,14 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 6. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the **SQL Query** text area:
 
       ```
-      <copy>
+       <copy>
          select distinct lat, lon, created_by, apex_util.get_since(created) as since from
          (
          select lat, lon, created_by, created from SM_POSTS
          union
          select lat, lon, created_by, created from SM_REACTIONS
          )
-      </copy>
+       </copy>
       ```
 
       ![Page designer](images/update-region-s.png)
@@ -87,11 +90,13 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
     - And now we will configure a tooltip for each map point. Under Tooltip, toggle Advanced Formatting to **ON**.
 
     - Copy and paste this expression into HTML Expression box:
+
       ```
-      <copy>
-      &CREATED_BY. @ &SINCE.
-      </copy>
+       <copy>
+       &CREATED_BY. @ &SINCE.
+       </copy>
       ```
+
     ![Page designer](images/tooltip-s.png)
 
 9. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
@@ -105,6 +110,7 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
    ![Page designer](images/save.png)
 
 ## Task 2: Create Map button
+
 Now we’ll create a button that will be in the top navigation bar, between the Install App and User menu.
 
 1. First, navigate to your applications’ **Shared Components** page. This can be done in a couple of different ways. Since you are already in Page Designer, you can click on the button that looks like stacked pieces.
@@ -146,26 +152,26 @@ In this task, we update our javascript on the page so that the Target you specif
 2. Page 1 is now open in the Page Designer. Ensure that **Page 1: Timeline** is already selected in the Rendering tree. In the Property Editor, go to the **Javascript > Execute When Page Loads** property and update the script by replacing it with the following script:
 
       ```
-      <copy>
-      apex.actions.add([{
-      name: "like",
-      action: (event, element, args) => {
-         apex.items.P1_ACTION_ID.value = args.id;
-         apex.event.trigger(document, 'action-like');
-         }
-      }, {
-      name: "delete",
-      action: (event, element, args) => {
-         apex.items.P1_ACTION_ID.value = args.id;
-         apex.event.trigger(document, 'action-delete');
-         }
-      }, {
-      name: "open-map",
-      action: () => {
-         apex.event.trigger(document, 'action-open-map');
-         }
-      }]);
-      </copy>
+       <copy>
+         apex.actions.add([{
+         name: "like",
+         action: (event, element, args) => {
+            apex.items.P1_ACTION_ID.value = args.id;
+            apex.event.trigger(document, 'action-like');
+            }
+         }, {
+         name: "delete",
+         action: (event, element, args) => {
+            apex.items.P1_ACTION_ID.value = args.id;
+            apex.event.trigger(document, 'action-delete');
+            }
+         }, {
+         name: "open-map",
+         action: () => {
+            apex.event.trigger(document, 'action-open-map');
+            }
+         }]);
+       </copy>
       ```
 
       ![Property Editor](images/js-expression.png)
@@ -179,9 +185,9 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Dynamic Actions Tab](images/new-da.png)
 
-4. On the right side with **New** selected, edit the following:
+5. On the right side with **New** selected, edit the following:
 
-    - Identification > Name : **action-open-map**
+    - Identification > Name: **action-open-map**
 
     - Custom Event : **action-open-map**
 
@@ -189,23 +195,22 @@ In this task, we update our javascript on the page so that the Target you specif
 
     - JavaScript Expression : **document**
 
-   ![Property Editor](images/action-open-map.png)
+      ![Property Editor](images/action-open-map.png)
 
-5. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**.
-In the Property Editor:
+6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**.
+   In the Property Editor:
 
-    - Identification > Action : **Open Region**
+    - Identification > Action: **Open Region**
 
     - Selection Type : **Region**
 
     - Region : **Post and Like Locations**
 
-    ![Property Editor](images/open-region.png)
+      ![Property Editor](images/open-region.png)
 
 7. That completes the configuration of this button. Click **Save**. Before we run the app, we need to add another dynamic action to get the device location.
 
    ![Page Designer Toolbar](images/save2.png)
-
 
 ## Task 4: Create Dynamic Action to get Device Location
 
@@ -220,9 +225,9 @@ In this final task, we create another dynamic action to get the device location 
    ![Dynamic Actions tab in the Page Designer](images/da-name.png)
 
 3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, edit the following:
-      - Action : **Get Current Position**
+   - Identification > Action: **Get Current Position**
 
-      Under Settings:
+   - Under Settings:
 
       - Return Type : **Latitude and Longitude**
 
@@ -234,7 +239,7 @@ In this final task, we create another dynamic action to get the device location 
 
 4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
 
-      ![Page Designer](images/value-protected.png)
+   ![Page Designer](images/value-protected.png)
 
 5. Let us see how the Map is displayed in the app. Click **Save and Run**.
 
@@ -246,5 +251,5 @@ In this final task, we create another dynamic action to get the device location 
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** -  Sahaana Manavalan, Senior Product Manager, February 2025

@@ -12,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create the Cards region to display the posts
 - Configure the attributes of the Cards region to match our design
 
@@ -22,7 +23,7 @@ In this lab, you will:
 ## Task 1: Create a Cards Region
 
 1. Navigate to the Rendering Tree and right-click on **Body**, and
-choose **Create Region**.   
+choose **Create Region**.
 
     ![Create region option](images/create-region-s.png)
 
@@ -40,34 +41,34 @@ choose **Create Region**.
 
         - SQL Query: Copy and Paste the below code:
 
-       ```
-       <copy>
-        select
-        p.id,
-        p.created_by AS user_name,
-        p.post_comment AS comment_text,
-        p.file_blob,
-        p.file_mime,
+          ```
+           <copy>
+            select
+            p.id,
+            p.created_by AS user_name,
+            p.post_comment AS comment_text,
+            p.file_blob,
+            p.file_mime,
 
-        apex_util.get_since(p.created) post_date,
+            apex_util.get_since(p.created) post_date,
 
-        (
-            select count(*) from SM_REACTIONS smr
-            where smr.post_id=p.id
-        ) as REACTIONS,
+            (
+                select count(*) from SM_REACTIONS smr
+                where smr.post_id=p.id
+            ) as REACTIONS,
 
-        (
-            select 'user-has-liked' from SM_REACTIONS smr
-            where smr.post_id=p.id and created_by=:APP_USER
-        ) USER_REACTION_CSS
+            (
+                select 'user-has-liked' from SM_REACTIONS smr
+                where smr.post_id=p.id and created_by=:APP_USER
+            ) USER_REACTION_CSS
 
-        from SM_POSTS p
+            from SM_POSTS p
 
-        order by p.created desc
-       </copy>
-       ```
+            order by p.created desc
+           </copy>
+          ```
 
-  ![Property Editor](images/title-type1.png)
+      ![Property Editor](images/title-type1.png)
 
 3. Scroll down in the Property Editor to the **Appearance** section:
 
@@ -75,7 +76,7 @@ choose **Create Region**.
 
     - Advanced > Static ID: **timeline**.
 
-  ![Property editor](images/appearance1.png)
+    ![Property editor](images/appearance1.png)
 
     We are not done with this region yet! We have to configure
 which columns from the query results will be used in which parts of the
@@ -92,7 +93,7 @@ the following changes:
 
     - Subtitle > Column: **POST_DATE**
 
-  ![Attributes in Property Editor](images/attributes-11.png)
+    ![Attributes in Property Editor](images/attributes-11.png)
 
     - Body > Column: **COMMENT_TEXT**
 
@@ -100,7 +101,7 @@ the following changes:
 
     - Icon Column: **USER_NAME**
 
-  ![Attributes in Property Editor](images/attributes-21.png)
+    ![Attributes in Property Editor](images/attributes-21.png)
 
     And finally (for this Region), scroll down to the Media section, and set
 the following attributes:
@@ -121,7 +122,7 @@ the following attributes:
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-  ![Attributes in Property Editor](images/attributes-31.png)
+    ![Attributes in Property Editor](images/attributes-31.png)
 
 2. Now, the region is completely configured. Click **Save and Run**.
 
@@ -133,5 +134,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

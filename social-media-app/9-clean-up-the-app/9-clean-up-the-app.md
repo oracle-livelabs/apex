@@ -23,43 +23,44 @@ In this lab, you will:
 
 When we Like a post, we should be able to see the Heart in RED. Also, if we are using this app on a small screen (like a mobile device) it would be better if the Add Post button was relocated to the bottom right of the Screen. We can do this with two small blocks of Inline CSS on the page level.
 
-1.  Select **Page 1: Timeline** from the Rendering Tree and then in the Property Editor, proceed to **CSS > Inline**.
+1. Select **Page 1: Timeline** from the Rendering Tree and then in the Property Editor, proceed to **CSS > Inline**.
 
-2.  Copy and paste the following CSS into the **Inline** box:
+2. Copy and paste the following CSS into the **Inline** box:
 
     ```
-    <copy>
-        .user-has-liked {
-    color: red;
-    }
+     <copy>
+     .user-has-liked {
+        color: red;
+     }
 
-    @media (max-width: 640px) {
+     @media (max-width: 640px) {
         .new-post-button {
             position: fixed;
             bottom: 24px;
             right: 24px;
             z-index: 1000;
         }
-    }
-    </copy>
+     }
+     </copy>
     ```
+
     ![Property Editor](images/css.png)
 
 ## Task 2: Clean up the File Browse Page Item
 
-1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, enter/select the following:
+1. Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, enter/select the following:
 
     - Appearance > Template: **Hidden**
 
-    - Layout > Label Column Span: **0**  
+    - Layout > Label Column Span: **0**
 
     ![Property Editor](images/hidden-col-span-s.png)
 
-2.  Click on **Template Options**. Under **General**, check the **Stretch Form Item** option. This improves the alignment.
+2. Click on **Template Options**. Under **General**, check the **Stretch Form Item** option. This improves the alignment.
 
     ![Template Options Dialog](images/stretch-form-s.png)
 
-3.  And finally, under Appearance:
+3. And finally, under Appearance:
 
     - CSS Classes: **file-upload**
 
@@ -71,12 +72,11 @@ When we Like a post, we should be able to see the Heart in RED. Also, if we are 
 
     ![Running app](images/run-app-12.png)
 
-
   You can also send the URL to your mobile and try it out!
 
   You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

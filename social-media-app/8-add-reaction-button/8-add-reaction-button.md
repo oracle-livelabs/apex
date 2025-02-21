@@ -12,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create Dynamic Actions for Like and Delete buttons
 - Associate the Like and Delete buttons with custom events
 
@@ -29,24 +30,23 @@ In this lab, you will:
 
     ![Dynamic Actions tree](images/da-tree.png)
 
-
-2.  Right-click the **Events** and choose **Create Dynamic Action**.
+2. Right-click the **Events** and choose **Create Dynamic Action**.
 
     ![Right-click options](images/create-da1.png)
 
-3.  A **New** Dynamic Action has been created with a **True action** defaulted to **Show**.
+3. A **New** Dynamic Action has been created with a **True action** defaulted to **Show**.
 
     - Change the Name to **action-like**.
 
     ![Property editor](images/da-name.png)
 
-4.  For When > Event, select **Custom**.
+4. For When > Event, select **Custom**.
 
     ![Property Editor](images/when-event.png)
 
-5.  For When > Custom Event, enter **action-like**. This is an important detail because the Javascript on our page  identifies this Dynamic Action by this Custom Event name.
+5. For When > Custom Event, enter **action-like**. This is an important detail because the Javascript on our page  identifies this Dynamic Action by this Custom Event name.
 
-6.  Finally, under **When**:
+6. Finally, under **When**:
 
     - Selection Type: **JavaScript Expression**
 
@@ -62,14 +62,14 @@ We need to configure the True actions for the **action-like** Dynamic Action. We
 
 - Invoke the database work necessary to record the desired state for the user, for the corresponding post (PL/SQL).
 
-1.  Edit the **True** Action Identification > Name to **LIKE - update UI (adjust count + heart color)**
+1. Edit the **True** Action Identification > Name to **LIKE - update UI (adjust count + heart color)**
 
-2.  Set **Action** to **Execute JavaScript Code**.
+2. Set **Action** to **Execute JavaScript Code**.
 
-3.  Copy and paste the following JavaScript code into the **Code** box:
+3. Copy and paste the following JavaScript code into the **Code** box:
 
     ```
-    <copy>
+     <copy>
         const button = $('[data-id="'+ apex.items.P1_ACTION_ID.value +'"] .js-heart-button'); // get the card
 
         const label = button.find('.a-CardView-buttonLabel'); // get the likes count section
@@ -88,7 +88,7 @@ We need to configure the True actions for the **action-like** Dynamic Action. We
         }
 
         icon.toggleClass('user-has-liked'); // either add this class or remove it
-    </copy>
+     </copy>
     ```
     ![Property Editor of Dynamic Action](images/action-like-true.png)
 
@@ -98,12 +98,12 @@ We need to configure the True actions for the **action-like** Dynamic Action. We
 
     ![Dynamic Actions tree](images/true-action.png)
 
-5.  Click on the resulting default "Show" action, and set the Name to **LIKE -- do database work**
+5. Click on the resulting default "Show" action, and set the Name to **LIKE -- do database work**
 
-6.  Set the **Action** to **Execute Server-side Code**, and copy and paste the following into PL/SQL code:
+6. Set the **Action** to **Execute Server-side Code**, and copy and paste the following into PL/SQL code:
 
     ```
-    <copy>
+     <copy>
         begin
         -- try to store this posts' reaction from this user
         insert into SM_REACTIONS (post_id, reaction, lat, lon)
@@ -113,7 +113,7 @@ We need to configure the True actions for the **action-like** Dynamic Action. We
             delete from SM_REACTIONS where
                 post_id=:P1_ACTION_ID and created_by=:APP_USER;
         end;
-    </copy>
+     </copy>
     ```
 
     The code will insert the reaction for this user, for this post into the *SM_REACTIONS* table. If it already exists as determined by the constraint we created when we built the table, then the record will be deleted. These 2 actions now efficiently handle a series of otherwise complex processes: both on the Client-side and the Server-side.
@@ -132,7 +132,7 @@ Paste the below list of Page Items into the **Items to Submit** property.
 
 8. We should now be able to Like our own post! **Save and Run** to try it out. Click the Like and see the Heart turn Black (Once you define the css class in the next lab, the heart will turn to Red).
 
-9.  You could also explore the table data manually by navigating to **SQL Workshop > SQL commands**, and running a simple query as follows:
+9. You could also explore the table data manually by navigating to **SQL Workshop > SQL commands**, and running a simple query as follows:
     ```
     <copy>
     select * from sm_reactions
@@ -175,7 +175,6 @@ Paste the below list of Page Items into the **Items to Submit** property.
 
   ![Property Editor](images/true-property-editor.png)
 
-
 ## Task 4: Create the Delete Button True Actions
 
 We need to configure the True actions for the action-delete Dynamic Action.
@@ -198,7 +197,7 @@ There are actually 3 actions desired here:
 
     - Message: **You are about to delete this post. Are you sure?**
 
-  ![Property Editor](images/delete-confirm-dialog.png)
+    ![Property Editor](images/delete-confirm-dialog.png)
 
 2. Next, we need to add another True Action to do the database work and delete the post record from the table.	Right-click on the **True** title within the action-delete Dynamic Action and select **Create TRUE action**.
 
@@ -215,21 +214,20 @@ There are actually 3 actions desired here:
     - Settings > Code: Copy and paste the following PL/SQL (which is a DML statement) into the **PL/SQL Code** field.
 
     ```
-    <copy>
+     <copy>
     delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
     delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
-    </copy>
+     </copy>
     ```
 
     This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
-
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Enter the following Page Item name into **Items to Submit** field:
 
     ```
-    <copy>
+     <copy>
         P1_ACTION_ID
-    </copy>
+     </copy>
     ```
 
     ![Property Editor](images/page-item-s.png)
@@ -249,13 +247,13 @@ There are actually 3 actions desired here:
 
     - Settings > Code: copy and paste the following code into the **Code** box:
 
-    ```
-    <copy>
-        $('[data-id='+apex.items.P1_ACTION_ID.value+']').remove();
-    </copy>
-    ```
+        ```
+        <copy>
+            $('[data-id='+apex.items.P1_ACTION_ID.value+']').remove();
+        </copy>
+        ```
 
-  ![Property Editor](images/code-s.png)
+        ![Property Editor](images/code-s.png)
 
 7. We should now be able to delete our own post. **Save and Run** to try it out!
 
@@ -269,5 +267,5 @@ There are actually 3 actions desired here:
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

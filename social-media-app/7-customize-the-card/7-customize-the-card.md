@@ -12,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create a Like button for the user to react to a post
 - Create a Delete button to delete a post
 
@@ -23,7 +24,7 @@ In this lab, you will:
 
 The **Like** button will display the current count of likes next to a heart icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their like to the post. If the user has already liked the post, the effect of clicking it again will remove the like.
 
-1.  In the Rendering Tree:
+1. In the Rendering Tree:
 
     - Under the **Timeline** Cards Region, right-click on **Actions**
 
@@ -31,9 +32,9 @@ The **Like** button will display the current count of likes next to a heart icon
 
     ![Create Action](images/create-action-s.png)
 
-2.  You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
+2. You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
 
-3.  In the Property Editor, enter/select the following:
+3. In the Property Editor, enter/select the following:
 
     - Identification > Label: **&REACTIONS.** (including the period).
 
@@ -62,9 +63,9 @@ The **Like** button will display the current count of likes next to a heart icon
 
 Similar to the previous task, we create another button that will be used for Deleting posts. We will add a condition to this button so that the button only displays for posts that belong to the logged in user.
 
-1.  In the Rendering tree, right-click **Timeline > Actions**, and choose **Create Action**.
+1. In the Rendering tree, right-click **Timeline > Actions**, and choose **Create Action**.
 
-2.  In the Property Editor, update the following attributes:
+2. In the Property Editor, update the following attributes:
 
     - Action > Label: **Delete**.
 
@@ -96,12 +97,12 @@ Similar to the previous task, we create another button that will be used for Del
 
 In this task, we will provide the APEX page with the custom javascript that will be invoked by the "URL" from the Card button target link, to the Dynamic actions that we will create in Lab 8.
 
-1.  Select the **Page 1: Timeline** entry in the **Rendering Tree** and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
+1. Select the **Page 1: Timeline** entry in the **Rendering Tree** and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2.  Under the Javascript section, For: **Execute when Page loads** ,enter the following javascript code:
+2. Under the Javascript section, For: **Execute when Page loads** ,enter the following javascript code:
 
     ```
-    <copy>
+     <copy>
         apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
@@ -115,7 +116,7 @@ In this task, we will provide the APEX page with the custom javascript that will
             apex.event.trigger(document, 'action-delete');
             }
         }]);
-    </copy>
+     </copy>
     ```
 
     ![Property Editor](images/js-code-1.png)
@@ -134,7 +135,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     This is a design pattern using a single APEX Javascript API call (on page load) with an array of multiple code blocks as parameters. Each respective javascript block will then in-turn call a custom event, which we will configure our Dynamic Actions to respond to in the next task.
 
-3.  To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
+3. To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
 
     ![Create page item option](images/create-page-item4.png)
 
@@ -148,14 +149,13 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     - Settings > Value Protected: **Toggle Off**
 
-  ![Property Editor](images/value-protected1.png)
+    ![Property Editor](images/value-protected1.png)
 
-8. Now, let's go back and select the **Page 1: Timeline** Rendering Tree entry, and open up the code editor again to see the javascript we copied and pasted earlier. The code editor looks clean with no concerns!
+5. Now, let's go back and select the **Page 1: Timeline** Rendering Tree entry, and open up the code editor again to see the javascript we copied and pasted earlier. The code editor looks clean with no concerns!
 
     ![code editor](images/code-editor-2.png)
 
-
-9. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
+6. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
     ![Running app](images/run-app-1.png)
 
@@ -163,5 +163,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

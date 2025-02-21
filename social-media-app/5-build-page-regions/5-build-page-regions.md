@@ -16,14 +16,15 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create and Configure a Form Region
 - Customize components on the page
 - Create Buttons for actions such as Post and Save
 
 ### Prerequisites
 
-  - All previous labs 1-4 are executed.
-  - If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
+- All previous labs 1-4 are executed.
+- If you are starting the workshop from Lab 5, ensure that you have executed the **Alternate Time Saver** task in Lab 4.
 
 ## Task 1: Add a Form Region
 
@@ -45,7 +46,7 @@ middle). In the Property Editor, you will see a **Region** tab and parameters. E
 
     - Type:  **Form**
 
-  ![Form types select list](images/form-types.png "")
+    ![Form types select list](images/form-types.png "")
 
 4. The **Form Region** will be tied to the **SM\_POSTS** table that we created from the script. Therefore, in the **Source** section, specify the **Table Name** as **SM_POSTS**.
 
@@ -123,7 +124,7 @@ keyboard entry, but it doesn't save anything yet and needs some tweaking.
         - Dropzone Title: **Share a photo..**
 
     - Under Storage:
-        -  Type: **BLOB column specified in Item Source attribute**
+        - Type: **BLOB column specified in Item Source attribute**
 
         - MIME Type Column: **FILE\_MIME**
 
@@ -158,9 +159,9 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     - Appearance > Template: **Inline Dialog**
 
-    -  Next, click on the **Template Options** button so that we can customize some options.
+    - Next, click on the **Template Options** button so that we can customize some options.
 
-    -  Then, set the options to match the following:
+    - Then, set the options to match the following:
 
         - Check **Auto Height**
 
@@ -170,9 +171,9 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
         Click **OK**.
 
-   ![Property editor](images/post-property-4.png "")
+        ![Property editor](images/post-property-4.png "")
 
-  That should complete what we need to configure for the Post form region itself.
+        That should complete what we need to configure for the Post form region itself.
 
 3. Let's save and run the app.
 
@@ -201,9 +202,9 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     - Behavior > Action: **Defined by Dynamic Action**
 
-    The button configuration should look like this:
+        The button configuration should look like this:
 
-  ![Button attributes](images/button-attributes1.png "")
+        ![Button attributes](images/button-attributes1.png "")
 
 3. To make this button open the Post region (which is an inline dialog), we simply need to create an on-click **Dynamic Action**. To do this, right-click on the button in the rendering tree, and choose **Create Dynamic Action**.
 
@@ -215,20 +216,19 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
 5. Follow the next steps to configure the attributes:
 
-    -  With the first new entry selected, **New**, update it's name to **Open Post Dialog**
+    - With the first new entry selected, **New**, update it's name to **Open Post Dialog**
 
    ![Name the dynamic action](images/da-name.png)
 
-    -  Select the other entry, that is under True so that we can configure it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
+    - Select the other entry, that is under True so that we can configure it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
 
-    -  Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Post**.
+    - Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Post**.
 
    ![Affected elements in property editor](images/affected-elements.png)
 
     That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
     ![Running app](images/run-app-2.png)
-
 
 ## Task 5: Create a Save Button
 
@@ -250,15 +250,15 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
         - Width: **Stretch**
 
-    -  CSS Classes: **post-button**
+    - CSS Classes: **post-button**
 
-    -  Behavior > Action: **Defined by Dynamic Action**
+    - Behavior > Action: **Defined by Dynamic Action**
 
-    -  Database Action: **SQL INSERT action**
+    - Database Action: **SQL INSERT action**
 
     The attributes should look this:
 
-  ![Button attributes in property editor](images/configure-button-21.png)
+    ![Button attributes in property editor](images/configure-button-21.png)
 
 3. To enable the form to be able to save the new post data, we need another Dynamic Action and then a page process that does the work.
 
@@ -266,13 +266,13 @@ itself, so that it is in a different page position where it'll be hidden from vi
 
     ![Create dynamic action](images/create-da-21.png)
 
-4.  Set the **Name** to **Submit post**.
+4. Set the **Name** to **Submit post**.
 
 ### OPTIONAL STEPS (5 and 6)
 
-5.  To prevent users from posting blank rows, under **Client-side Condition**, we need to set type as **Javascript expression**.
+5. To prevent users from posting blank rows, under **Client-side Condition**, we need to set type as **Javascript expression**.
 
-6.  Paste this javascript into the Javascript Expression box:
+6. Paste this javascript into the Javascript Expression box:
 
     ```
     <copy>
@@ -298,8 +298,7 @@ page with a process for the Form:
 
 1. Click the **Processing** tab (this is also known as the Server-Side Processing section), and then select the **Processing** entry in the list (which is actually another tree and will grow in length as you add more server-side processes):
 
-
-2.  Right-click on the **Processing** entry and choose **Create Process**.
+2. Right-click on the **Processing** entry and choose **Create Process**.
 
     ![Processing tab](images/processing.png)
 
@@ -327,5 +326,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

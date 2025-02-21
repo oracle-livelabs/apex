@@ -1,6 +1,5 @@
 # Build the Data Model
 
-
 ## Introduction
 
 In this lab, you create the database objects required for the app. To do so, you are introduced to the **SQL Workshop** component of APEX where you build the database objects using **Quick SQL**, run SQL scripts and view the data using the Object Browser.
@@ -13,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Review the Data Model
 - Create database objects
 - Create table constraints
@@ -74,7 +74,7 @@ the developer on the left side.
 
 2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL script that we will run to build the database objects. This could also be done manually through APEX Object Browser or even by manually typed code.
 
- Save SQL Script with a name **db objects** and Click **Run**
+    Save SQL Script with a name **db objects** and Click **Run**
 
     ![Save the Quick SQL script](images/save-quick-sql.png "")
 
@@ -90,16 +90,15 @@ the developer on the left side.
 
 Since we prefer that Users react to a post one time only, we need to add a constraint to the *SM_REACTIONS* table. This will facilitate the proper functioning of a database operation later in this workshop.
 
-
-1.  From your APEX workspace homepage, click **SQL Workshop** and then click **Object Browser**.
+1. From your APEX workspace homepage, click **SQL Workshop** and then click **Object Browser**.
 
     ![Object Browser is displayed](images/nav-sql.png)
 
-2.  On the left side, select the Table **SM_REACTIONS**. In the main panel, click on the **Constraints** tab.
+2. On the left side, select the Table **SM_REACTIONS**. In the main panel, click on the **Constraints** tab.
 
     ![Object Browser is displayed](images/nav-object-browser.png)
 
-3.  Click the **Create** Button and configure the new constraint:
+3. Click the **Create** Button and configure the new constraint:
     | Parameter | Value |
     | -------- |:-------:|
     | Constraint Name | **SM\_REACTIONS\_CON** |
@@ -109,7 +108,7 @@ Since we prefer that Users react to a post one time only, we need to add a const
 
     ![Add constraint wizard](images/add-constraint1.png)
 
-4.  Click **Apply** to create the Constraint.
+4. Click **Apply** to create the Constraint.
 
     ![Add constraint wizard](images/add-constraint.png)
 
@@ -117,5 +116,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025

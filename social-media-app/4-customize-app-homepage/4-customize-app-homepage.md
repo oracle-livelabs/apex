@@ -1,6 +1,7 @@
 # Customize the App Homepage
 
 ## Introduction
+
 In this lab, you take advantage of the low code development by customizing the Social Media App declaratively. You  learn to navigate and modify the application and page properties.
 
 Estimated Time: 5 minutes
@@ -11,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Customize the Application Homepage
 - Learn to remove the Navigation Menu and Breadcrumb Region
 
@@ -43,7 +45,7 @@ Since our app is a Single Page Application, we do not need a breadcrumb bar at t
 
     ![Rendering Tree in Page Designer](images/after-breadcrumb-delete.png "")
 
-3. Click **Save and Run** to see how they have affected our app so far.
+2. Click **Save and Run** to see how they have affected our app so far.
 
     ![Save and Run button](images/save-and-run.png "")
 
@@ -87,5 +89,5 @@ In this task, you will learn to download and import a starter app. If you follow
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
