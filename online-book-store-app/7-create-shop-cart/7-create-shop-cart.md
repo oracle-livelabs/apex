@@ -395,9 +395,18 @@ In this task, you create buttons for removing items from the cart and proceeding
 
           ```
           <copy>
-          select sum(a.n002)
-          from apex_collections a, obs_books b
-          where collection_name = 'BOOKS' and b.book_id(+) = a.n001
+        WITH cart AS (
+            SELECT
+                n001 AS book_id,
+                n002 AS quantity
+            FROM apex_collections
+            WHERE collection_name = 'BOOKS'
+)
+SELECT
+    SUM(c.quantity) AS total_quantity
+FROM cart c
+JOIN obs_books b
+    ON b.book_id = c.book_id;
           </copy>
           ```
 
@@ -413,13 +422,22 @@ In this task, you create buttons for removing items from the cart and proceeding
 
         - Type: **SQL Query (return single value)**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and paste the below code:
 
             ```
             <copy>
-            SELECT ROUND(SUM(b.price * ((100 - b.discount) / 100) * a.n002), 0)
-            FROM apex_collections a, obs_books b
-            WHERE collection_name = 'BOOKS' AND b.book_id(+) = a.n001;
+            WITH cart AS (
+                SELECT
+                    n001 AS book_id,
+                    n002 AS quantity
+                FROM apex_collections
+                WHERE collection_name = 'BOOKS'
+)
+SELECT
+    ROUND(SUM(b.price * ((100 - b.discount) / 100) * c.quantity), 0) AS total_cost
+FROM cart c
+JOIN obs_books b
+    ON b.book_id = c.book_id;
             </copy>
             ```
 

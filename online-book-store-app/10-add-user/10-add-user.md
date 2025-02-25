@@ -636,23 +636,19 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     - Under Validation:
 
-        - Type: **Function Body (returning Boolean)**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
-            if :P27_NEW_PASSWORD is not NULL then
-                return true;
-            else
-                return false;
-            end if;
+            :P27_NEW_PASSWORD is not NULL
             </copy>
             ```
 
      - Error > Error Message: **Password must have some value**.
 
-    ![close dialog](images/10-4-new-pass-val1.png " ")
+    ![close dialog](images/10-4-new-password-val1.png " ")
 
 13. Right-click **Reset Password** and select **Create Page Item**.
 
@@ -684,24 +680,18 @@ This task provides a comprehensive step-by-step process for creating and configu
 
     - Under Validation:
 
-        - Type: **Function Body (returning Boolean)**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
         ```
         <copy>
-        begin
-            if :P27_NEW_PASSWORD = :P27_CONFIRM_NEW_PASSWORD then
-                return true;
-            else
-                return false;
-            end if;
-        end;
+        :P27_NEW_PASSWORD = :P27_CONFIRM_NEW_PASSWORD
         </copy>
         ```
 
     - Error > Error Message: **Confirm Password and Password must be same.**
 
-    ![close dialog](images/10-4-confirm-pass-val.png " ")
+    ![close dialog](images/10-4-confirm-password-val.png " ")
 
 17. Right-click **Content Body** and select **Create Region**.
 
