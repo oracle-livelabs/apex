@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn to create and manage a shopping cart within an Oracle APEX application. The lab includes adding navigation bar entry, creating a shopping cart page, implementing various interactive components, and integrating backend processes to handle cart operations and checkout procedures. This exercise will demonstrate the comprehensive capabilities of APEX for building dynamic web applications with a strong emphasis on database interaction and user interface design.
+In this lab, you will learn to implement email verification and authentication features within an Oracle APEX application. The lab covers email verification for Forgot Password and User Sign-Up, resetting passwords, signing up, and enabling login with Google. You will configure authentication mechanisms, integrate email-based validation, and ensure secure user access. This exercise demonstrates Oracle APEX's capabilities in building robust authentication systems while enhancing user experience and security.
 
 Estimated Time: 35 minutes
 
