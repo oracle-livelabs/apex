@@ -393,23 +393,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/11-4-search-dynamic-action1.png " ")
 
-15. In the property editor, enter/select the following:
-
-    - Identification > Name: **Perform Search**
-
-    - When > Event: **Key Press**
-
-    - Under Client-side Condition:
-
-        - Type: **JavaScript Expression**
-
-        - JavaScript expression: Copy and paste the following code:
-
-            ```
-            <copy>
-            this.browserEvent.which === apex.jQuery.ui.keyCode.ENTER
-            </copy>
-            ```
+15. In the property editor, under Identification update Name to **Perform Search**
 
     ![close dialog](images/11-4-perform-search.png " ")
 

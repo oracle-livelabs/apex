@@ -395,17 +395,13 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (returning Boolean)**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
 
          ```
         <copy>
-        if :P100003_Password is not NULL then
-            return true;
-        else
-            return false;
-        end if;
+        :P100003_Password is not NULL
        </copy>
         ```
 
@@ -437,17 +433,13 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (returning Boolean)**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
-            if :P100003_CONFIRM_PASSWORD is not NULL then
-                return true;
-            else
-                return false;
-            end if;
+            :P100003_CONFIRM_PASSWORD is not NULL
             </copy>
         ```
 
@@ -465,19 +457,13 @@ Create the forgot password Page
 
     - Under Validation:
 
-        - Type: **Function Body (returning Boolean)**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
-            begin
-             if :P100003_Password = :P100003_CONFIRM_PASSWORD then
-                return true;
-             else
-                return false;
-             end if;
-            end;
+            :P100003_Password = :P100003_CONFIRM_PASSWORD
             </copy>
            ```
 
