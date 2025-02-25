@@ -4,7 +4,7 @@
 
 In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. You will then create a Search Configuration based on Oracle Vector Search to build an efficient search system. Finally, you will create a search page that utilizes these search configurations for powerful and accurate search functionality.
 
->*Note: This lab assumes you are using Oracle Database 23ai.*
+>*Note: This lab requires you are using Oracle Database 23ai.*
 
 Estimated Time: 10 minutes
 

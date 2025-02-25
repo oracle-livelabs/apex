@@ -6,7 +6,7 @@ In this lab, you learn to extract data from REST Data Sources while also enablin
 
 REST Data Sources enable developers to access to Representational State Transfer (REST) services or generic JSON data feeds in applications and use the data in Oracle APEX components.
 
-Data Synchronization enables developers to automatically sync the contents of a local table with the data from a REST service.
+Data Synchronization lets developers automatically cache the data from a REST service in a local table to improve performance for less-frequently-changing reference data.
 
 A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and a Report region). The report region displays search results as cards or a classic report.
 
@@ -99,7 +99,9 @@ In this lab, you will:
 
     ![App builder home page](images/click-save.png " ")
 
-3. Now, under Details > **Synchronization Type**: Select **Replace** and click **Save and Run**.
+3. The table OBS\_BOOKS is different from the Data Profile. It can be ignored since we only want to sync data that already has a corresponding column in the OBS_BOOKS table.
+
+   Now, under Details > **Synchronization Type**: Select **Replace** and click **Save and Run**.
 
     ![App builder home page](images/click-replace.png " ")
 

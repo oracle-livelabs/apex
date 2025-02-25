@@ -185,7 +185,7 @@ This trigger ensures that before inserting or updating a record in the **OBS\_US
 
 4. Expand Tables and click **OBS\_USERS**. Under **Data**, click **Insert Row** and enter/select the following:
 
-      - USER_ID: **1**
+      - USER_ID: **0**
       - USERNAME: **user01**
       - EMAIL: **user01@xyz.com**
       - PASSWORD: **secretPassword**

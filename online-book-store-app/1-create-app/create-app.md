@@ -160,7 +160,7 @@ In this lab, you create a simple application with one click called **Online Book
 
 ## Summary
 
-You now know how to create an application along with editing an icon of the application. Also, you now know how to load a Quick SQL using shorthand syntax. You may now **proceed to the next lab**.
+You now know how to create an application along with editing an icon of the application. Also, you now know how to use a Quick SQL using shorthand syntax. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

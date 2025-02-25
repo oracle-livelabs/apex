@@ -140,7 +140,7 @@ Create the forgot password Page
 
     ![close dialog](images/12-1-send-btn.png " ")
 
-15. Navigate the **Processing** tab, right-click **Processing** and select **Create Process**.
+15. Navigate to the **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/12-1-create-process-email.png " ")
 

@@ -155,7 +155,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 3. With **Page 2: Chat Widget** selected in the Rendering Tree, enter/select the following in the Property Editor:
 
-    - Appearance > Template Options: Click **Use Teamplate Defaults**
+    - Appearance > Template Options: Click **Use Template Defaults**
 
         - General: Check **Remove Body Padding**
 
