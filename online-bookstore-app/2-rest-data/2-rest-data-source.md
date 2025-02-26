@@ -56,7 +56,7 @@ In this lab, you will:
 
         ```
         <copy>
-        https://raw.githubusercontent.com/pankaj-2407/BookStore/main/data.json
+        https://raw.githubusercontent.com/oracle-livelabs/apex/main/online-bookstore-app/data.json
         </copy>
         ```
 
