@@ -116,7 +116,7 @@ In this lab, you will:
 
         - External Page Item: **P10\_SEARCH\_PAGE\_ITEM**
 
-    - Source > Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR**
+    - Source > Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY**
 
     ![App builder home page](images/fs-search-attributes.png " ")
 
@@ -196,7 +196,7 @@ In this lab, you will:
             <b>Author:</b> &AUTHOR.
         </div>
         <div>
-            <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
+            <b>Price:</b> <strike>&amp;#8377;&PRICE.</strike> &amp;#8377;&NEW_PRICE.
         </div>
         <div>
             <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>

@@ -129,7 +129,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/14-2-16-page10.png " ")
 
-17. In the rendering tab, select **P10\_SEARCH** under **Facets** and under Source update Database Column(s): **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,OBJECT\_DET,TEXT\_DET**.
+17. In the rendering tab, select **P10\_SEARCH** under **Facets** and under Source update Database Column(s): **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY,OBJECT\_DET,TEXT\_DET**.
 
 18. Click **Save**
 
