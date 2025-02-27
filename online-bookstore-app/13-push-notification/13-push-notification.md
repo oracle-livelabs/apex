@@ -106,11 +106,18 @@ In this lab, you will:
         ```
         <copy>
         for eachuser in (
-            select (select username from obs_users ou where ou.user_id = ow.user_id ) username,
-            (select title from obs_books where book_id = :P50_BOOK_ID)  title,
-            (select author from obs_books where book_id = :P50_BOOK_ID)  author
-            from obs_wishlist ow
-            where book_id = :P50_BOOK_ID
+            SELECT
+                ou.username,
+                ob.title,
+                ob.author
+            FROM
+                obs_wishlist ow
+            JOIN
+                obs_users ou ON ow.user_id = ou.user_id
+            JOIN
+                obs_books ob ON ow.book_id = ob.book_id
+            WHERE
+                ob.book_id = :P50_BOOK_ID
         ) loop
 
         if :P50_AVAILABILITY= 'Y' and :P50_AVAILABILITY_OLD= 'N' then
