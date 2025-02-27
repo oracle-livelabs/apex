@@ -18,6 +18,8 @@ In this lab, you will:
 
 ## Task 1: Improve Faceted Search
 
+In this task, we will reorder the facets and edit their properties and ranges accordingly.
+
 1. Go to the Application Home Page and click **Page 10 - Search Books**.
 
     ![App builder home page](images/3-1-1-page10.png " ")
@@ -71,6 +73,8 @@ In this lab, you will:
    ![App builder home page](images/fs-review.png " ")
 
 ## Task 2: Create Search Bar
+
+In this task, we will move the search facet to a homepage search item above the books.
 
 1. Go back to the page designer, and in the left pane, right-click **Body** and select **Create Page Item**.
 
@@ -129,6 +133,8 @@ In this lab, you will:
     ![App builder home page](images/save-and-run.png " ")
 
 ## Task 3: Enhance the Cards Region
+
+In this task, we will enhance the cards region on the homepage by displaying the book cover and key details about each book.
 
 1. Go back to the page designer, and select **Search Results** region and enter/select the following:
 
@@ -238,6 +244,8 @@ In this lab, you will:
 
 ## Task 4: Activate Sorting Options
 
+In this task, we will activate sorting options for books by title, discount, and final price after discount.
+
 1. Go back to the page designer, and select **Search Results** region and in the Property Editor, enter/select the following:
 
     - Order By:
@@ -268,7 +276,9 @@ In this lab, you will:
 
     ![App builder home page](images/review-fs.png " ")
 
-## Task 5: Include a Link for Purchasing Books
+## Task 5: Create a Book Details Page
+
+In this task, we will create a book details page that opens when a book on the homepage is clicked and displays additional book information.
 
 1. Go back to the page designer, and select **Application ID**.
 

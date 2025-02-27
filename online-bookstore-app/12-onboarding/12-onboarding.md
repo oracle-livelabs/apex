@@ -1068,7 +1068,7 @@ Create the User Sign Up Page
 
 ## Task 5: Login with Google
 
- You create a Social Sign-in authentication scheme in this task to enable Google Authentication.
+ In this task, you will create a free Social Sign-in authentication scheme to enable Google Authentication.
 
 1. Log in to Google's developer [console](https://console.developers.google.com).
 
@@ -1251,30 +1251,41 @@ Create the User Sign Up Page
 
         ```
         <copy>
-        procedure  google_post_authenticate is
-        l_email varchar2(1000);
-        L_VAR VARCHAR2(100);
-        l_user_id number;
-        l_username varchar2(1000);
-        Begin
-            l_email:= apex_json.get_varchar2('email');
+        procedure google_post_authenticate is
+            l_email varchar2(1000);
+            l_user_id number;
+            l_username varchar2(1000);
+        begin
+            -- Extract the user's email from the Google authentication response JSON
+            l_email := apex_json.get_varchar2('email');
 
             begin
-            select user_id, username into l_user_id,l_username from obs_users where email=l_email;
+                -- Check if the user already exists in the obs_users table
+                select user_id, username
+                into l_user_id, l_username
+                from obs_users
+                where email = l_email;
 
-            update obs_users set full_name =  apex_json.get_varchar2('name'), picture_url = apex_json.get_varchar2('picture') where user_id = l_user_id;
-            apex_custom_auth.set_user (
-            p_user => l_username
-        );
-            exception when no_data_found then
+                -- If the user exists, update their full name and profile picture
+                update obs_users
+                set full_name = apex_json.get_varchar2('name'),
+                    picture_url = apex_json.get_varchar2('picture')
+                where user_id = l_user_id;
 
-            insert into obs_users(email,username,full_name,picture_url) values (
+                -- Set the authenticated user in Oracle APEX
+                apex_custom_auth.set_user(p_user => l_username);
+
+            exception
+                -- If no record is found, insert the user as a new entry
+                when no_data_found then
+                    insert into obs_users(email, username, full_name, picture_url)
+                    values (
+                        apex_json.get_varchar2('email'),  -- Use email as both email and username
                         apex_json.get_varchar2('email'),
-                        apex_json.get_varchar2('email'),
-                        apex_json.get_varchar2('name'),
-                        apex_json.get_varchar2('picture')
+                        apex_json.get_varchar2('name'),   -- Store full name
+                        apex_json.get_varchar2('picture') -- Store profile picture URL
                     );
-        end;
+            end;
         end google_post_authenticate;
         </copy>
         ```

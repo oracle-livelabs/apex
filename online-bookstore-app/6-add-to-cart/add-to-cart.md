@@ -111,7 +111,7 @@ END OBS_MANAGE_ORDERS;
     PROCEDURE add_book (p_book IN NUMBER, p_quantity IN NUMBER)
     IS
     BEGIN
-        IF NOT apex_collection.collection_exists(p_collection_name => 'BOOKS') AND book_exists(p_book) = 0
+        IF NOT apex_collection.collection_exists(p_collection_name => 'BOOKS')
         THEN
             apex_collection.create_collection(p_collection_name => 'BOOKS');
         END IF;
@@ -149,8 +149,8 @@ END OBS_MANAGE_ORDERS;
     PROCEDURE remove_from_wishlist (p_book_id IN NUMBER, p_user_id IN NUMBER)
     IS
     BEGIN
-        DELETE FROM obs_wishlist 
-        WHERE user_id = p_user_id 
+        DELETE FROM obs_wishlist
+        WHERE user_id = p_user_id
         AND book_id = p_book_id;
     END remove_from_wishlist;
 
@@ -371,7 +371,7 @@ To create Application Computations:
        <copy>
         SELECT U.USER_ID
        FROM OBS_USERS U
-       WHERE LOWER(U.USERNAME) = LOWER(:APP_USER) OR LOWER(U.EMAIL) = LOWER(:APP_USER);
+       WHERE U.USERNAME = LOWER(:APP_USER) OR U.EMAIL = LOWER(:APP_USER);
        </copy>
        ```
 
@@ -476,15 +476,15 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     - Under Computation:
 
-        - Type: **Function Body**
+        - Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below code:
+        - PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
-               RETURN obs_manage_orders.book_exists(p_book => :P18_BOOK_ID);
-               </copy>
-               ```
+            obs_manage_orders.book_exists(p_book => :P18_BOOK_ID) 
+            </copy>
+            ```
 
     ![Computation](images/book-in-cart-comp-details.png " ")
 
