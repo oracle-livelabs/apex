@@ -15,7 +15,7 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-* Oracle Database 23c Free Developer Release
+* Oracle Database 23ai Free Developer Release
 * A terminal or console access to the database
 
 ## Task 1: Resetting database user password
@@ -48,7 +48,7 @@ This lab assumes you have:
 
 
     Connected to:
-    Oracle Database 23c Free, Release 23.0.0.0.0 - Developer-Release
+    Oracle Database 23ai Free, Release 23.0.0.0.0 - Developer-Release
     Version 23.2.0.0.0
 
     SQL>
@@ -68,7 +68,7 @@ This lab assumes you have:
 
     ![Change to PDB](images/alter-session1.png " ")
 
-5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *new\_password\_here* with your new password. Throughout this workshop, we will use the **Welcome123** password.
+5. To change the password for the **hol23c** user, use the "alter user \[username\] identified by \[new password\]" command. The syntax below shows how to do this for the hol23c user; make sure to replace *[new\_password\_here]* with your new password. Throughout this workshop, we will use the **Welcome123** password.
 
     ```
     <copy>alter user hol23c identified by </copy>[new_password_here];
@@ -87,7 +87,7 @@ This lab assumes you have:
 
     ```
     SQL> <copy>exit</copy>
-    Disconnected from Oracle Database 23c Free, Release 23.0.0.0.0 - Developer-Release
+    Disconnected from Oracle Database 23ai Free, Release 23.0.0.0.0 - Developer-Release
     Version 23.2.0.0.0
     [FREE:oracle@hol23cfdr:~]$
     ```
@@ -119,7 +119,7 @@ This lab assumes you have:
 
     ![Verify ORDS](images/confirm_ords.png)
 
-You may now proceed to the next lab.
+You may now **proceed to the next lab.**
 
 ## Acknowledgements
 * **Author** - Kaylien Phan and William Masdon, Product Managers, Database Product Management

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Before we can begin using APEX to visualize and analyze our geospatial data, we must first create and populate tables and other database objects containing our data sources. This lab assumes that you have already installed the Oracle Database 23c Free Developer Release and configured and installed ORDS on a pluggable database.
+Before we can begin using APEX to visualize and analyze our geospatial data, we must first create and populate tables and other database objects containing our data sources. This lab assumes that you have already installed the Oracle Database 23ai Free Developer Release and configured and installed ORDS on a pluggable database.
 
 Estimated Time: 10 minutes
 
@@ -16,8 +16,11 @@ In this lab, you will:
 ### Prerequisites
 
 This lab assumes you have:
-- Oracle Database 23c Free Developer Release
+- Oracle Database 23ai Free Developer Release
 - Completed all previous labs successfully
+
+Watch the video below for a quick walk through of the lab.
+[Prepare APEX workspace](videohub:1_jxcqa47n)
 
 ## Task 1: Download the schema creation and population scripts
 
@@ -36,7 +39,7 @@ This lab assumes you have:
 3. Pull down the materials for setup.
 
     ```
-    $ <copy>wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/b1_vZe_9llVqw_oTDq-SQyRrkDshcuABTHc6QuUDG984jfUi0mbk5x7pOZ7mPDPh/n/c4u04/b/livelabsfiles/o/partner-solutions/plot-ev-charging-points-with-apex-native-map-regions/apex-mapping.zip</copy>
+    $ <copy>wget https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/partner-solutions/plot-ev-charging-points-with-apex-native-map-regions/apex-mapping.zip</copy>
     ```
 
     ![Wget to pull materials](images/material-pulldown-setup.png)
@@ -113,7 +116,9 @@ This lab assumes you have:
 
    ![Create tables](./images/database-objects-created.png)
 
-5. Your schema setup is now complete. You may proceed to the next lab.
+5. Your schema setup is now complete.
+
+You may now **proceed to the next lab.**
 
 ## Learn More
 - [Oracle SQL Developer 23.1 Concepts and Usage](https://docs.oracle.com/en/database/oracle/sql-developer/23.1/rptug/sql-developer-concepts-usage.html#GUID-464C045C-FBDF-417A-A20B-037D294B3BDA)

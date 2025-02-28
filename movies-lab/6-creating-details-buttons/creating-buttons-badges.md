@@ -390,16 +390,16 @@ You now know how to use SQL commands in Page Designer regions and processes to g
 
 ## Learn More
 
-- [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-buttons.html) 
+- [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/creating-buttons.html) 
 
-- [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/understanding-page-processes.html)  
+- [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/understanding-page-processes.html)  
 
-- [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/controlling-navigation-using-branches.html)  
+- [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/controlling-navigation-using-branches.html)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 6 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-6-231.sql) to download a copy of the app at the end of Lab 6.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-6-241.sql) to download a copy of the app at the end of Lab 6.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -427,4 +427,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, June 2024

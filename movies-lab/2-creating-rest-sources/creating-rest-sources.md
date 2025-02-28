@@ -16,13 +16,13 @@ In this lab, you will:
 ### Prerequisites
 - Completion of workshop through Lab 1  
 - A TMDB API key  
-- The <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
+- The <a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>
 
 
 ## Task 1: Import the REST Catalog
 You will use a REST Source Catalog that contains predefined services to create REST data sources. Using a REST Catalog will greatly simplify the process of creating REST sources to get data from TMDB API because all you will need to do is import the catalog, select the sources you want to use, and update the web credential associated with the sources.
 
-1. Download the TMDB REST Source Catalog by clicking <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>here</a>.
+1. Download the TMDB REST Source Catalog by clicking <a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>here</a>.
 
 2. In the App Builder tab in your browser, click **Export/Import** on the Movies Watchlist application home page.
 
@@ -129,14 +129,14 @@ You now know how to create REST data sources from a REST Catalog in Oracle APEX 
 
 ## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/managing-REST-data-sources.html)  
+- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-REST-data-sources.html)  
 
 - [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 2 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-2-231.sql) to download a copy of the app at the end of Lab 2.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-2-241.sql) to download a copy of the app at the end of Lab 2.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -163,4 +163,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, June 2024

@@ -1,12 +1,14 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
+Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), Autonomous Transaction Processing (ATP), and Autonomous JSON Database are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizen, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser.
 
-In this lab, you customize:
-  - **Project Tasks** page we Created in the Previous Labs.
-  - **Interactive Grid** Page as a Developer.
-  - **Interactive Grid** Page as an End-user.
+In this workshop, you customize the **Project Tasks** Application. You learn to customise an Interactive Grid as a Developer and an End User.
+
+
+### Recap
+In preceding workshop, you learned to Customise the Interactive Report as a Developer as well as an End User.
+
 
 Estimated Time: 40 minutes
 
@@ -15,7 +17,7 @@ Estimated Time: 40 minutes
 * Customise the Interactive Grid page you have have in **Project Tasks** Application as a **Developer**.
 * Customise the Interactive Grid page you have have in **Project Tasks** Application as an **End-user**.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+*Note: This workshop assumes you are using Oracle APEX 23.2.*
 
 ## Learn More - *Useful Links*
 

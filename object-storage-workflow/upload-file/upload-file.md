@@ -28,13 +28,13 @@ To complete this lab, you need to have the following:
 
     ![Create Task Details](images/task-details.png " ")
 
-2. Choose Unified Task list and choose the report context **My Tasks**
+2. Choose Unified Task list and choose the report context **My Tasks**.
 
     ![Unified Task List](images/unified-task-list.png " ")
 
     ![My Tasks](images/my-tasks.png " ")
 
-3. Next, a second page will be created specifically for tasks initiated by the logged-in user. This time use the report context **Initiated by Me**
+3. Next, a second page will be created specifically for tasks initiated by the logged-in user. This time use the report context **Initiated by Me**.
 
     ![Create Second Task Page](images/second-task-page.png " ")
 
@@ -98,7 +98,7 @@ To complete this lab, you need to have the following:
 
     ![Script Success](images/script-success.png " ")
 
-2. Return to page overview. Now, it's time to test the proper assignment of tasks before proceeding further
+2. Return to page overview. Now, it's time to test the proper assignment of tasks before proceeding further.
 
     ![Navigate to Page 3](images/click-page-3.png " ")
 
@@ -123,11 +123,11 @@ To complete this lab, you need to have the following:
 
 ## Task 3: Upload File Process
 
-1. Now, it's time to navigate back to page 11, where the necessary processing for uploading and downloading files from object storage will be added
+1. Now, it's time to navigate back to page 11, where the necessary processing for uploading and downloading files from object storage will be added.
 
     ![Return Page 11](images/return-page-11.png " ")
 
-2. To proceed, navigate to the **Processing** tab and create a new process. Follow the same steps we previously used to create the **Assign to Project Lead** process. Right-click on **Processes** and select **Create New Process**
+2. To proceed, navigate to the **Processing** tab and create a new process. Follow the same steps we previously used to create the **Assign to Project Lead** process. Right-click on **Processes** and select **Create New Process**.
 
     ![Create new process](images/create-process-2.png " ")
 

@@ -1,0 +1,47 @@
+{
+  "workshoptitle": "Build a CRM Application using Oracle APEX",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/Introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Create an APEX Application using Quick SQL",
+        "filename": "../../1-sql-script/1-sql-script.md"
+      },
+      {
+        "title": "Lab 2: Improve the Form",
+        "filename": "../../2-form-edits/2-form-edits.md"
+      },
+      {
+        "title": "Lab 3: Create Faceted Search Page",
+        "filename": "../../3-faceted-search/3-faceted-search.md"
+      },
+      {
+        "title": "Lab 4: Create Search Configurations",
+        "filename": "../../4-global-search/4-global-search.md"
+      },
+      {
+        "title": "Lab 5: Create an Opportunity Heat Map",
+        "filename": "../../5-heat-map/5-heat-map.md"
+      },
+      {
+        "title": "Lab 6: Implement Human Workflow ",
+        "filename": "../../6-approvals-component/6-approvals-component.md"
+      },
+      {
+        "title": "Lab 7: Implement Opportunity Dashboard ",
+        "filename": "../../7-dashboard/7-dashboard.md"
+      },
+
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}

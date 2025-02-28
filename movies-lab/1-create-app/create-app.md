@@ -35,9 +35,9 @@ In this lab, you will:
 
     ![App Builder page with highlighted Create button](images/app-builder-create.png " ")
 
-4. Click **New Application**.
+4. Select the **Use Create App Wizard** option.
 
-    ![Create an Application page with highlighted New Application button](images/new-application-edit.png " ")
+    ![Create an Application page with the Use Create App Wizard list item highlighted](images/new-application-edit.png " ")
 
 5. In the Create an Application wizard, set Name to **Movies Watchlist**.
 
@@ -132,7 +132,7 @@ You now know how to create, run, and update the theme of an application. You may
 
 ## Learn More
 
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
+- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/application-builder-concepts.html)
 
 - [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
 
@@ -143,11 +143,11 @@ You now know how to create, run, and update the theme of an application. You may
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 1 and follow the instructions below to import it into your Oracle APEX workspace.  
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-1-231.sql) to download a copy of the app at the end of Lab 1.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-1-241.sql) to download a copy of the app at the end of Lab 1.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, June 2024

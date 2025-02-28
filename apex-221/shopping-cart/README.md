@@ -26,17 +26,17 @@ Estimated Time: 90 minutes
 
 ## Lab Modules
 
-| # | Module | Est. Time |
-| --- | --- | --- |
-| 1 | [Install a Sample Dataset](?lab=1-installing-sample-tables) | 5 min |
-| 2 | [Add Columns to Products table](?lab=2-adding-columns) | 10 min |
-| 3 | [Create Database Objects](?lab=3-creating-db-objects) | 5 min |
-| 4 | [Create the Application](?lab=4-create-app) | 15 min |
-| 5 | [Create the Order Page](?lab=5-creating-orders-page) | 15 min |
-| 6 | [Create the Shopping Cart Page](?lab=6-creating-shopping-cart) | 20 min |
-| 7 | [Create the Add to Cart Page](?lab=7-creating-add-to-cart-page) | 20 min |
-| 8 | [Improve Products Page](?lab=8-improving-products) | 20 min |
-| 9 | [Improve Application](?lab=9-improving-app) | 10 min |
+| #   | Module                                                          | Est. Time |
+| --- | --------------------------------------------------------------- | --------- |
+| 1   | [Install a Sample Dataset](?lab=1-installing-sample-tables)     | 5 min     |
+| 2   | [Add Columns to Products table](?lab=2-adding-columns)          | 10 min    |
+| 3   | [Create Database Objects](?lab=3-creating-db-objects)           | 5 min     |
+| 4   | [Create the Application](?lab=4-create-app)                     | 15 min    |
+| 5   | [Create the Order Page](?lab=5-creating-orders-page)            | 15 min    |
+| 6   | [Create the Shopping Cart Page](?lab=6-creating-shopping-cart)  | 20 min    |
+| 7   | [Create the Add to Cart Page](?lab=7-creating-add-to-cart-page) | 20 min    |
+| 8   | [Improve Products Page](?lab=8-improving-products)              | 20 min    |
+| 9   | [Improve Application](?lab=9-improving-app)                     | 10 min    |
 
 
 ### **Let's Get Started!**
@@ -46,8 +46,8 @@ Estimated Time: 90 minutes
 
 ### Downloads
 
-- [Download the completed application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Zj4e0yI2vy8IJhU1uanEjpi7CX7kj4xLWG_dHkcpkox0OX1bu6KWPYNzk8MLZJBb/n/c4u04/b/developer-library/o/shoppingcart-app.sql).
-- [Download images for your application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/clothing-images.zip).
+- [Download the completed application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/shopping-cart-app.sql).
+- [Download images for your application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/clothing-images.zip).
 
 ## Learn More - *Useful Links*
 

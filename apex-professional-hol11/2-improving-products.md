@@ -1,27 +1,26 @@
-# Improve the products page
+# Improve the product page
 
 ## Introduction
 
-In this lab, you will learn how to improve the Products page by adding new facets and customizing the cards.
+In this Lab, you learn how to improve the Products page by adding new facets and customizing the cards.
 
-
-*Please note that customer can quickly identify the products that already have been added to the shopping cart.*
+*Please note that customers can quickly identify the products already added to the shopping cart.*
 
 Estimated Time: 20 minutes
 
 ### Objectives
-In this lab, you will:
+In this Lab, you will:
 - Improve both Faceted Search and Cards region
 - Add Dynamic Actions to the page
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out on trying the previous labs? Don't worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
-## Task 1: Navigate to Products Page.
+## Task 1: Navigate to the Products Page.
 
-In this Lab, you will be using Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where your customers can explore the products and select what they wish to buy.
-As you can see, it's hard to find the products and it would be beneficial to see additional details related to the products.
+In this Lab, you will be using an Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where customers can explore the products and select what they wish to buy.
+As you can see, it's hard to find the products, and it would be beneficial to see additional details related to the products.
 
 
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
@@ -29,12 +28,12 @@ As you can see, it's hard to find the products and it would be beneficial to see
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
     *{Note: End users who log directly into the app will not see this toolbar.}*
 
-    In the Developer Toolbar click **Page 19**.
+    In the Developer Toolbar, click **Page 19**.
 
     ![Navigate to page 19](./images/navigate-to-page19.png " ")
 
-    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
-    Once in the App Builder click **19 - Products**.
+    Alternatively, you can also manually navigate back to the APEX App Builder tab in your browser by selecting the appropriate browser tab or window.   
+    Once in the App Builder, click **19 - Products**.
 
     ![19 - Products](./images/alt-app-builder.png " ")
 
@@ -42,11 +41,12 @@ As you can see, it's hard to find the products and it would be beneficial to see
 
 
 ## Task 2: Reorder Facets
-Unit price is not a common search criteria, so you want to put this facet at the bottom.
+Unit price is not a standard search criterion, so you want to put this facet at the bottom.
 
 1. In the Rendering tree (left pane), under Search, within Facets, click and hold **P19\_UNIT\_PRICE** and drag it down until it is under **P19\_CLOTHING\_ID**, then release the mouse.
 
     ![Reorder Facets](./images/reorder-facets.png " ")
+
 
 ## Task 3: Enhance the Faceted Search
 
@@ -60,7 +60,7 @@ Unit price is not a common search criteria, so you want to put this facet at the
 
 ## Task 4: Enhance the Cards Region
 
-1.  In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
+1. In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
     - For SQL Query - enter the following SQL code:
         ```
         <copy>
@@ -77,41 +77,32 @@ Unit price is not a common search criteria, so you want to put this facet at the
             (
                     SELECT l1."COLOR"
                     FROM   "COLOR_LOOKUP" l1
-                    WHERE  l1."COLOR_ID" = m."COLOR_ID") "COLOR_ID_L$1",
+                    WHERE  l1."COLOR_ID" = m." COLOR_ID") "COLOR_ID_L$1",
             "DEPARTMENT_ID",
             (
                     SELECT l2."DEPARTMENT"
                     FROM   "DEPARTMENT_LOOKUP" l2
-                    WHERE  l2."DEPARTMENT_ID" = m."DEPARTMENT_ID") "DEPARTMENT_ID_L$2",
+                    WHERE  l2."DEPARTMENT_ID" = m." DEPARTMENT_ID") "DEPARTMENT_ID_L$2",
             "CLOTHING_ID",
             (
                     SELECT l3."CLOTHING"
                     FROM   "CLOTHING_LOOKUP" l3
-                    WHERE  l3."CLOTHING_ID" = m."CLOTHING_ID") "CLOTHING_ID_L$3",
+                    WHERE  l3."CLOTHING_ID" = m." CLOTHING_ID") "CLOTHING_ID_L$3",
             b.brand
-        FROM   "PRODUCTS" m,
+        FROM "PRODUCTS" m,
             json_table (m.product_details, '$' columns ( brand varchar2(4000) path '$.brand') ) b
         </copy>
         ```
 
         ![Change SQL Query](./images/change-sql-query.png " ")
 
-    - Under Appearance section:
+    - Under the Appearance section:
         - Click **Template Options**. For Style - select **Style A**
 
       ![Edit Template options](./images/template-options.png " ")  
         - Click **Ok**
 
 2. Click **Attributes** and apply the following changes:
-
-    ![Edit Attributes](./images/change-attributes1.png " ")
-
-    - Under Appearance section:
-        - For Layout - select **Grid**
-        - For Grid Columns - select **Auto**
-
-    - Under Title section:
-        -   For Column - select **PRODUCT_NAME**
 
     - Under Subtitle section:
         - Set Advanced Formatting to **On**
@@ -138,10 +129,11 @@ Unit price is not a common search criteria, so you want to put this facet at the
         -   For Primary Key Column 1 - select **PRODUCT_ID**
 
       Click **Save.**
-        ![Add Primary key](./images/change-attributes2.png " ")        
+
+    ![Add Primary key](./images/change-attributes1.png " ")        
 
 ## Task 5: Create Actions
-Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
+Customers need a way to shop for products, so in this task, you will add an action to allow customers to learn more about the product.
 
 1. Navigate to **Search Results** (left pane).
 2. On Actions, right-click **Create Action**.
@@ -154,8 +146,8 @@ Customers need a way to shop the products, so in this task you will add an actio
         - For Page - enter **17**.
         - For Set Items, enter:
 
-            | Name | Value |
-            | --- | --- |
+            | Name             | Value        |
+            | ---------------- | ------------ |
             | P17\_PRODUCT\_ID | &PRODUCT_ID. |
 
         - For Clear Cache, enter **17**
@@ -168,14 +160,13 @@ In this task, you will create two dynamic actions:
 - To show a success message when a product is added/edited/removed from the shopping cart
 - To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
 
-1. Navigate to **Dynamic Actions** tab (left pane).
-     ![Navigate to Dynamic Actions](./images/navigate-to-da.png " ")  
+1. Navigate to the **Dynamic Actions** tab (left pane).
 
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
      ![Create Dynamic Actions](./images/create-da1.png " ")  
 3. In the Property Editor, enter the following:
-    - Under Identification section:
+    - Under the Identification section:
         - For Name - enter **Show Success Message**
     - Under When section:
         - For Event - select **Dialog Closed**
@@ -185,7 +176,7 @@ In this task, you will create two dynamic actions:
       ![Show success Message](./images/create-da2.png " ")
 
 4. Navigate to **Refresh** Action.
-    - Under Identification section:
+    - Under the Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
         - For Code - enter the following JavaScript Code:
@@ -211,12 +202,14 @@ In this task, you will create two dynamic actions:
 
      ![Create Dynamic Action2](./images/create-2-da1.png " ")
 6. In the Property Editor, enter the following:    
-    - Under Identification section:
+    - Under the Identification section:
         - For Name - enter **Update Shopping Cart Header**
+
     - Under When section:        
         - For Event - select **Dialog Closed**
         - For Selection Type - select **Region**
-        - For Region - select **Search Results**     
+        - For Region - select **Search Results**
+
     - Under Client-side Condition:
         - For Type - select **JavaScript expression**
         - For JavaScript Expression, enter the following:
@@ -229,7 +222,7 @@ In this task, you will create two dynamic actions:
             ![Define Dynamic Action2](./images/create-2-da2.png " ")
 
 7. Navigate to **Refresh** Action.
-    - Under Identification section:
+    - Under the Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
         - For Code - enter the following JavaScript Code:
@@ -245,13 +238,13 @@ In this task, you will create two dynamic actions:
             ```
             ![Navigate to Refresh](./images/create-2-da3.png " ")
 
-8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic action.
+8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic Action.
 9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
 
      ![Create Opposite Action](./images/create-2-opp-action.png " ")
 
 10. Navigate to **Execute JavaScript Code** Action.
-    - Under Identification section:
+    - Under the Identification section:
         - For Action - select **Execute JavaScript Code**
     - Under Settings section:        
         - For Code - enter the following JavaScript Code:
@@ -271,16 +264,17 @@ In this task, you will create two dynamic actions:
 
 ## Task 7: Run the Products Page
 
-1. After running products page, your page will look like the following image:
+1. After running the products page, your page will look like the following image:
 
    ![Products Page](./images/products-page.png " ")
 
 ## Summary
+You now know how to enhance faceted search and cards region. You may now **proceed to the next Lab**.
 
-You now know how to enhance faceted search and cards region. You may now **proceed to the next lab**.
+## What's next
+In the next Lab, you learn how to Create and Customize a Form and then link the form to an Interactive Report. This process involves designing a user-friendly data entry form and connecting it to a dynamic, interactive report that displays data from a database table.
 
-## Acknowledgments
-
-- **Author** - Roopesh Thokala, Product Manager
+## Acknowledgements
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2024

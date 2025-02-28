@@ -1,5 +1,6 @@
 {
-  "workshoptitle": "Migrating application development between Environments",
+  "workshoptitle": "Enhance the Applications using Progressive Web Application",
+  "help": "livelabs-help-db_us@oracle.com",
     "tutorials": [
       {
         "title": "Introduction",
@@ -10,12 +11,12 @@
         "filename": "../../../apex-professional-common/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Migrate Applications",
-        "filename": "../../migrating-applications.md"
+        "title": "Lab 1: Configure PWA",
+        "filename": "../../configuring-pwa.md"
       },
       {
-        "title": "Lab 2: Remote Deployment",
-        "filename": "../../remote-deployment.md"
+        "title": "Lab 2: Configure Push Notifications",
+        "filename": "../../configuring-push-notifications.md"
       },
       {
         "title": "Need Help?",

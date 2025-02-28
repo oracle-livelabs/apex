@@ -26,11 +26,14 @@ Watch the video below for a quick walk-through of the lab.
 [Create the shopping cart page](videohub:1_3n85gmue)
 
 ### Objectives
+
 In this lab, you will:
+
 - Create a page to list the products in the Shopping Cart
 - Create Application Items, Application Processes, and Dynamic Actions to manage the Shopping Cart
 
 ## Task 1: Create Application Items
+
 These items are needed to count the number of items in the shopping cart and the icon to display in the Navigation Bar.
 
 1. Click on **Shared Components**
@@ -39,7 +42,7 @@ These items are needed to count the number of items in the shopping cart and the
 
 2. Under Application Logic, click **Application Items**.
 
-    ![Shared Components page](./images/application-items.png " ")
+    ![Shared Components page](./images/application-items-s.png " ")
 
 3. Click **Create**.
 
@@ -60,14 +63,20 @@ These items are needed to count the number of items in the shopping cart and the
 This process is needed to refresh the number of items in the Shopping Cart, which will be shown in the navigation bar.
 
 1. Click on **Shared Components**.
+
     ![Application home page.](./images/application-items2.png " ")
 2. Under Application Logic, click **Application Processes**.
-    ![Shared Components page.](./images/application-process.png " ")
-3. Click **Create** and enter the following:
-    - For Name - enter **Initialize Shopping Cart Header**
-    - For Process Point - select **On Load: Before Header (page template header)**
-  Click **Next**.
-    ![Application Process Dialog](./images/application-process1.png " ")    
+
+    ![Shared Components page.](./images/application-process-s.png " ")
+3. Click **Create** and enter/select the following:
+
+    - Name: **Initialize Shopping Cart Header**
+
+    - Process Point: **On Load: Before Header (page template header)**
+
+    Click **Next**.
+
+  ![Application Process Dialog](./images/application-process1.png " ")    
 
 5. For Code, enter:
 
@@ -87,10 +96,14 @@ This process is needed to refresh the number of items in the Shopping Cart, whic
     END;
     </copy>
     ```
-    Click **Next**.
+
+6. Click **Next**.
+
     ![Enter code dialog while creating Application Process.](./images/application-process2.png " ")
 
 7. Click **Create Process**.   
+
+    ![creating Application Process.](./images/create-process-s.png " ")
 
 ## Task 3: Create a Normal Page - Shopping Cart
 
@@ -98,22 +111,31 @@ The shopping cart page allows users to review and edit the products in the cart.
 
 1. Click on Application Home.  ***The ID of your application may vary***.
 
-    ![Page designer view](./images/create-page.png " ")
+    ![Page designer view](./images/create-page1.png " ")
 
 2. Click **Create Page**.    
 
     ![Application home page.](./images/create-page2.png " ")
 
-3. Select **Blank Page** and click **Next**.
+3. Select **Blank Page**.
 
-4. Enter the following and click **Next**.
-    - Page Number - enter **17**
-    - For Name - enter **Shopping Cart**
-    - For Page Mode - select **Normal**
+4. Enter/select the following:
 
-5. Under Navigation, deselect **Breadcrumb** and **Navigation** and click **Create Page**.
+    - Under Page Definition:
 
-    ![Create Page dialog](./images/create-page3.png " ")
+        - Page Number: **17**
+
+        - Name: **Shopping Cart**
+
+    -  Under Navigation:
+
+        - Use Breadcrumb: **Toggle Off**
+
+        - Use Navigation: **Toggle Off**
+
+        Click **Create Page**.
+
+  ![Create Page dialog](./images/create-page3.png " ")
 
 ## Task 4: Add a Cards Region
 
@@ -121,16 +143,19 @@ This region will list the items that have been added temporarily to the shopping
 
 1. In the new page created, navigate to the **Gallery Menu**.
 
-2. Drag a **Cards** region and drop it to the Content Body section.
+2. Drag a **Cards** region and drop it to the **Body** section.
 
-    ![Page Designer](./images/create-cards.png " ")
+    ![Page Designer](./images/create-cards-s.png " ")
 
-3. In the Property Editor, enter the following:
+3. In the Property Editor, enter/select the following:
 
-    - For Title - enter **Shopping Cart**
-    - Under Source section:
-        - For Type - select **SQL Query**
-        - For SQL Query - enter the following SQL Query:
+    - Identification > Name: **Shopping Cart**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
@@ -149,27 +174,32 @@ This region will list the items that have been added temporarily to the shopping
             AND    p.product_id = a.n001
             </copy>
         ```
-        ![Property Editor](./images/cards-details.png " ")
 
-4. Click on **Attributes** and enter the following:
+  ![Property Editor](./images/cards-details-s.png " ")
 
-    - Under Appearance section:
-        - For Layout - select **Horizontal (Row)**
-        ![Attributes tab of the Page Designer](./images/attributes1.png " ")
+4. Navigate to **Attributes** and in the Property editor, enter/select the following:
 
-    - Under Title section:
+    - Under Appearance:
 
-        - For Column - select **NAME**
+        - Layout: **Horizontal (Row)**
 
-    - Under Subtitle section:
+    ![Attributes tab of the Page Designer](./images/attributes1.png " ")
 
-        - For Column - select **BRAND**    
-        ![Attributes tab of the Page Designer](./images/attributes2.png " ")
+    - Under Title:
 
-    - Under Body section:
+        - Column: **NAME**
 
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+    - Under Subtitle:
+
+        - Column: **BRAND**
+
+    ![Attributes tab of the Page Designer](./images/attributes2.png " ")
+
+    - Under Body:
+
+        - Advanced Formatting: **Toggle Off**
+
+        - HTML Expression: Enter the following:
 
             ```
             <copy>
@@ -177,9 +207,11 @@ This region will list the items that have been added temporarily to the shopping
             </copy>
             ```
 
-    - Under Secondary Body section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
+    - Under Secondary Body:
+
+        - Advanced Formatting: **Toggle On**
+
+        - HTML Expression: Enter the following:
 
             ```
             <copy>
@@ -187,21 +219,30 @@ This region will list the items that have been added temporarily to the shopping
             <b>Subtotal: &SUBTOTAL. </b>
             </copy>
             ```
-          ![Attributes tab of the Page Designer](./images/attributes-body.png " ")
 
-    - Under Media section:
-        - For Source - select **BLOB Column**
-        - For BLOB Column - select **PRODUCT_IMAGE**
-        ![Attributes tab of the Page Designer](./images/attributes3.png " ")  
+    ![Attributes tab of the Page Designer](./images/attributes-body.png " ")
 
-    - Under Messages section:
-        - For When No Data Found - enter: **Your shopping cart is empty!**
-        - For No Data Found Icon - select **fa-cart-empty**
-        ![Attributes tab of the Page Designer](./images/attributes4.png " ")
+    - Under Media:
 
-    - Under Card section:
-        - For Primary Key Column 1 - select **ITEM**
-        ![Attributes tab of the Page Designer](./images/attributes5.png " ")
+        - Source: **BLOB Column**
+
+        - BLOB Column: **PRODUCT_IMAGE**
+
+    ![Attributes tab of the Page Designer](./images/attributes3.png " ")  
+
+    - Under Messages:
+
+        - When No Data Found: **Your shopping cart is empty!**
+
+        - No Data Found Icon: **fa-cart-empty**
+
+    ![Attributes tab of the Page Designer](./images/attributes4.png " ")
+
+    - Under Card:
+
+        - Primary Key Column 1: **ITEM**
+
+    ![Attributes tab of the Page Designer](./images/attributes5.png " ")
 
 ## Task 5: Add an Action to the Shopping Cart
 
@@ -210,45 +251,55 @@ This action allows customers to open a page to edit a particular item in the sho
 1. In the Rendering tree (left pane), navigate to **Actions** under **Shopping Cart**.
 
 2. Right-click **Actions** and click **Create Action**.
-    ![Page Designer](./images/create-action.png " ")
 
-3. In the Property Editor, enter the following:
+    ![Page Designer](./images/create-action-ss.png " ")
 
-    - For Label - enter **Edit**
-    - For Target - click **No Link Defined**:
-        - For Page - enter **18**  
+3. In the Property Editor, Enter/select the following:
+
+    - Identification > Label: **Edit**
+
+    - Link > Target: click **No Link Defined**
+
+        - Target > Page: **18**  
         *{Note: Page 18 will be created in the next lab}*
+
         - Set items as follows:
+
             | Name             |  Value       |
             | ---              |  ---         |
             | P18\_PRODUCT\_ID | &PRODUCT_ID. |
 
         - Click **Ok**.
 
-        ![Property Editor](./images/edit-actions.png " ")
+  ![Property Editor](./images/edit-actions.png " ")
 
-    - For Display Type - select **Text with Icon**
-    - For Icon - enter **fa-cart-edit**
-        ![Edit Appearance in the Property Editor](./images/edit-appearance.png " ")
-This configures the (Edit) button to open page 18, passing the value of the PRODUCT_ID column of the current card as the value for the page item P18\_PRODUCT\_ID in that called page.       
+    - Display Type: **Text with Icon**
+
+    - Icon: **fa-cart-edit**
+
+  ![Edit Appearance in the Property Editor](./images/edit-appearance.png " ")
+
+    This configures the (Edit) button to open page 18, passing the value of the PRODUCT_ID column of the current card as the value for the page item P18\_PRODUCT\_ID in that called page.       
 
 ## Task 6: Add Items and Buttons to the Page
 
 1. Navigate to the **Gallery Menu**.
 
 2. Drag a **Static Content** region and drop it to the right of the Shopping Cart region to create a second region of content.
-    ![Gallery Menu in the Page Designer](./images/static-content-r.png " ")
+
+    ![Gallery Menu in the Page Designer](./images/static-content-r-s.png " ")
 
 3. In the Property Editor, enter the following:
-    - For Name - enter **Order Information**
+
+    - Identification > Name: **Order Information**
 
 4. Navigate to the **Order Information** (left pane) region.
 
 5. Right-click the **Order Information** region and click **Create Page Item**.
 
-    ![Rendering Tree](./images/create-item.png " ")
-6. Create five items as follows:
+    ![Rendering Tree](./images/create-item1-s.png " ")
 
+6. Create five items as follows:
 
     | Name |  Type  | Label  | Template | Value Required |
     | --- |  --- | --- | --- | --- |
@@ -260,10 +311,11 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     {: title="Details of the Page Items"}
 
 
-    For **P17_STORE** item, in the list of values section, configure the type as follows:
+7. For **P17_STORE** item, in the **list of values**, configure the type as follows:
 
-    - For Type - select **SQL Query**
-    - For SQL Query - enter the following SQL Query:
+    - Type: **SQL Query**
+
+    - SQL Query: Enter the following SQL Query:
 
         ```
         <copy>
@@ -272,28 +324,42 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
         from STORES STORES
         </copy>
         ```
-    - Set Display Extra Values - to **Off**
-    - For Null Display Value - enter **- Select a Store -**
 
-7. Navigate to the **Order Information** (left pane) region.
-8. Right-click the **Order Information** region  and click **Create Button**.
-     ![Rendering Tree](./images/create-button.png " ")  
-9. Create two buttons as follows:
+    - Display Extra Values: **Toggle Off**
 
-    | Button Name | Label  | Position | Button Template | Hot | Icon |
-    | --- |  --- | --- |
+    - Null Display Value: **- Select a Store -**
+
+  ![Select store](./images/select-store.png " ")
+
+8. Navigate to the **Order Information** (left pane) region.
+
+9. Right-click the **Order Information** region  and click **Create Button**.
+
+     ![Rendering Tree](./images/create-button1-s.png " ")
+
+10. Create two buttons as follows:
+
+    | Button Name | Label  | Slot | Button Template | Hot | Icon|
+    | --- |  --- | --- |--- | --- | --- |
     | Proceed | Proceed to Checkout | Create | Text | On | |
     | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
     {: title="Details of the 2 Buttons"}
 
-     Under Server-side Condition:
+     ![Button properties in the Property Editor](./images/proceed-button.png " ")
+
+     ![Button properties in the Property Editor](./images/clear-button.png " ")
+
+     Under **Server-side Condition**:
+
     | Button Name | Type  | Item |
     | --- |  --- | --- |
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     {: title="Server Side Condition for the 2 Buttons"}
 
-     ![Button properties in the Property Editor](./images/buttons.png " ")      
+     ![Button properties in the Property Editor](./images/buttons.png " ")   
+
+     ![Button properties in the Property Editor](./images/clear-server.png " ")    
 
 ## Task 7: Add Validations to the Page
 
@@ -331,9 +397,9 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     | Validate Name  | Proceed |
     | Validate Email | Proceed |
     | Validate Store | Proceed |
-    {: title="Server-side Conditions"}   
+    {: title="Server-side Conditions"}
 
-     ![Validation attributes in the Page Designer](./images/button-condition.png " ")       
+     ![Validation attributes in the Page Designer](./images/button-condition.png " ")
 
 ## Task 8: Add Process to Create the Order
 
@@ -341,13 +407,13 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
 2. Right-click **Processing** and click **Create Process**.
 
-3. In the Property Editor, enter the following:
+    ![Property Editor](./images/create-process-p.png " ")
 
-     ![Property Editor](./images/create-process.png " ")  
+3. In the Property Editor, enter/select the following:
 
-    - For Name - enter **Checkout**
-    - For Type -select **Execute Code**
-    - For PL/SQL Code - enter the following PL/SQL code:
+    - Name: **Checkout**
+
+    - PL/SQL Code: Enter the following PL/SQL code:
 
         ```
         <copy>
@@ -357,25 +423,28 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
                                         p_customer_email => :P17_CUSTOMER_EMAIL,
                                         p_store          => :P17_STORE,
                                         p_order_id       => :P17_ORDER_ID,
-                                        p_customer_id    => :P17_CUSTOMER_ID);   
-        END;                                    
+                                        p_customer_id    => :P17_CUSTOMER_ID);
+        END;
         </copy>
         ```
 
-    - For Success Message, enter **Order successfully created: &P17\_ORDER\_ID.**
-    - Under Server-side conditions, for When Button Pressed, select **Proceed**
+    - Success Message: **Order successfully created: &P17\_ORDER\_ID.**
 
-    ![Property Editor](./images/process-properties.png " ")
+    - Server-side Condition > When Button Pressed: **Proceed**
 
+  ![Property Editor](./images/process-properties.png " ")
 
 ## Task 9: Add Process to Clear the Shopping Cart
 
 1. On the **Processing** tab (left pane).
+
 2. Right-click **Processing** and click **Create Process**.
-3. Create a second process to clear the shopping cart. In the Property Editor, enter the following:
-    - For Name - enter **Clear Shopping Cart**
-    - For Type - select **Execute Code**
-    - For PL/SQL Code - enter the following PL/SQL code:
+
+3. Create a second process to clear the shopping cart. In the Property Editor, enter/select the following:
+
+    - Name: **Clear Shopping Cart**
+
+    - PL/SQL Code: Enter the following PL/SQL code:
 
     ```
     <copy>
@@ -385,10 +454,9 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
     </copy>
     ```
 
-    - For When Button Pressed, select **Clear**
+    - Server-side Condition > When Button Pressed: **Clear**
 
-    ![Property Editor for Process](./images/clear-process.png " ")
-
+   ![Property Editor for Process](./images/clear-process.png " ")
 
 ## Task 10: Add Branches to the Page
 
@@ -396,49 +464,49 @@ This configures the (Edit) button to open page 18, passing the value of the PROD
 
 2. Right-click **After Processing** and click **Create Branch**.
 
-     ![Processing Tab in the Page Designer](./images/create-branch.png " ")  
+     ![Processing Tab in the Page Designer](./images/create-branch-b.png " ")
 
-3. In the Property Editor, enter the following:  
+3. In the Property Editor, enter/select the following:
 
-    - For Name - enter **Go to Orders**
+    - Identification > Name: **Go to Orders**
 
-    - Navigate to Target attribute and click **No Link Defined**.
+    - Behavior > Target: click **No Link Defined**
 
-        - For Type - select **Page in this application**
+        - Page: **16**
 
-        - For Page - enter **16**
-
-        - For Set Items - enter:
+        - Set Items: enter:
 
             | Name | Value  |
             | --- |  --- |
-            | P16\_ORDER\_ID | &P17\_ORDER\_ID. |
+            | P16\_ORDER | &P17\_ORDER\_ID. |
 
-        - For Clear Cache - enter **16**.
+        - Clear Cache: **16**.
 
         - Click **OK**.
 
-    - For When Button Pressed, select **Proceed**.
+    - Server-side Condition > When Button Pressed: **Proceed**.
 
-      ![Button behaviour in the Property Editor](./images/branch-details.png " ")
+  ![Button behaviour in the Property Editor](./images/branch-details.png " ")
 
 4. Create a second branch when user clears the shopping cart. Right-click on **After Processing** and click **Create Branch**.
 
-5. In the Property Editor, enter the following:
+5. In the Property Editor, enter/select the following:
 
-    - For Name - enter **Go to Products**
+    - Name: **Go to Products**
 
-    - Navigate to Target attribute and click **No Link Defined**
+    - Behavior > Target: click **No Link Defined**.
 
-        - For Type - select **Page in this application**
+        - Type: **Page or URL (Redirect)**
 
-        - For Page - enter **1**
+        - Page: **1**
 
-        - For Clear Cache - enter **1**
+        - Clear Cache: **1**
 
         - Click **OK**
 
-    - For When Button Pressed, select **Clear**
+    - Server-side Condition > When Button Pressed: **Clear**
+
+ ![Button behaviour in the Property Editor](./images/branch-details1.png " ")
 
 ## Task 11: Add Dynamic Actions
 In this task, you will create a dynamic action to:
@@ -449,48 +517,47 @@ In this task, you will create a dynamic action to:
 
 1. Navigate to **Dynamic Actions** tab (left pane).
 
-     ![Dynamic Actions Tab](./images/create-da.png " ")  
-
 2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
 
-     ![Dynamic Actions Tab](./images/create-da2.png " ")  
+     ![Dynamic Actions Tab](./images/create-da21-s.png " ")  
 
-3. In the Property Editor, enter the following:
+3. In the Property Editor, enter/select the following:
 
-    - Under Identification section:
+    - Under Identification:
 
-        - For Name - enter **Update Shopping Cart Header**
+        - Name: **Update Shopping Cart Header**
 
-    - Under When section:   
+    - Under When:   
 
-        - For Event - select **Dialog Closed**
+        - Event: **Dialog Closed**
 
-        - For Selection Type - select **Region**
+        - Selection Type: **Region**
 
-        - For Region - select **Shopping Cart**   
+        - Region: **Shopping Cart**   
 
     - Under Client-side Condition:
 
-        - For Type - select **JavaScript expression**
+        - Type: **JavaScript expression**
 
-        - For JavaScript Expression, enter the following:
+        - JavaScript Expression: Enter the following:
 
             ```
             <copy>
             parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
             </copy>
             ```
-        ![Property Editor for Dynamic Actions](./images/da-properties.png " ")  
+
+  ![Property Editor for Dynamic Actions](./images/da-properties.png " ")  
 
 4. Navigate to **Refresh** Action.
 
-    - Under Identification section:
+    - Under Identification:
 
-        - For Action - select **Execute JavaScript Code**
+        - Action: **Execute JavaScript Code**
 
-    - Under Settings section:       
+    - Under Settings:       
 
-        - For Code - enter the following JavaScript Code:
+        - Code: Enter the following JavaScript Code:
 
             ```
             <copy>
@@ -501,41 +568,43 @@ In this task, you will create a dynamic action to:
             apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
             </copy>
             ```
-           ![Property Editor](./images/refresh-action.png " ")  
+
+  ![Property Editor](./images/refresh-action.png " ")  
 
 5. Create a second action. In the Dynamic Actions tab (left pane), navigate to **True** under **Update Shopping Cart Header** Dynamic Action. Right-click on **True** and select **Create TRUE Action**.
 
-     ![Dynamic Actions Tab](./images/create-2da.png " ")
+     ![Dynamic Actions Tab](./images/create-2da-s.png " ")
 
-6. In the Property Editor, enter the following:  
+6. In the Property Editor, enter/select the following:  
 
-    - Under Identification section:
+    - Under Identification:
 
-        - For Action - select **Refresh**
+        - Action: **Refresh**
 
-    - Under Affected Elements section:   
+    - Under Affected Elements:   
 
-        - For Selection Type - select **Region**
+        - Selection Type: **Region**
 
-        - For Region - select **Shopping Cart**   
+        - Region: **Shopping Cart**   
 
-           ![Property Editor](./images/true-action.png " ")  
+   ![Property Editor](./images/true-action.png " ")  
 
-11. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Execute JavaScript Code** action.
+7. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to **Execute JavaScript Code** action.
 
-12. Right-click  **Execute JavaScript Code** action and click **Create Opposite Action**.
+
+8. Right-click  **Execute JavaScript Code** action and click **Create Opposite Action**.
 
      ![Dynamic Actions Tab](./images/create-da5.png " ")
 
-13. Navigate to **Execute JavaScript Code** Action.
+9. Navigate to **Execute JavaScript Code** Action.
 
-    - Under Identification section:
+    - Under Identification:
 
-        - For Action - select **Execute JavaScript Code**
+        - Action: select **Execute JavaScript Code**
 
-    - Under Settings section:       
+    - Under Settings:       
 
-        - For Code - enter the following JavaScript Code:
+        - Code: enter the following JavaScript Code:
 
             ```
             <copy>
@@ -547,19 +616,21 @@ In this task, you will create a dynamic action to:
             </copy>
             ```
 
-14. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action. Right-click on **False** and select **Create FALSE Action**.
+10. Create a second action. In the Dynamic Actions tab (left pane), navigate to **False** under **Update Shopping Cart Header** Dynamic Action. Right-click on **False** and select **Create FALSE Action**.
 
-15. In the Property Editor, enter the following:
+    ![False Action](./images/false-action-s.png " ")
 
-    - Under Identification section:
+15. In the Property Editor, enter/select the following:
 
-        - For Action - select **Refresh**
+    - Identification > Action: **Refresh**
 
     - Under Affected Elements section:    
 
-        - For Selection Type - select **Region**
+        - Selection Type: **Region**
 
-        - For Region - select **Shopping Cart**    
+        - Region: **Shopping Cart**  
+
+    ![False Action](./images/false-action1.png " ")  
 
 ## Task 12: Format Products Image Size
 
@@ -579,11 +650,12 @@ In this task, you will create a dynamic action to:
             }
             </copy>
             ```
-     ![Property Editor](./images/inline-css.png " ")             
+
+  ![Property Editor](./images/inline-css.png " ")             
 
 3. Click **Save**.
 
-
+## Summary
 
 You now know how to add validations, processes, branches, and dynamic actions to your APEX page. You may now **proceed to the next lab**.
 
@@ -591,4 +663,4 @@ You now know how to add validations, processes, branches, and dynamic actions to
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
 - **Contributors** - Shakeeb Rahman, Architect
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

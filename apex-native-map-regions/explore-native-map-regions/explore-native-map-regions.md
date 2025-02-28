@@ -17,11 +17,17 @@ Learn how to:
 
 ### Prerequisites
 This lab assumes you have:
-- Oracle Database 23c Free Developer Release
+- Oracle Database 23ai Free Developer Release
 - Completed all previous labs successfully
 - ORDS still running so that you can open APEX
 
-    > Note: If you have closed ORDS, repeat the steps in Lab 2 to reopen it
+    > **Note:** If you have closed ORDS, repeat the steps in Lab 2 to reopen it
+
+Watch the video below for a quick walk through of the lab.
+[Prepare APEX workspace](videohub:1_afr7ooim)
+
+Watch the video below for a quick walk through of the lab.
+[Prepare APEX workspace](videohub:1_afr7ooim)
 
 ## Task 1: Open sample APEX Native Map Regions application
 
@@ -151,8 +157,8 @@ This lab assumes you have:
 
 ## Learn More
 * [Oracle APEX 23.1: Creating Maps](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-maps.html#GUID-ACA5ED1C-7031-42BF-90B1-98938FB6DC17)
-* [Oracle Database 23c: Spatial Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/spatial-concepts.html#GUID-67E4037F-C40F-442A-8662-837DD5539784)
-* [Oracle Database 23c: SDO_WITHIN_DISTANCE](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/indexing-querying-spatial-data.html#GUID-3839BEE8-7743-46F4-B573-667ADC7FEB3E)
+* [Oracle Database 23ai: Spatial Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/spatial-concepts.html#GUID-67E4037F-C40F-442A-8662-837DD5539784)
+* [Oracle Database 23ai: SDO_WITHIN_DISTANCE](https://docs.oracle.com/en/database/oracle/oracle-database/23/spatl/indexing-querying-spatial-data.html#GUID-3839BEE8-7743-46F4-B573-667ADC7FEB3E)
 
 ## Acknowledgements
 - **Author** - Jim Czuprynski, LiveLabs Contributor, Zero Defect Computing, Inc. 

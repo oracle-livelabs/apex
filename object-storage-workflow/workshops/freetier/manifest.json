@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "APEX low-code workflow with Object Storage",
+  "workshoptitle": "Build a Low-Code Oracle APEX App to manage files in OCI Object Storage",
     "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
       {
@@ -8,7 +8,7 @@
       },
       {
         "title": "Get Started",
-        "filename": "../../../common-latest/1-sign-up-apex/1-sign-up-apex.md"
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
       },
       {
         "title": "Lab 1: Create autonomous instance",

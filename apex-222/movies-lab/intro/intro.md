@@ -21,18 +21,18 @@ In this lab, you will:
 
 ### Labs
 
-| # | Module | Est. Time |
-| --- | --- | --- |
-| - | [Getting Started](?lab=1-sign-up-apex) | 5 min |
-| 1 | [Create the Application](?lab=create-app) | 10 min |
-| 2 | [Create REST Data Sources](?lab=creating-rest-sources) | 10 min |
-| 3 | [Create the Search Page](?lab=creating-movie-search-page) | 20 min |
-| 4 | [Create the Details Page](?lab=creating-movie-details-page) | 20 min |
-| 5 | [Create Local Tables](?lab=creating-tables) | 10 min |
-| 6 | [Implement Buttons and Badges](?lab=creating-buttons-badges) | 25 min |
-| 7 | [Implement the Watchlist Page](?lab=implementing-watchlist-page) | 25 min |
-| - | [Add Cast List (Optional)](?lab=adding-cast-list) | 5 min |
-| - | [Improve the UI (Optional)](?lab=improving-watchlist-page) | 5 min |
+| #   | Module                                                           | Est. Time |
+| --- | ---------------------------------------------------------------- | --------- |
+| -   | [Getting Started](?lab=1-sign-up-apex)                           | 5 min     |
+| 1   | [Create the Application](?lab=create-app)                        | 10 min    |
+| 2   | [Create REST Data Sources](?lab=creating-rest-sources)           | 10 min    |
+| 3   | [Create the Search Page](?lab=creating-movie-search-page)        | 20 min    |
+| 4   | [Create the Details Page](?lab=creating-movie-details-page)      | 20 min    |
+| 5   | [Create Local Tables](?lab=creating-tables)                      | 10 min    |
+| 6   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
+| 7   | [Implement the Watchlist Page](?lab=implementing-watchlist-page) | 25 min    |
+| -   | [Add Cast List (Optional)](?lab=adding-cast-list)                | 5 min     |
+| -   | [Improve the UI (Optional)](?lab=improving-watchlist-page)       | 5 min     |
 
 ### **Let's Get Started!**
 
@@ -41,7 +41,7 @@ In this lab, you will:
 
 ### Downloads
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/movies-watchlist.sql) to download the completed application.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/movies-watchlist.sql) to download the completed application.
 
 ## Learn More - *Useful Links*
 

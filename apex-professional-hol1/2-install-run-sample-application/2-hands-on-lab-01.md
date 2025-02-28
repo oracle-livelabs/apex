@@ -2,31 +2,31 @@
 
 ## Introduction
 
-In this lab, you will navigate through the major components of Oracle APEX. This lab also covers installing and running a sample application.
+In this lab, you learn to navigate the significant components of Oracle APEX. This lab also covers installing and running a sample application.
 
 Estimated Time: 10 minutes
 
 ### Objectives
 In this lab, you will:
-- Navigate through the major Components of Oracle APEX
-- Install and run a packaged application
+- Navigate through the significant Components of Oracle APEX.
+- Install and run a Packaged Application.
 
-## Task 1: Major Components of APEX
+## Task 1: Explore the major Components of APEX
 
 To log in to Oracle APEX, you need a Workspace Name, username, and the password created for that Workspace. In this hands-on lab, you log in to your Oracle APEX Workspace.
 
-1. Log in to **Oracle APEX Workspace**. Perform the following steps:
-    -	Open your browser and enter the URL to sign in to the APEX development environment.
+1. To login to your Oracle APEX Workspace, perform the following steps:
+    -	Open your browser and enter the **URL** to sign in to the APEX development environment.
 
-    - The login page appears. Enter the Workspace name, username, and password. Click **Sign In**.  
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.  
 
-  ![Workspace Login](images/login-to-workspace2.png " ")
+  ![Workspace Login](images/login-to-workspace.png " ")
 
-2. The **Workspace** home page appears. Click **App Builder**.
+2. The Workspace home page appears. Click **App Builder**.
 
   ![Workspace Home Page](images/workspace-home-page.png " ")
 
-3. You do not have any applications listed right now. You can create a new app or install a **sample** or **starter app**.
+3. You do not have any applications listed right now. You can 'Create a New App' or 'Install a Sample or Starter App'.
 
   ![App Builder](images/app-builder2.png " ")
 
@@ -38,11 +38,11 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
     ![SQL Workshop Screen](images/sql-workshop1.png " ")
 
-5. Click **Gallery**
+5. Click **Gallery**.
 
     ![Gallery](images/gallery.png " ")
 
-6. The Gallery Page displays a collection of starter Applications, Sample Applications and Custom Applications that you can install in your workspace.
+6. The Gallery Page displays a collection of Starter Applications, Sample Applications and Custom Applications that you can install in your Workspace.
 
    ![Sample Applications](images/gallery-page2.png " ")
 
@@ -50,27 +50,27 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
 This lab covers installing and running a sample application.
 
-1. Once you Navigate to Gallery, Click **Sample Apps**.
+1. Navigate to **Gallery**, select **Sample Apps**.
 
    ![Click Sample Apps](images/gallery-page3.png " ")
 
-2. Now that you are in **Sample Apps**, search for apps by typing "**Reporting**" into the "Search Apps" search box and navigate to **Sample Reporting** and click the **Install** Button.
+2. Now that you are in **Sample Apps**, navigate to **Sample Reporting**, and click the **Install** Button. You can also search for apps by typing "**Reporting**" in the 'Search Apps' box.
 
   ![Install Sample Reporting](images/install-sample-app.png " ")
 
-3. On the Install Application page, click the **Install Application** Button.
+3. On the Install Application page, observe that your app is currently being installed.
 
-   ![Install Application](images/install-app.png " ")
+   ![Install Application](images/installing-sample-app.png " ")
 
-4. You can now see that the application is installed. Run the application by selecting **Run Application**.
-
+4. You can now see that the application is installed. Click **Run Application**.
    ![Run Application](images/click-run-application.png " ")
 
 5. Log in to the **Sample Reporting** application as an End User. Enter your **Username** and **Password** (Same as your Workspace credentials) and click **Sign In**.
 
-   ![Sign In Sample App](images/run-application1.png " ")
+   ![Sign In Sample App](images/log-in-to-the-app.png " ")
 
-6. You now see the Sample Reporting application home page. In your Runtime environment under **Developer Toolbar**, click **Home** to return to the home page of the APEX development environment.
+6. You now see the Sample Reporting application home page. In your Runtime environment, a **Developer Toolbar** appears at the bottom.
+   Click **Home** to return to the home page of the APEX application development environment.
 
    ![Home Screen of Sample App](images/navigate-to-sample-reports.png " ")
 
@@ -78,17 +78,19 @@ This lab covers installing and running a sample application.
 
    ![Navigate App Builder](images/navigate-to-app-builder.png " ")
 
-8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are displayed along with their icons and report format.
+8. Toggle between the **View Icons** and the **View Reports** buttons. You see that applications are correspondingly displayed along with their icons and in the report format.
    ![View Icons](images/display-as-icons1.png " ")
 
    ![View Reports](images/display-as-report1.png " ")
 
 ## Summary
-You now know how to Navigate through the major Components of Oracle APEX
-and Install and run a packaged application . You may now **proceed to the next lab**.
+You have now learned how to navigate the significant components of Oracle APEX and install and run a packaged application. You are now ready to **proceed to the next lab**.
 
-## Acknowledgments
+## What's Next?
+In the next hands-on lab, you'll gain practical experience in utilizing SQL Workshop. You'll explore tasks such as installing a Sample Dataset, extending existing table­s by adding new columns, populating new columns, creating lookup tables, developing Package­s, and utilizing various utilities such as Quick SQL, Data Workshop, and Data Generator.
 
-- **Author** - Roopesh Thokala, Product Manager
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023
+- **Last Updated By/Date** - Roopesh Thokala, Oct 2023

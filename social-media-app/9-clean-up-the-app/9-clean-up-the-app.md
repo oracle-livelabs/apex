@@ -47,32 +47,36 @@ When we Like a post, we should be able to see the Heart in RED. Also, if we are 
 
 ## Task 2: Clean up the File Browse Page Item
 
-1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor:
-    - Change **Appearance > Template** to **Hidden**
-    - Set the **Layout > Label Column Span** to 0.  
+1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, enter/select the following:
 
-    ![Property Editor](images/hidden-col-span.png)
+    - Appearance > Template: **Hidden**
+
+    - Layout > Label Column Span: **0**  
+
+    ![Property Editor](images/hidden-col-span-s.png)
 
 2.  Click on **Template Options**. Under **General**, check the **Stretch Form Item** option. This improves the alignment.
 
-    ![Template Options Dialog](images/stretch-form.png)
+    ![Template Options Dialog](images/stretch-form-s.png)
 
 3.  And finally, under Appearance:
-    - For CSS Classes, enter **file-upload** 
-    - For icon select **fa-camera-retro**
 
-    ![Property Editor](images/appearance.png)
+    - CSS Classes: **file-upload**
+
+    - Icon: **fa-camera-retro**
+
+    ![Property Editor](images/appearance-s.png)
 
 4. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app-12.png)
 
 
-    You can also send the URL to your mobile and try it out!
+  You can also send the URL to your mobile and try it out!
 
-    You may now **proceed to the next lab**
+  You may now **proceed to the next lab**
 
 ## Acknowledgements
 
  - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

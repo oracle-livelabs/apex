@@ -148,7 +148,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
 ## Task 3: Import Mobile Application
 
-1. First we will download the skeleton framework to create Mobile Application. Download from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/alphaMobileAppSkeleton.zip)
+1. First we will download the skeleton framework to create Mobile Application. Download from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/alphaMobileAppSkeleton.zip)
 
 2. Select the **Mobile Applications** icon on the left on side of the web page and then click **Upper Right-Hand menu** and select **Import**.
 
@@ -194,7 +194,7 @@ Service Connections are REST endpoints pointing to various services. In this ste
 
     ![](images/step3/8.png " ")
 
-13. Download a static image from here: [AlphaOffice Image](https://objectstorage.us-ashburn-1.oraclecloud.com/p/LNAcA6wNFvhkvHGPcWIbKlyGkicSOVCIgWLIu6t7W2BQfwq2NSLCsXpTL9wVzjuP/n/c4u04/b/livelabsfiles/o/developer-library/AlphaOfficeSupply.png). Click on this link and save the file locally.
+13. Download a static image from here: [AlphaOffice Image](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/AlphaOfficeSupply.png). Click on this link and save the file locally.
 
 14. Now, click on the **Image** component in the canvas and click the **Data** tab in the Properties section. 
 

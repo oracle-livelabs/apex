@@ -30,17 +30,17 @@ To complete this lab, you need to have the following:
 
     ![Page 14 Created](images/new-page-14.png " ")
 
-2. Create a hidden page item to hold the file name of the user's selected file
+2. Create a hidden page item to hold the file name of the user's selected file.
 
     ![Create Hidden Item](images/p14-hidden-item.png " ")
 
     ![Change Type Hidden](images/type-hidden.png " ")
 
-3. Next, expand the pre-rendering and add a before header process
+3. Next, expand the pre-rendering and add a before header process.
 
     ![Create Before Header Process](images/before-header-process.png " ")
 
-4. Enter a new title of Download File, and enter the PL/SQL code as shown
+4. Enter a new title of Download File, and enter the PL/SQL code as shown.
     ![Process Information](images/download-file-info.png " ")
 
     ```SQL
@@ -102,7 +102,7 @@ To complete this lab, you need to have the following:
 
     ![Create Virtual Column](images/create-virtual-column.png " ")
 
-2. Enter the new link information and items to set
+2. Enter the new link information and items to set.
 
     ![Set Link Items](images/set-items.png " ")
 
@@ -110,7 +110,9 @@ To complete this lab, you need to have the following:
 
     ![Set Link Icon](images/set-link-icon.png " ")
 
-4. Finally, it's time to perform a comprehensive test. The application should be accessed by logging in with the user **Lucille** to view the original task that was created for uploading to object storage earlier.
+4. Finally, it's time to perform a comprehensive test. Log into the application with 'APEX_USER' and upload a new project file, as done before. Then access the application by logging in with the user **Lucille** to view this task that was just created.
+
+    >**Note: You may also see the previously uploaded file in a previous task that was used for testing.**
 
     ![Login Lucille](images/final-test-1.png " ")
 

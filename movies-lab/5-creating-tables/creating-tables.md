@@ -28,15 +28,12 @@ The first table you need to create is the movie\_users table. It is very simple,
     ```
     <copy>
     movie_users
-        id /pk
         username /unique
     ```
 
-3. Click the **Generate SQL** button at the top of the pane. 
-
     ![Quick SQL page with copied movie_users code in the left pane and generated code in the right pane](images/generate-users-sql.png " ")
 
-4. Click **Settings** on the top right of the Quick SQL toolbar. 
+3. Click **Settings** on the top right of the Quick SQL toolbar. 
 
     * Scroll down to Additional Columns and check **Audit columns**.
 
@@ -46,23 +43,19 @@ The first table you need to create is the movie\_users table. It is very simple,
 
     ![Quick SQL Settings dialog open to the Audit Columns region overlaying the Quick SQL page](images/users-settings.png " ")
 
-5. Click **Save SQL Script**. 
+4. Click the **Review and Run** button. 
 
-6. Script Name: **Create movie users**
+    ![Quick SQL page with Review and Run button highlighted](images/users-run.png " ")
 
-7. Click **Save Script**.
+5. Enter **Create movie users** as the name for the script and select **Run**.
 
-    ![Save Script dialog open over the Quick SQL page](images/users-save-script.png " ")
+    ![Script Editor page with Create movie users set as the Script Name field value and the Run button highlighted](images/users-run-script.png " ")
 
-8. Click the **Review and Run** button.
-
-9. Click **Run**, then **Run Now**. 
-
-    * You should see a success page with 2 statements successfully processed.
+6. Click **Run Now**. You should see a success page with 2 statements successfully processed.
 
     ![SQL Scripts Results page showing 2 statements processed, 2 successful, and 0 errors](images/users-success.png " ")
 
-10. Now you will add an Application Item and Application Process, which will capture a user's email when they log in and assign them an ID so that you can keep track of their unique watchlist.
+7. Now you will add an Application Item and Application Process, which will capture a user's email when they log in and assign them an ID so that you can keep track of their unique watchlist.
 
 ## Task 2: Create the Application Item and Process
 To store data within the movie\_users database, you will use an application process. The process checks a user's email when they log in and if they are a new user, it adds them to a local table, assigning them an ID. The ID of the current user is also stored in an application item, which will be used when a user adds, removes, or updates movies in their watchlist.
@@ -154,8 +147,7 @@ You will need a table to store some basic movie information in addition to the u
 
     ```
     <copy>
-    watchlist
-        id /pk
+    watchlist /unique movie_id, user_id
         movie_id
         user_id /fk movie_users
         watched_yn
@@ -165,53 +157,40 @@ You will need a table to store some basic movie information in addition to the u
         release_date
         runtime num
         vote_average num
-        /unique movie_id, user_id
     ```
 
 	* Note the /unique directive in the last line of the Quick SQL code. In the movie\_users table, you created a unique key by using the /unique directive for the username column. This prevents the same user from getting put into the table more than once by making sure the username is always unique. In the watchlist table, the unique key actually comes from two different columns: movie\_id and user\_id. A single user cannot add the same movie to the watchlist table more than once. Unique keys are extremely helpful when it comes to maintaining the integrity of the data in your local tables.
 
-3. Click the **Generate SQL** button at the top of the pane.
+3. Just like you did for the movie\_users table, click Settings and select **Audit columns**. 
 
-    ![Quick SQL page with copied watchlist code in the left pane and generated code in the right pane](images/generate-watchlist.png " ")
-
-4. Just like you did for the movie\_users table, click Settings and select **Audit columns**. 
-
-5. Click **Save Changes**.
+4. Click **Save Changes**.
 
     ![Quick SQL Settings dialog open to the Audit Columns region overlaying the Quick SQL page](images/watchlist-settings.png " ")
 
-6. Click **Save SQL Script**.
+5. Click **Review and Run**.
 
-    * Set Name: **Create watchlist** 
+6. Enter **Create watchlist** as the name for the script and select **Run**.
 
-    * Click **Save Script**.
+    ![Script Editor page with Create watchlist set as the Script Name field value and the Run button highlighted](images/users-run-script.png " ")
 
-    ![Save Script dialog open over the Quick SQL page](images/watchlist-save-script.png " ")
-
-7. Click **Review and Run**.
-
-8. Click **Run**.
-
-9. Click **Run Now**. You should see 3 statements executed successfully.
+7. Click **Run Now**. You should see 3 statements executed successfully.
 
     ![SQL Scripts Results page showing 4 statements processed, 4 successful, and 0 errors](images/watchlist-success.png " ")
 
-10. The watchlist table has now been created. When a user clicks the Add to Watchlist button in the Movie Details dialog, the SQL action will capture the movie and user data and store it in this table so that you can access it later to build out our Watchlist on the front end.
+8. The watchlist table has now been created. When a user clicks the Add to Watchlist button in the Movie Details dialog, the SQL action will capture the movie and user data and store it in this table so that you can access it later to build out our Watchlist on the front end.
 
-11. Now you will set up your Back, Add, Remove, and Mark Watched buttons.
-
-You now know how to use Quick SQL to define new tables, and create application items and processes to store information and at specific points in your app. You may now **proceed to the next lab**.
+You now know how to use Quick SQL to define new tables, and create application items and processes to store information and at specific points in your app. Next you will set up your Back, Add, Remove, and Mark Watched buttons. You may now **proceed to the next lab**.
 
 ## Learn More
 
 - [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)  
 
-- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/aeutl/using-quick-sql.html)
+- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/aeutl/using-quick-sql.html)
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 5 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-5-231.sql) to download a copy of the app at the end of Lab 5.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-5-241.sql) to download a copy of the app at the end of Lab 5.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
@@ -239,4 +218,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, May 2023
+- **Last Updated By/Date** - Paige Hanssen, June 2024

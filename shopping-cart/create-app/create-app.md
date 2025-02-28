@@ -25,7 +25,7 @@ In this lab, you will:
 
     ![App builder home page](images/go-create-app.png " ")
 
-2.  Click **New Application**.
+2.  Click **Use Create App Wizard**.
 
     ![Create Application options](./images/new-app.png " ")
 
@@ -49,53 +49,75 @@ A dashboard page is a great way to show important information using various char
 
 1. In the Create Application wizard, click **Add Page**.
 
+    ![Add Page](./images/add-page.png " ")
+
 2. Click **Dashboard**.
 
     ![Add Page wizard](./images/add-dashboard.png " ")
 
-3. For Chart 1, enter the following:
+3. Select **Chart 1**, Enter/select the following:
 
-    * Chart Type – select **Bar**
-    * Chart Name – enter **Top 10 Products**
-    * Table or View – select **PRODUCT_ORDERS**
-    * Label Column – select **PRODUCT_NAME**
-    * Type – select **Sum**
-    * Value Column – select **TOTAL_SALES**.
+    - Chart Type: **Bar**
 
-    ![Chart 1 wizard](./images/chart1.png " ")
+    - Chart Name: **Top 10 Products**
 
-4. Click Chart 2, and enter the following:
+    - Table or View: **PRODUCT_ORDERS**
 
-    * Chart Type – select **Pie**
-    * Chart Name – enter **Top 5 Stores**
-    * Table or View – select **STORE_ORDERS**
-    * Label Column – select **STORE_NAME**
-    * Type – select **Sum**
-    * Value Column – select **TOTAL_SALES**.
+    - Label Column: **PRODUCT_NAME**
 
-    ![Chart 2 wizard](./images/chart2.png " ")
+    - Type: **Sum**
 
-5. Click Chart 3, and enter the following:
+    - Value Column: **TOTAL_SALES**.
 
-    * Chart Type – select **Pie**
-    * Chart Name – enter **Order Status**
-    * Table or View – select **CUSTOMER\_ORDER\_PRODUCTS**
-    * Label Column – select **ORDER_STATUS**
-    * Type – select **Count**
-    * Value Column – select **ORDER_ID**.
+  ![Chart 1 wizard](./images/chart1.png " ")
 
-    ![Chart 3 wizard](./images/chart3.png " ")    
+4. Select **Chart 2**, and Enter/select the following:
 
-6. Click Chart 4, and enter the following:
+    - Chart Type: **Pie**
 
-    * Chart Type – select **Bar**
-    * Chart Name – enter **Product Reviews**
-    * Table or View – select **PRODUCT_REVIEWS**
-    * Label Column – select **PRODUCT_NAME**
-    * Type – select **Column Value**
-    * Value Column – select **AVG_RATING**.
+    - Chart Name: **Top 5 Stores**
 
-    ![Chart 4 wizard](./images/chart4.png " ")  
+    - Table or View: **STORE_ORDERS**
+
+    - Label Column: **STORE_NAME**
+
+    - Type: **Sum**
+
+    - Value Column: **TOTAL_SALES**.
+
+  ![Chart 2 wizard](./images/chart2.png " ")
+
+5. Select **Chart 3**, and Enterselect the following:
+
+    - Chart Type: **Pie**
+
+    - Chart Name: **Order Status**
+
+    - Table or View: **CUSTOMER\_ORDER\_PRODUCTS**
+
+    - Label Column: **ORDER_STATUS**
+
+    - Type: **Count**
+
+    - Value Column: **ORDER_ID**.
+
+  ![Chart 3 wizard](./images/chart3.png " ")    
+
+6. Select **Chart 4**, and Enter/select the following:
+
+    - Chart Type: **Bar**
+
+    - Chart Name: **Product Reviews**
+
+    - Table or View: **PRODUCT_REVIEWS**
+
+    - Label Column: **PRODUCT_NAME**
+
+    - Type: **Column Value**
+
+    - Value Column: **AVG_RATING**.
+
+  ![Chart 4 wizard](./images/chart4.png " ")  
 
 7. Click Advanced and check **Set as Administration Page**.
 
@@ -108,23 +130,32 @@ A dashboard page is a great way to show important information using various char
 ## Task 4: Add the Products Page
 
 1. In the Create Application wizard, click **Add Page**.
+
 2. Click **Faceted Search**.
 
     ![Add Page wizard](./images/faceted-search.png " ")
 
-3. On the Faceted Search Page, enter the following:
-    - Page Name - enter **Products**
-    - Select **Cards**
-    - Table - select **PRODUCTS**
-    - Select **Grid**
-    - Title Column - select **PRODUCT_NAME**
-    - Body Column - select **- Select Column -** (to unselect the default column chosen)
+3. On the Faceted Search Page, Enter/select the following:
 
-    Expand Advanced Section and check **Set as Home Page**
+    - Page Name: **Products**
+
+    - Select **Cards**
+
+    - Table: **PRODUCTS**
+
+    - Select **Grid**
+
+    - Title Column: **PRODUCT_NAME**
+
+    - Body Column: **- Select Column -** (to unselect the default column chosen)
+
+    - Expand Advanced Section and check **Set as Home Page**
 
     Click **Add Page**.
 
-    ![Add Page wizard](./images/fs-page.png " ")  
+  ![Add Page wizard](./images/fs-page.png " ")
+
+  ![Add Page wizard](./images/fs-page1.png " ")  
 
 ## Task 5: Delete Original Home Page
 
@@ -143,7 +174,9 @@ Since we designated the product faceted search page as the application's home pa
 ## Task 6: Add Multiple Reports
 
 1. In the Create Application wizard, click **Add Page**.
+
 2. Click the arrow to the left of **Additional Pages** to see additional page types.
+
 3. Click **Multiple Reports**.
 
     ![Add Page wizard](./images/multiple-reports.png " ")
@@ -174,6 +207,7 @@ Since we designated the product faceted search page as the application's home pa
 
 
 2. For each page you edit, click **Advanced** and check **Set as Administration Page**.
+
 3. Click **Save Changes**.
 
     ![Edit Page wizard](./images/admin-pages.png " ")
@@ -185,9 +219,12 @@ Since we designated the product faceted search page as the application's home pa
 
     ![Add Page wizard](./images/ir-page.png " ")
 
-3. On the Report Page, enter the following:
-    - Page Name - enter **Manage Products**
-    - Table - select **PRODUCTS**
+3. On the Report Page, Enter/select the following:
+
+    - Page Name: **Manage Products**
+
+    - Table: select **PRODUCTS**
+
     - Check **Include Form**
 
 4. Click **Advanced** and check **Set as Administration Page**.
@@ -215,7 +252,7 @@ Now that you have added all the pages, it is time to generate the app and review
 2. Once the application is created, you will find the new app on the application home page.
 Click **Run Application**.
 
-    ![Application home page](./images/run-app.png " ")
+    ![Application home page](./images/run-app12.png " ")
 
 ## Task 11: Run the Application
 
@@ -234,4 +271,4 @@ You now know how to create an application with a number of different page types 
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024

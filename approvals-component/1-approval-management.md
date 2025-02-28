@@ -10,12 +10,11 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 - Create an APEX Application
-- Create and run SQL Script
+- Create and Run SQL Script
 - Add Users
 
-
 ## Task 1: Create an Application
-In this lab, you create a new application named Expense Tracker.
+In this lab, you create a new application named **Expense Tracker**.
 
 1. If you have not already logged into your Oracle APEX workspace, sign in using the workspace name, email, and password you signed up with.
 
@@ -29,32 +28,24 @@ In this lab, you create a new application named Expense Tracker.
 
     ![Click Application Homepage Create Button](images/create-new-application.png " ")
 
-4. Click **New Application**
+4. For Name: Enter **Expense Tracker** and Click **Create Application**
 
     ![Select New Application ](images/click-new-application.png " ")
-
-5. In the Create an Application wizard, set Name to **Expense Tracker**.
-
-6. Click **Create Application** to create your app and go to the application home page.
-
-    ![Select New Application ](images/create-application-expense-tracker.png " ")
 
 ## Task 2: Create SQL Script
 In this lab, you create database objects using SQL Scripts.
 
-1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
+1. At the top of the application home page, click **SQL Workshop** and then Select **SQL Scripts**.
 
-    ![Select Sql Workshop](./images/sql-workshop.png " ")
+    ![Select Sql Workshop](./images/sql-workshop1.png " ")
 
-2. Click **Create**. The Script Editor appears.
+2. Click **Create**.
 
     ![Create SQL Scripts](./images/create-sql-scripts.png " ")
 
-3. In the Script Name, enter a name for the script - **Employee details and Expense status**
+3. For Script Name: Enter **Employee details and Expense status**
 
-4. Enter the SQL statements.
-
-   Copy the code below and paste it into the code editor:
+4. Copy and Paste below code into the code editor and Click **Run**.
 
       ```
       <copy>
@@ -83,13 +74,15 @@ In this lab, you create database objects using SQL Scripts.
       </copy>
       ```
 
-5. Click **Run**. A dialog appears, click **Run Now**. Now you can see that SQL statements run successfully.
+     ![Run SQL Script](./images/script.png " ")
 
-  ![Run SQL Script](./images/script.png " ")
+5. On the Run Script page, click Run Now.
 
-  ![Run Now Sql Script](./images/click-run-now.png " ")
+     ![Run Now Sql Script](./images/click-run-now.png " ")
 
-  ![SQL Script Created](./images/sql-script-created.png " ")
+6. The Script Results page will be displayed listing the statements processed, successful, and with errors.
+
+     ![SQL Script Created](./images/sql-script-created.png " ")
 
 ## Task 3: Add Users
    In this lab, you create users for multi-level management.
@@ -102,13 +95,13 @@ In this lab, you create database objects using SQL Scripts.
 
      ![Create Multiple Users](./images/create-users.png " ")
 
-3. Specify the following attributes:
+3. Enter the following attributes:
 
-     - List of Email Addresses: **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
+    - For List of Email Addresses: Enter **MATT@email.com, JANE@email.com, CLARA@email.com, JOHN@email.com**
 
-     - Usernames : Select **Exclude @ domain as part of the username**
+    - For Usernames: Select **Exclude @ domain as part of the username**
 
-     - For password and Confirm Password: Enter a password of your choice
+    - For password and Confirm Password: Enter a password of your choice.
 
 4. Click **Next** and **Create Valid Users**.
 
@@ -116,10 +109,8 @@ In this lab, you create database objects using SQL Scripts.
 
    ![Click validate users](./images/create-valid-users.png " ")
 
-   ![Users created](./images/users-created.png " ")  
-
-
 ## **Summary**
+
 You now know how to create an application, run a SQL script and add users.
 
 You may now **proceed to the next lab**.   
@@ -127,4 +118,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
    - **Author** - Ankita Beri, Product Manager
    - **Contributor** - Roopesh Thokala, Senior Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
+   - **Last Updated By/Date** - Ankita Beri, Product Manager, November 2023

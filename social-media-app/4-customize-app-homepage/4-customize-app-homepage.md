@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Remove the Navigation Menu
 
-1. As a first step, we want to remove the Navigation menu from the page. To do this, select **Page 1: Timeline** in the Rendering Tree. 
+1. As a first step, we want to remove the Navigation menu from the page. To do this, select **Page 1: Timeline** in the Rendering Tree.
 
     ![Page designer is seen](images/property-editor-nav.png "")
 
@@ -51,11 +51,9 @@ Since our app is a Single Page Application, we do not need a breadcrumb bar at t
 
     ![The update app after the changes](images/updated-app.png "")
 
-    **Note:** We will repeat this process of iterating over the app development: Make
-changes, Save and Run and review the effects of our changes.
+    **Note:** We will repeat this process of iterating over the app development: Make changes, Save and Run and review the effects of our changes.
 
-    With the navigation list and the breadcrumb removed, we have a nice
-clean slate to proceed with.
+    With the navigation list and the breadcrumb removed, we have a nice clean slate to proceed with.
 
     Switch back to your browser tab with **Page Designer**.
 
@@ -63,7 +61,7 @@ clean slate to proceed with.
 
 In this task, you will learn to download and import a starter app. If you follow this lab, you can skip Lab 1, Lab 2, Lab 3 and Lab 4. Once you complete this task, go to Lab 5.
 
-1. Download the [Starter App](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_LAB1-4_completed.zip) for Social Media workshop. This app has all the functionality performed in Lab 1,2,3 and 4.
+1. Download the [Starter App](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_LAB1-4_completed.zip) for Social Media workshop. This app has all the functionality performed in Lab 1,2,3 and 4.
 
 2. To import an application, from your app builder, click **Import**.
 
@@ -73,25 +71,21 @@ In this task, you will learn to download and import a starter app. If you follow
 
     ![Import dialog](images/drag-and-drop.png)
 
-4. Click **Next** to confirm import.
-
-    ![Import dialog](images/import-confirm.png)
-
-5. Accept the defaults and click **Install Application**. Click **Next**.
+4. Accept the defaults and click **Install Application**.
 
     ![Install app screen](images/install-app.png)
 
-    ![Install app screen](images/supporting-objects.png)
+5. Click **Install Supporting Objects**.
 
-6. Click **Install**. Once you get a success message, click **Run Application**.
+    ![Install app screen](images/install-support.png)
 
-    ![Install app screen](images/run-app.png)
+6. Click **Run Application**.
 
-    Now, continue Lab 5.
+    ![Install app screen](images/run-app2.png)
 
     You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+ - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+ - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024

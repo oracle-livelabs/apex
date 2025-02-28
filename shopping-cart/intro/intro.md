@@ -24,7 +24,7 @@ In this lab, you will:
 * Learn how to create a page to list all the products
 * Learn how to manage the products
 
-*{Note: This lab assumes you are using Oracle APEX 23.1.}*
+*{Note: This lab assumes you are using Oracle APEX 24.1.}*
 
 ### Labs
 
@@ -48,7 +48,7 @@ In this lab, you will:
 
 ### Downloads
 
-- [Download the application](files/shopping-cart-app.sql). To run the app, please run the steps described in Lab 1, 2, and 3.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Facme-shop.sql) to download the completed application. To run the app, please run the steps described in Lab 1, 2, and 3.
 - [Download the Application icon](./images/shopping-cart-01.png)
 
 ## Learn More - *Useful Links*
@@ -69,4 +69,4 @@ In this lab, you will:
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
