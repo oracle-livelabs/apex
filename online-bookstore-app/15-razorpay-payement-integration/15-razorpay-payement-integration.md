@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to create and configure key components in Oracle APEX for seamless integration with external services. You will set up Web Credentials, create a REST Data Source, and integrate a Payment Gateway. These steps will enable secure communication with APIs and external systems, enhancing the functionality of your applications.
+In this lab, you will create a Razorpay key in test mode (free of cost). You will set up Web Credentials, create a REST Data Source, and integrate a Payment Gateway. These steps will enable secure communication with APIs and external systems, enhancing the functionality of your applications.
 
 Estimated Time: 20 minutes
 

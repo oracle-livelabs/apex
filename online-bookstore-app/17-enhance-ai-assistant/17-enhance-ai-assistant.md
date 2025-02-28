@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will enhance the previous 'Build an AI-Assistant Chat Widget' lab by further refining AI configurations and integrating multiple Retrieval-Augmented Generation (RAG) data sources for improved AI responses."
+In this lab, you will refine the AI configurations from the previous 'Build an AI-Assistant Chat Widget' lab by adding another RAG source for order details, allowing the AI to provide order-related responses with improved relevance and accuracy.
 
 Estimated Time: 5 minutes
 

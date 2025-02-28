@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn to create REST Data Sources, automations, and triggers in Oracle APEX. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness.
+In this lab, you will learn to create REST Data Sources, automations, and triggers. These components enable seamless API integration, automate tasks, and trigger actions based on events, enhancing application efficiency and responsiveness. Additionally, the combination will automatically engage the Oracle AI Vision service to analyze the content of the book cover image, generating a textual description of its contents. This enhances the customer's ability to find the book they are looking for through improved search functionality.
 
 Estimated Time: 10 minutes
 
@@ -184,6 +184,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
                 l_response clob;
                 l_response_text clob;
             BEGIN
+                    -- Retrieve binary image data (BLOB) from the book cover image URL
+                    -- using an HTTP GET request, then convert it to a Base64-encoded CLOB
                     l_file_data:=   replace(replace(apex_web_service.blob2clobbase64(apex_web_service.make_rest_request_b(
                             p_url => :book_image,
                             p_http_method => 'GET')), chr(10),''),chr(13),'');
@@ -245,6 +247,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
             END;
         </copy>
         ```
+
     Click **Apply Changes**
 
     ![Click Timeline](images/14-2-5-details0.png " ")
