@@ -563,7 +563,7 @@ In this lab, you will:
 
         ```
         <copy>
-        apex_pwa.push_queue;
+        apex_mail.push_queue;
         </copy>
         ```
 
@@ -660,7 +660,7 @@ In this lab, you will:
 
         ```
         <copy>
-        apex_pwa.push_queue;
+        apex_mail.push_queue;
         </copy>
         ```
 

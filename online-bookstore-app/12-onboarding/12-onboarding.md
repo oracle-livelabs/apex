@@ -206,25 +206,31 @@ Create the forgot password Page
 
                 ```
                 <copy>
-                declare
-                    v_url  varchar2(1000);
-                begin
-                    v_url := apex_util.host_url || APEX_PAGE.GET_URL (
-                            p_page   => 100003,
-                            p_items  => 'P100003_EMAIL',
-                            p_values =>  :EMAIL);
+                DECLARE
+                    v_url  VARCHAR2(1000);
+                    v_html VARCHAR2(4000);
+                BEGIN
+                    v_url := apex_util.host_url || APEX_PAGE.GET_URL(
+                                p_page   => 100003,
+                                p_items  => 'P100003_EMAIL',
+                                p_values => :EMAIL);
 
-                    return '<html><body>' || utl_tcp.crlf ||
+                    v_html := apex_string.format(q'[
+                        <html>
+                            <body>
+                                <p>Please open the link to Reset Password for your account</p>
+                                <p><a href="%s">
+                                    <b>Reset Password</b>
+                                </a></p>
+                                <p>Sincerely,<br />
+                                The Online Bookstore Team<br />
+                                </p>
+                            </body>
+                        </html>
+                    ]', v_url);
 
-                                '<p>Please open the link to Reset Password for your account' || utl_tcp.crlf ||
-                                '<p><a href="'|| v_url ||'">
-                                    <b> Reset Password </b></a></p>'|| utl_tcp.crlf ||
-                                '<p>Sincerely,<br />' || utl_tcp.crlf ||
-                                'The Online book store Team<br />' || utl_tcp.crlf ||
-
-                                '</body></html>';
-
-                end;
+                    RETURN v_html;
+                END;
                 </copy>
                 ```
 
@@ -791,27 +797,35 @@ Create the User Sign Up Page
 
             - PL/SQL Function Body: Copy and Paste the below code:
 
-            ```
-            <copy>
-            declare
-            l_url varchar2(1000);
-            begin
-            l_url := apex_util.host_url || APEX_PAGE.GET_URL (
-            p_page  => 100000,
-            p_items => 'P100000_EMAIL',
-            p_values => :P100001_EMAIL);
+                ```
+                <copy>
+                DECLARE
+                    l_url  VARCHAR2(1000);
+                    l_html VARCHAR2(4000);
+                BEGIN
+                    l_url := apex_util.host_url || APEX_PAGE.GET_URL(
+                                p_page   => 100000,
+                                p_items  => 'P100000_EMAIL',
+                                p_values => :P100001_EMAIL);
 
-            return '<html><body>' || utl_tcp.crlf ||
-            '<p>Please open the link to create your account' || utl_tcp.crlf ||
-            '<p><a href="'|| l_url ||'">
-            <b> Setup your account </b></a></p>'|| utl_tcp.crlf ||
-            '<p>Sincerely,<br />' || utl_tcp.crlf ||
-            'The Online book store Team<br />' || utl_tcp.crlf ||
-            '</body></html>';
+                    l_html := apex_string.format(q'[
+                        <html>
+                            <body>
+                                <p>Please open the link to create your account</p>
+                                <p><a href="%s">
+                                    <b>Setup your account</b>
+                                </a></p>
+                                <p>Sincerely,<br />
+                                The Online Bookstore Team<br />
+                                </p>
+                            </body>
+                        </html>
+                    ]', l_url);
 
-            end;
-            </copy>
-            ```
+                    RETURN l_html;
+                END;
+                </copy>
+                ```
 
     ![p-body-html](images/12-3-p-body-html-param.png " ")
 
