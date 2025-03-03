@@ -28,7 +28,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 Import them into your workspace. To run the app, please run the steps described in the following workshop:
 
-1. **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Customize an Interactive Report as a Developer
 
