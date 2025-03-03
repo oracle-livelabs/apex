@@ -455,7 +455,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
               UNION ALL
               SELECT Num+1
               FROM list_of_numbers
-              WHERE Num < (SELECT book_quantity FROM obs_books WHERE book_id = :P18_BOOK_ID)
+              WHERE Num < LEAST(10, (SELECT book_quantity FROM obs_books WHERE book_id = :P18_BOOK_ID))
             )
 
             SELECT Num as d, Num as r
@@ -744,13 +744,24 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
     - Setting > Code: Copy and paste the below code:
 
         ```
-    <copy>
-    // Update Badge Text
-    apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
-    // Update Icon
-    apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
-    </copy>
-    ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+        </copy>
+        ```
+
+        or
+
+        ```
+        <copy>
+        // Update Badge Text
+        $(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+        // Update Icon
+        $(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+        </copy>
+        ```
 
     ![close dialog](images/true-action.png " ")
 
@@ -761,15 +772,28 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 7. In the Property Editor, enter/select the following:
 
     - Action: Execute JavaScript Code.
+
     - Setting > Code: Copy and paste the below code:
-    ```
-    <copy>
-    // Update Badge Text
-    apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
-    // Update Icon
-    apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
-    </copy>
-    ```
+
+        ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+        </copy>
+        ```
+
+        or
+
+        ```
+        <copy>
+        // Update Badge Text
+        $(".js-shopping-cart-item .t-Button-badge").text('');
+        // Update Icon
+        $(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+        </copy>
+        ```
 
     ![close dialog](images/false-action-details.png " ")
 

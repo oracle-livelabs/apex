@@ -77,7 +77,7 @@ In this lab, you create a simple application with one click called **Online Book
 
     ```
     <copy>
-    OBS_Users
+    Users
       user_id num /pk
       username  /nn /unique
       email  /nn /unique
@@ -89,7 +89,7 @@ In this lab, you create a simple application with one click called **Online Book
       is_admin
       picture_url
 
-    OBS_Books
+    Books
       book_id num /pk
       price num /nn
       title  /nn
@@ -106,18 +106,18 @@ In this lab, you create a simple application with one click called **Online Book
       available_yn  /nn /default Y
       text_det
 
-    OBS_Orders
+    Orders
       order_id num /pk
-      user_id num /fk OBS_Users /cascade
+      user_id num /fk Users /cascade
       order_no
       order_datetime timestamp
       payment_id vc
       razorpay_id vc
 
-    OBS_Order_Items
+    Order_Items
       Order_item_id num /pk
-      order_id num /fk OBS_Orders /cascade
-      book_id num /fk OBS_Books /cascade
+      order_id num /fk Orders /cascade
+      book_id num /fk Books /cascade
       added_time  timestamp
       added_date date
       price num
@@ -125,14 +125,14 @@ In this lab, you create a simple application with one click called **Online Book
       quantity num
       discount num
 
-    OBS_Unverified_Users
+    Unverified_Users
       user_id num /pk
       email
 
-    OBS_Wishlist
+    Wishlist
       wishlist_id num /pk
-      user_id num /fk OBS_Users /cascade
-      book_id num /fk OBS_Books /cascade
+      user_id num /fk Users /cascade
+      book_id num /fk Books /cascade
     </copy>
     ```
 

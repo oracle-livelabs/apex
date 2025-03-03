@@ -100,7 +100,7 @@ The code also includes error handling to manage exceptions and set appropriate a
       end;
 
    -- First, check to see if the user exists
-   select count(*) into l_count from obs_users where lower(email) = lower(l_email);
+   select count(*) into l_count from obs_users where email = lower(l_email);
 
    if l_count > 0 then
 
@@ -108,7 +108,7 @@ The code also includes error handling to manage exceptions and set appropriate a
    l_hashed_password := hash_password(lower(l_email), p_password);
 
    -- Get the stored password
-   select password into l_password from obs_users where  lower(email)  = l_email;
+   select password into l_password from obs_users where email  = lower(l_email);
 
    -- Compare the two, and if there is a match, return TRUE
    if l_hashed_password = l_password then

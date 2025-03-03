@@ -60,6 +60,8 @@ In this task, we will reorder the facets and edit their properties and ranges ac
 
     ![App builder home page](images/fs-discount.png " ")
 
+    *Note: The pipe symbol (|) is used as a delimiter in range facet return values, helping define upper and lower boundaries for filtering data.*
+
 5. Select **P10\_CATEGORY** facet, enter/select the following:
 
     - Layout > Sequence: **40**
