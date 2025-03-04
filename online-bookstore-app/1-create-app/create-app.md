@@ -80,12 +80,13 @@ In this task, you'll use Quick SQL to quickly generate and execute a script for 
     ```
     <copy>
     #prefix: obs
+    #PK: identity
 
     Users
       user_id num /pk
       username  /nn /unique
       email  /nn /unique
-      password
+      password --HASHED PASSWORD
       full_name
       address
       profile_pic blob

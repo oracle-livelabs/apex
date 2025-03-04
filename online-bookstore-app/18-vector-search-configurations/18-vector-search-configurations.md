@@ -176,7 +176,6 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
 
     !["Page Designer"](images/18-3-8.png "")
 
-
 ## Task 4: Create a Search Configuration
 
 In this task, you will set up a Search Configuration based on Oracle Vector Search.
@@ -232,6 +231,8 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
     !["Page Designer"](images/18-4-7.png "")
 
 ## Task 5: Create an Oracle Vector Search Page
+
+In this task, you'll create a Vector Search Page to enable advanced search functionality for books. You'll configure the search page, update navigation settings, and test the feature to retrieve relevant book results.
 
 1. Navigate to the application home page and click  **Create Page**.
 
