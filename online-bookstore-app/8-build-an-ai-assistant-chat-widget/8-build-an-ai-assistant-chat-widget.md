@@ -23,6 +23,8 @@ In this lab, you will:
 
 ## Task 1: Generate API Keys using OCI Console
 
+Note: If you already have an OCI key pair, you may skip this lab.
+
 To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
@@ -135,6 +137,8 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Task 4: Create the Chat Page
 
+In this task, you'll create a Chat Page with a modal dialog layout and configure an AI-powered chat widget.
+
 1. Navigate to your application homepage and click **Create Page**. Select **Blank Page**.
 
     ![App home page](images/create-blank-page.png ' ')
@@ -191,6 +195,8 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     Click **Save**
 
 ## Task 5: Create AI Configurations
+
+In this task, you'll configure AI Configurations to enable book-related queries using Generative AI. You'll set up an AI model, define response behavior, and create a RAG Source to provide book details dynamically.
 
 1. Navigate to **Shared Components**.
 
@@ -260,6 +266,8 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 ## Task 6: Create a Dynamic Action for Chat Widget
 
+In this task, you'll create a Dynamic Action to display the AI-powered chat widget. This will enable users to interact with the Books Analysis AI and get book-related responses within the application.
+
 1. Navigate to **Page 2: Chat Widget** by clicking **Edit Page 2**.
 
     ![Page Designer Dynamic Actions](images/8-6-1-page2.png ' ')
@@ -288,6 +296,8 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     ![Page Designer Dynamic Actions](images/quick-action.png)
 
 ## Task 7: Create a navigation entry to Launch the Chat
+
+In this task, you'll add a navigation entry to the application's navigation bar, allowing users to easily launch the AI-powered chat assistant from any page.
 
 1. Navigate to **Shared Components**.
 

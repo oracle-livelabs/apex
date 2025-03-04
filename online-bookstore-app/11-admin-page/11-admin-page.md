@@ -689,7 +689,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 ## Task 5: Edit Book Details
 
-In this task, you will develop a form for detailed editing of book records.
+In this task, you will create a form that enables users to edit book records in detail, ensuring accurate and efficient data management.
 
 1. On the Page Designer toolbar, Navigate to (+ v) and select **Page**.
 
@@ -796,7 +796,7 @@ In this task, you will develop a form for detailed editing of book records.
 
 ## Task 6: Manage User Roles
 
-In this task, you will create pages for viewing and updating user roles using interactive reports and forms.
+In this task, you will build pages with interactive reports and forms to view and manage user roles/data efficiently.
 
 1. On the Page Designer toolbar, Navigate to **(+ v)** and select **Page**.
 

@@ -17,6 +17,8 @@ In this lab, you will:
 
 ## Task 1: Create My Wishlist page
 
+In this task, you'll create a My Wishlist page that displays a list of books saved by the user. You'll use AI assistance to generate an SQL query and configure the layout.
+
 1. Navigate to your application homepage by clicking **Application ID**.
 
     ![close dialog](images/app-id3.png " ")
@@ -271,6 +273,8 @@ In this lab, you will:
 
 ## Task 2: Add Wishlist Management Buttons on Page 18
 
+In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the book details page. These buttons will allow users to manage their wishlist by invoking database actions based on their selection.
+
 1. Navigate to Page **18**.
 
     ![close dialog](images/nav-to-page-18.png " ")
@@ -436,6 +440,8 @@ In this lab, you will:
 13. Click **Save**.
 
 ## Task 3: Create an entry in Navigation Bar List
+
+In this task, you'll add a My Wishlist entry to the navigation bar, allowing users to quickly access their saved books. This ensures easy navigation and enhances the user experience.
 
 1. Navigate to **Shared Component**.
 
