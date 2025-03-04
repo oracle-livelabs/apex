@@ -890,6 +890,8 @@ In this task, you modify the user role update form for enhanced usability and fu
 
 ## Task 8: Run the Application
 
+In this task, you will log in and explore the Administration section to manage books and user roles. You will update book details, modify user information, and apply changes to see the updates in action.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

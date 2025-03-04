@@ -333,6 +333,8 @@ In this task, you'll add a navigation entry to the application's navigation bar,
 
 ## Task 8: Run the Application
 
+In this task, you will interact with the AI Assistant, ask book-related questions, and analyze the responses to enhance your understanding.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

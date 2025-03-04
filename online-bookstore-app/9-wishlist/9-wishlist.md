@@ -477,6 +477,8 @@ In this task, you'll add a My Wishlist entry to the navigation bar, allowing use
 
 ## Task 4: Run the Application
 
+In this task, you will add books to your wishlist, view them under My Wishlist, and remove books when needed.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

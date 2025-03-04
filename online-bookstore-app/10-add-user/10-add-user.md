@@ -1062,6 +1062,8 @@ Application Computation, navigate back to the shared component and under **Appli
 
 ## Task 6: Run the Application
 
+In this task, you will access the My Profile page to view purchased books, update your password, and edit your profile details, including changing your profile picture.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

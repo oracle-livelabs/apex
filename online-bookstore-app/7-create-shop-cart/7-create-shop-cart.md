@@ -1101,6 +1101,8 @@ In this task, you'll create a My Books page to display books purchased by the us
 
 ## Task 7: Run the Application
 
+In this task, you will navigate to the Search Books page, select a book to purchase, add it to your cart, and complete the checkout process. Finally, you will verify your purchased books in My Books.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

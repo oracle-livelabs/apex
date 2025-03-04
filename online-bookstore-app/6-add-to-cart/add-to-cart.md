@@ -803,6 +803,8 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
 ## Task 8: Run the Application
 
+In this task, you will add a book to the cart, observe the cart item count, and remove a book from the cart to verify the update.
+
 1. Run the application and enter the credentials below:
 
       - Username: **user01**

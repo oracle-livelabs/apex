@@ -14,6 +14,8 @@ In this lab, you will:
 
 ## Task 1: Push Notification
 
+In this task, you will enable Push Notifications for the application and configure them to notify users when a book becomes available. You'll set up Progressive Web App (PWA) settings and implement a process to send notifications.
+
 1. Navigate to **App Builder** and select **Online Bookstore application**.
 
     ![Click My Apps](images/13-1-1-app.png " ")
@@ -145,6 +147,8 @@ Progressive Web App is updated.
 
 ## Task 2: Configure Navigation Bar Entries for Settings Page of Push Notification
 
+In this task, you will configure the Navigation Bar to include a Settings option for managing push notifications. This ensures users can easily access notification preferences from the app's navigation menu.
+
 1. Navigate to **Shared Components**.
 
     ![close dialog](images/13-1-sc-admin-2.png " ")
@@ -180,6 +184,8 @@ Progressive Web App is updated.
     ![close dialog](images/13-2-create-entry-admin.png " ")
 
 ## Task 3: Run the Application
+
+In this task, you will run the application, enable push notifications, and test the feature by updating a book's availability. If the book is on your wishlist, you will receive a push notification when it becomes available.
 
 1. Run the application and enter the credentials below:
 

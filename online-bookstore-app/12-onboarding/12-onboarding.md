@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## Task 1: Creating Email Verification for Forgot Password
 
-Create the forgot password Page
+In this task, you will create a Forgot Password page with email verification functionality. Users will enter their email to receive a reset link, ensuring secure password recovery. You will also update the login page to include a "Forgot Password" button for easy access.
 
 1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
 
@@ -323,6 +323,8 @@ Create the forgot password Page
 25. Click **Save**. 
 
 ## Task 2: Creating  Reset Password
+
+In this task, you will create a Reset Password page that allows users to securely update their password. The process includes validation checks, password confirmation, and redirection to the login page upon successful update.
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
     ![close dialog](images/12-2-blank-page-email.png " ")
@@ -645,7 +647,7 @@ Create the forgot password Page
 
 ## Task 3: Creating Email Verification for User SignUp
 
-Create the User Sign Up Page
+In this task, you will create an Email Verification process for user sign-up. The process involves validating user email, sending a verification email with a sign-up link, and updating the login page with a SignUp button for new users.
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
 
@@ -883,6 +885,8 @@ Create the User Sign Up Page
 
 ## Task 4: Creating  SignUp
 
+In this task, you will set up the SignUp functionality, allowing users to register and verify their accounts. You'll configure form fields, validation, and automated login after successful registration.
+
 1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
     ![form-page-signup](images/12-4-nav-create-page.png " ")
 
@@ -1082,7 +1086,7 @@ Create the User Sign Up Page
 
 ## Task 5: Login with Google
 
- In this task, you will create a free Social Sign-in authentication scheme to enable Google Authentication.
+ In this task, you will set up free Social Sign-in Google Authentication to enable users to log in with their Google accounts. You'll configure OAuth settings, create an authentication scheme, and integrate it into the login process.
 
 1. Log in to Google's developer [console](https://console.developers.google.com).
 
@@ -1384,6 +1388,8 @@ Create the User Sign Up Page
 34. Click **Save**.
 
 ## Task 6: Run the Application
+
+In this task, you will run the lab and test various functionalities, including Sign Up, Forgot Password, and Login/Signup with Google Account.
 
 1. Run the application and click **New here? SignUp** to create a new account.
 
