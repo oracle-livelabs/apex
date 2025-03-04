@@ -208,7 +208,7 @@ In this lab, you will:
         n002,
         b.discount,
         Sysdate,
-        SYSTIMESTAMP AT TIME ZONE 'Asia/Kolkata' AS added_time
+        SYSTIMESTAMP
         FROM  apex_collections a,
         obs_books b
         WHERE collection_name = 'BOOKS'

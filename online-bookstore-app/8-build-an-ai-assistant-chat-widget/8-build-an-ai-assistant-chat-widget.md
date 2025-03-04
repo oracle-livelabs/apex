@@ -244,7 +244,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     - Identification > Name: **Books**
 
-    - Description > Description: **List of price, discounted_price, title, author, category, discount, publisher, contributor, description**
+    - Description > Description: **List of price, title, author, category, discount, publisher, contributor, description**
 
     - Source > SQL Query: Copy and paste the below query:
 

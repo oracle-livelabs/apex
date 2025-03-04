@@ -220,7 +220,7 @@ END OBS_MANAGE_ORDERS;
                     n002,
                     b.discount,
                     SYSDATE,
-                    SYSTIMESTAMP AT TIME ZONE 'Asia/Kolkata' AS added_time
+                    SYSTIMESTAMP
             FROM   apex_collections a, obs_books b
             WHERE  collection_name = 'BOOKS'
             AND    b.book_id = a.n001;

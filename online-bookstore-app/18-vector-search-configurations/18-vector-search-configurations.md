@@ -136,6 +136,47 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
 
     !["Page Designer"](images/18-3-3.png "")
 
+4. Navigate to **Object Browser** via **SQL Workshop**
+
+    !["Page Designer"](images/18-3-4.png "")
+
+5. In the object tree, right-click **Triggers** and select **Create Trigger**
+
+    !["Page Designer"](images/18-3-5.png "")
+
+6. Enter/Select the following and click **Create Trigger**
+
+    - Table: **OBS_BOOKS**
+
+    - Firing Point: **Before**
+
+    !["Page Designer"](images/18-3-6.png "")
+
+7. Replace the existing code with the below code:
+
+    ```
+    <copy>
+    CREATE OR REPLACE TRIGGER "OBS_BOOKS_T_1"
+    BEFORE INSERT OR UPDATE ON "OBS_BOOKS"
+    FOR EACH ROW
+    BEGIN
+
+        IF :NEW.DESCRIPTION != :OLD.DESCRIPTION THEN
+            :NEW.DESCRIPTION_VECTOR := APEX_AI.GET_VECTOR_EMBEDDINGS(
+                    P_VALUE             => :NEW.DESCRIPTION,
+                    P_SERVICE_STATIC_ID => 'db_onnx_model'
+            );
+        END IF;
+    END;
+    /
+    </copy>
+     ```
+
+8. Click **Save and Compile**
+
+    !["Page Designer"](images/18-3-8.png "")
+
+
 ## Task 4: Create a Search Configuration
 
 In this task, you will set up a Search Configuration based on Oracle Vector Search.

@@ -93,6 +93,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
 
     ![Click Timeline](images/edit-post.png " ")
 
+    *NOTE: These are the default operations provided by the OCI AI Vision service, for this HOL we will be using only the POST operation.*
+
     ![Click Timeline](images/post.png " ")
 
 11. Under Operation Parameters, click **Synchronize with Body** and click **OK**.
@@ -136,6 +138,8 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
     ![Click Timeline](images/14-2-19-save.png " ")
 
 ## Task 2: Create Automation
+
+In this task, we will create an automation in Oracle APEX that updates the object\_det and text\_det columns of the obs\_books table. This automation will be triggered whenever book details are updated. To ensure efficiency, we will add a WHERE clause so that the automation executes only when the Book_image column is modified. If no rows meet this condition, the automation will exit immediately without performing any unnecessary operations.
 
 1. Navigate to **Shared Components** and under **Workflows and Automations**, select **Automations**.
 

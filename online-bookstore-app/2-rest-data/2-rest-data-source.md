@@ -10,6 +10,8 @@ Data Synchronization lets developers automatically cache the data from a REST se
 
 A faceted search page displays and filters data using an intuitive experience users recognize from e-commerce sites (a left Search region and a Report region). The report region displays search results as cards or a classic report.
 
+You can load the data directly into the OBS\_BOOK table from this [obs\_books.csv](files/obs_books.csv) file, which is the old, basic method of data loading. Instead, explore modern approaches like fetching data dynamically from GitHub, as demonstrated in Task 1 and Task 2.
+
 Estimated Time: 5 minutes
 
 ### Objectives
@@ -22,33 +24,31 @@ In this lab, you will:
 
 ## Task 1: Extract data using REST Data Source
 
-1. You can load the data directly into the OBS\_BOOK table from this [obs\_books.csv](files/obs_books.csv) file, which is the old, basic method of data loading. Instead, explore modern approaches like fetching data dynamically from GitHub, as demonstrated in Task 1 and Task 2.
-
-2. Click **App Builder** on the top Navigation Bar.
+1. Click **App Builder** on the top Navigation Bar.
 
     ![App builder home page](images/click-app-builder.png " ")
 
-3. Click **Online Bookstore** Application.
+2. Click **Online Bookstore** Application.
 
     ![App builder home page](images/select-obs-app.png " ")
 
-4. Click **Shared Components**.
+3. Click **Shared Components**.
 
     ![App builder home page](images/select-sc.png " ")
 
-5. Under **Data Sources**, click **REST Data Sources**.
+4. Under **Data Sources**, click **REST Data Sources**.
 
     ![App builder home page](images/rest-data-source.png " ")
 
-6. Click **Create**.
+5. Click **Create**.
 
     ![App builder home page](images/rds-create.png " ")
 
-7. On Create REST Data Source - Method, click **Next**.
+6. On Create REST Data Source - Method, click **Next**.
 
     ![App builder home page](images/rds-next1.png " ")
 
-8. On Create REST Data Source, enter/select the following:
+7. On Create REST Data Source, enter/select the following:
 
      - REST Data Source Type : **Simple HTTP**
 
@@ -62,24 +62,23 @@ In this lab, you will:
         </copy>
         ```
 
-
      Click **Next**.
 
     ![App builder home page](images/rds-name.png " ")
 
-9. On **Create REST Data Source - Remote Server** wizard, leave as default and click **Next**.
+8. On **Create REST Data Source - Remote Server** wizard, leave as default and click **Next**.
 
     ![App builder home page](images/rds-next2.png " ")
 
-10. On **Create REST Data Source - Settings** wizard, leave as default and click **Next**.
+9. On **Create REST Data Source - Settings** wizard, leave as default and click **Next**.
 
     ![App builder home page](images/rds-next3.png " ")
 
-11. Click **Discover**. APEX invokes the REST service URL and a Preview appears.
+10. Click **Discover**. APEX invokes the REST service URL and a Preview appears.
 
     ![App builder home page](images/rds-discover.png " ")
 
-12. Click **Create REST Data Source**. The REST Data Source is created.
+11. Click **Create REST Data Source**. The REST Data Source is created.
 
     ![App builder home page](images/create-rds.png " ")
 

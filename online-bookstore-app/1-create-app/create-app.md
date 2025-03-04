@@ -77,6 +77,8 @@ In this lab, you create a simple application with one click called **Online Book
 
     ```
     <copy>
+    #prefix: obs
+
     Users
       user_id num /pk
       username  /nn /unique

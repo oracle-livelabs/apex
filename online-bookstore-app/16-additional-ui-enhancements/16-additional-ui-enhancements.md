@@ -774,7 +774,7 @@ In this lab, you will:
                 to_char(Round( SUM(i.price * ((100 - i.discount) / 100) * i.quantity),0),'999G999G999G999G999G999G990') AS total,
                 SUM(i.quantity) AS quantity,
                 TO_CHAR(i.added_date, 'DD MON YYYY') as purchased_date,
-                TO_CHAR(i.added_time, 'HH12:MI:SS AM') || ' IST'  AS purchased_time,
+                TO_CHAR(i.added_time, 'HH12:MI:SS AM') AS purchased_time,
                 i.added_time added_time
             FROM   obs_orders o
             LEFT JOIN obs_order_items i

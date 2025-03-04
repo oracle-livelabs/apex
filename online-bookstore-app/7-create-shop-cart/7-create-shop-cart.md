@@ -826,7 +826,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
             SUM(i.price* ((100-i.discount)/100) * i.quantity) AS total,
             sum(i.quantity) AS quantity,
             TO_CHAR(i.added_date, 'DD MON YYYY') as added_date,
-            TO_CHAR(i.added_time, 'HH12:MI:SS AM') || ' IST'  AS added_time
+            TO_CHAR(i.added_time, 'HH12:MI:SS AM') AS added_time
 
         FROM   obs_orders o
         LEFT JOIN obs_order_items i
@@ -946,7 +946,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 ## Task 5: Add My Books to Navigation Bar List
 
-In this task, you add an entry to the navigation bar that displays the shopping cart icon and item count dynamically.
+In this task, you will add a navigation bar entry that links to the My Books page.
 
 1. Navigate to **Shared Components**.
 
