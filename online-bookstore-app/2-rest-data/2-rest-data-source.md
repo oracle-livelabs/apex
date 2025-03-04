@@ -24,6 +24,8 @@ In this lab, you will:
 
 ## Task 1: Extract data using REST Data Source
 
+In this task, you'll create a REST Data Source to extract data from an external API. This will allow you to fetch and integrate book data into your application.
+
 1. Click **App Builder** on the top Navigation Bar.
 
     ![App builder home page](images/click-app-builder.png " ")
@@ -84,6 +86,8 @@ In this lab, you will:
 
 ## Task 2: Enable Data Synchronization
 
+In this task, you'll synchronize data from a REST Data Source into an existing database table. You'll map the data to the OBS_BOOKS table.
+
 1. After creating REST Data Source, click **No** to enable Synchronization.
 
     ![App builder home page](images/click-no.png " ")
@@ -112,7 +116,7 @@ In this lab, you will:
 
 ## Task 3: Create a Faceted Search Page
 
-In this task, you create Faceted Search page which will display list of the books with their titles and authors.
+In this task, you will create a Faceted Search page that displays a list of books along with their details, such as titles, authors, and more.
 
 1. Go to **Online Bookstore** application. Click **Create Page**.
 

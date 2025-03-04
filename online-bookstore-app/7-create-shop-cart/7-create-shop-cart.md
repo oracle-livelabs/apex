@@ -724,6 +724,8 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 ## Task 4: Build Order Information Page
 
+In this task, you'll build an Order Information page to display order details and purchased items. You'll create different sections using regions, reports, and cards to present transaction status, order summary, and item details dynamically.
+
 1. Navigate to Application Home Page by clicking **Application ID**.
 
     ![close dialog](images/app-id10.png " ")
@@ -981,6 +983,8 @@ In this task, you will add a navigation bar entry that links to the My Books pag
     ![close dialog](images/navi-entry-details.png " ")
 
 ## Task 6: Build My Books Page
+
+In this task, you'll create a My Books page to display books purchased by the user. The page will use a Cards region to showcase book details, including title, price, quantity, and discount.
 
 1. Click **Application ID**.
 

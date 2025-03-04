@@ -14,6 +14,8 @@ In this lab, you will:
 
 ## Task 1: Update Theme of the Application
 
+In this task, you'll update the application's theme using Theme Roller. You'll customize the layout, appearance, and color scheme to enhance the look and feel of the application.
+
 1. In the runtime view, click **Customize** from the developer toolbar.
 
    ![App builder home page](images/customize.png " ")
