@@ -24,6 +24,8 @@ In this lab, you will:
 
 ## Task 1 Add Built with APEX To Footer
 
+In this task, you will update the application's footer to display "Built with APEX" This helps showcase the platform used for development.
+
 1. Navigate to the application homepage and click **Edit Application Definition**.
 
     ![Click](images/16-1-1.png " ")
@@ -42,6 +44,8 @@ In this lab, you will:
 
 ## Task 2: Remove Hamburger Icon (Navigation Menu)
 
+In this task, you will update the user interface settings to remove the hamburger icon and hide the navigation menu for a cleaner layout.
+
 1. Navigate to the application homepage and click **Edit Application Definition**.
 
     ![Click](images/16-1-1.png " ")
@@ -59,6 +63,8 @@ In this lab, you will:
     ![Click](images/16-2-4.png " ")
 
 ## Task 3: Integrate Global Search
+
+In this task, you will integrate a global search feature that remains accessible across all pages. This will enhance the user experience by allowing seamless navigation and quick access to search functionality.
 
 1. Navigate to the application homepage and click **Shared Components**.
 
@@ -305,6 +311,8 @@ In this lab, you will:
     ![Click](images/16-4-33.2.png " ")
 
 ## Task 4: Use Email Templates For Sending Emails
+
+In this task, you will create and configure email templates to standardize the emails sent for user signup and forgot password verification. You will set up placeholders, define the email structure, and implement processes for sending these verification emails.
 
 1. Navigate to the application homepage and click **Shared Components**.
 
@@ -678,6 +686,8 @@ In this lab, you will:
 
 ## Task 5: Default Profile Picture
 
+In this task, you will configure a default profile picture for users who haven't uploaded one. You will upload a default image as a static file and modify the RESTful service query to ensure that users without a profile picture are assigned the default image automatically.
+
 1. Navigate to the application homepage and click **Shared Components**
 
     ![Click](images/16-6-1.png " ")
@@ -720,6 +730,8 @@ In this lab, you will:
     ![Click](images/16-6-9.png " ")
 
 ## Task 6: My Orders Page
+
+In this task, you will create the My Orders page to display users' past orders, including order details, payment information, and total amount. You will configure the page, write an SQL query to fetch order data, and enable navigation to order details.
 
 1. Navigate to the application homepage and click **Create Page**.
 
@@ -895,6 +907,8 @@ In this lab, you will:
     ![Click](images/16-5-18.2.png " ")
 
 ## Task 7: Enhance Home Page
+
+In this task, you will enhance the Home Page by updating the total book count label, repositioning the sorting option, and applying custom styling. These changes will improve the page layout and user experience.
 
 1. Navigate to the application homepage and select page **10- Search Books**.
 

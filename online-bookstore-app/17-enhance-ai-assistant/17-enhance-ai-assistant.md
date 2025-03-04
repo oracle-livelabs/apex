@@ -14,6 +14,8 @@ In this lab, you will:
 
 ## Task 1: Create Multiple RAG Data Source
 
+In this task, you will enhance the AI configurations by adding a new RAG source for order details. This will enable the AI to retrieve and provide accurate order-related responses.
+
 1. Navigate to **Shared Components**.
 
     ![Page Designer](images/17-1-1.png ' ')
@@ -111,6 +113,8 @@ In this lab, you will:
     ![Page Designer](images/17-1-10.png ' ')
 
 ## Task 2: Run the Application
+
+In this task, you will test the AI Assistant by running the application and querying order-related details. This will help verify that the AI retrieves accurate responses based on the newly added RAG source for orders.
 
 1. Run the application and click **AI Assistant** entry in the navigation bar.
 
