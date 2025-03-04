@@ -16,9 +16,7 @@ In this lab, you:
 
 ## Task 1: Integrating with Object Detection and Text Detection
 
-Configure OCI Vision REST API as REST Data Source
-
-In this task, you create a REST Data Source with OCI vision REST API as the endpoint.
+In this task, you will create a REST Data Source using the OCI Vision REST API as the endpoint to enable object and text detection in your application.
 
 1. Navigate to the application home page and click **Shared Components**.
 
@@ -285,9 +283,11 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
     ![Click Timeline](images/14-2-9-process-details-calloci.png " ")
 
-10. Click Save.
+10. Click **Save**.
 
 ## Task 3: Create a trigger
+
+In this task, you will create a trigger that resets object and text detection fields whenever a book image is updated. This ensures that changes to book images trigger reprocessing.
 
 1. Navigate to **Object Browser** via **SQL Workshop**
 
@@ -328,6 +328,8 @@ In this task, we will create an automation in Oracle APEX that updates the objec
      ![Click Timeline](images/14-3-5-save-and-compile1.png " ")
 
 ## Task 4: Run the Application
+
+In this task, you will run the application and test the enhanced search functionality, which now includes text and object detection from book covers. This allows users to find books based on cover content.
 
 1. Run the application and enter the credentials below:
 

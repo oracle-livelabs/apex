@@ -16,6 +16,8 @@ In this lab, you will:
 
 ## Task 1: Create Web Credential
 
+In this task, you will generate an API key in Test Mode on the Razorpay dashboard and use it to create a web credential in your workspace for secure authentication and seamless integration of the demo payment gateway.
+
 1. Login/Signup to your Razorpay Dashboard [console](https://dashboard.razorpay.com/signin?screen=sign_in).
 
 2. Select the **Test** mode from (Test or Live) to generate the API key.
@@ -57,6 +59,8 @@ In this lab, you will:
     ![Click Timeline](images/15-1-9-details.png " ")
 
 ## Task 2: Create REST Data Source
+
+In this task, you will create a REST Data Source to integrate with the Razorpay API, enabling seamless communication for order creation within the application.
 
 1. Navigate to the application home page and click **Shared Components**.
 
@@ -120,6 +124,7 @@ In this lab, you will:
     ```
 
     ![Click Timeline](images/15-2-10-edit-post.png " ")
+
     ![Click Timeline](images/15-2-10-post-details.png " ")
 
 11. Under Operation Parameters, click **Synchronize with body** and click **OK**.
@@ -137,6 +142,7 @@ In this lab, you will:
    {: title="POST Operation Parameters"}
 
     ![Click Timeline](images/15-2-13-add-para1.png " ")
+
     ![Click Timeline](images/15-2-13-add-para2.png " ")
 
 14. Click **Apply Changes**.
@@ -144,6 +150,8 @@ In this lab, you will:
     ![Click Timeline](images/15-2-14-apply-changes.png " ")
 
 ## Task 3: Update OBS MANAGE ORDERS Package
+
+In this task, you will update the OBS\_MANAGE\_ORDERS package to include Razorpay payment details while creating orders, ensuring proper order tracking and payment integration.
 
 1. Expand **SQL Workshop** and navigate to **Object Browser**.
 
@@ -224,6 +232,8 @@ In this lab, you will:
      ![Click Timeline](images/15-3-4-manage-orders-package-body.png " ")
 
 ## Task 4: Integrate Payment Gateway in Shopping Cart Page
+
+This task integrates the Razorpay payment gateway into the Shopping Cart page, enabling seamless order processing and payment handling within the application.
 
 1. Navigate to **App Builder** and select **Online Bookstore Application**.
 
@@ -489,6 +499,8 @@ In this lab, you will:
 21. Click **Save**.
 
 ## Task 5: Run the Application
+
+In this task, you will run the application, log in, add items to the shopping cart, and complete a simulated payment using Razorpay's integration. This step ensures the end-to-end functionality of the payment gateway, from order creation to transaction confirmation.
 
 1. Run the application and enter the credentials below:
 
