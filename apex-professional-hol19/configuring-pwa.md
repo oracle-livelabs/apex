@@ -18,6 +18,12 @@ In this lab, you:
 
 - Include screenshots to be displayed while installing the PWA app.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol18.sql)**
+
 ## Task 1: Configure Progressive Web Application
 
 1. Navigate to the **Demo Projects** Application.
