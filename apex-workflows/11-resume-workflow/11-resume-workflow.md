@@ -38,7 +38,7 @@ To view debug messages for a specific workflow instance:
 
     ![wait for feedback](./images/shared-components.png " ")
 
-4. On the **Shared Components** page, click **Workflows** under Workflows and Automations.
+4. Under **Workflows and Automations**, click **Workflows**.
 
     ![wait for feedback](./images/workflows-and-automations.png " ")
 
@@ -46,11 +46,15 @@ To view debug messages for a specific workflow instance:
 
     ![wait for feedback](./images/doctor-appointment-workflow.png " ")
 
-6. Click on **1.0 [Dev]** and in the property editor, select Debug Level: **Info**, under Advanced.
+6. Under **Doctor Appointment** workflow select **1.0 [Dev]**. In the Property Editor, enter/select the following:
+
+    - Under Advanced:
+
+        - Debug Level: **Info**
 
     ![wait for feedback](./images/debug-level-info.png " ")
     
-7. Go back to Application page and click **Utilities**.
+7. Navigate back to Application Id and click **Utilities**.
 
      ![wait for feedback](./images/go-back-application-page.png " ")
 
