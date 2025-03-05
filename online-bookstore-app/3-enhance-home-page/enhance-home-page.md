@@ -370,41 +370,11 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/book-image-computation.png " ")
 
-14. Right-click **P18\_BOOK\_ID** and select **Duplicate**.
-
-    ![App builder home page](images/create-dup.png " ")
-
-15. In the Property Editor, update Name to **P18\_BUY\_LINKS**.
-
-    ![App builder home page](images/page-item-buy-links.png " ")
-
-16. Right-click **P18\_BUY\_LINKS** and select **Create Computation**.
-
-    ![App builder home page](images/create-comp.png " ")
-
-17. In the Property Editor, enter/select the following:
-
-    - Execution > Point: **Before Header**
-
-    - Under Computation:
-
-        - Type: **SQL Query (return single value)**
-
-        - SQL Query: Copy and paste below code into the code editor
-
-            ```
-            <copy>
-            select BUY_LINKS from obs_books where book_id= :P18_BOOK_ID
-            </copy>
-            ```
-
-    ![App builder home page](images/buy-links-computation.png " ")
-
-18. In the left pane, right-click **Content Body** and select **Create Region**.
+14. In the left pane, right-click **Content Body** and select **Create Region**.
 
       ![App builder home page](images/create-region1.png " ")
 
-19. In the Property Editor, enter/select the following:
+15. In the Property Editor, enter/select the following:
 
     - Identification > Name: **IMAGE\_DISPLAY**
 
@@ -414,7 +384,11 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/region-details1.png " ")
 
-20. Right-click **Content Body** and select **Create Region**. In the Property Editor, enter/select the following:
+16. Right-click **Content Body** and select **Create Region**.
+
+    ![App builder home page](images/region-2.png " ")
+
+17. In the Property Editor, enter/select the following:
 
      - Under Identification:
 
@@ -430,17 +404,19 @@ In this task, we will create a book details page that opens when a book on the h
 
         ```
         <copy>
-        select BOOK_ID,
+        SELECT
+           BOOK_ID,
            Round(PRICE,2) as price,
            TITLE,
            AUTHOR,
            DISCOUNT,
            PUBLISHER,
            CONTRIBUTOR,
+           CATEGORY,
            DESCRIPTION,
            ROUND(Price*((100- Discount)/100),2) as new_price
-        from OBS_BOOKS
-        where BOOK_ID=:P18_BOOK_ID
+        FROM OBS_BOOKS
+        WHERE BOOK_ID=:P18_BOOK_ID
        </copy>
        ```
 
@@ -452,7 +428,7 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/book-info-details.png " ")
 
-21. In the right pane, click **Attributes**. In the Property Editor, update the following:
+18. In the right pane, click **Attributes**. In the Property Editor, update the following:
 
     - Appearance > Template: **Value Attribute Pairs-Column**
 
@@ -460,11 +436,11 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/book-info-save.png " ")
 
-22. Under **Book Information** region, expand columns, select **BOOK\_ID**, **NEW\_PRICE** and change **Type** to **Hidden** under Identification.
+19. Under **Book Information** region, expand columns, select **BOOK\_ID**, **NEW\_PRICE** and change **Type** to **Hidden** under Identification.
 
        ![App builder home page](images/bookid-hidden.png " ")
 
-23. Select **PRICE** and update the following:
+20. Select **PRICE** and update the following:
 
      - Column Formatting > HTML Expression:
      ```
@@ -475,7 +451,7 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/price-html.png " ")
 
-24. Select **DISCOUNT** and update the following:
+21. Select **DISCOUNT** and update the following:
 
      - Column Formatting > HTML Expression:
      ```
@@ -486,19 +462,19 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/discount-html.png " ")
 
-25. Click **Save**.
+22. Click **Save**.
 
     ![App builder home page](images/click-save-2.png " ")
 
-26. In the page designer toolbar, select **Page Selector** and click **10**.
+23. In the page designer toolbar, select **Page Selector** and click **10**.
 
     ![App builder home page](images/navigate-to-10.png " ")
 
-27. In the left pane, under **Search Results** region, right-click **Actions** and select **Create Action**.
+24. In the left pane, under **Search Results** region, right-click **Actions** and select **Create Action**.
 
     ![App builder home page](images/create-action.png " ")
 
-28. In the Property Editor, enter/select the following:
+25. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Full Card**
 
@@ -518,7 +494,7 @@ In this task, we will create a book details page that opens when a book on the h
 
     ![App builder home page](images/action-details.png " ")
 
-29. Click **Save and Run**.
+26. Click **Save and Run**.
 
     ![App builder home page](images/action-review.png " ")
 
