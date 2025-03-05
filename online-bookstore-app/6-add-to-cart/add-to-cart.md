@@ -437,6 +437,10 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
     ![Page Items](images/shop-cart-page-item.png " ")
 
+    ![Page Items](images/book-in-cart-page-item.png " ")
+
+    ![Page Items](images/quantity-page-item.png " ")
+
 5. Select P18\_QUANTITY and update the following:
 
     - Appearance > Template: **Required**
@@ -447,8 +451,8 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - SQL Query: Copy and Paste the below code:
 
-        ```
-        <copy>
+            ```
+            <copy>
             WITH list_of_numbers(Num) AS (
               SELECT 1
               FROM dual
@@ -460,13 +464,14 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
             SELECT Num as d, Num as r
             FROM list_of_numbers;
-        </copy>
-        ```
+            </copy>
+            ```
+
          - Display Extra Values: **Toggle Off**
 
          - Display Null Values: **Toggle Off**
 
-    ![Quantity Page Item](images/quantity.png " ")
+    ![Quantity Page Item](images/quantity1.png " ")
 
 6. Right-click **P18\_BOOK\_IN\_CART** and select **Create Computation**.
 
@@ -482,11 +487,11 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
             ```
             <copy>
-            obs_manage_orders.book_exists(p_book => :P18_BOOK_ID) 
+            obs_manage_orders.book_exists(p_book => :P18_BOOK_ID)
             </copy>
             ```
 
-    ![Computation](images/book-in-cart-comp-details.png " ")
+    ![Computation](images/book-in-cart-computation-details.png " ")
 
 8. In the left pane, right-click **Buttons Bar** and select **Create Button**.
 
