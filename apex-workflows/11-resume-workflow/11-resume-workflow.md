@@ -32,23 +32,43 @@ To view debug messages for a specific workflow instance:
 
 2. Select **Doctor's Appointment** application.
 
-3. Click **Utilities**.
+    ![wait for feedback](./images/doctor-appointment-page.png " ")
+
+3. Click **Shared Components**.
+
+    ![wait for feedback](./images/shared-components.png " ")
+
+4. On the **Shared Components** page, click **Workflows** under Workflows and Automations.
+
+    ![wait for feedback](./images/workflows-and-automations.png " ")
+
+5. Select **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/doctor-appointment-workflow.png " ")
+
+6. Click on **1.0 [Dev]** and in the property editor, select Debug Level: **Info**, under Advanced.
+
+    ![wait for feedback](./images/debug-level-info.png " ")
+    
+7. Go back to Application page and click **Utilities**.
+
+     ![wait for feedback](./images/go-back-application-page.png " ")
 
     ![wait for feedback](./images/utilities.png " ")
 
-4. On the **Utilities** page, click **Debug Messages**.
+8. On the **Utilities** page, click **Debug Messages**.
 
     ![wait for feedback](./images/debug-msgs.png " ")
 
-5. Click **Actions**, **Columns**.The Select Columns window appears.
+9. Click **Actions**, **Columns**. The Select Columns window appears.
 
     ![wait for feedback](./images/columns.png " ")
 
-6. In the **Do Not Display** section, select **Workflow Instance**.
+10. In the **Do Not Display** section, select **Workflow Instance**.
 
-7. Click **Move** to move **Workflow Instance** to **Display in Report**.
+11. Click **Move** to move **Workflow Instance** to **Display in Report**.
 
-8. Click **Apply**.
+12. Click **Apply**.
 
     ![wait for feedback](./images/workflow-instance.png " ")
 
