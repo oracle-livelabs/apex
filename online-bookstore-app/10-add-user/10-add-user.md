@@ -86,7 +86,6 @@ This task provides step-by-step instructions for creating a profile page display
             select  distinct
                 oi.book_id as book_id,
                 bi.book_image as book_image,
-                bi.buy_links as buy_links,
                 bi.title as title,
                 oi.price as price,
                 bi.description as description,
