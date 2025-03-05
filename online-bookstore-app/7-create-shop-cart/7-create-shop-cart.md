@@ -74,7 +74,6 @@ In this task, you develop a new page in the application to display the shopping 
         SELECT
             b.book_id,
             b.title,
-            b.buy_links,
             b.price,
             b.description,
             b.discount,
