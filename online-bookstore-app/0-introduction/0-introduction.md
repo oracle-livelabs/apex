@@ -11,6 +11,7 @@ Estimated Time: 4 hours 40 minutes
 In this workshop, you will:
 
 - Develop an APEX Application
+- Load Data using Data Workshop
 - Integrate REST Data Sources
 - Customize Themes and UI
 - Configure Authentication & Security
@@ -37,7 +38,7 @@ In this workshop, you will:
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Create the application](?lab=create-app) | 4 minutes |
-| 2 | [Create REST data source](?lab=2-rest-data-source) | 5 minutes |
+| 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | 5 minutes |
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 15 minutes |
 | 4 | [Customize Application Theme](?lab=application-theme) | 1 minute |
 | 5 | [Custom Authentication](?lab=authentication) | 5 minutes |

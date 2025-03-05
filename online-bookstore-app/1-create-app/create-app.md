@@ -71,7 +71,7 @@ In this lab, you create a simple application with one click called **Online Book
 
 In this task, you'll use Quick SQL to quickly generate and execute a script for creating database tables. This script defines tables for an online bookstore app, including Users, Books, Orders, and more. Once executed, you can review the tables in the Object Browser.
 
-1. Navigate to Select **SQL Workshop** and select **Utilities > Quick SQL**.
+1. Navigate to select **SQL Workshop** and select **Utilities > Quick SQL**.
 
     ![Create Application wizard](./images/quick-sql.png " ")
 

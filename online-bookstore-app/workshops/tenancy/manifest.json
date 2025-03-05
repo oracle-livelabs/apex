@@ -3,7 +3,7 @@
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../intro/introduction.md"
+        "filename": "../../0-introduction/0-introduction.md"
       },
       {
         "title": "Get Started",
@@ -14,8 +14,8 @@
         "filename": "../../1-create-app/create-app.md"
       },
       {
-        "title": "Lab 2: Create REST Data Source ",
-        "filename": "../../2-rest-data/2-rest-data-source.md"
+        "title": "Lab 2: Load Data Using Data Workshop ",
+        "filename": "../../2-load-data-using-data-workshop/2-load-data-using-data-workshop.md"
       },
       {
         "title": "Lab 3: Enhance the Home Page",
