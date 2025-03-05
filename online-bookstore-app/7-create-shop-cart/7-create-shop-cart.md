@@ -894,9 +894,8 @@ In this task, you'll build an Order Information page to display order details an
                 o.price,
                 (o.price) Subtotal,
                 b.book_image,
-                b.buy_links,
                 o.quantity,
-            o.price*((100-b.discount)/100) *o.quantity as total_price
+                o.price*((100-b.discount)/100) *o.quantity as total_price
         FROM   obs_order_items o,
             obs_books b
         WHERE  b.book_id = o.book_id
@@ -935,7 +934,6 @@ In this task, you'll build an Order Information page to display order details an
 
             ```
             <copy>
-            <a href="&BUY_LINKS." target="_blank">
             <img src="&BOOK_IMAGE." width="160rem" height="180 rem" alt="Error in the image">
             </copy>
             ```
