@@ -6,6 +6,16 @@ In this lab, you use the Theme Roller to save a new Theme Style. Then, you enabl
 
 Estimated Time: 5 minutes
 
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+
 ## Task 1: Use Themes and Theme Styles
 
 In this task, you save a Theme Style by using the Theme Roller. Then, you enable end users to apply this style while running the application.
