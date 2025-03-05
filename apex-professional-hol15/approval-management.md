@@ -120,45 +120,19 @@ In this task, you will learn how to configure a process to send automated email 
 
 This task focuses on capturing customer feedback after an order is placed. By adding interactive elements like a star rating and feedback text box, you will create a mechanism to gather valuable insights from users about their shopping experience.
 
-1. Navigate to **SQL Workshop**, click **Object Browser**.
-
-    ![Select Sql Workshop](./images/object-browser.png " ")
-
-2. Under **Tables**, select **Orders** and click **Add Column**.
-
-    ![Select Sql Workshop](./images/add-column.png " ")
-
-3. Add the following three columns into the **Orders** table and click **Apply**.
-
-    | Column | Data Type | Length | Default |
-    | ------ | --------- | ------ | ------- |
-    | STAR_RATING | NUMBER |      |         |
-    | FEEDBACK   | VARCHAR2 | 2000 |        |
-    | EMAIL_FLAGGED | VARCHAR2 | 1  | 'N' |
-
-    ![Select Sql Workshop](./images/star-rating.png " ")
-
-    ![Select Sql Workshop](./images/feedback.png " ")
-
-    ![Select Sql Workshop](./images/email-flagged.png " ")
-
-4. Navigate to **App Builder**.
-
-    ![Select Sql Workshop](./images/app-builder.png " ")
-
-5. Select **Online Shopping Application**.
+1. Navigate to **App Builder** and select **Online Shopping Application**.
 
     ![Select Sql Workshop](./images/online-shop-app.png " ")
 
-6. Click **16 - Order Information**.
+2. Click **16 - Order Information**.
 
     ![Select Sql Workshop](./images/16-shop-info.png " ")
 
-7. In the left pane, right-click **Thank you for your order!** region and select **Create Sub Region**.
+3. In the left pane, right-click **Thank you for your order!** region and select **Create Sub Region**.
 
     ![Select Sql Workshop](./images/sub-region.png " ")
 
-8. In the Property Editor, enter/select the following:
+4. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Rate your shopping experience**
 
@@ -166,11 +140,11 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/rate-your-exp.png " ")
 
-9. Right-click **Rate your shopping experience** region and select **Create Page Item**.
+5. Right-click **Rate your shopping experience** region and select **Create Page Item**.
 
     ![Select Sql Workshop](./images/page-item1.png " ")
 
-10. Create the following two page items one after the other:
+6. Create the following two page items one after the other:
 
     | Name | Type | Label |
     | ---- | ---- | ----- |
@@ -181,11 +155,11 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/feedback-item.png " ")
 
-11. Right-click **Rate your shopping experience** region and select **Create Button**.
+7. Right-click **Rate your shopping experience** region and select **Create Button**.
 
     ![Select Sql Workshop](./images/create-btn-submit.png " ")
 
-12. In the Property Editor, enter/select the following:
+8. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -207,11 +181,11 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
     ![Select Sql Workshop](./images/btn-server.png " ")
 
-13. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+9. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![Select Sql Workshop](./images/create-process-1.png " ")
 
-14. In the Property Editor, enter/select the following:
+10. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Submit Review**
 
@@ -232,7 +206,7 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
      ![Select Sql Workshop](./images/submit-review.png " ")
 
-15. Click **Save**.
+11. Click **Save**.
 
 ## Task 3: Create an Email Template
 

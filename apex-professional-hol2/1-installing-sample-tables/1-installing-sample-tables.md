@@ -18,6 +18,14 @@ In this lab, you will:
 
 - Install a sample dataset into your Oracle APEX Workspace.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2GettingStarted-with-OracleAPEX-Lab1shop.sql)**.
+
+Import them into your workspace. To run the app, please run the steps described in the following workshop:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
 ## Task 1: Create Customer Orders Tables
 
 1. Log in to your workspace. If you are already logged in, click on the **APEX** logo in the upper left-hand corner of the page to return to the APEX workspace home page.

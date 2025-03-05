@@ -18,7 +18,7 @@ In this lab, you will:
 
 - Create lookup tables.
 
-## Task 1: Add Columns to the Products Table
+## Task 1: Add Columns to the Products and Order Table
 
 1. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, select **Object Browser**.
 
@@ -63,6 +63,24 @@ In this lab, you will:
      Click **Apply**.
 
     ![Add column Clothing2](images/add-clothing-column2.png " ")
+
+6. Under **Tables**, select **Orders** and click **Add Column**.
+
+    ![Select Sql Workshop](./images/add-column1.png " ")
+
+7. Add the following three columns into the **Orders** table and click **Apply**.
+
+    | Column | Data Type | Length | Default |
+    | ------ | --------- | ------ | ------- |
+    | STAR_RATING | NUMBER |      |         |
+    | FEEDBACK   | VARCHAR2 | 2000 |        |
+    | EMAIL_FLAGGED | VARCHAR2 | 1  | 'N' |
+
+    ![Select Sql Workshop](./images/star-rating.png " ")
+
+    ![Select Sql Workshop](./images/feedback.png " ")
+
+    ![Select Sql Workshop](./images/email-flagged.png " ")
 
 ## Task 2: Populate the new columns
 

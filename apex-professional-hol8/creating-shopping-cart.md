@@ -18,6 +18,18 @@ By the end of this lab, you will be able to:
 
 - Add and configure hidden fields to store and manipulate shopping cart data.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingAndCustomisingInteractiveGrids-OnlineShoppingApplication.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+
 ## Task 1: Add Items and Buttons to display Order Information
 
 In this task, you will enhance the functionality of the Shopping Cart page in an online shopping application. By adding new page items and buttons, such as "Proceed to Checkout" and "Clear Shopping Cart," users can manage their shopping experience more efficiently. You will also create fields to capture customer details like email, full name, and store selection, streamlining the checkout process and improving the user interface.

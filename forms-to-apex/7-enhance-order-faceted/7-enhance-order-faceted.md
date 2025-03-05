@@ -52,23 +52,23 @@ Since order filled is not a key facet search, let's remove it by following these
 
         - SQL Query: Copy and paste the below SQL query
 
-    ```
-    <copy>
-    SELECT id,
-       customer_id,
-       date_ordered,
-       date_shipped,
-       sales_rep_id,
-       (SELECT Sum(i.price * i.quantity)
-        FROM   s_ord o
-               JOIN s_item i
-                 ON o.id = i.ord_id
-        WHERE  o.id = s_ord.id) TOTAL,
-       payment_type,
-       order_filled
-       FROM   s_ord;
-    </copy>
-    ```
+        ```
+        <copy>
+        SELECT id,
+           customer_id,
+           date_ordered,
+           date_shipped,
+           sales_rep_id,
+           (SELECT Sum(i.price * i.quantity)
+            FROM   s_ord o
+                JOIN s_item i
+                ON o.id = i.ord_id
+            WHERE  o.id = s_ord.id) TOTAL,
+            payment_type,
+            order_filled
+            FROM   s_ord;
+        </copy>
+        ```
 
     - Under Appearance:
 
@@ -88,11 +88,16 @@ Since order filled is not a key facet search, let's remove it by following these
 
         - Target > click **No Link Defined**
 
-             - Page: **6**
+            - Page: **6**
 
-             - Set Items > Name: **P6\_ID**, Value: **#ID#**
+            - Set Items:
 
-             - Clear Cache: **6**
+                |Name | Value |
+                | ---| ------ |
+                |P6\_ID | ID  |
+                {: title="Set Items"}
+
+            - Clear Cache: **6**
 
             Click **OK**.
 
