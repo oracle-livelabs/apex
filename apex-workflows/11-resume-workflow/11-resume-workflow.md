@@ -130,7 +130,7 @@ When a workflow is suspended and eventually variables are modified, the workflow
     - Under List of Values:
 
         - Type: **SQL Query**
-        - SQL Query: Copy and paste the following code
+        - SQL Query: Copy and paste the below code
         ```
         <copy>
         select wa.name as name,
@@ -144,7 +144,7 @@ When a workflow is suspended and eventually variables are modified, the workflow
         and wv.workflow_static_id = wa.workflow_static_id
        </copy>
        ```
-       - Display Extra Values: Toggle Off
+       - Display Extra Values: **Toggle Off**
        - Null Display Value: **- Select -**
 
     ![wait for feedback](./images/create-page-item-activity-static-id.png " ")
