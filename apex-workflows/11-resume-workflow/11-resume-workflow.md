@@ -112,19 +112,93 @@ This has been addressed now. Try the following steps:
 
 When a workflow is suspended and eventually variables are modified, the workflow can be resumed at any activity in the workflow, not just the current activity
 
-1. In the runtime environment, navigate to **Monitor Appointment Workflows**.
+1. Go to **Doctor Appointments Made Easy!** application page, click **10 - Form on Appointment**.
 
-2. Now, suspend one of the Patient Appointment in **Active** State. Select **Active** workflow and click **Suspend**.
+    ![wait for feedback](./images/navigate-page-10.png " ")
 
-    ![wait for feedback](./images/suspend.png " ")
+2. In the left pane, right click on Buttons and select **Create Page Item**.
 
-3. To resume the suspended workflow, select **Suspended** state workflow and click **Resume**.
+    ![wait for feedback](./images/create-a-new-page-item.png " ")
 
-    ![wait for feedback](./images/resume.png " ")
+3. In the Property Editor, enter/select the following:
 
-4. The state is **Resumed**.
+    - Under Identification:
 
-    ![wait for feedback](./images/workflow-resumed.png " ")
+        - Name: **P10\_ACTIVITY\_STATIC\_ID**
+        - Type: **Select List**
+
+    - Under List of Values:
+
+        - Type: **SQL Query**
+        - SQL Query: Copy and paste the following code
+        ```
+        <copy>
+        select wa.name as name,
+        wa.static_id as value
+        from apex_appl_workflow_activities wa,
+        apex_appl_workflow_versions   wv,
+        apex_workflows                wf$
+        where wf$.workflow_id = :P10_WORKFLOW_ID
+        and wf$.workflow_version_id  = wv.version_id
+        and wv.version_id   = wa.version_id
+        and wv.workflow_static_id = wa.workflow_static_id
+       </copy>
+       ```
+       - Display Extra Values: Toggle Off
+       - Null Display Value: **- Select -**
+
+    ![wait for feedback](./images/create-page-item-activity-static-id.png " ")
+
+4. Go to Processing tab, select **Resume** process. In the Property Editor, enter/select the following:
+
+    - Under Settings:
+
+        - Activity Static ID Item: **P10\_ACTIVITY\_STATIC\_ID**
+
+    Save the changes.
+
+    ![wait for feedback](./images/resume-process-settings.png " ")
+
+5. In the runtime environment, login as **STEVE** and navigate to **New Appointment**. Enter/select the following:
+
+    - Name: **RAJESH**
+    - Email: Enter any email id
+    - Problem: **Psychiatric**
+    - Appointment Date: Choose any date
+    - Doctor: **ANACHATT**
+    - Age: 45
+
+    Click on Submit.
+
+    ![wait for feedback](./images/new-appointment.png " ")
+
+6. Now, logout from the app and login as **ANACHATT**. Navigate to **Doctor Tasks** from the **Navigation Menu**.
+
+    ![wait for feedback](./images/navigate-doctor-tasks.png " ")
+
+7. Click on **Approve** for Appointment for RAJESH.
+
+    ![wait for feedback](./images/approve-the-task.png " ")
+
+8. Login again as **Steve**.
+
+9. Navigate to **Monitor Appointment Workflows** from the Navigation Menu by expanding **Dashboard**. Click on **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/active-workflow.png " ")
+
+10. Click on **Suspend** to suspend the current activity.
+
+    ![wait for feedback](./images/suspend-the-activity.png " ")
+
+11. Again, click on **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/suspended-activity.png " ")
+
+12. Select **Send Thank You Note To Patient** from the activity select list and click on **Resume** button.
+
+    ![wait for feedback](./images/resume-another-activity.png " ")
+
+13. The selected activity is now resumed and the workflow status has been changed to **COMPLETED**.
 
 ## Summary
 
