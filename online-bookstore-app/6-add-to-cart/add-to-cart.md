@@ -16,6 +16,18 @@ In this lab, you will:
 - Create Application Computations
 - Set Up Book Details Page
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Create a Package to Manage Orders
 
 In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:

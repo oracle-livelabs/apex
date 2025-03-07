@@ -12,6 +12,18 @@ In this lab, you will:
 
 - Push Notification
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Push Notification
 
 In this task, you will enable Push Notifications for the application and configure them to notify users when a book becomes available. You'll set up Progressive Web App (PWA) settings and implement a process to send notifications.

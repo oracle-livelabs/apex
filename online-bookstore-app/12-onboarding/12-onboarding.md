@@ -14,6 +14,18 @@ In this lab, you will:
 - Reset Password/Signup
 - Login with Google
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Creating Email Verification for Forgot Password
 
 In this task, you will create a Forgot Password page with email verification functionality. Users will enter their email to receive a reset link, ensuring secure password recovery. You will also update the login page to include a "Forgot Password" button for easy access.
@@ -325,6 +337,8 @@ In this task, you will create a Forgot Password page with email verification fun
 ## Task 2: Creating  Reset Password
 
 In this task, you will create a Reset Password page that allows users to securely update their password. The process includes validation checks, password confirmation, and redirection to the login page upon successful update.
+
+>*Note: The previous reset password page created in Lab 10 Task 4 is a modal dialog page, where you reset the password from your application screen. This reset password page is to reset your password from the forgot password email link.*
 
 1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
     ![close dialog](images/12-2-blank-page-email.png " ")

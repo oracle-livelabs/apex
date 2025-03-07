@@ -14,6 +14,18 @@ In this lab, you will:
 - Create REST Data Source
 - Integrate Payment Gateway
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Create Web Credential
 
 In this task, you will generate an API key in Test Mode on the Razorpay dashboard and use it to create a web credential in your workspace for secure authentication and seamless integration of the demo payment gateway.

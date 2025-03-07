@@ -14,6 +14,18 @@ In this lab, you:
 - Create Automation
 - Create Trigger
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Integrating with Object Detection and Text Detection
 
 In this task, you will create a REST Data Source using the OCI Vision REST API as the endpoint to enable object and text detection in your application.

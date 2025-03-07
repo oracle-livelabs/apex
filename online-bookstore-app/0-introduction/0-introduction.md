@@ -62,22 +62,17 @@ Total estimated time: 4 hours 40 minutes
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
-## Downloads
+## Downloads: Download and Install the Complete Application
 
-If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
 
-<!-- 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) to download the completed application zip file and unzip it.
+1. Click [here]() to download the completed application zip file.
 
-2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
 
-3. Once the application is installed,
-    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-    - Follow Lab 3 > Task 1 and Configure OCI Vision REST API as REST Data Source using your URL endpoint.
-
-    - Follow Lab 3 > Task 2 and Task 3. Update the COMPARTMENT_ID parameter under the Image Classification and Text Detection child process with your Compartment ID from your OCI console.
-
-4. All set. Now, run the application and see it in action! -->
+4. All set. Now, run the application and see it in action!.
 
 ## Learn More - *Useful Links*
 

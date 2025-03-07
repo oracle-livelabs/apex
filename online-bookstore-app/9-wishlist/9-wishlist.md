@@ -15,6 +15,18 @@ In this lab, you will:
 - Create Buttons to add and remove books from the wishlist, including the necessary backend processes.
 - Update Navigation Bar to include a link to the wishlist page.
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Create My Wishlist page
 
 In this task, you'll create a My Wishlist page that displays a list of books saved by the user. You'll use AI assistance to generate an SQL query and configure the layout.

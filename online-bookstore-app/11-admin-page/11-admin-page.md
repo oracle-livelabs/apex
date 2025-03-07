@@ -15,6 +15,18 @@ Estimated Time: 30 minutes
 - Develop a form for detailed editing of book records.
 - Manage user roles by viewing and updating them using interactive reports and forms.
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Create an Administration Page
 
 This task guides you through creating an administration page for managing books and user roles. You will start by navigating to the Application Home Page to create a blank page named "Administration." Next, you will set up a new list in Shared Components, adding entries for managing books and user roles and customizing their icons. Finally, using the Media List template, you'll configure the Administration page to display this list.
@@ -469,7 +481,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
     ![close dialog](images/11-4-book-details-att.png " ")
 
-23. Select **PRICE**, **TITLE** **AUTHOR**, **CATEGORY**, **DISCOUNT**, **BUY\_LINKS**, **PUBLISHER**, **BOOK\_IMAGE**, **CONTRIBUTOR**, **DESCRIPTION**, **BOOK\_QUANTITY** and in the property editor, enter/select the following:
+23. Select **PRICE**, **TITLE** **AUTHOR**, **CATEGORY**, **DISCOUNT**, **PUBLISHER**, **BOOK\_IMAGE**, **CONTRIBUTOR**, **DESCRIPTION**, **BOOK\_QUANTITY** and in the property editor, enter/select the following:
 
     - Under Server-side Condition:
 
@@ -737,7 +749,7 @@ In this task, you will create a form that enables users to edit book records in 
 
     ![close dialog](images/11-5-author-new-row.png " ")
 
-8. Select **P50\_TITLE**, **P50\_AUTHOR**, **P50\_CATEGORY**, **P50\_DISCOUNT**, **P50\_BUY_LINKS**,  **P50\_PUBLISHER**, **P50\_BOOK\_IMAGE**, **P50\_CONTRIBUTOR**. In the property editor, under Identification > Type: **Text Field**.
+8. Select **P50\_TITLE**, **P50\_AUTHOR**, **P50\_CATEGORY**, **P50\_DISCOUNT**, **P50\_PUBLISHER**, **P50\_BOOK\_IMAGE**, **P50\_CONTRIBUTOR**. In the property editor, under Identification > Type: **Text Field**.
 
     ![close dialog](images/11-5-cols-update.png " ")
 
@@ -769,7 +781,6 @@ In this task, you will create a form that enables users to edit book records in 
     | P50\_CATEGORY |
     | P50\_PUBLISHER |
     | P50\_CONTRIBUTOR |
-    | P50\_BUY\_LINKS |
     | P50\_BOOK\_IMAGE |
     | P50\_DESCRIPTION |
     | P50\_AVAILABILITY\_YN |

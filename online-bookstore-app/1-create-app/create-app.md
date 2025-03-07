@@ -16,6 +16,18 @@ In this lab, you will:
 
 - Load Quick SQL
 
+## Downloads: Download and Install the Complete Application
+
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Create an Application
 
 In this lab, you create a simple application with one click called **Online Bookstore**. This option creates an application which contains only a Global Page, Home page, and Login page.
@@ -101,7 +113,6 @@ In this task, you'll use Quick SQL to quickly generate and execute a script for 
       author /nn
       category
       discount num /nn
-      buy_links
       publisher
       book_image
       contributor
@@ -151,7 +162,7 @@ In this task, you'll use Quick SQL to quickly generate and execute a script for 
 
    ![Create Application wizard](./images/run-now.png " ")
 
-5. We can see that 11 statements were run successfully.
+5. We can see that 12 statements were run successfully.
 
    ![Create Application wizard](./images/results.png " ")
 

@@ -16,6 +16,18 @@ In this lab, you will:
 - Activate Sorting options
 - Include a link for purchasing Books
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Improve Faceted Search
 
 In this task, we will reorder the facets and edit their properties and ranges accordingly.
@@ -156,7 +168,6 @@ In this task, we will enhance the cards region on the homepage by displaying the
          PUBLISHER,
          DISCOUNT,
          CATEGORY,
-         BUY_LINKS,
          BOOK_IMAGE,
          DESCRIPTION,
          ROUND(PRICE * ((100 - DISCOUNT) / 100), 2) AS NEW_PRICE,

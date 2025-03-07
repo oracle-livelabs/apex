@@ -17,6 +17,18 @@ In this lab, you will:
 - Create Application Processes
 - Create Application Computations
 
+## Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
+
+1. Click [here]() to download the completed application zip file.
+
+2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. All set. Now, run the application and see it in action!.
+
 ## Task 1: Build a Shopping Cart Page
 
 In this task, you develop a new page in the application to display the shopping cart with book details, quantities, and prices. Additionally, you implement SQL queries to fetch cart data and display it in a user-friendly format.
@@ -1034,7 +1046,6 @@ In this task, you'll create a My Books page to display books purchased by the us
             select  distinct
                 oi.book_id as book_id,
                 bi.book_image as book_image,
-                bi.buy_links as buy_links,
                 bi.title as title,
                 Round(oi.price,2) as price,
                 bi.description as description,
