@@ -110,19 +110,19 @@ In this task, we will move the search facet to a homepage search item above the 
 
         - SQL Query: Copy and paste the below code:
 
-     ```
-    <copy>
-    SELECT title FROM obs_books
-    Union
-    SELECT author FROM obs_books
-    Union
-    SELECT category FROM obs_books
-    Union
-    SELECT contributor FROM obs_books
-    Union
-    SELECT publisher FROM obs_books
-    </copy>
-    ```
+            ```
+            <copy>
+            SELECT title FROM obs_books
+            Union
+            SELECT author FROM obs_books
+            Union
+            SELECT category FROM obs_books
+            Union
+            SELECT contributor FROM obs_books
+            Union
+            SELECT publisher FROM obs_books
+            </copy>
+            ```
 
     ![App builder home page](images/fs-search-item.png " ")
 
@@ -158,26 +158,26 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
         - SQL Query: Copy and paste the below code
 
-        ```
-    <copy>
-        SELECT
-         BOOK_ID,
-         ROUND(PRICE, 2) AS PRICE,
-         TITLE,
-         AUTHOR,
-         PUBLISHER,
-         DISCOUNT,
-         CATEGORY,
-         BOOK_IMAGE,
-         DESCRIPTION,
-         ROUND(PRICE * ((100 - DISCOUNT) / 100), 2) AS NEW_PRICE,
-         CONTRIBUTOR,
-         OBJECT_DET,
-         TEXT_DET
-    FROM
-         OBS_BOOKS;
-        </copy>
-        ```
+            ```
+        <copy>
+            SELECT
+            BOOK_ID,
+            ROUND(PRICE, 2) AS PRICE,
+            TITLE,
+            AUTHOR,
+            PUBLISHER,
+            DISCOUNT,
+            CATEGORY,
+            BOOK_IMAGE,
+            DESCRIPTION,
+            ROUND(PRICE * ((100 - DISCOUNT) / 100), 2) AS NEW_PRICE,
+            CONTRIBUTOR,
+            OBJECT_DET,
+            TEXT_DET
+        FROM
+            OBS_BOOKS;
+            </copy>
+            ```
 
     ![App builder home page](images/search-results.png " ")
 
@@ -191,9 +191,9 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
 2. In the Property Editor, under **Attributes** (for the Search Results region) and enter/select the following:
 
-    - Appearance > Grid Columns: **4 columns**
+    - Appearance > Grid Columns: **4 Columns**
 
-    - Card > Primary Key: **BOOK_ID**
+    - Card > Primary Key Column 1: **BOOK_ID**
 
     - Under Title:
 
@@ -209,20 +209,20 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
         - HTML Expression: copy and paste the below HTML code:
 
-        ```
-        <copy>
-        <div>
-            <b>Author:</b> &AUTHOR.
-        </div>
-        <div>
-            <b>Price:</b> <strike>&amp;#8377;&PRICE.</strike> &amp;#8377;&NEW_PRICE.
-        </div>
-        <div>
-            <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
-        </div>
+            ```
+            <copy>
+            <div>
+                <b>Author:</b> &AUTHOR.
+            </div>
+            <div>
+                <b>Price:</b> <strike>&amp;#8377;&PRICE.</strike> &amp;#8377;&NEW_PRICE.
+            </div>
+            <div>
+                <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
+            </div>
 
-        </copy>
-        ```
+            </copy>
+            ```
 
     - Under Media:
 
