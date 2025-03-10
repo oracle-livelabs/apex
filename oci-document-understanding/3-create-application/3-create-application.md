@@ -391,30 +391,9 @@ In this lab, you will:
 
     ```
     <copy>
-    INSERT INTO DOCAI_RESPONSE
-            (
-                document_id,
-                field_type_code,
-                field_label,
-                label_score,
-                field_value
-            )
-     SELECT :P1_ID,
-       field_type_code,
-       field_label,
-       label_score,
-       field_value
-       FROM   JSON_TABLE(:P1_RESPONSE, '$.pages[*]'
-             COLUMNS (page_number       NUMBER        PATH '$.pageNumber',
-                      NESTED PATH '$.documentFields[*]' COLUMNS
-                       (field_type_code VARCHAR2(50)   PATH '$.fieldType',
-                        field_label     VARCHAR2(100)  PATH '$.fieldLabel.name',
-                        label_score     NUMBER         PATH '$.fieldLabel.confidence',
-                        field_value     VARCHAR2(1000) PATH '$.fieldValue.value'
-                        ))) jt
-      WHERE  jt.field_type_code = 'KEY_VALUE';
-      <copy>
-       ```
+    UPDATE INV_UPLOAD SET DOC_AI_JSON = :P1_RESPONSE WHERE ID = :P1_ID;
+    <copy>
+    ```
 
     ![Add Child Process details](images/parse-response.png " ")
 
@@ -429,4 +408,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Ankita Beri, Product Manager, March 2025
