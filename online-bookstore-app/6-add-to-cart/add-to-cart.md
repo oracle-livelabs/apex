@@ -266,7 +266,7 @@ To create Application Items:
 
 2. Click **Online Bookstore** application.
 
-   ![App builder home page](images/obs-app1.png " ")
+   ![App builder home page](images/obs-app.png " ")
 
 3. On the Application home page, click **Shared Components**.
 
@@ -331,17 +331,17 @@ To create Application Processes:
         ```
     <copy>
      -- Initialize shopping cart navigation bar to show  appropriate icon and count
-     DECLARE
-     l_cnt NUMBER := obs_manage_orders.get_quantity;
-     BEGIN
-     IF l_cnt > 0 THEN
-        :SHOPPING_CART_ITEMS := l_cnt;
-        :SHOPPING_CART_ICON := 'fa-cart-full';
-     ELSE
-        :SHOPPING_CART_ITEMS := '';
-        :SHOPPING_CART_ICON := 'fa-cart-empty';
-     END IF;
-     END;
+    DECLARE
+        l_cnt NUMBER := obs_manage_orders.get_quantity;
+    BEGIN
+        IF l_cnt > 0 THEN
+            :SHOPPING_CART_ITEMS := l_cnt;
+            :SHOPPING_CART_ICON := 'fa-cart-full';
+        ELSE
+            :SHOPPING_CART_ITEMS := '';
+            :SHOPPING_CART_ICON := 'fa-cart-empty';
+        END IF;
+    END;
     </copy>
     ```
 
@@ -383,13 +383,13 @@ To create Application Computations:
 
         - Computation: Copy and paste below code:
 
-        ```
-       <copy>
-        SELECT U.USER_ID
-       FROM OBS_USERS U
-       WHERE U.USERNAME = LOWER(:APP_USER) OR U.EMAIL = LOWER(:APP_USER);
-       </copy>
-       ```
+            ```
+            <copy>
+            SELECT U.USER_ID
+            FROM OBS_USERS U
+            WHERE U.USERNAME = LOWER(:APP_USER) OR U.EMAIL = LOWER(:APP_USER);
+            </copy>
+            ```
 
     Click **Create Computation**.
 
@@ -415,13 +415,13 @@ To create Application Computations:
 
         - Computation: Copy and paste below code:
 
-        ```
-        <copy>
-        SELECT U.USERNAME
-        FROM OBS_USERS U
-        WHERE U.USER_ID=:USER_ID
-        </copy>
-        ```
+            ```
+            <copy>
+            SELECT U.USERNAME
+            FROM OBS_USERS U
+            WHERE U.USER_ID=:USER_ID
+            </copy>
+            ```
 
     Click **Create Computation**.
 
@@ -666,7 +666,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
 
         - Type: **Close Dialog**
 
-    - Settings > Items to return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
+    - Settings > Items to Return: **P18\_SHOPPING\_CART_ITEMS, P18\_BOOK\_ID**
 
     ![close dialog](images/close-dialog.png " ")
 
@@ -742,7 +742,7 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
     - Identification > Name: **Update Shopping Cart Header**
 
-    -  When > Event: **Dialog Closed**
+    - When > Event: **Dialog Closed**
 
     - Under Client-side Condition:
 
@@ -750,11 +750,11 @@ In this task, you create a navigation bar entry that displays a shopping cart ic
 
         - JavaScript expression: Copy and paste the below code:
 
-        ```
-        <copy>
-        parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
-        </copy>
-        ```
+            ```
+            <copy>
+            parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
+            </copy>
+            ```
 
     ![close dialog](images/update-shop-cart-header.png " ")
 
