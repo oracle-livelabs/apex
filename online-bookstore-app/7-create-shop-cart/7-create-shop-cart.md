@@ -85,29 +85,29 @@ In this task, you develop a new page in the application to display the shopping 
 
         - SQL Query: Copy and paste the below code into the code editor:
 
-        ```
-        <copy>
-        SELECT
-            b.book_id,
-            b.title,
-            b.price,
-            b.description,
-            b.discount,
-            b.category,
-            b.author,
-            b.book_image,
-            a.n002 AS quantity,
-            b.price * ((100 - b.discount) / 100) AS new_price,
-            ROUND(b.price * a.n002, 2) AS total_price,
-            ROUND(b.price * ((100 - b.discount) / 100) * a.n002, 2) AS new_total_price
-        FROM
-            apex_collections a,
-            obs_books b
-        WHERE
-            collection_name = 'BOOKS'
-            AND b.book_id = a.n001;
-        </copy>
-        ```
+            ```
+            <copy>
+            SELECT
+                b.book_id,
+                b.title,
+                b.price,
+                b.description,
+                b.discount,
+                b.category,
+                b.author,
+                b.book_image,
+                a.n002 AS quantity,
+                b.price * ((100 - b.discount) / 100) AS new_price,
+                ROUND(b.price * a.n002, 2) AS total_price,
+                ROUND(b.price * ((100 - b.discount) / 100) * a.n002, 2) AS new_total_price
+            FROM
+                apex_collections a,
+                obs_books b
+            WHERE
+                collection_name = 'BOOKS'
+                AND b.book_id = a.n001;
+            </copy>
+            ```
 
     ![close dialog](images/create-region-details.png " ")
 
@@ -550,7 +550,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
          - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function: **REMOVE\_BOOK**
+         - Procedure or Function: **REMOVE\_BOOK**
 
      - Under Server-side Condition:
 
@@ -562,7 +562,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 3. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
 
-     - Under Value > Item: **P17\_BOOK\_ID**
+     - p_book > Item: **P17\_BOOK\_ID**
 
     ![close dialog](images/remove-p-book.png " ")
 
@@ -572,17 +572,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 5. In the Property Editor, enter the following:
 
-     - Under Identification: 
+     - Under Identification:
 
          - Name: **Increase Cart by 1**
 
          - Type: **Invoke API**  
 
-     - Under Settings: 
+     - Under Settings:
 
          - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function: **INCREASE\_BOOK\_IN\_CART**
+         - Procedure or Function: **INCREASE\_BOOK\_IN\_CART**
 
      - Under Server-side Condition:
 
@@ -607,17 +607,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 8. In the Property Editor, enter the following:
 
-     - Under Identification: 
+     - Under Identification:
 
          - Name: **Decrease Cart by 1**
 
          - Type: **Invoke API**  
 
-     - Under Settings: 
+     - Under Settings:
 
          - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function: **DECREASE\_BOOK\_IN\_CART**
+         - Procedure or Function: **DECREASE\_BOOK\_IN\_CART**
 
      - Under Server-side Condition:
 
@@ -642,17 +642,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 11. In the Property Editor, enter the following:
 
-     - Under Identification: 
+     - Under Identification:
 
          - Name: **Checkout**
 
          - Type: **Invoke API**  
 
-     - Under Settings: 
+     - Under Settings:
 
-         - Package Name: **OBS\_MANAGE\_ORDERS**
+         - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function Name: **CREATE\_ORDER**
+         - Procedure or Function: **CREATE\_ORDER**
 
      - Success Message > Success Message: **Order successfully created: &P17\_ORDER\_ID.**
 
@@ -676,17 +676,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 14. In the Property Editor, enter the following:
 
-     - Under Identification: 
+     - Under Identification:
 
          - Name: **Clear Shopping Cart**
 
          - Type: **Invoke API**  
 
-     - Under Settings: 
+     - Under Settings:
 
          - Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure/Function: **CLEAR\_CART**
+         - Procedure or Function: **CLEAR\_CART**
 
      - Server-side Condition > When Button Pressed: **Clear**
 
@@ -706,7 +706,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
           - Clear Cache: **10**
 
-          Click **OK**.
+        Click **OK**.
 
      - Server-side Condition > When Button Pressed: **Clear**
 
@@ -758,6 +758,7 @@ In this task, you'll build an Order Information page to display order details an
     - Under Identification:
 
         - Page Number: **16**
+
         - Name: **Order Information**
 
     - Under Navigation:
@@ -834,25 +835,25 @@ In this task, you'll build an Order Information page to display order details an
 
         - SQL Query: Copy and paste the below query:
 
-        ```
-        <copy>
-        SELECT 'Transaction Successful' as transaction_status,
-            o.order_id,
-            o.user_id,
-            o.payment_id,
-            SUM(i.price* ((100-i.discount)/100) * i.quantity) AS total,
-            sum(i.quantity) AS quantity,
-            TO_CHAR(i.added_date, 'DD MON YYYY') as added_date,
-            TO_CHAR(i.added_time, 'HH12:MI:SS AM') AS added_time
+            ```
+            <copy>
+            SELECT 'Transaction Successful' as transaction_status,
+                o.order_id,
+                o.user_id,
+                o.payment_id,
+                SUM(i.price* ((100-i.discount)/100) * i.quantity) AS total,
+                sum(i.quantity) AS quantity,
+                TO_CHAR(i.added_date, 'DD MON YYYY') as added_date,
+                TO_CHAR(i.added_time, 'HH12:MI:SS AM') AS added_time
 
-        FROM   obs_orders o
-        LEFT JOIN obs_order_items i
-        ON o.order_id = i.order_id
-        WHERE  o.order_id = :P16_ORDER_ID
+            FROM   obs_orders o
+            LEFT JOIN obs_order_items i
+            ON o.order_id = i.order_id
+            WHERE  o.order_id = :P16_ORDER_ID
 
-        GROUP BY o.order_id, o.user_id,o.payment_id, i.added_date,i.added_time;
-        </copy>
-         ```
+            GROUP BY o.order_id, o.user_id,o.payment_id, i.added_date,i.added_time;
+            </copy>
+            ```
 
     ![close dialog](images/sub-region-prop1.png " ")
 
@@ -902,21 +903,21 @@ In this task, you'll build an Order Information page to display order details an
 
         - SQL Query: Copy and paste the below query:
 
-        ```
-        <copy>
-        SELECT  b.title,
-                o.book_id,
-                o.price,
-                (o.price) Subtotal,
-                b.book_image,
-                o.quantity,
-                o.price*((100-b.discount)/100) *o.quantity as total_price
-        FROM   obs_order_items o,
-            obs_books b
-        WHERE  b.book_id = o.book_id
-        AND    o.order_id = :P16_ORDER_ID
-        </copy>
-         ```
+            ```
+            <copy>
+            SELECT  b.title,
+                    o.book_id,
+                    o.price,
+                    (o.price) Subtotal,
+                    b.book_image,
+                    o.quantity,
+                    o.price*((100-b.discount)/100) *o.quantity as total_price
+            FROM   obs_order_items o,
+                obs_books b
+            WHERE  b.book_id = o.book_id
+            AND    o.order_id = :P16_ORDER_ID
+            </copy>
+            ```
 
     ![close dialog](images/sub-region-prop2.png " ")
 
@@ -924,7 +925,7 @@ In this task, you'll build an Order Information page to display order details an
 
     - Appearance > Layout: **Float**
 
-    - Card > Primary key column 1: **BOOK_ID**.
+    - Card > Primary key column 1: **BOOK_ID**
 
     - Title > Column: **TITLE**
 
@@ -955,7 +956,7 @@ In this task, you'll build an Order Information page to display order details an
 
         - Position: **First**
 
-    ![close dialog](images/sub-region-prop-attr.png " ")
+    ![close dialog](images/subregion-prop-attr.png " ")
 
 22. Click **Save**.
 
@@ -1014,7 +1015,9 @@ In this task, you'll create a My Books page to display books purchased by the us
 4. In Create Blank Page dialog, enter/select the following:
 
     - Under Identification:
+
         - Page Number: **20**
+
         - Name: **My Books**
 
     - Under Navigation:
@@ -1045,23 +1048,23 @@ In this task, you'll create a My Books page to display books purchased by the us
 
         - SQL Query: Copy and paste the below query:
 
-        ```
-        <copy>
-            select  distinct
-                oi.book_id as book_id,
-                bi.book_image as book_image,
-                bi.title as title,
-                Round(oi.price,2) as price,
-                bi.description as description,
-                bi.discount,
-                sum(oi.quantity) OVER (PARTITION BY oi.book_id) AS quantity,
-                Round((oi.price * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS total_price,
-                Round((oi.price *((100- oi.discount)/100) * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS new_total_price
-            from obs_order_items oi, obs_books bi, obs_orders o
-            where o.order_id = oi.order_id and o.user_id = :USER_ID
-                and oi.book_id(+) = bi.book_id;
-        </copy>
-         ```
+            ```
+            <copy>
+                select  distinct
+                    oi.book_id as book_id,
+                    bi.book_image as book_image,
+                    bi.title as title,
+                    Round(oi.price,2) as price,
+                    bi.description as description,
+                    bi.discount,
+                    sum(oi.quantity) OVER (PARTITION BY oi.book_id) AS quantity,
+                    Round((oi.price * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS total_price,
+                    Round((oi.price *((100- oi.discount)/100) * SUM(oi.quantity) OVER (PARTITION BY oi.book_id)),2) AS new_total_price
+                from obs_order_items oi, obs_books bi, obs_orders o
+                where o.order_id = oi.order_id and o.user_id = :USER_ID
+                    and oi.book_id(+) = bi.book_id;
+            </copy>
+            ```
 
     - Order By:
 
@@ -1069,21 +1072,21 @@ In this task, you'll create a My Books page to display books purchased by the us
 
         - Item: Click **No Order By Item** and enter the following and click **OK**:
 
-        | Clause |  Key | Display |
-        | --- |  --- | --- |
-        | "TITLE"asc  | TITLE| Title |
-        | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
-        | "QUANTITY"asc| QUANTITY | Quantity |
+            | Clause |  Key | Display |
+            | --- |  --- | --- |
+            | "TITLE"asc  | TITLE| Title |
+            | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
+            | "QUANTITY"asc| QUANTITY | Quantity |
 
     ![close dialog](images/region-details.png " ")
 
 7. Navigate to **Attributes**, enter/select the following:
 
-    - Under Appearance > Layout: **Float**
+    - Appearance > Layout: **Float**
 
-    - Under Card > Primary key column 1: **BOOK\_ID**.
+    - Card > Primary key column 1: **BOOK\_ID**.
 
-    - Under Title > Column: **TITLE**
+    - Title > Column: **TITLE**
 
     - Under Secondary Body:
 
@@ -1091,15 +1094,15 @@ In this task, you'll create a My Books page to display books purchased by the us
 
         - HTML Expression: Copy and paste the below HTML Code:
 
-        ```
-        <copy>
-        <b>Quantity: </b>&QUANTITY.
-        <br>
-        <b>Purchased Total: </b> <strike>&#8377;&TOTAL_PRICE.</strike> &#8377;&NEW_TOTAL_PRICE.
-        <br>
-        <b>Discount: </b><span style="color: green;">&DISCOUNT.% Off</span>
-        </copy>
-         ```
+            ```
+            <copy>
+            <b>Quantity: </b>&QUANTITY.
+            <br>
+            <b>Purchased Total: </b> <strike>&#8377;&TOTAL_PRICE.</strike> &#8377;&NEW_TOTAL_PRICE.
+            <br>
+            <b>Discount: </b><span style="color: green;">&DISCOUNT.% Off</span>
+            </copy>
+            ```
 
     - Under Media:
 
@@ -1123,7 +1126,7 @@ In this task, you will navigate to the Search Books page, select a book to purch
 
     ![close dialog](images/7-7-1.png " ")
 
-2. Navigate to **Search Books** and select any book of your choice to buy.
+2. Select any book of your choice to buy.
 
     ![close dialog](images/search-books.png " ")
 
@@ -1142,6 +1145,7 @@ In this task, you will navigate to the Search Books page, select a book to purch
 6. Now, you see the order details page, On the Navigation Bar, select **My Books** to check all the purchased books.
 
     ![close dialog](images/order-details.png " ")
+
     ![close dialog](images/view-purchased-books.png " ")
 
 ## Summary
