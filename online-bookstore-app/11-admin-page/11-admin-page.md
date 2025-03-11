@@ -233,7 +233,7 @@ In this task, you will update the authorization scheme to ensure that only users
 
     ![close dialog](images/11-3-admin-rights.png " ")
 
-5. Navigate to **Page 15000: Administration** by clicking **Edit Page 15000**..
+5. Navigate to **Page 15000: Administration** by clicking **Edit Page 15000**.
     ![close dialog](images/11-3-nav-15000.png " ")
 
 6. In the Property editor, enter/select the following:
@@ -253,7 +253,9 @@ In this task, you will update the authorization scheme to ensure that only users
 In this task, you'll create a page to manage book information. Start by navigating to the Application Home Page and creating a new blank page with the identification details set. Then, customize the page layout and appearance. Next, create regions for updating book information and searching for books. Configure dynamic actions to handle search functionality and refresh actions. Set up buttons for editing, resetting, and creating book entries.
 
 1. On Page Designer toolbar, Navigate to **(+ v)** and select **Blank Page**.
+
     ![close dialog](images/11-4-nav-create-page.png " ")
+
 2. Click **Blank Page**.
 
     ![close dialog](images/blank-page-admin.png " ")
@@ -369,33 +371,33 @@ In this task, you'll create a page to manage book information. Start by navigati
 
         - SQL Query: Copy and paste the below code:
 
-        ```
-        <copy>
-        select "BOOK_ID",
-            null LINK_CLASS,
-            apex_page.get_url(p_items => 'P40_ID', p_values => "BOOK_ID") LINK,
-            null ICON_CLASS,
-            null LINK_ATTR,
-            null ICON_COLOR_CLASS,
-            case when coalesce(:P40_ID,'0') = "BOOK_ID"
-            then 'is-active'
-            else ' '
-            end LIST_CLASS,
-            (substr("TITLE", 1, 50)||( case when length("TITLE") > 50 then '...' else '' end )) LIST_TITLE,
-            (substr("DESCRIPTION", 1, 50)||( case when length("DESCRIPTION") > 50 then '...' else '' end )) LIST_TEXT,
-            (substr("AUTHOR", 1, 50)||( case when length("AUTHOR") > 50 then '...' else '' end )) LIST_AUTHOR,
-            (substr("CATEGORY", 1, 50)||( case when length("CATEGORY") > 50 then '...' else '' end )) LIST_CATEGORY,
-            null LIST_BADGE
-            from "OBS_BOOKS" x
-            where (:P40_SEARCH is null
-                or upper(x."TITLE") like '%'||upper(:P40_SEARCH)||'%'
-                or upper(x."DESCRIPTION") like '%'||upper(:P40_SEARCH)||'%'
-                or upper(x."AUTHOR") like '%'||upper(:P40_SEARCH)||'%'
-                or upper(x."CATEGORY") like '%'||upper(:P40_SEARCH)||'%'
-            )
-            order by "TITLE"
-        </copy>
-         ```
+            ```
+            <copy>
+            select "BOOK_ID",
+                null LINK_CLASS,
+                apex_page.get_url(p_items => 'P40_ID', p_values => "BOOK_ID") LINK,
+                null ICON_CLASS,
+                null LINK_ATTR,
+                null ICON_COLOR_CLASS,
+                case when coalesce(:P40_ID,'0') = "BOOK_ID"
+                then 'is-active'
+                else ' '
+                end LIST_CLASS,
+                (substr("TITLE", 1, 50)||( case when length("TITLE") > 50 then '...' else '' end )) LIST_TITLE,
+                (substr("DESCRIPTION", 1, 50)||( case when length("DESCRIPTION") > 50 then '...' else '' end )) LIST_TEXT,
+                (substr("AUTHOR", 1, 50)||( case when length("AUTHOR") > 50 then '...' else '' end )) LIST_AUTHOR,
+                (substr("CATEGORY", 1, 50)||( case when length("CATEGORY") > 50 then '...' else '' end )) LIST_CATEGORY,
+                null LIST_BADGE
+                from "OBS_BOOKS" x
+                where (:P40_SEARCH is null
+                    or upper(x."TITLE") like '%'||upper(:P40_SEARCH)||'%'
+                    or upper(x."DESCRIPTION") like '%'||upper(:P40_SEARCH)||'%'
+                    or upper(x."AUTHOR") like '%'||upper(:P40_SEARCH)||'%'
+                    or upper(x."CATEGORY") like '%'||upper(:P40_SEARCH)||'%'
+                )
+                order by "TITLE"
+            </copy>
+            ```
 
         - Page items to submit: **P40\_SEARCH**
 
@@ -819,11 +821,15 @@ In this task, you will create a form that enables users to edit book records in 
 
 15. Click **Manage Books Information**. On this page, you can search for any book. Select first book.
 
+    ![close dialog](images/11-5-16-update-book-info-page1.png " ")
+
     ![close dialog](images/11-5-16-update-book-info-page.png " ")
 
 16. Click **Edit** to update the book details.
 
     ![close dialog](images/11-5-book-details-drawer.png " ")
+
+    ![close dialog](images/11-5-book-details-drawer1.png " ")
 
 ## Task 6: Manage User Roles
 
