@@ -153,7 +153,7 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
         | Clause     |  Key   | Display |
         | ---------- |  ------ | ------ |
         | "TITLE"asc | TITLE |  Title |
-        | "PRICE"asc | PRICE | Price |
+        | "NEW_PRICE"asc | NEW_PRICE | Price |
 
         Click **OK**.
 
@@ -297,7 +297,7 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
     ![close dialog](images/book-id-param1.png " ")
     ![close dialog](images/user-id-param1.png " ") -->
 
-## Task 2: Add Wishlist Management Buttons on Page 18
+## Task 2: Add Wishlist Management Buttons on Book Details Page
 
 In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the book details page. These buttons will allow users to manage their wishlist by invoking database actions based on their selection.
 
@@ -363,7 +363,7 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
         - Label: **Remove From Wishlist**
 
-    - Under Layout > Slot: **Next**
+    - Layout > Slot: **Next**
 
     - Under Appearance:
 
@@ -371,7 +371,7 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
         - Icon: **fa-heart**
 
-    - Under Behavior > Database Action: **SQL DELETE Action**
+    - Behavior > Database Action: **SQL DELETE Action**
 
     ![close dialog](images/create-button2-prop1.png " ")
 
@@ -409,21 +409,21 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
         - Procedure or Function: **ADD\_TO\_WISHLIST**
 
-    - Under Success Message > Success Message: **Successfully added to Wishlist!**
+    - Success Message > Success Message: **Successfully added to Wishlist!**
 
-    - Under Error Message > Error Message: **Error adding to Wishlist!**
+    - Error Message > Error Message: **Error adding to Wishlist!**
 
-    - Under Server-side Condition > When button pressed: **Add\_to\_Wishlist**
+    - Server-side Condition > When button pressed: **Add\_to\_Wishlist**
 
     ![close dialog](images/process1-details.png " ")
 
 8. Under **Add to Wishlist**, expand parameters and enter/select the following:
 
-    - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+    - p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
 
     ![close dialog](images/process1-para1.png " ")
 
-    - p\_user\_id > Under value > Type: **Item**,  Item > Application: **USER\_ID**
+    - p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
 
     ![close dialog](images/process1-para2.png " ")
 
@@ -445,17 +445,17 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
         - Procedure or Function: **REMOVE\_FROM\_WISHLIST**
 
-    - Under Server-side condition > When button pressed: **Remove\_from\_Wishlist**
+    - Server-side condition > When button pressed: **Remove\_from\_Wishlist**
 
     ![close dialog](images/process2-details.png " ")
 
 11. Under **Remove from Wishlist**, expand parameters and enter/select the following:
 
-    - p\_book\_id > Under Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+    - p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
 
     ![close dialog](images/process2-para1.png " ")
 
-    - p\_user\_id > Under value > Type: **Item**,  Item > Application: **USER\_ID**
+    - p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
 
     ![close dialog](images/process2-para2.png " ")
 
@@ -525,15 +525,21 @@ In this task, you will add books to your wishlist, view them under My Wishlist, 
 
     ![close dialog](images/9-4-3.2.png " ")
 
-4. Navigate back to the home page by clicking **Online Bookstore**.
+4. To remove a book from the wishlist, click on the book and then click **Remove From Wishlist**.
 
-    ![close dialog](images/9-4-4.png " ")
+    ![close dialog](images/9-4-4.1.png " ")
 
-5. To remove a book from the wishlist, click on the book and then click **Remove From Wishlist**.
+    ![close dialog](images/9-4-4.2.png " ")
+
+    ![close dialog](images/9-4-4.3.png " ")
+
+5. Alternatively, navigate back to the home page by clicking **Online Bookstore** and click on the book and then click **Remove From Wishlist**.
 
     ![close dialog](images/9-4-5.1.png " ")
 
     ![close dialog](images/9-4-5.2.png " ")
+
+    ![close dialog](images/9-4-5.3.png " ")
 
 ## Summary
 
