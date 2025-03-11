@@ -31,11 +31,13 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. Update the hashed password for user01. To change the password, go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
+4. Update the hashed password for user01:
 
-5. Click the **edit icon** for user01 and update the password to **secretPassword**.
+    - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
 
-6. All set. Now, run the application and see it in action!.
+    - Click the **edit icon** for user01 and update the password to **secretPassword**.
+
+5. All set. Now, run the application and see it in action!.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -136,14 +138,25 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 4. In this workshop, you use OCI Generative AI Service as the AI provider. Enter/select the following:
 
-    - AI Provider: **OCI Generative AI Service**
-    - Name: **OCI Gen AI**
-    - Static ID: **oci\_gen\_ai**
-    - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Lab 3.
-    - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
-    - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
-    - Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
-    - Credentials: **apex\_ai\_cred**
+    - Under Identification:
+
+        - AI Provider: **OCI Generative AI Service**
+
+        - Name: **OCI Gen AI**
+
+        - Static ID: **oci\_gen\_ai**
+
+    - Under OCI Generative AI:
+
+        - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Task 1.
+
+        - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
+
+        - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
+
+    - Settings > Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
+
+    - Credentials > Credential: **apex\_ai\_cred**
 
     Click **Test Connection** to verify that everything is configured correctly and functioning properly.
 
@@ -194,10 +207,15 @@ In this task, you'll create a Chat Page with a modal dialog layout and configure
     - Identification > Name: **Chat**
 
     - Under Appearance > Template Options:
+
         - Under Common:
+
             - General: Check **Remove Body Padding**
+
             - Body Height: **320px**
+
             - Header: **Hidden**
+
         - Advanced > Bottom Margin: **None**
 
         Click **OK**
@@ -297,14 +315,21 @@ In this task, you'll create a Dynamic Action to display the AI-powered chat widg
     ![Page Designer Dynamic Actions](images/da-name.png ' ')
 
 4. Under True action, select **Show**. In the Property Editor, enter/select the following:
+
     - Identification > Action: **Show AI Assistant**
+
     - Generative AI > Configuration: **Books Analysis AI**
+
     - Under Appearance:
+
         - Display as: **Inline**
+
         - Container Selector: **#chat**
 
     - Under Quick Actions:
+
         - Message 1: **Provide an overview of the book A Little Life**
+
         - Message 2: **Who is the author of the book All About Love?**
 
     Click **Save**.

@@ -24,7 +24,21 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. All set. Now, run the application and see it in action!.
+4. Update the hashed password for user01:
+
+    - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
+
+    - Click the **edit icon** for user01 and update the password to **secretPassword**.
+
+5. Update the Web Credential and Generative AI:
+
+    - To create an OCI API Key, Refer to [Task 1: Generate API Keys using OCI Console](?lab=8-build-an-ai-assistant-chat-widget#Task1:GenerateAPIKeysusingOCIConsole) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
+
+    - Edit the apex\_ai\_cred details to match with your OCI API Key,  Refer to [Task 2: Create Web Credentials](?lab=8-build-an-ai-assistant-chat-widget#Task2:CreateWebCredentials) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
+
+    - To edit the generative ai, Refer to [Task 3: Configure Generative AI Service](?lab=8-build-an-ai-assistant-chat-widget#Task3:ConfigureGenerativeAIService) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
+
+6. All set. Now, run the application and see it in action!.
 
 ## Task 1: Creating Email Verification for Forgot Password
 

@@ -26,11 +26,13 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. Update the hashed password for user01. To change the password, go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
+4. Update the hashed password for user01:
 
-5. Click the **edit icon** for user01 and update the password to **secretPassword**.
+    - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
 
-6. All set. Now, run the application and see it in action!.
+    - Click the **edit icon** for user01 and update the password to **secretPassword**.
+
+5. All set. Now, run the application and see it in action!.
 
 ## Task 1: Create a Package to Manage Orders
 
