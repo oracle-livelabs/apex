@@ -39,7 +39,13 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
     - To edit the generative ai, Refer to [Task 3: Configure Generative AI Service](?lab=8-build-an-ai-assistant-chat-widget#Task3:ConfigureGenerativeAIService) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
 
-6. All set. Now, run the application and see it in action!.
+6. Update the Picture URL:
+
+    - Go to **SQL Workshop > RESTful Services > Modules > User Images > profile_pic/:id > GET** and copy Full URL.
+
+    - Go to **App Builder > Online Bookstore > Shared Components > Application Computations > PICTURE\_URL > Computation >**, and replace **<****picture\_url****>** with the copied FULL URL up to ..profile_pic/.
+
+7. All set. Now, run the application and see it in action!.
 
 ## Task 1: Create an Administration Page
 

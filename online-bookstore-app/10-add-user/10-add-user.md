@@ -376,7 +376,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Allow Cropping: **Toggle On**
 
-        - Aspect Ratio: **1:1(square)**
+        - Aspect Ratio: **1:1 (square)**
 
     ![close dialog](images/10-3-profile-pic.png " ")
 
@@ -399,7 +399,9 @@ In this task, you will learn how to create and configure a page to update the cu
 16. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Button Name: **CANCEL**
+
         - Label: **Cancel**
 
     - Layout > Slot: **Close**
@@ -444,7 +446,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Under Server-side Conditions:
 
-        - Type: **ITEM IS NOT NULL**
+        - Type: **Item is NOT NULL**
 
         - Item: **P26\_USER\_ID**
 
@@ -464,7 +466,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     - Behavior > Database Action: **SQL INSERT action**
 
-    - Server-side Condition > Type: **ITEM IS NULL**
+    - Server-side Condition > Type: **Item is NULL**
 
     ![close dialog](images/10-3-create-btn-details.png " ")
 
@@ -564,7 +566,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
         - Target: **No Link Defined**
 
-            - Under Target > Page: **26**
+            - Target > Page: **26**
 
             - Under Set Items:
 
@@ -572,7 +574,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
                 - Value: **&USER_ID.**
 
-            - Under Clear / Reset > Clear Cache: **26**
+            - Clear / Reset > Clear Cache: **26**
 
             Click **OK**.
 
@@ -746,9 +748,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
         - Target: click **No Link Defined**
 
-            - Under Target > Page: **15010**
+            - Target > Page: **15010**
 
-            - Under Clear / Reset > Clear Cache: **27**
+            - Clear / Reset > Clear Cache: **27**
 
             Click **OK**.
 
@@ -988,14 +990,14 @@ Application Computation, navigate back to the shared component and under **Appli
 
         - Computation: Copy and paste the below code:
 
-        ```
-        <copy>
-        select case when picture_url is not null and profile_pic is null then picture_url
-        else 'https://apex.oracle.com/pls/apex/<workspace name>/images/profile_pic/' || user_id
-        end case
-        from obs_users where user_id = :user_id;
-        </copy>
-        ```
+            ```
+            <copy>
+            select case when picture_url is not null and profile_pic is null then picture_url
+            else 'https://apex.oracle.com/pls/apex/<workspace name>/images/profile_pic/' || user_id
+            end case
+            from obs_users where user_id = :user_id;
+            </copy>
+            ```
 
     *Note: For the else statement in the above code, paste the URL you copied in the above task till **..profile_pic/***
 
