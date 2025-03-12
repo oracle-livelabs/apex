@@ -767,7 +767,7 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 9. Navigate to **Processing** tab, select **Process form Email Verification for User SignUp** under **Processing** and update the following:
 
-    - Success Message > Success Message: **Email Sent**
+    - Success Message > Success Message: **SignUp Link sent to your email address.**
 
     ![success-message](images/12-3-nav-process.png " ")
 
@@ -899,7 +899,7 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
         - Style: **Display as Link**
 
-          Click **OK**.
+        Click **OK**.
 
     ![image](images/12-3-16-signup-button-prop1.png " ")
 
@@ -970,7 +970,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
     ![page-public](images/12-4-delete-page-items.png " ")
 
-6. Select **P100000\_USERNAME**, **P100000\_PASSWORD**, **P100000\_FULL\_NAME** and update the following:
+6. Select **P100000\_USERNAME**, **P100000\_FULL\_NAME** and update the following:
 
     - Identification > Type: **Text Field**
 
@@ -1213,7 +1213,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
     - Under **Attributes**:
 
-        - Name: Enter **Google Authentication**
+        - Name: **Google Authentication**
         - Static Id: **Google_Authentication**
         - Authentication Type: Select **OAuth2 Client Credentials**.
         - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
@@ -1227,6 +1227,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 17. Navigate to **App Builder** and select **Online Bookstore Application**.
 
     ![Navigate to Online bookstore application](images/navigate-to-osa1.png " ")
+
     ![Navigate to Online bookstore application](images/navigate-to-osa2.png " ")
 
 18. Click **Shared Components**.
@@ -1429,7 +1430,7 @@ In this task, you will run the lab and test various functionalities, including S
 
     ![Click My Apps](images/12-6-1.png " ")
 
-2. Enter your email address and click **Create**.
+2. Enter your email address and click **Send SignUp Email**.
 
     ![Click My Apps](images/12-6-2.1.png " ")
 
