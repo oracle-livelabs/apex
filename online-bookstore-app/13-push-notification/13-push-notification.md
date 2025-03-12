@@ -22,11 +22,11 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. Update the hashed password for user01:
+4. Update the hashed password for user01 and user02:
 
     - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
 
-    - Click the **edit icon** for user01 and update the password to **secretPassword**.
+    - Click the **edit icon** for user01 and user02 and update the password to **secretPassword**.
 
 5. Update the Web Credential and Generative AI:
 
