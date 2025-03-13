@@ -65,7 +65,7 @@ The Create Application Wizard allows developers to load previously generated app
     ![create an application](images/create-an-app.png " ")
 
 
-## Task 4: Run the New Application
+## Task 3: Run the New Application
 
 1. In Page Designer, click **Run Application**
 
