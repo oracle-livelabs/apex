@@ -56,7 +56,11 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
     - To enable push notifications, run the application and click on your username in the top-right corner. Then, select **Settings**. By default, push notifications are disabled. Click Off and check the box labeled **Enable push notifications on this device**.
 
-9. All set. Now, run the application and see it in action!.
+9. Setup Compartment ID to run the Automation for AI Vision Service:
+
+    - Go to **App Builder > Online Bookstore > Shared Components > Automations > Index Book Cover With OCI Vision > Actions**, click the **edit icon** for **Invoke REST Data Source** and replace **#COMPARTMENT\_ID#** with your **COMPARTMENT\_ID** at two places in the query.
+
+10. All set. Now, run the application and see it in action!.
 
 ## Task 1: Create Web Credential
 

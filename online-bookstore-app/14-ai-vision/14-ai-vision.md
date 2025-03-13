@@ -165,20 +165,6 @@ In this task, you will create a REST Data Source using the OCI Vision REST API a
 
     ![Click Timeline](images/apply-changes.png " ")
 
-15. Navigate to the application homepage by clicking the **Application ID**.
-
-    ![Click Timeline](images/14-2-15-appid.png " ")
-
-16. Select Page **10 - Search Books**
-
-    ![Click Timeline](images/14-2-16-page10.png " ")
-
-17. In the rendering tab, select **P10\_SEARCH** under **Facets** and under Source update Database Column(s): **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY,OBJECT\_DET,TEXT\_DET**.
-
-18. Click **Save**
-
-    ![Click Timeline](images/14-2-19-save.png " ")
-
 ## Task 2: Create Automation
 
 In this task, we will create an automation in Oracle APEX that updates the object\_det and text\_det columns of the obs\_books table. This automation will be triggered whenever book details are updated. To ensure efficiency, we will add a WHERE clause so that the automation executes only when the Book_image column is modified. If no rows meet this condition, the automation will exit immediately without performing any unnecessary operations.
@@ -186,6 +172,7 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 1. Navigate to **Shared Components** and under **Workflows and Automations**, select **Automations**.
 
     ![Click Timeline](images/14-2-1-automations1.png " ")
+
     ![Click Timeline](images/14-2-1-automations2.png " ")
 
 2. Click **Create**.
@@ -206,7 +193,7 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
 5. Enter/Select the following:
 
-    - Source > Where Clause: **OBJECT\_DET IS NULL and BOOK\_IMAGE is NOT NULL**
+    - Source > Where Clause: **(OBJECT\_DET IS NULL OR TEXT\_DET IS NULL) AND BOOK\_IMAGE IS NOT NULL**
 
     - Under Action Execution:
 
@@ -297,21 +284,36 @@ In this task, we will create an automation in Oracle APEX that updates the objec
     Click **Apply Changes**
 
     ![Click Timeline](images/14-2-5-details0.png " ")
+
     ![Click Timeline](images/14-2-5-details1.png " ")
 
 6. Click **Save and Run**
 
     ![Click Timeline](images/14-2-6-save.png " ")
 
-7. Navigate to the application home page and click on page **50 - Edit Book Details**
+7. Navigate to the application homepage by clicking the **Application ID**.
+
+    ![Click Timeline](images/14-2-15-appid.png " ")
+
+8. Select Page **10 - Search Books**
+
+    ![Click Timeline](images/14-2-16-page10.png " ")
+
+9. In the rendering tab, select **P10\_SEARCH** under **Facets**.
+
+10. Under Source update Database Column(s): **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY,OBJECT\_DET,TEXT\_DET** and click **Save**
+
+    ![Click Timeline](images/14-2-19-save.png " ")
+
+11. Click the page selector and select page **50 - Edit Book Details**.
 
     ![Click Timeline](images/14-2-7-goto-page50.png " ")
 
-8. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
+12. Navigate to **Processing** tab, right-click **Processing** and click **Create Process**.
 
     ![Click Timeline](images/14-2-8-create-process.png " ")
 
-9. In the Property editor, enter/select the following:
+13. In the Property editor, enter/select the following:
 
     - Identification > Name: **Call OCI Vision Automation**
 
@@ -327,7 +329,7 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
     ![Click Timeline](images/14-2-9-process-details-calloci.png " ")
 
-10. Click **Save**.
+14. Click **Save**.
 
 ## Task 3: Create a trigger
 
