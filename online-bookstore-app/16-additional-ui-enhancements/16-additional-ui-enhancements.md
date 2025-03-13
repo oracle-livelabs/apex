@@ -32,11 +32,11 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. Update the hashed password for user01 and user02:
+4. Update the hashed password for user01:
 
     - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
 
-    - Click the **edit icon** for user01 and user02 and update the password to **secretPassword**.
+    - Click the **edit icon** for user01 and update the password to **secretPassword**.
 
 5. Update the Web Credential and Generative AI:
 
@@ -58,7 +58,13 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
     - Edit the Google Authentication details to match with your Google API Key, Refer to [Task 5: Login with Google](?lab=12-onboarding#Task5:LoginwithGoogle) of [Lab 12: Improve User Onboarding](?lab=12-onboarding), following steps 12 to 16.
 
-8. All set. Now, run the application and see it in action!.
+8. Generate Push Notification Credentials and enable Push Notifications on the device:
+
+    - To generate Push Notification Credentials, go to **App Builder > Online Bookstore > Shared Components > Progressive Web App > Push Notifications**, click **+ Generate Credentials** for Credentials.
+
+    - To enable push notifications, run the application and click on your username in the top-right corner. Then, select **Settings**. By default, push notifications are disabled. Click Off and check the box labeled **Enable push notifications on this device**.
+
+9. All set. Now, run the application and see it in action!.
 
 ## Task 1 Add Built with APEX To Footer
 
