@@ -18,9 +18,9 @@ In this lab, you will:
 
 If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
 
-1. Click [here]() to download the completed application zip file.
+1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab14.zip) to download the completed application zip file.
 
-2. Import the **online-bookstore-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+2. Import the **downloaded zip** file into your workspace. To import the app, go to **App Builder > Import**.
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
