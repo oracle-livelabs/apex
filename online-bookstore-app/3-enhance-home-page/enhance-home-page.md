@@ -234,7 +234,11 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
     ![App builder home page](images/image-atrributes.png " ")
 
-3. Select **Page 10: Search Books** root node and enter the following into the property editor:
+3. Select **P10\_PRICE** facet and under Source update Database Column to **NEW\_PRICE**.
+
+    ![App builder home page](images/price-to-newprice.png " ")
+
+4. Select **Page 10: Search Books** root node and enter the following into the property editor:
 
     - CSS > Inline: Copy and Paste the below CSS Code:
 
@@ -251,7 +255,7 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
     ![App builder home page](images/search-books-inline.png " ")
 
-4. Click **Save** and **Run**.
+5. Click **Save** and **Run**.
 
     ![Save and Run](images/save-run.png " ")
 
