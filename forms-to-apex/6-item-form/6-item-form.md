@@ -30,13 +30,15 @@ In this lab, you:
 
 4. On **Create Form** wizard, enter/select the following:
 
-    - Page Number: **7**
+    - Under Page Definition:
 
-    - Name: **Item - Details**
+        - Page Number: **7**
 
-    - Page Mode: **Drawer**
+        - Name: **Item - Details**
 
-    - Table/View Name: **S_ITEM**
+        - Page Mode: **Drawer**
+
+    - Data Source > Table/View Name: **S_ITEM**
 
     Click **Next**.
 
@@ -157,4 +159,4 @@ In this lab, you created a functional form for managing items in Oracle APEX by 
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

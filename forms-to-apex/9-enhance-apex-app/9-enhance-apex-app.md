@@ -8,7 +8,7 @@ Estimated Time: 10 Minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
 - Define and organize facets for the faceted search page to filter data effectively.
 - Define and personalize the interactive report views, allowing end-users to interact with and save their report configurations.
@@ -65,7 +65,7 @@ You can define which facets to filter the data. Some are defined automatically, 
 
     ![App Builder](images/nav-to-search.png " ")
 
-2. In the left pane, under **Search**, right-click **Facets** and click **Create Facet**.
+2. In the left pane, under **Search**, right-click **Facets** and select **Create Facet**.
 
     ![App Builder](images/create-facets1.png " ")
 
@@ -94,7 +94,7 @@ You can define which facets to filter the data. Some are defined automatically, 
 
     ![App Builder](images/sequence.png " ")
 
-5. Click Save.
+5. Click **Save**.
 
 ## Task 3: Customize the Interactive Report
 
@@ -187,7 +187,7 @@ For this task, you will focus on cleaning up the navigation menu by creating two
 
     ![App Builder](images/nav-menu3.png " ")
 
-4. Click **Create Entry**.
+4. Click **Create List Entry**.
 
     ![App Builder](images/create-entry.png " ")
 
@@ -296,4 +296,4 @@ In this lab, you learned how to enhance various aspects of your APEX app. Buildi
 ## Acknowledgements
 
 - **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -1,0 +1,67 @@
+{
+  "workshoptitle": "Build a Book Club Application",
+    "help": "maddie.thompson@oracle.com",
+	"tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-232/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Create the Application",
+        "filename": "../../1-create-app/create-app.md"
+      },
+      {
+        "title": "Lab 2: Create REST Data Source",
+          "filename": "../../2-creating-rest-sources/creating-rest-sources.md"
+      },
+      {
+        "title": "Lab 3: Create the Book Search Page",
+        "filename": "../../3-creating-search-page/creating-book-search-page.md"
+      },
+      {
+        "title": "Lab 4: Create the Book Details Page",
+        "filename": "../../4-creating-details-page/creating-book-details-page.md"
+      },
+      {
+        "title": "Lab 5: Create the Preview Book Page",
+        "filename": "../../5-creating-preview-page/creating-book-preview-page.md"
+      },
+      {
+        "title": "Lab 6: Create Users and Library Tables",
+        "filename": "../../6-creating-tables/creating-tables.md"
+      },
+      {
+        "title": "Lab 7: Implement Buttons and Badges",
+        "filename": "../../7-creating-details-buttons/creating-buttons-badges.md"
+      },
+      {
+        "title": "Lab 8: Implement the Library Page",
+        "filename": "../../8-implementing-library-page/implementing-library-page.md"
+      },
+      {
+        "title": "Lab 9: Create the Book Review Form and Table",
+        "filename": "../../9-creating-review-form/creating-review-form.md"
+      },
+      {
+        "title": "Lab 10: Implement Ratings & Reviews",
+        "filename": "../../10-implementing-ratings/implementing-ratings-and-reviews.md"
+      },
+      {
+        "title": "Optional Lab: Update App Navigation",
+        "filename": "../../11-update-navigation/update-navigation.md"
+      },
+      {
+        "title": "Optional Lab: Create a New App User to Test Functionality",
+        "filename": "../../12-add-app-user/add-app-user.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}

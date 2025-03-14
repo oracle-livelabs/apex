@@ -10,24 +10,25 @@ Estimated Time: 20 minutes
 
 In this lab, you:
 
-- Enable Push Notifications
-- Learn how to configure Push Notifications
+- Enable Push Notifications.
+
+- Learn how to configure Push Notifications.
 
 ## Task 1: Enable Push Notifications
 
-1. 1. Navigate to the **Demo Projects** Application.
+1. 1. Navigate to the **Demo Projects** application.
 
-    ![select the application](images/navigate-to-demo-proj.png " ")
+    ![select the application](images/select-demo-projects1.png " ")
 
-2. In the App Builder, select **shared components**.
+2. Select **shared components**.
 
     ![Select Shared Components](images/click-shared-components.png " ")
 
-3. In the Shared Components page, under User Interface, Select **Progressive Web App**.
+3. Under **User Interface**, select **Progressive Web App**.
 
-    ![Select Progressive Web App](images/select-pwa.png " ")
+    ![Select Progressive Web App](images/navigate-to-pwa1.png " ")
 
-4. Click **Push Notifications** tab and toggle the **Enable Push Notifications** button to ON. Click **+ Generate Credentials** and select **Generate Credentials** in the confirm dialog window.
+4. Click **Push Notifications** tab and toggle **ON** the **Enable Push Notifications**. Click **+ Generate Credentials** and select **Generate Credentials** in the confirm dialog window.
 
     ![PWA settings page](images/enable-push-notifications.png " ")
 
@@ -45,19 +46,19 @@ In this lab, you:
 
     ![Push Notifications settings page](images/save-and-run.png " ")
 
-8. In the Demo Projects App, click on your username at the top-right corner and select **Settings**.
+8. In the Demo Projects Application, click on your username at the top-right corner and select **Settings**.
 
-    ![App output](images/click-username.png " ")
+    ![App output](images/click-username1.png " ")
 
 9. Push Notifications are turned off by default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
-    ![Settings page](images/click-off.png " ")  
+    ![Settings page](images/click-off.png " ")
 
     ![Settings page](images/enable-push-notifications1.png " ")
 
 10. Push Notifications is now enabled for the username.
 
-    *Note:*
+    > **Note:**
 
     - If you cannot see the Push Notifications, ensure that the DND option is turned off in your system and your browser has the necessary permissions to send notifications.
 
@@ -75,79 +76,67 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![click create page](./images/click-create-page.png " ")
 
-3. For Create a Page: Select **Blank Page**.
+3. Select **Blank Page**.
 
     ![create a blank page](./images/create-blank-page.png " ")
 
-4. For Page Attributes, enter the following:
+4. For Page Attributes, enter/select the following:
 
-    - Under **Page Definition**:
+    - Page Definition > Name: **Push Notifications Views**
 
-        - For Name: Enter **Push Notifications Views**.
-
-    - Under **Navigation**
-
-        - For Breadcrumb: Set it to **No**.
+    - Navigation > Breadcrumb: Toggle **OFF**
 
     Click **Create Page**.
 
-    ![configure blank page](./images/configure-blank-page.png " ")
+    ![configure blank page](./images/configure-blank-page1.png " ")
 
-5. Now that you have created a **Blank Page** Page, you can view the page by clicking **Save** and **Run Page** on the top Right.
+5. In the **Rendering** tab, right-click **Body** and select **Create Region**.
 
-6. In the Rendering Tree, select the Rendering tab. Right-click **Body**and select **Create Region**.
+    ![Create create region](images/click-create-region1.png " ")
 
-    ![Create create region](images/click-create-region.png " ")
+6. In the Property Editor, enter/select the following:
 
-7. In the Property Editor, edit the appropriate attributes:
-   Under **Identification**:
+    - Identification > Title: **PWA Views**
 
-      - For Title: Enter **PWA Views**
+    - Appearance > Template: **Tabs Container**.
 
-      - For Type: Select **Static Content**
+    ![Configure pwa views region](images/configure-pwa-views1.png " ")
 
-   Under **Appearance**:
-
-      - For Template: Select **Tabs Container**.
-
-    ![Configure pwa views region](images/configure-pwa-views.png " ")
-
-8. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
+7. In the **Rendering** yab, right-click **PWA Views** and select **Create Sub Region**.
 
     ![create sub region](images/create-sub-region1.png " ")
 
-9. In the Property Editor, edit the appropriate attributes:
-    Under **Identification**:
+8. In the Property Editor, enter/select the following:
 
-      - For Title: Enter **Push Notifications Subscriptions**
+    - Under Identification:
 
-      - For Type: Select **Interactive Report**
+        - Title: **Push Notifications Subscriptions**
 
-    Under **Source**:
+        - Type: **Interactive Report**
 
-      - For Table Name: Enter **APEX\_APPL\_PUSH\_SUBSCRIPTIONS**.
+    - Source > Table Name: **APEX\_APPL\_PUSH\_SUBSCRIPTIONS**.
 
-    ![configure subscriptions](images/configure-subscriptions.png " ")
+    ![configure subscriptions](images/configure-subscriptions1.png " ")
 
-10. In the Rendering Tree, Right-click **PWA Views** and click **Create Sub Region**.
+9. In the **Rendering** tab, right-click **PWA Views** and select **Create Sub Region**.
 
     ![create sub region 2](images/create-sub-region2.png " ")
 
-11. In the Property Editor, edit the following:
+10. In the Property Editor, enter/select the following:
 
-    Under **Identification**:
+    - Under Identification:
 
-      - For Title: Enter **Push Notifications Queue**
+        - Title: **Push Notifications Queue**
 
-      - For Type: Select **Interactive Report**
+        - Type: **Interactive Report**
 
-    Under **Source**:
+    - Source > Table Name: **APEX\_PUSH\_NOTIFICATIONS\_QUEUE**
 
-      - For Table Name: Enter **APEX\_PUSH\_NOTIFICATIONS\_QUEUE**
+    ![configure subscriptions](images/configure-push-queue1.png " ")
 
-    ![configure subscriptions](images/configure-push-queue.png " ")
+11. Click **Save** and **Run** to view the changes.
 
-12. You can view the page by clicking **Save** and **Run Page** on the top Right.
+    ![configure subscriptions](images/run-save1.png " ")
 
 ## Task 3: Create Page Processes to send Push notifications
 
@@ -159,70 +148,73 @@ The built-in 'Send Push Notification' page process lets you send a notification 
 **Send using API**
 For users seeking more control over the appearance and content of their push notifications, the apex_pwa API offers more flexibility. This API allows you to manage additional parameters, such as the icon and a different destination application. This approach is practical for looping through multiple users and sending notifications simultaneously.
 
-1. In the **Demo Projects** app, navigate to **Page 4**.
+1. In the **Demo Projects** application, navigate to **Project Tasks** page and click **Page 4** in the developer toolbar.
 
    ![configure subscriptions](images/run-views-page.png " ")
 
-2. In the **Rendering Tree**, navigate to **Processing** tab. Right-click on **Process** and then click **Create Process**.
+2. Navigate to **Processing** tab. Right-click **Processing** and select **Create Process**.
 
-    ![configure subscriptions](images/click-create-process.png " ")
+    ![configure subscriptions](images/click-create-process1.png " ")
 
-3. In the Property Editor, edit the appropriate attributes:
-     Under **Identification**:
+3. In the Property Editor, enter/select the following:
 
-      - For Title: Enter **Send Push Notification**
+    - Under Identification:
 
-      - For Type: Select **Send Push Notification**
+        - Title: **Send Push Notification**
 
-     Under **Settings**:
+        - Type: **Send Push Notification**
 
-      - For **To**: Enter a username for whom you have Subscribed to Push Notifications.
+    - Under **Settings**:
 
-      - For Title: Enter a Title of your wish; in this example, enter **Hey There!**.
+        - To: Enter a username for whom you have Subscribed to Push Notifications.
 
-      - For **Subject**: Enter **Welcome to PWA Push Notifications**.
+        - Title: Enter a Title of your wish; in this example, enter **Hey there!**
 
-    ![configure subscriptions](images/create-push-process.png " ")
+        - Body: **Welcome to PWA Push Notifications.**
 
-4. In the **Rendering Tree**, navigate to **Processing** tab. Right-click on **Process** and click **Create Process**.
+    ![configure subscriptions](images/create-push-process1.png " ")
 
-    ![configure subscriptions](images/create-process2.png " ")
+4. Right-click **Processing** and select **Create Process**.
 
-3. In the Property Editor, edit the appropriate attributes:
+    ![configure subscriptions](images/create-process3.png " ")
 
-    Under **Identification**:
+5. In the Property Editor, enter/select the following:
 
-      - For Title, Enter **APEX PWA API**
+    - Under Identification:
 
-      - For Type, Select **Invoke API**
+        - Title: **APEX PWA API**
 
-    Under **Settings**:
+        - Type: **Invoke API**
 
-      - For Package: Enter **APEX\_PWA**.
+    - Under Settings:
 
-      - For Procedure or Function: Enter **SEND\_PUSH\_NOTIFICATION**.
+        - Package: **APEX\_PWA**
 
-    ![configure subscriptions](images/configure-apex-pwa.png " ")
+        - Procedure or Function: **SEND\_PUSH\_NOTIFICATION**
 
-4. In the Rendering Tree, under **APEX PWA API**, select **p\_user\_name**. Then, in the Property Editor, perform the following changes.
-     Under Value:
+    ![configure subscriptions](images/configure-apex-pwa1.png " ")
 
-      - For Type: Select **Static Value**
+6. Under **APEX PWA API** process, select **p\_user\_name** parameter. Then, in the Property Editor, enter/select the following:
 
-      - For Static Value: Enter a username for whom you have Subscribed to Push Notifications.
+    - Under Value:
 
-    ![configure subscriptions](images/configure-parameter.png " ")
+        - Type: **Static Value**
 
-5. In the Rendering Tree, under **APEX PWA API**, select **p\_title**. Then, in the Property Editor, perform the following changes.
-    Under Value:
+        - Static Value: Enter a username for whom you have Subscribed to Push Notifications.
 
-      - For Type: Select **Static Value**
+    ![configure subscriptions](images/configure-parameter1.png " ")
 
-      - For Static Value: Enter **Welcome to Push Notifications**.
+7. Now, select **p\_title** parameter. Then, in the Property Editor, enter/select the following:
 
-    ![configure subscriptions](images/config-apex-pwa-param.png " ")      
+    - Under Value:
 
-6. Click **Save**
+        - Type: **Static Value**
+
+        - Static Value: **Welcome to Push Notifications.**
+
+    ![configure subscriptions](images/config-apex-pwa-param1.png " ")
+
+8. Click **Save**.
 
 ## Summary
 
@@ -230,9 +222,9 @@ You learned to enhance the **Demo Projects** app with push notifications in this
 
 ## What's Next
 
-In the upcoming hands-on lab, you will learn to Create Installation Scripts and Data Packages. Also, you gain insights into how to Export Applications with supporting Objects and use Remote Deployment to deploy your Application.
+In the upcoming hands-on lab, you will learn to Create Working Copy, Installation Scripts and Data Packages. Also, you gain insights into how to Export Applications with supporting Objects and use Remote Deployment to deploy your Application.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

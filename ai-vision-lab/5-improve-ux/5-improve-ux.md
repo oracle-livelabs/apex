@@ -21,11 +21,11 @@ In this lab, you:
 In this task, you make use of the Image Upload item that allows user to crop images before adding a post.
 
 1. In the Timeline page, navigate to the **P1\_FILE\_BLOB** item in the rendering tree.
-In the Property Editor, for Identification -> Type, select **Image Upload**.
+In the Property Editor, under Identification > Type, select **Image Upload**.
 
     ![Page Designer view of the Timeline page](images/image-upload.png " ")
 
-2. In the Property editor, enter/select the following:
+2. In the Property editor, select the following:
 
     - Display > Display As: **Block Dropzone**
 
@@ -47,15 +47,14 @@ In the Property Editor, for Identification -> Type, select **Image Upload**.
 
     ![App output](images/sm-timeline.png " ")
 
-
 ## Task 2: Add the Share Button
 
 In this task, you add a Share button that allows a user to share the post via email, or other apps.
 
 **Note**:
-- On macOS, Share will **NOT** work on Chrome and Firefox browsers. Use Edge or Safari browsers.
 
-- On Windows, Share will **NOT** work on Edge browser. Use Chrome, Edge or Safari browsers.
+- On macOS, Share will **NOT** work on Chrome and Firefox browsers. Use Edge or Safari browsers.
+- On Windows, Share will **NOT** work on Edge browser. Use Chrome or Safari browsers.
 
 1. Navigate to the Timeline page. Under the **Timeline** region, right-click **Actions** and select **Create Action**.
 
@@ -65,78 +64,74 @@ In this task, you add a Share button that allows a user to share the post via em
 
     - Under Identification:
 
-        - **Type**: Button
+        - Type: **Button**
 
-        - **Label**: Share
+        - Label: **Share**
 
     - Under Link:
 
-        - **Type**: Redirect to URL
+        - Type: **Redirect to URL**
 
         - Target:
 
-            - **Type**: URL
+            - Type: **URL**
 
-            - **URL**: #action$share?id=&ID.
+            - URL: **#action$share?id=&ID.**
 
             Click **Ok**.
 
-  ![Property Editor](images/button-share.png " ")
-
+    ![Property Editor](images/button-share.png " ")
 3. In the Property Editor, under the **Appearance** group, update the following properties:
 
-    - **Display Type**: Icon
+    - Display Type: **Icon**
 
-    - **Icon**: fa-share-alt
+    - Icon: **fa-share-alt**
 
-  ![Property Editor](images/change-icon.png " ")
-
+    ![Property Editor](images/change-icon.png " ")
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
     ```
-    <copy>
+     <copy>
         apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
             apex.items.P1_ACTION_ID.value = args.id;
             apex.event.trigger(document, 'action-like');
         }
-    }, {
+        }, {
         name: "delete",
         action: (event, element, args) => {
             apex.items.P1_ACTION_ID.value = args.id;
             apex.event.trigger(document, 'action-delete');
         }
-    }, {
+        }, {
         name: "open-map",
         action: () => {
             apex.event.trigger(document, 'action-open-map');
         }
-    }, {
+        }, {
         name: "open-about",
         action: () => {
             apex.event.trigger(document, 'action-open-about');
         },
-    },
-    {
+        },
+        {
         name: "share",
         action: (event, element, args) => {
             apex.items.P1_ACTION_ID.value = args.id;
             apex.event.trigger(document, 'action-share');
-    }
-}
-]);
-</copy>
-```
+            }
+        }]);
+     </copy>
+    ```
 
-  ![Property Editor](images/exec-js.png " ")
+    ![Property Editor](images/exec-js.png " ")
 
-  ![Property Editor](images/update-js-code.png " ")
+    ![Property Editor](images/update-js-code.png " ")
 
 5. In the Rendering Tree, click on the **Dynamic Actions** tab. Right-click on **Custom** and select **Create Dynamic Action**.
 
     ![Dynamic Actions tab](images/custom-da.png " ")
-
 
 6. In the Property Editor, enter/select the following properties:
 
@@ -152,11 +147,11 @@ In this task, you add a Share button that allows a user to share the post via em
 
         - Javascript Expression: **document**
 
-  ![Property Editor](images/action-share.png " ")
+    ![Property Editor](images/action-share.png " ")
 
 7. In the left pane, under **action-share**, click on the **True** action. Now, in the property editor, update the following properties:
 
-    - **Identification > Action**: Share
+    - Identification > Action: **Share**
 
     - Under Settings:
 
@@ -169,13 +164,15 @@ In this task, you add a Share button that allows a user to share the post via em
         - File(s) Source: **SQL Query**
 
         - SQL Query:
+
             ```
-            <copy>
-                SELECT FILE_BLOB, FILE_NAME, FILE_MIME
-                FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
-            </copy>
+             <copy>
+             SELECT FILE_BLOB, FILE_NAME, FILE_MIME
+             FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
+             </copy>
             ```
-        - **Items to Submit**: P1\_ACTION\_ID
+
+        - Items to Submit: **P1\_ACTION\_ID**
 
     ![Property Editor](images/true-action-share.png " ")
 
@@ -205,7 +202,7 @@ In this task, you enable Push Notifications for the Social Media App. Whenever a
 
     Click **Apply**.
 
-  ![add column wizardr](images/new-column.png " ")
+    ![add column wizardr](images/new-column.png " ")
 
 3. The next step is to create an Automation. This automation will frequently check if there has been any update to the SM\_POSTS table and will trigger the Push Notification accordingly.
 To create an Automation, navigate to **Shared Components** and under Workflows and Automations, click **Automations**.
@@ -230,15 +227,16 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     Click **Next**.
 
-  ![Create Automations wizard](images/notification-auto.png " ")
+    ![Create Automations wizard](images/notification-auto.png " ")
 
 6. For **Source Type**, select **SQL Query** and enter the following SQL statement in the code box:
+
     ```
-    <copy>
-        SELECT r.id, p.created_by as post_owner, r.created_by as liked_by
-        from SM_POSTS p, SM_REACTIONS r
-        where p.id (+) = r.post_id and r.notified = 'N'
-    </copy>
+     <copy>
+     SELECT r.id, p.created_by as post_owner, r.created_by as liked_by
+     from SM_POSTS p, SM_REACTIONS r
+     where p.id (+) = r.post_id and r.notified = 'N'
+     </copy>
     ```
 
     Click **Create**.
@@ -265,7 +263,7 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     Click **Apply Changes**.
 
-  ![Edit Action page](images/send-notification.png " ")
+    ![Edit Action page](images/send-notification.png " ")
 
 10. Click **Add Action** to add a second action.
 
@@ -277,11 +275,12 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     - Type: **Execute Code**
 
-    - Code:
+    - Code: Copy and paste the below code:
+
         ```
-        <copy>
-        update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
-        </copy>
+         <copy>
+         update SM_REACTIONS set NOTIFIED = 'Y' WHERE ID = :ID;
+         </copy>
         ```
 
     Click **Create**.
@@ -314,23 +313,24 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
 17. Progressive Web App is updated. Now, **Save and Run** the page.
 
-    ![Push Notifications settings page](images/push-notify-run-app.png " ")    
+    ![Push Notifications settings page](images/push-notify-run-app.png " ")
 
 18. In the Social Media App, click on your username at the top-right corner and select **Settings**.
 
-    ![App output](images/open-settings.png " ")  
+    ![App output](images/open-settings.png " ")
 
 19. Push Notifications is disabled by Default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
-    ![Settings page](images/enable-push-notify.png " ")  
+    ![Settings page](images/enable-push-notify.png " ")
 
     ![Settings page](images/enable-checkbox.png " ")
 
 20. Now, if a user 'Likes' any of your posts, you will receive a push notification on your device.
 
-    ![App output](images/show-push-notify.png " ")  
+    ![App output](images/show-push-notify.png " ")
 
 Note:
+
 - If you are unable to see the Push Notifications, ensure that the DND option is disabled in your system and your browser has necessary permissions to send notifications.
 - View the compatibility matrix of Push Notifications [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
 
@@ -338,21 +338,21 @@ Note:
 
 1. Navigate to **Shared Components > Progressive Web App**.
 
-    ![Shared Components page](images/pwa1.png " ")    
+    ![Shared Components page](images/pwa.png " ")
 
 2. Scroll down to Shortcuts and click **Enable for All Sessions**. In the popup window, confirm by clicking **Enable for All Sessions**. Note: This option does not work in *apex.oracle.com* instance.
 
-    ![PWA page](images/enable-for-all.png " ")  
+    ![PWA page](images/enable-for-all.png " ")
 
     ![confirm dialog](images/confirm-enable.png " ")
 
 3. Click **Add Shortcut**.
 
-    ![PWA page](images/add-shortcut.png " ")  
+    ![PWA page](images/add-shortcut.png " ")
 
 4. In the Add Shortcut dialog, enter/select the following:
 
-    - Name: Timeline
+    - Name: **Timeline**
 
     - Target URL: *Select the Timeline page*
 
@@ -360,7 +360,7 @@ Note:
 
     Click **Create**.
 
-  ![PWA page](images/add-shortcut-images.png " ")
+    ![PWA page](images/add-shortcut-images.png " ")
 
     You will see how the shortcut looks after completing Task 5. Similarly, you can add multiple shortcuts, each pointing to a different page in your app.
 
@@ -395,12 +395,15 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
     ![System dock](images/view-shortcut.png " ")
 
 **Note:**
+
 - View the compatibility matrix for the **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation).
 - View the compatibility matrix for the **Shortcuts** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon).
 
 ## Summary
+
 You now know how to enhance the Social Media app with mobile features such as Cropping and Sharing Images, Push Notifications, and add the latest pwa features like Shortcuts and Screenshots.
 
 ## Acknowledgments
+
 - **Author** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, January 2025

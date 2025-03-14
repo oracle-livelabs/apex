@@ -8,35 +8,51 @@
       },
       {
               "title": "Get Started",
-              "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+              "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
         "title": "Lab 1: Identify Business Steps",
-        "filename": "../../identify-business-steps/1-identify-business-steps.md"
+        "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
       },
       {
         "title": "Lab 2: Design the Application",
-        "filename": "../../design-the-application/2-design-the-application.md"
+        "filename": "../../2-design-the-application/2-design-the-application.md"
       },
       {
-        "title": "Lab 3: Create Workflow",
-        "filename": "../../create-workflow/3-create-workflow.md"
+        "title": "Lab 3: Create Calculate Fees Workflow",
+        "filename": "../../3-calculate-fees-workflow/3-calculate-fees-workflow.md"
       },
       {
-        "title": "Lab 4: Add Human Tasks to the Workflow",
-        "filename": "../../add-human-tasks/4-add-human-tasks.md"
+        "title": "Lab 4: Create Doctor Appointment Workflow",
+        "filename": "../../4-doc-appointment-workflow/4-doc-appointment-workflow.md"
       },
       {
-        "title": "Lab 5: Add Activities and Connections",
-        "filename": "../../add-activities-connection/5-add-activities-connections.md"
+        "title": "Lab 5: Add Human Tasks to the Workflow",
+        "filename": "../../5-add-human-tasks/5-add-human-tasks.md"
       },
       {
-        "title": "Lab 6: Create Workflow Pages",
-        "filename": "../../create-pages/6-creating-pages.md"
+        "title": "Lab 6: Add Calculate fees workflow Activities and Connections ",
+        "filename": "../../6-calculate-fees-activities/6-calculate-fees-activities.md"
       },
       {
-        "title": "Lab 7: Run the Application",
-        "filename": "../../running-the-app/7-running-the-app.md"
+        "title": "Lab 7: Add Doctor Appointment workflow Activities and Connections ",
+        "filename": "../../7-doc-aapt-activities/7-doc-aapt-activities.md"
+      },
+      {
+        "title": "Lab 8: Create Workflow Pages",
+        "filename": "../../8-create-pages/8-creating-pages.md"
+      },
+      {
+        "title": "Lab 9: Run the Application",
+        "filename": "../../9-running-the-app/9-running-the-app.md"
+      },
+      {
+        "title": "Lab 10: Activate the Workflow",
+        "filename": "../../10-activate-workflow/10-activate-workflow.md"
+      },
+      {
+        "title": "Lab 11: Enhance Workflow Management (Optional)",
+        "filename": "../../11-resume-workflow/11-resume-workflow.md"
       },
       {
         "title": "Need Help?",
