@@ -64,7 +64,17 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
     - Edit the Razorpay API details to match with your Razorpay API Key, Refer to [Task 1: Create Web Credential](?lab=15-razorpay-payement-integration#Task1:CreateWebCredential) of [Lab 15: Razorpay Payment Gateway Integration](?lab=15-razorpay-payement-integration), following steps 5 to 9.
 
-11. All set. Now, run the application and see it in action!.
+11. Update ICON_URL for the application icon in the emails:
+
+    - Go to **App Builder > Online Bookstore > Page 100001 - Email Verification for User SignUp > Processing > Send Verification Email > Send Email Process**, under Settings, select **Placeholder Values** and update **ICON_URL**.
+
+        - In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
+
+    - Go to **App Builder > Online Bookstore > Page 100002 - Email Verification for Forgot Password > Processing > Send Verification Email > Send Email Process**, under Settings, select **Placeholder Values** and update **ICON_URL**.
+
+        - In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
+
+12. All set. Now, run the application and see it in action!.
 
 ## Task 1: Create Multiple RAG Data Source
 

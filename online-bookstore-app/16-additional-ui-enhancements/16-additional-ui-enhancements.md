@@ -263,6 +263,14 @@ In this task, you will integrate a global search feature that remains accessible
 
     ![Click](images/16-4-20.png " ")
 
+    - Server-side Condition
+
+        - Type: **Current Page is NOT in comma delimited list**
+
+        - Pages: **100000,100001,100002,100003**
+
+    ![Click](images/16-4-20.1.png " ")
+
 21. Navigate to **Dynamic Actions** tab, right-click **Change** and select **Create Dynamic Action**.
 
     ![Click](images/16-4-21.png " ")
@@ -414,7 +422,7 @@ In this task, you will create and configure email templates to standardize the e
 
      - Under Advanced
 
-        - HTML Format: Copy and paste the below code
+        - HTML Template: Copy and paste the below code
 
             ```
             <copy>
@@ -607,7 +615,7 @@ In this task, you will create and configure email templates to standardize the e
             | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
             | TITLE | Online Bookstore  |
 
-            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
+            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs.
 
      - Success Message > Success Message: **SignUp Link sent to your email address.**
 
@@ -661,7 +669,7 @@ In this task, you will create and configure email templates to standardize the e
 
     - Identification > Name: **Prepare URL for Email**
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+    - Source > PL/SQL Code: Copy and paste the below code:
         ```
         <copy>
         :P100002_URL := apex_util.host_url || APEX_PAGE.GET_URL (
@@ -704,7 +712,7 @@ In this task, you will create and configure email templates to standardize the e
             | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
             | TITLE | Online Bookstore  |
 
-            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and replace online-bookstore with your **app\_name**
+            NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs. Additionally, update the domain **apex.oracle.com** if your environment differs.
 
      - Success Message > Success Message: **Reset Password Link sent to your email address.**
 

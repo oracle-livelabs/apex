@@ -490,14 +490,6 @@ JOIN obs_books b
 
     ![close dialog](images/clear-btn.png " ")
 
-    - Under Server-side Condition:
-
-        - Type: **Item is NOT NULL**
-
-        - Item: **SHOPPING\_CART\_ITEMS**
-
-    ![close dialog](images/clear-btn1.png " ")
-
 7. Right-click **Order Information** and select **Create Button**.
 
     ![close dialog](images/btn1.png " ")
@@ -524,13 +516,17 @@ JOIN obs_books b
 
             Click **OK**
 
+    ![close dialog](images/proceed-btn.png " ")
+
+9. Select **Order Information** and in the Property Editor, enter/select the following:
+
     - Under Server-side Condition:
 
         - Type: **Item is NOT NULL**
 
         - Item: **SHOPPING\_CART\_ITEMS**
 
-    ![close dialog](images/proceed-btn.png " ")
+    ![close dialog](images/order-information-server-side.png " ")
 
 ## Task 3: Integrate Backend Processes
 
