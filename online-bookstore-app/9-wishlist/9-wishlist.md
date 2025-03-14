@@ -43,7 +43,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 ## Task 1: Create My Wishlist page
 
-In this task, you'll create a My Wishlist page that displays a list of books saved by the user. You'll use AI assistance to generate an SQL query and configure the layout.
+In this task, you'll create a My Wishlist page that displays a list of books saved by the user. You'll use AI Assistant to generate an SQL query and configure the layout.
 
 1. Navigate to your application homepage by clicking **Application ID**.
 

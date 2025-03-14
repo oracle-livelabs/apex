@@ -896,7 +896,7 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 ## Task 5: Show Profile Pic using RESTful Services
 
-In this task, you will learn how to configure RESTful services to handle user profile images and integrate them into your application. You will start by registering the schema with Oracle REST Data Services (ORDS) and creating the necessary modules, templates, and handlers. Next, you'll create an application item and Computation to manage the profile image URLs. Finally, you will update the navigation bar and profile page to display the user's profile picture.
+In this task, you will learn how to configure RESTful services to handle user profile images and integrate them into your application. You will start by registering the schema with Oracle REST Data Services (ORDS) and creating the necessary modules, templates, and handlers. Next, you'll create an Application Item and a Computation to manage the profile image URLs. Finally, you will update the navigation bar and profile page to display the user's profile picture.
 
 1. Navigate to **SQL Workshop** and select **RESTful Services**.
 

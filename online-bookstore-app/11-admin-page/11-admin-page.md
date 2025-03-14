@@ -49,7 +49,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 ## Task 1: Create an Administration Page
 
-This task guides you through creating an administration page for managing books and user roles. You will start by navigating to the Application Home Page to create a blank page named "Administration." Next, you will set up a new list in Shared Components, adding entries for managing books and user roles and customizing their icons. Finally, using the Media List template, you'll configure the Administration page to display this list.
+This task guides you through creating an administration page for managing books and user roles. You will start by navigating to the Application Home Page to create a blank page named "Administration". Next, you will set up a new list in Shared Components, adding entries for managing books and user roles and customizing their icons. Finally, using the Media List template, you'll configure the Administration page to display this list.
 
 1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
     ![close dialog](images/11-1-1-create-page-admin.png " ")

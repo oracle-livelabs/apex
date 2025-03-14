@@ -78,7 +78,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
 ## Task 1 Add Built with APEX To Footer
 
-In this task, you will update the application's footer to display "Built with APEX" This helps showcase the platform used for development.
+In this task, you will update the application's footer to display "Built with APEX". This helps showcase the platform used for development.
 
 1. Navigate to the application homepage and click **Edit Application Definition**.
 

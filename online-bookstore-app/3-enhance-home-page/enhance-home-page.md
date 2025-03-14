@@ -88,7 +88,7 @@ In this task, we will reorder the facets and edit their properties and ranges ac
 
 ## Task 2: Create Search Bar
 
-In this task, we will move the search facet to a homepage search item above the books.
+In this task, we will move the search facet to a homepage search item above the books region.
 
 1. Go back to the page designer, and in the left pane, right-click **Body** and select **Create Page Item**.
 

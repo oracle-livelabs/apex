@@ -82,7 +82,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 ## Task 1: Create an Application
 
-In this lab, you create a simple application with one click called **Online Bookstore**. This option creates an application which contains only a Global Page, Home page, and Login page.
+In this lab, you create a simple application with one click called **Online Bookstore**. This option creates an application that contains only a Global page, Home page, and Login page.
 
 1. On the Workspace home page, click the **App Builder**.
 
@@ -133,7 +133,7 @@ In this lab, you create a simple application with one click called **Online Book
 
 ## Task 2: Load Quick SQL
 
-In this task, you'll use Quick SQL to quickly generate and execute a script for creating database tables. This script defines tables for an online bookstore app, including Users, Books, Orders, and more. Once executed, you can review the tables in the Object Browser.
+In this task, you'll use Quick SQL to quickly generate and execute a script for creating database tables. This script defines tables for an Online Bookstore app, including Users, Books, Orders, and more. Once executed, you can review the tables in the Object Browser.
 
 1. Navigate to select **SQL Workshop** and select **Utilities > Quick SQL**.
 
