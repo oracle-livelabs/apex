@@ -340,7 +340,6 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
         var razorpayId = "&P17_RAZORPAY_ORDER_ID.";
             var amount = apex.item('P17_TOTAL').getValue();
             var options = {
-                "key": "<Enter they key>", // Your Razorpay test key
                 "amount": amount*100, // Amount in paise (e.g., 50000 paise = Rs 500)
                 "name": "Payment Page", // Name of the payment receiver
                 "description": "Transaction", // Description of the payment
@@ -384,7 +383,6 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
             rzp1.open();
         </copy>
         ```
-        **Note: Replace < Enter they key> in the above code with the key ID you saved in Task 1.
 
     - Under Client-side Condition:
 
