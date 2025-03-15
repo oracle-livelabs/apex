@@ -1028,4 +1028,4 @@ You now know how to add a footer to your app, manage the navigation menu, implem
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, Feb 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
