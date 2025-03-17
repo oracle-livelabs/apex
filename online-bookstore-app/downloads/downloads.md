@@ -6,7 +6,7 @@ In this lab, you will learn how to download and import an export file of the app
 
 ## Task 1: Download the App Export
 
-1. Download a lab export zip file from any lab. The export file is available after the introduction in all labs. The export file in any lab contains everything completed up to before that lab. The export files in the introduction and Lab 1 are the complete app exports.
+1. Download a lab export ZIP file from any lab. The export file is available after the introduction in all labs. Each export file contains everything completed up to the start of that specific lab. The export files in the Introduction and Lab 1 contain the complete app export, which includes everything completed in all the labs except for the optional Lab 18.
 
 ## Task 2: Import the App into an APEX Workspace
 
@@ -48,7 +48,7 @@ In this lab, you will learn how to download and import an export file of the app
 
 ## Task 4: Update the Web Credential and Generative AI
 
-Note: If you already have an OCI key pair, you may skip the step 1.
+Note: If you already have an OCI key pair, you may skip Step 1.
 
 To Generate the API Keys using OCI Console:
 
@@ -56,7 +56,7 @@ To Generate the API Keys using OCI Console:
 
 To Configure Web Credentials in Oracle APEX:
 
-2. Expand **App Builder**, then **All Workspace Utilities** and click **Workspace Utilities**.
+2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
     !["Page Designer"](images/19-4-2.png "")
 
@@ -68,7 +68,7 @@ To Configure Web Credentials in Oracle APEX:
 
     !["Page Designer"](images/19-4-4.png "")
 
-5. Enter the following details using the configuration file you copied in the step 7 and click **Apply Changes**.
+5. Enter the following details using the configuration file you copied and click **Apply Changes**.
 
     - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
@@ -125,7 +125,7 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-5-6.png "")
 
-7. Click **Picture\_URL**.
+7. Click **PICTURE\_URL**.
 
     !["Page Designer"](images/19-5-7.png "")
 
@@ -137,7 +137,7 @@ To Enable Generative AI in Oracle APEX:
 
 1. To create an Google API Key, Refer to [Task 5: Login with Google](?lab=12-onboarding#Task5:LoginwithGoogle) of [Lab 12: Improve User Onboarding](?lab=12-onboarding), following steps 1 to 10.
 
-2. Expand **App Builder**, then **All Workspace Utilities** and click **Workspace Utilities**.
+2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
     !["Page Designer"](images/19-6-2.png "")
 
@@ -239,7 +239,7 @@ To Enable Generative AI in Oracle APEX:
 
 1. To create an Razorpay API Key, Refer to [Task 1: Create Web Credential](?lab=15-razorpay-payement-integration#Task1:CreateWebCredential) of [Lab 15: Razorpay Payment Gateway Integration](?lab=15-razorpay-payement-integration), following steps 1 to 4.
 
-2. Expand **App Builder**, then **All Workspace Utilities** and click **Workspace Utilities**.
+2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
     !["Page Designer"](images/19-9-2.png "")
 

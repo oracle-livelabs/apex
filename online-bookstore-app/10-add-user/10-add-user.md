@@ -927,7 +927,7 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
    ![close dialog](images/10-5-create-handler1.png " ")
 
-9. Copy the **Full URL** and replace the id with user\_id to use in the step 14.
+9. Copy the **Full URL** and save it. We will use this information in Step 14.
 
     ![close dialog](images/10-5-copy-url.png " ")
 
