@@ -18,38 +18,6 @@ In this lab, you will:
 
 If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab11.zip) to download the export file, which contains everything completed in the previous labs, and follow the download instructions from Task 1 to Task 5 in the lab [Downloads](?lab=downloads).
 
-## Downloads: Missed Previous Labs? Download and Install the Application
-
-If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
-
-1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab11.zip) to download the completed application zip file.
-
-2. Import the **downloaded zip** file into your workspace. To import the app, go to **App Builder > Import**.
-
-3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-
-4. Update the hashed password for user01:
-
-    - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
-
-    - Click the **edit icon** for user01 and update the password to **secretPassword**.
-
-5. Update the Web Credential and Generative AI:
-
-    - To create an OCI API Key, refer to [Task 1: Generate API Keys using OCI Console](?lab=8-build-an-ai-assistant-chat-widget#Task1:GenerateAPIKeysusingOCIConsole) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
-
-    - Edit the apex\_ai\_cred details to match with your OCI API Key, refer to [Task 2: Create Web Credentials](?lab=8-build-an-ai-assistant-chat-widget#Task2:CreateWebCredentials) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
-
-    - To edit the OCI Gen AI, refer to [Task 3: Configure Generative AI Service](?lab=8-build-an-ai-assistant-chat-widget#Task3:ConfigureGenerativeAIService) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
-
-6. Update the Picture URL:
-
-    - Go to **SQL Workshop > RESTful Services > Modules > User Images > profile_pic/:id > GET** and copy Full URL.
-
-    - Go to **App Builder > Online Bookstore > Shared Components > Application Computations > PICTURE\_URL > Computation >**, and replace **<****picture\_url****>** with the copied FULL URL up to ..profile_pic/.
-
-7. All set. Now, run the application and see it in action!
-
 ## Task 1: Creating Email Verification for Forgot Password
 
 In this task, you will create a Forgot Password page with email verification functionality. Users will enter their email to receive a reset link, ensuring secure password recovery. You will also update the login page to include a "Forgot Password" button for easy access.

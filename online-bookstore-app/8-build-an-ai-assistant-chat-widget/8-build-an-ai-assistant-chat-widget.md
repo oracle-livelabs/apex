@@ -25,24 +25,6 @@ In this lab, you will:
 
 If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab7.zip) to download the export file, which contains everything completed in the previous labs, and follow the download instructions from Task 1 to Task 3 in the lab [Downloads](?lab=downloads).
 
-## Downloads: Missed Previous Labs? Download and Install the Application
-
-If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
-
-1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab7.zip) to download the completed application zip file.
-
-2. Import the **downloaded zip** file into your workspace. To import the app, go to **App Builder > Import**.
-
-3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-
-4. Update the hashed password for user01:
-
-    - Go to **SQL Workshop > Object Browser > Tables > OBS\_USERS > Data**.
-
-    - Click the **edit icon** for user01 and update the password to **secretPassword**.
-
-5. All set. Now, run the application and see it in action!
-
 ## Task 1: Generate API Keys using OCI Console
 
 Note: If you already have an OCI key pair, you may skip this lab.
