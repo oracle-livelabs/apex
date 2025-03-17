@@ -82,6 +82,10 @@
         "filename": "../../18-vector-search-configurations/18-vector-search-configurations.md"
       },
       {
+        "title": "Downloads: Download Instructions",
+        "filename": "../../downloads/downloads.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

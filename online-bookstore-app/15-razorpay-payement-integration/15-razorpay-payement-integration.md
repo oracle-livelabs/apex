@@ -102,8 +102,6 @@ In this task, you will generate an API key in Test Mode on the Razorpay dashboar
         - Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
         - Verify Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
 
-    Click **Create**.
-
     ![Click Timeline](images/15-1-9-details.png " ")
 
 ## Task 2: Create REST Data Source

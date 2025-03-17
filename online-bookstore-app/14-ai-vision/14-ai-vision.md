@@ -10,7 +10,7 @@ Estimated Time: 10 minutes
 
 In this lab, you:
 
-- Create Rest Data Source
+- Create REST Data Source
 - Create Automation
 - Create Trigger
 

@@ -1220,8 +1220,6 @@ In this task, you will set up the SignUp functionality, allowing users to regist
         - Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
         - Verify Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
 
-    Click **Create**
-
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
 17. Navigate to **App Builder** and select **Online Bookstore Application**.
