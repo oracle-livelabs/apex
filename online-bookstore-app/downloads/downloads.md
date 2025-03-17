@@ -24,9 +24,9 @@ In this lab, you will learn how to download and import an export file of the app
 
 4. Click **Next**.
 
-    *Note: This screen will appear only if the imported app contains workspace utilities created in the previous labs.*
-
     !["Page Designer"](images/19-2-4.png "")
+
+    *Note: This screen will appear only if the imported app contains workspace utilities created in the previous labs.*
 
 5. Click **Install Supporting Objects**.
 
