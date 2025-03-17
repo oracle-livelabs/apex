@@ -33,7 +33,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! You 
 
     - Click the **edit icon** for user01 and update the password to **secretPassword**.
 
-5. All set. Now, run the application and see it in action!.
+5. All set. Now, run the application and see it in action!
 
 ## Task 1: Build a Shopping Cart Page
 

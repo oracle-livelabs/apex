@@ -78,7 +78,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
         - In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
 
-12. All set. Now, run the application and see it in action!.
+12. All set. Now, run the application and see it in action!
 
 ## Task 1: Create an Application
 
