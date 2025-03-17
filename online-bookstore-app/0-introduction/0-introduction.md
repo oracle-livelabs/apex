@@ -64,6 +64,10 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads: Download and Install the Complete Application
 
+If you are stuck or the app is not working as expected, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18, and follow the download instructions from Task 1 to Task 10 in the lab [Downloads](?lab=downloads).
+
+## Downloads: Download and Install the Complete Application
+
 If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
 
 1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) to download the completed application zip file.

@@ -15,6 +15,10 @@ In this lab, you will:
 - Create Buttons to add and remove books from the wishlist, including the necessary backend processes.
 - Update Navigation Bar to include a link to the wishlist page.
 
+### Downloads: Missed Previous Labs? Download and Install the Application
+
+If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab8.zip) to download the export file, which contains everything completed in the previous labs, and follow the download instructions from Task 1 to Task 4 in the lab [Downloads](?lab=downloads).
+
 ## Downloads: Missed Previous Labs? Download and Install the Application
 
 If you're stuck or missed out on completing the previous labs, don't worry! You can download and install the application as follows:
