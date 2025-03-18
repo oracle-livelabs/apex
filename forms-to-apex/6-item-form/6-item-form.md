@@ -148,9 +148,41 @@ The S_ITEM table has five columns required: ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRIC
 
     ![App Builder](images/drag-process1.png " ")
 
-5. Lastly, navigate to **Rendering** tab, organize the items in the layout by dragging and dropping the items as per your preference and click **Save**.
+5. Lastly, navigate to **Rendering** tab, organize the items in the layout by dragging and dropping the items as per your preference.
 
     ![App Builder](images/drag-item1.png " ")
+
+## Task 5: Create a Validation Process
+
+1. In the **Processing** tab, right-click **Validating** and select **Create Validation**.
+
+    ![App Builder](images/create-validation.png " ")
+
+2. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Validate Products**
+
+    - Under the Validation:
+
+        - Type: **Function Body (returning Error Text)**
+
+        - PL/SQL Function Body Returning Error Text: Copy and paste the below code:
+
+        ```
+         <copy>
+         return PKG_MODERNIZATION.F_VALIDATE_ITEM(
+         p_product_id => :P7_PRODUCT_ID,
+         p_ord_id     => :P7_ORD_ID);
+         </copy>
+        ```
+
+        - Always Execute: **Toggle On**
+
+   ![App Builder](images/validate-products-validation.png " ")
+
+3. Click **Save**.
 
 ## Summary
 
