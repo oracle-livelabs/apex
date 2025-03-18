@@ -28,7 +28,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/f225896.sql) to download the completed application.
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/forms-modernization-export.sql) to download the completed application.
 
 ## Learn More
 
