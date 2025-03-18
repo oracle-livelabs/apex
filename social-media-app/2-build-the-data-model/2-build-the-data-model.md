@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you create the database objects required for the app. To do so, you are introduced to the **SQL Workshop** component of APEX where you build the database objects using **Quick SQL**, run SQL scripts and view the data using the Object Browser.
+In this lab, you will create the necessary database objects for the app. As part of this process, you will be introduced to the **SQL Workshop** component of APEX, where you will use  **Quick SQL** to build database objects, run SQL scripts, and explore data using the Object Browser.
 
 Estimated Time: 5 minutes
 
@@ -28,7 +28,7 @@ In this lab, you will:
     - A table for the **REACTIONS** on the posts.
 
     These tables each have a primary key and a foreign key relationship linking **REACTIONS** to **POSTS**.
-    There is also a constraint added to ensure that users can only react to a post once. We will be prefixing our database objects with **SM\_** (short for**S**ocial **M**edia) as shown in the following model:
+    Additionally, a constraint is applied to ensure that users can react to a post only once. We will prefix our database objects with **SM\_** (short for **S**ocial **M**edia), as shown in the following model:
 
     ![ER diagram of the data model](images/data-model.png "")
 
@@ -37,11 +37,9 @@ In this lab, you will:
     ![Naviagtion to Quick SQL from Toolbar](images/navigate-quick-sql.png "")
 
     The **Quick SQL** page is displayed.
-The left side of the page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. To learn more about the shorthand notation, you can click on the **Help** button at the top.
+    The left side of the page is where a developer can enter **Quick SQL** shorthand notation that represents the design of our data model. To learn more about the shorthand notation, you can click on the **Help** button at the top.
 
-    The right side of the page is where **Quick SQL** will generate the DDL
-(Database Definition Language) script based on the shorthand entered by
-the developer on the left side.
+    The right side of the page is where **Quick SQL** generates the DDL (Database Definition Language) script based on the shorthand entered by the developer on the left side.
 
    ![Quick SQL home page is displayed](images/quick-sql.png "")
 
@@ -72,13 +70,13 @@ the developer on the left side.
 
     ![Review and Run](images/review-run.png "")
 
-2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL script that we will run to build the database objects. This could also be done manually through APEX Object Browser or even by manually typed code.
+2. In this case, we have used APEX **Quick SQL** shorthand to generate the SQL script, which we will run to create the database objects. Alternatively, this could be done manually through the APEX **Object Browser** or by writing the SQL code manually.
 
-    Save SQL Script with a name **db objects** and Click **Run**
+    Save the SQL Script as **db objects**, and click **Run**
 
     ![Save the Quick SQL script](images/save-quick-sql.png "")
 
-3. Review the summary and then click **Run Now**.
+3. Review the summary and click **Run Now**.
 
     ![Run now button is displayed](images/run-now.png)
 
@@ -88,17 +86,17 @@ the developer on the left side.
 
 ## Task 3: Create a Custom Table Constraint
 
-Since we prefer that Users react to a post one time only, we need to add a constraint to the *SM_REACTIONS* table. This will facilitate the proper functioning of a database operation later in this workshop.
+Since we want users to react to a post only once, we need to add a constraint to the *SM_REACTIONS* table. This will ensure proper database behavior in a later step of this workshop.
 
-1. From your APEX workspace homepage, click **SQL Workshop** and then click **Object Browser**.
+1. On APEX workspace homepage, click **SQL Workshop** and select **Object Browser**.
 
     ![Object Browser is displayed](images/nav-sql.png)
 
-2. On the left side, select the Table **SM_REACTIONS**. In the main panel, click on the **Constraints** tab.
+2. In the object tree, expand Tables and select **SM_REACTIONS** table. In the details panel of the SM_REACTIONS table, click on the **Constraints** tab.
 
     ![Object Browser is displayed](images/nav-object-browser.png)
 
-3. Click the **Create** Button and configure the new constraint:
+3. Click the **Create** Button and create a new constraint with the following details:
     | Parameter | Value |
     | -------- |:-------:|
     | Constraint Name | **SM\_REACTIONS\_CON** |
