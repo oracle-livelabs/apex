@@ -129,7 +129,7 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-5-7.png "")
 
-8. In the else statement of the code, replace **<****picture\_url****>** with the URL you copied in step 2, up to **..profile_pic/**, and click **Apply Changes**.
+8. In the else statement of the code, replace **'<****picture\_url****>'** with the URL you copied in step 2, up to **'..profile_pic/'**, and click **Apply Changes**.
 
     !["Page Designer"](images/19-5-8.png "")
 

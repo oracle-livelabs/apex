@@ -127,7 +127,7 @@ In this task, you will create a REST Data Source using the OCI Vision REST API a
 
 ## Task 2: Create Automation
 
-In this task, we will create an automation in Oracle APEX that updates the object\_det and text\_det columns of the obs\_books table. This automation will be triggered whenever book details are updated. To ensure efficiency, we will add a WHERE clause so that the automation executes only when the Book_image column is modified. If no rows meet this condition, the automation will exit immediately without performing any unnecessary operations.
+In this task, we will create an automation in Oracle APEX that updates the object\_det and text\_det columns of the obs\_books table. This automation will be triggered whenever book details are updated. To ensure efficiency, we will add a WHERE clause so that the automation executes only when the book_image column is modified. If no rows meet this condition, the automation will exit immediately without performing any unnecessary operations.
 
 1. Navigate to **Shared Components** and under **Workflows and Automations**, select **Automations**.
 

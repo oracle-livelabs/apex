@@ -315,7 +315,7 @@ In this task, you will integrate a global search feature that remains accessible
 
 32. Run the application and observe the global search, which will remain visible even after you navigate to any other page.
 
-    ![Click](images/16-4-32.png " ")
+    ![Click](images/16-4-32.1.png " ")
 
 33. Navigate to any other page, e.g., the **My Books** page, and then return to the home page by clicking **Home** entry in the navigation bar or **Online Bookstore**.
 
