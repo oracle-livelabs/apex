@@ -65,7 +65,7 @@ You can define which facets to filter the data. Some are defined automatically, 
 
     ![App Builder](images/nav-to-search.png " ")
 
-2. In the left pane, under **Search**, right-click **Facets** and click **Create Facet**.
+2. In the left pane, under **Search**, right-click **Facets** and select **Create Facet**.
 
     ![App Builder](images/create-facets1.png " ")
 
@@ -94,7 +94,7 @@ You can define which facets to filter the data. Some are defined automatically, 
 
     ![App Builder](images/sequence.png " ")
 
-5. Click Save.
+5. Click **Save**.
 
 ## Task 3: Customize the Interactive Report
 

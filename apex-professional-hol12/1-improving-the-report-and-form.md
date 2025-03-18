@@ -16,6 +16,18 @@ By completing this lab, you will:
 
 - Enhance the form layout by organizing fields, hiding unnecessary items, and improving user interface elements.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-OnlineShoppingApplication.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+
 ## Task 1: Create a Product Details Form
 
 In this task, you will create a form that displays product details. This Form will be based on the PRODUCTS table and added as a modal dialog page for your application.
