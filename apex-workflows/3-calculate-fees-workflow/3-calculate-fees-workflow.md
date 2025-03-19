@@ -139,13 +139,13 @@ You will define the following parameters for the Calculate fees Workflow:
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Direction |
-  |----------|-------|-------------|----------|
-  | DNO | DNO | NUMBER |    |
-  | PATIENT_EMAIL | Patient Email | VARCHAR2 |     |
-  | PATIENT_NAME | Patient Name | VARCHAR2 |       |
-  | REQUEST_DATE | Request Date | TIMESTAMP |  |
-  | STATUS       |  Status      | VARCHAR2 | Out |
+  |Static ID | Label | Data Type | Direction | Session State Format Mask |
+  |----------|-------|-------------|----------|----|
+  | DNO | DNO | NUMBER |    | |
+  | PATIENT_EMAIL | Patient Email | VARCHAR2 |     | |
+  | PATIENT_NAME | Patient Name | VARCHAR2 |       | |
+  | REQUEST_DATE | Request Date | TIMESTAMP |  | DD-MON-YYYY HH24:MI:SS |
+  | STATUS       |  Status      | VARCHAR2 | Out | |
   {: title="List of Parameters to be Created"}
 
 ## Task 5: Add Workflow Variables

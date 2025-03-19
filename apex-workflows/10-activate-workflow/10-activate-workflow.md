@@ -48,7 +48,7 @@ Estimated Time: 5 minutes
 
     ![wait for feedback](./images/create-part.png " ")
 
-    ![wait for feedback](./images/workflow-admin2.png " ")
+    ![wait for feedback](./images/workflow-admin2-updated.png " ")
 
 7. Click **Save**.
 
