@@ -18,7 +18,11 @@ In this lab, you will:
 
 ### Downloads: Download and Install the Complete Application
 
-If you are stuck or the app is not working as expected, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18, and follow the download instructions from Task 1 to Task 10 in the lab [Downloads](?lab=downloads).
+If you are stuck or the app is not working as expected, don't worry! Download one of the export files below:
+
+- Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
+
+- Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs, including the optional Lab 18. This export requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 2 to Task 11.
 
 ## Task 1: Create an Application
 

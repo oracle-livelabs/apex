@@ -1,12 +1,41 @@
-# Downloads
+# Download Instructions
 
-## Download Instructions
+## Introduction
 
 In this lab, you will learn how to download and import an export file of the app. This process is essential to run the app successfully and complete the tasks that depend on the exported file. By the end of this lab, you will have a fully functional app environment for further exploration and development.
 
 ## Task 1: Download the App Export
 
-1. Download a lab export ZIP file from any lab. The export file is available after the introduction in all labs. Each export file contains everything completed up to the start of that specific lab. The export files in the Introduction and Lab 1 contain the complete app export, which includes everything completed in all the labs except for the optional Lab 18.
+You can download a lab export ZIP file from any lab. The export file is available after the introduction in all labs. Each export file contains everything completed up to the start of that specific lab.
+
+The export files in the Lab Introduction and Lab 1 include two app exports:
+
+- The first export contains everything completed in all labs except the optional Lab 18.
+
+- The second export includes Lab 18 as well. (This requires Oracle Database 23ai for Lab 18.)
+
+Alternatively, you can download the export file from the table below, located in any lab row. For example, an export file in Lab Row x means the app export includes everything completed up to the end of that specific lab.
+
+| Lab |  Module | Export File | To run the app, follow the steps described in the tasks below: |
+| --- | --- | --- | --- |
+| 1 | [Create the application](?lab=create-app) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab1.zip) | Task 2 Only |
+| 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab2.zip) | Task 2 Only |
+| 3 | [Enhance the Home Page](?lab=enhance-home-page) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab3.zip) | Task 2 Only |
+| 4 | [Customize Application Theme](?lab=application-theme) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab4.zip) | Task 2 Only |
+| 5 | [Custom Authentication](?lab=authentication) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab5.zip) | from Task 2 to Task 3 |
+| 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab6.zip) | from Task 2 to Task 3 |
+| 7 | [Create and Manage a Shopping Cart](?lab=7-create-shop-cart) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab7.zip) | from Task 2 to Task 3 |
+| 8 | [Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab8.zip) | from Task 2 to Task 4 |
+| 9 | [Create and Manage Wishlist Functionality](?lab=9-wishlist) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab9.zip) | from Task 2 to Task 4 |
+| 10 | [Create and Manage User Profile Pages](?lab=10-add-user) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab10.zip) | from Task 2 to Task 5 |
+| 11 | [Create and Manage Administration](?lab=11-admin-page) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab11.zip) | from Task 2 to Task 5 |
+| 12 | [Improve User Onboarding](?lab=12-onboarding) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab12.zip) | from Task 2 to Task 6 |
+| 13 | [Push Notification](?lab=13-push-notification) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab13.zip) | from Task 2 to Task 7 |
+| 14 | [AI Vision](?lab=14-ai-vision) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab14.zip) | from Task 2 to Task 8 |
+| 15 | [Razorpay Payment Integration](?lab=15-razorpay-payement-integration) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab15.zip) | from Task 2 to Task 9 |
+| 16 | [UI Enhancements](?lab=16-additional-ui-enhancements) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab16.zip) | from Task 2 to Task 10 |
+| 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) | from Task 2 to Task 10 |
+| 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Fobs-lab17.zip) | from Task 2 to Task 11 |
 
 ## Task 2: Import the App into an APEX Workspace
 
@@ -288,6 +317,50 @@ To Enable Generative AI in Oracle APEX:
 6. Repeat step 4.
 
     !["Page Designer"](images/19-10-6.png "")
+
+## Task 11: Vector Search using Search Configurations
+
+1. To load the ONXX Model, Refer to [Task 1: Load the ONNX Model](?lab=18-vector-search-configurations#Task1:LoadtheONNXModel) of [Lab 18: Vector Search using Search Configurations](?lab=18-vector-search-configurations).
+
+2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
+
+    !["Page Designer"](images/19-11-2.png "")
+
+3. Click **Vector Providers**
+
+    !["Page Designer"](images/19-11-3.png "")
+
+4. Click **DB ONXX Model**
+
+    !["Page Designer"](images/19-11-4.png "")
+
+5. Enter/select the following and click **Apply Changes**.
+
+    - Under Local Embedding:
+
+        - For ONNX Model Owner: **Select your Parsing Schema**
+
+        - ONNX Model Name: **DOC_MODEL**
+
+    !["Page Designer"](images/19-11-5.png "")
+
+6. Expand **SQL Workshop** and select **SQL Commands**.
+
+    !["Page Designer"](images/19-11-6.png "")
+
+7. Copy and paste the SQL code below, then click **Run**
+
+    ```
+    <copy>
+    UPDATE OBS_BOOKS
+    SET DESCRIPTION_VECTOR = APEX_AI.GET_VECTOR_EMBEDDINGS(
+        P_VALUE             => DESCRIPTION,
+        P_SERVICE_STATIC_ID => 'db_onnx_model'
+    );
+    </copy>
+     ```
+
+    !["Page Designer"](images/19-11-7.png "")
 
 ## Summary
 
