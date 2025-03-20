@@ -5,7 +5,7 @@
 In this lab, you will learn how to load ONNX models into Oracle Database and create a Vector Provider to generate vector embeddings. By leveraging Oracle Vector Search, you will configure a semantic similarity search, allowing users to find relevant results regardless of how they phrase their queries. Finally, you will build a search page that utilizes these configurations to enhance search accuracy and user experience.
 
 
->*Note: This lab requires you are using Oracle Database 23ai.*
+>*Note: This lab requires Oracle Database 23ai.*
 
 Estimated Time: 10 minutes
 
