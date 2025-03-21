@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn how to create database objects (package, trigger) using Object Browser and additionally, you'll learn how to create a Custom Authentication scheme from scratch to have complete control over your authentication interface.
+In this lab, you will learn how to create database objects (package, trigger) using Object Browser and additionally, you'll learn how to create a Custom Authentication scheme from scratch to have complete control over your authentication interface.
 
 Estimated Time: 5 minutes
 

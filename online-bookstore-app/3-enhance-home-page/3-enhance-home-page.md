@@ -2,7 +2,7 @@
 
 ## Introduction
 
-During this lab, you'll refine the faceted search page and its card section. Additionally, you'll discover how to integrate a Global search page item into the faceted search page for book searches. You'll also gain expertise in enabling sorting functionality on the search page. Lastly, you'll explore creating a hyperlink that redirects users to an Amazon page.
+During this lab, you'll refine the faceted search page and its card section. Additionally, you'll create a search bar at the top of the books section within the faceted search page for book searches. You'll also gain expertise in enabling sorting functionality on the search page. Finally, you'll create a Book Details Page to display detailed information about the selected book.
 
 Estimated Time: 15 minutes
 
