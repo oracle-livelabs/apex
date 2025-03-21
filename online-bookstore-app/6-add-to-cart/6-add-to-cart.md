@@ -18,27 +18,27 @@ In this lab, you will:
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab5.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab5.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
 
 ## Task 1: Create a Package to Manage Orders
 
 In this task, you create a package named **OBS\_MANAGE\_ORDERS**, contains procedures and functions to manage orders and wishlist items within a database application. Let's break down its components:
 
-**Procedure add\_book**: Adds a book to a collection named "BOOKS" along with its quantity.
+- **Procedure add\_book**: Adds a book to a collection named "BOOKS" along with its quantity.
 
-**Procedure remove\_book**: Removes a book from the "BOOKS" collection based on its ID.
+- **Procedure remove\_book**: Removes a book from the "BOOKS" collection based on its ID.
 
-**Procedure add\_to\_wishlist**: Inserts a book into the wishlist table for a specified user.
+- **Procedure add\_to\_wishlist**: Inserts a book into the wishlist table for a specified user.
 
-**Procedure remove\_from\_wishlist**: Removes a book from the wishlist of a specified user.
+- **Procedure remove\_from\_wishlist**: Removes a book from the wishlist of a specified user.
 
-**Function get\_quantity**: Retrieves the total number of items in the "BOOKS" collection.
+- **Function get\_quantity**: Retrieves the total number of items in the "BOOKS" collection.
 
-**Function book\_exists**: Checks if a book exists in the "BOOKS" collection and returns its quantity.
+- **Function book\_exists**: Checks if a book exists in the "BOOKS" collection and returns its quantity.
 
-**Procedure clear\_cart**: Clears all items from the "BOOKS" collection.
+- **Procedure clear\_cart**: Clears all items from the "BOOKS" collection.
 
-**Procedure create\_order**: Creates a new order by inserting data into the orders table and order items table based on the items in the "BOOKS" collection. It also deletes the "BOOKS" collection after order creation.
+- **Procedure create\_order**: Creates a new order by inserting data into the orders table and order items table based on the items in the "BOOKS" collection. It also deletes the "BOOKS" collection after order creation.
 
 To Create a Package:
 
@@ -840,7 +840,7 @@ In this task, you will add a book to the cart, observe the cart item count, and 
 
 ## Summary
 
-In this lab, you have learned how to enhance the Book Details page by creating a package to manage shopping cart functionalities, defining application items to store session state information, implementing application processes to run PL/SQL code at specific points, and setting up computations to determine user-related information. These steps enable the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface dynamically reflects the current state of the cart. You are now ready to move on to the next lab!
+In this lab, you have learned to enhance the Book Details page by creating a package to manage shopping cart functionalities, defining application items to store session state information, implementing application processes to run PL/SQL code at specific points, and setting up computations to determine user-related information. These steps enable the addition and removal of books to/from a shopping cart, updating the cart's item count, and ensuring the interface dynamically reflects the current state of the cart. You are now ready to move on to the next lab!
 
 ## Acknowledgements
 

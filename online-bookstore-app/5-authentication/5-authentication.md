@@ -16,17 +16,17 @@ In this lab, you will:
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab4.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab4.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Create a Package
 
 In this package named **OBS\_AUTH**, you are going to implement the following functionalities:
 
-**FUNCTION HASH\_PASSWORD**: This function calculates a hashed password using the provided email, password, and a salt. It utilizes the apex\_util.get\_hash function to generate the hash.
+- **FUNCTION HASH\_PASSWORD**: This function calculates a hashed password using the provided email, password, and a salt. It utilizes the apex\_util.get\_hash function to generate the hash.
 
-**FUNCTION AUTHENTICATE\_USER**: This function authenticates a user by verifying their provided username and password against stored credentials in the database. It retrieves the email associated with the provided username, checks if the user exists, hashes the provided password, and compares it with the stored hashed password. If the passwords match, it sets the authentication result to success and sets the authenticated username in a global variable.
+- **FUNCTION AUTHENTICATE\_USER**: This function authenticates a user by verifying their provided username and password against stored credentials in the database. It retrieves the email associated with the provided username, checks if the user exists, hashes the provided password, and compares it with the stored hashed password. If the passwords match, it sets the authentication result to success and sets the authenticated username in a global variable.
 
-**PROCEDURE POST\_AUTH**: This procedure is invoked after successful authentication. It sets the authenticated user using the username stored in the global variable.
+- **PROCEDURE POST\_AUTH**: This procedure is invoked after successful authentication. It sets the authenticated user using the username stored in the global variable.
 
 The code also includes error handling to manage exceptions and set appropriate authentication results.
 

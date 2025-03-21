@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-Welcome to LiveLab: Online Bookstore Application, an immersive, hands-on lab series designed to help you build a feature-rich, AI-powered online bookstore using Oracle APEX. Through 18 structured labs, you'll gain practical experience in developing a modern e-commerce platform—covering everything from app creation and UI customization to AI-driven search, payment integration, and advanced user engagement features. Whether you're a beginner or an experienced developer, this LiveLab will guide you step by step in crafting a dynamic and intelligent online bookstore.
+Welcome to LiveLab: Online Bookstore Application, an immersive, hands-on lab series designed to help you build a feature-rich, AI-powered online bookstore using Oracle APEX. Through 18 structured labs, you will gain practical experience in developing a modern e-commerce platform — covering everything from app creation and UI customization to AI-driven search, payment integration, and advanced user engagement features. Whether you are a beginner or an experienced developer, this LiveLab will guide you step by step in crafting a dynamic and intelligent online bookstore.
 
 Estimated Time: 4 hours 40 minutes
 
@@ -86,9 +86,9 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, don't worry! Download one of the export files below:
 
-- Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
+- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
 
-- Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application export file, which contains everything completed in all the labs, including the optional Lab 18. This export requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
+- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application export file, which contains everything completed in all the labs, including the optional Lab 18. This export requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
 
 ## Learn More - *Useful Links*
 

@@ -16,7 +16,7 @@ In this lab, you:
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Simply click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab13.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the lab [Downloads: Download Instructions](?lab=download-instructions) from Task 2 to Task 7.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab13.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) from Task 2 to Task 7.
 
 ## Task 1: Integrating with Object Detection and Text Detection
 
