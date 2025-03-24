@@ -22,19 +22,19 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 1. Navigate to **Shared Components**.
 
-    ![Page Designer](images/17-1-1.png ' ')
+    ![Page Designer](images/17-1-1-sc.png ' ')
 
 2. Under **Generative AI**, select **AI Configurations**.
 
-    ![Page Designer](images/17-1-2.png ' ')
+    ![Page Designer](images/17-1-2-genai-ai-config.png ' ')
 
 3. Click **Books Analysis AI**
 
-    ![Page Designer](images/17-1-3.png ' ')
+    ![Page Designer](images/17-1-3-open-ai-config.png ' ')
 
 4. Under **RAG Sources**, click **Books**.
 
-    ![Page Designer](images/17-1-4.png ' ')
+    ![Page Designer](images/17-1-4-rag-source.png ' ')
 
 5. Enter/select the following below:
 
@@ -46,11 +46,11 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 6. Click **Apply Changes**.
 
-    ![Page Designer](images/17-1-6.png ' ')
+    ![Page Designer](images/17-1-6-apply-changes.png ' ')
 
 7. Under **RAG Sources**, click **Create RAG Sources**.
 
-    ![Page Designer](images/17-1-7.png ' ')
+    ![Page Designer](images/17-1-7-create-rag-sources.png ' ')
 
 8. Enter/select the following properties:
 
@@ -92,7 +92,7 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
     Click **Create**
 
-    ![Page Designer](images/17-1-8.png ' ')
+    ![Page Designer](images/17-1-8-prop.png ' ')
 
 9. Enter/select the following properties:
 
@@ -114,7 +114,7 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 10. Click **Apply Changes**.
 
-    ![Page Designer](images/17-1-10.png ' ')
+    ![Page Designer](images/17-1-10-apply-changes.png ' ')
 
 ## Task 2: Run the Application
 
@@ -122,15 +122,15 @@ In this task, you will test the AI Assistant by running the application and quer
 
 1. Run the application and click **AI Assistant** entry in the navigation bar.
 
-    ![Page Designer](images/17-2-1.png ' ')
+    ![Page Designer](images/17-2-1-run.png ' ')
 
 2. Enter questions related to orders available in the bookstore and click the send icon.
 
-    ![Page Designer](images/17-2-2.png ' ')
+    ![Page Designer](images/17-2-2-ask-ques.png ' ')
 
 3. Observe and analyze the responses to gain better insights.
 
-    ![Page Designer](images/17-2-3.png ' ')
+    ![Page Designer](images/17-2-3-observe-response.png ' ')
 
 ## Summary
 
