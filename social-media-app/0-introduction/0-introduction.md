@@ -21,7 +21,7 @@ Watch the video below for a quick walkthrough of the workshop.
 * Customize the App using Dynamic Actions and custom CSS
 * Add a Maps region, retrieve device location, and install as a PWA (Progressive Web App)
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ### Labs
 
@@ -61,4 +61,4 @@ Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcT
 ## Acknowledgements
 
 * **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager
-* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025
