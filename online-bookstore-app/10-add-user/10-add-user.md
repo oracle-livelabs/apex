@@ -282,7 +282,7 @@ In this task, you set up entries for authenticated and public users, create a lo
 
 In this task, you will learn how to create and configure a page to update the current user's profile within an application. You will have a functional "Update Current User" page that allows users to update their profile details, including username, email, and profile picture.
 
-1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/10-3-user-create-page.png " ")
 
@@ -567,7 +567,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
 This task provides a comprehensive step-by-step process for creating and configuring an application's "Reset Password" page. The page will be designed as a modal dialog featuring a form allowing users to reset their passwords securely.
 
-1. On page designer toolbar, navigate to **(+ v)** and select **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/10-4-create-page.png " ")
 

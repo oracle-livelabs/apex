@@ -564,6 +564,7 @@ In this task, you will create and configure email templates to standardize the e
             | TARGET | Setup your account  |
             | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
             | TITLE | Online Bookstore  |
+            {: title="List of Placeholders and Their Values"}
 
             NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs.
 
@@ -653,14 +654,15 @@ In this task, you will create and configure email templates to standardize the e
 
         - Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
 
-            | Placeholder     |  Item or Value   |
+            | Placeholder     |  Item or Value  |
             | --------------- |  ------ |
             | SUBJECT | Online Bookstore - Reset Password! |
             | TARGET_HEADING | Please open the link to Reset Password for your account: |
-            | APP_LINK | &P100002_URL.  |
-            | TARGET | Reset Password  |
-            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
-            | TITLE | Online Bookstore  |
+            | APP_LINK | &P100002_URL. |
+            | TARGET | Reset Password |
+            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png |
+            | TITLE | Online Bookstore |
+            {: title="List of Placeholders and Their Values"}
 
             NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs. Additionally, update the domain **apex.oracle.com** if your environment differs.
 
@@ -818,6 +820,7 @@ In this task, you will create the My Orders page to display users' past orders, 
             | --- |  --- | --- |
             | "ADDED_TIME" DESC  | ADDED_TIME| Date |
             | "TOTAL" DESC | TOTAL | Amount |
+            {: title="List of Items"}
 
     ![Click](images/16-5-5.png " ")
 

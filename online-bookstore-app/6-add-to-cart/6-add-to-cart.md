@@ -438,6 +438,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
       | P18\_SHOPPING\_CART_ITEMS | Hidden |
       | P18\_BOOK\_IN\_CART | Hidden |
       | P18\_QUANTITY | Select List  |
+      {: title="List of Page Items"}
 
     ![Page Items](images/shop-cart-page-item.png " ")
 
@@ -579,6 +580,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
       | --------- |  ------ | ---- |
       | p\_book | Item | P18\_BOOK\_ID |
       | p\_quantity | Item | P18\_QUANTITY |
+      {: title="List of Parameters"}
 
     ![Add Product Parameter](images/add-process-book.png " ")
 
@@ -611,6 +613,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
       | Parameter |  Type   | Item |
       | --------- |  ------ | ---- |
       | p\_book | Item | P18\_BOOK\_ID |
+      {: title="List of Parameter"}
 
     ![Delete Product Parameter](images/delete-pro-pram.png " ")
 
@@ -639,6 +642,7 @@ In this task, you enhance the Book Details page by enabling the addition and rem
      | Parameter |  Type   | Item |
      | --------- |  ------ | ---- |
      | Function Result | Item | P18\_SHOPPING\_CART\_ITEMS |
+     {: title="List of Parameter"}
 
     ![Calculate Shopping Cart Items Parameter ](images/cal-item-func.png " ")
 

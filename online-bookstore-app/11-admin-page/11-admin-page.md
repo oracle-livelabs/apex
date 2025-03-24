@@ -23,7 +23,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! Clic
 
 This task guides you through creating an administration page for managing books and user roles. You will start by navigating to the Application Home Page to create a blank page named "Administration". Next, you will set up a new list in Shared Components, adding entries for managing books and user roles and customizing their icons. Finally, using the Media List template, you'll configure the Administration page to display this list.
 
-1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
     ![close dialog](images/11-1-1-create-page-admin.png " ")
 
 2. Click **Blank Page**.
@@ -67,7 +67,8 @@ This task guides you through creating an administration page for managing books 
     | List Entry Label | Target Page ID or custom URL |
     | ---------- |  ------ |
     | Manage Books Information | 40 |
-    | User Role| 30 |
+    | User Role | 30 |
+    {: title="List of Entry Labels"}
 
     Click **Next**.
 
@@ -224,7 +225,7 @@ In this task, you will update the authorization scheme to ensure that only users
 
 In this task, you'll create a page to manage book information. Start by navigating to the Application Home Page and creating a new blank page with the identification details set. Then, customize the page layout and appearance. Next, create regions for updating book information and searching for books. Configure dynamic actions to handle search functionality and refresh actions. Set up buttons for editing, resetting, and creating book entries.
 
-1. On Page Designer toolbar, Navigate to **(+ v)** and select **Blank Page**.
+1. On Page Designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/11-4-nav-create-page.png " ")
 
@@ -697,7 +698,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 In this task, you will create a form that enables users to edit book records in detail, ensuring accurate and efficient data management.
 
-1. On the Page Designer toolbar, Navigate to (+ v) and select **Page**.
+1. On the Page Designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/11-5-1-create-books.png " ")
 
@@ -807,7 +808,7 @@ In this task, you will create a form that enables users to edit book records in 
 
 In this task, you will build pages with interactive reports and forms to view and manage user roles/data efficiently.
 
-1. On the Page Designer toolbar, Navigate to **(+ v)** and select **Page**.
+1. On the Page Designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/11-6-create-page-role.png " ")
 

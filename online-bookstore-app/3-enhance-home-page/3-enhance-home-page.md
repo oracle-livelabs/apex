@@ -58,7 +58,7 @@ In this task, we will reorder the facets and edit their properties and ranges ac
        | 20 - 50 | 20\|50 |
        | 50 - 80 | 50\|80 |
        | >80 | 80\| |
-       {: title="Static Values"}
+       {: title="List of Static Values"}
 
        - Actions Menu > Chart: **Toggle Off**
 
@@ -268,6 +268,7 @@ In this task, we will activate sorting options for books by title, discount, and
             | "TITLE"asc  | TITLE| Title |
             | "NEW\_PRICE"asc | NEW\_PRICE | Price|
             | "DISCOUNT"desc| DISCOUNT | Discount |
+            {: title="List of Items"}
 
     ![App builder home page](images/order-by-item.png " ")
 

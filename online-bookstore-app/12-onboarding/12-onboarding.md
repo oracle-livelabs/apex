@@ -332,7 +332,8 @@ In this task, you will create a Reset Password page that allows users to securel
 
 >*Note: The previous reset password page created in Lab 10 Task 4 is a modal dialog page, where you reset the password from your application screen. This reset password page is to reset your password from the forgot password email link.*
 
-1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, Navigate navigate to **(+)** and select **Page**.
+
     ![close dialog](images/12-2-blank-page-email.png " ")
 
 2. Click **Blank Page**.
@@ -607,7 +608,7 @@ In this task, you will create a Reset Password page that allows users to securel
 
 31. Click **Save**.
 
-32. On page designer toolbar, Navigate to **(+ v)** and select **Page**.
+32. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![user-create-page](images/12-2-nav-create-page.png " ")
 
@@ -655,7 +656,7 @@ In this task, you will create a Reset Password page that allows users to securel
 
 In this task, you will create an Email Verification process for user sign-up. The process involves validating user email, sending a verification email with a sign-up link, and updating the login page with a SignUp button for new users.
 
-1. On page designer toolbar, Navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![form-page-user-signup](images/12-3-nav-create-page.png " ")
 
@@ -893,7 +894,8 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 In this task, you will set up the SignUp functionality, allowing users to register and verify their accounts. You'll configure form fields, validation, and automated login after successful registration.
 
-1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar,navigate to **(+)** and select **Page**.
+
     ![form-page-signup](images/12-4-nav-create-page.png " ")
 
 2. Choose **Form Page**.

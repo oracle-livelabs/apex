@@ -141,7 +141,7 @@ In this task, you will create a REST Data Source to integrate with the Razorpay 
    |---|-------|------|----------| --------------| ------ |
    | 1 | Request or Response Body| RESPONSE | Out |
    | 2 | HTTP Header| Content-Type | In | application/json | ON
-   {: title="POST Operation Parameters"}
+   {: title="List of POST Operation Parameters"}
 
     ![Click Timeline](images/15-2-13-add-para1.png " ")
 
@@ -251,7 +251,8 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
       | --------------- |  ------ |  --------------- |
       | P17\_RAZORPAY\_ORDER\_ID | Hidden |
       | P17\_PAYMENT\_ID | Hidden | Toggle OFF |
-      | P17\_RESPONSE | Hidden  |
+      | P17\_RESPONSE | Hidden |
+      {: title="List of Page Items"}
 
     ![Click Timeline](images/15-4-3-create-pageitems.png " ")
     ![Click Timeline](images/15-4-3-create-pageitems1.png " ")

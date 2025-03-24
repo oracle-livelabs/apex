@@ -115,7 +115,7 @@ In this task, you will create a REST Data Source using the OCI Vision REST API a
     |---|-------|------|----------| --------------| ------ |
     | 1 | Request or Response Body| RESPONSE | Out |
     | 2 | HTTP Header| Content-Type | In | application/json | ON
-    {: title="POST Operation Parameters"}
+    {: title="List of POST Operation Parameters"}
 
     ![Click Timeline](images/response.png " ")
 

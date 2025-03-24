@@ -101,7 +101,7 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
     ```
     <copy>
-    select 
+    select
         wl.book_id,
         b.author,
         b.book_image,
@@ -132,6 +132,7 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
         | ---------- |  ------ | ------ |
         | "TITLE"asc | TITLE |  Title |
         | "NEW_PRICE"asc | NEW_PRICE | Price |
+        {: title="List of Items"}
 
         Click **OK**.
 

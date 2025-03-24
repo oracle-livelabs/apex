@@ -227,6 +227,7 @@ In this task, you develop a new page in the application to display the shopping 
     | --------------- |  ------ | --------------- |
     | P17\_BOOK\_ID | Hidden | Toggle Off |
     | P17\_QUANTITY | Hidden | Toggle Off |
+    {: title="List of Page Items"}
 
 
     ![close dialog](images/book-id.png " ")
@@ -651,6 +652,7 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
       | --------------- |  ------ | --------------- |
       | p\_user\_id | Item | USER\_ID |
       | p\_order\_id | Item | P17\_ORDER\_ID |
+      {: title="List of Parameters"}
 
     ![close dialog](images/user-id.png " ")
     ![close dialog](images/order-id1.png " ")
@@ -1062,6 +1064,7 @@ In this task, you'll create a My Books page to display books purchased by the us
             | "TITLE"asc  | TITLE| Title |
             | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
             | "QUANTITY"asc| QUANTITY | Quantity |
+            {: title="List of Items"}
 
     ![close dialog](images/region-details.png " ")
 
