@@ -38,7 +38,7 @@ The code also includes error handling to manage exceptions and set appropriate a
 
    ![App builder home page](images/package.png " ")
 
-3. In Create Package dialog, For Name: enter **OBS\_AUTH** and click **Create Package**.
+3. In Create Package dialog, for Name: enter **OBS\_AUTH** and click **Create Package**.
 
    ![App builder home page](images/package-name.png " ")
 

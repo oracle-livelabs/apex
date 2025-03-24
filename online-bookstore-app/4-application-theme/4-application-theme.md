@@ -34,9 +34,9 @@ In this task, you'll update the application's theme using Theme Roller. You'll c
 
     - Redwood Options > Layout: **Floating**
 
-    - Appearance > Update all the options to **Dark**.
+    - Appearance > Update all the options to **Dark**
 
-    Click **Save**
+    Click **Save**.
 
    ![App builder home page](images/save-roller.png " ")
 

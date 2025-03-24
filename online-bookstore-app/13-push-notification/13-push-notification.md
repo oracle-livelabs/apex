@@ -1,4 +1,4 @@
-# Push Notification
+# Configure Push Notification
 
 ## Introduction
 
@@ -10,13 +10,14 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Push Notification
+- Configure Push Notifications using apex\_pwa.send\_push\_notification api
+- Enable End-Users to receive Push Notifications
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
 If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab12.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=download-instructions) from Task 2 to Task 6.
 
-## Task 1: Push Notification
+## Task 1: Implement Push Notifications
 
 In this task, you will enable Push Notifications for the application and configure them to notify users when a book becomes available. You'll set up Progressive Web App (PWA) settings and implement a process to send notifications.
 

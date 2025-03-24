@@ -369,6 +369,7 @@ In this task, you develop a new page in the application to display the shopping 
     | P17\_ORDER\_ID | Hidden |  |
     | P17\_NO\_OF\_BOOKS |Display Only | Number of Books |
     | P17\_TOTAL | Display Only | Grand Total|
+    {: title="List of Page Items"}
 
     ![close dialog](images/order-id.png " ")
 

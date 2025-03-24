@@ -1,4 +1,4 @@
-# Razorpay Payment Gateway Integration
+# Integrate Razorpay Payment Gateway
 
 ## Introduction
 

@@ -61,7 +61,7 @@ Alternatively, you can download the export file from the table below, located in
 
     !["Page Designer"](images/19-2-5.png "")
 
-## Task 3: Update the hashed password for user01
+## Task 3: Update the Hashed Password for user01
 
 1. Expand **SQL Workshop**, click **Object Browser**.
 
@@ -188,7 +188,7 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-6-5.png "")
 
-## Task 7: Generate Push Notification Credentials and enable Push Notifications on the device
+## Task 7: Generate Push Notification Credentials and Enable Push Notifications on the Device
 
 1. Click **App Builder**.
 
@@ -238,7 +238,7 @@ To Enable Generative AI in Oracle APEX:
     !["Page Designer"](images/19-7-11.png "")
     !["Page Designer"](images/19-7-11.2.png "")
 
-## Task 8: Setup Compartment ID to run the Automation for AI Vision Service
+## Task 8: Setup Compartment ID to Run the Automation for AI Vision Service
 
 1. Click **App Builder** and select **Online Bookstore**.
 
@@ -290,7 +290,7 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-9-5.png "")
 
-## Task 10: Update ICON_URL for the application icon in the emails
+## Task 10: Update ICON_URL for the Application Icon in the Emails
 
 1. Click **App Builder**.
 

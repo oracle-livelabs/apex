@@ -1,4 +1,4 @@
-# UI Enhancements
+# Enhance the UI
 
 ## Introduction
 

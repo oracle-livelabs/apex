@@ -22,7 +22,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! Clic
 
 In this task, you will create a Forgot Password page with email verification functionality. Users will enter their email to receive a reset link, ensuring secure password recovery. You will also update the login page to include a "Forgot Password" button for easy access.
 
-1. On page designer toolbar, navigate to **(+ v)** and click **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/12-1-create-page.png " ")
 

@@ -58,19 +58,19 @@
         "filename": "../../12-onboarding/12-onboarding.md"
       },
       {
-        "title": "Lab 13: Push Notification",
+        "title": "Lab 13: Configure Push Notification",
         "filename": "../../13-push-notification/13-push-notification.md"
       },
       {
-        "title": "Lab 14: AI Vision",
+        "title": "Lab 14: Integrate AI Vision to Enhance Book Search",
         "filename": "../../14-ai-vision/14-ai-vision.md"
       },
       {
-        "title": "Lab 15: Razorpay Payment Gateway Integration",
+        "title": "Lab 15: Integrate Razorpay Payment Gateway",
         "filename": "../../15-razorpay-payement-integration/15-razorpay-payement-integration.md"
       },
       {
-        "title": "Lab 16: UI Enhancements",
+        "title": "Lab 16: Enhance the UI",
         "filename": "../../16-additional-ui-enhancements/16-additional-ui-enhancements.md"
       },
       {
@@ -78,7 +78,7 @@
         "filename": "../../17-enhance-ai-assistant/17-enhance-ai-assistant.md"
       },
       {
-        "title": "Lab 18: [optional] Vector Search using Search Configurations",
+        "title": "Lab 18: [OPTIONAL] Implement Vector Search using Search Configurations",
         "filename": "../../18-vector-search-configurations/18-vector-search-configurations.md"
       },
       {

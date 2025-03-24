@@ -1,4 +1,4 @@
-# Vector Search using Search Configurations
+# Implement Vector Search using Search Configurations
 
 ## Introduction
 
