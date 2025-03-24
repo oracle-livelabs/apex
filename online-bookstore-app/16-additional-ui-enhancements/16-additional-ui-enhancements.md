@@ -32,19 +32,19 @@ In this task, you will update the application's footer to display "Built with AP
 
 1. Navigate to the application homepage and click **Edit Application Definition**.
 
-    ![Click](images/16-1-1.png " ")
+    ![Click](images/16-1-1-edit-app-definition.png " ")
 
 2. Click **User Interface**.
 
-    ![Click](images/16-1-2.png " ")
+    ![Click](images/16-1-2-user-interface.png " ")
 
 3. Click **Attributes** and update Add "Built with APEX" to Footer to **Toggle On** and click **Apply Changes**.
 
-    ![Click](images/16-1-3.png " ")
+    ![Click](images/16-1-3-attributes.png " ")
 
 4. Run the application.
 
-    ![Click](images/16-1-4.png " ")
+    ![Click](images/16-1-4-run-app.png " ")
 
 ## Task 2: Remove Hamburger Icon (Navigation Menu)
 
@@ -52,19 +52,19 @@ In this task, you will update the user interface settings to remove the hamburge
 
 1. Navigate to the application homepage and click **Edit Application Definition**.
 
-    ![Click](images/16-1-1.png " ")
+    ![Click](images/16-1-1-edit-app-definition.png " ")
 
 2. Click **User Interface**.
 
-    ![Click](images/16-1-2.png " ")
+    ![Click](images/16-1-2-user-interface.png " ")
 
 3. Click **Navigation Menu** and update Display Navigation to **Toggle On** and click **Apply Changes**.
 
-    ![Click](images/16-2-3.png " ")
+    ![Click](images/16-2-3-nav-menu.png " ")
 
 4. Run the application.
 
-    ![Click](images/16-2-4.png " ")
+    ![Click](images/16-2-4-run-app.png " ")
 
 ## Task 3: Integrate Global Search
 
@@ -72,15 +72,15 @@ In this task, you will integrate a global search feature that remains accessible
 
 1. Navigate to the application homepage and click **Shared Components**.
 
-    ![Click](images/16-4-1.png " ")
+    ![Click](images/16-4-1-sc.png " ")
 
 2. Click **Application Processes**.
 
-    ![Click](images/16-4-2.png " ")
+    ![Click](images/16-4-2-app-processes.png " ")
 
 3. Click **Create**.
 
-    ![Click](images/16-4-3.png " ")
+    ![Click](images/16-4-3-create.png " ")
 
 4. Enter/select the following:
 
@@ -92,7 +92,7 @@ In this task, you will integrate a global search feature that remains accessible
 
        Click **Next**.
 
-    ![Click](images/16-4-4.png " ")
+    ![Click](images/16-4-4-name-point.png " ")
 
 5. Enter the following:
 
@@ -106,7 +106,7 @@ In this task, you will integrate a global search feature that remains accessible
 
     Click **Next**.
 
-    ![Click](images/16-4-5.png " ")
+    ![Click](images/16-4-5-source-code.png " ")
 
 6. Enter the following:
 
@@ -116,27 +116,27 @@ In this task, you will integrate a global search feature that remains accessible
 
     Click **Create Process**.
 
-    ![Click](images/16-4-6.png " ")
+    ![Click](images/16-4-6-condition-type.png " ")
 
 7. Navigate to Application home page by clicking **Application ID**.
 
-    ![Click](images/16-4-7.png " ")
+    ![Click](images/16-4-7-app-id.png " ")
 
 8. Select page **10 - Search Books**.
 
-    ![Click](images/16-4-8.png " ")
+    ![Click](images/16-4-8-page10.png " ")
 
 9. Under **Navigation**, update Warn on Unsaved Changes to **Toggle Off**
 
-    ![Click](images/16-4-9.png " ")
+    ![Click](images/16-4-9-nav.png " ")
 
 10. Right-click **P10\_SEARCH\_PAGE\_ITEM** and select **Copy to other Page...**.
 
-    ![Click](images/16-4-10.png " ")
+    ![Click](images/16-4-10-copy-page-item.png " ")
 
 11. Enter New Page: **0** and click **Next**.
 
-    ![Click](images/16-4-11.png " ")
+    ![Click](images/16-4-11-new-page.png " ")
 
 12. Enter the following:
 
@@ -146,19 +146,19 @@ In this task, you will integrate a global search feature that remains accessible
 
     Click **Copy**.
 
-    ![Click](images/16-4-12.png " ")
+    ![Click](images/16-4-12-item-name.png " ")
 
 13. Right-click **P10\_SEARCH\_PAGE\_ITEM** and select **Delete**.
 
-    ![Click](images/16-4-13.png " ")
+    ![Click](images/16-4-13-delete-item.png " ")
 
 14. Select **P10\_SEARCH**, under **Settings** for External Page Item: enter **P0\_SEARCH\_PAGE\_ITEM**.
 
-    ![Click](images/16-4-14.png " ")
+    ![Click](images/16-4-14-settings.png " ")
 
 15. Navigate to **Dynamic Actions** tab, right-click **Events** and select **Create Dynamic Action**.
 
-    ![Click](images/16-4-15.png " ")
+    ![Click](images/16-4-15-da.png " ")
 
 16. Enter/select the following:
 
@@ -172,7 +172,7 @@ In this task, you will integrate a global search feature that remains accessible
 
         - Region: **Search**
 
-    ![Click](images/16-4-16.png " ")
+    ![Click](images/16-4-16-da-settings.png " ")
 
 17. Select **True Action** and enter/select the following:
 
@@ -191,13 +191,13 @@ In this task, you will integrate a global search feature that remains accessible
         </copy>
          ```
 
-    ![Click](images/16-4-17.png " ")
+    ![Click](images/16-4-17-action-code.png " ")
 
 18. Click **Save**.
 
 19. Navigate to Global Page **Page 0**.
 
-    ![Click](images/16-4-19.png " ")
+    ![Click](images/16-4-19-nav-page0.png " ")
 
 20. Select **P0\_SEARCH\_PAGE\_ITEM** and enter/select the following:
 
@@ -211,7 +211,7 @@ In this task, you will integrate a global search feature that remains accessible
 
     - Advanced > Custom Attributes: **style="height:45px;  margin-top: 6px;"**
 
-    ![Click](images/16-4-20.png " ")
+    ![Click](images/16-4-20-layout-appearance.png " ")
 
     - Server-side Condition
 
@@ -219,11 +219,11 @@ In this task, you will integrate a global search feature that remains accessible
 
         - Pages: **100000,100001,100002,100003**
 
-    ![Click](images/16-4-20.1.png " ")
+    ![Click](images/16-4-20.1-server-side.png " ")
 
 21. Navigate to **Dynamic Actions** tab, right-click **Change** and select **Create Dynamic Action**.
 
-    ![Click](images/16-4-21.png " ")
+    ![Click](images/16-4-21-create-da.png " ")
 
 22. Enter/select the following:
 
@@ -241,7 +241,7 @@ In this task, you will integrate a global search feature that remains accessible
 
         - Page: **10**
 
-    ![Click](images/16-4-22.png " ")
+    ![Click](images/16-4-22-da-settings.png " ")
 
 23. Select **True Action** and enter/select the following:
 
@@ -259,11 +259,11 @@ In this task, you will integrate a global search feature that remains accessible
 
         - Items to Submit: **P0\_SEARCH\_PAGE\_ITEM**
 
-    ![Click](images/16-4-23.png " ")
+    ![Click](images/16-4-23-da-action-code.png " ")
 
 24. Right-click **True** and select **Create TRUE Action**.
 
-    ![Click](images/16-4-24.png " ")
+    ![Click](images/16-4-24-create-da-true.png " ")
 
 25. Enter/select the following:
 
@@ -273,23 +273,23 @@ In this task, you will integrate a global search feature that remains accessible
 
 26. Click **Save**
 
-    ![Click](images/16-4-26.png " ")
+    ![Click](images/16-4-26-save.png " ")
 
 27. Navigate to **Shared Components**.
 
-    ![Click](images/16-4-27.png " ")
+    ![Click](images/16-4-27-sc.png " ")
 
 28. Under **Navigation and Search**, select **Navigation Bar List**.
 
-    ![Click](images/16-4-28.png " ")
+    ![Click](images/16-4-28-nav-bar-list.png " ")
 
 29. Click **Navigation Bar**.
 
-    ![Click](images/16-4-29.png " ")
+    ![Click](images/16-4-29-nav-bar.png " ")
 
 30. Click **Create List Entry**.
 
-    ![Click](images/16-4-30.png " ")
+    ![Click](images/16-4-30-create-list-entry.png " ")
 
 31. Enter/select the following and click **Create List Entry**.
 
@@ -309,18 +309,19 @@ In this task, you will integrate a global search feature that remains accessible
 
         - Expression 1: **10**
 
-    ![Click](images/16-4-31.1.png " ")
+    ![Click](images/16-4-31.1-listentry.png " ")
 
-    ![Click](images/16-4-31.2.png " ")
+    ![Click](images/16-4-31.2-listentry-cond.png " ")
 
 32. Run the application and observe the global search, which will remain visible even after you navigate to any other page.
 
-    ![Click](images/16-4-32.1.png " ")
+    ![Click](images/16-4-32.1-run.png " ")
 
 33. Navigate to any other page, e.g., the **My Books** page, and then return to the home page by clicking **Home** entry in the navigation bar or **Online Bookstore**.
 
-    ![Click](images/16-4-33.1.png " ")
-    ![Click](images/16-4-33.2.png " ")
+    ![Click](images/16-4-33.1-mybooks.png " ")
+
+    ![Click](images/16-4-33.2-homepage.png " ")
 
 ## Task 4: Use Email Templates For Sending Emails
 
@@ -328,15 +329,15 @@ In this task, you will create and configure email templates to standardize the e
 
 1. Navigate to the application homepage and click **Shared Components**.
 
-    ![Click](images/16-3-1.png " ")
+    ![Click](images/16-3-1-sc.png " ")
 
 2. Click **Email Templates** under **User Interface**.
 
-    ![Click](images/16-3-2.png " ")
+    ![Click](images/16-3-2-email-temp.png " ")
 
 3. Click **Create Email Template**.
 
-    ![Click](images/16-3-3.png " ")
+    ![Click](images/16-3-3-create-email-template.png " ")
 
 4. Enter/select the following below
 
@@ -465,35 +466,35 @@ In this task, you will create and configure email templates to standardize the e
 
     Click **Create Email template**.
 
-    ![Click](images/16-3-4.png " ")
+    ![Click](images/16-3-4-email-tem-prop.png " ")
 
 5. Click **Shared Components**
 
-    ![Click](images/16-3-5.png " ")
+    ![Click](images/16-3-5-sc.png " ")
 
 6. Click **Static Application Files** under **Files and Reports**.
 
-    ![Click](images/16-3-6.png " ")
+    ![Click](images/16-3-6-static-app-files.png " ")
 
 7. Click **Create File**.
 
-    ![Click](images/16-3-7.png " ")
+    ![Click](images/16-3-7-create-file.png " ")
 
 8. Upload the Application Icon with name **Online\_Bookstore\_Icon.png** and click **Create**. Download a sample Application Icon [here](./images/Online_Bookstore_Icon.png).
 
-    ![Click](images/16-3-8.png " ")
+    ![Click](images/16-3-8-download-icon.png " ")
 
 9. Navigate to application home page by clicking **application id**.
 
-    ![Click](images/16-3-9.png " ")
+    ![Click](images/16-3-9-app-id.png " ")
 
 10. Select Page **100001 - Email Verification for User SignUp**.
 
-    ![Click](images/16-3-10.png " ")
+    ![Click](images/16-3-10-page100001.png " ")
 
 11. Right-click **Body** and select **Create Page Item**.
 
-    ![Click](images/16-3-11.png " ")
+    ![Click](images/16-3-11-create-page-item.png " ")
 
 12. Enter/select the following below
 
@@ -503,19 +504,19 @@ In this task, you will create and configure email templates to standardize the e
 
         - Type: **Hidden**
 
-    ![Click](images/16-3-12.png " ")
+    ![Click](images/16-3-12-name.png " ")
 
 13. Navigate to the processing tab and select **Process form Email Verification for User SignUp** process and under **Success Message** replace **Success Message** with a blank space.
 
-    ![Click](images/16-3-13.png " ")
+    ![Click](images/16-3-13-process-success-message.png " ")
 
 14. Select **Send Verification Email** process and under Identification update Type to **Execution Chain**.
 
-    ![Click](images/16-3-14.png " ")
+    ![Click](images/16-3-14-new-process.png " ")
 
 15. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-15.png " ")
+    ![Click](images/16-3-15-add-child-process.png " ")
 
 16. Enter/select the following below
 
@@ -532,11 +533,11 @@ In this task, you will create and configure email templates to standardize the e
         </copy>
         ```
 
-    ![Click](images/16-3-16.png " ")
+    ![Click](images/16-3-16-process-prop.png " ")
 
 17. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-17.png " ")
+    ![Click](images/16-3-17-add-child-process.png " ")
 
 18. Enter/select the following below
 
@@ -570,11 +571,11 @@ In this task, you will create and configure email templates to standardize the e
 
      - Success Message > Success Message: **SignUp Link sent to your email address.**
 
-    ![Click](images/16-3-18.1.png " ")
+    ![Click](images/16-3-18-prop.png " ")
 
 19. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-19.png " ")
+    ![Click](images/16-3-19-add-child-process.png " ")
 
 20. Enter/select the following below and click **Save**.
 
@@ -588,15 +589,15 @@ In this task, you will create and configure email templates to standardize the e
         </copy>
         ```
 
-    ![Click](images/16-3-20.png " ")
+    ![Click](images/16-3-20-process-prop.png " ")
 
 21. Navigate to Page **100002 - Email Verification for Forgot Password**
 
-    ![Click](images/16-3-21.png " ")
+    ![Click](images/16-3-21-page100002.png " ")
 
 22. Right-click on **Body** and select **Create Page Item**.
 
-    ![Click](images/16-3-22.png " ")
+    ![Click](images/16-3-22-pageitem.png " ")
 
 23. Enter/select the following below
 
@@ -606,15 +607,15 @@ In this task, you will create and configure email templates to standardize the e
 
         - Type: **Hidden**
 
-    ![Click](images/16-3-23.png " ")
+    ![Click](images/16-3-23-pageitem-name-type.png " ")
 
 24. Navigate to the processing tab and select **Send Verification Email** process and update the type to **Execution Chain** and remove **Success Message** under Success Message.
 
-    ![Click](images/16-3-24.png " ")
+    ![Click](images/16-3-24-process-prop.png " ")
 
 25. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-25.png " ")
+    ![Click](images/16-3-25-add-child-process.png " ")
 
 26. Enter/select the following below
 
@@ -630,11 +631,11 @@ In this task, you will create and configure email templates to standardize the e
         </copy>
         ```
 
-    ![Click](images/16-3-26.png " ")
+    ![Click](images/16-3-26-process-prop.png " ")
 
 27. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-27.png " ")
+    ![Click](images/16-3-27-add-child-process.png " ")
 
 28. Enter/select the following below
 
@@ -668,11 +669,11 @@ In this task, you will create and configure email templates to standardize the e
 
      - Success Message > Success Message: **Reset Password Link sent to your email address.**
 
-    ![Click](images/16-3-28.1.png " ")
+    ![Click](images/16-3-28-prop.png " ")
 
 29. Right-click **Send Verification Email** and select **Add Child Process**.
 
-    ![Click](images/16-3-29.png " ")
+    ![Click](images/16-3-29-add-child-process.png " ")
 
 30. Enter/select the following below and click **Save**.
 
@@ -686,17 +687,17 @@ In this task, you will create and configure email templates to standardize the e
         </copy>
         ```
 
-    ![Click](images/16-3-30.png " ")
+    ![Click](images/16-3-30-prop.png " ")
 
 31. Run the application and explore the Signup and Forgot Password functionalities.
 
-    ![Click](images/16-3-31.png " ")
+    ![Click](images/16-3-31-run-app.png " ")
 
 32. Observe the formats and UI of the emails and compare them with Lab 12 > Task 6 > Steps 3 and 8.
 
-    ![Click](images/16-3-32.1.png " ")
+    ![Click](images/16-3-32.1-signup.png " ")
 
-    ![Click](images/16-3-32.2.png " ")
+    ![Click](images/16-3-32.2-forgot-pass.png " ")
 
 ## Task 5: Default Profile Picture
 
@@ -704,23 +705,23 @@ In this task, you will configure a default profile picture for users who haven't
 
 1. Navigate to the application homepage and click **Shared Components**
 
-    ![Click](images/16-6-1.png " ")
+    ![Click](images/16-6-1-sc.png " ")
 
 2. Click **Static Application Files** under **Files and Reports**.
 
-    ![Click](images/16-6-2.png " ")
+    ![Click](images/16-6-2-static-app-files.png " ")
 
 3. Click **Create File**.
 
-    ![Click](images/16-6-3.png " ")
+    ![Click](images/16-6-3-create-file.png " ")
 
 4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**. Download a sample default profile picture [here](./images/persona-male01-apex.png).
 
-    ![Click](images/16-6-4.png " ")
+    ![Click](images/16-6-4-default-profile-pic.png " ")
 
 5. Navigate to **SQL Workshop** and select **RESTful Services**.
 
-    ![Click](images/16-6-5.png " ")
+    ![Click](images/16-6-5-sql-workshop.png " ")
 
 6. Expand **Modules** > **User Images** > **profile\_pic/:id** and select **GET**.
 
@@ -729,19 +730,19 @@ In this task, you will configure a default profile picture for users who haven't
     ```
     <copy>
     select mime_type, profile_pic from obs_users where user_id = :id and profile_pic is not null and mime_type is not null
-    union all 
-    select mime_type,FILE_CONTENT as profile_pic  from apex_application_static_files where file_name =  'persona-male01-apex.png' and 
+    union all
+    select mime_type,FILE_CONTENT as profile_pic  from apex_application_static_files where file_name =  'persona-male01-apex.png' and
     not exists (select 1 from obs_users where user_id = :id and profile_pic is not null and mime_type is not null)
     </copy>
     ```
 
 8. Click **Apply Changes**.
 
-    ![Click](images/16-6-8.png " ")
+    ![Click](images/16-6-8-apply-changes.png " ")
 
 9. Run the application and sign up or log in with a new user. Navigate to the **My Profile** page and observe that a default profile picture and icon appear even without uploading.
 
-    ![Click](images/16-6-9.png " ")
+    ![Click](images/16-6-9-run-app.png " ")
 
 ## Task 6: My Orders Page
 
@@ -749,11 +750,11 @@ In this task, you will create the My Orders page to display users' past orders, 
 
 1. Navigate to the application homepage and click **Create Page**.
 
-    ![Click](images/16-5-1.png " ")
+    ![Click](images/16-5-1-create-page.png " ")
 
 2. Click **Blank Page**.
 
-    ![Click](images/16-5-2.png " ")
+    ![Click](images/16-5-2-blank-page.png " ")
 
 3. Enter/select the following:
 
@@ -771,11 +772,11 @@ In this task, you will create the My Orders page to display users' past orders, 
 
        Click **Create Page**.
 
-    ![Click](images/16-5-3.png " ")
+    ![Click](images/16-5-3-prop.png " ")
 
 4. Right-click **Body** and select **Create Region**.
 
-    ![Click](images/16-5-4.png " ")
+    ![Click](images/16-5-4-create-page-item.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -822,7 +823,7 @@ In this task, you will create the My Orders page to display users' past orders, 
             | "TOTAL" DESC | TOTAL | Amount |
             {: title="List of Items"}
 
-    ![Click](images/16-5-5.png " ")
+    ![Click](images/16-5-5-prop.png " ")
 
 6. In the right pane, select **Attributes** and enter the following:
 
@@ -841,11 +842,11 @@ In this task, you will create the My Orders page to display users' past orders, 
         </copy>
         ```
 
-    ![Click](images/16-5-6.png " ")
+    ![Click](images/16-5-6-att.png " ")
 
 7. In Page Rendering, under **My Orders** region, right-click **Actions** and select **Create Action**.
 
-    ![Click](images/16-5-7.png " ")
+    ![Click](images/16-5-7-create-action.png " ")
 
 8. In the Property Editor, enter the following:
 
@@ -863,25 +864,25 @@ In this task, you will create the My Orders page to display users' past orders, 
 
             Click **OK**
 
-    ![Click](images/16-5-8.png " ")
+    ![Click](images/16-5-8-action-prop.png " ")
 
 9. Click **Save**.
 
 10. Navigate to **Shared Components**.
 
-    ![Click](images/16-5-10.png " ")
+    ![Click](images/16-5-10-sc.png " ")
 
 11. Under **Navigation and Search**, select **Navigation Bar List**.
 
-    ![Click](images/16-5-11.png " ")
+    ![Click](images/16-5-11-nav-bar-list.png " ")
 
 12. Click **Navigation Bar**.
 
-    ![Click](images/16-5-12.png " ")
+    ![Click](images/16-5-12-nav-bar.png " ")
 
 13. Click **Create List Entry**.
 
-    ![Click](images/16-5-13.png " ")
+    ![Click](images/16-5-13-create-list-entry.png " ")
 
 14. Enter/select the following and click **Create List Entry**.
 
@@ -901,25 +902,25 @@ In this task, you will create the My Orders page to display users' past orders, 
 
         - Clear Cache: **19**
 
-    ![Click](images/16-5-14.png " ")
+    ![Click](images/16-5-14-prop.png " ")
 
 15. Run the lab and navigate to the **My Orders** page.
 
-    ![Click](images/16-5-15.png " ")
+    ![Click](images/16-5-15-run-app.png " ")
 
 16. Sort all orders by **Date**.
 
-    ![Click](images/16-5-16.png " ")
+    ![Click](images/16-5-16-sort-date.png " ")
 
 17. Sort all orders by **Amount**.
 
-    ![Click](images/16-5-17.png " ")
+    ![Click](images/16-5-17-sort-amount.png " ")
 
 18. Click on any order to automatically navigate to its details page.
 
-    ![Click](images/16-5-18.1.png " ")
+    ![Click](images/16-5-18.1-details.png " ")
 
-    ![Click](images/16-5-18.2.png " ")
+    ![Click](images/16-5-18.2-details.png " ")
 
 ## Task 7: Enhance Home Page
 
@@ -927,15 +928,15 @@ In this task, you will enhance the Home Page by updating the total book count la
 
 1. Navigate to the application homepage and select page **10- Search Books**.
 
-    ![Click](images/16-7-1.png " ")
+    ![Click](images/16-7-1-page10.png " ")
 
 2. Select **SEARCH**, navigate to Attributes and under Settings update **Total Row Count Label** to **Total Books:**
 
-    ![Click](images/16-7-2.png " ")
+    ![Click](images/16-7-2-att.png " ")
 
 3. Drag **P10\_ORDER\_BY** and drop above **RESET** under **Button Bar**.
 
-    ![Click](images/16-7-3.png " ")
+    ![Click](images/16-7-3-reorder.png " ")
 
 4. Enter/select the following below:
 
@@ -947,15 +948,15 @@ In this task, you will enhance the Home Page by updating the total book count la
 
     - Advanced > CSS Classes: **no-item-ui**
 
-    ![Click](images/16-7-4.png " ")
+    ![Click](images/16-7-4-prop.png " ")
 
 5. Click **Save and Run**.
 
-    ![Click](images/16-7-5.png " ")
+    ![Click](images/16-7-5-save-run.png " ")
 
 6. Click **Customize** from the developer toolbar and select **Theme Roller**.
 
-    ![Click](images/16-7-6.png " ")
+    ![Click](images/16-7-6-theme-roller.png " ")
 
 7. Add below class in the **Custom CSS** and click **Save**.
 
@@ -968,11 +969,11 @@ In this task, you will enhance the Home Page by updating the total book count la
     </copy>
     ```
 
-    ![Click](images/16-7-7.png " ")
+    ![Click](images/16-7-7-prop.png " ")
 
 8. Observe Total Books and book sorting options.
 
-    ![Click](images/16-7-8.png " ")
+    ![Click](images/16-7-8-total-books.png " ")
 
 ## Summary
 
