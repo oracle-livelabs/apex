@@ -6,7 +6,7 @@ In this lab, you will learn to create a blank APEX application that will be used
 
 In this lab, you will build a simple application for the Social Media App. It is important to note that APEX is well-suited for a wide range of applications, from simple ones like the Social Media App we are building to large, sophisticated applications based on local database objects, REST-enabled SQL objects, and even REST APIs.
 
-While APEX developers spend the majority of their time in the **App Builder**, you should also investigate the following:
+While APEX developers spend the majority of their time in the **App Builder**, you should also learn more about the following:
 
 - **SQL Workshop**: where you can create and maintain database objects.
 - **Team Development**: where you can track large APEX development projects.
@@ -32,7 +32,7 @@ In this lab, you will:
 
 ## Task 1: Create the APEX app
 
-1. From your APEX workspace homepage, click **Create Application**.
+1. From your APEX workspace homepage, navigate to App Builder and click **Create**.
 
     !["Create Application"](images/create-app1.png " ")
 
@@ -91,4 +91,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
 - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, February 2025
+- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, March 2025

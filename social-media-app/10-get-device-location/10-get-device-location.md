@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will enable the app to get the device location which will be optional for end-users. If they agree, then their Location/GPS Latitude and Longitude will be acquired on page load and will populate the **P1\_LAT** and **L1\_LON** hidden page items. When users subsequently like a post or create a new post of their own, their location will be recorded and displayed on a Map.
+In this lab, you will enable the app to retrieve the user's device location, which will be optional. If the user agrees, their GPS latitude and longitude will be captured on page load and stored in the **P1\_LAT** and **P1\_LON** hidden page items. When users like a post or create a new one, their location will be recorded and displayed on a map.
 
 Estimated Time: 5 minutes
 
@@ -22,9 +22,11 @@ In this lab, you will:
 
 ## Task 1: Create Map Region
 
-We are going to drag a map region item into the Dialogs, Drawers and Popups region of the Page Designer Layout section and then configure it. **Note**: This is an alternate way of placing page components on the page. You can still use the previous method of right-clicking on the tree to create a new region.
+We will add a map region by dragging it into the Dialogs, Drawers, and Popups section of the Page Designer Layout. Then, we will configure its settings.
 
-1. In the Layout section, scroll down to the bottom of the page, so that you can see the Dialogs, Drawers and Popups region.
+**Note:** This is an alternative way to add page components. You can still use the previous method of right-clicking on the rendering tree to create a new region.
+
+1. In the Layout section, scroll down to the bottom of the page, so that you can see the **Dialogs, Drawers and Popups** region.
 
    ![Layout pane in Page Designer](images/layout-pane.png)
 
@@ -44,68 +46,73 @@ We are going to drag a map region item into the Dialogs, Drawers and Popups regi
 
    ![Page designer](images/after-drop.png)
 
-5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. Update the following information:
+5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property Editor, enter the following:
 
-    - Name: **Post and Like Locations**
+    - Indentification > Name: **Post and Like Locations**
 
-    - Source > Location: **Local Database** (new properties will be shown underneath).
+    - Under Source:
+      - Location: **Local Database** (new properties will be shown underneath).
+      - Type: **SQL Query**
+      - SQL Query: copy and paste the following code in the code editor
 
-    - Source > Type: **SQL Query**
+         ```
+          <copy>
+            select distinct lat, lon, created_by, apex_util.get_since(created) as since from
+            (
+            select lat, lon, created_by, created from SM_POSTS
+            union
+            select lat, lon, created_by, created from SM_REACTIONS
+            )
+          </copy>
+         ```
 
-6. We are going to use a query that aggregates locations from both the **POSTS** and **REACTIONS** locations by way of an Oracle Union query. Copy and paste the following query code into the **SQL Query** text area:
-
-      ```
-       <copy>
-         select distinct lat, lon, created_by, apex_util.get_since(created) as since from
-         (
-         select lat, lon, created_by, created from SM_POSTS
-         union
-         select lat, lon, created_by, created from SM_REACTIONS
-         )
-       </copy>
-      ```
+         This query aggregates locations from both the POSTS and REACTIONS tables using an Oracle UNION query.
 
       ![Page designer](images/update-region-s.png)
 
-7. Next, update the following properties:
+    - Appearance > Template : **Inline Dialog**
 
-    - Appearance > Template : **Inline Dialog**.
+    - Advanced > Static ID : **map**  (The static ID will be used by our javascript to actually open the map region in the next task.)
 
-    - Advanced > Static ID : **map**. The static ID will be used by our javascript to actually open the map region in the next task.
+      ![Page designer](images/appearance.png)
 
-    ![Page designer](images/appearance.png)
+6. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
 
-8. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
+    - Identification > Name: **Locations**
 
-    - Layer > Identification > Name to **Locations**
+    - Source > Location: **Region Source**
 
-    - Source > Location to **Region Source**
+    - Under Column Mapping:
 
-    - Scroll down to Column Mapping and change Geometry Column Data Type to **Longitude/Latitude**
+      - Geometry Column Data Type: **Longitude/Latitude**
 
-    - Set the Longitude Column to be **LON** and the Latitude Column to be **LAT**
+      - Longitude Column: **LON**
 
-    ![Page designer](images/lat-lon.png)
+      - Latitude Column: **LAT**
 
-    - And now we will configure a tooltip for each map point. Under Tooltip, toggle Advanced Formatting to **ON**.
+         ![Page designer](images/lat-lon.png)
 
-    - Copy and paste this expression into HTML Expression box:
+    - Under Tooltip:
 
-      ```
-       <copy>
-       &CREATED_BY. @ &SINCE.
-       </copy>
-      ```
+      - toggle Advanced Formatting to **ON**.
 
-    ![Page designer](images/tooltip-s.png)
+      - HTML Expression: Copy and paste the below expression
 
-9. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
-    - Map > Height to **300** pixels
-    - Under Controls > Options, check **Mousewheel zoom** option
+         ```
+         <copy>
+         &CREATED_BY. @ &SINCE.
+         </copy>
+         ```
+
+         ![Page designer](images/tooltip-s.png)
+
+7. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
+    - Map > Height: **300** pixels
+    - Controls > Options, check **Mousewheel zoom** option
 
     ![Page designer](images/attributes.png)
 
-10. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
+8. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 
    ![Page designer](images/save.png)
 
@@ -125,21 +132,29 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
    ![Navigation Bar List page](images/nav-bar-list-entry.png)
 
-4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the **Add Entry** button to add a new row in the list.
+4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the **Create Entry** button to add a new row in the list.
 
-5. In the new blank row:
+5. Enter the following in the new List entry:
 
-    - Sequence: **15**
+    - Under Entry:
 
-    - Name: **Map**
+      - Sequence: **15**
 
-    - Target: **#action$open-map**
+      - Image/Class: **fa-map**
 
-    - Icon: **fa-map**
+      - List Entry Label: **Map**
 
-    Click **Apply Changes**
+    - Under Target:
 
-    ![Navigation Bar List page](images/add-entry.png)
+      - Target Type: **URL**
+
+      - URL Target: **#action$open-map**
+
+    Click **Create List Entry**
+
+    ![Navigation Bar List page](images/create-entry.png)
+
+    ![Navigation Bar List page](images/create-entry-s.png)
 
 ## Task 3: Create Dynamic Action to open Map Region
 
@@ -149,7 +164,8 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Page 1 is now open in the Page Designer. Ensure that **Page 1: Timeline** is already selected in the Rendering tree. In the Property Editor, go to the **Javascript > Execute When Page Loads** property and update the script by replacing it with the following script:
+2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected. In the Property Editor, enter the following:
+   - Javascript > Execute When Page Loads:  update the script by replacing it with the following code:
 
       ```
        <copy>
@@ -185,15 +201,19 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Dynamic Actions Tab](images/new-da.png)
 
-5. On the right side with **New** selected, edit the following:
+5. In the Property Editor with **New** selected, edit the following:
 
     - Identification > Name: **action-open-map**
 
-    - Custom Event : **action-open-map**
+    - Under When:
 
-    - Selection Type : **JavaScript Expression**
+      - Event : Custom
 
-    - JavaScript Expression : **document**
+      - Custom Event : **action-open-map**
+
+      - Selection Type : **JavaScript Expression**
+
+      - JavaScript Expression : **document**
 
       ![Property Editor](images/action-open-map.png)
 
@@ -202,9 +222,10 @@ In this task, we update our javascript on the page so that the Target you specif
 
     - Identification > Action: **Open Region**
 
-    - Selection Type : **Region**
+    - Under Affected Elements:
 
-    - Region : **Post and Like Locations**
+      - Selection Type : **Region**
+      - Region : **Post and Like Locations**
 
       ![Property Editor](images/open-region.png)
 
@@ -252,4 +273,4 @@ In this final task, we create another dynamic action to get the device location 
 ## Acknowledgements
 
 - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
-- **Last Updated By/Date** -  Sahaana Manavalan, Senior Product Manager, February 2025
+- **Last Updated By/Date** -  Sahaana Manavalan, Senior Product Manager, March 2025

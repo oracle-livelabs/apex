@@ -47,7 +47,7 @@ In the Property Editor, Enter/select the following:
 
     ![Form types select list](images/form-types.png "")
 
-4.  Under Source, set the Table Name to **SM_POSTS**.
+4. Under Source, set the Table Name to **SM_POSTS**.
 
     ![Page Designer view](images/form-source.png "")
 
@@ -110,11 +110,9 @@ In the Property Editor, Enter/select the following:
 
 5. Next, configure the **P1\_FILE\_BLOB** page item:
 
-    - Under Identification:
+    - Identification >  Type: **File Upload**
 
-        - Type: **File Upload**
-
-        - Label: **Photo**
+    - Label > Label: **Photo**
 
     - Under Display:
 
@@ -149,7 +147,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     ![Rendering tree with page items is displayed](images/post-page-items.png "")
 
-2. Next, click on **Post** in the rendering tree, so that we have that **Form** region selected. In the property editor, enter/select the following:
+2. In the Rendering Tree, click on **Post** region and enter/select the following in the property editor:
 
     - Layout > Position: **Dialogs, Drawers and Popups**.
 
@@ -176,7 +174,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 ## Task 4: Create a Button to Open the Post Dialog with a Dynamic Action
 
-1. In the Rendering Tree, Right click on **Components** and select **Create Button**.
+1. In the Rendering Tree, right click on **Components** and select **Create Button**.
 
     ![Rendering tree](images/create-button12.png "")
 
@@ -186,11 +184,12 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     - Layout > Slot:  **After Logo**
 
-    - Appearance > Button Template: **Text with Icon**
-
     - Under Appearance:
 
+        - Button Template: **Text with Icon**
+
         - CSS Classes: **new-post-button**
+
         - Appearance > Icon: **fa-plus**
 
     - Behavior > Action: **Defined by Dynamic Action**
@@ -199,7 +198,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
         ![Button attributes](images/button-attributes1.png "")
 
-3. To make the Post region (inline dialog) appear when this button is clicked, we need to create a **Dynamic Action**. Right click on the button in the rendering tree, and select **Create Dynamic Action**.
+3. To make the Post region (inline dialog) appear when this button is clicked, we need to create a **Dynamic Action**. In the rendering tree, right click on the button and select **Create Dynamic Action**.
 
     ![create dynamic action option](images/create-da.png "")
 
@@ -209,13 +208,20 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 5. Follow the next steps to configure the attributes:
 
-    - With the first new entry selected, **New**, update it's name to **Open Post Dialog**
+    - Select the first entry > **New**, and enter the following in the Property Editor:
+        - Identification > Name: **Open Post Dialog**
 
-   ![Name the dynamic action](images/da-name.png)
+            ![Name the dynamic action](images/da-name.png)
 
-    - Select the other entry, that is under True so that we can configure it, currently titled as* **Show,** and change the **Identification > Action** to be **Open Region**
+    - Select the **Show** entry under True Actions and select the following in the Property Editor:
 
-    - Then set the **Affected Elements > Selection Type** to be **Region**, and the **Region** to **Post**.
+        - Identification > Action: **Open Region**
+
+        - Under Affected Elements:
+
+            - Selection Type: **Region**
+
+            - Region: **Post**
 
    ![Affected elements in property editor](images/affected-elements.png)
 
@@ -225,7 +231,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 ## Task 5: Create a Save Button
 
-1. We now need a button for the user to *actually SAVE the post* they make. To do this, right click on the **Body > Post** region in the tree, and click **Create Button**
+1. We now need a button for the user to *actually SAVE the post* they make. To do this, in the Rendering tree, right click on the **Body > Post** region in the tree, and click **Create Button**
 
     ![Create button option in rendering tree](images/create-button-21.png)
 
@@ -235,19 +241,21 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     - Layout > Slot: **Next**
 
-    - Appearance > Hot: **ON**
+    - Under Appearance:
+        - Hot: **ON**
 
-    - Template options:
+        - Template options:
 
-        - Size: **Large**
+            - Size: **Large**
 
-        - Width: **Stretch**
+            - Width: **Stretch**
 
-    - CSS Classes: **post-button**
+        - CSS Classes: **post-button**
 
-    - Behavior > Action: **Defined by Dynamic Action**
+    - Under Behavior:
+        - Action: **Defined by Dynamic Action**
 
-    - Database Action: **SQL INSERT action**
+        - Database Action: **SQL INSERT action**
 
     The attributes should look this:
 
@@ -255,23 +263,23 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 3. To enable the form to be able to save the new post data, we need another Dynamic Action and then a page process that does the work.
 
-  Right-click on the **SAVE** button and choose **Create Dynamic Action**.
+    In the Rendering Tree, right click on the **SAVE** button and choose **Create Dynamic Action**.
 
     ![Create dynamic action](images/create-da-21.png)
 
-4. Set the **Name** to **Submit post**.
+4. In the property editor enter Identification > Name: **Submit post**
 
 ### OPTIONAL STEPS (5 and 6)
 
-5. To prevent users from posting blank rows, under **Client-side Condition**, we need to set type as **Javascript expression**.
+5. To prevent users from posting blank rows,under **Client-side Condition**, we need to set type as **Javascript expression**.
 
 6. Paste this javascript into the Javascript Expression box:
 
     ```
-    <copy>
-    apex.item('P1_FILE_BLOB').value.length>0 ||
-    apex.item('P1_POST_COMMENT').value.length>0
-    </copy>
+     <copy>
+     apex.item('P1_FILE_BLOB').value.length>0 ||
+     apex.item('P1_POST_COMMENT').value.length>0
+     </copy>
     ```
 
     ![Property editor](images/js-expression.png)
@@ -289,7 +297,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 In response to a user clicking the Post button, we need to configure our
 page with a process for the Form:
 
-1. Click the **Processing** tab (this is also known as the Server-Side Processing section), and then select the **Processing** entry in the list (which is actually another tree and will grow in length as you add more server-side processes):
+1. In the Rendering Tree, click the **Processing** tab (this is also known as the Server-Side Processing section), and then select the **Processing** entry in the list (which is actually another tree and will grow in length as you add more server-side processes):
 
 2. Right-click on the **Processing** entry and choose **Create Process**.
 

@@ -32,7 +32,7 @@ In this lab, you will:
 
     ![ER diagram of the data model](images/data-model.png "")
 
-2. To achieve this, we create the database objects for our application using **QuickSQL**. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
+2. To achieve this, we will create the database objects for our application using **QuickSQL**. Navigate to **SQL Workshop** > **Utilities** > **Quick SQL**.
 
     ![Naviagtion to Quick SQL from Toolbar](images/navigate-quick-sql.png "")
 
@@ -88,7 +88,7 @@ In this lab, you will:
 
 Since we want users to react to a post only once, we need to add a constraint to the *SM_REACTIONS* table. This will ensure proper database behavior in a later step of this workshop.
 
-1. On APEX workspace homepage, click **SQL Workshop** and select **Object Browser**.
+1. Navigate to **SQL Workshop** and select **Object Browser**.
 
     ![Object Browser is displayed](images/nav-sql.png)
 
@@ -115,4 +115,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
 - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025
