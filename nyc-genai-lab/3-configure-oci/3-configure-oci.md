@@ -24,6 +24,10 @@ In this lab, you:
 
 - Generate API Keys using OCI Console
 
+### Downloads
+
+If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab: Task 1: Import the App into an APEX Workspace](?lab=8-appendix&type=OCIGenAI#Task1:ImporttheAppintoanAPEXWorkspace).
+
 ## Task 1: Generate API Keys using OCI Console
 
 Note: If you already have an OCI key pair, you may skip this lab.

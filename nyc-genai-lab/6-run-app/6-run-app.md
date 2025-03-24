@@ -40,7 +40,7 @@ In this lab, you will:
     The search narrows down to 15 schools.
     ![Maps tab in the running app](images/map.png ' ')
 
-3. Switch to the Cards tab again. For the **Manhattan Center for Science and Mathematics** school, click **Learn More (i)icon**. An AI Assistant Chat Interface dialog is displayed.
+3. Switch to the Cards tab again. For the **Manhattan Center for Science and Mathematics** school, click **Learn More (i)** icon. An AI Assistant Chat Interface dialog is displayed.
 
     ![search schools tab](images/learn-more.png ' ')
 
