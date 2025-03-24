@@ -29,19 +29,25 @@ In this workshop, you will:
 
 - An APEX workspace.
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). 
 
-    - US Midwest (Chicago)
-    - Germany Central (Frankfurt)
-    - UK South (London)
-    - Brazil East (Sao Paulo)
-    - Japan Central (Osaka)
+- We need to use an API key for the AI Provider of your choice (OCI Generative AI, Open AI, Cohere) for Labs 8, and 17.
 
-- OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+- In this LiveLab, OCI Generative AI is the chosen AI provider. The prerequisites are as follows:
 
-- An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+    - The OCI account must be created in or subscribed to a region that supports the OCI Generative AI Service. Currently, the OCI Generative AI Service is available in the following regions:
 
-- The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+        - US Midwest (Chicago)
+        - Germany Central (Frankfurt)
+        - UK South (London)
+        - Brazil East (Sao Paulo)
+        - Japan Central (Osaka)
+
+    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+
+    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+
+    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
 >*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
