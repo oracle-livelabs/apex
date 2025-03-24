@@ -16,11 +16,15 @@ Estimated Time: 1 hour
 
 In this workshop, you:
 
-- Create an APEX application
-- Upload Invoice to OCI Object Storage using Invoke API
-- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type
-- Parse the response and display the result
-- Implement Invoice Approval Requests Using Approvals Component
+- Create an APEX application.
+
+- Upload Invoice to OCI Object Storage using Invoke API.
+
+- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type.
+
+- Parse the response and display the result.
+
+- Implement Invoice Approval Requests Using Approvals Component.
 
 <!---
 - Enhance Social Media App with AI-Powered Search.
@@ -36,7 +40,7 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Downloads
 
@@ -73,4 +77,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

@@ -30,13 +30,15 @@ In this lab, you:
 
 4. On **Create Form** wizard, enter/select the following:
 
-    - Page Number: **7**
+    - Under Page Definition:
 
-    - Name: **Item - Details**
+        - Page Number: **7**
 
-    - Page Mode: **Drawer**
+        - Name: **Item - Details**
 
-    - Table/View Name: **S_ITEM**
+        - Page Mode: **Drawer**
+
+    - Data Source > Table/View Name: **S_ITEM**
 
     Click **Next**.
 
