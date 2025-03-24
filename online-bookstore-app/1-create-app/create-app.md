@@ -148,6 +148,8 @@ In this task, you'll use Quick SQL to quickly generate and execute a script for 
     </copy>
     ```
 
+    >*NOTE: This Quick SQL script creates tables for managing users, books, orders, and wishlists in an online bookstore using Oracle APEX.*
+
     ![Create Application wizard](./images/review-run.png " ")
 
 3. Enter Script Name - **OBS Tables** and click **Run**.
