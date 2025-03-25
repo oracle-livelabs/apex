@@ -332,7 +332,7 @@ In this task, you will create a Reset Password page that allows users to securel
 
 >*Note: The previous reset password page created in Lab 10 Task 4 is a modal dialog page, where you reset the password from your application screen. This reset password page is to reset your password from the forgot password email link.*
 
-1. On page designer toolbar, Navigate navigate to **(+)** and select **Page**.
+1. On page designer toolbar, navigate to **(+)** and select **Page**.
 
     ![close dialog](images/12-2-blank-page-email.png " ")
 
