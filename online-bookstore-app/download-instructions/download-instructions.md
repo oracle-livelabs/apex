@@ -75,7 +75,7 @@ Alternatively, you can download the export file from the table below, located in
 
     !["Page Designer"](images/19-3-3-edit-data.png "")
 
-## Task 4: Update the Web Credential and Generative AI
+## Task 4: Update Web Credential and Configure Generative AI
 
 Note: If you already have an OCI key pair, you may skip Step 1.
 
@@ -320,7 +320,7 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-10-6-edit-icon-url.png "")
 
-## Task 11: Vector Search using Search Configurations
+## Task 11: Configure Vector Search using Search Configurations
 
 1. To load the ONXX Model, Refer to [Task 1: Load the ONNX Model](?lab=18-vector-search-configurations#Task1:LoadtheONNXModel) of [Lab 18: Vector Search using Search Configurations](?lab=18-vector-search-configurations).
 
