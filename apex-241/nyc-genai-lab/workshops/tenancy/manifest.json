@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "Build an Innovative Q&A Interface Powered by Generative AI with Oracle APEX",
+  "help": "livelabs-help-apex_us@oracle.com",
+	"tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../0-intro/0-intro.md"
+    },
+    {
+      "title": "Get Started",
+      "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Lab 1: Create an APEX App",
+      "filename": "../../1-create-app/1-create-app.md"
+    },
+    {
+      "title": "Lab 2: Visualize Schools on a Map",
+      "filename": "../../2-schools-on-map/2-schools-on-map.md"
+    },
+    {
+      "title": "Lab 3: Configure the OCI API Keys",
+      "filename": "../../3-configure-oci/3-configure-oci.md"
+    },
+    {
+      "title": "Lab 4: Build a Conversational Inquiry using Generative AI",
+      "filename": "../../4-using-genai/4-using-genai.md"
+    },
+    {
+      "title": "Lab 5: Generate Email to Apply to a School using Gen AI",
+      "filename": "../../5-apply-to-school/5-apply-to-school.md"
+    },
+    {
+      "title": "Lab 6: Run the Application",
+      "filename": "../../6-run-app/6-run-app.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
