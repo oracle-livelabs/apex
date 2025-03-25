@@ -271,7 +271,7 @@ In this task, you will learn to create custom authentication.
 
 11. Click the **View Password icon** to verify the password, then click **Sign In**.
 
-   ![App builder home page](images/5-3-11.png " ")
+   ![App builder home page](images/5-3-11-view-pass-icon.png " ")
 
 ## Summary
 

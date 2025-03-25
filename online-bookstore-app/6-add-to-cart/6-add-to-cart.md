@@ -824,23 +824,23 @@ In this task, you will add a book to the cart, observe the cart item count, and 
 
       - Password: **secretPassword**
 
-    ![close dialog](images/6-8-1.png " ")
+    ![close dialog](images/6-8-1-run-app.png " ")
 
 2. Click on any book, select the **Quantity**, and click **Add To Cart**.
 
-    ![close dialog](images/6-8-2.1.png " ")
+    ![close dialog](images/6-8-2.1-select-book.png " ")
 
-    ![close dialog](images/6-8-2.2.png " ")
+    ![close dialog](images/6-8-2.2-add-to-cart.png " ")
 
 3. Observe the total number of items on the shopping cart entry in the navigation bar
 
-    ![close dialog](images/6-8-3.png " ")
+    ![close dialog](images/6-8-3-observe-count.png " ")
 
 4. To remove a book from the cart, click on the book and then click **Remove From Cart**.
 
-    ![close dialog](images/6-8-4.1.png " ")
+    ![close dialog](images/6-8-4.1-select-book.png " ")
 
-    ![close dialog](images/6-8-4.2.png " ")
+    ![close dialog](images/6-8-4.2-remove-book-from-cart.png " ")
 
 ## Summary
 

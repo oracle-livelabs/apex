@@ -27,17 +27,17 @@ In this task, you will load data into an existing table using Data Workshop. You
 
 1. Navigate to select **SQL Workshop** and select **Utilities** > **Data Workshop**.
 
-    ![App builder home page](images/2-1-1.png " ")
+    ![App builder home page](images/2-1-1-data-workshop.png " ")
 
 2. Select **Load Data**
 
-    ![App builder home page](images/2-1-2.png " ")
+    ![App builder home page](images/2-1-2-load-data.png " ")
 
 3. Click the **Choose File** option or drag and drop the [obs\_books.csv](files/obs_books.csv) file on to the dialog window.
 
-    ![App builder home page](images/2-1-3.1.png " ")
+    ![App builder home page](images/2-1-3.1-choose-file.png " ")
 
-    ![App builder home page](images/2-1-3.2.png " ")
+    ![App builder home page](images/2-1-3.2-select-file.png " ")
 
 4. Under **Where do you want to load this data?**, enter/select the following:
 
@@ -45,29 +45,29 @@ In this task, you will load data into an existing table using Data Workshop. You
 
     - Table: **OBS\_BOOKS**
 
-    ![App builder home page](images/2-1-4.png " ")
+    ![App builder home page](images/2-1-4-select-table.png " ")
 
 5. To confirm the correct column mapping, click **Configure**.
 
-    ![App builder home page](images/2-1-5.png " ")
+    ![App builder home page](images/2-1-5-configure.png " ")
 
 6. Click **Column Mapping**
 
-    ![App builder home page](images/2-1-6.png " ")
+    ![App builder home page](images/2-1-6-column-mapping.png " ")
 
 7. Check and update the column mapping if any mapping is missing or incorrect, then click **Save Changes**.
 
-    ![App builder home page](images/2-1-7.png " ")
+    ![App builder home page](images/2-1-7-save-changes.png " ")
 
 8. Click **Load Data**.
 
-    ![App builder home page](images/2-1-8.png " ")
+    ![App builder home page](images/2-1-8-load-data.png " ")
 
 9. To check the data, click **View Table**, then select **Data**.
 
-    ![App builder home page](images/2-1-9.1.png " ")
+    ![App builder home page](images/2-1-9.1-view-table.png " ")
 
-    ![App builder home page](images/2-1-9.2.png " ")
+    ![App builder home page](images/2-1-9.2-data.png " ")
 
 ## Task 2: Create a Faceted Search Page
 

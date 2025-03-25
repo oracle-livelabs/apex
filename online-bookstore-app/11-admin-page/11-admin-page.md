@@ -908,45 +908,45 @@ In this task, you will log in and explore the Administration section to manage b
 
       - Password: **secretPassword**
 
-    ![close dialog](images/11-8-1.png " ")
+    ![close dialog](images/11-8-1-run-app.png " ")
 
 2. Navigate to **Administration** page by clicking on Administration entry in the navigation bar.
 
-    ![close dialog](images/11-8-2.png " ")
+    ![close dialog](images/11-8-2-administration.png " ")
 
 3. On the Administration page, to manage books information, select **Manage Books Information**.
 
-    ![close dialog](images/11-8-3.png " ")
+    ![close dialog](images/11-8-3-manage-book-information.png " ")
 
 4. Select any book and click **Edit** to update its details.
 
-    ![close dialog](images/11-8-4.1.png " ")
+    ![close dialog](images/11-8-4.1-select-book.png " ")
 
-    ![close dialog](images/11-8-4.2.png " ")
+    ![close dialog](images/11-8-4.2-click-edit.png " ")
 
 5. Modify the details and click **Apply Changes**.
 
-    ![close dialog](images/11-8-5.png " ")
+    ![close dialog](images/11-8-5-apply-changes.png " ")
 
 6. View the updated details of the selected book.
 
-    ![close dialog](images/11-8-6.png " ")
+    ![close dialog](images/11-8-6-view.png " ")
 
 7. To manage user details, go to the **Administration** page and select **User Role**.
 
-    ![close dialog](images/11-8-7.png " ")
+    ![close dialog](images/11-8-7-user-role.png " ")
 
 8. Click **Edit icon** to update the user details.
 
-    ![close dialog](images/11-8-8.png " ")
+    ![close dialog](images/11-8-8-edit.png " ")
 
 9. Modify the details and click **Apply Changes**.
 
-    ![close dialog](images/11-8-9.png " ")
+    ![close dialog](images/11-8-9-apply-changes.png " ")
 
 10. View the updated details of the selected user.
 
-    ![close dialog](images/11-8-10.png " ")
+    ![close dialog](images/11-8-10-view.png " ")
 
 ## Summary
 

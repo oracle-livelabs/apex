@@ -48,7 +48,7 @@ In this task, you'll update the application's theme using Theme Roller. You'll c
 
    ![App builder home page](images/success-theme.png " ")
 
-   ![App builder home page](images/4-1-4.3.png " ")
+   ![App builder home page](images/4-1-4.3-observe-theme.png " ")
 
 ## Summary
 

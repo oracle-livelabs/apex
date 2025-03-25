@@ -368,20 +368,19 @@ In this task, you will interact with the AI Assistant, ask book-related question
 
       - Password: **secretPassword**
 
-    ![close dialog](images/8-8-1.png " ")
+    ![close dialog](images/8-8-1-run-app.png " ")
 
 2. Click **AI Assistant** entry in the navigation bar.
 
-    ![close dialog](images/8-8-2.png " ")
+    ![close dialog](images/8-8-2-ai-assistant.png " ")
 
 3. Enter questions related to books available in the bookstore and click the send icon.
 
-    ![close dialog](images/8-8-3.png " ")
+    ![close dialog](images/8-8-3-enter-prompt.png " ")
 
 4. Observe and analyze the responses to gain better insights.
 
-    ![close dialog](images/8-8-4.png " ")
-     <!-- ![close dialog](images/8-7-6-run.png " ") -->
+    ![close dialog](images/8-8-4-observe-response.png " ")
 
 ## Summary
 

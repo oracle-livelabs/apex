@@ -1112,7 +1112,7 @@ In this task, you will navigate to the Search Books page, select a book to purch
 
       - Password: **secretPassword**
 
-    ![close dialog](images/7-7-1.png " ")
+    ![close dialog](images/7-7-1-run-app.png " ")
 
 2. Select any book of your choice to buy.
 

@@ -490,35 +490,35 @@ In this task, you will add books to your wishlist, view them under My Wishlist, 
 
       - Password: **secretPassword**
 
-    ![close dialog](images/9-4-1.png " ")
+    ![close dialog](images/9-4-1-run-app.png " ")
 
 2. Click on any book and click **Add To Wishlist**.
 
-    ![close dialog](images/9-4-2.1.png " ")
+    ![close dialog](images/9-4-2.1-click-book.png " ")
 
-    ![close dialog](images/9-4-2.2.png " ")
+    ![close dialog](images/9-4-2.2-add-to-wishlist.png " ")
 
 3. Observe the My Wishlist page by clicking on **My Wishlist** entry in the navigation bar.
 
-    ![close dialog](images/9-4-3.1.png " ")
+    ![close dialog](images/9-4-3.1-wishlist-page.png " ")
 
-    ![close dialog](images/9-4-3.2.png " ")
+    ![close dialog](images/9-4-3.2-view-books.png " ")
 
 4. To remove a book from the wishlist, click on the book and then click **Remove From Wishlist**.
 
-    ![close dialog](images/9-4-4.1.png " ")
+    ![close dialog](images/9-4-4.1-select-book.png " ")
 
-    ![close dialog](images/9-4-4.2.png " ")
+    ![close dialog](images/9-4-4.2-remove-book.png " ")
 
-    ![close dialog](images/9-4-4.3.png " ")
+    ![close dialog](images/9-4-4.3-view.png " ")
 
 5. Alternatively, navigate back to the home page by clicking **Online Bookstore** and click on the book and then click **Remove From Wishlist**.
 
-    ![close dialog](images/9-4-5.1.png " ")
+    ![close dialog](images/9-4-5.1-home-page.png " ")
 
-    ![close dialog](images/9-4-5.2.png " ")
+    ![close dialog](images/9-4-5.2-select-book.png " ")
 
-    ![close dialog](images/9-4-5.3.png " ")
+    ![close dialog](images/9-4-5.3-remove-book.png " ")
 
 ## Summary
 

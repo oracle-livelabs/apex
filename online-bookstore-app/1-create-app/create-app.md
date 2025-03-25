@@ -166,11 +166,11 @@ In this task, you'll use Quick SQL to quickly generate and execute a script for 
 
 6. Navigate to the **Object Browser** via the **SQL Workshop** dropdown to view all tables.
 
-   ![Create Application wizard](./images/1-2-6.png " ")
+   ![Create Application wizard](./images/1-2-6-sql-workshop.png " ")
 
 7. Expand **Tables** and select any table to view its columns and other details.
 
-  ![Create Application wizard](./images/1-2-7.png " ")
+  ![Create Application wizard](./images/1-2-7-tables.png " ")
 
 ## Summary
 

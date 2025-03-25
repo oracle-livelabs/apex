@@ -1075,26 +1075,27 @@ In this task, you will access the My Profile page to view purchased books, updat
 
       - Password: **secretPassword**
 
-    ![close dialog](images/10-6-1.png " ")
+    ![close dialog](images/10-6-1-run-app.png " ")
 
 2. Navigate to the **My Profile** page under your username.
 
-    ![close dialog](images/10-6-2.png " ")
+    ![close dialog](images/10-6-2-my-profile.png " ")
 
 3. View all your purchased books along with their quantities under the **My Books** section.
 
-    ![close dialog](images/10-6-3.png " ")
+    ![close dialog](images/10-6-3-my-books.png " ")
 
 4. To update your password, click **Change Password**, enter your **New Password** and **Confirm New Password** and click **Apply Changes**.
 
-    ![close dialog](images/10-6-4.png " ")
+    ![close dialog](images/10-6-4-update-password.png " ")
 
 5. To update your profile details, click **Edit Profile**, make your changes and click **Apply Changes**.
 
     For example, to update your profile picture, upload a new picture, adjust the size, click **Apply** and click **Apply Changes**.
 
-    ![close dialog](images/10-6-5.1.png " ")
-    ![close dialog](images/10-6-5.2.png " ")
+    ![close dialog](images/10-6-5.1-add-profile-picture.png " ")
+
+    ![close dialog](images/10-6-5.2-view-updated-profile-picture.png " ")
 
 >*NOTE: You will receive this profile picture by default after completing Task 5 of Lab 16.*
 
