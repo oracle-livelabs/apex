@@ -41,39 +41,39 @@ Alternatively, you can download the export file from the table below, located in
 
 1. Click **App Builder** and then click **Import**.
 
-    !["Page Designer"](images/19-2-1.png "")
+    !["Page Designer"](images/19-2-1-import.png "")
 
 2. Drag and drop your downloaded zip file, then click **Next**.
 
-    !["Page Designer"](images/19-2-2.png "")
+    !["Page Designer"](images/19-2-2-next.png "")
 
 3. Click **Install Application**.
 
-    !["Page Designer"](images/19-2-3.png "")
+    !["Page Designer"](images/19-2-3-install-app.png "")
 
 4. Click **Next**.
 
-    !["Page Designer"](images/19-2-4.png "")
+    !["Page Designer"](images/19-2-4-next.png "")
 
     *Note: This screen will appear only if the imported app contains workspace utilities created in the previous labs.*
 
 5. Click **Install Supporting Objects**.
 
-    !["Page Designer"](images/19-2-5.png "")
+    !["Page Designer"](images/19-2-5-install-supporting-objects.png "")
 
 ## Task 3: Update the Hashed Password for user01
 
 1. Expand **SQL Workshop**, click **Object Browser**.
 
-    !["Page Designer"](images/19-3-1.png "")
+    !["Page Designer"](images/19-3-1-sql-workshop.png "")
 
 2. Expand **Tables**, select **OBS\_USERS**, then click **Data**.
 
-    !["Page Designer"](images/19-3-2.png "")
+    !["Page Designer"](images/19-3-2-table-data.png "")
 
 3. Click **Edit Icon** for user01, update the password to **secretPassword**, and click **Save**.
 
-    !["Page Designer"](images/19-3-3.png "")
+    !["Page Designer"](images/19-3-3-edit-data.png "")
 
 ## Task 4: Update the Web Credential and Generative AI
 
@@ -87,15 +87,15 @@ To Configure Web Credentials in Oracle APEX:
 
 2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-    !["Page Designer"](images/19-4-2.png "")
+    !["Page Designer"](images/19-4-2-workspace-utilities.png "")
 
 3. Click **Web Credentials**.
 
-    !["Page Designer"](images/19-4-3.png "")
+    !["Page Designer"](images/19-4-3-web-cred.png "")
 
 4. Click **apex\_ai\_cred**.
 
-    !["Page Designer"](images/19-4-4.png "")
+    !["Page Designer"](images/19-4-4-open-cred.png "")
 
 5. Enter the following details using the configuration file you copied and click **Apply Changes**.
 
@@ -108,59 +108,59 @@ To Configure Web Credentials in Oracle APEX:
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-    !["Page Designer"](images/19-4-5.png "")
+    !["Page Designer"](images/19-4-5-edit-details.png "")
 
 To Enable Generative AI in Oracle APEX:
 
 6. Click **Workspace Utilities**.
 
-    !["Page Designer"](images/19-4-6.png "")
+    !["Page Designer"](images/19-4-6-workspace-utilities.png "")
 
 7. Click **Generative AI**.
 
-    !["Page Designer"](images/19-4-7.png "")
+    !["Page Designer"](images/19-4-7-gen-ai.png "")
 
 8. Click **OCI Gen AI**.
 
-    !["Page Designer"](images/19-4-8.png "")
+    !["Page Designer"](images/19-4-8-open-genai.png "")
 
 9. In the **Compartment ID** field, enter your **Compartment ID** and click **Apply Changes**. (Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID.)
 
-    !["Page Designer"](images/19-4-9.png "")
+    !["Page Designer"](images/19-4-9-add-compartment-id.png "")
 
 ## Task 5: Update the Picture URL
 
 1. Navigate to **SQL Workshop** and select **RESTful Services**.
 
-    !["Page Designer"](images/19-5-1.png "")
+    !["Page Designer"](images/19-5-1-restful-services.png "")
 
 2. Expand **Modules**, then **User Images**, then **profile_pic/:id**, select **GET**, and copy and save the **Full URL**. You will use this information in the following steps.
 
-    !["Page Designer"](images/19-5-2.png "")
+    !["Page Designer"](images/19-5-2-copy-url.png "")
 
 3. Click **App Builder**.
 
-    !["Page Designer"](images/19-5-3.png "")
+    !["Page Designer"](images/19-5-3-app-builder.png "")
 
 4. Click **Online Bookstore**.
 
-    !["Page Designer"](images/19-5-4.png "")
+    !["Page Designer"](images/19-5-4-obs-app.png "")
 
 5. Click **Shared Components**.
 
-    !["Page Designer"](images/19-5-5.png "")
+    !["Page Designer"](images/19-5-5-sc.png "")
 
 6. Click **Application Computations**.
 
-    !["Page Designer"](images/19-5-6.png "")
+    !["Page Designer"](images/19-5-6-app-computations.png "")
 
 7. Click **PICTURE\_URL**.
 
-    !["Page Designer"](images/19-5-7.png "")
+    !["Page Designer"](images/19-5-7-picture-url.png "")
 
 8. In the else statement of the code, replace **'<****picture\_url****>'** with the URL you copied in step 2, up to **'..profile_pic/'**, and click **Apply Changes**.
 
-    !["Page Designer"](images/19-5-8.png "")
+    !["Page Designer"](images/19-5-8-edit-url.png "")
 
 ## Task 6: Update the Google Auth Credential
 
@@ -168,15 +168,15 @@ To Enable Generative AI in Oracle APEX:
 
 2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-    !["Page Designer"](images/19-6-2.png "")
+    !["Page Designer"](images/19-6-2-workspace-utilites.png "")
 
 3. Click **Web Credentials**.
 
-    !["Page Designer"](images/19-6-3.png "")
+    !["Page Designer"](images/19-6-3-web-cred.png "")
 
 4. Click **Google Authentication**.
 
-    !["Page Designer"](images/19-6-4.png "")
+    !["Page Designer"](images/19-6-4-google-authentication.png "")
 
 5. Enter the following and click **Apply Changes**.
 
@@ -186,83 +186,85 @@ To Enable Generative AI in Oracle APEX:
         - Client Secret or Password: Enter the **Client secret** you copied above.
         - Verify Client Secret or Password: Enter the **Client secret** you copied above.
 
-    !["Page Designer"](images/19-6-5.png "")
+    !["Page Designer"](images/19-6-5-edit-prop.png "")
 
 ## Task 7: Generate Push Notification Credentials and Enable Push Notifications on the Device
 
 1. Click **App Builder**.
 
-    !["Page Designer"](images/19-7-1.png "")
+    !["Page Designer"](images/19-7-1-app-builder.png "")
 
 2. Click **Online Bookstore**.
 
-    !["Page Designer"](images/19-7-2.png "")
+    !["Page Designer"](images/19-7-2-obs.png "")
 
 3. Click **Shared Components**.
 
-    !["Page Designer"](images/19-7-3.png "")
+    !["Page Designer"](images/19-7-3-sc.png "")
 
 4. Click **Progressive Web App**.
 
-    !["Page Designer"](images/19-7-4.png "")
+    !["Page Designer"](images/19-7-4-progressive-web-app.png "")
 
 5. Click **Push Notifications**.
 
-    !["Page Designer"](images/19-7-5.png "")
+    !["Page Designer"](images/19-7-5-push-notifications.png "")
 
 6. Click **+ Generate Credentials** and click **Generate Credentials** in the confirm dialog window.
 
-    !["Page Designer"](images/19-7-6.1.png "")
+    !["Page Designer"](images/19-7-6.1-generate-cred.png "")
 
-    !["Page Designer"](images/19-7-6.2.png "")
+    !["Page Designer"](images/19-7-6.2-generate-cred.png "")
 
 7. Click **Application ID**.
 
-    !["Page Designer"](images/19-7-7.png "")
+    !["Page Designer"](images/19-7-7-app-id.png "")
 
 8. Click **Run Application**.
 
-    !["Page Designer"](images/19-7-8.png "")
+    !["Page Designer"](images/19-7-8-run-app.png "")
 
 9. Click **Login** and enter the credentials of user01. (Username: user01, Password: secretPassword) and click **Sign In**
 
-    !["Page Designer"](images/19-7-9.1.png "")
-    !["Page Designer"](images/19-7-9.2.png "")
+    !["Page Designer"](images/19-7-9.1-login.png "")
+
+    !["Page Designer"](images/19-7-9.2-signin.png "")
 
 10. In the Online Bookstore App, click on your username at the top-right corner and select **Settings**.
 
-    !["Page Designer"](images/19-7-10.png "")
+    !["Page Designer"](images/19-7-10-settings.png "")
 
 11. Push Notifications is disabled by default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
-    !["Page Designer"](images/19-7-11.png "")
-    !["Page Designer"](images/19-7-11.2.png "")
+    !["Page Designer"](images/19-7-11.1-push-noti.png "")
+
+    !["Page Designer"](images/19-7-11.2-enable.png "")
 
 ## Task 8: Setup Compartment ID to Run the Automation for AI Vision Service
 
 1. Click **App Builder** and select **Online Bookstore**.
 
-    !["Page Designer"](images/19-8-1.png "")
+    !["Page Designer"](images/19-8-1-app-builder.png "")
 
 2. Click **Shared Components**.
 
-    !["Page Designer"](images/19-8-2.png "")
+    !["Page Designer"](images/19-8-2-sc.png "")
 
 3. Click **Automations**.
 
-    !["Page Designer"](images/19-8-3.png "")
+    !["Page Designer"](images/19-8-3-automations.png "")
 
 4. Click **Index Book Cover With OCI Vision**.
 
-    !["Page Designer"](images/19-8-4.png "")
+    !["Page Designer"](images/19-8-4-open.png "")
 
 5. Under **Action** > Click **edit icon**.
 
-    !["Page Designer"](images/19-8-5.png "")
+    !["Page Designer"](images/19-8-5-edit-action.png "")
 
 6. Replace **#COMPARTMENT\_ID#** with your **COMPARTMENT\_ID** at two places in the following query and click **Apply Changes**.
 
-    !["Page Designer"](images/19-8-6.png "")
+    !["Page Designer"](images/19-8-6-replace-compartment-id.png "")
 
 ## Task 9: Update the Razorpay Auth Credential
 
@@ -270,15 +272,15 @@ To Enable Generative AI in Oracle APEX:
 
 2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-    !["Page Designer"](images/19-9-2.png "")
+    !["Page Designer"](images/19-9-2-workspace-utilities.png "")
 
 3. Click **Web Credentials**.
 
-    !["Page Designer"](images/19-9-3.png "")
+    !["Page Designer"](images/19-9-3-web-cred.png "")
 
 4. Click **Razorpay API**.
 
-    !["Page Designer"](images/19-9-4.png "")
+    !["Page Designer"](images/19-9-4-open.png "")
 
 5. Enter the following and click **Apply Changes**.
 
@@ -288,35 +290,35 @@ To Enable Generative AI in Oracle APEX:
         - Client Secret or Password: Enter the **Key Secret** you copied above.
         - Verify Client Secret or Password: Enter the **Key Secret** you copied above.
 
-    !["Page Designer"](images/19-9-5.png "")
+    !["Page Designer"](images/19-9-5-edit-prop.png "")
 
 ## Task 10: Update ICON_URL for the Application Icon in the Emails
 
 1. Click **App Builder**.
 
-    !["Page Designer"](images/19-10-1.png "")
+    !["Page Designer"](images/19-10-1-app-builder.png "")
 
 2. Click **Online Bookstore**.
 
-    !["Page Designer"](images/19-10-2.png "")
+    !["Page Designer"](images/19-10-2-obs.png "")
 
 3. Select Page **100001 - Email Verification for User SignUp**.
 
-    !["Page Designer"](images/19-10-3.png "")
+    !["Page Designer"](images/19-10-3-page100001.png "")
 
 4. Navigate to **Processing**, expand **Send Verification Email** and select **Send Email Process**. Under Settings, click **Placeholder Values**, update **ICON_URL**, click OK and then click **Save**.
 
     - In **ICON\_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
 
-    !["Page Designer"](images/19-10-4.png "")
+    !["Page Designer"](images/19-10-4-edit-icon-url.png "")
 
 5. Click **Page Finder** and select **Page 100002 - Email Verification for Forgot Password**.
 
-    !["Page Designer"](images/19-10-5.png "")
+    !["Page Designer"](images/19-10-5-page100002.png "")
 
 6. Repeat step 4.
 
-    !["Page Designer"](images/19-10-6.png "")
+    !["Page Designer"](images/19-10-6-edit-icon-url.png "")
 
 ## Task 11: Vector Search using Search Configurations
 
@@ -324,15 +326,15 @@ To Enable Generative AI in Oracle APEX:
 
 2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-    !["Page Designer"](images/19-11-2.png "")
+    !["Page Designer"](images/19-11-2-workspace-utilities.png "")
 
 3. Click **Vector Providers**
 
-    !["Page Designer"](images/19-11-3.png "")
+    !["Page Designer"](images/19-11-3-vector-provider.png "")
 
 4. Click **DB ONXX Model**
 
-    !["Page Designer"](images/19-11-4.png "")
+    !["Page Designer"](images/19-11-4-open.png "")
 
 5. Enter/select the following and click **Apply Changes**.
 
@@ -342,11 +344,11 @@ To Enable Generative AI in Oracle APEX:
 
         - ONNX Model Name: **DOC_MODEL**
 
-    !["Page Designer"](images/19-11-5.png "")
+    !["Page Designer"](images/19-11-5-edit-details.png "")
 
 6. Expand **SQL Workshop** and select **SQL Commands**.
 
-    !["Page Designer"](images/19-11-6.png "")
+    !["Page Designer"](images/19-11-6-sql-commands.png "")
 
 7. Copy and paste the SQL code below, then click **Run**
 
@@ -360,7 +362,7 @@ To Enable Generative AI in Oracle APEX:
     </copy>
      ```
 
-    !["Page Designer"](images/19-11-7.png "")
+    !["Page Designer"](images/19-11-7-fill-vector-embeddings.png "")
 
 ## Summary
 
