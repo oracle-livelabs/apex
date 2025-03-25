@@ -1103,15 +1103,16 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 2. Click **CREATE PROJECT**, or navigate to an already created project and then click **New project**.
 
     ![Click My Apps](images/create-project1.png " ")
-    ![Click My Apps](images/12-5-2.png " ")
+
+    ![Click My Apps](images/12-5-2-create-project.png " ")
 
 3. In the New Project Screen, for Project Name: Enter **OBS Application** and click **CREATE**.
 
-    ![Click My Apps](images/12-5-3.png " ")
+    ![Click My Apps](images/12-5-3-create.png " ")
 
 4. Click the OAuth consent screen (from the left side menu) and click **GET STARTED**
 
-    ![Click My Apps](images/12-5-4.png " ")
+    ![Click My Apps](images/12-5-4-get-started.png " ")
 
 5. Under Project Configuration, enter the following:
 
@@ -1123,26 +1124,27 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
         Click **Next**
 
-    ![Click My Apps](images/12-5-5.1.png " ")
+    ![Click My Apps](images/12-5-5.1-app-information.png " ")
 
      - Under **Audience** > Select **External** and click **NEXT**
 
-    ![Click My Apps](images/12-5-5.2.png " ")
+    ![Click My Apps](images/12-5-5.2-audience.png " ")
 
     - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
-    ![Click My Apps](images/12-5-5.3.png " ")
+    ![Click My Apps](images/12-5-5.3-contact-information.png " ")
 
     - Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
-    ![Click My Apps](images/12-5-5.4.png " ")
+    ![Click My Apps](images/12-5-5.4-finish.png " ")
 
 6. Click **CREATE**.
 
-    ![Click My Apps](images/12-5-6.png " ")
+    ![Click My Apps](images/12-5-6-create.png " ")
 
 7. Click **CREATE OAUTH CLIENT**.
-    ![Click My Apps](images/12-5-7.png " ")
+
+    ![Click My Apps](images/12-5-7-oauth-create.png " ")
 
 8. Enter the following:
 
@@ -1156,14 +1158,15 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
      Click **CREATE**.
 
-    ![Click My Apps](images/12-5-8.png " ")
+    ![Click My Apps](images/12-5-8-create.png " ")
 
 9. Click **Online Bookstore Authentication**.
-    ![Click My Apps](images/12-5-9.png " ")
+
+    ![Click My Apps](images/12-5-9-obs.png " ")
 
 10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
 
-    ![Click My Apps](images/12-5-10.png " ")
+    ![Click My Apps](images/12-5-10-copy-cred.png " ")
 
 11. Login into your Oracle APEX workspace.
 
@@ -1400,61 +1403,61 @@ In this task, you will run the lab and test various functionalities, including S
 
 1. Run the application and click **New here? SignUp** to create a new account.
 
-    ![Click My Apps](images/12-6-1.png " ")
+    ![Click My Apps](images/12-6-1-run-app.png " ")
 
 2. Enter your email address and click **Send SignUp Email**.
 
-    ![Click My Apps](images/12-6-2.1.png " ")
+    ![Click My Apps](images/12-6-2.1-email.png " ")
 
-    ![Click My Apps](images/12-6-2.2.png " ")
+    ![Click My Apps](images/12-6-2.2-message.png " ")
 
 3. Click **Setup your account**.
 
-    ![Click My Apps](images/12-6-3.png " ")
+    ![Click My Apps](images/12-6-3-email.png " ")
 
 4. Enter your details and click **SignUp**.
 
-    ![Click My Apps](images/12-6-4.png " ")
+    ![Click My Apps](images/12-6-4-fill-form.png " ")
 
 5. You will be automatically logged in with the newly created user.
 
-    ![Click My Apps](images/12-6-5.png " ")
+    ![Click My Apps](images/12-6-5-login.png " ")
 
 6. To reset your password, navigate to the login page and click **Forgot Password**.
 
-    ![Click My Apps](images/12-6-6.png " ")
+    ![Click My Apps](images/12-6-6-reset-pass.png " ")
 
 7. Enter your email address and click **Send Reset Password Link**.
 
-    ![Click My Apps](images/12-6-7.1.png " ")
+    ![Click My Apps](images/12-6-7.1-email.png " ")
 
-    ![Click My Apps](images/12-6-7.2.png " ")
+    ![Click My Apps](images/12-6-7.2-message.png " ")
 
 8. Click **Reset Password**.
 
-    ![Click My Apps](images/12-6-8.png " ")
+    ![Click My Apps](images/12-6-8-email.png " ")
 
 9. Enter **Password** and **Confirm Password** and click **Apply Changes**.
 
-    ![Click My Apps](images/12-6-9.png " ")
+    ![Click My Apps](images/12-6-9-fill-form.png " ")
 
 10. Password has been changed for user02. Enter your email address or username and new password to log in.
 
-    ![Click My Apps](images/12-6-10.png " ")
+    ![Click My Apps](images/12-6-10-signin.png " ")
 
 11. To log in or sign up with a Google account, navigate to the login page and click **Login/Signup with Google Account**.
 
-    ![Click My Apps](images/12-6-11.png " ")
+    ![Click My Apps](images/12-6-11-login-with-google.png " ")
 
 12. Select your Google account and click **Continue**.
 
-    ![Click My Apps](images/12-6-12.1.png " ")
+    ![Click My Apps](images/12-6-12.1-select-account.png " ")
 
-    ![Click My Apps](images/12-6-12.2.png " ")
+    ![Click My Apps](images/12-6-12.2-continue.png " ")
 
 13. You will be automatically logged in with the selected email address.
 
-    ![Click My Apps](images/12-6-13.png " ")
+    ![Click My Apps](images/12-6-13-automatically-login.png " ")
 
 ## Summary
 

@@ -198,22 +198,23 @@ In this task, you will run the application, enable push notifications, and test 
 
       - Password: **secretPassword**
 
-    ![close dialog](images/13-3-1.png " ")
+    ![close dialog](images/13-3-1-run-app.png " ")
 
 2. In the Online Bookstore App, click on your username at the top-right corner and select **Settings**.
 
-    <!-- ![close dialog](images/13-2-6-settings.png " ") -->
-    ![close dialog](images/13-3-2.png " ")
+    ![close dialog](images/13-3-2-settings.png " ")
 
 3. Push Notifications is disabled by default. Click **Off** and enable the checkbox for **Enable push notifications on this device**.
 
     ![close dialog](images/13-2-6-settings1.png " ")
+
     ![close dialog](images/13-2-6-settings2.png " ")
 
 4. To receive the push notification, change the availability status from "No" to "Yes" as an admin under Manage Book Information in the Administration section. If the book is in your wishlist, you will receive a push notification.
 
-    ![close dialog](images/13-3-4.1.png " ")
-    ![close dialog](images/13-3-4.2.png " ")
+    ![close dialog](images/13-3-4.1-edit-availability.png " ")
+
+    ![close dialog](images/13-3-4.2-push-notification.png " ")
 
 ## Summary
 

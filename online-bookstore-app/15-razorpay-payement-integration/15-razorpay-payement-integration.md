@@ -509,39 +509,39 @@ In this task, you will run the application, log in, add items to the shopping ca
 
       - Password: **secretPassword**
 
-    ![close dialog](images/15-5-1.png " ")
+    ![close dialog](images/15-5-1-run-app.png " ")
 
 2. Click on the books, select the quantity, and click **Add to Cart**,
 
-    ![close dialog](images/15-5-2.1.png " ")
+    ![close dialog](images/15-5-2.1-add-to-cart.png " ")
 
-    ![close dialog](images/15-5-2.2.png " ")
+    ![close dialog](images/15-5-2.2-add-to-cart.png " ")
 
-    ![close dialog](images/15-5-2.3.png " ")
+    ![close dialog](images/15-5-2.3-add-to-cart.png " ")
 
-    ![close dialog](images/15-5-2.4.png " ")
+    ![close dialog](images/15-5-2.4-add-to-cart.png " ")
 
 3. On the Navigation Bar, click **Shopping Cart**.
 
-    ![close dialog](images/15-5-3.png " ")
+    ![close dialog](images/15-5-3-shopping-cart.png " ")
 
 4. Click **Proceed to Purchase**.
 
-    ![close dialog](images/15-5-4.1.png " ")
+    ![close dialog](images/15-5-4.1-checkout.png " ")
 
-    ![close dialog](images/15-5-4.2.png " ")
+    ![close dialog](images/15-5-4.2-checkout.png " ")
 
 5. To complete the order, select a payment method and enter/select the dummy details.
 
-    ![close dialog](images/15-5-5.1.png " ")
+    ![close dialog](images/15-5-5.1-payment.png " ")
 
-    ![close dialog](images/15-5-5.2.png " ")
+    ![close dialog](images/15-5-5.2-payment.png " ")
 
-    ![close dialog](images/15-5-5.3.png " ")
+    ![close dialog](images/15-5-5.3-payment.png " ")
 
 6. After completing the order, you will be automatically redirected to the Transaction Details page.
 
-    ![close dialog](images/15-5-6.png " ")
+    ![close dialog](images/15-5-6-transaction-details.png " ")
 
 ## Summary
 

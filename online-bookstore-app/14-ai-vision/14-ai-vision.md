@@ -343,15 +343,15 @@ In this task, you will run the application and test the enhanced search function
 
       - Password: **secretPassword**
 
-    ![close dialog](images/14-4-1.png " ")
+    ![close dialog](images/14-4-1-run-app.png " ")
 
 2. Now, our search bar on the homepage will also work for text on book covers. For example, search for **Murder**.
 
-    ![close dialog](images/14-4-2.png " ")
+    ![close dialog](images/14-4-2-search.png " ")
 
 3. Now, our search bar on the homepage will also work for objects on book covers. For example, search for **Animal**.
 
-    ![close dialog](images/14-4-3.png " ")
+    ![close dialog](images/14-4-3-search-result.png " ")
 
 ## Summary
 
