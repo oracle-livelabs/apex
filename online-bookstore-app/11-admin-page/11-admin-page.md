@@ -592,11 +592,12 @@ In this task, you'll create a page to manage book information. Start by navigati
 
             - Target > Page: **50**
 
-            - Under Set items:
+            - Set Items:
 
-                - Name: **P50\_BOOK\_ID**
-
-                - Value: **&P40\_ID.**
+                | Name             | Value        |
+                | ---------------- | ------------ |
+                | P50\_BOOK\_ID | &P40\_ID. |
+                {: title="List of Items"}
 
             - Clear / Reset > Clear Cache: **50**
 

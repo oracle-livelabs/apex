@@ -856,11 +856,16 @@ In this task, you will create the My Orders page to display users' past orders, 
 
         - Type: **Redirect to Page in this application**
 
-        - Click **Target**
+        - Target: Click **No Link Defined**
 
-            - Page: **16**
+            - Target > Page: **16**
 
-            - Name: **P16\_ORDER\_ID** and Value: **&ORDER\_ID.**
+            - Set Items:
+
+                | Name             | Value        |
+                | ---------------- | ------------ |
+                | P16\_ORDER\_ID | &ORDER\_ID. |
+                {: title="List of Items"}
 
             Click **OK**
 

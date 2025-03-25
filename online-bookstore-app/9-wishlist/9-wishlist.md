@@ -190,7 +190,12 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
         - Target > Page: **18**
 
-        - Set Items > Name: **P18\_BOOK\_ID** and Value: **&BOOK\_ID.**
+        - Set Items:
+
+            | Name             | Value        |
+            | ---------------- | ------------ |
+            | P18\_BOOK\_ID | &BOOK\_ID. |
+            {: title="List of Items"}
 
         -  Clear/Reset > Clear Cache: **18**
 

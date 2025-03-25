@@ -52,13 +52,13 @@ In this task, we will reorder the facets and edit their properties and ranges ac
 
         - Click on Static Values: Enter the following
 
-       | Display Value |  Return Value  |
-       | --- |  --- |
-       | <20  | \|20 |
-       | 20 - 50 | 20\|50 |
-       | 50 - 80 | 50\|80 |
-       | >80 | 80\| |
-       {: title="List of Static Values"}
+            | Display Value |  Return Value  |
+            | --- |  --- |
+            | <20  | \|20 |
+            | 20 - 50 | 20\|50 |
+            | 50 - 80 | 50\|80 |
+            | >80 | 80\| |
+            {: title="List of Static Values"}
 
        - Actions Menu > Chart: **Toggle Off**
 
@@ -410,7 +410,7 @@ In this task, we will create a book details page that opens when a book on the h
 
         - SQL Query: Copy and paste below code into the code Editor
 
-        ```
+            ```
         <copy>
         SELECT
            BOOK_ID,
@@ -426,7 +426,7 @@ In this task, we will create a book details page that opens when a book on the h
         FROM OBS_BOOKS
         WHERE BOOK_ID=:P18_BOOK_ID
        </copy>
-       ```
+            ```
 
     ![App builder home page](images/book-info.png " ")
 

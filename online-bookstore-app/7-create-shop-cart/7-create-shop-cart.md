@@ -107,15 +107,15 @@ In this task, you develop a new page in the application to display the shopping 
 
         - Description: Copy and paste the code below:
 
-        ```
-        <copy>
-        &DESCRIPTION.
-        </br></br>
-        <b>Quantity:</b> &QUANTITY. </br>
-        <b>Price:</b> <strike> ₹&TOTAL_PRICE.</strike> ₹&NEW_TOTAL_PRICE.
-        <span style="color: green;">&DISCOUNT.% Off</span>
-        </copy>
-        ```
+            ```
+            <copy>
+            &DESCRIPTION.
+            </br></br>
+            <b>Quantity:</b> &QUANTITY. </br>
+            <b>Price:</b> <strike> ₹&TOTAL_PRICE.</strike> ₹&NEW_TOTAL_PRICE.
+            <span style="color: green;">&DISCOUNT.% Off</span>
+            </copy>
+            ```
 
          - Display Avatar: **Toggle On**
 
@@ -708,11 +708,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
      - Identification > Name: **Go To Orders**
 
      - Behavior > Target: Click **No Link Defined**
-          - Page: **16**
 
-          - Set Items > Name: **P16\_ORDER\_ID** and Value: **&P17\_ORDER\_ID.**
+          - Target > Page: **16**
 
-          - Clear Cache: **16**
+          - Set Items:
+
+            | Name             | Value        |
+            | ---------------- | ------------ |
+            | P16\_ORDER\_ID | &P17\_ORDER\_ID. |
+            {: title="List of Items"}
+
+          - Clear / Reset > Clear Cache:: **16**
 
           Click **OK**.
 

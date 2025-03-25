@@ -546,11 +546,12 @@ In this task, you will learn how to create and configure a page to update the cu
 
             - Target > Page: **26**
 
-            - Under Set Items:
+            - Set Items:
 
-                - Name:  **P26\_USER\_ID**
-
-                - Value: **&USER_ID.**
+                | Name             | Value        |
+                | ---------------- | ------------ |
+                | P26\_USER\_ID | &USER_ID. |
+                {: title="List of Items"}
 
             - Clear / Reset > Clear Cache: **26**
 
@@ -855,11 +856,12 @@ This task provides a comprehensive step-by-step process for creating and configu
 
             - Target > Page: **27**
 
-            - Under Set Items:
+            - Set Items:
 
-                - Name: **P27\_USER\_ID**
-
-                - Value: **&USER\_ID.**
+                | Name             | Value        |
+                | ---------------- | ------------ |
+                | P27\_USER\_ID | &USER\_ID. |
+                {: title="List of Items"}
 
             - Clear / Reset > Clear Cache: **27**
 
