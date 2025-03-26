@@ -28,16 +28,16 @@ In this lab, you will:
 
 ## Task 1: Add a Form Region
 
-1. On Application home page, Navigate to Page **1-Timeline**.
+1. On Application home page, navigate to **Page 1 - Timeline**.
 
     ![Navigate to Timeline](images/nav-timeline.png "")
 
-2. In the Rendering tree, Right click on **Body**, and select **Create Region**.
+2. In the Rendering tree, right click on **Body**, and select **Create Region**.
 
     ![Rendering Tree options are displayed](images/create-region1.png "")
 
 3. You will see a new region in the Rendering Tree, which will also appear in the **Layout** section (middle panel).
-In the Property Editor, Enter/select the following:
+In the Property Editor, enter/select the following:
 
     - Under Indentification:
 
@@ -81,7 +81,7 @@ In the Property Editor, Enter/select the following:
 
     ![Rendering tree with page items](images/delete-page-items.png "")
 
-    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, *Right click* on the **Post** region and select Synchronize Page Items. Then, carefully delete the items that are not needed.
+    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, *right click* on the **Post** region and select Synchronize Page Items. Then, carefully delete the items that are not needed.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 
@@ -94,7 +94,7 @@ In the Property Editor, Enter/select the following:
 
    ![Options available for Type is displayed](images/post-type.png "")
 
-3. Run the app again and see the results of our changes so far!
+3. Save the changes and run the app again and see the results of our changes so far!
 
     ![Updated app is displayed](images/updated-app1.png "")
 
@@ -104,7 +104,7 @@ In the Property Editor, Enter/select the following:
 
     ![Rendering tree](images/lat-lon.png "")
 
-    To keep things organized, drag P1_LAT and P1_LON under the already hidden P1_ID page item while they are still multi selected.
+    To keep things organized, drag **P1_LAT** and **P1_LON** under the already hidden P1_ID page item while they are still multi selected.
 
     ![Rendering tree](images/updated-tree.png "")
 
@@ -149,22 +149,26 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 2. In the Rendering Tree, click on **Post** region and enter/select the following in the property editor:
 
-    - Layout > Position: **Dialogs, Drawers and Popups**.
+    - Layout > Slot: **Dialogs, Drawers and Popups**.
 
     - Appearance:
         - Template: **Inline Dialog**
 
         - Click **Template Options** and select the following:
 
-            - Check **Auto Height**
+            - Under Common:
 
-            - Set **Size** to **None**
+                - Auto Height: **Check**
 
-            - Set **Heading Level** to **H1**
+                - Size: **None**
 
-            Click **OK**.
+            - Under Advanced:
 
-        ![Property editor](images/post-property-4.png "")
+                - Heading Level: **H1**
+
+                Click **OK**.
+
+         ![Property editor](images/post-property-4.png "")
 
 3. Now save and run the app.
 
@@ -178,9 +182,9 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     ![Rendering tree](images/create-button12.png "")
 
-2. In the Property Editor, enter the following:
+2. In the Property Editor, enter/select the following:
 
-    - Indentification > Name: **ADD\_POST**
+    - Identification > Name: **ADD\_POST**
 
     - Layout > Slot:  **After Logo**
 
@@ -267,30 +271,36 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     ![Create dynamic action](images/create-da-21.png)
 
-4. In the property editor enter Identification > Name: **Submit post**
+4. In the property editor, enter/select the following
 
-### OPTIONAL STEPS (5 and 6)
+    - Identification > Name: **Submit post**
 
-5. To prevent users from posting blank rows,under **Client-side Condition**, we need to set type as **Javascript expression**.
+### OPTIONAL STEP (5)
 
-6. Paste this javascript into the Javascript Expression box:
+5. To prevent users from posting blank rows,
 
-    ```
-     <copy>
-     apex.item('P1_FILE_BLOB').value.length>0 ||
-     apex.item('P1_POST_COMMENT').value.length>0
-     </copy>
-    ```
+    - Under Client-side Condition
 
-    ![Property editor](images/js-expression.png)
+        - Type: **Javascript expression**
 
-7. Click on the **True action** (beneath the Submit post tree entry) which is initially set to **Show,** and set the following attributes:
+        - Javascript expression: Copy and paste the following code
+
+            ```
+            <copy>
+            apex.item('P1_FILE_BLOB').value.length>0 ||
+            apex.item('P1_POST_COMMENT').value.length>0
+            </copy>
+            ```
+
+        ![Property editor](images/js-expression.png)
+
+6. Click on the **True action** (beneath the Submit post tree entry) which is initially set to **Show,** and enter/select the following:
 
     - Identification > Action: **Submit Page**
 
     - Settings > Request/Button name: **Save**
 
-  ![Property editor](images/da2-action.png)
+        ![Property editor](images/da2-action.png)
 
 ## Task 6: Configure the Submit Process to Insert a New Record into the Table
 
@@ -315,11 +325,11 @@ page with a process for the Form:
 
     - Success Message > Success Message: **Posted!**
 
-  ![Property Editor](images/process-attributes.png)
+        ![Property Editor](images/process-attributes.png)
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
-4. However, you can run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
+4. However, you can save and run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
 
     ![Running app](images/run-app-31.png)
 

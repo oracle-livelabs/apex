@@ -41,14 +41,20 @@ In this lab, you will:
     ![Property editor](images/da-name.png)
 
 4. Enter/select the following:
-    - Indentification > Name: **action-like**
+
+    - Identification > Name: **action-like**
+
     - Under When:
+
         - Event : **Custom**
+
         - Custom Event: **action-like**
+
         - Selection Type: **JavaScript Expression**
+
         - Javascript Expression: **document**
 
-    ![Property Editor](images/js-expression.png)
+        ![Property Editor](images/js-expression.png)
 
 ## Task 2: Creating the True Actions for the Like Button
 
@@ -56,17 +62,20 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 - Update the UI:
 
-  - Modify the like count dynamically on the client-side using JavaScript.
-  - This ensures immediate feedback to the user without requiring a full page reload.
+  - Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
+
 - Invoke the Database Action:
 
-  - Use a PL/SQL process to update the like status in the database.
-  - This ensures that the like/unlike action is correctly recorded for the post.
+  - Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
 
 1. In the True action, enter/select the following:
+
     - Under Identification:
+
         - Name: **LIKE - update UI (adjust count + heart color)**
-        - Action > **Execute JavaScript Code**.
+
+        - Action > **Execute JavaScript Code**
+
     - Under Settings: Copy and paste the following JavaScript code into the **Code** box:
 
         ```
@@ -91,18 +100,26 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
             icon.toggleClass('user-has-liked'); // either add this class or remove it
         </copy>
         ```
+
         ![Property Editor of Dynamic Action](images/action-like-true.png)
 
 2. Next, we need to add another True Action to handle the database operation and store the user's reaction.
 
-    In the Rendering tree of the action-like Dynamic Action, right-click on the True title and select **Create TRUE action**.
+    In the Rendering tree of the action-like Dynamic Action, right click on the True title and select **Create TRUE action**.
 
     ![Dynamic Actions tree](images/true-action.png)
 
 3. In the Property Editor on the resulting default "Show" action enter/select the following:
-    - Under Indentification:
+
+    - Under Identification:
+
         - Name: **LIKE -- do database work**
-        - Action: **Execute Server-side Code**, and copy and paste the following into PL/SQL code:
+
+        - Action: **Execute Server-side Code**
+
+    - Under Settings:
+
+        - PL/SQL Code: Copy and paste the following
 
         ```
         <copy>
@@ -125,6 +142,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
         ![Code Editor](images/plsql-code.png)
 
 4. We need to configure one final step for this action. The code block must receive the necessary Page Item values from our form. To achieve this, we will specify the Page Items to Submit to the server.
+
     - Settings > Items to Submit : **P1_ACTION_ID,P1_LAT,P1_LON**
 
         ![Property Editor](images/item-to-submit.png)
@@ -146,7 +164,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
     ![SQL commands editor](images/sql-without-record.png)
 
-    As more users interact with your app (which we haven't configured yet)), each reaction on a post will create a separate record in the SM_REACTIONS table.
+    As more users interact with your app (which we haven't configured yet), each reaction on a post will create a separate record in the SM_REACTIONS table.
 
 ## Task 3: Create a Dynamic Action with a custom **action-delete** event
 
@@ -156,22 +174,26 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
     ![Dynamic Actions tab](images/da-tab1.png)
 
-2. Right-click the **Custom** entry and choose **Create Dynamic Action**.
+2. Right click on **Custom** entry and select **Create Dynamic Action**.
 
     ![Dynamic Actions tree](images/create-da-3.png)
 
-3. You will now see that a New Dynamic Action has been created with a **True** action defaulted to **Show**.
+3. You will now see that a new Dynamic Action has been created with a **True** action defaulted to **Show**.
 
     ![Page Designer](images/da-overview.png)
 
 4. Update the following attributes in the Property Editor:
 
-    - Indentification > Name: **action-delete**
+    - Identification > Name: **action-delete**
 
     - Under When:
+
         - Event: **Custom**
+
         - Custom Event: **action-delete**. (This is once again an important detail because the Javascript on our page identifies this Dynamic Action by the Custom Event name.)
+
         - Selection Type: **JavaScript Expression**
+
         - Javascript Expression: **document**
 
   ![Property Editor](images/true-property-editor.png)
@@ -198,7 +220,7 @@ There are actually 3 actions desired here:
         - Title: **Are you Sure?**
         - Message: **You are about to delete this post. Are you sure?**
 
-    ![Property Editor](images/delete-confirm-dialog.png)
+        ![Property Editor](images/delete-confirm-dialog.png)
 
 2. Next, we need to add another True Action to do the database work and delete the post record from the table. In the Rendering Tree, right click on the **True** title within the action-delete Dynamic Action and select **Create TRUE action**.
 
@@ -212,28 +234,28 @@ There are actually 3 actions desired here:
 
         - Action: **Execute Server-side Code**
 
-    - Settings > Code: Copy and paste the following PL/SQL (which is a DML statement) into the **PL/SQL Code** field.
+    - Settings > PL/SQL Code: Copy and paste the following (which is a DML statement)
 
-        ```
-        <copy>
-        delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
-        delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
-        </copy>
-        ```
+            ```
+            <copy>
+            delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
+            delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+            </copy>
+            ```
 
         This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Select the following:
     - Settings > Items to Submit: **P1_ACTION_ID**
 
-    ![Property Editor](images/page-item-s.png)
+        ![Property Editor](images/page-item-s.png)
 
 5. Finally, after the row is deleted, we want to remove the post from the Timeline UI.
     In the **action-delete** custom event, right-click on **True** and select **Create TRUE Action**.
 
     ![Dynamic Action Tree](images/create-true-action.png)
 
-6. In the property Editor, enter/select the following:
+6. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -241,7 +263,7 @@ There are actually 3 actions desired here:
 
         - Action: **Execute JavaScript Code**
 
-    - Settings > Code: copy and paste the following code into the **Code** box:
+    - Settings > Code: Copy and paste the following
 
         ```
         <copy>
@@ -255,7 +277,7 @@ There are actually 3 actions desired here:
 
     ![App is dispalyed](images/run-app-11.png)
 
-8. Besides the post being removed from your screen, you can navigate to **SQL Workshop > Object Browser** and also confirm that there is no data left in the table **SM_POSTS**(assuming that there was only the one post in the app).
+8. Besides the post being removed from your screen, you can navigate to **SQL Workshop > Object Browser** and also confirm that there is no data left in the table **SM_POSTS** (assuming that there was only the one post in the app).
 
     ![SQL Commands page](images/verify-object-browser.png)
 

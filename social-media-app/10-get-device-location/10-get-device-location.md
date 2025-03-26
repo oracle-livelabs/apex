@@ -46,7 +46,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
    ![Page designer](images/after-drop.png)
 
-5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property Editor, enter the following:
+5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property editor, enter/select the following:
 
     - Indentification > Name: **Post and Like Locations**
 
@@ -94,7 +94,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
     - Under Tooltip:
 
-      - toggle Advanced Formatting to **ON**.
+      - Advanced Formatting: Toggle **ON**
 
       - HTML Expression: Copy and paste the below expression
 
@@ -106,9 +106,11 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
          ![Page designer](images/tooltip-s.png)
 
-7. Navigate to the **Post and Likes Locations** region. In the Property Editor, click on the **Attributes** tab and change the following properties:
+7. Navigate to the Post and Likes Locations region. In the property editor, click Attributes tab and enter/select the following:
+
     - Map > Height: **300** pixels
-    - Controls > Options, check **Mousewheel zoom** option
+
+    - Controls > Options: Check **Mousewheel zoom** option
 
     ![Page designer](images/attributes.png)
 
@@ -132,9 +134,9 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
    ![Navigation Bar List page](images/nav-bar-list-entry.png)
 
-4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the **Create Entry** button to add a new row in the list.
+4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the Create List Entry button to add a new row in the list.
 
-5. Enter the following in the new List entry:
+5. Enter/select the following in the new List entry:
 
     - Under Entry:
 
@@ -164,8 +166,9 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected. In the Property Editor, enter the following:
-   - Javascript > Execute When Page Loads:  update the script by replacing it with the following code:
+2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected.
+
+   - Javascript > Execute When Page Loads: Replace the script with the following code:
 
       ```
        <copy>
@@ -193,7 +196,8 @@ In this task, we update our javascript on the page so that the Target you specif
       ![Property Editor](images/js-expression.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
-   In the Rendering Tree, click the **Dynamic Actions** tab. Right click on the **Custom** branch, and choose **Create Dynamic Action**.
+
+   In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**.
 
    ![Dynamic Actions Tab](images/create-da4.png)
 
@@ -201,7 +205,7 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Dynamic Actions Tab](images/new-da.png)
 
-5. In the Property Editor with **New** selected, edit the following:
+5. In the Property Editor with **New** selected, enter/select the following:
 
     - Identification > Name: **action-open-map**
 
@@ -217,8 +221,7 @@ In this task, we update our javascript on the page so that the Target you specif
 
       ![Property Editor](images/action-open-map.png)
 
-6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**.
-   In the Property Editor:
+6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
     - Identification > Action: **Open Region**
 
@@ -245,7 +248,8 @@ In this final task, we create another dynamic action to get the device location 
 
    ![Dynamic Actions tab in the Page Designer](images/da-name.png)
 
-3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, edit the following:
+3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, enter/select the following:
+
    - Identification > Action: **Get Current Position**
 
    - Under Settings:

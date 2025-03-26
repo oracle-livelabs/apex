@@ -22,12 +22,11 @@ In this lab, you will:
 
 ## Task 1: Create a Cards Region
 
-1. In the Rendering Tree, right click on **Body**, and
-select **Create Region**.
+1. In the Rendering Tree, right click **Body**, and select **Create Region**.
 
     ![Create region option](images/create-region-s.png)
 
-2. Update the following attributes in the Property Editor:
+2. In the Property Editor, enter/select the following
 
     - Under Identification:
 
@@ -68,9 +67,7 @@ select **Create Region**.
            </copy>
           ```
 
-      ![Property Editor](images/title-type1.png)
-
-3. Enter the following:
+        ![Property Editor](images/title-type1.png)
 
     - Appearance > CSS Classes box: **t-Chat**
 

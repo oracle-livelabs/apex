@@ -40,7 +40,7 @@ The **Like** button will show a heart icon along with the total number of likes.
     - Under Link:
         - Type: **Redirect to URL**.
 
-        We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
+            We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
 
         - Target > URL: **#action$like?id=&ID.** (including the period), and click **OK**.
 
@@ -50,11 +50,11 @@ The **Like** button will show a heart icon along with the total number of likes.
 
         - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period). The **USER\_REACTION\_CSS** column is defined in the query for this CARDS region
 
-        - **CSS Classes**: **js-heart-button** (which will be used by our Dynamic Action JavaScript later.)
+        - CSS Classes : **js-heart-button**
 
         ![Property Editor](images/button-properties.png)
 
-    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
+        If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
 ## Task 2: Create a Delete Button
 
@@ -64,7 +64,7 @@ Similar to the previous task, we will create another button for deleting posts. 
 
 2. In the Property Editor, update the following attributes:
 
-    - Action > Label: **Delete**.
+    - Action > Label: **Delete**
 
     - Layout > Position: **Secondary** (This ensures that the button is displayed on the right side of the card)
 
@@ -95,7 +95,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 1. In the Rendering Tree, select the **Page 1: Timeline** entry and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2. Under the Javascript section, For: **Execute when Page loads**, enter the following javascript code:
+2. Under the Javascript section, For: **Execute when Page Loads:**, enter the following javascript code:
 
     ```
      <copy>
@@ -131,14 +131,14 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     This follows a design pattern where a single APEX JavaScript API call (on page load) includes an array of multiple code blocks as parameters. Each JavaScript block will then trigger a custom event, which we will configure our Dynamic Actions to respond to in the next task.
 
-3. To create and configure **P1\_ACTION\_ID** Page Item, in the Rendering Tree right click on the **Timeline** Cards Region and select **Create Page Item**.
+3. To create and configure **P1\_ACTION\_ID** Page Item, in the Rendering Tree right click **Timeline** Cards Region and select **Create Page Item**.
 
     ![Create page item option](images/create-page-item4.png)
 
 4. In the Property Editor:
 
     - Under Identification:
-        - Name as **P1\_ACTION\_ID**
+        - Name: **P1\_ACTION\_ID**
 
              *Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.
 

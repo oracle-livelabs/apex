@@ -27,7 +27,7 @@ Watch the video below for a quick walkthrough of the workshop.
 
 | Module                                                                         | Est. Time  |
 | ------------------------------------------------------------------------------ | ---------- |
-| [Create an App](?lab=1-create-the-app)                                         | 5 minutes  |
+| [Create an APEX App](?lab=1-create-the-app)                                         | 5 minutes  |
 | [Build the Data Model](?lab=2-build-data-model)                                | 5 minutes  |
 | [Get Familiar with the APEX Developer Tools](?lab=3-familiarize-with-devtools) | 5 minutes  |
 | [Customize the App Homepage](?lab=4-customize-app-homepage)                    | 5 minutes  |
@@ -35,8 +35,8 @@ Watch the video below for a quick walkthrough of the workshop.
 | [Build the Cards Region](?lab=6-build-cards-region)                            | 10 minutes |
 | [Create Action Buttons](?lab=7-customize-the-card)                             | 5 minutes  |
 | [Add Dynamic Actions](?lab=8-add-reaction-button)                              | 5 minutes  |
-| [Clean Up the App](?lab=9-clean-up-the-app)                                    | 5 minutes  |
-| [(OPTIONAL) Create a Map Region](?lab=11-get-device-location)                  | 5 minutes  |
+| [(Optional) Clean Up the App](?lab=9-clean-up-the-app)                                    | 5 minutes  |
+| [(Optional) Create a Map Region](?lab=11-get-device-location)                  | 5 minutes  |
 
 Total estimated time: 60 minutes
 
