@@ -264,7 +264,7 @@ In this final task, we create another dynamic action to get the device location 
 
 4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
 
-   ![Page Designer](images/value-protected.png)
+      ![Page Designer](images/value-protected.png)
 
 5. Let us see how the Map is displayed in the app. Click **Save and Run**.
 
