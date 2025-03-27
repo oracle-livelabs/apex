@@ -21,13 +21,25 @@ In this lab, you will:
 
 ## Task 1: The APEX Developer Toolbar
 
-1. Run the application and check the bottom of the page for the APEX Developer Toolbar.
+1. Navigate to the App Builder.
+
+    ![App Builder](images/AppBuilder.png "")
+
+2. Select **APEX Social Media** application.
+
+    ![Application Homepage](images/RunApplication.png "")
+
+3. Click Run Application.
+
+     ![Run Application](images/run-app1.png "")
+
+4. In the application, check the bottom of the page for the APEX Developer Toolbar.
 
     ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "")
 
     **Note**: The application end users will not see this bar. The developer tool bar is only visible to you because you are already logged into the APEX builder in another tab. The toolbar consists of quick links to features of APEX that we will continue to use for our development.
 
-2. Click **Page 1**. This navigates back to the APEX Page Designer, where you can begin making changes to the page.
+5. Click **Page 1**. This navigates back to the APEX Page Designer, where you can begin making changes to the page.
 
     ![Buttons on the developer toolbar](images/edit-page1.png "")
 

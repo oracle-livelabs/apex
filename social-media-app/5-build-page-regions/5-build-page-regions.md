@@ -227,7 +227,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
             - Region: **Post**
 
-   ![Affected elements in property editor](images/affected-elements.png)
+            ![Affected elements in property editor](images/affected-elements.png)
 
     That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
@@ -261,9 +261,9 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
         - Database Action: **SQL INSERT action**
 
-    The attributes should look this:
+        The attributes should look this:
 
-    ![Button attributes in property editor](images/configure-button-21.png)
+        ![Button attributes in property editor](images/configure-button-21.png)
 
 3. To enable the form to be able to save the new post data, we need another Dynamic Action and then a page process that does the work.
 
