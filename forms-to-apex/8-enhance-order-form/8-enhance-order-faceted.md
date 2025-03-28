@@ -293,7 +293,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
 2. Click **Actions**. Select **Data > Compute**.
 
-    ![App Builder](images/compute1.png " ")
+    ![App Builder](images/updated-compute.png " ")
 
 3. Enter/select the following:
 
@@ -305,7 +305,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/compute-apply1.png " ")
+    ![App Builder](images/updated-compute-item-total.png " ")
 
 4. Click **Actions** menu. Select **Data > Aggregate**
 
@@ -315,11 +315,11 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/aggregate.png " ")
+    ![App Builder](images/updated-aggregate.png " ")
 
-    ![App Builder](images/sum-total.png " ")
+    ![App Builder](images/updated-aggregate-sum.png " ")
 
-    ![App Builder](images/item-total.png " ")
+    ![App Builder](images/updated-aggregate-after.png " ")
 
 5. Click **Actions** menu. Select **Report > Save Report**
 
@@ -329,11 +329,11 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/save-report-item.png " ")
+    ![App Builder](images/updated-save-report.png " ")
 
-    ![App Builder](images/apply-save.png " ")
+    ![App Builder](images/updated-default-report.png " ")
 
-    ![App Builder](images/primary-apply.png " ")
+    ![App Builder](images/updated-primary-report.png " ")
 
 ## Summary
 
