@@ -2,7 +2,8 @@
 
 ## Introduction
 
-You will learn how to 
+This lab will walk you through setting up important OCI resources to use in the following labs. You will set up your compartment, object storage bucket, GenAI agent, knowledge base, and generate an API key. 
+Compartments are a logical collection of related resources. Compartments allow for organization and isolation of your cloud resources. Object storage is a low-cost storage option to store any type of data. Oracle's GenAI Agent combines LLMs and RAG to provide contextually relevant answers by searching a knowledge base. In your know
 
 Estimated time - 20 minutes
 
