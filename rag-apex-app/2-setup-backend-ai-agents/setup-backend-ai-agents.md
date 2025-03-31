@@ -12,16 +12,25 @@ Estimated time - 20 minutes
 In this lab, you will:
 * Create Compartment
 * Create an Object Storage Bucket for Knowledge Base
+* Create Knowledge Base
 * Create a GenAI agent
 * Generate API key
 
 ### Prerequisites
 
-* An OCI cloud account
+This lab assumes you have the following:
 
-## Task 1: 
+Access to Oracle Cloud Infrastructure (OCI), paid account or free tier, in a region that has:
+Generative AI
+Basic experience with OCI Cloud Console and standard components.
 
-1. 
+## Task 1: Create a compartment
+
+1. Navigate to the hamburger menu in the top left-hand corner. Select **'Identity & Security'**, under the **'Identity'** section choose **'Compartments'**.
+   	![Navigation menu to object storage buckets](./images/Compartment.png  "")
+
+2. Select the button **'Create Compartment'**. Enter in a name, for this example I will be naming the compartment **'LiveLab'**.
+	![Navigation menu to object storage buckets](./images/CreateCompartment.png  "")
 
 ## Task 2: Create Bucket for Knowledge Base
 
@@ -41,9 +50,44 @@ In this lab, you will:
 
 	![Create Bucket button](./images/drop-pdf-upload.png "")
 
-## Task 3: 
+## Task 3: Create your Knowledge Base
 
-You may now **proceed to the next lab**.
+1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **'Generative AI Agents'**. Make sure you are in the correct region.
+![Create Bucket button](./images/NavigateAIAgent.png "")
+
+2. On the left-hand side, select **Knowledge Bases** and click the button **Create Knowledge Base**
+
+   ![Create Bucket button](./images/createknowledgebase.png "")
+
+3. Enter in a name for your knowledge base, **'RAG-KB'**. Under **Data sources** click **'Specify data source'**.
+
+![Create Bucket button](./images/NewKB.png "")
+
+4. Select the Object Storage bucket you created earlier, **'RAG'**, and check **'Select all in bucket'**. Click **'Create'**.
+
+   
+
+## Task 4: Create your Gen AI Agent: 
+
+1. Navigate to Gen AI Agents by selecting the hamburger menu in the top lef-hand corner, click **Analytics & AI** and then, **Generative AI Agents**. Make sure you are in the correct region.
+
+![Create Bucket button](./images/NavigateAIAgent.png "")
+
+2. Create your AI Agent Agent. Enter a name, **'RAG-AI-AGENT'**, ensure you are in the correct compartment & click **'Next'**.
+
+## Task 4: Generate API Keys
+
+1. Navigate to your profile icon on the right-hand side of the screen. Select **'User Settings'**. 
+
+![Create Bucket button](./images/profile.png "")
+
+2. On the left under **'Resources'**, select **'API keys'**
+
+   ![Create Bucket button](./images/API.png "")
+
+3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**.
+
+      ![Create Bucket button](./images/gen.png "")
 
 ## Acknowledgements
 
