@@ -1,9 +1,9 @@
 # Setup Backend for GenAI agents
 
 ## Introduction
-
 This lab will walk you through setting up important OCI resources to use in the following labs. You will set up your compartment, object storage bucket, GenAI agent, knowledge base, and generate an API key. 
-Compartments are a logical collection of related resources. Compartments allow for organization and isolation of your cloud resources. Object storage is a low-cost storage option to store any type of data. Oracle's GenAI Agent combines LLMs and RAG to provide contextually relevant answers by searching a knowledge base. In your know
+
+Compartments are a logical collection of related resources. Compartments allow for organization and isolation of your cloud resources. Object storage is a low-cost storage option to store any type of data. Oracle's GenAI Agent combines LLMs and RAG to provide contextually relevant answers by searching a knowledge base. Your knowledge base is the base for all the data sources that an agent can use to retrieve information for its chat answers.
 
 Estimated time - 20 minutes
 
@@ -11,7 +11,9 @@ Estimated time - 20 minutes
 
 In this lab, you will:
 * Create Compartment
-* Create Bucket for Knowledge Base
+* Create an Object Storage Bucket for Knowledge Base
+* Create a GenAI agent
+* Generate API key
 
 ### Prerequisites
 
