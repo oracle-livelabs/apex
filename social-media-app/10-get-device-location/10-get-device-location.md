@@ -248,7 +248,8 @@ In this final task, we create another dynamic action to get the device location 
 
    ![Dynamic Actions tab in the Page Designer](images/da-name.png)
 
-3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, enter/select the following:
+3. In the Rendering Tree, under True action, select **Show**.
+In the Property Editor, enter/select the following:
 
    - Identification > Action: **Get Current Position**
 
