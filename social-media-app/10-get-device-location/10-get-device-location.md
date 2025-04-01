@@ -108,11 +108,11 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 7. Navigate to the Post and Likes Locations region. In the property editor, click Attributes tab and enter/select the following:
 
-   - Map > Height: **300** pixels
+    - Map > Height: **300** pixels
 
-   - Controls > Options: Check **Mousewheel zoom** option
+    - Controls > Options: Check **Mousewheel zoom** option
 
-      ![Page designer](images/attributes.png)
+       ![Page designer](images/attributes.png)
 
 8. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 
