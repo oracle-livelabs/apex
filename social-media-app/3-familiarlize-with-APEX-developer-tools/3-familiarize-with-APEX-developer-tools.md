@@ -21,7 +21,7 @@ In this lab, you will:
 
 ## Task 1: The APEX Developer Toolbar
 
-1. Navigate to the App Builder.
+1. Navigate to the **App Builder**.
 
     ![App Builder](images/AppBuilder.png "")
 
@@ -29,7 +29,7 @@ In this lab, you will:
 
     ![Application Homepage](images/RunApplication.png "")
 
-3. Click Run Application.
+3. Click **Run Application**.
 
      ![Run Application](images/run-app1.png "")
 

@@ -92,7 +92,7 @@ Since we want users to react to a post only once, we need to add a constraint to
 
     ![Object Browser is displayed](images/nav-sql.png)
 
-2. In the object tree, expand Tables and select **SM\_REACTIONS** table. In the details panel of the **SM\_REACTIONS** table, click on the Constraints tab.
+2. In the object tree, expand Tables and select **SM\_REACTIONS** table. In the details panel of the **SM\_REACTIONS** table, click on the **Constraints** tab.
 
     ![Object Browser is displayed](images/nav-object-browser.png)
 
