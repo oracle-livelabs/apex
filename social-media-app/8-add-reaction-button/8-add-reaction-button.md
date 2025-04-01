@@ -139,7 +139,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 4. We need to configure one final step for this action. The code block must receive the necessary Page Item values from our form. To achieve this, we will specify the Page Items to Submit to the server.
 
-    - Settings > Items to Submit : **P1_ACTION_ID,P1_LAT,P1_LON**
+    - Settings > Items to Submit : **P1\_ACTION_ID,P1\_LAT,P1\_LON**
 
         ![Property Editor](images/item-to-submit.png)
 
@@ -242,7 +242,7 @@ There are actually 3 actions desired here:
         This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Select the following:
-    - Settings > Items to Submit: **P1_ACTION_ID**
+    - Settings > Items to Submit: **P1\_ACTION_ID**
 
         ![Property Editor](images/page-item-s.png)
 
