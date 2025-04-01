@@ -46,7 +46,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
    ![Page designer](images/after-drop.png =90%x*)
 
-5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property editor, enter/select the following:
+5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property Editor, enter/select the following:
 
     - Indentification > Name: **Post and Like Locations**
     - Under Source:

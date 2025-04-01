@@ -251,7 +251,7 @@ There are actually 3 actions desired here:
 
     ![Dynamic Action Tree](images/create-true-action.png)
 
-6. In the Property editor, enter/select the following:
+6. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
