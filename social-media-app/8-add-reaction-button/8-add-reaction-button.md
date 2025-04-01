@@ -62,11 +62,11 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 - Update the UI:
 
-  - Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
+    - Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
 
 - Invoke the Database Action:
 
-  - Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
+    - Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
 
 1. In the True action, enter/select the following:
 
@@ -168,13 +168,13 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 ## Task 3: Create a Dynamic Action with a custom **action-delete** event
 
-**Note**: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.
+    **Note**: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.
 
 1. In the Rending treee, select **Dynamic Actions** tab.
 
     ![Dynamic Actions tab](images/da-tab1.png)
 
-2. Right click on **Custom** entry and select **Create Dynamic Action**.
+2. Right click **Custom** entry and select **Create Dynamic Action**.
 
     ![Dynamic Actions tree](images/create-da-3.png)
 

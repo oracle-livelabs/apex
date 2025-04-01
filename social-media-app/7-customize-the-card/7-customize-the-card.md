@@ -35,6 +35,7 @@ The **Like** button will show a heart icon along with the total number of likes.
     - Identification > Label: **&REACTIONS.** (including the period).
 
         This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
+
         *Note: The REACTIONS column is defined in the query for this CARDS Region.*
 
     - Under Link:
