@@ -242,7 +242,7 @@ There are actually 3 actions desired here:
         This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Select the following:
-    - Settings > Items to Submit: **P1\_ACTION_ID**
+    - Settings > Items to Submit: **P1\_ACTION\_ID**
 
         ![Property Editor](images/page-item-s.png)
 
