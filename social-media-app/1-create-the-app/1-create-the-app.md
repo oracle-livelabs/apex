@@ -46,7 +46,7 @@ In this lab, you will:
 
     - Update the Home Page Name: **Timeline**. Click **Save Changes**
 
-    !["Edit Home Page name"](images/edit_homepage.png =50%x*)
+    !["Edit Home Page name"](images/edit_homepage.png)
 
     - In *Features* section, check the **Install Progressive Web App** option.
 
