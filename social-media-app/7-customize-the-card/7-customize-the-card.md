@@ -134,7 +134,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 3. To create and configure **P1\_ACTION\_ID** Page Item, in the Rendering Tree right click **Timeline** Cards Region and select **Create Page Item**.
 
-    ![Create page item option](images/create-page-item4.png)
+    ![Create page item option](images/create-page-item4.png " ")
 
 4. In the Property Editor:
 
@@ -147,15 +147,15 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     - Settings > Value Protected: **Toggle Off**
 
-    ![Property Editor](images/value-protected1.png)
+    ![Property Editor](images/value-protected1.png " ")
 
 5. Now in the Rending tree, navigate back to **Page 1: Timeline** and open the Code Editor to review the JavaScript we previously copied and pasted. The editor should look clean, with no errors or concerns!
 
-    ![code editor](images/code-editor-2.png)
+    ![code editor](images/code-editor-2.png " ")
 
 6. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
-    ![Running app](images/run-app-1.png)
+    ![Running app](images/run-app-1.png =60%x*)
 
 You may now **proceed to the next lab**
 

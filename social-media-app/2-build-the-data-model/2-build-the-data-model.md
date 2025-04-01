@@ -108,7 +108,7 @@ Since we want users to react to a post only once, we need to add a constraint to
 
 4. Click **Apply** to create the Constraint.
 
-    ![Add constraint wizard](images/add-constraint.png)
+    ![Add constraint wizard](images/add-constraint.png =60%x*)
 
 You may now **proceed to the next lab**
 
