@@ -133,19 +133,19 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 5. Enter/select the following in the new List entry:
 
-   - Under Entry:
+    - Under Entry:
 
-      - Sequence: **15**
+        - Sequence: **15**
 
-      - Image/Class: **fa-map**
+        - Image/Class: **fa-map**
 
-      - List Entry Label: **Map**
+        - List Entry Label: **Map**
 
-   - Under Target:
+    - Under Target:
 
-      - Target Type: **URL**
+        - Target Type: **URL**
 
-      - URL Target: **#action$open-map**
+        - URL Target: **#action$open-map**
 
       Click **Create List Entry**
 
