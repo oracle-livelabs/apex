@@ -25,6 +25,7 @@ In this lab, you will:
 When a post is liked, the heart icon should turn red. Additionally, on smaller screens, relocating the Add Post button to the bottom right will enhance usability. We can achieve both with two small blocks of Inline CSS at the page level.
 
 1. In the Rendering Tree, select **Page 1: Timeline** and enter the following in the Property Editor:
+
     - Under CSS:
         - Inline: Copy and paste the following CSS into the **Inline** box
 
@@ -45,7 +46,7 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
             </copy>
             ```
 
-    ![Property Editor](images/css.png)
+            ![Property Editor](images/css.png)
 
 ## Task 2: Clean up the File Browse Page Item
 
