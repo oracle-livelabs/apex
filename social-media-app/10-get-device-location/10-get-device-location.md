@@ -138,7 +138,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 5. Enter/select the following in the new List entry:
 
-    - Under Entry:
+   - Under Entry:
 
       - Sequence: **15**
 
@@ -146,7 +146,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
       - List Entry Label: **Map**
 
-    - Under Target:
+   - Under Target:
 
       - Target Type: **URL**
 
@@ -172,7 +172,7 @@ In this task, we update our javascript on the page so that the Target you specif
       - Execute When Page Loads: Replace the script with the following code:
 
          ```
-         <copy>
+          <copy>
             apex.actions.add([{
                name: "like",
                action: (event, element, args) => {
@@ -191,7 +191,7 @@ In this task, we update our javascript on the page so that the Target you specif
                   apex.event.trigger(document, 'action-open-map');
                }
             }]);
-         </copy>
+          </copy>
          ```
 
          ![Property Editor](images/js-expression.png)
@@ -207,9 +207,9 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
 5. In the Property Editor with **New** selected, enter/select the following:
 
-    - Identification > Name: **action-open-map**
+   - Identification > Name: **action-open-map**
 
-    - Under When:
+   - Under When:
 
       - Event : Custom
 
@@ -223,9 +223,9 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
-    - Identification > Action: **Open Region**
+   - Identification > Action: **Open Region**
 
-    - Under Affected Elements:
+   - Under Affected Elements:
 
       - Selection Type : **Region**
 
