@@ -65,7 +65,7 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
 
     - Layout > Label Column Span : **0**
 
-        ![Property Editor](images/layout-s.png)
+        ![Property Editor](images/layout-s.png =50%x*)
 
 2. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 
