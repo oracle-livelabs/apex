@@ -54,6 +54,12 @@ In this lab, you:
 
     ![App Builder](images/item-detail-key.png " ")
 
+6. In the left pane, navigate to **Items - Details** region and expand the columns. Select **P7\_PRODUCT\_ID**. In the property editor, enter/select the following:
+
+    - Label > Label: **Product**    
+
+    ![App Builder](images/items-detail-page-item-label.png " ")
+
 ## Task 2: Create Validations
 
 The S_ITEM table has five columns required: ORD\_ID, ITEM\_ID, PRODUCT\_ID, PRICE, and QUANTITY. You must ensure that end-users enter or select a value for these items.
