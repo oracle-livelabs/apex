@@ -78,11 +78,11 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 6. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
 
-    - Identification > Name: **Locations**
+   - Identification > Name: **Locations**
 
-    - Source > Location: **Region Source**
+   - Source > Location: **Region Source**
 
-    - Under Column Mapping:
+   - Under Column Mapping:
 
       - Geometry Column Data Type: **Longitude/Latitude**
 
@@ -92,16 +92,16 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
          ![Page designer](images/lat-lon.png)
 
-    - Under Tooltip:
+   - Under Tooltip:
 
       - Advanced Formatting: Toggle **ON**
 
       - HTML Expression: Copy and paste the below expression
 
          ```
-         <copy>
-         &CREATED_BY. @ &SINCE.
-         </copy>
+          <copy>
+            &CREATED_BY. @ &SINCE.
+          </copy>
          ```
 
          ![Page designer](images/tooltip-s.png)
