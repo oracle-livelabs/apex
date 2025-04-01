@@ -168,7 +168,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
                 Click **OK**.
 
-         ![Property editor](images/post-property-4.png "")
+    ![Property editor](images/post-property-4.png "")
 
 3. Now save and run the app.
 
@@ -200,7 +200,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
         The button configuration should look like this:
 
-        ![Button attributes](images/button-attributes1.png "")
+    ![Button attributes](images/button-attributes1.png "")
 
 3. To make the Post region (inline dialog) appear when this button is clicked, we need to create a **Dynamic Action**. In the rendering tree, right click on the button and select **Create Dynamic Action**.
 
@@ -215,7 +215,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
     - Select the first entry > **New**, and enter the following in the Property Editor:
         - Identification > Name: **Open Post Dialog**
 
-            ![Name the dynamic action](images/da-name.png)
+    ![Name the dynamic action](images/da-name.png)
 
     - Select the **Show** entry under True Actions and select the following in the Property Editor:
 
@@ -227,7 +227,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
             - Region: **Post**
 
-            ![Affected elements in property editor](images/affected-elements.png)
+    ![Affected elements in property editor](images/affected-elements.png)
 
     That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
@@ -292,7 +292,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
             </copy>
             ```
 
-        ![Property editor](images/js-expression.png)
+    ![Property editor](images/js-expression.png)
 
 6. Click on the **True action** (beneath the Submit post tree entry) which is initially set to **Show,** and enter/select the following:
 
@@ -300,7 +300,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     - Settings > Request/Button name: **Save**
 
-        ![Property editor](images/da2-action.png)
+    ![Property editor](images/da2-action.png)
 
 ## Task 6: Configure the Submit Process to Insert a New Record into the Table
 
@@ -325,7 +325,7 @@ page with a process for the Form:
 
     - Success Message > Success Message: **Posted!**
 
-        ![Property Editor](images/process-attributes.png)
+    ![Property Editor](images/process-attributes.png)
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 

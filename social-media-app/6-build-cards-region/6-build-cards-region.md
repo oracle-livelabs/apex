@@ -67,13 +67,13 @@ In this lab, you will:
            </copy>
           ```
 
-        ![Property Editor](images/title-type1.png)
+    ![Property Editor](images/title-type1.png)
 
     - Appearance > CSS Classes box: **t-Chat**
 
     - Advanced > Static ID: **timeline**
 
-        ![Property editor](images/appearance1.png)
+    ![Property editor](images/appearance1.png)
 
     Next, we need to configure which columns from the query results will be used in different parts of the CARDS region.
 

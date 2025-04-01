@@ -31,7 +31,7 @@ In this lab, you will:
         - Override User Interface Level: Toggle the button to **ON**
         - List: **Do not show the Navigation Menu List**
 
-        ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
+    ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
 
 ## Task 2: Remove the Breadcrumb Region
 

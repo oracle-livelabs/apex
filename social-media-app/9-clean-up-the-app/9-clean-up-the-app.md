@@ -52,24 +52,25 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
 
 1. In the Rendering Tree, select Post region and click the **P1\_FILE\_BLOB** page item. In the Property Editor, enter/select the following:
 
-    - Under Appearance:
+     - Under Appearance:
 
-        - Template: **Hidden**
+          - Template: **Hidden**
 
-        - CSS Classes: **file-upload**
+          - CSS Classes: **file-upload**
 
-        - Icon: **fa-camera-retro**
+          - Icon: **fa-camera-retro**
 
-            ![Property Editor](images/appearance-s.png)
+        ![Property Editor](images/appearance-s.png)
 
-        - Under **Template Options**
+          - Under **Template Options**:
+
             - General: check the **Stretch Form Item** option. (This improves the alignment.)
 
-                ![Template Options Dialog](images/stretch-form-s.png =50%x*)
+    ![Template Options Dialog](images/stretch-form-s.png =50%x*)
 
     - Layout > Label Column Span : **0**
 
-        ![Property Editor](images/layout-s.png =35%x*)
+    ![Property Editor](images/layout-s.png =35%x*)
 
 2. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 

@@ -97,7 +97,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
         </copy>
         ```
 
-        ![Property Editor of Dynamic Action](images/action-like-true.png)
+    ![Property Editor of Dynamic Action](images/action-like-true.png)
 
 2. Next, we need to add another True Action to handle the database operation and store the user's reaction.
 
@@ -135,7 +135,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
         These two actions effectively handle both client-side and server-side processes, ensuring a smooth and efficient like/unlike functionality.
 
-        ![Code Editor](images/plsql-code.png)
+    ![Code Editor](images/plsql-code.png)
 
 4. We need to configure one final step for this action. The code block must receive the necessary Page Item values from our form. To achieve this, we will specify the Page Items to Submit to the server.
 
@@ -192,7 +192,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
         - Javascript Expression: **document**
 
-  ![Property Editor](images/true-property-editor.png)
+    ![Property Editor](images/true-property-editor.png)
 
 ## Task 4: Create the Delete Button True Actions
 
@@ -216,7 +216,7 @@ There are actually 3 actions desired here:
         - Title: **Are you Sure?**
         - Message: **You are about to delete this post. Are you sure?**
 
-        ![Property Editor](images/delete-confirm-dialog.png)
+    ![Property Editor](images/delete-confirm-dialog.png)
 
 2. Next, we need to add another True Action to do the database work and delete the post record from the table. In the Rendering Tree, right click on the **True** title within the action-delete Dynamic Action and select **Create TRUE action**.
 
@@ -244,7 +244,7 @@ There are actually 3 actions desired here:
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Select the following:
     - Settings > Items to Submit: **P1\_ACTION\_ID**
 
-        ![Property Editor](images/page-item-s.png)
+    ![Property Editor](images/page-item-s.png)
 
 5. Finally, after the row is deleted, we want to remove the post from the Timeline UI.
     In the **action-delete** custom event, right-click on **True** and select **Create TRUE Action**.
@@ -267,7 +267,7 @@ There are actually 3 actions desired here:
         </copy>
         ```
 
-        ![Property Editor](images/code-s.png)
+    ![Property Editor](images/code-s.png)
 
 7. We should now be able to delete our own post. **Save and Run** to try it out!
 
