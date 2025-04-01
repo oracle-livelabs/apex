@@ -198,7 +198,7 @@ In this task, we update our javascript on the page so that the Target you specif
          ![Property Editor](images/js-expression.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
-In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**.
+In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**
 
    ![Dynamic Actions Tab](images/create-da4.png)
 
