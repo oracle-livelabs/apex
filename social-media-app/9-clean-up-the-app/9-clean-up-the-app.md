@@ -52,8 +52,11 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
 1. In the Rendering Tree, select Post region and click the **P1\_FILE\_BLOB** page item. In the Property Editor, enter/select the following:
 
     - Under Appearance:
+
         - Template: **Hidden**
+
         - CSS Classes: **file-upload**
+
         - Icon: **fa-camera-retro**
 
             ![Property Editor](images/appearance-s.png)
