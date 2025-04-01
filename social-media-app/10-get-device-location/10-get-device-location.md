@@ -28,11 +28,11 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 1. In the Layout section, scroll down to the bottom of the page, so that you can see the **Dialogs, Drawers and Popups** region.
 
-   ![Layout pane in Page Designer](images/layout-pane.png " ")
+   ![Layout pane in Page Designer](images/layout-pane.pn =50%x*)
 
 2. Ensure that your component drawer is open below the layout section, and click **Regions** tab.
 
-   ![Gallery menu](images/layout-pane-s.png)
+   ![Gallery menu](images/layout-pane-s.png =60%x*)
 
 3. Click the **Map** Region in the component drawer and drag slowly and carefully into the Dialogs, Drawers and Popups region in the Layout section as shown. Notice that as you do this, things will adjust to show you where you can drop it.
 
@@ -44,16 +44,15 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
    In the rendering tree, you should see it appear like this:
 
-   ![Page designer](images/after-drop.png =80%x*)
+   ![Page designer](images/after-drop.png =90%x*)
 
 5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property editor, enter/select the following:
 
     - Indentification > Name: **Post and Like Locations**
-
     - Under Source:
-      - Location: **Local Database** (new properties will be shown underneath).
-      - Type: **SQL Query**
-      - SQL Query: copy and paste the following code in the code editor
+        - Location: **Local Database** (new properties will be shown underneath).
+        - Type: **SQL Query**
+        - SQL Query: copy and paste the following code in the code editor
 
          ```
           <copy>
@@ -83,17 +82,13 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
     - Source > Location: **Region Source**
 
     - Under Column Mapping:
-
-      - Geometry Column Data Type: **Longitude/Latitude**
-
-      - Longitude Column: **LON**
-
-      - Latitude Column: **LAT**
+        - Geometry Column Data Type: **Longitude/Latitude**
+        - Longitude Column: **LON**
+        - Latitude Column: **LAT**
 
          ![Page designer](images/lat-lon.png)
 
     - Under Tooltip:
-
         - Advanced Formatting: Toggle **ON**
 
         - HTML Expression: Copy and paste the below expression
@@ -128,7 +123,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 2. In the Navigation and Search section, click **Navigation Bar List**.
 
-   ![Shared Components page](images/nav-bar-list-s.png =70%x*)
+   ![Shared Components page](images/nav-bar-list-s.png =65%x*)
 
 3. Our app only has one of these, so drill into its’ configuration by clicking on the **Navigation Bar entry** in the report under the **Name** column.
 
@@ -168,32 +163,32 @@ In this task, we update our javascript on the page so that the Target you specif
 
 2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected
 
-   - Under Javascript
+    - Under Javascript
 
-      - Execute When Page Loads: Replace the script with the following code:
+        - Execute When Page Loads: Replace the script with the following code:
 
-         ```
-          <copy>
-            apex.actions.add([{
-               name: "like",
-               action: (event, element, args) => {
-                  apex.items.P1_ACTION_ID.value = args.id;
-                  apex.event.trigger(document, 'action-like');
-               }
-            }, {
-               name: "delete",
-               action: (event, element, args) => {
-                  apex.items.P1_ACTION_ID.value = args.id;
-                  apex.event.trigger(document, 'action-delete');
-               }
-            }, {
-               name: "open-map",
-               action: () => {
-                  apex.event.trigger(document, 'action-open-map');
-               }
-            }]);
-          </copy>
-         ```
+            ```
+            <copy>
+               apex.actions.add([{
+                  name: "like",
+                  action: (event, element, args) => {
+                     apex.items.P1_ACTION_ID.value = args.id;
+                     apex.event.trigger(document, 'action-like');
+                  }
+               }, {
+                  name: "delete",
+                  action: (event, element, args) => {
+                     apex.items.P1_ACTION_ID.value = args.id;
+                     apex.event.trigger(document, 'action-delete');
+                  }
+               }, {
+                  name: "open-map",
+                  action: () => {
+                     apex.event.trigger(document, 'action-open-map');
+                  }
+               }]);
+            </copy>
+            ```
 
          ![Property Editor](images/js-expression.png)
 
@@ -208,29 +203,29 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
 5. In the Property Editor with **New** selected, enter/select the following:
 
-   - Identification > Name: **action-open-map**
+    - Identification > Name: **action-open-map**
 
-   - Under When:
+    - Under When:
 
-       - Event : Custom
+        - Event : Custom
 
-       - Custom Event : **action-open-map**
+        - Custom Event : **action-open-map**
 
-       - Selection Type : **JavaScript Expression**
+        - Selection Type : **JavaScript Expression**
 
-       - JavaScript Expression : **document**
+        - JavaScript Expression : **document**
 
       ![Property Editor](images/action-open-map.png =40%x*)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
-   - Identification > Action: **Open Region**
+    - Identification > Action: **Open Region**
 
-   - Under Affected Elements:
+    - Under Affected Elements:
 
-      - Selection Type : **Region**
+        - Selection Type : **Region**
 
-      - Region : **Post and Like Locations**
+        - Region : **Post and Like Locations**
 
       ![Property Editor](images/open-region.png)
 
@@ -253,15 +248,15 @@ In this final task, we create another dynamic action to get the device location 
 3. In the Rendering Tree, under True action, select **Show**.
 In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Get Current Position**
+   - Identification > Action: **Get Current Position**
 
-    - Under Settings:
+   - Under Settings:
 
-       - Return Type : **Latitude and Longitude**
+      - Return Type : **Latitude and Longitude**
 
-       - Latitude Item: **P1_LAT**
+      - Latitude Item: **P1_LAT**
 
-       - Longitude Item: **P1_LON**
+      - Longitude Item: **P1_LON**
 
       ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
 
