@@ -61,7 +61,7 @@ In the Property Editor, enter/select the following:
 
 1. Currently, the form displays input fields for the table columns, but it does not save any data yet and requires some adjustments. Some of the generated page items are not needed, while others need to be modified.
 
-    To refine the form select each the below page items individually and press Delete. Alternatively, use Control + Click to select multiple items and delete them at once.
+    To refine the form **select** each the below page items individually and press **Delete**. Alternatively, use Control + Click to select multiple items and delete them at once.
 
     - **P\_FILE\_MIME**
 
