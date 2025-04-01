@@ -42,6 +42,8 @@ In this lab, you will:
 
 3. You are now viewing the **Create An Application** Page, with View
 Blueprint tab selected.
+
+    - Application Name: **APEX Social Media**
     - Update the Home Page Name: **Timeline**. Click Save Changes
 
     - In *Features* section, check the **Install Progressive Web App** option.
