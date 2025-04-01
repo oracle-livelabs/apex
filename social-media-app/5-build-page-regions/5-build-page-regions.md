@@ -277,7 +277,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 ### OPTIONAL STEP (5)
 
-5. To prevent users from posting blank rows,
+5. To prevent users from posting blank rows, enter/select the following
 
     - Under Client-side Condition
 
@@ -286,10 +286,10 @@ At the beginning, the form should not be visible to the user. To achieve this, w
         - Javascript expression: Copy and paste the following code
 
             ```
-            <copy>
-            apex.item('P1_FILE_BLOB').value.length>0 ||
-            apex.item('P1_POST_COMMENT').value.length>0
-            </copy>
+             <copy>
+             apex.item('P1_FILE_BLOB').value.length>0 ||
+             apex.item('P1_POST_COMMENT').value.length>0
+             </copy>
             ```
 
     ![Property editor](images/js-expression.png)
