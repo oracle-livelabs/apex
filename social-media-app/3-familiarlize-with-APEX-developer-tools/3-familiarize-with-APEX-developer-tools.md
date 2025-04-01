@@ -57,7 +57,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
 2. The middle section is itself divided into two sections:
 
-    ![The layout and gallery pane is displayed](images/pd-middle.png =60%x*)
+    ![The layout and gallery pane is displayed](images/pd-middle.png =50%x*)
 
     The top section is the page **Layout** tab, it also has other tabs within: **Page Search** and **Help**.
 
@@ -77,7 +77,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
     If you're unsure or need to restore the default layout, simply click the wrench button at the top right of Page Designer. Click **Layout** and select **Reset Layout**
 
-    ![Page designer settings](images/pd-reset.png =70%x*)
+    ![Page designer settings](images/pd-reset.png =50%x*)
 
 You may now **proceed to the next lab**.
 
