@@ -170,28 +170,28 @@ In this task, we update our javascript on the page so that the Target you specif
 
    - Javascript > Execute When Page Loads: Replace the script with the following code:
 
-         ```
-         <copy>
-            apex.actions.add([{
+      ```
+       <copy>
+         apex.actions.add([{
             name: "like",
             action: (event, element, args) => {
                apex.items.P1_ACTION_ID.value = args.id;
                apex.event.trigger(document, 'action-like');
-               }
-            }, {
+            }
+         }, {
             name: "delete",
             action: (event, element, args) => {
                apex.items.P1_ACTION_ID.value = args.id;
                apex.event.trigger(document, 'action-delete');
-               }
-            }, {
+            }
+         }, {
             name: "open-map",
             action: () => {
                apex.event.trigger(document, 'action-open-map');
-               }
-            }]);
-         </copy>
-         ```
+            }
+         }]);
+       </copy>
+      ```
 
       ![Property Editor](images/js-expression.png)
 
