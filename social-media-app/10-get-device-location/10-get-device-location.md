@@ -36,15 +36,15 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 3. Click the **Map** Region in the component drawer and drag slowly and carefully into the Dialogs, Drawers and Popups region in the Layout section as shown. Notice that as you do this, things will adjust to show you where you can drop it.
 
-   ![Layout pane](images/show-drag-drop-s.png =60%x*))
+   ![Layout pane](images/show-drag-drop-s.png =50%x*)
 
 4. Release/drop the Map region to the gold area inside this region.
 
-   ![Layout pane](images/drag-n-drop-s.png =60%x*))
+   ![Layout pane](images/drag-n-drop-s.png =50%x*)
 
    In the rendering tree, you should see it appear like this:
 
-   ![Page designer](images/after-drop.png =60%x*))
+   ![Page designer](images/after-drop.png =80%x*)
 
 5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property editor, enter/select the following:
 
@@ -84,19 +84,19 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
     - Under Column Mapping:
 
-       - Geometry Column Data Type: **Longitude/Latitude**
+      - Geometry Column Data Type: **Longitude/Latitude**
 
-       - Longitude Column: **LON**
+      - Longitude Column: **LON**
 
-       - Latitude Column: **LAT**
+      - Latitude Column: **LAT**
 
          ![Page designer](images/lat-lon.png)
 
     - Under Tooltip:
 
-       - Advanced Formatting: Toggle **ON**
+        - Advanced Formatting: Toggle **ON**
 
-       - HTML Expression: Copy and paste the below expression
+        - HTML Expression: Copy and paste the below expression
 
          ```
           <copy>
@@ -220,7 +220,7 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
        - JavaScript Expression : **document**
 
-      ![Property Editor](images/action-open-map.png =60%x*))
+      ![Property Editor](images/action-open-map.png =60%x*)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
