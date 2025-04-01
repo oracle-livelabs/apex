@@ -215,7 +215,7 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
         - JavaScript Expression : **document**
 
-      ![Property Editor](images/action-open-map.png =40%x*)
+      ![Property Editor](images/action-open-map.png =35%x*)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
