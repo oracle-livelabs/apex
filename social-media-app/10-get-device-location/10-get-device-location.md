@@ -67,13 +67,13 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
          This query aggregates locations from both the POSTS and REACTIONS tables using an Oracle UNION query.
 
-      ![Page designer](images/update-region-s.png)
+   ![Page designer](images/update-region-s.png)
 
     - Appearance > Template : **Inline Dialog**
 
     - Advanced > Static ID : **map**  (The static ID will be used by our javascript to actually open the map region in the next task.)
 
-      ![Page designer](images/appearance.png)
+   ![Page designer](images/appearance.png)
 
 6. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
 
@@ -86,7 +86,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
         - Longitude Column: **LON**
         - Latitude Column: **LAT**
 
-         ![Page designer](images/lat-lon.png)
+   ![Page designer](images/lat-lon.png)
 
     - Under Tooltip:
         - Advanced Formatting: Toggle **ON**
@@ -99,7 +99,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
           </copy>
          ```
 
-         ![Page designer](images/tooltip-s.png)
+   ![Page designer](images/tooltip-s.png)
 
 7. Navigate to the Post and Likes Locations region. In the property editor, click Attributes tab and enter/select the following:
 
@@ -107,7 +107,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
     - Controls > Options: Check **Mousewheel zoom** option
 
-       ![Page designer](images/attributes.png)
+   ![Page designer](images/attributes.png)
 
 8. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 
@@ -190,7 +190,7 @@ In this task, we update our javascript on the page so that the Target you specif
             </copy>
             ```
 
-         ![Property Editor](images/js-expression.png)
+   ![Property Editor](images/js-expression.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
 In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**
@@ -215,7 +215,7 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
         - JavaScript Expression : **document**
 
-      ![Property Editor](images/action-open-map.png =35%x*)
+   ![Property Editor](images/action-open-map.png =35%x*)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
