@@ -54,19 +54,15 @@ In this lab, you will:
 
         - Javascript Expression: **document**
 
-        ![Property Editor](images/js-expression.png)
+        ![Property Editor](images/js-expression.png =50%x*)
 
 ## Task 2: Creating the True Actions for the Like Button
 
 To complete the **action-like** Dynamic Action, we need to configure the True Actions to perform two tasks:
 
-- Update the UI:
+- Update the UI: Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
 
-    - Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
-
-- Invoke the Database Action:
-
-    - Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
+- Invoke the Database Action: Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
 
 1. In the True action, enter/select the following:
 
