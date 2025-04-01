@@ -112,7 +112,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
    - Controls > Options: Check **Mousewheel zoom** option
 
-    ![Page designer](images/attributes.png)
+      ![Page designer](images/attributes.png)
 
 8. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 

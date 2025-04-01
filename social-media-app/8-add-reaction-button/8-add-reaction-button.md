@@ -174,7 +174,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
     ![Dynamic Actions tab](images/da-tab1.png)
 
-2. Right click **Custom** entry and select **Create Dynamic Action**.
+2. Right-click **Custom** entry and select **Create Dynamic Action**.
 
     ![Dynamic Actions tree](images/create-da-3.png)
 
