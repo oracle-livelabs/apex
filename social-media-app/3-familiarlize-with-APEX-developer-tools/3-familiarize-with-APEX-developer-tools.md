@@ -77,7 +77,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
     If you're unsure or need to restore the default layout, simply click the wrench button at the top right of Page Designer. Click **Layout** and select **Reset Layout**
 
-    ![Page designer settings](images/pd-reset.png =55%x*)
+    ![Page designer settings](images/pd-reset.png =50%x*)
 
 You may now **proceed to the next lab**.
 
