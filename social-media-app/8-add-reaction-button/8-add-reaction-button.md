@@ -232,12 +232,12 @@ There are actually 3 actions desired here:
 
     - Settings > PL/SQL Code: Copy and paste the following (which is a DML statement)
 
-            ```
-            <copy>
-            delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
-            delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
-            </copy>
-            ```
+        ```
+         <copy>
+         delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
+         delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+         </copy>
+        ```
 
         This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
