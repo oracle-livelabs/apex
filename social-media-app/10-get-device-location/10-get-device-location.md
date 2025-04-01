@@ -248,17 +248,17 @@ In this final task, we create another dynamic action to get the device location 
 3. In the Rendering Tree, under True action, select **Show**.
 In the Property Editor, enter/select the following:
 
-   - Identification > Action: **Get Current Position**
+    - Identification > Action: **Get Current Position**
 
-   - Under Settings:
+    - Under Settings:
 
-      - Return Type : **Latitude and Longitude**
+        - Return Type : **Latitude and Longitude**
 
-      - Latitude Item: **P1_LAT**
+        - Latitude Item: **P1_LAT**
 
-      - Longitude Item: **P1_LON**
+        - Longitude Item: **P1_LON**
 
-      ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
+   ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
 
 4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
 
