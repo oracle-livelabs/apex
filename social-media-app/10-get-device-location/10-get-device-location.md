@@ -220,17 +220,17 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
        - JavaScript Expression : **document**
 
-      ![Property Editor](images/action-open-map.png =60%x*)
+      ![Property Editor](images/action-open-map.png =40%x*)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
-    - Identification > Action: **Open Region**
+   - Identification > Action: **Open Region**
 
-    - Under Affected Elements:
+   - Under Affected Elements:
 
-       - Selection Type : **Region**
+      - Selection Type : **Region**
 
-       - Region : **Post and Like Locations**
+      - Region : **Post and Like Locations**
 
       ![Property Editor](images/open-region.png)
 
