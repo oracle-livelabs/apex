@@ -258,7 +258,7 @@ In the Property Editor, enter/select the following:
 
         - Longitude Item: **P1_LON**
 
-   ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
+      ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
 
 4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
 
