@@ -141,7 +141,7 @@ In this task, we will provide the APEX page with the custom javascript that will
     - Under Identification:
         - Name: **P1\_ACTION\_ID**
 
-    **Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.**
+    *Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.*
 
         - Type: **Hidden**
 
