@@ -40,7 +40,7 @@ Watch the video below for a quick walkthrough of the workshop.
 
 Total estimated time: 60 minutes
 
-**Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-region) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
+**Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-regions) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
 
 ### **Let's Get Started!**
 

@@ -228,6 +228,7 @@ In this task, we update our javascript on the page so that the Target you specif
     - Under Affected Elements:
 
       - Selection Type : **Region**
+
       - Region : **Post and Like Locations**
 
       ![Property Editor](images/open-region.png)

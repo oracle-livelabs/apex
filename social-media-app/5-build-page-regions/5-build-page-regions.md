@@ -42,18 +42,18 @@ In the Property Editor, enter/select the following:
     - Under Indentification:
 
         - Name: **Post**
+
         - Title: **Post**
+
         - Type:  **Form**
 
-    ![Form types select list](images/form-types.png "")
-
-4. Under Source, set the Table Name to **SM_POSTS**.
+    - Source > Table Name: **SM_POSTS**
 
     ![Page Designer view](images/form-source.png "")
 
     You will see that APEX has populated the available columns from our table as "fields" in the form (visible on the left in the tree view and in the layout view).
 
-5. Save and Run the app.
+4. Save and Run the app.
 
     ![The app homepage](images/run-app3.png "")
 
@@ -67,13 +67,13 @@ In the Property Editor, enter/select the following:
 
     - **P1\_FILE\_NAME**
 
-    - **P1\_CREATED\_BY**
-
     - **P1\_CREATED**
 
-    - **P1\_UPDATED\_BY**
+    - **P1\_CREATED\_BY**
 
     - **P1\_UPDATED**
+
+    - **P1\_UPDATED\_BY**
 
     ![Rendering tree with page items](images/page-items1.png "")
 
@@ -104,7 +104,7 @@ In the Property Editor, enter/select the following:
 
     ![Rendering tree](images/lat-lon.png "")
 
-    To keep things organized, drag **P1_LAT** and **P1_LON** under the already hidden P1_ID page item while they are still multi selected.
+    To keep things organized, drag **P1\_LAT** and **P1\_LON** under the already hidden P1_ID page item while they are still multi selected.
 
     ![Rendering tree](images/updated-tree.png "")
 
