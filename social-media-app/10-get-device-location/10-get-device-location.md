@@ -166,7 +166,7 @@ In this task, we update our javascript on the page so that the Target you specif
 
    ![Navigation Bar List page](images/edit-page.png)
 
-2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected.
+2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected
 
    - Under Javascript
       - Execute When Page Loads: Replace the script with the following code:
