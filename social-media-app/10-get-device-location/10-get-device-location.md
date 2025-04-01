@@ -152,7 +152,7 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
       - URL Target: **#action$open-map**
 
-    Click **Create List Entry**
+      Click **Create List Entry**
 
     ![Navigation Bar List page](images/create-entry.png)
 
@@ -208,9 +208,9 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
 5. In the Property Editor with **New** selected, enter/select the following:
 
-    - Identification > Name: **action-open-map**
+   - Identification > Name: **action-open-map**
 
-    - Under When:
+   - Under When:
 
        - Event : Custom
 
