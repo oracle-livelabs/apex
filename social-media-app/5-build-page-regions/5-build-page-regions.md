@@ -338,4 +338,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
 - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025
