@@ -168,32 +168,33 @@ In this task, we update our javascript on the page so that the Target you specif
 
 2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected.
 
-   - Javascript > Execute When Page Loads: Replace the script with the following code:
+   - Under Javascript
+      - Execute When Page Loads: Replace the script with the following code:
 
-      ```
-       <copy>
-         apex.actions.add([{
-            name: "like",
-            action: (event, element, args) => {
-               apex.items.P1_ACTION_ID.value = args.id;
-               apex.event.trigger(document, 'action-like');
-            }
-         }, {
-            name: "delete",
-            action: (event, element, args) => {
-               apex.items.P1_ACTION_ID.value = args.id;
-               apex.event.trigger(document, 'action-delete');
-            }
-         }, {
-            name: "open-map",
-            action: () => {
-               apex.event.trigger(document, 'action-open-map');
-            }
-         }]);
-       </copy>
-      ```
+         ```
+         <copy>
+            apex.actions.add([{
+               name: "like",
+               action: (event, element, args) => {
+                  apex.items.P1_ACTION_ID.value = args.id;
+                  apex.event.trigger(document, 'action-like');
+               }
+            }, {
+               name: "delete",
+               action: (event, element, args) => {
+                  apex.items.P1_ACTION_ID.value = args.id;
+                  apex.event.trigger(document, 'action-delete');
+               }
+            }, {
+               name: "open-map",
+               action: () => {
+                  apex.event.trigger(document, 'action-open-map');
+               }
+            }]);
+         </copy>
+         ```
 
-      ![Property Editor](images/js-expression.png)
+         ![Property Editor](images/js-expression.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
 In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**.
