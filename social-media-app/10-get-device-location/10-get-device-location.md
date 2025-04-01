@@ -28,7 +28,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 1. In the Layout section, scroll down to the bottom of the page, so that you can see the **Dialogs, Drawers and Popups** region.
 
-   ![Layout pane in Page Designer](images/layout-pane.pn =50%x*)
+   ![Layout pane in Page Designer](images/layout-pane.png =50%x*)
 
 2. Ensure that your component drawer is open below the layout section, and click **Regions** tab.
 
