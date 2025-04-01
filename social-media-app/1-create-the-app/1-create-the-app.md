@@ -67,11 +67,11 @@ Blueprint tab selected.
 
 2. To sign in to the application, use your workspace username and password.
 
-    ![Sign in page](images/sign-in.png "")
+    ![Sign in page](images/sign-in.png =45%x*)
 
 3. Now you see the very beginning of your app.
 
-    ![First outlook of the app](images/app-running.png "")
+    ![First outlook of the app](images/app-running.png =60%x*)
 
 ## Task 3: Observe the App
 
