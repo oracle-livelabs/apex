@@ -213,6 +213,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 5. Follow the next steps to configure the attributes:
 
     - Select the first entry > **New**, and enter the following in the Property Editor:
+
         - Identification > Name: **Open Post Dialog**
 
     ![Name the dynamic action](images/da-name.png)
@@ -246,6 +247,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
     - Layout > Slot: **Next**
 
     - Under Appearance:
+
         - Hot: **ON**
 
         - Template options:

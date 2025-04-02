@@ -96,7 +96,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 1. In the Rendering Tree, select the **Page 1: Timeline** entry and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2. Under the Javascript section, For: **Execute when Page Loads:**, enter the following javascript code:
+2. Under the Javascript section, For: **Execute when Page Loads**, enter the following javascript code:
 
     ```
      <copy>
