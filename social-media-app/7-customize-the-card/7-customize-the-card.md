@@ -155,7 +155,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 6. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
-    ![Running app](images/run-app-1.png =60%x*)
+    ![Running app](images/run-app-1.png =50%x*)
 
 You may now **proceed to the next lab**
 
