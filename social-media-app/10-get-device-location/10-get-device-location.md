@@ -71,7 +71,9 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
     - Appearance > Template : **Inline Dialog**
 
-    - Advanced > Static ID : **map**  (The static ID will be used by our javascript to actually open the map region in the next task.)
+    - Advanced > Static ID : **map**
+
+      (The static ID will be used by our javascript to actually open the map region in the next task.)
 
    ![Page designer](images/appearance.png)
 
