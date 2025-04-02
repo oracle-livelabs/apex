@@ -27,8 +27,11 @@ In this lab, you will:
     ![Page designer is seen](images/property-editor-nav.png "")
 
 2. In the Property Editor, select the following:
+
     - Under Navigation Menu:
+
         - Override User Interface Level: Toggle **ON**
+
         - List: **Do not show the Navigation Menu List**
 
     ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
