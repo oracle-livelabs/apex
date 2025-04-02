@@ -138,15 +138,14 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 4. In the Property Editor:
 
-    - Under Identification:
-        - Name: **P1\_ACTION\_ID**
+     - Under Identification:
+          - Name: **P1\_ACTION\_ID**
 
-     *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1_NEW**.*
+            *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1_NEW**.*
 
+          - Type: **Hidden**
 
-        - Type: **Hidden**
-
-    - Settings > Value Protected: **Toggle Off**
+     - Settings > Value Protected: **Toggle Off**
 
     ![Property Editor](images/value-protected1.png " ")
 
