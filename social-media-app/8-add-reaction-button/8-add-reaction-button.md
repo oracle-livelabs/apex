@@ -141,7 +141,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
     - Settings > Items to Submit : **P1\_ACTION_ID,P1\_LAT,P1\_LON**
 
-        ![Property Editor](images/item-to-submit.png =60%x*)
+        ![Property Editor](images/item-to-submit.png =40%x*)
 
 5. Now, we should be able to like our own post!
 
@@ -164,7 +164,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 ## Task 3: Create a Dynamic Action with a custom **action-delete** event
 
- **Note**: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.
+ *Note: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.*
 
 1. In the Rending treee, select **Dynamic Actions** tab.
 

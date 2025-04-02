@@ -46,7 +46,7 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
             </copy>
             ```
 
-            ![Property Editor](images/css.png)
+    ![Property Editor](images/css.png)
 
 ## Task 2: Clean up the File Browse Page Item
 
@@ -66,11 +66,11 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
 
             - General: check the **Stretch Form Item** option. (This improves the alignment.)
 
-    ![Template Options Dialog](images/stretch-form-s.png =50%x*)
+    ![Template Options Dialog](images/stretch-form-s.png =40%x*)
 
     - Layout > Label Column Span : **0**
 
-    ![Property Editor](images/layout-s.png =35%x*)
+    ![Property Editor](images/layout-s.png =30%x*)
 
 2. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 

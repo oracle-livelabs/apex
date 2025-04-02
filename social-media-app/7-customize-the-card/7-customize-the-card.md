@@ -120,7 +120,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     Open the Code Editor to see the entire script.
 
-    ![Property Editor](images/code-editor.png)
+    ![Property Editor](images/code-editor.png =50%x*)
 
     ![Code Editor](images/js-code-2.png)
 
