@@ -55,7 +55,7 @@ The **Like** button will show a heart icon along with the total number of likes.
 
     ![Property Editor](images/button-properties.png)
 
-        If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
+    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
 ## Task 2: Create a Delete Button
 
@@ -141,7 +141,8 @@ In this task, we will provide the APEX page with the custom javascript that will
     - Under Identification:
         - Name: **P1\_ACTION\_ID**
 
-    *Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.*
+     *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1_NEW**.*
+
 
         - Type: **Hidden**
 
