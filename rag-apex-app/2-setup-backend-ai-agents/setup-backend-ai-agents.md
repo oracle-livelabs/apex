@@ -81,8 +81,30 @@ Basic experience with OCI Cloud Console and standard components.
 
 ![Create Bucket button](./images/CreateAgent.png "")
 
-3. Enter a name, **'RAG-AI-AGENT'**, ensure you are in the correct compartment & click **'Next'**.
+3. Enter a name, **'RAG-AGENT'**, ensure you are in the correct compartment, optinally enter in a welcome message, & click **'Next'**.
 
+![Create Bucket button](./images/agent.png "")
+
+4. Click **Create Tool**.
+
+![Create Bucket button](./images/click.png "")
+
+5. Select **RAG**. 
+
+![Create Bucket button](./images/rag.png "")
+
+6. Enter a name, **RAGLL**, description, and add the RAG-KB knowledge base you created earlier. After this, select **Create tool**.
+
+![Create Bucket button](./images/toolcreate.png "")   
+
+7. Setup agent endpoint. Make sure **Automatically create an endpoint for this agent** is checked. For the purposes of this LiveLab, leave all Guardrails disabled. Select **Next**.
+
+ ![Create Bucket button](./images/endpoint.png "") 
+
+ 8. Review your agent information and click **Create agent**. You can now proceed to the next task.
+
+     ![Create Bucket button](./images/ffinishagent.png "") 
+   
 ## Task 4: Generate API Keys
 
 1. Navigate to your profile icon on the right-hand side of the screen. Select **'User Settings'**. 
@@ -93,9 +115,10 @@ Basic experience with OCI Cloud Console and standard components.
 
    ![Create Bucket button](./images/API.png "")
 
-3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**.
+3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**. You will see a confifuration file preview, you can close this. You may proceed to the next lab. 
 
       ![Create Bucket button](./images/gen.png "")
+
 
 ## Acknowledgements
 
