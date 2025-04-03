@@ -43,7 +43,9 @@ The **Like** button will show a heart icon along with the total number of likes.
 
             We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
 
-        - Target > URL: **#action$like?id=&ID.** (including the period), and click **OK**.
+        - Target > URL: **#action$like?id=&ID.** (including the period)
+
+            Click **OK**.
 
     ![Redirect URL](images/redirect_like.png =50%x*)
 
@@ -76,7 +78,9 @@ Similar to the previous task, we will create another button for deleting posts. 
     - Under Link:
         - Type: **Redirect to URL**
 
-        - Target > URL: **#action$delete?id=&ID.** and click **OK**.
+        - Target > URL: **#action$delete?id=&ID.**
+
+        Click **OK**.
 
     ![Redirect URL](images/redirect_url.png =50%x*)
 
