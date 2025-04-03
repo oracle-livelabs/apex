@@ -70,7 +70,7 @@ In this lab, you will:
 
     ![Property Editor](images/title-type1.png)
 
-    ![Property Editor](images/sql_query.png =50%x*)
+    ![Property Editor](images/sql_query.png =40%x*)
 
     - Appearance > CSS Classes box: **t-Chat**
 

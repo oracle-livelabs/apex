@@ -328,7 +328,7 @@ page with a process for the Form:
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
-4. However, you can save and run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
+4. However, you can **save and run** the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
 
     ![Running app](images/run-app-31.png)
 
