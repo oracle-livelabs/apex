@@ -66,7 +66,7 @@ In this lab, you will:
             order by p.created desc
            </copy>
           ```
-
+        Click **OK**
     ![Property Editor](images/title-type1.png)
 
     ![Property Editor](images/sql_query.png =50%x*)
