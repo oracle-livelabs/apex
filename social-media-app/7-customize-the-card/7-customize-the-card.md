@@ -45,6 +45,8 @@ The **Like** button will show a heart icon along with the total number of likes.
 
         - Target > URL: **#action$like?id=&ID.** (including the period), and click **OK**.
 
+    ![Redirect URL](images/redirect_like.png =50%x*)
+
     - Under Appearance:
 
         - Display Type: **Text with Icon**
@@ -54,8 +56,6 @@ The **Like** button will show a heart icon along with the total number of likes.
         - CSS Classes : **js-heart-button**
 
     ![Property Editor](images/button-properties.png)
-
-    ![Redirect URL](images/redirect_like.png =50%x*)
 
 4. **Save** the app.
 
@@ -78,7 +78,9 @@ Similar to the previous task, we will create another button for deleting posts. 
     - Under Link:
         - Type: **Redirect to URL**
 
-        - Target > URL: **#action$delete?id=&ID.**
+        - Target > URL: **#action$delete?id=&ID.** and click **OK**.
+
+    ![Redirect URL](images/redirect_url.png =50%x*)
 
     - Under Appearance:
 
