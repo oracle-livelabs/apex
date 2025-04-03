@@ -8,8 +8,10 @@ Estimated time - 20 minutes
 
 ### Objectives
 
-* Create the Application on APEX
+* Provision a 23ai ADB and APEX App
 * Update the Credentials to Connect to OCI Resources
+* Create the Application
+* Connect Rest Sources
 * Build the Question Panel
 * Build the Chat Panel
 * Test the application
@@ -19,7 +21,7 @@ Estimated time - 20 minutes
 * An OCI cloud account
 * Subscription to US-Central Chicago Region
 
-## Task 1: Provision a 23ai ADB and Object Storage Bucket
+## Task 1: Provision a 23ai ADB and APEX App
 
 1. Navitage to the OCI home console and expand the side-menu bar.
 
@@ -39,24 +41,83 @@ Estimated time - 20 minutes
 
 	![Choose database version dropdown](./images/choose-23ai.png "")
 
-5. Navigate to **Object Storage** by selecting the side-menu button, click **Storage** and then, **Buckets**.
+5. Navigate to the newly created ADB by selecting the name that you provided, then click the **Tool Configuration** tab and select the Public Access URL **Copy** button for Oracle APEX. Paste that in a new tab.
 
-	![Navigation menu to object storage buckets](./images/nav-buckets.png  "")
+	![Copy URL for APEX app](./images/open-apex.png "")
 
-6. Select **Create Bucket**, name the nucket **RAG**, and leave everything else as default. Select Create
+6. Enter your password used during the creation of the ADB and click **Sign in to Administration**.
 
-	![Create Bucket button](./images/create-bucket.png "")
+	![Signin to Admin Portal](./images/access-admin.png "")
 
-7. Navigate to the newly created bucket by selecting from the list the name **RAG**. Scroll down on the bucket page and select **Upload**. Download the sample PDF [here](https://orasenatdpltsecitom03.objectstorage.us-phoenix-1.oci.customer-oci.com/p/ZtYD0BzBps8w3O2sYzLvnync2uSXfZk9SHSHdpaZAMnlxIVpVAEiGY4wmMKSZVEE/n/orasenatdpltsecitom03/b/RAG/o/OCI%20Dedicated%20Region%20At-A-Glance.pdf) and then, drag and drop the sample PDF to the console and select **Upload**.
+7. Create a new workspace by clicking **Create Workspace**.
 
-	![Create Bucket button](./images/upload-pdf.png "")
+	![Create workspace button](./images/create-workspace.png "")
 
+8. Create a new schema by clicking the **New Schema** button.
 
-1. Create an application by selecting the **create** button.
+	![New Schema button](./images/new-schema.png "")
 
-  ![create button on console](./images/create-app.png "")
+9. Enter the following credentials and click **Create Workspace**.
+	* **Workspace Name:** *RAG*
+	* **Workspace Username:** *RAG*
+	* **Workspace Password:** *Welcome2Oracle* (or choose a secure password that you will remember)
 
-2. 
+	![Create Credentials for Workspace](./images/workspace-creds.png "")
+
+10. Sign out of the admin management by selecting the profile button on the top right and click **Sign out**
+
+	![Sign out of admin console](./images/sign-out-admin.png "")
+
+11. Click **Return to Sign in Page** 
+
+	![Return to sign in page button](./images/return-sign-in.png "")
+
+12. Sign in using the new credentials:
+	* **Workspace Name:** *RAG*
+	* **Workspace Username:** *RAG*
+	* **Workspace Password:** *Welcome2Oracle* (or whichever password you chose to remember)
+
+	![Sign in workspace credentials](./images/sign-in-workspace.png "")
+
+## Task 2: Update the Credentials to Connect to OCI Resources
+
+1. Click **App Builder** to access the Web Credentials.
+
+	![App Builder Button](./images/app-builder.png "")
+
+2. Click the **Workspace Utilities** button.
+
+	![Workspace Utilities button](./images/workspace-utilities.png "")
+
+3. Click the **Web Credentials** button.
+
+	![Web Credentials Button](./images/web-credentials.png)
+
+4. Click **Create** to update your web credentials.
+
+	![Web Credentials Create button](./images/create-web-credentials.png "")
+
+5. Paste the information collected in the first lab into the cooresponding fields (be sure to name the credentials and static ID: **api_key**) and select **Create**.
+
+	![api_key credentials for oci access](./images/save-api-key-creds.png "")
+
+## Task 3: Create the Application
+
+1. Navigate back to the App Builder by selecting the menu button **App Builder**.
+
+	![App Builder Button](./images/nav-app-builder.png "")
+
+2.
+
+14. Create an application by selecting the **create** button.
+
+	![create button on console](./images/create-app.png "")
+
+15. Name the App **RAG Chatbot** and click **Create Application**.
+
+	![Naming of the App](./images/name-app.png "")
+
+16. 
 
 ## Task 2: 
 
