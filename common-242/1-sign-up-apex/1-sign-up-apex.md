@@ -308,7 +308,7 @@ At this point, you know how to create an APEX Workspace and you are ready to sta
 
 You may now proceed to the next lab.
 
-## **Acknowledgements**
+## Acknowledgements
 
 - **Author(s)** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025

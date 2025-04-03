@@ -144,7 +144,7 @@ Estimated Time: 20 minutes
 
     ![Configure Actions Source for Invoice Request](./images/set-invoice-sql-query.png " ")
 
-    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
+    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the appointment id)._
 
 5. Now, navigate to **Participants**, and enter/select the following:
 
@@ -212,7 +212,7 @@ You get a popup dialog asking if the next available page number should be used. 
 
     ![Configure Actions Source for Feedback Request](./images/set-feedback-sql-query1.png " ")
 
-    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the doctor's employee number)._
+    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the appointment id)._
 
 5. Navigate to **Participants**, and enter/select the following values:
 

@@ -4,7 +4,7 @@
 
 In the previous labs, you went through detailed steps to configure and use Generative AI in a Highschool Application that will enable parents to choose the best highschool for their child. Now, it is finally time to see the completed app in action.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 5 minutes
 
@@ -40,7 +40,7 @@ In this lab, you will:
     The search narrows down to 15 schools.
     ![Maps tab in the running app](images/map.png ' ')
 
-3. Switch to the Cards tab again. For the **Manhattan Center for Science and Mathematics** school, click **Learn More (i)icon**. An AI Assistant Chat Interface dialog is displayed.
+3. Switch to the Cards tab again. For the **Manhattan Center for Science and Mathematics** school, click **Learn More (i)** icon. An AI Assistant Chat Interface dialog is displayed.
 
     ![search schools tab](images/learn-more.png ' ')
 

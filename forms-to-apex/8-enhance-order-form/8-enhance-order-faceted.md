@@ -61,7 +61,43 @@ In this lab, you will:
 
     ![App Builder](images/payment-type-lov.png " ")
 
-5. To organize the items, drag and drop them like in the screenshot below and click **Save**.
+5. Select **P6\_CUSTOMER\_ID** and enter/select the following:
+
+    - Identification > Type: **Select List**
+
+    - Label > Label: **Customer**
+
+    - Under List of Values:
+
+        - Type: **Shared Component**
+
+        - List of Values: **S\_CUSTOMER.NAME**
+
+        - Null Display Value: **- Select a customer -**
+
+    ![App Builder](images/customer-id.png " ")
+
+
+6. Select **P6\_SALES\_REP\_ID** and enter/select the following:
+
+    - Identification > Type: **Popup LOV**
+
+    - Label > Label: **Sales Rep**
+
+    - Under List of Values:
+
+        - Type: **Shared Component**
+
+        - List of Values: **SALES\_REP\_LOV**
+
+        - Display Extra Values attribute: **Toggle Off**
+
+        - Null Display Value: **- Select a Sales Rep -**
+
+    ![App Builder](images/sales-rep-id.png " ")
+
+
+7. To organize the items, drag and drop them like in the screenshot below and click **Save**.
 
     ![App Builder](images/payment-type-save.png " ")
 
@@ -257,7 +293,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
 2. Click **Actions**. Select **Data > Compute**.
 
-    ![App Builder](images/compute1.png " ")
+    ![App Builder](images/updated-compute.png " ")
 
 3. Enter/select the following:
 
@@ -269,7 +305,7 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/compute-apply1.png " ")
+    ![App Builder](images/updated-compute-item-total.png " ")
 
 4. Click **Actions** menu. Select **Data > Aggregate**
 
@@ -279,11 +315,11 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/aggregate.png " ")
+    ![App Builder](images/updated-aggregate.png " ")
 
-    ![App Builder](images/sum-total.png " ")
+    ![App Builder](images/updated-aggregate-sum.png " ")
 
-    ![App Builder](images/item-total.png " ")
+    ![App Builder](images/updated-aggregate-after.png " ")
 
 5. Click **Actions** menu. Select **Report > Save Report**
 
@@ -293,11 +329,11 @@ Hold the ctrl key while you click **ORD\_ID** and **ITEM\_ID** and change the ty
 
     Click **Apply**.
 
-    ![App Builder](images/save-report-item.png " ")
+    ![App Builder](images/updated-save-report.png " ")
 
-    ![App Builder](images/apply-save.png " ")
+    ![App Builder](images/updated-default-report.png " ")
 
-    ![App Builder](images/primary-apply.png " ")
+    ![App Builder](images/updated-primary-report.png " ")
 
 ## Summary
 
