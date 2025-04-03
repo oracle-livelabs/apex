@@ -65,6 +65,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. Select the Object Storage bucket you created earlier, **'RAG'**, and check **'Select all in bucket'**. Click **'Create'**.
 
+![Create Bucket button](./images/SpecifyDataSourceKB.png "")
    
 
 ## Task 4: Create your Gen AI Agent: 
