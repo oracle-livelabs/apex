@@ -35,13 +35,13 @@ In this lab, you will:
 
 4. In the application, check the bottom of the page for the APEX Developer Toolbar.
 
-    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "")
+    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "" =50%x*)
 
     **Note**: The application end users will not see this bar. The developer tool bar is only visible to you because you are already logged into the APEX builder in another tab. The toolbar consists of quick links to features of APEX that we will continue to use for our development.
 
 5. Click **Page 1**. This navigates back to the APEX Page Designer, where you can begin making changes to the page.
 
-    ![Buttons on the developer toolbar](images/edit-page1.png "")
+    ![Buttons on the developer toolbar](images/edit-page1.png "" =50%x*)
 
 ## Task 2: Get acquainted with APEX Page Designer
 
