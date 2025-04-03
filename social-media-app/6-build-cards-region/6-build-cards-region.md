@@ -76,6 +76,8 @@ In this lab, you will:
 
     - Advanced > Static ID: **timeline**
 
+    **Save** the app.
+
     ![Property editor](images/appearance1.png)
 
     Next, we need to configure which columns from the query results will be used in different parts of the CARDS region.
