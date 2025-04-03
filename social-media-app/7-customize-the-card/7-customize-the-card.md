@@ -55,11 +55,9 @@ The **Like** button will show a heart icon along with the total number of likes.
 
         - CSS Classes : **js-heart-button**
 
+    **Save** the app.
+
     ![Property Editor](images/button-properties.png)
-
-4. **Save** the app.
-
-    ![Property Editor](images/save_app.png "")
 
     If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
@@ -92,15 +90,13 @@ Similar to the previous task, we will create another button for deleting posts. 
 
         - Type: **Expression**
 
-        - PL/SQL expression: **:USER\_NAME=:APP\_USER**
+        - PL/SQL expression: **trim(:user\_name)=trim(:APP\_USER)**
 
         This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
 
+    Click **Save**.
+
     ![Property Editor](images/button-action1.png)
-
-3. **Save** the app.
-
-    ![Property Editor](images/save_app.png "")
 
 ## Task 3: Add Javascript to the Page for the Card Buttons
 
