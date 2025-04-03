@@ -130,9 +130,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     Open the Code Editor to see the entire script.
 
-    ![Property Editor](images/code-editor.png =50%x*)
-
-    ![Code Editor](images/js-code-2.png)
+    ![Code Editor](images/js-code-2.png =60%x*)
 
     Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created yet.
 
@@ -151,7 +149,7 @@ In this task, we will provide the APEX page with the custom javascript that will
      - Under Identification:
           - Name: **P1\_ACTION\_ID**
 
-            *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1_NEW**.*
+            *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1\_NEW**.*
 
           - Type: **Hidden**
 

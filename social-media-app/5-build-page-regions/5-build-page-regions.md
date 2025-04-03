@@ -36,8 +36,7 @@ In this lab, you will:
 
     ![Rendering Tree options are displayed](images/create-region1.png "")
 
-3. You will see a new region in the Rendering Tree, which will also appear in the **Layout** section (middle panel).
-In the Property Editor, enter/select the following:
+3. In the Property Editor, enter/select the following:
 
     - Under Indentification:
 
@@ -81,7 +80,7 @@ In the Property Editor, enter/select the following:
 
     ![Rendering tree with page items](images/delete-page-items.png "")
 
-    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, *right click* on the **Post** region and select Synchronize Page Items. Then, carefully delete the items that are not needed.
+    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, **right click** on the **Post** region and select **Synchronize Page Items**. Then, carefully delete the items that are not needed.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 

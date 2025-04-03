@@ -103,7 +103,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
    ![Page designer](images/tooltip-s.png)
 
-7. Navigate to the Post and Likes Locations region. In the property editor, click Attributes tab and enter/select the following:
+7. Navigate to the **Post and Likes Locations** region. In the property editor, click **Attributes** tab and enter/select the following:
 
     - Map > Height: **300** pixels
 

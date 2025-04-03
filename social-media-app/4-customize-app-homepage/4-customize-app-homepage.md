@@ -70,7 +70,7 @@ In this task, you will learn how to download and import a starter app. If you fo
 
     ![App builder homepage](images/import.png)
 
-3. Drag and drop the Starter app zip file downloaded in **Point 1** and click Next.
+3. Drag and drop the Starter app zip file downloaded in **Point 1**. Click Next.
 
     ![Import dialog](images/drag-and-drop.png)
 
