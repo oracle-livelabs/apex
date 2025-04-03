@@ -1,0 +1,96 @@
+{
+  "workshoptitle": "Build your own Online Bookstore App with Oracle APEX",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../0-introduction/0-introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+          "title": "Lab 1: Create an APEX Application",
+        "filename": "../../1-create-app/create-app.md"
+      },
+      {
+        "title": "Lab 2: Load Data Using Data Workshop ",
+        "filename": "../../2-load-data-using-data-workshop/2-load-data-using-data-workshop.md"
+      },
+      {
+        "title": "Lab 3: Enhance the Home Page",
+        "filename": "../../3-enhance-home-page/3-enhance-home-page.md"
+      },
+      {
+        "title": "Lab 4: Customize Application Theme",
+        "filename": "../../4-application-theme/4-application-theme.md"
+      },
+      {
+        "title": "Lab 5: Create Custom Authentication",
+        "filename": "../../5-authentication/5-authentication.md"
+      },
+      {
+        "title": "Lab 6: Set Up Add to Cart Functionality",
+        "filename": "../../6-add-to-cart/6-add-to-cart.md"
+      },
+      {
+        "title": "Lab 7: Create and Manage a Shopping Cart",
+        "filename": "../../7-create-shop-cart/7-create-shop-cart.md"
+      },
+      {
+        "title": "Lab 8: Build an AI-Assistant Chat Widget",
+        "filename": "../../8-build-an-ai-assistant-chat-widget/8-build-an-ai-assistant-chat-widget.md"
+      },
+      {
+        "title": "Lab 9: Create and Manage Wishlist Functionality",
+        "filename": "../../9-wishlist/9-wishlist.md"
+      },
+      {
+        "title": "Lab 10: Create and Manage User Profile Pages",
+        "filename": "../../10-add-user/10-add-user.md"
+      },
+      {
+        "title": "Lab 11: Create and Manage Administration",
+        "filename": "../../11-admin-page/11-admin-page.md"
+      },
+      {
+        "title": "Lab 12: Improve User Onboarding",
+        "filename": "../../12-onboarding/12-onboarding.md"
+      },
+      {
+        "title": "Lab 13: Configure Push Notification",
+        "filename": "../../13-push-notification/13-push-notification.md"
+      },
+      {
+        "title": "Lab 14: Integrate AI Vision to Enhance Book Search",
+        "filename": "../../14-ai-vision/14-ai-vision.md"
+      },
+      {
+        "title": "Lab 15: Integrate Razorpay Payment Gateway",
+        "filename": "../../15-razorpay-payement-integration/15-razorpay-payement-integration.md"
+      },
+      {
+        "title": "Lab 16: Enhance the UI",
+        "filename": "../../16-additional-ui-enhancements/16-additional-ui-enhancements.md"
+      },
+      {
+        "title": "Lab 17: Enhance AI Assistant",
+        "filename": "../../17-enhance-ai-assistant/17-enhance-ai-assistant.md"
+      },
+      {
+        "title": "Lab 18: [OPTIONAL] Implement Vector Search using Search Configurations",
+        "filename": "../../18-vector-search-configurations/18-vector-search-configurations.md"
+      },
+      {
+        "title": "Lab Appendix: Download Instructions",
+        "filename": "../../download-instructions/download-instructions.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}
+
+

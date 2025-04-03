@@ -52,24 +52,24 @@ Estimated Time: 15 minutes
 
     !["third prompt"](images/prompt3.png "")
 
-9.  Finally, set the Project Dashboard Page as a Cards region and click **Create Application**.
+8.  Finally, set the Project Dashboard Page as a Cards region and click **Create Application**.
 
-    >Prompt 6:
+    >Prompt 4:
     >Set the Task Overview page as an Interactive Report with a Form
 
     !["sixth prompt"](images/prompt4.png "")
 
 > **Note:** _The pages might differ based on the prompt. Make sure that you have **Project Dashboard page defined as Cards Region**, **Project Tasks to-dos, and Links pages created as Interactive report with a Form** by giving appropriate prompts_
 
-10. On the Create an Application page, click **Appearance** Icon.
+10.  On the Create an Application page, click **Appearance** Icon.
 
     ![select appearance](images/click-appearance.png " ")
 
-11. In the Appearance Wizard, select **Redwood Light** and then click **Save Changes**.
+11.  In the Appearance Wizard, select **Redwood Light** and then click **Save Changes**.
 
     ![select redwood light theme](images/select-redwood-light.png " ")
 
-12. Make sure that the **Progressive Web App** and **Feedback features** are enabled. Then, click **Create Application**.
+12.  Make sure that the **Progressive Web App** and **Feedback features** are enabled. Then, click **Create Application**.
 
     ![click create application](images/click-create-applciation.png " ")
 

@@ -2,15 +2,15 @@
 
 ## About this Workshop
 
-In this workshop, you create a Social Media Application where you can POST pictures, LIKE your friends' pictures and DELETE your pictures if required. You can download the app on your mobile just like other social media apps. This workshop will give you a great exposure to what a developer can do with Oracle  APEX using Low-Code and relatively simple approaches!
+In this workshop, you will learn how to create a Social Media Application where you can POST pictures, LIKE your friends' pictures, and DELETE your own pictures when needed. You can download the app to your mobile device, just like other social media apps. This workshop will provide you with great exposure to what a developer can achieve with Oracle APEX using low-code and relatively simple approaches!
 
-When the users log into the app, they can post pictures by selecting and uploading from their local device along with adding a comment. The users can also scroll and see what their friends have posted, LIKE their pictures and keep count of the number of LIKES on each picture.
+When users log into the app, they can upload pictures from their local device and add comments. Users can also scroll through their feed to see what their friends have posted, LIKE their pictures, and track the number of LIKES on each post.
 
-Although the end result is a simple app to get started, you can continue to expand it's features by implementing Push Notifications, adding comments on friends' pictures and so on.
+While the initial version of the app is simple and meant to help you get started, you can easily add more features, such as push notifications, the ability to comment on friends' pictures, and more.
 
 Estimated Workshop Time: 60 minutes
 
-Watch the video below for a quick walk-through of the workshop.
+Watch the video below for a quick walkthrough of the workshop.
 [Create an APEX App](videohub:1_zeopb0u9)
 
 ### Objectives
@@ -19,45 +19,46 @@ Watch the video below for a quick walk-through of the workshop.
 * Build your first app in APEX
 * Build a Cards Region
 * Customize the App using Dynamic Actions and custom CSS
-* Add Maps region, get device location, and install PWA
+* Add a Maps region, retrieve device location, and install as a PWA (Progressive Web App)
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.*
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ### Labs
 
 | Module                                                                         | Est. Time  |
 | ------------------------------------------------------------------------------ | ---------- |
-| [Create an App](?lab=1-create-the-app)                                         | 5 minutes  |
-| [Build the Data Model](?lab=2-build-data-model)                                | 5 minutes  |
-| [Get Familiar with the APEX Developer Tools](?lab=3-familiarize-with-devtools) | 5 minutes  |
+| [Create an APEX App](?lab=1-create-the-app)                                         | 5 minutes  |
+| [Build the Data Model](?lab=2-build-the-data-model)                                | 5 minutes  |
+| [Get Familiar with the APEX Developer Tools](?lab=3-familiarize-with-APEX-developer-tools) | 5 minutes  |
 | [Customize the App Homepage](?lab=4-customize-app-homepage)                    | 5 minutes  |
-| [Build the Page Regions](?lab=5-build-page-region)                             | 15 minutes |
+| [Build the Page Regions](?lab=5-build-page-regions)                             | 15 minutes |
 | [Build the Cards Region](?lab=6-build-cards-region)                            | 10 minutes |
 | [Create Action Buttons](?lab=7-customize-the-card)                             | 5 minutes  |
 | [Add Dynamic Actions](?lab=8-add-reaction-button)                              | 5 minutes  |
-| [Clean Up the App](?lab=9-clean-up-the-app)                                    | 5 minutes  |
-| [(OPTIONAL) Create a Map Region](?lab=11-get-device-location)                  | 5 minutes  |
+| [(Optional) Clean Up the App](?lab=9-clean-up-the-app)                                    | 5 minutes  |
+| [(Optional) Create a Map Region](?lab=10-get-device-location)                  | 5 minutes  |
+
 Total estimated time: 60 minutes
 
 **Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-region) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
 
 ### **Let's Get Started!**
 
-If the menu is not displayed, you can open by clicking the menu button (![Menu icon](images/menu-button.png)) at the upper-left corner of the page.
+If the menu is not visible, you can open it by clicking the menu button (![Menu icon](images/menu-button.png)) in the upper-left corner of the page.
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
+Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
 
 ## Learn More
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2024
+* **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025

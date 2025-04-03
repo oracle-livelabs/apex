@@ -4,6 +4,8 @@
 
 In this hands-on lab, you will enhance your Oracle APEX applications by adding new pages, such as Calendars, Charts, Tree Pages, and Maps. These additions will bring dynamic functionality to your applications, enabling better data visualization and interactivity. By working on the Demo Projects and Online Shopping applications, you will gain practical experience in designing and customizing essential application components.
 
+Estimated Time: 15 minutes
+
 ### Objectives
 
 By the end of this lab, you will be able to:
@@ -18,7 +20,11 @@ By the end of this lab, you will be able to:
 
 - Implement a Map Page to display geographical data.
 
-Estimated Time: 15 minutes
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
+
+- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol14.sql)**
 
 ## Task 1: Create a Calendar
 

@@ -110,7 +110,7 @@ This has been addressed now. Try the following steps:
 
 ## Task 3: Resume Workflow at any Activity
 
-When a workflow is suspended and eventually variables are modified, the workflow can be resumed at any activity in the workflow, not just the current activity
+Let’s say a hospital is using the Doctor Appointments Made Easy! application to manage patient appointments. A patient named Rajesh has already received verbal approval for his appointment before the workflow was submitted. However, the system doesn’t recognize this verbal approval, and the workflow is currently waiting for Dr. Anachatt to approve it.
 
 1. Go to **Doctor Appointments Made Easy!** application page, click **10 - Form on Appointment**.
 
@@ -207,4 +207,4 @@ In this lab, you learned to display the Workflow Instance ID in debug messages t
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, March 2025
