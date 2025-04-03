@@ -65,8 +65,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. Select the Object Storage bucket you created earlier, **'RAG'**, and check **'Select all in bucket'**. Click **'Create'**.
 
-![Create Bucket button](./images/SpecifyDataSourceKB.png "")
-   
+![Create Bucket button](./images/DSKB.png "")
+
+5. Ensure your knowledge base is active before proceeding to Task 4.
+
+![Create Bucket button](./images/active.png "")
 
 ## Task 4: Create your Gen AI Agent: 
 
@@ -74,7 +77,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 ![Create Bucket button](./images/NavigateAIAgent.png "")
 
-2. Create your AI Agent Agent. Enter a name, **'RAG-AI-AGENT'**, ensure you are in the correct compartment & click **'Next'**.
+2. On the landing page for **Generative AI Agents** click the **Create Agent** button.
+
+![Create Bucket button](./images/CreateAgent.png "")
+
+3. Enter a name, **'RAG-AI-AGENT'**, ensure you are in the correct compartment & click **'Next'**.
 
 ## Task 4: Generate API Keys
 
