@@ -57,7 +57,7 @@ The **Like** button will show a heart icon along with the total number of likes.
 
         - CSS Classes : **js-heart-button**
 
-    **Save** the app.
+    Click **Save**.
 
     ![Property Editor](images/button-properties.png)
 
