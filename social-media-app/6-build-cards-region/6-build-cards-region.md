@@ -67,6 +67,7 @@ In this lab, you will:
            </copy>
           ```
         Click **OK**
+
     ![Property Editor](images/title-type1.png)
 
     ![Property Editor](images/sql_query.png =50%x*)
