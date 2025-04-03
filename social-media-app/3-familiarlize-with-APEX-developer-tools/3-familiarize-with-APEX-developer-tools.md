@@ -35,13 +35,13 @@ In this lab, you will:
 
 4. In the application, check the bottom of the page for the APEX Developer Toolbar.
 
-    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "" =50%x*)
+    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png =50%x*)
 
     **Note**: The application end users will not see this bar. The developer tool bar is only visible to you because you are already logged into the APEX builder in another tab. The toolbar consists of quick links to features of APEX that we will continue to use for our development.
 
 5. Click **Page 1**. This navigates back to the APEX Page Designer, where you can begin making changes to the page.
 
-    ![Buttons on the developer toolbar](images/edit-page1.png "" =50%x*)
+    ![Buttons on the developer toolbar](images/edit-page1.png =50%x*)
 
 ## Task 2: Get acquainted with APEX Page Designer
 
@@ -57,7 +57,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
 2. The middle section is itself divided into two sections:
 
-    ![The layout and gallery pane is displayed](images/pd-middle.png =50%x*)
+    ![The layout and gallery pane is displayed](images/pd-middle.png =40%x*)
 
     The top section is the page **Layout** tab, it also has other tabs within: **Page Search** and **Help**.
 
@@ -73,7 +73,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
     **Before we continue, take a moment to practice adjusting the size of your sections, but keep them all expanded.**
 
-    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png =70%x*))
+    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png =70%x*)
 
     If you're unsure or need to restore the default layout, simply click the wrench button at the top right of Page Designer. Click **Layout** and select **Reset Layout**
 
