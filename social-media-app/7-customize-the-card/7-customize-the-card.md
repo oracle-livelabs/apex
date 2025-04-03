@@ -55,13 +55,13 @@ The **Like** button will show a heart icon along with the total number of likes.
 
     ![Property Editor](images/button-properties.png)
 
-    ![Property Editor](images/redirect_url.png =50%x*)
-
-    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
+    ![Redirect URL](images/redirect_like.png =50%x*)
 
 4. **Save** the app.
 
     ![Property Editor](images/save_app.png "")
+
+    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
 ## Task 2: Create a Delete Button
 
