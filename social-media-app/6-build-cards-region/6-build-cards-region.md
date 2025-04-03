@@ -38,7 +38,7 @@ In this lab, you will:
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and Paste the below code in the Code Editor:
 
           ```
            <copy>
@@ -68,6 +68,8 @@ In this lab, you will:
           ```
 
     ![Property Editor](images/title-type1.png)
+
+    ![Property Editor](images/sql_query.png =50%x*)
 
     - Appearance > CSS Classes box: **t-Chat**
 

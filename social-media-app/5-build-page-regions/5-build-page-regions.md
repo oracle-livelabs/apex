@@ -236,7 +236,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 ## Task 5: Create a Save Button
 
-1. We now need a button for the user to *actually SAVE the post* they make. To do this, in the Rendering tree, right click on the **Body > Post** region in the tree, and click **Create Button**
+1. We now need a button for the user to *actually SAVE the post* they make. To do this, in the Rendering tree, right click on the **Dialogs, Drawers and Popups > Post** region in the tree, and click **Create Button**
 
     ![Create button option in rendering tree](images/create-button-21.png)
 
@@ -276,8 +276,6 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 4. In the property editor, enter/select the following
 
     - Identification > Name: **Submit post**
-
-### OPTIONAL STEP (5)
 
 5. To prevent users from posting blank rows, enter/select the following
 
