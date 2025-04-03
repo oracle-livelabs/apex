@@ -67,17 +67,17 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
 3. The third section on the right is called the **Property Editor** and displays the declarative features of the selected page component. The title of the first tab within will be the name of the component that you have selected, be it of type **Page** or **Region** and so forth. In addition, depending on what is selected, another tab titled **Attributes** might be available with more component specific declarative options. In this case, the top-most tree entry, **Page 1: Timeline** is selected, and the Property Editor displays the **Page** related declarative features:
 
-    ![The property editor is displayed](images/pd-right.png =30%x*)
+    ![The property editor is displayed](images/pd-right.png =20%x*)
 
    **Note**: Some tabs may have scroll bars, allowing you to scroll down or across to access additional options.
 
     **Before we continue, take a moment to practice adjusting the size of your sections, but keep them all expanded.**
 
-    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png "")
+    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png =70%x*))
 
     If you're unsure or need to restore the default layout, simply click the wrench button at the top right of Page Designer. Click **Layout** and select **Reset Layout**
 
-    ![Page designer settings](images/pd-reset.png =45%x*)
+    ![Page designer settings](images/pd-reset.png =40%x*)
 
 You may now **proceed to the next lab**.
 
