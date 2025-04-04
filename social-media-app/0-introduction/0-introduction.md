@@ -56,8 +56,6 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-4. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**.
-
 5. All set. Now, run the application and see it in action! Follow Task 2 of Lab: [Create an Application](?lab=1-create-the-app) to run the app.
 
 ## Learn More
