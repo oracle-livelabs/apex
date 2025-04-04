@@ -52,7 +52,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL_COMPLETED.zip) to download the completed application zip file.
 
-2. Import the **APEX_Social_Media_HOL_FINAL_COMPLETED.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+2. Import the **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file into your workspace. To import the app, go to **App Builder > Import**.
 
 3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
