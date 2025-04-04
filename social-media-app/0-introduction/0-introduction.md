@@ -46,9 +46,19 @@ Total estimated time: 60 minutes
 
 If the menu is not visible, you can open it by clicking the menu button (![Menu icon](images/menu-button.png)) in the upper-left corner of the page.
 
-### Downloads
+## Downloads
 
-Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL_COMPLETED.zip) to download the completed application.
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL_COMPLETED.zip) to download the completed application zip file.
+
+2. Import the **APEX_Social_Media_HOL_FINAL_COMPLETED.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+
+3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+4. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**.
+
+5. All set. Now, run the application and see it in action! Follow Task 2 of Lab: [Create an Application](?lab=1-create-the-app) to run the app.
 
 ## Learn More
 
