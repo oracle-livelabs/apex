@@ -107,19 +107,33 @@ Estimated time - 20 minutes
 
 	![App Builder Button](./images/nav-app-builder.png "")
 
-2.
-
-14. Create an application by selecting the **create** button.
+2. Create an application by selecting the **create** button.
 
 	![create button on console](./images/create-app.png "")
 
-15. Name the App **RAG Chatbot** and click **Create Application**.
+3. Name the App **RAG Chatbot** and click **Create Application**.
 
-	![Naming of the App](./images/name-app.png "")
+	![Naming of the App](./images/name-app.png "") 
 
-16. 
+## Task 4: Create REST Data Sources
 
-## Task 2: 
+1. Navigate to Shared Components from the App Home Console by selecting the button **Shared Components**.
+
+	![Navigate to Shared Components](./images/nav-shared-components.png "")
+
+2. Select the button **REST Data Sources** under the Data Sources field.
+
+	![Navigate to REST Data Sources](./images/nav-rest-data-sources.png "")
+
+3. Select the button **Create** to create the Data Source.
+
+	![Create button for REST Data Sources](./images/create-rest-data-sources.png "")
+
+4. Select **Next** and leave the option default as **from Scratch**.
+
+	![Default and Next Button](./images/create-from-scratch.png "")
+
+5. 
 
 ## Task 3: 
 
