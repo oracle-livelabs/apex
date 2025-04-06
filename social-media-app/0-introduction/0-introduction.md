@@ -54,23 +54,23 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 2. To import the app, navigate to App Builder and click Import.
 
-    !["App Builder"](images/app-import.png " ")
+    !["App Builder"](images/app-import.png =70%x*)
 
-3. Drag and drop the **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file, then click Next.
+3. Drag and drop the downloaded **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file, then click Next.
 
     !["Import App"](images/import-app.png =60%x*)
 
 4. Click Install Application.
 
-    !["Install App"](images/install-app.png =60%x*)
+    !["Install App"](images/install-app.png =70%x*)
 
 5. Click Install Supporting Objects.
 
-    !["Install Supporting Objects"](images/supporting-object.png =60%x*)
+    !["Install Supporting Objects"](images/supporting-object.png =70%x*)
 
 6. All set. Now, run the application and see it in action!
 
-    !["Run App"](images/run-app.png =60%x*)
+    !["Run App"](images/run-app.png =70%x*)
 
 ## Learn More
 
