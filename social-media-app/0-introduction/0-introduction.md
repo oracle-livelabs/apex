@@ -62,12 +62,15 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 4. Click Install Application.
 
-    !["Import App"](images/install-app.png =60%x*)
+    !["Install App"](images/install-app.png =60%x*)
 
 5. Click Install Supporting Objects.
 
+    !["Install Supporting Objects"](images/supporting-object.png =60%x*)
 
 6. All set. Now, run the application and see it in action!
+
+    !["Run App"](images/run-app.png =60%x*)
 
 ## Learn More
 
