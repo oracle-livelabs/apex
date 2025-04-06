@@ -54,7 +54,7 @@ In this lab, you will:
 
 4. Save and Run the app.
 
-    ![The app homepage](images/run-app3.png "")
+    ![The app homepage](images/run-app3.png =70%x*)
 
 ## Task 2: Clean up and configure the Form UI Page Components
 
@@ -74,7 +74,7 @@ In this lab, you will:
 
     - **P1\_UPDATED\_BY**
 
-    ![Rendering tree with page items](images/page-items1.png "")
+    ![Rendering tree with page items](images/page-items1.png =70%x*)
 
     After deletion, the Rendering tree of columns in the Post Form region will look like this:
 
