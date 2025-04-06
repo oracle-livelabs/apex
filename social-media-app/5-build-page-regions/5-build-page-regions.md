@@ -93,7 +93,7 @@ In this lab, you will:
 
    ![Options available for Type is displayed](images/post-type.png "")
 
-3. Save the changes and run the app again and see the results of our changes so far!
+3. **Save** and **run** the app again and see the results of our changes so far!
 
     ![Updated app is displayed](images/updated-app1.png "")
 
@@ -169,7 +169,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     ![Property editor](images/post-property-4.png "")
 
-3. Now save and run the app.
+3. Now **save** and run the app.
 
     You may not see anything at first, and that's expected. Since we changed the form region to an inline dialog, it stays hidden when the page loads. To make it visible, we need to create a button that will open it.
 
