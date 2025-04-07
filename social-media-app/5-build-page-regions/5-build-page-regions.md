@@ -52,7 +52,7 @@ In this lab, you will:
 
     You will see that APEX has populated the available columns from our table as "fields" in the form (visible on the left in the tree view and in the layout view).
 
-4. Save and Run the app.
+4. **Save and Run** the app.
 
     ![The app homepage](images/run-app3.png =70%x*)
 
