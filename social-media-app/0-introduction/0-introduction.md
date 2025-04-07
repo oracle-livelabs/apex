@@ -8,7 +8,7 @@ When users log into the app, they can upload pictures from their local device an
 
 While the initial version of the app is simple and meant to help you get started, you can easily add more features, such as push notifications, the ability to comment on friends' pictures, and more.
 
-Estimated Workshop Time: 60 minutes
+Estimated Workshop Time: 65 minutes
 
 Watch the video below for a quick walkthrough of the workshop.
 [Create an APEX App](videohub:1_zeopb0u9)
