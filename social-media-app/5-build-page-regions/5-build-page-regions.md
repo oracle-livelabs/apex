@@ -36,52 +36,51 @@ In this lab, you will:
 
     ![Rendering Tree options are displayed](images/create-region1.png "")
 
-3. You will see a new region in the Rendering Tree, which will also appear in the **Layout** section (middle panel).
-In the Property Editor, enter/select the following:
+3. In the Property Editor, enter/select the following:
 
     - Under Indentification:
 
         - Name: **Post**
+
         - Title: **Post**
+
         - Type:  **Form**
 
-    ![Form types select list](images/form-types.png "")
-
-4. Under Source, set the Table Name to **SM_POSTS**.
+    - Source > Table Name: **SM_POSTS**
 
     ![Page Designer view](images/form-source.png "")
 
     You will see that APEX has populated the available columns from our table as "fields" in the form (visible on the left in the tree view and in the layout view).
 
-5. Save and Run the app.
+4. **Save and Run** the app.
 
-    ![The app homepage](images/run-app3.png "")
+    ![The app homepage](images/run-app3.png =70%x*)
 
 ## Task 2: Clean up and configure the Form UI Page Components
 
 1. Currently, the form displays input fields for the table columns, but it does not save any data yet and requires some adjustments. Some of the generated page items are not needed, while others need to be modified.
 
-    To refine the form select each the below page items individually and press Delete. Alternatively, use Control + Click to select multiple items and delete them at once.
+    To refine the form **select** each the below page items individually and press **Delete**. Alternatively, use Control + Click to select multiple items and delete them at once.
 
     - **P\_FILE\_MIME**
 
     - **P1\_FILE\_NAME**
 
-    - **P1\_CREATED\_BY**
-
     - **P1\_CREATED**
 
-    - **P1\_UPDATED\_BY**
+    - **P1\_CREATED\_BY**
 
     - **P1\_UPDATED**
 
-    ![Rendering tree with page items](images/page-items1.png "")
+    - **P1\_UPDATED\_BY**
+
+    ![Rendering tree with page items](images/page-items1.png =70%x*)
 
     After deletion, the Rendering tree of columns in the Post Form region will look like this:
 
     ![Rendering tree with page items](images/delete-page-items.png "")
 
-    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, *right click* on the **Post** region and select Synchronize Page Items. Then, carefully delete the items that are not needed.
+    **If you made a mistake** , you can easily re-sync all the Region Page items back and repeat the process. To do this, **right click** on the **Post** region and select **Synchronize Page Items**. Then, carefully delete the items that are not needed.
 
     ![Options to synchronize in the rendering tree](images/sync-page-items.png)
 
@@ -94,7 +93,7 @@ In the Property Editor, enter/select the following:
 
    ![Options available for Type is displayed](images/post-type.png "")
 
-3. Save the changes and run the app again and see the results of our changes so far!
+3. **Save** and **run** the app again and see the results of our changes so far!
 
     ![Updated app is displayed](images/updated-app1.png "")
 
@@ -104,7 +103,7 @@ In the Property Editor, enter/select the following:
 
     ![Rendering tree](images/lat-lon.png "")
 
-    To keep things organized, drag **P1_LAT** and **P1_LON** under the already hidden P1_ID page item while they are still multi selected.
+    To keep things organized, drag **P1\_LAT** and **P1\_LON** under the already hidden P1_ID page item while they are still multi selected.
 
     ![Rendering tree](images/updated-tree.png "")
 
@@ -168,9 +167,9 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
                 Click **OK**.
 
-         ![Property editor](images/post-property-4.png "")
+    ![Property editor](images/post-property-4.png "")
 
-3. Now save and run the app.
+3. Now **save** and run the app.
 
     You may not see anything at first, and that's expected. Since we changed the form region to an inline dialog, it stays hidden when the page loads. To make it visible, we need to create a button that will open it.
 
@@ -200,7 +199,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
         The button configuration should look like this:
 
-        ![Button attributes](images/button-attributes1.png "")
+    ![Button attributes](images/button-attributes1.png "")
 
 3. To make the Post region (inline dialog) appear when this button is clicked, we need to create a **Dynamic Action**. In the rendering tree, right click on the button and select **Create Dynamic Action**.
 
@@ -213,9 +212,10 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 5. Follow the next steps to configure the attributes:
 
     - Select the first entry > **New**, and enter the following in the Property Editor:
+
         - Identification > Name: **Open Post Dialog**
 
-            ![Name the dynamic action](images/da-name.png)
+    ![Name the dynamic action](images/da-name.png)
 
     - Select the **Show** entry under True Actions and select the following in the Property Editor:
 
@@ -227,7 +227,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
             - Region: **Post**
 
-            ![Affected elements in property editor](images/affected-elements.png)
+    ![Affected elements in property editor](images/affected-elements.png)
 
     That almost completes the **Form** region. Click **Save and Run**! You will now see the **+Add Post** button and nothing else, until you click it, and then the in-line dialog opens with the Post **form**.
 
@@ -235,7 +235,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
 ## Task 5: Create a Save Button
 
-1. We now need a button for the user to *actually SAVE the post* they make. To do this, in the Rendering tree, right click on the **Body > Post** region in the tree, and click **Create Button**
+1. We now need a button for the user to *actually SAVE the post* they make. To do this, in the Rendering tree, right click on the **Dialogs, Drawers and Popups > Post** region in the tree, and click **Create Button**
 
     ![Create button option in rendering tree](images/create-button-21.png)
 
@@ -246,6 +246,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
     - Layout > Slot: **Next**
 
     - Under Appearance:
+
         - Hot: **ON**
 
         - Template options:
@@ -275,9 +276,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     - Identification > Name: **Submit post**
 
-### OPTIONAL STEP (5)
-
-5. To prevent users from posting blank rows,
+5. To prevent users from posting blank rows, enter/select the following
 
     - Under Client-side Condition
 
@@ -286,13 +285,13 @@ At the beginning, the form should not be visible to the user. To achieve this, w
         - Javascript expression: Copy and paste the following code
 
             ```
-            <copy>
-            apex.item('P1_FILE_BLOB').value.length>0 ||
-            apex.item('P1_POST_COMMENT').value.length>0
-            </copy>
+             <copy>
+             apex.item('P1_FILE_BLOB').value.length>0 ||
+             apex.item('P1_POST_COMMENT').value.length>0
+             </copy>
             ```
 
-        ![Property editor](images/js-expression.png)
+    ![Property editor](images/js-expression.png)
 
 6. Click on the **True action** (beneath the Submit post tree entry) which is initially set to **Show,** and enter/select the following:
 
@@ -300,7 +299,7 @@ At the beginning, the form should not be visible to the user. To achieve this, w
 
     - Settings > Request/Button name: **Save**
 
-        ![Property editor](images/da2-action.png)
+    ![Property editor](images/da2-action.png)
 
 ## Task 6: Configure the Submit Process to Insert a New Record into the Table
 
@@ -325,11 +324,11 @@ page with a process for the Form:
 
     - Success Message > Success Message: **Posted!**
 
-        ![Property Editor](images/process-attributes.png)
+    ![Property Editor](images/process-attributes.png)
 
     The form will now insert records into the **SM\_POSTS** table, but we won't be able to see them on the page until we complete the next lab.
 
-4. However, you can save and run the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
+4. However, you can **save and run** the app and select an image file (or take a picture on mobile), add a comment and click the Post button to have a record inserted anyway.
 
     ![Running app](images/run-app-31.png)
 
@@ -338,4 +337,4 @@ You may now **proceed to the next lab**
 ## Acknowledgements
 
 - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025

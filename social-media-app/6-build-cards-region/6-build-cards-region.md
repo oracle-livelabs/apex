@@ -38,7 +38,7 @@ In this lab, you will:
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and Paste the below code in the Code Editor:
 
           ```
            <copy>
@@ -66,14 +66,19 @@ In this lab, you will:
             order by p.created desc
            </copy>
           ```
+        Click **OK**
 
-        ![Property Editor](images/title-type1.png)
+    ![Property Editor](images/title-type1.png)
+
+    ![Property Editor](images/sql_query.png =40%x*)
 
     - Appearance > CSS Classes box: **t-Chat**
 
     - Advanced > Static ID: **timeline**
 
-        ![Property editor](images/appearance1.png)
+    **Save** the app.
+
+    ![Property editor](images/appearance1.png)
 
     Next, we need to configure which columns from the query results will be used in different parts of the CARDS region.
 

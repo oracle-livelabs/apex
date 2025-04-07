@@ -21,7 +21,7 @@ In this lab, you will:
 
 ## Task 1: The APEX Developer Toolbar
 
-1. Navigate to the App Builder.
+1. Navigate to the **App Builder**.
 
     ![App Builder](images/AppBuilder.png "")
 
@@ -29,19 +29,19 @@ In this lab, you will:
 
     ![Application Homepage](images/RunApplication.png "")
 
-3. Click Run Application.
+3. Click **Run Application**.
 
      ![Run Application](images/run-app1.png "")
 
 4. In the application, check the bottom of the page for the APEX Developer Toolbar.
 
-    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png "")
+    ![The application with the developer toolbar at the bottom](images/dev-toolbar.png =50%x*)
 
     **Note**: The application end users will not see this bar. The developer tool bar is only visible to you because you are already logged into the APEX builder in another tab. The toolbar consists of quick links to features of APEX that we will continue to use for our development.
 
 5. Click **Page 1**. This navigates back to the APEX Page Designer, where you can begin making changes to the page.
 
-    ![Buttons on the developer toolbar](images/edit-page1.png "")
+    ![Buttons on the developer toolbar](images/edit-page1.png =50%x*)
 
 ## Task 2: Get acquainted with APEX Page Designer
 
@@ -57,7 +57,7 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
 2. The middle section is itself divided into two sections:
 
-    ![The layout and gallery pane is displayed](images/pd-middle.png)
+    ![The layout and gallery pane is displayed](images/pd-middle.png =40%x*)
 
     The top section is the page **Layout** tab, it also has other tabs within: **Page Search** and **Help**.
 
@@ -67,17 +67,17 @@ The APEX Page Designer is divided into three vertical sections, each containing 
 
 3. The third section on the right is called the **Property Editor** and displays the declarative features of the selected page component. The title of the first tab within will be the name of the component that you have selected, be it of type **Page** or **Region** and so forth. In addition, depending on what is selected, another tab titled **Attributes** might be available with more component specific declarative options. In this case, the top-most tree entry, **Page 1: Timeline** is selected, and the Property Editor displays the **Page** related declarative features:
 
-    ![The property editor is displayed](images/pd-right.png "")
+    ![The property editor is displayed](images/pd-right.png =20%x*)
 
    **Note**: Some tabs may have scroll bars, allowing you to scroll down or across to access additional options.
 
     **Before we continue, take a moment to practice adjusting the size of your sections, but keep them all expanded.**
 
-    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png "")
+    ![Page designer is displayed highlighting the collapse icons](images/pd-slider.png =70%x*)
 
     If you're unsure or need to restore the default layout, simply click the wrench button at the top right of Page Designer. Click **Layout** and select **Reset Layout**
 
-    ![Page designer settings](images/pd-reset.png "")
+    ![Page designer settings](images/pd-reset.png =40%x*)
 
 You may now **proceed to the next lab**.
 

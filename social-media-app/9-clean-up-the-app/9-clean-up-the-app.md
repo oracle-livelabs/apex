@@ -25,6 +25,7 @@ In this lab, you will:
 When a post is liked, the heart icon should turn red. Additionally, on smaller screens, relocating the Add Post button to the bottom right will enhance usability. We can achieve both with two small blocks of Inline CSS at the page level.
 
 1. In the Rendering Tree, select **Page 1: Timeline** and enter the following in the Property Editor:
+
     - Under CSS:
         - Inline: Copy and paste the following CSS into the **Inline** box
 
@@ -51,21 +52,25 @@ When a post is liked, the heart icon should turn red. Additionally, on smaller s
 
 1. In the Rendering Tree, select Post region and click the **P1\_FILE\_BLOB** page item. In the Property Editor, enter/select the following:
 
-    - Under Appearance:
-        - Template: **Hidden**
-        - CSS Classes: **file-upload**
-        - Icon: **fa-camera-retro**
+     - Under Appearance:
 
-            ![Property Editor](images/appearance-s.png)
+          - Template: **Hidden**
 
-        - Under **Template Options**
+          - CSS Classes: **file-upload**
+
+          - Icon: **fa-camera-retro**
+
+        ![Property Editor](images/appearance-s.png)
+
+          - Under **Template Options**:
+
             - General: check the **Stretch Form Item** option. (This improves the alignment.)
 
-                ![Template Options Dialog](images/stretch-form-s.png)
+    ![Template Options Dialog](images/stretch-form-s.png =40%x*)
 
     - Layout > Label Column Span : **0**
 
-        ![Property Editor](images/layout-s.png)
+    ![Property Editor](images/layout-s.png =30%x*)
 
 2. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 
