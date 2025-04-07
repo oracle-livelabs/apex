@@ -8,7 +8,7 @@
     },
     {
       "title": "Get Started",
-      "filename": "../../../common-241/1-sign-up-apex/1-sign-up-apex.md"
+      "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
     },
     {
       "title": "Lab 1: Create an APEX App",
@@ -19,12 +19,17 @@
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
     {
-      "title": "Lab 3: Configure the OCI API Keys",
-      "filename": "../../3-configure-oci/3-configure-oci.md"
+      "title": "Lab 3: Configure a Generative AI Service in APEX",
+      "filename": "../../3-configure-oci/3-configure-oci.md",
+      "type": {
+        "OCIGenAI" : "OCIGenAI",
+        "OpenAI" : "OpenAI"
+        }
     },
     {
       "title": "Lab 4: Build a Conversational Inquiry using Generative AI",
       "filename": "../../4-using-genai/4-using-genai.md"
+      
     },
     {
       "title": "Lab 5: Generate Email to Apply to a School using Gen AI",
@@ -33,6 +38,14 @@
     {
       "title": "Lab 6: Run the Application",
       "filename": "../../6-run-app/6-run-app.md"
+    },
+    {
+      "title": "Lab 7 [OPTIONAL]: Implement RAG using AI Vector Search",
+      "filename": "../../7-vector-search/7-vector-search.md"
+    },
+    {
+      "title": "Lab Appendix: Download Instructions",
+      "filename": "../../8-appendix/8-appendix.md"
     },
     {
       "title": "Need Help?",
