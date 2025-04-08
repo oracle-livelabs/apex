@@ -4,7 +4,7 @@
 
 This lab walks the user 
 
-Estimated time - 20 minutes
+Estimated time - 45 minutes
 
 ### Objectives
 
