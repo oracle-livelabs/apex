@@ -73,15 +73,15 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 4: Create your Gen AI Agent: 
 
-1. Navigate to Gen AI Agents by selecting the hamburger menu in the top lef-hand corner, click **Analytics & AI** and then, **Generative AI Agents**. Make sure you are in the correct region.
+1. Navigate to Gen AI Agents by selecting the hamburger menu in the top left-hand corner, click **Analytics & AI** and then, **Generative AI Agents**. Make sure you are in the correct region.
 
 ![Create Bucket button](./images/NavigateAIAgent.png "")
 
-2. On the landing page for **Generative AI Agents** click the **Create Agent** button.
+2. On the landing page for **Generative AI Agents**, click the **Create Agent** button.
 
 ![Create Bucket button](./images/CreateAgent.png "")
 
-3. Enter a name, **'RAG-AGENT'**, ensure you are in the correct compartment, optinally enter in a welcome message, & click **'Next'**.
+3. Enter a name, **'RAG-AGENT'**, ensure you are in the correct compartment, optionally enter in a welcome message, & click **'Next'**.
 
 ![Create Bucket button](./images/agent.png "")
 
@@ -105,7 +105,7 @@ Basic experience with OCI Cloud Console and standard components.
 
      ![Create Bucket button](./images/ffinishagent.png "") 
    
-## Task 4: Generate API Keys
+## Task 5: Generate API Keys
 
 1. Navigate to your profile icon on the right-hand side of the screen. Select **'User Settings'**. 
 
@@ -115,7 +115,7 @@ Basic experience with OCI Cloud Console and standard components.
 
    ![Create Bucket button](./images/API.png "")
 
-3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**. You will see a confifuration file preview, you can close this. You may proceed to the next lab. 
+3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**. You will see a configuration file preview, you can close this. You may proceed to the next lab. 
 
       ![Create Bucket button](./images/gen.png "")
 
