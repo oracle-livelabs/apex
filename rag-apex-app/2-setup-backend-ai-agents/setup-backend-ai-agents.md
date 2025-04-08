@@ -52,68 +52,70 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 3: Create your Knowledge Base
 
-1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **'Generative AI Agents'**. Make sure you are in the correct region.
-![Create Bucket button](./images/NavigateAIAgent.png "")
+1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **'Generative AI Agents'**. 
+**Note:** Make sure you are in the correct region **US-Midwest Chicago** or else the Generative AI options won't be visable.
+
+	![Create Bucket button](./images/NavigateAIAgent.png "")
 
 2. On the left-hand side, select **Knowledge Bases** and click the button **Create Knowledge Base**
 
-   ![Create Bucket button](./images/createknowledgebase.png "")
+	![Create Bucket button](./images/createknowledgebase.png "")
 
 3. Enter in a name for your knowledge base, **'RAG-KB'**. Under **Data sources** click **'Specify data source'**.
 
-![Create Bucket button](./images/NewKB.png "")
+	![Create Bucket button](./images/NewKB.png "")
 
 4. Select the Object Storage bucket you created earlier, **'RAG'**, and check **'Select all in bucket'**. Click **'Create'**.
 
-![Create Bucket button](./images/DSKB.png "")
+	![Create Bucket button](./images/DSKB.png "")
 
 5. Ensure your knowledge base is active before proceeding to Task 4.
 
-![Create Bucket button](./images/active.png "")
+	![Create Bucket button](./images/active.png "")
 
 ## Task 4: Create your Gen AI Agent: 
 
 1. Navigate to Gen AI Agents by selecting the hamburger menu in the top left-hand corner, click **Analytics & AI** and then, **Generative AI Agents**. Make sure you are in the correct region.
 
-![Create Bucket button](./images/NavigateAIAgent.png "")
+	![Create Bucket button](./images/NavigateAIAgent.png "")
 
 2. On the landing page for **Generative AI Agents**, click the **Create Agent** button.
 
-![Create Bucket button](./images/CreateAgent.png "")
+	![Create Bucket button](./images/CreateAgent.png "")
 
 3. Enter a name, **'RAG-AGENT'**, ensure you are in the correct compartment, optionally enter in a welcome message, & click **'Next'**.
 
-![Create Bucket button](./images/agent.png "")
+	![Create Bucket button](./images/agent.png "")
 
 4. Click **Create Tool**.
 
-![Create Bucket button](./images/click.png "")
+	![Create Bucket button](./images/click.png "")
 
 5. Select **RAG**. 
 
-![Create Bucket button](./images/rag.png "")
+	![Create Bucket button](./images/rag.png "")
 
 6. Enter a name, **RAGLL**, description, and add the RAG-KB knowledge base you created earlier. After this, select **Create tool**.
 
-![Create Bucket button](./images/toolcreate.png "")   
+	![Create Bucket button](./images/toolcreate.png "")   
 
 7. Setup agent endpoint. Make sure **Automatically create an endpoint for this agent** is checked. For the purposes of this LiveLab, leave all Guardrails disabled. Select **Next**.
 
- ![Create Bucket button](./images/endpoint.png "") 
+ 	![Create Bucket button](./images/endpoint.png "") 
 
  8. Review your agent information and click **Create agent**. You can now proceed to the next task.
 
-     ![Create Bucket button](./images/ffinishagent.png "") 
+	![Create Bucket button](./images/ffinishagent.png "") 
    
 ## Task 5: Generate API Keys
 
 1. Navigate to your profile icon on the right-hand side of the screen. Select **'User Settings'**. 
 
-![Create Bucket button](./images/profile.png "")
+	![Create Bucket button](./images/profile.png "")
 
 2. On the left under **'Resources'**, select **'API keys'**
 
-   ![Create Bucket button](./images/API.png "")
+	![Create Bucket button](./images/API.png "")
 
 3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**. You will see a configuration file preview, you can close this. You may proceed to the next lab. 
 
