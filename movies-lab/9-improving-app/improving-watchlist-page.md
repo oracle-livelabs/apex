@@ -176,4 +176,4 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

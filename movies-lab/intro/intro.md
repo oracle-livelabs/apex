@@ -1,8 +1,10 @@
 # Introduction
+
 ## About this Workshop
+
 In this workshop, you will create an application that allows you and your friends to search for movies and create personal watchlists. You will use [The Movie Database (TMDB)](https://www.themoviedb.org/), which is a database that contains a large amount of data about a vast number of movies and TV shows. TMDB has an extensive API that you will access in this workshop to get lists of popular movies, search for movies, and get details and cast lists for movies.
 
-When individual users log into the app, the home page will display their own unique watchlist. They can add movies to their watchlist from either a list of current popular movies or by searching for a specific movie of their choice. After adding movies to their list, users can use filters to browse through their list based on watched status, release decade, and runtime. 
+When individual users log into the app, the home page will display their own unique watchlist. They can add movies to their watchlist from either a list of current popular movies or by searching for a specific movie of their choice. After adding movies to their list, users can use filters to browse through their list based on watched status, release decade, and runtime.
 
 While the end result is a simple version of a movies watchlist application, you can continue to build it out far past what this workshop takes you through, using many of the same concepts you will learn. The Movie Database API has a lot of options that you can use in your application, such as streaming providers for individual movies, videos related to movies, upcoming movies, and more. There are also a lot of features in Oracle APEX that you can use to allow users to rate movies they have watched, make comments on movies, and more.
 
@@ -11,16 +13,23 @@ Estimated Workshop Time: 2 hours
 Watch the video below for a quick walk-through of the workshop.
 [Walkthrough video of the entire workshop](videohub:1_vdi0shy5)
 
-*Note: This lab assumes you are using Oracle APEX 24.1.*
+> *Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### Objectives
-In this lab, you will:  
-- Obtain a free development environment.  
-- Learn how to create REST data sources.  
-- Learn how to create local tables.  
-- Learn how to use application items and processes.  
-- Learn how to create a page to view data from a REST source.  
-- Learn how to create a page to view data from a local table.  
+
+In this lab, you will:
+
+- Obtain a free development environment.
+
+- Learn how to create REST data sources.
+
+- Learn how to create local tables.
+
+- Learn how to use application items and processes.
+
+- Learn how to create a page to view data from a REST source.
+
+- Learn how to create a page to view data from a local table.
 
 ### Labs
 
@@ -40,6 +49,7 @@ In this lab, you will:
 ### **Let's Get Started!**
 
 - [Click here](?lab=1-sign-up-apex) or select **Getting Started** from the menu on the left to start the workshop and set up an Oracle APEX workspace.
+
 - If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
 
 ### Downloads
@@ -60,4 +70,4 @@ In this lab, you will:
 ## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, June 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
