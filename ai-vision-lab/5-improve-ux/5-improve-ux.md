@@ -87,7 +87,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
     - Icon: **fa-share-alt**
 
-    ![Property Editor](images/change-icon.png =50%x*)
+    ![Property Editor](images/change-icon.png =40%x*)
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
     ```
