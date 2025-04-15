@@ -93,6 +93,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
          }
          </copy>
         ```
+
     ![Click Timeline](images/edit-post.png " ")
 
     ![Click Timeline](images/post.png " ")
@@ -283,7 +284,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
     - Identification > Name: **Text Detection**
 
-        ![Click Timeline](images/text-detection.png " ")
+    ![Click Timeline](images/text-detection.png " ")
 
 3. Expand Parameters, select **FEATURE_TYPE** and enter the following:
 
@@ -293,7 +294,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
         - Value: **TEXT_DETECTION**
 
-        ![Click Timeline](images/feature-type1.png " ")
+    ![Click Timeline](images/feature-type1.png " ")
 
 4. Right click on the **Parse Image classification Response** child process and select **Duplicate**. Drag and drop it after **Text Detection**.
 
