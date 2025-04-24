@@ -40,15 +40,19 @@ In this lab, you will:
 
     !["Create App options"](images/create-app.png " ")
 
-3. You are now viewing the **Create An Application** Page, with View
-Blueprint tab selected.
-    - Update the Home Page Name: **Timeline**. Click Save Changes
+3. You are now viewing the **Create An Application** Page, with View Blueprint tab selected.
+
+    - Application Name: **APEX Social Media**
+
+    - Update the Home Page Name: **Timeline**. Click **Save Changes**
+
+    !["Edit Home Page name"](images/edit_homepage.png)
 
     - In *Features* section, check the **Install Progressive Web App** option.
 
     Click **Create Application**.
 
-    !["Create App wizard"](images/app-details.png " ")
+    !["Create App wizard"](images/app-details.png =60%x*)
 
 4. We now have three pages in our APEX application.
     - The Global page (which we will not be using in this lab),
@@ -65,11 +69,11 @@ Blueprint tab selected.
 
 2. To sign in to the application, use your workspace username and password.
 
-    ![Sign in page](images/sign-in.png "")
+    ![Sign in page](images/sign-in.png =45%x*)
 
 3. Now you see the very beginning of your app.
 
-    ![First outlook of the app](images/app-running.png "")
+    ![First outlook of the app](images/app-running.png =60%x*)
 
 ## Task 3: Observe the App
 

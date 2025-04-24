@@ -27,11 +27,14 @@ In this lab, you will:
     ![Page designer is seen](images/property-editor-nav.png "")
 
 2. In the Property Editor, select the following:
+
     - Under Navigation Menu:
-        - Override User Interface Level: Toggle the button to **ON**
+
+        - Override User Interface Level: Toggle **ON**
+
         - List: **Do not show the Navigation Menu List**
 
-        ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
+    ![The Navigation Menu group in the Property Editor](images/nav-menu-group.png "")
 
 ## Task 2: Remove the Breadcrumb Region
 
@@ -67,7 +70,7 @@ In this task, you will learn how to download and import a starter app. If you fo
 
     ![App builder homepage](images/import.png)
 
-3. Drag and drop the Starter app zip file downloaded in **Point 1** and click Next.
+3. Drag and drop the Starter app zip file downloaded in **Point 1**. Click Next.
 
     ![Import dialog](images/drag-and-drop.png)
 

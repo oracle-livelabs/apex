@@ -8,7 +8,7 @@ When users log into the app, they can upload pictures from their local device an
 
 While the initial version of the app is simple and meant to help you get started, you can easily add more features, such as push notifications, the ability to comment on friends' pictures, and more.
 
-Estimated Workshop Time: 60 minutes
+Estimated Time: 1 hour 5 minutes
 
 Watch the video below for a quick walkthrough of the workshop.
 [Create an APEX App](videohub:1_zeopb0u9)
@@ -40,15 +40,37 @@ Watch the video below for a quick walkthrough of the workshop.
 
 Total estimated time: 60 minutes
 
-**Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-region) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
+**Note**: If you would like to reduce the workshop time, you can skip to [Lab 5](?lab=5-build-page-regions) directly. As a prerequisite step, install the starter app provided in the **Alternate Time Saver** task in [Lab 4](?lab=4-customize-app-homepage).
 
 ### **Let's Get Started!**
 
 If the menu is not visible, you can open it by clicking the menu button (![Menu icon](images/menu-button.png)) in the upper-left corner of the page.
 
-### Downloads
+## Downloads
 
-Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
+If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL_COMPLETED.zip) to download the completed application zip file.
+
+2. To import the app, navigate to App Builder and click Import.
+
+    !["App Builder"](images/app-import.png =70%x*)
+
+3. Drag and drop the downloaded **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file, then click Next.
+
+    !["Import App"](images/import-app.png =60%x*)
+
+4. Click Install Application.
+
+    !["Install App"](images/install-app.png =70%x*)
+
+5. Click Install Supporting Objects.
+
+    !["Install Supporting Objects"](images/supporting-object.png =70%x*)
+
+6. All set. Now, run the application and see it in action!
+
+    !["Run App"](images/run-app.png =70%x*)
 
 ## Learn More
 

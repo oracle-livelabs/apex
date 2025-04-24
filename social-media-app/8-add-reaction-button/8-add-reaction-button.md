@@ -54,19 +54,15 @@ In this lab, you will:
 
         - Javascript Expression: **document**
 
-        ![Property Editor](images/js-expression.png)
+        ![Property Editor](images/js-expression.png =50%x*)
 
 ## Task 2: Creating the True Actions for the Like Button
 
 To complete the **action-like** Dynamic Action, we need to configure the True Actions to perform two tasks:
 
-- Update the UI:
+- Update the UI: Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
 
-  - Modify the like count dynamically on the client-side using JavaScript. This ensures immediate feedback to the user without requiring a full page reload.
-
-- Invoke the Database Action:
-
-  - Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
+- Invoke the Database Action: Use a PL/SQL process to update the like status in the database. This ensures that the like/unlike action is correctly recorded for the post.
 
 1. In the True action, enter/select the following:
 
@@ -101,7 +97,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
         </copy>
         ```
 
-        ![Property Editor of Dynamic Action](images/action-like-true.png)
+    ![Property Editor of Dynamic Action](images/action-like-true.png)
 
 2. Next, we need to add another True Action to handle the database operation and store the user's reaction.
 
@@ -139,13 +135,13 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
         These two actions effectively handle both client-side and server-side processes, ensuring a smooth and efficient like/unlike functionality.
 
-        ![Code Editor](images/plsql-code.png)
+    ![Code Editor](images/plsql-code.png)
 
 4. We need to configure one final step for this action. The code block must receive the necessary Page Item values from our form. To achieve this, we will specify the Page Items to Submit to the server.
 
-    - Settings > Items to Submit : **P1_ACTION_ID,P1_LAT,P1_LON**
+    - Settings > Items to Submit : **P1\_ACTION_ID,P1\_LAT,P1\_LON**
 
-        ![Property Editor](images/item-to-submit.png)
+        ![Property Editor](images/item-to-submit.png =40%x*)
 
 5. Now, we should be able to like our own post!
 
@@ -168,13 +164,13 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
 ## Task 3: Create a Dynamic Action with a custom **action-delete** event
 
-**Note**: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.
+ *Note: Task 3 and Task 4 can be considered optional – they enable the user to delete their own post, and are very similar to the previous 2 tasks.*
 
 1. In the Rending treee, select **Dynamic Actions** tab.
 
     ![Dynamic Actions tab](images/da-tab1.png)
 
-2. Right click on **Custom** entry and select **Create Dynamic Action**.
+2. Right-click **Custom** entry and select **Create Dynamic Action**.
 
     ![Dynamic Actions tree](images/create-da-3.png)
 
@@ -196,7 +192,7 @@ To complete the **action-like** Dynamic Action, we need to configure the True Ac
 
         - Javascript Expression: **document**
 
-  ![Property Editor](images/true-property-editor.png)
+    ![Property Editor](images/true-property-editor.png)
 
 ## Task 4: Create the Delete Button True Actions
 
@@ -220,7 +216,7 @@ There are actually 3 actions desired here:
         - Title: **Are you Sure?**
         - Message: **You are about to delete this post. Are you sure?**
 
-        ![Property Editor](images/delete-confirm-dialog.png)
+    ![Property Editor](images/delete-confirm-dialog.png)
 
 2. Next, we need to add another True Action to do the database work and delete the post record from the table. In the Rendering Tree, right click on the **True** title within the action-delete Dynamic Action and select **Create TRUE action**.
 
@@ -236,26 +232,26 @@ There are actually 3 actions desired here:
 
     - Settings > PL/SQL Code: Copy and paste the following (which is a DML statement)
 
-            ```
-            <copy>
-            delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
-            delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
-            </copy>
-            ```
+        ```
+         <copy>
+         delete from SM_REACTIONS where POST_ID = :P1_ACTION_ID and created_by=:APP_USER;
+         delete from SM_POSTS where id=:P1_ACTION_ID and created_by=:APP_USER;
+         </copy>
+        ```
 
         This code will delete the post from the *SM\_REACTIONS* table based on the logged in user (**:APP\_USER**) and matching the table record with the value in **:P1\_ACTION\_ID** (as identified in the code via Oracle bind variable syntax).
 
 4. The code block in the previous step needs to receive the Page Item value for the P1\_ACTION\_ID value as defined by the button in the Cards report for each post that shows the delete button/icon. This is handled by providing the Page Items to Submit to the Server. Select the following:
-    - Settings > Items to Submit: **P1_ACTION_ID**
+    - Settings > Items to Submit: **P1\_ACTION\_ID**
 
-        ![Property Editor](images/page-item-s.png)
+    ![Property Editor](images/page-item-s.png)
 
 5. Finally, after the row is deleted, we want to remove the post from the Timeline UI.
     In the **action-delete** custom event, right-click on **True** and select **Create TRUE Action**.
 
     ![Dynamic Action Tree](images/create-true-action.png)
 
-6. In the Property editor, enter/select the following:
+6. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -271,7 +267,7 @@ There are actually 3 actions desired here:
         </copy>
         ```
 
-        ![Property Editor](images/code-s.png)
+    ![Property Editor](images/code-s.png)
 
 7. We should now be able to delete our own post. **Save and Run** to try it out!
 

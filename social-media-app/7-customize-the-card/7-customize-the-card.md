@@ -35,6 +35,7 @@ The **Like** button will show a heart icon along with the total number of likes.
     - Identification > Label: **&REACTIONS.** (including the period).
 
         This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
+
         *Note: The REACTIONS column is defined in the query for this CARDS Region.*
 
     - Under Link:
@@ -42,7 +43,11 @@ The **Like** button will show a heart icon along with the total number of likes.
 
             We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
 
-        - Target > URL: **#action$like?id=&ID.** (including the period), and click **OK**.
+        - Target > URL: **#action$like?id=&ID.** (including the period)
+
+            Click **OK**.
+
+    ![Redirect URL](images/redirect_like.png =50%x*)
 
     - Under Appearance:
 
@@ -52,9 +57,11 @@ The **Like** button will show a heart icon along with the total number of likes.
 
         - CSS Classes : **js-heart-button**
 
-        ![Property Editor](images/button-properties.png)
+    Click **Save**.
 
-        If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
+    ![Property Editor](images/button-properties.png)
+
+    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
 ## Task 2: Create a Delete Button
 
@@ -73,6 +80,10 @@ Similar to the previous task, we will create another button for deleting posts. 
 
         - Target > URL: **#action$delete?id=&ID.**
 
+        Click **OK**.
+
+    ![Redirect URL](images/redirect_url.png =50%x*)
+
     - Under Appearance:
 
         - Display Type: **Icon**
@@ -83,11 +94,13 @@ Similar to the previous task, we will create another button for deleting posts. 
 
         - Type: **Expression**
 
-        - PL/SQL expression: **:USER\_NAME=:APP\_USER**
+        - PL/SQL expression: **trim(:user\_name)=trim(:APP\_USER)**
 
         This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
 
-        ![Property Editor](images/button-action1.png)
+    Click **Save**.
+
+    ![Property Editor](images/button-action1.png)
 
 ## Task 3: Add Javascript to the Page for the Card Buttons
 
@@ -95,7 +108,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 1. In the Rendering Tree, select the **Page 1: Timeline** entry and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2. Under the Javascript section, For: **Execute when Page Loads:**, enter the following javascript code:
+2. Under the Javascript section, For: **Execute when Page Loads**, enter the following javascript code:
 
     ```
      <copy>
@@ -119,9 +132,7 @@ In this task, we will provide the APEX page with the custom javascript that will
 
     Open the Code Editor to see the entire script.
 
-    ![Property Editor](images/code-editor.png)
-
-    ![Code Editor](images/js-code-2.png)
+    ![Code Editor](images/js-code-2.png =60%x*)
 
     Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created yet.
 
@@ -133,28 +144,28 @@ In this task, we will provide the APEX page with the custom javascript that will
 
 3. To create and configure **P1\_ACTION\_ID** Page Item, in the Rendering Tree right click **Timeline** Cards Region and select **Create Page Item**.
 
-    ![Create page item option](images/create-page-item4.png)
+    ![Create page item option](images/create-page-item4.png " ")
 
 4. In the Property Editor:
 
-    - Under Identification:
-        - Name: **P1\_ACTION\_ID**
+     - Under Identification:
+          - Name: **P1\_ACTION\_ID**
 
-             *Note: APEX will set **Page Item** > **Name** by default with the Prefix of **P** and the **Page Number** followed by an underscore (**\_**), and **NEW**; in this case, as **P1\_NEW**.
+            *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1\_NEW**.*
 
-        - Type: **Hidden**
+          - Type: **Hidden**
 
-    - Settings > Value Protected: **Toggle Off**
+     - Settings > Value Protected: **Toggle Off**
 
-    ![Property Editor](images/value-protected1.png)
+    ![Property Editor](images/value-protected1.png " ")
 
 5. Now in the Rending tree, navigate back to **Page 1: Timeline** and open the Code Editor to review the JavaScript we previously copied and pasted. The editor should look clean, with no errors or concerns!
 
-    ![code editor](images/code-editor-2.png)
+    ![code editor](images/code-editor-2.png " ")
 
 6. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
-    ![Running app](images/run-app-1.png)
+    ![Running app](images/run-app-1.png =50%x*)
 
 You may now **proceed to the next lab**
 
