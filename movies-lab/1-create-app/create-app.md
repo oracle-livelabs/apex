@@ -139,6 +139,8 @@ In this lab, you will:
 
 3. After you have received your API Key, copy it and store it somewhere where you will be able to easily access it.
 
+## Summary
+
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
 ## Learn More

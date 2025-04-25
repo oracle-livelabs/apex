@@ -43,6 +43,10 @@
         "filename": "../../8-adding-cast-list/adding-cast-list.md"
       },
       {
+        "title": "Optional Lab: Create a Movies Vector Search Page using Search Configurations",
+        "filename": "../../10-vector-search/movies-vector-search.md"
+      },
+      {
         "title": "Optional Lab: Improve the UI",
         "filename": "../../9-improving-app/improving-watchlist-page.md"
       },

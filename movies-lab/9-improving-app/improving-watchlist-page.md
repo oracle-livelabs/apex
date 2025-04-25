@@ -1,6 +1,7 @@
 # Improve the UI (Optional)
 
 ## Introduction
+
 There are a few more additions you can make to your app to really pull it all together and create the best user experience possible. This includes adding a welcome region for users when their Watchlist is empty to help them get started, customizing the Watchlist Cards with CSS, and cleaning up the UI to remove unnecessary items.
 
 Estimated Lab Time: 5 minutes
@@ -8,25 +9,32 @@ Estimated Lab Time: 5 minutes
 [Improve the UI](videohub:1_kam4afxs)
 
 ### Objectives
-In this lab, you will:  
-- Add a Get Started region to the My Watchlist page.  
-- Add custom CSS to the My Watchlist page.  
-- Remove the navigation menu.  
+
+In this lab, you will:
+
+- Add a Get Started region to the My Watchlist page.
+
+- Add custom CSS to the My Watchlist page.
+
+- Remove the navigation menu.
+
 - Add the Oracle APEX footer.
 
 ### Prerequisites
+
 - Completion of workshop through Lab 7
 
 ## Task 1: Create a Get Started Region
+
 When a user logs into the Movies Watchlist app for the first time, they will not have any movies and the My Watchlist page will be blank. It would be helpful if there were a welcome message to assist users in getting started if there are no movies on the page.
 
 1. In the Page Designer tab in your browser, navigate to page 1 of your application.
 
-2. In the rendering pane, right click on Body and select **Create Region**.
+2. In the **Rendering** tab, right-click **Body** and select **Create Region**.
 
-    * Title: **Get Started**
+    - Title: **Get Started**
 
-    * Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
+    - Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
 
         ```
         <copy>
@@ -40,16 +48,16 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 3. You also will need to add Server-side Conditions for the Get Started region and all other items within the Content Body page position, because you want to only show the Get Started region when a user has no movies in their watchlist. You only want to display the movie list, search, and sort by regions when a user has movies in their watchlist.
 
-4. In the Get Started region, scroll down to **Server-side Condition**.
+4. In the **Get Started** region, scroll down to **Server-side Condition**.
 
-    * Type: **No Rows returned**
+    - Type: **No Rows returned**
 
-    * SQL Query:
+    - SQL Query:
 
         ```
         <copy>
-        select null 
-          from watchlist 
+        select null
+          from watchlist
          where user_id = :USER_ID
         ```
 
@@ -61,14 +69,14 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 7. In Server-side Condition:
 
-    * Type: **Rows returned**
+    - Type: **Rows returned**
 
-    * SQL Query:
+    - SQL Query:
 
         ```
         <copy>
-        select null 
-          from watchlist 
+        select null
+          from watchlist
          where user_id = :USER_ID
         ```
 
@@ -79,6 +87,7 @@ When a user logs into the Movies Watchlist app for the first time, they will not
     ![My Watchlist page in runtime application showing the Get Started region and no movie cards](images/get-started-runtime.png " ")
 
 ## Task 2: Style the Movie Cards
+
 On the My Watchlist page, the cards that display the movies in the watchlist are very tall, and you can only see one full movie at a time without scrolling. It would be much better if you were able to view multiple movies on the same screen without having to scroll. You can add a little custom CSS to make this happen.
 
 1. In the rendering pane, click on **Page 1: My Watchlist**.
@@ -108,6 +117,7 @@ On the My Watchlist page, the cards that display the movies in the watchlist are
     ![My Watchlist page in runtime application with new CSS applied to movie cards](images/watchlist-runtime.png " ")
 
 ## Task 3: Add Footer and Remove Navigation
+
 You can put a couple finishing touches on your app UI by modifying the Application Definition, which contain properties that are applied across the entire app instead of individual pages and regions.
 
 1. In the Page Designer tab, go to your Application home.
@@ -141,21 +151,24 @@ You can put a couple finishing touches on your app UI by modifying the Applicati
 You have now completed your Movies Watchlist application and can search for movies and add them to your watchlist. However, there are many ways to continue to add functionality to and customize your application. You can check out the Resources section in this lab to learn about different ways you can enhance your app, including components that you can implement and API requests you can make to get additional data.
 
 ## Learn More
-- [Universal Theme Components](https://apex.oracle.com/pls/apex/apex_pm/r/ut/components)  
 
-- [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)  
+- [Universal Theme Components](https://apex.oracle.com/pls/apex/apex_pm/r/ut/components)
+
+- [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Stuck? Download the Application Here
+
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application and follow the instructions below to import it into your Oracle APEX workspace.
 
 - [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-9-241.sql) to download a copy of the completed app.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
-*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
+- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
-    ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")  
+>*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
+
+![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -165,7 +178,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
+    ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
