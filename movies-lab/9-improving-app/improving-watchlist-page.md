@@ -28,13 +28,17 @@ In this lab, you will:
 
 When a user logs into the Movies Watchlist app for the first time, they will not have any movies and the My Watchlist page will be blank. It would be helpful if there were a welcome message to assist users in getting started if there are no movies on the page.
 
-1. In the Page Designer tab in your browser, navigate to page 1 of your application.
+1. In the Page Designer tab in your browser, navigate to page **1** of your application.
 
 2. In the **Rendering** tab, right-click **Body** and select **Create Region**.
 
-    - Title: **Get Started**
+    ![Get Started region open in Property Editor on Page 1 in Page Designer](images/create-region.png " ")
 
-    - Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
+3. In the Property Editor, enter/select the following;
+
+    - Identification > Title: **Get Started**
+
+    - Source > HTML Code: Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
 
         ```
         <copy>
@@ -42,13 +46,14 @@ When a user logs into the Movies Watchlist app for the first time, they will not
         &lt;br>
         &lt;br>
         To search for movies and add them to your list, click on the &lt;strong>Add a Movie&lt;/strong> button above.
+        </copy>
         ```
 
-        ![Get Started region open in Property Editor on Page 1 in Page Designer](images/get-started.png " ")
+    ![Get Started region open in Property Editor on Page 1 in Page Designer](images/get-started.png " ")
 
-3. You also will need to add Server-side Conditions for the Get Started region and all other items within the Content Body page position, because you want to only show the Get Started region when a user has no movies in their watchlist. You only want to display the movie list, search, and sort by regions when a user has movies in their watchlist.
+4. You also will need to add Server-side Conditions for the Get Started region and all other items within the Content Body page position, because you want to only show the Get Started region when a user has no movies in their watchlist. You only want to display the movie list, search, and sort by regions when a user has movies in their watchlist.
 
-4. In the **Get Started** region, scroll down to **Server-side Condition**.
+5. In the **Get Started** region, scroll down to **Server-side Condition** and enter/select the following:
 
     - Type: **No Rows returned**
 
@@ -59,19 +64,20 @@ When a user logs into the Movies Watchlist app for the first time, they will not
         select null
           from watchlist
          where user_id = :USER_ID
+        </copy>
         ```
 
-        ![Close-up of Get Started region server-side condition](images/get-started-ssc.png " ")
+    ![Close-up of Get Started region server-side condition](images/get-started-ssc.png " ")
 
-5. You will use the same SQL Query in the Server-side Conditions for the Watchlist and Search Bar regions, but you will use the opposite type, Rows returned.
+6. You will use the same SQL Query in the Server-side Conditions for the Watchlist and Search Bar regions, but you will use the opposite type, Rows returned.
 
-6. Click on the Watchlist region.
+7. Now, navigate to **Watchlist** region. In the Property Editor, enter/select the following:
 
-7. In Server-side Condition:
+    - Server-side Condition:
 
-    - Type: **Rows returned**
+        - Type: **Rows returned**
 
-    - SQL Query:
+        - SQL Query:
 
         ```
         <copy>
@@ -80,7 +86,7 @@ When a user logs into the Movies Watchlist app for the first time, they will not
          where user_id = :USER_ID
         ```
 
-        ![Close-up of Watchlist region server-side condition](images/watchlist-ssc.png " ")
+    ![Close-up of Watchlist region server-side condition](images/watchlist-ssc.png " ")
 
 8. Save and run the page. You can test out your Get Started region by removing all the movies off your watchlist.
 
@@ -90,7 +96,7 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 On the My Watchlist page, the cards that display the movies in the watchlist are very tall, and you can only see one full movie at a time without scrolling. It would be much better if you were able to view multiple movies on the same screen without having to scroll. You can add a little custom CSS to make this happen.
 
-1. In the rendering pane, click on **Page 1: My Watchlist**.
+1. In the **Rendering** pane, navigate to **Page 1: My Watchlist**.
 
 2. Scroll down to the CSS property group.
 
@@ -108,6 +114,7 @@ On the My Watchlist page, the cards that display the movies in the watchlist are
     .a-CardView-items--row .has-media {
         grid-template-columns: minmax(32px,128px) minmax(0,var(--a-cv-icon-spacer,44px)) 1fr minmax(0,auto);
     }
+    </copy>
     ```
 
     ![Page 1 open in Page Designer with Page CSS properties in Property Editor](images/watchlist-css.png " ")
@@ -126,19 +133,13 @@ You can put a couple finishing touches on your app UI by modifying the Applicati
 
     ![Application Hom with Edit Application Definition button highlighted](images/app-definition.png " ")
 
-3. Click on **User Interface**.
-
-4. Click the **Attributes** tab.
-
-    * Set "Built with APEX" to Footer: **on**
+3. Under **User Interface**, Click the **Attributes** tab. Set **Built with APEX to FooteR**: Toggle **On**
 
     ![User Interface page with Attributes tab selected and Add "Built with APEX" to Footer set to Yes](images/app-footer.png " ")
 
-5. Because you only have one normal page and two modal dialog pages, it does not make much sense to have a navigation menu, so you can turn the navigation off.
+4. Because you only have one normal page and two modal dialog pages, it does not make much sense to have a navigation menu, so you can turn the navigation off.
 
-    * Click the **Navigation Menu** tab.
-
-    * Display Navigation: **off**
+5. Now, navigate to **Navigation Menu** tab and set Display Navigation: Toggle **Off**
 
 6. Click **Apply Changes**.
 

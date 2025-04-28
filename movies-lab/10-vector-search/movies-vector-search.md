@@ -149,9 +149,9 @@ This task involves configuring REST Synchronization for the Popular_Movies REST 
 
     !["configure vector provider"](images/save-run.png "")
 
-## Task 3: Add a Vector Column and Generate Vector Embeddings for Product Names
+## Task 4: Add a Vector Column and Generate Vector Embeddings for Popular Movies
 
-In this task, you will add a vector column in product table and write a PL/SQL code which generates vector embeddings for product names in the products table using the apex\_ai.get\_vector\_embeddings function. It iterates through each product, computes the vector representation of the product name using a specified AI model (db\_onnx\_model), and stores the resulting embedding in the pname\_vector column. .
+In this task, you will add a vector column in popular_movies table and write a PL/SQL code which generates vector embeddings for movie title and overview in the popular_movies table using the apex\_ai.get\_vector\_embeddings function. It iterates through each movie, computes the vector representation of the movie title and overview using a specified AI model (db\_onnx\_model), and stores the resulting embedding in the pname\_vector column. .
 
 1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
@@ -194,7 +194,7 @@ In this task, you will add a vector column in product table and write a PL/SQL c
 
     !["Click create"](images/vector-update.png "")
 
-## Task 4: Create a Search Configuration
+## Task 5: Create a Search Configuration
 
 In this task, you will set up a Search Configuration based on Oracle Vector Search.
 
@@ -260,9 +260,9 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
     !["enter system prompt"](images/icon-display.png "")
 
-## Task 5: Create an Oracle Vector Search Page
+## Task 6: Create an Oracle Vector Search Page
 
-In this task, you will create a Vector Search Page to search across your Products.
+In this task, you will create a Vector Search Page to search across popular movies.
 
 1. From your Search Configurations Page, click **App xxx**.
 
@@ -288,7 +288,7 @@ In this task, you will create a Vector Search Page to search across your Product
 
     ![create page wizard](./images/create-search-apge.png " ")
 
-## Task 6: Run the New Vector Search Page
+## Task 7: Run the New Vector Search Page
 
 1. In Page Designer of the newly created page, click **Run and Save**.
 
