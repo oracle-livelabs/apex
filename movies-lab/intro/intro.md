@@ -44,6 +44,7 @@ In this lab, you will:
 | 6   | [Implement Buttons and Badges](?lab=creating-buttons-badges)     | 25 min    |
 | 7   | [Implement the Watchlist Page](?lab=implementing-watchlist-page) | 25 min    |
 | -   | [Add Cast List (Optional)](?lab=adding-cast-list)                | 5 min     |
+| -   | [Create Vector Search Configuration (Optional)](?lab=movies-vector-search)                | 10 min     |
 | -   | [Improve the UI (Optional)](?lab=improving-watchlist-page)       | 5 min     |
 
 ### **Let's Get Started!**
@@ -54,7 +55,9 @@ In this lab, you will:
 
 ### Downloads
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/movies-watchlist-241.sql) to download the completed application.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/movies-watchlist-242.sql) to download the completed application.
+
+- To use the Vector Search capabilities of this application, you need to perform the steps mentioned in LAB - [Create Vector Search Configuration (Optional)](?lab=movies-vector-search) > Task 1, Task 2 and Task 4.
 
 ## Learn More
 
