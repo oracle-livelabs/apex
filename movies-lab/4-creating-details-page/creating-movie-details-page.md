@@ -316,8 +316,6 @@ You have now set up the Movie Details page and set it up to open for any card th
 
 - [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
 
-- [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)
-
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 4 and follow the instructions below to import it into your Oracle APEX workspace.

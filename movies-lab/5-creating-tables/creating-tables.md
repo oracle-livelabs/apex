@@ -182,7 +182,7 @@ You will need a table to store some basic movie information in addition to the u
 
     ![Script Editor page with Create watchlist set as the Script Name field value and the Run button highlighted](images/users-run-script.png " ")
 
-7. Click **Run Now**. You should see 3 statements executed successfully.
+7. Click **Run Now**. You should see 5 statements executed successfully.
 
     ![SQL Scripts Results page showing 4 statements processed, 4 successful, and 0 errors](images/watchlist-success.png " ")
 

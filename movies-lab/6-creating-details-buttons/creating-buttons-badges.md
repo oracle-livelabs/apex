@@ -63,7 +63,7 @@ In this lab, you will:
 
             - Style: **Remove UI Decoration**
 
-            Click **Ok** to close the dialog.
+            Click **OK** to close the dialog.
 
         - Icon: **fa-chevron-left**
 
@@ -133,7 +133,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
             - Page: **2**
 
-            Click **Ok**.
+            Click **OK**.
 
     ![BACK button Link Builder Target dialog open on Page 3 in Page Designer](images/back-behavior.png " ")
 
@@ -257,7 +257,7 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
         > *Note: The item P3\_PREVIOUS\_PAGE\_ID contains the page number of the page you were on before the Movie Details page. This is to return to whichever page the user was previously on when any of the buttons on the Details page get clicked. However, you still need to set up the Previous Page ID item, so you will do that now.*
 
-        Click **Ok**.
+        Click **OK**.
 
     ![Close-up of the Add movie process properties set in step 6](images/redirect-branch.png " ")
 
@@ -436,11 +436,11 @@ Before you test the buttons you just implemented, you will add badges to the Mov
             | P3\_PREVIOUS\_PAGE\_ID | 2 |
             { title: Set Items}
 
-            Click **Ok**.
+            Click **OK**.
 
     ![Full Card action Link Builder Target open on Page 2 in Page Designer](images/popular-card-action.png " ")
 
-6. Now that you have set up badges on the Popular Movies region, return to the beginning of step 1 of this task and follow the same steps for Searched Movies.
+6. Now that you have set up badges on the Popular Movies region, return to the beginning of **step 1** of this task and follow the same steps for **Searched Movies**.
 
 7. Save your changes and refresh the tab where your app is running. Now you can play around with the Movie Search and Movie Details page and test out adding, removing, and marking items as watched.
 

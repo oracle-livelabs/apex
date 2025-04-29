@@ -151,7 +151,7 @@ This task involves configuring REST Synchronization for the Popular_Movies REST 
 
 ## Task 4: Add a Vector Column and Generate Vector Embeddings for Popular Movies
 
-In this task, you will add a vector column in popular_movies table and write a PL/SQL code which generates vector embeddings for movie title and overview in the popular_movies table using the apex\_ai.get\_vector\_embeddings function. It iterates through each movie, computes the vector representation of the movie title and overview using a specified AI model (db\_onnx\_model), and stores the resulting embedding in the pname\_vector column. .
+In this task, you will add a vector column in popular\_movies table and write a PL/SQL code which generates vector embeddings for movie title and overview in the popular_movies table using the apex\_ai.get\_vector\_embeddings function. It iterates through each movie, computes the vector representation of the movie title and overview using a specified AI model (db\_onnx\_model), and stores the resulting embedding in the pname\_vector column. .
 
 1. From your Vector Provider page, click the Down Arrow next to **SQL Workshop** and select **SQL Commands**.
 
@@ -161,7 +161,7 @@ In this task, you will add a vector column in popular_movies table and write a P
 
     ```
     <copy>
-    ALTER TABLE PRODUCTS
+    ALTER TABLE POPULAR_MOVIES
     ADD PNAME_VECTOR VECTOR;
     </copy>
     ```
@@ -218,7 +218,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
 5. In the Create Search Configuration Detail Wizard, enter/select the following:
 
-    - Name : **Products Search - Vector**
+    - Name : **Movies Search - Vector**
 
     - Search Type: **Oracle Vector Search**
 
@@ -238,7 +238,7 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
 7. In the Create Search Configuration Column Mapping Wizard, enter/select the following:
 
-    - Primary Key Column Column 2 : **ID(Number)**
+    - Primary Key Column: **ID(Number)**
 
     - Vector Column: **PNAME_VECTOR(Vector)**
 
@@ -290,7 +290,7 @@ In this task, you will create a Vector Search Page to search across popular movi
 
 ## Task 7: Run the New Vector Search Page
 
-1. In Page Designer of the newly created page, click **Run and Save**.
+1. In Page Designer of the newly created page, click **Save and Run**.
 
     ![running the app](images/run-search-page.png " ")
 

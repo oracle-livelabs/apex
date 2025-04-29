@@ -110,16 +110,15 @@ On the My Watchlist page, the cards that display the movies in the watchlist are
         --a-cv-title-line-height: 1.5;
     }
 
-    /* Update default width of images */
-    .a-CardView-items--row .has-media {
+        /* Update default width of images */
+        .a-CardView-items--row .has-media {
         grid-template-columns: minmax(32px,128px) minmax(0,var(--a-cv-icon-spacer,44px)) 1fr minmax(0,auto);
     }
-    </copy>
     ```
 
     ![Page 1 open in Page Designer with Page CSS properties in Property Editor](images/watchlist-css.png " ")
 
-4. Save and run page 1. You will see that the height of the cards has decreased and the title of the movies within the cards has increased.
+4. Click **Save and Run**. You will see that the height of the cards has decreased and the title of the movies within the cards has increased.
 
     ![My Watchlist page in runtime application with new CSS applied to movie cards](images/watchlist-runtime.png " ")
 
@@ -133,7 +132,7 @@ You can put a couple finishing touches on your app UI by modifying the Applicati
 
     ![Application Hom with Edit Application Definition button highlighted](images/app-definition.png " ")
 
-3. Under **User Interface**, Click the **Attributes** tab. Set **Built with APEX to FooteR**: Toggle **On**
+3. Under **User Interface**, Click the **Attributes** tab. Set **Built with APEX to FooteR**: Toggle **On**.
 
     ![User Interface page with Attributes tab selected and Add "Built with APEX" to Footer set to Yes](images/app-footer.png " ")
 

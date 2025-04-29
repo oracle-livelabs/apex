@@ -141,7 +141,7 @@ In this step, you are going to connect the My Watchlist page to the Movie Detail
             | P3\_PREVIOUS\_PAGE\_ID | 1 |
             {title: Set Items}
 
-            Click **Ok**.
+            Click **OK**.
 
     ![Link Builder Target dialog for Watchlist Full Card action open over Page 1 in Page Designer](images/watchlist-action.png " ")
 
@@ -217,11 +217,10 @@ The next step is allowing a user to filter through movies in their watchlist to 
                 | ------------  | ------------ |
                 | Yes           | Y            |
                 | No            | N            |
-                {title: Static Values}
 
             - Sort > Sort at Runtime: Toggle **Off**
 
-                Click **Ok**.
+                Click **OK**.
 
     - Under Actions Menu:
 
@@ -285,7 +284,7 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
             - Sort > Sort at Runtime: Toggle **Off** 
 
-                Click **Ok**.
+                Click **OK**.
 
     - Under Actions Menu:
 
@@ -346,7 +345,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
 3. At this point, the sort item has been created but is not connected to anything else on the page.
 
-4. You want the value of the Sort By page item to define what the Watchlist Cards region `order by` is, so you will use the Cards Order By properties to link the P1\_SORT\_BY item and use its value to order by the associated column.
+4. You want the value of the Sort By page item to define what the Watchlist Cards region **order by** is, so you will use the Cards Order By properties to link the P1\_SORT\_BY item and use its value to order by the associated column.
 
 5. Click on the **Watchlist** region. In the Property editor, enter/select the following page attributes:
 
@@ -369,7 +368,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
             - Item > Name: **P1\_SORT\_BY**
 
-                Click **Ok**.
+                Click **OK**.
 
     ![Watchlist region Order By Item dialog open on Page 1 in Page Designer](images/watchlist-order-by.png " ")
 

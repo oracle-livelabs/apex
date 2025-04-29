@@ -152,10 +152,8 @@ In this step, you will start to add content to your app using the REST data sour
         - HTML Expression: Copy and paste the below HTML expression
 
             ```
-            <copy>
             &lt;div class="movie-rating">
             &lt;span aria-hidden="true" class="fa fa-star">&lt;/span> &VOTE_AVERAGE.&lt;/div>
-            </copy>
             ```
 
         > *Note: In the HTML Expression, the &NAME. syntax is used to create a substitution string for the value of the VOTE_AVERAGE column for each movie. To learn more, check out the Resources section at the end of this lab.*

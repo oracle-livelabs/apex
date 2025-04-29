@@ -52,7 +52,7 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
             - Region Title: **Small**
 
-                Click **Ok**.
+                Click **OK**.
 
     ![Cast Card region open in Property Editor on Page 3 in Page Designer](images/cast.png " ")
 
