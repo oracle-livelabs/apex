@@ -434,7 +434,6 @@ Before you test the buttons you just implemented, you will add badges to the Mov
             | Name | Value |
             | ---- | ----- |
             | P3\_PREVIOUS\_PAGE\_ID | 2 |
-            { title: Set Items}
 
             Click **OK**.
 

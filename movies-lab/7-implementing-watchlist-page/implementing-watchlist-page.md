@@ -139,7 +139,6 @@ In this step, you are going to connect the My Watchlist page to the Movie Detail
             | ----- | ----- |
             | P3\_ID | &MOVIE\_ID.|
             | P3\_PREVIOUS\_PAGE\_ID | 1 |
-            {title: Set Items}
 
             Click **OK**.
 
