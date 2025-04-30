@@ -133,9 +133,94 @@ Estimated time - 45 minutes
 
 	![Default and Next Button](./images/create-from-scratch.png "")
 
-5. 
+5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https:_//objectstorage._<region_>.oraclecloud.com/n/_<namespace_>/**. Select **Next** to continue.
+	* Example region: us-chicago-1
+	* Namespace: tenancy name 
 
-## Task 3: 
+	![Name and URL for Rest OS source](./images/object-rest.png)
+
+6. Select **Next** leaving the url base as default.
+
+	![Next button for base url](./images/next-path.png)
+
+7. Select **api_key** from the drop-down options listed and click **Advanced** to proceed.
+
+	![Api key dropdown button](./images/api-key-os.png)
+
+8. Paste the following into the options and select **Discover** to proceed to view the output and save.
+	
+	* **Parameter Type:** URL Query String
+	* **Parameter Name:** fields
+	* **Value:** <copy>name,size,timeCreated,md5,timeModified,storagetier</copy>
+	* **Is Static:** Yes
+
+	![Options for advanced Parameters](./images/advanced-parameters.png)
+
+
+## Task 5: Create Object Storage List Page
+
+1. Naviate to the home page by clicking the **app name** in the breadcrumbs bar and then click the **home page** to begin editing.
+
+	![Navigate using the breadcrumbs bar](./images/nav-home.png)
+
+	![Navigate to begin working on the homepage](./images/nav-home-page.png)
+
+Next we will create our first region to display the objects in the object storage bucket.
+
+2. Right-click on the body of the editor and select **Create Region**.
+
+	![Create new region](./images/create-region.png)
+
+3. Modify the details to match the following:
+
+	* **Name:** Object Storage List
+	* **Type:** Classic Report
+	* **Source:** **Location:** Rest Source, **Rest Source:** Object Storage
+
+	![edit region for object storage table](./images/object-storage-list.png)
+
+Next we will create the upload functionality to send files to object storage.
+
+4. Create an **Upload Region** by right-clicking to the left side and select **Create Region**.
+
+	![create upload region](./images/upload-region.png)
+
+5. Name the region **Upload** and select the appearance to be **Inline Popup**
+
+	![create and name inline popup](./images/inline-popup.png)
+
+6. Right click the new region **Upload** and select **Create Page Item**. Name the item **P1_FILE** and select from the drop down **File Upload**.
+
+	![create file upload](./images/p1-file.png)
+
+	![select  file upload](./images/file-upload-type.png)
+
+7. Right click the **Upload region** one more time and select **Create Button**. Name the button **UploadIngest** and use the label title **Upload & Ingest**. Enable **Hot** for the appearance.
+
+	![select create button](./images/upload-button.png)
+
+	![name and edit button](./images/edit-upload-button.png)
+
+Next we will create the Open Upload Region Action. 
+
+8. Right click the **Upload Button** and select **Create Dynamic Action**. Modify the options to the include the following for the **True** option:
+	* **Name:** Open Region
+	* **Action:** Open Region
+	* **Selection Type:** Region
+	* **Region:** Upload
+
+	![dynamic action for upload button](./images/dynamic-upload-button.png)
+
+	![true details for dynamic actions](./images/dynamic-action-edit.png)
+
+9. Select the **process button** to create an Upload Process and right click to click **Create Process**. Name it **Upload & Ingest** and select **Execution Chain** for Type.
+
+	![dynamic action for upload button](./images/nav-process.png)
+
+10. Edit the Process
+
+	![true details for dynamic actions](./images/dynamic-action-edit.png)
+
 
 Thank you for completing this lab.
 
