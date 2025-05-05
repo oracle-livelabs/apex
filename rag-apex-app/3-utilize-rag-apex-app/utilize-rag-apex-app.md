@@ -217,10 +217,101 @@ Next we will create the Open Upload Region Action.
 
 	![dynamic action for upload button](./images/nav-process.png)
 
-10. Edit the Process
+	![naming of process with execution chain](./images/upload-ingest-process.png)
 
-	![true details for dynamic actions](./images/dynamic-action-edit.png)
+10. Edit the Process by right clicking the process and select **Add Child Process**.
 
+	![add child process button](./images/upload-child.png)
+
+11. Name the child process **Upload to Object Storage** and select **PL/SQL** and paste the following in the box:
+
+	```
+	<copy>
+	declare
+	l_request_url	varchar2(32767);
+	l_content_length	number;
+	l_response	clob;
+	upload_failed_exception	exception;
+	l_request_object	blob;
+	l_request_filename	varchar2(500);
+	begin
+	select blob_content,filename into l_request_object,l_request_filename from apex_application_temp_files where name = :P1_FILE;
+	l_request_url := ' https://objectstorage.us-chicago-1.oraclecloud.com/n/<namespace>/b/RAG/o/' || utl_url.escape(l_request_filename);
+	l_response := apex_web_service.make_rest_request(
+	p_url => l_request_url,
+	p_http_method => 'PUT',
+	p_body_blob => l_request_object,
+	p_credential_static_id => 'api_key'
+	);
+	END; 
+	</copy>
+	```
+
+* **Note:** Be sure to exit the l_request_url to include the correct namespace for you tenancy. 
+
+	![name the child process and add pl/sql](./images/plsql-process.png)
+
+12. Repeate the last step by right clicking the Process and **add a child process**. Name it the following: **Ingest** and paste the following PL/SQL:
+
+	```
+	<copy>
+	declare
+	 c_agent_endpoint_id constant varchar2(1024) :=
+	  'ocid1.genaiagentdatasource.oc1.us-chicago-1.xxxxxxxxxxxxxx';
+	 l_response clob;
+	begin
+	 apex_web_service.set_request_headers(
+	  p_name_01 => 'Content-Type'
+	  , p_value_01 => 'application/json'
+	 );
+	l_response := apex_web_service.make_rest_request(
+	  p_http_method => 'POST'
+	  , p_url =>
+		'https://agent.generativeai.us-chicago-1.oci.oraclecloud.com'
+		|| '/20240531/dataIngestionJobs'
+	  , p_credential_static_id => 'api_key'
+	  , p_body => json_object(
+		key 'compartmentId' value 'ocid1.compartment.oc1..xxxxxxxxxxxxxx'
+		, key 'dataSourceId' value 'ocid1.genaiagentdatasource.oc1.us-chicago-1.xxxxxxxxxxxxxxxxx'
+		, key 'displayName' value 'APEX_INGEST'
+	  )
+	 );
+	end;
+	</copy>
+	```
+* **Note:** Be sure to edit the following fields: **compartmentId** and **dataSourceId** to match the correct values.
+
+	![name the child process and add pl/sql](./images/ingest-plsql-process.png)
+
+13. Save and Run by clicking the **Green button** at the top right of the page.
+
+	![green button to run and save](./images/save-and-run.png)
+
+## Task 6: Test Upload Functionality
+
+1. Navigate to the new tab and provide your credentials to login to the app. Select **Sign in** to proceed.
+
+	![Login screen for app](./images/login.png)
+
+* **Note:** if prompted to change the password proceed to do so.
+
+	![green button to run and save](./images/change-password.png)
+
+2. Select the button **Upload** to begin testing.
+
+3. Select the **File button** and select the file downloaded here:
+
+4. Click Upload & Ingest to ingest the file to the knowledge .
+
+5. Verify that the file is updated in the classic report on page 1 by navigating back to the console
+
+6. optional: double check that Ingestion job has fired
+		1. Cloud Console
+		2. Hamburger Mentu -> Analytics & AI
+		3. GenAI Agents
+		4. Click Knowledge Base
+		5. Click Data Source
+Check if Name “APEX_INGEST” is there, and check lifecycle State Accepted/Processing/Succeeded
 
 Thank you for completing this lab.
 
