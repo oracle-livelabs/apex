@@ -64,7 +64,7 @@ Estimated Time: 60 minutes
 | [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
 | [Build a Conversational Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
-| [Run the Application](?lab=6-run-app) | 5 minutes |
+| [Run the Application](?lab=7-run-app) | 5 minutes |
 
 Total estimated time: 60 minutes
 
