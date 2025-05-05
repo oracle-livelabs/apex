@@ -130,7 +130,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     From any browser go to [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in).
 
-    Enter your **Cloud Account Name** in the input field and click the **Next** button.
+    Enter your **Cloud Account Name** in the input field and click the **Next** button. Select an identity provider and click **Next**.
 
    ![log in page for Oracle Cloud account](images/enter-oracle-cloud-account-name.png " ")
 
@@ -148,7 +148,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
    ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
 
-7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
+7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create**.
 
     ![Create Autonomous Database page](images/atp-settings-1.png " ")
 
@@ -156,9 +156,9 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![Create Autonomous Database page](images/atp-settings-3.png " ")
 
-8. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
+8. You will be redirected to the Autonomous Database Details page for the new instance.
 
-    Continue when the status changes from:
+    Continue when the status changes from 'Provisioning' to 'Available':
 
     ![Autonomous Database Details page](images/status-provisioning.png " ")
 
@@ -168,11 +168,8 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
 
-    Click the **APEX Instance URL** provided on the ATP overview screen.
+    Navigate to **Tool Configuration**. Under Oracle APEX, click **Copy** to copy the public access URL and open in a different tab.
 
-    ![Open APEX instance](images/apex-instance.png " ")
-
-10. Now, click **Launch APEX**
 
     ![Launch APEX instance](images/launch-apex-inst.png " ")
 
@@ -255,7 +252,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 6. The APEX Instances Details displays again.
 
-   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
+   When the provisioning process completes, an orange 'Provisioning' badge changes to a green 'Available' badge. The Launch APEX button is enabled.
 
    ![Provisioning status](images/apex-logo-orange.png " ")
 
