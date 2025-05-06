@@ -328,7 +328,6 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
             | Title         |TITLE         |
             | Rating        | RATING       |
             | Date Added    | RECENT       |
-            {title: Static Values}
 
             - Sort > Sort at Runtime: Toggle **Off**
 
@@ -361,7 +360,6 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
                 | "TITLE" asc | TITLE | Title |
                 | "VOTE_AVERAGE" desc | RATING | Rating |
                 | "CREATED" desc | RECENT | Date Added |
-                {title: Order By Clauses}
 
             > *Note: The Key and Display values auto-fill with the values set in the P1\_SORT\_BY item, but you will need to add the Order By clause for each.*
 
@@ -393,7 +391,7 @@ You now know how to filter data using a Faceted Search and sort data with a sele
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 7 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-7-241.sql) to download a copy of the app at the end of Lab 7.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-7.sql) to download a copy of the app at the end of Lab 7.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 

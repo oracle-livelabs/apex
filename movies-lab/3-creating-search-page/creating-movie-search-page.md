@@ -152,8 +152,10 @@ In this step, you will start to add content to your app using the REST data sour
         - HTML Expression: Copy and paste the below HTML expression
 
             ```
+            <copy>
             &lt;div class="movie-rating">
             &lt;span aria-hidden="true" class="fa fa-star">&lt;/span> &VOTE_AVERAGE.&lt;/div>
+            <copy>
             ```
 
         > *Note: In the HTML Expression, the &NAME. syntax is used to create a substitution string for the value of the VOTE_AVERAGE column for each movie. To learn more, check out the Resources section at the end of this lab.*
@@ -386,8 +388,6 @@ You now know how to create a page in your APEX application and add components to
 
 - [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
 
-- [Variables in APEX](https://www.talkapex.com/2011/01/variables-in-apex/)
-
 - [Intro to Dynamic Actions Video](https://www.youtube.com/watch?v=hpcYevCC-Ow)
 
 - [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-dynamic-actions.html)
@@ -396,7 +396,7 @@ You now know how to create a page in your APEX application and add components to
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 3 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-3-241.sql) to download a copy of the app at the end of Lab 3.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-3.sql) to download a copy of the app at the end of Lab 3.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 

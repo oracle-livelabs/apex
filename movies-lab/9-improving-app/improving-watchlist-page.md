@@ -122,7 +122,7 @@ On the My Watchlist page, the cards that display the movies in the watchlist are
 
     ![My Watchlist page in runtime application with new CSS applied to movie cards](images/watchlist-runtime.png " ")
 
-## Task 3: Add Footer and Remove Navigation
+## Task 3: Add Footer
 
 You can put a couple finishing touches on your app UI by modifying the Application Definition, which contain properties that are applied across the entire app instead of individual pages and regions.
 
@@ -136,15 +136,9 @@ You can put a couple finishing touches on your app UI by modifying the Applicati
 
     ![User Interface page with Attributes tab selected and Add "Built with APEX" to Footer set to Yes](images/app-footer.png " ")
 
-4. Because you only have one normal page and two modal dialog pages, it does not make much sense to have a navigation menu, so you can turn the navigation off.
+4. Click **Apply Changes**.
 
-5. Now, navigate to **Navigation Menu** tab and set Display Navigation: Toggle **Off**
-
-6. Click **Apply Changes**.
-
-    ![User Interface page with Navigation Menu tab selected and Display Navigation switch set to Yes](images/nav-menu.png " ")
-
-7. Refresh the tab your Movies Watchlist application is running in to use your completed app.
+5. Refresh the tab your Movies Watchlist application is running in to use your completed app.
 
     ![My Watchlist page open in Movies Watchlist runtime application](images/final-app.png " ")
 
@@ -160,15 +154,15 @@ You have now completed your Movies Watchlist application and can search for movi
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-9-241.sql) to download a copy of the completed app.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/movies-watchlist-export.sql) to download a copy of the completed app.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 - You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
->*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
+    >*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
+    ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -185,6 +179,8 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 - Make sure Install Supporting Objects is **on** and click **Next** again.
 
 - Click **Install** to install the supporting objects and finish importing the application.
+
+- To use the Vector Search capabilities of this application, you need to perform the steps mentioned in Lab - [Create Vector Search Configuration (Optional)](?lab=movies-vector-search) > Task 1, Task 2 and Task 4.
 
 ## Acknowledgements
 

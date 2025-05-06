@@ -475,7 +475,7 @@ You now know how to use SQL commands in Page Designer regions and processes to g
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 6 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/lab-6-241.sql) to download a copy of the app at the end of Lab 6.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-6.sql) to download a copy of the app at the end of Lab 6.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
