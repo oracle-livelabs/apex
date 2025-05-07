@@ -72,6 +72,7 @@ In this lab, you will:
     ```
     ![SQL commands editor](images/load-onnx.png ' ')
 
+    Read more about the pre-trained ONNX model being used in this blog: https://blogs.oracle.com/machinelearning/post/use-our-prebuilt-onnx-model-now-available-for-embedding-generation-in-oracle-database-23ai
 ## Task 3: Create a Vector Provider
 
 Vector providers are configured to convert text into an embedding.
