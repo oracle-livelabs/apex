@@ -1,8 +1,8 @@
-# Build a RAG Chatbot using Low-Code APEX
+# Build an Upload and Ingest for AI Agent using Low-Code APEX
 
 ## Introduction
 
-This lab walks the user 
+This lab walks the user through the process of building an APEX and completing the first half of the application - the Upload & Ingest functionality. Using the OCI REST Data Source of Object Storage, the user can see what is in the Bucket that ther knowledge base will be trained on. By executing a process to trigger the Ingest, the AI Agent will be trained on the newest data loaded. 
 
 Estimated time - 45 minutes
 
@@ -11,10 +11,10 @@ Estimated time - 45 minutes
 * Provision a 23ai ADB and APEX App
 * Update the Credentials to Connect to OCI Resources
 * Create the Application
-* Connect Rest Sources
-* Build the Question Panel
-* Build the Chat Panel
-* Test the application
+* Create REST Data Sources
+* Create Object Storage List Page
+* Test Upload Functionality
+* (Optional) Double check that the Ingestion job has fired
 
 ### Prerequisites
 
@@ -305,13 +305,13 @@ Next we will create the Open Upload Region Action.
 
 5. Verify that the file is updated in the classic report on page 1 by navigating back to the console
 
-6. optional: double check that Ingestion job has fired
-		1. Cloud Console
-		2. Hamburger Mentu -> Analytics & AI
-		3. GenAI Agents
-		4. Click Knowledge Base
-		5. Click Data Source
-Check if Name “APEX_INGEST” is there, and check lifecycle State Accepted/Processing/Succeeded
+## (Optional) Task 7: Double check that the Ingestion job has fired
+1. Navigate to the OCI Cloud Console
+
+2. Click on the Hamburger Menu button at the top right and select **Analytics & AI**, then **GenAI Agents**.
+3. Click **Knowledge Base** at the bottom of the page.
+
+4. Click **Data Source** and Check for the Name **“APEX_INGEST”** and confirm that it is there, and check lifecycle State **Accepted/Processing/Succeeded**
 
 Thank you for completing this lab.
 
