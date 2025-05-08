@@ -46,7 +46,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-
 * **Authors:**
 	* Kevin Xie - Cloud Architect
 	* Nicholas Cusato - Cloud Architect

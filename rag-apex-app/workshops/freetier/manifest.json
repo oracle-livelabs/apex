@@ -22,6 +22,10 @@
             "filename": "../../3-utilize-rag-apex-app/utilize-rag-apex-app.md"
         },
         {
+            "title": "Lab 3: Build a RAG Chatbot using Low-Code APEX",
+            "filename": "../../4-chatbot-rag-apex-app/chatbot-rag-apex-app.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

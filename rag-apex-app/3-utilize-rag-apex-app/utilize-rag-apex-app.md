@@ -133,7 +133,7 @@ Estimated time - 45 minutes
 
 	![Default and Next Button](./images/create-from-scratch.png "")
 
-5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https:_//objectstorage._<region_>.oraclecloud.com/n/_<namespace_>/**. Select **Next** to continue.
+5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https:_//objectstorage._<region_>.oraclecloud.com/n/_<namespace_>/b/RAG/o/**. Select **Next** to continue.
 	* Example region: us-chicago-1
 	* Namespace: tenancy name 
 
@@ -156,6 +156,10 @@ Estimated time - 45 minutes
 
 	![Options for advanced Parameters](./images/advanced-parameters.png)
 
+
+9. Observe the object listed in the bucket and select **Create REST Data Source** to complete the discovery. 
+
+	![Complete REST discovery](./images/create-rest-data-source-complete.png)
 
 ## Task 5: Create Object Storage List Page
 
@@ -203,7 +207,7 @@ Next we will create the upload functionality to send files to object storage.
 
 Next we will create the Open Upload Region Action. 
 
-8. Right click the **Upload Button** and select **Create Dynamic Action**. Modify the options to the include the following for the **True** option:
+8. Right click the region **Object Storage List** and select **Create Button**. Name it **Upload**, then right click and select **Create Dynamic Action**. Modify the options to the include the following for the **True** option:
 	* **Name:** Open Region
 	* **Action:** Open Region
 	* **Selection Type:** Region
@@ -247,7 +251,7 @@ Next we will create the Open Upload Region Action.
 	</copy>
 	```
 
-* **Note:** Be sure to exit the l_request_url to include the correct namespace for you tenancy. 
+* **Note:** Be sure to edit the variable l_request_url to include the correct namespace for you tenancy. 
 
 	![name the child process and add pl/sql](./images/plsql-process.png)
 
@@ -299,9 +303,11 @@ Next we will create the Open Upload Region Action.
 
 2. Select the button **Upload** to begin testing.
 
-3. Select the **File button** and select the file downloaded here:
+	![upload button for popup](./images/upload-test.png)
 
-4. Click Upload & Ingest to ingest the file to the knowledge .
+3. Select the **File button** and select the file downloaded here. Click Upload & Ingest to ingest the file to the knowledge.
+
+	![file loading and ingest button](./images/upload-and-ingest-new-file.png)
 
 5. Verify that the file is updated in the classic report on page 1 by navigating back to the console
 
