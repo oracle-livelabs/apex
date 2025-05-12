@@ -87,7 +87,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
     - Icon: **fa-share-alt**
 
-    ![Property Editor](images/change-icon.png " ")
+    ![Property Editor](images/change-icon.png =40%x*)
 4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
 
     ```
@@ -180,7 +180,7 @@ In this task, you add a Share button that allows a user to share the post via em
 
     ![App output](images/run-app-share.png " ")
 
-    ![Image share via email](images/image-share-mail.png " ")
+    ![Image share via email](images/image-share-mail.png =60%x*)
 
 ## Task 3: Enable Push Notifications
 
@@ -202,7 +202,7 @@ In this task, you enable Push Notifications for the Social Media App. Whenever a
 
     Click **Apply**.
 
-    ![add column wizardr](images/new-column.png " ")
+    ![add column wizardr](images/new-column.png =50%x*)
 
 3. The next step is to create an Automation. This automation will frequently check if there has been any update to the SM\_POSTS table and will trigger the Push Notification accordingly.
 To create an Automation, navigate to **Shared Components** and under Workflows and Automations, click **Automations**.
@@ -301,7 +301,7 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     ![PWA settings page](images/push-notify-settings.png " ")
 
-    ![PWA settings page](images/confirm-settings.png " ")
+    ![PWA settings page](images/confirm-settings.png =60%x*)
 
 15. Click **+ Add Settings Page**.
 
@@ -309,7 +309,7 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
 16. **Create Push Notifications Settings Page** dialog window appears. Click **Create**.
 
-    ![Push Notifications settings page](images/push-notify-page-create.png " ")
+    ![Push Notifications settings page](images/push-notify-page-create.png =60%x*)
 
 17. Progressive Web App is updated. Now, **Save and Run** the page.
 
@@ -323,11 +323,11 @@ To create an Automation, navigate to **Shared Components** and under Workflows a
 
     ![Settings page](images/enable-push-notify.png " ")
 
-    ![Settings page](images/enable-checkbox.png " ")
+    ![Settings page](images/enable-checkbox.png =60%x*)
 
 20. Now, if a user 'Likes' any of your posts, you will receive a push notification on your device.
 
-    ![App output](images/show-push-notify.png " ")
+    ![App output](images/show-push-notify.png =60%x*)
 
 Note:
 
@@ -360,7 +360,7 @@ Note:
 
     Click **Create**.
 
-    ![PWA page](images/add-shortcut-images.png " ")
+    ![PWA page](images/add-shortcut-images.png =60%x*)
 
     You will see how the shortcut looks after completing Task 5. Similarly, you can add multiple shortcuts, each pointing to a different page in your app.
 
@@ -374,11 +374,11 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
 2. In the PWA Screenshot wizard, enter a Description, upload a Screenshot and click **Create**.
 
-    ![PWA page](images/add-screenshot-image.png " ")
+    ![PWA page](images/add-screenshot-image.png =60%x*)
 
 3. Repeat steps 1-2 to add as many screenshots as you would like and click **Apply Changes**.
 
-    ![PWA page](images/apply-changes.png " ")
+    ![PWA page](images/apply-changes.png =60%x*)
 
 4. Click **Save and Run** the page.
 
@@ -388,7 +388,7 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     ![App Home page](images/install-app.png " ")
 
-    ![App Home page](images/install-app-ss.png " ")
+    ![App Home page](images/install-app-ss.png =60%x*)
 
 6. Once the pwa is installed, right-click on the app icon in your taskbar/dock and view the shortcut called **Timeline** that we created earlier. Clicking on the shortcut will directly open the corresponding page in the app.
 

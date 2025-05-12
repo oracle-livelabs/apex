@@ -53,7 +53,7 @@ To view debug messages for a specific workflow instance:
         - Debug Level: **Info**
 
     ![wait for feedback](./images/debug-level-info.png " ")
-    
+
 7. Navigate back to Application Id and click **Utilities**.
 
      ![wait for feedback](./images/go-back-application-page.png " ")
