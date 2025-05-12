@@ -86,7 +86,7 @@ You now know how to run the app and explore the Gen AI features of the app.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, June 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
 
 
 

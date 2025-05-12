@@ -64,7 +64,8 @@ Estimated Time: 60 minutes
 | [Configure the OCI API Keys](?lab=3-configure-oci) | 10 minutes |
 | [Build a Conversational Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
-| [Run the Application](?lab=7-run-app) | 5 minutes |
+| [Run the Application](?lab=6-run-app) | 5 minutes |
+| [OPTIONAL - Implement RAG using AI Vector Search](?lab=7-vector-search) | 15 minutes |
 
 Total estimated time: 60 minutes
 
@@ -93,4 +94,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgements
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

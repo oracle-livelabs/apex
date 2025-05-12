@@ -140,3 +140,9 @@ To Enable Generative AI in Oracle APEX:
     !["Page Designer"](images/highschool-chunk.png " ")
 
 8. All set. Now, run the application and see it in action! Follow Lab 6: [Run the Application](?lab=6-run-app) to run the app.
+
+
+## Acknowledgments
+
+ - **Author** - Apoorva Srinivas, Senior Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
