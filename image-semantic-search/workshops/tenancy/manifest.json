@@ -14,12 +14,12 @@
         "filename": "../../1-import-app/1-import-app.md"
       },
       {
-        "title": "Lab 3: Export and Load ONNX Models",
-        "filename": "../../3-configure-db/3-configure-db.md"
+        "title": "Lab 2: Export and Load ONNX Models",
+        "filename": "../../2-export-onnx-model/2-export-onnx-model.md"
       },
       {
-        "title": "Lab 4: Run the Application",
-        "filename": "../../4-run-app/4-run-app.md"
+        "title": "Lab 3: Add Semantic Search to APEX Application",
+        "filename": "../../3-edit-application/3-edit-application.md"
       },
       {
         "title": "Lab 5: Enhance the app with Mobile Features",

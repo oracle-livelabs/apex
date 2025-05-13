@@ -16,7 +16,7 @@ In this lab, you:
 - Add Shortcuts to the PWA app
 - Include screenshots to be displayed while installing the PWA app
 
-## Task 1: Add the Image Upload item for image search
+## Task 1: Add Image Upload item for image search
 
 In this task, you will create a new region Page item to upload image for search.
 
@@ -42,14 +42,14 @@ In this task, you will create a new region Page item to upload image for search.
 
     - Under Identification:
 
-        - Name: **P1_IMAGE_SEARCH_BLOB**
+        - Name: **P1\_IMAGE\_SEARCH\_BLOB**
         - Type: **Image Upload**
 
     - Label > Label: **Search Image**
 
     - Display > Display As: **Block Dropzone**
 
-    - Storage > Type: **Table APEX_APPLICATION_TEMP_FILES**
+    - Storage > Type: **Table APEX\_APPLICATION\_TEMP\_FILES**
 
     ![Create Region page](images/property-editor2.png " ")
 
@@ -81,13 +81,14 @@ In this task, you will create a new region Page item to upload image for search.
 
         ```
          <copy>
-          SELECT FILENAME FROM APEX_APPLICATION_TEMP_FILES WHERE NAME =:P1_IMAGE_SEARCH_BLOB;
-          </copy>
+         SELECT FILENAME FROM APEX_APPLICATION_TEMP_FILES
+         WHERE NAME =:P1_IMAGE_SEARCH_BLOB;
+         </copy>
         ```
 
     ![Create Region page](images/sql-query2.png " ")
 
-## Task 2: Add the Image Upload item for image search
+## Task 2: Add Image Upload Button
 
 In this task, you will create a new button to open the image search region.
 
@@ -110,26 +111,48 @@ Right-click on the After Logo region, and click **Create Button**.
     - Under Appearance:
 
         - Button Template: **Text with Icon**
-        -CSS Classes: **nav-bar**
-        -Icon: **fa-image**
+        - CSS Classes: **nav-bar**
+        - Icon: **fa-image**
 
     - Behavior > Action: **Defined by Dynamic Action**
 
     ![Property Editor](images/image_search_button.png " ")
 
-3. Click **Save and Run** to test the changes.
+4. Right click on the IMAGE_SEARCH button and select **Create Dynamic Action**.
 
-    ![Page Designer](images/save-and-run.png " ")
+    ![Create DA](images/create-da.png " ")
 
-4. Click **Add Post**. An Image Upload dialog opens. Choose an image or drag-and-drop the image. You will now be able to crop the image and click on **Apply Changes**. Once ready, click on **Post** to post the image to your Timeline.
+5. In the Property Editor of the New action, enter Identification > Name : **Open Image Search Dialog**
 
-    ![Image upload dialog window](images/add-post.png " ")
+    ![DA Property Editor](images/open-dialog.png " ")
 
-    ![Image upload dialog window](images/crop-image.png " ")
+6. In the True Actions, select the show and enter the following in the property editor:
 
-5. The new image now appears on your Social Media Timeline.
+    - Identification > Action: Execute Javascript code
 
-    ![App output](images/sm-timeline.png " ")
+    - Settings > Code : copy and paste the below code
+
+        ```
+         <copy>
+         apex.item('P1_SEARCH').setValue('');
+         </copy>
+        ```
+
+    ![App output](images/edit-da1.png " ")
+
+7. In the rendering tree editor, under the created dynamic action, right click on the True Action and click Create True Action.
+
+    ![Add True Action](images/add-true2.png " ")
+
+8. In the property editor, select the following:
+
+    - Identification > Action: **Show**
+
+    - Under Affected Elements:
+        - Selection Type: **Region**
+        - Region: **Image Search**
+
+    ![Add True Action](images/edit-da2.png.png " ")
 
 ## Task 2: Add the Share Button
 

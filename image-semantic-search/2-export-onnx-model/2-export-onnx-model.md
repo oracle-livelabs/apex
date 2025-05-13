@@ -1,0 +1,225 @@
+# Export and Load the CLIP ONNX Pipeline Model
+
+## Introduction
+
+In this lab, you'll learn how to export a CLIP multi-modal ONNX pipeline model using the OML4Py client and how to load the exported ONNX Model to your Oracle Database.This step is pivotal for enabling semantic search capabilities in applications, where users can search using both text and images.
+
+By the end of this lab, you'll have a CLIP model integrated into your Oracle Database environment, ready to generate embeddings for both images and text, facilitating advanced semantic search functionalities.
+
+Estimated Time: 20 Minutes
+
+### Objectives
+
+In this lab, you:
+
+- Export CLIP ONNX Pipeline model
+- Upload the exported model to Object Storage
+- Load the CLIP ONNX Model onto the Database
+
+## Task 1: Export ONNX Pipeline Model
+
+In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Client
+
+**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4PY client is installed.
+
+1. Navigate to terminal where you have installed the OML4PY client and to start Python, copy paste the following:
+
+    ```
+     <copy>
+     Python
+     </copy>
+    ```
+
+   ![Start Python](images/start-python.png " ")
+
+2. Import OML and connect to a local database/ADB:
+
+    ```
+     <copy>
+     import oml
+     oml.connect(user="USERNAME", password="PASSWORD", host="host.oracle.com", port=1521, service_name="service.oracle.com")
+     </copy>
+    ```
+
+   ![Import OML and Connect to DB](images/import-oml.png " ")
+
+3. To get a list of all preconfigured models, import ONNXPipelineConfig from oml.utils
+
+    ```
+     <copy>
+     from oml.utils import ONNXPipelineConfig, ONNXPipeline
+     print(ONNXPipelineConfig.show_preconfigured())
+     </copy>
+    ```
+
+   ![List Preconfigured Model](images/list-model.png " ")
+
+4. Export the CLIP  preconfigured embedding model to a local folder
+    ```
+     <copy>
+     from oml.utils import ONNXPipeline,ONNXPipelineConfig
+    em = ONNXPipeline("openai/clip-vit-large-patch14",config=config)
+    em.export2file("clip-vit-large-patch14","/scratch/")
+     </copy>
+    ```
+
+   ![Export Model ](images/export-model.png " ")
+
+    *Note:* You can work with any available preconfigured CLIP Models in the OML4Py Client.
+
+5. The previous step, CLIP models produces 2 files - 1 for image and 1 for text. You can verify that the files were produced in python or using file explorer.
+
+    ![Check Export](images/model_exported.png " ")
+
+## Task 2: Upload the Model to Object Storage
+
+In this task, you will upload the exported models in the previous task, to object storage.
+
+1. Login into your OCI Account.
+
+   ![OCI Login](images/oci-login.png " ")
+
+2. Click on the navigation bar and select Storage > Object Storage & Archive Storage > Buckets.
+
+   ![Click Buckets](images/buckets.png " ")
+
+3. Select **Create Bucket**.
+
+   ![Create Bucket](images/create_bucket1.png " ")
+
+4. Enter the Bucket Name as **ONNX-Pipeline-Model-Export** and click Create:
+
+   ![Create Bucket](images/create-bucket2.png " ")
+
+5. Navigate to the Bucket details and select **Upload**.
+
+   ![Upload Object](images/upload-object.png " ")
+
+6. Drag and drop both the exported model files into the Upload Objects wizard and click **Upload**.
+
+    ![Upload Model](images/upload-object2.png " ")
+
+7. Once both the files are uploaded and the status shows **Finished**, click **Close**.
+
+    ![Close Upload Object](images/upload-object3.png " ")
+
+## Task 3: Create Pre-Authenticated Request for the objects
+
+1. Click the three dots in the object and select **Create Pre-Authenticated Request**
+
+    ![Click PAR](images/click-par.png " ")
+
+2. In the Create Pre-Authenticated Request window, select the following:
+
+    - Create Pre-Authenticated Request Target: **Object**
+
+    - Access Type: **Permit object reads**
+
+     Click **Create Pre-Authenticated Request**  button
+
+   ![Click Timeline](images/create-par.png " ")
+
+3. **Copy** the dedicated endpoint PAR Request URL and click **Close**.
+
+   ![Click Timeline](images/create-par2.png " ")
+
+4. Repeat the steps 1-3 to generate PAR for the text model and store the PAR, which is going to be used in later labs.
+
+## Task 4: Grant DB privileges
+
+Before uploading the ONNX model to your database schema, you must grant the schema the privilege to create mining models while logged in as SYS/ADMIN.
+
+1. Login as SYS/Admin User and execute the below command.
+
+    ```
+     <copy>
+     GRANT EXECUTE ON DBMS_CLOUD TO <YourSchemaName> ;
+     GRANT CREATE MINING MODEL TO <YourSchemaName>;
+     </copy>
+    ```
+
+    ![Execute Grants](images/grants.png " ")
+
+2. Login to your APEX Workspace, and navigate to **SQL Commands**, to create credentials of your user to access the Object storage bucket.
+
+    ![SQL Commands](images/sql-commands.png " ")
+
+3. Copy and paste the following code with the API Keys saved from Task 2.
+
+    ```
+     <copy>
+     BEGIN
+     dbms_cloud.create_credential (
+     credential_name => 'onnx_obj_store_cred_image',
+     username        => '<Your username>',
+     password        => '<AUTH Token>'
+     );
+     END;
+     </copy>
+    ```
+
+    Click **Run**.
+
+    ![Create Credentials](images/create-creds.png " ")
+
+## Task 5: Load ONNX Model to Oracle Database
+In this lab, you will load the ONNX Models into your database.
+
+1. Copy and paste the below to load the CLIP text model, by replacing the object_uri with PAR URL created in Task 3.
+
+    ```
+     <copy>
+     BEGIN
+     DBMS_VECTOR.LOAD_ONNX_MODEL(
+     model_name => 'clip_txt_model',
+     model_data => DBMS_CLOUD.GET_OBJECT(
+                     credential_name => 'onnx_obj_store_cred_image',
+                     object_uri      => '<Enter your PAR URL for the text model>'
+                  ),
+     metadata   => JSON('{
+         "function": "embedding",
+         "embeddingOutput": "embedding",
+         "input": { "input": ["data"] }
+        }')
+     );
+     END;
+     </copy>
+    ```
+
+    ![Load text model](images/text-model.png " ")
+
+2.  Copy and paste the below to load the CLIP image model, by replacing the object_uri with PAR URL created in Task 3.
+
+    ```
+     <copy>
+     BEGIN
+     DBMS_VECTOR.LOAD_ONNX_MODEL(
+        model_name => 'clip_img_model',
+        model_data => DBMS_CLOUD.GET_OBJECT(
+                     credential_name => 'onnx_obj_store_cred_image',
+                     object_uri      => '<Enter your PAR URL for the image model>>'
+                  ),
+     metadata   => JSON('{
+        "function": "embedding",
+         "embeddingOutput": "embedding",
+         "input": { "input": ["data"] }
+        }')
+     );
+     END;
+     </copy>
+    ```
+
+    ![Load image model](images/image-model.png " ")
+
+Here, you assign the name "clip_txt_model" to the Text model and "clip_img_model" to the Image model being imported.
+
+## Summary
+
+You now know how to export and load ONNX Pipeline Models to your Oracle Database.
+
+You may now **proceed to the next lab**.
+
+## Acknowledgments
+
+- **Author** - Sahaana Manavalan,Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, May 2025
