@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks the user through the process of building an APEX and completing the first half of the application - the Upload & Ingest functionality. Using the OCI REST Data Source of Object Storage, the user can see what is in the Bucket that ther knowledge base will be trained on. By executing a process to trigger the Ingest, the AI Agent will be trained on the newest data loaded. 
+This lab walks the user through the process of building an APEX and completing the first half of the application - the Upload & Ingest functionality. Using the OCI REST Data Source of Object Storage, the user can see what is in the Bucket that their knowledge base will be trained on. By executing a process to trigger the Ingest, the AI Agent will be trained on the newest data loaded. 
 
 Estimated time - 45 minutes
 
@@ -20,6 +20,7 @@ Estimated time - 45 minutes
 
 * An OCI cloud account
 * Subscription to US-Central Chicago Region
+* Previous Lab has been completed
 
 ## Task 1: Provision a 23ai ADB and APEX App
 
@@ -31,7 +32,7 @@ Estimated time - 45 minutes
 
 	![Navigate to Autonmous Database](./images/nav-adb.png "")
 
-3. Ensure you are in the correct compartment and select **Create Autonmous Database**. The region in which you provision the ADB doesn't matter as much as the previous GenAI services Lab as the ADB will use the service route to access the model. 
+3. Ensure you are in the correct compartment and select **Create Autonomous Database**. The region in which you provision the ADB doesn't matter as much as the previous GenAI services Lab as the ADB will use the service route to access the model. 
 
 	![Console create ADB button](./images/create-adb-button.png "")
 
