@@ -26,10 +26,10 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 1: Create a compartment
 
-1. Navigate to the hamburger menu in the top left-hand corner. Select **'Identity & Security'**, under the **'Identity'** section choose **'Compartments'**.
+1. Navigate to the hamburger menu in the top left-hand corner. Select **Identity & Security**, under the **Identity** section choose **Compartments**.
    	![Navigation menu to object storage buckets](./images/Compartment.png  "")
 
-2. Select the button **'Create Compartment'**. Enter in a name, for this example I will be naming the compartment **'LiveLab'**.
+2. Select the button **Create Compartment**. Enter in a name, for this example I will be naming the compartment **LiveLab**.
 	![Navigation menu to object storage buckets](./images/CreateCompartment.png  "")
 
 ## Task 2: Create Bucket for Knowledge Base
@@ -38,11 +38,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Navigation menu to object storage buckets](./images/nav-buckets.png  "")
 
-2. Select **Create Bucket**, name the nucket **RAG**, and leave everything else as default. Select Create
+2. Select **Create Bucket**, name the bucket **RAG**, and leave everything else as default. Select Create.
 
 	![Create Bucket button](./images/create-bucket.png "")
 
-3. Navigate to the newly created bucket by selecting from the list the name **RAG**. Scroll down on the bucket page and select **Upload**. 
+3. Navigate to the newly created bucket by selecting from the list, **RAG**. Scroll down on the bucket page and select **Upload**. 
 
 	![Create Bucket button](./images/upload-pdf.png "")
 
@@ -53,7 +53,7 @@ Basic experience with OCI Cloud Console and standard components.
 ## Task 3: Create your Knowledge Base
 
 1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **'Generative AI Agents'**. 
-**Note:** Make sure you are in the correct region **US-Midwest Chicago** or else the Generative AI options won't be visable.
+ **Note:** Make sure you are in the correct region **US-Midwest Chicago** or else the Generative AI options won't be visable.
 
 	![Create Bucket button](./images/NavigateAIAgent.png "")
 
@@ -61,11 +61,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/createknowledgebase.png "")
 
-3. Enter in a name for your knowledge base, **'RAG-KB'**. Under **Data sources** click **'Specify data source'**.
+3. Enter in a name for your knowledge base, **RAG-KB**. Under **Data sources** click **'Specify data source'**.
 
 	![Create Bucket button](./images/NewKB.png "")
 
-4. Select the Object Storage bucket you created earlier, **'RAG'**, and check **'Select all in bucket'**. Click **'Create'**.
+4. Select the Object Storage bucket you created earlier, **RAG**, and check **'Select all in bucket'**. Click **'Create'**.
 
 	![Create Bucket button](./images/DSKB.png "")
 
@@ -83,7 +83,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/CreateAgent.png "")
 
-3. Enter a name, **'RAG-AGENT'**, ensure you are in the correct compartment, optionally enter in a welcome message, & click **'Next'**.
+3. Enter a name, **RAG-AGENT**, ensure you are in the correct compartment, optionally enter in a welcome message, & click **Next**.
 
 	![Create Bucket button](./images/agent.png "")
 
@@ -109,15 +109,15 @@ Basic experience with OCI Cloud Console and standard components.
    
 ## Task 5: Generate API Keys
 
-1. Navigate to your profile icon on the right-hand side of the screen. Select **'User Settings'**. 
+1. Navigate to your profile icon on the right-hand side of the screen. Select **User Settings**. 
 
 	![Create Bucket button](./images/profile.png "")
 
-2. On the left under **'Resources'**, select **'API keys'**
+2. On the left under **Resources**, select **API keys**
 
 	![Create Bucket button](./images/API.png "")
 
-3. Make sure **'Generate API Key Pair'** is selected. Download your private & public key because you will need these for later. After downloading, select **'Add'**. You will see a configuration file preview, you can close this. You may proceed to the next lab. 
+3. Make sure **Generate API Key Pair** is selected. Download your private & public key because you will need these for later. After downloading, select **Add**. You will see a configuration file preview, you can close this. You may proceed to the next lab. 
 
       ![Create Bucket button](./images/gen.png "")
 
