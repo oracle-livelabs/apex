@@ -310,4 +310,4 @@ You may now **proceed to the next lab**.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

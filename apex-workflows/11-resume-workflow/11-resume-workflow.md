@@ -53,7 +53,7 @@ To view debug messages for a specific workflow instance:
         - Debug Level: **Info**
 
     ![wait for feedback](./images/debug-level-info.png " ")
-    
+
 7. Navigate back to Application Id and click **Utilities**.
 
      ![wait for feedback](./images/go-back-application-page.png " ")
@@ -112,11 +112,17 @@ This has been addressed now. Try the following steps:
 
 Let’s say a hospital is using the Doctor Appointments Made Easy! application to manage patient appointments. A patient named Rajesh has already received verbal approval for his appointment before the workflow was submitted. However, the system doesn’t recognize this verbal approval, and the workflow is currently waiting for Dr. Anachatt to approve it.
 
-1. Go to **Doctor Appointments Made Easy!** application page, click **10 - Form on Appointment**.
+With the new enhancement, the workflow does not need to be restarted. Instead, an administrator can:
+
+- Suspend the workflow at its current step.
+- Select the final approval activity from the available workflow steps.
+- Resume the workflow from that step, effectively bypassing unnecessary approvals.
+
+1. Go to **Doctor Appointments Made Easy!** application and click **10 - Form on Appointment** page.
 
     ![wait for feedback](./images/navigate-page-10.png " ")
 
-2. In the left pane, right click on Buttons and select **Create Page Item**.
+2. In the left pane, navigate to **Buttons** region and select **Create Page Item**.
 
     ![wait for feedback](./images/create-a-new-page-item.png " ")
 
@@ -125,12 +131,15 @@ Let’s say a hospital is using the Doctor Appointments Made Easy! application t
     - Under Identification:
 
         - Name: **P10\_ACTIVITY\_STATIC\_ID**
+
         - Type: **Select List**
 
     - Under List of Values:
 
         - Type: **SQL Query**
-        - SQL Query: Copy and paste the below code
+
+        - SQL Query: Copy and paste the below code:
+
         ```
         <copy>
         select wa.name as name,
@@ -144,61 +153,68 @@ Let’s say a hospital is using the Doctor Appointments Made Easy! application t
         and wv.workflow_static_id = wa.workflow_static_id
        </copy>
        ```
+
        - Display Extra Values: **Toggle Off**
+
        - Null Display Value: **- Select -**
 
     ![wait for feedback](./images/create-page-item-activity-static-id.png " ")
 
-4. Go to Processing tab, select **Resume** process. In the Property Editor, enter/select the following:
+4. Go to **Processing** tab, select **Resume** process. In the Property Editor, enter/select the following:
 
     - Under Settings:
 
         - Activity Static ID Item: **P10\_ACTIVITY\_STATIC\_ID**
 
-    Save the changes.
+5. Click **Save and Run**.
 
     ![wait for feedback](./images/resume-process-settings.png " ")
 
-5. In the runtime environment, login as **STEVE** and navigate to **New Appointment**. Enter/select the following:
+6. In the runtime environment, login as **STEVE** and navigate to **New Appointment**. Enter/select the following:
 
     - Name: **RAJESH**
-    - Email: Enter any email id
-    - Problem: **Psychiatric**
-    - Appointment Date: Choose any date
-    - Doctor: **ANACHATT**
-    - Age: 45
 
-    Click on Submit.
+    - Email: Enter your email address
+
+    - Problem: **Psychiatric**
+
+    - Appointment Date: Choose appointment date
+
+    - Doctor: **ANACHATT**
+
+    - Age: **45**
+
+7. Click **Submit**.
 
     ![wait for feedback](./images/new-appointment.png " ")
 
-6. Now, logout from the app and login as **ANACHATT**. Navigate to **Doctor Tasks** from the **Navigation Menu**.
+8. Now, logout and login as **ANACHATT**. Navigate to **Doctor Tasks** from the **Navigation Menu**.
 
     ![wait for feedback](./images/navigate-doctor-tasks.png " ")
 
-7. Click on **Approve** for Appointment for RAJESH.
+9. Click **Approve** for RAJESH's appointment.
 
     ![wait for feedback](./images/approve-the-task.png " ")
 
-8. Login again as **Steve**.
+10. Login again as **Steve**.
 
-9. Navigate to **Monitor Appointment Workflows** from the Navigation Menu by expanding **Dashboard**. Click on **Doctor Appointment** workflow.
+11. Navigate to **Monitor Appointment Workflows** under **Dashboard**. Click **Doctor Appointment** workflow.
 
     ![wait for feedback](./images/active-workflow.png " ")
 
-10. Click on **Suspend** to suspend the current activity.
+12. Click **Suspend**.
 
     ![wait for feedback](./images/suspend-the-activity.png " ")
 
-11. Again, click on **Doctor Appointment** workflow.
+13. Again, navigate to **Doctor Appointment** workflow.
 
     ![wait for feedback](./images/suspended-activity.png " ")
 
-12. Select **Send Thank You Note To Patient** from the activity select list and click on **Resume** button.
+14. Select **Send Thank You Note To Patient** activity from the activity select list and click **Resume** button.
 
     ![wait for feedback](./images/resume-another-activity.png " ")
 
-13. The selected activity is now resumed and the workflow status has been changed to **COMPLETED**.
+15. The selected activity is now resumed and the workflow status has been changed to **COMPLETED**.
 
 ## Summary
 
