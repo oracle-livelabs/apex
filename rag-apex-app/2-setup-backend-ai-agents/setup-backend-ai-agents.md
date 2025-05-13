@@ -52,7 +52,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 3: Create your Knowledge Base
 
-1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **'Generative AI Agents'**. 
+1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **Generative AI Agents**. 
  **Note:** Make sure you are in the correct region **US-Midwest Chicago** or else the Generative AI options won't be visable.
 
 	![Create Bucket button](./images/NavigateAIAgent.png "")
@@ -61,11 +61,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/createknowledgebase.png "")
 
-3. Enter in a name for your knowledge base, **RAG-KB**. Under **Data sources** click **'Specify data source'**.
+3. Enter in a name for your knowledge base, **RAG-KB**. Under **Data sources** click **Specify data source**.
 
 	![Create Bucket button](./images/NewKB.png "")
 
-4. Select the Object Storage bucket you created earlier, **RAG**, and check **'Select all in bucket'**. Click **'Create'**.
+4. Select the Object Storage bucket you created earlier, **RAG**, and check **Select all in bucket**. Click **Create**.
 
 	![Create Bucket button](./images/DSKB.png "")
 
