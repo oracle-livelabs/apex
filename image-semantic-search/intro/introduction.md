@@ -60,7 +60,6 @@ If you are stuck or the App is not working as expected, you can download and ins
 | 4 | [Implement Text and Image Search](?lab=application-theme) | 10 minute |
 | 5 | [Run the Application](?lab=authentication) | 5 minutes |
 
-
 ## Learn More - *Useful Links*
 
 - [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
@@ -72,5 +71,5 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025

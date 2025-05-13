@@ -1,12 +1,18 @@
-# Integrate OCI Vision with Oracle APEX
+# Export and Load the CLIP ONNX Pipeline Model
 
 ## Introduction
 
-OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items needing attention, such as X-ray anomalies. Developers can also identify and localize objects in images to automate counting common items, such as packages and vehicles.
+In this lab, you'll learn how to export a CLIP multi-modal ONNX pipeline model using the OML4Py client. This model is pivotal for enabling semantic search capabilities in applications, where users can search using both text and images.​
 
-Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
+The lab will guide you through:​
 
-In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyze and index the images and images with text uploaded by the user.
+- Exporting the ONNX pipeline model using the OML4Py client.
+
+- Uploading the exported model to Oracle Cloud Object Storage.
+
+- Importing the ONNX model into Oracle Database using DBMS\_CLOUD\_AI.IMPORT\_MODEL.
+
+By the end of this lab, you'll have a CLIP model integrated into your Oracle Database environment, ready to generate embeddings for both images and text, facilitating advanced semantic search functionalities.
 
 Estimated Time: 20 Minutes
 
@@ -14,13 +20,15 @@ Estimated Time: 20 Minutes
 
 In this lab, you:
 
-- Export ONNX Pipeline Model
-- Grant Access to Database
-- Load the ONNX Model onto the Database
+- Export CLIP ONNX Pipeline model
+- Upload the exported model to Object Storage
+- Load the CLIP ONNX Model onto the Database
 
 ## Task 1: Export ONNX Pipeline Model
 
-In this task, you will export the CLIP Model, ONNX Pipeline Model using the OML4PY Client
+In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Client
+
+**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4PY client is installed.
 
 1. Navigate to terminal where you have installed the OML4PY client and to start Python, copy paste the following:
 
@@ -57,43 +65,36 @@ In this task, you will export the CLIP Model, ONNX Pipeline Model using the OML4
 4. Export the CLIP  preconfigured embedding model to a local folder
     ```
      <copy>
-     em = ONNXPipeline("openai/clip-vit-base-patch32")
+     em = ONNXPipeline("openai/clip-vit-base-patch32",settings={"ignore_checksum_error":True})
      em.export2file("model_Clip_Test",output_dir="/scratch/")
      </copy>
     ```
 
    ![Export Model ](images/export-model.png " ")
 
-
 14. Click **Apply Changes**.
 
     ![Click Timeline](images/apply-changes.png " ")
 
-## Task 2: Invoke the OCI Vision REST Data Source for Image Classification
+## Task 2: Upload Models to Object Storage
 
-In this task, you create a page process to invoke the OCI Vision REST Data Source for image classification implemented in the previous task.
+In this task, you will upload the exported models in the previous task, to object storage.
 
-1. Navigate to the application homepage by clicking the **Application ID**.
+1. Login into your OCI Account.
 
-   ![Click Timeline](images/click-app-id11.png " ")
+   ![OCI Login](images/oci-login.png " ")
 
-2. Click **1-Timeline** page.
+2. Click on the navigation bar and select Storage > Object Storage & Archive Storage > Buckets.
 
-   ![Click Timeline](images/select-timeline1.png " ")
+   ![Click Buckets](images/buckets.png " ")
 
-3. Right-click **Timeline** region in the Rendering Pane and Select **Create Page Item**.
+3. Select **Create Bucket**.
 
-   ![Click Timeline](images/create-page-item2.png " ")
+   ![Create Bucket](images/create_bucket1.png " ")
 
-4. In the Property Editor, enter the following:
+4. In the Property Editor, enter the Bucket Name as **ONNX Pipeline Model Export** and click Create:
 
-    - Under Identification:
-
-        - Name: **P1\_RESPONSE**
-
-        - Type: **Hidden**
-
-   ![Click Timeline](images/response-page-item1.png " ")
+   ![Create Bucket](images/create_bucket2.png " ")
 
 5. Navigate to the **Processing** Tab (left pane), right-click **Processes** and select **Create Process**.
 
