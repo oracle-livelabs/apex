@@ -81,9 +81,16 @@ In this lab, you will:
 
     ![Page Designer](images/school-id.png ' ')
 
+3. Navigate to Shared Components and select **AI Attributes** under Generative AI.
+    ![Page Designer](images/nav-shared-components.png ' ')
+    ![Shared components page](images/ai-attributes.png ' ')
+
+4. For Service, select the Generative AI service that you configured in Lab 3. In this workshop, we choose **OCI Gen AI**. Click **Apply Changes**.
+    ![AI attributes page](images/select-service.png ' ')
+
 3. Navigate to Shared Components and select **AI Configurations** under Generative AI.
 
-    ![Page Designer](images/nav-shared-components.png ' ')
+    ![Page Designer](images/nav-shared-components-2.png ' ')
     ![Shared components page](images/ai-config.png ' ')
 
 4. Generative AI Configurations contain information such as System Prompt, Welcome Message, and Retrieval-Augmented Generation (RAG) Sources to enable richer interactions with Generative AI services. We create an AI Configuration to store the system prompt for our chat.
@@ -310,4 +317,4 @@ You may now **proceed to the next lab**.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

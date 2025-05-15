@@ -26,7 +26,9 @@ In this lab, you:
 
 ### Downloads
 
-If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab: Task 1: Import the App into an APEX Workspace](?lab=8-appendix&type=OCIGenAI#Task1:ImporttheAppintoanAPEXWorkspace).
+If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the **Appendix Lab**:
+    - [Task 1: Import the App into an APEX Workspace](?lab=8-appendix&type=OCIGenAI#Task1:ImporttheAppintoanAPEXWorkspace)
+    - [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](?lab=8-appendix&type=OCIGenAI#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -91,7 +93,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Static ID: **oci\_gen\_ai**
     - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Task 1 of this lab.
     - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
-    - Model ID: **meta.llama-3.1-70b-instruct** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
+    - Model ID: **meta.llama-3.3-70b-instruct** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
     - Used by App Builder: Toggle the button to turn it **ON**. Note that the Base URL is auto generated.
 
     ![Gen AI services page](images/oci-gen-ai-details.png ' ')
@@ -204,4 +206,4 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 - **Author** - Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

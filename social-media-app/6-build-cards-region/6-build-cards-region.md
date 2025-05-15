@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn to create the CARDS region to display the posts and configure the region attributes.
+In this lab, you will learn to create the CARDS region to display the posts and configure the region attributes.
 
 Estimated Time: 10 minutes
 
@@ -12,6 +12,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
+
 - Create the Cards region to display the posts
 - Configure the attributes of the Cards region to match our design
 
@@ -21,12 +22,11 @@ In this lab, you will:
 
 ## Task 1: Create a Cards Region
 
-1. Navigate to the Rendering Tree and right-click on **Body**, and
-choose **Create Region**.   
+1. In the Rendering Tree, right click **Body**, and select **Create Region**.
 
     ![Create region option](images/create-region-s.png)
 
-2. Update the following attributes in the Property Editor:
+2. In the Property Editor, enter/select the following
 
     - Under Identification:
 
@@ -38,53 +38,53 @@ choose **Create Region**.
 
         - Type: **SQL Query**
 
-        - SQL Query: Copy and Paste the below code:
+        - SQL Query: Copy and Paste the below code in the Code Editor:
 
-       ```
-       <copy>
-        select
-        p.id,
-        p.created_by AS user_name,
-        p.post_comment AS comment_text,
-        p.file_blob,
-        p.file_mime,
+          ```
+           <copy>
+            select
+            p.id,
+            p.created_by AS user_name,
+            p.post_comment AS comment_text,
+            p.file_blob,
+            p.file_mime,
 
-        apex_util.get_since(p.created) post_date,
+            apex_util.get_since(p.created) post_date,
 
-        (
-            select count(*) from SM_REACTIONS smr
-            where smr.post_id=p.id
-        ) as REACTIONS,
+            (
+                select count(*) from SM_REACTIONS smr
+                where smr.post_id=p.id
+            ) as REACTIONS,
 
-        (
-            select 'user-has-liked' from SM_REACTIONS smr
-            where smr.post_id=p.id and created_by=:APP_USER
-        ) USER_REACTION_CSS
+            (
+                select 'user-has-liked' from SM_REACTIONS smr
+                where smr.post_id=p.id and created_by=:APP_USER
+            ) USER_REACTION_CSS
 
-        from SM_POSTS p
+            from SM_POSTS p
 
-        order by p.created desc
-       </copy>
-       ```
+            order by p.created desc
+           </copy>
+          ```
+        Click **OK**
 
-  ![Property Editor](images/title-type1.png)
+    ![Property Editor](images/title-type1.png)
 
-3. Scroll down in the Property Editor to the **Appearance** section:
+    ![Property Editor](images/sql_query.png =40%x*)
 
     - Appearance > CSS Classes box: **t-Chat**
 
-    - Advanced > Static ID: **timeline**.
+    - Advanced > Static ID: **timeline**
 
-  ![Property editor](images/appearance1.png)
+    **Save** the app.
 
-    We are not done with this region yet! We have to configure
-which columns from the query results will be used in which parts of the
-CARDS.
+    ![Property editor](images/appearance1.png)
+
+    Next, we need to configure which columns from the query results will be used in different parts of the CARDS region.
 
 ## Task 2: Configure the Attributes of the Cards Region
 
-1. In the Property Editor, select the **Attributes** tab, and make
-the following changes:
+1. In the Property Editor under the Timeline region, enter/select the following in the **Attributes** tab:
 
     - Card > Primary Key Column 1: **ID**
 
@@ -92,36 +92,39 @@ the following changes:
 
     - Subtitle > Column: **POST_DATE**
 
-  ![Attributes in Property Editor](images/attributes-11.png)
+    ![Attributes in Property Editor](images/attributes-11.png)
 
     - Body > Column: **COMMENT_TEXT**
 
-    - Icon and Badge > Icon Source: **Initials**
+    - Under Icon and Badge:
 
-    - Icon Column: **USER_NAME**
+        - Icon Source: **Initials**
 
-  ![Attributes in Property Editor](images/attributes-21.png)
+        - Icon Column: **USER_NAME**
 
-    And finally (for this Region), scroll down to the Media section, and set
-the following attributes:
+    ![Attributes in Property Editor](images/attributes-21.png)
 
-    - Source: **BLOB column**
+    And finally (for this Region), scroll down to the Media section, and enter/set the following attributes:
 
-    - BLOB Column: **FILE_BLOB**
+    - Under Media:
 
-    - Position: **First**
+        - Source: **BLOB column**
 
-    - Appearance: **Widescreen**
+        - BLOB Column: **FILE_BLOB**
 
-    - Sizing: **Cover**
+        - Position: **First**
 
-    - CSS Classes: **selectDisable**
+        - Appearance: **Widescreen**
 
-    - Image Description: **&COMMENT_TEXT.** (including the period!)
+        - Sizing: **Cover**
+
+        - CSS Classes: **selectDisable**
+
+        - Image Description: **&COMMENT_TEXT.** (including the period!)
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-  ![Attributes in Property Editor](images/attributes-31.png)
+    ![Attributes in Property Editor](images/attributes-31.png)
 
 2. Now, the region is completely configured. Click **Save and Run**.
 
@@ -133,5 +136,5 @@ You may now **proceed to the next lab**
 
 ## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Ankita Beri Product Manager, June 2024
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025
