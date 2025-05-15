@@ -176,17 +176,17 @@ Import them into your workspace. To run the app, please run the steps described 
 
     ![Click My Apps](images/create-project1.png " ")
 
-    ![Click My Apps](images/12-5-2-create-project.png " ")
+    ![Click My Apps](images/create-project.png " ")
 
 3. In the New Project Screen, for Project Name: Enter **APEX Social SignIn** and click **CREATE**.
 
-    ![Click My Apps](images/12-5-3-create.png " ")
+    ![Click My Apps](images/create-new-project.png " ")
 
 4. Click the **OAuth consent screen** (from the left side menu) and click **GET STARTED**
 
-    ![Click My Apps](images/12-5-4-oauth.png " ")
+    ![Click My Apps](images/oauth.png " ")
 
-    ![Click My Apps](images/12-5-4-get-started.png " ")
+    ![Click My Apps](images/get-started.png " ")
 
 5. Under Project Configuration, enter the following:
 
@@ -198,27 +198,27 @@ Import them into your workspace. To run the app, please run the steps described 
 
         Click **Next**
 
-    ![Click My Apps](images/12-5-5.1-app-information.png " ")
+    ![Click My Apps](images/app-information.png " ")
 
      - Under **Audience** > Select **External** and click **NEXT**
 
-    ![Click My Apps](images/12-5-5.2-audience.png " ")
+    ![Click My Apps](images/audience.png " ")
 
     - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
-    ![Click My Apps](images/12-5-5.3-contact-information.png " ")
+    ![Click My Apps](images/contact-information.png " ")
 
     - Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
-    ![Click My Apps](images/12-5-5.4-finish.png " ")
+    ![Click My Apps](images/finish.png " ")
 
 6. Click **CREATE**.
 
-    ![Click My Apps](images/12-5-6-create.png " ")
+    ![Click My Apps](images/create.png " ")
 
 7. Click **CREATE OAUTH CLIENT**.
 
-    ![Click My Apps](images/12-5-7-oauth-create.png " ")
+    ![Click My Apps](images/oauth-create.png " ")
 
 8. Enter the following:
 
@@ -232,15 +232,15 @@ Import them into your workspace. To run the app, please run the steps described 
 
      Click **CREATE**.
 
-    ![Click My Apps](images/12-5-8-create.png " ")
+    ![Click My Apps](images/click-create-cred.png " ")
 
 9. Click **APEX Social Authentication**.
 
-    ![Click My Apps](images/12-5-9-obs.png " ")
+    ![Click My Apps](images/click-apex-social-auth.png " ")
 
 10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
 
-    ![Click My Apps](images/12-5-10-copy-cred.png " ")
+    ![Click My Apps](images/copy-cred.png " ")
 
 11. Login to your APEX workspace and click **Workspace Utilities**.
 
