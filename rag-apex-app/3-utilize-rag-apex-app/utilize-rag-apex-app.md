@@ -330,4 +330,4 @@ Thank you for completing this lab.
 	* Olivia Maxwell - Cloud Architect
 	* Graham Shroyer - Cloud Architect
 	* Rachel Ogle - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, March 2025
+* **Last Updated by/Date** - Nicholas Cusato, May 2025
