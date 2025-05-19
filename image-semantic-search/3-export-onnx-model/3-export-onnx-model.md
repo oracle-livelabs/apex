@@ -140,29 +140,8 @@ Before uploading the ONNX model to your database schema, you must grant the sche
 
     ![Execute Grants](images/grants.png " ")
 
-2. Login to your APEX Workspace, and navigate to **SQL Commands**, to create credentials of your user to access the Object storage bucket.
-
-    ![SQL Commands](images/sql-commands.png " ")
-
-3. Copy and paste the following code with the API Keys saved from Task 2.
-
-    ```
-     <copy>
-     BEGIN
-     dbms_cloud.create_credential (
-     credential_name => 'onnx_obj_store_cred_image',
-     username        => '<Your username>',
-     password        => '<AUTH Token>'
-     );
-     END;
-     </copy>
-    ```
-
-    Click **Run**.
-
-    ![Create Credentials](images/create-creds.png " ")
-
 ## Task 5: Load ONNX Model to Oracle Database
+
 In this lab, you will load the ONNX Models into your database.
 
 1. Copy and paste the below to load the CLIP text model, by replacing the object_uri with PAR URL created in Task 3.
@@ -202,7 +181,7 @@ In this lab, you will load the ONNX Models into your database.
      metadata   => JSON('{
         "function": "embedding",
          "embeddingOutput": "embedding",
-         "input": { "input": ["data"] }
+         "input": { "data": ["data"] }
         }')
      );
      END;
@@ -211,7 +190,7 @@ In this lab, you will load the ONNX Models into your database.
 
     ![Load image model](images/image-model.png " ")
 
-Here, you assign the name "clip_txt_model" to the Text model and "clip_img_model" to the Image model being imported.
+Here, you assign the name "clip\_txt\_model" to the Text model and "clip\_img\_model" to the Image model being imported.
 
 ## Summary
 
@@ -221,5 +200,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Sahaana Manavalan,Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, May 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025

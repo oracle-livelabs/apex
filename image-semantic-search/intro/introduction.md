@@ -2,26 +2,25 @@
 
 ## About this Workshop
 
-In today's data-driven world, the ability to extract valuable insights from visual content has become a game-changer for businesses across industries. Artificial Intelligence (AI) has made significant strides in the field of computer vision, enabling machines to understand and interpret visual data with remarkable accuracy.
+In today's digital landscape, visual content is everywhere—from product photos and social media posts to scanned documents and user-generated media. The ability to search and understand images meaningfully, not just by filenames or tags, has become a powerful differentiator for modern applications. Traditional search methods often miss the context or content of images, limiting their effectiveness in image-rich environments.
 
-In this workshop, you learn to enhance the Oracle APEX Social Media app with OCI Vision for the classification and text detection of images. By integrating OCI Vision with Oracle APEX, businesses can tap into the power of visual intelligence, transforming their data analysis capabilities and revolutionizing user experiences.
+In this workshop, you will learn how to implement image and text semantic search in Oracle APEX using ONNX models and Oracle Database 23ai’s built-in AI Vector Search. You'll enhance a Social Media-style APEX application to intelligently interpret and search both images and text based on semantic meaning. By combining deep learning models with APEX, you’ll unlock next-generation search experiences that go beyond keywords—empowering your apps to truly understand what users are looking for.
 
-Estimated Time: 50 minutes
+Estimated Time: 1 hour
 
 ### Objectives
 
 In this workshop, you:
 
-- Create a REST Data Source in APEX based on the OCI Vision REST Endpoint.
-- Invoke the OCI Vision REST Data Source for Image Classification and Text Detection using the Invoke API Page Process Type.
-- Enhance the App to include the results from OCI Vision and make the images searchable.
-- Make the app mobile ready by enabling PWA and other mobile friendly features.
+- Export and load ONNX Pipeline models that can understand the content of images and text by converting them into vector representations.
 
-<!---
-- Enhance Social Media App with AI-Powered Search.
-- Integrate APEX with OCI using API keys.
-- Seamlessly link APEX with OCI Vision Service through REST Data Sources.
---->
+- Integrate these models into your Oracle Database so they can be used directly from within your APEX application.
+
+- Enhance a Social Media APEX application to automatically extract meaning from uploaded images.
+
+- Enable users to perform intelligent searches,such as finding similar images or related posts—based on visual or textual similarity.
+
+- Build a seamless user experience where image and text search feels natural, accurate, and fast.
 
 ### Prerequisites for Building this App
 
@@ -54,11 +53,11 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Import and Customize Social Media App](?lab=1-import-app) | 5 minutes |
-| 2 | [Prepare Your Environment](?lab=2-load-data-using-data-workshop) | 5 minutes |
-| 3 | [Configure Database Access and Load ONNX Models](?lab=enhance-home-page) | 15 minutes |
-| 4 | [Implement Text and Image Search](?lab=application-theme) | 10 minute |
-| 5 | [Run the Application](?lab=authentication) | 5 minutes |
+| 1 | [Configure OCI Keys](?lab=1-configure-oci) | 5 minutes |
+| 2 | [Import and Edit Social Media App](?lab=2-import-app) | 10 minutes |
+| 3 | [Export and Load ONNX Models](?lab=3-export-onnx-model) | 15 minutes |
+| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 20 minutes |
+| 5 | [Run the Application](?lab=5-run-app) | 5 minutes |
 
 ## Learn More - *Useful Links*
 
