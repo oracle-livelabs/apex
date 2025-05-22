@@ -320,6 +320,8 @@ Next we will create the Open Upload Region Action.
 
 4. Click **Data Source** and Check for the Name **“APEX_INGEST”** and confirm that it is there, and check lifecycle State **Accepted/Processing/Succeeded**
 
+	![verify the ingest job in the OCI console](./images/ingest-job.png)
+
 Thank you for completing this lab.
 
 ## Acknowledgements

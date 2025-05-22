@@ -266,16 +266,15 @@ Next we will create the Question Panel.
 
 	![create new page blank citations](./images/citations-page.png)
 
-3. Click **Edit Page** and select Appearance/Template Options: click Template Defaults
-			1. Check Stretch to Fit Window
-			2. OK
+3. Click **Edit Page** and under **Appearance/Template Options**, click **Template Defaults**, and select **Stretch to Fit Window**. Select **Ok** to save.
 
 	![stretch to fit template](./images/stretch-to-fit.png)
-
 
 3. Right-click Components/Content Body ande select **Create Page Item**. Modify the following on the right side of the screen:
 	* **Name:** P3_SEQ_ID
 	* **Type:** Hidden
+
+	![page item seq id hidden](./images/seq-id-hidden-citations.png)
 
 4. Create the Citation Region by right-clicking Components/Content Body and selecting **Create Region**. Modify the following on the right side of the screen:
 	* **Name:** Citations
