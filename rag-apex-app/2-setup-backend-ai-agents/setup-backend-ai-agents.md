@@ -46,7 +46,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/upload-pdf.png "")
 
-4. Download the sample PDF [here](https://orasenatdpltsecitom03.objectstorage.us-phoenix-1.oci.customer-oci.com/p/ZtYD0BzBps8w3O2sYzLvnync2uSXfZk9SHSHdpaZAMnlxIVpVAEiGY4wmMKSZVEE/n/orasenatdpltsecitom03/b/RAG/o/OCI%20Dedicated%20Region%20At-A-Glance.pdf) and then, drag and drop the sample PDF to the console and select **Upload**.
+4. Download the sample PDF [here](https://docs.oracle.com/en/database/oracle/apex/24.2/htmrn/oracle-apex-release-notes.pdf) and then, drag and drop the sample PDF to the console and select **Upload**.
 
 	![Create Bucket button](./images/drop-pdf-upload.png "")
 
