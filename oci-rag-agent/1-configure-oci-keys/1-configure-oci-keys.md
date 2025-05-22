@@ -1,4 +1,4 @@
-# Getting Started with Oracle Cloud: API Keys,Bucket and  Knowledge Base
+# Configure OCI API Keys and Bucket
 
 ## Introduction
 
