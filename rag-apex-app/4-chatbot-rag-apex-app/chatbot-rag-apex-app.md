@@ -18,7 +18,7 @@ Estimated time - 45 minutes
 * An OCI cloud account
 * Subscription to US-Central Chicago Region
 
-## Task 1: Create the 
+## Task 1: Create the Chatbot Page
 
 1. Navigate to the App Homepage and select **Create New Page**.
 
@@ -243,7 +243,7 @@ Next we will create the Question Panel.
 	</copy>
 	```
 
-* **Note:** Be sure to update the first variable line (**c_agent_endpoint_id**) in the copy section above with the AI Agent OCID with the correct OCID from the OCI console. Make sure there are no spaces in the single quotes.
+* **Note:** Be sure to update the first variable line (**c_agent_endpoint_id**) in the copy section above with the AI Agent Endpoint OCID with the correct OCID from the OCI console. Make sure there are no spaces in the single quotes.
 
 	![generate Response for Child process](./images/generate-response-child.png)
 
