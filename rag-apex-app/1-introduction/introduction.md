@@ -52,4 +52,4 @@ You may now **proceed to the next lab**.
 	* Olivia Maxwell - Cloud Architect
 	* Graham Shroyer - Cloud Architect
 	* Rachel Ogle - Cloud Architect
-* **Last Updated by/Date** - Rachel Ogle, March 2025
+* **Last Updated by/Date** - Rachel Ogle, May 2025
