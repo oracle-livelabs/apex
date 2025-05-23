@@ -136,7 +136,7 @@ Estimated time - 45 minutes
 
 5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https:_//objectstorage._<region_>.oraclecloud.com/n/_<namespace_>/b/RAG/o/**. Select **Next** to continue.
 	* Example region: us-chicago-1
-	* Namespace: tenancy name 
+	* Namespace: Object storage namespace
 
 	![Name and URL for Rest OS source](./images/object-rest.png)
 
