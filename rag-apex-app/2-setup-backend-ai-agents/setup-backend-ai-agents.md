@@ -14,6 +14,7 @@ In this lab, you will:
 * Create an Object Storage Bucket for Knowledge Base
 * Create Knowledge Base
 * Create a GenAI agent
+* Create you agent endpoint
 * Generate API key
 
 ### Prerequisites
@@ -99,13 +100,14 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/toolcreate.png "")   
 
-7. Setup agent endpoint. Make sure **Automatically create an endpoint for this agent** is checked. For the purposes of this LiveLab, leave all Guardrails disabled. Select **Next**.
+7. Setup agent endpoint. Make sure **Automatically create an endpoint for this agent** is checked. For the purposes of this LiveLab, leave all Guardrails disabled. You will need the Endpoint OCID for later in the following labs. Select **Next**.
 
  	![Create Bucket button](./images/endpoint.png "") 
 
  8. Review your agent information and click **Create agent**. You can now proceed to the next task.
 
-	![Create Bucket button](./images/ffinishagent.png "") 
+	![Create Bucket button](./images/ffinishagent.png "")
+
    
 ## Task 5: Generate API Keys
 
