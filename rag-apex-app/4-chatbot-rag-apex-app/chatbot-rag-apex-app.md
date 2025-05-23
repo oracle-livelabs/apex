@@ -177,7 +177,6 @@ Next we will create the Question Panel.
 	  raise_application_error(-20001, 'Error creating session.');
 	 end if;
 	end;
-						 4. Server-side condition
 	</copy>
 	```
 	* **Server-side condition**
