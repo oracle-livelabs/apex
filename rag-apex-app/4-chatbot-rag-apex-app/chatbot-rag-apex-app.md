@@ -327,7 +327,20 @@ Next we will create the Question Panel.
 	![define link on citations](./images/define-link.png)
 
 
-7. Save & Run (green arrow button) (edited) 
+7. Click the **green arrow** at the top right of the page to save the app and run it.
+
+	![save and run green button](./images/save-and-run.png)
+
+8. Test the app functionality by typing a series of questions specific to the knowledge base, such as the following:
+
+* What are the main new features introduced in Oracle APEX 24.2?
+* What are the minimum database and browser requirements for Oracle APEX 24.2?
+* What is the recommended web server for running Oracle APEX 24.2?
+* What improvements have been made to REST source integration?
+* Can you describe the new workflow enhancements in APEX 24.2?
+* What are the new AI-related features, such as "Generate Text with AI" or "Create Custom Data Models Using AI"?
+
+9. Observe the response and click through the citations response to validate answers. 
 
 Thank you for completing this lab.
 

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks the user through the process of building an APEX and completing the first half of the application - the Upload & Ingest functionality. Using the OCI REST Data Source of Object Storage, the user can see what is in the Bucket that their knowledge base will be trained on. By executing a process to trigger the Ingest, the AI Agent will be trained on the newest data loaded. 
+This lab walks the user through the process of building an APEX app and completing the first half of the development - the Upload & Ingest functionality. Using the OCI REST Data Source of Object Storage, the user can see what is in the Bucket that their knowledge base will be trained on. By executing a process to trigger the Ingest, the AI Agent will be trained on the newest data loaded. 
 
 Estimated time - 45 minutes
 
@@ -140,6 +140,9 @@ Estimated time - 45 minutes
 
 	![Name and URL for Rest OS source](./images/object-rest.png)
 
+
+* **Note:** Object Storage Namespace can be obtained from the OCI console by navigating to the bucket.
+
 6. Select **Next** leaving the url base as default.
 
 	![Next button for base url](./images/next-path.png)
@@ -252,11 +255,11 @@ Next we will create the Open Upload Region Action.
 	</copy>
 	```
 
-* **Note:** Be sure to edit the variable **l\_request\_url** to include the correct namespace for you tenancy. 
+* **Note:** Be sure to edit the variable **l\_request\_url** to include the correct namespace for you tenancy. This can be obtained by navigating to the Tenancy page on the OCI console.
 
 	![name the child process and add pl/sql](./images/plsql-process.png)
 
-12. Repeate the last step by right clicking the Process and **add a child process**. Name it the following: **Ingest** and paste the following PL/SQL:
+12. Repeat the last step by right-clicking **Process** and select **add a child process**. Name it the following: **Ingest** and paste the following PL/SQL:
 
 	```
 	<copy>
@@ -284,9 +287,13 @@ Next we will create the Open Upload Region Action.
 	end;
 	</copy>
 	```
-* **Note:** Be sure to edit the following fields: **compartmentId** and **dataSourceId** to match the correct values. As well as update **c\_agent\_endpoint\_id** from the text copied in Lab 1, Task 4, Step 7. d
 
 	![name the child process and add pl/sql](./images/ingest-plsql-process.png)
+
+* **Note:** Be sure to edit the following fields: **compartmentId** and **dataSourceId** to match the correct values. Update **c\_agent\_endpoint\_id** from the text copied in Lab 1, Task 4, Step 7. dataSourceId can be obtained by navigating to the AI Agents page on the OCI console. Using the hamburger menu, select AI & Analytics -> AI Services -> Generative AI Agents - select **Agents** and copy the OCID on the page.
+
+	![Data Source ID location for GenAI Agent](./images/nav-agent-ocid.png)
+
 
 13. Save and Run by clicking the **Green button** at the top right of the page.
 
