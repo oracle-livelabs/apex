@@ -3,11 +3,11 @@
 ## About this Workshop
 The scope of this workshop is to create a Generative AI RAG application using Oracle APEX with Generative AI Agents in Oracle Autonomous Database. This workshop will use Oracle Object Storage as the knowledge base. 
 
-> **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago)** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
-
+Here is a demo of what to expect for the RAG app:
 
 <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmlibnJzcGFnMm1qNThtcGQzd29ibDZ3MjlsNzVrdnhocGZuczRqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qYq2wrUrOYkjLdPszy/giphy.gif" alt="demo gif of lab" width="200%">
 
+> **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago)** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
 
 ### What is Generative AI?
 
