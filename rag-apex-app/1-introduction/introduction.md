@@ -5,6 +5,10 @@ The scope of this workshop is to create a Generative AI RAG application using Or
 
 > **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago)** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
 
+
+<img src="./images/rag-demo.gif" alt="demo gif of lab" width="200%">
+
+
 ### What is Generative AI?
 
 Generative AI enables users to quickly generate new content based on a variety of inputs. Inputs and outputs to these models can include text, images, sounds, animation, 3D models, and other types of data.
