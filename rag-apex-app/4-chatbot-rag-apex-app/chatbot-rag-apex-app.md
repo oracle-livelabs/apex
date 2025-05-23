@@ -18,7 +18,7 @@ Estimated time - 45 minutes
 * An OCI cloud account
 * Subscription to US-Central Chicago Region
 
-## Task 1: Create the Chatbot Page (2)
+## Task 1: Create the Chatbot Page 
 
 1. Navigate to the App Homepage and select **Create New Page**.
 
