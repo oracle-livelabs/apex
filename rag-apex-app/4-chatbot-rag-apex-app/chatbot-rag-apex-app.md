@@ -88,25 +88,25 @@ Next we will create the Question Panel.
 	![New Region Question Panel](./images/question-panel.png)
 
 8. Right-click the new region: **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** P2_SESSION_ID
+	* **Name:** "P2_SESSION_ID"
 	* **Type:** Hidden
 
 	![PAge Item Hidden Session ID Panel](./images/session-id-hidden.png)
 
 9. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** P2_COLLECTION_NAME
+	* **Name:** "P2_COLLECTION_NAME"
 	* **Type:** Hidden
 
 	![Page Item Hidden Session ID Panel](./images/collection-name-hidden.png)
 
 10. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** P2_SEQ_ID
+	* **Name:** "P2_SEQ_ID"
 	* **Type:** Hidden
 
 	![Seq Id Hidden Panel](./images/seq-id-hidden.png)
 
 11. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** P2_QUESTION
+	* **Name:** "P2_QUESTION"
 	* **Type:** Text Field
 	* **Settings:** Submit when Enter pressed: Enabled
 
