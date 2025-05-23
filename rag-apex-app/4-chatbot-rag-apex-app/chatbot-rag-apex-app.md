@@ -88,19 +88,19 @@ Next we will create the Question Panel.
 	![New Region Question Panel](./images/question-panel.png)
 
 8. Right-click the new region: **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** "P2_SESSION_ID"
+	* **Name:** "P2\_SESSION\_ID"
 	* **Type:** Hidden
 
 	![PAge Item Hidden Session ID Panel](./images/session-id-hidden.png)
 
 9. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** "P2_COLLECTION_NAME"
+	* **Name:** "P2\_COLLECTION\_NAME"
 	* **Type:** Hidden
 
 	![Page Item Hidden Session ID Panel](./images/collection-name-hidden.png)
 
 10. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
-	* **Name:** "P2_SEQ_ID"
+	* **Name:** "P2\_SEQ\_ID"
 	* **Type:** Hidden
 
 	![Seq Id Hidden Panel](./images/seq-id-hidden.png)
@@ -181,7 +181,7 @@ Next we will create the Question Panel.
 	```
 	* **Server-side condition**
 	* **Type:** Item is Null
-	* **Item:** P2_SESSION_ID
+	* **Item:** P2\_SESSION\_ID
 
 	![generate session state](./images/session-child-process.png)
 
@@ -243,7 +243,7 @@ Next we will create the Question Panel.
 	</copy>
 	```
 
-* **Note:** Be sure to update the first variable line (**c_agent_endpoint_id**) in the copy section above with the AI Agent Endpoint OCID with the correct OCID from the OCI console. Make sure there are no spaces in the single quotes.
+* **Note:** Be sure to update the first variable line (**c\_agent\_endpoint\_id**) in the copy section above with the AI Agent Endpoint OCID with the correct OCID from the OCI console that was written down from Lab 1, Task 4, Step 7. Make sure there are no spaces within the single quotes.
 
 	![generate Response for Child process](./images/generate-response-child.png)
 
@@ -270,7 +270,7 @@ Next we will create the Question Panel.
 	![stretch to fit template](./images/stretch-to-fit.png)
 
 3. Right-click **Components/Content Body** and select **Create Page Item**. Modify the following on the right side of the screen:
-	* **Name:** P3_SEQ_ID
+	* **Name:** P3\_SEQ\_ID
 	* **Type:** Hidden
 
 	![page item seq id hidden](./images/seq-id-hidden-citations.png)
@@ -321,7 +321,7 @@ Next we will create the Question Panel.
 	* **Type:** Page in this application
 	* **Page:** 3
 	* **Set Items:**
-		* **Name:** P3_SEQ_ID
+		* **Name:** P3\_SEQ\_ID
 		* **Value:** #N001#
 
 	![define link on citations](./images/define-link.png)
