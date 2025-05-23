@@ -4,7 +4,7 @@
 
 This lab walks the user througth part 2 of the APEX app development where the user creates the chatbot page.  
 
-Estimated time - 45 minutes
+Estimated time - 20 minutes
 
 ### Objectives
 

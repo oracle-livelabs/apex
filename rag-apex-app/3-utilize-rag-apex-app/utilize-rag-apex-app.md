@@ -134,7 +134,7 @@ Estimated time - 45 minutes
 
 	![Default and Next Button](./images/create-from-scratch.png "")
 
-5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https:_//objectstorage._<region_>.oraclecloud.com/n/_<namespace_>/b/RAG/o/**. Select **Next** to continue.
+5. Select Rest Data Type as **OCI**, then name the Rest Data Source **Object Storage** and paste the URL for the object storage rest url, which has the following format: **https://objectstorage.<region\_>.oraclecloud.com/n/\_<namespace\_>/b/RAG/o/**. Select **Next** to continue.
 	* Example region: us-chicago-1
 	* Namespace: Object storage namespace
 
@@ -252,7 +252,7 @@ Next we will create the Open Upload Region Action.
 	</copy>
 	```
 
-* **Note:** Be sure to edit the variable l_request_url to include the correct namespace for you tenancy. 
+* **Note:** Be sure to edit the variable **l\_request\_url** to include the correct namespace for you tenancy. 
 
 	![name the child process and add pl/sql](./images/plsql-process.png)
 
@@ -262,7 +262,7 @@ Next we will create the Open Upload Region Action.
 	<copy>
 	declare
 	 c_agent_endpoint_id constant varchar2(1024) :=
-	  'ocid1.genaiagentdatasource.oc1.us-chicago-1.xxxxxxxxxxxxxx';
+	  'ocid1.genaiagentendpoint.oc1.us-chicago-1.xxxxxxxxxxxxxx';
 	 l_response clob;
 	begin
 	 apex_web_service.set_request_headers(
@@ -284,7 +284,7 @@ Next we will create the Open Upload Region Action.
 	end;
 	</copy>
 	```
-* **Note:** Be sure to edit the following fields: **compartmentId** and **dataSourceId** to match the correct values.
+* **Note:** Be sure to edit the following fields: **compartmentId** and **dataSourceId** to match the correct values. As well as update **c\_agent\_endpoint\_id** from the text copied in Lab 1, Task 4, Step 7. d
 
 	![name the child process and add pl/sql](./images/ingest-plsql-process.png)
 
