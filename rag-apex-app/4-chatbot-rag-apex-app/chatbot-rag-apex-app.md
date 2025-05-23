@@ -137,7 +137,7 @@ Next we will create the Question Panel.
 	![generate response process ](./images/generate-response.png)
 
 17. Right-click **GenerateResponse Process** and select **Add Child Process**. Provide the following on the right side of the panel:
-	* **Name:** Create Session if not exists
+	* **Name:** Create Session
 	* **PL/SQL Code:**
 	```
 	<copy>
@@ -180,8 +180,8 @@ Next we will create the Question Panel.
 	</copy>
 	```
 	* **Server-side condition**
-	* **Type:** Item is Null
-	* **Item:** P2\_SESSION\_ID
+		* **Type:** Item is Null
+		* **Item:** P2\_SESSION\_ID
 
 	![generate session state](./images/session-child-process.png)
 

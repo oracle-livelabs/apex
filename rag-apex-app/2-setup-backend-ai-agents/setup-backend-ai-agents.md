@@ -14,7 +14,6 @@ In this lab, you will:
 * Create an Object Storage Bucket for Knowledge Base
 * Create Knowledge Base
 * Create a GenAI agent
-* Create you agent endpoint
 * Generate API key
 
 ### Prerequisites
@@ -132,4 +131,4 @@ Basic experience with OCI Cloud Console and standard components.
 	* Olivia Maxwell - Cloud Architect
 	* Graham Shroyer - Cloud Architect
 	* Rachel Ogle - Cloud Architect
-* **Last Updated by/Date** - Nicholas Cusato, March 2025
+* **Last Updated by/Date** - Nicholas Cusato, May 2025

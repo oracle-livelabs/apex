@@ -17,13 +17,14 @@ Natural language processing is the ability of a computer application to understa
 
 Retrieval-Augmented Generation (RAG) enhances AI responses by retrieving relevant external data before generating an answer. This improves accuracy, reduces errors, and keeps information up to date. RAG works with Oracle Generative AI Agents to provide responses that are grounded in real data.
 
-Estimated time - 
+Estimated time - 1.5 hr
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
 * Set up a Knowledge Base for GenAI agents
+* Build an Upload and Ingest for AI Agent using Low-Code APEX
 * Build a RAG Chatbot using Low-Code APEX
 
 ### Prerequisites
