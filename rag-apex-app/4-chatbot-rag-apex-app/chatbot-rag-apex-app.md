@@ -244,7 +244,7 @@ Next we will create the Question Panel.
 	</copy>
 	```
 
-* **Note:** Be sure to update the first variable line (**c_agent_endpoint_id**) in the copy section above with the AI Agent OCID with the correct OCID from the OCI console.
+* **Note:** Be sure to update the first variable line (**c_agent_endpoint_id**) in the copy section above with the AI Agent OCID with the correct OCID from the OCI console. Make sure there are no spaces in the single quotes.
 
 	![generate Response for Child process](./images/generate-response-child.png)
 
@@ -270,7 +270,7 @@ Next we will create the Question Panel.
 
 	![stretch to fit template](./images/stretch-to-fit.png)
 
-3. Right-click Components/Content Body ande select **Create Page Item**. Modify the following on the right side of the screen:
+3. Right-click **Components/Content Body** and select **Create Page Item**. Modify the following on the right side of the screen:
 	* **Name:** P3_SEQ_ID
 	* **Type:** Hidden
 
@@ -303,20 +303,32 @@ Next we will create the Question Panel.
 	</copy>
 	```
 
+	![create citations resport region](./images/citations-report.png)
+
 5. Click the **Save button** at the top right of the page.
+
+	![save citations resport region](./images/save-citations.png)
 
 6. Create a link to the Citations by first navigating back to page 2 by clicking the **nav bar** and selecting **2**.
 
-7. Expand the Columns under the Chat Subregion
-	3. Click Actions
-	4. Change Type from Plain Text to Link
-		1. Link target: Click No Link Defined
-		2. Type: Page in this application
-		3. Page: 3
-		4. Set Items:
-			1. Name: P3_SEQ_ID
-			2. Value: #N001#
-7. Save & Run (green) (edited) 
+	![nav to page 2](./images/nav-page-2.png)
+
+
+7. Expand the Columns under the Chat Subregion by clicking **the arrow** and then select **Actions**.Change Type from Plain Text to **Link**.
+
+	![change actions to link](./images/link-to-citations.png)
+
+	* **Link target:** Click No Link Defined
+	* **Type:** Page in this application
+	* **Page:** 3
+	* **Set Items:**
+		* **Name:** P3_SEQ_ID
+		* **Value:** #N001#
+
+	![define link on citations](./images/define-link.png)
+
+
+7. Save & Run (green arrow button) (edited) 
 
 Thank you for completing this lab.
 
