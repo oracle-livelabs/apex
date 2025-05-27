@@ -1,4 +1,4 @@
-# Building a RAG Chatbot using Low-Code APEX
+# Build a RAG Chatbot with Low-Code APEX
 
 ## Introduction
 
@@ -42,7 +42,7 @@ Estimated time - 20 minutes
 
 5. Right-click the new region ChatBot and select **Create Page Item**. Name the page item **P2_ANSWER** and select type as **Hidden**.
 
-	![](./images/hidden-answer.png)
+	![Hidden Answer](./images/hidden-answer.png)
 
 6. Right Click **ChatBot Region** and select **Create Sub Region**. Modify the following on the right panel: 
 	* **Name:** Chat
@@ -91,7 +91,7 @@ Next we will create the Question Panel.
 	* **Name:** "P2\_SESSION\_ID"
 	* **Type:** Hidden
 
-	![PAge Item Hidden Session ID Panel](./images/session-id-hidden.png)
+	![Page Item Hidden Session ID Panel](./images/session-id-hidden.png)
 
 9. Right-click the same **Question Panel** and select **Create Page Item**. Update the following on the right side of the screen:
 	* **Name:** "P2\_COLLECTION\_NAME"
