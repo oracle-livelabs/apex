@@ -27,7 +27,7 @@ Basic experience with OCI Cloud Console and standard components.
 ## Task 1: Create a compartment
 
 1. Navigate to the hamburger menu in the top left-hand corner. Select **Identity & Security**, under the **Identity** section choose **Compartments**.
-   	![Navigation menu to object storage buckets](./images/Compartment.png  "")
+   	![Navigation menu to object storage buckets](./images/compartment.png  "")
 
 2. Select the button **Create Compartment**. Enter in a name, for this example I will be naming the compartment **LiveLab**.
 	![Navigation menu to object storage buckets](./images/CreateCompartment.png  "")
