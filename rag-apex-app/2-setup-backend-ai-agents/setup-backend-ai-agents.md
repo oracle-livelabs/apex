@@ -81,7 +81,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 2. On the landing page for **Generative AI Agents**, click the **Create Agent** button.
 
-	![Create Bucket button](./images/CreateAgent.png "")
+	![Create Bucket button](./images/createagent.png "")
 
 3. Enter a name, **RAG-AGENT**, ensure you are in the correct compartment, optionally enter in a welcome message, & click **Next**.
 
