@@ -42,7 +42,23 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads: Download and Install the Complete Application
 
-Download exports
+If you are stuck or the app is not working as expected, you can download and install the completed App as follows:
+
+1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/rag_agents_export.sql) to download the completed application.
+
+2. Import the **rag\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+
+3. Once the application is installed,
+
+    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+
+    - Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage.
+
+    - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge BAse and Generative AI Agents in OCI.
+
+    - Follow Lab 3 > Task 2 to create Web Credentials in Oracle APEX.
+
+4. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 

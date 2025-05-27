@@ -852,10 +852,9 @@ In this task you will learn how to create processes and will create  processes:
     | 3 | p\_namespace| P5\_NAMESPACE_NAME |
     | 4 | p\_bucket| P5\_BUCKET_NAME |
     | 5 | p\_region| P5\_REGION |
-    | 6 | p\_bucket| P5\_BUCKET_NAME |
-    | 7 | p\_object_storage\_url| P5\_OBJECT\_STORAGE\_URL |
-    | 8 | p\_file_name| P5\_FILE_NAME|
-    | 9 | p\_mime_type| P5\_MIME_TYPE |
+    | 6 | p\_object_storage\_url| P5\_OBJECT\_STORAGE\_URL |
+    | 7 | p\_file_name| P5\_FILE_NAME|
+    | 8 | p\_mime_type| P5\_MIME_TYPE |
     {: title="Parameters Mapping"}
 
      ![Parameters](images/parameters1.png " ")

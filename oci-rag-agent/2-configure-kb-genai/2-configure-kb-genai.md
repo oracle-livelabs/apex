@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this LAB you will learn how to create a **Knowledge Base** and **Generative AI Agents** using Oracle’s Generative AI services.
+In this lab, you will learn how to create a **Knowledge Base** and **Generative AI Agents** using Oracle’s Generative AI services.
 
 - A **Knowledge Base** serves as the foundation for all the data sources that an AI agent can access to retrieve relevant information and provide more accurate, context-aware responses during a conversation.
 

@@ -28,8 +28,7 @@ In this task you will upload document to OVI Object storage using APEX.
 
     ![UI UploadDoc](images/ui-uploaddoc.png " ")
 
-2. Click **Choose File** and upload the file (for this lab we have taken file reference
-)
+2. Click the **Choose File** option or drag and drop the [apex\_document.pdf](files/apex_document.pdf) file on to the dialog window.
 
 3. Click **Create**.
 

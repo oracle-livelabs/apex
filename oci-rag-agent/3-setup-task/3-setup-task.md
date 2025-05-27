@@ -19,19 +19,19 @@ In this lab, you:
 
 >*Note: Explanation of Tables, Triggers, Sequences, Functions, and Packages:*
 
-- *RAG_CHATBOT Table*: Stores chatbot conversation details like user comments, session IDs, and timestamps.
+- *RAG\_CHATBOT Table*: Stores chatbot conversation details like user comments, session IDs, and timestamps.
 
-- *RAG_CITATIONS Table*: Stores citations related to chatbot responses, including the source and location of the information used.
+- *RAG\_CITATIONS Table*: Stores citations related to chatbot responses, including the source and location of the information used.
 
-- *DOC_UPLOAD Table*: Manages metadata for documents uploaded to OCI Object Storage, including file names, MIME types, and URLs.
+- *DOC\_UPLOAD Table*: Manages metadata for documents uploaded to OCI Object Storage, including file names, MIME types, and URLs.
 
-- *DOC_UPLOAD_BIU Trigger*: Automatically updates creation and modification timestamps, as well as user information when documents are inserted or updated in the DOC_UPLOAD table.
+- *DOC\_UPLOAD\_BIU Trigger*: Automatically updates creation and modification timestamps, as well as user information when documents are inserted or updated in the DOC_UPLOAD table.
 
-- *INGESTION_SEQ Sequence*: Generates unique numeric IDs for tracking uploaded documents, starting at 401 and incrementing with each new record.
+- *INGESTION\_SEQ Sequence*: Generates unique numeric IDs for tracking uploaded documents, starting at 401 and incrementing with each new record.
 
-- *URL_ENCODE Function*: Encodes a string for safe use in URLs by escaping special characters to ensure proper transmission in HTTP requests.
+- *URL\_ENCODE Function*: Encodes a string for safe use in URLs by escaping special characters to ensure proper transmission in HTTP requests.
 
-- *OCI_OBJECT_STORAGE_UTILS Package*: Contains procedures to interact with OCI Object Storage, including uploading, retrieving, and deleting files from the cloud storage.
+- *OCI\_OBJECT\_STORAGE\_UTILS Package*: Contains procedures to interact with OCI Object Storage, including uploading, retrieving, and deleting files from the cloud storage.
 
 1. Log into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
 
