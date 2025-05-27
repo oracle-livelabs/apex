@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Analyze Document store using RAG on Oracle APEX",
+    "workshoptitle": "Analyze Document store with RAG on Oracle APEX",
     "help": "livelabs-help-analytics_us@oracle.com”",
     "tutorials": [
         {
@@ -18,11 +18,11 @@
             "filename": "../../2-setup-backend-ai-agents/setup-backend-ai-agents.md"
         },
         {
-            "title": "Lab 2: Build an Upload & Ingest AI Agent using Low-Code APEX",
+            "title": "Lab 2: Build an Upload & Ingest AI Agent with Low-Code APEX",
             "filename": "../../3-utilize-rag-apex-app/utilize-rag-apex-app.md"
         },
         {
-            "title": "Lab 3: Build a RAG Chatbot using Low-Code APEX",
+            "title": "Lab 3: Build a RAG Chatbot with Low-Code APEX",
             "filename": "../../4-chatbot-rag-apex-app/chatbot-rag-apex-app.md"
         },
         {
