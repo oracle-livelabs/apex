@@ -118,10 +118,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/api.png "")
 
-3. Make sure **Generate API Key Pair** is selected. Download your private & public key because you will need these for later. After downloading, select **Add**. You will see a configuration file preview, you can close this. You may proceed to the next lab. 
+3. Make sure **Generate API Key Pair** is selected. Download your private & public key because you will need these for later. After downloading, select **Add**. You will see a configuration file preview, you can close this.  
 
       ![Create Bucket button](./images/gen.png "")
 
+You may proceed to the next lab.
 
 ## Acknowledgements
 
