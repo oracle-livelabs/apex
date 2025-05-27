@@ -57,7 +57,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 	![Create Bucket button](./images/NavigateAIAgent.png "")
 
-2. On the left-hand side, select **Knowledge Bases** and click the button **Create Knowledge Base**
+2. Select **Knowledge Bases** on the left-hand side and click the button **Create Knowledge Base**
 
 	![Create Bucket button](./images/createknowledgebase.png "")
 
