@@ -3,9 +3,9 @@
 ## About this Workshop
 Ready to supercharge your applications with artificial intelligence? In this hands-on Oracle LiveLab, you’ll dive into the world of GenAI agents using the power of low-code Oracle APEX. Discover how to set up a dynamic Knowledge Base, seamlessly upload and ingest data for your AI agent, and craft an intelligent RAG chatbot — all without writing complex code. Whether you’re new to AI or looking to expand your toolkit, this workshop will guide you step by step to build smarter, more responsive applications with Oracle’s cutting-edge technology.
 
-Here is a demo of what to expect for the RAG app:
+<!-- Here is a demo of what to expect for the RAG app:
 
-<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmlibnJzcGFnMm1qNThtcGQzd29ibDZ3MjlsNzVrdnhocGZuczRqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qYq2wrUrOYkjLdPszy/giphy.gif" alt="demo gif of lab" width="200%">
+<img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmlibnJzcGFnMm1qNThtcGQzd29ibDZ3MjlsNzVrdnhocGZuczRqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qYq2wrUrOYkjLdPszy/giphy.gif" alt="demo gif of lab" width="200%"> -->
 
 > **NOTE:** Your tenancy must be subscribed to the **US Midwest (Chicago)** region in order to run this workshop. See the [OCI documentation](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/managingregions.htm) for more details.
 
