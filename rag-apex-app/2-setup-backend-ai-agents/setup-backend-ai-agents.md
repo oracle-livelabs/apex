@@ -30,7 +30,7 @@ Basic experience with OCI Cloud Console and standard components.
    	![Navigation menu to object storage buckets](./images/compartment.png  "")
 
 2. Select the button **Create Compartment**. Enter in a name, for this example I will be naming the compartment **LiveLab**.
-	![Navigation menu to object storage buckets](./images/CreateCompartment.png  "")
+	![Navigation menu to object storage buckets](./images/createcompartment.png  "")
 
 ## Task 2: Create Bucket for Knowledge Base
 
