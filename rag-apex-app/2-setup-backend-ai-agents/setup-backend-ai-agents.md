@@ -77,7 +77,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 1. Navigate to Gen AI Agents by selecting the hamburger menu in the top left-hand corner, click **Analytics & AI** and then, **Generative AI Agents**. Make sure you are in the correct region.
 
-	![Create Bucket button](./images/NavigateAIAgent.png "")
+	![Create Bucket button](./images/navigateaiagent.png "")
 
 2. On the landing page for **Generative AI Agents**, click the **Create Agent** button.
 
