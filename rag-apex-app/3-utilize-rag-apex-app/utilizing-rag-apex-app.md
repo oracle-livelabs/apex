@@ -329,7 +329,7 @@ Next we will create the Open Upload Region Action.
 
 	![verify the ingest job in the OCI console](./images/ingest-job.png)
 
-Thank you for completing this lab.
+Thank you for completing this lab. You may proceed to the next lab.
 
 ## Acknowledgements
 
