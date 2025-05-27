@@ -1,4 +1,4 @@
-# Setting up Backend for GenAI agents
+# Setup Backend for GenAI agents
 
 ## Introduction
 This lab will walk you through setting up important OCI resources to use in the following labs. You will set up your compartment, object storage bucket, GenAI agent, knowledge base, and generate an API key. 
