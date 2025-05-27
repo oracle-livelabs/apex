@@ -67,7 +67,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. Select the Object Storage bucket you created earlier, **RAG**, and check **Select all in bucket**. Click **Create**.
 
-	![Create Bucket button](./images/DSKB.png "")
+	![Create Bucket button](./images/dskb.png "")
 
 5. Ensure your knowledge base is active before proceeding to Task 4.
 
