@@ -63,7 +63,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 3. Enter in a name for your knowledge base, **RAG-KB**. Under **Data sources** click **Specify data source**.
 
-	![Create Bucket button](./images/NewKB.png "")
+	![Create Bucket button](./images/newkb.png "")
 
 4. Select the Object Storage bucket you created earlier, **RAG**, and check **Select all in bucket**. Click **Create**.
 
