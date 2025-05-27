@@ -55,7 +55,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. Navigate to the hamburger menu in the top left-hand corner. Select 'Analytics & AI', choose **Generative AI Agents**. 
  **Note:** Make sure you are in the correct region **US-Midwest Chicago** or else the Generative AI options won't be visable.
 
-	![Create Bucket button](./images/NavigateAIAgent.png "")
+	![Create Bucket button](./images/navigateaiagent.png "")
 
 2. Select **Knowledge Bases** on the left-hand side and click the button **Create Knowledge Base**
 
