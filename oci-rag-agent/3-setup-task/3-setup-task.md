@@ -19,7 +19,7 @@ In this lab, you:
 
 >*Note: Explanation of Tables, Triggers, Sequences, Functions, and Packages:*
 
-- *RAG\_CHATBOT Table*: Stores chatbot conversation details like user comments, session IDs, and timestamps.
+- *RAG\_CHATBOT Table*: Stores chatbot conversation details like user prompts, session IDs, and timestamps.
 
 - *RAG\_CITATIONS Table*: Stores citations related to chatbot responses, including the source and location of the information used.
 
@@ -330,11 +330,11 @@ To create a Web Credential in Oracle APEX:
 
 ## Summary
 
-You've gained the skills to create database objects using SQL Scripts, and set up web credentials.
+In this lab, you have learned how to run SQL commands using SQL Scripts. You have created tables, triggers, sequences, functions, and packages to manage chatbot conversation data, handle document uploads, and interact with OCI Object Storage.
 
 You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
 - **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2025

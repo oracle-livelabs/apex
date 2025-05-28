@@ -84,11 +84,11 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
 ## Summary
 
-In this lab, you have learned how to configure OCI API keys and create buckets in OCI Object Storage. You set up secure authentication to allow safe access to OCI resources and created storage buckets to organize and manage files such as documents and PDFs. This setup forms the foundation for securely storing and accessing data.
+In this lab, you have learned how to configure OCI API keys and create buckets in OCI Object Storage. You set up secure authentication to allow safe access to OCI resources and created storage buckets to organize and manage files PDFs and text files. This setup forms the foundation for securely storing and accessing data.
 
 You may now proceed to the next lab.
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager, April 2025
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, April 2025
+- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2025

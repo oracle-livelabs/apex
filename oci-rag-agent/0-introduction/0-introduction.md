@@ -2,7 +2,11 @@
 
 ## About this Workshop
 
-This lab demonstrates how to integrate Generative AI Agents with Oracle APEX by leveraging OCI Object Storage and Generative AI Agents. Learn how to combine the power of large language models (LLMs) and retrieval-augmented generation (RAG) with the simplicity of Oracle's low-code platform. In this lab, you'll upload documents to OCI Object Storage, use Generative AI Agents to process and extract insights from enterprise data, and surface intelligent, context-aware responses directly within your APEX applications—enhancing automation, user engagement, and business productivity in a secure, scalable environment.
+This lab demonstrates how to integrate Oracle APEX with OCI **Generative AI Agents**, showcasing how enterprises can enhance their applications with intelligent, context-aware capabilities. You'll explore combine the power of **Large Language Models (LLMs)** combined with Retrieval-Augmented Generation (RAG) to transform raw enterprise documents into actionable insights.
+
+As part of the lab, you'll begin by uploading various documents to OCI Object Storage, which serves as a secure, scalable repository for your enterprise data. These documents are then processed through an **ingestion job**, which parses, indexes, and prepares the data for interaction using the OCI Generative AI service.
+
+You will integrate a **chat interface** within your Oracle APEX application, allowing end users to interact with the Generative AI Agent in real time. The AI agent uses the previously ingested content to provide intelligent, personalized, and context-rich responses, enhancing user experience and driving operational efficiency.
 
 Estimated Time: 90 minutes
 
@@ -72,4 +76,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgements
 
 - **Author**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date**: Shailu Srivastava, Product Manager, April 2025
+- **Last Updated By/Date**: Shailu Srivastava, Product Manager, May 2025
