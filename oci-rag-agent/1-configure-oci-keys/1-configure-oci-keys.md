@@ -22,7 +22,7 @@ In this lab, you:
 
 To Generate the API Keys using OCI Console:
 
-1. Log into your OCI Account.
+1. Login into your OCI Account.
 
    ![Add API Key](images/oci-login.png " ")
 
@@ -30,13 +30,13 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/profile.png " ")
 
-3. Under **Resources** at the bottom-left, select **API Keys** and  click **Add API key**.
+3. Under **Tokens and keys** tab and click **Add API key**.
 
     ![Add API Key](images/api-keys.png " ")
 
 4. The Add API key dialog is displayed. Select **Generate API key pair** to create a new key pair.
 
-5. Click **Download private key**. A *.pem* file will be saved to your local device. You do not need to download the public key.
+5. Click **Download private key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
    >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
