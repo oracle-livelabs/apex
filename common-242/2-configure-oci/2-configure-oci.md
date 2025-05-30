@@ -4,8 +4,6 @@
 
 To use the native GenAI features in APEX, you must configure a Generative AI service in APEX. To configure a Generative AI service, you will first need to obtain an API key from your preferred AI provider. You can either choose **OCI Generative AI** or **OpenAI** as your AI provider.
 
-<if type="OCIGenAI">
-
 
 In this lab, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you need to first configure the OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
 
@@ -118,81 +116,6 @@ Congratulations! You've completed the lab.
 You now know how to generate an API Key using OCI console and configure a Generative AI service in APEX.
 
 You may now **proceed to the next lab**.
-
-</if>
-
-<if type="OpenAI">
-
-In this lab, you use Open AI as the AI provider to build a conversational chatbot. 
-
-
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
-
-Estimated Time: 10 Minutes
-
-### Objectives
-
-In this lab, you:
-
-- Generate API Key for OpenAI.
-
-## Task 1: Generate API Keys using Open AI
-
-1. Create and login to your [OpenAI account](https://platform.openai.com/).
-
-   ![OpenAI login page](images/login-openai.png " ")
-
-
-2. Navigate to [API Keys](https://platform.openai.com/settings/organization/api-keys) page to create a new key.
-
-   Click **Create new secret key**. Enter the details and click **Create secret key**.
-
-   ![API keys page](images/create-secret-key.png " ")
-
-
-3. A secret key is generated. **Copy** and save the API key into a notepad. You will use this information while configuring a Generative AI service in APEX.
-
-   ![Create secret key dialog](images/save-secret-key.png " ")
-
-## Task 2: Configure Generative AI Service
-
-To use the Generative AI service in APEX, you need to first configure it at the workspace level.
-
-1. From the App Builder, navigate to **Workspace Utilities** > **All Workspace Utilities**.
-
-    ![Workspace homepage](images/ws-utilities.png ' ')
-
-2. Select **Generative AI**.
-
-    ![Workspace Utilities page](images/select-genai.png ' ') 
-
-3. Click **Create** to configure a Generative AI Service.
-
-     ![Gen AI services page](images/create-genai.png ' ') 
-
-4. For this workshop, if you prefer to choose OpenAI as the AI provider, enter/select the following:
-
-    - AI Provider: **Open AI**
-    - Name: **Open AI**
-    - Used by App Builder: Toggle the button to turn it **ON**
-    - API Key: Enter your *Open AI API* key that you generated in Task 1 of this lab.
-    - AI Model: **gpt-3.5-turbo** (Enter a preferred model of your choice)
-
-    Click **Test Connection**.
-   ![Gen AI services page](images/open-ai-details.png ' ') 
-
-5. If the connection is successful, click **Create**. 
-   If unsuccessful, go to troubleshooting section in Appendix lab. (provide link to troubleshoot lab)
-   ![Gen AI services page](images/open-ai-create.png ' ') 
-
-## Summary
-
-Congratulations! You've completed the lab.
-
-You now know how to an generate API Key using OpenAI.
-
-You may now **proceed to the next lab**.
-</if>
 
 
 
