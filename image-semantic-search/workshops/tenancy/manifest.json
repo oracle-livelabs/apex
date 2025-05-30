@@ -22,12 +22,16 @@
         "filename": "../../3-export-onnx-model/3-export-onnx-model.md"
       },
       {
-        "title": "Lab 4: Implement Text and Image Search",
-        "filename": "../../4-edit-application/4-edit-application.md"
+        "title": "Lab 4: Create Vector Providers",
+        "filename": "../../4-create-vector-providers/4-create-vector-providers.md"
       },
       {
-        "title": "Lab 5: Run the application",
-        "filename": "../../5-run-app/5-run-app.md"
+        "title": "Lab 5: Implement Text and Image Search",
+        "filename": "../../5-edit-application/5-edit-application.md"
+      },
+      {
+        "title": "Lab 6: Run the application",
+        "filename": "../../6-run-app/6-run-app.md"
       },
       {
         "title": "Need Help?",
