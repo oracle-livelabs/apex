@@ -16,7 +16,7 @@ In this lab, you:
 
 1. Login to the application. The username and password are the same as your APEX workspace user credentials.
 
-    ![Click Timeline](images/social-media-login.png " ")
+    ![Click Timeline](images/social-media-login.png =60%x*)
 
 2. Click **Add Post** on the Navigation Bar.
 

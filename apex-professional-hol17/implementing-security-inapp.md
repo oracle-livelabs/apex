@@ -170,69 +170,77 @@ Import them into your workspace. To run the app, please run the steps described 
 
 1. Log in to Google's developer [console](https://console.developers.google.com).
 
-    **Note**: If you are logging in to the Google developer console for the first time, you must check and click **AGREE AND CONTINUE**.
+     *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
 
-2. Click **Create Project**.
+2. Click **CREATE PROJECT**, or navigate to an already created project and then click **New project**.
 
     ![Click My Apps](images/create-project1.png " ")
 
-3. In the **New Project** Screen, for Project Name: Enter **APEX Social SignIn** and click **Create**.
+    ![Click My Apps](images/create-project.png " ")
 
-    ![Click My Apps](images/new-project1.png " ")
+3. In the New Project Screen, for Project Name: Enter **APEX Social SignIn** and click **CREATE**.
 
-4. Click the **OAuth consent screen** (from the left side menu), select **External**, and click **Create**
+    ![Click My Apps](images/create-new-project.png " ")
 
-    ![Click My Apps](images/external.png " ")
+4. Click the **OAuth consent screen** (from the left side menu) and click **GET STARTED**
 
-5. In the OAuth consent screen, enter/select the following:
+    ![Click My Apps](images/oauth.png " ")
 
-    - Under **App Information**:
+    ![Click My Apps](images/get-started.png " ")
 
-        - Application name: Enter your **Application Name**
+5. Under Project Configuration, enter the following:
+
+    - Under **App information**:
+
+        - App name: Enter your **Application Name**
 
         - User support email: Enter your **Email Address**
 
-    - App Domain  > Application Homepage link: Enter your **Application Homepage link**
+        Click **Next**
 
-    - Authorized domains > Click **+ADD DOMAIN**: Add your Authorized domain. For example, I added oracle.com
+    ![Click My Apps](images/app-information.png " ")
 
-    - Developer contact information > Email addresses: Enter your **Email Address**
+     - Under **Audience** > Select **External** and click **NEXT**
 
-       Click **Save and Continue**.
+    ![Click My Apps](images/audience.png " ")
 
-    ![Click My Apps](images/oauth-consent-screen.png " ")
+    - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
-    ![Click My Apps](images/oauth-consent-screen1.png " ")
+    ![Click My Apps](images/contact-information.png " ")
 
-6. Under **Scopes**, leave everything as default and click **Save and Continue**.
+    - Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
-    ![Click My Apps](images/scopes.png " ")
+    ![Click My Apps](images/finish.png " ")
 
-7. Under **Test users**, leave everything as default and click **Save and Continue**.
+6. Click **CREATE**.
 
-    ![Click My Apps](images/test-users.png " ")
+    ![Click My Apps](images/create.png " ")
 
-8. Click **Credentials** (from left side menu). Click **+Create Credentials** and select **OAuth client ID**.
+7. Click **CREATE OAUTH CLIENT**.
 
-    ![Click My Apps](images/create-creds.png " ")
+    ![Click My Apps](images/oauth-create.png " ")
 
-9. Enter/select the following:
+8. Enter the following:
 
-    - Application type: **Web Application**
+     - For Application type: Select **Web Application**
 
-    - Name: **APEX Social Authentication**
+     - For Name: Enter **APEX Social Authentication**
 
-    - Under Authorized redirect URLs, click **+Add URl**
+   Under Authorized redirect URIs, click **+Add URl**
 
-        - URls 1: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+     - For URls 1: Enter https://apex.oracle.com/pls/apex/apex_authentication.callback
 
-    Click **Create**.
+     Click **CREATE**.
 
-    ![Click My Apps](images/create-creds1.png " ")
+    ![Click My Apps](images/click-create-cred.png " ")
 
-10. You will get the *Client ID* and *Client secret*. Save these IDs. You will use them later.
+9. Click **APEX Social Authentication**.
 
-    ![Click My Apps](images/creds-created.png " ")
+    ![Click My Apps](images/click-apex-social-auth.png " ")
+
+10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
+
+    ![Click My Apps](images/copy-cred.png " ")
 
 11. Login to your APEX workspace and click **Workspace Utilities**.
 
@@ -445,4 +453,4 @@ In the next hands-on lab, you will learn to create and customize a Calendar page
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, May 2025

@@ -93,6 +93,7 @@ In this task, you create a REST Data Source with OCI vision REST API as the endp
          }
          </copy>
         ```
+
     ![Click Timeline](images/edit-post.png " ")
 
     ![Click Timeline](images/post.png " ")
@@ -224,6 +225,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
              where ID = :P1_ID;
              </copy>
             ```
+
     ![Click Timeline](images/file-data.png " ")
 
 12. Select **RESPONSE** and enter the following:
@@ -283,7 +285,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
     - Identification > Name: **Text Detection**
 
-        ![Click Timeline](images/text-detection.png " ")
+    ![Click Timeline](images/text-detection.png " ")
 
 3. Expand Parameters, select **FEATURE_TYPE** and enter the following:
 
@@ -293,7 +295,7 @@ In this task, you duplicate the page process to invoke the OCI Vision REST Data 
 
         - Value: **TEXT_DETECTION**
 
-        ![Click Timeline](images/feature-type1.png " ")
+    ![Click Timeline](images/feature-type1.png " ")
 
 4. Right click on the **Parse Image classification Response** child process and select **Duplicate**. Drag and drop it after **Text Detection**.
 
@@ -348,39 +350,38 @@ In this task, you create a search bar where the end user can enter the search te
 
     - Settings > Enable **Submit when Enter pressed**
 
-   Under Appearance:
-
-    - Width: **100**
+    - Appearance > Width: **100**
 
    ![Click Timeline](images/ai-search-page-item1.png " ")
 
 3. Select the **Timeline** region in the property editor and enter the following:
 
     ```
-    <copy>
-    select
-    p.id,
-    p.created_by AS user_name,
-    p.post_comment AS comment_text,
-    p.file_blob,
-    p.file_mime,
-      apex_util.get_since(p.created) post_date,
-    (
-    select count(*) from SM_REACTIONS smr
-    where smr.post_id=p.id
-    ) as REACTIONS,
-    (
-    select 'user-has-liked' from SM_REACTIONS smr
-    where smr.post_id=p.id and created_by=UPPER(:APP_USER)
-    ) USER_REACTION_CSS
-    from SM_POSTS p
-    where (:P1_AI_SEARCH IS NOT NULL AND
-    (upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%') OR upper(ai_output_td) like upper('%'||:P1_AI_SEARCH||'%')
-    )
-    )OR :P1_AI_SEARCH IS NULL
-    order by p.created desc;
-   <copy>
-   ```
+     <copy>
+     select
+     p.id,
+     p.created_by AS user_name,
+     p.post_comment AS comment_text,
+     p.file_blob,
+     p.file_mime,
+     apex_util.get_since(p.created) post_date,
+     (
+     select count(*) from SM_REACTIONS smr
+     where smr.post_id=p.id
+     ) as REACTIONS,
+     (
+     select 'user-has-liked' from SM_REACTIONS smr
+     where smr.post_id=p.id and created_by=UPPER(:APP_USER)
+     ) USER_REACTION_CSS
+     from SM_POSTS p
+     where (:P1_AI_SEARCH IS NOT NULL AND
+     (upper(ai_output) like upper('%'||:P1_AI_SEARCH||'%') OR upper(ai_output_td) like upper('%'||:P1_AI_SEARCH||'%')
+     )
+     )OR :P1_AI_SEARCH IS NULL
+     order by p.created desc;
+     <copy>
+    ```
+
     - Page items to Submit: Select **P1\_AI\_SEARCH**
 
     ![Click Timeline](images/timeline-query11.png " ")

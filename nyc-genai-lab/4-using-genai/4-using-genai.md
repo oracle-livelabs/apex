@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn to build a conversational inquiry about schools using Generative AI wherein a user can ask questions about a school in chat and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the latest feature of APEX 24.1 called the **Open AI Assistant**.
+In this lab, you learn to build a conversational inquiry about schools using Generative AI wherein a user can ask questions about a school in chat and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the APEX GenAI dynamic action called the **Show AI Assistant**.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 20 minutes
 
@@ -15,57 +15,18 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Configure a Generative AI service in your workspace
-- Build a conversational chatbot using Generative AI
+- Create AI Configuration with RAG sources.
+- Build a conversational chatbot using Generative AI.
 
-## Task 1: Configure Generative AI Service
 
-To use the Generative AI service in APEX, you need to first configure it at the workspace level.
-
-1. From the App Builder, navigate to **Workspace Utilities** > **All Workspace Utilities**.
-
-    ![Workspace homepage](images/ws-utilities.png ' ')
-
-2. Select **Generative AI**.
-
-    ![Workspace Utilities page](images/select-genai.png ' ') 
-
-3. Click **Create** to configure a Generative AI Service.
-
-     ![Gen AI services page](images/create-genai.png ' ') 
-
-4. In this workshop, you use OCI Generative AI Service as the AI provider. Enter/select the following:
-
-    - AI Provider: **OCI Generative AI Service**
-    - Name: **OCI Gen AI**
-    - Static ID: **oci\_gen\_ai**
-    - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Lab 3.
-    - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
-    - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
-    - Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
-    - Credential: **apex\_ai\_cred**
-
-    Click **Create**.
-
-    <!--In this workshop, you use Open AI as the AI provider. Enter/select the following:
-
-    - AI Provider: **Open AI**
-    - Name: **Open AI**
-    - Used by App Builder: Enable the toggle button to **ON**
-    - API Key: Enter your Open AI API key. To signup for an Open AI key, visit [platform.openai.com](https://platform.openai.com/)
-
-    Click **Create**. -->
-
-    ![Gen AI services page](images/oci-gen-ai-details.png ' ')
-
-## Task 2: Create the Chat Page
+## Task 1: Create the Chat Page
 
 1. Navigate to your application homepage and click **Create Page**. Select **Blank Page**.
 
     ![App home page](images/create-blank-page.png ' ')
 
 2. In the Create Blank page dialog, enter/select the following:
-    - Page Number: **3**
+    - Page Number: **2**
     - Name: **Learn More**
     - Page Mode: **Modal Dialog**
 
@@ -73,7 +34,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![create page wizard](images/learn-more.png ' ')
 
-3. With **Page 3: Learn More** selected in the Rendering Tree, enter/select the following in the Property Editor:
+3. With **Page 2: Learn More** selected in the Rendering Tree, enter/select the following in the Property Editor:
     - Appearance > Template Options:
         - General: Check **Remove Body Padding**
         - Content Padding: **Remove Padding**
@@ -102,7 +63,9 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - Advanced > Static ID: **chat**
         ![Page Designer](images/chat-to3.png =40%x*)
 
-## Task 3: Configure the Prompt Context
+    - Click **Save**.
+
+## Task 2: Configure the Prompt Context using AI Configuration
 
 1. Create a Page Item to store the selected School ID. In the Rendering Tree, under Components, right-click **Content Body** and select **Create Page Item**.
 
@@ -111,33 +74,59 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 2. In the Property Editor, enter/select the following:
 
     - Under Identification:
-        - Name: **P3\_SCHOOL\_ID**
+        - Name: **P2\_SCHOOL\_ID**
         - Type: **Hidden**
+        
+        Click **Save**.
 
     ![Page Designer](images/school-id.png ' ')
 
-3. Similarly, repeat step 1 to create another Page Item. Then, enter/select the following in the Property Editor:
+3. Navigate to Shared Components and select **AI Attributes** under Generative AI.
+    ![Page Designer](images/nav-shared-components.png ' ')
+    ![Shared components page](images/ai-attributes.png ' ')
 
-    - Under Identification:
-        - Name: **P3_CONTEXT**
-        - Type: **Hidden**
+4. For Service, select the Generative AI service that you configured in Lab 3. In this workshop, we choose **OCI Gen AI**. Click **Apply Changes**.
+    ![AI attributes page](images/select-service.png ' ')
 
-    ![Page Designer](images/context-item.png ' ')
+3. Navigate to Shared Components and select **AI Configurations** under Generative AI.
 
-4. In the Rendering Tree, right-click **P3_CONTEXT** and select **Create Computation**.
+    ![Page Designer](images/nav-shared-components-2.png ' ')
+    ![Shared components page](images/ai-config.png ' ')
 
-    ![Page Designer](images/create-computation.png ' ')
+4. Generative AI Configurations contain information such as System Prompt, Welcome Message, and Retrieval-Augmented Generation (RAG) Sources to enable richer interactions with Generative AI services. We create an AI Configuration to store the system prompt for our chat.
 
-5. In the Property Editor, enter/select the following:
+    In the Generative AI Configurations page, click **Create**.
 
-    - Execution > Point: **Before Regions**
-    - Under Computation:
-        - Type: **SQL Query (return single value)**
-        - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
+    ![Gen AI Configurations page](images/create-ai-config.png ' ')
 
-    ![Page Designer](images/compute-sql.png =40%x*)
+5. Enter/select the following:
+    - Name: **Learn More AI**
+    - Service: **Application Default** (If configured, you can also choose other GenAI services from the list)
+    - System Prompt: 
+    ```
+    <copy>
+    If the question cannot be answered based on the above context, say "Information Not Found!".
+    </copy>
+    ```
+    - Welcome Message: **Welcome! How may I help you?**
 
-6. In the Code Editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
+    Click **Create**.
+
+     ![Gen AI Configurations page](images/learn-more-ai-details.png ' ')
+
+6. Retrieval-Augmented Generation (RAG) Sources are used by the Generative AI Service to improve response quality by providing relevant information.
+
+    Now, let's add a RAG Source to the AI Configuration. Click **Create RAG Source**.
+
+    ![Gen AI Configurations page](images/create-rag-source.png ' ')
+
+7. In the RAG source page, enter/select the following:
+    - Name: **School Context**
+    - Source > Type: **SQL Query**
+
+    ![RAG Source page](images/rag-details-1.png ' ')
+       
+8. You will make use of the APEX Assistant to generate the SQL Query for the RAG Source. In the SQL Query code editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
 
     Enter the following prompt in the chat box and click **Send**:
 
@@ -169,11 +158,11 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Page Designer](images/enter-prompt.png ' ')
 
-7. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**.
+9. The AI Assistant suggests a SQL Query. You can provide further prompts to refine the query. Once you are happy with the query, click **Insert**.
 
     ![Page Designer](images/insert-query.png ' ')
 
-8. The SQL query is inserted into the Code Editor. Replace *your\_school\_id* with **:P3\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
+10. The SQL query is inserted into the Code Editor. Verify that the *where* condition in the query has ID = **:P2\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
 
     ```
     <copy>
@@ -189,49 +178,34 @@ To use the Generative AI service in APEX, you need to first configure it at the 
        'Attendance rate: ' || ATTENDANCE_RATE || chr(10) || chr(13) ||
        'Graduation rate: ' || GRADUATION_RATE as prompt_context
     from HIGHSCHOOLS
-    where ID = :P3_SCHOOL_ID;
+    where ID = :P2_SCHOOL_ID;
     </copy>
     ```
 
     ![Page Designer](images/edit-validate.png ' ')
 
-9. If the validation is successful, click **OK**.
+11. If the validation is successful, click **Create**.
+    A RAG source is created successfully. You can add as many RAG Sources as you wish.
 
     ![Page Designer](images/success-ok.png ' ')
 
-## Task 4: Create a Dynamic Action for Chat Widget
+
+## Task 3: Create a Dynamic Action for Chat Widget
+
+1. Click **Edit Page 2** to navigate to the page designer.
+    ![Page Designer](images/edit-page-2.png ' ')
 
 1. From the Rendering Tree, navigate to the Dynamic Actions tab. Right-click **Page Load** and select **Create Dynamic Action**.
 
     ![Page Designer Dynamic Actions](images/create-da.png ' ')
 
-2. In the Property Editor, for Name, enter **Open AI Assistant - Chat**.
+2. In the Property Editor, for Name, enter **Show AI Assistant - Chat**.
 
     ![Page Designer Dynamic Actions](images/da-name.png ' ')
 
 3. Under True action, select **Show**. In the Property Editor, enter/select the following:
-    - Identification > Action: **Open AI Assistant**
-    - Under Generative AI:
-        - Service: **OCI Gen AI**
-        - System Prompt:
-
-        ```
-        <copy>
-        Use the below context to answer all questions:
-
-        '''
-
-        &P3_CONTEXT.
-
-        '''
-
-        If the question cannot be answered based on the above context, say "Information Not Found!".
-
-        </copy>
-        ```
-
-        - Welcome Message: **Welcome! How may I help you?**
-
+    - Identification > Action: **Show AI Assistant**
+    - Generative AI > Configuration: **Learn More AI**
     - Under Appearance:
         - Display as: **Inline**
         - Container Selector: **#chat**
@@ -246,7 +220,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     Click **Save**.
 
-## Task 5: Create Action to Launch the Chat
+## Task 4: Create Action to Launch the Chat
 
 1. Navigate to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
 
@@ -263,12 +237,12 @@ To use the Generative AI service in APEX, you need to first configure it at the 
         - Label: **Learn More**
     - Layout > Position: **Primary**
     - Under Link > Target: Click **No Link Defined**
-        - Target > Page: **3**
+        - Target > Page: **2**
         - Set Items:
 
             |Name | Value|
             |------|------|
-            |P3\_SCHOOL\_ID| &ID. |
+            |P2\_SCHOOL\_ID| &ID. |
             {: title="Set Item name and value"}
 
         Click **OK**.
@@ -284,7 +258,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     ![Page Designer](images/learn-more2.png =40%x*)
 
-## Task 6: Build the 'Ask Question' Button
+## Task 5: Build the 'Ask Question' Button
 
 In this task, we add a common 'Ask Question' button where a user can ask generic questions about any New York City highschool.
 
@@ -297,7 +271,7 @@ In this task, we add a common 'Ask Question' button where a user can ask generic
         - Button Name: **ask**
         - Label: **Ask a Question**
     - Layout > Slot: **Next**
-    - Appearance > Hot: Enable the Toggle Button to **ON**.
+    - Appearance > Hot: Toggle the Button to turn it **ON**.
 
     ![Page Designer](images/button-properties.png =50%x*)
 
@@ -308,8 +282,8 @@ In this task, we add a common 'Ask Question' button where a user can ask generic
     ![Page Designer](images/ask-da-name.png =50%x*)
 
 4. Select the True action and enter/select the following in the Property Editor:
-    - Identification > Action: **Open AI Assistant**
-    - Generative AI > Service: **OCI Gen AI**
+    - Identification > Action: **Show AI Assistant**
+    - Generative AI > Service: **OCI Gen AI** (If configured, you can also choose other GenAI services from the list.)
     - System Prompt:
     ```
     <copy>
@@ -333,8 +307,9 @@ In this task, we add a common 'Ask Question' button where a user can ask generic
     ![App running in browser tab](images/run-app4.png " ")
 
 ## Summary
+Congratulations! You have completed the lab.
 
-You now know how configure Generative AI service in your APEX workspace. You also learnt to build a conversational Chatbot using Generative AI.
+You now know how to create AI configurations with RAG sources in APEX. You also know how to build a conversational Chatbot using Generative AI.
 
 You may now **proceed to the next lab**.
 
@@ -342,4 +317,4 @@ You may now **proceed to the next lab**.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

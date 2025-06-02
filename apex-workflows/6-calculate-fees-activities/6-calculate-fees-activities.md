@@ -54,7 +54,7 @@ The first step in the business logic is to check if the appointment is a follow-
 
     - Condition > When: True
 
-    ![Adding a new switch activity](./images/config-switch-activity3.png " ")
+    ![Adding a new switch activity](./images/config-switch-activity3-updated.png " ")
 
 ## Task 3: Create Activity Variable for Free Consultation
 
