@@ -28,7 +28,7 @@ To create Knowledge Base in OCI console:
 
 1. Click the menu icon **(☰)** at the top-left corner.
 
-2. Navigate to **Analytics & AI** and select **Generative AI Agents**.
+2. Navigate to **Analytics & AI** > **AI Services** select **Generative AI Agents**.
 
    ![Select GenerativeAI](images/gen-ai-tab.png " ")
 
@@ -36,7 +36,7 @@ To create Knowledge Base in OCI console:
 
     ![Select Knowledge Bases](images/select-knowledgebase.png " ")
 
-4. Select your **Compartment** and click **Create Knowledge Base**.
+4. Click **Create Knowledge Base**.
 
     ![Create Knowledge Base](images/create-knowledgebase.png " ")
 
@@ -48,9 +48,9 @@ To create Knowledge Base in OCI console:
 
     - Data store type: **Object storage**
 
-6. Under **Data sources**, click **Specify data source**.
-
     ![Create Knowledge Base](images/new-knowledge-base.png " ")
+
+6. Under **Data sources**, click **Specify data source**.
 
 7. Under **Specify data source**, enter/select the following and click **Create**.
 
@@ -70,7 +70,7 @@ To create Knowledge Base in OCI console:
 
 ## Task 2: Create Generative AI Agents in OCI
 
-To Create Generative AI Agents in OCI Console:
+Follow the below steps to create Generate AI Agents in OCI Console:
 
 1. In the Console's navigation bar, choose a region that supports Generative AI Agents, such as US Midwest (Chicago) or UK South (London). For a full list of supported regions, refer to [Regions with Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions).
 
@@ -108,7 +108,7 @@ To Create Generative AI Agents in OCI Console:
 
     ![Add tool](images/select-RAG-tool.png " ")
 
-8. Scroll down and select your **Knowledge base**, which you created in previous Task.
+8. Scroll down and choose your **Knowledge base**, which you created in Lab2 > Task1.
 
     >*Note: If you have not created Knowledge Base in previous task, you can create it here by clicking **Create knowledge base***
 

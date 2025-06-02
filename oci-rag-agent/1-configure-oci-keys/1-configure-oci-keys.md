@@ -56,7 +56,7 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
    ![Navigate to storage](images/navigate-to-storage.png " ")
 
-2. Under Storage, select **Buckets**.
+2. Under Storage > Object Storage & Archive Storage > select **Buckets**.
 
    ![Select Bucket](images/select-bucket.png " ")
 

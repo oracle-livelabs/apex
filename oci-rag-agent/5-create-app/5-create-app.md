@@ -12,8 +12,6 @@ Estimated Time: 45 Minutes
 
 In this lab, you will:
 
-- Create an APEX Application.
-
 - Create Processes and Page Items.
 
 - Invoke OCI Document Understanding using REST Data Sources.
@@ -24,53 +22,7 @@ In this lab, you will:
 
 - Create Automation Process to fetch Ingestion Job details.
 
-## Task 1: Create an Application
-
-In this task, you will create an application that allow you to build pages, add components, and define business logic for your project.
-
-1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
-
-   ![Click Create](images/create.png " ")
-
-2. Select **Use Create App Wizard**.
-
-   ![Use Create App Wizard](images/use-create-app-wizard.png " ")
-
-3. In Create an Application Wizard, enter/select the following:
-
-    - Name : **GenAI Agents for APEX**
-
-   ![Enter App name](images/app-name.png " ")
-
-4. Click **Add Page**.
-
-   ![Blank Page Create](images/blank-page-create.png " ")
-
-5. Select **Blank**.
-
-    ![Select Blank Page](images/create-blank-page.png " ")
-
-6. Under **Add Blank Page**, enter/select the following:
-
-    - Name : **Chat With OCI Generative AI**
-
-7. Click **Add Page**.
-
-    ![Blank Page Name](images/blank-page-name.png " ")
-
-8. Under **Pages**, click **Edit** beside **Home**.
-
-    ![Edit Home Page](images/click-edit.png " ")
-
-9. Click **Delete**.
-
-    ![Delete Home Page](images/delete-home-page.png " ")
-
-10. Click **Create Application**.
-
-    ![Create Application](images/create-application.png " ")
-
-## Task 2: Create Page Items and Region
+## Task 1: Create Page Items and Region
 
 In this task, you will create Page Items, Static Content region and a subregion, and configure dynamic actions to control their behavior based on user interactions.
 
@@ -250,7 +202,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - Target: Click **No Link Defined**, enter/select the following:
 
-            - Page : **6**
+            - Page : **7**
 
             - Under Set Items, enter the following:
 
@@ -300,7 +252,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     ![True Action](images/true-action1.png " ")
 
-## Task 3: Create Buttons Sub Region
+## Task 2: Create Buttons Sub Region
 
 In this task, you will create buttons to trigger specific actions and configure subregions to logically group related components, enhancing the functionality.
 
@@ -466,8 +418,8 @@ In this task, you will create buttons to trigger specific actions and configure 
             )
             values
             (
-               : APP_USER, 'Yes', : P1_PROMPT, sysdate,
-               : P1_SESSION_ID
+               :APP_USER, 'Yes', :P1_PROMPT, sysdate,
+               :P1_SESSION_ID
             );
             end;
 
@@ -582,7 +534,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
 20. In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Execute Server-side Code**
+    - Identification > Action: **Execute JavaScript Code**
     - Under Settings > Code : Copy and paste the below code
 
     ```
@@ -598,7 +550,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
     ![True Action4](images/send-true4.png " ")
 
-## Task 4: Create Page Processes and Computation
+## Task 3: Create Page Processes and Computation
 
 In this task, we will create a Static Content region and a subregion, and configure dynamic actions to control their behavior based on user interactions.
 
@@ -695,7 +647,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
     ![Response Session](images/response-session1.png " ")
 
-## Task 5: Add Pages for Document Upload
+## Task 4: Add Pages for Document Upload
 
 1. Navigate back to the Page Designer. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
@@ -814,7 +766,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
        ![Server Side](images/page5-serverside.png " ")
 
-## Task 6: Add Processes to the Page
+## Task 5: Add Processes to the Page
 
 In this task you will learn how to create processes and will create  processes:
 
@@ -991,7 +943,7 @@ In this task you will learn how to create processes and will create  processes:
 
     ![Edit Branch](images/edit-branch.png " ")
 
-## Task 7: Create Page for Document Processing
+## Task 6: Create Page for Document Processing
 
 In this task we will create Application Items,Application Processes and Content Row Dialog page
 
@@ -1207,7 +1159,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Size](images/size-large.png " ")
 
-## Task 8: Add Buttons in HomePage
+## Task 7: Add Buttons in HomePage
 
 1. Go to **Navigation Bar** and navigate to **Page 1**.
 
@@ -1260,7 +1212,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Upload Document](images/upload-doc.png " ")
 
-## Task 9: Create Page to View Citations
+## Task 8: Create Page to View Citations
 
 1. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
@@ -1326,7 +1278,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Citations Attributes](images/citation-attributes.png " ")
 
-## Task 10: Create Automation
+## Task 9: Create Automation
 
 1. In the Page designer toolbar, click **Shared Components** icon.
 

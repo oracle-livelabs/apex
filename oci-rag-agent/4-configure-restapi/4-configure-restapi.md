@@ -14,15 +14,63 @@ Estimated Time: 15 Minutes
 
 In this lab, you will:
 
+- Create an APEX Application.
+
 - Create REST Data Sources for creating session
 
 - Create REST Data Source for Creating Ingestion Job
 
-## Task 1: Invoke Create Session using REST Data Source
+## Task 1: Create an Application
 
-1. Navigate to **Shared Components**.
+In this task, you will create an application that allow you to build pages, add components, and define business logic for your project.
 
-     ![Click REST Data Sources](images/shared-compss.png " ")
+1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
+
+   ![Click Create](images/create.png " ")
+
+2. Select **Use Create App Wizard**.
+
+   ![Use Create App Wizard](images/use-create-app-wizard.png " ")
+
+3. In Create an Application Wizard, enter/select the following:
+
+    - Name : **GenAI Agents for APEX**
+
+   ![Enter App name](images/app-name.png " ")
+
+4. Click **Add Page**.
+
+   ![Blank Page Create](images/blank-page-create.png " ")
+
+5. Select **Blank**.
+
+    ![Select Blank Page](images/create-blank-page.png " ")
+
+6. Under **Add Blank Page**, enter/select the following:
+
+    - Name : **Chat With OCI Generative AI**
+
+7. Click **Add Page**.
+
+    ![Blank Page Name](images/blank-page-name.png " ")
+
+8. Under **Pages**, click **Edit** beside **Home**.
+
+    ![Edit Home Page](images/click-edit.png " ")
+
+9. Click **Delete**.
+
+    ![Delete Home Page](images/delete-home-page.png " ")
+
+10. Click **Create Application**.
+
+    ![Create Application](images/create-application.png " ")
+
+## Task 2: Invoke Create Session using REST Data Source
+
+1. Navigate to App Builder > Select your application > Shared Components **Shared Components**.
+
+     ![Click REST Data Sources](images/shared-comp.png " ")
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
@@ -49,7 +97,7 @@ In this lab, you will:
     Click **Next**.
 
     >**Note**:
-    - URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents-client/20240531/>
+    - URL Endpoint may differ based on Region. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents-client/20240531/>
     - POST endpoint for Create Session: Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents-client/20240531/Session/CreateSession>
 
    ![Create REST Data Sources](images/general-tab.png " ")
@@ -112,7 +160,7 @@ In this lab, you will:
 
    ![Response](images/response.png " ")
 
-## Task 2: Invoke Ingestion Job using REST Data Source
+## Task 3: Invoke Ingestion Job using REST Data Source
 
 1. Navigate to **Shared Components**.
 
@@ -141,7 +189,7 @@ In this lab, you will:
     Click **Next**.
 
     >**Note**:
-    - URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents/20240531>
+    - URL Endpoint differs based on region not based on OCI Tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents/20240531>
     - POST endpoint for Ingestion job Refer to the following link for more details <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents/20240531/DataIngestionJob/CreateDataIngestionJob>
 
    ![Create REST Data Sources](images/general-tab2.png " ")

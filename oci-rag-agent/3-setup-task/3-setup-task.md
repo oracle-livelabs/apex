@@ -267,7 +267,7 @@ In this lab, you:
      </copy>
       ```
 
-4. For **Script Name**: Enter **Application Scripts** and click **Run**.
+4. For **Script Name**: Enter **RAG_AGENT Script** and click **Run**.
 
    ![Script Name](./images/create-script.png " ")
 
@@ -277,7 +277,7 @@ In this lab, you:
 
 6. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 
-    ![SQL Script Results](images/successful-run.png " ")
+    ![SQL Script Results](images/successful-run1.png " ")
 
 ## Task 2: Create Web Credentials in Oracle APEX
 
