@@ -143,10 +143,32 @@ In this task, we will create a Search page for Text based search.
 
     ![CSS Inline](images/css-inline.png " ")
 
+6. Save and Run the Page.
+
+    ![Save and Run page](images/save-run2.png " ")
+
+7. 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Task 2: Image upload
 
 4. In the rendering tree, right-click on the Image Search Region and select **Create Page Item**.
 

@@ -42,12 +42,12 @@ In this lab, you:
 
         - Provider Type: **Database ONNX Model**
         - Name:**CLIP TEXT MODEL**
-        - Static ID: **clip_text_model**
+        - Static ID: **clip\_text\_model**
 
     - Under Local Embedding:
 
         - ONNX Model Owner: **Select your schema**
-        - ONNX Model Name: **CLIP_TXT_MODEL**
+        - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
     and click on **Create**.
 
@@ -100,11 +100,11 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
 
         - Provider Type: **Custom PL/SQL**
         - Name:**CLIP IMAGE MODEL**
-        - Static ID: **clip_image_model**
+        - Static ID: **clip\_image\_model**
 
     - Under Local Embedding:
 
-        - Custom Function Name: **clip_image_model**
+        - Custom Function Name: **clip\_image\_model**
 
     and click on **Create**.
 
