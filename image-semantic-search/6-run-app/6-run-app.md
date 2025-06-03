@@ -38,10 +38,9 @@ In this lab, you:
 
 ## Summary
 
-You now know how to post an image and search for images and images with text using AI search.
+You have now learned how to post images and perform AI-powered searches on uploaded images using either text or image queries as input.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, January 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, June 2025

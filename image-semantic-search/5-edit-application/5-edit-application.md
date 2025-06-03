@@ -4,7 +4,7 @@
 
 In this lab, you will enhance your APEX Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context-aware results.
 
-By the end of this lab, your APEX application will support real-time, AI-powered search—enabling users to find similar or related posted images using natural language or visual input.
+By the end of this lab, your APEX application will support real-time, AI-powered search, enabling users to find similar or related posted images through natural language or visual input.
 
 Estimated Time: 20 minutes
 
