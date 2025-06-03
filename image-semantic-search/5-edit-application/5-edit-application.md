@@ -18,7 +18,7 @@ In this lab, you will:
 
 - Create a Search Page for image-to-image search, where users can upload an image to find visually similar posted images.
 
-- Modify the Timeline region to embed and display posted images using the image vector provider for similarity-based retrieval.
+- Edit the Timeline region to automatically generate image embeddings using the image vector provider whenever a new image is posted. These embeddings are stored in the database to support future semantic searches.
 
 ## Task 1:  Create Search Configuration for Text-Based Search
 
@@ -415,9 +415,9 @@ In this task, we will create a Search page for Text based search.
 
 ## Summary
 
-You have successfully enhanced the Social Media app by integrating semantic image search features. You added an image upload interface, created buttons to trigger and reset searches, and updated the timeline region to display results that closely match the uploaded image or query. Your APEX app can now deliver intelligent, visually driven search experiences powered by AI.
+You have successfully enhanced the Social Media app by integrating semantic search features that enable users to search posted images using text or image queries. You implemented search pages for both text-based and image-to-image searches and updated the Timeline region to automatically generate and store image embeddings whenever new images are posted. These enhancements empower your APEX application to deliver fast, accurate, and intelligent search results powered by AI.
 
 ## Acknowledgments
 
-- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, June 2025
