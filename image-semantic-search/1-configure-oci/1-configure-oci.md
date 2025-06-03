@@ -13,6 +13,7 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Generate API Keys using OCI Console
+
 - Create Credentials in Oracle APEX
 
 ## Task 1: Generate API Keys using OCI Console
@@ -23,11 +24,11 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click Profile > **User Settings** at the top-right corner.
+2. Click **My Profile** at the top-right corner and select **User settings**.
 
-    ![Profile Menu](images/user-settings.png " ")
+    ![Profile Menu](images/profile.png " ")
 
-3. Under Resources at the bottom-left, select **API Keys** and  click **Add API Key**.
+3. Under **Tokens and keys** tab and click **Add API key**.
 
     ![Add API Key](images/api-keys.png " ")
 
