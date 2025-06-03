@@ -143,428 +143,275 @@ In this task, we will create a Search page for Text based search.
 
     ![CSS Inline](images/css-inline.png " ")
 
-6. Save and Run the Page.
+6. Click **Save** to save the Page.
 
     ![Save and Run page](images/save-run2.png " ")
 
-7. 
+## Task 3: Create Search Page for Image
 
+1. Click on the + Icon on the top right corner and select
+**Page**.
 
+    ![Create page](images/create-pages1.png " ")
 
+2. In the Create a Page Wizard, select the Component as **Cards** and click **Next**.
 
+    ![Create page](images/create-pages2.png " ")
 
+3. In the Create Cards Wizards, enter/select the following:
 
+    - Page Definition > Name : **Image to Image**
 
+    - Under Data Source:
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Task 2: Image upload
-
-4. In the rendering tree, right-click on the Image Search Region and select **Create Page Item**.
-
-    ![Create Item](images/create-item.png " ")
-
-5. In the Property editor, enter the following:
-
-    - Under Identification:
-
-        - Name: **P1\_IMAGE\_SEARCH\_BLOB**
-        - Type: **Image Upload**
-
-    - Label > Label: **Search Image**
-
-    - Display > Display As: **Block Dropzone**
-
-    - Storage > Type: **Table APEX\_APPLICATION\_TEMP\_FILES**
-
-    ![Create Region page](images/property-editor2.png " ")
-
-6. In the rendering tree, right-click on the Image Search Region and select **Create Page Item**.
-
-     ![Create Item](images/create-item2.png " ")
-
-7. In the Property editor, enter the following:
-
-    - Under Identification:
-
-        - Name: **P1_FILENAME**
-        - Type: **Hidden**
-
-    - Settings > Value Protected: **Toggle Off**
-
-    ![Create Region page](images/property-editor3.png " ")
-
-8. Right click on the P1_FILENAME Page item and Select **Create Computation**
-
-    ![Create Region page](images/create-computation.png " ")
-
-9. In the Property editor, enter the following:
-
-    - Under Computation:
-
-        - Type: **SQL Query(return single value)**
-        - SQL Query: Copy and Paste the below code
+        - Source Type: **SQL Query**
+        - Enter a SQL SELECT statement: copy and paste the below query:
 
         ```
          <copy>
-         SELECT FILENAME FROM APEX_APPLICATION_TEMP_FILES
-         WHERE NAME =:P1_IMAGE_SEARCH_BLOB;
-         </copy>
-        ```
-
-    ![Create Region page](images/sql-query2.png " ")
-
-10. Right click on the Image Search Region, and click **Create Button**
-
-    ![Create Button](images/create-submit.png " ")
-
-11. In the property editor, enter the following:
-
-    - Identification > Button Name: **Search**
-
-    - Layout > Slot: **Create**
-
-    - Under Appearance:
-
-        - Template Option > Type : **Primary**
-
-        Click **Ok**
-
-       ![Property editor Button](images/edit-button-submit.png " ")
-
-12. Save the page.
-
-    ![Property editor Button](images/save-page.png " ")
-
-## Task 2: Add Image Upload Button
-
-In this task, you will create a new button to open the image search region.
-
-1. In the Timeline page, navigate to the After logo region in the rendering tree.
-Right-click on the After Logo region, and click **Create Button**.
-
-    ![Page Designer view of the Timeline page](images/new-button.png " ")
-
-2. In the Property editor, enter the following:
-
-    - Under Identification:
-
-        - Button Name: **IMAGE_SEARCH**
-        - Label: **Image Search**
-
-    - Under Appearance:
-
-        - Button Template: **Text with Icon**
-        - CSS Classes: **nav-bar**
-        - Icon: **fa-image**
-
-    - Behavior > Action: **Defined by Dynamic Action**
-
-    ![Property Editor](images/image_search_button.png " ")
-
-3. Right click on the IMAGE_SEARCH button and select **Create Dynamic Action**.
-
-    ![Create DA](images/create-da.png " ")
-
-4. In the Property Editor of the New action, enter Identification > Name : **Open Image Search Dialog**
-
-    ![DA Property Editor](images/open-dialog.png " ")
-
-5. In the True Actions, select the show and enter the following in the property editor:
-
-    - Identification > Action: Execute Javascript code
-
-    - Settings > Code : copy and paste the below code
-
-        ```
-         <copy>
-         apex.item('P1_SEARCH').setValue('');
-         </copy>
-        ```
-
-    ![App output](images/edit-da1.png " ")
-
-6. In the rendering tree, under the created dynamic action, right click on the True Action and click Create True Action.
-
-    ![Add True Action](images/add-true2.png " ")
-
-7. In the property editor, select the following:
-
-    - Identification > Action: **Open Region**
-
-    - Under Affected Elements:
-        - Selection Type: **Region**
-        - Region: **Image Search**
-
-    Click **Save**.
-
-    ![Add True Action](images/edit-da2.png " ")
-
-## Task 3: Add a Reset Button
-
-In this task, you will create a new button to clear the text and image search Page items.
-
-1. In the rendering tree under After Logo component, right click and select **Create Button**
-
-    ![Add Reset Button](images/reset-button.png " ")
-
-2. In the property editor, enter the following:
-
-    - Under Identification:
-
-        - Button Name: **RESET**
-
-        - Label: **Reset**
-
-    - Appearance > CSS Classes: **nav-bar**
-
-    - Behavior > Action: **Defined by Dynamic Action**
-
-    ![Reset Button Properties](images/reset-button2.png " ")
-
-3. Right click on the RESET button and select **Create Dynamic Action**.
-
-    ![Create DA](images/create-da4.png " ")
-
-4. In the Property Editor of the New action, enter Identification > Name : **Clear search item values**
-
-    ![DA Property Editor](images/clear-button2.png " ")
-
-5. In the True Actions, select the show and enter the following in the property editor:
-
-    - Identification > Action: Execute Server-side code
-
-    - Under Settings:
-
-        - Language: **PL/SQL**
-        - Code : Copy and paste the below code
-
-        ```
-         <copy>
-         DELETE FROM apex_application_temp_files;
-         </copy>
-        ```
-
-    ![DA Property Editor](images/clear-button2.png " ")
-
-6. In the rendering tree, right click on the True Action and click **Create TRUE Action**.
-
-    ![DA Add action ](images/create-true-da.png " ")
-
-7. Click on the Show and enter the following in the Property Editor:
-
-    -  Identification > Action: **Clear**
-
-    - Under Affected Elements:
-
-        - Selection Type: **Item(s)**
-        - Items(s): **P1_IMAGE_SEARCH_BLOB,P1_SEARCH,P1_FILENAME**
-
-    ![DA Add action ](images/create-true-da2.png " ")
-
-8. Create another TRUE action by repeating step 6, and enter the following in the property editor:
-
-    - Identification > Action: **Refresh**
-
-    - Under affected Elements:
-
-        - Selection Type: **Region**
-        - Region: **Timeline**
-
-    ![DA Add action](images/create-true-da3.png " ")
-
-## Task 4: Edit the Timeline Region
-
-In this task, you will edit the Timeline region to refer the ONNX models we loaded in Lab 2. 
-
-
-1. Navigate to the Timeline page and Select the **Timeline** region. In the property editor, enter the following:
-    - Source > SQL Query: Copy paste the below code:
-
-        ```
-         <copy>
-         WITH uploaded_image AS (
-            SELECT blob_content AS image_blob
+         WITH vector_image AS (
+            SELECT apex_ai.get_vector_embeddings (
+                p_value   =>  apex_web_service.blob2clobbase64(blob_content),
+                p_service_static_id => 'clip_image_model') as img_vector
             FROM apex_application_temp_files
-            WHERE filename = :P1_FILENAME
+            WHERE filename = :P3_FILENAME
             ORDER BY created_on DESC
             FETCH FIRST 1 ROWS ONLY
             )
             SELECT A.*,
                 TO_CHAR(ROUND(vector_distance, 3), '0.999') AS vector_distance_display
             FROM (
-                SELECT
-                    p.id,
-                    p.post_comment,
-                    p.file_blob,
-                    p.file_mime,
-                    p.file_name,
-                    p.created,
-                    p.created_by,
-                    p.updated,
-                    p.updated_by,
-                    CASE
-                        -- If TEXT search is entered
-                        WHEN :P1_SEARCH IS NOT NULL THEN
-                            COSINE_DISTANCE(
-                                TO_VECTOR(VECTOR_EMBEDDING(clip_txt_model USING :P1_SEARCH AS data)),
-                                p.ai_image_vector
-                            )
-
-                        -- If IMAGE is uploaded
-                        WHEN EXISTS (SELECT 1 FROM uploaded_image) THEN
-                            COSINE_DISTANCE(
-                                TO_VECTOR(VECTOR_EMBEDDING(
-                                    clip_img_model USING (SELECT image_blob FROM uploaded_image) AS data
-                                )),
-                                p.ai_image_vector
-                            )
-
-                        -- Otherwise, don't compute distance
-                        ELSE NULL
-                    END AS vector_distance
-                    FROM sm_posts p
-                    ) A
-
-         ORDER BY  A.vector_distance, A.created DESC;
+            SELECT
+                p.id,
+                p.post_comment,
+                p.file_blob,
+                p.file_mime,
+                p.file_name,
+                p.created,
+                p.created_by,
+                p.updated,
+                p.updated_by,
+                CASE
+                    WHEN EXISTS (SELECT 1 FROM vector_image) THEN
+                        COSINE_DISTANCE(
+                            (SELECT img_vector FROM vector_image),
+                            p.ai_image_vector
+                        )
+                    ELSE null
+                END AS vector_distance
+            FROM sm_posts p
+            ) A
+            ORDER BY A.vector_distance, A.created DESC;
          </copy>
-        ````
+        ```
 
-        And click **Ok**.
+    Click **Next**.
 
-    ![Page Designer](images/sql-query5.png " ")
+    ![Create page](images/create-pages3.png " ")
 
-2. In the Property Editor, update the following properties:
+4. In the Create Cards Wizard, select the following:
+
+    - Cards Attributes > Title Column: **VECTOR\_DISTANCE\_DISPLAY**
+
+    Click **Create Page**.
+
+    ![Create page](images/create-pages4.png " ")
+
+5. In the Rendering tree, right click on the **Body** and select **Create Page Item**.
+
+    ![Create Page item](images/create-pageitem1.png " ")
+
+6. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
-        - Type: **Button**
+        - Name: **P3_IMAGE**
 
-        - Label: **Share**
+        - Type: **Image Upload**
 
-    - Under Link:
+    - Label > Label: **Upload Image for Search**
 
-        - Type: **Redirect to URL**
+    - Display > Display As: **Block Dropzone**
 
-        - Target:
+    - Layout > Sequence: **10**
 
-            - Type: **URL**
+    ![Page item](images/create-pageitem2.png " ")
 
-            - URL: **#action$share?id=&ID.**
+    ![Page item](images/create-pageitem3.png " ")
 
-            Click **Ok**.
+7. Right click on the **P3_IMAGE** page item and select **Create Dynamic Action**
 
-    ![Property Editor](images/button-share.png " ")
-3. In the Property Editor, under the **Appearance** group, update the following properties:
+    ![Create Dynamic Action](images/create-das1.png " ")
 
-    - Display Type: **Icon**
+8. Select the New Action and enter the following in the Property editor:
+    - Identification > Name: **Submit Image**
 
-    - Icon: **fa-share-alt**
+    ![Create Dynamic Action](images/create-das2.png " ")
 
-    ![Property Editor](images/change-icon.png =40%x*)
-4. In the Rendering Tree on the left pane, select **Page 1: Timeline**. In the Property Editor, update **Javascript > Execute When Page Loads** with the following code snippet:
+9. Under True, select **Show** and enter/select the following in the property editor:
 
-    ```
-     <copy>
-        apex.actions.add([{
-        name: "like",
-        action: (event, element, args) => {
-            apex.items.P1_ACTION_ID.value = args.id;
-            apex.event.trigger(document, 'action-like');
-        }
-        }, {
-        name: "delete",
-        action: (event, element, args) => {
-            apex.items.P1_ACTION_ID.value = args.id;
-            apex.event.trigger(document, 'action-delete');
-        }
-        }, {
-        name: "open-map",
-        action: () => {
-            apex.event.trigger(document, 'action-open-map');
-        }
-        }, {
-        name: "open-about",
-        action: () => {
-            apex.event.trigger(document, 'action-open-about');
-        },
-        },
-        {
-        name: "share",
-        action: (event, element, args) => {
-            apex.items.P1_ACTION_ID.value = args.id;
-            apex.event.trigger(document, 'action-share');
-            }
-        }]);
-     </copy>
-    ```
+    - Identification > Action: **Submit Page**
 
-    ![Property Editor](images/exec-js.png " ")
+    ![True Dynamic Action](images/das3.png " ")
 
-    ![Property Editor](images/update-js-code.png " ")
+10. In the Rendering Tree, right click on **Body** and select **Create Page Item**.
 
-5. In the Rendering Tree, click on the **Dynamic Actions** tab. Right-click on **Custom** and select **Create Dynamic Action**.
+    ![Create Page Item](images/create-pi.png " ")
 
-    ![Dynamic Actions tab](images/custom-da.png " ")
+11. In the property editor, enter/select the following:
 
-6. In the Property Editor, enter/select the following properties:
+    - Under Identification:
+        - Name: **P3_FILENAME**
+        - Type: **Hidden**
 
-    - Identification > Name: **action-share**
+    - Settings > Value Protected: **Toggle Off**
 
-    - Under When:
+    ![Filename Item](images/create-pe2.png " ")
 
-        - Event: **Custom**
+12. Right click on the **P3_FILENAME** page item and select **Create Computation**
 
-        - Custom Event: **action-share**
+    ![Create Computation](images/create-computation1.png " ")
 
-        - Selection Type: **Javascript Expression**
+13. In the property editor, enter/select the following:
 
-        - Javascript Expression: **document**
+    - Execution > Point: **After Submit**
 
-    ![Property Editor](images/action-share.png " ")
+    - Computation > SQL Query: copy and paste the below code:
 
-7. In the left pane, under **action-share**, click on the **True** action. Now, in the property editor, update the following properties:
+        ```
+         <copy>
+         SELECT FILENAME FROM APEX_APPLICATION_TEMP_FILES  WHERE NAME =:P3_IMAGE
+         </copy>
+        ```
 
-    - Identification > Action: **Share**
+    ![Create Computation](images/create-computation2.png " ")
+
+14. In the Rendering tree, right click on **Body** and select
+**Create Page Item**.
+
+    ![Create Page item](images/create-items5.png " ")
+
+15. In the Property editor, enter the following:
+
+    - Under Identification:
+
+        - Name: **P3\_DISPLAY\_IMAGE**
+        - Type: **Display Image**
+
+    - Label > Label: **Uploaded Search Image**
 
     - Under Settings:
 
-        - Title: **Image Shared on Social Media App**
+        - Based on: **BLOB Column returned by SQL statement**
 
-        - Text: **&APP_USER. is sharing a file.**
-
-        - Share Type: **File(s)**
-
-        - File(s) Source: **SQL Query**
-
-        - SQL Query:
-
+        - SQL Statement: copy and paste the below query
             ```
              <copy>
-             SELECT FILE_BLOB, FILE_NAME, FILE_MIME
-             FROM SM_POSTS WHERE ID = :P1_ACTION_ID;
+             SELECT BLOB_CONTENT FROM APEX_APPLICATION_TEMP_FILES
+             WHERE NAME =:P3_IMAGE;
              </copy>
             ```
+    - Layout > Column Span: **3**
 
-        - Items to Submit: **P1\_ACTION\_ID**
+    - Appearance > Template Options: Stretch Form Item
 
-    ![Property Editor](images/true-action-share.png " ")
+    - Under Server-side Condition:
+        - Type: **Item is NOT NULL**
+        - Item: **P3_IMAGE**
 
-8. **Save and Run** the page. You can see a Share button for each post. Click on **Share** to open a context menu and choose the app you want to share with. In this example, choose **Mail** and the post is attached as an image in an email draft with an associated text.
+    ![Display Page item](images/pa-display.png " " )
 
-    ![App output](images/run-app-share.png " ")
+    ![Display Page item](images/create-items6.png " ")
 
-    ![Image share via email](images/image-share-mail.png =60%x*)
+    ![Display Page item](images/display-item2.png " ")
+
+16. In the Rendering tree, under Body, select **Image to Image** region, and enter/select the following in the property editor:
+
+    - Identification >  Name: **Search Results**
+    - Source > Page Items to Submit: **P3_FILENAME**
+    - Under Layout:
+        - Sequence: **40**
+        - Start New Row: Toggle **OFF**
+
+    ![Property Editor cards](images/change-cards1.png " ")
+
+    - Under Attributes:
+        - Appearance > Grid Columns: **4 Columns**
+
+        - Card > Primary Key Column 1: **ID**
+
+        - Under Media:
+            - Source: **BLOB Column**
+            - BLOB Column: **FILE_COLUMN**
+            - Position: **First**
+            - Appearance: **Square**
+            - Sizing: **Cover**
+
+    ![Property Editor cards](images/card-attributes2.png " ")
+
+    ![Property Editor cards](images/card-attributes.png " ")
+
+17. **Save** the page.
+
+    ![Property editor Button](images/save-page.png " ")
+
+## Task 4 : Embed the uploaded images
+
+1. Click on the **Page Finder** and Navigate to **Page 1 : Timeline**.
+
+    ![Navigate to Page 1](images/goto-page1.png " ")
+
+2. Select the **Processes** tab.
+
+    ![Processes tab](images/processes.png " ")
+
+3. Right click on Processes and select **Create Process**.
+
+    ![Processes tab](images/create-process2.png " ")
+
+4. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+        - Name: **Image embeddings**
+        - Type: **Execution Chain**
+
+    - Under Server-side Condition:
+
+        - When Button Pressed: **ADD_POST**
+        - Type: **Item is NOT NULL**
+        - Item: **P1\_FILE\_BLOB**
+
+    ![Process Property Editor](images/execution-chain.png " ")
+
+5. In the Processes tab, right click on the **Image embeddings** process and select **Add Child Process**.
+
+    ![Add Child Process](images/child-process.png " ")
+
+6. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+        - Name: **Vectorize**
+        - Type: **Execute Code**
+
+    - Source > PL/SQL Code : copy and paste the below code:
+
+        ```
+         <copy>
+         BEGIN
+         UPDATE sm_posts
+         SET ai_image_vector = apex_ai.get_vector_embeddings (
+            p_value   =>  apex_web_service.blob2clobbase64(file_blob),
+            p_service_static_id => 'clip_image_model')
+         WHERE id = :P1_ID;
+         END;
+         </copy>
+        ```
+
+    ![Process Property Editor](images/process-propertyeditor.png " ")
+
+7. Save the page.
+
+    ![Save application](images/save-run3.png " ")
 
 ## Summary
 
@@ -572,5 +419,5 @@ You have successfully enhanced the Social Media app by integrating semantic imag
 
 ## Acknowledgments
 
-- **Author** - Sahaana Manavalan,Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, May 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
