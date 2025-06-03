@@ -56,8 +56,10 @@ If you are stuck or the App is not working as expected, you can download and ins
 | 1 | [Configure OCI Keys](?lab=1-configure-oci) | 5 minutes |
 | 2 | [Import and Edit Social Media App](?lab=2-import-app) | 10 minutes |
 | 3 | [Export and Load ONNX Models](?lab=3-export-onnx-model) | 15 minutes |
-| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 20 minutes |
-| 5 | [Run the Application](?lab=5-run-app) | 5 minutes |
+| 4 | [Create Vector Providers](?lab=4-create-vector-providers) | 10 minutes |
+| 5 | [Implement Text and Image Search](?lab=5-edit-application) | 20 minutes |
+| 6 | [Run the Application](?lab=5-run-app) | 5 minutes |
+
 
 ## Learn More - *Useful Links*
 

@@ -2,25 +2,25 @@
 
 ## Introduction
 
-In this lab, you will integrate semantic search capabilities directly into the user interface of your APEX Social Media app. Instead of relying on basic keyword filtering, users will be able to search for posts using text or images based on meaning and similarity. Whether it’s finding visually similar images or posts related to a phrase, your app will deliver intelligent, context-aware results.
+In this lab, you will enhance your APEX Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context-aware results.
 
-By the end of this lab, your APEX application will be ready to handle real-time image-based queries with ease.
+By the end of this lab, your APEX application will support real-time, AI-powered search—enabling users to find similar or related posted images using natural language or visual input.
 
 Estimated Time: 20 minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
-- Add an Image Upload item to the APEX app for users to perform image-based search.
+- Create a Search Configuration for semantic search on posted images.
 
-- Create an Upload button to trigger the search functionality using the uploaded image.
+- Build a Search Page that allows users to search posted images using text queries.
 
-- Add a Reset button to clear the uploaded image and search results, allowing users to start a new search.
+- Create a Search Page for image-to-image search, where users can upload an image to find visually similar posted images.
 
-- Edit the Timeline region to dynamically reflect results matching the uploaded image or query, ensuring users see only contextually similar posts.
+- Modify the Timeline region to embed and display posted images using the image vector provider for similarity-based retrieval.
 
-## Task 1:  Create Search Configuration and Page for Text-Based Search
+## Task 1:  Create Search Configuration for Text-Based Search
 
 In this task, you will create a search configuration in Oracle APEX using the CLIP text vector provider, and then build a search page that allows users to perform semantic searches based on text input.
 
