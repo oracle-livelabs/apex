@@ -106,7 +106,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
 
         - Custom Function Name: **clip\_image\_model**
 
-    and click on **Create**.
+     Click **Create**.
 
     ![Property Editor Create Vector Provider](images/create-vector-provider3.png " ")
 
