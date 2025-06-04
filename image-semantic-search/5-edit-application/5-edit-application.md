@@ -51,7 +51,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc2.png " ")
+    ![Create Search Configuration](images/create-sc2.png " " =60%x*)
 
 7. Enter/Select the following:
 
@@ -62,7 +62,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc3.png " ")
+    ![Create Search Configuration](images/create-sc3.png " " =60%x*)
 
 8. Select the following:
 
@@ -72,7 +72,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Create Search Configuration**.
 
-    ![Create Search Configuration](images/create-sc4.png " ")
+    ![Create Search Configuration](images/create-sc4.png " " =60%x*)
 
 9. In the Search Configuration Page, enter/select the following:
 
