@@ -18,7 +18,7 @@ In this lab, you:
 
     ![Click Timeline](images/social-media-login.png =60%x*)
 
-2. Click **Add Post** on the Navigation Bar.
+2. Click **Add Post** on the bottom right corner.
 
 3. Drag and Drop the image from your local system or use the **Choose File** button to upload an image from your local system. Then, click **Post**.
 
@@ -26,15 +26,17 @@ In this lab, you:
 
     The image has been posted on your timeline. Similarly, add as many posts as you would like.
 
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term.
+4. Now, click on the **Text to Image** tab and enter your Search Term in the Search Bar and then press **Enter**. The app searches for and displays all the images that contain the corresponding search term.
 
-    In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images with the sky for image classification.
+    In the following example, for text to image search, when you enter "yellow wheel" in the Search bar, the app displays all the images that contain or relate to a yellow wheel.
 
     ![Click Timeline](images/img-class.png " ")
 
-    In the following example, for text detection, when you enter 'Bengaluru' in the AI Search Field, the app displays all the images with the text 'Bengaluru'.
+5. To perform an image-to-image search, navigate to the Image to Image tab, upload the image you want to find similar matches for, and press Enter. The app will then search and display all posted images that closely resemble the uploaded image.
 
-    ![Click Timeline](images/text-detect.png " ")
+    In the following example, for image-based search, when you upload an image of a 'yellow wheel', the app displays all posted images that are visually similar or related to the uploaded image.
+
+    ![Click Timeline](images/image-detect.png " ")
 
 ## Summary
 
