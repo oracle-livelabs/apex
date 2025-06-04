@@ -42,7 +42,7 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/add-api-key.png " ")
 
-7. The key is added, and the Configuration File Preview is displayed. Copy and save the API Key Fingerprint from the text box into a notepad. You will use this information for creating Credentials in Oracle APEX.
+7. The key is added, and the Configuration file preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information to create Oracle APEX Web Credentials.
 
     ![Profile Menu](images/configuration-preview.png " ")
 
@@ -60,7 +60,7 @@ To create a Web Credential in Oracle APEX:
 
     ![SQL Commands](images/sql-commands.png " ")
 
-3. Copy and paste the following code with the API Keys saved from Task 1.
+3. Copy and paste the following code by replacing the password with the API Fingerprint ID saved from Task 1. (Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40** )
 
     ```
      <copy>
@@ -68,7 +68,7 @@ To create a Web Credential in Oracle APEX:
      dbms_cloud.create_credential (
      credential_name => 'onnx_obj_store_cred_image',
      username        => '<Your username>',
-     password        => '<API Keys>'
+     password        => '<Fingerprint ID>'
      );
      END;
      </copy>

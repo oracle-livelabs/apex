@@ -6,7 +6,7 @@ In this lab, you'll learn how to export a CLIP multi-modal ONNX pipeline model u
 
 By the end of this lab, you'll have a CLIP model integrated into your Oracle Database environment, ready to generate embeddings for both images and text, facilitating advanced semantic search functionalities.
 
-Estimated Time: 20 Minutes
+Estimated Time: 15 Minutes
 
 ### Objectives
 
