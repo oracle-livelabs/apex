@@ -116,7 +116,7 @@ In this task, we will create a Search page for Text based search.
 
 3. In the Create a Page Wizard, Select **Search Page**.
 
-    ![Create Page](images/create-paget2.png " ")
+    ![Create Page](images/create-paget2.png " " =60%x*)
 
 4. In the Create Page Wizard, enter/select the following:
 
