@@ -164,13 +164,6 @@ In this task, you will create Page Items, Static Content region and a subregion,
       ```
       <copy>
 
-         <html>
-         <head></head>
-         <body>
-            <h1 id='sample'>My First Heading</h1>
-            <p>My first paragraph.</p>
-         </body>
-      </html>
          <h3 style="margin:0; display:flex; justify-content:center; align-items:center; height:300px;">Start Conversation</h3>
 
       </copy>
@@ -672,18 +665,18 @@ In this task, we will create a Static Content region and a subregion, and config
 
    ![Edit Form](images/create-formpage.png " ")
 
-6. Once Page is created, click **Upload Documents to Knowledge Base** region, select **Create page Item**.
+6. Once Page is created, navigate to the page, right-click on **Upload Documents to Knowledge Base** region and select **Create page Item**.
 
-7. Now, add the following eight page items one after the other:
+7. Now, add the following nine page items one after the other:
 
    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype | SQL Query (return single value)
    |---|-------|------|----------| --------------| ------ |------ |
-   | 1 | P5\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment ID|
+   | 1 | P5\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment OCID|
    | 2 | P5\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
    | 3 | P5\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
    | 4 | P5\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket(For this Lab we have **GenAIRAGBucket**) |
    | 5 | P5\_REGION| Hidden | Static | Enter your Region. e.g. us-chicago-1 |
-   | 6 | P5\_DATASOURCE_ID| Hidden |  |  | [Refer Lab 2, Task3, Step9](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
+   | 6 | P5\_DATASOURCE_ID| Hidden |  |  | [Refer Lab 2, Task3, Step10](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
    | 7 | P5\_DISPLAY\_NAME| Hidden | SQL Query (return single value) | | | select concat('IngestionJob\_', ingestion\_seq.nextval) from dual;  |
    | 8 | P5\_DESCRIPTION| Hidden | | Creating an Ingestion Job for the latest files | | |
    | 9 | P5\_ING\_RESPONSE| Hidden | |  | | |
@@ -762,7 +755,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Under Server-side Condition:
         - Type: **Item is zero**
-        - Item **P5_INGESTION_COUNT**
+        - Item **P5\_INGESTION\_COUNT**
 
        ![Server Side](images/page5-serverside.png " ")
 
@@ -778,7 +771,7 @@ In this task you will learn how to create processes and will create  processes:
 
 - **Auto DML**: This process helps in Data Manipulation Language (DML) operations such as insert, update, or delete based on user actions on the form.
 
-1. Navigate to the **Processing** tab, select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
+1. On Page 5, Navigate to the **Processing** tab, select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
 
     - Identification > Type: **Invoke API**
 
@@ -811,7 +804,7 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Parameters](images/parameters1.png " ")
 
-3. Right-click **Processes** and click **Create Processes**.
+3. Right-click **Processes** and click **Create Process**.
 
 4. In the Property Editor, enter/select the following:
 
@@ -825,7 +818,7 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Process2](images/process2.png " ")
 
-5. Right-click **Work with Ingestion Jobs** processes, click **Create Child Processes**.
+5. Right-click **Work with Ingestion Jobs** processes, click **Add Child Process**.
 
 6. In the Property Editor, enter/select the following:
 
@@ -854,13 +847,13 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Child Parameters1](images/child-parameters11.png " ")
 
-8. Right-click **Work with Ingestion Jobs** process, click **Create Child Processes**.
+8. Right-click **Work with Ingestion Jobs** process, click **Add Child Process**.
 
 9. In the Property Editor, expand the **Parameters** and enter/select the following:
 
     - Under Identification:
         - Name: **Set Ingestion Job Details**
-        - Type: **Invoke API**
+        - Type: **Execute Code**
         - Execution Chain: **Work with Ingestion Job**
 
     - Under Source:
@@ -871,10 +864,10 @@ In this task you will learn how to create processes and will create  processes:
             SELECT
             jt.Status,
             jt.job_id into : P5_INGESTION_RESPONSE,
-            : P5_DATA_ING_JOB_ID
+            :P5_DATA_ING_JOB_ID
             FROM
             JSON_TABLE(
-                : P5_ING_RESPONSE,
+                :P5_ING_RESPONSE,
                 '$' COLUMNS (
                 Status VARCHAR2(50) PATH '$.lifecycleState',
                 job_id varchar2(300) PATH '$.id'
@@ -896,8 +889,8 @@ In this task you will learn how to create processes and will create  processes:
 
     - Under Settings:
         - Type: **PL/SQL Package**
-        - Package: **OCI_OBJECT_STORAGE_UTILS**
-        - Procedure or Function: **DELETE_FILE**
+        - Package: **OCI\_OBJECT\_STORAGE\_UTILS**
+        - Procedure or Function: **DELETE\_FILE**
 
     - Server-side Condition > When Button Pressed: **DELETE**
 
@@ -920,8 +913,8 @@ In this task you will learn how to create processes and will create  processes:
 
     - Under Identification:
         - Name: **Auto DML**
-        - Type: **Form - Automatic Row Processing**
-        - From Region: **Upload Document to Knowledge Base**
+        - Type: **Form - Automatic Row Processing (DML)**
+        - From Region: **Upload Documents to Knowledge Base**
 
     - Under Server-side Condition:
         - Type: **Request is contained in Value**
@@ -1109,25 +1102,55 @@ In this task we will create Application Items,Application Processes and Content 
 
 19. Under **Menu** action, right-click **Menus** add below items one after another:
 
-    |   | Identification > Type | Identification > Label | Link > Type | Target > Static |
-    |---|-------|------|----------| --------------|
-    | 1 | Menu Entry| Download PDF | Redirect to Page in this Application |Click **No Link Defined and follow Table :Link Builder - Target**|
-    | 2 | Menu Entry| Edit/Delete Document | Redirect to Page in this Application |Click **No Link Defined and follow Table :Link Builder - Target**|
-    {: title="Menus Items"}
+    - Under Identification enter/select the following:
 
-    |   | Page | Set Items > Name | Set Items > Name | Clear Cache| Advanced > Request |
-    |---|-------|------|----------| --------------|--------|
-    | 1 | 6| ID | &ID. || APPLICATION\_PROCESS=DOWNLOAD\_DOC |
-    | 2 | 5| P5\_ID | &ID. |5|  |
-    {: title="Link Builder - Target"}
+        - Type: **Menu Entry**
+        - Target: **Download PDF**
+
+    - Under Link enter/select the following:
+
+        - Type: **Redirect to Page in this Application**
+        - Label: Click **No Link Defined**
+
+    - In the dialog **Under Link Builder - Target** enter/select the following:
+
+        - Target > Page : **6**
+
+        - Set Items > Name : **ID**
+
+        - Set Items > Value : **&ID.**
+
+        - Advanced > Request : **APPLICATION\_PROCESS=DOWNLOAD\_DOC**
 
     ![Download PDF](images/download-pdf.png " ")
 
+20. Under **Menu** action, right-click **Menus** add below items one after another:
+
+    - Under Identification enter/select the following:
+
+        - Type: **Menu Entry**
+        - Target: **Edit/Delete Document**
+
+    - Under Link enter/select the following:
+
+        - Type: **Redirect to Page in this Application**
+        - Label: Click **No Link Defined**
+
+    - In the dialog **Under Link Builder - Target** enter/select the following:
+
+        - Target > Page : **5**
+
+        - Set Items > Name : **P5\_ID**
+
+        - Set Items > Value : **&ID.**
+
+        - Clear / Reset > Clear Cache : **5**
+
     ![Edit Document](images/edit-document.png " ")
 
-20. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
+21. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
 
-    |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Set Items > Clear Cache |
+    |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Clear Cache |
     |---|-------|------|----------| --------------| ---- | --- | --- |
     | 1 | Chat\_with\_AI\_Agent| Chat With AI Agent | Top of Region [Legacy]| |Redirect to Page in this Application| 1 | 1 |
     | 2 | Upload| Upload Document to KB | Top of Region [Legacy]| Toggle On |Redirect to Page in this Application| 5 | 5 |
@@ -1137,9 +1160,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Upload](images/upload.png " ")
 
-21. Right-click **Content Body**, click **Create Page Item**.
+22. Right-click **Content Body**, click **Create Page Item**.
 
-22. In the Property Editor, enter/select the following:
+23. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1149,9 +1172,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Page6 Item](images/page-item.png " ")
 
-23. Navigate to **Page 6: Document Processing Tracker** root node.
+24. Navigate to **Page 6: Document Processing Tracker** root node.
 
-24. In the Property Editor, enter/select the following:
+25. In the Property Editor, enter/select the following:
 
     - Template Options > Size: **Large**
 
@@ -1232,7 +1255,7 @@ In this task we will create Application Items,Application Processes and Content 
 
 4. Click **Create Page**
 
-5. In the Property Editor and enter/select the following::
+5. Select **View Citations** region, in the property editor  enter/select the following::
 
     - Under Source:
 

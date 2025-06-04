@@ -17,7 +17,7 @@ In this lab, you will:
 
 1. Navigate to Page 1 **Chat With OCI Generative AI**.
 
-2. Click **GenAI Agents for APEX** breadcrumb bar.
+2. Click **GenAI Agents for APEX** under Breadcrumb Bar.
 
 3. In the Property Editor, enter/select the following:
 
@@ -26,8 +26,6 @@ In this lab, you will:
     ![Breadcrumb](images/breadcrumb.png " ")
 
 4. Navigate to **Page1 : Chat With OCI Generative AI** root node, in the Property Editor, enter/select the following:
-
-    - Under Appearance > Template: **Blank with Attributes**
 
     - Under Navigation Menu > Override User Interface Level: **Toggle On**
 
