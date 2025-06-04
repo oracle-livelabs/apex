@@ -30,13 +30,13 @@ In this lab, you:
 
     In the following example, for text to image search, when you enter "yellow wheel" in the Search bar, the app displays all the images that contain or relate to a yellow wheel.
 
-    ![Click Timeline](images/img-class.png " ")
+    ![Text to Image Search](images/img-class.png " ")
 
-5. To perform an image-to-image search, navigate to the Image to Image tab, upload the image you want to find similar matches for, and press Enter. The app will then search and display all posted images that closely resemble the uploaded image.
+5. To perform an image-to-image search, navigate to the Image to Image tab, upload the image you want to find similar matches for. The app will then search and display all posted images that closely resemble the uploaded image.
 
     In the following example, for image-based search, when you upload an image of a 'yellow wheel', the app displays all posted images that are visually similar or related to the uploaded image.
 
-    ![Click Timeline](images/image-detect.png " ")
+    ![Image to Image Search](images/image-detect.png " ")
 
 ## Summary
 

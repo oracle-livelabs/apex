@@ -156,7 +156,7 @@ In this task, we will create a Search page for Text based search.
 
 2. In the Create a Page Wizard, select the Component as **Cards** and click **Next**.
 
-    ![Create page](images/create-pages2.png " ")
+    ![Create page](images/create-pages2.png " " =60%x*)
 
 3. In the Create Cards Wizards, enter/select the following:
 
@@ -207,7 +207,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Next**.
 
-    ![Create page](images/create-pages3.png " ")
+    ![Create page](images/create-pages3.png " " =60%x*)
 
 4. In the Create Cards Wizard, select the following:
 
@@ -215,7 +215,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Create Page**.
 
-    ![Create page](images/create-pages4.png " ")
+    ![Create page](images/create-pages4.png " " =60%x*)
 
 5. In the Rendering tree, right click on the **Body** and select **Create Page Item**.
 
@@ -243,7 +243,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Create Dynamic Action](images/create-das1.png " ")
 
-8. Select the New Action and enter the following in the Property editor:
+8. Select the **New** Action and enter the following in the property editor:
     - Identification > Name: **Submit Image**
 
     ![Create Dynamic Action](images/create-das2.png " ")
@@ -276,7 +276,7 @@ In this task, we will create a Search page for Text based search.
 
     - Execution > Point: **After Submit**
 
-    - Computation > SQL Query: copy and paste the below code:
+    - Computation > SQL Query: Copy and paste the below code:
 
         ```
          <copy>
@@ -304,7 +304,7 @@ In this task, we will create a Search page for Text based search.
 
         - Based on: **BLOB Column returned by SQL statement**
 
-        - SQL Statement: copy and paste the below query
+        - SQL Statement: Copy and paste the below query
             ```
              <copy>
              SELECT BLOB_CONTENT FROM APEX_APPLICATION_TEMP_FILES
@@ -319,7 +319,7 @@ In this task, we will create a Search page for Text based search.
         - Type: **Item is NOT NULL**
         - Item: **P3_IMAGE**
 
-    ![Display Page item](images/pa-display.png " " )
+    ![Display Page item](images/pa-display.png " " =30%x*)
 
     ![Display Page item](images/create-items6.png " ")
 
@@ -328,12 +328,18 @@ In this task, we will create a Search page for Text based search.
 16. In the Rendering tree, under Body, select **Image to Image** region, and enter/select the following in the property editor:
 
     - Identification >  Name: **Search Results**
+
     - Source > Page Items to Submit: **P3_FILENAME**
+
     - Under Layout:
         - Sequence: **40**
         - Start New Row: Toggle **OFF**
 
+    - Appearance > Template: **Standard**
+
     ![Property Editor cards](images/change-cards1.png " ")
+
+    ![Property Editor cards](images/change-cards3.png " ")
 
     - Under Attributes:
         - Appearance > Grid Columns: **4 Columns**
@@ -350,10 +356,30 @@ In this task, we will create a Search page for Text based search.
     ![Property Editor cards](images/card-attributes2.png " ")
 
     ![Property Editor cards](images/card-attributes.png " ")
+17. In the Rendering tree, right click on **Body** and select **Create Button**.
 
-17. **Save** the page.
+    ![Create button](images/create-clear.png " ")
 
-    ![Property editor Button](images/save-page.png " ")
+18. In the Property Editor, enter/select the following:
+
+    - Identification > Button Name: **Clear**
+
+    - Under Layout:
+        - Sequence: **10**
+        - Column: **12**
+
+    - Under Appearance:
+        - Template Options:
+            - Type: **Primary**
+            - Width: **Stretch**
+
+            Click **Ok**.
+
+    ![Save](images/clear-button.png " ")
+
+19. **Save** the page.
+
+    ![Save](images/save-page1.png " ")
 
 ## Task 4 : Embed the uploaded images
 
@@ -393,7 +419,7 @@ In this task, we will create a Search page for Text based search.
         - Name: **Vectorize**
         - Type: **Execute Code**
 
-    - Source > PL/SQL Code : copy and paste the below code:
+    - Source > PL/SQL Code : Copy and paste the below code:
 
         ```
          <copy>
