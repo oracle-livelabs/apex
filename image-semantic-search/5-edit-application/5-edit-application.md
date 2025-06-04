@@ -124,7 +124,7 @@ In this task, we will create a Search page for Text based search.
 
     - Search Configurations > **Click the check box for Text Search**.
 
-    ![Create Page](images/create-paget3.png " ")
+    ![Create Page](images/create-paget3.png " " =60%x*)
 
 5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under CSS > Inline.
 
