@@ -1255,7 +1255,16 @@ In this task we will create Application Items,Application Processes and Content 
 
 4. Click **Create Page**
 
-5. Select **View Citations** region, in the property editor  enter/select the following::
+5. Right-click **Content Body**, select **Create Page Item**.
+
+6. In the property editor enter/select the following:
+
+    - Identification > Name: **P7\_CONV\_ID**
+    - Identification > Type: **Hidden**
+
+    ![Page Item7](images/p7_convid.png " ")
+
+7. Select **View Citations** region, in the property editor enter/select the following::
 
     - Under Source:
 
@@ -1275,7 +1284,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Edit Citations](images/edit-citation.png " ")
 
-6. Navigate to **Attributes** tab, enter/select the following:
+8. Navigate to **Attributes** tab, enter/select the following:
 
     - Under Settings: (including period (**.**) ):
 
