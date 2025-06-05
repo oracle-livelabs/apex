@@ -435,7 +435,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Process Property Editor](images/process-propertyeditor.png " ")
 
-7. Save the page.
+7. **Save** the page.
 
     ![Save application](images/save-run3.png " ")
 
