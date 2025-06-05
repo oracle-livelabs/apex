@@ -58,7 +58,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Follow Lab 1 > Task 2 to create a bucket in OCI Object Storage.
 
-    - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge BAse and Generative AI Agents in OCI.
+    - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge Base and Generative AI Agents in OCI.
 
     - Follow Lab 3 > Task 2 to create Web Credentials in Oracle APEX.
 
