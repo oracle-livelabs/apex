@@ -20,9 +20,9 @@ In this lab, you:
 
 In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Client
 
-**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4PY client is installed. For more info, click [here] (https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/generate-multi-modal-embeddings-using-clip.html#GUID-F3F77239-15DB-45A1-9288-768F0AF8F0D2)
+**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4Py client is installed. For more info, click [here]. (https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/generate-multi-modal-embeddings-using-clip.html#GUID-F3F77239-15DB-45A1-9288-768F0AF8F0D2)
 
-1. Navigate to terminal where you have installed the OML4PY client and to start Python, copy paste the following:
+1. Navigate to terminal where you have installed the OML4Py client and to start Python, copy paste the following:
 
     ```
      <copy>
@@ -43,7 +43,7 @@ In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Clie
 
    ![Import OML and Connect to DB](images/import-oml.png " ")
 
-3. To get a list of all preconfigured models, import ONNXPipelineConfig from oml.utils
+3. To get a list of all pre-configured models, import ONNXPipelineConfig from oml.utils. Copy and paste the following:
 
     ```
      <copy>
@@ -54,7 +54,8 @@ In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Clie
 
    ![List Preconfigured Model](images/list-model.png " ")
 
-4. Export the CLIP  preconfigured embedding model to a local folder
+4. Export the CLIP pre-configured embedding model to a local folder. Copy and paste the following:
+
     ```
      <copy>
      from oml.utils import ONNXPipeline,ONNXPipelineConfig
@@ -65,7 +66,7 @@ In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Clie
 
    ![Export Model ](images/export-model.png " ")
 
-    *Note:* You can work with any available preconfigured CLIP Models in the OML4Py Client.
+    *Note:* You can work with any available pre-configured CLIP Models in the OML4Py Client.
 
 5. The previous step, CLIP models produces 2 files - 1 for image and 1 for text. You can verify that the files were produced in python or using file explorer.
 
@@ -79,7 +80,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
    ![OCI Login](images/oci-login.png " ")
 
-2. Click on the navigation bar and select Storage > Object Storage & Archive Storage > Buckets.
+2. Click on the navigation bar and select **Storage > Object Storage & Archive Storage > Buckets**.
 
    ![Click Buckets](images/buckets.png " ")
 
@@ -87,7 +88,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
    ![Create Bucket](images/create_bucket1.png " ")
 
-4. Enter the Bucket Name as **ONNX-Pipeline-Model-Export** and click Create:
+4. Enter the Bucket Name as **ONNX-Pipeline-Model-Export** and click **Create**.
 
    ![Create Bucket](images/create-bucket2.png " ")
 
@@ -105,7 +106,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
 ## Task 3: Create Pre-Authenticated Request for the objects
 
-1. Click the three dots in the object and select **Create Pre-Authenticated Request**
+1. Click the three dots in the object and select **Create Pre-Authenticated Request**.
 
     ![Click PAR](images/click-par.png " ")
 
@@ -115,7 +116,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
     - Access Type: **Permit object reads**
 
-     Click **Create Pre-Authenticated Request**  button
+     Click **Create Pre-Authenticated Request** button.
 
    ![Click Timeline](images/create-par.png " ")
 

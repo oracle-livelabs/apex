@@ -13,6 +13,7 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Import the Social Media Application into your APEX workspace
+
 - Add a Column to the Table using Object Browser to store the AI response
 
 ## Task 1: Import the Social Media Application
@@ -24,6 +25,7 @@ In this lab, you:
     ![Click Import](images/import0.png " ")
 
 2. The Import dialog displays. Perform the following steps:
+
     - Drag and drop, or navigate to the file.
 
     - File Type: Indicate the type of export file to be imported. Select **Application, Page, or Component Export**.
@@ -58,7 +60,7 @@ To Add two new columns to the SM\_POSTS Table:
 
     ![Click Import](images/sql-commands.png " ")
 
-2. Copy and paste the below SQL command into the Editor to create new column AI\_IMAGE\_VECTOR. Select **Run**
+2. Copy and paste the below SQL command into the Editor to create new column AI\_IMAGE\_VECTOR and click **Run**.
     ```
      <copy>
      ALTER TABLE SM_POSTS ADD AI_IMAGE_VECTOR VECTOR;
