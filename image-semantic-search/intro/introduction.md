@@ -41,11 +41,9 @@ If you are stuck or the App is not working as expected, you can download and ins
 2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
+    - Follow Lab 1 to generate API keys using the OCI Console, and update the existing web credentials in the app with your own credentials.
 
-    - Follow Lab 3 > Task 1 and Configure OCI Vision REST API as REST Data Source using your URL endpoint.
-
-    - Follow Lab 3 > Task 2 and Task 3. Update the COMPARTMENT_ID parameter under the Image Classification and Text Detection child process with your Compartment ID from your OCI console.
+    - Proceed to Lab 3 to export the ONNX model using the OML4Py client. Upload the exported model to Object Storage and use a Pre-Authenticated Request (PAR) URL to load the model into the database.
 
 4. All set. Now, run the application and see it in action!
 
