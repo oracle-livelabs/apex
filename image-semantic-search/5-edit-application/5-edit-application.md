@@ -149,7 +149,7 @@ In this task, we will create a Search page for Text based search.
 
 ## Task 3: Create Search Page for Image
 
-1. Click on the + Icon on the top right corner and select
+1. Click on the **+** Icon on the top right corner and select
 **Page**.
 
     ![Create page](images/create-pages1.png " ")

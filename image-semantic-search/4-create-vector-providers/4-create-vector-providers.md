@@ -49,7 +49,7 @@ In this lab, you:
         - ONNX Model Owner: **Select your schema**
         - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-    and click on **Create**.
+    and click **Create**.
 
     ![Create Text Vector Provider](images/create-textmodel.png " ")
 
@@ -90,7 +90,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
 
     ![Workspace Utilities](images/vector.png " ")
 
-5. Click **Create**
+5. Click **Create**.
 
     ![Create Vector Provider](images/create-vector-provider2.png " ")
 
