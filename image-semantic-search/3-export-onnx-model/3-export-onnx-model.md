@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you'll learn how to export a CLIP multi-modal ONNX pipeline model using the OML4Py client and how to load the exported ONNX Model to your Oracle Database.This step is pivotal for enabling semantic search capabilities in applications, where users can search using both text and images.
+In this lab, you will learn how to export a CLIP multi-modal ONNX pipeline model using the OML4Py client and how to load the exported ONNX Model to your Oracle Database.This step is pivotal for enabling semantic search capabilities in applications, where users can search using both text and images.
 
-By the end of this lab, you'll have a CLIP model integrated into your Oracle Database environment, ready to generate embeddings for both images and text, facilitating advanced semantic search functionalities.
+By the end of this lab, you will have a CLIP model integrated into your Oracle Database environment, ready to generate embeddings for both images and text, facilitating advanced semantic search functionalities.
 
 Estimated Time: 15 Minutes
 
@@ -20,7 +20,7 @@ In this lab, you:
 
 In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Client
 
-**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4PY client is installed.
+**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4PY client is installed. For more info, click [here] (https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/generate-multi-modal-embeddings-using-clip.html#GUID-F3F77239-15DB-45A1-9288-768F0AF8F0D2)
 
 1. Navigate to terminal where you have installed the OML4PY client and to start Python, copy paste the following:
 
