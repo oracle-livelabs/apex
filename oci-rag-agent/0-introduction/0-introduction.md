@@ -48,11 +48,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, you can download and install the completed App as follows:
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/rag_agents_export.sql) to download the completed application.
-
-2. Import the **rag\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-
-3. Once the application is installed,
+1. Setup OCI:
 
     - Follow Lab 1 > Task 1 to generate API keys using the OCI Console, and update the existing web credentials with your credentials.
 
@@ -60,15 +56,44 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge Base and Generative AI Agents in OCI.
 
-    - Follow Lab 3 > Task 2 to create Web Credentials in Oracle APEX.
+2. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/rag_agents_export.sql) to download the completed application.
 
-4. Navigate to Shared Components > Data Sources > Rest Data Sources > **Create Sessions API**.
+3. Import the **genai\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-5. Under Parameters, click **Add Parameter**.
+4. Update **Web Credentials**
 
-   ![Add Parameter](images/download-add.png " ")
+    - Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-6. Enter/select the following:
+    ![App Builder](images/download-appbuild.png " ")
+
+    - Click **Web Credentials**.
+
+    ![Web credentials](images/web-creds.png " ")
+
+    - Click  **APEX\_OCI\_AI\_CRED**.
+
+    ![Click Creds](images/click-creds.png " ")
+
+    - Enter the following details using the configuration file you copied and click **Apply Changes**.
+
+        - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+        Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
+
+        - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
+
+        - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
+
+        - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+
+    ![Enter Creds](images/enter-creds.png " ")
+
+5. Navigate to Shared Components > Data Sources > Rest Data Sources > Click **Create Sessions API**.
+
+6. Under Parameters, click **Add Parameter**.
+
+   ![Add Parameter](images/download-addparams.png " ")
+
+7. Enter/select the following:
 
     - Type: **URL Pattern**
 
@@ -76,29 +101,43 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Default Value: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
 
-   ![Edit Parameter](images/download-parameter.png " ")
+   ![Edit Parameter](images/download-eparams.png " ")
 
-7. Navigate to Page 1 of application, map the following page item:
+8. Navigate to Page 1 of application, map the following page item:
 
-    - P1\_AGENT\_ENDPOINT\_ID: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
+    - Under Body, select **P1\_AGENT\_ENDPOINT\_ID**.
 
-    - P1\_APEX\_AI\_CRED: **APEX\_OCI\_AI\_CRED**
+    - In the property editor, Default > Type : **Static**.
 
-8. Navigate to Page 5 of application, map the following page item:
+    - Under Static Value:  Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
 
-    - P5\_COMPARTMENT\_ID: Enter your Compartment OCID.
+   ![Map Endpoint](images/map-endpoint.png " ")
 
-    - P5\_CRED_STATIC\_ID: **APEX\_OCI\_AI\_CRED**
+9. Navigate to Page 5 of application, map the following page item:
 
-    - P5\_NAMESPACE\_NAME: Enter your object storage namespace.
+   |   | Page Item |Default > Type | Default > Static Value |
+   |---|-----------------|------|----------|
+   | 1 | P5\_COMPARTMENT\_ID| Static |Enter your OCI account Compartment OCID|
+   | 2 | P5\_CRED\_STATIC\_ID|  Static | APEX\_OCI\_AI\_CRED |
+   | 3 | P5\_NAMESPACE\_NAME| Static | Enter Namespace which you copied while creating a Bucket|
+   | 4 | P5\_BUCKET\_NAME| Static | Enter the Bucket Name which you copied while creating a Bucket (For this Lab we have **GenAIRAGBucket**) |
+   | 5 | P5\_REGION| Static | Enter your Region. e.g. us-chicago-1 |
+   | 6 | P5\_DATASOURCE\_ID| Static | Enter your data source OCID.|
+   {: title="Map Page Items"}
 
-    - P5\_BUCKET\_NAME: Enter your bucket name.
+   ![Map Compartment](images/map-compid.png " ")
 
-    - P5\_REGION: Enter your Region (eg: us-chicago-1)
+   ![Map StaticId](images/map-static.png " ")
 
-    - P5\_DATASOURCE\_ID: Enter your data source OCID.
+   ![Map Namespace](images/map-namespace.png " ")
 
-9. All set. Now, run the application with the users you created and see it in action!
+   ![Map Bucket](images/map-bucket.png " ")
+
+   ![Map Region](images/map-region.png " ")
+
+   ![Map Datasource](images/map-datasource.png " ")
+
+10. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 
