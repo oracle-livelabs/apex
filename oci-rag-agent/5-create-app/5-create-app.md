@@ -32,13 +32,14 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
 2. Create the following Page Items, one after another:
 
-    |   | Name | Type | Value Protected |
-    |---|-------|------|----------|
-    | 1 | P1\_RESPONSE\_SESSION| Hidden | Toggle On |
-    | 2 | P1\_SESSION\_ID| Hidden | Toggle On |
-    | 3 | P1\_CONV\_ID| Hidden | Toggle On |
-    | 4 | P1\_APEX\_AI\_CRED| Hidden | Toggle Off |
-    | 5 | P1\_AGENT\_ENDPOINT\_ID| Hidden | Toggle Off |
+    |   | Name | Type | Value Protected | Default > Static Value |
+    |---|-------|------|----------|---- |
+    | 1 | P1\_RESPONSE\_SESSION| Hidden | Toggle On ||
+    | 2 | P1\_SESSION\_ID| Hidden | Toggle On ||
+    | 3 | P1\_CONV\_ID| Hidden | Toggle On ||
+    | 4 | P1\_APEX\_AI\_CRED| Hidden | Toggle Off ||
+    | 5 | P1\_AGENT\_ENDPOINT\_ID| Hidden | Toggle Off ||
+    | 6 | P1\_REGION| Hidden | Toggle On |us-chicago-1 (enter your region)|
     {: title="Page Item Details"}
 
    ![Response Session](images/response-session.png " ")
@@ -50,6 +51,8 @@ In this task, you will create Page Items, Static Content region and a subregion,
    ![Create AI Cred](images/create-aicred.png " ")
 
    ![Create endpoint](images/create-endpointid.png " ")
+
+   ![Region PageItem](images/region-pageitem.png " ")
 
 3. Select **P1\_APEX\_AI\_CRED** page item, enter/select the following:
 
@@ -181,7 +184,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
 12. Under **AI Agents Conversation** sub-region, click **ACTIONS**.
 
-13. In the Property Editor**, enter/select the following:
+13. In the property editor, enter/select the following:
 
     - Identification > Type: **Link**
 
@@ -191,7 +194,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - Link Attributes: **target="_blank"**
 
-        ![Edit Actions](images/edit-actions.png " ")
+        ![Edit Actions](images/edit-actions1.png " ")
 
         - Target: Click **No Link Defined**, enter/select the following:
 
@@ -457,71 +460,72 @@ In this task, you will create buttons to trigger specific actions and configure 
     ```
     <copy>
 
-    declare l_body clob;
-    l_response clob;
-    l_url varchar2(2000);
-    l_result varchar2(4000);
-    begin l_url := 'https://agent-runtime.generativeai.us-chicago-1.oci.oraclecloud.com/20240531/agentEndpoints/' || : P1_AGENT_ENDPOINT_ID || '/actions/chat';
-    l_body := '{"sessionId"    : "' || : P1_SESSION_ID || '",' || '"shouldStream" : "false",' || '"userMessage"  : "' || : P1_PROMPT || '"}';
-    apex_web_service.g_request_headers(1).name := 'Content-Type';
-    apex_web_service.g_request_headers(1).value := 'application/json';
-    l_response := apex_web_service.make_rest_request(
-    p_url => l_url, p_http_method => 'POST',
-    p_body => l_body, p_credential_static_id => : P1_APEX_AI_CRED
-    );
-    SELECT
-    response_text into l_result
-    FROM
-    JSON_TABLE(
-        l_response,
-        '$.message[*]' COLUMNS (
-        response_text varchar2(4000) PATH '$.content.text'
-        )
-    ) jt;
-    insert into RAG_CHATBOT (
-    user_name, is_own, comment_text, comment_date,
-    session_ID
-    )
-    values
-    (
-        'AI', 'No', l_result, sysdate, : P1_SESSION_ID
-    ) returning CONV_ID into : P1_CONV_ID;
+        declare
+        l_body       clob;
+        l_response   clob;
+        l_url        varchar2(2000);
+        l_result     varchar2(4000);
+    begin
+        l_url := 'https://agent-runtime.generativeai.'
+                    || :P1_REGION
+                    ||'.oci.oraclecloud.com/20240531/agentEndpoints/'
+                    || :P1_AGENT_ENDPOINT_ID
+                    || '/actions/chat';
+        l_body := '{"sessionId"    : "' || :P1_SESSION_ID || '",'
+                || '"shouldStream" : "false",'
+                || '"userMessage"  : "' || :P1_PROMPT || '"}';
+
+        apex_web_service.g_request_headers(1).name := 'Content-Type';
+        apex_web_service.g_request_headers(1).value := 'application/json';
+
+        l_response := apex_web_service.make_rest_request(
+                        p_url                  => l_url,
+                        p_http_method          => 'POST',
+                        p_body                 => l_body,
+                        p_credential_static_id => :P1_APEX_AI_CRED
+                    );
+
+
+            SELECT response_text into l_result
+        FROM   JSON_TABLE(l_response, '$.message[*]'
+                COLUMNS (response_text varchar2(4000) PATH '$.content.text'
+                            )) jt;
+
+    insert into RAG_CHATBOT (user_name, is_own, comment_text, comment_date, session_ID)
+    values ('AI', 'No', l_result, sysdate, :P1_SESSION_ID)
+    returning CONV_ID into :P1_CONV_ID;
+
     -- Adding Citations
-    for i in (
-    SELECT
-        jt.source_text,
-        jt.source_location
-    FROM
-        JSON_TABLE(
+
+    for i in (SELECT jt.source_text, jt.source_location
+    FROM JSON_TABLE(
         l_response,
-        '$.traces[*]' COLUMNS (
-            NESTED PATH '$.citations[*]' COLUMNS (
-            source_text VARCHAR2(4000) PATH '$.sourceText',
-            source_location VARCHAR2(4000) PATH '$.sourceLocation.url'
-            )
+        '$.traces[*]'
+        COLUMNS (
+            NESTED PATH '$.citations[*]'
+                COLUMNS (
+                    source_text VARCHAR2(4000) PATH '$.sourceText',
+                    source_location VARCHAR2(4000) PATH '$.sourceLocation.url'
+                )
         )
-        ) jt
-    where
-        jt.source_text is not null
-        and jt.source_location is not null
-    ) loop insert into RAG_CITATIONS (
-    conv_id, prompt, source_text, source_location,
-    asked_on
+    ) jt
+    where jt.source_text is not null and
+    jt.source_location is not null
     )
-    values
-    (
-        : P1_CONV_ID,: P1_PROMPT, i.source_text,
-        i.source_location, systimestamp
-    );
+    loop
+        insert into RAG_CITATIONS (conv_id, prompt, source_text, source_location, asked_on) 
+            values (:P1_CONV_ID,:P1_PROMPT, i.source_text,i.source_location, systimestamp);
+
     end loop;
+
     end;
 
     </copy>
     ```
 
-    - Item to Submit: **P1\_PROMPT,P1\_SESSION\_ID,P1\_AGENT\_ENDPOINT\_ID,P1\_APEX\_AI\_CRED**
+    - Item to Submit: **P1\_PROMPT,P1\_SESSION\_ID,P1\_AGENT\_ENDPOINT\_ID,P1\_APEX\_AI\_CRED**, **P1\_REGION**
 
-    ![True Action3](images/send-true3.png " ")
+    ![True Action3](images/send-true03.png " ")
 
 19. Right-click **True** action and click **Create TRUE Action**.
 
@@ -686,7 +690,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
      - Navigate to **Property Editor**, Identification > Type : **Hidden**
 
-   ![Page Items](images/all-pageitems.png " ")
+   ![Page Items](images/all-pageitem.png " ")
 
 8. Right-click **Upload Documents to Knowledge Base** region, click **Create Page Item**.
 
@@ -1026,7 +1030,11 @@ In this task we will create Application Items,Application Processes and Content 
 
 14. Click **Create Page**.
 
-15. Once the Page is created, select **List Available Documents** region. In the Property Editor, enter/select the following:
+15. Under Content Body, select **Document Processing Tracker**.
+
+16. In the property editor, enter/select the following
+
+    - Identification > Name : **List Available Documents**
 
     - Under Source:
 
@@ -1057,9 +1065,11 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
+    ![Rename](images/rename.png " ")
+
     ![Edit Form](images/edit-documenttracker.png " ")
 
-16. In the Property Editor, select **Attributes** tab and enter/select the following:
+17. In the Property Editor, select **Attributes** tab and enter/select the following:
 
     - Under Settings:
 
@@ -1083,11 +1093,11 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Document Attributes](images/document-attributes.png " ")
 
-17. Under **List Available Documents**, right-click **Action**, and click **Create Action**.
+18. Under **List Available Documents**, right-click **Action**, and click **Create Action**.
 
     ![Create Action](images/create-actionmenu.png " ")
 
-18. In the Property Editor, enter/select the following:
+19. In the Property Editor, enter/select the following:
 
     - Under Identification :
         - Position: **Primary Actions**
@@ -1100,7 +1110,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Edit Menu](images/edit-menu.png " ")
 
-19. Under **Menu** action, right-click **Menus** add below items one after another:
+20. Under **Menu** action, right-click **Menus** add below items one after another:
 
     - Under Identification enter/select the following:
 
@@ -1124,7 +1134,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Download PDF](images/download-pdf.png " ")
 
-20. Under **Menu** action, right-click **Menus** add below items one after another:
+21. Under **Menu** action, right-click **Menus** add below items one after another:
 
     - Under Identification enter/select the following:
 
@@ -1148,7 +1158,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Edit Document](images/edit-document.png " ")
 
-21. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
+22. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
 
     |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Clear Cache |
     |---|-------|------|----------| --------------| ---- | --- | --- |
@@ -1160,9 +1170,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Upload](images/upload.png " ")
 
-22. Right-click **Content Body**, click **Create Page Item**.
+23. Right-click **Content Body**, click **Create Page Item**.
 
-23. In the Property Editor, enter/select the following:
+24. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1172,9 +1182,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Page6 Item](images/page-item.png " ")
 
-24. Navigate to **Page 6: Document Processing Tracker** root node.
+25. Navigate to **Page 6: Document Processing Tracker** root node.
 
-25. In the Property Editor, enter/select the following:
+26. In the Property Editor, enter/select the following:
 
     - Template Options > Size: **Large**
 
@@ -1264,11 +1274,11 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Page Item7](images/p7_convid.png " ")
 
-7. Select **View Citations** region, in the property editor enter/select the following::
+7. Select **View Citations** region, in the property editor enter/select the following:
 
     - Under Source:
 
-        - Type: ***SQL Query**
+        - Type: **SQL Query**
 
         - SQL Query: Copy the below code
 

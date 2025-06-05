@@ -62,7 +62,43 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Follow Lab 3 > Task 2 to create Web Credentials in Oracle APEX.
 
-4. All set. Now, run the application with the users you created and see it in action!
+4. Navigate to Shared Components > Data Sources > Rest Data Sources > **Create Sessions API**.
+
+5. Under Parameters, click **Add Parameter**.
+
+   ![Add Parameter](images/download-add.png " ")
+
+6. Enter/select the following:
+
+    - Type: **URL Pattern**
+
+    - Name: **agentEndpointId**
+
+    - Default Value: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
+
+   ![Edit Parameter](images/download-parameter.png " ")
+
+7. Navigate to Page 1 of application, map the following page item:
+
+    - P1\_AGENT\_ENDPOINT\_ID: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
+
+    - P1\_APEX\_AI\_CRED: **APEX\_OCI\_AI\_CRED**
+
+8. Navigate to Page 5 of application, map the following page item:
+
+    - P5\_COMPARTMENT\_ID: Enter your Compartment OCID.
+
+    - P5\_CRED_STATIC\_ID: **APEX\_OCI\_AI\_CRED**
+
+    - P5\_NAMESPACE\_NAME: Enter your object storage namespace.
+
+    - P5\_BUCKET\_NAME: Enter your bucket name.
+
+    - P5\_REGION: Enter your Region (eg: us-chicago-1)
+
+    - P5\_DATASOURCE\_ID: Enter your data source OCID.
+
+9. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 

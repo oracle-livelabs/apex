@@ -21,6 +21,8 @@ In this lab, you will:
 
 3. In the Property Editor, enter/select the following:
 
+    - Identification > Type: **Static Content**
+
     - Appearance > Template: **Blank with Attributes**
 
     ![Breadcrumb](images/breadcrumb.png " ")
