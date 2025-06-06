@@ -20,7 +20,7 @@ In this lab, you:
 
 In this task, you will export the CLIP ONNX Pipeline Model using the OML4Py Client
 
-**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4Py client is installed. For more info, click [here]. (https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/generate-multi-modal-embeddings-using-clip.html#GUID-F3F77239-15DB-45A1-9288-768F0AF8F0D2)
+**Note:** These instructions assume you have configured your Oracle Linux 8 repo in /etc/yum.repos.d, configured a Wallet if using an Autonomous Database, and set up a proxy if needed,and OML4Py client is installed. For more info, click [here](https://docs.oracle.com/en/database/oracle/oracle-database/23/vecse/generate-multi-modal-embeddings-using-clip.html#GUID-F3F77239-15DB-45A1-9288-768F0AF8F0D2).
 
 1. Navigate to terminal where you have installed the OML4Py client and to start Python, copy paste the following:
 
