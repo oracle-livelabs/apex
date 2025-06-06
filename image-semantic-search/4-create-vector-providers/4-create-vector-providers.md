@@ -119,4 +119,4 @@ You now know how to create a Database ONNX vector provider for text and a Custom
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025

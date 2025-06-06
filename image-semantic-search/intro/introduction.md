@@ -58,7 +58,6 @@ If you are stuck or the App is not working as expected, you can download and ins
 | 5 | [Implement Text and Image Search](?lab=5-edit-application) | 20 minutes |
 | 6 | [Run the Application](?lab=6-run-app) | 5 minutes |
 
-
 ## Learn More - *Useful Links*
 
 - [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
