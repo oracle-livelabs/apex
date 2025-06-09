@@ -24,7 +24,7 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click **My Profile** at the top-right corner and select **User settings**.
+2. Click **Profile** at the top-right corner and select your username.
 
     ![Profile Menu](images/profile.png " ")
 

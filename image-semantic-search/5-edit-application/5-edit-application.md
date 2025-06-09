@@ -156,7 +156,7 @@ In this task, we will create a Search page for Text based search.
 
 2. In the Create a Page Wizard, select the Component as **Cards** and click **Next**.
 
-    ![Create page](images/create-pages2.png  =60%x*)
+    ![Create page](images/create-pages2.png =60%x*)
 
 3. In the Create Cards Wizards, enter/select the following:
 
