@@ -38,12 +38,12 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/Image_semantic_search.sql) to download the completed application file.
 
-2. Import the **Image_semantic_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **Image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow Lab 1 to generate API keys using the OCI Console, and update the existing web credentials in the app with your own credentials.
+    - Follow Lab 1 to generate API keys using the OCI Console, grant database privileges and create credentials in the app.
 
-    - Proceed to Lab 3 to export the ONNX model using the OML4Py client. Upload the exported model to Object Storage and use a Pre-Authenticated Request (PAR) URL to load the model into the database.
+    - Proceed to Lab 3 to export the ONNX model using the OML4Py client. Upload the exported model to Object Storage and use a Pre-Authenticated Request (PAR) URL to load the model into the database. (You can skip this step if you have your own multimodal model loaded in the database.)
 
 4. All set. Now, run the application and see it in action!
 
