@@ -84,7 +84,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
     ![Property Editor](images/run-command.png " ")
 3. In the Navigation bar, navigate to **App Builder** > Workspace Utilities > **All Workspace Utilities**.
 
-    ![App Builder Utilities](images/workspace-utils.png)
+    ![App Builder Utilities](images/workspace-utils.png =50%x*)
 
 4. Select **Vector Providers**.
 
