@@ -319,7 +319,7 @@ In this task, we will create a Search page for Text based search.
         - Type: **Item is NOT NULL**
         - Item: **P3_IMAGE**
 
-    ![Display Page item](images/pa-display.png " " =30%x*)
+    ![Display Page item](images/pa-display.png =30%x*)
 
     ![Display Page item](images/create-items6.png " ")
 
