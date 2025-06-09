@@ -1,8 +1,8 @@
-# Invoke Generative AI Agents using REST Data Sources
+# Create APEX App and Configure REST Data Source
 
 ## Introduction
 
-In this lab, you will set up a REST Data Source to **Create Sessions** and invoke **Ingestion Job**.
+In this lab, you create an APEX application named **GenAI Agents for APEX** using the Create App Wizard. Later, you will set up a REST Data Source to **Create Sessions** and invoke **Ingestion Job**.
 
 **Session Creation REST Data Source**: This REST data source is used to create a secure session with the Oracle Generative AI service. It establishes the authentication context required to interact with other AI APIs.
 

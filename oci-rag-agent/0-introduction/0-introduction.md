@@ -2,9 +2,9 @@
 
 ## About this Workshop
 
-This lab demonstrates how to integrate Oracle APEX with OCI **Generative AI Agents**, showcasing how enterprises can enhance their applications with intelligent, context-aware capabilities. You will explore the power of **Large Language Models (LLMs)** combined with **Retrieval-Augmented Generation (RAG)** to transform raw enterprise documents into actionable insights.
+This workshop demonstrates how to integrate Oracle APEX with OCI **Generative AI Agents**, showcasing how enterprises can enhance their applications with intelligent, context-aware capabilities. You will explore the power of **Large Language Models (LLMs)** combined with **Retrieval-Augmented Generation (RAG)** to transform raw enterprise documents into actionable insights.
 
-As part of the lab, you will begin by uploading various documents to OCI Object Storage, which serves as a secure, scalable repository for your enterprise data. These documents are then processed through an **ingestion job**, which parses, indexes, and prepares the data for interaction using the **OCI Generative AI service**.
+As part of this workshop, you will begin by uploading various documents to OCI Object Storage, which serves as a secure, scalable repository for your enterprise data. These documents are then processed through an **ingestion job**, which parses, indexes, and prepares the data for interaction using the **OCI Generative AI service**.
 
 You will integrate a **chat interface** within your Oracle APEX application, allowing end users to interact with the Generative AI Agent in real time. The AI agent uses the previously ingested content to provide intelligent, personalized, and context-rich responses, enhancing user experience and driving operational efficiency.
 

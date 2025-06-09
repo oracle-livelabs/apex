@@ -1,10 +1,8 @@
-# Create APEX Application
+# Add Page Items and Page Processes
 
 ## Introduction
 
-In this lab, you create an APEX application named **GenAI Agents for APEX** using the Create App Wizard. This application provides a graphical interface for interacting with Oracle Generative AI services.
-
-**GenAI Agents** are intelligent components designed to retrieve and respond with contextually relevant information using Retrieval Augmented Generation (RAG). They combine large language models with enterprise data, making responses both intelligent and data aware. These agents utilize ingested documents stored in a knowledge base and deliver natural language answers to user queries.
+Now that you have created the application, in this lab you will extend its functionality by creating the necessary processes and page items to support user interaction. Then, you will create interactive pages and invoke AI services using REST Data Sources. You'll also display AI-generated results and citations, add navigation buttons, and implement automation to fetch ingestion job details.
 
 Estimated Time: 45 Minutes
 
@@ -12,13 +10,13 @@ Estimated Time: 45 Minutes
 
 In this lab, you will:
 
-- Create Processes and Page Items.
+- Create Page Items and a Region for user input.
 
-- Invoke OCI Document Understanding using REST Data Sources.
+- Create a Sub Region to add functional buttons.
 
-- Create Processes to upload Invoice to Object Storage and Automate DML.
+- Create Page Processes and Computations.
 
-- Integrate Document Understanding API and Parse the Response.
+- Create Pages for Document Processing and Viewing Citation.
 
 - Create Automation Process to fetch Ingestion Job details.
 

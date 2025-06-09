@@ -14,7 +14,7 @@
       "filename": "../../1-configure-oci-keys/1-configure-oci-keys.md"
       },
       {
-      "title": "Lab 2: Create Knowledge Base and GenAI Agent",
+      "title": "Lab 2: Create Knowledge Base and Generative AI Agent",
       "filename": "../../2-configure-kb-genai/2-configure-kb-genai.md"
       },
       {
@@ -22,11 +22,11 @@
       "filename": "../../3-setup-task/3-setup-task.md"
     },
     {
-      "title": "Lab 4: Configure REST APIs",
+      "title": "Lab 4: Configure APEX App and Configure REST Data Source",
       "filename": "../../4-configure-restapi/4-configure-restapi.md"
     },
     {
-      "title": "Lab 5: Create APEX Application",
+      "title": "Lab 5: Add Page Items and Page Processes",
       "filename": "../../5-create-app/5-create-app.md"
     },
     {

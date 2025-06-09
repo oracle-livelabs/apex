@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Prerequisite
 
-- In the navigation bar of the Console, select a region with Generative AI Agents, for example, **US Midwest (Chicago) or UK South (London)**. See which [Regions with Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions) for the regions in which Generative AI Agents is hosted.
+- In the navigation bar of the Console, select a region with Generative AI Agents, for example, **US Midwest (Chicago) or UK South (London)**. See [Regions with Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions) for the regions in which Generative AI Agents is hosted.
 
 ## Task 1: Create a Knowledge Base in OCI
 
