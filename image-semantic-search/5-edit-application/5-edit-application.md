@@ -51,7 +51,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc2.png " " =60%x*)
+    ![Create Search Configuration](images/create-sc2.png =60%x* )
 
 7. Enter/Select the following:
 
@@ -62,7 +62,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc3.png " " =60%x*)
+    ![Create Search Configuration](images/create-sc3.png =60%x*)
 
 8. Select the following:
 
@@ -72,7 +72,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Create Search Configuration**.
 
-    ![Create Search Configuration](images/create-sc4.png " " =60%x*)
+    ![Create Search Configuration](images/create-sc4.png =60%x*)
 
 9. In the Search Configuration Page, enter/select the following:
 
@@ -116,7 +116,7 @@ In this task, we will create a Search page for Text based search.
 
 3. In the Create a Page Wizard, Select **Search Page**.
 
-    ![Create Page](images/create-paget2.png " " =60%x*)
+    ![Create Page](images/create-paget2.png =60%x*)
 
 4. In the Create Page Wizard, enter/select the following:
 
@@ -124,7 +124,7 @@ In this task, we will create a Search page for Text based search.
 
     - Search Configurations > **Click the check box for Text Search**.
 
-    ![Create Page](images/create-paget3.png " " =60%x*)
+    ![Create Page](images/create-paget3.png =60%x*)
 
 5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under CSS > Inline.
 
@@ -156,7 +156,7 @@ In this task, we will create a Search page for Text based search.
 
 2. In the Create a Page Wizard, select the Component as **Cards** and click **Next**.
 
-    ![Create page](images/create-pages2.png " " =60%x*)
+    ![Create page](images/create-pages2.png  =60%x*)
 
 3. In the Create Cards Wizards, enter/select the following:
 
@@ -207,7 +207,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Next**.
 
-    ![Create page](images/create-pages3.png " " =60%x*)
+    ![Create page](images/create-pages3.png =60%x*)
 
 4. In the Create Cards Wizard, select the following:
 
@@ -215,7 +215,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Create Page**.
 
-    ![Create page](images/create-pages4.png " " =60%x*)
+    ![Create page](images/create-pages4.png =60%x*)
 
 5. In the Rendering tree, right click on the **Body** and select **Create Page Item**.
 
