@@ -28,7 +28,7 @@ In this lab, you:
 
 4. Now, click on the **Text to Image** tab and enter your Search Term in the Search Bar and then press **Enter**. The app searches for and displays all the images that contain the corresponding search term.
 
-    In the following example, for text to image search, when you enter "yellow wheel" in the Search bar, the app displays all the images that contain or relate to a yellow wheel.
+    In the following example, for text to image search, when you enter "Yellow wheel" in the Search bar, the app displays all the images that contain or relate to a yellow wheel.
 
     ![Text to Image Search](images/img-class.png " ")
 
