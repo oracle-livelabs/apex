@@ -90,6 +90,8 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
 7. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
+    >* This sub-region is being created to display a chat conversation between user and  AI agent, such as in a chatbot scenario.
+
 8. In the Property Editor, enter/select the following:
 
     - Under Identification:
