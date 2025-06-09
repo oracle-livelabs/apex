@@ -2,8 +2,7 @@
 
 ## Introduction
 
-In this lab, you will run SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
-We are creating tables, triggers, sequences, functions, and a package to manage chatbot conversation data, document uploads, and interactions with OCI Object Storage.
+In this lab, you will create tables, triggers, sequences, functions, and a package to manage chatbot conversation data, document uploads, and interactions with OCI Object Storage. To do this, you will run SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
 
 Estimated Time: 10 Minutes
 
