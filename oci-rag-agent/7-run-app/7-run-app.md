@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, we will focus on enhancing the visual design and overall user experience of the APEX application. You will begin by running the application to explore its key features in action. Specifically, you'll interact with the **Upload Document**, **Create Session** functionality, experience how to chat with the RAG Agent, and perform essential file operations such as deleting and saving files.
+In this lab, you will begin by running the application to explore its key features in action. Specifically, you'll interact with the **Upload Document**, **Create Session** functionality, experience how to chat with the RAG Agent, and perform essential file operations such as deleting and saving files.
 
 Estimated Time: 5 Minutes
 
@@ -58,7 +58,7 @@ In this task you will chat with AI and can view the citations of the response, s
 
 3. Close the dialog.
 
-## Task 3: Create New Session, download/delete the documents
+## Task 3: Create a New Chat session
 
 In this task you can create new session which refreshes the current chat and starts a new session and download or delete your existing document.
 
@@ -84,5 +84,5 @@ You may now proceed to the next lab
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2025
+- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025

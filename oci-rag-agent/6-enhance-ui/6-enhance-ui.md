@@ -111,5 +111,5 @@ You may now proceed to the next lab
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2025
+- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025
