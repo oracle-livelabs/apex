@@ -18,7 +18,7 @@ In this lab, you:
 
     ![Click Timeline](images/social-media-login.png =60%x*)
 
-2. Click **Add Post** on the bottom right corner.
+2. Click **Add Post +** on the bottom right corner.
 
 3. Drag and Drop the image from your local system or use the **Choose File** button to upload an image from your local system. Then, click **Post**.
 

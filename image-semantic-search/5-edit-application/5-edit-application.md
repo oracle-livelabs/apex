@@ -36,7 +36,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     ![Shared components](images/shared-components.png " ")
 
-4. Under Navigation and Search, Select **Search Configurations**.
+4. Under Navigation and Search, select **Search Configurations**.
 
     ![Shared components](images/shared-components2.png " ")
 
@@ -57,7 +57,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     - Vector Provider: **CLIP TEXT MODEL**
     - Source Type: **Table**
-    - Table / View Owner: **select your schema**
+    - Table / View Owner: **`<select your schema>`**
     - Table / View Name: **SM_POSTS**
 
     Click **Next**.
@@ -67,8 +67,8 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 8. Select the following:
 
     - Primary key Column: **ID**
-    - Vector Column: **AI\_IMAGE\_VECTOR**
-    - Title Column: **UPDATED_BY**
+    - Vector Column: **AI\_IMAGE\_VECTOR (Vector)**
+    - Title Column: **UPDATED_BY (Varchar2)**
 
     Click **Create Search Configuration**.
 
@@ -77,8 +77,8 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 9. In the Search Configuration Page, enter/select the following:
 
     - Under Icon and Display:
-        - Icon Source: **Image bLOB Column**
-        - Icon BLOB Column Name: **FILE_BLOB**
+        - Icon Source: **Image BLOB Column**
+        - Icon BLOB Column Name: **FILE_BLOB (Blob)**
         - Default Result Row Template: Copy and paste the following code:
 
             ```
@@ -106,7 +106,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
 In this task, we will create a Search page for Text based search.
 
-1. Navigate to the Application homepage.
+1. Navigate to the Application homepage by clicking on the application ID.
 
     ![App Builder](images/app-navigate.png " ")
 
@@ -114,7 +114,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Create Page](images/create-paget.png " ")
 
-3. In the Create a Page Wizard, Select **Search Page**.
+3. In the Create a Page Wizard, select **Search Page**.
 
     ![Create Page](images/create-paget2.png =60%x*)
 
@@ -123,6 +123,8 @@ In this task, we will create a Search page for Text based search.
     - Page Definition > Name: **Text to Image**
 
     - Search Configurations > **Click the check box for Text Search**.
+
+    Click **Create Page**.
 
     ![Create Page](images/create-paget3.png =60%x*)
 
@@ -154,7 +156,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Create page](images/create-pages1.png " ")
 
-2. In the Create a Page Wizard, select the Component as **Cards** and click **Next**.
+2. In the Create a Page Wizard, select **Cards** and click **Next**.
 
     ![Create page](images/create-pages2.png =60%x*)
 
@@ -211,7 +213,7 @@ In this task, we will create a Search page for Text based search.
 
 4. In the Create Cards Wizard, select the following:
 
-    - Cards Attributes > Title Column: **VECTOR\_DISTANCE\_DISPLAY**
+    - Cards Attributes > Title Column: **VECTOR\_DISTANCE\_DISPLAY (Varchar2)**
 
     Click **Create Page**.
 
@@ -313,7 +315,10 @@ In this task, we will create a Search page for Text based search.
             ```
     - Layout > Column Span: **3**
 
-    - Appearance > Template Options: Stretch Form Item
+    - Under Appearance:
+        - Template Options > Stretch Form Item : select the checkbox.
+
+            Click **Ok**.
 
     - Under Server-side Condition:
         - Type: **Item is NOT NULL**
@@ -353,6 +358,8 @@ In this task, we will create a Search page for Text based search.
             - Appearance: **Square**
             - Sizing: **Cover**
 
+        Reselect Card > Primary Key Column 1: **ID**.
+
     ![Property Editor cards](images/card-attributes2.png " ")
 
     ![Property Editor cards](images/card-attributes.png " ")
@@ -377,7 +384,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Save](images/clear-button.png " ")
 
-19. **Save** the page.
+19. Click **Save**.
 
     ![Save](images/save-page1.png " ")
 
@@ -391,7 +398,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Processes tab](images/processes.png " ")
 
-3. Right click on Processes and select **Create Process**.
+3. Right-click on **Processes** and select **Create Process**.
 
     ![Processes tab](images/create-process2.png " ")
 
@@ -435,7 +442,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Process Property Editor](images/process-propertyeditor.png " ")
 
-7. **Save** the page.
+7. Click **Save**.
 
     ![Save application](images/save-run3.png " ")
 

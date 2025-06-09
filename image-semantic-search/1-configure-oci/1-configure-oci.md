@@ -10,11 +10,13 @@ Estimated Time: 10 Minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
-- Generate API Keys using OCI Console
+- Generate API keys using the OCI Console.
 
-- Create Credentials in Oracle APEX
+- Grant necessary database privileges to create web credentials and mining models.
+
+- Create and configure credentials within Oracle APEX for secure access.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -46,7 +48,22 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/configuration-preview.png " ")
 
-## Task 2: Create Credentials in Oracle APEX
+## Task 2: Grant Database Privileges
+
+To enable your schema to create web credentials and mining models, you must grant the necessary privileges while logged in as a SYS or Admin user.
+
+1. Login as SYS/Admin User and execute the below command.
+
+    ```
+     <copy>
+     GRANT EXECUTE ON DBMS_CLOUD TO <YourSchemaName> ;
+     GRANT CREATE MINING MODEL TO <YourSchemaName>;
+     </copy>
+    ```
+
+    ![Execute Grants](images/grants.png " ")
+
+## Task 3: Create Credentials in Oracle APEX
 
  Credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
 
@@ -60,16 +77,16 @@ To create a Credential in Oracle APEX:
 
     ![SQL Commands](images/sql-commands.png " ")
 
-3. Copy and paste the following code by replacing the password with the API Fingerprint ID saved from Task 1. (Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40** )
+3. Copy and paste the code, replacing username with your OCI account email ID and password with the API Fingerprint ID from Task 1 (e.g., **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**).
 
     ```
      <copy>
      BEGIN
-     dbms_cloud.create_credential (
-     credential_name => 'onnx_obj_store_cred_image',
-     username        => '<Your username>',
-     password        => '<Fingerprint ID>'
-     );
+      dbms_cloud.create_credential (
+        credential_name => 'onnx_obj_store_cred_image',
+        username        => '<Your username>',
+        password        => '<Fingerprint ID>'
+      );
      END;
      </copy>
     ```

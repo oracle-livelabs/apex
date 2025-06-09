@@ -41,7 +41,7 @@ In this lab, you:
     - Under Identification:
 
         - Provider Type: **Database ONNX Model**
-        - Name:**CLIP TEXT MODEL**
+        - Name: **CLIP TEXT MODEL**
         - Static ID: **clip\_text\_model**
 
     - Under Local Embedding:
@@ -59,7 +59,7 @@ In this lab, you:
 
 In this task, you will write a PL/SQL function that uses the CLIP image model to generate vector embeddings from image BLOBs. You’ll then create a custom vector provider in APEX that leverages this function to support semantic image search in your app.
 
-1. Navigate to the SQL Workshop > SQL Commands page.
+1. Navigate to the **SQL Workshop** > **SQL Commands** page.
 
     ![Page Designer](images/sql-commands.png " ")
 
@@ -79,10 +79,10 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
      </copy>
     ```
 
-    and click **Run**.
+    Click **Run**.
 
     ![Property Editor](images/run-command.png " ")
-3. In the Navigation bar, navigate to App Builder > Workspace Utilities > **All Workspace Utilities**.
+3. In the Navigation bar, navigate to **App Builder** > Workspace Utilities > **All Workspace Utilities**.
 
     ![App Builder Utilities](images/workspace-utils.png)
 
@@ -99,7 +99,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
     - Under Identification:
 
         - Provider Type: **Custom PL/SQL**
-        - Name:**CLIP IMAGE MODEL**
+        - Name: **CLIP IMAGE MODEL**
         - Static ID: **clip\_image\_model**
 
     - Under Local Embedding:

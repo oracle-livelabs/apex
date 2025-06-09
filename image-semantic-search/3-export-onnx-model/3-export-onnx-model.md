@@ -106,7 +106,9 @@ In this task, you will upload the exported models in the previous task, to objec
 
 ## Task 3: Create Pre-Authenticated Request for the objects
 
-1. Click the three dots in the object and select **Create Pre-Authenticated Request**.
+In this task, you will generate Pre-Authenticated Requests (PARs) for both the uploaded files, the image model and the text model, in Oracle Cloud Object Storage.
+
+1. Click the **three dots** in the right corner of the clip-vit-large-patch14\_img.onnx model object and select **Create Pre-Authenticated Request**.
 
     ![Click PAR](images/click-par.png " ")
 
@@ -126,22 +128,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
 4. Repeat the steps 1-3 to generate PAR for the text model and store the PAR, which is going to be used in later labs.
 
-## Task 4: Grant DB privileges
-
-Before uploading the ONNX model to your database schema, you must grant the schema the privilege to create mining models while logged in as SYS/ADMIN.
-
-1. Login as SYS/Admin User and execute the below command.
-
-    ```
-     <copy>
-     GRANT EXECUTE ON DBMS_CLOUD TO <YourSchemaName> ;
-     GRANT CREATE MINING MODEL TO <YourSchemaName>;
-     </copy>
-    ```
-
-    ![Execute Grants](images/grants.png " ")
-
-## Task 5: Load ONNX Model to Oracle Database
+## Task 4: Load ONNX Model to Oracle Database
 
 In this lab, you will load the ONNX Models into your database.
 

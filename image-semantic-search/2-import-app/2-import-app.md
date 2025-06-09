@@ -24,17 +24,9 @@ In this lab, you:
 
     ![Click Import](images/import0.png " ")
 
-2. The Import dialog displays. Perform the following steps:
+2. The Import dialog displays. Drag and drop, or navigate to the file. (Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL.zip) to download the application.)
 
-    - Drag and drop, or navigate to the file.
-
-    - File Type: Indicate the type of export file to be imported. Select **Application, Page, or Component Export**.
-
-    - File Character Set: Verify that the File Character Set is correct.
-
-    - Click **Next**.
-
-   The export file is imported.
+    Click **Next**.
 
     ![Click Import](images/import1.png " ")
 
