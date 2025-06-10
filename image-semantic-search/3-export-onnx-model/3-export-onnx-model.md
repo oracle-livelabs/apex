@@ -110,7 +110,7 @@ In this task, you will upload the exported models in the previous task, to objec
 
 In this task, you will generate Pre-Authenticated Requests (PARs) for both the uploaded files, the image model and the text model, in Oracle Cloud Object Storage.
 
-1. Click the **three dots** in the right corner of the clip-vit-large-patch14\_img.onnx model object and select **Create Pre-Authenticated Request**.
+1. Click the **three dots** in the right corner of the _clip-vit-large-patch14\_img.onnx_ object and select **Create Pre-Authenticated Request**.
 
     ![Click PAR](images/click-par.png " ")
 
@@ -128,7 +128,7 @@ In this task, you will generate Pre-Authenticated Requests (PARs) for both the u
 
    ![Click Timeline](images/create-par2.png " ")
 
-4. Repeat the steps 1-3 to generate PAR for the text model and store the PAR, which is going to be used in later labs.
+4. Repeat the steps 1-3 to generate PAR for the text model and store the PAR, which will be used in the next task.
 
 ## Task 4: Load ONNX Model to Oracle Database
 
