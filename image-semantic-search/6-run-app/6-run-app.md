@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you run the APEX Social Media application and perform AI Search on the uploaded images.
+In this lab, you run the APEX Social Media application and perform Search on the uploaded images with text or image input queries.
 
 Estimated Time: 5 Minutes
 
@@ -34,7 +34,7 @@ In this lab, you:
 
     ![Text to Image Search](images/img-class.png " ")
 
-5. To perform an image-to-image search, navigate to the Image to Image tab, upload the image you want to find similar matches for. The app will then search and display all posted images that closely resemble the uploaded image.
+5. To perform an Image to Image search, navigate to the  **Image to Image** tab, upload the image you want to find similar matches for. The app will then search and display all posted images that closely resemble the uploaded image.
 
     In the following example, for image-based search, when you upload an image of a 'yellow wheel', the app displays all posted images that are visually similar or related to the uploaded image.
 
