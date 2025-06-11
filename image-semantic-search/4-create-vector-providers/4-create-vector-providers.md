@@ -73,7 +73,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
      l_params CLOB := '{"provider": "database", "model": "clip_img_model"}';
      BEGIN
         l_blob := apex_web_service.clobbase642blob(p_base64_image);
-        select to_vector(VECTOR_EMBEDDING(clip_IMG_model USING l_blob AS data )) into l_vector ;
+        select to_vector(VECTOR_EMBEDDING(clip_img_model USING l_blob AS data )) into l_vector ;
         RETURN l_vector;
      END;
      </copy>

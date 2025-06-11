@@ -68,7 +68,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     - Primary key Column: **ID**
     - Vector Column: **AI\_IMAGE\_VECTOR (Vector)**
-    - Title Column: **UPDATED_BY (Varchar2)**
+    - Title Column: **CREATED_BY (Varchar2)**
 
     Click **Create Search Configuration**.
 
@@ -353,7 +353,7 @@ In this task, we will create a Search page for Text based search.
 
         - Under Media:
             - Source: **BLOB Column**
-            - BLOB Column: **FILE_COLUMN**
+            - BLOB Column: **FILE_BLOB**
             - Position: **First**
             - Appearance: **Square**
             - Sizing: **Cover**
