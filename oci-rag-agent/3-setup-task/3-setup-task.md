@@ -14,7 +14,7 @@ In this lab, you:
 
 - Create Web Credentials.
 
-## Task 1: Create Database Objects Using SQL Scripts
+## Task 1: Create Database Objects using SQL Scripts
 
 >*Note: Explanation of Tables, Triggers, Sequences, Functions, and Packages:*
 
