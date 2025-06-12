@@ -10,31 +10,31 @@ Estimated Time: 5 Minutes
 
 In this lab, you will:
 
-- Add document to Object Storage, using APEX
+- Add document to Object Storage, using APEX.
 
-- Chat with Generative AI Agent on the documents uploaded
+- Chat with Generative AI Agent on the documents uploaded.
 
-- View Citations for the response from Agent
+- View Citations for the response from Agent.
 
-- Establish New Session
+- Establish New Session.
 
-- Download/delete the file from Object Store by using APEX
+- Download/delete the file from Object Store by using APEX.
 
 ## Task 1: Add document to Object Storage, using APEX
 
 In this task you will upload document to OVI Object storage using APEX.
 
-1. Click **Upload Documents** in the navigation bar.
+1. In the **Navigation Bar**, click **Upload Documents** .
 
     ![UI UploadDoc](images/ui-uploaddoc.png " ")
 
-2. Click the **Choose File** option or drag and drop the [apex\_document.pdf](files/apex_document.pdf) file on to the dialog window.
+2. Click  **Choose File** option or drag and drop the [apex\_document.pdf](files/apex_document.pdf) file on to the dialog window.
 
 3. Click **Create**.
 
     ![UI Upload](images/ui-upload.png " ")
 
-4. File gets added to OCI Object Storage bucket and ingestion job will run at t backend and details like ingestion id will be stored in database table.
+4. File gets added to OCI Object Storage bucket and ingestion job will run at the backend and details like ingestion id will be stored in database table.
 
     ![Ingestion Job](images/ingestionjob.png " ")
 
@@ -46,7 +46,7 @@ In this task you will upload document to OVI Object storage using APEX.
 
 In this task you will chat with AI and can view the citations of the response, so you can verify the information and gain more context.
 
-1. Type your question and press **Enter**.
+1. Enter your question and press **Enter**.
 
     ![Type](images/type.png " ")
 
@@ -62,7 +62,7 @@ In this task you will chat with AI and can view the citations of the response, s
 
 In this task you can create new session which refreshes the current chat and starts a new session and download or delete your existing document.
 
-1. Click **New Session** button on navigation bar.
+1. On the **Navigation Bar**, click **New Session**.
 
     ![New Session1](images/new-session1.png " ")
 
@@ -72,15 +72,13 @@ In this task you can create new session which refreshes the current chat and sta
 
     ![UI UploadDoc](images/ui-uploaddoc.png " ")
 
-3. Click three dot and select Download or Delete.
+3. Click three dot and select **Download** or **Delete**.
 
     ![Three Menu](images/three-menu.png " ")
 
 ## Summary
 
 In this lab, you have learned how to work with static components, create computations and processes, define page items, invoke REST APIs. Additionally, you created an automation process to fetch ingestion job details.
-
-You may now proceed to the next lab
 
 ## Acknowledgements
 

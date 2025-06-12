@@ -10,14 +10,15 @@ Estimated Time: 5 Minutes
 
 In this lab, you will:
 
-- Add Inline CSS
-- Customize Theme using Theme Roller
+- Add Inline CSS.
+
+- Customize Theme using Theme Roller.
 
 ## Task 1: Add Inline CSS
 
 1. Navigate to Page 1 **Chat With OCI Generative AI**.
 
-2. Click **GenAI Agents for APEX** under Breadcrumb Bar.
+2. Under **Breadcrumb Bar**, click **GenAI Agents for APEX** .
 
 3. In the Property Editor, enter/select the following:
 
@@ -27,11 +28,11 @@ In this lab, you will:
 
     ![Breadcrumb](images/breadcrumb.png " ")
 
-4. Navigate to **Page1 : Chat With OCI Generative AI** root node, in the Property Editor, enter/select the following:
+4. Navigate to **Page 1 : Chat With OCI Generative AI** root node and in the Property Editor, enter/select the following:
 
-    - Under Navigation Menu > Override User Interface Level: **Toggle On**
+    - Navigation Menu > Override User Interface Level: **Toggle On**
 
-    - Under CSS > Inline: Copy below CSS
+    - CSS > Inline: Copy and paste the below CSS in the code editor:
 
     ```
     <copy>
@@ -69,7 +70,7 @@ In this lab, you will:
 
 ## Task 2: Explore Theme Roller to customize the look and feel
 
-1. Navigate to **Developer Toolbar** at bottom. Click **Customize > Theme Roller**.
+1. At bottom navigate to **Developer Toolbar**. Click **Customize > Theme Roller**.
 
    ![Developer Toolbar](images/developer-toolbar.png " ")
 
@@ -91,13 +92,11 @@ In this lab, you will:
 
     - Body Background > **Light(Default)**
 
-5. Click **Save As**
+5. Click **Save As**.
 
     ![Theme](images/theme-roller.png " ")
 
-6. Enter Style Name: **Theme**
-
-7. Click **Save**
+6. Enter Style Name: **Theme**, click **Save**.
 
    ![Save Theme](images/save-theme.png " ")
 
@@ -107,7 +106,7 @@ In this lab, you will:
 
 In this lab, you have learned how to work with and the Theme Roller.
 
-You may now proceed to the next lab
+You may now proceed to the next lab.
 
 ## Acknowledgements
 
