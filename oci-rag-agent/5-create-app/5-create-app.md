@@ -605,7 +605,7 @@ In this task, we will create a Static Content region and a subregion, and config
         SELECT id
         FROM
         JSON_TABLE(
-            : P1_RESPONSE_SESSION,
+            :P1_RESPONSE_SESSION,
             '$' COLUMNS (
                 id VARCHAR2(4000) PATH '$.id'
             )
