@@ -867,7 +867,7 @@ In this task you will learn how to create processes and will create  processes:
         <copy>
             SELECT
             jt.Status,
-            jt.job_id into : P5_INGESTION_RESPONSE,
+            jt.job_id into :P5_INGESTION_RESPONSE,
             :P5_DATA_ING_JOB_ID
             FROM
             JSON_TABLE(
