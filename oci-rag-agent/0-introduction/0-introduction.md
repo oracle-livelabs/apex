@@ -30,7 +30,7 @@ In this workshop, you will:
 
 - Interact with OCI Generative AI Agents through the Chat REST API.
 
->*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+>Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Prerequisites
 
