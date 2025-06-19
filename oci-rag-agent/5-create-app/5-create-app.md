@@ -605,7 +605,7 @@ In this task, we will create a Static Content region and a subregion, and config
         SELECT id
         FROM
         JSON_TABLE(
-            : P1_RESPONSE_SESSION,
+            :P1_RESPONSE_SESSION,
             '$' COLUMNS (
                 id VARCHAR2(4000) PATH '$.id'
             )
@@ -867,7 +867,7 @@ In this task you will learn how to create processes and will create  processes:
         <copy>
             SELECT
             jt.Status,
-            jt.job_id into : P5_INGESTION_RESPONSE,
+            jt.job_id into :P5_INGESTION_RESPONSE,
             :P5_DATA_ING_JOB_ID
             FROM
             JSON_TABLE(
