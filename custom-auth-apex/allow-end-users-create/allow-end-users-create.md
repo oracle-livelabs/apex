@@ -133,19 +133,11 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
 	![Delete the "Close Dialog" process](./images/delete-close-dialog.png)
 
-17.	Create a **Branch** (right-click on **After Processing** and click “Create Branch”) of **Behavior Type** “Page or URL (Redirect)” and route it back to the Login page (should be page 9999 by default). Feel free to name this something like “Close Dialog”.
-
-	![Create a Branch "After Processing"](./images/after-processing-branch.png) ![Select the Behavior Type for this Branch](./images/branch-behavior-type.png)
-
-18.	Then add an **Ajax Callback** (right-click on **Ajax Callback** and click “Create Process”) of **Type** “Clear Session State”. Feel free to name this something like “Display messages”. This callback forces the success/error messages associated with step 15 to appear even after this modal dialog closes.
-
-	![Create an Ajax Callback](./images/ajax-callback.png) ![Adjust the Ajax callback Type](./images/ajax-callback-settings.png)
-
-19.	Finally, navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
+17.	Navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
 
 ![Change page's authentication](./images/make-page-public.png)
 
-20.	Click **Save** in the top-right corner.
+18.	Click **Save** in the top-right corner.
 
 This concludes this task. You may now **proceed to the next task.**
 
