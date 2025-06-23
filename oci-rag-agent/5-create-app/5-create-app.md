@@ -673,16 +673,16 @@ In this task, we will create a Static Content region and a subregion, and config
 
 7. Now, add the following nine page items one after the other:
 
-   |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype | SQL Query (return single value)
-   |---|-------|------|----------| --------------| ------ |------ |
+   |   | Identification > Name | Identification > Type | Default > Type | Default > Static Value | SQL Query (return single value)
+   |---|-------|------|----------| --------------| ------ |
    | 1 | P5\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment OCID|
    | 2 | P5\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
    | 3 | P5\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
    | 4 | P5\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket(For this Lab we have **GenAIRAGBucket**) |
    | 5 | P5\_REGION| Hidden | Static | Enter your Region. e.g. us-chicago-1 |
-   | 6 | P5\_DATASOURCE_ID| Hidden |  |  | [Refer Lab 2, Task3, Step10](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
-   | 7 | P5\_DISPLAY\_NAME| Hidden | SQL Query (return single value) | | | select concat('IngestionJob\_', ingestion\_seq.nextval) from dual;  |
-   | 8 | P5\_DESCRIPTION| Hidden | | Creating an Ingestion Job for the latest files | | |
+   | 6 | P5\_DATASOURCE_ID| Hidden | Static | Copy OCID of Data Source [Refer Lab 2, Task3, Step10](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource) |  |
+   | 7 | P5\_DISPLAY\_NAME| Hidden | SQL Query (return single value) | | select concat('IngestionJob\_', ingestion\_seq.nextval) from dual;  |
+   | 8 | P5\_DESCRIPTION| Hidden | Static | Creating an Ingestion Job for the latest files | | |
    | 9 | P5\_ING\_RESPONSE| Hidden | |  | | |
    {: title="Form Page Items"}
 
