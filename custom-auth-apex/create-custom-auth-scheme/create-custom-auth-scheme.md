@@ -31,7 +31,7 @@ This lab assumes you have:
 	*For this workshop we will create an empty "skeleton" application, but if you have an existing application that you want to implement custom authentication for, feel free to use your own.*
 	![App Builder &gt; Create](./images/create-new-app.png)
 
-3. Select **New Application**.
+3. Select **Use Create App Wizard**.
 ![New Application](./images/new-application.png)
 
 4. Give your application a name and choose an application style/theme by clicking the pop-out ![Pop-out Icon](./images/popout-icon.png) icon by **Appearance**.
@@ -266,25 +266,34 @@ Now we will put all the pieces together to build out our custom authentication s
 
 	![Set authentication function and create the authentication scheme](./images/create-auth-scheme-final.png)
 
-8.	It will take you back to the Authentication Schemes page. A green success message should appear at the top saying that this new Authentication Scheme was set as the current scheme. Additionally, “- Current” should now be displayed next to the new custom authentication scheme you just created.
+8.	It will take you back to the Authentication Schemes page. A green success message should appear at the top saying **Action processed**. Now click on the name of our new authentication scheme ("Custom authentication for end-user account creation").
 
-	![Our new Custom Authentication scheme is now set](./images/new-auth-scheme-success.png)
+	![Our new Custom Authentication scheme has been created](./images/new-auth-scheme-success.png)
 
-9. While we will not discuss Authorization Schemes in-depth in this workshop, we do need to make a change to our application's security as it pertains to Authorization in order for us to continue with the workshop. Return to the application home page by clicking on "Application XXX" from the Breadcrumb menu in the top-left.
+9. In the top-right corner, click the **Make Current Scheme** and then click **OK** in the subsequent pop-up window.
+
+	![Make the new Custom Authentication scheme the current scheme](./images/make-current-auth-scheme.png)
+	![Click 'OK' to confirm](./images/confirm-current-auth-scheme.png)
+
+	> **Note:** It will take you back to the Authentication Schemes page. A green success message should appear at the top saying **Authentication scheme activated as current authentication scheme** and you will notice that in the **Is Current** column, there will be a "Yes" next to this authentication scheme now.
+
+	![New authentication scheme is now current](./images/new-auth-scheme-set.png)
+
+10. While we will not discuss Authorization Schemes in-depth in this workshop, we do need to make a change to our application's security as it pertains to Authorization in order for us to continue with the workshop. Return to the application home page by clicking on "Application XXX" from the Breadcrumb menu in the top-left.
 
 	*Check out the [Learn More](#LearnMore) section at the end of this lab to learn more about Authorization Schemes.*
 
 	![Return to application home page via Breadcrumb menu](./images/app-from-breadcrumb.png)
 
-10. Click on the "Edit Application Definition" button in the top-right.
+11. Click on the "Edit Application Definition" button in the top-right.
 
 	![Edit Application Properties](./images/edit-app-definition.png)
 
-11. Navigate to the **Security** menu along the top toolbar.
+12. Navigate to the **Security** menu along the top toolbar.
 
 	![Navigate to Security menu](./images/navigate-to-security.png)
 
-12. Under **Authorization**, select "- No application authorization required -" for the **Authorization Scheme**. Then click **Apply Changes** in the top-right corner.
+13. Under **Authorization**, select "- No application authorization required -" for the **Authorization Scheme**. Then click **Apply Changes** in the top-right corner.
 
 	![Select the authorization scheme](./images/select-authz-scheme.png)
 
@@ -292,13 +301,13 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/understanding-authentication.html) in Oracle APEX
-* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-an-authentication-scheme.html#GUID-093A9521-FDEB-432A-891D-791ED402C333) in Oracle APEX
-* [Custom Authentication](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/custom-authentication.html#GUID-27D42A6E-8BF5-44CB-BDB3-E7F544CDE267) in Oracle APEX
-* [Triggers](https://docs.oracle.com/en/database/oracle/apex/23.1/aeutl/managing-triggers.html) in Oracle APEX
+* [Understanding Authentication](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/understanding-authentication.html) in Oracle APEX
+* [Creating an Authentication Scheme](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-an-authentication-scheme.html) in Oracle APEX
+* [Custom Authentication](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/custom-authentication.html) in Oracle APEX
+* [Triggers](https://docs.oracle.com/en/database/oracle/apex/24.2/aeutl/managing-triggers.html) in Oracle APEX
 * [DBMS_CRYPTO Interface](https://docs.oracle.com/en/database/oracle/oracle-database/23/arpls/DBMS_CRYPTO.html)
-* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/providing-security-through-authorization.html#GUID-8FBF5F46-0541-4859-8470-D10E333DD271) in Oracle APEX
+* [Understanding Authorization Schemes](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/providing-security-through-authorization.html) in Oracle APEX
 
 ## Acknowledgements
-* **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, June 2023
+* **Author** - Ana Beyer, Staff Cloud Engineer, Oracle
+* **Last Updated By/Date** - Ana Beyer, June 2025

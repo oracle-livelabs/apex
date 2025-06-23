@@ -39,17 +39,23 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 
 	![Select the primary key and click Create](./images/select-pk.png)
 
-5. Change the **EMAIL** and **USERNAME** item **Type** to “Text Fields”, and the **PASSWORD** item **Type** to “Password”. To do so, select the page item in the left-side pane, and change the **Type** field in the right-side pane from the dropdown menu.
+5. Change the **ACCOUNT_STATUS** item **Type** to "Hidden". To do so, select the page item in the left-side pane, and change the **Type** field in the right-side pane from the dropdown menu. Change the **PASSWORD** item **Type** to “Password”.
 
-   Make the **EMAIL** page item of **Subtype** “E-Mail” as well so that it will automatically check that the value entered is a properly formatted email address.
+  Change the **EMAIL** page item to **Subtype** “E-Mail” as well so that it will automatically check that the value entered is a properly formatted email address.
 
-	 ![Change the EMAIL and USERNAME item TYPE](./images/change-item-type.png)
+	![Change the PASSWORD item TYPE](./images/change-item-type.png)
+
+	![Change the EMAIL item TYPE](./images/change-item-subtype.png)
 
 6. Add another page item (right-click on the **PASSWORD** page item in the left-side pane and click “Create Page Item Below”) and name it something like **CONFIRM_ PASSWORD** so that the user has to re-enter their password to confirm it (keep the **PXX_** prefix where “XX” is your page number). Change the **Type** to “Password”.
 
 	![Create another page item to confirm the password](./images/create-page-item.png)![Make new item of Type "Password"](./images/password-type.png)
 
-7.	Next create a **Validation** on the **EMAIL** page item (right-click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
+7. In the right-hand side, find the "Appearance" section and change the **Template** to "Required Floating" so that the input field on the form matches the formatting of the original "PASSWORD" field.  Scroll down and find the **Validation** section and toggle on "Value Required".
+
+	![Format the "CONFIRM_PASSWORD" field](./images/confirm-pwd-formatting.png)
+
+8.	Next create a **Validation** on the **EMAIL** page item (right-click on the page item in the left-side pane and click “Create Validation”) and call it something like **UNIQUE_ EMAIL**. This Validation will check that this email is not already taken by another user. In the right-side pane, the **Validation Type** should be set as “No Rows returned” and then copy & paste the code snippet below as the associated SQL Query. Change “XX” in **PXX_ EMAIL** to the page number assigned to this page (see top-left of page). Then provide an **Error Message** that will appear if a user enters an email that is taken.
 
 	![Right-click on EMAIL and click "Create Validation"](./images/create-validation.png) ![Create the validation](./images/unique-email-validation.png)
 
@@ -59,9 +65,9 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	</copy>
 	```
 
-8. Similarly, create a **Validation** on the **USERNAME** page item following the same process as in the previous step (step 7), but in the **SQL Query** change **email** to **username** and **PXX_ EMAIL** to **PXX_ USERNAME**.
+9. Similarly, create a **Validation** on the **USERNAME** page item following the same process as in the previous step (step 8), but in the **SQL Query** change **email** to **username** and **PXX_ EMAIL** to **PXX_ USERNAME**.
 
-9. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, the password must be at least 8 characters long, have at least one special character, one upper and lower case letter, and have at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
+10. Next create a **Validation** on the **PASSWORD** page item of **Type** “Function Body (returning Error Text)”. This will check that the password entered meets a standard set of minimum requirements. Specifically, the password must be at least 8 characters long, have at least one special character, one upper and lower case letter, and have at least one number. Copy & paste the following code snippet as the **PL/SQL Function Body Returning Error Text**.
 
 	> **Note:** Remember to change the “XX” in **PXX_PASSWORD** to your assigned page number. From here on out, assume that this will always be the case for all code snippets. To make it easier to edit the code block, click on the Popout Icon, ![Popout Icon](./images/popout-icon.png), and click **OK** in the bottom-right of the dialog when you're finished editing.
 
@@ -92,7 +98,7 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	END;
 	</copy>
 	```
-10. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 6 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
+11. Create a **Validation** on the **CONFIRM_PASSWORD** page item that you created in step 6 and make it of **Type** “Function Body (returning Boolean)”. In the **PL/SQL Function Body** field, copy & paste the code snippet below, changing the page numbers as applicable. Add an **Error Message** that you want to appear if the user enters two passwords that do not match.
 
 	```
 	<copy>
@@ -107,37 +113,39 @@ Now that we have the custom authentication Scheme set up, we need to create a pa
 	</copy>
 	```
 
-11.	Under **Region Buttons** there should be 4 default buttons already created. Feel free to delete the **DELETE** and **SAVE** buttons as you will not be needing them (right-click on them in the left-side pane and click “Delete”).
+12.	Under **Region Buttons** there should be 4 default buttons already created. Feel free to delete the **DELETE** and **SAVE** buttons as you will not be needing them (right-click on them in the left-side pane and click “Delete”).
 
 	![Delete unnecessary buttons](./images/default-buttons.png)
 
-12.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “&gt;” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
+13.	The default **CANCEL** button has a Dynamic Action already associated with it. We are going to add another **TRUE** Action by expanding the **CANCEL** hierarchy in the left-side pane (click on the “&gt;” icon next to **CANCEL**).  Right-click on “Cancel Dialog” in the left-side pane and click “Create TRUE Action”.
 
 	![Right-click on the "Cancel Dialog" Dynamic Action and click "Create TRUE Action"](./images/create-true-action.png)
 
-13.	In the right-side pane change **Action** to “Refresh”, **Selection Type** to “Region” and **Region** to “Create New User” from the dropdown.
+14.	In the right-side pane change **Action** to “Refresh”, **Selection Type** to “Region” and **Region** to “Create New User” from the dropdown. You can leave the **Name** blank.
 
 	![Edit Dynamic Actions](./images/refresh-dynamic-action.png)
 
-14.	In the **Processing** tab on the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)), click on “Process form …” under **Processes** and add a **Success Message** and **Error Message** notifying the user that their account has/hasn’t been created.
+15.	In the **Processing** tab on the left-side pane (denoted by ![Processing tab icon](./images/processing-icon.png)), click on “Process form …” under **Processes**. Scroll down in the right-side pane and add a **Success Message** and **Error Message** notifying the user that their account has/hasn’t been created.
 
 	![Add Success and Error Messages for when a user tries to create an account](./images/create-user-success-error-msgs.png)
 
-15.	There is a default “Close Dialog” process created that we don’t need. To delete this process, right-click on it and click “Delete”.
+16.	There is a default “Close Dialog” process created that we don’t need. To delete this process, right-click on it and click “Delete”.
 
 	![Delete the "Close Dialog" process](./images/delete-close-dialog.png)
 
-16.	Create a **Branch** (right-click on **After Processing** and click “Create Branch”) of **Behavior Type** “Page or URL (Redirect)” and route it back to the Login page (should be page 9999 by default). Feel free to name this something like “Close Dialog”.
+17.	Create a **Branch** (right-click on **After Processing** and click “Create Branch”) of **Behavior Type** “Page or URL (Redirect)” and route it back to the Login page (should be page 9999 by default). Feel free to name this something like “Close Dialog”.
 
 	![Create a Branch "After Processing"](./images/after-processing-branch.png) ![Select the Behavior Type for this Branch](./images/branch-behavior-type.png)
 
-17.	Then add an **Ajax Callback** (right-click on **Ajax Callback** and click “Create Process”) of **Type** “Clear Session State”. Feel free to name this something like “Display messages”. This callback forces the success/error messages associated with step 17 to appear even after this modal dialog closes.
+18.	Then add an **Ajax Callback** (right-click on **Ajax Callback** and click “Create Process”) of **Type** “Clear Session State”. Feel free to name this something like “Display messages”. This callback forces the success/error messages associated with step 15 to appear even after this modal dialog closes.
 
 	![Create an Ajax Callback](./images/ajax-callback.png) ![Adjust the Ajax callback Type](./images/ajax-callback-settings.png)
 
-18.	Finally, navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
+19.	Finally, navigate back to the **Rendering** tab on the left-side pane (denoted by ![Rendering tab icon](./images/rendering-icon.png)) and click on “Page XX: Create New User”. In the right-side pane, search for “Security” in the search/filter bar (or scroll down to this section yourself). Change the **Authentication** setting to “Page is Public” from the dropdown.
 
-19.	Click **Save** in the top-right corner.
+![Change page's authentication](./images/make-page-public.png)
+
+20.	Click **Save** in the top-right corner.
 
 This concludes this task. You may now **proceed to the next task.**
 
@@ -169,11 +177,11 @@ This concludes this lab. You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/adding-new-a-page-to-an-app.html) in Oracle APEX
-* [Validations](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/understanding-validations.html) in Oracle APEX
-* [Managing Buttons](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-buttons.html) in Oracle APEX
-* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/managing-dynamic-actions.html#GUID-93732CF5-42AD-4400-B1B9-5F6AA3D80715) in Oracle APEX
+* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/adding-new-page-app.html) in Oracle APEX
+* [Validations](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/understanding-validations.html) in Oracle APEX
+* [Managing Buttons](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-buttons.html) in Oracle APEX
+* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-dynamic-actions.html) in Oracle APEX
 
 ## Acknowledgements
-* **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, June 2023
+* **Author** - Ana Beyer, Staff Cloud Engineer, Oracle
+* **Last Updated By/Date** - Ana Beyer, June 2025
