@@ -140,8 +140,8 @@ In this lab, you will:
 
           | Name | Value  |
           | --- |  --- |
-          | P16_ORDER | &P16\_ORDER\_ID. |
-          
+          | P16\_ORDER\_ID | &P16\_ORDER\_ID. |
+
         - For Clear Cache - enter **16**.
         - Click **OK**.
 
@@ -162,6 +162,8 @@ In this lab, you will:
 
     - Under Server-side condition, for When Button Pressed, select **Clear**
 
+  Click Save.
+
 ## Summary
 
 You now know how to add validations, processes and branches to your APEX page. You may now **proceed to the next lab**.
@@ -170,4 +172,4 @@ You now know how to add validations, processes and branches to your APEX page. Y
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, May 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

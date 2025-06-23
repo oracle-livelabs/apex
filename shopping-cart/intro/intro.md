@@ -24,7 +24,7 @@ In this lab, you will:
 * Learn how to create a page to list all the products
 * Learn how to manage the products
 
-*{Note: This lab assumes you are using Oracle APEX 22.1.}*
+*{Note: This lab assumes you are using Oracle APEX 23.1.}*
 
 ### Labs
 
@@ -69,4 +69,4 @@ In this lab, you will:
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, August 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

@@ -27,7 +27,7 @@ In this lab, you will:
 
 3. Click on the **Movie Details** page.
 
-4. When you set up the Movie Details page, a Buttons region was automatically created in the Dialog Footer region of the page with a Cancel button. You are going to move this region to the Dialog Header region and add some buttons that will allow you to add, remove, and update your watchlist.
+4. When you set up the Movie Details page, a Buttons region was automatically created in the Dialog Footer position of the page with a Cancel button. You are going to move this region to the Dialog Header position and add some buttons that will allow you to add, remove, and update your watchlist.
 
 5. In the rendering pane, click on the **Buttons** region and set the following properties:
 
@@ -388,25 +388,25 @@ Before you test the buttons you just implemented, you will add badges to the Mov
     
 You now know how to use SQL commands in Page Designer regions and processes to get, store, update, and delete data from your tables. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/creating-buttons.html) 
+- [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/creating-buttons.html) 
 
-- [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/understanding-page-processes.html)  
+- [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/understanding-page-processes.html)  
 
-- [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/controlling-navigation-using-branches.html)  
+- [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/controlling-navigation-using-branches.html)  
 
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 6 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](./files/lab-6.sql) to download a copy of the app at the end of Lab 6.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-6-231.sql) to download a copy of the app at the end of Lab 6.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 - You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.  
 *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
-    ![](images/blank-credentials.png " ")  
+    ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")  
 
 - If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
@@ -416,7 +416,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
     - In the Verify Client Secret/Password column, past your API key again.
 
-        ![](images/complete-credentials.png " ")
+        ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
 - Click **Next**.
 
@@ -424,7 +424,7 @@ Stuck on a step or struggling with the lab? You can download a copy of the Movie
 
 - Click **Install** to install the supporting objects and finish importing the application.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023

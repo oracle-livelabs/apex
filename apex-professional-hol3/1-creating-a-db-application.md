@@ -30,7 +30,7 @@ In this lab, you will:
 
 ## Task 2: Name the Application
 
-1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create application wizard the icon and color of the icon will be a random selecti�on so most likely will not be the same color or icon that they see in the screenshot.
+1. In the Create Application wizard, for Name enter **Online Shopping Application**. Note that, in the create application wizard the icon and color of the icon will be a random selection so most likely will not be the same color or icon that they see in the screenshot.
 
     ![Name the application](./images/name-the-application1.png " ")
 
@@ -135,7 +135,7 @@ A dashboard page is a great way to show important information using various char
 
     ![](./images/set-as-admin-page2.png " ")
 
-## Task 8: Add Manage Products Page
+## Task 6: Add Manage Products Page
 
 1. In the Create Application wizard, click **Add Page**.
 2. Click **Interactive Report**.
@@ -162,9 +162,9 @@ A dashboard page is a great way to show important information using various char
 
 5. Click **Add Page**.
 
-  ![Add page](./images/add-report-page1.png " ")
+  ![Add page](./images/add-page1.png " ")
 
-## Task 9: Set Features
+## Task 7: Set Features
 
 Features are a set of optional application capabilities in Oracle APEX that you can include in your new application. Access Control enables role-based user authorization with a single click.
 
@@ -172,7 +172,7 @@ Features are a set of optional application capabilities in Oracle APEX that you 
 
   ![Check Install Progressive Web App](./images/set-features.png " ")
 
-## Task 10: Finish Creating the Application
+## Task 8: Finish Creating the Application
 
 Now that you have added all the pages, it is time to generate the app and review it.
 
@@ -185,7 +185,7 @@ Click **Run Application**.
 
     ![Run application](./images/run-application.png " ")
 
-## Task 11: Run the Application
+## Task 9: Run the Application
 
 1. Enter your user credentials. Click **Sign In**.
 
@@ -201,4 +201,4 @@ You now know how to create an application with a number of different page types 
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, May 2023

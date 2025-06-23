@@ -35,48 +35,42 @@ In this lab, you will:
 
 4. For **Color** column, enter the following:
 
-    * Add Column - enter **COLOR**
-    * Type - select **VARCHAR2**
+    * Column - enter **COLOR**
+    * Data Type - select **VARCHAR2**
     * Length - enter **200**.
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add Column wizard](./images/color-column.png " ")
 
-7. Click **Finish**.
+5. Click **Add Column** button again.
 
-8. Click **Add Column** button again.
+6.  For Department column, enter the following:
 
-9.  For Department column, enter the following:
-
-    * Add Column - enter **DEPARTMENT**
-    * Type - select **VARCHAR2**
+    * Column - enter **DEPARTMENT**
+    * Data Type - select **VARCHAR2**
     * Length - enter **200**.
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add Column wizard](./images/department-column.png " ")
 
-11. Click **Finish**.
+7. Click **Add Column** button again.
 
-12. Click **Add Column** button again.
+8. For Clothing column, enter the following:
 
-13. For Clothing column, enter the following:
-
-    * Add Column - enter **CLOTHING**
-    * Type - select **VARCHAR2**
+    * Column - enter **CLOTHING**
+    * Data Type - select **VARCHAR2**
     * Length - enter **200**.
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add Column wizard](./images/clothing-column.png " ")
-
-15. Click **Finish**.
 
 ## Task 2: Populate the new columns
 
 1. From the Oracle APEX Home, click **SQL Workshop** and select **SQL Scripts**.
-    
+
     ![SQL Scripts page in SQL Workshop](./images/sql-scripts.png " ")
 
 3. Click **Create**.
@@ -88,30 +82,17 @@ In this lab, you will:
     ```
     <copy>
     UPDATE
-        (
-                SELECT p.product_id,
-                        p.product_name,
-                        p.clothing,
-                        p.color,
-                        p.department,
-                        p.product_details
-                FROM   products p ) p
-    SET    p.clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
-        p.color =
-        (
-                SELECT c.color
-                FROM   json_table (p.product_details, '$' COLUMNS ( color VARCHAR2(4000) path '$.colour') ) c),
-        p.department =
-        (
-                SELECT g.department
-                FROM   json_table (p.product_details, '$' COLUMNS ( department VARCHAR2(4000) path '$.gender') ) g)
+    products
+    SET    clothing = Substr(product_name, Instr(product_name, ' ',1,1)+1, Instr(product_name, ' ',1, 2)+1 - Instr(product_name, ' ',1,1)- 2),
+    color = json_value(product_details,'$.colour'),
+    department = json_value(product_details,'$.gender')
     ```
 
     This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similary, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns respectively based on information found in the JSON product details column in the **Products** table.
 
     Click **Run**.
-    
-    ![SQL Scripts page with Run and Save buttons](./images/insert-code-run.png " ")
+
+    ![SQL Scripts page with Run and Save buttons](./images/insert-code.png " ")
 
 6. Click **Run Now**.
 
@@ -122,9 +103,9 @@ In this lab, you will:
     ![Script Results page is displayed](./images/script-results.png " ")
 
 8. To check the values in the Products table, click **SQL Workshop** and click **SQL Commands**.
-    
+
     ![SQL Commands page under SQL Workshop](./images/sql-commands.png " ")
-    
+
 9. Copy the following SQL Query and click **Run**.
     ```
     <copy>
@@ -149,74 +130,38 @@ You will create lookup tables based on the new three columns, after you will hav
 
 3. Navigate to **PRODUCTS** Table.
 
-4. Click **Create Lookup Table** button.
+4. Click **More** and Select **Create Lookup Table** button.
 
     ![Table view in the Object Browser](./images/lookup-table.png " ")
 
-5. For Column, select **COLOR - varchar2**. Click **Next**.
+5. For Text Column, select **COLOR**. Click **Create Lookup Table**.
 
     ![Create Lookup Column wizard](./images/lt-color.png " ")
 
-7. Leave the table and sequence name by default:
-
-    * New Table Name: **COLOR_LOOKUP**
-    * New Sequence: **COLOR\_LOOKUP\_SEQ**
-    
-    Click **Next**.
-
-    ![Create Lookup Column wizard](./images/lt-color2.png " ")
-
-9. Click **Create Lookup Table**.
-
-    ![Create Lookup Column wizard](./images/lt-color3.png " ")
-
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-10. To create **Department** lookup table, navigate back to the **Products** table and Click **Create Lookup Table** button.
+6. To create **Department** lookup table, navigate back to the **Products** table and Click **More** , Select **Create Lookup Table** button.
 
     ![Create Lookup Column wizard](./images/lookup-table2.png " ")
 
-11. For Column, select **DEPARTMENT - varchar2**. Click **Next**.
+7. For Text Column, select **DEPARTMENT**. Click **Create Lookup Table**.
 
     ![Create Lookup Column wizard](./images/lt-department.png " ")
 
-13. Leave the table and sequence name by default:
-
-    * New Table Name: **DEPARTMENT_LOOKUP**
-    * New Sequence: **DEPARTMENT\_LOOKUP\_SEQ**
-
-    Click **Next**.
-
-    ![Create Lookup Column wizard](./images/lt-department2.png " ")
-    
-15. Click **Create Lookup Table**.
-
-    ![Create Lookup Column wizard](./images/lt-department3.png " ")
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
-    
-16. To create **Clothing** lookup table, navigate back to the **Products** table and Click **Create Lookup Table** button.
 
-    ![Create Lookup Column wizard](./images/lookup-table2.png " ")
+8. To create **Clothing** lookup table, navigate back to the **Products** table and Click **More**, Select **Create Lookup Table** button.
 
-17. For Column, select **CLOTHING - varchar2**. Click **Next**.
+    ![Create Lookup Column wizard](./images/lookup-table3.png " ")
+
+    *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
+
+9. For Text Column, select **CLOTHING**. Click **Create Lookup Table**.
 
     ![Create Lookup Column wizard](./images/lt-clothing.png " ")
 
-19. Leave the table and sequence name by default:
 
-    * New Table Name: **CLOTHING_LOOKUP**
-    * New Sequence: **CLOTHING\_LOOKUP\_SEQ**
-
-    Click **Next**.
-
-    ![](./images/lt-clothing2.png " ")
-
-21. Click **Create Lookup Table**.
-
-    ![Create Lookup Column wizard](./images/lt-clothing3.png " ")
-    *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
-
-22. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
+10. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
     - COLOR_LOOKUP
     - DEPARTMENT_LOOKUP
     - CLOTHING_LOOKUP
@@ -231,4 +176,4 @@ You now know how to add new columns to your existing tables, how to create looku
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager;
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

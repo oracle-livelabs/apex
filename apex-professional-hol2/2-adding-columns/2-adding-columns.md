@@ -35,53 +35,43 @@ In this lab, you will:
 
 4. For Color column, enter the following:
 
-    * Add Column - enter **COLOR**
-    * Type - select **VARCHAR2**
+    * Column - enter **COLOR**
+
+    * Data Type - select **VARCHAR2**
+
     * Length - enter **200**.  
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add Column - Colors](images/add-color-column.png " ")
 
-5. Click **Finish**.
+5. Click **Add Column** button.
 
-    ![Confirm your request](images/add-color-column2.png " ")
+6.  For Department column, enter the following:
 
-6. Click **Add Column** button.
+    * Column - enter **DEPARTMENT**
 
-    ![Add column Department](images/add-department-column1.png " ")
+    * Data Type - select **VARCHAR2**
 
-7.  For Department column, enter the following:
-
-    * Add Column - enter **DEPARTMENT**
-    * Type - select **VARCHAR2**
     * Length - enter **200**.
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add Column Department2](images/add-department-column2.png " ")
 
-8. Click **Finish**.
+7. Click **Add Column** button.
 
-    ![Confirm your request - Department](images/add-department-column3.png " ")
+8. For Clothing column, enter the following:
 
-9. Click **Add Column** button.
+    * Column - enter **CLOTHING**
 
-    ![Add column Clothing](images/add-clothing-column1.png " ")
+    * Data Type - select **VARCHAR2**
 
-10. For Clothing column, enter the following:
-
-    * Add Column - enter **CLOTHING**
-    * Type - select **VARCHAR2**
     * Length - enter **200**.
 
-    Click **Next**.
+    Click **Apply**.
 
     ![Add column Clothing2](images/add-clothing-column2.png " ")
-
-11. Click **Finish**.
-
-    ![Confirm your request - Clothing](images/add-clothing-column3.png " ")
 
 ## Task 2: Populate the new columns
 
@@ -168,76 +158,34 @@ In this lab, you create lookup tables based on the new three columns. After you 
 
 3. Navigate to **PRODUCTS** Table.
 
-4. Click **Create Lookup Table** button.
+4. Click **More** and Select **Create Lookup Table** button.
 
     ![Create lookup table1](./images/create-lookup-tables1.png " ")
 
-5. For Column, select **COLOR - varchar2**.
-   Click **Next**.
+5. For Text Column, select **COLOR** and Click **Create Lookup Table**.
 
     ![Create Color lookup](./images/create-color-lookup.png " ")
 
-6. Leave the default table and sequence names:
-
-    * New Table Name: **COLOR_LOOKUP**
-    * New Sequence: **COLOR\_LOOKUP\_SEQ**
-
-    Click **Next**.
-
-    ![Create Color lookup1](./images/create-color-lookup1.png " ")
-
-7. Click **Create Lookup Table**.
-
-    ![Create Color lookup2](./images/create-color-lookup2.png " ")
-
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-8. To create **Department** lookup table, navigate back to the **Products** table and Click **Create Lookup Table** button.
+6. To create **Department** lookup table, navigate back to the **Products** table and Click **More** and Select **Create Lookup Table** button.
 
-    ![Create Lookup Table2](./images/create-lookup-tables2.png " ")
+    ![Create Lookup Table2](./images/create-lookup-tables1.png " ")
 
-9. For Column, select **DEPARTMENT - varchar2**.
-
-    Click **Next**.
-
-    ![Create Department Lookup](./images/create-department-lookup.png " ")
-
-10. Leave the default table and sequence names:
-
-    * New Table Name: **DEPARTMENT_LOOKUP**
-    * New Sequence: **DEPARTMENT\_LOOKUP\_SEQ**
-
-    Click **Next**.
+7. For Text Column, select **DEPARTMENT** and Click **Create Lookup Table**.
 
     ![Create Department Lookup1](./images/create-department-lookup1.png " ")
 
-11. Click **Create Lookup Table**.
-
-    ![Create Department Lookup2](./images/create-department-lookup2.png " ")
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-12. To create **Clothing** lookup table, navigate back to the **Products** table and Click **Create Lookup Table** button.
+8. To create **Clothing** lookup table, navigate back to the **Products** table and Click **More** and Select **Create Lookup Table** button.
 
     ![Create Lookup Table3](./images/create-lookup-tables3.png " ")
 
-13. For Column, select **CLOTHING - varchar2**.
+9. For Text Column, select **CLOTHING** and Click **Create Lookup Table**.
 
-    Click **Next**.
+    ![Create Clothing Lookup](./images/create-clothing-lookup1.png " ")
 
-    ![Create Clothing Lookup](./images/create-clothing-lookup.png " ")
-
-14. Leave the default table and sequence names:
-
-    * New Table Name: **CLOTHING_LOOKUP**
-    * New Sequence: **CLOTHING\_LOOKUP\_SEQ**
-
-    Click **Next**.
-
-    ![Create Clothing Lookup1](./images/create-clothing-lookup1.png " ")
-
-15. Click **Create Lookup Table**.
-
-    ![Create Clothing Lookup2](./images/create-clothing-lookup2.png " ")
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
 16. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
@@ -257,4 +205,4 @@ You now know how to add new columns to your existing tables, how to create looku
 
 - **Author** - Roopesh Thokala, Product Manager
 - **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, March 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023

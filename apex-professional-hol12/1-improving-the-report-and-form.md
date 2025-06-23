@@ -7,7 +7,7 @@ Estimated Time: 20 minutes
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-7.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
 
 ## Task 1: Create a Product Details Form
 
@@ -67,9 +67,9 @@ Estimated Time: 20 minutes
         - For Page - enter **21**.  
         - For Set Items, enter:
 
-                | Name | Value |
-                | --- | --- |
-                | P21_PRODUCT_ID | #PRODUCT_ID# |    
+            | Name | Value |
+            | --- | --- |
+            | P21\_PRODUCT\_ID | #PRODUCT_ID# |    
 
         - For Clear Cache, enter **21**  
         - Click **Ok**.
@@ -120,4 +120,4 @@ You now know how to Create and Customize a Form and then link the form to an Int
 
  - **Author/Contributors** -  Roopesh Thokala, Product Manager
  - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Roopesh Thokala, Product Manager, April 2022
+ - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023

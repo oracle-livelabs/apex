@@ -24,6 +24,11 @@ In this lab, you will:
 - Learn how to Request Information/ Delegate/ Release
 - Learn how to set deadlines and expiration
 
+### Downloads
+
+**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
+
+
 ## Task 1: Create the Application
 In this lab, you create a new application named Expense Tracker.
 
@@ -149,7 +154,7 @@ To create a task definition:
 
     - For Name - Enter **Expense Request**
 
-    - For Subject - Enter **&EXPENSE_TYPE. Expense request for &EMP_NAME.**
+    - For Subject - Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
 
     - For Static ID - Enter **EXPENSE_REQUEST**
 
@@ -165,18 +170,24 @@ To create a task definition:
 6. Under **Settings** Section:
 
     - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
-    
+
+    ![Click Task Definition](images/click-task-definition.png " ")
+
+    - Click on the task definition - **Expense Request** to continue editing.
+
+    ![Click on Expense Request](images/select-expense-request.png " ")
+
     - For Actions Source - Select SQL Query.
 
     - For Actions SQL query - Copy the code below and paste it into  the code editor:  
 
     ```
     <copy>
-    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
+    select e.empno, e.emp_name, m.emp_name as mgr_name from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
+    where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
     </copy>
     ```
-
-       ![Task Definition Settings](images/task-definition-settings.png " ")
+    ![Task Definition Settings](images/task-definition-settings.png " ")
 
 7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
 
@@ -209,11 +220,18 @@ To create a task definition:
      | ESTIMATED\_COST | Estimated Cost | String |
      | EXPENSE\_STATUS | Expense Status | String |
      | EXPENSE\_TYPE | Expense Type | String |
-     | EXPENSE\_TYPE | Req Id | String |
+     | REQ\_ID | Req Id | String |
 
      ![Task Definition Parameters](images/task-definition-parameters.png " ")
 
-10. Under **Actions** Section, Click **Add Action** button
+     - Click **Apply Changes**.
+
+10. Click on the task definition - **Expense Request** to continue editing.
+
+  ![Click on Expense Request](images/select-expense-request.png " ")
+
+
+11. Under **Actions** Section, Click **Add Action** button
 
      ![Task Definition Actions Create](images/task-definition-actions0.png " ")
 
@@ -227,7 +245,7 @@ To create a task definition:
 
     - For Code: Copy the code below and paste it into  the code editor:
 
-      ```
+    ```
         <copy>
          declare
            l_req_id number;
@@ -248,15 +266,13 @@ To create a task definition:
     ```
     - Click **Create** to save Create Event Action.
 
-    ![Task Definition Action - create1](images/task-definition-create-action.png " ")
+      ![Task Definition Action - create1](images/task-definition-create-action.png " ")
 
-11. To Add the next action, Click **Add Action** button.
+12. To Add the next action, Click **Add Action** button.
 
     ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
 
     Specify the following:
-
-    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
     - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
 
@@ -318,7 +334,7 @@ To create a task definition:
 
        ![Task Definition - Approved action created](images/task-definition-approved-code0.png " ")
 
-12. Again, Click  **Add Actions** button.
+13. Again, Click  **Add Actions** button.
 
     ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
 
@@ -434,6 +450,8 @@ Add a page to Submit an Expense request.
 
 7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
 
+  ![Create Page Item - P3_EXPENSE_TYPE](images/create-page-item.png " ")
+
     - For Name - Enter **P3\_EXPENSE\_TYPE**
 
     - For Type - Select, **Select List**
@@ -482,7 +500,6 @@ Add a page to Submit an Expense request.
          select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
         </copy>
         ```
-  
     ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
 
     - For Sequence - Enter 5
@@ -493,21 +510,21 @@ Add a page to Submit an Expense request.
 
 12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
 
-   ![Create processing tab process1](images/submit-expense-create-process.png " ")
+    ![Create processing tab process1](images/submit-expense-create-process.png " ")
 
     In the Property Editor, enter the following:
 
-    - For Name - Type **Submit Expense request**
+     - For Name - Type **Submit Expense request**
 
-    - For Type - Select **Human Task - Create**
+     - For Type - Select **Human Task - Create**
 
     Under **Settings** Section:
 
-    - For Definition - Select **Expense request**
+     - For Definition - Select **Expense request**
 
-    - For Details Primary key Element: Select **P3\_EMPNO**
+     - For Details Primary key Element: Select **P3\_EMPNO**
 
-    - For Success Message: Type **Expense Request submitted successfully**
+     - For Success Message: Type **Expense Request submitted successfully**
 
     ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
 
@@ -944,7 +961,6 @@ Navigate to App Builder, Select Expense Tracker application. Click Shared Compon
     END;
     </copy>
     ```
-   
    ![Expense Request Details ](./images/expire-task.png " ")
 
 ## **Summary**
@@ -954,6 +970,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
    - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala , Product Manager
-   - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2022
-
+   - **Contributor** - Roopesh Thokala, Product Manager
+   - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023

@@ -8,7 +8,7 @@
             "filename":"../../workshop-intro/intro.md"
         },        
         {
-            "title": "Getting Started",
+            "title": "Get Started",
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
           },
         {
@@ -24,8 +24,8 @@
             "filename": "../../../spreadsheet/4-improving-the-report-and-form/4-improving-the-report-and-form.md"
         },
         {
-            "title": "Lab 4: Link the Calendar",
-            "filename": "../../../spreadsheet/5-linking-the-calendar/5-linking-the-calendar.md"
+            "title": "Lab 4: Add a Map Region and Install PWA",
+            "filename": "../../../spreadsheet/5-using-maps-and-pwa/5-using-maps-and-pwa.md"
         },
         {
             "title": "Lab 5: Defining New Data Structures",

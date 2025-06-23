@@ -18,7 +18,7 @@ Estimated Time: 40 minutes
 * Create a page to list the products in the **Shopping Cart** Application.
 * Create Pages to Search and Edit the Projects in **Demo Projects** Application.
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
+*Note: This workshop assumes you are using Oracle APEX 23.1.*
 
 ## Learn More - *Useful Links*
 

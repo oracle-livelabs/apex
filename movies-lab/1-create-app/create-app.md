@@ -46,7 +46,7 @@ In this lab, you will:
     * Select the red color swatch (fifth from the left) and the smiley face icon.
 
     * Click **Save Icon**.
-    
+
     ![Choose Application Icon dialog with the fifth color swatch and Smiley icon selected](images/choose-icon.png " ")
 
 7. In the Pages section of the Create Application wizard, click the **Edit** button next to Home.
@@ -130,9 +130,9 @@ In this lab, you will:
 
 You now know how to create, run, and update the theme of an application. You may now **proceed to the next lab**.
 
-## Resources
+## Learn More
 
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.1/htmdb/application-builder-concepts.html)
+- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/22.2/htmdb/application-builder-concepts.html)
 
 - [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
 
@@ -143,11 +143,11 @@ You now know how to create, run, and update the theme of an application. You may
 ## Stuck? Download the Application Here
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 1 and follow the instructions below to import it into your Oracle APEX workspace.  
 
-- [Click here](./files/lab-1.sql) to download a copy of the app at the end of Lab 1.
+- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Ei1_2QRw4M8tQpk59Qhao2JCvEivSAX8MGB9R6PfHZlqNkpkAcnVg4V3-GyTs1_t/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/lab-1-231.sql) to download a copy of the app at the end of Lab 1.
 
 - You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Paige Hanssen
-- **Last Updated By/Date** - Paige Hanssen, August 2022
+- **Last Updated By/Date** - Paige Hanssen, May 2023

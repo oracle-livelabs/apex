@@ -31,18 +31,18 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     ![Copy Page dialog](images/copy-page-1.png " ")   
 
 4. For Page to Copy, enter the following:
-  - For New Page Name, enter **NYC Highschools Map**
-  - For Breadcrumb, select the Breadcrumb option
-  - For Entry Name - accept the default value or enter **NYC Highschools Map**
-  Accept the default values for other fields and click **Next**.
+    - For New Page Name, enter **NYC Highschools Map**
+    - For Breadcrumb, select the Breadcrumb option
+    - For Entry Name - accept the default value or enter **NYC Highschools Map**
+    Accept the default values for other fields and click **Next**.
 
- ![Page to Copy dialog](images/copy-page-2.png " ")  
+    ![Page to Copy dialog](images/copy-page-2.png " ")  
 
-4. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
+5. Under Navigation Menu, select **Create a new navigation menu entry** and click **Next**. This creates a new entry in the left side navigation menu of your application.
 
     ![Navigation menu dialog](images/copy-page-3.png " ")   
 
-5. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
+6. Under New Names, you can enter new names for the items and buttons. Accept the default names and click **Copy**.
 
     ![New names table is displayed in the dialog](images/copy-page-4.png " ")
 
@@ -50,13 +50,9 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
 
 
 ## **Task 2**: Adding a Map Region
-1. The newly created Page 6, **NYC Highschools Map** opens in the Page Designer. In the Rendering pane, select the **Search** region. Now, in the property editor, navigate to *Source > Filtered Region* and select the **Nyc Highschools** region.
-    ![Page Designer view](images/search-filtered-region.png " ")
-    
+1. The newly created Page 6, **NYC Highschools Map** opens in the Page Designer. In the Rendering pane, navigate to Body and select the **Nyc Highschools** region. In the Property Editor, change the type to **Map**.
 
-1. In the Rendering pane, navigate to Body and select the **Nyc Highschools** region. In the Property Editor, change the type to **Map**.
     ![Page Designer view](images/select-map-type.png " ")
-  
 
 2. To customize a map region, you need to add layers. Under Layers, click on **New**.
   In the property editor, perform the following:
@@ -72,43 +68,43 @@ In order to implement the map, we will copy the existing **NYC Highschools Searc
     |Geometry Column Data Type       |Longitude/Latitude         |
     |Longitude Column         |Longitude        |
     |Latitude Column         |Latitude        |
-    
+
     ![Property Editor view](images/column-mapping.png " ")   
-    
+
 4. Click on **Save**. Later, click on **Application \<n\>** at the top to navigate to the application home page.
 
     ![Save button](images/save-and-go.png " ")   
 
 5. Let us set an icon for the newly created **NYC Highschools Map**. Click on **Shared Components**.
- 
+
     ![Application console](images/shared-components.png " ")
-    
-6. Under Navigation, select **Navigation Menu**. Under Lists, select **Navigation Menu**.
+
+6. Under Navigation and Search, select **Navigation Menu**. Under Lists, select **Navigation Menu**.
 
     ![Shared Components page](images/nav-menu.png " ")
-    
+
     ![Navigation Menu list](images/select-nav-menu.png " ")
-    
+
 7. Click the edit icon next to **NYC Highschools Map** list entry.
 
     ![Navigation Menu list](images/edit-map-entry.png " ")
-    
+
 8. In the edit page, for Image/Class enter **fa-map-marker** and click **Apply Changes**.
 
     ![Edit page details](images/fa-map-marker.png " ")
 
 9. Click **Run Page**. The **NYC Highschools Map** is displayed with a faceted search on the left and a map region on the right. Filter the values using faceted search and observe how the map changes accordingly.
-    
+
     ![Run Page button](images/run-page.png " ")
-    
+
     ![NYC Highschool Map page is displayed](images/nyc-highschool-map.png " ")
-    
+
 ## **Task 3**: Enhancing the Map Region
 APEX allows customization of the map in a declarative way. In this step, you will enhance the map by adding tooltip and custom pin colors on the map.
 
 1. From the **NYC Highschools Map** page in the application, click **Page 6** in the developer toolbar to edit the page.
     ![Developer Toolbar is displayed](images/edit-page-6.png " ")
-    
+
 2. In the Rendering tree, navigate to **Nyc Highschools** under Body and select the **Schools** layer.   
   In the Property Editor, do the following:
      - Under Tooltip, toggle the button to switch on **Advanced Formatting**.
@@ -119,20 +115,20 @@ APEX allows customization of the map in a declarative way. In this step, you wil
       Borough: &BOROUGH.<br
       </copy>
       ```
-      
+
     ![Page Designer view](images/add-tooltip.png " ")
-  
+
 3. Click **Save and Run Page**. The NYC Highschools Map is displayed. Hover over a pin in the map to display the custom tooltip. The tooltip displays the Highschool name and the Borough name.
     ![NYC Highschool Map page is displayed](images/show-tooltip.png " ")
 
 4. Now, you will customize the map by adding a condition such that the value of the *GRADUATION_RATE* will determine the pin color. To do so, click **Page 6** in the developer toolbar to edit the page.
     ![Developer Toolbar is displayed](images/edit-page-6.png " ")
-    
-5. In the Rendering tree, navigate to **Nyc Highschools** under Body. In the Property Editor, under Source, select **SQL Query** for Type. Click on the Code Editor button next to SQL Query.
+
+5. In the Rendering tree, navigate to **Nyc Highschools** under Body. In the Property Editor, under Source, select **Local Database** for Location and **SQL Query** for Type. Click on the Code Editor button next to SQL Query.
    ![Page Designer view](images/maps-sql-query.png " ")
 
 6. In the Code Editor, modify the SQL query to add a CASE statement to determine the color based on the value of *GRADUATION_RATE*. Replace the query with the following query:
-    
+
       ```
       <copy>
       select ID,
@@ -162,41 +158,41 @@ APEX allows customization of the map in a declarative way. In this step, you wil
       ```
   Click **OK**.
   ![Code Editor in the Property Editor](images/code-editor.png " ")
-  
+
 7. Select **Schools** layer in the Rendering pane. In the Property Editor, do the following:
     - For **Name**, enter **Schools - Red**
     - Under **Row Assignment**,
         - For **Column**, select **PIN_COLOR**
         - For **Value for this Layer**, enter **red**
     - Under **Appearance**, for Fill Color enter **&PIN_COLOR.**
-  
+
     ![Page Designer view](images/edit-schools.png " ")
-    
+
     ![Page Designer view](images/schools-red.png " ")
 
 8. In the Rendering Pane, right-click on **Schools - Red** and select **Duplicate**. In the Property Editor, do the following:
     - For **Name**, enter **Schools - Green**
     - Under **Row Assignment**, for **Value for this Layer**, enter **green**
-    
+
     ![Rendering Tree](images/red-duplicate.png " ")
-    
+
     ![Property Editor](images/schools-green.png " ")
 
 9. In the Rendering Pane, right-click on **Schools - Green** and select **Duplicate**. In the Property Editor, do the following:
     - For **Name**, enter **Schools - Yellow**
     - Under **Row Assignment**, for **Value for this Layer**, enter **yellow**
-    
+
     ![Rendering Tree](images/green-duplicate.png " ")
-    
+
     ![Property Editor](images/schools-yellow.png " ")
 
 10. Click **Save and Run** page. The **NYC Highschools Map** displays different colors for the pins.
     - The schools with a Graduation rate between 0-50 are displayed in **red**
     - The schools with a Graduation rate between 50-75 are displayed in **yellow**
     - The schools with a Graduation rate between 75-100 are displayed in **green**
-    
+
     ![NYC Highschools Map page](images/custom-pin-colors.png " ")
-  
+
 
 ## **Task 4**: Installing a Progressive Web App (PWA)
 
@@ -209,20 +205,20 @@ Recall that you created a Progressive Web App by running the Create Application 
   - PWA is available in Google Chrome, Microsoft Edge and Safari browsers. Firefox does not support PWA.
 
 1. To install a PWA, go to your application and click **Install App** on the navigation bar.
-  
+
   ![Navigation bar in the app](images/install-app.png " ")  
-  
+
 2. A popup dialog appears in your browser asking you whether you want to install the app. Click **Install**.
 
   ![A popup dialog to confirm install](images/install-pwa.png " ")  
 
 3. After a few seconds, the application icon is created on your desktop/home screen. Double-click the application icon.
   ![App icon on desktop](images/pwa-icon.png " ")
-  
+
 4. The application is now open as a PWA without the need for a browser. This provides a customizable offline page when users are offline and cannot request the network. It optimizes page loading speed on the mobile device. It also improves the page load rendering time.
 
   ![PWA open in your desktop](images/open-pwa.png " ")
-  
+
 ## **Summary**
 
 You now know how to embed a maps in your application and to install a Progressive Web App (PWA).
@@ -238,4 +234,4 @@ You now know how to embed a maps in your application and to install a Progressiv
 ## **Acknowledgements**
 
  - **Author** -  Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, April 2022
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023

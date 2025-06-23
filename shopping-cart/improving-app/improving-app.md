@@ -77,7 +77,7 @@ Add a new navigation menu entry to allow:
 
 1. Click the Shared Components icon at the top right.
     ![Shared Components Page](./images/shared-components3.png " ")
-2. Under Navigation, click **Navigation Bar List**.
+2. Under Navigation and Search, click **Navigation Bar List**.
     ![Shared Components Page](./images/navigation-bar.png " ")
 
 3. Click **Navigation Bar**.
@@ -98,7 +98,7 @@ Add a new navigation menu entry to allow:
 
 5. Click **Create List Entry**.
     ![Create Navigation entry details](./images/create-entry2.png " ")
-    
+
 6. Click **&APP_USER.**
     ![Navigation Bar List](./images/edit-app-user.png " ")
 
@@ -112,13 +112,13 @@ Add a new navigation menu entry to allow:
     - For Image/Class - enter **fa-wrench**
     - For List Entry Label - enter **Administration**
     - For Page - select **10000**
-    
+
 5. Click **Create List Entry**.
     ![Create a list enrty](./images/new-entry.png " ")
-    
+
 6. Click **Run Page** and view the updated application.
     ![Run Page icon in the toolbar](./images/final-app.png " ")
-    
+
 
 
 You now know how to enhance and maintain both navigation menu and navigation bar.
@@ -126,4 +126,4 @@ You now know how to enhance and maintain both navigation menu and navigation bar
 ## Acknowledgments
 
 - **Author** - Apoorva Srinivas, Senior Product Manager; Monica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2022
+- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
