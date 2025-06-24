@@ -292,11 +292,80 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/19-9-5-edit-prop.png "")
 
+6. Click **App Builder**.
+
+    !["Page Designer"](images/19-10-1-app-builder.png "")
+
+7. Click **Online Bookstore**.
+
+    !["Page Designer"](images/19-10-2-obs.png "")
+
+8. Select Page **17 - Shopping Cart**.
+
+    !["Page Designer"](images/19-9-8-page17.png "")
+
+9. Navigate to **Dynamic Actions** tab, select the first **True** action under **Invoke Razorpay**, and under Settings, add one line of code to include the Razorpay key under the options in the **Code**.
+
+    ```
+        <copy>
+        // Options for the Razorpay checkout
+        var razorpayId = "&P17_RAZORPAY_ORDER_ID.";
+            var amount = apex.item('P17_TOTAL').getValue();
+            var options = {
+                "key": "<Enter Your Razorpay Key>", // Your Razorpay test key
+                "amount": amount*100, // Amount in paise (e.g., 50000 paise = Rs 500)
+                "name": "Payment Page", // Name of the payment receiver
+                "description": "Transaction", // Description of the payment
+                "order_id": razorpayId, // Your custom order ID
+
+                // Handler function to be executed after successful payment
+                "handler": function(response) {
+                    console.log(response)
+                    // Set values in Apex items for the response data
+                    apex.item("P17_PAYMENT_ID").setValue(response.razorpay_payment_id);
+                    apex.item("P17_RAZORPAY_ORDER_ID").setValue(response.razorpay_order_id);
+                    apex.page.submit({
+                        request : "Proceed",
+                        showWait :true
+                    }
+                        );
+                },
+                // Pre-filled customer information
+                "prefill": {
+                    "name": "",
+                    "email": "test@example.com",
+                    "contact": "9999999999"
+                },
+                // Additional notes for the payment
+                "notes": {
+                    "address": "Razorpay Corporate Office"
+                },
+                // Custom theme color for the Razorpay checkout window
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+
+            // Create a new Razorpay instance and open the checkout window
+            var rzp1 = new Razorpay(options);
+            rzp1.on('payment.failed', function(response) {
+                // Handle the case where payment fails
+                // For example, you can show an error message to the user
+            });
+
+            rzp1.open();
+        </copy>
+        ```
+
+    !["Page Designer"](images/19-9-9-key.png "")
+
+    *Note: Replace &lt;Enter Your Razorpay Key> in the above code with the key ID you saved in Step 1.*
+
 ## Task 10: Update ICON_URL for the Application Icon in the Emails
 
 1. Click **App Builder**.
 
-    !["Page Designer"](images/19-10-1-app-builder.png "")
+    !["Page Designer"](images/19-10-1-app-builder1.png "")
 
 2. Click **Online Bookstore**.
 

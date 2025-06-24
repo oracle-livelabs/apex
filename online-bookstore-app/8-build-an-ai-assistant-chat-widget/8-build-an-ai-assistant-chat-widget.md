@@ -35,27 +35,27 @@ To Generate the API Keys using OCI Console:
 
    ![Add API Key](images/oci-login.png " ")
 
-2. Click **My profile** at the top-right corner.
+2. Click **My Profile** at the top-right corner and select **User settings**.
 
-    ![Profile Menu](images/profile.png " ")
+    ![Profile Menu](images/profile1.png " ")
 
-3. Under Resources at the bottom-left, select **API keys** and  click **Add API key**.
+3. Under **Tokens and keys** tab and click **Add API key**.
 
-    ![Add API Key](images/api-keys.png " ")
+    ![Add API Key](images/api-keys1.png " ")
 
 4. The Add API key dialog is displayed. Select **Generate API key pair** to create a new key pair.
 
-5. Click **Download private key**. A *.pem* file is saved to your local device. You do not need to download the public key.
+5. Click **Download private key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
+   >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
-    ![Profile Menu](images/add-api-key.png " ")
+    ![Profile Menu](images/add-api-key1.png " ")
 
-7. The key is added, and the Configuration file preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information for creating Oracle APEX Web Credentials.
+7. The key is added, and the **Configuration file preview** is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information to create Oracle APEX Web Credentials.
 
-    ![Profile Menu](images/configuration-preview.png " ")
+    ![Profile Menu](images/configuration-preview1.png " ")
 
 ## Task 2: Create Web Credentials
 
