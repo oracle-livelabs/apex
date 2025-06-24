@@ -1,20 +1,26 @@
 # Introduction
 
 ## **What is APEX?**
+
 Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON) and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools, where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
 Estimated Time: 45 minutes
 
 ### Objectives
 
-* Obtain a APEX free development environment
-* Build your first app through uploading a Spreadsheet
-* Improve the Faceted Search page
-* Improve the Interactive Report and form pages
-* Add Maps region and install PWA
-* Link pages
+- Obtain a APEX free development environment.
 
-*Note: This workshop assumes you are using Oracle APEX 23.1.*
+- Build your first app through uploading a Spreadsheet.
+
+- Improve the Faceted Search page.
+
+- Improve the Interactive Report and form pages.
+
+- Add Maps region and install PWA.
+
+- Link pages.
+
+>*Note:This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### Labs
 
@@ -25,15 +31,13 @@ Estimated Time: 45 minutes
 | [Improving the Report and Form](?lab=lab-3-improve-report-form) | 20 minutes |
 | [Adding Maps and PWA](?lab=lab-4-add-map-region-install-pwa) | 10 minutes |
 
-Total estimated time: 45 minutes
-
-### **Let's Get Started!**
+### Let's Get Started
 
 If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
 ### Downloads
 
-[Click here](files/spreadsheet-app.sql) to download the completed application.
+[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fspreadsheet-lab-export.sql) to download the completed application.
 
 ## Learn More - *Useful Links*
 
@@ -43,8 +47,8 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author** - Apoorva Srinivas, Senior Product Manager
- - **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
- - **Last Updated By/Date** - Ankita Beri, Product Manager, April 2023
+- **Author** - Apoorva Srinivas, Senior Product Manager
+- **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
+- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

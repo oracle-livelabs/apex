@@ -2,174 +2,224 @@
 
 ## Introduction
 
-
-This Hands-on Lab is a collection of six tasks. After completing this lab, your application will enable customers to:
-
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
+This lab enhances a shopping cart page by adding critical validations, processes, and branching processes to manage customer orders effectively. By the end, customers can place orders seamlessly, validate required information, clear their cart, and quickly proceed to checkout. These tasks ensure the application runs smoothly and delivers an optimized user experience.
 
 Estimated Time: 15 minutes
 
-
 ### Objectives
+
 In this lab, you will:
-- Create Validations, Processes and Branches to manage the Shopping Cart
+
+- Create validations to ensure required fields are filled.
+
+- Implement processes to create orders and manage the shopping cart.
+
+- Add branching logic to efficiently transition between pages.
+
+- Clear the shopping cart and proceed to checkout seamlessly.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-4.sql)** and import it into your workspace. To run the app, please run the steps described in in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-OnlineShoppingApplication.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Create Validations on the Page
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
+In this task, you will add validations to ensure that required fields on the shopping cart page—such as customer name, email, and store—are filled before proceeding to the next steps. If mandatory information is missing, these validations will prompt the user with appropriate error messages.
 
-    ![](./images/click-app-builder1.png " ")
+1. Navigate to the **App Builder**.
 
-2. Now you select **Shopping Cart** under **Page Icons**.
+    ![Click App Builder](./images/click-app-builder.png " ")
 
-    ![](./images/navigate-to-shopping-cart-page.png " ")
+2. Click **Online Shopping Application**.
 
-3. In the Rendering tree (left pane), click **Processing** tab.
+    ![Select Online Shopping Cart App](./images/click-app-builder1.png " ")
 
-4. Over **Validating**, right-click **Create Validation**.
+3. Select **17 - Shopping Cart** page.
 
-     ![](./images/create-validation1.png " ")  
+    ![Navigate to Shopping Cart Page](./images/navigate-to-shopping-cart-page.png " ")
 
-5. Create three validations for the following items: Name, Email, and Store
+4. Navigate to **Processing** tab. Right-click **Validating** and select **Create Validation**.
 
-    ![](./images/create-validation2.png " ")
+    ![Navigate to Shopping Cart Page](./images/create-validation.png " ")
 
-    | Name |  Type (under Validation) | Item |
-    | --- |  --- | --- |
-    | Validate Name | Item is NOT NULL | P16\_CUSTOMER\_FULLNAME |
-    | Validate Email | Item is NOT NULL | P16\_CUSTOMER\_EMAIL |
-    | Validate Store | Item is NOT NULL | P16_STORE |
+5. In the property editor, enter/select the following:
 
-    Under Error:
+    - Identification > Name: **Validate Name**
 
-    | Error Message | Display Location | Associated Item |
-    | --- |  --- | --- |
-    | Please enter your name | Inline with Field and in Notification | P16\_CUSTOMER\_FULLNAME |
-    | Please enter your email address | Inline with Field and in Notification | P16\_CUSTOMER\_EMAIL |
-    | Please select a store | Inline with Field and in Notification | P16_STORE |
+    - Under Validation:
 
-     ![](./images/create-validation3.png " ")
+        - Type: **Item is NOT NULL**
 
-     As these validations only apply when user proceeds to checkout, let's create that condition.
-     Under Server-side Condition, set the following:
+        - Item: **P17\_CUSTOMER\_FULL_NAME**
 
-    | Name  | When Button Pressed |
-    | ---   |  --- |
-    | Validate Name  | Proceed |
-    | Validate Email | Proceed |
-    | Validate Store | Proceed |   
+    - Under Error:
 
-     ![](./images/create-validation4.png " ")       
+        - Error Message: **Please enter your name.**
+
+        - Associated Item: **P17\_CUSTOMER\_FULLNAME**
+
+    - Server-side Condition > When Button Pressed: **Proceed**
+
+    ![Navigate to Shopping Cart Page](./images/create-validation11.png " ")
+
+6. Create two more validations for the following items: **Email** and **Store**.
+
+    | Name           | Validation > Type | Validation > Item       | Error Message                      | Associated Item         | Server-side Condition > When Button Pressed |
+    | -------------- | ----------------- | ----------------------- | ------------------------------- |----------------------- | ------------- |
+    | Validate Email | Item is NOT NULL  | P17\_CUSTOMER\_EMAIL    | Please enter your email address | P17\_CUSTOMER\_EMAIL    | Proceed |
+    | Validate Store | Item is NOT NULL  | P17_STORE               | Please select a store           | P17_STORE               | Proceed |
+    {: title="Validation Properties"}
+
+    ![Customize Validation](./images/create-validation3.png " ")
+
+    ![Customize Validation](./images/create-validation4.png " ")
 
 ## Task 2: Add a Process to Create the Order
 
-1. On the **Processing** tab (left pane).
-2. Right-click **Processing** and click **Create Process**.
+This task focuses on creating a backend process that allows users to submit their orders. You will invoke a PL/SQL package that handles order creation, ensuring the order is successfully placed with all relevant customer information.
 
-     ![](./images/create-process1.png " ")
+1. Navigate to **Processing** tab (left pane). Right-click **Processing** and select **Create Process**.
 
-3. In the Property Editor, enter the following:
-     ![](./images/create-process2.png " ")   
-    - For Name - enter **Checkout**
-    - For Type -select **Execute Code**
-    - For PL/SQL Code - enter the following PL/SQL code:
+    ![Create Page Process](./images/create-process1.png " ")
 
-        ```
-        <copy>
-        BEGIN
-            MANAGE_ORDERS.create_order (
-                                        p_customer       => :P16_CUSTOMER_FULLNAME,
-                                        p_customer_email => :P16_CUSTOMER_EMAIL,
-                                        p_store          => :P16_STORE,
-                                        p_order_id       => :P16_ORDER_ID,
-                                        p_customer_id    => :P16_CUSTOMER_ID);   
-        END;                                    
-        </copy>
-        ```
+2. In the Property Editor, enter/select the following:
+    - Under Identification:
 
-    - For Success Message, enter **Order successfully created: &P16\_ORDER\_ID.**
-    - Under Server-side condition, for When Button Pressed, select **Proceed**
+        - Name: **Checkout**
 
-  ![](./images/create-process3.png " ")
+        - Type: **Invoke API**
+
+    - Under Settings:
+
+        - Type: **PL/SQL Package**
+
+        - Package: **MANAGE_ORDERS**.  You can type in the name or pick from the list.
+
+        - Procedure or Function: **CREATE_ORDER**,  defined in the selected PL/SQL package. You can type in the name or pick from the list.
+
+    ![Create and Configure Invoke API Process](./images/create-process2.png " ")
+
+3. Expand the **Checkout** process. Under **Parameters**, select **p_customer** and enter/select the following:
+
+    - Under Value:
+
+        - Type: **Item**
+
+        - Value: **P17\_CUSTOMER\_FULLNAME**
+
+    ![Configure Invoke API Process](./images/create-invoke-api.png " ")
+
+4. Click **Save**.
 
 ## Task 3: Add Process to Clear the Shopping Cart
 
-1. On the **Processing** tab (left pane).
-2. Right-click **Processing** and click **Create Process**.
-3. Create a second process to clear the shopping cart. In the Property Editor, enter the following:
-    - For Name - enter **Clear Shopping Cart**
-    - For Type - select **Execute Code**
-    - For PL/SQL Code - enter the following PL/SQL code:
+In this task, you will create a process to clear the shopping cart when the customer requests it. This includes providing a success message and redirecting the user to the shopping cart page, ensuring they can start fresh.
 
-    ```
-    <copy>
-    BEGIN
-        manage_orders.clear_cart;
-    END;
-    </copy>
-    ```
+1. In the **Processing** tab, right-click **Ajax Callback** and select **Create Process**.
 
-    - Under Server-side condition, for When Button Pressed, select **Clear**.
+    ![Create Page Process](./images/create-process12.png " ")
 
-  ![](./images/create-process11.png " ")
+2. In the property editor, enter/select the following:
+
+    - Identification > Name: **clear_cart**
+
+    - Source > PL/SQL Code: Copy and paste the below code:
+
+        ```
+       <copy>
+        BEGIN
+            manage_orders.clear_cart;
+        END;
+        ```
+
+        </copy>
+
+    - Success Message > Success Message: **Your cart has been successfully cleared**
+
+    - Server-side Condition > When Button Pressed: **Clear**
+
+    ![Create and Configure Background Process](./images/clear-cart.png " ")
+
+3. Under **Rendering** tab, select **Proceed**. In the Property Editor, under **Behavior**, enable **Show Processing**.
+
+    This would avoid accidental multiple-page submissions by displaying a processing animation and temporarily disabling page interaction using the new Show Processing attribute available for page buttons.
+
+    ![Configure Child Process](./images/button-processing.png " ")
+
+4. Click **Save**.
+
+5. Navigate to **Shared Components**.
+
+    ![Configure Child Process](./images/user-interface.png " ")
+
+6. Under **User Interface**, click **User Interface Attributes**.
+
+    ![Configure Child Process](./images/auto-dismissing.png " ")
+
+7. Under **Attributes**, enable **Auto Dismiss Success Messages** and click **Apply Changes**.
+
+    By turning this new application's User Interface attribute on, all success messages in the application will be dismissed automatically.
+
+    Also, you can use the new **setDismissPreferences** API to control dismiss preferences and customize the timing of the auto-dismiss functionality.
+
+    ![Configure Child Process](./images/shared-comp.png " ")
 
 ## Task 4: Add Branches to the Page
 
-1. On the **Processing** tab (left pane).
-2. Right-click **After Processing** and click **Create Branch**.
+In this task, you will create a branching process that redirects the user to the appropriate page after they submit an order. Branches ensure a smooth navigation experience by guiding users based on their actions, such as checking or viewing their order details.
 
-     ![](./images/create-branch1.png " ")  
+1. In the top right corner, navigate to **Edit Page 17**.
 
-3. In the Property Editor, enter the following:  
+    ![Navigate to page 17](./images/17-page.png " ")
 
-    - For Name - enter **Go to Orders**
+2. In the **Processing** tab (left pane), right-click **After Processing** and select **Create Branch**.
 
-    - Navigate to Target attribute and click **No Link Defined**.
-        - For Type - select **Page in this application**
-        - For Page - enter **16**
-        - For Set Items - enter:
+    ![Create a Branch](./images/create-branch1.png " ")
 
-          | Name | Value  |
-          | --- |  --- |
-          | P16\_ORDER\_ID | &P16\_ORDER\_ID. |
+3. In the Property Editor, enter/select the following:
 
-        - For Clear Cache - enter **16**.
-        - Click **OK**.
+    - Identification > Name: **Go to Orders**
 
-    - Under Server-side condition, for When Button Pressed, select **Proceed**.
+    - Target: Click **No Link Defined**.
 
-    ![](./images/create-branch2.png " ")
+        - Type: **Page in this application**
 
-4. Create a second branch when the user clears the shopping cart. Right-click on **After Processing** and click **Create Branch**.
+        - Page: **16**
 
-5. In the Property Editor, enter the following:
-    - For Name - enter **Go to Products**
+        - Set Items: Enter/select the following:
 
-    - Navigate to Target attribute and click **No Link Defined**
-        - For Type - select **Page in this application**
-        - For Page - enter **1**
-        - For Clear Cache - enter **1**
-        - Click **OK**
+            | Name           | Value            |
+            | -------------- | ---------------- |
+            | P16\_ORDER | &P17\_ORDER\_ID. |
+            {: title="List of Taregt Item(s)"}
 
-    - Under Server-side condition, for When Button Pressed, select **Clear**
+        - Clear Cache: **16**.
 
-  Click Save.
+        Click **OK**.
+
+    - Server-side condition > When Button Pressed: **Proceed**.
+
+    ![Configure Branch](./images/create-branch.png " ")
+
+4. Click **Save**.
 
 ## Summary
 
-You now know how to add validations, processes and branches to your APEX page. You may now **proceed to the next lab**.
+In this hands-on lab, you learned to create data validations for page items, ensuring data accuracy. You also implemented a dedicated page process to streamline order creation. Additionally, the lab covered clearing the shopping cart and enabling a seamless transition to the checkout process, enhancing the overall user experience. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## What's Next
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+In the next lab, you explore the use of Dynamic Actions to manage the shopping cart, allowing for efficient real-time updates. Additionally, you learn how to review product details and enable users to add, edit, or remove items from their cart with the help of Page Process.
+
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

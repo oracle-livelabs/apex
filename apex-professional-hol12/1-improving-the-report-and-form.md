@@ -1,123 +1,177 @@
 # Create and Use Forms
 
 ## Introduction
-In this lab, you will learn how to Create and Customize a Form and then you will link the form to an Interactive Report
 
-Estimated Time: 20 minutes
+In this lab, you will learn how to create and customize forms in Oracle APEX and link them to a Classic report. Forms enable users to view, add, and edit data effectively, enhancing the overall functionality and usability of your application. You will create a Product Details form, integrate it with a Classic Report, and enhance its layout and usability for a seamless user experience.
+
+Estimated Time: 10 minutes
+
+### Objectives
+
+By completing this lab, you will:
+
+- Create a modal dialog form to display and manage product details.
+
+- Link the form to an interactive report for seamless data editing and creation.
+
+- Enhance the form layout by organizing fields, hiding unnecessary items, and improving user interface elements.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-7.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-OnlineShoppingApplication.sql)**
+
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
+
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Create a Product Details Form
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
+In this task, you will create a form that displays product details. This Form will be based on the PRODUCTS table and added as a modal dialog page for your application.
+
+1. Navigate to the **App Builder**. Click **Online Shopping Application**.
 
     ![App Builder](images/navigate-to-osa1.png " ")
 
     ![Online Shopping Application](images/navigate-to-osa2.png " ")
 
-2. Now, click Create Page.
+2. Now, click **Create Page**.
 
     ![Create Page](images/create-form1.png " ")
 
-3. For Create a Page: Select Page Type - Select **Component** and then select **Form**.
+3. Select **Form**.
 
     ![Create Form](images/create-form2.png " ")
 
-4. For Page Attributes, enter the following:
-  Under **Page Definition**:
-    - For Page Number, enter **21**.
-    - For Page Name, enter **Product Details**
-    - For Page Mode, select **Modal Dialog**
+4. For page attributes, enter/select the following:
 
-  Under **Data Source**:
-    - For **Table/View Name**, Select **PRODUCTS**.
+    - Under Page Definition:
 
-  Click **Next.**
+        - Page Number: **15**
 
-  ![Define Form](./images/create-form3.png " ")
+        - Name: **Product Details**
 
-5. Under Primary key, for Primary Key Column1 - Ensure the **PRODUCT_ID** is selected as the primary key. Then click **Create Page**.
+        - Page Mode: **Modal Dialog**
 
-  ![Define Primary key](./images/create-form4.png " ")
+    - Data Source > Table/View Name: **PRODUCTS**
 
-## Task 2: Link a Report to a Form
+    Click **Next.**
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application** and run **Application**. From the runtime application, navigate to the **Manage Products** page in **Page Designer**.
+    ![Define Form](./images/create-form3.png " ")
 
-    Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
-    *{Note: End users who log directly into the app will not see this toolbar.}*
+5. For **Primary Key Column 1**, ensure the **PRODUCT_ID** is selected. Click **Create Page**.
 
-    In the Developer Toolbar click **Page 14**.
+    ![Define Primary key](./images/mp-create-page.png " ")
 
-    ![Navigate To Administration](./images/navigate-to-mp1.png " ")
+## Task 2: Enhance the Form
 
-    ![Navigate To Manage Products](./images/navigate-to-mp2.png " ")
+After linking the Form to the report, it's time to enhance its usability and appearance. In this task, you will rearrange the form layout, hide unnecessary items, and make the Form more intuitive for users.
 
-2. In the Rendering tree (left pane), navigate to **Products**.
+1. Navigate to the **Page 15** in the **Page Designer**.
 
-    ![Navigate to Products in page designer](./images/linking-a-form1.png " ")
+    ![Navigate to Page 15](images/navigate-to-page21.png " ")
 
-3. In the Property Editor (right pane), click **Attributes** and do the following:
+2. Under **Products** region, select **PRODUCT_DETAILS** column and enter/select the following:
 
-    - Under **Link**:
-      -   For Link Column - select **Link to a Custom Target**
-      -   Click **No Link Defined** Button and do the following in the popup  
-        - For Page - enter **21**.  
-        - For Set Items, enter:
+    - Identification > Type: **DOWNLOAD BLOB**
 
-            | Name | Value |
-            | --- | --- |
-            | P21\_PRODUCT\_ID | #PRODUCT_ID# |    
+    - Under BLOB Attributes:
 
-        - For Clear Cache, enter **21**  
-        - Click **Ok**.
+        - Table Name: **PRODUCTS**
 
-    Click **Save.**      
+        - BLOB Column: **PRODUCT_DETAILS**
 
-    ![Link a column](./images/linking-a-form2.png " ")
+        - Primary Key Column 1: **PRODUCT_ID**
 
-4. Click **Save** and then reload the **Manage Products** page in the runtime environment.
+    ![Enhance form2](images/product-details.png " ")
 
-5. Now, In the **Manage Products** page, click **Pencil Icon** on the first row. Verify the **Product Details** model dialog page.
+3. Select **PRODUCT_IMAGE** column and enter/select the following:
 
-  ![Click Pencil icon](./images/refresh-manage-products.png " ")
+    - Identification > Type: **Display Image**
 
-  ![View Product Details](./images/refresh-manage-products1.png " ")
+    - Under BLOB Attributes:
 
-## Task 3: Enhance the Form
+        - Table Name: **PRODUCTS**
 
-1.  Navigate to the **Page 21** in the **App Builder**. Then Click on **P21\_PRODUCT\_NAME** in the Rendering Tree. Now, change the Identification Type to **Text Field** in the Property Editor.
+        - BLOB Column: **PRODUCT_IMAGE**
 
-    ![Navigate to Page 21](images/navigate-to-page21.png " ")
+        - Primary Key Column 1: **PRODUCT_ID**
 
-2. Items can readily be moved using drag-and-drop within Layout. If required you can also drag new components like regions, items, and buttons into the Layout pane from the Gallery, located directly below it.
+    ![Enhance form2](images/product-image.png " ")
 
-  In Page Designer, with **Page 21** loaded, within Layout (middle pane), click **P21\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item up and to the right, until it is directly after **P21\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
+4. Select **P15\_IMAGE\_MIME\_TYPE, P15\_IMAGE\_FILENAME, P15\_IMAGE\_CHARSET and P15\_IMAGE\_LAST\_UPDATED** and update **Type** to **Hidden**
 
- ![Enhance form1](images/enhance-form1.png " ")
+    ![Enhance form2](images/hide-items.png " ")
 
-3. As an alternative to using drag-and-drop you can also reposition items using attributes in the Property Editor.
+5. Now, select **P15\_COLOR\_ID, P15\_DEPARTMENT\_ID and P15\_CLOTHING\_ID** and update **Name** as following one after the other:
 
-  In Page Designer, within Layout (or the Rendering tree in the left pane), select **P21\_IMAGE\_CHARSET**. In the Property Editor (right pane), **Under Layout > Start New Row**.
+    | Page Item | Name |
+    |-----------|------|
+    | P15\_COLOR\_ID | Color |
+    | P15\_DEPARTMENT\_ID | Department |
+    | P15\_CLOTHING\_ID | Clothing |
+    {: title="Page Items"}
 
-  ![Enhance form2](images/enhance-form2.png " ")
+    ![Enhance form2](images/name-update.png " ")
 
-4. You now need to Focus on **First item on Page**.  In **Page Rendering**(Left Pane), Select **Page 21: Product Details**. Then, In the **Property Editor**, Scroll down to Navigation and for **Cursor Focus**, select **First item on page**. Then, click **Save**.
+6. Items can readily be moved using drag-and-drop within the layout. You can also drag new components like regions, items, and buttons from the Gallery into the Layout pane directly below it.
 
-  ![Enhance form3](images/enhance-form3.png " ")
+    In Page Designer, with **Page 15** loaded, within the layout (middle pane), click **P15\_UNIT\_PRICE** and continue to hold the mouse down. Drag the item to the right until it is directly after **P15\_PRODUCT\_NAME**, and a dark yellow box is displayed. Release the mouse to drop the item in the new location.
 
-5. Now that you have customized the Form. You can reload **Manage Products** page in the runtime environment. Click on **Edit** to view the Form Page.
+    ![Enhance form1](images/enhance-form1.png " ")
 
-  ![Enhanced Form](images/enhanced-form.png " ")
+7. As an alternative to drag-and-drop, you can also reposition items using attributes in the Property Editor.
+
+    In Page Designer, within layout (or the Rendering tab in the left pane), select **P15\_DEPARTMENT\_ID** and **P15\_CLOTHING\_ID** In the Property Editor (right pane); under layout, toggle off **Start New Row**.
+
+    ![Enhance form2](images/enhance-form2.png " ")
+
+8. You now need to focus on **First item on Page**. In **Page Rendering**(Left Pane), select **Page 15: Product Details**. In the **Property Editor**, update the following:
+
+    - Navigation > Cursor Focus: **First item on page**.
+
+    ![Enhance form3](images/enhance-form3.png " ")
+
+9. Click **Save**.
+
+## Task 3: Run the Manage Products page
+
+In this final task, you will run the application to test the integration and functionality of the Manage Products page. You will navigate to the page, test editing and adding data through the form, and validate its usability in the runtime environment.
+
+1. Run Online Shopping Application.
+
+2. Navigate to **Administration** in the application menu. Select **Manage Products**.
+
+    ![Enhanced Form](images/nav-admin.png " ")
+
+3. On the **Manage Products** page, a Classic Report is displayed.
+
+    - Perform the following actions:
+
+        - Edit Rows: Click the Edit pencil icon to modify an existing product.
+
+        - Add New Row: Click the Create button to add a new product.
+
+    ![Enhanced Form](images/classic-report.png " ")
+
+4. When you click either the Edit pencil icon or the Create button:
+
+    - The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
+
+    ![Enhanced Form](images/enhanced-form1.png " ")
 
 ## Summary
 
-You now know how to Create and Customize a Form and then link the form to an Interactive Report. You may now **proceed to the next lab**.
+By completing this lab, you have successfully created a product details form, linked it to a Classic Report, and enhanced its layout and usability. You now have the foundational skills to create and manage forms in Oracle APEX, improving the overall interactivity of your applications. You may now **proceed to the next lab**.
+
+## What's next
+
+In the next lab, you learn how to make some pages publicly accessible, allowing users to access specific pages in your application without requiring them to log in.
 
 ## Acknowledgements
 
- - **Author/Contributors** -  Roopesh Thokala, Product Manager
- - **Contributor** - Ankita Beri, Product Manager
- - **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+- **Author/Contributors** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

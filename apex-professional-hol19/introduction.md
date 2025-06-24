@@ -1,23 +1,30 @@
 # Introduction
 
 ## **What is APEX?**
-Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON), and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets around to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
+Oracle APEX is a feature of Oracle Database, including the Autonomous Data Warehouse (ADW) and Autonomous Transaction Processing (ATP), Autonomous JSON Database (JSON), and APEX Application Development (APEX) services. Oracle APEX is a low-code development environment with various features and tools where you can create an application fast. In the future, rather than emailing spreadsheets to gather information, you will know how to easily create an app in minutes using APEX and email the URL instead. The result will be a secure, scalable, multi-user app that provides a single source-of-truth for your data!
 
-In this lab, You will create Installation scripts and Data Packages to export Database objects along with Data. Then you will export the **DEMO PROJECTS** Application along with supporting objects and import it into another workspace.
+Oracle APEX allows developers to create Progressive Web Apps (PWAs) that can be easily installed on any desktop or mobile device, offering users a more native app experience. This application is a valuable reference for developers looking to incorporate key PWA features into their applications, helping them create more engaging and user-friendly apps.
 
-In the second part of the lab, You will be using Remote Deployment to deploy your Application from Development to UAT. The ORDS feature, **REST Enabled SQL** is not available for **apex.oracle.com** users. Therefore, you will not be able to perform this lab in the hosted instance apex.oracle.com. You should be using **APEX Service** or **APEX on Autonomous Database** options for this lab.
+In this lab, You will make the **Demo Projects** app installable on any device. You also implement a 'Share' button where a user can share the uploaded images with other users via email or 3rd party apps. Finally, you add mobile capabilities to the app by enabling Push Notifications for the Demo Projects App. You also learn to add Shortcuts and Screenshots to the PWA app.
 
-*Note: This workshop assumes you are using Oracle APEX 22.2.*
-
-Estimated Time: 20 minutes
+Estimated Time: 35 minutes
 
 ### Objectives
 
-* Create Installation Scripts
-* Create Data Packages
-* Export application with supporting Objects.
-* Use Remote Deployment to deploy your Application.
+- Implement the 'Share' button.
+
+- Enable Push Notifications.
+
+- Add Shortcuts to the PWA app.
+
+- Include screenshots to be displayed while installing the PWA app.
+
+- Enable Push Notifications.
+
+- Learn how to configure Push Notifications.
+
+> **Note:** This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Learn More - *Useful Links*
 
@@ -26,3 +33,8 @@ Estimated Time: 20 minutes
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager
+- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2024

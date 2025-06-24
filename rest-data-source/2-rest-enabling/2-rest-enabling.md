@@ -188,7 +188,7 @@ Alternatively, you could go to SQL Workshop > RESTful Services and REST enabled 
     end;
     /<copy>
     ```
-    *Note: You can also cut and paste the script from the following URL -* [https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-hol-rest-enable-5478504.txt](https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-hol-rest-enable-5478504.txt)
+     *Note: You can also cut and paste the script from the following URL -* [https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-hol-rest-enable-5478504.txt](https://www.oracle.com/technetwork/developer-tools/apex/application-express/apex-hol-rest-enable-5478504.txt)
 
     Click **Run**.
 
@@ -225,5 +225,4 @@ This completes Lab 2. You now know how to REST enable database objects include a
 
  - **Author/Contributors** -  Salim Hlayel, Principal Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Salim Hlayel, Principal Product Manager, November 2020
-
+ - **Last Updated By/Date** - Ankita Beri ,Product Manager, June 2023

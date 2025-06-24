@@ -2,201 +2,249 @@
 
 ## Introduction
 
-In this lab, you create new Page Items and Buttons in the Shopping Cart and Add to Cart pages we created in  the **Lab 2** of **Developing Reports** Workshop.
+In this lab, you will learn how to add new items and buttons to a shopping cart page in an online shopping application. You will create and configure page items like customer details, product information, and buttons to manage the shopping cart. This enables users to review, modify, and interact with their cart seamlessly and intuitively.
 
-Customers will be able to:
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
-
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
-In this lab, you will:
-* Create new Page Items and Buttons in the Shopping Cart and Add to Cart pages.
+
+By the end of this lab, you will be able to:
+
+- Add static content regions and create page items to capture order information.
+
+- Create and configure buttons to manage the shopping cart.
+
+- Implement server-side conditions to control button visibility based on user actions.
+
+- Add and configure hidden fields to store and manipulate shopping cart data.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-3.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingAndCustomisingInteractiveGrids-OnlineShoppingApplication.sql)**
 
-## Task 1: Add Items and Buttons to the Page
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-1. Navigate to the **App Builder**. Then Click on **Online Shopping Application**.
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-    ![](./images/click-app-builder.png " ")
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-    ![](./images/navigate-to-osa.png " ")
+## Task 1: Add Items and Buttons to display Order Information
 
+In this task, you will enhance the functionality of the Shopping Cart page in an online shopping application. By adding new page items and buttons, such as "Proceed to Checkout" and "Clear Shopping Cart," users can manage their shopping experience more efficiently. You will also create fields to capture customer details like email, full name, and store selection, streamlining the checkout process and improving the user interface.
 
-2. Now you select **Shopping Cart** under **Page Icons**.
+1. Navigate to the **App Builder** and click **Online Shopping Application**.
 
-    ![](./images/select-shopping-cart-page.png " ")
+    ![Click App Builder](./images/click-app-builder.png " ")
 
-3. Drag a **Static Content** region and drop it to the right of the Shopping Cart region to create a second region of content.
+    ![Navigate to Online Shopping Cart Application](./images/navigate-to-osa.png " ")
 
-    ![](./images/drag-drop-static-content.png " ")
+2. Now, select the **Shopping Cart** page.
 
-4. In the Property Editor, enter the following:
-    - For Title - enter **Order Information**
-5. Navigate to the **Order Information** (left pane) region.
+    ![Select Shopping Cart Page](./images/select-shopping-cart-page.png " ")
 
-6. Right-click the **Order Information** region and click **Create Page Item**.
+3. Drag a **Static Content** region and drop it to the right of the **Shopping Cart** region.
 
-    ![](./images/create-page-item1.png " ")
+    ![Drag and Drop Static Content Region](./images/drag-drop-static-content.png " ")
 
-7. In the **Property Editor**, Enter the following.
+4. In the Property Editor, for **Name** enter **Order Information**.
 
-    - For Name, Enter **P16\_CUSTOMER\_EMAIL**
-    - For Type, Select **Text Field**.
-    - For Label, Enter **Email Address**.
-    - Under Validation, for Value Required, Set it to **Off**.
+    ![Input Title for Static content region](./images/select-title-for-region.png " ")
 
-    ![](./images/create-page-item2.png " ")
+5. Right-click **Order Information** (left pane) region and select **Create Page Item**.
 
-8. Create four items as follows:
+    ![Create Page Item](./images/create-page-item.png " ")
 
-    | Name |  Type  | Label  | Template | Value Required |
-    | --- |  --- | --- | --- | --- |
-    | P16\_CUSTOMER\_FULLNAME | Text Field | Full Name | Optional - Floating | Off |  
-    | P16\_ORDER\_ID | Hidden |  | | |
-    | P16\_CUSTOMER\_ID | Hidden |  | | |
-    | P16_STORE | Select List | Store | Optional - Floating | Off |
+6. In the **Property Editor**, enter/select the following:
 
-    For **P16\_STORE** item, in the list of values section, configure the type as follows:
-    - For Type - select **SQL Query**
-    - For SQL Query - enter the following SQL Query:
+    - Identification > Name: **P17\_CUSTOMER\_EMAIL**
+
+    - Label > Label: **Email Address**
+
+    ![Create Email Address](./images/create-address.png " ")
+
+7. Now, create four page items one after the other:
+
+    | Name                    | Type        | Label     |
+    | ----------------------- | ----------- | --------- |
+    | P17\_CUSTOMER\_FULLNAME | Text Field  | Full Name |
+    | P17\_ORDER\_ID          | Hidden      |           |
+    | P17\_CUSTOMER\_ID       | Hidden      |           |
+    | P17_STORE               | Select List | Store     |
+    {: title="List of Page Items to be created"}
+
+8. Select **P17\_STORE**. In the property editor, enter/select the following:
+
+    - Under List of Values:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and paste the following SQL Query:
 
         ```
         <copy>
-        select STORES.STORE_NAME as STORE_NAME,
-            STORES.STORE_ID as STORE_ID
+        select STORE_NAME as d,
+        STORE_ID as r
         from STORES
+        order by 1
         </copy>
         ```
-    - Set Display Extra Values - to **Off**
-    - For Null Display Value - enter **- Select a Store -**
 
-    ![](./images/create-store-item.png " ")
+        - Display Extra Values: Toggle **Off**
 
-9. Navigate to the **Order Information** (left pane) region.
-10. Right-click the **Order Information** region  and click **Create Button**.
+        - Null Display Value: **- Select a Store -**
 
-    ![](./images/right-click-button.png " ")  
+    ![select store](./images/create-store-item.png " ")
 
-11. Create two buttons as follows:
+9. Right-click **Order Information** region and select **Create Button**.
 
-    | Button Name | Label  | Button Position | Button Template | Hot | Icon |
-    | --- |  --- | --- | --- | --- | --- |
-    | Proceed | Proceed to Checkout | Create | Text | On | |
-    | Clear | Clear Shopping Cart | Change | Text with Icon | Off | fa-cart-empty |
+    ![Create Button](./images/right-click-button.png " ")
 
-    ![](./images/create-button1.png " ")
+10. Now, create two buttons one after the other:
 
-     Under Server-side Condition:
-    | Button Name | Type  | Item  |
-    | --- |  --- | --- |
-    | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
-    | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
+    | Button Name | Label               | Slot | Button Template | Hot | Icon          |
+    | ----------- | ------------------- | --------------- | --------------- | --- | ------------- |
+    | Proceed     | Proceed to Checkout | Create          | Text            | On  |               |
+    | Clear       | Clear Shopping Cart | Change          | Text with Icon  | Off | fa-cart-empty |
+    {: title="List of Buttons to be created"}
 
-     ![](./images/create-button2.png " ")
+    ![Create Proceed Button](./images/create-button1.png " ")
 
-    Click Save.
+    ![Create Clear Button](./images/create-clear-button.png " ")
 
-## Task 2: Add Items and Buttons
+11. Under Server-side Condition, update as follows:
+
+    | Button Name | Type             | Item                  |
+    | ----------- | ---------------- | --------------------- |
+    | Proceed     | Item is NOT NULL | Application > SHOPPING\_CART\_ITEMS |
+    | Clear       | Item is NOT NULL | Application > SHOPPING\_CART\_ITEMS |
+    {: title="Server-side conditions for Buttons"}
+
+    ![Add Server Side condition to Buttons](./images/create-button2.png " ")
+
+12. Click **Save and Run**.
+
+    ![Add Server Side condition to Buttons](./images/shop-cart1.png " ")
+
+## Task 2: Add Items and Buttons to Edit the Cart
+
 In this task, you will create four-page items:
-- PRODUCT_ID: To get the product ID
-- ACTION: To identify the action (Add / Edit / Delete) made for the customer
-- QUANTITY: To permit customers to select the number of items to add or edit in the shopping cart
-- SHOPPING\_CART\_ITEMS: To get the number of items (total) in the shopping cart after an action is made
 
-1. Navigate to **Page Finder** and click on **File**. Then in the popup **Page Finder**, Select **Page 17**.
+- **PRODUCT\_ID**: To get the product ID.
 
-      ![](./images/select-page-17.png " ")
+- **ACTION**: To identify the action (Add / Edit / Delete) made for the customer.
+
+- **QUANTITY**: To permit customers to select the number of items to add or edit in the shopping cart.
+
+- **SHOPPING\_CART\_ITEMS**: To get the number of items (total) in the shopping cart after an action is performed.
+
+1. From the page designer, click the **Page Finder** icon and select page **18**.
+
+    ![Select Page 18](./images/select-page-17.png " ")
 
 2. Drag a **Static Content** region and drop it to the **Dialog Footer**.
 
-     ![](./images/create-static-content1.png " ")  
+    ![Dialog footer](./images/create-static-content1.png " ")
 
-3. In the Property Editor, enter the following:
-    - For Title - enter **Buttons Bar**
-    - For Template - select **Buttons Container**
+3. In the property editor, enter/select the following:
 
-  ![](./images/create-button.png " ")
+    - Identification > Name: **Buttons Bar**
 
-4. In the Rendering tree (left pane), navigate to **Buttons Bar** region.
-5. Right-click the **Buttons Bar** region and click  **Create Page Item**.
+    - Appearance > Template: **Buttons Container**
 
-     ![](./images/create-page-item3.png " ")
+    ![Update Button](./images/create-button.png " ")
 
-6. Create four items as follows. In the Property Editor, do the following:
+4. Right-click the **Buttons Bar** region and select **Create Page Item**.
 
-    | Name |  Type  | Label  | Template |
-    | ---  |  ---   | ---    | --- |
-    | P17_ACTION | Hidden |
-    | P17\_PRODUCT\_ID | Hidden |
-    | P17_SHOPPING\_CART\_ITEMS | Hidden |
-    | P17_QUANTITY | Select List | Quantity | Required |
+    ![Create Page Item](./images/create-page-item3.png " ")
 
-    For **P17_QUANTITY** item, do the following:
-    - Under List of Values section:
-        - For Type - select **Static Values**
-        - For Static Values - click **Display1, Display2** and enter the following:
+5. Create four items as follows. In the Property Editor, enter/select the following:
 
-            | Display Value |  Return Value  |
-            | --- |  --- |
-            | 1 | 1 |
-            | 2 | 2 |
-            | 3 | 3 |
-            | 4 | 4 |
-            | 5 | 5 |
+    | Name                      | Type        | Label    | Template |
+    | ------------------------- | ----------- | -------- | -------- |
+    | P18_ACTION                | Hidden      |
+    | P18\_PRODUCT\_ID          | Hidden      |
+    | P18_SHOPPING\_CART\_ITEMS | Hidden      |
+    | P18_QUANTITY              | Select List | Quantity | Required |
+    {: title="Page Items' properties"}
 
-    - Click **Ok**
-    - Set Display Extra Values to **Off**
-    - Set Display Null Value to **Off**
+6. For **P18_QUANTITY** page item. In the property editor, enter/select the following:
 
-  ![](./images/create-quantity-column1.png " ")
+    - Under List of Values:
 
-7. Navigate to **Buttons Bar** region (left side).
-8. Right-click the region and click **Create Button**.
-     ![](./images/create-button3.png " ")
-9. Create three buttons as follows:
+        - Type: **Static Values**
 
-    | Name | Label | Button Position |Button Template | Hot |
-    | ---  | ---   | ---             | --- | ---             |
-    | Add          | Add to Cart | Next |Text  |  On  |  On |
-    | Edit         | Update Quantity| Create   |Text  |  On | |
-    | Delete       | Remove from Cart | Edit   |Text  |  Off |
+        - Static Values: Enter the following:
 
-    ![](./images/create-button4.png " ")
+           | Display Value | Return Value |
+           | ------------- | ------------ |
+           | 1             | 1            |
+           | 2             | 2            |
+           | 3             | 3            |
+           | 4             | 4            |
+           | 5             | 5            |
+           {: title="Display and Return Values"}
 
-     Under Server-side Condition section:
-    | Name | Type | Item |
-    | ---  | ---   | ---             |
-    | Add  | Item is zero | P17_QUANTITY |
-    | Edit         | Item is NOT zero | P17_QUANTITY |
-    | Delete       | Item is NOT zero | P17_QUANTITY |
+        Click **OK**.
 
-      ![](./images/enable-server-side.png " ")    
+    - Display Extra Values: Toggle **Off**
 
-10. For **Delete** button, apply the following changes:
-    - Under Appearance section, click Template Options:
-        - For Type - select **Danger**
-        - For Style -select **Display as Link**
-        - For Spacing Right, select **Large**
-    - Click **Ok**.
-    - Click **Save**.
+    - Display Null Value: Toggle  **Off**
 
-    ![](./images/create-danger-button.png " ")
+    ![Select quantity](./images/create-quantity-column1.png " ")
+
+7. Navigate to the **Buttons Bar** region. Right-click and select **Create Button**.
+
+    ![Create Button](./images/create-button3.png " ")
+
+8. Create three buttons, one after the other, as follows:
+
+    | Name   | Label            | Slot | Hot |
+    | ------ | ---------------- | --------------- | --- |
+    | Add    | Add to Cart      | Next            | On  |
+    | Edit   | Update Quantity  | Create          | On  |
+    | Delete | Remove from Cart | Edit            | Off |
+    {: title="Buttons to be created"}
+
+    ![Create three buttons](./images/create-button4.png " ")
+
+9. Under Server-side Condition, update as follows:
+
+    | Name   | Type             | Item         |
+    | ------ | ---------------- | ------------ |
+    | Add    | Item is zero     | P18_QUANTITY |
+    | Edit   | Item is NOT zero | P18_QUANTITY |
+    | Delete | Item is NOT zero | P18_QUANTITY |
+    {: title="Server-side conditions for Buttons}
+
+    ![Update server-side condition](./images/enable-server-side.png " ")
+
+10. For the **Delete** button in the property editor, enter/select the following:
+
+    - Under Appearance > Template Options:
+
+        - Type: **Danger**
+
+        - Style: **Display as Link**
+
+        - Spacing Right: **Large**
+
+        Click **OK**.
+
+    ![create danger button](./images/create-danger-button.png " ")
+
+11. Click **Save**.
 
 ## Summary
 
-You now know how to create Page Items and Page buttons. You may now **proceed to the next lab**.
+In this lab, you learned how to create new page items and buttons for the shopping cart and add to cart pages. This enables the end users to review, edit item quantities, remove items, clear the cart, and proceed to checkout for a more user-friendly shopping experience. You may now **proceed to the next lab**.
+
+## What's Next?
+
+In the next workshop, you will understand how to create validations in APEX to ensure data integrity. Then, you will also explore creating custom processes to enhance shopping cart functionality. Lastly, you learn to implement Dynamic Actions for seamless cart management and navigation.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributors** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** -  Ankita Beri, Product Manager, September 2024

@@ -1,0 +1,54 @@
+{
+  "workshoptitle": "Modernization of Oracle Forms to Oracle APEX",
+    "tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/introduction.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Analyze the sample Forms [Study] ",
+        "filename": "../../1-analyze-sample-forms/analyze.md"
+      },
+      {
+        "title": "Lab 2: Map Oracle Forms components to APEX [Study] ",
+        "filename": "../../2-mapping-forms-to-apex/2-mapping-forms-to-apex.md"
+      },
+      {
+        "title": "Lab 3: Setup the Database objects ",
+        "filename": "../../3-setup-database-objects/3-setup-database-objects.md"
+      },
+      {
+        "title": "Lab 4: Create the APEX Application",
+        "filename": "../../4-create-apex-app/4-create-apex-app.md"
+      },
+      {
+        "title": "Lab 5: Configure List of Values",
+        "filename": "../../5-configure-list-values/5-configure-list-values.md"
+      },
+      {
+        "title": "Lab 6: Create the Items Form",
+        "filename": "../../6-item-form/6-item-form.md"
+      },
+      {
+        "title": "Lab 7: Enhance Order Faceted Search Page",
+        "filename": "../../7-enhance-order-faceted/7-enhance-order-faceted.md"
+      },
+      {
+        "title": "Lab 8: Enhance Order Form Page",
+        "filename": "../../8-enhance-order-form/8-enhance-order-faceted.md"
+      },
+      {
+        "title": "Lab 9: Enhance Your APEX App",
+        "filename": "../../9-enhance-apex-app/9-enhance-apex-app.md"
+      },      
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      }
+    ]
+}

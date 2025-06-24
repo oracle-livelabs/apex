@@ -1,0 +1,51 @@
+{
+  "workshoptitle": "Build a Low-Code Oracle APEX App to manage files in OCI Object Storage",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+        "title": "Get Started",
+        "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      },
+      {
+        "title": "Lab 1: Create autonomous instance",
+        "filename": "../../create-autonomous/create-autonomous.md"
+      },
+      {
+        "title": "Lab 2: Create application with task definition",
+          "filename": "../../create-application/create-application.md"
+      },
+      {
+        "title": "Lab 3: Create REST data source",
+        "filename": "../../create-rest-data-source/create-rest.md"
+      },
+      {
+        "title": "Lab 4: Create form page",
+        "filename": "../../create-form/create-form.md"
+      },
+      {
+        "title": "Lab 5: Upload file to Object Storage",
+        "filename": "../../upload-file/upload-file.md"
+      },
+      {
+        "title": "Lab 6: Alter task details",
+        "filename": "../../task-details/task-details.md"
+      },
+      {
+        "title": "Lab 7: Download Object Storage file",
+        "filename": "../../download-file/download-file.md"
+      },
+      {
+        "title": "Lab 8: Clean up",
+        "filename": "../../clean-up/clean-up.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}

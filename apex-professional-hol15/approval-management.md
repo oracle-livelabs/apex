@@ -1,974 +1,422 @@
-#  Extend Application Capabilities
+# Extending Application Capabilities
 
 ## Introduction
 
-In this workshop, you will create an application that allows you to manage expenses using the approvals component. To explain the concepts and terms associated with Approval Management in APEX, we take the example of the Expense Tracker Application.
+This lab focuses on extending the functionality of your application by integrating advanced features such as email notifications, feedback collection, and automated workflows. Through practical exercises, you will enhance the Online Shopping Application, creating a seamless and user-friendly experience for customers. The lab will provide you with hands-on experience in configuring processes, sending automated emails, and designing feedback mechanisms, ultimately improving application efficiency and usability.
 
-To apply for an expense, an employee logs into the application and submits an expense request filling in the Type (Accommodation/Conference/Internet/ Miscellaneous Expenses) and Estimated Expenses. The task could be assigned to multiple potential owners, and then they can perform possible actions (Request information/Delegate/Release/Change Priority).
-
-If the expense cost is more than 50000, then the Expense request, once approved by the immediate manager, will go to the next manager and so on, depending on the Expense amount. This is a typical use case for a multi-level approval.
-
-Also, Deadlines and Expiration are set for a task. The potential owner will get an Email before 5 mins of task expiration. If the task is not approved or rejected before the expiry, then the task could be tagged as Expired.
-
-Estimated Time: 1 hour
+Estimated Time: 15 mins
 
 ### Objectives
+
 In this lab, you will:
-- Obtain a free development environment
-- Learn how to create a SQL Script
-- Learn how to create a Task definition
-- Learn how to create a Page to submit Expense
-- Learn how to create a Unified Task List
-- Learn how to create Users
-- Learn how to create an Email Template
-- Learn how to Request Information/ Delegate/ Release
-- Learn how to set deadlines and expiration
+
+- Configure and send automated emails from your application.
+
+- Design a feedback collection page for user input.
+
+- Create and implement email templates for consistent communication.
+
+- Automate application workflows using scheduled actions.
 
 ### Downloads
 
-**[Click Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/VEKec7t0mGwBkJX92Jn0nMptuXIlEpJ5XJA-A6C9PymRgY2LhKbjWqHeB5rVBbaV/n/c4u04/b/livelabsfiles/o/data-management-library-files/expense-tracker-1.sql)** to download the completed application.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FUsingThemesTemplates-OnlineShoppingApplication.sql)**
 
-## Task 1: Create the Application
-In this lab, you create a new application named Expense Tracker.
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-1. If you have not already logged into your Oracle APEX workspace, sign in using the workspace name, email, and password you signed up with.
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-    ![Sign In](images/signin.png " ")
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-2. At the top left of your workspace, click **App Builder**.
+## Task 1: Send E - Mail from an application
 
-    ![Sign In](images/appbuilder.png " ")
+In this task, you will learn how to configure a process to send automated email notifications. These notifications will enhance user engagement by providing updates on order status and enabling access to relevant information via embedded links.
 
-3. On the App Builder page, click **Create**.
+1. Navigate to **Online Shopping Application**.
 
-    ![Click Application Homepage Create Button](images/create-new-application.png " ")
+    ![Select Sql Workshop](./images/online-shop.png " ")
 
-4. Click **New Application**
+2. Select **17 - Shopping Cart**
 
-    ![Select New Application ](images/click-new-application.png " ")
+    ![Select Sql Workshop](./images/17-shop-cart.png " ")
 
-5. In the Create an Application wizard, set Name to **Expense Tracker**.
+3. In the left pane, right-click **Order Information** region and select **Create Page Item**.
 
-6. Click **Create Application** to create your app and go to the application home page.
+    ![Select Sql Workshop](./images/url-page-item.png " ")
 
-    ![Select New Application ](images/create-application-expense-tracker.png " ")
+4. In the Property Editor, enter/select the following:
 
-## Task 2: Create a SQL Script
-In this lab, you create database objects using SQL Script.
+    - Under Identification:
 
-1. At the top of the application home page, click **SQL Workshop** and then **SQL Scripts**. The SQL Scripts page appears.
+        - Name: **P17\_APP\_ITEM\_URL**
 
-    ![Select Sql Workshop](./images/sql-workshop.png " ")
+        - Type: **Hidden**
 
-2. Click **Create**. The Script Editor appears.
+    ![Select Sql Workshop](./images/url-hidden.png " ")
 
-    ![Create SQL Scripts](./images/create-sql-scripts.png " ")
+5. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
-3. In the Script Name, enter a name for the script - **Employee details and Expense status**
+    ![Select Sql Workshop](./images/create-process-url.png " ")
 
-4. Enter the SQL statements.
+6. In the Property Editor, enter/select the following:
 
-   Copy the code below and paste it into  the code editor:
-      ```
-      <copy>
-      CREATE TABLE "EMPLOYEE_DETAILS"
-      ("EMPNO" NUMBER GENERATED BY DEFAULT ON NULL
-      AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999
-      INCREMENT BY 1 START WITH 8000 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOT NULL ENABLE,
-      "EMP_NAME" VARCHAR2(100),
-      "MGR" NUMBER(4,0),
-      CONSTRAINT "EMP_PK" PRIMARY KEY ("EMPNO"));
-      insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (10, 'JOHN', 20);
-      insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (20, 'CLARA',30);
-      insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (30, 'JANE', 40);
-      insert into EMPLOYEE_DETAILS(empno, emp_name, mgr) values (40, 'MATT', null);
-     commit;
-      CREATE TABLE "EMP_EXPENSE_REQUEST"
-      ("REQ_ID" NUMBER GENERATED BY DEFAULT ON NULL
-      AS IDENTITY MINVALUE 1 MAXVALUE 9999999999999999999999999999
-      INCREMENT BY 1 START WITH 8000 CACHE 20 NOORDER NOCYCLE NOKEEP NOT NULL ENABLE,
-      "EMP_NO" VARCHAR2(10),
-      "EXPENSE_TYPE" VARCHAR2(100),
-      "ESTIMATED_COST" NUMBER(8,0),
-      "UPDATED_BY" VARCHAR2(100),
-      "STATUS" VARCHAR2(20),
-      CONSTRAINT "EMP_EXPENSE_REQUEST_PK" PRIMARY KEY ("REQ_ID"));  
-      </copy>
-      ```
+    - Identification > Name: **Prepare URL**
 
-5. Click **Run and Run Now**. Now you can see that SQL statements run successfully.
-
-  ![Run SQL Script](./images/script.png " ")
-
-  ![Run Now Sql Script](./images/click-run-now.png " ")
-
-  ![SQL Script Created](./images/sql-script-created.png " ")
-
-## Task 3: Add Users
-   In this lab, you create users for multi-level management.
-
-1. Navigate to the Administration icon on Application home page and select **Manage Users and Group** from the dropdown list.
-
-     ![Manage Users and Group](./images/manage-users.png " ")
-
-2. Click **Create Multiple Users**
-
-     ![Create Multiple Users](./images/create-users.png " ")
-
-3. Specify the following attributes:
-
-     - For a List of Email Addresses: Enter **MATT@oracle.com, JANE@oracle.com, CLARA@oracle.com, JOHN@oracle.com**
-
-     - For Usernames : Select **Exclude @ domain as part of the username**
-
-     - For password and Confirm Password: Enter a password of your wish
-
-4. Click **Next** and **Create Valid Users**
-
-   ![Create Multiple Users - details](./images/create-multiple-users.png " ")
-
-   ![Click validate users](./images/create-valid-users.png " ")
-
-   ![Users created](./images/users-created.png " ")  
-
-## Task 4: Create a Task Definition
-
-Create a task definition to configure task parameters, participants, actions, and due dates for an expense request
-
-To create a task definition:
-
-1. In the **App Builder**, navigate to **Expense Tracker** application  and select **shared components**.
-
-   ![Task Definition in Shared Components](images/task-definition-sc.png " ")
-
-2. Under Workflows and Automations, select **Task Definitions**.
-
-   ![Select Task Definition](images/task-definition.png " ")
-
-3. Click **Create**.
-
-   ![Create Task Definition](images/task-definition-create.png " ")
-
-4. Specify the task definition name and define the metadata.
-
-    - For Name - Enter **Expense Request**
-
-    - For Subject - Enter **&EXPENSE\_TYPE. Expense request for &EMP\_NAME.**
-
-    - For Static ID - Enter **EXPENSE_REQUEST**
-
-    - For Priority - Select **2-High**
-
-  Leave Business Administrator and Potential owner blank for now.
-
-5. Click **Create**.
-
-   ![Click Create on Task Definition page](images/task-definition-details.png " ")
-
-
-6. Under **Settings** Section:
-
-    - For Task details Page Number - Click on **Create Task Details Page** button then click **OK**
-
-    ![Click Task Definition](images/click-task-definition.png " ")
-
-    - Click on the task definition - **Expense Request** to continue editing.
-
-    ![Click on Expense Request](images/select-expense-request.png " ")
-
-    - For Actions Source - Select SQL Query.
-
-    - For Actions SQL query - Copy the code below and paste it into  the code editor:  
-
-    ```
-    <copy>
-    select e.empno, e.emp_name, m.emp_name as mgr_name from EMPLOYEE_DETAILS e, EMPLOYEE_DETAILS m
-    where m.empno(+)=e.mgr and e.empno= :APEX$TASK_PK
-    </copy>
-    ```
-    ![Task Definition Settings](images/task-definition-settings.png " ")
-
-7. **Under Participants** Section - Select Participants to assign additional people to the Task Definition.
-
-    - Click Add Row.
-
-    - For Participant Type - Select **Potential Owner**
-
-    - For Value Type - Select **SQL Query**
-
-    - For Value - Copy the code below and paste it into  the code editor
-
-    ```
-    <copy>
-    select EMP_NAME from employee_details where EMPNO =(select MGR from employee_details where EMPNO=(select EMPNO from employee_details where EMP_NAME=:APP_USER))
-    </copy>
-    ```
-
-    - Click **Apply Changes** to save all existing changes.
-
-    ![Task Definition Participants](images/task-definition-participants0.png " ")
-
-8. Click on the task definition - **Expense Request** to continue editing.
-
-    ![Click on Expense Request](images/task-definition-created.png " ")
-
-9. **Under Parameters** Section - Select Add Row and fill in the 4 parameter fields listed below:
-
-     | Static ID |  Label  | Data Type
-     | --- |  --- | --- |
-     | ESTIMATED\_COST | Estimated Cost | String |
-     | EXPENSE\_STATUS | Expense Status | String |
-     | EXPENSE\_TYPE | Expense Type | String |
-     | REQ\_ID | Req Id | String |
-
-     ![Task Definition Parameters](images/task-definition-parameters.png " ")
-
-     - Click **Apply Changes**.
-
-10. Click on the task definition - **Expense Request** to continue editing.
-
-  ![Click on Expense Request](images/select-expense-request.png " ")
-
-
-11. Under **Actions** Section, Click **Add Action** button
-
-     ![Task Definition Actions Create](images/task-definition-actions0.png " ")
-
-    Specify the following:
-
-    - For Name - Enter **CREATE\_EXPENSE\_REPORT\_ENTRY**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select Create
-
-    - For Code: Copy the code below and paste it into  the code editor:
-
-    ```
-        <copy>
-         declare
-           l_req_id number;
-        begin
-          if :APP_USER = :EMP_NAME then --this is the original initiator
-           l_req_id := :APEX$TASK_ID;
-        -- create a new record in the Employee Expense Request table EMP_EXPENSE_REQUEST
-        insert into EMP_EXPENSE_REQUEST values
-        (to_number(l_req_id),
-        :EMPNO,
-        :EXPENSE_TYPE,
-        :ESTIMATED_COST,
-        '',
-       'PENDING');
-    end if;
-    end;
-    </copy>
-    ```
-    - Click **Create** to save Create Event Action.
-
-      ![Task Definition Action - create1](images/task-definition-create-action.png " ")
-
-12. To Add the next action, Click **Add Action** button.
-
-    ![Task Definition - Add Action](images/task-definition-create-action-saved.png " ")
-
-    Specify the following:
-
-    - For Name - Enter **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select **Complete**
-
-    - For Outcome : Select **Approved**
-
-    - For Code: Copy the code below and paste it into  the code editor:
-
-      ```
-      <copy>
-        declare
-        l_mgr number;
-        l_task_id number;
-        l_request_id number;
-        l_req_status varchar2(10) :='PENDING';
-        Begin
-           if :APP_USER = :MGR_NAME then --this is the first approver
-       -- set the request id to be the id of the task created when the request was submitted
-          l_request_id := :APEX$TASK_ID;
-        else
-       -- this is an intermediate approver. Set the request-id from the corresponding task parameter value
-       l_request_id := :REQ_ID;
-       end if;
-       if  :ESTIMATED_COST < 50000 then -- the approval is complete
-
-        update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
-         where req_id = l_request_id and emp_no=:APEX$TASK_PK;
-
-        l_req_status := 'APPROVED';
-       else -- the request needs to go through another level of Approval
-        -- updated the request record with details of the current approver in the chain of approvers
-        update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
-         where req_id = l_request_id
-           and emp_no=:APEX$TASK_PK;
-       -- create a new task assigned to the manager of the current approver
-        l_task_id := apex_approval.create_task(
-            p_application_id => :APP_ID,
-            p_task_def_static_id => 'EXPENSE_REQUEST',
-            p_initiator => :EMP_NAME, -- ensure initiator is the original requestor and not the current task owner
-            p_parameters => apex_approval.t_task_parameters(
-                1 => apex_approval.t_task_parameter(static_id => 'EXPENSE_TYPE', string_value => :EXPENSE_TYPE),
-                2 => apex_approval.t_task_parameter(static_id => 'ESTIMATED_COST', string_value => :ESTIMATED_COST),
-                3 => apex_approval.t_task_parameter(static_id => 'REQ_ID',      string_value => l_request_id),
-                4 => apex_approval.t_task_parameter(static_id => 'STATUS',      string_value => l_req_status)
-             ),
-            p_detail_pk => :APEX$TASK_PK
-            );
-            end if;
-          end;
-      </copy>
-      ```
-
-    - Click **Create** to add action.
-
-       ![Task Definition - Approved](images/task-definition-approved-action.png " ")
-
-       ![Task Definition - Approved action created](images/task-definition-approved-code0.png " ")
-
-13. Again, Click  **Add Actions** button.
-
-    ![Task Definition - Add Action](images/task-definition-approved-saved.png " ")
-
-    Specify the following:
-
-    - For Name - Enter **UPDATE\_REQUEST\_STATUS**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select **Complete**
-
-    - For Outcome  - Select **Rejected**
-
-    - For Code: Copy the code below and paste it into  the code editor:
-
-    ```
-    <copy>
-      declare
-        l_mgr number;
-        l_task_id number;
-        l_request_id number;
-        l_req_status varchar2(10) := 'PENDING';
-      begin
-        select mgr into l_mgr from employee_details where emp_name=:APP_USER;
-      if :APP_USER = :MGR_NAME then --this is the first approver
-        l_request_id := :APEX$TASK_ID;
-      else
-        l_request_id := :REQ_ID;
-      end if;-- the request is complete and rejected.
-      update EMP_EXPENSE_REQUEST set status = 'REJECTED', updated_by=updated_by||'->'||:APP_USER
-      where req_id = l_request_id and emp_no=:APEX$TASK_PK;
-      end;
-    </copy>
-    ```
-
-    - Click **Create** and **Apply Changes**
-
-     ![Task Definition - Rejected](images/task-definition-rejected-action.png " ")
-
-     ![Task Definition - Rejected1](images/task-definition-rejected-code0.png " ")
-
-     ![Task Definition - Rejected2](images/task-definition-rejected-saved.png " ")
-
-
-## Task 5: Create a Page to Apply for Expense
-Add a page to Submit an Expense request.
-
-1. Click **Application ID**, Application home page appears.
-
-   ![Application Home Page](images/application-id.png " ")
-
-2. Click **Create**, create page wizard appears.
-
-    ![Click create on Application home page](images/application-create-page.png " ")
-
-3. Select **Blank page** under component and click **Next**
-
-    ![Select blank page](images/application-blank-page.png " ")
-
-4. Specify Blank Page Attributes.
-
-   Under **Page Definition** Section:
-
-    - For Page Number - Type 3
-
-    - For Name - Enter **Apply for Expense**
-
-    - For Page Mode   - Select Normal   
-
-   Under **Navigation** Section:
-
-    - For Use Breadcrumb - Select On
-
-    - For Breadcrumb Parent Entry - Select Home(Page 1)
-
-    - For Use Navigation - Select On
-
-    - For Navigation Preference - Select **Create a new Entry**
-
-    - For Icon  - Enter **fa-file-o**
-
-   Click **Create Page**.
-
-   ![Blank page definition](images/application-blank-page-details.png " ")
-
-5. In the left pane, select the Rendering tab. Right-click **Body** , select **Create Region**.
-
-   ![Create create to apply an expense](images/submit-expense-region.png " ")
-
-6. In the Property Editor, edit the appropriate attributes:
-
-   Under **Identification** section:
-
-    - For Title: Enter **New Expense Request**
-
-    - For Type: Select **Form**
-
-   Under **Source** section:
-
-    - For Type: Select **SQL Query**
-
-    - For SQL query: Copy the code below and paste it into  the code editor:
-
-    ```
-     <copy>
-    Select e.empno, e.emp_name, m.emp_name as mgr_name
-      from EMPLOYEE_DETAILS e , EMPLOYEE_DETAILS m
-     where m.empno(+) = e.mgr
-      and e.empno = :P3_EMPNO;
-    </copy>
-    ```    
-    ![New Expense request region source](images/submit-expense-region-details.png " ")
-
-7. Now, right-click the region (**New Expense Request**) and select Create Page Item.
-
-  ![Create Page Item - P3_EXPENSE_TYPE](images/create-page-item.png " ")
-
-    - For Name - Enter **P3\_EXPENSE\_TYPE**
-
-    - For Type - Select, **Select List**
-
-    Under **List of Values** section:
-
-    - For Type - Select **Static values**
-
-    - For Static Values - Enter below list and click **OK**
-
-    | Display Value |  Return Value  |
-    | --- |  --- |
-    | Internet/Broadband Charges | Internet/Broadband Charges |
-    | Accommodation | Accommodation |
-    | Conference | Conference |
-    | Misc. Expenses | Misc. Expenses |
-
-    - For Null Display Value - Enter **--Select Expense Type--**
-
-   ![Update Page Item - P3_EXPENSE_TYPE](images/submit-expense-type.png " ")
-
-8. Right-click region (**New Expense Request**) and select Create Page Item.
-
-    - For Name - Enter **P3\_ESTIMATED\_COST**
-
-    - For Type - Select Number Field
-
-9. Select the **P3\_EMPNO** page item and enable the primary key under **Source** section and Click **Save** to apply changes.
-
-    ![Update Page item P3_EMPNO ](images/submit-expense-primary-key.png " ")
-
-10. On the Rendering tab (left pane). Under Pre-Rendering, Right-click **Before Header** and click **Create Process**.
-
-    ![Create rendering process1](images/submit-expense-process.png " ")
-
-    In the Property Editor, enter the following:
-
-    - For Name - Type **Fetch Employee Details for User**
-
-    - For Type - Select Execute code
-
-    - For PL/SQL Code - Enter the following PL/SQL code:
-
-        ```
-        <copy>
-         select empno into :P3_EMPNO from employee_details where emp_name=:APP_USER;
-        </copy>
-        ```
-    ![Create rendering process1 - details](images/submit-expense-process-details.png " ")
-
-    - For Sequence - Enter 5
-
-    ![Create rendering process2](images/submit-expense-fetch.png " ")
-
-11. Click **Save**.
-
-12. Now add a process on the **Processing tab** to submit a request. Right-click Processing and click **Create Process**.
-
-    ![Create processing tab process1](images/submit-expense-create-process.png " ")
-
-    In the Property Editor, enter the following:
-
-     - For Name - Type **Submit Expense request**
-
-     - For Type - Select **Human Task - Create**
-
-    Under **Settings** Section:
-
-     - For Definition - Select **Expense request**
-
-     - For Details Primary key Element: Select **P3\_EMPNO**
-
-     - For Success Message: Type **Expense Request submitted successfully**
-
-    ![Create processing tab process1- details](images/submit-expense-report-process.png " ")
-
-13. Under Parameters for Submit Expense request process:
-
-    a) For  Estimated Cost, enter the following:
-
-       - For Type - Select ITEM
-
-       - For Value - Select **P3\_ESTIMATED\_COST**
-
-    ![Process parameters1](images/submit-expense-report-cost.png " ")
-
-    b) For  Expense Status, enter the following:
-
-       - For Type - Select Static Value
-
-       - For Value - Type **PENDING**
-
-     ![Process parameters2](images/submit-expense-status.png " ")
-
-    c) For  Expense Type, enter the following:
-
-       - For Type - Select ITEM
-
-       - For Value - Select **P3\_EXPENSE\_TYPE**
-
-     ![Process parameters3](images/submit-expense-report-type.png " ")
-
-    d) For  Request ID, enter the following:
-
-       - For Type - Select NULL
-
-    ![Process parameters4](images/submit-expense-report-reqid.png " ")
-
-14. Click **Save**
-
-15. On Rendering tab, Right-click Body and select **Create Button**.
-
-    ![Create Button](images/submit-expense-create-button.png " ")
-
-    In the Property Editor, enter the following:
-
-      - For Button Name - Type **SUBMIT_REQUEST**
-
-      - For Hot - Select On
-
-    ![Button details](images/submit-expense-button-details.png " ")
-
-16. Navigate to Processing tab, Select Process **Submit Expense Request**.
-
-    Under **Server-Side Condition** Section:
-
-    - For When Button Pressed : Select **SUBMIT_REQUEST**        
-
-    ![Submit button](images/submit-expense-submit-button.png " ")
-
-17. Click **Save**.
-
-## Task 6: Create Unified Task Lists
-Add a Unified Task list page to see the submitted expense request list by a requestor and the Approval list approved or rejected by the approver.
-
-1. Click Application ID on the right-above corner of the page designer. Application Home page appears.
-
-  ![Click Application ID](./images/utl-appid.png " ")
-
-2. Click **Create**.
-
-   ![Click create on Application home page](./images/utl-create-page.png " ")
-
-3. Under Components, Select Unified Task List and click **Next**
-
-   ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
-
-4. Specify the following page attributes:
-
-    - For Page Number - Type 4
-
-    - For Name - Type **My Approvals**
-
-    - For Report Context - Select **My Tasks**
-
-    Click **Create Page**. A unified Task List page was created.
-
-    ![Click Create Page](./images/utl-details.png " ")   
-
-5. To create another Unified Task list page, Again, Click Application ID on the right-above corner of the page designer. Application Home page appears.
-
-    ![Crete Unified Task List2](./images/utl-page-created.png " ")
-
-6. Click **Create** button. Create Application wizard appears.
-
-    ![Click create on application home page](./images/utl-create-page.png " ")
-
-7. Under Components, Select Unified Task List and click **Next**
-
-    ![Select Unified Task List](./images/utl-create-page-wizard.png " ")
-
-8. Specify the following page attributes:
-
-    - For Page Number - Type 6
-
-    - For Name - Type **My Expense Requests**
-
-    - For Report Context - Select **Initiated by Me**
-
-    Click **Create Page**. A unified Task List page was created.
-
-    ![Click create page ](./images/utl-my-requests.png " ")
-
-## Task 7: Create an Email Template  
-Add an Email Template to add for before expiry action in the task definition.
-
-To define an email template:
-
-1. Navigate to the Shared Components page:
-
-    - On the Workspace home page, click **App Builder**.
-
-    - Select an **Expense Tracker** application.
-
-    - On the Application home page, click **Shared Components**.
-
-2. Under User Interface Components, select Email Templates.
-
-   ![Select email template ](./images/email-template-sc-page.png " ")
-
-3. On the Email Templates page, click Create Email Template.
-   The Details page appears.
-
-   ![click Create Email Template](./images/email-template-create-button.png " ")
-
-4. Under **Identification**:
-
-    - For Template Name - Enter **BEFORE EXPENSE EXPIRY EMAIL**
-
-    - For Email Subject - Copy and Paste the below Text
-
-     ```
-     <copy>
-     Expense Request FOR #APEX_TASK_SUBJECT# Requires your review
-     </copy>
-     ```
-
-    *Note: For substitution strings with the #STRING_NAME# format. You can pass in values for these strings using the Placeholder Values dialog for the Process in Page Designer or the APEX_MAIL API.
-
-5. Under **HTML Format**:
-
-    - For Header - Copy the text below and paste it into the Header:
-    ```
-    <copy>
-    <b style="font-size: 24px;">My Approvals</b>
-    </copy>
-    ```
-    - For Body - Copy the text below and paste it into the Body:
-    ```
-     <copy>
-    <strong>Hello #APEX_TASK_OWNER#</strong>,<br>
-    <br>Please check your "My Approvals" inbox. The expense request for #EMP_NAME# requires your timely review manner.<br>
-    <br>Thanks for your kind attention to this matter.<br>
-    <br>Need to make a change to your Approvals? <a href="#APPROVAL_URL#">Manage your Approvals here.</a>
-    </copy>
-     ```
-    - For Plain Text Format - Copy the text below and paste it into Plain text format:
-    ```
-    <copy>
-    Hello #APEX_TASK_OWNER#,
-    Please check your "My Approvals" inbox. The expense request for #EMP_NAME# requires your timely review manner.
-    Thanks for your kind attention to this matter.
-    Need to make a change to your Approval? Manage your Approval here: #APPROVAL_URL#
-    </copy>
-    ```
-
-    ![Create Email Template](./images/email-click-create.png " ")
-
-    ![Enter email template details1](./images/email-details2.png " ")
-
-6. Click **Create Email Template**
-
-## Task 8: Update Table Employee Details
-
-1. Navigate to SQL Workshop and click SQL Commands
-
-2. Copy and Paste the commands below into the Script Editor to update the Employee Details Table and Execute the command one by one.  
-
-   Note: The steps to create and populate the table EMPLOYEE\_DETAILS are shared in TASK 2. Ensure that you have that table created and populated before running the commands below.  
-
-   Add a new column HR\_MGR (HR Manager) to the existing Employee table EMPLOYEE\_DETAILS and update the existing Employee records as shown below:
-    ```
-    <copy>
-    insert into EMPLOYEE_DETAILS(empno, emp_name) values (50, 'SOPHIE');
-
-    insert into EMPLOYEE_DETAILS(empno, emp_name) values (60, 'ROBIN');
-
-    Alter table "EMPLOYEE_DETAILS" add "HR_MGR" VARCHAR2(10);
-
-    Update EMPLOYEE_DETAILS set HR_MGR = 'SOPHIE' where EMPNO in  (10,20);
-
-    Update EMPLOYEE_DETAILS set HR_MGR = 'ROBIN' where EMPNO in  (30,40);
-    </copy>
-    ```  
-
-    ![SQL Commands](./images/sql-commands.png " ")
-
-    NOTE: Don't forget to create 2 Users, SOPHIE and ROBIN, using the  Manage Users And Groups menu option under Workspace Administration as done in TASK 6.
-
-## Task 9: Update Task Definition
-We will further extend the Expense Tracker Application to see how tasks could be assigned to multiple potential owners and then explore possible actions(Request Information / Delegate / Release) that these potential owners perform on the task.
-
-1. Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
-
-    ![Edit Expense Request](./images/edit-td.png " ")
-
-    ![Click Task definition - Expense request](./images/edit-td-name.png " ")
-
-2. Under **Actions** - Edit **NEXT\_APPROVER\_OR\_UPDATE\_STATUS**
-
-    Copy the code below and  replace it into the code editor:
-
-    ```
-    <copy>
-    declare
-    l_mgr number;
-    l_task_id number;
-    l_request_id number;
-    l_req_status varchar2(10) :='PENDING';
-    begin
-       select mgr into l_mgr from employee_details where emp_name=:APP_USER;
-    if :APP_USER = :MGR_NAME then --this is the first approver
-       -- set the request id to be the id of the task created when the request was submitted
-       l_request_id := :APEX$TASK_ID;
-    else
-       -- this is an intermediate approver, set the request id from the corresponding task parameter value
-       l_request_id := :REQ_ID;
-    end if;
-    if l_mgr is null or :ESTIMATED_COST < 50000 then -- the approval is complete
-
-        update EMP_EXPENSE_REQUEST set status = 'APPROVED', updated_by=updated_by||'->'||:APP_USER
-         where req_id = l_request_id and emp_no=:APEX$TASK_PK;
-         l_req_status := 'APPROVED';
-    else -- the request needs to go through another level of approval
-        -- updated the request record with details of the current approver in the chain of approvers
-        update EMP_EXPENSE_REQUEST set updated_by = updated_by||'->'||:APEX$TASK_OWNER
-         where req_id = l_request_id
-           and emp_no=:APEX$TASK_PK;
-        -- create a new task assigned to the manager of the current approver
-        l_task_id := apex_approval.create_task(
-            p_application_id => :APP_ID,
-            p_task_def_static_id => 'EXPENSE_REQUEST',
-            p_initiator => :EMP_NAME, -- ensure initiator is the original requestor and not the current task owner
-            p_parameters => apex_approval.t_task_parameters(
-                1 => apex_approval.t_task_parameter(static_id => 'EXPENSE_TYPE', string_value => :EXPENSE_TYPE),
-                2 => apex_approval.t_task_parameter(static_id => 'ESTIMATED_COST', string_value => :ESTIMATED_COST),
-                3 => apex_approval.t_task_parameter(static_id => 'REQ_ID',      string_value => l_request_id),
-                4 => apex_approval.t_task_parameter(static_id => 'STATUS',      string_value => l_req_status)
-        ),
-        p_detail_pk => :APEX$TASK_PK
-    );
-    end if;
-    end;
-    </copy>
-    ```
-    Click **Apply Changes**
-
-3. **Under Participants** Section - Click Add Row
-
-    - For Participant Type - Select Potential Owner
-
-    - For Value Type - Select SQL Query
-
-    - For Value -  Copy the code below and  paste it into the code editor:
-
-    ```
-    <copy>
-    select HR_MGR from EMPLOYEE_DETAILS where EMPNO = :APEX$TASK_PK
-    </copy>
-    ```
-    ![Add participant](./images/td-participants-add-row.png " ")  
-
-    ![Participant value](./images/td-participants-value.png " ")
-
-    Click **Apply Changes** to save the updated Participants.
-
-    Note :Adding the new Participant entry implies that for each employee, the approver of the Expense is either the manager he/she reports to or his/her HR Manager. In this example, if Clara was applying for an expense, the task could be approved by either her manager Jane or her HR Manager Sophie.
-
-4. We now essentially have a scenario where there can be more than one potential owner of an expense request task. This will help us to demonstrate the operations like Claim, Release, and Delegate that can be performed on tasks with  >1 potential owner(s).
-
-    Under **Actions** Section: Click **Add Actions**
-
-    - For Name - Enter **DELEGATE\_EXPENSE\_REQUEST**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select Delegate
-
-    - For Success Message - Enter **Request Delegated Successfully**
-
-    - For Code: Copy the code below and paste it into  the code editor:
-
-    ```
-    <copy>
-    begin
-    apex_approval.add_to_history ('Request Delegated by '|| :APEX$TASK_OWNER);
-    end;
-    </copy>
-    ```
-    - Click **Create** to add action.
-
-    ![Add action - delegate](./images/td-4-action.png " ")
-
-    ![Add action - delegate details](./images/td-delegate.png " ")
-
-5. Again click **Add Actions** to request information.
-
-    - For Name - Enter **REQUEST\_MORE\_INFO**
-
-    - For Type - Select Execute Code
-
-    - On Event - Select **Request Information**
-
-    - For Success Message - Enter **Information Requested Successfully**
-
-    - For Code: Copy the code below and paste it into  the code editor:
-    ```
-    <copy>
-    begin
-    apex_approval.add_to_history ('Information Requested From '|| :APEX$TASK_OWNER);
-    end;
-    </copy>
-    ```
-    - Click **Create** to add action.
-
-  ![Add Action - Request Info](./images/td-5-action.png " ")
-
-  ![Add Request Info details and click Create](./images/td-request-info.png " ")
-
-## Task 10: Add Deadline and Expiration for an Expense Request
-Add deadline and expiration events in actions for expense requests.
-
-Navigate to App Builder, Select Expense Tracker application. Click Shared Components→ Workflows and Automations→ Task Definitions and select the Expense Request Task Definition.
-
-1. Under **Deadline** Section:
-
-    - For Due on type - Select interval
-
-    - For Due on the interval - Type PT30M
-
-    - For Expiration Policy - Select Expire
-
-    Click **Apply Changes**
-
-    ![Select Deadline section](./images/td-deadline1.png " ")
-
-    ![Enter Deadline details](./images/td-deadline.png " ")
-
-2. Select **Expense Request**
-
-   Under the **Actions** Section - click **Add Actions**
-
-   Specify the following attributes:
-
-    - For Name - Enter **BEFORE\_EXPIRY**
-
-    - For Type - Select Send Email
-
-    - On Event - Select **Before Expire**
-
-    - For Before Expire Interval - Enter **PT25M**
-
-    - For Success Message - Enter **Task will expire in 5 minutes**
-
-   Under **Send Email Settings** Section:
-
-    - For From - Enter the Email address of your wish
-
-    - For To - Enter the Email address of your wish
-
-    - For Email Template - Select **BEFORE EXPENSE EXPIRY EMAIL**
-
-    - For Subject - Enter
-
-    ![Add Action - Before Expire](./images/td-6-action.png " ")
-
-    ![Enter Before expire details](./images/placeholder-button.png " ")
-
-3. Click the **Set Placeholder Values** button beside the email template.
-
-   Add a Column or Value for mentioned Placeholders and Click **Save** to add placeholders.
-
-   | Placeholder|  Column or Value  |
-   | --- |  --- |
-   | APEX\_TASK\_SUBJECT | &APEX$TASK\_SUBJECT. |
-   | APEX\_TASK\_OWNER | &APEX$TASK\_OWNER. |
-   | EMP\_NAME | &EMP_NAME. |
-   | APPROVAL\_URL | Paste the Login URL of your Expense Tracker Application |
-
-   ![Set placeholders for email template](./images/placeholder.png " ")
-
-4. Click **Create** to save an action.
-
-   ![Create action before expiry](./images/td-before-email.png " ")
-
-5. To add Expire event, click on **Add Actions** and specify the following attributes:
-
-    - For Name - Enter **TASK_EXPIRED**
-
-    - For Type - Select Execute Code
-
-    - For Execution Sequence - 70
-
-    - On Event - Select **Expire**
-
-    - For Success Message - Enter 'Task Expired Successfully'
-
-    - For Code: Copy the code below and paste it into  the code editor:
-
-    ```
-    <copy>
-    begin
-    apex_approval.add_to_history( 'Task ' || :APEX$TASK_SUBJECT || ' Expired');
-    end;
-    </copy>
-    ```
-    - Click **Create** to add action.
-
-  ![Add Action - Task expired](./images/task_expired-action.png " ")
-
-  Note: In order to expire a task manually. Create a button on a region on any unified task list page and a process under the processing tab with the below PLSQL code:
+    - Source > PL/SQL Code: Copy and Paste the below code:
 
     ```
     <copy>
     BEGIN
-    apex_approval.handle_task_deadlines;
+    :P17_APP_ITEM_URL := 'http://' || OWA_UTIL.get_cgi_env('HTTP_HOST') ||APEX_UTIL.PREPARE_URL(
+        p_url => 'f?p=' || :APP_ID || ':16:'||:APP_SESSION||'::NO::P16_ORDER:&P17_ORDER_ID.',
+        p_checksum_type => 'SESSION');
     END;
     </copy>
     ```
-   ![Expense Request Details ](./images/expire-task.png " ")
 
-## **Summary**
-You now know how to manage Approval Components.
+    ![Select Sql Workshop](./images/prepare-url.png " ")
 
-You may now **proceed to the next lab**.   
+7. Right-click **Processing**, select **Create Process**.
 
-## Acknowledgments
-   - **Author** - Ankita Beri, Product Manager
-   - **Contributor** - Roopesh Thokala, Product Manager
-   - **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+    ![Select Sql Workshop](./images/create-process-send-email.png " ")
+
+8. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Send E-Mail**
+
+        - Type: **Send E-Mail**
+
+    - Under Settings:
+
+        - From: **&APP_EMAIL.**
+
+        - To: **&P17\_CUSTOMER\_EMAIL.**
+
+        - Subject: **Your Order Confirmation : &P17\_ORDER\_ID.**
+
+        - Body Plain Text: Copy and paste the below text:
+
+            ```
+            <copy>
+            Hello &P17_CUSTOMER_FULLNAME.,
+            We're getting your order ready to be shipped. We will notify you when it has been sent.
+            <a href="&P17_APP_ITEM_URL." target="_blank">View your order</a>
+            If you have any questions contact us at noreply@oracle.com
+            </copy>
+            ```
+
+        - Body HTML:Copy and paste the below text:
+
+            ```
+            <copy>
+            <html>
+            <body>
+            <p>Hello &P17_CUSTOMER_FULLNAME.,</p><br>
+            <p>We're getting your order ready to be shipped. We will notify you when it has been sent.</p><br>
+            <p><a href="&P17_APP_ITEM_URL." target="_blank">View your order</a></p><br>
+            <p>If you have any questions contact us at noreply@oracle.com</p><br>
+            </body>
+            </html>
+            </copy>
+            ```
+
+    ![Select Sql Workshop](./images/send-email.png " ")
+
+9. Click **Save**.
+
+## Task 2: Create Feedback Page
+
+This task focuses on capturing customer feedback after an order is placed. By adding interactive elements like a star rating and feedback text box, you will create a mechanism to gather valuable insights from users about their shopping experience.
+
+1. Navigate to **App Builder** and select **Online Shopping Application**.
+
+    ![Select Sql Workshop](./images/online-shop-app.png " ")
+
+2. Click **16 - Order Information**.
+
+    ![Select Sql Workshop](./images/16-shop-info.png " ")
+
+3. In the left pane, right-click **Thank you for your order!** region and select **Create Sub Region**.
+
+    ![Select Sql Workshop](./images/sub-region.png " ")
+
+4. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Rate your shopping experience**
+
+    - Layout > Start New Row: **Toggle Off**
+
+    ![Select Sql Workshop](./images/rate-your-exp.png " ")
+
+5. Right-click **Rate your shopping experience** region and select **Create Page Item**.
+
+    ![Select Sql Workshop](./images/page-item1.png " ")
+
+6. Create the following two page items one after the other:
+
+    | Name | Type | Label |
+    | ---- | ---- | ----- |
+    | P16_REVIEW | Star Rating | Review |
+    | P16_FEEDBACK | Textarea | Feedback |
+
+    ![Select Sql Workshop](./images/star-rating-item.png " ")
+
+    ![Select Sql Workshop](./images/feedback-item.png " ")
+
+7. Right-click **Rate your shopping experience** region and select **Create Button**.
+
+    ![Select Sql Workshop](./images/create-btn-submit.png " ")
+
+8. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Submit**
+
+        - Label: **Submit**
+
+    - Layout > Slot: **Copy**
+
+    - Appearance > Hot: **Toggle On**
+
+    - Under Server-side Condition:
+
+        - Type: **Item is NULL**
+
+        - Item: **P16_REVIEW**
+
+    ![Select Sql Workshop](./images/btn-info.png " ")
+
+    ![Select Sql Workshop](./images/btn-server.png " ")
+
+9. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+
+    ![Select Sql Workshop](./images/create-process-1.png " ")
+
+10. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Submit Review**
+
+    - Source > PL/SQL Code: Copy and paste the below code:
+
+    ```
+    <copy>
+        UPDATE ORDERS
+        SET STAR_RATING = :P16_REVIEW,
+            FEEDBACK = :P16_FEEDBACK
+        where order_id = :P16_ORDER;
+    </copy>
+    ```
+
+    - Success Message > Success Message: **Thank you for your feedback!**
+
+    - Server-side Condition > When Button Pressed: **Submit**
+
+     ![Select Sql Workshop](./images/submit-review.png " ")
+
+11. Click **Save**.
+
+## Task 3: Create an Email Template
+
+Email templates simplify the process of sending structured, professional messages to users. In this task, you will design a reusable template for sending product review reminders, ensuring consistent branding and communication.
+
+1. Click the **Shared Components** icon on the top right corner.
+
+   ![Select email template ](./images/shared-comp1.png " ")
+
+2. Under **User Interface**, select **Email Templates**.
+
+   ![Select email template ](./images/email-templates.png " ")
+
+3. Click **Create Email Template**.
+
+   ![click Create Email Template](./images/create-email-temp.png " ")
+
+4. Enter/select the following:
+
+    - Under **Identification**:
+
+        - Template Name: **Product Review Reminder**
+
+        - Static Identifier: **PRODUCT\_REVIEW\_REMINDER**
+
+        - Email Subject: **How Was Your Experience? Let Us Know!**
+
+    - HTML Format > Body: Copy and paste the below HTML
+
+        ```
+        <copy>
+        <html>
+         <body>
+           <p>Dear #CUSTOMER_NAME#,</p>
+           <p>Thank you for purchasing !</p>
+           <p>We hope you're enjoying it. Could you take a moment to rate your experience?</p>
+           <p>
+              <a href="#RATING_LINK#">Click here to rate this product</a>
+           </p>
+           <p>Thank you for your feedback!</p>
+           <p>Best regards,</p>
+           <p>Online Shopping Application</p>
+         </body>
+        </html>
+        </copy>
+        ```
+
+    ![click Create Email Template](./images/product-review-reminder.png " ")
+
+    - **Plain Text Format**: Copy the text below and paste it into plain text format:
+
+        ```
+       <copy>
+        Dear #CUSTOMER_NAME#,
+        Thank you for purchasing [Product Name]!
+        We hope you're enjoying it. Could you take a moment to rate your experience? Your feedback helps us improve and serve you better.
+        Click the link below to rate your product: #RATING_LINK#
+        Thank you for your time and input!
+        Best regards,
+        The Online Shopping App
+        </copy>
+        ```
+
+    ![Create Email Template](./images/create-template.png " ")
+
+5. Click **Create Email Template**
+
+## Task 4: Create an Automation
+
+Automation is key to improving application efficiency and reducing manual effort. In this task, you will set up an automation to send product review reminders to customers based on specific criteria, leveraging the email template created in Task 3.
+
+1. Navigate to **Shared Components**.
+
+    ![Create Email Template](./images/shared-comp2.png " ")
+
+2. Under **Workflows and Automations**, select **Automations**.
+
+    ![Create Email Template](./images/automations.png " ")
+
+3. Click **Create**.
+
+    ![Create Email Template](./images/create-automation.png " ")
+
+4. Under **Create Automation**, enter/select the following:
+
+    - Name: **Product Review Reminder**
+
+    - Type: **Scheduled**
+
+    - Actions initiated on: **Query**
+
+    - Execution Schedule: **Daily at Midnight**
+
+    Click **Next**.
+
+    - Source Type: **Table**
+
+    - Table/View Name: **ORDERS (table)**
+
+    Click **Create**.
+
+    ![Create Email Template](./images/create-automation1.png " ")
+
+    ![Create Email Template](./images/create-automation2.png " ")
+
+5. Enter/select the following:
+
+    - Settings > Schedule Status: **Active**
+
+    - Source > Where Clause: Copy and paste the below code:
+
+        ```
+        <copy>
+            TO_DATE(TO_CHAR(order_datetime, 'MM/DD/YYYY'), 'MM/DD/YYYY') = SYSDATE - 1
+            AND EMAIL_FLAGGED = 'N'
+            AND STAR_RATING IS NULL
+        </copy>
+        ```
+
+6. Click **Save Changes**.
+
+    ![Create Email Template](./images/auto-save-changes.png " ")
+
+7. Click **Product Review Reminder**.
+
+    ![Create Email Template](./images/product-review-rem.png " ")
+
+8. Navigate to **Actions** tab and edit **New Action**.
+
+    ![Create Email Template](./images/actions.png " ")
+
+9. Enter/select the following:
+
+    - Action > Name: **Send E-Mail**
+
+    - Code > Code: Copy and paste the below code:
+
+        ```
+        <copy>
+        DECLARE
+            l_url CLOB;
+        BEGIN
+        FOR x IN (SELECT c.full_name,
+                     c.email_address,
+                     o.order_id,
+                     To_date(To_char(o.order_datetime, 'MM/DD/YYYY'),
+                     'MM/DD/YYYY')
+                     AS
+                              order_datetime
+              FROM   customers c
+                     join orders o
+                       ON c.customer_id = o.customer_id
+              WHERE  To_date(To_char(o.order_datetime, 'MM/DD/YYYY'),
+                     'MM/DD/YYYY')
+                     = SYSDATE
+                     AND o.email_flagged = 'N') LOOP
+        l_url := 'http://'
+                 || owa_util.Get_cgi_env('HTTP_HOST')
+                 ||apex_util.Prepare_url(p_url => 'f?p='
+                                                  || :APP_ID
+                                                  || ':16:'
+                                                  ||:APP_SESSION
+                                                  ||'::NO::P16_ORDER:'
+                                                  ||apex_json.Stringify(
+                                                    x.order_id),
+                     p_checksum_type => 'SESSION');
+
+        apex_mail.Send (p_to => apex_json.Stringify(x.email_address),
+        p_template_static_id => 'PRODUCT_REVIEW_REMINDER',
+        p_placeholders => '{'
+                          || '    "CUSTOMER_FULLNAME":'
+                          || apex_json.Stringify(x.full_name)
+                          || '   ,"RATE_URL":'
+                          || apex_json.Stringify(apex_mail.get_instance_url
+                                                 || apex_page.Get_url(16))
+                          || '}');
+
+            UPDATE orders
+            SET    email_flagged = 'Y'
+            WHERE  order_id = x.order_id;
+        END LOOP;
+        END;
+        </copy>
+        ```
+
+    ![Create Email Template](./images/send-email1.png " ")
+
+10. Click **Apply Changes**.
+
+## Summary
+
+In this lab, you extended the capabilities of your application by implementing email processes, designing feedback pages, and automating workflows. These features enhance user interaction, streamline communication, and improve operational efficiency. You may now **proceed to the next lab**.
+
+## What's Next
+
+During the upcoming hands-on session, you will learn to enable a Remote Database schema. The lab will guide you through creating an application and integrating application data from a REST Data Source. Additionally, you will learn the Process of synchronizing data from REST Data Sources.
+
+## Acknowledgements
+
+- **Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024

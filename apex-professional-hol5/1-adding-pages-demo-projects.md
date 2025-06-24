@@ -1,123 +1,348 @@
 # Add Pages to the Demo Projects application
 
-## Introduction
-
-In this lab,
-  - You navigate to **Demo Projects Application** and create an **Interactive Grid** and **Smart Filters** Pages.
-
-<!--
-Customers will be able to:
-- Review the items in the shopping cart
-- Edit the quantity of the items
-- Remove an item
-- Clear the shopping cart
-- Proceed to checkout
+In this lab, you will learn how to create different page types in the Demo Projects application, including Interactive Grid, Smart Filters, and Content Row pages. These pages allow users to search, filter, and manage project tasks and statuses. This hands-on experience will give you insight into how to effectively build and customize Oracle APEX applications to meet various business needs.
 
 Estimated Time: 20 minutes
 
-Watch the video below for a quick walk through of the lab.
+## Objectives
 
-[](youtube:Cvl9xMAqnm8)
+By the end of this lab, you will be able to:
 
--->
-Estimated Time: 20 minutes
+- Create an Interactive Grid to search and edit project tasks.
 
+- Implement Smart Filters to allow efficient filtering of project tasks.
 
-### Objectives
-In this lab, you will:
-- Create Pages to Search and Edit the Projects and Tasks in **Demo Projects** Application.
+- Design a Content Row page to display task details with selection and action capabilities.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-1.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-create-app-from-spreadsheet.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshop:
 
-## Task 1: Add Interactive Grid to Demo Projects Application.
-In this lab, you create an interactive grid on the **DEMO_PROJECTS** table. You already created the **Demo Projects** application in HOL-3. Now, you create an **Interactive Grid** in the **Demo Projects** application.
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-1. On the Workspace home page, click the App Builder icon. Select **Demo Projects** Application.
+## Task 1: Add Interactive Grid to Demo Projects Application
 
-    ![](./images/select-demo-projects-app1.png " ")
+In this task, you will create an Interactive Grid to display and manage tasks from the DEMO_PROJECTS table. An Interactive Grid allows users to interact with the data by sorting, filtering, and updating records directly within the grid.
+
+1. On the Workspace home page, click **App Builder** and select **Demo Projects** application.
+
+    ![App Builder](./images/select-demo-projects-app1.png " ")
 
 2. Click **Create Page**.
 
-    ![](./images/create-page11.png " ")
+    ![Create Page](./images/create-page11.png " ")
 
-3. For Create a Page:
-   Select Page Type - Select **Component** and then select **Interactive Grid**.
+3. For Page Type, select **Interactive Grid**.
 
-    ![](./images/create-ig-1.png " ")
+    ![Interactive Grid](./images/create-ig-1.png " ")
 
-4. For Page Attributes, enter the following:
+4. For page attributes, enter/select the following:
 
-    - Under **Page Definition**:
+    - Under Page Definition:
 
-        - For Page Number, enter **4**.
+        - Page Number: **4**
 
-    - For Page Name, enter **Project Tasks**  
+        - Page Name: **Project Tasks**
 
-        - Under **Data Source**:
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
 
-        - For **Table/View Name**, Select **DEMO_PROJECTS**.
+    - Navigation > Use Breadcrumb: Toggle **OFF**
 
-    - Under **Navigation**
+      Click **Create Page**.
 
-        - For **Breadcrumb**, Set it to **No**.
+    ![Page Attributes](./images/create-ig-2.png " ")
 
-    Click **Create Page**.
+5. Click **Save and Run** to view the Interactive Grid page.
 
-    ![](./images/create-ig-2.png " ")
+    ![Save and Run Page](./images/save-run-tasks.png " ")
 
-5. Now that you have created an **Interactive Grid** Page, you can view the page by clicking **Save** and **Run Page** on the top Right.
+    ![Save and Run Page](./images/view-interactive-grid11.png " ")
 
-    ![](./images/view-interactive-grid11.png " ")
+## Task 2: Add Smart Filters to Demo Projects Application
 
-## Task 2: Add Smart Filters to Demo Projects Application.
-In this lab, you create a Smart Filters report on the DEMO_PROJECTS table. You already created the **Demo Projects** application in HOL-3. Now, you will create a Smart Filters in the Demo Projects application.
+In this lab, you create a Smart Filters page on the **DEMO_PROJECTS** table.
 
-1. Navigate to Create button and click **Page**.
+1. On the **Page Designer** toolbar, navigate to **(+ v)** icon and select **Page**.
 
-    ![](./images/create-sf-page11.png " ")
+    ![Select Page](./images/create-sf-page11.png " ")
 
-2. For Create a Page:
-   Select Page Type - Under **Component** tab, select **Smart Filters**.
+2. For Page Type, select **Smart Filters**.
 
-    ![](./images/create-sf-page12.png " ")
+    ![Smart Filters](./images/create-sf-page12.png " ")
 
-3. For **Create Smart Filters**, enter the following:
-    - Under **Page Definition**:
+3. In **Create Smart Filters** wizard, enter/select the following:
 
-        - For **Page Number**, enter **8**
+    - Under Page Definition:
 
-    - For **Name**, enter **Project Tasks Search**  
+        - Page Number: **8**
 
-       - Under **Data Source**:
+        - Name: **Project Tasks Search**
 
-       - For **Table/View Name**, enter **DEMO_PROJECTS**  
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
 
-   - Under **Navigation**
+    - Navigation > Use Breadcrumb: Toggle **OFF**.
 
-       - For **Breadcrumb**, Set it to **No**.
+      Click **Next**.
 
-   Click **Next**.
+    ![Create Smart Filters](./images/create-sf-page13.png " ")
 
-  ![](./images/create-sf-page13.png " ")
+4. Accept the default filters and click **Create Page**.
 
-4. For **Select the Filters** page:
-    - Leave the remaining details to defaults.
-    - Click **Create Page**.
+    ![Select the Filters](./images/create-sf-page14.png " ")
 
-    ![](./images/create-sf-page14.png " ")
+5. Click **Save and Run** to view the Smart Filters page.
 
-5. Now that you have created a **Smart Filters** Page, You can view the Page by Clicking **Save and Run Page**
+    ![Save and Run Page](./images/create-srun.png " ")
 
-    ![](./images/create-sf-page16.png " ")
+    ![Save and Run Page](./images/create-sf-page16.png " ")
+
+## Task 3: Add Content Row to Demo Projects Application
+
+In this task, you create a **Content Row** report with selection support on the DEMO_PROJECTS table. Content Row is a Classic Report template suitable for displaying most types of content. This report features a column for selection, such as a checkbox or radio button, an icon, a title and description, miscellaneous attributes, and actions.
+
+1. On the **Page Designer** toolbar, navigate to **(+ v)** icon and select **Page**.
+
+    ![Select Page](./images/cr-page-8.png " ")
+
+2. Select **Blank Page**.
+
+    ![Blank Page](./images/cr-blank-page.png " ")
+
+3. On **Create Blank Page** wizard, enter/select the following:
+
+    - Page Number: **3**
+
+    - Name: **Tasks Status**
+
+      Click **Create Page**.
+
+    ![Blank Page](./images/cr-create-page.png " ")
+
+4. Under **Rendering** tab, right-click **Body** and select **Create Region**.
+
+    ![Create Region](./images/cr-create-region.png " ")
+
+5. In the property editor, enter/select the following:
+
+    - Identification > Name: **Selection Support**
+
+    - Appearance > Template Defaults: Click **Use Template Options**
+
+        - Common > Header: **Hidden**
+
+        Click **OK**.
+
+    ![Create election Support](./images/cr-select-support.png " ")
+
+6. Right-click **Selection Support** region and select **Create Page Item**.
+
+    ![Create election Support](./images/cr-page-item.png " ")
+
+7. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **P3\_STATUS**
+
+        - Type: **Select List**
+
+    - Label > Label: **Status**
+
+    - Under List of Values:
+
+        - Type: **SQL Query**
+
+        - SQL Query:
+
+        ```
+        <copy>
+        Select distinct status d, status r from demo_projects
+        </copy>
+        ```
+
+        - Display Extra Values: Toggle **Off**
+
+        - Display Null Value: Toggle **Off**
+
+    ![Create election Support](./images/cr-page-item-detail.png " ")
+
+8. Right-click **Selection Support** region and select **Create Page Item**.
+
+    ![Create election Support](./images/cr-page-item1.png " ")
+
+9. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **P3\_SELECT\_ALL**
+
+        - Type: **Checkbox**
+
+    - Label > Label: **Select All**
+
+    - Layout > Start New Row: Toggle **Off**
+
+    ![Create election Support](./images/cr-page-item-detail1.png " ")
+
+10. Right-click **Selection Support** region and select **Create Page Item**.
+
+    ![Create election Support](./images/cr-page-item2.png " ")
+
+11. In the property editor, enter/select the following:
+
+     - Under Identification:
+
+        - Name: **P3\_SELECTION_ID**
+
+        - Type: **Hidden**
+
+    ![Create election Support](./images/cr-page-item-detail2.png " ")
+
+12. Under **Page Rendering**, right-click **Body** and select **Create Region**.
+
+    ![Create election Support](./images/cr-region.png " ")
+
+13. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Title: **Update Tasks Status**
+
+        - Type: **Content Row**
+
+    - Source > Table Source: **DEMO\_PROJECTS**
+
+    ![Create Region](./images/cr-region-details.png " ")
+
+14. Click **Attributes** and enter/select the following:
+
+    - Under Settings:
+
+        - Overline: **&PROJECT.**
+
+        - Title: **&TASK\_NAME.**
+
+        - Description : **Task Assigned To: &ASSIGNED\_TO.**
+
+        - Miscellaneous: **Cost: &COST.**
+
+        - Display Avatar: Toggle **ON**
+
+        - Display Badge: Toggle the button to **ON**
+
+    - Avatar > Icon: **fa-tasks**
+
+    - Under Badge:
+
+        - Label: **PROJECT**
+
+        - Value: **STATUS**
+
+        - State: **ASSIGNED\_TO**
+
+    - Under Row Selection:
+
+        - Type: **Multiple Selection**
+
+        - Current Selection Page Item: **P3\_SELECTION\_ID**
+
+        - Select All Page Item: **P3\_SELECT\_ALL**
+
+    ![Attributes](./images/cr-attributes.png " ")
+
+    ![Attributes](./images/cr-attributes1.png " ")
+
+15. Right-click **Selection Support** region and select **Create Button**.
+
+    ![Create Button](./images/cr-button.png " ")
+
+16. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Button Name: **Update**
+
+        - Label: **Update**
+
+    - Layout > Slot: **Change**
+
+    - Under Appearance:
+
+        - Button Template: **Text with Icon**
+
+        - Hot: Toggle **ON**
+
+        - Icon: **fa-save**
+
+    ![Create Button](./images/cr-button-details.png " ")
+
+17. Right-click **Update** button and select **Create Dynamic Action**.
+
+    ![Create Dynamic Action](./images/cr-dynamic-action.png " ")
+
+18. In the property editor, for name enter **Update Status**.
+
+    ![Create Dynamic Action](./images/cr-dynamic-action-name.png " ")
+
+19. Click **Show** and in the property editor, enter/select the following:
+
+    - Identification > Action: **Execute Server-side Code**
+
+    - Settings > PL/SQL Code: Copy and paste the below code in the code editor:
+
+    ```
+    <copy>
+    BEGIN
+    UPDATE DEMO_PROJECTS
+    SET
+        STATUS = :P3_STATUS
+    WHERE
+        ID IN (
+            SELECT
+                COLUMN_VALUE
+            FROM
+                TABLE ( APEX_STRING.SPLIT(:P3_SELECTION_ID, ':') )
+        );
+
+    END;
+    </copy>
+    ```
+
+    - Items to Submit: **P3\_STATUS,P3\_SELECTION\_ID**
+
+    ![Create Dynamic Action](./images/cr-dynamic-action-details.png " ")
+
+20. Right-click **True** action and select **Create TRUE Action**.
+
+    ![True Action](./images/cr-true.png " ")
+
+21. In the property editor, enter/select the following:
+
+    - Identification > Action: **Refresh**
+
+    - Under Affected Elements:
+
+        - Selection Type: **Region**
+
+        - Region: **Update Tasks Status**
+
+    ![True Action](./images/cr-true-detail.png " ")
+
+22. Click **Save and Run**.
+
+    ![Save and Run](./images/save-run1.png " ")
+
+23. To update the status of the Project Tasks, select any status from the list, check the rows you want to update, and then click the **Update** button.
+
+    ![Run Application](./images/cr-run-page.png " ")
+
+    ![Run Application](./images/cr-run-page1.png " ")
 
 ## Summary
 
-You now know how to create interactive grid and smart filters. You may now **proceed to the next lab**.
+You now know how to create Interactive Grid, Smart Filters and Content Row pages. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

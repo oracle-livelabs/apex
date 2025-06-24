@@ -2,223 +2,455 @@
 
 ## Introduction
 
-Application security is very important for the majority of applications. You must ensure that users enter valid credentials. Generally, username and password (Authentication) and the logged-in user has appropriate rights within the application (Authorization).
+In modern web applications, ensuring security is a critical requirement. Oracle APEX provides a robust framework for implementing authentication and authorization mechanisms to safeguard applications from unauthorized access. In this lab, you will learn to implement social sign-in options, specifically using Oracle Identity Access Management (IAM) and Google Authentication, to allow users to securely log in to the Online Shopping Application. Additionally, you will explore how to enable multiple authentication schemes for flexibility and convenience.
 
+This hands-on lab demonstrates how to integrate these features step-by-step, ensuring a secure and user-friendly experience for application users.
 
 Estimated Time: 20 minutes
 
+### Objectives
+
+In this lab, you will:
+
+- Configure Oracle IAM authentication for an application.
+
+- Implement Google Authentication for seamless social sign-in.
+
+- Enable multiple authentication schemes within an Oracle APEX application.
+
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-10.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-## Task 1: Implement Social Sign In(Facebook) Authentication in Online Shopping Cart Application.
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingApplicationData-OnlineShoppingApplication.sql)**
 
- In this hands-on lab, you create a Social Sign-in authentication scheme to enable Facebook Authentication. You test the authentication scheme.
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
- 1. Log in to Facebook’s developer [console](https://developers.facebook.com/). Login to the Meta for Developers using your **Facebook Credentials** and then select **My Apps**.
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-    ![Click My Apps](images/click-myapps.png " ")
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-    *Note: If you are logging in to the Facebook developer console for the first time, you must follow the below process before navigating to My Apps*
+## Task 1: Configure Oracle IAM Authentication in Online Shopping Application
 
-    - *A new user must first click the Get Started link to Create a Facebook for Developers account.*
-    - *This then brings you to a welcome screen that gives you the option to Continue. Click Continue.*
-    - *Review your email and agree or not to the marketing-related communication from Facebook.*
-    - *Choose an option for who you are. Example, developer, product manager, etc.*
+1. Log in to your Oracle cloud console.
 
-2. Click **Create App**.
+2. Navigate to **Identity & Security**.
 
-    ![Click Create App](images/create-app.png " ")
+    ![Define Authentication](images/identity-security.png " ")
 
-3. Under **Select an app type**, Select **Business** and then click **Next**.
+3. Under **Identity**, select **Domains**.
 
-    ![Select type as Business](images/create-app1.png " ")
+    ![Define Authentication](images/select-domains.png " ")
 
-4. Now, Under **Provide Basic Information**, enter the following and click **Create App**.
-    - For **Display Name**, enter **APEX Authentication**
-    - For **App contact email**, enter **Your email address**.
+4. Select your **Domain**.
 
-    ![Click Create App](images/create-app3.png " ")
+    ![Define Authentication](images/select-domain.png " ")
 
-5. You will now verify your Facebook account by **Re-entering** your password.
+5. Under **Identity Domain**, navigate to **Integrated applications** and click **Add application**.
 
-    ![Verify your account](images/verify-your-account1.png " ")
+    ![Define Authentication](images/add-application.png " ")
 
-6. Navigate to **Settings** and then select **Basic**. There, you can see the App ID and App Secret. Copy the **App ID** and **App secret** and paste them into your Notepad. It will be used to create the **web credential** in your **APEX application** later.
+6. Select **Confidential Application** and click **Launch Workflow**.
 
-    ![Copy credentials](images/copy-credentials.png " ")
+    ![Define Authentication](images/select-confidential.png " ")
 
-7. In the **Left Navigation Menu**, click on **Add Product**.
+7. Enter a **Name** for your application.
 
-    ![Add Product](images/add_product.png " ")
+    ![Define Authentication](images/click-next.png " ")
 
-8. Under **Add products to your app**, select **Set up** in **Facebook Login** card.
+8. Under **Authentication and authorization** , enable **Enforce grants as authorization** and click **Next**.
 
-    ![Select Facebook](images/select-facebook.png " ")
+    ![Define Authentication](images/click-next1.png " ")
 
-9. Navigate to **Settings** under **Facebook Login** in the navigation menu. You have to enable Client OAuth Login and add https://apex.oracle.com/pls/apex/apex_authentication.callback (If you are using apex.oracle.com) Valid OAuth Redirect URIs. Then click on **Save Changes**.
+9. Under **Client configuration**, enter/select the following:
 
-    ![Click on Save changes](images/apex-callback.png " ")
+    - Under Authorization:
 
-10. Login to your APEX workspace and click **Workspace Utilities**.
+        - Allowed grant types: Enable **Authorization code** (This will be used later to control access to the Oracle APEX application)
+
+        - Redirect URL: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+
+        - Post-logout redirect URL: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
+
+    Click **Next**.
+
+    ![Define Authentication](images/confidential-details.png " ")
+
+10. Under **Configure policy**, leave as default and click **Finish**.
+
+    ![Define Authentication](images/add-confidential.png " ")
+
+11. Click **Activate** and **Activate application**.
+
+    ![Define Authentication](images/click-activate.png " ")
+
+    ![Define Authentication](images/activate-app.png " ")
+
+12. Copy the *Client ID* and *Client secret* which we will use in the configuration on Oracle APEX.
+
+    ![Define Authentication](images/copy-clientid.png " ")
+
+13. Now, log in to your Oracle APEX workspace and navigate to **Workspace Utilities**.
+
+    ![Define Authentication](images/select-web-creds1.png " ")
+
+14. Select **Web Credentials**.
+
+    ![Define Authentication](images/select-web-creds.png " ")
+
+15. Under **Web Credentials**, click **Create**.
+
+    ![Define Authentication](images/create-web-creds.png " ")
+
+16. Enter/select the following information:
+
+    - Name: **OCI IAM Credentials**
+
+    - Authentication Type: **Basic Authentication**
+
+    - Client ID or Username: Enter Client ID copied in **step 12**.
+
+    - Client Secret or Password: Enter Client Secret copied in **step 12**.
+
+    - Verify Client Secret or Password: Enter Client Secret copied in **step 12**.
+
+    Click **Create**.
+
+    ![Define Authentication](images/iam-creds.png " ")
+
+17. Assign a user to this application. Navigate back to your Oracle cloud console, select **Users** and click **Assign users**.
+
+    ![Define Authentication](images/add-users.png " ")
+
+    ![Define Authentication](images/assign-users.png " ")
+
+18. Also, under **Groups**, assign the group to the user you created.
+
+19. Add a user *First name, Last name and Email* and click **Assign**.
+
+    ![Define Authentication](images/assign-groups.png " ")
+
+20. Log in to your Oracle APEX workspace and select **Online Shopping Application**.
+
+    ![Define Authentication](images/select-online.png " ")
+
+21. Click **Shared Components**. Under Security, click **Authentication Schemes**.
+
+    ![Define Authentication](images/shared-comp-auth.png " ")
+
+    ![Define Authentication](images/select-auth-scheme.png " ")
+
+22. Click **Create**.
+
+    ![Define Authentication](images/create-auth.png " ")
+
+23. Enter/select the following information:
+
+    - Name: **IAM**
+
+    - Scheme Type: **Social Sign-In**
+
+    - Credential Store: **OCI IAM Credentials**
+
+    - Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: https://[idcs-service-url]/.well-known/openid-configuration/.
+
+    - Scope: **profile, email, groups**
+
+    - Username: **#sub#**
+
+    - Additional User Attributes: **groups**
+
+    Click **Create Authentication Scheme**.
+
+    ![Define Authentication](images/auth-create.png " ")
+
+## Task 2: Implement Social Sign In(Google) Authentication in Online Shopping Application
+
+ You create a Social Sign-in authentication scheme in this hands-on lab to enable Google Authentication.
+
+1. Log in to Google's developer [console](https://console.developers.google.com).
+
+     *Note: If you are logging in to the Google developer console for the first time, you must check and click on AGREE AND CONTINUE*
+
+2. Click **CREATE PROJECT**, or navigate to an already created project and then click **New project**.
+
+    ![Click My Apps](images/create-project1.png " ")
+
+    ![Click My Apps](images/create-project.png " ")
+
+3. In the New Project Screen, for Project Name: Enter **APEX Social SignIn** and click **CREATE**.
+
+    ![Click My Apps](images/create-new-project.png " ")
+
+4. Click the **OAuth consent screen** (from the left side menu) and click **GET STARTED**
+
+    ![Click My Apps](images/oauth.png " ")
+
+    ![Click My Apps](images/get-started.png " ")
+
+5. Under Project Configuration, enter the following:
+
+    - Under **App information**:
+
+        - App name: Enter your **Application Name**
+
+        - User support email: Enter your **Email Address**
+
+        Click **Next**
+
+    ![Click My Apps](images/app-information.png " ")
+
+     - Under **Audience** > Select **External** and click **NEXT**
+
+    ![Click My Apps](images/audience.png " ")
+
+    - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
+
+    ![Click My Apps](images/contact-information.png " ")
+
+    - Under **Finish** >  Tick the checkbox and click **CONTINUE**
+
+    ![Click My Apps](images/finish.png " ")
+
+6. Click **CREATE**.
+
+    ![Click My Apps](images/create.png " ")
+
+7. Click **CREATE OAUTH CLIENT**.
+
+    ![Click My Apps](images/oauth-create.png " ")
+
+8. Enter the following:
+
+     - For Application type: Select **Web Application**
+
+     - For Name: Enter **APEX Social Authentication**
+
+   Under Authorized redirect URIs, click **+Add URl**
+
+     - For URls 1: Enter https://apex.oracle.com/pls/apex/apex_authentication.callback
+
+     Click **CREATE**.
+
+    ![Click My Apps](images/click-create-cred.png " ")
+
+9. Click **APEX Social Authentication**.
+
+    ![Click My Apps](images/click-apex-social-auth.png " ")
+
+10. You will get the **Client ID** and **Client secret**. Save these IDs. We will use them later.
+
+    ![Click My Apps](images/copy-cred.png " ")
+
+11. Login to your APEX workspace and click **Workspace Utilities**.
 
     ![Select Workspace utilities](images/select-workspace-utilities.png " ")
 
-11. Under **Workspace Utilities**, Select **Web Credentials**.
+12. Under **Workspace Utilities**, select **Web Credentials**.
 
     ![Select Web Credentials](images/select-web-credentials.png " ")
 
-12. Click **Create**.
+13. Click **Create**.
 
     ![Click Create](images/click-create.png " ")
 
-13. In the **Web Credentials** enter the following and click **Create**.
-    Under **Attributes**:
-    - For **Name**, Enter **FB\_LOGIN\_DEMO**
-    - For **Static Identifier**, Enter **FB\_LOGIN\_DEMO**
-    - For **Authentication Type**, select **OAuth2 Client Credentials Flow**.
-    - For **Client ID or Username**, Enter the **APP ID** you copied in **Step 6**.
-    - For **Client Secret or Password** and **Verify Client Secret or Password**, Enter the **App Secret** you copied in **Step 6**.
+14. In the **Web Credentials** enter/select the following:
+
+    - Under **Attributes**:
+
+        - Name: **Google SignIn**
+
+        - Authentication Type: **OAuth2 Client Credentials**.
+
+        - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
+
+        - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
-14. Navigate to **App Builder** and select **Online Shopping Application**.
+15. Click **Create**.
+
+16. Navigate to **App Builder** and select **Online Shopping Application**.
 
     ![Navigate to Online shopping application](images/navigate-to-osa.png " ")
 
-15. Click **Shared Components**.
+17. Click **Shared Components**.
 
     ![Select Shared Components](images/select-shared-components.png " ")
 
-16. Under **Security**, Select **Authentication Schemes**.
+18. Under **Security**, select **Authentication Schemes**.
 
     ![Select Authentication Schemes](images/select-authentication.png " ")
 
-17. In the **Authentication Schemes** page, click **Create**.
+19. In the **Authentication Schemes** page, click **Create**.
 
-    ![Click Create](images/click-create2.png " ")
+    ![Click Create](images/click-create22.png " ")
 
-18. Under **Create Authentication Scheme** Page, leave the settings to default and click **Next**.
+20. Under **Create Authentication Scheme** page, leave the settings to default and click **Next**.
 
     ![Create Authentication Scheme](images/create-auth1.png " ")
 
-19. In the **Authentication Scheme** enter the following and click **Create Authentication Scheme**.
-    Under **Name**:
-    - For **Name**, Enter **FB Authentication**.
-    - For **Scheme Type**, select **Social Sign-In**.  
+21. In the **Authentication Scheme**, enter/select the following:
 
-    Under **Settings**:
-    - For **Credential Store**, Enter **FB\_LOGIN\_DEMO**.
-    - For **Authentication Provider**, select **Facebook**.
-    - For **Scope**, Enter **email**.
-    - For **Username**, Enter **name**.
+    - Under Name:
+
+        - Name: **Google**
+
+        - Scheme Type: **Social Sign-In**
+
+    - Under Settings:
+
+        - Credential Store: **Google SignIn**
+
+        - Authentication Provider: **Google**
+
+        - Scope: **profile,email**
+
+        - Username: **email,name,roles**
+
+        Click **Create Authentication Scheme**.
 
     ![Define Authentication](images/create-auth2.png " ")
 
-20. Notice that a new **Authentication Scheme** you created is displayed as **FB Authentication - Current**.
+22. Click **Google** authentication, under **Login Processing**, select **Enabled** for **Switch in Session**. Do the same for **OCI** authentication as well.
 
-    ![Authentication scheme displayed](images/create-auth3.png " ")
+    ![Define Authentication](images/create-auth4.png " ")
 
-21. Run the application by navigating to **Online Shopping Application** and click **Run**.
+    ![Define Authentication](images/create-auth3.png " ")
 
-22. In the **User Interface**, click **Administration**.
+## Task 3: Enable Multiple Authentication in Online Shopping Application
 
-    ![Click Administration](images/run-app2.png " ")
+Providing multiple authentication options improves the flexibility and usability of your application. In this task, you will enhance the Online Shopping Application's login page by implementing a multi-authentication approach. Users will be able to choose between IAM authentication and Google sign-in. You will also customize the login page with buttons for each authentication type and apply styling for a polished user experience.
 
-23. Now, log in to the application using your **Facebook Credentials**.
+1. In your **Online Shopping Application**, navigate to **9999 - Login Page**.
 
-    ![Login into Facebook](images/fb-login1.png " ")
+    ![Define Authentication](images/login-page.png " ")
 
-24. You are now logged in to the **Online Shopping Application**. Check the user name on the top right of the **Navigation Bar**.  
+2. Right-click **Online Shopping Application** region, select **Create Sub-region**.
 
-    ![Check username on the top of the Navigation Bar](images/run-app3.png " ")
+    ![Define Authentication](images/create-sub-region.png " ")
 
-## Task 2: Creating and Using an Authorization Scheme
+3. In the Property Editor, enter/select the following:
 
-In this task, you create an **Authorization Scheme** to ensure only people entered as Team Members can log into the **Online Shopping Application**. You apply the authorization scheme to the application properties.
+    - Identification > Name: **Multi Authentication**
 
-1. Navigate to App Builder and select **Online Shopping Application**.
+    - Appearance > Template Options: Click **Use Template Defaults**
 
-    ![Select Online shopping application](images/navigate-to-osp.png " ")
+        - Header: **Hidden**
 
-2. In the application home page, click **Shared Components**.
+        Click **OK**
 
-    ![Navigate to Shared components](images/bavigate-to-sc.png " ")
+    ![Define Authentication](images/create-0btn2.png " ")
 
-3. Under Shared Components > Security, click **Application Access Control**.
+4. Right-click **Multi Authentication** sub-region, select **Create Button**.
 
-    ![Navigate to Application access control](images/click-access-control.png " ")
+    ![Define Authentication](images/create-btn1.png " ")
 
-4. Under **Roles**, Select **Add Role**.
+5. In the Property Editor, enter/select the following:
 
-    ![Select Add role under roles](images/add-role.png " ")
+    - Under Identification:
 
-5. In the **Role** Page, enter the following and click **Create Role**.
-    - For **Name**, Enter **Administrator**
-    - For **Static Identifier**, select **ADMINISTRATOR**
+        - Button Name: **IAM_Login**
 
-    ![Define name and static identifier](images/add-role1.png " ")
+        - Label: **IAM Authentication**
 
-6. In the **User Role Assignments**, Click **Add User Role Assignment**.
+    - Under Appearance:
 
-    ![Add User Role Assignment](images/assign-user1.png " ")
+        - Button Template: **Text with Icon**
 
-7. In the **User Assignment** Page, enter the following and click **Create Assignment**.
-    - For **User Name**, Enter **AUTHORIZED USER**.
-    - For **Application Role**, Check **ADMINISTRATOR** to **Yes**.
+        - Template Options > Use Template Defaults: Width > **Stretch**
 
-    ![Create Assignment](images/assign-user2.png " ")
+        Click **OK**.
 
-8. Navigate back to **Shared Components** and then select **Authorization Schemes**.
+        - Icon: **fa-oracle-o**
 
-    ![Select shared components](images/select-sc.png " ")
+    - Under Behavior:
 
-    ![Select Authorization Schemes](images/select-authorization.png " ")
+        - Action: **Redirect to Page in this Application**
 
-9. Under **Authorization Scheme**, Click **Create**.
+        - Target: Click **No Linked Defined**
 
-    ![Click Create](images/click-create11.png " ")
+            - Target > Page: **10000**
 
-10. For **Create Authorization Scheme**, Leave the settings to default and then click **Next**.
+            - Advanced > Request: **APEX_AUTHENTICATION=IAM**
 
-    ![Create Authorization Scheme](images/click-create12.png " ")
+        Click **OK**.
 
-11. In the **Details** section of Create Authorization Scheme, enter the following and click **Create Authorization Scheme**.
-    - For **Name**, Enter **Admin**.
-    - For **Scheme Type**, Select **Is In Role or Group**.
-    - For **Type**, select **Application Role**
-    - For **Name(s)**, Select **Administrator**.
-    - For **Identify error message displayed**, enter **You are not Authorized to view this.**
+    ![Define Authentication](images/iam-btn.png " ")
 
-    ![Define Authorization scheme](images/create-authorization1.png " ")
+6. Right-click **Multi Authentication** sub-region, select **Create Button**.
 
-12. Navigate to **Shared Components** and then under **Security**, Select **Security Attributes**.
+    ![Define Authentication](images/iam-btn1.png " ")
 
-    ![Navigate to Shared Components](images/navigate-to-sc1.png " ")
+7. In the Property Editor, enter/select the following:
 
-    ![Navigate to Security Attributes](images/navigate-to-sa.png " ")
+    - Under Identification:
 
-13. In the **Edit Security Attributes** Page, under **Authorization**, select **Admin** for **Authorization Scheme**. Click **Apply Changes**.
+        - Button Name: **Google_SignIn**
 
-    ![Select Admin for authorization scheme](images/select-authorization-scheme.png " ")
+        - Label: **Google Sign In**
 
-14. Navigate to the runtime environment (tab or window). Click Sign Out in the navigation bar (top right).
+    - Layout > Start New Row: **Toggle Off**
 
-15. Run the application by navigating to **Online Shopping Application** and click Run. In the User Interface, click **Administration**.
+    - Under Appearance:
 
-    ![Click Administration](images/login1.png " ")
+        - Button Template: **Text with Icon**
 
-16. Since your name is not **Authorized User**, verify the access denied message is displayed.
+        - Template Options > Use Template Defaults: Width > **Stretch**
 
-    ![Not Authorised to view](images/login2.png " ")
+        Click **OK**
+
+        - Icon: **fa-google**
+
+    - Under Behavior:
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: Click **No Linked Defined**
+
+            - Target > Page: **10000**
+
+            - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
+
+        Click **OK**
+
+    ![Define Authentication](images/google-btn1.png " ")
+
+    ![Define Authentication](images/google-btn2.png " ")
+
+8. Navigate to **Page 9999: Login Page**, update the following:
+
+    - Inline: Copy and paste the below CSS
+
+        ```
+        <copy>
+        span.t-Icon.t-Icon--left.fa.fa-oracle-o {
+        color: red;
+        }
+        span.t-Icon.t-Icon--left.fa.fa-google {
+        color: mediumslateblue;
+        }
+        </copy>
+        ```
+
+    ![Define Authentication](images/inline-css1.png " ")
+
+9. Click **Save and Run**.
+
+    > **Note:** If you get reader rights error while clicking on any authentication button, navigate to **User Interface Attributes** in shared components. Select **Security** tab and update **Authorization Scheme** to **- No application authorization required**.
+
+    ![Define Authentication](images/multi-auth1.png " ")
 
 ## Summary
-You now know how to create a Social Sign-in authentication scheme to enable Facebook Authentication
 
-You may now **proceed to the next lab**.
+In this lab, you have successfully implemented secure authentication mechanisms for your Oracle APEX application
+You now know how to create a Social Sign-in authentication scheme to enable Google and IAM Authentication. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## What's Next
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+In the next hands-on lab, you will learn to create and customize a Calendar page, a Tree page and a Map page with a custom background.
+
+## Acknowledgements
+
+- **Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, May 2025

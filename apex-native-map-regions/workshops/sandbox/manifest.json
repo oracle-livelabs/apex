@@ -1,0 +1,39 @@
+{
+    "workshoptitle": "Grabbing Live Wires: Plotting EV Charging Points with APEX Native Map Regions",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Initialize the LiveLab Environment",
+            "filename": "../../initialize-livelabs-environment/initialize-livelabs-environment.md"
+        },
+        {
+            "title": "Lab 2: Change Password and Start ORDS",
+            "filename": "../../change_pw/change_pw.md"
+        },
+        {
+            "title": "Lab 3: Prepare Database Objects",
+            "filename": "../../prepare-database-objects/prepare-database-objects.md"
+        },
+        {
+            "title": "Lab 4: Create and Prepare APEX Workspace",
+            "filename": "../../apex-prepare-workspace/apex-prepare-workspace.md"
+        },
+        {
+            "title": "Lab 5: Explore Native Map Region Capabilities",
+            "filename": "../../explore-native-map-regions/explore-native-map-regions.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

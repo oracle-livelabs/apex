@@ -2,13 +2,17 @@
 
 ## Introduction
 
-In this lab, you will do the final touch up of the app to improve the aesthetics. You will learn how to customize the CSS.
+In this lab, you will apply the final touches to enhance the app’s appearance. You will learn how to customize the CSS for a better user experience.
 
 Estimated Time: 5 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_gu1lhbr3)
 
 ### Objectives
 
 In this lab, you will:
+
 - Improve the aesthetics by using custom CSS
 - Enhance the appearance of a page item declaratively
 
@@ -18,58 +22,65 @@ In this lab, you will:
 
 ## Task 1: Add CSS to the page
 
-When we have liked a post we should see the Heart in RED. Also, if we are using this app on a small screen (like a mobile device) it would be better if the Add Post button was relocated to the bottom right of the Screen. We can do this with 2 small blocks of Inline CSS on the page level.
+When a post is liked, the heart icon should turn red. Additionally, on smaller screens, relocating the Add Post button to the bottom right will enhance usability. We can achieve both with two small blocks of Inline CSS at the page level.
 
-1.  Select **Page 1: Timeline** from the Rendering Tree and then in the Property Editor, proceed
-    to scroll down to the **CSS > Inline**.
+1. In the Rendering Tree, select **Page 1: Timeline** and enter the following in the Property Editor:
 
-2.  Copy and paste the following CSS into the **Inline** box:
+    - Under CSS:
+        - Inline: Copy and paste the following CSS into the **Inline** box
 
-    ```
-    <copy>
-        .user-has-liked {
-    color: red;
-    }
+            ```
+            <copy>
+            .user-has-liked {
+                color: red;
+            }
 
-    @media (max-width: 640px) {
-        .new-post-button {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 1000;
-        }
-    }
-    </copy>
-    ```
+            @media (max-width: 640px) {
+                .new-post-button {
+                    position: fixed;
+                    bottom: 24px;
+                    right: 24px;
+                    z-index: 1000;
+                }
+            }
+            </copy>
+            ```
+
     ![Property Editor](images/css.png)
 
 ## Task 2: Clean up the File Browse Page Item
 
-1.  Select **P1\_FILE\_BLOB** page item under the Post region. In the Property Editor, remove the Page Item **Label** from the **File Browse** Page Item by changing the following:
-    - Change **Appearance > Template** to **Hidden**
-    - Set the **Layout > Label Column Span** to 0.
+1. In the Rendering Tree, select Post region and click the **P1\_FILE\_BLOB** page item. In the Property Editor, enter/select the following:
 
-    ![Property Editor](images/hidden-col-span.png)
+     - Under Appearance:
 
-2.  Improve its alignment by checking the **Template Options > General > Stretch Form Item** to ON.
+          - Template: **Hidden**
 
-    ![Template Options Dialog](images/stretch-form.png)
+          - CSS Classes: **file-upload**
 
-3.  And finally, for CSS Classes enter **file-upload** and for icon select **fa-camera-retro**, as shown in the following screenshot:
+          - Icon: **fa-camera-retro**
 
-    ![Property Editor](images/appearance.png)
+        ![Property Editor](images/appearance-s.png)
 
-4. Voila! We have arrived at a working and significantly functional low-code APEX
-application. Save and Run the application.
+          - Under **Template Options**:
 
-    ![Running app](images/run-app.png)
+            - General: check the **Stretch Form Item** option. (This improves the alignment.)
 
+    ![Template Options Dialog](images/stretch-form-s.png =40%x*)
 
-    Send the URL to your mobile and try it out!
+    - Layout > Label Column Span : **0**
 
-    You may now **proceed to the next lab**
+    ![Property Editor](images/layout-s.png =30%x*)
 
-## **Acknowledgements**
+2. Voila! We have arrived at a working and significantly functional low-code APEX application. **Save and Run** the application.
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+    ![Running app](images/run-app-12.png)
+
+  You can also send the URL to your mobile and try it out!
+
+  You may now **proceed to the next lab**
+
+## Acknowledgements
+
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025

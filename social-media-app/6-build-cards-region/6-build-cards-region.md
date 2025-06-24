@@ -2,17 +2,19 @@
 
 ## Introduction
 
-In this lab, you learn to create the CARDS region that can query the data
-the way we need it, and configure the region attributes to suit our
-goals.
+In this lab, you will learn to create the CARDS region to display the posts and configure the region attributes.
 
 Estimated Time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_cmdi0d57)
 
 ### Objectives
 
 In this lab, you will:
+
 - Create the Cards region to display the posts
-- Configure the attributes of the Cards region to maych our design
+- Configure the attributes of the Cards region to match our design
 
 ### Prerequisites
 
@@ -20,76 +22,69 @@ In this lab, you will:
 
 ## Task 1: Create a Cards Region
 
-1. Navigate to the Rendering Tree and right-click on **Body**, and
-choose **Create Region**.   
+1. In the Rendering Tree, right click **Body**, and select **Create Region**.
 
-    ![Create region option](images/create-region.png)
+    ![Create region option](images/create-region-s.png)
 
-2. Update the following attributes in the Property Editor:
+2. In the Property Editor, enter/select the following
 
     - Under Identification:
-         - For Title, enter **Timeline**
-         - For Type, select **Cards**
 
-    ![Property Editor](images/title-type.png)
+         - Name: **Timeline**
 
-    - Under Source, for Type select **SQL Query**.
+         - Type: **Cards**
 
-3.  Clear the **SQL Query** that was automatically put into the SQL
-    Query box. The attributes should look like the following:
+    - Under Source:
 
+        - Type: **SQL Query**
 
-4.  Copy and paste the following **SQL** statement into that box and
-    *tab out* of it
+        - SQL Query: Copy and Paste the below code in the Code Editor:
 
-    ```
-    <copy>
-        select
-        p.id,
-        p.created_by AS user_name,
-        p.post_comment AS comment_text,
-        p.file_blob,
-        p.file_mime,
-        
-        apex_util.get_since(p.created) post_date,
+          ```
+           <copy>
+            select
+            p.id,
+            p.created_by AS user_name,
+            p.post_comment AS comment_text,
+            p.file_blob,
+            p.file_mime,
 
-        (
-            select count(*) from SM_REACTIONS smr 
-            where smr.post_id=p.id
-        ) as REACTIONS,
+            apex_util.get_since(p.created) post_date,
 
-        (
-            select 'user-has-liked' from SM_REACTIONS smr 
-            where smr.post_id=p.id and created_by=:APP_USER
-        ) USER_REACTION_CSS
+            (
+                select count(*) from SM_REACTIONS smr
+                where smr.post_id=p.id
+            ) as REACTIONS,
 
-        from SM_POSTS p 
+            (
+                select 'user-has-liked' from SM_REACTIONS smr
+                where smr.post_id=p.id and created_by=:APP_USER
+            ) USER_REACTION_CSS
 
-        order by p.created desc
-    </copy>
-    ```
+            from SM_POSTS p
 
-    And this is the final configuration for the **Region** tab:
+            order by p.created desc
+           </copy>
+          ```
+        Click **OK**
 
-    ![SQL expression in editor](images/sql-code.png)
+    ![Property Editor](images/title-type1.png)
 
-5. Scroll down on the list of Region attributes to the **Appearance**
-section:
+    ![Property Editor](images/sql_query.png =40%x*)
 
-    - In the Appearance > CSS Classes box, put **t-Chat**
+    - Appearance > CSS Classes box: **t-Chat**
 
-    - Under **Advanced** section, for **Static ID** specify **timeline**.
+    - Advanced > Static ID: **timeline**
 
-    ![Property editor](images/appearance.png)
+    **Save** the app.
 
-    We're not quite done with this region yet. We have to configure
-which columns from the query results will be used on which parts of the
-CARDS themselves.
+    ![Property editor](images/appearance1.png)
+
+    Next, we need to configure which columns from the query results will be used in different parts of the CARDS region.
 
 ## Task 2: Configure the Attributes of the Cards Region
 
-1. In the Property Editor, select the **Attributes** tab, and make
-the following changes:
+1. In the Property Editor under the Timeline region, enter/select the following in the **Attributes** tab:
 
     - Card > Primary Key Column 1: **ID**
 
@@ -97,50 +92,49 @@ the following changes:
 
     - Subtitle > Column: **POST_DATE**
 
-    ![Attributes in Property Editor](images/attributes-1.png)
+    ![Attributes in Property Editor](images/attributes-11.png)
 
     - Body > Column: **COMMENT_TEXT**
 
-    - Icon and Badge > Icon Source: **Initials**
+    - Under Icon and Badge:
 
-    - Icon Column: **USER_NAME**
+        - Icon Source: **Initials**
 
-    ![Attributes in Property Editor](images/attributes-2.png)
+        - Icon Column: **USER_NAME**
 
-    And finally (for this Region), scroll down to the Media section, and set
-these attributes:
+    ![Attributes in Property Editor](images/attributes-21.png)
 
-    - Source: **BLOB column**
+    And finally (for this Region), scroll down to the Media section, and enter/set the following attributes:
 
-    - BLOB Column: **FILE_BLOB**
+    - Under Media:
 
-    - Position: **First**
+        - Source: **BLOB column**
 
-    - Appearance: **Widescreen**
+        - BLOB Column: **FILE_BLOB**
 
-    - Sizing: **Cover**
+        - Position: **First**
 
-    - CSS Classes: enter **selectDisable**
+        - Appearance: **Widescreen**
 
-    - Copy and paste **&COMMENT_TEXT.** (including the period!)
-    into the **Image Description** box
+        - Sizing: **Cover**
+
+        - CSS Classes: **selectDisable**
+
+        - Image Description: **&COMMENT_TEXT.** (including the period!)
 
     - BLOB Attributes > Mime Type Column: **FILE_MIME**
 
-    These attributes should look like this:
+    ![Attributes in Property Editor](images/attributes-31.png)
 
-    ![Attributes in Property Editor](images/attributes-3.png)
+2. Now, the region is completely configured. Click **Save and Run**.
 
-2. And this completes the region. Click **Save and Run**.
+     If you made a post earlier, you should now see your image and your comment text!
 
-    If you made a post earlier you should now see your image and your
-comment text:
-
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app1.png)
 
 You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025

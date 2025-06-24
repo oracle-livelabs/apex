@@ -2,181 +2,244 @@
 
 ## Introduction
 
-In this Hands-on-lab, you will add Calendars, Charts, Tree pages and Maps to Demo Projects application and to Online Shopping Application.
+In this hands-on lab, you will enhance your Oracle APEX applications by adding new pages, such as Calendars, Charts, Tree Pages, and Maps. These additions will bring dynamic functionality to your applications, enabling better data visualization and interactivity. By working on the Demo Projects and Online Shopping applications, you will gain practical experience in designing and customizing essential application components.
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
+
+### Objectives
+
+By the end of this lab, you will be able to:
+
+- Create and customize a Calendar page for tracking events and tasks.
+
+- Build a Form page and link it to other pages.
+
+- Integrate drag-and-drop functionality into the Calendar.
+
+- Create and configure a Tree Page for hierarchical data visualization.
+
+- Implement a Map Page to display geographical data.
 
 ### Downloads
 
-- Did you miss out on trying the previous labs? Don’t worry! You can download the application from **[here](files/demo-projects-4.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
+
+- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol14.sql)**
 
 ## Task 1: Create a Calendar
 
-1. Navigate to **App Builder** and in the **Home Page**, click **Demo Projects**. application.
+Calendars provide an intuitive way to visualize date-related data, such as tasks and project timelines. In this task, you will create a Calendar Page in the Demo Projects application. You’ll also customize its appearance to match your application’s design standards.
+
+1. Navigate to **App Builder** and select **Demo Projects**. application.
 
     ![Navigate to App Builder](images/navigate-to-dp.png " ")
 
     ![Select Demo Projects](images/navigate-to-dp1.png " ")
 
-2. In the application home page, click **Create Page**.
+2. On the application home page, click **Create Page**.
 
     ![Click Create Page](images/create-calendar-page1.png " ")
 
-3. Select **Calendar** page type.
+3. Select **Calendar** as a page type.
 
-    ![Select Calender](images/create-calendar-page2.png " ")
+    ![Select Calender](images/create-calendar-page3.png " ")
 
-4.  In the **Create Calendar** enter the following and click **Next**.
+4. In the **Create Calendar**, enter/select the following:
 
-    Under **Page Definition**:
-    - For **Name**, Enter **Calendar**.
+    - Under Page Definition:
 
-    Under **Data Source**:
-    - For **Table/View Name**, select **DEMO_PROJECTS**.
+        - Page Number: **5**
 
-    Under **Navigation**:
-    - For **Breadcrumb** and **Navigation**, Set it to **Yes**.
+        - Name: **Calendar**
 
-    ![Create Calender](images/create-calendar-page3.png " ")
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
 
-5. In the **Create Calendar** page, enter the following and click **Create Page**.
-    - For **Display Column**, enter **TASK_NAME**.
-    - For **Start Date Column**, enter **START_DATE**.
-    - For **End Date Column**, enter **END_DATE**.
+    Click **Next**.
 
-    ![Create Calender2](images/create-calendar-page4.png " ")
+    ![Create Calender](images/create-calendar-page4.png " ")
 
-6. Click **Save** and **Run Page**. Log in to the application with your credentials.
+5. In the **Create Calendar** page, enter/select the following:
 
-7. In the Developer Toolbar, click **Edit Page \<n\>**.
+    - Display Column: **TASK_NAME**
+
+    - Start Date Column: **START_DATE**
+
+    - End Date Column: **END_DATE**
+
+    Click **Create Page**
+
+    ![Create Calender2](images/create-calendar-page5.png " ")
+
+6. Click **Save** and **Run**. Log in to the application with your credentials.
+
+    ![Click Edit Page](images/save-run.png " ")
+
+7. In the Developer Toolbar, click **Edit Page 5**.
 
     ![Click Edit Page](images/view-page1.png " ")
 
-8. The Calendar page displays the **region title Calendar**, and also has a border around the region. In the Rendering tree, locate the Calendar region. Click **Calendar**. In the **Property Editor**, under **Appearance**, click the **Template Options** button.
+8. The Calendar page displays the Region title as Calendar and has a border around the region. In the **Rendering** tab, navigate to **Calendar** region. In the Property Editor, enter/select the following:
+
+    - Appearance > Template Options: Click **Use Template Defaults**
+
+        - Header: **Hidden but accessible**
+
+        - Style: **Remove UI Decoration**
+
+         Click **OK**.
 
     ![Edit Template Options](images/edit-calendar1.png " ")
 
-9. In the Template Options dialog, input the following:
-
-    - Header - select **Hidden but accessible**  
-
-    - Style - select **Remove UI Decoration**  
-
-    Click **OK**. Then **Save** and **Run** the runtime environment to see the changes.
-
     ![Click Ok](images/edit-calendar2.png " ")
 
-## Task 2: Create a Form page on DEMO_PROJECTS Tables.
+9. Click **Save** and **Run**.
 
-In this Lab, you will create a Form Page on DEMO_PROJECTS Tables, then in the next labs, you will link the form to the Calendar Page.
+## Task 2: Create a Form page on DEMO_PROJECTS Tables
 
-1. Navigate to **App Builder** and in the **Home Page**, click **Demo Projects**. application. Then, click **Create Page**.
+Forms are essential for capturing user input and updating database records. In this task, you will create a Form Page for the DEMO_PROJECTS table. This form will later be linked to the Calendar to allow users to create and edit calendar events.
 
- ![Click Create Page](images/create-form-page1.png " ")
+1. Navigate to Page Designer toolbar, click **(+ v)** icon and select **Page**.
 
-2. Select **Form** page type.
+    ![Click Create Page](images/create-form-page1.png " ")
 
-  ![Select Form](images/create-form-page2.png " ")
+2. Select **Form**.
 
-3. In the **Create Form** enter the following and click **Next**.
+   ![Select Form](images/create-form-page2.png " ")
 
-    Under **Page Definition**:
-    - For **Page Number**, Enter **9**.
-    - For **Name**, Enter **Form on Projects**.
-    - For **Page Mode**, Select **Modal Dialog**.
+3. In the **Create Form**, enter/select the following:
 
-  Under **Data Source**:
-    - For **Table/View Name**, select **DEMO_PROJECTS**.
+    - Under Page Definition:
 
-  ![Select Modal Dialog](images/create-form-page3.png " ")
+        - Page Number: **9**
 
-4. In the **Create Form** page, enter the following and click **Create Page**.
-    - For **Primary Key Column 1**, Select **ID (Number)**.
+        - Name: **Form on Projects**
+
+        - Page Mode: **Modal Dialog**
+
+    - Data Source > Table/View Name: **DEMO_PROJECTS**
+
+    Click **Next**.
+
+   ![Select Modal Dialog](images/create-form-page3.png " ")
+
+4. Leave everything as default and click **Create Page**.
 
     ![Click Create page](images/create-form-page4.png " ")
 
-## Task 3: Customize the Calendar Page.
+## Task 3: Customize the Calendar Page
 
-In this lab, You will link the form page you created in Task 2 with the Calendar page.
+In this task, you’ll link the Form Page created in Task 2 to the Calendar, enabling users to create and edit tasks directly from the Calendar interface. You will also enable drag-and-drop functionality for seamless task updates.
 
-1. Navigate to **Calendar** in the runtime environment and then click **Page <n>**
+1. Navigate to **Page Finder** in the page designer toolbar and select page **5**.
 
-  ![Navigate to Calender](images/customizing-calendar1.png " ")
+   ![Navigate to Calender](images/customizing-calendar1.png " ")
 
-2. You need to add the **Create** and **View / Edit** links. In the Rendering tree, locate and select the **Calendar** region. In the **Property Editor**, Click **Attributes**. Then, Under Settings, Select **ID** for **Primary Key** and then locate **Create Link** and click **No Link Defined**.
+2. To add the **Create** and **View / Edit** links, in the Rendering tree, navigate to **Calendar** region.
 
-  ![Customize calender in page designer](images/customizing-calendar2.png " ")
+3. In the Property Editor, click **Attributes** and enter/select the following:
 
-3. In the Link Builder – Create Link dialog, select **9** for Page, and enter **9** for **Clear Cache**. Click **OK**.
+    - Under Settings:
 
-  ![Edit Calender](images/customizing-calendar3.png " ")  
+        - Primary Key Column: **ID**
 
-4. In the Property Editor, locate **View/Edit Link** and click **No Link Defined**.
+        - Create Link: Click **No Link Defined**.
 
-5. In the Link Builder – View / Edit Link dialog, input the following:
-    - Page - select **9**
-    - Name - select **P9_ID**
-    - Value - select **ID** or enter **&ID**.
-    - Clear Cache - enter **9**  
+            - Page: **9**
 
-  Click **OK**.
+            - Clear Cache:**9**
 
-  ![Add Link](images/customizing-calendar6.png " ")  
+            Click **OK**
 
-6. You can enable calendar drag and drop by using the component attribute **Drag and Drop**. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs a SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events primary key value as well as the new start and new end timestamp.  
+    - View/Edit Link: Click **No Link Defined**.
 
-    Under **Settings**:
-    - For **Drag and Drop**, Set it to **Yes**.
-    - For **Drag and Drop PL/SQL Code**, Copy and paste the below code.
-    ```
-    <copy>
-    begin
-    update DEMO_PROJECTS
-     set start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
-    end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
-     where ID = :APEX$PK_VALUE;
-     end;
-     </copy>
-     ```
-    ![Enable drag nad drop](images/customizing-calendar5.png " ")  
+        - Page: **9**
 
-7. Click **Save** and **Run Page**.
-Notice that you can now drag and drop tasks in the calendar. In the Developer Toolbar, click **Application< n >**.
+        - Set Items:
+
+            | Name | Value |
+            |----- | ----- |
+            | P9_ID | ID |
+
+        - Clear Cache: **9**
+
+        Click **OK**.
+
+   ![Add Link](images/customizing-calendar6.png " ")
+
+4. Use the component attribute **Drag and Drop** to enable the calendar to drag and drop. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then, enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs an SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events' primary key value and the new start and end timestamp.
+
+    - Under Settings:
+
+        - Drag and Drop: **Toggle On**
+
+        - Drag and Drop PL/SQL Code: Copy and paste the below code.
+            ```
+            <copy>
+            begin
+                update DEMO_PROJECTS
+            set
+                start_date = to_date(:APEX$NEW_START_DATE,'YYYYMMDDHH24MISS'),
+                end_date = to_date(:APEX$NEW_END_DATE,'YYYYMMDDHH24MISS')
+            where
+                ID = :APEX$PK_VALUE;
+            end;
+            </copy>
+            ```
+
+    ![Enable drag nad drop](images/customizing-calendar5.png " ")
+
+5. Click **Save** and **Run**.
+Notice that you can now drag and drop tasks in the calendar.
 
     ![Customized Calender](images/customized-calendar1.png " ")
 
-## Task 4: Create and Customize a Tree Page.
+    ![Customized Calender](images/customized-calendar7.png " ")
 
-In this hands-on lab, you create the **Employee** Tree by first creating a **blank page** and then adding a **Tree region**.
+    ![Customized Calender](images/customized-calendar8.png " ")
 
-1. First, create a blank page in the **Demo Projects** application. In the application home page, click **Create Page**.
+## Task 4: Create and Customize a Tree Page
 
-  ![Click Create Page](images/create-tree1.png " ")
+Tree Pages are an excellent way to display hierarchical data, such as organizational structures or project dependencies. In this task, you’ll create a Tree Page to visualize employee relationships in the Demo Projects application. You will also learn to configure the tree layout and customize its appearance for optimal user experience.
+
+1. Create a blank page in the **Demo Projects** application. Navigate to Create **(+ v)** in the page designer toolbar and select **Page**.
+
+   ![Click Create Page](images/create-tree1.png " ")
 
 2. Select **Blank Page**.
 
-  ![Select Blank page](images/create-tree2.png " ")
+   ![Select Blank page](images/create-tree2.png " ")
 
-3. Enter **Tree Page** for **Name** and then Click **Create Page**.
+3. On **Create Blank Page**, enter/select the following:
 
-  ![Define Page](images/create-tree3.png " ")
+    - Page Number: **7**
 
-4. Now, you create a **Tree region**. In the page designer, under Rendering, right-click **Body** and select **Create Region**.
+    - Name: **Tree Page**
 
-  ![Create Region](images/create-tree4.png " ")
+    Click **Create Page**.
 
-5. In the property editor, enter the following:  
-    Under **Identification**:
-    - For **Name**, Enter **Tree**
-    - For **Type**, Select **Tree**
+    ![Define Page](images/create-tree3.png " ")
 
-    Under **Source**:
-    - For **Type**, Select **SQL Query**
-    - For **Sql Query**, Copy the following code and paste it.
+4. Now, you create a **Tree region**. In the page designer, under **Rendering** tab, right-click **Body** and select **Create Region**.
 
-    ```
-    <copy>
-    select case when connect_by_isleaf = 1 then 0
+    ![Create Region](images/create-tree4.png " ")
+
+5. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Tree**
+
+        - Type: **Tree**
+
+    - Under Source:
+
+        - Type: **SQL Query**
+
+        - Sql Query: Copy the following code and paste it.
+
+        ```
+       <copy>
+       select case when connect_by_isleaf = 1 then 0
              when level = 1             then 1
              else                           -1
         end as status,
@@ -185,50 +248,60 @@ In this hands-on lab, you create the **Employee** Tree by first creating a **bla
         null as icon,
         "EMPNO" as value,
         "ENAME" as tooltip
-     from EBA_DEMO_IR_EMP
-     start with "MGR" is null
-     connect by prior "EMPNO" = "MGR"
-     order siblings by "ENAME"
-    </copy>
-    ```
-    ![Define Region](images/create-tree5.png " ")
+        from EBA_DEMO_IR_EMP
+        start with "MGR" is null
+        connect by prior "EMPNO" = "MGR"
+        order siblings by "ENAME"
+       </copy>
+       ```
 
-6. In the page designer, navigate to **Appearance** and then click the **Template Options** button.
+    - Under Appearance > Template Options: Click **Use Template Defaults**
+
+        - General: Check **Remove Body Padding**
+
+        - Header: **Hidden but accessible**
+
+        - Style: **Remove UI Decoration**
+
+        Click **OK**.
+
+    ![Define Region](images/create-tree5.png " ")
 
     ![Edit Template options](images/create-tree7.png " ")
 
-7. In the Template Options dialog:
-    - General: Select the **Remove Body Padding** check box.
-    - Header: Select **Hidden but accessible**
-    - Style: Select **Remove UI Decoration**
-    Click **OK**.
-
     ![Click Ok](images/create-tree8.png " ")
 
-8. In the **Property Editor**, Select **Attributes**. Navigate to **Settings** and select / enter the following:
-    - Node Label Column: **TITLE**
-    - Node Value Column: **VALUE**
-    - Hierarchy: **Not Computed**
-    - Node Status Column: **STATUS**
-    - Hierarchy Level Column: **LEVEL**
-    - Tooltip: **Database Column**
-    - Tooltip Column: **TOOLTIP**
+6. In the **Property Editor**, select **Attributes** and enter/select the following:
 
-    Then, click **Save** and **Run Page**.
+    - Under Settings:
 
-    ![Click Save and Run](images/create-tree9.png " ")
+        - Node Label Column: **TITLE**
 
-9. The **Tree Page** is now displayed.
+        - Node Value Column: **VALUE**
 
-    ![](images/run-tree2.png " ")
+        - Hierarchy: **Not Computed**
+
+        - Node Status Column: **STATUS**
+
+        - Hierarchy Level Column: **LEVEL**
+
+        - Tooltip: **Database Column**
+
+        - Tooltip Column: **TOOLTIP**
+
+7. Click **Save** and **Run Page**.
+
+   ![Click Save and Run](images/create-tree9.png " ")
+
+8. The **Tree Page** is now displayed.
+
+    ![run tree page](images/run-tree2.png " ")
 
 ## Summary
-You now know how to add Calendars and Tree pages.
 
-You may now **proceed to the next lab**.
+In this lab, you successfully created and customized a Calendar Page to display tasks and events, providing an intuitive way to manage date-related data. You also built a Form Page and linked it to the Calendar, enabling seamless task creation and editing. Additionally, you enabled drag-and-drop functionality in the Calendar, making it easier to update tasks interactively. Furthermore, you designed a Tree Page to represent hierarchical data, such as employee relationships or project dependencies. By completing this lab, you gained practical skills in building and customizing interactive pages in Oracle APEX, enhancing both the usability and functionality of your applications. You may now **proceed to the next Lab**.
 
-## Acknowledgments
+## Acknowledgements
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Product Manager, May 2023
+- **Author** - Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024

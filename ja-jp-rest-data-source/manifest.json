@@ -1,0 +1,35 @@
+{
+  "workshoptitle": "Oracle Autonomousクラウド・サービスのRESTデータ・ソースを使用したアプリの構築",
+  "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+    {
+      "title": "はじめに",
+      "filename": "0-workshop-intro-and-setup/0-workshop-intro-and-setup.md"
+    },
+    {
+      "title": "ラボ1: APEX Workspaceのサインアップ",
+      "filename": "../ja-jp-existing-tables/sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "ラボ2: データベース・オブジェクトのREST有効化",
+      "filename": "2-rest-enabling/2-rest-enabling.md"
+    },
+    {
+      "title": "ラボ3: RESTデータ・ソースの定義",
+      "filename": "3-defining-rest-data-source/3-defining-rest-data-source.md"
+    },
+    {
+      "title": "ラボ4: ページの作成",
+      "filename": "4-creating-pages/4-creating-pages.md"
+    },
+    {
+      "title": "ラボ5: LOVの定義",
+      "filename": "5-defining-lov/5-defining-lov.md"
+    },
+    {
+        "title": "ヘルプ",
+        "description": "一般的な問題の解決策とライブ・ヘルプを受けるための手順",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

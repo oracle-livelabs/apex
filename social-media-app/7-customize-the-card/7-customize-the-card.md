@@ -2,13 +2,17 @@
 
 ## Introduction
 
-In this lab, you will learn to customize the card in order to add a reaction button and a delete button for a user to like a post or delete a post respectively.
+In this lab, you will customize the CARDS region by adding a reaction button and a delete button, allowing users to like or delete a post.
 
 Estimated Time: 5 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_53khevkr)
 
 ### Objectives
 
 In this lab, you will:
+
 - Create a Like button for the user to react to a post
 - Create a Delete button to delete a post
 
@@ -16,103 +20,98 @@ In this lab, you will:
 
 - Completion of workshop through Lab 6
 
-## Task 1 : Create a Like Button
+## Task 1: Create a Like Button
 
-The **Like** button will display the current count of likes next to a heart
-icon. The user will be able to see the number of likes in total, and they will be able to click the button and add their
-like to the post. If the user has already liked the post, the effect of
-clicking it again will remove the like. 
+The **Like** button will show a heart icon along with the total number of likes. Users can click the button to add their like to the post. If they have already liked it, clicking again will remove their like.
 
-1.  In the rendering tree under the **Timeline** Cards Region, right-click on **Actions** and choose
-    **Create Action**.
+1. In the Rendering Tree under the **Timeline** Cards Region, right click on **Actions** and select **Create Action**
 
-2.  You will see a new sub-entry item titled **Button** and you can
-    select it to see the properties on the right.
+    ![Create Action](images/create-action-s.png)
 
-3.  Copy and paste **&REACTIONS.** (including the period) into
-    the **Identification > Label** box. This is called APEX string
-    substitution syntax, and it will render the count of reactions as
-    the Label for this button, on each post. The **REACTIONS** column is
-    defined in the query for this CARDS Region.
+2. You will see a new sub-entry item titled **Button** and you can select it to see the properties on the right.
 
-4.  We now need this button to have a URL-link that can be hooked up to
-    javascript later, so that the database operation can be performed.
-    Set the **Link > Type** to **Redirect to URL**.
+3. In the Property Editor, enter/select the following:
 
-5.  Now, click the **Target** button so that you can *copy and paste*
-    **#action$like?id=&ID.** (including the period) into the
-    URL box, and click OK.
+    - Identification > Label: **&REACTIONS.** (including the period).
 
-6.  Next, we want to configure the **Appearance** of this button by
-    setting the **Display Type** to **Text with Icon** and copying
-    and pasting **fa-heart &USER\_REACTION\_CSS.** (including
-    the period) into the **Icon** box. The **USER\_REACTION\_CSS** column
-    is defined in the query for this CARDS region.
+        This is called APEX string substitution syntax, and it will render the count of reactions as the Label for this button, on each post.
 
-7.  For the **CSS Classes** property, enter **js-heart-button** which will be used by our Dynamic
-    Action JavaScript later.
+        *Note: The REACTIONS column is defined in the query for this CARDS Region.*
 
-    These properties should now look as follows:
+    - Under Link:
+        - Type: **Redirect to URL**.
+
+            We need the LIKE button to have a URL that can be linked to javascript later, so that the database operation can be performed.
+
+        - Target > URL: **#action$like?id=&ID.** (including the period)
+
+            Click **OK**.
+
+    ![Redirect URL](images/redirect_like.png =50%x*)
+
+    - Under Appearance:
+
+        - Display Type: **Text with Icon**
+
+        - Icon: **fa-heart &USER\_REACTION\_CSS.** (including the period). The **USER\_REACTION\_CSS** column is defined in the query for this CARDS region
+
+        - CSS Classes : **js-heart-button**
+
+    Click **Save**.
 
     ![Property Editor](images/button-properties.png)
 
-    Don't run the app just yet -- as the button will generate a javascript
-error because we haven't added that code to the app to make it work.
-Since we are creating another button, we'll do that after the next step.
+    If you run the app now, the button will cause a JavaScript error because the necessary code hasn’t been added yet. We will fix this after creating the DELETE button.
 
 ## Task 2: Create a Delete Button
 
-Similar to the previous task, we want to create another button that will be used for Deleting posts. We'll add a condition to this
-button that only displays for posts that belong to the logged in user:
+Similar to the previous task, we will create another button for deleting posts. This button will have a condition to ensure that it is only displayed for posts belonging to the logged-in user.
 
-1.  Right-click the **Timeline > Actions** entry in the rendering
-    tree, and choose **Create Action**.
+1. In the Rendering tree under **Timeline**, right click on Actions, and select **Create Action**.
 
-2.  In the Property Section, update the following attributes:
-    - Under the **Action** tab, set the **Label** to **Delete**.
+2. In the Property Editor, update the following attributes:
 
-    - Under **Layout > Position**, choose **Secondary** (so that it's on
-    the right side of the card)
+    - Action > Label: **Delete**
 
-    - Under **Link**, change the **Type** to **Redirect to URL**.
+    - Layout > Position: **Secondary** (This ensures that the button is displayed on the right side of the card)
 
-    - Click on the **Target** button and enter
-    **#action$delete?id=&ID.** and then click on the **OK**.
+    - Under Link:
+        - Type: **Redirect to URL**
 
-    - In the **Appearance** section, change the **Display Type** to **Icon** and for Font-APEX CSS class, enter 
-    **fa-trash-o**.
+        - Target > URL: **#action$delete?id=&ID.**
 
-    - Finally, lets define the **Server-side condition** that controls
-    whether or not this **button** shows up per card by setting the
-    **Type** to **Expression**, and the **Language** to **PL/SQL**.
+        Click **OK**.
 
-    - Under **Server-side conditions**, for **PL/SQL expression**, enter **:USER\_NAME=:APP\_USER**
-    
-    This expression will compare the query column value returned to
-    the currently signed-in APEX user. This colon-prefixed "variable"
-    syntax is called "Bind Variable Syntax" in PL/SQL. If it evaluates
-    to true (for each row or Card) then APEX will render the **Button**,
-    otherwise it won't.
+    ![Redirect URL](images/redirect_url.png =50%x*)
 
-    The result of these steps should look like the following:
+    - Under Appearance:
 
-    ![Property Editor](images/button-action.png)
+        - Display Type: **Icon**
+
+        - Icon: **fa-trash-o**
+
+    - Under Server-side condition:
+
+        - Type: **Expression**
+
+        - PL/SQL expression: **trim(:user\_name)=trim(:APP\_USER)**
+
+        This Server-side condition controls whether or not this **button** shows for a card. The expression will compare the query column value returned to the currently signed-in APEX user. The colon-prefixed "variable" syntax is called the "Bind Variable Syntax" in PL/SQL. If it evaluates to true (for each row or Card) then APEX will render the **Button**, otherwise the button is not visible.
+
+    Click **Save**.
+
+    ![Property Editor](images/button-action1.png)
 
 ## Task 3: Add Javascript to the Page for the Card Buttons
 
-In this task we will provide the APEX page with the custom javascript
-that will be invoked by the "URL link" from the Cards button link
-targets, to the Dynamic actions that we will create in Lab 8.
+In this task, we will provide the APEX page with the custom javascript that will be invoked by the "URL" from the Card button target link, to the Dynamic actions that we will create in Lab 8.
 
-1.  Select the **Page 1: Timeline** entry in the **Rendering Tree**
-    and review the attributes for the **Page** in the Property section
-    on the right. Scroll down to **Execute when Page Loads** section,
-    which is currently empty.
+1. In the Rendering Tree, select the **Page 1: Timeline** entry and review the attributes for the **Page 1:Timeline** in the Property editor on the right.
 
-2.  *Copy and Paste* this javascript code into **Execute when Page Loads** box:
+2. Under the Javascript section, For: **Execute when Page Loads**, enter the following javascript code:
 
     ```
-    <copy>
+     <copy>
         apex.actions.add([{
         name: "like",
         action: (event, element, args) => {
@@ -126,69 +125,51 @@ targets, to the Dynamic actions that we will create in Lab 8.
             apex.event.trigger(document, 'action-delete');
             }
         }]);
-    </copy>
+     </copy>
     ```
 
     ![Property Editor](images/js-code-1.png)
 
     Open the Code Editor to see the entire script.
 
-    ![Property Editor](images/code-editor.png)
-    
-    ![Code Editor](images/js-code-2.png)
+    ![Code Editor](images/js-code-2.png =60%x*)
 
-    Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created
-yet.
+    Notice that the code references a Page Item, **P1\_ACTION\_ID** with a squiggly underline, which we have not created yet.
 
     ![code editor](images/js-code-3.png)
 
-3. We need this Page Item **P1\_ACTION\_ID** to be on the page so that this
-javascript can store the particular CARD **ID** when a user clicks
-either buttons, which in turn, will execute either the **like** or the
-**delete** operations from the URL link targets. This is a design
-pattern using a single APEX Javascript API call (on page load) with an
-array of multiple code blocks as parameters. Each respective javascript
-block will then in-turn call a custom event, which we'll configure our
-Dynamic Actions to respond to in the next task.
+    We need the **P1\_ACTION\_ID** page item to be present on the page so that JavaScript can store the specific CARD ID when a user clicks either the **Like** or **Delete** button. This ID will then be used to execute the corresponding operation through the URL link targets.
 
+    This follows a design pattern where a single APEX JavaScript API call (on page load) includes an array of multiple code blocks as parameters. Each JavaScript block will then trigger a custom event, which we will configure our Dynamic Actions to respond to in the next task.
 
+3. To create and configure **P1\_ACTION\_ID** Page Item, in the Rendering Tree right click **Timeline** Cards Region and select **Create Page Item**.
 
-4.  To create and configure **P1\_ACTION\_ID** Page Item, right-click on the **Timeline** Cards Region in the **Rendering Tree** and choose **Create Page Item**.
+    ![Create page item option](images/create-page-item4.png " ")
 
-    ![Create page item option](images/create-page-item.png)
+4. In the Property Editor:
 
-5.  APEX will default set **Page Item** > **Name** with the Prefix of
-    **P** and the **Page Number** followed by an underscore (**\_**),
-    and **NEW** in this case, as **P1\_NEW** -- we want to edit this name
-    to be **P1\_ACTION\_ID** in the **Page Item > Identification > Name** field.
+     - Under Identification:
+          - Name: **P1\_ACTION\_ID**
 
-6.  We also want to change the **Type** to **Hidden**
+            *Note: APEX will set **Page Item** > **Name** by default with the prefix of **P**, the **Page Number**, followed by an underscore (**_**), and **NEW**; in this case, as **P1\_NEW**.*
 
-7.  And, finally set the **Settings > Value Protected** option to
-    **OFF**.
-    
-    ![Property Editor](images/value-protected.png)
+          - Type: **Hidden**
 
-8. We need to unprotect this hidden **Page Item** because we'll be
-writing to it via our Javascript.
+     - Settings > Value Protected: **Toggle Off**
 
-    Now, let's go back and select the **Page 1: Timeline** Rendering Tree
-entry, and open up the code editor again to see the javascript we copied
-and pasted earlier:
+    ![Property Editor](images/value-protected1.png " ")
 
-    ![code editor](images/code-editor-2.png)
+5. Now in the Rending tree, navigate back to **Page 1: Timeline** and open the Code Editor to review the JavaScript we previously copied and pasted. The editor should look clean, with no errors or concerns!
 
-    The code editor looks clean with no concerns!
+    ![code editor](images/code-editor-2.png " ")
 
-9. **Save and Run** the page to see how the app is shaping up, granted, this
-doesn't look to be as huge a leap visually, but functionally, we're
-almost there!
+6. **Save and Run** the page to see how the app is shaping up. Functionally, we're almost there!
 
-    ![Running app](images/run-app.png)
+    ![Running app](images/run-app-1.png =50%x*)
 
 You may now **proceed to the next lab**
 
-## **Acknowledgements**
+## Acknowledgements
 
- - **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; 
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, March 2023
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025

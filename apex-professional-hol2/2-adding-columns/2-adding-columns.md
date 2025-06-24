@@ -2,92 +2,102 @@
 
 ## Introduction
 
-The **PRODUCTS** table includes some columns such as image, price, and details. But there are other characteristics that customers would appreciate knowing about a  product, such as color, type of clothing, and department. In this lab, you will add these columns to the Products table.
+The **PRODUCTS** table includes columns such as image, price, and details. However, customers would appreciate knowing other characteristics about a product, such as color, type of clothing, and department. In this lab, you will add these columns to the Products table.
 
-Since many products will share the same colors, clothing type, and department, to avoid data redundancy it is best practise to create three additional tables to store the unique values of color, type, and department data. Instead of creating these three tables for yourself, you'll use the **Create Lookup Table** feature.
-
-In this lab, you learn how to add these three new columns to the **PRODUCTS** table and then create lookup tables for those new columns.
+Since many products will share the same colors, clothing type, and department, it is best practice to create three additional tables to store the unique values of color, type, and department data to avoid data redundancy. Instead of creating these three tables, you'll use the **Create Lookup Table** feature.
 
 Estimated Time: 10 minutes
 
-<!--
-Watch the video below for a quick walk through of the lab.
-test comment
-[](youtube:klrFD971TtI)-->
-
 ### Objectives
+
 In this lab, you will:
-- Add new columns to the existing Products table
-- Populate the new columns
-- Create lookup tables
 
-## Task 1: Add Columns to the Products Table
+- Add new columns to the existing Products table.
 
-1. From the APEX Main Menu, click **SQL Workshop**.
+- Populate the new columns.
 
-2. Click **Object Browser**.
+- Create lookup tables.
 
-    ![Oject Browser](images/navigate-to-object-browser1.png " ")
+## Task 1: Add Columns to the Products and Order Table
 
-3. Navigate to **PRODUCTS** Table. Click **Add Column** button.
+1. From the APEX workspace home page, select the down arrow next to **SQL Workshop**, select **Object Browser**.
+
+    ![Object Browser](images/navigate-to-object-browser1.png " ")
+
+2. Under **Tables**, select **PRODUCTS** and click **+ Add Column**.
 
     ![Add Column](images/products-add-column1.png " ")
 
-4. For Color column, enter the following:
+3. To create the **Color** column, enter/select the following:
 
-    * Column - enter **COLOR**
+    - Column: **COLOR**
 
-    * Data Type - select **VARCHAR2**
+    - Data Type: **VARCHAR2**
 
-    * Length - enter **200**.  
+    - Length: **200**
 
-    Click **Apply**.
+     Click **Apply**.
 
     ![Add Column - Colors](images/add-color-column.png " ")
 
-5. Click **Add Column** button.
+4. To create the **Department** column, click **+ Add Column** and enter/select the following:
 
-6.  For Department column, enter the following:
+    - Column: **DEPARTMENT**
 
-    * Column - enter **DEPARTMENT**
+    - Data Type: **VARCHAR2**
 
-    * Data Type - select **VARCHAR2**
+    - Length: **200**
 
-    * Length - enter **200**.
-
-    Click **Apply**.
+     Click **Apply**.
 
     ![Add Column Department2](images/add-department-column2.png " ")
 
-7. Click **Add Column** button.
+5. To create the **Clothing** column, click **+ Add Column** and enter/select the following:
 
-8. For Clothing column, enter the following:
+    - Column: **CLOTHING**
 
-    * Column - enter **CLOTHING**
+    - Data Type: **VARCHAR2**
 
-    * Data Type - select **VARCHAR2**
+    - Length: **200**
 
-    * Length - enter **200**.
-
-    Click **Apply**.
+     Click **Apply**.
 
     ![Add column Clothing2](images/add-clothing-column2.png " ")
 
+6. Under **Tables**, select **Orders** and click **Add Column**.
+
+    ![Select Sql Workshop](./images/add-column1.png " ")
+
+7. Add the following three columns into the **Orders** table and click **Apply**.
+
+    | Column | Data Type | Length | Default |
+    | ------ | --------- | ------ | ------- |
+    | STAR_RATING | NUMBER |      |         |
+    | FEEDBACK   | VARCHAR2 | 2000 |        |
+    | EMAIL_FLAGGED | VARCHAR2 | 1  | 'N' |
+
+    ![Select Sql Workshop](./images/star-rating.png " ")
+
+    ![Select Sql Workshop](./images/feedback.png " ")
+
+    ![Select Sql Workshop](./images/email-flagged.png " ")
+
 ## Task 2: Populate the new columns
 
-1. From the APEX main menu, click **SQL Workshop**.
+In this task, you will extract and populate specific information from existing data into existing columns using SQL Scripts. You will work with the Products table within your database. You will update several columns (clothing, color, and department) based on the information stored in other columns.
 
-2. Click **SQL Scripts**.
+1. Click **SQL Workshop** from the top navigation menu and select **SQL Scripts**.
 
     ![SQL Scripts](images/navigate-to-sql-scripts1.png " ")
 
-3. Click **Create**.
+2. Click **Create**.
 
     ![Create SQL Scripts](images/click-create-sql-scripts1.png " ")
 
-4. For Script Name, enter **Populating new columns**.
+3. For **Script Name**, enter **Populating new columns**.
 
-5. Copy the following script and paste into the editor.
+4. Copy the following script and paste it into the editor.
+
     ```
     <copy>
     UPDATE
@@ -111,25 +121,24 @@ In this lab, you will:
      </copy>
      ```
 
-    This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similary, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns respectively based on information found in the JSON product details column in the **Products** table.
+    This script inserts the unique product type values (e.g. Shirt, Jacket, Skirt, etc.) into the CLOTHING column in the **Products** table. Similarly, it inserts the unique department names (e.g. Boy's, Girl's, Men's, Women's) and color names into the DEPARTMENT and COLOR columns, respectively, based on information found in the JSON product details column in the **Products** table.
 
-6. Click **Run**.
+5. Click **Run** and **Run Now**.
 
     ![Run SQL Scripts](images/populate-column-data1.png " ")
 
-7. Click **Run Now**.
-
     ![Run Script](images/run-script1.png " ")
 
-8. The Script Results page is displayed listing the statements processed, successful, and with errors.
+    The Script Results page lists the count of statements processed, successful, and with errors.
 
     ![Script Results](images/sql-scripts-results1.png " ")
 
-9. To check the values in the Products table, click **SQL Workshop** and click **SQL Commands**.
+6. To check the values in the **Products** table, click **SQL Workshop** and select **SQL Commands**.
 
     ![SQL Commands](images/open-sql-commands.png " ")
 
-10. Copy the following SQL Query.
+7. Copy and paste the following SQL Query in the editor:
+
     ```
     <copy>
     SELECT p.product_name,
@@ -141,68 +150,64 @@ In this lab, you will:
     </copy>
     ```
 
-11. Click **Run**.
+8. Click **Run**.
 
     ![Run SQL query](images/run-sql-query1.png " ")
 
 ## Task 3: Create Lookup Tables
-Since multiple products may have the same values for Color, Department, and Clothing, to avoid repetition and make updates easy, you can create a lookup table for each. A lookup table stores the value of the available colors, departments, or clothing in a single place, and then each product can reference the value from the lookup table.
 
-In this lab, you create lookup tables based on the new three columns. After you create a lookup table, this allows the PRODUCTS table to reference the new color, clothing type, and department lookup value by its new numeric primary key value in the lookup table.
+Since multiple products may have the same color, department, and clothing values, you can create a lookup table for each column to avoid repetition and make updates easier. A lookup table stores the value of the available colors, departments, or clothing in a single place, and then each product can reference the value from the lookup table.
 
-1. From the APEX main menu, click **SQL Workshop**.
+You create lookup tables in this lab based on the three new columns. After you create a lookup table, the PRODUCTS table can reference the new color, clothing type, and department lookup value by its new numeric primary key value in the lookup table.
 
-2. Click **Object Browser**.
+1. From the APEX main menu, click **SQL Workshop** and  select **Object Browser**.
 
     ![Object Browser](./images/navigate-to-object-browser2.png " ")
 
-3. Navigate to **PRODUCTS** Table.
-
-4. Click **More** and Select **Create Lookup Table** button.
+2. Under **Tables**, select **PRODUCTS**. Then, navigate to **More** and select **Create Lookup Table**.
 
     ![Create lookup table1](./images/create-lookup-tables1.png " ")
 
-5. For Text Column, select **COLOR** and Click **Create Lookup Table**.
+3. For **Text Column**, select **COLOR** and click **Create Lookup Table**.
 
     ![Create Color lookup](./images/create-color-lookup.png " ")
 
-    *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
+    *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-6. To create **Department** lookup table, navigate back to the **Products** table and Click **More** and Select **Create Lookup Table** button.
+4. To create **Department** lookup table, navigate back to the **PRODUCTS** table. Click **More** and select **Create Lookup Table**.
 
     ![Create Lookup Table2](./images/create-lookup-tables1.png " ")
 
-7. For Text Column, select **DEPARTMENT** and Click **Create Lookup Table**.
+5. For **Text Column**, select **DEPARTMENT** and click **Create Lookup Table**.
 
     ![Create Department Lookup1](./images/create-department-lookup1.png " ")
 
-    *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
+    *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-8. To create **Clothing** lookup table, navigate back to the **Products** table and Click **More** and Select **Create Lookup Table** button.
+6. To create **Clothing** lookup table, navigate back to the **PRODUCTS** table. Click **More** and select **Create Lookup Table**.
 
     ![Create Lookup Table3](./images/create-lookup-tables3.png " ")
 
-9. For Text Column, select **CLOTHING** and Click **Create Lookup Table**.
+7. For **Text Column**, select **CLOTHING** and click **Create Lookup Table**.
 
     ![Create Clothing Lookup](./images/create-clothing-lookup1.png " ")
 
-    *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
+    *Note: Click the **Create Lookup Table** button only once. Then, you will find the new table listed in the Object Browser.*
 
-16. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
+8. The columns COLOR, DEPARTMENT, and CLOTHING in the **PRODUCTS** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID, respectively, and their data type is changed to NUMBER. Also, there are new tables containing the values of the products:
     - COLOR_LOOKUP
     - DEPARTMENT_LOOKUP
     - CLOTHING_LOOKUP
 
-The numeric value of the COLOR\_ID column will now store a reference to the system-assigned unique id of a particular color, whose name is stored in the new COLOR\_LOOKUP table. Similarly, the DEPARTMENT\_ID column references the id of a row in the DEPARTMENT\_LOOKUP table and CLOTHING\_ID references the id of a row in the CLOTHING\_LOOKUP table.    
+    The numeric value of the COLOR\_ID column will now store a reference to the system-assigned unique id of a particular color, whose name is stored in the new COLOR\_LOOKUP table. Similarly, the DEPARTMENT\_ID column references the id of a row in the DEPARTMENT\_LOOKUP table, and CLOTHING\_ID references the id of a row in the CLOTHING\_LOOKUP table.
 
-
-![Lookup table results](./images/lookup-table-results.png " ")
+    ![Lookup table results](./images/lookup-table-results.png " ")
 
 ## Summary
-You now know how to add new columns to your existing tables, how to create lookup tables for reference information, and how to create and run a SQL script to populate your tables. You may now **proceed to the next lab**.
 
-## Acknowledgments
+You now know how to add new columns to your existing tables, create lookup tables for reference information, and create and run an SQL script to populate your tables. You may now **proceed to the next lab**.
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, May 2023
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

@@ -1,70 +1,94 @@
-# Improve the products page
+# Improve the Product Page
 
 ## Introduction
 
-In this lab, you will learn how to improve the Products page by adding new facets and customizing the cards.
+This lab focuses on enhancing the Products page of the Online Shopping Application. You’ll learn how to make the page more user-friendly by adding facets to improve search functionality, customizing the cards for better product presentation, and implementing dynamic actions to improve interactivity. By the end of this lab, customers will have an easier time finding products, viewing details, and managing their shopping carts.
 
-
-*Please note that customer can quickly identify the products that already have been added to the shopping cart.*
+*Please note that customers can quickly identify the products already added to the shopping cart.*
 
 Estimated Time: 20 minutes
 
 ### Objectives
+
 In this lab, you will:
-- Improve both Faceted Search and Cards region
-- Add Dynamic Actions to the page
+
+- Rearrange and enhance search facets to improve usability.
+
+- Customize the product cards to display more relevant information.
+
+- Add dynamic actions to make the page more interactive and responsive.
+
+- Understand how different filter types contribute to an efficient search experience.
 
 ### Downloads
 
-- Did you miss out trying the previous labs? Don’t worry! You can download the application from **[here](files/online-shopping-cart-6.sql)** and import it into your workspace. To run the app, please run the steps described in **[Get Started with Oracle APEX](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)** and **[Using SQL Workshop](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)** workshops.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-## Task 1: Navigate to Products Page.
+- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreateUsingDynamicActions-OnlineShoppingApplication.sql)**
 
-In this Lab, you will be using Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where your customers can explore the products and select what they wish to buy.
-As you can see, it's hard to find the products and it would be beneficial to see additional details related to the products.
+Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
+- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+
+- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+
+## Task 1: Navigate to the Products Page
+
+In this Lab, you will be using an Online Shopping Application. Navigate to **Online Shopping Application**. In the Runtime environment, navigate to **Products**. This is the page where customers can explore the products and select what they wish to buy.
+
+As you can see, it's hard to find the products, and it would be beneficial to see additional details related to the products.
 
 1. From the runtime application, navigate to the **Products** page in **Page Designer**.
 
     Given that you run this app from the APEX App Builder, you will find the Developer Toolbar at the bottom of the screen.
-    *{Note: End users who log directly into the app will not see this toolbar.}*
 
-    In the Developer Toolbar click **Page 19**.
+    > **Note:** End users who log directly into the app will not see this toolbar.
+
+    In the Developer Toolbar, click **Page 19**.
 
     ![Navigate to page 19](./images/navigate-to-page19.png " ")
 
-    Alternatively, you can also navigate back to the APEX App Builder tab in your browser manually by selecting the appropriate browser tab or window.   
-    Once in the App Builder click **19 - Products**.
+    Alternatively, you can also manually navigate back to the APEX App Builder tab in your browser by selecting the appropriate browser tab or window.
+    Once in the App Builder, click **19 - Products**.
 
     ![19 - Products](./images/alt-app-builder.png " ")
 
     You should now be in Page Designer with **Page 19: Products** loaded.
 
-
 ## Task 2: Reorder Facets
-Unit price is not a common search criteria, so you want to put this facet at the bottom.
 
-1. In the Rendering tree (left pane), under Search, within Facets, click and hold **P19\_UNIT\_PRICE** and drag it down until it is under **P19\_CLOTHING\_ID**, then release the mouse.
+Unit price is not a standard search criterion, so you want to put this facet at the bottom.
+
+1. In the Rendering tree (left pane), under **Search** region, within Facets, click and hold **P19\_UNIT\_PRICE** and drag it down until it is under **P19\_CLOTHING\_ID**, then release the mouse.
 
     ![Reorder Facets](./images/reorder-facets.png " ")
 
 ## Task 3: Enhance the Faceted Search
 
-1. In the Rendering tree (left pane), navigate to **Search**.
-2. In the Property Editor (right pane), click **Attributes** and do the following:
-    -   For Total Row Count Label - enter **Total Products**
-    -   For Show Charts - select **No**
+You’ll modify the settings of the faceted search to make it more intuitive for users, such as customizing labels and hiding unnecessary elements like charts.
 
+1. In the **Rendering** tab (left pane), navigate to **Search** region.
 
-  ![Change faceted search](./images/change-faceted-search-attr.png " ")    
+2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
+
+    - Under Settings:
+
+        - Total Row Count Label: **Total Products**
+
+        - Show Charts: **No**
+
+    ![Change faceted search](./images/change-faceted-search-attr.png " ")
 
 ## Task 4: Enhance the Cards Region
 
-1.  In the Rendering tree (left pane), navigate to **Search Results** and in the Property Editor (right pane), do the following:
-    - For SQL Query - enter the following SQL code:
-        ```
-        <copy>
-        SELECT "PRODUCT_ID",
+This task focuses on updating the design and layout of the cards that display product information, ensuring they’re visually appealing and easy to read.
+
+1. In the **Rendering** tab (left pane), navigate to **Search Results** and in the Property Editor (right pane), update the SQL query:
+
+    ```
+    <copy>
+        SELECT
+            "PRODUCT_ID",
             "PRODUCT_NAME",
             "UNIT_PRICE",
             "PRODUCT_DETAILS",
@@ -73,214 +97,272 @@ Unit price is not a common search criteria, so you want to put this facet at the
             "IMAGE_FILENAME",
             "IMAGE_CHARSET",
             "IMAGE_LAST_UPDATED",
-            "COLOR_ID",
             (
-                    SELECT l1."COLOR"
-                    FROM   "COLOR_LOOKUP" l1
-                    WHERE  l1."COLOR_ID" = m."COLOR_ID") "COLOR_ID_L$1",
-            "DEPARTMENT_ID",
+                SELECT
+                    L1."COLOR"
+                FROM
+                    "COLOR_LOOKUP" L1
+                WHERE
+                    L1."COLOR_ID" = M."COLOR_ID"
+            ) "COLOR_ID",
             (
-                    SELECT l2."DEPARTMENT"
-                    FROM   "DEPARTMENT_LOOKUP" l2
-                    WHERE  l2."DEPARTMENT_ID" = m."DEPARTMENT_ID") "DEPARTMENT_ID_L$2",
-            "CLOTHING_ID",
+                SELECT
+                    L2."DEPARTMENT"
+                FROM
+                    "DEPARTMENT_LOOKUP" L2
+                WHERE
+                    L2."DEPARTMENT_ID" = M."DEPARTMENT_ID"
+            ) "DEPARTMENT_ID",
             (
-                    SELECT l3."CLOTHING"
-                    FROM   "CLOTHING_LOOKUP" l3
-                    WHERE  l3."CLOTHING_ID" = m."CLOTHING_ID") "CLOTHING_ID_L$3",
-            b.brand
-        FROM   "PRODUCTS" m,
-            json_table (m.product_details, '$' columns ( brand varchar2(4000) path '$.brand') ) b
-        </copy>
+                SELECT
+                    L3."CLOTHING"
+                FROM
+                    "CLOTHING_LOOKUP" L3
+                WHERE
+                    L3."CLOTHING_ID" = M."CLOTHING_ID"
+            ) "CLOTHING_ID",
+            B.BRAND
+        FROM
+            "PRODUCTS" M,
+            JSON_TABLE ( M.PRODUCT_DETAILS, '$'
+                    COLUMNS (
+                        BRAND VARCHAR2 ( 4000 ) PATH '$.brand'
+                    )
+                )
+            B;
+    </copy>
+    ```
+
+    ![Change SQL Query](./images/change-sql-query.png " ")
+
+    - Under Appearance > Template Options:
+
+        - Click **Use Template Defaults**.
+
+        - Common > Style: **Style A**
+
+        - Click **OK**
+
+    ![Edit Template options](./images/template-options.png " ")
+
+2. In the Property Editor, navigate to **Attributes** and enter/select the following:
+
+    - Under Subtitle:
+
+        - Set Advanced Formatting: **Toggle On**
+
+        - HTML Expression: Enter the following:
+
         ```
-
-        ![Change SQL Query](./images/change-sql-query.png " ")
-
-    - Under Appearance section:
-        - Click **Template Options**. For Style - select **Style A**
-
-      ![Edit Template options](./images/template-options.png " ")  
-        - Click **Ok**
-
-2. Click **Attributes** and apply the following changes:
-
-    ![Edit Attributes](./images/change-attributes1.png " ")
-
-    - Under Appearance section:
-        - For Layout - select **Grid**
-        - For Grid Columns - select **Auto**
-
-    - Under Title section:
-        -   For Column - select **PRODUCT_NAME**
-
-    - Under Subtitle section:
-        - Set Advanced Formatting to **On**
-        - For HTML Expression - enter the following:
-
-            ```
-            <copy>
-            <small>&BRAND.</small><br />
+        <copy>
+            <small>&BRAND.</small> <br/>
             <b class="u-success-text u-pullRight" id="message_&PRODUCT_ID.">
             {if QUANTITY/} &QUANTITY. in cart {endif/}
             </b>
             <b>$&UNIT_PRICE.</b>
-            </copy>
-            ```
+        </copy>
+        ```
 
-    - Under Media section:
-        -   For Source - select **BLOB Column**
-        -   For BLOB Column - select **PRODUCT_IMAGE**
-        -   For Position - select **First**
-        -   For Appearance - select **Widescreen**
-        -   For Sizing - select **Fit**
+    - Under Media:
 
-    - Under Card section:
-        -   For Primary Key Column 1 - select **PRODUCT_ID**
+        - Source: **BLOB Column**
 
-      Click **Save.**
-        ![Add Primary key](./images/change-attributes2.png " ")        
+        - BLOB Column: **PRODUCT_IMAGE**
+
+        - Position: **First**
+
+        - Appearance: **Widescreen**
+
+        - Sizing: **Fit**
+
+    - Card > Primary Key Column 1: **PRODUCT_ID**
+
+    ![Add Primary key](./images/change-attributes1.png " ")
+
+    ![Add Primary key](./images/change-attributes2.png " ")
+
+3. Click **Save and Run**.
+
+    ![Add Primary key](./images/products-page.png " ")
 
 ## Task 5: Create Actions
-Customers need a way to shop the products, so in this task you will add an action to allow customers to learn more about the product.
+
+You’ll add interactive actions to the cards, such as linking to detailed product information, to make the page more functional.
 
 1. Navigate to **Search Results** (left pane).
-2. On Actions, right-click **Create Action**.
+
+2. Right-click **Actions**, select **Create Action**.
 
     ![Create Action](./images/create-action1.png " ")
 
-3. In the Property Editor (right pane), enter the following:
-    -   For Type - select **Full Card**
-    -   For Target - Click **No Link Defined** and do the following:
-        - For Page - enter **17**.
-        - For Set Items, enter:
+3. In the Property Editor (right pane), enter/select the following:
 
-            | Name | Value |
-            | --- | --- |
-            | P17\_PRODUCT\_ID | &PRODUCT_ID. |
+    - Identification > Type: **Full Card**
 
-        - For Clear Cache, enter **17**
-        - Click **Ok**.
+    - Link > Target: Click **No Link Defined**
+
+        - Page: **18**
+
+        - Set Items:
+
+            | Name             | Value        |
+            | ---------------- | ------------ |
+            | P18\_PRODUCT\_ID | &PRODUCT_ID. |
+
+        - Clear Cache: **18**
+
+        - Click **OK**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
 
+4. Click **Save and Run**.
+
+    ![Open Add to Cart](./images/open-cart.png " ")
+
 ## Task 6: Add Dynamic Actions
+
 In this task, you will create two dynamic actions:
+
 - To show a success message when a product is added/edited/removed from the shopping cart
+
 - To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
 
-1. Navigate to **Dynamic Actions** tab (left pane).
-     ![Navigate to Dynamic Actions](./images/navigate-to-da.png " ")  
+1. Navigate to the **Dynamic Actions** tab (left pane).
 
-2. Right-click **Dialog Closed** and click **Create Dynamic Action**.
+2. Right-click **Dialog Closed** and select **Create Dynamic Action**.
 
-     ![Create Dynamic Actions](./images/create-da1.png " ")  
-3. In the Property Editor, enter the following:
-    - Under Identification section:
-        - For Name - enter **Show Success Message**
-    - Under When section:
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**
+     ![Create Dynamic Actions](./images/create-da1.png " ")
 
-      ![Show success Message](./images/create-da2.png " ")
+3. In the Property Editor, enter/select the following:
 
-4. Navigate to **Refresh** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+    - Identification > Name: **Show Success Message**
 
-            ```
-            <copy>    
-            var productAction   = this.data.P17_ACTION,
-                productQuantity = this.data.P17_QUANTITY,
+    - Under Execution:
+
+        - Type: **Debounce**
+
+        - Time: **400**
+
+    - Under When:
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
+
+      ![Show success Message](./images/create-da02.png " ")
+
+4. Navigate to **Refresh** Action and update the following:
+
+    - Identification > Action: **Execute JavaScript Code**
+
+    - Settings > Code: Enter the following JavaScript Code:
+
+        ```
+        <copy>
+            var productAction   = this.data.P18_ACTION,
+                productQuantity = this.data.P18_QUANTITY,
                 productCard$  = apex.jQuery("#message_" + this.data.P17_PRODUCT_ID);
 
-            if (productAction === 'ADD') {
+               if (productAction === 'ADD') {
                 productCard$.text("Added " + productQuantity + " to cart!");
-            } else if (productAction === 'EDIT') {
+            }    else if (productAction === 'EDIT') {
                 productCard$.text("Updated quantity to " + productQuantity + "!");
-            } else if (productAction === 'DELETE') {
+            }    else if (productAction === 'DELETE') {
                 productCard$.text("Removed from cart!");
             }
-            </copy>
-            ```
-            ![Navigate to Refresh action](./images/create-da3.png " ")
+        </copy>
+        ```
 
-5. Create a second dynamic action. Right-click **Dialog Closed** and click **Create Dynamic Action**.  
+    ![Navigate to Refresh action](./images/create-da03.png " ")
 
-     ![Create Dynamic Action2](./images/create-2-da1.png " ")
-6. In the Property Editor, enter the following:    
-    - Under Identification section:
-        - For Name - enter **Update Shopping Cart Header**
-    - Under When section:        
-        - For Event - select **Dialog Closed**
-        - For Selection Type - select **Region**
-        - For Region - select **Search Results**     
+5. Create a second dynamic action. Right-click **Dialog Closed** and select **Create Dynamic Action**.
+
+    ![Create Dynamic Action2](./images/create-2-da1.png " ")
+
+6. In the Property Editor, enter/select the following:
+
+    - Identification > Name: **Update Shopping Cart Header**
+
+    - Under Execution:
+
+        - Type: **Throttle**
+
+        - Time: **400**
+
+    - Under When:
+
+        - Selection Type: **Region**
+
+        - Region: **Search Results**
+
     - Under Client-side Condition:
-        - For Type - select **JavaScript expression**
-        - For JavaScript Expression, enter the following:
+
+        - Type: **JavaScript expression**
+
+        - JavaScript Expression: Enter the following:
 
             ```
             <copy>
-            parseInt(this.data.P17_SHOPPING_CART_ITEMS) > 0
+            parseInt(this.data.P18_SHOPPING_CART_ITEMS) > 0
             </copy>
             ```
-            ![Define Dynamic Action2](./images/create-2-da2.png " ")
+
+    ![Define Dynamic Action2](./images/create-2-da2.png " ")
 
 7. Navigate to **Refresh** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P17_SHOPPING_CART_ITEMS);
+    - Identification > Action: **Execute JavaScript Code**
 
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
-            </copy>
-            ```
-            ![Navigate to Refresh](./images/create-2-da3.png " ")
+    - Settings > Code: Enter the following JavaScript Code:
 
-8. Create an opposite action. In the Dynamic Actions tab (left pane), navigate to the newly dynamic action.
-9. Right-click **Execute JavaScript Code** and click **Create Opposite Action**.
+        ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text(this.data.P18_SHOPPING_CART_ITEMS);
+
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-empty').addClass('fa-cart-full');
+        </copy>
+        ```
+
+    ![Navigate to Refresh](./images/create-2-da3.png " ")
+
+8. Right-click **Execute JavaScript Code** and select **Create Opposite Action**.
 
      ![Create Opposite Action](./images/create-2-opp-action.png " ")
 
-10. Navigate to **Execute JavaScript Code** Action.
-    - Under Identification section:
-        - For Action - select **Execute JavaScript Code**
-    - Under Settings section:        
-        - For Code - enter the following JavaScript Code:
+9. In the Property Editor, update the following:
+    - Settings > Code: Copy and Replace with the following JavaScript Code:
 
-            ```
-            <copy>
-            // Update Badge Text
-            apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
+         ```
+        <copy>
+        // Update Badge Text
+        apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
 
-            // Update Icon
-            apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
-            </copy>
-            ```
-            ![Javascript Code](./images/create-2-opp-action1.png " ")
+        // Update Icon
+        apex.jQuery(".js-shopping-cart-item .t-Icon").removeClass('fa-cart-full').addClass('fa-cart-empty');
+        </copy>
+        ```
 
-11. Click **Save and Run Page**.
+    ![Javascript Code](./images/create-2-opp-action1.png " ")
+
+10. Click **Save and Run Page**.
 
 ## Task 7: Run the Products Page
 
-1. After running products page, your page will look like the following image:
+Finally, you’ll run the application to test and review all the changes made during the lab.
+
+1. After running the products page, your page will look like the following image:
 
    ![Products Page](./images/products-page.png " ")
 
 ## Summary
 
-You now know how to enhance faceted search and cards region. You may now **proceed to the next lab**.
+By completing this lab, you’ve enhanced the Products page to make it easier for customers to find and manage products. You reordered search facets, improved the appearance of the cards, and added dynamic actions for better interactivity. These changes not only improve the visual appeal of the page but also make it more functional and user-friendly.
 
-## Acknowledgments
+You’re now ready to move on to the next lab and continue building on these improvements.
 
-- **Author** - Roopesh Thokala, Product Manager
-- **Contributor** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Toufiq Mohammed, Senior Product Manager, May 2023
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024

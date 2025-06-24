@@ -17,7 +17,7 @@ handler for both the EMP and DEPT tables. You have already created a REST Data S
 3. Select your application.
 4. On the application home page, click **Shared Components**.
 
-    ![](images/go-shared.png " ")
+    ![](images/go-shared1.png " ")
 
 5. On the Shared Components page, under Data Sources, click **REST Data Sources**.
 
@@ -44,7 +44,7 @@ handler for both the EMP and DEPT tables. You have already created a REST Data S
 8. On the Remote Server dialog, review the Base URL and Service URL Path.
     Click **Next**.
 
-    ![](images/review-urls.png " ")
+    ![](images/review-urls1.png " ")
 
     *Note: As you have already defined a REST Data Source with the same base path, for the REST EMP Source, then the Base URL is not updateable.*
 
@@ -93,7 +93,7 @@ You now have the REST Data Sources which can be used as the basis for List of Va
 
     Click **Create**.
 
-    ![](images/set-columns.png " ")
+    ![](images/set-columns1.png " ")
 
 7. To create the List of Values for Departments is the same as above.
 
@@ -135,7 +135,6 @@ If you review the Maintain Employee form page more closely you will see that the
     - **List of Values > Display Extra Values:** Uncheck
 
     ![](images/set-deptno.png " ")
-    ![](images/set-deptno2.png " ")
 
 3. From Page Designer, in the Rendering tree (left pane), click **P3_MGR**.
 
@@ -148,7 +147,7 @@ If you review the Maintain Employee form page more closely you will see that the
 
 4. In the Page Designer toolbar, click **Save**.
 
-    ![](images/save-form.png " ")
+    ![](images/set-mgr.png " ")
 
 ## Task 4: Update the Report
 Similarly, the Employees report shows numerical values rather than names.
@@ -191,7 +190,7 @@ Similarly, the Employees report shows numerical values rather than names.
     Select a department.        
     Select a manager.
 
-    ![](images/runtime-form.png " ")
+    ![](images/runtime-for.png " ")
 
 ## **Summary**
 This completes Lab 5 and the workshop. You now know how to define List of Values against REST endpoints and then utilize those within an application.
@@ -208,5 +207,4 @@ This completes Lab 5 and the workshop. You now know how to define List of Values
 
  - **Author/Contributors** -  Salim Hlayel, Principle Product Manager
  - **Contributors** - Oracle LiveLabs Team (Arabella Yao, Product Manager Intern | Jaden McElvey, Technical Lead | Jeffrey Malcolm Jr, Intern)
- - **Last Updated By/Date** - Madhusudhan Rao, Apr 2022
-
+ - **Last Updated By/Date** - Ankita Beri, Product Manager, June 2023
