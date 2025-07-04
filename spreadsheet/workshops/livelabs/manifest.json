@@ -9,8 +9,13 @@
     },
     {
       "title": "Get Started",
-      "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
-    },
+      "description": "Prerequisites for LiveLabs (Oracle-owned tenancies). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+   },
+   {
+    "title": "Sign up for an APEX Workspace",
+    "filename": "../../../common-242/1-sign-up-apex/sign-up-apex-sandbox.md"
+  },
     {
       "title": "Lab 1: Create an App from a Spreadsheet",
       "filename": "../../2-creating-an-app-from-a-spreadsheet/2-creating-an-app-from-a-spreadsheet.md"
