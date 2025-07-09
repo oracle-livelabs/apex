@@ -215,7 +215,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
-In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
+In this part, you will create an Oracle APEX Application Development Service. Once you have signed up for the service, you will create an *APEX Service* instance. The final step in the process is to provision Oracle APEX workspace.
 
 1. Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
