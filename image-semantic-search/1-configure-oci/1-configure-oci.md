@@ -6,6 +6,8 @@ In this lab, you learn how to configure the OCI API keys. In Oracle Cloud Infras
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
 
+These keys will enable authenticated access to OCI resources, which is essential for tasks such as importing models. You will use these configured credentials in later labs to connect to OCI and to load and access models within your Oracle Database environment.
+
 Estimated Time: 10 Minutes
 
 ### Objectives
