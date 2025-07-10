@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will explore the application features. You will start by uploading the document to the OCI Object Storage.Then you will chat with the Generative AI Agent and it will respond intelligently using the information from your uploaded document.Also you use the Create Session option which helps you start a fresh chat session.
+In this lab, you will explore the application features. You will start by uploading the document to the OCI Object Storage.Then you will chat with the Generative AI Agent and it will respond intelligently using the information from your uploaded document.Also you can use the Create Session option which helps you start a fresh chat session.
 
 Estimated Time: 5 Minutes
 
@@ -30,7 +30,7 @@ In this task, you will upload document to OCI Object storage.
 
 2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](files/APP_Builder_User_Guide.pdf?download=1) document onto the dialog window.
 
->* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
+    >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
 
 3. Click **Create**.
 
