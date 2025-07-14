@@ -4,7 +4,7 @@
 
 In this lab, you import the Social Media application into your APEX workspace. You use this imported app to integrate with the OCI Vision service.
 
-You can download the Social Media Application [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL.zip).
+You can download the Social Media Application [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/APEX_Social_Media_HOL.zip).
 
 Estimated Time: 10 Minutes
 
@@ -22,7 +22,7 @@ In this lab, you:
 
     ![Click Import](images/import0.png " ")
 
-2. The Import dialog displays. Drag and drop, or navigate to the file. (Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL.zip) to download the application.)
+2. The Import dialog displays. Drag and drop, or navigate to the file. (Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/APEX_Social_Media_HOL.zip) to download the application.)
 
     Click **Next**.
 
@@ -32,7 +32,7 @@ In this lab, you:
 
     ![Click Import](images/install_page.png " ")
 
-4. Click **Install Supporting Objects**.
+4. Click **Install Supporting Objects** to set up the required tables for the application to function properly.
 
     ![Click Import](images/install_page2.png " ")
 
