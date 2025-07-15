@@ -1,8 +1,8 @@
-# Run the Application
+# Explore the Application Features
 
 ## Introduction
 
-In this lab, you will begin by running the application to explore its key features in action. Specifically, you'll interact with the **Upload Document**, **Create Session** functionality, experience how to chat with the RAG Agent, and perform essential file operations such as deleting and saving files.
+In this lab, you will explore the application features. You will start by uploading the document to the OCI Object Storage.Then you will chat with the Generative AI Agent and it will respond intelligently using the information from your uploaded document.Also you can use the Create Session option which helps you start a fresh chat session.
 
 Estimated Time: 5 Minutes
 
@@ -10,31 +10,33 @@ Estimated Time: 5 Minutes
 
 In this lab, you will:
 
-- Add document to Object Storage, using APEX.
+- Upload a document to OCI Object Storage.
 
-- Chat with Generative AI Agent on the documents uploaded.
+- Chat with Generative AI Agent.
 
-- View Citations for the response from Agent.
+- View Citations for the Response.
 
 - Establish New Session.
 
-- Download/delete the file from Object Store by using APEX.
+- Download/delete the file from Object Storage.
 
-## Task 1: Add document to Object Storage, using APEX
+## Task 1: Upload a document to OCI Object Storage
 
-In this task you will upload document to OVI Object storage using APEX.
+In this task, you will upload document to OCI Object storage.
 
-1. In the **Navigation Bar**, click **Upload Documents** .
+1. In the **Navigation Bar**, click **Upload Documents**.
 
     ![UI UploadDoc](images/ui-uploaddoc.png " ")
 
-2. Click  **Choose File** option or drag and drop the [apex\_document.pdf](files/apex_document.pdf) file on to the dialog window.
+2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](files/APP_Builder_User_Guide.pdf?download=1) document onto the dialog window.
+
+    >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
 
 3. Click **Create**.
 
     ![UI Upload](images/ui-upload.png " ")
 
-4. File gets added to OCI Object Storage bucket and ingestion job will run at the backend and details like ingestion id will be stored in database table.
+4. The document will be uploaded to OCI Object Storage bucket. Ingestion job will run in the background and details like ingestion id will be stored in database table.
 
     ![Ingestion Job](images/ingestionjob.png " ")
 
@@ -42,25 +44,25 @@ In this task you will upload document to OVI Object storage using APEX.
 
     ![Ingestion Job](images/ingestionjob-success.png " ")
 
-## Task 2: Chat with AI and view citations of the response
+## Task 2: Chat with AI and View Citations of the Response
 
-In this task you will chat with AI and can view the citations of the response, so you can verify the information and gain more context.
+In this task, you will chat with Generative AI Agents. You can also view the citations of the responses to verify the information and identify the source document.
 
 1. Enter your question and press **Enter**.
 
     ![Type](images/type.png " ")
 
-    ![Type](images/type-chat.png " ")
+    ![Type](images/type-chat1.png " ")
 
 2. Click **View Citations** link.
 
-    ![Type](images/click-citation.png " ")
+    ![Type](images/click-citation1.png " ")
 
 3. Close the dialog.
 
 ## Task 3: Create a New Chat session
 
-In this task you can create new session which refreshes the current chat and starts a new session and download or delete your existing document.
+In this task, you can create new session which refreshes the current chat and starts a new session.Moreover you can download or delete your existing document.
 
 1. On the **Navigation Bar**, click **New Session**.
 
