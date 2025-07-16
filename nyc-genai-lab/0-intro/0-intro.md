@@ -40,6 +40,7 @@ Estimated Time: 60 minutes
 
         - Brazil East (Sao Paulo)
         - Germany Central (Frankfurt)
+        - India South (Hyderabad) 
         - Japan Central (Osaka)
         - UAE East (Dubai)
         - UK South (London)
