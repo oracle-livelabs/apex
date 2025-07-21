@@ -410,7 +410,7 @@ In this task, we will create a Search page for Text based search.
 
     - Under Server-side Condition:
 
-        - When Button Pressed: **ADD_POST**
+        - When Button Pressed: **SAVE**
         - Type: **Item is NOT NULL**
         - Item: **P1\_FILE\_BLOB**
 
