@@ -10,7 +10,7 @@ Here is a demo of what to expect from this application:
 
 ![Demo Application](images/RAG.gif " ")
 
-Estimated Time: 90 minutes
+Estimated Time: 1 hour 30 mins
 
 ### Objectives
 
