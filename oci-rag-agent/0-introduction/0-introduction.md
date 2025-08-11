@@ -8,9 +8,9 @@ As part of this workshop, you will upload Oracle App Builder documentation to OC
 
 Here is a demo of what to expect from this application:
 
-![Demo Application](images/RAG.gif " ")
+![Demo Application](images/rag-demo.gif " ")
 
-Estimated Time: 90 minutes
+Estimated Time: 1 hour 30 mins
 
 ### Objectives
 

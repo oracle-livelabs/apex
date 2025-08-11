@@ -24,20 +24,32 @@ In this lab, you will:
 
 In this task, you will create Page Items, Static Content region and a subregion, and configure dynamic actions to control their behavior based on user interactions.
 
-1. Under **Rendering** tab, right-click **Body** and select **Create Page Item**.
+1. Navigate to **Application ID**.
 
-   ![Create Pageitem](images/create-pageitem1.png " ")
+    ![Create Pageitem](images/navigate-appid.png " ")
 
-2. Create the following Page Items, one after another:
+2. Click on **Chat With OCI Generative AI**
 
-    |   | Name | Type | Value Protected | Default > Static Value |
-    |---|-------|------|----------|---- |
-    | 1 | P1\_RESPONSE\_SESSION| Hidden | Toggle On ||
-    | 2 | P1\_SESSION\_ID| Hidden | Toggle On ||
-    | 3 | P1\_CONV\_ID| Hidden | Toggle On ||
-    | 4 | P1\_APEX\_AI\_CRED| Hidden | Toggle Off ||
-    | 5 | P1\_AGENT\_ENDPOINT\_ID| Hidden | Toggle Off ||
-    | 6 | P1\_REGION| Hidden | Toggle On |us-chicago-1 (enter your region)|
+    ![Create Pageitem](images/click-homepage1.png " ")
+
+3. Under Breadcrumb Bar select **Breadcrumb**. Navigate to Property Editor > Identification > Name: **GenAI Agents for APEX**.
+
+    ![Create Pageitem](images/breadcrumb-name.png " ")
+
+4. Under **Rendering** tab, right-click **Body** and select **Create Page Item**.
+
+   ![Create Pageitem](images/create-pageitem11.png " ")
+
+5. Create the following Page Items, one after another:
+
+    |   | Name | Type | Value Protected | Default > Static Value |Default > Static Value |
+    |---|-------|---------------|----------|---- |------|
+    | 1 | P1\_RESPONSE\_SESSION| Hidden | Toggle On |||
+    | 2 | P1\_SESSION\_ID| Hidden | Toggle On |||
+    | 3 | P1\_CONV\_ID| Hidden | Toggle On |||
+    | 4 | P1\_APEX\_AI\_CRED| Hidden | Toggle Off |Static|APEX\_OCI\_AI\_CRED|
+    | 5 | P1\_AGENT\_ENDPOINT\_ID| Hidden | Toggle Off |Static| [Refer Lab 2, Task3, Step5](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)|
+    | 6 | P1\_REGION| Hidden | Toggle On| Static | (enter your region; eg: us-chicago-1)|
     {: title="Page Item Details"}
 
    ![Response Session](images/response-session.png " ")
@@ -48,31 +60,19 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
    ![Create AI Cred](images/create-aicred.png " ")
 
+   ![Create AI Cred](images/create-aicred2.png " ")
+
    ![Create endpoint](images/create-endpointid.png " ")
 
-   ![Region PageItem](images/region-pageitem.png " ")
+   ![Create endpoint](images/create-endpointid2.png " ")
 
-3. Select **P1\_APEX\_AI\_CRED** page item, enter/select the following:
+   ![Region PageItem](images/region-pageitem3.png " ")
 
-    - Under Default:
+6. In the **Rendering Tab**, right-Click **Body** and click **Create Region**
 
-        - Type: **Static**
+   ![Create Region](images/create-region1.png " ")
 
-        - Static value: **APEX\_OCI\_AI\_CRED**
-
-4. Select **P1\_AGENT\_ENDPOINT\_ID** page item, enter/select the following:
-
-    - Under Default:
-
-       - Type: **Static**
-
-       - Static value: **ocid1.genaiagentendpoint.oc1.us-chicago-1.\*\*\*\*\*\*flywv7a** [Refer Lab 2, Task3, Step5](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
-
-5. In the **Rendering Tab**, right-Click **Body** and click **Create Region**
-
-   ![Create Region](images/create-region.png " ")
-
-6. In the Property editor, enter/select the following:
+7. In the Property editor, enter/select the following:
 
     - Under Identification:
 
@@ -84,13 +84,17 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     - Advanced > Static ID : **functional_chat**
 
+   ![Create Region](images/region-advanced1.png " ")
+
    ![Create Region](images/region-advanced.png " ")
 
-7. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
+8. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
-    >* This sub-region is being created to display a chat conversation between user and  AI agent, such as in a chatbot scenario.
+    > This sub-region is being created to display a chat conversation between user and  AI agent, such as in a chatbot scenario.
 
-8. In the Property Editor, enter/select the following:
+   ![Sub Region](images/sub-region22.png " ")
+
+9. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -146,11 +150,11 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - CSS Class: **t-Chat**
 
-    - Under Advanced > Static ID: **ai-agents-chat**
+    - Advanced > Static ID: **ai-agents-chat**
 
     ![Edit Appearance](images/subregion-appearance.png " ")
 
-9. Navigate to **Attributes** tab, enter/select the following:
+10. Navigate to **Attributes** tab, enter/select the following:
 
     - Under Appearance:
 
@@ -167,28 +171,44 @@ In this task, you will create Page Items, Static Content region and a subregion,
       ```
       <copy>
 
-         <h3 style="margin:0; display:flex; justify-content:center; align-items:center; height:300px;">Start Conversation</h3>
+         <h3 style="margin:0; display:flex; justify-content:center; align-items:center; height:300px;">Start Conversation </h3>
 
       </copy>
       ```
 
     ![SubRegion Attributes](images/subregion-attributes.png " ")
 
-10. In the **Rendering** pane, select **AI Agents Conversation** sub region. Expand the columns and click **COMMENT_TEXT**.
+11. In the **Rendering** pane, select **AI Agents Conversation** sub region. Expand the columns and click **COMMENT_TEXT**.
 
-11. In the Property Editor, enter/select the following:
+12. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Rich Text**
 
     ![Comment Text](images/comment-text.png " ")
 
-12. Under **AI Agents Conversation** sub-region, click **ACTIONS**.
+13. Under sub-region **AI Agents Conversation** , click column **ACTIONS**.
 
-13. In the property editor, enter/select the following:
+14. In the property editor, enter/select the following:
 
     - Identification > Type: **Link**
 
-    - Under Link:
+    - Link > Target: Click **No Link Defined**, enter/select the following:
+
+        - Page : **7**
+
+        - Under Set Items, enter the following:
+
+            - Name: **P7\_CONV\_ID**
+
+            - Value: **#CONV\_ID#**
+
+            - Click **OK**
+
+        ![Edit Link](images/edit-link2.png " ")
+
+        >**Note**: Page 7 will create in next task
+
+    - Link > Link Attributes: **target="_blank"**
 
         - Link Text: **#ACTIONS#**
 
@@ -196,27 +216,11 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         ![Edit Actions](images/edit-actions1.png " ")
 
-        - Target: Click **No Link Defined**, enter/select the following:
+15. Right-click **AI Agents Conversation** sub-region, click **Create Dynamic Action**.
 
-            - Page : **7**
+    ![Create Dynamic Action](images/create-dynamicaction2.png " ")
 
-            - Under Set Items, enter the following:
-
-                - Name: **P7\_CONV\_ID**
-
-                - Value: **#CONV\_ID#**
-
-            - Click **OK**
-
-        ![Edit Link](images/edit-link1.png " ")
-
-        >**Note**: Page 7 will create in next task
-
-14. Right-click **AI Agents Conversation** sub-region, click **Create Dynamic Action**.
-
-    ![Create Dynamic Action](images/create-dynamicaction1.png " ")
-
-15. In the Property Editor, enter/select the following:
+16. In the Property Editor, enter/select the following:
 
     - Name: **Scroll to bottom**
 
@@ -230,21 +234,21 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     ![Scroll to Bottom](images/scroll-tobottom.png " ")
 
-16. Under **True** action, click **Show**.
+17. Under **True** action, click **Show**.
 
-17. In the Property Editor, enter/select the following:
+18. In the Property Editor, enter/select the following:
 
     - Identification > Action : **Execute JavaScript Code**
 
     - Settings > Code : Copy and paste the below code
 
-    ```
-    <copy>
+        ```
+        <copy>
 
-    $("#ai-agents-chat .t-Comments").scrollTop($("#ai-agents-chat .t-Comments")[0].scrollHeight);
+        $("#ai-agents-chat .t-Comments").scrollTop($("#ai-agents-chat .t-Comments")[0].scrollHeight);
 
-    </copy>
-    ```
+        </copy>
+        ```
 
     ![True Action](images/true-action1.png " ")
 
@@ -253,6 +257,8 @@ In this task, you will create Page Items, Static Content region and a subregion,
 In this task, you will create buttons to trigger specific actions and configure subregions to logically group related components, enhancing the functionality.
 
 1. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
+
+    ![Create Sub Region](images/create-subregion23.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -268,7 +274,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
 3. Right-click **Buttons** sub-region, click **Create Page Item**.
 
-    ![Button PageItem](images/button-pageitem.png " ")
+    ![Button PageItem](images/button-pageitem3.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -316,11 +322,11 @@ In this task, you will create buttons to trigger specific actions and configure 
 
         - JavaScript expression: Copy the below code
 
-        ```
-        <copy>
-               this.browserEvent.key === 'Enter' && !apex.item("P1_PROMPT").isEmpty()
-        </copy>
-        ```
+            ```
+            <copy>
+                this.browserEvent.key === 'Enter' && !apex.item("P1_PROMPT").isEmpty()
+            </copy>
+            ```
 
     ![Prompt DynamicAction](images/prompt-dynamicaction.png " ")
 
@@ -332,18 +338,18 @@ In this task, you will create buttons to trigger specific actions and configure 
 
     - Settings > Code : Copy the below code
 
-    ```
-    <copy>
-        this.browserEvent.preventDefault();
-        apex.event.trigger($("#call-genai-agents"), "click");
-    </copy>
-    ```
+        ```
+        <copy>
+            this.browserEvent.preventDefault();
+            apex.event.trigger($("#call-genai-agents"), "click");
+        </copy>
+        ```
 
    ![True Action](images/true-action2.png " ")
 
 9. Right-click **Buttons** sub-region, click **Create Button**.
 
-     ![Create Button](images/create-button.png " ")
+     ![Create Button](images/create-button2.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -383,7 +389,9 @@ In this task, you will create buttons to trigger specific actions and configure 
 
       ![Edit SendButton1](images/send-edit2.png " ")
 
-11. Under **Button** sub-region, right-Click **Send** button, and click **Create Dynamic Action**.
+11. Under **Button** sub-region, Right-Click **Send** button, and click **Create Dynamic Action**.
+
+    ![Create DynamicAction](images/create-dyaction.png " ")
 
 12. In the Property Editor, enter/select the following:
 
@@ -405,25 +413,26 @@ In this task, you will create buttons to trigger specific actions and configure 
         - Language: **PL/SQL**
         - PL/SQL Code: Copy the below code:
 
-        ```
-        <copy>
+            ```
+            <copy>
 
-            begin insert into RAG_CHATBOT (
-            user_name, is_own, comment_text, comment_date,
-            session_ID
-            )
-            values
-            (
-               :APP_USER, 'Yes', :P1_PROMPT, sysdate,
-               :P1_SESSION_ID
-            );
-            end;
+                begin insert into RAG_CHATBOT (
+                user_name, is_own, comment_text, comment_date,
+                session_ID
+                )
+                values
+                (
+                :APP_USER, 'Yes', :P1_PROMPT, sysdate,
+                :P1_SESSION_ID
+                );
+                end;
 
-        </copy>
-        ```
+            </copy>
+            ```
 
-       - Item to Submit: **P1\_PROMPT,P1\_SESSION\_ID**
-       - Item to Return: **P1\_CONV\_ID**
+        - Items to Submit: **P1\_PROMPT,P1\_SESSION\_ID**
+
+        - Items to Return: **P1\_CONV\_ID**
 
     ![Send True Action](images/send-true1.png " ")
 
@@ -434,116 +443,126 @@ In this task, you will create buttons to trigger specific actions and configure 
 16. In the Property Editor, enter/select the following:
 
     - Identification > Action: **Execute Server-side Code**
+
     - Under Settings > Code : Copy and paste the below code
 
-    ```
-    <copy>
-    apex.region("ai-agents-chat").refresh();
-    var spinner = apex.util.showSpinner();
-    </copy>
-    ```
+        ```
+        <copy>
+        apex.region("ai-agents-chat").refresh();
+        var spinner = apex.util.showSpinner();
+        </copy>
+        ```
 
     ![True Action2](images/send-true2.png " ")
 
 17. Right-click **True** action and click **Create TRUE Action**.
 
+    ![Create True Action](images/create-trueaction.png " ")
+
 18. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: Calling RAG Agent
+
         - Action: **Execute Server-side Code**
 
     - Under Settings:
+
         - Language: PL/SQL
+
         - Code : Copy and paste the below code
 
-    ```
-    <copy>
+        ```
+        <copy>
 
-        declare
-        l_body       clob;
-        l_response   clob;
-        l_url        varchar2(2000);
-        l_result     varchar2(4000);
-    begin
-        l_url := 'https://agent-runtime.generativeai.'
-                    || :P1_REGION
-                    ||'.oci.oraclecloud.com/20240531/agentEndpoints/'
-                    || :P1_AGENT_ENDPOINT_ID
-                    || '/actions/chat';
-        l_body := '{"sessionId"    : "' || :P1_SESSION_ID || '",'
-                || '"shouldStream" : "false",'
-                || '"userMessage"  : "' || :P1_PROMPT || '"}';
+            declare
+            l_body       clob;
+            l_response   clob;
+            l_url        varchar2(2000);
+            l_result     varchar2(4000);
+        begin
+            l_url := 'https://agent-runtime.generativeai.'
+                        || :P1_REGION
+                        ||'.oci.oraclecloud.com/20240531/agentEndpoints/'
+                        || :P1_AGENT_ENDPOINT_ID
+                        || '/actions/chat';
+            l_body := '{"sessionId"    : "' || :P1_SESSION_ID || '",'
+                    || '"shouldStream" : "false",'
+                    || '"userMessage"  : "' || :P1_PROMPT || '"}';
 
-        apex_web_service.g_request_headers(1).name := 'Content-Type';
-        apex_web_service.g_request_headers(1).value := 'application/json';
+            apex_web_service.g_request_headers(1).name := 'Content-Type';
+            apex_web_service.g_request_headers(1).value := 'application/json';
 
-        l_response := apex_web_service.make_rest_request(
-                        p_url                  => l_url,
-                        p_http_method          => 'POST',
-                        p_body                 => l_body,
-                        p_credential_static_id => :P1_APEX_AI_CRED
-                    );
+            l_response := apex_web_service.make_rest_request(
+                            p_url                  => l_url,
+                            p_http_method          => 'POST',
+                            p_body                 => l_body,
+                            p_credential_static_id => :P1_APEX_AI_CRED
+                        );
 
 
-            SELECT response_text into l_result
-        FROM   JSON_TABLE(l_response, '$.message[*]'
-                COLUMNS (response_text varchar2(4000) PATH '$.content.text'
-                            )) jt;
+                SELECT response_text into l_result
+            FROM   JSON_TABLE(l_response, '$.message[*]'
+                    COLUMNS (response_text varchar2(4000) PATH '$.content.text'
+                                )) jt;
 
-    insert into RAG_CHATBOT (user_name, is_own, comment_text, comment_date, session_ID)
-    values ('AI', 'No', l_result, sysdate, :P1_SESSION_ID)
-    returning CONV_ID into :P1_CONV_ID;
+        insert into RAG_CHATBOT (user_name, is_own, comment_text, comment_date, session_ID)
+        values ('AI', 'No', l_result, sysdate, :P1_SESSION_ID)
+        returning CONV_ID into :P1_CONV_ID;
 
-    -- Adding Citations
+        -- Adding Citations
 
-    for i in (SELECT jt.source_text, jt.source_location
-    FROM JSON_TABLE(
-        l_response,
-        '$.traces[*]'
-        COLUMNS (
-            NESTED PATH '$.citations[*]'
-                COLUMNS (
-                    source_text VARCHAR2(4000) PATH '$.sourceText',
-                    source_location VARCHAR2(4000) PATH '$.sourceLocation.url'
-                )
+        for i in (SELECT jt.source_text, jt.source_location
+        FROM JSON_TABLE(
+            l_response,
+            '$.traces[*]'
+            COLUMNS (
+                NESTED PATH '$.citations[*]'
+                    COLUMNS (
+                        source_text VARCHAR2(4000) PATH '$.sourceText',
+                        source_location VARCHAR2(4000) PATH '$.sourceLocation.url'
+                    )
+            )
+        ) jt
+        where jt.source_text is not null and
+        jt.source_location is not null
         )
-    ) jt
-    where jt.source_text is not null and
-    jt.source_location is not null
-    )
-    loop
-        insert into RAG_CITATIONS (conv_id, prompt, source_text, source_location, asked_on) 
-            values (:P1_CONV_ID,:P1_PROMPT, i.source_text,i.source_location, systimestamp);
+        loop
+            insert into RAG_CITATIONS (conv_id, prompt, source_text, source_location, asked_on) 
+                values (:P1_CONV_ID,:P1_PROMPT, i.source_text,i.source_location, systimestamp);
 
-    end loop;
+        end loop;
 
-    end;
+        end;
 
-    </copy>
-    ```
+        </copy>
+        ```
 
-    - Item to Submit: **P1\_PROMPT,P1\_SESSION\_ID,P1\_AGENT\_ENDPOINT\_ID,P1\_APEX\_AI\_CRED**, **P1\_REGION**
+    - Items to Submit: **P1\_PROMPT,P1\_SESSION\_ID,P1\_AGENT\_ENDPOINT\_ID,P1\_APEX\_AI\_CRED**, **P1\_REGION**
 
     ![True Action3](images/send-true03.png " ")
 
 19. Right-click **True** action and click **Create TRUE Action**.
 
+    ![Create True Action](images/create-trueaction.png " ")
+
 20. In the Property Editor, enter/select the following:
 
     - Identification > Action: **Execute JavaScript Code**
+
     - Under Settings > Code : Copy and paste the below code
 
-    ```
-    <copy>
-        apex.region("ai-agents-chat").refresh();
-        apex.item("P1_PROMPT").setValue("");
-        apex.item("P1_PROMPT").enable();
-        apex.item("P1_PROMPT").setFocus();
-        $("#apex_wait_overlay").remove();
-        $(".u-Processing").remove();
-    </copy>
-    ```
+        ```
+        <copy>
+            apex.region("ai-agents-chat").refresh();
+            apex.item("P1_PROMPT").setValue("");
+            apex.item("P1_PROMPT").enable();
+            apex.item("P1_PROMPT").setFocus();
+            $("#apex_wait_overlay").remove();
+            $(".u-Processing").remove();
+        </copy>
+        ```
 
     ![True Action4](images/send-true4.png " ")
 
@@ -558,33 +577,43 @@ In this task, we will create a Static Content region and a subregion, and config
 2. In the Property Editor, enter/select the following:
 
     - Identification > Item Name: **P1_PROMPT**
+
     - Computation > Type: **Static Value**
+
     - Error > Error Message: **Clear the message if page is refreshed.**
 
    ![Create Prompt](images/p1-prompt.png " ")
 
 3. Right-click **Before Header** and select **Create Computation**.
 
+   ![Create Computation](images/create-computation.png " ")
+
 4. In the Property Editor, enter/select the following:
 
     - Identification > Item Name: **P1\_SESSION\_ID**
+
     - Computation > Type: **Static Value**
 
    ![Create SessionId](images/process-sessionid.png " ")
 
 5. Right-click **Before Header** and select **Create Process**.
 
-   ![Create Process](images/create-process.png " ")
+   ![Create Process](images/create-process1.png " ")
 
 6. In the Property Editor, enter/select the following:
 
      - Under Identification:
-        - Item Name: **Create Session**
+
+        - Name: **Create Session**
+
         - Type: **Invoke API**
 
      - Under Settings:
+
         - Type: **REST Source**
+
         - REST Source: **Create Session API** [Refer Lab 4](?lab=4-configure-restapi)
+
         - Operation: **POST**
 
         ![Enter Process](images/enter-process.png " ")
@@ -600,39 +629,45 @@ In this task, we will create a Static Content region and a subregion, and config
         - SQL Query (return single value): Copy the below code
 
         ```
-        <copy>
+            <copy>
 
-        SELECT id
-        FROM
-        JSON_TABLE(
-            :P1_RESPONSE_SESSION,
-            '$' COLUMNS (
-                id VARCHAR2(4000) PATH '$.id'
-            )
-        ) jt;
+            SELECT id
+            FROM
+            JSON_TABLE(
+                :P1_RESPONSE_SESSION,
+                '$' COLUMNS (
+                    id VARCHAR2(4000) PATH '$.id'
+                )
+            ) jt;
 
-        </copy>
-        ```
+            </copy>
+            ```
 
    ![Edit Default](images/edit-default.png " ")
 
 9. Navigate to **Pre-Rendering**. Select **Create Session** process and expand **Parameters**.
 
+    ![Expand Session](images/expand-session.png " ")
+
 10. Click **AGENT_NAME** parameter. In the Property Editor, enter/select the following:
 
     - Under Value:
+
         - Type : **Static Value**
+
         - Static Value: **RAGAgent**
 
-    ![Agent Name](images/agent-name.png " ")
+    ![Agent Name](images/agent-name1.png " ")
 
 11. Click **DESCRIPTION** parameter. In the Property Editor, enter/select the following:
 
     - Under Value:
+
         - Type : **Static Value**
+
         - Static Value: **Session for RAG Agent**
 
-    ![Description](images/description.png " ")
+    ![Description](images/description1.png " ")
 
 12. Click **RESPONSE** parameter. In the Property Editor, enter/select the following:
 
@@ -642,13 +677,15 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Value > Item : **P1\_RESPONSE\_SESSION**
 
-    ![Response Session](images/response-session1.png " ")
+    ![Response Session](images/response-session2.png " ")
+
+13. Click **Save**.
 
 ## Task 4: Add Pages for Document Upload
 
 1. Navigate back to the Page Designer. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](images/plus-page.png " ")
+   ![Create Page](images/plus-page1.png " ")
 
 2. Select **Form**.
 
@@ -657,8 +694,11 @@ In this task, we will create a Static Content region and a subregion, and config
 3. In the Property Editor, enter/select the following:
 
     - Page Number : **5**
+
     - Name: **Upload Documents to knowledge Base**
+
     - Page Mode: **Drawer**
+
     - Table/View Name: **DOC\_UPLOAD**
 
 4. Click **Next**.
@@ -670,6 +710,8 @@ In this task, we will create a Static Content region and a subregion, and config
    ![Edit Form](images/create-formpage.png " ")
 
 6. Once Page is created, navigate to the page, right-click on **Upload Documents to Knowledge Base** region and select **Create page Item**.
+
+   ![Page](images/page5.png " ")
 
 7. Now, add the following nine page items one after the other:
 
@@ -697,11 +739,15 @@ In this task, we will create a Static Content region and a subregion, and config
 9. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **P5\_DOC\_UPLOAD**
+
         - Type: **File Upload**
 
     - Under Display:
+
         - Display As: **Block Dropzone**
+
         - Dropzone Title: **Upload your Document**
 
    ![Document Upload](images/doc-upload.png " ")
@@ -711,18 +757,25 @@ In this task, we will create a Static Content region and a subregion, and config
 11. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **P5\_INGESTION\_COUNT**
+
         - Type: **Hidden**
 
     ![Ingestion Count](images/ingestion-count.png " ")
 
 12. Right-click **P5\_INGESTION\_COUNT** page item, click **Create Computation**.
 
+    ![Ingestion Computation](images/ingestion-computation1.png " ")
+
 13. In the Property Editor, enter/select the following:
 
     - Under Computation:
+
         - Type: **SQL Query (return single value)**
+
         - SQL Query: Copy the below code
+
         ```
         <copy>
 
@@ -735,11 +788,14 @@ In this task, we will create a Static Content region and a subregion, and config
 
 14. Right-click **Content Body**, click **Create Region**.
 
+    ![ContentBody Region](images/contentbody-region.png " ")
+
 15. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
         - Name: **Ingestion Details**
+
         - Type: **Static Content**
 
     - Source > HTML Code : **An Ingestion Job is currently In-Progress. Please wait before uploading Documents**
@@ -749,6 +805,7 @@ In this task, we will create a Static Content region and a subregion, and config
     - Under Server-side Condition:
 
         - Type: **Item is NOT zero**
+
         - Item: **P5\_INGESTION\_COUNT**
 
         ![Ingestion Details](images/ingestion-details2.png " ")
@@ -758,10 +815,12 @@ In this task, we will create a Static Content region and a subregion, and config
 17. In the Property Editor, enter/select the following:
 
     - Under Server-side Condition:
+
         - Type: **Item is zero**
+
         - Item **P5\_INGESTION\_COUNT**
 
-       ![Server Side](images/page5-serverside.png " ")
+       ![Server Side](images/page5-serverside11.png " ")
 
 ## Task 5: Add Processes to the Page
 
@@ -775,24 +834,31 @@ In this task you will learn how to create processes and will create  processes:
 
 - **Auto DML**: This process helps in Data Manipulation Language (DML) operations such as insert, update, or delete based on user actions on the form.
 
-1. On Page 5, Navigate to the **Processing** tab, select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
+1. Navigate to the **Processing** tab, right-click **Close Dialog** process, click **Delete**.
+
+      ![Delete Process](images/delete-process.png " ")
+
+2. Select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
 
     - Identification > Type: **Invoke API**
 
     - Under Settings:
+
         - Type: **PL/SQL Package**
+
         - Package: **OCI\_OBJECT\_STORAGE\_UTILS**
+
         - Procedure or Function: **UPLOAD_FILE**
 
     - Under Server-side Condition:
 
-        - When Button Pressed: **--Select--**
         - Type: **Request is contained in Value**
+
         - Value: **CREATE,SAVE**
 
         ![Process](images/process0.png " ")
 
-2. Expand the **Parameters** and map the following items one after another:
+3. Expand the **Parameters** and map the following items one after another:
 
     |   | Parameters | Value > Item |
     |---|-------|------|
@@ -808,37 +874,51 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Parameters](images/parameters1.png " ")
 
-3. Right-click **Processes** and click **Create Process**.
+4. Right-click **Processes** and click **Create Process**.
 
-4. In the Property Editor, enter/select the following:
+     ![Create Process](images/create-process20.png " ")
+
+5. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Work with Ingestion Jobs**
+
         - Type: **Execution Chain**
 
     - Under Server-side Condition:
+
         - Type: **Request is contained in Value**
+
         - Value: **CREATE,SAVE**
 
      ![Process2](images/process2.png " ")
 
-5. Right-click **Work with Ingestion Jobs** processes, click **Add Child Process**.
+6. Right-click **Work with Ingestion Jobs** processes, click **Add Child Process**.
 
-6. In the Property Editor, enter/select the following:
+     ![Add ChildProcess](images/template-childprocess.png " ")
+
+7. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Call Ingestion API**
+
         - Type: **Invoke API**
+
         - Execution Chain: **Work with Ingestion Job**
 
     - Under Settings:
+
         - Type: **REST Source**
+
         - Value: **Create Ingestion Job API**
+
         - Operation: **POST**
 
      ![Child Process1](images/child-process1.png " ")
 
-7. Under **Call Ingestion API** child process, expand the parameters and map the following parameters:
+8. Under **Call Ingestion API** child process, expand the parameters and map the following parameters:
 
     |   | Parameters | Parameter > Ignore Output|Value > Item |
     |---|-------|------|----|
@@ -851,13 +931,18 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Child Parameters1](images/child-parameters11.png " ")
 
-8. Right-click **Work with Ingestion Jobs** process, click **Add Child Process**.
+9. Right-click **Work with Ingestion Jobs** process, click **Add Child Process**.
 
-9. In the Property Editor, expand the **Parameters** and enter/select the following:
+     ![Add ChildProcess](images/template-childprocess.png " ")
+
+10. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Set Ingestion Job Details**
+
         - Type: **Execute Code**
+
         - Execution Chain: **Work with Ingestion Job**
 
     - Under Source:
@@ -883,24 +968,29 @@ In this task you will learn how to create processes and will create  processes:
 
      ![Child Process2](images/child-process2.png " ")
 
-10. Right-click **Processes**, select **Create Process**.
+11. Right-click **Processes**, select **Create Process**.
 
-11. In the Property Editor, enter/select the following:
+12. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Delete File in Object Storage**
+
         - Type: **Invoke API**
 
     - Under Settings:
+
         - Type: **PL/SQL Package**
+
         - Package: **OCI\_OBJECT\_STORAGE\_UTILS**
+
         - Procedure or Function: **DELETE\_FILE**
 
     - Server-side Condition > When Button Pressed: **DELETE**
 
         ![Process](images/process3.png " ")
 
-12. Under **Delete File in Object Storage** process and map the following parameters:
+13. Under **Delete File in Object Storage** process and map the following parameters:
 
     |   | Parameters | Value > Item |
     |---|-------|------|
@@ -909,28 +999,37 @@ In this task you will learn how to create processes and will create  processes:
     | 3 | p\_mime\_type| P5\_MIME\_TYPE |
     {: title="Parameters Mapping"}
 
-    ![Parameters](images/parameters3.png " ")
+    ![Parameters](images/param1.png " ")
 
-13. Right-click **Processes** and click **Create Process**.
+    ![Parameters](images/param2.png " ")
 
-14. In the Property Editor, enter/select the following:
+    ![Parameters](images/param3.png " ")
+
+14. Right-click **Processes** and click **Create Process**.
+
+15. In the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Auto DML**
+
         - Type: **Form - Automatic Row Processing (DML)**
+
         - From Region: **Upload Documents to Knowledge Base**
 
     - Under Server-side Condition:
+
         - Type: **Request is contained in Value**
+
         - Value: **CREATE,SAVE,DELETE**
 
     ![Process](images/process4.png " ")
 
-15. Right-click **After Processing**, click **Create Branch**.
+16. Right-click **After Processing**, click **Create Branch**.
 
     ![Create Branch](images/create-branch.png " ")
 
-16. In the Property Editor, enter/select the following:
+17. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Go To Page 6**
 
@@ -938,7 +1037,11 @@ In this task you will learn how to create processes and will create  processes:
 
     - Link Builder - Target > Page : **6**
 
+    - Click **OK**.
+
     ![Edit Branch](images/edit-branch.png " ")
+
+18. Click **Save**.
 
 ## Task 6: Create Page for Document Processing
 
@@ -959,14 +1062,18 @@ In this task we will create Application Items,Application Processes and Content 
 4. In the Property Editor, enter/select the following:
 
     - Name: **ID**
-    - Scope: **Application**
-    - Security > Session State Protection : **Unrestricted**
 
-    ![Edit ApplicationItem](images/edit-applicationitem0.png " ")
+    - Scope: **Application**
+
+    - Security > Session State Protection : **Unrestricted**
 
     - Click **Create Application Item**
 
+    ![Edit ApplicationItem](images/edit-applicationitem0.png " ")
+
 5. Navigate back to **Shared Components** page.
+
+    ![Shared Components](images/application-sharedcomponent.png " ")
 
 6. Under **Application Logic**, select **Application Processes**.
 
@@ -979,34 +1086,38 @@ In this task we will create Application Items,Application Processes and Content 
 8. Enter/select the following::
 
     - Name : **DOWNLOAD_DOC**
+
     - Sequence: **1**
+
     - Point: **Ajax Callback:Run this application process when requested by a page process.**
 
-    ![Edit Identification](images/identification.png " ")
-
     - Click **Next**
+
+    ![Edit Identification](images/identification.png " ")
 
 9. Enter/select the following::
 
     - Language : **PL/SQL**
+
     - Code: Copy the below code
-    ```
-    <copy>
 
-    BEGIN
-      OCI_OBJECT_STORAGE_UTILS.get_file(:ID);
-    END;
+        ```
+        <copy>
 
-    </copy>
-    ```
+        BEGIN
+        OCI_OBJECT_STORAGE_UTILS.get_file(:ID);
+        END;
 
-    ![Edit Source](images/source.png " ")
+        </copy>
+        ```
 
     - Click **Next**
 
+    ![Edit Source](images/source.png " ")
+
 10. Click **Create Process**.
 
-    ![Create Application Process](images/create-applicationprocesses.png " ")
+    ![Create Application Process](images/create-appprocess.png " ")
 
 11. Navigate to your Application ID and click **Create Page**.
 
@@ -1021,55 +1132,58 @@ In this task we will create Application Items,Application Processes and Content 
 13. Enter/select the following::
 
     - Page Number : **6**
+
     - Name: **Documents Processing Tracker**
+
     - Page Mode: **Drawer**
+
+    - Click **Create Page**
 
     ![Edit Form](images/document-tracker.png " ")
 
-    - Click **Next**
+14. Under Content Body, select **Document Processing Tracker**.
 
-14. Click **Create Page**.
-
-15. Under Content Body, select **Document Processing Tracker**.
-
-16. In the property editor, enter/select the following
+15. In the property editor, enter/select the following
 
     - Identification > Name : **List Available Documents**
 
     - Under Source:
 
         - Type: **SQL Query**
+
         - SQL Query: Copy the below code
 
-        ```
-        <copy>
+            ```
+            <copy>
 
-        select
-        ID,
-        FILE_NAME,
-        MIME_TYPE,
-        OBJECT_STORAGE_URL,
-        CREATED,
-        CREATED_BY,
-        UPDATED,
-        UPDATED_BY,
-        INGESTION_RESPONSE,
-        case when INGESTION_RESPONSE = 'SUCCEEDED'
-              then 'success' when INGESTION_RESPONSE = 'ACCEPTED' then 'danger' else 'warning' end as response_color,
-         DATA_ING_JOB_ID
-        from
-        DOC_UPLOAD
+            select
+            ID,
+            FILE_NAME,
+            MIME_TYPE,
+            OBJECT_STORAGE_URL,
+            CREATED,
+            CREATED_BY,
+            UPDATED,
+            UPDATED_BY,
+            INGESTION_RESPONSE,
+            case when INGESTION_RESPONSE = 'SUCCEEDED'
+                then 'success' when INGESTION_RESPONSE = 'ACCEPTED' then 'danger' else 'warning' end as response_color,
+            DATA_ING_JOB_ID
+            from
+            DOC_UPLOAD
 
-        </copy>
-        ```
+            </copy>
+            ```
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
     ![Rename](images/rename.png " ")
 
+    ![Appearance](images/page6-appearance.png " ")
+
     ![Edit Form](images/edit-documenttracker.png " ")
 
-17. In the Property Editor, select **Attributes** tab and enter/select the following:
+16. In the Property Editor, select **Attributes** tab and enter/select the following:
 
     - Under Settings:
 
@@ -1093,33 +1207,40 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Document Attributes](images/document-attributes.png " ")
 
-18. Under **List Available Documents**, right-click **Action**, and click **Create Action**.
+17. Under **List Available Documents**, right-click **Action**, and click **Create Action**.
 
     ![Create Action](images/create-actionmenu.png " ")
 
-19. In the Property Editor, enter/select the following:
+18. In the Property Editor, enter/select the following:
 
     - Under Identification :
+
         - Position: **Primary Actions**
+
         - Template : **Menu**
+
         - Label : **Menu**
 
     - Under Appearance :
+
         - Display Type: **Icon**
+
         - Icon : **fa-ellipsis-v**
 
     ![Edit Menu](images/edit-menu.png " ")
 
-20. Under **Menu** action, right-click **Menus** add below items one after another:
+19. Under **Menu** action, right-click **Menus** add below items one after another:
 
     - Under Identification enter/select the following:
 
         - Type: **Menu Entry**
+
         - Target: **Download PDF**
 
     - Under Link enter/select the following:
 
         - Type: **Redirect to Page in this Application**
+
         - Label: Click **No Link Defined**
 
     - In the dialog **Under Link Builder - Target** enter/select the following:
@@ -1134,31 +1255,35 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Download PDF](images/download-pdf.png " ")
 
-21. Under **Menu** action, right-click **Menus** add below items one after another:
+20. Under **Menu** action, right-click **Menus** add below items one after another:
 
     - Under Identification enter/select the following:
 
         - Type: **Menu Entry**
-        - Target: **Edit/Delete Document**
+
+        - Label: **Edit/Delete Document**
 
     - Under Link enter/select the following:
 
         - Type: **Redirect to Page in this Application**
+
         - Label: Click **No Link Defined**
 
-    - In the dialog **Under Link Builder - Target** enter/select the following:
+            - In the dialog **Under Link Builder - Target** enter/select the following:
 
-        - Target > Page : **5**
+                - Target > Page : **5**
 
-        - Set Items > Name : **P5\_ID**
+                - Set Items > Name : **P5\_ID**
 
-        - Set Items > Value : **&ID.**
+                - Set Items > Value : **&ID.**
 
-        - Clear / Reset > Clear Cache : **5**
+                - Clear / Reset > Clear Cache : **5**
+
+                - Click **OK**
 
     ![Edit Document](images/edit-document.png " ")
 
-22. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
+21. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
 
     |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Clear Cache |
     |---|-------|------|----------| --------------| ---- | --- | --- |
@@ -1170,9 +1295,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Upload](images/upload.png " ")
 
-23. Right-click **Content Body**, click **Create Page Item**.
+22. Right-click **Content Body**, click **Create Page Item**.
 
-24. In the Property Editor, enter/select the following:
+23. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1182,9 +1307,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Page6 Item](images/page-item.png " ")
 
-25. Navigate to **Page 6: Document Processing Tracker** root node.
+24. Navigate to **Page 6: Document Processing Tracker** root node.
 
-26. In the Property Editor, enter/select the following:
+25. In the Property Editor, enter/select the following:
 
     - Template Options > Size: **Large**
 
@@ -1192,11 +1317,17 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Size](images/size-large.png " ")
 
+26. Click **Save**.
+
 ## Task 7: Add Buttons in HomePage
 
 1. Go to **Navigation Bar** and navigate to **Page 1**.
 
+    ![Navigate HomePage](images/navigate-home.png " ")
+
 2. In the **Rendering Pane**, right-click  **Breadcrumb Bar** and select **Create Button**.
+
+    ![Navigate Button](images/navigate-button.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -1211,10 +1342,12 @@ In this task we will create Application Items,Application Processes and Content 
     - Under Appearance:
 
         - Button Template: **Text with Icon**
+
         - Hot: Toggle **On**
+
         - Icon: **fa-plus-square-o**
 
-    - Behavior >Action: **Submit Page**
+    - Behavior > Action: **Submit Page**
 
     ![New Session](images/new-session.png " ")
 
@@ -1225,6 +1358,7 @@ In this task we will create Application Items,Application Processes and Content 
     - Under Identification:
 
         - Button Name: **UploadDocuments**
+
         - Label: **Upload Documents**
 
     - Layout > Slot: **Before Navigation Bar**
@@ -1245,11 +1379,13 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Upload Document](images/upload-doc.png " ")
 
+6. Click **Save**.
+
 ## Task 8: Create Page to View Citations
 
 1. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](images/plus-page.png " ")
+   ![Create Page](images/plus-page7.png " ")
 
 2. Select **Content Row** .
 
@@ -1258,18 +1394,23 @@ In this task we will create Application Items,Application Processes and Content 
 3. Enter/select the following::
 
     - Page Number : **7**
-    - Name: **View Citations**
-    - Page Mode: **Drawer**
 
-    ![View Citations](images/view-citations.png " ")
+    - Name: **View Citations**
+
+    - Page Mode: **Drawer**
 
 4. Click **Create Page**
 
+    ![View Citations](images/view-citations.png " ")
+
 5. Right-click **Content Body**, select **Create Page Item**.
+
+    ![Add PageItem](images/pageitem-pg7.png " ")
 
 6. In the property editor enter/select the following:
 
     - Identification > Name: **P7\_CONV\_ID**
+
     - Identification > Type: **Hidden**
 
     ![Page Item7](images/p7_convid.png " ")
@@ -1282,13 +1423,13 @@ In this task we will create Application Items,Application Processes and Content 
 
         - SQL Query: Copy the below code
 
-    ```
-    <copy>
+            ```
+            <copy>
 
-    select * from RAG_CITATIONS WHERE CONV_ID = :P7_CONV_ID;
+            select * from RAG_CITATIONS WHERE CONV_ID = :P7_CONV_ID;
 
-    </copy>
-    ```
+            </copy>
+            ```
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
@@ -1304,21 +1445,24 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Description: Copy and paste the below HTML code:
 
-        ```
-        <copy>
-        <b>SOURCE TEXT</b>: &SOURCE_TEXT. <br> <br> <br>
-        <b>SOURCE LOCATION</b>: &SOURCE_LOCATION.
-        </copy>
-        ```
+            ```
+            <copy>
+            <b>SOURCE TEXT</b>: &SOURCE_TEXT. <br> <br> <br>
+            <b>SOURCE LOCATION</b>: &SOURCE_LOCATION.
+            </copy>
+            ```
 
         - Display Avatar: Toggle **On**
 
     - Under Avatar:
 
         - Type: **Icon**
+
         - Icon: **fa-chatbot**
 
     ![Citations Attributes](images/citation-attributes.png " ")
+
+9.Click **Save**.
 
 ## Task 9: Create Automation
 
@@ -1337,10 +1481,15 @@ In this task we will create Application Items,Application Processes and Content 
 4. Under Create Automation, enter/select the following:
 
     - Name: **Get Ingestion Status**
+
     - Type: **Scheduled**
+
     - Actions initiated on: **Query**
+
     - Execution Schedule: **Custom**
+
     - Frequency: **Minutely**
+
     - Interval: **2**
 
 5. Click **Next**.
@@ -1359,10 +1508,10 @@ In this task we will create Application Items,Application Processes and Content 
 
 9. Under Edit Action, enter/select the following:
 
-   ![Edit Actions](images/edit-aicon.png " ")
-
     - Name: **Get Ingestion Job Status**
+
     - Type: **Execute Code**
+
     - Execution Sequence: **10**
 
 10. Under Code, copy paste the below PL/SQL:
