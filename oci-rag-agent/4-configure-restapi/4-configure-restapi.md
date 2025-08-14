@@ -68,7 +68,9 @@ In this task, you will create an application that allow you to build pages, add 
 
 ## Task 2: Invoke Create Session using REST Data Source
 
-1. Navigate to App Builder > Select your application > Shared Components **Shared Components**.
+1. Navigate to App Builder > Select your application > **Shared Components**.
+
+     ![Select Application](images/select-app.png " ")
 
      ![Click REST Data Sources](images/shared-comp.png " ")
 
@@ -164,7 +166,7 @@ In this task, you will create an application that allow you to build pages, add 
 
 1. Navigate to **Shared Components**.
 
-     ![Click REST Data Sources](images/shared-compss.png " ")
+     ![Click REST Data Sources](images/shared-comp.png " ")
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
@@ -238,9 +240,9 @@ In this task, you will create an application that allow you to build pages, add 
 
 13. Under **Operation Parameters**, select **Add Parameter**.
 
-14. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
-
     ![Add Parameter](images/add-parameter2.png " ")
+
+14. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
     |   | Type | Name | Direction | Default Value | Static |
     |---|-------|------|----------| --------------| ------ |
@@ -248,13 +250,17 @@ In this task, you will create an application that allow you to build pages, add 
     | 2. | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
+    ![Content Type](images/content-type1.png " ")
+
+    ![Response](images/response.png " ")
+
 15. Click **Add Parameter**.
 
-    ![Add Parameter](images/after-add.png " ")
+    ![Add Parameter](images/after-add1.png " ")
 
 ## Summary
 
-In this lab, you learned how to set up REST Data Sources for secure session creation and triggering ingestion jobs, enabling document embedding and AI agent access for RAG-based responses.
+In this lab, you have learned how to set up REST Data Sources for secure session creation and triggering ingestion jobs.
 
 You may now proceed to the next lab.
 
