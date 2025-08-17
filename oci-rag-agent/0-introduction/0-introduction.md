@@ -139,7 +139,25 @@ If you are stuck or the app is not working as expected, you can download and ins
 
    ![Map Datasource](images/map-datasource.png " ")
 
-10. All set. Now, run the application with the users you created and see it in action!
+10. Navigate to **Shared Components**.
+
+    ![Navigate Shared](images/navigate-shared.png " ")
+
+11. Under Workflows and Automations click **Automations**.
+
+    ![Click Automation](images/click-automation.png " ")
+
+12. Click automation **Get Ingestion Status**.
+
+    ![Select Automation](images/select-automation.png " ")
+
+13. Under Settings > Scheduled Status > toggle > **Active**.
+
+14. Click **Save Changes**.
+
+    ![Set Active](images/set-active.png " ")
+
+15. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 
