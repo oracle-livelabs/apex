@@ -49,6 +49,7 @@ You will create the following users for the application:
     | -------------- | --------- |
     |    STEVE          |   HR  |
     |   AMY     |    IT  |
+    |   ALEX | Sales |
     {: title="List of Users to Create in the Application"}
 
 4. In the **Create multiple Users** dialog, enter/select the following attributes:
@@ -59,6 +60,7 @@ You will create the following users for the application:
       <copy>
       AMY@yourdomain.com
       STEVE@yourdomain.com
+      ALEX@yourdomain.com
       </copy>
       ```
 
@@ -92,11 +94,14 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Create  Users - details](./images/create-emp1.png " ")
 
-4. Create the users : AMY and STEVE with appropirate details.
+4. Create the users : AMY and STEVE with appropiate details.
 
    ![Create Amy](./images/create-amy.png " ")
-
+   
    ![Create Steve](./images/create-steve.png =50%x*)
+
+   ![Create ALEX](./images/create-alex.png =50%x*)
+   
 
 ## Task 3: Onboard an Employee
 

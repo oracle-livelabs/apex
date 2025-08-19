@@ -1,33 +1,28 @@
-# Title of the Lab
+# Create Task Definitions for Employee Onboarding Workflow
 
 ## Introduction
 
-*Describe the lab in one or two sentences, for example:* This lab walks you through the steps to ...
+In this lab, you will define key Human Tasks using Oracle APEX’s Approvals Component to support the Employee Onboarding process. These tasks will automate and manage essential actions such as IT setup and training allocation for new employees. You'll configure task details, assign participants dynamically using SQL, define task parameters, and set up automated email reminders based on deadlines.
 
-Estimated Time: -- minutes
+These task definitions will later be integrated into a complete onboarding workflow.
 
-### About <Product/Technology> (Optional)
-Enter background information here about the technology/feature or product used in this lab - no need to repeat what you covered in the introduction. Keep this section fairly concise. If you find yourself needing more than two sections/paragraphs, please utilize the "Learn More" section.
+Estimated Time: 20 minutes
 
 ### Objectives
 
-*List objectives for this lab using the format below*
-
 In this lab, you will:
-* Objective 1
-* Objective 2
-* Objective 3
 
-### Prerequisites (Optional)
+* Create a task definition for IT Setup with participant assignment and employee-specific actions
 
-*List the prerequisites for this lab using the format below. Fill in whatever knowledge, accounts, etc. is needed to complete the lab. Do NOT list each previous lab as a prerequisite.*
+* Define a task for Training Allocation with dynamic data source and reminder email setup
 
-This lab assumes you have:
-* An Oracle Cloud account
+* Add participants and parameters for each task using SQL-based logic
+
+* Configure task deadlines, renewal policies, and notification actions
+
+### Prerequisites
+
 * All previous labs successfully completed
-
-
-*This is the "fold" - below items are collapsed by default*
 
 ## Task 1: Create Task Definitions for IT Setup
 

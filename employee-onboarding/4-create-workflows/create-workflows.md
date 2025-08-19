@@ -1,17 +1,24 @@
+# Build Employment Type-Based Workflows in Oracle APEX
 
 ## Introduction
 
-In this lab, you will create a **Calculate Fees** Workflow to manage fee calculations. You will then integrate it into the **Doctor Appointment** Workflow using the **Invoke Workflow** activity. Invoke Workflow activity allows you to call and execute one workflow from within a parent workflow, enabling seamless integration between workflows.
+In this lab, you will create an **Employment Type** Workflow to automate employee training assignments. The workflow will decide the training path based on whether the employee is **Full Time** or an **Intern**, and send follow up emails. You will learn how to set up workflow parameters, variables, activities, and connections to build a complete workflow process.
 
 ### Objectives
 
 In this lab, you learn how to:
 
-- Create a Calculate Fees Workflow.
+- Create and configure a new workflow in Oracle APEX
 
-- Modify the Calculate Fees Workflow details.
+- Define workflow parameters and variables
 
-- Add Calculate Fees Workflow Variables
+- Add conditional logic to handle different employment types
+
+- Invoke backend procedures for training assignment
+
+- Create human tasks for training allocation and email notifications
+
+- Connect all workflow activities to ensure a complete onboarding flow
 
 Estimated Time: 20 minutes
 
@@ -22,7 +29,6 @@ Estimated Time: 20 minutes
 ## Task 1: Create the Workflow
 
 To create a Workflow:
-
 
 1. Navigate to **Shared Components**.
 
@@ -261,7 +267,6 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
    ![Link parameters](./images/params-emp1.png " ")
 
-
 ## Task 7: Create Activity to send Training Completion Email
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
@@ -316,7 +321,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 ## Summary
 
-In this lab, you learned the process of creating a Employeement Type Workflow using Oracle APEX.
+In this lab, you created a workflow in Oracle APEX that assigns onboarding tasks based on the employee’s employment type (Full-Time or Intern). You defined workflow parameters and variables, added automated activities to assign trainings, and configured human tasks and notifications to guide the onboarding process.
 
 ## What's Next
 

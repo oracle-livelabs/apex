@@ -1,18 +1,29 @@
-# Create Pages in the Application
+# Create Task and Workflow Pages in the Application
 
 ## Introduction
 
-In this hands-on lab, you will create a page for collecting new appointment requests. You will create pages for managing doctor appointments, incorporating workflows, task lists, and feedback.
+In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling hospital staff, IT teams, and doctors to initiate and act upon employee-related tasks.
+This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule inductions, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
 
 ### Objectives
 
 In this lab, you will learn how to:
 
-- Create the New Appointments page
-- Create the Patient Tasks page
-- Create the Doctors Task page
-- Modify the Task Details page
-- Create the Feedback page and View appointment workflows page
+- Create the New Employee Page to capture employee details for onboarding.
+
+- Configure Workflow Processes to automatically trigger onboarding workflows.
+
+- Build IT Tasks Page to handle email setup and laptop allocation.
+
+- Create Schedule Induction Page for HR to schedule induction sessions.
+
+- Develop Unified Task List Pages to view and act on tasks.
+
+- Customize Task Details Pages.
+
+- Create Workflow Console Pages for employees to monitor workflows they initiated or own.
+
+- Improve the Navigation Menu to provide easy access to tasks and workflows.
 
 Estimated Time: 20 minutes
 
@@ -22,7 +33,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create the New Employee Page
 
-Now that the Workflow is created, let us create the page that the hospital staff will use to create a new appointment.
+Now that the Workflow is created, let us create the page that HR will use to create a new appointment.
 
 1. Navigate to **Application ID <number>**.
 
@@ -453,8 +464,6 @@ In this task you will create a page to create an email id and allocate laptop to
 
 ## Task 5: Create Tasks Page
 
-Our application has two entry points for Patients: First, to confirm an invoice request and second, to provide feedback. For this, we need to create a Unified Task List for Patients' tasks.
-
 1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
 
     ![click page](./images/click-create-pagee.png " ")
@@ -477,7 +486,7 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
 5. To create another Unified Task list page, click **+ (Plus) Icon** on the top-right corner of the page designer toolbar. Select **Page** from the drop-down.
 
-    ![create patient tasks](./images/create-apge.png " ")
+    ![create page tasks](./images/create-apge.png " ")
 
 6. Select **Unified Task List**.
 
@@ -738,9 +747,9 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
 21. Click **Save**.
 
-## Task 5: Create the Workflows Page
+## Task 7: Create the Workflows Page
 
-Finally, we need the page that the Hospital Management Staff will use to monitor the appointment workflow.
+Finally, we need the page that the HR will use to monitor the employee onboarding workflow.
 
 We use the Workflow Console and Details pages with **Initiated By Me** report context, which allows a logged-in user to view all Workflows Initiated by him or her.
 
@@ -774,7 +783,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![Save workflow ](./images/save-workflow-console.png " ")
 
-## Task 6: Create the Workflows Page - My Workflows
+## Task 8: Create the Workflows Page - My Workflows
 
 1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down., select **Create Page**.
 
@@ -802,7 +811,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 4. Save and Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
-## Task 7: Improve Navigation Menu
+## Task 9: Improve Navigation Menu
 
 1. On the top right, select the **Shared Components icon**.
 
@@ -862,11 +871,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 ## Summary
 
-You have successfully created a comprehensive Oracle APEX application for managing doctor appointments with workflows, task lists, and feedback features.
-
-## What's Next
-
-In the next lab, you will understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
+You have successfully created a comprehensive Oracle APEX application for Onboarding new employees with workflows and task lists,
 
 ## Acknowledgements
 

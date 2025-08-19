@@ -5,7 +5,7 @@
 This lab walks you through the database objects required for Employee Onboarding.
 In this task, you'll use SQ scripts to execute a script for creating database tables and inserting data in the tables. This script defines tables for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 
@@ -185,6 +185,8 @@ In this task you will use SQL Scripts to quickly load and execute the required d
       VALUES ('HR');
       INSERT INTO DEPARTMENTS (DEPT_NAME)
       VALUES ('IT');
+      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      VALUES ('Sales');
 
     /
     </copy>

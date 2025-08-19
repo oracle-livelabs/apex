@@ -23,24 +23,24 @@
             "filename": "../../2-create-app/2-create-app.md"
         },
         {
-            "title": "Lab 3: Create Tasks",
+            "title": "Lab 3: Create Tasks Definitions",
             "filename": "../../3-create-tasks/create-tasks.md"
         },
         {
             "title": "Lab 4: Create Employment Type Workflow",
-            "filename": "../../4-create-workflow/workflow.md"
+            "filename": "../../4-create-workflows/create-workflows.md"
         },
         {
             "title": "Lab 5: Create Employee Onboarding Workflow",
-            "filename": "../../5-create-form/create-form.md"
+            "filename": "../../5-create-emp-workflow/create-workflows.md"
         },
         {
             "title": "Lab 6: Create Workflow pages",
-            "filename": "../../6-create-report/create-report.md"
+            "filename": "../../6-create-workflow-pages/create-workflow-pages.md"
         },
         {
             "title": "Lab 7: Create Archive Tasks and Archive Workflow",
-            "filename": "../../7-create-calendar/create-calendar.md"
+            "filename": "../../7-archived-tasks/archived-tasks.md"
         },
         {
             "title": "Lab 8: Running the App",

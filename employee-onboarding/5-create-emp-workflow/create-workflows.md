@@ -1,17 +1,22 @@
+# Create and Configure Employee Onboarding Workflow
 
 ## Introduction
 
-In this lab, you will create a **Calculate Fees** Workflow to manage fee calculations. You will then integrate it into the **Doctor Appointment** Workflow using the **Invoke Workflow** activity. Invoke Workflow activity allows you to call and execute one workflow from within a parent workflow, enabling seamless integration between workflows.
+In this lab, you will create an **Employee Onboarding** Workflow to automate the onboarding process for New employees. You will define workflow parameters and variables, add activities like sending emails and creating tasks, and integrate a child workflow for employment type based task assignments. This will help you learn how to build and manage workflows using Oracle APEX Workflow Designer.
 
 ### Objectives
 
 In this lab, you learn how to:
 
-- Create a Calculate Fees Workflow.
+- Create a new workflow and modify its details
 
-- Modify the Calculate Fees Workflow details.
+- Define workflow parameters and variables
 
-- Add Calculate Fees Workflow Variables
+- Add activities such as Send Email, Execute Code, Human Task, and Invoke Workflow
+
+- Link parameters and configure email templates and tasks
+
+- Save and test the complete onboarding workflow
 
 Estimated Time: 20 minutes
 
@@ -319,11 +324,11 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 ## Summary
 
-In this lab, you learned the process of creating a Employee Onboarding Workflow using Oracle APEX.
+In this lab, you learned how to create an Employee Onboarding Workflow by setting up parameters, variables, and activities. You practiced configuring workflow details, invoking child workflows, and sending automated emails to streamline the onboarding process.
 
 ## What's Next
 
-In the next lab, you will create and customise the task pages.
+In the next lab, you will create and customise the task and workflow pages.
 
 You may now **proceed to the next lab**.
 
