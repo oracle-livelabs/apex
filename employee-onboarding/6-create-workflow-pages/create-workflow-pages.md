@@ -132,13 +132,299 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
     ![Save page](./images/save-page.png " ")
 
-## Task 3: Create Tasks Page
+## Task 3: Create Page for IT Tasks
+
+In this task you will create a page to create an email id and allocate laptop to the employee.
+
+1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
+
+    ![click page](./images/click-create-page.png " ")
+
+2. Select **Blank Page**.
+
+   ![Select Blank Page](./images/select-blank-page.png " ")
+3. Specify the following page attributes:
+
+    - Name: **IT Setup**
+
+    - Page Mode Context: **Modal Dialog**
+
+    Click **Create Page**.
+
+    ![create blank page tasks](./images/select-blank.png " ")
+
+4. In the rendering tree, right click on **Components** and select **Create Region**.
+
+    ![create region tasks](./images/create-region-it.png " ")
+
+5. In the property editor, enter Identification > Name: **IT Setup**.
+
+    ![Static Region](./images/static-region.png " ")
+
+6. Right click on the **IT Setup** region and select **Create Page Item**.
+
+   ![New Page Region](./images/new-page-item.png " ")
+
+7. In the property editor, enter/select the following:
+
+    - Under Identification:
+        - Name: **P11_SETUP_INFO**
+        - Type: **Hidden**
+
+   ![New Page Item](./images/new-page-item1.png " ")
+
+8. Similarly, create another **Page Item** with the following property:
+
+    - Under Identification:
+        - Name: **P11_EMPLOYEE_ID**
+        - Type: **Display Only**
+
+    - Label > Label: **Employee ID**
+
+    ![New Page Item](./images/new-page-item2.png " ")
+
+9. Similarly,create another **Page Item** with the following properties:
+
+    - Under Identification:
+        - Name: **P11_FIRST_NAME**
+        - Type: **Display Only**
+
+    - Label > Label: **First Name**
+
+    - Default:
+
+        - Type: **SQL Query (return single value)**
+        - SQL Query: copy and paste the below code
+
+            ```
+             <copy>
+             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+             </copy>
+            ```
+
+
+    ![New Page Item](./images/new-page-item3.png " ")
+
+10. Now, right click on the **IT Setup** region and select **Create Sub Region**.
+
+    ![New Sub Region](./images/new-sub-region.png " ")
+
+11. In the property editor, enter/select the following:
+
+    - Identification > Name: **Create Email**
+
+    - Appearance > Template: **Blank with Attributes (No Grid)**
+
+    - Under Server-side Condition:
+        - Type: **Item = Value**
+        - Item: **P11\_SETUP\_INFO**
+        - Value: **Create Email**
+
+    ![Property Sub Region](./images/prop-sub-region1.png " ")
+
+    ![Property Sub Region](./images/prop-sub-region2.png " ")
+
+12. Right click on the **Create Email** region and select **Create Page Item**.
+
+    ![Create new item](./images/email-id-item.png " ")
+
+13. In the property editor, enter/select the following:
+
+    - Identification > Name: **P11\_EMAIL\_ID**
+
+    - Label > Label: **New Email ID**
+
+    - Appearance > Template: **Required - Floating**
+
+    ![Property Sub Region Email ID](./images/email-id-item2.png " ")
+
+14. Similarly, create another sub region under **IT Setup** region and select **Create Sub Region**.
+
+    ![New Sub Region](./images/new-sub-region2.png " ")
+
+15. In the property editor, enter/select the following:
+
+    - Identification > Name: **Allocate Laptop**
+
+    - Appearance > Template: **Blank with Attributes (No Grid)**
+
+    - Under Server-side Condition:
+        - Type: **Item = Value**
+        - Item: **P11\_SETUP\_INFO**
+        - Value: **Allocate Laptop**
+
+    ![Property Sub Region](./images/prop-sub-region5.png " ")
+
+16. Right click on the **Allocate Laptop** region and select **Create Page Item**.
+
+    ![Create New item for Laptop Info](./images/laptop-info-item.png " ")
+
+17. In the property editor, enter/select the following:
+
+    - Under Identification:
+        - Name: **P11\_LAPTOP\_INFO**
+        - Type: **Rich Text Editor**
+
+    - Label > Label: **Laptop Info**
+
+    - Appearance > Template: **Required - Floating**
+
+    - Under Default:
+
+        - Type: **Static**
+        - Static Value: copy and past the below text
+
+            ```
+             <copy>
+             ### Laptop Allocation Information:
+
+             - **Laptop Model**:
+             - **Asset Tag / Serial Number**:
+             - **Pickup/Delivery Details**: [e.g., Pick up from IT desk, courier tracking info]
+             - **Setup Instructions**: [Link or brief steps]
+             </copy>
+            ```
+
+    ![Property Sub Region Laptop Info](./images/laptop-id-item.png " ")
+
+    ![Property Sub Region Laptop Info](./images/laptop-id-item1.png " ")
+
+18. In the **rendering tree**, right click on the **Dialog Footer** region and select **Create Region**.
+
+    ![Create a new Region](./images/button-cont.png " ")
+
+19. In the property editor, enter/select the following:
+
+    - Identification > Name: **Buttons Container**
+
+    - Appearance > Template: **Buttons Container**
+
+    ![Create a new Region](./images/buttons-cont2.png " ")
+
+20. In the rendering tree, click on the **Buttons Container** region and select **Create Button**.
+
+    ![Create a new button](./images/buttons-cont4.png " ")
+
+21. In the property editor, enter/select the following:
+
+    - Identification:
+        - Button Name: **Submit**
+        - Label: **&P11\_SETUP\_INFO.**
+
+    - Appearance > Hot: **Toggle ON**
+
+    ![Buttons Container](./images/buttons-cont3.png " ")
+
+22. Now, navigate to the **Processing** tab and right click on **Processing**, select **Create Process**.
+
+    ![New Process for Email ID](./images/process-email.png " ")
+
+23. In the Property editor, enter/select the following:
+
+    - Identification > Name: **Update Email Address**
+
+    - PL/SQL code: enter the following code snippet:
+
+        ```
+        <copy>
+         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+        </copy>
+        ```
+
+    - Under Server-side Condition:
+        - Type: **Item = Value**
+        - Item: **P11\_SETUP\_INFO**
+        - Value: **Create Email**
+
+    ![create page process](./images/update-email.png " ")
+
+    ![server side condition](./images/server-side-email-press.png " ")
+
+24. Similarly, create another process with the following property:
+
+    - Identification > Name: **Update Laptop Details**
+
+    - PL/SQL code: enter the following code snippet:
+
+        ```
+        <copy>
+         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+        </copy>
+        ```
+
+    - Under Server-side Condition:
+        - Type: **Item = Value**
+        - Item: **P11\_SETUP\_INFO**
+        - Value: **Allocate Laptop**
+
+    ![create page process](./images/update-laptop.png " ")
+
+    ![server side condition](./images/server-side-laptop-press.png " ")
+
+25. Similarly, create another process with the following property:
+
+    - Under Identification:
+        - Name: **Close Dialog**
+        - Type: **Close Dialog**
+
+    ![Close page process](./images/close-page.png " ")
+
+26. Click **Save**.
+
+    ![Save page](./images/save-2-page.png " ")
+
+## Task 4: Create Schedule Induction Page
+
+1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
+
+    ![click page](./images/create-page4.png " ")
+
+2. Select **Form**.
+
+    ![Create Form page](./images/create-page4.png " ")
+
+3. Specify the following page attributes:
+
+    - Under Page Definition:
+
+        - Name: **Schedule Induction**
+        - Page Mode: **Modal Dialog**
+
+    - Data Source > Data Source: **HR_INDUCTION**
+
+    Click **Next**.
+
+    ![create Induction page](./images/create-form4.png " ")
+
+4. Click **Create Page**.
+
+    ![create page](./images/create-form5.png " ")
+
+5. In the rendering tree, select the 4 page items : **P12_CREATED**, **P12_CREATED_BY**, **P12_UPDATED** and **P12_UPDATED_BY**.
+
+    ![Select page items](./images/select-hide.png " ")
+
+6. In the property editor, set the Identification >  Type: **Hidden**.
+
+    ![Hide page items](./images/hide-item.png " ")
+
+7. In the rendering tree, select **P12_INDUCTION_END_TIME** and in the property editor set the Layout > Start New Row: **Toggle OFF**.
+
+    ![Start new row](./images/new-row-item.png " ")
+
+8. Click **Save**.
+
+    ![Save Page](./images/save-induction.png " ")
+
+## Task 5: Create Tasks Page
 
 Our application has two entry points for Patients: First, to confirm an invoice request and second, to provide feedback. For this, we need to create a Unified Task List for Patients' tasks.
 
 1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
 
-    ![click page](./images/click-create-page.png " ")
+    ![click page](./images/click-create-pagee.png " ")
 
 2. Select **Unified Task List**.
 
@@ -146,17 +432,13 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
 3. Specify the following page attributes:
 
-    - Page Number: **6**
-
-    - Name: **Patient Tasks**
+    - Name: **My Tasks**
 
     - Report Context: **My Tasks**
 
-    - Breadcrumb Parent Entry: **Home (Page 1)**
-
     Click **Create Page**.
 
-    ![create patient tasks](./images/create-patient-tasks.png " ")
+    ![create IT tasks](./images/create-my-tasks.png " ")
 
 4. Our application has 1 entry point for Doctors. Doctors need to log in to approve or reject appointment requests. For this, you will create a Doctor Tasks page. This will also be a Unified Task List page for Doctors to act on the tasks assigned to them.
 
@@ -170,355 +452,260 @@ Our application has two entry points for Patients: First, to confirm an invoice 
 
 7. Specify the following page attributes:
 
-    - Page Number: **7**
-
-    - Name: **Doctor Tasks**
+    - Name: **Tasks Initiated by Me**
 
     - Report Context: **My Tasks**
 
     Click **Create Page**.
 
-  ![create-doctor-tasks-page](./images/create-doctor-tasks.png " ")
+    ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png " ")
 
-## Task 4: Modify the Task Details Pages
+8. Click **Save**.
+
+    ![Save page](./images/save-page1.png " ")
+
+## Task 6: Modify the Task Details Pages
 
 Our Application has three Task Definitions -  Appointment Request, Invoice Request, and Feedback Request. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
 
-1. In the **Doctors Appointment Made Easy!** application, navigate to **Shared Components** and select **Task Definitions**.
+1. Click on the **Shared Components icon**.
+
+    ![select shared components definitions](./images/select-shared-comp.png " ")
+
+2. Select **Task Definitions**.
 
     ![select task definitions](./images/select-task-def.png " ")
 
-2. In the Task Definitions page, click **Appointment Request**.
+3. In the Task Definitions page, click **IT Setup**.
 
-    ![select appointment request](./images/select-appointment-req.png " ")
+    ![select IT Setup request](./images/select-it-req.png " ")
 
-3. In the Task Definition Editor, note the page number in the **Task Details URL** (f?p=&APP\_ID.:2:&SESSION.::&DEBUG.:RP,2:P2\_TASK\_ID:&TASK\_ID.). This points to Page 2.
+4. In the Task Definition Editor, note the page number in the **Task Details URL** (f?p=&APP\_ID.:35:&SESSION.::&DEBUG.:RP,35:P35\_TASK\_ID:&TASK\_ID.). This points to Page 35.
 
     ![select appointment request](./images/configure-task-def.png " ")
 
-4. Navigate to your application home page and click **Page 2**.
+5. Navigate to your application home page and click **Page 35**.
 
     ![navigate to page 2](./images/navigate-to-page-2.png " ")
 
-5. Now, update the following in the Property Editor:
+6. Now, update the following in the Property Editor:
 
-    - Name: **Appointment Request Details**
+    - Name: **IT Setup Task Details**
 
-    - Title: **Appointment Request Details**
+    - Title: **IT Setup Task Details**
 
-    ![change title page2](./images/change-title-page2.png " ")
+    ![change title](./images/change-title-page5.png " ")
 
-6. Click **Save**.
+7. In the rendering tree, right click on **Content Body** and select **Create Region**
 
-7. You now need to change the Invoice Request Details Page.
+    ![create region](./images/create-region.png " ")
 
-    Navigate to **Shared Components > Task Definition > Invoice Request** and similarly check the page number for the Task Details. The **Invoice Request** Task Definition points to Page 3.
+8. In the Property editor, enter/select the following:
 
-8. Navigate to your application home page and click **Page 3**.
+    - Under Identification:
 
-9. Now, update the following in the Property Editor:
+        - Name: **IT Task - Status**
+        - Type: **Content Row**
 
-    - Name: **Invoice Details**
+    - Under Source:
 
-    - Title: **Invoice Details**
+        - Type: **SQL Query**
+        - SQL Query: copy and paste the below code
+            ```
+             <copy>
+             SELECT
+             ip.employee_id,
+             ip.task_name,
+             CASE
+                WHEN ip.status = 'Y' THEN 'Completed'
+                ELSE 'Pending'
+             END AS task_status,
+             CASE
+                WHEN ip.status = 'Y' THEN 'success'
+                ELSE 'danger'
+             END AS response_color
+             FROM (
+                SELECT
+                    employee_id,
+                    email_created AS status,
+                    'Create Email' AS task_name
+                FROM it_provisioning
+                UNION ALL
+                SELECT
+                    employee_id,
+                    laptop_allocated AS status,
+                    'Allocate Laptop' AS task_name
+                FROM it_provisioning
+             ) ip
+             WHERE ip.employee_id IN (
+                SELECT TO_NUMBER(param_value)
+                FROM apex_task_parameters
+                WHERE task_id = NVL(:P35_TASK_ID, 0)
+                AND is_visible = 'Y'
+                AND param_label = 'Employee ID'
+                AND REGEXP_LIKE(param_value, '^\d+$')
+             )
+             </copy>
+            ```
+
+        - Page Items to Submit: **P35\_TASK\_ID**
+
+    - Layout > Sequence: **45**
+
+    - Appearance > Template: **Standard**
+
+    - Under Server-side Condition:
+
+        - Type: **Expression**
+        - PL/SQL Expression: copy and paste the below code
+
+            ```
+             <copy>
+             apex_human_task.is_allowed (
+                p_task_id   => :P35_TASK_ID,
+                p_operation => apex_human_task.c_task_op_complete )
+             </copy>
+            ```
+
+    ![IT Status region](./images/it-stats1.png " ")
+
+    ![IT Status region](./images/it-stats2.png " ")
+
+    ![IT Status region](./images/it-stats3.png " ")
+
+9. Click on the **Attributes** tab of IT Task - Status region, and enter/select the following:
+
+    - Under Settings:
+
+        - Overline: **Employee ID: &EMPLOYEE_ID.**
+        - Title: **Task Name: &TASK_NAME.**
+        - Display Badge: **Toggle ON**
+
+    - Under Badge:
+
+        - Label: **&TASK_STATUS.**
+        - Value: **TASK_STATUS**
+        - State: **RESPONSE_COLOR**
+
+    ![IT Status Attributes](./images/it-stats-attri.png " ")
+
+10. In the rendering tree, under IT Task- Status, right click on **Actions** and select **Create Action**.
+
+    ![Create Action for IT Status](./images/create-action1.png " ")
+
+11. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Position: **Primary Actions**
+        - Template: **Button**
+        - Label: **&TASK\_NAME.**
+
+    - Under Link:
+
+        - Target:
+            - Page: **11** ( IT Setup page)
+            - Set Items:
+                - P11\_EMPLOYEE\_ID - **&EMPLOYEE_ID.**
+                - P11\_SETUP\_INFO - **&TASK_NAME.**
+
+                Click **Ok**.
+
+    ![ Action Settings for IT Status](./images/create-action2.png " ")
+
+12. Save the Page.
+
+    ![ Save Page](./images/save-3-page.png " ")
+
+13. You now need to change the Allocate Trainings Details Page.
+
+    Navigate to **Shared Components > Task Definition > Allocate Trainings** and similarly check the page number for the Task Details. The **Allocate Trainings** Task Definition points to Page 36.
+
+    *Note: Your Task Definition page number may be different.*
+
+14. Navigate to your application home page and click **Page 36**.
+
+15. Now, update the following in the Property Editor:
+
+    - Name: **Allocate Trainings Task Details**
+
+    - Title: **Allocate Trainings Task Details**
 
     ![change title page2](./images/change-title-page3.png " ")
 
-10. Under **Rendering** tab, navigate to **Invoice Details > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
+16. Under **Rendering** tab, navigate to **Allocate Trainings > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
 
     ![delete developer info](./images/delete-developer-info1.png " ")
 
-11. Under **Rendering** tab, select **Details** region. In the Property editor, edit the Title to **View Invoice**.
+17. In the Task details Page, the HR should be able to fill out an induction form and submit it. On submission, it will create an entry in the **IT_SETUP_TASKS** table for the particular employee. We will customize the Induction Details Page as follows:
 
-    ![change details title](./images/change-details-title.png " ")
-
-    > **Note:** _Developer Information region is autogenerated for Action Tasks (non-approval). This can be removed/customized depending on the application use-case._
-
-12. Click **Save**.
-
-13. Navigate to **Shared Components > Task Definition > Feedback Request** and similarly check the page number for the Task Details. The **Feedback Request** Task Definition points to Page 4.
-
-14. Navigate to your application home page and click **Page 4**.
-    Now, update the following in the Property Editor:
-
-    - Name: **Feedback Details**
-
-    - Title: **Feedback Details**
-
-    ![change details title](./images/change-feedback-title.png " ")
-
-15. Under **Rendering** tab, navigate to **Feedback Details > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
-
-    ![delete developer info](./images/delete-feedback-devinf.png " ")
-
-16. Under **Rendering** tab, click **Details** region. In the Property Editor, for Title: Enter **View Appointment Details**.
-
-    ![change details title](./images/edit-details-region.png " ")
-
-17. In the Details Page, the patient should be able to fill out a Feedback form and submit it. On submission, it will create an entry in the **PATIENT_FEEDBACK** table for the particular doctor. We will customize the Feedback Details Page as follows:
-
-    - Right-click  **View Appointment Details** and select **Create Region Below**.
+    - Right-click  **Subject** and select **Create Region Below**.
 
     ![create region below](./images/create-region-below13.png " ")
 
 18. Select the newly created region and in the Property Editor, enter/select the following:
 
     - Under Identification:
-
-        - Name: **Your Feedback**
-
-        - Type: **Form**
+        - Name: **Training Details**
+        - Type: **Content Row**
 
     - Under Source:
-
-        - Table: **APPOINTMENT**
-
-        - Where:
-          ```
-          <copy>
-          booking_id = :P4_BOOKING_ID
-          </copy>
-          ```
-
-    ![configure feedback](./images/configure-feedback.png " ")
-
-19. Select the Page Items **P4\_FEE** and **P4\_WORKFLOW\_ID**. In the Property Editor, for Identification > Type, select **Hidden**.
-
-    ![set items as hidden](./images/set-items-to-hidden.png " ")
-
-20. Select **P4_SCHEDULE** and then in the property editor, for Appearance > Format Mask, select **DD-MON-YYYY HH24:MI:SS**.
-
-    ![set items as hidden](./images/update-schedule-item.png " ")
-
-21. Now, create two new page items under the **Your Feedback** region.
-
-    In the Rendering tree, right-click **Region Body** and select **Create Page Item**.
-
-    ![create page item](./images/create-page-item11.png " ")
-
-22. Select the newly created page item and in the Property Editor, enter/select the following:
-
-    - Under Identification:
-
-        - Name: **P4_RATING**
-
-        - Type: **Radio Group**
-
-    - Under List of Values:
-
-        - Type: **Static Values**
-
-        - Static Values: **Display1,Display2**
-
-        - Enter the following under Display and Return:
-
-        | Display Value |  Return Value  |
-        | --- |  --- |
-        | Excellent | 1 |
-        | Good | 2 |
-        | Satisfactory | 3 |
-        | Unsatisfactory | 4 |
-        {: title="Display and Return Values for List of Values}
-
-    Click **OK**.
-
-    ![create page item](./images/configure-rating.png " ")
-
-23. Similarly, create a new item **P4_FEEDBACK** and set the Type as **Rich Text Editor**.
-
-    ![create page item](./images/configure-feedback1.png " ")
-
-24. Click **Save**.
-
-25. Under **Pre-Rendering**, create a new **Process** above the **Initialize Form Feedback Details** process.
-
-    ![create page item](./images/configure-pre-rendering-process.png " ")
-
-26. In the Property Editor, enter/select the following:
-
-    - Identification > Name: **Populate Booking Details in Feedback Form**
-
-    - PL/SQL Code: Enter the following code:
-
-    ```
-    <copy>
-    begin
-
-    select booking_id into :P4_BOOKING_ID
-    from appointment where booking_id = (select
-         param_value
-    from apex_task_parameters
-    where task_id = :P4_TASK_ID and param_static_id = 'BOOKING_ID');
-
-    end;
-    </copy>
-    ```
-
-    ![create page item](./images/configure-pre-rendering.png " ")
-
-27. Navigate to the **Processing Tab**.
-
-28. Right-click **Processing**, select **Create Process** and add it after the **Claim** process.
-
-    ![create page item](./images/process-13.png " ")
-
-29. In the Property editor, enter/select the following:
-
-    - Identification > Name: **Save Feedback**
-
-    - Type: **Execute Code**
-
-    - PL/SQL code: enter the following code snippet:
-
-        ```
-        <copy>
-        begin
-            insert into patient_feedback (
-            patient_name,
-            doctor_no,
-            appointment,
-            feedback,
-            rating,
-            created_at,
-            updated_at)
-        values
-            (:P4_PATIENT_USERNAME,
-            :P4_DOCTOR_NO,
-            to_timestamp_tz(:P4_SCHEDULE,'DD-MON-YYYY HH24:MI:SS'),
-            :P4_FEEDBACK,
-            :P4_RATING,
-            systimestamp,
-            systimestamp);
-        end;
-        </copy>
-        ```
-
-    ![create page process](./images/save-feedback.png " ")
-
-30. For Server Side Condition > When Button Pressed, select **COMPLETE**.
-
-    ![when button pressed](./images/button-press.png " ")
-
-31. Click **Save**.
-
-## Task 5: Create the Patient Appointments And Feedbacks Page
-
-Now, you need to create a View Only page where patients can log in to view their appointments and the feedback they have left so far.
-
-1. Click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down.
-
-    ![when button pressed](./images/create-page13.png " ")
-
-2. Select **Blank Page**.
-
-   ![Create Page wizard](./images/create-blank-page13.png " ")
-
-3. Specify the following page attributes:
-
-    - Page Number: **8**
-
-    - Name: **Patient Appointments And Feedbacks**
-
-    - Breadcrumb Parent Entry: **Home (Page 1)**
-
-    Click **Create Page**. A Blank page is created.
-
-    ![create patient tasks](./images/configure-patient-apps.png " ")
-
-4. Right-click **Body** and select **Create Region**.
-
-    ![create patient tasks](./images/create-region21.png " ")
-
-5. In the Property Editor and enter/select the following:
-
-    - Under Identification:
-
-        - Title: **Appointments**
-
-        - Type: **Comments**
-
-    - Under Source:
-
-        - Table Name: **APPOINTMENT**
-
-        - **Where Clause**: Enter the below code:
-          ```
-          <copy>
-          patient_username=:APP_USER
-          </copy>
-          ```
-
-    - Appearance > Template: **Collapsible**
-
-    ![create patient tasks](./images/configure-appointments1.png " ")
-
-6. Select **Appointments** region, and in the Property editor, under **Attributes** tab and enter/select the following:
-
-    - Under Settings:
-
-        - Comment Text: **STATUS**
-
-        - User Name: **DOCTOR\_EMAIL**
-
-        - Date: **SCHEDULE**
-
-    ![create patient tasks](./images/configure-attr.png " ")
-
-7. Right-click **Appointments** Region, and select **Create Region Below**.
-
-    ![create patient tasks](./images/create-region-below1.png " ")
-
-8. In the Property Editor, enter/select the following:
-
-    - Under Identification:
-
-        - Title: **Feedbacks**
-
-        - Type: **Comments**
-
-    - Under Source:
-
         - Type: **SQL Query**
-
-        - SQL Query: copy and paste the below SQL.
+        - SQL Query: copy and paste the below code
 
             ```
-            <copy>
-            SELECT 
-            ID,
-            PATIENT_NAME,
-            'DR.' || DNAME AS DNAME,
-            APPOINTMENT,
-            FEEDBACK,
-            RATING,
-            CREATED_AT,
-            UPDATED_AT
-            FROM 
-            PATIENT_FEEDBACK, 
-            DOCTOR
-            WHERE 
-            PATIENT_NAME = :APP_USER
-            AND DOCTOR_NO = DNO;
-            </copy>
+             <copy>
+             SELECT et.training_id,
+             e.FIRST_NAME AS EMPLOYEE_NAME,
+             tc.TRAINING_NAME,
+             et.STATUS,
+             et.Employee_ID,
+             CASE
+                WHEN et.STATUS = 'Completed' THEN 'success'
+                WHEN et.STATUS = 'Not Started' THEN 'warning'
+                ELSE 'danger'
+             END AS response_color
+             FROM EMPLOYEE_TRAININGS et
+             JOIN EMPLOYEES e
+             ON e.EMPLOYEE_ID = et.EMPLOYEE_ID
+             JOIN TRAINING_CATALOG tc
+             ON tc.CATALOG_ID = et.CATALOG_ID
+             WHERE e.EMAIL = (
+                SELECT param_value
+                FROM apex_task_parameters
+                WHERE task_id = :P36_TASK_ID
+                AND is_visible = 'Y'
+                AND param_label = 'Email'
+             );
+             </copy>
             ```
 
-    ![configure feedbacks](./images/configure-feedbacks.png " ")
+            - Page Items to submit: **P36_TASK_ID**
 
-9. Select **Feedbacks** region. In the Property editor, under **Attributes** tab, enter/select the following:
+    ![configure Training Region](./images/configure-training-Details.png " ")
 
-    - Under Settings:
+19. In the rendering tree, under **Training Details**, right click on **Actions** and select **Add Action**.
 
-        - Comment Text: **FEEDBACK**
+    ![Create Action](./images/create-action-training.png " ")
 
-        - User Name: **DNAME**
+20. In the property editor, enter/select the following:
 
-        - Date: **APPOINTMENT**
+    - Under Identification:
 
-    ![configure feedbacks attr](./images/configure-feedbacks1.png " ")
+        - Position: **Primary Actions**
+        - Template: **Button**
+        - Label: **Mark Complete**
 
-10. Click **Save**.
+    - Under Link:
 
-## Task 6: Create the View Appointment Workflows Page
+        - Type: **Redirect to URL**
+        - Target: **javascript:apex.event.trigger(document,'mark_complete',&TRAINING_ID.)**
+
+    ![Action mark complete](./images/action-complete.png " ")
+
+21. Click **Save**.
+
+## Task 5: Create the Workflows Page
 
 Finally, we need the page that the Hospital Management Staff will use to monitor the appointment workflow.
 
@@ -526,77 +713,119 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 > **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs.
 
-1. To create the Workflow Console and Details pages, on the Application home page, select **Create Page**.
+1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down, select **Create Page**.
 
 2. Select **Workflow Console**.
 
-    ![configure feedbacks attr](./images/create-workflow-console.png " ")
+    ![configure workflow attr](./images/create-workflow-console.png " ")
 
 3. In the Create Workflow Console wizard, enter/select the following:
 
     - Under Page Definition:
 
-        - Name: **Monitor Appointment Workflows**
+        - Name: **Workflows Initiated By Me**
 
         - Report Context: **Initiated By Me**
 
         - Include Dashboard Page: **Toggle On**
 
-        - Dashboard Page Name: **Dashboard**
+        - Dashboard Page Name: **Workflow Dashboard**
 
-        - Form Page Name: **Form on Appointment**. This is used for the Workflow Details page.
+        - Form Page Name: **Initiated By Me Form**. This is used for the Workflow Details page.
 
     Click **Create Page**.
 
-    ![configure feedbacks attr](./images/config-workflow-console.png " ")
+    ![configure workflow attr](./images/config-workflow-console.png " ")
 
-4. Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
+4. Save the page.
+
+    ![Save workflow ](./images/save-workflow-console.png " ")
+
+## Task 6: Create the Workflows Page - My Workflows
+
+1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down., select **Create Page**.
+
+    ![Create workflow page](./images/create-workflow-page.png " ")
+
+2. Select **Workflow Console**.
+
+    ![configure workflow attr](./images/create-workflow-console.png " ")
+
+3. In the Create Workflow Console wizard, enter/select the following:
+
+    - Under Page Definition:
+
+        - Name: **My Workflows**
+
+        - Report Context: **My Workflows**
+
+        - Include Dashboard Page: **Toggle Off**
+
+        - Form Page Name: **My Workflows Me Form**. This is used for the Workflow Details page.
+
+    Click **Create Page**.
+
+    ![configure workflow attr](./images/config-workflow-console2.png " ")
+
+4. Save and Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
 ## Task 7: Improve Navigation Menu
 
-1. Navigate to **Doctor Appointments Made Easy!** applications and select **Shared Components**.
+1. On the top right, select the **Shared Components icon**.
+
+    ![shared components](./images/shared-compo.png " ")
 
 2. Under **Navigation and Search**, select **Navigation Menu**.
 
-    ![configure feedbacks attr](./images/doc-nav-menu.png " ")
+    ![Navigation Menu](./images/doc-nav-menu.png " ")
 
 3. Select **Navigation Menu**.
 
-    ![configure feedbacks attr](./images/docnav-menu1.png " ")
+    ![Select Navigation Menu](./images/docnav-menu1.png " ")
 
-4. Under **List Entries**, select **Home**.
+4. Under **List Entries**, select **Create List Entry**.
 
-    ![configure feedbacks attr](./images/doc-home.png " ")
+    ![List entries](./images/doc-create-list.png " ")
 
 5. Enter/select the following:
 
-    - Entry > List Entry Label: **DASHBOARD**
+    - Under Entry:
+        - Image/Class: **fa-tasks-alt**
+        - List Entry Label: **Task Pages**
 
-    - Target > Page: **11**
+    - Target > Target Type: **- No Target -**
 
-    Click **Apply Changes**.
+    Click **Create List Entry**.
 
-    ![configure feedbacks attr](./images/doc-home1.png " ")
+    ![Create List entry](./images/doc-home1.png " ")
 
-6. Under **List Entries**, select **New Appointment** and update Image/Class to **fa-desktop**. Click **Apply Changes**.
+6. Similarly, create another entry with the following properties:
 
-    ![configure feedbacks attr](./images/doc-new-appt.png " ")
+    - Under Entry:
+        - Image/Class: **fa-workflow**
+        - List Entry Label: **Workflow Pages**
 
-    ![configure feedbacks attr](./images/fa-desktop.png " ")
+    - Target > Target Type: **- No Target -**
 
-7. Navigate to Sequence 70 - Dashboard and click **Delete** and confirm **OK**.
+    Click **Create List Entry**.
 
-    ![configure feedbacks attr](./images/doc-dash.png " ")
+    ![Create List entry](./images/doc-home2.png " ")
 
-    ![configure feedbacks attr](./images/dash-delete.png " ")
+7. Now, select **Tasks Initiated by Me**, **My Workflows**, **My Tasks** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
 
-    ![configure feedbacks attr](./images/dash-delete-ok.png " ")
+    ![Set Parent Entry](./images/doc-pat.png " ")
 
-8. Now, select **Patient Appointments AND Feedbacks** , **Monitor Appointment Workflows** and update Parent List Entry to **Dashboard**. Click **Apply Changes**.
+    ![Set Parent Entry](./images/doc-parents.png " ")
 
-    ![configure feedbacks attr](./images/doc-pat.png " ")
+8. Similarly, select **My Workflows**, **Workflows Initiated by Me** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
 
-    ![configure feedbacks attr](./images/doc-parent.png " ")
+    ![Set Parent Entry](./images/doc-pat1.png " ")
+
+    ![Set Parent Entry](./images/doc-parent1.png " ")
+
+9. Now, select **Administration** list entry and set the Sequence: **150** and select **Apply Changes**.
+
+    ![Set Admin Entry](./images/admin-entry.png " ")
 
 ## Summary
 
