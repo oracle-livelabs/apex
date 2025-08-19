@@ -15,30 +15,41 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Provision an Instance",
-      "description": "Labs that follow the introduction are numbered, starting with Lab 1",
-      "filename": "../../provision/provision.md"
-    },
-    {
-      "title": "Lab 2: Setup the Environment",
-      "filename": "../../setup/setup.md"
-    },
-    {
-      "title": "Lab 3: Load Data into an Instance",
-      "filename": "../../data-load/data-load.md"
-    },
-    {
-      "title": "Lab 4: Query Data",
-      "filename": "../../query/query.md"
-    },
-    {
-        "title": "Lab 5: Tables in LiveLabs",
-        "filename": "../../tables/tables.md"
-    },
-    {
-            "title": "Lab 6: Variables in LiveLabs",
-            "filename": "../../variables/variables.md"
-    },
+            "title": "Lab 1: Load Database Objects",
+            "filename": "../../1-data-load/1-data-load.md"
+        },
+        {
+            "title": "Lab 2: Create an Application and Admin pages",
+            "filename": "../../2-create-app/2-create-app.md"
+        },
+        {
+            "title": "Lab 3: Create Tasks",
+            "filename": "../../3-create-tasks/create-tasks.md"
+        },
+        {
+            "title": "Lab 4: Create Employment Type Workflow",
+            "filename": "../../4-create-workflow/workflow.md"
+        },
+        {
+            "title": "Lab 5: Create Employee Onboarding Workflow",
+            "filename": "../../5-create-form/create-form.md"
+        },
+        {
+            "title": "Lab 6: Create Workflow pages",
+            "filename": "../../6-create-report/create-report.md"
+        },
+        {
+            "title": "Lab 7: Create Archive Tasks and Archive Workflow",
+            "filename": "../../7-create-calendar/create-calendar.md"
+        },
+        {
+            "title": "Lab 8: Running the App",
+            "filename": "../../8-running-the-app/8-running-the-app.md"
+        },
+        {
+            "title": "Lab 9: Activate Workflow",
+            "filename": "../../9-activate-workflow/9-activate-workflow.md"
+        },  
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
