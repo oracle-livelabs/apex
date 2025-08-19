@@ -1,28 +1,32 @@
-# Create Pages in the Application
+# Archiving Tasks and Workflows in Oracle APEX
 
 ## Introduction
 
-In this hands-on lab, you will create a page for collecting new appointment requests. You will create pages for managing doctor appointments, incorporating workflows, task lists, and feedback.
+In any workflow-based application, retaining historical records is crucial for auditing, compliance, and process tracking. Oracle APEX provides purgeable views for tasks and workflows, but without proper archiving, important data might be lost once purged. To address this, we can create SQL scripts, packages, and automations that safely archive tasks and workflows into dedicated tables.
+
+This lab guides you through building a complete archiving solution. You will create SQL scripts to define archive tables and PL/SQL packages, set up automations to execute the archiving process daily, and design a page to view archived tasks and workflows.
 
 ### Objectives
 
 In this lab, you will learn how to:
 
-- Create the New Appointments page
-- Create the Patient Tasks page
-- Create the Doctors Task page
-- Modify the Task Details page
-- Create the Feedback page and View appointment workflows page
+- Create a SQL Script to build archive tables and PL/SQL packages (TASKS_ARCHIVER and WORKFLOWS_ARCHIVER).
 
-Estimated Time: 20 minutes
+- Set up Oracle APEX Automations that run daily to archive workflows and tasks.
+
+- Build an APEX page with interactive reports to view archived tasks, workflows, and their history.
+
+By the end of this lab, you’ll have an automated archiving system that keeps your workflow data safe and accessible for long-term reference.
+
+Estimated Time: 15 minutes
 
 ### Prerequisites
 
 - All the previous Labs have been completed.
 
-## Task 1: Create the New Appointments Page
+## Task 1: Create a SQL Script Page
 
-Now that the Workflow is created, let us create the page that the hospital staff will use to create a new appointment.
+Now that the Workflow is created, let us create a SQL script that archives workflows
 
 1. Navigate to **SQL Workshop** > **SQL Scripts**.
 
@@ -791,11 +795,13 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
 ## Summary
 
-You have successfully created a comprehensive Oracle APEX application for managing doctor appointments with workflows, task lists, and feedback features.
+In this lab, you created a SQL Script Page to define archive tables and packages, and configured two daily Automations—one for workflows and another for tasks—to execute archiving procedures. You also developed a new Archived Tasks and Workflows Page with interactive reports for easy access to archived data.
+
+This approach ensures that workflow-related information is retained securely, supporting auditability and historical analysis without impacting live workflow performance.
 
 ## What's Next
 
-In the next lab, you will understand the behavior of the **Doctor Appointments Made Easy!** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
+In the next lab, you will understand the behavior of the **Employee Onboarding** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
 
 ## Acknowledgements
 

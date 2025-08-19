@@ -1,12 +1,15 @@
-# Run the 'Doctor Appointments Made Easy!' Application
+# Run the Employee Onboarding Application
 
 ## Introduction
 
-In this lab, you will run and understand the behavior of the **Employee Onboarding** application through hands-on activities. You also perform various tasks to understand the workflow and automation implemented in the application.
+In this lab, you will run and explore the Employee Onboarding application to understand how the workflows and automations function in a real scenario. Through hands-on activities, you will simulate the process of hiring and onboarding a new employee and observe how the system handles different roles and tasks.
+
+### Real-world Scenario:
+A Sales Manager recruits a new employee just one day before the scheduled onboarding. The HR team then completes the onboarding process, assigns the employee to the Sales Manager, and ensures the reporting structure is correctly established. This scenario helps demonstrate how Oracle APEX workflows and automations work together to manage onboarding efficiently, while also maintaining proper assignment and organizational hierarchy.
 
 ### Objectives
 
-- Demonstrate the behavior of the "Employee Onboarding" application through hands-on activities.
+- Demonstrate the behavior of the Employee Onboarding application through hands-on activities.
 
 Estimated Time: 15 minutes
 
@@ -88,26 +91,27 @@ In this task, you will recreate the previously created  employees in the Applica
 
 2. Log in as an Administrator and Navigate to **Administration** > **Employees** page.
 
-   ![login to the application](./images/login-to-app.png =50%x*)
+   ![login to the application](./images/login-to-app.png =30%x*)
 
 3. Click **Create**.
 
    ![Create  Users - details](./images/create-emp1.png " ")
 
-4. Create the users : AMY and STEVE with appropiate details.
+4. Create the users : AMY, STEVE and ALEX with appropiate details.
 
    ![Create Amy](./images/create-amy.png " ")
-   
-   ![Create Steve](./images/create-steve.png =50%x*)
 
-   ![Create ALEX](./images/create-alex.png =50%x*)
-   
+   ![Create Steve](./images/create-steve.png =40%x*)
+
+   ![Create ALEX](./images/create-alex.png =40%x*)
+
+
 
 ## Task 3: Onboard an Employee
 
-1. Log in as STEVE (Hospital Staff).
+1. Log in as STEVE (HR) to onboard a new employee
 
-   ![login to the application](./images/login-to-app.png " ")
+   ![login to the application](./images/login-steve.png =40%x*)
 
 3. Click **New Employee - Onboarding** to onboard a new employee.
 
