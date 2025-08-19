@@ -100,75 +100,115 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Create  Users - details](./images/create-emp1.png " ")
 
-4. Create the users : AMY, STEVE and ALEX with appropiate details.
+4. Create the users : STEVE, AMY and ALEX with appropiate details.
 
-   ![Create Amy](./images/create-amy.png " ")
+   ![Create Steve](./images/create-steve.png " ")
 
-   ![Create Steve](./images/create-steve.png =40%x*)
+   ![Create Amy](./images/create-amy.png =40%x*)
 
    ![Create ALEX](./images/create-alex.png =40%x*)
 
-
-
-## Task 3: Onboard an Employee
+## Task 4: Onboard a New Hire
 
 1. Log in as STEVE (HR) to onboard a new employee
 
    ![login to the application](./images/login-steve.png =40%x*)
 
-3. Click **New Employee - Onboarding** to onboard a new employee.
+2. Click **New Employee - Onboarding** to onboard a new employee.
 
    ![create appointment](./images/create-employee-onboard.png " ")
 
-4. Select **Psychiatric** from the problem dropdown.
+3. Enter the following details:
 
-5. Choose **ANACHATT** as the available doctor.
+   - First Name: **Monica**
+   - Personal Email: **Monica@test.com**
+   - Employee Type: **Full-Time**
+   - Department: **Sales**
+   - Role: **Senior Sales Engineer**
+   - Manager: **ALEX**
+   - Joining Date: **- Enter a Date -**
 
-6. Fill in the **Age** (example: 45) and click **Submit**.
+   Click **Create**.
 
-   ![create an appointment](./images/create-appointment1.png " ")
+   ![Create Monica](./images/create-monica.png " ")
 
-7. Verify the success message.
+4. Verify the success message.
 
-   ![appointment created](./images/appoint-created1.png " ")
+   ![appointment created](./images/success-msg.png " ")
 
 ## Task 4: Monitor the Workflow
 
-1. Click on **Monitor Appointment Workflows** from the left navigation menu.
+1. From the left navigation menu, click on **Workflow Pages** and select **Workflows Initiated By Me**.
 
-   ![navigate to doctors app made easy](./images/monitor-appt.png " ")
+   ![navigate to Workflow Initiated by me](./images/work-init-me.png " ")
 
-2. Click on the **Workflow for Patient RAJESH** entry and observe the Workflow Details Popup.
+2. Click on the **Employee Onboarding** entry and observe the Workflow Details Popup.
 
-    - Workflow is waiting at "Raise Appointment Request" Activity.
+    - Workflow is waiting at "On boarding Tasks" Activity.
 
     - Observe Workflow Parameters.
 
-    ![navigate to doctors app made easy](./images/monitor-appts.png " ")
+    ![navigate to workflow](./images/monitor-appts.png " ")
 
-## Task 5: Approve the Appointment Request
+## Task 5: Do the IT Setup tasks
 
-1. Log in as **ANACHATT**, who is a Doctor in this workflow.
+1. Log in as **AMY**, who is a IT staff in this workflow.
 
-2. Select **Doctor Tasks** from the left navigation menu.
+    ![login as AMY](./images/login-amy.png =40%x*)
 
-    ![navigate to doctors app made easy](./images/login-as-annchatt.png " ")
+2. Select **Task Pages** and click **My Tasks** from the left navigation menu.
 
-3. Click **Approve** to approve the appointment request.
+    ![navigate to my tasks](./images/my-tasks.png " ")
+
+3. Click on the **IT Setup Tasks for Monica** to complete the IT setup for the new hire.
+
+    ![navigate to my tasks](./images/current-tasks.png " ")
+
+4. Observe that there are two pending tasks: **Task Name: Create Email** and **Task Name: Allocate Laptop** activity for the new hire (MONICA), to create an official email ID and to allocate a laptop.
+
+    ![Pending my tasks](./images/pending-tasks.png " ")
+
+5. Observe that there is a **Create Email** button which navigate you to the **IT Setup** page. Click **Create Email**.
+
+    ![create email](./images/create-email.png " ")
+
+6. Enter an **email** for the new hire and click **Create Email**.
+
+    ![create email](./images/create-email4.png " ")
+
+7. Similarly, click on **Allocate Laptop** to allocate a laptop for the new hire. ( Notice that the Create Email task is marked as Completed.)
+
+    ![Allocate laptop](./images/allocate-laptop.png " ")
+
+8. Enter **Laptop allocation informations** and click **Allocate Laptop**.
+
+    ![Allocate laptop](./images/allocate-laptop2.png " ")
+
+9. Click on the **IT Setup Tasks for Monica** to complete the task.
+
+    ![navigate to my tasks](./images/click-tasks.png " ")
+
+10. Observe that both the tasks are **Completed**. Click on **Complete** to finish the IT Setup Tasks.
+
+    ![Complete Tasks](./images/complete-task.png " ")
+
+11. Notice the success message for task completion.
+
+    ![Completed Task sucess messages](./images/task-sucess.png " ")
 
 ## Task 6: Observe the Workflow
 
-1. Log out and log in as **STEVE** (Hospital Staff).
+1. Log out and log in as **STEVE** (HR).
 
-2. Click on **Monitor Appointment Workflows** from the left navigation menu.
+   ![login to the application](./images/login-steve.png =40%x*)
 
-3. Observe that there are two active workflows: **Calculate Fees** and **Doctor Appointment** and Calculate Fees workflow is waiting at **Raise Invoice Request** activity for the patient (RAJESH), to pay and confirm the invoice. Observe that there is a **To Parent Workflow** button which navigate you to the **Doctor Appointment** workflow.
+2. Click on **Workflow Pages** and select **Workflows Initiated By Me** from the left navigation menu.
 
-   ![navigate to doctors app made easy](./images/two-workflows.png " ")
+   ![navigate to wf initiated by me](./images/observe-wf.png " ")
 
-   ![navigate to doctors app made easy](./images/steve-monitor-appt-child.png " ")
+3. Observe that there are two active workflows: **Employement Type Workflow** and **Employee Onboarding**.
 
-   ![navigate to doctors app made easy](./images/steve-monitor-appt-parent.png " ")
+   ![wf initiated by me](./images//observe-wf1.png " ")
 
 4. Note the correctly set Workflow Variables: Approver, Fee, and TaskOutcome.
 
