@@ -55,4 +55,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, July 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, July 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

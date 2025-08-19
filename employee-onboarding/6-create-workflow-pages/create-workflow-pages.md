@@ -91,7 +91,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
       - Apperance > Template: **Required - Floating**
 
-      - Validation > Value - **Required**
+      - Validation > Value - **Toggle ON**
 
       - Under List of Values:
         - Type: **Static Values**
@@ -106,11 +106,19 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
         ![Add Static Values](./images/add-static-values.png " ")
 
-12. Select **P8\_EMAIL** and in the property editor, set the Label > Label as **Personal Email**.
+12. In the rendering tree, select **P8\_EMAIL** item and in the property editor, set the Label > Label as **Personal Email**.
 
     ![Set email item](./images/set-email.png " ")
 
-15. Click **Save**.
+13. Select **P8\_FIRST\_NAME**, **P8\_EMAIL** , **P8\_DEPARTMENT\_ID**, and **P8\_MANAGER\_ID** and **P8\_JOINING\_DATA**, in the property editor, select the following:
+
+    - Apperance > Template: **Required - Floating**
+
+    - Validation > Value - **Required**
+
+    ![Hide page item](./images/edit-page-items.png " ")
+
+14. Click **Save**.
 
     ![Save page](./images/save-page.png " ")
 
@@ -862,5 +870,5 @@ In the next lab, you will understand the behavior of the **Doctor Appointments M
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

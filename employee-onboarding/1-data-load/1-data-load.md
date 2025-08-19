@@ -201,9 +201,9 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 ## Summary
 
-
+You have successfully completed the initial steps for designing the **Employee Onboarding** application. You have created the required database objects.
 
 ## Acknowledgements
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, July 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, July 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

@@ -82,10 +82,11 @@ You will create the following users for the application:
 
    ![Run application](./images/run-app.png " ")
 
-2. Log in as ADMIN and Navigate to **Administration** > **Employees** page.
+2. Log in as an Administrator and Navigate to **Administration** > **Employees** page.
 
    ![login to the application](./images/login-to-app.png " ")
 
+3. 
 
 ## Task 3: Onboard an Employee
 
@@ -228,5 +229,5 @@ In this hands-on lab, you learned how to:
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

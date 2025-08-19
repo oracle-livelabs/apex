@@ -246,7 +246,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
 21. In the property editor, enter/select the following:
 
-    - Under Identification:
+	- Under Identification:
         - Button Name: **Create**
         - Label: **Create Training**
 
@@ -351,12 +351,8 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 ## Summary
 
 In this task, you learnt how to create administration pages to create and manage Employees, Department and Training Catalogues.
-## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
 
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
 
 ## Acknowledgements
 
