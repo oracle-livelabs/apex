@@ -20,7 +20,7 @@ Access to Oracle Cloud Infrastructure (OCI), paid account or free tier, in a reg
 Generative AI
 Basic experience with OCI Cloud Console and standard components.
 
-## Task 1: Create Autonomous Databse
+## Task 1: Create Autonomous Database
 
 1. Navigate to the OCI home console and expand the side-menu bar. 
 
