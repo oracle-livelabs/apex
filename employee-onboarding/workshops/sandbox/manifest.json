@@ -1,6 +1,6 @@
 {
-    "workshoptitle": "The Title of the Workshop is defined in the manifest",
-    "help": "livelabs-help-**enterarea**_us@oracle.com",
+    "workshoptitle": "Employee Onboarding with Oracle APEX",
+    "help": "livelabs-help-apex_us@oracle.com",
     "variables": ["../../variables/variables.json",
         "../../variables/variables-in-another-file.json"],
     "tutorials": [
