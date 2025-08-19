@@ -263,7 +263,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
     ![Save Page](images/save-page.png "" )
 
-## TASK 2: Create Email Template
+## Task 2: Create Email Template
 
 1. Navigate to **Shared Components**.
 

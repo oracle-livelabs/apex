@@ -20,7 +20,7 @@ Estimated Time: 20 minutes
 
 - All the previous Labs have been completed.
 
-## Task 1: Create the New Appointments Page
+## Task 1: Create the New Employee Page
 
 Now that the Workflow is created, let us create the page that the hospital staff will use to create a new appointment.
 
@@ -85,7 +85,32 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
     ![Hide page item](./images/edit-vpn-item.png " ")
 
-11. Click **Save**.
+11. Select **P8\_EMPLOYEE\_TYPE**, in the property editor, enter/select the following:
+
+      - Identification > Type: **Select One**
+
+      - Apperance > Template: **Required - Floating**
+
+      - Validation > Value - **Required**
+
+      - Under List of Values:
+        - Type: **Static Values**
+        - Static Values:
+
+            |Display Value | Return Value |
+            |----------|-------|
+            | Full-Time | Full Time  |
+            | Intern | Intern |
+
+            {: title="List of Static Values to be Created"}
+
+        ![Add Static Values](./images/add-static-values.png " ")
+
+12. Select **P8\_EMAIL** and in the property editor, set the Label > Label as **Personal Email**.
+
+    ![Set email item](./images/set-email.png " ")
+
+15. Click **Save**.
 
     ![Save page](./images/save-page.png " ")
 
