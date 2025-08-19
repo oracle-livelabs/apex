@@ -45,7 +45,7 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
 3. Select **Form**.
 
-    ![select blank page](./images/select-form-page.png " ")
+    ![select blank page](./images/select-form-page.png =60%x*)
 
 4. For Page Attributes, enter/select the following:
 
@@ -57,12 +57,12 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
      Click **Next**.
 
-    ![Configure form page](./images/form-details.png " ")
+    ![Configure form page](./images/form-details.png =60%x*)
 
 5. Select Primary key column 1 : **EMPLOYEE_ID (Number)**.
     Click **Create Page**.
 
-    ![Configure form page](./images/primary-key.png " ")
+    ![Configure form page](./images/primary-key.png =60%x*)
 
 6. In the Page Designer, in the rendering tree, select **New Employee - Onboarding** region and in the property editor, make the following changes:
 
@@ -195,7 +195,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     Click **Create Page**.
 
-    ![create blank page tasks](./images/select-blank.png " ")
+    ![create blank page tasks](./images/select-blank.png =60%x*)
 
 4. In the rendering tree, right click on **Components** and select **Create Region**.
 
@@ -490,7 +490,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
 6. Select **Unified Task List**.
 
-    ![Select Unified Task List](./images/select-unified-tasks.png " ")
+    ![Select Unified Task List](./images/select-unified-tasks.png =60%x*)
 
 7. Specify the following page attributes:
 
@@ -500,7 +500,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     Click **Create Page**.
 
-    ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png " ")
+    ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png =40%x*)
 
 8. Click **Save**.
 
@@ -747,7 +747,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
 21. Click **Save**.
 
-## Task 7: Create the Workflows Page
+## Task 7: Create Initiated By Me Workflow Page
 
 Finally, we need the page that the HR will use to monitor the employee onboarding workflow.
 
@@ -759,7 +759,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 2. Select **Workflow Console**.
 
-    ![configure workflow attr](./images/create-workflow-console.png " ")
+    ![configure workflow attr](./images/create-workflow-console.png =60%x*)
 
 3. In the Create Workflow Console wizard, enter/select the following:
 
@@ -777,13 +777,13 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     Click **Create Page**.
 
-    ![configure workflow attr](./images/config-workflow-console.png " ")
+    ![configure workflow attr](./images/config-workflow-console.png =60%x*)
 
 4. Save the page.
 
     ![Save workflow ](./images/save-workflow-console.png " ")
 
-## Task 8: Create the Workflows Page - My Workflows
+## Task 8: Create My Workflows Page
 
 1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down., select **Create Page**.
 
@@ -791,7 +791,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 2. Select **Workflow Console**.
 
-    ![configure workflow attr](./images/create-workflow-console.png " ")
+    ![configure workflow attr](./images/create-workflow-console.png =60%x*)
 
 3. In the Create Workflow Console wizard, enter/select the following:
 
@@ -807,7 +807,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     Click **Create Page**.
 
-    ![configure workflow attr](./images/config-workflow-console2.png " ")
+    ![configure workflow attr](./images/config-workflow-console2.png =50%x*)
 
 4. Save and Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
@@ -868,6 +868,83 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 9. Now, select **Administration** list entry and set the Sequence: **150** and select **Apply Changes**.
 
     ![Set Admin Entry](./images/admin-entry.png " ")
+
+## Task 10: Improve UI (Optional)
+
+1. Navigate to **Shared Components**.
+
+    ![Shared component](./images/shared-compon.png " ")
+
+2. Select **Home**.
+
+    ![Select Home page](./images/home-page.png " ")
+
+3. In the rendering tree, right click on **Body** and select **Create Region**.
+
+    ![Create New Region](./images/create-nav-region.png " ")
+
+4. In the property editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **Navigation Menu List**
+
+        - Type: **List**
+
+    - Source > List: **Navigation Menu**
+
+    - Appearance > Template: **Blank with Attributes (No Grid)**
+
+    ![Navigation Menu](./images/nav-props.png " ")
+
+5. Under **Attributes**, select the following:
+
+    - Under Apperance:
+
+        - List Template: **Cards**
+
+        - Template Options: select the following in the pop-up box:
+
+            - General: Apply Theme Colors **Check**
+            - Style: **Block**
+            - Icons: **Display Icons**
+            - Body Text: **Hidden**
+
+    ![Navigation Menu attributes](./images/nav-props2.png " ")
+
+6. Click **Save and Run** the page.
+
+    ![Save & Run Page](./images/run-page.png " ")
+
+7. Login to the application
+
+    ![Login to app](./images/login-app.png =50%x*)
+
+8. In the **Developer Tool Bar**, select **Customize** and click **Theme Roller**.
+
+    ![Theme roller](./images/theme-roller.png " ")
+
+9. In the Theme Roller, select the following:
+
+    - Theme > Select Theme: **Redwood Light**
+
+    - Under Redwood Options:
+        - Pillar: **Ocean**
+        - Layout: **Floating**
+
+    - Under Appearance:
+        - Header: **Pillar**
+        - Navigation: **Pillar**
+        - Body Header: **Dark**
+        - Body Background: **Dark**
+
+    And click **Save**.
+
+    ![Theme roller](./images/theme-roller2.png =35%x*)
+
+10. Click **Save**.
+
+    ![Theme roller](./images/theme-roller3.png " ")
 
 ## Summary
 
