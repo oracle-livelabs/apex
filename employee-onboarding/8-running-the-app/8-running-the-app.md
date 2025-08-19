@@ -45,10 +45,10 @@ In this task, you create multiple users for **Employee Onboarding** application.
 3. You will create the following users for the application:
 You will create the following users for the application:
 
-    | Department        | Employee Name |
+    |   Employee Name      |  Department |
     | -------------- | --------- |
-    | HR             | STEVE    |
-    | IT       | AMY     |
+    |    STEVE          |   HR  |
+    |   AMY     |    IT  |
     {: title="List of Users to Create in the Application"}
 
 4. In the **Create multiple Users** dialog, enter/select the following attributes:
@@ -70,13 +70,15 @@ You will create the following users for the application:
 
     > *Note:* Replace yourdomain.com with your actual domain.
 
-    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+    ![Create Multiple Users - details](./images/create-multiple-users.png =50%x*)
 
 5. Click **Create Valid Users**.
 
-    ![Create Multiple Users - details](./images/create-multiple-users2.png " ")
+    ![Create Multiple Users - details](./images/create-multiple-users2.png =50%x*)
 
-## Task 3: Enter Employee in Application
+## Task 3: Enter Employees in Application
+
+In this task, you will recreate the previously created  employees in the Application.
 
 1. From the Application Home Page, click **Run Application**.
 
@@ -84,23 +86,27 @@ You will create the following users for the application:
 
 2. Log in as an Administrator and Navigate to **Administration** > **Employees** page.
 
-   ![login to the application](./images/login-to-app.png " ")
+   ![login to the application](./images/login-to-app.png =50%x*)
 
-3. 
+3. Click **Create**.
+
+   ![Create  Users - details](./images/create-emp1.png " ")
+
+4. Create the users : AMY and STEVE with appropirate details.
+
+   ![Create Amy](./images/create-amy.png " ")
+
+   ![Create Steve](./images/create-steve.png =50%x*)
 
 ## Task 3: Onboard an Employee
 
-1. From the Application Home Page, click **Run Application**.
-
-   ![Run application](./images/run-app.png " ")
-
-2. Log in as STEVE (Hospital Staff).
+1. Log in as STEVE (Hospital Staff).
 
    ![login to the application](./images/login-to-app.png " ")
 
-3. Click **New Appointment** to book an appointment for **RAJESH**.
+3. Click **New Employee - Onboarding** to onboard a new employee.
 
-   ![create appointment](./images/create-appointment.png " ")
+   ![create appointment](./images/create-employee-onboard.png " ")
 
 4. Select **Psychiatric** from the problem dropdown.
 

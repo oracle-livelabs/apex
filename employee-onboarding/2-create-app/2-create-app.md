@@ -1,8 +1,8 @@
-# Title of the Lab
+# Create an Employee Onboarding Application with Admin Pages and Email Template
 
 ## Introduction
 
-In this lab, you will create a new application named Employee Onboarding Application. Then, you will quickly build admin pages for employee, training catalogue and department data.
+In this lab, you will create an Employee Onboarding Application using Oracle APEX. You will build administration pages to manage key onboarding data, including Employees, Departments, and the Training Catalog. You will also organize these pages under a common Administration menu and create a customized Email Template to support the onboarding communication process.
 
 Estimated Lab Time: 15 minutes
 
@@ -10,15 +10,19 @@ Estimated Lab Time: 15 minutes
 
 In this lab, you will:
 
-* Objective 1
-* Objective 2
-* Objective 3
+* Create the Employee Onboarding Application
+
+* Add a Navigation Entry for the Administration page
+
+* Build Administration Pages for Employees, Departments, and the Training Catalog
+
+* Create an Email Template for the onboarding process
 
 ## Task 1: Create Employee Onboarding Application
 
 Task 2 opening paragraph.
 
-1. Click on App Builder.
+1. Click **App Builder**.
 
   ![App Builder](images/app-builder-1.png "")
 2. In the App Builder home page, click **Create** to create an application.
@@ -31,7 +35,7 @@ Task 2 opening paragraph.
 
   ![Created App](images/create-app-2.png "")
 
-## Task 1: Create a Navigation Entry
+## Task 2: Create a Navigation Entry
 
 In this task, you will create a navigation entry for the admin pages and link the pages in task 3 to this entry.
 
@@ -263,7 +267,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
     ![Save Page](images/save-page.png "" )
 
-## Task 2: Create Email Template
+## Task 4: Create Email Template
 
 1. Navigate to **Shared Components**.
 
@@ -350,9 +354,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
 ## Summary
 
-In this task, you learnt how to create administration pages to create and manage Employees, Department and Training Catalogues.
-
-
+In this task, you learned how to build administration pages to create and manage Employees, Departments, and Training Catalogs. You also added a navigation entry for the main Administration page. Additionally, you created an email template for the Onboarding process.
 
 ## Acknowledgements
 

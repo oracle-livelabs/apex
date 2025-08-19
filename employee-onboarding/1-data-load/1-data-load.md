@@ -2,8 +2,8 @@
 
 ## Introduction
 
-This lab walks you through the database objects required for Employee On-boarding.
-In this task, you'll use Quick SQL to quickly generate and execute a script for creating database tables. This script defines tables for an Online Bookstore app, including Users, Books, Orders, and more. Once executed, you can review the tables in the Object Browser.
+This lab walks you through the database objects required for Employee Onboarding.
+In this task, you'll use SQ scripts to execute a script for creating database tables and inserting data in the tables. This script defines tables for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
 Estimated Time: 10 minutes
 
@@ -12,12 +12,10 @@ Estimated Time: 10 minutes
 In this lab, you will:
 
 * Load the database objects that are required for this lab using SQL Scripts
-* Objective 2
-* Objective 3
 
 ## Task 1: Load Database objects
 
-In this task you will use SQL Scripts to quickly load and execute the required database objects including tables, procedures and packages. This script defines tables for an Employee Onboarding, including Employee,Trainings,Books, Orders, and more. Once executed, you can review the tables in the Object Browser.
+In this task you will use SQL Scripts to quickly load and execute the required database objects including tables, procedures and packages. This script defines tables for an Employee Onboarding, including  Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
 1. In the Workspace home page, click the **SQL Workshop**.
 
@@ -33,9 +31,9 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 4. In the Script Editor, enter the following:
 
-    **Name**:  Employee Onboarding Database objects
+    Name:  **Employee Onboarding Database objects**
 
-    **Script**: Copy and paste the following in the code editor:
+    Script: Copy and paste the following in the code editor:
 
     ```
     <copy>
@@ -183,6 +181,11 @@ In this task you will use SQL Scripts to quickly load and execute the required d
       END IF;
       COMMIT;
       END ASSIGN_EMPLOYEE_TRAININGS;
+      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      VALUES ('HR');
+      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      VALUES ('IT');
+
     /
     </copy>
     ```
