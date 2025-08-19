@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling hospital staff, IT teams, and doctors to initiate and act upon employee-related tasks.
+In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling HR, IT teams, and new hires to initiate and act upon employee-related tasks.
 This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule inductions, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
 
 ### Objectives
@@ -482,7 +482,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![create IT tasks](./images/create-my-tasks.png " ")
 
-4. Our application has 1 entry point for Doctors. Doctors need to log in to approve or reject appointment requests. For this, you will create a Doctor Tasks page. This will also be a Unified Task List page for Doctors to act on the tasks assigned to them.
+4. Our application has 1 entry point for IT teams. IT need to log in to approve or reject appointment requests. For this, you will create a IT Tasks page. This will also be a Unified Task List page for IT team to act on the tasks assigned to them.
 
 5. To create another Unified Task list page, click **+ (Plus) Icon** on the top-right corner of the page designer toolbar. Select **Page** from the drop-down.
 

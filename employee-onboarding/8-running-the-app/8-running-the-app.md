@@ -4,8 +4,11 @@
 
 In this lab, you will run and explore the Employee Onboarding application to understand how the workflows and automations function in a real scenario. Through hands-on activities, you will simulate the process of hiring and onboarding a new employee and observe how the system handles different roles and tasks.
 
-### Real-world Scenario:
-A Sales Manager recruits a new employee just one day before the scheduled onboarding. The HR team then completes the onboarding process, assigns the employee to the Sales Manager, and ensures the reporting structure is correctly established. This scenario helps demonstrate how Oracle APEX workflows and automations work together to manage onboarding efficiently, while also maintaining proper assignment and organizational hierarchy.
+### Real-world Scenario
+
+A Sales Manager recruits a new employee. The HR team then completes the onboarding process,just one day before the scheduled onboarding, HR assigns the employee to the Sales Manager, and ensures the reporting structure is correctly established.
+When the new employee is entered in the system, it triggers a workflow
+ This scenario helps demonstrate how Oracle APEX workflows and automations work together to manage onboarding efficiently, while also maintaining proper assignment and organizational hierarchy.
 
 ### Objectives
 

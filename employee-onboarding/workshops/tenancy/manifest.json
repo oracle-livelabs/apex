@@ -18,39 +18,43 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Load Database Objects",
+            "title": "Lab 1: Identify Business Steps",
+            "filename": "../../0-identify-business-steps/identify-business-steps.md"
+        },
+        {
+            "title": "Lab 2: Load Database Objects",
             "filename": "../../1-data-load/1-data-load.md"
         },
         {
-            "title": "Lab 2: Create an Application and Admin pages",
+            "title": "Lab 3: Create an Application and Admin pages",
             "filename": "../../2-create-app/2-create-app.md"
         },
         {
-            "title": "Lab 3: Create Tasks Definitions",
+            "title": "Lab 4: Create Tasks Definitions",
             "filename": "../../3-create-tasks/create-tasks.md"
         },
         {
-            "title": "Lab 4: Create Employment Type Workflow",
+            "title": "Lab 5: Create Employment Type Workflow",
             "filename": "../../4-create-workflows/create-workflows.md"
         },
         {
-            "title": "Lab 5: Create Employee Onboarding Workflow",
+            "title": "Lab 6: Create Employee Onboarding Workflow",
             "filename": "../../5-create-emp-workflow/create-workflows.md"
         },
         {
-            "title": "Lab 6: Create Workflow pages",
+            "title": "Lab 7: Create Workflow pages",
             "filename": "../../6-create-workflow-pages/create-workflow-pages.md"
         },
         {
-            "title": "Lab 7: Create Archive Tasks and Archive Workflow",
+            "title": "Lab 8: Create Archive Tasks and Archive Workflow",
             "filename": "../../7-archived-tasks/archived-tasks.md"
         },
         {
-            "title": "Lab 8: Running the App",
+            "title": "Lab 9: Running the App",
             "filename": "../../8-running-the-app/8-running-the-app.md"
         },
         {
-            "title": "Lab 9: Activate Workflow",
+            "title": "Lab 10: Activate Workflow",
             "filename": "../../9-activate-workflow/9-activate-workflow.md"
         },
         {

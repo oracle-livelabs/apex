@@ -10,7 +10,7 @@ This lab guides you through building a complete archiving solution. You will cre
 
 In this lab, you will learn how to:
 
-- Create a SQL Script to build archive tables and PL/SQL packages (TASKS_ARCHIVER and WORKFLOWS_ARCHIVER).
+- Create a SQL Script to build archive tables and PL/SQL packages (TASKS\_ARCHIVER and WORKFLOWS\_ARCHIVER).
 
 - Set up Oracle APEX Automations that run daily to archive workflows and tasks.
 
@@ -26,7 +26,7 @@ Estimated Time: 15 minutes
 
 ## Task 1: Create a SQL Script Page
 
-Now that the Workflow is created, let us create a SQL script that archives workflows
+Now that the Workflow is created, let us create a SQL script that archives workflows and tasks.
 
 1. Navigate to **SQL Workshop** > **SQL Scripts**.
 
@@ -771,7 +771,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
         - Type: **Interactive Report**
 
-    - Source > Table Name: **ARCHIVED_TASK_HISTORY**
+    - Source > Table Name: **ARCHIVED\_TASK\_HISTORY**
 
 
      ![create IR region](./images/create-ir-region2.png " ")
@@ -784,7 +784,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
         - Type: **Interactive Report**
 
-    - Source > Table Name: **ARCHIVED_TASK_HISTORY**
+    - Source > Table Name: **ARCHIVED\_TASK\_HISTORY**
 
 
      ![create IR region](./images/create-ir-region3.png " ")
