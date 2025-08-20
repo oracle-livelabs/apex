@@ -142,6 +142,12 @@ In this task you will use SQL Scripts to quickly load and execute the required d
     ALTER TRIGGER "HR_INDUCTION_BIU" ENABLE;
     ALTER TABLE "IT_PROVISIONING" ADD CONSTRAINT "FK_IT_EMPLOYEE" FOREIGN KEY ("EMPLOYEE_ID")
       REFERENCES "EMPLOYEES" ("EMPLOYEE_ID") ENABLE;
+      INSERT INTO DEPARTMENTS (NAME)
+      VALUES ('HR');
+      INSERT INTO DEPARTMENTS (NAME)
+      VALUES ('IT');
+      INSERT INTO DEPARTMENTS (NAME)
+      VALUES ('Sales');
     create or replace PACKAGE it_prov_guard IS
       is_running BOOLEAN := FALSE;
       END it_prov_guard;
@@ -181,12 +187,6 @@ In this task you will use SQL Scripts to quickly load and execute the required d
       END IF;
       COMMIT;
       END ASSIGN_EMPLOYEE_TRAININGS;
-      INSERT INTO DEPARTMENTS (NAME)
-      VALUES ('HR');
-      INSERT INTO DEPARTMENTS (NAME)
-      VALUES ('IT');
-      INSERT INTO DEPARTMENTS (NAME)
-      VALUES ('Sales');
 
     /
     </copy>
@@ -198,7 +198,7 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 5. In the confirmation screen, click **Run Now**.
 
-  ![Run SQL Script](images/run-script.png "")
+  ![Run SQL Script](images/load-script.png "")
 
 6. The Results page lists the summary of the executed script.
 
