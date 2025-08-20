@@ -14,15 +14,17 @@ Estimated Workshop Time: 2 hours.
 
 In this workshop, you will learn how to:
 
-- Build a multi-step onboarding process using the Oracle APEX
+- Build a multi step onboarding process using the Oracle APEX
 
-- Define workflow participants and implement role-based task routing.
+- Define workflow participants and implement role based task routing.
 
-- Build APEX pages to initiate workflows and complete tasks
+- Build APEX pages to initiate workflows and complete tasks.
 
-- Automate notifications for onboarding steps using declarative actions
+- Automate notifications for onboarding steps.
 
-- Monitor and report on onboarding progress using workflow views
+- Monitor and report on onboarding progress using workflow views.
+
+- Archive Tasks and Workflows.
 
 ### Prerequisites for Building this App
 
