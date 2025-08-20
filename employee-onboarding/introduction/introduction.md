@@ -8,7 +8,7 @@ Workflows in Oracle APEX enable you to model business processes using a visual e
 
 In this hands-on workshop, you will build an Employee Onboarding application that uses APEX Workflows to automate and streamline onboarding processes—resulting in improved efficiency, reduced manual coordination, and a better new-hire experience.
 
-Estimated Workshop Time: 1 hour 30 minutes.
+Estimated Workshop Time: 2 hours.
 
 ### Objectives
 
@@ -29,6 +29,21 @@ In this workshop, you will learn how to:
 - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
 *Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+
+## Labs
+
+| Lab |  Module | Est. Time |
+| --- | --- | --- |
+| 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 10 minutes |
+| 2 | [Load Database Objects](?lab=2-data-load) | 10 minutes |
+| 3 | [Create an Application and Admin pages](?lab=3-create-app) | 15 minutes |
+| 4 | [Create Tasks Definitions](?lab=4-create-tasks) | 20 minutes |
+| 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 15 minutes |
+| 6 | [Create Employee Onboarding Workflow](?lab=6-create-empon-wf) | 15 minutes |
+| 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 20 minutes |
+| 8 | [Create Archive Tasks and Archive Workflow](?lab=8-archived-tasks) | 5 minutes |
+| 9 | [Run the Application](?lab=9-running-the-app) | 10 minutes |
+| 10 | [Activate Workflow](?lab=10-activate-workflow) | 10 minutes |
 
 ## Downloads
 
