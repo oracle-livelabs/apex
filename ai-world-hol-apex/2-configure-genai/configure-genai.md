@@ -1,6 +1,6 @@
 # Configure GenAI in your Tenancy & APEX Workspace
 
-## Introduction: 
+## Introduction
 
 In this Lab we will walk through process of configuring your OCI tenancy and APEX workspace to utilize GenAI. Both the Web Credential and GenAI configuration we create in your APEX Workspace will be available across any APEX application you create in your workspace. 
 

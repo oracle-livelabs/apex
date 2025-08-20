@@ -1,6 +1,6 @@
 # Deploy Autonomous Database and Create APEX Workspace
 
-## Introduction: 
+## Introduction
 
 In this Lab we will walk through process of deploying a 23ai Autonomous Database and creating an APEX workspace to start developing applications.
 
