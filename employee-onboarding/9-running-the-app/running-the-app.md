@@ -279,63 +279,22 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Complete task](./images/check-wf3.png " ")
 
-5. Log out and log back in as **STEVE** to monitor the workflow. Observe that the Employee Onboarding workflow has been completed alone with the Employment Type Workflow.
-
-   ![Check onboarding workflow](./images/check-emp-workflow.png " ")
-
-      ![Check onboarding workflow](./images/check-emp-workflow2.png " ")
-
-## Task 10: Request Feedback Process
-
-1. As the Doctor Appointment workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
-
-   Recall that the Wait activity has a timeout setting that elapses once the Appointment Time is reached.
-
-   ![wait for appointment](./images/check-appt-workflow2.png " ")
-
-2. At this point, we wait for the appointment time to elapse and check back again once that happens. This is what is observed.
-
-   ![wait for appointment1](./images/wait-for-appt1.png " ")
-
-## Task 9: Provide Patient Feedback
-
-1. Now that the Feedback Request has been raised, log out and log back in as **RAJESH** (the patient).
-
-2. Click on **Patient Tasks** and find the Feedback Request Task (Feedback fro Consultation on ....) waiting for your action.
-
-3. Fill in the Feedback Details and click **Complete**.
-
-  ![wait for feedback](./images/check-feedback-form1.png " ")
-
 ## Task 10: Complete the Workflow
 
 1. Log out and log back in as **STEVE** to monitor the workflow.
 
 2. Observe that the both the Workflows are now completed.
 
-   ![wait for feedback](./images/observe-workflow-completed.png " ")
+   ![Check onboarding workflow](./images/check-emp-workflow.png " ")
+
+   ![Check onboarding workflow](./images/check-emp-workflow2.png " ")
 
 ## Task 11: Verify Email Confirmation
 
-1. Check the inbox of the patient's email for a 'Thank You' email.
+1. Check the inbox of the New Hire's email for a 'Thank You' email.
 
    ![thank you email](./images/thank-you-email.png " ")
 
-2. Log in as **RAJESH** and verify that the Feedback was entered successfully.
-
-   ![wait for feedback](./images/rajesh-feedback-check.png " ")
-
-## [OPTIONAL] Additional Scenarios to Try
-
-1. **Double Booking:** As a Hospital Staff, try to book 2 appointments for the same time for 2 different patients with the same doctor. Observe the workflow termination for the second patient.
-
-2. **Doctor Rejects Appointment:** As a Doctor, reject an appointment request. Observe the workflow termination for the patient.
-
-3. **Appointment Within 7 Days:** As a Hospital Staff, try to book an appointment for the same patient with the same doctor within 7 days of the last appointment. Observe the calculated consultation fees.
-
-4. **Delay in Invoice Response:** As a patient, after receiving an Invoice Request, do not act on the task. Observe the workflow termination and receive a No Appointment Email after one day.
-
-5. **Delay in Feedback Response:** As a patient, after receiving a Feedback Request, do not act on the task. Observe the workflow completion, and after 12 hours, 'Thank You' email is not received.
 
 ## Summary
 

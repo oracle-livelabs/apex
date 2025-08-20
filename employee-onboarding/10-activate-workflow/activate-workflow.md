@@ -1,4 +1,4 @@
-# Activate the 'Doctor Appointments Made Easy!' Application
+# Activate the 'Employee Onboarding' Application
 
 ## Introduction
 
@@ -22,11 +22,11 @@ Estimated Time: 5 minutes
 
 2. Under **Workflows and Automations**, select **Workflows**.
 
-3. Select **Calculate Fees**.
+3. Select **Employee Onboarding**.
 
-4. Navigate to **Calculate Fees** workflow. Under **1.0** workflow version, right-click **Participants** and select **Create Participant**.
+4. Navigate to **Employee Onboarding** workflow. Under **1.0** workflow version, right-click **Participants** and select **Create Participant**.
 
-    ![wait for feedback](./images/create-participant.png " ")
+    ![Create Participant](./images/add-participant.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -40,29 +40,29 @@ Estimated Time: 5 minutes
 
         - Type: **Static Value**
 
-        - Static Value: **PATRICK**
+        - Static Value: **STEVE**
 
-    ![wait for feedback](./images/workflow-admin.png " ")
+    ![Create Admin](./images/create-admin.png " ")
 
-6. Follow the same steps for **Doctor Appointment** workflow to add a participant.
+6. Follow the same steps for **Employment Type** workflow to add a participant.
 
-    ![wait for feedback](./images/create-part.png " ")
+    ![Create Admin](./images/create-part.png " ")
 
-    ![wait for feedback](./images/workflow-admin2-updated.png " ")
+    ![Create Admin](./images/create-part2.png  " ")
 
 7. Click **Save**.
 
 ## Task 2: Activate the Workflow
 
-1. On the Workflow Definition page, go to **Calculate Fees** workflow and under **1.0** workflow version, right-click and select **Activate** as well as click **OK** to confirm.
+1. On the Workflow Definition page, go to **Employment Type** Workflow and under **1.0** workflow version, right-click and select **Activate** as well as click **OK** to confirm.
 
-    ![wait for feedback](./images/activate-cal.png " ")
+    ![Activate Workflow](./images/activate-type.png " ")
 
-    ![wait for feedback](./images/activate-confirm.png " ")
+    ![Activate Workflow](./images/click-ok.png " ")
 
-2. Now, right-click **Doctor Appointment** workflow and select **Activate**.
+2. Now, right-click **Employee Onboarding** workflow and select **Activate**.
 
-    ![wait for feedback](./images/activate-doc.png " ")
+    ![Activate Workflow](./images/activate-emp.png " ")
 
 3. Click **Save**.
 
