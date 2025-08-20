@@ -12,11 +12,11 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-* Create a task definition for IT Setup with participant assignment and employee-specific actions
+* Create a task definition for IT Setup with participant assignment and employee specific actions
 
 * Define a task for Training Allocation with dynamic data source and reminder email setup
 
-* Add participants and parameters for each task using SQL-based logic
+* Add participants and parameters for each task
 
 * Configure task deadlines, renewal policies, and notification actions
 
@@ -34,7 +34,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
 2. Under Workflows and Automations, select **Task Definitions**.
 
-    ![Shared Component Task](images/task1.png)
+    ![Shared Component Task](images/tasks2.png)
 
 3. Click **Create**.
 
