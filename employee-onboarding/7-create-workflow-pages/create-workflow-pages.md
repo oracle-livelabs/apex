@@ -187,6 +187,7 @@ In this task you will create a page to create an email id and allocate laptop to
 2. Select **Blank Page**.
 
    ![Select Blank Page](./images/select-blank-page.png " ")
+
 3. Specify the following page attributes:
 
     - Name: **IT Setup**
@@ -648,8 +649,12 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
         - Target:
             - Page: **11** ( IT Setup page)
             - Set Items:
-                - P11\_EMPLOYEE\_ID - **&EMPLOYEE_ID.**
-                - P11\_SETUP\_INFO - **&TASK_NAME.**
+
+                |  Name     |   Value    |
+                |--------------------|------------|
+                | P11\_EMPLOYEE\_ID   | &EMPLOYEE_ID. |
+                | P11\_SETUP\_INFO       | &TASK_NAME. |
+                {: title="List of Parameters to be added for Link Builder Target - Set Items"}
 
                 Click **Ok**.
 
