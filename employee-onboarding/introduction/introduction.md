@@ -6,7 +6,7 @@ Manual processes in employee onboarding like tracking approvals, assigning tasks
 
 Workflows in Oracle APEX enable you to model business processes using a visual editor, define roles and actions, and manage task execution declaratively. These workflows are database driven, integrated into the APEX runtime, and require little to no custom code, making them ideal for business critical flows like onboarding, approvals, procurement, or service requests.
 
-In this hands-on workshop, you will build an Employee Onboarding application that uses APEX Workflows to automate and streamline onboarding processes resulting in improved efficiency, reduced manual coordination, and a better new hire experience.
+In this hands on workshop, you will build an Employee Onboarding application that uses APEX Workflows to automate and streamline onboarding processes resulting in improved efficiency, reduced manual coordination, and a better new hire experience.
 
 Estimated Workshop Time: 2 hours.
 
