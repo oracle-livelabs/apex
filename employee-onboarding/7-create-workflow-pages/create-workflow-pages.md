@@ -168,6 +168,7 @@ Now that the Workflow is created, let us create the page that HR will use to onb
     | Employee Name | Item | P8\_FIRST\_NAME |
     | Employment Type | Item | P8\_EMPLOYMENT\_TYPE |
     | Initiated By | Expression |    :APP_USER      |
+    {: title="List of Parameters to be linked"}
 
     ![create workflow process](./images/configure-process-param.png " ")
 
@@ -185,7 +186,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
 2. Select **Blank Page**.
 
-   ![Select Blank Page](./images/select-blank-page.png " ")
+   ![Select Blank Page](./images/select-blank-page.png =50%x*)
 
 3. Specify the following page attributes:
 
@@ -195,7 +196,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     Click **Create Page**.
 
-    ![create blank page tasks](./images/select-blank.png =60%x*)
+    ![create blank page tasks](./images/select-blank.png =50%x*)
 
 4. In the rendering tree, right click on **Components** and select **Create Region**.
 
@@ -212,7 +213,7 @@ In this task you will create a page to create an email id and allocate laptop to
 7. In the property editor, enter/select the following:
 
     - Under Identification:
-        - Name: **P11_SETUP_INFO**
+        - Name: **P11\_SETUP\_INFO**
         - Type: **Hidden**
 
    ![New Page Item](./images/new-page-item1.png " ")
@@ -220,17 +221,17 @@ In this task you will create a page to create an email id and allocate laptop to
 8. Similarly, create another **Page Item** with the following property:
 
     - Under Identification:
-        - Name: **P11_EMPLOYEE_ID**
+        - Name: **P11\_EMPLOYEE\_ID**
         - Type: **Display Only**
 
     - Label > Label: **Employee ID**
 
     ![New Page Item](./images/new-page-item2.png " ")
 
-9. Similarly,create another **Page Item** with the following properties:
+9. Similarly, create another **Page Item** with the following properties:
 
     - Under Identification:
-        - Name: **P11_FIRST_NAME**
+        - Name: **P11\_FIRST\_NAME**
         - Type: **Display Only**
 
     - Label > Label: **First Name**
@@ -246,7 +247,6 @@ In this task you will create a page to create an email id and allocate laptop to
              </copy>
             ```
 
-
     ![New Page Item](./images/new-page-item3.png " ")
 
 10. Now, right click on the **IT Setup** region and select **Create Sub Region**.
@@ -259,12 +259,16 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
+    - Validation > Value Required: **Toggle ON**
+
     - Under Server-side Condition:
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Create Email**
 
     ![Property Sub Region](./images/prop-sub-region1.png " ")
+
+    ![Property Sub Region](./images/validation.png =25%x*)
 
     ![Property Sub Region](./images/prop-sub-region2.png " ")
 
@@ -282,7 +286,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Property Sub Region Email ID](./images/email-id-item2.png " ")
 
-14. Similarly, create another sub region under **IT Setup** region and select **Create Sub Region**.
+14. Similarly, create another sub region under **IT Setup** region and select **Create Region**.
 
     ![New Sub Region](./images/new-sub-region2.png " ")
 
@@ -313,6 +317,8 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Appearance > Template: **Required - Floating**
 
+    - Validation > Value Required: **Toggle ON**
+
     - Under Default:
 
         - Type: **Static**
@@ -330,6 +336,8 @@ In this task you will create a page to create an email id and allocate laptop to
             ```
 
     ![Property Sub Region Laptop Info](./images/laptop-id-item.png " ")
+
+    ![Property Sub Region](./images/validation.png =25%x*)
 
     ![Property Sub Region Laptop Info](./images/laptop-id-item1.png " ")
 
@@ -351,7 +359,8 @@ In this task you will create a page to create an email id and allocate laptop to
 
 21. In the property editor, enter/select the following:
 
-    - Identification:
+    - Under Identification:
+
         - Button Name: **Submit**
         - Label: **&P11\_SETUP\_INFO.**
 
@@ -377,6 +386,7 @@ In this task you will create a page to create an email id and allocate laptop to
         ```
 
     - Under Server-side Condition:
+
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Create Email**
@@ -399,6 +409,7 @@ In this task you will create a page to create an email id and allocate laptop to
         ```
 
     - Under Server-side Condition:
+
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Allocate Laptop**
@@ -410,6 +421,7 @@ In this task you will create a page to create an email id and allocate laptop to
 25. Similarly, create another process with the following property:
 
     - Under Identification:
+
         - Name: **Close Dialog**
         - Type: **Close Dialog**
 
@@ -419,50 +431,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Save page](./images/save-2-page.png " ")
 
-## Task 4: Create Schedule Induction Page
-
-1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
-
-    ![click page](./images/create-page4.png " ")
-
-2. Select **Form**.
-
-    ![Create Form page](./images/create-page4.png " ")
-
-3. Specify the following page attributes:
-
-    - Under Page Definition:
-
-        - Name: **Schedule Induction**
-        - Page Mode: **Modal Dialog**
-
-    - Data Source > Data Source: **HR_INDUCTION**
-
-    Click **Next**.
-
-    ![create Induction page](./images/create-form4.png " ")
-
-4. Click **Create Page**.
-
-    ![create page](./images/create-form5.png " ")
-
-5. In the rendering tree, select the 4 page items : **P12_CREATED**, **P12_CREATED_BY**, **P12_UPDATED** and **P12_UPDATED_BY**.
-
-    ![Select page items](./images/select-hide.png " ")
-
-6. In the property editor, set the Identification >  Type: **Hidden**.
-
-    ![Hide page items](./images/hide-item.png " ")
-
-7. In the rendering tree, select **P12_INDUCTION_END_TIME** and in the property editor set the Layout > Start New Row: **Toggle OFF**.
-
-    ![Start new row](./images/new-row-item.png " ")
-
-8. Click **Save**.
-
-    ![Save Page](./images/save-induction.png " ")
-
-## Task 5: Create Tasks Page
+## Task 4: Create Tasks Page
 
 1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
 
@@ -506,7 +475,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Save page](./images/save-page1.png " ")
 
-## Task 6: Modify the Task Details Pages
+## Task 5: Modify the Task Details Pages
 
 Our Application has three Task Definitions -  Appointment Request, Invoice Request, and Feedback Request. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
 
@@ -683,7 +652,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     ![delete developer info](./images/delete-developer-info1.png " ")
 
-17. In the Task details Page, the HR should be able to fill out an induction form and submit it. On submission, it will create an entry in the **IT_SETUP_TASKS** table for the particular employee. We will customize the Induction Details Page as follows:
+17. In the Task details Page, the HR should be able to fill out an induction form and submit it. On submission, it will create an entry in the **IT\_SETUP\_TASKS** table for the particular employee. We will customize the Induction Details Page as follows:
 
     - Right-click  **Subject** and select **Create Region Below**.
 
@@ -726,7 +695,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
              </copy>
             ```
 
-            - Page Items to submit: **P36_TASK_ID**
+            - Page Items to submit: **P36\_TASK\_ID**
 
     ![configure Training Region](./images/configure-training-Details.png " ")
 
@@ -745,13 +714,13 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
     - Under Link:
 
         - Type: **Redirect to URL**
-        - Target: **javascript:apex.event.trigger(document,'mark_complete',&TRAINING_ID.)**
+        - Target: **javascript:apex.event.trigger(document,'mark\_complete',&TRAINING\_ID.)**
 
     ![Action mark complete](./images/action-complete.png " ")
 
 21. Click **Save**.
 
-## Task 7: Create Initiated By Me Workflow Page
+## Task 6: Create Initiated By Me Workflow Page
 
 Finally, we need the page that the HR will use to monitor the employee onboarding workflow.
 
@@ -787,7 +756,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![Save workflow ](./images/save-workflow-console.png " ")
 
-## Task 8: Create My Workflows Page
+## Task 7: Create My Workflows Page
 
 1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down., select **Create Page**.
 
@@ -815,7 +784,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 4. Save and Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
-## Task 9: Improve Navigation Menu
+## Task 8: Improve Navigation Menu
 
 1. On the top right, select the **Shared Components icon**.
 
@@ -873,7 +842,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![Set Admin Entry](./images/admin-entry.png " ")
 
-## Task 10: Improve UI (Optional)
+## Task 9: Improve UI (Optional)
 
 1. Navigate to **Shared Components**.
 
