@@ -267,13 +267,23 @@ In this task, you will recreate the previously created  employees in the Applica
 
 1. Log out and log in as **MONICA** (New Hire).
 
-2. Navigate to **My Tasks** and click on the entry **Invoice for Rajesh for consultation....** to complete the request after confirming the invoice.
+2. Navigate to **My Tasks** and click on the entry **Allocate Trainings for Monica** to complete the request after completing the Trainings.
 
-   ![navigate to doctors app made easy](./images/rajesh-patient-tasks.png " ")
+   ![Navigate to my tasks](./images/check-wf.png " ")
 
-3. Log out and log back in as **STEVE** to monitor the workflow. Observe that the Calculate fees workflow has been completed. Now, Doctor Appointment workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
+3. Click **Complete** to complete the task.
 
-   ![check appointment workflow](./images/check-appt-workflow.png " ")
+   ![Complete task](./images/check-wf2.png " ")
+
+4. Notice the success message.
+
+   ![Complete task](./images/check-wf3.png " ")
+
+5. Log out and log back in as **STEVE** to monitor the workflow. Observe that the Employee Onboarding workflow has been completed alone with the Employment Type Workflow.
+
+   ![Check onboarding workflow](./images/check-emp-workflow.png " ")
+
+      ![Check onboarding workflow](./images/check-emp-workflow2.png " ")
 
 ## Task 10: Request Feedback Process
 
