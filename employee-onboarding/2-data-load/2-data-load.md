@@ -3,7 +3,7 @@
 ## Introduction
 
 This lab walks you through the database objects required for Employee Onboarding.
-In this task, you'll use SQ scripts to execute a script for creating database tables and inserting data in the tables. This script defines tables for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
+In this task, you'll use SQL scripts to execute a script for creating database objects and inserting data in the tables. This script defines tables, package and procedure for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
 Estimated Time: 5 minutes
 
@@ -15,7 +15,7 @@ In this lab, you will:
 
 ## Task 1: Load Database objects
 
-In this task you will use SQL Scripts to quickly load and execute the required database objects including tables, procedures and packages. This script defines tables for an Employee Onboarding, including  Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
+In this task you will use SQL Scripts to quickly load and execute the required database objects including tables, package and procedures. This script defines the database objects for an Employee Onboarding, including  Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
 1. In the Workspace home page, click the **SQL Workshop**.
 
@@ -181,11 +181,11 @@ In this task you will use SQL Scripts to quickly load and execute the required d
       END IF;
       COMMIT;
       END ASSIGN_EMPLOYEE_TRAININGS;
-      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      INSERT INTO DEPARTMENTS (NAME)
       VALUES ('HR');
-      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      INSERT INTO DEPARTMENTS (NAME)
       VALUES ('IT');
-      INSERT INTO DEPARTMENTS (DEPT_NAME)
+      INSERT INTO DEPARTMENTS (NAME)
       VALUES ('Sales');
 
     /
