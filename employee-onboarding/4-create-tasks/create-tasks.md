@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will define key Human Tasks using Oracle APEX’s Approvals Component to support the Employee Onboarding process. These tasks will automate and manage essential actions such as IT setup and training allocation for new employees. You'll configure task details, assign participants dynamically using SQL, define task parameters, and set up automated email reminders based on deadlines.
+In this lab, you will define key Tasks using Oracle APEX’s Tasks Component to support the Employee Onboarding process. These tasks will automate and manage essential actions such as IT setup and training allocation for new employees. You'll configure task details, assign participants dynamically using SQL, define task parameters, and set up automated email reminders based on deadlines.
 
 These task definitions will later be integrated into a complete onboarding workflow.
 
@@ -26,11 +26,11 @@ In this lab, you will:
 
 ## Task 1: Create Task Definitions for IT Setup
 
-Task 1 opening paragraph.
+In this task, you will create a task definition for IT Setup and assign it to the IT staff.
 
-1. From the Application Home page, click **Shared Components**.
+1. Click **Shared Components**.
 
-    ![Shared Component](images/shared-comp.png "")
+    ![Shared Component](images/shared-componen.png "")
 
 2. Under Workflows and Automations, select **Task Definitions**.
 

@@ -228,14 +228,14 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under List of Values:
 
-      - Type: **Static Values**
-      - Static Values: enter the following values in the modal form
+        - Type: **Static Values**
+        - Static Values: enter the following values in the modal form
 
-          | Display Value | Return Value |
-          | -----------| -----------|
-          | Virtual | Virtual |
-          | Classroom | Classroom |
-          {: title="List of Values to be added for Training Type"}
+            | Display Value | Return Value |
+            | -----------| -----------|
+            | Virtual | Virtual |
+            | Classroom | Classroom |
+            {: title="List of Values to be added for Training Type"}
 
         Click **Ok**.
 
@@ -247,37 +247,38 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under List of Values:
 
-      - Type: **Static Values**
-      - Static Values: enter the following values in the modal form
+        - Type: **Static Values**
+        - Static Values: enter the following values in the modal form
 
-          | Display Value | Return Value |
-          | -----------| -----------|
-          | Full-Time | Full Time |
-          | Intern | Intern |
-          {: title="List of Values to be added for Target Audience"}
+            | Display Value | Return Value |
+            | -----------| -----------|
+            | Full-Time | Full Time |
+            | Intern | Intern |
+            {: title="List of Values to be added for Target Audience"}
 
         Click **Ok**.
 
-  ![ training type edit](images/training-type.png "") 
+  ![ training type edit](images/target-audience.png "") 
 
 21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor set Validation > Value Required : Toggle **ON**
 
   ![ training type edit](images/validation.png "")
 
+22. Click Save page.
 
-
+  ![Save page](images/save-page.png "" )
 
   Now that you have your form page ready, let us link the Training Catalogue Page to the form page.
 
-19. Click on the **Page Finder Icon** and select the **Training Catalogue Page**.
+23. Click on the **Page Finder Icon** and select the **Training Catalogue Page**.
 
   ![Navigate to training page](images/navigate-form.png "" )
 
-20. In the rendering tree, under Training Catalogue region and right click on **Actions**.
+24. In the rendering tree, under **Training Catalogue** region and right click on **Actions**.
 
   ![Create action](images/create-action1.png "" )
 
-21. In the property editor, enter/select the following:
+25. In the property editor, enter/select the following:
 
     - Under Identification:
         - Position: **Primary Actions**
@@ -295,11 +296,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Edit action](images/edit-action2.png "" )
 
-22. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
+26. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
 
   ![Create button](images/create-button1.png "" )
 
-22. In the property editor, enter/select the following:
+27. In the property editor, enter/select the following:
 
 	- Under Identification:
         - Button Name: **Create**
@@ -314,13 +315,13 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create button settings](images/create-button2.png "" )
 
-22. Save the page.
+28. Save the page.
 
     ![Save Page](images/save-page.png "" )
 
 ## Task 4: Create Email Template
 
-1. Navigate to **Shared Components**.
+1. Click on the **Shared Components** icon to navigate to shared Components.
 
     ![Shared Components](images/shared-comps.png "" )
 
@@ -341,15 +342,15 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under HTML Format:
 
-      - Header: copy and paste the below code
+        - Header: copy and paste the below code
 
-          ```
-           <copy>
-           <b style="font-size: 24px;">Employee Onboarding</b>
-           </copy>
-          ```
+            ```
+            <copy>
+            <b style="font-size: 24px;">Employee Onboarding</b>
+            </copy>
+            ```
 
-      - Body: copy and paste the below code
+        - Body: copy and paste the below code
 
           ```
            <copy>
