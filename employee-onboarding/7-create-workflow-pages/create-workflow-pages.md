@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling HR, IT teams, and new hires to initiate and act upon employee-related tasks.
+In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling HR, IT teams, and New Hires to initiate and act upon employee related tasks.
 This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule inductions, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
 
 ### Objectives
@@ -33,7 +33,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Create the New Employee Page
 
-Now that the Workflow is created, let us create the page that HR will use to create a new appointment.
+Now that the Workflow is created, let us create the page that HR will use to onboard a new employee.
 
 1. Navigate to **Application ID <number>**.
 
@@ -45,7 +45,7 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
 3. Select **Form**.
 
-    ![select blank page](./images/select-form-page.png =60%x*)
+    ![select blank page](./images/select-form-page.png =50%x*)
 
 4. For Page Attributes, enter/select the following:
 
@@ -57,12 +57,12 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
      Click **Next**.
 
-    ![Configure form page](./images/form-details.png =60%x*)
+    ![Configure form page](./images/form-details.png =50%x*)
 
 5. Select Primary key column 1 : **EMPLOYEE_ID (Number)**.
     Click **Create Page**.
 
-    ![Configure form page](./images/primary-key.png =60%x*)
+    ![Configure form page](./images/primary-key.png =50%x*)
 
 6. In the Page Designer, in the rendering tree, select **New Employee - Onboarding** region and in the property editor, make the following changes:
 
@@ -74,7 +74,7 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
     ![Configure form region](./images/form-appearance.png " ")
 
-7. In the rendering tree, under **New Employee - Onboarding** region and select **Last Name**.
+7. In the rendering tree, under **New Employee - Onboarding** region and select **P8\_LAST\_NAME**.
 
      ![Edit page item](./images/edit-page-item1.png " ")
 
@@ -82,7 +82,7 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
      ![Edit page item](./images/edit-page-item2.png " ")
 
-9. Similarly do the same for following 4 Page Items:
+9. Similarly, do the same for following 4 Page Items:
     - **P8\_PHONE**
     - **P8\_DEPARTMENT\_ID**
     - **P8\_MANAGER\_ID**
@@ -90,9 +90,7 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
      ![Edit page item](./images/edit-page-item3.png " ")
 
-10. Select **P8\_STATUS**, **P8\_LAPTOP\_INFO** , **P8\_SEAT\_INFO** and **P8\_VPN\_DETAILS**, in the property editor, select the following:
-
-    - Identification > Type: **Hidden**
+10. Select **P8\_STATUS**, **P8\_LAPTOP\_INFO** , **P8\_SEAT\_INFO** and **P8\_VPN\_DETAILS**, and in the property editor, set Identification > Type: **Hidden**
 
     ![Hide page item](./images/edit-vpn-item.png " ")
 
@@ -106,14 +104,15 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
       - Under List of Values:
         - Type: **Static Values**
-        - Static Values:
+        - Static Values: enter the following
 
             |Display Value | Return Value |
             |----------|-------|
             | Full-Time | Full Time  |
             | Intern | Intern |
-
             {: title="List of Static Values to be Created"}
+
+            Click **Ok**.
 
         ![Add Static Values](./images/add-static-values.png " ")
 
@@ -121,11 +120,11 @@ Now that the Workflow is created, let us create the page that HR will use to cre
 
     ![Set email item](./images/set-email.png " ")
 
-13. Select **P8\_FIRST\_NAME**, **P8\_EMAIL** , **P8\_DEPARTMENT\_ID**, and **P8\_MANAGER\_ID** and **P8\_JOINING\_DATA**, in the property editor, select the following:
+13. Select **P8\_FIRST\_NAME**, **P8\_EMAIL** , **P8\_DEPARTMENT\_ID**, and **P8\_MANAGER\_ID** and **P8\_JOINING\_DATE**, in the property editor, select the following:
 
     - Apperance > Template: **Required - Floating**
 
-    - Validation > Value - **Required**
+    - Validation > Value Required - **Toggle ON**
 
     ![Hide page item](./images/edit-page-items.png " ")
 
@@ -953,7 +952,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 ## Summary
 
-You have successfully created a comprehensive Oracle APEX application for Onboarding new employees with workflows and task lists,
+You have successfully created a comprehensive Oracle APEX application for Onboarding new employees with workflows and task lists.
 
 ## Acknowledgements
 
