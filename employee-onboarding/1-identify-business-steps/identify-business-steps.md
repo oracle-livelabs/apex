@@ -58,13 +58,13 @@ We will first define the Employee Onboarding Workflow (Parent), followed by the 
 |---------|-------------------------------------------------------------|-----------|------------------------|
 | 1       | Branch based on employment type: Full-Time or Intern. | Automatic | Workflow              |
 | 2      | If Full-Time: Assign mandatory trainings (HR, Security, Role,etc). | Automatic | Workflow              |
-| 3      | If Intern: Assign intern-specific orientation trainings. | Automatic | Workflow              |
+| 3      | If Intern: Assign intern specific orientation trainings. | Automatic | Workflow              |
 | 4       |Notify employee with assigned training details. | Automatic | Workflow                 |
 | 5      | Employee completes assigned training tasks. | Manual | Employee                 |
 | 6      | Send Training Completion Email to HR and Manager. | Automatic | Workflow    |
 {: title="Employment Type Workflow Steps"}
 
-This structure shows how the parent onboarding process automatically invokes the child workflow to handle employment-specific training. It ensures smooth coordination between HR, IT, and Training while automating notifications and follow-ups.
+This structure shows how the parent onboarding process automatically invokes the child workflow to handle employment specific training. It ensures smooth coordination between HR, IT, and Training while automating notifications and follow ups.
 
 This comprehensive breakdown illustrates the significance of workflow in managing complex business processes, making the system efficient and responsive.
 
