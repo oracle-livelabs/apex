@@ -70,11 +70,11 @@ This comprehensive breakdown illustrates the significance of workflow in managin
 
 - Employee Onboarding Workflow
 
-![Flow Chart for Employee Onboarding Workflow](images/emp-wf.png " ")
+    ![Flow Chart for Employee Onboarding Workflow](images/emp-wf.png " ")
 
 - Employment Type Workflow
 
-![Flow Chart for  Employment Type Workflow](images/emp-wf1.png " ")
+    ![Flow Chart for  Employment Type Workflow](images/emp-wf1.png " ")
 
 ## Summary
 
