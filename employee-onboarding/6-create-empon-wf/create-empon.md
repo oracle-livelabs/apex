@@ -36,7 +36,7 @@ To create a Workflow:
 
    ![Create Workflow](./images/create-wf.png " ")
 
-4. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
+3. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
 
     ![Create Workflow](./images/select-wf2.png " ")
 
@@ -49,8 +49,7 @@ To create a Workflow:
         - Title: **Employee Onboarding**
 
     - Under Advanced:
-        - Static ID: **EMPLOYEE_ONBOARDING**
-
+        - Static ID: **EMPLOYEE\_ONBOARDING**
 
     ![Create Workflow](./images/select-wf.png " ")
 
@@ -74,14 +73,9 @@ To create a Workflow:
 
 In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
-Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the Hospital Staff submitting patient details to the system, marking the commencement of the workflow.
+Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the HR Staff submitting New Hire details to the system, marking the commencement of the workflow.
 
-The inputs to the workflow will be the patient details. In workflow terminology, these are called **Workflow Parameters**.
-
-You will define the following parameters for the Calculate fees Workflow:
-   BOOKING\_ID,
-   DNO,
-   PATIENT\_NAME, PATIENT\_EMAIL, REQUEST\_DATE, STATUS
+The inputs to the workflow will be the employee details. In workflow terminology, these are called **Workflow Parameters**.
 
 1. To create Workflow Parameters, right-click **Employee Onboarding** Workflow and select **Create Parameter**.
 
@@ -134,7 +128,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 3. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
 
-    - Identification > Static ID: **TASK_OUTCOME**
+    - Identification > Static ID: **TASK\_OUTCOME**
 
     - Label > Label: **TaskOutcome**
 
@@ -142,7 +136,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 4. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
 
-    - Identification > Static ID: **MANAGER_ID**
+    - Identification > Static ID: **MANAGER\_ID**
 
     - Label > Label: **Manager ID**
 
@@ -162,7 +156,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 ## Task 5: Add Workflow Activity for Employee Onboarding Email
 
-1. From the Activities Palette, drag an **Send Email**activity into the Diagram Builder area and drop it on the connection joining the Start and End activities.
+1. From the Activities Palette, drag an **Send Email** activity into the Diagram Builder area and drop it on the connection joining the Start and End activities.
 
    ![Create Activity](./images/drag-act.png " ")
 
@@ -175,8 +169,8 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
         - Email Template: **Onboarding Email**
         - Under Placeholders: Map the placeholders to the Item or Value fields
 
-            - FIRST_NAME: **&EMPLOYEE_NAME.**
-            - HR_NAME: **&INITIATED_BY.**
+            - FIRST_NAME: **&EMPLOYEE\_NAME.**
+            - HR_NAME: **&INITIATED\_BY.**
 
    ![Create activity to send email trainings](./images/send-email.png " ")
 
@@ -217,10 +211,12 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
     - Identification > Name: **On boarding Tasks**
 
     - Under Settings:
+
         - Definition: **IT Setup**
         - Details Primary Key Item: **EMPLOYEE_ID**
 
     - Under Deadline:
+
         - Due On Type: **Interval**
         - Interval: **P2D**
 
@@ -229,6 +225,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 7. Under **On boarding Tasks** activity, in parameters tab, select **Department** and select the following in the property editor:
 
     - Under Value:
+
         - Type: **Item**
         - Item: **DEPARTMENT**
 
@@ -237,6 +234,7 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 8. Similarly, select **Email** parameter.In the Property Editor, enter/select the following:
 
     - Under Value:
+
         - Type: **Item**
         - Item: **EMAIL**
 
@@ -245,16 +243,18 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 9. Similarly, select **Employee ID** parameter.In the Property Editor, enter/select the following:
 
     - Under Value:
+
         - Type: **Item**
-        - Item: **EMPLOYEE_ID**
+        - Item: **EMPLOYEE\_ID**
 
     ![link parameter for Activity](./images/emp-id-param.png " ")
 
 10. Similarly, select **Employee Name** parameter.In the Property Editor, enter/select the following:
 
     - Under Value:
+
         - Type: **Item**
-        - Item: **EMPLOYEE_NAME**
+        - Item: **EMPLOYEE\_NAME**
 
     ![link parameter for Activity](./images/emp-name-param.png " ")
 
@@ -274,17 +274,27 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
 
 3. Under **Tasks based on Employment Type** and select **Employee ID** parameter. In the Property Editor, enter/select the following:
 
-    - Value > Item : **EMPLOYEE_ID**
+    - Value > Item : **EMPLOYEE\_ID**
 
    ![link parameter for Activity](./images/params3.png " ")
 
 4. Similarly, select **Employee Type** parameter.In the Property Editor, enter/select the following:
 
-    - Value > Item : **EMPLOYEE_TYPE**
+    - Value > Item : **EMPLOYEE\_TYPE**
 
    ![link parameter for Activity](./images/params4.png " ")
 
-## Task 6: Create Activity to send Onboarding Completion Email
+5. Similarly, edit the below parameters:
+
+    |Type  | Item |
+  |----------|-------|
+  | Employee ID | EMPLOYEE_ID |
+  |Employee Type | EMPLOYEE_TYPE |
+  |  Employee Name |EMPLOYEE_NAME|
+  | EMPLOYMENT_TYPE | Employment Type |
+  {: title="List of Parameters to be Created for Tasks based on Employment Type"}
+
+## Task 7: Create Activity to send Onboarding Completion Email
 
 1. From the Activities palette, drag a **Send E-Mail Task - Create** Activity into the Diagram Builder area and drop it between the **Tasks based on Employment Type** activity and **End**.
 

@@ -49,14 +49,16 @@ In this task, you create multiple users for **Employee Onboarding** application.
    ![Create Users application](./images/create-users2.png " ")
 
 3. You will create the following users for the application:
-You will create the following users for the application:
 
     |   Employee Name      |  Department |
     | -------------- | --------- |
     |    STEVE          |   HR  |
     |   AMY     |    IT  |
     |   ALEX | Sales |
+    | MONICA | Sales |
     {: title="List of Users to Create in the Application"}
+
+   *Note: MONICA is a new hire in the Sales Department, for whom we will be initating a workflow request.*
 
 4. In the **Create multiple Users** dialog, enter/select the following attributes:
 
@@ -67,6 +69,7 @@ You will create the following users for the application:
       AMY@yourdomain.com
       STEVE@yourdomain.com
       ALEX@yourdomain.com
+      MONICA@yourdomain.com
       </copy>
       ```
 
@@ -78,7 +81,7 @@ You will create the following users for the application:
 
     > *Note:* Replace yourdomain.com with your actual domain.
 
-    ![Create Multiple Users - details](./images/create-multiple-users.png =50%x*)
+    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
 
 5. Click **Create Valid Users**.
 
@@ -120,13 +123,13 @@ In this task, you will recreate the previously created  employees in the Applica
 
 3. Enter the following details:
 
-   - First Name: **Monica**
-   - Personal Email: **Monica@test.com**
-   - Employee Type: **Full-Time**
-   - Department: **Sales**
-   - Role: **Senior Sales Engineer**
-   - Manager: **ALEX**
-   - Joining Date: **- Enter a Date -**
+    - First Name: **MONICA**
+    - Personal Email: **MONICA@test.com**
+    - Employee Type: **Full-Time**
+    - Department: **Sales**
+    - Role: **Senior Sales Engineer**
+    - Manager: **ALEX**
+    - Joining Date: **- Enter a Date -**
 
    Click **Create**.
 
@@ -152,7 +155,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 ## Task 5: Do the IT Setup tasks
 
-1. Log in as **AMY**, who is a IT staff in this workflow.
+1. Log in as **AMY**, who is an IT staff in this workflow.
 
     ![login as AMY](./images/login-amy.png =40%x*)
 
@@ -206,17 +209,65 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![navigate to wf initiated by me](./images/observe-wf.png " ")
 
-3. Observe that there are two active workflows: **Employement Type Workflow** and **Employee Onboarding**.
+3. Observe that there are two workflows: **Employement Type Workflow** and **Employee Onboarding** in **Faulted** state.
 
-   ![wf initiated by me](./images//observe-wf1.png " ")
+   ![wf initiated by me](./images/observe-wf1.png " ")
 
-4. Note the correctly set Workflow Variables: Approver, Fee, and TaskOutcome.
+4. Select **Employement Type Workflow** and notice that the workflow is Faulted in the **Tasks bases on Employement Type** step since there are no Trainings.
 
-## Task 7: Complete the Workflow
+   ![wf initiated by me](./images/observe-wf4.png " ")
 
-1. Log out and log in as **RAJESH**.
+5. Click **Close**.
 
-2. Navigate to **Patient Tasks** and click on the entry **Invoice for Rajesh for consultation....** to complete the request after confirming the invoice.
+## Task 7: Create Training Catalogues
+
+1. Navigate to Administration, and click **Training Catalogues**.
+
+   ![Training Catalogues](./images/create-training.png " ")
+
+2. Click **Create**.
+
+   ![Create Training Catalogues](./images/create-training2.png " ")
+
+3. Create the following Trainings:
+
+    |   Training Name      |  Description | Training Type | Estimated Hours | Target Audience |
+    | -------------- | --------- | --------- | --------- | --------- |
+    |    Corporate Orientation | Introduction to the company’s mission, values, organizational structure, and policies. Covers workplace culture, diversity, and code of conduct. | Virtual | 2 | Full-Time |
+    |   HR Policies & Benefits | Overview of HR processes, leave policies, performance management, payroll, and employee benefits (healthcare, retirement, allowances, etc.).   | Virtual | 3 | Full-Time |
+    |   Role-Specific Training | Training modules tailored to the employee’s department (e.g., Sales CRM usage, Developer tools, Finance ERP systems).  | Virtual | 7 | Full-Time |
+    | Basic IT & Tools Training | Training on how to access company email, collaboration platforms (Slack, Teams), and productivity tools (Google Workspace, MS Office, etc.). | Virtual | 8 | Intern |
+    {: title="List of Trainings to Create in the Application"}
+
+   ![Create Training Catalogue](./images/create-training3.png " ")
+
+   ![Create Training Catalogue](./images/create-training4.png " ")
+
+## Task 8: Retry Workflow
+
+1. Navigate to **Workflows Intiated By Me** page.
+
+   ![Navigate Workflow](./images/observe-wf7.png " ")
+
+2. Click on **Employee onboarding** workflow.
+
+   ![Navigate Workflow](./images/observe-wf6.png " ")
+
+3. Click **Retry** to retry the workflow after adding training catalogues.
+
+   ![Retry Workflow](./images/observe-wf8.png " ")
+
+4. Observe the success message.
+
+   ![Success Workflow](./images/observe-wf9.png " ")
+
+   Now the workflow is waiting at the **Tasks based on Employment Type** step.
+
+## Task 9: Complete the Workflow
+
+1. Log out and log in as **MONICA** (New Hire).
+
+2. Navigate to **My Tasks** and click on the entry **Invoice for Rajesh for consultation....** to complete the request after confirming the invoice.
 
    ![navigate to doctors app made easy](./images/rajesh-patient-tasks.png " ")
 
@@ -224,7 +275,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![check appointment workflow](./images/check-appt-workflow.png " ")
 
-## Task 8: Request Feedback Process
+## Task 10: Request Feedback Process
 
 1. As the Doctor Appointment workflow is waiting at **Wait Before Requesting Feedback** activity to complete.
 
