@@ -71,11 +71,9 @@ To create a Workflow:
 
 ## Task 3: Add Inputs for Employment Type Workflow
 
-In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
+In this lab, you explore various aspects of workflow data using the example of a Employee Onboarding application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
-Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the HR Staff submitting New Hire details to the system, marking the commencement of the workflow.
-
-The inputs to the workflow will be the employee details. In workflow terminology, these are called **Workflow Parameters**.
+Referring to the flow chart in Lab 1, illustrating the business logic, the employee onboarding process initiates with the HR Staff submitting New Hire details to the system, marking the commencement of the workflow.
 
 1. To create Workflow Parameters, right-click **Employee Onboarding** Workflow and select **Create Parameter**.
 
@@ -97,22 +95,15 @@ The inputs to the workflow will be the employee details. In workflow terminology
   | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  | In  |
   | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | No | In  |
   | DEPARTMENT | Department ID | NUMBER | No | In  |
-  | INITIATED_BY | Department ID | NUMBER | Yes | In  |
+  | INITIATED_BY | Initiated By | VARCHAR2 | Yes | In  |
   {: title="List of Parameters to be Created"}
 
     ![Add Parameter](./images/add-params2.png" ")
 
 ## Task 4: Add Workflow Variables
 
-The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
+The inputs provided to the Employee Onboarding Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
-As an example, consider the following business scenario:
-
-Before an appointment is confirmed, the workflow needs to compute the doctor's availability based on his/her current appointment schedule. So, availability of the doctor is a variable that will be determined based on this computation.
-
-When an appointment is confirmed, the Booking ID for the appointment is carried forward to later activities which calculate and update the appointment fees.
-
-Data such as Availability, Booking ID and Fee need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
 1. Right-click **1.0 [DEV]** (workflow version), select **Create Variable**.
 

@@ -67,25 +67,12 @@ To create a Workflow:
 
     > **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
 
-3. At this point, we will remove this activity since we plan to introduce new specific activities in subsequent sections of this lab. To do this, either right-click on the highlighted RED activity in the Workflow tree and select **Delete**, or click the three dots at the bottom right corner of the activity in the Diagram. This will open a menu, and choose **Delete** from the options provided.
-
-   ![Delete activity using Tree](./images/delete-activity-tree.png " ")
-
-   ![Delete activity using workflow designer](./images/delete-activity-designer.png " ")
-
-4. Navigate to **Start**. Under **Outgoing**, select **New** and select the following:
-
-    - Activity > To: **End**
-
-   ![Check Errors in the Page](./images/set-end.png " ")
-
-5. Click **Save**.
 
 ## Task 3: Add Inputs for Employment Type Workflow
 
-In this lab, you explore various aspects of workflow data using the example of a doctor appointment application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
+In this lab, you explore various aspects of workflow data using the example of a Employee Onboarding application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
-Referring to the flow chart in Lab 1, illustrating the business logic, the appointment booking process initiates with the HR Staff submitting New Hire details to the system, marking the commencement of the workflow.
+Referring to the flow chart in Lab 1, illustrating the business logic, the onboarding process begins with the HR Staff submitting New Hire details to the system, which initiates the workflow.
 
 The inputs to the workflow will be the New Employee details. In workflow terminology, these are called **Workflow Parameters**.
 
@@ -116,15 +103,13 @@ The inputs to the workflow will be the New Employee details. In workflow termino
 
 ## Task 4: Add Workflow Variables
 
-The inputs provided to the Appointment Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
+The inputs provided to the Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
 As an example, consider the following business scenario:
 
-Before an appointment is confirmed, the workflow needs to compute the doctor's availability based on his/her current appointment schedule. So, availability of the doctor is a variable that will be determined based on this computation.
+Before an onboarding is completed, the workflow needs to allocate trainings based on the employement type. So, the employement type of the New hire is a variable that will be determined based on this computation.
 
-When an appointment is confirmed, the Booking ID for the appointment is carried forward to later activities which calculate and update the appointment fees.
-
-Data such as Availability, Booking ID and Fee need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
+Data such as Employement Type, Employee ID, Employee Name and Email need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
 1. Right-click **1.0 [DEV]** (workflow version), select **Create Variable**.
 
@@ -147,6 +132,8 @@ Data such as Availability, Booking ID and Fee need to be updatable by the activi
    ![Create task outcome Variable](./images/create-variable-task.png " ")
 
 ## Task 5: Add Workflow Activity for Full Time Employees
+
+In this task, you will create an activity for Employment Type as Full Time.
 
 1. In the Workflow Designer, under 1.0[Dev], click on Activity and enter/select the following in the property editor:
 
