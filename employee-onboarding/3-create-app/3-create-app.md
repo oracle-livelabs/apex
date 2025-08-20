@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Create Employee Onboarding Application
 
-Task 2 opening paragraph.
+In this task you will create an application.
 
 1. Click **App Builder**.
 
@@ -31,19 +31,20 @@ Task 2 opening paragraph.
 3. In the Create Application Wizard, enter name as **Employee Onboarding Application** and click **Create Application**.
 
   ![Create New App](images/create-app-1.png "")
-4. The application is now created.
+
+4. The application is now created. This is the Application Home page.
 
   ![Created App](images/create-app-2.png "")
 
 ## Task 2: Create a Navigation Entry
 
-In this task, you will create a navigation entry for the admin pages and link the pages in task 3 to this entry.
+In this task, you will create a navigation entry for an **Administrion** page.
 
 1. Click **Shared Components**.
 
   ![Shared Components Page](images/create-app3.png "" )
 
-2. Under Navigation and Search, select **Navigation Menu**.
+2. Under **Navigation and Search**, select **Navigation Menu**.
 
   ![Shared Components Page](images/nav-menu.png "" )
 
@@ -51,13 +52,14 @@ In this task, you will create a navigation entry for the admin pages and link th
 
   ![Navigation Menu](images/nav-menu2.png "" )
 
-4. Under List Enteries, select **Create List Entry**.
+4. Under **List Enteries**, select **Create List Entry**.
 
   ![Navigation Menu](images/nav-menu3.png "" )
 
 5. Enter/Select the following:
 
     - Under Entry
+        - Sequence: **150**
         - Image/Class: **fa-database-user**
         - List Entry Label: **Administration**
 
@@ -65,15 +67,15 @@ In this task, you will create a navigation entry for the admin pages and link th
 
     Click **Create List Entry**.
 
-  ![New Navigation Menu list entry](images/nav-menu4.png "" )
+  ![New Navigation Menu list entry](images/nav-menu6.png "" )
 
-6. Click on the Application ID to go back to the Application homepage.
+6. Click on the **Application ID** to go back to the Application homepage.
 
-  ![New Navigation Menu list entry](images/nav-menu5.png "" )
+  ![New Navigation Menu list entry](images/nav-menu7.png "" )
 
 ## Task 3: Create Admin Pages - Employee, Departments & Training Catalogue
 
-In this task you will create Employee, Departments and Training Catalogue Pages and add them to a common Admin Page.
+In this task, you will build the administrative setup pages that will allow HR and administrators to input and manage core data for the onboarding application. These pages will serve as the backbone for the workflows you design, ensuring that employee, department, and training details are properly maintained.
 
 1. In the Application Home page, click **Create Page**
 
@@ -92,11 +94,10 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
         - Form Page Mode: **Drawer**
 
     - Under Data Source:
-        - Table/View Name: **Employees**
+        - Table/View Name: **EMPLOYEES**
 
     - Under Navigation:
         - Use Breadcrumb: **Toggle OFF**
-        - Use Navigation: **Toggle On**
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-users**
 
@@ -108,7 +109,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
   ![Create emp page](images/create-emp-3.png "" )
 
-5. Your Employee page is now created. In page designer, on the top right, click the **+** icon and select **Page**.
+5. Your Employee page is now created. In page designer, on the top right, click the **+** icon to create a page and select **Page**.
 
   ![Create a new page](images/create-page2.png "" )
 
@@ -124,13 +125,12 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 
     - Under Data Source:
 
-        - Table/View Name: **Departments**
+        - Table/View Name: **DEPARTMENTS**
         - Editing Enabled: **Toggle On**
 
     - Under Navigation:
 
         - Use Breadcrumb: **Toggle OFF**
-        - Use Navigation: **Toggle ON**
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-address-card-o**
 
@@ -153,7 +153,7 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
 11. In the Page wizard, enter/select the following:
 
     - Under Page Definition:
-        - **Name:** Training Catalogue
+        - Name: **Training Catalogue**
 
     - Under Navigation:
         - Use Breadcrumb: **Toggle Off**
@@ -178,16 +178,20 @@ In this task you will create Employee, Departments and Training Catalogue Pages 
     - Under Appearance:
         - Template: **Standard**
 
-    - Under Attributes:
-        - Under Settings:
-          - Overline: **&TARGET_AUDIENCE.**
-          - Title: **&TRAINING_NAME.**
-          - Description:**&DESCRIPTION.**
-          - Miscellaneous: **Estimated Time: &ESTIMATED_HOURS. hours**
+ 
 
   ![Trainings page settings](images/training-catalog1.png "" )
 
   ![Trainings page settings](images/trainings-catalog3.png =40%x*)
+
+13.  In the **Attributes** tab, enter the following:
+
+    - Under Settings:
+
+        - Overline: **&TARGET_AUDIENCE.**
+        - Title: **&TRAINING_NAME.**
+        - Description:**&DESCRIPTION.**
+        - Miscellaneous: **Estimated Time: &ESTIMATED_HOURS. hours**
 
   ![Trainings page](images/training-catalog2.png "" )
 
