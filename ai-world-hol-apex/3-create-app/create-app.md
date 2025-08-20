@@ -64,9 +64,9 @@ Basic experience with OCI Cloud Console and standard components.
 
 7. With our New Region selected on the left side, navigate to the right side of your screen for this selected region.  Enter a title, 'Welcome to the APEX Movie DB' and a Name for the region, 'Welcome'. Now we will enter a short message in the HTML source code to give users an understanding of the application:  
 
-    “<h3>Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies</h3> 
+    “&lt;h3&gt;Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies&lt;/h3&gt; 
 
-    <h3>To enhance your experience, try our AI Movie Assistant by clicking below</h3>”
+    &lt;h3&gt;To enhance your experience, try our AI Movie Assistant by clicking below&lt;/h3&gt;”
     ![Region Details](./images/regionDetails.png  "")
 
 8. To clean up the UI we can delete the Movie region from the Breadcrumb Bar on the Rendering tree, right click on the region and select Delete.
