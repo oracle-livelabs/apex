@@ -178,8 +178,6 @@ In this task, you will build the administrative setup pages that will allow HR a
     - Under Appearance:
         - Template: **Standard**
 
- 
-
   ![Trainings page settings](images/training-catalog1.png "" )
 
   ![Trainings page settings](images/trainings-catalog3.png =40%x*)
@@ -190,20 +188,24 @@ In this task, you will build the administrative setup pages that will allow HR a
 
         - Overline: **&TARGET_AUDIENCE.**
         - Title: **&TRAINING_NAME.**
-        - Description:**&DESCRIPTION.**
+        - Description: **&DESCRIPTION.**
         - Miscellaneous: **Estimated Time: &ESTIMATED_HOURS. hours**
 
   ![Trainings page](images/training-catalog2.png "" )
 
-13. Now let's create a form page to input the training calatogues. Click the **+ icon** on the top right corner and select **Page**.
+14. Click **Save** to save the page.
+
+  ![Save page](images/save-pages.png "" )
+
+15. Now let's create a form page to input the training calatogues. Click the **+ icon** on the top right corner and select **Page**.
 
   ![Create a page](images/create-page4.png "" )
 
-14. In the create a page wizard, select **Form**.
+16. In the create a page wizard, select **Form**.
 
   ![Create a form page](images/create-form1.png =50%x*)
 
-15. Enter/select the following in the page wizard:
+17. Enter/select the following in the page wizard:
 
     - Under page Definition:
         - Name: **Create Training Catalogue**
@@ -216,21 +218,66 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create a form page](images/create-form2.png =50%x*)
 
-16. Select **Primary key Column 1** :  CATALOG_ID(Number) and click **Create Page**.
+18. Select Primary key Column 1: **CATALOG_ID(Number)** and click **Create Page**.
 
   ![Create a form page](images/create-form3.png =50%x*)
 
+19. In the rendering tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the property editor:
+
+    - Identification > Type: **Select One**
+
+    - Under List of Values:
+
+      - Type: **Static Values**
+      - Static Values: enter the following values in the modal form
+
+          | Display Value | Return Value |
+          | -----------| -----------|
+          | Virtual | Virtual |
+          | Classroom | Classroom |
+          {: title="List of Values to be added for Training Type"}
+
+        Click **Ok**.
+
+  ![ training type edit](images/training-type.png "")
+
+20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE_** and enter/select the following in the property editor:
+
+    - Identification > Type: **Select One**
+
+    - Under List of Values:
+
+      - Type: **Static Values**
+      - Static Values: enter the following values in the modal form
+
+          | Display Value | Return Value |
+          | -----------| -----------|
+          | Full-Time | Full Time |
+          | Intern | Intern |
+          {: title="List of Values to be added for Target Audience"}
+
+        Click **Ok**.
+
+  ![ training type edit](images/training-type.png "") 
+
+21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor set Validation > Value Required : Toggle **ON**
+
+  ![ training type edit](images/validation.png "")
+
+
+
+
   Now that you have your form page ready, let us link the Training Catalogue Page to the form page.
 
-17. Click on the **Page Finder Icon** and select the **Training Catalogue Page**.
+19. Click on the **Page Finder Icon** and select the **Training Catalogue Page**.
 
   ![Navigate to training page](images/navigate-form.png "" )
 
-18. In the rendering tree, under Training Catalogue region and right click on **Actions**.
+20. In the rendering tree, under Training Catalogue region and right click on **Actions**.
 
   ![Create action](images/create-action1.png "" )
 
-19. In the property editor, enter/select the following:
+21. In the property editor, enter/select the following:
 
     - Under Identification:
         - Position: **Primary Actions**
@@ -248,11 +295,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Edit action](images/edit-action2.png "" )
 
-20. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
+22. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
 
   ![Create button](images/create-button1.png "" )
 
-21. In the property editor, enter/select the following:
+22. In the property editor, enter/select the following:
 
 	- Under Identification:
         - Button Name: **Create**
