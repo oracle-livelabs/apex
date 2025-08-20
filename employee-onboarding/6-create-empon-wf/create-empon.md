@@ -104,7 +104,6 @@ Referring to the flow chart in Lab 1, illustrating the business logic, the emplo
 
 The inputs provided to the Employee Onboarding Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
-
 1. Right-click **1.0 [DEV]** (workflow version), select **Create Variable**.
 
     ![Create Variable](./images/create-variable.png " ")
@@ -125,7 +124,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create task outcome Variable](./images/create-variable-task.png " ")
 
-4. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
+4. Similarly, create a variable **Manager ID**. In the Property Editor, Enter/Select the following:
 
     - Identification > Static ID: **MANAGER\_ID**
 
@@ -145,7 +144,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create task outcome Variable](./images/create-managerid.png " ")
 
-## Task 5: Add Workflow Activity for Employee Onboarding Email
+## Task 5: Add Workflow Activities for Employee Onboarding
 
 1. From the Activities Palette, drag an **Send Email** activity into the Diagram Builder area and drop it on the connection joining the Start and End activities.
 
@@ -279,10 +278,8 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
     |Type  | Item |
   |----------|-------|
-  | Employee ID | EMPLOYEE_ID |
-  |Employee Type | EMPLOYEE_TYPE |
   |  Employee Name |EMPLOYEE_NAME|
-  | EMPLOYMENT_TYPE | Employment Type |
+  | Email | EMAIL |
   {: title="List of Parameters to be Created for Tasks based on Employment Type"}
 
 ## Task 7: Create Activity to send Onboarding Completion Email
