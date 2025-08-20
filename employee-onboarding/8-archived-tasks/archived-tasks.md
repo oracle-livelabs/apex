@@ -608,7 +608,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ```
 
-        and click **create.
+        and click **Create**
 
     ![Create Automation](./images/create-auto2.png " ")
 
@@ -637,7 +637,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ````
 
-    and click **Apply Chamges**.
+    and click **Apply Changes**.
 
     ![Edit Automation](./images/edit-action1.png " ")
 
@@ -662,17 +662,17 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
         ```
          <copy>
-         select * from apex_purgeable_workflows;
+         select * from apex_purgeable_tasks;
          </copy>
         ```
 
-        and click **create.
+        and click **Create**.
 
-    ![Create Automation](./images/create-auto2.png " ")
+    ![Create Automation](./images/edit-auto2.png " ")
 
 15. Navigate to the **Settings** tab and set the Schedule Status as **Active**.
 
-    ![Activate Automation](./images/activate-auto2.png " ")
+    ![Activate Automation](./images/activate-auto4.png " ")
 
 16. Navigate to the **Actions** tab and click on the **pencil icon** to edit the action.
 
@@ -694,7 +694,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ````
 
-    and click **Apply Chamges**.
+    and click **Apply Changes**.
 
     ![Edit Automation](./images/edit-auto3.png " ")
 
@@ -714,7 +714,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
 3. Select **Blank Page**.
 
-    ![Create Blank Page](./images/create-at1.png " ")
+    ![Create Blank Page](./images/create-at1.png =50%x*)
 
 4. In the create page wizard, enter/select the following:
 
@@ -731,7 +731,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
     ![Create Region](./images/create-region1.png " ")
 
-6.  In the property editor, enter/select following:
+6. In the property editor, enter/select following:
 
     - Identification > Name: **Show All**
 
@@ -742,7 +742,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
             - Remember Active Tab: **Check**
             - Layout: **Fill Tab Labels**
 
-            Click **Ok**
+            Click **Ok**.
 
     ![New Region](./images/static-region.png " ")
 
@@ -763,7 +763,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
      ![create IR region](./images/create-ir-region.png " ")
 
-9. Similary create another sub region to view Archived Tasks History, with the following attributes:
+9. Similary, create another sub region to view Archived Tasks History, with the following attributes:
 
     - Under Identification:
 
@@ -784,7 +784,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
         - Type: **Interactive Report**
 
-    - Source > Table Name: **ARCHIVED\_TASK\_HISTORY**
+    - Source > Table Name: **ARCHIVED\_WORKFLOWS**
 
 
      ![create IR region](./images/create-ir-region3.png " ")
@@ -795,13 +795,13 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
 ## Summary
 
-In this lab, you created a SQL Script Page to define archive tables and packages, and configured two daily Automations—one for workflows and another for tasks—to execute archiving procedures. You also developed a new Archived Tasks and Workflows Page with interactive reports for easy access to archived data.
+In this lab, you created a SQL Script Page to define archive tables and packages, and configured two daily Automations : one for workflows and another for tasks, to execute archiving procedures. You also developed a new Archived Tasks and Workflows Page with interactive reports for easy access to archived data.
 
-This approach ensures that workflow-related information is retained securely, supporting auditability and historical analysis without impacting live workflow performance.
+This approach ensures that workflow information is retained securely, supporting auditability and historical analysis without impacting live workflow performance.
 
 ## What's Next
 
-In the next lab, you will understand the behavior of the **Employee Onboarding** application through hands-on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
+In the next lab, you will understand the behavior of the **Employee Onboarding** application through hands on activities. You will also perform various tasks to understand the workflow and automation implemented in the application.
 
 ## Acknowledgements
 

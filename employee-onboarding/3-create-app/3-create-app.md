@@ -59,7 +59,6 @@ In this task, you will create a navigation entry for an **Administrion** page.
 5. Enter/Select the following:
 
     - Under Entry
-        - Sequence: **150**
         - Image/Class: **fa-database-user**
         - List Entry Label: **Administration**
 
@@ -67,7 +66,7 @@ In this task, you will create a navigation entry for an **Administrion** page.
 
     Click **Create List Entry**.
 
-  ![New Navigation Menu list entry](images/nav-menu6.png "" )
+  ![New Navigation Menu list entry](images/nav-menu4.png "" )
 
 6. Click on the **Application ID** to go back to the Application homepage.
 

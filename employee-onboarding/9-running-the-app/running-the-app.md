@@ -2,13 +2,7 @@
 
 ## Introduction
 
-In this lab, you will run and explore the Employee Onboarding application to understand how the workflows and automations function in a real scenario. Through hands-on activities, you will simulate the process of hiring and onboarding a new employee and observe how the system handles different roles and tasks.
-
-### Real-world Scenario
-
-A Sales Manager recruits a new employee. The HR team then completes the onboarding process,just one day before the scheduled onboarding, HR assigns the employee to the Sales Manager, and ensures the reporting structure is correctly established.
-When the new employee is entered in the system, it triggers a workflow
- This scenario helps demonstrate how Oracle APEX workflows and automations work together to manage onboarding efficiently, while also maintaining proper assignment and organizational hierarchy.
+In this lab, you will run and explore the Employee Onboarding application to understand how the workflows and automations function in a real scenario. Through hands on activities, you will simulate the process of hiring and onboarding a new employee and observe how the system handles different roles and tasks.
 
 ### Objectives
 
@@ -31,6 +25,8 @@ Estimated Time: 15 minutes
     - Substitution: **APP_EMAIL**
 
     - Value: **no-reply@acmecorp.com**
+
+      > *Note:* Replace acmecorp.com with your actual domain.
 
    ![set application Email](./images/set-app-email.png " ")
 
@@ -85,13 +81,13 @@ In this task, you create multiple users for **Employee Onboarding** application.
 
 5. Click **Create Valid Users**.
 
-    ![Create Multiple Users - details](./images/create-multiple-users2.png =50%x*)
+    ![Create Multiple Users - details](./images/create-multiple-users2.png  " ")
 
 ## Task 3: Enter Employees in Application
 
 In this task, you will recreate the previously created  employees in the Application.
 
-1. From the Application Home Page, click **Run Application**.
+1. Navigate to the Application Home Page, click **Run Application**.
 
    ![Run application](./images/run-app.png " ")
 
@@ -147,13 +143,13 @@ In this task, you will recreate the previously created  employees in the Applica
 
 2. Click on the **Employee Onboarding** entry and observe the Workflow Details Popup.
 
-    - Workflow is waiting at "On boarding Tasks" Activity.
+    - Workflow is waiting at **On boarding Tasks** Activity.
 
     - Observe Workflow Parameters.
 
     ![navigate to workflow](./images/monitor-appts.png " ")
 
-## Task 5: Do the IT Setup tasks
+## Task 5: Complete the IT Setup tasks
 
 1. Log in as **AMY**, who is an IT staff in this workflow.
 
@@ -177,7 +173,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 6. Enter an **email** for the new hire and click **Create Email**.
 
-    ![create email](./images/create-email4.png " ")
+    ![create email](./images/create-email2.png " ")
 
 7. Similarly, click on **Allocate Laptop** to allocate a laptop for the new hire. ( Notice that the Create Email task is marked as Completed.)
 
@@ -271,15 +267,15 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Navigate to my tasks](./images/check-wf.png " ")
 
-3. Click **Complete** to complete the task.
+3. Click **Mark Complete** and finally **Complete** to complete the trainings assigned to the New Hire.
 
-   ![Complete task](./images/check-wf2.png " ")
+   ![Complete task](./images/complete-tasks-monica.png " ")
 
 4. Notice the success message.
 
    ![Complete task](./images/check-wf3.png " ")
 
-## Task 10: Complete the Workflow
+## Task 10: Observe the Workflow
 
 1. Log out and log back in as **STEVE** to monitor the workflow.
 
@@ -294,7 +290,6 @@ In this task, you will recreate the previously created  employees in the Applica
 1. Check the inbox of the New Hire's email for a 'Thank You' email.
 
    ![thank you email](./images/thank-you-email.png " ")
-
 
 ## Summary
 

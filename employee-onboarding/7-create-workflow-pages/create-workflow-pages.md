@@ -3,7 +3,7 @@
 ## Introduction
 
 In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling HR, IT teams, and New Hires to initiate and act upon employee related tasks.
-This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule inductions, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
+This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule trainings, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
 
 ### Objectives
 
@@ -14,8 +14,6 @@ In this lab, you will learn how to:
 - Configure Workflow Processes to automatically trigger onboarding workflows.
 
 - Build IT Tasks Page to handle email setup and laptop allocation.
-
-- Create Schedule Induction Page for HR to schedule induction sessions.
 
 - Develop Unified Task List Pages to view and act on tasks.
 
@@ -451,7 +449,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![create IT tasks](./images/create-my-tasks.png " ")
 
-4. Our application has 1 entry point for IT teams. IT need to log in to approve or reject appointment requests. For this, you will create a IT Tasks page. This will also be a Unified Task List page for IT team to act on the tasks assigned to them.
+4. Our application has 1 entry point for IT teams. IT need to log in to create an email and allocate a laptop for the new hire. For this, you will create a IT Tasks page. This will also be a Unified Task List page for IT team to act on the tasks assigned to them.
 
 5. To create another Unified Task list page, click **+ (Plus) Icon** on the top-right corner of the page designer toolbar. Select **Page** from the drop-down.
 
@@ -477,7 +475,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
 ## Task 5: Modify the Task Details Pages
 
-Our Application has three Task Definitions -  Appointment Request, Invoice Request, and Feedback Request. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
+Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
 
 1. Click on the **Shared Components icon**.
 
@@ -491,7 +489,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     ![select IT Setup request](./images/select-it-req.png " ")
 
-4. In the Task Definition Editor, note the page number in the **Task Details URL** (f?p=&APP\_ID.:35:&SESSION.::&DEBUG.:RP,35:P35\_TASK\_ID:&TASK\_ID.). This points to Page 35.
+4. In the Task Definition Editor, under **Settings** note the page number in the **Task Details URL** (f?p=&APP\_ID.:35:&SESSION.::&DEBUG.:RP,35:P35\_TASK\_ID:&TASK\_ID.). This points to Page 35.
 
     ![select appointment request](./images/configure-task-def.png " ")
 
@@ -507,7 +505,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     ![change title](./images/change-title-page5.png " ")
 
-7. In the rendering tree, right click on **Content Body** and select **Create Region**
+7. In the rendering tree, right click on **Content Body** and select **Create Region**.
 
     ![create region](./images/create-region.png " ")
 
@@ -600,7 +598,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     ![IT Status Attributes](./images/it-stats-attri.png " ")
 
-10. In the rendering tree, under IT Task- Status, right click on **Actions** and select **Create Action**.
+10. In the rendering tree, under **IT Task- Status**, right click on **Actions** and select **Create Action**.
 
     ![Create Action for IT Status](./images/create-action1.png " ")
 
@@ -652,7 +650,7 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
 
     ![delete developer info](./images/delete-developer-info1.png " ")
 
-17. In the Task details Page, the HR should be able to fill out an induction form and submit it. On submission, it will create an entry in the **IT\_SETUP\_TASKS** table for the particular employee. We will customize the Induction Details Page as follows:
+17. In the Task details Page, the New Employee should be able to view all the trainings assigned to them and mark it as Complete. We will customize the Allocate Trainings Details Page as follows:
 
     - Right-click  **Subject** and select **Create Region Below**.
 
@@ -696,8 +694,31 @@ Our Application has three Task Definitions -  Appointment Request, Invoice Reque
             ```
 
             - Page Items to submit: **P36\_TASK\_ID**
-
+            
     ![configure Training Region](./images/configure-training-Details.png " ")
+
+19. In the Attributes tab, enter/select the following:
+
+    - Under Settings:
+        - Title: **&TRAINING_NAME.**
+        - Description:
+
+            ```
+             <copy>
+             Employee Name: &EMPLOYEE_NAME. <br>
+             Training Status: &STATUS.
+             </copy>
+
+        - Display Badge: Toggle **ON**
+
+    - Under Badge:
+        - Label: **&STATUS.**
+        - Value: **Status**
+        - State: **RESPONSE_COLOR**
+
+    ![configure Training Region](./images/attri-training.png " ")
+
+    ![configure Training Region](./images/temp-training.png =30%x*)
 
 19. In the rendering tree, under **Training Details**, right click on **Actions** and select **Add Action**.
 
@@ -726,7 +747,7 @@ Finally, we need the page that the HR will use to monitor the employee onboardin
 
 We use the Workflow Console and Details pages with **Initiated By Me** report context, which allows a logged-in user to view all Workflows Initiated by him or her.
 
-> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. You will learn about these in subsequent blogs.
+> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. 
 
 1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down, select **Create Page**.
 
@@ -774,15 +795,13 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
         - Report Context: **My Workflows**
 
-        - Include Dashboard Page: **Toggle Off**
-
         - Form Page Name: **My Workflows Me Form**. This is used for the Workflow Details page.
 
     Click **Create Page**.
 
     ![configure workflow attr](./images/config-workflow-console2.png =50%x*)
 
-4. Save and Run the application and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
+4. Click **Save and Run** and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
 ## Task 8: Improve Navigation Menu
 
@@ -826,13 +845,13 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![Create List entry](./images/doc-home2.png " ")
 
-7. Now, select **Tasks Initiated by Me**, **My Workflows**, **My Tasks** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
+7. Now, select **Tasks Initiated by Me**, **My Tasks** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
 
     ![Set Parent Entry](./images/doc-pat.png " ")
 
     ![Set Parent Entry](./images/doc-parents.png " ")
 
-8. Similarly, select **My Workflows**, **Workflows Initiated by Me** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
+8. Similarly, select  **Workflows Initiated by Me**, **Workflow Dashboard**, **My Workflows** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
 
     ![Set Parent Entry](./images/doc-pat1.png " ")
 
@@ -844,9 +863,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 ## Task 9: Improve UI (Optional)
 
-1. Navigate to **Shared Components**.
-
-    ![Shared component](./images/shared-compon.png " ")
+1. Navigate to the **Application Home page**.
 
 2. Select **Home**.
 
@@ -921,7 +938,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 ## Summary
 
-You have successfully created a comprehensive Oracle APEX application for Onboarding new employees with workflows and task lists.
+You have successfully created a comprehensive Oracle APEX application for Onboarding New Employees with workflows and task lists.
 
 ## Acknowledgements
 
