@@ -28,7 +28,7 @@ Estimated Time: 20 minutes
 
 To create a Workflow:
 
-1. Navigate to **Workflow**.
+1. Navigate to **Workflows**.
 
    ![Navigate to Shared Components](./images/wf-nav.png " ")
 
@@ -42,7 +42,7 @@ To create a Workflow:
 
 ## Task 2: Modify Workflow Details
 
-1. Select New in the Rendering tab, in the Property Editor, enter/select the following:
+1. Select **New** in the Rendering tab, in the Property Editor enter/select the following:
 
     - Under Identification:
         - Name: **Employee Onboarding**

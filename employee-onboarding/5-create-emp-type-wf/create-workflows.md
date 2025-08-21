@@ -215,7 +215,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![link parameter for Activity](./images/params4.png " ")
 
-## Task 6: Create Activity to Assign Trainings
+## Task 7: Create Activity to Assign Trainings
 
 In this task, you will create a Send Email Activity to send an email to the New Hire after completion of requiredtrainings.
 
@@ -249,7 +249,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
 
    ![Link parameters](./images/params-emp1.png " ")
 
-## Task 7: Create Activity to send Training Completion Email
+## Task 8: Create Activity to send Training Completion Email
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
 
@@ -283,7 +283,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
 
    ![Create activity to send email trainings](./images/send-email2.png " ")
 
-## Task 8: Draw connections between Activities
+## Task 9: Draw connections between Activities
 
 1. Draw Connections from **Trainings for Full-Time Employee** to **Assign Trainings** and **Trainings for Intern** to **Assign Trainings** activity.
 
