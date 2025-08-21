@@ -344,7 +344,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 13. Right-click **Breadcrumb** and select **Delete**.
 
-    ![Select Theme to Redwood Light](images/delete-breadcrumb.png " ")
+    ![Select Theme to Redwood Light](images1/temp-img-6-13.png " ")
 
 14. Select **P3_SEARCH**, in the Property Editor, and update the following:
 
