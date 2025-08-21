@@ -4,7 +4,7 @@
 
 In this lab, you start using the Theme Roller to set a new theme style, enhancing the application's appearance with a fresh layout and color scheme. After that, you'll create a plug-in as a template component called "Hero." This custom plug-in will be a visual and interactive component, allowing dynamic headers, descriptions, and search features to be integrated within an application page.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
