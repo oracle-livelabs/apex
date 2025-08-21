@@ -28,7 +28,7 @@ In this task you will create an application.
 2. In the App Builder home page, click **Create** to create an application.
 
   ![Create New App](images/create-app.png "")
-3. In the Create Application Wizard, enter name as **Employee Onboarding Application** and click **Create Application**.
+3. In the Create Application Wizard, enter Name as **Employee Onboarding Application** and click **Create Application**.
 
   ![Create New App](images/create-app-1.png "")
 
@@ -68,7 +68,7 @@ In this task, you will create a navigation entry for an **Administrion** page.
 
   ![New Navigation Menu list entry](images/nav-menu4.png "" )
 
-6. Click on the **Application ID** to go back to the Application homepage.
+6. Click on the **Application ID** to go back to the Application Home page.
 
   ![New Navigation Menu list entry](images/nav-menu7.png "" )
 
@@ -88,7 +88,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Page Definition:
         - Name: **Employees**
-        - Include Form page: **Toggle On**
+        - Include Form page: **Toggle ON**
         - Form Page Name: **Create/Edit Employee**
         - Form Page Mode: **Drawer**
 
@@ -100,11 +100,11 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-users**
 
-    And click **Next**.
+    Click **Next**.
 
   ![Create emp page](images/create-emp2.png =50%x*)
 
-4. Select Primary key as **EMPLOYEE_ID(Number)** and click **Create Page**.
+4. Select Primary key as **EMPLOYEE_ID (Number)** and click **Create Page**.
 
   ![Create emp page](images/create-emp-3.png "" )
 
@@ -125,7 +125,7 @@ In this task, you will build the administrative setup pages that will allow HR a
     - Under Data Source:
 
         - Table/View Name: **DEPARTMENTS**
-        - Editing Enabled: **Toggle On**
+        - Editing Enabled: **Toggle ON**
 
     - Under Navigation:
 
@@ -133,11 +133,11 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-address-card-o**
 
-    And click **Next**.
+    Click **Next**.
 
   ![Create Dept page](images/create-dept3.png =50%x*)
 
-8. Select Primary key as **DEPARTMENT_ID(Number)** and click **Create Page**.
+8. Select Primary key as **DEPARTMENT_ID (Number)** and click **Create Page**.
 
   ![Create Dept page](images/create-dept4.png =50%x*)
 
@@ -155,18 +155,19 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Name: **Training Catalogue**
 
     - Under Navigation:
-        - Use Breadcrumb: **Toggle Off**
-        - Use Navigation: **Toggle On**
+        - Use Breadcrumb: **Toggle OFF**
+        - Use Navigation: **Toggle ON**
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-badge-list**
 
-    And click **Create Page**.
+    Click **Create Page**.
 
   ![Create Trainings page](images/create-trainings3.png =50%x*)
 
 12. In the rendering tree, select **Training Catalogue** region and enter/select the following in the property editor:
 
     - Under Source:
+
         - SQL Query: copy and paste the below sql query
 
           ```
@@ -174,7 +175,9 @@ In this task, you will build the administrative setup pages that will allow HR a
           select * from TRAINING_CATALOG
           </copy>
           ```
+
     - Under Appearance:
+
         - Template: **Standard**
 
   ![Trainings page settings](images/training-catalog1.png "" )
@@ -213,11 +216,11 @@ In this task, you will build the administrative setup pages that will allow HR a
     - Under Data Source:
         - Table/View Name: **TRAINING_CATALOG**
 
-    And click **Next**.
+    Click **Next**.
 
   ![Create a form page](images/create-form2.png =50%x*)
 
-18. Select Primary key Column 1: **CATALOG_ID(Number)** and click **Create Page**.
+18. Select Primary key Column 1: **CATALOG_ID (Number)** and click **Create Page**.
 
   ![Create a form page](images/create-form3.png =50%x*)
 
@@ -263,7 +266,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![ training type edit](images/validation.png "")
 
-22. Click Save page.
+22. Click **Save**.
 
   ![Save page](images/save-page.png "" )
 
@@ -273,7 +276,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Navigate to training page](images/navigate-form.png "" )
 
-24. In the rendering tree, under **Training Catalogue** region and right click on **Actions**.
+24. In the rendering tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
 
   ![Create action](images/create-action1.png "" )
 
@@ -286,12 +289,15 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Link:
         - Target :
-            -  Page: **6** (Create Training Catalog page)
+            -  Page: **6**
             - Set Items:
-                - Name: **P6\_CATALOG\_ID**
-                - Value: **&CATALOG_ID.**
 
-          And click **Ok**.
+                | Name  | Value |
+                | -----------| -----------|
+                | P6\_CATALOG\_ID | &CATALOG_ID. |
+                {: title="List of Values to be added for Edit Button"}
+
+          Click **Ok**.
 
   ![Edit action](images/edit-action2.png "" )
 
@@ -310,11 +316,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Behavior:
         - Action: **Redirect to Page in this Application**
-        - Target > Page: **6** (Create Training Catalogue) and Click **Ok**.
+        - Target > Page: **6** and click **Ok**.
 
   ![Create button settings](images/create-button2.png "" )
 
-28. Save the page.
+28. Click **Save**.
 
     ![Save Page](images/save-page.png "" )
 
@@ -328,11 +334,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Shared Components](images/shared-comps2.png "" )
 
-3. Click **Create Template**.
+3. Click **Create Email Template**.
 
     ![Create Template](images/create-emp-temp.png "" )
 
-4. Enter the following in the Template Details:
+4. Enter the following in the Template Details and click **Create Email Template**.
 
     - Under Identification:
 
