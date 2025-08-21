@@ -56,14 +56,13 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Select Theme to Redwood Light](images/click-save-as.png " ")
 
-## Task 2: Use Themes and Theme Styles
+## Task 2: Export and Import Theme Styles
 
 1. To Export theme styles:
 
     - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
 
     ![Click Customize in Developer Toolbar](images1/temp-img1.png " ")
-
 
 2. From the Additional Options menu, select **Export**. This option exports the current style configuration into a JSON file.
 
@@ -87,7 +86,7 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Click Customize in Developer Toolbar](images1/temp-img3.png " ")
 
-4. Click **Save As** and name it as Redwood Light (Ocean Theme) and then **Save**.
+4. Click **Save As** and name it as **Redwood Light (Ocean Theme)** and then **Save**.
 
     ![Click Customize in Developer Toolbar](images1/temp-img4.png " ")
 
@@ -104,11 +103,11 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Click Customize in Developer Toolbar](images1/temp-img7.png " ")
 
-8. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Redwood light (Bootcamp Demo)** and click **Apply Changes**.
+8. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Redwood Light (My Theme)** and click **Apply Changes**.
 
     ![Click Customize in Developer Toolbar](images1/temp-img8.png " ")
 
-9. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
+9. The Theme Style is applied, and you see a message that says Preferences changed for user **<****username>**.
 
     ![Click Customize in Developer Toolbar](images1/temp-img9.png " ")
 
