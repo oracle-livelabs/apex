@@ -56,7 +56,61 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Select Theme to Redwood Light](images/click-save-as.png " ")
 
-## Task 2: ......
+## Task 2: Use Themes and Theme Styles
+
+1. To Export theme styles:
+
+    - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img1.png " ")
+
+
+2. From the Additional Options menu, select **Export**. This option exports the current style configuration into a JSON file.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img2.png " ")
+
+    - Navigate to the downloaded file.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img2.2.png " ")
+
+    - Copy & paste the below JSON text to update the pillar to Ocean Pillar style.
+
+        ```
+        <copy>
+        {"classes":["rw-layout--fixed t-PageBody--scrollTitle","rw-layout--fixed t-PageBody--scrollTitle","rw-mode-header--pillar","rw-mode-nav--pillar","rw-mode-body-header--dark","rw-mode-body--dark","rw-pillar--ocean"],"vars":{},"customCSS":"","useCustomLess":"N"}
+        </copy>
+        ```
+
+    ![Click Customize in Developer Toolbar](images1/temp-img2.3.png " ")
+
+3. Import theme styles: From the Additional Options menu, select **Import**. A File Browser appears.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img3.png " ")
+
+4. Click **Save As** and name it as Redwood Light (Ocean Theme) and then **Save**.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img4.png " ")
+
+5. On the application home page, click **Shared Components**. Under User Interface, click **User Interface Attributes**.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img5.png " ")
+    ![Click Customize in Developer Toolbar](images1/temp-img5.2.png " ")
+
+6. Under **Attributes**, click **Enable End Users to Choose Theme Style**. Make sure this attribute is set to On. Notice that the new Theme Style you saved is displayed under the Theme Style list. Click **Apply Changes**.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img6.png " ")
+
+7. Now, run the application. At the bottom of the page, click the **Customize** link.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img7.png " ")
+
+8. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Redwood light (Bootcamp Demo)** and click **Apply Changes**.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img8.png " ")
+
+9. The Theme Style is applied, and you see a message that says Preferences changed for user < username >.
+
+    ![Click Customize in Developer Toolbar](images1/temp-img9.png " ")
 
 ## Task 3: Create Plug-in
 
