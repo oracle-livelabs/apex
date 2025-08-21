@@ -19,8 +19,7 @@ Estimated Time: 30 minutes
 * Create an application on the new data structures using APEX Assistant
 * Refine the application by generating SQL using APEX assistant
 * Add functionality to Generate Text with AI
-* Create an AI Chat Assistant to inquire about the Project.
-* Create a Search Page based on Oracle Vector Search
+* Create an AI Chat Assistant to inquire about the Events.
 
 >**Note**: This workshop assumes you are using Oracle APEX 24.2 and Oracle Database 23ai. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 

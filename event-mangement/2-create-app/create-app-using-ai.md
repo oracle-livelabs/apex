@@ -13,6 +13,7 @@ Estimated Time: 15 minutes
 ### What You will Need
 
 - An Oracle Cloud paid account, or free trial.
+
 - Project Data model created using Generative AI.
 
 ## Task 1: Create the Application using Generative AI
@@ -39,67 +40,76 @@ Estimated Time: 15 minutes
 
     !["first prompt"](images/app-prompt.png "")
 
-6. Now, we need set the Project Details page as Interactive report and convert the Milestones Page into Interactive Grid.
+6. Now, we need to add a form page to edit events. Enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 2:
-    >Set the Project Details page as an Interactive Report with a Form and the Milestones page as an Interactive Grid
+    >Add a form page to edit events
 
     !["second prompt"](images/prompt2.png "")
 
-7. Similarly, you need to add a new page for Project Dashboard and make it a Homepage. Also, you will be removing the exiting Home page which is marked as Welcome Page.
-    >Prompt 3:
-    >Add a project dashboard as a Cards page, set it as the Home page, and remove the Welcome page
+7. Similarly, you need to enable **Feedback** feature. Enter the prompt mentioned below and hit **Enter**.
 
+    >Prompt 3:
+    >Enable Feedback feature.
 
     !["third prompt"](images/prompt3.png "")
 
-8.  Finally, set the Project Dashboard Page as a Cards region and click **Create Application**.
+8. Finally, click **Create Application**.
 
     >Prompt 4:
     >Set the Task Overview page as an Interactive Report with a Form
 
     !["sixth prompt"](images/prompt4.png "")
 
-> **Note:** _The pages might differ based on the prompt. Make sure that you have **Project Dashboard page defined as Cards Region**, **Project Tasks to-dos, and Links pages created as Interactive report with a Form** by giving appropriate prompts_
+    > **Note:** _The pages might differ based on the prompt. Make sure that you have **Events Dashboard page**, **Event page created as Faceted Search page** by giving appropriate prompts_
 
-10.  On the Create an Application page, click **Appearance** Icon.
+9. On the Create an Application page, navigate to **Dashboard** page and click **Edit**.
 
-    ![select appearance](images/click-appearance.png " ")
+    ![select appearance](images/edit-dash.png " ")
 
-11.  In the Appearance Wizard, select **Redwood Light** and then click **Save Changes**.
+10. On the **Add Dashboard Page**, update the the Page Name to **Dashboard**. Click **Set Icon** and search for **chart**, select an icon of your wish.
 
-    ![select redwood light theme](images/select-redwood-light.png " ")
+11. Under **Advanced**, enable **Set as Home Page** and click **Save Changes**.
 
-12.  Make sure that the **Progressive Web App** and **Feedback features** are enabled. Then, click **Create Application**.
+    ![select appearance](images/update-dash.png " ")
 
-    ![click create application](images/click-create-applciation.png " ")
+12. Update the Application Name to **Events Management** and **click** on the set icon.
 
+    ![select appearance](images/set-icon.png " ")
+
+13. Download the icon from **here**. Click **Upload your own icon**, choose the image and click **Save Icon**.
+
+    ![select appearance](images/save-icon.png " ")
+
+14. Make sure that the **Progressive Web App** and **Feedback features** are enabled. Then, click **Create Application**.
+
+    ![click create application](images/create-event-app.png " ")
 
 ## Task 2: Run the Application
 
 1. Your new application will be displayed in Page Designer. Click **Run Application**.
 
-    ![run the application](images/run-application.png " ")
+    ![run the application](images/run-appp.png " ")
 
 2. In the runtime environment, the login page will be displayed.
 
-    Enter your **Username** and **Password**.   
-    Click **Sign In**.
+    Enter your **Username** and **Password**. Click **Sign In**.
 
     The new application will be displayed.
 
-    ![input login credentials](images/login-details.png " ")
+    ![input login credentials](images/login-detail.png " ")
 
 3. Play around with the application and explore the different pages.
 
     Records are displayed in all of the reports which makes page review significantly easier, especially for reports. The fact that the data may not be exactly correct for the columns is not critical, as you can very easily update the data to make it more realistic.
 
-    ![display project dashboard page](images/show-projects-dashboard.png " ")
+    ![display project dashboard page](images/event-dashboard.png " ")
 
 ## **Summary**
+
 You now know how to utilize Generative AI to create the first cut of your application.
 
 ## **Acknowledgments**
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Last Updated By/Date** - Roopesh Thokala, Senior Product Manager, January 2025
+- **Author** - Ankita Beri, Product Manager
+- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
