@@ -126,11 +126,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Hide page item](./images/edit-page-items.png " ")
 
-14. Select **P8\_DEPARTMENT\_ID** and in the property editor, select the Identification > Name: **Department**
+14. Select **P8\_DEPARTMENT\_ID** and in the property editor, set Identification > Name: **Department**
 
     ![Edit Department ID page item](./images/edit-dept.png " ")
 
-15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, select the Label > Label: **Department**
+15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, set Label > Label: **Department**
 
     ![Edit Manager ID page item](./images/edit-mang.png " ")
 
