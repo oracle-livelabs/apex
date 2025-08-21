@@ -729,11 +729,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![configure Training Region](./images/temp-training.png =30%x*)
 
-19. In the rendering tree, under **Training Details**, right click on **Actions** and select **Add Action**.
+20. In the rendering tree, under **Training Details**, right click on **Actions** and select **Add Action**.
 
     ![Create Action](./images/create-action-training.png " ")
 
-20. In the property editor, enter/select the following:
+21. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -748,7 +748,85 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![Action mark complete](./images/action-complete.png " ")
 
-21. Click **Save**.
+22. In the rendering tree, right click on **Content Body** and select **Create Page Item**.
+
+    ![Create Training ID](./images/add-training-id.png " ")
+
+23. In the property editor, enter/select the following:
+
+    - Under Identification:
+        - Name: **P36\_TRAINING\_ID**
+        - Type: **Hidden**
+
+    - Settings > Value Protected: **Toggle OFF**
+
+    ![Create Training ID](./images/add-training-id2.png " ")
+
+24. Navigate to **Dynamic Actions** tab, right click on  **Events** and select **Create Dynamic Action**.
+
+    ![Create DA](./images/da-train.png " ")
+
+25. In the property editor, enter/select the following:
+
+    - Identification: Name > **Update Employee Trainings**
+
+    - Under When:
+
+        - Event: **Custom**
+        - Custom Event: **mark_complete**
+        - Selection Type: **JavaScript Expression**
+        - JavaScript Expression: **document**
+
+        ![Create DA](./images/da-train2.png " ")
+
+26. Under **True** action, select **Show** and enter/select the following in the property editor:
+
+    - Identification: Action > **Set Value**
+
+    - Under Settings:
+        - Set Type: **JavaScript Expression**
+        - JavaScript Expression: **this.data**
+
+    - Affected Elements > Item(s): **P36\_TRAINING\_ID**
+
+       ![Create TRUE action](./images/set-value.png " ")
+
+27. In the rendering tree, right click on **True** and click **Create TRUE Action**.
+
+       ![Create TRUE action](./images/create-true-action.png " ")
+
+28. In the property editor, enter/select the following:
+
+     - Identification: Action > **Execute Server-side Code**
+
+     - Under Settings:
+
+        -  PL/SQL: copy and paste the below code
+
+            ```
+             <copy>
+             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P36_TRAINING_ID;
+             </copy>
+            ```
+
+        - Items to Submit: **P36\_TRAINING\_ID**
+
+       ![Create TRUE action](./images/set-value2.png " ")
+
+29. Similary, create another **TRUE** action, with the following properties:
+
+     - Identification: Action > **Refresh**
+
+     - Under Settings:
+
+        - Selection Type: **Region**
+        - Region: **Training Details**
+
+       ![Create TRUE action](./images/set-value3.png " ")
+
+30. Click **Save**.
+
+       ![Save Page](./images/save-pages.png " ")
 
 ## Task 6: Create Initiated By Me Workflow Page
 

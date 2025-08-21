@@ -267,9 +267,11 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Navigate to my tasks](./images/check-wf.png " ")
 
-3. Click **Mark Complete** and finally **Complete** to complete the trainings assigned to the New Hire.
+3. Click **Mark Complete** for all the trainings and finally **Complete** to complete the trainings assigned to the New Hire.
 
    ![Complete task](./images/complete-tasks-monica.png " ")
+
+   ![Complete task](./images/mark-completes3.png " ")
 
 4. Notice the success message.
 
@@ -287,9 +289,11 @@ In this task, you will recreate the previously created  employees in the Applica
 
 ## Task 11: Verify Email Confirmation
 
-1. Check the inbox of the New Hire's email for a 'Thank You' email.
+1. Check the inbox of the New Hire's email for two emails.
 
-   ![thank you email](./images/thank-you-email.png " ")
+   ![Congralutions email](./images/email1.png " ")
+
+   ![Congralutions email](./images/email2.png " ")
 
 ## Summary
 
