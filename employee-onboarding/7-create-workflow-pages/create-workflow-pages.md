@@ -705,7 +705,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
             
     ![configure Training Region](./images/configure-training-Details.png " ")
 
-19. In the Attributes tab, enter/select the following:
+19. In the **Attributes** tab, enter/select the following:
 
     - Under Settings:
         - Title: **&TRAINING_NAME.**
