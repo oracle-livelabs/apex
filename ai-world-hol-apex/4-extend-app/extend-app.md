@@ -1,21 +1,17 @@
 # Extend your APEX App with Grok Models.
 
 ##  Introduction
-In this lab, we’ll enhance the **GenAI assistant experience** by exploring how to **switch between different OCI Generative AI models**.  
-Different models may perform better depending on your application’s domain — testing them helps you deliver the **best user experience**.
+In this lab, we’ll enhance the GenAI assistant experience by exploring how to switch between different OCI Generative AI models.  
+Different models may perform better depending on your application’s domain — testing them helps you deliver the best user experience.
 
----
-
-##  Objectives
+###  Objectives
 By the end of this lab, you will:
-- Learn how to **utilize additional LLMs** (like Grok) within your **APEX App**.
+- Learn how to utilize additional LLMs (like Grok) within your APEX App.
 
----
-
-##  Prerequisites
+###  Prerequisites
 This lab assumes you have:
-- **Access to Oracle Cloud Infrastructure (OCI)** (paid account or free tier) in a region with **Generative AI** available.  
-- **Basic experience** with the OCI Console and APEX components.  
+- Access to Oracle Cloud Infrastructure (OCI) (paid account or free tier) in a region with Generative AI available.  
+- Basic experience** with the OCI Console and APEX components.  
 
 ---
 
@@ -61,10 +57,17 @@ Try switching between two models — note differences in:
 - **Detail level** (short vs comprehensive)  
 - **Response speed**  
 
+You’ve successfully **extended your APEX app** by experimenting with **different LLMs (like Grok)**.  
+This approach allows you to **fine-tune the assistant experience** based on different model selection.
+
 ---
 
-## Summary
-You’ve successfully **extended your APEX app** by experimenting with **different LLMs (like Grok)**.  
-This approach allows you to **fine-tune the assistant experience** for your specific domain and users.  
 
-Now your app isn’t just smart — it’s adaptable!
+## Acknowledgments
+
+* **Authors:**
+
+* Karol Stuart, Master Principal Cloud Architect 
+* Graham Anderson, Senior Cloud Architect 
+
+* **Last Updated by/Date** - Karol Stuart, August 2025

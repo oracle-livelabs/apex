@@ -27,7 +27,7 @@ In this workshop, you will learn how to:
 * Create an Autonomous Databse and Create an APEX Application
 * Integrate OCI GenAI into your Application 
 * Extend you Application's functionality and Test other LLM's like Grok
-
+By the end of this workshop, you will build a Mood-Based Movie Recommender with GenAI.
  
 
 ### Prerequisites
@@ -40,7 +40,18 @@ You may now **proceed to the next lab**.
 
 ## Learn more
 
-***Insert Links*** 
+# Oracle Resources
+
+## Oracle APEX
+- [Oracle APEX Home](https://apex.oracle.com/en/)
+- [Oracle APEX Documentation](https://www.oracle.com/technetwork/developer-tools/apex/overview/apex-overview-otn-4491378.pdf)
+- [Try APEX for Free](https://apex.oracle.com/en/learn/getting-started/)
+- [Download APEX](https://www.oracle.com/tools/downloads/apex-downloads/)
+
+## Oracle Generative AI (GenAI)
+- [Oracle GenAI Home](https://www.oracle.com/artificial-intelligence/generative-ai/)
+- [Oracle GenAI Documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/home.htm)
+- [Get Started with GenAI](https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service)
 
 ## Acknowledgments
 

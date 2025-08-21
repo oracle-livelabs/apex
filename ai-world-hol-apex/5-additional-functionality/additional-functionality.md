@@ -4,6 +4,30 @@
 In this lab, you’ll create a **fun APEX application** that uses **GenAI** to recommend movies based on the user’s **mood**.  
 You’ll upload a movie dataset, configure a GenAI assistant, and integrate it into your application so users can interact with it naturally.
 
+###  Objectives
+By the end of this lab, you will:
+- Upload and manage a **movie dataset** in your database  
+- Configure and integrate a **GenAI assistant** into your application  
+- Build a **Mood-Based Movie Recommender** that suggests movies based on user input 
+
+###  Prerequisites
+This lab assumes you have:
+- Access to Oracle Cloud Infrastructure (OCI) (paid account or free tier) in a region with Generative AI available.  
+- Basic experience** with the OCI Console and APEX components.  
+
+### Dataset
+
+[Click here](datasets/movies_sample.csv) to access the full movies_sample.csv dataset. Here’s a preview of the sample movie dataset you’ll upload:
+
+| Title                   | Genre     | Rating | Keywords                        |
+|--------------------------|----------|--------|---------------------------------|
+| The Shawshank Redemption| Drama    | 9.3    | inspiring, hopeful, friendship  |
+| Inception                | Sci-Fi   | 8.8    | mind-bending, thrilling, adventurous |
+| The Lion King            | Animation| 8.5    | nostalgic, heartwarming, family |
+| Interstellar             | Sci-Fi   | 8.6    | adventurous, emotional, epic    |
+| Forrest Gump             | Drama    | 8.8    | nostalgic, emotional, inspiring |
+
+
 ---
 
 ## Step 1: Import a Movie Dataset 
@@ -107,25 +131,16 @@ You’ll upload a movie dataset, configure a GenAI assistant, and integrate it i
    - *I’m in a nostalgic mood and want something heartwarming.*  
    - *I’m feeling adventurous and need something thrilling!*  
 
-Your assistant will now respond with **smart movie suggestions** from the dataset.
+Your assistant will now respond with **smart movie suggestions** from the dataset. You’ve successfully built a **Mood-Based Movie Recommender** with **APEX + GenAI**!
 
 ---
 
-You’ve successfully built a **Mood-Based Movie Recommender** with **APEX + GenAI**!
 
----
+## Acknowledgments
 
-## 📂 Sample Dataset Preview
+* **Authors:**
 
-Here’s a preview of the sample movie dataset you’ll upload:
+* Karol Stuart, Master Principal Cloud Architect 
+* Graham Anderson, Senior Cloud Architect 
 
-| Title                   | Genre     | Rating | Keywords                        |
-|--------------------------|----------|--------|---------------------------------|
-| The Shawshank Redemption| Drama    | 9.3    | inspiring, hopeful, friendship  |
-| Inception                | Sci-Fi   | 8.8    | mind-bending, thrilling, adventurous |
-| The Lion King            | Animation| 8.5    | nostalgic, heartwarming, family |
-| Interstellar             | Sci-Fi   | 8.6    | adventurous, emotional, epic    |
-| Forrest Gump             | Drama    | 8.8    | nostalgic, emotional, inspiring |
-
-👉 Full dataset provided in `movies_sample.csv`.
-
+* **Last Updated by/Date** - Karol Stuart, August 2025
