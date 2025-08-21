@@ -36,19 +36,21 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=allow-end-users-cre
 
 	![Select Blank Page for Page Type](./images/blank-page.png)
 
-3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. Leave **Page Group** and **Breadcrumb** as is. Where it says **Navigation**, click on the “&gt;” to expand this section. De-select **Use Breadcrumb** and **Use Navigation**. Then click **Create Page**.
+3.	You can keep the auto-assigned **Page Number** or manually enter one yourself (make sure it’s not already being used). Give the page a **Name** like “Account Activation” and keep **Page Mode** set to **Normal**. De-select/un-toggle **Use Breadcrumb** and **Use Navigation**. Then click **Create Page**.
 
 	![Fill out the "Create Blank Page" form](./images/finish-create-page.png)
 
-4.	Your new “Account Activation” page should automatically open. Right-click on “Account Activation” in the left-side pane (under **Body**) and click on **Create Page Item**.
+4.	Your new “Account Activation” page should automatically open. Right-click on **Body** in the left-side pane and click on **Create Region**. Give the region a **Name** like "Account Activation". Then right-click on this new region in the left-side pane and click on **Create Page Item**.
 
+	![Create region called "Account Activation"](./images/create-new-region.png)
+	![Name new region](./images/name-new-region.png)
 	![Create page item in "Account Activation" Body](./images/create-page-item.png)
 
 5.	In the right-side pane, give the item a **Name**, like **EMAIL** (keep the “PXX_” prefix). And select **Hidden** as the **Type** from the dropdown menu. Leave everything else as is in the right-side pane.
 
 	![Give the page item a Name and make it of Type "Hidden"](./images/hidden-email-page-item.png)
 
-6.	Now in the left-side pane, select “Account Activation” under **Body** and in the right-side pane, change the **Type** to **PL/SQL Dynamic Content** from the dropdown menu. Click on the icon next to **PL/SQL Code** to open a code editor popup window.
+6.	Now in the left-side pane, select “Account Activation” under **Body** and in the right-side pane, change the **Type** to **Dynamic Content** from the dropdown menu. Click on the icon next to **PL/SQL Code** to open a code editor popup window.
 
 	![Make the content Type "PL/SQL Dynamic Content"](./images/dynamic-content-for-activation.png)
 
@@ -82,7 +84,7 @@ As mentioned in [Lab 2, Task 1: Create a New User Page](?lab=allow-end-users-cre
 	select email into v_email from user_creds where email = :PXX_EMAIL;
 	select account_status into v_verified from user_creds where email =:PXX_EMAIL;
 	if v_email is not null and v_verified = 0 then
-	    update users set account_status = 1 where email = :PXX_EMAIL;
+	    update user_creds set account_status = 1 where email = :PXX_EMAIL;
 	    htp.p('
 	    <style>
 	    .class1{
@@ -130,7 +132,7 @@ This concludes this task. You may now **proceed to the next task.**
 
 Now that we have an Account Activation page to go to, we need to build out the functionality that sends the account activation email once the user creates an account. This will be done from the “Create New User” page (created in [Lab 2, Task 1](?lab=allow-end-users-create&nav=open#Task1:CreateaNewUserPage)). Follow the steps outlined below to send an account activation email once a user creates an account.
 
-1.	On the “Create New User” page, navigate to the Processing tab on the left-side pane (denoted by ![Processing icon](./images/processing-icon.png)) and right-click on “Process form…” and select **Create Process**.
+1.	On the “Create New User” page, navigate to the Processing tab on the left-side pane (denoted by ![Processing icon](./images/processing-icon.png)) and right-click on “Processes” and select **Create Process**.
 
 	![Create a Process on the "Create New User" page](./images/create-process.png)
 
@@ -197,9 +199,9 @@ The following two tasks will walk you through the creation of the Forgot/Reset P
 
 	![Select primary key](./images/form-pk.png)
 
-4. Change the **EMAIL** page item to **Type** “Hidden”, **USERNAME** to **Type** “Display Only”, and **PASSWORD** to **Type** “Password”.
+4. Change the **EMAIL** page item to **Type** “Hidden”, **USERNAME** to **Type** “Display Only”, **PASSWORD** to **Type** “Password”, and ACCOUNT_STATUS to **Type** "Hidden".
 
-	![Change EMAIL item type](./images/email-type.png) ![Change USERNAME item type](./images/username-type.png) ![Change PASSWORD item type](./images/password-type.png)
+	![Change EMAIL item type](./images/email-type.png) ![Change USERNAME item type](./images/username-type.png) ![Change PASSWORD item type](./images/password-type.png) ![Change ACCOUNT_STATUS item type](./images/account-status-type.png)
 
 5. With the **USERNAME** page item selected in the left-side pane, scroll down in the right-side pane to the **Source** section and change the **Form Region** to “- Select -” and the **Type** to “SQL Query (returning single value)”. Copy & paste the code snippet below into the **SQL Query** text box, changing **PXX_EMAIL** to reflect your page number. Also, change the **Used** value to “Always, replacing any existing value in session state” from the dropdown menu.
 
@@ -403,7 +405,7 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 
 3.	In the right-side pane, give it a **Title** (something like “Forgot Password”) and make it of **Type** “Form”. Under **Source** provide the user credentials table name in the **Table Name** field. Page items corresponding to the table columns will now appear in the left-side pane.
 
-	> **Note:** For formatting/appearance purposes, I like to change **Template** (in the **Appearance** section) to "- Select -", but that is a personal preference choice.
+	> **Note:** For formatting/appearance purposes, I like to change **Template** (in the **Appearance** section) to "None", but that is a personal preference choice.
 
 	![Fill in region information](./images/region-information.png)
 
@@ -549,10 +551,10 @@ Now we will create a Send Reset Password Link page that implements the Forgot Pa
 ## Learn More
 
 * [Setting up an Approved Sender in the OCI Console](https://blogs.oracle.com/apex/post/sending-email-from-your-oracle-apex-app-on-autonomous-database) for an APEX app
-* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/adding-new-a-page-to-an-app.html) in Oracle APEX
-* [Managing Buttons](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/creating-buttons.html) in Oracle APEX
-* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/23.1/htmdb/managing-dynamic-actions.html#GUID-93732CF5-42AD-4400-B1B9-5F6AA3D80715) in Oracle APEX
+* [Adding a New Page to an Application](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/adding-new-page-app.html) in Oracle APEX
+* [Managing Buttons](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-buttons.html) in Oracle APEX
+* [About Dynamic Actions](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-dynamic-actions.html) in Oracle APEX
 
 ## Acknowledgements
-* **Author** - Ana Beyer, Cloud Engineer, Oracle
-* **Last Updated By/Date** - Ana Beyer, June 2023
+* **Author** - Ana Beyer, Staff Cloud Engineer, Oracle
+* **Last Updated By/Date** - Ana Beyer, June 2025
