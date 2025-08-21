@@ -44,19 +44,11 @@ To Generate the API Keys using OCI Console:
 
     ![Profile Menu](images/profile.png " ")
 
-3. Select a Compartment and click on the domain name.
+3. Switch to the **Tokens and keys** tab. Click **Add API key**.
 
-   ![Domain List](images/domain.png " ")
+   ![Tokens and keys page](images/add-api-key.png " ")
 
-4. Select **Users** from the left navigation menu. Select and click on the username for which you would like to create the API key.
-
-   ![User list](images/select-user.png " ")
-
-4. Under Resources at the bottom-left, select **API Keys** and  click **Add API Key**.
-
-    ![Add API Key](images/api-keys.png " ")
-
-5. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
+4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
 5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
@@ -64,7 +56,7 @@ To Generate the API Keys using OCI Console:
 
 6. Click **Add**.
 
-    ![Profile Menu](images/add-api-key.png " ")
+    ![Profile Menu](images/add.png " ")
 
 7. The key is added, and the Configuration File Preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information while configuring a Generative AI service in APEX.
 

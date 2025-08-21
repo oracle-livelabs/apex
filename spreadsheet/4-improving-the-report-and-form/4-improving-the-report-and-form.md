@@ -62,7 +62,7 @@ The **NYC Highschools Report** page utilizes an Interactive Report to display th
     | Property | Value |
     | --- | --- |
     | Column Label | **Application to Seat Ratio** |
-    | Format Mask | **5,234.10** |
+    | Format Mask | **5,234.10** (Pick this format mask from the Select List)|
     | Computation Expression | **M / L** |
 
     ![Interactive Report Computation](images/set-compute.png " ")

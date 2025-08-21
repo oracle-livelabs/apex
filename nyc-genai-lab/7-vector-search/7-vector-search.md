@@ -214,6 +214,7 @@ Search Configuration contains information about a searchable data source.
 4. In the Create Search Configuration dialog, enter/select the following:
     - Name: **Highschool Info**
     - Search Type: **Oracle Vector Search**
+    
     Click **Next**.
 
     ![Create Search Configurations page](images/sc-detail-1.png ' ')
@@ -239,6 +240,16 @@ Search Configuration contains information about a searchable data source.
 
     ![Create Search Configurations page](images/sc-static-id.png ' ')
 
+8. Under the Source group, for **Where Clause**, enter the following:
+    ```
+    <copy>
+    SCHOOL_ID = :P2_SCHOOL_ID
+    </copy>
+    ```
+
+    ![Create Search Configurations page](images/where-clause.png ' ')
+
+ 
 8. Scroll down and for Maximum Rows to Return, enter **1**. Click **Apply Changes**.
 
     ![Create Search Configurations page](images/max-rows.png ' ')

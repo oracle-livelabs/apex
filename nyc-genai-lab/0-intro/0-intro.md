@@ -38,11 +38,14 @@ Estimated Time: 60 minutes
 - If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
     - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
 
-        - US Midwest (Chicago)
-        - Germany Central (Frankfurt)
-        - UK South (London)
         - Brazil East (Sao Paulo)
+        - Germany Central (Frankfurt)
+        - India South (Hyderabad) 
         - Japan Central (Osaka)
+        - UAE East (Dubai)
+        - UK South (London)
+        - US Midwest (Chicago)
+        
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
