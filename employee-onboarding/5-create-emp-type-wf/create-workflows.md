@@ -92,14 +92,14 @@ The inputs to the workflow will be the New Employee details. In workflow termino
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Value Required| Direction |
+  |Static ID | Label | Data Type | Required| Direction |
   |----------|-------|------------|---|----------|
   | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes | In   |
   | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  | In  |
   | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes | In  |
     {: title="List of Parameters to be Created"}
 
-    ![Add Parameter](./images/add-params2.png" ")
+    ![Add Parameter](./images/add-params2.png =50%x*)
 
 ## Task 4: Add Workflow Variables
 
@@ -152,7 +152,7 @@ In this task, you will create an activity for Employment Type as Full Time.
     - Identification > Name: **Trainings for Full-Time Employee**
 
     - Under Settings:
-        - Type: **PL/SQK Procedure or Function**
+        - Type: **PL/SQL Procedure or Function**
         - Procedure or Function: **ASSIGN\_EMPLOYEE\_TRAININGS**
 
    ![Create INVOKE API Activity](./images/create-api2.png " ")
@@ -169,13 +169,13 @@ In this task, you will create an activity for Employment Type as Full Time.
 
 5. Notice in the rendering tree, there are some fields marked in Red. This activity has two Parameters, highlighted in RED to show that they are required.
 
-6. Under **Trainings for Full-Time Employee** and select **p_employee_id** parameter. In the Property Editor, enter/select the following:
+6. Under **Trainings for Full-Time Employee** and select **p\_employee\_id** parameter. In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_ID**
 
    ![link parameter for Activity](./images/params1.png " ")
 
-7. Similarly, select **p_employee_type** parameter.In the Property Editor, enter/select the following:
+7. Similarly, select **p\_employee\_type** parameter.In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_TYPE**
 
@@ -188,7 +188,7 @@ In this task, you will create an activity for Employment Type as Full Time.
     - Identification > Name: **Trainings for Intern**
 
     - Under Settings:
-        - Type: **PL/SQK Procedure or Function**
+        - Type: **PL/SQL Procedure or Function**
         - Procedure or Function: **ASSIGN\_EMPLOYEE\_TRAININGS**
 
    ![Create INVOKE API Activity](./images/create-api4.png " ")
@@ -203,19 +203,21 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create connection for intern](./images/create-api5.png " ")
 
-3. Under **Trainings for Intern** and select **p_employee_id** parameter. In the Property Editor, enter/select the following:
+3. Under **Trainings for Intern** and select **p\_employee\_id** parameter. In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_ID**
 
    ![link parameter for Activity](./images/params3.png " ")
 
-4. Similarly, select **p_employee_type** parameter.In the Property Editor, enter/select the following:
+4. Similarly, select **p\_employee\_type** parameter.In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_TYPE**
 
    ![link parameter for Activity](./images/params4.png " ")
 
 ## Task 6: Create Activity to Assign Trainings
+
+In this task, you will create a Send Email Activity to send an email to the New Hire after completion of requiredtrainings.
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Trainings for Full-Time Employee** activity.
 
@@ -231,7 +233,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create activity to assign trainings](./images/assign-trainings4.png " ")
 
-3. Under the parameters tab, select Email and select the following in the property editor:
+3. Under the parameters tab, select **Email** and select the following in the property editor:
 
     - Under Value:
         - Type: **Item**

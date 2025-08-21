@@ -716,6 +716,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              Employee Name: &EMPLOYEE_NAME. <br>
              Training Status: &STATUS.
              </copy>
+            ```
 
         - Display Badge: Toggle **ON**
 

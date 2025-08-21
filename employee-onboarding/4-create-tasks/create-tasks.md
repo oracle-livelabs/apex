@@ -6,7 +6,7 @@ In this lab, you will define key Tasks using Oracle APEX’s Tasks Component to 
 
 These task definitions will later be integrated into a complete onboarding workflow.
 
-Estimated Time: 20 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -47,7 +47,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
     - Subject: **IT Setup Tasks for &EMPLOYEE_NAME.**
     - Priority: **2-High**
 
-    And click **Create**.
+    Click **Create**.
 
     ![Create Task Wizard](images/create-task2.png "")
 
@@ -98,7 +98,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
     ![Potential Owner](images/potential-owner1.png "")
 
-9. Under **Parameters**, add the below Parameters by clicking **Add Row**.
+9. Navigate to **Parameters** tab, and add the below Parameters by clicking **Add Row**.
 
     | Parameter Name     |   Label    |
     |--------------------|------------|
@@ -108,9 +108,9 @@ In this task, you will create a task definition for IT Setup and assign it to th
     | EMPLOYEE_NAME     | Employee Name  |
     {: title="List of Parameters to be added for the Task Definition"}
 
-  ![Add Task Parameters](./images/add-task-parameters1.png " ")
+    ![Add Task Parameters](./images/add-task-parameters1.png " ")
 
-10. Click Apply Changes.
+10. Click **Apply Changes**.
 
 ## Task 2: Create Task Definitions to Allocate Trainings
 
@@ -157,7 +157,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
     > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's id)._
 
-5. Now, navigate to **Participants**, and enter/select the following:
+5. Now, navigate to **Participants** tab, and enter/select the following:
 
     - Participant Type: **Potential Owner**
 
@@ -233,7 +233,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
              </copy>
             ```
 
-    And click **Create**.
+    Click **Create**.
 
     ![Create a Task Action](./images/send-email-action.png " ")
 
