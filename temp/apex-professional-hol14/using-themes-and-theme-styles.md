@@ -103,7 +103,7 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Click Customize in Developer Toolbar](images1/temp-img7.png " ")
 
-8. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Redwood Light (My Theme)** and click **Apply Changes**.
+8. Users can specify their Theme Style while running the application using the customize dialogue. Select the Theme Style **Use Application Default Style** and click **Apply Changes**.
 
     ![Click Customize in Developer Toolbar](images1/temp-img8.png " ")
 
