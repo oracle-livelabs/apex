@@ -29,9 +29,9 @@ Estimated Time: 20 minutes
 
 - All the previous Labs have been completed.
 
-## Task 1: Create the New Employee Page
+## Task 1: Create a New Employee Onboarding Page
 
-Now that the Workflow is created, let us create the page that HR will use to onboard a new employee.
+Now that the Workflow is created, let us create a page that HR will use to Onboard a New Employee.
 
 1. Navigate to **Application ID <number>**.
 
@@ -126,7 +126,15 @@ Now that the Workflow is created, let us create the page that HR will use to onb
 
     ![Hide page item](./images/edit-page-items.png " ")
 
-14. Click **Save**.
+14. Select **P8\_DEPARTMENT\_ID** and in the property editor, select the Identification > Name: **Department**
+
+    ![Edit Department ID page item](./images/edit-dept.png " ")
+
+15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, select the Label > Label: **Department**
+
+    ![Edit Manager ID page item](./images/edit-mang.png " ")
+
+16. Click **Save**.
 
     ![Save page](./images/save-page.png " ")
 
