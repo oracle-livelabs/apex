@@ -291,9 +291,9 @@ In this task, you will recreate the previously created  employees in the Applica
 
 1. Check the inbox of the New Hire's email for two emails.
 
-   ![Congralutions email](./images/email1.png " ")
-
    ![Congralutions email](./images/email2.png " ")
+
+   ![Congralutions email](./images/email1.png " ")
 
 ## Summary
 
