@@ -25,15 +25,15 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
   ![SQL Scripts](images/sql-scripts.png "")
 
-3. Click the **Create** button.
+3. Click **Create**.
 
   ![Create a SQL Script](images/create-script.png "")
 
 4. In the Script Editor, enter the following:
 
-    Name:  **Employee Onboarding Database objects**
+    - Script Name:  **Employee Onboarding Database objects**
 
-    Script: Copy and paste the following in the code editor:
+    - Script: Copy and paste the following in the code editor:
 
     ```
     <copy>
@@ -192,7 +192,7 @@ In this task you will use SQL Scripts to quickly load and execute the required d
     </copy>
     ```
 
-  and click **Run**.
+    Click **Run**.
 
   ![Create a SQL Script 2](images/script-sql-run.png "")
 
