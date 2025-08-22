@@ -22,9 +22,11 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 1: Load Sample Data and Create APEX Application
 
-1. In your APEX Workspace, click App Builder and Click Create. Here we can Select Create App From a File  ***Add Screenshot***
+1. In your APEX Workspace, click App Builder and Click Create. Here we can Select Create App From a File . 
+    ![Create A NewApp](./images/createANewApp.png  "")
 
-2. Here we will load in our data. Click the select file option and select the correct file from your file browser. 
+2. Here we will load in our data. Download the [sample](./datasets/movies_sample.csv) data. Click the select file option and select the correct file from your file browser. 
+    ![Drag Drop](./images/dragDrop.png  "")
 
 3. Give this table a name, Movies, and click Load Data
     ![Data Load](./images/dataLoad.png  "")
