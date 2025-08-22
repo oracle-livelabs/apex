@@ -23,7 +23,7 @@ In this lab, you will learn how to:
 
 - Improve the Navigation Menu to provide easy access to tasks and workflows.
 
-Estimated Time: 20 minutes
+Estimated Time: 40 minutes
 
 ### Prerequisites
 
@@ -834,7 +834,7 @@ Finally, we need the page that the HR will use to monitor the employee onboardin
 
 We use the Workflow Console and Details pages with **Initiated By Me** report context, which allows a logged-in user to view all Workflows Initiated by him or her.
 
-> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from. 
+> **Note:** The Workflow Console allows workspace users to view and manage their workflow instances, including My Workflows for workflow owners, Admin Workflows for workflow administrators, and Initiated by Me for workflow initiators. When configuring the Workflow Console, you have different Report Contexts to choose from.
 
 1. To create the Workflow Console and Details pages, click **+ (Plus) Icon** on the right-above corner of the page designer. Then, select **Page** from the drop-down, select **Create Page**.
 

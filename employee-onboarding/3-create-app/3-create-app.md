@@ -243,7 +243,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![ training type edit](images/training-type.png "")
 
-20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE_** and enter/select the following in the property editor:
+20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the property editor:
 
     - Identification > Type: **Select One**
 
