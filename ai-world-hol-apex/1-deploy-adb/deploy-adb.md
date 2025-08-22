@@ -25,6 +25,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. Navigate to the OCI home console and expand the side-menu bar. 
 
 2. Select the Oracle Database and click the Autonomous Database Option. 
+    ![OracleDB Autonomous](./images/oracleDBAutonomous.png  "")
 
 3. Select your desired compartment and select Create Autonomous Database.  
 
@@ -33,9 +34,11 @@ Basic experience with OCI Cloud Console and standard components.
 ## Task 2: Create APEX Workspace on your ADB
 
 1. Once your ADB has been provisioned, you can select Tool Configuration and copy your Public Access URL under Oracle APEX. Open this URL in a new tab. 
-    ![ADB Tool COnfiguration](./images/adbToolConfiguration.png  "")
+    ![ADB Tool Configuration](./images/adbToolConfiguration.png  "")
 
 2. Here you will enter your admin password from you ADB to access APEX Administration Services.
+    ![Click Admin Services](./images/clickAdminServices.png  "")
+    
     ![Workspace Login](./images/workspaceLogin.png  "")
 
 3. You will be greeted with a welcome to APEX page and you can select Create Workspace. A workspace in APEX is simply a protected area within an APEX environment where developers and users can create and manage APEX applications or interact with the underlying database. Here you will select whether you would like a New Schema for your workspace, or to use an existing Schema in your ADB. In this case, we will select New Schema.

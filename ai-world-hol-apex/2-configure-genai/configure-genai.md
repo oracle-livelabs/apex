@@ -32,13 +32,18 @@ Basic experience with OCI Cloud Console and standard components.
 4. Next, select Tokens and Keys tab along the top bar.
     ![Tokens and Keys](./images/tokensAndKeys.png  "")
 
-5. Select Add API Key and select Generate API key pair, ensure you Download Private Key before adding.***FIX***
+5. Select Add API Key and select Generate API key pair, ensure you Download Public and Private Key. Then, the Add buton wil be enabled and then click 'Add'
+    ![Add API Key](./images/addAPIKey.png  "")
+
+    ![Add API Key](./images/downloadAPIKey.png  "")
 
 6. You can then copy the Fingerprint 
 
 7. Now click on your user in the top right again, this time select your tenancy. 
 
 8. Copy down your Tenancy OCID.
+    ![Tenancy Select](./images/tenancy.png  "")
+
     ![Tenancy OCID](./images/tenancyOCID.png  "")
 
 ## Task 2: Configure Web Credntials & Generative AI in your APEX Workspace
@@ -50,6 +55,8 @@ Basic experience with OCI Cloud Console and standard components.
 
 3. Now select Web Credentials and click Create.
     ![Web Credentials](./images/webCredentials.png  "")
+
+    ![Web Credentials Create](./images/webcredentialsCreate.png  "")
 
 4. From the drop down for 'Authentication Type' select *OCI Native Authentication*. Give your Credentials a name. Then we will use the data we copied from our tenancy in previous steps. Enter your
 
@@ -67,9 +74,16 @@ Then click Create
 5. With our Web Credential created, return to Workspace Utilities and select Generative AI. Here we will click Create.
     ![Generative AI](./images/generativeAI.png  "")
 
+    ![Generative AI Create](./images/generativeAICreate.png  "")
+
 6. Select OCI Generative AI Service as the AI Provider. Then enter a name for your Generative AI Configuration. Next you can copy in the Compartment ID from above and select the appropriate region. There will be a default model, or you can choose another from this list. Ensure the model is available in the region you select.
 
-[Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available 
+[Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available.
+
+aiProviderOCIGenAIService
+
+    ![AIProvider OCIGenAIService](./images/aiProviderOCIGenAIService.png  "")
+
     ![AI Credential](./images/aiCredential.png  "")
 
 7. Enable the Used by App Builder setting if you would like to add a Generative AI option in the Create Application Wizard and include Generative AI support (APEX Assistant) in all APEX Code Editors. Only one Generative AI Service at a time can be configured with the Used by App Builder setting enabled. 
