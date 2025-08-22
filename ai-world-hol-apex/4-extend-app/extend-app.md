@@ -1,4 +1,4 @@
-# Extend your APEX App with Grok Models.
+# Extend your APEX App with Llama or Grok Models.
 
 ##  Introduction
 In this lab, we’ll enhance the GenAI assistant experience by exploring how to switch between different OCI Generative AI models.  
@@ -6,7 +6,7 @@ Different models may perform better depending on your application’s domain —
 
 ###  Objectives
 By the end of this lab, you will:
-- Learn how to utilize additional LLMs (like Grok) within your APEX App.
+- Learn how to utilize additional LLMs (like Llama or Grok) within your APEX App.
 
 ###  Prerequisites
 This lab assumes you have:
@@ -15,50 +15,92 @@ This lab assumes you have:
 
 ---
 
-## Task 1: Try out Grok Models or other LLMs in your APEX Application 
+## Task 1: Try out Meta Llama Model in your APEX Application 
 
-### Step 1: Explore Available Models
+### Step 1: Explore Available Models to use llama Model
 1. Open the documentation for pretrained models:  
    [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
-   - ![Step1-Models](images/step1-models.png)
+
+   - ![Metal Llama Models](./images/MetaLlama4.png)
 
 2. Browse through the list of available models and note the **Model ID** you want to test.  
-   Example:  xai.grok-4
+   Example:  *meta.llama-4-maverick-17b-128e-instruct-fp8*
 
+   [Meta Llama 4 Maverick Model](https://docs.oracle.com/en-us/iaas/Content/generative-ai/meta-llama-4-maverick.htm#meta.llama-4-maverick:~:text=Model%20Name-,OCI%20Model%20Name,-Pricing%20Page%20Product)
 
 ---
 
 ### Step 2: Update Your APEX Application
-1. Return to your **APEX Workspace**, go to **App Builder**, and open your existing application.  
-- ![Step2-AppBuilder](images/step2-appbuilder.png)
+1. Return to your APEX Workspace, open Workspace Utilities and select Generative AI. Open the Gen AI Service already created.
+   ![Generative AI](./images/workspaceGenAI.png  "") 
 
-2. On the top menu, select:  
-- **Shared Components → AI Configurations**  
-- ![Step2-AIConfig](images/step2-aiconfig.png)
+2. In the ModelID field, replace the old model id with the new one (e.g.)  *meta.llama-4-maverick-17b-128e-instruct-fp8*
+   ![Update Model](./images/updateModel.png  "") and test the connection
 
-3. Select your **existing AI configuration**.
-
-4. In the **Model ID** field, replace the current value with the one you copied (e.g., `xai.grok-4`).  
-- ![Step2-ModelID](images/step2-modelid.png)
-
-5. Click **Apply Changes** to save.  
+3. Click Apply Changes to save.  
 
 ---
 
 ### Step 3: Run and Compare
-1. Return to your application in **App Builder**.  
-2. Click **Run Application**.  
-- ![Step3-RunApp](images/step3-runapp.png)
+1. Return to your application in App Builder and select the Movie app.
 
-3. Interact with the assistant and observe how it responds.  
+2. Click Run Application.  
+
+3. Interact with the assistant and observe how it responds. Try the same prompt, which you tried in the previous lab and compare the results.:
+   - *I’m in a nostalgic mood and want something heartwarming.*  
+
+   ![Llama Results](./images/cohereVsLlama.png  "") 
+
+   You can also try other questions and see how the new model responds back 
+
+   - *I’m feeling adventurous and need something thrilling!*  
+
+    ![Llama Results](./images/llamaResults2.png  "")           
+
 
 Try switching between two models — note differences in:
 - **Tone** (formal vs casual)  
 - **Detail level** (short vs comprehensive)  
 - **Response speed**  
 
-You’ve successfully **extended your APEX app** by experimenting with **different LLMs (like Grok)**.  
-This approach allows you to **fine-tune the assistant experience** based on different model selection.
+
+## Task 2: Try out Grok Model in your APEX Application 
+
+### Step 1: Explore Available Models to use Grok Model
+1. Open the documentation for pretrained models:  
+   [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
+
+   - ![Grok Models](./images/grok3.png)   
+
+2. Browse through the list of available models and note the **Model ID** you want to test.  
+   Example:  *xai.grok-3*
+
+   [xai.grok-3 Model](https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3.htm#:~:text=Model%20Name-,OCI%20Model%20Name,-Pricing%20Page%20Product)
+
+### Step 1: Update Your APEX Application to use Grok Model
+1. Return to your APEX Workspace, open Workspace Utilities and select Generative AI. Open the Gen AI Service already created.
+   ![Generative AI](./images/workspaceGenAI.png  "") 
+
+2. In the ModelID field, replace the old model id with the new Grok model (e.g.)  *xai.grok-3*
+   ![Update Model Grok](./images/updateModelGrok.png  "") and test the connection
+
+   *Note: For Grok models are on demand only. (pay-as-you-go usage)*
+
+3. Click Apply Changes to save.  
+
+
+### Step 2: Run and test Grok Model
+1. Return to your application in App Builder and select the Movie app.
+
+2. Click Run Application.  
+
+3. Interact with the assistant and observe how it responds. Try the same prompt, which you tried in the previous lab and compare the results.:
+   - *I’m in a nostalgic mood and want something heartwarming.*  
+
+   ![Llama Results](./images/grokResults.png  "") 
+
+You’ve successfully extended your APEX app by experimenting with **different LLMs (like Llama and Grok)**.  
+This approach allows you to fine-tune the assistant experience based on different model selection.
 
 ---
 

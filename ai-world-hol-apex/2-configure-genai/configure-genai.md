@@ -39,10 +39,20 @@ Basic experience with OCI Cloud Console and standard components.
 
 6. You can then copy the Fingerprint 
 
-7. Now click on your user in the top right again, this time select your tenancy. 
+7. Now click Compartments on the left and select your compartment. 
 
-8. Copy down your Tenancy OCID.
+    ![Compartment Select](./images/selectCompartment.png  "")
+
+    ![View Compartment Details](./images/viewCompartmentDetails.png  "")
+
+8. Copy down your Compartment OCID.
+
+    ![Copy Compartment OCID](./images/copyCompartmentOCID.png  "")
+
+9. Now click on your user in the top right again, this time select your tenancy. 
+
     ![Tenancy Select](./images/tenancy.png  "")
+10. Copy down your Tenancy OCID.
 
     ![Tenancy OCID](./images/tenancyOCID.png  "")
 
@@ -60,27 +70,26 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. From the drop down for 'Authentication Type' select *OCI Native Authentication*. Give your Credentials a name. Then we will use the data we copied from our tenancy in previous steps. Enter your
 
-OCI User ID (User OCID), 
-OCI Private Key (downloaded), 
-**Note: To enter your Private Key, open the downloaded private key and copy it.**
-OCI Tenancy ID (Tenancy OCID) and 
-OCI Public Key Fingerprint. 
+    OCI User ID (User OCID),  
+    OCI Private Key (downloaded),  
+    *Note: Open the downloaded OCI private key file (`vi` on macOS or Notepad on Windows), copy its contents, and paste in below screen*.  
+    OCI Tenancy ID (Tenancy OCID) and  
+    OCI Public Key Fingerprint.  
 
 
-Then click Create
+    Then click Create
 
-    ![Credential Details](./images/credentialDetails.png  "")
+   ![Credential Details](./images/credentialDetails.png  "")
 
 5. With our Web Credential created, return to Workspace Utilities and select Generative AI. Here we will click Create.
-    ![Generative AI](./images/generativeAI.png  "")
+   ![Generative AI](./images/generativeAI.png  "")
 
-    ![Generative AI Create](./images/generativeAICreate.png  "")
+   ![Generative AI Create](./images/generativeAICreate.png  "")
 
 6. Select OCI Generative AI Service as the AI Provider. Then enter a name for your Generative AI Configuration. Next you can copy in the Compartment ID from above and select the appropriate region. There will be a default model, or you can choose another from this list. Ensure the model is available in the region you select.
 
-[Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available.
+    [Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available.
 
-aiProviderOCIGenAIService
 
     ![AIProvider OCIGenAIService](./images/aiProviderOCIGenAIService.png  "")
 

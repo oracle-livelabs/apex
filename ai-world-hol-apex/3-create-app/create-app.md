@@ -46,24 +46,43 @@ Basic experience with OCI Cloud Console and standard components.
 
 ## Task 2: Create GenAI Chatbot in your Application
 
-1. To enhance the experience for finding movies, we will utilize the OCI GenAI connection we made earlier. Return to the App Builder and select Shared Components.
+1. To enhance the experience for finding movies, we will utilize the OCI GenAI connection we made earlier. Return to the App Builder and select the newly created app and select Shared Components.
+    ![App builder App](./images/appBuilderApp.png  "")
+    ![Shared Components](./images/appSharedComponents.png  "")    
 
-2. In the lower left, select AI Configurations under the Generative AI Section. Click Create. Here we will enter a name for the configuration and select our Credential from Lab 2 from the Service drop down. ***May need to break this into two steps and add additional screenshot***
+2. In the lower left, select AI Configurations under the Generative AI Section. Click Create. Here we will enter a name for the configuration and select our Credential from Lab 2 from the Service drop down. 
+    ![AI Configuration ](./images/aiConfigurations.png  "")
+    ![AI Configuration - Create](./images/aiConfigurationsCreate.png  "")
+    ![AI Configuration - Name Service](./images/aiConfigurationsNameService.png  "")
+
+3. In the System Prompt field, enter a prompt for our GenAI configuration so it know what to do 
+    ```
+    You are an expert in movies and films. Use the data in the MOVIES table to inform your responses and make suggestions.
+    ```
+
     ![AI Configuration](./images/aiConfiguration.png  "")
 
-3. In the System Prompt field, enter a prompt for our GenAI configuration so it know what to do “You are an expert in movies and films. Use the data in the MOVIES table to inform your responses and make suggestions.” (see above image)
+4. Enter a welcome message to greet users when they begin a conversation with our AI. Click Create
+    ```
+    Hello and welcome to MovieApp! I am your personal AI movie assistant.
 
-4. Enter a welcome message to greet users when they begin a conversation with our AI. 
+    ```
+    ![AI Configuration](./images/welcomeMessage.png  "")    
 
-5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter SELECT * FROM MOVIES. Click Create in the top right 
-    ![RAG Sources](./images/ragSources.png  "")
+5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter
+    ```
+    SELECT * FROM MOVIES
+    ```
+    Click "Create" in the top right and then click "Apply Changes"
+    ![RAG Sources](./images/createRAG.png  "")
     ![RAG Source Details](./images/ragSourceDetails.png  "")
 
-6. Return to App Builder and select Page 1 – Home. On the left side, known as the rendering tree, right click on Page Navigation and select Create Region Below. Now drag this newly created region above the Page Navigation Region. We will use this region to give users a quick understanding of the application, as well as a location to launch our AI Assistant. ***MAY NEED BETTER SCREENSHOT***
+6. Return to App Builder and select Page 1 – Home. On the left side, known as the rendering tree, right click on Page Navigation and select Create Region Below. Now drag this newly created region above the Page Navigation Region. We will use this region to give users a quick understanding of the application, as well as a location to launch our AI Assistant.
+    ![Create Region Below](./images/createRegionBelow.png  "")
     ![New Region](./images/newRegion.png  "")
 
 7. With our New Region selected on the left side, navigate to the right side of your screen for this selected region.  Enter a title, 'Welcome to the APEX Movie DB' and a Name for the region, 'Welcome'. Now we will enter a short message in the HTML source code to give users an understanding of the application:  
-
+    
     “&lt;h3&gt;Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies&lt;/h3&gt; 
 
     &lt;h3&gt;To enhance your experience, try our AI Movie Assistant by clicking below&lt;/h3&gt;”
@@ -71,12 +90,16 @@ Basic experience with OCI Cloud Console and standard components.
 
 8. To clean up the UI we can delete the Movie region from the Breadcrumb Bar on the Rendering tree, right click on the region and select Delete.
 
+    ![Delete BreadCrumb Region](./images/deleteBreadCrumbRegion.png  "")    
+
 9. Now click the green play button in the top right to save and run your application to see your changes.
+
+    ![App Page](./images/appPage.png  "")   
 
 10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button. 
     ![New Button](./images/newButton.png  "")
 
-Click on the newly created button, and navigate to the right side of the screen. Here we will give the button a name, Launch_AI_Assistant. Next, scroll down the right side and on the Button Template attribute, select Text with Icon from the drop down. In the Icon attribute below, enter fa-ai-generative, this will give a small icon next our text. On the Layout Section, Select Below Region for the Slot attribute, and align it to the left side. ***Need Better Screenshots HERE***
+Click on the newly created button, and navigate to the right side of the screen. Here we will give the button a name, _Launch_AI_Assistant_. Next, scroll down the right side and on the Button Template attribute, select Text with Icon from the drop down. In the Icon attribute below, enter _fa-ai-generative_, this will give a small icon next our text. On the Layout Section, Select _Below Region_ for the _Slot_ attribute, and align it to the left side.
     ![Button Details](./images/buttonDetails.png  "")
 
 11. Scroll down to the Behavior section and on the action attribute, select Defined by Dynamic Action from the drop down. Dynamic Actions allow developers to take actions or function-like execution using a variety of custom or prebuilt actions.
@@ -89,9 +112,18 @@ Click on the newly created button, and navigate to the right side of the screen.
 13. Now click on the True action from the rendering tree under our Dynamic Action. This is where we will select what action to take when the above When Criteria is met (in this case, clicking the button). 
     ![True Action](./images/trueAction.png  "")
 On the right side Action attribute, select Show AI Assistant. Now select our Configuration from the drop down.
+    ![Show AI Assistant](./images/showAIAssistant.png  "")
     ![GenAI Action](./images/genAIAction.png  "")
 
-14. You can save and run the Application, then click on the new button and test out the AI Assistant ***ADD RESULTS SCREENSHOT OR VIDEO***
+14. You can save and run the Application, then click on the new button and test out the AI Assistant. Try prompts like:
+   - *I’m in a nostalgic mood and want something heartwarming.*  
+   - *I’m feeling adventurous and need something thrilling!*  
+
+    ![GenAI Action](./images/results.png  "")           
+
+    You can validate the values from the original source files 
+    ![Source Data Search1](./images/nostalgic.png  "")
+    ![Source Data Search2](./images/heartwarming.png  "")
 
 You have successfully created your application and created a dynamic action to launch your GenAI Chatbot to interact with your the data in your Autonomous Database. You may proceed to the next lab.
 
