@@ -21,7 +21,7 @@ This lab assumes you have:
 1. Open the documentation for pretrained models:  
    [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
-   - ![Metal Llama Models](./images/MetaLlama4.png)
+   ![Metal Llama Models](./images/MetaLlama4.png)
 
 2. Browse through the list of available models and note the **Model ID** you want to test.  
    Example:  *meta.llama-4-maverick-17b-128e-instruct-fp8*
@@ -70,7 +70,7 @@ Try switching between two models — note differences in:
 1. Open the documentation for pretrained models:  
    [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
-   - ![Grok Models](./images/grok3.png)   
+   ![Grok Models](./images/grok3.png)   
 
 2. Browse through the list of available models and note the **Model ID** you want to test.  
    Example:  *xai.grok-3*

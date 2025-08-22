@@ -53,7 +53,7 @@ Basic experience with OCI Cloud Console and standard components.
 6. Once logged in, you will land on the APEX home page where we can select App Builder to begin working on our applications. Move on to Lab 2 where will configure GenAI.
     ![APEX Home Page](./images/apexHomePage.png  "")
 
-You may proceed to the next lab.
+You may now **proceed to the next lab**
 
 ## Acknowledgements
 

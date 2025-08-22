@@ -127,7 +127,7 @@ On the right side Action attribute, select Show AI Assistant. Now select our Con
     ![Source Data Search1](./images/nostalgic.png  "")
     ![Source Data Search2](./images/heartwarming.png  "")
 
-You have successfully created your application and created a dynamic action to launch your GenAI Chatbot to interact with your the data in your Autonomous Database. You may proceed to the next lab.
+You have successfully created your application and created a dynamic action to launch your GenAI Chatbot to interact with your the data in your Autonomous Database. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

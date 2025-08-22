@@ -99,7 +99,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 8. Now click Test Connection to ensure it works. With a success, click Create.
 
-You have successfully created your web credential and utilized it to create your Generative AI configuration. You may proceed to the next lab.
+You have successfully created your web credential and utilized it to create your Generative AI configuration. You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
