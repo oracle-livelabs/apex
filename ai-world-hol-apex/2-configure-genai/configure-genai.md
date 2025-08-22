@@ -51,13 +51,25 @@ Basic experience with OCI Cloud Console and standard components.
 3. Now select Web Credentials and click Create.
     ![Web Credentials](./images/webCredentials.png  "")
 
-4. From the drop down for Authentication Type select OCI Native Authentication. Give your Credentials a name. Then we will use the data we copied from our tenancy in previous steps. Enter your OCI User ID (User OCID), OCI Private Key (downloaded), OCI Tenancy ID (Tenancy OCID), and your OCI Public Key Fingerprint. To enter your Private Key, open the downloaded key and copy it. Then click Create
+4. From the drop down for 'Authentication Type' select *OCI Native Authentication*. Give your Credentials a name. Then we will use the data we copied from our tenancy in previous steps. Enter your
+
+OCI User ID (User OCID), 
+OCI Private Key (downloaded), 
+**Note: To enter your Private Key, open the downloaded private key and copy it.**
+OCI Tenancy ID (Tenancy OCID) and 
+OCI Public Key Fingerprint. 
+
+
+Then click Create
+
     ![Credential Details](./images/credentialDetails.png  "")
 
 5. With our Web Credential created, return to Workspace Utilities and select Generative AI. Here we will click Create.
     ![Generative AI](./images/generativeAI.png  "")
 
 6. Select OCI Generative AI Service as the AI Provider. Then enter a name for your Generative AI Configuration. Next you can copy in the Compartment ID from above and select the appropriate region. There will be a default model, or you can choose another from this list. Ensure the model is available in the region you select.
+
+[Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available 
     ![AI Credential](./images/aiCredential.png  "")
 
 7. Enable the Used by App Builder setting if you would like to add a Generative AI option in the Create Application Wizard and include Generative AI support (APEX Assistant) in all APEX Code Editors. Only one Generative AI Service at a time can be configured with the Used by App Builder setting enabled. 
