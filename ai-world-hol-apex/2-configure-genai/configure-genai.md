@@ -24,7 +24,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. Navigate to the OCI Cloud Console. Open the Menu in the top left corner and select Identity & Security. Under Identity, select Compartments. Copy the OCID for the compartment you wish to use. 
 
 2. Now click on the top right user icon and select your user (xxx.xxx@xxx.com)
-    ![OCI Profile](./images/ociProfile.png  "")
+    ![OCI Profile](./images/ociProfile.png  "OCI Profile Page")
 
 3. Copy down your user OCID
     ![User OCID](./images/userOCID.png  "")
