@@ -76,7 +76,7 @@ Basic experience with OCI Cloud Console and standard components.
     SELECT * FROM MOVIES
     ```
     Click "Create" in the top right and then click "Apply Changes"
-    ![RAG Sources](./images/createRAG.png  "")
+    ![RAG Sources](./images/create_rag.png  "")
     ![RAG Source Details](./images/rag_source_details.png  "")
 
 6. Return to App Builder and select Page 1 – Home. On the left side, known as the rendering tree, right click on Page Navigation and select Create Region Below. Now drag this newly created region above the Page Navigation Region. We will use this region to give users a quick understanding of the application, as well as a location to launch our AI Assistant.
