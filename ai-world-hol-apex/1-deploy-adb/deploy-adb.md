@@ -4,7 +4,11 @@
 
 In this Lab we will walk through process of deploying a 23ai Autonomous Database and creating an APEX workspace to start developing applications.
 
-***Add more on APEX workspace???***
+An APEX workspace is a secure, private area within the Oracle APEX environment where developers and users can create and manage applications on top of your database. Each workspace can have its own schemas, users, and applications, allowing you to organize development projects, control access, and maintain separation between different teams or projects.
+
+By the end of this lab, you’ll have a fully configured workspace connected to your Autonomous Database, ready to start building low-code applications enriched with data and ready for Generative AI integration.
+
+Estimated Time: 15–20 minutes
 
 ### Objectives
 

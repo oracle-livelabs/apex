@@ -4,6 +4,10 @@
 In this lab, we’ll enhance the GenAI assistant experience by exploring how to switch between different OCI Generative AI models.  
 Different models may perform better depending on your application’s domain — testing them helps you deliver the best user experience.
 
+By the end of this lab, users will have learned how to extend their APEX application by integrating and experimenting with different Generative AI models, such as Llama and Grok. 
+
+Estimated Time: Approximately 15–20 minutes.
+
 ###  Objectives
 By the end of this lab, you will:
 - Learn how to utilize additional LLMs (like Llama or Grok) within your APEX App.

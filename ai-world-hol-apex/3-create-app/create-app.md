@@ -4,6 +4,10 @@
 
 In this Lab we will import sample data into our Autonomous Database, create a simple APEX application on the data, and then add GenAI Chatbot into our application. If you have existing data in your Oracle Database, this is a great opportunity to quickly build a powerful application on top of it.
 
+By the end of this lab, users will understand how to upload data into the app, be able to create a functional APEX application, and integrate a GenAI Chatbot to interact with their data dynamically.
+
+Estimated Time: 40–45 minutes
+
 ### Objectives
 
 In this lab, you will:

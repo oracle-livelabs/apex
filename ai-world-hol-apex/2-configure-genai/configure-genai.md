@@ -4,6 +4,10 @@
 
 In this Lab we will walk through process of configuring your OCI tenancy and APEX workspace to utilize GenAI. Both the Web Credential and GenAI configuration we create in your APEX Workspace will be available across any APEX application you create in your workspace. 
 
+By the end of this lab, you will understand how to gather OCI tenancy information, configure a Web Credential in APEX and create a Generative AI configuration.
+
+Estimated Time: 20–30 minutes
+
 ### Objectives
 
 In this lab, you will:
