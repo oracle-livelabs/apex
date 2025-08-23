@@ -23,50 +23,50 @@ Basic experience with OCI Cloud Console and standard components.
 
 1. Navigate to the OCI Cloud Console. Open the Menu in the top left corner and select Identity & Security. Under Identity, select Compartments. Copy the OCID for the compartment you wish to use. 
 
-2. Now click on the top right user icon and select your user (xxx.xxx@xxx.com)
-    ![OCI Profile](./images/ociProfile.png  "OCI Profile Page")
+2. Now click on the top right user icon and select your user (xxxx.xxxx@xxxx.com)
+    ![OCI Profile](./images/oci_profile.png  "OCI Profile Page")
 
 3. Copy down your user OCID
-    ![User OCID](./images/userOCID.png  "")
+    ![User OCID](./images/user_ocid.png  "")
 
 4. Next, select Tokens and Keys tab along the top bar.
-    ![Tokens and Keys](./images/tokensAndKeys.png  "")
+    ![Tokens and Keys](./images/tokens_and_keys.png  "")
 
 5. Select Add API Key and select Generate API key pair, ensure you Download Public and Private Key. Then, the Add buton wil be enabled and then click 'Add'
-    ![Add API Key](./images/addAPIKey.png  "")
+    ![Add API Key](./images/add_api_key.png  "")
 
-    ![Add API Key](./images/downloadAPIKey.png  "")
+    ![Add API Key](./images/download_api_key.png  "")
 
 6. You can then copy the Fingerprint 
 
 7. Now click Compartments on the left and select your compartment. 
 
-    ![Compartment Select](./images/selectCompartment.png  "")
+    ![Compartment Select](./images/select_compartment.png  "")
 
-    ![View Compartment Details](./images/viewCompartmentDetails.png  "")
+    ![View Compartment Details](./images/view_compartment_details.png  "")
 
 8. Copy down your Compartment OCID.
 
-    ![Copy Compartment OCID](./images/copyCompartmentOCID.png  "")
+    ![Copy Compartment OCID](./images/copy_compartment_ocid.png  "")
 
 9. Now click on your user in the top right again, this time select your tenancy. 
 
     ![Tenancy Select](./images/tenancy.png  "")
 10. Copy down your Tenancy OCID.
 
-    ![Tenancy OCID](./images/tenancyOCID.png  "")
+    ![Tenancy OCID](./images/tenancy_ocid.png  "")
 
 ## Task 2: Configure Web Credntials & Generative AI in your APEX Workspace
 
 1. Now we have all necessary information from your tenancy, you can return to your APEX workspace, if you don’t already have it open. Return to your Autonomous Database, go to Tool Configuration, and open your APEX URL. 
 
 2. Once back in your APEX workspace. Select App Builder, and click Workspace Utilities
-    ![Workspace Utilities](./images/workspaceUtilities.png  "")
+    ![Workspace Utilities](./images/workspace_utilities.png  "")
 
 3. Now select Web Credentials and click Create.
-    ![Web Credentials](./images/webCredentials.png  "")
+    ![Web Credentials](./images/web_credentials.png  "")
 
-    ![Web Credentials Create](./images/webcredentialsCreate.png  "")
+    ![Web Credentials Create](./images/webcredentials_create.png  "")
 
 4. From the drop down for 'Authentication Type' select *OCI Native Authentication*. Give your Credentials a name. Then we will use the data we copied from our tenancy in previous steps. Enter your
 
@@ -79,21 +79,21 @@ Basic experience with OCI Cloud Console and standard components.
 
     Then click Create
 
-   ![Credential Details](./images/credentialDetails.png  "")
+   ![Credential Details](./images/credential_details.png  "")
 
 5. With our Web Credential created, return to Workspace Utilities and select Generative AI. Here we will click Create.
-   ![Generative AI](./images/generativeAI.png  "")
+   ![Generative AI](./images/generative_ai.png  "")
 
-   ![Generative AI Create](./images/generativeAICreate.png  "")
+   ![Generative AI Create](./images/generative_ai_create.png  "")
 
 6. Select OCI Generative AI Service as the AI Provider. Then enter a name for your Generative AI Configuration. Next you can copy in the Compartment ID from above and select the appropriate region. There will be a default model, or you can choose another from this list. Ensure the model is available in the region you select.
 
     [Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrined models available.
 
 
-    ![AIProvider OCIGenAIService](./images/aiProviderOCIGenAIService.png  "")
+    ![AIProvider OCIGenAIService](./images/ai_provider_oci_gen_ai_service.png  "")
 
-    ![AI Credential](./images/aiCredential.png  "")
+    ![AI Credential](./images/ai_credential.png  "")
 
 7. Enable the Used by App Builder setting if you would like to add a Generative AI option in the Create Application Wizard and include Generative AI support (APEX Assistant) in all APEX Code Editors. Only one Generative AI Service at a time can be configured with the Used by App Builder setting enabled. 
 

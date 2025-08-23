@@ -21,7 +21,7 @@ This lab assumes you have:
 1. Open the documentation for pretrained models:  
    [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
-   ![Metal Llama Models](./images/MetaLlama4.png)
+   ![Metal Llama Models](./images/meta_llama4.png "")
 
 2. Browse through the list of available models and note the **Model ID** you want to test.  
    Example:  *meta.llama-4-maverick-17b-128e-instruct-fp8*
@@ -32,10 +32,10 @@ This lab assumes you have:
 
 ### Step 2: Update Your APEX Application
 1. Return to your APEX Workspace, open Workspace Utilities and select Generative AI. Open the Gen AI Service already created.
-   ![Generative AI](./images/workspaceGenAI.png  "") 
+   ![Generative AI](./images/workspace_gen_ai.png  "") 
 
 2. In the ModelID field, replace the old model id with the new one (e.g.)  *meta.llama-4-maverick-17b-128e-instruct-fp8*
-   ![Update Model](./images/updateModel.png  "") and test the connection
+   ![Update Model](./images/update_model.png  "") and test the connection
 
 3. Click Apply Changes to save.  
 
@@ -49,13 +49,13 @@ This lab assumes you have:
 3. Interact with the assistant and observe how it responds. Try the same prompt, which you tried in the previous lab and compare the results.:
    - *I’m in a nostalgic mood and want something heartwarming.*  
 
-   ![Llama Results](./images/cohereVsLlama.png  "") 
+   ![Llama Results](./images/cohere_vs_llama.png  "") 
 
    You can also try other questions and see how the new model responds back 
 
    - *I’m feeling adventurous and need something thrilling!*  
 
-    ![Llama Results](./images/llamaResults2.png  "")           
+    ![Llama Results](./images/llama_results2.png  "")           
 
 
 Try switching between two models — note differences in:
@@ -79,10 +79,10 @@ Try switching between two models — note differences in:
 
 ### Step 1: Update Your APEX Application to use Grok Model
 1. Return to your APEX Workspace, open Workspace Utilities and select Generative AI. Open the Gen AI Service already created.
-   ![Generative AI](./images/workspaceGenAI.png  "") 
+   ![Generative AI](./images/workspace_gen_ai.png  "") 
 
 2. In the ModelID field, replace the old model id with the new Grok model (e.g.)  *xai.grok-3*
-   ![Update Model Grok](./images/updateModelGrok.png  "") and test the connection
+   ![Update Model Grok](./images/update_model_grok.png  "") and test the connection
 
    *Note: For Grok models are on demand only. (pay-as-you-go usage)*
 
@@ -97,7 +97,7 @@ Try switching between two models — note differences in:
 3. Interact with the assistant and observe how it responds. Try the same prompt, which you tried in the previous lab and compare the results.:
    - *I’m in a nostalgic mood and want something heartwarming.*  
 
-   ![Llama Results](./images/grokResults.png  "") 
+   ![Llama Results](./images/grok_results.png  "") 
 
 You’ve successfully extended your APEX app by experimenting with **different LLMs (like Llama and Grok)**.  
 This approach allows you to fine-tune the assistant experience based on different model selection.
