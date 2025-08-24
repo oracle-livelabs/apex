@@ -23,9 +23,10 @@ By the end of this workshop, you will build a **Mood-Based Movie Recommender wit
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful.  
 
 
-## Oracle Autonomous Database (ADB)  
+## Task 1: Learn the Essentials
 
-### What is Oracle Autonomous Database?  
+
+### **What is Oracle Autonomous Database?**
 
 Oracle Autonomous Database (ADB) is a fully managed, cloud-native database service that uses machine learning to automate routine database tasks such as provisioning, tuning, backups, and patching. With support for both transaction processing and analytics, ADB lets you focus on building applications instead of managing infrastructure.  
 
@@ -34,9 +35,8 @@ For APEX developers, ADB provides a **ready-to-use APEX environment** out of the
 - [Autonomous Database Overview](https://www.oracle.com/autonomous-database/)  
 - [Autonomous Database Documentation](https://docs.oracle.com/en/cloud/paas/autonomous-database/index.html)  
 
-## Oracle APEX  
 
-### What is Oracle APEX?  
+### **What is Oracle APEX?**  
 
 Oracle Application Express (APEX) is a low-code development platform built into Oracle Database. It enables you to quickly build scalable, secure web applications with minimal coding effort. With APEX, you can:  
 
@@ -52,13 +52,13 @@ APEX combined with Autonomous Database and OCI services (like GenAI) makes it si
 - [Try APEX for Free](https://apex.oracle.com/en/learn/getting-started/)  
 - [Download APEX](https://www.oracle.com/tools/downloads/apex-downloads/)  
 
-## Oracle Generative AI (GenAI)  
 
-### What is Generative AI?  
+### **What is Generative AI?** 
 
 Generative AI enables users to quickly generate new content based on a variety of inputs. Inputs and outputs to these models can include text, images, sounds, animation, 3D models, and other types of data.  
 
-### What is a GenAI Agent?  
+
+### **What is a GenAI Agent?**
 
 A Generative AI (GenAI) agent is an intelligent assistant powered by large language models that can understand natural language, reason, and take actions. In Oracle Cloud, GenAI agents can be embedded into applications (like APEX apps) to answer questions, recommend content, automate tasks, and interact with users naturally.  
 
@@ -67,7 +67,7 @@ A Generative AI (GenAI) agent is an intelligent assistant powered by large langu
 
 You may now **proceed to the next lab**.  
 
-## Acknowledgments  
+## Acknowledgements  
 
 * **Authors:**  
 * Karol Stuart, Master Principal Cloud Architect  

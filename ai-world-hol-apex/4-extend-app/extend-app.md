@@ -109,7 +109,7 @@ This approach allows you to fine-tune the assistant experience based on differen
 
 ---
 
-## Acknowledgments
+## Acknowledgements
 
 * **Authors:**
 

@@ -62,19 +62,25 @@ Basic experience with OCI Cloud Console and standard components.
 
 3. In the System Prompt field, enter a prompt for our GenAI configuration so it knows what to do 
     ```
+    <copy>
     You are an expert in movies and films. Use the data in the MOVIES table to inform your responses and make suggestions.
+    </copy>
     ```
     ![AI Configuration](./images/ai_configuration.png  "System prompt configuration for the AI Assistant")
 
 4. Enter a welcome message to greet users when they begin a conversation with our AI. Click Create
     ```
+    <copy>
     Hello and welcome to MovieApp! I am your personal AI movie assistant.
+    </copy>
     ```
     ![AI Configuration](./images/welcome_message.png  "Set welcome message for AI chatbot")
 
 5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter
     ```
+    <copy>
     SELECT * FROM MOVIES
+    </copy>
     ```
     Click "Create" in the top right and then click "Apply Changes"
     ![RAG Sources](./images/create_rag.png  "Create RAG source from Movies table")
