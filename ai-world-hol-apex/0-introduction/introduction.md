@@ -23,7 +23,7 @@ By the end of this workshop, you will build a **Mood-Based Movie Recommender wit
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful.  
 
 
-## Task 1: Learn the Essentials
+## Task 1: Explore the Foundations
 
 
 ### **What is Oracle Autonomous Database?**
