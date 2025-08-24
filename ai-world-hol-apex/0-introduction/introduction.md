@@ -22,7 +22,6 @@ By the end of this workshop, you will build a **Mood-Based Movie Recommender wit
 * Basic database and SQL knowledge.  
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful.  
 
-# Oracle Resources
 
 ## Oracle Autonomous Database (ADB)  
 

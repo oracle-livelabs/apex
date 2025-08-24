@@ -82,7 +82,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 6. Select OCI Generative AI Service as the AI Provider. Then enter a name for your Generative AI Configuration. Next you can copy in the Compartment ID from above and select the appropriate region. There will be a default model, or you can choose another from this list. Ensure the model is available in the region you select.
 
-    [Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pretrained models available.
+    [Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pre-trained models available.
 
     ![AIProvider OCIGenAIService](./images/ai_provider_oci_gen_ai_service.png  "Select OCI Generative AI Service as provider")
     ![AI Credential](./images/ai_credential.png  "Enter name, compartment, region and select Credential to authenticate with OCI GenAI service")

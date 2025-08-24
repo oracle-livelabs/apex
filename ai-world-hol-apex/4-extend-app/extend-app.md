@@ -22,8 +22,8 @@ This lab assumes you have:
 ## Task 1: Try out Meta Llama Model in your APEX Application 
 
 ### Step 1: Explore Available Models to use Llama Model
-1. Open the documentation for pretrained models:  
-   [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
+1. Open the documentation for pre-trained models:  
+   [OCI Generative AI Pre-trained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
    ![Metal Llama Models](./images/meta_llama4.png  "Meta Llama 4 model listing in OCI Generative AI")
 
@@ -71,8 +71,8 @@ Try switching between two models — note differences in:
 ## Task 2: Try out Grok Model in your APEX Application 
 
 ### Step 1: Explore Available Models to use Grok Model
-1. Open the documentation for pretrained models:  
-   [OCI Generative AI Pretrained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
+1. Open the documentation for pre-trained models:  
+   [OCI Generative AI Pre-trained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
    ![Grok Models](./images/grok3.png  "Grok-3 model listing in OCI Generative AI")
 
