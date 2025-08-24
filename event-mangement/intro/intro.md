@@ -25,7 +25,7 @@ Estimated Time: 30 minutes
 
 ### **Let's Get Started!**
 
-    - Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Create Data Model using AI**.
+- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Create Data Model using AI**.
 
 >**Note**: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
@@ -51,9 +51,10 @@ If you are stuck or the App is not working as expected, you can download and ins
 
     - In the **Web Credentials** Page:
 
-      - For Credential Name, Enter **Authorization**
+        - For Credential Name, Enter **Authorization**
 
-      - For Credential Secret, Enter **Bearer YOUR_KEY**
+        - For Credential Secret, Enter **Bearer YOUR_KEY**
+
         ![update open ai cred](images/update-openai-cred.png " ")
 
 ## Learn More - *Useful Links*
