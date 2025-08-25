@@ -105,7 +105,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create emp page](images/create-emp2.png =50%x*)
 
-4. Select Primary key Column 1 as **EMPLOYEE_ID (Number)** and click **Create Page**.
+4. Select Primary Key Column 1: **EMPLOYEE_ID (Number)** and click **Create Page**.
 
   ![Create emp page](images/create-emp-3.png "" )
 
@@ -139,7 +139,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create Dept page](images/create-dept3.png =50%x*)
 
-8. Select Primary key Column 1 as **DEPARTMENT_ID (Number)** and click **Create Page**.
+8. Select Primary Key Column 1: **DEPARTMENT_ID (Number)** and click **Create Page**.
 
   ![Create Dept page](images/create-dept4.png =50%x*)
 
@@ -171,7 +171,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Source:
 
-        - SQL Query: copy and paste the below sql query
+        - SQL Query: Modify/Replace SQL query with below sql query
 
           ```
           <copy>
@@ -224,7 +224,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create a form page](images/create-form22.png =50%x*)
 
-18. Select Primary key Column 1: **CATALOG_ID (Number)** and click **Create Page**.
+18. Select Primary Key Column 1: **CATALOG_ID (Number)** and click **Create Page**.
 
   ![Create a form page](images/create-form3.png =50%x*)
 

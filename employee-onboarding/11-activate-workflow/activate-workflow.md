@@ -18,11 +18,17 @@ Estimated Time: 5 minutes
 
 ## Task 1: Add Participant
 
-1. Navigate to **Shared Components**.
+1. From the **Application Homepage** , navigate to **Shared Components**.
+
+    ![Shared Components](./images/shared-compos.png " ")
 
 2. Under **Workflows and Automations**, select **Workflows**.
 
+    ![Shared Components](./images/wf.png " ")
+
 3. Select **Employee Onboarding**.
+
+    ![Select WF](./images/select-wf.png " ")
 
 4. Navigate to **Employee Onboarding** workflow. Under **1.0** workflow version, right-click **Participants** and select **Create Participant**.
 
@@ -52,9 +58,11 @@ Estimated Time: 5 minutes
 
 7. Click **Save**.
 
+    ![Save Workflow](./images/save-page.png  " ")
+
 ## Task 2: Activate the Workflow
 
-1. On the Workflow Definition page, go to **Employment Type** Workflow and under **1.0** workflow version, right-click and select **Activate** as well as click **OK** to confirm.
+1. On the Workflow Definition page, go to **Employment Type Workflow** and under **1.0** workflow version, right-click and select **Activate** as well as click **OK** to confirm.
 
     ![Activate Workflow](./images/activate-type.png " ")
 
@@ -65,6 +73,8 @@ Estimated Time: 5 minutes
     ![Activate Workflow](./images/activate-emp.png " ")
 
 3. Click **Save**.
+
+    ![Save Workflow](./images/save-page.png  " ")
 
 ## Summary
 

@@ -193,7 +193,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create INVOKE API Activity](./images/create-api4.png " ")
 
-2. Create a connection between **Activity** and **Trainings for Full-Time Employee** and enter/select the following in the property editor:
+2. Create a connection between **Activity** and **Trainings for Intern** and enter/select the following in the property editor:
 
     - Indentification > Name: **Intern**
 

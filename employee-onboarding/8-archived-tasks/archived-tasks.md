@@ -795,6 +795,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
     ![Save the page](./images/save-page2.png "")
 
+
 ## Summary
 
 In this lab, you created a SQL Script Page to define archive tables and packages, and configured two daily Automations : one for workflows and another for tasks, to execute archiving procedures. You also developed a new Archived Tasks and Workflows Page with interactive reports for easy access to archived data.
