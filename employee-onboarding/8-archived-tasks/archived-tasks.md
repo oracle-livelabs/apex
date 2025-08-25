@@ -571,6 +571,8 @@ Now that the Workflow is created, let us create a SQL script that archives workf
         </copy>
       ```
 
+    Click **Run**.
+
     ![select script](./images/select-script-page.png " ")
 
 4. Click **Run Now**.
@@ -593,13 +595,13 @@ Now that the Workflow is created, let us create a SQL script that archives workf
     - Actions initiated on: **Query**
     - Execution Schedule: **Daily at Midnight**
 
-    and click **Next**.
+    Click **Next**.
 
     ![Create Automation](./images/create-auto1.png " ")
 
 8. Enter/select the following:
 
-    - Source: **SQL Query**
+    - Source Type: **SQL Query**
     - Enter a SQL SELECT Statement: copy and paste the following:
 
         ```
@@ -608,7 +610,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ```
 
-        and click **Create**
+        Click **Create**
 
     ![Create Automation](./images/create-auto2.png " ")
 
@@ -637,11 +639,11 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ````
 
-    and click **Apply Changes**.
+    Click **Apply Changes**.
 
     ![Edit Automation](./images/edit-action1.png " ")
 
-12. Click on **Save and Run**.
+12. Click **Save and Run**.
 
     ![Save and Run Automation](./images/save-auto.png " ")
 
@@ -651,7 +653,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
     - Execution Schedule: **Daily at Midnight**
 
-    and click **Next**.
+    Click **Next**.
 
     ![Create Automation](./images/create-auto3.png " ")
 
@@ -666,7 +668,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ```
 
-        and click **Create**.
+        Click **Create**.
 
     ![Create Automation](./images/edit-auto2.png " ")
 
@@ -694,11 +696,11 @@ Now that the Workflow is created, let us create a SQL script that archives workf
          </copy>
         ````
 
-    and click **Apply Changes**.
+    Click **Apply Changes**.
 
     ![Edit Automation](./images/edit-auto3.png " ")
 
-18. Click on **Save and Run**.
+18. Click **Save and Run**.
 
     ![Save and Run Automation](./images/save-auto2.png " ")
 

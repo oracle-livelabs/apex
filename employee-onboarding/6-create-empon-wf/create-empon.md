@@ -89,13 +89,13 @@ Referring to the flow chart in Lab 1, illustrating the business logic, the emplo
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Value Required| Direction |
-  |----------|-------|------------|---|----------|
-  | EMPLOYEE_ID | Employee ID | VARCHAR2 | No | In   |
-  | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  | In  |
-  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | No | In  |
-  | DEPARTMENT | Department ID | NUMBER | No | In  |
-  | INITIATED_BY | Initiated By | VARCHAR2 | Yes | In  |
+  |Static ID | Label | Data Type | Required|
+  |----------|-------|------------|----------|
+  | EMPLOYEE_ID | Employee ID | VARCHAR2    | No |
+  | EMPLOYEE_NAME | Employee Name | VARCHAR2  | No  |
+  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2   | No | 
+  | DEPARTMENT | Department ID | NUMBER   | No |
+  | INITIATED_BY | Initiated By | VARCHAR2 |Yes |
   {: title="List of Parameters to be Created"}
 
     ![Add Parameter](./images/add-params2.png" ")
@@ -161,6 +161,8 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
             - FIRST_NAME: **&EMPLOYEE\_NAME.**
             - HR_NAME: **&INITIATED\_BY.**
+
+            Click **Ok**.
 
    ![Create activity to send email trainings](./images/send-email.png " ")
 

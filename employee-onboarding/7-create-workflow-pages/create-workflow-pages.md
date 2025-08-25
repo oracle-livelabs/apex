@@ -98,7 +98,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
       - Apperance > Template: **Required - Floating**
 
-      - Validation > Value - **Toggle ON**
+      - Validation > Value Required - **Toggle ON**
 
       - Under List of Values:
         - Type: **Static Values**
@@ -110,7 +110,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
             | Intern | Intern |
             {: title="List of Static Values to be Created"}
 
-            Click **Ok**.
+            Click **OK**.
 
         ![Add Static Values](./images/add-static-values.png " ")
 
@@ -126,11 +126,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Hide page item](./images/edit-page-items.png " ")
 
-14. Select **P8\_DEPARTMENT\_ID** and in the property editor, set Identification > Name: **Department**
+14. Select **P8\_DEPARTMENT\_ID** and in the property editor, set Label > Label: **Department**
 
     ![Edit Department ID page item](./images/edit-dept.png " ")
 
-15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, set Label > Label: **Department**
+15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, set Label > Label: **Manager**
 
     ![Edit Manager ID page item](./images/edit-mang.png " ")
 
@@ -621,7 +621,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
     - Under Link:
 
         - Target:
-            - Page: **11** ( IT Setup page)
+            - Page: **11**
             - Set Items:
 
                 |  Name     |   Value    |
@@ -729,7 +729,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![configure Training Region](./images/temp-training.png =30%x*)
 
-20. In the rendering tree, under **Training Details**, right click on **Actions** and select **Add Action**.
+20. In the rendering tree, under **Training Details**, right click on **Actions** and select **Create Action**.
 
     ![Create Action](./images/create-action-training.png " ")
 
@@ -882,7 +882,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
         - Report Context: **My Workflows**
 
-        - Form Page Name: **My Workflows Me Form**. This is used for the Workflow Details page.
+        - Form Page Name: **My Workflows Form**. This is used for the Workflow Details page.
 
     Click **Create Page**.
 
@@ -932,7 +932,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![Create List entry](./images/doc-home2.png " ")
 
-7. Now, select **Tasks Initiated by Me**, **My Tasks** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
+7. Now, select **Tasks Initiated by Me**, **My Tasks** and update Parent List Entry to **Tasks Pages**. Click **Apply Changes**.
 
     ![Set Parent Entry](./images/doc-pat.png " ")
 
@@ -987,9 +987,11 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
             - Icons: **Display Icons**
             - Body Text: **Hidden**
 
+            Click **OK**.
+
     ![Navigation Menu attributes](./images/nav-props2.png " ")
 
-6. Click **Save and Run** the page.
+6. Click **Save and Run**.
 
     ![Save & Run Page](./images/run-page.png " ")
 
@@ -1015,7 +1017,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
         - Body Header: **Dark**
         - Body Background: **Dark**
 
-    And click **Save**.
+        Click **Save**.
 
     ![Theme roller](./images/theme-roller2.png =35%x*)
 
