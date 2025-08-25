@@ -266,23 +266,45 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 3. Under **Tasks based on Employment Type** and select **Employee ID** parameter. In the Property Editor, enter/select the following:
 
-    - Value > Item : **EMPLOYEE\_ID**
+    - Under Value:
+
+        - Type: **Item**
+        - Item : **EMPLOYEE\_ID**
 
    ![link parameter for Activity](./images/params3.png " ")
 
-4. Similarly, select **Employee Type** parameter.In the Property Editor, enter/select the following:
+4. Similarly, select **Employee Type** parameter. In the Property Editor, enter/select the following:
 
-    - Value > Item : **EMPLOYEE\_TYPE**
+    - Under Value:
+
+        - Type: **Item**
+        - Item : **EMPLOYEE\_TYPE**
 
    ![link parameter for Activity](./images/params4.png " ")
 
-5. Similarly, edit the below parameters:
+5. Similary, edit the **Email** paramter, and in the property editor, enter/select the following:
 
-    |Type  | Item |
-  |----------|-------|
-  |  Employee Name |EMPLOYEE_NAME|
-  | Email | EMAIL |
-  {: title="List of Parameters to be Created for Tasks based on Employment Type"}
+    - Under Value:
+
+        - Type: **SQL Query (return single value)**
+        - SQL Query: copy and paste the below code
+
+            ```
+            <copy>
+            select Email from EMPLOYEES where EMPLOYEE_ID = :EMPLOYEE_ID;
+            </copy>
+            ```
+
+   ![link parameter for Activity](./images/email-params4.png " ")
+
+6. Similarly, select **Employee Name** parameter. In the Property Editor, enter/select the following:
+
+    - Under Value:
+
+        - Type: **Item**
+        - Item : **EMPLOYEE\_NAME**
+
+   ![link parameter for Activity](./images/params6.png " ")
 
 ## Task 7: Create Activity to send Onboarding Completion Email
 
