@@ -130,7 +130,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Edit Department ID page item](./images/edit-dept.png " ")
 
-15. Similarly, select **P8\_MANAGER_\_ID** and in the property editor, set Label > Label: **Manager**
+15. Similarly, select **P8\_MANAGER\_ID** and in the property editor, set Label > Label: **Manager**
 
     ![Edit Manager ID page item](./images/edit-mang.png " ")
 
@@ -485,6 +485,8 @@ In this task you will create a page to create an email id and allocate laptop to
 
 Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For each of them, we have created a Task Details page. In this task, we will rename the Pages so that they appear more meaningful in the Application.
 
+ *Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL queries in the lab to reference the correct page item numbers in your application.*
+
 1. Click on the **Shared Components icon**.
 
     ![select shared components definitions](./images/select-shared-comp.png " ")
@@ -517,7 +519,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![create region](./images/create-region.png " ")
 
-8. In the Property editor, enter/select the following:
+8. In the Property editor, enter/select the following: (*Note: Your Task Definition page numbers may be different. Ensure that you update the below SQL query to reference the correct page item numbers in your application.*)
 
     - Under Identification:
 
@@ -557,7 +559,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              WHERE ip.employee_id IN (
                 SELECT TO_NUMBER(param_value)
                 FROM apex_task_parameters
-                WHERE task_id = NVL(:P35_TASK_ID, 0)
+                WHERE task_id = NVL(:P35_TASK_ID, 0)  -- Replace P35 with your Task Detail page number
                 AND is_visible = 'Y'
                 AND param_label = 'Employee ID'
                 AND REGEXP_LIKE(param_value, '^\d+$')
@@ -580,7 +582,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              <copy>
              apex_human_task.is_allowed (
                 p_task_id   => :P35_TASK_ID,
-                p_operation => apex_human_task.c_task_op_complete )
+                p_operation => apex_human_task.c_task_op_complete ) ----Replace P35 with your Task Detail page number
              </copy>
             ```
 
@@ -694,7 +696,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              WHERE e.EMAIL = (
                 SELECT param_value
                 FROM apex_task_parameters
-                WHERE task_id = :P36_TASK_ID
+                WHERE task_id = :P36_TASK_ID -- Replace P36 with your Task Detail page number
                 AND is_visible = 'Y'
                 AND param_label = 'Email'
              );
@@ -702,8 +704,10 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
             ```
 
             - Page Items to submit: **P36\_TASK\_ID**
-            
+
     ![configure Training Region](./images/configure-training-Details.png " ")
+
+    *Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
 
 19. In the **Attributes** tab, enter/select the following:
 
@@ -805,7 +809,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
             ```
              <copy>
-             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P36_TRAINING_ID;
+             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P36_TRAINING_ID; -- Replace P36 with your Task Detail page number
              </copy>
             ```
 
@@ -813,11 +817,13 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
        ![Create TRUE action](./images/set-value2.png " ")
 
+*Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
+
 29. Similary, create another **TRUE** action, with the following properties:
 
      - Identification: Action > **Refresh**
 
-     - Under Settings:
+     - Under Affected Items:
 
         - Selection Type: **Region**
         - Region: **Training Details**
@@ -928,7 +934,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     - Target > Target Type: **- No Target -**
 
-    Click **Create List Entry**.
+     Click **Create List Entry**.
 
     ![Create List entry](./images/doc-home2.png " ")
 
