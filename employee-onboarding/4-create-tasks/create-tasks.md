@@ -134,9 +134,9 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
    You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
-  ![Creating Task Details page](./images/create-task-details1.png " ")
+    ![Creating Task Details page](./images/create-task-details1.png " ")
 
-  ![Creating Task Details page confirm](./images/create-task-details6.png " ")
+    ![Creating Task Details page confirm](./images/create-task-details6.png " ")
 
 4. Select **Allocate Trainings** to open the task definition in edit mode and enter/select the following:
 
@@ -157,7 +157,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
     > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's id)._
 
-5. Now, navigate to **Participants** tab, and enter/select the following:
+5. Now, navigate to **Participants** tab, click **Add Row** and enter/select the following:
 
     - Participant Type: **Potential Owner**
 
@@ -199,7 +199,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
    ![Select Task](./images/select-tasks.png " ")
 
-10. Navigate to the **Actions** tab, and select **Add Action**.
+10. Navigate to the **Actions** tab, and click **Add Action**.
 
    ![Select Task](./images/add-actions.png " ")
 

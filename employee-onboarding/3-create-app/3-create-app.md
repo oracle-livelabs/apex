@@ -87,6 +87,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 3. Enter/select the following:
 
     - Under Page Definition:
+        - Page Number: **2**
         - Name: **Employees**
         - Include Form page: **Toggle ON**
         - Form Page Name: **Create/Edit Employee**
@@ -120,6 +121,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Page Definition:
 
+        - Page Number: **4**
         - Name: **Departments**
 
     - Under Data Source:
@@ -152,6 +154,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 11. In the Page wizard, enter/select the following:
 
     - Under Page Definition:
+        - Page Number: **5**
         - Name: **Training Catalogue**
 
     - Under Navigation:
@@ -210,6 +213,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 17. Enter/select the following in the page wizard:
 
     - Under page Definition:
+        - Page Number: **6**
         - Name: **Create Training Catalogue**
         - Page Mode: **Drawer**
 
@@ -260,7 +264,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
         Click **Ok**.
 
-  ![ training type edit](images/target-audience.png "") 
+  ![ training type edit](images/target-audience.png "")
 
 21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor set Validation > Value Required : Toggle **ON**
 
@@ -390,7 +394,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
             Everything you need—from training modules to onboarding tasks—is available on our Employee Portal.<br><br>
 
-            📹 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Watch a short walkthrough video</a><br><br>
+            <br><br>
 
             Your login credentials will be sent to you via a secure channel shortly.<br><br>
 

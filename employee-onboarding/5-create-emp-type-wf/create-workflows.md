@@ -138,7 +138,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 1. In the Workflow Designer, under 1.0[Dev], click on Activity and enter/select the following in the property editor:
 
     - Identification > Type: **Switch**
-    - Switch > Type: **Check Workflow**
+    - Switch > Type: **Check Workflow Variable**
     - Compare >  Compare Variable: **EMPLOYEMENT\_TYPE**
 
    ![Create Activity](./images/create-switch.png " ")
@@ -147,7 +147,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create INVOKE API Activity](./images/create-api1.png " ")
 
-3. In the Property Editor, enter/select the following:
+3. For the newly created property, in the property editor, enter/select the following:
 
     - Identification > Name: **Trainings for Full-Time Employee**
 
@@ -217,8 +217,6 @@ In this task, you will create an activity for Employment Type as Full Time.
 
 ## Task 7: Create Activity to Assign Trainings
 
-In this task, you will create a Send Email Activity to send an email to the New Hire after completion of requiredtrainings.
-
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Trainings for Full-Time Employee** activity.
 
    ![Create activity to assign trainings](./images/assign-trainings1.png " ")
@@ -250,6 +248,8 @@ In this task, you will create a Send Email Activity to send an email to the New 
    ![Link parameters](./images/params-emp1.png " ")
 
 ## Task 8: Create Activity to send Training Completion Email
+
+In this task, you will create a Send Email Activity to send an email to the New Hire after completion of required trainings.
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
 

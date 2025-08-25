@@ -44,7 +44,7 @@ Estimated Time: 5 minutes
 
     ![Create Admin](./images/create-admin.png " ")
 
-6. Follow the same steps for **Employment Type** workflow to add a participant.
+6. Follow the same steps for **Employment Type Workflow** to add a participant.
 
     ![Create Admin](./images/create-part.png " ")
 

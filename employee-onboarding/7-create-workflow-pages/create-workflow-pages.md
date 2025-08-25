@@ -3,7 +3,7 @@
 ## Introduction
 
 In this lab, you will extend the Employee Onboarding application by creating and configuring multiple pages that support the onboarding process. The workflow you built earlier will now be tied to user-facing pages, enabling HR, IT teams, and New Hires to initiate and act upon employee related tasks.
-This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule trainings, track tasks, and improve navigation, resulting in a fully functional onboarding solution.
+This exercise demonstrates how to create form pages, configure workflow processes, manage IT setup, schedule trainings and track tasks, resulting in a fully functional onboarding solution.
 
 ### Objectives
 
@@ -20,8 +20,6 @@ In this lab, you will learn how to:
 - Customize Task Details Pages.
 
 - Create Workflow Console Pages for employees to monitor workflows they initiated or own.
-
-- Improve the Navigation Menu to provide easy access to tasks and workflows.
 
 Estimated Time: 40 minutes
 
@@ -895,141 +893,6 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
     ![configure workflow attr](./images/config-workflow-console2.png =50%x*)
 
 4. Click **Save and Run** and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
-
-## Task 8: Improve Navigation Menu
-
-1. On the top right, select the **Shared Components icon**.
-
-    ![shared components](./images/shared-compo.png " ")
-
-2. Under **Navigation and Search**, select **Navigation Menu**.
-
-    ![Navigation Menu](./images/doc-nav-menu.png " ")
-
-3. Select **Navigation Menu**.
-
-    ![Select Navigation Menu](./images/docnav-menu1.png " ")
-
-4. Under **List Entries**, select **Create List Entry**.
-
-    ![List entries](./images/doc-create-list.png " ")
-
-5. Enter/select the following:
-
-    - Under Entry:
-        - Image/Class: **fa-tasks-alt**
-        - List Entry Label: **Task Pages**
-
-    - Target > Target Type: **- No Target -**
-
-    Click **Create List Entry**.
-
-    ![Create List entry](./images/doc-home1.png " ")
-
-6. Similarly, create another entry with the following properties:
-
-    - Under Entry:
-        - Image/Class: **fa-workflow**
-        - List Entry Label: **Workflow Pages**
-
-    - Target > Target Type: **- No Target -**
-
-     Click **Create List Entry**.
-
-    ![Create List entry](./images/doc-home2.png " ")
-
-7. Now, select **Tasks Initiated by Me**, **My Tasks** and update Parent List Entry to **Tasks Pages**. Click **Apply Changes**.
-
-    ![Set Parent Entry](./images/doc-pat.png " ")
-
-    ![Set Parent Entry](./images/doc-parents.png " ")
-
-8. Similarly, select  **Workflows Initiated by Me**, **Workflow Dashboard**, **My Workflows** and update Parent List Entry to **Workflow Pages**. Click **Apply Changes**.
-
-    ![Set Parent Entry](./images/doc-pat1.png " ")
-
-    ![Set Parent Entry](./images/doc-parent1.png " ")
-
-9. Now, select **Administration** list entry and set the Sequence: **150** and select **Apply Changes**.
-
-    ![Set Admin Entry](./images/admin-entry.png " ")
-
-## Task 9: Improve UI (Optional)
-
-1. Navigate to the **Application Home page**.
-
-2. Select **Home**.
-
-    ![Select Home page](./images/home-page.png " ")
-
-3. In the rendering tree, right click on **Body** and select **Create Region**.
-
-    ![Create New Region](./images/create-nav-region.png " ")
-
-4. In the property editor, enter/select the following:
-
-    - Under Identification:
-
-        - Name: **Navigation Menu List**
-
-        - Type: **List**
-
-    - Source > List: **Navigation Menu**
-
-    - Appearance > Template: **Blank with Attributes (No Grid)**
-
-    ![Navigation Menu](./images/nav-props.png " ")
-
-5. Under **Attributes**, select the following:
-
-    - Under Apperance:
-
-        - List Template: **Cards**
-
-        - Template Options: select the following in the pop-up box:
-
-            - General: Apply Theme Colors **Check**
-            - Style: **Block**
-            - Icons: **Display Icons**
-            - Body Text: **Hidden**
-
-            Click **OK**.
-
-    ![Navigation Menu attributes](./images/nav-props2.png " ")
-
-6. Click **Save and Run**.
-
-    ![Save & Run Page](./images/run-page.png " ")
-
-7. Login to the application
-
-    ![Login to app](./images/login-app.png =50%x*)
-
-8. In the **Developer Tool Bar**, select **Customize** and click **Theme Roller**.
-
-    ![Theme roller](./images/theme-roller.png " ")
-
-9. In the Theme Roller, select the following:
-
-    - Theme > Select Theme: **Redwood Light**
-
-    - Under Redwood Options:
-        - Pillar: **Ocean**
-        - Layout: **Floating**
-
-    - Under Appearance:
-        - Header: **Pillar**
-        - Navigation: **Pillar**
-        - Body Header: **Dark**
-        - Body Background: **Dark**
-
-        Click **Save**.
-
-    ![Theme roller](./images/theme-roller2.png =35%x*)
-
-10. Click **Save**.
-
-    ![Theme roller](./images/theme-roller3.png " ")
 
 ## Summary
 
