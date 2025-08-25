@@ -92,11 +92,11 @@ The inputs to the workflow will be the New Employee details. In workflow termino
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Required| Direction |
-  |----------|-------|------------|---|----------|
-  | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes | In   |
-  | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  | In  |
-  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes | In  |
+  |Static ID | Label | Data Type | Required| 
+  |----------|-------|------------|---|
+  | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes |
+  | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  |
+  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes | 
     {: title="List of Parameters to be Created"}
 
     ![Add Parameter](./images/add-params2.png =50%x*)
@@ -139,7 +139,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
     - Identification > Type: **Switch**
     - Switch > Type: **Check Workflow Variable**
-    - Compare >  Compare Variable: **EMPLOYEMENT\_TYPE**
+    - Compare >  Compare Variable: **EMPLOYMENT\_TYPE**
 
    ![Create Activity](./images/create-switch.png " ")
 
@@ -157,7 +157,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create INVOKE API Activity](./images/create-api2.png " ")
 
-4. Click on the connection between Activity and Training for Full-Time, and enter/select the following in the property editor:
+4. Create a connection between **Activity** and **Trainings for Full-Time Employee** and enter/select the following in the property editor:
 
     - Indentification > Name: **Full Time**
 
@@ -193,7 +193,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create INVOKE API Activity](./images/create-api4.png " ")
 
-2. Click on the connection between Activity and Training for Intern, and enter/select the following in the property editor:
+2. Create a connection between **Activity** and **Trainings for Full-Time Employee** and enter/select the following in the property editor:
 
     - Indentification > Name: **Intern**
 

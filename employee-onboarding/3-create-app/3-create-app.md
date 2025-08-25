@@ -105,7 +105,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create emp page](images/create-emp2.png =50%x*)
 
-4. Select Primary key as **EMPLOYEE_ID (Number)** and click **Create Page**.
+4. Select Primary key Column 1 as **EMPLOYEE_ID (Number)** and click **Create Page**.
 
   ![Create emp page](images/create-emp-3.png "" )
 
@@ -139,7 +139,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![Create Dept page](images/create-dept3.png =50%x*)
 
-8. Select Primary key as **DEPARTMENT_ID (Number)** and click **Create Page**.
+8. Select Primary key Column 1 as **DEPARTMENT_ID (Number)** and click **Create Page**.
 
   ![Create Dept page](images/create-dept4.png =50%x*)
 
@@ -214,7 +214,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under page Definition:
         - Page Number: **6**
-        - Name: **Create Training Catalogue**
+        - Name: **Create/Edit Training Catalogue**
         - Page Mode: **Drawer**
 
     - Under Data Source:
@@ -222,7 +222,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     Click **Next**.
 
-  ![Create a form page](images/create-form2.png =50%x*)
+  ![Create a form page](images/create-form22.png =50%x*)
 
 18. Select Primary key Column 1: **CATALOG_ID (Number)** and click **Create Page**.
 
@@ -266,17 +266,21 @@ In this task, you will build the administrative setup pages that will allow HR a
 
   ![ training type edit](images/target-audience.png "")
 
-21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor set Validation > Value Required : Toggle **ON**
+21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor enter/select the following:
 
-  ![ training type edit](images/validation.png "")
+    - Appearance >  Template: **Required - Floating**
+
+    - Validation > Value Required: **Toggle ON**
+
+  ![ training type edit](images/multi-select.png "")
 
 22. Click **Save**.
 
-  ![Save page](images/save-page.png "" )
+  ![Save page](images/saves-pages.png "" )
 
   Now that you have your form page ready, let us link the Training Catalogue Page to the form page.
 
-23. Click on the **Page Finder Icon** and select the **Training Catalogue Page**.
+23. Click on the **Page Finder Icon** and select the **Training Catalogue ** Page.
 
   ![Navigate to training page](images/navigate-form.png "" )
 
@@ -322,11 +326,29 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Action: **Redirect to Page in this Application**
         - Target > Page: **6** and click **Ok**.
 
-  ![Create button settings](images/create-button2.png "" )
+  ![Create button settings](images/create-button2.png " " )
 
-28. Click **Save**.
+28. Navigate to the **Dynamic Actions** tab, right click on **Dialog Closed** and select **Create Dynamic Action**.
 
-    ![Save Page](images/save-page.png "" )
+  ![Create DA](images/create-da.png " " )
+
+29. Select the newly created action, and enter/select the following in the propery editor:
+
+    - Identification > Name: **Dialog Close**
+
+    - Under When:
+        - Selection Type: **JavaScript Expression**
+        - JavaScript Expression: **document**
+
+  ![Create DA settings](images/create-da2.png " " )
+
+30. Under the **Dialog Close** Event, select **Refresh**, and in the propery editor, set Affected Elements > Region: **Training Catalogue**.
+
+  ![Create DA settings](images/create-da3.png " " )
+
+31. Click **Save**.
+
+    ![Save Page](images/save-page.png " " )
 
 ## Task 4: Create Email Template
 

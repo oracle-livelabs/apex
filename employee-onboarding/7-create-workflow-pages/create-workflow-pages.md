@@ -55,7 +55,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Configure form page](./images/form-details.png =50%x*)
 
-5. Select Primary key column 1 : **EMPLOYEE_ID (Number)**.
+5. Select Primary Key Column 1 : **EMPLOYEE_ID (Number)**.
     Click **Create Page**.
 
     ![Configure form page](./images/primary-key.png =50%x*)
@@ -175,6 +175,8 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
     {: title="List of Parameters to be linked"}
 
     ![create workflow process](./images/configure-process-param.png " ")
+
+    *Note: Your Page Item Number may vary.*
 
 5. Click **Save**.
 

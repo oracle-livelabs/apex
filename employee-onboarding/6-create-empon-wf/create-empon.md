@@ -65,9 +65,11 @@ To create a Workflow:
 
     - Activity > To: **End**
 
-   ![Check Errors in the Page](./images/set-end.png " ")
+   ![Check Errors in the Page](./images/set-end2.png " ")
 
 5. Click **Save**.
+
+   ![Save Page](./images/save-empon.png " ")
 
 ## Task 3: Add Inputs for Employment Type Workflow
 
@@ -146,7 +148,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 ## Task 5: Add Workflow Activities for Employee Onboarding
 
-1. From the Activities Palette, drag an **Send Email** activity into the Diagram Builder area and drop it on the connection joining the Start and End activities.
+1. From the Activities Palette, drag an **Send Email** activity into the Diagram Builder area and drop it on the connection joining the **Start** and **End** activities.
 
    ![Create Activity](./images/drag-act.png " ")
 
@@ -282,7 +284,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![link parameter for Activity](./images/params4.png " ")
 
-5. Similary, edit the **Email** paramter, and in the property editor, enter/select the following:
+5. Similary, edit the **Email** parameter, and in the property editor, enter/select the following:
 
     - Under Value:
 
