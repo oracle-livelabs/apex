@@ -6,7 +6,7 @@ In this Lab we will walk through process of configuring your OCI tenancy and APE
 
 By the end of this lab, you will understand how to gather OCI tenancy information, configure a Web Credential in APEX and create a Generative AI configuration.
 
-Estimated Time: 20–30 minutes
+Estimated Time: 20–25 minutes
 
 ### Objectives
 

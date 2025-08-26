@@ -33,7 +33,15 @@ Basic experience with OCI Cloud Console and standard components.
 
 3. Select your desired compartment and select Create Autonomous Database.  
 
-4. Follow the instructions in the provisioning, provide a unique name, password and select 23ai as DB Version. ***Insert on Free Tier*** 
+4. Follow the instructions in the provisioning wizard:  
+
+- Enter a unique database name (e.g., `LiveLabDB_01`)  
+- Select deployment type: `Transaction Processing`  
+- Choose `Developer` option  
+- Set database version: `23ai`  
+- Provide an admin password that meets OCI requirements (e.g., `StrongPass#2025`)  
+- Click `Create` Autonomous Database  
+- Verify the database is ready after provisioning completes  
 
 ## Task 2: Create APEX Workspace on your ADB
 
