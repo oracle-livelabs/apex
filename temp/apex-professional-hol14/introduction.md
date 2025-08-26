@@ -28,9 +28,11 @@ Estimated Time: 15 minutes
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following applications:
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)**
+<!-- - **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)** -->
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)**
+<!-- - **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)** -->
+
+- **[Demo Projects](files/labfiles_demo-projects-hol11.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 

@@ -56,7 +56,7 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
     ![Select Theme to Redwood Light](images/click-save-as.png " ")
 
-## Task 2: Export and Import Theme Styles
+<!-- ## Task 2: Export and Import Theme Styles
 
 1. To Export theme styles:
 
@@ -109,9 +109,9 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
 9. The Theme Style is applied, and you see a message that says Preferences changed for user **<****username>**.
 
-    ![Click Customize in Developer Toolbar](images1/temp-img9.png " ")
+    ![Click Customize in Developer Toolbar](images1/temp-img9.png " ") -->
 
-## Task 3: Create Plug-in
+<!-- ## Task 3: Create Plug-in
 
 In this task, you will create a plug-in named "Hero." This plug-in will be a template component that can dynamically display headers, descriptions, and search fields, adding interactive elements to the application.
 
@@ -167,9 +167,9 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
 
 6. Click **Create Plug-in**.
 
-    ![Select Theme to Redwood Light](images/create-plug-in.png " ")
+    ![Select Theme to Redwood Light](images/create-plug-in.png " ") -->
 
-## Task 4: Enhance Template Component
+<!-- ## Task 4: Enhance Template Component
 
 In this task, you will customize the "Hero" plug-in by adding attributes. These attributes, like overline and description, will allow more dynamic control over how content appears in the component.
 
@@ -205,9 +205,9 @@ In this task, you will customize the "Hero" plug-in by adding attributes. These 
 
     Click **Create**.
 
-    ![Select Theme to Redwood Light](images/description-attribute.png " ")
+    ![Select Theme to Redwood Light](images/description-attribute.png " ") -->
 
-## Task 5: Add Slots in Template Component
+<!-- ## Task 5: Add Slots in Template Component
 
 To make the "Hero" plug-in interactive, you will define slots at the Template Component level. This will allow developers to nest components inside Template Components in Page Designer.
 
@@ -234,9 +234,9 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
 
 6. Click **Apply Changes**.
 
-    ![Select Theme to Redwood Light](images/plugin-css.png " ")
+    ![Select Theme to Redwood Light](images/plugin-css.png " ") -->
 
-## Task 6: Add Template Component Region
+## Task 2: Add Template Component Region
 
 With the plug-in configured, you will add it to the Project Task Status page as a region. This will allow you to test the component's behavior and appearance within an application page.
 
@@ -286,27 +286,32 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/serach.png " ")
 
-8. Now, drag **P3_STATUS** under **Project Task** region and in the Property Editor, update **Label** to **Update Status to**.
+8. Select **P3_SEARCH**, in the Property Editor, and update the following:
+
+    - Appearance > Value Placeholder: **Search Project, Task Name**
+
+    ![Select Theme to Redwood Light](images/search-placeholder.png " ")
+9. Now, drag **P3_STATUS** under **Project Task** region and in the Property Editor, update **Label** to **Update Status to**.
 
     ![Select Theme to Redwood Light](images/status.png " ")
 
     ![Select Theme to Redwood Light](images/status1.png " ")
 
-9. Also, drag **P3\_SELECT\_ALL** and **Update** button under **Project Task** region.
+10. Also, drag **P3\_SELECT\_ALL** and **Update** button under **Project Task** region.
 
     ![Select Theme to Redwood Light](images/select-all.png " ")
 
     ![Select Theme to Redwood Light](images/update-drag.png " ")
 
-10. Select **P3\_SELECTION\_ID** and drag it under the **Update Tasks Status** region.
+11. Select **P3\_SELECTION\_ID** and drag it under the **Update Tasks Status** region.
 
     ![Select Theme to Redwood Light](images/selection-id-drag.png " ")
 
-11. Right-click **Selection Support** region and select **Delete**.
+12. Right-click **Selection Support** region and select **Delete**.
 
     ![Select Theme to Redwood Light](images/delete-region.png " ")
 
-12. Select **Update Task Status** region and in the Property Editor, enter/select the following:
+13. Select **Update Task Status** region and in the Property Editor, enter/select the following:
 
     - Under Source:
 
@@ -342,19 +347,13 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
     ![Select Theme to Redwood Light](images/update-sql.png " ")
 
-13. Right-click **Breadcrumb** and select **Delete**.
+14. Right-click **Breadcrumb** and select **Delete**.
 
     ![Select Theme to Redwood Light](images1/temp-img-6-13.png " ")
 
-14. Select **P3_SEARCH**, in the Property Editor, and update the following:
-
-    - Appearance > Value Placeholder: **Search Project, Task Name**
-
-    ![Select Theme to Redwood Light](images/search-placeholder.png " ")
-
 15. Click **Save and Run**.
 
-## Task 7: Run the Application
+## Task 3: Run the Application
 
 Finally, you'll test the "Hero" plug-in and its functionality by running the application. This will help verify that the component displays correctly and that interactive elements like search and update work as expected.
 
