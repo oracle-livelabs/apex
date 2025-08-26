@@ -14,7 +14,7 @@
       "description": "Using noVNC Remote Desktop",
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
-        {
+    {
             "title": "Lab 1: Identify Business Steps",
             "filename": "../../1-identify-business-steps/identify-business-steps.md"
         },
@@ -47,12 +47,16 @@
             "filename": "../../8-archived-tasks/archived-tasks.md"
         },
         {
-            "title": "Lab 9: Run the App",
-            "filename": "../../9-running-the-app/running-the-app.md"
+            "title": "Lab 9: Improve UI & Navigation",
+            "filename": "../../9-improve-ui/improve-ui.md"
         },
         {
-            "title": "Lab 10: Activate Workflow",
-            "filename": "../../10-activate-workflow/activate-workflow.md"
+            "title": "Lab 10: Run the App",
+            "filename": "../../10-running-the-app/running-the-app.md"
+        },
+        {
+            "title": "Lab 11: Activate Workflow",
+            "filename": "../../11-activate-workflow/activate-workflow.md"
         },
     {
       "title": "Need Help?",

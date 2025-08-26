@@ -265,16 +265,12 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
-    - Validation > Value Required: **Toggle ON**
-
     - Under Server-side Condition:
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Create Email**
 
     ![Property Sub Region](./images/prop-sub-region1.png " ")
-
-    ![Property Sub Region](./images/validation.png =25%x*)
 
     ![Property Sub Region](./images/prop-sub-region2.png " ")
 
@@ -290,7 +286,11 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Appearance > Template: **Required - Floating**
 
+    - Validation > Value Required: **Toggle ON**
+
     ![Property Sub Region Email ID](./images/email-id-item2.png " ")
+
+    ![Property Sub Region](./images/validation.png =25%x*)
 
 14. Similarly, create another sub region under **IT Setup** region and select **Create Region**.
 
@@ -382,7 +382,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Identification > Name: **Update Email Address**
 
-    - PL/SQL code: enter the following code snippet:
+    - Source > PL/SQL code: enter the following code snippet
 
         ```
         <copy>
@@ -390,7 +390,7 @@ In this task you will create a page to create an email id and allocate laptop to
          UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
         </copy>
         ```
-
+    *Note: Your 
     - Under Server-side Condition:
 
         - Type: **Item = Value**
@@ -471,15 +471,11 @@ In this task you will create a page to create an email id and allocate laptop to
 
     - Name: **Tasks Initiated by Me**
 
-    - Report Context: **My Tasks**
+    - Report Context: **Initiated by Me**
 
     Click **Create Page**.
 
     ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png =40%x*)
-
-8. Click **Save**.
-
-    ![Save page](./images/save-page1.png " ")
 
 ## Task 5: Modify the Task Details Pages
 
@@ -624,6 +620,9 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         - Target:
             - Page: **11**
+             
+              *Note: This should link to the IT Setup page. Your page numbers may vary*
+
             - Set Items:
 
                 |  Name     |   Value    |

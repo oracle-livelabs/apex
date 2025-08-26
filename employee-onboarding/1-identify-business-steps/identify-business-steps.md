@@ -26,7 +26,7 @@ In this lab, you will:
 
 - Identify Business steps required to create **Employee Onboarding** Application.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ### Prerequisites
 
