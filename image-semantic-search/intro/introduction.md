@@ -50,7 +50,7 @@ If you are stuck or the App is not working as expected, you can download and ins
             - ONNX Model Owner: **-Select your schema-**
             - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-        Click **Apply Changes**
+        Click **Apply Changes**.
 
     ![Correct ONNC Model Owner Page item](images/vector_providers.png " ")
 
@@ -63,7 +63,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 | 1 | [Load ONNX Models](?lab=1-load-model) | 10 minutes |
 | 2 | [Import and Edit Social Media App](?lab=2-import-app) | 5 minutes |
 | 3 | [Create Vector Providers](?lab=3-create-vector-providers) | 15 minutes |
-| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 25 minutes |
+| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 20 minutes |
 | 5 | [Run the Application](?lab=5-run-app) | 5 minutes |
 
 ## Learn More - *Useful Links*
