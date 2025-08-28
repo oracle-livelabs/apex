@@ -337,7 +337,7 @@ In this task, we will create a Search page for Text based search.
     - Source > Page Items to Submit: **P3_FILENAME**
 
     - Under Layout:
-        - Sequence: **40**
+        - Sequence: **60**
         - Start New Row: Toggle **OFF**
 
     - Appearance > Template: **Standard**

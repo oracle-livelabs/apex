@@ -621,7 +621,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Target:
             - Page: **11**
              
-              *Note: This should link to the IT Setup page. Your page numbers may vary*
+              *Note: This should link to the IT Setup page. Your page numbers may vary.*
 
             - Set Items:
 
