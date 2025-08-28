@@ -106,7 +106,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
 In this task, we will create a Search page for Text based search.
 
-1. Navigate to the Application homepage by clicking on the application ID.
+1. Navigate to the Application homepage by clicking on the **Application ID**.
 
     ![App Builder](images/app-navigate.png " ")
 
@@ -128,7 +128,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Create Page](images/create-paget3.png =60%x*)
 
-5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under CSS > Inline.
+5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
 
     ```
      <copy>
@@ -316,7 +316,7 @@ In this task, we will create a Search page for Text based search.
     - Layout > Column Span: **3**
 
     - Under Appearance:
-        - Template Options > Stretch Form Item : select the checkbox.
+        - Template Options > Stretch Form Item : **select** the checkbox.
 
             Click **Ok**.
 
@@ -337,7 +337,7 @@ In this task, we will create a Search page for Text based search.
     - Source > Page Items to Submit: **P3_FILENAME**
 
     - Under Layout:
-        - Sequence: **60**
+        - Sequence: **40**
         - Start New Row: Toggle **OFF**
 
     - Appearance > Template: **Standard**

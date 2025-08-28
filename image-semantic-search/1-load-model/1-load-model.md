@@ -39,11 +39,11 @@ In this lab, you will load the ONNX Models into your database.
 
    ![Login into your APEX account](images/apex-login.png " ")
 
-2. On the APEX Homepage, navigate to SQL Workspace > **SQL Commands**, to create credentials of your user to access the Object storage bucket.
+2. On the APEX Homepage, navigate to SQL Workspace > **SQL Commands**.
 
     ![SQL Commands](images/sql-commands.png " ")
 
-3. Copy and paste the below to load the CLIP text model, by replacing the object_uri with PAR URL created in Task 3.
+3. Copy and paste the below code to load the CLIP text model and click **Run**.
 
     ```
      <copy>
@@ -64,9 +64,9 @@ In this lab, you will load the ONNX Models into your database.
      </copy>
     ```
 
-    ![Load text model](images/load-text-model.png " ")
+    ![Load text model](images/load-txt-model.png " ")
 
-2.  Copy and paste the below to load the CLIP image model, by replacing the object_uri with PAR URL created in Task 3.
+4. Copy and paste the below to load the CLIP image model and click **Run**.
 
     ```
      <copy>

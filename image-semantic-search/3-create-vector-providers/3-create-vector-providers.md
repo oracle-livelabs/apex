@@ -46,10 +46,10 @@ In this lab, you:
 
     - Under Local Embedding:
 
-        - ONNX Model Owner: **Select your schema**
+        - ONNX Model Owner: **-Select your schema-**
         - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-    and click **Create**.
+    Click **Create**.
 
     ![Create Text Vector Provider](images/create-textmodel.png " ")
 
@@ -63,7 +63,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
 
     ![Page Designer](images/sql-commands.png " ")
 
-2. In the Property Editor, enter the following:
+2. In SQL Commands, enter the following:
 
     ```
      <copy>

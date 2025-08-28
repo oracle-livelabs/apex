@@ -6,7 +6,7 @@ In this lab, you will import the Social Media application into your APEX workspa
 
 You can download the Social Media Application [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/APEX_Social_Media_HOL.zip).
 
-Estimated Time: 10 Minutes
+Estimated Time: 5 Minutes
 
 ### Objectives
 
@@ -47,4 +47,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
