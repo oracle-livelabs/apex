@@ -41,9 +41,18 @@ If you are stuck or the App is not working as expected, you can download and ins
 2. Import the **Image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow Lab 1 to generate API keys using the OCI Console, grant database privileges and create credentials in the app.
+    - Follow **Lab 1** to load the ONNX Models to your database.
 
-    - Proceed to Lab 3 to export the ONNX model using the OML4Py client. Upload the exported model to Object Storage and use a Pre-Authenticated Request (PAR) URL to load the model into the database. (You can skip this step if you have your own multi modal model loaded in the database.)
+    - Proceed to **App Builder homepage**, navigate to **Workspace Utilities > Vector Providers > CLIP TEXT MODEL**. In the Vector Provider Details page, select the following:
+
+        - Under Local Embedding:
+
+            - ONNX Model Owner: **-Select your schema-**
+            - ONNX Model Name: **CLIP\_TXT\_MODEL**
+
+        Click **Apply Changes**
+
+    ![Correct ONNC Model Owner Page item](images/vector_providers.png " ")
 
 4. All set. Now, run the application and see it in action!
 
