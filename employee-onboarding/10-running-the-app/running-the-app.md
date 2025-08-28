@@ -153,7 +153,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 1. Log in as **AMY**, who is an IT staff in this workflow.
 
-    ![login as AMY](./images/login-amy.png =40%x*)
+    ![login as AMY](./images/login-amy.png " ")
 
 2. Select **Task Pages** and click **My Tasks** from the left navigation menu.
 
