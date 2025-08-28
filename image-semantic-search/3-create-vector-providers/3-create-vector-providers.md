@@ -4,7 +4,7 @@
 
 In this lab, you will create Vector Providers in Oracle APEX for both the CLIP text model and the CLIP image model. These vector providers act as bridges between your APEX application and the underlying ONNX models stored in Oracle Database 23ai. They allow you to generate and use vector embeddings for both text inputs and image inputs as part of a semantic search experience.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

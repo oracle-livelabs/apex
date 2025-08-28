@@ -6,7 +6,7 @@ In today's digital landscape, visual content is everywhere—from product photos
 
 In this workshop, you will learn how to implement image and text semantic search in Oracle APEX using ONNX models and Oracle Database 23ai’s built-in AI Vector Search. You will enhance a Social Media APEX application to intelligently interpret and search image using both text and image queries. By combining deep learning models with APEX, you’ll unlock next-generation search experiences that go beyond keywords—empowering your apps to truly understand what users are looking for.
 
-Estimated Time: 1 hour
+Estimated Time: 45 minutes
 
 ### Objectives
 
@@ -62,8 +62,8 @@ If you are stuck or the App is not working as expected, you can download and ins
 | --- | --- | --- |
 | 1 | [Load ONNX Models](?lab=1-load-model) | 10 minutes |
 | 2 | [Import and Edit Social Media App](?lab=2-import-app) | 5 minutes |
-| 3 | [Create Vector Providers](?lab=3-create-vector-providers) | 15 minutes |
-| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 20 minutes |
+| 3 | [Create Vector Providers](?lab=3-create-vector-providers) | 10 minutes |
+| 4 | [Implement Text and Image Search](?lab=4-edit-application) | 15 minutes |
 | 5 | [Run the Application](?lab=5-run-app) | 5 minutes |
 
 ## Learn More - *Useful Links*

@@ -6,7 +6,7 @@ In this lab, you will enhance your APEX Social Media app by integrating semantic
 
 By the end of this lab, your APEX application will support real time, AI powered search, enabling users to find similar or related posted images through natural language or visual input.
 
-Estimated Time: 20 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 
