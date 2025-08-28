@@ -272,7 +272,7 @@ In this lab, you:
 
 5. On the Run Script page, click **Run Now**.
 
-    ![Run Now](images/run-now.png " ")
+    ![Run Now](images/run-now1.png " ")
 
 6. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 

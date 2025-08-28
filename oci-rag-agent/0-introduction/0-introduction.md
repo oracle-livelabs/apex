@@ -8,9 +8,9 @@ As part of this workshop, you will upload Oracle App Builder documentation to OC
 
 Here is a demo of what to expect from this application:
 
-![Demo Application](images/RAG.gif " ")
+![Demo Application](images/rag-demo.gif " ")
 
-Estimated Time: 90 minutes
+Estimated Time: 1 hour 30 mins
 
 ### Objectives
 
@@ -139,7 +139,25 @@ If you are stuck or the app is not working as expected, you can download and ins
 
    ![Map Datasource](images/map-datasource.png " ")
 
-10. All set. Now, run the application with the users you created and see it in action!
+10. Navigate to **Shared Components**.
+
+    ![Navigate Shared](images/navigate-shared.png " ")
+
+11. Under Workflows and Automations click **Automations**.
+
+    ![Click Automation](images/click-automation.png " ")
+
+12. Click automation **Get Ingestion Status**.
+
+    ![Select Automation](images/select-automation.png " ")
+
+13. Under Settings > Scheduled Status > toggle > **Active**.
+
+14. Click **Save Changes**.
+
+    ![Set Active](images/set-active.png " ")
+
+15. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 

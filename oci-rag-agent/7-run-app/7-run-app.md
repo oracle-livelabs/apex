@@ -28,7 +28,7 @@ In this task, you will upload document to OCI Object storage.
 
     ![UI UploadDoc](images/ui-uploaddoc.png " ")
 
-2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](files/APP_Builder_User_Guide.pdf?download=1) document onto the dialog window.
+2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foracle-apex-app-builder-users-guide.pdf?download=1) document onto the dialog window.
 
     >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
 

@@ -16,8 +16,6 @@ In this lab, you:
 
 - Create a Bucket in OCI Object Storage.
 
-- Create Knowledge Base in OCI.
-
 ## Task 1: Generate API Keys using OCI Console
 
 To Generate the API Keys using OCI Console:

@@ -16,13 +16,15 @@ In this lab, you will:
 
 ## Task 1: Add Inline CSS
 
-1. Navigate to Page 1 **Chat With OCI Generative AI**.
+1. Click on **Application Id**. Navigate to Page 1 **Chat With OCI Generative AI**.
+
+    ![Application ID](images/navigateto-appid.png " ")
+
+    ![Navigate Page1](images/navigateto-pg1.png " ")
 
 2. Under **Breadcrumb Bar**, click **GenAI Agents for APEX** .
 
 3. In the Property Editor, enter/select the following:
-
-    - Identification > Type: **Static Content**
 
     - Appearance > Template: **Blank with Attributes**
 
@@ -34,35 +36,35 @@ In this lab, you will:
 
     - CSS > Inline: Copy and paste the below CSS in the code editor:
 
-    ```
-    <copy>
+        ```
+        <copy>
 
-    .t-Chat, .t-Chat .t-Comments {
-    height: 470px;
-    overflow: scroll;
-    }
+        .t-Chat, .t-Chat .t-Comments {
+        height: 470px;
+        overflow: scroll;
+        }
 
-    .t-Chat .t-Chat--own {
-    flex-direction: row-reverse;
-    }
+        .t-Chat .t-Chat--own {
+        flex-direction: row-reverse;
+        }
 
-    .t-Chat .t-Chat--own .t-Comments-icon {
-    margin: 0 0 0 12px;
-    }
+        .t-Chat .t-Chat--own .t-Comments-icon {
+         margin: 0 0 0 12px;
+         }
 
-    .t-Chat .t-Chat--own .t-Comments-body {
-    align-items: flex-end;
-    }
+        .t-Chat .t-Chat--own .t-Comments-body {
+        align-items: flex-end;
+        }
 
-    .t-Chat .t-Chat--own .t-Comments-comment:after {
-    border-left-color: var(--ut-comment-chat-background-color);
-    border-right-color: transparent;
-    right: auto;
-    left: 100%;
-    }
+        .t-Chat .t-Chat--own .t-Comments-comment:after {
+        border-left-color: var(--ut-comment-chat-background-color);
+        border-right-color: transparent;
+        right: auto;
+        left: 100%;
+        }
 
-    </copy>
-    ```
+        </copy>
+        ```
 
     ![Breadcrumb](images/page1.png " ")
 
@@ -75,6 +77,8 @@ In this lab, you will:
    ![Developer Toolbar](images/developer-toolbar.png " ")
 
 2. Theme > Select Theme > **Redwood Light**.
+
+   ![Redwood Theme](images/redwood-light.png " ")
 
 3. Under Redwood Options, enter/select the following:
 

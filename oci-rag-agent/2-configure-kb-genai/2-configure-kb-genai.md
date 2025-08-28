@@ -28,7 +28,7 @@ To create Knowledge Base in OCI console:
 
 1. Click the menu icon **(☰)** at the top-left corner.
 
-2. Navigate to **Analytics & AI** > **AI Services** select **Generative AI Agents**.
+2. Navigate to **Analytics & AI** > **AI Services** and select **Generative AI Agents**.
 
    ![Select GenerativeAI](images/gen-ai-tab.png " ")
 
@@ -58,7 +58,7 @@ To create Knowledge Base in OCI console:
 
     - Under Data bucket:
 
-        - Select your bucket created in LAB1 > Task-2
+        - Select your bucket created in [Lab1 > Task2](?lab=1-configure-oci-keys#Task2:CreateaBucketinOCIObjectStorage)
 
         - Select all in bucket: **Enable**
 
@@ -76,7 +76,7 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
 2. Navigate to menu icon **(☰)** at the top-left corner.
 
-3. Navigate to **Analytics & AI** and select **Generative AI Agents**.
+3. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
    ![Select GenerativeAI](images/gen-ai-tab.png " ")
 
@@ -90,15 +90,13 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
     - Compartment: Choose your compartment
 
-    - Click **Next**
-
     ![Create Agent](images/create-agent.png " ")
 
-6. Click **Create tool**.
+6. Click **Add tool**.
 
-    ![Click tool](images/add-tool.png " ")
+    ![Click tool](images/add-tool1.png " ")
 
-7. Under **Create tool**, enter/Select the following:
+7. Under **Add tool**, enter/Select the following:
 
     - Select **RAG**
 
@@ -106,15 +104,15 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
     - Description: **RAG tool to chat with documents from OCl Object Storage**
 
-    ![Add tool](images/select-RAG-tool.png " ")
+    ![Add tool](images/select-rag-tool1.png " ")
 
-8. Scroll down and choose your **Knowledge base**, which you created in Lab2 > Task1.
+8. Scroll down and choose your **Knowledge base**, which you created in [Lab2 > Task1](?lab=2-configure-kb-genai#Task1:CreateaKnowledgeBaseinOCI).
 
     >*Note: If you have not created Knowledge Base in previous task, you can create it here by clicking **Create knowledge base***
 
-9. Click **Create tool**.
+9. Click **Add tool**.
 
-    ![Select KnowledgeBase](images/select-knowledge-base.png " ")
+    ![Select KnowledgeBase](images/select-knowledge-base1.png " ")
 
 10. Once tool is created, click **Next**.
 
@@ -138,7 +136,7 @@ To Fetch the OCID of the Generative AI Agent and Data Source in OCI console:
 
 1. Navigate to the menu icon **(☰)** at the top-left corner.
 
-2. Navigate to **Analytics & AI** and select **Generative AI Agents**.
+2. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
    ![Select GenerativeAI](images/gen-ai-tab.png " ")
 
@@ -165,6 +163,8 @@ To Fetch the OCID of the Generative AI Agent and Data Source in OCI console:
     ![Under Knowledgebases](images/click-genairag.png " ")
 
 9. Under **Data sources** , click **FilesforRAG**.
+
+    ![Choose Datadource](images/choose-datasource.png " ")
 
 10. Copy the **OCID**. (*will use it in LAB 5*)
 
