@@ -72,7 +72,7 @@ In this lab, you will:
 
     ![AI Service Configured](./images/genai-service-created.png " ")
 
-## Task 2: Create Project Management Data Model using AI
+## Task 2: Create Event Management Data Model using AI
 
 To create a data model with AI, you need to have a configured Generative AI Service and ensure the **Used by App Builder** is enabled. If no AI Service is available, the Create Data Model Using AI option will not be visible.
 

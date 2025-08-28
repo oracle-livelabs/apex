@@ -23,6 +23,10 @@
           "filename": "../../3-apex-assistant/3-apex-assistant.md"
       },
       {
+        "title": "Lab 4: Enhance UI with APEX Assistant",
+          "filename": "../../4-chat-assistant/3-ui-apex-assistant.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
