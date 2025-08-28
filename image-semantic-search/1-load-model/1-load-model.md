@@ -1,4 +1,4 @@
-# Grant ProviledLoad CLIP ONNX Models into Oracle Database
+# Load CLIP ONNX Models into Oracle Database
 
 ## Introduction
 
