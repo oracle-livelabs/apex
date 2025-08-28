@@ -18,10 +18,24 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     !["Click App Builder"](images/event-types.png "")
 
-3. Under **Event Types**, select **Series 1** and change **Source > Type** to **SQL Query**. Open the code editor of SQL Query.
+3. Under **Event Types**, select **Series 1** and change **Source > Type** to **SQL Query**. **Open** the code editor of the **SQL Query**.
 
     !["Click App Builder"](images/series-sql-query.png "")
 
-4. Navigate to **APEX Assistant**. Select your query and in the APEX Assistant box, enter the 
+4. Navigate to **APEX Assistant**. Select your query. In the APEX Assistant box, enter the following prompt:
+
+    >Prompt 1:
+    >Provide a breakdown of event types.
 
     !["Click App Builder"](images/code-chart.png "")
+
+5. Now, we need the highest count at the top. Enter the below prompt:
+
+    >Prompt 2:
+    >Show highest count at the top.
+
+    !["Click App Builder"](images/code-chart1.png "")
+
+6. Select your query and click **Insert** in APEX Assistant box.
+
+    !["Click App Builder"](images/code-chart1.png "")

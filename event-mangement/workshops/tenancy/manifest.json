@@ -19,6 +19,10 @@
           "filename": "../../2-create-app/create-app-using-ai.md"
       },
       {
+        "title": "Lab 3: Enhance Dashboard using APEX Assistant",
+          "filename": "../../3-apex-assistant/3-apex-assistant.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"

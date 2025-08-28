@@ -14,7 +14,7 @@ Estimated Time: 15 minutes
 
 - An Oracle Cloud paid account, or free trial.
 
-- Event Data model created using Generative AI.
+- Project Data model created using Generative AI.
 
 ## Task 1: Create the Application using Generative AI
 
