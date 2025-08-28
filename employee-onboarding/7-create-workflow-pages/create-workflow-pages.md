@@ -390,7 +390,9 @@ In this task you will create a page to create an email id and allocate laptop to
          UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
         </copy>
         ```
-    *Note: Your 
+
+    *Note: Your page item may vary* 
+
     - Under Server-side Condition:
 
         - Type: **Item = Value**
@@ -635,19 +637,23 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![ Action Settings for IT Status](./images/create-action2.png " ")
 
-12. Save the Page.
+12. Under **Rendering** tab, navigate to **IT Setup Task Details > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
+
+    ![delete developer info](./images/delete-dev-info.png " ")
+
+13. Save the Page.
 
     ![ Save Page](./images/save-3-page.png " ")
 
-13. You now need to change the Allocate Trainings Details Page.
+14. You now need to change the Allocate Trainings Details Page.
 
     Navigate to **Shared Components > Task Definition > Allocate Trainings** and similarly check the page number for the Task Details. The **Allocate Trainings** Task Definition points to Page 36.
 
     *Note: Your Task Definition page number may be different.*
 
-14. Navigate to your application home page and click **Page 36**.
+15. Navigate to your application home page and click **Page 36**.
 
-15. Now, update the following in the Property Editor:
+16. Now, update the following in the Property Editor:
 
     - Name: **Allocate Trainings Task Details**
 
@@ -655,17 +661,17 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![change title page2](./images/change-title-page3.png " ")
 
-16. Under **Rendering** tab, navigate to **Allocate Trainings > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
+17. Under **Rendering** tab, navigate to **Allocate Trainings > Components > Content Body > Developer Information**. Right-click **Developer Information** region and click **Delete**.
 
     ![delete developer info](./images/delete-developer-info1.png " ")
 
-17. In the Task details Page, the New Employee should be able to view all the trainings assigned to them and mark it as Complete. We will customize the Allocate Trainings Details Page as follows:
+18. In the Task details Page, the New Employee should be able to view all the trainings assigned to them and mark it as Complete. We will customize the Allocate Trainings Details Page as follows:
 
     - Right-click  **Subject** and select **Create Region Below**.
 
     ![create region below](./images/create-region-below13.png " ")
 
-18. Select the newly created region and in the Property Editor, enter/select the following:
+19. Select the newly created region and in the Property Editor, enter/select the following:
 
     - Under Identification:
         - Name: **Training Details**
@@ -708,7 +714,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     *Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
 
-19. In the **Attributes** tab, enter/select the following:
+20. In the **Attributes** tab, enter/select the following:
 
     - Under Settings:
         - Title: **&TRAINING_NAME.**
@@ -732,11 +738,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![configure Training Region](./images/temp-training.png =30%x*)
 
-20. In the rendering tree, under **Training Details**, right click on **Actions** and select **Create Action**.
+21. In the rendering tree, under **Training Details**, right click on **Actions** and select **Create Action**.
 
     ![Create Action](./images/create-action-training.png " ")
 
-21. In the property editor, enter/select the following:
+22. In the property editor, enter/select the following:
 
     - Under Identification:
 
@@ -751,11 +757,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![Action mark complete](./images/action-complete.png " ")
 
-22. In the rendering tree, right click on **Content Body** and select **Create Page Item**.
+23. In the rendering tree, right click on **Content Body** and select **Create Page Item**.
 
     ![Create Training ID](./images/add-training-id.png " ")
 
-23. In the property editor, enter/select the following:
+24. In the property editor, enter/select the following:
 
     - Under Identification:
         - Name: **P36\_TRAINING\_ID**
@@ -765,11 +771,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![Create Training ID](./images/add-training-id2.png " ")
 
-24. Navigate to **Dynamic Actions** tab, right click on  **Events** and select **Create Dynamic Action**.
+25. Navigate to **Dynamic Actions** tab, right click on  **Events** and select **Create Dynamic Action**.
 
     ![Create DA](./images/da-train.png " ")
 
-25. In the property editor, enter/select the following:
+26. In the property editor, enter/select the following:
 
     - Identification: Name > **Update Employee Trainings**
 
@@ -782,7 +788,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         ![Create DA](./images/da-train2.png " ")
 
-26. Under **True** action, select **Show** and enter/select the following in the property editor:
+27. Under **True** action, select **Show** and enter/select the following in the property editor:
 
     - Identification: Action > **Set Value**
 
@@ -794,11 +800,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
        ![Create TRUE action](./images/set-value.png " ")
 
-27. In the rendering tree, right click on **True** and click **Create TRUE Action**.
+28. In the rendering tree, right click on **True** and click **Create TRUE Action**.
 
        ![Create TRUE action](./images/create-true-action.png " ")
 
-28. In the property editor, enter/select the following:
+29. In the property editor, enter/select the following:
 
      - Identification: Action > **Execute Server-side Code**
 
@@ -816,9 +822,9 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
        ![Create TRUE action](./images/set-value2.png " ")
 
-*Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
+    *Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
 
-29. Similary, create another **TRUE** action, with the following properties:
+30. Similary, create another **TRUE** action, with the following properties:
 
      - Identification: Action > **Refresh**
 
@@ -829,7 +835,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
        ![Create TRUE action](./images/set-value3.png " ")
 
-30. Click **Save**.
+31. Click **Save**.
 
        ![Save Page](./images/save-pages.png " ")
 
