@@ -52,7 +52,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
         Click **Apply Changes**.
 
-    ![Correct ONNC Model Owner Page item](images/vector_providers.png " ")
+    ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
 
 4. All set. Now, run the application and see it in action!
 
