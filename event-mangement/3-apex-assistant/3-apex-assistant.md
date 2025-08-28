@@ -4,9 +4,13 @@
 
 In this lab, we will learn how to enhance charts in Oracle APEX by leveraging the APEX Assistant. Instead of manually writing queries, we will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach not only speeds up development but also demonstrates how AI-powered assistance can simplify complex tasks like data visualization.
 
+In addition to enhancing charts, we will also explore how to create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
+
 ### Objectives
 
 - Enhance charts by using APEX Assistant to generate SQL queries through natural language.
+
+- Create PL/SQL packages using APEX Assistant in SQL Commands.
 
 ## Task 1: Enhance charts using Generative AI
 
@@ -31,7 +35,7 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     >Note: APEX Assistant responds with a query as shown in the above screenshot.
 
-5. Now, we need the highest count at the top. Enter the below prompt and press enter:
+5. Next, let’s adjust the query so that the highest count appears at the top. Enter the below prompt and press enter:
 
     >Prompt 2:
     >Show highest count at the top.
@@ -44,11 +48,11 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
 7. While **Validating**, if your query throws an error, APEX Assistant can help troubleshoot the problem.
 
-    For example, suppose you have the following query and have inadvertently left off the "s" at the end the table name.
+    For example, suppose you have the following query and have inadvertently left off the "s" at the end of the table name.
 
     APEX Assistant switches to General Assistance mode. Click **Help me fix this**.
 
-    APEX Assistant reviews the code and error and suggests the table name may not be spelled correctly.
+    APEX Assistant reviews the code and error, and suggests the table name may not be spelled correctly.
 
     !["Click App Builder"](images/fix-this.png "")
 
@@ -56,7 +60,7 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     !["Click App Builder"](images/selections.png "")
 
-9. Now, let's map the columns for the Event Types chart. In the Property Editor, enter/select the following:
+9. Next, we’ll map the columns for the Event Types chart. In the Property Editor, enter/select the following:
 
     - Under Column Mapping:
 
@@ -66,7 +70,7 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     !["Click App Builder"](images/column-mapping-chart1.png "")
 
-10. Let's say, for second chart we want to display **Total Events By Month/Year**. Navigate to Chart 2 and update the following:
+10. For the second chart, we’ll display **Total Events By Month/Year**. Navigate to Chart 2 and update the following:
 
     - Identification > Name: **Total Events By Month/Year**.
 
@@ -101,7 +105,7 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     !["Click App Builder"](images/sql-command.png "")
 
-2. Copy and paste the following create table statement in the code editor to create a package on insert, update and delete events.
+2. Copy and paste the following CREATE TABLE statement in the code editor to create a package on insert, update and delete operations of events table.
 
     ```
     <copy>
@@ -140,21 +144,21 @@ In this lab, we will learn how to enhance charts in Oracle APEX by leveraging th
 
     !["Click App Builder"](images/run-spec.png "")
 
-6. Now, select the Package Body and click **Run**.
+6. Next, select the Package Body and click **Run**.
 
     !["Click App Builder"](images/run-body.png "")
 
-7. Let's navigate to **SQL Workshop > Object Browser** to view newly created package.
+7. Finally, navigate to **SQL Workshop > Object Browser** to view the newly created package.
 
     !["Click App Builder"](images/objt-storage.png "")
 
-8. Look under **Packages**, the package has been created.
+8. Under **Packages**, you can see that the package has been created.
 
     !["Click App Builder"](images/package-created.png "")
 
 ## **Summary**
 
-You now know how to use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder.
+You now know how to use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder and SQL Workshop.
 
 ## **Acknowledgments**
 
