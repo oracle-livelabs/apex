@@ -26,7 +26,7 @@ Estimated Time: 10 minutes
 
 1. On the top right, select the **Shared Components icon**.
 
-    ![shared components](./images/shared-compo.png " ")
+    ![shared components](./images/shared-comps.png " ")
 
 2. Under **Navigation and Search**, select **Navigation Menu**.
 
@@ -60,7 +60,7 @@ Estimated Time: 10 minutes
 
     - Target > Target Type: **- No Target -**
 
-     Click **Create List Entry**.
+    Click **Create List Entry**.
 
     ![Create List entry](./images/doc-home2.png " ")
 
@@ -79,6 +79,10 @@ Estimated Time: 10 minutes
 9. Now, select **Administration** list entry and set the Sequence: **150** and select **Apply Changes**.
 
     ![Set Admin Entry](./images/admin-entry.png " ")
+
+10. Similarly, select **Archived Tasks and Workflows** list entry and set the Sequence: **145** and select **Apply Changes**.
+
+    ![Set Admin Entry](./images/archived-tasks.png " ")
 
 ## Task 2: Improve UI
 

@@ -721,11 +721,13 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 4. In the create page wizard, enter/select the following:
 
     - Page Definition: Name: **Archived Tasks and Workflows**
+
     - Navigation:
+
         - Breadcrumb: **Toggle OFF**
         - Icon: **fa-archive**
 
-    Click **Create Page**.
+     Click **Create Page**.
 
     ![Create Page](./images/create-at2.png " ")
 
@@ -744,7 +746,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
             - Remember Active Tab: **Check**
             - Layout: **Fill Tab Labels**
 
-            Click **Ok**.
+            Click **OK**.
 
     ![New Region](./images/static-region.png " ")
 

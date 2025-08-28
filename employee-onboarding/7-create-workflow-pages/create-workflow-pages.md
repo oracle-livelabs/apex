@@ -796,7 +796,10 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Set Type: **JavaScript Expression**
         - JavaScript Expression: **this.data**
 
-    - Affected Elements > Item(s): **P36\_TRAINING\_ID**
+    - Affected Elements:
+
+        - Selection Type: **Item(s)**
+        - Item(s): **P36\_TRAINING\_ID**
 
        ![Create TRUE action](./images/set-value.png " ")
 
@@ -865,15 +868,11 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
         - Dashboard Page Name: **Workflow Dashboard**
 
-        - Form Page Name: **Initiated By Me Form**. This is used for the Workflow Details page.
+        - Form Page Name: **Initiated By Me Form**. ( This is used for the Workflow Details page.)
 
     Click **Create Page**.
 
-    ![configure workflow attr](./images/config-workflow-console.png =60%x*)
-
-4. Save the page.
-
-    ![Save workflow ](./images/save-workflow-console.png " ")
+    ![configure workflow attr](./images/config-workflow-console.png "")
 
 ## Task 7: Create My Workflows Page
 
@@ -900,6 +899,8 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
     ![configure workflow attr](./images/config-workflow-console2.png =50%x*)
 
 4. Click **Save and Run** and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
+
+    ![Save workflow ](./images/save-runn.png " ")
 
 ## Summary
 
