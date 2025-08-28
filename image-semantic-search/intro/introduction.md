@@ -43,7 +43,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 3. Once the application is installed,
     - Follow **Lab 1** to load the ONNX Models to your database.
 
-    - Proceed to **App Builder homepage**, navigate to **Workspace Utilities > Vector Providers > CLIP TEXT MODEL**. In the Vector Provider Details page, select the following:
+    - In the **App Builder homepage**, navigate to **Workspace Utilities > Vector Providers > CLIP TEXT MODEL**. In the Vector Provider Details page, select the following:
 
         - Under Local Embedding:
 
