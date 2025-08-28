@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will enhance your APEX Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context-aware results.
+In this lab, you will enhance your APEX Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context aware results.
 
-By the end of this lab, your APEX application will support real-time, AI-powered search, enabling users to find similar or related posted images through natural language or visual input.
+By the end of this lab, your APEX application will support real time, AI powered search, enabling users to find similar or related posted images through natural language or visual input.
 
 Estimated Time: 20 minutes
 
@@ -16,7 +16,7 @@ In this lab, you will:
 
 - Build a Search Page that allows users to search posted images using text queries.
 
-- Create a Search Page for image-to-image search, where users can upload an image to find visually similar posted images.
+- Create a Search Page for image to image search, where users can upload an image to find visually similar posted images.
 
 - Edit the Timeline region to automatically generate image embeddings using the image vector provider whenever a new image is posted. These embeddings are stored in the database to support future semantic searches.
 
@@ -51,7 +51,7 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc2.png =60%x* )
+    ![Create Search Configuration](images/create-sc2.png " " )
 
 7. Enter/Select the following:
 
@@ -62,17 +62,17 @@ In this task, you will create a search configuration in Oracle APEX using the CL
 
     Click **Next**.
 
-    ![Create Search Configuration](images/create-sc3.png =60%x*)
+    ![Create Search Configuration](images/create-sc3.png " ")
 
 8. Select the following:
 
-    - Primary key Column: **ID**
+    - Primary key Column: **ID ( Number)**
     - Vector Column: **AI\_IMAGE\_VECTOR (Vector)**
     - Title Column: **CREATED_BY (Varchar2)**
 
     Click **Create Search Configuration**.
 
-    ![Create Search Configuration](images/create-sc4.png =60%x*)
+    ![Create Search Configuration](images/create-sc4.png " ")
 
 9. In the Search Configuration Page, enter/select the following:
 
@@ -116,17 +116,20 @@ In this task, we will create a Search page for Text based search.
 
 3. In the Create a Page Wizard, select **Search Page**.
 
-    ![Create Page](images/create-paget2.png =60%x*)
+    ![Create Page](images/create-paget2.png " ")
 
 4. In the Create Page Wizard, enter/select the following:
 
-    - Page Definition > Name: **Text to Image**
+    - Under Page Definition:
+
+        - Page Number : **2**
+        - Name: **Text to Image**
 
     - Search Configurations > **Click the check box for Text Search**.
 
     Click **Create Page**.
 
-    ![Create Page](images/create-paget3.png =60%x*)
+    ![Create Page](images/create-paget3.png " ")
 
 5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
 
@@ -145,7 +148,7 @@ In this task, we will create a Search page for Text based search.
 
     ![CSS Inline](images/css-inline.png " ")
 
-6. Click **Save** to save the Page.
+6. Click **Save**.
 
     ![Save and Run page](images/save-run2.png " ")
 
@@ -158,11 +161,14 @@ In this task, we will create a Search page for Text based search.
 
 2. In the Create a Page Wizard, select **Cards** and click **Next**.
 
-    ![Create page](images/create-pages2.png =60%x*)
+    ![Create page](images/create-pages2.png )
 
 3. In the Create Cards Wizards, enter/select the following:
 
-    - Page Definition > Name : **Image to Image**
+    - Under Page Definition:
+
+        - Page Number : **3**
+        -  Name : **Image to Image**
 
     - Under Data Source:
 
@@ -209,7 +215,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Next**.
 
-    ![Create page](images/create-pages3.png =60%x*)
+    ![Create page](images/create-pages3.png " ")
 
 4. In the Create Cards Wizard, select the following:
 
@@ -217,7 +223,7 @@ In this task, we will create a Search page for Text based search.
 
     Click **Create Page**.
 
-    ![Create page](images/create-pages4.png =60%x*)
+    ![Create page](images/create-pages4.png " ")
 
 5. In the Rendering tree, right click on the **Body** and select **Create Page Item**.
 
@@ -237,9 +243,7 @@ In this task, we will create a Search page for Text based search.
 
     - Layout > Sequence: **10**
 
-    ![Page item](images/create-pageitem2.png " ")
-
-    ![Page item](images/create-pageitem3.png " ")
+    ![Page item](images/image-drop.png " ")
 
 7. Right click on the **P3_IMAGE** page item and select **Create Dynamic Action**
 
@@ -324,7 +328,7 @@ In this task, we will create a Search page for Text based search.
         - Type: **Item is NOT NULL**
         - Item: **P3_IMAGE**
 
-    ![Display Page item](images/pa-display.png =30%x*)
+    ![Display Page item](images/pa-display.png " ")
 
     ![Display Page item](images/create-items6.png " ")
 

@@ -35,11 +35,11 @@ To enable your schema to create web credentials and mining models, you must gran
 
 In this lab, you will load the ONNX Models into your database.
 
-1. Login into your Oracle APEX workspace.
+1. Login into your **Oracle APEX workspace**.
 
    ![Login into your APEX account](images/apex-login.png " ")
 
-2. On the APEX Homepage, navigate to SQL Workspace > **SQL Commands**.
+2. On the APEX Homepage, navigate to **SQL Workshop** > **SQL Commands**.
 
     ![SQL Commands](images/sql-commands.png " ")
 

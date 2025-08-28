@@ -20,23 +20,19 @@ In this lab, you:
 
  In this task, you configure a vector provider to generate embeddings from text input using the CLIP text model stored in the database.
 
-1. Navigate to **App Builder**.
+1. Navigate to **App Builder** > **Workspace Utilities** > **All Workspace Utilities**.
 
-    ![App Builder Home Page](images/app_builder_homepage.png " ")
+    ![App Builder Home Page](images/hp-1.png " ")
 
-2. Select **Workspace Utilities**.
-
-    ![App Builder Home Page](images/app_builder_homepage2.png " ")
-
-3. Select **Vector Providers**.
+2. Select **Vector Providers**.
 
     ![Workspace Utilities](images/vector.png " ")
 
-4. Click **Create**.
+3. Click **Create**.
 
     ![Create Vector Provider](images/create-vectorprovider.png " ")
 
-5. Enter/Select the following in the create window:
+4. Enter/Select the following in the create window:
 
     - Under Identification:
 
@@ -84,7 +80,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
     ![Property Editor](images/run-command.png " ")
 3. In the Navigation bar, navigate to **App Builder** > Workspace Utilities > **All Workspace Utilities**.
 
-    ![App Builder Utilities](images/workspace-utils.png =50%x*)
+    ![App Builder Utilities](images/workspace-utils.png " ")
 
 4. Select **Vector Providers**.
 
@@ -102,9 +98,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
         - Name: **CLIP IMAGE MODEL**
         - Static ID: **clip\_image\_model**
 
-    - Under Local Embedding:
-
-        - Custom Function Name: **clip\_image\_model**
+    - Local Embedding > Custom Function Name: **clip\_image\_model**
 
      Click **Create**.
 
