@@ -1,4 +1,4 @@
-# Enhance Dashboard using APEX Assistant
+# Enhance Charts and Database Objects with APEX Assistant
 
 ## Introduction
 
