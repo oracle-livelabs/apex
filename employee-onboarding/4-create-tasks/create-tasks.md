@@ -112,8 +112,6 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
 10. Click **Apply Changes**.
 
-    ![Apply Changes](./images/apply-changes.png " ")
-
 ## Task 2: Create Task Definitions to Allocate Trainings
 
 1. In the Task Definitions page, click **Create**.
