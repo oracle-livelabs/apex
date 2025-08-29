@@ -625,6 +625,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 11. In the Edit Action page, enter the following:
 
     - Action > Name: **Archive Workflows**
+
     - Code > Code: copy and paste the below code
 
         ```
@@ -683,6 +684,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 17. In the Edit Action page, enter the following:
 
     - Action > Name: **Archive Tasks**
+
     - Code > Code: copy and paste the below code
 
         ```
@@ -740,6 +742,7 @@ Now that the Workflow is created, let us create a SQL script that archives workf
     - Identification > Name: **Show All**
 
     - Under Appearance:
+
         - Template: **Tabs Container**
         - Template Options:
 
@@ -777,7 +780,6 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
     - Source > Table Name: **ARCHIVED\_TASK\_HISTORY**
 
-
      ![create IR region](./images/create-ir-region2.png " ")
 
 10. Similary create another sub region for Archived Wrorkflows, with the following attributes:
@@ -790,13 +792,11 @@ Now that the Workflow is created, let us create a SQL script that archives workf
 
     - Source > Table Name: **ARCHIVED\_WORKFLOWS**
 
-
      ![create IR region](./images/create-ir-region3.png " ")
 
 11. Click **Save**.
 
     ![Save the page](./images/save-page2.png "")
-
 
 ## Summary
 

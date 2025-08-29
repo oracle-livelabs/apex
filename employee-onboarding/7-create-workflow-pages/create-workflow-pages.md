@@ -31,7 +31,7 @@ Estimated Time: 40 minutes
 
 Now that the Workflow is created, let us create a page that HR will use to Onboard a New Employee.
 
-1. Navigate to **Application ID <number>**.
+1. Navigate to **Application ID <-number->**.
 
     ![navigate to emp onboarding app](./images/app-id.png " ")
 
@@ -41,7 +41,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
 3. Select **Form**.
 
-    ![select blank page](./images/select-form-page.png =50%x*)
+    ![select blank page](./images/select-form-page.png "")
 
 4. For Page Attributes, enter/select the following:
 
@@ -53,16 +53,17 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
      Click **Next**.
 
-    ![Configure form page](./images/form-details.png =50%x*)
+    ![Configure form page](./images/form-details.png "")
 
 5. Select Primary Key Column 1 : **EMPLOYEE_ID (Number)**.
     Click **Create Page**.
 
-    ![Configure form page](./images/primary-key.png =50%x*)
+    ![Configure form page](./images/primary-key.png "")
 
 6. In the Page Designer, in the rendering tree, select **New Employee - Onboarding** region and in the property editor, make the following changes:
 
     - Under Appearance:
+
         - Template Options: In the pop-up box
             - Header: **Hidden**
 
@@ -99,6 +100,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
       - Validation > Value Required - **Toggle ON**
 
       - Under List of Values:
+
         - Type: **Static Values**
         - Static Values: enter the following
 
@@ -176,7 +178,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![create workflow process](./images/configure-process-param.png " ")
 
-    *Note: Your Page Item Number may vary.*
+    *Note: Your Page Number may vary.*
 
 5. Click **Save**.
 
@@ -219,6 +221,7 @@ In this task you will create a page to create an email id and allocate laptop to
 7. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **P11\_SETUP\_INFO**
         - Type: **Hidden**
 
@@ -227,6 +230,7 @@ In this task you will create a page to create an email id and allocate laptop to
 8. Similarly, create another **Page Item** with the following property:
 
     - Under Identification:
+
         - Name: **P11\_EMPLOYEE\_ID**
         - Type: **Display Only**
 
@@ -237,6 +241,7 @@ In this task you will create a page to create an email id and allocate laptop to
 9. Similarly, create another **Page Item** with the following properties:
 
     - Under Identification:
+
         - Name: **P11\_FIRST\_NAME**
         - Type: **Display Only**
 
@@ -266,6 +271,7 @@ In this task you will create a page to create an email id and allocate laptop to
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
     - Under Server-side Condition:
+
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Create Email**
@@ -303,6 +309,7 @@ In this task you will create a page to create an email id and allocate laptop to
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
     - Under Server-side Condition:
+
         - Type: **Item = Value**
         - Item: **P11\_SETUP\_INFO**
         - Value: **Allocate Laptop**
@@ -316,6 +323,7 @@ In this task you will create a page to create an email id and allocate laptop to
 17. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **P11\_LAPTOP\_INFO**
         - Type: **Rich Text Editor**
 
@@ -391,7 +399,7 @@ In this task you will create a page to create an email id and allocate laptop to
         </copy>
         ```
 
-    *Note: Your page item may vary* 
+    *Note: Your page item may vary.*
 
     - Under Server-side Condition:
 
@@ -622,7 +630,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         - Target:
             - Page: **11**
-             
+
               *Note: This should link to the IT Setup page. Your page numbers may vary.*
 
             - Set Items:
@@ -674,10 +682,12 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 19. Select the newly created region and in the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Training Details**
         - Type: **Content Row**
 
     - Under Source:
+
         - Type: **SQL Query**
         - SQL Query: copy and paste the below code
 
@@ -717,6 +727,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 20. In the **Attributes** tab, enter/select the following:
 
     - Under Settings:
+
         - Title: **&TRAINING_NAME.**
         - Description:
 
@@ -730,6 +741,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Display Badge: Toggle **ON**
 
     - Under Badge:
+
         - Label: **&STATUS.**
         - Value: **Status**
         - State: **RESPONSE_COLOR**
@@ -764,6 +776,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 24. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **P36\_TRAINING\_ID**
         - Type: **Hidden**
 
@@ -793,6 +806,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
     - Identification: Action > **Set Value**
 
     - Under Settings:
+
         - Set Type: **JavaScript Expression**
         - JavaScript Expression: **this.data**
 

@@ -319,6 +319,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
     - Identification > Name: **Onboarding Completion Email**
 
     - Under Settings:
+
         - To: **&EMAIL.**
         - Subject: **Congratulations on Completing Your Onboarding!**
         - Body Plain Text: copy and paste the below text

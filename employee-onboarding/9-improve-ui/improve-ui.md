@@ -43,6 +43,7 @@ Estimated Time: 10 minutes
 5. Enter/select the following:
 
     - Under Entry:
+
         - Image/Class: **fa-tasks-alt**
         - List Entry Label: **Task Pages**
 
@@ -55,6 +56,7 @@ Estimated Time: 10 minutes
 6. Similarly, create another entry with the following properties:
 
     - Under Entry:
+
         - Image/Class: **fa-workflow**
         - List Entry Label: **Workflow Pages**
 
