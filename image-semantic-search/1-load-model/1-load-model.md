@@ -100,4 +100,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
