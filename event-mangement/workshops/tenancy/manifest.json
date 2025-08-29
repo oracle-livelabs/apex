@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Event Management App with AI-Assisted Development in Oracle APEX",
+  "workshoptitle": "Generate an Event Management App with AI assisted development in Oracle APEX",
     "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
       {
@@ -12,11 +12,11 @@
       },
       {
         "title": "Lab 1: Configure AI Service and Create Data Model using AI",
-        "filename": "../../1-installing-sample-datasets/create-data-model-using-ai.md"
+        "filename": "../../1-create-data-model-using-ai/1-create-data-model-using-ai.md"
       },
       {
         "title": "Lab 2: Create the Application using Generative AI",
-          "filename": "../../2-create-app/create-app-using-ai.md"
+          "filename": "../../2-create-app/2-create-app.md"
       },
       {
         "title": "Lab 3: Enhance Charts and Database Objects with APEX Assistant",
@@ -24,7 +24,7 @@
       },
       {
         "title": "Lab 4: Enhance UI with APEX Assistant",
-          "filename": "../../4-chat-assistant/4-ui-apex-assistant.md"
+          "filename": "../../4-ui-apex-assistant/4-ui-apex-assistant.md"
       },
       {
         "title": "Lab 5: Create an Event Chat Assistant",
