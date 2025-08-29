@@ -4,6 +4,8 @@
 
 In this lab, you will learn how to enhance an Oracle APEX application by creating an Event Chat Assistant. Using the Show AI Assistant dynamic action, you will build a chatbot that can respond to user queries about event details. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to see how it works with generic responses, and then enhance it by creating an AI Configuration and RAG source so the chatbot fetches information directly from your event data. This approach demonstrates how to combine low-code development with AI-driven capabilities to deliver smarter, data-aware user experiences.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 By the end of this lab, you will be able to:

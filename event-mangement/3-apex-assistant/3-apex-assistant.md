@@ -6,6 +6,8 @@ In this lab, you will learn how to enhance charts in Oracle APEX using APEX Assi
 
 In addition to enhancing charts, you will also create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 - Enhance charts by using APEX Assistant to generate SQL queries through natural language.

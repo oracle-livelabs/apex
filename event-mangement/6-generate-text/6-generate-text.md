@@ -4,6 +4,8 @@
 
 In this lab, you will enhance your Oracle APEX application by integrating AI-powered text generation. Specifically, you will create a feature that automatically generates event descriptions based on event details stored in the database. By leveraging a Retrieval-Augmented Generation (RAG) source and dynamic actions, you will see how APEX makes it easy to combine low-code development with AI services to deliver smarter, user-friendly applications.
 
+Estimated Time: 5 minutes
+
 ### Objectives
 
 - Create a Generate Description button within the form page.
@@ -18,7 +20,7 @@ In this lab, you will enhance your Oracle APEX application by integrating AI-pow
 
     !["Click App Builder"](images/navigate-to-11.png "")
 
-2. In the **Rendering** tab, right-click **Body** and click **Create Button**.
+2. In the **Rendering** tab, right-click **Region** and click **Create Button**.
 
     !["Click App Builder"](images/create-button-ai.png "")
 

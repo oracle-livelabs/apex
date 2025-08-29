@@ -8,7 +8,7 @@ In this lab, you will explore how to use Generative AI Services to build a compl
 
 Using Generative AI, you will design a data model tailored for project management, incorporating key elements such as project statuses, milestones, tasks, task to-dos, task links, and comments. These components will provide the foundation for building an efficient and interactive project management application.
 
-Estimated Time: 15 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 
@@ -121,15 +121,15 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["click create sql script"](images/review-quick-sql.png "")
 
-9. For Script Name: Enter **Event Data Model** and click **Save Script**.
+9. For Script Name: Enter **Event Data Model**.
 
     !["provide script name"](images/event-data-model.png "")
 
-10. Now to add sample data into the tables. Navigate to **APEX Assistant**.
+10. Now to add sample data into the tables. Click **APEX Assistant**.
 
     !["provide script name"](images/click-apex-assistant.png "")
 
-11. Select all your database objects and click **Use Selection** from the APEX Assistant box.
+11. Select your SQL code and click **Use Selection** from the APEX Assistant box.
 
     !["provide script name"](images/use-selection.png "")
 
