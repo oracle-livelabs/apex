@@ -26,6 +26,8 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/edit-page.png "")
 
+    >Note: Page number may vary depending on your application.
+
 3. Select **Events** region. In the Property Editor, select the following:
 
     - Identification > Type: **Content Row**
@@ -139,6 +141,8 @@ By the end of this lab, you will be able to:
         - Clear Cache: **11**
 
         Click **OK**.
+
+    >Note: Page number may vary depending on your application.
 
     !["Click App Builder"](images/title-link.png "")
 

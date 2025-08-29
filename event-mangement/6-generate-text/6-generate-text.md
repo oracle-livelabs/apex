@@ -18,6 +18,8 @@ Estimated Time: 5 minutes
 
 1. In the runtime environment, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
 
+    >Note: Page number may vary depending on your application.
+
     !["Click App Builder"](images/navigate-to-11.png "")
 
 2. In the **Rendering** tab, right-click **Region** and click **Create Button**.
@@ -41,6 +43,8 @@ Estimated Time: 5 minutes
        - Icon: **fa-file-text**
 
 4. Drag and drop **GENERATE\_DESCRIPTION** button under **P11\_DESCRIPTION** page item.
+
+    >Note: Page Item number may vary depending on your application.
 
     !["Click App Builder"](images/generate-desc.png "")
 
@@ -89,6 +93,7 @@ Estimated Time: 5 minutes
     where ev.id = :P11_ID
     </copy>
     ```
+    >Note: Page Item number may vary depending on your application.
 
     - Under Server-side Condition:
 
@@ -102,6 +107,8 @@ Estimated Time: 5 minutes
         </copy>
         ```
 
+    >Note: Page number may vary depending on your application.
+
 6. Click **Create**.
 
     !["Click App Builder"](images/gen-desc.png "")
@@ -111,6 +118,8 @@ Estimated Time: 5 minutes
 ## Task 3: Add Generate Text with AI Dynamic Action
 
 1. On the top right corner, click **Edit Page 11**.
+
+    >Note: Page number may vary depending on your application.
 
     !["Click App Builder"](images/edit-page11.png "")
 
@@ -141,6 +150,8 @@ Estimated Time: 5 minutes
         - Type: **Item**
 
         - Item: **P11_DESCRIPTION**
+
+    >Note: Page Item number may vary depending on your application.
 
 5. Click **Save**.
 

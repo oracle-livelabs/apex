@@ -22,6 +22,8 @@ By the end of this lab, you will be able to:
 
 1. Close the dialog box. From the developer toolbar, navigate to **Page 3**.
 
+    >Note: Page number may vary depending on your application.
+
     !["Click App Builder"](images/navigate-to3.png "")
 
 2. In the Page Designer, right-click **Breadcrumb** and click **Create Button**.
@@ -150,6 +152,7 @@ By the end of this lab, you will be able to:
     return :APP_PAGE_ID = 3;
     </copy>
     ```
+    >Note: Page number may vary depending on your application.
 
 11. Click **Create**.
 
