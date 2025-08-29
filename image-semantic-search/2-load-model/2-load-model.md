@@ -22,7 +22,7 @@ To enable your schema to load the mining models, you must grant the necessary pr
 
 1. Login as SYS/Admin User and execute the below command.
 
-    ```
+    ```sql
      <copy>
      GRANT EXECUTE ON DBMS_CLOUD TO <YourSchemaName> ;
      GRANT CREATE MINING MODEL TO <YourSchemaName>;
@@ -41,7 +41,7 @@ In this lab, you will load the ONNX Models into your database.
 
 2. Copy and paste the below code to load the CLIP text model and click **Run**.
 
-    ```
+    ```sql
      <copy>
      BEGIN
      DBMS_VECTOR.LOAD_ONNX_MODEL(
@@ -62,9 +62,9 @@ In this lab, you will load the ONNX Models into your database.
 
     ![Load text model](images/load-txt-model.png " ")
 
-4. Copy and paste the below to load the CLIP image model and click **Run**.
+3. Copy and paste the below to load the CLIP image model and click **Run**.
 
-    ```
+    ```sql
      <copy>
      BEGIN
      DBMS_VECTOR.LOAD_ONNX_MODEL(
