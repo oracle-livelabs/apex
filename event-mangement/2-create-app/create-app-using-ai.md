@@ -105,11 +105,11 @@ Estimated Time: 15 minutes
 
     ![display project dashboard page](images/event-dashboard.png " ")
 
-## **Summary**
+## Summary
 
 You now know how to utilize Generative AI to create the first cut of your application.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025

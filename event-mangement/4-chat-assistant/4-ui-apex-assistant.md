@@ -16,7 +16,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Convert a Classic Report into a Content Row
 
-1. From the runtime environment, navigate to your faceted search page. For this demo the page is **Discover Events**. The name might differ because app has been generated using AI.
+1. From the runtime environment, navigate to your faceted search page. For this demo, the page is *Discover Events*. The name might differ because the app was generated using AI.
 
     !["Click App Builder"](images/discover-events.png "")
 
@@ -40,7 +40,7 @@ By the end of this lab, you will be able to:
 
         - Display Avatar: Toggle **On**
 
-    - Avatar > Icon: **fa-calender-month**
+    - Avatar > Icon: **fa-calendar-month**
 
     !["Click App Builder"](images/name-attr.png "")
 
@@ -72,12 +72,12 @@ By the end of this lab, you will be able to:
 10. Select **&DESCRIPTION.** and click **APEX Assistant**. Now add the following prompts:
 
     > Prompt 1:
-    > Generate a HTML to display start date and venue as a labelled information using span tag.
+    > Generate an HTML to display start date and venue as a labelled information using span tag.
 
     !["Click App Builder"](images/generate-html.png "")
 
     > Prompt 2:
-    > use APEX substitution strings
+    > Use APEX substitution strings
 
     !["Click App Builder"](images/substitution-apex.png "")
 
@@ -98,15 +98,15 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-content-row.png "")
 
-14. Next, let's add a badge to the content row. Navigate back to the page designer. Navigate to **Attributes** tab and enter/select the following:
+14. Next, add a badge to the content row. Navigate back to the page designer. Navigate to **Attributes** tab and enter/select the following:
 
     - Settings > Display Badge: Toggle **On**
 
     - Under Badge:
 
-        - Label: **&EVENT_TYPE_ID.**
+        - Label: **&EVENT\_TYPE\_ID.**
 
-        - Value: **EVENT_TYPE_NAME**
+        - Value: **EVENT\_TYPE\_NAME**
 
         - Position: **End**
 
@@ -118,7 +118,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/save-run2.png "")
 
-16. Next, let's add hyperlink to title and open a form page. Navigate back to the page designer. Under **Events** region, right-click **Actions** and click **Create Action**.
+16. Next, add a hyperlink to the title to open a form page. Navigate back to the page designer. Under **Events** region, right-click **Actions** and click **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
 

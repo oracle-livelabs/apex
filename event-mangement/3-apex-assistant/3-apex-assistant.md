@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, we will learn how to enhance charts in Oracle APEX by leveraging the APEX Assistant. Instead of manually writing queries, we will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach not only speeds up development but also demonstrates how AI-powered assistance can simplify complex tasks like data visualization.
+In this lab, you will learn how to enhance charts in Oracle APEX using APEX Assistant. Instead of manually writing queries, we will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach speeds up development and shows how AI-powered assistance can simplify complex tasks such as data visualization.
 
-In addition to enhancing charts, we will also explore how to create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
+In addition to enhancing charts, you will also create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
 
 ### Objectives
 
@@ -12,9 +12,9 @@ In addition to enhancing charts, we will also explore how to create database obj
 
 - Create PL/SQL packages using APEX Assistant in SQL Commands.
 
-## Task 1: Enhance charts using Generative AI
+## Task 1: Enhance Charts with APEX Assistant
 
-1. From the runtime environment, navigate to developer toolbar and click **Page 1**.
+1. From the runtime environment, navigate to the developer toolbar and click **Page 1**.
 
     !["Click App Builder"](images/event-dashboard.png "")
 
@@ -35,7 +35,7 @@ In addition to enhancing charts, we will also explore how to create database obj
 
     >Note: APEX Assistant responds with a query as shown in the above screenshot.
 
-5. Next, let’s adjust the query so that the highest count appears at the top. Enter the below prompt and press enter:
+5. Next, let’s adjust the query so that the highest count appears at the top. Enter the following prompt and press Enter.
 
     >Prompt 2:
     >Show highest count at the top.
@@ -48,7 +48,7 @@ In addition to enhancing charts, we will also explore how to create database obj
 
 7. While **Validating**, if your query throws an error, APEX Assistant can help troubleshoot the problem.
 
-    For example, suppose you have the following query and have inadvertently left off the "s" at the end of the table name.
+    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table name.
 
     APEX Assistant switches to General Assistance mode. Click **Help me fix this**.
 
@@ -56,7 +56,7 @@ In addition to enhancing charts, we will also explore how to create database obj
 
     !["Click App Builder"](images/fix-this.png "")
 
-8. You can also use **General Assistance** for general conversation, technical questions such as "Explain this" or "Improve this code."  APEX Assistant prompts you with default options such as **Use Selection, Improve Selection, and Explain Selection**.
+8. You can also use **General Assistance** for general conversation, technical questions such as "Explain this" or "Improve this code."  APEX Assistant provides default options such as **Use Selection, Improve Selection, and Explain Selection**.
 
     !["Click App Builder"](images/selections.png "")
 
@@ -99,13 +99,13 @@ In addition to enhancing charts, we will also explore how to create database obj
 
     !["Click App Builder"](images/view-dash.png "")
 
-## Task 2: Create a Package using APEX Assistant
+## Task 2: Create a PL/SQL Package with APEX Assistant
 
 1. Navigate to **SQL Workshop** and select **SQL Commands**.
 
     !["Click App Builder"](images/sql-command.png "")
 
-2. Copy and paste the following CREATE TABLE statement in the code editor to create a package on insert, update and delete operations of events table.
+2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
 
     ```
     <copy>
@@ -132,7 +132,7 @@ In addition to enhancing charts, we will also explore how to create database obj
 3. Click **APEX Assistant** and enter the following prompt:
 
     >Prompt 1:
-    >Generate a PL/SQL package to insert, update and delete events.
+    >Generate a PL/SQL package to handle insert, update, and delete operations for events.
 
     !["Click App Builder"](images/apex-assist.png "")
 
@@ -156,11 +156,11 @@ In addition to enhancing charts, we will also explore how to create database obj
 
     !["Click App Builder"](images/package-created.png "")
 
-## **Summary**
+## Summary
 
-You now know how to use integrated AI Chat capability (called APEX Assistant) in Code Editors within App Builder and SQL Workshop.
+In this lab, you learned how to use the integrated AI Chat capability (APEX Assistant) in code editors within App Builder and SQL Workshop.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025

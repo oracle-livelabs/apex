@@ -38,7 +38,7 @@ In this lab, you will enhance your Oracle APEX application by integrating AI-pow
 
        - Icon: **fa-file-text**
 
-4. Drag **GENERATE_DESCRIPTION** button under **P11_DESCRIPTION** page item.
+4. Drag and drop **GENERATE\_DESCRIPTION** button under **P11\_DESCRIPTION** page item.
 
     !["Click App Builder"](images/generate-desc.png "")
 

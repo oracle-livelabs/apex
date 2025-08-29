@@ -600,7 +600,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     ![Object Browser](./images/view-tables.png " ")
 
-## **Summary**
+## Summary
 
 You now know how to configure Generative AI Services using Workspace Utilities and Create a Data Model using AI. You may now **proceed to the next lab**.
 

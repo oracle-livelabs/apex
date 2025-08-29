@@ -16,7 +16,7 @@ By the end of this lab, you will be able to:
 
 - Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your event data source.
 
-## Task 1: Create an Event Chat Assistant without RAG Source
+## Task 1: Set Up Event Chat Assistant without RAG Source
 
 1. Close the dialog box. From the developer toolbar, navigate to **Page 3**.
 
@@ -46,7 +46,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/event-assist-btn.png "")
 
-4. In the **Rendering** atb, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
+4. In the **Rendering** tab, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
 
     !["Click App Builder"](images/create-dy-chatbot.png "")
 
@@ -62,7 +62,7 @@ By the end of this lab, you will be able to:
 
     - Generative AI > Service: **Open AI**
 
-    - Welcome Message: **Hi! How can I help you today.**
+    - Welcome Message: **Hi! How can I help you today?**
 
     - Appearance > Title: **Event Assistant**
 
@@ -74,9 +74,9 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-assit.png "")
 
-## Task 2:Create AI Configuration and a RAG Source
+## Task 2: Create AI Configuration and RAG Source
 
-1. In the Page Designer, navigate to **Shared Components**.
+1. Navigate to **Shared Components**.
 
     !["Click App Builder"](images/naviagte-sc.png "")
 
@@ -101,7 +101,7 @@ By the end of this lab, you will be able to:
         ```
         <copy>
 
-        Generate a professional looking Abstract as description not exceeding 400 chars.
+        Generate a professional-looking abstract as a description, not exceeding 400 characters.
 
         Use the data provided about the events as context.
 
@@ -153,9 +153,9 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/rag-func1.png "")
 
-## Task 3: Create an Event Chat Assistant with RAG Source
+## Task 3: Enable Event Chat Assistant with RAG Source
 
-1. From top right corner, click **Edit Page 3**
+1. From the top-right corner, click **Edit Page 3**.
 
     !["Click App Builder"](images/edit-page3.png "")
 
@@ -173,13 +173,13 @@ By the end of this lab, you will be able to:
 
 3. Click **Save and Run**.
 
-4. In the runtime environment, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched exclusively from the specified data source.
+4. In the runtime environment, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
     !["Click App Builder"](images/view-ai-chat.png "")
 
 ## Summary
 
-In this lab, you created an Event Chat Assistant that integrates AI into your Oracle APEX application. You started by setting up the chatbot without a RAG source, which returned generic responses. Then, you enhanced the chatbot by creating an AI Configuration and RAG source, enabling the assistant to fetch accurate event details directly from your database. With this setup, your Event Chat Assistant now delivers a more relevant and interactive experience, showcasing how AI-powered assistants can make applications more user-friendly and context-aware.
+In this lab, you created an Event Chat Assistant by adding a button, configuring AI settings, and setting up a dynamic action, allowing users to interactively ask questions about event details.
 
 ## Acknowledgments
 
