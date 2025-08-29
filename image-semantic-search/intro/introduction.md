@@ -60,8 +60,8 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Load ONNX Models](?lab=1-load-model) | 10 minutes |
-| 2 | [Import and Edit Social Media App](?lab=2-import-app) | 5 minutes |
+| 1 | [Import and Edit Social Media App](?lab=1-import-app) | 5 minutes |
+| 2 | [Load ONNX Models](?lab=2-load-model) | 10 minutes |
 | 3 | [Create Vector Providers](?lab=3-create-vector-providers) | 10 minutes |
 | 4 | [Implement Text and Image Search](?lab=4-edit-application) | 15 minutes |
 | 5 | [Run the Application](?lab=5-run-app) | 5 minutes |
@@ -78,4 +78,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

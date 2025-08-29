@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Grant Database Privileges
 
-To enable your schema to load the mining models, you must grant the necessary privileges while logged in as a SYS or Admin user.
+To enable your schema to load the mining models, you must grant the necessary privileges while logged in as a SYS or Admin user in **SQL Actions.**
 
 1. Login as SYS/Admin User and execute the below command.
 
@@ -35,15 +35,11 @@ To enable your schema to load the mining models, you must grant the necessary pr
 
 In this lab, you will load the ONNX Models into your database.
 
-1. Login into your **Oracle APEX workspace**.
+1. From your **Application Homepage**, Navigate to **SQL Workshop** > **SQL Commands**.
 
-   ![Login into your APEX account](images/apex-login.png " ")
+   ![SQL Commands](images/sql-commands2.png " ")
 
-2. On the APEX Homepage, navigate to **SQL Workshop** > **SQL Commands**.
-
-    ![SQL Commands](images/sql-commands.png " ")
-
-3. Copy and paste the below code to load the CLIP text model and click **Run**.
+2. Copy and paste the below code to load the CLIP text model and click **Run**.
 
     ```
      <copy>
@@ -89,7 +85,7 @@ In this lab, you will load the ONNX Models into your database.
 
     ![Load image model](images/load-img-model.png " ")
 
-Here, you assign the name "clip\_txt\_model" to the Text model and "clip\_img\_model" to the Image model being imported.
+Here, you assign the name **clip\_txt\_model** to the Text model and **clip\_img\_model** to the Image model being imported.
 
 ## Summary
 

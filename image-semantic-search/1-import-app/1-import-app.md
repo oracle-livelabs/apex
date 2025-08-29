@@ -16,25 +16,31 @@ In this lab, you:
 
 ## Task 1: Import the Social Media Application
 
-1. Navigate to the **App Builder** and click **Import**.
+1. Login into your **Oracle APEX Workspace**.
 
-    ![Click Import](images/import0.png " ")
+   ![Login into your APEX account](images/apex-login.png " ")
 
-2. The Import dialog displays. Drag and drop, or navigate to the file. (Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL.sql) to download the application.)
+2. On the Workspace home page, click **App Builder.**
+
+    ![Click App Builder](images/homepage_app.png " ")
+
+3. Click **Import**.
+
+    ![Click Import](images/click-import.png " ")
+4. The Import dialog displays. Drag and drop, or navigate to the file. (Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL.sql) to download the application.)
 
     Click **Next**.
 
     ![Click Import](images/import1.png " ")
 
-3. Accept the defaults, click **Install Application**.
+5. Accept the defaults, click **Install Application**.
 
     ![Click Import](images/install_page.png " ")
-
-4. Click **Install Supporting Objects** to set up the required tables for the application to function properly.
+6. Click **Install Supporting Objects** to set up the required tables for the application to function properly.
 
     ![Click Import](images/install_page2.png " ")
 
-5. Click **Edit Application**.
+7. Click **Edit Application**.
 
    ![Click Import](images/install_page3.png " ")
 

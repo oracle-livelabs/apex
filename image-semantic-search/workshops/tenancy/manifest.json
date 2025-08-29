@@ -11,12 +11,12 @@
         "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Load ONNX Model",
-        "filename": "../../1-load-model/1-load-model.md"
+        "title": "Lab 1: Import Social Media App ",
+        "filename": "../../1-import-app/1-import-app.md"
       },
       {
-        "title": "Lab 2: Import Social Media App ",
-        "filename": "../../2-import-app/2-import-app.md"
+        "title": "Lab 2: Load ONNX Model",
+        "filename": "../../2-load-model/2-load-model.md"
       },
       {
         "title": "Lab 3: Create Vector Providers",

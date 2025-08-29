@@ -22,7 +22,7 @@ In this lab, you:
 
 1. Navigate to **App Builder** > **Workspace Utilities** > **All Workspace Utilities**.
 
-    ![App Builder Home Page](images/hp-1.png " ")
+    ![App Builder Home Page](images/workspace-utils.png " ")
 
 2. Select **Vector Providers**.
 
@@ -61,7 +61,7 @@ In this task, you will write a PL/SQL function that uses the CLIP image model to
 
 2. In SQL Commands, enter the following:
 
-    ```
+    ```sql
      <copy>
      CREATE OR REPLACE FUNCTION clip_image_model (p_base64_image IN CLOB) RETURN VECTOR IS
      l_blob   BLOB;
@@ -113,4 +113,4 @@ You now know how to create a Database ONNX vector provider for text and a Custom
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

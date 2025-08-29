@@ -36,15 +36,15 @@ In this lab, you:
 
 5. To perform an Image to Image search, navigate to the  **Image to Image** tab, upload the image you want to find similar matches for. The app will then search and display all posted images that closely resemble the uploaded image.
 
-    In the following example, for image-based search, when you upload an image of a 'yellow wheel', the app displays all posted images that are visually similar or related to the uploaded image.
+    In the following example, for image based search, when you upload an image of a 'yellow wheel', the app displays all posted images that are visually similar or related to the uploaded image.
 
     ![Image to Image Search](images/image-detect.png " ")
 
 ## Summary
 
-You have now learned how to post images and perform AI-powered searches on uploaded images using either text or image queries as input.
+You have now learned how to post images and perform AI powered searches on uploaded images using either text or image queries as input.
 
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, June 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
