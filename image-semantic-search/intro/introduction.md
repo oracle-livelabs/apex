@@ -4,7 +4,7 @@
 
 In today's digital landscape, visual content is everywhere, from product photos and social media posts to scanned documents and user generated media. The ability to search and understand images meaningfully, not just by filenames or tags, has become a powerful differentiator for modern applications. Traditional search methods often miss the context or content of images, limiting their effectiveness in image rich environments.
 
-In this workshop, you will learn how to implement image and text semantic search in Oracle APEX using ONNX models and Oracle Database 23ai’s built in AI Vector Search. You will enhance a Social Media APEX application to intelligently interpret and search images using both text and image queries. By combining deep learning models with APEX, you’ll unlock next generation search experiences that go beyond keywords, empowering your apps to truly understand what users are looking for.
+In this workshop, you will learn how to implement image and text semantic search in Oracle APEX using ONNX models and Oracle Database 23ai’s built in AI Vector Search. You will enhance the Social Media APEX application to intelligently interpret and search images using both text and image queries. By combining deep learning models with APEX, you’ll unlock next generation search experiences that go beyond keywords, empowering your apps to truly understand what users are looking for.
 
 Estimated Time: 45 minutes
 
@@ -18,7 +18,7 @@ In this workshop, you:
 
 - Enhance a Social Media APEX application to automatically extract meaning from uploaded images.
 
-- Enable users to perform intelligent searches,such as finding similar images or related posts—based on visual or textual similarity.
+- Enable users to perform intelligent searches,such as finding similar images or related posts based on visual or textual similarity.
 
 - Build a seamless user experience where image and text search feels natural, accurate, and fast.
 
