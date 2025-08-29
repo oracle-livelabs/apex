@@ -146,11 +146,11 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-title-link.png "")
 
-## **Summary**
+## Summary
 
 In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, showcasing how AI integration within APEX accelerates development and improves application design.
 
-## **Acknowledgments**
+## Acknowledgments
 
 - **Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
