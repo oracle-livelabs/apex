@@ -36,7 +36,7 @@ Estimated Time: 15 minutes
 5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 1:
-    >Create an application with Projects, Milestones, Status, Tasks, To-Dos, Links, and Comments. Enable Progressive Web App and Feedback features.
+    >Create an Event Management App. This app should have a calendar page and a Search page for events.
 
     !["first prompt"](images/app-prompt.png "")
 

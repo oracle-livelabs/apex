@@ -110,49 +110,45 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["provide prompt"](images/add-event-types.png "")
 
-7. Now, let's change the format from SQL to **Quick SQL** and add another prompt to update prefix of all database objects.
+7. Add another prompt to update prefix of all database objects.
 
     >Prompt:
     >Prefix all objects with ev_
 
     !["provide prompt"](images/prefix.png "")
 
-8. To complete the **SQL script**, click **Review Quick SQL**.
+8. To complete the **SQL script**, click **Create SQL Script**.
 
     !["click create sql script"](images/review-quick-sql.png "")
 
-9. In the Script Editor page, navigate to **:** beside Review and Run and click **Save SQL Script**.
-
-    !["provide script name"](images/save-sql-script.png "")
-
-10. For Script Name: Enter **Event Data Model** and click **Save Script**.
+9. For Script Name: Enter **Event Data Model** and click **Save Script**.
 
     !["provide script name"](images/event-data-model.png "")
 
-11. Now to add sample data into the tables. Navigate to **APEX Assistant**.
+10. Now to add sample data into the tables. Navigate to **APEX Assistant**.
 
     !["provide script name"](images/click-apex-assistant.png "")
 
-12. Select all your database objects and click **Use Selection** from the APEX Assistant box.
+11. Select all your database objects and click **Use Selection** from the APEX Assistant box.
 
     !["provide script name"](images/use-selection.png "")
 
-13. In APEX Assistant box, enter the prompt to generate sample data for that tables.
+12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
 
     >Prompt:
     >Generate Sample Data
 
     !["provide script name"](images/generate-sample-data.png "")
 
-14. **Copy** the generated insert queries from the APEX Assistant box. insert it into the left code editor in the end.
+13. **Copy** the generated insert queries from the APEX Assistant box. insert it into the left code editor in the end.
 
     !["provide script name"](images/copy-query.png "")
 
-15. Paste the copied queries into the left code editor in the end.
+14. Paste the copied queries into the left code editor in the end.
 
     !["provide script name"](images/insert-query.png "")
 
-16. Replace the code editor with the below modified database objects code:
+15. Replace the code editor with the below modified database objects code:
 
     ```
     <copy>
@@ -576,15 +572,15 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     ```
     </copy>
 
-17. After replacing the code, click **Run** and confirm it with **Yes**.
+16. After replacing the code, click **Run** and confirm it with **Yes**.
 
     !["run now"](images/confirm-yes.png "")
 
-18. Review the summary and then click **Run Now**.
+17. Review the summary and then click **Run Now**.
 
     !["run now"](images/run-now.png "")
 
-19. We can see that all the statements were run successfully.
+18. We can see that all the statements were run successfully.
 
     !["data model created"](images/successful-statemwnts.png "")
 
