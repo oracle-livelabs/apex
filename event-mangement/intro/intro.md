@@ -1,6 +1,6 @@
-# Event Management App with AI-Assisted Development in Oracle APEX
+# Introduction
 
-## Introduction
+## About this Workshop
 
 In this hands-on lab, you will build a dynamic and interactive application using Oracle APEX AI Assistant. This lab is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
 
