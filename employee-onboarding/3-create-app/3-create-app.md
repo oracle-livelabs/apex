@@ -96,9 +96,11 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Form Page Mode: **Drawer**
 
     - Under Data Source:
+
         - Table/View Name: **EMPLOYEES**
 
     - Under Navigation:
+
         - Use Breadcrumb: **Toggle OFF**
         - Parent Navigation Menu Entry: **Administration**
         - Icon: **fa-users**
