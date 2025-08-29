@@ -24,13 +24,13 @@ In this task you will create an application.
 
 1. Click **App Builder**.
 
-  ![App Builder](images/app-builder-1.png "")
+    ![App Builder](images/app-builder-1.png "")
 2. In the App Builder home page, click **Create** to create an application.
 
-  ![Create New App](images/create-app.png "")
+    ![Create New App](images/create-app.png "")
 3. In the Create Application Wizard, enter Name as **Employee Onboarding Application** and click **Create Application**.
 
-  ![Create New App](images/create-app-1.png "")
+    ![Create New App](images/create-app-1.png "")
 
 4. The application is now created. This is the Application Home page.
 
@@ -42,23 +42,24 @@ In this task, you will create a navigation entry for an **Administrion** page.
 
 1. Click **Shared Components**.
 
-  ![Shared Components Page](images/create-app3.png "" )
+    ![Shared Components Page](images/create-app3.png "" )
 
 2. Under **Navigation and Search**, select **Navigation Menu**.
 
-  ![Shared Components Page](images/nav-menu.png "" )
+    ![Shared Components Page](images/nav-menu.png "" )
 
 3. Click **Navigation Menu**.
 
-  ![Navigation Menu](images/nav-menu2.png "" )
+    ![Navigation Menu](images/nav-menu2.png "" )
 
 4. Under **List Enteries**, select **Create List Entry**.
 
-  ![Navigation Menu](images/nav-menu3.png "" )
+    ![Navigation Menu](images/nav-menu3.png "" )
 
 5. Enter/Select the following:
 
     - Under Entry
+
         - Image/Class: **fa-database-user**
         - List Entry Label: **Administration**
 
@@ -66,11 +67,11 @@ In this task, you will create a navigation entry for an **Administrion** page.
 
     Click **Create List Entry**.
 
-  ![New Navigation Menu list entry](images/nav-menu4.png "" )
+    ![New Navigation Menu list entry](images/nav-menu4.png "" )
 
 6. Click on the **Application ID** to go back to the Application Home page.
 
-  ![New Navigation Menu list entry](images/nav-menu7.png "" )
+    ![New Navigation Menu list entry](images/nav-menu7.png "" )
 
 ## Task 3: Create Admin Pages - Employee, Departments & Training Catalogue
 
@@ -78,15 +79,16 @@ In this task, you will build the administrative setup pages that will allow HR a
 
 1. In the Application Home page, click **Create Page**
 
-  ![Create new page](images/create-page-1.png "")
+    ![Create new page](images/create-page-1.png "")
 
 2. In the create page wizard, select **Interactive Report** and click **Next**.
 
-  ![Create emp page](images/create-emp1.png =50%x*)
+    ![Create emp page](images/create-emp1.png "")
 
 3. Enter/select the following:
 
     - Under Page Definition:
+
         - Page Number: **2**
         - Name: **Employees**
         - Include Form page: **Toggle ON**
@@ -103,19 +105,19 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     Click **Next**.
 
-  ![Create emp page](images/create-emp2.png =50%x*)
+    ![Create emp page](images/create-emp2.png "")
 
 4. Select Primary Key Column 1: **EMPLOYEE_ID (Number)** and click **Create Page**.
 
-  ![Create emp page](images/create-emp-3.png "" )
+    ![Create emp page](images/create-emp-3.png "" )
 
 5. Your Employee page is now created. In page designer, on the top right, click the **+** icon to create a page and select **Page**.
 
-  ![Create a new page](images/create-page2.png "" )
+    ![Create a new page](images/create-page2.png "" )
 
 6. In the Create a Page wizard, select **Interactive Grid** and click **Next**.
 
-  ![Create a dept page](images/create-dept2.png =50%x*)
+    ![Create a dept page](images/create-dept2.png =50%x*)
 
 7. Enter/select the following:
 
@@ -137,27 +139,29 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     Click **Next**.
 
-  ![Create Dept page](images/create-dept3.png =50%x*)
+    ![Create Dept page](images/create-dept3.png "")
 
 8. Select Primary Key Column 1: **DEPARTMENT_ID (Number)** and click **Create Page**.
 
-  ![Create Dept page](images/create-dept4.png =50%x*)
+    ![Create Dept page](images/create-ig2.png "")
 
 9. Your Department page is now created. In page designer, on the top right, click the **+** icon and select **Page**.
 
-  ![Create a new page](images/create-page3.png "" )
+    ![Create a new page](images/create-page3.png "" )
 
 10. In the Create a Page wizard, select **Content Row** and click **Next**.
 
-  ![Create Trainings page](images/create-trainings1.png =50%x*)
+    ![Create Trainings page](images/create-trainings1.png "")
 
 11. In the Page wizard, enter/select the following:
 
     - Under Page Definition:
+
         - Page Number: **5**
         - Name: **Training Catalogue**
 
     - Under Navigation:
+
         - Use Breadcrumb: **Toggle OFF**
         - Use Navigation: **Toggle ON**
         - Parent Navigation Menu Entry: **Administration**
@@ -165,7 +169,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     Click **Create Page**.
 
-  ![Create Trainings page](images/create-trainings3.png =50%x*)
+    ![Create Trainings page](images/create-trainings3.png "")
 
 12. In the rendering tree, select **Training Catalogue** region and enter/select the following in the property editor:
 
@@ -183,11 +187,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
         - Template: **Standard**
 
-  ![Trainings page settings](images/training-catalog1.png "" )
+    ![Trainings page settings](images/training-catalog1.png "" )
 
-  ![Trainings page settings](images/trainings-catalog3.png =40%x*)
+    ![Trainings page settings](images/trainings-catalog3.png "")
 
-13.  In the **Attributes** tab, enter the following:
+13. In the **Attributes** tab, enter the following:
 
     - Under Settings:
 
@@ -196,37 +200,39 @@ In this task, you will build the administrative setup pages that will allow HR a
         - Description: **&DESCRIPTION.**
         - Miscellaneous: **Estimated Time: &ESTIMATED_HOURS. hours**
 
-  ![Trainings page](images/training-catalog2.png "" )
+    ![Trainings page](images/training-catalog2.png "" )
 
 14. Click **Save** to save the page.
 
-  ![Save page](images/save-pages.png "" )
+    ![Save page](images/save-pages.png "" )
 
 15. Now let's create a form page to input the training calatogues. Click the **+ icon** on the top right corner and select **Page**.
 
-  ![Create a page](images/create-page4.png "" )
+    ![Create a page](images/create-page4.png "" )
 
 16. In the create a page wizard, select **Form**.
 
-  ![Create a form page](images/create-form1.png =50%x*)
+    ![Create a form page](images/create-form1.png "")
 
 17. Enter/select the following in the page wizard:
 
     - Under page Definition:
+
         - Page Number: **6**
         - Name: **Create/Edit Training Catalogue**
         - Page Mode: **Drawer**
 
     - Under Data Source:
+
         - Table/View Name: **TRAINING_CATALOG**
 
     Click **Next**.
 
-  ![Create a form page](images/create-form22.png =50%x*)
+    ![Create a form page](images/create-form22.png "")
 
 18. Select Primary Key Column 1: **CATALOG_ID (Number)** and click **Create Page**.
 
-  ![Create a form page](images/create-form3.png =50%x*)
+    ![Create a form page](images/create-form3.png "")
 
 19. In the rendering tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the property editor:
 
@@ -245,7 +251,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
         Click **Ok**.
 
-  ![ training type edit](images/training-type.png "")
+    ![ training type edit](images/training-type.png "")
 
 20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the property editor:
 
@@ -264,38 +270,40 @@ In this task, you will build the administrative setup pages that will allow HR a
 
         Click **Ok**.
 
-  ![ training type edit](images/target-audience.png "")
+    ![ training type edit](images/target-audience.png "")
 
-21. In the rendering tree, select **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor enter/select the following:
+21. In the rendering tree, use **Control + Click** to select multiple items : **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor enter/select the following:
 
     - Appearance >  Template: **Required - Floating**
 
     - Validation > Value Required: **Toggle ON**
 
-  ![ training type edit](images/multi-select.png "")
+    ![ training type edit](images/multi-select.png "")
 
 22. Click **Save**.
 
-  ![Save page](images/saves-pages.png "" )
+    ![Save page](images/saves-pages.png "" )
 
-  Now that you have your form page ready, let us link the Training Catalogue Page to the form page.
+    Now that you have your form page ready, let us link the Training Catalogue Page to the form page.
 
-23. Click on the **Page Finder Icon** and select the **Training Catalogue ** Page.
+23. Click on the **Page Finder Icon** and select the **Training Catalogue** Page.
 
-  ![Navigate to training page](images/navigate-form.png "" )
+    ![Navigate to training page](images/navigate-form.png "" )
 
 24. In the rendering tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
 
-  ![Create action](images/create-action1.png "" )
+    ![Create action](images/create-action1.png "" )
 
 25. In the property editor, enter/select the following:
 
     - Under Identification:
+
         - Position: **Primary Actions**
         - Template: **Button**
         - Label: **Edit**
 
     - Under Link:
+
         - Target :
             -  Page: **6**
             - Set Items:
@@ -307,44 +315,48 @@ In this task, you will build the administrative setup pages that will allow HR a
 
           Click **Ok**.
 
-  ![Edit action](images/edit-action2.png "" )
+    ![Edit action](images/edit-action2.png "" )
 
 26. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
 
-  ![Create button](images/create-button1.png "" )
+    ![Create button](images/create-button1.png "" )
 
 27. In the property editor, enter/select the following:
 
 	- Under Identification:
+
         - Button Name: **Create**
         - Label: **Create Training**
 
     - Under Layout:
+
         - Slot: **Above Region [Legacy]**
 
     - Under Behavior:
+
         - Action: **Redirect to Page in this Application**
         - Target > Page: **6** and click **Ok**.
 
-  ![Create button settings](images/create-button2.png " " )
+    ![Create button settings](images/create-button2.png " " )
 
 28. Navigate to the **Dynamic Actions** tab, right click on **Dialog Closed** and select **Create Dynamic Action**.
 
-  ![Create DA](images/create-da.png " " )
+    ![Create DA](images/create-da.png " " )
 
 29. Select the newly created action, and enter/select the following in the propery editor:
 
     - Identification > Name: **Dialog Close**
 
     - Under When:
+
         - Selection Type: **JavaScript Expression**
         - JavaScript Expression: **document**
 
-  ![Create DA settings](images/create-da2.png " " )
+    ![Create DA settings](images/create-da2.png " " )
 
 30. Under the **Dialog Close** Event, select **Refresh**, and in the propery editor, set Affected Elements > Region: **Training Catalogue**.
 
-  ![Create DA settings](images/create-da3.png " " )
+    ![Create DA settings](images/create-da3.png " " )
 
 31. Click **Save**.
 

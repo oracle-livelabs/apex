@@ -51,10 +51,12 @@ To create a Workflow:
 1. Select New in the Rendering tab, in the Property Editor, enter/select the following:
 
     - Under Identification:
+
         - Name: **Employment Type Workflow**
         - Title: **Employment Type Workflow**
 
     - Under Advanced:
+
         - Static ID: **Employment\_Type\_Workflow**
 
     ![Create Workflow](./images/select-wf.png " ")
@@ -66,7 +68,6 @@ To create a Workflow:
     ![Create Workflow](./images/ef-emp-type2.png " ")
 
     > **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
-
 
 ## Task 3: Add Inputs for Employment Type Workflow
 
@@ -92,11 +93,11 @@ The inputs to the workflow will be the New Employee details. In workflow termino
 
 3. Similarly, add the following **Parameters** one after the other, given in the table below.
 
-  |Static ID | Label | Data Type | Required| 
-  |----------|-------|------------|---|
-  | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes |
-  | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  |
-  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes | 
+    |Static ID | Label | Data Type | Required|
+    |----------|-------|------------|---|
+    | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes |
+    | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  |
+    | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes |
     {: title="List of Parameters to be Created"}
 
     ![Add Parameter](./images/add-params2.png =50%x*)
@@ -188,6 +189,7 @@ In this task, you will create an activity for Employment Type as Full Time.
     - Identification > Name: **Trainings for Intern**
 
     - Under Settings:
+
         - Type: **PL/SQL Procedure or Function**
         - Procedure or Function: **ASSIGN\_EMPLOYEE\_TRAININGS**
 
@@ -198,6 +200,7 @@ In this task, you will create an activity for Employment Type as Full Time.
     - Indentification > Name: **Intern**
 
     - Under Condition:
+
         - Operator: **Is Equal To**
         - Value: **Intern**
 
@@ -226,6 +229,7 @@ In this task, you will create an activity for Employment Type as Full Time.
     - Identification > Name: **Assign Trainings**
 
     - Under Settings:
+
         - Definition: **Allocate Trainings**
         - Details Primary Key Item: **EMPLOYEE_ID**
 
@@ -234,6 +238,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 3. Under the parameters tab, select **Email** and select the following in the property editor:
 
     - Under Value:
+
         - Type: **Item**
         - Item: **EMAIL**
 
@@ -242,6 +247,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 4. Similarly, select **Employee Name** and select the following in the property editor:
 
     - Under Value:
+
         - Type: **Item**
         - Item: **EMPLOYEE_NAME**
 
@@ -251,7 +257,7 @@ In this task, you will create an activity for Employment Type as Full Time.
 
 In this task, you will create a Send Email Activity to send an email to the New Hire after completion of required trainings.
 
-1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
+1. From the Activities palette, drag a **Send Email** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
 
    ![Create activity to send email](./images/send-email.png " ")
 
@@ -260,6 +266,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
     - Identification > Name: **Training Completion Email**
 
     - Under Settings:
+
         - To: **&EMAIL.**
         - Subject: **You’ve Completed Your Trainings – You are All Set, &EMPLOYEE_NAME.!**
         - Body Plain Text: copy and paste the below text

@@ -19,15 +19,15 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 1. In the Workspace home page, click the **SQL Workshop**.
 
-  ![Workspace Homepage](images/workspace_homepage.png " ")
+    ![Workspace Homepage](images/workspace_homepage.png " ")
 
 2. Click **SQL Scripts**.
 
-  ![SQL Scripts](images/sql-scripts.png "")
+    ![SQL Scripts](images/sql-scripts.png "")
 
 3. Click **Create**.
 
-  ![Create a SQL Script](images/create-script.png "")
+    ![Create a SQL Script](images/create-script.png "")
 
 4. In the Script Editor, enter the following:
 
@@ -194,15 +194,15 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
     Click **Run**.
 
-  ![Create a SQL Script 2](images/script-sql-run.png "")
+    ![Create a SQL Script 2](images/script-sql-run.png "")
 
 5. In the confirmation screen, click **Run Now**.
 
-  ![Run SQL Script](images/load-script.png "")
+    ![Run SQL Script](images/load-script.png "")
 
 6. The Results page lists the summary of the executed script.
 
-  ![Results SQL Script](images/results.png "")
+    ![Results SQL Script](images/results.png "")
 
 ## Summary
 

@@ -310,7 +310,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 ## Task 7: Create Activity to send Onboarding Completion Email
 
-1. From the Activities palette, drag a **Send E-Mail Task - Create** Activity into the Diagram Builder area and drop it between the **Tasks based on Employment Type** activity and **End**.
+1. From the Activities palette, drag a **Send Email** Activity into the Diagram Builder area and drop it between the **Tasks based on Employment Type** activity and **End**.
 
    ![Create activity to send email](./images/send-email-comp.png " ")
 
