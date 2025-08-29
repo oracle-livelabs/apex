@@ -18,7 +18,7 @@ In this lab, you will:
 
 ## Task 1: Grant Database Privileges
 
-To enable your schema to create web credentials and mining models, you must grant the necessary privileges while logged in as a SYS or Admin user.
+To enable your schema to load the mining models, you must grant the necessary privileges while logged in as a SYS or Admin user.
 
 1. Login as SYS/Admin User and execute the below command.
 
