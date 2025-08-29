@@ -31,6 +31,10 @@
           "filename": "../../5-chat-bot/5-chat-bot.md"
       },
       {
+        "title": "Lab 6: Generate Event Description with AI",
+          "filename": "../../6-generate-text/6-generate-text.md"
+      },
+      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
