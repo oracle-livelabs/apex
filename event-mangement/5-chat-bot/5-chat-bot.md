@@ -162,6 +162,8 @@ By the end of this lab, you will be able to:
 
 1. From the top-right corner, click **Edit Page 3**.
 
+    >Note: Page number may vary depending on your application.
+
     !["Click App Builder"](images/edit-page3.png "")
 
 2. In the Dynamic Action tab, select True Action **Show AI Assistant** and update the following:
