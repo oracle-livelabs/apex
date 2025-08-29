@@ -1,4 +1,4 @@
-# Create Generative AI Service and Create a Data Model using AI
+# Configure Generative AI Service and Create a Data Model using AI
 
 ## Introduction
 

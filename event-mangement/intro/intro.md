@@ -47,14 +47,14 @@ As you progress, you integrate AI-powered text generation into your application,
 
 ## Labs
 
-| Module | Est. Time |
-| --- | --- |
-| [Create Generative AI Service and Create a Data Model using AI](?lab=1-installing-sample-datasets) | 5 minutes |
-| [Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
-| [Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
-| [Enhance UI with APEX Assistant](?lab=4-chat-assistant) | 5 minutes |
-| [Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
-| [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
+| | Module | Est. Time |
+|--- |--- | --- |
+| 1.|[Configure Generative AI Service and Create a Data Model using AI](?lab=1-installing-sample-datasets) | 5 minutes |
+| 2.|[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
+|3.|[Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
+| 4.|[Enhance UI with APEX Assistant](?lab=4-chat-assistant) | 5 minutes |
+| 5.|[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
+|6.| [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
 
 Total estimated time: 30 minutes
 
@@ -70,7 +70,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevent_management_hol.sql)** to download the completed application.
 
-2. Import the event_management_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
+2. Import the event\_management\_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 
 3. Once the application is installed, follow the below steps to update the Web Credentials.
 
