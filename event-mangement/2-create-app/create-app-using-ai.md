@@ -16,6 +16,8 @@ Estimated Time: 5 minutes
 
 - Events Data model created using Generative AI.
 
+>**Note:** You do NOT want to click Create Application, as you will use Generative AI to create an application later.
+
 ## Task 1: Create the Application using Generative AI
 
 1. From your APEX workspace homepage, click **App Builder**.
@@ -31,7 +33,9 @@ Estimated Time: 5 minutes
 
 4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
 
-     ![Refresh Cache](images/refresh-cache.png "")
+    >**Note:** If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/24.2/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)
+
+    ![Refresh Cache](images/refresh-cache.png "")
 
 5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
 
