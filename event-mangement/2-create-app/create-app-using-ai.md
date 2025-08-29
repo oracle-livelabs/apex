@@ -14,7 +14,7 @@ Estimated Time: 15 minutes
 
 - An Oracle Cloud paid account, or free trial.
 
-- Project Data model created using Generative AI.
+- Events Data model created using Generative AI.
 
 ## Task 1: Create the Application using Generative AI
 
@@ -45,21 +45,21 @@ Estimated Time: 15 minutes
     >Prompt 2:
     >Add a form page to edit events
 
-    !["second prompt"](images/prompt2.png "")
+    !["second prompt"](images/edit-form.png "")
 
 7. Similarly, you need to enable **Feedback** feature. Enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 3:
     >Enable Feedback feature.
 
-    !["third prompt"](images/prompt3.png "")
+    !["third prompt"](images/enable-feedback.png "")
 
 8. Finally, click **Create Application**.
 
     >Prompt 4:
     >Set the Task Overview page as an Interactive Report with a Form
 
-    !["sixth prompt"](images/prompt4.png "")
+    !["sixth prompt"](images/create-new-appp.png "")
 
     > **Note:** _The pages might differ based on the prompt. Make sure that you have **Events Dashboard page**, **Event page created as Faceted Search page** by giving appropriate prompts_
 
