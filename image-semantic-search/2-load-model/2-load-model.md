@@ -48,7 +48,7 @@ In this lab, you will load the ONNX Models into your database.
      model_name => 'clip_txt_model',
      model_data => DBMS_CLOUD.GET_OBJECT(
                      credential_name => null,
-                     object_uri      => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/MIJaGRt7FlqvNTWxie-6sC2vUlcxVDDNkIu6HjFeOTUYIsjzWnmo9k2o9x1cUSj8/n/idmypotriwr1/b/image-semanticsearch_livelabs/o/clip_vit_base_patch32_txt.onnx '
+                     object_uri      => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/MIJaGRt7FlqvNTWxie-6sC2vUlcxVDDNkIu6HjFeOTUYIsjzWnmo9k2o9x1cUSj8/n/idmypotriwr1/b/image-semanticsearch_livelabs/o/clip_vit_base_patch32_txt.onnx'
                   ),
      metadata   => JSON('{
          "function": "embedding",
