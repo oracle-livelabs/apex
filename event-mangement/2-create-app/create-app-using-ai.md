@@ -25,6 +25,7 @@ Estimated Time: 5 minutes
     !["Click App Builder"](images/ai-app-builder.png "")
 
 2. Click **Create**.
+
     !["Click create App"](images/create-new-app.png "")
 
 3. In the Create an Application Page, select **Create APP Using Generative AI**
@@ -33,7 +34,7 @@ Estimated Time: 5 minutes
 
 4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
 
-    >**Note:** If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/24.2/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)
+    *Note: If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/24.2/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)*
 
     ![Refresh Cache](images/refresh-cache.png "")
 
@@ -65,7 +66,7 @@ Estimated Time: 5 minutes
 
     !["sixth prompt"](images/create-new-appp.png "")
 
-    > **Note:** _The pages might differ based on the prompt. Make sure that you have **Events Dashboard page**, **Event page created as Faceted Search page** by giving appropriate prompts_
+    *Note:The pages might differ based on the prompt. Make sure that you have **Events Dashboard page**, **Event page created as Faceted Search page** by giving appropriate prompts.*
 
 9. On the Create an Application page, navigate to **Dashboard** page and click **Edit**.
 

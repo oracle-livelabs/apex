@@ -584,7 +584,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["data model created"](images/successful-statemwnts.png "")
 
->**Note:** You do NOT want to click Create Application, as you will use Generative AI to create an application later.
+    *Note: You do NOT want to click Create Application, as you will use Generative AI to create an application later.*
 
 ## Task 3: Review Database Objects
 
