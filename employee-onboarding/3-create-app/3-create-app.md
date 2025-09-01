@@ -119,7 +119,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
 6. In the Create a Page wizard, select **Interactive Grid** and click **Next**.
 
-    ![Create a dept page](images/create-dept2.png =50%x*)
+    ![Create a dept page](images/create-dept2.png "")
 
 7. Enter/select the following:
 
@@ -325,7 +325,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
 27. In the property editor, enter/select the following:
 
-	- Under Identification:
+    - Under Identification:
 
         - Button Name: **Create**
         - Label: **Create Training**

@@ -49,7 +49,7 @@ Estimated Time: 10 minutes
 
     - Target > Page: **9**
 
-    *Note: Link it your **My Tasks** Page.*
+    *Note: Link it to your **My Tasks** Page.*
 
     Click **Create List Entry**.
 
@@ -64,7 +64,7 @@ Estimated Time: 10 minutes
 
     - Target > Page: **19**
 
-    *Note: Link it your **Workflows Initiated By Me** Page.*
+    *Note: Link it to your **Workflows Initiated By Me** Page.*
 
     Click **Create List Entry**.
 

@@ -60,6 +60,8 @@ In this lab, you will load the ONNX Models into your database.
      </copy>
     ```
 
+   *Note: The object_uri link provided above will expire on September 30, 2027.*
+
     ![Load text model](images/load-txt-model.png " ")
 
 3. Copy and paste the below to load the CLIP image model and click **Run**.
@@ -82,6 +84,8 @@ In this lab, you will load the ONNX Models into your database.
      END;
      </copy>
     ```
+
+   *Note: The object_uri link provided above will expire on September 30, 2027.*
 
     ![Load image model](images/load-img-model.png " ")
 
