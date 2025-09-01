@@ -16,6 +16,10 @@ In this lab, you:
 
 - Create a Bucket in OCI Object Storage.
 
+## Prerequisite
+
+- In the navigation bar of the Console, select a region with Generative AI Agents, for example, **US Midwest (Chicago) or UK South (London)**. See [Regions with Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/overview.htm#regions) for the regions in which Generative AI Agents is hosted.
+
 ## Task 1: Generate API Keys using OCI Console
 
 To Generate the API Keys using OCI Console:
