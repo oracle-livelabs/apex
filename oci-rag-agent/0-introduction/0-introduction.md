@@ -58,7 +58,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge Base and Generative AI Agents in OCI.
 
-2. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/genai_agents_export.sql) to download the completed application.
+2. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fgenaiagent_export.sql) to download the completed application.
 
 3. Import the **genai\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
