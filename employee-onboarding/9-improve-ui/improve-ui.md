@@ -47,11 +47,13 @@ Estimated Time: 10 minutes
         - Image/Class: **fa-tasks-alt**
         - List Entry Label: **Task Pages**
 
-    - Target > Target Type: **- No Target -**
+    - Target > Page: **9**
+
+    *Note: Link it your **My Tasks** Page.*
 
     Click **Create List Entry**.
 
-    ![Create List entry](./images/doc-home1.png " ")
+    ![Create List entry](./images/my-tasks.png " ")
 
 6. Similarly, create another entry with the following properties:
 
@@ -60,11 +62,13 @@ Estimated Time: 10 minutes
         - Image/Class: **fa-workflow**
         - List Entry Label: **Workflow Pages**
 
-    - Target > Target Type: **- No Target -**
+    - Target > Page: **19**
+
+    *Note: Link it your **Workflows Initiated By Me** Page.*
 
     Click **Create List Entry**.
 
-    ![Create List entry](./images/doc-home2.png " ")
+    ![Create List entry](./images/my-wf.png " ")
 
 7. Now, select **Tasks Initiated by Me**, **My Tasks** and update Parent List Entry to **Tasks Pages**. Click **Apply Changes**.
 
