@@ -106,7 +106,7 @@ Referring to the flow chart in Lab 1, illustrating the business logic, the emplo
 
 The inputs provided to the Employee Onboarding Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
 
-1. Right-click **1.0 [DEV]** (workflow version), select **Create Variable**.
+1. Right-click **1.0 [Dev]** (workflow version), select **Create Variable**.
 
     ![Create Variable](./images/create-variable.png " ")
 

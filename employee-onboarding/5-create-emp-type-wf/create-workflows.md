@@ -112,7 +112,7 @@ Before an onboarding is completed, the workflow needs to allocate trainings base
 
 Data such as Employement Type, Employee ID, Employee Name and Email need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
-1. Right-click **1.0 [DEV]** (workflow version), select **Create Variable**.
+1. Right-click **1.0 [Dev]** (workflow version), select **Create Variable**.
 
     ![Create Variable](./images/create-variable.png " ")
 

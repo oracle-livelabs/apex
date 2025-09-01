@@ -100,7 +100,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
 9. Navigate to **Parameters** tab, and add the below Parameters by clicking **Add Row**.
 
-    | Parameter Name     |   Label    |
+    | Static ID     |   Label    |
     |--------------------|------------|
     | DEPARTMENT   | Department |
     | EMAIL       | Email |

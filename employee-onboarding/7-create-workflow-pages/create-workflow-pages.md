@@ -194,7 +194,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
 2. Select **Blank Page**.
 
-   ![Select Blank Page](./images/select-blank-page.png =50%x*)
+   ![Select Blank Page](./images/select-blank-page.png "")
 
 3. Specify the following page attributes:
 
@@ -204,7 +204,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     Click **Create Page**.
 
-    ![create blank page tasks](./images/select-blank.png =50%x*)
+    ![create blank page tasks](./images/select-blank.png "")
 
 4. In the rendering tree, right click on **Components** and select **Create Region**.
 
@@ -296,7 +296,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Property Sub Region Email ID](./images/email-id-item2.png " ")
 
-    ![Property Sub Region](./images/validation.png =25%x*)
+    ![Property Sub Region](./images/validation.png )
 
 14. Similarly, create another sub region under **IT Setup** region and select **Create Region**.
 
@@ -351,7 +351,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Property Sub Region Laptop Info](./images/laptop-id-item.png " ")
 
-    ![Property Sub Region](./images/validation.png =25%x*)
+    ![Property Sub Region](./images/validation.png )
 
     ![Property Sub Region Laptop Info](./images/laptop-id-item1.png " ")
 
@@ -475,7 +475,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
 6. Select **Unified Task List**.
 
-    ![Select Unified Task List](./images/select-unified-tasks.png =60%x*)
+    ![Select Unified Task List](./images/select-unified-tasks.png )
 
 7. Specify the following page attributes:
 
@@ -485,7 +485,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     Click **Create Page**.
 
-    ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png =40%x*)
+    ![Create tasks initiated by me](./images/create-initiatedbyme-tasks.png "")
 
 ## Task 5: Modify the Task Details Pages
 
@@ -748,7 +748,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![configure Training Region](./images/attri-training.png " ")
 
-    ![configure Training Region](./images/temp-training.png =30%x*)
+    ![configure Training Region](./images/temp-training.png "")
 
 21. In the rendering tree, under **Training Details**, right click on **Actions** and select **Create Action**.
 
@@ -868,7 +868,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 2. Select **Workflow Console**.
 
-    ![configure workflow attr](./images/create-workflow-console.png =60%x*)
+    ![configure workflow attr](./images/create-workflow-console.png "")
 
 3. In the Create Workflow Console wizard, enter/select the following:
 
@@ -896,7 +896,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
 2. Select **Workflow Console**.
 
-    ![configure workflow attr](./images/create-workflow-console.png =60%x*)
+    ![configure workflow attr](./images/create-workflow-console.png "")
 
 3. In the Create Workflow Console wizard, enter/select the following:
 
@@ -910,7 +910,7 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     Click **Create Page**.
 
-    ![configure workflow attr](./images/config-workflow-console2.png =50%x*)
+    ![configure workflow attr](./images/config-workflow-console2.png "")
 
 4. Click **Save and Run** and navigate through different pages to demonstrate the workflow, tasks, and feedback functionalities.
 
