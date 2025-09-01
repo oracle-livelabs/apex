@@ -54,12 +54,14 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 1. Click [here](LINK) to download the completed application file.
 
-2. Import the **FILE_NAME.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **Employee_Onboarding_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow Lab 1 > Task 1 to change the potential users in the Workflow .
+    - Follow Lab 10 > Task 2: Create Application Users.
 
 4. All set. Now, run the application and see it in action!
+
+*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Learn More - *Useful Links*
 
