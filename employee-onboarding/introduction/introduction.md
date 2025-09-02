@@ -37,7 +37,7 @@ In this workshop, you will learn how to:
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 5 minutes |
-| 2 | [Load Database Objects](?lab=2-data-load) | 5 minutes |
+| 2 | [Load Database Objects](?lab=2-data-load) | 10 minutes |
 | 3 | [Create an Application and Admin pages](?lab=3-create-app) | 15 minutes |
 | 4 | [Create Tasks Definitions](?lab=4-create-tasks) | 10 minutes |
 | 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 15 minutes |
@@ -45,7 +45,7 @@ In this workshop, you will learn how to:
 | 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 40 minutes |
 | 8 | [Create Archive Tasks and Archive Workflow](?lab=8-archived-tasks) | 5 minutes |
 | 9 | [Improve UI & Navigation](?lab=9-improve-ui) | 10 minutes |
-| 10 | [Run the Application](?lab=10-running-the-app) | 15 minutes |
+| 10 | [Run the Application](?lab=10-running-the-app) | 10 minutes |
 | 11 | [Activate Workflow](?lab=11-activate-workflow) | 5 minutes |
 
 ## Downloads
@@ -61,7 +61,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 4. All set. Now follow Lab 10 to run the application and see it in action!
 
-*Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 6 and 7 since the data is already populated.*
+*Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 1, 6 and 7 since the data is already populated.*
 
 ## Learn More - *Useful Links*
 

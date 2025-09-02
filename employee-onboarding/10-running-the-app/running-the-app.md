@@ -8,7 +8,7 @@ In this lab, you will run and explore the Employee Onboarding application to und
 
 - Demonstrate the behavior of the Employee Onboarding application through hands-on activities.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Prerequisites
 
@@ -18,11 +18,11 @@ Estimated Time: 15 minutes
 
 In this task, you will recreate the previously created  employees in the Application.
 
-1. Navigate to the Application Home Page, click **Run Application**.
+1. From the **Application Home page**, click **Run Application**.
 
    ![Run application](./images/run-app.png " ")
 
-2. Log in as an Administrator and Navigate to **Administration** > **Employees** page.
+2. Log in as an **Administrator** and Navigate to **Administration** > **Employees** page.
 
    ![login to the application](./images/login-to-app.png =30%x*)
 
