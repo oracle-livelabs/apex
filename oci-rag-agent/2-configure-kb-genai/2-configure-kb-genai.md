@@ -36,11 +36,13 @@ To create Knowledge Base in OCI console:
 
     ![Select Knowledge Bases](images/select-knowledgebase.png " ")
 
-4. Click **Create Knowledge Base**.
+4. Select your **Compartment**.
+
+5. Click **Create Knowledge Base**.
 
     ![Create Knowledge Base](images/create-knowledgebase.png " ")
 
-5. Under **New knowledge base**, enter/select the following:
+6. Under **New knowledge base**, enter/select the following:
 
     - Name : **GenAIRAG**
 
@@ -50,9 +52,9 @@ To create Knowledge Base in OCI console:
 
     ![Create Knowledge Base](images/new-knowledge-base.png " ")
 
-6. Under **Data sources**, click **Specify data source**.
+7. Under **Data sources**, click **Specify data source**.
 
-7. Under **Specify data source**, enter/select the following and click **Create**.
+8. Under **Specify data source**, enter/select the following and click **Create**.
 
     - Name : **FilesforRAG**
 
@@ -64,7 +66,7 @@ To create Knowledge Base in OCI console:
 
     ![Specify Data Source](images/specify-data-source.png " ")
 
-8. Click **Create**.
+9. Click **Create**.
 
     ![Specify Data Source](images/create-knowledge-base.png " ")
 

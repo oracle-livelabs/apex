@@ -112,33 +112,24 @@ In this task, you will create Page Items, Static Content region and a subregion,
         <copy>
 
             SELECT
-      CONV_ID,
-      USER_NAME,
-      COMMENT_TEXT,
-      COMMENT_DATE,
-      APEX_STRING.GET_INITIALS(USER_NAME) USER_ICON,
-      CASE IS_OWN
-         WHEN 'Yes' THEN
-               NULL
-         ELSE
-               'View Citations'
-      END                                 ACTIONS,
-      NULL                                AS ATTRIBUTE_1,
-      NULL                                AS ATTRIBUTE_2,
-      NULL                                AS ATTRIBUTE_3,
-      NULL                                AS ATTRIBUTE_4,
-      CASE IS_OWN
-         WHEN 'Yes' THEN
-               't-Chat--own'
-         ELSE
-               NULL
-      END                                 COMMENT_MODIFIERS
-      FROM
-         RAG_CHATBOT
-      WHERE
-         SESSION_ID = :P1_SESSION_ID
-      ORDER BY
-         COMMENT_DATE ASC
+            CONV_ID,
+            USER_NAME,
+            COMMENT_TEXT,
+            COMMENT_DATE,
+            APEX_STRING.GET_INITIALS(USER_NAME) USER_ICON,
+            CASE IS_OWN WHEN 'Yes' THEN NULL ELSE 'View Citations' END ACTIONS,
+            NULL AS ATTRIBUTE_1,
+            NULL AS ATTRIBUTE_2,
+            NULL AS ATTRIBUTE_3,
+            NULL AS ATTRIBUTE_4,
+            CASE IS_OWN WHEN 'Yes' THEN 't-Chat--own' ELSE NULL END COMMENT_MODIFIERS
+            FROM
+            RAG_CHATBOT
+            WHERE
+            SESSION_ID = :P1_SESSION_ID
+            ORDER BY
+            COMMENT_DATE ASC
+
       </copy>
       ```
 
@@ -1283,21 +1274,37 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Edit Document](images/edit-document.png " ")
 
-21. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
+21. Right-click on **List Available Documents** click **Create Button**.
 
-    |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Clear Cache |
-    |---|-------|------|----------| --------------| ---- | --- | --- |
-    | 1 | Chat\_with\_AI\_Agent| Chat With AI Agent | Top of Region [Legacy]| |Redirect to Page in this Application| 1 | 1 |
-    | 2 | Upload| Upload Document to KB | Top of Region [Legacy]| Toggle On |Redirect to Page in this Application| 5 | 5 |
-    {: title="Link Builder - Target"}
+22. Enter/select the following:
 
-    ![Chat WithAI](images/chat-withai.png " ")
+    - Under Identification
 
-    ![Upload](images/upload.png " ")
+        - Button Name: **Upload**
 
-22. Right-click **Content Body**, click **Create Page Item**.
+        - Label: **Upload Document to KB**
 
-23. In the Property Editor, enter/select the following:
+    - Layout: **Top of Region [Legacy]**
+
+    - Appearance : **Hot**
+
+    - Under Behavior
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: click **No Link Defined**
+
+    - Target > Page: **5**
+
+    - Clear/Reset > Clear Cache : **5**
+
+    ![Upload](images/upload1.png " ")
+
+    ![Upload](images/upload2.png " ")
+
+23. Right-click **Content Body**, click **Create Page Item**.
+
+24. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1307,17 +1314,15 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Page6 Item](images/page-item.png " ")
 
-24. Navigate to **Page 6: Document Processing Tracker** root node.
+25. Navigate to **Page 6: Document Processing Tracker** root node.
 
-25. In the Property Editor, enter/select the following:
+26. In the Property Editor, enter/select the following:
 
     - Template Options > Size: **Large**
 
-    - Under Dialog > Chained : **Toggle On**
+    ![Size](images/size-large1.png " ")
 
-    ![Size](images/size-large.png " ")
-
-26. Click **Save**.
+27. Click **Save**.
 
 ## Task 7: Add Buttons in HomePage
 
