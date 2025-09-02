@@ -159,6 +159,25 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
 3. In the property editor, enter/select the following:
 
+    - Identification > Name: **Add Patient**
+
+    - Source > SQL Query: Copy and paste the below query in the code editor:
+
+    ```
+    <copy>
+    insert into PATIENTS
+       (Patient_name, email)
+        values
+       (:P5_NAME , :P5_EMAIL);
+    </copy>
+    ```
+
+    ![create page process](./images/add-patient-process.png " ")
+
+4. Again, right-click **Processing** and select **Create Process**.
+
+5. In the property editor, enter/select the following:
+
       - Under Identification:
 
           - Name: **Doctor Appointment Workflow**
@@ -175,7 +194,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
      ![create workflow process](./images/create-workflow-process.png " ")
 
-4. Now, configure Parameters for the Workflow Page Process. Update the following **Parameters** one after the other:
+6. Now, configure Parameters for the Workflow Page Process. Update the following **Parameters** one after the other:
 
     | Parameter |  Type  | Item |
     | --- |  --- | ---- |
@@ -187,7 +206,7 @@ Now that the Workflow is created, let us create the page that the hospital staff
 
     ![create workflow process](./images/configure-process-param.png " ")
 
-5. Click **Save**.
+7. Click **Save**.
 
 ## Task 3: Create the Patient and Doctor Tasks Page
 
@@ -541,7 +560,7 @@ Now, you need to create a View Only page where patients can log in to view their
 
             ```
             <copy>
-            SELECT 
+            SELECT
             ID,
             PATIENT_NAME,
             'DR.' || DNAME AS DNAME,
@@ -550,10 +569,10 @@ Now, you need to create a View Only page where patients can log in to view their
             RATING,
             CREATED_AT,
             UPDATED_AT
-            FROM 
-            PATIENT_FEEDBACK, 
+            FROM
+            PATIENT_FEEDBACK,
             DOCTOR
-            WHERE 
+            WHERE
             PATIENT_NAME = :APP_USER
             AND DOCTOR_NO = DNO;
             </copy>
@@ -631,15 +650,47 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     - Target > Page: **11**
 
+    - Under Conditions:
+
+        - Condition Type: **Expression**
+
+        - Expression 1:
+
+        ```
+        <copy>
+        :APP_USER = 'STEVE' OR :APP_USER ='PATRICK'
+        </copy>
+        ```
+
     Click **Apply Changes**.
 
     ![configure feedbacks attr](./images/doc-home1.png " ")
 
-6. Under **List Entries**, select **New Appointment** and update Image/Class to **fa-desktop**. Click **Apply Changes**.
+    ![configure feedbacks attr](./images/nav-dash1.png " ")
+
+6. Under **List Entries**, select **New Appointment** and update the following:
+
+    - Entry > Image/Class: **fa-desktop**.
+
+    - Under Conditions:
+
+        - Condition Type: **Expression**
+
+        - Expression 1:
+
+        ```
+        <copy>
+        :APP_USER = 'STEVE'
+        </copy>
+        ```
+
+    Click **Apply Changes**.
 
     ![configure feedbacks attr](./images/doc-new-appt.png " ")
 
     ![configure feedbacks attr](./images/fa-desktop.png " ")
+
+    ![configure feedbacks attr](./images/nav-appoint1.png " ")
 
 7. Navigate to Sequence 70 - Dashboard and click **Delete** and confirm **OK**.
 
@@ -655,6 +706,44 @@ We use the Workflow Console and Details pages with **Initiated By Me** report co
 
     ![configure feedbacks attr](./images/doc-parent.png " ")
 
+9. Navigate to **Patient Tasks** and update the following:
+
+    - Under Conditions:
+
+        - Condition Type: **Exists (SQL query returns at least one row)**
+
+        - Expression 1:
+
+        ```
+        <copy>
+        select 1 from patients where UPPER(patient_name) = UPPER(:APP_USER)
+        </copy>
+        ```
+
+        Click **Apply Changes**.
+
+    ![configure feedbacks attr](./images/nav-pat1.png " ")
+
+10. Navigate to **Doctor Tasks** and update the following:
+
+    - Under Conditions:
+
+        - Condition Type: **Exists (SQL query returns at least one row)**
+
+        - Expression 1:
+
+        ```
+        <copy>
+        select 1 from doctor where UPPER(dname) = UPPER:APP_USER)
+        </copy>
+        ```
+
+        Click **Apply Changes**.
+
+    ![configure feedbacks attr](./images/nav-doc.png " ")
+
+    ![configure feedbacks attr](./images/nav-doc1.png " ")
+
 ## Summary
 
 You have successfully created a comprehensive Oracle APEX application for managing doctor appointments with workflows, task lists, and feedback features.
@@ -666,4 +755,4 @@ In the next lab, you will understand the behavior of the **Doctor Appointments M
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2025
