@@ -231,9 +231,9 @@ In this task, you will recreate the previously created  employees in the Applica
 In this hands-on lab, you learned how to:
 
 - Automate business processes using APEX Workflows.
-- Define workflow activities, variables, parameters, additional data, and connections.
-- Start a new workflow through a Page Process.
 - Monitor the progress of initiated workflows.
+- Retry Faulted workflow.
+- Complete Workflow processes.
 
 ## Acknowledgements
 
