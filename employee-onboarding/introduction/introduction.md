@@ -57,11 +57,11 @@ If you are stuck or the App is not working as expected, you can download and ins
 2. Import the **Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow Lab 10 > Task 2: Create Application Users.
+    - Follow Lab 2 > Task 1: Create Application Users.
 
-4. All set. Now, run the application and see it in action!
+4. All set. Now follow Lab 10 to run the application and see it in action!
 
-*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 6 and 7 since the data is already populated.*
 
 ## Learn More - *Useful Links*
 

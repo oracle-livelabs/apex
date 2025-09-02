@@ -1,4 +1,4 @@
-# Load Database Objects using SQL Workshop
+# Load Database Objects & Create App Users
 
 ## Introduction
 
