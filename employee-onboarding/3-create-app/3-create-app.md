@@ -18,6 +18,8 @@ In this lab, you will:
 
 * Create an Email Template for the onboarding process
 
+- Set up Subtitution String for APP_EMAIL
+
 ## Task 1: Create Employee Onboarding Application
 
 In this task you will create an application.
@@ -449,7 +451,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create Template](images/create-emp-temp2.png "" )
 
-## Task 4: Set the APP_EMAIL Substitution String
+## Task 5: Set the APP_EMAIL Substitution String
 
 In this task, you will create a substitution string to manage the application email address used throughout your Employee Onboarding application. Substitution strings allow you to define values once and reuse them across multiple locations, making maintenance easier.
 
