@@ -1,4 +1,4 @@
-# Activate the 'Employee Onboarding' Application
+# Activate the Employee Onboarding Application
 
 ## Introduction
 
