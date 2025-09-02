@@ -481,5 +481,5 @@ In this task, you learned how to build administration pages to create and manage
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

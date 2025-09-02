@@ -261,5 +261,5 @@ You have successfully completed the initial steps for designing the **Employee O
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, July 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
