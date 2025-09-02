@@ -3,33 +3,84 @@
 ## Introduction
 
 This lab walks you through the database objects required for Employee Onboarding.
-In this task, you'll use SQL scripts to execute a script for creating database objects and inserting data in the tables. This script defines tables, package and procedure for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
+This task also shows you how to create multiple users representing different roles within the **Employee Onboarding** application, enabling you to test various user experiences and access levels.
 
-Estimated Time: 5 minutes
+You'll use SQL scripts to execute a script for creating database objects and inserting data in the tables. This script defines tables, package and procedure for an Employee Onboarding app, including Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
+
+Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-* Load the database objects that are required for this lab using SQL Scripts
+- Create Application users.
 
-## Task 1: Load Database objects
+- Load the database objects that are required for this lab using SQL Scripts
+
+## Task 1: Create Application Users
+
+In this task, you'll create multiple users representing different roles within the **Employee Onboarding** application, enabling you to test various user experiences and access levels.
+
+1. On the Workspace home page, click **Administration** icon and select **Manage Users and Groups**.
+
+    ![Create Users application](./images/add-users.png " ")
+
+2. Click **Create Multiple User**.
+
+    ![Create Users application](./images/create-users2.png " ")
+
+3. You will create the following users for the application:
+
+    |   Employee Name      |  Department |
+    | -------------- | --------- |
+    |    STEVE       |   HR  |
+    |   AMY     |    IT  |
+    |   ALEX | Sales |
+    | MONICA | Sales |
+    {: title="List of Users to Create in the Application"}
+
+    *Note: MONICA is a new hire in the Sales Department, for whom we will be initating a workflow request.*
+
+4. In the **Create multiple Users** dialog, enter/select the following attributes:
+
+    - List of Email Addresses: Copy and Paste the below email addresses
+
+      ```
+      <copy>
+      AMY@yourdomain.com
+      STEVE@yourdomain.com
+      ALEX@yourdomain.com
+      MONICA@yourdomain.com
+      </copy>
+      ```
+
+    - Usernames: **Exclude @ domain as part of the username**
+
+    - Password and Confirm Password: **Enter a password**
+
+    Click **Next**.
+
+    > *Note:* Replace yourdomain.com with your actual domain.
+
+    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+
+5. Click **Create Valid Users**.
+
+    ![Create Multiple Users - details](./images/create-multiple-users2.png  " ")
+
+## Task 2: Load Database objects
 
 In this task you will use SQL Scripts to quickly load and execute the required database objects including tables, package and procedures. This script defines the database objects for an Employee Onboarding, including  Employees, Departments, Employee Trainings, and more. Once executed, you can review the tables in the Object Browser.
 
-1. In the Workspace home page, click the **SQL Workshop**.
+1. Navigate to **SQL Workshop** > **SQL Scripts**.
 
-    ![Workspace Homepage](images/workspace_homepage.png " ")
+    ![Workspace Homepage](images/go-sql-scripts.png " ")
 
-2. Click **SQL Scripts**.
-
-    ![SQL Scripts](images/sql-scripts.png "")
-
-3. Click **Create**.
+2. Click **Create**.
 
     ![Create a SQL Script](images/create-script.png "")
 
-4. In the Script Editor, enter the following:
+3. In the Script Editor, enter the following:
 
     - Script Name:  **Employee Onboarding Database objects**
 
@@ -196,11 +247,11 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
     ![Create a SQL Script 2](images/script-sql-run.png "")
 
-5. In the confirmation screen, click **Run Now**.
+4. In the confirmation screen, click **Run Now**.
 
     ![Run SQL Script](images/load-script.png "")
 
-6. The Results page lists the summary of the executed script.
+5. The Results page lists the summary of the executed script.
 
     ![Results SQL Script](images/results.png "")
 
