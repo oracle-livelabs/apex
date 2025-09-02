@@ -52,9 +52,9 @@ In this workshop, you will learn how to:
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/Employee_Onboarding_App.sql) to download the completed application file.
+1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FEmployee_Onboarding_App.sql) to download the completed application file.
 
-2. Import the **Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **labfiles\_Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
     - Follow Lab 2 > Task 1: Create Application Users.
