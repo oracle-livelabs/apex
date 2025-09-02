@@ -37,7 +37,7 @@ In this workshop, you will learn how to:
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 5 minutes |
-| 2 | [Load Database Objects](?lab=2-data-load) | 10 minutes |
+| 2 | [Load Database Objects & Create App Users](?lab=2-data-load) | 10 minutes |
 | 3 | [Create an Application and Admin pages](?lab=3-create-app) | 15 minutes |
 | 4 | [Create Tasks Definitions](?lab=4-create-tasks) | 10 minutes |
 | 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 15 minutes |
