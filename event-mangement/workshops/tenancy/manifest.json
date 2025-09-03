@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "Generate an Event Management App with AI assisted development in Oracle APEX",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+        "title": "Getting Started",
+        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Lab 1: Configure AI Service and Create Data Model using AI",
+        "filename": "../../1-create-data-model-using-ai/1-create-data-model-using-ai.md"
+      },
+      {
+        "title": "Lab 2: Create the Application using Generative AI",
+          "filename": "../../2-create-app/2-create-app.md"
+      },
+      {
+        "title": "Lab 3: Enhance Charts and Database Objects with APEX Assistant",
+          "filename": "../../3-apex-assistant/3-apex-assistant.md"
+      },
+      {
+        "title": "Lab 4: Enhance UI with APEX Assistant",
+          "filename": "../../4-ui-apex-assistant/4-ui-apex-assistant.md"
+      },
+      {
+        "title": "Lab 5: Create an Event Chat Assistant",
+          "filename": "../../5-chat-bot/5-chat-bot.md"
+      },
+      {
+        "title": "Lab 6: Generate Event Description with AI",
+          "filename": "../../6-generate-text/6-generate-text.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}
