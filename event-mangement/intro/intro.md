@@ -10,7 +10,7 @@ Next, you will customize your application using Oracle APEX low-code features, m
 
 As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the Show AI Assistant dynamic Action of APEX of APEX, providing a responsive interface for real-time user interaction.
 
-###  Objectives
+### Objectives
 
 - Obtain a free development environment.
 - Create a Data Model using AI.
@@ -18,6 +18,8 @@ As you progress, you integrate AI-powered text generation into your application,
 - Refine the application by generating SQL using APEX assistant.
 - Create an AI Chat Assistant to inquire about the Events.
 - Add functionality to Generate Text with AI.
+
+Total Workshop Time: 30 minutes
 
 ## Prerequisites
 
@@ -49,10 +51,10 @@ As you progress, you integrate AI-powered text generation into your application,
 
 | | Module | Est. Time |
 |--- |--- | --- |
-| 1.|[Configure Generative AI Service and Create a Data Model using AI](?lab=1-installing-sample-datasets) | 5 minutes |
+| 1.|[Configure Generative AI Service and Create a Data Model using AI](?lab=1-create-data-model) | 5 minutes |
 | 2.|[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
 |3.|[Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
-| 4.|[Enhance UI with APEX Assistant](?lab=4-chat-assistant) | 5 minutes |
+| 4.|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
 | 5.|[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
 |6.| [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
 
