@@ -17,6 +17,17 @@ In this lab, you will:
 
 - Load the database objects that are required for this lab using SQL Scripts
 
+### Downloads
+
+If you would like to skip the part of building the app from scratch, download the starter app [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql).
+
+Complete the following steps:
+
+1. Follow on screen instructions to import and install the app with supporting objects.
+2. Execute Lab 2 > Task 2 to install application users.
+
+Then, skip to Lab 4.
+
 ## Task 1: Create Application Users
 
 In this task, you'll create multiple users representing different roles within the **Employee Onboarding** application, enabling you to test various user experiences and access levels.
