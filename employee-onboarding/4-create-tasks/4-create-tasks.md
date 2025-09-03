@@ -24,6 +24,17 @@ In this lab, you will:
 
 * All previous labs successfully completed
 
+### Downloads
+
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
+
+Complete the following steps:
+
+1. Follow on screen instructions to import and install the app with supporting objects.
+2. Execute Lab 2 > Task 2 to install application users.
+
+Then, proceed with the below tasks.
+
 ## Task 1: Create Task Definitions for IT Setup
 
 In this task, you will create a task definition for IT Setup and assign it to the IT staff.
@@ -66,6 +77,7 @@ In this task, you will create a task definition for IT Setup and assign it to th
 7. Under **Settings**, enter/select the following:
 
     - Actions Source: **SQL Query**
+
     - Actions SQL Query: Copy and paste the below SQL Query:
         ```
          <copy>
@@ -164,13 +176,12 @@ In this task, you will create a task definition for IT Setup and assign it to th
     - Value Type: **SQL Query**
 
     - Value: Copy and paste the below code:
-  
+
         ```
          <copy>
          select upper(first_name) from employees  where employee_id = :APEX$TASK_PK;
          </copy>
         ```
-
 
     ![Add Potential owner to the Task](./images/add-training-participant.png " ")
 
@@ -249,5 +260,5 @@ You have successfully created Human Task definitions for the Employee Onboarding
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

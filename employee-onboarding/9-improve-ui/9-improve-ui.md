@@ -62,9 +62,9 @@ Estimated Time: 10 minutes
         - Image/Class: **fa-workflow**
         - List Entry Label: **Workflow Pages**
 
-    - Target > Page: **19**
+    - Target > Page: **16**
 
-    *Note: Link it to your **Workflows Initiated By Me** Page.*
+    *Note: Link it to your **Workflow Dashboard** Page.*
 
     Click **Create List Entry**.
 
@@ -82,9 +82,18 @@ Estimated Time: 10 minutes
 
     ![Set Parent Entry](./images/doc-parent1.png " ")
 
-9. Now, select **Administration** list entry and set the Sequence: **150** and select **Apply Changes**.
+9. Now, select **Administration** list entry and enter/select the following:
 
-    ![Set Admin Entry](./images/admin-entry.png " ")
+    - Entry > Sequence: **150**
+
+    - Under Target:
+
+        - Target type: **Page in this Application**
+        - Page: **2**
+
+    Click **Apply Changes**.
+
+    ![Set Admin Entry](./images/admin2.png " ")
 
 10. Similarly, select **Archived Tasks and Workflows** list entry and set the Sequence: **145** and select **Apply Changes**.
 
@@ -173,5 +182,5 @@ You have improved the Employee Onboarding application by updating the navigation
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

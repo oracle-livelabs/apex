@@ -1,8 +1,7 @@
 # Other LiveLabs you might like
 
+- [Enhance your Oracle APEX App with Document-Aware Generative AI Agents](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=4190)
 
-- [Autonomous Database Dedicated](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=677)
+- [Implementing Image and Text Semantic Search in Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=4208)
 
-- [Manage and Monitor Autonomous Database](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=553)
-
-- [Scaling and Performance in the Autonomous Database](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=608)
+- [Build your own Online Bookstore App with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=4141)
