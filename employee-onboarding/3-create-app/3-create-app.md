@@ -18,6 +18,8 @@ In this lab, you will:
 
 * Create an Email Template for the onboarding process
 
+- Set up Subtitution String for APP_EMAIL
+
 ## Task 1: Create Employee Onboarding Application
 
 In this task you will create an application.
@@ -449,11 +451,35 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create Template](images/create-emp-temp2.png "" )
 
+## Task 5: Set the APP_EMAIL Substitution String
+
+In this task, you will create a substitution string to manage the application email address used throughout your Employee Onboarding application. Substitution strings allow you to define values once and reuse them across multiple locations, making maintenance easier.
+
+1. Navigate to the Application Home page by clicking on **Application ID**
+
+   ![Edit App definition](./images/go-app.png " ")
+
+2. Click **Edit Application Definition**.
+
+   ![Edit App definition](./images/edit-app-def.png " ")
+
+3. Under Substitutions, add the following entry for APP_EMAIL settings.
+
+    - Substitution: **APP_EMAIL**
+
+    - Value: **no-reply@acmecorp.com**
+
+      > *Note:* Replace acmecorp.com with your actual domain.
+
+   ![set application Email](./images/set-app-email.png " ")
+
+4. Click **Apply Changes**.
+
 ## Summary
 
 In this task, you learned how to build administration pages to create and manage Employees, Departments, and Training Catalogs. You also added a navigation entry for the main Administration page. Additionally, you created an email template for the Onboarding process.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

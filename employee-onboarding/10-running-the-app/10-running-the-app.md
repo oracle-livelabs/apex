@@ -8,90 +8,21 @@ In this lab, you will run and explore the Employee Onboarding application to und
 
 - Demonstrate the behavior of the Employee Onboarding application through hands-on activities.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Prerequisites
 
 - All the previous Labs have been completed.
 
-## Task 1: Set the APP_EMAIL Substitution String
-
-1. Go to the Application Home Page and click **Edit Application Definition**.
-
-   ![Edit App definition](./images/edit-app-def.png " ")
-
-2. Under Substitutions, add the following entry for APP_EMAIL settings.
-
-    - Substitution: **APP_EMAIL**
-
-    - Value: **no-reply@acmecorp.com**
-
-      > *Note:* Replace acmecorp.com with your actual domain.
-
-   ![set application Email](./images/set-app-email.png " ")
-
-3. Click **Apply Changes**.
-
-## Task 2: Create Application Users
-
-In this task, you create multiple users for **Employee Onboarding** application.
-
-1. On the Application home page, click Administration icon and select Manage Users and Groups.
-
-   ![Create Users application](./images/create-users.png " ")
-
-2. Click **Create Multiple User**.
-
-   ![Create Users application](./images/create-users2.png " ")
-
-3. You will create the following users for the application:
-
-    |   Employee Name      |  Department |
-    | -------------- | --------- |
-    |    STEVE          |   HR  |
-    |   AMY     |    IT  |
-    |   ALEX | Sales |
-    | MONICA | Sales |
-    {: title="List of Users to Create in the Application"}
-
-   *Note: MONICA is a new hire in the Sales Department, for whom we will be initating a workflow request.*
-
-4. In the **Create multiple Users** dialog, enter/select the following attributes:
-
-    - List of Email Addresses: Copy and Paste the below email addresses
-
-      ```
-      <copy>
-      AMY@yourdomain.com
-      STEVE@yourdomain.com
-      ALEX@yourdomain.com
-      MONICA@yourdomain.com
-      </copy>
-      ```
-
-    - Usernames: **Exclude @ domain as part of the username**
-
-    - Password and Confirm Password: **Enter a password**
-
-    Click **Next**.
-
-    > *Note:* Replace yourdomain.com with your actual domain.
-
-    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
-
-5. Click **Create Valid Users**.
-
-    ![Create Multiple Users - details](./images/create-multiple-users2.png  " ")
-
-## Task 3: Enter Employees in Application
+## Task 1: Enter Employees in Application
 
 In this task, you will recreate the previously created  employees in the Application.
 
-1. Navigate to the Application Home Page, click **Run Application**.
+1. From the **Application Home page**, click **Run Application**.
 
    ![Run application](./images/run-app.png " ")
 
-2. Log in as an Administrator and Navigate to **Administration** > **Employees** page.
+2. Log in as an **Administrator** and Navigate to **Administration** > **Employees** page.
 
    ![login to the application](./images/login-to-app.png =30%x*)
 
@@ -107,7 +38,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Create ALEX](./images/create-alex.png =40%x*)
 
-## Task 4: Onboard a New Hire
+## Task 2: Onboard a New Hire
 
 1. Log in as STEVE (HR) to onboard a new employee
 
@@ -135,7 +66,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![appointment created](./images/success-msg.png " ")
 
-## Task 5: Monitor the Workflow
+## Task 3: Monitor the Workflow
 
 1. From the left navigation menu, click on **Workflow Pages** and select **Workflows Initiated By Me**.
 
@@ -149,7 +80,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
     ![navigate to workflow](./images/monitor-appts.png " ")
 
-## Task 6: Complete the IT Setup tasks
+## Task 4: Complete the IT Setup tasks
 
 1. Log in as **AMY**, who is an IT staff in this workflow.
 
@@ -195,7 +126,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
     ![Completed Task sucess messages](./images/task-sucess.png " ")
 
-## Task 7: Observe the Workflow
+## Task 5: Observe the Workflow
 
 1. Log out and log in as **STEVE** (HR).
 
@@ -215,7 +146,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 5. Click **Close**.
 
-## Task 8: Create Training Catalogues
+## Task 6: Create Training Catalogues
 
 1. Navigate to Administration, and click **Training Catalogues**.
 
@@ -239,7 +170,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Create Training Catalogue](./images/create-training4.png " ")
 
-## Task 9: Retry Workflow
+## Task 7: Retry Workflow
 
 1. Navigate to **Workflows Intiated By Me** page.
 
@@ -259,7 +190,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    Now the workflow is waiting at the **Tasks based on Employment Type** step.
 
-## Task 10: Complete the Workflow
+## Task 8: Complete the Workflow
 
 1. Log out and log in as **MONICA** (New Hire).
 
@@ -277,7 +208,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Complete task](./images/check-wf3.png " ")
 
-## Task 11: Observe the Workflow
+## Task 9: Observe the Workflow
 
 1. Log out and log back in as **STEVE** to monitor the workflow.
 
@@ -287,7 +218,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![Check onboarding workflow](./images/check-emp-workflow2.png " ")
 
-## Task 12: Verify Email Confirmation
+## Task 10: Verify Email Confirmation
 
 1. Check the inbox of the New Hire's email for two emails.
 
@@ -300,11 +231,11 @@ In this task, you will recreate the previously created  employees in the Applica
 In this hands-on lab, you learned how to:
 
 - Automate business processes using APEX Workflows.
-- Define workflow activities, variables, parameters, additional data, and connections.
-- Start a new workflow through a Page Process.
 - Monitor the progress of initiated workflows.
+- Retry Faulted workflow.
+- Complete Workflow processes.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
