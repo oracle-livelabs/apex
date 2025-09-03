@@ -1,8 +1,15 @@
-# Activate the 'Employee Onboarding' Application
+# Activate the Workflows
 
 ## Introduction
 
 In this lab, you add an ADMIN participant and activate the workflow.
+
+Workflows marked as **Active** are ready for production use and represent the live version of your business processes. The APEX Workflow engine exclusively processes workflow versions that have an 'Active' status, ensuring only approved workflows run in your production environment.
+
+- Only one version of a workflow can be active at any given time, preventing conflicts and ensuring consistency.
+- Active workflows are the only versions recognized by the start_workflow API and workflow engine in production applications.
+- While Active, certain workflow changes can still be made and saved without disrupting running processes.
+- An Active workflow versions can be deactivated when you need to retire them from production use.
 
 ### Objectives
 
@@ -86,5 +93,5 @@ In this hands-on lab, you learned how to:
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Sahaana Manavalan, Senior Product Manager, August 2025
+- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
