@@ -50,9 +50,11 @@ If you are stuck or the App is not working as expected, you can download and ins
             - ONNX Model Owner: **-Select your schema-**
             - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-        Click **Apply Changes**.
+            Click **Apply Changes**.
 
-    ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
+        ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
+
+    - Follow **Lab 3 > Task 2**, since the imported application does not include the CLIP IMAGE MODEL.
 
 4. All set. Now, run the application and see it in action!
 
