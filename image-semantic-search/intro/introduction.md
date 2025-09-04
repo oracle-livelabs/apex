@@ -41,7 +41,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 2. Import the **Image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow **Lab 1** to load the ONNX Models to your database.
+    - Follow **Lab 2** to load the ONNX Models to your database.
 
     - In the **App Builder homepage**, navigate to **Workspace Utilities > Vector Providers > CLIP TEXT MODEL**. In the Vector Provider Details page, select the following:
 
