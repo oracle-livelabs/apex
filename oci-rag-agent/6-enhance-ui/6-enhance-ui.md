@@ -28,7 +28,7 @@ In this lab, you will:
 
     - Appearance > Template: **Blank with Attributes**
 
-    ![Breadcrumb](images/breadcrumb.png " ")
+    ![Breadcrumb](images/breadcrumb-genai.png " ")
 
 4. Navigate to **Page 1 : Chat With OCI Generative AI** root node and in the Property Editor, enter/select the following:
 
@@ -68,7 +68,7 @@ In this lab, you will:
 
     ![Breadcrumb](images/page1.png " ")
 
-5. Now, run the application.
+5. Click **Save** and run the application.
 
 ## Task 2: Explore Theme Roller to customize the look and feel
 

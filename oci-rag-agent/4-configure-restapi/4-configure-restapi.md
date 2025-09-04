@@ -156,7 +156,7 @@ In this task, you will create an application that allow you to build pages, add 
     | 2. | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
-    ![Content Type](images/content-type1.png " ")
+    ![Content Type](images/http-header.png " ")
 
 15. Click **Add Parameter**.
 
@@ -250,7 +250,7 @@ In this task, you will create an application that allow you to build pages, add 
     | 2. | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
-    ![Content Type](images/content-type1.png " ")
+    ![Content Type](images/http-header.png " ")
 
     ![Response](images/response.png " ")
 
