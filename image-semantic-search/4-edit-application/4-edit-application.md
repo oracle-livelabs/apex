@@ -136,7 +136,7 @@ In this task, we will create a Search page for Text based search.
 
     ![Create Page](images/create-paget3.png " ")
 
-5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
+5. In the Rendering Tree, select **Page 2: Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
 
     ```css
      <copy>
