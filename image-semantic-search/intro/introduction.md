@@ -12,7 +12,7 @@ Estimated Time: 45 minutes
 
 In this workshop, you:
 
-- Export and load ONNX Pipeline models that can understand the content of images and text by converting them into vector representations.
+- Load ONNX Pipeline models that can understand the content of images and text by converting them into vector representations.
 
 - Integrate these models into your Oracle Database so they can be used directly from within your APEX application.
 
@@ -41,7 +41,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 2. Import the **Image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
-    - Follow **Lab 1** to load the ONNX Models to your database.
+    - Follow **Lab 2** to load the ONNX Models to your database.
 
     - In the **App Builder homepage**, navigate to **Workspace Utilities > Vector Providers > CLIP TEXT MODEL**. In the Vector Provider Details page, select the following:
 
@@ -50,9 +50,11 @@ If you are stuck or the App is not working as expected, you can download and ins
             - ONNX Model Owner: **-Select your schema-**
             - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-        Click **Apply Changes**.
+            Click **Apply Changes**.
 
-    ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
+        ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
+
+    - Follow **Lab 3 > Task 2**, since the imported application does not include the CLIP IMAGE MODEL.
 
 4. All set. Now, run the application and see it in action!
 
