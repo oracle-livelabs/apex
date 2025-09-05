@@ -12,7 +12,7 @@ Estimated Time: 45 minutes
 
 In this workshop, you:
 
-- Export and load ONNX Pipeline models that can understand the content of images and text by converting them into vector representations.
+- Load ONNX Pipeline models that can understand the content of images and text by converting them into vector representations.
 
 - Integrate these models into your Oracle Database so they can be used directly from within your APEX application.
 
