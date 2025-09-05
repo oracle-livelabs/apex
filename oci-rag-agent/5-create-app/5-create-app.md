@@ -433,7 +433,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
 16. In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Execute Server-side Code**
+    - Identification > Action: **Execute JavaScript Code**
 
     - Under Settings > Code : Copy and paste the below code
 
@@ -1284,7 +1284,7 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Label: **Upload Document to KB**
 
-    - Layout: **Top of Region [Legacy]**
+    - Layout > Slot: **Top of Region [Legacy]**
 
     - Appearance : **Hot**
 
@@ -1354,7 +1354,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Behavior > Action: **Submit Page**
 
-    ![New Session](images/new-session.png " ")
+    ![New Session](images/new-sessionbtn.png " ")
 
 4. Right-click  **Breadcrumb Bar** and select **Create Button**.
 
