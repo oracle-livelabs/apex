@@ -8,8 +8,8 @@ In the previous labs, you went through detailed steps to configure and use Gener
 
 Estimated Time: 5 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Run the Application](videohub:1_2kyt4e45)
 
 ### Objectives
 
