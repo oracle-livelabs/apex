@@ -8,8 +8,8 @@ In this lab, you learn to build a conversational inquiry about schools using Gen
 
 Estimated Time: 20 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Build a chatbot](videohub:1_q23fay7j)
 
 ### Objectives
 
