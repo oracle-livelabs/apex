@@ -18,9 +18,9 @@ In this lab, you will:
 
 1. Click on **Application Id**. Navigate to Page 1 **Chat With OCI Generative AI**.
 
-    ![Application ID](images/navigateto-appid.png " ")
+    ![Application ID](./images/navigateto-appid.png " ")
 
-    ![Navigate Page1](images/navigateto-pg1.png " ")
+    ![Navigate Page1](./images/navigateto-pg1.png " ")
 
 2. Under **Breadcrumb Bar**, click **GenAI Agents for APEX** .
 
@@ -28,7 +28,7 @@ In this lab, you will:
 
     - Appearance > Template: **Blank with Attributes**
 
-    ![Breadcrumb](images/breadcrumb.png " ")
+    ![Breadcrumb](./images/breadcrumb-genai.png " ")
 
 4. Navigate to **Page 1 : Chat With OCI Generative AI** root node and in the Property Editor, enter/select the following:
 
@@ -66,19 +66,19 @@ In this lab, you will:
         </copy>
         ```
 
-    ![Breadcrumb](images/page1.png " ")
+    ![Breadcrumb](./images/page1.png " ")
 
-5. Now, run the application.
+5. Click **Save** and run the application.
 
 ## Task 2: Explore Theme Roller to customize the look and feel
 
 1. At bottom navigate to **Developer Toolbar**. Click **Customize > Theme Roller**.
 
-   ![Developer Toolbar](images/developer-toolbar.png " ")
+   ![Developer Toolbar](./images/developer-toolbar.png " ")
 
 2. Theme > Select Theme > **Redwood Light**.
 
-   ![Redwood Theme](images/redwood-light.png " ")
+   ![Redwood Theme](./images/redwood-light.png " ")
 
 3. Under Redwood Options, enter/select the following:
 
@@ -98,13 +98,13 @@ In this lab, you will:
 
 5. Click **Save As**.
 
-    ![Theme](images/theme-roller.png " ")
+    ![Theme](./images/theme-roller.png " ")
 
 6. Enter Style Name: **Theme**, click **Save**.
 
-   ![Save Theme](images/save-theme.png " ")
+   ![Save Theme](./images/save-theme.png " ")
 
-   ![Final App](images/final-app.png " ")
+   ![Final App](./images/final-app.png " ")
 
 ## Summary
 

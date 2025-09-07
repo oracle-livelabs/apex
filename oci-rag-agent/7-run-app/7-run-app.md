@@ -26,7 +26,7 @@ In this task, you will upload document to OCI Object storage.
 
 1. In the **Navigation Bar**, click **Upload Documents**.
 
-    ![UI UploadDoc](images/ui-uploaddoc.png " ")
+    ![UI UploadDoc](./images/ui-uploaddoc.png " ")
 
 2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foracle-apex-app-builder-users-guide.pdf?download=1) document onto the dialog window.
 
@@ -34,15 +34,15 @@ In this task, you will upload document to OCI Object storage.
 
 3. Click **Create**.
 
-    ![UI Upload](images/ui-upload.png " ")
+    ![UI Upload](./images/ui-upload.png " ")
 
 4. The document will be uploaded to OCI Object Storage bucket. Ingestion job will run in the background and details like ingestion id will be stored in database table.
 
-    ![Ingestion Job](images/ingestion-job.png " ")
+    ![Ingestion Job](./images/ingestion-job.png " ")
 
 5. Once the document uploaded successfully, click **Chat With AI Agent**
 
-    ![Ingestion Job](images/ingestionjob-success.png " ")
+    ![Ingestion Job](./images/ingestionjob-success.png " ")
 
 ## Task 2: Chat with AI and View Citations of the Response
 
@@ -50,13 +50,13 @@ In this task, you will chat with Generative AI Agents. You can also view the cit
 
 1. Enter your question and press **Enter**.
 
-    ![Type](images/type.png " ")
+    ![Type](./images/type.png " ")
 
-    ![Type](images/type-chat1.png " ")
+    ![Type](./images/type-chat1.png " ")
 
 2. Click **View Citations** link.
 
-    ![Type](images/click-citation1.png " ")
+    ![Type](./images/click-citation1.png " ")
 
 3. Close the dialog.
 
@@ -66,17 +66,17 @@ In this task, you can create new session which refreshes the current chat and st
 
 1. On the **Navigation Bar**, click **New Session**.
 
-    ![New Session1](images/new-session1.png " ")
+    ![New Session1](./images/new-session1.png " ")
 
-    ![Refresh Session](images/refresh.png " ")
+    ![Refresh Session](./images/refresh.png " ")
 
 2. Click **Upload Documents** in the navigation bar.
 
-    ![UI UploadDoc](images/ui-uploaddoc.png " ")
+    ![UI UploadDoc](./images/ui-uploaddoc.png " ")
 
 3. Click three dot and select **Download** or **Delete**.
 
-    ![Three Menu](images/three-menu1.png " ")
+    ![Three Menu](./images/three-menu1.png " ")
 
 ## Summary
 
