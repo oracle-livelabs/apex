@@ -20,7 +20,7 @@ In this lab, you will:
 
 - Edit the Timeline region to automatically generate image embeddings using the image vector provider whenever a new image is posted. These embeddings are stored in the database to support future semantic searches.
 
-## Task 1:  Create Search Configuration for Text-Based Search
+## Task 1:  Create Search Configuration for Text based Search
 
 In this task, you will create a search configuration in Oracle APEX using the CLIP text vector provider, and then build a search page that allows users to perform semantic searches based on text input.
 
@@ -84,17 +84,22 @@ In this task, you will create a search configuration in Oracle APEX using the CL
             ```
              <copy>
              <div class="a-ResultsItem &RESULT_CSS_CLASSES!ATTR.">
-              {if ?ICON_VALUE/}
-                {case ICON_TYPE/}
-                {when INITIALS/}
-                    <div class="a-ResultItem-initials u-color-var">&ICON_VALUE.</div>
-                {when URL/}
-                    <div class="a-ResultItem-image"><img src="&ICON_VALUE!ATTR." alt="&ENAME!ATTR." role="presentation" /></div>
-                {when CLASS/}
-                    <div class="a-ResultItem-icon u-color-var"><span class="fa &ICON_VALUE!ATTR." aria-hidden="true"></span></div>
-                {endcase/}
-             {endif/}
+                {if ?ICON_VALUE/}
+                    {case ICON_TYPE/}
+                    {when INITIALS/}
+                        <div class="a-ResultItem-initials u-color-var">&ICON_VALUE.</div>
+                    {when URL/}
+                        <div class="a-ResultItem-image">
+                        <img src="&ICON_VALUE!ATTR." alt="&ENAME!ATTR." role="presentation" width="200" height="200" />
+                        </div>
+                    {when CLASS/}
+                        <div class="a-ResultItem-icon u-color-var">
+                        <span class="fa &ICON_VALUE!ATTR." aria-hidden="true"></span>
+                        </div>
+                    {endcase/}
+                {endif/}
              </div>
+
              </copy>
             ```
 
@@ -131,14 +136,10 @@ In this task, we will create a Search page for Text based search.
 
     ![Create Page](images/create-paget3.png " ")
 
-5. In the Rendering Tree, select **Page:Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
+5. In the Rendering Tree, select **Page 2: Text to Image** and in the property  editor, copy paste the following under **CSS > Inline**.
 
-    ```
+    ```css
      <copy>
-     img{
-        width : 200px;
-        height : 200px;
-        }
      .a-SearchResults-list{
         flex-direction: row;
         flex-wrap: wrap;
@@ -146,7 +147,7 @@ In this task, we will create a Search page for Text based search.
      </copy>
     ```
 
-    ![CSS Inline](images/css-inline.png " ")
+    ![CSS Inline](images/page-css.png " ")
 
 6. Click **Save**.
 
@@ -167,8 +168,8 @@ In this task, we will create a Search page for Text based search.
 
     - Under Page Definition:
 
-        - Page Number : **3**
-        -  Name : **Image to Image**
+        - Page Number: **3**
+        - Name: **Image to Image**
 
     - Under Data Source:
 

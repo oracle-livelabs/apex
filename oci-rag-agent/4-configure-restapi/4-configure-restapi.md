@@ -26,25 +26,25 @@ In this task, you will create an application that allow you to build pages, add 
 
 1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
 
-   ![Click Create](images/create.png " ")
+   ![Click Create](./images/create.png " ")
 
 2. Select **Use Create App Wizard**.
 
-   ![Use Create App Wizard](images/use-create-app-wizard.png " ")
+   ![Use Create App Wizard](./images/use-create-app-wizard.png " ")
 
 3. In Create an Application Wizard, enter/select the following:
 
     - Name : **GenAI Agents for APEX**
 
-   ![Enter App name](images/app-name.png " ")
+   ![Enter App name](./images/app-name.png " ")
 
 4. Click **Add Page**.
 
-   ![Blank Page Create](images/blank-page-create.png " ")
+   ![Blank Page Create](./images/blank-page-create.png " ")
 
 5. Select **Blank**.
 
-    ![Select Blank Page](images/create-blank-page.png " ")
+    ![Select Blank Page](./images/create-blank-page.png " ")
 
 6. Under **Add Blank Page**, enter/select the following:
 
@@ -52,39 +52,39 @@ In this task, you will create an application that allow you to build pages, add 
 
 7. Click **Add Page**.
 
-    ![Blank Page Name](images/blank-page-name.png " ")
+    ![Blank Page Name](./images/blank-page-name.png " ")
 
 8. Under **Pages**, click **Edit** beside **Home**.
 
-    ![Edit Home Page](images/click-edit.png " ")
+    ![Edit Home Page](./images/click-edit.png " ")
 
 9. Click **Delete**.
 
-    ![Delete Home Page](images/delete-home-page.png " ")
+    ![Delete Home Page](./images/delete-home-page.png " ")
 
 10. Click **Create Application**.
 
-    ![Create Application](images/create-application.png " ")
+    ![Create Application](./images/create-application.png " ")
 
 ## Task 2: Invoke Create Session using REST Data Source
 
 1. Navigate to App Builder > Select your application > **Shared Components**.
 
-     ![Select Application](images/select-app.png " ")
+     ![Select Application](./images/select-app.png " ")
 
-     ![Click REST Data Sources](images/shared-comp.png " ")
+     ![Click REST Data Sources](./images/shared-comp.png " ")
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
-   ![Click REST Data Sources](images/rest-data-source2.png " ")
+   ![Click REST Data Sources](./images/rest-data-source2.png " ")
 
 3. Click **Create**.
 
-   ![Click Create](images/create-rest.png " ")
+   ![Click Create](./images/create-rest.png " ")
 
 4. Select **From scratch** and click **Next**.
 
-   ![Click From scratch](images/rest-next.png " ")
+   ![Click From scratch](./images/rest-next.png " ")
 
 5. Under Create REST Data Source, enter/select the following:
 
@@ -102,11 +102,11 @@ In this task, you will create an application that allow you to build pages, add 
     - URL Endpoint may differ based on Region. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents-client/20240531/>
     - POST endpoint for Create Session: Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents-client/20240531/Session/CreateSession>
 
-   ![Create REST Data Sources](images/general-tab.png " ")
+   ![Create REST Data Sources](./images/general-tab.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
-   ![Create REST Data Source - Remote Server](images/remote-server.png " ")
+   ![Create REST Data Source - Remote Server](./images/remote-server.png " ")
 
 7. Under Authentication, enter/select the following:
 
@@ -117,15 +117,15 @@ In this task, you will create an application that allow you to build pages, add 
 8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-   ![Click Create REST Source Manually](images/authentication-tab.png " ")
+   ![Click Create REST Source Manually](./images/authentication-tab.png " ")
 
 9. On the REST Data Sources page, click **Create Session API**.
 
-   ![Click Document Understanding API](images/click-create-session.png " ")
+   ![Click Document Understanding API](./images/click-create-session.png " ")
 
 10. Navigate to **Operations** tab , select **Edit icon** for the **POST** operation
 
-    ![Click Edit POST](images/edit-post.png " ")
+    ![Click Edit POST](./images/edit-post.png " ")
 
 11. For **Request Body Template**: Copy and paste the JSON given below.
 
@@ -140,13 +140,13 @@ In this task, you will create an application that allow you to build pages, add 
 
 12. Click **Synchronize with Body** and click **OK**.
 
-    ![Request Body Teamplate](images/request-body-template.png " ")
+    ![Request Body Teamplate](./images/request-body-template.png " ")
 
-    ![Synchronize with Body Ok](images/synchronize-ok.png " ")
+    ![Synchronize with Body Ok](./images/synchronize-ok.png " ")
 
 13. Under **Operation Parameters**, select **Add Parameter**.
 
-    ![Click AGENT_NAME](images/add-parameter1.png " ")
+    ![Click AGENT_NAME](./images/add-parameter1.png " ")
 
 14. In the **Edit REST Data Source Parameter** dialog, add the following  parameters:
 
@@ -156,29 +156,29 @@ In this task, you will create an application that allow you to build pages, add 
     | 2. | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
-    ![Content Type](images/content-type1.png " ")
+    ![Content Type](./images/http-header.png " ")
 
 15. Click **Add Parameter**.
 
-   ![Response](images/response.png " ")
+   ![Response](./images/response.png " ")
 
 ## Task 3: Invoke Ingestion Job using REST Data Source
 
 1. Navigate to **Shared Components**.
 
-     ![Click REST Data Sources](images/shared-comp.png " ")
+     ![Click REST Data Sources](./images/shared-comp.png " ")
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
-   ![Click REST Data Sources](images/rest-data-source2.png " ")
+   ![Click REST Data Sources](./images/rest-data-source2.png " ")
 
 3. Click **Create**.
 
-   ![Click Create](images/click-create-ingestion.png " ")
+   ![Click Create](./images/click-create-ingestion.png " ")
 
 4. Select **From scratch** and click **Next**.
 
-   ![Click From scratch](images/rest-next.png " ")
+   ![Click From scratch](./images/rest-next.png " ")
 
 5. Under **Create REST Data Source**, enter/select the following:
 
@@ -194,11 +194,11 @@ In this task, you will create an application that allow you to build pages, add 
     - URL Endpoint differs based on region not based on OCI Tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents/20240531>
     - POST endpoint for Ingestion job Refer to the following link for more details <https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-agents/20240531/DataIngestionJob/CreateDataIngestionJob>
 
-   ![Create REST Data Sources](images/general-tab2.png " ")
+   ![Create REST Data Sources](./images/general-tab2.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
-   ![Create REST Data Source - Remote Server](images/remote-server-2.png " ")
+   ![Create REST Data Source - Remote Server](./images/remote-server-2.png " ")
 
 7. Under Authentication, enter/select the following:
 
@@ -209,15 +209,15 @@ In this task, you will create an application that allow you to build pages, add 
 8. Click **Create REST Source Manually**.
    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-   ![Click Create REST Source Manually](images/authentication-tab.png " ")
+   ![Click Create REST Source Manually](./images/authentication-tab.png " ")
 
 9. On the REST Data Sources page, click **Create Ingestion Job API**.
 
-   ![Click Document Understanding API](images/click-create-ingestion-job.png " ")
+   ![Click Document Understanding API](./images/click-create-ingestion-job.png " ")
 
 10. Navigate to **Operations** tab , select **Edit icon** for the **POST** operation.
 
-    ![Click Edit POST](images/edit-post.png " ")
+    ![Click Edit POST](./images/edit-post.png " ")
 
 11. For **Request Body Template**: Copy and paste the JSON given below.
 
@@ -234,13 +234,13 @@ In this task, you will create an application that allow you to build pages, add 
 
 12. Click **Synchronize with Body** and click **OK**.
 
-    ![Request Body Teamplate](images/request-body-template2.png " ")
+    ![Request Body Teamplate](./images/request-body-template2.png " ")
 
-    ![Synchronize with Body Ok](images/synchronize-ok2.png " ")
+    ![Synchronize with Body Ok](./images/synchronize-ok2.png " ")
 
 13. Under **Operation Parameters**, select **Add Parameter**.
 
-    ![Add Parameter](images/add-parameter2.png " ")
+    ![Add Parameter](./images/add-parameter2.png " ")
 
 14. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
@@ -250,13 +250,13 @@ In this task, you will create an application that allow you to build pages, add 
     | 2. | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
-    ![Content Type](images/content-type1.png " ")
+    ![Content Type](./images/http-header.png " ")
 
-    ![Response](images/response.png " ")
+    ![Response](./images/response.png " ")
 
 15. Click **Add Parameter**.
 
-    ![Add Parameter](images/after-add1.png " ")
+    ![Add Parameter](./images/after-add1.png " ")
 
 ## Summary
 
