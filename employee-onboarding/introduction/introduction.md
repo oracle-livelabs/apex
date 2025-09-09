@@ -43,8 +43,8 @@ In this workshop, you will learn how to:
 | 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 15 minutes |
 | 6 | [Create Employee Onboarding Workflow](?lab=6-create-empon-wf) | 15 minutes |
 | 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 40 minutes |
-| 8 | [Create Archive Tasks and Archive Workflow](?lab=8-archived-tasks) | 5 minutes |
-| 9 | [Improve UI & Navigation](?lab=9-improve-ui) | 10 minutes |
+| 8 | [Create Archive Tasks and Archive Workflow (Optional)](?lab=8-archived-tasks) | 5 minutes |
+| 9 | [Improve UI & Navigation (Optional)](?lab=9-improve-ui) | 10 minutes |
 | 10 | [Run the Application](?lab=10-running-the-app) | 10 minutes |
 | 11 | [Activate Workflow](?lab=11-activate-workflow) | 5 minutes |
 
