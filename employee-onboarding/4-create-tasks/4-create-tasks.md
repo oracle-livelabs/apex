@@ -31,7 +31,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! Clic
 Complete the following steps:
 
 1. Follow on screen instructions to import and install the app with supporting objects.
-2. Execute Lab 2 > Task 2 to install application users.
+2. Execute **Lab 2 > Task 1** to install application users.
 
 Then, proceed with the below tasks.
 
