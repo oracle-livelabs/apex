@@ -48,7 +48,7 @@ In this lab, you will load the ONNX Models into your database.
      model_name => 'clip_txt_model',
      model_data => DBMS_CLOUD.GET_OBJECT(
                      credential_name => null,
-                     object_uri      => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/MIJaGRt7FlqvNTWxie-6sC2vUlcxVDDNkIu6HjFeOTUYIsjzWnmo9k2o9x1cUSj8/n/idmypotriwr1/b/image-semanticsearch_livelabs/o/clip_vit_base_patch32_txt.onnx'
+                     object_uri      => 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_txt.onnx'
                   ),
      metadata   => JSON('{
          "function": "embedding",
@@ -73,7 +73,7 @@ In this lab, you will load the ONNX Models into your database.
         model_name => 'clip_img_model',
         model_data => DBMS_CLOUD.GET_OBJECT(
                      credential_name => null,
-                     object_uri      => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/xkFZ3O-rFst30gDNh1L7SC_E89y2AedmAcLU7jD4szAilXhW7qSda4x3WCh53dE9/n/idmypotriwr1/b/image-semanticsearch_livelabs/o/clip_vit_base_patch32_img.onnx'
+                     object_uri      => 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_img.onnx'
                   ),
      metadata   => JSON('{
         "function": "embedding",

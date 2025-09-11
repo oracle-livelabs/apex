@@ -61,7 +61,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 4. All set. Now follow Lab 10 to run the application and see it in action!
 
-*Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 1, 6 and 7 since the data is already populated.*
+*Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 1, 5, 6 and 7 since the data is already populated.*
 
 ## Learn More - *Useful Links*
 
