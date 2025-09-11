@@ -18,7 +18,7 @@
             "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
         },
         {
-            "title": "Lab 2: Load Database Objects & Create App Users",
+            "title": "Lab 2: Load Database Objects & Create Workspace Users",
             "filename": "../../2-data-load/2-data-load.md"
         },
         {
@@ -26,7 +26,7 @@
             "filename": "../../3-create-app/3-create-app.md"
         },
         {
-            "title": "Lab 4: Create Tasks Definitions",
+            "title": "Lab 4: Create Task Definitions",
             "filename": "../../4-create-tasks/4-create-tasks.md"
         },
         {

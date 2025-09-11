@@ -95,7 +95,7 @@ Referring to the flow chart in Lab 1, illustrating the business logic, the emplo
   |----------|-------|------------|----------|
   | EMPLOYEE_ID | Employee ID | VARCHAR2    | No |
   | EMPLOYEE_NAME | Employee Name | VARCHAR2  | No  |
-  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2   | No | 
+  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2   | No |
   | DEPARTMENT | Department ID | NUMBER   | No |
   | INITIATED_BY | Initiated By | VARCHAR2 |Yes |
   {: title="List of Parameters to be Created"}
@@ -118,7 +118,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create Approver Variable](./images/create-approver.png " ")
 
-3. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
+3. Similarly, create a variable **Task Outcome**. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **TASK\_OUTCOME**
 
@@ -126,7 +126,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create task outcome Variable](./images/create-variable-task.png " ")
 
-4. Similarly, create a variable **Manager ID**. In the Property Editor, Enter/Select the following:
+4. Similarly, create a variable called **Manager ID**. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **MANAGER\_ID**
 
@@ -152,7 +152,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create Activity](./images/drag-act.png " ")
 
-2. Click the newly added **Send Email** and in the Property Editor, enter/select the following:
+2. Click the newly added **Send Email** and in the property editor, enter/select the following:
 
     - Identification > Name: **Employee Onboarding Email**
 

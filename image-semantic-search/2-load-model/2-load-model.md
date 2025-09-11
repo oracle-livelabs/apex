@@ -8,6 +8,9 @@ By the end of this lab, you will have a CLIP model integrated into your Oracle D
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Load CLIP ONNX Models](videohub:1_27kd0wmg)
+
 ### Objectives
 
 In this lab, you will:
