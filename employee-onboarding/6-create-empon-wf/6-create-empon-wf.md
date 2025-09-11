@@ -280,7 +280,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
     - Under Value:
 
         - Type: **Item**
-        - Item : **EMPLOYEE\_TYPE**
+        - Item : **EMPLOYMENT\_TYPE**
 
    ![link parameter for Activity](./images/params4.png " ")
 
