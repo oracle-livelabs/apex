@@ -44,11 +44,11 @@
             "filename": "../../7-create-workflow-pages/7-create-workflow-pages.md"
         },
         {
-            "title": "Lab 8: Create Archive Tasks and Archive Workflow",
+            "title": "Lab 8 [OPTIONAL]: Create Archive Tasks and Archive Workflow",
             "filename": "../../8-archived-tasks/8-archived-tasks.md"
         },
         {
-            "title": "Lab 9: Improve UI & Navigation",
+            "title": "Lab 9 [OPTIONAL]: Improve UI & Navigation",
             "filename": "../../9-improve-ui/9-improve-ui.md"
         },
         {
@@ -60,9 +60,9 @@
             "filename": "../../11-activate-workflow/11-activate-workflow.md"
         },
         {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
-        }
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
     ]
 }
