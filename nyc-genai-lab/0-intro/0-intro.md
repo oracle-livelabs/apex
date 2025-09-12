@@ -4,7 +4,7 @@
 
 From precisely summarizing intricate data to crafting context-aware responses, Generative AI stands at the forefront of a technological shift, promising to redefine how we navigate and leverage knowledge in our day-to-day interactions. With the introduction of AI assisted development in Oracle APEX, enabling your applications with generative AI capabilities has never been easier.
 
-In this workshop, you learn to bring generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
+In this workshop, you learn to bring Generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
 
 <!-- ## What is OCI Generative AI service?
 
@@ -17,7 +17,7 @@ In this workshop, you learn to bring generative AI capabilities based on large l
 
 You can read more about these models from the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm). -->
 
-This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop an "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them in making an informed decision about whether a specific school is the ideal fit for their child.
+This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop a "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them to make an informed decision about whether a specific school is the ideal fit for their child.
 
 Estimated Time: 60 minutes
 
@@ -27,26 +27,36 @@ Estimated Time: 60 minutes
 * Build a conversational chatbot using Generative AI to ask questions about a school.
 * Generate Email using Generative AI to apply to a school.
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.2 or later.*
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ## Prerequisites
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+- An APEX workspace.
 
-    - US Midwest (Chicago)
-    - Germany Central (Frankfurt)
-    - UK South (London)
-    - Brazil East (Sao Paulo)
+- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere)
 
-- This workshop makes use of OCI Generative AI Service. OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+- If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
+    - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
 
-- An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+        - Brazil East (Sao Paulo)
+        - Germany Central (Frankfurt)
+        - India South (Hyderabad) 
+        - Japan Central (Osaka)
+        - UAE East (Dubai)
+        - UK South (London)
+        - US Midwest (Chicago)
+        
 
-- The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-- An APEX 24.1.2 workspace. We recommend that you sign up for a workspace on [apex.oracle.com](https://apex.oracle.com). Refer to the [Get Started: Option 3](?lab=1-sign-up-apex#Option3:apexoraclecom) lab to sign up for a new workspace.
+    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
-*Note: This workshop assumes you are using Oracle APEX 24.1.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+
+
+*Note*: 
+- This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+- The application ID in the screenshots may vary. Please ignore the application ID.
 
 ## Labs
 
@@ -58,6 +68,7 @@ Estimated Time: 60 minutes
 | [Build a Conversational Inquiry using Generative AI](?lab=4-using-genai) | 20 minutes |
 | [Generate Email to Apply to a School](?lab=5-apply-to-school) | 15 minutes |
 | [Run the Application](?lab=6-run-app) | 5 minutes |
+| [OPTIONAL - Implement RAG using AI Vector Search](?lab=7-vector-search) | 15 minutes |
 
 Total estimated time: 60 minutes
 
@@ -67,27 +78,12 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads
 
-If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
+If you are stuck or the app is not working as expected, you can download and install one of the the completed app as follows:
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/nyc-gen-ai-app.zip) to download the completed application zip file.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file until Lab 6. Note: This application export does not include the vector search covered in **Optional Lab 7**. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 and Task 2.
 
-2. Import the **nyc-gen-ai-app.zip** file into your workspace. To import the app, go to **App Builder > Import**.
+- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-vector-search.zip) to download the completed application zip file until Lab 7. Note: This application export includes the vector search covered in **Optional Lab 7**. To run this app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 till Task 3. Note: This app requires Oracle Database 23ai and Oracle APEX 24.2.
 
-3. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
-
-4. Once the application is installed, navigate to **App Builder > Workspace Utilities > Web Credentials**.
-
-5. Edit the **apex\_ai\_cred** details to match with your OCI API Key. Refer to the lab: [Configure the OCI API Keys](?lab=3-configure-oci) to create an OCI API Key.
-
-     ![Web Credentials page](images/edit-web-cred.png " ")
-6. Navigate to **App Builder > Workspace Utilities > Generative AI**. Edit the **OCI Gen AI** service.
-
-    - Enter the **Compartment ID**. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved while creating your OCI API Key.
-    - For Credential, select **apex\_ai\_cred**.
-    - Click **Apply Changes**.
-    ![Generative AI page](images/edit-oci-genai.png " ")
-
-7. All set. Now, run the application and see it in action! Follow the lab: [Run the Application](?lab=6-run-app) to run the app.
 
 ## Learn More - *Useful Links*
 
@@ -101,4 +97,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgements
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025

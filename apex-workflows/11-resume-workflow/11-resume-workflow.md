@@ -32,23 +32,47 @@ To view debug messages for a specific workflow instance:
 
 2. Select **Doctor's Appointment** application.
 
-3. Click **Utilities**.
+    ![wait for feedback](./images/doctor-appointment-page.png " ")
+
+3. Click **Shared Components**.
+
+    ![wait for feedback](./images/shared-components.png " ")
+
+4. Under **Workflows and Automations**, click **Workflows**.
+
+    ![wait for feedback](./images/workflows-and-automations.png " ")
+
+5. Select **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/doctor-appointment-workflow.png " ")
+
+6. Under **Doctor Appointment** workflow select **1.0 [Dev]**. In the Property Editor, enter/select the following:
+
+    - Under Advanced:
+
+        - Debug Level: **Info**
+
+    ![wait for feedback](./images/debug-level-info.png " ")
+
+7. Navigate back to Application Id and click **Utilities**.
+
+     ![wait for feedback](./images/go-back-application-page.png " ")
 
     ![wait for feedback](./images/utilities.png " ")
 
-4. On the **Utilities** page, click **Debug Messages**.
+8. On the **Utilities** page, click **Debug Messages**.
 
     ![wait for feedback](./images/debug-msgs.png " ")
 
-5. Click **Actions**, **Columns**.The Select Columns window appears.
+9. Click **Actions**, **Columns**. The Select Columns window appears.
 
     ![wait for feedback](./images/columns.png " ")
 
-6. In the **Do Not Display** section, select **Workflow Instance**.
+10. In the **Do Not Display** section, select **Workflow Instance**.
 
-7. Click **Move** to move **Workflow Instance** to **Display in Report**.
+11. Click **Move** to move **Workflow Instance** to **Display in Report**.
 
-8. Click **Apply**.
+12. Click **Apply**.
 
     ![wait for feedback](./images/workflow-instance.png " ")
 
@@ -86,21 +110,111 @@ This has been addressed now. Try the following steps:
 
 ## Task 3: Resume Workflow at any Activity
 
-When a workflow is suspended and eventually variables are modified, the workflow can be resumed at any activity in the workflow, not just the current activity
+Let’s say a hospital is using the Doctor Appointments Made Easy! application to manage patient appointments. A patient named Rajesh has already received verbal approval for his appointment before the workflow was submitted. However, the system doesn’t recognize this verbal approval, and the workflow is currently waiting for Dr. Anachatt to approve it.
 
-1. In the runtime environment, navigate to **Monitor Appointment Workflows**.
+With the new enhancement, the workflow does not need to be restarted. Instead, an administrator can:
 
-2. Now, suspend one of the Patient Appointment in **Active** State. Select **Active** workflow and click **Suspend**.
+- Suspend the workflow at its current step.
+- Select the final approval activity from the available workflow steps.
+- Resume the workflow from that step, effectively bypassing unnecessary approvals.
 
-    ![wait for feedback](./images/suspend.png " ")
+1. Go to **Doctor Appointments Made Easy!** application and click **10 - Form on Appointment** page.
 
-3. To resume the suspended workflow, select **Suspended** state workflow and click **Resume**.
+    ![wait for feedback](./images/navigate-page-10.png " ")
 
-    ![wait for feedback](./images/resume.png " ")
+2. In the left pane, navigate to **Buttons** region and select **Create Page Item**.
 
-4. The state is **Resumed**.
+    ![wait for feedback](./images/create-a-new-page-item.png " ")
 
-    ![wait for feedback](./images/workflow-resumed.png " ")
+3. In the Property Editor, enter/select the following:
+
+    - Under Identification:
+
+        - Name: **P10\_ACTIVITY\_STATIC\_ID**
+
+        - Type: **Select List**
+
+    - Under List of Values:
+
+        - Type: **SQL Query**
+
+        - SQL Query: Copy and paste the below code:
+
+        ```
+        <copy>
+        select wa.name as name,
+        wa.static_id as value
+        from apex_appl_workflow_activities wa,
+        apex_appl_workflow_versions   wv,
+        apex_workflows                wf$
+        where wf$.workflow_id = :P10_WORKFLOW_ID
+        and wf$.workflow_version_id  = wv.version_id
+        and wv.version_id   = wa.version_id
+        and wv.workflow_static_id = wa.workflow_static_id
+       </copy>
+       ```
+
+       - Display Extra Values: **Toggle Off**
+
+       - Null Display Value: **- Select -**
+
+    ![wait for feedback](./images/create-page-item-activity-static-id.png " ")
+
+4. Go to **Processing** tab, select **Resume** process. In the Property Editor, enter/select the following:
+
+    - Under Settings:
+
+        - Activity Static ID Item: **P10\_ACTIVITY\_STATIC\_ID**
+
+5. Click **Save and Run**.
+
+    ![wait for feedback](./images/resume-process-settings.png " ")
+
+6. In the runtime environment, login as **STEVE** and navigate to **New Appointment**. Enter/select the following:
+
+    - Name: **RAJESH**
+
+    - Email: Enter your email address
+
+    - Problem: **Psychiatric**
+
+    - Appointment Date: Choose appointment date
+
+    - Doctor: **ANACHATT**
+
+    - Age: **45**
+
+7. Click **Submit**.
+
+    ![wait for feedback](./images/new-appointment.png " ")
+
+8. Now, logout and login as **ANACHATT**. Navigate to **Doctor Tasks** from the **Navigation Menu**.
+
+    ![wait for feedback](./images/navigate-doctor-tasks.png " ")
+
+9. Click **Approve** for RAJESH's appointment.
+
+    ![wait for feedback](./images/approve-the-task.png " ")
+
+10. Login again as **Steve**.
+
+11. Navigate to **Monitor Appointment Workflows** under **Dashboard**. Click **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/active-workflow.png " ")
+
+12. Click **Suspend**.
+
+    ![wait for feedback](./images/suspend-the-activity.png " ")
+
+13. Again, navigate to **Doctor Appointment** workflow.
+
+    ![wait for feedback](./images/suspended-activity.png " ")
+
+14. Select **Send Thank You Note To Patient** activity from the activity select list and click **Resume** button.
+
+    ![wait for feedback](./images/resume-another-activity.png " ")
+
+15. The selected activity is now resumed and the workflow status has been changed to **COMPLETED**.
 
 ## Summary
 
@@ -109,4 +223,4 @@ In this lab, you learned to display the Workflow Instance ID in debug messages t
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Last Updated By/Date** - Ankita Beri, Product Manager, March 2025

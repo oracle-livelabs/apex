@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle APEX is a low-code application platform for Oracle Database. APEX Application Development, Autonomous Data Warehouse (ADW), and Autonomous Transaction Processing (ATP) are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizens, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop and then create an APEX workspace accordingly.
+Oracle APEX is the world's most popular enterprise low-code application platform that enables you to build scalable, secure web and mobile apps, with world-class features, that can be deployed anywhere – cloud or on premises. APEX Application Development, Autonomous Data Warehouse (ADW), and Autonomous Transaction Processing (ATP) are fully managed services, pre-integrated and pre-configured with APEX, for rapidly building and deploying modern data-driven applications in Oracle Cloud. Business users, citizens, and application developers can create enterprise apps 20X faster with 100X less code — without having to learn complex web technologies with just a browser. To start, you will need to decide on the service you are going to use for this workshop and then create an APEX workspace accordingly.
 
 If you already have an APEX 24.2 workspace provisioned, you can skip this lab.
 
@@ -130,7 +130,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     From any browser go to [https://cloud.oracle.com/en_US/sign-in](https://cloud.oracle.com/en_US/sign-in).
 
-    Enter your **Cloud Account Name** in the input field and click the **Next** button.
+    Enter your **Cloud Account Name** in the input field and click the **Next** button. Select an identity provider and click **Next**.
 
    ![log in page for Oracle Cloud account](images/enter-oracle-cloud-account-name.png " ")
 
@@ -148,7 +148,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
    ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
 
-7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create Autonomous Database**.
+7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create**.
 
     ![Create Autonomous Database page](images/atp-settings-1.png " ")
 
@@ -156,9 +156,9 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![Create Autonomous Database page](images/atp-settings-3.png " ")
 
-8. After clicking **Create Autonomous Database**, you will be redirected to the Autonomous Database Details page for the new instance.
+8. You will be redirected to the Autonomous Database Details page for the new instance.
 
-    Continue when the status changes from:
+    Continue when the status changes from 'Provisioning' to 'Available':
 
     ![Autonomous Database Details page](images/status-provisioning.png " ")
 
@@ -168,11 +168,8 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 9. Within your new database, APEX is not yet configured. Therefore, when you first access APEX, you will need to log in as an APEX Instance Administrator to create a workspace.
 
-    Click the **APEX Instance URL** provided on the ATP overview screen.
+    Navigate to **Tool Configuration**. Under Oracle APEX, click **Copy** to copy the public access URL and open in a different tab.
 
-    ![Open APEX instance](images/apex-instance.png " ")
-
-10. Now, click **Launch APEX**
 
     ![Launch APEX instance](images/launch-apex-inst.png " ")
 
@@ -218,7 +215,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
-In this part, you will create an Oracle APEX Application Development Service trial account. Once you have signed up for the service, you will create an *APEX Service*. The final step in the process is to provision Oracle APEX workspace.
+In this part, you will create an Oracle APEX Application Development Service. Once you have signed up for the service, you will create an *APEX Service* instance. The final step in the process is to provision Oracle APEX workspace.
 
 1. Please [click this link to create your free account](https://signup.cloud.oracle.com/). When you complete the registration process, you'll receive an account with a $300 credit that you can utilize to create an APEX Service. You can then use any remaining credit to continue to explore the Oracle Cloud.
 
@@ -255,7 +252,7 @@ In this part, you will create an Oracle APEX Application Development Service tri
 
 6. The APEX Instances Details displays again.
 
-   When the provisioning process completes the APX logo turns from orange to green and the Launch APEX and Launch Database Actions buttons are enabled.
+   When the provisioning process completes, an orange 'Provisioning' badge changes to a green 'Available' badge. The Launch APEX button is enabled.
 
    ![Provisioning status](images/apex-logo-orange.png " ")
 
@@ -308,7 +305,7 @@ At this point, you know how to create an APEX Workspace and you are ready to sta
 
 You may now proceed to the next lab.
 
-## **Acknowledgements**
+## Acknowledgements
 
-- **Author(s)** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Author** -  Apoorva Srinivas, Senior Product Manager
+- **Last Updated By/Date**: Apoorva Srinivas, Senior Product Manager, April 2025

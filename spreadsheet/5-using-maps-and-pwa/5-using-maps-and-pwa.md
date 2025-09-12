@@ -132,6 +132,9 @@ APEX allows customization of the map in a declarative way. In this step, you wil
       Borough: &BOROUGH.<br>
       </copy>
       ```
+    
+    Notice the substitution syntax for **SCHOOL_NAME** and **BOROUGH**. To reference context values, such as page item or column values in static contexts, you can prefix the page item or column name with a `&` and post-fix with `.` (a dot.) The `&` and `.` are very important, otherwise the values won't be substituted.
+
 
     ![Page Designer view](images/add-tooltip.png " ")
 

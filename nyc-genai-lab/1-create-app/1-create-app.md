@@ -1,14 +1,14 @@
 # Create an APEX Application
 
 ## Introduction
-In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can build an app directly from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
+In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can declaratively build an app from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.1.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 5 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_z1ozvg3v)
 
 ### Objectives
 
@@ -38,7 +38,7 @@ In this lab, you will:
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
-4. Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx) file on to the dialog window.
+4. Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx?download=1) file on to the dialog window.
 
     ![Image showing a wizard to upload a file](images/drag-and-drop.png " ")
 
@@ -46,11 +46,11 @@ In this lab, you will:
 
     ![Image showing the Load Data wizard](images/new-table-name.png " ")
 
-    After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at that point.
+    After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 
 ## Task 2: Create an Application
 
-The Data Load wizard has created a new table and populated that table with the records from the sample data. Now you can create an app based on this new table.
+The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
 
 1. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then click **Create Application**.
 
@@ -149,7 +149,7 @@ In this task, we configure the Cards region to display the information that we n
     - Title > Column: **SCHOOL_NAME**
     - Subtitle > Column: **LOCATION**
     - Body:
-        - Advanced Formatting: Enable the Toggle Button to **ON**.
+        - Advanced Formatting: Toggle the Button to turn it **ON**.
         - HTML Expression:
         ```
         <copy>
@@ -177,7 +177,8 @@ In this task, we configure the Cards region to display the information that we n
 2. In the Rendering Tree, select **Search**.
 
     In the Property Editor, switch to the **Attributes** tab and enter the following:
-        - Total Row Count Label: **Schools:**
+        
+    - Total Row Count Label: **Schools:**
 
     ![Page Designer](images/row-count-label.png " ")
 
@@ -215,7 +216,7 @@ In this task, we configure the Cards region to display the information that we n
 
 7. In the Rendering Tree, select **Search Results** region.
 
-    In the Property Editor, under Source, select **Order by Item** and enter the following and then click **OK**.
+    In the Property Editor, under Order By, for Type, select **Item** and for Item, enter the following and then click **OK**.
     | Clause | Key | Display |
     |--------|-----|---------|
     | TOTAL\_STUDENTS desc| TOTAL_STUDENTS | Total Students|
@@ -229,6 +230,7 @@ In this task, we configure the Cards region to display the information that we n
     ![Page Designer](images/clauses.png " ")
 
 8. Click **Save and Run** page.
+
 
 ## Task 5: Customize the Application Theme
 
@@ -282,6 +284,6 @@ You may now **proceed to the next lab**.
 
  - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, July 2024
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
 
 
