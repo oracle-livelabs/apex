@@ -6,6 +6,9 @@ In this lab, you will explore the application features. You will start by upload
 
 Estimated Time: 5 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create APEX App and Configure REST Data Source](videohub:1_evsvnjk6)
+
 ### Objectives
 
 In this lab, you will:

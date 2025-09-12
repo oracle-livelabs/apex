@@ -6,6 +6,9 @@ In this lab, you will create tables, triggers, sequences, functions, and a packa
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Setup Tasks for Application Development](videohub:1_0t6qwa89)
+
 ### Objectives
 
 In this lab, you:
