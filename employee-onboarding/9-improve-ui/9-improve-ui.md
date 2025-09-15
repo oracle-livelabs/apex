@@ -107,11 +107,11 @@ Estimated Time: 10 minutes
 
     ![Select Home page](./images/home-page.png " ")
 
-3. In the rendering tree, right click on **Body** and select **Create Region**.
+3. In the Rendering Tree, right click on **Body** and select **Create Region**.
 
     ![Create New Region](./images/create-nav-region.png " ")
 
-4. In the property editor, enter/select the following:
+4. In the Property Editor, enter/select the following:
 
     - Under Identification:
 

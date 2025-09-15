@@ -238,7 +238,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create a form page](images/create-form3.png "")
 
-19. In the rendering tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the property editor:
+19. In the Rendering Tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the Property Editor:
 
     - Identification > Type: **Select One**
 
@@ -257,7 +257,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![ training type edit](images/training-type.png "")
 
-20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the property editor:
+20. Similarly, in the Rendering Tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the Property Editor:
 
     - Identification > Type: **Select One**
 
@@ -276,7 +276,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![ training type edit](images/target-audience.png "")
 
-21. In the Rendering Tree, use **Control + Click** to select multiple items : **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor enter/select the following:
+21. In the Rendering Tree, use **Control + Click** to select multiple items : **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the Property Editor enter/select the following:
 
     - Appearance >  Template: **Required - Floating**
 
@@ -294,7 +294,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Navigate to training page](images/navigate-form.png "" )
 
-24. In the rendering tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
+24. In the Rendering Tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
 
     ![Create action](images/create-action1.png "" )
 
@@ -451,7 +451,7 @@ In this task, you will create an Email Template to onboard the employees.
            </copy>
           ```
 
-    ![Create Template](images/create-emp-temp2.png "" )
+    ![Create Template](images/set-emails.png "" )
 
 5. Click **Create Email Template**.
 

@@ -71,11 +71,7 @@ To create a Workflow:
 
 ## Task 3: Add Inputs for Employment Type Workflow
 
-In this lab, you explore various aspects of workflow data using the example of a Employee Onboarding application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
-
-Referring to the flow chart in Lab 1, illustrating the business logic, the onboarding process begins with the HR Staff submitting New Hire details to the system, which initiates the workflow.
-
-The inputs to the workflow will be the New Employee details. In workflow terminology, these are called **Workflow Parameters**.
+In this task, you will configure the inputs to the workflow — the new employee’s details. In workflow terminology, these are called **Workflow Parameters**.
 
 1. To create Workflow Parameters, right-click **Employment Type Workflow** Workflow and select **Create Parameter**.
 
@@ -97,10 +93,10 @@ The inputs to the workflow will be the New Employee details. In workflow termino
     |----------|-------|------------|---|
     | EMPLOYEE_ID | Employee ID | VARCHAR2 | Yes |
     | EMPLOYEE_NAME | Employee Name | VARCHAR2 |  No  |
-    | EMPLOYMENT_TYPE | Employment Type | VARCHAR2 | Yes |
+    | EMPLOYEE_TYPE | Employee Type | VARCHAR2 | Yes |
     {: title="List of Parameters to be Created"}
 
-    ![Add Parameter](./images/add-params2.png =50%x*)
+    ![Add Parameter](./images/add-params2.png "")
 
 ## Task 4: Add Workflow Variables
 
@@ -108,9 +104,9 @@ The inputs provided to the Workflow are read-only in nature. This means that, on
 
 As an example, consider the following business scenario:
 
-Before an onboarding is completed, the workflow needs to allocate trainings based on the employement type. So, the employement type of the New hire is a variable that will be determined based on this computation.
+Before an onboarding is completed, the workflow needs to allocate trainings based on the Employment type. So, the Employment type of the New hire is a variable that will be determined based on this computation.
 
-Data such as Employement Type, Employee ID, Employee Name and Email need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
+Data such as Employment Type, Employee ID, Employee Name and Email need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
 
 1. Right-click **1.0 [Dev]** (workflow version), select **Create Variable**.
 
@@ -134,19 +130,19 @@ Data such as Employement Type, Employee ID, Employee Name and Email need to be u
 
 ## Task 5: Add Workflow Activity for Full Time Employees
 
-In this task, you will create an activity for Employment Type as Full Time.
+In this task, you will create an activity for Employee Type as Full Time.
 
 1. In the Workflow Designer, under 1.0[Dev], click on Activity and enter/select the following in the property editor:
 
     - Identification > Type: **Switch**
     - Switch > Type: **Check Workflow Variable**
-    - Compare >  Compare Variable: **EMPLOYMENT\_TYPE**
+    - Compare >  Compare Variable: **EMPLOYEE\_TYPE**
 
-   ![Create Activity](./images/create-switch.png " ")
+   ![Create Activity](./images/switch-changes.png " ")
 
-2. Now from the Activities Palette, drag a **Invoke API** Activity into the Diagram Builder area and drop it on the connection joining the Activity.
+2. Now from the Activities Palette, drag a **Invoke API** Activity into the Diagram Builder area and drop it below the Activity.
 
-   ![Create INVOKE API Activity](./images/create-api1.png " ")
+   ![Create INVOKE API Activity](./images/create-api23.png " ")
 
 3. For the newly created property, in the property editor, enter/select the following:
 
@@ -156,9 +152,13 @@ In this task, you will create an activity for Employment Type as Full Time.
         - Type: **PL/SQL Procedure or Function**
         - Procedure or Function: **ASSIGN\_EMPLOYEE\_TRAININGS**
 
-   ![Create INVOKE API Activity](./images/create-api2.png " ")
+   ![Create INVOKE API Activity](./images/create-api31.png " ")
 
-4. Create a connection between **Activity** and **Trainings for Full-Time Employee** and enter/select the following in the property editor:
+4. Create a connection between **Activity** and **Trainings for Full-Time Employee**. To do this, select **Activity**, click the **+** icon at the bottom, and drag the connector to **Trainings for Full-Time Employee** or another way to create a connection is to select the Activity in the rendering tree, and right click
+
+    ![Create INVOKE API Activity](./images/create-conns.png " ")
+
+5. In the Property Editor, enter/select the following:
 
     - Indentification > Name: **Full Time**
 
@@ -168,23 +168,23 @@ In this task, you will create an activity for Employment Type as Full Time.
 
    ![Create INVOKE API Activity](./images/create-api3.png " ")
 
-5. Notice in the rendering tree, there are some fields marked in Red. This activity has two Parameters, highlighted in RED to show that they are required.
+6. Notice in the Rendering Tree, there are some fields marked in Red. This activity has two Parameters, highlighted in RED to show that they are required.
 
-6. Under **Trainings for Full-Time Employee** and select **p\_employee\_id** parameter. In the Property Editor, enter/select the following:
+7. Under **Trainings for Full-Time Employee** and select **p\_employee\_id** parameter. In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_ID**
 
    ![link parameter for Activity](./images/params1.png " ")
 
-7. Similarly, select **p\_employee\_type** parameter.In the Property Editor, enter/select the following:
+8. Similarly, select **p\_employee\_type** parameter.In the Property Editor, enter/select the following:
 
     - Value > Item : **EMPLOYEE_TYPE**
 
-   ![link parameter for Activity](./images/params2.png " ")
+   ![link parameter for Activity](./images/params-employee-type.png " ")
 
 ## Task 6: Create Activity for Interns
 
-1. Similarly, Create another Activity for Intern as the Employment type. From the Activities palette, drag a **Invoke API** Activity into the Diagram Builder area and drop it on the connection joining the Activity. In the Property Editor, enter/select the following:
+1. Similarly, Create another Activity for Intern as the Employment type. From the Activities palette, drag a **Invoke API** Activity into the Diagram Builder area. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Trainings for Intern**
 
@@ -193,7 +193,7 @@ In this task, you will create an activity for Employment Type as Full Time.
         - Type: **PL/SQL Procedure or Function**
         - Procedure or Function: **ASSIGN\_EMPLOYEE\_TRAININGS**
 
-   ![Create INVOKE API Activity](./images/create-api4.png " ")
+   ![Create INVOKE API Activity](./images/create-api51.png " ")
 
 2. Create a connection between **Activity** and **Trainings for Intern** and enter/select the following in the property editor:
 
@@ -216,13 +216,13 @@ In this task, you will create an activity for Employment Type as Full Time.
 
     - Value > Item : **EMPLOYEE_TYPE**
 
-   ![link parameter for Activity](./images/params4.png " ")
+   ![link parameter for Activity](./images/params-41.png " ")
 
 ## Task 7: Create Activity to Assign Trainings
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Trainings for Full-Time Employee** activity.
 
-   ![Create activity to assign trainings](./images/assign-trainings1.png " ")
+   ![Create activity to assign trainings](./images/assign-trainings12.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -233,25 +233,25 @@ In this task, you will create an activity for Employment Type as Full Time.
         - Definition: **Allocate Trainings**
         - Details Primary Key Item: **EMPLOYEE_ID**
 
-   ![Create activity to assign trainings](./images/assign-trainings4.png " ")
+   ![Create activity to assign trainings](./images/assign-trainings22.png " ")
 
-3. Under the parameters tab, select **Email** and select the following in the property editor:
+3. Under the parameters tab, select **Email** and select the following in the Property Editor:
 
     - Under Value:
 
         - Type: **Item**
         - Item: **EMAIL**
 
-   ![Link parameters](./images/params-emp2.png " ")
+   ![Link parameters](./images/params-id21.png " ")
 
-4. Similarly, select **Employee Name** and select the following in the property editor:
+4. Similarly, select **Employee Name** and select the following in the Property Editor:
 
     - Under Value:
 
         - Type: **Item**
         - Item: **EMPLOYEE_NAME**
 
-   ![Link parameters](./images/params-emp1.png " ")
+   ![Link parameters](./images/params-emp12.png " ")
 
 ## Task 8: Create Activity to send Training Completion Email
 
@@ -259,7 +259,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
 
 1. From the Activities palette, drag a **Send Email** Activity into the Diagram Builder area and drop it below the **Assign Trainings** activity.
 
-   ![Create activity to send email](./images/send-email.png " ")
+   ![Create activity to send email](./images/send-email12.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -288,21 +288,21 @@ In this task, you will create a Send Email Activity to send an email to the New 
              <copy>
             ```
 
-   ![Create activity to send email trainings](./images/send-email2.png " ")
+   ![Create activity to send email trainings](./images/send-email22.png " ")
 
 ## Task 9: Draw connections between Activities
 
 1. Draw Connections from **Trainings for Full-Time Employee** to **Assign Trainings** and **Trainings for Intern** to **Assign Trainings** activity.
 
-   ![Create Connections](./images/create-conn2.png " ")
+   ![Create Connections](./images/create-conn21.png " ")
 
 2. Similarly, draw connections from **Assign Trainings** to **Training Completion Email**.
 
-   ![Create Connections](./images/create-conn3.png " ")
+   ![Create Connections](./images/create-conn31.png " ")
 
 3. Finally, draw a connection from **Training Completion Email** to **End** activity to eliminate the Workflow Model's validation errors.
 
-   ![Create Connections](./images/create-conn4.png " ")
+   ![Create Connections](./images/create-conn41.png " ")
 
 4. Click **Save**.
 
@@ -310,7 +310,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
 
 ## Summary
 
-In this lab, you created a workflow in Oracle APEX that assigns onboarding tasks based on the employee’s employment type (Full-Time or Intern). You defined workflow parameters and variables, added automated activities to assign trainings, and configured human tasks and notifications to guide the onboarding process.
+In this lab, you created a workflow in Oracle APEX that assigns onboarding tasks based on the Employee’s Employment type (Full-Time or Intern). You defined workflow parameters and variables, added automated activities to assign trainings, and configured human tasks and notifications to guide the onboarding process.
 
 ## What's Next
 

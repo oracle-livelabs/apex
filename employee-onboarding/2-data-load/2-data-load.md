@@ -84,11 +84,11 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 1. Navigate to **SQL Workshop** > **SQL Scripts**.
 
-    ![Workspace Homepage](images/go-sql-scripts.png " ")
+    ![Workspace Homepage](images/admin-homepage.png " ")
 
 2. Click **Create**.
 
-    ![Create a SQL Script](images/create-script.png "")
+    ![Create a SQL Script](images/create-script.png " ")
 
 3. In the Script Editor, enter the following:
 
@@ -249,7 +249,7 @@ In this task you will use SQL Scripts to quickly load and execute the required d
     -- Procedure to assign trainings to an employee based on employment type
     CREATE OR REPLACE PROCEDURE ASSIGN_EMPLOYEE_TRAININGS (
         p_employee_id     IN EMPLOYEE_TRAININGS.EMPLOYEE_ID%TYPE,
-        p_employment_type IN VARCHAR2
+        p_employee_type IN VARCHAR2
     )
     AS
     BEGIN
@@ -272,13 +272,13 @@ In this task you will use SQL Scripts to quickly load and execute the required d
             'Not Started',
             'HR System'
         FROM TRAINING_CATALOG
-        WHERE TARGET_AUDIENCE IN ('All', p_employment_type);
+        WHERE TARGET_AUDIENCE IN ('All', p_employee_type);
 
         -- Raise error if no trainings were assigned
         IF SQL%ROWCOUNT = 0 THEN
             RAISE_APPLICATION_ERROR(
                 -20001,
-                'No trainings found for employment type: ' || p_employment_type
+                'No trainings found for employee type: ' || p_employee_type
             );
         END IF;
 
