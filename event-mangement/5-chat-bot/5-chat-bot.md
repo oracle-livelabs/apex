@@ -94,7 +94,7 @@ By the end of this lab, you will be able to:
 
 4. In the Generative AI Configuration page, enter the following:
 
-    - Identification > Name : Event AI Configuration
+    - Identification > Name : **Event AI Configuration**
 
     - Under Generative AI:
 
@@ -102,15 +102,15 @@ By the end of this lab, you will be able to:
 
         - System Prompt:
 
-        ```
-        <copy>
+            ```
+            <copy>
 
-        Generate a professional-looking abstract as a description, not exceeding 400 characters.
+            Generate a professional-looking abstract as a description, not exceeding 400 characters.
 
-        Use the data provided about the events as context.
+            Use the data provided about the events as context.
 
-        ```
-        </copy>
+            ```
+            </copy>
 
         - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
@@ -132,7 +132,7 @@ By the end of this lab, you will be able to:
 
 8. In the APEX Assistant box, enter the following prompt and press enter:
 
-    > Prompt 1
+    > Prompt 1:
     > Fetch event id, start date, venue, name and event type
 
     !["Click App Builder"](images/event-assist-rag.png "")
@@ -147,11 +147,11 @@ By the end of this lab, you will be able to:
 
     - Expression 1:
 
-    ```
-    <copy>
-    return :APP_PAGE_ID = 3;
-    </copy>
-    ```
+        ```
+        <copy>
+        return :APP_PAGE_ID = 3;
+        </copy>
+        ```
     >Note: Page number may vary depending on your application.
 
 11. Click **Create**.
