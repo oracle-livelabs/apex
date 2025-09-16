@@ -6,6 +6,9 @@ In this lab, we will focus on improving the visual design and user experience of
 
 Estimated Time: 5 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Enhance Application UI](videohub:1_7avm4951)
+
 ### Objectives
 
 In this lab, you will:

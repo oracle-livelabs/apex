@@ -6,6 +6,9 @@ Now that you have created the application, in this lab you will extend its funct
 
 Estimated Time: 45 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Add Page Items and Page Processes](videohub:1_mzdlonub)
+
 ### Objectives
 
 In this lab, you will:
