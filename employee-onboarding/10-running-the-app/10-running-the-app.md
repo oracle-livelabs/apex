@@ -8,7 +8,7 @@ In this lab, you will run and explore the Employee Onboarding application to und
 
 - Demonstrate the behavior of the Employee Onboarding application through hands-on activities.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Prerequisites
 

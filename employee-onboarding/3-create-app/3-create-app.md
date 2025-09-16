@@ -4,7 +4,7 @@
 
 In this task you will use the simple Create Application wizard to generate a basic APEX application that you will build on throughout the workshop. You will build administration pages to manage key onboarding data, including Employees, Departments, and the Training Catalog. You will also organize these pages under a common Administration menu and create a customized Email Template to support the onboarding communication process.
 
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 30 minutes
 
 ### Objectives
 
@@ -473,7 +473,7 @@ In this task, you will create a substitution string to manage the application em
 
     - Value: **no-reply@acmecorp.com**
 
-      > *Note:* Replace acmecorp.com with your actual domain.
+     *Note: Replace acmecorp.com with your actual domain.*
 
    ![set application Email](./images/set-app-email.png " ")
 

@@ -36,16 +36,16 @@ In this workshop, you will learn how to:
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 5 minutes |
+| 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 10 minutes |
 | 2 | [Load Database Objects & Create Workspace Users](?lab=2-data-load) | 10 minutes |
-| 3 | [Create an Application and Admin pages](?lab=3-create-app) | 15 minutes |
+| 3 | [Create an Application and Admin pages](?lab=3-create-app) | 30 minutes |
 | 4 | [Create Task Definitions](?lab=4-create-tasks) | 10 minutes |
-| 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 15 minutes |
-| 6 | [Create Employee Onboarding Workflow](?lab=6-create-empon-wf) | 15 minutes |
-| 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 40 minutes |
-| 8 | [Create Archive Tasks and Archive Workflow (Optional)](?lab=8-archived-tasks) | 5 minutes |
-| 9 | [Improve UI & Navigation (Optional)](?lab=9-improve-ui) | 10 minutes |
-| 10 | [Explore the Application](?lab=10-running-the-app) | 10 minutes |
+| 5 | [Create Employment Type Workflow](?lab=5-create-emp-type-wf) | 20 minutes |
+| 6 | [Create Employee Onboarding Workflow](?lab=6-create-empon-wf) | 20 minutes |
+| 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 60 minutes |
+| 8 | [Create Archive Tasks and Archive Workflow (Optional)](?lab=8-archived-tasks) | 10 minutes |
+| 9 | [Improve UI & Navigation (Optional)](?lab=9-improve-ui) | 15 minutes |
+| 10 | [Explore the Application](?lab=10-running-the-app) | 15 minutes |
 | 11 | [Activate Workflow](?lab=11-activate-workflow) | 5 minutes |
 
 ## Downloads

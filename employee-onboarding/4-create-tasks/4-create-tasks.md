@@ -31,7 +31,7 @@ If you're stuck or missed out on completing the previous labs, don't worry! Clic
 Complete the following steps:
 
 1. Follow on screen instructions to import and install the app with supporting objects.
-2. Execute **Lab 2 > Task 1** to create workspace users.
+2. Execute **Lab 2 > Task 1** to create Workspace users.
 
 Then, proceed with the below tasks.
 

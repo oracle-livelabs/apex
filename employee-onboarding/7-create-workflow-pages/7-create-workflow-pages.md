@@ -21,7 +21,7 @@ In this lab, you will learn how to:
 
 - Create Workflow Console Pages for employees to monitor workflows they initiated or own.
 
-Estimated Time: 40 minutes
+Estimated Time: 60 minutes
 
 ### Prerequisites
 

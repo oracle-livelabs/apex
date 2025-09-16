@@ -23,7 +23,7 @@ If you would like to skip the part of building the app from scratch, download th
 Complete the following steps:
 
 1. Follow on screen instructions to import and install the app with supporting objects.
-2. Execute **Lab 2 > Task 1** to create workspace users.
+2. Execute **Lab 2 > Task 1** to create Workspace users.
 
 Then, skip to **Lab 4**.
 

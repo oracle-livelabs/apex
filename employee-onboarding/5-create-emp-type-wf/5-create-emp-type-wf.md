@@ -67,7 +67,7 @@ To create a Workflow:
 
     ![Create Workflow](./images/ef-emp-type2.png " ")
 
-    > **Note:** _You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop._
+ *Note: You may have noticed the label [Dev] next to the version in the tree on the left pane. This means that this version of the Workflow is In Development and all parts of it are editable. We will learn about workflow versioning- Active vs. In Development versions in future labs in this workshop.*
 
 ## Task 3: Add Inputs for Employment Type Workflow
 

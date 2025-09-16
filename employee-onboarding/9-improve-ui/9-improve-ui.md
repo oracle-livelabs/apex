@@ -16,7 +16,7 @@ In this lab, you will learn how to:
 
 - Enhance the application’s visual theme using the Theme Roller.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Prerequisites
 
