@@ -45,7 +45,7 @@ In this workshop, you will learn how to:
 | 7 | [Create Workflow pages](?lab=7-create-workflow-pages) | 40 minutes |
 | 8 | [Create Archive Tasks and Archive Workflow (Optional)](?lab=8-archived-tasks) | 5 minutes |
 | 9 | [Improve UI & Navigation (Optional)](?lab=9-improve-ui) | 10 minutes |
-| 10 | [Run the Application](?lab=10-running-the-app) | 10 minutes |
+| 10 | [Explore the Application](?lab=10-running-the-app) | 10 minutes |
 | 11 | [Activate Workflow](?lab=11-activate-workflow) | 5 minutes |
 
 ## Downloads
@@ -56,7 +56,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 2. Import the **labfiles\_Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-3. Once the application is installed, follow **Lab 2 > Task 1: Create Application Users**.
+3. Once the application is installed, follow **Lab 2 > Task 1: Create Workspace Users**.
 
 4. Follow Lab 10 to explore the application and see the workflows in action!
 
