@@ -67,7 +67,7 @@ To create a Workflow:
 
    ![Save Page](./images/save-empon.png " ")
 
-## Task 3: Add Inputs for Employment Type Workflow
+## Task 3: Add Inputs for Employee Type Workflow
 
 In this lab, you explore various aspects of workflow data using the example of a Employee Onboarding application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 

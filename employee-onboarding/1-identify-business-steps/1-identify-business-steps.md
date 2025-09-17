@@ -18,7 +18,7 @@ To achieve this, we will:
 
 - Define the key participants (HR, IT, Employee, Workflow automation).
 
-> **Note:** _In APEX Workflow terminology, we refer to an executable step as an **Activity** and a sequence/condition as a **Connection**._
+*Note: In APEX Workflow terminology, we refer to an executable step as an **Activity** and a sequence/condition as a **Connection**.*
 
 ### Objectives
 

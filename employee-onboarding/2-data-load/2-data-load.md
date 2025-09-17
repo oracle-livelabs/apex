@@ -302,7 +302,7 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 ## Summary
 
-You have successfully completed the initial steps for designing the **Employee Onboarding** application. You have created the required database objects.
+You have successfully completed the initial steps for designing the **Employee Onboarding** application. You have created the required Database Objects and Workspace Users.
 
 ## Acknowledgements
 
