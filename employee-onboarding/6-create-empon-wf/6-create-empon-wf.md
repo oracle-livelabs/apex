@@ -315,7 +315,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              <copy>
              Dear &EMPLOYEE_NAME.,
 
-             Congratulations on successfully completing your onboarding process — and welcome officially to the team!
+             Congratulations on successfully completing your onboarding process and welcome officially to the team!
 
              We are excited to have you with us and look forward to the great work you'll do. Over the past few days, you have taken your first steps into our company culture, systems, and values, and we hope the experience has been informative and engaging.
              If you have any lingering questions or need further support, please don't hesitate to reach out to your manager or the HR team. Your growth and success are important to us, and we're here to support you every step of the way.
