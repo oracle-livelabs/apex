@@ -18,7 +18,7 @@
             "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
         },
         {
-            "title": "Lab 2: Load Database Objects & Create App Users",
+            "title": "Lab 2: Load Database Objects & Create Workspace Users",
             "filename": "../../2-data-load/2-data-load.md"
         },
         {
@@ -26,7 +26,7 @@
             "filename": "../../3-create-app/3-create-app.md"
         },
         {
-            "title": "Lab 4: Create Tasks Definitions",
+            "title": "Lab 4: Create Task Definitions",
             "filename": "../../4-create-tasks/4-create-tasks.md"
         },
         {
@@ -42,15 +42,15 @@
             "filename": "../../7-create-workflow-pages/7-create-workflow-pages.md"
         },
         {
-            "title": "Lab 8: Create Archive Tasks and Archive Workflow",
+            "title": "Lab 8 [OPTIONAL]: Create Archive Tasks and Archive Workflow [Optional]",
             "filename": "../../8-archived-tasks/8-archived-tasks.md"
         },
         {
-            "title": "Lab 9: Improve UI & Navigation",
+            "title": "Lab 9 [OPTIONAL]: Improve UI & Navigation [Optional]",
             "filename": "../../9-improve-ui/9-improve-ui.md"
         },
         {
-            "title": "Lab 10: Run the App",
+            "title": "Lab 10: Explore the App",
             "filename": "../../10-running-the-app/10-running-the-app.md"
         },
         {
