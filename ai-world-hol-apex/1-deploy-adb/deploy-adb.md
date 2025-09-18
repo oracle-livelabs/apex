@@ -10,6 +10,8 @@ By the end of this lab, you’ll have a fully configured workspace connected to 
 
 Estimated Time: 15–20 minutes
 
+ [Deploy Autonomous Database and Create APEX Workspace Video Recording](videohub:1_qjaoc6v5)
+
 ### Objectives
 
 In this lab, you will:
