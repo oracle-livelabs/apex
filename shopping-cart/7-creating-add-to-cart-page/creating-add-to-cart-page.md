@@ -311,7 +311,7 @@ In this task, you will create four-page items:
 
 2. Right-click **Before Regions** and select **Create Computation**.
 
-     ![Rendering Tree](./images/computation-s.png " ")
+     ![Rendering Tree](./images/before-header.png " ")
 
 3. In the Property Editor, enter/select the following:
 

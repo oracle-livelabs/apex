@@ -54,7 +54,7 @@ Skip this step if you already have the API key.
 
    ![Click Web Credentials](images/sc-web-creds.png " ")
 
-5. Click **apex_ai_cred**.
+5. Click **apex\_ai\_cred**.
 
    ![Create Web Credentials](images/apex-ai-cred.png " ")
 

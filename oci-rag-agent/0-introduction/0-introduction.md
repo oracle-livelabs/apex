@@ -8,7 +8,7 @@ As part of this workshop, you will upload Oracle App Builder documentation to OC
 
 Here is a demo of what to expect from this application:
 
-![Demo Application](images/rag-demo.gif " ")
+![Demo Application](./images/demo-app.gif " ")
 
 Estimated Time: 1 hour 30 mins
 
@@ -58,7 +58,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Follow Lab 2 > Task 1 and Task 2 to create a Knowledge Base and Generative AI Agents in OCI.
 
-2. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/genai_agents_export.sql) to download the completed application.
+2. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fgenaiagent_export.sql) to download the completed application.
 
 3. Import the **genai\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
@@ -66,15 +66,15 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
-    ![App Builder](images/download-appbuild.png " ")
+    ![App Builder](./images/download-appbuild.png " ")
 
     - Click **Web Credentials**.
 
-    ![Web credentials](images/web-creds.png " ")
+    ![Web credentials](./images/web-creds.png " ")
 
     - Click  **APEX\_OCI\_AI\_CRED**.
 
-    ![Click Creds](images/click-creds.png " ")
+    ![Click Creds](./images/click-creds.png " ")
 
     - Enter the following details using the configuration file you copied and click **Apply Changes**.
 
@@ -87,13 +87,13 @@ If you are stuck or the app is not working as expected, you can download and ins
 
         - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-    ![Enter Creds](images/enter-creds.png " ")
+    ![Enter Creds](./images/enter-creds.png " ")
 
 5. Navigate to Shared Components > Data Sources > Rest Data Sources > Click **Create Sessions API**.
 
 6. Under Parameters, click **Add Parameter**.
 
-   ![Add Parameter](images/download-addparams.png " ")
+   ![Add Parameter](./images/download-addparams.png " ")
 
 7. Enter/select the following:
 
@@ -103,7 +103,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Default Value: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
 
-   ![Edit Parameter](images/download-eparams.png " ")
+   ![Edit Parameter](./images/download-eparams.png " ")
 
 8. Navigate to Page 1 of application, map the following page item:
 
@@ -113,7 +113,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Under Static Value:  Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
 
-   ![Map Endpoint](images/map-endpoint.png " ")
+   ![Map Endpoint](./images/map-endpoint.png " ")
 
 9. Navigate to Page 5 of application, map the following page item:
 
@@ -127,19 +127,37 @@ If you are stuck or the app is not working as expected, you can download and ins
    | 6 | P5\_DATASOURCE\_ID| Static | Enter your data source OCID.|
    {: title="Map Page Items"}
 
-   ![Map Compartment](images/map-compid.png " ")
+   ![Map Compartment](./images/map-compid.png " ")
 
-   ![Map StaticId](images/map-static.png " ")
+   ![Map StaticId](./images/map-static.png " ")
 
-   ![Map Namespace](images/map-namespace.png " ")
+   ![Map Namespace](./images/map-namespace.png " ")
 
-   ![Map Bucket](images/map-bucket.png " ")
+   ![Map Bucket](./images/map-bucket.png " ")
 
-   ![Map Region](images/map-region.png " ")
+   ![Map Region](./images/map-region.png " ")
 
-   ![Map Datasource](images/map-datasource.png " ")
+   ![Map Datasource](./images/map-datasource.png " ")
 
-10. All set. Now, run the application with the users you created and see it in action!
+10. Navigate to **Shared Components**.
+
+    ![Navigate Shared](./images/navigate-shared.png " ")
+
+11. Under Workflows and Automations click **Automations**.
+
+    ![Click Automation](./images/click-automation.png " ")
+
+12. Click automation **Get Ingestion Status**.
+
+    ![Select Automation](./images/select-automation.png " ")
+
+13. Under Settings > Scheduled Status > toggle > **Active**.
+
+14. Click **Save Changes**.
+
+    ![Set Active](./images/set-active.png " ")
+
+15. All set. Now, run the application with the users you created and see it in action!
 
 ## Learn More - *Useful Links*
 

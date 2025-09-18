@@ -250,7 +250,13 @@ At this point, the workflow needs to raise an Invoice Request for the patient to
 
 5. Navigate to **Raise Invoice Request** activity and select **Doctor Name** parameter. In the Property Editor, enter/select the following:
 
-    - Value > Static Value: **&DNAME.**
+    - Value > SQL Query:
+
+    ```
+    <copy>
+    select dname from doctor where dno = :DNO
+    </copy>
+    ```
 
    ![Configure Doctor Name](./images/config-doctor-name.png " ")
 

@@ -357,21 +357,12 @@ This action allows customers to open a page to edit a particular item in the sho
 
 3. Create three validations for the following items: **Name**, **Email**, and **Store**
 
-    | Name |  Validation > Type | Validation > Item |
-    | --- |  --- | --- |
-    | Validate Name | Item is NOT NULL | P17\_CUSTOMER\_FULLNAME |
-    | Validate Email | Item is NOT NULL | P17\_CUSTOMER\_EMAIL |
-    | Validate Store | Item is NOT NULL | P17_STORE |
+    | Identification > Name |  Validation > Type | Validation > Item | Error Message | Display Location | Associated Item |
+    | --- |  --- | --- | --- |  --- | --- |
+    | Validate Name | Item is NOT NULL | P17\_CUSTOMER\_FULLNAME | Please enter your name | Inline with Field and in Notification | P17\_CUSTOMER\_FULLNAME |
+    | Validate Email | Item is NOT NULL | P17\_CUSTOMER\_EMAIL |Please enter your email address | Inline with Field and in Notification | P17\_CUSTOMER\_EMAIL |
+    | Validate Store | Item is NOT NULL | P17_STORE |Please select a store | Inline with Field and in Notification | P17_STORE |
     {: title="Validations for the Items"}
-
-    - Under Error:
-
-    | Error Message | Display Location | Associated Item |
-    | --- |  --- | --- |
-    | Please enter your name | Inline with Field and in Notification | P17\_CUSTOMER\_FULLNAME |
-    | Please enter your email address | Inline with Field and in Notification | P17\_CUSTOMER\_EMAIL |
-    | Please select a store | Inline with Field and in Notification | P17_STORE |
-    {: title="Error Messages for the Validations"}
 
     ![Validation attributes in the Page Designer](./images/validations.png " ")
 
@@ -415,6 +406,18 @@ This action allows customers to open a page to edit a particular item in the sho
     - Server-side Condition > When Button Pressed: **Proceed**
 
     ![Property Editor](./images/process-properties.png " ")
+
+4. Under Processes expand **Checkout**.
+
+5. Select **p_customer**. In the Property Editor, enter/select the following:
+
+    - Under Value:
+
+        - Type : **Item**
+
+        - Item: **P17\_CUSTOMER\_FULLNAME**
+
+    ![Map FullName](./images/map-fullname.png " ")
 
 ## Task 9: Add Process to Clear the Shopping Cart
 
