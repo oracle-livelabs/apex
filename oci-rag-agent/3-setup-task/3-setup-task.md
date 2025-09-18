@@ -6,6 +6,9 @@ In this lab, you will create tables, triggers, sequences, functions, and a packa
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Setup Tasks for Application Development](videohub:1_0t6qwa89)
+
 ### Objectives
 
 In this lab, you:
@@ -34,11 +37,11 @@ In this lab, you:
 
 1. Log into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
 
-    ![Select Quick SQL](images/sql_script.png " ")
+    ![Select Quick SQL](./images/sql_script.png " ")
 
 2. Click **Create**.
 
-    ![Create Quick SQL](images/create-quick-sql.png " ")
+    ![Create Quick SQL](./images/create-quick-sql.png " ")
 
 3. Copy the following SQL code and paste it into the code editor:
 
@@ -268,15 +271,15 @@ In this lab, you:
 
 4. For **Script Name**: Enter **RAG_AGENT Script** and click **Run**.
 
-   ![Script Name](./images/create-script.png " ")
+   ![Script Name](././images/create-script.png " ")
 
 5. On the Run Script page, click **Run Now**.
 
-    ![Run Now](images/run-now1.png " ")
+    ![Run Now](./images/run-now1.png " ")
 
 6. The Results page shows the results of running the script. Scroll to the bottom to see a summary. You should not see any errors.
 
-    ![SQL Script Results](images/successful-run1.png " ")
+    ![SQL Script Results](./images/successful-run1.png " ")
 
 ## Task 2: Create Web Credentials in Oracle APEX
 
@@ -288,19 +291,19 @@ To create a Web Credential in Oracle APEX:
 
 1. On the Workspace home page, navigate to **App Builder**.
 
-   ![Click App Builder](images/app-build5.png " ")
+   ![Click App Builder](./images/app-build5.png " ")
 
 2. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+   ![Click Workspace Utilities](./images/workspace-utilities.png " ")
 
 3. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/web-credentials.png " ")
+   ![Click Web Credentials](./images/web-credentials.png " ")
 
 4. Click **Create**.
 
-   ![Create Web Credentials](images/create-web-creds.png " ")
+   ![Create Web Credentials](./images/create-web-creds.png " ")
 
 5. Enter/select the following details using the configuration file you copied in the previous task.
 
@@ -315,17 +318,17 @@ To create a Web Credential in Oracle APEX:
 
     - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
-    ![Private key file](images/private-key.png " ")
+    ![Private key file](./images/private-key.png " ")
 
     - OCI Tenancy ID: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
     - OCI Public Key Fingerprint: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds1.png " ")
+   ![Web Credentials page](./images/web-creds1.png " ")
 
 6. Click **Create**.
 
-   ![Web Credentials page](images/web-creds-created.png " ")
+   ![Web Credentials page](./images/web-creds-created.png " ")
 
 ## Summary
 

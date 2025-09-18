@@ -6,6 +6,9 @@ Now that you have created the application, in this lab you will extend its funct
 
 Estimated Time: 45 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Add Page Items and Page Processes](videohub:1_mzdlonub)
+
 ### Objectives
 
 In this lab, you will:
@@ -26,19 +29,19 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
 1. Navigate to **Application ID**.
 
-    ![Create Pageitem](images/navigate-appid.png " ")
+    ![Create Pageitem](./images/navigate-appid.png " ")
 
 2. Click on **Chat With OCI Generative AI**
 
-    ![Create Pageitem](images/click-homepage1.png " ")
+    ![Create Pageitem](./images/click-homepage1.png " ")
 
 3. Under Breadcrumb Bar select **Breadcrumb**. Navigate to Property Editor > Identification > Name: **GenAI Agents for APEX**.
 
-    ![Create Pageitem](images/breadcrumb-name.png " ")
+    ![Create Pageitem](./images/breadcrumb-name.png " ")
 
 4. Under **Rendering** tab, right-click **Body** and select **Create Page Item**.
 
-   ![Create Pageitem](images/create-pageitem11.png " ")
+   ![Create Pageitem](./images/create-pageitem11.png " ")
 
 5. Create the following Page Items, one after another:
 
@@ -52,25 +55,25 @@ In this task, you will create Page Items, Static Content region and a subregion,
     | 6 | P1\_REGION| Hidden | Toggle On| Static | (enter your region; eg: us-chicago-1)|
     {: title="Page Item Details"}
 
-   ![Response Session](images/response-session.png " ")
+   ![Response Session](./images/response-session.png " ")
 
-   ![Session ID](images/session-id.png " ")
+   ![Session ID](./images/session-id.png " ")
 
-   ![Conv ID](images/conv-id.png " ")
+   ![Conv ID](./images/conv-id.png " ")
 
-   ![Create AI Cred](images/create-aicred.png " ")
+   ![Create AI Cred](./images/create-aicred.png " ")
 
-   ![Create AI Cred](images/create-aicred2.png " ")
+   ![Create AI Cred](./images/create-aicred2.png " ")
 
-   ![Create endpoint](images/create-endpointid.png " ")
+   ![Create endpoint](./images/create-endpointid.png " ")
 
-   ![Create endpoint](images/create-endpointid2.png " ")
+   ![Create endpoint](./images/create-endpointid2.png " ")
 
-   ![Region PageItem](images/region-pageitem3.png " ")
+   ![Region PageItem](./images/region-pageitem3.png " ")
 
 6. In the **Rendering Tab**, right-Click **Body** and click **Create Region**
 
-   ![Create Region](images/create-region1.png " ")
+   ![Create Region](./images/create-region1.png " ")
 
 7. In the Property editor, enter/select the following:
 
@@ -84,15 +87,15 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     - Advanced > Static ID : **functional_chat**
 
-   ![Create Region](images/region-advanced1.png " ")
+   ![Create Region](./images/region-advanced1.png " ")
 
-   ![Create Region](images/region-advanced.png " ")
+   ![Create Region](./images/region-advanced.png " ")
 
 8. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
     > This sub-region is being created to display a chat conversation between user and  AI agent, such as in a chatbot scenario.
 
-   ![Sub Region](images/sub-region22.png " ")
+   ![Sub Region](./images/sub-region22.png " ")
 
 9. In the Property Editor, enter/select the following:
 
@@ -112,37 +115,28 @@ In this task, you will create Page Items, Static Content region and a subregion,
         <copy>
 
             SELECT
-      CONV_ID,
-      USER_NAME,
-      COMMENT_TEXT,
-      COMMENT_DATE,
-      APEX_STRING.GET_INITIALS(USER_NAME) USER_ICON,
-      CASE IS_OWN
-         WHEN 'Yes' THEN
-               NULL
-         ELSE
-               'View Citations'
-      END                                 ACTIONS,
-      NULL                                AS ATTRIBUTE_1,
-      NULL                                AS ATTRIBUTE_2,
-      NULL                                AS ATTRIBUTE_3,
-      NULL                                AS ATTRIBUTE_4,
-      CASE IS_OWN
-         WHEN 'Yes' THEN
-               't-Chat--own'
-         ELSE
-               NULL
-      END                                 COMMENT_MODIFIERS
-      FROM
-         RAG_CHATBOT
-      WHERE
-         SESSION_ID = :P1_SESSION_ID
-      ORDER BY
-         COMMENT_DATE ASC
+            CONV_ID,
+            USER_NAME,
+            COMMENT_TEXT,
+            COMMENT_DATE,
+            APEX_STRING.GET_INITIALS(USER_NAME) USER_ICON,
+            CASE IS_OWN WHEN 'Yes' THEN NULL ELSE 'View Citations' END ACTIONS,
+            NULL AS ATTRIBUTE_1,
+            NULL AS ATTRIBUTE_2,
+            NULL AS ATTRIBUTE_3,
+            NULL AS ATTRIBUTE_4,
+            CASE IS_OWN WHEN 'Yes' THEN 't-Chat--own' ELSE NULL END COMMENT_MODIFIERS
+            FROM
+            RAG_CHATBOT
+            WHERE
+            SESSION_ID = :P1_SESSION_ID
+            ORDER BY
+            COMMENT_DATE ASC
+
       </copy>
       ```
 
-    ![Edit SubRegion](images/edit-subregion1.png " ")
+    ![Edit SubRegion](./images/edit-subregion1.png " ")
 
     - Under Appearance:
 
@@ -152,7 +146,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     - Advanced > Static ID: **ai-agents-chat**
 
-    ![Edit Appearance](images/subregion-appearance.png " ")
+    ![Edit Appearance](./images/subregion-appearance.png " ")
 
 10. Navigate to **Attributes** tab, enter/select the following:
 
@@ -176,7 +170,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
       </copy>
       ```
 
-    ![SubRegion Attributes](images/subregion-attributes.png " ")
+    ![SubRegion Attributes](./images/subregion-attributes.png " ")
 
 11. In the **Rendering** pane, select **AI Agents Conversation** sub region. Expand the columns and click **COMMENT_TEXT**.
 
@@ -184,7 +178,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     - Identification > Type: **Rich Text**
 
-    ![Comment Text](images/comment-text.png " ")
+    ![Comment Text](./images/comment-text.png " ")
 
 13. Under sub-region **AI Agents Conversation** , click column **ACTIONS**.
 
@@ -204,7 +198,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
             - Click **OK**
 
-        ![Edit Link](images/edit-link2.png " ")
+        ![Edit Link](./images/edit-link2.png " ")
 
         >**Note**: Page 7 will create in next task
 
@@ -214,11 +208,11 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - Link Attributes: **target="_blank"**
 
-        ![Edit Actions](images/edit-actions1.png " ")
+        ![Edit Actions](./images/edit-actions1.png " ")
 
 15. Right-click **AI Agents Conversation** sub-region, click **Create Dynamic Action**.
 
-    ![Create Dynamic Action](images/create-dynamicaction2.png " ")
+    ![Create Dynamic Action](./images/create-dynamicaction2.png " ")
 
 16. In the Property Editor, enter/select the following:
 
@@ -232,7 +226,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - Region: **AI Agents Conversation**
 
-    ![Scroll to Bottom](images/scroll-tobottom.png " ")
+    ![Scroll to Bottom](./images/scroll-tobottom.png " ")
 
 17. Under **True** action, click **Show**.
 
@@ -250,7 +244,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
         </copy>
         ```
 
-    ![True Action](images/true-action1.png " ")
+    ![True Action](./images/true-action1.png " ")
 
 ## Task 2: Create Buttons Sub Region
 
@@ -258,7 +252,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
 1. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
-    ![Create Sub Region](images/create-subregion23.png " ")
+    ![Create Sub Region](./images/create-subregion23.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -270,11 +264,11 @@ In this task, you will create buttons to trigger specific actions and configure 
 
     - Appearance > Template: **Blank with Attributes**
 
-    ![Button Region](images/region-buttons.png " ")
+    ![Button Region](./images/region-buttons.png " ")
 
 3. Right-click **Buttons** sub-region, click **Create Page Item**.
 
-    ![Button PageItem](images/button-pageitem3.png " ")
+    ![Button PageItem](./images/button-pageitem3.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -300,7 +294,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
         - Value Placeholder: **Enter your message...**
 
-    ![Edit Prompt](images/edit-prompt.png " ")
+    ![Edit Prompt](./images/edit-prompt.png " ")
 
 5. Right-click **P1_PROMPT** page item and click **Create Dynamic Action**.
 
@@ -328,7 +322,7 @@ In this task, you will create buttons to trigger specific actions and configure 
             </copy>
             ```
 
-    ![Prompt DynamicAction](images/prompt-dynamicaction.png " ")
+    ![Prompt DynamicAction](./images/prompt-dynamicaction.png " ")
 
 7. Under **True** action, click **Show**.
 
@@ -345,11 +339,11 @@ In this task, you will create buttons to trigger specific actions and configure 
         </copy>
         ```
 
-   ![True Action](images/true-action2.png " ")
+   ![True Action](./images/true-action2.png " ")
 
 9. Right-click **Buttons** sub-region, click **Create Button**.
 
-     ![Create Button](images/create-button2.png " ")
+     ![Create Button](./images/create-button2.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -369,7 +363,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
         - Column Attributes: **style="align-self: center;"**
 
-      ![Edit Button](images/send-edit1.png " ")
+      ![Edit Button](./images/send-edit1.png " ")
 
     - Under Appearance:
 
@@ -387,11 +381,11 @@ In this task, you will create buttons to trigger specific actions and configure 
 
     - Advanced > Static ID: **call-genai-agents**
 
-      ![Edit SendButton1](images/send-edit2.png " ")
+      ![Edit SendButton1](./images/send-edit2.png " ")
 
 11. Under **Button** sub-region, Right-Click **Send** button, and click **Create Dynamic Action**.
 
-    ![Create DynamicAction](images/create-dyaction.png " ")
+    ![Create DynamicAction](./images/create-dyaction.png " ")
 
 12. In the Property Editor, enter/select the following:
 
@@ -401,7 +395,7 @@ In this task, you will create buttons to trigger specific actions and configure 
         - Type: **JavaScript expression**
         - JavaScript Expression : **!apex.item("P1_PROMPT").isEmpty()**
 
-    ![Send DynamicAction](images/send-dynamicaction.png " ")
+    ![Send DynamicAction](./images/send-dynamicaction.png " ")
 
 13. Under True action, click **Show**.
 
@@ -434,15 +428,15 @@ In this task, you will create buttons to trigger specific actions and configure 
 
         - Items to Return: **P1\_CONV\_ID**
 
-    ![Send True Action](images/send-true1.png " ")
+    ![Send True Action](./images/send-true1.png " ")
 
 15. Right-click **True** action and click **Create TRUE Action**.
 
-    ![Create True Action](images/create-trueaction.png " ")
+    ![Create True Action](./images/create-trueaction.png " ")
 
 16. In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Execute Server-side Code**
+    - Identification > Action: **Execute JavaScript Code**
 
     - Under Settings > Code : Copy and paste the below code
 
@@ -453,11 +447,11 @@ In this task, you will create buttons to trigger specific actions and configure 
         </copy>
         ```
 
-    ![True Action2](images/send-true2.png " ")
+    ![True Action2](./images/send-true2.png " ")
 
 17. Right-click **True** action and click **Create TRUE Action**.
 
-    ![Create True Action](images/create-trueaction.png " ")
+    ![Create True Action](./images/create-trueaction.png " ")
 
 18. In the Property Editor, enter/select the following:
 
@@ -541,11 +535,11 @@ In this task, you will create buttons to trigger specific actions and configure 
 
     - Items to Submit: **P1\_PROMPT,P1\_SESSION\_ID,P1\_AGENT\_ENDPOINT\_ID,P1\_APEX\_AI\_CRED**, **P1\_REGION**
 
-    ![True Action3](images/send-true03.png " ")
+    ![True Action3](./images/send-true03.png " ")
 
 19. Right-click **True** action and click **Create TRUE Action**.
 
-    ![Create True Action](images/create-trueaction.png " ")
+    ![Create True Action](./images/create-trueaction.png " ")
 
 20. In the Property Editor, enter/select the following:
 
@@ -564,7 +558,7 @@ In this task, you will create buttons to trigger specific actions and configure 
         </copy>
         ```
 
-    ![True Action4](images/send-true4.png " ")
+    ![True Action4](./images/send-true4.png " ")
 
 ## Task 3: Create Page Processes and Computation
 
@@ -572,7 +566,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
 1. Under **Rendering** Tab, expand **Pre-Rendering**, right-click **Before Header** and select **Create Computation**.
 
-   ![Create Computation](images/create-computation.png " ")
+   ![Create Computation](./images/create-computation.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -582,11 +576,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Error > Error Message: **Clear the message if page is refreshed.**
 
-   ![Create Prompt](images/p1-prompt.png " ")
+   ![Create Prompt](./images/p1-prompt.png " ")
 
 3. Right-click **Before Header** and select **Create Computation**.
 
-   ![Create Computation](images/create-computation.png " ")
+   ![Create Computation](./images/create-computation.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -594,11 +588,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Computation > Type: **Static Value**
 
-   ![Create SessionId](images/process-sessionid.png " ")
+   ![Create SessionId](./images/process-sessionid.png " ")
 
 5. Right-click **Before Header** and select **Create Process**.
 
-   ![Create Process](images/create-process1.png " ")
+   ![Create Process](./images/create-process1.png " ")
 
 6. In the Property Editor, enter/select the following:
 
@@ -616,7 +610,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Operation: **POST**
 
-        ![Enter Process](images/enter-process.png " ")
+        ![Enter Process](./images/enter-process.png " ")
 
 7. Navigate to **Body**, click **P1\_SESSION\_ID**.
 
@@ -643,11 +637,11 @@ In this task, we will create a Static Content region and a subregion, and config
             </copy>
             ```
 
-   ![Edit Default](images/edit-default.png " ")
+   ![Edit Default](./images/edit-default.png " ")
 
 9. Navigate to **Pre-Rendering**. Select **Create Session** process and expand **Parameters**.
 
-    ![Expand Session](images/expand-session.png " ")
+    ![Expand Session](./images/expand-session.png " ")
 
 10. Click **AGENT_NAME** parameter. In the Property Editor, enter/select the following:
 
@@ -657,7 +651,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Static Value: **RAGAgent**
 
-    ![Agent Name](images/agent-name1.png " ")
+    ![Agent Name](./images/agent-name1.png " ")
 
 11. Click **DESCRIPTION** parameter. In the Property Editor, enter/select the following:
 
@@ -667,7 +661,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Static Value: **Session for RAG Agent**
 
-    ![Description](images/description1.png " ")
+    ![Description](./images/description1.png " ")
 
 12. Click **RESPONSE** parameter. In the Property Editor, enter/select the following:
 
@@ -677,7 +671,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Value > Item : **P1\_RESPONSE\_SESSION**
 
-    ![Response Session](images/response-session2.png " ")
+    ![Response Session](./images/response-session2.png " ")
 
 13. Click **Save**.
 
@@ -685,11 +679,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
 1. Navigate back to the Page Designer. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](images/plus-page1.png " ")
+   ![Create Page](./images/plus-page1.png " ")
 
 2. Select **Form**.
 
-   ![Create Page](images/select-form.png " ")
+   ![Create Page](./images/select-form.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -703,15 +697,15 @@ In this task, we will create a Static Content region and a subregion, and config
 
 4. Click **Next**.
 
-    ![Edit Form](images/edit-form.png " ")
+    ![Edit Form](./images/edit-form.png " ")
 
 5. Click **Create Page**.
 
-   ![Edit Form](images/create-formpage.png " ")
+   ![Edit Form](./images/create-formpage.png " ")
 
 6. Once Page is created, navigate to the page, right-click on **Upload Documents to Knowledge Base** region and select **Create page Item**.
 
-   ![Page](images/page5.png " ")
+   ![Page](./images/page5.png " ")
 
 7. Now, add the following nine page items one after the other:
 
@@ -732,7 +726,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
      - Navigate to **Property Editor**, Identification > Type : **Hidden**
 
-   ![Page Items](images/all-pageitem.png " ")
+   ![Page Items](./images/all-pageitem.png " ")
 
 8. Right-click **Upload Documents to Knowledge Base** region, click **Create Page Item**.
 
@@ -750,7 +744,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Dropzone Title: **Upload your Document**
 
-   ![Document Upload](images/doc-upload.png " ")
+   ![Document Upload](./images/doc-upload.png " ")
 
 10. Right-click **Content Body**, click **Create Page Item**.
 
@@ -762,11 +756,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Type: **Hidden**
 
-    ![Ingestion Count](images/ingestion-count.png " ")
+    ![Ingestion Count](./images/ingestion-count.png " ")
 
 12. Right-click **P5\_INGESTION\_COUNT** page item, click **Create Computation**.
 
-    ![Ingestion Computation](images/ingestion-computation1.png " ")
+    ![Ingestion Computation](./images/ingestion-computation1.png " ")
 
 13. In the Property Editor, enter/select the following:
 
@@ -784,11 +778,11 @@ In this task, we will create a Static Content region and a subregion, and config
         </copy>
         ```
 
-    ![Ingestion computation](images/ingestion-computation.png " ")
+    ![Ingestion computation](./images/ingestion-computation.png " ")
 
 14. Right-click **Content Body**, click **Create Region**.
 
-    ![ContentBody Region](images/contentbody-region.png " ")
+    ![ContentBody Region](./images/contentbody-region.png " ")
 
 15. In the Property Editor, enter/select the following:
 
@@ -800,7 +794,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Source > HTML Code : **An Ingestion Job is currently In-Progress. Please wait before uploading Documents**
 
-        ![Ingestion Details](images/ingestion-details1.png " ")
+        ![Ingestion Details](./images/ingestion-details1.png " ")
 
     - Under Server-side Condition:
 
@@ -808,7 +802,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Item: **P5\_INGESTION\_COUNT**
 
-        ![Ingestion Details](images/ingestion-details2.png " ")
+        ![Ingestion Details](./images/ingestion-details2.png " ")
 
 16. Under **Content Body**, select **Upload Documents to Knowledge Base** region.
 
@@ -820,7 +814,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Item **P5\_INGESTION\_COUNT**
 
-       ![Server Side](images/page5-serverside11.png " ")
+       ![Server Side](./images/page5-serverside11.png " ")
 
 ## Task 5: Add Processes to the Page
 
@@ -836,7 +830,7 @@ In this task you will learn how to create processes and will create  processes:
 
 1. Navigate to the **Processing** tab, right-click **Close Dialog** process, click **Delete**.
 
-      ![Delete Process](images/delete-process.png " ")
+      ![Delete Process](./images/delete-process.png " ")
 
 2. Select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
 
@@ -856,7 +850,7 @@ In this task you will learn how to create processes and will create  processes:
 
         - Value: **CREATE,SAVE**
 
-        ![Process](images/process0.png " ")
+        ![Process](./images/process0.png " ")
 
 3. Expand the **Parameters** and map the following items one after another:
 
@@ -872,11 +866,11 @@ In this task you will learn how to create processes and will create  processes:
     | 8 | p\_mime_type| P5\_MIME_TYPE |
     {: title="Parameters Mapping"}
 
-     ![Parameters](images/parameters1.png " ")
+     ![Parameters](./images/parameters1.png " ")
 
 4. Right-click **Processes** and click **Create Process**.
 
-     ![Create Process](images/create-process20.png " ")
+     ![Create Process](./images/create-process20.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -892,11 +886,11 @@ In this task you will learn how to create processes and will create  processes:
 
         - Value: **CREATE,SAVE**
 
-     ![Process2](images/process2.png " ")
+     ![Process2](./images/process2.png " ")
 
 6. Right-click **Work with Ingestion Jobs** processes, click **Add Child Process**.
 
-     ![Add ChildProcess](images/template-childprocess.png " ")
+     ![Add ChildProcess](./images/template-childprocess.png " ")
 
 7. In the Property Editor, enter/select the following:
 
@@ -916,7 +910,7 @@ In this task you will learn how to create processes and will create  processes:
 
         - Operation: **POST**
 
-     ![Child Process1](images/child-process1.png " ")
+     ![Child Process1](./images/child-process1.png " ")
 
 8. Under **Call Ingestion API** child process, expand the parameters and map the following parameters:
 
@@ -929,11 +923,11 @@ In this task you will learn how to create processes and will create  processes:
     | 5 | RESPONSE| Toggle Off |P5\_ING\_RESPONSE |
     {: title="Parameters Mapping"}
 
-     ![Child Parameters1](images/child-parameters11.png " ")
+     ![Child Parameters1](./images/child-parameters11.png " ")
 
 9. Right-click **Work with Ingestion Jobs** process, click **Add Child Process**.
 
-     ![Add ChildProcess](images/template-childprocess.png " ")
+     ![Add ChildProcess](./images/template-childprocess.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -966,7 +960,7 @@ In this task you will learn how to create processes and will create  processes:
         </copy>
         ```
 
-     ![Child Process2](images/child-process2.png " ")
+     ![Child Process2](./images/child-process2.png " ")
 
 11. Right-click **Processes**, select **Create Process**.
 
@@ -988,7 +982,7 @@ In this task you will learn how to create processes and will create  processes:
 
     - Server-side Condition > When Button Pressed: **DELETE**
 
-        ![Process](images/process3.png " ")
+        ![Process](./images/process3.png " ")
 
 13. Under **Delete File in Object Storage** process and map the following parameters:
 
@@ -999,11 +993,11 @@ In this task you will learn how to create processes and will create  processes:
     | 3 | p\_mime\_type| P5\_MIME\_TYPE |
     {: title="Parameters Mapping"}
 
-    ![Parameters](images/param1.png " ")
+    ![Parameters](./images/param1.png " ")
 
-    ![Parameters](images/param2.png " ")
+    ![Parameters](./images/param2.png " ")
 
-    ![Parameters](images/param3.png " ")
+    ![Parameters](./images/param3.png " ")
 
 14. Right-click **Processes** and click **Create Process**.
 
@@ -1023,11 +1017,11 @@ In this task you will learn how to create processes and will create  processes:
 
         - Value: **CREATE,SAVE,DELETE**
 
-    ![Process](images/process4.png " ")
+    ![Process](./images/process4.png " ")
 
 16. Right-click **After Processing**, click **Create Branch**.
 
-    ![Create Branch](images/create-branch.png " ")
+    ![Create Branch](./images/create-branch.png " ")
 
 17. In the Property Editor, enter/select the following:
 
@@ -1039,7 +1033,7 @@ In this task you will learn how to create processes and will create  processes:
 
     - Click **OK**.
 
-    ![Edit Branch](images/edit-branch.png " ")
+    ![Edit Branch](./images/edit-branch.png " ")
 
 18. Click **Save**.
 
@@ -1049,15 +1043,15 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the Page designer toolbar, click **Shared Components** icon.
 
-   ![Shared Components](images/shared-components.png " ")
+   ![Shared Components](./images/shared-components.png " ")
 
 2. Click **Application Items**.
 
-   ![Application Items](images/click-applicationitems.png " ")
+   ![Application Items](./images/click-applicationitems.png " ")
 
 3. Click **Create**.
 
-    ![Click Create](images/click-createai.png " ")
+    ![Click Create](./images/click-createai.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -1069,19 +1063,19 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Click **Create Application Item**
 
-    ![Edit ApplicationItem](images/edit-applicationitem0.png " ")
+    ![Edit ApplicationItem](./images/edit-applicationitem0.png " ")
 
 5. Navigate back to **Shared Components** page.
 
-    ![Shared Components](images/application-sharedcomponent.png " ")
+    ![Shared Components](./images/application-sharedcomponent.png " ")
 
 6. Under **Application Logic**, select **Application Processes**.
 
-    ![Application Processes](images/click-processes.png " ")
+    ![Application Processes](./images/click-processes.png " ")
 
 7. Click **Create**.
 
-    ![Create Application Processes](images/create-applicationprocesses.png " ")
+    ![Create Application Processes](./images/create-applicationprocesses.png " ")
 
 8. Enter/select the following::
 
@@ -1093,7 +1087,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Click **Next**
 
-    ![Edit Identification](images/identification.png " ")
+    ![Edit Identification](./images/identification.png " ")
 
 9. Enter/select the following::
 
@@ -1113,21 +1107,21 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Click **Next**
 
-    ![Edit Source](images/source.png " ")
+    ![Edit Source](./images/source.png " ")
 
 10. Click **Create Process**.
 
-    ![Create Application Process](images/create-appprocess.png " ")
+    ![Create Application Process](./images/create-appprocess.png " ")
 
 11. Navigate to your Application ID and click **Create Page**.
 
-    ![Navigate Application](images/navigate-application.png " ")
+    ![Navigate Application](./images/navigate-application.png " ")
 
-    ![Create Page](images/create-page2.png " ")
+    ![Create Page](./images/create-page2.png " ")
 
 12. Select **Content Row**.
 
-    ![Create Page](images/create-contentrow.png " ")
+    ![Create Page](./images/create-contentrow.png " ")
 
 13. Enter/select the following::
 
@@ -1139,7 +1133,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Click **Create Page**
 
-    ![Edit Form](images/document-tracker.png " ")
+    ![Edit Form](./images/document-tracker.png " ")
 
 14. Under Content Body, select **Document Processing Tracker**.
 
@@ -1177,11 +1171,11 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
-    ![Rename](images/rename.png " ")
+    ![Rename](./images/rename.png " ")
 
-    ![Appearance](images/page6-appearance.png " ")
+    ![Appearance](./images/page6-appearance.png " ")
 
-    ![Edit Form](images/edit-documenttracker.png " ")
+    ![Edit Form](./images/edit-documenttracker.png " ")
 
 16. In the Property Editor, select **Attributes** tab and enter/select the following:
 
@@ -1205,11 +1199,11 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Column Width: **Auto**
 
-    ![Document Attributes](images/document-attributes.png " ")
+    ![Document Attributes](./images/document-attributes.png " ")
 
 17. Under **List Available Documents**, right-click **Action**, and click **Create Action**.
 
-    ![Create Action](images/create-actionmenu.png " ")
+    ![Create Action](./images/create-actionmenu.png " ")
 
 18. In the Property Editor, enter/select the following:
 
@@ -1227,7 +1221,7 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Icon : **fa-ellipsis-v**
 
-    ![Edit Menu](images/edit-menu.png " ")
+    ![Edit Menu](./images/edit-menu.png " ")
 
 19. Under **Menu** action, right-click **Menus** add below items one after another:
 
@@ -1253,7 +1247,7 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Advanced > Request : **APPLICATION\_PROCESS=DOWNLOAD\_DOC**
 
-    ![Download PDF](images/download-pdf.png " ")
+    ![Download PDF](./images/download-pdf.png " ")
 
 20. Under **Menu** action, right-click **Menus** add below items one after another:
 
@@ -1281,23 +1275,39 @@ In this task we will create Application Items,Application Processes and Content 
 
                 - Click **OK**
 
-    ![Edit Document](images/edit-document.png " ")
+    ![Edit Document](./images/edit-document.png " ")
 
-21. Right-click on **List Available Documents** click **Create Button**, create below buttons one after another.
+21. Right-click on **List Available Documents** click **Create Button**.
 
-    |   | Identification > Button Name | Identification > Label | Layout > Slot | Appearance > Hot |Behavior > Action | Target > No Link Defined > Target > Page  | Clear Cache |
-    |---|-------|------|----------| --------------| ---- | --- | --- |
-    | 1 | Chat\_with\_AI\_Agent| Chat With AI Agent | Top of Region [Legacy]| |Redirect to Page in this Application| 1 | 1 |
-    | 2 | Upload| Upload Document to KB | Top of Region [Legacy]| Toggle On |Redirect to Page in this Application| 5 | 5 |
-    {: title="Link Builder - Target"}
+22. Enter/select the following:
 
-    ![Chat WithAI](images/chat-withai.png " ")
+    - Under Identification
 
-    ![Upload](images/upload.png " ")
+        - Button Name: **Upload**
 
-22. Right-click **Content Body**, click **Create Page Item**.
+        - Label: **Upload Document to KB**
 
-23. In the Property Editor, enter/select the following:
+    - Layout > Slot: **Top of Region [Legacy]**
+
+    - Appearance : **Hot**
+
+    - Under Behavior
+
+        - Action: **Redirect to Page in this Application**
+
+        - Target: click **No Link Defined**
+
+    - Target > Page: **5**
+
+    - Clear/Reset > Clear Cache : **5**
+
+    ![Upload](./images/upload1.png " ")
+
+    ![Upload](./images/upload2.png " ")
+
+23. Right-click **Content Body**, click **Create Page Item**.
+
+24. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -1305,29 +1315,27 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Type: **Hidden**
 
-    ![Page6 Item](images/page-item.png " ")
+    ![Page6 Item](./images/page-item.png " ")
 
-24. Navigate to **Page 6: Document Processing Tracker** root node.
+25. Navigate to **Page 6: Document Processing Tracker** root node.
 
-25. In the Property Editor, enter/select the following:
+26. In the Property Editor, enter/select the following:
 
     - Template Options > Size: **Large**
 
-    - Under Dialog > Chained : **Toggle On**
+    ![Size](./images/size-large1.png " ")
 
-    ![Size](images/size-large.png " ")
-
-26. Click **Save**.
+27. Click **Save**.
 
 ## Task 7: Add Buttons in HomePage
 
 1. Go to **Navigation Bar** and navigate to **Page 1**.
 
-    ![Navigate HomePage](images/navigate-home.png " ")
+    ![Navigate HomePage](./images/navigate-home.png " ")
 
 2. In the **Rendering Pane**, right-click  **Breadcrumb Bar** and select **Create Button**.
 
-    ![Navigate Button](images/navigate-button.png " ")
+    ![Navigate Button](./images/navigate-button.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -1349,7 +1357,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Behavior > Action: **Submit Page**
 
-    ![New Session](images/new-session.png " ")
+    ![New Session](./images/new-sessionbtn.png " ")
 
 4. Right-click  **Breadcrumb Bar** and select **Create Button**.
 
@@ -1377,7 +1385,7 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Click **OK**
 
-    ![Upload Document](images/upload-doc.png " ")
+    ![Upload Document](./images/upload-doc.png " ")
 
 6. Click **Save**.
 
@@ -1385,11 +1393,11 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](images/plus-page7.png " ")
+   ![Create Page](./images/plus-page7.png " ")
 
 2. Select **Content Row** .
 
-    ![Create Page](images/create-contentrow.png " ")
+    ![Create Page](./images/create-contentrow.png " ")
 
 3. Enter/select the following::
 
@@ -1401,11 +1409,11 @@ In this task we will create Application Items,Application Processes and Content 
 
 4. Click **Create Page**
 
-    ![View Citations](images/view-citations.png " ")
+    ![View Citations](./images/view-citations.png " ")
 
 5. Right-click **Content Body**, select **Create Page Item**.
 
-    ![Add PageItem](images/pageitem-pg7.png " ")
+    ![Add PageItem](./images/pageitem-pg7.png " ")
 
 6. In the property editor enter/select the following:
 
@@ -1413,7 +1421,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Identification > Type: **Hidden**
 
-    ![Page Item7](images/p7_convid.png " ")
+    ![Page Item7](./images/p7_convid.png " ")
 
 7. Select **View Citations** region, in the property editor enter/select the following:
 
@@ -1433,7 +1441,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
-    ![Edit Citations](images/edit-citation.png " ")
+    ![Edit Citations](./images/edit-citation.png " ")
 
 8. Navigate to **Attributes** tab, enter/select the following:
 
@@ -1460,7 +1468,7 @@ In this task we will create Application Items,Application Processes and Content 
 
         - Icon: **fa-chatbot**
 
-    ![Citations Attributes](images/citation-attributes.png " ")
+    ![Citations Attributes](./images/citation-attributes.png " ")
 
 9.Click **Save**.
 
@@ -1468,15 +1476,15 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the Page designer toolbar, click **Shared Components** icon.
 
-   ![Shared Components](images/shared-components.png " ")
+   ![Shared Components](./images/shared-components.png " ")
 
 2. Under Workflows and Automations, click **Automations**
 
-   ![Click Automations](images/click-automations.png " ")
+   ![Click Automations](./images/click-automations.png " ")
 
 3. Click **Create**
 
-   ![Click Create](images/create10.png " ")
+   ![Click Create](./images/create10.png " ")
 
 4. Under Create Automation, enter/select the following:
 
@@ -1494,17 +1502,17 @@ In this task we will create Application Items,Application Processes and Content 
 
 5. Click **Next**.
 
-   ![Click Automations Text](images/create-automationstext.png " ")
+   ![Click Automations Text](./images/create-automationstext.png " ")
 
 6. Under Create Automation > Table/View name: **DOC_UPLOAD(table)**, leave others default.
 
 7. Click **Create**.
 
-   ![Click Automations Text](images/create-automationstext2.png " ")
+   ![Click Automations Text](./images/create-automationstext2.png " ")
 
 8. Under Actions, click **Edit Icon**
 
-   ![Edit Actions](images/edit-aicon.png " ")
+   ![Edit Actions](./images/edit-aicon.png " ")
 
 9. Under Edit Action, enter/select the following:
 
@@ -1563,13 +1571,13 @@ In this task we will create Application Items,Application Processes and Content 
 
 11. Click **Apply Changes**.
 
-    ![Edit Action](images/edit-action2.png " ")
+    ![Edit Action](./images/edit-action2.png " ")
 
 12. Under Settings, Schedule Status > Active.
 
 13. Click **Save and Run**.
 
-    ![Status Active](images/status-active.png " ")
+    ![Status Active](./images/status-active.png " ")
 
 ## Summary
 
