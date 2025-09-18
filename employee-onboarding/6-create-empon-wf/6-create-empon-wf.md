@@ -114,15 +114,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create Approver Variable](./images/create-approver.png " ")
 
-3. Similarly, create a variable **Task Outcome**. In the Property Editor, enter/select the following:
-
-    - Identification > Static ID: **TASKOUTCOME**
-
-    - Label > Label: **TaskOutcome**
-
-   ![Create task outcome Variable](./images/create-variable-task.png " ")
-
-4. Similarly, create a variable called **Manager ID**. In the Property Editor, enter/select the following:
+3. Similarly, create a variable called **Manager ID**. In the Property Editor, enter/select the following:
 
     - Identification > Static ID: **MANAGER\_ID**
 
@@ -211,7 +203,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create activity to assign trainings](./images/human-task21.png " ")
 
-7. Under **On boarding Tasks** activity, in parameters tab, select **Department** and select the following in the property editor:
+7. Under **Onboarding Tasks** activity, in parameters tab, select **Department** and select the following in the property editor:
 
     - Under Value:
 
