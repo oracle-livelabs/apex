@@ -150,7 +150,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 3. Now from the Activities Palette, drag a **Execute Code** Activity into the Diagram Builder area and drop it on the connection joining **Employee Onboarding Email** and End.
 
-   ![Create Execute Code](./images/exc-code.png " ")
+   ![Create Execute Code](./images/drag-code21.png " ")
 
 4. In the Property Editor, enter/select the following:
 
