@@ -108,14 +108,6 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 2. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
 
-    - Identification > Static ID: **APPROVER**
-
-    - Label > Label: **Approver**
-
-   ![Create Approver Variable](./images/create-approver.png " ")
-
-3. Similarly, create a variable called **Manager ID**. In the Property Editor, enter/select the following:
-
     - Identification > Static ID: **MANAGER\_ID**
 
     - Label > Label: **Manager ID**
@@ -132,13 +124,13 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              </copy>
             ```
 
-   ![Create task outcome Variable](./images/create-managerid.png " ")
+   ![Create task outcome Variable](./images/add-mgrid.png " ")
 
 ## Task 5: Add Workflow Activities for Employee Onboarding
 
 1. From the Activities Palette, drag a **Send Email** activity into the Diagram Builder area and drop it on the connection joining the **Start** and **End** activities.
 
-   ![Create Activity](./images/drag-act.png " ")
+   ![Create Activity](./images/drag-act11.png " ")
 
 2. Click the newly added **Send Email** and in the property editor, enter/select the following:
 
