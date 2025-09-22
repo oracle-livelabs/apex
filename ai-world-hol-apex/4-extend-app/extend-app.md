@@ -8,7 +8,9 @@ By the end of this lab, users will have learned how to extend their APEX applica
 
 Estimated Time: Approximately 15–20 minutes.
 
+
 [Extend your APEX App with Llama or Grok Models Video Recording](videohub:1_hw3plrxw)
+
 
 ###  Objectives
 By the end of this lab, you will:

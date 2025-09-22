@@ -6,6 +6,9 @@ In this lab, you will create Vector Providers in Oracle APEX for both the CLIP t
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create Vector Providers](videohub:1_x4l4dblf)
+
 ### Objectives
 
 In this lab, you:

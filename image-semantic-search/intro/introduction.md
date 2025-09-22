@@ -50,7 +50,7 @@ If you are stuck or the App is not working as expected, you can download and ins
             - ONNX Model Owner: **-Select your schema-**
             - ONNX Model Name: **CLIP\_TXT\_MODEL**
 
-            Click **Apply Changes**.
+            Select **Apply Changes**.
 
         ![Correct ONNX Model Owner Page item](images/vector_providers.png " ")
 

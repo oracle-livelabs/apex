@@ -8,6 +8,9 @@ By the end of this lab, your APEX application will support real time, AI powered
 
 Estimated Time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Implement Image and Text Search](videohub:1_b6mqsmvt)
+
 ### Objectives
 
 In this lab, you will:

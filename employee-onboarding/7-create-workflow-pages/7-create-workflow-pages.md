@@ -21,7 +21,7 @@ In this lab, you will learn how to:
 
 - Create Workflow Console Pages for employees to monitor workflows they initiated or own.
 
-Estimated Time: 40 minutes
+Estimated Time: 60 minutes
 
 ### Prerequisites
 
@@ -31,7 +31,7 @@ Estimated Time: 40 minutes
 
 Now that the Workflow is created, let us create a page that HR will use to Onboard a New Employee.
 
-1. Navigate to **Application ID <-number->**.
+1. Navigate to **Application ID**.
 
     ![navigate to emp onboarding app](./images/app-id.png " ")
 
@@ -60,7 +60,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Configure form page](./images/primary-key.png "")
 
-6. In the Page Designer, in the rendering tree, select **New Employee - Onboarding** region and in the property editor, make the following changes:
+6. In the Page Designer, in the Rendering Tree, select **New Employee - Onboarding** region and in the Property Editor, make the following changes:
 
     - Under Appearance:
 
@@ -71,15 +71,16 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Configure form region](./images/form-appearance.png " ")
 
-7. In the rendering tree, under **New Employee - Onboarding** region and select **P8\_LAST\_NAME**.
+7. In the Rendering Tree, under **New Employee - Onboarding** region and select **P8\_LAST\_NAME**.
 
      ![Edit page item](./images/edit-page-item1.png " ")
 
-8. In the property editor, under Layout > Start New Row : **Toggle OFF**.
+8. In the Property Editor, under Layout > Start New Row : **Toggle OFF**.
 
      ![Edit page item](./images/edit-page-item2.png " ")
 
-9. Similarly, do the same for following 4 Page Items:
+9. Similarly, in the Rendering Tree, multi select the following page items and in the Property Editor switch the **Start New Row** property to **OFF**.
+
     - **P8\_PHONE**
     - **P8\_DEPARTMENT\_ID**
     - **P8\_MANAGER\_ID**
@@ -87,11 +88,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
      ![Edit page item](./images/edit-page-item3.png " ")
 
-10. Select **P8\_STATUS**, **P8\_LAPTOP\_INFO** , **P8\_SEAT\_INFO** and **P8\_VPN\_DETAILS**, and in the property editor, set Identification > Type: **Hidden**
+10. Select **P8\_STATUS**, **P8\_LAPTOP\_INFO** , **P8\_SEAT\_INFO** and **P8\_VPN\_DETAILS**, and in the Property Editor, set Identification > Type: **Hidden**
 
     ![Hide page item](./images/edit-vpn-item.png " ")
 
-11. Select **P8\_EMPLOYEE\_TYPE**, in the property editor, enter/select the following:
+11. Select **P8\_EMPLOYEE\_TYPE**, in the Property Editor, enter/select the following:
 
       - Identification > Type: **Select One**
 
@@ -114,11 +115,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
         ![Add Static Values](./images/add-static-values.png " ")
 
-12. In the rendering tree, select **P8\_EMAIL** item and in the property editor, set the Label > Label as **Personal Email**.
+12. In the Rendering Tree, select **P8\_EMAIL** item and in the Property Editor, set the Label > Label as **Personal Email**.
 
     ![Set email item](./images/set-email.png " ")
 
-13. Select **P8\_FIRST\_NAME**, **P8\_EMAIL** , **P8\_DEPARTMENT\_ID**, and **P8\_MANAGER\_ID** and **P8\_JOINING\_DATE**, in the property editor, select the following:
+13. Select **P8\_FIRST\_NAME**, **P8\_EMAIL** , **P8\_DEPARTMENT\_ID**, and **P8\_MANAGER\_ID** and **P8\_JOINING\_DATE**, in the Property Editor, select the following:
 
     - Apperance > Template: **Required - Floating**
 
@@ -126,11 +127,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![Hide page item](./images/edit-page-items.png " ")
 
-14. Select **P8\_DEPARTMENT\_ID** and in the property editor, set Label > Label: **Department**
+14. Select **P8\_DEPARTMENT\_ID** and in the Property Editor, set Label > Label: **Department**
 
     ![Edit Department ID page item](./images/edit-dept.png " ")
 
-15. Similarly, select **P8\_MANAGER\_ID** and in the property editor, set Label > Label: **Manager**
+15. Similarly, select **P8\_MANAGER\_ID** and in the Property Editor, set Label > Label: **Manager**
 
     ![Edit Manager ID page item](./images/edit-mang.png " ")
 
@@ -146,7 +147,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
     ![create page process](./images/click-create-process.png " ")
 
-3. In the property editor, enter/select the following:
+3. In the Property Editor, enter/select the following:
 
       - Under Identification:
 
@@ -162,7 +163,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
       - Success message: **Employee Onboarding Initiated**
 
-     ![create workflow process](./images/create-workflow-process.png " ")
+     ![create workflow process](./images/create-wf-process.png " ")
 
 4. Now, configure Parameters for the Workflow Page Process. Update the following **Parameters** one after the other:
 
@@ -172,11 +173,11 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
     | Email | Item | P8\_EMAIL |
     | Employee ID | Item | P8\_EMPLOYEE\_ID |
     | Employee Name | Item | P8\_FIRST\_NAME |
-    | Employment Type | Item | P8\_EMPLOYMENT\_TYPE |
+    | Employee Type | Item | P8\_EMPLOYEE\_TYPE |
     | Initiated By | Expression |    :APP_USER      |
     {: title="List of Parameters to be linked"}
 
-    ![create workflow process](./images/configure-process-param.png " ")
+    ![create workflow process](./images/config-process-params.png " ")
 
     *Note: Your Page Number may vary.*
 
@@ -186,7 +187,7 @@ Now that the Workflow is created, let us create a page that HR will use to Onboa
 
 ## Task 3: Create Page for IT Tasks
 
-In this task you will create a page to create an email id and allocate laptop to the employee.
+In this task you will create a page to create an Email ID and allocate laptop to the employee.
 
 1. Click **+ (Plus) Icon** on the top-right corner of the page designer. Select **Page** from the drop-down.
 
@@ -206,11 +207,11 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![create blank page tasks](./images/select-blank.png "")
 
-4. In the rendering tree, right click on **Components** and select **Create Region**.
+4. In the Rendering Tree, right click on **Components** and select **Create Region**.
 
     ![create region tasks](./images/create-region-it.png " ")
 
-5. In the property editor, enter Identification > Name: **IT Setup**.
+5. In the Property Editor, enter Identification > Name: **IT Setup**.
 
     ![Static Region](./images/static-region.png " ")
 
@@ -218,7 +219,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
    ![New Page Region](./images/new-page-item.png " ")
 
-7. In the property editor, enter/select the following:
+7. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -264,7 +265,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![New Sub Region](./images/new-sub-region.png " ")
 
-11. In the property editor, enter/select the following:
+11. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Create Email**
 
@@ -284,7 +285,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Create new item](./images/email-id-item.png " ")
 
-13. In the property editor, enter/select the following:
+13. In the Property Editor, enter/select the following:
 
     - Identification > Name: **P11\_EMAIL\_ID**
 
@@ -302,7 +303,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![New Sub Region](./images/new-sub-region2.png " ")
 
-15. In the property editor, enter/select the following:
+15. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Allocate Laptop**
 
@@ -320,7 +321,7 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Create New item for Laptop Info](./images/laptop-info-item.png " ")
 
-17. In the property editor, enter/select the following:
+17. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -355,11 +356,11 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Property Sub Region Laptop Info](./images/laptop-id-item1.png " ")
 
-18. In the **rendering tree**, right click on the **Dialog Footer** region and select **Create Region**.
+18. In the **Rendering Tree**, right click on the **Dialog Footer** region and select **Create Region**.
 
     ![Create a new Region](./images/button-cont.png " ")
 
-19. In the property editor, enter/select the following:
+19. In the Property Editor, enter/select the following:
 
     - Identification > Name: **Buttons Container**
 
@@ -367,11 +368,11 @@ In this task you will create a page to create an email id and allocate laptop to
 
     ![Create a new Region](./images/buttons-cont2.png " ")
 
-20. In the rendering tree, click on the **Buttons Container** region and select **Create Button**.
+20. In the Rendering Tree, click on the **Buttons Container** region and select **Create Button**.
 
     ![Create a new button](./images/buttons-cont4.png " ")
 
-21. In the property editor, enter/select the following:
+21. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -521,7 +522,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![change title](./images/change-title-page5.png " ")
 
-7. In the rendering tree, right click on **Content Body** and select **Create Region**.
+7. In the Rendering Tree, right click on **Content Body** and select **Create Region**.
 
     ![create region](./images/create-region.png " ")
 
@@ -614,11 +615,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![IT Status Attributes](./images/it-stats-attri.png " ")
 
-10. In the rendering tree, under **IT Task- Status**, right click on **Actions** and select **Create Action**.
+10. In the Rendering Tree, under **IT Task- Status**, right click on **Actions** and select **Create Action**.
 
     ![Create Action for IT Status](./images/create-action1.png " ")
 
-11. In the property editor, enter/select the following:
+11. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -691,30 +692,31 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Type: **SQL Query**
         - SQL Query: copy and paste the below code
 
-            ```
+            ```sql
              <copy>
-             SELECT et.training_id,
-             e.FIRST_NAME AS EMPLOYEE_NAME,
-             tc.TRAINING_NAME,
-             et.STATUS,
-             et.Employee_ID,
-             CASE
-                WHEN et.STATUS = 'Completed' THEN 'success'
-                WHEN et.STATUS = 'Not Started' THEN 'warning'
-                ELSE 'danger'
-             END AS response_color
-             FROM EMPLOYEE_TRAININGS et
-             JOIN EMPLOYEES e
-             ON e.EMPLOYEE_ID = et.EMPLOYEE_ID
-             JOIN TRAINING_CATALOG tc
-             ON tc.CATALOG_ID = et.CATALOG_ID
-             WHERE e.EMAIL = (
-                SELECT param_value
-                FROM apex_task_parameters
-                WHERE task_id = :P36_TASK_ID -- Replace P36 with your Task Detail page number
-                AND is_visible = 'Y'
-                AND param_label = 'Email'
-             );
+             SELECT
+                et.training_id,
+                e.FIRST_NAME AS EMPLOYEE_NAME,
+                tc.TRAINING_NAME,
+                et.STATUS,
+                et.Employee_ID,
+                CASE
+                  WHEN et.STATUS = 'Completed' THEN 'success'
+                  WHEN et.STATUS = 'Not Started' THEN 'warning'
+                  ELSE 'danger'
+                END AS response_color
+             FROM
+                EMPLOYEE_TRAININGS et
+                JOIN EMPLOYEES e ON e.EMPLOYEE_ID = et.EMPLOYEE_ID
+                JOIN TRAINING_CATALOG tc ON tc.CATALOG_ID = et.CATALOG_ID
+             WHERE
+                e.EMAIL = (
+                  SELECT param_value
+                  FROM apex_task_parameters
+                  WHERE task_id = :P36_TASK_ID -- Replace P36 with your Task Detail page number
+                     AND is_visible = 'Y'
+                     AND param_label = 'Email'
+                );
              </copy>
             ```
 
@@ -750,11 +752,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![configure Training Region](./images/temp-training.png "")
 
-21. In the rendering tree, under **Training Details**, right click on **Actions** and select **Create Action**.
+21. In the Rendering Tree, under **Training Details**, right click on **Actions** and select **Create Action**.
 
     ![Create Action](./images/create-action-training.png " ")
 
-22. In the property editor, enter/select the following:
+22. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -767,13 +769,15 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Type: **Redirect to URL**
         - Target: **javascript:apex.event.trigger(document,'mark\_complete',&TRAINING\_ID.)**
 
+        *Note: This triggers a custom APEX event called 'mark\_complete' on the page, passing the TRAINING\_ID as a parameter. It’s used to programmatically mark a training as complete without leaving the page.*
+
     ![Action mark complete](./images/action-complete.png " ")
 
-23. In the rendering tree, right click on **Content Body** and select **Create Page Item**.
+23. In the Rendering Tree, right click on **Content Body** and select **Create Page Item**.
 
     ![Create Training ID](./images/add-training-id.png " ")
 
-24. In the property editor, enter/select the following:
+24. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -788,7 +792,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
     ![Create DA](./images/da-train.png " ")
 
-26. In the property editor, enter/select the following:
+26. In the Property Editor, enter/select the following:
 
     - Identification: Name > **Update Employee Trainings**
 
@@ -801,7 +805,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         ![Create DA](./images/da-train2.png " ")
 
-27. Under **True** action, select **Show** and enter/select the following in the property editor:
+27. Under **True** action, select **Show** and enter/select the following in the Property Editor:
 
     - Identification: Action > **Set Value**
 
@@ -817,11 +821,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
        ![Create TRUE action](./images/set-value.png " ")
 
-28. In the rendering tree, right click on **True** and click **Create TRUE Action**.
+28. In the Rendering Tree, right click on **True** and click **Create TRUE Action**.
 
        ![Create TRUE action](./images/create-true-action.png " ")
 
-29. In the property editor, enter/select the following:
+29. In the Property Editor, enter/select the following:
 
      - Identification: Action > **Execute Server-side Code**
 
