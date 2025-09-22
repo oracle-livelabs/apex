@@ -8,8 +8,8 @@ In this lab, you learn to create a Map region and display the schools as Points 
 
 Estimated Time: 10 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Visualize Schools on a Map](videohub:1_oyunfa26)
 
 ### Objectives
 

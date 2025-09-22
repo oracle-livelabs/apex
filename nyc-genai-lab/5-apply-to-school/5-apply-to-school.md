@@ -8,8 +8,8 @@ In this lab, you configure a button for the student's parent to apply to a schoo
 
 Estimated Time: 15 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_hobahueq)
 
 ### Objectives
 

@@ -8,8 +8,8 @@ In this optional lab, you will learn how to implement Vector Search using an enh
 
 Estimated Time: 15 minutes
 
-<!-- Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_a6bi2e62) -->
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_emo5g5yi)
 
 ### Prerequisites
 

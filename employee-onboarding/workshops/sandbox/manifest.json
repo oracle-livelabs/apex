@@ -14,12 +14,12 @@
             "description": "The Introduction is always first. The title and contents menu title match for the Introduction.",
             "filename": "../../introduction/introduction.md"
         },
-        {
+                {
             "title": "Lab 1: Identify Business Steps",
-            "filename": "../../1-identify-business-steps/identify-business-steps.md"
+            "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
         },
         {
-            "title": "Lab 2: Load Database Objects",
+            "title": "Lab 2: Load Database Objects & Create Workspace Users",
             "filename": "../../2-data-load/2-data-load.md"
         },
         {
@@ -27,36 +27,36 @@
             "filename": "../../3-create-app/3-create-app.md"
         },
         {
-            "title": "Lab 4: Create Tasks Definitions",
-            "filename": "../../4-create-tasks/create-tasks.md"
+            "title": "Lab 4: Create Task Definitions",
+            "filename": "../../4-create-tasks/4-create-tasks.md"
         },
         {
             "title": "Lab 5: Create Employment Type Workflow",
-            "filename": "../../5-create-emp-type-wf/create-workflows.md"
+            "filename": "../../5-create-emp-type-wf/5-create-emp-type-wf.md"
         },
         {
             "title": "Lab 6: Create Employee Onboarding Workflow",
-            "filename": "../../6-create-empon-wf/create-empon.md"
+            "filename": "../../6-create-empon-wf/6-create-empon-wf.md"
         },
         {
             "title": "Lab 7: Create Workflow pages",
-            "filename": "../../7-create-workflow-pages/create-workflow-pages.md"
+            "filename": "../../7-create-workflow-pages/7-create-workflow-pages.md"
         },
         {
-            "title": "Lab 8: Create Archive Tasks and Archive Workflow",
-            "filename": "../../8-archived-tasks/archived-tasks.md"
+            "title": "Lab 8 [OPTIONAL]: Create Archive Tasks and Archive Workflow [Optional]",
+            "filename": "../../8-archived-tasks/8-archived-tasks.md"
         },
         {
-            "title": "Lab 9: Improve UI & Navigation",
-            "filename": "../../9-improve-ui/improve-ui.md"
+            "title": "Lab 9 [OPTIONAL]: Improve UI & Navigation [Optional]",
+            "filename": "../../9-improve-ui/9-improve-ui.md"
         },
         {
-            "title": "Lab 10: Run the App",
-            "filename": "../../10-running-the-app/running-the-app.md"
+            "title": "Lab 10: Explore the App",
+            "filename": "../../10-running-the-app/10-running-the-app.md"
         },
         {
             "title": "Lab 11: Activate Workflow",
-            "filename": "../../11-activate-workflow/activate-workflow.md"
+            "filename": "../../11-activate-workflow/11-activate-workflow.md"
         },
         {
             "title": "Need Help?",
