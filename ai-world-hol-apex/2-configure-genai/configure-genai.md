@@ -8,6 +8,10 @@ By the end of this lab, you will understand how to gather OCI tenancy informatio
 
 Estimated Time: 20–25 minutes
 
+
+[Configure GenAI in your Tenancy & APEX Workspace Video Recording](videohub:1_9ikcl1lc)
+
+
 ### Objectives
 
 In this lab, you will:
