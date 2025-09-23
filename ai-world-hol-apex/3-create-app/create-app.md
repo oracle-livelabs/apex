@@ -8,6 +8,10 @@ By the end of this lab, users will understand how to upload data into the app, b
 
 Estimated Time: 40–45 minutes
 
+
+[Create APEX Application and Integrate AI Chatbot Video Recording](videohub:1_5xlrznvs)
+
+
 ### Objectives
 
 In this lab, you will:
