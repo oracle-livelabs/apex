@@ -66,6 +66,10 @@ In this task, you will recreate the previously created employees in the Applicat
 
    ![appointment created](./images/success-msg.png " ")
 
+5. Check the inbox of the New Hire's personal email for the onboarding email.
+
+   ![Congralutions email](./images/email-onboarding.png " ")
+
 ## Task 3: Monitor the Workflow
 
 1. From the left navigation menu, click on **Workflow Pages** and select **Workflows Initiated By Me**.
@@ -74,19 +78,13 @@ In this task, you will recreate the previously created employees in the Applicat
 
 2. Click on the **Employee Onboarding** entry and observe the Workflow Details Popup.
 
-    - Workflow is waiting at **On boarding Tasks** Activity.
+    - Workflow is waiting at **Onboarding Tasks** Activity.
 
     - Observe Workflow Parameters.
 
     ![navigate to workflow](./images/monitor-appts.png " ")
 
-## Task 4: Verify Onboarding Email
-
-1. Check the inbox of the New Hire's personal email for the onboarding email.
-
-   ![Congralutions email](./images/email-onboarding.png " ")
-
-## Task 5: Complete the IT Setup tasks
+## Task 4: Complete the IT Setup tasks
 
 1. Log in as **AMY**, who is an IT staff in this workflow.
 
@@ -132,7 +130,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
     ![Completed Task sucess messages](./images/task-sucess.png " ")
 
-## Task 6: Observe the Workflow
+## Task 5: Observe the Workflow
 
 1. Log out and log in as **STEVE** (HR).
 
@@ -152,7 +150,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
 5. Click **Close**.
 
-## Task 7: Create Training Catalogues
+## Task 6: Create Training Catalogues
 
 1. Navigate to Administration, and click **Training Catalogues**.
 
@@ -176,7 +174,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
    ![Create Training Catalogue](./images/create-training4.png " ")
 
-## Task 8: Retry Workflow
+## Task 7: Retry Workflow
 
 1. Navigate to **Workflows Intiated By Me** page.
 
@@ -196,7 +194,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
    Now the workflow is waiting at the **Tasks based on Employment Type** step.
 
-## Task 9: Complete the Workflow
+## Task 8: Complete the Workflow
 
 1. Log out and log in as **MONICA** (New Hire).
 
@@ -214,7 +212,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
    ![Complete task](./images/check-wf3.png " ")
 
-## Task 10: Observe the Workflow
+## Task 9: Observe the Workflow
 
 1. Log out and log back in as **STEVE** to monitor the workflow.
 
@@ -224,7 +222,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
    ![Check onboarding workflow](./images/check-emp-workflow2.png " ")
 
-## Task 11: Verify Email Confirmation
+## Task 10: Verify Email Confirmation
 
 1. Check the inbox of the New Hire's corporate email for two emails.
 
