@@ -10,6 +10,9 @@ In this lab, you will learn how to create a **Knowledge Base** and **Generative 
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create Knowledge Base and Generative AI Agents in OCI](videohub:1_0hprtlt0)
+
 ### Objectives
 
 In this lab, you will:

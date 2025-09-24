@@ -8,6 +8,9 @@ Setting up API keys is a one time step that allows your applications or tools to
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Configure OCI API Keys and Bucket](videohub:1_26r632er)
+
 ### Objectives
 
 In this lab, you:

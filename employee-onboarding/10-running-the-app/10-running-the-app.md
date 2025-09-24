@@ -1,4 +1,4 @@
-# Run the Employee Onboarding Application
+# Explore the Employee Onboarding Application
 
 ## Introduction
 
@@ -8,7 +8,7 @@ In this lab, you will run and explore the Employee Onboarding application to und
 
 - Demonstrate the behavior of the Employee Onboarding application through hands-on activities.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ Estimated Time: 10 minutes
 
 ## Task 1: Enter Employees in Application
 
-In this task, you will recreate the previously created  employees in the Application.
+In this task, you will recreate the previously created employees in the Application.
 
 1. From the **Application Home page**, click **Run Application**.
 
@@ -66,6 +66,10 @@ In this task, you will recreate the previously created  employees in the Applica
 
    ![appointment created](./images/success-msg.png " ")
 
+5. Check the inbox of the New Hire's personal email for the onboarding email.
+
+   ![Congralutions email](./images/email-onboarding.png " ")
+
 ## Task 3: Monitor the Workflow
 
 1. From the left navigation menu, click on **Workflow Pages** and select **Workflows Initiated By Me**.
@@ -74,7 +78,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 2. Click on the **Employee Onboarding** entry and observe the Workflow Details Popup.
 
-    - Workflow is waiting at **On boarding Tasks** Activity.
+    - Workflow is waiting at **Onboarding Tasks** Activity.
 
     - Observe Workflow Parameters.
 
@@ -220,7 +224,7 @@ In this task, you will recreate the previously created  employees in the Applica
 
 ## Task 10: Verify Email Confirmation
 
-1. Check the inbox of the New Hire's email for two emails.
+1. Check the inbox of the New Hire's corporate email for two emails.
 
    ![Congralutions email](./images/email2.png " ")
 

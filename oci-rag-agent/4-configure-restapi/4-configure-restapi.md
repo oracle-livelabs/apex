@@ -10,6 +10,9 @@ In this lab, you create an APEX application named **GenAI Agents for APEX** usin
 
 Estimated Time: 15 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create APEX App and Configure REST Data Source](videohub:1_anvfb960)
+
 ### Objectives
 
 In this lab, you will:
@@ -230,11 +233,12 @@ In this task, you will create an application that allow you to build pages, add 
          "description": "#DESCRIPTION#"
        }
        </copy>
+
         ```
 
 12. Click **Synchronize with Body** and click **OK**.
 
-    ![Request Body Teamplate](./images/request-body-template2.png " ")
+    ![Request Body Template](./images/request-body-template2.png " ")
 
     ![Synchronize with Body Ok](./images/synchronize-ok2.png " ")
 
@@ -247,10 +251,10 @@ In this task, you will create an application that allow you to build pages, add 
     |   | Type | Name | Direction | Default Value | Static |
     |---|-------|------|----------| --------------| ------ |
     | 1. | HTTP Header| Content-Type | In | application/json | ON |
-    | 2. | Request or Response Body| RESPONSE | Out |  |  |
+    | 2. | Request or Response Body| RESPONSE | Out |||
     {: title="POST Operation Parameters"}
 
-    ![Content Type](./images/http-header.png " ")
+    ![HTTP Header](./images/edit-rest.png " ")
 
     ![Response](./images/response.png " ")
 
