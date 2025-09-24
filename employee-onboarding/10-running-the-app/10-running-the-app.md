@@ -16,6 +16,9 @@ Watch the video below for a quick walk-through of the lab.
 Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_fny0oxa1)
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_fny0oxa1)
+
 ### Prerequisites
 
 - All the previous Labs have been completed.

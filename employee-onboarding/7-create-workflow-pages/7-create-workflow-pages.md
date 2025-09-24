@@ -258,8 +258,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
             ```sql
              <copy>
-             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-             </copy>
+             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+             </copy>  
             ```
 
     ![New Page Item](./images/new-page-item3.png " ")
@@ -398,8 +398,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
         ```sql
         <copy>
-         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
         </copy>
         ```
 
@@ -423,8 +423,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
         ```sql
         <copy>
-         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
         </copy>
         ```
 
