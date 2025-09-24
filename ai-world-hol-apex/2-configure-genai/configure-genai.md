@@ -45,7 +45,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 6. You can then copy the Fingerprint
     ![Copy Fingerprint](./images/copy_fingerprint.png "Copy Fingerprint")
-    
+
 7. Now click Compartments on the left and select your compartment. 
     ![Compartment Select](./images/select_compartment.png  "Select OCI compartments link from side link")
     ![View Compartment Details](./images/view_compartment_details.png  "View selected OCI compartment details")
@@ -104,4 +104,4 @@ You have successfully created your web credential and utilized it to create your
 * Karol Stuart, Master Principal Cloud Architect 
 * Graham Anderson, Senior Cloud Architect 
 
-* **Last Updated by/Date** - Graham Anderson, August 2025
+* **Last Updated by/Date** - Graham Anderson, September 2025
