@@ -19,6 +19,9 @@ Workflows marked as **Active** are ready for production use and represent the li
 
 Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_ee4mob7b)
+
 ### Prerequisites
 
 - All the previous Labs have been completed.
