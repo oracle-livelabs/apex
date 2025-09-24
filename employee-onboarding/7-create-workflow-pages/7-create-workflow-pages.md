@@ -21,7 +21,10 @@ In this lab, you will learn how to:
 
 - Create Workflow Console Pages for employees to monitor workflows they initiated or own.
 
-Estimated Time: 60 minutes
+Estimated Time: 40 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_vh4x3bjv)
 
 ### Prerequisites
 
@@ -255,8 +258,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
             ```sql
              <copy>
-             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID; -- Replace <NUMBER> with your page number.
-             </copy>
+             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+             </copy>  
             ```
 
     ![New Page Item](./images/new-page-item3.png " ")
@@ -395,9 +398,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
         ```sql
         <copy>
-        -- Replace <NUMBER> with your page number. See the screenshot for reference.
-         UPDATE EMPLOYEES SET EMAIL = :P<NUMBER>_EMAIL_ID WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
         </copy>
         ```
 
@@ -421,9 +423,8 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
         ```sql
         <copy>
-         --Replace <NUMBER> with your page number. See the screenshot for reference.
-         UPDATE EMPLOYEES SET LAPTOP_INFO = :P<NUMBER>_LAPTOP_INFO WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
         </copy>
         ```
 

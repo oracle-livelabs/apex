@@ -20,6 +20,9 @@ In this lab, you learn how to:
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_xcfm63i5)
+
 ### Prerequisites
 
 - All the previous Labs have been completed.

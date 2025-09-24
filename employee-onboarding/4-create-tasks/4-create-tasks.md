@@ -8,6 +8,9 @@ These task definitions will later be integrated into a complete onboarding workf
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_jlqz4abb)
+
 ### Objectives
 
 In this lab, you will:
