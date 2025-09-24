@@ -95,12 +95,15 @@ Basic experience with OCI Cloud Console and standard components.
     ![New Region](./images/new_region.png  "Drag the newly created region above the Page Navigation")
 
 7. With our New Region selected on the left side, navigate to the right side of your screen for this selected region.  Enter a title, 'Welcome to the APEX Movie DB' and a Name for the region, 'Welcome'. Now we will enter a short message in the HTML source code to give users an understanding of the application:  
-    
+    ```
+    <copy>
     “&lt;h3&gt;Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies&lt;/h3&gt; 
 
     &lt;h3&gt;To enhance your experience, try our AI Movie Assistant by clicking below&lt;/h3&gt;”
+    </copy>
+    ```
     ![Region Details](./images/region_details.png  "Enter title and HTML content for new region")
-
+    
 8. To clean up the UI we can delete the Movie region from the Breadcrumb Bar on the Rendering tree, right click on the region and select Delete.
     ![Delete BreadCrumb Region](./images/delete_bread_crumb_region.png  "Delete Movie region from breadcrumb bar")    
 
@@ -108,6 +111,8 @@ Basic experience with OCI Cloud Console and standard components.
     ![App Page](./images/app_page.png  "The application page and layout")   
 
 10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button. 
+    ![New Button Menu](./images/new_button_menu.png "Right Click on Welcome Region")
+    
     ![New Button](./images/new_button.png  "Create a button in the Welcome region to launch AI assistant")
 
     Click on the newly created button, and navigate to the right side of the screen. Here we will give the button a name, _Launch_AI_Assistant_. Next, scroll down the right side and on the Button Template attribute, select Text with Icon from the drop down. In the Icon attribute below, enter _fa-ai-generative_, this will give a small icon next our text. On the Layout Section, Select _Below Region_ for the _Slot_ attribute, and align it to the left side.

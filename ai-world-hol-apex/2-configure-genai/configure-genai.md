@@ -43,8 +43,9 @@ Basic experience with OCI Cloud Console and standard components.
     ![Add API Key](./images/add_api_key.png  "Add a new OCI API key pair")
     ![Add API Key](./images/download_api_key.png  "Download the generated OCI public and private keys")
 
-6. You can then copy the Fingerprint 
-
+6. You can then copy the Fingerprint
+    ![Copy Fingerprint](./images/copy_fingerprint.png "Copy Fingerprint")
+    
 7. Now click Compartments on the left and select your compartment. 
     ![Compartment Select](./images/select_compartment.png  "Select OCI compartments link from side link")
     ![View Compartment Details](./images/view_compartment_details.png  "View selected OCI compartment details")
