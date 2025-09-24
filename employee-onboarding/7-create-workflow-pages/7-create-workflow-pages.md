@@ -253,9 +253,9 @@ In this task you will create a page to create an Email ID and allocate laptop to
         - Type: **SQL Query (return single value)**
         - SQL Query: copy and paste the below code
 
-            ```
+            ```sql
              <copy>
-             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID; -- Replace <NUMBER> with your page number.
              </copy>
             ```
 
@@ -393,10 +393,11 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
     - Source > PL/SQL code: enter the following code snippet
 
-        ```
+        ```sql
         <copy>
-         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+        -- Replace <NUMBER> with your page number. See the screenshot for reference.
+         UPDATE EMPLOYEES SET EMAIL = :P<NUMBER>_EMAIL_ID WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
+         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
         </copy>
         ```
 
@@ -418,10 +419,11 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
     - PL/SQL code: enter the following code snippet:
 
-        ```
+        ```sql
         <copy>
-         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         --Replace <NUMBER> with your page number. See the screenshot for reference.
+         UPDATE EMPLOYEES SET LAPTOP_INFO = :P<NUMBER>_LAPTOP_INFO WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
+         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P<NUMBER>_EMPLOYEE_ID;
         </copy>
         ```
 
@@ -566,7 +568,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              WHERE ip.employee_id IN (
                 SELECT TO_NUMBER(param_value)
                 FROM apex_task_parameters
-                WHERE task_id = NVL(:P35_TASK_ID, 0)  -- Replace P35 with your Task Detail page number
+                WHERE task_id = NVL(:P<NUMBER>_TASK_ID, 0)  -- Replace <NUMBER> with your Task Detail page number
                 AND is_visible = 'Y'
                 AND param_label = 'Employee ID'
                 AND REGEXP_LIKE(param_value, '^\d+$')
@@ -588,8 +590,8 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
             ```
              <copy>
              apex_human_task.is_allowed (
-                p_task_id   => :P35_TASK_ID,
-                p_operation => apex_human_task.c_task_op_complete ) ----Replace P35 with your Task Detail page number
+                p_task_id   => :P<<NUMBER>_TASK_ID,
+                p_operation => apex_human_task.c_task_op_complete ) ----Replace <NUMBER> with your Task Detail page number
              </copy>
             ```
 
@@ -713,7 +715,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
                 e.EMAIL = (
                   SELECT param_value
                   FROM apex_task_parameters
-                  WHERE task_id = :P36_TASK_ID -- Replace P36 with your Task Detail page number
+                  WHERE task_id = :P<NUMBER>_TASK_ID -- Replace <NUMBER> with your Task Detail page number
                      AND is_visible = 'Y'
                      AND param_label = 'Email'
                 );
@@ -833,9 +835,9 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         -  PL/SQL: copy and paste the below code
 
-            ```
+            ```sql
              <copy>
-             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P36_TRAINING_ID; -- Replace P36 with your Task Detail page number
+             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P<NUMBER>_TRAINING_ID; -- Replace <NUMBER> with your Task Detail page number
              </copy>
             ```
 
