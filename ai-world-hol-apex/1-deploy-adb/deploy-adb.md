@@ -39,7 +39,8 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. Follow the instructions in the provisioning wizard:  
 
-- Enter a unique database name (e.g., `LiveLabDB_01`)  
+- Enter a unique display and database name (e.g., `LiveLabDB01`)  
+- Select your assigned compartment
 - Select deployment type: `Transaction Processing`  
 - Choose `Developer` option  
 - Set database version: `23ai`  
