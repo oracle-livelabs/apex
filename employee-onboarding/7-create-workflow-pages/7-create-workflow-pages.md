@@ -1,4 +1,4 @@
-# Create Task and Workflow Pages in the Application
+# Create Task and Workflow Pages
 
 ## Introduction
 
@@ -21,7 +21,10 @@ In this lab, you will learn how to:
 
 - Create Workflow Console Pages for employees to monitor workflows they initiated or own.
 
-Estimated Time: 60 minutes
+Estimated Time: 40 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_vh4x3bjv)
 
 ### Prerequisites
 
@@ -253,10 +256,10 @@ In this task you will create a page to create an Email ID and allocate laptop to
         - Type: **SQL Query (return single value)**
         - SQL Query: copy and paste the below code
 
-            ```
+            ```sql
              <copy>
-             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-             </copy>
+             SELECT FIRST_NAME FROM EMPLOYEES WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+             </copy>  
             ```
 
     ![New Page Item](./images/new-page-item3.png " ")
@@ -393,10 +396,10 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
     - Source > PL/SQL code: enter the following code snippet
 
-        ```
+        ```sql
         <copy>
-         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET EMAIL = :P11_EMAIL_ID WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET EMAIL_CREATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;  -- Replace 11 with appropriate page item id
         </copy>
         ```
 
@@ -418,10 +421,10 @@ In this task you will create a page to create an Email ID and allocate laptop to
 
     - PL/SQL code: enter the following code snippet:
 
-        ```
+        ```sql
         <copy>
-         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
-         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID;
+         UPDATE EMPLOYEES SET LAPTOP_INFO = :P11_LAPTOP_INFO WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
+         UPDATE IT_PROVISIONING SET LAPTOP_ALLOCATED = 'Y' WHERE EMPLOYEE_ID = :P11_EMPLOYEE_ID; -- Replace 11 with appropriate page item id
         </copy>
         ```
 
@@ -566,7 +569,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
              WHERE ip.employee_id IN (
                 SELECT TO_NUMBER(param_value)
                 FROM apex_task_parameters
-                WHERE task_id = NVL(:P35_TASK_ID, 0)  -- Replace P35 with your Task Detail page number
+                WHERE task_id = NVL(:P<NUMBER>_TASK_ID, 0)  -- Replace <NUMBER> with your Task Detail page number
                 AND is_visible = 'Y'
                 AND param_label = 'Employee ID'
                 AND REGEXP_LIKE(param_value, '^\d+$')
@@ -588,8 +591,8 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
             ```
              <copy>
              apex_human_task.is_allowed (
-                p_task_id   => :P35_TASK_ID,
-                p_operation => apex_human_task.c_task_op_complete ) ----Replace P35 with your Task Detail page number
+                p_task_id   => :P<<NUMBER>_TASK_ID,
+                p_operation => apex_human_task.c_task_op_complete ) ----Replace <NUMBER> with your Task Detail page number
              </copy>
             ```
 
@@ -713,7 +716,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
                 e.EMAIL = (
                   SELECT param_value
                   FROM apex_task_parameters
-                  WHERE task_id = :P36_TASK_ID -- Replace P36 with your Task Detail page number
+                  WHERE task_id = :P<NUMBER>_TASK_ID -- Replace <NUMBER> with your Task Detail page number
                      AND is_visible = 'Y'
                      AND param_label = 'Email'
                 );
@@ -833,9 +836,9 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         -  PL/SQL: copy and paste the below code
 
-            ```
+            ```sql
              <copy>
-             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P36_TRAINING_ID; -- Replace P36 with your Task Detail page number
+             UPDATE EMPLOYEE_TRAININGS SET STATUS = 'Completed' where training_id=:P<NUMBER>_TRAINING_ID; -- Replace <NUMBER> with your Task Detail page number
              </copy>
             ```
 

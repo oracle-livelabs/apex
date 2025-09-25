@@ -1,44 +1,86 @@
-# Create Task Definitions for Employee Onboarding Workflow
+# Appendix: Download and Install Instructions
 
-## Introduction
+This lab focuses on a set of simplified tasks designed to help you quickly understand and practice APEX workflows. The starter app is preconfigured, so you can dive straight into executing the tasks and learning the core concepts. Let’s get started!
 
-In this lab, you will define key Tasks using Oracle APEX’s Tasks Component to support the Employee Onboarding process. These tasks will automate and manage essential actions such as IT setup and training allocation for new employees. You'll configure task details, assign participants dynamically using SQL, define task parameters, and set up automated email reminders based on deadlines.
-
-These task definitions will later be integrated into a complete onboarding workflow.
-
-Estimated Time: 10 minutes
-
-Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_jlqz4abb)
-
-### Objectives
+## Objectives
 
 In this lab, you will:
+- Download and install the starter app designed to help you concentrate on APEX Workflows.
+- Create Task Definitions
+- Create Workflows
+- Explore the App
 
-* Create a task definition for IT Setup with participant assignment and employee specific actions
+## Task 1: Import the Starter App into an APEX Workspace
 
-* Define a task for Training Allocation with dynamic data source and reminder email setup
+1. Navigate to **App Builder** and click **Import**.
 
-* Add participants and parameters for each task
+    !["Page Designer"](images/app-import.png " ")
 
-* Configure task deadlines, renewal policies, and notification actions
+2. Drag and drop your downloaded zip file, then click **Next**.
 
-### Prerequisites
+    !["Page Designer"](images/drag-zip.png " ")
 
-* All previous labs successfully completed
+3. Click **Install Application**.
 
-### Downloads
+    !["Page Designer"](images/install-app.png " ")
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
+4. Click **Install Supporting Objects**.
 
-Complete the following steps:
+    !["Page Designer"](images/install-supp-objects.png " ")
 
-1. Follow on screen instructions to import and install the app with supporting objects.
-2. Execute **Lab 2 > Task 1** to create Workspace users.
 
-Then, proceed with the below tasks.
+## Task 2: Create Workspace Users
 
-## Task 1: Create Task Definitions for IT Setup
+In this task, you will create multiple **Workspace users** in Oracle APEX to represent different roles for the **Employee Onboarding** application. Defining these users will help you simulate how HR, IT, and Sales employees interact with the application and allow you to test the onboarding workflow from different perspectives.
+
+You will create the following users:
+
+|   Employee Name |  Department |
+| -------------- | --------- |
+|    STEVE       |   HR  |
+|   AMY     |    IT  |
+|   ALEX | Sales |
+| MONICA | Sales |
+{: title="List of Users to Create in the Workspace"}
+
+*Note: MONICA is a new hire in the Sales Department, for whom we will be initating a workflow request.*
+
+1. On the Workspace home page, click **Administration** icon and select **Manage Users and Groups**.
+
+    ![Create Users application](./images/add-users.png " ")
+
+2. Click **Create Multiple Users**.
+
+    ![Create Users application](./images/create-users2.png " ")
+
+3. In the **Create multiple Users**, enter the list of email addresses and set the following attributes:
+
+    - List of Email Addresses: Copy and Paste the below email addresses and replace yourdomain.com with your actual domain.
+
+      ```
+      <copy>
+      AMY@yourdomain.com
+      STEVE@yourdomain.com
+      ALEX@yourdomain.com
+      MONICA@yourdomain.com
+      </copy>
+      ```
+
+    - Usernames: **Exclude @ domain as part of the username**
+
+    - Password and Confirm Password: **Enter a password**
+
+    *Note: These users are not Workspace Administrators or Developers, they are End Users and will only have access to the Employee Onboarding application.*
+
+    Click **Next**.
+
+    ![Create Multiple Users - details](./images/create-multiple-users.png " ")
+
+4. Click **Create Valid Users**.
+
+    ![Create Multiple Users - details](./images/create-multiple-users2.png  " ")
+
+## Task 3: Create Task Definitions for IT Setup
 
 In this task, you will create a Task Definition for IT Setup and assign it to the IT staff.
 
@@ -65,13 +107,9 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
     ![Create Task Wizard](images/create-task2.png "")
 
-5. Under **Settings** notice that the Task Details Page Number is empty. Click **Create Task Details Page** button to generate the details page for this task.
+5. Under **Settings**, for Task Details Page Number enter **35**. Click **Apply Changes**.
 
-   You get a popup dialog asking if the next available page number should be used. Click **OK**.
-
-    ![Create Task Wizard](images/create-task-details.png "")
-
-    ![Create Task Wizard](images/create-task-details2.png "")
+    ![Create Task Details Page](images/task-details-page-it-setup.png "")
 
 6. In the Task Definitions page, select **IT Setup**.
 
@@ -127,7 +165,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 10. Click **Apply Changes**.
 
-## Task 2: Create Task Definitions to Allocate Trainings
+## Task 4: Create Task Definitions to Allocate Trainings
 
 1. In the Task Definitions page, click **Create**.
 
@@ -145,13 +183,10 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
     ![Creating Task Definition](./images/create-training-task.png " ")
 
-3. Under **Settings**, notice that the Task Details Page Number is empty. Click **Create Task Details Page**  to generate the details page for this task.
+3. Under **Settings**, for Task Details Page Number enter **36**. Click **Apply Changes**.
 
-   You get a popup dialog asking if the next available page number should be used. Click **OK**.
+    ![Creating Task Details page](./images/task-details-page-allocate-trainings.png " ")
 
-    ![Creating Task Details page](./images/create-task-details1.png " ")
-
-    ![Creating Task Details page confirm](./images/create-task-details6.png " ")
 
 4. Select **Allocate Trainings** to open the task definition in edit mode and enter/select the following:
 
@@ -260,11 +295,71 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
     ![Click Apply changes](./images/apply-changes.png " ")
 
-## Summary
+## Task 5: Create Employment Type Workflow
 
-You have successfully created Human Task definitions for the Employee Onboarding Workflow using the Approvals Component. In the next section, we will integrate these tasks into the workflow to complete the design process.
+Execute [Lab 5: Create Employment Type Workflow](?lab=5-create-emp-type-wf) and proceed to next task.
 
-## Acknowledgements
+## Task 6: Create Employee Onboarding Workflow
 
-- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+Execute [Lab 6: Create Employee Onboarding Workflow](?lab=6-create-empon-wf) and proceed to next task.
+
+## Task 7: Create and Configure Page Process
+1. Navigate to the **Processing** tab.
+
+2. Under **Processing** tab, right-click **Processing** and select **Create Process**.
+
+    ![create page process](./images/click-create-process.png " ")
+
+3. In the Property Editor, enter/select the following:
+
+      - Under Identification:
+
+          - Name: **Initiate Employee Onboarding Workflow**
+
+          - Type: **Workflow**
+
+      - Under Settings:
+
+          - Definition: **Employee Onboarding**
+
+          - Details Primary Key Item: **P8\_EMPLOYEE\_ID**
+
+      - Success message: **Employee Onboarding Initiated**
+
+     ![create workflow process](./images/create-wf-process.png " ")
+
+4. Now, configure Parameters for the Workflow Page Process. Update the following **Parameters** one after the other:
+
+    | Parameter |  Type  | Item |
+    | --- |  --- | ---- |
+    | Department ID | Item | P8\_DEPARTMENT\_ID |
+    | Email | Item | P8\_EMAIL |
+    | Employee ID | Item | P8\_EMPLOYEE\_ID |
+    | Employee Name | Item | P8\_FIRST\_NAME |
+    | Employee Type | Item | P8\_EMPLOYEE\_TYPE |
+    | Initiated By | Expression |    :APP_USER      |
+    {: title="List of Parameters to be linked"}
+
+    ![create workflow process](./images/config-process-params.png " ")
+
+    *Note: Your Page Number may vary.*
+
+5. Click **Save**.
+
+    ![Save page](./images/save-page.png " ")
+
+Optionally, execute [Lab 8: Archive Tasks and Archive Workflow](?lab=8-archived-tasks).
+
+## Task 8: Explore the App
+
+Execute [Lab 10: Explore the App](?lab=10-running-the-app) and proceed to next task.
+
+
+Optionally, execute [Lab 11: Activate Workflow](?lab=11-activate-workflow) to activate the workflow.
+
+
+
+## Acknowledgments
+
+ - **Author** - Apoorva Srinivas, Senior Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, September 2025

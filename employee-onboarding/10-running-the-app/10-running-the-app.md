@@ -10,6 +10,9 @@ In this lab, you will run and explore the Employee Onboarding application to und
 
 Estimated Time: 15 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_fny0oxa1)
+
 ### Prerequisites
 
 - All the previous Labs have been completed.
@@ -66,6 +69,10 @@ In this task, you will recreate the previously created employees in the Applicat
 
    ![appointment created](./images/success-msg.png " ")
 
+5. Check the inbox of the New Hire's personal email for the onboarding email.
+
+   ![Congralutions email](./images/email-onboarding.png " ")
+
 ## Task 3: Monitor the Workflow
 
 1. From the left navigation menu, click on **Workflow Pages** and select **Workflows Initiated By Me**.
@@ -74,7 +81,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
 2. Click on the **Employee Onboarding** entry and observe the Workflow Details Popup.
 
-    - Workflow is waiting at **On boarding Tasks** Activity.
+    - Workflow is waiting at **Onboarding Tasks** Activity.
 
     - Observe Workflow Parameters.
 
@@ -220,7 +227,7 @@ In this task, you will recreate the previously created employees in the Applicat
 
 ## Task 10: Verify Email Confirmation
 
-1. Check the inbox of the New Hire's email for two emails.
+1. Check the inbox of the New Hire's corporate email for two emails.
 
    ![Congralutions email](./images/email2.png " ")
 
