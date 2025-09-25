@@ -1,4 +1,4 @@
-# Create and Configure Employee Onboarding Workflow
+# Create Employee Onboarding Workflow
 
 ## Introduction
 

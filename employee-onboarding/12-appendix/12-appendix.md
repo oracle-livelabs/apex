@@ -348,7 +348,7 @@ Execute [Lab 6: Create Employee Onboarding Workflow](?lab=6-create-empon-wf) and
 
     ![Save page](./images/save-page.png " ")
 
-Optionally, execute [Lab 8: Create Archive Tasks and Archive Workflow](?lab=8-archived-tasks).
+Optionally, execute [Lab 8: Archive Tasks and Archive Workflow](?lab=8-archived-tasks).
 
 ## Task 8: Explore the App
 
