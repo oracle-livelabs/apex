@@ -40,11 +40,11 @@
             "filename": "../../6-create-empon-wf/6-create-empon-wf.md"
         },
         {
-            "title": "Lab 7: Create Workflow pages",
+            "title": "Lab 7: Create Task and Workflow pages",
             "filename": "../../7-create-workflow-pages/7-create-workflow-pages.md"
         },
         {
-            "title": "Lab 8 [OPTIONAL]: Create Archive Tasks and Archive Workflow",
+            "title": "Lab 8 [OPTIONAL]: Archive Tasks and Workflows",
             "filename": "../../8-archived-tasks/8-archived-tasks.md"
         },
         {
@@ -58,6 +58,10 @@
         {
             "title": "Lab 11: Activate Workflow",
             "filename": "../../11-activate-workflow/11-activate-workflow.md"
+        },
+        {
+            "title": "Appendix Lab",
+            "filename": "../../12-appendix/12-appendix.md"
         },
      {
       "title": "Need Help?",

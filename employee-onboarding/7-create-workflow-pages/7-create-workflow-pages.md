@@ -1,4 +1,4 @@
-# Create Task and Workflow Pages in the Application
+# Create Task and Workflow Pages
 
 ## Introduction
 
