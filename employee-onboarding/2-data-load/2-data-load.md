@@ -8,6 +8,9 @@ You'll use SQL scripts to execute a script for creating database objects and ins
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_wwuevbgw)
+
 ### Objectives
 
 In this lab, you will:
