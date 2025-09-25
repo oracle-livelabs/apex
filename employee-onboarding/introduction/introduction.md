@@ -50,17 +50,29 @@ In this workshop, you will learn how to:
 
 ## Downloads
 
+### **Option 1: Download the Completed App**
+
 If you are stuck or the App is not working as expected, you can download and install the completed app as follows:
 
 1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FEmployee_Onboarding_App.sql) to download the completed application file.
 
 2. Import the **labfiles\_Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
-3. Once the application is installed, follow **Lab 2 > Task 1: Create Workspace Users**.
+3. Once the application is installed, follow **[Lab 2 > Task 1: Create Workspace Users](?lab=2-data-load#Task1:CreateWorkspaceUsers)**.
 
-4. Follow Lab 10 to explore the application and see the workflows in action!
+4. Follow [Lab 10](?lab=10-running-the-app) to explore the application and see the workflows in action!
 
 *Note: This app export includes sample data for Employees, Departments, and Training Catalog. You can skip Lab 10 > Tasks 1, 5, 6 and 7 since the data is already populated.*
+
+### **Option 2: Download the Starter App**
+
+Choose this option to download the ready-to-use starter app. The tasks of App and Pages creation is already done for you, so you can jump right in and focus on learning APEX Workflows. Let's get started!
+
+1. Download the [Starter App](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Femp-onboarding-without-workflow.sql).
+
+2. Skip to the [Appendix Lab](?lab=12-appendix) and follow the instructions.
+
+
 
 ## Learn More - *Useful Links*
 
