@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Building Employee Onboarding Workflows in Oracle APEX",
+    "workshoptitle": "Build an Employee Onboarding App with Oracle APEX Workflows",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
