@@ -4,6 +4,8 @@
 
 Are you looking to take advantage of existing Oracle data to create intelligent applications with GenAI? In this hands-on Oracle LiveLab, we’ll show you how to combine the ease of Oracle APEX with the power of Oracle Generative AI services. You'll learn how to leverage the power of low-code development to create an APEX application with new or existing data in your Oracle Database. You can quickly add powerful Generative AI functionality to assist users in querying and utilizing this data, and extend your app further by incorporating models such as Llama and Grok.
 
+Estimated Time: 5-10 minutes
+
 ### Objectives: 
 
 In this workshop, you will learn how to:
