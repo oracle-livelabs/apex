@@ -6,6 +6,9 @@ In this lab, you run the APEX Social Media application and perform Search on the
 
 Estimated Time: 5 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Run the App](videohub:1_utzfuc9n)
+
 ### Objectives
 
 In this lab, you:

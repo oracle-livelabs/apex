@@ -10,6 +10,9 @@ In this lab, you will learn how to create a **Knowledge Base** and **Generative 
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create Knowledge Base and Generative AI Agents in OCI](videohub:1_0hprtlt0)
+
 ### Objectives
 
 In this lab, you will:
@@ -30,17 +33,17 @@ To create Knowledge Base in OCI console:
 
 2. Navigate to **Analytics & AI** > **AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](images/gen-ai-tab.png " ")
+   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 3. Under **Generative AI Agents**, select **Knowledge Bases**.
 
-    ![Select Knowledge Bases](images/select-knowledgebase.png " ")
+    ![Select Knowledge Bases](./images/select-knowledgebase.png " ")
 
 4. Select your **Compartment**.
 
 5. Click **Create Knowledge Base**.
 
-    ![Create Knowledge Base](images/create-knowledgebase.png " ")
+    ![Create Knowledge Base](./images/create-knowledgebase.png " ")
 
 6. Under **New knowledge base**, enter/select the following:
 
@@ -50,7 +53,7 @@ To create Knowledge Base in OCI console:
 
     - Data store type: **Object storage**
 
-    ![Create Knowledge Base](images/new-knowledge-base.png " ")
+    ![Create Knowledge Base](./images/new-knowledge-base.png " ")
 
 7. Under **Data sources**, click **Specify data source**.
 
@@ -64,11 +67,11 @@ To create Knowledge Base in OCI console:
 
         - Select all in bucket: **Enable**
 
-    ![Specify Data Source](images/specify-data-source.png " ")
+    ![Specify Data Source](./images/specify-data-source.png " ")
 
 9. Click **Create**.
 
-    ![Specify Data Source](images/create-knowledge-base.png " ")
+    ![Specify Data Source](./images/create-knowledge-base.png " ")
 
 ## Task 2: Create Generative AI Agents in OCI
 
@@ -80,11 +83,11 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
 3. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](images/gen-ai-tab.png " ")
+   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 4. Under **Generative AI Agents** and select **Agents**.
 
-    ![Select Agents](images/select-agents.png " ")
+    ![Select Agents](./images/select-agents.png " ")
 
 5. Under **Create agent**, enter/select the following and click **Next**:
 
@@ -92,11 +95,11 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
     - Compartment: Choose your compartment
 
-    ![Create Agent](images/create-agent.png " ")
+    ![Create Agent](./images/create-agent.png " ")
 
 6. Click **Add tool**.
 
-    ![Click tool](images/add-tool1.png " ")
+    ![Click tool](./images/add-tool1.png " ")
 
 7. Under **Add tool**, enter/Select the following:
 
@@ -106,7 +109,7 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
     - Description: **RAG tool to chat with documents from OCl Object Storage**
 
-    ![Add tool](images/select-rag-tool1.png " ")
+    ![Add tool](./images/select-rag-tool1.png " ")
 
 8. Scroll down and choose your **Knowledge base**, which you created in [Lab2 > Task1](?lab=2-configure-kb-genai#Task1:CreateaKnowledgeBaseinOCI).
 
@@ -114,23 +117,23 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
 9. Click **Add tool**.
 
-    ![Select KnowledgeBase](images/select-knowledge-base1.png " ")
+    ![Select KnowledgeBase](./images/select-knowledge-base1.png " ")
 
 10. Once tool is created, click **Next**.
 
 11. Under **Setup agent endpoint**, leave everything as default and click **Next**.
 
-    ![Select Endpoint1](images/setup-endpoint-1.png " ")
+    ![Select Endpoint1](./images/setup-endpoint-1.png " ")
 
-    ![Select Endpoint2](images/setup-endpoint-2.png " ")
+    ![Select Endpoint2](./images/setup-endpoint-2.png " ")
 
 12. Now, click **Create agent**.
 
-    ![Review Create](images/review-and-create.png " ")
+    ![Review Create](./images/review-and-create.png " ")
 
 13. For **Llama 3 License Agreement and Acceptable Use Policy**, accept the agreement and click **Submit**.
 
-    ![Accept Agreement](images/accept-llama3.png " ")
+    ![Accept Agreement](./images/accept-llama3.png " ")
 
 ## Task 3: Fetch OCID of  Generative AI Agent and  Data Source
 
@@ -140,37 +143,37 @@ To Fetch the OCID of the Generative AI Agent and Data Source in OCI console:
 
 2. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](images/gen-ai-tab.png " ")
+   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 3. Under **Generative AI Agents**, select **Agents**.
 
-    ![Select Agents](images/select-agents.png " ")
+    ![Select Agents](./images/select-agents.png " ")
 
 4. Select your agent.
 
 5. Under **Endpoint**, select your endpoint.
 
-    ![Click Endpoint](images/click-endpoint.png " ")
+    ![Click Endpoint](./images/click-endpoint.png " ")
 
 6. Copy the agent endpoint **OCID**. (*Will use it in Lab 4 & 5*)
 
-    ![Copy OCID](images/endpoint-ocid2.png " ")
+    ![Copy OCID](./images/endpoint-ocid2.png " ")
 
 7. Navigate back to your agent. Under **Resources**, click **Knowledge Bases**.
 
-    ![Click Knowledgebases](images/goto-knowledgebase.png " ")
+    ![Click Knowledgebases](./images/goto-knowledgebase.png " ")
 
 8. Under **Knowledge Bases**, select your knowledge base:  **GenAIRAG**.
 
-    ![Under Knowledgebases](images/click-genairag.png " ")
+    ![Under Knowledgebases](./images/click-genairag.png " ")
 
 9. Under **Data sources** , click **FilesforRAG**.
 
-    ![Choose Datadource](images/choose-datasource.png " ")
+    ![Choose Datadource](./images/choose-datasource.png " ")
 
 10. Copy the **OCID**. (*will use it in LAB 5*)
 
-    ![DataSource OCID](images/ocid-filesforrag.png " ")
+    ![DataSource OCID](./images/ocid-filesforrag.png " ")
 
 ## Summary
 

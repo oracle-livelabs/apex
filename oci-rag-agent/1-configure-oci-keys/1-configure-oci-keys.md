@@ -8,6 +8,9 @@ Setting up API keys is a one time step that allows your applications or tools to
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Configure OCI API Keys and Bucket](videohub:1_26r632er)
+
 ### Objectives
 
 In this lab, you:
@@ -26,15 +29,15 @@ To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
-   ![Add API Key](images/oci-login.png " ")
+   ![Add API Key](./images/oci-login.png " ")
 
 2. Click **My Profile** at the top-right corner and select **User settings**.
 
-    ![Profile Menu](images/profile.png " ")
+    ![Profile Menu](./images/profile.png " ")
 
 3. Under **Tokens and keys** tab and click **Add API key**.
 
-    ![Add API Key](images/api-keys.png " ")
+    ![Add API Key](./images/api-keys.png " ")
 
 4. The Add API key dialog is displayed. Select **Generate API key pair** to create a new key pair.
 
@@ -44,11 +47,11 @@ To Generate the API Keys using OCI Console:
 
 6. Click **Add**.
 
-    ![Profile Menu](images/add-api-key.png " ")
+    ![Profile Menu](./images/add-api-key.png " ")
 
 7. The key is added, and the Configuration file preview is displayed. Copy and save the configuration file snippet from the text box into a notepad. You will use this information to create Oracle APEX Web Credentials.
 
-    ![Profile Menu](images/configuration-preview.png " ")
+    ![Profile Menu](./images/configuration-preview.png " ")
 
 ## Task 2: Create a Bucket in OCI Object Storage
 
@@ -56,15 +59,15 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
 1. To access the Object Storage service, click on the menu icon **(☰)** at the top-left corner.
 
-   ![Navigate to storage](images/navigate-to-storage.png " ")
+   ![Navigate to storage](./images/navigate-to-storage.png " ")
 
 2. Under Storage > Object Storage & Archive Storage > select **Buckets**.
 
-   ![Select Bucket](images/select-bucket.png " ")
+   ![Select Bucket](./images/select-bucket.png " ")
 
 3. Select the compartment where you want to create the Bucket. You can choose an existing compartment or create a new one if needed. Now, select **Create Bucket**.
 
-   ![Select Bucket](images/create-bucket.png " ")
+   ![Select Bucket](./images/create-bucket.png " ")
 
 4. Enter/select the following:
 
@@ -74,15 +77,15 @@ To create a Bucket using OCI Console, login to your OCI Account.
 
     Click **Create**.
 
-    ![Select Bucket](images/bucket-details.png " ")
+    ![Select Bucket](./images/bucket-details.png " ")
 
 5. Navigate to **OCIDocAI** Bucket.
 
-    ![Select Bucket](images/bucket.png " ")
+    ![Select Bucket](./images/bucket.png " ")
 
 6. Copy and save **Bucket Name** and **Namespace** from the bucket details into a notepad. You will use this information to upload an invoice to OCI Object Storage using Invoke API.
 
-    ![Select Bucket](images/bucket-created.png " ")
+    ![Select Bucket](./images/bucket-created.png " ")
 
 ## Summary
 

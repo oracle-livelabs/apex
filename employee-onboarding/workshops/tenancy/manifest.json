@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Employee Onboarding with Oracle APEX",
+    "workshoptitle": "Build an Employee Onboarding App with Oracle APEX Workflows",
     "include": {"starter-file.sql":"../../data-load/files/starter-file.sql",
                 "sample.json":"../../data-load/files/sample.json",
                 "step2.md":"../../data-load/files/step2.md"},
@@ -20,7 +20,7 @@
             "filename": "../../1-identify-business-steps/1-identify-business-steps.md"
         },
         {
-            "title": "Lab 2: Load Database Objects & Create App Users",
+            "title": "Lab 2: Load Database Objects & Create Workspace Users",
             "filename": "../../2-data-load/2-data-load.md"
         },
         {
@@ -28,7 +28,7 @@
             "filename": "../../3-create-app/3-create-app.md"
         },
         {
-            "title": "Lab 4: Create Tasks Definitions",
+            "title": "Lab 4: Create Task Definitions",
             "filename": "../../4-create-tasks/4-create-tasks.md"
         },
         {
@@ -40,19 +40,19 @@
             "filename": "../../6-create-empon-wf/6-create-empon-wf.md"
         },
         {
-            "title": "Lab 7: Create Workflow pages",
+            "title": "Lab 7: Create Task and Workflow pages",
             "filename": "../../7-create-workflow-pages/7-create-workflow-pages.md"
         },
         {
-            "title": "Lab 8: Create Archive Tasks and Archive Workflow",
+            "title": "Lab 8 [OPTIONAL]: Archive Tasks and Workflows",
             "filename": "../../8-archived-tasks/8-archived-tasks.md"
         },
         {
-            "title": "Lab 9: Improve UI & Navigation",
+            "title": "Lab 9 [OPTIONAL]: Improve UI & Navigation",
             "filename": "../../9-improve-ui/9-improve-ui.md"
         },
         {
-            "title": "Lab 10: Run the App",
+            "title": "Lab 10: Explore the App",
             "filename": "../../10-running-the-app/10-running-the-app.md"
         },
         {
@@ -60,9 +60,13 @@
             "filename": "../../11-activate-workflow/11-activate-workflow.md"
         },
         {
-            "title": "Other LiveLabs you might like",
-            "description": "Other LiveLabs you might like",
-            "filename": "../../other-livelabs/other-livelabs.md"
-        }
+            "title": "Appendix Lab",
+            "filename": "../../12-appendix/12-appendix.md"
+        },
+     {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
     ]
 }

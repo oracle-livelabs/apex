@@ -18,6 +18,9 @@ OCI API keys consist of two parts: a **Public key** and a **Private key**. You u
 
 Estimated Time: 10 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Configure a Generative AI Service in APEX](videohub:1_vdr019y8)
+
 ### Objectives
 
 In this lab, you:
@@ -129,6 +132,9 @@ In this lab, you use Open AI as the AI provider to build a conversational chatbo
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 10 Minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Configure a Generative AI Service in APEX](videohub:1_caybibul)
 
 ### Objectives
 
