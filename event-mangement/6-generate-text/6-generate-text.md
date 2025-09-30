@@ -36,11 +36,11 @@ Estimated Time: 5 minutes
 
     - Under Appearance:
 
-       - Button Template: **Text with Icon**
+        - Button Template: **Text with Icon**
 
-       - Hot: Toggle **On**
+        - Hot: Toggle **On**
 
-       - Icon: **fa-file-text**
+        - Icon: **fa-file-text**
 
 4. Drag and drop **GENERATE\_DESCRIPTION** button under **P11\_DESCRIPTION** page item.
 
@@ -76,23 +76,23 @@ Estimated Time: 5 minutes
 
     - Source > SQL Query: Copy and paste the following SQL into the code editor.
 
-    ```
-    <copy>
-    select distinct ev.ID,
-       ev.venue_id,
-       ev.EVENT_TYPE_ID,
-       ev.NAME,
-       ev.START_DATE,
-       evt.name event_type,
-       ev.name venue
-    from EV_EVENTS ev
-    join EV_EVENT_TYPES evt
-    on evt.id = ev.event_type_id
-    join ev_venues eve
-    on eve.id = ev.venue_id
-    where ev.id = :P11_ID
-    </copy>
-    ```
+        ```
+        <copy>
+        select distinct ev.ID,
+            ev.venue_id,
+            ev.EVENT_TYPE_ID,
+            ev.NAME,
+            ev.START_DATE,
+            evt.name event_type,
+            ev.name venue
+        from EV_EVENTS ev
+            join EV_EVENT_TYPES evt
+        on evt.id = ev.event_type_id
+            join ev_venues eve
+        on eve.id = ev.venue_id
+            where ev.id = :P11_ID
+        </copy>
+        ```
     >Note: Page Item number may vary depending on your application.
 
     - Under Server-side Condition:
@@ -101,11 +101,11 @@ Estimated Time: 5 minutes
 
         - Expression:
 
-        ```
-        <copy>
-        return :APP_PAGE_ID = 11;
-        </copy>
-        ```
+            ```
+            <copy>
+            return :APP_PAGE_ID = 11;
+            </copy>
+            ```
 
     >Note: Page number may vary depending on your application.
 
