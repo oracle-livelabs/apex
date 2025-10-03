@@ -43,7 +43,7 @@ Basic experience with OCI Cloud Console and standard components.
 5. Give the application a name, and select an Icon if you would like to change it. By default, APEX will create some pages for you in the application.
     ![Application Creation](./images/application_creation.png  "Configure application name and icon")
 
-6. You can select Access Control from the features selection so we can manage how users login.
+6. You can select Access Control from the features selection so we can manage how users login. Click 'Create Application'
     ![Access Control](./images/access_control.png  "Set access control and user login options for the app")
 
 7. Now you will see all the pages that were created for the application. Launch the application by clicking the play button Run Application so we can see what it looks like.
@@ -80,7 +80,7 @@ Basic experience with OCI Cloud Console and standard components.
     ```
     ![AI Configuration](./images/welcome_message.png  "Set welcome message for AI chatbot")
 
-5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter
+5. Next we will add our database table as a RAG source for our AI Assistant. Select 'RAG Source tab' and click Create RAG Source. Enter a name and for the SQL query, enter
     ```
     <copy>
     SELECT * FROM MOVIES
@@ -110,7 +110,7 @@ Basic experience with OCI Cloud Console and standard components.
 9. Now click the green play button in the top right to save and run your application to see your changes.
     ![App Page](./images/app_page.png  "The application page and layout")   
 
-10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button. 
+10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button Below. 
     ![New Button Menu](./images/new_button_menu.png "Right Click on Welcome Region")
     
     ![New Button](./images/new_button.png  "Create a button in the Welcome region to launch AI assistant")
