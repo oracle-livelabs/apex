@@ -117,7 +117,7 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/sql-command.png "")
 
-2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
+2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table. Also CREATE TABLE DDL command can be obtained from the Object Browser.
 
     ```
     <copy>

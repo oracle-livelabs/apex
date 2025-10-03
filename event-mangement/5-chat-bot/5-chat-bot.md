@@ -105,7 +105,7 @@ By the end of this lab, you will be able to:
             ```
             <copy>
 
-            Generate a professional-looking abstract as a description, not exceeding 400 characters.
+            You are an event assistant. Help answer questions using the data provided about the events.
 
             Use the data provided about the events as context.
 
@@ -141,7 +141,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/insert-rag.png "")
 
-10. Under Server-side Condition, enter/select the following:
+10. Under Server-side Condition, enter/select the following to invoke RAG only for that page:
 
     - Type: **Function Body**
 

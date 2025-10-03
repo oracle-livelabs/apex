@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create an interactive Event Management application using Create Application using Generative AI. The application will be built using the Sample Dataset you generated in the previous lab, providing a practical foundation for your project.
+In this lab, you will create an interactive Event Management application using Create Application using Generative AI. The application will be built using the Sample Dataset you generated in the previous lab, providing a practical foundation for your event management.
 
 Estimated Time: 5 minutes
 
@@ -38,7 +38,7 @@ Estimated Time: 5 minutes
 
     *Note: If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/24.2/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)*
 
-5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
+5. Use the APEX Assistant Wizard to create an Application, to create a Event Management Application, enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 1:
     >Create an Event Management App. This app should have a calendar page and a Search page for events.
