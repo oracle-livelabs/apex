@@ -1,4 +1,4 @@
-# Create and Configure Employee Onboarding Workflow
+# Create Employee Onboarding Workflow
 
 ## Introduction
 
@@ -19,6 +19,9 @@ In this lab, you learn how to:
 - Save and test the complete onboarding workflow
 
 Estimated Time: 20 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_xcfm63i5)
 
 ### Prerequisites
 
@@ -293,13 +296,37 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
    ![Create activity to send email](./images/send-email-comps.png " ")
 
-2. In the Property Editor, enter/select the following:
+2. In the Rendering Tree, right click on the **New** Activity and click **Create Activity Variable**.
+
+   ![Create activity variable to send email](./images/create-corp-email.png " ")
+
+3. In the Property Editor, enter/select the following:
+
+    - Identification > Static ID: **CORP_EMAIL**
+
+    - Label > Label: **CORP_EMAIL**
+
+    - Under Value:
+
+        - Type: **SQL Query (return single value)**
+        - SQL Query: copy and paste the below query
+
+            ```sql
+             <copy>
+             select Email from EMPLOYEES
+             where EMPLOYEE_ID = :EMPLOYEE_ID;
+             </copy>
+            ```
+
+   ![Corp Email activity variable settings](./images/corp-email.png " " )
+
+4. In the Rendering Tree, click the **New Activity** and in the Property Editor, enter/select the following:
 
     - Identification > Name: **Onboarding Completion Email**
 
     - Under Settings:
 
-        - To: **&EMAIL.**
+        - To: **&CORP_EMAIL.**
         - Subject: **Congratulations on Completing Your Onboarding!**
         - Body Plain Text: copy and paste the below text
 
@@ -320,11 +347,11 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              <copy>
             ```
 
-    ![Create activity to send email trainings](./images/send-email21.png " ")
+    ![Create activity to send email trainings](./images/onboarding-comp-email.png " ")
 
-3. Click **Save**.
+5. Click **Save**.
 
-    ![Save page](./images/save-pages.png "")
+    ![Save page](./images/save-pages-email.png "")
 
 ## Summary
 

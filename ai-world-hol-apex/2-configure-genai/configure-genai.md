@@ -8,6 +8,10 @@ By the end of this lab, you will understand how to gather OCI tenancy informatio
 
 Estimated Time: 20–25 minutes
 
+
+[Configure GenAI in your Tenancy & APEX Workspace Video Recording](videohub:1_9ikcl1lc)
+
+
 ### Objectives
 
 In this lab, you will:
@@ -39,7 +43,8 @@ Basic experience with OCI Cloud Console and standard components.
     ![Add API Key](./images/add_api_key.png  "Add a new OCI API key pair")
     ![Add API Key](./images/download_api_key.png  "Download the generated OCI public and private keys")
 
-6. You can then copy the Fingerprint 
+6. You can then copy the Fingerprint
+    ![Copy Fingerprint](./images/copy_fingerprint.png "Copy Fingerprint")
 
 7. Now click Compartments on the left and select your compartment. 
     ![Compartment Select](./images/select_compartment.png  "Select OCI compartments link from side link")
@@ -99,4 +104,4 @@ You have successfully created your web credential and utilized it to create your
 * Karol Stuart, Master Principal Cloud Architect 
 * Graham Anderson, Senior Cloud Architect 
 
-* **Last Updated by/Date** - Graham Anderson, August 2025
+* **Last Updated by/Date** - Graham Anderson, September 2025

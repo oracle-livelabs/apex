@@ -1,4 +1,4 @@
-# Archiving Tasks and Workflows in Oracle APEX
+# Archive Tasks and Workflows
 
 ## Introduction
 
@@ -19,6 +19,9 @@ In this lab, you will learn how to:
 By the end of this lab, you’ll have an automated archiving system that keeps your workflow data safe and accessible for long-term reference.
 
 Estimated Time: 10 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_j2wat4sw)
 
 ### Prerequisites
 

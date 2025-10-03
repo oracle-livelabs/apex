@@ -10,6 +10,10 @@ By the end of this lab, you’ll have a fully configured workspace connected to 
 
 Estimated Time: 15–20 minutes
 
+
+[Deploy Autonomous Database and Create APEX Workspace Video Recording](videohub:1_qjaoc6v5)
+
+
 ### Objectives
 
 In this lab, you will:
@@ -35,7 +39,8 @@ Basic experience with OCI Cloud Console and standard components.
 
 4. Follow the instructions in the provisioning wizard:  
 
-- Enter a unique database name (e.g., `LiveLabDB_01`)  
+- Enter a unique display and database name (e.g., `LiveLabDB01`)  
+- Select your assigned compartment
 - Select deployment type: `Transaction Processing`  
 - Choose `Developer` option  
 - Set database version: `23ai`  
