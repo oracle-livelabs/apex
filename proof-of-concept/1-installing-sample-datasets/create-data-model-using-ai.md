@@ -98,12 +98,11 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["click create sql script"](images/click-create-sql-script.png "")
 
-7. In the Script Editor page, to save, edit, and run the script, enter the following Script name and click **Run**.
-      - For Script Name: **Project Management Data Model**
+7. For Script Name: **Project Management Data Model**. Replace the script with below code:
 
     !["provide script name"](images/provide-script-name.png "")
 
-8. Replace the script with below:
+     >**Note:** We are replacing the code to ensure the lab can be completed as intended. The replacement is only for consistency with the lab steps and expected results.
 
     ```
     <copy>
@@ -536,17 +535,15 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     <copy>
     ```
 
-    >**Note:** We are replacing the code to ensure the lab can be completed as intended. The replacement is only for consistency with the lab steps and expected results.
-
-9. Review the summary and then click **Run Now**.
+8. Review the summary and then click **Run Now**.
 
     !["run now"](images/run-now3.png "")
 
-10. We can see that all the statements were run successfully.
+9. We can see that all the statements were run successfully.
 
     !["data model created"](images/successful-run2.png "")
 
->**Note:** You do NOT want to click Create Application, as you will use Generative AI to create an application later.
+    >**Note:** You do NOT want to click Create Application, as you will use Generative AI to create an application later.
 
 ## Task 3: Review Database Objects
 
