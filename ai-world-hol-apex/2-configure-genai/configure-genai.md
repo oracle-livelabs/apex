@@ -74,7 +74,7 @@ Basic experience with OCI Cloud Console and standard components.
 
     OCI User ID (User OCID),  
     OCI Private Key (downloaded),  
-    *Note: Open the downloaded OCI private key file (`vi` on macOS or Notepad on Windows), copy its contents, and paste in below screen*.  
+    *Note: Open the downloaded OCI private key file (`Textedit` on macOS or Notepad on Windows), copy its contents, and paste in below screen*.  
     OCI Tenancy ID (Tenancy OCID) and  
     OCI Public Key Fingerprint.  
 

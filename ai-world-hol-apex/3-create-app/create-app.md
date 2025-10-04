@@ -32,7 +32,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. In your APEX Workspace, click App Builder and Click Create. Here we can Select Create App From a File . 
     ![Create A NewApp](./images/create_a_new_app.png  "Create a new APEX application")
 
-2. Here we will load in our data. Download the [sample](./datasets/movies_sample.csv) data. Click the select file option and select the correct file from your file browser. 
+2. Here we will load in our data. Right click the ["fictionalmovies.csv"](./datasets/fictionalmovies.csv) link, Select "Save Link As"/"Download Linked File" to download it to your local folder. Click the choose file option and select the fictionalmovies.csv file from your local file browser. 
     ![Drag Drop](./images/drag_drop.png  "Drag and drop CSV file to load sample data into APEX")
 
 3. Give this table a name, Movies, and click Load Data
@@ -110,7 +110,7 @@ Basic experience with OCI Cloud Console and standard components.
 9. Now click the green play button in the top right to save and run your application to see your changes.
     ![App Page](./images/app_page.png  "The application page and layout")   
 
-10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button Below. 
+10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button. 
     ![New Button Menu](./images/new_button_menu.png "Right Click on Welcome Region")
     
     ![New Button](./images/new_button.png  "Create a button in the Welcome region to launch AI assistant")
