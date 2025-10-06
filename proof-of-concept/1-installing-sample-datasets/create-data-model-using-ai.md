@@ -51,7 +51,7 @@ In this lab, you will:
     - Credentials > API Key: Type 'Bearer **Enter the API Key you procured from OpenAI**'
     - Advanced > AI Model: **gpt-4o**
 
->**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
+    >**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
 
 7. To validate the information you enter prior to completing the setup, click **Test Connection**.
 
@@ -98,9 +98,11 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["click create sql script"](images/click-create-sql-script.png "")
 
-7. For Script Name: **Project Management Data Model**. Replace the script with below code:
+7. In the Script Editor, enter the following:
 
-    !["provide script name"](images/provide-script-name.png "")
+    - Script Name: **Project Management Data Model**.
+
+    - Replace the script with below code:
 
      >**Note:** We are replacing the code to ensure the lab can be completed as intended. The replacement is only for consistency with the lab steps and expected results.
 
@@ -533,7 +535,11 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     VALUES (3, 3, 'Validate data mapping', 'Check mapping with source systems', 'Ivy', 'N');
 
     <copy>
+
     ```
+    - Click **Run**.
+
+    !["provide script name"](images/replace-script.png "")
 
 8. Review the summary and then click **Run Now**.
 
