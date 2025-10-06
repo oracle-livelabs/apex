@@ -1,4 +1,4 @@
-# Use the Create Application Wizard
+# Create the Application using Generative AI
 
 ## Introduction
 
