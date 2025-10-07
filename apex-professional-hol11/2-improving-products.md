@@ -87,8 +87,7 @@ This task focuses on updating the design and layout of the cards that display pr
 
     ```
     <copy>
-        SELECT
-            "PRODUCT_ID",
+        SELECT "PRODUCT_ID",
             "PRODUCT_NAME",
             "UNIT_PRICE",
             "PRODUCT_DETAILS",
@@ -97,39 +96,24 @@ This task focuses on updating the design and layout of the cards that display pr
             "IMAGE_FILENAME",
             "IMAGE_CHARSET",
             "IMAGE_LAST_UPDATED",
+            "COLOR_ID",
             (
-                SELECT
-                    L1."COLOR"
-                FROM
-                    "COLOR_LOOKUP" L1
-                WHERE
-                    L1."COLOR_ID" = M."COLOR_ID"
-            ) "COLOR_ID",
+                    SELECT l1."COLOR"
+                    FROM   "COLOR_LOOKUP" l1
+                    WHERE  l1."COLOR_ID" = m."COLOR_ID") "COLOR_ID_L$1",
+            "DEPARTMENT_ID",
             (
-                SELECT
-                    L2."DEPARTMENT"
-                FROM
-                    "DEPARTMENT_LOOKUP" L2
-                WHERE
-                    L2."DEPARTMENT_ID" = M."DEPARTMENT_ID"
-            ) "DEPARTMENT_ID",
+                    SELECT l2."DEPARTMENT"
+                    FROM   "DEPARTMENT_LOOKUP" l2
+                    WHERE  l2."DEPARTMENT_ID" = m."DEPARTMENT_ID") "DEPARTMENT_ID_L$2",
+            "CLOTHING_ID",
             (
-                SELECT
-                    L3."CLOTHING"
-                FROM
-                    "CLOTHING_LOOKUP" L3
-                WHERE
-                    L3."CLOTHING_ID" = M."CLOTHING_ID"
-            ) "CLOTHING_ID",
-            B.BRAND
-        FROM
-            "PRODUCTS" M,
-            JSON_TABLE ( M.PRODUCT_DETAILS, '$'
-                    COLUMNS (
-                        BRAND VARCHAR2 ( 4000 ) PATH '$.brand'
-                    )
-                )
-            B;
+                    SELECT l3."CLOTHING"
+                    FROM   "CLOTHING_LOOKUP" l3
+                    WHERE  l3."CLOTHING_ID" = m."CLOTHING_ID") "CLOTHING_ID_L$3",
+            b.brand
+        FROM   "PRODUCTS" m,
+            json_table (m.product_details, '$' columns ( brand varchar2(4000) path '$.brand') ) b
     </copy>
     ```
 
