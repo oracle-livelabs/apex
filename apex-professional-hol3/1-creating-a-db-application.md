@@ -204,7 +204,7 @@ Interactive reports allow users to manage and analyze data dynamically. In this 
 
     - Table: **PRODUCTS**
 
-4. Under **Advanced**, enable **Set as Administration Page** and click **Add Page**.
+4. Under **Advanced**, disable **Include Form** and enable **Set as Administration Page** and click **Add Page**.
 
     ![Add page](./images/add-report-page.png " ")
 
