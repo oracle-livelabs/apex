@@ -66,9 +66,11 @@ Estimated Time: 5 minutes
 
     - Under Column Mapping:
 
-        - Series Name: **EVENT_NAME**
+        - Label: **NAME**
 
         - Value: **EVENT_COUNT**
+
+        *Note: Columns name might differ.*
 
     !["Click App Builder"](images/column-mapping-chart1.png "")
 
@@ -104,6 +106,8 @@ Estimated Time: 5 minutes
         - Label: **EVENT_NAME**
 
         - Value: **REGISTRATION_COUNT**
+
+    *Note: Columns name might differ.*
 
     !["Click App Builder"](images/reg-count.png "")
 
@@ -144,24 +148,24 @@ Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 
     !["Click App Builder"](images/paste-statement.png "")
 
-3. Click **APEX Assistant** and enter the following prompt:
+3. Click **APEX Assistant**, select **General Assistance** and enter the following prompt:
 
     >Prompt 1:
     >Generate a PL/SQL package to insert, update, and delete events.
 
-    !["Click App Builder"](images/apex-assist.png "")
+    !["Click App Builder"](images/prompt1-pack.png "")
 
-4. Clear the contents of the code editor. Now, select **Insert** in the APEX Assistant to insert the code into the editor. 
+4. Clear the contents of the code editor. Now, click **Insert** in the APEX Assistant to insert the code into the editor.
 
     !["Click App Builder"](images/copy-insert.png "")
 
-5. First, select the Package Specification and click **Run**.
+5. First, insert the Package Specification and click **Run**.
 
-    !["Click App Builder"](images/run-spec.png "")
+    !["Click App Builder"](images/package-spec.png "")
 
-6. Next, select the Package Body and click **Run**.
+6. Next, insert the Package Body and click **Run**.
 
-    !["Click App Builder"](images/run-body.png "")
+    !["Click App Builder"](images/package-body.png "")
 
 7. Finally, navigate to **SQL Workshop > Object Browser** to view the newly created package.
 

@@ -63,7 +63,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/add-event-promt.png "")
 
-7. Click **Insert** or replace the SQL query given below:
+7. Click **Insert** or replace the SQL query given below for the expected output:
 
     ```
     <copy>
@@ -101,9 +101,9 @@ By the end of this lab, you will be able to:
 10. Select **&DESCRIPTION.** and click **APEX Assistant**. Now add the following prompts:
 
     > Prompt 1:
-    > Generate an HTML to display start date and venue as a labelled information using span tag.
+    > Generate an HTML to display start date and end date as a labelled information using span tag.
 
-    !["Click App Builder"](images/generate-html.png "")
+    !["Click App Builder"](images/gen-html.png "")
 
     > Prompt 2:
     > Use APEX substitution strings
@@ -115,9 +115,19 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/below-desc.png "")
 
-11. Click **Insert** and **OK**.
+11. Click **Insert** and **OK**. Or replace with the below HTML for the expected output:
 
-    !["Click App Builder"](images/insert-html.png "")
+    ```
+    <copy>
+    <span>&DESCRIPTION.</span><br>
+    <span><strong>Start Date:</strong> <span>&START_DATE.</span></span>
+    <span style="margin-left: 20px;"><strong>End Date:</strong> <span>&END_DATE.</span></span>
+    </copy>
+    ```
+
+    !["Click App Builder"](images/insert-desc.png "")
+
+    !["Click App Builder"](images/insert-desc1.png "")
 
 12. Click **Save and Run**.
 
@@ -172,7 +182,7 @@ By the end of this lab, you will be able to:
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/title-link.png "")
+    !["Click App Builder"](images/title-link1.png "")
 
 18. Click **Save and Run** and view the changes.
 

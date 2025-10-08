@@ -20,7 +20,7 @@ Estimated Time: 5 minutes
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-11.png "")
+    !["Click App Builder"](images/navigate-to-1.png "")
 
 2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
 
@@ -160,6 +160,8 @@ Estimated Time: 5 minutes
 6. Navigate to **Rendering** tab, select **P11_ID** and update the following and click **Save**.
 
     - Session State > Storage: **Per Session (Persistent)**
+
+    *Note: This is to maintain for each session by storing the value in the database, to access it across requests.*
 
     !["Click App Builder"](images/per-session.png "")
 

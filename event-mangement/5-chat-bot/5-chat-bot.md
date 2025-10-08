@@ -24,7 +24,7 @@ By the end of this lab, you will be able to:
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to3.png "")
+    !["Click App Builder"](images/navigate-to-3.png "")
 
 2. In the Page Designer, right-click **Breadcrumb** and click **Create Button**.
 
@@ -64,7 +64,7 @@ By the end of this lab, you will be able to:
 
     - Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Service: **Open AI**
+    - Generative AI > Service: Select **YOUR_GEN_AI**
 
     - Welcome Message: **Hi! How can I help you today?**
 
@@ -117,6 +117,8 @@ The chat assistant currently returns results from a web search, not from our dat
         - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
 5. Click **Create**.
+
+    !["Click App Builder"](images/event-ai-conf1.png "")
 
     !["Click App Builder"](images/event-ai-conf.png "")
 
