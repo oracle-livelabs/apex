@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn how to configure Generative AI Services to create a data model, build an application, generate SQL queries, Generate AI-powered text, and develop a chatbot. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues and attendees for efficient event management.
+In this lab, you learn how to create a data model using Generative AI. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues and attendees for efficient event management.
 
 Estimated Time: 5 minutes
 

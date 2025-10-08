@@ -113,6 +113,8 @@ Estimated Time: 5 minutes
 
 ## Task 2: Create a PL/SQL Package with APEX Assistant
 
+In this task, you will learn how to create a package using APEX Assistant in SQL Commands and explore how it can be leveraged to efficiently generate PL/SQL package code.
+
 1. Navigate to **SQL Workshop** and select **SQL Commands**.
 
     !["Click App Builder"](images/sql-command.png "")
