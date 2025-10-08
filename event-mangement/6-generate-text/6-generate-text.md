@@ -16,7 +16,7 @@ Estimated Time: 5 minutes
 
 ## Task 1: Add Generate Description Button
 
-1. In the runtime environment, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
+1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
 
     >Note: Page number may vary depending on your application.
 

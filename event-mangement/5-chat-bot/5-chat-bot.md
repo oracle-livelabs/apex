@@ -74,7 +74,9 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/show-ai-assist.png "")
 
-8. In the runtime environment, click the **Event Assistant** button and enter the prompt **List AI Events**. The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
+8. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
+
+The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
     !["Click App Builder"](images/view-assit.png "")
 
@@ -180,7 +182,7 @@ By the end of this lab, you will be able to:
 
 3. Click **Save and Run**.
 
-4. In the runtime environment, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
+4. In the app, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
     !["Click App Builder"](images/view-ai-chat.png "")
 

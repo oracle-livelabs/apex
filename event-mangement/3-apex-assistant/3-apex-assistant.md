@@ -119,7 +119,8 @@ In this task, you will learn how to create a package using APEX Assistant in SQL
 
     !["Click App Builder"](images/sql-command.png "")
 
-2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table. Also CREATE TABLE DDL command can be obtained from the Object Browser.
+2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
+Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 
     ```
     <copy>
@@ -150,7 +151,7 @@ In this task, you will learn how to create a package using APEX Assistant in SQL
 
     !["Click App Builder"](images/apex-assist.png "")
 
-4. Select your create table statement from the code editor, click **Insert** or **Copy** and then replace the contents in your Code Editor and run it to create the package.
+4. Clear the contents of the code editor. Now, select **Insert** in the APEX Assistant to insert the code into the editor. 
 
     !["Click App Builder"](images/copy-insert.png "")
 
