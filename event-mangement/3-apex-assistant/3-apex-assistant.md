@@ -1,8 +1,8 @@
-# Enhance Charts and Database Objects with APEX Assistant
+# Enhance Charts and Database Objects using AI
 
 ## Introduction
 
-In this lab, you will learn how to enhance charts in Oracle APEX using APEX Assistant. Instead of manually writing queries, we will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach speeds up development and shows how AI-powered assistance can simplify complex tasks such as data visualization.
+In this lab, you will learn how to enhance charts in Oracle APEX using AI. Instead of manually writing queries, you will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach speeds up development and shows how AI-powered assistance can simplify complex tasks such as data visualization.
 
 In addition to enhancing charts, you will also create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
 
@@ -10,17 +10,17 @@ Estimated Time: 5 minutes
 
 ### Objectives
 
-- Enhance charts by using APEX Assistant to generate SQL queries through natural language.
+- Enhance charts by using AI-powered APEX Assistant to generate SQL queries through natural language.
 
-- Create PL/SQL packages using APEX Assistant in SQL Commands.
+- Create PL/SQL packages using AI-powered APEX Assistant in SQL Commands.
 
-## Task 1: Enhance Charts with APEX Assistant
+## Task 1: Enhance Charts using AI
 
-1. From the runtime environment, navigate to the developer toolbar and click **Page 1**.
+1. From the browser tab where the app is running, navigate to the developer toolbar and click **Page 1**.
 
     !["Click App Builder"](images/event-dashboard.png "")
 
-2. In the page designer, select **Created** region. In the property editor, update **Identification > Name** to **Event Types**.
+2. In the page designer, select the region created under **Body**. In the property editor, update **Identification > Name** to **Event Types**.
 
     !["Click App Builder"](images/event-types.png "")
 
@@ -50,7 +50,7 @@ Estimated Time: 5 minutes
 
 7. While **Validating**, if your query throws an error, APEX Assistant can help troubleshoot the problem.
 
-    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table name.
+    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table **ev_events**.
 
     APEX Assistant switches to General Assistance mode. Click **Help me fix this**.
 

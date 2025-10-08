@@ -1,4 +1,4 @@
-# Configure Generative AI Service and Create a Data Model using AI
+# Create a Data Model using Generative sAI
 
 ## Introduction
 
@@ -10,8 +10,6 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Create/Configure Generative AI Services into your APEX Workspace.
-
 - Create a Data Model using AI in Oracle APEX Workspace.
 
 ### Before You Start
@@ -22,53 +20,7 @@ In this lab, you will:
 
 - An APEX Workspace
 
-## Task 1: Creating a Generative AI Service Object - Open AI
-
-1. Log into your workspace.
-
-2. From your APEX workspace home page, click **App Builder**
-
-    ![Click App Builder](./images/click-app-builder.png " ")
-
-3. On the **App Builder** page, select **Workspace Utilities**.
-
-    ![Select workspace utilities](./images/select-workspace-utilities.png " ")
-
-4. Under Workspace Utilities, click **Generative AI**.
-
-    ![click generative AI](./images/click-generative-ai.png " ")
-
-5. On the **Generative AI Services** page, click **Create**.
-
-    ![Click create](./images/click-create.png " ")
-
-6. If AI Provider is Open AI, under **Create/Edit** Generative AI Service Page, enter the following details.
-
-    - Under Identification:
-
-        - AI Provider: **Open AI**
-
-        - Name: **Open AI**
-
-    - Settings > Used by App Builder: **Toggle On**
-
-    - Credentials > API Key: **Enter the API Key you procured from OpenAI**'
-
-    - Advanced > AI Model: **gpt-4o**
-
-    >**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
-
-7. To validate the information you enter prior to completing the setup, click **Test Connection**.
-
-    ![create generative ai service](./images/create-gen-ai-service.png " ")
-
-8. Once the Connection is Successful, click **Create**.
-
-    ![connection successful](./images/connection-successfull-create.png " ")
-
-    ![AI Service Configured](./images/genai-service-created.png " ")
-
-## Task 2: Create Event Management Data Model using AI
+## Task 1: Create Event Management Data Model using AI
 
 To create a data model with AI, ensure that you have configured Generative AI Service and enabled **Used by App Builder** (Refer to the previous Task). If a Generative AI Service is not configured, the Create Data Model Using AI option will not be visible.
 
@@ -584,7 +536,7 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
     *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
 
-## Task 3: Review Database Objects
+## Task 2: Review Database Objects
 
 1. Navigate to **SQL Workshop** > **Object Browser**.
 

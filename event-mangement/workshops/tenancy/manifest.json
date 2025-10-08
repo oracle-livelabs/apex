@@ -11,11 +11,15 @@
         "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Configure AI Service",
-        "filename": "../../0-configure-ai-keys/0-configure-ai-keys.md"
+        "title": "Lab 1: Configure a Generative AI Service in APEX",
+        "filename": "../../0-configure-ai-keys/0-configure-ai-keys.md",
+        "type": {
+          "OCIGenAI" : "OCIGenAI",
+          "OpenAI" : "OpenAI"
+          }
       },
       {
-        "title": "Lab 2: Create Data Model using AI",
+        "title": "Lab 2: Create Data Model using Generative AI",
         "filename": "../../1-create-data-model-using-ai/1-create-data-model-using-ai.md"
       },
       {
@@ -23,7 +27,7 @@
           "filename": "../../2-create-app/2-create-app.md"
       },
       {
-        "title": "Lab 4: Enhance Charts and Database Objects with APEX Assistant",
+        "title": "Lab 4: Enhance Charts and Database Objects using AI",
           "filename": "../../3-apex-assistant/3-apex-assistant.md"
       },
       {
