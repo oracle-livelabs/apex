@@ -64,7 +64,7 @@ By the end of this lab, you will be able to:
 
     - Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Service: Select **YOUR_GEN_AI**
+    - Generative AI > Service: Select **YOUR\_GEN\_AI\_SERVICE**
 
     - Welcome Message: **Hi! How can I help you today?**
 

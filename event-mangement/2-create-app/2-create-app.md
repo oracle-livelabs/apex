@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will create an interactive Event Management application using Create Application using Generative AI feature in Oracle APEX. The application will be built using the custom data model you generated in the previous lab, providing a practical foundation for your event management.
+In this lab, you will create an interactive Event Management application using **Create Application using Generative AI** feature in Oracle APEX. The application will be built using the custom data model you generated in the previous lab, providing a practical foundation for your event management.
 
 Estimated Time: 5 minutes
 
