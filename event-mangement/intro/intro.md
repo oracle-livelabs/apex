@@ -12,6 +12,8 @@ As you progress, you integrate AI-powered text generation into your application,
 
 Total Workshop Time: 30 minutes
 
+Total Workshop Time: 30 minutes
+
 ### Objectives
 
 - Create a Custom Data Model using AI.
