@@ -30,8 +30,12 @@ Estimated Time: 5 minutes
 
 4. Navigate to **APEX Assistant**. Select your query. From the menu, select **Query Builder** (if not already selected). In the APEX Assistant box, enter the following prompt and press enter:
 
+    ```
+    <copy>
     >Prompt 1:
     >Provide a breakdown of event types.
+    </copy>
+    ```
 
     !["Click App Builder"](images/code-chart.png "")
 
@@ -39,8 +43,12 @@ Estimated Time: 5 minutes
 
 5. Next, let’s adjust the query so that the highest count appears at the top. Enter the following prompt and press Enter.
 
+     ```
+    <copy>
     >Prompt 2:
     >Show highest count at the top.
+    </copy>
+    ```
 
     !["Click App Builder"](images/code-chart1.png "")
 
@@ -86,8 +94,12 @@ Estimated Time: 5 minutes
 
 12. Navigate to **APEX Assistant** and enter the following prompt:
 
+    ```
+    <copy>
     >Prompt 1:
-    >Top 5 upcoming events by registration count
+    >Top 5 upcoming events by registration count.
+    </copy>
+    ```
 
     !["Click App Builder"](images/chart2-code-prompt.png "")
 
@@ -150,8 +162,12 @@ Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 
 3. Click **APEX Assistant**, select **General Assistance** and enter the following prompt:
 
+     ```
+    <copy>
     >Prompt 1:
     >Generate a PL/SQL package to insert, update, and delete events.
+    </copy>
+    ```
 
     !["Click App Builder"](images/prompt1-pack.png "")
 

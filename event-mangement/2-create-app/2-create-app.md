@@ -36,8 +36,12 @@ Estimated Time: 5 minutes
 
 5. To create a Event Management Application, you will use the APEX Assistant wizard. Enter the prompt mentioned below and hit **Enter**.
 
+    ```
+    <copy>
     >Prompt 1:
     >Create an Event Management App. This app should have a calendar page and a Search page for events.
+    </copy>
+    ```
 
     !["first prompt"](images/app-prompt.png "")
 
@@ -45,15 +49,23 @@ Estimated Time: 5 minutes
 
 6. Now, we need to add a Form page to edit events. Enter the prompt mentioned below and hit **Enter**.
 
+    ```
+    <copy>
     >Prompt 2:
     >Add a form page to edit events
+    </copy>
+    ```
 
     !["second prompt"](images/edit-form.png "")
 
 7. Additionally, we want to enable the **Feedback** feature.
 
+    ```
+    <copy>
     >Prompt 3:
     >Enable Feedback feature.
+    </copy>
+    ```
 
     !["third prompt"](images/enable-feedback.png "")
 

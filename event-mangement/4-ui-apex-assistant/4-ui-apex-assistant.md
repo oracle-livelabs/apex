@@ -58,8 +58,12 @@ By the end of this lab, you will be able to:
 
 6. Select the SQL Query. Click **APEX Assistant** and add the following prompt:
 
+    ```
+    <copy>
     >Prompt 1:
-    > Add venue and event type
+    > Add venue and event type.
+    </copy>
+    ```
 
     !["Click App Builder"](images/add-event-promt.png "")
 
@@ -100,18 +104,30 @@ By the end of this lab, you will be able to:
 
 10. Select **&DESCRIPTION.** and click **APEX Assistant**. Now add the following prompts:
 
+     ```
+    <copy>
     > Prompt 1:
     > Generate an HTML to display start date and end date as a labelled information using span tag.
+    </copy>
+    ```
 
     !["Click App Builder"](images/gen-html.png "")
 
+     ```
+    <copy>
     > Prompt 2:
-    > Use APEX substitution strings
+    > Use APEX substitution strings.
+    </copy>
+    ```
 
     !["Click App Builder"](images/substitution-apex.png "")
 
+     ```
+    <copy>
     > Prompt 3:
     > Display it below description
+    </copy>
+    ```
 
     !["Click App Builder"](images/below-desc.png "")
 

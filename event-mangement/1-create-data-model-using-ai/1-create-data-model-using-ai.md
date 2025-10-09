@@ -46,22 +46,34 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 5. You will use the **APEX Assistant** Wizard to create a *Event Management* Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
+    ```
+    <copy>
     >Prompt 1:
-    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees
+    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees.
+    </copy>
+    ```
 
     !["provide prompt"](images/provide-prompt1.png "")
 
 6. Enter another prompt to **Add Event Types**.
 
+    ```
+    <copy>
     >Prompt 2:
     >Add Event Types
+    </copy>
+    ```
 
     !["provide prompt"](images/add-event-types.png "")
 
 7. Add another prompt to update prefix of all database objects.
 
+    ```
+    <copy>
     >Prompt 3:
     >Prefix all objects with ev_
+    </copy>
+    ```
 
     !["provide prompt"](images/prefix.png "")
 
@@ -83,8 +95,12 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
 
-    >Prompt:
+    ```
+    <copy>
+    >Prompt 1:
     >Generate Sample Data
+    </copy>
+    ```
 
     !["provide script name"](images/generate-sample-data.png "")
 

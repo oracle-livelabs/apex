@@ -136,8 +136,12 @@ By the end of this lab, you will be able to:
 
 8. In the APEX Assistant box, enter the following prompt and press enter:
 
+    ```
+    <copy>
     > Prompt 1:
     > Fetch event id, start date, venue, name and event type
+    </copy>
+    ```
 
     !["Click App Builder"](images/event-assist-rag.png "")
 
