@@ -63,7 +63,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/add-event-promt.png "")
 
-7. Click **Insert** or replace the SQL query given below for the expected output:
+7. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
 
     ```
     <copy>
@@ -115,7 +115,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/below-desc.png "")
 
-11. Click **Insert** and **OK**. Or replace with the below HTML for the expected output:
+11. Click **Insert** and then **OK**, or replace the existing content with the HTML provided below to achieve the expected output:
 
     ```
     <copy>
@@ -182,13 +182,13 @@ By the end of this lab, you will be able to:
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/title-link1.png "")
+    !["Click App Builder"](images/title-link.png "")
 
 18. Click **Save and Run** and view the changes.
 
     !["Click App Builder"](images/save-run3.png "")
 
-    !["Click App Builder"](images/view-title-link.png "")
+    !["Click App Builder"](images/title-link1.png "")
 
 ## Summary
 
@@ -198,4 +198,3 @@ In this lab, you transformed a classic report into a content row layout, improvi
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
-

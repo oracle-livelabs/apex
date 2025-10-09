@@ -104,7 +104,7 @@ Click **Upload your own icon**, choose the image and click **Save Icon**.
 
     Records are displayed in all of the reports which makes page review significantly easier, especially for reports. The fact that the data may not be exactly correct for the columns is not critical, as you can very easily update the data to make it more realistic.
 
-    ![display project dashboard page](images/event-dashboard.png " ")
+    ![display project dashboard page](images/event-dashboard1.png " ")
 
 ## Summary
 
