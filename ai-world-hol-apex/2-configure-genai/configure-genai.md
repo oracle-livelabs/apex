@@ -74,7 +74,7 @@ Basic experience with OCI Cloud Console and standard components.
 
     OCI User ID (User OCID),  
     OCI Private Key (downloaded),  
-    *Note: Open the downloaded OCI private key file (`vi` on macOS or Notepad on Windows), copy its contents, and paste in below screen*.  
+    *Note: Open the downloaded OCI private key file (`Textedit` on macOS or Notepad on Windows), copy its contents, and paste in below screen*.  
     OCI Tenancy ID (Tenancy OCID) and  
     OCI Public Key Fingerprint.  
 
@@ -90,6 +90,14 @@ Basic experience with OCI Cloud Console and standard components.
     [Click here](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm) to see pre-trained models available.
 
     ![AIProvider OCIGenAIService](./images/ai_provider_oci_gen_ai_service.png  "Select OCI Generative AI Service as provider")
+
+    Follow these steps to set up your GenAIService:
+    - **Name:** 'GenAIService'
+    - **Compartment:** Paste your **Compartment OCID** in the compartment field.
+    - **Region:** Enter 'us-chicago-1'.
+    - **Model ID:** Enter 'cohere.command-a-03-2025'.
+    - **Credential:** Select `oci_ai_credential` from the available credentials list.
+
     ![AI Credential](./images/ai_credential.png  "Enter name, compartment, region and select Credential to authenticate with OCI GenAI service")
 
 7. Enable the Used by App Builder setting if you would like to add a Generative AI option in the Create Application Wizard and include Generative AI support (APEX Assistant) in all APEX Code Editors. Only one Generative AI Service at a time can be configured with the Used by App Builder setting enabled. 
