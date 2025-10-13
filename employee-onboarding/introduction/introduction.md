@@ -8,6 +8,9 @@ Workflows in Oracle APEX enable you to model business processes using a visual e
 
 In this hands-on workshop, you will build an Employee Onboarding application that uses APEX Workflows to automate and streamline onboarding processes resulting in improved efficiency, reduced manual coordination, and a better new hire experience.
 
+Here is a quick overview of the app you will be building:
+![Demo Application](./images/emp-onboarding.gif " ")
+
 Estimated Workshop Time: ~3-4 hours.
 
 ### Objectives

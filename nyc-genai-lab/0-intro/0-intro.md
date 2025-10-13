@@ -19,6 +19,9 @@ You can read more about these models from the [documentation](https://docs.oracl
 
 This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop a "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them to make an informed decision about whether a specific school is the ideal fit for their child.
 
+Here is a quick overview of the app you will be building:
+![Demo Application](./images/nyc-genai.gif " ")
+
 Estimated Time: 60 minutes
 
 ### **Objectives**
