@@ -161,9 +161,9 @@ By the end of this lab, you will be able to:
 
         - Set Items:
 
-        | Name | Value |
-        | ----- | ---- |
-        | P11_ID | &ID.|
+            | Name | Value |
+            | ----- | ---- |
+            | P11_ID | &ID.|
 
         - Clear Cache: **11**
 

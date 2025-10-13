@@ -101,7 +101,7 @@ Estimated Time: 5 minutes
 
     - Under Column Mapping:
 
-        - Series Name: **EVENT_NAME**
+        - Label: **EVENT_NAME**
 
         - Value: **REGISTRATION_COUNT**
 

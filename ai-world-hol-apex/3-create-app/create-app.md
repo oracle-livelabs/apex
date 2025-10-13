@@ -32,7 +32,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. In your APEX Workspace, click App Builder and Click Create. Here we can Select Create App From a File . 
     ![Create A NewApp](./images/create_a_new_app.png  "Create a new APEX application")
 
-2. Here we will load in our data. Download the [sample](./datasets/movies_sample.csv) data. Click the select file option and select the correct file from your file browser. 
+2. Here we will load in our data. Right click the ["fictionalmovies.csv"](./datasets/fictionalmovies.csv) link, Select "Save Link As"/"Download Linked File" to download it to your local folder. Click the choose file option and select the fictionalmovies.csv file from your local file browser. 
     ![Drag Drop](./images/drag_drop.png  "Drag and drop CSV file to load sample data into APEX")
 
 3. Give this table a name, Movies, and click Load Data
@@ -43,7 +43,7 @@ Basic experience with OCI Cloud Console and standard components.
 5. Give the application a name, and select an Icon if you would like to change it. By default, APEX will create some pages for you in the application.
     ![Application Creation](./images/application_creation.png  "Configure application name and icon")
 
-6. You can select Access Control from the features selection so we can manage how users login.
+6. You can select Access Control from the features selection so we can manage how users login. Click 'Create Application'
     ![Access Control](./images/access_control.png  "Set access control and user login options for the app")
 
 7. Now you will see all the pages that were created for the application. Launch the application by clicking the play button Run Application so we can see what it looks like.
@@ -80,7 +80,7 @@ Basic experience with OCI Cloud Console and standard components.
     ```
     ![AI Configuration](./images/welcome_message.png  "Set welcome message for AI chatbot")
 
-5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter
+5. Next we will add our database table as a RAG source for our AI Assistant. Select 'RAG Source tab' and click Create RAG Source. Enter a name and for the SQL query, enter
     ```
     <copy>
     SELECT * FROM MOVIES
@@ -95,12 +95,15 @@ Basic experience with OCI Cloud Console and standard components.
     ![New Region](./images/new_region.png  "Drag the newly created region above the Page Navigation")
 
 7. With our New Region selected on the left side, navigate to the right side of your screen for this selected region.  Enter a title, 'Welcome to the APEX Movie DB' and a Name for the region, 'Welcome'. Now we will enter a short message in the HTML source code to give users an understanding of the application:  
-    
-    “&lt;h3&gt;Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies&lt;/h3&gt; 
+    ```
+    <copy>
+    &lt;h3&gt;Welcome to a database where you can explore and interact with movie data, find new films to watch, and learn more about popular movies&lt;/h3&gt; 
 
-    &lt;h3&gt;To enhance your experience, try our AI Movie Assistant by clicking below&lt;/h3&gt;”
+    &lt;h3&gt;To enhance your experience, try our AI Movie Assistant by clicking below&lt;/h3&gt;
+    </copy>
+    ```
     ![Region Details](./images/region_details.png  "Enter title and HTML content for new region")
-
+    
 8. To clean up the UI we can delete the Movie region from the Breadcrumb Bar on the Rendering tree, right click on the region and select Delete.
     ![Delete BreadCrumb Region](./images/delete_bread_crumb_region.png  "Delete Movie region from breadcrumb bar")    
 
@@ -108,6 +111,8 @@ Basic experience with OCI Cloud Console and standard components.
     ![App Page](./images/app_page.png  "The application page and layout")   
 
 10. Let’s now add our AI Assistant, return to Page 1 App Builder. On the Rendering Tree, right click our Welcome region and select Create Button. 
+    ![New Button Menu](./images/new_button_menu.png "Right Click on Welcome Region")
+    
     ![New Button](./images/new_button.png  "Create a button in the Welcome region to launch AI assistant")
 
     Click on the newly created button, and navigate to the right side of the screen. Here we will give the button a name, _Launch_AI_Assistant_. Next, scroll down the right side and on the Button Template attribute, select Text with Icon from the drop down. In the Icon attribute below, enter _fa-ai-generative_, this will give a small icon next our text. On the Layout Section, Select _Below Region_ for the _Slot_ attribute, and align it to the left side.
@@ -143,4 +148,4 @@ You have successfully created your application and created a dynamic action to l
 * Karol Stuart, Master Principal Cloud Architect 
 * Graham Anderson, Senior Cloud Architect 
 
-* **Last Updated by/Date** - Graham Anderson, August 2025
+* **Last Updated by/Date** - Graham Anderson, September 2025

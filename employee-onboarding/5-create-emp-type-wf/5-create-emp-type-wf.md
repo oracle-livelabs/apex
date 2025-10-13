@@ -1,4 +1,4 @@
-# Build Employment Type-Based Workflows in Oracle APEX
+# Create Employment Type Workflow
 
 ## Introduction
 
@@ -101,37 +101,7 @@ In this task, you will configure the inputs to the workflow — the new employee
 
     ![Add Parameter](./images/add-params2.png "")
 
-## Task 4: Add Workflow Variables
-
-The inputs provided to the Workflow are read-only in nature. This means that, once the workflow is submitted, their values will never be modified. The workflow needs to process and pass data from one activity to the next.
-
-As an example, consider the following business scenario:
-
-Before an onboarding is completed, the workflow needs to allocate trainings based on the Employment type. So, the Employment type of the New hire is a variable that will be determined based on this computation.
-
-Data such as Employment Type, Employee ID, Employee Name and Email need to be updatable by the activities of the workflow as part of the execution. Such data is defined as **Workflow Variables**.
-
-1. Right-click **1.0 [Dev]** (workflow version), select **Create Variable**.
-
-    ![Create Variable](./images/create-variable.png " ")
-
-2. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
-
-    - Identification > Static ID: **APPROVER**
-
-    - Label > Label: **Approver**
-
-   ![Create Approver Variable](./images/create-approver.png " ")
-
-3. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
-
-    - Identification > Static ID: **TASK\_OUTCOME**
-
-    - Label > Label: **Task Outcome**
-
-   ![Create task outcome Variable](./images/create-variable-task.png " ")
-
-## Task 5: Add Workflow Activity for Full Time Employees
+## Task 4: Add Workflow Activity for Full Time Employees
 
 In this task, you will create an activity for Employee Type as Full Time.
 
@@ -185,7 +155,7 @@ In this task, you will create an activity for Employee Type as Full Time.
 
    ![link parameter for Activity](./images/params-employee-type.png " ")
 
-## Task 6: Create Activity for Interns
+## Task 5: Create Activity for Interns
 
 1. Similarly, Create another Activity for Intern as the Employment type. From the Activities palette, drag a **Invoke API** Activity into the Diagram Builder area. In the Property Editor, enter/select the following:
 
@@ -221,7 +191,7 @@ In this task, you will create an activity for Employee Type as Full Time.
 
    ![link parameter for Activity](./images/params-41.png " ")
 
-## Task 7: Create Activity to Assign Trainings
+## Task 6: Create Activity to Assign Trainings
 
 1. From the Activities palette, drag a **Human Task - Create** Activity into the Diagram Builder area and drop it below the **Trainings for Full-Time Employee** activity.
 
@@ -256,7 +226,7 @@ In this task, you will create an activity for Employee Type as Full Time.
 
    ![Link parameters](./images/params-emp12.png " ")
 
-## Task 8: Create Activity to send Training Completion Email
+## Task 7: Create Activity to send Training Completion Email
 
 In this task, you will create a Send Email Activity to send an email to the New Hire after completion of required trainings.
 
@@ -293,7 +263,7 @@ In this task, you will create a Send Email Activity to send an email to the New 
 
    ![Create activity to send email trainings](./images/send-email22.png " ")
 
-## Task 9: Draw connections between Activities
+## Task 8: Draw connections between Activities
 
 1. Draw Connections from **Trainings for Full-Time Employee** to **Assign Trainings** and **Trainings for Intern** to **Assign Trainings** activity.
 
