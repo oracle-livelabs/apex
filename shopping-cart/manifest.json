@@ -42,8 +42,8 @@
         "filename": "8-improving-products/improving-products.md"
       },
       {
-        "title": "Lab 9: Configure a Generative AI Service in APEX",
-        "filename": "../../9-configure-gen-ai/9-configure-gen-ai.md",
+        "title": "Lab 9: [Optional] Configure a Generative AI Service in APEX",
+        "filename": "9-configure-gen-ai/9-configure-gen-ai.md",
         "type": {
           "OCIGenAI" : "OCIGenAI",
           "OpenAI" : "OpenAI"
@@ -58,7 +58,7 @@
         "filename": "11-vector-search-configurations/vector-search-configurations.md"
       },
       {
-        "title": "Lab 12: [Optional] Improve the Application",
+        "title": "Lab 12: Improve the Application",
         "filename": "12-improving-app/improving-app.md"
       },
       {

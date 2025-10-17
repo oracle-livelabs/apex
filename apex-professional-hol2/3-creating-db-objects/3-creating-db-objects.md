@@ -234,7 +234,7 @@ You will create a PL/SQL package to manage shopping cart operations in this task
     </copy>
     ```
 
-6. Click **Save & Compile**.
+6. Click **Save and Run**.
 
     ![Save & Compile Package](./images/create-package-body2.png " ")
 
