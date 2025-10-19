@@ -250,5 +250,5 @@ In the next workshop, you will understand how to create validations in APEX to e
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** -  Ankita Beri, Product Manager, September 2024
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** -  Ankita Beri, Senior Product Manager, October 2025
