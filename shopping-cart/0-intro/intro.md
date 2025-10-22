@@ -68,7 +68,7 @@ In this lab, you will:
 
 - If you are stuck or the application is not working as expected, you can download and install the completed App as follows:
 
-    1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oic-library%2Facme-shop.sql) to download the completed application.
+    1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foic-library_acme-shop.sql) to download the completed application.
 
     2. To run the application, please run the steps described in Lab 1, 2, and 3.
 
