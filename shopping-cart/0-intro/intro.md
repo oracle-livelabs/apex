@@ -90,9 +90,15 @@ In this lab, you will:
 
     3. Now, [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foic-library_acme-shop.sql) to download the completed application and import it into your workspace.
 
-    4. Follow **LAB 9** to configure Generative AI.
+    4. When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the username you wish to log in to the application, choose the appropriate application role, and click **Create Assignment**.
 
-    5. To use the **Vector Search** capabilities of this application, perform the steps mentioned in **LAB 10: Task 1, Task 2  and Task 3**.
+        ![Workspace home page](./images/role-assignment.png " ")
+
+        ![Workspace home page](./images/add-user.png " ")
+
+    5. Follow **LAB 9** to configure Generative AI.
+
+    6. To use the **Vector Search** capabilities of this application, perform the steps mentioned in **LAB 10: Task 1, Task 2  and Task 3**.
 
 - [Download the Application icon](./images/shopping-cart-01.png)
 
