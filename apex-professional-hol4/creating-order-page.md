@@ -24,19 +24,35 @@ In this lab, you will:
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
+- If you are stuck or the application is not working as expected, you can download and install the completed App as follows:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+    1. First, install the sample dataset from your workspace using the following lab:**[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+    2. After installing the sample dataset tables, download the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step. To import the SQL script follow the below steps:
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+    - Navigate to your APEX homepage, click the down arrow next to **SQL Workshop**, and select **SQL Scripts**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
+        ![Workspace home page](./images/click-sqlscript.png " ")
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+    - Click **Upload** and drag and drop the SQL script file downloaded in the previous step.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+        ![Workspace home page](./images/click-upload.png " ")
+
+    - After uploading, click the **Run** icon.
+
+        ![Workspace home page](./images/run-script.png " ")
+
+        ![Workspace home page](./images/partial-ddl-success.png " ")
+
+    3. Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
+
+    4. When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the username you wish to log in to the application, choose the appropriate application role, and click **Create Assignment**.
+
+        ![Workspace home page](./images/role-assignment.png " ")
+
+        ![Workspace home page](./images/add-user.png " ")
+
+> Note: If you want to reinstall the the database objects, you can download the provided **[script](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)** to drop the existing database objects.
 
 ## Task 1: Navigate and Review the Page Designer panes
 

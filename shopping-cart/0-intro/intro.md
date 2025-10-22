@@ -88,7 +88,7 @@ In this lab, you will:
 
         ![Workspace home page](./images/partial-ddl-success.png " ")
 
-    3. Now, [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foic-library_acme-shop.sql) to download the completed application and import it into your workspace.
+    3. Now, **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foic-library_acme-shop.sql)** to download the completed application and import it into your workspace.
 
     4. When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the username you wish to log in to the application, choose the appropriate application role, and click **Create Assignment**.
 
@@ -124,5 +124,5 @@ In this lab, you will:
 
 ## Acknowledgments
 
-- **Author** - Apoorva Srinivas, Senior Product Manager; Mónica Godoy, Principal Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Author** - Apoorva Srinivas, Principal Product Manager; Mónica Godoy, Senior Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
