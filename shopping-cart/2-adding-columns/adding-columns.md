@@ -32,7 +32,7 @@ In this lab, you will:
 
     ![Table view in the Object Browser](./images/ob.png " ")
 
-3. Navigate to **PRODUCTS** table and click **Add Column**.
+3. Expand **Tables**, navigate to **PRODUCTS** table and click **Add Column**.
 
     ![Table view in the Object Browser](./images/products.png " ")
 
@@ -111,7 +111,7 @@ In this lab, you will:
 
 4. Click **Run Now**.
 
-    ![SQL Script with Run Now button](./images/create-script.png " ")
+    ![SQL Script with Run Now button](./images/run-script-acme.png " ")
 
 5. The Script Results page is displayed listing the number of statements processed, successful, and with errors.
 
@@ -155,7 +155,7 @@ You will create lookup tables based on the new three columns, after you will hav
 
     *Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-4. To create **Department** lookup table, navigate back to the **Products** table and click **More** , select **Create Lookup Table**.
+4. To create **Department** lookup table, navigate back to the **PRODUCTS** table and click **More** , select **Create Lookup Table**.
 
     ![Create Lookup Column wizard](./images/lookup-table2-s.png " ")
 
@@ -165,7 +165,7 @@ You will create lookup tables based on the new three columns, after you will hav
 
     >*Note: Click the **Create Lookup Table** button only once. Then you will find the new table listed in the Object Browser.*
 
-6. To create **Clothing** lookup table, navigate back to the **Products** table and click **More**, select **Create Lookup Table** button.
+6. To create **Clothing** lookup table, navigate back to the **PRODUCTS** table and click **More**, select **Create Lookup Table** button.
 
     ![Create Lookup Column wizard](./images/lookup-table3-s.png " ")
 
@@ -175,7 +175,7 @@ You will create lookup tables based on the new three columns, after you will hav
 
     ![Create Lookup Column wizard](./images/lt-clothing.png " ")
 
-8. The columns COLOR, DEPARTMENT, and CLOTHING in the **Products** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
+8. The columns COLOR, DEPARTMENT, and CLOTHING in the **PRODUCTS** table are renamed to COLOR\_ID, DEPARTMENT\_ID, and CLOTHING\_ID respectively, and their data type changed to NUMBER. Also, there are new tables containing the values of the products:
 
     - COLOR_LOOKUP
 

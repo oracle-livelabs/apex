@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you build an application based on the data structures you built in previous labs.
+In this lab, you build an application based on the data structures you have built in previous labs.
 
 Estimated Time: 15 minutes
 
@@ -186,7 +186,7 @@ Since we designated the product faceted search page as the application's home pa
 
 4. Click **Add Pages**.
 
-    ![Add Page wizard](./images/multiple-reports2.png " ")
+    ![Add Page wizard](./images/multiple-reports3.png " ")
 
 ## Task 7: Set Multiple Reports as Administration Pages
 
@@ -208,7 +208,7 @@ Since we designated the product faceted search page as the application's home pa
 
 ## Task 8: Add Manage Products Page
 
-1. In the **Create an Application** wizard, click **Add Page**.
+1. In the **Create an Application** wizard, under **Pages** click **Add Page**.
 
 2. Click **Interactive Report**.
 
