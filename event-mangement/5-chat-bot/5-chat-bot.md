@@ -24,7 +24,7 @@ By the end of this lab, you will be able to:
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to3.png "")
+    !["Click App Builder"](images/navigate-to-3.png "")
 
 2. In the Page Designer, right-click **Breadcrumb** and click **Create Button**.
 
@@ -64,7 +64,7 @@ By the end of this lab, you will be able to:
 
     - Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Service: **Open AI**
+    - Generative AI > Service: Select **YOUR\_GEN\_AI\_SERVICE**
 
     - Welcome Message: **Hi! How can I help you today?**
 
@@ -74,7 +74,9 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/show-ai-assist.png "")
 
-8. In the runtime environment, click the **Event Assistant** button and enter the prompt **List AI Events**. The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
+8. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
+
+   The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
     !["Click App Builder"](images/view-assit.png "")
 
@@ -105,7 +107,7 @@ By the end of this lab, you will be able to:
             ```
             <copy>
 
-            Generate a professional-looking abstract as a description, not exceeding 400 characters.
+            You are an event assistant. Help answer questions using the data provided about the events.
 
             Use the data provided about the events as context.
 
@@ -115,6 +117,8 @@ By the end of this lab, you will be able to:
         - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
 5. Click **Create**.
+
+    !["Click App Builder"](images/event-ai-conf1.png "")
 
     !["Click App Builder"](images/event-ai-conf.png "")
 
@@ -132,8 +136,12 @@ By the end of this lab, you will be able to:
 
 8. In the APEX Assistant box, enter the following prompt and press enter:
 
+    ```
+    <copy>
     > Prompt 1:
     > Fetch event id, start date, venue, name and event type
+    </copy>
+    ```
 
     !["Click App Builder"](images/event-assist-rag.png "")
 
@@ -141,7 +149,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/insert-rag.png "")
 
-10. Under Server-side Condition, enter/select the following:
+10. Under Server-side Condition, enter/select the following to invoke RAG only for that page:
 
     - Type: **Function Body**
 
@@ -180,7 +188,7 @@ By the end of this lab, you will be able to:
 
 3. Click **Save and Run**.
 
-4. In the runtime environment, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
+4. In the app, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
     !["Click App Builder"](images/view-ai-chat.png "")
 
@@ -190,5 +198,5 @@ In this lab, you created an Event Chat Assistant by adding a button, configuring
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

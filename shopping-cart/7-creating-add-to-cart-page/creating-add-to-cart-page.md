@@ -38,9 +38,9 @@ Create a Modal Page to add products to the cart.
 
     ![Toolbar in the page designer](./images/create-modal-page-s.png " ")
 
-2. Select **Blank Page**.
+2. Select **Blank Page** and click **Next**.
 
-    ![Toolbar in the page designer](./images/create-blankpage.png " ")
+    ![Toolbar in the page designer](./images/blank-page1.png " ")
 
 3. On **Create Blank Page**, enter/select the following:
 

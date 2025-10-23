@@ -30,7 +30,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 Calendars provide an intuitive way to visualize date-related data, such as tasks and project timelines. In this task, you will create a Calendar Page in the Demo Projects application. You’ll also customize its appearance to match your application’s design standards.
 
-1. Navigate to **App Builder** and select **Demo Projects**. application.
+1. Navigate to **App Builder** and select **Demo Projects** application.
 
     ![Navigate to App Builder](images/navigate-to-dp.png " ")
 
@@ -70,7 +70,7 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
     ![Create Calender2](images/create-calendar-page5.png " ")
 
-6. Click **Save** and **Run**. Log in to the application with your credentials.
+6. Click **Save and Run**. Log in to the application with your credentials.
 
     ![Click Edit Page](images/save-run.png " ")
 
@@ -92,7 +92,7 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
     ![Click Ok](images/edit-calendar2.png " ")
 
-9. Click **Save** and **Run**.
+9. Click **Save and Run**.
 
 ## Task 2: Create a Form page on DEMO_PROJECTS Tables
 
@@ -150,6 +150,8 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
             Click **OK**
 
+    ![Add Link](images/create-link.png " ")
+
     - View/Edit Link: Click **No Link Defined**.
 
         - Page: **9**
@@ -158,7 +160,8 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
             | Name | Value |
             |----- | ----- |
-            | P9_ID | ID |
+            | P9_ID | &ID. |
+            {: title="Set Items"}
 
         - Clear Cache: **9**
 
@@ -188,7 +191,7 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
     ![Enable drag nad drop](images/customizing-calendar5.png " ")
 
-5. Click **Save** and **Run**.
+5. Click **Save and Run**.
 Notice that you can now drag and drop tasks in the calendar.
 
     ![Customized Calender](images/customized-calendar1.png " ")
@@ -235,25 +238,25 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
         - Type: **SQL Query**
 
-        - Sql Query: Copy the following code and paste it.
+        - SQL Query: Copy the following code and paste it.
 
-        ```
-       <copy>
-       select case when connect_by_isleaf = 1 then 0
-             when level = 1             then 1
-             else                           -1
-        end as status,
-        level,
-        "ENAME" as title,
-        null as icon,
-        "EMPNO" as value,
-        "ENAME" as tooltip
-        from EBA_DEMO_IR_EMP
-        start with "MGR" is null
-        connect by prior "EMPNO" = "MGR"
-        order siblings by "ENAME"
-       </copy>
-       ```
+            ```
+            <copy>
+            select case when connect_by_isleaf = 1 then 0
+                    when level = 1             then 1
+                    else                           -1
+                end as status,
+                level,
+                "ENAME" as title,
+                null as icon,
+                "EMPNO" as value,
+                "ENAME" as tooltip
+                from EBA_DEMO_IR_EMP
+                start with "MGR" is null
+                connect by prior "EMPNO" = "MGR"
+                order siblings by "ENAME"
+            </copy>
+            ```
 
     - Under Appearance > Template Options: Click **Use Template Defaults**
 
@@ -289,7 +292,7 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
         - Tooltip Column: **TOOLTIP**
 
-7. Click **Save** and **Run Page**.
+7. Click **Save and Run**.
 
    ![Click Save and Run](images/create-tree9.png " ")
 
@@ -303,5 +306,5 @@ In this lab, you successfully created and customized a Calendar Page to display 
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
+- **Author** - Roopesh Thokala, Principal Product Manager, Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

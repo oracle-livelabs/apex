@@ -11,27 +11,35 @@
         "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {
-        "title": "Lab 1: Configure AI Service and Create Data Model using AI",
+        "title": "Lab 1: Configure a Generative AI Service in APEX",
+        "filename": "../../0-configure-ai-keys/0-configure-ai-keys.md",
+        "type": {
+          "OCIGenAI" : "OCIGenAI",
+          "OpenAI" : "OpenAI"
+          }
+      },
+      {
+        "title": "Lab 2: Create Data Model using Generative AI",
         "filename": "../../1-create-data-model-using-ai/1-create-data-model-using-ai.md"
       },
       {
-        "title": "Lab 2: Create the Application using Generative AI",
+        "title": "Lab 3: Create the Application using Generative AI",
           "filename": "../../2-create-app/2-create-app.md"
       },
       {
-        "title": "Lab 3: Enhance Charts and Database Objects with APEX Assistant",
+        "title": "Lab 4: Enhance Charts and Database Objects using AI",
           "filename": "../../3-apex-assistant/3-apex-assistant.md"
       },
       {
-        "title": "Lab 4: Enhance UI with APEX Assistant",
+        "title": "Lab 5: Enhance UI with AI",
           "filename": "../../4-ui-apex-assistant/4-ui-apex-assistant.md"
       },
       {
-        "title": "Lab 5: Create an Event Chat Assistant",
+        "title": "Lab 6: Create an Event Chat Assistant",
           "filename": "../../5-chat-bot/5-chat-bot.md"
       },
       {
-        "title": "Lab 6: Generate Event Description with AI",
+        "title": "Lab 7: Generate Event Description with AI",
           "filename": "../../6-generate-text/6-generate-text.md"
       },
       {
