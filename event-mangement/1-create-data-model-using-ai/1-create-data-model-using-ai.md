@@ -1,4 +1,4 @@
-# Create a Data Model using Generative sAI
+# Create a Data Model using Generative AI
 
 ## Introduction
 
