@@ -16,11 +16,11 @@ Estimated Time: 5 minutes
 
 ## Task 1: Add Generate Description Button
 
-1. In the runtime environment, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
+1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-11.png "")
+    !["Click App Builder"](images/navigate-to-1.png "")
 
 2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
 
@@ -36,11 +36,11 @@ Estimated Time: 5 minutes
 
     - Under Appearance:
 
-       - Button Template: **Text with Icon**
+        - Button Template: **Text with Icon**
 
-       - Hot: Toggle **On**
+        - Hot: Toggle **On**
 
-       - Icon: **fa-file-text**
+        - Icon: **fa-file-text**
 
 4. Drag and drop **GENERATE\_DESCRIPTION** button under **P11\_DESCRIPTION** page item.
 
@@ -76,23 +76,23 @@ Estimated Time: 5 minutes
 
     - Source > SQL Query: Copy and paste the following SQL into the code editor.
 
-    ```
-    <copy>
-    select distinct ev.ID,
-       ev.venue_id,
-       ev.EVENT_TYPE_ID,
-       ev.NAME,
-       ev.START_DATE,
-       evt.name event_type,
-       ev.name venue
-    from EV_EVENTS ev
-    join EV_EVENT_TYPES evt
-    on evt.id = ev.event_type_id
-    join ev_venues eve
-    on eve.id = ev.venue_id
-    where ev.id = :P11_ID
-    </copy>
-    ```
+        ```
+        <copy>
+        select distinct ev.ID,
+            ev.venue_id,
+            ev.EVENT_TYPE_ID,
+            ev.NAME,
+            ev.START_DATE,
+            evt.name event_type,
+            ev.name venue
+        from EV_EVENTS ev
+            join EV_EVENT_TYPES evt
+        on evt.id = ev.event_type_id
+            join ev_venues eve
+        on eve.id = ev.venue_id
+            where ev.id = :P11_ID
+        </copy>
+        ```
     >Note: Page Item number may vary depending on your application.
 
     - Under Server-side Condition:
@@ -101,11 +101,11 @@ Estimated Time: 5 minutes
 
         - Expression:
 
-        ```
-        <copy>
-        return :APP_PAGE_ID = 11;
-        </copy>
-        ```
+            ```
+            <copy>
+            return :APP_PAGE_ID = 11;
+            </copy>
+            ```
 
     >Note: Page number may vary depending on your application.
 
@@ -157,7 +157,15 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/gen-text.png "")
 
-6. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
+6. Navigate to **Rendering** tab, select **P11_ID** and update the following and click **Save**.
+
+    - Session State > Storage: **Per Session (Persistent)**
+
+    *Note: This is to maintain for each session by storing the value in the database, to access it across requests.*
+
+    !["Click App Builder"](images/per-session.png "")
+
+7. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
 
     !["Click App Builder"](images/view-desc.png "")
 
@@ -167,5 +175,5 @@ In this lab, you built an AI-powered feature to generate event descriptions in O
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

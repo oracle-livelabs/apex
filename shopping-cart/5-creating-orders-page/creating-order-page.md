@@ -33,9 +33,9 @@ Create a Normal Page to review the Order that customer has made.
 
     ![App Builder home page](./images/create-page.png " ")
 
-2. Select **Blank Page**.
+2. Select **Blank Page** and click **Next**.
 
-    ![create page wizard](./images/create-blank-page111.png " ")
+    ![create page wizard](./images/blank-page1.png " ")
 
 3. Enter/select the following and click **Next**.
 
@@ -126,7 +126,7 @@ Add a region to display Order details.
 
 2. Right-click the region and select **Create Sub Region**.
 
-    ![Rendering tree (left pane) of Page designer](./images/create-sub-region2-s.png " ")
+    ![Rendering tree (left pane) of Page designer](./images/order-sub-region.png " ")
 
 3. In the Property Editor, enter/select the following:
 

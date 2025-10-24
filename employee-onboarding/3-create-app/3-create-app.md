@@ -2,9 +2,12 @@
 
 ## Introduction
 
-In this lab, you will create an Employee Onboarding Application using Oracle APEX. You will build administration pages to manage key onboarding data, including Employees, Departments, and the Training Catalog. You will also organize these pages under a common Administration menu and create a customized Email Template to support the onboarding communication process.
+In this task you will use the simple Create Application wizard to generate a basic APEX application that you will build on throughout the workshop. You will build administration pages to manage key onboarding data, including Employees, Departments, and the Training Catalog. You will also organize these pages under a common Administration menu and create a customized Email Template to support the onboarding communication process.
 
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 30 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_8k5i8ex2)
 
 ### Objectives
 
@@ -18,7 +21,7 @@ In this lab, you will:
 
 * Create an Email Template for the onboarding process
 
-- Set up Subtitution String for APP_EMAIL
+* Set up Subtitution String for APP_EMAIL
 
 ## Task 1: Create Employee Onboarding Application
 
@@ -40,7 +43,7 @@ In this task you will create an application.
 
 ## Task 2: Create a Navigation Entry
 
-In this task, you will create a navigation entry for an **Administrion** page.
+In this task, you will create a navigation entry for the **Administration** page so that users can easily access the page from the application’s main menu. This ensures that administrative functionality is clearly organized and readily available within the app.
 
 1. Click **Shared Components**.
 
@@ -54,7 +57,7 @@ In this task, you will create a navigation entry for an **Administrion** page.
 
     ![Navigation Menu](images/nav-menu2.png "" )
 
-4. Under **List Enteries**, select **Create List Entry**.
+4. Under **List Entries**, select **Create List Entry**.
 
     ![Navigation Menu](images/nav-menu3.png "" )
 
@@ -115,7 +118,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create emp page](images/create-emp-3.png "" )
 
-5. Your Employee page is now created. In page designer, on the top right, click the **+** icon to create a page and select **Page**.
+5. Your Employee page is now created. In Page Designer, select the **+** icon and choose **Page** to create a new page.
 
     ![Create a new page](images/create-page2.png "" )
 
@@ -149,7 +152,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create Dept page](images/create-ig2.png "")
 
-9. Your Department page is now created. In page designer, on the top right, click the **+** icon and select **Page**.
+9. Your Department page is now created. In Page Designer, select the **+** icon and choose **Page** to create a new page.
 
     ![Create a new page](images/create-page3.png "" )
 
@@ -175,16 +178,16 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create Trainings page](images/create-trainings3.png "")
 
-12. In the rendering tree, select **Training Catalogue** region and enter/select the following in the property editor:
+12. In the Rendering Tree, select the **Training Catalogue** region and update the following Source and Appearance attributies.
 
     - Under Source:
 
-        - SQL Query: Modify/Replace SQL query with below sql query
+        - SQL Query: replace the SQL query with below query
 
-          ```
-          <copy>
-          select * from TRAINING_CATALOG
-          </copy>
+          ```sql
+           <copy>
+           select * from TRAINING_CATALOG
+           </copy>
           ```
 
     - Under Appearance:
@@ -195,7 +198,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Trainings page settings](images/trainings-catalog3.png "")
 
-13. In the **Attributes** tab, enter the following:
+13. At the top of the **Property Editor**, switch to the **Attributes** tab to set up some additional properties unique to the region type.
 
     - Under Settings:
 
@@ -210,11 +213,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Save page](images/save-pages.png "" )
 
-15. Now let's create a form page to input the training calatogues. Click the **+ icon** on the top right corner and select **Page**.
+15. Now let's create a Form page to input the training calatogues. Click the **+ icon** on the top right corner and select **Page**.
 
     ![Create a page](images/create-page4.png "" )
 
-16. In the create a page wizard, select **Form**.
+16. In the Create a Page wizard, select **Form**.
 
     ![Create a form page](images/create-form1.png "")
 
@@ -238,7 +241,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create a form page](images/create-form3.png "")
 
-19. In the rendering tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the property editor:
+19. In the Rendering Tree, select **P6\_TRAINING\_TYPE** and enter/select the following in the Property Editor:
 
     - Identification > Type: **Select One**
 
@@ -257,7 +260,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![ training type edit](images/training-type.png "")
 
-20. Similarly, in the rendering tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the property editor:
+20. Similarly, in the Rendering Tree, select **P6\_TARGET\_AUDIENCE** and enter/select the following in the Property Editor:
 
     - Identification > Type: **Select One**
 
@@ -276,7 +279,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![ training type edit](images/target-audience.png "")
 
-21. In the rendering tree, use **Control + Click** to select multiple items : **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the property editor enter/select the following:
+21. In the Rendering Tree, use **Control + Click** to select multiple items : **P6\_TRAINING\_NAME**, **P6\_TRAINING\_TYPE**, **P6\_ESTIMATED\_HOURS** and **P6\_TARGET\_AUDIENCE** and in the Property Editor enter/select the following:
 
     - Appearance >  Template: **Required - Floating**
 
@@ -294,11 +297,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Navigate to training page](images/navigate-form.png "" )
 
-24. In the rendering tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
+24. In the Rendering Tree, under **Training Catalogue** region, right click on **Actions** and select **Create Action**.
 
     ![Create action](images/create-action1.png "" )
 
-25. In the property editor, enter/select the following:
+25. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -308,8 +311,8 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     - Under Link:
 
-        - Target :
-            -  Page: **6**
+        - Target:
+            - Page: **6**
             - Set Items:
 
                 | Name  | Value |
@@ -321,11 +324,11 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Edit action](images/edit-action2.png "" )
 
-26. In the rendering tree, right click on **Training Catalogue** region and select **Create Button**.
+26. In the Rendering Tree, right click on **Training Catalogue** region and select **Create Button**.
 
     ![Create button](images/create-button1.png "" )
 
-27. In the property editor, enter/select the following:
+27. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -368,6 +371,8 @@ In this task, you will build the administrative setup pages that will allow HR a
 
 ## Task 4: Create Email Template
 
+In this task, you will create an Email Template to onboard the employees.
+
 1. Click on the **Shared Components** icon to navigate to shared Components.
 
     ![Shared Components](images/shared-comps.png "" )
@@ -380,7 +385,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
     ![Create Template](images/create-emp-temp.png "" )
 
-4. Enter the following in the Template Details and click **Create Email Template**.
+4. Enter the following in the Template Details:
 
     - Under Identification:
 
@@ -393,7 +398,7 @@ In this task, you will build the administrative setup pages that will allow HR a
 
             ```
             <copy>
-            <b style="font-size: 24px;">Employee Onboarding</b>
+            <strong style="font-size: 24px;">Employee Onboarding</strong>
             </copy>
             ```
 
@@ -449,7 +454,9 @@ In this task, you will build the administrative setup pages that will allow HR a
            </copy>
           ```
 
-    ![Create Template](images/create-emp-temp2.png "" )
+    ![Create Template](images/set-emails.png "" )
+
+5. Click **Create Email Template**.
 
 ## Task 5: Set the APP_EMAIL Substitution String
 
@@ -469,7 +476,7 @@ In this task, you will create a substitution string to manage the application em
 
     - Value: **no-reply@acmecorp.com**
 
-      > *Note:* Replace acmecorp.com with your actual domain.
+     *Note: Replace acmecorp.com with your actual domain.*
 
    ![set application Email](./images/set-app-email.png " ")
 

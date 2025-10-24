@@ -1,8 +1,8 @@
-# Create and Configure Employee Onboarding Workflow
+# Create Employee Onboarding Workflow
 
 ## Introduction
 
-In this lab, you will create an **Employee Onboarding** Workflow to automate the onboarding process for New employees. You will define workflow parameters and variables, add activities like sending emails and creating tasks, and integrate a child workflow for employment type based task assignments. This will help you learn how to build and manage workflows using Oracle APEX Workflow Designer.
+In this lab, you will create an Employee Onboarding workflow in Oracle APEX to automate the onboarding process for new employees. You will define workflow parameters and variables, and add activities such as sending emails and creating tasks. As part of this workflow, you will also invoke the Employment Type workflow created in Lab 5 as a child workflow. This allows the onboarding process to dynamically branch into employment-specific tasks, ensuring that each employee type follows the correct onboarding path.
 
 ### Objectives
 
@@ -20,6 +20,9 @@ In this lab, you learn how to:
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_xcfm63i5)
+
 ### Prerequisites
 
 - All the previous Labs have been completed.
@@ -28,15 +31,11 @@ Estimated Time: 20 minutes
 
 To create a Workflow:
 
-1. Navigate to **Workflows**.
+1. In the Rendering Tree, right click on **Workflows** and select **Create Workflow**.
 
-   ![Navigate to Shared Components](./images/wf-nav.png " ")
+   ![Navigate to Shared Components](./images/create-wf2.png " ")
 
-2. In the Workflows Page, click **Create**.
-
-   ![Create Workflow](./images/create-wf.png " ")
-
-3. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
+2. This will lead you to the Workflow Designer. A new workflow with a Start Activity, Execute Code Activity, and End Activity will be auto-created.
 
     ![Create Workflow](./images/select-wf2.png " ")
 
@@ -71,7 +70,7 @@ To create a Workflow:
 
    ![Save Page](./images/save-empon.png " ")
 
-## Task 3: Add Inputs for Employment Type Workflow
+## Task 3: Add Inputs for Employee Type Workflow
 
 In this lab, you explore various aspects of workflow data using the example of a Employee Onboarding application that you are building. You will focus on understanding parameters, variables, activity variables, and additional data.
 
@@ -95,12 +94,12 @@ Referring to the flow chart in Lab 1, illustrating the business logic, the emplo
   |----------|-------|------------|----------|
   | EMPLOYEE_ID | Employee ID | VARCHAR2    | No |
   | EMPLOYEE_NAME | Employee Name | VARCHAR2  | No  |
-  | EMPLOYMENT_TYPE | Employment Type | VARCHAR2   | No | 
+  | EMPLOYEE_TYPE | Employee Type | VARCHAR2   | No |
   | DEPARTMENT | Department ID | NUMBER   | No |
   | INITIATED_BY | Initiated By | VARCHAR2 |Yes |
   {: title="List of Parameters to be Created"}
 
-    ![Add Parameter](./images/add-params2.png" ")
+    ![Add Parameter](./images/add-prams21.png " ")
 
 ## Task 4: Add Workflow Variables
 
@@ -111,22 +110,6 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
     ![Create Variable](./images/create-variable.png " ")
 
 2. A new variable with Name **New** gets created in the tree. In the Property Editor, enter/select the following:
-
-    - Identification > Static ID: **APPROVER**
-
-    - Label > Label: **Approver**
-
-   ![Create Approver Variable](./images/create-approver.png " ")
-
-3. Similarly, create a variable **Task Outcome**. In the Property Editor, Enter/Select the following:
-
-    - Identification > Static ID: **TASK\_OUTCOME**
-
-    - Label > Label: **TaskOutcome**
-
-   ![Create task outcome Variable](./images/create-variable-task.png " ")
-
-4. Similarly, create a variable **Manager ID**. In the Property Editor, Enter/Select the following:
 
     - Identification > Static ID: **MANAGER\_ID**
 
@@ -144,15 +127,15 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              </copy>
             ```
 
-   ![Create task outcome Variable](./images/create-managerid.png " ")
+   ![Create task outcome Variable](./images/add-mgrid.png " ")
 
 ## Task 5: Add Workflow Activities for Employee Onboarding
 
-1. From the Activities Palette, drag an **Send Email** activity into the Diagram Builder area and drop it on the connection joining the **Start** and **End** activities.
+1. From the Activities Palette, drag a **Send Email** activity into the Diagram Builder area and drop it on the connection joining the **Start** and **End** activities.
 
-   ![Create Activity](./images/drag-act.png " ")
+   ![Create Activity](./images/drag-act11.png " ")
 
-2. Click the newly added **Send Email** and in the Property Editor, enter/select the following:
+2. Click the newly added **Send Email** and in the property editor, enter/select the following:
 
     - Identification > Name: **Employee Onboarding Email**
 
@@ -170,7 +153,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 3. Now from the Activities Palette, drag a **Execute Code** Activity into the Diagram Builder area and drop it on the connection joining **Employee Onboarding Email** and End.
 
-   ![Create Execute Code](./images/exc-code.png " ")
+   ![Create Execute Code](./images/drag-code21.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -179,19 +162,18 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
     - Source > PL/SQL Code: copy and paste the below code
 
         ```
-         <copy>
-         declare
-         l_req_id number;
-         l_count number;
-         begin
-         select count(*) into l_count from IT_PROVISIONING where employee_id = :EMPLOYEE_ID;
-         if l_count = 0 then
-         Insert into IT_PROVISIONING (EMPLOYEE_ID, EMAIL_CREATED, LAPTOP_ALLOCATED,WORKFLOW_ID)
-         Values (:EMPLOYEE_ID,'N','N',:APEX$WORKFLOW_ID );
-
-         end if;
-         end;
-         </copy>
+        <copy>
+        declare
+        l_req_id number;
+        l_count number;
+        begin
+        select count(*) into l_count from IT_PROVISIONING where employee_id = :EMPLOYEE_ID;
+        if l_count = 0 then
+            Insert into IT_PROVISIONING (EMPLOYEE_ID, EMAIL_CREATED, LAPTOP_ALLOCATED, WORKFLOW_ID)
+            Values (:EMPLOYEE_ID, 'N', 'N', :APEX$WORKFLOW_ID );
+        end if;
+        end;
+        </copy>
         ```
 
     ![Create INVOKE API Activity](./images/create-code2.png " ")
@@ -202,7 +184,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
 6. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **On boarding Tasks**
+    - Identification > Name: **Onboarding Tasks**
 
     - Under Settings:
 
@@ -214,16 +196,16 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
         - Due On Type: **Interval**
         - Interval: **P2D**
 
-   ![Create activity to assign trainings](./images/human-task2.png " ")
+   ![Create activity to assign trainings](./images/human-task21.png " ")
 
-7. Under **On boarding Tasks** activity, in parameters tab, select **Department** and select the following in the property editor:
+7. Under **Onboarding Tasks** activity, in parameters tab, select **Department** and select the following in the property editor:
 
     - Under Value:
 
         - Type: **Item**
         - Item: **DEPARTMENT**
 
-    ![Link Parameters](./images/dept-param.png " ")
+    ![Link Parameters](./images/dept-param21.png " ")
 
 8. Similarly, select **Email** parameter.In the Property Editor, enter/select the following:
 
@@ -232,7 +214,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
         - Type: **Item**
         - Item: **EMAIL**
 
-    ![link parameter for Activity](./images/email-param.png " ")
+    ![link parameter for Activity](./images/email-params.png " ")
 
 9. Similarly, select **Employee ID** parameter.In the Property Editor, enter/select the following:
 
@@ -241,7 +223,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
         - Type: **Item**
         - Item: **EMPLOYEE\_ID**
 
-    ![link parameter for Activity](./images/emp-id-param.png " ")
+    ![link parameter for Activity](./images/emp-id-params.png " ")
 
 10. Similarly, select **Employee Name** parameter.In the Property Editor, enter/select the following:
 
@@ -250,13 +232,13 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
         - Type: **Item**
         - Item: **EMPLOYEE\_NAME**
 
-    ![link parameter for Activity](./images/emp-name-param.png " ")
+    ![link parameter for Activity](./images/emp-name-params.png " ")
 
 ## Task 6: Create Activity to Invoke Child Workflow
 
 1. Create another Activity to invoke the **Employment Type Workflow**. From the Activities palette, drag a **Invoke Workflow** Activity into the Diagram Builder area and drop it on the connection joining the Activity to end.
 
-   ![Create Invoke Workflow](./images/invoke-workflow.png " ")
+   ![Create Invoke Workflow](./images/invoke-wf21.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -264,27 +246,9 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
 
     - Settings > Definition: **Employment Type Workflow**
 
-    ![Create Invoke Workflow Activity](./images/invoke-wf.png " ")
+    ![Create Invoke Workflow Activity](./images/invoke-wf22.png " ")
 
-3. Under **Tasks based on Employment Type** and select **Employee ID** parameter. In the Property Editor, enter/select the following:
-
-    - Under Value:
-
-        - Type: **Item**
-        - Item : **EMPLOYEE\_ID**
-
-   ![link parameter for Activity](./images/params3.png " ")
-
-4. Similarly, select **Employee Type** parameter. In the Property Editor, enter/select the following:
-
-    - Under Value:
-
-        - Type: **Item**
-        - Item : **EMPLOYMENT\_TYPE**
-
-   ![link parameter for Activity](./images/params4.png " ")
-
-5. Similary, edit the **Email** parameter, and in the property editor, enter/select the following:
+3. Under **Tasks based on Employment Type** and select **Email** parameter. In the Property Editor, enter/select the following:
 
     - Under Value:
 
@@ -297,30 +261,72 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
             </copy>
             ```
 
-   ![link parameter for Activity](./images/email-params4.png " ")
+   ![link parameter for Activity](./images/email-params41.png " ")
 
-6. Similarly, select **Employee Name** parameter. In the Property Editor, enter/select the following:
+4. Similarly, select **Employee ID** parameter. In the Property Editor, enter/select the following:
+
+    - Under Value:
+
+        - Type: **Item**
+        - Item : **EMPLOYEE\_ID**
+
+   ![link parameter for Activity](./images/params31.png " ")
+
+5. Similarly, select **Employee Name** parameter. In the Property Editor, enter/select the following:
 
     - Under Value:
 
         - Type: **Item**
         - Item : **EMPLOYEE\_NAME**
 
-   ![link parameter for Activity](./images/params6.png " ")
+   ![link parameter for Activity](./images/params61.png " ")
+
+6. Similarly, select **Employee Type** parameter. In the Property Editor, enter/select the following:
+
+    - Under Value:
+
+        - Type: **Item**
+        - Item : **EMPLOYEE\_TYPE**
+
+   ![link parameter for Activity](./images/params-41.png " ")
 
 ## Task 7: Create Activity to send Onboarding Completion Email
 
 1. From the Activities palette, drag a **Send Email** Activity into the Diagram Builder area and drop it between the **Tasks based on Employment Type** activity and **End**.
 
-   ![Create activity to send email](./images/send-email-comp.png " ")
+   ![Create activity to send email](./images/send-email-comps.png " ")
 
-2. In the Property Editor, enter/select the following:
+2. In the Rendering Tree, right click on the **New** Activity and click **Create Activity Variable**.
+
+   ![Create activity variable to send email](./images/create-corp-email.png " ")
+
+3. In the Property Editor, enter/select the following:
+
+    - Identification > Static ID: **CORP_EMAIL**
+
+    - Label > Label: **CORP_EMAIL**
+
+    - Under Value:
+
+        - Type: **SQL Query (return single value)**
+        - SQL Query: copy and paste the below query
+
+            ```sql
+             <copy>
+             select Email from EMPLOYEES
+             where EMPLOYEE_ID = :EMPLOYEE_ID;
+             </copy>
+            ```
+
+   ![Corp Email activity variable settings](./images/corp-email.png " " )
+
+4. In the Rendering Tree, click the **New Activity** and in the Property Editor, enter/select the following:
 
     - Identification > Name: **Onboarding Completion Email**
 
     - Under Settings:
 
-        - To: **&EMAIL.**
+        - To: **&CORP_EMAIL.**
         - Subject: **Congratulations on Completing Your Onboarding!**
         - Body Plain Text: copy and paste the below text
 
@@ -328,7 +334,7 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              <copy>
              Dear &EMPLOYEE_NAME.,
 
-             Congratulations on successfully completing your onboarding process — and welcome officially to the team!
+             Congratulations on successfully completing your onboarding process and welcome officially to the team!
 
              We are excited to have you with us and look forward to the great work you'll do. Over the past few days, you have taken your first steps into our company culture, systems, and values, and we hope the experience has been informative and engaging.
              If you have any lingering questions or need further support, please don't hesitate to reach out to your manager or the HR team. Your growth and success are important to us, and we're here to support you every step of the way.
@@ -341,11 +347,11 @@ The inputs provided to the Employee Onboarding Workflow are read-only in nature.
              <copy>
             ```
 
-    ![Create activity to send email trainings](./images/send-email2.png " ")
+    ![Create activity to send email trainings](./images/onboarding-comp-email.png " ")
 
-3. Click **Save**.
+5. Click **Save**.
 
-    ![Save page](./images/save-page.png "")
+    ![Save page](./images/save-pages-email.png "")
 
 ## Summary
 

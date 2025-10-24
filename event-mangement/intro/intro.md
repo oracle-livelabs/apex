@@ -2,24 +2,25 @@
 
 ## About this Workshop
 
-In this hands-on lab, you will build a dynamic and interactive application using Oracle APEX AI Assistant. This lab is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
+In this workshop, you will build a dynamic and interactive Events Management application using Generative Development in Oracle APEX. This workshop is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
 
-You will begin by creating a data model with the assistance of AI, quickly setting up the foundation for your application. Once the data model is ready, you will use the APEX Assistant to build an initial application framework, highlighting how AI can simplify and speed up the development process.
+You will begin by creating a custom data model **using Oracle APEX AI Assistant**, quickly setting up the foundation for your application. Once the data model is ready, you will use the APEX Assistant to build an initial application blueprint, highlighting how AI can simplify and speed up the development process.
 
 Next, you will customize your application using Oracle APEX low-code features, making adjustments with pre-built components that streamline the enhancement process. You also learn how to generate SQL queries with the help of APEX Assistant, simplifying the creation of complex queries for your application.
 
-As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the Show AI Assistant dynamic Action of APEX of APEX, providing a responsive interface for real-time user interaction.
+As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the **Show AI Assistant** dynamic Action of APEX, providing a responsive interface for real-time user interaction.
+
+Total Workshop Time: 30 minutes
+
+Total Workshop Time: 30 minutes
 
 ### Objectives
 
-- Obtain a free development environment.
-- Create a Data Model using AI.
-- Create an application on the new data structures using APEX Assistant.
-- Refine the application by generating SQL using APEX assistant.
+- Create a Custom Data Model using AI.
+- Generate an application using APEX AI Assistant.
+- Customize/ Enhance the application by leveraging APEX assistant to generate SQL queries in the Code Editor.
 - Create an AI Chat Assistant to inquire about the Events.
 - Add functionality to Generate Text with AI.
-
-Total Workshop Time: 30 minutes
 
 ## Prerequisites
 
@@ -51,7 +52,7 @@ Total Workshop Time: 30 minutes
 
 | | Module | Est. Time |
 |--- |--- | --- |
-| 1.|[Configure Generative AI Service and Create a Data Model using AI](?lab=1-create-data-model) | 5 minutes |
+| 1.|[Configure Generative AI Service and Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 5 minutes |
 | 2.|[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
 |3.|[Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
 | 4.|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
@@ -70,7 +71,7 @@ Total estimated time: 30 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevent_management_hol.sql)** to download the completed application.
+1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevents-management-hol.sql)** to download the completed application.
 
 2. Import the event\_management\_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 
@@ -90,7 +91,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
         - Credential Name: **Authorization**
 
-        - Credential Secret: Enter **Bearer YOUR_KEY**
+        - Credential Secret: Enter **YOUR_KEY**
 
     - Click **Apply Changes**.
 
@@ -106,5 +107,5 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

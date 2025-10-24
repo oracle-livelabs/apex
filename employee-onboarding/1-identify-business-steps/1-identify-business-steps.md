@@ -18,7 +18,7 @@ To achieve this, we will:
 
 - Define the key participants (HR, IT, Employee, Workflow automation).
 
-> **Note:** _In APEX Workflow terminology, we refer to an executable step as an **Activity** and a sequence/condition as a **Connection**._
+*Note: In APEX Workflow terminology, we refer to an executable step as an **Activity** and a sequence/condition as a **Connection**.*
 
 ### Objectives
 
@@ -26,7 +26,7 @@ In this lab, you will:
 
 - Identify Business steps required to create **Employee Onboarding** Application.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Prerequisites
 

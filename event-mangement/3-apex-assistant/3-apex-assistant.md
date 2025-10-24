@@ -1,8 +1,8 @@
-# Enhance Charts and Database Objects with APEX Assistant
+# Enhance Charts and Database Objects using AI
 
 ## Introduction
 
-In this lab, you will learn how to enhance charts in Oracle APEX using APEX Assistant. Instead of manually writing queries, we will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach speeds up development and shows how AI-powered assistance can simplify complex tasks such as data visualization.
+In this lab, you will learn how to enhance charts in Oracle APEX using AI. Instead of manually writing queries, you will use natural language prompts to ask the APEX Assistant to generate the required SQL. This approach speeds up development and shows how AI-powered assistance can simplify complex tasks such as data visualization.
 
 In addition to enhancing charts, you will also create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
 
@@ -10,17 +10,17 @@ Estimated Time: 5 minutes
 
 ### Objectives
 
-- Enhance charts by using APEX Assistant to generate SQL queries through natural language.
+- Enhance charts by using AI-powered APEX Assistant to generate SQL queries through natural language.
 
-- Create PL/SQL packages using APEX Assistant in SQL Commands.
+- Create PL/SQL packages using AI-powered APEX Assistant in SQL Commands.
 
-## Task 1: Enhance Charts with APEX Assistant
+## Task 1: Enhance Charts using AI
 
-1. From the runtime environment, navigate to the developer toolbar and click **Page 1**.
+1. From the browser tab where the app is running, navigate to the developer toolbar and click **Page 1**.
 
     !["Click App Builder"](images/event-dashboard.png "")
 
-2. In the page designer, select **Created** region. In the property editor, update **Identification > Name** to **Event Types**.
+2. In the page designer, select the region created under **Body**. In the property editor, update **Identification > Name** to **Event Types**.
 
     !["Click App Builder"](images/event-types.png "")
 
@@ -30,8 +30,12 @@ Estimated Time: 5 minutes
 
 4. Navigate to **APEX Assistant**. Select your query. From the menu, select **Query Builder** (if not already selected). In the APEX Assistant box, enter the following prompt and press enter:
 
+    ```
+    <copy>
     >Prompt 1:
     >Provide a breakdown of event types.
+    </copy>
+    ```
 
     !["Click App Builder"](images/code-chart.png "")
 
@@ -39,8 +43,12 @@ Estimated Time: 5 minutes
 
 5. Next, let’s adjust the query so that the highest count appears at the top. Enter the following prompt and press Enter.
 
+     ```
+    <copy>
     >Prompt 2:
     >Show highest count at the top.
+    </copy>
+    ```
 
     !["Click App Builder"](images/code-chart1.png "")
 
@@ -50,7 +58,7 @@ Estimated Time: 5 minutes
 
 7. While **Validating**, if your query throws an error, APEX Assistant can help troubleshoot the problem.
 
-    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table name.
+    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table **ev_events**.
 
     APEX Assistant switches to General Assistance mode. Click **Help me fix this**.
 
@@ -66,9 +74,11 @@ Estimated Time: 5 minutes
 
     - Under Column Mapping:
 
-        - Series Name: **EVENT_NAME**
+        - Label: **NAME**
 
         - Value: **EVENT_COUNT**
+
+        *Note: Columns name might differ.*
 
     !["Click App Builder"](images/column-mapping-chart1.png "")
 
@@ -84,8 +94,12 @@ Estimated Time: 5 minutes
 
 12. Navigate to **APEX Assistant** and enter the following prompt:
 
+    ```
+    <copy>
     >Prompt 1:
-    >Top 5 upcoming events by registration count
+    >Top 5 upcoming events by registration count.
+    </copy>
+    ```
 
     !["Click App Builder"](images/chart2-code-prompt.png "")
 
@@ -101,9 +115,11 @@ Estimated Time: 5 minutes
 
     - Under Column Mapping:
 
-        - Series Name: **EVENT_NAME**
+        - Label: **EVENT_NAME**
 
         - Value: **REGISTRATION_COUNT**
+
+    *Note: Columns name might differ.*
 
     !["Click App Builder"](images/reg-count.png "")
 
@@ -113,11 +129,14 @@ Estimated Time: 5 minutes
 
 ## Task 2: Create a PL/SQL Package with APEX Assistant
 
+In this task, you will learn how to create a package using APEX Assistant in SQL Commands and explore how it can be leveraged to efficiently generate PL/SQL package code.
+
 1. Navigate to **SQL Workshop** and select **SQL Commands**.
 
     !["Click App Builder"](images/sql-command.png "")
 
 2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
+Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 
     ```
     <copy>
@@ -141,24 +160,28 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/paste-statement.png "")
 
-3. Click **APEX Assistant** and enter the following prompt:
+3. Click **APEX Assistant**, select **General Assistance** and enter the following prompt:
 
+     ```
+    <copy>
     >Prompt 1:
     >Generate a PL/SQL package to insert, update, and delete events.
+    </copy>
+    ```
 
-    !["Click App Builder"](images/apex-assist.png "")
+    !["Click App Builder"](images/prompt1-pack.png "")
 
-4. Select your create table statement from the code editor, click **Insert** or **Copy** and then replace the contents in your Code Editor and run it to create the package.
+4. Clear the contents of the code editor. Now, click **Insert** in the APEX Assistant to insert the code into the editor.
 
     !["Click App Builder"](images/copy-insert.png "")
 
-5. First, select the Package Specification and click **Run**.
+5. First, insert the Package Specification and click **Run**.
 
-    !["Click App Builder"](images/run-spec.png "")
+    !["Click App Builder"](images/package-spec.png "")
 
-6. Next, select the Package Body and click **Run**.
+6. Next, insert the Package Body and click **Run**.
 
-    !["Click App Builder"](images/run-body.png "")
+    !["Click App Builder"](images/package-body.png "")
 
 7. Finally, navigate to **SQL Workshop > Object Browser** to view the newly created package.
 
@@ -174,5 +197,5 @@ In this lab, you learned how to use the integrated AI Chat capability (APEX Assi
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

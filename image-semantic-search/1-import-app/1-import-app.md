@@ -8,6 +8,9 @@ You can download the Social Media Application [here](https://c4u04.objectstorage
 
 Estimated Time: 5 Minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Import Social Media App](videohub:1_8x5tzjbo)
+
 ### Objectives
 
 In this lab, you:

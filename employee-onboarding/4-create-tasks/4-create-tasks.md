@@ -8,6 +8,9 @@ These task definitions will later be integrated into a complete onboarding workf
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_jlqz4abb)
+
 ### Objectives
 
 In this lab, you will:
@@ -31,17 +34,17 @@ If you're stuck or missed out on completing the previous labs, don't worry! Clic
 Complete the following steps:
 
 1. Follow on screen instructions to import and install the app with supporting objects.
-2. Execute **Lab 2 > Task 1** to install application users.
+2. Execute **Lab 2 > Task 1** to create Workspace users.
 
 Then, proceed with the below tasks.
 
 ## Task 1: Create Task Definitions for IT Setup
 
-In this task, you will create a task definition for IT Setup and assign it to the IT staff.
+In this task, you will create a Task Definition for IT Setup and assign it to the IT staff.
 
-1. Click **Shared Components**.
+1. In your Employee Onboarding Application home page, navigate to **Shared Components**.
 
-    ![Shared Component](images/shared-componen.png "")
+    ![Shared Component](images/shared-comps2.png "")
 
 2. Under Workflows and Automations, select **Task Definitions**.
 
@@ -85,11 +88,11 @@ In this task, you will create a task definition for IT Setup and assign it to th
          </copy>
         ```
 
+        This step ties our task to the system of records, in this case, the employee's records.
+
+    *Note: APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's number).*
+
     ![Task Definitions](images/create-task-details4.png "")
-
-    This step ties our task to the system of records, in this case, the employee's records.
-
-    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's number)._
 
 8. Navigate to **Participants** tab, and click **Add Row**. Enter/select the following details:
 
@@ -163,11 +166,11 @@ In this task, you will create a task definition for IT Setup and assign it to th
             </copy>
             ```
 
+    *Note: APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's id)*
+
     ![Select Allocate Trainings](./images/allocate-training.png " ")
 
     ![Configure Actions Source for Allocate Trainings](./images/set-training-sql-query.png " ")
-
-    > **Note:** _APEX$TASK\_PK is a substitution string holding the primary key value of the system of records (in this case, the employee's id)._
 
 5. Now, navigate to **Participants** tab, click **Add Row** and enter/select the following:
 
@@ -202,6 +205,8 @@ In this task, you will create a task definition for IT Setup and assign it to th
     - Expiration Policy: **Renew**
     - Maximum Renewal Count: **3**
 
+    *Note: The Due On Interval is set to **P2D**, which represents a period of 2 days.*
+
     ![Add Task Deadlines](./images/add-training-deadlines.png " ")
 
 8. Click **Apply Changes**.
@@ -212,11 +217,12 @@ In this task, you will create a task definition for IT Setup and assign it to th
 
 10. Navigate to the **Actions** tab, and click **Add Action**.
 
-   ![Select Task](./images/add-actions.png " ")
+    ![Select Task](./images/add-actions.png " ")
 
 11. Enter/Select the following in the Edit Action page:
 
     - Under Action:
+
         - Name: **Send Email**
         - Type: **Send E-Mail**
         - On Event: **Before Expire**
