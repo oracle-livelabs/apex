@@ -118,9 +118,9 @@ The shopping cart page allows users to review and edit the products in the cart.
 
     ![Application home page.](./images/create-page2.png " ")
 
-3. Select **Blank Page**.
+3. Select **Blank Page** and click **Next**.
 
-    ![Application home page.](./images/create-blankpage.png " ")
+    ![Application home page.](./images/blank-page1.png " ")
 
 4. Enter/select the following:
 
@@ -144,7 +144,7 @@ The shopping cart page allows users to review and edit the products in the cart.
 
 This region will list the items that have been added temporarily to the shopping cart.
 
-1. In the new page created, navigate to the **Gallery Menu**.
+1. In the new page created, navigate to the **Gallery Menu**, select **Regions**.
 
 2. Drag a **Cards** region and drop it to the **Body** section.
 
@@ -239,7 +239,7 @@ This region will list the items that have been added temporarily to the shopping
 
 This action allows customers to open a page to edit a particular item in the shopping cart.
 
-1. Under **Rendering** tab (left pane), navigate to **Shopping Cart** region and select **Actions**.
+1. Under **Rendering** tab (left pane), expand **Shopping Cart** region and select **Actions**.
 
 2. Right-click **Actions** and select **Create Action**.
 
@@ -342,6 +342,10 @@ This action allows customers to open a page to edit a particular item in the sho
     | Proceed | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     | Clear | Item is NOT NULL | SHOPPING\_CART\_ITEMS |
     {: title="Server Side Condition for the 2 Buttons"}
+
+    - Navigate to **Application**.
+
+    ![Navigate to Application](./images/nav-application.png " ")
 
     ![Button properties in the Property Editor](./images/buttons.png " ")
 

@@ -26,6 +26,8 @@ In this task, you will start by loading data from a spreadsheet into Oracle APEX
 
     ![Create Application](images/create-app1.png " ")
 
+    ![Create Application](images/click-create.png " ")
+
 2. Select **Create App From a File**.
 
     ![Create application from a file](images/from-a-file.png " ")
@@ -172,5 +174,5 @@ The next workshop will teach you to navigate and review the page designer panes.
 
 ## Acknowledgements
 
-- **Author** -  Roopesh Thokala, Senior Product Manager, Ankita Beri, Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author** -  Roopesh Thokala, Senior Product Manager, Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

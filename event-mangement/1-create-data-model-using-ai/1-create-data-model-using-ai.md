@@ -1,12 +1,8 @@
-# Configure Generative AI Service and Create a Data Model using AI
+# Create a Data Model using Generative AI
 
 ## Introduction
 
-In this lab, you learn how to configure Generative AI Services to create a data model, build an application, generate SQL queries, Generate AI-powered text, and develop a chatbot. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes project statuses, milestones, tasks, to-dos, links, and comments—tools for efficient project management.
-
-In this lab, you will explore how to use Generative AI Services to build a complete application. You will configure the Generative AI services to create a data model, generate SQL queries, produce AI-powered text, and develop a chatbot. Before starting, ensure you have a secure key to access OCI Generative AI, or OpenAI, or Cohere services.
-
-Using Generative AI, you will design a data model tailored for project management, incorporating key elements such as project statuses, milestones, tasks, task to-dos, task links, and comments. These components will provide the foundation for building an efficient and interactive project management application.
+In this lab, you learn how to create a data model using Generative AI. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues and attendees for efficient event management.
 
 Estimated Time: 5 minutes
 
@@ -14,11 +10,9 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Create/Configure Generative AI Services into your APEX Workspace.
-
 - Create a Data Model using AI in Oracle APEX Workspace.
 
-### What You will Need
+### Before You Start
 
 - Sign up and Get access for one of the supported Generative AI Services like OCI Generative AI, OpenAI or Cohere.
 
@@ -26,55 +20,9 @@ In this lab, you will:
 
 - An APEX Workspace
 
-## Task 1: Creating a Generative AI Service Object - Open AI
+## Task 1: Create Event Management Data Model using AI
 
-1. Log into your workspace.
-
-2. From your APEX workspace home page, click **App Builder**
-
-    ![Click App Builder](./images/click-app-builder.png " ")
-
-3. On the **App Builder** page, select **Workspace Utilities**.
-
-    ![Select workspace utilities](./images/select-workspace-utilities.png " ")
-
-4. Under Workspace Utilities, click **Generative AI**.
-
-    ![click generative AI](./images/click-generative-ai.png " ")
-
-5. On the **Generative AI Services** page, click **Create**.
-
-    ![Click create](./images/click-create.png " ")
-
-6. If AI Provider is Open AI, under **Create/Edit** Generative AI Service Page, enter the following details.
-
-    - Under Identification:
-
-        - AI Provider: **Open AI**
-
-        - Name: **Open AI**
-
-    - Settings > Used by App Builder: **Toggle On**
-
-    - Credentials > API Key: Type 'Bearer **Enter the API Key you procured from OpenAI**'
-
-    - Advanced > AI Model: **gpt-4o**
-
-    >**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
-
-7. To validate the information you enter prior to completing the setup, click **Test Connection**.
-
-    ![create generative ai service](./images/create-gen-ai-service.png " ")
-
-8. Once the Connection is Successful, click **Create**.
-
-    ![connection successful](./images/connection-successfull-create.png " ")
-
-    ![AI Service Configured](./images/genai-service-created.png " ")
-
-## Task 2: Create Event Management Data Model using AI
-
-To create a data model with AI, you need to have a configured Generative AI Service and ensure the **Used by App Builder** is enabled. If no AI Service is available, the Create Data Model Using AI option will not be visible.
+To create a data model with AI, ensure that you have configured Generative AI Service and enabled **Used by App Builder** (Refer to the previous Task). If a Generative AI Service is not configured, the Create Data Model Using AI option will not be visible.
 
 1. Login to your Application. On the Workspace home page, click **SQL Workshop**.
 
@@ -92,40 +40,52 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     >**Note:** You can also access Create Data Model Using AI directly from the Tasks list on the SQL Workshop home page.
 
-4. When using Generative AI features within the APEX development environment, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a Dialog regarding **consent**. Click on **Accept**.
+4. When using Generative AI features within the APEX development environment *for the first time*, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a Dialog regarding **consent**. Click on **Accept**.
 
     ![provide consent](./images/provide-consent.png " ")
 
-5. Use the **APEX Assistant** Wizard to create a Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
+5. You will use the **APEX Assistant** Wizard to create a *Event Management* Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
-    >Prompt:
-    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees
+    ```
+    <copy>
+    >Prompt 1:
+    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees.
+    </copy>
+    ```
 
     !["provide prompt"](images/provide-prompt1.png "")
 
 6. Enter another prompt to **Add Event Types**.
 
-    >Prompt:
+    ```
+    <copy>
+    >Prompt 2:
     >Add Event Types
+    </copy>
+    ```
 
     !["provide prompt"](images/add-event-types.png "")
 
 7. Add another prompt to update prefix of all database objects.
 
-    >Prompt:
+    ```
+    <copy>
+    >Prompt 3:
     >Prefix all objects with ev_
+    </copy>
+    ```
 
     !["provide prompt"](images/prefix.png "")
 
-8. To complete the **SQL script**, click **Create SQL Script**.
+8. At this point, you are satisfied with the generated SQL script. Click **Create SQL Script**.
 
     !["click create sql script"](images/review-quick-sql.png "")
 
-9. For Script Name: Enter **Event Data Model**.
+9. For Script Name, enter **Event Data Model**.
 
     !["provide script name"](images/event-data-model.png "")
 
-10. Now to add sample data into the tables. Click **APEX Assistant**.
+10. Next, we'd like to add sample data into the tables. To do this, we leverage the APEX Assistant in the Code Editor. Click **APEX Assistant**.
 
     !["provide script name"](images/click-apex-assistant.png "")
 
@@ -135,16 +95,20 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
 12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
 
-    >Prompt:
+    ```
+    <copy>
+    >Prompt 1:
     >Generate Sample Data
+    </copy>
+    ```
 
     !["provide script name"](images/generate-sample-data.png "")
 
-13. **Copy** the generated insert queries from the APEX Assistant box. insert it into the left code editor in the end.
+13. **Copy** the generated insert queries from the APEX Assistant box.
 
     !["provide script name"](images/copy-query.png "")
 
-14. Paste the copied queries into the left code editor in the end.
+14. Paste the copied queries into the left-hand side code editor towards the end.
 
     !["provide script name"](images/insert-query.png "")
 
@@ -574,7 +538,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
 
-16. After replacing the code, click **Run** and confirm it with **Yes**.
+16. After replacing the code, click **Run** and select **Yes** to confirm.
 
     !["run now"](images/confirm-yes.png "")
 
@@ -582,19 +546,19 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["run now"](images/run-now.png "")
 
-18. We can see that all the statements were run successfully.
+18. Observe that all the statements were run successfully.
 
     !["data model created"](images/successful-statemwnts.png "")
 
-    *Note: You do NOT want to click Create Application, as you will use Generative AI to create an application later.*
+    *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
 
-## Task 3: Review Database Objects
+## Task 2: Review Database Objects
 
 1. Navigate to **SQL Workshop** > **Object Browser**.
 
     ![SQL Workshop home page](./images/object-browser.png " ")
 
-2. Click on tables to view different tables and then you will see various tabs, such as Data, Constraints, and so forth, to review the table details.
+2. Expand **Tables** in the Object Pane to view different tables. Select a table to view table details such as Data, Constraints, and so forth in the Details View pane on the right.
 
     ![Object Browser](./images/view-tables.png " ")
 
@@ -604,5 +568,5 @@ You now know how to configure Generative AI Services using Workspace Utilities a
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

@@ -16,11 +16,11 @@ Estimated Time: 5 minutes
 
 ## Task 1: Add Generate Description Button
 
-1. In the runtime environment, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
+1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-11.png "")
+    !["Click App Builder"](images/navigate-to-1.png "")
 
 2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
 
@@ -157,7 +157,15 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/gen-text.png "")
 
-6. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
+6. Navigate to **Rendering** tab, select **P11_ID** and update the following and click **Save**.
+
+    - Session State > Storage: **Per Session (Persistent)**
+
+    *Note: This is to maintain for each session by storing the value in the database, to access it across requests.*
+
+    !["Click App Builder"](images/per-session.png "")
+
+7. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
 
     !["Click App Builder"](images/view-desc.png "")
 
@@ -167,5 +175,5 @@ In this lab, you built an AI-powered feature to generate event descriptions in O
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

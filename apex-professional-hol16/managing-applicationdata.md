@@ -382,7 +382,7 @@ In this task, you will create a Data Load Definition and use it to load data int
 
         - Page Number: **44**
 
-        - Name :**Data Loading**
+        - Name: **Data Loading**
 
     - Data Load Attributes > Data Load: **Data Loading**
 
@@ -416,5 +416,5 @@ In the upcoming hands-on lab, you will learn to integrate multi level authentica
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
