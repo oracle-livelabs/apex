@@ -179,13 +179,15 @@ In this task, you will set up an AI configuration and then add RAG sources to it
 
     - Settings > Send On Page Submit: Toggle **OFF**
 
+    - Drag the Page Item **P18\_REVIEW\_SUMMARY** above **Products** card region.
+
     ![create page wizard](./images/reviewsummary1.png " ")
 
 7. Navigate to **Dynamic Action** tab, right-click **Page Load** and select **Create Dynamic Action**.
 
     ![create page wizard](./images/create-da-rag.png " ")
 
-8. In the Property Editor, for Name: enter **Generate Summary**.
+8. In the Property Editor, enter Name: **Generate Summary**.
 
     ![create page wizard](./images/generate-summary.png " ")
 

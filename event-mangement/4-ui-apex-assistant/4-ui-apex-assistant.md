@@ -1,8 +1,8 @@
-# Enhance UI with APEX Assistant
+# Enhance UI with AI
 
 ## Introduction
 
-In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features like avatars, badges, and title links. Additionally, you will use APEX Assistant to modify SQL queries and generate dynamic HTML for improved descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity tools, resulting in a richer and more engaging user experience.
+In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features like avatars, badges, and title links. Additionally, you will use the AI-powered APEX Assistant to modify SQL queries and generate dynamic HTML for improved descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity tools, resulting in a richer and more engaging user experience.
 
 Estimated Time: 5 minutes
 
@@ -12,19 +12,19 @@ By the end of this lab, you will be able to:
 
 - Convert a classic report into a content row layout to improve readability and design.
 
-- Use APEX Assistant in the code editor to extend SQL queries and generate HTML.
+- Use AI-powered APEX Assistant in the code editor to extend SQL queries and generate HTML.
 
 - Enhance the report with avatars, badges, and hyperlinks for better interactivity.
 
 ## Task 1: Convert a Classic Report into a Content Row
 
-1. From the runtime environment, navigate to your faceted search page. For this demo, the page is *Discover Events*. The name might differ because the app was generated using AI.
+1. From the browser tab where the app is running, navigate to your faceted search page. In this lab, the page is called *Discover Events*. The name might differ because the app was generated using AI.
 
     !["Click App Builder"](images/discover-events.png "")
 
     >Note: Since the page name is AI-generated, it may differ. This is the Faceted Search page created on the *EV_EVENTS* table.
 
-2. From the developer toolbar, click **Page 3**.
+2. From the Developer Toolbar, click **Page 3**.
 
     !["Click App Builder"](images/edit-page.png "")
 
@@ -58,12 +58,16 @@ By the end of this lab, you will be able to:
 
 6. Select the SQL Query. Click **APEX Assistant** and add the following prompt:
 
+    ```
+    <copy>
     >Prompt 1:
-    > Add venue and event type
+    > Add venue and event type.
+    </copy>
+    ```
 
     !["Click App Builder"](images/add-event-promt.png "")
 
-7. Click **Insert** or replace the SQL query given below:
+7. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
 
     ```
     <copy>
@@ -100,34 +104,56 @@ By the end of this lab, you will be able to:
 
 10. Select **&DESCRIPTION.** and click **APEX Assistant**. Now add the following prompts:
 
+     ```
+    <copy>
     > Prompt 1:
-    > Generate an HTML to display start date and venue as a labelled information using span tag.
+    > Generate an HTML to display start date and end date as a labelled information using span tag.
+    </copy>
+    ```
 
-    !["Click App Builder"](images/generate-html.png "")
+    !["Click App Builder"](images/gen-html.png "")
 
+     ```
+    <copy>
     > Prompt 2:
-    > Use APEX substitution strings
+    > Use APEX substitution strings.
+    </copy>
+    ```
 
     !["Click App Builder"](images/substitution-apex.png "")
 
+     ```
+    <copy>
     > Prompt 3:
     > Display it below description
+    </copy>
+    ```
 
     !["Click App Builder"](images/below-desc.png "")
 
-11. Click **Insert** and **OK**.
+11. Click **Insert** and then **OK**, or replace the existing content with the HTML provided below to achieve the expected output:
 
-    !["Click App Builder"](images/insert-html.png "")
+    ```
+    <copy>
+    <span>&DESCRIPTION.</span><br>
+    <span><strong>Start Date:</strong> <span>&START_DATE.</span></span>
+    <span style="margin-left: 20px;"><strong>End Date:</strong> <span>&END_DATE.</span></span>
+    </copy>
+    ```
+
+    !["Click App Builder"](images/insert-desc.png "")
+
+    !["Click App Builder"](images/insert-desc1.png "")
 
 12. Click **Save and Run**.
 
     !["Click App Builder"](images/saverun.png "")
 
-13. Now, view the updated content row report using APEX Assistant.
+13. Now, view the updated content row report.
 
     !["Click App Builder"](images/view-content-row.png "")
 
-14. Next, add a badge to the content row. Navigate back to the page designer. Navigate to **Attributes** tab and enter/select the following:
+14. Next, let's add a badge to the content row. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
 
     - Settings > Display Badge: Toggle **On**
 
@@ -147,7 +173,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/save-run2.png "")
 
-16. Next, add a hyperlink to the title to open a form page. Navigate back to the page designer. Under **Events** region, right-click **Actions** and click **Create Action**.
+16. Next, let's add a hyperlink to the title to open a form page. Switch to the Page Designer tab. Under **Events** region, right-click **Actions** and click **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
 
@@ -164,6 +190,7 @@ By the end of this lab, you will be able to:
             | Name | Value |
             | ----- | ---- |
             | P11_ID | &ID.|
+            {: title="Set Items"}
 
         - Clear Cache: **11**
 
@@ -177,7 +204,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/save-run3.png "")
 
-    !["Click App Builder"](images/view-title-link.png "")
+    !["Click App Builder"](images/title-link1.png "")
 
 ## Summary
 
@@ -185,6 +212,5 @@ In this lab, you transformed a classic report into a content row layout, improvi
 
 ## Acknowledgments
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, August 2025
-
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

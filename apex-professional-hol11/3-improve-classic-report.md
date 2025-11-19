@@ -185,5 +185,5 @@ In the next Lab, you learn how to create and customize a Form and then link the 
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
