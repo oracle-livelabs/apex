@@ -32,7 +32,7 @@ Basic experience with OCI Cloud Console and standard components.
 1. In your APEX Workspace, click App Builder and Click Create. Here we can Select Create App From a File . 
     ![Create A NewApp](./images/create_a_new_app.png  "Create a new APEX application")
 
-2. Here we will load in our data. Download the [sample](./datasets/movies_sample.csv) data. Click the select file option and select the correct file from your file browser. 
+2. Here we will load in our data. Right click the ["fictionalmovies.csv"](./datasets/fictionalmovies.csv) link, Select "Save Link As"/"Download Linked File" to download it to your local folder. Click the choose file option and select the fictionalmovies.csv file from your local file browser. 
     ![Drag Drop](./images/drag_drop.png  "Drag and drop CSV file to load sample data into APEX")
 
 3. Give this table a name, Movies, and click Load Data
@@ -43,7 +43,7 @@ Basic experience with OCI Cloud Console and standard components.
 5. Give the application a name, and select an Icon if you would like to change it. By default, APEX will create some pages for you in the application.
     ![Application Creation](./images/application_creation.png  "Configure application name and icon")
 
-6. You can select Access Control from the features selection so we can manage how users login.
+6. You can select Access Control from the features selection so we can manage how users login. Click 'Create Application'
     ![Access Control](./images/access_control.png  "Set access control and user login options for the app")
 
 7. Now you will see all the pages that were created for the application. Launch the application by clicking the play button Run Application so we can see what it looks like.
@@ -80,7 +80,7 @@ Basic experience with OCI Cloud Console and standard components.
     ```
     ![AI Configuration](./images/welcome_message.png  "Set welcome message for AI chatbot")
 
-5. Next we will add our database table as a RAG source for our AI Assistant. Click Create RAG Source. Enter a name and for the SQL query, enter
+5. Next we will add our database table as a RAG source for our AI Assistant. Select 'RAG Source tab' and click Create RAG Source. Enter a name and for the SQL query, enter
     ```
     <copy>
     SELECT * FROM MOVIES

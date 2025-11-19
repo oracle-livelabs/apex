@@ -358,5 +358,5 @@ In the next workshop, you learn how to customize Interactive Grid as a developer
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

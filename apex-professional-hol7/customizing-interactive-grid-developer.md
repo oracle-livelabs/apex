@@ -46,7 +46,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     ![Edit Page 4](./images/click-page.png " ")
 
-3. In the Property Editor, add the following column group headers to the interactive grid:
+3. In the Property Editor, add the following Column Group headers to the interactive grid:
 
     - **Project Breakdown**: Project, Task_Name columns
 
@@ -54,7 +54,9 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     - **Project Financing**: Cost, Budget columns
 
-    **a)** Navigate to **Project Tasks** region, right-click **Column Groups** and select **Create Column Group**. Create the following three column groups one after the other.
+    **a)** Navigate to **Project Tasks** region, right-click **Column Groups** and select **Create Column Group**.
+
+    Create the following three Column Groups one after the other.
 
     | Column Group          | Heading       |
     | --------------------- | ----------- |
@@ -67,7 +69,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     ![Add column group headers](./images/reate-column-group1.png " ")
 
-    **b)** Now that you have created column groups, you must assign them columns. Expand **Columns** in the rendering tree and select **PROJECT** and **TASK_NAME** columns.
+    **b)** Now that you have created Column Groups, you must assign them columns. Expand **Columns** in the rendering tree and select **PROJECT** and **TASK_NAME** columns.
 
     In the property editor, under **Layout**, select **Project Breakdown** for the group.
 
@@ -75,25 +77,27 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     **c)** Then, in thee rendering tree, select **START\_DATE** and **END\_DATE** columns.
 
-    In the property editor, under **Layout**, select **Schedule** for the group.
+    In the property editor, under **Layout**, select **Schedule** for the Group.
 
     ![Add column group headers](./images/select-schedule-group11.png " ")
 
-    **d)** Finally, in the rendering tree, select **COST**, and **BUDGET** columns. In the property editor, under **Layout**, select **Project Financing** for Group.
+    **d)** Finally, in the rendering tree, select **COST**, and **BUDGET** columns.
+
+    In the property editor, under **Layout**, select **Project Financing** for Group.
 
     Then, click **Save and Run**.
 
     ![Add column group headers](./images/select-financing-group11.png " ")
 
-    **e)** The interactive grid now displays column groups.
+    **e)** The interactive grid now displays Column Groups.
 
     ![Add column group headers](./images/display-groups11.png " ")
 
-4. Rearrange the columns in the interactive grid. You want to display the column groups Project Breakdown, Schedule, and Project Financing in order, followed by Status and Assigned To.
+4. Rearrange the columns in the interactive grid. You want to display the Column Groups Project Breakdown, Schedule, and Project Financing in order, followed by Status and Assigned To.
 
-    **a)** Hover the mouse over the **Project Financing** column group header to display the drag handle. Your mouse cursor also changes when it comes into contact with the drag handle. Click and hold the **drag** handle.
+    **a)** Hover the mouse over the **Project Financing** Column Group header to display the drag handle. Your mouse cursor also changes when it comes into contact with the drag handle. Click and hold the **drag** handle.
 
-    **b)** Then, drag the column group to the **Status** column location. The Heading shifts out of place in the row. The Status column should follow the Project Financing column group. Release the mouse. The Project Financing column group drops into place.
+    **b)** Then, drag the Column Group to the **Status** column location. The Heading shifts out of place in the row. The Status column should follow the Project Financing Column Group. Release the mouse. The Project Financing Column Group drops into place.
 
     ![Add column group headers](./images/rearrange-column11.png " ")
 
@@ -123,7 +127,7 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     ![Editable interactive grid](./images/edit-enabled11.png " ")
 
-7. Delete the column groups in the interactive grid.
+7. Delete the Column Groups in the interactive grid.
 
     Navigate to Project Tasks > Column Groups. Right-click **Schedule**, **Project Breakdown** and **Project Financing**, and select **Delete**.
 
@@ -151,5 +155,5 @@ You now know how to Manage and Customize the Interactive Grid as a Developer. Yo
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, SeniorProduct Manager, October 2025

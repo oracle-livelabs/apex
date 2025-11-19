@@ -61,7 +61,7 @@ To do this, enter **server** in the search bar text area and click **Go**.
 
     ![Customize Interactive Grid](./images/set-control-break.png " ")
 
-9. In the Control Break dialog, for Column, enter **Project** and click **Save**.
+9. In the Control Break dialog, for Column, select **Project** and click **Save**.
 
     ![Customize Interactive Grid](./images/control-break1.png " ")
 
@@ -182,5 +182,5 @@ In the next workshop, you will learn how to create page items and buttons.
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

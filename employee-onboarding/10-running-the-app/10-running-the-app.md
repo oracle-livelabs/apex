@@ -54,7 +54,7 @@ In this task, you will recreate the previously created employees in the Applicat
 3. Enter the following details:
 
     - First Name: **MONICA**
-    - Personal Email: **MONICA@test.com**
+    - Personal Email: **MONICA@example.com**
     - Employee Type: **Full-Time**
     - Department: **Sales**
     - Role: **Senior Sales Engineer**
