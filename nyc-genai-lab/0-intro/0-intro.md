@@ -4,7 +4,7 @@
 
 From precisely summarizing intricate data to crafting context-aware responses, Generative AI stands at the forefront of a technological shift, promising to redefine how we navigate and leverage knowledge in our day-to-day interactions. With the introduction of AI assisted development in Oracle APEX, enabling your applications with generative AI capabilities has never been easier.
 
-In this workshop, you learn to bring Generative AI capabilities based on large language models (LLMs) to your applications built using Oracle APEX, your favourite low-code platform. The Generative AI service can be accessed through REST APIs, and by using the powerful REST Data Source capabilities of APEX, you can effortlessly incorporate this advanced technology into your applications with a low-code approach.
+In this workshop, you will learn how to build an intelligent, user-friendly school-search experience using Oracle APEX. We’ll start by implementing **Faceted Search** for **Cards** and **Map** regions of APEX to help users quickly explore and identify the right school. Then, we’ll enhance the application with a conversational chatbot powered by **APEX Generative AI** features, enabling users to ask natural questions about any school. Finally, we’ll use Generate AI to automatically draft a polished email for applying to a school, showcasing how AI can streamline real-world tasks end to end.
 
 <!-- ## What is OCI Generative AI service?
 
@@ -17,7 +17,6 @@ In this workshop, you learn to bring Generative AI capabilities based on large l
 
 You can read more about these models from the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm). -->
 
-This workshop will guide you through the process of utilizing the generation models within the Generative AI Service to develop a "Ask Questions" feature for the New York High Schools APEX application. This functionality empowers parents to inquire about school facilities, policies, and more, aiding them to make an informed decision about whether a specific school is the ideal fit for their child.
 
 Here is a quick overview of the app you will be building:
 ![Demo Application](./images/nyc-genai.gif " ")
@@ -26,11 +25,16 @@ Estimated Time: 60 minutes
 
 ### **Objectives**
 
-* Implement Faceted Search for Cards and Map Regions to filter and search for the best school.
-* Build a conversational chatbot using Generative AI to ask questions about a school.
-* Generate Email using Generative AI to apply to a school.
+* Implement **Faceted Search for Cards** and **Map Regions** to filter and search for the best school.
+* Build a conversational chatbot to ask questions about a school using the **Generative AI** features of Oracle APEX such as **AI configurations, RAG sources** and **Show AI Assistant Dynamic Actions**.
+* Utilize the **Generate Text with AI Dynamic Action** to Generate Email using Generative AI to apply to a school.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+
+*Note:This workshop assumes you are using Oracle APEX 24.2.*
+
+**Quick Tip:**
+- If you’re interested in exploring only the **Generative AI** features, begin directly with [Lab 3](lab=3-configure-oci).
+- Before you start, make sure to download and install the starter application provided at the beginning of **Lab 3**.
 
 ## Prerequisites
 
@@ -61,6 +65,7 @@ Estimated Time: 60 minutes
 - This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 - The application ID in the screenshots may vary. Please ignore the application ID.
 
+
 ## Labs
 
 | Module | Est. Time |
@@ -83,9 +88,9 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, you can download and install one of the the completed app as follows:
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file until Lab 6. Note: This application export does not include the vector search covered in **Optional Lab 7**. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 and Task 2.
+- **OPTION 1:** [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file until Lab 6. Note: This application export does not include the vector search covered in **Optional Lab 7**. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 and Task 2.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-vector-search.zip) to download the completed application zip file until Lab 7. Note: This application export includes the vector search covered in **Optional Lab 7**. To run this app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 till Task 3. Note: This app requires Oracle Database 23ai and Oracle APEX 24.2.
+- **OPTION 2:** [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-vector-search.zip) to download the completed application zip file until Lab 7. Note: This application export includes the vector search covered in **Optional Lab 7**. To run this app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 till Task 3. Note: This app requires Oracle Database 23ai and Oracle APEX 24.2.
 
 
 ## Learn More - *Useful Links*
