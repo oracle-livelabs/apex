@@ -6,7 +6,6 @@ To use the native GenAI features in APEX, you must configure a Generative AI ser
 
 <if type="OCIGenAI">
 
-
 In this lab, you use OCI Generative AI as the AI provider to build a conversational chatbot. To use the OCI Generative AI Service in APEX, you need to first configure the OCI API keys. In Oracle Cloud Infrastructure (OCI), API keys are used for secure authentication when accessing OCI resources through REST APIs.
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
@@ -25,11 +24,11 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you:
 
-- Generate API Keys using OCI Console
+- Generate API Keys using OCI Console.
 
-### Downloads
+### Download the Starter App
 
-If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the **Appendix Lab**:
+If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the starter app, which contains everything completed until Lab 2. To run the app, follow the steps described in the **Appendix Lab**:
     - [Task 1: Import the App into an APEX Workspace](?lab=8-appendix&type=OCIGenAI#Task1:ImporttheAppintoanAPEXWorkspace)
     - [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](?lab=8-appendix&type=OCIGenAI#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 
