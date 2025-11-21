@@ -22,7 +22,7 @@ In this lab, you will:
 
 ## Task 1: Create a Map Region
 
-1. Navigate to Page 1 (Search and Apply) in the Page Designer. In the rendering tree, right-click **Body** and select **Create Region**.
+1. Navigate to Page 1 (Search and Apply) in the Page Designer. In the Left Pane (Rendering Tree), right-click **Body** and select **Create Region**.
 
     ![Page designer](images/new-region.png " ")
 
@@ -41,7 +41,7 @@ In this lab, you will:
 
     ![Page designer](images/map-region-2.png =40%x*)
 
-3. In the rendering tree, select the **New** layer created under Map.
+3. In the Left Pane (Rendering Tree), select the **New** layer created under Map.
     ![Page designer](images/new-layer.png =40%x*)
 
 4. In the Property Editor, enter/select the following:
@@ -63,7 +63,7 @@ In this lab, you will:
 
     ![Page designer](images/school-layer-2.png =40%x*)
 
-5. In the rendering tree, under Map, right-click **Layers** and select **Create Layer**.
+5. In the Left Pane (Rendering Tree), under Map, right-click **Layers** and select **Create Layer**.
     ![Page designer](images/new-layer-2.png =40%x*)
 
 6. In the property editor, enter/select the following:
@@ -164,7 +164,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     ![SQL Commands editor](images/plsql.png ' ')
 
 4. Navigate to **App Builder** > **Highschools** > **Search and Apply**.
-   In the rendering tree, select the **Map** region. In the property editor, enter the following:
+   In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
     - Source > Where Clause:
         ```
         <copy>
@@ -177,7 +177,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
     ![Page Designer](images/where-clause.png ' ')
 
-5. In the rendering tree, navigate to the Dynamic Actions tab. Right-click on **Events**, and select **Create Dynamic Action**.
+5. In the Left Pane (Rendering Tree), navigate to the Dynamic Actions tab. Right-click on **Events**, and select **Create Dynamic Action**.
 
     ![Page Designer](images/create-da.png =50%x*)
 
@@ -201,7 +201,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
 ## Task 3: Display Cards and Maps as Radio Group
 
-1. In the Rendering Tree, right-click Button Bar and select **Create Page Item**.
+1. In the Left Pane (Rendering Tree), right-click Button Bar and select **Create Page Item**.
     ![Page Designer](images/create-page-item.png ' ')
 
 2. Enter/select the following in the property editor:
