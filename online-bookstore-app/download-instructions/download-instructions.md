@@ -2,11 +2,11 @@
 
 ## Introduction
 
-In this lab, you will learn how to download and import an export file of the app. This process is essential to run the app successfully and complete the tasks that depend on the exported file. By the end of this lab, you will have a fully functional app environment for further exploration and development.
+In this lab, you will learn how to download and import an export zip file of the app. This process is essential to run the app successfully and complete the tasks that depend on the exported file. By the end of this lab, you will have a fully functional app environment for further exploration and development.
 
-## Task 1: Download the App Export
+## Task 1: Download the App Export ZIP Files
 
-You can download a lab export ZIP file from any lab. The export file is available after the introduction in all labs. Each export file contains everything completed up to the start of that specific lab.
+You can download an app export ZIP file from any lab. The file is available at the end of the introduction section in each lab. Each file contains everything completed up to the start of that specific lab.
 
 The export files in the Lab Introduction and Lab 1 include two app exports:
 
@@ -16,7 +16,7 @@ The export files in the Lab Introduction and Lab 1 include two app exports:
 
 Alternatively, you can download the export file from the table below, located in any lab row. For example, an export file in Lab Row x means the app export includes everything completed up to the end of that specific lab.
 
-| Lab |  Module | Export File | To run the app, follow the steps described in the tasks below: |
+| Lab |  Module | Export Zip File | To run the app, follow the steps described in the tasks below: |
 | --- | --- | --- | --- |
 | 1 | [Create the application](?lab=create-app) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) | Task 2 Only |
 | 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | [Download](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) | Task 2 Only |

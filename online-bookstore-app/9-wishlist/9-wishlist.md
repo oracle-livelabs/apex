@@ -10,14 +10,13 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Wishlist Page.
-- Add Dynamic Actions to refresh the wishlist content and handle interactions such as adding and removing items.
-- Create Buttons to add and remove books from the wishlist, including the necessary backend processes.
-- Update Navigation Bar to include a link to the wishlist page.
+- Create a Wishlist Page to display saved books
+- Add buttons and processes to add or remove wishlist items
+- Create a Navigation Bar Entry to access the Wishlist page
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab8.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab8.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
 
 ## Task 1: Create My Wishlist page
 
