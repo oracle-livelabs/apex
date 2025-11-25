@@ -10,15 +10,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Package to manage process of adding, removing, and processing orders and wishlist items.
-- Create Application Items
-- Create Application Processes
-- Create Application Computations
-- Set Up Book Details Page
+- Create a Package to manage adding, removing, and processing orders and wishlist items
+- Create Application Items to store shared values across pages
+- Create Application Processes to handle cart count
+- Create Application Computations to set user-related information after authentication
+- Set Up the Book Details Page to support cart actions and wishlist functionality
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab5.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab5.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
 
 ## Task 1: Create a Package to Manage Orders
 
