@@ -8,16 +8,18 @@ Estimated Time: 30 minutes
 
 ### Objectives
 
-- Create an Administration Page to manage various administrative tasks.
-- Add Navigation Entries to integrate the administration page into the application's navigation bar for easy access.
-- Configure Authorization Schemes to implement and apply security measures to control access to the administration page.
-- Manage book information for searching, viewing, and updating.
-- Develop a form for detailed editing of book records.
-- Manage user roles by viewing and updating them using interactive reports and forms.
+In this lab, you will:
+
+- Create an Administration Page to manage various administrative tasks
+- Add Navigation Entry to access the administration section
+- Configure Authorization Schemes to restrict admin access
+- Manage book information with search, view, and update options
+- Create a form for editing detailed book records
+- Manage user roles using interactive reports and forms
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab10.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab10.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
 
 ## Task 1: Create an Administration Page
 
@@ -129,7 +131,7 @@ update Image/Class: **fa-database-file**. Click **Apply Changes**.
 
 16. Click **Save**.
 
-## Task 2: Configure Navigation Bar Entries for Administration
+## Task 2: Configure Navigation Bar Entry for Administration
 
 In this task, you will add a navigation bar entry for the administration page. Additionally, apply an authorization scheme to restrict access to users with administration rights.
 

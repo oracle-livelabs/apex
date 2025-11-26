@@ -10,15 +10,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Improve Faceted Search
-- Create Search Bar
-- Enhance the Cards region
-- Activate Sorting options
-- Include a link for purchasing Books
+- Improve Faceted Search to refine filtering options
+- Create a Search Bar for keyword-based searching
+- Enhance the Cards region with richer display details
+- Activate Sorting options for better result ordering
+- Create a Book Details page as a modal dialog opened from each card
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Improve Faceted Search
 

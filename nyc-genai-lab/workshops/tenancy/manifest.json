@@ -7,8 +7,12 @@
       "filename": "../../0-intro/0-intro.md"
     },
     {
-      "title": "Get Started",
+      "title": "Sign Up for an APEX Workspace",
       "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Review Commonly Used APEX Terminology",
+      "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
     },
     {
       "title": "Lab 1: Create an APEX App",
