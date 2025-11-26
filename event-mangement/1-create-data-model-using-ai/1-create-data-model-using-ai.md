@@ -24,6 +24,8 @@ In this lab, you will:
 
 To create a data model with AI, ensure that you have configured Generative AI Service and enabled **Used by App Builder** (Refer to the previous Task). If a Generative AI Service is not configured, the Create Data Model Using AI option will not be visible.
 
+In this task, you will learn how to leverage Oracle APEX's Generative AI Service to build an Event Management Data Model without writing SQL manually. By providing simple prompts, you will generate database objects, refine them, and add sample records automatically.
+
 1. Login to your Application. On the Workspace home page, click **SQL Workshop**.
 
     ![select sql workshop](./images/select-sql-workshop.png " ")
@@ -44,12 +46,12 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
     ![provide consent](./images/provide-consent.png " ")
 
-5. You will use the **APEX Assistant** Wizard to create a *Event Management* Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
+5. You will use the **APEX Assistant** Wizard to create a *Event Management* Data Model using AI. To create a Events Management Data Model, enter the prompts mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
+    **Prompt 1:**
     ```
     <copy>
-    >Prompt 1:
-    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees.
+    Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees.
     </copy>
     ```
 
@@ -57,10 +59,10 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 6. Enter another prompt to **Add Event Types**.
 
+    **Prompt 2:**
     ```
     <copy>
-    >Prompt 2:
-    >Add Event Types
+    Add Event Types
     </copy>
     ```
 
@@ -68,16 +70,16 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 7. Add another prompt to update prefix of all database objects.
 
+    **Prompt 3:**
     ```
     <copy>
-    >Prompt 3:
-    >Prefix all objects with ev_
+    Prefix all objects with ev_
     </copy>
     ```
 
     !["provide prompt"](images/prefix.png "")
 
-8. At this point, you are satisfied with the generated SQL script. Click **Create SQL Script**.
+8. At this point, we are satisfied with the generated SQL script. Click **Create SQL Script**.
 
     !["click create sql script"](images/review-quick-sql.png "")
 
@@ -112,7 +114,9 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
     !["provide script name"](images/insert-query.png "")
 
-15. Replace the code editor with the below modified database objects code:
+15. Before clicking on **Run** button. Let's replace the code from the **Script Editor** with the below modified database objects code:
+
+    > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
 
     ```
     <copy>
@@ -536,23 +540,23 @@ To create a data model with AI, ensure that you have configured Generative AI Se
     ```
     </copy>
 
-    > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
-
-16. After replacing the code, click **Run** and select **Yes** to confirm.
+16. After replacing the code, click **Run** in the Script Editor.
 
     !["run now"](images/confirm-yes.png "")
 
-17. Review the summary and then click **Run Now**.
+17. Click **Run Now** to submit the script for execution.
 
     !["run now"](images/run-now.png "")
 
-18. Observe that all the statements were run successfully.
+18. The Manage Script Results page appears listing script results.
 
     !["data model created"](images/successful-statemwnts.png "")
 
     *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
 
 ## Task 2: Review Database Objects
+
+Now, let's review the database objects created using AI.
 
 1. Navigate to **SQL Workshop** > **Object Browser**.
 
@@ -564,9 +568,9 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 ## Summary
 
-You now know how to configure Generative AI Services using Workspace Utilities and Create a Data Model using AI. You may now **proceed to the next lab**.
+You now know how to create a Data Model using AI. You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

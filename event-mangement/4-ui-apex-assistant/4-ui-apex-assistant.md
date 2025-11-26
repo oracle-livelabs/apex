@@ -30,44 +30,30 @@ By the end of this lab, you will be able to:
 
     >Note: Page number may vary depending on your application.
 
-3. Select **Events** region. In the Property Editor, select the following:
+3. From the left pane, select **Events** region. In the Property Editor, select the following:
 
     - Identification > Type: **Content Row**
 
     !["Click App Builder"](images/content-row.png "")
 
-4. Navigate to **Attributes**. In the Property Editor, enter/select the following:
-
-    - Under Settings:
-
-        - Title: **&NAME.**
-
-        - Description: **&DESCRIPTION.**
-
-        - Display Avatar: Toggle **On**
-
-    - Avatar > Icon: **fa-calendar-month**
-
-    !["Click App Builder"](images/name-attr.png "")
-
-    !["Click App Builder"](images/desc-attr.png "")
-
-5. Navigate back to **Region** tab. In the Property Editor, update **Source > Type** to **SQL Query** and open the code editor of SQL Query.
+4. Update **Source > Type** to **SQL Query** and open the code editor of SQL Query.
 
     !["Click App Builder"](images/code-edit.png "")
 
-6. Select the SQL Query. Click **APEX Assistant** and add the following prompt:
+5. Select your SQL Query. Click **APEX Assistant** and add the following prompt:
 
+    **Prompt 1:**
     ```
     <copy>
-    >Prompt 1:
-    > Add venue and event type.
+    Add venue and event type.
     </copy>
     ```
 
     !["Click App Builder"](images/add-event-promt.png "")
 
-7. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
+6. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
+
+    *Note: By replacing it with the provided code, we ensure that your application behaves consistently and matches the expected outcome.*
 
     ```
     <copy>
@@ -94,38 +80,52 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/insert-prompt.png "")
 
-8. Click **OK** to close the dialog.
+7. Click **OK** to close the dialog.
 
     !["Click App Builder"](images/close-editor.png "")
 
-9. Again, navigate back to **Attributes** tab and open the code editor of **Description**.
+8. In the Property Editor, navigate to **Attributes** tab and enter/select the following:
+
+    - Under Settings:
+
+        - Title: **&NAME.**
+
+        - Display Avatar: Toggle **On**
+
+    - Avatar > Icon: **fa-calendar-month**
+
+    !["Click App Builder"](images/name-attr.png "")
+
+    !["Click App Builder"](images/desc-attr.png "")
+
+9. Under **Settings**, open the code editor of **Description**.
 
     !["Click App Builder"](images/attr.png "")
 
-10. Select **&DESCRIPTION.** and click **APEX Assistant**. Now add the following prompts:
+10. Click **APEX Assistant**. Now add the following prompts:
 
+    **Prompt 1:**
      ```
     <copy>
-    > Prompt 1:
-    > Generate an HTML to display start date and end date as a labelled information using span tag.
+    Generate an HTML to display start date and end date as a labelled information using span tag.
     </copy>
     ```
 
     !["Click App Builder"](images/gen-html.png "")
 
+    **Prompt 2:**
      ```
     <copy>
-    > Prompt 2:
-    > Use APEX substitution strings.
+    Use APEX substitution strings.
     </copy>
     ```
 
     !["Click App Builder"](images/substitution-apex.png "")
 
+    **Prompt 3:**
      ```
     <copy>
-    > Prompt 3:
-    > Display it below description
+    Display it below description.
     </copy>
     ```
 
@@ -173,7 +173,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/save-run2.png "")
 
-16. Next, let's add a hyperlink to the title to open a form page. Switch to the Page Designer tab. Under **Events** region, right-click **Actions** and click **Create Action**.
+16. Next, let's add a hyperlink to the title to open a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and click **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
 
@@ -206,6 +206,50 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/title-link1.png "")
 
+## Task 2: Enhance appearance of an app
+
+In this task, you will use Theme Roller to quickly transform the appearance of an application without editing any code.
+
+1. When you run an application from App Builder and view a page, the Runtime Developer toolbar displays at the bottom of any editable running page.
+
+    On the Runtime Developer Toolbar, click **Customize**.
+
+    !["Click App Builder"](images/customize.png "")
+
+2. To access the Theme Roller dialog, click **Theme Roller** from the Customize menu.
+
+    !["Click App Builder"](images/theme-roller1.png "")
+
+3. In the **Theme Roller** dialog box, update **Select Theme** to **Redwood Light**.
+
+    !["Click App Builder"](images/redwood-light.png "")
+
+4. Under **Redwood Options**, select the following:
+
+    - Pillar: **Rose**
+
+    - Layout: **Floating**
+
+    !["Click App Builder"](images/redwood-options.png "")
+
+5. Under **Appearance**, select the following:
+
+    - Header: **Pillar**
+
+    - Navigation: **Pillar**
+
+    - Body Header: **Dark**
+
+    - Body Background: **Dark**
+
+6. Click **Save** to save the theme.
+
+    !["Click App Builder"](images/appearnace.png "")
+
+7. In **Save As** dialog box, for **Style Name** enter **Event Management Theme** and click **Save**.
+
+    !["Click App Builder"](images/style-name.png "")
+
 ## Summary
 
 In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, showcasing how AI integration within APEX accelerates development and improves application design.
@@ -213,4 +257,4 @@ In this lab, you transformed a classic report into a content row layout, improvi
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

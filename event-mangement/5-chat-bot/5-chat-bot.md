@@ -20,13 +20,13 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Set Up Event Chat Assistant without RAG Source
 
-1. Close the dialog box. From the developer toolbar, navigate to **Page 3**.
+1. Close the dialog box. From the runtime developer toolbar, navigate to **Page 3**.
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-3.png "")
+    !["Click App Builder"](images/navigate-to-page3.png "")
 
-2. In the Page Designer, right-click **Breadcrumb** and click **Create Button**.
+2. In the left pane, right-click **Breadcrumb** and click **Create Button**.
 
     !["Click App Builder"](images/chatbot-btn.png "")
 
@@ -50,7 +50,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/event-assist-btn.png "")
 
-4. In the **Rendering** tab, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
+4. In the left pane, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
 
     !["Click App Builder"](images/create-dy-chatbot.png "")
 
@@ -78,7 +78,7 @@ By the end of this lab, you will be able to:
 
    The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
-    !["Click App Builder"](images/view-assit.png "")
+    !["Click App Builder"](images/view-chat.png "")
 
 ## Task 2: Create AI Configuration and RAG Source
 
@@ -136,10 +136,10 @@ By the end of this lab, you will be able to:
 
 8. In the APEX Assistant box, enter the following prompt and press enter:
 
+    Prompt 1:
     ```
     <copy>
-    > Prompt 1:
-    > Fetch event id, start date, venue, name and event type
+    Fetch event id, start date, venue, name and event type
     </copy>
     ```
 
@@ -190,7 +190,7 @@ By the end of this lab, you will be able to:
 
 4. In the app, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
-    !["Click App Builder"](images/view-ai-chat.png "")
+    !["Click App Builder"](images/view-ai-chat1.png "")
 
 ## Summary
 
@@ -199,4 +199,4 @@ In this lab, you created an Event Chat Assistant by adding a button, configuring
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

@@ -20,7 +20,7 @@ Estimated Time: 5 minutes
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-1.png "")
+    !["Click App Builder"](images/navigate-to-page1.png "")
 
 2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
 
@@ -167,7 +167,7 @@ Estimated Time: 5 minutes
 
 7. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
 
-    !["Click App Builder"](images/view-desc.png "")
+    !["Click App Builder"](images/view-desc-btn.png "")
 
 ## Summary
 
@@ -176,4 +176,4 @@ In this lab, you built an AI-powered feature to generate event descriptions in O
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
