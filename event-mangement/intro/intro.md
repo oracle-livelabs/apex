@@ -2,23 +2,25 @@
 
 ## About this Workshop
 
-In this workshop, you will build a dynamic and interactive Events Management application using Generative Development in Oracle APEX. This workshop is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
+In this workshop, you will build a dynamic and interactive **Events Management Application** using Generative Development in Oracle APEX. This workshop is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
 
-You will begin by creating a custom data model **using Oracle APEX AI Assistant**, quickly setting up the foundation for your application. Once the data model is ready, you will use the APEX Assistant to build an initial application blueprint, highlighting how AI can simplify and speed up the development process.
+You will begin by creating a **custom data model using natural language**, quickly establishing the foundation for your application. Once the data model is ready, you will again use natural language to generate an initial application blueprint, demonstrating how AI can streamline and speed up the development process.
 
-Next, you will customize your application using Oracle APEX low-code features, making adjustments with pre-built components that streamline the enhancement process. You also learn how to generate SQL queries with the help of APEX Assistant, simplifying the creation of complex queries for your application.
+Next, you will enhance the application by using the **APEX Assistant** to generate SQL and HTML directly within the APEX Code Editor, simplifying the creation of both UI and data logic.
 
-As you progress, you integrate AI-powered text generation into your application, enabling it to dynamically create and utilize text content. You will also implement an AI chat assistant by leveraging the **Show AI Assistant** dynamic Action of APEX, providing a responsive interface for real-time user interaction.
+As you proceed, you will integrate advanced AI capabilities into the application. This includes building an **AI-powered Event Assistant** that uses **Retrieval-Augmented Generation (RAG)** to answer event-related questions through an interactive **chat interface**. You will also implement a feature that uses the **Generate Text with AI** dynamic action to automatically create event descriptions.
+
+By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
 
 Total Workshop Time: 35 minutes
 
 ### Objectives
 
-- Create a Custom Data Model using AI.
-- Generate an application using APEX AI Assistant.
-- Customize/ Enhance the application by leveraging APEX assistant to generate SQL queries in the Code Editor.
-- Create an AI Chat Assistant to inquire about the Events.
-- Add functionality to Generate Text with AI.
+- Create a Custom Data Model using Generative AI.
+- Generate an application *blueprint* using APEX AI Assistant.
+- Improve the application's UI and UX using the APEX AI Assistant to generate SQL and HTML directly in the Code Editor.
+- Build an AI-powered Event Assistant that uses RAG to answer event-related queries through a chat interface.
+- Add a feature to generate event descriptions using AI through the *Generate Text with AI* dynamic action.
 
 ## Prerequisites
 
@@ -48,17 +50,15 @@ Total Workshop Time: 35 minutes
 
 ## Labs
 
-| | Module | Est. Time |
+| S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1.|[Configure Generative AI Service](?lab=0-configure-ai-keys) | 5 minutes |
-| 2.|[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 5 minutes |
-| 3.|[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
-|4.|[Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
-| 5.|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
-| 6.|[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
-|7.| [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
-
-Total estimated time: 30 minutes
+| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 5 minutes |
+| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 5 minutes |
+| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
+| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
+| 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
+| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
+| 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
 
 ### **Let's Get Started!**
 
@@ -107,4 +107,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
