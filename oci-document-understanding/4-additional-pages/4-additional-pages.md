@@ -10,11 +10,9 @@ Estimated Time: 15 Minutes
 
 In this lab, you:
 
-- Create an Application Process.
-
+- Create an Application Process to display PDFs.
 - Develop an Invoice Tracking page using Cards.
-
-- Create an Invoice Analysis page.
+- Create an Invoice Analysis page that displays the PDF and the extracted results in an Interactive Report.
 
 ## Task 1: Create an Application Process
 
@@ -380,4 +378,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

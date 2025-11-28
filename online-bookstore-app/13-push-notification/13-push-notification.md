@@ -225,4 +225,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

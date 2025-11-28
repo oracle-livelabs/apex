@@ -515,4 +515,4 @@ You've learned how to enhance the faceted search page, integrate Global Search u
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

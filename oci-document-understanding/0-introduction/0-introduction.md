@@ -10,7 +10,7 @@ Within this user-friendly app built with the Oracle APEX low-code platform, user
 
 Once your document is processed, you will easily transition to a user-friendly page featuring the Cards Region, which displays critical information in an organized manner. Clicking on a card brings up a Pop-up Dialog page where you will find a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
 
-Estimated Time: 1 hour
+Estimated Time: 1 hour 2 minutes
 
 ### Objectives
 
@@ -18,33 +18,68 @@ In this workshop, you:
 
 - Create an APEX application.
 
-- Upload Invoice to OCI Object Storage using Invoke API.
+- Add API Keys in the OCI Console.
 
-- Invoke the OCI Document Understanding REST Data Source using the Invoke API page process type.
+- Create a Bucket in OCI Object Storage.
 
-- Parse the response and display the result.
+- Create Web Credentials in Oracle APEX.
+
+- Upload Invoices to OCI Object Storage using the Invoke API.
+
+- Invoke OCI Document Understanding using REST Data Source.
+
+- Parse the response and display the extracted results using Interactive Report.
 
 - Implement Invoice Approval Requests Using Approvals Component.
 
-<!---
-- Enhance Social Media App with AI-Powered Search.
-- Integrate APEX with OCI using API keys.
-- Seamlessly link APEX with OCI Vision Service through REST Data Sources.
---->
+## Prerequisites
 
-### Prerequisites for Building this App:
+- An APEX workspace.
 
-- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
+- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+
+    - Brazil East (Sao Paulo)
+    - Germany Central (Frankfurt)
+    - India South (Hyderabad)
+    - Japan Central (Osaka)
+    - UAE East (Dubai)
+    - UK South (London)
+    - US Midwest (Chicago)
+
+- OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
 - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+>*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
-## Downloads
+- *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-If you are stuck or the app is not working as expected, you can download and install the completed App as follows:
+- *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
+
+- *The application ID and application icon in the screenshots may vary. Please ignore the application ID and icon.*
+
+## Labs
+
+| Lab |  Module | Est. Time |
+| --- | --- | --- |
+| 1 | [Configure OCI API Keys and a Bucket](?lab=1-configure-oci-keys) | 10 minutes |
+| 2 | [Setup Tasks for Application Development](?lab=2-install-scripts) | 10 minutes |
+| 3 | [Integrate OCI Document Understanding with Oracle APEX](?lab=3-create-application) | 10 minutes |
+| 4 | [Develop an Invoice Tracker and Invoice Analysis Page](?lab=4-additional-pages) | 15 minutes |
+| 5 | [Implement Invoice Approval Requests Using Approvals Component](?lab=5-approval-comp) | 15 minutes |
+| 6 | [Run the Application](?lab=6-run-app) | 2 minutes |
+
+Total Estimated Time: 1 hour 2 minutes
+
+### **Let's Get Started!**
+
+If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
+
+## Downloads: Download and Install the Complete Application
+
+If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
 
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application.
 
@@ -77,4 +112,4 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

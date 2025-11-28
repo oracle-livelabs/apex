@@ -10,7 +10,8 @@ Estimated Time: 2 Minutes
 
 In this lab, you:
 
-- Run the Application
+- Run the Application.
+- Explore the various features of the app.
 
 ## Task 1: Run the Application
 
@@ -55,4 +56,4 @@ You now know how to run the Automatic Invoice Handling application and obtain re
 ## Acknowledgements
 
 - **Author(s)** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

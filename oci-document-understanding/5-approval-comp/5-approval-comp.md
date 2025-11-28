@@ -10,9 +10,9 @@ Estimated Time: 15 Minutes
 
 In this lab, you:
 
-- Create a Task Definition
-- Develop a Process to Fetch Employee details and manage human-task approval
-- Create Unified Task Lists
+- Create a Task Definition and its corresponding Task Details page.
+- Develop a Process to Fetch Employee details and manage human-task approvals.
+- Create Unified Task List pages.
 
 ## Task 1: Create a Task Definition
 
@@ -332,4 +332,4 @@ You now know how to create a Task Definition for Invoice Approval Requests. Addi
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

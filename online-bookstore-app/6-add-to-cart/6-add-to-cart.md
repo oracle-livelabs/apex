@@ -849,4 +849,4 @@ In this lab, you have learned to enhance the Book Details page by creating a pac
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

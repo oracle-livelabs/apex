@@ -15,10 +15,8 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create database objects using SQL Scripts.
-
-- Create multiple Application Users.
-
-- Create Web Credentials.
+- Create multiple users within the workspace.
+- Create Web Credentials in Oracle APEX.
 
 ## Task 1: Create database objects using SQL Scripts
 
@@ -310,4 +308,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

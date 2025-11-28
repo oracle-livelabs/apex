@@ -12,14 +12,10 @@ Estimated Time: 10 Minutes
 
 In this lab, you will:
 
-- Create an Application.
-
-- Invoke OCI Document Understanding using REST Data Sources.
-
-- Enhance Home Page to Upload Invoices and Process the document.
-
+- Create a new APEX application.
+- Invoke OCI Document Understanding through REST Data Sources.
+- Configure a Form region to Upload Invoices and Process the document.
 - Create Processes to upload Invoice to Object Storage and Automate DML.
-
 - Integrate Document Understanding API and Parse the Response.
 
 ## Task 1: Create an Application
@@ -429,4 +425,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
