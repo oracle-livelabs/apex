@@ -12,7 +12,7 @@ As you proceed, you will integrate advanced AI capabilities into the application
 
 By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
 
-Total Workshop Time: 35 minutes
+Total Workshop Time: 30 minutes
 
 ### Objectives
 
@@ -52,12 +52,12 @@ Total Workshop Time: 35 minutes
 
 | S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 5 minutes |
-| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 5 minutes |
-| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
-| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
+| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 4 minutes |
+| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 4 minutes |
+| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 4 minutes |
+| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 4 minutes |
 | 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
-| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
+| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 4 minutes |
 | 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
 
 ### **Let's Get Started!**
