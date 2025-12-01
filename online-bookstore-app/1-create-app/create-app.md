@@ -12,8 +12,8 @@ Estimated Time: 4 minutes
 
 In this lab, you will:
 
-- Create a new APEX application
-- Load Quick SQL to create database objects
+- Create a new APEX application.
+- Load Quick SQL to create database objects.
 
 ### Prerequisites
 

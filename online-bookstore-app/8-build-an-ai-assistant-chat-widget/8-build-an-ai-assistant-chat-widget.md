@@ -14,11 +14,11 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Generate API Keys using OCI Console
-- Create Web Credentials in Oracle APEX
-- Configure Generative AI Service
-- Create AI Configurations with RAG Data Sources
-- Create a Navigation Bar Entry to access the AI chat interface
+- Generate API Keys using OCI Console.
+- Create Web Credentials in Oracle APEX.
+- Configure Generative AI Service.
+- Create AI Configurations with RAG Data Sources.
+- Create a Navigation Bar Entry to access the AI chat interface.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

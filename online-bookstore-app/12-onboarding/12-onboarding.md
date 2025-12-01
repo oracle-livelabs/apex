@@ -10,9 +10,9 @@ Estimated Time: 35 minutes
 
 In this lab, you will:
 
-- Implement Email Verification for Forgot Password and User SignUp
-- Set up Reset Password and SignUp functionality
-- Implement Login with Google as an authentication option
+- Implement Email Verification for Forgot Password and User SignUp.
+- Set up Reset Password and SignUp functionality.
+- Implement Login with Google as an authentication option.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

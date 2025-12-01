@@ -10,9 +10,9 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Wishlist Page to display saved books
-- Add buttons and processes to add or remove wishlist items
-- Create a Navigation Bar Entry to access the Wishlist page
+- Create a Wishlist Page to display saved books.
+- Add buttons and processes to add or remove wishlist items.
+- Create a Navigation Bar Entry to access the Wishlist page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

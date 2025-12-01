@@ -10,11 +10,11 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Improve Faceted Search to refine filtering options
-- Create a Search Bar for keyword-based searching
-- Enhance the Cards region with richer display details
-- Activate Sorting options for better result ordering
-- Create a Book Details page as a modal dialog opened from each card
+- Improve Faceted Search to refine filtering options.
+- Create a Search Bar for keyword-based searching.
+- Enhance the Cards region with richer display details.
+- Activate Sorting options for better result ordering.
+- Create a Book Details page as a modal dialog opened from each card.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

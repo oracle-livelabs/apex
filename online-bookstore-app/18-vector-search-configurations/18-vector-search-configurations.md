@@ -10,11 +10,11 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-- Load ONNX Models
-- Create a Vector Provider
-- Generate Vector Embeddings
-- Create Search Configuration based on Oracle Vector Search
-- Create an Oracle Vector Search Page
+- Load ONNX Models.
+- Create a Vector Provider.
+- Generate Vector Embeddings.
+- Create Search Configuration based on Oracle Vector Search.
+- Create an Oracle Vector Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

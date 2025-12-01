@@ -10,7 +10,7 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Create Multiple RAG Data Sources to enhance AI responses for order details
+- Create Multiple RAG Data Sources to enhance AI responses for order details.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

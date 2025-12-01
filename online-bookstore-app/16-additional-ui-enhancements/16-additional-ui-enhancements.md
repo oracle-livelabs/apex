@@ -10,12 +10,12 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Add Footer Text to the App
-- Manage the Navigation Menu for improved layout
-- Integrate a Global Search Bar across the app
-- Use Email Templates to send emails
-- Set a Default Profile Picture for new users
-- Create a My Orders Page to list user purchases
+- Add Footer Text to the App.
+- Manage the Navigation Menu for improved layout.
+- Integrate a Global Search Bar across the app.
+- Use Email Templates to send emails.
+- Set a Default Profile Picture for new users.
+- Create a My Orders Page to list user purchases.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

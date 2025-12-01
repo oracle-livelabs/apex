@@ -10,7 +10,7 @@ Estimated Time: 1 minute
 
 In this lab, you will:
 
-- Customize the application theme using Theme Roller
+- Customize the application theme using Theme Roller.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 

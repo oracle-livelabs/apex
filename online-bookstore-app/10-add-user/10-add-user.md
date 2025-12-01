@@ -10,10 +10,10 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Create a User Profile Page to manage account information
-- Add Navigation Bar Entries for accessing the profile and related pages
-- Create and Manage forms to update user details and reset passwords
-- Implement RESTful Services for handling profile pictures and integrating them into the app
+- Create a User Profile Page to manage account information.
+- Add Navigation Bar Entries for accessing the profile and related pages.
+- Create and Manage forms to update user details and reset passwords.
+- Implement RESTful Services for handling profile pictures and integrating them into the app.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
