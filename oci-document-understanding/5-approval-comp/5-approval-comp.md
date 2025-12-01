@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will walk you through creating a Task Definition for Invoice Approval Requests. Additionally, you'll set up two processes to fetch employee details and manage human-task approval. Furthermore, you'll create two unified task list pages—one for initiated tasks and another for tasks assigned to you.
+In this lab, you will create a Task Definition to support the Invoice Approval Requests. You will also configure the processes required to retrieve employee information and execute human-task approvals. Additionally, you will create two unified task list pages—one to display tasks initiated by the user and another to show tasks assigned to them for action.
 
 Estimated Time: 15 Minutes
 
@@ -15,6 +15,8 @@ In this lab, you:
 - Create Unified Task List pages.
 
 ## Task 1: Create a Task Definition
+
+In this task, you'll create a Task Definition to support the invoice approval workflow. You will define the task structure, configure participants, set required parameters, and add actions that update invoice status upon approval.
 
 1. In the Page Designer toolbar, navigate to **Shared Components** icon.
 
@@ -58,19 +60,19 @@ In this lab, you:
 
     - Actions SQL Query: Copy the code below and paste it into  the code editor:
 
-    ```
-    <copy>
-    SELECT
-      E.EMPNO,
-      E.EMP_NAME,
-      M.EMP_NAME AS MGR_NAME
-    FROM
-    EMPLOYEE_DETAILS E, EMPLOYEE_DETAILS M
-    WHERE
-        M.EMPNO (+) = E.MGR
-        AND E.EMPNO = :APEX$TASK_PK
-    </copy>
-    ```
+        ```
+        <copy>
+        SELECT
+        E.EMPNO,
+        E.EMP_NAME,
+        M.EMP_NAME AS MGR_NAME
+        FROM
+        EMPLOYEE_DETAILS E, EMPLOYEE_DETAILS M
+        WHERE
+            M.EMPNO (+) = E.MGR
+            AND E.EMPNO = :APEX$TASK_PK
+        </copy>
+        ```
 
     ![Task Definition Settings](images/action-source.png " ")
 
@@ -142,22 +144,22 @@ In this lab, you:
 
      - Code: Copy the code below and paste it into the code editor:
 
-    ```
-    <copy>
-    DECLARE
-    L_REQ_ID NUMBER;
-    BEGIN
-    --   if :APP_USER = :EMP_NAME then --this is the original initiator
-    L_REQ_ID := :ID;
-    UPDATE INV_UPLOAD
-    SET
-        STATUS = 'Approved'
-    WHERE
-        ID = L_REQ_ID;
+        ```
+        <copy>
+        DECLARE
+        L_REQ_ID NUMBER;
+        BEGIN
+        --   if :APP_USER = :EMP_NAME then --this is the original initiator
+        L_REQ_ID := :ID;
+        UPDATE INV_UPLOAD
+        SET
+            STATUS = 'Approved'
+        WHERE
+            ID = L_REQ_ID;
 
-    END;
-    </copy>
-    ```
+        END;
+        </copy>
+        ```
 
     Click **Create**.
 
@@ -166,6 +168,8 @@ In this lab, you:
 13. Click **Apply Changes**.
 
 ## Task 2: Create a Process to Fetch Employee details
+
+In this task, you'll create processes to fetch employee details and submit an invoice for approval. You will retrieve the logged-in employee’s information using PL/SQL and configure a Human Task process that initiates the invoice approval workflow with the required parameters.
 
 1. Navigate to **Application ID**.
 
@@ -185,17 +189,17 @@ In this lab, you:
 
     - Source > PL/SQL Code: Copy and paste the below code into the code editor:
 
-    ```
-    <copy>
-    SELECT
-    EMPNO
-      INTO :P1_EMP_NO
-    FROM
-      EMPLOYEE_DETAILS
-    WHERE
-      UPPER(EMP_NAME) = UPPER(:APP_USER);
-    </copy>
-    ```
+        ```
+        <copy>
+        SELECT
+        EMPNO
+        INTO :P1_EMP_NO
+        FROM
+        EMPLOYEE_DETAILS
+        WHERE
+        UPPER(EMP_NAME) = UPPER(:APP_USER);
+        </copy>
+        ```
 
     - Execution > Sequence: **1**
 
@@ -237,6 +241,8 @@ In this lab, you:
 8. Click **Save**.
 
 ## Task 3: Create Unified Task Lists
+
+In this task, you'll create unified task list pages to display tasks initiated by the user and tasks requiring their approval. You will also update the Task Details page to include navigation links that allow users to review related invoice information.
 
 1. On Page Designer toolbar, navigate to **Create(+ v)** and select **Page**.
 
@@ -294,20 +300,20 @@ In this lab, you:
 
     - Source > SQL Query: Copy and replace the below code into the code editor:
 
-    ```
-    <copy>
-    SELECT
-      UPPER(PARAM_LABEL)      PARAM_LABEL,
-      PARAM_VALUE,
-      'Check the Comparision' LINK_TO
-    FROM
-      APEX_TASK_PARAMETERS
-    WHERE
-        TASK_ID = :P4_TASK_ID
-        AND IS_VISIBLE = 'Y'
-        AND UPPER(PARAM_LABEL) = 'ID';
-    </copy>
-    ```
+        ```
+        <copy>
+        SELECT
+        UPPER(PARAM_LABEL)      PARAM_LABEL,
+        PARAM_VALUE,
+        'Check the Comparision' LINK_TO
+        FROM
+        APEX_TASK_PARAMETERS
+        WHERE
+            TASK_ID = :P4_TASK_ID
+            AND IS_VISIBLE = 'Y'
+            AND UPPER(PARAM_LABEL) = 'ID';
+        </copy>
+        ```
 
     ![Select Unified Task List](./images/details.png " ")
 

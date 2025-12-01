@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab guides you through creating an application process to download a file from a URL stored in the database. You'll also develop two new pages for invoice tracking and analysis.
+In this lab, you will create an application process that downloads files from URLs stored in the database. You will also build two additional pages to support invoice tracking and analysis, helping users view uploaded documents and compare extracted data with the original files.
 
 Estimated Time: 15 Minutes
 
@@ -16,7 +16,7 @@ In this lab, you:
 
 ## Task 1: Create an Application Process
 
-In this task, you create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter 'P3_ID'.
+In this task, you'll create an application process to retrieve the URL and MIME type of a document stored in an Object Storage service. It makes an authenticated REST API call to retrieve the document as a BLOB, sets the appropriate HTTP response headers, and sends the document to the client for download. The operation is based on the ID provided in the input parameter 'P3_ID'.
 
 1. Navigate to **Shared Components**
 
@@ -81,7 +81,7 @@ In this task, you create an application process to retrieve the URL and MIME typ
 
 ## Task 2: Develop an Invoice Tracking page using Cards
 
-In this task, you create an Invoice Tracking page featuring the Cards Region, which displays the uploaded image or PDF file.
+In this task, you'll create an Invoice Tracking page featuring the Cards Region, which displays the uploaded image or PDF file.
 
 1. Navigate to **Application ID**.
 
@@ -107,34 +107,34 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
     - Enter a SQL SELECT Statement: Copy and paste the below code:
 
-    ```
-    <copy>
-    SELECT
-    A.ID,
-    A.FILE_NAME,
-    A.MIME_TYPE,
-    A.OBJECT_STORAGE_URL,
-    A.CREATED,
-    A.CREATED_BY,
-    A.UPDATED,
-    A.UPDATED_BY,
-    A.STATUS,
-    CASE
-        WHEN A.STATUS = 'Pending Approval' THEN
-            'u-color-24'
-        WHEN A.STATUS = 'Approved'         THEN
-            'u-color-20'
-    END CARD_COLOR,
-    A.DOC_AI_JSON,
-    B.FIELD_VALUE
-    FROM
-    INV_UPLOAD     A,
-    DOCAI_RESPONSE B
-    WHERE
-        A.ID = B.DOCUMENT_ID
-    AND B.FIELD_LABEL = 'InvoiceTotal'
-     </copy>
-     ```
+        ```
+        <copy>
+        SELECT
+        A.ID,
+        A.FILE_NAME,
+        A.MIME_TYPE,
+        A.OBJECT_STORAGE_URL,
+        A.CREATED,
+        A.CREATED_BY,
+        A.UPDATED,
+        A.UPDATED_BY,
+        A.STATUS,
+        CASE
+            WHEN A.STATUS = 'Pending Approval' THEN
+                'u-color-24'
+            WHEN A.STATUS = 'Approved'         THEN
+                'u-color-20'
+        END CARD_COLOR,
+        A.DOC_AI_JSON,
+        B.FIELD_VALUE
+        FROM
+        INV_UPLOAD     A,
+        DOCAI_RESPONSE B
+        WHERE
+            A.ID = B.DOCUMENT_ID
+        AND B.FIELD_LABEL = 'InvoiceTotal'
+        </copy>
+        ```
 
      Click **Next**.
 
@@ -183,7 +183,7 @@ In this task, you create an Invoice Tracking page featuring the Cards Region, wh
 
 ## Task 3: Create an Invoice Analysis page
 
-In this task, you create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
+In this task, you'll create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
 1. In the Page Designer toolbar, navigate to **(+ v)** in Page Designer toolbar and select **Page**.
 
@@ -235,11 +235,11 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
     - Source > PL/SQL Code: Copy and paste the below code into the code editor:
 
-    ```
-    <copy>
-    :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
-    </copy>
-      ```
+        ```
+        <copy>
+        :P3_URL := APEX_PAGE.GET_URL(P_PAGE => 3,P_REQUEST => 'APPLICATION_PROCESS=DISPLAY_PDF', P_PLAIN_URL => TRUE);
+        </copy>
+        ```
 
     ![Preapare URL](images/prepare-url1.png " ")
 
@@ -252,14 +252,14 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
     - Identification > Name: **Uploaded File**
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
-
-    ```
-    <copy>
-    <p align="center">
-      <iframe src="&P3_URL." width="100%"  height="500"></iframe>
-    </p>
-    </copy>
-    ```
+`
+        ```
+        <copy>
+        <p align="center">
+        <iframe src="&P3_URL." width="100%"  height="500"></iframe>
+        </p>
+        </copy>
+        ````
 
    ![Upload File](images/uploaded-file.png " ")
 
@@ -281,27 +281,27 @@ In this task, you create an Invoice Analysis page featuring the Cards Region. Th
 
         - SQL Query: Copy and Paste the below code into the code editor:
 
-       ```
-       <copy>
-       SELECT
-          ID,
-          DOCUMENT_ID,
-          REGEXP_REPLACE(FIELD_LABEL, '([A-Z])', ' \1') FIELD_LABEL,
-        CASE
-        WHEN FIELD_LABEL LIKE '%Date%' THEN
-            TO_CHAR(TO_TIMESTAMP(FIELD_VALUE, 'YYYY-MM-DD"T"HH24:MI:SS.FF3"Z"'),
-                    'DD-MON-YYYY')
-        ELSE
-            FIELD_VALUE
-            END AS FIELD_VALUE,
-        LABEL_SCORE
-        FROM
-            DOCAI_RESPONSE
-        WHERE
-            DOCUMENT_ID = :P3_ID
-            AND FIELD_VALUE <> '#';
-       </copy>
-        ```
+            ```
+            <copy>
+            SELECT
+                ID,
+                DOCUMENT_ID,
+                REGEXP_REPLACE(FIELD_LABEL, '([A-Z])', ' \1') FIELD_LABEL,
+                CASE
+                WHEN FIELD_LABEL LIKE '%Date%' THEN
+                    TO_CHAR(TO_TIMESTAMP(FIELD_VALUE, 'YYYY-MM-DD"T"HH24:MI:SS.FF3"Z"'),
+                            'DD-MON-YYYY')
+                ELSE
+                    FIELD_VALUE
+                    END AS FIELD_VALUE,
+                LABEL_SCORE
+                FROM
+                    DOCAI_RESPONSE
+                WHERE
+                    DOCUMENT_ID = :P3_ID
+                    AND FIELD_VALUE <> '#';
+            </copy>
+                ```
 
        - Layout > Start New Row: **Toggle Off**
 

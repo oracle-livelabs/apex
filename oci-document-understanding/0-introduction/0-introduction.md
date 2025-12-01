@@ -2,13 +2,13 @@
 
 ## About this Workshop
 
-In the digital transformation era, businesses constantly seek innovative solutions to enhance their processes and maximize efficiency. Oracle APEX and Oracle Cloud Infrastructure (OCI) Document Understanding have emerged as powerful tools to streamline data extraction and processing.
+In the digital transformation era, businesses consistently seek innovative solutions to enhance their processes and maximize efficiency. Oracle APEX and Oracle Cloud Infrastructure (OCI) Document Understanding have emerged as powerful tools that streamline data extraction and document processing.
 
-In this workshop, you learn to integrate Oracle APEX with OCI Document Understanding, highlighting  steps to incorporate these technologies seamlessly into your workflow.
+In this workshop, you will learn how to integrate Oracle APEX with OCI Document Understanding, walking through the essential steps required to incorporate these technologies seamlessly into an intelligent workflow.
 
-Within this user-friendly app built with the Oracle APEX low-code platform, users effortlessly upload invoices by selecting the "Select an Invoice or Receipt" option. OCI Document Understanding then extracts form fields from the uploaded image or PDF file. With this functionality, users can streamline their expense management process with ease.
+Using a user-friendly application built with the Oracle APEX low-code platform, participants will upload invoices by simply selecting the “Select an Invoice or Receipt” option. OCI Document Understanding then automatically extracts key form fields from the uploaded image or PDF. This capability greatly simplifies and accelerates the expense management process.
 
-Once your document is processed, you will easily transition to a user-friendly page featuring the Cards Region, which displays critical information in an organized manner. Clicking on a card brings up a Pop-up Dialog page where you will find a clear comparison between your uploaded PDF and the output from OCI Document Understanding.
+Once a document is processed, the application transitions to a page that presents the extracted information using the Cards Region, offering a clean and organized view. Clicking on any card opens a Pop-up Dialog where users can visually compare the original PDF with the extracted data from OCI Document Understanding—making review and validation intuitive and efficient.
 
 Estimated Time: 1 hour 2 minutes
 

@@ -15,6 +15,8 @@ In this lab, you:
 
 ## Task 1: Run the Application
 
+In this task, you'll run the application and test the complete invoice processing workflow. You will log in as different users, upload sample invoices, review extracted data, track submitted invoices, and approve pending requests using the unified task lists.
+
 1. From your Application home page, click **Run Application**.
 
     ![Task Definition in Shared Components](images/run-application.png " ")

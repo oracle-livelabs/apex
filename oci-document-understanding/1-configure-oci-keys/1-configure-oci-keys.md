@@ -17,6 +17,8 @@ In this lab, you:
 
 ## Task 1: Generate API Keys using OCI Console
 
+Note: If you already have an OCI key pair, you may skip this lab.
+
 To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
@@ -47,7 +49,7 @@ To Generate the API Keys using OCI Console:
 
 ## Task 2: Create a Bucket in OCI Object Storage
 
-To create a Bucket using OCI Console, login to your OCI Account.
+In this task, you'll create a bucket in OCI Object Storage.
 
 1. To access the Object Storage service, click on the menu icon **(☰)** at the top-left corner.
 
