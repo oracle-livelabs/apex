@@ -10,9 +10,9 @@ Estimated Time: 10 minutes
 
 In this lab, you:
 
-- Create a REST Data Source to integrate OCI Vision for object and text detection
-- Create an Automation to update detection results when book details change
-- Create a Trigger to reset detection fields when a book image is updated
+- Create a REST Data Source to integrate OCI Vision for object and text detection.
+- Create an Automation to update detection results when book details change.
+- Create a Trigger to reset detection fields when a book image is updated.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -362,4 +362,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
