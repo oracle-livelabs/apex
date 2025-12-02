@@ -143,7 +143,7 @@ In this task, you will learn how to create a package using APEX Assistant in SQL
 
 2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
 
-Note: To provide accurate context to the AI Assistant about which table it should reference while generating the package, we enter the following CREATE TABLE statement in the editor.
+    *Note: To provide accurate context to the AI Assistant about which table it should reference while generating the package, we enter the following CREATE TABLE statement in the editor.*
 
     ```
     <copy>
