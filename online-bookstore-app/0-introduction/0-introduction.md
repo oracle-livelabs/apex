@@ -86,7 +86,7 @@ In this workshop, you will:
 | 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 5 minutes |
 | 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 10 minutes |
 
-Total estimated time: 4 hours 40 minutes
+Total Estimated Time: 4 hours 40 minutes
 
 ### **Let's Get Started!**
 
@@ -112,4 +112,4 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

@@ -10,10 +10,10 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Create a Web Credential using the Razorpay API key
-- Create a REST Data Source to integrate with the Razorpay API
-- Update the OBS\_MANAGE\_ORDERS package to include payment details
-- Integrate the Razorpay payment gateway into the Shopping Cart page
+- Create a Web Credential using the Razorpay API key.
+- Create a REST Data Source to integrate with the Razorpay API.
+- Update the OBS\_MANAGE\_ORDERS package to include payment details.
+- Integrate the Razorpay payment gateway into the Shopping Cart page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -556,4 +556,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

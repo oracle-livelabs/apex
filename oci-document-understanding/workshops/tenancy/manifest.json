@@ -3,11 +3,15 @@
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../intro/introduction.md"
+        "filename": "../../0-introduction/0-introduction.md"
       },
       {
-        "title": "Get Started",
+        "title": "Sign Up for an APEX Workspace",
         "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Review Commonly Used APEX Terminology",
+        "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
       },
       {
         "title": "Lab 1: Configure OCI API Keys and a Bucket",

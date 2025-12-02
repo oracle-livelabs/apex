@@ -10,12 +10,12 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Build a Shopping Cart Page to display and manage cart items
-- Build an Order Information Page to show order details and totals
-- Create a Navigation Bar Entry for quick access to cart and orders
-- Build a My Books Page to list purchased or owned books
-- Create Application Processes to update cart and order data
-- Create Application Computations to set values needed across these pages
+- Build a Shopping Cart Page to display and manage cart items.
+- Build an Order Information Page to show order details and totals.
+- Create a Navigation Bar Entry for quick access to cart and orders.
+- Build a My Books Page to list purchased or owned books.
+- Create Application Processes to update cart and order data.
+- Create Application Computations to set values needed across these pages.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -1151,4 +1151,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

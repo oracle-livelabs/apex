@@ -440,5 +440,4 @@ In this lab, you will follow the download instructions to import an export file 
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
-<!-- | 19 | [Downloads](?lab=downloads#Task1:DownloadtheApp) | 1 minutes | -->
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

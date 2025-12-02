@@ -4,9 +4,9 @@
 
 In this lab, you will run SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
 
-Furthermore, you'll discover how to create multiple accounts in a single operation.
+You will also explore how to efficiently create multiple workspace user accounts in a single operation using the APEX Administration interface.
 
-Moreover, you'll configure Web credentials to authenticate connections to external REST services or REST-Enabled SQL services from APEX.
+Finally, you will learn how to configure Web Credentials, which enable secure authentication when connecting to external REST services or REST-Enabled SQL services from APEX.
 
 Estimated Time: 10 Minutes
 
@@ -15,12 +15,12 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create database objects using SQL Scripts.
-
-- Create multiple Application Users.
-
-- Create Web Credentials.
+- Create multiple users within the workspace.
+- Create Web Credentials in Oracle APEX.
 
 ## Task 1: Create database objects using SQL Scripts
+
+In this task, you'll create the required database objects by running **SQL Scripts** in your APEX workspace.
 
 1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
 
@@ -220,7 +220,7 @@ In this lab, you:
 
 ## Task 2: Create Multiple Application Users
 
-Workspace administrators can create new user accounts one at a time or create multiple accounts in a single operation.
+In this task, you'll create multiple workspace user accounts for this application using the APEX Administration interface. Workspace administrators can create new user accounts individually or create multiple accounts in a single operation.
 
 To create multiple users accounts simultaneously:
 
@@ -310,4 +310,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
