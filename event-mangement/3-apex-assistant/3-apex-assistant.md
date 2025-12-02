@@ -197,6 +197,8 @@ Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 
     !["Click App Builder"](images/package-created.png "")
 
+    *Note: This package can be extended further to improve the application. For example, you can add more procedures to handle event validations, fetch event details, or manage related data such as venues and event types. Over time, this package can become the central place for all logic related to inserting, updating, and deleting events in the application.*
+
 ## Summary
 
 In this lab, you learned how to use the integrated AI Chat capability (APEX Assistant) in code editors within App Builder and SQL Workshop.

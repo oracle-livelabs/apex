@@ -50,5 +50,5 @@ Through these labs, you will:
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri ,Product Manager
-- **Last Updated By/Date** - Ankita Beri ,Product Manager, Jan 2025
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri ,Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri , Senior Product Manager, November 2025
