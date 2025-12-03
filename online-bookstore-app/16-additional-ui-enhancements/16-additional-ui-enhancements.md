@@ -10,21 +10,16 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Add Footer Text to the App.
-
-- Manage Navigation Menu.
-
-- Integrate Global Search Bar
-
-- Use Email Templates to send Emails.
-
-- Default Profile Picture
-
-- Create My Orders Page
+- Add Footer Text to the App
+- Manage the Navigation Menu for improved layout
+- Integrate a Global Search Bar across the app
+- Use Email Templates to send emails
+- Set a Default Profile Picture for new users
+- Create a My Orders Page to list user purchases
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab15.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 9.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab15.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 9.
 
 ## Task 1 Add Built with APEX To Footer
 

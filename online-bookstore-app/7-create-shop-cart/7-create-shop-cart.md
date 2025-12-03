@@ -10,16 +10,16 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Build a Shopping Cart Page
-- Build Order Information Page
-- Create a Navigation Bar Entry
-- Build My Books Page
-- Create Application Processes
-- Create Application Computations
+- Build a Shopping Cart Page to display and manage cart items
+- Build an Order Information Page to show order details and totals
+- Create a Navigation Bar Entry for quick access to cart and orders
+- Build a My Books Page to list purchased or owned books
+- Create Application Processes to update cart and order data
+- Create Application Computations to set values needed across these pages
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab6.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab6.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
 
 ## Task 1: Build a Shopping Cart Page
 

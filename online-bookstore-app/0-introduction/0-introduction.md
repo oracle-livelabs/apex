@@ -10,18 +10,20 @@ Estimated Time: 4 hours 40 minutes
 
 In this workshop, you will:
 
-- Develop an APEX Application
-- Load Data using Data Workshop
-- Integrate REST Data Sources
-- Customize Themes and UI
-- Configure Authentication & Security
-- Implement E-commerce Features (Cart, Wishlist, Orders, Profile, My Books etc)
-- Leverage AI Capabilities (RAG, AI Vision, AI Assistant)
-- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here)
-- Set Up Push Notifications
-- Integrate Payment Processing with Razorpay
-- Design and Manage Email Templates
-- Create Vector Providers, Search Configurations and Oracle Vector Search Page
+- Develop an APEX Application.
+- Load Data using Data Workshop.
+- Integrate REST Data Sources.
+- Customize the application theme and UI.
+- Configure Authentication & Security.
+- Implement e-commerce features including Cart, Wishlist, Orders, Profile, and My Books, etc.
+- Add API Keys in the OCI Console.
+- Create Web Credentials in Oracle APEX.
+- Leverage AI capabilities such as RAG, OCI Vision, and the AI Assistant.
+- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here).
+- Set Up Push Notifications to alert users when books in their wishlist become available.
+- Integrate Razorpay to support demo payment transactions within the application.
+- Create and use email templates for sending emails in the application.
+- Create Vector Providers, Search Configurations and Oracle Vector Search Page.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 
@@ -37,11 +39,13 @@ In this workshop, you will:
 
     - The OCI account must be created in or subscribed to a region that supports the OCI Generative AI Service. Currently, the OCI Generative AI Service is available in the following regions:
 
-        - US Midwest (Chicago)
-        - Germany Central (Frankfurt)
-        - UK South (London)
         - Brazil East (Sao Paulo)
+        - Germany Central (Frankfurt)
+        - India South (Hyderabad)
         - Japan Central (Osaka)
+        - UAE East (Dubai)
+        - UK South (London)
+        - US Midwest (Chicago)
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
@@ -90,11 +94,11 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads: Download and Install the Complete Application
 
-If you are stuck or the app is not working as expected, don't worry! Download one of the export files below:
+If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
 
-- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
+- **OPTION 1:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
 
-- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application export file, which contains everything completed in all the labs, including the optional Lab 18. This export requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
+- **OPTION 2:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
 
 ## Learn More - *Useful Links*
 

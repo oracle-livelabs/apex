@@ -8,14 +8,16 @@ Estimated Time: 30 minutes
 
 ### Objectives
 
-- Create a User Profile Page
-- Add Navigation Bar Entries to include links to the user profile and other pages.
-- Create and manage forms to update user details and reset passwords.
-- Implement RESTful Services to handle user profile pictures and integrate these services into the application.
+In this lab, you will:
+
+- Create a User Profile Page to manage account information
+- Add Navigation Bar Entries for accessing the profile and related pages
+- Create and Manage forms to update user details and reset passwords
+- Implement RESTful Services for handling profile pictures and integrating them into the app
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab9.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab9.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
 
 ## Task 1: Creating a Profile Page with a Book List
 
