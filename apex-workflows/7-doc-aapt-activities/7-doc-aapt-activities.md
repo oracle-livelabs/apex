@@ -480,8 +480,6 @@ Once the Patient confirms the invoice / makes the payment, the Appointment recor
 
         - Value > Type: **API Default**
 
-
-
     ![config booking id](./images/config-status.png " ")
 
 7. Now, select **Approved?** activity and draw an arrow to the **Update Appointment** activity and in the Property Editor, update the following:
@@ -647,4 +645,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

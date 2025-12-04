@@ -182,4 +182,4 @@ In this hands-on lab, you learned how to:
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

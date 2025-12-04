@@ -755,4 +755,4 @@ In the next lab, you will understand the behavior of the **Doctor Appointments M
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
