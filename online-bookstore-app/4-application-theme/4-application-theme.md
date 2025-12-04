@@ -10,7 +10,7 @@ Estimated Time: 1 minute
 
 In this lab, you will:
 
-- Customize the application theme using Theme Roller
+- Customize the application theme using Theme Roller.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -57,4 +57,4 @@ You've learned how to update the theme of the application using theme roller. Re
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

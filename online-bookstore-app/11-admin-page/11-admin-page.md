@@ -10,12 +10,12 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Create an Administration Page to manage various administrative tasks
-- Add Navigation Entry to access the administration section
-- Configure Authorization Schemes to restrict admin access
-- Manage book information with search, view, and update options
-- Create a form for editing detailed book records
-- Manage user roles using interactive reports and forms
+- Create an Administration Page to manage various administrative tasks.
+- Add Navigation Entry to access the administration section.
+- Configure Authorization Schemes to restrict admin access.
+- Manage book information with search, view, and update options.
+- Create a form for editing detailed book records.
+- Manage user roles using interactive reports and forms.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -960,4 +960,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

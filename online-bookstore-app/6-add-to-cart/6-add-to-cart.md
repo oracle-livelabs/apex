@@ -10,11 +10,11 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Package to manage adding, removing, and processing orders and wishlist items
-- Create Application Items to store shared values across pages
-- Create Application Processes to handle cart count
-- Create Application Computations to set user-related information after authentication
-- Set Up the Book Details Page to support cart actions and wishlist functionality
+- Create a Package to manage adding, removing, and processing orders and wishlist items.
+- Create Application Items to store shared values across pages.
+- Create Application Processes to handle cart count.
+- Create Application Computations to set user-related information after authentication.
+- Set Up the Book Details Page to support cart actions and wishlist functionality.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -849,4 +849,4 @@ In this lab, you have learned to enhance the Book Details page by creating a pac
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

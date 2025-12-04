@@ -14,8 +14,8 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Load Data using Data Workshop
-- Create a Faceted Search Page
+- Load Data using Data Workshop.
+- Create a Faceted Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -136,4 +136,4 @@ You now know how to Load data using Data Workshop. Also, you know how to Create 
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You also set up a REST Data Source to interact with OCI Document Understanding and enhance the home page to facilitate invoice uploading and document processing and analysis.
+In this lab, you create an APEX application named **Automatic Invoice Handling** using the Create App Wizard. You will also configure a REST Data Source to interact with OCI Document Understanding, Oracle Cloud Infrastructure’s service for intelligent document processing. OCI Document Understanding enables you to extract structured data, metadata, and insights from unstructured documents such as PDFs, images, and scanned files.
 
-OCI Doc Understanding refers to Oracle Cloud Infrastructure's (OCI) service for document processing and analysis. It enables users to extract valuable insights and metadata from unstructured documents such as PDFs, images, and scanned documents.
+Throughout this lab, you will enhance the application’s home page to support invoice uploads and document processing and analysis—from data extraction to storing the results in the database.
 
 Estimated Time: 10 Minutes
 
@@ -12,17 +12,15 @@ Estimated Time: 10 Minutes
 
 In this lab, you will:
 
-- Create an Application.
-
-- Invoke OCI Document Understanding using REST Data Sources.
-
-- Enhance Home Page to Upload Invoices and Process the document.
-
+- Create a new APEX application.
+- Invoke OCI Document Understanding through REST Data Sources.
+- Configure a Form region to Upload Invoices and Process the document.
 - Create Processes to upload Invoice to Object Storage and Automate DML.
-
 - Integrate Document Understanding API and Parse the Response.
 
 ## Task 1: Create an Application
+
+In this task, you'll create a new application using the APEX **App Builder**. You'll configure the application’s icon, appearance, name, and key features using the **Use Create App Wizard**.
 
 1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
 
@@ -59,6 +57,8 @@ In this lab, you will:
     ![Automatic Invoice Handling](images/create-application.png " ")
 
 ## Task 2: Invoke OCI Doc Understanding using REST Data Source
+
+In this task, you'll configure a **REST Data Source** in the **Shared Components** to invoke the OCI Document Understanding service. You'll create the **REST Data Source** from scratch, set up authentication, define the POST operation, and add the necessary parameters for calling the OCI Document Understanding API.
 
 1. Navigate to **Shared Components**.
 
@@ -113,26 +113,26 @@ In this lab, you will:
 
     - Request Body Template: Copy and paste the JSON given below.
 
-    ```
-    <copy>
-    {
-    "compartmentId" : "#COMPARTMENT_ID#",
-    "document" :
+        ```
+        <copy>
         {
-            "namespaceName" : "#NAMESPACE_NAME#",
-            "bucketName" : "#BUCKET_NAME#",
-            "objectName" : "#OBJECT_NAME#",
-            "source" : "OBJECT_STORAGE"
-        },
-    "features" :
-        [
+        "compartmentId" : "#COMPARTMENT_ID#",
+        "document" :
             {
-                "featureType" : "#FEATURE_TYPE#"
-            }
-        ]
-     }
-    <copy>
-     ```
+                "namespaceName" : "#NAMESPACE_NAME#",
+                "bucketName" : "#BUCKET_NAME#",
+                "objectName" : "#OBJECT_NAME#",
+                "source" : "OBJECT_STORAGE"
+            },
+        "features" :
+            [
+                {
+                    "featureType" : "#FEATURE_TYPE#"
+                }
+            ]
+        }
+        <copy>
+        ```
 
 11. Click **Synchronize with Body** and then click **OK**.
 
@@ -163,6 +163,8 @@ In this lab, you will:
     ![Click Timeline](images/apply-changes.png " ")
 
 ## Task 3: Enhance Home Page to Upload Invoices and Process the document
+
+In this task, you'll enhance the Home page of your application to allow users to upload invoices and initiate document processing. You will create a form region, configure hidden items, add a file-upload component, and set up buttons and settings required to process invoices through OCI Document Understanding.
 
 1. Navigate to **Application ID**.
 
@@ -268,11 +270,17 @@ In this lab, you will:
 
     ![create-button](images/btn-details.png " ")
 
-14. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+14. Click **Save**.
+
+## Task 4: Create Processes to upload Invoices to Object Storage and Automate DML
+
+In this task, you'll create the backend processes required to upload invoices to OCI Object Storage and automate database operations. You will configure an execution chain, invoke a PL/SQL API to upload files, and add an automatic DML process to handle data persistence for the invoice records.
+
+1. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![create process](images/create-process6.png " ")
 
-15. In the property editor, enter/select the following details:
+2. In the property editor, enter/select the following details:
 
      - Under Identification:
 
@@ -282,15 +290,11 @@ In this lab, you will:
 
     ![create process](images/process-invoice.png " ")
 
-16. Click **Save**.
-
-## Task 4: Create Processes to upload Invoices to Object Storage and Automate DML
-
-1. In the **Processing** tab, right-click **Process Invoice** process and select **Add Child Process**.
+3. In the **Processing** tab, right-click **Process Invoice** process and select **Add Child Process**.
 
     ![Add Child Process](images/add-child-process.png " ")
 
-2. In the Property Editor, enter/select the following:
+4. In the Property Editor, enter/select the following:
 
     - Under Identification:
 
@@ -306,7 +310,7 @@ In this lab, you will:
 
    ![Add Child Process details](images/upload-to-storage.png " ")
 
-3. Under **Upload to Object Storage** process, expand Parameters and enter the following:
+5. Under **Upload to Object Storage** process, expand Parameters and enter the following:
 
     |   | Parameters | Value > Type | Value > Item |
     |---|-----------|--------------|--------------|
@@ -319,11 +323,11 @@ In this lab, you will:
 
     ![Add Child Process details](images/param-file-content.png " ")
 
-4. Right-click **Process Invoice** process again and select **Add Child Process**.
+6. Right-click **Process Invoice** process again and select **Add Child Process**.
 
     ![Add Child Process details](images/add-child-process1.png " ")
 
-5. In the Property Editor, enter/select the following details:
+7. In the Property Editor, enter/select the following details:
 
     - Under Identification:
 
@@ -335,9 +339,11 @@ In this lab, you will:
 
     ![Add Child Process details](images/automatic-dml.png " ")
 
-6. Click **Save**.
+8. Click **Save**.
 
 ## Task 5: Integrate Document Understanding API and Parse the Response
+
+In this task, you'll invoke the REST Source to analyze uploaded documents and implement PL/SQL logic to parse and store the extracted data in our database.
 
 1. In the **Processing** tab, right-click **Process Invoice** and select **Add Child Process**.
 
@@ -389,32 +395,32 @@ In this lab, you will:
 
     - Source > PL/SQL Code: Copy and paste the below code into the code editor:
 
-    ```
-    <copy>
-    INSERT INTO DOCAI_RESPONSE
-            (
-                document_id,
-                field_type_code,
-                field_label,
-                label_score,
-                field_value
-            )
-     SELECT :P1_ID,
-       field_type_code,
-       field_label,
-       label_score,
-       field_value
-       FROM   JSON_TABLE(:P1_RESPONSE, '$.pages[*]'
-             COLUMNS (page_number       NUMBER        PATH '$.pageNumber',
-                      NESTED PATH '$.documentFields[*]' COLUMNS
-                       (field_type_code VARCHAR2(50)   PATH '$.fieldType',
-                        field_label     VARCHAR2(100)  PATH '$.fieldLabel.name',
-                        label_score     NUMBER         PATH '$.fieldLabel.confidence',
-                        field_value     VARCHAR2(1000) PATH '$.fieldValue.value'
-                        ))) jt
-      WHERE  jt.field_type_code = 'KEY_VALUE';
-      <copy>
-       ```
+        ```
+        <copy>
+        INSERT INTO DOCAI_RESPONSE
+                (
+                    document_id,
+                    field_type_code,
+                    field_label,
+                    label_score,
+                    field_value
+                )
+        SELECT :P1_ID,
+        field_type_code,
+        field_label,
+        label_score,
+        field_value
+        FROM   JSON_TABLE(:P1_RESPONSE, '$.pages[*]'
+                COLUMNS (page_number       NUMBER        PATH '$.pageNumber',
+                        NESTED PATH '$.documentFields[*]' COLUMNS
+                        (field_type_code VARCHAR2(50)   PATH '$.fieldType',
+                            field_label     VARCHAR2(100)  PATH '$.fieldLabel.name',
+                            label_score     NUMBER         PATH '$.fieldLabel.confidence',
+                            field_value     VARCHAR2(1000) PATH '$.fieldValue.value'
+                            ))) jt
+        WHERE  jt.field_type_code = 'KEY_VALUE';
+        <copy>
+        ```
 
     ![Add Child Process details](images/parse-response.png " ")
 
@@ -429,4 +435,4 @@ You're now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

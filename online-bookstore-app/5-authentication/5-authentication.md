@@ -10,9 +10,9 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Create a Package to implement password hashing and user authentication logic
-- Create a Trigger to enforce data integrity and secure password storage
-- Create a Custom Authentication Scheme for validating user login credentials
+- Create a Package to implement password hashing and user authentication logic.
+- Create a Trigger to enforce data integrity and secure password storage.
+- Create a Custom Authentication Scheme for validating user login credentials.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -280,4 +280,4 @@ You've gained knowledge on creating database objects such as packages and trigge
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

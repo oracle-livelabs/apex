@@ -10,8 +10,8 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Configure Push Notifications using apex\_pwa.send\_push\_notification api
-- Enable End-Users to receive Push Notifications
+- Configure Push Notifications using apex\_pwa.send\_push\_notification api.
+- Enable End-Users to receive Push Notifications.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
@@ -225,4 +225,4 @@ You are now ready to move on to the next lab!
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
