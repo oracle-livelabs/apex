@@ -72,7 +72,7 @@ In this workshop, you will:
 | 8 | [Create Workflow Pages](?lab=8-creating-pages) | 20 minutes |
 | 9 | [Run the Application](?lab=9-running-the-app) | 20 minutes |
 | 10 | [Activate the Workflow](?lab=10-activate-workflow) | 5 minutes |
-| 11 | [Enhance Workflow Management (Optional)](?lab=11-resume-workflow.md) | 5 minutes |
+| 11 | [Enhance Workflow Management](?lab=11-resume-workflow.md) | 5 minutes |
 
 Total Estimated Time: 3 hours 50 minutes
 
@@ -101,4 +101,5 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

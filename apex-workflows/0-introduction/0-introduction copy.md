@@ -75,4 +75,5 @@ Import them into your workspace. To run the app, please run the steps described 
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

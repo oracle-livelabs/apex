@@ -32,6 +32,8 @@ In this workshop, you will:
 
 - Implement Invoice Approval Requests Using Approvals Component.
 
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
+
 ## Prerequisites
 
 - An APEX workspace.
@@ -112,4 +114,5 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

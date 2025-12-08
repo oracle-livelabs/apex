@@ -77,4 +77,4 @@ In this hands-on lab, you learned how to:
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

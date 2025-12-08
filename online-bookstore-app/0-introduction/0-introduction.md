@@ -31,7 +31,7 @@ In this workshop, you will:
 
 - An APEX workspace.
 
-- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). 
+- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
 - We need to use an API key for the AI Provider of your choice (OCI Generative AI, Open AI, Cohere) for Labs 8, and 17.
 
@@ -67,11 +67,11 @@ In this workshop, you will:
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Create the application](?lab=create-app) | 4 minutes |
+| 1 | [Create an APEX application](?lab=create-app) | 4 minutes |
 | 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | 5 minutes |
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 15 minutes |
 | 4 | [Customize Application Theme](?lab=application-theme) | 1 minute |
-| 5 | [Custom Authentication](?lab=authentication) | 5 minutes |
+| 5 | [Create Custom Authentication](?lab=authentication) | 5 minutes |
 | 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | 15 minutes |
 | 7 | [Create and Manage a Shopping Cart](?lab=7-create-shop-cart) | 30 minutes |
 | 8 | [Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget) | 15 minutes |
@@ -79,12 +79,12 @@ In this workshop, you will:
 | 10 | [Create and Manage User Profile Pages](?lab=10-add-user) | 30 minutes |
 | 11 | [Create and Manage Administration](?lab=11-admin-page) | 30 minutes |
 | 12 | [Improve User Onboarding](?lab=12-onboarding) | 35 minutes |
-| 13 | [Push Notification](?lab=13-push-notification) | 5 minutes |
-| 14 | [AI Vision](?lab=14-ai-vision) | 10 minutes |
-| 15 | [Razorpay Payment Integration](?lab=15-razorpay-payement-integration) | 20 minutes |
-| 16 | [UI Enhancements](?lab=16-additional-ui-enhancements) | 30 minutes |
+| 13 | [Configure Push Notification](?lab=13-push-notification) | 5 minutes |
+| 14 | [Integrate AI Vision to Enhance Book Search](?lab=14-ai-vision) | 10 minutes |
+| 15 | [Integrate Razorpay Payment Gateway](?lab=15-razorpay-payement-integration) | 20 minutes |
+| 16 | [Enhance the UI](?lab=16-additional-ui-enhancements) | 30 minutes |
 | 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 5 minutes |
-| 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 10 minutes |
+| 18 | [Implement Vector Search using Search Configurations](?lab=18-vector-search-configurations) | 10 minutes |
 
 Total Estimated Time: 4 hours 40 minutes
 
