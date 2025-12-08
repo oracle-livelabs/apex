@@ -14,7 +14,7 @@ Estimated Time: 1 hour 2 minutes
 
 ### Objectives
 
-In this workshop, you:
+In this workshop, you will:
 
 - Create an APEX application.
 
@@ -31,6 +31,8 @@ In this workshop, you:
 - Parse the response and display the extracted results using Interactive Report.
 
 - Implement Invoice Approval Requests Using Approvals Component.
+
+*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ## Prerequisites
 
@@ -79,7 +81,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads: Download and Install the Complete Application
 
-If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
+If you are stuck or the app is not working as expected, don't worry! You can download and install the completed app as follows:
 
 1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application.
 
@@ -112,4 +114,5 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 ## Acknowledgments
 
 - **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

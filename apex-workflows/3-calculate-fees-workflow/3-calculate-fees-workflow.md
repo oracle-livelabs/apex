@@ -205,4 +205,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** -  Ankita Beri, Product Manager, March 2025
+- **Last Updated By/Date** - Ankita Beri, Product Manager, March 2025
