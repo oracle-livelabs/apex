@@ -180,21 +180,21 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
 
-11. Enter the password for the Administration Services and click **Sign In to Administration**.
+10. Enter the password for the Administration Services and click **Sign In to Administration**.
 
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
 
     ![Administration Services login page](images/log-in-as-admin.png " ")
 
-12. Click **Create Workspace**.
+11. Click **Create Workspace**.
 
     ![Create Workspace page](images/welcome-create-workspace.png " ")
 
-13. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+12. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
     ![Choose type of schema](images/choose-schema.png " ")
 
-14. In the Create Workspace dialog, enter the following:
+13. In the Create Workspace dialog, enter the following:
 
       | Property | Value |
       | --- | --- |
@@ -206,13 +206,13 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![Create Workspace dialog](images/create-workspace.png " ")
 
-15. In the APEX Instance Administration page, click the **DEMO** link in the success message.
+14. In the APEX Instance Administration page, click the **DEMO** link in the success message.
 
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-16. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
+15. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 

@@ -97,9 +97,9 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
 12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
 
+    **Prompt 1:**
     ```
     <copy>
-    >Prompt 1:
     >Generate Sample Data
     </copy>
     ```
