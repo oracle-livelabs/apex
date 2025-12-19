@@ -116,7 +116,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
 15. Before clicking on **Run** button. Let's replace the code from the **Script Editor** with the below modified database objects code:
 
-    > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
+    > Note: We are replacing the code to ensure the lab can be completed as intended. The replacement is only for consistency with the lab steps and expected results.
 
     ```
     <copy>
