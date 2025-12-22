@@ -107,7 +107,7 @@ By the end of this lab, you will be able to:
     **Prompt 1:**
      ```
     <copy>
-    Generate an HTML to display start date and end date as a labelled information using span tag.
+    Generate some HTML to display start date and end date as a labelled information using span tag.
     </copy>
     ```
 
@@ -141,9 +141,7 @@ By the end of this lab, you will be able to:
     </copy>
     ```
 
-    !["Click App Builder"](images/insert-desc.png "")
-
-    !["Click App Builder"](images/insert-desc1.png "")
+    !["Click App Builder"](images/insert-html.png "")
 
 12. Click **Save and Run**.
 
