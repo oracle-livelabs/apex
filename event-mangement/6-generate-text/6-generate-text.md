@@ -95,25 +95,9 @@ Estimated Time: 5 minutes
         ```
     >Note: Page Item number may vary depending on your application.
 
-    - Under Server-side Condition:
-
-        - Type: **Function Body**
-
-        - Expression:
-
-            ```
-            <copy>
-            return :APP_PAGE_ID = 11;
-            </copy>
-            ```
-
-    >Note: Page number may vary depending on your application.
-
 6. Click **Create**.
 
     !["Click App Builder"](images/gen-desc.png "")
-
-    !["Click App Builder"](images/func-body2.png "")
 
 ## Task 3: Add Generate Text with AI Dynamic Action
 
