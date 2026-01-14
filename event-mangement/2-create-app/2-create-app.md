@@ -34,7 +34,7 @@ When we generate a data model, the database updates instantly but APEX’s schem
 
     !["Click App Builder"](images/review-tables.png "")
 
-## Task 1: Create the Application using Generative AI
+## Task 2: Create the Application using Generative AI
 
 In this task, you will create an application using Generative AI and enter natural language.
 
