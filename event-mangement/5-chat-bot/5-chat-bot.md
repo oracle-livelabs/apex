@@ -122,11 +122,11 @@ By the end of this lab, you will be able to:
 
         - Expression:
 
-        ```
-        <copy>
-        return :APP_PAGE_ID = 3;
-        </copy>
-        ```
+            ```
+            <copy>
+            return :APP_PAGE_ID = 3;
+            </copy>
+            ```
         >Note: Page number may vary depending on your application.
 
 5. Click **Create**.
