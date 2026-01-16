@@ -119,7 +119,7 @@ Click **Upload your own icon**, choose the image and click **Save Icon**.
 
     ![click create application](images/create-event-app1.png " ")
 
-## Task 2: Run the Application
+## Task 3: Run the Application
 
 1. It is now time to see how the AI generated APEX app looks! Click **Run Application**.
 
