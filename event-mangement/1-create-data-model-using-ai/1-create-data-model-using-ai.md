@@ -4,7 +4,7 @@
 
 In this lab, you learn how to create a data model using Generative AI. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues and attendees for efficient event management.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -100,7 +100,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
     **Prompt 1:**
     ```
     <copy>
-    >Generate Sample Data
+    Generate Sample Data
     </copy>
     ```
 
