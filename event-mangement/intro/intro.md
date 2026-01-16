@@ -52,13 +52,13 @@ Total Workshop Time: 60 minutes
 
 | S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 4 minutes |
-| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 4 minutes |
-| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 4 minutes |
-| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 4 minutes |
+| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 10 minutes |
+| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 10 minutes |
+| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 10 minutes |
+| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 10 minutes |
 | 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
-| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 4 minutes |
-| 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
+| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
+| 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 10 minutes |
 
 ### **Let's Get Started!**
 
