@@ -116,11 +116,26 @@ By the end of this lab, you will be able to:
 
         - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
+    - Under Server-side Condition:
+
+        - Type: Function Body
+
+        - Expression:
+
+        ```
+        <copy>
+        return :APP_PAGE_ID = 3;
+        </copy>
+        ```
+        >Note: Page number may vary depending on your application.
+
 5. Click **Create**.
 
     !["Click App Builder"](images/event-ai-conf1.png "")
 
     !["Click App Builder"](images/event-ai-conf.png "")
+
+    !["Click App Builder"](images/assistant-server.png "")
 
 6. Click **Event AI Configuration**. Under RAG Sources, click **Create RAG Source**.
 
