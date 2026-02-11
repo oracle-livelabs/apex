@@ -12,35 +12,27 @@
       },
       {
         "title": "Lab 1: Configure a Generative AI Service in APEX",
-        "filename": "../../0-configure-ai-keys/0-configure-ai-keys.md",
-        "type": {
-          "OCIGenAI" : "OCIGenAI",
-          "OpenAI" : "OpenAI"
-          }
+        "filename": "../../1-configure-ai-keys/1-configure-ai-keys.md",
       },
       {
-        "title": "Lab 2: Create Data Model using Generative AI",
-        "filename": "../../1-create-data-model-using-ai/1-create-data-model-using-ai.md"
+        "title": "Lab 2: Managing Data Using SQL Workshop",
+        "filename": "../../2-create-data-model-using-ai/2-create-data-model-using-ai.md"
       },
       {
-        "title": "Lab 3: Create the Application using Generative AI",
-          "filename": "../../2-create-app/2-create-app.md"
+        "title": "Lab 3: Building Enterprise AI Apps Faster - Part 1",
+          "filename": "../../3-create-app/3-create-app.md"
       },
       {
-        "title": "Lab 4: Enhance UI with AI",
-          "filename": "../../4-ui-apex-assistant/4-ui-apex-assistant.md"
+        "title": "Lab 4: Building Enterprise AI Apps Faster - Part 2",
+          "filename": "../../4-chat-bot/4-chat-bot.md"
       },
       {
-        "title": "Lab 5: Create an Event Chat Assistant",
-          "filename": "../../5-chat-bot/5-chat-bot.md"
+        "title": "Lab 5: Working with External Data Sources",
+          "filename": "../../5-data-sources/5-data-sources.md"
       },
       {
-        "title": "Lab 6: Generate Event Description with AI",
-          "filename": "../../6-generate-text/6-generate-text.md"
-      },
-      {
-        "title": "Lab 7 [OPTIONAL]: Enhance Charts and Database Objects using AI",
-          "filename": "../../3-apex-assistant/3-apex-assistant.md"
+        "title": "Lab 6: Authentication & Authorization",
+          "filename": "../../6-auth/6-auth.md"
       },
       {
         "title": "Need Help?",

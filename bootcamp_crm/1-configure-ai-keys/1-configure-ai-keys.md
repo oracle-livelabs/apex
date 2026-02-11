@@ -63,4 +63,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, Febuary 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

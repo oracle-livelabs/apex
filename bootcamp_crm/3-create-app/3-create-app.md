@@ -1,4 +1,4 @@
-# Create the Application using Generative AI
+# Building Enterprise AI Apps Faster - Part 1
 
 ## Introduction
 
@@ -534,4 +534,4 @@ This lab demonstrated how Generative AI accelerates application development whil
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, Febuary 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

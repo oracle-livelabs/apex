@@ -683,4 +683,4 @@ You now know how to create a Data Model using AI. You may now **proceed to the n
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, Febuary 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
