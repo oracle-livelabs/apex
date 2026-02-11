@@ -18,6 +18,115 @@ By the end of this lab, you will be able to:
 
 - Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your event data source.
 
+## Task 1 : Add Email Validation in the Leads Form Page
+
+1. Navigate to developer toolbar, **Quick Edit** on **Email** Field.
+
+    ![display project dashboard page](images/quick-edit-email.png " ")
+
+2. Right-click **
+Right Click > Create Validation
+Name : Validate Email Format
+Item  P4_EMAIL
+Regular Expression: ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+Error Message : Please enter a valid Email Address
+Task 2 : Add a Dynamic Action to refresh the content Row Region
+
+Quick Edit on the content row region 
+Right Click > Create Dynamic Action
+Check the defaults
+Event Dialog Closed
+Selection Type: Region 
+Region Leads
+True Action > Refresh > Region > Leads
+Task 3: Create a Chatbot for CRM
+
+Go to the Dashboard Page (Home Page)
+Quick Edit on the breadcrumb
+Right Click > Create Button
+Button:
+Name : CRM_AI_ASSISTANT
+Label CRM AI Assistant
+Layout > Slot > Next
+Button Template : Text with Icon
+Hot > On
+Icon : fa-chatbot
+Right Click on the button > Create Dynamic Action
+Dynamic Action:
+Name : Open AI Chatbot
+True Action:
+Show AI Assistant
+Service : Select Open AI (Created in Lab 1)
+Run the application > Click CRM AI Assistant button to open the chatbot > Prompt : Show me all new leads.
+Task 4: RAG Powered Chatbot
+
+Go to shared Components > AI Configurations
+Create an AI COnfiguration
+Name: CRM AI Configuration
+Service : Open AI
+System Prompt: 
+You are a CRM domain assistant.
+
+Answer only questions related to Customer Relationship Management (CRM), including leads, opportunities, accounts, contacts, sales pipeline, customer interactions, support cases, and CRM workflows.
+
+Use only the data provided in the conversation or context. Do not use outside knowledge. If the answer is not available in the provided data, say:
+"The provided data does not contain this information."
+
+Do not guess, assume, or generalize. Keep answers precise, factual, and based strictly on the input.
+
+
+
+Welcome Message : Hi, How may I help you?
+Create AI Configuration
+Create RAG Source
+Name : Leads Details
+Description: Provides details about leads
+SQL Query: APEX AI Assistant >  Get all details about leads like account name, Channel, status etc
+
+
+
+select l.first_name,
+       l.last_name,
+       l.email,
+       l.phone,
+       l.source,
+       l.status,
+       l.created_on,
+       l.created_by,
+       l.updated_on,
+       l.updated_by,
+       l.row_version,
+       l.account_id,
+       a.name     as account_name
+  from crm_leads          l
+  left join crm_accounts  a
+    on l.account_id = a.id
+Server Side Condition: Last user prompt contains : Leads
+Create another RAG Source
+Name : Opportunity Details
+Description: Provides details about Opportunities
+SQL Query: APEX AI Assistant > Get all details about opportunities like Account Name, Opportunity Name, Description, Amount, Stage, Close Date.
+
+
+select ca.name        as account_name,
+       co.name        as opportunity_name,
+       co.description,
+       co.amount,
+       co.stage,
+       co.close_date
+  from crm_opportunities    co
+  join crm_accounts        ca
+    on co.account_id = ca.id
+Server-side condition > Last User Prompt Contains, Expression: opportunities
+Go to Dashboard page > CRM_AI_ASSISTANT > Dynamic action > and select CRM AI Configuration for the Configuration attrubute
+Run the app > Open the CRM AI Assistant. Test with below prompts
+Show me all new leads
+Which opportunities are worth more than $500,000?
+Show me all opportunities with close dates in the past that aren't closed.
+
+
+
+
 ## Task 1: Set Up Event Chat Assistant without RAG Source
 
 1. Close the dialog box. From the runtime developer toolbar, navigate to **Page 3**.
