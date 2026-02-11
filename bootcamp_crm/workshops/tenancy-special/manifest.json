@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "Smart Project Management App with AI-Assisted Development in Oracle APEX",
+  "help": "livelabs-help-db_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../intro/intro.md"
+    },
+    {
+      "title": "Getting Started",
+      "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Lab 1: Configure AI Service and Create Data Model using AI",
+      "filename": "../../1-installing-sample-datasets/create-data-model-using-ai.md"
+    },
+    {
+      "title": "Lab 2: Create the Application using Generative AI",
+      "filename": "../../2-create-app/create-app-using-ai.md"
+    },
+    {
+      "title": "Lab 3: Regenerate the Application",
+      "filename": "../../3-regen-app/regen-app.md"
+    },
+    {
+      "title": "Lab 4: Improve Tasks and Task To Dos",
+      "filename": "../../4-improving-tasks-todos/improving-tasks-todos.md"
+    },
+    {
+      "title": "Lab 5: Configure AI and Generate Text using AI",
+      "filename": "../../5-generate-text-with-ai/work-with-ai.md"
+    },
+    {
+      "title": "Lab 6: Create an AI Chat Assistant",
+      "filename": "../../6-create-chat-assistant/show-ai-assistant.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
