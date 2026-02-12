@@ -267,6 +267,152 @@ By the end of this lab, you will be able to:
 
     *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
 
+7. Navigate to **App Builder**.
+
+    !["data model created"](images/app-builder.png "")
+
+8. Select **Customer Hub** application.
+
+    !["data model created"](images/customer-hub.png "")
+
+9. Select **Shared Components**.
+
+    !["data model created"](images/sc4.png "")
+
+10. Under Security, select **Authentication Schemes**.
+
+    !["data model created"](images/auth-sch.png "")
+
+11. Click **Create**.
+
+    !["data model created"](images/create-auth-sch.png "")
+
+12. Leave as default and click **Next**.
+
+    !["data model created"](images/next.png "")
+
+13. Enter/select the following details:
+
+    - Under Name:
+
+        - Name: **Custom AuthN**
+
+        - Scheme Type: **Custom**
+
+    - Settings > Authentication Function Name: **CRM_AUTH.AUTHENTICATE_USER**
+
+14. From the right-hand side task list, enable **Stay on Page**.
+
+15. Click **Create Authentication Scheme**.
+
+    !["data model created"](images/custom-authn.png "")
+
+16. Click **Make Current Scheme**.
+
+    !["data model created"](images/make-current.png "")
+
+17. Click **OK** to confirm.
+
+    !["data model created"](images/confirm.png "")
+
+## Task 2: Create a Interactive Report with a Form Page
+
+1. Navigate to **Application ID**. Your application ID might differ.
+
+    !["data model created"](images/app-id.png "")
+
+2. Click **Create Page**.
+
+    !["data model created"](images/create-page.png "")
+
+3. Select **Interactive Report**.
+
+    !["data model created"](images/ir.png "")
+
+4. Enter/select the following details:
+
+    - Name : **Manage Users**
+
+    - Inculde Form Page: Toggle **On**
+
+    - Form Page Name : **Manage Users**
+
+    - Data Source > Table: **CRM_USERS**
+
+    Click **Next**.
+
+    !["data model created"](images/ir-details.png "")
+
+5. Click **Create Page**.
+
+    !["data model created"](images/create-page1.png "")
+
+6. In the left pane, select the following columns and change the type to **Hidden**.
+
+    - PASSWORD_HASH
+    - PASSWORD_SALT
+    - PASSWORD_PLAIN
+    - ROW_VERSION
+    - CREATED_ON
+    - CREATED_BY
+    - UPDATED_ON
+    - UPDATED_BY
+
+    !["data model created"](images/hide-items.png "")
+
+    !["data model created"](images/hide-items2.png "")
+
+7. Click **Save and Run**.
+
+    !["data model created"](images/save-run6.png "")
+
+8. From the developer toolbar, navigate to Manage Users form page and make the below items as **Hidden**:
+
+    >Note: Page Number might differ.
+
+    - P8_PASSWORD_HASH
+    - P8_PASSWORD_SALT
+    - P8_ROW_VERSION
+    - P8_CREATED_ON
+    - P8_CREATED_BY
+    - P8_UPDATED_ON
+    - P8_UPDATED_BY
+
+9. Click **Save**.
+
+10. Logout and login again with username: **Admin** and Password: **Welcome123!**
+
+    !["data model created"](images/admin-login.png "")
+
+11. Explore the newly created page: Manage Users.
+
+    !["data model created"](images/manage-users-nav.png "")
+
+## Task 3: Create Authorization Schemes
+
+Go to Shared Components. > Security Attributes > Under Authorization group > Set Source for Role or Group Schemes to Custom Code. Apply Changes.
+Go to Authentication > Custom Auth > Post- Authentication Procedure > Enter CRM_AUTH.POST_AUTH
+Create an Authorization Scheme 
+Name : CRM Admin
+Is in Role or Group
+Type : Custom 
+Name(s) : Admin
+Assign the autorization scheme to Manage Users Screen and also in the Navigation Menu list entry for Manage Users.
+Now login as Admin – you see Manage Users is accessible.
+Login as Other user 
+rpatel/Welcome123!
+
+You wont see Manage Users entry.
+
+Create another Authorization scheme
+Name : CRM Viewer
+Is in Role or Group
+Type : Custom 
+Name(s) :Viewer
+The user with Viewer role should be allowed to create Opportunities , for example
+Go to Opportunities Report page
+Create Button > Authorization scheme > {Not CRM Viewer }
+Test the Authorization for Viewer. Login as sgupta and verify that the Create button is not displayed for this user.
 ## Summary
 
 In this lab, you:
