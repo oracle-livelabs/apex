@@ -16,323 +16,256 @@ By the end of this lab, you will be able to:
 
 1. Navigate to **SQL Workshop** and click **(V)**. Select **SQL Scripts**.
 
-    ![display project dashboard page](images/quick-edit-email.png " ")
+    ![display project dashboard page](images/sql-scripts.png " ")
 
-1. Navigate to developer toolbar, **Quick Edit** on **Email** Field.
+2. Click **Create Scripts**.
 
-    ![display project dashboard page](images/quick-edit-email.png " ")
+    ![display project dashboard page](images/create-script.png " ")
 
-2. Right-click **P6_EMAIL** and select **Create Validation**.
+3. For Script Name: Enter **Users & Roles** and copy and paste the below code in the Code editor:
 
-    ![display project dashboard page](images/create-validation.png " ")
-
-3. In the right pane, enter/select the following:
-
-    - Identification > Name: **Validate Email Format**
-
-    - Under Validation:
-
-        - Type: **Item matched Regular Expression**
-
-        - Item: **P6_EMAIL**
-
-        - Regular Expression: **^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$**
-
-    - Error > Error Message : **Please enter a valid Email Address**
-
-    ![display project dashboard page](images/validate-email.png " ")
-
-4. Click **Save**.
-
-    ![display project dashboard page](images/save-page.png " ")
-
-5. In the run time evironment, refresh the leads form page. Make some changes to the email address and click **Apply Changes**. You will notice the validation notification.
-
-    ![display project dashboard page](images/show-validation.png " ")
-
-## Task 2 : Add a Dynamic Action to refresh the content Row Region
-
-When a Lead record is edited in a dialog, the Leads Content Row region should automatically refresh to reflect updated data. In this task, you will create a Dynamic Action to refresh the region when the dialog closes.
-
-1. Close the leads form page. **Quick Edit** on the Content Row region.
-
-    ![display project dashboard page](images/quick-edit-report.png " ")
-
-2. Right-click leads region and select **Create Dynamic Action**.
-
-    ![display project dashboard page](images/create-dynamic-action.png " ")
-
-3. In the right pane, update Identification > Name to **Refesh Content Row** and check the defaults:
-
-    - Under When:
-
-        - Event: Event Dialog Closed
-
-        - Selection Type: Region
-
-        - Region: Leads
-
-    ![display project dashboard page](images/refresh-row.png " ")
-
-4. Navigate to True Action and in the right pane, check the defaults:
-
-    - Identification > Action: Refresh
-
-    - Under Affected Elements:
-
-        - Selection Type: Region
-
-        - Region: Leads
-
-    ![display project dashboard page](images/true-action.png " ")
-
-5. Click **Save**.
-
-    ![display project dashboard page](images/save-page1.png " ")
-
-## Task 3: Create a Chatbot for CRM
-
-In this task, you will create a CRM AI Assistant button on the Dashboard page and configure the *Show AI Assistant* dynamic action without using a RAG source. This demonstrates how the assistant behaves with generic AI responses.
-
-1. In the runtime environment, go to the Dashboard Page (Home Page) and **Quick Edit** on the **breadcrumb**.
-
-    ![display project dashboard page](images/quick-edit-breadcrumb.png " ")
-
-2. In the left pane, right-click **Breadcrumb** and click **Create Button**.
-
-    !["Click App Builder"](images/create-button.png "")
-
-3. In the right pane, enter/select the following:
-
-    - Under Identification:
-
-        - Button Name: **CRM_AI_ASSISTANT**
-
-        - Label: **CRM AI Assistant**
-
-    - Layout > Slot: **Next**
-
-    - Under Appearance:
-
-        - Button Template: **Text with Icon**
-
-        - Hot: Toggle **On**
-
-        - Icon: **fa-chatbot**
-
-    !["Click App Builder"](images/button-details.png "")
-
-4. In the left pane, right-click **CRM_AI_ASSISTANT** button and click **Create Dynamic Action**.
-
-    !["Click App Builder"](images/create-dynamic-action2.png "")
-
-5. In the right pane, enter the following:
-
-    - Identification > Name : **Open AI Chatbot**
-
-    !["Click App Builder"](images/open-ai-chatbot.png "")
-
-6. Under **True** Action, click **Show**. In the right pane, enter/select the following:
-
-    - Identification > Action: **Show AI Assistant**
-
-    - Generative AI > Service: Select **Open AI** (Created in Lab 1)
-
-    !["Click App Builder"](images/show-ai.png "")
-
-7. Click **Save and Run**.
-
-    !["Click App Builder"](images/save-run3.png "")
-
-8. In the app, click the **CRM AI Assistant** button and enter the prompt as **Show me all new leads.**.
-
-   The chat assistant currently doesn't returns results from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
-
-    !["Click App Builder"](images/view-chat.png "")
-
-## Task 4: RAG Powered Chatbot
-
-In this task, you will create an AI Configuration and define RAG Sources. This enables the chatbot to retrieve information directly from your CRM tables using APEX Assistant.
-
-1. Navigate back to Page designer. Go to **Shared Components**.
-
-    !["Click App Builder"](images/sc.png "")
-
-2. Under Generative AI, click **AI Configurations**.
-
-    !["Click App Builder"](images/ai-conf.png "")
-
-3. In the Generative AI Configurations page, click **Create**.
-
-    !["Click App Builder"](images/create-ai-conf.png "")
-
-4. In the Generative AI Configuration page, enter the following:
-
-    - Identification > Name : **CRM AI Configuration**
-
-    - Under Generative AI:
-
-        - Service: **Open AI** (Select the AI service which you have configured in Lab 1.)
-
-        - System Prompt:
-
-            ```
-            <copy>
-
-            You are a CRM domain assistant.
-
-            Answer only questions related to Customer Relationship Management (CRM), including leads, opportunities, accounts, contacts, sales pipeline, customer interactions, support cases, and CRM workflows.
-
-            Use only the data provided in the conversation or context. Do not use outside knowledge. If the answer is not available in the provided data, say:
-            "The provided data does not contain this information."
-            Do not guess, assume, or generalize. Keep answers precise, factual, and based strictly on the input.
-
-            ```
-            </copy>
-
-        - Welcome Message: **Hi, How may I help you?**
-
-5. From right-hand side task list, enable **Return To Page**.
-
-6. Click **Create**.
-
-   !["Click App Builder"](images/crm-ai-conf.png "")
-
-    !["Click App Builder"](images/welcome-msg.png "")
-
-7. Under RAG Sources, click **Create RAG Source**.
-
-    !["Click App Builder"](images/create-rag.png "")
-
-8. In the RAG Source page, enter/select the following:
-
-    - Identification > Name: **Leads Details**
-
-    - Description: **Provides details about leads**
-
-    !["Click App Builder"](images/lead-details.png "")
-
-9. Under Source > SQL Query: Click **APEX Assistant**
-
-    !["Click App Builder"](images/lead-details.png "")
-
-10. In the APEX Assistant box, enter the following prompt and press enter:
-
-    Prompt 1:
     ```
     <copy>
-    Get all details about leads like account name, Channel, status etc
+    CREATE TABLE crm_roles (
+    id               NUMBER GENERATED BY DEFAULT ON NULL AS IDENTITY
+                     CONSTRAINT crm_roles_pk PRIMARY KEY,
+    role_name        VARCHAR2(50)  NOT NULL UNIQUE,
+    role_description VARCHAR2(500),
+    row_version      INTEGER       NOT NULL,
+    created_on       DATE          NOT NULL,
+    created_by       VARCHAR2(255) NOT NULL,
+    updated_on       DATE          NOT NULL,
+    updated_by       VARCHAR2(255) NOT NULL
+    );
+
+    CREATE TABLE crm_users (
+    id             NUMBER GENERATED BY DEFAULT ON NULL AS IDENTITY
+                   CONSTRAINT crm_users_pk PRIMARY KEY,
+    username       VARCHAR2(50)  NOT NULL UNIQUE,
+    email          VARCHAR2(100) NOT NULL UNIQUE,
+    password_hash  VARCHAR2(255) NOT NULL,
+    password_salt  VARCHAR2(64)  NOT NULL,
+    password_plain VARCHAR2(255),
+    first_name     VARCHAR2(50)  NOT NULL,
+    last_name      VARCHAR2(50)  NOT NULL,
+
+    role_id        NUMBER        NOT NULL
+                   CONSTRAINT crm_users_role_fk
+                   REFERENCES crm_roles(id) ON DELETE CASCADE,
+
+    phone          VARCHAR2(20),
+    row_version    INTEGER       NOT NULL,
+    created_on     DATE          NOT NULL,
+    created_by     VARCHAR2(255) NOT NULL,
+    updated_on     DATE          NOT NULL,
+    updated_by     VARCHAR2(255) NOT NULL
+    );
+
+    CREATE INDEX crm_users_indx_1
+    ON crm_users(role_id);
+
+    CREATE OR REPLACE TRIGGER crm_roles_biu
+    BEFORE INSERT OR UPDATE ON crm_roles
+    FOR EACH ROW
+    BEGIN
+    :new.updated_on := SYSDATE;
+    :new.updated_by := COALESCE(
+                           SYS_CONTEXT('APEX$SESSION','APP_USER'),
+                           USER
+                       );
+
+    IF INSERTING THEN
+        :new.row_version := 1;
+        :new.created_on  := :new.updated_on;
+        :new.created_by  := :new.updated_by;
+    ELSE
+        :new.row_version := NVL(:old.row_version, 0) + 1;
+    END IF;
+    END;
+    /
+    CREATE OR REPLACE TRIGGER crm_users_biu
+    BEFORE INSERT OR UPDATE ON crm_users
+    FOR EACH ROW
+    BEGIN
+    :new.updated_on := SYSDATE;
+    :new.updated_by := COALESCE(
+                           SYS_CONTEXT('APEX$SESSION','APP_USER'),
+                           USER
+                       );
+
+    IF INSERTING THEN
+        :new.row_version := 1;
+        :new.created_on  := :new.updated_on;
+        :new.created_by  := :new.updated_by;
+    ELSE
+        :new.row_version := NVL(:old.row_version, 0) + 1;
+    END IF;
+
+    -- Password hashing logic
+    IF :new.password_plain IS NOT NULL THEN
+        IF INSERTING
+           OR :old.password_plain IS NULL
+           OR :new.password_plain <> :old.password_plain
+        THEN
+            :new.password_salt := DBMS_RANDOM.STRING('x', 20);
+
+            :new.password_hash := apex_util.get_hash(
+                                     apex_t_varchar2(:new.password_plain || :new.password_salt),
+                                     FALSE
+                                  );
+
+            :new.password_plain := NULL;
+        END IF;
+    END IF;
+    END;
+    /
+
+    CREATE OR REPLACE PACKAGE crm_auth AS
+    FUNCTION authenticate_user (
+        p_username IN VARCHAR2,
+        p_password IN VARCHAR2
+    ) RETURN BOOLEAN;
+
+    PROCEDURE post_auth;
+    END crm_auth;
+
+    CREATE OR REPLACE PACKAGE BODY crm_auth AS
+
+    FUNCTION authenticate_user (
+        p_username IN VARCHAR2,
+        p_password IN VARCHAR2
+    ) RETURN BOOLEAN
+    IS
+        l_hash      crm_users.password_hash%TYPE;
+        l_salt      crm_users.password_salt%TYPE;
+        l_test_hash VARCHAR2(255);
+    BEGIN
+        SELECT password_hash,
+               password_salt
+        INTO   l_hash,
+               l_salt
+        FROM   crm_users
+        WHERE  LOWER(username) = LOWER(p_username);
+
+        l_test_hash := apex_util.get_hash(
+                          apex_t_varchar2(p_password || l_salt),
+                          FALSE
+                       );
+
+        IF l_test_hash = l_hash THEN
+            apex_util.set_authentication_result(0);
+            RETURN TRUE;
+        ELSE
+            apex_util.set_authentication_result(4);
+            RETURN FALSE;
+        END IF;
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            apex_util.set_authentication_result(1);
+            RETURN FALSE;
+
+        WHEN OTHERS THEN
+            apex_util.set_authentication_result(7);
+            apex_util.set_custom_auth_status(SQLERRM);
+            RETURN FALSE;
+    END authenticate_user;
+    PROCEDURE post_auth IS
+        l_role_name crm_roles.role_name%TYPE;
+    BEGIN
+        SELECT r.role_name
+        INTO   l_role_name
+        FROM   crm_users u
+        JOIN   crm_roles r
+               ON r.id = u.role_id
+        WHERE  LOWER(u.username) = LOWER(v('APP_USER'));
+
+        apex_authorization.enable_dynamic_groups(
+            p_group_names => apex_t_varchar2(l_role_name)
+        );
+
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            NULL;
+    END post_auth;
+
+    END crm_auth;
+    /
+
+    INSERT INTO crm_roles
+        (id, role_name, role_description, row_version,
+        created_on, created_by, updated_on, updated_by)
+    VALUES
+        (1, 'Admin', 'System administrator with full access',
+        1, SYSDATE - 100, 'SYSTEM', SYSDATE - 100, 'SYSTEM');
+
+    INSERT INTO crm_roles VALUES
+        (2, 'Sales Manager', 'Manages sales team and accounts',
+        1, SYSDATE - 100, 'SYSTEM', SYSDATE - 100, 'SYSTEM');
+
+    INSERT INTO crm_roles VALUES
+        (3, 'Sales Rep', 'Handles customer accounts and deals',
+        1, SYSDATE - 100, 'SYSTEM', SYSDATE - 100, 'SYSTEM');
+
+    INSERT INTO crm_roles VALUES
+        (4, 'Support Agent', 'Provides customer support',
+        1, SYSDATE - 100, 'SYSTEM', SYSDATE - 100, 'SYSTEM');
+
+    INSERT INTO crm_roles VALUES
+        (5, 'Viewer', 'Read only access to reports',
+        1, SYSDATE - 100, 'SYSTEM', SYSDATE - 100, 'SYSTEM');
+
+    COMMIT;
+
+    INSERT INTO crm_users (
+        username, email, password_plain, first_name, last_name,
+        role_id, phone, row_version,
+        created_on, created_by, updated_on, updated_by
+    ) VALUES (
+        'admin', 'admin@acmecrm.com', 'Welcome123!', 'John', 'Admin',
+        1, '555-0001', 1,
+        SYSDATE, 'SYSTEM', SYSDATE, 'SYSTEM'
+    );
+
+    INSERT INTO crm_users VALUES
+    ('smiller','sarah.miller@acmecrm.com','Welcome123!','Sarah','Miller',2,'5550101',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('rpatel','raj.patel@acmecrm.com','Welcome123!','Raj','Patel',3,'5550102',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('achen','alex.chen@acmecrm.com','Welcome123!','Alex','Chen',3,'5550103',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('mroberts','mia.roberts@acmecrm.com','Welcome123!','Mia','Roberts',4,'5550201',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('tnguyen','tom.nguyen@acmecrm.com','Welcome123!','Tom','Nguyen',4,'5550202',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('dlee','daniel.lee@acmecrm.com','Welcome123!','Daniel','Lee',5,'5550301',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    INSERT INTO crm_users VALUES
+    ('sgupta','sneha.gupta@acmecrm.com','Welcome123!','Sneha','Gupta',5,'5550302',1,SYSDATE,'SYSTEM',SYSDATE,'SYSTEM');
+
+    COMMIT;
+
     </copy>
     ```
 
-    !["Click App Builder"](images/apex-assistant-rag.png "")
+4. Click **Run** in the Script Editor.
 
-11. Click **Insert**.
+    !["provide script name"](images/paste-script.png "")
 
-    !["Click App Builder"](images/insert-rag.png "")
+5. Click **Run Now** to submit the script for execution.
 
-12. Under Server-side condition, enter/select the following:
+    !["run now"](images/run-now.png "")
 
-    - Type: **Last User Prompt contains**
+6. The Manage Script Results page appears listing script results.
 
-    - Expression 1: **Leads**
+    !["data model created"](images/statements.png "")
 
-13. Click **Create**.
-
-    !["Click App Builder"](images/server-side.png "")
-
-14. Click **Create RAG Source** again.
-
-    !["Click App Builder"](images/create-rag2.png "")
-
-15. In the RAG Source page, enter/select the following:
-
-    - Identification > Name: **Opportunity Details**
-
-    - Description: **Provides details about leads**
-
-    !["Click App Builder"](images/opportunity-details.png "")
-
-16. Under Source > SQL Query: Click **APEX Assistant**
-
-    !["Click App Builder"](images/apex-assistant-rag2.png "")
-
-17. In the APEX Assistant box, enter the following prompt and press enter:
-
-    Prompt 1:
-    ```
-    <copy>
-    Get all details about opportunities like Account Name, Opportunity Name, Description, Amount, Stage, Close Date.
-    </copy>
-    ```
-
-    !["Click App Builder"](images/apex-assistant-rag2.png "")
-
-18. Click **Insert**.
-
-    !["Click App Builder"](images/insert-rag2.png "")
-
-19. Under Server-side condition, enter/select the following:
-
-    - Type: **Last User Prompt contains**
-
-    - Expression 1: **Opportunities**
-
-20. Click **Create**.
-
-     !["Click App Builder"](images/server-side2.png "")
-
-
-## Task 3: Enable Chat Assistant with RAG Source
-
-In this final task, you will connect the CRM AI Configuration (with RAG sources) to the Show AI Assistant dynamic action so that the chatbot retrieves data directly from your CRM tables.
-
-1. From the top-right corner, click **Edit Page 1**.
-
-    >Note: Page number may vary depending on your application.
-
-    !["Click App Builder"](images/edit-page-1.png "")
-
-2. Under **CRM_AI_ASSISTANT** button, select True Action **Show AI Assistant** and update the following:
-
-    - Generative AI > Configuration: **CRM AI Configuration**
-
-    !["Click App Builder"](images/conf-rag.png "")
-
-3. Click **Save and Run**.
-
-    !["Click App Builder"](images/save-run4.png "")
-
-4. In the app, click the **CRM AI Assistant** button and enter the following prompts:
-
-    Prompt 1:
-    ```
-    <copy>
-    Show me all new leads
-    </copy>
-    ```
-
-    !["Click App Builder"](images/ques1.png "")
-
-    Prompt 2:
-    ```
-    <copy>
-    Which opportunities are worth more than $500,000?
-    </copy>
-    ```
-
-    !["Click App Builder"](images/ques2.png "")
-
-    Prompt 3:
-    ```
-    <copy>
-    Show me all opportunities with close dates in the past that aren't closed.
-    </copy>
-    ```
-
-    !["Click App Builder"](images/ques3.png "")
-
-    The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
+    *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
 
 ## Summary
 
