@@ -1,12 +1,8 @@
-# Building Enterprise AI Apps Faster - Part 2
+# Authentication & Authorization
 
 ## Introduction
 
-In this lab, you will enhance your Oracle APEX CRM application by implementing both user experience improvements and AI-driven capabilities.
 
-You will begin by strengthening the application with email validation to ensure data quality and by creating dynamic actions to automatically refresh regions and improve interactivity.
-
-Next, you will build a CRM Chat Assistant using the Show AI Assistant dynamic action. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to understand how it generates generic responses. Then, you will enhance it by creating an AI Configuration and defining RAG sources, enabling the chatbot to retrieve information directly from your CRM tables.
 
 Estimated Time: 20 minutes
 
@@ -14,21 +10,13 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will be able to:
 
-- Implement email validation to enforce proper data entry in the Leads form.
 
-- Create dynamic actions to automatically refresh regions and improve user experience.
 
-- Create an CRM AI Assistant button in your APEX application.
+## Task 1 : Create a SQL Script
 
-- Configure a Show AI Assistant dynamic action without using a RAG source.
+1. Navigate to **SQL Workshop** and click **(V)**. Select **SQL Scripts**.
 
-- Create an AI Configuration and define a RAG Source to query CRM data.
-
-- Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your CRM data source.
-
-## Task 1 : Add Email Validation in the Leads Form Page
-
-Data validation is essential to ensure high-quality CRM records. In this task, you will add a regular expression validation to the Email field in the Leads form page.
+    ![display project dashboard page](images/quick-edit-email.png " ")
 
 1. Navigate to developer toolbar, **Quick Edit** on **Email** Field.
 
