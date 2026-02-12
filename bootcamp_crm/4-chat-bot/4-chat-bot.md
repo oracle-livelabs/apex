@@ -1,24 +1,34 @@
-# Create an Event Chat Assistant
+# Building Enterprise AI Apps Faster - Part 2
 
 ## Introduction
 
-In this lab, you will learn how to enhance an Oracle APEX application by creating an Event Chat Assistant. Using the Show AI Assistant dynamic action, you will build a chatbot that can respond to user queries about event details. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to see how it works with generic responses, and then enhance it by creating an AI Configuration and RAG source so the chatbot fetches information directly from your event data. This approach demonstrates how to combine low-code development with AI-driven capabilities to deliver smarter, data-aware user experiences.
+In this lab, you will enhance your Oracle APEX CRM application by implementing both user experience improvements and AI-driven capabilities.
 
-Estimated Time: 5 minutes
+You will begin by strengthening the application with email validation to ensure data quality and by creating dynamic actions to automatically refresh regions and improve interactivity.
+
+Next, you will build a CRM Chat Assistant using the Show AI Assistant dynamic action. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to understand how it generates generic responses. Then, you will enhance it by creating an AI Configuration and defining RAG sources, enabling the chatbot to retrieve information directly from your CRM tables.
+
+Estimated Time: 20 minutes
 
 ### Objectives
 
 By the end of this lab, you will be able to:
 
-- Create an Event Assistant button in your APEX application.
+- Implement email validation to enforce proper data entry in the Leads form.
+
+- Create dynamic actions to automatically refresh regions and improve user experience.
+
+- Create an CRM AI Assistant button in your APEX application.
 
 - Configure a Show AI Assistant dynamic action without using a RAG source.
 
-- Create an AI Configuration and define a RAG Source to query event data.
+- Create an AI Configuration and define a RAG Source to query CRM data.
 
-- Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your event data source.
+- Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your CRM data source.
 
 ## Task 1 : Add Email Validation in the Leads Form Page
+
+Data validation is essential to ensure high-quality CRM records. In this task, you will add a regular expression validation to the Email field in the Leads form page.
 
 1. Navigate to developer toolbar, **Quick Edit** on **Email** Field.
 
@@ -54,6 +64,8 @@ By the end of this lab, you will be able to:
 
 ## Task 2 : Add a Dynamic Action to refresh the content Row Region
 
+When a Lead record is edited in a dialog, the Leads Content Row region should automatically refresh to reflect updated data. In this task, you will create a Dynamic Action to refresh the region when the dialog closes.
+
 1. Close the leads form page. **Quick Edit** on the Content Row region.
 
     ![display project dashboard page](images/quick-edit-report.png " ")
@@ -74,114 +86,41 @@ By the end of this lab, you will be able to:
 
     ![display project dashboard page](images/refresh-row.png " ")
 
-4. True Action > Refresh > Region > Leads
-Task 3: Create a Chatbot for CRM
+4. Navigate to True Action and in the right pane, check the defaults:
 
-Go to the Dashboard Page (Home Page)
-Quick Edit on the breadcrumb
-Right Click > Create Button
-Button:
-Name : CRM_AI_ASSISTANT
-Label CRM AI Assistant
-Layout > Slot > Next
-Button Template : Text with Icon
-Hot > On
-Icon : fa-chatbot
-Right Click on the button > Create Dynamic Action
-Dynamic Action:
-Name : Open AI Chatbot
-True Action:
-Show AI Assistant
-Service : Select Open AI (Created in Lab 1)
-Run the application > Click CRM AI Assistant button to open the chatbot > Prompt : Show me all new leads.
-Task 4: RAG Powered Chatbot
+    - Identification > Action: Refresh
 
-Go to shared Components > AI Configurations
-Create an AI COnfiguration
-Name: CRM AI Configuration
-Service : Open AI
-System Prompt: 
-You are a CRM domain assistant.
+    - Under Affected Elements:
 
-Answer only questions related to Customer Relationship Management (CRM), including leads, opportunities, accounts, contacts, sales pipeline, customer interactions, support cases, and CRM workflows.
+        - Selection Type: Region
 
-Use only the data provided in the conversation or context. Do not use outside knowledge. If the answer is not available in the provided data, say:
-"The provided data does not contain this information."
+        - Region: Leads
 
-Do not guess, assume, or generalize. Keep answers precise, factual, and based strictly on the input.
+    ![display project dashboard page](images/true-action.png " ")
 
+5. Click **Save**.
 
+    ![display project dashboard page](images/save-page1.png " ")
 
-Welcome Message : Hi, How may I help you?
-Create AI Configuration
-Create RAG Source
-Name : Leads Details
-Description: Provides details about leads
-SQL Query: APEX AI Assistant >  Get all details about leads like account name, Channel, status etc
+## Task 3: Create a Chatbot for CRM
 
+In this task, you will create a CRM AI Assistant button on the Dashboard page and configure the *Show AI Assistant* dynamic action without using a RAG source. This demonstrates how the assistant behaves with generic AI responses.
 
+1. In the runtime environment, go to the Dashboard Page (Home Page) and **Quick Edit** on the **breadcrumb**.
 
-select l.first_name,
-       l.last_name,
-       l.email,
-       l.phone,
-       l.source,
-       l.status,
-       l.created_on,
-       l.created_by,
-       l.updated_on,
-       l.updated_by,
-       l.row_version,
-       l.account_id,
-       a.name     as account_name
-  from crm_leads          l
-  left join crm_accounts  a
-    on l.account_id = a.id
-Server Side Condition: Last user prompt contains : Leads
-Create another RAG Source
-Name : Opportunity Details
-Description: Provides details about Opportunities
-SQL Query: APEX AI Assistant > Get all details about opportunities like Account Name, Opportunity Name, Description, Amount, Stage, Close Date.
-
-
-select ca.name        as account_name,
-       co.name        as opportunity_name,
-       co.description,
-       co.amount,
-       co.stage,
-       co.close_date
-  from crm_opportunities    co
-  join crm_accounts        ca
-    on co.account_id = ca.id
-Server-side condition > Last User Prompt Contains, Expression: opportunities
-Go to Dashboard page > CRM_AI_ASSISTANT > Dynamic action > and select CRM AI Configuration for the Configuration attrubute
-Run the app > Open the CRM AI Assistant. Test with below prompts
-Show me all new leads
-Which opportunities are worth more than $500,000?
-Show me all opportunities with close dates in the past that aren't closed.
-
-
-
-
-## Task 1: Set Up Event Chat Assistant without RAG Source
-
-1. Close the dialog box. From the runtime developer toolbar, navigate to **Page 3**.
-
-    >Note: Page number may vary depending on your application.
-
-    !["Click App Builder"](images/navigate-to-page3.png "")
+    ![display project dashboard page](images/quick-edit-breadcrumb.png " ")
 
 2. In the left pane, right-click **Breadcrumb** and click **Create Button**.
 
-    !["Click App Builder"](images/chatbot-btn.png "")
+    !["Click App Builder"](images/create-button.png "")
 
-3. In the Property Editor, enter/select the following:
+3. In the right pane, enter/select the following:
 
     - Under Identification:
 
-        - Button Name: **EVENT_ASSISTANT**
+        - Button Name: **CRM_AI_ASSISTANT**
 
-        - Label: **Event Assistant**
+        - Label: **CRM AI Assistant**
 
     - Layout > Slot: **Next**
 
@@ -193,43 +132,43 @@ Show me all opportunities with close dates in the past that aren't closed.
 
         - Icon: **fa-chatbot**
 
-    !["Click App Builder"](images/event-assist-btn.png "")
+    !["Click App Builder"](images/button-details.png "")
 
-4. In the left pane, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
+4. In the left pane, right-click **CRM_AI_ASSISTANT** button and click **Create Dynamic Action**.
 
-    !["Click App Builder"](images/create-dy-chatbot.png "")
+    !["Click App Builder"](images/create-dynamic-action2.png "")
 
-5. In the Property Editor, enter the following:
+5. In the right pane, enter the following:
 
-    - Identification > Name : **Event Assistant**
+    - Identification > Name : **Open AI Chatbot**
 
-    !["Click App Builder"](images/event-dy.png "")
+    !["Click App Builder"](images/open-ai-chatbot.png "")
 
-6. Under **True** Action, click **Show**. In the Property Editor, enter/select the following:
+6. Under **True** Action, click **Show**. In the right pane, enter/select the following:
 
     - Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Service: Select **YOUR\_GEN\_AI\_SERVICE**
+    - Generative AI > Service: Select **Open AI** (Created in Lab 1)
 
-    - Welcome Message: **Hi! How can I help you today?**
-
-    - Appearance > Title: **Event Assistant**
+    !["Click App Builder"](images/show-ai.png "")
 
 7. Click **Save and Run**.
 
-    !["Click App Builder"](images/show-ai-assist.png "")
+    !["Click App Builder"](images/save-run3.png "")
 
-8. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
+8. In the app, click the **CRM AI Assistant** button and enter the prompt as **Show me all new leads.**.
 
-   The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
+   The chat assistant currently doesn't returns results from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
     !["Click App Builder"](images/view-chat.png "")
 
-## Task 2: Create AI Configuration and RAG Source
+## Task 4: RAG Powered Chatbot
 
-1. Navigate to **Shared Components**.
+In this task, you will create an AI Configuration and define RAG Sources. This enables the chatbot to retrieve information directly from your CRM tables using APEX Assistant.
 
-    !["Click App Builder"](images/naviagte-sc.png "")
+1. Navigate back to Page designer. Go to **Shared Components**.
+
+    !["Click App Builder"](images/sc.png "")
 
 2. Under Generative AI, click **AI Configurations**.
 
@@ -237,113 +176,195 @@ Show me all opportunities with close dates in the past that aren't closed.
 
 3. In the Generative AI Configurations page, click **Create**.
 
-    !["Click App Builder"](images/create-conf.png "")
+    !["Click App Builder"](images/create-ai-conf.png "")
 
 4. In the Generative AI Configuration page, enter the following:
 
-    - Identification > Name : **Event AI Configuration**
+    - Identification > Name : **CRM AI Configuration**
 
     - Under Generative AI:
 
-        - Service: Select the AI service which you habe configured in Lab 1.
+        - Service: **Open AI** (Select the AI service which you have configured in Lab 1.)
 
         - System Prompt:
 
             ```
             <copy>
 
-            You are an event assistant. Help answer questions using the data provided about the events.
+            You are a CRM domain assistant.
 
-            Use the data provided about the events as context.
+            Answer only questions related to Customer Relationship Management (CRM), including leads, opportunities, accounts, contacts, sales pipeline, customer interactions, support cases, and CRM workflows.
+
+            Use only the data provided in the conversation or context. Do not use outside knowledge. If the answer is not available in the provided data, say:
+            "The provided data does not contain this information."
+            Do not guess, assume, or generalize. Keep answers precise, factual, and based strictly on the input.
 
             ```
             </copy>
 
-        - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
+        - Welcome Message: **Hi, How may I help you?**
 
-    - Under Server-side Condition:
+5. From right-hand side task list, enable **Return To Page**.
 
-        - Type: Function Body
+6. Click **Create**.
 
-        - Expression:
+   !["Click App Builder"](images/crm-ai-conf.png "")
 
-            ```
-            <copy>
-            return :APP_PAGE_ID = 3;
-            </copy>
-            ```
-        >Note: Page number may vary depending on your application.
+    !["Click App Builder"](images/welcome-msg.png "")
 
-5. Click **Create**.
+7. Under RAG Sources, click **Create RAG Source**.
 
-    !["Click App Builder"](images/event-ai-conf1.png "")
+    !["Click App Builder"](images/create-rag.png "")
 
-    !["Click App Builder"](images/event-ai-conf.png "")
+8. In the RAG Source page, enter/select the following:
 
-    !["Click App Builder"](images/assistant-server.png "")
+    - Identification > Name: **Leads Details**
 
-6. Click **Event AI Configuration**. Under RAG Sources, click **Create RAG Source**.
+    - Description: **Provides details about leads**
 
-    !["Click App Builder"](images/create-rag-source.png "")
+    !["Click App Builder"](images/lead-details.png "")
 
-7. In the RAG Source page, enter/select the following:
+9. Under Source > SQL Query: Click **APEX Assistant**
 
-    - Identification > Name: **Event Assistant**
+    !["Click App Builder"](images/lead-details.png "")
 
-    - Description: **Event assistant to query about event details**
-
-    - Source > SQL Query: Click **APEX Assistant**
-
-8. In the APEX Assistant box, enter the following prompt and press enter:
+10. In the APEX Assistant box, enter the following prompt and press enter:
 
     Prompt 1:
     ```
     <copy>
-    Fetch event id, start date, venue, name and event type
+    Get all details about leads like account name, Channel, status etc
     </copy>
     ```
 
-    !["Click App Builder"](images/event-assist-rag.png "")
+    !["Click App Builder"](images/apex-assistant-rag.png "")
 
-9. Click **Insert**.
+11. Click **Insert**.
 
     !["Click App Builder"](images/insert-rag.png "")
 
-10. Click **Create**.
+12. Under Server-side condition, enter/select the following:
 
-    !["Click App Builder"](images/rag-func1.png "")
+    - Type: **Last User Prompt contains**
 
-## Task 3: Enable Event Chat Assistant with RAG Source
+    - Expression 1: **Leads**
 
-1. From the top-right corner, click **Edit Page 3**.
+13. Click **Create**.
+
+    !["Click App Builder"](images/server-side.png "")
+
+14. Click **Create RAG Source** again.
+
+    !["Click App Builder"](images/create-rag2.png "")
+
+15. In the RAG Source page, enter/select the following:
+
+    - Identification > Name: **Opportunity Details**
+
+    - Description: **Provides details about leads**
+
+    !["Click App Builder"](images/opportunity-details.png "")
+
+16. Under Source > SQL Query: Click **APEX Assistant**
+
+    !["Click App Builder"](images/apex-assistant-rag2.png "")
+
+17. In the APEX Assistant box, enter the following prompt and press enter:
+
+    Prompt 1:
+    ```
+    <copy>
+    Get all details about opportunities like Account Name, Opportunity Name, Description, Amount, Stage, Close Date.
+    </copy>
+    ```
+
+    !["Click App Builder"](images/apex-assistant-rag2.png "")
+
+18. Click **Insert**.
+
+    !["Click App Builder"](images/insert-rag2.png "")
+
+19. Under Server-side condition, enter/select the following:
+
+    - Type: **Last User Prompt contains**
+
+    - Expression 1: **Opportunities**
+
+20. Click **Create**.
+
+     !["Click App Builder"](images/server-side2.png "")
+
+
+## Task 3: Enable Chat Assistant with RAG Source
+
+In this final task, you will connect the CRM AI Configuration (with RAG sources) to the Show AI Assistant dynamic action so that the chatbot retrieves data directly from your CRM tables.
+
+1. From the top-right corner, click **Edit Page 1**.
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/edit-page3.png "")
+    !["Click App Builder"](images/edit-page-1.png "")
 
-2. In the Dynamic Action tab, select True Action **Show AI Assistant** and update the following:
+2. Under **CRM_AI_ASSISTANT** button, select True Action **Show AI Assistant** and update the following:
 
-    - Generative AI > Configuration: **Event AI Configuration**
+    - Generative AI > Configuration: **CRM AI Configuration**
 
-    - Under Quick Actions:
-
-        - Message 1: **List all AI events**
-
-        - Message 2: **List any Oracle APEX events**
-
-    !["Click App Builder"](images/event-conf-msg.png "")
+    !["Click App Builder"](images/conf-rag.png "")
 
 3. Click **Save and Run**.
 
-4. In the app, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
+    !["Click App Builder"](images/save-run4.png "")
 
-    !["Click App Builder"](images/view-ai-chat1.png "")
+4. In the app, click the **CRM AI Assistant** button and enter the following prompts:
+
+    Prompt 1:
+    ```
+    <copy>
+    Show me all new leads
+    </copy>
+    ```
+
+    !["Click App Builder"](images/ques1.png "")
+
+    Prompt 2:
+    ```
+    <copy>
+    Which opportunities are worth more than $500,000?
+    </copy>
+    ```
+
+    !["Click App Builder"](images/ques2.png "")
+
+    Prompt 3:
+    ```
+    <copy>
+    Show me all opportunities with close dates in the past that aren't closed.
+    </copy>
+    ```
+
+    !["Click App Builder"](images/ques3.png "")
+
+    The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
 ## Summary
 
-In this lab, you created an Event Chat Assistant by adding a button, configuring AI settings, and setting up a dynamic action, allowing users to interactively ask questions about event details.
+In this lab, you:
+
+- Added validation to improve CRM data quality.
+
+- Created dynamic actions to enhance UI responsiveness.
+
+- Built a CRM AI Assistant using Show AI Assistant.
+
+- Created an AI Configuration with a structured system prompt.
+
+- Defined RAG sources using APEX Assistant.
+
+- Enabled secure, data-driven conversational responses.
+
+You have now successfully implemented a RAG-powered CRM Chat Assistant inside Oracle APEX, demonstrating how Generative AI can be securely integrated with enterprise data using low-code development.
 
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
