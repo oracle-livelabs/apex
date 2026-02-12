@@ -1,4 +1,4 @@
-# Building Enterprise AI Apps Faster - Part 2
+# Build Enterprise AI Apps Faster - Part 2
 
 ## Introduction
 

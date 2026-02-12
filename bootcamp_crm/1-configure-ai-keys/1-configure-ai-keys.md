@@ -2,9 +2,9 @@
 
 ## Introduction
 
-To use the native GenAI features in APEX, you must configure a Generative AI service in APEX.
+To use the native Generative AI features in Oracle APEX, you must first configure a Generative AI service at the workspace level.
 
-In this lab, you will use Open AI as the AI provider. We have already generated Open AI API keys for you. Now let's see how to configure them.
+In this lab, you will configure OpenAI as the AI provider. The OpenAI API key has already been generated for you. You will now configure the service and test the connection within your APEX workspace.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
@@ -14,7 +14,7 @@ Estimated Time: 5 Minutes
 
 In this lab, you:
 
-- Configure API Key for OpenAI.
+- Configure an OpenAI Generative AI service in your Oracle APEX workspace.
 
 ## Task 1: Configure Generative AI Service
 

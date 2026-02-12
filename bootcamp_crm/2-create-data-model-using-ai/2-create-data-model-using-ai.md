@@ -2,7 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn how to create a data model using Generative AI. Ensure you have a secure key for accessing OpenAI. You will then use Generative AI to create a data model that includes CRM accounts, leads, contacts, opportunities and activities.
+In this lab, you will learn how to create a complete data model using Generative AI in Oracle APEX. You will leverage the configured OpenAI service to generate a CRM data model that includes Accounts, Leads, Contacts, Opportunities, and Activities.
+
+Instead of writing SQL manually, you will use natural language prompts to generate database objects, refine them, and add sample data using the APEX Assistant.
 
 Estimated Time: 10 minutes
 
@@ -10,7 +12,7 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Create a Data Model using AI in Oracle APEX Workspace.
+- Create a CRM data model using Generative AI in Oracle APEX.
 
 ### Before You Start
 
@@ -675,7 +677,11 @@ Now, let's review the database objects created using AI.
 
 ## Summary
 
-You now know how to create a Data Model using AI. You may now **proceed to the next lab**.
+In this lab, you used Generative AI to create a complete CRM data model, including tables, constraints, indexes, triggers, and sample data.
+
+You experienced how Oracle APEX enables AI-assisted development to significantly reduce manual SQL effort while maintaining enterprise-grade structure and standards.
+
+You may now proceed to the next lab.
 
 ## Acknowledgments
 

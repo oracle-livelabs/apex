@@ -2,25 +2,29 @@
 
 ## About this Workshop
 
-In this workshop, you will build a dynamic and interactive **Customer Replationship Management (CRM) Application** using Generative Development in Oracle APEX. This workshop is designed to showcase how AI-driven features of Oracle APEX can accelerate application development and simplify complex tasks, helping you create powerful applications with ease.
+In this hands-on workshop, you will build and enhance a modern **CRM application** using Oracle APEX by combining low-code development, secure architecture, external integrations, and AI-powered capabilities.
 
-You will begin by creating a **custom data model using natural language**, quickly establishing the foundation for your application. Once the data model is ready, you will again use natural language to generate an initial application blueprint, demonstrating how AI can streamline and speed up the development process.
+You will begin by **configuring a Generative AI service** and using natural language prompts to **generate a complete CRM data model**. Instead of manually writing SQL or creating pages one by one, you will leverage AI to design and **build your application blueprint**. From there, you will enhance dashboards, reports, and forms using Oracle APEX’s powerful customization features.
 
-Next, you will enhance the application by using the **APEX Assistant** to generate SQL and HTML directly within the APEX Code Editor, simplifying the creation of both UI and data logic.
+Beyond core application development, you will extend your CRM by **integrating external REST APIs**, configuring data synchronization, and **implementing a custom security** framework. You will design secure authentication flows, **enforce role-based access control (RBAC)**, and ensure that users only access data relevant to their roles.
 
-As you proceed, you will integrate advanced AI capabilities into the application. This includes building an **AI-powered Chat Assistant** that uses **Retrieval-Augmented Generation (RAG)** to answer leads-related questions through an interactive **chat interface**.
+You will also **integrate Generative AI with Retrieval-Augmented Generation (RAG)** to deliver intelligent, context-aware, and data-driven user experiences within your CRM application.
 
-By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
+By the end of this workshop, you will have built a secure, extensible, and AI-enabled enterprise CRM application entirely using Oracle APEX’s low-code capabilities — demonstrating how AI and modern architecture can dramatically accelerate application development without compromising control, scalability, or security.
 
 Total Workshop Time: 60 minutes
 
 ### Objectives
 
 - Create a Custom Data Model using Generative AI.
+
 - Generate an application *blueprint* using APEX AI Assistant.
-- Improve the application's UI and UX using the APEX AI Assistant to generate SQL and HTML directly in the Code Editor.
-- Build an AI-powered Event Assistant that uses RAG to answer event-related queries through a chat interface.
-- Add a feature to generate event descriptions using AI through the *Generate Text with AI* dynamic action.
+
+- Learn how to integrate and synchronize external REST APIs with your Oracle APEX application using REST Data Sources.
+
+- Build a secure custom authentication and role-based authorization framework within your Oracle APEX application.
+
+- Enhance your CRM application with data validation, dynamic actions, and AI-powered conversational capabilities using Generative AI and RAG.
 
 ## Prerequisites
 
@@ -52,13 +56,12 @@ Total Workshop Time: 60 minutes
 
 | S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 10 minutes |
-| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 10 minutes |
-| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 10 minutes |
-| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 10 minutes |
-| 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
-| 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
-| 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 10 minutes |
+| 1 |[Configure Generative AI Service](?lab=1-configure-ai-keys) | 10 minutes |
+| 2 |[Create a Data Model using AI](?lab=2-create-data-model-using-ai) | 10 minutes |
+| 3 |[Build Enterprise AI Apps Faster - Part 1](?lab=3-create-app) | 10 minutes |
+| 4|[EBuild Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 10 minutes |
+| 5 |[Working with External Data Sources](?lab=5-data-sources) | 5 minutes |
+| 6 | [Authentication & Authorization](?lab=6-auth) | 5 minutes |
 
 ### **Let's Get Started!**
 
