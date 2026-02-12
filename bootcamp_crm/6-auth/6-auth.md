@@ -384,30 +384,113 @@ By the end of this lab, you will be able to:
 
     !["data model created"](images/admin-login.png "")
 
-11. Explore the newly created page: Manage Users.
+11. Explore the newly created page: Manage Users and logout from the application.
 
     !["data model created"](images/manage-users-nav.png "")
 
 ## Task 3: Create Authorization Schemes
 
-Go to Shared Components. > Security Attributes > Under Authorization group > Set Source for Role or Group Schemes to Custom Code. Apply Changes.
-Go to Authentication > Custom Auth > Post- Authentication Procedure > Enter CRM_AUTH.POST_AUTH
-Create an Authorization Scheme 
-Name : CRM Admin
-Is in Role or Group
-Type : Custom 
-Name(s) : Admin
-Assign the autorization scheme to Manage Users Screen and also in the Navigation Menu list entry for Manage Users.
-Now login as Admin – you see Manage Users is accessible.
-Login as Other user 
-rpatel/Welcome123!
+1. Navigate back to Page designer and go to **Shared Components**.
 
-You wont see Manage Users entry.
+    !["data model created"](images/sc5.png "")
 
-Create another Authorization scheme
+2. Under Security, select **Security Attributes**.
+
+    !["data model created"](images/security-att.png "")
+
+3. Under Authorization > Source for Role or Group Schemes: **Custom Code**. Click **Apply Changes**.
+
+    !["data model created"](images/custom-code.png "")
+
+4. Under Security, select **Authentication Schemes**.
+
+    !["data model created"](images/auth-sch2.png "")
+
+5. Select **Custom AuthN**.
+
+    !["data model created"](images/custom-authn1.png "")
+
+6.  Under Login Processing, for Post- Authentication Procedure Name: Enter **CRM_AUTH.POST_AUTH** and click **Apply Changes**.
+
+    !["data model created"](images/post-auth.png "")
+
+7. Navigate to **Shared Components**.
+
+    !["data model created"](images/sc6.png "")
+
+8. Under Security, select **Authorization Schemes**.
+
+    !["data model created"](images/authz.png "")
+
+9. Click **Create**.
+
+    !["data model created"](images/create-authz.png "")
+
+10. Leave as default and click **Next**.
+
+    !["data model created"](images/authz-next.png "")
+
+11. Enter/select the following:
+
+    - Name : **CRM Admin**
+
+    - Scheme Type : **Is in Role or Group**
+
+    - Type : **Custom**
+
+    - Name(s) : **Admin**
+
+    Click **Create Authorization Scheme**.
+
+    !["data model created"](images/create-authz1.png "")
+
+12. From the top-right corner, click **Edit Page 7**.
+
+    >Note: Page number may vary depending on your application.
+
+    !["Click App Builder"](images/edit-page-7.png "")
+
+13. In the right pane, update the following:
+
+    - Security > Authorization Scheme: **CRM Admin**
+
+    !["Click App Builder"](images/authz-page.png "")
+
+14. Click **Save**.
+
+    !["Click App Builder"](images/save6.png "")
+
+15. Navigate to **Shared Components**.
+
+    !["Click App Builder"](images/sc7.png "")
+
+16. Under Navigation and Search, select **Navigation Menu**.
+
+    !["Click App Builder"](images/nav-menu.png "")
+
+17. Select **Navigation Menu**.
+
+    !["Click App Builder"](images/nav-menu1.png "")
+
+18. Navigate to **Manage Users**.
+
+    !["Click App Builder"](images/manage-users3.png "")
+
+19. Under Authorization > Authorization Scheme: Select **CRM Admin**. Click **Apply Changes**.
+
+    !["Click App Builder"](images/nav-authz.png "")
+
+20. Click **Save and Run**.
+
+    !["Click App Builder"](images/save-run7.png "")
+
+21. Now first login as **Admin/Welcome123!** – you see Manage Users is accessible. Logout and Login as other user:
+**rpatel/Welcome123!**. You wont see Manage Users entry.
+
+## Task 4: Create another Authorization scheme
 Name : CRM Viewer
 Is in Role or Group
-Type : Custom 
+Type : Customx
 Name(s) :Viewer
 The user with Viewer role should be allowed to create Opportunities , for example
 Go to Opportunities Report page
