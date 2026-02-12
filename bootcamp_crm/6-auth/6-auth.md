@@ -2,7 +2,9 @@
 
 ## Introduction
 
+In this lab, you will implement a fully custom authentication and role-based authorization framework in your Oracle APEX application.
 
+You will create database tables for users and roles, implement password hashing using database triggers, build a custom authentication scheme, and configure dynamic role-based authorization using APEX authorization schemes.
 
 Estimated Time: 20 minutes
 
@@ -10,9 +12,15 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will be able to:
 
+- Create Custom Authentication Scheme.
 
+- Implement Role-based Authorization Schemes.
+
+- Configure Page-level and component-level authorization.
 
 ## Task 1 : Create a SQL Script
+
+In this task, you will create the database objects required to support authentication and role management. You will then configure a custom authentication scheme that uses a PL/SQL package to validate users.
 
 1. Navigate to **SQL Workshop** and click **(V)**. Select **SQL Scripts**.
 
@@ -315,7 +323,9 @@ By the end of this lab, you will be able to:
 
     !["data model created"](images/confirm.png "")
 
-## Task 2: Create a Interactive Report with a Form Page
+## Task 2: Create a User Management Page
+
+In this task, you will create an Interactive Report with an associated form page to manage application users stored in the CRM_USERS table. You will also hide sensitive columns to ensure secure data handling.
 
 1. Navigate to **Application ID**. Your application ID might differ.
 
@@ -388,7 +398,9 @@ By the end of this lab, you will be able to:
 
     !["data model created"](images/manage-users-nav.png "")
 
-## Task 3: Create Authorization Schemes
+## Task 3: Implement Role-Based Authorization (Admin Access)
+
+Now that authentication is working, you will configure dynamic role-based authorization. You will create an authorization scheme for the Admin role and restrict access to the Manage Users page and navigation menu.
 
 1. Navigate back to Page designer and go to **Shared Components**.
 
@@ -487,32 +499,87 @@ By the end of this lab, you will be able to:
 21. Now first login as **Admin/Welcome123!** – you see Manage Users is accessible. Logout and Login as other user:
 **rpatel/Welcome123!**. You wont see Manage Users entry.
 
-## Task 4: Create another Authorization scheme
-Name : CRM Viewer
-Is in Role or Group
-Type : Customx
-Name(s) :Viewer
-The user with Viewer role should be allowed to create Opportunities , for example
-Go to Opportunities Report page
-Create Button > Authorization scheme > {Not CRM Viewer }
-Test the Authorization for Viewer. Login as sgupta and verify that the Create button is not displayed for this user.
+## Task 4: Implement Component-Level Authorization (Viewer Restrictions)
+
+In this task, you will create another authorization scheme for the Viewer role and restrict specific functionality (such as the Create button) based on role membership.
+
+This demonstrates component-level authorization control.
+
+1. In the Page designer, navigate to **Shared Components**.
+
+    !["data model created"](images/sc8.png "")
+
+2. Under Security, select **Authorization Schemes**.
+
+    !["data model created"](images/authz2.png "")
+
+3. Click **Create**.
+
+    !["data model created"](images/create-authz2.png "")
+
+4. Leave as default and click **Next**.
+
+    !["data model created"](images/authz-next.png "")
+
+5. Enter/select the following:
+
+    - Name : **CRM Viewer**
+
+    - Scheme Type : **Is in Role or Group**
+
+    - Type : **Custom**
+
+    - Name(s) : **Viewer**
+
+    Click **Create Authorization Scheme**.
+
+    !["data model created"](images/crm-viewer.png "")
+
+6. The user with Viewer role should be allowed to create Opportunities.
+
+7. Navigate to **Application ID**.
+
+    !["data model created"](images/app-id1.png "")
+
+8. Go to Opportunities Report page. Page Name might differ in your application. In my case, it is Opportunity Follow Up.
+
+    !["data model created"](images/opportunity.png "")
+
+9. In the left pane, select **Create** button. In the right pane, update the following:
+
+    - Security > Authorization Scheme: Select **{Not CRM Viewer}**
+
+    Click **Save**.
+
+    !["data model created"](images/not-crm-viewer.png "")
+
+10. Now, let's test the Authorization for Viewer. Login as sgupta and verify that the Create button is not displayed for this user.
+
+    !["data model created"](images/sgupta.png "")
+
+    !["data model created"](images/create-btn-n.png "")
+
 ## Summary
 
 In this lab, you:
 
-- Added validation to improve CRM data quality.
+- Created custom CRM user and role tables.
 
-- Created dynamic actions to enhance UI responsiveness.
+- Implemented secure password hashing with salt using triggers.
 
-- Built a CRM AI Assistant using Show AI Assistant.
+- Built a PL/SQL authentication package.
 
-- Created an AI Configuration with a structured system prompt.
+- Configured a Custom Authentication Scheme in Oracle APEX.
 
-- Defined RAG sources using APEX Assistant.
+- Enabled dynamic role-based authorization.
 
-- Enabled secure, data-driven conversational responses.
+- Restricted access to pages and navigation entries.
 
-You have now successfully implemented a RAG-powered CRM Chat Assistant inside Oracle APEX, demonstrating how Generative AI can be securely integrated with enterprise data using low-code development.
+- Applied component-level authorization to buttons.
+
+- Tested authentication and authorization using multiple roles.
+
+Your application now supports a secure, role-driven authentication and authorization model using custom database logic.
 
 ## Acknowledgments
 

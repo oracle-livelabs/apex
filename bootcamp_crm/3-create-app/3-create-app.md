@@ -124,7 +124,7 @@ In this task, you will create a CRM application using the Create Application Usi
 
     !["sixth prompt"](images/edit-icon.png "")
 
-9. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**.
+9. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-logo.png)**.
 
     !["sixth prompt"](images/upload-icon.png "")
 
