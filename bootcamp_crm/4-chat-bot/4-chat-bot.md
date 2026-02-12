@@ -24,21 +24,57 @@ By the end of this lab, you will be able to:
 
     ![display project dashboard page](images/quick-edit-email.png " ")
 
-2. Right-click **
-Right Click > Create Validation
-Name : Validate Email Format
-Item  P4_EMAIL
-Regular Expression: ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
-Error Message : Please enter a valid Email Address
-Task 2 : Add a Dynamic Action to refresh the content Row Region
+2. Right-click **P6_EMAIL** and select **Create Validation**.
 
-Quick Edit on the content row region 
-Right Click > Create Dynamic Action
-Check the defaults
-Event Dialog Closed
-Selection Type: Region 
-Region Leads
-True Action > Refresh > Region > Leads
+    ![display project dashboard page](images/create-validation.png " ")
+
+3. In the right pane, enter/select the following:
+
+    - Identification > Name: **Validate Email Format**
+
+    - Under Validation:
+
+        - Type: **Item matched Regular Expression**
+
+        - Item: **P6_EMAIL**
+
+        - Regular Expression: **^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$**
+
+    - Error > Error Message : **Please enter a valid Email Address**
+
+    ![display project dashboard page](images/validate-email.png " ")
+
+4. Click **Save**.
+
+    ![display project dashboard page](images/save-page.png " ")
+
+5. In the run time evironment, refresh the leads form page. Make some changes to the email address and click **Apply Changes**. You will notice the validation notification.
+
+    ![display project dashboard page](images/show-validation.png " ")
+
+## Task 2 : Add a Dynamic Action to refresh the content Row Region
+
+1. Close the leads form page. **Quick Edit** on the Content Row region.
+
+    ![display project dashboard page](images/quick-edit-report.png " ")
+
+2. Right-click leads region and select **Create Dynamic Action**.
+
+    ![display project dashboard page](images/create-dynamic-action.png " ")
+
+3. In the right pane, update Identification > Name to **Refesh Content Row** and check the defaults:
+
+    - Under When:
+
+        - Event: Event Dialog Closed
+
+        - Selection Type: Region
+
+        - Region: Leads
+
+    ![display project dashboard page](images/refresh-row.png " ")
+
+4. True Action > Refresh > Region > Leads
 Task 3: Create a Chatbot for CRM
 
 Go to the Dashboard Page (Home Page)
