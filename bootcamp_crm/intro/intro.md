@@ -59,8 +59,8 @@ Total Workshop Time: 60 minutes
 | 1 |[Configure Generative AI Service](?lab=1-configure-ai-keys) | 10 minutes |
 | 2 |[Create a Data Model using AI](?lab=2-create-data-model-using-ai) | 10 minutes |
 | 3 |[Build Enterprise AI Apps Faster - Part 1](?lab=3-create-app) | 10 minutes |
-| 4|[EBuild Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 10 minutes |
-| 5 |[Working with External Data Sources](?lab=5-data-sources) | 5 minutes |
+| 4|[Build Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 10 minutes |
+| 5 |[Work with External Data Sources](?lab=5-data-sources) | 5 minutes |
 | 6 | [Authentication & Authorization](?lab=6-auth) | 5 minutes |
 
 ### **Let's Get Started!**
@@ -73,7 +73,7 @@ Total Workshop Time: 60 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-livelab-export.sql)** to download the completed application.
+1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-hol.sql)** to download the completed application.
 
 2. Import the crm\_livelab\_export.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 

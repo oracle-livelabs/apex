@@ -20,6 +20,12 @@ Estimated Time: 10 minutes
 
 - Use a REST Data Source as the source of a report region.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%202.sql)** to download the completed application till Lab 4.
+
 ## Task 1 : Create REST Data Sources
 
 In this task, you will create a REST Data Source using an Oracle REST Data Services (ORDS) endpoint. You will then configure synchronization to merge data into the existing CRM_LEADS table and schedule automatic updates.
@@ -42,11 +48,11 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
 5. On Create REST Data Source dialog, enter/select the following:
 
-    - Type : **Oracle REST Data Services**
+    - REST Data Source Type : **Oracle REST Data Services**
 
     - Name: **Leads API**
 
-    - Endpoint:  https://oracleapex.com/ords/t_crm/crm_leads/
+    - URL Endpoint:  https://oracleapex.com/ords/t_crm/crm_leads/
 
     Click **Next**.
 
@@ -64,7 +70,7 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
     ![display project dashboard page](images/create-rest-data.png " ")
 
-9. To enable Synchronization, click **N**o** in the Synchronized column.
+9. To enable Synchronization, click **No** in the Synchronized column.
 
     ![display project dashboard page](images/no.png " ")
 
@@ -112,11 +118,11 @@ You will also prepare the local table for synchronization tracking.
 
 2. In the right pane, enter/select the following:
 
-   - Under Source:
+    - Under Source:
 
-        - Location: REST Source
+        - Location: **REST Source**
 
-        - Rest Source: Leads API (created in Task 1)
+        - Rest Source: **Leads API** (created in Task 1)
 
         - REST Synchronization > Use Local table: Toggle **On**
 

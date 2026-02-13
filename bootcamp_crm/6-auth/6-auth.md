@@ -18,6 +18,12 @@ By the end of this lab, you will be able to:
 
 - Configure Page-level and component-level authorization.
 
+### Downloads
+
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
+
+**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorking-with-External-Data-Sources.sql)** to download the completed application till Lab 5.
+
 ## Task 1 : Create a SQL Script
 
 In this task, you will create the database objects required to support authentication and role management. You will then configure a custom authentication scheme that uses a PL/SQL package to validate users.
@@ -26,11 +32,11 @@ In this task, you will create the database objects required to support authentic
 
     ![display project dashboard page](images/sql-scripts.png " ")
 
-2. Click **Create Scripts**.
+2. Click **Create**.
 
     ![display project dashboard page](images/create-script.png " ")
 
-3. For Script Name: Enter **Users & Roles** and copy and paste the below code in the Code editor:
+3. For **Script Name**: Enter **Users & Roles** and copy and paste the below code in the Code editor:
 
     ```
     <copy>
@@ -307,7 +313,7 @@ In this task, you will create the database objects required to support authentic
 
         - Scheme Type: **Custom**
 
-    - Settings > Authentication Function Name: **CRM_AUTH.AUTHENTICATE_USER**
+    - Settings > Authentication Function Name: **CRM\_AUTH.AUTHENTICATE\_USER**
 
 14. From the right-hand side task list, enable **Stay on Page**.
 
@@ -380,13 +386,13 @@ In this task, you will create an Interactive Report with an associated form page
 
     >Note: Page Number might differ.
 
-    - P8_PASSWORD_HASH
-    - P8_PASSWORD_SALT
-    - P8_ROW_VERSION
-    - P8_CREATED_ON
-    - P8_CREATED_BY
-    - P8_UPDATED_ON
-    - P8_UPDATED_BY
+    - P7\_PASSWORD\_HASH
+    - P7\_PASSWORD\_SALT
+    - P7\_ROW\_VERSION
+    - P7\_CREATED\_ON
+    - P7\_CREATED\_BY
+    - P7\_UPDATED\_ON
+    - P7\_UPDATED\_BY
 
 9. Click **Save**.
 
@@ -410,7 +416,7 @@ Now that authentication is working, you will configure dynamic role-based author
 
     !["data model created"](images/security-att.png "")
 
-3. Under Authorization > Source for Role or Group Schemes: **Custom Code**. Click **Apply Changes**.
+3. Under Authorization > Source for Role or Group Schemes: Select **Custom Code**. Click **Apply Changes**.
 
     !["data model created"](images/custom-code.png "")
 
@@ -422,7 +428,7 @@ Now that authentication is working, you will configure dynamic role-based author
 
     !["data model created"](images/custom-authn1.png "")
 
-6.  Under Login Processing, for Post- Authentication Procedure Name: Enter **CRM_AUTH.POST_AUTH** and click **Apply Changes**.
+6.  Under Login Processing, for **Post- Authentication Procedure Name**: Enter **CRM\_AUTH.POST\_AUTH** and click **Apply Changes**.
 
     !["data model created"](images/post-auth.png "")
 

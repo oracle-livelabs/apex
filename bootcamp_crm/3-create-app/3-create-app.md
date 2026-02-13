@@ -18,7 +18,7 @@ You will then enhance the AI-generated application by:
 
 This lab demonstrates how Generative AI accelerates application development while still allowing full customization using APEX.
 
-Estimated Time: 10 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -74,13 +74,13 @@ In this task, you will create a CRM application using the Create Application Usi
 
     !["Click create App"](images/new-app.png "")
 
-3. Select **Create APP Using Generative AI**.
+3. Select **Create App Using Generative AI**.
 
     !["Click create app using Gen AI"](images/create-app-gen-ai.png "")
 
 4. To create a CRM application, you will use the APEX Assistant wizard. Enter the prompts mentioned below and hit **Enter**.
 
-    Prompt 1:
+    **Prompt 1:**
 
     ```
     <copy>
@@ -94,7 +94,7 @@ In this task, you will create a CRM application using the Create Application Usi
 
 5. Now, you need a Form page to edit leads. Enter the prompt mentioned below and hit **Enter**.
 
-    Prompt 2:
+    **Prompt 2:**
     ```
     <copy>
     Add a Leads Edit form.
@@ -105,7 +105,7 @@ In this task, you will create a CRM application using the Create Application Usi
 
 6. Additionally, you want to add a dashboard as home page and enable the **Feedback** feature.
 
-    Prompt 3:
+    **Prompt 3:**
     ```
     <copy>
     Add a dashboard page and make it the home page. Also enable Feedback feature.
@@ -194,9 +194,9 @@ You will create:
 
     - Under Identification:
 
-       - Name: **Sales Pipeline By Stage**
+        - Name: **Sales Pipeline By Stage**
 
-       - Type: **Chart**
+        - Type: **Chart**
 
     ![display project dashboard page](images/sales-chart.png " ")
 
@@ -220,7 +220,7 @@ You will create:
 
 8. In the APEX Assistant dialog, enter the following prompt and press enter:
 
-    Prompt 1:
+    **Prompt 1:**
     ```
     <copy>
     Give me a breakdown of the sales pipeline by stage
@@ -303,7 +303,7 @@ You will create:
 
 19. In the APEX Assistant dialog, enter the following prompt and press enter:
 
-    Prompt 1:
+    **Prompt 1:**
     ```
     <copy>
     Display Top 10 Accounts by Revenue
@@ -392,7 +392,7 @@ In this task, you will improve the Leads faceted search page by converting it to
 
         - Overline: **&SOURCE.**
 
-        - Title : **&FIRST_NAME. &LAST_NAME.**
+        - Title : **&FIRST\_NAME. &LAST\_NAME.**
 
         - Description: **&ACCOUNT_ID. <br> &EMAIL.**
 
@@ -430,12 +430,12 @@ In this task, you will improve the Leads faceted search page by converting it to
 
     - Target : Leads Form Page (in my case it's Page 6)
 
-    -   - Set Items:
+    - Set Items:
 
-            | Name | Value |
-            | ----- | ---- |
-            | P6_ID | &ID.|
-            {: title="Set Items"}
+        | Name | Value |
+        | ----- | ---- |
+        | P6_ID | &ID.|
+        {: title="Set Items"}
 
         - Clear Cache: **6**
 
@@ -476,19 +476,19 @@ In this final task, you will improve the usability of the Leads Edit Form by con
 
 3. Navigate to **P4_STATUS** page item. In the right pane, enter/select the following:
 
-    - Identification > Type: Select List
+    - Identification > Type: **Select List**
 
     - Under List of Values:
 
-       - Type: **Static Values**
+        - Type: **Static Values**
 
-       - Display Extra Value: Toggle **Off**
+        - Display Extra Value: Toggle **Off**
 
-       - Display Null Value: Toggle **Off**
+        - Display Null Value: Toggle **Off**
 
-       ![display project dashboard page](images/status-list.png " ")
+        ![display project dashboard page](images/status-list.png " ")
 
-       - Static Values: Click **Display1, Display2**
+        - Static Values: Click **Display1, Display2**
 
             | Display | Return |
             | ----- | ---- |
