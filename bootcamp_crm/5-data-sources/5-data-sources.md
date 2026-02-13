@@ -1,4 +1,4 @@
-# Working with External Data Sources
+# Work with External Data Sources
 
 ## Introduction
 
@@ -8,7 +8,7 @@ You will create a REST Data Source using Oracle REST Data Services (ORDS), enabl
 
 This lab demonstrates how Oracle APEX enables seamless integration with external APIs while maintaining performance and data consistency through scheduled synchronization.
 
-Estimated Time: 10 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 

@@ -6,7 +6,7 @@ In this lab, you will learn how to create a complete data model using Generative
 
 Instead of writing SQL manually, you will use natural language prompts to generate database objects, refine them, and add sample data using the APEX Assistant.
 
-Estimated Time: 20 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 

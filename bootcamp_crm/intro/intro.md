@@ -56,12 +56,12 @@ Total Workshop Time: 60 minutes
 
 | S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1 |[Configure Generative AI Service](?lab=1-configure-ai-keys) | 10 minutes |
+| 1 |[Configure Generative AI Service](?lab=1-configure-ai-keys) | 5 minutes |
 | 2 |[Create a Data Model using AI](?lab=2-create-data-model-using-ai) | 10 minutes |
-| 3 |[Build Enterprise AI Apps Faster - Part 1](?lab=3-create-app) | 10 minutes |
-| 4|[Build Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 10 minutes |
-| 5 |[Work with External Data Sources](?lab=5-data-sources) | 5 minutes |
-| 6 | [Authentication & Authorization](?lab=6-auth) | 5 minutes |
+| 3 |[Build Enterprise AI Apps Faster - Part 1](?lab=3-create-app) | 20 minutes |
+| 4|[Build Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 20 minutes |
+| 5 |[Work with External Data Sources](?lab=5-data-sources) | 15 minutes |
+| 6 | [Authentication & Authorization](?lab=6-auth) | 20 minutes |
 
 ### **Let's Get Started!**
 
