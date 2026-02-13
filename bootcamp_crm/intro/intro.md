@@ -12,7 +12,7 @@ You will also **integrate Generative AI with Retrieval-Augmented Generation (RAG
 
 By the end of this workshop, you will have built a secure, extensible, and AI-enabled enterprise CRM application entirely using Oracle APEX’s low-code capabilities — demonstrating how AI and modern architecture can dramatically accelerate application development without compromising control, scalability, or security.
 
-Total Workshop Time: 60 minutes
+Total Workshop Time: 90 minutes
 
 ### Objectives
 
@@ -61,7 +61,7 @@ Total Workshop Time: 60 minutes
 | 3 |[Build Enterprise AI Apps Faster - Part 1](?lab=3-create-app) | 20 minutes |
 | 4|[Build Enterprise AI Apps Faster - Part 2](?lab=4-chat-bot) | 20 minutes |
 | 5 |[Work with External Data Sources](?lab=5-data-sources) | 15 minutes |
-| 6 | [Authentication & Authorization](?lab=6-auth) | 20 minutes |
+| 6 | [Implement Custom Authentication and Role-Based Authorization](?lab=6-auth) | 20 minutes |
 
 ### **Let's Get Started!**
 
