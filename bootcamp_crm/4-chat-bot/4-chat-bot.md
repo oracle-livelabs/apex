@@ -233,7 +233,6 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 9. Under Source > SQL Query: Click **APEX Assistant**
 
-    !["Click App Builder"](images/lead-details.png "")
 
 10. In the APEX Assistant box, enter the following prompt and press enter:
 

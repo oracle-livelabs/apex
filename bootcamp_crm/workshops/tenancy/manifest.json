@@ -7,6 +7,10 @@
         "filename": "../../intro/intro.md"
       },
       {
+        "title": "Review Commonly Used APEX Terminology",
+        "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
+      },
+      {
         "title": "Lab 1: Configure a Generative AI Service in APEX",
         "filename": "../../1-configure-ai-keys/1-configure-ai-keys.md"
       },
