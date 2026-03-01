@@ -4,7 +4,7 @@
 
 In this workshop, you build a modern and responsive **Customer Support Application** using Generative Development in Oracle APEX. <!-- The experience demonstrates how Oracle APEX pairs low-code productivity with AI-driven tooling, so that you can deliver high-quality enterprise apps quickly, even when the underlying processes such as support ticket management are complex. -->
 
-You begin by generating a **Custom Data Model** for Customer Support use case using natural language**, establishing tables for customers, accounts, agents, support tickets, timelines, and interactions. Once the schema is created, you will proceed to generate an initial application **Blueprint** using natural language, showcasing how AI can accelerate the early stages of development.
+You begin by generating a **Custom Data Model** for Customer Support use case using natural language, establishing tables for customers, accounts, agents, support tickets, timelines, and interactions. Once the schema is created, you will proceed to generate an initial application **Blueprint** using natural language, showcasing how AI can accelerate the early stages of development.
 
 Next, you will enhance the application by using the **APEX Assistant** (AI chat assistant) to generate SQL and HTML directly within the APEX Code Editor, quickly shaping both data access and UI presentation for support ticket lists.
 

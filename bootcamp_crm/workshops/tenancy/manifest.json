@@ -1,0 +1,47 @@
+{
+  "workshoptitle": "Build an AI-Powered CRM App with Oracle APEX",
+    "help": "livelabs-help-db_us@oracle.com",
+	"tutorials": [
+      {
+        "title": "Introduction",
+        "filename": "../../intro/intro.md"
+      },
+      {
+        "title": "Review Commonly Used APEX Terminology",
+        "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
+      },
+      {
+        "title": "Lab 1: Configure a Generative AI Service in APEX",
+        "filename": "../../1-configure-ai-keys/1-configure-ai-keys.md"
+      },
+      {
+        "title": "Lab 2: Create a Data Model using Generative AI",
+        "filename": "../../2-create-data-model-using-ai/2-create-data-model-using-ai.md"
+      },
+      {
+        "title": "Lab 3: Build an App using AI",
+          "filename": "../../3-create-app/3-create-app.md"
+      },
+      {
+        "title": "Lab 4: Create an AI Chatbot",
+          "filename": "../../4-chat-bot/4-chat-bot.md"
+      },
+      {
+        "title": "Lab 5: Work with External Data Sources",
+          "filename": "../../5-data-sources/5-data-sources.md"
+      },
+      {
+        "title": "Lab 6: Implement Custom Authentication and Role-Based Authorization",
+          "filename": "../../6-auth/6-auth.md"
+      },
+      {
+        "title": "Appendix: Download Instructions",
+          "filename": "../../8-appendix/8-appendix.md"
+      },
+      {
+        "title": "Need Help?",
+        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      }
+    ]
+}

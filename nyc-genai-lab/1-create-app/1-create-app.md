@@ -48,15 +48,27 @@ In this lab, you will:
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 
-## Task 2: Create an Application
+6. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then close the dialog.
 
-The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
+    *Note*: We will not be creating the application from this step since ORacle APEX creates multiple pages which are not required for the purpose of this workshop. 
 
-1. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then click **Create Application**.
+    The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
+
+    Continue to Task 2.
 
     ![Image showing the success message of Load Data and options to View Table or Create Application](images/create-app-table.png " ")
 
-2. On the Create Application page, click the application icon.
+## Task 2: Create an Application
+
+
+1. Navigate to **App Builder** and click **Create Application**.
+
+    ![Image showing the success message of Load Data and options to View Table or Create Application](images/app-builder-create.png " ")
+
+2. Select **Use Create App Wizard**.
+    ![Image showing the Create Application Page](images/use-create-app-wizard.png " ")
+
+3. On the Create Application page, for **Name**, enter **Highschools**. Click the application icon.
    ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
 3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/ai-highschools.png).
@@ -65,36 +77,34 @@ The Data Load wizard has created a new table called **HIGHSCHOOLS** and populate
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/crop-and-save.png " ")
 
-5. In the Create Application page, review the pages listed by default.
+5. In the Create Application page, select **Add Page**.
+    ![Image showing the Create Application Page](images/add-page.png " ")
 
-   Click the **Edit** button for **Highschools Search** and update the following:
+6. Select **Faceted Search**. 
+    ![Image showing the Create Page wizard](images/faceted-search.png " ")
+
+7. In the Add Cards Page qizard, enter/select the following:
     - Page Name: **Search and Apply**
-    - For Page Type, choose **Cards** toggle button.
+    - Table or View: **HIGHSCHOOLS**
 
-    ![Edit App page](images/app-edit.png " ")
-    ![Edit Page wizard](images/edit-page-name.png " ")
-
-6. For the Cards properties, select the following:
+    For the Cards properties, select the following:
     - Title Column: **SCHOOL_NAME**
     - Body Column: **NEIGHBORHOOD**
+
+    ![Edit Page wizard](images/edit-page-name.png " ")
+
     - Expand Advanced section and check the **Set as Home Page** box
 
-    Click **Save Changes**.
+    Click **Add Page**.
     ![Edit Page wizard](images/cards-columns.png " ")
 
-7. Next, we delete the pages that we no longer need. Click **Edit** next to the Home page.
+7. Next, we delete the page that we no longer need. Click **Edit** next to the Home page.
     ![Edit Page wizard](images/edit-home.png " ")
 
 8. Click **Delete**. In the dialog 'Would you like to perform this delete action?', select **OK**.
     ![Delete Page wizard](images/delete-home.png " ")
 
     ![Confirm Delete dialog](images/confirm-delete.png " ")
-
-9. Repeat Steps 7 and 8 to delete the **Highschools Report** page.
-    ![Delete page wizard](images/delete-report.png " ")
-
-10. Repeat Steps 7 and 8 to delete the **Dashboard** page.
-    ![Delete page wizard](images/delete-dashboard.png " ")
 
 11. In the Create Application wizard, under Features, check the following checkboxes:
     - **Install Progressive Web App**

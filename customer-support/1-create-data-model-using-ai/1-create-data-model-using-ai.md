@@ -122,7 +122,7 @@ In this task, you learn how to leverage Oracle APEX's Generative AI Service to b
 
     !["provide script name"](images/insert-query.png "")
 
-15. At this point, you can optionally replace the generated script with the provided [cs_data_model.sql](files/cs_data_model.sql) to ensure your objects match the reference data model used throughout this workshop. The excerpt below shows the beginning of the script:
+15. At this point, you can optionally replace the generated script with the provided [cs\_data\_model.sql](files/cs_data_model.sql) to ensure your objects match the reference data model used throughout this workshop. The excerpt below shows the beginning of the script:
 
     > Note: We are replacing the code to ensure the lab functions as intended. This update is purely to maintain consistency with the lab steps and the expected outcomes.
 
