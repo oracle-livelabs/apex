@@ -200,7 +200,7 @@ Now that the authentication is working, you will configure dynamic role-based au
 
     !["data model created"](images/custom-authn1.png "")
 
-6.  Under Login Processing, for **Post- Authentication Procedure Name**, enter **CRM\_AUTH.POST\_AUTH** and click **Apply Changes**.
+6. Under Login Processing, for **Post- Authentication Procedure Name**, enter **CRM\_AUTH.POST\_AUTH** and click **Apply Changes**.
 
     !["data model created"](images/post-auth.png "")
 

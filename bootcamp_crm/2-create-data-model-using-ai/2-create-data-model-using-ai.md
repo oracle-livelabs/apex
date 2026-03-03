@@ -55,7 +55,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
     </copy>
     ```
 
-    !["provide prompt"](images/promt1-model.png "")
+    !["provide prompt"](images/promt1-model.png " ")
 
 7. Enter another prompt to update the prefix for all database objects.
 
@@ -66,19 +66,19 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
     </copy>
     ```
 
-    !["provide prompt"](images/prompt2-model.png "")
+    !["provide prompt"](images/prompt2-model.png " ")
 
 8. At this point, we are satisfied with the generated SQL script. Click **Create SQL Script**.
 
-    !["click create sql script"](images/create-sql-script.png "")
+    !["click create sql script"](images/create-sql-script.png " ")
 
 9. Next, we'd like to add sample data into the tables. To do this, we leverage the APEX Assistant in the Code Editor. Click **APEX Assistant**.
 
-    !["provide script name"](images/select-assit.png "")
+    !["provide script name"](images/select-assit.png " ")
 
 10. Select your SQL code and click **Use Selection** from the APEX Assistant box.
 
-    !["provide script name"](images/use-select.png "")
+    !["provide script name"](images/use-select.png " ")
 
 11. In APEX Assistant box, enter the prompt to generate sample data for that tables and press Enter or click the Send icon.
 
@@ -89,15 +89,15 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
     </copy>
     ```
 
-    !["provide script name"](images/generate-data.png "")
+    !["provide script name"](images/generate-data.png " ")
 
 12. **Copy** the generated insert queries from the APEX Assistant box.
 
-    !["provide script name"](images/copt-data.png "")
+    !["provide script name"](images/copt-data.png " ")
 
 13. Paste the copied queries into the left-hand side code editor towards the end.
 
-    !["provide script name"](images/paste-data.png "")
+    !["provide script name"](images/paste-data.png " ")
 
 14. Before clicking on **Run** button. Let's replace the code from the **Script Editor** with the modified database objects code in [crm-data.sql](files/crm-data.sql)
 
@@ -106,15 +106,15 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
 15. For Script Name, enter **CRM Data Model**. And then, click **Run** in the Script Editor.
 
-    !["provide script name"](images/script-name.png "")
+    !["provide script name"](images/script-name.png " ")
 
 17. Click **Run Now** to submit the script for execution.
 
-    !["run now"](images/run-script.png "")
+    !["run now"](images/run-script.png " ")
 
 18. The Manage Script Results page appears listing script results.
 
-    !["data model created"](images/successful-statements.png "")
+    !["data model created"](images/successful-statements.png " ")
 
     *Note: Do NOT click **Create App** yet, as you will creating an app in the upcoming lab using Generative AI.*
 

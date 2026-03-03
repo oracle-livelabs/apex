@@ -107,7 +107,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 - Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
 - External Site + Slack:   [http://apex.world](http://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, Febuary 2026
