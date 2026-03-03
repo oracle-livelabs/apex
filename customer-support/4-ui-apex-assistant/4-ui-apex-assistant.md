@@ -256,7 +256,7 @@ In this task, you use the Theme Roller to quickly transform the appearance of an
 
 In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, showcasing how AI integration within APEX accelerates development and improves application design.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Authors** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, January 2026

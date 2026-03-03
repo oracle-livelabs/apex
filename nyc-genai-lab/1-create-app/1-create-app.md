@@ -69,10 +69,10 @@ In this lab, you will:
     ![Image showing the Create Application Page](images/use-create-app-wizard.png " ")
 
 3. On the Create Application page, for **Name**, enter **Highschools**. Click the application icon.
-   ![Image showing the Create Application Page](images/app-thumbnail.png " ")
+    ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
 3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/ai-highschools.png).
-  ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
+    ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/crop-and-save.png " ")
@@ -125,7 +125,7 @@ In this task, we configure the Cards region to display the information that we n
 
 2. In the Left Pane, under Body, select **Search Results** region.
 
-   In the Property Editor, enter/select the following:
+    In the Property Editor, enter/select the following:
     - Under Source:
         - Type: **SQL Query**
         - SQL Query: Replace the SQL query with the following
@@ -290,10 +290,10 @@ You now know how to create an Oracle APEX application from a spreadsheet. You al
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Authors** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2026
 
 

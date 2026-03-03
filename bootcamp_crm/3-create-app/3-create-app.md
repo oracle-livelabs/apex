@@ -523,7 +523,7 @@ In this lab, you successfully:
 
 This lab demonstrated how Generative AI accelerates application development while still allowing full customization using Oracle APEX’s powerful low-code capabilities.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

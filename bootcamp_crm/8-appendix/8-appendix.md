@@ -1,6 +1,9 @@
 # Appendix: Download Instructions
 
+## Introduction
 This lab consists of instructions to import and install the downloaded app in case you are stuck at any point in the workshop.
+
+Estimated Time: 5 minutes
 
 ## Objectives
 
@@ -53,7 +56,7 @@ To Enable Generative AI in Oracle APEX:
 
 
 
-## Acknowledgments
+## Acknowledgements
 
  - **Author** - Apoorva Srinivas, Principal Product Manager
  - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, February 2026

@@ -142,7 +142,7 @@ You experienced how Oracle APEX enables AI-assisted development to significantly
 
 You may now proceed to the next lab.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

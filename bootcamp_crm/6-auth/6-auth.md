@@ -24,7 +24,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorking-with-External-Data-Sources.sql)** to download the completed application till Lab 5. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
-## Task 1 : Create a SQL Script
+## Task 1: Create a SQL Script
 
 In this task, you will create the database objects required to support authentication and role management. You will then configure a custom authentication scheme that uses a PL/SQL package to validate users.
 
@@ -200,7 +200,7 @@ Now that the authentication is working, you will configure dynamic role-based au
 
     !["data model created"](images/custom-authn1.png "")
 
-6.  Under Login Processing, for **Post- Authentication Procedure Name**: Enter **CRM\_AUTH.POST\_AUTH** and click **Apply Changes**.
+6.  Under Login Processing, for **Post- Authentication Procedure Name**, enter **CRM\_AUTH.POST\_AUTH** and click **Apply Changes**.
 
     !["data model created"](images/post-auth.png "")
 
@@ -275,7 +275,7 @@ Now that the authentication is working, you will configure dynamic role-based au
     !["Click App Builder"](images/save-run7.png "")
 
 21. Now first login as **Admin/Welcome123!** – you see Manage Users is accessible. Logout and Login as other user:
-**rpatel/Welcome123!**. You wont see Manage Users entry.
+    **rpatel/Welcome123!**. You wont see Manage Users entry.
 
 ## Task 4: Implement Component-Level Authorization (Viewer Restrictions)
 
@@ -357,7 +357,7 @@ In this lab, you:
 
 Your application now supports a secure, role-driven authentication and authorization model using custom database logic.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

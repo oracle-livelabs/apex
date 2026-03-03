@@ -50,9 +50,9 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 
 5. If the connection is successful, click **Create**.
-   If unsuccessful, go to troubleshooting section in Appendix lab.
+    If unsuccessful, go to troubleshooting section in Appendix lab.
 
-   ![Gen AI services page](images/open-ai.png ' ')
+    ![Gen AI services page](images/open-ai.png ' ')
 
 ## Summary
 
@@ -63,7 +63,7 @@ You now know how to configure a Generative AI service using OpenAI.
 You may now **proceed to the next lab**.
 
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

@@ -26,7 +26,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%202.sql)** to download the completed application till Lab 4. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
-## Task 1 : Create REST Data Sources
+## Task 1: Create REST Data Sources
 
 In this task, you will create a REST Data Source using an Oracle REST Data Services (ORDS) endpoint. You will then configure synchronization to merge data into the existing CRM_LEADS table and schedule automatic updates.
 
@@ -106,7 +106,7 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
     ![display project dashboard page](images/save-run5.png " ")
 
-## Task 2 : Configure the REST Data Source in the Leads Report
+## Task 2: Configure the REST Data Source in the Leads Report
 
 Now that the REST Data Source has been created and synchronized, you will configure the Leads report region to use the REST source instead of directly querying the database table.
 
@@ -166,7 +166,7 @@ In this lab, you:
 
 You now understand how Oracle APEX enables seamless integration with external APIs while maintaining local performance and scheduled data synchronization.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
