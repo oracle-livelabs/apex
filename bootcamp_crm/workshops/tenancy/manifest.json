@@ -19,11 +19,11 @@
         "filename": "../../2-create-data-model-using-ai/2-create-data-model-using-ai.md"
       },
       {
-        "title": "Lab 3: Build Enterprise AI Apps Faster - Part 1",
+        "title": "Lab 3: Build an App using AI",
           "filename": "../../3-create-app/3-create-app.md"
       },
       {
-        "title": "Lab 4: Build Enterprise AI Apps Faster - Part 2",
+        "title": "Lab 4: Create an AI Chatbot",
           "filename": "../../4-chat-bot/4-chat-bot.md"
       },
       {
@@ -33,6 +33,10 @@
       {
         "title": "Lab 6: Implement Custom Authentication and Role-Based Authorization",
           "filename": "../../6-auth/6-auth.md"
+      },
+      {
+        "title": "Appendix: Download Instructions",
+          "filename": "../../8-appendix/8-appendix.md"
       },
       {
         "title": "Need Help?",

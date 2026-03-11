@@ -2,29 +2,29 @@
 
 ## About this Workshop
 
-In this hands-on workshop, you will build and enhance a modern **CRM application** using Oracle APEX by combining low-code development, secure architecture, external integrations, and AI-powered capabilities.
+In this hands-on workshop, you will build and enhance a modern **CRM application** using Oracle APEX by combining low-code development, AI-powered capabilities, external data integrations, and custom authentication.
 
-You will begin by **configuring a Generative AI service** and using natural language prompts to **generate a complete CRM data model**. Instead of manually writing SQL or creating pages one by one, you will leverage AI to design and **build your application blueprint**. From there, you will enhance dashboards, reports, and forms using Oracle APEX’s powerful customization features.
+You will begin by **Configuring a Generative AI service** and proceed to use natural language prompts to **generate a complete CRM Data Model**. Instead of manually writing SQL or creating pages one by one, you will leverage AI to design and **build your application blueprint**. Additionally, you will enhance dashboards, reports, and forms using Oracle APEX’s powerful customization features.
 
-Beyond core application development, you will extend your CRM by **integrating external REST APIs**, configuring data synchronization, and **implementing a custom security** framework. You will design secure authentication flows, **enforce role-based access control (RBAC)**, and ensure that users only access data relevant to their roles.
+Beyond core application development, you will extend your CRM by **integrating external REST APIs**, configuring data synchronization, and **implementing a custom security** framework. You will design secure authentication flows, **enforce role-based authorization**, and ensure that users only access data relevant to their roles.
 
-You will also **integrate Generative AI with Retrieval-Augmented Generation (RAG)** to deliver intelligent, context-aware, and data-driven user experiences within your CRM application.
+You will also integrate Generative AI with **Retrieval-Augmented Generation (RAG)** to deliver intelligent, context-aware, and data-driven user experiences within your CRM application.
 
 By the end of this workshop, you will have built a secure, extensible, and AI-enabled enterprise CRM application entirely using Oracle APEX’s low-code capabilities — demonstrating how AI and modern architecture can dramatically accelerate application development without compromising control, scalability, or security.
 
-Total Workshop Time: 90 minutes
+Total Workshop Time: 1 hour 30 minutes
 
 ### Objectives
 
 - Create a Custom Data Model using Generative AI.
 
-- Generate an application *blueprint* using APEX AI Assistant.
+- Generate an application **blueprint** using APEX AI Assistant.
 
 - Learn how to integrate and synchronize external REST APIs with your Oracle APEX application using REST Data Sources.
 
-- Build a secure custom authentication and role-based authorization framework within your Oracle APEX application.
+- Build a secure **Custom Authentication** and **role-based Authorization** framework within your Oracle APEX application.
 
-- Enhance your CRM application with data validation, dynamic actions, and AI-powered conversational capabilities using Generative AI and RAG.
+- Enhance your CRM application with data validation, dynamic actions, and AI-powered chatbot using **Generative AI** and **RAG**.
 
 ## Prerequisites
 
@@ -63,11 +63,11 @@ Total Workshop Time: 90 minutes
 | 5 |[Work with External Data Sources](?lab=5-data-sources) | 15 minutes |
 | 6 | [Implement Custom Authentication and Role-Based Authorization](?lab=6-auth) | 20 minutes |
 
+Total Estimated Time: **1 hour 30 minutes**
+
 ### **Let's Get Started!**
 
-- Click on **Getting Started** from the menu on the right. If you already have an Oracle Cloud account, click on **Lab 1: Configure AI Service and Create Data Model using AI**.
-
->**Note**: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
+If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the upper-left corner of the page.
 
 ## Downloads
 
@@ -107,7 +107,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 - Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
 - External Site + Slack:   [http://apex.world](http://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, Febuary 2026

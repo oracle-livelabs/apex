@@ -1,4 +1,4 @@
-# Build Enterprise AI Apps Faster - Part 2
+# Create an AI Chatbot
 
 ## Introduction
 
@@ -6,7 +6,7 @@ In this lab, you will enhance your Oracle APEX CRM application by implementing b
 
 You will begin by strengthening the application with email validation to ensure data quality and by creating dynamic actions to automatically refresh regions and improve interactivity.
 
-Next, you will build a CRM Chat Assistant using the Show AI Assistant dynamic action. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to understand how it generates generic responses. Then, you will enhance it by creating an AI Configuration and defining RAG sources, enabling the chatbot to retrieve information directly from your CRM tables.
+Next, you will build a CRM **Chat Assistant** using a dynamic action. You will first configure the chatbot without a RAG (Retrieval-Augmented Generation) source to understand how it generates generic responses. Then, you will enhance it by creating an AI Configuration and defining RAG sources, enabling the chatbot to retrieve information directly from your CRM tables.
 
 Estimated Time: 20 minutes
 
@@ -30,10 +30,10 @@ By the end of this lab, you will be able to:
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%201.sql)** to download the completed application till Lab 3.
+**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%201.sql)** to download the completed application till Lab 3. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
 
-## Task 1 : Add Email Validation in the Leads Form Page
+## Task 1: Add Email Validation in the Leads Form Page
 
 Data validation is essential to ensure high-quality CRM records. In this task, you will add a regular expression validation to the Email field in the Leads form page.
 
@@ -69,7 +69,7 @@ Data validation is essential to ensure high-quality CRM records. In this task, y
 
     ![display project dashboard page](images/show-validation.png " ")
 
-## Task 2 : Add a Dynamic Action to refresh the content Row Region
+## Task 2: Add a Dynamic Action to refresh the content Row Region
 
 When a Lead record is edited in a dialog, the Leads Content Row region should automatically refresh to reflect updated data. In this task, you will create a Dynamic Action to refresh the region when the dialog closes.
 
@@ -85,7 +85,7 @@ When a Lead record is edited in a dialog, the Leads Content Row region should au
 
     - Under When:
 
-        - Event: **Event Dialog Closed**
+        - Event: **Dialog Closed**
 
         - Selection Type: **Region**
 
@@ -111,7 +111,7 @@ When a Lead record is edited in a dialog, the Leads Content Row region should au
 
 ## Task 3: Create a Chatbot for CRM
 
-In this task, you will create a CRM AI Assistant button on the Dashboard page and configure the *Show AI Assistant* dynamic action without using a RAG source. This demonstrates how the assistant behaves with generic AI responses.
+In this task, you will create a CRM AI Assistant button on the Dashboard page and configure the *Show AI Assistant* dynamic action without using a RAG source. This demonstrates how the AI chat assistant provides generic AI responses.
 
 1. In the runtime environment, go to the Dashboard Page (Home Page) and **Quick Edit** on the **breadcrumb**.
 
@@ -165,7 +165,7 @@ In this task, you will create a CRM AI Assistant button on the Dashboard page an
 
 8. In the app, click the **CRM AI Assistant** button and enter the prompt as **Show me all new leads.**
 
-   The chat assistant currently doesn't returns results from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
+    The chat assistant currently doesn't returns results from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
     !["Click App Builder"](images/show-chatbot.png "")
 
@@ -215,7 +215,7 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 6. Click **Create**.
 
-   !["Click App Builder"](images/crm-ai-conf.png "")
+    !["Click App Builder"](images/crm-ai-conf.png "")
 
     !["Click App Builder"](images/welcome-msg.png "")
 
@@ -298,7 +298,6 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
      !["Click App Builder"](images/server-side2.png "")
 
-
 ## Task 5: Enable Chat Assistant with RAG Source
 
 In this final task, you will connect the CRM AI Configuration (with RAG sources) to the Show AI Assistant dynamic action so that the chatbot retrieves data directly from your CRM tables.
@@ -368,7 +367,7 @@ In this lab, you:
 
 You have now successfully implemented a RAG-powered CRM Chat Assistant inside Oracle APEX, demonstrating how Generative AI can be securely integrated with enterprise data using low-code development.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

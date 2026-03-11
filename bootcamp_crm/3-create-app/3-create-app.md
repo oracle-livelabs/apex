@@ -1,22 +1,14 @@
-# Build Enterprise AI Apps Faster - Part 1
+# Build an App using AI
 
 ## Introduction
 
-In this lab, you will build an interactive CRM Management application using the Create Application Using Generative AI feature in Oracle APEX.
+In this lab, you will build an interactive CRM Management application using the **Create Application Using Generative AI** feature in Oracle APEX.
 
 Instead of manually creating pages, you will use natural language prompts to generate an application blueprint. The application will be based on the custom data model created in the previous lab, providing a practical foundation for a CRM solution.
 
-You will then enhance the AI-generated application by:
+You will then enhance the AI-generated application by customizing the dashboard, improving report layouts, refining form usability and adding visual insights using charts.
 
-- Customizing the dashboard
-
-- Improving report layouts
-
-- Refining form usability
-
-- Adding visual insights using charts
-
-This lab demonstrates how Generative AI accelerates application development while still allowing full customization using APEX.
+This lab demonstrates how Generative AI accelerates application development while still allowing full customization using Oracle APEX.
 
 Estimated Time: 20 minutes
 
@@ -32,7 +24,7 @@ Estimated Time: 20 minutes
 
 - Enhance faceted search pages using Content Row layout
 
-- Improve form usability with LOVs and select lists
+- Improve form usability with List of Values (LOVs) and select lists
 
 ### Prerequisites
 
@@ -40,7 +32,7 @@ Estimated Time: 20 minutes
 
 ## Task 1: Refresh Data Dictionary
 
-When we generate a data model, the database updates instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures APEX reads the latest tables and makes them available in wizards and builders.In this task, we will refresh the Data Dictionary to synchronize APEX with the updated schema.
+When we generate a data model, the database tables are updated instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures Oracle APEX reads the latest tables and makes them available in wizards and builders for use with the AI services. In this task, we will refresh the Data Dictionary to synchronize Oracle APEX with the updated schema.
 
 1. To refresh database objects, navigate to APEX Administration beside your user profile. Select **Manage Service**.
 
@@ -64,7 +56,7 @@ When we generate a data model, the database updates instantly but APEX’s schem
 
 ## Task 2: Create the Application using Generative AI
 
-In this task, you will create a CRM application using the Create Application Using Generative AI feature. Instead of manually selecting tables and pages, you will describe your application requirements in natural language, and APEX Assistant will generate the application blueprint.
+In this task, you will create a CRM application using the **Create Application Using Generative AI** feature. Instead of manually selecting tables and pages, you will describe your application requirements in natural language, and APEX Assistant will generate the application blueprint.
 
 1. From your APEX workspace top navigation bar, click **App Builder**.
 
@@ -124,7 +116,7 @@ In this task, you will create a CRM application using the Create Application Usi
 
     !["sixth prompt"](images/edit-icon.png "")
 
-9. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-logo.png)**.
+9. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download the icon from **[here](images/crm-app-icon.png)**.
 
     !["sixth prompt"](images/upload-icon.png "")
 
@@ -134,7 +126,7 @@ In this task, you will create a CRM application using the Create Application Usi
 
 11. Update the application name to **Customer Hub**.
 
-    !["sixth prompt"](images/click-create-app.png "")
+    !["sixth prompt"](images/enter-app-name.png "")
 
 12. Click **Create Application**.
 
@@ -150,7 +142,7 @@ Now that the application has been created, you will run it to review the AI-gene
 
 2. The login page will be displayed.
 
-    Enter your **Username** and **Password**. Click **Sign In**.
+    Enter your workspace **Username** and **Password**. Click **Sign In**.
 
     The new application will be displayed.
 
@@ -164,7 +156,7 @@ Now that the application has been created, you will run it to review the AI-gene
 
     - Opportunities page
 
-    - Leads form page
+    - Leads Form page
 
     ![display project dashboard page](images/dash.png " ")
 
@@ -176,9 +168,9 @@ In this task, you will enhance the dashboard by adding visual insights.
 
 You will create:
 
-- A Pie Chart showing Sales Pipeline by Stage
+- A Pie Chart showing Sales Pipeline by Stage.
 
-- A Classic Report showing Top 10 Accounts by Revenue
+- A Classic Report showing Top 10 Accounts by Revenue.
 
 1. Navigate to **CRM Dashboard** page.
 
@@ -200,7 +192,7 @@ You will create:
 
     ![display project dashboard page](images/sales-chart.png " ")
 
-5. Navigate to **Attributes** tab, update Chart > Type to **Pie**.
+5. Navigate to **Attributes** tab, update **Chart > Type** to **Pie**.
 
     ![display project dashboard page](images/chart-attribute.png " ")
 
@@ -210,7 +202,7 @@ You will create:
 
         - Type: **SQL Query**
 
-        - SQL Query: Open Code Editor
+        - SQL Query: *Open Code Editor*
 
     ![display project dashboard page](images/chart-sql.png " ")
 
@@ -360,7 +352,7 @@ You will create:
 
 In this task, you will improve the Leads faceted search page by converting it to a modern Content Row layout and enhancing the visual presentation.
 
-1. In the runtime environment, navigate to faceted search page (in my case it's Discover Potential Clients). Navigate to developer toolbar, **Quick Edit** on Report.
+1. In the runtime environment, navigate to faceted search page (in this case - **Discover Potential Clients**). Navigate to developer toolbar, **Quick Edit** on Report.
 
     ![display project dashboard page](images/quick-edit-faceted.png " ")
 
@@ -406,7 +398,7 @@ In this task, you will improve the Leads faceted search page by converting it to
 
     - Under Badge:
 
-        - Label: **Status**
+        - Label: **&STATUS.**
 
         - Value: **STATUS**
 
@@ -514,7 +506,6 @@ In this final task, you will improve the usability of the Leads Edit Form by con
 
     ![display project dashboard page](images/view-status.png " ")
 
-
 ## Summary
 
 In this lab, you successfully:
@@ -531,7 +522,7 @@ In this lab, you successfully:
 
 This lab demonstrated how Generative AI accelerates application development while still allowing full customization using Oracle APEX’s powerful low-code capabilities.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
