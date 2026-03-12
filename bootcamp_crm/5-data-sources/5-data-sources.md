@@ -168,5 +168,5 @@ You now understand how Oracle APEX enables seamless integration with external AP
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
+- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
