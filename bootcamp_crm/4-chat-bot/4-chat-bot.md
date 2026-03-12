@@ -369,5 +369,5 @@ You have now successfully implemented a RAG-powered CRM Chat Assistant inside Or
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
+- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

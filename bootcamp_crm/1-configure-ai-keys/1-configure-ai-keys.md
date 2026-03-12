@@ -40,19 +40,16 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     - Used by App Builder: Toggle the button to turn it **ON**
 
-    - Credential: **--Create New--**
-
-    - API Key: *Enter your OpenAI API key*
+    - Credential: **OPENAI_CREDENTIAL**
 
     - AI Model: **gpt-4.1**
 
     Click **Test Connection**.
 
-
 5. If the connection is successful, click **Create**.
-    If unsuccessful, go to troubleshooting section in Appendix lab.
+   If unsuccessful, go to troubleshooting section in Appendix lab.
 
-    ![Gen AI services page](images/open-ai.png ' ')
+   ![Gen AI services page](images/open-ai.png ' ')
 
 ## Summary
 
@@ -64,5 +61,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
+- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
