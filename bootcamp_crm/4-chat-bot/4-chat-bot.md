@@ -298,7 +298,6 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
      !["Click App Builder"](images/server-side2.png "")
 
-
 ## Task 5: Enable Chat Assistant with RAG Source
 
 In this final task, you will connect the CRM AI Configuration (with RAG sources) to the Show AI Assistant dynamic action so that the chatbot retrieves data directly from your CRM tables.
@@ -370,5 +369,5 @@ You have now successfully implemented a RAG-powered CRM Chat Assistant inside Or
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
+- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
