@@ -13,7 +13,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Prerequisites
 
-- To run this lab, you should configure an APEX workspace on an **Oracle Database 23ai** instance.
+- To run this lab, you should configure an APEX workspace on an **Oracle Database 26ai** instance.
 
 ### Objectives
 
@@ -324,8 +324,7 @@ In this task, we update the RAG source to use the vector we created. The Learn M
 
 You now know how to implement Vector Search in your APEX app. You understood how vectors can be used in AI configurations to optimize RAG implementations by reducing the content sent to large language models, thereby saving costs without compromising on the accuracy of responses.
 
-## Acknowledgments
-
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+## Acknowledgements
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
 
