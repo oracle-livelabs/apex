@@ -75,7 +75,7 @@ In this lab, you will:
 
 3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. 
 
-Download a sample icon from [here](images/ai-highschools.png).
+    Download a sample icon from [here](images/ai-highschools.png).
     ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
@@ -296,8 +296,8 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager; 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2026
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
 
 

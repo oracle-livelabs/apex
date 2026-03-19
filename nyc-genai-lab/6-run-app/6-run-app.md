@@ -83,11 +83,11 @@ In this lab, you will:
 
 You now know how to run the app and explore the Gen AI features of the app.
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Authors** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
 
 
 

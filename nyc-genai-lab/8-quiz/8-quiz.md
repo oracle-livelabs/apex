@@ -7,6 +7,10 @@
 
 This section contains a short quiz to test your understanding of the lab. Get a score of 80 to pass the quiz and earn a badge. Don't forget to share it on Social Media!
 
+Estimated Time: 5 minutes
+
+## Objectives
+- Test your understanding of APEX concepts used in this workshop
 
 ## Quiz
 
@@ -54,3 +58,8 @@ Q: What provider type is selected when creating a Vector Provider for the ONNX m
 - Local File System
 
 ```
+
+## Acknowledgements
+
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Karina Pastor, Principal Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
