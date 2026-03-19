@@ -78,6 +78,7 @@ In this lab, you will:
 
     Be thrilled to learn more about NYC Highschools by asking questions and receiving a response from Generative AI!
 
+
 ## Summary
 
 You now know how to run the app and explore the Gen AI features of the app.

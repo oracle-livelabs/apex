@@ -13,7 +13,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Prerequisites
 
-- To run this lab, you should configure an APEX workspace on an **Oracle Database 23ai** instance.
+- To run this lab, you should configure an APEX workspace on an **Oracle Database 26ai** instance.
 
 ### Objectives
 

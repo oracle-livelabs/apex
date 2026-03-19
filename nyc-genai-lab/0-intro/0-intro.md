@@ -90,7 +90,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 - **OPTION 1:** [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-app.zip) to download the completed application zip file until Lab 6. Note: This application export does not include the vector search covered in **Optional Lab 7**. To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 and Task 2.
 
-- **OPTION 2:** [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-vector-search.zip) to download the completed application zip file until Lab 7. Note: This application export includes the vector search covered in **Optional Lab 7**. To run this app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 till Task 3. Note: This app requires Oracle Database 23ai and Oracle APEX 24.2.
+- **OPTION 2:** [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-gen-ai-vector-search.zip) to download the completed application zip file until Lab 7. Note: This application export includes the vector search covered in **Optional Lab 7**. To run this app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 till Task 3. Note: This app requires Oracle Database 26ai and Oracle APEX 24.2.
 
 
 ## Learn More - *Useful Links*

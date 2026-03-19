@@ -38,6 +38,8 @@ In this lab, you will:
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
+3. Download the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx?download=1) file to your local machine.
+
 4. Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx?download=1) file on to the dialog window.
 
     ![Image showing a wizard to upload a file](images/drag-and-drop.png " ")
@@ -50,7 +52,7 @@ In this lab, you will:
 
 6. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then close the dialog.
 
-    *Note*: We will not be creating the application from this step since ORacle APEX creates multiple pages which are not required for the purpose of this workshop. 
+    *Note*: We will not be creating the application from this step since Oracle APEX creates multiple pages which are not required for the purpose of this workshop. 
 
     The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
 
@@ -71,7 +73,9 @@ In this lab, you will:
 3. On the Create Application page, for **Name**, enter **Highschools**. Click the application icon.
     ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
-3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/ai-highschools.png).
+3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. 
+
+Download a sample icon from [here](images/ai-highschools.png).
     ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
@@ -85,6 +89,7 @@ In this lab, you will:
 
 7. In the Add Cards Page qizard, enter/select the following:
     - Page Name: **Search and Apply**
+    - Switch to **Cards** tab.
     - Table or View: **HIGHSCHOOLS**
 
     For the Cards properties, select the following:
@@ -96,7 +101,7 @@ In this lab, you will:
     - Expand Advanced section and check the **Set as Home Page** box
 
     Click **Add Page**.
-    ![Edit Page wizard](images/cards-columns.png " ")
+    ![Edit Page wizard](images/add-faceted-page.png " ")
 
 7. Next, we delete the page that we no longer need. Click **Edit** next to the Home page.
     ![Edit Page wizard](images/edit-home.png " ")
@@ -282,7 +287,6 @@ In this task, we configure the Cards region to display the information that we n
     ![App with redwood light theme](images/redwood-light.png " ")
     
     You have successfully customized the application theme.
-
 
 ## Summary
 
