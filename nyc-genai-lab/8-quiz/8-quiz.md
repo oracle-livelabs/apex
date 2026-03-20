@@ -5,7 +5,7 @@
 ```
 ## Introduction
 
-This section contains a short quiz to test your understanding of the lab. Get a score of 80 to pass the quiz and earn a badge. Don't forget to share it on Social Media!
+Put your knowledge to the test! This section features a short quiz designed to assess your understanding of the lab. Score 80% or higher to pass and earn your badge. You can then celebrate your achievement by sharing it on social media!
 
 Estimated Time: 5 minutes
 

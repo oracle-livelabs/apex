@@ -309,7 +309,7 @@ In this task, we update the RAG source to use the vector we created. The Learn M
 
     ![App builder](images/sql-commands-3.png ' ')
 
-6. Run the following SQL command to see how the **CONTENT\_LENGTH** column shows significant decrease in the length:
+6. Run the following SQL command to observe the significant decrease in the **CONTENT\_LENGTH** column. This query returns logs for all AI interactions. As shown in the Results pane, interactions prior to using Vector Search often had content lengths exceeding 1000 characters, which can significantly increase the number of tokens consumed by the AI provider.
 
     ```
     <copy>
