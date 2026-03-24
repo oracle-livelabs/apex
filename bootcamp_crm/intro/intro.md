@@ -40,9 +40,13 @@ Total Workshop Time: 1 hour 30 minutes
         - Germany Central (Frankfurt)
         - India South (Hyderabad)
         - Japan Central (Osaka)
+        - Saudi Arabia Central (Riyadh)
         - UAE East (Dubai)
         - UK South (London)
         - US Midwest (Chicago)
+        - US East (Ashburn)
+        - US Midwest (Chicago)
+        - US West (Phoenix)
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
