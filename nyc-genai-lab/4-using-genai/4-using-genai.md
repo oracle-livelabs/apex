@@ -313,8 +313,8 @@ You now know how to create AI configurations with RAG sources in APEX. You also 
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+  - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026

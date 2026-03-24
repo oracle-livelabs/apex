@@ -13,7 +13,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Prerequisites
 
-- To run this lab, you should configure an APEX workspace on an **Oracle Database 23ai** instance.
+- To run this lab, you should configure an APEX workspace on an **Oracle Database 26ai** instance.
 
 ### Objectives
 
@@ -309,7 +309,7 @@ In this task, we update the RAG source to use the vector we created. The Learn M
 
     ![App builder](images/sql-commands-3.png ' ')
 
-6. Run the following SQL command to see how the **CONTENT\_LENGTH** column shows significant decrease in the length:
+6. Run the following SQL command to observe the significant decrease in the **CONTENT\_LENGTH** column. This query returns logs for all AI interactions. As shown in the Results pane, interactions prior to using Vector Search often had content lengths exceeding 1000 characters, which can significantly increase the number of tokens consumed by the AI provider.
 
     ```
     <copy>
@@ -324,8 +324,7 @@ In this task, we update the RAG source to use the vector we created. The Learn M
 
 You now know how to implement Vector Search in your APEX app. You understood how vectors can be used in AI configurations to optimize RAG implementations by reducing the content sent to large language models, thereby saving costs without compromising on the accuracy of responses.
 
-## Acknowledgments
-
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+## Acknowledgements
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
 
