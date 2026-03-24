@@ -114,7 +114,7 @@ By the end of this lab, you will be able to:
             ```
             </copy>
 
-        - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
+    - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
 5. Click **Create**.
 
