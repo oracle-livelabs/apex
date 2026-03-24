@@ -108,8 +108,7 @@ In this task, you will create an application using Generative AI and enter natur
 
     ![select appearance](images/set-icon.png " ")
 
-12. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**.
-Click **Upload your own icon**, choose the image and click **Save Icon**.
+12. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**. Click **Upload your own icon**, choose the image and click **Save Icon**.
 
     ![select appearance](images/save-icon.png " ")
 

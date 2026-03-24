@@ -12,7 +12,7 @@ As you proceed, you will integrate advanced AI capabilities into the application
 
 By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
 
-Total Workshop Time: 60 minutes
+Estimated Time: 60 minutes
 
 ### Objectives
 
