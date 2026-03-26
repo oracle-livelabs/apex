@@ -10,18 +10,20 @@ Estimated Time: 4 hours 40 minutes
 
 In this workshop, you will:
 
-- Develop an APEX Application
-- Load Data using Data Workshop
-- Integrate REST Data Sources
-- Customize Themes and UI
-- Configure Authentication & Security
-- Implement E-commerce Features (Cart, Wishlist, Orders, Profile, My Books etc)
-- Leverage AI Capabilities (RAG, AI Vision, AI Assistant)
-- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here)
-- Set Up Push Notifications
-- Integrate Payment Processing with Razorpay
-- Design and Manage Email Templates
-- Create Vector Providers, Search Configurations and Oracle Vector Search Page
+- Develop an APEX Application.
+- Load Data using Data Workshop.
+- Integrate REST Data Sources.
+- Customize the application theme and UI.
+- Configure Authentication & Security.
+- Implement e-commerce features including Cart, Wishlist, Orders, Profile, and My Books, etc.
+- Add API Keys in the OCI Console.
+- Create Web Credentials in Oracle APEX.
+- Leverage AI capabilities such as RAG, OCI Vision, and the AI Assistant.
+- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here).
+- Set Up Push Notifications to alert users when books in their wishlist become available.
+- Integrate Razorpay to support demo payment transactions within the application.
+- Create and use email templates for sending emails in the application.
+- Create Vector Providers, Search Configurations and Oracle Vector Search Page.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 
@@ -29,7 +31,7 @@ In this workshop, you will:
 
 - An APEX workspace.
 
-- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). 
+- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
 - We need to use an API key for the AI Provider of your choice (OCI Generative AI, Open AI, Cohere) for Labs 8, and 17.
 
@@ -37,11 +39,13 @@ In this workshop, you will:
 
     - The OCI account must be created in or subscribed to a region that supports the OCI Generative AI Service. Currently, the OCI Generative AI Service is available in the following regions:
 
-        - US Midwest (Chicago)
-        - Germany Central (Frankfurt)
-        - UK South (London)
         - Brazil East (Sao Paulo)
+        - Germany Central (Frankfurt)
+        - India South (Hyderabad)
         - Japan Central (Osaka)
+        - UAE East (Dubai)
+        - UK South (London)
+        - US Midwest (Chicago)
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
@@ -63,11 +67,11 @@ In this workshop, you will:
 
 | Lab |  Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Create the application](?lab=create-app) | 4 minutes |
+| 1 | [Create an APEX application](?lab=create-app) | 4 minutes |
 | 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | 5 minutes |
 | 3 | [Enhance the Home Page](?lab=enhance-home-page) | 15 minutes |
 | 4 | [Customize Application Theme](?lab=application-theme) | 1 minute |
-| 5 | [Custom Authentication](?lab=authentication) | 5 minutes |
+| 5 | [Create Custom Authentication](?lab=authentication) | 5 minutes |
 | 6 | [Set Up Add to Cart Functionality](?lab=add-to-cart) | 15 minutes |
 | 7 | [Create and Manage a Shopping Cart](?lab=7-create-shop-cart) | 30 minutes |
 | 8 | [Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget) | 15 minutes |
@@ -75,14 +79,14 @@ In this workshop, you will:
 | 10 | [Create and Manage User Profile Pages](?lab=10-add-user) | 30 minutes |
 | 11 | [Create and Manage Administration](?lab=11-admin-page) | 30 minutes |
 | 12 | [Improve User Onboarding](?lab=12-onboarding) | 35 minutes |
-| 13 | [Push Notification](?lab=13-push-notification) | 5 minutes |
-| 14 | [AI Vision](?lab=14-ai-vision) | 10 minutes |
-| 15 | [Razorpay Payment Integration](?lab=15-razorpay-payement-integration) | 20 minutes |
-| 16 | [UI Enhancements](?lab=16-additional-ui-enhancements) | 30 minutes |
+| 13 | [Configure Push Notification](?lab=13-push-notification) | 5 minutes |
+| 14 | [Integrate AI Vision to Enhance Book Search](?lab=14-ai-vision) | 10 minutes |
+| 15 | [Integrate Razorpay Payment Gateway](?lab=15-razorpay-payement-integration) | 20 minutes |
+| 16 | [Enhance the UI](?lab=16-additional-ui-enhancements) | 30 minutes |
 | 17 | [Enhance AI-Assistant Chat Widget](?lab=17-enhance-ai-assistant) | 5 minutes |
-| 18 | [Create Search Configurations with Oracle Vector Search](?lab=18-vector-search-configurations) | 10 minutes |
+| 18 | [Implement Vector Search using Search Configurations](?lab=18-vector-search-configurations) | 10 minutes |
 
-Total estimated time: 4 hours 40 minutes
+Total Estimated Time: 4 hours 40 minutes
 
 ### **Let's Get Started!**
 
@@ -90,11 +94,11 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ## Downloads: Download and Install the Complete Application
 
-If you are stuck or the app is not working as expected, don't worry! Download one of the export files below:
+If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
 
-- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application export file, which contains everything completed in all the labs except the optional Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
+- **OPTION 1:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
 
-- Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application export file, which contains everything completed in all the labs, including the optional Lab 18. This export requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
+- **OPTION 2:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
 
 ## Learn More - *Useful Links*
 
@@ -108,4 +112,4 @@ If you are stuck or the app is not working as expected, don't worry! Download on
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

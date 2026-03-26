@@ -94,7 +94,9 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/type-hidden.png ' ')
 
-5. In the Rendering Tree, select the page item **P3\_PARENT\_NAME**. In the Property Editor, enter/select the following:
+5. To save parents some time, we are going to set default values for the details (Parent Name, Parent Email) we already know on the school application form. 
+
+    In the Rendering Tree, select the page item **P3\_PARENT\_NAME**. In the Property Editor, enter/select the following:
 
     - Identification > Type: **Display Only**
     - Under Default:
@@ -123,6 +125,7 @@ Let us create a new Form page for school application.
         - Type: **Static**
         - Static Value: **APPLIED**
 
+    The static value is used to display a badge on the respective school card once the parent submits the application.
     ![Page Designer](images/disposition.png ' ')
 
 8. Select the page item **P3\_PARENT\_EMAIL**. In the Property Editor, enter/select the following:
@@ -238,7 +241,8 @@ In this task, we create an AI configuration with a RAG source. This will serve a
         L_SCHOOL_NAME HIGHSCHOOLS.SCHOOL_NAME%TYPE;
         L_PROMPT CLOB;
         BEGIN
-            SELECT SCHOOL_NAME INTO L_SCHOOL_NAME FROM HIGHSCHOOLS WHERE ID = :P3_SCHOOL_ID;
+            SELECT SCHOOL_NAME INTO L_SCHOOL_NAME 
+            FROM HIGHSCHOOLS WHERE ID = :P3_SCHOOL_ID;
             L_PROMPT :=
                 q'[
                 Parent Name : ]'|| :P3_PARENT_NAME||chr(10)||chr(13) ||q'[

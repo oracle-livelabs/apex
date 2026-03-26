@@ -20,7 +20,7 @@ Estimated Time: 5 minutes
 
     >Note: Page number may vary depending on your application.
 
-    !["Click App Builder"](images/navigate-to-1.png "")
+    !["Click App Builder"](images/navigate-to-page1.png "")
 
 2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
 
@@ -97,7 +97,7 @@ Estimated Time: 5 minutes
 
     - Under Server-side Condition:
 
-        - Type: **Function Body**
+        - Type: Function Body
 
         - Expression:
 
@@ -106,14 +106,13 @@ Estimated Time: 5 minutes
             return :APP_PAGE_ID = 11;
             </copy>
             ```
-
-    >Note: Page number may vary depending on your application.
+        >Note: Page number may vary depending on your application.
 
 6. Click **Create**.
 
     !["Click App Builder"](images/gen-desc.png "")
 
-    !["Click App Builder"](images/func-body2.png "")
+    !["Click App Builder"](images/desc-server.png "")
 
 ## Task 3: Add Generate Text with AI Dynamic Action
 
@@ -167,7 +166,7 @@ Estimated Time: 5 minutes
 
 7. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
 
-    !["Click App Builder"](images/view-desc.png "")
+    !["Click App Builder"](images/view-desc-btn.png "")
 
 ## Summary
 
@@ -176,4 +175,4 @@ In this lab, you built an AI-powered feature to generate event descriptions in O
 ## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

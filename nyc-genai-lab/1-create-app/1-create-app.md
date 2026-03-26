@@ -113,7 +113,7 @@ In this task, we configure the Cards region to display the information that we n
 1. Navigate to **Search and Apply** page.
     ![Application Home Page](images/select-page.png " ")
 
-2. In the Rendering Tree, under Body, select **Search Results** region.
+2. In the Left Pane, under Body, select **Search Results** region.
 
    In the Property Editor, enter/select the following:
     - Under Source:
@@ -174,7 +174,7 @@ In this task, we configure the Cards region to display the information that we n
 1. Click **Edit Page 1** from the Developer Toolbar.
     ![App is displayed](images/edit1.png " ")
 
-2. In the Rendering Tree, select **Search**.
+2. In the Left Pane, select **Search**.
 
     In the Property Editor, switch to the **Attributes** tab and enter the following:
         
@@ -214,7 +214,7 @@ In this task, we configure the Cards region to display the information that we n
 
     ![Page Designer](images/lov.png " ")
 
-7. In the Rendering Tree, select **Search Results** region.
+7. In the Left Pane, select **Search Results** region.
 
     In the Property Editor, under Order By, for Type, select **Item** and for Item, enter the following and then click **OK**.
     | Clause | Key | Display |
