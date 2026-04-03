@@ -11,7 +11,7 @@
       },
       {
         "title": "Your OCI API key",
-        "filename": "https://oracle-livelabs.github.io/common/labs/ocw24/hol3318.md"
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/ocw24/hol3318.md"
     },
       {
         "title": "Lab 1: Create the Web Credentials",
@@ -36,7 +36,7 @@
       {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
       }
     ]
 }
