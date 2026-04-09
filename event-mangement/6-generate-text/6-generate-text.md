@@ -172,7 +172,7 @@ Estimated Time: 5 minutes
 
 In this lab, you built an AI-powered feature to generate event descriptions in Oracle APEX. You added a button, configured a RAG Source, and created a dynamic action to display and save the generated description.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

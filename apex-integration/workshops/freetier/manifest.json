@@ -13,7 +13,7 @@
         {
             "title": "Get Started",
             "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
             "title": "Lab 1: Setup an OCM instance",
@@ -21,7 +21,7 @@
         },
         {
             "title": "Lab 2: Setup an Oracle APEX instance",
-            "filename": "https://oracle-livelabs.github.io/apex/common/1-sign-up-apex/1-sign-up-apex.md"
+            "filename": "https://livelabs.oracle.com/cdn/apex/common/1-sign-up-apex/1-sign-up-apex.md"
         },
         {
             "title": "Lab 3: Setup content repository",
@@ -46,7 +46,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }
