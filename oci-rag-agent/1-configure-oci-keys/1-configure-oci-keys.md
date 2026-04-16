@@ -13,7 +13,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab, you:
+In this lab, you will:
 
 - Generate API Keys using OCI Console.
 
