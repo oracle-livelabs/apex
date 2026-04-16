@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Generate an Event Management App with AI assisted development in Oracle APEX",
+  "workshoptitle": "Build an AI-Powered Event Management App in 60 Minutes with Oracle APEX",
     "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
       {
@@ -7,7 +7,7 @@
         "filename": "../../intro/intro.md"
       },
       {
-        "title": "Getting Started",
+        "title": "Get Started",
         "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
       },
       {

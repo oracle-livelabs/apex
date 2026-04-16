@@ -97,7 +97,7 @@ Estimated Time: 5 minutes
 
     - Under Server-side Condition:
 
-        - Type: **Function Body**
+        - Type: Function Body
 
         - Expression:
 
@@ -106,14 +106,13 @@ Estimated Time: 5 minutes
             return :APP_PAGE_ID = 11;
             </copy>
             ```
-
-    >Note: Page number may vary depending on your application.
+        >Note: Page number may vary depending on your application.
 
 6. Click **Create**.
 
     !["Click App Builder"](images/gen-desc.png "")
 
-    !["Click App Builder"](images/func-body2.png "")
+    !["Click App Builder"](images/desc-server.png "")
 
 ## Task 3: Add Generate Text with AI Dynamic Action
 

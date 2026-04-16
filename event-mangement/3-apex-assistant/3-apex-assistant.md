@@ -6,7 +6,7 @@ In this lab, you will learn how to enhance charts in Oracle APEX using AI. Inste
 
 In addition to enhancing charts, you will also create database objects such as tables and PL/SQL packages—directly from the SQL Commands interface using APEX Assistant.
 
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -142,7 +142,8 @@ In this task, you will learn how to create a package using APEX Assistant in SQL
     !["Click App Builder"](images/sql-command.png "")
 
 2. Copy and paste the following *CREATE TABLE* statement in the code editor. You will then use APEX Assistant to generate a package that handles insert, update, and delete operations for the events table.
-Note: CREATE TABLE DDL command can be obtained from the Object Browser.
+
+    *Note: To provide accurate context to the AI Assistant about which table it should reference while generating the package, we enter the following CREATE TABLE statement in the editor.*
 
     ```
     <copy>
@@ -196,6 +197,8 @@ Note: CREATE TABLE DDL command can be obtained from the Object Browser.
 8. Under **Packages**, you can see that the package has been created.
 
     !["Click App Builder"](images/package-created.png "")
+
+    *Note: This package can be extended further to improve the application. For example, you can add more procedures to handle event validations, fetch event details, or manage related data such as venues and event types. Over time, this package can become the central place for all logic related to inserting, updating, and deleting events in the application.*
 
 ## Summary
 

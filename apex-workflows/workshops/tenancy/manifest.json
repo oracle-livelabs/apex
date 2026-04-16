@@ -4,11 +4,15 @@
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../introduction.md"
+        "filename": "../../0-introduction/0-introduction.md"
       },
       {
-              "title": "Get Started",
+              "title": "Sign Up for an APEX Workspace",
               "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Review Commonly Used APEX Terminology",
+        "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
       },
       {
         "title": "Lab 1: Identify Business Steps",
@@ -31,11 +35,11 @@
         "filename": "../../5-add-human-tasks/5-add-human-tasks.md"
       },
       {
-        "title": "Lab 6: Add Calculate fees workflow Activities and Connections ",
+        "title": "Lab 6: Add Calculate fees workflow Activities and Connections",
         "filename": "../../6-calculate-fees-activities/6-calculate-fees-activities.md"
       },
       {
-        "title": "Lab 7: Add Doctor Appointment workflow Activities and Connections ",
+        "title": "Lab 7: Add Doctor Appointment workflow Activities and Connections",
         "filename": "../../7-doc-aapt-activities/7-doc-aapt-activities.md"
       },
       {
@@ -51,7 +55,7 @@
         "filename": "../../10-activate-workflow/10-activate-workflow.md"
       },
       {
-        "title": "Lab 11: Enhance Workflow Management (Optional)",
+        "title": "Lab 11: [OPTIONAL] Enhance Workflow Management",
         "filename": "../../11-resume-workflow/11-resume-workflow.md"
       },
       {

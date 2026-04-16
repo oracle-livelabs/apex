@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will run the Automatic Invoice Handling application and perform OCI Document Understanding on uploaded invoices.
+In this lab, you will run the Automatic Invoice Handling application and use OCI Document Understanding to process uploaded invoices. You will walk through the end-to-end workflow, including uploading invoices, reviewing extracted data, tracking submissions, and approving pending requests.
 
 Estimated Time: 2 Minutes
 
@@ -10,9 +10,12 @@ Estimated Time: 2 Minutes
 
 In this lab, you:
 
-- Run the Application
+- Run the Application.
+- Explore the various features of the app.
 
 ## Task 1: Run the Application
+
+In this task, you will launch the application and test the complete invoice-processing workflow. You will log in as different users, upload sample invoices, review the extracted data, track submitted invoices, and approve pending requests through the unified task lists.
 
 1. From your Application home page, click **Run Application**.
 
@@ -55,4 +58,5 @@ You now know how to run the Automatic Invoice Handling application and obtain re
 ## Acknowledgements
 
 - **Author(s)** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
+- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

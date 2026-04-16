@@ -14,12 +14,12 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Load Data using Data Workshop
-- Create a Faceted Search Page
+- Load Data using Data Workshop.
+- Create a Faceted Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Load Data using Data Workshop
 
@@ -136,4 +136,4 @@ You now know how to Load data using Data Workshop. Also, you know how to Create 
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

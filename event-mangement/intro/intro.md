@@ -12,7 +12,9 @@ As you proceed, you will integrate advanced AI capabilities into the application
 
 By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
 
-Total Workshop Time: 35 minutes
+By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
+
+Total Workshop Time: 60 minutes
 
 ### Objectives
 
@@ -46,7 +48,7 @@ Total Workshop Time: 35 minutes
 
     - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-    *Note: This workshop assumes you are using Oracle APEX 24.2 and Oracle Database 23ai. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+    *Note: This workshop assumes you are using Oracle APEX 24.2.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Labs
 
@@ -70,7 +72,7 @@ Total Workshop Time: 35 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevents-management-hol.sql)** to download the completed application.
+1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevent_management_app_hol.sql)** to download the completed application.
 
 2. Import the event\_management\_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 
@@ -99,7 +101,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Learn More - *Useful Links*
 
 - APEX on Autonomous:   [https://apex.oracle.com/autonomous](https://apex.oracle.com/autonomous)
-- APEX Collateral:   [https://apex.oracle.com](https://apex.oracle.com)
+- APEX Collateral:   [http://oracle.com/apex](https://www.oracle.com/apex)
 - Tutorials:   [https://apex.oracle.com/en/learn/tutorials](https://apex.oracle.com/en/learn/tutorials)
 - Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
 - External Site + Slack:   [http://apex.world](http://apex.world)

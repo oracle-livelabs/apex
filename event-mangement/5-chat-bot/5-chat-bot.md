@@ -100,7 +100,7 @@ By the end of this lab, you will be able to:
 
     - Under Generative AI:
 
-        - Service: **Open AI**
+        - Service: Select the AI service which you habe configured in Lab 1.
 
         - System Prompt:
 
@@ -116,11 +116,26 @@ By the end of this lab, you will be able to:
 
         - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
+    - Under Server-side Condition:
+
+        - Type: Function Body
+
+        - Expression:
+
+            ```
+            <copy>
+            return :APP_PAGE_ID = 3;
+            </copy>
+            ```
+        >Note: Page number may vary depending on your application.
+
 5. Click **Create**.
 
     !["Click App Builder"](images/event-ai-conf1.png "")
 
     !["Click App Builder"](images/event-ai-conf.png "")
+
+    !["Click App Builder"](images/assistant-server.png "")
 
 6. Click **Event AI Configuration**. Under RAG Sources, click **Create RAG Source**.
 
@@ -149,20 +164,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/insert-rag.png "")
 
-10. Under Server-side Condition, enter/select the following to invoke RAG only for that page:
-
-    - Type: **Function Body**
-
-    - Expression 1:
-
-        ```
-        <copy>
-        return :APP_PAGE_ID = 3;
-        </copy>
-        ```
-    >Note: Page number may vary depending on your application.
-
-11. Click **Create**.
+10. Click **Create**.
 
     !["Click App Builder"](images/rag-func1.png "")
 
