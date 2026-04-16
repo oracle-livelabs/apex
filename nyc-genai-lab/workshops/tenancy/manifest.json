@@ -48,13 +48,17 @@
       "filename": "../../7-vector-search/7-vector-search.md"
     },
     {
+      "title": "Quiz: Test your Understanding",
+      "filename": "../../8-quiz/8-quiz.md"
+    },
+    {
       "title": "Lab Appendix: Download Instructions",
       "filename": "../../8-appendix/8-appendix.md"
     },
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

@@ -204,7 +204,7 @@ In this task, you will learn how to create a package using APEX Assistant in SQL
 
 In this lab, you learned how to use the integrated AI Chat capability (APEX Assistant) in code editors within App Builder and SQL Workshop.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
