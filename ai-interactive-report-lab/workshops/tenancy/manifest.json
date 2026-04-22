@@ -1,0 +1,46 @@
+{
+    "workshoptitle": "Explore the New AI Interactive Report Feature with SCM Data",
+    "help": "livelabs-help_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md",
+            "description": "Workshop overview, audience, objectives, and lab flow for the new AI Interactive Report feature."
+        },
+        {
+            "title": "Lab 1: Create a SCM Application",
+            "filename": "../../lab-1-create-a-scm-application/lab-1-create-a-scm-application.md",
+            "description": "Install the SCM sample application, review the dataset, and run the existing report."
+        },
+        {
+            "title": "Lab 2: Configure an AI Service",
+            "filename": "../../lab-2-configure-an-ai-service/lab-2-configure-an-ai-service.md",
+            "description": "Configure the provider, credential, model, and connection for APEX AI features."
+        },
+        {
+            "title": "Lab 3: Create an Interactive Report using Natural Language",
+            "filename": "../../lab-3-create-an-interactive-report-using-natural-language/lab-3-create-an-interactive-report-using-natural-language.md",
+            "description": "Create the replenishment view, build the report page, and enable natural language support."
+        },
+        {
+            "title": "Lab 4: Configure Column-Level AI Attributes",
+            "filename": "../../lab-4-configure-column-level-ai-attributes/lab-4-configure-column-level-ai-attributes.md",
+            "description": "Add SCM-specific AI context and reference data for report columns."
+        },
+        {
+            "title": "Lab 5: Use Search with AI",
+            "filename": "../../lab-5-use-search-with-ai/lab-5-use-search-with-ai.md",
+            "description": "Test AI search prompts, row search behavior, and chip refinement."
+        },
+        {
+            "title": "Lab 6: Use the Interactive Report Chat Assistant",
+            "filename": "../../lab-6-use-the-interactive-report-chat-assistant/lab-6-use-the-interactive-report-chat-assistant.md",
+            "description": "Use chat prompts to analyze, refine, visualize, and save report views."
+        },
+        {
+            "title": "Need Help?",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md",
+            "description": "Solutions to common problems and directions for receiving live help."
+        }
+    ]
+}
