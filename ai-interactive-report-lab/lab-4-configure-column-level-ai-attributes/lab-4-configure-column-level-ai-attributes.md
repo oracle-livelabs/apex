@@ -122,7 +122,6 @@ This task gives the AI controlled value sets for important categorical fields. R
 
 9. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
 
-    ![Open the replenishment report after saving the AI settings](images/run-replenishment-report-after-saving-column-ai-settings.png)
 
 ## Summary
 

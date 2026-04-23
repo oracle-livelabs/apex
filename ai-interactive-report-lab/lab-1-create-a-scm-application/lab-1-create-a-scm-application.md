@@ -9,6 +9,7 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
+
 - Download and run the SCM data model and sample data load scripts.
 - Create a Supply Chain Management application in your workspace.
 - Review the sample SCM dataset and baseline report structure.
@@ -17,8 +18,8 @@ In this lab, you will:
 
 Use these files during the hands-on setup:
 
-* [01_SCM_INV_WMS_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql)
-* [02_SCM_INV_WMS_SAMPLE_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
+- [01_SCM_INV_WMS_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql)
+0 [02_SCM_INV_WMS_SAMPLE_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
 
 Run the files in the order listed above.
 
@@ -28,8 +29,8 @@ This task gives learners the exact files needed to prepare the workshop data. By
 
 1. Download the following files from the **Downloads** section of this lab:
 
-    * `01_SCM_INV_WMS_DATAMODEL.sql`
-    * `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`
+    - `01_SCM_INV_WMS_DATAMODEL.sql`
+    - `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`
 
 2. Sign in to your Oracle APEX workspace and open **SQL Workshop**.
 
