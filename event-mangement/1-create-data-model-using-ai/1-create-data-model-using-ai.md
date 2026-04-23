@@ -570,7 +570,7 @@ Now, let's review the database objects created using AI.
 
 You now know how to create a Data Model using AI. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025

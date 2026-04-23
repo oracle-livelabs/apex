@@ -114,28 +114,13 @@ By the end of this lab, you will be able to:
             ```
             </copy>
 
-        - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
-
-    - Under Server-side Condition:
-
-        - Type: Function Body
-
-        - Expression:
-
-            ```
-            <copy>
-            return :APP_PAGE_ID = 3;
-            </copy>
-            ```
-        >Note: Page number may vary depending on your application.
+    - Welcome Message: **Hi! I’m your Event Assistant. How can I help you today?**
 
 5. Click **Create**.
 
     !["Click App Builder"](images/event-ai-conf1.png "")
 
     !["Click App Builder"](images/event-ai-conf.png "")
-
-    !["Click App Builder"](images/assistant-server.png "")
 
 6. Click **Event AI Configuration**. Under RAG Sources, click **Create RAG Source**.
 
@@ -160,11 +145,42 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/event-assist-rag.png "")
 
-9. Click **Insert**.
+9. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
 
+    *Note: By replacing it with the provided code, we ensure that your application behaves consistently and matches the expected outcome.*
+
+    ```
+    <copy>
+    select e.id,
+       e.start_date,
+       v.name      as venue,
+       e.name,
+       et.name     as event_type
+    from ev_events        e
+    join ev_venues        v
+     on e.venue_id = v.id
+    join ev_event_types   et
+     on e.event_type_id = et.id;
+    </copy>
+    ```
     !["Click App Builder"](images/insert-rag.png "")
 
-10. Click **Create**.
+10. Under Server-side Condition, enter/select the following:
+
+    - Type: Function Body
+
+    - Expression:
+
+        ```
+            <copy>
+            return :APP_PAGE_ID = 3;
+            </copy>
+        ```
+        >Note: Page number may vary depending on your application.
+
+    !["Click App Builder"](images/assistant-server.png "")
+
+11. Click **Create**.
 
     !["Click App Builder"](images/rag-func1.png "")
 
@@ -198,7 +214,7 @@ By the end of this lab, you will be able to:
 
 In this lab, you created an Event Chat Assistant by adding a button, configuring AI settings, and setting up a dynamic action, allowing users to interactively ask questions about event details.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
