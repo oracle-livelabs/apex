@@ -1,0 +1,38 @@
+{
+  "workshoptitle": "Build an App from Spec-To-Code with AI and APEXlang",
+  "help": {
+    "email": ""
+  },
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md",
+      "description": "Overview of the Spec to Code App Dev LiveLab."
+    },
+    {
+      "title": "Lab 1: Setup the Environment",
+      "filename": "../../1-setup-environment/1-setup-environment.md",
+      "description": "Install VS Code and required extensions."
+    },
+    {
+      "title": "Lab 2: Setup CRM Schema along with Sample Data",
+      "filename": "../../2-setup-crm-schema/2-setup-crm-schema.md",
+      "description": "Load the CRM schema scripts through APEX SQL Workshop."
+    },
+    {
+      "title": "Lab 3: Prepare Inputs and Generate Metadata",
+      "filename": "../../3-prepare-inputs-and-generate-metadata/3-prepare-inputs-and-generate-metadata.md",
+      "description": "Prepare Inputs and Generate Metadata."
+    },
+    {
+      "title": "Lab 4: Deploy, Configure, and Customize Application",
+      "filename": "../../4-deploy-configure-and-customize-application/4-deploy-configure-and-customize-application.md",
+      "description": "Deploy, Configure, and Customize Application."
+    },
+    {
+      "title": "Lab 5: Enhance the Application using APEXlang Skills",
+      "filename": "../../5-enhance-application/5-enhance-application.md",
+      "description": "Implement the APEXlang-driven enhancements listed in the source material."
+    }
+  ]
+}
