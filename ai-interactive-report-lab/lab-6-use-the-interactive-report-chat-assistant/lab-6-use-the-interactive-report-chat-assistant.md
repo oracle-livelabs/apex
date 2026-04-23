@@ -9,10 +9,11 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-    - Use the chat assistant to transform the replenishment report.
-    - Apply grouping, aggregation, pivoting, and highlighting through prompts.
-    - Visualize replenishment results as a chart.
-    - Save a reusable SCM report view.
+
+- Use the chat assistant to transform the replenishment report.
+- Apply grouping, aggregation, pivoting, and highlighting through prompts.
+- Visualize replenishment results as a chart.
+- Save a reusable SCM report view.
 
 ## Task 1: Open the Assistant and Build Analytical Views
 
@@ -22,7 +23,7 @@ This task shows how the assistant can progressively reshape the report from a fl
 
     ![Open the assistant panel](images/open-assistant-panel.png)
 
-2. Enter `Group replenishment alerts by warehouse` and send the prompt.
+2. Enter *Group replenishment alerts by warehouse* and send the prompt.
 
     ![Enter the group by prompt](images/enter-group-by-prompt.png)
 
@@ -30,7 +31,7 @@ This task shows how the assistant can progressively reshape the report from a fl
 
     ![Confirm the group by chip](images/confirm-group-by-chip.png)
 
-4. Enter `Show total quantity to target per warehouse` and send the prompt.
+4. Enter *Show total quantity to target per warehouse* and send the prompt.
 
     ![Enter the total quantity prompt](images/enter-total-qty-prompt.png)
 
@@ -38,7 +39,7 @@ This task shows how the assistant can progressively reshape the report from a fl
 
     ![Confirm the aggregate](images/confirm-total-qty-aggregate.png)
 
-6. Enter `Create a pivot showing quantity to target by warehouse, with priorities across the top` and send the prompt.
+6. Enter *Create a pivot showing quantity to target by warehouse, with priorities across the top* and send the prompt.
 
     ![Enter the pivot prompt](images/enter-pivot-prompt.png)
 
@@ -85,5 +86,6 @@ This task demonstrates how the assistant can refine the same report session with
 You used the Interactive Report chat assistant to group, aggregate, pivot, highlight, filter, chart, and save an SCM replenishment report view. The report now supports both exploratory analysis and reusable business reporting.
 
 ## Acknowledgements
+
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, April, 2026

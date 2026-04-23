@@ -15,43 +15,44 @@ Estimated Workshop Time: 40 Minutes
 ### Objectives
 
 In this workshop you will:
-    - Download and run the SCM data model and sample data load scripts.
-    - Create and review the Supply Chain Management application.
-    - Configure an AI provider.
-    - Create an Interactive Report using natural language.
-    - Enable natural language support for the report and add SCM report context.
-    - Configure column-level AI metadata for key SCM report columns.
-    - Use Search with AI and the chat assistant to analyze replenishment alerts.
+
+- Download and run the SCM data model and sample data load scripts.
+- Create and review the Supply Chain Management application.
+- Configure an AI provider.
+- Create an Interactive Report using natural language.
+- Enable natural language support for the report and add SCM report context.
+- Configure column-level AI metadata for key SCM report columns.
+- Use Search with AI and the chat assistant to analyze replenishment alerts.
 
 ### Prerequisites
 
-    - An APEX workspace.
+- An APEX workspace.
 
-    - API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere)
+- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere)
 
-    - If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
+- If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
 
-        - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: oracle.com/cloud/free/. The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+    - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: oracle.com/cloud/free/. The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
 
-            - Brazil East (Sao Paulo)
-            - Germany Central (Frankfurt)
-            - India South (Hyderabad)
-            - Japan Central (Osaka)
-            - UAE East (Dubai)
-            - UK South (London)
-            - US Midwest (Chicago)
+        - Brazil East (Sao Paulo)
+        - Germany Central (Frankfurt)
+        - India South (Hyderabad)
+        - Japan Central (Osaka)
+        - UAE East (Dubai)
+        - UK South (London)
+        - US Midwest (Chicago)
 
-        - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the documentation.
+    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the documentation.
 
-        - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
-        - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
 *Note*:
 
-    - This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+- This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
-    - The application ID in the screenshots may vary. Please ignore the application ID.
+- The application ID in the screenshots may vary. Please ignore the application ID.
 
 ## Lab Modules
 

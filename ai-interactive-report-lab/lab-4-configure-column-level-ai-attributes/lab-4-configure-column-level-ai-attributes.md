@@ -9,9 +9,10 @@ Estimated Lab Time: 10 minutes
 ### Objectives
 
 In this lab, you will:
-* Add SCM-specific column context to key report columns.
-* Define reference values for status and warehouse-related columns.
-* Validate that AI uses the column guidance correctly.
+
+- Add SCM-specific column context to key report columns.
+- Define reference values for status and warehouse-related columns.
+- Validate that AI uses the column guidance correctly.
 
 ## Task 1: Add SCM Column Context
 
@@ -25,7 +26,7 @@ This task helps the AI understand the meaning of your most important replenishme
 
     ![Expand the report columns](images/expand-report-columns.png)
 
-3. Select `QTY_TO_TARGET`.
+3. Select the column **QTY\_TO\_TARGET**.
 
     ![Select the QTY_TO_TARGET column](images/select-qty-to-target-column.png)
 
@@ -35,27 +36,39 @@ This task helps the AI understand the meaning of your most important replenishme
 
 5. In **Column Context**, enter the following context value:
 
-    `Suggested replenishment quantity to move into the pick face for this alert. Users may refer to this as replenishment quantity, suggested move quantity, restock amount, or quantity to replenish.`
+    ```
+    <copy>
+    Suggested replenishment quantity to move into the pick face for this alert. Users may refer to this as replenishment quantity, suggested move quantity, restock amount, or quantity to replenish.
+    </copy>
+    ```
 
     ![Enter the QTY_TO_TARGET column context](images/enter-qty-to-target-column-context.png)
 
-6. Select the column `PRIORITY_CODE`.
+6. Select the column **PRIORITY_CODE**.
 
     ![Select the PRIORITY_CODE column](images/select-priority-code-column.png)
 
 7. In the **Generative AI** section, locate **Column Context** and enter the following context value:
 
-    `Business urgency of the replenishment alert. HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.`
+    ```
+    <copy>
+    Business urgency of the replenishment alert. HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.
+    </copy>
+    ```
 
     ![Enter the PRIORITY_CODE column context](images/enter-priority-code-column-context.png)
 
-8. Select the column `RAISED_AT`.
+8. Select the column **RAISED_AT**.
 
     ![Select the RAISED_AT column](images/select-raised-at-column.png)
 
 9. In **Column Context**, enter the following context value:
 
-    `Timestamp when the replenishment alert was raised. Users may ask for alerts raised today, this week, recently, or in the last few days.`
+    ```
+    <copy>
+    Timestamp when the replenishment alert was raised. Users may ask for alerts raised today, this week, recently, or in the last few days.
+    </copy>
+    ```
 
     ![Enter the RAISED_AT column context](images/enter-raised-at-column-context.png)
 
@@ -67,7 +80,7 @@ This task helps the AI understand the meaning of your most important replenishme
 
 This task gives the AI controlled value sets for important categorical fields. Reference data reduces ambiguity when users ask for open alerts, warehouse-specific results, or other structured SCM filters.
 
-1. Select the column `ALERT_STATUS_CODE`.
+1. Select the column **ALERT\_STATUS\_CODE**.
 
     ![Select the ALERT_STATUS_CODE column](images/select-alert-status-code-column.png)
 
@@ -81,7 +94,7 @@ This task gives the AI controlled value sets for important categorical fields. R
 
     ![Enter the alert status static values and click OK](images/enter-alert-status-static-values.png)
 
-5. Select the column `WAREHOUSE_CODE`.
+5. Select the column **WAREHOUSE_CODE**.
 
     ![Select the WAREHOUSE_CODE column](images/select-warehouse-code-column.png)
 
@@ -91,17 +104,19 @@ This task gives the AI controlled value sets for important categorical fields. R
 
 7. In **SQL Query**, enter the following query so AI can retrieve the valid warehouse codes dynamically:
 
-    ```sql
+    ```
+    <copy>
     select warehouse_code as d,
            warehouse_code as r
      from scm_nl2ir_replenishment_v
      group by warehouse_code
      order by warehouse_code
+     </copy>
     ```
 
     ![Enter the SQL query for warehouse code reference data](images/enter-warehouse-code-sql-query.png)
 
-8. Click **Save and Run Page**.
+8. Click **Save and Run**.
 
     ![Save and run the page with the column AI settings](images/save-and-run-page-with-column-ai-settings.png)
 

@@ -9,9 +9,9 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-    - Download and run the SCM data model and sample data load scripts.
-    - Create a Supply Chain Management application in your workspace.
-    - Review the sample SCM dataset and baseline report structure.
+- Download and run the SCM data model and sample data load scripts.
+- Create a Supply Chain Management application in your workspace.
+- Review the sample SCM dataset and baseline report structure.
 
 ### Downloads
 

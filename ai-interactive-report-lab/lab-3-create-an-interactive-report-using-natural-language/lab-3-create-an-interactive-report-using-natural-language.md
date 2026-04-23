@@ -24,7 +24,7 @@ This task creates the AI Interactive Report page for the SCM reporting surface r
 
     ```
     <copy>
-    Create an interactive report page named Replenishment Report using SCM_NL2IR_REPLENISHMENT_V
+    Create an interactive report page based on the view SCM_NL2IR_REPLENISHMENT_V
     </copy>
     ```
 
@@ -34,7 +34,7 @@ This task creates the AI Interactive Report page for the SCM reporting surface r
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-4. Review the suggested page details, confirm that **Name** is `Replenishment Report` and **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
+4. Review the suggested page details, confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
 
     ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
 

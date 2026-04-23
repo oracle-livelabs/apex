@@ -9,9 +9,10 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-* Run AI-generated filter and sort requests.
-* Compare AI search behavior with row search behavior.
-* Review and refine the generated report chips.
+
+- Run AI-generated filter and sort requests.
+- Compare AI search behavior with row search behavior.
+- Review and refine the generated report chips.
 
 ## Task 1: Run AI Search Scenarios on the Replenishment Report
 
@@ -21,7 +22,7 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Open the replenishment report](images/open-replenishment-report.png)
 
-2. In the report search bar, enter `Show only open replenishment alerts` and submit the prompt.
+2. In the report search bar, enter *Show only open replenishment alerts* and submit the prompt.
 
     ![Enter the open alerts prompt](images/enter-open-alerts-prompt.png)
 
@@ -29,7 +30,7 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Confirm the open alert chip](images/confirm-open-alert-chip.png)
 
-4. In the same search bar, enter `Sort by highest quantity to target` and submit the prompt.
+4. In the same search bar, enter *Sort by highest quantity to target* and submit the prompt.
 
     ![Enter the sort prompt](images/enter-sort-prompt.png)
 
@@ -37,7 +38,7 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Confirm the quantity sort](images/confirm-qty-sort.png)
 
-6. Enter `Show HIGH priority open alerts raised this week` and submit the prompt.
+6. Enter *Show HIGH priority open alerts raised this week* and submit the prompt.
 
     ![Enter the priority and date prompt](images/enter-priority-date-prompt.png)
 
@@ -49,7 +50,7 @@ This task validates that the report can interpret common SCM questions and trans
 
 This task helps you distinguish AI search from standard row search and shows how users can refine the generated result set after the AI has interpreted a prompt.
 
-1. In the search bar, enter the single word `NL2IRWH036` and submit it.
+1. In the search bar, enter the single word *NL2IRWH036* and submit it.
 
     ![Enter the warehouse row search](images/enter-warehouse-row-search.png)
 
@@ -57,7 +58,7 @@ This task helps you distinguish AI search from standard row search and shows how
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 
-3. Enter another AI-style prompt such as `Show open alerts for warehouse NL2IRWH036` and submit it.
+3. Enter another AI-style prompt such as *Show open alerts for warehouse NL2IRWH036* and submit it.
 
     ![Enter the warehouse AI prompt](images/enter-warehouse-ai-prompt.png)
 
@@ -83,5 +84,5 @@ You tested Search with AI on the SCM replenishment report, compared it with row 
 
 ## Acknowledgements
 
-* **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, April, 2026
