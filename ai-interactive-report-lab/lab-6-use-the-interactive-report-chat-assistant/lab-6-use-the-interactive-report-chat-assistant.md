@@ -4,15 +4,15 @@
 
 This lab uses the AI Interactive Report chat assistant to reshape the replenishment data without manually changing report settings. You will ask the assistant to group, aggregate, pivot, highlight, chart, and save views so the SCM report can support both operational users and executive review.
 
-Estimated Lab Time: 20 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 
 In this lab, you will:
-* Use the chat assistant to transform the replenishment report.
-* Apply grouping, aggregation, pivoting, and highlighting through prompts.
-* Visualize replenishment results as a chart.
-* Save a reusable SCM report view.
+    - Use the chat assistant to transform the replenishment report.
+    - Apply grouping, aggregation, pivoting, and highlighting through prompts.
+    - Visualize replenishment results as a chart.
+    - Save a reusable SCM report view.
 
 ## Task 1: Open the Assistant and Build Analytical Views
 
@@ -50,7 +50,7 @@ This task shows how the assistant can progressively reshape the report from a fl
 
 This task demonstrates how the assistant can refine the same report session without starting over. You will highlight important records, narrow the business question, turn the result into a chart, and save the final layout for repeat use.
 
-1. Enter `Highlight rows where Qty To Target is greater than 10 in green` and send the prompt.
+1. Enter: *Highlight rows where Qty To Target is greater than 10 in green* and send the prompt.
 
     ![Enter the highlight prompt](images/enter-highlight-prompt.png)
 
@@ -58,7 +58,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the highlight rule](images/confirm-highlight-rule.png)
 
-3. Enter `Filter to only HIGH priority and OPEN alerts` and send the prompt.
+3. Enter: *Filter to only HIGH priority and OPEN alerts* and send the prompt.
 
     ![Enter the filter prompt](images/enter-high-open-filter-prompt.png)
 
@@ -66,7 +66,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the filter chips](images/confirm-filter-chips.png)
 
-5. Enter `Show Qty To Target by Warehouse Code as a bar chart` and send the prompt.
+5. Enter: *Show Qty To Target by Warehouse Code as a bar chart* and send the prompt.
 
     ![Enter the bar chart prompt](images/enter-bar-chart-prompt.png)
 
@@ -74,7 +74,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the bar chart view](images/confirm-bar-chart-view.png)
 
-7. Enter `Save this as Weekly Replenishment View` and send the prompt.
+7. Enter: *Save this as Weekly Replenishment View* and send the prompt.
 
     ![Enter the save view prompt](images/enter-save-view-prompt.png)
 
@@ -85,5 +85,5 @@ This task demonstrates how the assistant can refine the same report session with
 You used the Interactive Report chat assistant to group, aggregate, pivot, highlight, filter, chart, and save an SCM replenishment report view. The report now supports both exploratory analysis and reusable business reporting.
 
 ## Acknowledgements
-* **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April 21, 2026
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, April, 2026

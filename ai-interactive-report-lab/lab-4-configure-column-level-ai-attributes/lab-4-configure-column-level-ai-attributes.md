@@ -116,4 +116,4 @@ You configured SCM column context and reference values for the replenishment rep
 ## Acknowledgements
 
 * **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April 20, 2026
+* **Last Updated By/Date** - Ankita Beri, April, 2026

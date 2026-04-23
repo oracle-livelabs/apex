@@ -4,7 +4,7 @@
 
 This lab exercises the new AI Interactive Report search experience on the replenishment report. You will test simple filters, sorting, combined conditions, row search behavior, and chip adjustments to confirm that the report converts business language into Interactive Report actions.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 
@@ -84,4 +84,4 @@ You tested Search with AI on the SCM replenishment report, compared it with row 
 ## Acknowledgements
 
 * **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April 21, 2026
+* **Last Updated By/Date** - Ankita Beri, April, 2026

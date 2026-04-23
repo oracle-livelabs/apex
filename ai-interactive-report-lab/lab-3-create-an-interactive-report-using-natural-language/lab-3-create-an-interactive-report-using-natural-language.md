@@ -4,7 +4,7 @@
 
 This lab introduces the core build experience for the new AI Interactive Report feature. With *`SCM_NL2IR_REPLENISHMENT_V`* already created by the data model setup script, you will use natural language to create an Interactive Report on top of that view and then enable natural language support directly on the report so end users can search the replenishment data conversationally.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 
