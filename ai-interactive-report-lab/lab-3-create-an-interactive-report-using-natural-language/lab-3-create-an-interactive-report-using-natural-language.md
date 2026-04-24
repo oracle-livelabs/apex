@@ -35,7 +35,7 @@ This task creates the replenishment report page used in the remaining labs. The 
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-4. Review the suggested page details, confirm that Page Named is **SCM Replenishment** and **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
+4. Review the suggested page details, change Page Name to **SCM Replenishment** and confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
 
     ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
 
@@ -51,13 +51,13 @@ This task creates the replenishment report page used in the remaining labs. The 
 
 This task turns the report into an AI-enabled search surface. You will enable natural language support on the region, choose the default AI search behavior, and provide report context so the model understands replenishment terminology.
 
-1. In **Page Designer**, keep the **Replenishment Overview** region selected and open the **Attributes** tab.
-
-    ![Open the report region attributes](images/enable-natural-language-support.png)
+1. In **Page Designer**, keep the **SCM Replenishment** region selected and open the **Attributes** tab.
 
 2. In the **Generative AI** section, turn **Natural Language Support** **On**.
 
-3. Set **Default Search Mode** to **Search with AI**.
+    ![Open the report region attributes](images/enable-natural-language-support.png)
+
+3. Confirm **Default Search Mode** is **Search with AI**.
 
 4. In **Report Context**, enter the following text:
 
@@ -69,11 +69,9 @@ This task turns the report into an AI-enabled search surface. You will enable na
 
     ![Use the Report Context field](images/enter-report-context.png)
 
-5. Click **Save**.
+5. Click **Save and Run Page**.
 
-6. Click **Run** to open the report.
-
-7. Confirm that the report opens with the conversational search bar and AI actions available above the report.
+6. Confirm that the report opens with the conversational search bar.
 
     ![Confirm Search with AI and the processing state](images/search-with-ai-enabled.png)
 

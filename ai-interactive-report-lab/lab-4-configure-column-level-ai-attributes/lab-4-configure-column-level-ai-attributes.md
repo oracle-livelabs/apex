@@ -125,7 +125,7 @@ This task gives the AI controlled value sets for important categorical fields. R
 
 ## Summary
 
-You configured SCM column context and reference values for the replenishment report. The report is now better prepared to interpret warehouse and inventory questions accurately.
+You configured SCM column context and reference data type for the replenishment report. The report is now better prepared to interpret warehouse and inventory questions accurately.
 
 ## Acknowledgements
 

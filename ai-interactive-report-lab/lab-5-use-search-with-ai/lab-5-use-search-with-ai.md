@@ -42,11 +42,11 @@ This task validates that the report can interpret common SCM questions and trans
 
 This task helps you distinguish AI search from standard row search and shows how users can refine the generated result set after the AI has interpreted a prompt.
 
-1. In the search bar, enter the single word *NL2IRWH036* and submit it.
+1. In the search bar, enter the word *Warehouse NL2IRWH036* and submit it.
 
     ![Enter the warehouse row search](images/enter-warehouse-row-search.png)
 
-2. Observe whether the report uses standard row search instead of AI interpretation.
+2. Observe whether the report uses standard row search instead of Search with AI.
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 

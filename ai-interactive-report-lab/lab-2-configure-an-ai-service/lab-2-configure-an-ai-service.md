@@ -1,4 +1,4 @@
-# Configure an AI Service
+# Configure Generative AI Service
 
 ## Introduction
 
@@ -38,7 +38,7 @@ In this task, I will use the OCI Generative AI service, so you must first create
 
 7. Enter the **OCI User ID, OCI Private Key, OCI Tenancy ID, and OCI Public Key Fingerprint** from your OCI tenancy.
 
-    ![Open App Builder](images/mask-creds.png)
+    ![Open App Builder](images/mask-creds-masked.png)
 
 8. Click **Create**.
 
@@ -46,9 +46,11 @@ In this task, I will use the OCI Generative AI service, so you must first create
 
 ## Task 2: Define the Generative AI Provider
 
-This task sets the service foundation for every AI-driven action later in the workshop. A valid provider and credential ensure that report creation, AI search, and chat interactions all use the same trusted connection.
+This task sets the service foundation for every AI-driven action later in the workshop. A valid Generative AI service provider and web credentials ensure that report creation, AI search, and chat interactions all use the same trusted connection.
 
-1. From the workspace home page, click **App Builder > Workspace Utilities**. If no Generative AI service has been configured for your workspace, you can also click **Enable AI** in the top navigation bar to configure it.
+1. To configure the Generative AI service in your workspace, click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
+
+    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities** to access the configuration settings.
 
     ![Open App Builder](images/navigate-to-app-builder.png)
 
@@ -90,7 +92,7 @@ This task sets the service foundation for every AI-driven action later in the wo
 
 ## Summary
 
-You configured the AI provider, enabled App Builder access, selected the workshop model, and validated the connection. The SCM application can now use AI features inside App Builder and runtime.
+You configured the Generative AI service provider, enabled App Builder access, and validated the connection. The SCM application can now use AI features inside App Builder and runtime.
 
 ## Acknowledgements
 
