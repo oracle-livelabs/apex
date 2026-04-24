@@ -13,7 +13,7 @@
             "description": "Load the SCM scripts, create the application shell, and verify the seeded SCM objects."
         },
         {
-            "title": "Lab 2: Configure an Generative AI Service",
+            "title": "Lab 2: Configure Generative AI Service",
             "filename": "../../lab-2-configure-an-ai-service/lab-2-configure-an-ai-service.md",
             "description": "Configure the provider, credential, model, and connection for APEX AI features."
         },

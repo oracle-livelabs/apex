@@ -12,7 +12,39 @@ In this lab, you will:
 
 - Configure the Generative AI provider used by the SCM application.
 
-## Task 1: Define the Generative AI Provider
+## Task 1: Create a Web Credential
+
+In this task, I will use the OCI Generative AI service, so you must first create a web credential required to configure the service in your workspace
+
+1. From the workspace home page, click **App Builder**.
+
+    ![Open App Builder](images/app-builder-web.png)
+
+2. Click **Workspace Utilities**.
+
+    ![Open App Builder](images/workspace-utilities-web.png)
+
+3. Click **Web Credentials**.
+
+    ![Open App Builder](images/web-credentials.png)
+
+4. Click **Create**.
+
+    ![Open App Builder](images/create-web-creds.png)
+
+5. In the Name field, enter a value such as **oci-credentials**.
+
+6. For Authentication Type, select **OCI Native Authentication**.
+
+7. Enter the **OCI User ID, OCI Private Key, OCI Tenancy ID, and OCI Public Key Fingerprint** from your OCI tenancy.
+
+    ![Open App Builder](images/mask-creds.png)
+
+8. Click **Create**.
+
+    ![Open App Builder](images/creds-created.png)
+
+## Task 2: Define the Generative AI Provider
 
 This task sets the service foundation for every AI-driven action later in the workshop. A valid provider and credential ensure that report creation, AI search, and chat interactions all use the same trusted connection.
 
@@ -44,7 +76,7 @@ This task sets the service foundation for every AI-driven action later in the wo
 
     ![Enable App Builder usage](images/enable-app-builder-usage.png)
 
-8. Create or select the credential required by the provider.
+8. Select the credential created in Task 1..
 
     ![Configure the AI credential](images/configure-ai-credential.png)
 
