@@ -2,89 +2,62 @@
 
 ## Introduction
 
-This lab introduces the core build experience for the new AI Interactive Report feature. With *`SCM_NL2IR_REPLENISHMENT_V`* already created by the data model setup script, you will use natural language to create an Interactive Report on top of that view and then enable natural language support directly on the report so end users can search the replenishment data conversationally.
+This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_NL2IR_REPLENISHMENT_V` already created by the setup script, you will build an Interactive Report page on that view and then enable natural language support directly on the report region.
 
 Estimated Lab Time: 5 minutes
 
 ### Objectives
 
 In this lab, you will:
-- Build an Interactive Report page from a view.
-- Enable natural language support on the report.
+- Create an Interactive Report page on `SCM_NL2IR_REPLENISHMENT_V`.
+- Enable natural language support on the report region.
 
 ## Task 1: Create the Replenishment Report Page
 
-This task creates the AI Interactive Report page for the SCM reporting surface referenced in the source material. The setup script has already created `SCM_NL2IR_REPLENISHMENT_V`, so you can focus directly on building the report page on top of that business-ready view.
+This task creates the replenishment report page used in the remaining labs. The setup script has already created `SCM_NL2IR_REPLENISHMENT_V`, so you only need to point the new Interactive Report page at that view.
 
-1. In **App Builder**, click **Create Page**.
+1. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
 
     ![Click Create Page](images/click-create-page.png)
 
-2. Use natural language to request a new Interactive Report page based on the view `SCM_NL2IR_REPLENISHMENT_V`. For example, enter:
+2. In the **Create Interactive Report** dialog, use the following values:
 
     ```
-    <copy>
-    Create an interactive report page based on the view SCM_NL2IR_REPLENISHMENT_V
-    </copy>
+    Page Number: 2
+    Name: Replenishment Overview
+    Page Mode: Normal
+    Include Form Page: Off
     ```
 
-    ![Enter the Interactive Report prompt](images/enter-interactive-report-prompt.png)
+    ![Review the Create Interactive Report dialog](images/review-generated-report-page-details.png)
 
-3. Once you're okay with the page, click **Create Page**.
+3. Under **Data Source**, keep **Local Database** and **Table** selected, then set **Table / View Name** to `SCM_NL2IR_REPLENISHMENT_V`.
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-4. Review the suggested page details, confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
+4. Click **Create Page**.
 
-    ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
+5. Confirm that the success message **Interactive Report page created.** appears in **Page Designer**.
 
-5. Click **Run**.
+    ![Review the generated report page details](images/click-create-page.png)
 
-    ![Run the replenishment report](images/run-replenishment-report.png)
+6. In the left pane, select the **Replenishment Overview** Interactive Report region and verify that the source is `SCM_NL2IR_REPLENISHMENT_V`.
 
-    Confirm that the report renders from the view.
-
-    ![View the replenishment report](images/view-replenishment-report.png)
+    ![Review the report region source settings](images/select-interactive-report-region.png)
 
 ## Task 2: Enable Natural Language on the Interactive Report
 
-This task turns the new report into an AI-enabled search surface. You will connect the report to the AI service configured earlier, choose the default search behavior, and add SCM report context so the AI understands replenishment terminology.
+This task turns the report into an AI-enabled search surface. You will enable natural language support on the region, choose the default AI search behavior, and provide report context so the model understands replenishment terminology.
 
-1. Before you edit the page, confirm that the AI service you created in Lab 2 is available in the workspace.
+1. In **Page Designer**, keep the **Replenishment Overview** region selected and open the **Attributes** tab.
 
-2. In **Page Designer**, click **Shared Components**.
+    ![Open the report region attributes](images/enable-natural-language-support.png)
 
-    ![Open Shared Components from Page Designer](images/open-shared-components-from-page-designer.png)
+2. In the **Generative AI** section, turn **Natural Language Support** **On**.
 
-3. Under Generative AI, click **AI Attributes**.
+3. Set **Default Search Mode** to **Search with AI**.
 
-    ![Click AI Attributes](images/click-ai-attributes.png)
-
-4. In the **Service** field, select `my-ai-service`.
-
-    ![Select the AI service and apply changes](images/select-ai-service-and-apply-changes.png)
-
-5. Click **Apply Changes**.
-
-    ![Click Apply Changes](images/click-apply-changes.png)
-
-6. Click **Edit Page 2** to return to **Page Designer**.
-
-    ![Return to Page Designer](images/click-edit-page-2.png)
-
-7. In **Page Designer**, select the Interactive Report region from the left pane.
-
-    ![Select the Interactive Report region](images/select-interactive-report-region.png)
-
-8. In the right pane, select **Attributes**, open the **Generative AI** section and turn **Natural Language Support** **On**.
-
-    ![Open Attributes and enable Natural Language Support](images/enable-natural-language-support.png)
-
-9. Set **Default Search Mode** to **AI Search** for this workshop. If your rollout requires a more conservative default, you can use **Row Search** instead.
-
-    ![Choose the default search mode](images/choose-default-search-mode.png)
-
-10. In **Report Context**, enter the following SCM business context:
+4. In **Report Context**, enter the following text:
 
     ```
     <copy>
@@ -94,17 +67,17 @@ This task turns the new report into an AI-enabled search surface. You will conne
 
     ![Use the Report Context field](images/enter-report-context.png)
 
-11. Click **Save and Run**.
+5. Click **Save**.
 
-    ![Save and run the report page](images/save-and-run-report-page.png)
+6. Click **Run** to open the report.
 
-12. Confirm that the report shows the **Search with AI** option and the AI processing indicator.
+7. Confirm that the report opens with the conversational search bar and AI actions available above the report.
 
     ![Confirm Search with AI and the processing state](images/search-with-ai-enabled.png)
 
 ## Summary
 
-You built an Interactive Report on `SCM_NL2IR_REPLENISHMENT_V`, enabled natural language support, and added SCM-specific report context. The report is now ready for column-level AI tuning.
+You created an Interactive Report on `SCM_NL2IR_REPLENISHMENT_V`, enabled natural language support, and added SCM-specific report context. The report is now ready for column-level AI tuning.
 
 ## Acknowledgements
 

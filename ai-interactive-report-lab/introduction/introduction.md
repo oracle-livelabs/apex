@@ -10,7 +10,7 @@ This workshop shows how to use that capability with SCM data. Using a Supply Cha
 
 The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt without losing visibility into how the report was configured.
 
-Estimated Workshop Time: 40 Minutes
+Estimated Workshop Time: 30 Minutes
 
 ### Objectives
 
@@ -28,7 +28,7 @@ In this workshop you will:
 
 - An APEX workspace.
 
-- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere)
+- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama and Generic(OpenAI API Compatible))
 
 - If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
 
@@ -38,9 +38,12 @@ In this workshop you will:
         - Germany Central (Frankfurt)
         - India South (Hyderabad)
         - Japan Central (Osaka)
+        - Saudi Arabia Central (Riyadh)
         - UAE East (Dubai)
         - UK South (London)
+        - US East (Ashburn)
         - US Midwest (Chicago)
+        - US West (Phoenix)
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the documentation.
 

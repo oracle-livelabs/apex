@@ -8,9 +8,9 @@
             "description": "Workshop overview, audience, objectives, and lab flow for the new AI Interactive Report feature."
         },
         {
-            "title": "Lab 1: Create a SCM Application",
+            "title": "Lab 1: Create a Supply Chain Management Application",
             "filename": "../../lab-1-create-a-scm-application/lab-1-create-a-scm-application.md",
-            "description": "Install the SCM sample application, review the dataset, and run the existing report."
+            "description": "Load the SCM scripts, create the application shell, and verify the seeded SCM objects."
         },
         {
             "title": "Lab 2: Configure an AI Service",
@@ -20,7 +20,7 @@
         {
             "title": "Lab 3: Create an Interactive Report using Natural Language",
             "filename": "../../lab-3-create-an-interactive-report-using-natural-language/lab-3-create-an-interactive-report-using-natural-language.md",
-            "description": "Create the replenishment view, build the report page, and enable natural language support."
+            "description": "Create the replenishment report page on SCM_NL2IR_REPLENISHMENT_V and enable natural language support."
         },
         {
             "title": "Lab 4: Configure Column-Level AI Attributes",
