@@ -54,9 +54,11 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
 7. Return to **SQL Scripts**, upload `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`, and then run it to load the SCM sample data.
 
-    ![Run the sample data load script](images/run-sample-dataload-script.png)
+    ![Run the sample data load script](images/run-sample-dataload-script1.png)
 
 8. Verify that both scripts complete without errors before you continue.
+
+    ![Run the sample data load script](images/run-sample-dataload-script.png)
 
 ## Task 2: Create a Supply Chain Management Application
 
@@ -79,8 +81,6 @@ This task creates the application shell that you will enhance throughout the wor
     ![Click Create Application](images/click-create-application.png)
 
 5. Confirm that the new application appears in **App Builder**.
-
-    ![Open App Builder and confirm the application card](images/open-app-builder-and-confirm-app-card.png)
 
 ## Task 3: Review the Application Shell and Seeded SCM Objects
 
