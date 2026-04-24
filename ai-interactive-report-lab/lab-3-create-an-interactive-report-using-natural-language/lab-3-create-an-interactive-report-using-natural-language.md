@@ -10,7 +10,7 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Create an Interactive Report page on `SCM_NL2IR_REPLENISHMENT_V`.
+- Create an Interactive Report page using natural language.
 - Enable natural language support on the report region.
 
 ## Task 1: Build an Interactive Report page from a view

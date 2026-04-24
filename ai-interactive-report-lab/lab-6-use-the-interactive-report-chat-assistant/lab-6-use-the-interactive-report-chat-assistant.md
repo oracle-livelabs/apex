@@ -59,7 +59,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the highlight rule](images/confirm-highlight-rule.png)
 
-3. Enter: *Filter to only HIGH priority and OPEN alerts* and send the prompt.
+3. Remove the chip and enter *Filter to only HIGH priority and OPEN alerts* and send the prompt.
 
     ![Enter the filter prompt](images/enter-high-open-filter-prompt.png)
 
@@ -67,7 +67,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the filter chips](images/confirm-filter-chips.png)
 
-5. Enter: *Show Qty To Target by Warehouse Code as a bar chart* and send the prompt.
+5. Remove the chips and enter *Show Qty To Target by Warehouse Code as a bar chart* and send the prompt.
 
     ![Enter the bar chart prompt](images/enter-bar-chart-prompt.png)
 
@@ -75,7 +75,7 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the bar chart view](images/confirm-bar-chart-view.png)
 
-7. Enter: *Save this as Weekly Replenishment View* and send the prompt.
+7. Enter *Save this as Weekly Replenishment View* and send the prompt.
 
     ![Enter the save view prompt](images/enter-save-view-prompt.png)
 

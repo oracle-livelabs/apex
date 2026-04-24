@@ -38,14 +38,6 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Confirm the quantity sort](images/confirm-qty-sort.png)
 
-6. Enter *Show HIGH priority open alerts raised this week* and submit the prompt.
-
-    ![Enter the priority and date prompt](images/enter-priority-date-prompt.png)
-
-7. Confirm that the report applies the `OPEN` and `HIGH` filters and narrows the results using the `Raised At` date values.
-
-    ![Confirm the applied status, priority, and raised-date results](images/confirm-priority-status-date-filters.png)
-
 ## Task 2: Review Search Modes and Applied Chips
 
 This task helps you distinguish AI search from standard row search and shows how users can refine the generated result set after the AI has interpreted a prompt.
@@ -58,7 +50,7 @@ This task helps you distinguish AI search from standard row search and shows how
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 
-3. Enter another AI-style prompt such as *Show open alerts for warehouse NL2IRWH036* and submit it.
+3. Now, remove the chip and enter another AI-style prompt such as *Show open alerts for warehouse NL2IRWH036* and submit it.
 
     ![Enter the warehouse AI prompt](images/enter-warehouse-ai-prompt.png)
 
