@@ -62,7 +62,7 @@ In this workshop you will:
 | # | Module | Est. Time |
 | --- | --- | --- |
 | 1 | Create a Supply Chain Management Application | 5 minutes |
-| 2 | Configure an AI Service | 10 minutes |
+| 2 | Configure an Generative AI Service | 10 minutes |
 | 3 | Create an Interactive Report Using Natural Language | 5 minutes |
 | 4 | Configure Column-Level AI Attributes | 10 minutes |
 | 5 | Use Search with AI | 5 minutes |

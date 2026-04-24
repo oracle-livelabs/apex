@@ -9,41 +9,43 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
+
 - Create an Interactive Report page on `SCM_NL2IR_REPLENISHMENT_V`.
 - Enable natural language support on the report region.
 
-## Task 1: Create the Replenishment Report Page
+## Task 1: Build an Interactive Report page from a view
 
 This task creates the replenishment report page used in the remaining labs. The setup script has already created `SCM_NL2IR_REPLENISHMENT_V`, so you only need to point the new Interactive Report page at that view.
 
 1. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
 
-    ![Click Create Page](images/click-create-page.png)
+    ![Click Create Page](images/review-pages-and-shared-components.png)
 
-2. In the **Create Interactive Report** dialog, use the following values:
+2. Use natural language to request a new Interactive Report page based on the view `SCM_NL2IR_REPLENISHMENT_V`. For example, enter:
 
     ```
-    Page Number: 2
-    Name: Replenishment Overview
-    Page Mode: Normal
-    Include Form Page: Off
+    <copy>
+    Create an interactive report page based on the view SCM_NL2IR_REPLENISHMENT_V
+    </copy>
     ```
 
-    ![Review the Create Interactive Report dialog](images/review-generated-report-page-details.png)
+    ![Enter the Interactive Report prompt](images/enter-interactive-report-prompt.png)
 
-3. Under **Data Source**, keep **Local Database** and **Table** selected, then set **Table / View Name** to `SCM_NL2IR_REPLENISHMENT_V`.
+3. Once you're okay with the page, click **Create Page**.
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-4. Click **Create Page**.
+4. Review the suggested page details, confirm that Page Named is **SCM Replenishment** and **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
 
-5. Confirm that the success message **Interactive Report page created.** appears in **Page Designer**.
+    ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
 
-    ![Review the generated report page details](images/click-create-page.png)
+5. Click **Run**.
 
-6. In the left pane, select the **Replenishment Overview** Interactive Report region and verify that the source is `SCM_NL2IR_REPLENISHMENT_V`.
+    ![Run the replenishment report](images/run-replenishment-report.png)
 
-    ![Review the report region source settings](images/select-interactive-report-region.png)
+    Confirm that the report renders from the view.
+
+    ![View the replenishment report](images/view-replenishment-report.png)
 
 ## Task 2: Enable Natural Language on the Interactive Report
 

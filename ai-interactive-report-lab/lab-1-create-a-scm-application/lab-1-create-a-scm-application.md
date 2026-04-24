@@ -82,6 +82,8 @@ This task creates the application shell that you will enhance throughout the wor
 
 5. Confirm that the new application appears in **App Builder**.
 
+    ![Click Create Application](images/confirm.png)
+
 ## Task 3: Review the Application Shell and Seeded SCM Objects
 
 This task gives you context for the rest of the workshop. You will review the application home page created in Task 2 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
@@ -104,5 +106,5 @@ You loaded the SCM setup scripts, created the Supply Chain Management applicatio
 
 ## Acknowledgements
 
-* **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, April, 2026
