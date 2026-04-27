@@ -8,10 +8,6 @@
             "description": "Workshop overview, audience, objectives, and lab flow for the new AI Interactive Report feature."
         },
         {
-        "title": "Get Started",
-        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
-      },
-        {
             "title": "Lab 1: Create a Supply Chain Management Application",
             "filename": "../../lab-1-create-a-scm-application/lab-1-create-a-scm-application.md",
             "description": "Load the SCM scripts, create the application shell, and verify the seeded SCM objects."
