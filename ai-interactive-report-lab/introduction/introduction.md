@@ -10,9 +10,9 @@ This workshop shows how to use that capability with SCM data. Using a Supply Cha
 
 The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt without losing visibility into how the report was configured.
 
-Estimated Workshop Time: 30 Minutes
+Estimated Workshop Time: 40 Minutes
 
-### Objectives
+## Objectives
 
 In this workshop you will:
 
@@ -24,7 +24,7 @@ In this workshop you will:
 - Configure column-level AI metadata for key SCM report columns.
 - Use Search with AI and the chat assistant to analyze replenishment alerts.
 
-### Prerequisites
+## Prerequisites
 
 - An APEX workspace.
 
