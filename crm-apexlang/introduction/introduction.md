@@ -1,4 +1,4 @@
-# Build an App from Spec-To-Code with AI and APEXlang
+# Build an App through Spec-Driven Development with AI and APEXlang
 
 ## Introduction
 This workshop guides APEX developers and beginners through spec-driven CRM application development. You will start by translating detailed functional specifications into a working CRM app, accelerating the kickoff of your build. From there, you will explore how APEXlang enables natural-language prompts to manage and modify the application—handling bulk updates, introducing new features, and navigating tenancy tasks without needing to master APEX syntax or jargon.
