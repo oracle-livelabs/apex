@@ -6,15 +6,15 @@ Before you can build the AI Agent, the workspace needs a schema, sample data, an
 
 In this lab, you will load two SQL scripts, one that creates the warehouse tables and one that populates them with sample data, then import the SCM application export and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Upload and run the SCM data model script
+- Set up the SCM data model
 
-- Upload and run the SCM sample data script
+- Load the Sample Data
 
 - Import the SCM application for the workshop
 
@@ -60,21 +60,21 @@ In this task, you will upload and run the data model script. This creates the wa
 
     | Table | Purpose |
     | --- | --- |
-    | scm\_warehouses | Warehouse master data |
-    | scm\_user\_roles | Role definitions and authority levels |
-    | scm\_application\_users | Application users and manager relationships |
-    | scm\_user\_role\_assignments | Primary and secondary role assignments |
-    | scm\_warehouse\_areas | Warehouse zones such as storage and picking |
-    | scm\_storage\_locations | Physical storage and pick locations |
-    | scm\_items | Inventory items |
-    | scm\_item\_warehouse\_policies | Reorder points, safety stock, and lead times per item per warehouse |
-    | scm\_inventory\_balances | Available stock quantities per location |
-    | scm\_replenishment\_alerts | Low-stock and out-of-stock alerts |
-    | scm\_business\_partners | Supplier master data |
-    | scm\_partner\_sites | Supplier site details |
-    | scm\_inbound\_receipts | Supplier delivery headers |
-    | scm\_inbound\_receipt\_lines | Delivery line items and quality data |
-    | scm\_operational\_tasks | Replenishment orders raised by the agent |
+    | `scm_warehouses` | Warehouse master data |
+    | `scm_user_roles` | Role definitions and authority levels |
+    | `scm_application_users` | Application users and manager relationships |
+    | `scm_user_role_assignments` | Primary and secondary role assignments |
+    | `scm_warehouse_areas` | Warehouse zones such as storage and picking |
+    | `scm_storage_locations` | Physical storage and pick locations |
+    | `scm_items` | Inventory items |
+    | `scm_item_warehouse_policies` | Reorder points, safety stock, and lead times per item per warehouse |
+    | `scm_inventory_balances` | Available stock quantities per location |
+    | `scm_replenishment_alerts` | Low-stock and out-of-stock alerts |
+    | `scm_business_partners` | Supplier master data |
+    | `scm_partner_sites` | Supplier site details |
+    | `scm_inbound_receipts` | Supplier delivery headers |
+    | `scm_inbound_receipt_lines` | Delivery line items and quality data |
+    | `scm_operational_tasks` | Replenishment orders raised by the agent |
     {: title="Database Tables"}
 
 ## Task 2: Load the Sample Data
@@ -145,64 +145,61 @@ In this task, you will import the base APEX application. It already contains the
 
 ## Task 4: Configure Generative AI Service
 
-In this task, you will connect a Generative AI Service to the workspace and assign it to the application. The AI Agent uses this service when it processes chat messages in Lab 4.
+In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the imported SCM application. This wires up the LLM backend that the AI Agent will use to process natural language queries later in the workshop.
 
-1. From the Oracle APEX Home page, select **App Builder**.
+1. From **App Builder**, select **Workspace Utilities**.
 
-2. From **App Builder**, select **Workspace Utilities**.
+    ![App Builder Workspace Utilities](./images/workspace-utli.png " ")
 
-3. From **Workspace Utilities**, select **Generative AI Services**.
+2. From **Workspace Utilities**, select **Generative AI**.
 
-    ![Generative AI Services page](./images/gen-ai-services-home.png " ")
+    ![Generative AI Services page](./images/genai-nav.png " ")
 
-4. Select **Create**. On the **Create Generative AI Service** page, enter the following values for the workshop OCI setup:
+3. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the workshop OCI setup:
 
-    | Field | Value |
-    | --- | --- |
-    | AI Provider | **OCI Generative AI Service** |
-    | Name | **OCI Gen AI** |
-    | Static ID | **oci\_gen\_ai** |
-    | Compartment ID | Enter your OCI Compartment ID. If you saved an OCI configuration file in Task 1 and you only have one compartment, you can reuse the compartment OCID from that file. |
-    | Region | **us-chicago-1** |
-    | Model ID | **meta.llama-3.3-70b-instruct** |
-    | Used by App Builder | **On** |
-    | Base URL | Leave the auto-generated value unchanged. |
-    | Credential | Select an existing OCI credential if one is already available in your workspace. Otherwise create a new OCI credential. |
-    {: title="Generative AI Service Configuration"}
+    > **Note:** This workshop uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OpenAI, Azure OpenAI Service, Google Gemini, and Cohere, among others. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
+
+    - AI Provider: **OCI Generative AI Service**
+    - Name: **OCI Gen AI**
+    - Static ID: **oci\_gen\_ai**
+    - Compartment ID: Enter your OCI Compartment ID. If you saved an OCI configuration file in Task 1 and you only have one compartment, you can reuse the compartment OCID from that file.
+    - Region: **us-chicago-1**
+    - Model ID: **meta.llama-3.3-70b-instruct**
+    - Used by App Builder: **On**
+    - Base URL: Leave the auto-generated value unchanged.
+    - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise create a new OCI credential.
 
     ![Create Generative AI Service](./images/gen-ai-service-create.png " ")
 
-5. Select **Create**.
+4. Select **Create**.
 
-6. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
+5. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
 
     ![Generative AI Service created](./images/gen-ai-service-created.png " ")
 
-7. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
+6. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
 
     ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
 
-8. Select the application ID for the imported SCM application from the App Builder applications list.
+7. Select the imported SCM application from the App Builder applications list.
 
-    ![App Builder applications list](./images/app-builder-page-dark.png " ")
+    ![App Builder applications list](./images/app-builder-app-list.png " ")
 
-9. On the application home page, select **Shared Components**.
+8. On the application home page, select **Shared Components**.
 
     ![Application home page](./images/app-homepage.png " ")
 
-10. From **Shared Components**, select **AI Attributes**.
+9. From **Shared Components**, select **AI Attributes**.
 
     ![Shared Components](./images/shared-components-dark.png " ")
 
-11. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
-
-    ![AI Attributes page](./images/ai-attributes-page.png " ")
+10. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
 
     ![AI Attributes configured with the Generative AI Service](./images/ai-attributes-service-selected.png " ")
 
 ## Summary
 
-The warehouse schema, sample data, base application, and **OCI Gen AI** service are now in place. You are ready to create the AI Agent and start adding tools in the next lab.
+The warehouse schema, sample data, sample application, and Generative AI service are now in place. You are ready to create the AI Agent and start adding tools in the next lab.
 
 ## Acknowledgements
 

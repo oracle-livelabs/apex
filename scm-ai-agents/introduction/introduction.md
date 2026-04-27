@@ -10,7 +10,7 @@ In this hands-on workshop, you will build an **SCM Procurement Agent** for the *
 
 You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, keeping business logic in PL/SQL and data in Oracle Database, all configured declaratively within APEX.
 
-Estimated Workshop Time: 65 minutes
+Estimated Workshop Time: 60 minutes
 
 ## Key Concepts
 
@@ -74,21 +74,21 @@ This workshop covers a complete procurement use case using both context tools an
 
 | #  | Tool Name                            | Type                     | Execution Point       |
 |----|--------------------------------------|--------------------------|-----------------------|
-| 1  | get\_user\_context                   | Retrieve Data            | Augment System Prompt |
-| 2  | get\_browser\_timezone               | Execute Client-side Code | Augment System Prompt |
-| 3  | get\_stocks\_at\_risk                | Retrieve Data            | On Demand             |
-| 4  | get\_suppliers\_for\_item            | Retrieve Data            | On Demand             |
-| 5  | get\_supplier\_delivery\_performance | Retrieve Data            | On Demand             |
-| 6  | show\_warehouses\_by\_supplier       | Retrieve Data            | On Demand             |
-| 7  | confirm\_action                      | Execute Client-side Code | On Demand             |
-| 8  | raise\_purchase\_order               | Execute Server-side Code | On Demand             |
+| 1  | `get_user_context`                   | Retrieve Data            | Augment System Prompt |
+| 2  | `get_browser_timezone`               | Execute Client-side Code | Augment System Prompt |
+| 3  | `get_stocks_at_risk`                 | Retrieve Data            | On Demand             |
+| 4  | `get_suppliers_for_item`             | Retrieve Data            | On Demand             |
+| 5  | `get_supplier_delivery_performance`  | Retrieve Data            | On Demand             |
+| 6  | `show_warehouses_by_supplier`        | Retrieve Data            | On Demand             |
+| 7  | `confirm_action`                     | Execute Client-side Code | On Demand             |
+| 8  | `raise_purchase_order`               | Execute Server-side Code | On Demand             |
 {: title="Tool Coverage Map"}
 
 ## Labs
 
 | Lab | Module | Est. Time |
 | --- | --- | --- |
-| 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 15 minutes |
+| 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 10 minutes |
 | 2 | [Build an AI Agent and Add Context Tools](?lab=2-create-agent-context-tools) | 15 minutes |
 | 3 | [Add Supplier Evaluation and Purchase Order Tools](?lab=3-add-core-tools) | 25 minutes |
 | 4 | [Add the Agent to the Application and Run the Application](?lab=4-run-application) | 10 minutes |

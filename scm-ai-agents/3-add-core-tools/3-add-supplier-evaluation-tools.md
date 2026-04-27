@@ -30,23 +30,22 @@ This is the starting point of the procurement process. When the user asks what s
 
 2. In the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool from the SCM Procurement Agent page](./images/add-tool-from-agent.png " ")
+    ![Select Add Tool from the SCM Procurement Agent page](./images/add-tool.png " ")
 
-3. Enter the following configuration:
+3. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **get\_stocks\_at\_risk** |
-    | Type | **Retrieve Data** |
-    | Execution Point | **On Demand** |
-    | Description | **Returns items in the current user's warehouse that are at or below their reorder point, or have an open replenishment alert. Call this when the user asks about stock risk, low stock, or what needs attention. Returns item name, available quantity, reorder point, alert priority, and supplier lead time. Results are ordered by priority then by gap size.** |
-    {: title="Tool 3 Configuration"}
+    - Under **Identification**:
+
+        - Name: **get\_stocks\_at\_risk**
+        - Type: **Retrieve Data**
+        - Execution Point: **On Demand**
+        - Description: **Returns items in the current user's warehouse that are at or below their reorder point, or have an open replenishment alert. Call this when the user asks about stock risk, low stock, or what needs attention. Returns item name, available quantity, reorder point, alert priority, and supplier lead time. Results are ordered by priority then by gap size.**
 
     ![Filled configuration for the get\_stocks\_at\_risk tool](./images/tool-stocks-at-risk-config.png " ")
 
     This tool does not require any parameters.
 
-4. In the **SQL** field, enter:
+4. Under **Settings**, for **SQL Query**, copy and paste the following:
 
     ```sql
     <copy>
@@ -104,24 +103,24 @@ This is the starting point of the procurement process. When the user asks what s
     </copy>
     ```
 
-    ![Entered SQL for the get\_stocks\_at\_risk tool](./images/tool-stocks-at-risk-sql.png " ")
+    ![Entered SQL for the get\_stocks\_at\_risk tool](./images/sql-query-tool3.png " ")
 
 5. Click **Create**.
 
-    This query uses the following tables:
+    ![SCM Procurement Agent with get\_stocks\_at\_risk saved](./images/tool-stocks-at-risk-created.png " ")
+
+6. This query uses the following tables:
 
     | Table | What it provides |
     | --- | --- |
-    | scm\_item\_warehouse\_policies | Warehouse policy, reorder levels, lead time |
-    | scm\_items | Item identity and unit of measure |
-    | scm\_warehouses | Warehouse context |
-    | scm\_inventory\_balances | Available stock quantity |
-    | scm\_storage\_locations | Warehouse mapping for balances |
-    | scm\_replenishment\_alerts | Open alert priority and age |
-    | scm\_application\_users | Default warehouse for the current user |
-    {: title="Tables used by get\_stocks\_at\_risk"}
-
-    ![SCM Procurement Agent with get\_stocks\_at\_risk saved](./images/tool-stocks-at-risk-created.png " ")
+    | `scm_item_warehouse_policies` | Warehouse policy, reorder levels, lead time |
+    | `scm_items` | Item identity and unit of measure |
+    | `scm_warehouses` | Warehouse context |
+    | `scm_inventory_balances` | Available stock quantity |
+    | `scm_storage_locations` | Warehouse mapping for balances |
+    | `scm_replenishment_alerts` | Open alert priority and age |
+    | `scm_application_users` | Default warehouse for the current user |
+    {: title="Tables used by get_stocks_at_risk"}
 
 ## Task 2: Find Suppliers for a Selected Item
 
@@ -131,17 +130,16 @@ Once the user picks an item at risk, they need to know who can supply it. This t
 
 1. On the **SCM Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create get\_suppliers\_for\_item](./images/task2-add-tool.png " ")
+    ![Select Add Tool to create get\_suppliers\_for\_item](./images/add-tool4.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **get\_suppliers\_for\_item** |
-    | Type | **Retrieve Data** |
-    | Execution Point | **On Demand** |
-    | Description | **Returns active suppliers who have previously supplied the given item. Pass item\_id from get\_stocks\_at\_risk. Shows supplier name, site, total receipts, on-time rate, damage rate, and last received date. Call this when the user picks an item and asks who can supply it. Results are ordered best performer first.** |
-    {: title="Tool 4 Configuration"}
+    - Under **Identification**:
+
+        - Name: **get\_suppliers\_for\_item**
+        - Type: **Retrieve Data**
+        - Execution Point: **On Demand**
+        - Description: **Returns active suppliers who have previously supplied the given item. Pass item\_id from get\_stocks\_at\_risk. Shows supplier name, site, total receipts, on-time rate, damage rate, and last received date. Call this when the user picks an item and asks who can supply it. Results are ordered best performer first.**
 
     ![Filled configuration for get\_suppliers\_for\_item](./images/task2-tool4-config.png " ")
 
@@ -149,12 +147,12 @@ Once the user picks an item at risk, they need to know who can supply it. This t
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
-    | ITEM\_ID | Selected item identifier. | NUMBER | Yes |
+    | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
     {: title="Tool 4 Parameters"}
 
     ![Tool 4 parameter grid with ITEM\_ID added](./images/task2-tool4-params.png " ")
 
-4. In the **SQL** field, enter:
+4. Under **Settings**, for **SQL Query**, copy and paste the following:
 
     ```sql
     <copy>
@@ -196,17 +194,17 @@ Once the user picks an item at risk, they need to know who can supply it. This t
 
 5. Click **Create**.
 
-    This query uses the following tables:
+    ![SCM Procurement Agent with get\_suppliers\_for\_item saved](./images/task2-tool4-create.png " ")
+
+6. This query uses the following tables:
 
     | Table | What it provides |
     | --- | --- |
-    | scm\_business\_partners | Supplier identity |
-    | scm\_partner\_sites | Supplier site details |
-    | scm\_inbound\_receipts | Historical supplier deliveries |
-    | scm\_inbound\_receipt\_lines | Item-level receipt history and quality data |
-    {: title="Tables used by get\_suppliers\_for\_item"}
-
-    ![SCM Procurement Agent with get\_suppliers\_for\_item saved](./images/task2-tool4-created.png " ")
+    | `scm_business_partners` | Supplier identity |
+    | `scm_partner_sites` | Supplier site details |
+    | `scm_inbound_receipts` | Historical supplier deliveries |
+    | `scm_inbound_receipt_lines` | Item-level receipt history and quality data |
+    {: title="Tables used by get_suppliers_for_item"}
 
 ## Task 3: Evaluate Supplier Delivery Performance
 
@@ -216,17 +214,16 @@ Before committing to a supplier, users often want to see a fuller picture of tha
 
 1. On the **SCM Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create get\_supplier\_delivery\_performance](./images/task3-add-tool.png " ")
+    ![Select Add Tool to create get\_supplier\_delivery\_performance](./images/add-tool5.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **get\_supplier\_delivery\_performance** |
-    | Type | **Retrieve Data** |
-    | Execution Point | **On Demand** |
-    | Description | **Returns a detailed delivery performance scorecard for a supplier over a given period. Pass supplier\_id from get\_suppliers\_for\_item. Pass TIME\_PERIOD as QUARTER for last quarter or YEAR for last 12 months. Call this when the user wants to check a supplier's track record before raising a purchase order. Returns on-time rate, average delay, dock-to-stock time, damage rate, and total volumes.** |
-    {: title="Tool 5 Configuration"}
+    - Under **Identification**:
+
+        - Name: **get\_supplier\_delivery\_performance**
+        - Type: **Retrieve Data**
+        - Execution Point: **On Demand**
+        - Description: **Returns a detailed delivery performance scorecard for a supplier over a given period. Pass supplier\_id from get\_suppliers\_for\_item. Pass TIME\_PERIOD as QUARTER for last quarter or YEAR for last 12 months. Call this when the user wants to check a supplier's track record before raising a purchase order. Returns on-time rate, average delay, dock-to-stock time, damage rate, and total volumes.**
 
     ![Filled configuration for get\_supplier\_delivery\_performance](./images/task3-tool5-config.png " ")
 
@@ -234,13 +231,13 @@ Before committing to a supplier, users often want to see a fuller picture of tha
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
-    | TIME\_PERIOD | Reporting horizon such as `QUARTER` or `YEAR`. | VARCHAR2 | Yes |
-    | SUPPLIER\_ID | Selected supplier identifier. | NUMBER | Yes |
+    | `TIME_PERIOD` | Reporting horizon such as `QUARTER` or `YEAR`. | VARCHAR2 | Yes |
+    | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
     {: title="Tool 5 Parameters"}
 
     ![Tool 5 parameter grid with SUPPLIER\_ID and TIME\_PERIOD added](./images/task3-tool5-params.png " ")
 
-4. In the **SQL** field, enter:
+4. Under **Settings**, for **SQL Query**, copy and paste the following:
 
     ```sql
     <copy>
@@ -293,20 +290,20 @@ Before committing to a supplier, users often want to see a fuller picture of tha
     </copy>
     ```
 
-    ![Entered SQL for get\_supplier\_delivery\_performance](./images/task3-tool5-sql.png " ")
+    ![Entered SQL for get\_supplier\_delivery\_performance](./images/tool5-sql.png " ")
 
 5. Click **Create**.
 
-    This query uses the following tables:
+    ![SCM Procurement Agent with get\_supplier\_delivery\_performance saved](./images/tool5-sql.png " ")
+
+6. This query uses the following tables:
 
     | Table | What it provides |
     | --- | --- |
-    | scm\_business\_partners | Supplier identity |
-    | scm\_inbound\_receipts | Header-level delivery timing |
-    | scm\_inbound\_receipt\_lines | Quantity, damage, shortage, and rejection data |
-    {: title="Tables used by get\_supplier\_delivery\_performance"}
-
-    ![SCM Procurement Agent with get\_supplier\_delivery\_performance saved](./images/task3-tool5-created.png " ")
+    | `scm_business_partners` | Supplier identity |
+    | `scm_inbound_receipts` | Header-level delivery timing |
+    | `scm_inbound_receipt_lines` | Quantity, damage, shortage, and rejection data |
+    {: title="Tables used by get_supplier_delivery_performance"}
 
 ## Task 4: Show Available Warehouses for a Supplier
 
@@ -316,17 +313,16 @@ A purchase order must be directed to a specific warehouse. This tool shows the u
 
 1. On the **SCM Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create show\_warehouses\_by\_supplier](./images/task4-add-tool.png " ")
+    ![Select Add Tool to create show\_warehouses\_by\_supplier](./images/tool6-add.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **show\_warehouses\_by\_supplier** |
-    | Type | **Retrieve Data** |
-    | Execution Point | **On Demand** |
-    | Description | **Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise\_purchase\_order. Present the warehouse list to the user and ask them to choose which warehouse the delivery should go to. Do not choose a warehouse yourself. Wait for the user to confirm their selection, then use their chosen warehouse\_id as WH\_ID in raise\_purchase\_order.** |
-    {: title="Tool 6 Configuration"}
+    - Under **Identification**:
+
+        - Name: **show\_warehouses\_by\_supplier**
+        - Type: **Retrieve Data**
+        - Execution Point: **On Demand**
+        - Description: **Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise\_purchase\_order. Present the warehouse list to the user and ask them to choose which warehouse the delivery should go to. Do not choose a warehouse yourself. Wait for the user to confirm their selection, then use their chosen warehouse\_id as WH\_ID in raise\_purchase\_order.**
 
     ![Filled configuration for show\_warehouses\_by\_supplier](./images/task4-tool6-config.png " ")
 
@@ -334,12 +330,12 @@ A purchase order must be directed to a specific warehouse. This tool shows the u
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
-    | SUPPLIER\_ID | Selected supplier identifier. | NUMBER | Yes |
+    | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
     {: title="Tool 6 Parameters"}
 
     ![Tool 6 parameter grid with SUPPLIER\_ID added](./images/task4-tool6-params.png " ")
 
-4. In the **SQL** field, enter:
+4. Under **Settings**, for **SQL Query**, copy and paste the following:
 
     ```sql
     <copy>
@@ -360,19 +356,19 @@ A purchase order must be directed to a specific warehouse. This tool shows the u
     </copy>
     ```
 
-    ![Entered SQL for show\_warehouses\_by\_supplier](./images/task4-tool6-sql.png " ")
+    ![Entered SQL for show\_warehouses\_by\_supplier](./images/tool6-sql.png " ")
 
 5. Click **Create**.
 
-    This query uses the following tables:
+    ![SCM Procurement Agent with show\_warehouses\_by\_supplier saved](./images/tool6-sql.png " ")
+
+6. This query uses the following tables:
 
     | Table | What it provides |
     | --- | --- |
-    | scm\_warehouses | Warehouse identity and status |
-    | scm\_inbound\_receipts | Historical supplier deliveries by warehouse |
-    {: title="Tables used by show\_warehouses\_by\_supplier"}
-
-    ![SCM Procurement Agent with show\_warehouses\_by\_supplier saved](./images/task4-tool6-created.png " ")
+    | `scm_warehouses` | Warehouse identity and status |
+    | `scm_inbound_receipts` | Historical supplier deliveries by warehouse |
+    {: title="Tables used by show_warehouses_by_supplier"}
 
 ## Task 5: Request User Confirmation Before Any Write Action
 
@@ -384,17 +380,16 @@ If the user cancels, the agent stops and reports back. The purchase order is onl
 
 1. On the **SCM Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create confirm\_action](./images/task5-add-tool.png " ")
+    ![Select Add Tool to create confirm\_action](./images/add-tool7.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **confirm\_action** |
-    | Type | **Execute Client-side Code** |
-    | Execution Point | **On Demand** |
-    | Description | **Shows a browser confirmation dialog with the provided MESSAGE. Returns "confirmed" if the user clicks OK, or "denied" if they cancel. Always call this before raise\_purchase\_order. Build MESSAGE as a plain-English summary of the full order: item name, quantity, supplier name, warehouse name, due date, and PO owner. If the return value is "denied", stop and report back to the user.** |
-    {: title="Tool 7 Configuration"}
+    - Under **Identification**:
+
+        - Name: **confirm\_action**
+        - Type: **Execute Client-side Code**
+        - Execution Point: **On Demand**
+        - Description: **Shows a browser confirmation dialog with the provided MESSAGE. Returns "confirmed" if the user clicks OK, or "denied" if they cancel. Always call this before raise\_purchase\_order. Build MESSAGE as a plain-English summary of the full order: item name, quantity, supplier name, warehouse name, due date, and PO owner. If the return value is "denied", stop and report back to the user.**
 
     ![Filled configuration for confirm\_action](./images/task5-tool7-config.png " ")
 
@@ -407,7 +402,7 @@ If the user cancels, the agent stops and reports back. The purchase order is onl
 
     ![Tool 7 parameter grid with MESSAGE added](./images/task5-tool7-params.png " ")
 
-4. In the **JavaScript** field, enter:
+4. Under **Settings**, for **Code**, copy and paste the following:
 
     ```javascript
     <copy>
@@ -419,11 +414,11 @@ If the user cancels, the agent stops and reports back. The purchase order is onl
     </copy>
     ```
 
-    ![Entered JavaScript for confirm\_action](./images/task5-tool7-code.png " ")
+    ![Entered JavaScript for confirm\_action](./images/tool7-code.png " ")
 
 5. Click **Create**.
 
-    ![SCM Procurement Agent with confirm\_action saved](./images/task5-tool7-created.png " ")
+    ![SCM Procurement Agent with confirm\_action saved](./images/tool7-create.png " ")
 
 ## Task 6: Create the Purchase Order and Action the Replenishment Alert
 
@@ -435,17 +430,16 @@ The agent only calls this tool after collecting the warehouse, quantity, and due
 
 1. On the **SCM Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create raise\_purchase\_order](./images/task6-add-tool.png " ")
+    ![Select Add Tool to create raise\_purchase\_order](./images/add-tool8.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **raise\_purchase\_order** |
-    | Type | **Execute Server-side Code** |
-    | Execution Point | **On Demand** |
-    | Description | **Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Call show\_warehouses\_by\_supplier and ask the user to pick a warehouse. Use their answer as WH\_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE\_DATE in YYYY-MM-DD format. 4. Call confirm\_action with a plain-English summary and wait for "confirmed". Only call this tool after confirm\_action returns "confirmed". Use full\_name from get\_user\_context as the PO owner.** |
-    {: title="Tool 8 Configuration"}
+    - Under **Identification**:
+
+        - Name: **raise\_purchase\_order**
+        - Type: **Execute Server-side Code**
+        - Execution Point: **On Demand**
+        - Description: **Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Call show\_warehouses\_by\_supplier and ask the user to pick a warehouse. Use their answer as WH\_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE\_DATE in YYYY-MM-DD format. 4. Call confirm\_action with a plain-English summary and wait for "confirmed". Only call this tool after confirm\_action returns "confirmed". Use full\_name from get\_user\_context as the PO owner.**
 
     ![Filled configuration for raise\_purchase\_order](./images/task6-tool8-config.png " ")
 
@@ -454,16 +448,20 @@ The agent only calls this tool after collecting the warehouse, quantity, and due
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
     | TIMEZONE | Browser timezone value for due-date conversion. | VARCHAR2 | Yes |
-    | DUE\_DATE | Required delivery date in `YYYY-MM-DD` format. | VARCHAR2 | Yes |
-    | QUANTITY | Requested purchase quantity. | NUMBER | Yes |
-    | WH\_ID | Chosen warehouse identifier. | NUMBER | Yes |
-    | SUPPLIER\_ID | Selected supplier identifier. | NUMBER | Yes |
-    | ITEM\_ID | Selected item identifier. | NUMBER | Yes |
+    | `DUE_DATE` | Required delivery date in `YYYY-MM-DD` format. | VARCHAR2 | Yes |
+    | `QUANTITY` | Requested purchase quantity. | NUMBER | Yes |
+    | `WH_ID` | Chosen warehouse identifier. | NUMBER | Yes |
+    | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
+    | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
     {: title="Tool 8 Parameters"}
 
     ![Tool 8 parameter grid with all purchase-order inputs added](./images/task6-tool8-params.png " ")
 
-4. In the **PL/SQL Code** field, enter:
+4. Under **Settings**, enter/select the following:
+
+    - Type: **Function Body**
+    - Language: **PL/SQL**
+    - **Function Body Returning CLOB** : copy and paste the following:
 
     ```plsql
     <copy>
@@ -558,11 +556,13 @@ The agent only calls this tool after collecting the warehouse, quantity, and due
     </copy>
     ```
 
-    ![Entered PL/SQL code for raise\_purchase\_order](./images/task6-tool8-code.png " ")
+    ![Entered PL/SQL code for raise\_purchase\_order](./images/tool8-code.png " ")
 
 5. Click **Create**.
 
-    This PL/SQL block:
+    ![SCM Procurement Agent with raise\_purchase\_order saved](./images/tool8-create.png " ")
+
+6. This PL/SQL block:
 
     - Creates a planned supplier receipt with a sequential purchase order number
     - Inserts the receipt line for the selected item and quantity
@@ -571,16 +571,14 @@ The agent only calls this tool after collecting the warehouse, quantity, and due
 
     | Table | What it does |
     | --- | --- |
-    | scm\_inbound\_receipts | Inserts the planned purchase-order header |
-    | scm\_inbound\_receipt\_lines | Inserts the purchase-order line |
-    | scm\_replenishment\_alerts | Marks the alert as actioned |
-    | scm\_application\_users | Resolves the current application user |
-    | scm\_items | Resolves item name and UOM |
-    | scm\_business\_partners | Resolves supplier name |
-    | scm\_warehouses | Resolves warehouse name |
-    {: title="Tables used by raise\_purchase\_order"}
-
-    ![SCM Procurement Agent with raise\_purchase\_order saved](./images/task6-tool8-created.png " ")
+    | `scm_inbound_receipts` | Inserts the planned purchase-order header |
+    | `scm_inbound_receipt_lines` | Inserts the purchase-order line |
+    | `scm_replenishment_alerts` | Marks the alert as actioned |
+    | `scm_application_users` | Resolves the current application user |
+    | `scm_items` | Resolves item name and UOM |
+    | `scm_business_partners` | Resolves supplier name |
+    | `scm_warehouses` | Resolves warehouse name |
+    {: title="Tables used by raise_purchase_order"}
 
 ## Summary
 

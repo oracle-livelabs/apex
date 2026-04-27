@@ -22,33 +22,36 @@ In this task, you will create the SCM Procurement Agent. You will set the system
 
 Open the agent creation page from within your application's Shared Components to ensure it is automatically associated with the correct application.
 
-1. From your application home page, select **Shared Components**.
+1. Click on **Application 102** to return to your application home page.
 
     ![Return to Shared Components from the AI Attributes page](./images/ai-attributes-to-shared-components.png " ")
 
-2. From **Shared Components**, under **Generative AI**, select **AI Agents**.
+2. From your application home page, select **Shared Components**.
+
+    ![Application home page](./images/app-homepage.png " ")
+
+3. From **Shared Components**, under **Generative AI**, select **AI Agents**.
 
     ![Open AI Agents from Shared Components](./images/shared-components-ai-agents.png " ")
 
-3. On the **Generative AI Agents** page, select **Create**.
+4. On the **Generative AI Agents** page, select **Create**.
 
     ![Generative AI Agents page](./images/ai-agents-list.png " ")
 
-    *Important: Open the create page from your application's Shared Components context. Entering the AI Agent create page outside the application context can fail because the application ID is not set.*
+5. On the **Create Generative AI Agent** page, enter/select the following:
 
-4. On the **Create Generative AI Agent** page, enter the following:
+    - Under **Identification**:
 
-    | Field | Value |
-    | --- | --- |
-    | Name | **SCM Procurement Agent** |
-    | Service | **OCI Gen AI** |
-    {: title="AI Agent Configuration"}
+        - Name: **SCM Procurement Agent**
+        - Service: **OCI Gen AI**
 
-5. In **System Prompt**, enter:
+    ![Create AI Agent page with the name and service fields completed](./images/create-agent-details.png " ")
 
-    ```
+6. In **System Prompt**, enter:
+
+    ```text
     <copy>
-    You are a supplier risk and procurement assistant for the SCM Warehouse Management application.
+    You are a procurement assistant for the SCM Warehouse Console application.
     Your role is to:
     - Identify items at risk in the current user's warehouse
     - Explain the severity of the risk using available stock, reorder policy, alert priority, and lead time
@@ -73,42 +76,44 @@ Open the agent creation page from within your application's Shared Components to
     </copy>
     ```
 
-6. In **Welcome Message**, enter:
+    ![System Prompt completed for the SCM Procurement Agent](./images/create-agent-system-prompt.png " ")
 
-    ```
+7. In **Welcome Message**, enter:
+
+    ```text
     <copy>
     Hi, I'm your Procurement Agent. Ask me which stocks are at risk, or ask me to find suppliers and raise a purchase order.
     </copy>
     ```
 
-    ![Create AI Agent page with the SCM Procurement Agent details filled](./images/create-ai-agent.png " ")
+    ![Welcome Message completed for the SCM Procurement Agent](./images/create-agent-welcome-message.png " ")
 
-7. Select **Create**.
+8. Select **Create**.
 
-    ![SCM Procurement Agent saved after creation](./images/agent-created.png " ")
+    ![Create button on the Generative AI Agent page](./images/create-agent-create.png " ")
 
-## Task 2: Inject the Signed-In User's Identity and Role
+## Task 2: Add the User Context Tool
 
 The agent needs to know who the signed-in user is before it can give useful answers. This tool queries the database and returns the user's full name, role, warehouse, approval authority, and manager automatically on every message.
 
 **Type:** Retrieve Data | **Execution:** Augment System Prompt
 
-1. In the AI Agent definition, open the **Tools** section and select **Add Tool**.
+1. In the **Tools** section, select **Add Tool**.
 
-    ![Open the Tools section and select Add Tool](./images/agent-add-tool.png " ")
+    ![Open the Tools section and select Add Tool](./images/add-tool.png " ")
 
-2. Enter the following configuration:
+2. Enter/select the following configuration:
 
-    | Field | Value |
-    | --- | --- |
-    | Tool Name | **get\_user\_context** |
-    | Type | **Retrieve Data** |
-    | Execution Point | **Augment System Prompt** |
-    | Parameters | *None* |
-    | Description | **Returns the current user's full name, role, warehouse, approval authority level, and manager. Injected automatically on every message before any reasoning begins. Use full\_name as the PO owner when raising purchase orders. Use warehouse\_id as the default warehouse context.** |
-    {: title="Tool 1 Configuration"}
+    - Under **Identification**:
 
-3. In the **SQL** field, enter:
+        - Tool Name: **get\_user\_context**
+        - Type: **Retrieve Data**
+        - Execution Point: **Augment System Prompt**
+        - Description: **Returns the current user's full name, role, warehouse, approval authority level, and manager. Injected automatically on every message before any reasoning begins. Use full\_name as the PO owner when raising purchase orders. Use warehouse\_id as the default warehouse context.**
+
+    ![User context tool fields completed](./images/tool-user-context-config.png " ")
+
+3. Under **Settings**, for **SQL Query**, copy and paste the following:
 
     ```sql
     <copy>
@@ -134,54 +139,52 @@ The agent needs to know who the signed-in user is before it can give useful answ
     </copy>
     ```
 
-    ![Filled get\_user\_context tool definition](./images/tool-user-context-filled.png " ")
+    ![SQL Query completed for the get\_user\_context tool](./images/tool-user-context-sql.png " ")
 
 4. Click **Create**.
 
-    ![SCM Procurement Agent with get\_user\_context saved](./images/tool-user-context-created.png " ")
+    ![Create button on the get\_user\_context tool page](./images/tool-user-context-create.png " ")
 
     This query joins four tables to assemble the user's full context:
 
     | Table | What it provides |
     | --- | --- |
-    | scm\_application\_users | User name, email, default warehouse, manager |
-    | scm\_user\_role\_assignments | Active primary role and optional approval override |
-    | scm\_user\_roles | Role name, scope, approval authority |
-    | scm\_warehouses | Warehouse name, code, and warehouse ID |
-    {: title="Tables Used by get\_user\_context"}
+    | `scm_application_users` | User name, email, default warehouse, manager |
+    | `scm_user_role_assignments` | Active primary role and optional approval override |
+    | `scm_user_roles` | Role name, scope, approval authority |
+    | `scm_warehouses` | Warehouse name, code, and warehouse ID |
+    {: title="Tables Used by get_user_context"}
 
-## Task 3: Capture the User's Browser Timezone
+## Task 3: Add the Browser Timezone Tool
 
 When a user sets a delivery due date, the agent needs to know their timezone so the date is recorded correctly. This tool reads the timezone directly from the browser and passes it to the agent on every message.
 
 **Type:** Execute Client-side Code | **Execution:** Augment System Prompt
 
-1. From the AI Agent definition, select **Add Tool** again.
+1. In the **Tools** section, select **Add Tool**.
 
-2. Enter the following configuration:
+    ![Add Tool](./images/click-add-tool.png " ")
 
-    | Field | Value |
-    | --- | --- |
-    | Tool Name | **get\_browser\_timezone** |
-    | Type | **Execute Client-side Code** |
-    | Execution Point | **Augment System Prompt** |
-    | Parameters | *None* |
-    | Description | **Returns the user's browser timezone such as Asia/Kolkata or Europe/London. Injected automatically on every message. Pass this as TIMEZONE when calling raise\_purchase\_order so due dates are set correctly for the user's location.** |
-    {: title="Tool 2 Configuration"}
+2. Enter/select the following configuration:
 
-3. In the **JavaScript** field, enter:
+    - Under **Identification**:
 
-    ```javascript
-    <copy>
-    return Intl.DateTimeFormat().resolvedOptions().timeZone;
-    </copy>
-    ```
+        - Tool Name: **get\_browser\_timezone**
+        - Type: **Execute Client-side Code**
+        - Execution Point: **Augment System Prompt**
+    - Settings > Code: Copy and paste the following:
 
-    ![Filled get\_browser\_timezone tool definition](./images/tool-browser-timezone-filled.png " ")
+        ```javascript
+        <copy>
+        return Intl.DateTimeFormat().resolvedOptions().timeZone;
+        </copy>
+        ```
 
-4. Click **Create**.
+    ![Browser timezone tool fields and code completed](./images/tool-browser-timezone-config.png " ")
 
-    ![SCM Procurement Agent with get\_browser\_timezone saved](./images/tool-browser-timezone-created.png " ")
+3. Click **Create**.
+
+    ![Create button on the get\_browser\_timezone tool page](./images/tool-browser-timezone-create.png " ")
 
 ## Summary
 
