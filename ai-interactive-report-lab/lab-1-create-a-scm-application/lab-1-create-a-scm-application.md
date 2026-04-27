@@ -40,25 +40,31 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
     ![Navigate to SQL Scripts](images/navigate-to-sql-scripts.png)
 
-4. Click **Upload**, then select file `scm-datamodel.sql`.
+4. Click **Upload**.
 
-    ![Upload the data model script](images/upload-datamodel-script.png)
+    ![Upload the data model script](images/click-upload.png)
 
-5. Click **Run** to execute the data model script.
+5. Select file `scm-datamodel.sql` and click **Upload**.
 
-    ![Run the data model script](images/run-datamodel-script.png)
+    ![Upload the data model script](images/data-model-file.png)
 
-6. Review the results and confirm the script status is **Complete** with **0** errors.
+6. Click **Run** icon.
 
-    ![Verify the script results](images/verify-script-results.png)
+    ![Upload the data model script](images/play.png)
 
-7. Return to **SQL Scripts**, upload `scm-dataload.sql`, and then run it to load the SCM sample data.
+7. Click **Run** to execute the data model script.
+
+    ![Run the data model script](images/run-model.png)
+
+8. Review the results and confirm the script status is **Complete** with **0** errors.
 
     ![Run the sample data load script](images/run-sample-dataload-script1.png)
 
-8. Verify that both scripts complete without errors before you continue.
+9. Return to **SQL Scripts**, upload `scm-dataload.sql`, and then run it to load the SCM sample data.
 
-    ![Run the sample data load script](images/run-sample-dataload-script.png)
+    ![Run the sample data load script](images/back-scripts.png)
+
+10. Verify that both scripts complete without errors before you continue.
 
 ## Task 2: Create a Supply Chain Management Application
 
