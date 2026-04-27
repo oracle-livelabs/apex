@@ -18,8 +18,8 @@ In this lab, you will:
 
 Use these files during the hands-on setup:
 
-- [01_SCM_INV_WMS_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql)
-- [02_SCM_INV_WMS_SAMPLE_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
+- [scm-datamodel.sql](files/scm-datamodel.sql)
+- [scm-dataload.sql](files/scm_dataload.sql)
 
 Run the files in the order listed above.
 
@@ -29,8 +29,8 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
 1. Download the following files from the **Downloads** section of this lab:
 
-    - `01_SCM_INV_WMS_DATAMODEL.sql`
-    - `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`
+    - `scm-datamodelL.sql`
+    - `scm-dataload..sql`
 
 2. Sign in to your Oracle APEX workspace and open **SQL Workshop**.
 
