@@ -407,6 +407,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
- - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager; 
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
  - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026

@@ -18,8 +18,14 @@ Download the skills from [here](https://orahub.oci.oraclecorp.com/dbtools-apex-d
     ![Visual Studio Code workspace with APEXlang skills repository cloned](images/vscode-apexlang-repo-setup.png)
 
 ## Task 2: Export the app in APEXlang format into the Applications folder
-1. Export the CRM application in APEXlang format and place the output inside the `Applications` folder of the APEXlang skills that you downloaded in Task 1.
+Export the CRM application in APEXlang format and place the output inside the `Applications` folder of the APEXlang skills that you downloaded in Task 1.
+
+1. Navigate to SQL Developer extension, expand the connection you created and further expand **APEX**. Under APEX, you will find all the apps that are part of the schema. Right-click **Vision CRM** and select **Export**.
     ![APEXlang command output showing exported application files](images/apexlang-export-app.png)
+
+2. Accept the default values, for Folder, click **Browse** and select the *Applications* folder in your APEXlang skills parent folder. Then, click **Apply**.
+    ![APEXlang command output showing exported application files](images/export-to-apps.png)
+
 
 ## Task 3: Import the App into your APEX workspace from VS Code
 1. Expand the Applications folder and navigate to vision-crm > pages. Select any one of the page to open in the editor.
