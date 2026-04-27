@@ -29,8 +29,8 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
 1. Download the following files from the **Downloads** section of this lab:
 
-    - `scm-datamodelL.sql`
-    - `scm-dataload..sql`
+    - `scm-datamodel.sql`
+    - `scm-dataload.sql`
 
 2. Sign in to your Oracle APEX workspace and open **SQL Workshop**.
 
@@ -40,7 +40,7 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
     ![Navigate to SQL Scripts](images/navigate-to-sql-scripts.png)
 
-4. Click **Upload**, then select file `01_SCM_INV_WMS_DATAMODEL.sql`.
+4. Click **Upload**, then select file `scm-datamodel.sql`.
 
     ![Upload the data model script](images/upload-datamodel-script.png)
 
@@ -52,7 +52,7 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
     ![Verify the script results](images/verify-script-results.png)
 
-7. Return to **SQL Scripts**, upload `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`, and then run it to load the SCM sample data.
+7. Return to **SQL Scripts**, upload `scm-dataload.sql`, and then run it to load the SCM sample data.
 
     ![Run the sample data load script](images/run-sample-dataload-script1.png)
 
