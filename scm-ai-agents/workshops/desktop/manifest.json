@@ -1,0 +1,31 @@
+{
+  "workshoptitle": "Build an SCM Procurement Agent with Oracle APEX",
+  "help": "livelabs-help-apex_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Lab 1: Import the Data Model, Sample Data, and Base Application",
+      "filename": "../../1-import-data/1-import-data.md"
+    },
+    {
+      "title": "Lab 2: Build an AI Agent and Add Context Tools",
+      "filename": "../../2-create-agent-context-tools/2-build-agent-context-tools.md"
+    },
+    {
+      "title": "Lab 3: Add Supplier Evaluation and Purchase Order Tools",
+      "filename": "../../3-add-core-tools/3-add-supplier-evaluation-tools.md"
+    },
+    {
+      "title": "Lab 4: Add the Agent to the Application and Run the Application",
+      "filename": "../../4-run-application/4-add-agent-run-application.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
