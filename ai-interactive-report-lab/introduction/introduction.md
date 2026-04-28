@@ -6,7 +6,7 @@ Interactive Reports in Oracle APEX already give end users a rich set of capabili
 
 APEX **AI Interactive Reports** changes that experience. Instead of manually configuring a report, users can ask a question in plain language and let APEX translate that request into the right report actions. Based on the intent of the prompt, APEX can apply filters, sorting, pivots, aggregates, groupings, and column selections automatically. Each AI-generated configuration is shown as a visible chip, making the result transparent, reviewable, and easy to refine.
 
-This workshop shows how to use that capability with SCM data. Using a Supply Chain Management application and a replenishment-focused view, you will configure AI support, create an Interactive Report on `SCM_NL2IR_REPLENISHMENT_V`, add report-level and column-level context, and use both Search with AI and the chat assistant to analyze replenishment activity in natural language.
+This workshop shows how to use that capability with SCM data. Using a Supply Chain Management application and a replenishment-focused view, you will configure AI support, create an Interactive Report on view named `SCM_NL2IR_REPLENISHMENT_V`, add report-level and column-level context, and use both Search with AI and the chat assistant to analyze replenishment activity in natural language.
 
 The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt without losing visibility into how the report was configured.
 
