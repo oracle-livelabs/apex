@@ -4,14 +4,59 @@ import path from "node:path";
 import { chromium } from "playwright";
 
 const ROOT = process.cwd();
-const BASE_URL = process.env.APEX_BASE_URL || "http://localhost:8775";
-const WORKSPACE = process.env.APEX_WORKSPACE || "scm-gendev";
-const USERNAME = process.env.APEX_USERNAME || "scm-gendev-user";
-const PASSWORD = process.env.APEX_PASSWORD || "scm-gendev-user";
-const COLOR_SCHEME = (process.env.APEX_COLOR_SCHEME || "dark").toLowerCase();
 
-const args = process.argv.slice(2);
+function parseArgs(argv) {
+  const opts = {};
+  const args = [];
+
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (!a.startsWith("--")) {
+      args.push(a);
+      continue;
+    }
+
+    const [kRaw, vRaw] = a.split("=", 2);
+    const key = kRaw.slice(2);
+    const next = vRaw ?? argv[i + 1];
+    const takeNext = vRaw == null && next != null && !next.startsWith("--");
+
+    if (key === "base-url") {
+      opts.baseUrl = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "cdp-url") {
+      opts.cdpUrl = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "start-url") {
+      opts.startUrl = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "workspace") {
+      opts.workspace = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "username") {
+      opts.username = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "password") {
+      opts.password = vRaw ?? (takeNext ? (i++, next) : "");
+    } else if (key === "color-scheme") {
+      opts.colorScheme = (vRaw ?? (takeNext ? (i++, next) : "")).toLowerCase();
+    } else if (key === "help" || key === "h") {
+      opts.help = true;
+    } else {
+      // Unknown flag: ignore (keeps backward compatibility with local wrappers).
+    }
+  }
+
+  return { opts, args };
+}
+
+const parsed = parseArgs(process.argv.slice(2));
+const opts = parsed.opts;
+const args = parsed.args;
 const command = args[0] || "probe";
+
+const BASE_URL = opts.baseUrl || process.env.APEX_BASE_URL || "http://localhost:8775";
+const CDP_URL = opts.cdpUrl || process.env.APEX_CDP_URL || process.env.PW_CDP_URL || "";
+const START_URL = opts.startUrl || process.env.APEX_START_URL || "";
+const WORKSPACE = opts.workspace || process.env.APEX_WORKSPACE || "scm-gendev";
+const USERNAME = opts.username || process.env.APEX_USERNAME || "scm-gendev-user";
+const PASSWORD = opts.password || process.env.APEX_PASSWORD || "scm-gendev-user";
+const COLOR_SCHEME = (opts.colorScheme || process.env.APEX_COLOR_SCHEME || "dark").toLowerCase();
 
 function builderUrl(p = "") {
   return `${BASE_URL}/ords/r/apex/${p}`.replace(/\/+$/, "");
@@ -30,11 +75,47 @@ async function ensureDir(filePath) {
 }
 
 async function launch() {
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage({
-    viewport: { width: 1600, height: 1000 },
-    deviceScaleFactor: 1,
-  });
+  const cdpUrl = CDP_URL || "";
+  const viewport = { width: 1600, height: 1000 };
+  let browser;
+  let context;
+
+  if (cdpUrl) {
+    browser = await chromium.connectOverCDP(cdpUrl);
+    // With CDP we attach to an existing browser context (cannot reliably create new contexts).
+    context = browser.contexts()[0];
+    if (!context) {
+      context = await browser.newContext({ viewport, deviceScaleFactor: 1 }).catch(() => null);
+    }
+    if (!context) {
+      throw new Error("Connected over CDP but no browser context is available. Make sure Chrome has at least one open window/tab.");
+    }
+  } else {
+    browser = await chromium.launch({ headless: true });
+    context = await browser.newContext({ viewport, deviceScaleFactor: 1 });
+  }
+
+  let page;
+  try {
+    page = await context.newPage();
+  } catch {
+    page = context.pages()[0];
+    if (!page) {
+      throw new Error("Unable to create or reuse a page in the connected browser context.");
+    }
+  }
+  await page.setViewportSize(viewport).catch(() => {});
+
+  if (cdpUrl) {
+    // IMPORTANT: Do not close the user's Chrome when disconnecting from CDP.
+    // Wrap browser.close() so all existing finally blocks remain safe.
+    const originalClose = browser.close.bind(browser);
+    browser.close = async () => {
+      await page.close().catch(() => {});
+      browser.disconnect();
+      browser._codexOriginalClose = originalClose;
+    };
+  }
   if (COLOR_SCHEME === "dark") {
     await page.emulateMedia({ colorScheme: "dark" });
   }
@@ -89,6 +170,7 @@ async function setInputValue(locator, value) {
 
 async function loginIfNeeded(page) {
   const candidates = [
+    ...(START_URL ? [START_URL] : []),
     builderUrl("workspace/sign-in"),
     builderUrl("workspace/home"),
     `${BASE_URL}/ords/`,
@@ -645,12 +727,12 @@ async function runCreateAgent() {
     await page.locator("#B1474049947713159").click();
     await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
     await page.waitForTimeout(2000);
-    await page.locator("#P3504_NAME").fill("SCM Warehouse Agent");
+    await page.locator("#P3504_NAME").fill("Warehouse Operations Agent");
     await page.locator("textarea[aria-label='System Prompt']").fill(
-      "You are a warehouse operations assistant for a distribution warehouse. Identify issues, explain the risk, recommend an action, and wait for confirmation before taking write actions."
+      "You are an inventory and warehouse operations assistant for the APEX Inventory and Warehouse Management application. Identify inventory and operational issues, explain the risk, recommend an action, and wait for confirmation before taking write actions."
     );
     await page.locator("textarea[aria-label='Welcome Message']").fill(
-      "Hi, I'm your Warehouse Assistant. Ask me what needs attention, or tell me to fix something."
+      "Hi, I'm your Warehouse Operations Agent. Ask me about inventory balances, inbound or outbound work, stock transfers, cycle counts, adjustments, or operational exceptions."
     );
     await page.locator("#B2602403377975816").click();
     await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
@@ -900,7 +982,7 @@ async function openAiAgentCreate(page, appId) {
   await page.waitForTimeout(2000);
 }
 
-async function openAiAgentDetails(page, appId, agentName = "SCM Procurement Agent") {
+async function openAiAgentDetails(page, appId, agentName = "Warehouse Operations Agent") {
   await loginIfNeeded(page);
   await withTargetPath(page, `app-builder/home?fb_flow_id=${appId}&f4000_p1_flow=${appId}&clear=RP`);
   await clickFirstVisible(page, [
@@ -917,37 +999,66 @@ async function openAiAgentDetails(page, appId, agentName = "SCM Procurement Agen
   ]);
   await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
   await page.waitForTimeout(2000);
-  await page.getByRole("link", { name: agentName, exact: true }).first().click();
+  const agentLink = page.getByRole("link", { name: agentName, exact: true }).first();
+  if (await agentLink.isVisible({ timeout: 5000 }).catch(() => false)) {
+    await agentLink.click();
+  } else {
+    // Fallback: some report templates don't expose the row link as an ARIA "link" role.
+    await page.locator("a").filter({ hasText: agentName }).first().click();
+  }
   await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
   await page.waitForTimeout(2500);
 }
 
+async function focusAgentToolsSection(page, { toolName } = {}) {
+  // Prefer the Tools tab so the screenshots clearly show the tool list / Add Tool button.
+  await clickFirstVisible(page, [
+    "a:has-text('Tools')",
+    "button:has-text('Tools')",
+  ]);
+  await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+  await page.waitForTimeout(1200);
+
+  const addTool = page.getByRole("button", { name: "Add Tool", exact: true }).first();
+  if (await addTool.count()) {
+    await addTool.scrollIntoViewIfNeeded().catch(() => {});
+  }
+  if (toolName) {
+    const toolLink = page.getByRole("link", { name: toolName, exact: true }).first();
+    if (await toolLink.count()) {
+      await toolLink.scrollIntoViewIfNeeded().catch(() => {});
+    }
+  }
+  await page.waitForTimeout(600);
+  await page.mouse.wheel(0, -350);
+  await page.waitForTimeout(800);
+}
+
 async function fillAiAgentForm(page, {
-  name = "SCM Procurement Agent",
+  name = "Warehouse Operations Agent",
   serviceLabel = "OCI Gen AI",
-  systemPrompt = `You are a procurement assistant for the SCM Warehouse Console application.
+  systemPrompt = `You are an inventory and warehouse operations assistant for the APEX Inventory and Warehouse Management application.
 Your role is to:
-- Identify items at risk in the current user's warehouse
-- Explain the severity of the risk using available stock, reorder policy, alert priority, and lead time
-- Find suppliers who have previously supplied the selected item
-- Compare supplier performance before recommending a supplier
-- Collect the warehouse, quantity, and due date needed for a purchase order
-- Execute actions only after the user confirms
+- Answer inventory and warehouse operations questions using tool and database results
+- Focus on the current user's default warehouse unless the user asks for a broader authorized view
+- Explain stock positions using item, warehouse, location, lot, serial, status, and quantity details
+- Highlight inbound, outbound, transfer, count, adjustment, and operational exception records that need attention
+- Ask a clarifying question when the item, warehouse, location, quantity, or time period is missing
+- Execute write actions only after the user confirms
 
 Always prioritise:
-- CRITICAL and HIGH stock-risk items
-- Items at or below reorder point
-- Items with open replenishment alerts and short or threatened lead time
-- Supplier recommendations with stronger on-time and quality performance
+- CRITICAL and HIGH operational exceptions
+- Short, damaged, expired, quarantined, or constrained inventory
+- Orders, transfers, counts, and adjustments that are overdue or blocked
+- Recommendations that are specific to the user's role and warehouse context
 
-When the user asks to raise a purchase order:
-- Call show_warehouses_by_supplier and ask the user to choose the warehouse
-- Ask how many units are needed
-- Ask when delivery is required
-- Call confirm_action before raise_purchase_order
-- Do not invent supplier, warehouse, quantity, or due date
-- Use full_name from get_user_context as the PO owner`,
-  welcomeMessage = "Hi, I'm your Procurement Agent. Ask me which stocks are at risk, or ask me to find suppliers and raise a purchase order.",
+When the user asks to take an operational action:
+- Summarize the exact item, warehouse, location, lot, serial, quantity, and reason
+- Call confirm_action before any server-side write tool
+- Do not invent item, warehouse, location, lot, serial, quantity, date, or reason values
+- Use warehouse_id from get_user_context as the active warehouse context
+- Use full_name from get_user_context when identifying the requesting user`,
+  welcomeMessage = "Hi, I'm your Warehouse Operations Agent. Ask me about inventory balances, inbound or outbound work, stock transfers, cycle counts, adjustments, or operational exceptions.",
 } = {}) {
   await page.locator("#P3504_NAME").fill(name);
 
@@ -965,6 +1076,173 @@ When the user asks to raise a purchase order:
   await page.locator("textarea[aria-label='System Prompt']").fill(systemPrompt);
   await page.locator("textarea[aria-label='Welcome Message']").fill(welcomeMessage);
   await page.waitForTimeout(1000);
+  await normalizeEditorViews(page);
+}
+
+async function withOverlayBoxes(page, rects, fn) {
+  // Draw Oracle-red boxes as DOM overlays so the screenshot already includes annotation.
+  // We expand outward by the full stroke width so the border does not cover the control itself.
+  const stroke = 6;
+  const color = "rgb(214, 59, 42)"; // Matches existing workshop box pixels.
+  const pad = stroke;
+
+  await page.evaluate(() => {
+    document.querySelectorAll("[data-codex-overlay='box']").forEach((el) => el.remove());
+  });
+
+  await page.evaluate(({ rects, stroke, color, pad }) => {
+    const root = document.documentElement;
+    const body = document.body;
+    const mk = (r) => {
+      const box = document.createElement("div");
+      box.dataset.codexOverlay = "box";
+      box.style.position = "fixed";
+      box.style.left = `${Math.max(0, r.x - pad)}px`;
+      box.style.top = `${Math.max(0, r.y - pad)}px`;
+      box.style.width = `${Math.max(0, r.width + pad * 2)}px`;
+      box.style.height = `${Math.max(0, r.height + pad * 2)}px`;
+      box.style.border = `${stroke}px solid ${color}`;
+      box.style.boxSizing = "border-box";
+      box.style.pointerEvents = "none";
+      box.style.zIndex = "2147483647";
+      box.style.borderRadius = "0";
+      return box;
+    };
+    rects.forEach((r) => {
+      if (!r || !isFinite(r.x) || !isFinite(r.y) || !isFinite(r.width) || !isFinite(r.height)) return;
+      // Clamp to the viewport so we don't create huge overlays if something goes offscreen.
+      const vw = root.clientWidth;
+      const vh = root.clientHeight;
+      const x = Math.max(0, Math.min(vw, r.x));
+      const y = Math.max(0, Math.min(vh, r.y));
+      const w = Math.max(0, Math.min(vw - x, r.width));
+      const h = Math.max(0, Math.min(vh - y, r.height));
+      if (w < 2 || h < 2) return;
+      body.appendChild(mk({ x, y, width: w, height: h }));
+    });
+  }, { rects, stroke, color, pad });
+
+  try {
+    await fn();
+  } finally {
+    await page.evaluate(() => {
+      document.querySelectorAll("[data-codex-overlay='box']").forEach((el) => el.remove());
+    });
+  }
+}
+
+async function locatorRect(locator) {
+  await locator.scrollIntoViewIfNeeded().catch(() => {});
+  await locator.waitFor({ state: "visible", timeout: 10000 }).catch(() => {});
+  return await locator.evaluate((el) => {
+    const r = el.getBoundingClientRect();
+    return { x: r.x, y: r.y, width: r.width, height: r.height };
+  });
+}
+
+async function runLab2Task1Step() {
+  const appId = args[1];
+  const step = args[2];
+  const outFile = args[3];
+  if (!appId || !step || !outFile) {
+    throw new Error("Usage: node scm-ai-agents/scripts/scm_capture.mjs lab2-task1-step <app-id> <5|6|7|8> <output-file>");
+  }
+
+  const stepNum = Number(step);
+  if (![5, 6, 7, 8].includes(stepNum)) {
+    throw new Error("lab2-task1-step only supports steps 5, 6, 7, or 8.");
+  }
+
+  const { browser, page } = await launch();
+  try {
+    await openAiAgentCreate(page, appId);
+
+    const nameField = page.locator("#P3504_NAME").first();
+    const serviceField = page.locator("#P3504_REMOTE_SERVER_ID").first();
+    const systemPromptField = page.locator("textarea[aria-label='System Prompt']").first();
+    const welcomeField = page.locator("textarea[aria-label='Welcome Message']").first();
+    const createBtn = page.locator("#B2602403377975816").first();
+    const monacoEditors = page.locator(".monaco-editor");
+
+    await nameField.fill("Warehouse Operations Agent");
+    if (await serviceField.count()) {
+      const opts = await serviceField.locator("option").evaluateAll((els) =>
+        els.map((el) => ({ label: (el.textContent || "").trim(), value: el.getAttribute("value") || "" })),
+      );
+      const target = opts.find((o) => o.label === "OCI Gen AI");
+      if (target) {
+        await serviceField.selectOption(target.value);
+      }
+    }
+
+    // Ensure clean step states (Step 5/6 should not show later-step text).
+    await systemPromptField.fill("");
+    await welcomeField.fill("");
+
+    if (stepNum >= 6) {
+      await systemPromptField.fill(`You are an inventory and warehouse operations assistant for the APEX Inventory and Warehouse Management application.
+Your role is to:
+- Answer inventory and warehouse operations questions using tool and database results
+- Focus on the current user's default warehouse unless the user asks for a broader authorized view
+- Explain stock positions using item, warehouse, location, lot, serial, status, and quantity details
+- Highlight inbound, outbound, transfer, count, adjustment, and operational exception records that need attention
+- Ask a clarifying question when the item, warehouse, location, quantity, or time period is missing
+- Execute write actions only after the user confirms
+
+Always prioritise:
+- CRITICAL and HIGH operational exceptions
+- Short, damaged, expired, quarantined, or constrained inventory
+- Orders, transfers, counts, and adjustments that are overdue or blocked
+- Recommendations that are specific to the user's role and warehouse context
+
+When the user asks to take an operational action:
+- Summarize the exact item, warehouse, location, lot, serial, quantity, and reason
+- Call confirm_action before any server-side write tool
+- Do not invent item, warehouse, location, lot, serial, quantity, date, or reason values
+- Use warehouse_id from get_user_context as the active warehouse context
+- Use full_name from get_user_context when identifying the requesting user`);
+    }
+
+    if (stepNum >= 7) {
+      await welcomeField.fill("Hi, I'm your Warehouse Operations Agent. Ask me about inventory balances, inbound or outbound work, stock transfers, cycle counts, adjustments, or operational exceptions.");
+    }
+
+    await page.waitForTimeout(800);
+    await normalizeEditorViews(page);
+    await page.waitForTimeout(800);
+
+    const systemPromptBoxTarget = (await monacoEditors.count().catch(() => 0)) >= 1
+      ? monacoEditors.nth(0)
+      : systemPromptField;
+    const welcomeBoxTarget = (await monacoEditors.count().catch(() => 0)) >= 2
+      ? monacoEditors.nth(1)
+      : welcomeField;
+
+    if (stepNum === 8) {
+      await createBtn.scrollIntoViewIfNeeded().catch(() => {});
+      await page.waitForTimeout(500);
+    }
+
+    const rects = [];
+    if (stepNum === 5) {
+      rects.push(await locatorRect(nameField));
+      rects.push(await locatorRect(serviceField));
+    } else if (stepNum === 6) {
+      rects.push(await locatorRect(systemPromptBoxTarget));
+    } else if (stepNum === 7) {
+      rects.push(await locatorRect(welcomeBoxTarget));
+    } else if (stepNum === 8) {
+      rects.push(await locatorRect(createBtn));
+    }
+
+    await withOverlayBoxes(page, rects, async () => {
+      await screenshot(page, outFile, false);
+    });
+
+    await dumpProbe(page);
+  } finally {
+    await browser.close();
+  }
 }
 
 async function runShowAiAgentForm() {
@@ -977,6 +1255,37 @@ async function runShowAiAgentForm() {
   try {
     await openAiAgentCreate(page, appId);
     await fillAiAgentForm(page);
+    await screenshot(page, outFile, false);
+    await dumpProbe(page);
+  } finally {
+    await browser.close();
+  }
+}
+
+async function runShowAiAgentList() {
+  const appId = args[1];
+  const outFile = args[2];
+  if (!appId || !outFile) {
+    throw new Error("Usage: node scm-ai-agents/scripts/scm_capture.mjs show-ai-agent-list <app-id> <output-file>");
+  }
+  const { browser, page } = await launch();
+  try {
+    await loginIfNeeded(page);
+    await withTargetPath(page, `app-builder/home?fb_flow_id=${appId}&f4000_p1_flow=${appId}&clear=RP`);
+    await clickFirstVisible(page, [
+      "a:has-text('Shared Components')",
+      "button:has-text('Shared Components')",
+    ]);
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2000);
+    await clickFirstVisible(page, [
+      "a:has-text('Generative AI Agents')",
+      "a:has-text('AI Agents')",
+      "button:has-text('Generative AI Agents')",
+      "button:has-text('AI Agents')",
+    ]);
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2000);
     await screenshot(page, outFile, false);
     await dumpProbe(page);
   } finally {
@@ -1019,6 +1328,57 @@ async function runDeleteAiTool() {
     await page.waitForTimeout(2000);
     await page.getByRole("button", { name: "Delete", exact: true }).first().click();
     await page.waitForTimeout(1000);
+    const confirm = page.locator(".ui-dialog:visible .ui-dialog-buttonpane button").filter({ hasText: /delete|ok|yes/i }).first();
+    if (await confirm.count()) {
+      await confirm.click();
+    } else {
+      await page.keyboard.press("Enter").catch(() => {});
+    }
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(3000);
+    await dumpProbe(page);
+  } finally {
+    await browser.close();
+  }
+}
+
+async function runDeleteAiAgent() {
+  const appId = args[1];
+  const agentName = args[2] || "Warehouse Operations Agent";
+  if (!appId) {
+    throw new Error("Usage: node scm-ai-agents/scripts/scm_capture.mjs delete-ai-agent <app-id> [agent-name]");
+  }
+  const { browser, page } = await launch();
+  try {
+    await loginIfNeeded(page);
+    await withTargetPath(page, `app-builder/home?fb_flow_id=${appId}&f4000_p1_flow=${appId}&clear=RP`);
+    await clickFirstVisible(page, [
+      "a:has-text('Shared Components')",
+      "button:has-text('Shared Components')",
+    ]);
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2000);
+    await clickFirstVisible(page, [
+      "a:has-text('Generative AI Agents')",
+      "a:has-text('AI Agents')",
+      "button:has-text('Generative AI Agents')",
+      "button:has-text('AI Agents')",
+    ]);
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2000);
+
+    const agentLink = page.getByRole("link", { name: agentName, exact: true }).first();
+    if (!(await agentLink.isVisible({ timeout: 1500 }).catch(() => false))) {
+      console.log(JSON.stringify({ appId, agentName, deleted: false, reason: "not_found" }, null, 2));
+      return;
+    }
+
+    await agentLink.click();
+    await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2000);
+    const deleteBtn = page.getByRole("button", { name: "Delete", exact: true }).first();
+    await deleteBtn.click();
+    await page.waitForTimeout(1200);
     const confirm = page.locator(".ui-dialog:visible .ui-dialog-buttonpane button").filter({ hasText: /delete|ok|yes/i }).first();
     if (await confirm.count()) {
       await confirm.click();
@@ -1201,28 +1561,30 @@ function getAiToolSpec(variant) {
       name: "get_user_context",
       type: "Retrieve Data",
       executionPoint: "Augment System Prompt",
-      description: "Returns the current user's full name, role, warehouse, approval authority level, and manager. Injected automatically on every message before any reasoning begins. Use full_name as the PO owner when raising purchase orders. Use warehouse_id as the default warehouse context.",
+      description: "Returns the current user's full name, role, assigned warehouse, default warehouse, and manager. Injected automatically on every message before any reasoning begins. Use warehouse_id as the active warehouse context, default_warehouse_id as the fallback warehouse, and full_name when identifying the requesting user.",
       parameters: [],
       editorLabel: "SQL Query",
       editorValue: `select u.full_name,
        u.email_address,
        r.role_name,
-       r.role_scope_code,
-       coalesce(a.authority_level_override,
-                r.approval_authority_level)  as approval_authority_level,
-       w.warehouse_name,
-       w.warehouse_code,
-       w.warehouse_id,
-       mgr.full_name                         as manager_name,
-       mgr.email_address                     as manager_email
+       r.role_code,
+       coalesce(a.warehouse_id, u.default_warehouse_id) as warehouse_id,
+       coalesce(aw.warehouse_name, dw.warehouse_name)   as warehouse_name,
+       coalesce(aw.warehouse_code, dw.warehouse_code)   as warehouse_code,
+       u.default_warehouse_id,
+       dw.warehouse_name                               as default_warehouse_name,
+       dw.warehouse_code                               as default_warehouse_code,
+       mgr.full_name                                   as manager_name,
+       mgr.email_address                               as manager_email
   from scm_application_users     u
   join scm_user_role_assignments  a   on a.application_user_id  = u.application_user_id
                                      and a.assignment_status_code = 'ACTIVE'
                                      and a.is_primary_role        = true
   join scm_user_roles             r   on r.user_role_id          = a.user_role_id
-  left join scm_warehouses        w   on w.warehouse_id          = u.default_warehouse_id
+  left join scm_warehouses        aw  on aw.warehouse_id         = a.warehouse_id
+  left join scm_warehouses        dw  on dw.warehouse_id         = u.default_warehouse_id
   left join scm_application_users mgr on mgr.application_user_id = u.manager_user_id
- where u.user_name = :APP_USER`,
+ where lower(u.user_name) = lower(:APP_USER)`,
     };
   }
 
@@ -1231,10 +1593,60 @@ function getAiToolSpec(variant) {
       name: "get_browser_timezone",
       type: "Execute Client-side Code",
       executionPoint: "Augment System Prompt",
-      description: "Returns the user's browser timezone such as Asia/Kolkata or Europe/London. Injected automatically on every message. Pass this as TIMEZONE when calling raise_purchase_order so due dates are set correctly for the user's location.",
+      description: "Returns the user's browser timezone such as Asia/Kolkata or Europe/London. Injected automatically on every message so operational dates and timestamps are interpreted correctly for the user's location.",
       parameters: [],
       editorLabel: "Code",
       editorValue: "return Intl.DateTimeFormat().resolvedOptions().timeZone;",
+    };
+  }
+
+  if (variant === "get_low_stock_items") {
+    return {
+      name: "get_low_stock_items",
+      type: "Retrieve Data",
+      executionPoint: "On Demand",
+      description: "Returns items in the current user's warehouse where available stock is below the minimum stock quantity. Call this when the user asks about low stock, shortages, or what needs attention. Returns item details, minimum stock, available quantity, and shortfall.",
+      parameters: [],
+      editorLabel: "SQL Query",
+      editorValue: `select i.item_id, i.item_code, i.item_name, w.warehouse_id, w.warehouse_name, p.minimum_stock_quantity, nvl(bal.available_quantity, 0) as available_quantity, greatest(p.minimum_stock_quantity - nvl(bal.available_quantity,0), 0) as shortfall_quantity from scm_item_warehouse_policies p join scm_items i on i.item_id = p.item_id join scm_warehouses w on w.warehouse_id = p.warehouse_id left join (select warehouse_id, item_id, sum(quantity_available) as available_quantity from scm_inventory_balances where stock_status_code = 'AVAILABLE' group by warehouse_id, item_id) bal on bal.warehouse_id = p.warehouse_id and bal.item_id = p.item_id where p.is_active = true and p.warehouse_id = (select coalesce(a.warehouse_id, u.default_warehouse_id) from scm_application_users u left join scm_user_role_assignments a on a.application_user_id = u.application_user_id and a.assignment_status_code = 'ACTIVE' and a.is_primary_role = true where lower(u.user_name) = lower(:APP_USER)) and nvl(bal.available_quantity, 0) < p.minimum_stock_quantity order by shortfall_quantity desc, i.item_name`,
+    };
+  }
+
+  if (variant === "get_item_location_balances") {
+    return {
+      name: "get_item_location_balances",
+      type: "Retrieve Data",
+      executionPoint: "On Demand",
+      description: "Returns location-level stock balances for a selected item in the current user's warehouse. Pass item_id from get_low_stock_items. Use this when the user asks where an item is stored or how much is available by location.",
+      parameters: [
+        { name: "ITEM_ID", description: "Selected item identifier.", type: "NUMBER", required: true },
+      ],
+      editorLabel: "SQL Query",
+      editorValue: `select sl.storage_location_id, sl.location_code, sl.location_name, wa.area_code, ib.stock_status_code, sum(ib.quantity_on_hand) as quantity_on_hand, sum(ib.quantity_reserved) as quantity_reserved, sum(ib.quantity_available) as quantity_available from scm_inventory_balances ib join scm_storage_locations sl on sl.storage_location_id = ib.storage_location_id left join scm_warehouse_areas wa on wa.warehouse_area_id = sl.warehouse_area_id where ib.warehouse_id = (select coalesce(a.warehouse_id, u.default_warehouse_id) from scm_application_users u left join scm_user_role_assignments a on a.application_user_id = u.application_user_id and a.assignment_status_code = 'ACTIVE' and a.is_primary_role = true where lower(u.user_name) = lower(:APP_USER)) and ib.item_id = :ITEM_ID group by sl.storage_location_id, sl.location_code, sl.location_name, wa.area_code, ib.stock_status_code order by sl.location_code, ib.stock_status_code`,
+    };
+  }
+
+  if (variant === "get_inbound_receipts_needing_attention") {
+    return {
+      name: "get_inbound_receipts_needing_attention",
+      type: "Retrieve Data",
+      executionPoint: "On Demand",
+      description: "Returns inbound receipts in the current user's warehouse that are planned, arrived, partially received, or require review. Call this when the user asks what is inbound, what has arrived, or what needs receiving attention.",
+      parameters: [],
+      editorLabel: "SQL Query",
+      editorValue: `select ir.inbound_receipt_id, ir.receipt_number, ir.receipt_source_code, bp.partner_name as source_partner_name, ir.source_document_number, ir.receipt_status_code, ir.review_status_code, ir.expected_arrival_at, ir.actual_arrival_at, ir.receiving_completed_at, au.full_name as assigned_to, count(distinct irl.inbound_receipt_line_id) as line_count, sum(nvl(irl.expected_quantity, 0)) as expected_quantity from scm_inbound_receipts ir left join scm_business_partners bp on bp.business_partner_id = ir.source_partner_id left join scm_application_users au on au.application_user_id = ir.assigned_user_id left join scm_inbound_receipt_lines irl on irl.inbound_receipt_id = ir.inbound_receipt_id where ir.warehouse_id = (select coalesce(a.warehouse_id, u.default_warehouse_id) from scm_application_users u left join scm_user_role_assignments a on a.application_user_id = u.application_user_id and a.assignment_status_code = 'ACTIVE' and a.is_primary_role = true where lower(u.user_name) = lower(:APP_USER)) and ir.receipt_status_code in ('PLANNED','ARRIVED','PART_RECEIVED','REVIEW_REQUIRED') group by ir.inbound_receipt_id, ir.receipt_number, ir.receipt_source_code, bp.partner_name, ir.source_document_number, ir.receipt_status_code, ir.review_status_code, ir.expected_arrival_at, ir.actual_arrival_at, ir.receiving_completed_at, au.full_name order by case ir.receipt_status_code when 'REVIEW_REQUIRED' then 1 when 'ARRIVED' then 2 when 'PART_RECEIVED' then 3 when 'PLANNED' then 4 else 5 end, ir.expected_arrival_at nulls last`,
+    };
+  }
+
+  if (variant === "get_outbound_orders_needing_attention") {
+    return {
+      name: "get_outbound_orders_needing_attention",
+      type: "Retrieve Data",
+      executionPoint: "On Demand",
+      description: "Returns outbound orders in the current user's warehouse that are not yet dispatched or closed. Call this when the user asks what is shipping today, what needs picking/packing, or which outbound orders are blocked.",
+      parameters: [],
+      editorLabel: "SQL Query",
+      editorValue: `select oo.outbound_order_id, oo.outbound_order_number, oo.order_type_code, oo.priority_code, oo.outbound_status_code, oo.requested_ship_at, bp.partner_name as customer_name, au.full_name as assigned_to, count(distinct ol.outbound_order_line_id) as line_count, sum(nvl(ol.requested_quantity, 0)) as requested_quantity from scm_outbound_orders oo left join scm_business_partners bp on bp.business_partner_id = oo.customer_partner_id left join scm_application_users au on au.application_user_id = oo.assigned_user_id left join scm_outbound_order_lines ol on ol.outbound_order_id = oo.outbound_order_id where oo.ship_from_warehouse_id = (select coalesce(a.warehouse_id, u.default_warehouse_id) from scm_application_users u left join scm_user_role_assignments a on a.application_user_id = u.application_user_id and a.assignment_status_code = 'ACTIVE' and a.is_primary_role = true where lower(u.user_name) = lower(:APP_USER)) and oo.outbound_status_code not in ('DISPATCHED', 'CANCELLED', 'CLOSED') group by oo.outbound_order_id, oo.outbound_order_number, oo.order_type_code, oo.priority_code, oo.outbound_status_code, oo.requested_ship_at, bp.partner_name, au.full_name order by decode(oo.priority_code, 'CRITICAL', 1, 'HIGH', 2, 'MEDIUM', 3, 'LOW', 4, 5), oo.requested_ship_at nulls last`,
     };
   }
 
@@ -1246,7 +1658,7 @@ function getAiToolSpec(variant) {
       description: "Returns items in the current user's warehouse that are at or below their reorder point, or have an open replenishment alert. Call this when the user asks about stock risk, low stock, or what needs attention. Returns item name, available quantity, reorder point, alert priority, and supplier lead time. Results are ordered by priority then by gap size.",
       parameters: [],
       editorLabel: "SQL Query",
-      editorValue: `select i.item_id, i.item_code, i.item_name, i.base_uom_code, w.warehouse_name, nvl(bal.total_available,0) as available_quantity, p.reorder_point_quantity, p.safety_stock_quantity, p.reorder_target_quantity, p.replenishment_lead_time_days, ra.priority_code as alert_priority, ra.alert_type_code, ra.alert_number, round((systimestamp-ra.raised_at)*24) as hours_open from scm_item_warehouse_policies p join scm_items i on i.item_id=p.item_id join scm_warehouses w on w.warehouse_id=p.warehouse_id left join (select sl.warehouse_id, ib.item_id, sum(ib.quantity_available) as total_available from scm_inventory_balances ib join scm_storage_locations sl on sl.storage_location_id=ib.storage_location_id where ib.stock_status_code='AVAILABLE' group by sl.warehouse_id, ib.item_id) bal on bal.warehouse_id=p.warehouse_id and bal.item_id=p.item_id left join scm_replenishment_alerts ra on ra.item_id=p.item_id and ra.warehouse_id=p.warehouse_id and ra.alert_status_code in ('OPEN','IN_REVIEW') and ra.priority_code=(select decode(max(decode(ra2.priority_code,'CRITICAL',4,'HIGH',3,'MEDIUM',2,'LOW',1)),4,'CRITICAL',3,'HIGH',2,'MEDIUM',1,'LOW') from scm_replenishment_alerts ra2 where ra2.item_id=p.item_id and ra2.warehouse_id=p.warehouse_id and ra2.alert_status_code in ('OPEN','IN_REVIEW')) where p.warehouse_id=(select default_warehouse_id from scm_application_users where user_name=:APP_USER) and p.is_active=true and p.low_stock_alert_enabled_flag=true and (nvl(bal.total_available,0)<=nvl(p.reorder_point_quantity,0) or ra.alert_number is not null) order by decode(ra.priority_code,'CRITICAL',1,'HIGH',2,'MEDIUM',3,'LOW',4,5), nvl(p.reorder_point_quantity,0)-nvl(bal.total_available,0) desc`,
+      editorValue: `select i.item_id, i.item_code, i.item_name, i.base_uom_code, w.warehouse_name, nvl(bal.total_available,0) as available_quantity, p.reorder_point_quantity, p.safety_stock_quantity, p.reorder_target_quantity, p.replenishment_lead_time_days, ra.priority_code as alert_priority, ra.alert_type_code, ra.alert_number, round((systimestamp-ra.raised_at)*24) as hours_open from scm_item_warehouse_policies p join scm_items i on i.item_id=p.item_id join scm_warehouses w on w.warehouse_id=p.warehouse_id left join (select sl.warehouse_id, ib.item_id, sum(ib.quantity_available) as total_available from scm_inventory_balances ib join scm_storage_locations sl on sl.storage_location_id=ib.storage_location_id where ib.stock_status_code='AVAILABLE' group by sl.warehouse_id, ib.item_id) bal on bal.warehouse_id=p.warehouse_id and bal.item_id=p.item_id left join scm_replenishment_alerts ra on ra.item_id=p.item_id and ra.warehouse_id=p.warehouse_id and ra.alert_status_code in ('OPEN','IN_REVIEW') and ra.priority_code=(select decode(max(decode(ra2.priority_code,'CRITICAL',4,'HIGH',3,'MEDIUM',2,'LOW',1)),4,'CRITICAL',3,'HIGH',2,'MEDIUM',1,'LOW') from scm_replenishment_alerts ra2 where ra2.item_id=p.item_id and ra2.warehouse_id=p.warehouse_id and ra2.alert_status_code in ('OPEN','IN_REVIEW')) where p.warehouse_id=(select default_warehouse_id from scm_application_users where lower(user_name)=lower(:APP_USER)) and p.is_active=true and p.low_stock_alert_enabled_flag=true and (nvl(bal.total_available,0)<=nvl(p.reorder_point_quantity,0) or ra.alert_number is not null) order by decode(ra.priority_code,'CRITICAL',1,'HIGH',2,'MEDIUM',3,'LOW',4,5), nvl(p.reorder_point_quantity,0)-nvl(bal.total_available,0) desc`,
     };
   }
 
@@ -1298,12 +1710,31 @@ function getAiToolSpec(variant) {
       name: "confirm_action",
       type: "Execute Client-side Code",
       executionPoint: "On Demand",
-      description: "Shows a browser confirmation dialog with the provided MESSAGE. Returns \"confirmed\" if the user clicks OK, or \"denied\" if they cancel. Always call this before raise_purchase_order. Build MESSAGE as a plain-English summary of the full order: item name, quantity, supplier name, warehouse name, due date, and PO owner. If the return value is \"denied\", stop and report back to the user.",
+      description: "Shows a browser confirmation dialog with the provided MESSAGE. Returns \"confirmed\" if the user clicks OK, or \"denied\" if they cancel. Always call this before create_stock_adjustment. Build MESSAGE as a plain-English summary of the adjustment: item, location, direction, quantity, and reason. If the return value is \"denied\", stop and report back to the user.",
       parameters: [
         { name: "MESSAGE", description: "Confirmation text displayed to the user.", type: "VARCHAR2", required: true },
       ],
       editorLabel: "Code",
       editorValue: `return new Promise(resolve => { apex.message.confirm(this.data.MESSAGE, okPressed => { resolve(okPressed ? "confirmed" : "denied"); }); });`,
+    };
+  }
+
+  if (variant === "create_stock_adjustment") {
+    return {
+      name: "create_stock_adjustment",
+      type: "Execute Server-side Code",
+      executionPoint: "On Demand",
+      description: "Creates a stock adjustment and adjustment line for the selected item and location, and updates the AVAILABLE inventory balance. Before calling this tool you must call confirm_action and wait for \"confirmed\". Use get_item_location_balances to help the user choose STORAGE_LOCATION_ID.",
+      parameters: [
+        { name: "ITEM_ID", description: "Selected item identifier.", type: "NUMBER", required: true },
+        { name: "STORAGE_LOCATION_ID", description: "Selected storage location identifier.", type: "NUMBER", required: true },
+        { name: "ADJUSTMENT_DIRECTION", description: "INCREASE or DECREASE.", type: "VARCHAR2", required: true },
+        { name: "ADJUSTMENT_QUANTITY", description: "Adjustment quantity (must be > 0).", type: "NUMBER", required: true },
+        { name: "REASON_CODE", description: "Reason code for the adjustment.", type: "VARCHAR2", required: true },
+        { name: "REASON_DESCRIPTION", description: "Plain-English explanation for the line.", type: "VARCHAR2", required: true },
+      ],
+      editorLabel: "PL/SQL Code",
+      editorValue: `declare n varchar2(30); aid number; uid number; wh number; lwh number; oh number; rs number; nh number; begin if :ADJUSTMENT_DIRECTION not in ('INCREASE','DECREASE') then raise_application_error(-20001,'ADJUSTMENT_DIRECTION must be INCREASE or DECREASE.'); end if; if nvl(:ADJUSTMENT_QUANTITY,0) <= 0 then raise_application_error(-20002,'ADJUSTMENT_QUANTITY must be greater than 0.'); end if; select u.application_user_id, coalesce(a.warehouse_id,u.default_warehouse_id) into uid, wh from scm_application_users u left join scm_user_role_assignments a on a.application_user_id = u.application_user_id and a.assignment_status_code = 'ACTIVE' and a.is_primary_role = true where lower(u.user_name) = lower(:APP_USER); select warehouse_id into lwh from scm_storage_locations where storage_location_id = :STORAGE_LOCATION_ID; if lwh != wh then raise_application_error(-20003,'STORAGE_LOCATION_ID is not in the current user warehouse.'); end if; select 'ADJ-' || lpad(nvl(max(to_number(regexp_substr(adjustment_number,'[0-9]+$'))), 0) + 1, 6, '0') into n from scm_stock_adjustments where adjustment_number like 'ADJ-%'; insert into scm_stock_adjustments (adjustment_number, warehouse_id, adjustment_type_code, reason_code, requested_by_user_id, notes) values (n, wh, 'MANUAL_ADJUSTMENT', :REASON_CODE, uid, :REASON_DESCRIPTION) returning stock_adjustment_id into aid; insert into scm_stock_adjustment_lines (stock_adjustment_id, line_number, item_id, storage_location_id, from_status_code, adjustment_direction_code, adjustment_quantity, reason_description) values (aid, 1, :ITEM_ID, :STORAGE_LOCATION_ID, 'AVAILABLE', :ADJUSTMENT_DIRECTION, :ADJUSTMENT_QUANTITY, :REASON_DESCRIPTION); begin select quantity_on_hand, quantity_reserved into oh, rs from scm_inventory_balances where warehouse_id = wh and storage_location_id = :STORAGE_LOCATION_ID and item_id = :ITEM_ID and inventory_lot_id is null and stock_status_code = 'AVAILABLE' for update; exception when no_data_found then if :ADJUSTMENT_DIRECTION = 'DECREASE' then raise_application_error(-20004,'No AVAILABLE inventory balance exists for that item and location.'); end if; oh := 0; rs := 0; insert into scm_inventory_balances (warehouse_id, storage_location_id, item_id, inventory_lot_id, stock_status_code, quantity_on_hand, quantity_reserved, quantity_available, last_moved_at) values (wh, :STORAGE_LOCATION_ID, :ITEM_ID, null, 'AVAILABLE', 0, 0, 0, systimestamp); end; if :ADJUSTMENT_DIRECTION = 'INCREASE' then nh := oh + :ADJUSTMENT_QUANTITY; else nh := oh - :ADJUSTMENT_QUANTITY; end if; if nh < 0 then raise_application_error(-20005,'Adjustment would make on-hand quantity negative.'); end if; update scm_inventory_balances set quantity_on_hand = nh, quantity_available = greatest(0, nh - rs), last_moved_at = systimestamp where warehouse_id = wh and storage_location_id = :STORAGE_LOCATION_ID and item_id = :ITEM_ID and inventory_lot_id is null and stock_status_code = 'AVAILABLE'; apex_ai.set_tool_result(p_result => 'Stock adjustment ' || n || ' created.', p_notification_message => n || ' created', p_notification_type => 'success'); end;`,
     };
   }
 
@@ -1322,7 +1753,7 @@ function getAiToolSpec(variant) {
         { name: "TIMEZONE", description: "Browser timezone value for due-date conversion.", type: "VARCHAR2", required: true },
       ],
       editorLabel: "PL/SQL Code",
-      editorValue: `declare v_receipt_number varchar2(30); v_receipt_id number; v_user_id number; v_item_name varchar2(200); v_uom varchar2(10); v_supplier_name varchar2(200); v_warehouse_name varchar2(200); v_seq number; v_due timestamp with time zone; begin select application_user_id into v_user_id from scm_application_users where user_name = :APP_USER; select item_name, base_uom_code into v_item_name, v_uom from scm_items where item_id = :ITEM_ID; select partner_name into v_supplier_name from scm_business_partners where business_partner_id = :SUPPLIER_ID; select warehouse_name into v_warehouse_name from scm_warehouses where warehouse_id = :WH_ID; select nvl(max(to_number(regexp_substr(receipt_number,'\\d+$'))), 0) + 1 into v_seq from scm_inbound_receipts where receipt_number like 'POR-%'; v_receipt_number := 'POR-' || lpad(v_seq, 6, '0'); v_due := to_timestamp_tz(:DUE_DATE || ' 17:00:00 ' || :TIMEZONE, 'YYYY-MM-DD HH24:MI:SS TZR'); insert into scm_inbound_receipts (receipt_number, receipt_source_code, warehouse_id, source_partner_id, receipt_status_code, expected_arrival_at, received_by) values (v_receipt_number, 'SUPPLIER', :WH_ID, :SUPPLIER_ID, 'PLANNED', v_due, :APP_USER) returning inbound_receipt_id into v_receipt_id; insert into scm_inbound_receipt_lines (inbound_receipt_id, line_number, item_id, expected_quantity, received_quantity, accepted_quantity, quarantine_quantity, damaged_quantity, shortage_quantity, overage_quantity, rejected_quantity, line_status_code) values (v_receipt_id, 1, :ITEM_ID, :QUANTITY, 0, 0, 0, 0, 0, 0, 0, 'OPEN'); update scm_replenishment_alerts set alert_status_code = 'ACTIONED', reviewed_at = systimestamp, reviewed_by_user_id = v_user_id where item_id = :ITEM_ID and warehouse_id = :WH_ID and alert_status_code in ('OPEN', 'IN_REVIEW'); apex_ai.set_tool_result(p_result => 'Purchase order ' || v_receipt_number || ' raised for ' || v_item_name || ' - ' || :QUANTITY || ' ' || v_uom || ' from ' || v_supplier_name || ' to ' || v_warehouse_name || '. Expected delivery ' || to_char(v_due, 'DD-Mon-YYYY') || '.', p_notification_message => v_receipt_number || ' raised successfully', p_notification_type => 'success'); end;`,
+      editorValue: `declare v_receipt_number varchar2(30); v_receipt_id number; v_user_id number; v_item_name varchar2(200); v_uom varchar2(10); v_supplier_name varchar2(200); v_warehouse_name varchar2(200); v_seq number; v_due timestamp with time zone; begin select application_user_id into v_user_id from scm_application_users where lower(user_name) = lower(:APP_USER); select item_name, base_uom_code into v_item_name, v_uom from scm_items where item_id = :ITEM_ID; select partner_name into v_supplier_name from scm_business_partners where business_partner_id = :SUPPLIER_ID; select warehouse_name into v_warehouse_name from scm_warehouses where warehouse_id = :WH_ID; select nvl(max(to_number(regexp_substr(receipt_number,'\\d+$'))), 0) + 1 into v_seq from scm_inbound_receipts where receipt_number like 'POR-%'; v_receipt_number := 'POR-' || lpad(v_seq, 6, '0'); v_due := to_timestamp_tz(:DUE_DATE || ' 17:00:00 ' || :TIMEZONE, 'YYYY-MM-DD HH24:MI:SS TZR'); insert into scm_inbound_receipts (receipt_number, receipt_source_code, warehouse_id, source_partner_id, receipt_status_code, expected_arrival_at, received_by) values (v_receipt_number, 'SUPPLIER', :WH_ID, :SUPPLIER_ID, 'PLANNED', v_due, :APP_USER) returning inbound_receipt_id into v_receipt_id; insert into scm_inbound_receipt_lines (inbound_receipt_id, line_number, item_id, expected_quantity, received_quantity, accepted_quantity, quarantine_quantity, damaged_quantity, shortage_quantity, overage_quantity, rejected_quantity, line_status_code) values (v_receipt_id, 1, :ITEM_ID, :QUANTITY, 0, 0, 0, 0, 0, 0, 0, 'OPEN'); update scm_replenishment_alerts set alert_status_code = 'ACTIONED', reviewed_at = systimestamp, reviewed_by_user_id = v_user_id where item_id = :ITEM_ID and warehouse_id = :WH_ID and alert_status_code in ('OPEN', 'IN_REVIEW'); apex_ai.set_tool_result(p_result => 'Purchase order ' || v_receipt_number || ' raised for ' || v_item_name || ' - ' || :QUANTITY || ' ' || v_uom || ' from ' || v_supplier_name || ' to ' || v_warehouse_name || '. Expected delivery ' || to_char(v_due, 'DD-Mon-YYYY') || '.', p_notification_message => v_receipt_number || ' raised successfully', p_notification_type => 'success'); end;`,
     };
   }
 
@@ -1331,6 +1762,22 @@ function getAiToolSpec(variant) {
 
 async function fillFieldValue(locator, value) {
   if (!(await locator.count())) {
+    return;
+  }
+  const tag = await locator.evaluate((el) => (el && el.tagName ? el.tagName.toLowerCase() : "")).catch(() => "");
+  if (tag === "select") {
+    // Some APEX versions render certain attributes as select lists; don't try to "fill" them.
+    // If the requested value matches an option label/value exactly, select it; otherwise leave unchanged.
+    const options = await locator.locator("option").evaluateAll((els) =>
+      els.map((el) => ({
+        value: el.getAttribute("value") || "",
+        label: (el.textContent || "").trim(),
+      })),
+    ).catch(() => []);
+    const match = options.find((o) => o.value === value) || options.find((o) => o.label === value);
+    if (match) {
+      await locator.selectOption(match.value).catch(() => {});
+    }
     return;
   }
   if (await locator.isVisible().catch(() => false)) {
@@ -1353,10 +1800,47 @@ async function setEditorValue(page, label, value) {
     const locator = page.locator(selector).first();
     if (await locator.count()) {
       await fillFieldValue(locator, value);
+      // Ensure screenshots show the beginning of the code block.
+      await locator.evaluate((el) => {
+        try {
+          el.scrollTop = 0;
+          if (typeof el.setSelectionRange === "function") {
+            el.setSelectionRange(0, 0);
+          }
+        } catch {}
+      });
       return;
     }
   }
   throw new Error(`Editor not found for label: ${label}`);
+}
+
+async function normalizeEditorViews(page) {
+  // For workshop screenshots we want the beginning of each long text area/editor visible.
+  await page.evaluate(() => {
+    try {
+      document.querySelectorAll("textarea").forEach((el) => {
+        try {
+          el.scrollTop = 0;
+          if (typeof el.setSelectionRange === "function") {
+            el.setSelectionRange(0, 0);
+          }
+        } catch {}
+      });
+    } catch {}
+
+    try {
+      const monaco = window.monaco;
+      const editors = monaco?.editor?.getEditors?.() || [];
+      for (const ed of editors) {
+        try {
+          ed.setPosition({ lineNumber: 1, column: 1 });
+          ed.revealPositionInCenter({ lineNumber: 1, column: 1 });
+          ed.setScrollTop(0);
+        } catch {}
+      }
+    } catch {}
+  });
 }
 
 async function fillAiToolParameters(page, parameters) {
@@ -1408,10 +1892,12 @@ async function fillAiToolForm(page, variant) {
     await executionPoint.selectOption({ label: spec.executionPoint });
   }
   await fillFieldValue(page.locator("#P3510_EXTRA_DESCRIPTION").first(), spec.description);
+  await fillFieldValue(page.locator("#P3510_ATTRIBUTE_01").first(), spec.description);
   await fillAiToolParameters(page, spec.parameters);
   await setEditorValue(page, spec.editorLabel, spec.editorValue);
 
   await page.waitForTimeout(1000);
+  await normalizeEditorViews(page);
 }
 
 async function runShowAiToolForm() {
@@ -1458,7 +1944,15 @@ async function runShowAiToolFormView() {
         await target.scrollIntoViewIfNeeded();
       }
     } else if (view === "code") {
-      const target = page.locator("textarea[aria-label='Code']").first();
+      // Some tool types use "Code" while server-side tools use "PL/SQL Code".
+      const code = page.locator("textarea[aria-label='Code']").first();
+      const plsql = page.locator("textarea[aria-label='PL/SQL Code']").first();
+      const target = (await code.count()) ? code : plsql;
+      if (await target.count()) {
+        await target.scrollIntoViewIfNeeded();
+      }
+    } else if (view === "plsql") {
+      const target = page.locator("textarea[aria-label='PL/SQL Code']").first();
       if (await target.count()) {
         await target.scrollIntoViewIfNeeded();
       }
@@ -1790,6 +2284,192 @@ async function runLab4Task1Step() {
   }
 }
 
+async function runLab3Capture() {
+  const appId = args[1];
+  const outDir = args[2];
+  if (!appId || !outDir) {
+    throw new Error("Usage: node scm-ai-agents/scripts/scm_capture.mjs lab3-capture <app-id> <output-dir>");
+  }
+
+  const out = (name) => path.isAbsolute(outDir) ? path.join(outDir, name) : path.join(ROOT, outDir, name);
+
+  const { browser, page } = await launch();
+  try {
+    const deleteToolIfPresent = async (toolName) => {
+      await openAiAgentDetails(page, appId);
+      const toolLink = page.getByRole("link", { name: toolName, exact: true }).first();
+      if (!(await toolLink.isVisible({ timeout: 1500 }).catch(() => false))) {
+        return false;
+      }
+      await toolLink.click();
+      await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+      await page.waitForTimeout(1500);
+      await page.getByRole("button", { name: "Delete", exact: true }).first().click();
+      await page.waitForTimeout(900);
+      const confirm = page.locator(".ui-dialog:visible .ui-dialog-buttonpane button").filter({ hasText: /delete|ok|yes/i }).first();
+      if (await confirm.count()) {
+        await confirm.click();
+      } else {
+        await page.keyboard.press("Enter").catch(() => {});
+      }
+      await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+      await page.waitForTimeout(2200);
+      return true;
+    };
+
+    // Keep the capture idempotent: start from a "fresh dev" state by deleting any pre-existing Lab 3 tools.
+    for (const toolName of [
+      "get_low_stock_items",
+      "get_item_location_balances",
+      "get_inbound_receipts_needing_attention",
+      "get_outbound_orders_needing_attention",
+      "confirm_action",
+      "create_stock_adjustment",
+    ]) {
+      await deleteToolIfPresent(toolName);
+    }
+
+    // Start from the agent page (end state of Lab 2).
+    await openAiAgentDetails(page, appId);
+    await focusAgentToolsSection(page);
+    await screenshot(page, out("agent-context-tools-saved.png"), false);
+
+    const snapAddTool = async (fileName) => {
+      const addTool = page.getByRole("button", { name: "Add Tool", exact: true }).first();
+      await addTool.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(800);
+      await page.mouse.wheel(0, -350);
+      await page.waitForTimeout(800);
+      await screenshot(page, out(fileName), false);
+    };
+
+    const createToolWithSnaps = async ({
+      variant,
+      addToolShot,
+      configShot,
+      paramsShot,
+      sqlShot,
+      codeShot,
+      createdShot,
+    }) => {
+      await openAiAgentDetails(page, appId);
+      await snapAddTool(addToolShot);
+
+      // Open the tool create dialog/page.
+      await page.locator("#B4196921258515421").click();
+      await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+      await page.waitForTimeout(2000);
+
+      await fillAiToolForm(page, variant);
+
+      // Config (top of the form).
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(800);
+      await screenshot(page, out(configShot), false);
+
+      // Parameters (when requested).
+      if (paramsShot) {
+        const target = page.locator("#parameters").first();
+        if (await target.count()) {
+          await target.scrollIntoViewIfNeeded();
+        }
+        await page.waitForTimeout(900);
+        await screenshot(page, out(paramsShot), false);
+      }
+
+      // SQL / Code (when requested).
+      if (sqlShot) {
+        const target = page.locator("textarea[aria-label='SQL Query']").first();
+        if (await target.count()) {
+          await target.scrollIntoViewIfNeeded();
+        }
+        await page.waitForTimeout(900);
+        await screenshot(page, out(sqlShot), false);
+      }
+
+      if (codeShot) {
+        const code = page.locator("textarea[aria-label='Code']").first();
+        const plsql = page.locator("textarea[aria-label='PL/SQL Code']").first();
+        const target = (await plsql.count()) ? plsql : code;
+        if (await target.count()) {
+          await target.scrollIntoViewIfNeeded();
+        }
+        await page.waitForTimeout(900);
+        await screenshot(page, out(codeShot), false);
+      }
+
+      // Create and capture the post-create agent page.
+      await page.locator("#B4169588554479423").click();
+      await page.waitForLoadState("domcontentloaded", { timeout: 120000 }).catch(() => {});
+      await page.waitForTimeout(2500);
+      const toolName = getAiToolSpec(variant).name;
+      await focusAgentToolsSection(page, { toolName });
+      await screenshot(page, out(createdShot), false);
+    };
+
+    // Task 1
+    await createToolWithSnaps({
+      variant: "get_low_stock_items",
+      addToolShot: "add-tool.png",
+      configShot: "tool-stocks-at-risk-config.png",
+      sqlShot: "sql-query-tool3.png",
+      createdShot: "tool-stocks-at-risk-created.png",
+    });
+
+    // Task 2
+    await createToolWithSnaps({
+      variant: "get_item_location_balances",
+      addToolShot: "add-tool4.png",
+      configShot: "task2-tool4-config.png",
+      paramsShot: "task2-tool4-params.png",
+      sqlShot: "task2-tool4-sql.png",
+      createdShot: "task2-tool4-create.png",
+    });
+
+    // Task 3
+    await createToolWithSnaps({
+      variant: "get_inbound_receipts_needing_attention",
+      addToolShot: "add-tool5.png",
+      configShot: "task3-tool5-config.png",
+      sqlShot: "tool5-sql.png",
+      createdShot: "task3-tool5-created.png",
+    });
+
+    // Task 4
+    await createToolWithSnaps({
+      variant: "get_outbound_orders_needing_attention",
+      addToolShot: "tool6-add.png",
+      configShot: "task4-tool6-config.png",
+      sqlShot: "tool6-sql.png",
+      createdShot: "task4-tool6-created.png",
+    });
+
+    // Task 5
+    await createToolWithSnaps({
+      variant: "confirm_action",
+      addToolShot: "add-tool7.png",
+      configShot: "task5-tool7-config.png",
+      paramsShot: "task5-tool7-params.png",
+      codeShot: "tool7-code.png",
+      createdShot: "tool7-create.png",
+    });
+
+    // Task 6
+    await createToolWithSnaps({
+      variant: "create_stock_adjustment",
+      addToolShot: "add-tool8.png",
+      configShot: "task6-tool8-config.png",
+      paramsShot: "task6-tool8-params.png",
+      codeShot: "tool8-code.png",
+      createdShot: "tool8-create.png",
+    });
+
+    await dumpProbe(page);
+  } finally {
+    await browser.close();
+  }
+}
+
 if (command === "probe") {
   await runProbe();
 } else if (command === "shot") {
@@ -1836,10 +2516,14 @@ if (command === "probe") {
   await runSetAppAiService();
 } else if (command === "show-ai-agent-form") {
   await runShowAiAgentForm();
+} else if (command === "show-ai-agent-list") {
+  await runShowAiAgentList();
 } else if (command === "show-ai-agent-tools") {
   await runShowAiAgentTools();
 } else if (command === "delete-ai-tool") {
   await runDeleteAiTool();
+} else if (command === "delete-ai-agent") {
+  await runDeleteAiAgent();
 } else if (command === "inspect-ai-tool-parameter-grid") {
   await runInspectAiToolParameterGrid();
 } else if (command === "create-ai-agent") {
@@ -1854,8 +2538,12 @@ if (command === "probe") {
   await runShowAiToolFormView();
 } else if (command === "create-ai-tool") {
   await runCreateAiTool();
+} else if (command === "lab2-task1-step") {
+  await runLab2Task1Step();
 } else if (command === "lab4-task1-step") {
   await runLab4Task1Step();
+} else if (command === "lab3-capture") {
+  await runLab3Capture();
 } else {
   throw new Error(`Unknown command: ${command}`);
 }

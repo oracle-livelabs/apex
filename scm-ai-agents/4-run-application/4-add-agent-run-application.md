@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will wire the **SCM Procurement Agent** to the application and run the end-to-end procurement process to verify it works correctly.
+In this lab, you will wire the **Warehouse Operations Agent** to the application and run an end-to-end warehouse operations flow to verify it works correctly.
 
 Estimated Time: 10 minutes
 
@@ -10,15 +10,15 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Add the **SCM Procurement Agent** to the **Operational Dashboard**
+- Add the **Warehouse Operations Agent** to the **Operational Dashboard**
 
 - Run the application and test the end-to-end procurement process
 
 ## Task 1: Add the Agent to the Application
 
-In this task, you will configure the entry point that users will use to start the AI Assistant from the Operational Dashboard. You will add a button to Page 1 and attach a trigger action that opens **SCM Procurement Agent** directly from the running application.
+In this task, you will configure the entry point that users will use to start the AI Assistant from the Operational Dashboard. You will add a button to Page 1 and attach a trigger action that opens **Warehouse Operations Agent** directly from the running application.
 
-1. On the **SCM Procurement Agent** page, select the App ID to return to the application home page.
+1. On the **Warehouse Operations Agent** page, select the App ID to return to the application home page.
 
     ![SCM Procurement Agent page with Edit Page 1](./images/navigate-app.png " ")
 
@@ -34,19 +34,24 @@ In this task, you will configure the entry point that users will use to start th
 
     - Under **Identification**:
 
-        - Button Name: **PROCUREMENT_ASSISTANT**
-        - Label: **Procurement Assistant**
+        - Button Name: **WAREHOUSE_ASSISTANT**
 
     - Under **Layout**:
 
         - Region: **Breadcrumb**
         - Slot: **Next**
 
+    - Under **Appearance**:
+
+        - Button Template: **Text with Icon**
+        - Hot: Toggle **On**
+        - Icon: **fa-ai-generative**
+
     ![Procurement Assistant button configured in the Breadcrumb region with Slot set to Next](./images/button-configured.png " ")
 
 5. In the **Rendering** tree, right-click **Procurement Assistant** and select **Create Trigger Action**.
 
-    ![Create Trigger Action from the Procurement Assistant button](./images/new-button-context.png " ")
+    ![Create Trigger Action from the Procurement Assistant button](./images/new-button-trigger.png " ")
 
 6. With the new trigger action selected, enter/select the following in the **Property Editor**:
 
@@ -56,8 +61,8 @@ In this task, you will configure the entry point that users will use to start th
 
     - Under **Settings**:
 
-        - Agent: **SCM Procurement Agent**
-        - Quick Message 1: **What stocks are at risk?**
+        - Agent: **Warehouse Operations Agent**
+        - Quick Message 1: **What is running low in my warehouse?**
 
     ![Trigger action configured to Show AI Assistant with SCM Procurement Agent](./images/show-ai-assistant-configured.png " ")
 
@@ -79,7 +84,7 @@ In this task, you will confirm that the user you will sign in with is set up cor
 
 ## Task 3: Run the Application
 
-In this task, you will launch the application and validate the end-to-end procurement process. It begins with a stock shortage, continues through supplier evaluation, and ends with creation of a planned purchase order.
+In this task, you will launch the application and validate an end-to-end warehouse operations flow. It begins with identifying low stock, continues through locating where inventory is held, and ends with creating a controlled stock adjustment.
 
 1. From the saved **Page Designer** screen, click **Run** to launch the application.
 
@@ -87,49 +92,49 @@ In this task, you will launch the application and validate the end-to-end procur
 
 2. Sign in with a user that exists in `scm_application_users`.
 
-3. On **Operational Dashboard**, click **Procurement Assistant** to open the AI Assistant, then begin the conversation with the quick message:
+3. On **Operational Dashboard**, click **Warehouse Assistant** to open the AI Assistant, then begin the conversation with the quick message:
 
     ```
-    What stocks are at risk?
+    What is running low in my warehouse?
     ```
 
 4. As the conversation progresses, the expected tool flow is:
 
     | Step | Tool Called | Purpose |
     | --- | --- | --- |
-    | Auto | `get_user_context` | Adds the user's identity, role, warehouse, approval authority, and manager |
+    | Auto | `get_user_context` | Adds the user's identity, role, warehouse, default warehouse, and manager |
     | Auto | `get_browser_timezone` | Adds the browser timezone |
-    | On Demand | `get_stocks_at_risk` | Returns the stock-risk items in the user's warehouse |
-    | On Demand | `get_suppliers_for_item` | Returns suppliers for the selected item |
-    | On Demand | `get_supplier_delivery_performance` | Returns detailed supplier performance for the requested period |
-    | On Demand | `show_warehouses_by_supplier` | Returns the warehouses that supplier has delivered to |
-    | On Demand | `confirm_action` | Requests human confirmation before the purchase order is raised |
-    | On Demand | `raise_purchase_order` | Inserts the planned purchase order and raises a success notification |
+    | On Demand | `get_low_stock_items` | Returns low-stock items in the user's warehouse |
+    | On Demand | `get_item_location_balances` | Returns location-level balances for the selected item |
+    | On Demand | `get_inbound_receipts_needing_attention` | Returns inbound receipts that need receiving or review |
+    | On Demand | `get_outbound_orders_needing_attention` | Returns outbound orders that need picking, packing, or release |
+    | On Demand | `confirm_action` | Requests human confirmation before the stock adjustment is created |
+    | On Demand | `create_stock_adjustment` | Inserts the stock adjustment and updates inventory balance |
     {: title="Expected Tool Flow"}
 
 5. Continue the process with prompts such as:
 
     ```
-    Show me suppliers for Industrial Bearings.
+    Show me location balances for Industrial Bearings.
     ```
 
     ```
-    Show me delivery performance for Apex Industrial last quarter.
+    What inbound receipts need attention?
     ```
 
     ```
-    Yes, raise a PO.
+    Create a stock adjustment to increase Industrial Bearings by 10 in the primary location.
     ```
 
-6. When the agent asks for the destination warehouse, quantity, and delivery date, provide the values required for the purchase order.
+6. When the agent asks for the location, direction, quantity, and reason, provide the values required for the stock adjustment.
 
-7. Confirm the browser dialog when it appears so the purchase order can be created.
+7. Confirm the browser dialog when it appears so the stock adjustment can be created.
 
-8. Verify that a new planned record appears in `scm_inbound_receipts`, that the related line appears in `scm_inbound_receipt_lines`, and that the replenishment alert is marked as actioned.
+8. Verify that a new record appears in `scm_stock_adjustments`, that a related line appears in `scm_stock_adjustment_lines`, and that the inventory balance is updated in `scm_inventory_balances`.
 
 ## Summary
 
-You have completed the workshop. The Operational Dashboard now launches the AI Assistant from a dedicated button, and the SCM Procurement Agent is ready to guide users through supplier evaluation and purchase order creation within a single conversation.
+You have completed the workshop. The Operational Dashboard now launches the AI Assistant from a dedicated button, and the Warehouse Operations Agent is ready to guide users through low stock review, operational work review, and controlled stock adjustments within a single conversation.
 
 This is what AI Agents in Oracle APEX make possible: a user with a question can get a reasoned, data-driven answer and take a real action in the application, without leaving the page.
 
