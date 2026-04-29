@@ -64,9 +64,36 @@ In this workshop, you will learn how to:
 
 ## Prerequisites
 
-- An Oracle APEX 26.1 (or later) workspace
+- An APEX workspace.
 
-- To complete live runtime testing in Lab 4, a workspace-level **Generative AI Service** connected to a supported chat model
+- API key for the AI provider of your choice: OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or Generic OpenAI API Compatible.
+
+If you choose OCI Generative AI as your AI provider, the prerequisites are as follows:
+
+- A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
+
+- The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+
+    - Brazil East (Sao Paulo)
+    - Germany Central (Frankfurt)
+    - India South (Hyderabad)
+    - Japan Central (Osaka)
+    - Saudi Arabia Central (Riyadh)
+    - UAE East (Dubai)
+    - UK South (London)
+    - US East (Ashburn)
+    - US Midwest (Chicago)
+    - US West (Phoenix)
+
+- OCI Generative AI Service is available in limited regions. To see whether your cloud region supports OCI Generative AI Service, visit the OCI documentation.
+
+- An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments: the tenancy root compartment and `ManagedCompartmentForPaaS`, which is created by Oracle for Oracle Platform services.
+
+- The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges through an OCI IAM policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+
+> **Note:** This workshop assumes you are using Oracle APEX 26.1. Some features might not be available in prior releases, and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+
+> **Note:** The application ID in the screenshots may vary. Please ignore the application ID.
 
 ## Tool Coverage Map
 
