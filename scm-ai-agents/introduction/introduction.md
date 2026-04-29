@@ -2,11 +2,11 @@
 
 ## About this Workshop
 
-Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have. When an item drops below its reorder point and the replenishment alert is already CRITICAL, a warehouse manager needs answers fast: which items are at risk, which suppliers can help, and who has the best delivery record.
+Managing warehouse operations manually takes time that warehouse teams do not always have. When stock is running low, inbound work is pending, outbound orders need attention, or an adjustment requires approval, a warehouse manager needs answers fast.
 
-AI Agents in Oracle APEX give your application the ability to reason through these questions and act on the answers. Instead of navigating multiple reports and forms, a user can open a chat panel and have a guided conversation. The agent understands who the user is, retrieves the right data, compares options, asks for confirmation, and raises a purchase order, all without leaving the application.
+AI Agents in Oracle APEX give your application the ability to reason through these questions and act on the answers. Instead of navigating multiple reports and forms, a user can open a chat panel and have a guided conversation. The agent understands who the user is, retrieves the right warehouse data, asks for confirmation, and creates a controlled stock adjustment, all without leaving the application.
 
-In this hands-on workshop, you will build an **SCM Procurement Agent** for the **SCM Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
+In this hands-on workshop, you will build a **Warehouse Operations Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify low-stock items, review location balances, inspect inbound and outbound work, and create confirmed stock adjustments, all from within a conversational chat interface in Oracle APEX.
 
 You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, keeping business logic in PL/SQL and data in Oracle Database, all configured declaratively within APEX.
 
@@ -50,7 +50,7 @@ In this workshop, you will learn how to:
 
 - Create an AI Agent in Oracle APEX
 
-- Define tools that retrieve user context, stock risk, supplier options, and supplier delivery performance
+- Define tools that retrieve user context, low-stock items, location balances, inbound receipts, and outbound orders
 
 - Use **Augment System Prompt** tools to inject identity and timezone context automatically on every message
 
@@ -60,7 +60,7 @@ In this workshop, you will learn how to:
 
 - Use `apex_ai.set_tool_result` to push structured results and notifications to the chat UI
 
-- Build a complete procurement use case: **identify > evaluate > confirm > act**
+- Build a complete warehouse operations use case: **identify > review > confirm > act**
 
 ## Prerequisites
 
@@ -70,18 +70,18 @@ In this workshop, you will learn how to:
 
 ## Tool Coverage Map
 
-This workshop covers a complete procurement use case using both context tools and on-demand operational tools:
+This workshop covers a complete warehouse operations use case using both context tools and on-demand operational tools:
 
 | #  | Tool Name                            | Type                     | Execution Point       |
 |----|--------------------------------------|--------------------------|-----------------------|
 | 1  | `get_user_context`                   | Retrieve Data            | Augment System Prompt |
 | 2  | `get_browser_timezone`               | Execute Client-side Code | Augment System Prompt |
-| 3  | `get_stocks_at_risk`                 | Retrieve Data            | On Demand             |
-| 4  | `get_suppliers_for_item`             | Retrieve Data            | On Demand             |
-| 5  | `get_supplier_delivery_performance`  | Retrieve Data            | On Demand             |
-| 6  | `show_warehouses_by_supplier`        | Retrieve Data            | On Demand             |
+| 3  | `get_low_stock_items`                | Retrieve Data            | On Demand             |
+| 4  | `get_item_location_balances`         | Retrieve Data            | On Demand             |
+| 5  | `get_inbound_receipts_needing_attention` | Retrieve Data        | On Demand             |
+| 6  | `get_outbound_orders_needing_attention` | Retrieve Data        | On Demand             |
 | 7  | `confirm_action`                     | Execute Client-side Code | On Demand             |
-| 8  | `raise_purchase_order`               | Execute Server-side Code | On Demand             |
+| 8  | `create_stock_adjustment`            | Execute Server-side Code | On Demand             |
 {: title="Tool Coverage Map"}
 
 ## Labs
@@ -90,7 +90,7 @@ This workshop covers a complete procurement use case using both context tools an
 | --- | --- | --- |
 | 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 10 minutes |
 | 2 | [Build an AI Agent and Add Context Tools](?lab=2-create-agent-context-tools) | 15 minutes |
-| 3 | [Add Supplier Evaluation and Purchase Order Tools](?lab=3-add-core-tools) | 25 minutes |
+| 3 | [Add Core Warehouse Operations Tools](?lab=3-add-core-tools) | 25 minutes |
 | 4 | [Add the Agent to the Application and Run the Application](?lab=4-run-application) | 10 minutes |
 {: title="Workshop Labs"}
 

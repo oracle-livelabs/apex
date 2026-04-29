@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will wire the **Warehouse Operations Agent** to the application and run an end-to-end warehouse operations flow to verify it works correctly.
+In this lab, you will wire the **Warehouse Operations Agent** to the **APEX Inventory and Warehouse Management** application and run an end-to-end warehouse operations flow to verify it works correctly.
 
 Estimated Time: 10 minutes
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Add the **Warehouse Operations Agent** to the **Operational Dashboard**
 
-- Run the application and test the end-to-end procurement process
+- Run the application and test the end-to-end warehouse operations process
 
 ## Task 1: Add the Agent to the Application
 
@@ -20,7 +20,7 @@ In this task, you will configure the entry point that users will use to start th
 
 1. On the **Warehouse Operations Agent** page, select the App ID to return to the application home page.
 
-    ![SCM Procurement Agent page with Edit Page 1](./images/navigate-app.png " ")
+    ![Warehouse Operations Agent page with Edit Page 1](./images/navigate-app.png " ")
 
 2. From the application home page, select **Page 1 - Operational Dashboard** to open it in Page Designer.
 
@@ -35,6 +35,7 @@ In this task, you will configure the entry point that users will use to start th
     - Under **Identification**:
 
         - Button Name: **WAREHOUSE_ASSISTANT**
+        - Label: **Warehouse Assistant**
 
     - Under **Layout**:
 
@@ -45,13 +46,13 @@ In this task, you will configure the entry point that users will use to start th
 
         - Button Template: **Text with Icon**
         - Hot: Toggle **On**
-        - Icon: **fa-ai-generative**
+        - Icon: **fa-ai-sparkle-generate-audio**
 
-    ![Procurement Assistant button configured in the Breadcrumb region with Slot set to Next](./images/button-configured.png " ")
+    ![Warehouse Assistant button configured in the Breadcrumb region with Slot set to Next](./images/button-configured.png " ")
 
-5. In the **Rendering** tree, right-click **Procurement Assistant** and select **Create Trigger Action**.
+5. In the **Rendering** tree, right-click **Warehouse Assistant** and select **Create Trigger Action**.
 
-    ![Create Trigger Action from the Procurement Assistant button](./images/new-button-trigger.png " ")
+    ![Create Trigger Action from the Warehouse Assistant button](./images/new-button-trigger.png " ")
 
 6. With the new trigger action selected, enter/select the following in the **Property Editor**:
 
@@ -64,7 +65,7 @@ In this task, you will configure the entry point that users will use to start th
         - Agent: **Warehouse Operations Agent**
         - Quick Message 1: **What is running low in my warehouse?**
 
-    ![Trigger action configured to Show AI Assistant with SCM Procurement Agent](./images/show-ai-assistant-configured.png " ")
+    ![Trigger action configured to Show AI Assistant with Warehouse Operations Agent](./images/show-ai-assistant-configured.png " ")
 
 7. Click **Save** to persist the button and trigger action changes.
 

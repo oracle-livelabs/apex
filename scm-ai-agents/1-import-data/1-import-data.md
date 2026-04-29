@@ -4,7 +4,7 @@
 
 Before you can build the AI Agent, the workspace needs a schema, sample data, and a base application to work from.
 
-In this lab, you will load three SQL scripts: one that creates the warehouse tables, one that populates them with sample data, and one that adds operational data. You will then import the SCM application export and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
+In this lab, you will load three SQL scripts: one that creates the warehouse tables, one that populates them with sample data, and one that adds operational data. You will then import the **APEX Inventory and Warehouse Management** application export and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
 
 Estimated Time: 10 minutes
 
@@ -16,7 +16,7 @@ In this lab, you will:
 
 - Load the sample and operational data
 
-- Import the SCM application for the workshop
+- Import the **APEX Inventory and Warehouse Management** application for the workshop
 
 - Add a workspace-level Generative AI Service and assign it to the application
 
@@ -149,7 +149,7 @@ In this task, you will load the sample data and operational records that drive t
     | Exceptions | Operational exceptions for agent review workflows |
     {: title="Operational Data Summary"}
 
-## Task 3: Import the SCM Application
+## Task 3: Import the APEX Inventory and Warehouse Management Application
 
 In this task, you will import the base APEX application. It already contains the page layout and shared components, so you can focus entirely on building the AI Agent in the following labs rather than setting up pages from scratch.
 
@@ -165,7 +165,7 @@ In this task, you will import the base APEX application. It already contains the
 
 4. In the import wizard, select the downloaded file to upload, then click **Next**.
 
-    ![Import SCM application](./images/import_app.png " ")
+    ![Import APEX Inventory and Warehouse Management application](./images/import_app.png " ")
 
 5. Review the import details and select **Import Application**.
 
@@ -173,11 +173,11 @@ In this task, you will import the base APEX application. It already contains the
 
 6. After the import completes, verify that the import finishes successfully and that the application is now available in **App Builder**.
 
-    ![Imported SCM application available in App Builder](./images/app-builder-page-dark.png " ")
+    ![Imported APEX Inventory and Warehouse Management application available in App Builder](./images/app-builder-page-dark.png " ")
 
 ## Task 4: Configure Generative AI Service
 
-In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the imported SCM application. This wires up the LLM backend that the AI Agent will use to process natural language queries later in the workshop.
+In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the imported **APEX Inventory and Warehouse Management** application. This wires up the LLM backend that the AI Agent will use to process natural language queries later in the workshop.
 
 1. From the left navigation, select **App Builder**.
 
@@ -221,7 +221,7 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
     ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
 
-9. Select the imported SCM application from the App Builder applications list.
+9. Select the imported **APEX Inventory and Warehouse Management** application from the App Builder applications list.
 
     ![App Builder applications list](./images/works-app.png " ")
 
