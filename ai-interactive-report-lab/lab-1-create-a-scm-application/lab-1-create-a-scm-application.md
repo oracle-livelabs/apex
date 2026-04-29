@@ -19,7 +19,7 @@ In this lab, you will:
 Use these files during the hands-on setup:
 
 - [scm-datamodel.sql](files/scm-datamodel.sql)
-- [scm-dataload.sql](files/scm_dataload.sql)
+- [scm-dataload.sql](files/scm-dataload.sql)
 
 Run the files in the order listed above.
 
