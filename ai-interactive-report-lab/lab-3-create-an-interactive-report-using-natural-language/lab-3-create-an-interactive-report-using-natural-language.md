@@ -19,7 +19,7 @@ This task creates the replenishment report page used in the remaining labs. The 
 
 1. Navigate to **App Builder** icon in the left navigation.
 
-    ![Click Create Page](images/app-builder-icon1.png)
+    ![Click Create Page](images/nav-to-app.png)
 
 2. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
 

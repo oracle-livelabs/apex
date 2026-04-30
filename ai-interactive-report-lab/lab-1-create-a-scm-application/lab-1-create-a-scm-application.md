@@ -112,15 +112,11 @@ This task creates the application shell that you will enhance throughout the wor
 
 This task gives you context for the rest of the workshop. You will review the application home page created in Task 2 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
 
-1. Open the **Supply Chain Management** application and review the initial application home page.
-
-    ![Review the application home page and available pages](images/review-pages-and-shared-components.png)
-
-2. Return to the workspace home page, open **SQL Workshop**, and then click **Object Browser**.
+1. Navigate to **SQL Workshop** icon , and then click **Object Browser**.
 
     ![Navigate to Object Browser](images/navigate-to-object-browser.png)
 
-3. Review the installed SCM objects that support replenishment reporting, by searching with SCM_ in your Object Browser to list the core tables and views created by the setup scripts.
+2. Review the installed SCM objects that support replenishment reporting, by searching with SCM_ in your Object Browser to list the core tables and views created by the setup scripts.
 
     ![Identify SCM objects in Object Browser](images/identify-scm-objects.png)
 
