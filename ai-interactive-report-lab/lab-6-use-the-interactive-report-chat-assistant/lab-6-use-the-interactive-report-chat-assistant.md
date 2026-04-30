@@ -145,7 +145,7 @@ This task demonstrates how the assistant can refine the same report session with
 
 12. Confirm that the saved report appears in the available report views.
 
-    ![Enter the save view prompt](images/save-report.png)
+    ![Enter the save view prompt](images/save-report-result.png)
 
 ## Summary
 
