@@ -90,7 +90,7 @@ This task creates the application shell that you will enhance throughout the wor
 
     ![Click Create Application](images/get-image.png)
 
-## Task 3: Review the Application Shell and Seeded SCM Objects
+## Task 3: Review the Database Objects
 
 This task gives you context for the rest of the workshop. You will review the application home page created in Task 2 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
 
