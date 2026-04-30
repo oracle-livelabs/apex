@@ -16,13 +16,13 @@ In this lab, you will:
 
 In this task, I will use the OCI Generative AI service, so you must first create a web credential required to configure the service in your workspace
 
-1. From the workspace home page, click **App Builder**.
+1. Navigate to **App Builder** icon.
 
-    ![Open App Builder](images/app-builder-web.png)
+    ![Open App Builder](images/app-builder-web1.png)
 
 2. Click **Workspace Utilities**.
 
-    ![Open App Builder](images/workspace-utilities-web.png)
+    ![Open App Builder](images/workspace-utilities-web1.png)
 
 3. Click **Web Credentials**.
 
@@ -48,47 +48,67 @@ In this task, I will use the OCI Generative AI service, so you must first create
 
 This task sets the service foundation for every AI-driven action later in the workshop. A valid Generative AI service provider and web credentials ensure that report creation, AI search, and chat interactions all use the same trusted connection.
 
-1. To configure the Generative AI service in your workspace, click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
+1. To configure the Generative AI service in your workspace, navigate back to Oracle APEX Homepage and click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
 
-    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities** to access the configuration settings.
+    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
+
+    ![Open App Builder](images/apex-home-page.png)
 
     ![Open App Builder](images/navigate-to-app-builder.png)
 
-2. Click **Generative AI**.
-
     ![Click Generative AI](images/navigate-to-generative-ai-services.png)
 
-3. Click **Create**.
+2. Click **Create**.
 
-    ![Click Create](images/click-create-ai-service.png)
+    ![Click Create](images/lick-create-ai-service.png)
 
-4. Set **AI Provider** to the provider required for your environment. In this workshop example, use **OCI Generative AI Service**.
+3. Set **AI Provider** to the provider required for your environment. In this workshop example, use **OCI Generative AI Service**.
 
     ![Set the AI provider](images/set-ai-provider-and-app-builder-usage.png)
 
-5. Enter a meaningful service name such as **my-ai-service**.
+4. Enter a meaningful service name such as **my-ai-service**.
 
     ![Enter the AI service name](images/enter-ai-service-name.png)
 
-6. Enter your **Compartment ID** and **Region** details if you are using **OCI Generative AI Service**.
+5. Enter your **Compartment ID** and **Region** details if you are using **OCI Generative AI Service**.
 
     ![Enter the compartment and region details](images/enter-compartment-and-region.png)
 
-7. Set **Use by App Builder** to **Yes** so AI features are available while you create the application.
+6. Set **Use by App Builder** to **Yes** so AI features are available while you create the application.
 
     ![Enable App Builder usage](images/enable-app-builder-usage.png)
 
-8. Select the credential created in Task 1..
+7. Select the credential created in Task 1.
 
     ![Configure the AI credential](images/configure-ai-credential.png)
 
-9. Click **Test Connection**.
+8. Click **Test Connection**.
 
     ![Save and test the AI service](images/save-and-test-ai-service.png)
 
-10. Confirm that the connection succeeds and click **Create**.
+9. Confirm that the connection succeeds and click **Create**.
 
     ![Click Create](images/click-create-ai-service-final.png)
+
+10. From the Generative AI Services page, select the App Builder icon in the left navigation.
+
+    ![Click Create](images/app-builder-icon1.png)
+
+11. Select the **Supply Chain Application** from the App Builder applications list.
+
+    ![Click Create](images/click-scm.png)
+
+12. On the application home page, select **Shared Components**.
+
+    ![Click Create](images/select-sc.png)
+
+13. From Shared Components, select **AI Attributes**.
+
+    ![Click Create](images/select-ai-att.png)
+
+14. For Generative AI Service, select **my-ai-service** from the drop down, then select **Apply Changes**.
+
+    ![Click Create](images/select-ai.png)
 
 ## Summary
 

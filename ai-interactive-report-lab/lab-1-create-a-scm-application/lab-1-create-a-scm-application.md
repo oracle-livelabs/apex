@@ -60,19 +60,37 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
     ![Run the sample data load script](images/run-sample-dataload-script1.png)
 
-9. Return to **SQL Scripts**, upload `scm-dataload.sql`, and then run it to load the SCM sample data.
+9. Return to **SQL Scripts**.
 
     ![Run the sample data load script](images/back-scripts.png)
 
-10. Verify that both scripts complete without errors before you continue.
+10. Click **Upload**.
+
+    ![Run the sample data load script](images/click-upload-dataload.png)
+
+11. Now, select file `scm-dataload.sql`, and click **Upload** to load the SCM sample data.
+
+    ![Run the sample data load script](images/upload-dataload.png)
+
+12. Click **Run** icon.
+
+    ![Run the sample data load script](images/run-icon-dataload.png)
+
+13. Click **Run** to execute the data load script.
+
+    ![Run the sample data load script](images/run-dataload.png)
+
+14. Verify that both scripts complete without errors before you continue.
+
+    ![Run the sample data load script](images/success-dataload.png)
 
 ## Task 2: Create a Supply Chain Management Application
 
 This task creates the application shell that you will enhance throughout the workshop. The goal is to create a new Supply Chain Management application in App Builder so later labs can focus on the AI-enabled reporting experience.
 
-1. From the workspace home page, open **App Builder**.
+1. From the workspace home page, click **App Builder**.
 
-    ![Navigate to App Builder](images/navigate-to-app-builder.png)
+    ![Navigate to App Builder](images/app-builder-icon.png)
 
 2. On the **App Builder** page, click **Create** and start a new application.
 

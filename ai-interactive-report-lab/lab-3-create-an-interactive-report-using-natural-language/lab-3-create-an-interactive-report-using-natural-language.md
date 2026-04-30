@@ -17,11 +17,21 @@ In this lab, you will:
 
 This task creates the replenishment report page used in the remaining labs. The setup script has already created `SCM_NL2IR_REPLENISHMENT_V`, so you only need to point the new Interactive Report page at that view.
 
-1. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
+1. Navigate to **App Builder** icon in the left navigation.
+
+    ![Click Create Page](images/app-builder-icon1.png)
+
+2. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
+
+    ![Click Create Page](images/click-scm.png)
 
     ![Click Create Page](images/review-pages-and-shared-components.png)
 
-2. Use natural language to request a new Interactive Report page based on the view `SCM_NL2IR_REPLENISHMENT_V`. For example, enter:
+3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click on Accept.
+
+   ![Click Create Page](images/review-pages-and-shared-components.png)
+
+4. Use natural language to request a new Interactive Report page based on the view `SCM_NL2IR_REPLENISHMENT_V`. For example, enter:
 
     ```
     <copy>
@@ -31,15 +41,15 @@ This task creates the replenishment report page used in the remaining labs. The 
 
     ![Enter the Interactive Report prompt](images/enter-interactive-report-prompt.png)
 
-3. Once you're okay with the page, click **Create Page**.
+5. Once you're okay with the page, click **Create Page**.
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-4. Review the suggested page details, change Page Name to **SCM Replenishment** and confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
+6. Review the suggested page details, change Page Name to **SCM Replenishment** and confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
 
     ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
 
-5. Click **Run**.
+7. Click **Run**.
 
     ![Run the replenishment report](images/run-replenishment-report.png)
 

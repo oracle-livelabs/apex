@@ -62,7 +62,7 @@ This task helps the AI understand the meaning of your most important replenishme
 
     ![Select the RAISED_AT column](images/select-raised-at-column.png)
 
-9. In **Column Context**, enter the following context value:
+9. In the **Generative AI** section, locate **Column Context**, enter the following context value:
 
     ```
     <copy>
@@ -122,12 +122,11 @@ This task gives the AI controlled value sets for important categorical fields. R
 
 9. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
 
-
 ## Summary
 
 You configured SCM column context and reference data type for the replenishment report. The report is now better prepared to interpret warehouse and inventory questions accurately.
 
 ## Acknowledgements
 
-* **Author** - Ankita Beri, Senior Product Manager
-* **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, April, 2026

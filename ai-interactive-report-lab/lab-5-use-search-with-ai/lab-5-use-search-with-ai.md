@@ -22,7 +22,7 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Open the replenishment report](images/open-replenishment-report.png)
 
-2. In the report search bar, enter *Show only open replenishment alerts* and submit the prompt.
+2. In the report search bar, enter *Show only open replenishment alerts* and hit enter.
 
     ![Enter the open alerts prompt](images/enter-open-alerts-prompt.png)
 
@@ -30,7 +30,7 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Confirm the open alert chip](images/confirm-open-alert-chip.png)
 
-4. In the same search bar, enter *Sort by highest quantity to target* and submit the prompt.
+4. In the same search bar, enter *Sort by highest quantity to target* and hit enter.
 
     ![Enter the sort prompt](images/enter-sort-prompt.png)
 
@@ -42,7 +42,7 @@ This task validates that the report can interpret common SCM questions and trans
 
 This task helps you distinguish AI search from standard row search and shows how users can refine the generated result set after the AI has interpreted a prompt.
 
-1. In the search bar, enter the word *Warehouse NL2IRWH036* and submit it.
+1. Remove the chip. In the search bar, enter the word *Warehouse NL2IRWH036* and submit it.
 
     ![Enter the warehouse row search](images/enter-warehouse-row-search.png)
 

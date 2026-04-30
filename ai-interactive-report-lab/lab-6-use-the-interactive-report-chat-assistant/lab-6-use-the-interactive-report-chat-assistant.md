@@ -19,7 +19,7 @@ In this lab, you will:
 
 This task shows how the assistant can progressively reshape the report from a flat list into an analytical view. Each prompt builds on the previous result so you can see how conversational report design works for SCM data.
 
-1. Run the replenishment report page and click **Assistant** to open the right-side chat panel for the Interactive Report.
+1. Remove the chip and click **Assistant** to open the right-side chat panel for the Interactive Report.
 
     ![Open the assistant panel](images/open-assistant-panel.png)
 
