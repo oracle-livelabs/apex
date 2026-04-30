@@ -52,7 +52,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
 8. On the confirmation page, select **Run**.
 
-    ![Confirm the data model script run](./images/data-model-confirm.png " ")
+    ![Confirm the data model script run](./images/data-model-run.png " ")
 
 9. Verify that the script completes successfully and that the following tables are created:
 
@@ -77,6 +77,8 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_operational_tasks` | Replenishment orders raised by the agent |
     {: title="Database Tables"}
 
+> **Note:** If you need to reset the data and re-run the load scripts, use the [00\_SCM\_INV\_WMS\_TRUNCATE.sql](./files/00_SCM_INV_WMS_TRUNCATE.sql) script. Run it in **SQL Commands** to truncate all tables in the correct order before re-running Tasks 2 and 3.
+
 ## Task 2: Load the Sample Data
 
 In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
@@ -91,43 +93,47 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 3. Download the [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql) file to your local machine.
 
-4. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data`** for **Script Name**, and select **Upload**.
+4. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
-    ![Sample Data Upload](./images/sample-data-upload.png " ")
+    ![Sample Data Upload](./images/sample-data-upload1.png " ")
 
-5. In the row for **`scm_sample_data`**, select **Run**.
+5. In the row for **`scm_sample_data1`**, select **Run**.
 
-    ![Select Run for the scm\_sample\_data script from the SQL Scripts list](./images/sample-data-uploaded.png " ")
+    ![Select Run for the scm\_sample\_data script from the SQL Scripts list](./images/sample-data-uploaded1.png " ")
 
 6. On the confirmation page, select **Run**.
 
-    ![Confirm the sample data script run](./images/sample-data-confirm.png " ")
+    ![Confirm the sample data script run](./images/sample-data1-confirm.png " ")
 
 7. Verify that the script completes successfully.
 
-    ![Sample Data Results](./images/sample-data-results.png " ")
+    ![Sample Data Results](./images/sample-data1-results.png " ")
+
+8. Select **SQL Scripts**.
+
+    ![Sample Data Results](./images/sample-data1-return.png " ")
 
 8. Select **Upload** again.
 
-    ![Upload to SQL Scripts](./images/upload3.png " ")
+    ![Upload to SQL Scripts](./images/sample-data2-clickupload.png " ")
 
 9. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
 
-10. In the **Upload Script** dialog, select the downloaded file, enter **`scm_operational_data`** for **Script Name**, and select **Upload**.
+10. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
-    ![Operational Data Upload](./images/operational-data-upload.png " ")
+    ![Operational Data Upload](./images/sample-data2-upload.png " ")
 
-11. In the row for **`scm_operational_data`**, select **Run**.
+11. In the row for **`scm_sample_data2`**, select **Run**.
 
-    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/operational-data-uploaded.png " ")
+    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/sample-data2-runn.png " ")
 
 12. On the confirmation page, select **Run**.
 
-    ![Confirm the operational data script run](./images/operational-data-confirm.png " ")
+    ![Confirm the operational data script run](./images/sample-data2-run.png " ")
 
 13. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 3.
 
-    ![Operational Data Results](./images/operational-data-results.png " ")
+    ![Operational Data Results](./images/sample-data2-results.png " ")
 
 The combined sample data now includes the following:
 
@@ -147,7 +153,7 @@ In this task, you will import the base APEX application. It already contains the
 
 1. From the left navigation, select **App Builder**.
 
-    ![Navigate to App Builder from the left navigation](./images/nav-app.png " ")
+    ![Navigate to App Builder from the left navigation](./images/sample-data2-return.png " ")
 
 2. From the **App Builder** page, select **Import**.
 
@@ -157,31 +163,35 @@ In this task, you will import the base APEX application. It already contains the
 
 4. In the import wizard, select the downloaded file to upload, then click **Next**.
 
-    ![Import SCM application](./images/import_app.png " ")
+    ![Import SCM application](./images/import-app.png " ")
 
 5. Review the import details and select **Import Application**.
 
-    ![Install Application](./images/import2.png " ")
+    ![Install Application](./images/import-app1.png " ")
 
-6. After the import completes, verify that the import finishes successfully and that the application is now available in **App Builder**.
+6. After the import completes, verify that the import finishes successfully.
 
-    ![Imported SCM application available in App Builder](./images/app-builder-page-dark.png " ")
+    ![Imported SCM application available in App Builder](./images/app-builder-page-dark1.png " ")
 
 ## Task 4: Configure Generative AI Service
 
 In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the application. This wires up the LLM backend that the AI Agent will use to process natural language queries later in the workshop.
 
-1. From **App Builder**, select **Workspace Utilities**.
+1. From the left navigation, click **App Builder**.
 
-    ![App Builder Workspace Utilities](./images/workspace-utli.png " ")
+    ![Imported SCM application available in App Builder](./images/app-builder-page-dark2.png " ")
 
-2. From **Workspace Utilities**, select **Generative AI**.
+2. From **App Builder**, select **Workspace Utilities**.
+
+    ![App Builder Workspace Utilities](./images/appbuilder-home2.png " ")
+
+3. From **Workspace Utilities**, select **Generative AI**.
 
     ![Generative AI Services page](./images/genai-nav.png " ")
 
-3. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the workshop OCI setup:
+4. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the Workspace level Generative AI configuration:
 
-    > **Note:** This workshop uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OpenAI, Azure OpenAI Service, Google Gemini, and Cohere, among others. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
+    > **Note:** This livelabs uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OpenAI, Azure OpenAI Service, Google Gemini, and Cohere, among others. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
 
     - AI Provider: **OCI Generative AI Service**
     - Name: **OCI Gen AI**
@@ -195,35 +205,37 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
     ![Create Generative AI Service](./images/gen-ai-service-create.png " ")
 
-4. Select **Create**.
+5. Select **Create**.
 
-5. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
+6. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
 
     ![Generative AI Service created](./images/gen-ai-service-created.png " ")
 
-6. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
+7. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
 
     ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
 
-7. Select the application from the App Builder applications list.
+8. Select the application from the App Builder applications list.
 
-    ![App Builder applications list](./images/app-builder-app-list.png " ")
+    ![App Builder applications list](./images/appbuilder-home3.png " ")
 
-8. On the application home page, select **Shared Components**.
+9. On the application home page, select **Shared Components**.
 
-    ![Application home page](./images/app-homepage.png " ")
+    ![Application home page](./images/shared-comp.png " ")
 
-9. From **Shared Components**, select **AI Attributes**.
+10. From **Shared Components**, select **AI Attributes**.
 
-    ![Shared Components](./images/shared-components-dark.png " ")
+    ![Shared Components](./images/shared-comp2.png " ")
 
-10. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
+11. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
 
-    ![AI Attributes configured with the Generative AI Service](./images/ai-attributes-service-selected.png " ")
+    ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
 
 ## Summary
 
 The warehouse schema, sample data, sample application, and Generative AI service are now in place. You are ready to create the AI Agent and start adding tools in the next lab.
+
+You may now **proceed to the next Lab**.
 
 ## Acknowledgements
 

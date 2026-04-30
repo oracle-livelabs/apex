@@ -8,43 +8,11 @@ AI Agents in Oracle APEX give your application the ability to reason through the
 
 This workshop focuses on the inventory and warehouse management aspects of supply chain: identifying stock shortages, evaluating supplier options, and raising purchase orders through a conversational AI Agent.
 
-In this hands-on workshop, you will build an **SCM Procurement Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
+In this hands-on workshop, you will build an **AI Procurement Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
 
 You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, keeping business logic in PL/SQL and data in Oracle Database, all configured declaratively within APEX.
 
 Estimated Workshop Time: 60 minutes
-
-## Key Concepts
-
-### What is a Generative AI Agent?
-
-A **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
-
-- **System Prompt**: defines the agent's role, rules, and behavior. It is sent to the AI service with every conversation turn and shapes how the agent reasons and responds.
-- **Welcome Message**: the greeting shown to the user when they first open the chat panel.
-- **Tools**: give the agent the ability to retrieve information and perform actions. The AI service decides which tools to call and when, based on what the user is asking.
-
-### What is a Generative AI Tool?
-
-**Generative AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
-
-Oracle APEX provides three built-in tool types:
-
-| Tool Type | What it does |
-| --- | --- |
-| **Retrieve Data** | Runs a SQL query and returns the results to the agent |
-| **Execute Server-side Code** | Runs a PL/SQL block to perform a write action or call an API |
-| **Execute Client-side Code** | Runs JavaScript in the browser, for example to read browser state or show a dialog |
-{: title="Tool Types"}
-
-You can also create custom, reusable Generative AI Tool plug-ins under Shared Components. These plug-ins then appear in the tool type list alongside the built-in types.
-
-### What is an Execution Point?
-
-Every tool has an **Execution Point** that controls when it runs:
-
-- **Augment System Prompt**: the tool runs with each new message and its result is included as a hidden system message before the AI service processes what the user typed. Use this for context the agent always needs, such as who the user is or what timezone their browser is using.
-- **On Demand**: the tool is made available to the AI service but only runs when the conversation requires it. The agent decides when to invoke it. Not all tool types support both execution points.
 
 ## Objectives
 
@@ -63,6 +31,29 @@ In this workshop, you will learn how to:
 - Use `apex_ai.set_tool_result` to push structured results and notifications to the chat UI
 
 - Build a complete procurement use case: **identify > evaluate > confirm > act**
+
+## Key Concepts
+
+### What is a Generative AI Agent?
+
+A **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
+
+- **System Prompt**: defines the agent's role, rules, and behavior. It is sent to the AI service with every conversation turn and shapes how the agent reasons and responds.
+- **Welcome Message**: the greeting shown to the user when they first open the chat panel.
+- **Tools**: give the agent the ability to retrieve information and perform actions. The AI service decides which tools to call and when, based on what the user is asking.
+
+### What is a Generative AI Tool?
+
+**Generative AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
+
+Oracle APEX provides three built-in tool types: **Retrieve Data** runs a SQL query and returns results to the agent, **Execute Server-side Code** runs a PL/SQL block to perform write actions or call APIs, and **Execute Client-side Code** runs JavaScript in the browser. You can also create custom, reusable tool plug-ins under Shared Components.
+
+### What is an Execution Point?
+
+Every tool has an **Execution Point** that controls when it runs:
+
+- **Augment System Prompt**: the tool runs with each new message and its result is included as a hidden system message before the AI service processes what the user typed. Use this for context the agent always needs, such as who the user is or what timezone their browser is using.
+- **On Demand**: the tool is made available to the AI service but only runs when the conversation requires it. The agent decides when to invoke it. Not all tool types support both execution points.
 
 ## Prerequisites
 
@@ -97,22 +88,6 @@ In this workshop, you will learn how to:
 
 > **Note:** The application ID in the screenshots may vary. Please ignore the application ID.
 
-## Tool Coverage Map
-
-This workshop covers a complete procurement use case using both context tools and on-demand operational tools:
-
-| #  | Tool Name                            | Type                     | Execution Point       |
-|----|--------------------------------------|--------------------------|-----------------------|
-| 1  | `get_user_context`                   | Retrieve Data            | Augment System Prompt |
-| 2  | `get_browser_timezone`               | Execute Client-side Code | Augment System Prompt |
-| 3  | `get_stocks_at_risk`                 | Retrieve Data            | On Demand             |
-| 4  | `get_suppliers_for_item`             | Retrieve Data            | On Demand             |
-| 5  | `get_supplier_delivery_performance`  | Retrieve Data            | On Demand             |
-| 6  | `show_warehouses_by_supplier`        | Retrieve Data            | On Demand             |
-| 7  | `confirm_action`                     | Execute Client-side Code | On Demand             |
-| 8  | `raise_purchase_order`               | Execute Server-side Code | On Demand             |
-{: title="Tool Coverage Map"}
-
 ## Labs
 
 | Lab | Module | Est. Time |
@@ -122,6 +97,20 @@ This workshop covers a complete procurement use case using both context tools an
 | 3 | [Add Supplier Evaluation and Purchase Order Tools](?lab=3-add-core-tools) | 25 minutes |
 | 4 | [Add the Agent to the Application and Run the Application](?lab=4-run-application) | 10 minutes |
 {: title="Workshop Labs"}
+
+## Downloads
+
+If you are stuck or the application is not working as expected, you can download and install the completed application as follows:
+
+1. Download the [SCM\_INV\_WMS\_EXPORT\_APP.sql](./files/SCM_INV_WMS_EXPORT_APP.sql) completed application export file.
+
+2. Import the **SCM\_INV\_WMS\_EXPORT\_APP.sql** file into your APEX workspace. Follow the steps in the **Install Application** wizard to install the application along with its Supporting Objects.
+
+3. Once the application is installed, follow Lab 1 > Tasks 1 and 2 to load the data model and sample data, then follow Lab 1 > Task 4 to configure the Generative AI Service.
+
+4. Follow Lab 4 > Task 2 to set up your user access.
+
+5. Follow Lab 4 > Task 3 to run the application and walk through the end-to-end procurement conversation.
 
 ## Learn More
 

@@ -8,8 +8,6 @@
 -- 3. Review control uses simple status columns.
 -- 4. Role access uses six application roles with warehouse assignments.
 
-set define off
-
 ------------------------------------------------------------------------------
 -- 1. Core reference data
 ------------------------------------------------------------------------------
@@ -321,6 +319,21 @@ create table scm_user_roles (
             primary_display_column 'true',
             semantic_type 'name'
         ),
+    role_scope_code varchar2(20 char) default 'WAREHOUSE' not null
+        annotations (
+            display_label 'Role Scope',
+            description 'Business scope covered by the role.',
+            search_facet 'distinct-list',
+            semantic_type 'scope',
+            ai_context 'Valid values include ENTERPRISE, WAREHOUSE, QUALITY, FINANCE, ADMIN.'
+        ),
+    approval_authority_level number(4) default 0 not null
+        annotations (
+            display_label 'Approval Authority Level',
+            description 'Standard approval authority level attached to the role.',
+            search_facet 'range',
+            semantic_type 'ranking'
+        ),
     is_system_role boolean default true not null
         annotations (
             display_label 'Is System Role',
@@ -352,7 +365,17 @@ create table scm_user_roles (
             'QUALITY_USER',
             'BUSINESS_VIEWER'
         )
-    )
+    ),
+    constraint ck_scm_user_roles_02 check (
+        role_scope_code in (
+            'ENTERPRISE',
+            'WAREHOUSE',
+            'QUALITY',
+            'FINANCE',
+            'ADMIN'
+        )
+    ),
+    constraint ck_scm_user_roles_03 check (approval_authority_level >= 0)
 ) annotations (
     display_label 'User Roles',
     description 'Stores records for user roles.'
@@ -469,6 +492,12 @@ create table scm_user_role_assignments (
             semantic_type 'status',
             ai_context 'Valid values include ACTIVE, INACTIVE.'
         ),
+    authority_level_override number(4)
+        annotations (
+            display_label 'Authority Level Override',
+            description 'Role authority level override for this specific assignment where needed.',
+            semantic_type 'ranking'
+        ),
     effective_from_date date default trunc(sysdate) not null
         annotations (
             display_label 'Effective From Date',
@@ -513,7 +542,8 @@ create table scm_user_role_assignments (
     constraint fk_scm_user_role_assignments_04 foreign key (assigned_by_user_id)
         references scm_application_users (application_user_id),
     constraint ck_scm_user_role_assignments_01 check (assignment_status_code in ('ACTIVE', 'INACTIVE')),
-    constraint ck_scm_user_role_assignments_02 check (effective_to_date is null or effective_to_date >= effective_from_date)
+    constraint ck_scm_user_role_assignments_02 check (effective_to_date is null or effective_to_date >= effective_from_date),
+    constraint ck_scm_user_role_assignments_03 check (authority_level_override is null or authority_level_override >= 0)
 ) annotations (
     display_label 'User Role Assignments',
     description 'Stores records for user role assignments.'
@@ -974,6 +1004,40 @@ create table scm_item_warehouse_policies (
             format_mask 'FM999G999G999G990',
             semantic_type 'quantity'
         ),
+    reorder_point_quantity number(18,4)
+        annotations (
+            display_label 'Reorder Point Quantity',
+            description 'Quantity level that triggers replenishment review.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    reorder_target_quantity number(18,4)
+        annotations (
+            display_label 'Reorder Target Quantity',
+            description 'Target stock quantity after replenishment.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    safety_stock_quantity number(18,4)
+        annotations (
+            display_label 'Safety Stock Quantity',
+            description 'Safety stock quantity that should remain protected before replenishment risk is escalated.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    replenishment_lead_time_days number(6)
+        annotations (
+            display_label 'Replenishment Lead Time Days',
+            description 'Lead time in days used when evaluating replenishment urgency and alert timing.',
+            semantic_type 'duration_days'
+        ),
+    low_stock_alert_enabled_flag boolean default true not null
+        annotations (
+            display_label 'Low Stock Alert Enabled Flag',
+            description 'Indicates whether low stock alerts should be raised for the item in the warehouse.',
+            search_facet 'distinct-list',
+            semantic_type 'flag'
+        ),
     is_active boolean default true not null
         annotations (
             display_label 'Is Active',
@@ -987,10 +1051,209 @@ create table scm_item_warehouse_policies (
         references scm_items (item_id),
     constraint fk_scm_item_warehouse_policies_02 foreign key (warehouse_id)
         references scm_warehouses (warehouse_id),
-    constraint ck_scm_item_warehouse_policies_01 check (minimum_stock_quantity >= 0)
+    constraint ck_scm_item_warehouse_policies_01 check (minimum_stock_quantity >= 0),
+    constraint ck_scm_item_warehouse_policies_02 check (reorder_point_quantity is null or reorder_point_quantity >= 0),
+    constraint ck_scm_item_warehouse_policies_03 check (reorder_target_quantity is null or reorder_target_quantity >= 0),
+    constraint ck_scm_item_warehouse_policies_04 check (safety_stock_quantity is null or safety_stock_quantity >= 0),
+    constraint ck_scm_item_warehouse_policies_05 check (replenishment_lead_time_days is null or replenishment_lead_time_days >= 0),
+    constraint ck_scm_item_warehouse_policies_06 check (
+        reorder_point_quantity is null
+        or reorder_target_quantity is null
+        or reorder_point_quantity <= reorder_target_quantity
+    ),
+    constraint ck_scm_item_warehouse_policies_07 check (
+        safety_stock_quantity is null
+        or reorder_point_quantity is null
+        or safety_stock_quantity <= reorder_point_quantity
+    )
 ) annotations (
     display_label 'Item Warehouse Policies',
     description 'Stores records for item warehouse policies.'
+);
+
+create table scm_replenishment_alerts (
+    replenishment_alert_id number generated always as identity (start with 1 increment by 1 cache 100)
+        annotations (
+            display_label 'Replenishment Alert ID',
+            description 'Surrogate key for the replenishment alert.',
+            display_in_report 'false',
+            display_in_form 'false',
+            semantic_type 'identifier'
+        ),
+    alert_number varchar2(30 char) not null
+        annotations (
+            display_label 'Alert Number',
+            description 'Business reference used to identify the replenishment alert.',
+            value_required 'true',
+            primary_display_column 'true',
+            semantic_type 'reference_number'
+        ),
+    warehouse_id number not null
+        annotations (
+            display_label 'Warehouse ID',
+            description 'Warehouse where the replenishment need was identified.',
+            value_required 'true',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    item_id number not null
+        annotations (
+            display_label 'Item ID',
+            description 'Item that requires replenishment review.',
+            value_required 'true',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    item_warehouse_policy_id number
+        annotations (
+            display_label 'Item Warehouse Policy ID',
+            description 'Warehouse policy that triggered the alert where relevant.',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    pick_location_id number
+        annotations (
+            display_label 'Pick Location ID',
+            description 'Pick location that needs replenishment where relevant.',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    reserve_location_id number
+        annotations (
+            display_label 'Reserve Location ID',
+            description 'Reserve location expected to supply the replenishment where known.',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    alert_type_code varchar2(30 char) not null
+        annotations (
+            display_label 'Alert Type Code',
+            description 'Business type of replenishment alert.',
+            value_required 'true',
+            search_facet 'distinct-list',
+            semantic_type 'classification',
+            ai_context 'Valid values include LOW_STOCK, OUT_OF_STOCK, PICK_FACE_REPLENISHMENT, AGING_REVIEW, SHORT_DATED_REVIEW.'
+        ),
+    alert_status_code varchar2(20 char) default 'OPEN' not null
+        annotations (
+            display_label 'Alert Status Code',
+            description 'Current business status of the replenishment alert.',
+            search_facet 'distinct-list',
+            semantic_type 'status',
+            ai_context 'Valid values include OPEN, IN_REVIEW, ACTIONED, CLOSED, SUPPRESSED.'
+        ),
+    priority_code varchar2(20 char) default 'MEDIUM' not null
+        annotations (
+            display_label 'Priority Code',
+            description 'Business priority of the replenishment alert.',
+            semantic_type 'priority',
+            ai_context 'Valid values include LOW, MEDIUM, HIGH, CRITICAL.'
+        ),
+    available_quantity number(18,4)
+        annotations (
+            display_label 'Available Quantity',
+            description 'Available quantity seen when the alert was raised.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    trigger_quantity number(18,4)
+        annotations (
+            display_label 'Trigger Quantity',
+            description 'Quantity threshold that triggered the alert.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    target_quantity number(18,4)
+        annotations (
+            display_label 'Target Quantity',
+            description 'Target quantity the business wants to recover to.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    recommended_replenishment_quantity number(18,4)
+        annotations (
+            display_label 'Recommended Replenishment Quantity',
+            description 'Suggested quantity to move or review as the replenishment action.',
+            format_mask 'FM999G999G999G990D0000',
+            semantic_type 'quantity'
+        ),
+    raised_at timestamp with time zone default systimestamp not null
+        annotations (
+            display_label 'Raised At',
+            description 'Date and time when the replenishment alert was raised.',
+            format_mask 'DD-MON-YYYY HH24:MI TZH:TZM',
+            semantic_type 'datetime'
+        ),
+    reviewed_at timestamp with time zone
+        annotations (
+            display_label 'Reviewed At',
+            description 'Date and time when the alert was reviewed.',
+            format_mask 'DD-MON-YYYY HH24:MI TZH:TZM',
+            semantic_type 'datetime'
+        ),
+    reviewed_by_user_id number
+        annotations (
+            display_label 'Reviewed By User ID',
+            description 'User who reviewed the replenishment alert.',
+            display_as_lov 'select-list',
+            semantic_type 'identifier'
+        ),
+    alert_notes varchar2(1000 char)
+        annotations (
+            display_label 'Alert Notes',
+            description 'Business notes for the replenishment alert.',
+            semantic_type 'comment'
+        ),
+    constraint pk_scm_replenishment_alerts primary key (replenishment_alert_id),
+    constraint uq_scm_replenishment_alerts_01 unique (alert_number),
+    constraint fk_scm_replenishment_alerts_01 foreign key (warehouse_id)
+        references scm_warehouses (warehouse_id),
+    constraint fk_scm_replenishment_alerts_02 foreign key (item_id)
+        references scm_items (item_id),
+    constraint fk_scm_replenishment_alerts_03 foreign key (item_warehouse_policy_id)
+        references scm_item_warehouse_policies (item_warehouse_policy_id),
+    constraint fk_scm_replenishment_alerts_04 foreign key (pick_location_id)
+        references scm_storage_locations (storage_location_id),
+    constraint fk_scm_replenishment_alerts_05 foreign key (reserve_location_id)
+        references scm_storage_locations (storage_location_id),
+    constraint fk_scm_replenishment_alerts_06 foreign key (reviewed_by_user_id)
+        references scm_application_users (application_user_id),
+    constraint ck_scm_replenishment_alerts_01 check (
+        alert_type_code in (
+            'LOW_STOCK',
+            'OUT_OF_STOCK',
+            'PICK_FACE_REPLENISHMENT',
+            'AGING_REVIEW',
+            'SHORT_DATED_REVIEW'
+        )
+    ),
+    constraint ck_scm_replenishment_alerts_02 check (
+        alert_status_code in (
+            'OPEN',
+            'IN_REVIEW',
+            'ACTIONED',
+            'CLOSED',
+            'SUPPRESSED'
+        )
+    ),
+    constraint ck_scm_replenishment_alerts_03 check (
+        priority_code in (
+            'LOW',
+            'MEDIUM',
+            'HIGH',
+            'CRITICAL'
+        )
+    ),
+    constraint ck_scm_replenishment_alerts_04 check (available_quantity is null or available_quantity >= 0),
+    constraint ck_scm_replenishment_alerts_05 check (trigger_quantity is null or trigger_quantity >= 0),
+    constraint ck_scm_replenishment_alerts_06 check (target_quantity is null or target_quantity >= 0),
+    constraint ck_scm_replenishment_alerts_07 check (
+        recommended_replenishment_quantity is null
+        or recommended_replenishment_quantity >= 0
+    )
+) annotations (
+    display_label 'Replenishment Alerts',
+    description 'Stores records for replenishment alerts.'
 );
 
 ------------------------------------------------------------------------------
@@ -1382,6 +1645,12 @@ create table scm_inbound_receipts (
             description 'Date and time when receiving was completed.',
             format_mask 'DD-MON-YYYY HH24:MI TZH:TZM',
             semantic_type 'datetime'
+        ),
+    received_by varchar2(128 char)
+        annotations (
+            display_label 'Received By',
+            description 'User who completed receipt of the goods.',
+            semantic_type 'user_name'
         ),
     received_by_user_id number
         annotations (
@@ -4069,50 +4338,6 @@ with read only;
 ------------------------------------------------------------------------------
 -- 6. Supporting indexes
 ------------------------------------------------------------------------------
-
-declare
-    procedure safe_exec(p_sql varchar2) is
-    begin
-        execute immediate p_sql;
-    exception
-        when others then
-            null;
-    end;
-begin
-    safe_exec('drop index idx_scm_warehouses_geo force');
-    safe_exec('drop index idx_scm_warehouses_geo');
-end;
-/
-
-delete from user_sdo_geom_metadata
-where upper(table_name) = 'SCM_WAREHOUSES'
-  and upper(column_name) = 'WAREHOUSE_GEOMETRY';
-
-commit;
-
-begin
-    insert into user_sdo_geom_metadata (
-        table_name,
-        column_name,
-        diminfo,
-        srid
-    )
-    values (
-        'SCM_WAREHOUSES',
-        'WAREHOUSE_GEOMETRY',
-        mdsys.sdo_dim_array(
-            mdsys.sdo_dim_element('Longitude', -180, 180, 0.005),
-            mdsys.sdo_dim_element('Latitude', -90, 90, 0.005)
-        ),
-        4326
-    );
-exception
-    when others then
-        if sqlcode != -13223 then
-            raise;
-        end if;
-end;
-/
 
 create index idx_scm_user_role_assignments_01
     on scm_user_role_assignments (application_user_id, warehouse_id, assignment_status_code);
