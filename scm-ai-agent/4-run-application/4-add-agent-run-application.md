@@ -4,7 +4,7 @@
 
 In this lab, you will complete the final three steps to bring the workshop together. First, you will add the **Procurement Agent** to the **Home Dashboard** by creating a button and attaching it to the AI Agent using a trigger action. Next, you will set up user access so the application can identify you when you sign in. Finally, you will run the application and walk through the complete procurement conversation: identifying low-stock items, evaluating suppliers, and raising a purchase order.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
