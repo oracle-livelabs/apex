@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab configures AI attributes for SCM replenishment columns from `SCM_NL2IR_REPLENISHMENT_V`. You will add clear business context to the quantity, priority, and date columns so AI can interpret warehouse questions more accurately.
+This lab configures AI attributes for SCM replenishment columns from `SCM_REPLENISHMENT_V`. You will add clear business context to the quantity, priority, and date columns so AI can interpret warehouse questions more accurately.
 
 Estimated Lab Time: 10 minutes
 
@@ -108,7 +108,7 @@ This task gives the AI controlled value sets for important categorical fields. R
     <copy>
     select warehouse_code as d,
            warehouse_code as r
-     from scm_nl2ir_replenishment_v
+     from scm_replenishment_v
      group by warehouse_code
      order by warehouse_code
      </copy>

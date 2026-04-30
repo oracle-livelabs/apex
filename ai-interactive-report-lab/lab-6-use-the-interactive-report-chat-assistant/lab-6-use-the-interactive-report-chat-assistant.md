@@ -19,11 +19,17 @@ In this lab, you will:
 
 This task shows how the assistant can progressively reshape the report from a flat list into an analytical view. Each prompt builds on the previous result so you can see how conversational report design works for SCM data.
 
-1. Remove the chip and click **Assistant** to open the right-side chat panel for the Interactive Report.
+1. Remove the filter chip and click **Assistant** to open the right-side chat panel for the Interactive Report.
 
     ![Open the assistant panel](images/open-assistant-panel.png)
 
-2. Enter *Group by replenishment alerts by warehouse* and send the prompt.
+2. Enter the following and send the prompt.
+
+    ```
+    <copy>
+    Group by replenishment alerts by warehouse
+    </copy>
+    ```
 
     ![Enter the group by prompt](images/enter-group-by-prompt.png)
 
@@ -31,7 +37,13 @@ This task shows how the assistant can progressively reshape the report from a fl
 
     ![Confirm the group by chip](images/confirm-group-by-chip.png)
 
-4. Enter *Show total quantity to target per warehouse* and send the prompt.
+4. Enter the following and send the prompt.
+
+    ```
+    <copy>
+    Show total quantity to target per warehouse
+    </copy>
+    ```
 
     ![Enter the total quantity prompt](images/enter-total-qty-prompt.png)
 
@@ -39,7 +51,13 @@ This task shows how the assistant can progressively reshape the report from a fl
 
     ![Confirm the aggregate](images/confirm-total-qty-aggregate.png)
 
-6. Enter *Create a pivot showing quantity to target by warehouse, with priorities across the top* and send the prompt.
+6. Enter the following and send the prompt.
+
+    ```
+    <copy>
+    Create a pivot showing quantity to target by warehouse, with priorities across the top
+    </copy>
+    ```
 
     ![Enter the pivot prompt](images/enter-pivot-prompt.png)
 
@@ -55,7 +73,13 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Enter the highlight prompt](images/reset.png)
 
-2. Enter *Highlight rows where Qty To Target is greater than 10 in green* and send the prompt.
+2. Enter the following and send the prompt.
+
+    ```
+    <copy>
+    Highlight rows where Qty To Target is greater than 25 in green
+    </copy>
+    ```
 
     ![Enter the highlight prompt](images/enter-highlight-prompt.png)
 
@@ -63,7 +87,13 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the highlight rule](images/confirm-highlight-rule.png)
 
-4. Remove the chip and enter *Filter to only HIGH priority and OPEN alerts* and send the prompt.
+4. Remove the chip and enter the following and send the prompt.
+
+    ```
+    <copy>
+    Filter to only HIGH priority and OPEN alerts
+    </copy>
+    ```
 
     ![Enter the filter prompt](images/enter-high-open-filter-prompt.png)
 
@@ -71,7 +101,13 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the filter chips](images/confirm-filter-chips.png)
 
-6. Remove the chips and enter *Show Qty To Target by Warehouse Code as a bar chart* and send the prompt.
+6. Remove the chips and enter the following and send the prompt.
+
+     ```
+    <copy>
+    Show Qty To Target by Warehouse Code as a bar chart
+    </copy>
+    ```
 
     ![Enter the bar chart prompt](images/enter-bar-chart-prompt.png)
 
@@ -79,11 +115,35 @@ This task demonstrates how the assistant can refine the same report session with
 
     ![Confirm the bar chart view](images/confirm-bar-chart-view.png)
 
-8. Enter *Save this as Weekly Replenishment View* and send the prompt.
+8. Enter **Reset**.
+
+    ![Enter the save view prompt](images/reset-chart.png)
+
+9. Enter the following and send the prompt.
+
+    ```
+    <copy>
+    Break down the report based on alter status code
+    </copy>
+    ```
+
+    ![Enter the save view prompt](images/breakdown-prompt.png)
+
+10. Confirm that the report assistant adds the relevant filter chip of control break.
+
+    ![Enter the save view prompt](images/breakdown-result.png)
+
+11. To save the report, enter the following and send the prompt.
+
+    ```
+    <copy>
+    Save this report as Alert Status report
+    </copy>
+    ```
 
     ![Enter the save view prompt](images/enter-save-view-prompt.png)
 
-9. Confirm that the saved report appears in the available report views.
+12. Confirm that the saved report appears in the available report views.
 
     ![Enter the save view prompt](images/save-report.png)
 

@@ -16,7 +16,7 @@ In this lab, you will:
 
 In this task, I will use the OCI Generative AI service, so you must first create a web credential required to configure the service in your workspace
 
-1. Navigate to **App Builder** icon.
+1. Navigate to **App Builder** icon from the left navigation menu.
 
     ![Open App Builder](images/app-builder-web1.png)
 
@@ -48,7 +48,7 @@ In this task, I will use the OCI Generative AI service, so you must first create
 
 This task sets the service foundation for every AI-driven action later in the workshop. A valid Generative AI service provider and web credentials ensure that report creation, AI search, and chat interactions all use the same trusted connection.
 
-1. To configure the Generative AI service in your workspace, navigate back to Oracle APEX Homepage and click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
+1. To configure the Generative AI service in your workspace, navigate back to Oracle APEX Homepage from the left navigation menu and click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
 
     Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
 

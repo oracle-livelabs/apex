@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_NL2IR_REPLENISHMENT_V` already created by the setup script, you will build an Interactive Report page on that view and then enable natural language support directly on the report region.
+This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_REPLENISHMENT_V` already created by the setup script, you will build an Interactive Report page on that view and then enable natural language support directly on the report region.
 
 Estimated Lab Time: 5 minutes
 
@@ -15,7 +15,7 @@ In this lab, you will:
 
 ## Task 1: Build an Interactive Report page from a view
 
-This task creates the replenishment report page used in the remaining labs. The setup script has already created `SCM_NL2IR_REPLENISHMENT_V`, so you only need to point the new Interactive Report page at that view.
+This task creates the replenishment report page used in the remaining labs. The setup script has already created **SCM\_REPLENISHMENT\_V**, so you only need to point the new Interactive Report page at that view.
 
 1. Navigate to **App Builder** icon in the left navigation.
 
@@ -31,11 +31,11 @@ This task creates the replenishment report page used in the remaining labs. The 
 
    ![Click Create Page](images/review-pages-and-shared-components.png)
 
-4. Use natural language to request a new Interactive Report page based on the view `SCM_NL2IR_REPLENISHMENT_V`. For example, enter:
+4. Use natural language to request a new Interactive Report page based on the view **SCM\_REPLENISHMENT\_V**. For example, enter:
 
     ```
     <copy>
-    Create an interactive report page based on the view SCM_NL2IR_REPLENISHMENT_V
+    Create an interactive report page based on the view SCM_REPLENISHMENT_V
     </copy>
     ```
 
@@ -45,7 +45,7 @@ This task creates the replenishment report page used in the remaining labs. The 
 
     ![Create the report page from the SCM view](images/create-report-page-from-view.png)
 
-6. Review the suggested page details, change Page Name to **SCM Replenishment** and confirm that **Table / View Name** is `SCM_NL2IR_REPLENISHMENT_V`, then click **Create Page**.
+6. Review the suggested page details, change Page Name to **SCM Replenishment** and confirm that **Table / View Name** is **SCM\_REPLENISHMENT\_V**, then click **Create Page**.
 
     ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
 
@@ -87,7 +87,7 @@ This task turns the report into an AI-enabled search surface. You will enable na
 
 ## Summary
 
-You created an Interactive Report on `SCM_NL2IR_REPLENISHMENT_V`, enabled natural language support, and added SCM-specific report context. The report is now ready for column-level AI tuning.
+You created an Interactive Report, enabled natural language support, and added SCM-specific report context. The report is now ready for column-level AI tuning.
 
 ## Acknowledgements
 

@@ -22,7 +22,13 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Open the replenishment report](images/open-replenishment-report.png)
 
-2. In the report search bar, enter *Show only open replenishment alerts* and hit enter.
+2. In the report search bar, enter the following and hit enter.
+
+    ```
+    <copy>
+    Show only open replenishment alerts
+    </copy>
+    ```
 
     ![Enter the open alerts prompt](images/enter-open-alerts-prompt.png)
 
@@ -30,7 +36,13 @@ This task validates that the report can interpret common SCM questions and trans
 
     ![Confirm the open alert chip](images/confirm-open-alert-chip.png)
 
-4. In the same search bar, enter *Sort by highest quantity to target* and hit enter.
+4. In the same search bar, enter the following and hit enter.
+
+    ```
+    <copy>
+    Sort by highest quantity to target
+    </copy>
+    ```
 
     ![Enter the sort prompt](images/enter-sort-prompt.png)
 
@@ -42,7 +54,7 @@ This task validates that the report can interpret common SCM questions and trans
 
 This task helps you distinguish AI search from standard row search and shows how users can refine the generated result set after the AI has interpreted a prompt.
 
-1. Remove the chip. In the search bar, enter the word *Warehouse NL2IRWH036* and submit it.
+1. Remove the filter chip. In the search bar, enter the words *Warehouse NL2IRWH036* and hit enter.
 
     ![Enter the warehouse row search](images/enter-warehouse-row-search.png)
 
@@ -50,7 +62,13 @@ This task helps you distinguish AI search from standard row search and shows how
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 
-3. Now, remove the chip and enter another AI-style prompt such as *Show open alerts for warehouse NL2IRWH036* and submit it.
+3. Now, remove the filter chip and enter the following AI-style prompt and hit enter.
+
+    ```
+    <copy>
+    Show open alerts for warehouse NL2IRWH036
+    </copy>
+    ```
 
     ![Enter the warehouse AI prompt](images/enter-warehouse-ai-prompt.png)
 
@@ -58,11 +76,11 @@ This task helps you distinguish AI search from standard row search and shows how
 
     ![Show the AI processing indicator](images/show-ai-processing.png)
 
-5. Review the applied chips created by AI.
+5. Review the applied filter chips created by AI.
 
     ![Review the AI chips](images/review-ai-chips.png)
 
-6. Adjust or remove one of the chips.
+6. Remove one of the filter chip on clicking **X**.
 
     ![Remove the warehouse chip](images/remove-warehouse-chip.png)
 
