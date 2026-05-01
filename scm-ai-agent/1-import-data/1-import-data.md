@@ -4,7 +4,7 @@
 
 Before you can build the AI Agent, the workspace needs a schema, sample data, and a base application to work from.
 
-In this lab, you will load three SQL scripts: one that creates the warehouse schema, one that loads the reference data, and one that loads the operational data including the supplier delivery history the agent will use. You will then import the application and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
+In this lab, you will load three SQL scripts: covering the warehouse schema, reference data, and operational data including the supplier delivery history the agent uses. You will then import the application and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
 
 Estimated Time: 10 minutes
 
