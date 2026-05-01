@@ -77,8 +77,6 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_operational_tasks` | Replenishment orders raised by the agent |
     {: title="Database Tables"}
 
-> **Note:** If you need to reset the data and re-run the load scripts, use the [00\_SCM\_INV\_WMS\_TRUNCATE.sql](./files/00_SCM_INV_WMS_TRUNCATE.sql) script. Run it in **SQL Commands** to truncate all tables in the correct order before re-running Tasks 2 and 3.
-
 ## Task 2: Load the Sample Data
 
 In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
