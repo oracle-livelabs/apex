@@ -152,6 +152,8 @@ The procurement conversation starts here. The user opens the assistant and asks 
     | `scm_storage_locations` | Warehouse mapping for balances |
     | `scm_replenishment_alerts` | Open alert priority and age |
     | `scm_application_users` | Default warehouse for the current user |
+    | `scm_inbound_receipts` | Excludes items with an existing planned receipt |
+    | `scm_inbound_receipt_lines` | Item-level match for the planned receipt check |
     {: title="Tables used by get_stocks_at_risk"}
 
 ## Task 2: Find Suppliers for a Selected Item
@@ -656,6 +658,7 @@ The agent only calls this tool after all previous steps are complete and `confir
         | `scm_inbound_receipt_lines` | Inserts the purchase-order line |
         | `scm_replenishment_alerts` | Marks the alert as actioned |
         | `scm_application_users` | Resolves the current application user |
+        | `scm_storage_locations` | Resolves the receiving location for the warehouse |
         | `scm_items` | Resolves item name and UOM |
         | `scm_business_partners` | Resolves supplier name |
         | `scm_warehouses` | Resolves warehouse name |

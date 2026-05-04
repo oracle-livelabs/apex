@@ -102,6 +102,8 @@ In this task, you will set up your user so the application recognises you when y
 
 6. Copy and paste the following script into the editor. Replace the placeholder values, then select **Run**.
 
+    > **Important:** Replace `YOUR_APEX_USERNAME` with the exact username you use to sign in to the APEX workspace. Replace `Your Full Name` and `your.email@example.com` with your details. The script assigns you the **Warehouse Manager** role for the **PHX-WEST** warehouse, which is the primary demo warehouse for this workshop.
+
     ```sql
     <copy>
     declare
@@ -147,8 +149,6 @@ In this task, you will set up your user so the application recognises you when y
     end;
     </copy>
     ```
-
-    Replace `YOUR_APEX_USERNAME` with the exact username you use to sign in to the APEX workspace (case-insensitive match). Replace `Your Full Name` and `your.email@example.com` with your details. The script assigns you the **Warehouse Manager** role for the **PHX-WEST** warehouse, which is the primary demo warehouse for this workshop.
 
     ![SQL Commands in SQL Workshop](./images/add-user.png " ")
 
