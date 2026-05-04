@@ -15,7 +15,7 @@ Each tool in this lab represents one step in the procurement journey:
 
 All six tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 3 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
 
-Estimated Time: 25 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
