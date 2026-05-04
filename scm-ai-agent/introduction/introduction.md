@@ -111,11 +111,13 @@ If you are stuck or the application is not working as expected, you can download
 
 2. Import the **SCM\_INV\_WMS\_EXPORT\_APP.sql** file into your APEX workspace. Follow the steps in the **Import Application** wizard to import the application.
 
-3. Once the application is installed, follow Lab 1 > Tasks 1 and 2 to load the data model and sample data, then follow Lab 2 to configure the Generative AI Service.
+3. Follow **Lab 1 > Task 1** to load the data model and **Lab 1 > Task 2** to load the sample data.
 
-4. Follow Lab 5 > Task 2 to set up your user access.
+4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-5. Follow Lab 5 > Task 3 to run the application and walk through the end-to-end procurement conversation.
+5. Follow **Lab 5 > Task 2** to set up your user access.
+
+6. Follow **Lab 5 > Task 3** to run the application and walk through the end-to-end procurement conversation.
 
 ## Learn More
 
