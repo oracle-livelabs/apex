@@ -426,9 +426,9 @@ At this point the agent has gathered everything it needs: the item, the supplier
 
 This tool shows a browser confirmation dialog that summarises the full order and waits for the user to click OK or Cancel. If the user cancels, the agent stops and reports back. The purchase order is only raised after this tool returns `"confirmed"`.
 
-> **About `this.data` in client-side tools:** In an **Execute Client-side Code** tool, `this.data` is a JavaScript object that contains the parameters the agent passed to this tool call. For example, if the agent calls `confirm_action` with `MESSAGE = "Raise PO for 100 units..."`, then `this.data.MESSAGE` inside the code block holds that string. You can access any tool parameter this way.
-
 **Type:** Execute Client-side Code | **Execution:** On Demand
+
+> **Note:** In an **Execute Client-side Code** tool, `this.data` is a JavaScript object that contains the parameters passed by the agent to this tool call. For example, if the agent calls `confirm_action` with `MESSAGE = "Raise PO for 100 units..."`, then `this.data.MESSAGE` inside the code block holds that string. Any tool parameter can be accessed in this way.
 
 1. On the **Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
