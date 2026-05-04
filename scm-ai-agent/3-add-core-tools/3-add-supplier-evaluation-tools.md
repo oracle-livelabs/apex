@@ -2,7 +2,7 @@
 
 ## Introduction
 
-With the agent created and context tools in place from Lab 2, you can now add the tools that drive the actual procurement conversation.
+With the agent created and context tools in place from Lab 3, you can now add the tools that drive the actual procurement conversation.
 
 Each tool in this lab represents one step in the procurement journey:
 
@@ -13,7 +13,7 @@ Each tool in this lab represents one step in the procurement journey:
 5. **Confirm before acting**: show a browser dialog and wait for the user to approve
 6. **Raise the order**: write the planned purchase order to the database and notify the user
 
-All six tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 2 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
+All six tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 3 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
 
 Estimated Time: 25 minutes
 
@@ -37,7 +37,7 @@ In this lab, you will:
 | `show_warehouses_by_supplier` | Retrieve Data | On Demand |
 | `confirm_action` | Execute Client-side Code | On Demand |
 | `raise_purchase_order` | Execute Server-side Code | On Demand |
-{: title="Tools Built in Lab 3"}
+{: title="Tools Built in Lab 4"}
 
 ## Task 1: Identify Items at Risk in the Warehouse
 
@@ -666,7 +666,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
 ## Summary
 
-All eight tools are now in place: the two context tools from Lab 2 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order — all through a single guided conversation.
+All eight tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order — all through a single guided conversation.
 
 You may now **proceed to the next lab**.
 

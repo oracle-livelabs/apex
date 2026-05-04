@@ -4,7 +4,7 @@
 
 Before you can build the AI Agent, the workspace needs a schema, sample data, and a base application to work from.
 
-In this lab, you will load three SQL scripts: covering the warehouse schema, reference data, and operational data including the supplier delivery history the agent uses. You will then import the application and connect a Generative AI Service. Once this lab is complete, the workspace is ready for you to add agent tools in the following labs.
+In this lab, you will load three SQL scripts: covering the warehouse schema, reference data, and operational data including the supplier delivery history the agent uses. You will then import the base application. Once this lab is complete, the workspace is ready for you to configure the Generative AI Service in the next lab.
 
 Estimated Time: 10 minutes
 
@@ -129,7 +129,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Confirm the operational data script run](./images/sample-data2-run.png " ")
 
-14. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 3.
+14. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 4.
 
     ![Operational Data Results](./images/sample-data2-results.png " ")
 
@@ -171,67 +171,9 @@ In this task, you will import the base APEX application. It already contains the
 
     ![Imported SCM application available in App Builder](./images/app-builder-page-dark1.png " ")
 
-## Task 4: Configure Generative AI Service
-
-In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the application. This wires up the LLM backend that the AI Agent will use to process natural language queries later in the workshop.
-
-1. From the left navigation, click **App Builder**.
-
-    ![Imported SCM application available in App Builder](./images/app-builder-page-dark2.png " ")
-
-2. From **App Builder**, select **Workspace Utilities**.
-
-    ![App Builder Workspace Utilities](./images/appbuilder-home2.png " ")
-
-3. From **Workspace Utilities**, select **Generative AI**.
-
-    ![Generative AI Services page](./images/genai-nav.png " ")
-
-4. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the Workspace level Generative AI configuration:
-
-    > **Note:** This livelabs uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, and Generic OpenAI API Compatible. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
-
-    - AI Provider: **OCI Generative AI Service**
-    - Name: **OCI Gen AI**
-    - Static ID: **oci\_gen\_ai**
-    - Compartment ID: Enter your OCI Compartment ID. If you saved an OCI configuration file in Task 1 and you only have one compartment, you can reuse the compartment OCID from that file.
-    - Region: **us-chicago-1**
-    - Model ID: **meta.llama-3.3-70b-instruct**
-    - Used by App Builder: **On**
-    - Base URL: Leave the auto-generated value unchanged.
-    - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise create a new OCI credential.
-
-    ![Create Generative AI Service](./images/gen-ai-service-create.png " ")
-
-5. Select **Create**.
-
-6. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
-
-    ![Generative AI Service created](./images/gen-ai-service-created.png " ")
-
-7. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
-
-    ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
-
-8. Select the application from the App Builder applications list.
-
-    ![App Builder applications list](./images/appbuilder-home3.png " ")
-
-9. On the application home page, select **Shared Components**.
-
-    ![Application home page](./images/shared-comp.png " ")
-
-10. From **Shared Components**, select **AI Attributes**.
-
-    ![Shared Components](./images/shared-comp2.png " ")
-
-11. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
-
-    ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
-
 ## Summary
 
-The warehouse schema, sample data, sample application, and Generative AI service are now in place. You are ready to create the AI Agent and start adding tools in the next lab.
+The warehouse schema, sample data, and base application are now in place. You are ready to configure the Generative AI Service in the next lab.
 
 You may now **proceed to the next lab**.
 

@@ -12,7 +12,7 @@ In this hands-on workshop, you will build an **AI Procurement Agent** for the **
 
 You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, keeping business logic in PL/SQL and data in Oracle Database, all configured declaratively within APEX.
 
-Estimated Workshop Time: 60 minutes
+Estimated Workshop Time: 65 minutes
 
 ## Objectives
 
@@ -97,9 +97,10 @@ Every tool has an **Execution Point** that controls when it runs:
 | Lab | Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 10 minutes |
-| 2 | [Build an AI Agent and Add Context Tools](?lab=2-create-agent-context-tools) | 15 minutes |
-| 3 | [Add Supplier Evaluation and Purchase Order Tools](?lab=3-add-core-tools) | 25 minutes |
-| 4 | [Add the Agent to the Application and Run the Application](?lab=4-run-application) | 10 minutes |
+| 2 | [Configure Generative AI Service](?lab=2-configure-genai-service) | 5 minutes |
+| 3 | [Build an AI Agent and Add Context Tools](?lab=2-create-agent-context-tools) | 15 minutes |
+| 4 | [Add Supplier Evaluation and Purchase Order Tools](?lab=3-add-core-tools) | 25 minutes |
+| 5 | [Add the Agent to the Application and Run the Application](?lab=4-run-application) | 10 minutes |
 {: title="Workshop Labs"}
 
 ## Downloads
@@ -110,11 +111,11 @@ If you are stuck or the application is not working as expected, you can download
 
 2. Import the **SCM\_INV\_WMS\_EXPORT\_APP.sql** file into your APEX workspace. Follow the steps in the **Import Application** wizard to import the application.
 
-3. Once the application is installed, follow Lab 1 > Tasks 1 and 2 to load the data model and sample data, then follow Lab 1 > Task 4 to configure the Generative AI Service.
+3. Once the application is installed, follow Lab 1 > Tasks 1 and 2 to load the data model and sample data, then follow Lab 2 to configure the Generative AI Service.
 
-4. Follow Lab 4 > Task 2 to set up your user access.
+4. Follow Lab 5 > Task 2 to set up your user access.
 
-5. Follow Lab 4 > Task 3 to run the application and walk through the end-to-end procurement conversation.
+5. Follow Lab 5 > Task 3 to run the application and walk through the end-to-end procurement conversation.
 
 ## Learn More
 

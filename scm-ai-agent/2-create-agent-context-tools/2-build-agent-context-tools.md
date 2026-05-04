@@ -4,7 +4,7 @@
 
 The procurement use case in this workshop is warehouse-specific. When a user asks what stock is at risk, the answer should reflect their warehouse, not the whole network. When the agent raises a purchase order, it needs to know who is requesting it and what their approval authority is. When a user sets a delivery date, the agent needs to interpret it in the right timezone.
 
-None of that is possible without knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 3 and 4 accurate and personalised.
+None of that is possible without knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 4 and 5 accurate and personalised.
 
 In this lab, you will create the **Procurement Agent** and add those two context tools.
 
@@ -24,7 +24,7 @@ In this lab, you will:
 | --- | --- | --- |
 | `get_user_context` | Retrieve Data | Augment System Prompt |
 | `get_browser_timezone` | Execute Client-side Code | Augment System Prompt |
-{: title="Tools Built in Lab 2"}
+{: title="Tools Built in Lab 3"}
 
 ## Task 1: Create the AI Agent
 
