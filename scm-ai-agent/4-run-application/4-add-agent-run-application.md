@@ -162,7 +162,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     ![Navigate to App Builder from the left navigation](./images/nav-appbuilder.png " ")
 
-2. On the **App Builder** home page, hover over the application tile and select **Run** to launch the application.
+2. On the **App Builder** home page, hover over the application tile and select **Run** icon to launch the application.
 
     ![Run the application from the App Builder home page](./images/run-app.png " ")
 
