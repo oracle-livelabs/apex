@@ -58,11 +58,11 @@ The procurement conversation starts here. The user opens the assistant and asks 
         - Execution Point: **On Demand**
         - Description: copy and paste the following:
 
-    ```text
-    <copy>
-    Returns items in the current user's warehouse that are at or below their reorder point, or have an open replenishment alert. Call this when the user asks about stock risk, low stock, or what needs attention. Returns item name, available quantity, reorder point, alert priority, and supplier lead time. Results are ordered by priority then by gap size.
-    </copy>
-    ```
+            ```text
+            <copy>
+            Returns items in the current user's warehouse that are at or below their reorder point, or have an open replenishment alert. Call this when the user asks about stock risk, low stock, or what needs attention. Returns item name, available quantity, reorder point, alert priority, and supplier lead time. Results are ordered by priority then by gap size.
+            </copy>
+            ```
 
     ![Filled configuration for the get\_stocks\_at\_risk tool](./images/create-tool2.png " ")
 
@@ -175,11 +175,11 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
         - Execution Point: **On Demand**
         - Description: copy and paste the following:
 
-    ```text
-    <copy>
-    Returns active suppliers who have previously supplied the given item. Pass item_id from get_stocks_at_risk. Present only supplier_name, total_receipts, last_received_at, on_time_rate_pct, and damage_rate_pct to the user. Keep supplier_id and partner_site_id internal, as they are needed as parameters for show_warehouses_by_supplier and raise_purchase_order. Results are ordered best performer first.
-    </copy>
-    ```
+            ```text
+            <copy>
+            Returns active suppliers who have previously supplied the given item. Pass item_id from get_stocks_at_risk. Present only supplier_name, total_receipts, last_received_at, on_time_rate_pct, and damage_rate_pct to the user. Keep supplier_id and partner_site_id internal, as they are needed as parameters for show_warehouses_by_supplier and raise_purchase_order. Results are ordered best performer first.
+            </copy>
+            ```
 
     ![Filled configuration for get\_suppliers\_for\_item](./images/tool2-identification.png " ")
 
@@ -188,7 +188,7 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
     | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
-    {: title="Tool 4 Parameters"}
+    {: title="get_suppliers_for_item Parameters"}
 
     ![Tool 4 parameter grid with ITEM\_ID added](./images/tool2-parameter.png " ")
 
@@ -281,7 +281,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
     | --- | --- | --- | --- |
     | `TIME_PERIOD` | Reporting horizon such as `QUARTER` or `YEAR`. | VARCHAR2 | Yes |
     | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
-    {: title="Tool 5 Parameters"}
+    {: title="get_supplier_delivery_performance Parameters"}
 
     ![Tool 5 parameter grid with SUPPLIER\_ID and TIME\_PERIOD added](./images/task3-param.png " ")
 
@@ -372,11 +372,11 @@ With a supplier chosen, the conversation turns to where the order should go. A p
         - Execution Point: **On Demand**
         - Description: copy and paste the following:
 
-    ```text
-    <copy>
-    Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise_purchase_order. Present only warehouse_code and warehouse_name to the user. Never show warehouse_id. Ask the user to choose a warehouse by name or code. If the user has already named a warehouse, match it to the correct row and use that row's warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id internal.
-    </copy>
-    ```
+            ```text
+            <copy>
+            Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise_purchase_order. Present only warehouse_code and warehouse_name to the user. Never show warehouse_id. Ask the user to choose a warehouse by name or code. If the user has already named a warehouse, match it to the correct row and use that row's warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id internal.
+            </copy>
+            ```
 
     ![Filled configuration for show\_warehouses\_by\_supplier](./images/task4-iden.png " ")
 
@@ -385,7 +385,7 @@ With a supplier chosen, the conversation turns to where the order should go. A p
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
     | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
-    {: title="Tool 6 Parameters"}
+    {: title="show_warehouses_by_supplier Parameters"}
 
     ![Tool 6 parameter grid with SUPPLIER\_ID added](./images/task4-params.png " ")
 
@@ -458,7 +458,7 @@ This tool shows a browser confirmation dialog that summarises the full order and
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
     | MESSAGE | Confirmation text displayed to the user. | VARCHAR2 | Yes |
-    {: title="Tool 7 Parameters"}
+    {: title="confirm_action Parameters"}
 
     ![Tool 7 parameter grid with MESSAGE added](./images/task5-params.png " ")
 
@@ -522,7 +522,7 @@ The agent only calls this tool after all previous steps are complete and `confir
     | `WH_ID` | Chosen warehouse identifier. | NUMBER | Yes |
     | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
     | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
-    {: title="Tool 8 Parameters"}
+    {: title="raise_purchase_order Parameters"}
 
     ![Tool 8 parameter grid with all purchase-order inputs added](./images/task6-params.png " ")
 
