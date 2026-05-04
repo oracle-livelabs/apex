@@ -484,9 +484,9 @@ This is where the conversation becomes an action. The user has identified a shor
 
 The agent only calls this tool after all previous steps are complete and `confirm_action` has returned `"confirmed"`.
 
-> **About `apex_ai.set_tool_result`:** In an **Execute Server-side Code** tool, you call `apex_ai.set_tool_result` to send a result back to the agent and optionally surface a notification in the chat UI. The `p_result` parameter is the text the agent receives and uses to form its reply. The optional `p_notification_message` and `p_notification_type` parameters display a toast notification (`'success'`, `'warning'`, or `'error'`) directly in the APEX page. Without this call the agent receives no confirmation that the write succeeded.
-
 **Type:** Execute Server-side Code | **Execution:** On Demand
+
+> **Note:** In an **Execute Server-side Code** tool, `apex_ai.set_tool_result` can be called to return a result to the agent and optionally display a notification in the chat UI. The `p_result` parameter contains the text the agent receives to form its reply. The optional `p_notification_message` and `p_notification_type` parameters display a toast notification (`'success'`, `'warning'`, or `'error'`) in the APEX page. Without this call, the agent receives no confirmation that the write operation succeeded.
 
 1. On the **Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
