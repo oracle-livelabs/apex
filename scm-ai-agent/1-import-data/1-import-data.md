@@ -18,8 +18,6 @@ In this lab, you will:
 
 - Import the application for the workshop
 
-- Add a workspace-level Generative AI Service and assign it to the application
-
 ## Task 1: Set Up the Data Model
 
 In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs.
@@ -48,15 +46,17 @@ In this task, you will upload and run the data model script. This creates the wa
 
 7. In the row for **`scm_data_model`**, select **Run**.
 
-    ![Select Run for the scm\_data\_model script from the SQL Scripts list](./images/data-model-uploaded.png " ")
+    ![Select Run for the scm\_data\_model script from the SQL Scripts list](./images/scm-data-model-run.png " ")
 
 8. On the confirmation page, select **Run**.
 
-    ![Confirm the data model script run](./images/data-model-run.png " ")
+    ![Confirm the data model script run](./images/run-model.png " ")
 
-9. Verify that the script completes successfully and that the following tables are created:
+9. Verify that the script completes successfully and that the following objects are created:
 
     ![Data Model Results](./images/data-model-results.png " ")
+
+    **Tables**
 
     | Table | Purpose |
     | --- | --- |
@@ -77,6 +77,20 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_operational_tasks` | Replenishment orders raised by the agent |
     {: title="Database Tables"}
 
+    **Views and Procedures**
+
+    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple — the business logic lives in the database, not inline in the tool.
+
+    | Object | Used by |
+    | --- | --- |
+    | `scm_v_user_context` | `get_user_context` tool |
+    | `scm_v_stocks_at_risk` | `get_stocks_at_risk` tool |
+    | `scm_v_suppliers_for_item` | `get_suppliers_for_item` tool |
+    | `scm_v_supplier_delivery_performance` | `get_supplier_delivery_performance` tool |
+    | `scm_v_warehouses_by_supplier` | `show_warehouses_by_supplier` tool |
+    | `scm_raise_purchase_order` | `raise_purchase_order` tool |
+    {: title="Agent Views and Procedure"}
+
 ## Task 2: Load the Sample Data
 
 In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
@@ -87,7 +101,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 2. Select **Upload**.
 
-    ![Upload to SQL Scripts](./images/upload2.png " ")
+    ![Upload to SQL Scripts](./images/upload-data1.png " ")
 
 3. Download the [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql) file to your local machine.
 
@@ -101,11 +115,11 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 6. On the confirmation page, select **Run**.
 
-    ![Confirm the sample data script run](./images/sample-data1-confirm.png " ")
+    ![Confirm the sample data script run](./images/run-sample1.png " ")
 
 7. Verify that the script completes successfully.
 
-    ![Sample Data Results](./images/sample-data1-results.png " ")
+    ![Sample Data Results](./images/ran-sample1.png " ")
 
 8. Select **SQL Scripts**.
 
@@ -113,17 +127,17 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 9. Select **Upload** again.
 
-    ![Upload to SQL Scripts](./images/sample-data2-clickupload.png " ")
+    ![Upload to SQL Scripts](./images/upload-data2.png " ")
 
 10. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
 
 11. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
-    ![Operational Data Upload](./images/sample-data2-upload.png " ")
+    ![Operational Data Upload](./images/sample-data2-clickupload.png " ")
 
 12. In the row for **`scm_sample_data2`**, select **Run**.
 
-    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/sample-data2-runn.png " ")
+    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/sample-data2-upload.png " ")
 
 13. On the confirmation page, select **Run**.
 
@@ -165,7 +179,7 @@ In this task, you will import the base APEX application. It already contains the
 
 5. Review the import details and select **Import Application**.
 
-    ![Install Application](./images/import-app1.png " ")
+    ![Install Application](./images/import-file.png " ")
 
 6. After the import completes, verify that the import finishes successfully.
 

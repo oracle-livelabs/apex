@@ -4389,3 +4389,377 @@ create index idx_scm_stock_adjustments_01
 
 create index idx_scm_operational_exceptions_01
     on scm_operational_exceptions (warehouse_id, review_status_code, severity_code);
+
+
+-- =============================================================================
+-- Agent Views and Procedures
+-- =============================================================================
+-- The following views and procedure are used by the AI Procurement Agent tools
+-- built in Labs 3 and 4. They encapsulate query logic in the database so that
+-- the tool configurations in APEX remain simple and maintainable.
+-- =============================================================================
+
+
+-- ---------------------------------------------------------------------------
+-- View: scm_v_user_context
+-- Used by: get_user_context tool (Lab 3, Task 2)
+-- ---------------------------------------------------------------------------
+create or replace view scm_v_user_context as
+select u.user_name,
+       u.full_name,
+       u.email_address,
+       r.role_name,
+       r.role_scope_code,
+       coalesce(a.authority_level_override,
+                r.approval_authority_level)   as approval_authority_level,
+       w.warehouse_name,
+       w.warehouse_code,
+       w.warehouse_id,
+       mgr.full_name                          as manager_name,
+       mgr.email_address                      as manager_email
+  from scm_application_users     u
+  join scm_user_role_assignments  a   on a.application_user_id   = u.application_user_id
+                                     and a.assignment_status_code = 'ACTIVE'
+                                     and a.is_primary_role        = true
+  join scm_user_roles             r   on r.user_role_id           = a.user_role_id
+  left join scm_warehouses        w   on w.warehouse_id           = u.default_warehouse_id
+  left join scm_application_users mgr on mgr.application_user_id  = u.manager_user_id;
+
+
+-- ---------------------------------------------------------------------------
+-- View: scm_v_stocks_at_risk
+-- Used by: get_stocks_at_risk tool (Lab 4, Task 1)
+-- CTEs pre-compute available balances and highest alert priority per
+-- item/warehouse to avoid ORA-01799 (subquery in outer-join ON clause).
+-- ---------------------------------------------------------------------------
+create or replace view scm_v_stocks_at_risk as
+with balances as (
+    select sl.warehouse_id,
+           ib.item_id,
+           sum(ib.quantity_available) as total_available
+      from scm_inventory_balances  ib
+      join scm_storage_locations   sl on sl.storage_location_id = ib.storage_location_id
+     where ib.stock_status_code = 'AVAILABLE'
+     group by sl.warehouse_id, ib.item_id
+),
+highest_alert as (
+    select item_id,
+           warehouse_id,
+           decode(max(decode(priority_code,
+                       'CRITICAL',4,'HIGH',3,'MEDIUM',2,'LOW',1)),
+                       4,'CRITICAL',3,'HIGH',2,'MEDIUM',1,'LOW') as priority_code
+      from scm_replenishment_alerts
+     where alert_status_code in ('OPEN', 'IN_REVIEW')
+     group by item_id, warehouse_id
+)
+select u.user_name,
+       i.item_id,
+       i.item_code,
+       i.item_name,
+       i.base_uom_code,
+       w.warehouse_name,
+       nvl(bal.total_available, 0)                                              as available_quantity,
+       p.reorder_point_quantity,
+       p.safety_stock_quantity,
+       p.reorder_target_quantity,
+       p.replenishment_lead_time_days,
+       ra.priority_code                                                          as alert_priority,
+       ra.alert_type_code,
+       ra.alert_number,
+       round((systimestamp - ra.raised_at) * 24)                                as hours_open,
+       decode(ra.priority_code,'CRITICAL',1,'HIGH',2,'MEDIUM',3,'LOW',4,5)      as priority_sort,
+       nvl(p.reorder_point_quantity,0) - nvl(bal.total_available,0)             as stock_gap
+  from scm_item_warehouse_policies p
+  join scm_items             i   on i.item_id              = p.item_id
+  join scm_warehouses        w   on w.warehouse_id         = p.warehouse_id
+  join scm_application_users u   on u.default_warehouse_id = w.warehouse_id
+  left join balances         bal on bal.warehouse_id = p.warehouse_id
+                                and bal.item_id      = p.item_id
+  left join highest_alert    ha  on ha.item_id       = p.item_id
+                                and ha.warehouse_id  = p.warehouse_id
+  left join scm_replenishment_alerts ra
+         on ra.item_id           = p.item_id
+        and ra.warehouse_id      = p.warehouse_id
+        and ra.alert_status_code in ('OPEN', 'IN_REVIEW')
+        and ra.priority_code     = ha.priority_code
+ where p.is_active                    = true
+   and p.low_stock_alert_enabled_flag = true
+   and ( nvl(bal.total_available, 0) <= nvl(p.reorder_point_quantity, 0)
+         or ra.alert_number is not null )
+   and not exists (
+           select 1
+             from scm_inbound_receipts      por
+             join scm_inbound_receipt_lines porl on porl.inbound_receipt_id = por.inbound_receipt_id
+            where por.receipt_source_code  = 'SUPPLIER'
+              and por.receipt_status_code  = 'PLANNED'
+              and por.warehouse_id         = p.warehouse_id
+              and porl.item_id             = p.item_id
+              and por.expected_arrival_at  > systimestamp
+       );
+
+
+-- ---------------------------------------------------------------------------
+-- View: scm_v_suppliers_for_item
+-- Used by: get_suppliers_for_item tool (Lab 4, Task 2)
+-- ---------------------------------------------------------------------------
+create or replace view scm_v_suppliers_for_item as
+select irl.item_id,
+       bp.business_partner_id                          as supplier_id,
+       bp.partner_number,
+       bp.partner_name                                 as supplier_name,
+       ps.partner_site_id,
+       ps.site_code,
+       ps.site_name,
+       count(distinct ir.inbound_receipt_id)           as total_receipts,
+       max(ir.actual_arrival_at)                       as last_received_at,
+       round(
+           100 * avg(
+               case
+                   when ir.actual_arrival_at   is not null
+                    and ir.expected_arrival_at is not null
+                    and ir.actual_arrival_at  <= ir.expected_arrival_at
+                   then 1 else 0
+               end), 1)                                as on_time_rate_pct,
+       round(
+           100 * sum(nvl(irl.damaged_quantity, 0))
+               / nullif(sum(nvl(irl.received_quantity, 0)), 0),
+           1)                                          as damage_rate_pct
+  from scm_business_partners     bp
+  join scm_partner_sites         ps  on ps.business_partner_id = bp.business_partner_id
+  join scm_inbound_receipts      ir  on ir.source_partner_id   = bp.business_partner_id
+                                    and ir.receipt_source_code  = 'SUPPLIER'
+  join scm_inbound_receipt_lines irl on irl.inbound_receipt_id  = ir.inbound_receipt_id
+ where bp.partner_type_code   = 'SUPPLIER'
+   and bp.partner_status_code = 'ACTIVE'
+ group by irl.item_id,
+          bp.business_partner_id, bp.partner_number, bp.partner_name,
+          ps.partner_site_id,     ps.site_code,       ps.site_name;
+
+
+-- ---------------------------------------------------------------------------
+-- View: scm_v_supplier_delivery_performance
+-- Used by: get_supplier_delivery_performance tool (Lab 4, Task 3)
+-- Pre-aggregates metrics for QUARTER and YEAR so the tool filters by
+-- business_partner_id and time_period only.
+-- ---------------------------------------------------------------------------
+create or replace view scm_v_supplier_delivery_performance as
+select 'QUARTER'                                               as time_period,
+       bp.business_partner_id,
+       bp.partner_name                                         as supplier_name,
+       count(distinct ir.inbound_receipt_id)                   as receipt_count,
+       round(100 * avg(
+           case
+               when ir.actual_arrival_at   is not null
+                and ir.expected_arrival_at is not null
+                and ir.actual_arrival_at  <= ir.expected_arrival_at
+               then 1 else 0
+           end), 1)                                            as on_time_rate_pct,
+       round(avg(
+           case
+               when ir.actual_arrival_at   is not null
+                and ir.expected_arrival_at is not null
+                and ir.actual_arrival_at  > ir.expected_arrival_at
+               then (cast(ir.actual_arrival_at   as date)
+                   - cast(ir.expected_arrival_at as date)) * 24
+           end), 1)                                            as avg_delay_hours,
+       round(avg(
+           case
+               when ir.actual_arrival_at      is not null
+                and ir.receiving_completed_at is not null
+               then (cast(ir.receiving_completed_at as date)
+                   - cast(ir.actual_arrival_at      as date)) * 24
+           end), 1)                                            as avg_dock_to_stock_hours,
+       sum(nvl(irl.received_quantity, 0))                      as total_received,
+       sum(nvl(irl.damaged_quantity,  0))                      as total_damaged,
+       sum(nvl(irl.shortage_quantity, 0))                      as total_shortage,
+       sum(nvl(irl.rejected_quantity, 0))                      as total_rejected,
+       round(100 * sum(nvl(irl.damaged_quantity, 0))
+           / nullif(sum(nvl(irl.received_quantity, 0)), 0), 1) as damage_rate_pct
+  from scm_business_partners     bp
+  join scm_inbound_receipts      ir  on ir.source_partner_id  = bp.business_partner_id
+                                    and ir.receipt_source_code = 'SUPPLIER'
+  join scm_inbound_receipt_lines irl on irl.inbound_receipt_id = ir.inbound_receipt_id
+ where ir.actual_arrival_at >= add_months(trunc(sysdate, 'Q'), -3)
+   and ir.actual_arrival_at  < sysdate
+ group by bp.business_partner_id, bp.partner_name
+union all
+select 'YEAR'                                                  as time_period,
+       bp.business_partner_id,
+       bp.partner_name                                         as supplier_name,
+       count(distinct ir.inbound_receipt_id)                   as receipt_count,
+       round(100 * avg(
+           case
+               when ir.actual_arrival_at   is not null
+                and ir.expected_arrival_at is not null
+                and ir.actual_arrival_at  <= ir.expected_arrival_at
+               then 1 else 0
+           end), 1)                                            as on_time_rate_pct,
+       round(avg(
+           case
+               when ir.actual_arrival_at   is not null
+                and ir.expected_arrival_at is not null
+                and ir.actual_arrival_at  > ir.expected_arrival_at
+               then (cast(ir.actual_arrival_at   as date)
+                   - cast(ir.expected_arrival_at as date)) * 24
+           end), 1)                                            as avg_delay_hours,
+       round(avg(
+           case
+               when ir.actual_arrival_at      is not null
+                and ir.receiving_completed_at is not null
+               then (cast(ir.receiving_completed_at as date)
+                   - cast(ir.actual_arrival_at      as date)) * 24
+           end), 1)                                            as avg_dock_to_stock_hours,
+       sum(nvl(irl.received_quantity, 0))                      as total_received,
+       sum(nvl(irl.damaged_quantity,  0))                      as total_damaged,
+       sum(nvl(irl.shortage_quantity, 0))                      as total_shortage,
+       sum(nvl(irl.rejected_quantity, 0))                      as total_rejected,
+       round(100 * sum(nvl(irl.damaged_quantity, 0))
+           / nullif(sum(nvl(irl.received_quantity, 0)), 0), 1) as damage_rate_pct
+  from scm_business_partners     bp
+  join scm_inbound_receipts      ir  on ir.source_partner_id  = bp.business_partner_id
+                                    and ir.receipt_source_code = 'SUPPLIER'
+  join scm_inbound_receipt_lines irl on irl.inbound_receipt_id = ir.inbound_receipt_id
+ where ir.actual_arrival_at >= add_months(trunc(sysdate, 'YYYY'), -12)
+   and ir.actual_arrival_at  < sysdate
+ group by bp.business_partner_id, bp.partner_name;
+
+
+-- ---------------------------------------------------------------------------
+-- View: scm_v_warehouses_by_supplier
+-- Used by: show_warehouses_by_supplier tool (Lab 4, Task 4)
+-- ---------------------------------------------------------------------------
+create or replace view scm_v_warehouses_by_supplier as
+select ir.source_partner_id         as supplier_id,
+       w.warehouse_id,
+       w.warehouse_code,
+       w.warehouse_name,
+       count(ir.inbound_receipt_id) as total_deliveries,
+       max(ir.actual_arrival_at)    as last_delivered_at
+  from scm_warehouses       w
+  join scm_inbound_receipts ir on ir.warehouse_id        = w.warehouse_id
+                               and ir.receipt_source_code = 'SUPPLIER'
+ where w.warehouse_status_code = 'ACTIVE'
+ group by ir.source_partner_id, w.warehouse_id, w.warehouse_code, w.warehouse_name;
+
+
+-- ---------------------------------------------------------------------------
+-- Procedure: scm_raise_purchase_order
+-- Used by: raise_purchase_order tool (Lab 4, Task 6)
+-- ---------------------------------------------------------------------------
+create or replace procedure scm_raise_purchase_order (
+    p_confirmed   in varchar2,
+    p_item_id     in number,
+    p_supplier_id in number,
+    p_wh_id       in number,
+    p_quantity    in number,
+    p_due_date    in varchar2,
+    p_timezone    in varchar2,
+    p_app_user    in varchar2
+)
+as
+    v_receipt_number   varchar2(30);
+    v_receipt_id       number;
+    v_user_id          number;
+    v_item_name        varchar2(200);
+    v_uom              varchar2(10);
+    v_supplier_name    varchar2(200);
+    v_warehouse_name   varchar2(200);
+    v_seq              number;
+    v_due              timestamp with time zone;
+    v_receiving_loc_id number;
+begin
+    if p_confirmed != 'confirmed' then
+        apex_ai.set_tool_result(
+            p_result => 'Purchase order cancelled. User did not confirm.'
+        );
+        return;
+    end if;
+
+    select application_user_id
+      into v_user_id
+      from scm_application_users
+     where lower(user_name) = lower(p_app_user);
+
+    select storage_location_id
+      into v_receiving_loc_id
+      from scm_storage_locations
+     where warehouse_id         = p_wh_id
+       and location_type_code   = 'RECEIVING'
+       and location_status_code = 'ACTIVE'
+       and rownum               = 1;
+
+    select item_name, base_uom_code
+      into v_item_name, v_uom
+      from scm_items
+     where item_id = p_item_id;
+
+    select partner_name
+      into v_supplier_name
+      from scm_business_partners
+     where business_partner_id = p_supplier_id;
+
+    select warehouse_name
+      into v_warehouse_name
+      from scm_warehouses
+     where warehouse_id = p_wh_id;
+
+    select nvl(max(to_number(regexp_substr(receipt_number, '\d+$'))), 0) + 1
+      into v_seq
+      from scm_inbound_receipts
+     where receipt_number like 'POR-%';
+
+    v_receipt_number := 'POR-' || lpad(v_seq, 6, '0');
+
+    v_due := to_timestamp_tz(
+                 p_due_date || ' 17:00:00 ' || p_timezone,
+                 'YYYY-MM-DD HH24:MI:SS TZR'
+             );
+
+    insert into scm_inbound_receipts (
+        receipt_number, receipt_source_code, warehouse_id,
+        source_partner_id, receipt_status_code,
+        expected_arrival_at, received_by
+    ) values (
+        v_receipt_number, 'SUPPLIER', p_wh_id,
+        p_supplier_id, 'PLANNED',
+        v_due, p_app_user
+    ) returning inbound_receipt_id into v_receipt_id;
+
+    insert into scm_inbound_receipt_lines (
+        inbound_receipt_id, line_number, item_id,
+        receiving_location_id,
+        expected_quantity, received_quantity,
+        accepted_quantity, quarantine_quantity,
+        damaged_quantity, shortage_quantity,
+        overage_quantity, rejected_quantity,
+        line_status_code
+    ) values (
+        v_receipt_id, 1, p_item_id,
+        v_receiving_loc_id,
+        p_quantity, 0,
+        0, 0, 0, 0, 0, 0,
+        'OPEN'
+    );
+
+    update scm_replenishment_alerts
+       set alert_status_code   = 'ACTIONED',
+           reviewed_at         = systimestamp,
+           reviewed_by_user_id = v_user_id
+     where item_id            = p_item_id
+       and warehouse_id       = p_wh_id
+       and alert_status_code in ('OPEN', 'IN_REVIEW');
+
+    apex_ai.set_tool_result(
+        p_result               => 'Purchase order ' || v_receipt_number
+                                    || ' raised for '   || v_item_name
+                                    || ' - '            || p_quantity
+                                    || ' '              || v_uom
+                                    || ' from '         || v_supplier_name
+                                    || ' to '           || v_warehouse_name
+                                    || '. Expected delivery '
+                                    || to_char(v_due, 'DD-Mon-YYYY') || '.',
+        p_notification_message => v_receipt_number || ' raised successfully',
+        p_notification_type    => 'success'
+    );
+end scm_raise_purchase_order;
+/

@@ -92,6 +92,8 @@ Every tool has an **Execution Point** that controls when it runs:
 
 > **Note:** The application ID in the screenshots may vary. Please ignore the application ID.
 
+> **Important:** This workshop requires access to a Generative AI provider of your choice. Oracle APEX connects to your chosen AI provider using your own credentials — Oracle APEX does not provide or include AI model access. Usage of the AI provider's API may incur costs charged directly by that provider, depending on your plan and usage. Please review your AI provider's pricing before proceeding.
+
 ## Labs
 
 | Lab | Module | Est. Time |
@@ -115,9 +117,7 @@ If you are stuck or the application is not working as expected, you can download
 
 4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-5. Follow **Lab 5 > Task 2** to set up your user access.
-
-6. Follow **Lab 5 > Task 3** to run the application and walk through the end-to-end procurement conversation.
+5. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
 
 ## Learn More
 

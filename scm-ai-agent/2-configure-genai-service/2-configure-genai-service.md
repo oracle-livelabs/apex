@@ -4,6 +4,8 @@
 
 Before you can create the AI Agent, you need to connect Oracle APEX to a Generative AI provider. In this lab, you will configure OCI Generative AI as a workspace-level service and assign it to the application. This provides the LLM backend that the Procurement Agent will use to process natural language and invoke tools in the following labs.
 
+> **Important:** Oracle APEX acts as the application layer — it does not provide or include access to any AI model. You will need your own credentials for a supported Generative AI provider. Any charges for API usage are billed directly by your AI provider, not by Oracle APEX. Please review your provider's pricing before proceeding.
+
 Estimated Time: 5 minutes
 
 ### Objectives

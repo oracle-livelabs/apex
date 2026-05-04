@@ -134,35 +134,19 @@ The agent needs to know who the signed-in user is before it can give useful answ
 
             ```sql
             <copy>
-            select u.full_name,
-                u.email_address,
-                r.role_name,
-                r.role_scope_code,
-                coalesce(a.authority_level_override,
-                            r.approval_authority_level)  as approval_authority_level,
-                w.warehouse_name,
-                w.warehouse_code,
-                w.warehouse_id,
-                mgr.full_name                         as manager_name,
-                mgr.email_address                     as manager_email
-            from scm_application_users     u
-            join scm_user_role_assignments  a   on a.application_user_id  = u.application_user_id
-                                                and a.assignment_status_code = 'ACTIVE'
-                                                and a.is_primary_role        = true
-            join scm_user_roles             r   on r.user_role_id          = a.user_role_id
-            left join scm_warehouses        w   on w.warehouse_id          = u.default_warehouse_id
-            left join scm_application_users mgr on mgr.application_user_id = u.manager_user_id
-            where lower(u.user_name) = lower(:APP_USER)
+            select *
+              from scm_v_user_context
+             where lower(user_name) = lower(:APP_USER)
             </copy>
             ```
 
-    ![SQL Query completed for the get\_user\_context tool](./images/create-tool1.png " ")
+    ![SQL Query completed for the get\_user\_context tool](./images/task1-setting.png " ")
 
 3. Click **Create**.
 
     ![Create button on the get\_user\_context tool page](./images/create-tools1.png " ")
 
-    This query joins four tables to assemble the user's full context:
+    The `scm_v_user_context` view joins the following tables to assemble the user's full context:
 
     | Table | What it provides |
     | --- | --- |
