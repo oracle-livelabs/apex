@@ -92,7 +92,7 @@ Every tool has an **Execution Point** that controls when it runs:
 
 > **Note:** The application ID in the screenshots may vary. Please ignore the application ID.
 
-> **Important:** This workshop requires access to a Generative AI provider of your choice. Oracle APEX connects to your chosen AI provider using your own credentials — Oracle APEX does not provide or include AI model access. Usage of the AI provider's API may incur costs charged directly by that provider, depending on your plan and usage. Please review your AI provider's pricing before proceeding.
+> **Important:** This workshop requires an active account with a supported Generative AI provider. Oracle APEX connects to the provider of your choice using your own credentials. Any charges for API usage are billed directly by your provider. Please review your provider's pricing before proceeding.
 
 ## Labs
 

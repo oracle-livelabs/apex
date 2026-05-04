@@ -462,7 +462,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
 ## Summary
 
-All eight tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order — all through a single guided conversation.
+All eight tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order, all through a single guided conversation.
 
 You may now **proceed to the next lab**.
 

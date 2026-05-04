@@ -79,7 +79,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
     **Views and Procedures**
 
-    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple — the business logic lives in the database, not inline in the tool.
+    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple. The business logic lives in the database, not inline in the tool.
 
     | Object | Used by |
     | --- | --- |

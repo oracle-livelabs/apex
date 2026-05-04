@@ -131,7 +131,7 @@ In this task, you will launch the application and validate the end-to-end procur
     </copy>
     ```
 
-    *Tool invoked: `show_warehouses_by_supplier` — the agent retrieves the warehouses this supplier has previously delivered to and asks you to choose one.*
+    *Tool invoked: `show_warehouses_by_supplier`. The agent retrieves the warehouses this supplier has previously delivered to and asks you to choose one.*
 
     ![Procurement Assistant Conversation](./images/raise-po.png " ")
 
@@ -143,13 +143,13 @@ In this task, you will launch the application and validate the end-to-end procur
     </copy>
     ```
 
-    *Tool invoked: `confirm_action` — the agent presents a summary of the purchase order and waits for your confirmation before proceeding.*
+    *Tool invoked: `confirm_action`. The agent presents a summary of the purchase order and waits for your confirmation before proceeding.*
 
     ![Procurement Assistant Conversation](./images/quantity.png " ")
 
 8. Confirm the browser dialog when it appears so the purchase order can be created.
 
-    *Tool invoked: `raise_purchase_order` — the purchase order is inserted into the system.*
+    *Tool invoked: `raise_purchase_order`. The purchase order is inserted into the system.*
 
     ![Procurement Assistant Conversation](./images/confirm-po.png " ")
 
