@@ -6,6 +6,7 @@ This workshop guides APEX developers and beginners through spec-driven CRM appli
 ### Objectives
 - Install the required development tools and extensions.
 - Load the CRM schema and sample data into the APEX workspace.
+- Generate a CRM app through Spec-Driven Development.
 - Enhance the CRM application with APEXlang-driven customizations and automations.
 
 Estimated Workshop Time: 1 hour

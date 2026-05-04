@@ -13,83 +13,174 @@ Estimated Time: 15 minutes
 ## Task 1: Set up the APEXlang Skills repo in VSCode
 1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
-Download the skills from [here](https://orahub.oci.oraclecorp.com/dbtools-apex-dev/apex-app-gen/-/tree/apexlang-skill?ref_type=heads). Unzip the folder.
+    Download the skills from [here](https://orahub.oci.oraclecorp.com/dbtools-apex-dev/apex-app-gen/-/tree/apexlang-skill?ref_type=heads). Unzip the folder.
 
     ![Visual Studio Code workspace with APEXlang skills repository cloned](images/vscode-apexlang-repo-setup.png)
 
+2. Create an empty folder called **Applications**.
+
+    ![Folder structure](images/app-folder.png)
+
 ## Task 2: Export the app in APEXlang format into the Applications folder
-Export the CRM application in APEXlang format and place the output inside the `Applications` folder of the APEXlang skills that you downloaded in Task 1.
+Export the CRM application in APEXlang format and place the output inside the `applications` folder of the APEXlang skills that you downloaded in Task 1.
 
 1. Navigate to SQL Developer extension, expand the connection you created and further expand **APEX**. Under APEX, you will find all the apps that are part of the schema. Right-click **Vision CRM** and select **Export**.
     ![APEXlang command output showing exported application files](images/apexlang-export-app.png)
 
-2. Accept the default values, for Folder, click **Browse** and select the *Applications* folder in your APEXlang skills parent folder. Then, click **Apply**.
+2. Accept the default values, for Folder, click **Browse** and select the *applications* folder in your APEXlang skills parent folder. Then, click **Apply**.
     ![APEXlang command output showing exported application files](images/export-to-apps.png)
 
 
 ## Task 3: Import the App into your APEX workspace from VS Code
-1. Expand the Applications folder and navigate to vision-crm > pages. Select any one of the page to open in the editor.
+1. Expand the Applications folder and navigate to **vision-crm > pages**. Select any one of the page to open in the editor.
+
+    ![VS code application files](images/select-page.png)
 
 2. At the top right, you will be able to see a green arrow button for Import Application. (If you do not see this button, ensure that you have successfully connected to your APEX schema from SQL Developer extension.)
 
-3. Click **Import Application**. View the status at the bar below. Once the application is successfully imported, run the application from the App Builder in your browser.
+    Click **Import Application**. View the status at the bar below. Once the application is successfully imported, run the application from the App Builder in your browser.
 
-## Task 3: Change the leads report type to Content Row
+    ![VS code editor](images/green-button-import.png)
+
+## Task 4: Change the leads report type to Content Row
 1. Use APEXlang to adjust the leads report so it renders as a content report.
 
-Prompt: Convert the lead management report to a content row. Show Lead Name and Lead Type Code. Display the lead value as a badge on the right with a proper avatar.
+    Prompt: 
+    ```
+    <copy>
+    Convert the lead management report to a content row. Show Lead Name and Lead Type Code. Display the lead value as a badge on the right with a proper avatar.
+    </copy>
+    ```
+    
     ![APEXlang configuration panel changing leads report to content report](images/apexlang-leads-content-report.png)
 
 2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code.
+
     ![Application running in the browser](images/view-leads-content-report.png)   
 
-## Task 4: Bulk Edit pages
+## Task 5: Bulk Edit pages
 1. Update the placement of the New Leads and New Opportunity create buttons.
 
-Prompt: Move all create buttons across the app - New Lead, New Opportunity, etc. - to the right side of the breadcrumb bar. Make them visually prominent.
+    Prompt: 
+    ```
+    <copy>
+    Move all create buttons across the app - New Lead, New Opportunity, etc. - to the right side of the breadcrumb bar. Make them visually prominent.
+    </copy>
+    ```
+
     ![APEX builder interface repositioning create buttons](images/apexlang-bulk-edit-buttons.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code. 
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
 Observe that 9 pages are updated and the buttons are now visually prominent.
     ![Application running in the browser](images/view-bulk-edit-buttons.png)
 
-## Task 5: Enforce Business Rules using Validations
+## Task 6: Enforce Business Rules using Validations
 1. Ensure that both Budget Value and Estimated Value remain non-negative within the application.
-Prompt: In the lead form ensure budget amount and Expected Value are non-negative.
+
+    Prompt: 
+    ```
+    <copy>
+    In the lead form ensure budget amount and Expected Value are non-negative.
+    </copy>
+    ```
+
     ![APEX validation rule enforcing non-negative budget values](images/apexlang-budget-validation.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code.  
-Click on the three dots to **Edit** a lead record.
-    ![Edit record in the app](images/edit-lead.png)
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code.  
+  
+
+3. Click on any lead to **Edit** a lead record.
+
+    ![Edit record in the app](images/edit-lead1.png)
+
+    ![Edit record in the app](images/edit-lead2.png)
 
 3. Enter a negative amount value for **Budget Amount** and click **Apply Changes**. Observe how a validation error is produced.
+    
     ![APEX validation rule enforcing non-negative budget values](images/view-budget-validation.png)
 
-## Task 6: Get Instant Feedback using Dynamic Action
-1. Implement a dynamic action that immediately displays an intuitive message when the Budget value is modified to a negative number.
 
-Prompt: Add inline validation to the Budget Amount field. Show an error message immediately when the value is modified, in addition to the existing submit validation.
-    ![Dynamic action configuration showing negative budget warning message](images/apex-dynamic-action-negative-budget.png)
-
-## Task 7: Visualize leads on a map, convert to heat map
+## Task 7: Visualize leads on a Map
 1. Visualize the leads data on a map presentation.
+
+    Prompt:
+    ```
+    <copy>
+        Add a map page to visualize leads by location.
+    </copy>
+    ```
     ![Leads data rendered on an interactive map region](images/apex-map-visualize-leads.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code. 
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
     ![Leads data rendered on an interactive map region](images/view-map-visualize-leads.png)
 
-3. Convert the map into a heat map view using APEXlang capabilities.
-    ![Heat map representation of leads density](images/apex-heatmap-view.png)
-
-4. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code. 
-    ![Heat map representation of leads density](images/view-heatmap-view.png)
 
 ## Task 8: Build a CRM chat assistant
 1. Build a CRM chat assistant experience powered by APEXlang.
+
+    Prompt: 
+    ```
+    <copy>
+    Add an AI Assistant to the Executive Dashboard page which can handle queries about leads and opportunities.
+    </copy>
+    ```
+
     ![APEXlang-generated CRM chat assistant interface](images/apexlang-crm-chat-assistant.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code. 
+3. Let us refine the chat assistant to enhance the search capability using Tools introduced in APEX 26.1. 
+
+    Prompt: 
+    ```
+    <copy>
+    Add a tool to Search leads based on owner, branch, stage.
+    </copy>
+    ```
+
+    ![APEXlang-generated CRM chat assistant interface](images/add-search-tool.png)
+
+4. Finally, let us try adding tools that perform a task on your behalf.
+
+    Prompt: 
+    ```
+    <copy>
+    Add a tool to convert Lead to Opportunities.
+    </copy>
+    ```
+
+    ![APEXlang-generated CRM chat assistant interface](images/lead-convert-tool.png)
+
+
+5. Import Application into the workspace and view the Executive Dashboard page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
     ![APEXlang-generated CRM chat assistant interface](images/view-chat-assistant.png)
+
+6. Try the following queries in the AI assistant.
+
+- Query 1: 
+    ```
+    <copy>
+    Show me recent leads owned by nyc.sales.1
+    </copy>
+    ```
+
+    ![APEXlang-generated CRM chat assistant interface](images/query1.png)
+
+- Query 2: 
+    ```
+    <copy>
+    Analyse lead L-331
+    </copy>
+    ```
+
+    ![APEXlang-generated CRM chat assistant interface](images/query2.png)
+
+- Query 3: 
+    ```
+    <copy>
+    Convert this lead to opportunity
+    </copy>
+    ```
+
+    ![APEXlang-generated CRM chat assistant interface](images/query3.png)
 
 ## Acknowledgements
 - **Author** - Apoorva Srinivas, Prinicpal Product Manager

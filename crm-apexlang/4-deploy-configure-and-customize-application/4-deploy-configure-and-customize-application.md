@@ -63,25 +63,28 @@ In this task, you import the generated blueprint file and validate the blueprint
 
   ![Add Access](./images/add-access.png " ")
 
-6. Enter the User Name and assign the appropriate roles. Click **Create Assignment**
+6. For the purpose of this demo, we will assign all the roles to a single user to avoid multiple logins.
+
+  In this case, enter your APEX workspace username and assign the appropriate roles. Click **Create Assignment**.
 
   ![Add Roles](./images/add-roles.png " ")
 
-## Task 3: Run and Customize the Application
+## Task 3: Run and Explore the Application
 
-In this task, you run the application and apply the first round of UI customization. This final step confirms that the imported application runs and lets you tailor the appearance before moving on to later work.
+In this task, you run the application and explore the app. This final step confirms that the imported application runs successfully.
 
 1. Run the application.
 
 ![Run App](./images/run-app.png)
 
-2. Navigate to **Developer Toolbar**. Click on **Customise**.Open **Theme Roller**.
+2. Explore the different pages in the app.
 
-![Developer Toolbar](./images/developer-toolbar.png)
+![App](./images/app1.png)
 
-3. Customize the UI appearance.
+![App](./images/app2.png)
 
-4. Save the theme.
+![App](./images/app3.png)
+
 
 ## Acknowledgements
 
