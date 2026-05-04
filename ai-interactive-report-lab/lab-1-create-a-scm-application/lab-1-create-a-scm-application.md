@@ -120,6 +120,26 @@ This task gives you context for the rest of the workshop. You will review the ap
 
     ![Identify SCM objects in Object Browser](images/identify-scm-objects.png)
 
+## Task 4: Refresh Data Dictionary
+
+When we generate a data model, the database updates instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures APEX reads the latest tables and makes them available in wizards and builders.In this task, we will refresh the Data Dictionary to synchronize APEX with the updated schema.
+
+1. To refresh database objects, click APEX **Administration** icon from the left menu above your user profile. Then select **Manage Service > Manage Service**.
+
+    ![Identify SCM objects in Object Browser](images/nav-admin-callouts.png)
+
+2. On the right-hand side, under **Manage Meta Data**, select **Data Dictionary Cache**.
+
+    ![Identify SCM objects in Object Browser](images/data-dic.png)
+
+3. To refresh the cache manually click **Refresh Cache Only**.
+
+    ![Identify SCM objects in Object Browser](images/refresh-cache-only.png)
+
+4. Now you will view refreshed cache for tables.
+
+    ![Identify SCM objects in Object Browser](images/cache-results.png)
+
 ## Summary
 
 You loaded the SCM setup scripts, created the Supply Chain Management application, and verified that the required SCM objects are available. The application and sample data are now ready for AI service configuration and report enhancement.
