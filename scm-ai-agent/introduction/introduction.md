@@ -10,7 +10,7 @@ This workshop focuses on the inventory and warehouse management aspects of suppl
 
 In this hands-on workshop, you will build an **AI Procurement Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
 
-You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, keeping business logic in PL/SQL and data in Oracle Database, all configured declaratively within APEX.
+You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
 
 Estimated Workshop Time: 60 minutes
 
