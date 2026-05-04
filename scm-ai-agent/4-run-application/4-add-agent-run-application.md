@@ -68,11 +68,11 @@ In this task, you will configure the entry point that users will use to start th
 
     - Under **Quick Actions**:
 
-        - Quick Message 1: **What items are low in stock?**
+        - Message 1: **What items are low in stock?**
 
     ![Trigger action configured to Show AI Assistant with Procurement Agent](./images/show-ai.png " ")
 
-7. Click **Save** to persist the button and trigger action changes.
+7. Click **Save** to persist the changes made so far.
 
     ![Page Designer with the button, trigger action, and saved confirmation](./images/save-page.png " ")
 
@@ -96,7 +96,7 @@ In this task, you will set up your user so the application recognises you when y
 
     ![User assignment](./images/add-acl-user2.png " ")
 
-5. Navigate to **SQL Workshop > SQL Commands**. Hover over the left navigation bar, select **SQL Workshop**, then select **SQL Commands**.
+5. Hover over the left navigation bar, select **SQL Workshop**, then select **SQL Commands**.
 
     ![SQL Commands in SQL Workshop](./images/nav-sql.png " ")
 
@@ -156,6 +156,8 @@ In this task, you will set up your user so the application recognises you when y
 
 In this task, you will launch the application and validate the end-to-end procurement process. It begins with a stock shortage, continues through supplier evaluation, and ends with creation of a planned purchase order.
 
+> **Note:** The agent's responses and screenshots shown are for reference only. Response format and wording may differ between sessions, as large language models are non-deterministic by nature.
+
 1. From the left navigation, select **App Builder**.
 
     ![Navigate to App Builder from the left navigation](./images/nav-appbuilder.png " ")
@@ -175,7 +177,9 @@ In this task, you will launch the application and validate the end-to-end procur
 5. Begin the conversation with the quick message:
 
     ```text
+    <copy>
     What items are low in stock?
+    </copy>
     ```
 
     *Before processing your message, the agent automatically runs `get_user_context` and `get_browser_timezone` to inject your identity, warehouse, and timezone into every response. It then calls `get_stocks_at_risk` to return the items at or below their reorder point in your warehouse.*
@@ -185,7 +189,9 @@ In this task, you will launch the application and validate the end-to-end procur
 6. Ask the agent to show suppliers for the item:
 
     ```text
+    <copy>
     Show me suppliers for Logi Lift Vertical Mouse.
+    </copy>
     ```
 
     *Tool invoked: `get_suppliers_for_item`*
@@ -195,7 +201,9 @@ In this task, you will launch the application and validate the end-to-end procur
 7. Request delivery performance for the supplier:
 
     ```text
+    <copy>
     Show me delivery performance for VoltNest Consumer Electronics last quarter.
+    </copy>
     ```
 
     *Tool invoked: `get_supplier_delivery_performance`*
@@ -205,7 +213,9 @@ In this task, you will launch the application and validate the end-to-end procur
 8. Instruct the agent to raise a purchase order:
 
     ```text
+    <copy>
     Yes, raise a PO.
+    </copy>
     ```
 
     *Tool invoked: `show_warehouses_by_supplier` — the agent retrieves the warehouses this supplier has previously delivered to and asks you to choose one.*
@@ -215,7 +225,9 @@ In this task, you will launch the application and validate the end-to-end procur
 9. When the agent asks for the destination warehouse, quantity, and delivery date, reply with:
 
     ```text
+    <copy>
     PHX-WEST, 50 units, deliver by 2026-06-25.
+    </copy>
     ```
 
     *Tool invoked: `confirm_action` — the agent presents a summary of the purchase order and waits for your confirmation before proceeding.*
@@ -234,9 +246,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
 ## Summary
 
-You have completed the livelab. The Home Dashboard now launches the AI Agent from a dedicated button, and the Procurement Agent is ready to guide users through supplier evaluation and purchase order creation within a single conversation.
-
-This is what AI Agents in Oracle APEX make possible: a user with a question can get a reasoned, data-driven answer and take a real action in the application, without leaving the page.
+You have completed this LiveLab. The Home Dashboard now has a dedicated entry point for the Procurement Agent, and users can identify low stocks, evaluate suppliers, and raise a purchase order through a single guided conversation in Oracle APEX.
 
 ## Acknowledgements
 

@@ -111,25 +111,25 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Sample Data Results](./images/sample-data1-return.png " ")
 
-8. Select **Upload** again.
+9. Select **Upload** again.
 
     ![Upload to SQL Scripts](./images/sample-data2-clickupload.png " ")
 
-9. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
+10. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
 
-10. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
+11. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
     ![Operational Data Upload](./images/sample-data2-upload.png " ")
 
-11. In the row for **`scm_sample_data2`**, select **Run**.
+12. In the row for **`scm_sample_data2`**, select **Run**.
 
     ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/sample-data2-runn.png " ")
 
-12. On the confirmation page, select **Run**.
+13. On the confirmation page, select **Run**.
 
     ![Confirm the operational data script run](./images/sample-data2-run.png " ")
 
-13. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 3.
+14. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 3.
 
     ![Operational Data Results](./images/sample-data2-results.png " ")
 
@@ -189,7 +189,7 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
 4. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the Workspace level Generative AI configuration:
 
-    > **Note:** This livelabs uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OpenAI, Azure OpenAI Service, Google Gemini, and Cohere, among others. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
+    > **Note:** This livelabs uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, and Generic OpenAI API Compatible. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
 
     - AI Provider: **OCI Generative AI Service**
     - Name: **OCI Gen AI**
@@ -233,7 +233,7 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
 The warehouse schema, sample data, sample application, and Generative AI service are now in place. You are ready to create the AI Agent and start adding tools in the next lab.
 
-You may now **proceed to the next Lab**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

@@ -4,7 +4,7 @@
 
 The procurement use case in this workshop is warehouse-specific. When a user asks what stock is at risk, the answer should reflect their warehouse, not the whole network. When the agent raises a purchase order, it needs to know who is requesting it and what their approval authority is. When a user sets a delivery date, the agent needs to interpret it in the right timezone.
 
-None of that is possible without knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every message using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 3 and 4 accurate and personalised.
+None of that is possible without knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 3 and 4 accurate and personalised.
 
 In this lab, you will create the **Procurement Agent** and add those two context tools.
 
@@ -115,7 +115,7 @@ The agent needs to know who the signed-in user is before it can give useful answ
 
     - Under **Identification**:
 
-        - Tool Name: **get\_user\_context**
+        - Name: **get\_user\_context**
         - Type: **Retrieve Data**
         - Execution Point: **Augment System Prompt**
 
@@ -184,7 +184,7 @@ When a user sets a delivery due date, the agent needs to know their timezone so 
 
     - Under **Identification**:
 
-        - Tool Name: **get\_browser\_timezone**
+        - Name: **get\_browser\_timezone**
         - Type: **Execute Client-side Code**
         - Execution Point: **Augment System Prompt**
 
@@ -202,9 +202,9 @@ When a user sets a delivery due date, the agent needs to know their timezone so 
 
 ## Summary
 
-The Procurement Agent is created and has two context tools in place. On every message, the agent automatically knows who the user is, which warehouse they belong to, and what timezone their browser is using. This foundation is what makes the agent's answers relevant and accurate for each individual user.
+The Procurement Agent is created and has two context tools in place. On every new message, the agent automatically knows who the user is, which warehouse they belong to, and what timezone their browser is using. This foundation ensures that every agent response is scoped and accurate for each individual user.
 
-In the next lab, you will add the tools that allow the agent to identify stock risk, compare suppliers, and raise a purchase order.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

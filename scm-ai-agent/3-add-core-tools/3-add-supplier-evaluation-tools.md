@@ -181,7 +181,7 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
 
     ![Filled configuration for get\_suppliers\_for\_item](./images/tool2-identification.png " ")
 
-3. Add the following parameter:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -273,7 +273,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
 
     ![Filled configuration for get\_supplier\_delivery\_performance](./images/task3-iden.png " ")
 
-3. Under **Parameters** tab, click **Add Parameter** and add the following parameters:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -340,7 +340,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
 
 5. Click **Create**.
 
-    ![Procurement Agent with get\_supplier\_delivery\_performance saved](./images/tool5-create.png " ")
+    ![Procurement Agent with get\_supplier\_delivery\_performance saved](./images/task5-create.png " ")
 
 6. This query uses the following tables:
 
@@ -378,7 +378,7 @@ With a supplier chosen, the conversation turns to where the order should go. A p
 
     ![Filled configuration for show\_warehouses\_by\_supplier](./images/task4-iden.png " ")
 
-3. Add the following parameter:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -451,7 +451,7 @@ This tool shows a browser confirmation dialog that summarises the full order and
 
     ![Filled configuration for confirm\_action](./images/task5-iden.png " ")
 
-3. Add one parameter:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -509,7 +509,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
     ![Filled configuration for raise\_purchase\_order](./images/task6-iden.png " ")
 
-3. Add the following parameters:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -663,11 +663,9 @@ The agent only calls this tool after all previous steps are complete and `confir
 
 ## Summary
 
-All eight tools are now in place: the two context tools from Lab 2 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can identify stock at risk, evaluate suppliers, collect delivery performance, confirm the destination warehouse, get user confirmation, and raise a purchase order, all through a single guided conversation.
+All eight tools are now in place: the two context tools from Lab 2 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order — all through a single guided conversation.
 
-In the next lab, you will wire the agent to the application and run it end to end.
-
-You may now **proceed to the next Lab**.
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

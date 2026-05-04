@@ -22,7 +22,7 @@ In this workshop, you will learn how to:
 
 - Define tools that retrieve user context, stock risk, supplier options, and supplier delivery performance
 
-- Use **Augment System Prompt** tools to inject identity and timezone context automatically on every message
+- Use **Augment System Prompt** tools to inject identity and timezone context automatically on every new message
 
 - Use **On Demand** tools that the AI model calls only when the conversation requires them
 
@@ -36,17 +36,21 @@ In this workshop, you will learn how to:
 
 ### What is a Generative AI Agent?
 
-A **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
+An **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
+
+> **Note:** Starting with Oracle APEX 26.1, AI Configurations from previous releases are now AI Agents. Your existing configurations carry over; the rename reflects the expanded capabilities, including tools and multi-step orchestration.
 
 - **System Prompt**: defines the agent's role, rules, and behavior. It is sent to the AI service with every conversation turn and shapes how the agent reasons and responds.
 - **Welcome Message**: the greeting shown to the user when they first open the chat panel.
 - **Tools**: give the agent the ability to retrieve information and perform actions. The AI service decides which tools to call and when, based on what the user is asking.
 
-### What is a Generative AI Tool?
+### What is an AI Tool?
 
-**Generative AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
+**AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
 
 Oracle APEX provides three built-in tool types: **Retrieve Data** runs a SQL query and returns results to the agent, **Execute Server-side Code** runs a PL/SQL block to perform write actions or call APIs, and **Execute Client-side Code** runs JavaScript in the browser. You can also create custom, reusable tool plug-ins under Shared Components.
+
+> **Note:** Starting with Oracle APEX 26.1, RAG Sources from previous releases are automatically migrated to Augment System Prompt Tools. The behavior is the same; your existing RAG integrations continue to work, now as part of the unified tool model.
 
 ### What is an Execution Point?
 
@@ -104,7 +108,7 @@ If you are stuck or the application is not working as expected, you can download
 
 1. Download the [SCM\_INV\_WMS\_EXPORT\_APP.sql](./files/SCM_INV_WMS_EXPORT_APP.sql) completed application export file.
 
-2. Import the **SCM\_INV\_WMS\_EXPORT\_APP.sql** file into your APEX workspace. Follow the steps in the **Install Application** wizard to install the application along with its Supporting Objects.
+2. Import the **SCM\_INV\_WMS\_EXPORT\_APP.sql** file into your APEX workspace. Follow the steps in the **Import Application** wizard to import the application.
 
 3. Once the application is installed, follow Lab 1 > Tasks 1 and 2 to load the data model and sample data, then follow Lab 1 > Task 4 to configure the Generative AI Service.
 
