@@ -78,7 +78,7 @@ This task prepares the workshop schema. You will upload and run the provided SQL
 
 13. Click **Run** to execute the data load script.
 
-    ![Run the sample data load script](images/run-dataload.png)
+    ![Run the sample data load script](images/run-dataload-blurred.png)
 
 14. Verify that both scripts complete without errors before you continue.
 
@@ -147,4 +147,5 @@ You loaded the SCM setup scripts, created the Supply Chain Management applicatio
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
+

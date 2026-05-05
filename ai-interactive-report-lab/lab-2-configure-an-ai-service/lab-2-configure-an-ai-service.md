@@ -95,4 +95,4 @@ You configured the Generative AI service provider, enabled App Builder access, a
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April, 2026

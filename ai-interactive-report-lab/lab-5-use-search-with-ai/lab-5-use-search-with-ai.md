@@ -95,4 +95,4 @@ You tested Search with AI on the SCM replenishment report, compared it with row 
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, April, 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
