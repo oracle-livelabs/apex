@@ -4,7 +4,7 @@
 
 This lab configures AI attributes for SCM replenishment columns from `SCM_REPLENISHMENT_V`. You will add clear business context to the quantity, priority, and date columns so AI can interpret warehouse questions more accurately.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 
