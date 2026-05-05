@@ -24,7 +24,9 @@ In this lab, you will:
 In this task, you create a single working directory for the files that will be used throughout the workshop. Keeping the inputs together makes it easier to upload the correct artifacts to Codex in the next task.
 
 1. Create a folder named `CRM_APP`.
-2. Download the Functional Specification file and `blueprint_prompt.md` file.
+2. Download the `Functional Specification file` and `blueprint_prompt.md` file.
+    - [crm_functional_requirements_spec.md](./files/crm_functional_requirements_spec.md)
+    - [blueprint_prompt.md](./files/blueprint_prompt.md)
 3. Save both files in the `CRM_APP` folder.
 
  ![CRM APP Folder](./images/crm-app-folder.png " ")

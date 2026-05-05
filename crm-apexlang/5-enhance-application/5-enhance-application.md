@@ -43,6 +43,13 @@ Export the CRM application in APEXlang format and place the output inside the `a
     ![VS code editor](images/green-button-import.png)
 
 ## Task 4: Change the leads report type to Content Row
+From this task onwards, we are going to enhance and modify the Vision CRM app by providing prompts using the Codex client in VS Code.
+
+1. Before you prompt, ensure that you choose **Inteligence** as **Medium** for Codex since we already have the necessary APEXlang skills for Codex to understand and reason faster.
+
+    ![Codex editor](images/codex-intel.png)
+
+
 1. Use APEXlang to adjust the leads report so it renders as a content report.
 
     Prompt: 
@@ -116,7 +123,7 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
 
 
 ## Task 8: Build a CRM chat assistant
-1. Build a CRM chat assistant experience powered by APEXlang.
+1. Build a CRM chat assistant experience powered by APEXlang that handles queries about leads and opportunities.
 
     Prompt: 
     ```
@@ -152,6 +159,12 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
 
 5. Import Application into the workspace and view the Executive Dashboard page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
     ![APEXlang-generated CRM chat assistant interface](images/view-chat-assistant.png)
+
+    *TIP* : If you would like to look at the tools and changes made to the app by APEXlang:
+
+    - Navigate to your App's **Shared Components**. 
+    - Under Generative AI, select **AI Agents**.
+    - Observe the **CRM Dashboard Assistant** Generative AI Agent created along with various On Demand Tools.
 
 6. Try the following queries in the AI assistant.
 
