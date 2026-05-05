@@ -10,6 +10,10 @@
       "description": "Overview of the Spec to Code App Dev LiveLab."
     },
     {
+      "title": "Sign Up for an APEX Workspace",
+      "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
       "title": "Lab 1: Setup the Environment",
       "filename": "../../1-setup-environment/1-setup-environment.md",
       "description": "Install VS Code and required extensions."
