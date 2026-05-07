@@ -117,7 +117,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Confirm the sample data script run](./images/run-sample1.png " ")
 
-7. Verify that the script completes successfully.
+7. Verify that the script completes successfully with 0 errors.
 
     ![Sample Data Results](./images/ran-sample1.png " ")
 
