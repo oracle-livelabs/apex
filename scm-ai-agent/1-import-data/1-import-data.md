@@ -181,6 +181,8 @@ In this task, you will import the base APEX application. It already contains the
 
     ![Install Application](./images/import-file.png " ")
 
+    > **Note:** APEX may assign a different application ID during import. Use the application ID shown after import for all subsequent steps in this workshop.
+
 6. After the import completes, verify that the import finishes successfully.
 
     ![Imported SCM application available in App Builder](./images/app-builder-page-dark1.png " ")
