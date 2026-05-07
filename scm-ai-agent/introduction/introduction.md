@@ -115,7 +115,9 @@ If you are stuck or the application is not working as expected, you can download
 
 4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-5. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
+5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all eight tools.
+
+6. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
 
 ## Learn More
 
