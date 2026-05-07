@@ -13,7 +13,9 @@ Estimated Time: 15 minutes
 ## Task 1: Set up the APEXlang Skills repo in VSCode
 1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
-    Download the skills from [here](https://orahub.oci.oraclecorp.com/dbtools-apex-dev/apex-app-gen/-/tree/apexlang-skill?ref_type=heads). Unzip the folder.
+    Download the APEXlang skills from Github: [APEXlang skills](https://github.com/oracle/skills/tree/main/apex). 
+    
+    Unzip the folder.
 
     ![Visual Studio Code workspace with APEXlang skills repository cloned](images/vscode-apexlang-repo-setup.png)
 
