@@ -61,7 +61,7 @@ Every tool has an **Execution Point** that controls when it runs:
 
 ## Prerequisites
 
-- An APEX workspace.
+- An Oracle APEX 26.1 workspace. This workshop requires APEX 26.1. Some features, instructions, and screenshots may differ or not be available in prior releases.
 
 - An API key for the AI provider of your choice: OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or Generic OpenAI API Compatible.
 
@@ -87,8 +87,6 @@ Every tool has an **Execution Point** that controls when it runs:
     - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments: the tenancy root compartment and ManagedCompartmentForPaaS, which is created by Oracle for Oracle Platform services.
 
     - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges through an OCI IAM policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
-
-> **Note:** This workshop assumes you are using Oracle APEX 26.1. Some features might not be available in prior releases, and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 > **Note:** The application ID in the screenshots may vary. Please ignore the application ID.
 
