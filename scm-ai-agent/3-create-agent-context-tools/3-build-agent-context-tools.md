@@ -92,7 +92,7 @@ Open the agent creation page from within your application's Shared Components to
 
             ```text
             <copy>
-            Hi, I'm your Procurement Assistant. How can I help you today ?
+            Hi, I'm your Procurement Assistant. How can I help you today?
             </copy>
             ```
 
