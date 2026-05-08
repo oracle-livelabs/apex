@@ -45,7 +45,7 @@ The procurement conversation starts here. The user opens the assistant and asks 
 
 **Type:** Retrieve Data | **Execution:** On Demand
 
-1. In the **Tools** section, select **Add Tool**.
+1. On the **Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
     ![Select Add Tool from the Procurement Agent page](./images/add-tool2.png " ")
 
