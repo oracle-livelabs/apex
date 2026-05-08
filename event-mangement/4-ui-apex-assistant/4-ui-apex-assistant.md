@@ -18,7 +18,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Convert a Classic Report into a Content Row
 
-1. From the browser tab where the app is running, navigate to your faceted search page. In this lab, the page is called *Discover Events*. The name might differ because the app was generated using AI.
+1. From the browser tab where the app is running, navigate to your faceted search page. In this lab, the page is called *Event Search*. The name might differ because the app was generated using AI.
 
     !["Click App Builder"](images/discover-events.png "")
 
@@ -90,11 +90,15 @@ By the end of this lab, you will be able to:
 
         - Title: **&NAME.**
 
+        - Description: **&DESCRIPTION.**
+
         - Display Avatar: Toggle **On**
 
     - Avatar > Icon: **fa-calendar-month**
 
     !["Click App Builder"](images/name-attr.png "")
+
+    !["Click App Builder"](images/desc-attr1.png "")
 
     !["Click App Builder"](images/desc-attr.png "")
 
@@ -142,6 +146,8 @@ By the end of this lab, you will be able to:
     ```
 
     !["Click App Builder"](images/insert-html.png "")
+
+    !["Click App Builder"](images/insert-html1.png "")
 
 12. Click **Save and Run**.
 
@@ -204,50 +210,6 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/title-link1.png "")
 
-## Task 2: Enhance appearance of an app
-
-In this task, you will use Theme Roller to quickly transform the appearance of an application without editing any code.
-
-1. When you run an application from App Builder and view a page, the Runtime Developer toolbar displays at the bottom of any editable running page.
-
-    On the Runtime Developer Toolbar, click **Customize**.
-
-    !["Click App Builder"](images/customize.png "")
-
-2. To access the Theme Roller dialog, click **Theme Roller** from the Customize menu.
-
-    !["Click App Builder"](images/theme-roller1.png "")
-
-3. In the **Theme Roller** dialog box, update **Select Theme** to **Redwood Light**.
-
-    !["Click App Builder"](images/redwood-light.png "")
-
-4. Under **Redwood Options**, select the following:
-
-    - Pillar: **Rose**
-
-    - Layout: **Floating**
-
-    !["Click App Builder"](images/redwood-options.png "")
-
-5. Under **Appearance**, select the following:
-
-    - Header: **Pillar**
-
-    - Navigation: **Pillar**
-
-    - Body Header: **Dark**
-
-    - Body Background: **Dark**
-
-6. Click **Save** to save the theme.
-
-    !["Click App Builder"](images/appearnace.png "")
-
-7. In **Save As** dialog box, for **Style Name** enter **Event Management Theme** and click **Save**.
-
-    !["Click App Builder"](images/style-name.png "")
-
 ## Summary
 
 In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, showcasing how AI integration within APEX accelerates development and improves application design.
@@ -255,4 +217,4 @@ In this lab, you transformed a classic report into a content row layout, improvi
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
