@@ -94,15 +94,15 @@ In this task, you will create an application using Generative AI by entering nat
 
     *Important Note: The pages might differ based on the prompt. Make sure that you have **Events Dashboard page** and the **Event page is created as Faceted Search page** by giving appropriate prompts.*
 
-8. On the Create an Application page, locate the **Dashboard** page (in this case, **Insights Hub**) and click **Edit**.
+8. On the Create an Application page, locate the **Dashboard** page (in this case, **Event Dashboard**) and click **Edit**.
 
     ![select appearance](images/edit-dash.png " ")
 
 9. In the **Add Dashboard Page** dialog, update the Page Name to **Dashboard**. Click **Set Icon** and search for **chart**, select an icon of your choice.
 
-10. Under **Advanced**, enable **Set as Home Page** and click **Save Changes**.
-
     ![select appearance](images/update-dash.png " ")
+
+10. Under **Advanced**, enable **Set as Home Page** and click **Save Changes**.
 
     ![select appearance](images/update-dash1.png " ")
 
@@ -132,7 +132,7 @@ In this task, you will create an application using Generative AI by entering nat
 
     ![input login credentials](images/login-detail.png " ")
 
-3. Explore the application and explore the different pages.
+3. Explore the application and the different pages.
 
     Records are displayed in all of the reports which makes reviewing pages significantly easier, especially for reports. The fact that the data may not be exactly correct for the columns is not critical, as you can very easily update the data to make it more realistic.
 

@@ -96,7 +96,7 @@ By the end of this lab, you will be able to:
 
     - Avatar > Icon: **fa-calendar-month**
 
-    !["Click App Builder"](images/name-attr.png "")
+    !["Click App Builder"](images/name-attr1.png "")
 
     !["Click App Builder"](images/desc-attr1.png "")
 
@@ -106,7 +106,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/attr.png "")
 
-10. Click **APEX Assistant**. Now add the following prompts:
+10. Select &DESCRIPTION. and click **APEX Assistant**. Now add the following prompts:
 
     **Prompt 1:**
      ```
@@ -177,6 +177,8 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/save-run2.png "")
 
+    !["Click App Builder"](images/view-results.png "")
+
 16. Next, let's add a hyperlink to the title to open a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and click **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
@@ -187,20 +189,20 @@ By the end of this lab, you will be able to:
 
     - Link > Target: Click **No Link Defined**
 
-        - Target > Page: **11**
+        - Target > Page: **5**
 
         - Set Items:
 
             | Name | Value |
             | ----- | ---- |
-            | P11_ID | &ID.|
+            | P5_ID | &ID.|
             {: title="Set Items"}
 
-        - Clear Cache: **11**
+        - Clear Cache: **5**
 
         Click **OK**.
 
-    >Note: Page number may vary depending on your application.
+    >Note: Page number may vary depending on your application. Select the forms page to edit the events.
 
     !["Click App Builder"](images/title-link.png "")
 

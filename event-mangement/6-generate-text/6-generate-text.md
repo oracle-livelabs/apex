@@ -18,11 +18,11 @@ Estimated Time: 5 minutes
 
 1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
 
-    >Note: Page number may vary depending on your application.
+    >Note: Page number may vary depending on your application. Open the forms page.
 
     !["Click App Builder"](images/navigate-to-page1.png "")
 
-2. In the **Rendering** tab, right-click **Region Body** and click **Create Button**.
+2. In the left pane, right-click **Region Body** and click **Create Button**.
 
     !["Click App Builder"](images/create-button-ai.png "")
 

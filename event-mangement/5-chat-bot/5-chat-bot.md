@@ -50,31 +50,31 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/event-assist-btn.png "")
 
-4. In the left pane, right-click **EVENT_ASSISTANT** button and click **Create Dynamic Action**.
+4. In the left pane, right-click **EVENT_ASSISTANT** button and click **Create Trigger Action**.
 
     !["Click App Builder"](images/create-dy-chatbot.png "")
 
 5. In the Property Editor, enter the following:
 
-    - Identification > Name : **Event Assistant**
+    - Under Identification
 
-    !["Click App Builder"](images/event-dy.png "")
+        - Name : **Event Assistant**
 
-6. Under **True** Action, click **Show**. In the Property Editor, enter/select the following:
+        - Action: **Show AI Assistant**
 
-    - Identification > Action: **Show AI Assistant**
-
-    - Generative AI > Service: Select **YOUR\_GEN\_AI\_SERVICE**
+    - Generative AI > Service: Select **YOUR\_GEN\_AI\_SERVICE** created in lab 1
 
     - Welcome Message: **Hi! How can I help you today?**
 
     - Appearance > Title: **Event Assistant**
 
-7. Click **Save and Run**.
-
     !["Click App Builder"](images/show-ai-assist.png "")
 
-8. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
+6. Click **Save and Run**.
+
+    !["Click App Builder"](images/show-ai-assist1.png "")
+
+7. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
 
    The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
@@ -82,25 +82,25 @@ By the end of this lab, you will be able to:
 
 ## Task 2: Create AI Configuration and RAG Source
 
-1. Navigate to **Shared Components**.
+1. Switch to the Page Designer tab. Navigate to **Shared Components**.
 
     !["Click App Builder"](images/naviagte-sc.png "")
 
-2. Under Generative AI, click **AI Configurations**.
+2. Under Generative AI, click **AI Agents**.
 
     !["Click App Builder"](images/ai-conf.png "")
 
-3. In the Generative AI Configurations page, click **Create**.
+3. In the Generative AI Agents page, click **Create**.
 
     !["Click App Builder"](images/create-conf.png "")
 
-4. In the Generative AI Configuration page, enter the following:
+4. In the Generative AI Agent page, enter the following:
 
     - Identification > Name : **Event AI Configuration**
 
     - Under Generative AI:
 
-        - Service: Select the AI service which you habe configured in Lab 1.
+        - Service: Select the AI service which you have configured in Lab 1.
 
         - System Prompt:
 
@@ -120,19 +120,29 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/event-ai-conf1.png "")
 
-    !["Click App Builder"](images/event-ai-conf.png "")
-
-6. Click **Event AI Configuration**. Under RAG Sources, click **Create RAG Source**.
+6. Scroll down and navigate to Tools and click **Add Tool**.
 
     !["Click App Builder"](images/create-rag-source.png "")
 
-7. In the RAG Source page, enter/select the following:
+7. In the Generative AI Tool page, enter/select the following:
 
-    - Identification > Name: **Event Assistant**
+    - Under Identification
 
-    - Description: **Event assistant to query about event details**
+        - Name: **event_assistant**
 
-    - Source > SQL Query: Click **APEX Assistant**
+        - Type: **Retrieve Data**
+
+        - Execution Point: **Augment System Prompt**
+
+    - Under Settings:
+
+        - Data Description: **Event assistant to query about event details**
+
+        - Type: **SQL Query**
+
+        - SQL Query: Click **APEX Assistant**
+
+    !["Click App Builder"](images/create-tool.png "")
 
 8. In the APEX Assistant box, enter the following prompt and press enter:
 
@@ -169,14 +179,14 @@ By the end of this lab, you will be able to:
 
     - Type: Function Body
 
-    - Expression:
+    - Expression 1:
 
         ```
             <copy>
             return :APP_PAGE_ID = 3;
             </copy>
         ```
-        >Note: Page number may vary depending on your application.
+        >Note: Page number may vary depending on your application. Replace the page number with your faceted search page.
 
     !["Click App Builder"](images/assistant-server.png "")
 
@@ -188,13 +198,13 @@ By the end of this lab, you will be able to:
 
 1. From the top-right corner, click **Edit Page 3**.
 
-    >Note: Page number may vary depending on your application.
+    >Note: Page number may vary depending on your application. Open your faceted search search page.
 
     !["Click App Builder"](images/edit-page3.png "")
 
-2. In the Dynamic Action tab, select True Action **Show AI Assistant** and update the following:
+2. Navigate to **EVENT_ASSISTANT** button and select **Event Assistant** Triggered Actions and update the following:
 
-    - Generative AI > Configuration: **Event AI Configuration**
+    - Generative AI > Agent: **Event AI Configuration**
 
     - Under Quick Actions:
 
@@ -205,6 +215,8 @@ By the end of this lab, you will be able to:
     !["Click App Builder"](images/event-conf-msg.png "")
 
 3. Click **Save and Run**.
+
+    !["Click App Builder"](images/event-conf-msg1.png "")
 
 4. In the app, click the **Event Assistant** button and click **List all AI Events**. The chat assistant will now return results using a RAG (Retrieval-Augmented Generation) source, ensuring that details are fetched only from the specified data source.
 
@@ -217,4 +229,4 @@ In this lab, you created an Event Chat Assistant by adding a button, configuring
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
