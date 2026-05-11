@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will enhance your Oracle APEX application by integrating AI-powered text generation. Specifically, you will create a feature that automatically generates event descriptions based on event details stored in the database. By leveraging a Retrieval-Augmented Generation (RAG) source and dynamic actions, you will see how APEX makes it easy to combine low-code development with AI services to deliver smarter, user-friendly applications.
+In this lab, you will enhance your Oracle APEX application by integrating AI-powered text generation. Specifically, you will create a feature that automatically generates event descriptions based on event details stored in the database. By leveraging an augmented system prompt tool and trigger action, you will see how APEX makes it easy to combine low-code development with AI services to deliver smarter, user-friendly applications.
 
 Estimated Time: 5 minutes
 
@@ -10,9 +10,9 @@ Estimated Time: 5 minutes
 
 - Create a Generate Description button within the form page.
 
-- Configure a RAG Source to fetch event details for AI input.
+- Configure a Tool to fetch event details for AI input.
 
-- Implement a Generate Text with AI dynamic action to produce event descriptions automatically.
+- Implement a Generate Text with AI trigger action to produce event descriptions automatically.
 
 ## Task 1: Add Generate Description Button
 
@@ -54,7 +54,7 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/click-save.png "")
 
-## Task 2: Define a Tool to Generate description
+## Task 2: Define an AI Tool to Generate description
 
 1. Navigate to **Shared Components**.
 
@@ -84,7 +84,7 @@ Estimated Time: 5 minutes
 
     - Under Setting:
 
-        - Data Description: **Retrieve the event details for a given event**
+        - Data Description: **Retrieve the event details for a given event. Provide the data as a paragraph.**
 
         - Type > SQL Query
 
@@ -109,7 +109,7 @@ Estimated Time: 5 minutes
         ```
     >Note: Page Item number may vary depending on your application. Do not miss to replace page number in the SQL Query.
 
-    !["Click App Builder"](images/gen-desc.png "")
+    !["Click App Builder"](images/gen-desc3.png "")
 
     - Under Server-side Condition:
 

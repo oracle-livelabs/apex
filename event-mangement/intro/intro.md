@@ -8,7 +8,7 @@ You will begin by creating a **custom data model using natural language**, quick
 
 Next, you will enhance the application by using the **APEX Assistant** to generate SQL and HTML directly within the APEX Code Editor, simplifying the creation of both UI and data logic.
 
-As you proceed, you will integrate advanced AI capabilities into the application. This includes building an **AI-powered Event Assistant** that uses **Retrieval-Augmented Generation (RAG)** to answer event-related questions through an interactive **chat interface**. You will also implement a feature that uses the **Generate Text with AI** dynamic action to automatically create event descriptions.
+As you proceed, you will integrate advanced AI capabilities into the application. This includes building an **AI-powered Event Assistant** that uses **AI Agent** to answer event-related questions through an interactive **chat interface**. You will also implement a feature that uses the **Generate Text with AI** trigger action to automatically create event descriptions.
 
 By the end of this workshop, you will understand how Oracle APEX brings together AI assistance, data-driven development, and enterprise-grade application architecture to help you build intelligent applications quickly and effectively.
 
@@ -19,8 +19,8 @@ Estimated Time: 60 minutes
 - Create a Custom Data Model using Generative AI.
 - Generate an application *blueprint* using APEX AI Assistant.
 - Improve the application's UI and UX using the APEX AI Assistant to generate SQL and HTML directly in the Code Editor.
-- Build an AI-powered Event Assistant that uses RAG to answer event-related queries through a chat interface.
-- Add a feature to generate event descriptions using AI through the *Generate Text with AI* dynamic action.
+- Build an AI-powered Event Assistant that uses AI Agents to answer event-related queries through a chat interface.
+- Add a feature to generate event descriptions using AI through the *Generate Text with AI* trigger action.
 
 ## Prerequisites
 
@@ -36,9 +36,12 @@ Estimated Time: 60 minutes
         - Germany Central (Frankfurt)
         - India South (Hyderabad)
         - Japan Central (Osaka)
+        - Saudi Arabia Central (Riyadh)
         - UAE East (Dubai)
         - UK South (London)
+        - US East (Ashburn)
         - US Midwest (Chicago)
+        - US West (Phoenix)
 
     - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
@@ -46,7 +49,9 @@ Estimated Time: 60 minutes
 
     - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-    *Note: This workshop assumes you are using Oracle APEX 24.2.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+    *Note: This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+
+    *Note: The application ID in the screenshots may vary. Please ignore the application ID. Important: This workshop requires an active account with a supported Generative AI provider. Oracle APEX connects to the provider of your choice using your own credentials. Any charges for API usage are billed directly by your provider. Please review your provider's pricing before proceeding.*
 
 ## Labs
 
@@ -107,4 +112,4 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
