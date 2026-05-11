@@ -16,9 +16,9 @@ Estimated Time: 5 minutes
 
 ## Task 1: Add Generate Description Button
 
-1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 11**.
+1. In the app, click any event name to open a dialog box. Then, from the developer toolbar, navigate to **Page 5**.
 
-    >Note: Page number may vary depending on your application. Open the forms page.
+    >Note: Page number may vary depending on your application. Open the forms page from your workspace.
 
     !["Click App Builder"](images/navigate-to-page1.png "")
 
@@ -42,21 +42,25 @@ Estimated Time: 5 minutes
 
         - Icon: **fa-file-text**
 
-4. Drag and drop **GENERATE\_DESCRIPTION** button under **P11\_DESCRIPTION** page item.
+    !["Click App Builder"](images/generate-desc.png "")
+
+4. Drag and drop **GENERATE\_DESCRIPTION** button under **P5\_DESCRIPTION** page item.
 
     >Note: Page Item number may vary depending on your application.
 
-    !["Click App Builder"](images/generate-desc.png "")
+    !["Click App Builder"](images/generate-desc1.png "")
 
 5. Click **Save**.
 
-## Task 2: Define RAG Source
+    !["Click App Builder"](images/click-save.png "")
+
+## Task 2: Define a Tool to Generate description
 
 1. Navigate to **Shared Components**.
 
     !["Click App Builder"](images/nav-sc.png "")
 
-2. Under Generative AI, click **AI Configurations**.
+2. Under Generative AI, click **AI Agents**.
 
     !["Click App Builder"](images/ai-conf3.png "")
 
@@ -64,17 +68,27 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/event-ai-cong2.png "")
 
-4. Under RAG Sources, click **Create RAG Source**.
+4. Under Tools, click **Add Tool**.
 
     !["Click App Builder"](images/create-rag2.png "")
 
-5. In the RAG Source page, enter/select the following:
+5. In the Generative AI Tool page, enter/select the following:
 
-    - Identification > Name: **Generate Description**
+    - Under Identification:
 
-    - Description: **Retrieve the event details for a given event**
+        - Name: **generate_description**
 
-    - Source > SQL Query: Copy and paste the following SQL into the code editor.
+        - Type: **Retrieve Data**
+
+        - Execution Point: **Augment System Prompt**
+
+    - Under Setting:
+
+        - Data Description: **Retrieve the event details for a given event**
+
+        - Type > SQL Query
+
+        - SQL Query: Copy and paste the following SQL into the code editor.
 
         ```
         <copy>
@@ -90,10 +104,12 @@ Estimated Time: 5 minutes
         on evt.id = ev.event_type_id
             join ev_venues eve
         on eve.id = ev.venue_id
-            where ev.id = :P11_ID
+            where ev.id = :P5_ID
         </copy>
         ```
-    >Note: Page Item number may vary depending on your application.
+    >Note: Page Item number may vary depending on your application. Do not miss to replace page number in the SQL Query.
+
+    !["Click App Builder"](images/gen-desc.png "")
 
     - Under Server-side Condition:
 
@@ -103,60 +119,54 @@ Estimated Time: 5 minutes
 
             ```
             <copy>
-            return :APP_PAGE_ID = 11;
+            return :APP_PAGE_ID = 5;
             </copy>
             ```
-        >Note: Page number may vary depending on your application.
+        >Note: Page number may vary depending on your application. You need replace with your forms page number.
 
 6. Click **Create**.
 
-    !["Click App Builder"](images/gen-desc.png "")
-
     !["Click App Builder"](images/desc-server.png "")
 
-## Task 3: Add Generate Text with AI Dynamic Action
+## Task 3: Create Trigger Action to Generate description
 
-1. On the top right corner, click **Edit Page 11**.
+1. On the top right corner, click **Edit Page 5**. This page is navigating you to forms page.
 
     >Note: Page number may vary depending on your application.
 
     !["Click App Builder"](images/edit-page11.png "")
 
-2. In the **Rendering** tab, right-click **GENERATE_DESCRIPTION** and select **Create Dynamic Action**.
+2. In the left pane, right-click **GENERATE_DESCRIPTION** and select **Create Trigger Action**.
 
     !["Click App Builder"](images/create-desc-dy.png "")
 
 3. In the Property Editor, enter the following:
 
-    - Identification > Name : **Generate Description**
+    - Under Identification:
 
-    !["Click App Builder"](images/geb-desc.png "")
+        - Name : **Generate Description**
 
-4. Under **True** Action, click **Show**. In the Property Editor, enter/select the following:
+        - Action: **Generate Text with AI**
 
-    - Identification > Action: **Generate Text with AI**
-
-    - Generative AI > Configuration: **Event AI Configuration**
+    - Generative AI > Agent: **Event AI Configuration**
 
     - Under Input Value:
 
         - Type: **Item**
 
-        - Item: **P11_ID**
+        - Item: **P5_ID**
 
     - Under Use Response:
 
         - Type: **Item**
 
-        - Item: **P11_DESCRIPTION**
+        - Item: **P5_DESCRIPTION**
 
     >Note: Page Item number may vary depending on your application.
 
-5. Click **Save**.
+    !["Click App Builder"](images/create-desc-ta.png "")
 
-    !["Click App Builder"](images/gen-text.png "")
-
-6. Navigate to **Rendering** tab, select **P11_ID** and update the following and click **Save**.
+4. Navigate to left pane, select **P5_ID** and update the following and click **Save**.
 
     - Session State > Storage: **Per Session (Persistent)**
 
@@ -164,7 +174,7 @@ Estimated Time: 5 minutes
 
     !["Click App Builder"](images/per-session.png "")
 
-7. Run the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
+5. Refresh the application and open the form page. Click **Generate Description** to create an event description in the Description item. Click **Apply Changes** to save it to the table.
 
     !["Click App Builder"](images/view-desc-btn.png "")
 
@@ -175,4 +185,4 @@ In this lab, you built an AI-powered feature to generate event descriptions in O
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026

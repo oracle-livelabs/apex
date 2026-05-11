@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features like avatars, badges, and title links. Additionally, you will use the AI-powered APEX Assistant to modify SQL queries and generate dynamic HTML for improved descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity tools, resulting in a richer and more engaging user experience.
+In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features such as avatars, badges, and title links. Additionally, you will use the AI-powered APEX Assistant to modify SQL queries and generate dynamic HTML for improved descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity features, resulting in a richer and more engaging user experience.
 
 Estimated Time: 10 minutes
 
@@ -12,7 +12,7 @@ By the end of this lab, you will be able to:
 
 - Convert a classic report into a content row layout to improve readability and design.
 
-- Use AI-powered APEX Assistant in the code editor to extend SQL queries and generate HTML.
+- Use the AI-powered APEX Assistant in the code editor to extend SQL queries and generate HTML.
 
 - Enhance the report with avatars, badges, and hyperlinks for better interactivity.
 
@@ -36,11 +36,11 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/content-row.png "")
 
-4. Update **Source > Type** to **SQL Query** and open the code editor of SQL Query.
+4. Update **Source > Type** to **SQL Query** and open the SQL Query code editor.
 
     !["Click App Builder"](images/code-edit.png "")
 
-5. Select your SQL Query. Click **APEX Assistant** and add the following prompt:
+5. Select your SQL query, click **APEX Assistant** and add the following prompt:
 
     **Prompt 1:**
     ```
@@ -84,7 +84,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/close-editor.png "")
 
-8. In the Property Editor, navigate to **Attributes** tab and enter/select the following:
+8. In the Property Editor, navigate to the **Attributes** tab and enter/select the following:
 
     - Under Settings:
 
@@ -102,7 +102,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/desc-attr.png "")
 
-9. Under **Settings**, open the code editor of **Description**.
+9. Under **Settings**, open the code editor forz **Description**.
 
     !["Click App Builder"](images/attr.png "")
 
@@ -111,7 +111,7 @@ By the end of this lab, you will be able to:
     **Prompt 1:**
      ```
     <copy>
-    Generate some HTML to display start date and end date as a labelled information using span tag.
+    Generate some HTML to display start date and end date as labelled information using span tag.
     </copy>
     ```
 
@@ -157,7 +157,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-content-row.png "")
 
-14. Next, let's add a badge to the content row. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
+14. Next, add a badge to the content row. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
 
     - Settings > Display Badge: Toggle **On**
 
@@ -179,7 +179,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-results.png "")
 
-16. Next, let's add a hyperlink to the title to open a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and click **Create Action**.
+16. Next, add a hyperlink to the title to open a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and select **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
 
@@ -200,13 +200,13 @@ By the end of this lab, you will be able to:
 
         - Clear Cache: **5**
 
-        Click **OK**.
+        Click **OK** to close the dialog.
 
-    >Note: Page number may vary depending on your application. Select the forms page to edit the events.
+    >Note: Page number may vary depending on your application. Select the form page to edit the events.
 
     !["Click App Builder"](images/title-link.png "")
 
-18. Click **Save and Run** and view the changes.
+18. Click **Save and Run** to view the changes.
 
     !["Click App Builder"](images/save-run3.png "")
 

@@ -18,7 +18,7 @@ By the end of this lab, you will be able to:
 
 - Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your event data source.
 
-## Task 1: Set Up Event Chat Assistant without RAG Source
+## Task 1: Set Up Event Chat Assistant
 
 1. Close the dialog box. From the runtime developer toolbar, navigate to **Page 3**.
 
@@ -76,11 +76,11 @@ By the end of this lab, you will be able to:
 
 7. In the app, click the **Event Assistant** button and enter the prompt as **List AI Events**.
 
-   The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI configuration with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
+   The chat assistant currently returns results from a web search, not from our database. To fix this, we will create an AI agent with a RAG (Retrieval-Augmented Generation) source so that the Event Assistant fetches details only from the specified data source.
 
     !["Click App Builder"](images/view-chat.png "")
 
-## Task 2: Create AI Configuration and RAG Source
+## Task 2: Create an AI Agent and a Tool
 
 1. Switch to the Page Designer tab. Navigate to **Shared Components**.
 
@@ -194,7 +194,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/rag-func1.png "")
 
-## Task 3: Enable Event Chat Assistant with RAG Source
+## Task 3: Configure an Event Chat Assistant
 
 1. From the top-right corner, click **Edit Page 3**.
 
