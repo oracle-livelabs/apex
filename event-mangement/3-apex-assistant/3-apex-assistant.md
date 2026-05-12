@@ -16,17 +16,15 @@ Estimated Time: 10 minutes
 
 ## Task 1: Enhance Charts using AI
 
-1. Navigate to **Dashboard** page from the navigation menu.
+1. From the runtime environment, navigate to **Dashboard** page from the navigation menu.
 
     !["Click App Builder"](images/dashboard1.png "")
 
 2. From the browser tab where the app is running, navigate to the runtime developer toolbar and click **Page 1**.
 
-    !["Click App Builder"](images/dashboard1.png "")
-
     !["Click App Builder"](images/event-dashboard12.png "")
 
-3. In the page designer, select the region created under **Body**. In the property editor, update **Identification > Name** to **Event Types**.
+3. In the page designer, select the first region under **Body**. In the property editor, update **Identification > Name** to **Event Types**.
 
     !["Click App Builder"](images/event-types.png "")
 
@@ -47,7 +45,7 @@ Estimated Time: 10 minutes
 
     >Note: APEX Assistant responds with a query as shown in the above screenshot.
 
-6. Next, let’s adjust the query so that the highest count appears at the top. Enter the following prompt and press Enter.
+6. Next adjust the query so that the highest count appears at the top. Enter the following prompt and press Enter.
 
     **Prompt 2:**
      ```
@@ -64,7 +62,7 @@ Estimated Time: 10 minutes
 
 8. While **Validating**, if your query throws an error, APEX Assistant can help troubleshoot the problem.
 
-    For example, suppose you run a query and inadvertently leave off the 's'. at the end of the table **ev_events**.
+    For example, suppose you run a query and inadvertently comment off the group by.
 
     APEX Assistant switches to General Assistance mode. Click **Help me fix this**.
 
@@ -98,12 +96,12 @@ Estimated Time: 10 minutes
 
     !["Click App Builder"](images/chart2-code.png "")
 
-13. Navigate to **APEX Assistant** and enter the following prompt:
+13. Click **APEX Assistant** and enter the following prompt:
 
     **Prompt 1:**
     ```
     <copy>
-    Top 5 upcoming events by registration count.
+    Top 5 events by registration count.
     </copy>
     ```
 
@@ -133,11 +131,13 @@ Estimated Time: 10 minutes
 
     !["Click App Builder"](images/view-dashboard.png "")
 
+     !["Click App Builder"](images/view-dashboard1.png "")
+
 ## Task 2: Create a PL/SQL Package with APEX Assistant
 
 In this task, you will learn how to create a package using APEX Assistant in SQL Commands and explore how it can be leveraged to efficiently generate PL/SQL package code.
 
-1. Navigate to **SQL Workshop** and select **SQL Commands**.
+1. Switch back to Page Designer. Navigate to **SQL Workshop** and select **SQL Commands**.
 
     !["Click App Builder"](images/sql-command.png "")
 
@@ -207,4 +207,4 @@ In this lab, you learned how to use the integrated AI Chat capability (APEX Assi
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
