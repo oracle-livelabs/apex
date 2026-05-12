@@ -164,4 +164,4 @@ You have completed this LiveLab. The Home Dashboard now has a dedicated entry po
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

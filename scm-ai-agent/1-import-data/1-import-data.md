@@ -163,7 +163,7 @@ The combined sample data now includes the following:
 
 In this task, you will import the base APEX application. It already contains the page layout and shared components, so you can focus entirely on building the AI Agent in the following labs rather than setting up pages from scratch.
 
-1. From the left navigation, select **App Builder**.
+1. From the left navigation, select the **App Builder** icon.
 
     ![Navigate to App Builder from the left navigation](./images/sample-data2-return.png " ")
 
@@ -196,4 +196,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

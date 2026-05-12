@@ -20,7 +20,7 @@ In this lab, you will:
 
 In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the application.
 
-1. From the left navigation, click **App Builder**.
+1. From the left navigation, click the **App Builder** icon.
 
     ![Imported SCM application available in App Builder](./images/app-builder-page-dark2.png " ")
 
@@ -83,4 +83,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
