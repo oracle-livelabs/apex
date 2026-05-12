@@ -7,8 +7,12 @@
       "filename": "../../introduction/introduction.md"
     },
     {
-      "title": "Sign up for an APEX Workspace",
-      "filename": "../../../common-242/1-sign-up-apex/sign-up-apex-sandbox.md"
+      "title": "Sign Up for an APEX Workspace",
+      "filename": "../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Review Commonly Used APEX Terminology",
+      "filename": "../../common-261/4-apex-basics/4-apex-basics.md"
     },
     {
       "title": "Lab 1: Import the Data Model, Sample Data, and Base Application",
