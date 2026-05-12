@@ -82,6 +82,14 @@ If you are stuck or the application is not working as expected, you can download
 
 - Follow **Lab 5 and Lab 6** to run the application and walk through the end-to-end procurement conversation.
 
+## Uninstall the Application and Data Model
+
+After completing the workshop, follow these steps to remove the application and data model from your workspace.
+
+1. To delete the application, open the application from **App Builder**. On the application home page, under **Tasks** on the right side, select **Delete Application** and follow the delete wizard.
+
+2. To remove the SCM data model and all associated database objects, download and run the [scm-uninstall.sql](./files/scm-uninstall.sql) script from **SQL Workshop > SQL Scripts**. This drops all tables, views, procedures, and indexes with the `SCM_` prefix.
+
 ## Learn More - *Useful Links*
 
 - APEX on Autonomous:   [https://apex.oracle.com/autonomous](https://apex.oracle.com/autonomous)
