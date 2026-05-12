@@ -33,7 +33,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
   - Sign in to Oracle APEX. The workspace home page appears.
 
-  - Click the help menu at the top of the page and select **About**. The about APEX page appears.
+  - Click the help menu at the bottom-left of the page and select **About**. The about APEX page appears.
 
     ![APEX Details](images/version.png)
 
@@ -321,4 +321,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
 
 - **Author** -  Apoorva Srinivas, Principal Product Manager
-- **Last Updated By/Date**: Apoorva Srinivas, Principal Product Manager, December 2025
+- **Last Updated By/Date**: Apoorva Srinivas, Principal Product Manager, May 2026
