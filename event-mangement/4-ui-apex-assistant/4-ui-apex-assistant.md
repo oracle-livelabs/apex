@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features such as avatars, badges, and title links. Additionally, you will use the AI-powered APEX Assistant to modify SQL queries and generate dynamic HTML for improved descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity features, resulting in a richer and more engaging user experience.
+In this lab, you will learn how to modernize a classic report in Oracle APEX by converting it into a content row layout. You will also explore how to enhance the report presentation with features such as avatars, badges, and title links. Additionally, you will use the AI-powered APEX Assistant to modify SQL queries and generate dynamic HTML to enhance report descriptions. These enhancements demonstrate how APEX makes it easy to combine low-code development with AI-assisted productivity features, resulting in a richer and more engaging user experience.
 
 Estimated Time: 10 minutes
 
@@ -18,7 +18,7 @@ By the end of this lab, you will be able to:
 
 ## Task 1: Convert a Classic Report into a Content Row
 
-1. From the browser tab where the app is running, navigate to your faceted search page. In this lab, the page is called *Event Search*. The name might differ because the app was generated using AI.
+1. From the browser tab where the app is running, navigate to your faceted search page. In this lab, the page is called Event Search. The name may differ because the application was generated using AI.
 
     !["Click App Builder"](images/discover-events.png "")
 
@@ -28,7 +28,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/edit-page.png "")
 
-    >Note: Page number may vary depending on your application.
+    >Note: The page number may vary depending on your application.
 
 3. From the left pane, select **Events** region. In the Property Editor, select the following:
 
@@ -40,7 +40,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/code-edit.png "")
 
-5. Select your SQL query, click **APEX Assistant** and add the following prompt:
+5. Select your SQL query, click **APEX Assistant** and enter the following prompt:
 
     **Prompt 1:**
     ```
@@ -53,8 +53,7 @@ By the end of this lab, you will be able to:
 
 6. Click **Insert**, or replace the existing SQL query with the one provided below to generate the same output for this workshop:
 
-    *Note: By replacing it with the provided code, we ensure that your application behaves consistently and matches the expected outcome.*
-
+    *Note: Replacing the query with the provided code ensures that your application behaves consistently and matches the expected output.*
     ```
     <copy>
     select ee.id,
@@ -102,11 +101,11 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/desc-attr.png "")
 
-9. Under **Settings**, open the code editor forz **Description**.
+9. Under **Settings**, open the code editor for **Description**.
 
     !["Click App Builder"](images/attr.png "")
 
-10. Select &DESCRIPTION. and click **APEX Assistant**. Now add the following prompts:
+10. Select &DESCRIPTION. and click **APEX Assistant**. Now enter the following prompts:
 
     **Prompt 1:**
      ```
@@ -135,7 +134,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/below-desc.png "")
 
-11. Click **Insert** and then **OK**, or replace the existing content with the HTML provided below to achieve the expected output:
+11. Click **Insert** and then **OK**, or or replace the existing content with the HTML below to achieve the expected output:
 
     ```
     <copy>
@@ -147,17 +146,15 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/insert-html.png "")
 
-    !["Click App Builder"](images/insert-html1.png "")
-
 12. Click **Save and Run**.
 
     !["Click App Builder"](images/saverun.png "")
 
-13. Now, view the updated content row report.
+13. View the updated content row report.
 
     !["Click App Builder"](images/view-content-row.png "")
 
-14. Next, add a badge to the content row. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
+14. Next, add a badge to the content row layout. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
 
     - Settings > Display Badge: Toggle **On**
 
@@ -179,7 +176,7 @@ By the end of this lab, you will be able to:
 
     !["Click App Builder"](images/view-results.png "")
 
-16. Next, add a hyperlink to the title to open a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and select **Create Action**.
+16. Next, add a hyperlink to the title that opens a form page. Switch to the Page Designer tab. In the left pane, under **Events** region, right-click **Actions** and select **Create Action**.
 
     !["Click App Builder"](images/create-action.png "")
 
@@ -202,7 +199,7 @@ By the end of this lab, you will be able to:
 
         Click **OK** to close the dialog.
 
-    >Note: Page number may vary depending on your application. Select the form page to edit the events.
+    >Note: Page number may vary depending on your application. Select the form page used to edit events.
 
     !["Click App Builder"](images/title-link.png "")
 
@@ -214,7 +211,7 @@ By the end of this lab, you will be able to:
 
 ## Summary
 
-In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, showcasing how AI integration within APEX accelerates development and improves application design.
+In this lab, you transformed a classic report into a content row layout, improving the overall presentation of data. You learned how to enhance the report with avatars, badges, and title links, making it more interactive and visually appealing. You also used APEX Assistant to modify SQL queries and generate custom HTML within the description, demonstrating how AI integration in APEX accelerates development and enhances application design.
 
 ## Acknowledgements
 
