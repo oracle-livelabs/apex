@@ -9,10 +9,11 @@ In this lab, you use OCI Generative AI as the AI provider to build a conversatio
 
 OCI API keys consist of two parts: a **Public key** and a **Private key**. You use the OCI console to generate the Private/Public key pair.
 
-**Note:** 
-   - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+**Note:**
 
-   - The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+
+    - The screenshots in this workshop are taken using Dark Mode in APEX 24.2
 
 Estimated Time: 10 Minutes
 
