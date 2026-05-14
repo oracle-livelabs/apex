@@ -35,7 +35,7 @@ To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
-   ![Add API Key](images/oci-login.png " ")
+    ![Add API Key](images/oci-login.png " ")
 
 2. Click **Profile** at the top-right corner and select your username.
 
@@ -43,13 +43,13 @@ To Generate the API Keys using OCI Console:
 
 3. Switch to the **Tokens and keys** tab. Click **Add API key**.
 
-   ![Tokens and keys page](images/add-api-key.png " ")
+    ![Tokens and keys page](images/add-api-key.png " ")
 
 4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
 5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring a Generative AI service in the upcoming lab.*
+    *Note: You will use this private key while configuring a Generative AI service in the upcoming lab.*
 
 6. Click **Add**.
 
@@ -148,7 +148,7 @@ In this lab, you:
 
 2. Navigate to [API Keys](https://platform.openai.com/settings/organization/api-keys) page to create a new key.
 
-   Click **Create new secret key**. Enter the details and click **Create secret key**.
+    Click **Create new secret key**. Enter the details and click **Create secret key**.
 
     ![API keys page](images/create-secret-key.png " ")
 
@@ -185,7 +185,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     - AI Model: **gpt-5.4-nano** (Enter a preferred model of your choice)
 
     Click **Test Connection**.
-   ![Gen AI services page](images/open-ai-details.png ' ')
+    ![Gen AI services page](images/open-ai-details.png ' ')
 
 4. If the connection is successful, click **Create**.
    If unsuccessful, go to troubleshooting section in Appendix lab.

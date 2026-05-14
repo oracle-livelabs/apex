@@ -29,7 +29,7 @@ This task creates the replenishment report page used in the remaining labs. The 
 
 3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click on Accept.
 
-   ![Click Create Page](images/review-pages-and-shared-components.png)
+    ![Click Create Page](images/review-pages-and-shared-components.png)
 
 4. Use natural language to request a new Interactive Report page based on the view **SCM\_REPLENISHMENT\_V**. For example, enter:
 
