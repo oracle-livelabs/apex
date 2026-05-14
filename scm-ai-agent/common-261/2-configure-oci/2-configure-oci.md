@@ -37,7 +37,7 @@ To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
-   ![Add API Key](images/oci-login.png " ")
+    ![Add API Key](images/oci-login.png " ")
 
 2. Click **Profile** at the top-right corner and select your username.
 
@@ -45,13 +45,13 @@ To Generate the API Keys using OCI Console:
 
 3. Switch to the **Tokens and keys** tab. Click **Add API key**.
 
-   ![Tokens and keys page](images/add-api-key.png " ")
+    ![Tokens and keys page](images/add-api-key.png " ")
 
 4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
 
 5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring a Generative AI service in the upcoming lab.*
+    *Note: You will use this private key while configuring a Generative AI service in the upcoming lab.*
 
 6. Click **Add**.
 
@@ -102,9 +102,9 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40** 
 
-   Click **Test Connection**.
+    Click **Test Connection**.
 
-   ![Gen AI services page](images/oci-test-connection.png ' ')
+    ![Gen AI services page](images/oci-test-connection.png ' ')
 
 5. If the connection is successful, click **Create**.
    If unsuccessful, verify if you have configured the IAM Policy on OCI correctly. Refer to the [Identity and Access Management](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=624&p210_wec) workshop for more details.
@@ -123,3 +123,8 @@ You may now **proceed to the next lab**.
 ## Acknowledgments
 - **Author** - Apoorva Srinivas, Senior Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

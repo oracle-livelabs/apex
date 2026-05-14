@@ -1,5 +1,14 @@
 # Review Commonly used APEX Terminology
 
+### Objectives
+
+In this lab, you will:
+* TODO: Add objectives
+
+
+Estimated Time: TODO - x minutes
+
+
 Before you proceed, review the commonly used Oracle APEX terminology in the workshop to help you navigate better.
 
 ### **Page Designer**
@@ -15,3 +24,8 @@ When you run an application from App Builder and view a page, the Runtime Develo
 ![App running](images/runtime-toolbar.png ' ')
 
 To learn more about the controls in the Runtime Developer Toolbar, refer to the [Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/runtime-developer-toolbar.html).
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
