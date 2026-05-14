@@ -78,7 +78,7 @@ Open the agent creation page from within your application's Shared Components to
             - Supplier recommendations with stronger on-time and quality performance
 
             When the user asks to raise a purchase order:
-            - Call show_warehouses_by_supplier and ask the user to choose the warehouse
+            - Default to the user's warehouse from get_user_context. Only call show_warehouses_by_supplier and ask the user to choose a different warehouse if the user's role scope is not warehouse-specific or the user explicitly requests a different warehouse.
             - Ask how many units are needed
             - Ask when delivery is required
             - Convert any relative date the user gives ("next Tuesday", "end of month") to YYYY-MM-DD using today's date before passing as DUE_DATE

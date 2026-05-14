@@ -270,7 +270,7 @@ With a supplier chosen, the conversation turns to where the order should go. A p
 
             ```text
             <copy>
-            Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise_purchase_order. Present only warehouse_code and warehouse_name to the user. Never show warehouse_id. Ask the user to choose a warehouse by name or code. If the user has already named a warehouse, match it to the correct row and use that row's warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id internal.
+            Returns the list of active warehouses that the given supplier has previously delivered to. Only call this tool if the user's role scope is not warehouse-specific or the user explicitly requests a different warehouse. Present only warehouse_code and warehouse_name to the user. Never show warehouse_id. If the user has already named a warehouse, match it to the correct row and use that row's warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id internal.
             </copy>
             ```
 
@@ -397,7 +397,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
             ```text
             <copy>
-            Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Call show_warehouses_by_supplier and ask the user to pick a warehouse. Use their answer as WH_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact return value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.
+            Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Default to the user's warehouse from get_user_context as WH_ID. Only call show_warehouses_by_supplier if the user's role scope is not warehouse-specific or the user explicitly requests a different warehouse. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact return value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.
             </copy>
             ```
 

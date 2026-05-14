@@ -258,7 +258,7 @@ wwv_flow_imp_shared.create_ai_agent(
 '- Supplier recommendations with stronger on-time and quality performance',
 '',
 'When the user asks to raise a purchase order:',
-'- Call show_warehouses_by_supplier and ask the user to choose the warehouse',
+'- Default to the user''s warehouse from get_user_context. Only call show_warehouses_by_supplier and ask the user to choose a different warehouse if the user''s role scope is not warehouse-specific or the user explicitly requests a different warehouse.',
 '- Ask how many units are needed',
 '- Ask when delivery is required',
 '- Convert any relative date the user gives ("next Tuesday", "end of month") to YYYY-MM-DD using today''s date before passing as DUE_DATE',
@@ -461,9 +461,9 @@ wwv_flow_imp_shared.create_ai_agent_tool(
 ,p_static_id=>'raise-purchase-order'
 ,p_tool_type=>'NATIVE_EXECUTE_SERVER_SIDE_CODE'
 ,p_execution_point=>'ON_DEMAND'
-,p_description=>'Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Call show_warehouses_by_supplier and ask the user to pick a warehouse. Use their answer'
-||' as WH_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact retu'
-||'rn value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.'
+,p_description=>'Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Default to the user''s warehouse from get_user_context as WH_ID. Only call show_warehouse'
+||'s_by_supplier if the user''s role scope is not warehouse-specific or the user explicitly requests a different warehouse. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answe'
+||'r as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact return value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'language', 'PLSQL',
   'plsql_code', wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -567,9 +567,8 @@ wwv_flow_imp_shared.create_ai_agent_tool(
 ,p_static_id=>'show-warehouses-by-supplier'
 ,p_tool_type=>'NATIVE_RETRIEVE_DATA'
 ,p_execution_point=>'ON_DEMAND'
-,p_description=>'Returns the list of active warehouses that the given supplier has previously delivered to. Call this when the user asks to raise a purchase order, before calling raise_purchase_order. Present only warehouse_code and warehouse_name to the user. Never '
-||'show warehouse_id. Ask the user to choose a warehouse by name or code. If the user has already named a warehouse, match it to the correct row and use that row''s warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id int'
-||'ernal.'
+,p_description=>'Returns the list of active warehouses that the given supplier has previously delivered to. Only call this tool if the user''s role scope is not warehouse-specific or the user explicitly requests a different warehouse. Present only warehouse_code and war'
+||'ehouse_name to the user. Never show warehouse_id. If the user has already named a warehouse, match it to the correct row and use that row''s warehouse_id as WH_ID in raise_purchase_order without asking again. Keep warehouse_id internal.'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'sql_query', wwv_flow_string.join(wwv_flow_t_varchar2(
     'select warehouse_id,',

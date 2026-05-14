@@ -131,15 +131,15 @@ In this task, you will launch the application and validate the end-to-end procur
     </copy>
     ```
 
-    *Tool invoked: `show_warehouses_by_supplier`. The agent retrieves the warehouses this supplier has previously delivered to and asks you to choose one.*
+    *The agent uses your default warehouse from `get_user_context` and asks for the quantity and delivery date.*
 
     ![Procurement Assistant Conversation](./images/raise-po.png " ")
 
-7. When the agent asks for the destination warehouse, quantity, and delivery date, reply with:
+7. When the agent asks for the quantity and delivery date, reply with:
 
     ```text
     <copy>
-    PHX-WEST, 50 units, deliver by 2026-06-25.
+    50 units, deliver by 2026-06-25.
     </copy>
     ```
 
