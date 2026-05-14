@@ -200,7 +200,7 @@ You now know how to an generate API Key using OpenAI.
 You may now **proceed to the next lab**.
 </if>
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
