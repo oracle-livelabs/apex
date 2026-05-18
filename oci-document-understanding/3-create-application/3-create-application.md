@@ -44,7 +44,7 @@ In this task, you'll create a new application using the APEX **App Builder**. Yo
 
 6. For Theme Style, select **Redwood Light** and click **Save Changes**.
 
-    ![Redwood Light](images/redwood-light.png " ")
+    ![Redwood Light](images/redwood.png " ")
 
 7. In Create an Application wizard, enter/select the following:
 
@@ -148,9 +148,9 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-    |   | Type | Name | Direction | Default Value | Static |
-    |---|-------|------|----------| --------------| ------ |
-    | 1 | HTTP Header| Content-Type | In | application/json | ON |
+    |   | Type | Name | Direction | Static | Data Type | Default Value Type | Static Value |
+    |---|-------|------|----------| --------------| ------ | ------ | ------- |
+    | 1 | HTTP Header| Content-Type | In | ON | String | Static | application/json |
     | 2 | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
@@ -325,7 +325,7 @@ In this task, you'll create the backend processes required to upload invoices to
 
 6. Right-click **Process Invoice** process again and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process1.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 7. In the Property Editor, enter/select the following details:
 
@@ -347,7 +347,7 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
 
 1. In the **Processing** tab, right-click **Process Invoice** and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process1.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 2. In the Property Editor, enter/select the following details:
 
@@ -387,7 +387,7 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
 
 5. Right-click **Process Invoice** process and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process2.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 6. In the Property Editor, enter/select the following details:
 
@@ -434,6 +434,6 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

@@ -103,7 +103,9 @@ In this task, you'll create an Invoice Tracking page featuring the Cards Region,
 
         - Name: **Invoice Tracker**
 
-    - Data Source > Source Type: **SQL Query**
+    - Data Source: **Local Database**
+
+    - Source Type: **SQL Query**
 
     - Enter a SQL SELECT Statement: Copy and paste the below code:
 
@@ -191,7 +193,7 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
 
 2. Select **Blank Page**.
 
-   ![Select Blank Page](images/blank-page1.png " ")
+   ![Select Blank Page](images/blankpage.png " ")
 
 3. On the Create Page dialog, enter/select the following:
 
@@ -315,8 +317,6 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
 
         - Dialog Template: **Modal Dialog**
 
-        - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and click **OK**.
-
     ![Modal Dialog](images/modal-dialog.png " ")
 
 13. Click **Save**.
@@ -377,6 +377,6 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

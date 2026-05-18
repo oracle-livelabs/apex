@@ -32,7 +32,7 @@ In this workshop, you will:
 
 - Implement Invoice Approval Requests Using Approvals Component.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+*Note: This workshop assumes you are using Oracle APEX 26.1.*
 
 ## Prerequisites
 
@@ -54,11 +54,11 @@ In this workshop, you will:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
->*Note: This workshop assumes you are using Oracle APEX 24.2.*
+>*Note: This workshop assumes you are using Oracle APEX 26.1.*
 
 - *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-- *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
+- *The screenshots in this workshop are taken using Dark Mode in APEX 26.1*
 
 - *The application ID and application icon in the screenshots may vary. Please ignore the application ID and icon.*
 
@@ -113,6 +113,6 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026
