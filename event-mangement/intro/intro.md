@@ -81,7 +81,7 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 1. **[Click here](files/event-management-hol-app.sql)** to download the completed application.
 
-2. Follow **Appendix** lab to import the application in your workspace.
+2. Follow Lab [Appendix: Download Instructions](?lab=8-appendix) to import the application in your workspace.
 
 ## Learn More - *Useful Links*
 

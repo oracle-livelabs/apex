@@ -30,7 +30,7 @@ In this lab, you will:
 
     !["Page Designer"](images/install-supp-objects.png " ")
 
-## Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI
+## Task 2: Update Web Credentials in Oracle APEX
 
 Web credentials are used to authenticate connection to external REST services, or REST Enabled SQL services from APEX.
 
@@ -38,7 +38,7 @@ Creating Web Credentials securely stores and encrypts authentication credentials
 
 To update the Web Credential in Oracle APEX:
 
-1. You need access to an OCI API Key Pair. To generate an OCI Key pair, refer to [Lab 1: Task 1 : Generate API keys using OCI Console](?lab=3-configure-oci&type=OCIGenAI#Task1:GenerateAPIKeysusingOCIConsole)
+1. You need access to an OCI API Key Pair. To generate an OCI Key pair, refer to Lab 1 > Task 1 [Configure a Generative AI Service in APEX](?lab=0-configure-ai-keys)
 
     *Note: Skip this step if you already have the API key.*
 
@@ -61,8 +61,6 @@ To update the Web Credential in Oracle APEX:
 
     - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
-      ![Private key file](images/private-key.png " ")
-
     - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
@@ -71,7 +69,7 @@ To update the Web Credential in Oracle APEX:
 
     ![Web Credentials page](images/web-creds.png " ")
 
-## Task 3: Enable Generative AI in Oracle APEX
+## Task 3: Configure Generative AI
 
 1. Click **Workspace Utilities**.
 
