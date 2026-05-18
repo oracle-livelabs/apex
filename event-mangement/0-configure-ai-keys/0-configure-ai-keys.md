@@ -2,7 +2,7 @@
 
 ## Introduction
 
-To use the native GenAI features in APEX, you must configure a Generative AI service in APEX. To configure a Generative AI service, you will first need to obtain an API key from your preferred AI provider. You can either choose **OCI Generative AI** or **OpenAI** as your AI provider.
+To use the native GenAI features in APEX, you must configure a Generative AI service in APEX. To configure a Generative AI service, you will first need to obtain an API key from your preferred AI provider. You can choose either of these *(OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama or Generic (OpenAI API Compatible))* as your AI provider.
 
 <if type="OCIGenAI">
 
