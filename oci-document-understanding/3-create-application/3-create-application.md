@@ -22,7 +22,9 @@ In this lab, you will:
 
 In this task, you'll create a new application using the APEX **App Builder**. You'll configure the application’s icon, appearance, name, and key features using the **Use Create App Wizard**.
 
-1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
+1. On the workspace home page, click  **App Builder** and click **Create**.
+
+    ![Click App Builder](images/app-build.png " ")
 
     ![Click Create](images/create.png " ")
 
