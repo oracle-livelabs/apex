@@ -131,7 +131,7 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
                 }
             ]
         }
-        <copy>
+        </copy>
         ```
 
 11. Click **Synchronize with Body** and then click **OK**.
@@ -419,7 +419,7 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
                             field_value     VARCHAR2(1000) PATH '$.fieldValue.value'
                             ))) jt
         WHERE  jt.field_type_code = 'KEY_VALUE';
-        <copy>
+        </copy>
         ```
 
 
