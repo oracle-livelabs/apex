@@ -50,7 +50,7 @@ In this task, you will create an application using Generative AI by entering nat
 
     !["Click create app using Gen AI"](images/create-app-using-gen-ai.png "")
 
-    *Note*: If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/24.2/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)
+    *Note*: If the AI Assistant does not detect the tables created using AI, refresh the Data Dictionary Cache to ensure the latest tables are available. [Refer to the documentation for steps.](https://docs.oracle.com/en/database/oracle/apex/26.1/aeadm/accessing-data-dictionary-cache-from-administration-services.html#GUID-E398AC8D-2054-4B10-A49C-E6AD49DCF78F)
 
 4. To create an Event Management application, you will use the APEX Assistant wizard. Enter the prompts mentioned below and hit **Enter**.
 
