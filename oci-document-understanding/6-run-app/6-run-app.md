@@ -57,6 +57,6 @@ You now know how to run the Automatic Invoice Handling application and obtain re
 
 ## Acknowledgements
 
-- **Author(s)** - Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026
