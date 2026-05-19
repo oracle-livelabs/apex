@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you learn how to create a data model using Generative AI. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues and attendees for efficient event management.
+In this lab, you will learn how to create a data model using Generative AI. Ensure that you have a secure key to access OCI Generative AI, OpenAI, or any other Generative AI services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues, and attendees for efficient event management.
 
 Estimated Time: 10 minutes
 
@@ -14,11 +14,11 @@ In this lab, you will:
 
 ### Before You Start
 
-- Sign up and Get access for one of the supported Generative AI Services like OCI Generative AI, OpenAI or Cohere.
+- Sign up and get access for one of the supported Generative AI Services such as OCI Generative AI, OpenAI or Cohere.
 
-- An Oracle Cloud paid account, or free trial.
+- An Oracle Cloud paid account or free trial account.
 
-- An APEX Workspace
+- An APEX workspace
 
 ## Task 1: Create Event Management Data Model using AI
 
@@ -26,7 +26,7 @@ To create a data model with AI, ensure that you have configured Generative AI Se
 
 In this task, you will learn how to leverage Oracle APEX's Generative AI Service to build an Event Management Data Model without writing SQL manually. By providing simple prompts, you will generate database objects, refine them, and add sample records automatically.
 
-1. Login to your Application. On the Workspace home page, click **SQL Workshop**.
+1. On the Workspace home page, from the left navigation menu click the **SQL Workshop** icon.
 
     ![select sql workshop](./images/select-sql-workshop.png " ")
 
@@ -38,15 +38,11 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
     ![select create data model](./images/click-create-data-model-ai.png " ")
 
-    ![select create data model alternate](./images/click-create-data-model.png " ")
-
-    >**Note:** You can also access Create Data Model Using AI directly from the Tasks list on the SQL Workshop home page.
-
-4. When using Generative AI features within the APEX development environment *for the first time*, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a Dialog regarding **consent**. Click on **Accept**.
+4. When using Generative AI features within the APEX development environment *for the first time*, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a dialog regarding **consent**. Click **Accept**.
 
     ![provide consent](./images/provide-consent.png " ")
 
-5. You will use the **APEX Assistant** Wizard to create a *Event Management* Data Model using AI. To create a Events Management Data Model, enter the prompts mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
+5. You will use the **APEX Assistant** Wizard to create an *Event Management* Data Model using AI. To create an Event Management Data Model, enter the prompts mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
     **Prompt 1:**
     ```
@@ -95,7 +91,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
     !["provide script name"](images/use-selection.png "")
 
-12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
+12. In the APEX Assistant box, enter the prompt to generate sample data for those tables.
 
     **Prompt 1:**
     ```
@@ -114,7 +110,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
     !["provide script name"](images/insert-query.png "")
 
-15. Before clicking on **Run** button. Let's replace the code from the **Script Editor** with the below modified database objects code:
+15. Before clicking the **Run** button. Let's replace the code from the **Script Editor** with the modified database objects code below:
 
     > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
 
@@ -544,7 +540,7 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
     !["run now"](images/confirm-yes.png "")
 
-17. Click **Run Now** to submit the script for execution.
+17. Click **Run** to submit the script for execution.
 
     !["run now"](images/run-now.png "")
 
@@ -552,13 +548,13 @@ In this task, you will learn how to leverage Oracle APEX's Generative AI Service
 
     !["data model created"](images/successful-statemwnts.png "")
 
-    *Note: Do NOT click Create App yet, as you will creating an app in the upcoming lab using Generative AI.*
+    *Note: Do NOT click Create App yet, as you will create an app in the upcoming lab using Generative AI.*
 
 ## Task 2: Review Database Objects
 
 Now, let's review the database objects created using AI.
 
-1. Navigate to **SQL Workshop** > **Object Browser**.
+1. From the left navigation menu, hover over **SQL Workshop** icon, then select **Object Browser**.
 
     ![SQL Workshop home page](./images/object-browser.png " ")
 
@@ -573,4 +569,4 @@ You now know how to create a Data Model using AI. You may now **proceed to the n
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, November 2025
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
