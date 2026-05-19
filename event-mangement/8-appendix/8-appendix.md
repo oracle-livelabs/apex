@@ -1,5 +1,8 @@
 # Appendix: Download Instructions
 
+Estimated Time: TODO - x minutes
+
+
 This lab consists of tasks that need to be executed on a case-by-case basis. If you are directed to this lab at any point of time, choose the appropriate task that needs to be executed to proceed.
 
 ## Objectives
@@ -7,6 +10,10 @@ This lab consists of tasks that need to be executed on a case-by-case basis. If 
 In this lab, you will:
 
 - [Download](files/event-management-hol-app.sql) and install the final export of the app.
+
+## Introduction
+
+TODO: Add introduction text here.
 
 ## Task 1: Import the App into an APEX Workspace
 
@@ -44,15 +51,15 @@ To update the Web Credential in Oracle APEX:
 
 2. From left navigation menu, navigate to **App Builder** icon and click **Workspace Utilities > All Workspace Utilities**.
 
-   ![Click App Builder](images/app-builder1.png " ")
+    ![Click App Builder](images/app-builder1.png " ")
 
 3. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/sc-web-creds.png " ")
+    ![Click Web Credentials](images/sc-web-creds.png " ")
 
 4. Click **Credentials for oci gen ai**.
 
-   ![Create Web Credentials](images/apex-ai-cred.png " ")
+    ![Create Web Credentials](images/apex-ai-cred.png " ")
 
 5. Enter the following details using the configuration file you copied while generating an API key in OCI Console.
 
@@ -101,3 +108,8 @@ To update the Web Credential in Oracle APEX:
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
