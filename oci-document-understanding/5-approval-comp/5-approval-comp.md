@@ -20,15 +20,15 @@ In this task, you'll create a Task Definition to support the invoice approval wo
 
 1. In the Page Designer toolbar, navigate to **Shared Components** icon.
 
-   ![Task Definition in Shared Components](images/sc-8.png " ")
+    ![Task Definition in Shared Components](images/sc-8.png " ")
 
 2. Under **Workflows and Automations**, select **Task Definitions**.
 
-   ![Select Task Definition](images/task-def.png " ")
+    ![Select Task Definition](images/task-def.png " ")
 
 3. Click **Create**.
 
-   ![Create Task Definition](images/task-def-create.png " ")
+    ![Create Task Definition](images/task-def-create.png " ")
 
 4. In **Create Task Definition** page, enter/select the following:
 
@@ -177,11 +177,11 @@ In this task, you'll create processes to fetch employee details and submit an in
 
 2. Select **1 - Home** page.
 
-   ![Home - 1](./images/home1.png " ")
+    ![Home - 1](./images/home1.png " ")
 
 3. In the **Rendering** tab, navigate to **Pre-Rendering** and right-click **Before Header**, select **Create Process**.
 
-   ![Create Process](./images/create-process3.png " ")
+    ![Create Process](./images/create-process3.png " ")
 
 4. In the Property Editor, enter/select the following:
 
