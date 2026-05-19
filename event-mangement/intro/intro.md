@@ -63,13 +63,13 @@ Total Workshop Time: 60 minutes
 
 | S No. | Module | Est. Time |
 |--- |--- | --- |
-| 1 |[Configure Generative AI Service](?lab=0-configure-ai-keys) | 5 minutes |
-| 2 |[Create a Data Model using AI](?lab=1-create-data-model-using-ai) | 5 minutes |
-| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 5 minutes |
-| 4|[Enhance UI with APEX Assistant](?lab=4-ui-apex-assistant) | 5 minutes |
+| 1 |[Configure a Generative AI Service in APEX](?lab=0-configure-ai-keys) | 10 minutes |
+| 2 |[Create a Data Model using Generative AI](?lab=1-create-data-model-using-ai) | 10 minutes |
+| 3 |[Create the Application using Generative AI](?lab=2-create-app) | 10 minutes |
+| 4|[Enhance UI with AI](?lab=4-ui-apex-assistant) | 10 minutes |
 | 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
 | 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
-| 7 |[OPTIONAL - Enhance Charts and Database Objects with APEX Assistant](?lab=3-apex-assistant) | 5 minutes |
+| 7 |[OPTIONAL - Enhance Charts and Database Objects using AI](?lab=3-apex-assistant) | 10 minutes |
 
 ### **Let's Get Started!**
 
@@ -81,31 +81,9 @@ Total Workshop Time: 60 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevent_management_app_hol.sql)** to download the completed application.
+1. **[Click here](files/event-management-hol-app.sql)** to download the completed application.
 
-2. Import the event\_management\_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
-
-3. Once the application is installed, follow the below steps to update the Web Credentials.
-
-    - Click the Down Arrow next to **App Builder**, click **Workspace Utilities** and then select **All Workspace Utilities**.
-
-    ![navigate to workspace utilities](images/navigate-to-workspace-utilities.png " ")
-
-    - Select **Web Credentials**.
-
-    - Click **Credentials for Open AI**.
-
-    ![select openai credentials](images/select-openai-cred.png " ")
-
-    - In the **Web Credentials** page, enter/select the following:
-
-        - Credential Name: **Authorization**
-
-        - Credential Secret: Enter **YOUR_KEY**
-
-    - Click **Apply Changes**.
-
-    ![update open ai cred](images/update-openai-cred.png " ")
+2. Follow Lab [Appendix: Download Instructions](?lab=8-appendix) to import the application in your workspace.
 
 ## Learn More - *Useful Links*
 
