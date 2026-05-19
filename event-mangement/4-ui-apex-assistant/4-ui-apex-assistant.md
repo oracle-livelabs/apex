@@ -110,7 +110,7 @@ By the end of this lab, you will be able to:
     **Prompt 1:**
      ```
     <copy>
-    Generate some HTML to display start date and end date as labelled information using span tag.
+    Generate an HTML to display start date and end date as a labelled information using span tag.
     </copy>
     ```
 
@@ -152,7 +152,7 @@ By the end of this lab, you will be able to:
 
 13. View the updated content row report.
 
-    !["Click App Builder"](images/view-content-row3.png "")
+    !["Click App Builder"](images/view-content-row.png "")
 
 14. Next, add a badge to the content row layout. Switch to the Page Designer tab. Navigate to **Attributes** tab and enter/select the following:
 

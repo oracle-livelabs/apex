@@ -16,21 +16,19 @@ Estimated Time: 1 hour 30 mins
 
 In this workshop, you will:
 
-- Creating an Agent in OCI Generative AI Agents.
+- Understand how to create OCI Generative AI Agents.
 
-- Add API Keys in the OCI Console.
+- Learn how to setup API Keys in the OCI Console.
 
-- Create Web Credentials in Oracle APEX.
+- Create Web Credentials in Oracle APEX so your app can call OCI services safely.
 
-- Create Session and Ingestion Job using OCI Ingestion Job REST APIs.
+- Set up an automation job to monitor the status of ongoing Ingestion Jobs.
 
-- Set up an automation to monitor the status of incomplete Ingestion Jobs.
+- Create and invoke a REST Data Source in your APEX app.
 
-- Create and invoke a REST Data Source in your APEX app using the OCI Generative AI Agents' Create Sessions REST API.
+- Design a simple Classic Report in APEX that will act as the chat widget.
 
-- Design and customize a Classic Report for the chat widget.
-
-- Interact with OCI Generative AI Agents through the Chat REST API.
+- Interact with OCI Generative AI Agents through the Chat REST API and display the response in your app.
 
 >Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
