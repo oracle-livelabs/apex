@@ -43,10 +43,6 @@
           "filename": "../../3-apex-assistant/3-apex-assistant.md"
       },
       {
-      "title": "Lab Appendix: Download Instructions",
-      "filename": "../../8-appendix/8-appendix.md"
-    },
-      {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
         "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"

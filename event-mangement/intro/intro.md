@@ -81,9 +81,31 @@ Total Workshop Time: 60 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](files/event-management-hol-app.sql)** to download the completed application.
+1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fevent_management_app_hol.sql)** to download the completed application.
 
-2. Follow Lab [Appendix: Download Instructions](?lab=8-appendix) to import the application in your workspace.
+2. Import the event\_management\_hol.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
+
+3. Once the application is installed, follow the below steps to update the Web Credentials.
+
+    - Click the Down Arrow next to **App Builder**, click **Workspace Utilities** and then select **All Workspace Utilities**.
+
+    ![navigate to workspace utilities](images/navigate-to-workspace-utilities.png " ")
+
+    - Select **Web Credentials**.
+
+    - Click **Credentials for Open AI**.
+
+    ![select openai credentials](images/select-openai-cred.png " ")
+
+    - In the **Web Credentials** page, enter/select the following:
+
+        - Credential Name: **Authorization**
+
+        - Credential Secret: Enter **YOUR_KEY**
+
+    - Click **Apply Changes**.
+
+    ![update open ai cred](images/update-openai-cred.png " ")
 
 ## Learn More - *Useful Links*
 
