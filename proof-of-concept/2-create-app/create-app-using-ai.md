@@ -29,8 +29,6 @@ Estimated Time: 15 minutes
 
 4. In the APEX Assistant Wizard, if you see a warning that says "It looks like there are some changes to tables in your workspace. Please refresh the data dictionary cache to work with the latest tables". Click on **Accept** and then click **Refresh Cache**.
 
-     ![Refresh Cache](images/refresh-cache.png "")
-
 5. Use the APEX Assistant Wizard to create an Application, to create a Project Management Application, enter the prompt mentioned below and hit **Enter**.
 
     >Prompt 1:
@@ -84,10 +82,6 @@ Estimated Time: 15 minutes
 
     Enter your **Username** and **Password**.   
     Click **Sign In**.
-
-    The new application will be displayed.
-
-    ![input login credentials](images/login-details.png " ")
 
 3. Play around with the application and explore the different pages.
 

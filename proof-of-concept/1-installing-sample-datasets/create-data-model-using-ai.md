@@ -539,7 +539,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     ```
     - Click **Run**.
 
-    !["provide script name"](./images/replace-script2.png "")
+    !["provide script name"](./images/replace-s2.png "")
 
 8. Review the summary and then click **Run Now**.
 

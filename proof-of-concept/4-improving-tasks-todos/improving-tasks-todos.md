@@ -89,68 +89,67 @@ It would be beneficial to see additional details related to the milestone.
 
 In the Runtime environment navigate to **Task To Dos** page and notice that the report includes the Task but not the associated Milestone. To retrieve these values in the report you need to utilize an SQL which ties in the Projects and Milestones tables. This can be done using inner selects or by joining multiple tables together. For simplicity you are going to implement inner select statements. And, you will generate this SQL query using APEX Assistant.
 
-1. From the runtime application, navigate to the To Dos report page, and then navigate to Page Designer. In the Developer Toolbar click **Edit Page nn**.
+1. From the runtime application, navigate to the To Dos report page, and then navigate to Page Designer. In the Developer Toolbar click **Edit Page X**.
 
     ![select tasks todos page](images/select-page9.png " ")
 
-    You should now be in Page Designer with **Page 9: Task-ToDos** loaded.
+    You should now be in Page Designer with **Page 9: Task-ToDos** loaded (it maybe different page number in your case).
 
-2. You need to update the query defined for To Dos. Within Page Designer, in the Rendering tree (left pane), click **Task Todos**. In the Property Editor (right pane),  
+2. You need to update the query defined for To Dos. Within Page Designer, in the Rendering tree (left pane), click **Task Todos**. In the Property Editor (right pane), 
     - For Source: **SQL Query**.
 
     ![set SQL Query as source](images/set-sql-query.png " ")
 
-> **Note:** _The SQL Query will be populated. The SQL statement selects all of the columns from the HOL\_TO\_DOS table_
+    >**Note:** _The SQL Query will be populated. The SQL statement selects all of the columns from the HOL\_TO\_DOS table_
 
-1. In the property editor, under Source, click the **Code Editor** icon next to SQL Query.     
+3. In the property editor, under Source, click the **Code Editor** icon next to SQL Query.
 
     ![select code editor](images/select-code-editor.png " ")
 
-2. In the **Code Editor - SQL Query** wizard, click **APEX Assistant**.
+4. In the **Code Editor - SQL Query** wizard, click **APEX Assistant**.
 
     ![click APEX Assistant](images/click-apex-assistant.png " ")
 
-3. To retrieve the Project name and Milestone Name from the respective tables, copy and paste the below prompt in your AI Assistant and click **Enter**.
+5. To retrieve the Project name and Milestone Name from the respective tables, copy and paste the below prompt in your AI Assistant and click **Enter**.
 
-    >Prompt:  
+    >Prompt:
     >Write a query to fetch details from task todos, including project and milestone names, using subqueries to join projects, tasks, and milestones
 
     ![enter prompt1](images/enter-prompt1.png " ")
 
-
-5. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**.
+6. Notice that APEX Assistant generated an SQL, if you wish to utilize it, select **Insert**.
 
     ![generated SQL](images/generated-sql.png " ")
 
-6. In the Code Editor toolbar, click **Validate**. If the SQL is validated successfully, then click **OK**.
+7. In the Code Editor toolbar, click **Validate**. If the SQL is validated successfully, then click **OK**.
 
     ![validate code](images/validate-code.png " ")
 
-7. Run the application to ensure the new Project and Milestone columns display correctly. In the Page Designer toolbar, click **Save and Run**.
+8. Run the application to ensure the new Project and Milestone columns display correctly. In the Page Designer toolbar, click **Save and Run**.
 
     ![run application](images/run-app.png " ")
 
-8. In the runtime environment, in the Tasks Todos report menu, click **Actions**. In the dropdown, select **Columns**.
+9. In the runtime environment, in the Tasks Todos report menu, click **Actions**. In the dropdown, select **Columns**.
 
     ![click actions](images/click-actions.png " ")
 
-9. In the Select Columns dialog, select **Project Name**, **Milestone Name**, and **Task ID** from the Left side or **Do Not Display** side and move them to **Display in Report**.   
+10. In the Select Columns dialog, select **Project Name**, **Milestone Name**, and **Task ID** from the Left side or **Do Not Display** side and move them to **Display in Report**.
 
     ![move columns](images/move-columns.png " ")
 
-10. In the Select Columns dialog, under **Display in Report**, rearrange the columns and move **Task ID**, **Project Name**, and **Milestone Name** to the top. Click **Apply**.
+11. In the Select Columns dialog, under **Display in Report**, rearrange the columns and move **Task ID**, **Project Name**, and **Milestone Name** to the top. Click **Apply**.
 
     ![change position](images/change-position.png " ")
 
-11. You need to save the revised report layout so others will see the new and improved column placement. In the runtime environment, in the To Dos report menu, click **Actions**. Then, in the dropdown, select **Report**, and then click **Save Report**.
+12. You need to save the revised report layout so others will see the new and improved column placement. In the runtime environment, in the To Dos report menu, click **Actions**. Then, in the dropdown, select **Report**, and then click **Save Report**.
 
     ![save report](images/save-report.png " ")
 
-12.  In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.
+13.  In the Save Report dialog, for Save (Only displayed for developers), select **As Default Report Settings**.
 
     ![save as default](images/save-as-default.png " ")
 
-13. In the Save Default Report dialog, click **Apply**.     
+14. In the Save Default Report dialog, click **Apply**.
 
     ![save default](images/save-default.png " ")
     > **Note:** _You want to save the report as Primary so that it displayed as you see it now to end users when they navigate to the page_
@@ -160,7 +159,7 @@ If you review the To Dos form page, by clicking an edit icon on the report, you 
 
 This same LOV is used on the Links form page so we can reuse it there as well.
 
-1. Within Page Designer, with Page 9 selected, in the Page Designer toolbar, click **Shared Components**.
+1. Within Page Designer, with Page **Task To-Dos** selected, in the Page Designer toolbar, click **Shared Components**.
 
     ![navigate to shared components](images/navigate-to-shared-comp1.png " ")
 
