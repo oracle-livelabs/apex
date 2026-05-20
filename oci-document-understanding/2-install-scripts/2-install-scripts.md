@@ -24,7 +24,7 @@ In this task, you'll create the required database objects by running **SQL Scrip
 
 1. Log in into your APEX Workspace. Click on **SQL Workshop** and select **SQL Scripts**.
 
-    ![Select WKSPL](images/sql_wksp.png " ")
+    ![Select WKSP](images/sql-wksp.png " ")
 
     ![Select Quick SQL](images/sql-script0.png " ")
 
