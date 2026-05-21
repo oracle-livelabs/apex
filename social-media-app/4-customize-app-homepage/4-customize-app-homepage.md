@@ -67,25 +67,29 @@ Since our app is a Single Page Application, we do not need a breadcrumb bar at t
 
 In this task, you will learn how to download and import a starter application. If you follow this lab, you can skip Lab 1, Lab 2, Lab 3, and Lab 4. Once you complete this task, proceed to Lab 5.
 
-1. Download the [Starter App](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_LAB1-4_completed.zip) for Social Media workshop. This application includes all functionality completed in Labs 1, 2, 3, and 4.
+1. Download the **[Starter App](files/APEX_Social_Media_HOL.sql)** to download the completed application. for Social Media workshop. This application includes all functionality completed in Labs 1, 2, 3, and 4.
 
-2. To import an application, from App Builder, click **Import**.
+2. From your workspace home page, click **App Builder**.
+
+    ![App builder homepage](images/app-build.png)
+
+3. To import an application, from App Builder, click **Import**.
 
     ![App builder homepage](images/import.png)
 
-3. Drag and drop the starter application ZIP file downloaded in **Step 1**. Click Next.
+4. Drag and drop the starter application file downloaded in **Step 1**. Click **Next**.
 
     ![Import dialog](images/drag-and-drop.png)
 
-4. Accept the defaults and click **Install Application**.
+5. Accept the defaults and click **Import Application**.
 
-    ![Install app screen](images/install-app.png)
+    ![Install app screen](images/install-app1.png)
 
-5. Click **Install Supporting Objects**.
+6. Click **Install Supporting Objects**.
 
     ![Install app screen](images/install-support.png)
 
-6. Click **Run Application**.
+7. Click **Run Application**.
 
     ![Install app screen](images/run-app2.png)
 

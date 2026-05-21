@@ -278,5 +278,6 @@ In this final task, we create another dynamic action to get the device location 
 
 ## Acknowledgements
 
-- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager;
-- **Last Updated By/Date** -  Sahaana Manavalan, Senior Product Manager, March 2025
+- **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager; Ankita Beri, Senior Product Manager
+
+- **Last Updated By/Date** -  Ankita Beri, Senior Product Manager, May 2026
