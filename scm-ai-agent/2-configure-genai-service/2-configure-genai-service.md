@@ -32,45 +32,54 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
     ![Generative AI Services page](./images/genai-nav.png " ")
 
-4. Select **Create**. On the **Create Generative AI Service** page, enter/select the following values for the Workspace level Generative AI configuration:
+4. Select **Create**.
+
+    ![Select Create on the Generative AI Services page](./images/click-create-ai.png " ")
+
+5. On the **Create Generative AI Service** page, enter/select the following:
 
     > **Note:** This LiveLab uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, and Generic OpenAI API Compatible. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
 
     - AI Provider: **OCI Generative AI Service**
     - Name: **OCI Gen AI**
-    - Static ID: **oci\_gen\_ai**
     - Compartment ID: Enter your OCI Compartment ID.
-    - Region: **us-chicago-1**
-    - Model ID: **meta.llama-3.3-70b-instruct**
-    - Used by App Builder: **On**
+    - Region: Enter your OCI region. (Currently, the OCI Generative AI Service is only available in limited regions.)
+    - Model ID: **meta.llama-3.3-70b-instruct** or **cohere.command-a-03-2025** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
+    - Used by App Builder: Toggle **On**
     - Base URL: Leave the auto-generated value unchanged.
     - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential.
 
-    ![Create Generative AI Service](./images/gen-ai-service-create.png " ")
+    ![Create Generative AI Service](./images/create-genai.png " ")
 
-5. Select **Create**.
+6. Click **Test Connection**.
 
-6. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
+    ![Test Connection on the Create Generative AI Service page](./images/test-connection.png " ")
+
+7. Select **Create**.
+
+    ![Select Create on the Generative AI Service page](./images/oci-genai-create.png " ")
+
+8. Verify that the new **OCI Gen AI** service appears in the **Generative AI Services** list.
 
     ![Generative AI Service created](./images/gen-ai-service-created.png " ")
 
-7. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
+9. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
 
     ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
 
-8. Select the application from the App Builder applications list.
+10. Select the application from the App Builder applications list.
 
     ![App Builder applications list](./images/appbuilder-home3.png " ")
 
-9. On the application home page, select **Shared Components**.
+11. On the application home page, select **Shared Components**.
 
     ![Application home page](./images/shared-comp.png " ")
 
-10. From **Shared Components**, select **AI Attributes**.
+12. From **Shared Components**, select **AI Attributes**.
 
     ![Shared Components](./images/shared-comp2.png " ")
 
-11. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
+13. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
 
     ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
 
