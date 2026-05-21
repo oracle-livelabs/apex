@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## About This Workshop
 
 Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have. When an item drops below its reorder point and the replenishment alert is already CRITICAL, a warehouse manager needs answers fast: which items are at risk, which suppliers can help, and who has the best delivery record.
 
@@ -32,9 +32,9 @@ In this workshop, you will learn how to:
 
 ## Key Concepts
 
-### What is a Generative AI Agent?
+### What Is a Generative AI Agent?
 
-An **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
+A **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
 
 > **Note:** Starting with Oracle APEX 26.1, AI Configurations from previous releases are now AI Agents. Your existing configurations carry over; the rename reflects the expanded capabilities, including tools and multi-step orchestration.
 
@@ -42,7 +42,7 @@ An **Generative AI Agent** is a Shared Component in Oracle APEX that enables ric
 - **Welcome Message**: the greeting shown to the user when they first open the chat panel.
 - **Tools**: give the agent the ability to retrieve information and perform actions. The AI service decides which tools to call and when, based on what the user is asking.
 
-### What is an AI Tool?
+### What Is an AI Tool?
 
 **AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
 
@@ -50,7 +50,7 @@ Oracle APEX provides three built-in tool types: **Retrieve Data** runs a SQL que
 
 > **Note:** Starting with Oracle APEX 26.1, RAG Sources from previous releases are automatically migrated to Augment System Prompt Tools. The behavior is the same; your existing RAG integrations continue to work, now as part of the unified tool model.
 
-### What is an Execution Point?
+### What Is an Execution Point?
 
 Every tool has an **Execution Point** that controls when it runs:
 
