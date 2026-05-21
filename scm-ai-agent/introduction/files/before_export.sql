@@ -557,7 +557,7 @@ wwv_flow_imp_shared.create_ai_agent_tool(
 ||' as WH_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. Use full_name from get_user_context as the PO owner.'
 ,p_requires_confirmation=>true
 ,p_confirm_title=>'Confirm Purchase Order'
-,p_confirm_message=>'Raise PO for &QUANTITY. units of item &ITEM_ID. from supplier &SUPPLIER_ID. to warehouse &WH_ID., expected delivery by &DUE_DATE'
+,p_confirm_message=>'Raise PO for &QUANTITY. units of item &ITEM_ID. from supplier &SUPPLIER_ID. to warehouse &WH_ID., expected delivery by &DUE_DATE.'
 ,p_confirm_approve_label=>'Raise PO'
 ,p_confirm_cancel_label=>'Cancel'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
