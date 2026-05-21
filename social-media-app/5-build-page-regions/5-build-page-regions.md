@@ -98,7 +98,7 @@ Estimated Time: 15 minutes
 
         - Label: **Post**
 
-   ![Options available for Type is displayed](images/post-type.png "")
+    ![Options available for Type is displayed](images/post-type.png "")
 
 3. Click **Save and Run** and see the results of our changes so far!
 

@@ -65,7 +65,7 @@ In this lab, you will:
 
 ## Task 2: Run the App and Sign In
 
-1. Click **Run application**.
+1. Click **Run Application**.
 
     ![Application home page](images/run-app1.png "")
 
@@ -81,7 +81,7 @@ In this lab, you will:
 
 1. The side navigation is currently enabled in the app. To open the navigation menu, click on the hamburger menu at the top left of the screen. We will be customizing the page to our purpose.
 
-   ![Navigation menu of the app](images/app-nav.png "")
+    ![Navigation menu of the app](images/app-nav.png "")
 
 2. Next, we will go back to the APEX Workspace and create the APEX Social Media data model.
 

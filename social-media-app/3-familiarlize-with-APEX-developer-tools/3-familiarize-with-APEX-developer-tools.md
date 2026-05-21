@@ -26,11 +26,11 @@ Estimated Time: 5 minutes
 
 1. From the left navigation menu, click the **App Builder** icon.
 
-    ![App Builder](images/AppBuilder.png "")
+    ![App Builder](images/appbuilder.png "")
 
 2. Select the **APEX Social Media** application.
 
-    ![Application Homepage](images/RunApplication.png "")
+    ![Application Homepage](images/runapplication.png "")
 
 3. Click **Run Application**.
 
@@ -74,7 +74,7 @@ APEX Page Designer is divided into three vertical sections, each containing one 
 
     ![The property editor is displayed](images/pd-right.png)
 
-   **Note**: Some tabs may have scroll bars, allowing you to scroll down or across to access additional options.
+    **Note**: Some tabs may have scroll bars, allowing you to scroll down or across to access additional options.
 
     **Before we continue, take a moment to practice adjusting the size of your sections, but keep them all expanded.**
 

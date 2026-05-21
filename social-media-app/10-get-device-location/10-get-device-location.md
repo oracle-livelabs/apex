@@ -4,21 +4,22 @@
 
 In this lab, you will enable the app to retrieve the user's device location, which will be optional. If the user agrees, their GPS latitude and longitude will be captured on page load and stored in the **P1\_LAT** and **P1\_LON** hidden page items. When users like a post or create a new one, their location will be recorded and displayed on a map.
 
-Estimated Time: 5 minutes
-
-Watch the video below for a quick walk-through of the lab.
+<!-- Watch the video below for a quick walk-through of the lab.
 [Create an APEX App](videohub:1_xrycy2p7)
-
+ -->
 ### Objectives
 
 In this lab, you will:
 
-- Create a Map Region
-- Retrieve the User's location and display on a Map using Dynamic Actions
+- Create a Map Region.
+
+- Retrieve the User's location and display on a Map using Dynamic Actions.
 
 ### Prerequisites
 
 - Completion of workshop through Lab 9
+
+Estimated Time: 5 minutes
 
 ## Task 1: Create Map Region
 
@@ -28,31 +29,35 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
 1. In the Layout section, scroll down to the bottom of the page, so that you can see the **Dialogs, Drawers and Popups** region.
 
-   ![Layout pane in Page Designer](images/layout-pane.png =50%x*)
+    ![Layout pane in Page Designer](images/layout-pane.png)
 
 2. Ensure that your component drawer is open below the layout section, and click **Regions** tab.
 
-   ![Gallery menu](images/layout-pane-s.png =60%x*)
+    ![Gallery menu](images/layout-pane-s.png)
 
 3. Click the **Map** Region in the component drawer and drag slowly and carefully into the Dialogs, Drawers and Popups region in the Layout section as shown. Notice that as you do this, things will adjust to show you where you can drop it.
 
-   ![Layout pane](images/show-drag-drop-s.png =50%x*)
+    ![Layout pane](images/show-drag-drop-s.png)
 
 4. Release/drop the Map region to the gold area inside this region.
 
-   ![Layout pane](images/drag-n-drop-s.png =50%x*)
+    ![Layout pane](images/drag-n-drop-s.png)
 
-   In the rendering tree, you should see it appear like this:
+    In the rendering tree, you should see it appear like this:
 
-   ![Page designer](images/after-drop.png =90%x*)
+    ![Page designer](images/after-drop.png)
 
 5. Now, we need to edit the settings for the Map region. APEX Maps support multiple layers, but for this app, one layer is sufficient. In the Property Editor, enter/select the following:
 
-    - Indentification > Name: **Post and Like Locations**
+    - Identification > Name: **Post and Like Locations**
+
     - Under Source:
-        - Location: **Local Database** (new properties will be shown underneath).
-        - Type: **SQL Query**
-        - SQL Query: copy and paste the following code in the code editor
+
+      - Location: **Local Database** (new properties will be shown underneath).
+
+      - Type: **SQL Query**
+
+      - SQL Query: copy and paste the following code in the code editor
 
          ```
           <copy>
@@ -65,35 +70,35 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
           </copy>
          ```
 
-         This query aggregates locations from both the POSTS and REACTIONS tables using an Oracle UNION query.
+      This query aggregates locations from both the POSTS and REACTIONS tables using an Oracle UNION query.
 
-   ![Page designer](images/update-region-s.png)
+      - Appearance > Template : **Inline Dialog**
 
-    - Appearance > Template : **Inline Dialog**
-
-    - Advanced > Static ID : **map**
+      - Advanced > Static ID : **map**
 
       (The static ID will be used by our javascript to actually open the map region in the next task.)
 
-   ![Page designer](images/appearance.png)
+      ![Page designer](images/update-region-s.png)
 
-6. Finally, in the Rendering tree, click on the **New** Layer that was created so that we can configure a few final properties.
+      ![Page designer](images/appearance.png)
+
+6. Finally, in the left pane, click **Employees** Layer that was created so that we can configure a few final properties.
 
     - Identification > Name: **Locations**
 
     - Source > Location: **Region Source**
 
     - Under Column Mapping:
-        - Geometry Column Data Type: **Longitude/Latitude**
-        - Longitude Column: **LON**
-        - Latitude Column: **LAT**
 
-   ![Page designer](images/lat-lon.png)
+      - Geometry Column Data Type: **Longitude/Latitude**
 
-    - Under Tooltip:
-        - Advanced Formatting: Toggle **ON**
+      - Longitude Column: **LON**
 
-        - HTML Expression: Copy and paste the below expression
+      - Latitude Column: **LAT**
+
+    ![Page designer](images/lat-lon1.png)
+
+    - Tooltip > HTML Expression: Copy and paste the below expression
 
          ```
           <copy>
@@ -101,7 +106,7 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
           </copy>
          ```
 
-   ![Page designer](images/tooltip-s.png)
+    ![Page designer](images/tooltip-s.png)
 
 7. Navigate to the **Post and Likes Locations** region. In the property editor, click **Attributes** tab and enter/select the following:
 
@@ -109,11 +114,11 @@ We will add a map region by dragging it into the Dialogs, Drawers, and Popups se
 
     - Controls > Options: Check **Mousewheel zoom** option
 
-   ![Page designer](images/attributes.png)
+    ![Page designer](images/attributes.png)
 
 8. Save your changes! Remember, you won’t see this region on your app yet as it is a hidden region until we build the button and add code to open it.
 
-   ![Page designer](images/save.png)
+   ![Page designer](images/savee.png)
 
 ## Task 2: Create Map button
 
@@ -121,53 +126,55 @@ Now we’ll create a button that will be in the top navigation bar, between the 
 
 1. First, navigate to your applications’ **Shared Components** page. This can be done in a couple of different ways. Since you are already in Page Designer, you can click on the button that looks like stacked pieces.
 
-   ![Page designer](images/nav-shared-components.png)
+    ![Page designer](images/nav-shared-components.png)
 
 2. In the Navigation and Search section, click **Navigation Bar List**.
 
-   ![Shared Components page](images/nav-bar-list-s.png =65%x*)
+    ![Shared Components page](images/nav-bar-list-s.png)
 
 3. Our app only has one of these, so drill into its’ configuration by clicking on the **Navigation Bar entry** in the report under the **Name** column.
 
-   ![Navigation Bar List page](images/nav-bar-list-entry.png)
+    ![Navigation Bar List page](images/nav-bar-list-entry.png)
 
-4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the Create List Entry button to add a new row in the list.
+4. You will see 4 existing entries in the list, and we want to add a new one for the Map button. To do this, you can immediately click the **Create List Entry** button to add a new row in the list.
+
+    ![Navigation Bar List page](images/list-entry.png)
 
 5. Enter/select the following in the new List entry:
 
-    - Under Entry:
+   - Under Entry:
 
-        - Sequence: **15**
+      - List Entry Label: **Map**
 
-        - Image/Class: **fa-map**
+      - Sequence: **15**
 
-        - List Entry Label: **Map**
+      - Icon: **fa-map**
 
-    - Under Target:
+   - Under Target:
 
-        - Target Type: **URL**
+      - Target Type: **URL**
 
-        - URL Target: **#action$open-map**
+      - URL Target: **#action$open-map**
 
       Click **Create List Entry**
 
-    ![Navigation Bar List page](images/create-entry.png)
+   ![Navigation Bar List page](images/create-entry.png)
 
-    ![Navigation Bar List page](images/create-entry-s.png)
+   ![Navigation Bar List page](images/create-entry-s.png)
 
 ## Task 3: Create Dynamic Action to open Map Region
 
 In this task, we update our javascript on the page so that the Target you specified above can open the map region.
 
-1. Click on the **Edit Page 1** button in the upper right of the current page.
+1. Click **Edit Page 1** button in the upper right of the current page.
 
-   ![Navigation Bar List page](images/edit-page.png)
+    ![Navigation Bar List page](images/edit-page.png)
 
 2. Page 1 is now open in the Page Designer. In the Rendering Tree, ensure that **Page 1: Timeline** is already selected
 
     - Under Javascript
 
-        - Execute When Page Loads: Replace the script with the following code:
+        - Execute When Page Loads: **Replace** the script with the following code:
 
             ```
             <copy>
@@ -192,16 +199,14 @@ In this task, we update our javascript on the page so that the Target you specif
             </copy>
             ```
 
-   ![Property Editor](images/js-expression.png)
+    ![Property Editor](images/js-expression2.png)
 
 3. We’re almost there! We now need to create another custom dynamic action to open the Map region that we created, when the new Map button is clicked.
-In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and select **Create Dynamic Action**
+    In the Rendering Tree, click the Dynamic Actions tab. Right-click **Custom**, and select **Create Dynamic Action**
 
-   ![Dynamic Actions Tab](images/create-da4.png)
+    ![Dynamic Actions Tab](images/create-da4.png)
 
 4. You should now see the new Dynamic Action as New/Show.
-
-   ![Dynamic Actions Tab](images/new-da.png)
 
 5. In the Property Editor with **New** selected, enter/select the following:
 
@@ -209,15 +214,13 @@ In the Rendering Tree, click the Dynamic Actions tab. Right click Custom, and se
 
     - Under When:
 
-        - Event : Custom
+      - Custom Event : **action-open-map**
 
-        - Custom Event : **action-open-map**
+      - Selection Type : **JavaScript Expression**
 
-        - Selection Type : **JavaScript Expression**
+      - JavaScript Expression : **document**
 
-        - JavaScript Expression : **document**
-
-   ![Property Editor](images/action-open-map.png =35%x*)
+    ![Property Editor](images/action-open-map.png)
 
 6. The last part of this is to configure the dynamic action itself that is currently set to **Show**. Select **Show**. In the Property Editor enter/select the following:
 
@@ -241,30 +244,29 @@ In this final task, we create another dynamic action to get the device location 
 
 1. From the Dynamic Actions tab, under Events right-click **Page Load** and select **Create Dynamic Action**.
 
-   ![Dynamic Actions tab in the Page Designer](images/create-da2.png)
+    ![Dynamic Actions tab in the Page Designer](images/create-da2.png)
 
 2. In the Property Editor, for Identification > Name, enter a name such as **Get Device Location**.
 
-   ![Dynamic Actions tab in the Page Designer](images/da-name.png)
+    ![Dynamic Actions tab in the Page Designer](images/da-name1.png)
 
-3. In the Rendering Tree, under True action, select **Show**.
-In the Property Editor, enter/select the following:
+3. In the Rendering Tree, under True action, select **Show**. In the Property Editor, enter/select the following:
 
     - Identification > Action: **Get Current Position**
 
     - Under Settings:
 
-        - Return Type : **Latitude and Longitude**
+      - Return Type : **Latitude and Longitude**
 
-        - Latitude Item: **P1_LAT**
+      - Latitude Item: **P1_LAT**
 
-        - Longitude Item: **P1_LON**
+      - Longitude Item: **P1_LON**
 
-   ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
+    ![Dynamic Actions tab in the Page Designer](images/da-true-action.png)
 
-4. In the Rendering Tree, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
+4. In the left pane, under Post region, select **P1\_LAT** and **P1\_LON** together. In the Property Editor, under Settings, toggle the **Value Protected** to OFF.
 
-      ![Page Designer](images/value-protected.png)
+    ![Page Designer](images/value-protected.png)
 
 5. Let us see how the Map is displayed in the app. Click **Save and Run**.
 
