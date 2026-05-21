@@ -120,7 +120,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 7. Verify that the script completes successfully with 0 errors.
 
-    ![Sample Data Results](./images/ran-script1.png" ")
+    ![Sample Data Results](./images/ran-script1.png " ")
 
 8. Select **SQL Scripts**.
 
