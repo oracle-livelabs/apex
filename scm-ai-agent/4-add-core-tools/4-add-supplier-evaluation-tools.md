@@ -64,7 +64,7 @@ The procurement conversation starts here. The user opens the assistant and asks 
 
     This tool does not require any parameters.
 
-3. Under **Settings**, for **SQL Query**, copy and paste the following:
+3. Under **Settings**, for SQL Query, copy and paste the following:
 
     ```sql
     <copy>
@@ -145,7 +145,7 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
 
     ![Tool 4 parameter grid with ITEM\_ID added](./images/tool2-parameter.png " ")
 
-4. Under **Settings**, for **SQL Query**, copy and paste the following:
+4. Under **Settings**, for SQL Query, copy and paste the following:
 
     ```sql
     <copy>
@@ -219,7 +219,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
 
     ![Tool 5 parameter grid with SUPPLIER\_ID and TIME\_PERIOD added](./images/task3-param.png " ")
 
-4. Under **Settings**, for **SQL Query**, copy and paste the following:
+4. Under **Settings**, for SQL Query, copy and paste the following:
 
     ```sql
     <copy>
@@ -281,7 +281,7 @@ With a supplier chosen, the conversation turns to where the order should go. A p
 
     ![Tool 6 parameter grid with SUPPLIER\_ID added](./images/task4-params.png " ")
 
-4. Under **Settings**, for **SQL Query**, copy and paste the following:
+4. Under **Settings**, for SQL Query, copy and paste the following:
 
     ```sql
     <copy>
@@ -355,7 +355,7 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     ![raise\_purchase\_order parameter grid](./images/task6-params.png " ")
 
-4. Under **Settings**, for **PL/SQL Code**, copy and paste the following:
+4. Under **Settings**, for PL/SQL Code, copy and paste the following:
 
     ```plsql
     <copy>
