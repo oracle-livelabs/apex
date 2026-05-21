@@ -10,7 +10,7 @@ This workshop focuses on the inventory and warehouse management aspects of suppl
 
 In this hands-on workshop, you will build an **AI Procurement Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
 
-You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
+You will define seven tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
 
 Estimated Workshop Time: 60 minutes
 
@@ -26,11 +26,9 @@ In this workshop, you will learn how to:
 
 - Use **On Demand** tools that the AI model calls only when the conversation requires them
 
-- Implement a **human checkpoint pattern** using a browser confirmation dialog
-
 - Use `apex_ai.set_tool_result` to push structured results and notifications to the chat UI
 
-- Build a complete procurement use case: **identify > evaluate > confirm > act**
+- Build a complete procurement use case: **identify > evaluate > act**
 
 ## Key Concepts
 
@@ -115,7 +113,7 @@ If you are stuck or the application is not working as expected, you can download
 
 4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all eight tools.
+5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all seven tools.
 
 6. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
 

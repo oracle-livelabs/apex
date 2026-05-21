@@ -143,15 +143,13 @@ In this task, you will launch the application and validate the end-to-end procur
     </copy>
     ```
 
-    *Tool invoked: `confirm_action`. The agent presents a summary of the purchase order and waits for your confirmation before proceeding.*
+    *The agent calls `raise_purchase_order`. Because this tool has **Requires Confirmation** enabled, APEX displays a confirmation dialog with the order details before the tool runs.*
 
     ![Procurement Assistant Conversation](./images/quantity.png " ")
 
-8. Confirm the browser dialog when it appears so the purchase order can be created.
+8. Review the confirmation dialog and click **Raise PO** to approve the purchase order.
 
-    *Tool invoked: `raise_purchase_order`. The purchase order is inserted into the system.*
-
-    ![Procurement Assistant Conversation](./images/confirm-po.png " ")
+    ![Confirm Purchase Order dialog](./images/confirm-raise-po.png " ")
 
 9. The agent confirms the purchase order in the chat, showing the PO number, item, quantity, supplier, warehouse, and expected delivery date. The purchase order is now a planned inbound receipt in the system.
 

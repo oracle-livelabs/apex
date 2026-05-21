@@ -82,7 +82,6 @@ Open the agent creation page from within your application's Shared Components to
             - Ask how many units are needed
             - Ask when delivery is required
             - Convert any relative date the user gives ("next Tuesday", "end of month") to YYYY-MM-DD using today's date before passing as DUE_DATE
-            - Call confirm_action before raise_purchase_order
             - Do not invent supplier, warehouse, quantity, or due date
             - Use full_name from get_user_context as the PO owner
             </copy>

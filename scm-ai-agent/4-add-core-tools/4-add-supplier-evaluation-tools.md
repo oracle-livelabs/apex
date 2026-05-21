@@ -10,10 +10,9 @@ Each tool in this lab represents one step in the procurement journey:
 2. **Find who can help**: look up active suppliers with a delivery history for that item
 3. **Evaluate the options**: pull a performance scorecard for a chosen supplier
 4. **Choose a destination**: show which warehouses that supplier has delivered to before
-5. **Confirm before acting**: show a browser dialog and wait for the user to approve
-6. **Raise the order**: write the planned purchase order to the database and notify the user
+5. **Raise the order**: write the planned purchase order to the database and notify the user
 
-All six tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 3 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
+All five tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 3 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
 
 Estimated Time: 20 minutes
 
@@ -22,8 +21,6 @@ Estimated Time: 20 minutes
 In this lab, you will:
 
 - Add supplier evaluation tools to identify stock risk, compare suppliers, and review delivery performance
-
-- Add a human confirmation checkpoint before any write action runs
 
 - Add the tool that creates the planned purchase order
 
@@ -35,7 +32,6 @@ In this lab, you will:
 | `get_suppliers_for_item` | Retrieve Data | On Demand |
 | `get_supplier_delivery_performance` | Retrieve Data | On Demand |
 | `show_warehouses_by_supplier` | Retrieve Data | On Demand |
-| `confirm_action` | Execute Client-side Code | On Demand |
 | `raise_purchase_order` | Execute Server-side Code | On Demand |
 {: title="Tools Built in Lab 4"}
 
@@ -314,69 +310,11 @@ With a supplier chosen, the conversation turns to where the order should go. A p
     | `scm_inbound_receipts` | Historical supplier deliveries by warehouse |
     {: title="Tables used by show_warehouses_by_supplier"}
 
-## Task 5: Request User Confirmation Before Any Write Action
+## Task 5: Create the Purchase Order and Action the Replenishment Alert
 
-At this point the agent has gathered everything it needs: the item, the supplier, the warehouse, the quantity, and the due date. Before it writes anything to the database, the user must explicitly approve. This is the human checkpoint that separates a recommendation from an action, a pattern every AI-powered write should follow.
+This is where the conversation becomes an action. The user has identified a shortage, chosen a supplier, picked a warehouse, and specified a quantity and date. Now the agent executes. This tool writes the planned purchase order to the database, marks the replenishment alert as actioned so it no longer appears as open, and pushes a success notification back to the chat panel, all in a single PL/SQL block.
 
-This tool shows a browser confirmation dialog that summarises the full order and waits for the user to click OK or Cancel. If the user cancels, the agent stops and reports back. The purchase order is only raised after this tool returns `"confirmed"`.
-
-**Type:** Execute Client-side Code | **Execution:** On Demand
-
-> **Note:** In an **Execute Client-side Code** tool, `this.data` is a JavaScript object that contains the parameters passed by the agent to this tool call. For example, if the agent calls `confirm_action` with `MESSAGE = "Raise PO for 100 units..."`, then `this.data.MESSAGE` inside the code block holds that string. Any tool parameter can be accessed in this way.
-
-1. On the **Procurement Agent** page, in the **Tools** section, select **Add Tool**.
-
-    ![Select Add Tool to create confirm\_action](./images/task5-add.png " ")
-
-2. Enter/select the following configuration:
-
-    - Under **Identification**:
-
-        - Name: **confirm\_action**
-        - Type: **Execute Client-side Code**
-        - Execution Point: **On Demand**
-        - Description: copy and paste the following:
-
-            ```text
-            <copy>
-            Shows a browser confirmation dialog with the provided MESSAGE. Returns "confirmed" if the user clicks OK, or "denied" if they cancel. Always call this before raise_purchase_order. Build MESSAGE as a plain-English summary of the full order: item name, quantity, supplier name, warehouse name, due date, and PO owner. If the return value is "denied", stop and report back to the user.
-            </copy>
-            ```
-
-    ![Filled configuration for confirm\_action](./images/task5-iden.png " ")
-
-3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
-
-    | Parameter | Description | Data Type | Required |
-    | --- | --- | --- | --- |
-    | MESSAGE | Confirmation text displayed to the user. | VARCHAR2 | Yes |
-    {: title="confirm_action Parameters"}
-
-    ![Tool 7 parameter grid with MESSAGE added](./images/task5-params.png " ")
-
-4. Under **Settings**, for **Code**, copy and paste the following:
-
-    ```javascript
-    <copy>
-    return new Promise(resolve => {
-        apex.message.confirm(this.data.MESSAGE, okPressed => {
-            resolve(okPressed ? "confirmed" : "denied");
-        });
-    });
-    </copy>
-    ```
-
-    ![Entered JavaScript for confirm\_action](./images/task5-code.png " ")
-
-5. Click **Create**.
-
-    ![Procurement Agent with confirm\_action saved](./images/task5-create.png " ")
-
-## Task 6: Create the Purchase Order and Action the Replenishment Alert
-
-This is where the conversation becomes an action. The user has identified a shortage, chosen a supplier, picked a warehouse, specified a quantity and date, and confirmed. Now the agent executes. This tool writes the planned purchase order to the database, marks the replenishment alert as actioned so it no longer appears as open, and pushes a success notification back to the chat panel, all in a single PL/SQL block.
-
-The agent only calls this tool after all previous steps are complete and `confirm_action` has returned `"confirmed"`.
+The agent only calls this tool after all previous steps are complete. Because this tool writes to the database, you will enable **Requires Confirmation** so that APEX presents a confirmation dialog to the user before the tool runs. This is a built-in capability available on every tool — no custom code required.
 
 **Type:** Execute Server-side Code | **Execution:** On Demand
 
@@ -384,7 +322,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
 1. On the **Procurement Agent** page, in the **Tools** section, select **Add Tool**.
 
-    ![Select Add Tool to create raise\_purchase\_order](./images/task6-add.png " ")
+    ![Select Add Tool to create raise\_purchase\_order](./images/task5-add.png " ")
 
 2. Enter/select the following configuration:
 
@@ -397,7 +335,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
             ```text
             <copy>
-            Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Default to the user's warehouse from get_user_context as WH_ID. Only call show_warehouses_by_supplier if the user's role scope is not warehouse-specific or the user explicitly requests a different warehouse. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact return value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.
+            Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Default to the user's warehouse from get_user_context as WH_ID. Only call show_warehouses_by_supplier if the user's role scope is not warehouse-specific or the user explicitly requests a different warehouse. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. Use full_name from get_user_context as the PO owner.
             </copy>
             ```
 
@@ -407,7 +345,6 @@ The agent only calls this tool after all previous steps are complete and `confir
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
-    | `CONFIRMED` | Return value from confirm\_action. Must be "confirmed" to proceed. | VARCHAR2 | Yes |
     | `TIMEZONE` | Browser timezone value for due-date conversion. | VARCHAR2 | Yes |
     | `DUE_DATE` | Required delivery date in `YYYY-MM-DD` format. If the user gives a relative expression such as "next Tuesday" or "in two weeks", compute the exact calendar date using today's date and convert it to YYYY-MM-DD before passing. Never pass a natural language string. | VARCHAR2 | Yes |
     | `QUANTITY` | Requested purchase quantity. | NUMBER | Yes |
@@ -416,14 +353,13 @@ The agent only calls this tool after all previous steps are complete and `confir
     | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
     {: title="raise_purchase_order Parameters"}
 
-    ![Tool 8 parameter grid with all purchase-order inputs added](./images/task6-params.png " ")
+    ![raise\_purchase\_order parameter grid](./images/task6-params.png " ")
 
 4. Under **Settings**, for **PL/SQL Code**, copy and paste the following:
 
     ```plsql
     <copy>
     scm_raise_purchase_order(
-        p_confirmed   => :CONFIRMED,
         p_item_id     => :ITEM_ID,
         p_supplier_id => :SUPPLIER_ID,
         p_wh_id       => :WH_ID,
@@ -437,11 +373,27 @@ The agent only calls this tool after all previous steps are complete and `confir
 
     ![Entered PL/SQL code for raise\_purchase\_order](./images/task6-sql.png " ")
 
-5. Click **Create**.
+5. Under **User Approval**, enable **Requires Confirmation** and enter the following:
+
+    - Confirmation Title: **Confirm Purchase Order**
+    - Confirmation Message:
+
+        ```text
+        <copy>
+        Raise PO for &QUANTITY. units of item &ITEM_ID. from supplier &SUPPLIER_ID. to warehouse &WH_ID., expected delivery by &DUE_DATE.
+        </copy>
+        ```
+
+    - Approve Label: **Raise PO**
+    - Cancel Label: **Cancel**
+
+    This ensures the user sees a confirmation dialog summarising the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
+
+6. Click **Create**.
 
     ![Procurement Agent with raise\_purchase\_order saved](./images/task6-crete.png " ")
 
-6. The `scm_raise_purchase_order` procedure handles the following:
+7. The `scm_raise_purchase_order` procedure handles the following:
 
     - Creates a planned supplier receipt with a sequential purchase order number
     - Inserts the receipt line for the selected item and quantity
@@ -462,7 +414,7 @@ The agent only calls this tool after all previous steps are complete and `confir
 
 ## Summary
 
-All eight tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the six procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, obtain user confirmation, and raise a purchase order, all through a single guided conversation.
+All seven tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the five procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, and raise a purchase order, all through a single guided conversation.
 
 You may now **proceed to the next lab**.
 

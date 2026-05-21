@@ -88,6 +88,7 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_v_suppliers_for_item` | `get_suppliers_for_item` tool |
     | `scm_v_supplier_delivery_performance` | `get_supplier_delivery_performance` tool |
     | `scm_v_warehouses_by_supplier` | `show_warehouses_by_supplier` tool |
+    | `scm_replenishment_v` | Annotated replenishment alerts view for reporting |
     | `scm_raise_purchase_order` | `raise_purchase_order` tool |
     {: title="Agent Views and Procedure"}
 

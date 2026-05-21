@@ -4643,11 +4643,74 @@ select ir.source_partner_id         as supplier_id,
 
 
 -- ---------------------------------------------------------------------------
+-- View: scm_replenishment_v
+-- Annotated replenishment alerts view for AI agent consumption
+-- ---------------------------------------------------------------------------
+CREATE OR REPLACE FORCE EDITIONABLE VIEW "SCM_REPLENISHMENT_V" ("ALERT_NUMBER" ANNOTATIONS("COLUMN_CONTEXT" 'Business alert reference used to identify the replenishment alert.', "DESCRIPTION" 'Business reference used to identify the replenishment alert.', "DISPLAY_LABEL" 'Alert Number', "SEMANTIC_TYPE" 'reference_number'), "ALERT_STATUS_CODE" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include ACTIONED, CLOSED, IN_REVIEW, OPEN, SUPPRESSED.', "COLUMN_CONTEXT" 'Current lifecycle status of the replenishment alert. Values currently present in this view include ACTIONED, CLOSED, IN_REVIEW, OPEN, SUPPRESSED.', "DESCRIPTION" 'Current lifecycle status of the replenishment alert.', "DISPLAY_LABEL" 'Alert Status', "SEMANTIC_TYPE" 'status'), "ALERT_TYPE_CODE" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include AGING_REVIEW, LOW_STOCK, OUT_OF_STOCK, PICK_FACE_REPLENISHMENT, SHORT_DATED_REVIEW.', "COLUMN_CONTEXT" 'Business type of replenishment alert represented by the row. Values currently present in this view include AGING_REVIEW, LOW_STOCK, OUT_OF_STOCK, PICK_FACE_REPLENISHMENT, SHORT_DATED_REVIEW.', "DESCRIPTION" 'Business type of replenishment alert represented by the row.', "DISPLAY_LABEL" 'Alert Type', "SEMANTIC_TYPE" 'classification'), "PRIORITY_CODE" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include CRITICAL, HIGH, LOW, MEDIUM.', "COLUMN_CONTEXT" 'Business priority assigned to the replenishment alert. Values currently present in this view include CRITICAL, HIGH, LOW, MEDIUM.', "DESCRIPTION" 'Business priority assigned to the replenishment alert.', "DISPLAY_LABEL" 'Priority Code', "SEMANTIC_TYPE" 'priority'), "RAISED_AT" ANNOTATIONS("COLUMN_CONTEXT" 'Timestamp when the replenishment alert was raised.', "DESCRIPTION" 'Date and time when the replenishment alert was raised.', "DISPLAY_LABEL" 'Raised At', "SEMANTIC_TYPE" 'datetime'), "REVIEW_PENDING_FLAG" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include Y and N.', "COLUMN_CONTEXT" 'Y means the alert is still pending review. N means the alert has already been reviewed.', "DESCRIPTION" 'Indicates whether the alert is still pending review.', "DISPLAY_LABEL" 'Review Pending Flag', "SEMANTIC_TYPE" 'flag'), "WAREHOUSE_CODE" ANNOTATIONS("COLUMN_CONTEXT" 'Business warehouse code for the warehouse responsible for the replenishment alert.', "DESCRIPTION" 'Business code of the warehouse responsible for the alert.', "DISPLAY_LABEL" 'Warehouse Code', "SEMANTIC_TYPE" 'code'), "WAREHOUSE_NAME" ANNOTATIONS("COLUMN_CONTEXT" 'Business warehouse name for the warehouse responsible for the replenishment alert.', "DESCRIPTION" 'Business name of the warehouse responsible for the alert.', "DISPLAY_LABEL" 'Warehouse Name', "SEMANTIC_TYPE" 'name'), "ITEM_CODE" ANNOTATIONS("COLUMN_CONTEXT" 'Business item code for the item associated with the replenishment alert.', "DESCRIPTION" 'Business code of the item that requires replenishment attention.', "DISPLAY_LABEL" 'Item Code', "SEMANTIC_TYPE" 'code'), "ITEM_NAME" ANNOTATIONS("COLUMN_CONTEXT" 'Business item name for the item associated with the replenishment alert.', "DESCRIPTION" 'Business name of the item that requires replenishment attention.', "DISPLAY_LABEL" 'Item Name', "SEMANTIC_TYPE" 'name'), "ITEM_CATEGORY_CODE" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include APPAREL, ELEC, ELECTRONICS, FOOD, MED, MEDICAL, SPARES.', "COLUMN_CONTEXT" 'Business category assigned to the item. Values currently present in this view include APPAREL, ELEC, ELECTRONICS, FOOD, MED, MEDICAL, SPARES.', "DESCRIPTION" 'Business category assigned to the item.', "DISPLAY_LABEL" 'Item Category', "SEMANTIC_TYPE" 'category'), "BASE_UOM_CODE" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include CS and EA.', "COLUMN_CONTEXT" 'Default unit of measure used for inventory quantities in the row. Values currently present in this view include CS and EA.', "DESCRIPTION" 'Default unit of measure used for inventory quantities in the row.', "DISPLAY_LABEL" 'Base Unit of Measure', "SEMANTIC_TYPE" 'unit_of_measure'), "PICK_LOCATION_CODE" ANNOTATIONS("COLUMN_CONTEXT" 'Business code of the pick location that needs replenishment attention.', "DESCRIPTION" 'Business code of the pick location linked to the alert.', "DISPLAY_LABEL" 'Pick Location Code', "SEMANTIC_TYPE" 'code'), "AVAILABLE_QUANTITY" ANNOTATIONS("COLUMN_CONTEXT" 'Available stock quantity observed when the replenishment alert was raised.', "DESCRIPTION" 'Available quantity recorded on the replenishment alert when it was raised.', "DISPLAY_LABEL" 'Available Quantity', "SEMANTIC_TYPE" 'quantity'), "TRIGGER_QUANTITY" ANNOTATIONS("COLUMN_CONTEXT" 'Quantity threshold that caused the replenishment alert to be raised.', "DESCRIPTION" 'Quantity threshold that triggered the replenishment alert.', "DISPLAY_LABEL" 'Trigger Quantity', "SEMANTIC_TYPE" 'quantity'), "QTY_TO_TARGET" ANNOTATIONS("COLUMN_CONTEXT" 'Calculated quantity required to move available stock up to the target quantity.', "DESCRIPTION" 'Calculated quantity required to move available stock up to the target quantity.', "DISPLAY_LABEL" 'Quantity To Target', "SEMANTIC_TYPE" 'quantity'), "CURRENT_WH_QTY_AVAILABLE" ANNOTATIONS("COLUMN_CONTEXT" 'Current available stock quantity aggregated across the warehouse for the same item.', "DESCRIPTION" 'Current available stock across the warehouse for the same item.', "DISPLAY_LABEL" 'Current Warehouse Quantity Available', "SEMANTIC_TYPE" 'quantity'), "RESERVE_CAN_COVER_TO_TARGET_FLAG" ANNOTATIONS("AI_CONTEXT" 'Values currently present in this view include Y and N.', "COLUMN_CONTEXT" 'Y means reserve stock can fully cover the quantity needed to reach target quantity. N means it cannot.', "DESCRIPTION" 'Indicates whether reserve stock can fully cover the quantity needed to reach target quantity.', "DISPLAY_LABEL" 'Reserve Can Cover To Target Flag', "SEMANTIC_TYPE" 'flag')) AS
+  with loc_bal as (
+  select ib.item_id,
+         ib.storage_location_id,
+         sum(ib.quantity_available) as qty_available
+    from scm_inventory_balances ib
+   group by ib.item_id, ib.storage_location_id
+),
+wh_bal as (
+  select sl.warehouse_id,
+         ib.item_id,
+         sum(ib.quantity_available) as qty_available
+    from scm_inventory_balances ib
+    join scm_storage_locations sl
+      on sl.storage_location_id = ib.storage_location_id
+   group by sl.warehouse_id, ib.item_id
+)
+select ra.alert_number as alert_number,
+       ra.alert_status_code as alert_status_code,
+       ra.alert_type_code as alert_type_code,
+       ra.priority_code as priority_code,
+       ra.raised_at as raised_at,
+       case when ra.reviewed_at is null then 'Y' else 'N' end as review_pending_flag,
+       wh.warehouse_code as warehouse_code,
+       wh.warehouse_name as warehouse_name,
+       i.item_code as item_code,
+       i.item_name as item_name,
+       i.item_category_code as item_category_code,
+       i.base_uom_code as base_uom_code,
+       pick_loc.location_code as pick_location_code,
+       ra.available_quantity as available_quantity,
+       ra.trigger_quantity as trigger_quantity,
+       case
+         when ra.available_quantity is not null and ra.target_quantity is not null
+         then greatest(ra.target_quantity - ra.available_quantity, 0)
+       end as qty_to_target,
+       wh_bal.qty_available as current_wh_qty_available,
+       case
+         when ra.available_quantity is not null
+          and ra.target_quantity is not null
+          and greatest(ra.target_quantity - ra.available_quantity, 0) > 0
+          and nvl(reserve_bal.qty_available, 0) >= greatest(ra.target_quantity - ra.available_quantity, 0)
+         then 'Y'
+         else 'N'
+       end as reserve_can_cover_to_target_flag
+  from scm_replenishment_alerts ra
+  join scm_items i
+    on i.item_id = ra.item_id
+  join scm_warehouses wh
+    on wh.warehouse_id = ra.warehouse_id
+  left join scm_storage_locations pick_loc
+    on pick_loc.storage_location_id = ra.pick_location_id
+  left join loc_bal reserve_bal
+    on reserve_bal.item_id = ra.item_id
+   and reserve_bal.storage_location_id = ra.reserve_location_id
+  left join wh_bal
+    on wh_bal.warehouse_id = ra.warehouse_id
+   and wh_bal.item_id = ra.item_id;
+
+
+-- ---------------------------------------------------------------------------
 -- Procedure: scm_raise_purchase_order
--- Used by: raise_purchase_order tool (Lab 4, Task 6)
+-- Used by: raise_purchase_order tool (Lab 4, Task 5)
 -- ---------------------------------------------------------------------------
 create or replace procedure scm_raise_purchase_order (
-    p_confirmed   in varchar2,
     p_item_id     in number,
     p_supplier_id in number,
     p_wh_id       in number,
@@ -4668,13 +4731,6 @@ as
     v_due              timestamp with time zone;
     v_receiving_loc_id number;
 begin
-    if p_confirmed != 'confirmed' then
-        apex_ai.set_tool_result(
-            p_result => 'Purchase order cancelled. User did not confirm.'
-        );
-        return;
-    end if;
-
     select application_user_id
       into v_user_id
       from scm_application_users

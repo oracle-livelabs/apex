@@ -262,44 +262,12 @@ wwv_flow_imp_shared.create_ai_agent(
 '- Ask how many units are needed',
 '- Ask when delivery is required',
 '- Convert any relative date the user gives ("next Tuesday", "end of month") to YYYY-MM-DD using today''s date before passing as DUE_DATE',
-'- Call confirm_action before raise_purchase_order',
 '- Do not invent supplier, warehouse, quantity, or due date',
 '- Use full_name from get_user_context as the PO owner'))
 ,p_welcome_message=>'Hi, I''m your Procurement Assistant. How can I help you today ?'
 ,p_version_scn=>'SH256:QyLOV9RS0D6hv89Old4YXhBayvZKRQ9vryOfnZ844co'
 ,p_created_on=>wwv_flow_imp.dz('20260430141350Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260430184546Z')
-,p_created_by=>'SCM-GENDEV-USER'
-,p_updated_by=>'SCM-GENDEV-USER'
-);
-wwv_flow_imp_shared.create_ai_agent_tool(
- p_id=>wwv_flow_imp.id(10202344601747864)
-,p_tool_name=>'confirm_action'
-,p_static_id=>'confirm-action'
-,p_tool_type=>'NATIVE_EXECUTE_CLIENT_SIDE_CODE'
-,p_execution_point=>'ON_DEMAND'
-,p_description=>'Shows a browser confirmation dialog with the provided MESSAGE. Returns "confirmed" if the user clicks OK, or "denied" if they cancel. Always call this before raise_purchase_order. Build MESSAGE as a plain-English summary of the full order: item name,'
-||' quantity, supplier name, warehouse name, due date, and PO owner. If the return value is "denied", stop and report back to the user.'
-,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
-  'js_code', wwv_flow_string.join(wwv_flow_t_varchar2(
-    'return new Promise(resolve => {',
-    '    apex.message.confirm(this.data.MESSAGE, okPressed => {',
-    '        resolve(okPressed ? "confirmed" : "denied");',
-    '    });',
-    '});')))).to_clob
-,p_created_on=>wwv_flow_imp.dz('20260430154056Z')
-,p_updated_on=>wwv_flow_imp.dz('20260430154056Z')
-,p_created_by=>'SCM-GENDEV-USER'
-,p_updated_by=>'SCM-GENDEV-USER'
-);
-wwv_flow_imp_shared.create_ai_agent_tool_param(
- p_id=>wwv_flow_imp.id(10202674628747865)
-,p_param_name=>'MESSAGE'
-,p_description=>'Confirmation text displayed to the user.'
-,p_data_type=>'VARCHAR2'
-,p_is_required=>true
-,p_created_on=>wwv_flow_imp.dz('20260430154056Z')
-,p_updated_on=>wwv_flow_imp.dz('20260430154056Z')
 ,p_created_by=>'SCM-GENDEV-USER'
 ,p_updated_by=>'SCM-GENDEV-USER'
 );
@@ -586,8 +554,12 @@ wwv_flow_imp_shared.create_ai_agent_tool(
 ,p_tool_type=>'NATIVE_EXECUTE_SERVER_SIDE_CODE'
 ,p_execution_point=>'ON_DEMAND'
 ,p_description=>'Creates a planned purchase order as a PLANNED inbound receipt for the given item and supplier. Before calling this tool you must complete these steps in order: 1. Call show_warehouses_by_supplier and ask the user to pick a warehouse. Use their answer'
-||' as WH_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. 4. Call confirm_action with a plain-English summary. Pass the exact retu'
-||'rn value from confirm_action as CONFIRMED. If CONFIRMED is not "confirmed", do not call this tool. Use full_name from get_user_context as the PO owner.'
+||' as WH_ID. 2. Ask the user how many units they need. Use their answer as QUANTITY. 3. Ask the user when they need delivery by. Use their answer as DUE_DATE in YYYY-MM-DD format. Use full_name from get_user_context as the PO owner.'
+,p_requires_confirmation=>true
+,p_confirm_title=>'Confirm Purchase Order'
+,p_confirm_message=>'Raise PO for &QUANTITY. units of item &ITEM_ID. from supplier &SUPPLIER_ID. to warehouse &WH_ID., expected delivery by &DUE_DATE'
+,p_confirm_approve_label=>'Raise PO'
+,p_confirm_cancel_label=>'Cancel'
 ,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
   'language', 'PLSQL',
   'plsql_code', wwv_flow_string.join(wwv_flow_t_varchar2(
@@ -603,13 +575,6 @@ wwv_flow_imp_shared.create_ai_agent_tool(
     '    v_due              timestamp with time zone;',
     '    v_receiving_loc_id number;',
     '    begin',
-    '    if :CONFIRMED != ''confirmed'' then',
-    '        apex_ai.set_tool_result(',
-    '            p_result => ''Purchase order cancelled. User did not confirm.''',
-    '        );',
-    '        return;',
-    '    end if;',
-    '',
     '    select application_user_id',
     '        into v_user_id',
     '        from scm_application_users',
@@ -700,17 +665,6 @@ wwv_flow_imp_shared.create_ai_agent_tool(
     '')))).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260430154735Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260430184546Z')
-,p_created_by=>'SCM-GENDEV-USER'
-,p_updated_by=>'SCM-GENDEV-USER'
-);
-wwv_flow_imp_shared.create_ai_agent_tool_param(
- p_id=>wwv_flow_imp.id(10203481052787787)
-,p_param_name=>'CONFIRMED'
-,p_description=>'Return value from confirm_action. Must be "confirmed" to proceed.'
-,p_data_type=>'VARCHAR2'
-,p_is_required=>true
-,p_created_on=>wwv_flow_imp.dz('20260430154735Z')
-,p_updated_on=>wwv_flow_imp.dz('20260430154735Z')
 ,p_created_by=>'SCM-GENDEV-USER'
 ,p_updated_by=>'SCM-GENDEV-USER'
 );
