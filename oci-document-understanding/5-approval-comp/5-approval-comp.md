@@ -20,15 +20,15 @@ In this task, you'll create a Task Definition to support the invoice approval wo
 
 1. In the Page Designer toolbar, navigate to **Shared Components** icon.
 
-   ![Task Definition in Shared Components](images/sc-8.png " ")
+    ![Task Definition in Shared Components](images/sc-8.png " ")
 
 2. Under **Workflows and Automations**, select **Task Definitions**.
 
-   ![Select Task Definition](images/task-def.png " ")
+    ![Select Task Definition](images/task-def.png " ")
 
 3. Click **Create**.
 
-   ![Create Task Definition](images/task-def-create.png " ")
+    ![Create Task Definition](images/task-def-create.png " ")
 
 4. In **Create Task Definition** page, enter/select the following:
 
@@ -76,7 +76,7 @@ In this task, you'll create a Task Definition to support the invoice approval wo
 
     ![Task Definition Settings](images/action-source.png " ")
 
-8. Under **Participants**, click **Add Row** and enter/select the following:
+8. Under **Participants**, click **Add Participant** and enter/select the following:
 
      - Participant Type: **Potential Owner**
 
@@ -177,11 +177,11 @@ In this task, you'll create processes to fetch employee details and submit an in
 
 2. Select **1 - Home** page.
 
-   ![Home - 1](./images/home1.png " ")
+    ![Home - 1](./images/home1.png " ")
 
 3. In the **Rendering** tab, navigate to **Pre-Rendering** and right-click **Before Header**, select **Create Process**.
 
-   ![Create Process](./images/create-process3.png " ")
+    ![Create Process](./images/create-process3.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -294,8 +294,6 @@ In this task, you'll create unified task list pages to display tasks initiated b
 
 7. On the Page Designer toolbar, navigate to **Page Finder** and select **4 - Task Details** page.
 
-    ![Select Unified Task List](./images/navigate-to-task-details.png " ")
-
 8. Under the **Rendering** tab, select **Details** region and update the following:
 
     - Source > SQL Query: Copy and replace the below code into the code editor:
@@ -337,6 +335,6 @@ You now know how to create a Task Definition for Invoice Approval Requests. Addi
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

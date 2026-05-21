@@ -23,7 +23,7 @@ To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
-   ![Add API Key](images/oci-login.png " ")
+    ![Add API Key](images/oci-login.png " ")
 
 2. Click **My Profile** at the top-right corner and select **User settings**.
 
@@ -37,7 +37,7 @@ To Generate the API Keys using OCI Console:
 
 5. Click **Download private key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
-   >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
+    >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
@@ -53,15 +53,15 @@ In this task, you'll create a bucket in OCI Object Storage.
 
 1. To access the Object Storage service, click on the menu icon **(☰)** at the top-left corner.
 
-   ![Navigate to storage](images/navigate-to-storage.png " ")
+    ![Navigate to storage](images/navigate-to-storage.png " ")
 
 2. Under Storage, select **Buckets**.
 
-   ![Select Bucket](images/select-bucket.png " ")
+    ![Select Bucket](images/select-bucket.png " ")
 
 3. Select the compartment where you want to create the Bucket. You can choose an existing compartment or create a new one if needed. Now, select **Create Bucket**.
 
-   ![Select Bucket](images/create-bucket.png " ")
+    ![Select Bucket](images/create-bucket.png " ")
 
 4. Enter/select the following:
 
@@ -89,6 +89,6 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
