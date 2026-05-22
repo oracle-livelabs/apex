@@ -34,7 +34,7 @@ Estimated Time: 5 minutes
 
 3. Click **Run Application**.
 
-     ![Run Application](images/run-app1.png "")
+    ![Run Application](images/un-app1.png "")
 
 4. In the application, check the bottom of the page for the APEX Developer Toolbar.
 
