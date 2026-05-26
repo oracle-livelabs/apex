@@ -21,7 +21,7 @@ To generate API keys using the OCI Console:
 
 1. Log in to your OCI account.
 
-   ![Log in to OCI Console](images/oci-login.png " ")
+    ![Log in to OCI Console](images/oci-login.png " ")
 
 2. Click **My Profile** at the top right.
 
@@ -29,7 +29,7 @@ To generate API keys using the OCI Console:
 
 3. Under Resources at the bottom left, select **API Keys**.
 
-   Click **Add API Key**.
+    Click **Add API Key**.
 
     ![Click Add API Key](images/api-keys.png " ")
 
@@ -37,9 +37,9 @@ To generate API keys using the OCI Console:
 
 5. Click **Download Private Key**.
 
-   A *.pem* file is saved to your local device. You do not need to download the public key.
+    A *.pem* file is saved to your local device. You do not need to download the public key.
 
-   *Note: You will use this private key while configuring the web credentials in Oracle APEX in the next task.*
+    *Note: You will use this private key while configuring the web credentials in Oracle APEX in the next task.*
 
 6. Click **Add**.
 
@@ -61,23 +61,23 @@ To create a Web Credential in Oracle APEX:
 
 1. Log in to your Oracle APEX workspace.
 
-   ![Log in to APEX workspace](images/apex-login.png " ")
+    ![Log in to APEX workspace](images/apex-login.png " ")
 
 2. On the Workspace home page, click **App Builder**.
 
-   ![Click App Builder](images/app-builder-new.png " ")
+    ![Click App Builder](images/app-builder-new.png " ")
 
 3. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/wus.png " ")
+    ![Click Workspace Utilities](images/wus.png " ")
 
 4. Select **Web Credentials**.
 
-   ![Select Web Credentials](images/web-crds.png " ")
+    ![Select Web Credentials](images/web-crds.png " ")
 
 5. Click **Create**.
 
-   ![Click Create](images/create-wc.png " ")
+    ![Click Create](images/create-wc.png " ")
 
 6. Enter the following details using the configuration file you copied in the previous task.
 
@@ -95,7 +95,7 @@ To create a Web Credential in Oracle APEX:
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Enter Web Credentials details](images/creds1.png " ")
+    ![Enter Web Credentials details](images/creds1.png " ")
 
 7. Click **Create**.
 
@@ -112,3 +112,8 @@ You may now **proceed to the next lab**.
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, April 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

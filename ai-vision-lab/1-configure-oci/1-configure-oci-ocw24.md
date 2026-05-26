@@ -26,23 +26,23 @@ To create a Web Credential in Oracle APEX:
 
 1. Log in to your Oracle APEX workspace.
 
-   ![Log in to APEX workspace](images/apex-login.png " ")
+    ![Log in to APEX workspace](images/apex-login.png " ")
 
 2. On the Workspace home page, click **App Builder**.
 
-   ![Click App Builder](images/app-builder1.png " ")
+    ![Click App Builder](images/app-builder1.png " ")
 
 3. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
 4. Select **Web Credentials**.
 
-   ![Select Web Credentials](images/sc-web-creds.png " ")
+    ![Select Web Credentials](images/sc-web-creds.png " ")
 
 5. Click **Create**.
 
-   ![Click Create](images/create-wc.png " ")
+    ![Click Create](images/create-wc.png " ")
 
 6. Enter the following details using the configuration file from the zip file you downloaded in the prerequisites.
 
@@ -77,3 +77,8 @@ You may now **proceed to the next lab**.
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

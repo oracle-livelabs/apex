@@ -25,27 +25,27 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
 1. In the left navigation bar, click the **App Builder** icon.
 
-   ![Click App Builder](images/nav-to-app.png " ")
+    ![Click App Builder](images/nav-to-app.png " ")
 
 2. In the App Builder home page, click the **Application Name**.
 
-   ![Click the application name in App Builder](images/nav-app.png " ")
+    ![Click the application name in App Builder](images/nav-app.png " ")
 
 3. In the Application home page, click **Shared Components**.
 
-   ![Click Shared Components](images/shared.png " ")
+    ![Click Shared Components](images/shared.png " ")
 
 4. Under Data Sources, click **REST Data Sources**.
 
-   ![Click REST Data Sources](images/rest.png " ")
+    ![Click REST Data Sources](images/rest.png " ")
 
 5. Click **Create**.
 
-   ![Click Create](images/create-rest.png " ")
+    ![Click Create](images/create-rest.png " ")
 
 6. Leave the defaults and click **Next**.
 
-   ![Leave the defaults and click Next](images/create-rest1.png " ")
+    ![Leave the defaults and click Next](images/create-rest1.png " ")
 
 7. Under Create REST Data Source, enter the following attributes.
 
@@ -59,11 +59,11 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
     Click **Next**.
 
-   ![Enter OCI Vision REST Data Source details](images/create-rest2.png " ")
+    ![Enter OCI Vision REST Data Source details](images/create-rest2.png " ")
 
 8. Under Create REST Data Source - Remote Server, leave the defaults, click **Next**.
 
-   ![Click Next on Remote Server](images/remote-server.png " ")
+    ![Click Next on Remote Server](images/remote-server.png " ")
 
 9. Under Authentication, enter/select the following:
 
@@ -71,11 +71,11 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
     - Credentials: **apex\_ai\_cred**
 
-   ![Set Authentication Required to On and select apex_ai_cred](images/auth.png " ")
+    ![Set Authentication Required to On and select apex_ai_cred](images/auth.png " ")
 
 10. Click **Create REST Source Manually**.
 
-   The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
+    The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
     ![Click Create REST Source Manually](images/auth.png " ")
 
@@ -148,15 +148,15 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
 1. Navigate to the application home page by clicking the **Application ID**.
 
-   ![Click the Application ID](images/click-app-id11.png " ")
+    ![Click the Application ID](images/click-app-id11.png " ")
 
 2. Click the **1-Timeline** page.
 
-   ![Click 1-Timeline page](images/select-timeline1.png " ")
+    ![Click 1-Timeline page](images/select-timeline1.png " ")
 
 3. In the Rendering pane, right-click the **Timeline** region and select **Create Page Item**.
 
-   ![Right-click Timeline and select Create Page Item](images/create-page-item.png " ")
+    ![Right-click Timeline and select Create Page Item](images/create-page-item.png " ")
 
 4. In the Property Editor, enter the following:
 
@@ -166,13 +166,13 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
         - Type: **Hidden**
 
-   ![Set Name to P1_RESPONSE and Type to Hidden](images/response-page-item.png " ")
+    ![Set Name to P1_RESPONSE and Type to Hidden](images/response-page-item.png " ")
 
 5. In the left pane, navigate to the **Processing** tab.
 
-   Right-click **Processes** and select **Create Process**.
+    Right-click **Processes** and select **Create Process**.
 
-   ![Right-click Processes and select Create Process](images/processing.png " ")
+    ![Right-click Processes and select Create Process](images/processing.png " ")
 
 6. In the Property Editor, enter/select the following:
 
@@ -218,9 +218,9 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
         - Value: Enter the compartment OCID.
 
-   *Note: If using the root compartment, enter the tenancy OCID from the configuration preview file generated during API key creation. If you use a different compartment, you can find the corresponding compartment OCID from the OCI Console.*
+    *Note: If using the root compartment, enter the tenancy OCID from the configuration preview file generated during API key creation. If you use a different compartment, you can find the corresponding compartment OCID from the OCI Console.*
 
-   ![Set COMPARTMENT_ID static value](images/compartment-id.png " ")
+    ![Set COMPARTMENT_ID static value](images/compartment-id.png " ")
 
 10. Select **FEATURE_TYPE** and enter the following:
 
@@ -379,7 +379,7 @@ In this task, you create a search bar where the user can enter search terms and 
 
     - Appearance > Width: **100**
 
-   ![Configure P1_AI_SEARCH page item](images/ai-search-page-item.png " ")
+    ![Configure P1_AI_SEARCH page item](images/ai-search-page-item.png " ")
 
 3. In the Property Editor, select the **Timeline** region and enter the following:
 
@@ -439,3 +439,8 @@ You may now **proceed to the next lab**.
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

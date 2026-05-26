@@ -22,7 +22,7 @@ In this task, configure the Image Upload item on the Timeline page. This enables
 
 1. In App Builder, open the **APEX Social Media** application and open the Timeline page in Page Designer.
 
-   Navigate to the **P1\_FILE\_BLOB** item in the Rendering Tree. In the Property Editor, enter/select the following:
+    Navigate to the **P1\_FILE\_BLOB** item in the Rendering Tree. In the Property Editor, enter/select the following:
 
     - Under **Identification**:
 
@@ -44,13 +44,13 @@ In this task, configure the Image Upload item on the Timeline page. This enables
 
 3. Click **Add Post**.
 
-   An Image Upload dialog opens.
+    An Image Upload dialog opens.
 
-   Choose an image or drag and drop the image.
+    Choose an image or drag and drop the image.
 
-   Crop the image and click **Apply Changes**.
+    Crop the image and click **Apply Changes**.
 
-   Click **Post** to post the image to your Timeline.
+    Click **Post** to post the image to your Timeline.
 
     ![Click Add Post to open Image Upload dialog](images/add-post.png " ")
 
@@ -97,7 +97,7 @@ In this task, add a Share button to each Timeline post. This enables users to sh
 
 3. In the Rendering Tree on the left pane, select **Page 1: Timeline**.
 
-   In the Property Editor, under **JavaScript > Execute When Page Loads**, replace the code with the following code snippet:
+    In the Property Editor, under **JavaScript > Execute When Page Loads**, replace the code with the following code snippet:
 
     ```javascript
     <copy>
@@ -205,15 +205,15 @@ In this task, configure push notifications for the Social Media application. The
 
 1. Return to your APEX workspace.
 
-   Add a new column to the **SM\_REACTIONS** table to track notifications.
+    Add a new column to the **SM\_REACTIONS** table to track notifications.
 
-   In the left navigation, hover over the **SQL Workshop** icon and select **Object Browser**.
+    In the left navigation, hover over the **SQL Workshop** icon and select **Object Browser**.
 
     ![Navigate to Object Browser from SQL Workshop](images/nav-sql.png " ")
 
 2. In the **Object Browser**, under Tables, select **SM\_REACTIONS**.
 
-   On the right pane, click **Add Column**.
+    On the right pane, click **Add Column**.
 
     ![Select SM_REACTIONS table and click Add Column](images/add-column.png " ")
 
@@ -233,7 +233,7 @@ In this task, configure push notifications for the Social Media application. The
 
 4. Create an automation. This automation frequently checks for new rows in the **SM\_REACTIONS** table and triggers the push notification accordingly.
 
-   To create an automation, navigate to **App Builder** by clicking the icon in the left navigation bar.
+    To create an automation, navigate to **App Builder** by clicking the icon in the left navigation bar.
 
     ![Navigate to App Builder](images/nav-app1.png " ")
 
@@ -398,7 +398,7 @@ In this task, configure a shortcut for the Progressive Web App. The shortcut all
 
 1. Return to App Builder > **Progressive Web App** page, navigate to the **Installability** tab, and scroll down to **Shortcuts**.
 
-   Click **Enable for All Sessions**.
+    Click **Enable for All Sessions**.
 
     ![Click Enable for All Sessions under Shortcuts](images/enable-for-all.png " ")
 
@@ -436,13 +436,13 @@ In this task, add screenshots to the Progressive Web App install experience. The
 
 2. In the PWA Screenshot wizard, enter a description and upload a screenshot.
 
-   Click **Create**.
+    Click **Create**.
 
     ![Enter description, upload screenshot, and click Create](images/add-screenshot-image.png " ")
 
 3. Repeat steps 1-2 to add additional screenshots.
 
-   Click **Apply Changes**.
+    Click **Apply Changes**.
 
     ![Click Apply Changes after adding screenshots](images/apply-changes2.png " ")
 
@@ -452,9 +452,9 @@ In this task, add screenshots to the Progressive Web App install experience. The
 
 5. Click **Install App** to install as a PWA.
 
-   A pop-up window displays the screenshots and a message to confirm the installation of the application.
+    A pop-up window displays the screenshots and a message to confirm the installation of the application.
 
-   Follow the on-screen instructions to install the application.
+    Follow the on-screen instructions to install the application.
 
     ![Click Install App to install as PWA](images/install-app.png " ")
 
@@ -479,3 +479,8 @@ You now know how to enhance the Social Media app with mobile features such as cr
 
 - **Author** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

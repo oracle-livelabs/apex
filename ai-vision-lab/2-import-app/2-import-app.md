@@ -19,7 +19,7 @@ In this lab, you learn how to:
 
 2. In the left navigation bar, hover over the **App Builder** icon.
 
-   Click **Import**.
+    Click **Import**.
 
     ![Click Import in App Builder](images/app-import.png " ")
 
@@ -29,13 +29,13 @@ In this lab, you learn how to:
 
     - Click **Next**.
 
-   The export file is imported.
+    The export file is imported.
 
     ![Upload file and click Next](images/import-file.png " ")
 
 4. Accept the defaults.
 
-   Click **Import Application**.
+    Click **Import Application**.
 
     ![Click Import Application](images/import-loaded.png " ")
 
@@ -45,7 +45,7 @@ In this lab, you learn how to:
 
 6. Click **Edit Application**.
 
-   ![Click Edit Application](images/edit-app.png " ")
+    ![Click Edit Application](images/edit-app.png " ")
 
 7. In the Application home page, click **Refresh Theme**.
 
@@ -59,26 +59,26 @@ To add two new columns to the **SM\_POSTS** table:
 
 1. In the left navigation bar, hover over the **SQL Workshop** icon.
 
-   Click **Object Browser**.
+    Click **Object Browser**.
 
     ![Navigate to SQL Workshop and select Object Browser](images/sql-work.png " ")
 
 2. In the object tree, expand Tables and select **SM\_POSTS** table.
 
-   On the columns tab, click **Add Column**.
+    On the columns tab, click **Add Column**.
 
     ![Select SM_POSTS and click Add Column](images/add-column.png " ")
 
 3. The Add Column wizard is displayed. Configure the Add Column attributes. At a minimum, enter a column name and select a type. Depending on the column type, specify whether the column requires precision, scale, a default value, or is nullable. For more details on an attribute, see field-level Help.
 
-   Enter the following:
+    Enter the following:
       - Column: **AI\_OUTPUT**
       - Data Type: **VARCHAR2**
       - Length: **1000**
 
       Click **Apply**.
 
-   ![Enter AI_OUTPUT column details](images/ai-output-column.png " ")
+    ![Enter AI_OUTPUT column details](images/ai-output-column.png " ")
 
 4. Click **Add Column** and enter the following:
 
@@ -101,3 +101,8 @@ You may now **proceed to the next lab**.
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

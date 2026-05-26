@@ -18,7 +18,7 @@ In this lab, you learn how to:
 
 1. Log in to the application.
 
-   The username and password are the same as your APEX workspace user credentials.
+    The username and password are the same as your APEX workspace user credentials.
 
     ![Log in to the Social Media app](images/social-media-login.png " ")
 
@@ -26,7 +26,7 @@ In this lab, you learn how to:
 
 3. Drag and drop the image from your local system, or use the **Choose File** button to upload an image from your local system.
 
-   Click **Post**.
+    Click **Post**.
 
     ![Upload an image and click Post](images/add-post.png " ")
 
@@ -57,3 +57,8 @@ You now know how to post an image and search for images and text within images u
 - **Author** - Roopesh Thokala, Senior Product Manager
 - **Co-Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
