@@ -11,6 +11,11 @@ Estimated Time: 5 minutes
 
 An APEX Workspace is a logical domain where you define APEX applications. Each workspace is associated with one or more database schemas (database users) which are used to store the database objects, such as tables, views, packages, and more. APEX applications are built on top of these database objects.
 
+### Objectives
+
+In this lab, you will:
+* TODO: Add objectives
+
 ## Create an APEX Workspace using Autonomous AI Database in Oracle Cloud
 
 From within your Oracle Cloud environment, you will create an instance of the Autonomous AI Database service.
