@@ -281,7 +281,7 @@ To create a Web Credential in Oracle APEX:
 
     ![Create Web Credentials](images/create-web-creds1.png " ")
 
-5. Enter/select the following details using the configuration file you copied in the previous task.
+5. Enter/select the following details using the configuration file you copied from Lab 1 Task 1.
 
     - Name: **APEX\_OCI\_AI\_CRED**
 

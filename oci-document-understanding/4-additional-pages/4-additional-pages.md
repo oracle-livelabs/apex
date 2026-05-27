@@ -185,7 +185,7 @@ In this task, you'll create an Invoice Tracking page featuring the Cards Region,
 
 ## Task 3: Create an Invoice Analysis page
 
-In this task, you'll create an Invoice Analysis page featuring the Cards Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
+In this task, you'll create an Invoice Analysis page featuring the Interactive Report Region. This Region organizes extracted fields from the uploaded image or PDF file. Clicking on a card brings up a Pop-up Dialog page where you can clearly compare your uploaded PDF with the output from OCI Document Understanding.
 
 1. In the Page Designer toolbar, navigate to **(+ v)** in Page Designer toolbar and select **Page**.
 

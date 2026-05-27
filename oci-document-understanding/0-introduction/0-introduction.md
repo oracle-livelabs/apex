@@ -116,8 +116,3 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
 - **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
