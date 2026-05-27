@@ -68,6 +68,7 @@ Estimated Time: 60 minutes
 | 5 |[Create an Event Chat Assistant](?lab=5-chat-bot) | 5 minutes |
 | 6 | [Generate Event Description with AI](?lab=6-generate-text) | 5 minutes |
 | 7 |[OPTIONAL - Enhance Charts and Database Objects using AI](?lab=3-apex-assistant) | 10 minutes |
+| 8 |[Lab Appendix: Download Instructions](?lab=8-appendix) | 10 minutes |
 
 ### **Let's Get Started!**
 

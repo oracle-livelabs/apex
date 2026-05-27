@@ -1,7 +1,6 @@
 # Appendix: Download Instructions
 
-Estimated Time: TODO - x minutes
-
+## Introduction
 
 This lab consists of tasks that need to be executed on a case-by-case basis. If you are directed to this lab at any point of time, choose the appropriate task that needs to be executed to proceed.
 
@@ -11,9 +10,7 @@ In this lab, you will:
 
 - [Download](files/event-management-hol-app.sql) and install the final export of the app.
 
-## Introduction
-
-TODO: Add introduction text here.
+Estimated Time: 5 minutes
 
 ## Task 1: Import the App into an APEX Workspace
 
