@@ -1,6 +1,6 @@
 # Introduction
 
-## About this Workshop
+## About This Workshop
 
 Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have. When an item drops below its reorder point and the replenishment alert is already CRITICAL, a warehouse manager needs answers fast: which items are at risk, which suppliers can help, and who has the best delivery record.
 
@@ -10,7 +10,7 @@ This workshop focuses on the inventory and warehouse management aspects of suppl
 
 In this hands-on workshop, you will build an **AI Procurement Agent** for the **APEX Inventory and Warehouse Management** application. You will define tools that allow warehouse managers to identify stock shortages, evaluate suppliers, and raise purchase orders, all from within a conversational chat interface in Oracle APEX.
 
-You will define eight tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
+You will define seven tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
 
 Estimated Workshop Time: 60 minutes
 
@@ -26,17 +26,15 @@ In this workshop, you will learn how to:
 
 - Use **On Demand** tools that the AI model calls only when the conversation requires them
 
-- Implement a **human checkpoint pattern** using a browser confirmation dialog
-
 - Use `apex_ai.set_tool_result` to push structured results and notifications to the chat UI
 
-- Build a complete procurement use case: **identify > evaluate > confirm > act**
+- Build a complete procurement use case: **identify > evaluate > act**
 
 ## Key Concepts
 
-### What is a Generative AI Agent?
+### What Is a Generative AI Agent?
 
-An **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
+A **Generative AI Agent** is a Shared Component in Oracle APEX that enables richer, conversational interactions with a Generative AI service. An agent is made up of three things:
 
 > **Note:** Starting with Oracle APEX 26.1, AI Configurations from previous releases are now AI Agents. Your existing configurations carry over; the rename reflects the expanded capabilities, including tools and multi-step orchestration.
 
@@ -44,7 +42,7 @@ An **Generative AI Agent** is a Shared Component in Oracle APEX that enables ric
 - **Welcome Message**: the greeting shown to the user when they first open the chat panel.
 - **Tools**: give the agent the ability to retrieve information and perform actions. The AI service decides which tools to call and when, based on what the user is asking.
 
-### What is an AI Tool?
+### What Is an AI Tool?
 
 **AI Tools** offer a way to provide extra knowledge and expose extra capabilities to an AI service responding to a prompt. Tools can retrieve data from the database, execute server-side PL/SQL logic, or run client-side JavaScript in the browser.
 
@@ -52,7 +50,7 @@ Oracle APEX provides three built-in tool types: **Retrieve Data** runs a SQL que
 
 > **Note:** Starting with Oracle APEX 26.1, RAG Sources from previous releases are automatically migrated to Augment System Prompt Tools. The behavior is the same; your existing RAG integrations continue to work, now as part of the unified tool model.
 
-### What is an Execution Point?
+### What Is an Execution Point?
 
 Every tool has an **Execution Point** that controls when it runs:
 
@@ -115,7 +113,7 @@ If you are stuck or the application is not working as expected, you can download
 
 4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all eight tools.
+5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all seven tools.
 
 6. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
 

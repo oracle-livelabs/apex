@@ -101,7 +101,12 @@ To update the Web Credential in Oracle APEX:
 
     !["Page Designer"](images/run.png "")
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
