@@ -26,11 +26,11 @@ Estimated Time: 5 minutes
 
 1. From the left navigation menu, click the **App Builder** icon.
 
-    ![App Builder](images/appbuilder.png "")
+    ![App Builder](images/appbuilder1.png "")
 
 2. Select the **APEX Social Media** application.
 
-    ![Application Homepage](images/runapplication.png "")
+    ![Application Homepage](images/runapplication1.png "")
 
 3. Click **Run Application**.
 
