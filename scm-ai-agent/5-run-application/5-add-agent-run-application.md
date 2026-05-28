@@ -109,7 +109,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *Tool invoked: `get_suppliers_for_item`*
 
-    ![Procurement Assistant Conversation](./images/supplier-list.png " ")
+    ![Procurement Assistant Conversation](./images/supplier-list.png =60%x*)
 
 5. Request delivery performance for the supplier:
 
@@ -121,7 +121,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *Tool invoked: `get_supplier_delivery_performance`*
 
-    ![Procurement Assistant Conversation](./images/supplier-perf.png " ")
+    ![Procurement Assistant Conversation](./images/supplier-perf.png =60%x*)
 
 6. Instruct the agent to raise a purchase order:
 
@@ -133,7 +133,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *The agent uses your default warehouse from `get_user_context` and asks for the quantity and delivery date.*
 
-    ![Procurement Assistant Conversation](./images/raise-po.png " ")
+    ![Procurement Assistant Conversation](./images/raise-po.png =60%x*)
 
 7. When the agent asks for the quantity and delivery date, reply with:
 
@@ -143,19 +143,17 @@ In this task, you will launch the application and validate the end-to-end procur
     </copy>
     ```
 
-    *Tool invoked: `confirm_action`. The agent presents a summary of the purchase order and waits for your confirmation before proceeding.*
+    *The agent calls `raise_purchase_order`. Because this tool has **Requires Confirmation** enabled, APEX displays a confirmation dialog with the order details before the tool runs.*
 
-    ![Procurement Assistant Conversation](./images/quantity.png " ")
+    ![Procurement Assistant Conversation](./images/quantity.png =60%x*)
 
-8. Confirm the browser dialog when it appears so the purchase order can be created.
+8. Review the confirmation dialog and click **Raise PO** to approve the purchase order.
 
-    *Tool invoked: `raise_purchase_order`. The purchase order is inserted into the system.*
-
-    ![Procurement Assistant Conversation](./images/confirm-po.png " ")
+    ![Confirm Purchase Order dialog](./images/confirm-raise-po.png =60%x*)
 
 9. The agent confirms the purchase order in the chat, showing the PO number, item, quantity, supplier, warehouse, and expected delivery date. The purchase order is now a planned inbound receipt in the system.
 
-    ![Procurement Assistant Conversation](./images/po-placed.png " ")
+    ![Procurement Assistant Conversation](./images/po-placed.png =60%x*)
 
 ## Summary
 
