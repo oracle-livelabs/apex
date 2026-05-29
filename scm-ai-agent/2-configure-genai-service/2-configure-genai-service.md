@@ -6,7 +6,7 @@ Before you can create the AI Agent, you need to connect Oracle APEX to a Generat
 
 > **Important:** Oracle APEX acts as the application layer and connects to the Generative AI provider of your choice using your own credentials. You will need an active account with a supported provider to complete this lab. Any charges for API usage are billed directly by your AI provider. Please review your provider's pricing before proceeding.
 
-Estimated Time: 10 minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 

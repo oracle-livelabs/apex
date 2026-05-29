@@ -397,6 +397,8 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     This ensures the user sees a confirmation dialog summarising the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
 
+    <!-- TODO: Add screenshot for the User Approval settings after Requires Confirmation is enabled. Suggested filename: ./images/task6-user-approval.png -->
+
 6. Click **Create**.
 
     ![Procurement Agent with raise\_purchase\_order saved](./images/task6-crete.png " ")
