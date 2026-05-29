@@ -24,27 +24,27 @@ In this task, you'll create a new application using the APEX **App Builder**. Yo
 
 1. On the workspace home page, click down arrow **'⌄'** next to **App Builder** and click **Create**.
 
-   ![Click Create](images/create.png " ")
+    ![Click Create](images/create.png " ")
 
 2. Select **Use Create App Wizard**.
 
-   ![Use Create App Wizard](images/use-create-app-wizard.png " ")
+    ![Use Create App Wizard](images/use-create-app-wizard.png " ")
 
 3. Before Name, select **Set Icon**.
 
-   ![Set Icon](images/set-icon.png " ")
+    ![Set Icon](images/set-icon.png " ")
 
 4. In the Choose Application Icon dialog, select any color and icon, then click **Save Icon**.
 
-   ![Save Icon](images/save-icon.png " ")
+    ![Save Icon](images/save-icon.png " ")
 
 5. Next to **Name**, select **Set Appearance** icon.
 
-   ![Set Appearance](images/set-appearance.png " ")
+    ![Set Appearance](images/set-appearance.png " ")
 
 6. For Theme Style, select **Redwood Light** and click **Save Changes**.
 
-    ![Redwood Light](images/redwood-light.png " ")
+    ![Redwood Light](images/redwood.png " ")
 
 7. In Create an Application wizard, enter/select the following:
 
@@ -66,15 +66,15 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
 
 2. Under **Data Sources**, select **REST Data Sources**.
 
-   ![Click REST Data Sources](images/rest-data-source2.png " ")
+    ![Click REST Data Sources](images/rest-data-source2.png " ")
 
 3. Click **Create**.
 
-   ![Click Create](images/create-rest.png " ")
+    ![Click Create](images/create-rest.png " ")
 
 4. Select **From scratch** and click **Next**.
 
-   ![Click From scratch](images/rest-next.png " ")
+    ![Click From scratch](images/rest-next.png " ")
 
 5. Under Create REST Data Source, enter/select the following:
 
@@ -88,11 +88,11 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
 
     >**Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
-   ![Create REST Data Sources](images/rest-general.png " ")
+    ![Create REST Data Sources](images/rest-general.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
-   ![Create REST Data Source - Remote Server](images/rest-remote.png " ")
+    ![Create REST Data Source - Remote Server](images/rest-remote.png " ")
 
 7. Under Authentication, enter/select the following:
 
@@ -101,13 +101,13 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
     - Credentials: **APEX\_OCI\_AI\_CRED**
 
 8. Click **Create REST Source Manually**.
-   The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
+    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-   ![Click Create REST Source Manually](images/rest-authen.png " ")
+    ![Click Create REST Source Manually](images/rest-authen.png " ")
 
 9. On the REST Data Sources page, click **Document Understanding API**.
 
-   ![Click Document Understanding API](images/doc-under.png " ")
+    ![Click Document Understanding API](images/doc-under.png " ")
 
 10. Navigate to **Operations** tab , select **Edit icon** for the **POST** operation and enter the following:
 
@@ -131,7 +131,7 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
                 }
             ]
         }
-        <copy>
+        </copy>
         ```
 
 11. Click **Synchronize with Body** and then click **OK**.
@@ -148,9 +148,9 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-    |   | Type | Name | Direction | Default Value | Static |
-    |---|-------|------|----------| --------------| ------ |
-    | 1 | HTTP Header| Content-Type | In | application/json | ON |
+    |   | Type | Name | Direction | Static | Data Type | Default Value Type | Static Value |
+    |---|-------|------|----------| --------------| ------ | ------ | ------- |
+    | 1 | HTTP Header| Content-Type | In | ON | String | Static | application/json |
     | 2 | Request or Response Body| RESPONSE | Out |  |  |
     {: title="POST Operation Parameters"}
 
@@ -168,19 +168,19 @@ In this task, you'll enhance the Home page of your application to allow users to
 
 1. Navigate to **Application ID**.
 
-   ![Application ID](images/app-id2.png " ")
+    ![Application ID](images/app-id2.png " ")
 
 2. Select **1-Home** page.
 
-   ![1-Home](images/home-page.png " ")
+    ![1-Home](images/home-page.png " ")
 
 3. Under **Breadcrumb Bar**, select **Automatic Invoice Handling** region and update Name to **Process Your Invoice**.
 
-   ![Breadcrumb bar](images/breadcrum-bar.png " ")
+    ![Breadcrumb bar](images/breadcrum-bar.png " ")
 
 4. Under **Rendering** tab, right-click **Body** and select **Create Region**.
 
-   ![Create Region](images/create-region.png " ")
+    ![Create Region](images/create-region.png " ")
 
 5. In the property editor, enter/select the following:
 
@@ -200,29 +200,29 @@ In this task, you'll enhance the Home page of your application to allow users to
 
 7. In the **Rendering** tab, right-click **Upload Your Invoice** region and select **Create Page Item**.
 
-   ![hidden items](images/create-page-item.png " ")
+    ![hidden items](images/create-page-item.png " ")
 
 8. Now, add the following eight page items one after the other:
 
-   |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | P1\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment ID
-   | 2 | P1\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
-   | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
-   | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket |
-   | 5 | P1\_FEATURE\_TYPE| Hidden | Static | KEY\_VALUE\_EXTRACTION |
-   | 6 | P1\_REGION| Hidden | Static | Enter your Region. e.g. us-ashburn-1 |
-   | 7 | P1\_RESPONSE| Hidden |  |  | CLOB
-   | 8 | P1\_EMP\_NO| Hidden |  |  |
-   {: title="Upload your Invoice Page Items"}
+    |   | Identification > Name | Identification > Type | Default > Type | Default > Static | Session State > Datatype |
+    |---|-------|------|----------| --------------| ------ |
+    | 1 | P1\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment ID
+    | 2 | P1\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
+    | 3 | P1\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
+    | 4 | P1\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket |
+    | 5 | P1\_FEATURE\_TYPE| Hidden | Static | KEY\_VALUE\_EXTRACTION |
+    | 6 | P1\_REGION| Hidden | Static | Enter your Region. e.g. us-ashburn-1 |
+    | 7 | P1\_RESPONSE| Hidden |  |  | CLOB
+    | 8 | P1\_EMP\_NO| Hidden |  |  |
+    {: title="Upload your Invoice Page Items"}
 
-   ![hidden items](images/compartment-id1.png " ")
+    ![hidden items](images/compartment-id1.png " ")
 
-   ![hidden items](images/response-item.png " ")
+    ![hidden items](images/response-item.png " ")
 
 9. Under **Upload your Invoice** region, right-click **P1\_ID** page item and select **Create Page Item Below**.
 
-   ![hidden items](images/create-page-item-below.png " ")
+    ![hidden items](images/create-page-item-below.png " ")
 
 10. In the property editor,  Enter/select the following details:
 
@@ -308,7 +308,7 @@ In this task, you'll create the backend processes required to upload invoices to
 
         - Procedure or Function: **UPLOAD\_FILE**
 
-   ![Add Child Process details](images/upload-to-storage.png " ")
+    ![Add Child Process details](images/upload-to-storage.png " ")
 
 5. Under **Upload to Object Storage** process, expand Parameters and enter the following:
 
@@ -325,7 +325,7 @@ In this task, you'll create the backend processes required to upload invoices to
 
 6. Right-click **Process Invoice** process again and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process1.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 7. In the Property Editor, enter/select the following details:
 
@@ -347,7 +347,7 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
 
 1. In the **Processing** tab, right-click **Process Invoice** and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process1.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 2. In the Property Editor, enter/select the following details:
 
@@ -387,7 +387,7 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
 
 5. Right-click **Process Invoice** process and select **Add Child Process**.
 
-    ![Add Child Process details](images/add-child-process2.png " ")
+    ![Add Child Process details](images/add-child-process.png " ")
 
 6. In the Property Editor, enter/select the following details:
 
@@ -419,8 +419,9 @@ In this task, you'll invoke the REST Source to analyze uploaded documents and im
                             field_value     VARCHAR2(1000) PATH '$.fieldValue.value'
                             ))) jt
         WHERE  jt.field_type_code = 'KEY_VALUE';
-        <copy>
+        </copy>
         ```
+
 
     ![Add Child Process details](images/parse-response.png " ")
 
@@ -434,6 +435,6 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

@@ -20,15 +20,15 @@ In this task, you'll create an application process to retrieve the URL and MIME 
 
 1. Navigate to **Shared Components**
 
-   ![Shared Components](images/sc-7.png " ")
+    ![Shared Components](images/sc-7.png " ")
 
 2. Under **Application Logic**, select **Application Processes**
 
-   ![Application Processes](images/application-process2.png " ")
+    ![Application Processes](images/application-process2.png " ")
 
 3. Click **Create**.
 
-   ![Application Processes](images/process-create.png " ")
+    ![Application Processes](images/process-create.png " ")
 
 4. Under Identification:
 
@@ -85,15 +85,15 @@ In this task, you'll create an Invoice Tracking page featuring the Cards Region,
 
 1. Navigate to **Application ID**.
 
-   ![Click Application ID](images/app-id5.png " ")
+    ![Click Application ID](images/app-id5.png " ")
 
 2. Click **Create Page**.
 
-   ![Click Create Page](images/cards-create-page.png " ")
+    ![Click Create Page](images/cards-create-page.png " ")
 
 3. Under Component, select **Cards**.
 
-   ![Select Cards](images/card.png " ")
+    ![Select Cards](images/card.png " ")
 
 4. Under **Create Cards** page, enter/select the following:
 
@@ -103,7 +103,9 @@ In this task, you'll create an Invoice Tracking page featuring the Cards Region,
 
         - Name: **Invoice Tracker**
 
-    - Data Source > Source Type: **SQL Query**
+    - Data Source: **Local Database**
+
+    - Source Type: **SQL Query**
 
     - Enter a SQL SELECT Statement: Copy and paste the below code:
 
@@ -146,9 +148,9 @@ In this task, you'll create an Invoice Tracking page featuring the Cards Region,
 
     - Body Column: **CREATED_BY (Varchar2)**
 
-   Click **Create Page**.
+    Click **Create Page**.
 
-   ![Card Attributes](images/cards-attributes.png " ")
+    ![Card Attributes](images/cards-attributes.png " ")
 
 6. In the **Rendering** tab, select **Invoice Tracker** region. In the Property Editor, navigate to **Attributes** tab, enter/select the following:
 
@@ -187,11 +189,11 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
 
 1. In the Page Designer toolbar, navigate to **(+ v)** in Page Designer toolbar and select **Page**.
 
-   ![Click Page](images/create-blank-page.png " ")
+    ![Click Page](images/create-blank-page.png " ")
 
 2. Select **Blank Page**.
 
-   ![Select Blank Page](images/blank-page1.png " ")
+    ![Select Blank Page](images/blankpage.png " ")
 
 3. On the Create Page dialog, enter/select the following:
 
@@ -205,9 +207,9 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
 
     - Navigation > Use Navigation: **Toggle Off**
 
-   Click **Create Page**.
+    Click **Create Page**.
 
-   ![Invoice Analysis](images/create-blank-page11.png " ")
+    ![Invoice Analysis](images/create-blank-page11.png " ")
 
 4. In the **Rendering** tab, right-click **Body**, and select **Create Page Item**.
 
@@ -252,7 +254,7 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
     - Identification > Name: **Uploaded File**
 
     - Source > HTML Code: Enter the below HTML code into the code editor:
-`
+    `
         ```
         <copy>
         <p align="center">
@@ -261,7 +263,7 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
         </copy>
         ````
 
-   ![Upload File](images/uploaded-file.png " ")
+    ![Upload File](images/uploaded-file.png " ")
 
 10. Right-click **Uploaded File** region, select **Create Region Below**.
 
@@ -314,8 +316,6 @@ In this task, you'll create an Invoice Analysis page featuring the Cards Region.
         - Page Mode: **Modal Dialog**
 
         - Dialog Template: **Modal Dialog**
-
-        - Template Options > Click **Use Template Defaults** : Check **Strech to Fit Window** and click **OK**.
 
     ![Modal Dialog](images/modal-dialog.png " ")
 
@@ -377,6 +377,6 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

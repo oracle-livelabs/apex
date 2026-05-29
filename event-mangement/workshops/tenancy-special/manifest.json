@@ -8,7 +8,7 @@
     },
     {
       "title": "Getting Started",
-      "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
     },
     {
       "title": "Lab 1: Configure AI Service and Create Data Model using AI",
@@ -33,6 +33,10 @@
     {
       "title": "Lab 6: Create an AI Chat Assistant",
       "filename": "../../6-create-chat-assistant/show-ai-assistant.md"
+    },
+    {
+      "title": "Lab Appendix: Download Instructions",
+      "filename": "../../8-appendix/8-appendix.md"
     },
     {
       "title": "Need Help?",
