@@ -1,4 +1,4 @@
-# Lab 3: Prepare Inputs and Generate Metadata
+# Prepare Inputs and Generate Metadata
 
 ## Introduction
 

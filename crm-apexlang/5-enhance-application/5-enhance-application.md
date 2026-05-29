@@ -1,4 +1,4 @@
-# Lab 5: Enhance the Application using APEXlang Skills
+# Enhance the Application using APEXlang Skills
 
 ## Introduction
 APEXlang is an Open Application Specification Language introduced in Oracle APEX 26.1. In this lab, you use APEXlang skills to vibe code and perform bulk updates, add business validations, create new pages and add a chatbot to the CRM application.

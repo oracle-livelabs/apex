@@ -1,4 +1,4 @@
-# Lab 4: Deploy, Configure, and Customize Application
+# Deploy, Configure, and Customize Application
 
 ## Introduction
 

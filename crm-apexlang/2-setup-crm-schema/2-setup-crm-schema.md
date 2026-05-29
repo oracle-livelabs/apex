@@ -1,4 +1,4 @@
-# Lab 2: Setup CRM Schema along with Sample Data
+# Setup CRM Schema along with Sample Data
 
 ## Introduction
 Prepare the CRM schema and sample data inside your APEX workspace so the application has a working dataset.
@@ -15,7 +15,7 @@ Estimated Time: 15 minutes
 - [02\_crm\_sample\_data.sql](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/02_crm_sample_data.sql)
     
 
-## Task 2: Run the scripts in your APEX workspace > SQL Workshop > SQL scripts
+## Task 2: Run the SQL scripts in your APEX workspace
 1. Open SQL Workshop in your APEX workspace and navigate to **SQL Scripts**.
     ![APEX SQL Workshop upload interface ready for CRM scripts](images/sql-scripts.png)
 

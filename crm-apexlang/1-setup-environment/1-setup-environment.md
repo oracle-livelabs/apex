@@ -1,4 +1,4 @@
-# Lab 1: Setup the Environment
+# Setup the Environment
 
 ## Introduction
 In this lab, you prepare your local machine with the core tools needed to build and enhance the CRM application.
