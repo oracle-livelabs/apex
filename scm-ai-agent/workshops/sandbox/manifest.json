@@ -15,8 +15,12 @@
       "filename": "../../1-import-data/1-import-data.md"
     },
     {
-      "title": "Lab 2: Configure Generative AI Service",
-      "filename": "../../2-configure-genai-service/2-configure-genai-service.md"
+      "title": "Lab 2: Configure a Generative AI Service",
+      "filename": "../../common-261/2-configure-ai-keys/2-configure-ai-keys.md",
+      "type": {
+        "OCIGenAI": "OCIGenAI",
+        "OpenAI": "OpenAI"
+      }
     },
     {
       "title": "Lab 3: Build an AI Agent and Add Context Tools",

@@ -95,7 +95,7 @@ Every tool has an **Execution Point** that controls when it runs:
 | Lab | Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 10 minutes |
-| 2 | [Configure Generative AI Service](?lab=2-configure-genai-service) | 5 minutes |
+| 2 | [Configure a Generative AI Service](?lab=2-configure-ai-keys) | 10 minutes |
 | 3 | [Build an AI Agent and Add Context Tools](?lab=3-create-agent-context-tools) | 15 minutes |
 | 4 | [Add Supplier Evaluation and Purchase Order Tools](?lab=4-add-core-tools) | 20 minutes |
 | 5 | [Add the Agent to the Application and Run the Application](?lab=5-run-application) | 10 minutes |
@@ -111,7 +111,7 @@ If you are stuck or the application is not working as expected, you can download
 
 3. Follow **Lab 1 > Task 1** to load the data model and **Lab 1 > Task 2** to load the sample data.
 
-4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
+4. Follow **Lab 2** to configure your AI provider key and Generative AI Service.
 
 5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all seven tools.
 
