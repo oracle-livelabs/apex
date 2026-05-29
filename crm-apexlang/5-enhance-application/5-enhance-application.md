@@ -10,7 +10,7 @@ APEXlang is an Open Application Specification Language introduced in Oracle APEX
 
 Estimated Time: 15 minutes
 
-## Task 1: Set up the APEXlang Skills repo in VSCode
+## Task 1: Set up the APEXlang Skills repo in Visual Studio Code
 1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
     Download the APEXlang skills from Github: [APEXlang skills](http://github.com/oracle/skills/apex). 
@@ -33,7 +33,7 @@ Export the CRM application in APEXlang format and place the output inside the `a
     ![APEXlang command output showing exported application files](images/export-to-apps.png)
 
 
-## Task 3: Import the App into your APEX workspace from VS Code
+## Task 3: Import the App into your APEX workspace from Visual Studio Code
 1. Expand the Applications folder and navigate to **vision-crm > pages**. Select any one of the page to open in the editor.
 
     ![VS code application files](images/select-page.png)
@@ -45,14 +45,14 @@ Export the CRM application in APEXlang format and place the output inside the `a
     ![VS code editor](images/green-button-import.png)
 
 ## Task 4: Change the leads report type to Content Row
-From this task onwards, we are going to enhance and modify the Vision CRM app by providing prompts using the Codex client in VS Code.
+From this task onwards, we are going to enhance and modify the Vision CRM app by providing prompts using the Codex client in Visual Studio Code.
 
-1. Before you prompt, ensure that you choose **Inteligence** as **Medium** for Codex since we already have the necessary APEXlang skills for Codex to understand and reason faster.
+1. Before you prompt, ensure that you choose **Intelligence** as **Medium** for Codex since we already have the necessary APEXlang skills for Codex to understand and reason faster.
 
     ![Codex editor](images/codex-intel.png)
 
 
-1. Use APEXlang to adjust the leads report so it renders as a content report.
+1. Use APEXlang skills to convert the Leads Management report that is currently a classic report to a content row report.
 
     Prompt: 
     ```
@@ -63,7 +63,7 @@ From this task onwards, we are going to enhance and modify the Vision CRM app by
     
     ![APEXlang configuration panel changing leads report to content report](images/apexlang-leads-content-report.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 2** for steps to import the application from VS Code.
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from Visual Studio Code.
 
     ![Application running in the browser](images/view-leads-content-report.png)   
 
@@ -79,7 +79,7 @@ From this task onwards, we are going to enhance and modify the Vision CRM app by
 
     ![APEX builder interface repositioning create buttons](images/apexlang-bulk-edit-buttons.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from Visual Studio Code. 
 Observe that 9 pages are updated and the buttons are now visually prominent.
     ![Application running in the browser](images/view-bulk-edit-buttons.png)
 
@@ -95,7 +95,7 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
 
     ![APEX validation rule enforcing non-negative budget values](images/apexlang-budget-validation.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code.  
+2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from Visual Studio Code.  
   
 
 3. Click on any lead to **Edit** a lead record.
@@ -120,7 +120,7 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
     ```
     ![Leads data rendered on an interactive map region](images/apex-map-visualize-leads.png)
 
-2. Import Application into the workspace and view the Leads Management page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
+2. Import Application into the workspace and view the Leads Map page to see the changes. Refer **Task 3** for steps to import the application from Visual Studio Code. 
     ![Leads data rendered on an interactive map region](images/view-map-visualize-leads.png)
 
 
@@ -159,7 +159,7 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
     ![APEXlang-generated CRM chat assistant interface](images/lead-convert-tool.png)
 
 
-5. Import Application into the workspace and view the Executive Dashboard page to see the changes. Refer **Task 3** for steps to import the application from VS Code. 
+5. Import Application into the workspace and view the Executive Dashboard page to see the changes. Refer **Task 3** for steps to import the application from Visual Studio Code. 
     ![APEXlang-generated CRM chat assistant interface](images/view-chat-assistant.png)
 
     *TIP* : If you would like to look at the tools and changes made to the app by APEXlang:
@@ -198,5 +198,5 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
     ![APEXlang-generated CRM chat assistant interface](images/query3.png)
 
 ## Acknowledgements
-- **Author** - Apoorva Srinivas, Prinicpal Product Manager
+- **Author** - Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, April 2026

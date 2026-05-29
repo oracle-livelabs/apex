@@ -26,7 +26,7 @@ Estimated Time: 15 minutes
     
     ![APEX SQL Workshop upload interface ready for CRM scripts](images/upload-script.png)
 
-2. Execute the scripts one by one in sequence within SQL Scripts to deploy the CRM schema and sample data.
+2. Execute the scripts one by one in sequence within SQL Scripts to install the CRM schema and sample data.
     ![APEX SQL Scripts execution results confirming successful run](images/apex-sql-scripts-run.png)
 
     ![APEX SQL Scripts execution results confirming successful run](images/run-script.png)
@@ -34,5 +34,5 @@ Estimated Time: 15 minutes
     ![APEX SQL Scripts execution results confirming successful run](images/script-results.png)
 
 ## Acknowledgements
-- **Author** - Apoorva Srinivas, Prinicpal Product Manager
+- **Author** - Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, April 2026

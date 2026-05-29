@@ -34,7 +34,16 @@
       "description": "Deploy, Configure, and Customize Application."
     },
     {
-      "title": "Lab 5: Enhance the Application using APEXlang Skills",
+      "title": "Lab 5: Configure Gen AI service in APEX workspace",
+      "filename": "../../../common-261/2-configure-ai-keys/2-configure-ai-keys.md",
+      "description": "Configure Gen AI service in APEX workspace",
+      "type": {
+        "OCIGenAI" : "OCIGenAI",
+        "OpenAI" : "OpenAI"
+        }
+    },
+    {
+      "title": "Lab 6: Enhance the Application using APEXlang Skills",
       "filename": "../../5-enhance-application/5-enhance-application.md",
       "description": "Implement the APEXlang-driven enhancements listed in the source material."
     }

@@ -1,0 +1,3767 @@
+# Provenance
+- Source Prompt: blueprint-prompt.md (v26.1.220)
+- Functional Requirements: crm_functional_requirements_spec.md
+- Schema Metadata: crm_schema_metadata.md
+- UX Patterns: Built-in
+# Application Definition
+- Name: Vision CRM
+- Description: CRM application for Vision sales lifecycle management from lead capture through opportunity, quote, order, invoice, payment, and governance workflows.
+- Comments: Supports role-based CRM operations for sales leadership, managers, representatives, and administrators across regions, branches, customers, and commercial transactions.
+- Primary Application Language: en
+- Home Page: Page 1
+- Access Controls:
+  - Roles:
+    - Role: Chief Sales Officer
+      - Description: Views company-wide performance, pipeline, forecast, regional comparisons, and executive drill-down reporting.
+    - Role: Regional Vice President
+      - Description: Reviews regional branch performance, pipeline trends, high-value approvals, and follow-up discipline.
+    - Role: Branch Sales Manager
+      - Description: Manages branch pipeline, assignment, coaching, approvals, overdue work, and local commercial execution.
+    - Role: Sales Representative
+      - Description: Owns daily CRM work for assigned leads, accounts, contacts, opportunities, quotes, activities, and transactions.
+    - Role: Administrator
+      - Description: Maintains setup data, access rules, approval rules, duplicate matching rules, products, users, and reference values.
+- List of Values:
+  - LOV
+    - Name: LOV_REGIONS
+    - Type: Table
+    - Table Name: CRM_REGIONS
+    - Display: NAME
+    - Return: REGION_ID
+  - LOV
+    - Name: LOV_BRANCHES
+    - Type: Table
+    - Table Name: CRM_BRANCHES
+    - Display: NAME
+    - Return: BRANCH_ID
+  - LOV
+    - Name: LOV_ROLES
+    - Type: Table
+    - Table Name: CRM_ROLES
+    - Display: NAME
+    - Return: ROLE_ID
+  - LOV
+    - Name: LOV_USERS
+    - Type: Table
+    - Table Name: CRM_USERS
+    - Display: USERNAME
+    - Return: USER_ID
+  - LOV
+    - Name: LOV_INDUSTRIES
+    - Type: Table
+    - Table Name: CRM_INDUSTRIES
+    - Display: NAME
+    - Return: INDUSTRY_ID
+  - LOV
+    - Name: LOV_ACCOUNT_RELATIONSHIP_STATUSES
+    - Type: Table
+    - Table Name: CRM_ACCOUNT_RELATIONSHIP_STATUSES
+    - Display: DESCRIPTION
+    - Return: ACCOUNT_RELATIONSHIP_STATUS_ID
+  - LOV
+    - Name: LOV_ACCOUNTS
+    - Type: Table
+    - Table Name: CRM_ACCOUNTS
+    - Display: NAME
+    - Return: ACCOUNT_ID
+  - LOV
+    - Name: LOV_CONTACTS
+    - Type: Table
+    - Table Name: CRM_CONTACTS
+    - Display: NAME
+    - Return: CONTACT_ID
+  - LOV
+    - Name: LOV_CONTACT_CHANNELS
+    - Type: Table
+    - Table Name: CRM_CONTACT_CHANNELS
+    - Display: DESCRIPTION
+    - Return: CONTACT_CHANNEL_ID
+  - LOV
+    - Name: LOV_CONTACT_ROLES
+    - Type: Table
+    - Table Name: CRM_CONTACT_ROLES
+    - Display: DESCRIPTION
+    - Return: CONTACT_ROLE_ID
+  - LOV
+    - Name: LOV_LEAD_TYPES
+    - Type: Table
+    - Table Name: CRM_LEAD_TYPES
+    - Display: DESCRIPTION
+    - Return: LEAD_TYPE_ID
+  - LOV
+    - Name: LOV_LEAD_STATES
+    - Type: Table
+    - Table Name: CRM_LEAD_STATES
+    - Display: DESCRIPTION
+    - Return: LEAD_STATE_ID
+  - LOV
+    - Name: LOV_LEAD_SOURCES
+    - Type: Table
+    - Table Name: CRM_LEAD_SOURCES
+    - Display: DESCRIPTION
+    - Return: LEAD_SOURCE_ID
+  - LOV
+    - Name: LOV_LEAD_DISQUALIFICATION_REASONS
+    - Type: Table
+    - Table Name: CRM_LEAD_DISQUALIFICATION_REASONS
+    - Display: DESCRIPTION
+    - Return: LEAD_DISQUAL_REASON_ID
+  - LOV
+    - Name: LOV_LEADS
+    - Type: Table
+    - Table Name: CRM_LEADS
+    - Display: LEAD_CODE
+    - Return: LEAD_ID
+  - LOV
+    - Name: LOV_OPPORTUNITIES
+    - Type: Table
+    - Table Name: CRM_OPPORTUNITIES
+    - Display: OPPORTUNITY_NAME
+    - Return: OPPORTUNITY_ID
+  - LOV
+    - Name: LOV_OPPORTUNITY_STAGES
+    - Type: Table
+    - Table Name: CRM_OPPORTUNITY_STAGES
+    - Display: DESCRIPTION
+    - Return: OPPORTUNITY_STAGE_ID
+  - LOV
+    - Name: LOV_OPPORTUNITY_CATEGORIES
+    - Type: Table
+    - Table Name: CRM_OPPORTUNITY_CATEGORIES
+    - Display: DESCRIPTION
+    - Return: OPPORTUNITY_CATEGORY_ID
+  - LOV
+    - Name: LOV_OPPORTUNITY_CLOSE_REASONS
+    - Type: Table
+    - Table Name: CRM_OPPORTUNITY_CLOSE_REASONS
+    - Display: DESCRIPTION
+    - Return: OPPORTUNITY_CLOSE_REASON_ID
+  - LOV
+    - Name: LOV_CUSTOMERS
+    - Type: Table
+    - Table Name: CRM_CUSTOMERS
+    - Display: NAME
+    - Return: CUSTOMER_ID
+  - LOV
+    - Name: LOV_CUSTOMER_STATUSES
+    - Type: Table
+    - Table Name: CRM_CUSTOMER_STATUSES
+    - Display: DESCRIPTION
+    - Return: CUSTOMER_STATUS_ID
+  - LOV
+    - Name: LOV_CUSTOMER_PRIORITIES
+    - Type: Table
+    - Table Name: CRM_CUSTOMER_PRIORITIES
+    - Display: DESCRIPTION
+    - Return: CUSTOMER_PRIORITY_ID
+  - LOV
+    - Name: LOV_QUOTES
+    - Type: Table
+    - Table Name: CRM_QUOTES
+    - Display: QUOTE_NO
+    - Return: QUOTE_ID
+  - LOV
+    - Name: LOV_QUOTE_STATUSES
+    - Type: Table
+    - Table Name: CRM_QUOTE_STATUSES
+    - Display: DESCRIPTION
+    - Return: QUOTE_STATUS_ID
+  - LOV
+    - Name: LOV_APPROVAL_STATUSES
+    - Type: Table
+    - Table Name: CRM_APPROVAL_STATUSES
+    - Display: DESCRIPTION
+    - Return: APPROVAL_STATUS_ID
+  - LOV
+    - Name: LOV_APPROVAL_RULES
+    - Type: Table
+    - Table Name: CRM_APPROVAL_RULES
+    - Display: RULE_NAME
+    - Return: APPROVAL_RULE_ID
+  - LOV
+    - Name: LOV_PRODUCTS
+    - Type: Table
+    - Table Name: CRM_PRODUCTS
+    - Display: NAME
+    - Return: PRODUCT_ID
+  - LOV
+    - Name: LOV_PRODUCT_TYPES
+    - Type: Table
+    - Table Name: CRM_PRODUCT_TYPES
+    - Display: NAME
+    - Return: PRODUCT_TYPE_ID
+  - LOV
+    - Name: LOV_ORDERS
+    - Type: Table
+    - Table Name: CRM_ORDERS
+    - Display: ORDER_ID
+    - Return: ORDER_ID
+  - LOV
+    - Name: LOV_ORDER_SOURCES
+    - Type: Table
+    - Table Name: CRM_ORDER_SOURCES
+    - Display: DESCRIPTION
+    - Return: ORDER_SOURCE_ID
+  - LOV
+    - Name: LOV_ORDER_STATUSES
+    - Type: Table
+    - Table Name: CRM_ORDER_STATUSES
+    - Display: DESCRIPTION
+    - Return: ORDER_STATUS_ID
+  - LOV
+    - Name: LOV_INVOICES
+    - Type: Table
+    - Table Name: CRM_INVOICES
+    - Display: INVOICE_NO
+    - Return: INVOICE_ID
+  - LOV
+    - Name: LOV_INVOICE_STATUSES
+    - Type: Table
+    - Table Name: CRM_INVOICE_STATUSES
+    - Display: DESCRIPTION
+    - Return: INVOICE_STATUS_ID
+  - LOV
+    - Name: LOV_PAYMENT_MODES
+    - Type: Table
+    - Table Name: CRM_PAYMENT_MODES
+    - Display: DESCRIPTION
+    - Return: PAYMENT_MODE_ID
+  - LOV
+    - Name: LOV_PAYMENT_STATUSES
+    - Type: Table
+    - Table Name: CRM_PAYMENT_STATUSES
+    - Display: DESCRIPTION
+    - Return: PAYMENT_STATUS_ID
+  - LOV
+    - Name: LOV_ACTIVITY_TYPES
+    - Type: Table
+    - Table Name: CRM_ACTIVITY_TYPES
+    - Display: DESCRIPTION
+    - Return: ACTIVITY_TYPE_ID
+  - LOV
+    - Name: LOV_ACTIVITY_STATUSES
+    - Type: Table
+    - Table Name: CRM_ACTIVITY_STATUSES
+    - Display: DESCRIPTION
+    - Return: ACTIVITY_STATUS_ID
+  - LOV
+    - Name: LOV_ACTIVITY_OUTCOMES
+    - Type: Table
+    - Table Name: CRM_ACTIVITY_OUTCOMES
+    - Display: DESCRIPTION
+    - Return: ACTIVITY_OUTCOME_ID
+- Page Groups
+  - Page Group
+    - Name: Executive
+    - Description: Sales leadership dashboards and drill-down reporting.
+  - Page Group
+    - Name: Relationship Management
+    - Description: Accounts, contacts, customers, and relationship history.
+  - Page Group
+    - Name: Pipeline Management
+    - Description: Leads, opportunities, forecasts, and deal progression.
+  - Page Group
+    - Name: Commercial Transactions
+    - Description: Quotes, orders, bookings, invoices, payments, and transaction history.
+  - Page Group
+    - Name: Activity Management
+    - Description: Sales tasks, meetings, calls, follow-ups, reminders, and outcomes.
+  - Page Group
+    - Name: Governance
+    - Description: Approval workflows, audit visibility, and commercial controls.
+  - Page Group
+    - Name: Administration
+    - Description: Setup, reference values, users, roles, access rules, and data quality controls.
+- Menu
+  - Menu Name: Main Navigation
+  - Entries:
+    - Entry
+      - Label: Dashboard
+      - Icon: fa-dashboard
+      - Action: Navigate to executive CRM dashboard
+      - Target: Page 1
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Accounts and Contacts
+      - Icon: fa-building
+      - Action: Navigate to organization and stakeholder management
+      - Target: Page 2
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Leads
+      - Icon: fa-bullhorn
+      - Action: Navigate to lead capture and qualification
+      - Target: Page 4
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Opportunities
+      - Icon: fa-line-chart
+      - Action: Navigate to pipeline and opportunity management
+      - Target: Page 6
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Quotes
+      - Icon: fa-file-text-o
+      - Action: Navigate to quote headers and quote lines
+      - Target: Page 8
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Customers
+      - Icon: fa-users
+      - Action: Navigate to customer records and relationship status
+      - Target: Page 10
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Activities
+      - Icon: fa-calendar
+      - Action: Navigate to activities, tasks, reminders, and follow-ups
+      - Target: Page 12
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Orders and Billing
+      - Icon: fa-shopping-cart
+      - Action: Navigate to orders, bookings, invoices, and payments
+      - Target: Page 14
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+    - Entry
+      - Label: Approvals
+      - Icon: fa-check-square-o
+      - Action: Navigate to approval monitoring and approval history
+      - Target: Page 16
+      - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Administrator
+    - Entry
+      - Label: Administration
+      - Icon: fa-cogs
+      - Action: Navigate to setup, users, roles, products, and governance rules
+      - Target: Page 17
+      - Authorized Roles: Administrator
+- Breadcrumb
+  - Name: Main Breadcrumb
+  - Entries:
+    - Entry
+      - Name: Dashboard
+      - Page: Page 1
+    - Entry
+      - Name: Accounts and Contacts
+      - Page: Page 2
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Account and Contact Maintenance
+      - Page: Page 3
+      - Parent Entry: Accounts and Contacts
+    - Entry
+      - Name: Leads
+      - Page: Page 4
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Lead Maintenance
+      - Page: Page 5
+      - Parent Entry: Leads
+    - Entry
+      - Name: Opportunities
+      - Page: Page 6
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Opportunity Maintenance
+      - Page: Page 7
+      - Parent Entry: Opportunities
+    - Entry
+      - Name: Quotes
+      - Page: Page 8
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Quote Maintenance
+      - Page: Page 9
+      - Parent Entry: Quotes
+    - Entry
+      - Name: Customers
+      - Page: Page 10
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Customer Maintenance
+      - Page: Page 11
+      - Parent Entry: Customers
+    - Entry
+      - Name: Activities
+      - Page: Page 12
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Activity Maintenance
+      - Page: Page 13
+      - Parent Entry: Activities
+    - Entry
+      - Name: Orders and Billing
+      - Page: Page 14
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Transaction Maintenance
+      - Page: Page 15
+      - Parent Entry: Orders and Billing
+    - Entry
+      - Name: Approvals
+      - Page: Page 16
+      - Parent Entry: Dashboard
+    - Entry
+      - Name: Administration
+      - Page: Page 17
+      - Parent Entry: Dashboard
+## Pages
+### Page 1: Dashboard
+- Description: Role-aware sales dashboard showing pipeline, lead, quote, collection, and follow-up health.
+- Comments: Presents leadership and sales users with KPI and chart context for daily CRM triage and drill-down navigation.
+- Pattern: metric-chart-two-up
+- Page Mode: standard
+- Menu: true
+- Page Group: Executive
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Data visibility is further constrained by CRM access rules, ownership, branch, and region scope.
+#### Regions
+##### Region: Open Leads Metric
+- Comments: Counts active leads that still require qualification or conversion follow-up.
+- Position: body
+- Colstart: 1
+- Colspan: 6
+- Component:
+  - Component Type: Metric Card
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select count(l.LEAD_ID) as VALUE
+from CRM_LEADS l
+join CRM_LEAD_STATES s
+    on s.LEAD_STATE_ID = l.LEAD_STATE_ID
+where upper(s.CODE) not in ('CONVERTED', 'DISQUALIFIED')
+```
+  - Summary: Counts open lead records using lifecycle state codes.
+- Columns:
+  - Column Name: VALUE
+    - Label: Open Leads
+    - Datatype: number
+    - Render As: metric
+    - Format Mask: 999G999G999G999G990
+##### Region: Pipeline Value Metric
+- Comments: Sums current opportunity value to show open commercial exposure.
+- Position: body
+- Colstart: 7
+- Colspan: 6
+- Component:
+  - Component Type: Metric Card
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select nvl(sum(o.VALUE_AMT), 0) as VALUE
+from CRM_OPPORTUNITIES o
+join CRM_OPPORTUNITY_STAGES s
+    on s.OPPORTUNITY_STAGE_ID = o.OPPORTUNITY_STAGE_ID
+where upper(s.CODE) not in ('CLOSED_WON', 'CLOSED_LOST')
+```
+  - Summary: Summarizes opportunity value for records not in closed stages.
+- Columns:
+  - Column Name: VALUE
+    - Label: Pipeline Value
+    - Datatype: number
+    - Render As: metric
+    - Format Mask: 999G999G999G999G990D00
+##### Region: Overdue Invoice Metric
+- Comments: Counts outstanding invoices with due dates in the past to focus collection action.
+- Position: body
+- Colstart: 1
+- Colspan: 6
+- Component:
+  - Component Type: Metric Card
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select count(i.INVOICE_ID) as VALUE
+from CRM_INVOICES i
+where i.DUE_DATE < sysdate
+and nvl(i.OUTSTANDING_AMT, 0) > 0
+```
+  - Summary: Counts overdue invoice headers with remaining outstanding amount.
+- Columns:
+  - Column Name: VALUE
+    - Label: Overdue Invoices
+    - Datatype: number
+    - Render As: metric
+    - Format Mask: 999G999G999G999G990
+##### Region: Pending Approval Metric
+- Comments: Counts pending approval actions for quote and order governance.
+- Position: body
+- Colstart: 7
+- Colspan: 6
+- Component:
+  - Component Type: Metric Card
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select count(a.APPROVAL_ACTION_ID) as VALUE
+from CRM_APPROVAL_ACTIONS a
+join CRM_APPROVAL_STATUSES s
+    on s.APPROVAL_STATUS_ID = a.APPROVAL_STATUS_ID
+where upper(s.CODE) in ('PENDING', 'SUBMITTED', 'IN_REVIEW')
+```
+  - Summary: Counts approval history rows that represent currently pending governance work.
+- Columns:
+  - Column Name: VALUE
+    - Label: Pending Approvals
+    - Datatype: number
+    - Render As: metric
+    - Format Mask: 999G999G999G999G990
+##### Region: Leads by Source Chart
+- Comments: Shows lead acquisition distribution to compare marketing and sales source effectiveness.
+- Position: body
+- Colstart: 1
+- Colspan: 6
+- Component:
+  - Component Type: Chart
+  - Qualifier: Bar
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select coalesce(s.DESCRIPTION, 'Unassigned') as label
+     , count(l.LEAD_ID) as value
+from CRM_LEADS l
+left join CRM_LEAD_SOURCES s
+    on s.LEAD_SOURCE_ID = l.LEAD_SOURCE_ID
+group by coalesce(s.DESCRIPTION, 'Unassigned')
+order by
+    value desc
+```
+  - Summary: Groups leads by acquisition source for sales and marketing review.
+- Columns:
+  - Column Name: label
+    - Label: Lead Source
+    - Datatype: varchar2
+    - Render As: label
+  - Column Name: value
+    - Label: Leads
+    - Datatype: number
+    - Render As: value
+    - Format Mask: 999G999G999G999G990
+##### Region: Opportunity Value by Stage Chart
+- Comments: Visualizes weighted pipeline by opportunity stage for management review.
+- Position: body
+- Colstart: 7
+- Colspan: 6
+- Component:
+  - Component Type: Chart
+  - Qualifier: Bar
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select s.DESCRIPTION as label
+     , nvl(sum(o.VALUE_AMT), 0) as value
+from CRM_OPPORTUNITY_STAGES s
+left join CRM_OPPORTUNITIES o
+    on o.OPPORTUNITY_STAGE_ID = s.OPPORTUNITY_STAGE_ID
+group by s.DESCRIPTION, s.SEQ_NO
+order by
+    s.SEQ_NO
+```
+  - Summary: Aggregates opportunity value by ordered pipeline stage.
+- Columns:
+  - Column Name: label
+    - Label: Stage
+    - Datatype: varchar2
+    - Render As: label
+  - Column Name: value
+    - Label: Value
+    - Datatype: number
+    - Render As: value
+    - Format Mask: 999G999G999G999G990D00
+##### Region: Collections by Invoice Status Chart
+- Comments: Summarizes outstanding invoice value by status for collection prioritization.
+- Position: body
+- Colstart: 1
+- Colspan: 6
+- Component:
+  - Component Type: Chart
+  - Qualifier: Donut
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select s.DESCRIPTION as label
+     , nvl(sum(i.OUTSTANDING_AMT), 0) as value
+from CRM_INVOICE_STATUSES s
+left join CRM_INVOICES i
+    on i.INVOICE_STATUS_ID = s.INVOICE_STATUS_ID
+group by s.DESCRIPTION, s.SEQ_NO
+order by
+    s.SEQ_NO
+```
+  - Summary: Aggregates remaining invoice balances by collection status.
+- Columns:
+  - Column Name: label
+    - Label: Invoice Status
+    - Datatype: varchar2
+    - Render As: label
+  - Column Name: value
+    - Label: Outstanding Amount
+    - Datatype: number
+    - Render As: value
+    - Format Mask: 999G999G999G999G990D00
+##### Region: Overdue Activities Chart
+- Comments: Highlights activity workload by status for follow-up discipline.
+- Position: body
+- Colstart: 7
+- Colspan: 6
+- Component:
+  - Component Type: Chart
+  - Qualifier: Bar
+  - Parent Child Role: None
+- Data Source:
+  - Type: SQL
+  - SQL:
+```sql
+select s.DESCRIPTION as label
+     , count(a.ACTIVITY_ID) as value
+from CRM_ACTIVITY_STATUSES s
+left join CRM_ACTIVITIES a
+    on a.ACTIVITY_STATUS_ID = s.ACTIVITY_STATUS_ID
+where a.DUE_ON is null
+or a.DUE_ON < sysdate
+group by s.DESCRIPTION, s.SEQ_NO
+order by
+    s.SEQ_NO
+```
+  - Summary: Counts activities with no due date or a due date before today by status.
+- Columns:
+  - Column Name: label
+    - Label: Activity Status
+    - Datatype: varchar2
+    - Render As: label
+  - Column Name: value
+    - Label: Activities
+    - Datatype: number
+    - Render As: value
+    - Format Mask: 999G999G999G999G990
+### Page 2: Accounts and Contacts
+- Description: Searchable workspace for organizations, contacts, and stakeholder relationship roles.
+- Comments: Supports account and contact discovery with links to maintenance workflows for ownership, location, industry, and communication data.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Relationship Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Sales users operate within access rules for owned, branch, region, or all-account scope.
+#### Regions
+##### Region: Accounts Report
+- Comments: Lists organizations with status, branch, owner, and industry context for relationship management.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACCOUNTS
+  - Primary Keys: ACCOUNT_ID
+  - Order By: NAME
+  - Summary: Account master rows used for prospect and customer organization management.
+- Columns:
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: NAME
+    - Label: Account Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 3
+      - Link Passing: ACCOUNT_ID
+      - Link Target Items: P3_ACCOUNT_ID
+      - Link Icon: fa-edit
+  - Column Name: INDUSTRY_ID
+    - Label: Industry
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_INDUSTRIES
+    - Visible: true
+  - Column Name: ACCOUNT_RELATIONSHIP_STATUS_ID
+    - Label: Relationship Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACCOUNT_RELATIONSHIP_STATUSES
+    - Visible: true
+  - Column Name: CITY
+    - Label: City
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: STATE
+    - Label: State
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+- Links:
+  - Link:
+    - Link To: Page 3
+    - Link Passing: ACCOUNT_ID
+    - Link Target Items: P3_ACCOUNT_ID
+    - Label: Edit Account
+    - Link Icon: fa-edit
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+- Actions:
+  - Action
+    - Label: Create Account
+    - Link To: Page 3
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Contacts Report
+- Comments: Lists people tied to accounts with preferred contact channel and role handoff context.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_CONTACTS
+  - Primary Keys: CONTACT_ID
+  - Order By: NAME
+  - Summary: Contact master rows associated with account organizations.
+- Columns:
+  - Column Name: CONTACT_ID
+    - Label: Contact
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACCOUNTS
+    - Visible: true
+  - Column Name: NAME
+    - Label: Contact Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 3
+      - Link Passing: CONTACT_ID
+      - Link Target Items: P3_CONTACT_ID
+      - Link Icon: fa-edit
+  - Column Name: EMAIL
+    - Label: Email
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PHONE
+    - Label: Phone
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: DESIGNATION
+    - Label: Designation
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PREFERRED_CHANNEL_ID
+    - Label: Preferred Channel
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CONTACT_CHANNELS
+    - Visible: true
+- Actions:
+  - Action
+    - Label: Create Contact
+    - Link To: Page 3
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+### Page 3: Account and Contact Maintenance
+- Description: Standard maintenance page for account and contact records used from account and contact reports.
+- Comments: Edits organization and stakeholder data while retaining ownership, geography, communication preference, and audit context.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Relationship Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Create and update buttons are intended for managers, representatives, and administrators subject to row-level access rules.
+#### Regions
+##### Region: Account Form
+- Comments: Maintains organization master values that drive account, lead, opportunity, and customer alignment.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACCOUNTS
+  - Summary: Account form bound to CRM_ACCOUNTS for organization maintenance.
+- Columns:
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_ID
+    - Render As: hidden
+  - Column Name: NAME
+    - Label: Account Name
+    - Datatype: varchar2
+    - Page Item Name: P3_ACCOUNT_NAME
+    - Render As: textField
+    - Required: true
+    - MaxLength: 255
+  - Column Name: INDUSTRY_ID
+    - Label: Industry
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_INDUSTRY_ID
+    - Render As: selectList
+    - LOV: LOV_INDUSTRIES
+  - Column Name: ACCOUNT_RELATIONSHIP_STATUS_ID
+    - Label: Relationship Status
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_RELATIONSHIP_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNT_RELATIONSHIP_STATUSES
+    - Required: true
+  - Column Name: WEBSITE
+    - Label: Website
+    - Datatype: varchar2
+    - Page Item Name: P3_ACCOUNT_WEBSITE
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: CITY
+    - Label: City
+    - Datatype: varchar2
+    - Page Item Name: P3_ACCOUNT_CITY
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: STATE
+    - Label: State
+    - Datatype: varchar2
+    - Page Item Name: P3_ACCOUNT_STATE
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_BRANCH_ID
+    - Render As: selectList
+    - LOV: LOV_BRANCHES
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_USER_OWNER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P3_ACCOUNT_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Account
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Account
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Close
+    - Link To: Page 2
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+##### Region: Contact Form
+- Comments: Maintains stakeholder details and communication preferences for an account relationship workflow.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_CONTACTS
+  - Summary: Contact form bound to CRM_CONTACTS for stakeholder maintenance.
+- Columns:
+  - Column Name: CONTACT_ID
+    - Label: Contact
+    - Datatype: number
+    - Page Item Name: P3_CONTACT_ID
+    - Render As: hidden
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P3_CONTACT_ACCOUNT_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNTS
+    - Required: true
+  - Column Name: NAME
+    - Label: Contact Name
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_NAME
+    - Render As: textField
+    - Required: true
+    - MaxLength: 255
+  - Column Name: EMAIL
+    - Label: Email
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_EMAIL
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: PHONE
+    - Label: Phone
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_PHONE
+    - Render As: textField
+    - MaxLength: 32
+  - Column Name: DESIGNATION
+    - Label: Designation
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_DESIGNATION
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: PREFERRED_CHANNEL_ID
+    - Label: Preferred Channel
+    - Datatype: number
+    - Page Item Name: P3_CONTACT_PREFERRED_CHANNEL_ID
+    - Render As: selectList
+    - LOV: LOV_CONTACT_CHANNELS
+  - Column Name: PREFERRED_CONTACT_WINDOW
+    - Label: Preferred Contact Window
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_PREFERRED_CONTACT_WINDOW
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: PREFERRED_CONTACT_NOTES
+    - Label: Preferred Contact Notes
+    - Datatype: varchar2
+    - Page Item Name: P3_CONTACT_PREFERRED_CONTACT_NOTES
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P3_CONTACT_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Contact
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Contact
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Accounts
+    - Link To: Page 2
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+### Page 4: Leads
+- Description: Lead capture, qualification, location, conversion, and disqualification workspace.
+- Comments: Enables sales users and managers to monitor lead sources, owners, statuses, next actions, and geospatial lead concentration.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Pipeline Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Lead visibility follows ownership, branch, region, and administrator access scopes.
+#### Regions
+##### Region: Leads Report
+- Comments: Lists captured leads with status, rating, source, owner, expected value, and conversion tracking.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_LEADS
+  - Primary Keys: LEAD_ID
+  - Order By: STATUS_DATE desc, LEAD_SUBJECT
+  - Summary: Lead master records used for qualification and conversion management.
+- Columns:
+  - Column Name: LEAD_ID
+    - Label: Lead
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: LEAD_CODE
+    - Label: Lead Code
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 5
+      - Link Passing: LEAD_ID
+      - Link Target Items: P5_LEAD_ID
+      - Link Icon: fa-edit
+  - Column Name: LEAD_SUBJECT
+    - Label: Lead Subject
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: LEAD_TYPE_ID
+    - Label: Rating
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_LEAD_TYPES
+    - Visible: true
+  - Column Name: LEAD_STATE_ID
+    - Label: Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_LEAD_STATES
+    - Visible: true
+  - Column Name: LEAD_SOURCE_ID
+    - Label: Source
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_LEAD_SOURCES
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: EXPECTED_VALUE_AMT
+    - Label: Expected Value
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: NEXT_ACTION_DATE
+    - Label: Next Action
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: STATUS_DATE
+    - Label: Status Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+- Actions:
+  - Action
+    - Label: Create Lead
+    - Link To: Page 5
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Lead Location Map
+- Comments: Displays lead locations from captured latitude and longitude to support regional and branch planning.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Map
+  - Qualifier: longitudeLatitude
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_LEADS
+  - Primary Keys: LEAD_ID
+  - Where: LATITUDE is not null and LONGITUDE is not null
+  - Summary: Lead map points using stored decimal degree coordinates.
+- Columns:
+  - Column Name: LEAD_ID
+    - Label: Lead
+    - Datatype: number
+    - Render As: hidden
+  - Column Name: LEAD_SUBJECT
+    - Label: Lead
+    - Datatype: varchar2
+    - Render As: tooltip
+  - Column Name: LATITUDE
+    - Label: Latitude
+    - Datatype: number
+    - Render As: latitudeCol
+  - Column Name: LONGITUDE
+    - Label: Longitude
+    - Datatype: number
+    - Render As: longitudeCol
+- Links:
+  - Link:
+    - Link To: Page 5
+    - Link Type: Edit
+    - Link Passing: LEAD_ID
+    - Link Target Items: P5_LEAD_ID
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+### Page 5: Lead Maintenance
+- Description: Standard form for creating, updating, qualifying, converting, and disqualifying leads.
+- Comments: Maintains lead assignment, status, source, value, geography, next action, and conversion references.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Pipeline Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Conversion and disqualification controls should enforce business processes outside the generated form metadata.
+#### Regions
+##### Region: Lead Form
+- Comments: Captures lead qualification details and downstream conversion references for pipeline creation.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_LEADS
+  - Summary: Lead form bound to CRM_LEADS for lifecycle updates and assignment changes.
+- Columns:
+  - Column Name: LEAD_ID
+    - Label: Lead
+    - Datatype: number
+    - Page Item Name: P5_LEAD_ID
+    - Render As: hidden
+  - Column Name: LEAD_CODE
+    - Label: Lead Code
+    - Datatype: varchar2
+    - Page Item Name: P5_LEAD_CODE
+    - Render As: displayOnly
+    - MaxLength: 32
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P5_ACCOUNT_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNTS
+  - Column Name: CONTACT_ID
+    - Label: Contact
+    - Datatype: number
+    - Page Item Name: P5_CONTACT_ID
+    - Render As: selectList
+    - LOV: LOV_CONTACTS
+  - Column Name: LEAD_SUBJECT
+    - Label: Lead Subject
+    - Datatype: varchar2
+    - Page Item Name: P5_LEAD_SUBJECT
+    - Render As: textField
+    - Required: true
+    - MaxLength: 255
+  - Column Name: LEAD_TYPE_ID
+    - Label: Rating
+    - Datatype: number
+    - Page Item Name: P5_LEAD_TYPE_ID
+    - Render As: selectList
+    - LOV: LOV_LEAD_TYPES
+    - Required: true
+  - Column Name: LEAD_STATE_ID
+    - Label: Lead Status
+    - Datatype: number
+    - Page Item Name: P5_LEAD_STATE_ID
+    - Render As: selectList
+    - LOV: LOV_LEAD_STATES
+    - Required: true
+  - Column Name: LEAD_SOURCE_ID
+    - Label: Lead Source
+    - Datatype: number
+    - Page Item Name: P5_LEAD_SOURCE_ID
+    - Render As: selectList
+    - LOV: LOV_LEAD_SOURCES
+  - Column Name: LEAD_DISQUAL_REASON_ID
+    - Label: Disqualification Reason
+    - Datatype: number
+    - Page Item Name: P5_LEAD_DISQUAL_REASON_ID
+    - Render As: selectList
+    - LOV: LOV_LEAD_DISQUALIFICATION_REASONS
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Page Item Name: P5_BRANCH_ID
+    - Render As: selectList
+    - LOV: LOV_BRANCHES
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P5_USER_OWNER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+    - Required: true
+  - Column Name: BUDGET_AMT
+    - Label: Budget
+    - Datatype: number
+    - Page Item Name: P5_BUDGET_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: EXPECTED_VALUE_AMT
+    - Label: Expected Value
+    - Datatype: number
+    - Page Item Name: P5_EXPECTED_VALUE_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: CITY
+    - Label: City
+    - Datatype: varchar2
+    - Page Item Name: P5_CITY
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: STATE
+    - Label: State
+    - Datatype: varchar2
+    - Page Item Name: P5_STATE
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: DETAILS
+    - Label: Details
+    - Datatype: varchar2
+    - Page Item Name: P5_DETAILS
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: QUALIFICATION_SUMMARY
+    - Label: Qualification Summary
+    - Datatype: varchar2
+    - Page Item Name: P5_QUALIFICATION_SUMMARY
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: NEXT_ACTION_DATE
+    - Label: Next Action Date
+    - Datatype: date
+    - Page Item Name: P5_NEXT_ACTION_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: STATUS_DATE
+    - Label: Status Date
+    - Datatype: date
+    - Page Item Name: P5_STATUS_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: CONVERTED_OPPORTUNITY_ID
+    - Label: Converted Opportunity
+    - Datatype: number
+    - Page Item Name: P5_CONVERTED_OPPORTUNITY_ID
+    - Render As: selectList
+    - LOV: LOV_OPPORTUNITIES
+  - Column Name: CONVERTED_CUSTOMER_ID
+    - Label: Converted Customer
+    - Datatype: number
+    - Page Item Name: P5_CONVERTED_CUSTOMER_ID
+    - Render As: selectList
+    - LOV: LOV_CUSTOMERS
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P5_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Lead
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Lead
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Leads
+    - Link To: Page 4
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+##### Region: Lead Change History
+- Comments: Shows important lead field changes for qualification audit and conversion traceability.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_LEAD_HISTORY
+  - Primary Keys: LEAD_HIST_ID
+  - Order By: CHANGED_ON desc
+  - Summary: Lead field-level history rows for audit review.
+- Columns:
+  - Column Name: LEAD_HIST_ID
+    - Label: Lead History
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: LEAD_ID
+    - Label: Lead
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_LEADS
+    - Visible: false
+  - Column Name: FIELD_NAME
+    - Label: Field
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: OLD_VALUE
+    - Label: Old Value
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: NEW_VALUE
+    - Label: New Value
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CHANGED_BY_USER_ID
+    - Label: Changed By
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: CHANGED_ON
+    - Label: Changed On
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+### Page 6: Opportunities
+- Description: Pipeline workspace for opportunity stage, value, close date, probability, and stakeholder reporting.
+- Comments: Helps sales teams and leaders manage stage progression, stale deals, value bands, close reasons, and review dates.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Pipeline Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Opportunity data is scoped by owner, branch, region, and access rules.
+#### Regions
+##### Region: Opportunities Report
+- Comments: Lists pipeline records with stage, category, owner, value, probability, and next review context.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_OPPORTUNITIES
+  - Primary Keys: OPPORTUNITY_ID
+  - Order By: EXPECTED_CLOSE_DATE, OPPORTUNITY_NAME
+  - Summary: Opportunity master records used to manage deal progression and forecast reporting.
+- Columns:
+  - Column Name: OPPORTUNITY_ID
+    - Label: Opportunity
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: OPPORTUNITY_CODE
+    - Label: Opportunity Code
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 7
+      - Link Passing: OPPORTUNITY_ID
+      - Link Target Items: P7_OPPORTUNITY_ID
+      - Link Icon: fa-edit
+  - Column Name: OPPORTUNITY_NAME
+    - Label: Opportunity Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACCOUNTS
+    - Visible: true
+  - Column Name: OPPORTUNITY_STAGE_ID
+    - Label: Stage
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITY_STAGES
+    - Visible: true
+  - Column Name: OPPORTUNITY_CATEGORY_ID
+    - Label: Value Band
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITY_CATEGORIES
+    - Visible: true
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: VALUE_AMT
+    - Label: Value
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PROBABILITY_PCT
+    - Label: Win Probability
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 990D00
+  - Column Name: EXPECTED_CLOSE_DATE
+    - Label: Expected Close
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: NEXT_REVIEW_DATE
+    - Label: Next Review
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+- Actions:
+  - Action
+    - Label: Create Opportunity
+    - Link To: Page 7
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Opportunity Stage History
+- Comments: Shows stage movement history to support stage aging and sales cycle review.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_OPPORTUNITY_STAGE_HISTORY
+  - Primary Keys: OPP_STAGE_HIST_ID
+  - Order By: CHANGED_ON desc
+  - Summary: Stage transition rows for opportunity lifecycle audit.
+- Columns:
+  - Column Name: OPP_STAGE_HIST_ID
+    - Label: Stage History
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: OPPORTUNITY_ID
+    - Label: Opportunity
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITIES
+    - Visible: true
+  - Column Name: OLD_STAGE_ID
+    - Label: Old Stage
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITY_STAGES
+    - Visible: true
+  - Column Name: NEW_STAGE_ID
+    - Label: New Stage
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITY_STAGES
+    - Visible: true
+  - Column Name: CHANGED_BY_USER_ID
+    - Label: Changed By
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: CHANGED_ON
+    - Label: Changed On
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+### Page 7: Opportunity Maintenance
+- Description: Standard form for maintaining opportunity stage, value, owner, dates, reasons, and notes.
+- Comments: Supports deal progression, value banding, win-loss tracking, review scheduling, and pipeline auditability.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Pipeline Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Opportunity updates are restricted by ownership and approval policy where applicable.
+#### Regions
+##### Region: Opportunity Form
+- Comments: Maintains opportunity fields used for pipeline health, forecast, quote creation, and win-loss analysis.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_OPPORTUNITIES
+  - Summary: Opportunity form bound to CRM_OPPORTUNITIES for pipeline maintenance.
+- Columns:
+  - Column Name: OPPORTUNITY_ID
+    - Label: Opportunity
+    - Datatype: number
+    - Page Item Name: P7_OPPORTUNITY_ID
+    - Render As: hidden
+  - Column Name: OPPORTUNITY_CODE
+    - Label: Opportunity Code
+    - Datatype: varchar2
+    - Page Item Name: P7_OPPORTUNITY_CODE
+    - Render As: displayOnly
+    - MaxLength: 32
+  - Column Name: LEAD_ID
+    - Label: Source Lead
+    - Datatype: number
+    - Page Item Name: P7_LEAD_ID
+    - Render As: selectList
+    - LOV: LOV_LEADS
+    - Required: true
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P7_ACCOUNT_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNTS
+    - Required: true
+  - Column Name: PRIMARY_CONTACT_ID
+    - Label: Primary Contact
+    - Datatype: number
+    - Page Item Name: P7_PRIMARY_CONTACT_ID
+    - Render As: selectList
+    - LOV: LOV_CONTACTS
+  - Column Name: OPPORTUNITY_STAGE_ID
+    - Label: Stage
+    - Datatype: number
+    - Page Item Name: P7_OPPORTUNITY_STAGE_ID
+    - Render As: selectList
+    - LOV: LOV_OPPORTUNITY_STAGES
+    - Required: true
+  - Column Name: OPPORTUNITY_CATEGORY_ID
+    - Label: Value Band
+    - Datatype: number
+    - Page Item Name: P7_OPPORTUNITY_CATEGORY_ID
+    - Render As: selectList
+    - LOV: LOV_OPPORTUNITY_CATEGORIES
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P7_USER_OWNER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+    - Required: true
+  - Column Name: CLOSE_REASON_ID
+    - Label: Close Reason
+    - Datatype: number
+    - Page Item Name: P7_CLOSE_REASON_ID
+    - Render As: selectList
+    - LOV: LOV_OPPORTUNITY_CLOSE_REASONS
+  - Column Name: OPPORTUNITY_NAME
+    - Label: Opportunity Name
+    - Datatype: varchar2
+    - Page Item Name: P7_OPPORTUNITY_NAME
+    - Render As: textField
+    - Required: true
+    - MaxLength: 255
+  - Column Name: VALUE_AMT
+    - Label: Value
+    - Datatype: number
+    - Page Item Name: P7_VALUE_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PROBABILITY_PCT
+    - Label: Win Probability
+    - Datatype: number
+    - Page Item Name: P7_PROBABILITY_PCT
+    - Render As: numberField
+    - Format Mask: 990D00
+  - Column Name: EXPECTED_CLOSE_DATE
+    - Label: Expected Close Date
+    - Datatype: date
+    - Page Item Name: P7_EXPECTED_CLOSE_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: CURRENT_STAGE_DATE
+    - Label: Current Stage Date
+    - Datatype: date
+    - Page Item Name: P7_CURRENT_STAGE_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: NEXT_ACTION_DATE
+    - Label: Next Action Date
+    - Datatype: date
+    - Page Item Name: P7_NEXT_ACTION_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: NEXT_REVIEW_DATE
+    - Label: Next Review Date
+    - Datatype: date
+    - Page Item Name: P7_NEXT_REVIEW_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DETAILS
+    - Label: Details
+    - Datatype: varchar2
+    - Page Item Name: P7_DETAILS
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P7_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Opportunity
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Opportunity
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Opportunities
+    - Link To: Page 6
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+### Page 8: Quotes
+- Description: Quote management workspace for quote headers, revisions, approval status, and quote line items.
+- Comments: Enables sales users to review proposal status, commercial terms, discounting, totals, and line-level products before order conversion.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Commercial Transactions
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Quote visibility and editability follow opportunity ownership, branch, region, and approval status rules.
+#### Regions
+##### Region: Quotes Report
+- Comments: Lists quote headers with revision, status, approval, totals, customer, and owner context.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_QUOTES
+  - Primary Keys: QUOTE_ID
+  - Order By: QUOTE_DATE desc, QUOTE_NO
+  - Summary: Quote header records used for commercial proposal control.
+- Columns:
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: QUOTE_NO
+    - Label: Quote Number
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 9
+      - Link Passing: QUOTE_ID
+      - Link Target Items: P9_QUOTE_ID
+      - Link Icon: fa-edit
+  - Column Name: VERSION_NO
+    - Label: Version
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: OPPORTUNITY_ID
+    - Label: Opportunity
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_OPPORTUNITIES
+    - Visible: true
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CUSTOMERS
+    - Visible: true
+  - Column Name: QUOTE_STATUS_ID
+    - Label: Quote Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_QUOTE_STATUSES
+    - Visible: true
+  - Column Name: APPROVAL_STATUS_ID
+    - Label: Approval Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_APPROVAL_STATUSES
+    - Visible: true
+  - Column Name: QUOTE_DATE
+    - Label: Quote Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: EXPIRY_DATE
+    - Label: Expiry Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TOTAL_AMT
+    - Label: Total
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+- Actions:
+  - Action
+    - Label: Create Quote
+    - Link To: Page 9
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Quote Lines Report
+- Comments: Lists quote line items for products, quantities, rates, discounts, tax, and net amount.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_QUOTE_LINES
+  - Primary Keys: QUOTE_LINE_ID
+  - Order By: QUOTE_ID, LINE_NO
+  - Summary: Quote line records that detail products and commercial amounts.
+- Columns:
+  - Column Name: QUOTE_LINE_ID
+    - Label: Quote Line
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_QUOTES
+    - Visible: true
+  - Column Name: LINE_NO
+    - Label: Line
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PRODUCT_ID
+    - Label: Product
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PRODUCTS
+    - Visible: true
+  - Column Name: DESCRIPTION
+    - Label: Description
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: QUANTITY
+    - Label: Quantity
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: UNIT_PRICE
+    - Label: Unit Price
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: LINE_AMT
+    - Label: Line Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+- Links:
+  - Link:
+    - Link To: Page 9
+    - Link Passing: QUOTE_LINE_ID
+    - Link Target Items: P9_QUOTE_LINE_ID
+    - Label: Edit Line
+    - Link Icon: fa-edit
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+### Page 9: Quote Maintenance
+- Description: Standard maintenance page for quote headers and quote line items.
+- Comments: Maintains proposal terms, lifecycle dates, approval status, revision chain, and line-level product amounts.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Commercial Transactions
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Quote maintenance should block accepted or approval-locked updates according to business policy.
+#### Regions
+##### Region: Quote Form
+- Comments: Maintains commercial quote header values used for approval, acceptance, revision, and order conversion.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_QUOTES
+  - Summary: Quote form bound to CRM_QUOTES for header and status maintenance.
+- Columns:
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Page Item Name: P9_QUOTE_ID
+    - Render As: hidden
+  - Column Name: OPPORTUNITY_ID
+    - Label: Opportunity
+    - Datatype: number
+    - Page Item Name: P9_OPPORTUNITY_ID
+    - Render As: selectList
+    - LOV: LOV_OPPORTUNITIES
+    - Required: true
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P9_ACCOUNT_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNTS
+    - Required: true
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Page Item Name: P9_CUSTOMER_ID
+    - Render As: selectList
+    - LOV: LOV_CUSTOMERS
+  - Column Name: CONTACT_ID
+    - Label: Contact
+    - Datatype: number
+    - Page Item Name: P9_CONTACT_ID
+    - Render As: selectList
+    - LOV: LOV_CONTACTS
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P9_USER_OWNER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+    - Required: true
+  - Column Name: QUOTE_STATUS_ID
+    - Label: Quote Status
+    - Datatype: number
+    - Page Item Name: P9_QUOTE_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_QUOTE_STATUSES
+    - Required: true
+  - Column Name: APPROVAL_STATUS_ID
+    - Label: Approval Status
+    - Datatype: number
+    - Page Item Name: P9_APPROVAL_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_APPROVAL_STATUSES
+  - Column Name: QUOTE_NO
+    - Label: Quote Number
+    - Datatype: varchar2
+    - Page Item Name: P9_QUOTE_NO
+    - Render As: textField
+    - Required: true
+    - MaxLength: 64
+  - Column Name: VERSION_NO
+    - Label: Version
+    - Datatype: number
+    - Page Item Name: P9_VERSION_NO
+    - Render As: numberField
+    - Required: true
+  - Column Name: PARENT_QUOTE_ID
+    - Label: Parent Quote
+    - Datatype: number
+    - Page Item Name: P9_PARENT_QUOTE_ID
+    - Render As: selectList
+    - LOV: LOV_QUOTES
+  - Column Name: QUOTE_DATE
+    - Label: Quote Date
+    - Datatype: date
+    - Page Item Name: P9_QUOTE_DATE
+    - Render As: datePicker
+    - Required: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: EXPIRY_DATE
+    - Label: Expiry Date
+    - Datatype: date
+    - Page Item Name: P9_EXPIRY_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: ACCEPTED_DATE
+    - Label: Accepted Date
+    - Datatype: date
+    - Page Item Name: P9_ACCEPTED_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: REJECTED_DATE
+    - Label: Rejected Date
+    - Datatype: date
+    - Page Item Name: P9_REJECTED_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DISCOUNT_AMT
+    - Label: Discount
+    - Datatype: number
+    - Page Item Name: P9_DISCOUNT_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TAX_AMT
+    - Label: Tax
+    - Datatype: number
+    - Page Item Name: P9_TAX_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TOTAL_AMT
+    - Label: Total
+    - Datatype: number
+    - Page Item Name: P9_TOTAL_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TERMS_TEXT
+    - Label: Terms
+    - Datatype: varchar2
+    - Page Item Name: P9_TERMS_TEXT
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: SPECIAL_NOTES
+    - Label: Special Notes
+    - Datatype: varchar2
+    - Page Item Name: P9_SPECIAL_NOTES
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P9_QUOTE_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Quote
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Quote
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Quotes
+    - Link To: Page 8
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+##### Region: Quote Line Form
+- Comments: Maintains product, quantity, pricing, discount, tax, and amount values for a quote line.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_QUOTE_LINES
+  - Summary: Quote line form bound to CRM_QUOTE_LINES for proposal line item maintenance.
+- Columns:
+  - Column Name: QUOTE_LINE_ID
+    - Label: Quote Line
+    - Datatype: number
+    - Page Item Name: P9_QUOTE_LINE_ID
+    - Render As: hidden
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Page Item Name: P9_LINE_QUOTE_ID
+    - Render As: selectList
+    - LOV: LOV_QUOTES
+    - Required: true
+  - Column Name: LINE_NO
+    - Label: Line Number
+    - Datatype: number
+    - Page Item Name: P9_LINE_NO
+    - Render As: numberField
+    - Required: true
+  - Column Name: PRODUCT_ID
+    - Label: Product
+    - Datatype: number
+    - Page Item Name: P9_PRODUCT_ID
+    - Render As: selectList
+    - LOV: LOV_PRODUCTS
+  - Column Name: DESCRIPTION
+    - Label: Description
+    - Datatype: varchar2
+    - Page Item Name: P9_LINE_DESCRIPTION
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: QUANTITY
+    - Label: Quantity
+    - Datatype: number
+    - Page Item Name: P9_QUANTITY
+    - Render As: numberField
+    - Required: true
+  - Column Name: UNIT_PRICE
+    - Label: Unit Price
+    - Datatype: number
+    - Page Item Name: P9_UNIT_PRICE
+    - Render As: numberField
+    - Required: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: DISCOUNT_AMT
+    - Label: Discount
+    - Datatype: number
+    - Page Item Name: P9_LINE_DISCOUNT_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TAX_AMT
+    - Label: Tax
+    - Datatype: number
+    - Page Item Name: P9_LINE_TAX_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: LINE_AMT
+    - Label: Line Amount
+    - Datatype: number
+    - Page Item Name: P9_LINE_AMT
+    - Render As: numberField
+    - Required: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P9_LINE_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Quote Line
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Quote Line
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+### Page 10: Customers
+- Description: Customer management workspace for converted accounts, priority, status, ownership, and relationship view.
+- Comments: Provides a consolidated view of customer records with operational links to orders, invoices, payments, activities, and history.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Relationship Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Customer access is constrained by ownership, branch, region, and administrator scope.
+#### Regions
+##### Region: Customers Report
+- Comments: Lists customer master records with account, contact, branch, owner, status, and priority context.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_CUSTOMERS
+  - Primary Keys: CUSTOMER_ID
+  - Order By: NAME
+  - Summary: Customer master rows created from won business or active relationships.
+- Columns:
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: CUSTOMER_CODE
+    - Label: Customer Code
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 11
+      - Link Passing: CUSTOMER_ID
+      - Link Target Items: P11_CUSTOMER_ID
+      - Link Icon: fa-edit
+  - Column Name: NAME
+    - Label: Customer Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACCOUNTS
+    - Visible: true
+  - Column Name: PRIMARY_CONTACT_ID
+    - Label: Primary Contact
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CONTACTS
+    - Visible: true
+  - Column Name: CUSTOMER_STATUS_ID
+    - Label: Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CUSTOMER_STATUSES
+    - Visible: true
+  - Column Name: CUSTOMER_PRIORITY_ID
+    - Label: Priority
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CUSTOMER_PRIORITIES
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+- Actions:
+  - Action
+    - Label: Create Customer
+    - Link To: Page 11
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Customer Change History
+- Comments: Shows significant customer updates for relationship governance and audit review.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_CUSTOMER_HISTORY
+  - Primary Keys: CUSTOMER_HIST_ID
+  - Order By: CHANGED_ON desc
+  - Summary: Customer field-level history rows.
+- Columns:
+  - Column Name: CUSTOMER_HIST_ID
+    - Label: Customer History
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CUSTOMERS
+    - Visible: true
+  - Column Name: FIELD_NAME
+    - Label: Field
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: OLD_VALUE
+    - Label: Old Value
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: NEW_VALUE
+    - Label: New Value
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CHANGED_BY_USER_ID
+    - Label: Changed By
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: CHANGED_ON
+    - Label: Changed On
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+### Page 11: Customer Maintenance
+- Description: Standard form for customer profile, billing, shipping, status, priority, and owner data.
+- Comments: Maintains converted customer relationships and downstream transaction alignment for account management.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Relationship Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Customer maintenance follows account ownership and business access rules.
+#### Regions
+##### Region: Customer Form
+- Comments: Maintains customer master values used by orders, invoices, payments, reporting, and customer timeline views.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_CUSTOMERS
+  - Summary: Customer form bound to CRM_CUSTOMERS for relationship record maintenance.
+- Columns:
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Page Item Name: P11_CUSTOMER_ID
+    - Render As: hidden
+  - Column Name: CUSTOMER_CODE
+    - Label: Customer Code
+    - Datatype: varchar2
+    - Page Item Name: P11_CUSTOMER_CODE
+    - Render As: displayOnly
+    - MaxLength: 32
+  - Column Name: ACCOUNT_ID
+    - Label: Account
+    - Datatype: number
+    - Page Item Name: P11_ACCOUNT_ID
+    - Render As: selectList
+    - LOV: LOV_ACCOUNTS
+    - Required: true
+  - Column Name: PRIMARY_CONTACT_ID
+    - Label: Primary Contact
+    - Datatype: number
+    - Page Item Name: P11_PRIMARY_CONTACT_ID
+    - Render As: selectList
+    - LOV: LOV_CONTACTS
+  - Column Name: NAME
+    - Label: Customer Name
+    - Datatype: varchar2
+    - Page Item Name: P11_NAME
+    - Render As: textField
+    - Required: true
+    - MaxLength: 255
+  - Column Name: INDUSTRY_ID
+    - Label: Industry
+    - Datatype: number
+    - Page Item Name: P11_INDUSTRY_ID
+    - Render As: selectList
+    - LOV: LOV_INDUSTRIES
+  - Column Name: WEBSITE
+    - Label: Website
+    - Datatype: varchar2
+    - Page Item Name: P11_WEBSITE
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Page Item Name: P11_BRANCH_ID
+    - Render As: selectList
+    - LOV: LOV_BRANCHES
+  - Column Name: USER_OWNER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P11_USER_OWNER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+  - Column Name: CUSTOMER_STATUS_ID
+    - Label: Customer Status
+    - Datatype: number
+    - Page Item Name: P11_CUSTOMER_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_CUSTOMER_STATUSES
+  - Column Name: CUSTOMER_PRIORITY_ID
+    - Label: Customer Priority
+    - Datatype: number
+    - Page Item Name: P11_CUSTOMER_PRIORITY_ID
+    - Render As: selectList
+    - LOV: LOV_CUSTOMER_PRIORITIES
+  - Column Name: BILLING_ADDRESS
+    - Label: Billing Address
+    - Datatype: varchar2
+    - Page Item Name: P11_BILLING_ADDRESS
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: SHIPPING_ADDRESS
+    - Label: Shipping Address
+    - Datatype: varchar2
+    - Page Item Name: P11_SHIPPING_ADDRESS
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P11_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Customer
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Customer
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Customers
+    - Link To: Page 10
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+### Page 12: Activities
+- Description: Activity and follow-up workspace for calls, meetings, emails, tasks, notes, reminders, and outcomes.
+- Comments: Supports daily sales work management through tabular follow-up views and calendar scheduling.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Activity Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Activities are visible by owner, assignee, branch, region, and administrative scope.
+#### Regions
+##### Region: Activity Calendar
+- Comments: Shows scheduled sales activities by start and end date for calendar-based workload management.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Calendar
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACTIVITIES
+  - Primary Keys: ACTIVITY_ID
+  - Order By: SCHEDULED_START_ON
+  - Summary: Activity records displayed by scheduled start and end dates.
+- Columns:
+  - Column Name: ACTIVITY_ID
+    - Label: Activity
+    - Datatype: number
+    - Render As: hidden
+  - Column Name: SUBJECT
+    - Label: Subject
+    - Datatype: varchar2
+    - Render As: displayCol
+  - Column Name: SCHEDULED_START_ON
+    - Label: Start
+    - Datatype: date
+    - Render As: startDateCol
+  - Column Name: SCHEDULED_END_ON
+    - Label: End
+    - Datatype: date
+    - Render As: endDateCol
+  - Column Name: DUE_ON
+    - Label: Due
+    - Datatype: date
+    - Render As: supplementalInfo
+- Links:
+  - Link:
+    - Link To: Page 13
+    - Link Type: Edit
+    - Link Passing: ACTIVITY_ID
+    - Link Target Items: P13_ACTIVITY_ID
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Activities Report
+- Comments: Lists activity and task records with type, status, owner, assignee, due date, reminders, and outcome.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACTIVITIES
+  - Primary Keys: ACTIVITY_ID
+  - Order By: DUE_ON, SUBJECT
+  - Summary: Activity master rows used for daily sales follow-up tracking.
+- Columns:
+  - Column Name: ACTIVITY_ID
+    - Label: Activity
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: SUBJECT
+    - Label: Subject
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 13
+      - Link Passing: ACTIVITY_ID
+      - Link Target Items: P13_ACTIVITY_ID
+      - Link Icon: fa-edit
+  - Column Name: ACTIVITY_TYPE_ID
+    - Label: Type
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACTIVITY_TYPES
+    - Visible: true
+  - Column Name: ACTIVITY_STATUS_ID
+    - Label: Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACTIVITY_STATUSES
+    - Visible: true
+  - Column Name: ACTIVITY_OUTCOME_ID
+    - Label: Outcome
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ACTIVITY_OUTCOMES
+    - Visible: true
+  - Column Name: OWNER_USER_ID
+    - Label: Owner
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: ASSIGNED_USER_ID
+    - Label: Assigned To
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: DUE_ON
+    - Label: Due
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: COMPLETED_ON
+    - Label: Completed
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+- Actions:
+  - Action
+    - Label: Create Activity
+    - Link To: Page 13
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+### Page 13: Activity Maintenance
+- Description: Standard form for activities, tasks, follow-ups, reminders, ownership, and outcomes.
+- Comments: Captures daily sales interactions and work assignments that appear on user dashboards and calendars.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Activity Management
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Activity updates are allowed for owners, assignees, managers, and administrators according to access rules.
+#### Regions
+##### Region: Activity Form
+- Comments: Maintains activity type, status, outcome, ownership, schedule, due dates, reminders, and detailed notes.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACTIVITIES
+  - Summary: Activity form bound to CRM_ACTIVITIES for follow-up and task maintenance.
+- Columns:
+  - Column Name: ACTIVITY_ID
+    - Label: Activity
+    - Datatype: number
+    - Page Item Name: P13_ACTIVITY_ID
+    - Render As: hidden
+  - Column Name: ACTIVITY_TYPE_ID
+    - Label: Activity Type
+    - Datatype: number
+    - Page Item Name: P13_ACTIVITY_TYPE_ID
+    - Render As: selectList
+    - LOV: LOV_ACTIVITY_TYPES
+    - Required: true
+  - Column Name: ACTIVITY_STATUS_ID
+    - Label: Activity Status
+    - Datatype: number
+    - Page Item Name: P13_ACTIVITY_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_ACTIVITY_STATUSES
+    - Required: true
+  - Column Name: ACTIVITY_OUTCOME_ID
+    - Label: Activity Outcome
+    - Datatype: number
+    - Page Item Name: P13_ACTIVITY_OUTCOME_ID
+    - Render As: selectList
+    - LOV: LOV_ACTIVITY_OUTCOMES
+  - Column Name: OWNER_USER_ID
+    - Label: Owner
+    - Datatype: number
+    - Page Item Name: P13_OWNER_USER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+    - Required: true
+  - Column Name: ASSIGNED_USER_ID
+    - Label: Assigned User
+    - Datatype: number
+    - Page Item Name: P13_ASSIGNED_USER_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+  - Column Name: SUBJECT
+    - Label: Subject
+    - Datatype: varchar2
+    - Page Item Name: P13_SUBJECT
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: DETAIL
+    - Label: Detail
+    - Datatype: varchar2
+    - Page Item Name: P13_DETAIL
+    - Render As: textarea
+    - MaxLength: 4000
+  - Column Name: SCHEDULED_START_ON
+    - Label: Scheduled Start
+    - Datatype: date
+    - Page Item Name: P13_SCHEDULED_START_ON
+    - Render As: datePicker
+  - Column Name: SCHEDULED_END_ON
+    - Label: Scheduled End
+    - Datatype: date
+    - Page Item Name: P13_SCHEDULED_END_ON
+    - Render As: datePicker
+  - Column Name: DUE_ON
+    - Label: Due
+    - Datatype: date
+    - Page Item Name: P13_DUE_ON
+    - Render As: datePicker
+  - Column Name: COMPLETED_ON
+    - Label: Completed
+    - Datatype: date
+    - Page Item Name: P13_COMPLETED_ON
+    - Render As: datePicker
+  - Column Name: REMINDER_ON
+    - Label: Reminder
+    - Datatype: date
+    - Page Item Name: P13_REMINDER_ON
+    - Render As: datePicker
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P13_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Activity
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Activity
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Activities
+    - Link To: Page 12
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+### Page 14: Orders and Billing
+- Description: Commercial execution workspace for orders, booking lines, invoices, and payments.
+- Comments: Tracks the flow from accepted quote or direct order through booking, invoicing, collection, and payment follow-up.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Commercial Transactions
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Commercial transaction visibility follows customer, branch, region, and approval access policy.
+#### Regions
+##### Region: Orders Report
+- Comments: Lists order headers with customer, source, sales owner, delivery date, status, approval, and total amount.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ORDERS
+  - Primary Keys: ORDER_ID
+  - Order By: ORDER_DATE desc
+  - Summary: Order header records created from accepted quotes or direct order entry.
+- Columns:
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 15
+      - Link Passing: ORDER_ID
+      - Link Target Items: P15_ORDER_ID
+      - Link Icon: fa-edit
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_CUSTOMERS
+    - Visible: true
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_QUOTES
+    - Visible: true
+  - Column Name: USER_SALES_ID
+    - Label: Sales Rep
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: ORDER_STATUS_ID
+    - Label: Order Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ORDER_STATUSES
+    - Visible: true
+  - Column Name: APPROVAL_STATUS_ID
+    - Label: Approval Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_APPROVAL_STATUSES
+    - Visible: true
+  - Column Name: ORDER_DATE
+    - Label: Order Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DELIVERY_DATE
+    - Label: Delivery Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TOTAL_AMT
+    - Label: Total
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+- Actions:
+  - Action
+    - Label: Create Order
+    - Link To: Page 15
+    - slot: CREATE
+    - Action Type: navigate
+    - Process: Create
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Booking Lines Report
+- Comments: Lists booking line items tied to orders for product, quantity, price, discount, tax, and line total review.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_BOOKINGS
+  - Primary Keys: BOOKING_ID
+  - Order By: ORDER_ID, LINE_NO
+  - Summary: Booking rows that satisfy the requirement that every order has one or more line items.
+- Columns:
+  - Column Name: BOOKING_ID
+    - Label: Booking
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ORDERS
+    - Visible: true
+  - Column Name: LINE_NO
+    - Label: Line
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PRODUCT_TYPE_ID
+    - Label: Product Type
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PRODUCT_TYPES
+    - Visible: true
+  - Column Name: PRODUCT_ID
+    - Label: Product
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PRODUCTS
+    - Visible: true
+  - Column Name: QUANTITY
+    - Label: Quantity
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PRICE
+    - Label: Price
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: LINE_AMT
+    - Label: Line Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+- Links:
+  - Link:
+    - Link To: Page 15
+    - Link Passing: BOOKING_ID
+    - Link Target Items: P15_BOOKING_ID
+    - Label: Edit Booking
+    - Link Icon: fa-edit
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+##### Region: Invoices Report
+- Comments: Lists invoice headers with order, status, due date, total, paid, and outstanding amount context.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_INVOICES
+  - Primary Keys: INVOICE_ID
+  - Order By: DUE_DATE, INVOICE_NO
+  - Summary: Invoice header records generated from confirmed orders.
+- Columns:
+  - Column Name: INVOICE_ID
+    - Label: Invoice
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: INVOICE_NO
+    - Label: Invoice Number
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+    - Link:
+      - Link To: Page 15
+      - Link Passing: INVOICE_ID
+      - Link Target Items: P15_INVOICE_ID
+      - Link Icon: fa-edit
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ORDERS
+    - Visible: true
+  - Column Name: INVOICE_STATUS_ID
+    - Label: Invoice Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_INVOICE_STATUSES
+    - Visible: true
+  - Column Name: INVOICE_DATE
+    - Label: Invoice Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DUE_DATE
+    - Label: Due Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TOTAL_AMT
+    - Label: Total
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PAID_AMT
+    - Label: Paid
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: OUTSTANDING_AMT
+    - Label: Outstanding
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+##### Region: Payments Report
+- Comments: Lists payments applied to invoices with date, amount, mode, status, and reference number.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_PAYMENTS
+  - Primary Keys: PAYMENT_ID
+  - Order By: PAY_DATE desc
+  - Summary: Payment transaction rows applied to invoice balances.
+- Columns:
+  - Column Name: PAYMENT_ID
+    - Label: Payment
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: INVOICE_ID
+    - Label: Invoice
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_INVOICES
+    - Visible: true
+  - Column Name: PAY_DATE
+    - Label: Payment Date
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+    - Link:
+      - Link To: Page 15
+      - Link Passing: PAYMENT_ID
+      - Link Target Items: P15_PAYMENT_ID
+      - Link Icon: fa-edit
+  - Column Name: PAY_AMT
+    - Label: Payment Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PAYMENT_MODE_ID
+    - Label: Payment Mode
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PAYMENT_MODES
+    - Visible: true
+  - Column Name: PAYMENT_STATUS_ID
+    - Label: Payment Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PAYMENT_STATUSES
+    - Visible: true
+  - Column Name: REFERENCE_NO
+    - Label: Reference
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+### Page 15: Transaction Maintenance
+- Description: Standard maintenance page for orders, booking lines, invoices, and payments.
+- Comments: Centralizes commercial transaction edits so order execution and collections can be maintained from one operational page.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: false
+- Page Group: Commercial Transactions
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+  - Notes: Transaction updates should enforce approval locks and finance control rules before commit.
+#### Regions
+##### Region: Order Form
+- Comments: Maintains order header values for customer, quote source, sales owner, status, approval, delivery, and total amount.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ORDERS
+  - Summary: Order form bound to CRM_ORDERS for sales order maintenance.
+- Columns:
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Page Item Name: P15_ORDER_ID
+    - Render As: hidden
+  - Column Name: CUSTOMER_ID
+    - Label: Customer
+    - Datatype: number
+    - Page Item Name: P15_ORDER_CUSTOMER_ID
+    - Render As: selectList
+    - LOV: LOV_CUSTOMERS
+    - Required: true
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Page Item Name: P15_ORDER_QUOTE_ID
+    - Render As: selectList
+    - LOV: LOV_QUOTES
+  - Column Name: ORDER_SOURCE_ID
+    - Label: Order Source
+    - Datatype: number
+    - Page Item Name: P15_ORDER_SOURCE_ID
+    - Render As: selectList
+    - LOV: LOV_ORDER_SOURCES
+    - Required: true
+  - Column Name: USER_SALES_ID
+    - Label: Sales User
+    - Datatype: number
+    - Page Item Name: P15_USER_SALES_ID
+    - Render As: selectList
+    - LOV: LOV_USERS
+    - Required: true
+  - Column Name: ORDER_STATUS_ID
+    - Label: Order Status
+    - Datatype: number
+    - Page Item Name: P15_ORDER_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_ORDER_STATUSES
+    - Required: true
+  - Column Name: APPROVAL_STATUS_ID
+    - Label: Approval Status
+    - Datatype: number
+    - Page Item Name: P15_ORDER_APPROVAL_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_APPROVAL_STATUSES
+  - Column Name: APPROVAL_REQUIRED
+    - Label: Approval Required
+    - Datatype: varchar2
+    - Page Item Name: P15_APPROVAL_REQUIRED
+    - Render As: textField
+    - Required: true
+    - MaxLength: 1
+  - Column Name: ORDER_DATE
+    - Label: Order Date
+    - Datatype: date
+    - Page Item Name: P15_ORDER_DATE
+    - Render As: datePicker
+    - Required: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DELIVERY_DATE
+    - Label: Delivery Date
+    - Datatype: date
+    - Page Item Name: P15_DELIVERY_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TOTAL_AMT
+    - Label: Total Amount
+    - Datatype: number
+    - Page Item Name: P15_ORDER_TOTAL_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P15_ORDER_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Order
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Order
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+  - Action
+    - Label: Back to Orders
+    - Link To: Page 14
+    - slot: CLOSE
+    - Action Type: navigate
+    - Process: cancelDialog
+    - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Sales Representative, Administrator
+##### Region: Booking Form
+- Comments: Maintains order booking line values and captures product quantity, price, discount, tax, and line amount.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_BOOKINGS
+  - Summary: Booking form bound to CRM_BOOKINGS for order line maintenance.
+- Columns:
+  - Column Name: BOOKING_ID
+    - Label: Booking
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_ID
+    - Render As: hidden
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_ORDER_ID
+    - Render As: selectList
+    - LOV: LOV_ORDERS
+    - Required: true
+  - Column Name: LINE_NO
+    - Label: Line Number
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_LINE_NO
+    - Render As: numberField
+    - Required: true
+  - Column Name: PRODUCT_TYPE_ID
+    - Label: Product Type
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_PRODUCT_TYPE_ID
+    - Render As: selectList
+    - LOV: LOV_PRODUCT_TYPES
+  - Column Name: PRODUCT_ID
+    - Label: Product
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_PRODUCT_ID
+    - Render As: selectList
+    - LOV: LOV_PRODUCTS
+  - Column Name: PRICE
+    - Label: Price
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_PRICE
+    - Render As: numberField
+    - Required: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: QUANTITY
+    - Label: Quantity
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_QUANTITY
+    - Render As: numberField
+    - Required: true
+  - Column Name: DISCOUNT_AMT
+    - Label: Discount
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_DISCOUNT_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TAX_AMT
+    - Label: Tax
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_TAX_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: LINE_AMT
+    - Label: Line Amount
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_LINE_AMT
+    - Render As: numberField
+    - Required: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P15_BOOKING_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Booking
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Booking
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+##### Region: Invoice Form
+- Comments: Maintains invoice header values for order billing, due date, tax, totals, paid amount, and outstanding amount.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_INVOICES
+  - Summary: Invoice form bound to CRM_INVOICES for billing and collection status maintenance.
+- Columns:
+  - Column Name: INVOICE_ID
+    - Label: Invoice
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_ID
+    - Render As: hidden
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_ORDER_ID
+    - Render As: selectList
+    - LOV: LOV_ORDERS
+    - Required: true
+  - Column Name: INVOICE_NO
+    - Label: Invoice Number
+    - Datatype: varchar2
+    - Page Item Name: P15_INVOICE_NO
+    - Render As: textField
+    - Required: true
+    - MaxLength: 64
+  - Column Name: INVOICE_STATUS_ID
+    - Label: Invoice Status
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_INVOICE_STATUSES
+    - Required: true
+  - Column Name: INVOICE_DATE
+    - Label: Invoice Date
+    - Datatype: date
+    - Page Item Name: P15_INVOICE_DATE
+    - Render As: datePicker
+    - Required: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: DUE_DATE
+    - Label: Due Date
+    - Datatype: date
+    - Page Item Name: P15_DUE_DATE
+    - Render As: datePicker
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TAX_AMT
+    - Label: Tax
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_TAX_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TOTAL_AMT
+    - Label: Total
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_TOTAL_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PAID_AMT
+    - Label: Paid
+    - Datatype: number
+    - Page Item Name: P15_PAID_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: OUTSTANDING_AMT
+    - Label: Outstanding
+    - Datatype: number
+    - Page Item Name: P15_OUTSTANDING_AMT
+    - Render As: numberField
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P15_INVOICE_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Invoice
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Invoice
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+##### Region: Payment Form
+- Comments: Maintains payment records applied to invoices with amount, mode, status, date, and external reference.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Form
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_PAYMENTS
+  - Summary: Payment form bound to CRM_PAYMENTS for invoice settlement tracking.
+- Columns:
+  - Column Name: PAYMENT_ID
+    - Label: Payment
+    - Datatype: number
+    - Page Item Name: P15_PAYMENT_ID
+    - Render As: hidden
+  - Column Name: INVOICE_ID
+    - Label: Invoice
+    - Datatype: number
+    - Page Item Name: P15_PAYMENT_INVOICE_ID
+    - Render As: selectList
+    - LOV: LOV_INVOICES
+    - Required: true
+  - Column Name: PAY_DATE
+    - Label: Payment Date
+    - Datatype: date
+    - Page Item Name: P15_PAY_DATE
+    - Render As: datePicker
+    - Required: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: PAY_AMT
+    - Label: Payment Amount
+    - Datatype: number
+    - Page Item Name: P15_PAY_AMT
+    - Render As: numberField
+    - Required: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: PAYMENT_MODE_ID
+    - Label: Payment Mode
+    - Datatype: number
+    - Page Item Name: P15_PAYMENT_MODE_ID
+    - Render As: selectList
+    - LOV: LOV_PAYMENT_MODES
+    - Required: true
+  - Column Name: PAYMENT_STATUS_ID
+    - Label: Payment Status
+    - Datatype: number
+    - Page Item Name: P15_PAYMENT_STATUS_ID
+    - Render As: selectList
+    - LOV: LOV_PAYMENT_STATUSES
+    - Required: true
+  - Column Name: REFERENCE_NO
+    - Label: Reference Number
+    - Datatype: varchar2
+    - Page Item Name: P15_REFERENCE_NO
+    - Render As: textField
+    - MaxLength: 255
+  - Column Name: ROW_VERSION
+    - Label: Row Version
+    - Datatype: number
+    - Page Item Name: P15_PAYMENT_ROW_VERSION
+    - Render As: hidden
+    - Required: true
+- Actions:
+  - Action
+    - Label: Save Payment
+    - slot: CHANGE
+    - Action Type: submit
+    - Process: Apply
+    - Authorized Roles: Branch Sales Manager, Sales Representative, Administrator
+  - Action
+    - Label: Delete Payment
+    - slot: DELETE
+    - Action Type: submit
+    - Process: Delete
+    - Authorized Roles: Administrator
+### Page 16: Approvals
+- Description: Approval monitoring workspace for quote and order approvals, routing rules, actors, outcomes, and escalation visibility.
+- Comments: Supports managers and administrators with approval history, pending action visibility, and rule inspection.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Governance
+- Security Requirements:
+  - Authorized Roles: Chief Sales Officer, Regional Vice President, Branch Sales Manager, Administrator
+  - Notes: Approval actions are limited to roles with configured approval authority and matching transaction scope.
+#### Regions
+##### Region: Approval Actions Report
+- Comments: Lists approval workflow actions for orders and quotes with actor, status, sequence, date, and comments.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_APPROVAL_ACTIONS
+  - Primary Keys: APPROVAL_ACTION_ID
+  - Order By: ACTION_ON desc
+  - Summary: Approval history rows that record workflow actions and decisions.
+- Columns:
+  - Column Name: APPROVAL_ACTION_ID
+    - Label: Approval Action
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: ORDER_ID
+    - Label: Order
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ORDERS
+    - Visible: true
+  - Column Name: QUOTE_ID
+    - Label: Quote
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_QUOTES
+    - Visible: true
+  - Column Name: APPROVAL_RULE_ID
+    - Label: Approval Rule
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_APPROVAL_RULES
+    - Visible: true
+  - Column Name: APPROVAL_STATUS_ID
+    - Label: Approval Status
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_APPROVAL_STATUSES
+    - Visible: true
+  - Column Name: ACTION_SEQ_NO
+    - Label: Sequence
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ACTOR_USER_ID
+    - Label: Actor
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: ACTION_ON
+    - Label: Action On
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: COMMENTS
+    - Label: Comments
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+##### Region: Approval Rules Report
+- Comments: Lists approval routing thresholds by entity, branch, region, approver role, escalation role, and due hours.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_APPROVAL_RULES
+  - Primary Keys: APPROVAL_RULE_ID
+  - Order By: SEQ_NO, RULE_NAME
+  - Summary: Approval configuration rows used for commercial governance routing.
+- Columns:
+  - Column Name: APPROVAL_RULE_ID
+    - Label: Approval Rule
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: RULE_NAME
+    - Label: Rule Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ENTITY_TYPE
+    - Label: Entity Type
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: REGION_ID
+    - Label: Region
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_REGIONS
+    - Visible: true
+  - Column Name: MIN_AMOUNT
+    - Label: Minimum Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: MAX_AMOUNT
+    - Label: Maximum Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: APPROVER_ROLE_ID
+    - Label: Approver Role
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ROLES
+    - Visible: true
+  - Column Name: ESCALATE_ROLE_ID
+    - Label: Escalation Role
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ROLES
+    - Visible: true
+  - Column Name: RESPONSE_DUE_HOURS
+    - Label: Response Due Hours
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+  - Column Name: SEQ_NO
+    - Label: Sequence
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+### Page 17: Administration
+- Description: Administration workspace for users, roles, access rules, products, targets, duplicate match rules, and reference setup.
+- Comments: Gives administrators controlled setup views for CRM security, sales hierarchy, product catalog, targets, and data quality.
+- Pattern: vertical-stack
+- Page Mode: standard
+- Menu: true
+- Page Group: Administration
+- Security Requirements:
+  - Authorized Roles: Administrator
+  - Notes: Administration pages are restricted to the Administrator role.
+#### Regions
+##### Region: Users Report
+- Comments: Lists application users with role, region, branch, supervisor, and contact information for security setup.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_USERS
+  - Primary Keys: USER_ID
+  - Order By: USERNAME
+  - Summary: User records that define role assignment, branch alignment, region alignment, and reporting hierarchy.
+- Columns:
+  - Column Name: USER_ID
+    - Label: User
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: USERNAME
+    - Label: Username
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: EMAIL
+    - Label: Email
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PHONE
+    - Label: Phone
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ROLE_ID
+    - Label: Role
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ROLES
+    - Visible: true
+  - Column Name: REGION_ID
+    - Label: Region
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_REGIONS
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: SUPERVISOR_USER_ID
+    - Label: Supervisor
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+##### Region: Access Rules Report
+- Comments: Lists entity access rules and permissions that govern role-based view, create, update, delete, and approval scope.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_ACCESS_RULES
+  - Primary Keys: ACCESS_RULE_ID
+  - Order By: ENTITY_NAME, ACCESS_SCOPE_CODE
+  - Summary: Access rule metadata used by role-based security policies.
+- Columns:
+  - Column Name: ACCESS_RULE_ID
+    - Label: Access Rule
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: RULE_NAME
+    - Label: Rule Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ENTITY_NAME
+    - Label: Entity
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: ROLE_ID
+    - Label: Role
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_ROLES
+    - Visible: true
+  - Column Name: ACCESS_SCOPE_CODE
+    - Label: Access Scope
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CAN_VIEW
+    - Label: View
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CAN_CREATE
+    - Label: Create
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CAN_UPDATE
+    - Label: Update
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CAN_DELETE
+    - Label: Delete
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: CAN_APPROVE
+    - Label: Approve
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+##### Region: Products Report
+- Comments: Lists products and services available for quote and booking line entry.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_PRODUCTS
+  - Primary Keys: PRODUCT_ID
+  - Order By: NAME
+  - Summary: Product catalog rows referenced by quote lines and bookings.
+- Columns:
+  - Column Name: PRODUCT_ID
+    - Label: Product
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: CODE
+    - Label: Code
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: NAME
+    - Label: Product Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: PRODUCT_TYPE_ID
+    - Label: Product Type
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_PRODUCT_TYPES
+    - Visible: true
+  - Column Name: DESCRIPTION
+    - Label: Description
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+##### Region: Duplicate Match Rules Report
+- Comments: Lists duplicate detection rules for accounts, contacts, and customers to support data quality governance.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_DUPLICATE_MATCH_RULES
+  - Primary Keys: MATCH_RULE_ID
+  - Order By: ENTITY_NAME, RULE_NAME
+  - Summary: Duplicate match configuration rows used to flag likely duplicate business records.
+- Columns:
+  - Column Name: MATCH_RULE_ID
+    - Label: Match Rule
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: ENTITY_NAME
+    - Label: Entity
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: RULE_NAME
+    - Label: Rule Name
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: MATCH_ATTRIBUTES
+    - Label: Match Attributes
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: THRESHOLD_PCT
+    - Label: Threshold Percent
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 990D00
+##### Region: Sales Targets Report
+- Comments: Lists targets by user, branch, or region and period for target-versus-actual reporting.
+- Position: body
+- Colstart: 1
+- Colspan: 12
+- Component:
+  - Component Type: Interactive Report
+  - Parent Child Role: None
+- Data Source:
+  - Type: Table
+  - Name: CRM_SALES_TARGETS
+  - Primary Keys: TARGET_ID
+  - Order By: PERIOD_START_DATE desc, TARGET_SCOPE_CODE
+  - Summary: Sales target rows used for user, branch, and region performance measurement.
+- Columns:
+  - Column Name: TARGET_ID
+    - Label: Target
+    - Datatype: number
+    - Render As: hidden
+    - Visible: false
+  - Column Name: TARGET_SCOPE_CODE
+    - Label: Scope
+    - Datatype: varchar2
+    - Render As: plainText
+    - Visible: true
+  - Column Name: USER_ID
+    - Label: User
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_USERS
+    - Visible: true
+  - Column Name: BRANCH_ID
+    - Label: Branch
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_BRANCHES
+    - Visible: true
+  - Column Name: REGION_ID
+    - Label: Region
+    - Datatype: number
+    - Render As: plainTextBasedOnLov
+    - LOV: LOV_REGIONS
+    - Visible: true
+  - Column Name: PERIOD_START_DATE
+    - Label: Period Start
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: PERIOD_END_DATE
+    - Label: Period End
+    - Datatype: date
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: DD-MON-YYYY
+  - Column Name: TARGET_AMT
+    - Label: Target Amount
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true
+    - Format Mask: 999G999G999G999G990D00
+  - Column Name: TARGET_COUNT
+    - Label: Target Count
+    - Datatype: number
+    - Render As: plainText
+    - Visible: true

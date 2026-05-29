@@ -6,7 +6,7 @@ In this lab, you work with a generated application blueprint and import into Ora
 
 You begin by preparing the APEX environment, including registering the schema for RESTful Services. Next, you import the generated blueprint file into the workspace. The APEX parser then deterministically converts this blueprint into an APEX application and installs it in your workspace.
 
-After installation, you configure access by assigning roles using User Access Control. Finally, you launch the application and explore different pages.
+After installation, you configure access by assigning roles using User Access Control. Finally, you launch the application and explore the functionality.
 
 Estimated Time: 20 minutes
 
@@ -17,7 +17,7 @@ In this lab, you will:
 - Register the schema in RESTful Services.
 - Import the generated blueprint file into APEX workspace.
 - Configure user roles through User Access Control.
-- Launch the application and customize the UI.
+- Launch and explore the application.
 
 ## Task 1: Prepare the APEX Environment
 
@@ -50,8 +50,6 @@ In this task, you import the generated blueprint file and validate the blueprint
 
  ![App Import](./images/app-import.png " ")
 
-> **Note:** If a blueprint error appears after Step 3, click **Copy full error log to clipboard**. Paste the copied log into VS Code so your AI assistant can analyze it and fix the errors in the generated blueprint. Once the new file is ready, repeat Step 1 to Step 3 of Task 2.
-
 4. Click **Import Application**.
 
  ![App Import](./images/import-blueprint1.png " ")
@@ -60,21 +58,19 @@ In this task, you import the generated blueprint file and validate the blueprint
 
 >    ![App Imported](./images/blueprint-error.png " ")
 
-5. Click on **Edit Application**.
+> **Note:** If a blueprint error appears after Step 3, click **Copy full error log to clipboard**. Paste the copied log into VS Code so your AI assistant can analyze it and fix the errors in the generated blueprint. Once the new file is ready, repeat Step 1 to Step 3 of Task 2.
 
- ![Edit App](./images/edit-app.png " ")
-
-6. Navigate to **Shared Components**, and click **User Access Control**.
+5. Open the application. Navigate to **Shared Components**, and click **User Access Control**.
 
  ![Shared Components](./images/shared-components.png " ")
 
  ![Application Access Control](./images/app-access.png " ")
 
-7. Click **Add User Role Assignment**.
+6. Click **Add User Role Assignment**.
 
   ![Add Access](./images/add-access.png " ")
 
-8. For the purpose of this demo, we will assign all the roles to a single user to avoid multiple logins.
+7. For the purpose of this demo, we will assign all the roles to a single user to avoid multiple logins.
 
   In this case, enter your APEX workspace username and assign the appropriate roles. Click **Create Assignment**.
 

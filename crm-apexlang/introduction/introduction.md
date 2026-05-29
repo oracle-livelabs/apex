@@ -12,5 +12,5 @@ This workshop guides APEX developers and beginners through spec-driven CRM appli
 Estimated Workshop Time: 1 hour
 
 ## Acknowledgements
-- **Author** - Apoorva Srinivas, Prinicpal Product Manager
+- **Author** - Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, April 2026
