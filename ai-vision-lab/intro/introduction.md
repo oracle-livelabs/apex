@@ -1,5 +1,8 @@
 # Introduction
 
+Estimated Workshop Time: TODO - x minutes
+
+
 ## About this Workshop
 
 In today's data-driven world, the ability to extract valuable insights from visual content has become a game-changer for businesses across industries. Artificial Intelligence (AI) has made significant strides in the field of computer vision, enabling machines to understand and interpret visual data with remarkable accuracy.
@@ -70,3 +73,8 @@ If the application is not working as expected, download and install the complete
 
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
