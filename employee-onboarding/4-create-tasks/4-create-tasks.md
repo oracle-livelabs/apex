@@ -101,6 +101,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
     - Value Type: **SQL Query**
 
     - Value: Copy and paste the below code
+
         ```
          <copy>
          select upper(e.first_name)

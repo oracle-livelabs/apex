@@ -22,23 +22,23 @@ In this lab, you will:
 
 In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs.
 
-1. Sign in to your Oracle APEX workspace using the credentials provided for this workshop.
+1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](./files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
+
+2. Sign in to your Oracle APEX workspace using the credentials provided for this workshop.
 
     ![Sign in to your workspace](./images/login-workspace.png " ")
 
-2. From the Oracle APEX Home page, select **SQL Workshop**.
+3. From the Oracle APEX Home page, select **SQL Workshop**.
 
     ![Select SQL Workshop from the Oracle APEX Home page](./images/workspace-home.png " ")
 
-3. From the **SQL Workshop** page, select **SQL Scripts**.
+4. From the **SQL Workshop** page, select **SQL Scripts**.
 
     ![Select SQL Scripts from SQL Workshop](./images/sql-workshop-home.png " ")
 
-4. Select **Upload**.
+5. Select **Upload**.
 
     ![SQL Scripts page](./images/sql-scripts-page.png " ")
-
-5. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](./files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
 6. In the **Upload Script** dialog, select the downloaded file, enter **`scm_data_model`** for **Script Name**, and select **Upload**.
 
@@ -96,15 +96,15 @@ In this task, you will upload and run the data model script. This creates the wa
 
 In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
 
-1. Select **SQL Scripts**.
+1. Download the [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql) file to your local machine.
+
+2. Select **SQL Scripts**.
 
     ![Return to SQL Scripts](./images/return-tosscripts.png " ")
 
-2. Select **Upload**.
+3. Select **Upload**.
 
     ![Upload to SQL Scripts](./images/upload-data1.png " ")
-
-3. Download the [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql) file to your local machine.
 
 4. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
@@ -122,15 +122,15 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Sample Data Results](./images/ran-script1.png " ")
 
-8. Select **SQL Scripts**.
+8. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
+
+9. Select **SQL Scripts**.
 
     ![Sample Data Results](./images/sample-data1-return.png " ")
 
-9. Select **Upload** again.
+10. Select **Upload** again.
 
     ![Upload to SQL Scripts](./images/upload-data2.png " ")
-
-10. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
 
 11. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
@@ -164,15 +164,15 @@ The combined sample data now includes the following:
 
 In this task, you will import the base APEX application. It already contains the page layout and shared components, so you can focus entirely on building the AI Agent in the following labs rather than setting up pages from scratch.
 
-1. From the left navigation, select the **App Builder** icon.
+1. Download the [SCM\_INV\_WMS\_APP.sql](./files/SCM_INV_WMS_APP.sql) file to your local machine.
+
+2. From the left navigation, select the **App Builder** icon.
 
     ![Navigate to App Builder from the left navigation](./images/sample-data2-return.png " ")
 
-2. From the **App Builder** page, select **Import**.
+3. From the **App Builder** page, select **Import**.
 
     ![App Builder Home](./images/app-builder-home.png " ")
-
-3. Download the [SCM\_INV\_WMS\_APP.sql](./files/SCM_INV_WMS_APP.sql) file to your local machine.
 
 4. In the import wizard, select the downloaded file to upload, then click **Next**.
 
