@@ -381,8 +381,9 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     ![Entered PL/SQL code for raise\_purchase\_order](./images/task6-sql.png " ")
 
-5. Under **User Approval**, enable **Requires Confirmation** and enter the following:
+5. Under **User Approval**, enter the following:
 
+    - Requires Confirmation: Toggle **On**
     - Confirmation Title: **Confirm Purchase Order**
     - Confirmation Message:
 
@@ -397,7 +398,7 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     This ensures the user sees a confirmation dialog summarising the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
 
-    <!-- TODO: Add screenshot for the User Approval settings after Requires Confirmation is enabled. Suggested filename: ./images/task6-user-approval.png -->
+    ![User Approval settings for raise\_purchase\_order](./images/user-approval.png " ")
 
 6. Click **Create**.
 
