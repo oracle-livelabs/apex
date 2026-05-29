@@ -11,8 +11,8 @@ Estimated Time: 15 minutes
 
 ## Task 1: Download the scripts for installing CRM schema
 1. Download the installation scripts required to create the CRM schema:
-- [01\_crm\_ddl.sql](files/01_crm_ddl.sql)
-- [02\_crm\_sample\_data.sql](files/02_crm_sample_data.sql)
+- [01\_crm\_ddl.sql](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/01_crm_ddl.sql)
+- [02\_crm\_sample\_data.sql](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/02_crm_sample_data.sql)
     
 
 ## Task 2: Run the scripts in your APEX workspace > SQL Workshop > SQL scripts

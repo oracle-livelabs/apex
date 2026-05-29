@@ -26,8 +26,8 @@ In this task, you create a single working directory for the files that will be u
 1. Create a folder named `CRM_APP` in your local system.
 
 2. Download the `Functional Specification file` and `blueprint_prompt.md` file.
-    - [crm\_functional\_requirements\_spec.md](./files/crm_functional_requirements_spec.md)
-    - [blueprint\_prompt.md](./files/blueprint_prompt.md)
+    - [crm\_functional\_requirements\_spec.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_functional_requirements_spec.md)
+    - [blueprint\_prompt.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/blueprint-prompt.md)
 
 3. Click the file link to open the file. Right-click on the file and select **Save As**.
 

@@ -10,6 +10,13 @@ APEXlang is an Open Application Specification Language introduced in Oracle APEX
 
 Estimated Time: 15 minutes
 
+### Downloads
+If you are stuck or want to download the completed app till Lab 4, click the following link: 
+
+[CRM Phase 1 App Download](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_phase1.sql)
+
+Import the app into your APEX workspace using App Builder.
+
 ## Task 1: Set up the APEXlang Skills repo in Visual Studio Code
 1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
