@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Build an AI Procurement Agent with Oracle APEX",
+  "workshoptitle": "Build an AI Procurement Agent in Oracle APEX",
   "help": "livelabs-help-apex_us@oracle.com",
   "tutorials": [
     {
@@ -16,7 +16,11 @@
     },
     {
       "title": "Lab 2: Configure Generative AI Service",
-      "filename": "../../2-configure-genai-service/2-configure-genai-service.md"
+      "filename": "../../2-configure-genai-service/2-configure-genai-service.md",
+      "type": {
+        "OCIGenAI": "OCIGenAI",
+        "OpenAI": "OpenAI"
+      }
     },
     {
       "title": "Lab 3: Build an AI Agent and Add Context Tools",

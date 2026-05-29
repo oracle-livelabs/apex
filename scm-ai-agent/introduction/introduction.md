@@ -111,7 +111,7 @@ If you are stuck or the application is not working as expected, you can download
 
 3. Follow **Lab 1 > Task 1** to load the data model and **Lab 1 > Task 2** to load the sample data.
 
-4. Follow **Lab 2 > Task 1** to configure the Generative AI Service.
+4. Follow **Lab 2** to configure your AI provider key and Generative AI Service.
 
 5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all seven tools.
 

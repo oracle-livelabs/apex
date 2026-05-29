@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Before you can create the AI Agent, you need to connect Oracle APEX to a Generative AI provider. In this lab, you will configure OCI Generative AI as a workspace-level service and assign it to the application. This provides the LLM backend that the Procurement Agent will use to process natural language and invoke tools in the following labs.
+Before you can create the AI Agent, you need to connect Oracle APEX to a Generative AI provider. In this lab, you will generate or gather the provider credentials, configure a workspace-level Generative AI Service, and link that service to the application. This provides the LLM backend that the Procurement Agent will use to process natural language and invoke tools in the following labs.
 
 > **Important:** Oracle APEX acts as the application layer and connects to the Generative AI provider of your choice using your own credentials. You will need an active account with a supported provider to complete this lab. Any charges for API usage are billed directly by your AI provider. Please review your provider's pricing before proceeding.
 
@@ -12,13 +12,45 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
+- Generate or gather provider credentials
+
 - Configure a Generative AI Service in your APEX workspace
 
-- Assign the Generative AI Service to the application
+- Link the Generative AI Service to the application
 
-## Task 1: Configure Generative AI Service
+<if type="OCIGenAI">
 
-In this task, you will configure OCI Generative AI as a service in your APEX workspace and assign it to the application.
+## Task 1: Generate OCI API Keys
+
+In this task, you will generate the OCI API key details needed to configure OCI Generative AI Service in APEX. If you already have an OCI key pair and configuration details, you may skip this task.
+
+1. Log in to your OCI account.
+
+    ![OCI login page](./images/oci-login.png " ")
+
+2. Click **Profile** at the top-right corner and select your user name.
+
+    ![Profile menu](./images/profile.png " ")
+
+3. Open the **Tokens and keys** tab, then click **Add API key**.
+
+    ![Tokens and keys page](./images/add-api-key.png " ")
+
+4. In the **Add API Key** dialog, select **Generate API Key Pair**.
+
+5. Click **Download Private Key**. A `.pem` file is saved to your local machine. You do not need to download the public key.
+
+6. Click **Add**.
+
+    ![Add API key](./images/add.png " ")
+
+7. Copy and save the configuration file preview. You will use these values when configuring the Generative AI Service in APEX.
+
+    ![Configuration file preview](./images/configuration-preview.png " ")
+
+## Task 2: Configure Generative AI Service
+
+In this task, you will configure OCI Generative AI Service in your APEX workspace.
 
 1. From the left navigation, click the **App Builder** icon.
 
@@ -38,8 +70,6 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
 5. On the **Create Generative AI Service** page, enter/select the following:
 
-    > **Note:** This LiveLab uses OCI Generative AI Service as the AI provider. However, Oracle APEX supports multiple Generative AI providers, including OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, and Generic OpenAI API Compatible. You are not required to use OCI Generative AI; you may configure any supported provider that is available in your environment.
-
     - AI Provider: **OCI Generative AI Service**
     - Name: **OCI Gen AI**
     - Compartment ID: Enter your OCI Compartment ID.
@@ -47,7 +77,7 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
     - Model ID: **meta.llama-3.3-70b-instruct** or **cohere.command-a-03-2025** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
     - Used by App Builder: Toggle **On**
     - Base URL: Leave the auto-generated value unchanged.
-    - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential.
+    - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential using the configuration details from Task 1.
 
     ![Create Generative AI Service](./images/create-genai.png " ")
 
@@ -55,7 +85,7 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
     ![Test Connection on the Create Generative AI Service page](./images/test-connection.png " ")
 
-7. Select **Create**.
+7. If the connection is successful, select **Create**.
 
     ![Select Create on the Generative AI Service page](./images/oci-genai-create.png " ")
 
@@ -63,29 +93,91 @@ In this task, you will configure OCI Generative AI as a service in your APEX wor
 
     ![Generative AI Service created](./images/gen-ai-service-created.png " ")
 
-9. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
+</if>
+
+<if type="OpenAI">
+
+## Task 1: Generate an OpenAI API Key
+
+In this task, you will create an OpenAI API key to configure OpenAI as the Generative AI provider in APEX. If you already have an OpenAI API key, you may skip this task.
+
+1. Create and log in to your [OpenAI account](https://platform.openai.com/).
+
+    ![OpenAI login page](./images/login-openai.png " ")
+
+2. Navigate to the [API keys](https://platform.openai.com/settings/organization/api-keys) page and create a new secret key.
+
+    ![Create secret key](./images/create-secret-key.png " ")
+
+3. Copy and save the secret key. You will use it when you configure the Generative AI Service in APEX.
+
+    ![Save secret key](./images/save-secret-key.png " ")
+
+## Task 2: Configure Generative AI Service
+
+In this task, you will configure OpenAI as a Generative AI Service in your APEX workspace.
+
+1. Return to your Oracle APEX workspace. From the left navigation, click the **App Builder** icon.
+
+    ![Imported SCM application available in App Builder](./images/app-builder-page-dark2.png " ")
+
+2. From **App Builder**, select **Workspace Utilities**.
+
+    ![App Builder Workspace Utilities](./images/appbuilder-home2.png " ")
+
+3. From **Workspace Utilities**, select **Generative AI**.
+
+    ![Generative AI Services page](./images/genai-nav.png " ")
+
+4. Select **Create**.
+
+    ![Select Create on the Generative AI Services page](./images/click-create-ai.png " ")
+
+5. On the **Create Generative AI Service** page, enter/select the following:
+
+    - AI Provider: **Open AI**
+    - Name: **Open AI**
+    - Used by App Builder: Toggle **On**
+    - API Key: Enter the OpenAI API key you created in Task 1.
+    - AI Model: Enter the OpenAI model you want to use for this workshop.
+
+    ![Configure OpenAI Generative AI Service](./images/open-ai-details.png " ")
+
+6. Click **Test Connection**.
+
+7. If the connection is successful, select **Create**.
+
+    ![Create OpenAI Generative AI Service](./images/open-ai-create.png " ")
+
+</if>
+
+## Task 3: Link Your Generative AI Service to the Application
+
+In this task, you will link the Generative AI Service that you configured in the OCI GenAI or OpenAI section to the SCM application. The steps are the same for either provider.
+
+1. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
 
     ![Navigate to App Builder from Generative AI Services](./images/app-builder-from-genai-services.png " ")
 
-10. Select the application from the App Builder applications list.
+2. Select the application from the App Builder applications list.
 
     ![App Builder applications list](./images/appbuilder-home3.png " ")
 
-11. On the application home page, select **Shared Components**.
+3. On the application home page, select **Shared Components**.
 
     ![Application home page](./images/shared-comp.png " ")
 
-12. From **Shared Components**, select **AI Attributes**.
+4. From **Shared Components**, select **AI Attributes**.
 
     ![Shared Components](./images/shared-comp2.png " ")
 
-13. For **Generative AI Service**, select **OCI Gen AI**, then select **Apply Changes**.
+5. For **Generative AI Service**, select the service you configured earlier in this lab, then select **Apply Changes**.
 
     ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
 
 ## Summary
 
-The Generative AI Service is now configured and assigned to the application. You are ready to create the Procurement Agent and add tools in the next lab.
+The Generative AI Service is now configured and linked to the application. You are ready to create the Procurement Agent and add tools in the next lab.
 
 You may now **proceed to the next lab**.
 
