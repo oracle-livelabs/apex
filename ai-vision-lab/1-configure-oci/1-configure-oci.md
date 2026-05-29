@@ -33,7 +33,9 @@ To generate API keys using the OCI Console:
 
     ![Click Add API Key](images/api-keys.png " ")
 
-4. The Add API Key dialog is displayed. Select **Generate API Key Pair** to create a new key pair.
+4. The Add API Key dialog is displayed.
+
+    Select **Generate API Key Pair** to create a new key pair.
 
 5. Click **Download Private Key**.
 
@@ -47,7 +49,7 @@ To generate API keys using the OCI Console:
 
 7. The key is added, and the Configuration File Preview is displayed.
 
-   Copy and save the configuration file snippet from the text box into a text editor. You will use this information to create Oracle APEX web credentials.
+    Copy and save the configuration file snippet from the text box into a text editor. You will use this information to create Oracle APEX web credentials.
 
     ![Copy the Configuration File Preview](images/configuration-preview.png " ")
 
@@ -109,11 +111,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, April 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

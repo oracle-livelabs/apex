@@ -4,7 +4,7 @@
 
 OCI Vision can classify images into thousands of categories to simplify common digital asset management scenarios or identify items needing attention, such as X-ray anomalies. Developers can also identify and localize objects in images to automate counting common items, such as packages and vehicles.
 
-Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931&p210_wec=&session=6626792478361) workshop.
+Optionally, to get an overview of the OCI Vision service, try the [AI Services: Introduction to OCI Vision](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=931) workshop.
 
 In this lab, you learn how to integrate OCI Vision REST API with Oracle APEX to analyze and index images and text within images uploaded by the user.
 
@@ -61,35 +61,35 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
     ![Enter OCI Vision REST Data Source details](images/create-rest2.png " ")
 
-8. Under Create REST Data Source - Remote Server, leave the defaults, click **Next**.
+8. Under Create REST Data Source - Remote Server, leave the defaults.
+
+    Click **Next**.
 
     ![Click Next on Remote Server](images/remote-server.png " ")
 
 9. Under Authentication, enter/select the following:
 
-    - Authentication Required: Toggle the button to **On**
+    - Authentication Required: **Toggle On**
 
     - Credentials: **apex\_ai\_cred**
 
-    ![Set Authentication Required to On and select apex_ai_cred](images/auth.png " ")
-
-10. Click **Create REST Source Manually**.
+    Click **Create REST Source Manually**.
 
     The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-    ![Click Create REST Source Manually](images/auth.png " ")
+    ![Set Authentication and click Create REST Source Manually](images/auth.png " ")
 
-11. On the REST Data Sources page, click **OCI Vision**.
+10. On the REST Data Sources page, click **OCI Vision**.
 
     ![Click OCI Vision REST Data Source](images/rest-data-authentication.png " ")
 
-12. Select the Operations tab.
+11. Select the Operations tab.
 
     Click the **Edit** icon for the **POST** operation.
 
     ![Click Edit for POST operation](images/edit-post.png " ")
 
-13. In the REST Source Operation page, enter the following:
+12. In the REST Source Operation page, enter the following:
     - Database Operation: **-Not Mapped-**
 
     - Request Body Template: Copy and paste the following JSON:
@@ -114,19 +114,19 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
     ![Enter Request Body Template JSON](images/post.png " ")
 
-14. Under Operation Parameters, click **Synchronize with body**.
+13. Under Operation Parameters, click **Synchronize with body**.
 
     ![Click Synchronize with body](images/syncro.png " ")
 
-15. In the pop-up window, click **OK**.
+14. In the pop-up window, click **OK**.
 
     ![Click OK in the Synchronize with Body dialog](images/add-parameter.png " ")
 
-16. Under Operation Parameters, click **Add Parameter**.
+15. Under Operation Parameters, click **Add Parameter**.
 
     ![Click Add Parameter](images/add-comp.png " ")
 
-17. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
+16. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
     | #   | Type                     | Name         | Direction | Static | Default Value Type | Static Value |
     | --- | ------------------------ | ------------ | --------- | ------ | ------------------ | ------------ |
@@ -138,7 +138,7 @@ In this task, you create a REST Data Source with OCI Vision REST API as the endp
 
     ![Add Content-Type parameter](images/content-type.png " ")
 
-18. Click **Apply Changes**.
+17. Click **Apply Changes**.
 
     ![Click Apply Changes](images/apply-changes.png " ")
 
@@ -154,7 +154,7 @@ In this task, you create a page process to invoke the OCI Vision REST Data Sourc
 
     ![Click 1-Timeline page](images/select-timeline1.png " ")
 
-3. In the Rendering pane, right-click the **Timeline** region and select **Create Page Item**.
+3. In the Rendering tab, right-click the **Timeline** region and select **Create Page Item**.
 
     ![Right-click Timeline and select Create Page Item](images/create-page-item.png " ")
 
@@ -436,11 +436,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Senior Product Manager
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year

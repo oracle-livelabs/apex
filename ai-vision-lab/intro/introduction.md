@@ -1,8 +1,5 @@
 # Introduction
 
-Estimated Workshop Time: TODO - x minutes
-
-
 ## About this Workshop
 
 In today's data-driven world, the ability to extract valuable insights from visual content has become a game-changer for businesses across industries. Artificial Intelligence (AI) has made significant strides in the field of computer vision, enabling machines to understand and interpret visual data with remarkable accuracy.
@@ -33,11 +30,21 @@ In this workshop, you learn how to:
 
 *Note: This workshop assumes that you are using Oracle APEX 26.1. Some features might not be available in prior releases, and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
+## Labs
+
+| # | Lab | Est. Time |
+| --- | --- | --- |
+| 1 | Configure OCI API Keys | 10 minutes |
+| 2 | Import and Edit the Social Media App | 15 minutes |
+| 3 | Integrate OCI Vision with Oracle APEX | 20 minutes |
+| 4 | Run the Application | 5 minutes |
+| 5 | Enhance the App With Mobile Features | 30 minutes |
+
 ## Downloads
 
 If the application is not working as expected, download and install the completed application as follows:
 
-1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) to download the completed application file.
+1. Download the [ai-powered-image-search-export.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) file.
 
 2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the application with the supporting objects.
 
@@ -52,19 +59,14 @@ If the application is not working as expected, download and install the complete
 
 ## Learn More - *Useful Links*
 
-- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+- [OCI Vision](https://www.oracle.com/artificial-intelligence/vision/)
 - [APEX on Autonomous](https://apex.oracle.com/autonomous)
 - [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+- [External Site + Slack](https://apex.world)
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, February 2025
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

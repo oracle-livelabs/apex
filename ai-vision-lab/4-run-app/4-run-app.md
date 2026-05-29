@@ -16,9 +16,7 @@ In this lab, you learn how to:
 
 ## Task 1: Run the Application
 
-1. Log in to the application.
-
-    The username and password are the same as your APEX workspace user credentials.
+1. Log in to the application using your APEX workspace credentials.
 
     ![Log in to the Social Media app](images/social-media-login.png " ")
 
@@ -52,13 +50,9 @@ In this lab, you learn how to:
 
 You now know how to post an image and search for images and text within images using AI search.
 
+You may now **proceed to the next lab**.
+
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Senior Product Manager
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year

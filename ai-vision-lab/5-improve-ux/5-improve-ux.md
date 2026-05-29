@@ -446,7 +446,7 @@ In this task, add screenshots to the Progressive Web App install experience. The
 
     ![Click Apply Changes after adding screenshots](images/apply-changes2.png " ")
 
-4. Click **Save and Run** the page.
+4. Click **Save and Run**.
 
     ![Click Save and Run to preview the PWA app](images/save-and-run-pwa.png " ")
 
@@ -477,10 +477,5 @@ You now know how to enhance the Social Media app with mobile features such as cr
 
 ## Acknowledgments
 
-- **Author** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+- **Author** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year

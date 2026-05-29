@@ -121,10 +121,5 @@ You may now **proceed to the next lab**.
 
 
 ## Acknowledgments
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+- **Author** - Apoorva Srinivas, Principal Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

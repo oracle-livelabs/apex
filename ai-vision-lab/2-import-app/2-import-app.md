@@ -15,7 +15,7 @@ In this lab, you learn how to:
 
 ## Task 1: Import the Social Media Application
 
-1. Download the Social Media application [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL.zip).
+1. Download the [Social Media application](files/APEX_Social_Media_HOL_FINAL.sql).
 
 2. In the left navigation bar, hover over the **App Builder** icon.
 
@@ -23,15 +23,13 @@ In this lab, you learn how to:
 
     ![Click Import in App Builder](images/app-import.png " ")
 
-3. The Import dialog displays. Perform the following steps:
+3. The Import dialog is displayed. Perform the following steps:
 
     - Drag and drop the file, or navigate to the file.
 
     - Click **Next**.
 
-    The export file is imported.
-
-    ![Upload file and click Next](images/import-file.png " ")
+    ![Upload file and click Next](images/import-sql-file.png " ")
 
 4. Accept the defaults.
 
@@ -43,13 +41,9 @@ In this lab, you learn how to:
 
     ![Click Install Supporting Objects](images/install-app2.png " ")
 
-6. Click **Edit Application**.
+6. Verify that the application's supporting objects were installed successfully.
 
-    ![Click Edit Application](images/edit-app.png " ")
-
-7. In the Application home page, click **Refresh Theme**.
-
-   ![Click Refresh Theme](images/refresh.png " ")
+    ![Supporting Objects Installed](images/supporting-objects-installed.png " ")
 
 ## Task 2: Add Columns to the Table Using Object Browser
 
@@ -61,7 +55,7 @@ To add two new columns to the **SM\_POSTS** table:
 
     Click **Object Browser**.
 
-    ![Navigate to SQL Workshop and select Object Browser](images/sql-work.png " ")
+    ![Navigate to SQL Workshop and select Object Browser](images/sql-work2.png " ")
 
 2. In the object tree, expand Tables and select **SM\_POSTS** table.
 
@@ -69,9 +63,7 @@ To add two new columns to the **SM\_POSTS** table:
 
     ![Select SM_POSTS and click Add Column](images/add-column.png " ")
 
-3. The Add Column wizard is displayed. Configure the Add Column attributes. At a minimum, enter a column name and select a type. Depending on the column type, specify whether the column requires precision, scale, a default value, or is nullable. For more details on an attribute, see field-level Help.
-
-    Enter the following:
+3. In the Add Column wizard, enter the following:
       - Column: **AI\_OUTPUT**
       - Data Type: **VARCHAR2**
       - Length: **1000**
@@ -98,11 +90,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Product Manager
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year

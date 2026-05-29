@@ -102,4 +102,4 @@ From within your Oracle Cloud environment, you will create an instance of the Au
 ## Acknowledgements
 
 - **Author** - Apoorva Srinivas, Principal Product Manager
-- **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, December 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
