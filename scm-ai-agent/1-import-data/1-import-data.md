@@ -96,9 +96,12 @@ In this task, you will upload and run the data model script. This creates the wa
 
 In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
 
-1. Download the [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql) file to your local machine.
+1. Download both sample data files to your local machine:
 
-2. Select **SQL Scripts**.
+    - [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](./files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
+    - [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql)
+
+2. In the top breadcrumb, select **SQL Scripts**.
 
     ![Return to SQL Scripts](./images/return-tosscripts.png " ")
 
@@ -106,7 +109,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Upload to SQL Scripts](./images/upload-data1.png " ")
 
-4. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
+4. In the **Upload Script** dialog, select or drag and drop the downloaded **`02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`** file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
     ![Sample Data Upload](./images/sample-data-upload1.png " ")
 
@@ -122,29 +125,27 @@ In this task, you will load two sample data scripts. The first populates the ref
 
     ![Sample Data Results](./images/ran-script1.png " ")
 
-8. Download the [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](./files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql) file to your local machine.
-
-9. Select **SQL Scripts**.
+8. In the top breadcrumb, select **SQL Scripts**.
 
     ![Sample Data Results](./images/sample-data1-return.png " ")
 
-10. Select **Upload** again.
+9. Select **Upload** again.
 
     ![Upload to SQL Scripts](./images/upload-data2.png " ")
 
-11. In the **Upload Script** dialog, select the downloaded file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
+10. In the **Upload Script** dialog, select or drag and drop the downloaded **`03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`** file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
     ![Operational Data Upload](./images/sample-data2-clickupload.png " ")
 
-12. In the row for **`scm_sample_data2`**, select **Run**.
+11. In the row for **`scm_sample_data2`**, select **Run**.
 
     ![Select Run for the scm\_operational\_data script from the SQL Scripts list](./images/sample-data2-upload.png " ")
 
-13. On the confirmation page, select **Run**.
+12. On the confirmation page, select **Run**.
 
     ![Confirm the operational data script run](./images/sample-data2-run.png " ")
 
-14. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 4.
+13. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 4.
 
     ![Operational Data Results](./images/sample-data2-results.png " ")
 
