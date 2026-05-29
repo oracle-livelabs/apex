@@ -51,7 +51,7 @@ Use the steps below to request a free workspace on oracleapex.com.
 
 Signing up for apex.oracle.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
 
-1. Go to [oracleapex.com](https://oracleapex.com.).
+1. Go to [oracleapex.com](https://oracleapex.com/).
 
 2. Click **Get Started**.
 

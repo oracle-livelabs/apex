@@ -398,11 +398,11 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     This ensures the user sees a confirmation dialog summarising the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
 
-    ![User Approval settings for raise\_purchase\_order](./images/user-approval.png " ")
+    ![User Approval settings for raise\_purchase\_order](./images/user-app.png " ")
 
 6. Click **Create**.
 
-    ![Procurement Agent with raise\_purchase\_order saved](./images/task6-crete.png " ")
+    ![Procurement Agent with raise\_purchase\_order saved](./images/click-create-last-tool.png " ")
 
 7. The `scm_raise_purchase_order` procedure handles the following:
 
