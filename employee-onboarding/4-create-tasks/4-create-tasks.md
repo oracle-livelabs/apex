@@ -67,7 +67,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 5. Under **Settings** notice that the Task Details Page Number is empty. Click **Create Task Details Page** button to generate the details page for this task.
 
-   You get a popup dialog asking if the next available page number should be used. Click **OK**.
+    You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
     ![Create Task Wizard](images/create-task-details.png "")
 
@@ -148,7 +148,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 3. Under **Settings**, notice that the Task Details Page Number is empty. Click **Create Task Details Page**  to generate the details page for this task.
 
-   You get a popup dialog asking if the next available page number should be used. Click **OK**.
+    You get a popup dialog asking if the next available page number should be used. Click **OK**.
 
     ![Creating Task Details page](./images/create-task-details1.png " ")
 
@@ -214,7 +214,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 9. Select **Allocate Trainings** to open the task definition in edit mode.
 
-   ![Select Task](./images/select-tasks.png " ")
+    ![Select Task](./images/select-tasks.png " ")
 
 10. Navigate to the **Actions** tab, and click **Add Action**.
 

@@ -64,6 +64,8 @@ The procurement conversation starts here. The user opens the assistant and asks 
 
     This tool does not require any parameters.
 
+    Because the query filters by `:APP_USER`, the agent automatically scopes results to the signed-in user's warehouse. The user does not need to provide a warehouse parameter.
+
 3. Under **Settings**, for SQL Query, copy and paste the following:
 
     ```sql
@@ -138,6 +140,8 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
 
 3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
 
+    The `ITEM_ID` parameter connects this tool to the item selected from `get_stocks_at_risk`. This keeps the conversation grounded in the exact inventory item instead of relying only on item names typed by the user.
+
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
     | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
@@ -210,6 +214,8 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
     ![Filled configuration for get\_supplier\_delivery\_performance](./images/task3-iden.png " ")
 
 3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
+
+    These parameters let the agent ask a focused question: which supplier to evaluate and over what period. The `TIME_PERIOD` value keeps the same tool reusable for quarterly and yearly comparisons.
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
@@ -342,6 +348,8 @@ The agent only calls this tool after all previous steps are complete. Because th
     ![Filled configuration for raise\_purchase\_order](./images/task6-iden.png " ")
 
 3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
+
+    These parameters are the minimum values required to create a planned purchase order safely. The agent collects them through conversation, then passes structured values to the PL/SQL procedure.
 
     | Parameter | Description | Data Type | Required |
     | --- | --- | --- | --- |
