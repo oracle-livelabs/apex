@@ -20,23 +20,28 @@ Import the app into your APEX workspace using App Builder.
 ## Task 1: Set up the APEXlang Skills repo in Visual Studio Code
 1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
-    Download the APEXlang skills from Github: [APEXlang skills](http://github.com/oracle/skills/apex). 
+    Download the APEXlang skills from Github: [APEXlang skills](https://github.com/oracle/skills/tree/main). 
     
     Unzip the folder.
 
     ![Visual Studio Code workspace with APEXlang skills repository cloned](images/vscode-apexlang-repo-setup.png)
 
-2. Create an empty folder called **Applications**.
+3. Expand the **skills-main** folder and navigate to **apex** folder. Copy the **apexlang** folder and place it under **/.codex/skills**. This ensures that APEXlang skills are loaded to codex and can be used from the codex chat agent.
+
+    ![local machine folder structure](images/codex-skills.png)
+
+
+2. Create an empty folder called **Applications** on your local machine to manage your APEX apps.
 
     ![Folder structure](images/app-folder.png)
 
 ## Task 2: Export the app in APEXlang format into the Applications folder
-Export the CRM application in APEXlang format and place the output inside the `applications` folder of the APEXlang skills that you downloaded in Task 1.
+Export the CRM application in APEXlang format and place the output inside the `applications` folder.
 
 1. Navigate to SQL Developer extension, expand the connection you created and further expand **APEX**. Under APEX, you will find all the apps that are part of the schema. Right-click **Vision CRM** and select **Export**.
     ![APEXlang command output showing exported application files](images/apexlang-export-app.png)
 
-2. Accept the default values, for Folder, click **Browse** and select the *applications* folder in your APEXlang skills parent folder. Then, click **Apply**.
+2. Accept the default values, for Folder, click **Browse** and select the *applications* folder. Then, click **Apply**.
     ![APEXlang command output showing exported application files](images/export-to-apps.png)
 
 
