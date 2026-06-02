@@ -479,8 +479,3 @@ You now know how to enhance the Social Media app with mobile features such as cr
 
 - **Author** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
