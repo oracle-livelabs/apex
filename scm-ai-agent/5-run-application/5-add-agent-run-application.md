@@ -51,6 +51,8 @@ In this task, you will configure the entry point that users will use to start th
 
 5. In the Rendering tree, **right-click** on the newly created **PROCUREMENT_ASSISTANT** button and select **Create Trigger Action**.
 
+    The trigger action connects the page button to the AI Assistant. Without this action, the button would appear on the page but would not open the Procurement Agent.
+
     ![Create Trigger Action from the Procurement Assistant button](./images/create-trigger.png " ")
 
 6. With the new trigger action selected, enter/select the following in the **Property Editor**:
@@ -68,6 +70,8 @@ In this task, you will configure the entry point that users will use to start th
         - Message 1: **What items are low in stock?**
 
     ![Trigger action configured to Show AI Assistant with Procurement Agent](./images/show-ai.png " ")
+
+    The quick action gives users a suggested first question and starts the conversation with the same stock-risk workflow you built in Lab 4.
 
 7. Click the **Save & Run** icon to save your changes and launch the application.
 

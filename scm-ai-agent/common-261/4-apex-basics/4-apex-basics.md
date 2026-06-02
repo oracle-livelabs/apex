@@ -1,15 +1,18 @@
 # Review Commonly used APEX Terminology
 
+## Introduction
+
+Before you proceed, review the commonly used Oracle APEX terminology in the workshop to help you navigate better.
+
+Estimated Time: 5 minutes
+
 ### Objectives
 
 In this lab, you will:
-* TODO: Add objectives
 
+- Review Page Designer
 
-Estimated Time: TODO - x minutes
-
-
-Before you proceed, review the commonly used Oracle APEX terminology in the workshop to help you navigate better.
+- Review the Runtime Developer Toolbar
 
 ### **Page Designer**
 Page Designer is a full featured Integrated Development Environment (IDE) that includes a toolbar and multiple panes. You use Page Designer to maintain and enhance pages within an Oracle APEX application.
@@ -27,5 +30,5 @@ To learn more about the controls in the Runtime Developer Toolbar, refer to the 
 
 ## Acknowledgements
 
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
+- **Author** - Oracle LiveLabs
+- **Last Updated By/Date** - Oracle LiveLabs, May 2026
