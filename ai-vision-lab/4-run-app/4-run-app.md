@@ -32,7 +32,7 @@ In this lab, you learn how to:
 
 4. Enter a search term in the AI Search field available in the navigation bar.
 
-   Press **Enter**.
+    Press **Enter**.
 
     The application searches for and displays all images that contain the corresponding search term.
 
@@ -52,12 +52,7 @@ You now know how to post an image and search for images and text within images u
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year

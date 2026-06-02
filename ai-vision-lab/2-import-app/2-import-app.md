@@ -80,7 +80,7 @@ To add two new columns to the **SM\_POSTS** table:
 
     Click **Apply**.
 
-   ![Enter AI_OUTPUT_TD column details](images/ai-output-td-column.png " ")
+    ![Enter AI_OUTPUT_TD column details](images/ai-output-td-column.png " ")
 
 ## Summary
 
@@ -88,12 +88,7 @@ You now know how to import an Oracle APEX application and add columns to a table
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
-
-## Acknowledgements
-
-* **Author** - TODO: Your Name, Your Title, Your Organization
-* **Last Updated By/Date** - TODO: Your Name, Month Year
