@@ -16,23 +16,21 @@ Estimated Time: 1 hour 30 mins
 
 In this workshop, you will:
 
-- Creating an Agent in OCI Generative AI Agents.
+- Understand how to create OCI Generative AI Agents.
 
-- Add API Keys in the OCI Console.
+- Learn how to setup API Keys in the OCI Console.
 
-- Create Web Credentials in Oracle APEX.
+- Create Web Credentials in Oracle APEX so your app can call OCI services safely.
 
-- Create Session and Ingestion Job using OCI Ingestion Job REST APIs.
+- Set up an automation job to monitor the status of ongoing Ingestion Jobs.
 
-- Set up an automation to monitor the status of incomplete Ingestion Jobs.
+- Create and invoke a REST Data Source in your APEX app.
 
-- Create and invoke a REST Data Source in your APEX app using the OCI Generative AI Agents' Create Sessions REST API.
+- Design a simple Classic Report in APEX that will act as the chat widget.
 
-- Design and customize a Classic Report for the chat widget.
+- Interact with OCI Generative AI Agents through the Chat REST API and display the response in your app.
 
-- Interact with OCI Generative AI Agents through the Chat REST API.
-
->Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+>Note: This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
 
 ## Prerequisites
 
@@ -62,9 +60,12 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 3. Import the **genai\_agents\_export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
+    ![Import](./images/import1.png " ")
+
+ii
 4. Update **Web Credentials**
 
-    - Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
+    - Hover **App Builder**, then select **Workspace Utilities** and click **All Workspace Utilities**.
 
     ![App Builder](./images/download-appbuild.png " ")
 
@@ -89,7 +90,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     ![Enter Creds](./images/enter-creds.png " ")
 
-5. Navigate to Shared Components > Data Sources > Rest Data Sources > Click **Create Sessions API**.
+5. Navigate to your Application > Shared Components > Data Sources > Rest Data Sources > Click **Create Sessions API**.
 
 6. Under Parameters, click **Add Parameter**.
 
@@ -103,7 +104,7 @@ If you are stuck or the app is not working as expected, you can download and ins
 
     - Default Value: Enter your agent endpoint OCID, Refer - [Lab 2, Task3, Step 6](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource)
 
-   ![Edit Parameter](./images/download-eparams.png " ")
+   ![Edit Parameter](./images/mao-endpoint.png " ")
 
 8. Navigate to Page 1 of application, map the following page item:
 
@@ -145,17 +146,17 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 11. Under Workflows and Automations click **Automations**.
 
-    ![Click Automation](./images/click-automation.png " ")
+    ![Click Automation](./images/click-automation1.png " ")
 
 12. Click automation **Get Ingestion Status**.
 
-    ![Select Automation](./images/select-automation.png " ")
+    ![Select Automation](./images/select-automation1.png " ")
 
 13. Under Settings > Scheduled Status > toggle > **Active**.
 
-14. Click **Save Changes**.
+14. Click **Save and Run**.
 
-    ![Set Active](./images/set-active.png " ")
+    ![Set Active](./images/set-active1.png " ")
 
 15. All set. Now, run the application with the users you created and see it in action!
 
@@ -170,5 +171,5 @@ If you are stuck or the app is not working as expected, you can download and ins
 
 ## Acknowledgements
 
-- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025
+- **Author(s)**: Roopesh Thokala, Principal Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date**: Shailu Srivastava, Product Manager, May 2026

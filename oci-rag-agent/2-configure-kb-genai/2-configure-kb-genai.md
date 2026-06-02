@@ -33,7 +33,7 @@ To create Knowledge Base in OCI console:
 
 2. Navigate to **Analytics & AI** > **AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
+    ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 3. Under **Generative AI Agents**, select **Knowledge Bases**.
 
@@ -83,7 +83,7 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
 3. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
+    ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 4. Under **Generative AI Agents** and select **Agents**.
 
@@ -143,7 +143,7 @@ To Fetch the OCID of the Generative AI Agent and Data Source in OCI console:
 
 2. Navigate to **Analytics & AI > AI Services** and select **Generative AI Agents**.
 
-   ![Select GenerativeAI](./images/gen-ai-tab.png " ")
+    ![Select GenerativeAI](./images/gen-ai-tab.png " ")
 
 3. Under **Generative AI Agents**, select **Agents**.
 

@@ -27,21 +27,19 @@ In this lab, you will:
 
 In this task, you will create Page Items, Static Content region and a subregion, and configure dynamic actions to control their behavior based on user interactions.
 
-1. Navigate to **Application ID**.
-
-    ![Create Pageitem](./images/navigate-appid.png " ")
-
+1. Navigate to your **Application**.
+    brea
 2. Click on **Chat With OCI Generative AI**
 
     ![Create Pageitem](./images/click-homepage1.png " ")
 
 3. Under Breadcrumb Bar select **Breadcrumb**. Navigate to Property Editor > Identification > Name: **GenAI Agents for APEX**.
 
-    ![Create Pageitem](./images/breadcrumb-name.png " ")
+    ![Create Pageitem](./images/breadcrumb-name1.png " ")
 
 4. Under **Rendering** tab, right-click **Body** and select **Create Page Item**.
 
-   ![Create Pageitem](./images/create-pageitem11.png " ")
+    ![Create Pageitem](./images/create-pageitem111.png " ")
 
 5. Create the following Page Items, one after another:
 
@@ -55,25 +53,23 @@ In this task, you will create Page Items, Static Content region and a subregion,
     | 6 | P1\_REGION| Hidden | Toggle On| Static | (enter your region; eg: us-chicago-1)|
     {: title="Page Item Details"}
 
-   ![Response Session](./images/response-session.png " ")
+    ![Response Session](./images/response-session1.png " ")
 
-   ![Session ID](./images/session-id.png " ")
+    ![Session ID](./images/session-id1.png " ")
 
-   ![Conv ID](./images/conv-id.png " ")
+    ![Conv ID](./images/conv-id1.png " ")
 
-   ![Create AI Cred](./images/create-aicred.png " ")
+    ![Create AI Cred](./images/create-aicred1.png " ")
 
-   ![Create AI Cred](./images/create-aicred2.png " ")
+    ![Create AI Cred](./images/create-aicred21.png " ")
 
-   ![Create endpoint](./images/create-endpointid.png " ")
+    ![Create endpoint](./images/create-endpointid1.png " ")
 
-   ![Create endpoint](./images/create-endpointid2.png " ")
-
-   ![Region PageItem](./images/region-pageitem3.png " ")
+    ![Region PageItem](./images/region-pageitem31c.png " ")
 
 6. In the **Rendering Tab**, right-Click **Body** and click **Create Region**
 
-   ![Create Region](./images/create-region1.png " ")
+    ![Create Region](./images/create-region11.png " ")
 
 7. In the Property editor, enter/select the following:
 
@@ -87,15 +83,15 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
     - Advanced > Static ID : **functional_chat**
 
-   ![Create Region](./images/region-advanced1.png " ")
+    ![Create Region](./images/region-advanced11.png " ")
 
-   ![Create Region](./images/region-advanced.png " ")
+    ![Create Region](./images/region-advanced12.png " ")
 
 8. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
     > This sub-region is being created to display a chat conversation between user and  AI agent, such as in a chatbot scenario.
 
-   ![Sub Region](./images/sub-region22.png " ")
+    ![Sub Region](./images/sub-region1.png " ")
 
 9. In the Property Editor, enter/select the following:
 
@@ -144,9 +140,9 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
         - CSS Class: **t-Chat**
 
-    - Advanced > Static ID: **ai-agents-chat**
+    - Advanced > HTML DOM ID: **ai-agents-chat**
 
-    ![Edit Appearance](./images/subregion-appearance.png " ")
+    ![Edit Appearance](./images/subregion-apperance.png " ")
 
 10. Navigate to **Attributes** tab, enter/select the following:
 
@@ -212,7 +208,7 @@ In this task, you will create Page Items, Static Content region and a subregion,
 
 15. Right-click **AI Agents Conversation** sub-region, click **Create Dynamic Action**.
 
-    ![Create Dynamic Action](./images/create-dynamicaction2.png " ")
+    ![Create Dynamic Action](./images/create-dynamicaction21.png " ")
 
 16. In the Property Editor, enter/select the following:
 
@@ -252,7 +248,7 @@ In this task, you will create buttons to trigger specific actions and configure 
 
 1. Right-click **Chat with OCI Generative AI Agent** region, select **Create Sub Region**.
 
-    ![Create Sub Region](./images/create-subregion23.png " ")
+    ![Create Sub Region](./images/create-subregionn.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -339,11 +335,11 @@ In this task, you will create buttons to trigger specific actions and configure 
         </copy>
         ```
 
-   ![True Action](./images/true-action2.png " ")
+    ![True Action](./images/true-action2.png " ")
 
 9. Right-click **Buttons** sub-region, click **Create Button**.
 
-     ![Create Button](./images/create-button2.png " ")
+     ![Create Button](./images/create-button21.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -379,13 +375,13 @@ In this task, you will create buttons to trigger specific actions and configure 
         - Action : **Defined by Dynamic Action**
         - Execute Validations: **Toggle On**
 
-    - Advanced > Static ID: **call-genai-agents**
+    - Advanced > HTML DOM ID: **call-genai-agents**
 
       ![Edit SendButton1](./images/send-edit2.png " ")
 
 11. Under **Button** sub-region, Right-Click **Send** button, and click **Create Dynamic Action**.
 
-    ![Create DynamicAction](./images/create-dyaction.png " ")
+    ![Create DynamicAction](./images/create-dyaction3.png " ")
 
 12. In the Property Editor, enter/select the following:
 
@@ -566,7 +562,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
 1. Under **Rendering** Tab, expand **Pre-Rendering**, right-click **Before Header** and select **Create Computation**.
 
-   ![Create Computation](./images/create-computation.png " ")
+    ![Create Computation](./images/create-computation.png " ")
 
 2. In the Property Editor, enter/select the following:
 
@@ -576,11 +572,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Error > Error Message: **Clear the message if page is refreshed.**
 
-   ![Create Prompt](./images/p1-prompt.png " ")
+    ![Create Prompt](./images/p1-prompt.png " ")
 
 3. Right-click **Before Header** and select **Create Computation**.
 
-   ![Create Computation](./images/create-computation.png " ")
+    ![Create Computation](./images/create-computation.png " ")
 
 4. In the Property Editor, enter/select the following:
 
@@ -588,11 +584,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
     - Computation > Type: **Static Value**
 
-   ![Create SessionId](./images/process-sessionid.png " ")
+    ![Create SessionId](./images/process-sessionid.png " ")
 
 5. Right-click **Before Header** and select **Create Process**.
 
-   ![Create Process](./images/create-process1.png " ")
+    ![Create Process](./images/create-process11.png " ")
 
 6. In the Property Editor, enter/select the following:
 
@@ -637,11 +633,11 @@ In this task, we will create a Static Content region and a subregion, and config
             </copy>
             ```
 
-   ![Edit Default](./images/edit-default.png " ")
+    ![Edit Default](./images/edit-default.png " ")
 
 9. Navigate to **Pre-Rendering**. Select **Create Session** process and expand **Parameters**.
 
-    ![Expand Session](./images/expand-session.png " ")
+    ![Expand Session](./images/expand-session1.png " ")
 
 10. Click **AGENT_NAME** parameter. In the Property Editor, enter/select the following:
 
@@ -651,7 +647,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Static Value: **RAGAgent**
 
-    ![Agent Name](./images/agent-name1.png " ")
+    ![Agent Name](./images/agent-name11.png " ")
 
 11. Click **DESCRIPTION** parameter. In the Property Editor, enter/select the following:
 
@@ -661,7 +657,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Static Value: **Session for RAG Agent**
 
-    ![Description](./images/description1.png " ")
+    ![Description](./images/description11.png " ")
 
 12. Click **RESPONSE** parameter. In the Property Editor, enter/select the following:
 
@@ -671,7 +667,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Value > Item : **P1\_RESPONSE\_SESSION**
 
-    ![Response Session](./images/response-session2.png " ")
+    ![Response Session](./images/response-session22.png " ")
 
 13. Click **Save**.
 
@@ -679,11 +675,11 @@ In this task, we will create a Static Content region and a subregion, and config
 
 1. Navigate back to the Page Designer. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](./images/plus-page1.png " ")
+    ![Create Page](./images/plus-page11.png " ")
 
 2. Select **Form**.
 
-   ![Create Page](./images/select-form.png " ")
+    ![Create Page](./images/select-form.png " ")
 
 3. In the Property Editor, enter/select the following:
 
@@ -701,32 +697,32 @@ In this task, we will create a Static Content region and a subregion, and config
 
 5. Click **Create Page**.
 
-   ![Edit Form](./images/create-formpage.png " ")
+    ![Edit Form](./images/create-formpage.png " ")
 
 6. Once Page is created, navigate to the page, right-click on **Upload Documents to Knowledge Base** region and select **Create page Item**.
 
-   ![Page](./images/page5.png " ")
+    ![Page](./images/pages5.png " ")
 
 7. Now, add the following nine page items one after the other:
 
-   |   | Identification > Name | Identification > Type | Default > Type | Default > Static Value | SQL Query (return single value)
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | P5\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment OCID|
-   | 2 | P5\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
-   | 3 | P5\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
-   | 4 | P5\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket(For this Lab we have **GenAIRAGBucket**) |
-   | 5 | P5\_REGION| Hidden | Static | Enter your Region. e.g. us-chicago-1 |
-   | 6 | P5\_DATASOURCE_ID| Hidden | Static | Copy OCID of Data Source [Refer Lab 2, Task3, Step10](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource) |  |
-   | 7 | P5\_DISPLAY\_NAME| Hidden | SQL Query (return single value) | | select concat('IngestionJob\_', ingestion\_seq.nextval) from dual;  |
-   | 8 | P5\_DESCRIPTION| Hidden | Static | Creating an Ingestion Job for the latest files | | |
-   | 9 | P5\_ING\_RESPONSE| Hidden | |  | | |
-   {: title="Form Page Items"}
+    |   | Identification > Name | Identification > Type | Default > Type | Default > Static Value | SQL Query (return single value)
+    |---|-------|------|----------| --------------| ------ |
+    | 1 | P5\_COMPARTMENT\_ID| Hidden | Static |Enter your OCI account Compartment OCID|
+    | 2 | P5\_CRED\_STATIC\_ID| Hidden | Static | APEX\_OCI\_AI\_CRED |
+    | 3 | P5\_NAMESPACE\_NAME| Hidden | Static | Enter  Namespace which you copied while creating a Bucket|
+    | 4 | P5\_BUCKET\_NAME| Hidden | Static | Enter the Bucket Name which you copied while creating a Bucket(For this Lab we have **GenAIRAGBucket**) |
+    | 5 | P5\_REGION| Hidden | Static | Enter your Region. e.g. us-chicago-1 |
+    | 6 | P5\_DATASOURCE_ID| Hidden | Static | Copy OCID of Data Source [Refer Lab 2, Task3, Step10](?lab=2-configure-kb-genai#Task3:FetchOCIDofGenerativeAIAgentandDataSource) |  |
+    | 7 | P5\_DISPLAY\_NAME| Hidden | SQL Query (return single value) | | select concat('IngestionJob\_', ingestion\_seq.nextval) from dual;  |
+    | 8 | P5\_DESCRIPTION| Hidden | Static | Creating an Ingestion Job for the latest files | | |
+    | 9 | P5\_ING\_RESPONSE| Hidden | |  | | |
+    {: title="Form Page Items"}
 
      - Select **P5\_FILE\_NAME**, **P5\_MIME\_TYPE**, **P5\_OBJECT\_STORAGE\_URL**, **P5\_CREATED**, **P5\_CREATED\_BY**, **P5\_UPDATED**, **P5\_UPDATED\_BY**, **P5\_INGESTION\_RESPONSE**,**P5\_DATA\_ING\_JOB\_ID**.
 
      - Navigate to **Property Editor**, Identification > Type : **Hidden**
 
-   ![Page Items](./images/all-pageitem.png " ")
+    ![Page Items](./images/all-pageitem.png " ")
 
 8. Right-click **Upload Documents to Knowledge Base** region, click **Create Page Item**.
 
@@ -744,7 +740,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Dropzone Title: **Upload your Document**
 
-   ![Document Upload](./images/doc-upload.png " ")
+    ![Document Upload](./images/doc-upload.png " ")
 
 10. Right-click **Content Body**, click **Create Page Item**.
 
@@ -782,7 +778,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
 14. Right-click **Content Body**, click **Create Region**.
 
-    ![ContentBody Region](./images/contentbody-region.png " ")
+    ![ContentBody Region](./images/contentbody1-region.png " ")
 
 15. In the Property Editor, enter/select the following:
 
@@ -814,7 +810,7 @@ In this task, we will create a Static Content region and a subregion, and config
 
         - Item **P5\_INGESTION\_COUNT**
 
-       ![Server Side](./images/page5-serverside11.png " ")
+       ![Server Side](./images/page-serverside11.png " ")
 
 ## Task 5: Add Processes to the Page
 
@@ -830,13 +826,13 @@ In this task you will learn how to create processes and will create  processes:
 
 1. Navigate to the **Processing** tab, right-click **Close Dialog** process, click **Delete**.
 
-      ![Delete Process](./images/delete-process.png " ")
+      ![Delete Process](./images/delete-process01.png " ")
 
 2. Select **Process form Upload Documents to Knowledge Base** process, enter/select the following:
 
     - Identification > Type: **Invoke API**
 
-    - Under Settings:
+    - Under Invoke:
 
         - Type: **PL/SQL Package**
 
@@ -852,6 +848,8 @@ In this task you will learn how to create processes and will create  processes:
 
         ![Process](./images/process0.png " ")
 
+        ![Process1](./images/process01.png " ")
+
 3. Expand the **Parameters** and map the following items one after another:
 
     |   | Parameters | Value > Item |
@@ -864,13 +862,14 @@ In this task you will learn how to create processes and will create  processes:
     | 6 | p\_object_storage\_url| P5\_OBJECT\_STORAGE\_URL |
     | 7 | p\_file_name| P5\_FILE_NAME|
     | 8 | p\_mime_type| P5\_MIME_TYPE |
-    {: title="Parameters Mapping"}
 
-     ![Parameters](./images/parameters1.png " ")
+     {: title="Parameters Mapping"}
+
+     ![Parameters](./images/parameters11.png " ")
 
 4. Right-click **Processes** and click **Create Process**.
 
-     ![Create Process](./images/create-process20.png " ")
+     ![Create Process](./images/create-process21.png " ")
 
 5. In the Property Editor, enter/select the following:
 
@@ -890,9 +889,9 @@ In this task you will learn how to create processes and will create  processes:
 
 6. Right-click **Work with Ingestion Jobs** processes, click **Add Child Process**.
 
-     ![Add ChildProcess](./images/template-childprocess.png " ")
+     ![Add ChildProcess](./images/template-childprocess1.png " ")
 
-7. In the Property Editor, enter/select the following:
+7. In the Property Editor, enter/selecyyt the following:
 
     - Under Identification:
 
@@ -910,24 +909,24 @@ In this task you will learn how to create processes and will create  processes:
 
         - Operation: **POST**
 
-     ![Child Process1](./images/child-process1.png " ")
+     ![Child Process1](./images/child-process11.png " ")
 
 8. Under **Call Ingestion API** child process, expand the parameters and map the following parameters:
 
-    |   | Parameters | Parameter > Ignore Output|Value > Item |
-    |---|-------|------|----|
-    | 1 | COMPARTMENTID| |P5\_COMPARTMENT\_ID |
-    | 2 | DATASOURCEID| |P5\_DATASOURCE\_ID |
-    | 3 | DESCRIPTION| |P5\_DESCRIPTION |
-    | 4 | DISPLAYNAME| |P5\_DISPLAY\_NAME |
-    | 5 | RESPONSE| Toggle Off |P5\_ING\_RESPONSE |
+    |   | Parameters | Parameter > Ignore Output| Value > Type |Value > Item |
+    |---|-------|------|----|---|
+    | 1 | COMPARTMENTID| | Item |P5\_COMPARTMENT\_ID |
+    | 2 | DATASOURCEID| | Item |P5\_DATASOURCE\_ID |
+    | 3 | DESCRIPTION| | Item |P5\_DESCRIPTION |
+    | 4 | DISPLAYNAME| | Item |P5\_DISPLAY\_NAME |
+    | 5 | RESPONSE| Toggle Off| Item |P5\_ING\_RESPONSE |
     {: title="Parameters Mapping"}
 
      ![Child Parameters1](./images/child-parameters11.png " ")
 
 9. Right-click **Work with Ingestion Jobs** process, click **Add Child Process**.
 
-     ![Add ChildProcess](./images/template-childprocess.png " ")
+     ![Add ChildProcess](./images/template-childprocess1.png " ")
 
 10. In the Property Editor, enter/select the following:
 
@@ -986,18 +985,18 @@ In this task you will learn how to create processes and will create  processes:
 
 13. Under **Delete File in Object Storage** process and map the following parameters:
 
-    |   | Parameters | Value > Item |
-    |---|-------|------|
-    | 1 | p\_object\_storage\_url| P5\_OBJECT\_STORAGE\_URL |
-    | 2 | p\_static\_id| P5\_CRED\_STATIC\_ID |
-    | 3 | p\_mime\_type| P5\_MIME\_TYPE |
+    |   | Parameters | Value> Type |Value > Item |
+    |---|-------|------|-----|
+    | 1 | p\_object\_storage\_url| Item |P5\_OBJECT\_STORAGE\_URL |
+    | 2 | p\_static\_id| Item |P5\_CRED\_STATIC\_ID |
+    | 3 | p\_mime\_type| Item |P5\_MIME\_TYPE |
     {: title="Parameters Mapping"}
 
-    ![Parameters](./images/param1.png " ")
+    ![Parameters](./images/param11.png " ")
 
-    ![Parameters](./images/param2.png " ")
+    ![Parameters](./images/param12.png " ")
 
-    ![Parameters](./images/param3.png " ")
+    ![Parameters](./images/param13.png " ")
 
 14. Right-click **Processes** and click **Create Process**.
 
@@ -1017,7 +1016,7 @@ In this task you will learn how to create processes and will create  processes:
 
         - Value: **CREATE,SAVE,DELETE**
 
-    ![Process](./images/process4.png " ")
+    ![Process](./images/process14.png " ")
 
 16. Right-click **After Processing**, click **Create Branch**.
 
@@ -1043,11 +1042,11 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the Page designer toolbar, click **Shared Components** icon.
 
-   ![Shared Components](./images/shared-components.png " ")
+    ![Shared Components](./images/shared-components.png " ")
 
 2. Click **Application Items**.
 
-   ![Application Items](./images/click-applicationitems.png " ")
+    ![Application Items](./images/click-applicationitems.png " ")
 
 3. Click **Create**.
 
@@ -1066,8 +1065,6 @@ In this task we will create Application Items,Application Processes and Content 
     ![Edit ApplicationItem](./images/edit-applicationitem0.png " ")
 
 5. Navigate back to **Shared Components** page.
-
-    ![Shared Components](./images/application-sharedcomponent.png " ")
 
 6. Under **Application Logic**, select **Application Processes**.
 
@@ -1111,7 +1108,7 @@ In this task we will create Application Items,Application Processes and Content 
 
 10. Click **Create Process**.
 
-    ![Create Application Process](./images/create-appprocess.png " ")
+    ![Create Application Process](./images/create-appprocess1.png " ")
 
 11. Navigate to your Application ID and click **Create Page**.
 
@@ -1143,6 +1140,8 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Under Source:
 
+        - Location: **Local Database**
+
         - Type: **SQL Query**
 
         - SQL Query: Copy the below code
@@ -1171,11 +1170,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Appearance > Template: **Blank with Attributes (No Grid)**
 
-    ![Rename](./images/rename.png " ")
-
-    ![Appearance](./images/page6-appearance.png " ")
-
     ![Edit Form](./images/edit-documenttracker.png " ")
+
+    ![Appearance](./images/page6-appearance1.png " ")
 
 16. In the Property Editor, select **Attributes** tab and enter/select the following:
 
@@ -1301,9 +1298,9 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Clear/Reset > Clear Cache : **5**
 
-    ![Upload](./images/upload1.png " ")
+    ![Upload](./images/upload11.png " ")
 
-    ![Upload](./images/upload2.png " ")
+    ![Upload](./images/upload12.png " ")
 
 23. Right-click **Content Body**, click **Create Page Item**.
 
@@ -1323,7 +1320,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Template Options > Size: **Large**
 
-    ![Size](./images/size-large1.png " ")
+    ![Size](./images/size-large11.png " ")
 
 27. Click **Save**.
 
@@ -1333,7 +1330,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![Navigate HomePage](./images/navigate-home.png " ")
 
-2. In the **Rendering Pane**, right-click  **Breadcrumb Bar** and select **Create Button**.
+2. In the **Rendering Pane**, right-click  **Components** and select **Create Button**.
 
     ![Navigate Button](./images/button-navbar.png " ")
 
@@ -1359,7 +1356,7 @@ In this task we will create Application Items,Application Processes and Content 
 
     ![New Session](./images/new-sessionbtn.png " ")
 
-4. Right-click  **Breadcrumb Bar** and select **Create Button**.
+4. Right-click  **Before Navigation Bar** and select **Create Button**.
 
 5. In the Property Editor, enter/select the following:
 
@@ -1393,7 +1390,7 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the page designer toolbar, click ( + v ) icon and select **Page**.
 
-   ![Create Page](./images/plus-page7.png " ")
+    ![Create Page](./images/add-page7.png " ")
 
 2. Select **Content Row** .
 
@@ -1413,7 +1410,7 @@ In this task we will create Application Items,Application Processes and Content 
 
 5. Right-click **Content Body**, select **Create Page Item**.
 
-    ![Add PageItem](./images/pageitem-pg7.png " ")
+    ![Add PageItem](./images/pageitem-pg07.png " ")
 
 6. In the property editor enter/select the following:
 
@@ -1421,11 +1418,13 @@ In this task we will create Application Items,Application Processes and Content 
 
     - Identification > Type: **Hidden**
 
-    ![Page Item7](./images/p7_convid.png " ")
+    ![Page Item7](./images/p07_convid.png " ")
 
 7. Select **View Citations** region, in the property editor enter/select the following:
 
     - Under Source:
+
+        - Location: **Local Database**
 
         - Type: **SQL Query**
 
@@ -1476,15 +1475,13 @@ In this task we will create Application Items,Application Processes and Content 
 
 1. In the Page designer toolbar, click **Shared Components** icon.
 
-   ![Shared Components](./images/shared-components.png " ")
-
 2. Under Workflows and Automations, click **Automations**
 
-   ![Click Automations](./images/click-automations.png " ")
+    ![Click Automations](./images/click-automations.png " ")
 
 3. Click **Create**
 
-   ![Click Create](./images/create10.png " ")
+    ![Click Create](./images/create10.png " ")
 
 4. Under Create Automation, enter/select the following:
 
@@ -1502,17 +1499,17 @@ In this task we will create Application Items,Application Processes and Content 
 
 5. Click **Next**.
 
-   ![Click Automations Text](./images/create-automationstext.png " ")
+    ![Click Automations Text](./images/create-automationstext.png " ")
 
 6. Under Create Automation > Table/View name: **DOC_UPLOAD(table)**, leave others default.
 
 7. Click **Create**.
 
-   ![Click Automations Text](./images/create-automationstext2.png " ")
+    ![Click Automations Text](./images/create-automationstext2.png " ")
 
 8. Under Actions, click **Edit Icon**
 
-   ![Edit Actions](./images/edit-aicon.png " ")
+    ![Edit Actions](./images/edit-aicon.png " ")
 
 9. Under Edit Action, enter/select the following:
 
@@ -1587,5 +1584,5 @@ You may now proceed to the next lab
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, June 2025
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

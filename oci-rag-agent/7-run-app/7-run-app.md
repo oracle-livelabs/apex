@@ -33,7 +33,7 @@ In this task, you will upload document to OCI Object storage.
 
 2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foracle-apex-app-builder-users-guide.pdf?download=1) document onto the dialog window.
 
-    >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
+    >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 26.1.
 
 3. Click **Create**.
 
@@ -87,5 +87,5 @@ In this lab, you have learned how to work with static components, create computa
 
 ## Acknowledgements
 
-- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025
+- **Author(s)**: Roopesh Thokala, Principal Product Manager; Shailu Srivastava, Product Manager
+- **Last Updated By/Date**: Shailu Srivastava, Product Manager, May 2026
