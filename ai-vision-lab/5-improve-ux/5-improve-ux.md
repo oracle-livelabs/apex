@@ -189,9 +189,9 @@ In this task, add a Share button to each Timeline post. This enables users to sh
 
 8. The Share button is displayed for each post.
 
-   Click **Share** to open a context menu and choose the application you want to share with.
+    Click **Share** to open a context menu and choose the application you want to share with.
 
-   In this example, choose **Mail**. The post is attached as an image in an email draft with associated text.
+    In this example, choose **Mail**. The post is attached as an image in an email draft with associated text.
 
     ![Click Share button on a post to open the share context menu](images/share-app-pic.png " ")
 
@@ -387,10 +387,10 @@ In this task, configure push notifications for the Social Media application. The
 
     ![Push notification received when a user likes your post](images/show-push-notify.png " ")
 
-> **Note:**
->
-> - If you are unable to see Push Notifications, ensure that Do Not Disturb is disabled in your system and your browser has the necessary permissions to send notifications.
-> - View the [Push Notifications compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
+    > **Note:**
+    >
+    > - If you are unable to see Push Notifications, ensure that Do Not Disturb is disabled in your system and your browser has the necessary permissions to send notifications.
+    > - View the [Push Notifications compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/push-notifications)
 
 ## Task 4: Add Shortcuts for the PWA App
 
@@ -462,20 +462,20 @@ In this task, add screenshots to the Progressive Web App install experience. The
 
 6. After the PWA is installed, right-click the application icon in your taskbar or dock and view the shortcut called **Timeline**.
 
-   Click the shortcut to open the corresponding page in the application.
+    Click the shortcut to open the corresponding page in the application.
 
     ![Right-click app icon to view the Timeline shortcut](images/view-shortcut.png " ")
 
-> **Note:**
->
-> - View the [Screenshots compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation).
-> - View the [Shortcuts compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon).
+    > **Note:**
+    >
+    > - View the [Screenshots compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation).
+    > - View the [Shortcuts compatibility matrix](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon).
 
 ## Summary
 
 You now know how to enhance the Social Media app with mobile features such as cropping and sharing images, Push Notifications, shortcuts, and screenshots.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Toufiq Mohammed, Principal Product Manager; Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

@@ -69,7 +69,7 @@ If the application is not working as expected, download and install the complete
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](https://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

@@ -107,7 +107,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
     ![Gen AI services page](images/oci-test-connection.png ' ')
 
 5. If the connection is successful, click **Create**.
-   If unsuccessful, verify if you have configured the IAM Policy on OCI correctly. Refer to the [Identity and Access Management](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=624&p210_wec) workshop for more details.
+    If unsuccessful, verify if you have configured the IAM Policy on OCI correctly. Refer to the [Identity and Access Management](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=624&p210_wec) workshop for more details.
 
     ![Gen AI services page](images/oci-genai-create.png " ")
 
@@ -120,6 +120,6 @@ You may now **proceed to the next lab**.
 
 
 
-## Acknowledgments
+## Acknowledgements
 - **Author** - Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
