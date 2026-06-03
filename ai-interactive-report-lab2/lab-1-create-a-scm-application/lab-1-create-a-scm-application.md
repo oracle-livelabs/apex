@@ -10,97 +10,113 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Download and run the SCM data model and sample data load scripts.
+- Set up the SCM data model.
+- Load the reference data and operational data.
 - Create a Supply Chain Management application in your workspace.
 - Review the sample SCM objects and confirm the application shell is ready.
 
-### Downloads
+## Task 1: Set Up the Data Model
 
-Use these files during the hands-on setup:
+In this task, you will upload and run the data model script. This creates the warehouse tables and views needed for replenishment reporting in the later labs.
 
-- [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql)
-- [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
-- [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql)
+1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
-Run the files in the order listed above.
+2. Sign in to your Oracle APEX workspace using the credentials provided for this workshop.
 
-## Task 1: Install the SCM Data Model and Sample Dataset
+    ![Sign in to your workspace](images/login-workspace.png " ")
 
-This task prepares the workshop schema. You will upload and run the provided SQL scripts in SQL Workshop so the SCM tables, views, and sample replenishment data are ready for the later labs.
+3. From the Oracle APEX Home page, select **SQL Workshop**.
 
-1. Download the following files from the **Downloads** section of this lab:
+    ![Select SQL Workshop from the Oracle APEX Home page](images/workspace-home.png " ")
 
-    - `01_SCM_INV_WMS_DATAMODEL.sql`
-    - `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`
-    - `03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`
+4. From the **SQL Workshop** page, select **SQL Scripts**.
 
-2. Sign in to your Oracle APEX workspace and open **SQL Workshop**.
+    ![Select SQL Scripts from SQL Workshop](images/sql-workshop-home.png " ")
 
-    ![Open SQL Workshop](images/open-sql-workshop.png)
+5. Select **Upload**.
 
-3. On the **SQL Workshop** page, click **SQL Scripts**.
+    ![SQL Scripts page](images/sql-scripts-page.png " ")
 
-    ![Navigate to SQL Scripts](images/navigate-to-sql-scripts.png)
+6. In the **Upload Script** dialog, select the downloaded file, enter **`scm_data_model`** for **Script Name**, and select **Upload**.
 
-4. Click **Upload**.
+    ![Data Model Upload](images/data-model-upload.png " ")
 
-    ![Upload the data model script](images/click-upload.png)
+7. In the row for **`scm_data_model`**, select **Run**.
 
-5. Select file `01_SCM_INV_WMS_DATAMODEL.sql` and click **Upload**.
+    ![Select Run for the scm\_data\_model script from the SQL Scripts list](images/scm-data-model-run.png " ")
 
-    ![Upload the data model script](images/data-model-file.png)
+8. On the confirmation page, select **Run**.
 
-6. Click **Run** icon.
+    ![Confirm the data model script run](images/run-model.png " ")
 
-    ![Upload the data model script](images/play.png)
+9. Verify that the script completes successfully with 0 errors.
 
-7. Click **Run** to execute the data model script.
+    ![Data Model Results](images/ran-data-script.png " ")
 
-    ![Run the data model script](images/run-model.png)
+## Task 2: Load the Sample Data
 
-8. Review the results and confirm the script status is **Complete** with **0** errors.
+In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, items, suppliers, and inventory balances. The second loads the operational data: inbound receipts, replenishment alerts, and supplier delivery history. Both scripts must be run for the workshop to work correctly.
 
-    ![Confirm the data model script results](images/run-sample-dataload-script1.png)
+1. Download both sample data files to your local machine:
 
-9. Return to **SQL Scripts**.
+    - [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
+    - [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql)
 
-    ![Return to SQL Scripts](images/back-scripts.png)
+2. In the top breadcrumb, select **SQL Scripts**.
 
-10. Click **Upload**.
+    ![Return to SQL Scripts](images/return-tosscripts.png " ")
 
-    ![Click Upload](images/click-upload-dataload.png)
+3. Select **Upload**.
 
-11. Select file `02_SCM_INV_WMS_SAMPLE_DATALOAD.sql` and click **Upload** to load the SCM sample data.
+    ![Upload to SQL Scripts](images/upload-data1.png " ")
 
-    ![Upload the sample data load script](images/upload-dataload.png)
+4. In the **Upload Script** dialog, select or drag and drop the downloaded **`02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`** file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
-12. Click **Run** icon.
+    ![Sample Data Upload](images/sample-data-upload1.png " ")
 
-    ![Run the sample data load script](images/run-icon-dataload.png)
+5. In the row for **`scm_sample_data1`**, select **Run**.
 
-13. Click **Run** to execute the sample data load script.
+    ![Select Run for the scm\_sample\_data script from the SQL Scripts list](images/sample-data-uploaded1.png " ")
 
-    ![Execute the sample data load script](images/run-dataload-blurred.png)
+6. On the confirmation page, select **Run**.
 
-14. Review the results and confirm the script status is **Complete** with **0** errors.
+    ![Confirm the sample data script run](images/run-sample1.png " ")
 
-    ![Confirm the sample data load results](images/success-dataload.png)
+7. Verify that the script completes successfully with 0 errors.
 
-15. Return to **SQL Scripts** and click **Upload** again.
+    ![Sample Data Results](images/ran-script1.png " ")
 
-16. Select file `03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql` and click **Upload** to load the operational data.
+8. In the top breadcrumb, select **SQL Scripts**.
 
-17. Click **Run** icon, then click **Run** to execute the operational data load script.
+    ![Return to SQL Scripts](images/sample-data1-return.png " ")
 
-18. Verify that all three scripts complete without errors before you continue.
+9. Select **Upload** again.
 
-## Task 2: Create a Supply Chain Management Application
+    ![Upload to SQL Scripts](images/upload-data2.png " ")
+
+10. In the **Upload Script** dialog, select or drag and drop the downloaded **`03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`** file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
+
+    ![Operational Data Upload](images/sample-data2-clickupload.png " ")
+
+11. In the row for **`scm_sample_data2`**, select **Run**.
+
+    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](images/sample-data2-upload.png " ")
+
+12. On the confirmation page, select **Run**.
+
+    ![Confirm the operational data script run](images/sample-data2-run.png " ")
+
+13. Verify that the script completes successfully with 0 errors.
+
+    ![Operational Data Results](images/sample-data2-results.png " ")
+
+## Task 3: Create a Supply Chain Management Application
 
 This task creates the application shell that you will enhance throughout the workshop. The goal is to create a new Supply Chain Management application in App Builder so later labs can focus on the AI-enabled reporting experience.
 
-1. From the workspace home page, click **App Builder**.
+1. From the left navigation, select the **App Builder** icon.
 
-    ![Navigate to App Builder](images/app-builder-icon.png)
+    ![Navigate to App Builder from the left navigation](images/sample-data2-return.png " ")
 
 2. On the **App Builder** page, click **Create** and start a new application.
 
@@ -118,9 +134,9 @@ This task creates the application shell that you will enhance throughout the wor
 
     ![Click Create Application](images/get-image.png)
 
-## Task 3: Review the Database Objects
+## Task 4: Review the Database Objects
 
-This task gives you context for the rest of the workshop. You will review the application home page created in Task 2 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
+This task gives you context for the rest of the workshop. You will review the application home page created in Task 3 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
 
 1. Navigate to **SQL Workshop** icon , and then click **Object Browser**.
 
@@ -130,7 +146,7 @@ This task gives you context for the rest of the workshop. You will review the ap
 
     ![Identify SCM objects in Object Browser](images/identify-scm-objects.png)
 
-## Task 4: Refresh Data Dictionary
+## Task 5: Refresh Data Dictionary
 
 When we generate a data model, the database updates instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures APEX reads the latest tables and makes them available in wizards and builders.In this task, we will refresh the Data Dictionary to synchronize APEX with the updated schema.
 
@@ -157,5 +173,5 @@ You loaded the SCM setup scripts, created the Supply Chain Management applicatio
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
 

@@ -27,7 +27,7 @@ In this workshop you will:
 
 ## Prerequisites
 
-- An APEX workspace.
+- An APEX workspace running on an Oracle Database 19c or later.
 
 - API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama and Generic(OpenAI API Compatible))
 
@@ -103,4 +103,4 @@ After completing the workshop, follow these steps to remove the application and 
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
