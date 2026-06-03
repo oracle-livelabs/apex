@@ -54,11 +54,11 @@ A warehouse operations lead opens the replenishment report to check the morning'
 
 This task shows how the report decides between AI search and standard row search. Inputs with fewer than three words trigger a row search. Longer, natural language inputs trigger Search with AI.
 
-1. Remove the filter chip. In the search bar, enter *Oat Cups* and hit enter.
+1. Remove the filter chip. In the search bar, enter *PixelWave* and hit enter.
 
     ![Enter the row search](images/enter-warehouse-row-search.png)
 
-2. Observe that the report uses standard row search instead of Search with AI, because the input is fewer than three words. The report finds rows where "Oat Cups" appears as text in any column.
+2. Observe that the report uses standard row search instead of Search with AI, because the input is fewer than three words. The report finds rows where "PixelWave" appears as text in any column.
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 

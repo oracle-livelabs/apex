@@ -78,11 +78,11 @@ The microphone icon also appears in the chat assistant you used in Lab 6. In thi
 
 3. Speak a prompt such as:
 
-    *"Group alerts by warehouse and show total quantity to target"*
+    *"Which product lines generate the most alerts? Group by item category"*
 
 4. Confirm that the browser transcribes your speech into the chat input field.
 
-5. Send the prompt and confirm that the assistant applies the expected report actions.
+5. Send the prompt and confirm that the assistant applies a group by on item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
 
 ## Summary
 
