@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, and verify that the seeded SCM objects are available before you begin configuring AI features.
+This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, review the installed database objects, and refresh the data dictionary. These steps ensure that the schema, reference data, and APEX metadata are all in place before you begin configuring AI features.
 
 Estimated Lab Time: 5 minutes
 
@@ -17,7 +17,7 @@ In this lab, you will:
 
 ## Task 1: Set Up the Data Model
 
-In this task, you will upload and run the data model script. This creates the warehouse tables and views needed for replenishment reporting in the later labs.
+Every AI Interactive Report feature in this workshop depends on a well-structured schema. In this task, you will upload and run the data model script that creates the warehouse tables, views, and the replenishment view (`SCM_REPLENISHMENT_V`). This view serves as the source for the Interactive Report you will build in Lab 3, and its column structure is what APEX shares with the LLM as report metadata when processing natural language prompts.
 
 1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
@@ -55,7 +55,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
 ## Task 2: Load the Sample Data
 
-In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, items, suppliers, and inventory balances. The second loads the operational data: inbound receipts, replenishment alerts, and supplier delivery history. Both scripts must be run for the workshop to work correctly.
+With the schema in place, you now need data to work with. In this task, you will load two scripts that populate the model with realistic SCM data. The first script loads reference data: 20 warehouses, 200 items across multiple product categories, suppliers, and inventory balances. The second loads operational data: replenishment alerts, inbound receipts, and supplier delivery history. This is the dataset that the Interactive Report will display, and that you will query using natural language in Labs 5, 6, and 7.
 
 1. Download both sample data files to your local machine:
 
@@ -112,7 +112,7 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 ## Task 3: Create a Supply Chain Management Application
 
-This task creates the application shell that you will enhance throughout the workshop. The goal is to create a new Supply Chain Management application in App Builder so later labs can focus on the AI-enabled reporting experience.
+With the schema and data in place, you now need an APEX application to host the AI Interactive Report. In this task, you will create a new application in App Builder. This application serves as the container where you will configure the Generative AI service, build the report page, and enable all the natural language features in the following labs.
 
 1. From the left navigation, select the **App Builder** icon.
 
@@ -120,55 +120,55 @@ This task creates the application shell that you will enhance throughout the wor
 
 2. On the **App Builder** page, click **Create** and start a new application.
 
-    ![Create a new application](images/create-a-new-application.png)
+    ![Create a new application](images/create-a-new-application.png " ")
 
 3. In the **Name** field, enter **Supply Chain Management**.
 
-    ![Name the application](images/name-the-application.png)
+    ![Name the application](images/name-the-application.png " ")
 
 4. Click **Create Application**.
 
-    ![Click Create Application](images/click-create-application.png)
+    ![Click Create Application](images/click-create-application.png " ")
 
 5. Confirm that the new application appears in **App Builder**.
 
-    ![Click Create Application](images/get-image.png)
+    ![Confirm the application in App Builder](images/get-image.png " ")
 
 ## Task 4: Review the Database Objects
 
-This task gives you context for the rest of the workshop. You will review the application home page created in Task 3 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
+Before moving on, it is worth confirming that the setup scripts created the expected objects. In this task, you will open Object Browser and verify that the SCM tables and views are present in your schema. This quick check ensures everything is in place before you start configuring AI features.
 
 1. Navigate to **SQL Workshop** icon , and then click **Object Browser**.
 
-    ![Navigate to Object Browser](images/navigate-to-object-browser.png)
+    ![Navigate to Object Browser](images/navigate-to-object-browser.png " ")
 
 2. Review the installed SCM objects that support replenishment reporting, by searching with SCM_ in your Object Browser to list the core tables and views created by the setup scripts.
 
-    ![Identify SCM objects in Object Browser](images/identify-scm-objects.png)
+    ![Identify SCM objects in Object Browser](images/identify-scm-objects.png " ")
 
 ## Task 5: Refresh Data Dictionary
 
-When we generate a data model, the database updates instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures APEX reads the latest tables and makes them available in wizards and builders.In this task, we will refresh the Data Dictionary to synchronize APEX with the updated schema.
+When tables and views are created, the database updates instantly, but the APEX metadata cache does not. Without a refresh, the new SCM objects may not appear in page wizards, LOV queries, or the natural language report builder. In this task, you will refresh the Data Dictionary so APEX recognizes the new schema objects and can include them when generating pages or processing natural language prompts.
 
 1. To refresh database objects, click APEX **Administration** icon from the left menu above your user profile. Then select **Manage Service > Manage Service**.
 
-    ![Identify SCM objects in Object Browser](images/nav-admin-callouts.png)
+    ![Navigate to Administration](images/nav-admin-callouts.png " ")
 
 2. On the right-hand side, under **Manage Meta Data**, select **Data Dictionary Cache**.
 
-    ![Identify SCM objects in Object Browser](images/data-dic.png)
+    ![Select Data Dictionary Cache](images/data-dic.png " ")
 
-3. To refresh the cache manually click **Refresh Cache Only**.
+3. To refresh the cache manually, click **Refresh Cache Only**.
 
-    ![Identify SCM objects in Object Browser](images/refresh-cache-only.png)
+    ![Refresh Cache Only](images/refresh-cache-only.png " ")
 
-4. Now you will view refreshed cache for tables.
+4. Verify that the cache refresh completes successfully.
 
-    ![Identify SCM objects in Object Browser](images/cache-results.png)
+    ![Cache refresh results](images/cache-results.png " ")
 
 ## Summary
 
-You loaded the SCM setup scripts, created the Supply Chain Management application, and verified that the required SCM objects are available. The application and sample data are now ready for AI service configuration and report enhancement.
+You loaded the SCM data model and sample data, created the Supply Chain Management application, and verified that the required database objects are available. The application and data foundation are now ready for Generative AI configuration in the next lab.
 
 ## Acknowledgements
 

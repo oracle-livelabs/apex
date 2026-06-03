@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This lab uses the Interactive Report chat assistant to reshape the replenishment report into a warehouse alert summary. Instead of navigating menus and dialogs, you will ask the assistant to aggregate, highlight, chart, and save views using conversational prompts. The assistant uses the column context you configured in Lab 4 to interpret business terms without requiring column names.
+The right-side chat panel labeled **Assistant** provides a conversational experience focused exclusively on report configuration. It performs AI-driven interpretation only - the dialog explains which settings were applied and supports incremental refinement through follow-up prompts. Only the Interactive Report displays the data; the Assistant does not display business data, analytics, or summaries. It applies configuration by setting Interactive Report chips.
+
+In this lab, you will use the Assistant to reshape the replenishment report into a warehouse alert summary. Instead of navigating menus and dialogs, you will ask the assistant to aggregate, highlight, chart, and save views using conversational prompts.
 
 Estimated Lab Time: 5 minutes
 
@@ -15,7 +17,7 @@ In this lab, you will:
 
 ## Task 1: Build a Warehouse Alert Summary Report
 
-An operations director needs a quick summary of replenishment alerts across the network. The team needs to understand which warehouses carry the heaviest alert load and where stock levels are critically low. In this task you will use the chat assistant to build that view step by step.
+The Assistant goes beyond simple filtering. It can apply control breaks, aggregates, highlights, charts, and saved reports - all from conversational prompts. In this task, you will build a complete Warehouse Alert Summary report step by step, demonstrating how the Assistant interprets multi-action requests and layers report configurations incrementally without resetting between prompts.
 
 1. Remove any existing filter chips and click **Assistant** to open the right-side chat panel for the Interactive Report.
 
@@ -63,7 +65,7 @@ An operations director needs a quick summary of replenishment alerts across the 
 
 ## Summary
 
-You used the Interactive Report chat assistant to build a Warehouse Alert Summary report. You organized the report by warehouse with a control break and alert count aggregate, highlighted critically low stock items, charted alert volume across the network, and saved the finished view for reuse. The assistant interpreted business terms using the column context configured in Lab 4.
+You used the Interactive Report Chat Assistant to build a Warehouse Alert Summary report through conversational prompts. You organized the report by warehouse with a control break and alert count aggregate, highlighted critically low stock items, charted alert volume across the network, and saved the finished view for reuse. Each configuration was applied as standard Interactive Report settings, ensuring the experience remains consistent with existing Interactive Report behavior.
 
 ## Acknowledgements
 

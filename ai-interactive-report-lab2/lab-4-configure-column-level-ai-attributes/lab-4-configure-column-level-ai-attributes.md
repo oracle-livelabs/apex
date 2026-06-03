@@ -2,7 +2,11 @@
 
 ## Introduction
 
-This lab configures AI attributes for SCM replenishment columns from `SCM_REPLENISHMENT_V`. You will add clear business context to the quantity, priority, and date columns so AI can interpret warehouse questions more accurately.
+The AI does not have access to your actual business data. It relies entirely on the metadata you provide to understand your report columns. In the previous lab, you added report-level context that describes what the report is about. In this lab, you will go one level deeper and configure column-level AI attributes for key columns in `SCM_REPLENISHMENT_V`.
+
+Column Attributes in APEX have a Generative AI section that allows developers to refine AI behavior at a per-column level. There are two key settings: **Column Context**, which provides additional notes describing the purpose or interpretation of a column, and **Reference Data Type**, which indicates the type of reference data (Static Values, SQL Query, or Shared Component) that the AI can use when forming responses. By adding business descriptions and reference values, you give the AI the vocabulary it needs to correctly interpret column names, map user terms to valid filter values, and generate accurate report actions.
+
+For example, without column context, the AI has no way to know that `PRIORITY_CODE` represents business urgency or that its valid values are CRITICAL, HIGH, MEDIUM, and LOW. With that metadata in place, a prompt like "show me high priority alerts" is correctly mapped to a filter on `PRIORITY_CODE = HIGH`.
 
 Estimated Lab Time: 5 minutes
 
@@ -16,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Add SCM Column Context
 
-This task helps the AI understand the meaning of your most important replenishment columns. Strong column context improves the quality of generated filters, sort orders, summaries, and assistant actions.
+Report-level context tells the AI what the report is about, but column context tells it what each field means. Use column context when users ask questions using business language rather than database column names. Without it, a column like `QTY_TO_TARGET` is just a number. With context, the AI understands it represents the suggested replenishment quantity. Similarly, `RAISED_AT` could be any timestamp, but column context clarifies it as the date when the alert was raised. In this task, you will add business descriptions to key columns so the AI can generate accurate filters, sorts, and aggregations from natural language prompts.
 
 1. In **App Builder**, open the Supply Chain Management application and open the replenishment report page in **Page Designer**.
 
@@ -78,7 +82,7 @@ This task helps the AI understand the meaning of your most important replenishme
 
 ## Task 2: Configure Reference Data and Validate the Result
 
-This task gives the AI controlled value sets for important categorical fields. Reference data reduces ambiguity when users ask for open alerts, warehouse-specific results, or other structured SCM filters.
+Column context describes what a field means, but reference data tells the AI what values are valid. Use reference data when users ask questions that name specific values from a known list. Without it, the AI might guess values that do not exist, use incorrect spelling or capitalization, or apply invalid filter values that return no results. For example, when a user asks for "open alerts," the AI needs to know that the valid status values are OPEN, ACTIONED, and CLOSED. In this task, you will define reference values for categorical columns so the AI maps user terms to the correct filter values.
 
 1. Select the column **ALERT\_STATUS\_CODE**.
 
@@ -124,7 +128,7 @@ This task gives the AI controlled value sets for important categorical fields. R
 
 ## Summary
 
-You configured SCM column context and reference data type for the replenishment report. The report is now better prepared to interpret warehouse and inventory questions accurately.
+You configured column context and reference data for key columns in the replenishment report. The AI can now correctly interpret business terms like "replenishment quantity," "high priority," and "open alerts," and map them to the appropriate columns and valid filter values. The report is ready for natural language interaction in the next labs.
 
 ## Acknowledgements
 

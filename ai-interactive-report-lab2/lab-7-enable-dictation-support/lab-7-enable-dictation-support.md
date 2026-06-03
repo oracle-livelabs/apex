@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab enables dictation so you can use your voice to enter prompts in the Interactive Report search bar and chat assistant. Oracle APEX uses the Web Speech API to convert speech into text directly in the browser. Once enabled, a microphone icon appears in supported components, allowing hands-free interaction with the AI features you configured in previous labs.
+This lab enables dictation so users can interact with AI Interactive Reports using their voice. Oracle APEX uses the Web Speech API to convert speech into text directly in the browser. Once enabled, a microphone icon appears in the search bar and the Chat Assistant, allowing hands-free interaction with the AI features you configured in previous labs. Speech is processed by the end user's browser and may be sent to third-party servers depending on the browser implementation, which is why dictation is disabled by default.
 
 Estimated Lab Time: 5 minutes
 
@@ -22,7 +22,7 @@ In this lab, you will:
 
 ## Task 1: Enable Dictation in the Application Definition
 
-Dictation is disabled by default for security and privacy. Speech is processed by the end user's browser and may be sent to third-party servers depending on the browser implementation. In this task you will enable the setting so the microphone icon appears in supported components.
+Oracle APEX supports browser-based dictation through the Web Speech API. Because this is a security and privacy consideration, the setting must be explicitly enabled by the developer. In this task, you will enable dictation at the application level so the microphone icon appears in supported components.
 
 1. In the App Builder, click the **Shared Components** icon.
 
@@ -48,7 +48,7 @@ Dictation is disabled by default for security and privacy. Speech is processed b
 
 ## Task 2: Use Dictation with Search with AI
 
-With dictation enabled, a microphone icon now appears in the Interactive Report search bar you configured in Lab 5. In this task you will use voice input to submit a search prompt.
+With dictation enabled, a microphone icon now appears in the Interactive Report search bar. In this task, you will use voice input to submit a search prompt and confirm that the AI processes spoken input the same way it processes typed text. The search bar does not differentiate between typed and dictated input - both are interpreted by the AI and applied as Interactive Report settings.
 
 1. Run the **SCM Replenishment** report page.
 
@@ -68,7 +68,7 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
 ## Task 3: Use Dictation with the Chat Assistant
 
-The microphone icon also appears in the chat assistant you used in Lab 6. In this task you will use voice input to submit a chat prompt.
+The microphone icon also appears in the Chat Assistant you used in Lab 6. In this task, you will use voice input to submit a Group By prompt, demonstrating that the Assistant can handle complex report actions from spoken input. This also exercises the Group By feature, which creates a summary view showing grouped data with an aggregate function - a capability not covered in the previous labs.
 
 1. On the same report page, click **Assistant** to open the chat panel.
 
@@ -86,7 +86,7 @@ The microphone icon also appears in the chat assistant you used in Lab 6. In thi
 
 ## Summary
 
-You enabled dictation in the application security settings and verified that voice input works with both the Interactive Report search bar and the Chat Assistant. Users can now interact with AI features using speech instead of typing.
+You enabled dictation in the application security settings and verified that voice input works with both Search with AI and the Chat Assistant. Users can now interact with AI Interactive Report features using speech, bridging the gap between everyday users and the full power of their data.
 
 ## Acknowledgements
 

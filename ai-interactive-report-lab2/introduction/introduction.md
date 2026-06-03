@@ -2,13 +2,13 @@
 
 ## About This Workshop
 
-Interactive Reports in Oracle APEX already give end users a rich set of capabilities, including filtering, sorting, control breaks, highlighting, aggregations, charts, groupings, and pivots. These features are powerful and well established, but configuring them traditionally requires moving through multiple menus, dialogs, and report settings. In practice, that means some capabilities are not used as often as they could be because they take time to discover and apply.
+Interactive Reports in Oracle APEX offer end users a rich set of capabilities, including filtering, sorting, control breaks, highlighting, aggregations, charts, groupings, and pivots. While these features are powerful and well established, configuring them often requires navigating through multiple menus and dialogs. As a result, some capabilities may be underutilized due to discoverability challenges or the time needed to apply the appropriate settings.
 
-APEX **AI Interactive Reports** changes that experience. Instead of manually configuring a report, users can ask a question in plain language and let APEX translate that request into the right report actions. Based on the intent of the prompt, APEX can apply filters, sorting, pivots, aggregates, groupings, and column selections automatically. Each AI-generated configuration is shown as a visible chip, making the result transparent, reviewable, and easy to refine.
+APEX **AI Interactive Reports** changes that. Users can ask a question in plain language, and APEX automatically configures the report - applying filters, sorting, pivots, aggregates, groupings, and column selections based on what was asked. Every configuration the AI applies is surfaced as a visible chip, so users can see exactly what has been set, review it at a glance, and adjust anything that does not match their intent.
 
-This workshop shows how to use that capability with SCM data. Using a Supply Chain Management application and a replenishment-focused view, you will configure AI support, create an Interactive Report on view named **SCM\_REPLENISHMENT\_V**, add report-level and column-level context, and use both Search with AI and the chat assistant to analyze replenishment activity in natural language.
+In this workshop, you will build a Supply Chain Management application on a replenishment-focused view (**SCM\_REPLENISHMENT\_V**), configure Generative AI support, add report-level and column-level context, and use both Search with AI and the Interactive Report Chat Assistant to analyze replenishment activity in natural language. Importantly, your business data never leaves your environment. APEX only shares report metadata and configuration context with the LLM. The actual data in your report stays where it belongs.
 
-The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt without losing visibility into how the report was configured.
+The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt - without losing visibility into how the report was configured.
 
 Estimated Workshop Time: 35 Minutes
 
@@ -18,7 +18,7 @@ In this workshop you will:
 
 - Download and run the SCM data model, sample data, and operational data load scripts.
 - Create and review the Supply Chain Management application.
-- Configure  Generative AI provider.
+- Configure Generative AI provider.
 - Create an Interactive Report using natural language.
 - Enable natural language support for the report and add SCM report context.
 - Configure column-level AI metadata for key SCM report columns.
@@ -78,11 +78,11 @@ If you are stuck or the application is not working as expected, you can download
 
 - Import the *ai-interactive-report-lab.sql* file into your APEX workspace. Follow the steps in the Import Application wizard to import the application.
 
-- Follow **Lab 1 > Task 1** to load the data model, sample data, and operational data.
+- Follow **Lab 1 > Task 1 and Task 2** to load the data model, sample data, and operational data.
 
 - Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 
-- Follow **Lab 5 and Lab 6** to run the application and walk through the end-to-end procurement conversation.
+- Follow **Lab 5 and Lab 6** to run the application and walk through the AI Interactive Report features.
 
 ## Uninstall the Application and Data Model
 
