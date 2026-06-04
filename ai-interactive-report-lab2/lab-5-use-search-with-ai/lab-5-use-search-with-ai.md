@@ -26,7 +26,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ```
     <copy>
-    Show only the open alerts
+    Show only open replenishment alerts
     </copy>
     ```
 
