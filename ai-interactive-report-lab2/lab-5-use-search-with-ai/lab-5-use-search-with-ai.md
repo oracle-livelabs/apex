@@ -26,7 +26,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ```
     <copy>
-    Show only the alerts that still need attention
+    Show only the open alerts
     </copy>
     ```
 

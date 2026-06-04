@@ -56,7 +56,7 @@ Report-level context tells the AI what the report is about, but column context t
 
     ```
     <copy>
-    Business urgency of the replenishment alert. HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.
+    Business urgency of the replenishment alert. CRITICAL means highest urgency requiring immediate action, HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.
     </copy>
     ```
 
@@ -76,7 +76,21 @@ Report-level context tells the AI what the report is about, but column context t
 
     ![Enter the RAISED_AT column context](images/enter-raised-at-column-context.png)
 
-10. Click **Save**.
+10. Select the column **ALERT\_TYPE\_CODE**.
+
+    ![Select the ALERT_TYPE_CODE column](images/select-alert-type-code-column.png)
+
+11. In the **Generative AI** section, locate **Column Context** and enter the following context value:
+
+    ```
+    <copy>
+    Business type of replenishment alert. Users may refer to these as out of stock, low stock, pick face replenishment, aging review, or short dated review.
+    </copy>
+    ```
+
+    ![Enter the ALERT_TYPE_CODE column context](images/enter-alert-type-code-column-context.png)
+
+12. Click **Save**.
 
     ![Save the column context updates](images/save-column-context-updates.png)
 
@@ -94,19 +108,29 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Set the reference data type to Static Values](images/choose-static-values-reference-data.png)
 
-4. Click **Static Values**. In the dialog, replace the sample rows with the valid alert status values used by the replenishment report. Enter `OPEN`, `ACTIONED`, and `CLOSED`, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
+4. Click **Static Values**. In the dialog, replace the sample rows with the valid alert status values used by the replenishment report. Enter `OPEN`, `IN_REVIEW`, `ACTIONED`, `CLOSED`, and `SUPPRESSED`, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
 
     ![Enter the alert status static values and click OK](images/enter-alert-status-static-values.png)
 
-5. Select the column **WAREHOUSE_CODE**.
+5. Select the column **ALERT\_TYPE\_CODE**.
+
+    ![Select the ALERT_TYPE_CODE column for reference data](images/select-alert-type-code-column-reference.png)
+
+6. In the **Generative AI** section, set **Reference Data Type** to **Static Values**.
+
+7. Click **Static Values**. In the dialog, enter `LOW_STOCK`, `OUT_OF_STOCK`, `PICK_FACE_REPLENISHMENT`, `AGING_REVIEW`, and `SHORT_DATED_REVIEW`, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
+
+    ![Enter the alert type static values and click OK](images/enter-alert-type-static-values.png)
+
+8. Select the column **WAREHOUSE_CODE**.
 
     ![Select the WAREHOUSE_CODE column](images/select-warehouse-code-column.png)
 
-6. In the **Generative AI** section, set **Reference Data Type** to **SQL Query**.
+9. In the **Generative AI** section, set **Reference Data Type** to **SQL Query**.
 
     ![Set the reference data type to SQL Query](images/choose-sql-query-reference-data.png)
 
-7. In **SQL Query**, enter the following query so AI can retrieve the valid warehouse codes dynamically:
+10. In **SQL Query**, enter the following query so AI can retrieve the valid warehouse codes dynamically:
 
     ```
     <copy>
@@ -120,11 +144,11 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Enter the SQL query for warehouse code reference data](images/enter-warehouse-code-sql-query.png)
 
-8. Click **Save and Run**.
+11. Click **Save and Run**.
 
     ![Save and run the page with the column AI settings](images/save-and-run-page-with-column-ai-settings.png)
 
-9. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
+12. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
 
 ## Summary
 

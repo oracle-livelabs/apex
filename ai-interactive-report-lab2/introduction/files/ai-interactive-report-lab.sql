@@ -1265,7 +1265,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
 ,p_ai_lov_type=>'STATIC'
-,p_ai_lov_source=>'STATIC:OPEN;OPEN,ACTIONED;ACTIONED,CLOSED;CLOSED'
+,p_ai_lov_source=>'STATIC:OPEN;OPEN,IN_REVIEW;IN_REVIEW,ACTIONED;ACTIONED,CLOSED;CLOSED,SUPPRESSED;SUPPRESSED'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
 ,p_created_by=>'GENDEV_USER'
@@ -1281,6 +1281,9 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
+,p_ai_column_hint=>'Business type of replenishment alert. Users may refer to these as out of stock, low stock, pick face replenishment, aging review, or short dated review.'
+,p_ai_lov_type=>'STATIC'
+,p_ai_lov_source=>'STATIC:LOW_STOCK;LOW_STOCK,OUT_OF_STOCK;OUT_OF_STOCK,PICK_FACE_REPLENISHMENT;PICK_FACE_REPLENISHMENT,AGING_REVIEW;AGING_REVIEW,SHORT_DATED_REVIEW;SHORT_DATED_REVIEW'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040919Z')
 ,p_created_by=>'GENDEV_USER'
@@ -1403,7 +1406,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
-,p_ai_column_hint=>'Business urgency of the replenishment alert. HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.'
+,p_ai_column_hint=>'Business urgency of the replenishment alert. CRITICAL means highest urgency requiring immediate action, HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
 ,p_created_by=>'GENDEV_USER'
