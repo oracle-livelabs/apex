@@ -17,7 +17,7 @@ In this lab, you will:
 
 ## Task 1: Build a Warehouse Alert Summary Report
 
-The Assistant goes beyond simple filtering. It can apply control breaks, aggregates, highlights, charts, and saved reports - all from conversational prompts. In this task, you will build a complete Warehouse Alert Summary report step by step, demonstrating how the Assistant interprets multi-action requests and layers report configurations incrementally without resetting between prompts.
+Like Search with AI, the Assistant can use natural language to configure Interactive Reports. In this task, you will use the conversational panel to build a complete Warehouse Alert Summary report step by step, applying control breaks, aggregates, highlights, charts, and saved reports through follow-up prompts. This shows how report configurations can be layered incrementally without resetting between each request.
 
 1. Remove any existing filter chips and click **Assistant** to open the right-side chat panel for the Interactive Report.
 
@@ -31,7 +31,11 @@ The Assistant goes beyond simple filtering. It can apply control breaks, aggrega
     </copy>
     ```
 
+    ![Enter the group by prompt](images/enter-group-by-prompt.png)
+
 3. Confirm that the report splits into sections with a header for each warehouse and a count of alerts appears under each section. The assistant interpreted this single prompt as two separate actions: a control break on warehouse name to create the sections, and an aggregate to count the alert numbers under each section. The director can now walk through each site and instantly see how many alerts it has.
+
+    ![Confirm the group by chip](images/confirm-group-by-chip.png)
 
 4. Without resetting, enter the following and send the prompt.
 
@@ -41,9 +45,23 @@ The Assistant goes beyond simple filtering. It can apply control breaks, aggrega
     </copy>
     ```
 
+    ![Enter the highlight prompt](images/enter-highlight-prompt.png)
+
 5. Confirm that the highlight rule is applied. Within each warehouse section, rows where warehouse-wide stock is critically low now stand out in color, making it easy for each site manager to spot their problem items.
 
-6. Enter *Reset* to return to the default view, then enter the following and send the prompt.
+    ![Confirm the highlight rule](images/confirm-highlight-rule.png)
+
+6. Enter the following and send the prompt to return to the default view.
+
+    ```
+    <copy>
+    Reset
+    </copy>
+    ```
+
+    ![Enter the reset prompt](images/enter-reset-prompt.png)
+
+7. Enter the following and send the prompt.
 
     ```
     <copy>
@@ -51,9 +69,13 @@ The Assistant goes beyond simple filtering. It can apply control breaks, aggrega
     </copy>
     ```
 
-7. Confirm that the report switches to a bar chart. Each bar represents a warehouse, making it immediately clear which sites carry the heaviest alert load across the network.
+    ![Enter the bar chart prompt](images/enter-bar-chart-prompt.png)
 
-8. Enter the following and send the prompt.
+8. Confirm that the report switches to a bar chart. Each bar represents a warehouse, making it immediately clear which sites carry the heaviest alert load across the network.
+
+    ![Confirm the bar chart view](images/confirm-bar-chart-view.png)
+
+9. Enter the following and send the prompt.
 
     ```
     <copy>
@@ -61,7 +83,11 @@ The Assistant goes beyond simple filtering. It can apply control breaks, aggrega
     </copy>
     ```
 
-9. Confirm that the saved report appears in the available report views. The team can now reopen this view each week without reconfiguring the report.
+    ![Enter the save view prompt](images/enter-save-view-prompt.png)
+
+10. Confirm that the saved report appears in the available report views. The team can now reopen this view each week without reconfiguring the report.
+
+    ![Confirm the saved view](images/confirm-saved-view.png)
 
 ## Summary
 

@@ -160,7 +160,7 @@ In this task, you will link the Generative AI Service you configured in Task 2 t
 
     ![Shared Components](./images/shared-comp2.png " ")
 
-5. For **Generative AI Service**, select the service you configured earlier in this lab, then select **Apply Changes**.
+5. On the **AI** page, under **Generative AI**, set the **Service** to the service you configured earlier in this lab, then select **Apply Changes**.
 
     ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
 

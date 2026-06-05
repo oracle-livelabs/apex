@@ -36,7 +36,11 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Confirm the open alert chip](images/confirm-open-alert-chip.png)
 
-4. Remove the chip. Now enter the following and hit enter.
+4. Remove the chip by clicking **X**.
+
+    ![Remove the open alert chip](images/remove-open-alert-chip.png)
+
+5. In the search bar, enter the following and hit enter.
 
     ```
     <copy>
@@ -46,7 +50,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Enter the sort prompt](images/enter-sort-prompt.png)
 
-5. Confirm that the report applies a descending sort on `QTY_TO_TARGET`.
+7. Confirm that the report applies a descending sort on `QTY_TO_TARGET`.
 
     ![Confirm the quantity sort](images/confirm-qty-sort.png)
 
@@ -74,19 +78,11 @@ The search bar supports two modes: standard row search and Search with AI. Short
 
 4. Confirm that the gradient AI processing indicator appears while the request is being interpreted.
 
-    ![Show the AI processing indicator](images/show-ai-processing.png)
+    ![Show the AI processing indicator](images/show-grad.png)
 
 5. Review the applied filter chips created by AI. The assistant should apply filters for critical priority, out-of-stock alert type, and open status.
 
     ![Review the AI chips](images/review-ai-chips.png)
-
-6. Remove one of the filter chips by clicking **X**.
-
-    ![Remove a chip](images/remove-warehouse-chip.png)
-
-7. Confirm that the result set refreshes and remains editable after the AI response.
-
-    ![Confirm the updated results](images/confirm-updated-results.png)
 
 ## Summary
 
