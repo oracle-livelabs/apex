@@ -17,7 +17,9 @@ In this lab, you will:
 
 ## Task 1: Set Up the Data Model
 
-Every AI Interactive Report feature in this workshop depends on a well-structured schema. In this task, you will upload and run the data model script that creates the warehouse tables, views, and the replenishment view (`SCM_REPLENISHMENT_V`). This view serves as the source for the Interactive Report you will build in Lab 3, and its column structure is what APEX shares with the LLM as report metadata when processing natural language prompts.
+> **Note:** If you have already completed **Lab 1: Import the Data Model, Sample Data, and Base Application** in the *AI Agents* workshop using the same workspace, the data model and sample data are already loaded. You can skip **Task 1** and **Task 2** and proceed directly to **Task 3: Create a Supply Chain Management Application**.
+
+Every AI Interactive Report feature in this workshop depends on a well-structured schema. In this task, you will upload and run the data model script that creates the warehouse tables, views, and the replenishment view (`SCM_REPLENISHMENT_V`). This view serves as the source for the Interactive Report you will build in Lab 3, and its column structure is what APEX shares with the LLM as report metadata when processing natural language prompts. The data model is compatible with Oracle Database 19c and later.
 
 1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
@@ -174,4 +176,3 @@ You loaded the SCM data model and sample data, created the Supply Chain Manageme
 
 - **Author** - Ankita Beri, Senior Product Manager
 - **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
-
