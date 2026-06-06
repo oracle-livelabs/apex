@@ -86,8 +86,6 @@ The microphone icon also appears in the Chat Assistant you used in Lab 6. In thi
 
     ![Microphone icon in the assistant panel](images/search-micro.png " ")
 
-
-
 ## Summary
 
 You enabled dictation in the application security settings and verified that voice input works with both Search with AI and the Chat Assistant. Users can now interact with AI Interactive Report features using speech, bridging the gap between everyday users and the full power of their data.
