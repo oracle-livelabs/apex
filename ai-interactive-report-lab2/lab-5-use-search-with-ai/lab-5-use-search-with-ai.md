@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle APEX provides two distinct natural language entry points for Interactive Reports: Search with AI and the Chat Assistant. This lab focuses on the first - Search with AI. The familiar search bar now accepts natural language queries and intelligently applies the appropriate report configurations. It also preserves the existing Interactive Report behavior: entering one or two words triggers an immediate row search, providing continuity with existing end-user flows while enabling natural language input in the same control.
+Oracle APEX provides two distinct natural language entry points for Interactive Reports: Search with AI and the Chat Assistant. This lab focuses on the first - Search with AI. The familiar search bar now accepts natural language queries and intelligently applies the appropriate report configurations. It also preserves the existing Interactive Report behavior: entering one or two words triggers an immediate Row Search, providing continuity with existing end-user flows while enabling natural language input in the same control.
 
 Estimated Lab Time: 5 minutes
 
@@ -11,7 +11,7 @@ Estimated Lab Time: 5 minutes
 In this lab, you will:
 
 - Run AI-generated filter and sort requests.
-- Compare AI search behavior with row search behavior.
+- Compare AI search behavior with Row Search behavior.
 - Review and refine the generated report chips.
 
 ## Task 1: Filter and Sort with AI Search
@@ -56,13 +56,13 @@ With all the AI configuration in place, you can now see the feature in action. W
 
 ## Task 2: Compare AI Search with Row Search
 
-The search bar supports two modes: standard row search and Search with AI. Short keyword inputs (fewer than three words) trigger an immediate row search, while longer natural language prompts are routed to the AI for interpretation. This design preserves the existing Interactive Report search behavior while enabling natural language input in the same control. In this task, you will compare both modes and observe how the report determines which one to apply.
+The search bar supports two modes: Row Search and Search with AI. Short keyword inputs (fewer than three words) trigger an immediate Row Search, while longer natural language prompts are routed to the AI for interpretation. This design preserves the existing Interactive Report search behavior while enabling natural language input in the same control. In this task, you will compare both modes and observe how the report determines which one to apply.
 
 1. Remove the filter chip. In the search bar, enter *PixelWave* and hit enter.
 
     ![Enter the row search](images/enter-warehouse-row-search.png)
 
-2. Observe that the report uses standard row search instead of Search with AI, because the input is fewer than three words. The report finds rows where "PixelWave" appears as text in any column.
+2. Observe that the report uses Row Search instead of Search with AI, because the input is fewer than three words. The report finds rows where "PixelWave" appears as text in any column.
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 
@@ -86,7 +86,7 @@ The search bar supports two modes: standard row search and Search with AI. Short
 
 ## Summary
 
-You used Search with AI to filter and sort the replenishment report with natural language, compared it with standard row search, and refined the generated chips manually. Every configuration the AI applied was surfaced as a visible chip, making the result transparent, reviewable, and easy to adjust.
+You used Search with AI to filter and sort the replenishment report with natural language, compared it with Row Search, and refined the generated chips manually. Every configuration the AI applied was surfaced as a visible chip, making the result transparent, reviewable, and easy to adjust.
 
 ## Acknowledgements
 

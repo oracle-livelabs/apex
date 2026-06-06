@@ -27,7 +27,7 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
 3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click on Accept.
 
-    ![Click Create Page](images/review-pages-and-shared-components.png)
+    ![Click Create Page](images/click-ok.png)
 
 4. Use natural language to request a new Interactive Report page based on the view **SCM\_REPLENISHMENT\_V**. For example, enter:
 
@@ -53,7 +53,7 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
     Confirm that the report renders from the view.
 
-    ![View the replenishment report](images/lab3-image.png)
+    ![View the replenishment report](images/view-replenishment-report.png)
 
 ## Task 2: Enable Natural Language on the Interactive Report
 

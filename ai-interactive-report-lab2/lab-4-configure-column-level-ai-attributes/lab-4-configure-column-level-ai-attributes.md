@@ -4,7 +4,7 @@
 
 The AI does not have access to your actual business data. It relies entirely on the metadata you provide to understand your report columns. In the previous lab, you added report-level context that describes what the report is about. In this lab, you will go one level deeper and configure column-level AI attributes for key columns in `SCM_REPLENISHMENT_V`.
 
-Column Attributes in APEX have a Generative AI section that allows developers to refine AI behavior at a per-column level. There are two key settings: **Column Context**, which provides additional notes describing the purpose or interpretation of a column, and **Reference Data Type**, which indicates the type of reference data (Static Values, SQL Query, or Shared Component) that the AI can use when forming responses. By adding business descriptions and reference values, you give the AI the vocabulary it needs to correctly interpret column names, map user terms to valid filter values, and generate accurate report actions.
+In APEX Interactive Reports, each report column includes a Generative AI section where developers can refine AI behavior for that specific column. There are two key settings: **Column Context**, which provides additional notes describing the purpose or interpretation of a column, and **Reference Data Type**, which indicates the type of reference data (Static Values, SQL Query, or Shared Component) that the AI can use when forming responses. By adding business descriptions and reference values, you give the AI the vocabulary it needs to correctly interpret column names, map user terms to valid filter values, and generate accurate report actions.
 
 For example, without column context, the AI has no way to know that `PRIORITY_CODE` represents business urgency or that its valid values are CRITICAL, HIGH, MEDIUM, and LOW. With that metadata in place, a prompt like "show me high priority alerts" is correctly mapped to a filter on `PRIORITY_CODE = HIGH`.
 
@@ -104,7 +104,7 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Set the reference data type to Static Values](images/choose-static-values-reference-data.png)
 
-4. Click **Static Values**. In the dialog, replace the sample rows with the valid alert status values used by the replenishment report. Enter the following values, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
+4. Click **Static Values**. In the dialog, replace the sample rows with the alert status values used by the replenishment report. Enter the following values, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
 
     | Display Value | Return Value |
     | --- | --- |
@@ -115,7 +115,7 @@ Column context describes what a field means, but reference data tells the AI wha
     | `SUPPRESSED` | `SUPPRESSED` |
     {: title="Alert Status Static Values"}
 
-    ![Enter the alert status static values and click OK](images/add-ref1.png)
+    ![Enter the alert status static values and click OK](images/inreview.png)
 
 5. Select the column **ALERT\_TYPE\_CODE**. In the **Generative AI** section, set **Reference Data Type** to **Static Values**.
 

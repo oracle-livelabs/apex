@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, review the installed database objects, and refresh the data dictionary. These steps ensure that the schema, reference data, and APEX metadata are all in place before you begin configuring AI features.
+This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, review the installed database objects, and refresh the data dictionary. These steps ensure that the schema, sample data, and APEX metadata are all in place before you begin configuring AI features.
 
 Estimated Lab Time: 5 minutes
 
@@ -10,8 +10,7 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Set up the SCM data model.
-- Load the reference data and operational data.
+- Download and run the SCM data model and sample data scripts.
 - Create a Supply Chain Management application in your workspace.
 - Review the sample SCM objects and confirm the application shell is ready.
 
@@ -57,9 +56,9 @@ Every AI Interactive Report feature in this workshop depends on a well-structure
 
 ## Task 2: Load the Sample Data
 
-With the schema in place, you now need data to work with. In this task, you will load two scripts that populate the model with realistic SCM data. The first script loads reference data: 20 warehouses, 200 items across multiple product categories, suppliers, and inventory balances. The second loads operational data: replenishment alerts, inbound receipts, and supplier delivery history. This is the dataset that the Interactive Report will display, and that you will query using natural language in Labs 5, 6, and 7.
+With the schema in place, you now need data to work with. In this task, you will load two sample data scripts that populate the model with realistic SCM records, including warehouses, items, suppliers, inventory balances, replenishment alerts, inbound receipts, and supplier delivery history. This is the dataset that the Interactive Report will display, and that you will query using natural language in Labs 5, 6, and 7.
 
-1. Download both sample data files to your local machine:
+1. Download both data files to your local machine:
 
     - [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
     - [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql)
@@ -98,23 +97,23 @@ With the schema in place, you now need data to work with. In this task, you will
 
 10. In the **Upload Script** dialog, select or drag and drop the downloaded **`03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`** file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
-    ![Operational Data Upload](images/sample-data2-clickupload.png " ")
+    ![Sample Data Upload](images/sample-data2-clickupload.png " ")
 
 11. In the row for **`scm_sample_data2`**, select **Run**.
 
-    ![Select Run for the scm\_operational\_data script from the SQL Scripts list](images/sample-data2-upload.png " ")
+    ![Select Run for the scm\_sample\_data2 script from the SQL Scripts list](images/sample-data2-upload.png " ")
 
 12. On the confirmation page, select **Run**.
 
-    ![Confirm the operational data script run](images/sample-data2-run.png " ")
+    ![Confirm the sample data script run](images/sample-data2-run.png " ")
 
 13. Verify that the script completes successfully with 0 errors.
 
-    ![Operational Data Results](images/sample-data2-results.png " ")
+    ![Sample Data Results](images/sample-data2-results.png " ")
 
 ## Task 3: Create a Supply Chain Management Application
 
-With the schema and data in place, you now need an APEX application to host the AI Interactive Report. In this task, you will create a new application in App Builder. This application serves as the container where you will configure the Generative AI service, build the report page, and enable all the natural language features in the following labs.
+With the schema and data in place, you now need an APEX application to host the AI Interactive Report. In this task, you will create a new application in App Builder. This application serves as the container where you will build the report page and enable the natural language features in the following labs.
 
 1. From the left navigation, select the **App Builder** icon.
 

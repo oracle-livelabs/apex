@@ -16,7 +16,7 @@ Estimated Workshop Time: 35 Minutes
 
 In this workshop you will:
 
-- Download and run the SCM data model, sample data, and operational data load scripts.
+- Download and run the SCM data model and sample data scripts.
 - Create and review the Supply Chain Management application.
 - Configure Generative AI provider.
 - Create an Interactive Report using natural language.
@@ -78,7 +78,7 @@ If you are stuck or the application is not working as expected, you can download
 
 - Import the *ai-interactive-report-lab.sql* file into your APEX workspace. Follow the steps in the Import Application wizard to import the application.
 
-- Follow **Lab 1 > Task 1 and Task 2** to load the data model, sample data, and operational data.
+- Follow **Lab 1 > Task 1 and Task 2** to load the data model and sample data.
 
 - Follow **Lab 2 > Task 1** to configure the Generative AI Service.
 

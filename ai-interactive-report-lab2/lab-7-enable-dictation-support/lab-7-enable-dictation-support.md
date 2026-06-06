@@ -84,6 +84,10 @@ The microphone icon also appears in the Chat Assistant you used in Lab 6. In thi
 
 5. Send the prompt and confirm that the assistant applies a group by on item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
 
+    ![Microphone icon in the assistant panel](images/search-micro.png " ")
+
+
+
 ## Summary
 
 You enabled dictation in the application security settings and verified that voice input works with both Search with AI and the Chat Assistant. Users can now interact with AI Interactive Report features using speech, bridging the gap between everyday users and the full power of their data.
