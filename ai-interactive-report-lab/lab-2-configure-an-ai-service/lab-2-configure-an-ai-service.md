@@ -56,7 +56,7 @@ In this task, you will configure OCI Generative AI Service in your APEX workspac
 
     ![Open App Builder](images/navigate-to-app-builder.png " ")
 
-    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
+    Alternatively, from the workspace Home Page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
 
     ![Click Generative AI](images/navigate-to-generative-ai-services.png " ")
 
@@ -114,7 +114,7 @@ In this task, you will configure OpenAI as a Generative AI Service in your APEX 
 
     ![Open App Builder](images/navigate-to-app-builder.png " ")
 
-    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
+    Alternatively, from the workspace Home Page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
 
     ![Click Generative AI](images/navigate-to-generative-ai-services.png " ")
 

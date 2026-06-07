@@ -18,7 +18,7 @@ In this workshop you will:
 
 - Download and run the SCM data model and sample data scripts.
 - Create and review the Supply Chain Management application.
-- Configure Generative AI provider.
+- Configure a Generative AI provider.
 - Create an Interactive Report using natural language.
 - Enable natural language support for the report and add SCM report context.
 - Configure column-level AI metadata for key SCM report columns.
@@ -29,7 +29,7 @@ In this workshop you will:
 
 - An APEX workspace running on an Oracle Database 19c or later.
 
-- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama and Generic(OpenAI API Compatible))
+- An API key for the AI Provider of your choice. (OCI Gen AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama and Generic(OpenAI API Compatible))
 
 - If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
 

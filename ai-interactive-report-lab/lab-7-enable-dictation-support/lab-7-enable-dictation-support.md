@@ -78,7 +78,7 @@ The microphone icon also appears in the Chat Assistant you used in Lab 6. In thi
 
     ![Microphone icon in the assistant panel](images/chat-assistant.png " ")
 
-2. Click **Assistant** icon to open the chat panel.
+2. Click the **Assistant** icon to open the chat panel.
 
     ![Microphone icon in the assistant panel](images/screen1.png " ")
 

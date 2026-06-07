@@ -139,7 +139,7 @@ With the schema and data in place, you now need an APEX application to host the 
 
 Before moving on, it is worth confirming that the setup scripts created the expected objects. In this task, you will open Object Browser and verify that the SCM tables and views are present in your schema. This quick check ensures everything is in place before you start configuring AI features.
 
-1. Navigate to **SQL Workshop** icon , and then click **Object Browser**.
+1. Navigate to **SQL Workshop** icon, and then click **Object Browser**.
 
     ![Navigate to Object Browser](images/navigate-to-object-browser.png " ")
 

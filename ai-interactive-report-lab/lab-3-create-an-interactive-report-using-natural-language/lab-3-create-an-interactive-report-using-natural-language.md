@@ -25,7 +25,7 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
     ![Click Create Page](images/review-pages-and-shared-components.png)
 
-3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click on Accept.
+3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click **Accept**.
 
     ![Click Create Page](images/click-ok.png)
 

@@ -22,7 +22,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Open the replenishment report](images/open-replenishment-report.png)
 
-2. In the report search bar, enter the following and hit enter.
+2. In the report Search Bar, enter the following and press **enter**.
 
     ```
     <copy>
