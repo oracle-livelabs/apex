@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This lab uses the AI Interactive Report chat assistant to reshape the replenishment data without manually changing report settings. You will ask the assistant to group, aggregate, pivot, highlight, chart, and save views so the SCM report can support both operational users and executive review.
+The right-side chat panel labeled **Assistant** provides a conversational experience focused exclusively on report configuration. It performs AI-driven interpretation only - the dialog explains which settings were applied and supports incremental refinement through follow-up prompts. Only the Interactive Report displays the data; the Assistant does not display business data, analytics, or summaries. It applies configuration by setting Interactive Report chips.
+
+In this lab, you will use the Assistant to reshape the replenishment report into a warehouse alert summary. Instead of navigating menus and dialogs, you will ask the assistant to aggregate, highlight, chart, and save views using conversational prompts.
 
 Estimated Lab Time: 5 minutes
 
@@ -10,148 +12,88 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Use the chat assistant to transform the replenishment report.
-- Apply grouping, aggregation, pivoting, and highlighting through prompts.
-- Visualize replenishment results as a chart.
-- Save a reusable SCM report view.
+- Organize the report by warehouse with alert count aggregates and highlight low-stock items.
+- Chart alert volume across the network and save the finished view for reuse.
 
-## Task 1: Open the Assistant and Build Analytical Views
+## Task 1: Build a Warehouse Alert Summary Report
 
-This task shows how the assistant can progressively reshape the report from a flat list into an analytical view. Each prompt builds on the previous result so you can see how conversational report design works for SCM data.
+Like the Search with AI in search bar, the Assistant can use natural language to configure Interactive Reports. In this task, you will use the conversational panel to build a complete Warehouse Alert Summary report step by step, applying control breaks, aggregates, highlights, charts, and saved reports through follow-up prompts. This shows how report configurations can be layered incrementally without resetting between each request.
 
-1. Remove the filter chip and click **Assistant** to open the right-side chat panel for the Interactive Report.
+1. Remove any existing filter chips and click **Assistant** to open the right-side chat panel for the Interactive Report.
 
-    ![Open the assistant panel](images/open-assistant-panel.png)
+    ![Open the assistant panel](images/open-assistant-panel.png " ")
 
 2. Enter the following and send the prompt.
 
     ```
     <copy>
-    Group by replenishment alerts by warehouse
+    Break the report by warehouse and count the alerts for each
     </copy>
     ```
 
     ![Enter the group by prompt](images/enter-group-by-prompt.png)
 
-3. Confirm that a group-by chip is added for `WAREHOUSE_CODE` or `WAREHOUSE_NAME`.
+3. Confirm that the report splits into sections with a header for each warehouse and a count of alerts appears under each section. The assistant interpreted this single prompt as two separate actions: a control break on warehouse name to create the sections, and an aggregate to count the alert numbers under each section. The director can now walk through each site and instantly see how many alerts it has.
 
     ![Confirm the group by chip](images/confirm-group-by-chip.png)
 
-4. Enter the following and send the prompt.
+4. Without resetting, enter the following and send the prompt.
 
     ```
     <copy>
-    Show total quantity to target per warehouse
-    </copy>
-    ```
-
-    ![Enter the total quantity prompt](images/enter-total-qty-prompt.png)
-
-5. Confirm that an aggregate is added for `QTY_TO_TARGET`.
-
-    ![Confirm the aggregate](images/confirm-total-qty-aggregate.png)
-
-6. Enter the following and send the prompt.
-
-    ```
-    <copy>
-    Create a pivot showing quantity to target by warehouse, with priorities across the top
-    </copy>
-    ```
-
-    ![Enter the pivot prompt](images/enter-pivot-prompt.png)
-
-7. Review the generated pivot layout.
-
-    ![Review the pivot layout](images/review-pivot-layout.png)
-
-## Task 2: Highlight, Refine, Visualize, and Save the Report
-
-This task demonstrates how the assistant can refine the same report session without starting over. You will highlight important records, narrow the business question, turn the result into a chart, and save the final layout for repeat use.
-
-1. Enter *Reset* to return the report to its initial state so it is ready for new instructions.
-
-    ![Enter the highlight prompt](images/reset.png)
-
-2. Enter the following and send the prompt.
-
-    ```
-    <copy>
-    Highlight rows where Qty To Target is greater than 25 in green
+    Highlight items where current warehouse stock is below 10 units
     </copy>
     ```
 
     ![Enter the highlight prompt](images/enter-highlight-prompt.png)
 
-3. Confirm that the highlight rule is applied.
+5. Confirm that the highlight rule is applied. Within each warehouse section, rows where warehouse-wide stock is critically low now stand out in color, making it easy for each site manager to spot their problem items.
 
     ![Confirm the highlight rule](images/confirm-highlight-rule.png)
 
-4. Remove the chip and enter the following and send the prompt.
+6. Enter the following and send the prompt to return to the default view.
 
     ```
     <copy>
-    Filter to only HIGH priority and OPEN alerts
+    Reset
     </copy>
     ```
 
-    ![Enter the filter prompt](images/enter-high-open-filter-prompt.png)
+    ![Enter the reset prompt](images/enter-reset-prompt.png)
 
-5. Confirm that the assistant adds or updates the relevant chips instead of rebuilding the report from scratch.
+7. Enter the following and send the prompt.
 
-    ![Confirm the filter chips](images/confirm-filter-chips.png)
-
-6. Remove the chips and enter the following and send the prompt.
-
-     ```
+    ```
     <copy>
-    Show Qty To Target by Warehouse Code as a bar chart
+    Show a bar chart of alerts per warehouse
     </copy>
     ```
 
     ![Enter the bar chart prompt](images/enter-bar-chart-prompt.png)
 
-7. Confirm that the report switches to a chart-based visualization.
+8. Confirm that the report switches to a bar chart. Each bar represents a warehouse, making it immediately clear which sites carry the heaviest alert load across the network.
 
     ![Confirm the bar chart view](images/confirm-bar-chart-view.png)
-
-8. Enter **Reset**.
-
-    ![Enter the save view prompt](images/reset-chart.png)
 
 9. Enter the following and send the prompt.
 
     ```
     <copy>
-    Break down the report based on alter status code
-    </copy>
-    ```
-
-    ![Enter the save view prompt](images/breakdown-prompt.png)
-
-10. Confirm that the report assistant adds the relevant filter chip of control break.
-
-    ![Enter the save view prompt](images/breakdown-result.png)
-
-11. To save the report, enter the following and send the prompt.
-
-    ```
-    <copy>
-    Save this report as Alert Status report
+    Save this report as Warehouse Alert Summary
     </copy>
     ```
 
     ![Enter the save view prompt](images/enter-save-view-prompt.png)
 
-12. Confirm that the saved report appears in the available report views.
+10. Confirm that the saved report appears in the available report views. The team can now reopen this view each week without reconfiguring the report.
 
-    ![Enter the save view prompt](images/save-report-result.png)
+    ![Confirm the saved view](images/confirm-saved-view.png)
 
 ## Summary
 
-You used the Interactive Report chat assistant to group, aggregate, pivot, highlight, filter, chart, and save an SCM replenishment report view. The report now supports both exploratory analysis and reusable business reporting.
+You used the Interactive Report Chat Assistant to build a Warehouse Alert Summary report through conversational prompts. You organized the report by warehouse with a control break and alert count aggregate, highlighted critically low stock items, charted alert volume across the network, and saved the finished view for reuse. Each configuration was applied as standard Interactive Report settings, ensuring the experience remains consistent with existing Interactive Report behavior.
 
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026

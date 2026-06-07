@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_REPLENISHMENT_V` already created by the setup script, you will build an Interactive Report page on that view and then enable natural language support directly on the report region.
+This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_REPLENISHMENT_V` already created by the data model script, you will build an Interactive Report page on that view and then enable natural language support on the report region. Once enabled, users can ask questions in plain language, and APEX automatically configures the report - applying filters, sorting, aggregates, and more based on the intent of the prompt.
 
 Estimated Lab Time: 5 minutes
 
@@ -15,21 +15,19 @@ In this lab, you will:
 
 ## Task 1: Build an Interactive Report page from a view
 
-This task creates the replenishment report page used in the remaining labs. The setup script has already created **SCM\_REPLENISHMENT\_V**, so you only need to point the new Interactive Report page at that view.
+Oracle APEX can generate an Interactive Report page from a natural language description, selecting the appropriate source object and configuring the region automatically. No menus, no dialogs - just describe what you need. In this task, you will use that capability to create a replenishment report page on **SCM\_REPLENISHMENT\_V**, the view created by the data model script in Lab 1.
 
-1. Navigate to **App Builder** icon in the left navigation.
+1. Click on **Application &lt;APP\_ID&gt;** in the breadcrumb to return to your application home page.
 
-    ![Click Create Page](images/nav-to-app.png)
+    ![Return to application home page](images/app-id.png " ")
 
-2. In **App Builder**, open the **Supply Chain Management** application and click **Create Page**.
-
-    ![Click Create Page](images/click-scm.png)
+2. From your application home page, click **Create Page**.
 
     ![Click Create Page](images/review-pages-and-shared-components.png)
 
 3. When using Generative AI features within the APEX development environment for the first time, you will be asked to provide consent. In the APEX Assistant Wizard, if you see a Dialog regarding consent. Click on Accept.
 
-    ![Click Create Page](images/review-pages-and-shared-components.png)
+    ![Click Create Page](images/click-ok.png)
 
 4. Use natural language to request a new Interactive Report page based on the view **SCM\_REPLENISHMENT\_V**. For example, enter:
 
@@ -55,11 +53,11 @@ This task creates the replenishment report page used in the remaining labs. The 
 
     Confirm that the report renders from the view.
 
-    ![View the replenishment report](images/view-replenishment-report.png)
+    ![View the replenishment report](images/lab30image.png)
 
 ## Task 2: Enable Natural Language on the Interactive Report
 
-This task turns the report into an AI-enabled search surface. You will enable natural language support on the region, choose the default AI search behavior, and provide report context so the model understands replenishment terminology.
+Creating the report page is only half the setup. To generate report settings, APEX provides the LLM with Interactive Report context - including the report definition, column metadata, available reference values, and the current report state - so the model can determine the appropriate settings to apply. Importantly, the AI does not have direct access to your business data. It relies entirely on the metadata you provide to interpret natural language prompts. In this task, you will enable natural language support on the report region, choose the default AI search behavior, and provide a report-level context description that tells the AI what the report represents.
 
 1. In **Page Designer**, keep the **SCM Replenishment** region selected and open the **Attributes** tab.
 
@@ -83,11 +81,11 @@ This task turns the report into an AI-enabled search surface. You will enable na
 
 6. Confirm that the report opens with the conversational search bar.
 
-    ![Confirm Search with AI and the processing state](images/search-with-ai-enabled.png)
+    ![Confirm Search with AI and the processing state](images/lab3-image2.png)
 
 ## Summary
 
-You created an Interactive Report, enabled natural language support, and added SCM-specific report context. The report is now ready for column-level AI tuning.
+You created an Interactive Report using natural language, enabled natural language support on the report region, and added SCM-specific report context. The report is now ready for column-level AI configuration in the next lab.
 
 ## Acknowledgements
 

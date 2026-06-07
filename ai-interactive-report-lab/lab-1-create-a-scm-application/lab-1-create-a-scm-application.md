@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, and verify that the seeded SCM objects are available before you begin configuring AI features.
+This lab sets up the application and data foundation for the rest of the workshop. You will load the SCM data model and sample data, create the Supply Chain Management application, review the installed database objects, and refresh the data dictionary. These steps ensure that the schema, sample data, and APEX metadata are all in place before you begin configuring AI features.
 
 Estimated Lab Time: 5 minutes
 
@@ -10,142 +10,168 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Download and run the SCM data model and sample data load scripts.
+- Download and run the SCM data model and sample data scripts.
 - Create a Supply Chain Management application in your workspace.
 - Review the sample SCM objects and confirm the application shell is ready.
 
-### Downloads
+## Task 1: Set Up the Data Model
 
-Use these files during the hands-on setup:
+> **Note:** If you have already completed **Lab 1: Import the Data Model, Sample Data, and Base Application** in the *AI Agents* workshop using the same workspace, the data model and sample data are already loaded. You can skip **Task 1** and **Task 2** and proceed directly to **Task 3: Create a Supply Chain Management Application**.
 
-- [scm-datamodel.sql](files/scm-datamodel.sql)
-- [scm-dataload.sql](files/scm-dataload.sql)
+Every AI Interactive Report feature in this workshop depends on a well-structured schema. In this task, you will upload and run the data model script that creates the warehouse tables, views, and the replenishment view (`SCM_REPLENISHMENT_V`). This view serves as the source for the Interactive Report you will build in Lab 3, and its column structure is what APEX shares with the LLM as report metadata when processing natural language prompts. The data model is compatible with Oracle Database 19c and later.
 
-Run the files in the order listed above.
+1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
-## Task 1: Install the SCM Data Model and Sample Dataset
+2. Sign in to your Oracle APEX workspace using the credentials provided for this workshop.
 
-This task prepares the workshop schema. You will upload and run the provided SQL scripts in SQL Workshop so the SCM tables, views, and sample replenishment data are ready for the later labs.
+    ![Sign in to your workspace](images/login-workspace.png " ")
 
-1. Download the following files from the **Downloads** section of this lab:
+3. From the Oracle APEX Home page, select **SQL Workshop**.
 
-    - `scm-datamodel.sql`
-    - `scm-dataload.sql`
+    ![Select SQL Workshop from the Oracle APEX Home page](images/workspace-home.png " ")
 
-2. Sign in to your Oracle APEX workspace and open **SQL Workshop**.
+4. From the **SQL Workshop** page, select **SQL Scripts**.
 
-    ![Open SQL Workshop](images/open-sql-workshop.png)
+    ![Select SQL Scripts from SQL Workshop](images/sql-workshop-home.png " ")
 
-3. On the **SQL Workshop** page, click **SQL Scripts**.
+5. Select **Upload**.
 
-    ![Navigate to SQL Scripts](images/navigate-to-sql-scripts.png)
+    ![SQL Scripts page](images/sql-scripts-page.png " ")
 
-4. Click **Upload**.
+6. In the **Upload Script** dialog, select the downloaded file, enter **`scm_data_model`** for **Script Name**, and select **Upload**.
 
-    ![Upload the data model script](images/click-upload.png)
+    ![Data Model Upload](images/data-model-upload.png " ")
 
-5. Select file `scm-datamodel.sql` and click **Upload**.
+7. In the row for **`scm_data_model`**, select **Run**.
 
-    ![Upload the data model script](images/data-model-file.png)
+    ![Select Run for the scm\_data\_model script from the SQL Scripts list](images/scm-data-model-run.png " ")
 
-6. Click **Run** icon.
+8. On the confirmation page, select **Run**.
 
-    ![Upload the data model script](images/play.png)
+    ![Confirm the data model script run](images/run-model.png " ")
 
-7. Click **Run** to execute the data model script.
+9. Verify that the script completes successfully with 0 errors.
 
-    ![Run the data model script](images/run-model.png)
+    ![Data Model Results](images/ran-data-script.png " ")
 
-8. Review the results and confirm the script status is **Complete** with **0** errors.
+## Task 2: Load the Sample Data
 
-    ![Run the sample data load script](images/run-sample-dataload-script1.png)
+With the schema in place, you now need data to work with. In this task, you will load two sample data scripts that populate the model with realistic SCM records, including warehouses, items, suppliers, inventory balances, replenishment alerts, inbound receipts, and supplier delivery history. This is the dataset that the Interactive Report will display, and that you will query using natural language in Labs 5, 6, and 7.
 
-9. Return to **SQL Scripts**.
+1. Download both data files to your local machine:
 
-    ![Run the sample data load script](images/back-scripts.png)
+    - [02\_SCM\_INV\_WMS\_SAMPLE\_DATALOAD.sql](files/02_SCM_INV_WMS_SAMPLE_DATALOAD.sql)
+    - [03\_SCM\_INV\_WMS\_OPERATIONAL\_DATALOAD.sql](files/03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql)
 
-10. Click **Upload**.
+2. In the top breadcrumb, select **SQL Scripts**.
 
-    ![Run the sample data load script](images/click-upload-dataload.png)
+    ![Return to SQL Scripts](images/return-tosscripts.png " ")
 
-11. Now, select file `scm-dataload.sql`, and click **Upload** to load the SCM sample data.
+3. Select **Upload**.
 
-    ![Run the sample data load script](images/upload-dataload.png)
+    ![Upload to SQL Scripts](images/upload-data1.png " ")
 
-12. Click **Run** icon.
+4. In the **Upload Script** dialog, select or drag and drop the downloaded **`02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`** file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
-    ![Run the sample data load script](images/run-icon-dataload.png)
+    ![Sample Data Upload](images/sample-data-upload1.png " ")
 
-13. Click **Run** to execute the data load script.
+5. In the row for **`scm_sample_data1`**, select **Run**.
 
-    ![Run the sample data load script](images/run-dataload-blurred.png)
+    ![Select Run for the scm\_sample\_data script from the SQL Scripts list](images/sample-data-uploaded1.png " ")
 
-14. Verify that both scripts complete without errors before you continue.
+6. On the confirmation page, select **Run**.
 
-    ![Run the sample data load script](images/success-dataload.png)
+    ![Confirm the sample data script run](images/run-sample1.png " ")
 
-## Task 2: Create a Supply Chain Management Application
+7. Verify that the script completes successfully with 0 errors.
 
-This task creates the application shell that you will enhance throughout the workshop. The goal is to create a new Supply Chain Management application in App Builder so later labs can focus on the AI-enabled reporting experience.
+    ![Sample Data Results](images/ran-script1.png " ")
 
-1. From the workspace home page, click **App Builder**.
+8. In the top breadcrumb, select **SQL Scripts**.
 
-    ![Navigate to App Builder](images/app-builder-icon.png)
+    ![Return to SQL Scripts](images/sample-data1-return.png " ")
+
+9. Select **Upload** again.
+
+    ![Upload to SQL Scripts](images/upload-data2.png " ")
+
+10. In the **Upload Script** dialog, select or drag and drop the downloaded **`03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`** file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
+
+    ![Sample Data Upload](images/sample-data2-clickupload.png " ")
+
+11. In the row for **`scm_sample_data2`**, select **Run**.
+
+    ![Select Run for the scm\_sample\_data2 script from the SQL Scripts list](images/sample-data2-upload.png " ")
+
+12. On the confirmation page, select **Run**.
+
+    ![Confirm the sample data script run](images/sample-data2-run.png " ")
+
+13. Verify that the script completes successfully with 0 errors.
+
+    ![Sample Data Results](images/sample-data2-results.png " ")
+
+## Task 3: Create a Supply Chain Management Application
+
+With the schema and data in place, you now need an APEX application to host the AI Interactive Report. In this task, you will create a new application in App Builder. This application serves as the container where you will build the report page and enable the natural language features in the following labs.
+
+1. From the left navigation, select the **App Builder** icon.
+
+    ![Navigate to App Builder from the left navigation](images/sample-data2-return.png " ")
 
 2. On the **App Builder** page, click **Create** and start a new application.
 
-    ![Create a new application](images/create-a-new-application.png)
+    ![Create a new application](images/create-a-new-application.png " ")
 
 3. In the **Name** field, enter **Supply Chain Management**.
 
-    ![Name the application](images/name-the-application.png)
+    ![Name the application](images/name-the-application.png " ")
 
 4. Click **Create Application**.
 
-    ![Click Create Application](images/click-create-application.png)
+    ![Click Create Application](images/click-create-application.png " ")
 
 5. Confirm that the new application appears in **App Builder**.
 
-    ![Click Create Application](images/get-image.png)
+    ![Confirm the application in App Builder](images/get-image.png " ")
 
-## Task 3: Review the Database Objects
+## Task 4: Review the Database Objects
 
-This task gives you context for the rest of the workshop. You will review the application home page created in Task 2 and confirm that the SCM objects needed for replenishment reporting were installed successfully.
+Before moving on, it is worth confirming that the setup scripts created the expected objects. In this task, you will open Object Browser and verify that the SCM tables and views are present in your schema. This quick check ensures everything is in place before you start configuring AI features.
 
 1. Navigate to **SQL Workshop** icon , and then click **Object Browser**.
 
-    ![Navigate to Object Browser](images/navigate-to-object-browser.png)
+    ![Navigate to Object Browser](images/navigate-to-object-browser.png " ")
 
 2. Review the installed SCM objects that support replenishment reporting, by searching with SCM_ in your Object Browser to list the core tables and views created by the setup scripts.
 
-    ![Identify SCM objects in Object Browser](images/identify-scm-objects.png)
+    ![Identify SCM objects in Object Browser](images/identify-scm-objects.png " ")
 
-## Task 4: Refresh Data Dictionary
+## Task 5: Refresh Data Dictionary
 
-When we generate a data model, the database updates instantly but APEX’s schema metadata doesn’t. Refreshing the Data Dictionary ensures APEX reads the latest tables and makes them available in wizards and builders.In this task, we will refresh the Data Dictionary to synchronize APEX with the updated schema.
+When tables and views are created, the database updates instantly, but the APEX metadata cache does not. Without a refresh, the new SCM objects may not appear in page wizards, LOV queries, or the natural language report builder. In this task, you will refresh the Data Dictionary so APEX recognizes the new schema objects and can include them when generating pages or processing natural language prompts.
 
 1. To refresh database objects, click APEX **Administration** icon from the left menu above your user profile. Then select **Manage Service > Manage Service**.
 
-    ![Identify SCM objects in Object Browser](images/nav-admin-callouts.png)
+    ![Navigate to Administration](images/nav-admin-callouts.png " ")
 
 2. On the right-hand side, under **Manage Meta Data**, select **Data Dictionary Cache**.
 
-    ![Identify SCM objects in Object Browser](images/data-dic.png)
+    ![Select Data Dictionary Cache](images/data-dic.png " ")
 
-3. To refresh the cache manually click **Refresh Cache Only**.
+3. To refresh the cache manually, click **Refresh Cache Only**.
 
-    ![Identify SCM objects in Object Browser](images/refresh-cache-only.png)
+    ![Refresh Cache Only](images/refresh-cache-only.png " ")
 
-4. Now you will view refreshed cache for tables.
+4. Verify that the cache refresh completes successfully.
 
-    ![Identify SCM objects in Object Browser](images/cache-results.png)
+    ![Cache refresh results](images/cache-results.png " ")
 
 ## Summary
 
-You loaded the SCM setup scripts, created the Supply Chain Management application, and verified that the required SCM objects are available. The application and sample data are now ready for AI service configuration and report enhancement.
+You loaded the SCM data model and sample data, created the Supply Chain Management application, and verified that the required database objects are available. The application and data foundation are now ready for Generative AI configuration in the next lab.
 
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
-
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
