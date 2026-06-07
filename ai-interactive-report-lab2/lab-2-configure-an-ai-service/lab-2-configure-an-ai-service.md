@@ -54,9 +54,9 @@ In this task, you will configure OCI Generative AI Service in your APEX workspac
 
 1. To configure the Generative AI service in your workspace, navigate to Oracle APEX Homepage from the left navigation menu and click **Enable AI** in the top navigation bar. This option appears only if no AI service has been configured yet.
 
-    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
-
     ![Open App Builder](images/navigate-to-app-builder.png " ")
+
+    Alternatively, from the workspace home page, navigate to **App Builder > Workspace Utilities > Generative AI** to access the configuration settings.
 
     ![Click Generative AI](images/navigate-to-generative-ai-services.png " ")
 
