@@ -70,7 +70,7 @@ In this task, you will configure OCI Generative AI Service in your APEX workspac
     - Name: **OCI Gen AI**
     - Compartment ID: Enter your OCI Compartment ID.
     - Region: Enter your OCI region. (Currently, the OCI Generative AI Service is only available in limited regions.)
-    - Model ID: **meta.llama-3.3-70b-instruct** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
+    - Model ID: **cohere.command-a-03-2025** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
     - Used by App Builder: Toggle **On**
     - Base URL: Leave the auto-generated value unchanged.
     - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential using the configuration details from Task 1.
