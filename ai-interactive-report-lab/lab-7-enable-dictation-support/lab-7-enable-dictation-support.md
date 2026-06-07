@@ -102,5 +102,5 @@ You enabled dictation in the application security settings and verified that voi
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
+- **Author** - Sahaana Manavalan, Senior Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, June 2026
