@@ -52,7 +52,7 @@ Report-level context tells the AI what the report is about, but column context t
 
     ![Select the PRIORITY_CODE column](images/select-priority-code-column.png)
 
-7. In the **Generative AI** section, locate **Column Context** and enter the following context value:
+7. In the **Generative AI** section, enter the following **Column Context** value:
 
     ```
     <copy>
@@ -66,7 +66,7 @@ Report-level context tells the AI what the report is about, but column context t
 
     ![Select the RAISED_AT column](images/select-raised-at-column.png)
 
-9. In the **Generative AI** section, locate **Column Context**, enter the following context value:
+9. In the **Generative AI** section, enter the following **Column Context** value:
 
     ```
     <copy>
@@ -76,7 +76,7 @@ Report-level context tells the AI what the report is about, but column context t
 
     ![Enter the RAISED_AT column context](images/enter-raised-at-column-context.png)
 
-10. Select the column **ALERT\_TYPE\_CODE**. In the **Generative AI** section, locate **Column Context** and enter the following context value:
+10. Select the column **ALERT\_TYPE\_CODE**. In the **Generative AI** section, enter the following **Column Context** value:
 
     ```
     <copy>
