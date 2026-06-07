@@ -92,7 +92,7 @@ Report-level context tells the AI what the report is about, but column context t
 
 ## Task 2: Configure Reference Data and Validate the Result
 
-Column context describes what a field means, but reference data tells the AI what values are valid. Use reference data when users ask questions that name specific values from a known list. Without it, the AI might guess values that do not exist, use incorrect spelling or capitalization, or apply invalid filter values that return no results. For example, when a user asks for "open alerts," the AI needs to know that the valid status values are OPEN, ACTIONED, and CLOSED. In this task, you will define reference values for categorical columns so the AI maps user terms to the correct filter values.
+Column context describes what a field means, but reference data tells the AI what values are valid. Use reference data when users ask questions that name specific values from a known list. Without it, the AI might guess values that do not exist, use incorrect spelling or capitalization, or apply invalid filter values that return no results. For example, when a user asks for "open alerts," the AI needs to know that the valid status values are OPEN, IN_REVIEW, ACTIONED, CLOSED, and SUPPRESSED. In this task, you will define reference values for categorical columns so the AI maps user terms to the correct filter values.
 
 1. Select the column **ALERT\_STATUS\_CODE**.
 
@@ -134,15 +134,15 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Enter the alert type static values and click OK](images/set-ref3.png)
 
-8. Select the column **WAREHOUSE_CODE**.
+7. Select the column **WAREHOUSE_CODE**.
 
     ![Select the WAREHOUSE_CODE column](images/select-warehouse-code-column.png)
 
-9. In the **Generative AI** section, set **Reference Data Type** to **SQL Query**.
+8. In the **Generative AI** section, set **Reference Data Type** to **SQL Query**.
 
     ![Set the reference data type to SQL Query](images/choose-sql-query-reference-data.png)
 
-10. In **SQL Query**, enter the following query so AI can retrieve the valid warehouse codes dynamically:
+9. In **SQL Query**, enter the following query so AI can retrieve the valid warehouse codes dynamically:
 
     ```
     <copy>
@@ -156,11 +156,11 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Enter the SQL query for warehouse code reference data](images/enter-warehouse-code-sql-query.png)
 
-11. Click **Save and Run**.
+10. Click **Save and Run**.
 
     ![Save and run the page with the column AI settings](images/save-and-run-page-with-column-ai-settings.png)
 
-12. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
+11. The replenishment report opens again with the saved column-level AI settings. The remaining validation of AI search and assistant behavior is covered in the next two labs.
 
 ## Summary
 

@@ -60,29 +60,35 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
     *"Show me all open alerts with high priority"*
 
-4. Confirm that the browser transcribes your speech into text in the search bar.
+4. After you finish speaking, confirm that dictation ends and the browser transcribes your speech into text in the search bar.
 
-5. Press **Enter** or click the search button to submit the prompt.
+5. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
-6. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
+    ![Microphone icon in the search bar](images/task2.png " ")
 
 ## Task 3: Use Dictation with the Chat Assistant
 
 The microphone icon also appears in the Chat Assistant you used in Lab 6. In this task, you will use voice input to submit a Group By prompt, demonstrating that the Assistant can handle complex report actions from spoken input. This also exercises the Group By feature, which creates a summary view showing grouped data with an aggregate function - a capability not covered in the previous labs.
 
-1. On the same report page, click **Assistant** to open the chat panel.
+1. Before asking a new question, reset the report or close any filter chips applied in the previous task.
 
-2. In the chat input field, click the **microphone** icon to start dictation.
+    ![Microphone icon in the assistant panel](images/chat-assistant.png " ")
 
-    ![Microphone icon in the assistant panel](images/assistant-microphone.png " ")
+2. Click **Assistant** icon to open the chat panel.
 
-3. Speak a prompt such as:
+    ![Microphone icon in the assistant panel](images/screen1.png " ")
+
+3. In the chat input field, click the **microphone** icon to start dictation.
+
+    ![Microphone icon in the assistant panel](images/screen2.png " ")
+
+4. Speak a prompt such as:
 
     *"Which product lines generate the most alerts? Group by item category"*
 
-4. Confirm that the browser transcribes your speech into the chat input field.
+5. Confirm that the browser transcribes your speech into the chat input field. Click the **microphone** icon again or press **Enter** to stop dictation.
 
-5. Send the prompt and confirm that the assistant applies a group by on item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
+6. Send the prompt and confirm that the assistant applies a group by on item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
 
     ![Microphone icon in the assistant panel](images/search-micro.png " ")
 

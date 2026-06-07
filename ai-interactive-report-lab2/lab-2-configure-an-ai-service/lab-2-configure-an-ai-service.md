@@ -142,7 +142,7 @@ In this task, you will configure OpenAI as a Generative AI Service in your APEX 
 
 ## Task 3: Link Your Generative AI Service to the Application
 
-In this task, you will link the Generative AI Service you configured in Task 2 to the SCM application. The steps are the same for either provider.
+In this task, you will link the Generative AI Service you configured in Task 2 to the SCM application.
 
 1. From the **Generative AI Services** page, select the **App Builder** icon in the left navigation.
 
@@ -162,7 +162,17 @@ In this task, you will link the Generative AI Service you configured in Task 2 t
 
 5. On the **AI** page, under **Generative AI**, set the **Service** to the service you configured earlier in this lab, then select **Apply Changes**.
 
+<if type="OCIGenAI">
+
     ![AI Attributes configured with the Generative AI Service](./images/gen-ai-setting.png " ")
+
+</if>
+
+<if type="OpenAI">
+
+    ![AI Attributes configured with the OpenAI Generative AI Service](./images/open-ai-gen-ai-setting.png " ")
+
+</if>
 
 ## Summary
 

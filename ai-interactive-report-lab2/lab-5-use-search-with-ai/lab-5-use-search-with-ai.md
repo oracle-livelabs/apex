@@ -50,7 +50,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Enter the sort prompt](images/enter-sort-prompt.png)
 
-7. Confirm that the report applies a descending sort on `QTY_TO_TARGET`.
+6. Confirm that the report applies a descending sort on `QTY_TO_TARGET`.
 
     ![Confirm the quantity sort](images/confirm-qty-sort.png)
 

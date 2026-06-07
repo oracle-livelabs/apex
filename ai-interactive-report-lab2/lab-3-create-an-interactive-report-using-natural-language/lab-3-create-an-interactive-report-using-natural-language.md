@@ -53,7 +53,7 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
     Confirm that the report renders from the view.
 
-    ![View the replenishment report](images/view-replenishment-report.png)
+    ![View the replenishment report](images/lab3-img.png)
 
 ## Task 2: Enable Natural Language on the Interactive Report
 
