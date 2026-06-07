@@ -56,13 +56,17 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
     ![Microphone icon in the search bar](images/search-bar-microphone.png " ")
 
-3. Speak a prompt such as:
+3. If the browser asks for permission to use your microphone, click **Allow**.
+
+    ![Browser microphone permission prompt](images/permissions.png " ")
+
+4. Speak a prompt such as:
 
     *"Show me all open alerts with high priority"*
 
-4. After you finish speaking, confirm that dictation ends and the browser transcribes your speech into text in the search bar.
+5. After you finish speaking, confirm that dictation ends and the browser transcribes your speech into text in the search bar.
 
-5. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
+6. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
     ![Microphone icon in the search bar](images/task2.png " ")
 
