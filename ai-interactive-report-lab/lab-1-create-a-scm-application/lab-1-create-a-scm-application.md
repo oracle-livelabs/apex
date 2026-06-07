@@ -11,24 +11,24 @@ Estimated Lab Time: 5 minutes
 In this lab, you will:
 
 - Download and run the SCM data model and sample data scripts.
-- Create a Supply Chain Management application in your workspace.
+- Create a Supply Chain Management application in your Workspace.
 - Review the sample SCM objects and confirm the application shell is ready.
 
 ## Task 1: Set Up the Data Model
 
-> **Note:** If you have already completed **Lab 1: Import the Data Model, Sample Data, and Base Application** in the *AI Agents* workshop using the same workspace, the data model and sample data are already loaded. You can skip **Task 1** and **Task 2** and proceed directly to **Task 3: Create a Supply Chain Management Application**.
+> **Note:** If you have already completed **Lab 1: Import the Data Model, Sample Data, and Base Application** in the *AI Agents* workshop using the same Workspace, the data model and sample data are already loaded. You can skip **Task 1** and **Task 2** and proceed directly to **Task 3: Create a Supply Chain Management Application**.
 
 Every AI Interactive Report feature in this workshop depends on a well-structured schema. In this task, you will upload and run the data model script that creates the warehouse tables, views, and the replenishment view (`SCM_REPLENISHMENT_V`). This view serves as the source for the Interactive Report you will build in Lab 3, and its column structure is what APEX shares with the LLM as report metadata when processing natural language prompts. The data model is compatible with Oracle Database 19c and later.
 
 1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
-2. Sign in to your Oracle APEX workspace using the credentials provided for this workshop.
+2. Sign in to your Oracle APEX Workspace using the credentials provided for this workshop.
 
-    ![Sign in to your workspace](images/login-workspace.png " ")
+    ![Sign in to your Workspace](images/login-workspace.png " ")
 
-3. From the Oracle APEX Home page, select **SQL Workshop**.
+3. From the Workspace home page, select **SQL Workshop**.
 
-    ![Select SQL Workshop from the Oracle APEX Home page](images/workspace-home.png " ")
+    ![Select SQL Workshop from the Workspace home page](images/workspace-home.png " ")
 
 4. From the **SQL Workshop** page, select **SQL Scripts**.
 
@@ -119,7 +119,7 @@ With the schema and data in place, you now need an APEX application to host the 
 
     ![Navigate to App Builder from the left navigation](images/sample-data2-return.png " ")
 
-2. On the **App Builder** page, click **Create** and start a new application.
+2. On the App Builder home page, select **Create** and start a new application.
 
     ![Create a new application](images/create-a-new-application.png " ")
 
@@ -127,9 +127,9 @@ With the schema and data in place, you now need an APEX application to host the 
 
     ![Name the application](images/name-the-application.png " ")
 
-4. Click **Create Application**.
+4. Select **Create Application**.
 
-    ![Click Create Application](images/click-create-application.png " ")
+    ![Select Create Application](images/click-create-application.png " ")
 
 5. Confirm that the new application appears in **App Builder**.
 
@@ -137,13 +137,13 @@ With the schema and data in place, you now need an APEX application to host the 
 
 ## Task 4: Review the Database Objects
 
-Before moving on, it is worth confirming that the setup scripts created the expected objects. In this task, you will open Object Browser and verify that the SCM tables and views are present in your schema. This quick check ensures everything is in place before you start configuring AI features.
+Before configuring AI features, verify that the setup scripts created the required database objects. In this task, you will use Object Browser to confirm that the SCM tables and views are available in your schema.
 
-1. Navigate to **SQL Workshop** icon, and then click **Object Browser**.
+1. Select the **SQL Workshop** icon, and then select **Object Browser**.
 
     ![Navigate to Object Browser](images/navigate-to-object-browser.png " ")
 
-2. Review the installed SCM objects that support replenishment reporting, by searching with SCM_ in your Object Browser to list the core tables and views created by the setup scripts.
+2. Review the installed SCM objects that support replenishment reporting by searching for `SCM_` in Object Browser to list the core tables and views created by the setup scripts.
 
     ![Identify SCM objects in Object Browser](images/identify-scm-objects.png " ")
 
@@ -151,7 +151,7 @@ Before moving on, it is worth confirming that the setup scripts created the expe
 
 When tables and views are created, the database updates instantly, but the APEX metadata cache does not. Without a refresh, the new SCM objects may not appear in page wizards, LOV queries, or the natural language report builder. In this task, you will refresh the Data Dictionary so APEX recognizes the new schema objects and can include them when generating pages or processing natural language prompts.
 
-1. To refresh database objects, click APEX **Administration** icon from the left menu above your user profile. Then select **Manage Service > Manage Service**.
+1. To refresh database objects, select the APEX **Administration** icon from the left menu above your user profile. Then select **Manage Service > Manage Service**.
 
     ![Navigate to Administration](images/nav-admin-callouts.png " ")
 
@@ -159,7 +159,7 @@ When tables and views are created, the database updates instantly, but the APEX 
 
     ![Select Data Dictionary Cache](images/data-dic.png " ")
 
-3. To refresh the cache manually, click **Refresh Cache Only**.
+3. To refresh the cache manually, select **Refresh Cache Only**.
 
     ![Refresh Cache Only](images/refresh-cache-only.png " ")
 

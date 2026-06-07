@@ -27,7 +27,7 @@
         {
             "title": "Lab 3: Create an Interactive Report using Natural Language",
             "filename": "../../lab-3-create-an-interactive-report-using-natural-language/lab-3-create-an-interactive-report-using-natural-language.md",
-            "description": "Create the replenishment report page on SCM_NL2IR_REPLENISHMENT_V and enable natural language support."
+            "description": "Create the replenishment report page on SCM_REPLENISHMENT_V and enable natural language support."
         },
         {
             "title": "Lab 4: Configure Column-Level AI Attributes",
@@ -47,7 +47,7 @@
         {
             "title": "Lab 7: Enable Dictation Support",
             "filename": "../../lab-7-enable-dictation-support/lab-7-enable-dictation-support.md",
-            "description": "Enable voice-to-text input for the Interactive Report search bar and chat assistant."
+            "description": "Enable voice-to-text input for the Interactive Report search bar and Chat Assistant."
         },
         {
             "title": "Need Help?",

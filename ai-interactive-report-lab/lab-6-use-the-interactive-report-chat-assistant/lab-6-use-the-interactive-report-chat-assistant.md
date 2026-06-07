@@ -17,9 +17,9 @@ In this lab, you will:
 
 ## Task 1: Build a Warehouse Alert Summary Report
 
-Like the Search with AI in search bar, the Assistant can use natural language to configure Interactive Reports. In this task, you will use the conversational panel to build a complete Warehouse Alert Summary report step by step, applying control breaks, aggregates, highlights, charts, and saved reports through follow-up prompts. This shows how report configurations can be layered incrementally without resetting between each request.
+Like Search with AI in the search bar, the Assistant can use natural language to configure Interactive Reports. In this task, you will use the conversational panel to build a complete Warehouse Alert Summary report step by step, applying control breaks, aggregates, highlights, charts, and saved reports through follow-up prompts. This shows how report configurations can be layered incrementally without resetting between each request.
 
-1. Remove any existing filter chips and click **Assistant** to open the right-side chat panel for the Interactive Report.
+1. Remove any existing filter chips and select **Assistant** to open the right-side chat panel for the Interactive Report.
 
     ![Open the assistant panel](images/open-assistant-panel.png " ")
 

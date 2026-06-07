@@ -22,7 +22,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Open the replenishment report](images/open-replenishment-report.png)
 
-2. In the report Search Bar, enter the following and press **enter**.
+2. In the report search bar, enter the following and press **Enter**.
 
     ```
     <copy>
@@ -36,11 +36,11 @@ With all the AI configuration in place, you can now see the feature in action. W
 
     ![Confirm the open alert chip](images/confirm-open-alert-chip.png)
 
-4. Remove the chip by clicking **X**.
+4. Remove the chip by selecting **X**.
 
     ![Remove the open alert chip](images/remove-open-alert-chip.png)
 
-5. In the search bar, enter the following and hit enter.
+5. In the search bar, enter the following and press **Enter**.
 
     ```
     <copy>
@@ -58,7 +58,7 @@ With all the AI configuration in place, you can now see the feature in action. W
 
 The search bar supports two modes: Row Search and Search with AI. Short keyword inputs (fewer than three words) trigger an immediate Row Search, while longer natural language prompts are routed to the AI for interpretation. This design preserves the existing Interactive Report search behavior while enabling natural language input in the same control. In this task, you will compare both modes and observe how the report determines which one to apply.
 
-1. Remove the filter chip. In the search bar, enter *PixelWave* and hit enter.
+1. Remove the filter chip. In the search bar, enter `PixelWave` and press **Enter**.
 
     ![Enter the row search](images/enter-warehouse-row-search.png)
 
@@ -66,7 +66,7 @@ The search bar supports two modes: Row Search and Search with AI. Short keyword 
 
     ![Confirm the row search behavior](images/confirm-row-search-behavior.png)
 
-3. Now, remove the filter chip and enter the following AI-style prompt and hit enter.
+3. Now, remove the filter chip, enter the following AI-style prompt, and press **Enter**.
 
     ```
     <copy>

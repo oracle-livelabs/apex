@@ -22,41 +22,26 @@ In this workshop you will:
 - Create an Interactive Report using natural language.
 - Enable natural language support for the report and add SCM report context.
 - Configure column-level AI metadata for key SCM report columns.
-- Use Search with AI and the chat assistant to analyze replenishment alerts.
+- Use Search with AI and the Chat Assistant to analyze replenishment alerts.
 - Enable dictation support for voice-to-text input.
 
 ## Prerequisites
 
-- An APEX workspace running on an Oracle Database 19c or later.
+- An APEX Workspace running on an Oracle Database 19c or later.
 
-- An API key for the AI Provider of your choice. (OCI Gen AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama and Generic(OpenAI API Compatible))
+- An API key for the AI provider of your choice, such as OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or a generic OpenAI-compatible provider.
 
-- If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
+- If you choose OCI Generative AI as your AI provider, the prerequisites are as follows:
 
-    - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: oracle.com/cloud/free/. The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+    - A paid Oracle Cloud Infrastructure (OCI) account or a free Oracle Cloud account with trial credits. Read more about it at: oracle.com/cloud/free/. The OCI account must be created in or subscribed to a region that supports OCI Generative AI Service and the model you plan to use. To see whether your cloud region supports OCI Generative AI Service, visit the documentation.
 
-        - Brazil East (Sao Paulo)
-        - Germany Central (Frankfurt)
-        - India South (Hyderabad)
-        - Japan Central (Osaka)
-        - Saudi Arabia Central (Riyadh)
-        - UAE East (Dubai)
-        - UK South (London)
-        - US East (Ashburn)
-        - US Midwest (Chicago)
-        - US West (Phoenix)
-
-    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the documentation.
-
-    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments: the tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
     - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-*Note*:
-
-- This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
-
-- The application ID in the screenshots may vary. Please ignore the application ID.
+> **Note:** This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+>
+> The application ID in the screenshots may vary. Please ignore the application ID.
 
 ## Lab Modules
 
@@ -76,7 +61,7 @@ If you are stuck or the application is not working as expected, you can download
 
 - Download the [ai-interactive-report-lab.sql](files/ai-interactive-report-lab.sql) completed application export file.
 
-- Import the *ai-interactive-report-lab.sql* file into your APEX workspace. Follow the steps in the Import Application wizard to import the application.
+- Import the *ai-interactive-report-lab.sql* file into your APEX Workspace. Follow the steps in the Import Application wizard to import the application.
 
 - Follow **Lab 1 > Task 1 and Task 2** to load the data model and sample data.
 
@@ -86,9 +71,9 @@ If you are stuck or the application is not working as expected, you can download
 
 ## Uninstall the Application and Data Model
 
-After completing the workshop, follow these steps to remove the application and data model from your workspace.
+After completing the workshop, follow these steps to remove the application and data model from your Workspace.
 
-1. To delete the application, open the application from **App Builder**. On the application home page, under **Tasks** on the right side, select **Delete Application** and follow the delete wizard.
+1. To delete the application, open the application from **App Builder**. On the Application home page, under **Tasks** on the right side, select **Delete Application** and follow the delete wizard.
 
 2. To remove the SCM data model and all associated database objects, download and run the [04\_SCM\_INV\_WMS\_UNINSTALL.sql](./files/04_SCM_INV_WMS_UNINSTALL.sql) script from **SQL Workshop > SQL Scripts**. This drops all tables, views, procedures, and indexes with the `SCM_` prefix.
 

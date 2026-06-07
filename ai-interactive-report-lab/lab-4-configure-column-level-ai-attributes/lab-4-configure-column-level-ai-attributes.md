@@ -86,7 +86,7 @@ Report-level context tells the AI what the report is about, but column context t
 
     ![Enter the ALERT_TYPE_CODE column context](images/alter-context.png)
 
-11. Click **Save**.
+11. Select **Save**.
 
     ![Save the column context updates](images/save-column-context-updates.png)
 
@@ -104,7 +104,7 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Set the reference data type to Static Values](images/choose-static-values-reference-data.png)
 
-4. Click **Static Values**. In the dialog, replace the sample rows with the alert status values used by the replenishment report. Enter the following values, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
+4. Select **Static Values**. In the dialog, replace the sample rows with the alert status values used by the replenishment report. Enter the following values, using the same text for both **Display Value** and **Return Value**, and then select **OK**.
 
     | Display Value | Return Value |
     | --- | --- |
@@ -115,13 +115,13 @@ Column context describes what a field means, but reference data tells the AI wha
     | `SUPPRESSED` | `SUPPRESSED` |
     {: title="Alert Status Static Values"}
 
-    ![Enter the alert status static values and click OK](images/inreview.png)
+    ![Enter the alert status static values and select OK](images/inreview.png)
 
 5. Select the column **ALERT\_TYPE\_CODE**. In the **Generative AI** section, set **Reference Data Type** to **Static Values**.
 
     ![Select the ALERT_TYPE_CODE column for reference data](images/set-ref2.png)
 
-6. Click **Static Values**. In the dialog, enter the following values, using the same text for both **Display Value** and **Return Value**, and then click **OK**.
+6. Select **Static Values**. In the dialog, enter the following values, using the same text for both **Display Value** and **Return Value**, and then select **OK**.
 
     | Display Value | Return Value |
     | --- | --- |
@@ -132,7 +132,7 @@ Column context describes what a field means, but reference data tells the AI wha
     | `SHORT_DATED_REVIEW` | `SHORT_DATED_REVIEW` |
     {: title="Alert Type Static Values"}
 
-    ![Enter the alert type static values and click OK](images/set-ref3.png)
+    ![Enter the alert type static values and select OK](images/set-ref3.png)
 
 7. Select the column **WAREHOUSE_CODE**.
 
@@ -156,7 +156,7 @@ Column context describes what a field means, but reference data tells the AI wha
 
     ![Enter the SQL query for warehouse code reference data](images/enter-warehouse-code-sql-query.png)
 
-10. Click **Save and Run**.
+10. Select **Save and Run**.
 
     ![Save and run the page with the column AI settings](images/save-and-run-page-with-column-ai-settings.png)
 
@@ -169,4 +169,4 @@ You configured column context and reference data for key columns in the replenis
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, April 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
