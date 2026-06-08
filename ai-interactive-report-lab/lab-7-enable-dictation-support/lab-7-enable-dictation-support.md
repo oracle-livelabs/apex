@@ -105,7 +105,7 @@ The microphone icon also appears in the Chat Assistant. In this task, you will s
     This prompt asks the Assistant to group the report by item category and count the alerts in each group, creating a summary view of alert volume by product line.
 
 5. The browser transcribes your speech into the chat input field.
-Select the **microphone** icon again or press **Enter** to stop dictation and send the prompt. Confirm that the Chat Assistant groups the report by item category with a count of alerts.
+Select the **microphone** icon again to stop transcription, then press **Enter** or select the **Send Message** button to submit the prompt. Confirm that the Chat Assistant groups the report by item category with a count of alerts.
 
     [Dictation with Search with AI](videohub:1_bfqd2ni0)
 
