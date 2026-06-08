@@ -8,7 +8,7 @@ Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
 - Download and run the SCM data model and sample data scripts.
 - Create a Supply Chain Management application in your Workspace.
@@ -139,7 +139,7 @@ With the schema and data in place, you now need an APEX application to host the 
 
 Before configuring AI features, verify that the setup scripts created the required database objects. In this task, you will use Object Browser to confirm that the SCM tables and views are available in your schema.
 
-1. Select the **SQL Workshop** icon, and then select **Object Browser**.
+1. In the left navigation, hover over the **SQL Workshop** icon and select **Object Browser**.
 
     ![Navigate to Object Browser](images/navigate-to-object-browser.png " ")
 
@@ -170,6 +170,8 @@ When tables and views are created, the database updates instantly, but the APEX 
 ## Summary
 
 You loaded the SCM data model and sample data, created the Supply Chain Management application, and verified that the required database objects are available. The application and data foundation are now ready for Generative AI configuration in the next lab.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

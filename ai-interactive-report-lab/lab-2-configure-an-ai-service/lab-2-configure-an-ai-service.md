@@ -10,7 +10,7 @@ Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
 - Generate or gather provider credentials.
 - Configure a Generative AI Service in your APEX Workspace.

@@ -10,7 +10,7 @@ Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
 - Organize the report by warehouse with alert count aggregates and highlight low-stock items.
 - Chart alert volume across the network and save the finished view for reuse.
@@ -92,6 +92,8 @@ Like Search with AI in the search bar, the Assistant can use natural language to
 ## Summary
 
 You used the Interactive Report Chat Assistant to build a Warehouse Alert Summary report through conversational prompts. You organized the report by warehouse with a control break and alert count aggregate, highlighted critically low stock items, charted alert volume across the network, and saved the finished view for reuse. Each configuration was applied as standard Interactive Report settings, ensuring the experience remains consistent with existing Interactive Report behavior.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

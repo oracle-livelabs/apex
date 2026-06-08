@@ -12,7 +12,7 @@ Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
 - Add SCM-specific column context to key report columns.
 - Define reference values for status and warehouse-related columns.
@@ -165,6 +165,8 @@ Column context describes what a field means, but reference data tells the AI wha
 ## Summary
 
 You configured column context and reference data for key columns in the replenishment report. The AI can now correctly interpret business terms like "replenishment quantity," "high priority," and "open alerts," and map them to the appropriate columns and valid filter values. The report is ready for natural language interaction in the next labs.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 

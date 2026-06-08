@@ -8,14 +8,14 @@ Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
 - Create an Interactive Report page using natural language.
 - Enable natural language support for the report region.
 
 ## Task 1: Build an Interactive Report page from a view
 
-Oracle APEX can generate an Interactive Report page from a natural language description, selecting the appropriate source object and configuring the region automatically. No menus, no dialogs - just describe what you need. In this task, you will use that capability to create a replenishment report page based on **SCM\_REPLENISHMENT\_V**, the view created by the data model script in Lab 1.
+Oracle APEX can generate an Interactive Report page from a natural language description, selecting the appropriate source object and configuring the region automatically. Instead of navigating through menus and dialogs, you describe the page you need and APEX builds it for you. In this task, you will use that capability to create a replenishment report page based on **SCM\_REPLENISHMENT\_V**, the view created by the data model script in Lab 1.
 
 1. Select **Application &lt;APP\_ID&gt;** in the breadcrumb to return to the Application home page.
 
@@ -23,11 +23,11 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
 2. From the Application home page, select **Create Page**.
 
-    ![Select Create Page](images/review-pages-and-shared-components.png)
+    ![Select Create Page](images/review-pages-and-shared-components.png " ")
 
 3. If the APEX Assistant asks for consent the first time you use Generative AI in the development environment, select **Accept**.
 
-    ![Accept the consent dialog](images/click-ok.png)
+    ![Accept the consent dialog](images/click-ok.png " ")
 
 4. Use natural language to request a new Interactive Report page based on the view **SCM\_REPLENISHMENT\_V**. For example, enter:
 
@@ -37,23 +37,23 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
     </copy>
     ```
 
-    ![Enter the Interactive Report prompt](images/enter-interactive-report-prompt.png)
+    ![Enter the Interactive Report prompt](images/enter-interactive-report-prompt.png " ")
 
 5. Review the generated page, then select **Create Page**.
 
-    ![Create the report page from the SCM view](images/create-report-page-from-view.png)
+    ![Create the report page from the SCM view](images/create-report-page-from-view.png " ")
 
 6. Review the suggested page details, change **Page Name** to **SCM Replenishment**, confirm that **Table / View Name** is **SCM\_REPLENISHMENT\_V**, then select **Create Page**.
 
-    ![Review the generated page details and create the page](images/review-generated-report-page-details.png)
+    ![Review the generated page details and create the page](images/review-generated-report-page-details.png " ")
 
 7. Select **Run**.
 
-    ![Run the replenishment report](images/run-replenishment-report.png)
+    ![Run the replenishment report](images/run-replenishment-report.png " ")
 
     Confirm that the report renders from the view.
 
-    ![View the replenishment report](images/lab30image.png)
+    ![View the replenishment report](images/lab30image.png " ")
 
 ## Task 2: Enable Natural Language on the Interactive Report
 
@@ -63,7 +63,7 @@ Creating the report page is only half the setup. To generate report settings, AP
 
 2. In the **Generative AI** section, turn **Natural Language Support** **On**.
 
-    ![Open the report region attributes](images/enable-natural-language-support.png)
+    ![Open the report region attributes](images/enable-natural-language-support.png " ")
 
 3. Confirm **Default Search Mode** is **Search with AI**.
 
@@ -75,17 +75,19 @@ Creating the report page is only half the setup. To generate report settings, AP
     </copy>
     ```
 
-    ![Use the Report Context field](images/enter-report-context.png)
+    ![Use the Report Context field](images/enter-report-context.png " ")
 
 5. Select **Save and Run Page**.
 
 6. Confirm that the report opens with the conversational search bar.
 
-    ![Confirm Search with AI and the processing state](images/lab3-image2.png)
+    ![Confirm Search with AI and the processing state](images/lab3-image2.png " ")
 
 ## Summary
 
 You created an Interactive Report using natural language, enabled natural language support for the report region, and added SCM-specific report context. The report is now ready for column-level AI configuration in the next lab.
+
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
