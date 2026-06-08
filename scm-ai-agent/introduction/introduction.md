@@ -128,7 +128,7 @@ After completing the workshop, follow these steps to remove the application and 
 ## Learn More
 
 - [Oracle APEX](https://apex.oracle.com)
-- [APEX AI Agents Documentation](https://docs.oracle.com/en/database/oracle/apex/)
+- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
 - [APEX Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [APEX Community](https://apex.oracle.com/community)
 

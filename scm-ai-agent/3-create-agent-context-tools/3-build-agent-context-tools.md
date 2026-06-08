@@ -187,7 +187,7 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agents.html)
+- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
 - [AI Agent Tools](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agent-tools.html)
 
 ## Acknowledgements

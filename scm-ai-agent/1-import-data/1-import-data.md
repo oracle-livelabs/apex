@@ -20,7 +20,7 @@ In this lab, you will:
 
 ## Task 1: Set Up the Data Model
 
-> **Note:** If you completed **Lab 1: Create a Supply Chain Management Application** in the [AI Interactive Report](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?clear=RR,180&wid=4406) workshop on the same workspace, the data model and sample data are already loaded. Skip **Task 1** and **Task 2** and proceed to **Task 3: Import the SCM Application**.
+> **Note:** If you completed **Lab 1: Create a Supply Chain Management Application** in the [Build an AI Interactive Report in Oracle APEX](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?clear=RR,180&wid=4406) workshop on the same workspace, the data model and sample data are already loaded. Skip **Task 1** and **Task 2** and proceed to **Task 3: Import the SCM Application**.
 
 In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs. The data model is compatible with Oracle Database 19c and later.
 
