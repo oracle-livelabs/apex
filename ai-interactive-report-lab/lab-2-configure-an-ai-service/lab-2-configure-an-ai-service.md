@@ -174,7 +174,7 @@ In this task, you will link the Generative AI Service you configured in Task 2 t
 
 ## Summary
 
-The Generative AI Service is now configured and linked to the application. APEX can now send report metadata to the LLM when processing natural language prompts. You are ready to create the AI Interactive Report in the next lab.
+You configured a Generative AI Service in your APEX Workspace, tested the connection, and linked the service to the Supply Chain Management application. The application is now connected to a Generative AI provider and ready for AI Interactive Report configuration in the next lab.
 
 You may now **proceed to the next lab**.
 
