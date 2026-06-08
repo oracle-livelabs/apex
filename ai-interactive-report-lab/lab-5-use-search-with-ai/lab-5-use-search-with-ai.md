@@ -86,7 +86,7 @@ The search bar supports two modes: Row Search and Search with AI. Short keyword 
 
 ## Summary
 
-You used Search with AI to filter and sort the replenishment report with natural language, compared it with Row Search, and refined the generated chips manually. Every configuration the AI applied was surfaced as a visible chip, making the result transparent, reviewable, and easy to adjust.
+You used Search with AI to filter and sort the replenishment report with natural language prompts and compared AI Search behavior with Row Search. Each AI-generated configuration was surfaced as a visible chip, allowing you to review what was applied.
 
 You may now **proceed to the next lab**.
 

@@ -164,7 +164,7 @@ Column context describes what a field means, but reference data tells the AI wha
 
 ## Summary
 
-You configured column context and reference data for key columns in the replenishment report. The AI can now correctly interpret business terms like "replenishment quantity," "high priority," and "open alerts," and map them to the appropriate columns and valid filter values. The report is ready for natural language interaction in the next labs.
+You added column context to describe the business meaning of key report columns and defined reference data for status, alert type, and warehouse columns. These settings give the AI the vocabulary it needs to map natural language terms to the correct columns and valid filter values. The report is ready for natural language interaction in the next labs.
 
 You may now **proceed to the next lab**.
 
