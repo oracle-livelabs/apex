@@ -2,7 +2,7 @@
 
 ## About This Workshop
 
-When an item falls below its reorder point and the replenishment alert reaches CRITICAL, a warehouse manager needs fast answers: which items are at risk, which suppliers can help, and who delivers most reliably.
+Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have.When an item falls below its reorder point and the replenishment alert reaches CRITICAL, a warehouse manager needs fast answers: which items are at risk, which suppliers can help, and who delivers most reliably.
 
 AI Agents in Oracle APEX give your application the ability to reason through these questions and act on the answers. Instead of navigating multiple reports and forms, a user can open a chat panel and have a guided conversation. The agent understands who the user is, retrieves the right data, compares options, asks for confirmation, and raises a purchase order, all without leaving the application.
 
