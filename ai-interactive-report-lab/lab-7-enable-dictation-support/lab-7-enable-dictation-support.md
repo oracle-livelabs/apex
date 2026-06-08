@@ -24,7 +24,7 @@ In this lab, you learn how to:
 
 Dictation is disabled by default because speech may be processed by third-party servers depending on the browser. In this task, you will enable dictation in the application security settings so the microphone icon appears in the search bar and Chat Assistant.
 
-1. From the App Builder home page, open the **Supply Chain Management** application. On the Application home page, select **Shared Components**.
+1. From the App Builder, select **Shared Components**.
 
     ![Navigate to Shared Components](images/shared-comp.png " ")
 
