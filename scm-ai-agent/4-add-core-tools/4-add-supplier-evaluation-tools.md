@@ -4,7 +4,7 @@
 
 With the agent created and context tools in place from Lab 3, you can now add the tools that drive the actual procurement conversation.
 
-Each tool in this lab represents one step in the procurement journey:
+Each tool in this lab represents one step in the procurement process:
 
 1. **Identify the problem**: scan the warehouse for items at or below their reorder point
 2. **Find who can help**: look up active suppliers with a delivery history for that item
@@ -14,7 +14,7 @@ Each tool in this lab represents one step in the procurement journey:
 
 All five tools use the **On Demand** execution point, meaning the agent only calls them when the conversation reaches that step. The agent uses the context from Lab 3 (who the user is and which warehouse they belong to) to make every answer specific to the person asking.
 
-Estimated Time: 20 minutes
+Estimated Lab Time: 20 minutes
 
 ### Objectives
 
@@ -37,7 +37,7 @@ In this lab, you will:
 
 ## Task 1: Identify Items at Risk in the Warehouse
 
-The procurement conversation starts here. The user opens the assistant and asks what needs attention, and the agent needs a way to answer that question with real data from the warehouse. This tool scans for items that are at or below their reorder point, or already have an open replenishment alert, and returns them ordered by priority. The result gives the user a clear, ranked list of what to act on first.
+The procurement conversation starts here. The user asks what needs attention, and the agent returns items at or below their reorder point, or with an open replenishment alert, ordered by priority. The result gives the user a clear, ranked list of what to act on first.
 
 **Type:** Retrieve Data | **Execution:** On Demand
 
@@ -94,7 +94,7 @@ The procurement conversation starts here. The user opens the assistant and asks 
 
 4. Click **Create**.
 
-    ![Entered SQL for the get\_stocks\_at\_risk tool](./images/task1-create.png " ")
+    ![Procurement Agent with get_stocks_at_risk tool saved](./images/task1-create.png " ")
 
 5. The `scm_v_stocks_at_risk` view encapsulates the following tables:
 
@@ -113,7 +113,7 @@ The procurement conversation starts here. The user opens the assistant and asks 
 
 ## Task 2: Find Suppliers for a Selected Item
 
-Once the user picks an at-risk item, the conversation moves to finding who can supply it. Knowing the item is low is only half the answer: the user also needs to know their options before they can take action. This tool returns active suppliers who have a delivery history for the selected item, along with on-time rate and damage rate, so the user can compare at a glance and move toward a decision.
+Once the user picks an at-risk item, the conversation moves to finding who can supply it. Identifying the shortage is only the first step. The user also needs to see available suppliers before taking action. This tool returns active suppliers who have a delivery history for the selected item, along with on-time rate and damage rate, so the user can compare at a glance and move toward a decision.
 
 **Type:** Retrieve Data | **Execution:** On Demand
 
@@ -253,7 +253,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
 
 ## Task 4: Show Available Warehouses for a Supplier
 
-With a supplier chosen, the conversation turns to where the order should go. A purchase order needs a destination warehouse, but asking the user to type a warehouse ID is a poor experience and prone to error. This tool presents only the warehouses that the chosen supplier has actually delivered to before, giving the user a grounded, relevant list to choose from. The agent waits for the user's selection and uses the matching warehouse ID internally. The user never sees a number.
+With a supplier chosen, the conversation turns to where the order should go. A purchase order needs a destination warehouse, but requiring users to type a warehouse ID introduces unnecessary friction and error risk. This tool presents only the warehouses that the chosen supplier has actually delivered to before, giving the user a grounded, relevant list to choose from. The agent waits for the user's selection and uses the matching warehouse ID internally. The user never sees a number.
 
 **Type:** Retrieve Data | **Execution:** On Demand
 
@@ -318,7 +318,9 @@ With a supplier chosen, the conversation turns to where the order should go. A p
 
 ## Task 5: Create the Purchase Order and Action the Replenishment Alert
 
-This is where the conversation becomes an action. The user has identified a shortage, chosen a supplier, picked a warehouse, and specified a quantity and date. Now the agent executes. This tool writes the planned purchase order to the database, marks the replenishment alert as actioned so it no longer appears as open, and pushes a success notification back to the chat panel, all in a single PL/SQL block.
+This is where the conversation becomes an action. The user has identified a shortage, chosen a supplier, picked a warehouse, and specified a quantity and date. Now the agent executes.
+
+This tool writes the planned purchase order to the database, marks the replenishment alert as actioned so it no longer appears as open, and pushes a success notification back to the chat panel, all in a single PL/SQL block.
 
 The agent only calls this tool after all previous steps are complete. Because this tool writes to the database, you will enable **Requires Confirmation** so that APEX presents a confirmation dialog to the user before the tool runs. This is a built-in capability available on every tool — no custom code required.
 
@@ -396,7 +398,7 @@ The agent only calls this tool after all previous steps are complete. Because th
     - Approve Label: **Raise PO**
     - Cancel Label: **Cancel**
 
-    This ensures the user sees a confirmation dialog summarising the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
+    This ensures the user sees a confirmation dialog summarizing the order before the tool executes. If the user clicks **Cancel**, the tool does not run.
 
     ![User Approval settings for raise\_purchase\_order](./images/user-app.png " ")
 
@@ -425,9 +427,15 @@ The agent only calls this tool after all previous steps are complete. Because th
 
 ## Summary
 
-All seven tools are now in place: the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`) plus the five procurement tools added in this lab. The agent can now identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, and raise a purchase order, all through a single guided conversation.
+You added all five procurement tools in this lab. Combined with the two context tools from Lab 3 (`get_user_context` and `get_browser_timezone`), the agent now has seven tools. It can identify stock at risk, evaluate suppliers, review delivery performance, confirm the destination warehouse, and raise a purchase order, all through a single guided conversation.
 
 You may now **proceed to the next lab**.
+
+## Learn More
+
+- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agents.html)
+- [AI Agent Tools](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agent-tools.html)
+- [apex\_ai.set\_tool\_result](https://docs.oracle.com/en/database/oracle/apex/26.1/aeapi/APEX_AI.html)
 
 ## Acknowledgements
 
