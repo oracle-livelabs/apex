@@ -72,11 +72,9 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
     This prompt asks the AI to filter the report to only show alerts that have an open status and a high priority level.
 
-5. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt.
+5. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
-6. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
-
-    ![Filter chips applied from voice input](images/task2.png " ")
+    [Dictation with Search with AI](videohub:1_bfqd2ni0)
 
 ## Task 3: Use Dictation with the Chat Assistant
 
@@ -105,11 +103,9 @@ The microphone icon also appears in the Chat Assistant. In this task, you will s
     This prompt asks the Assistant to group the report by item category and count the alerts in each group, creating a summary view of alert volume by product line.
 
 5. The browser transcribes your speech into the chat input field.
-Select the **microphone** icon again or press **Enter** to stop dictation and send the prompt.
+Select the **microphone** icon again or press **Enter** to stop dictation and send the prompt. Confirm that the Chat Assistant groups the report by item category with a count of alerts.
 
-6. Confirm that the Chat Assistant groups the report by item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
-
-    ![Group By applied from voice input](images/search-micro.png " ")
+    [Dictation with the Chat Assistant](videohub:1_assssdui)
 
 ## Summary
 
