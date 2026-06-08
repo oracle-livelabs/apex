@@ -74,7 +74,9 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
 5. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
-    [Dictation with Search with AI](videohub:1_bfqd2ni0)
+    [Dictation with the Chat Assistant](videohub:1_assssdui)
+
+    ![Filter chips applied from voice input](images/task2.png " ")
 
 ## Task 3: Use Dictation with the Chat Assistant
 
@@ -105,7 +107,9 @@ The microphone icon also appears in the Chat Assistant. In this task, you will s
 5. The browser transcribes your speech into the chat input field.
 Select the **microphone** icon again or press **Enter** to stop dictation and send the prompt. Confirm that the Chat Assistant groups the report by item category with a count of alerts.
 
-    [Dictation with the Chat Assistant](videohub:1_assssdui)
+    [Dictation with Search with AI](videohub:1_bfqd2ni0)
+
+    ![Group By applied from voice input](images/search-micro.png " ")
 
 ## Summary
 
