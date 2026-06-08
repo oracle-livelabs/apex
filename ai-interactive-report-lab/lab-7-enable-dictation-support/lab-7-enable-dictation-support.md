@@ -50,17 +50,15 @@ Dictation is disabled by default because speech may be processed by third-party 
 
 With dictation enabled, a microphone icon now appears in the Interactive Report search bar. In this task, you will speak a search prompt and confirm that the AI applies the same report actions it would for typed input.
 
-1. Run the **SCM Replenishment** report page.
-
-2. In the report search bar, select the **microphone** icon to start dictation.
+1. In the report search bar, select the **microphone** icon to start dictation.
 
     ![Microphone icon in the search bar](images/search-bar-microphone.png " ")
 
-3. If the browser asks for permission to use your microphone, select **Allow**.
+2. If the browser asks for permission to use your microphone, select **Allow**.
 
     ![Browser microphone permission prompt](images/permissions.png " ")
 
-4. Speak a prompt such as:
+3. Speak a prompt such as:
 
     ```
     <copy>
@@ -70,7 +68,7 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
     This prompt asks the AI to filter the report to only show alerts that have an open status and a high priority level.
 
-5. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
+4. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
     [Dictation with the Chat Assistant](videohub:1_assssdui)
 
