@@ -45,7 +45,7 @@
             "description": "Use chat prompts to analyze, refine, visualize, and save report views."
         },
         {
-            "title": "Lab 7: Enable Dictation Support",
+            "title": "Lab 7: Enable Dictation Support [Optional]",
             "filename": "../../lab-7-enable-dictation-support/lab-7-enable-dictation-support.md",
             "description": "Enable voice-to-text input for the Interactive Report search bar and Chat Assistant."
         },
