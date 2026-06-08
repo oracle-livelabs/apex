@@ -2,17 +2,17 @@
 
 ## Introduction
 
-This lab enables dictation so users can interact with AI Interactive Reports using their voice. Oracle APEX uses the Web Speech API to convert speech into text directly in the browser. Once enabled, a microphone icon appears in the search bar and the Chat Assistant, allowing hands-free interaction with the AI features you configured in previous labs. Speech is processed by the end user's browser and may be sent to third-party servers depending on the browser implementation. For this reason, dictation is disabled by default.
+Oracle APEX supports browser-based dictation through the Web Speech API, allowing users to speak prompts instead of typing them. Once enabled, a microphone icon appears in the search bar and the Chat Assistant. In this lab, you will enable dictation at the application level and test voice input with the AI Interactive Report features you configured in previous labs.
 
 Estimated Lab Time: 5 minutes
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you learn how to:
 
-- Enable dictation at the application level.
-- Use voice input with the Interactive Report search bar.
-- Use voice input with the Interactive Report Chat Assistant.
+- Enable dictation in the application security settings.
+- Use voice input to filter a report with Search with AI.
+- Use voice input to configure a report with the Chat Assistant.
 
 ### Prerequisites
 
@@ -22,17 +22,19 @@ In this lab, you will:
 
 ## Task 1: Enable Dictation in the Application Definition
 
-Oracle APEX supports browser-based dictation through the Web Speech API. Because this feature has security and privacy considerations, the setting must be explicitly enabled by the developer. In this task, you will enable dictation at the application level so the microphone icon appears in supported components.
+Dictation is disabled by default because speech may be processed by third-party servers depending on the browser. In this task, you will enable dictation in the application security settings so the microphone icon appears in the search bar and Chat Assistant.
 
-1. From the App Builder home page, open the **Supply Chain Management** application. On the Application home page, select **Shared Components**.
+1. From the App Builder home page, open the **Supply Chain Management** application.
+On the Application home page, select **Shared Components**.
 
     ![Navigate to Shared Components](images/shared-comp.png " ")
 
-2. Under **Security**, select **Security Attributes**.
+2. Under Security, select **Security Attributes**.
 
     ![Open Security Attributes](images/security.png " ")
 
-3. Select the **Browser Security** tab. Toggle **Enable Dictation** on.
+3. Select the **Browser Security** tab.
+Toggle **Enable Dictation** on.
 
     ![Enable Dictation](images/browser-security.png " ")
 
@@ -48,7 +50,7 @@ Oracle APEX supports browser-based dictation through the Web Speech API. Because
 
 ## Task 2: Use Dictation with Search with AI
 
-With dictation enabled, a microphone icon now appears in the Interactive Report search bar. In this task, you will use voice input to submit a search prompt and confirm that the AI processes spoken input the same way it processes typed text. The search bar does not differentiate between typed and dictated input - both are interpreted by the AI and applied as Interactive Report settings.
+With dictation enabled, a microphone icon now appears in the Interactive Report search bar. In this task, you will speak a search prompt and confirm that the AI applies the same report actions it would for typed input.
 
 1. Run the **SCM Replenishment** report page.
 
@@ -62,43 +64,52 @@ With dictation enabled, a microphone icon now appears in the Interactive Report 
 
 4. Speak a prompt such as:
 
-    *"Show me all open alerts with high priority"*
+    ```
+    <copy>
+    Show me all open alerts with high priority
+    </copy>
+    ```
 
-5. After you finish speaking, confirm that dictation ends and the browser transcribes your speech into text in the search bar.
+5. After you finish speaking, the browser transcribes your speech into the search bar and submits the prompt.
 
 6. Confirm that the report applies the expected filter chips, just as it would with a typed prompt.
 
-    ![Microphone icon in the search bar](images/task2.png " ")
+    ![Filter chips applied from voice input](images/task2.png " ")
 
 ## Task 3: Use Dictation with the Chat Assistant
 
-The microphone icon also appears in the Chat Assistant you used in Lab 6. In this task, you will use voice input to submit a Group By prompt, demonstrating that the Chat Assistant can handle complex report actions from spoken input. This also exercises the Group By feature, which creates a summary view showing grouped data with an aggregate function - a capability not covered in the previous labs.
+The microphone icon also appears in the Chat Assistant. In this task, you will speak a Group By prompt and confirm that the Assistant applies the report action from voice input.
 
-1. Before asking a new question, reset the report or close any filter chips applied in the previous task.
+1. Reset the report or close any filter chips applied in the previous task.
 
-    ![Microphone icon in the assistant panel](images/chat-assistant.png " ")
+    ![Reset the report](images/chat-assistant.png " ")
 
 2. Select the **Assistant** icon to open the chat panel.
 
-    ![Microphone icon in the assistant panel](images/screen1.png " ")
+    ![Open the Assistant panel](images/screen1.png " ")
 
 3. In the chat input field, select the **microphone** icon to start dictation.
 
-    ![Microphone icon in the assistant panel](images/screen2.png " ")
+    ![Microphone icon in the chat input field](images/screen2.png " ")
 
 4. Speak a prompt such as:
 
-    *"Which product lines generate the most alerts? Group by item category"*
+    ```
+    <copy>
+    Which product lines generate the most alerts? Group by item category
+    </copy>
+    ```
 
-5. Confirm that the browser transcribes your speech into the chat input field. Select the **microphone** icon again or press **Enter** to stop dictation.
+5. The browser transcribes your speech into the chat input field.
+Select the **microphone** icon again or press **Enter** to stop dictation and send the prompt.
 
-6. Send the prompt and confirm that the Chat Assistant groups the report by item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
+6. Confirm that the Chat Assistant groups the report by item category with a count of alerts. The report switches to a summary view showing how many alerts each product line has.
 
-    ![Microphone icon in the assistant panel](images/search-micro.png " ")
+    ![Group By applied from voice input](images/search-micro.png " ")
 
 ## Summary
 
-Dictation is configured for the application and verified for Search with AI and the Chat Assistant. The application can now accept spoken prompts in supported AI Interactive Report components.
+You enabled dictation in the application security settings, used voice input to filter the replenishment report with Search with AI, and spoke a Group By prompt through the Chat Assistant. Both entry points process spoken input the same way they process typed text, giving users a hands-free option for interacting with AI Interactive Reports.
 
 ## Acknowledgements
 
