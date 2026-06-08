@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Oracle APEX provides two distinct natural language entry points for Interactive Reports: Search with AI and the Chat Assistant. This lab focuses on the first — Search with AI. The familiar search bar now accepts natural language queries and intelligently applies the appropriate report configurations. It also preserves the existing Interactive Report behavior: entering one or two words triggers an immediate Row Search, providing continuity with existing end-user flows while enabling natural language input in the same control.
+Oracle APEX provides two distinct natural language entry points for Interactive Reports: Search with AI and the Chat Assistant. This lab focuses on the first, Search with AI. The familiar search bar now accepts natural language queries and intelligently applies the appropriate report configurations. It also preserves the existing Interactive Report behavior: entering one or two words triggers an immediate Row Search, providing continuity with existing end-user flows while enabling natural language input in the same control.
 
 Estimated Lab Time: 5 minutes
 

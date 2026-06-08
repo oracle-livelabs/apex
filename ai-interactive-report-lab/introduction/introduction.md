@@ -4,9 +4,11 @@
 
 Interactive Reports in Oracle APEX offer end users a rich set of capabilities, including filtering, sorting, control breaks, highlighting, aggregations, charts, groupings, and pivots. While these features are powerful and well established, configuring them often requires navigating through multiple menus and dialogs. As a result, some capabilities may be underutilized due to discoverability challenges or the time needed to apply the appropriate settings.
 
-APEX **AI Interactive Reports** changes that. Users can ask a question in plain language, and APEX automatically configures the report - applying filters, sorting, pivots, aggregates, groupings, and column selections based on what was asked. Every configuration the AI applies is surfaced as a visible chip, so users can see exactly what has been set, review it at a glance, and adjust anything that does not match their intent.
+**AI Interactive Reports** lets users configure reports by asking questions in plain language. APEX interprets the natural language prompt and automatically applies the appropriate report settings, including filters, sorting, pivots, aggregates, groupings, and column selections. Every configuration the AI applies is surfaced as a visible chip, so users can see exactly what has been set, review it at a glance, and adjust anything that does not match their intent.
 
-In this workshop, you will build a Supply Chain Management application on a replenishment-focused view (**SCM\_REPLENISHMENT\_V**), configure Generative AI support, add report-level and column-level context, and use both Search with AI and the Interactive Report Chat Assistant to analyze replenishment activity in natural language. Importantly, your business data never leaves your environment. APEX only shares report metadata and configuration context with the LLM. The actual data in your report stays where it belongs.
+In this workshop, you will build a Supply Chain Management application on a replenishment-focused view (**SCM\_REPLENISHMENT\_V**) and configure Generative AI support. You will add report-level and column-level context to guide AI interpretation, then use Search with AI and the Chat Assistant to analyze replenishment activity using natural language prompts. The final lab enables dictation so users can speak prompts instead of typing them.
+
+> **Note:** APEX shares only report metadata and configuration context with the LLM. Your business data never leaves your environment.
 
 The workshop is designed for beginner users, database developers, platform engineers, and executives who want to understand how AI Interactive Reports can make SCM analytics faster, more accessible, and easier to adopt - without losing visibility into how the report was configured.
 
@@ -14,14 +16,11 @@ Estimated Workshop Time: 35 Minutes
 
 ## Objectives
 
-In this workshop you will:
+In this workshop, you learn how to:
 
-- Download and run the SCM data model and sample data scripts.
-- Create and review the Supply Chain Management application.
-- Configure a Generative AI provider.
-- Create an Interactive Report using natural language.
-- Enable natural language support for the report and add SCM report context.
-- Configure column-level AI metadata for key SCM report columns.
+- Set up the SCM data model, sample data, and Supply Chain Management application.
+- Configure a Generative AI provider and link it to the application.
+- Create an Interactive Report using natural language and enable Generative AI support with report and column-level context.
 - Use Search with AI and the Chat Assistant to analyze replenishment alerts.
 - Enable dictation support for voice-to-text input.
 
