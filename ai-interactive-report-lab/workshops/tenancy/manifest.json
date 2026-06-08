@@ -17,17 +17,17 @@
             "description": "Load the SCM scripts, create the application shell, and verify the seeded SCM objects."
         },
         {
-        "title": "Lab 2: Configure a Generative AI Service",
-        "filename": "../../common-261/2-configure-ai-keys/2-configure-ai-keys.md",
-        "type": {
-          "OCIGenAI" : "OCIGenAI",
-          "OpenAI" : "OpenAI"
-          }
+            "title": "Lab 2: Configure a Generative AI Service",
+            "filename": "../../lab-2-configure-an-ai-service/lab-2-configure-an-ai-service.md",
+            "type": {
+                "OCIGenAI": "OCIGenAI",
+                "OpenAI": "OpenAI"
+            }
         },
         {
             "title": "Lab 3: Create an Interactive Report using Natural Language",
             "filename": "../../lab-3-create-an-interactive-report-using-natural-language/lab-3-create-an-interactive-report-using-natural-language.md",
-            "description": "Create the replenishment report page on SCM_NL2IR_REPLENISHMENT_V and enable natural language support."
+            "description": "Create the replenishment report page on SCM_REPLENISHMENT_V and enable natural language support."
         },
         {
             "title": "Lab 4: Configure Column-Level AI Attributes",
@@ -43,6 +43,11 @@
             "title": "Lab 6: Use the Interactive Report Chat Assistant",
             "filename": "../../lab-6-use-the-interactive-report-chat-assistant/lab-6-use-the-interactive-report-chat-assistant.md",
             "description": "Use chat prompts to analyze, refine, visualize, and save report views."
+        },
+        {
+            "title": "Lab 7: Enable Dictation Support",
+            "filename": "../../lab-7-enable-dictation-support/lab-7-enable-dictation-support.md",
+            "description": "Enable voice-to-text input for the Interactive Report search bar and Chat Assistant."
         },
         {
             "title": "Need Help?",
