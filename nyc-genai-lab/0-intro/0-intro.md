@@ -34,7 +34,12 @@ Estimated Time: 60 minutes
 
 **Quick Tip:**
 - If you’re interested in exploring only the **Generative AI** features, begin directly with [Lab 3](lab=3-configure-oci).
-- Before you start, make sure to download and install the starter application provided at the beginning of **Lab 3**.
+- Before you start, make sure to download and install the following starter application: [Download the Starter App](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip)
+
+The starter app contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab](lab=8-appendix): 
+
+    - [Task 1: Import the App into an APEX Workspace](lab=8-appendix#Task1:ImporttheAppintoanAPEXWorkspace) 
+    - [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](lab=8-appendix#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 
 ## Prerequisites
 
