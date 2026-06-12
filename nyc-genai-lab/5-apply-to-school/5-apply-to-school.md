@@ -4,7 +4,7 @@
 
 In this lab, you configure a button for the student's parent to apply to a school they are interested in. The application body letter is generated using the Generative AI service. The parent can review and edit the letter before submitting the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 15 minutes
 
@@ -51,7 +51,7 @@ In this lab, you will:
 4. For Script Name, enter **NYC\_SCHOOLS\_APPS\_TABLE** and click **Run**.
     ![SQL Commands Page](images/script-name.png ' ') 
 
-5. Click **Run Now**.
+5. Click **Run**.
     ![SQL Commands Page](images/run-now.png ' ') 
 
 6. The summary displays that the statements were processed successfully and the table was created.
@@ -192,8 +192,8 @@ Let us create a new Form page for school application.
 
     ![Page Designer](images/edit-create.png ' ')
 
-## Task 3: Create an AI Configuration 
-In this task, we create an AI configuration with a RAG source. This will serve as the input for the 'Generate Text with AI' dynamic action in the upcoming task.
+## Task 3: Create an AI Agent to Generate Email Text 
+In this task, we create an AI Agent with a tool. This will serve as the input for the 'Generate Text with AI' dynamic action in the upcoming task.
 1. Navigate to Shared Components
     ![Page Designer](images/nav-shared-components.png ' ')
 
@@ -205,7 +205,7 @@ In this task, we create an AI configuration with a RAG source. This will serve a
 
 4. Enter/select the following:
     - Name: **Generate Text AI**
-    - Service: **OCI Gen AI** (If configured, you can choose the Generative AI service of your choice)
+    - Service: **Application Default** (If configured, you can choose the Generative AI service of your choice)
     - System Prompt:
         ```
         <copy>
@@ -217,13 +217,16 @@ In this task, we create an AI configuration with a RAG source. This will serve a
 
     ![AI configurations page](images/ai-config-details.png ' ')
 
-5. Once the changes are saved, click **Create RAG Source**.
+5. Once the changes are saved, click **Add Tool**.
 
-    ![AI configuration details page](images/create-rag.png ' ')
+    ![AI configuration details page](images/add-tool.png ' ')
 
 6. Enter/select the following:
-    - Identification > Name: **Details to Generate Email Text**
-    - Under Source:
+    - Under Identification:
+        - Name: **generate_email_text**
+        - Type: **Retrieve Data**
+        - Execution Point: **Augment System Prompt**
+    - Under Settings:
         - Type: **Function Body**
         - Language: **PL/SQL**
         - Function Body Returning CLOB:
@@ -249,7 +252,7 @@ In this task, we create an AI configuration with a RAG source. This will serve a
       
         Click **Create**.
 
-    ![AI configuration details page](images/rag-details.png ' ')
+    ![AI configuration details page](images/tool-details.png ' ')
 
 7. Click **Apply Changes** in the AI Configurations page.
 
@@ -263,46 +266,24 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
 
     ![AI configuration details page](images/edit-page-3.png ' ')
 
-2. In the Rendering pane, right-click **GENERATE_LETTER** and select **Create Dynamic Action**.
+2. In the Rendering pane, right-click **GENERATE_LETTER** and select **Create Trigger Action**.
 
     ![Page Designer](images/create-gen-da.png ' ')
 
-3. In the Property Editor, for Name, enter **Generate Email Text with AI**.
 
-    ![Page Designer](images/name-da.png ' ')
-
-4. Under True, select **Show**. In the Property Editor, enter/select the following:
-    - Identification > Action: **Execute Server-side Code**
-    - Under Settings:
-        - Language: **PL/SQL**
-        - PL/SQL Code: **null;**
+3. In the Property Editor, enter/select the following:
+    - Identification > Action: **Generate Text with AI**
+    - Generative AI:
+        - Agent: **Generate Text AI**
         - Items to Submit: **P3\_SCHOOL\_ID,P3\_PARENT\_NAME,P3\_STUDENT\_NAME**
-
-    This True action is executed in order to submit the values of School ID, parent name and student name to the server. By doing so, we can be rest assured that the correct values are picked by the AI configuration we created in the previous task.
-
-    ![Page Designer](images/exec-server-side.png ' ')
-
-5. In Oracle APEX, session state is how values for page items (and application items) are stored and retrieved for a specific user as they navigate between different pages of an application. In our case, we need the values of the school ID, parent name and student name to be persistent once a school is selected. In this step, we set the session state for 3 page items.
-
-    Select the page items **P3\_SCHOOL\_ID**, **P3\_PARENT\_NAME** and **P3\_STUDENT\_NAME**. In the Property Editor, under Session State, for Storage select **Per Session (Persistent)**.
-
-    ![Page Designer](images/change-session-state.png ' ')
-
-6. Under the Generate Email Text with AI dynamic action, right-click True and select **Create TRUE Action**.
-
-    ![Page Designer](images/create-true-action.png ' ')
-
-7. In the Property Editor, enter/select the following:
-    - Action: **Generate Text with AI**
-    - Generative AI > Configuration: **Generate Text AI**
     - Input Value > Type: **Only System Prompt**
     - Use Response:
         - Type: **Item**
         - Item: **P3\_EMAIL**
+    Click **Save**.
 
-    ![Page Designer](images/generate-text-true-action.png ' ')
-    
-8. Click **Save**.
+    ![Page Designer](images/da_details.png ' ')
+
 
 
 ## Task 5: Create the Apply Button
@@ -412,6 +393,5 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
  - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
- - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026
 

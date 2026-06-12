@@ -41,7 +41,7 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
 You can run this lab in any Oracle Database with APEX 26.1 installed. This includes the APEX Application Development Service, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 26.1 is installed), on a third-party cloud provider where APEX 26.1 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 26.1.
 
-Below are steps on how to sign up for an **APEX Application Development** Service, or for an **Oracle Autonomous AI Database** cloud service or **oracleapex.com** service.
+<!--Below are steps on how to sign up for an **APEX Application Development** Service, or for an **Oracle Autonomous AI Database** cloud service or **oracleapex.com** service.
 
 - On the other hand, **oracleapex.com** is also a free service; however, it is only designated for development purposes, and running production apps is not allowed. For conducting labs in this workshop, any of these options can be utilized.
 
@@ -56,12 +56,12 @@ We offer two types of Cloud Accounts:
 *Free Tier Accounts*: After you sign up for the free [Oracle Cloud promotion](https://signup.cloud.oracle.com/) or sign up for a paid account, you’ll get a welcome email. The email provides you with your cloud account details and sign-in credentials.
 
 *Oracle Cloud Paid Accounts*: When your tenancy is provisioned, Oracle sends an email to the default administrator at your company with the sign-in credentials and URL. This administrator can create a user for each person who needs access to the Oracle Cloud. Check your email or contact your administrator for your credentials and account name.
-
+-->
 ### Objectives
 
-- Learn how to login to your Oracle Cloud Account
+- Learn how to create an APEX workspace
 
-### Prerequisites
+<!-- ### Prerequisites
 
 - Cloud account access is required but not mandatory.
 - Cloud Account Name - The name of your tenancy (supplied by the administrator or in your Oracle Cloud welcome email).
@@ -70,11 +70,14 @@ We offer two types of Cloud Accounts:
 
 Click one of the options below to proceed.
 
-## Option 1: oracleapex.com
+   ## Option 1: oracleapex.com
+-->
 
-Signing up for apex.oracle.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
+## Create your workspace on oracleapex.com
 
-1. Go to [oracleapex.com](https://oracleapex.com.).
+Signing up for oracleapex.com is simply a matter of providing details on the workspace you wish to create and then waiting for the approval email.
+
+1. Go to [oracleapex.com](https://oracleapex.com).
 
 2. Click **Get Started**.
 
@@ -114,7 +117,7 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     ![APEX Builder homepage](images/apex-builder.png " ")
 
-## Option 2: Autonomous AI Database in Oracle Cloud
+<!--## Option 2: Autonomous AI Database in Oracle Cloud
 
 In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous AI* database. The final step in the process is to provision Oracle APEX.
 
@@ -220,7 +223,7 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
-## Option 3: APEX Service
+    ## Option 3: APEX Service
 
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
@@ -311,6 +314,8 @@ The password is the same as the one entered for the ADMIN user when creating the
 14. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
+
+-->
 
 ## Summary
 

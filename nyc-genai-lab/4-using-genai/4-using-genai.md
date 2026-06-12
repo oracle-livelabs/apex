@@ -4,7 +4,7 @@
 
 In this lab, you learn to build a conversational inquiry about schools using Generative AI wherein a user can ask questions about a school in chat and the chat widget uses Generative AI to provide context sensitive answers. This lab makes use of the APEX GenAI dynamic action called the **Show AI Assistant**.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 20 minutes
 
@@ -19,63 +19,19 @@ In this lab, you will:
 - Build a conversational chatbot using Generative AI.
 
 
-## Task 1: Create the Chat Page
 
-1. Navigate to your application homepage and click **Create Page**. Select **Blank Page**.
+## Task 1: Configure the Prompt Context using AI Agents
 
-    ![App home page](images/create-blank-page.png ' ')
-
-2. In the Create Blank page dialog, enter/select the following:
-    - Page Number: **2**
-    - Name: **Learn More**
-    - Page Mode: **Modal Dialog**
-
-    Click **Create Page**.
-
-    ![create page wizard](images/learn-more.png ' ')
-
-3. With **Page 2: Learn More** selected in the Rendering Tree, enter/select the following in the Property Editor:
-    - Appearance > Template Options:
-        - General: Check **Remove Body Padding**
-        - Content Padding: **Remove Padding**
-
-    ![create page wizard](images/learn-more-template.png ' ')
-
-4. In the rendering tree, under Components, right-click **Content Body** and select **Create Region**.
-
-    ![Page Designer](images/create-region.png ' ')
-
-5. In the Property Editor, enter/select the following:
-
-    - Identification > Name: **Chat**
-
-        ![Page Designer](images/chat-to1.png =40%x*)
-
-    - Under Appearance > Template Options:
-        - Under Common:
-            - General: Check **Remove Body Padding**
-            - Body Height: **320px**
-            - Header: **Hidden**
-        - Advanced > Bottom Margin: **None**
-
-        ![Page Designer](images/chat-to2.png =50%x*)
-
-    - Advanced > Static ID: **chat**
-        ![Page Designer](images/chat-to3.png =40%x*)
-
-    - Click **Save**.
-
-## Task 2: Configure the Prompt Context using AI Configuration
-
-1. Create a Page Item to store the selected School ID. In the Rendering Tree, under Components, right-click **Content Body** and select **Create Page Item**.
+1. Create a Page Item to store the selected School ID. Navigate to **Page 1: Search and Apply**. In the Rendering Tree, under **Body**, right-click **Search Results** and select **Create Page Item**.
 
     ![Page Designer](images/create-page-item.png ' ')
 
 2. In the Property Editor, enter/select the following:
 
     - Under Identification:
-        - Name: **P2\_SCHOOL\_ID**
+        - Name: **P1\_SCHOOL\_ID**
         - Type: **Hidden**
+        - Value Protected: Toggle the button **OFF**.
         
         Click **Save**.
 
@@ -85,23 +41,24 @@ In this lab, you will:
     ![Page Designer](images/nav-shared-components.png ' ')
     ![Shared components page](images/ai-attributes.png ' ')
 
-4. For Service, select the Generative AI service that you configured in Lab 3. In this workshop, we choose **OCI Gen AI**. Click **Apply Changes**.
+4. For Service, select the Generative AI service that you configured in Lab 3. In this workshop, we choose **OCI Gen AI**. Click **Apply Changes**.'
+Note: This ensures that whenever *Application Default* is chosen for the Generative AI service, **OCI Gen AI** service will be used.
     ![AI attributes page](images/select-service.png ' ')
 
 3. Navigate to Shared Components and select **AI Configurations** under Generative AI.
 
     ![Page Designer](images/nav-shared-components-2.png ' ')
-    ![Shared components page](images/ai-config.png ' ')
+    ![Shared components page](images/ai-agents.png ' ')
 
-4. Generative AI Configurations contain information such as System Prompt, Welcome Message, and Retrieval-Augmented Generation (RAG) Sources to enable richer interactions with Generative AI services. We create an AI Configuration to store the system prompt for our chat.
+4. Generative AI Agents contain information such as System Prompt, Welcome Message, and Generative AI Tools to enable richer interactions with Generative AI services. These agents can define tools that can be used by the AI service to retrieve relevant information improving response quality, and perform actions.
 
-    In the Generative AI Configurations page, click **Create**.
+    In the Generative AI Agents page, click **Create**.
 
-    ![Gen AI Configurations page](images/create-ai-config.png ' ')
+    ![Gen AI Configurations page](images/create-ai-agent.png ' ')
 
 5. Enter/select the following:
     - Name: **Learn More AI**
-    - Service: **Application Default** (If configured, you can also choose other GenAI services from the list)
+    - Service: **Application Default** (You can also choose other GenAI services from the list if configured)
     - System Prompt: 
     ```
     <copy>
@@ -114,19 +71,20 @@ In this lab, you will:
 
      ![Gen AI Configurations page](images/learn-more-ai-details.png ' ')
 
-6. Retrieval-Augmented Generation (RAG) Sources are used by the Generative AI Service to improve response quality by providing relevant information.
+6. Generative AI Tools offer a way to provide extra knowledge, and expose extra capabilities to an AI Service responding to a prompt. Augment System Prompt tools are called for each new message, and their results are included as hidden system messages. In this step, you will create an Augment System Prompt tool.
 
-    Now, let's add a RAG Source to the AI Configuration. Click **Create RAG Source**.
+    Click **Add Tool**.
 
-    ![Gen AI Configurations page](images/create-rag-source.png ' ')
+    ![Gen AI Configurations page](images/create-tool.png ' ')
 
-7. In the RAG source page, enter/select the following:
-    - Name: **School Context**
-    - Source > Type: **SQL Query**
+7. In the Generative AI Tool page, enter/select the following:
+    - Name: **school_context**
+    - Execution Point: **Augment System Prompt**
+    - Type: **SQL Query**
 
     ![RAG Source page](images/rag-details-1.png ' ')
        
-8. You will make use of the APEX Assistant to generate the SQL Query for the RAG Source. In the SQL Query code editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
+8. You will make use of the APEX Assistant to generate the SQL Query for the Tool. In the SQL Query code editor, click **APEX Assistant** to open a drawer where you can chat with the AI Assistant. If a dialog box appears to accept the Terms and Conditions, click **Accept**.
 
     Enter the following prompt in the chat box and click **Send**:
 
@@ -162,7 +120,7 @@ In this lab, you will:
 
     ![Page Designer](images/insert-query.png ' ')
 
-10. The SQL query is inserted into the Code Editor. Verify that the *where* condition in the query has ID = **:P2\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
+10. The SQL query is inserted into the Code Editor. Verify that the *where* condition in the query has ID = **:P1\_SCHOOL\_ID**. Click **Validate**. The SQL query should look like the following:
 
     ```
     <copy>
@@ -185,80 +143,67 @@ In this lab, you will:
     ![Page Designer](images/edit-validate.png ' ')
 
 11. If the validation is successful, click **Create**.
-    A RAG source is created successfully. You can add as many RAG Sources as you wish.
+    A tool is created successfully. You can add as many tools as you wish.
 
     ![Page Designer](images/success-ok.png ' ')
 
 
-## Task 3: Create a Dynamic Action for Chat Widget
+## Task 2: Create Action to Launch the Chat
 
-1. Click **Edit Page 2** to navigate to the page designer.
-    ![Page Designer](images/edit-page-2.png ' ')
+1. Click **Edit Page 1** to navigate to the page designer.
+    ![Page Designer](images/edit-page-1.png ' ')
 
-1. From the Rendering Tree, navigate to the Dynamic Actions tab. Right-click **Page Load** and select **Create Dynamic Action**.
+1. From the Rendering Tree in the left pane, navigate to **Search Results**. Right-click **Actions** and select **Create Action**.
 
     ![Page Designer Dynamic Actions](images/create-da.png ' ')
 
-2. In the Property Editor, for Name, enter **Show AI Assistant - Chat**.
+2. In the Property Editor, enter/select the following:
+    - Type: **Button**
+    - Label: **Learn More**
+    - Behaviour > Type: **Trigger Action**
+    
+    - Under Appearance:
+        - Display Type: **Icon**
+        - Icon: **fa-info-circle-o u-opacity-60**
+        - CSS Classes: **t-Button--noUI**
 
     ![Page Designer Dynamic Actions](images/da-name.png ' ')
 
-3. Under True action, select **Show**. In the Property Editor, enter/select the following:
+3. Under Triggered Actions, select **Execute Server-side Code** highlighted in red. In the Property Editor, enter/select the following:
+    - Identification > Action: **Set Value**
+    - Under Settings:
+        - Set Type: **PL/SQL Expression**
+        - PL/SQL Expression: **:ID**
+        - Items to Submit: **ID**
+    - Under Affected Elements:
+        - Selection Type: **Item(s)**
+        - Item(s): **P1\_SCHOOL\_ID**
+
+        ![Page Designer Dynamic Actions](images/trigger-action1.png ' ')
+
+
+4. Next, we create another Trigger Action to launch the chat box. Right-click **Triggered Actions**, select **Create Trigger Action**.
+
+    ![Page Designer Dynamic Actions](images/create-trigger-action2.png ' ')
+
+
+3. With the new Trigger Action selected, in the Property Editor, enter/select the following:
     - Identification > Action: **Show AI Assistant**
-    - Generative AI > Configuration: **Learn More AI**
-    - Under Appearance:
-        - Display as: **Inline**
-        - Container Selector: **#chat**
-
-        ![Page Designer Dynamic Actions](images/true-action.png ' ')
-
+    - Under Generative AI:
+        - Agent: **Learn More AI**
+        - Items to Submit: **P1\_SCHOOL\_ID**
     - Under Quick Actions:
         - Message 1: **Provide an overview of the school**
         - Message 2: **What is the graduation rate?**
 
-        ![Page Designer Dynamic Actions](images/quick-action.png =40%x*)
-
     Click **Save**.
 
-## Task 4: Create Action to Launch the Chat
+    ![Page Designer Dynamic Actions](images/trigger-action2.png ' ')
 
-1. Navigate to the Search and Apply page. To do so, click the **Page Finder** in the toolbar and select **Page 1**.
+4. **Save and Run** the page to see how the app looks.
+    ![App running in browser tab](images/run-app4.png " ")   
 
-    ![Page Designer Dynamic Actions](images/goto-page1.png ' ')
-
-2. In the Rendering Tree, navigate to **Body** > **Search Results**. Right-click **Actions** and select **Create Action**.
-
-     ![Page Designer](images/create-action.png =40%x*)
-
-3. In the Property Editor, enter/select the following:
-
-    - Under Identification:
-        - Type: **Button**
-        - Label: **Learn More**
-    - Layout > Position: **Primary**
-    - Under Link > Target: Click **No Link Defined**
-        - Target > Page: **2**
-        - Set Items:
-
-            |Name | Value|
-            |------|------|
-            |P2\_SCHOOL\_ID| &ID. |
-            {: title="Set Item name and value"}
-
-        Click **OK**.
-
-    - Under Appearance:
-        - Display Type: **Icon**
-        - Icon: **fa-info-circle-o u-opacity-60**
-        - CSS classes: **t-Button--noUI**
-
-    Finally, click **Save**.
-
-    ![Page Designer](images/learn-more1.png =40%x*)
-
-    ![Page Designer](images/learn-more2.png =40%x*)
-
-## Task 5: Build the 'Ask Question' Button
+## Task 3: Build the 'Ask Question' Button
 
 In this task, we add a common 'Ask Question' button where a user can ask generic questions about any New York City highschool.
 
@@ -275,15 +220,14 @@ In this task, we add a common 'Ask Question' button where a user can ask generic
 
     ![Page Designer](images/button-properties.png =50%x*)
 
-3. Right-click on **ask** button and select **Create Dynamic Action**. In the Property Editor, for Name, enter **AI Chatbot**.
+3. Right-click on **ask** button and select **Create Trigger Action**.
 
     ![Page Designer](images/ask-da.png =50%x*)
 
-    ![Page Designer](images/ask-da-name.png =50%x*)
 
-4. Select the True action and enter/select the following in the Property Editor:
+4. Enter/select the following in the Property Editor:
     - Identification > Action: **Show AI Assistant**
-    - Generative AI > Service: **OCI Gen AI** (If configured, you can also choose other GenAI services from the list.)
+    - Generative AI > Service: **Application Default** (If configured, you can also choose other Gen AI services from the list.)
     - System Prompt:
     ```
     <copy>
@@ -304,7 +248,7 @@ In this task, we add a common 'Ask Question' button where a user can ask generic
     ![Page Designer](images/ask-true-action.png " ")
 
 5. **Save and Run** the page to see how the app looks.
-    ![App running in browser tab](images/run-app4.png " ")
+    ![App running in browser tab](images/run-app5.png " ")
 
 ## Summary
 Congratulations! You have completed the lab.
@@ -316,5 +260,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
   - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
- - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026

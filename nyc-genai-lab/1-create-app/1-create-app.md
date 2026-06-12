@@ -3,12 +3,12 @@
 ## Introduction
 In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can declaratively build an app from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 5 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_z1ozvg3v)
+<!-- Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_a6bi2e62) -->
 
 ### Objectives
 
@@ -38,8 +38,6 @@ In this lab, you will:
 
     When creating an application from a file, APEX allows you to upload CSV, XLSX, XML, or JSON files and then build apps based on their data. Alternatively, you can also copy and paste CSV data or load sample data.
 
-3. Download the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx?download=1) file to your local machine.
-
 4. Within the Load Data wizard, click the **Choose File** option or drag and drop the [nyc\_high\_schools.xlsx](files/nyc_high_schools.xlsx?download=1) file on to the dialog window.
 
     ![Image showing a wizard to upload a file](images/drag-and-drop.png " ")
@@ -50,66 +48,53 @@ In this lab, you will:
 
     After clicking **Load Data**, you will see a spinner until the wizard finishes loading the data. Continue to Task 2 at this point.
 
-6. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then close the dialog.
+## Task 2: Create an Application
 
-    *Note*: We will not be creating the application from this step since Oracle APEX creates multiple pages which are not required for the purpose of this workshop. 
+The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
 
-    The Data Load wizard has created a new table called **HIGHSCHOOLS** and populated the table with the records from the sample data. Now, you can create an app based on this new table.
-
-    Continue to Task 2.
+1. In the Load Data dialog, verify that 427 rows have been loaded into the **HIGHSCHOOLS** table, then click **Create Application**.
 
     ![Image showing the success message of Load Data and options to View Table or Create Application](images/create-app-table.png " ")
 
-## Task 2: Create an Application
+2. On the Create Application page, click the application icon.
+   ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
-
-1. Navigate to **App Builder** and click **Create Application**.
-
-    ![Image showing the success message of Load Data and options to View Table or Create Application](images/app-builder-create.png " ")
-
-2. Select **Use Create App Wizard**.
-    ![Image showing the Create Application Page](images/use-create-app-wizard.png " ")
-
-3. On the Create Application page, for **Name**, enter **Highschools**. Click the application icon.
-    ![Image showing the Create Application Page](images/app-thumbnail.png " ")
-
-3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. 
-
-    Download a sample icon from [here](images/ai-highschools.png).
-    ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
+3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/ai-highschools.png).
+  ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/crop-and-save.png " ")
 
-5. In the Create Application page, select **Add Page**.
-    ![Image showing the Create Application Page](images/add-page.png " ")
+5. In the Create Application page, review the pages listed by default.
 
-6. Select **Faceted Search**. 
-    ![Image showing the Create Page wizard](images/faceted-search.png " ")
-
-7. In the Add Cards Page qizard, enter/select the following:
+   Click the **Edit** button for **Highschools Search** and update the following:
     - Page Name: **Search and Apply**
-    - Switch to **Cards** tab.
-    - Table or View: **HIGHSCHOOLS**
+    - For Page Type, choose **Cards** toggle button.
 
-    For the Cards properties, select the following:
-    - Title Column: **SCHOOL_NAME**
-    - Body Column: **NEIGHBORHOOD**
-
+    ![Edit App page](images/app-edit.png " ")
     ![Edit Page wizard](images/edit-page-name.png " ")
 
+6. For the Cards properties, select the following:
+    - Title Column: **SCHOOL_NAME**
+    - Body Column: **NEIGHBORHOOD**
     - Expand Advanced section and check the **Set as Home Page** box
 
-    Click **Add Page**.
-    ![Edit Page wizard](images/add-faceted-page.png " ")
+    Click **Save Changes**.
+    ![Edit Page wizard](images/cards-columns.png " ")
 
-7. Next, we delete the page that we no longer need. Click **Edit** next to the Home page.
+7. Next, we delete the pages that we no longer need. Click **Edit** next to the Home page.
     ![Edit Page wizard](images/edit-home.png " ")
 
 8. Click **Delete**. In the dialog 'Would you like to perform this delete action?', select **OK**.
     ![Delete Page wizard](images/delete-home.png " ")
 
     ![Confirm Delete dialog](images/confirm-delete.png " ")
+
+9. Repeat Steps 7 and 8 to delete the **Highschools Report** page.
+    ![Delete page wizard](images/delete-report.png " ")
+
+10. Repeat Steps 7 and 8 to delete the **Dashboard** page.
+    ![Delete page wizard](images/delete-dashboard.png " ")
 
 11. In the Create Application wizard, under Features, check the following checkboxes:
     - **Install Progressive Web App**
@@ -128,9 +113,9 @@ In this task, we configure the Cards region to display the information that we n
 1. Navigate to **Search and Apply** page.
     ![Application Home Page](images/select-page.png " ")
 
-2. In the Left Pane, under Body, select **Search Results** region.
+2. In the Rendering Tree, under Body, select **Search Results** region.
 
-    In the Property Editor, enter/select the following:
+   In the Property Editor, enter/select the following:
     - Under Source:
         - Type: **SQL Query**
         - SQL Query: Replace the SQL query with the following
@@ -157,7 +142,7 @@ In this task, we configure the Cards region to display the information that we n
 
         ![Page Designer](images/update-sql2.png =60%x*)
 
-    - Advanced > Static ID: **S\_SEARCH\_RESULTS**
+    - Advanced > HTML DOM ID: **S\_SEARCH\_RESULTS**
         ![Page Designer](images/search-static.png =40%x*)
 
 3. Switch to the **Attributes** tab and select the following:
@@ -189,7 +174,7 @@ In this task, we configure the Cards region to display the information that we n
 1. Click **Edit Page 1** from the Developer Toolbar.
     ![App is displayed](images/edit1.png " ")
 
-2. In the Left Pane, select **Search**.
+2. In the Rendering Tree, select **Search**.
 
     In the Property Editor, switch to the **Attributes** tab and enter the following:
         
@@ -229,7 +214,7 @@ In this task, we configure the Cards region to display the information that we n
 
     ![Page Designer](images/lov.png " ")
 
-7. In the Left Pane, select **Search Results** region.
+7. In the Rendering Tree, select **Search Results** region.
 
     In the Property Editor, under Order By, for Type, select **Item** and for Item, enter the following and then click **OK**.
     | Clause | Key | Display |
@@ -288,16 +273,17 @@ In this task, we configure the Cards region to display the information that we n
     
     You have successfully customized the application theme.
 
+
 ## Summary
 
 You now know how to create an Oracle APEX application from a spreadsheet. You also learnt to customize the pages and the theme of the application.
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgements
+## Acknowledgments
 
- - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
+ - **Authors** - Apoorva Srinivas, Principal Product Manager, Toufiq Mohammed, Principal Product Manager;
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026
 
 

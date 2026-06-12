@@ -56,6 +56,8 @@ Export the CRM application in APEXlang format and place the output inside the `a
 
     ![VS code editor](images/green-button-import.png)
 
+    *Note:* The first time you import the application after completing Task 2, no changes will be visible in the application. Going forward, you will repeat Task 3 after completing each subsequent task. After performing subsequent tasks and re-importing the application, you will be able to see the corresponding updates reflected in the application.
+
 ## Task 4: Change the leads report type to Content Row
 From this task onwards, we are going to enhance and modify the Vision CRM app by providing prompts using the Codex client in Visual Studio Code.
 
