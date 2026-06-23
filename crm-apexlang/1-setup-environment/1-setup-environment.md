@@ -20,7 +20,7 @@ Estimated Time: 15 minutes
     ![Visual Studio Code first launch window with welcome screen](images/vscode-first-launch.png)
 
 ## Task 2: Install the extensions
-1. In Visual Studio Code, open the Extensions view (`View` > `Extensions`) and search for `Codex`.
+1. In Visual Studio Code, open the Extensions view (`View` > `Extensions`) and search for `Codex`. In this workshop, we use Codex. However, you are free to choose your AI Coding Agent such as Claude Code.
     ![Visual Studio Code Extensions view focused on search bar](images/vscode-open-extensions-view.png)
 2. Select the Codex extension, click `Install`, then press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS) and run `Codex: Set API Key` to paste your API key.
     ![Codex extension page showing install button and API key command palette entry](images/codex-set-api-key.png)

@@ -18,7 +18,39 @@ If you are stuck or want to download the completed app till Lab 4, click the fol
 Import the app into your APEX workspace using App Builder.
 
 ## Task 1: Set up the APEXlang Skills repo in Visual Studio Code
-1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
+
+To install the required Oracle APEX and database skills:
+1. Open SQL Developer. Right-click your database connection. Select **Open SQLcl**.
+    ![VS Code left navigation bar](images/opensqlcl.png)
+
+2. This opens an SQLcl terminal connected to your database schema.
+
+    ![VS Code](images/sqlcl-started.png)
+
+3. Run the below command to install the required skills:
+
+    ```
+    <copy>
+    skills sync -skill-name apex,db
+    </copy>
+    ```
+    ![VS Code](images/skill-sync.png)
+
+**Note:** *The Skills repository may be updated over time. To get the latest changes, simply re-run the same command to sync it again.*
+
+This command installs the Oracle APEX and database-related skills needed for APEXlang workflows.
+
+After installation, the required skills should be available locally in your coding agent’s skills directory.
+
+You are now ready to start building APEX applications with APEXlang in your preferred AI coding agent.
+
+You can also clone or fork the Oracle Skills repository if that better fits your workflow. The repository contains the skill packages used by Codex and other supported agents.
+Alternatively, If you are unable to synchronize skills using SQLcl, you can manually download the required skills from the Oracle Skills Repository and place them in your coding agent's skills directory. For example, you can copy the downloaded skill folders to .codex/skills when using Codex or .claude/skills when using Claude Code. Once the skills are placed in the appropriate directory, the coding agent will be able to discover and use them.
+
+**Note:** Folders such as .codex and .claude are typically hidden by default because they are stored in your user home directory. On macOS and Linux, this is usually your home folder (for example, /Users/<username> or ~). On Windows, it is typically C:\Users\<username>. If you cannot locate these folders, enable the display of hidden files and folders in your operating system or editor before navigating to the corresponding skills directory.
+
+
+<!--1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
 
     Download the APEXlang skills from Github: [APEXlang skills](https://github.com/oracle/skills/tree/main). 
     
@@ -34,6 +66,7 @@ Import the app into your APEX workspace using App Builder.
 2. Create an empty folder called **Applications** on your local machine to manage your APEX apps.
 
     ![Folder structure](images/app-folder.png)
+    -->
 
 ## Task 2: Export the app in APEXlang format into the Applications folder
 Export the CRM application in APEXlang format and place the output inside the `applications` folder.
