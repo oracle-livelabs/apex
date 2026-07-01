@@ -27,7 +27,7 @@ In this task, you create a single working directory for the files that will be u
 
 2. Download the `Functional Specification file` and `blueprint_prompt.md` file.
     - [crm\_functional\_requirements\_spec.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_functional_requirements_spec.md)
-    - [blueprint\_prompt.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/blueprint-prompt.md)
+    - [blueprint\_prompt.md](https://github.com/oracle/apex/blob/26.1/blueprints/prompt/blueprint-prompt.md)
 
 3. Click the file link to open the file. Right-click on the file and select **Save As**.
 
@@ -84,7 +84,9 @@ In this task, you generate schema metadata from APEX workspace and then use Code
 
 ![Codex Prompt](./images/codex-prompt.png " ")
 
-13. During the generation of blueprint, the AI coding agent might prompt for approvals. Click on **Approve/Yes**.
+13. During the generation of blueprint, the AI coding agent might prompt for approvals. Carefully read the instructions, and if satisfied, click on **Approve/Yes**. 
+
+*Note:* Please note that some operations - such as making changes to the markdown files are completely safe and are necessary to generate a specification from a blueprint.
 
  ![Codex Prompt](./images/approve.png " ")
 

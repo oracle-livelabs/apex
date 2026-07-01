@@ -51,14 +51,14 @@ In this task, you import the generated blueprint file and validate the blueprint
  ![App Import](./images/app-import.png " ")
 
 > **Note:** If a blueprint error appears after Step 3, click **Copy full error log to clipboard**. Paste the copied log into VS Code so your AI assistant can analyze it and fix the errors in the generated blueprint. Once the new file is ready, repeat Step 1 to Step 3 of Task 2.
+![App Imported](./images/blueprint-error.png " ")
 
 4. Click **Import Application**.
 
  ![App Import](./images/import-blueprint1.png " ")
 
  ![App Imported](./images/app-imported.png " ")
-
->    ![App Imported](./images/blueprint-error.png " ")
+   
 
 5. Click on **Edit Application**.
 

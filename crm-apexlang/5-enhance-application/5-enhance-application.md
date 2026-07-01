@@ -36,7 +36,7 @@ To install the required Oracle APEX and database skills:
     ```
     ![VS Code](images/skill-sync.png)
 
-**Note:** *The Skills repository may be updated over time. To get the latest changes, simply re-run the same command to sync it again.*
+**Note:** *The Skills repository is updated regularly. To get the latest changes, simply re-run the same command to sync it again.*
 
 This command installs the Oracle APEX and database-related skills needed for APEXlang workflows.
 
@@ -44,10 +44,7 @@ After installation, the required skills should be available locally in your codi
 
 You are now ready to start building APEX applications with APEXlang in your preferred AI coding agent.
 
-You can also clone or fork the Oracle Skills repository if that better fits your workflow. The repository contains the skill packages used by Codex and other supported agents.
-Alternatively, If you are unable to synchronize skills using SQLcl, you can manually download the required skills from the Oracle Skills Repository and place them in your coding agent's skills directory. For example, you can copy the downloaded skill folders to .codex/skills when using Codex or .claude/skills when using Claude Code. Once the skills are placed in the appropriate directory, the coding agent will be able to discover and use them.
-
-**Note:** Folders such as .codex and .claude are typically hidden by default because they are stored in your user home directory. On macOS and Linux, this is usually your home folder (for example, /Users/<username> or ~). On Windows, it is typically C:\Users\<username>. If you cannot locate these folders, enable the display of hidden files and folders in your operating system or editor before navigating to the corresponding skills directory.
+Our skills are publically available at https://github.com/oracle/skills.  More advanced users may clone, fork or download them from there and install in their local agents.
 
 
 <!--1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
@@ -84,6 +81,9 @@ Export the CRM application in APEXlang format and place the output inside the `a
     ![VS code application files](images/select-page.png)
 
 2. At the top right, you will be able to see a green arrow button for Import Application. (If you do not see this button, ensure that you have successfully connected to your APEX schema from SQL Developer extension.)
+    *Note:* Importing your application will completely overwrite what you have in your App Builder. Please be sure that there are not any outstanding changes before running the import.
+
+    SQL Developer will always take a backup of the current state of your application and store it under the apex-exports folder.  This export is a traditional .sql export and can also be installed via SQLcl.
 
     Click **Import Application**. View the status at the bar below. Once the application is successfully imported, run the application from the App Builder in your browser.
 

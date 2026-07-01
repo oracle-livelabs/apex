@@ -14,6 +14,8 @@ OCI API keys consist of two parts: a **Public key** and a **Private key**. You u
 
 - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
+- Usage of OCI AI services incurs a cost.
+
 - The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 10 Minutes
@@ -46,7 +48,7 @@ To Generate the API Keys using OCI Console:
 
 5. Click **Download Private Key**. A *.pem* file is saved to your local device. You do not need to download the public key.
 
-    *Note: You will use this private key while configuring a Generative AI service in the upcoming lab.*
+    *Note: You will use this private key while configuring a Generative AI service in the upcoming lab. The private key should never be shared or added to cloud storage. Anyone with access to the .pem file could possibly be able to access your OCI AI services.*
 
 6. Click **Add**.
 
