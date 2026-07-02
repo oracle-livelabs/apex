@@ -2,13 +2,13 @@
 
 ## Introduction
 
-The procurement use case in this workshop is warehouse-specific. When a user asks what stock is at risk, the answer should reflect their warehouse, not the whole network. When the agent raises a purchase order, it needs to know who is requesting it and what their approval authority is. When a user sets a delivery date, the agent needs to interpret it in the right timezone.
+The procurement use case in this workshop is warehouse-specific. The agent must scope answers to the signed-in user's warehouse, identify the requester and approval authority for purchase orders, and interpret delivery dates in the correct timezone.
 
-None of that is possible without knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 4 and 5 accurate and personalised.
+All of this depends on knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 4 and 5 accurate and personalized.
 
 In this lab, you will create the **Procurement Agent** and add those two context tools.
 
-Estimated Time: 15 minutes
+Estimated Lab Time: 15 minutes
 
 ### Objectives
 
@@ -28,17 +28,15 @@ In this lab, you will:
 
 ## Task 1: Create the AI Agent
 
-In this task, you will create the Procurement Agent. You will set the system prompt that defines the agent's behavior and add a welcome message that greets the user when they open the chat panel.
+In this task, you will create the Procurement Agent. You will set the system prompt that defines the agent's behavior and add a welcome message that greets the user when they open the chat panel. Open the agent creation page from within your application's Shared Components to ensure it is automatically associated with the correct application.
 
-Open the agent creation page from within your application's Shared Components to ensure it is automatically associated with the correct application.
-
-1. Click on **Application &lt;APP\_ID&gt;** in the breadcrumb to return to your application home page.
+1. Click **Application &lt;APP\_ID&gt;** in the breadcrumb to return to your application home page.
 
     ![Return to Shared Components from the AI Attributes page](./images/app-id.png " ")
 
 2. From your application home page, select **Shared Components**.
 
-    ![Application home page](./images/shared-comp.png " ")
+    ![Select Shared Components from the application home page](./images/shared-comp.png " ")
 
 3. From **Shared Components**, under **Generative AI**, select **AI Agents**.
 
@@ -159,7 +157,7 @@ When a user sets a delivery due date, the agent needs to know their timezone so 
 
 1. In the **Tools** section, select **Add Tool**.
 
-    ![Add Tool](./images/click-add1.png " ")
+    ![Select Add Tool to create get_browser_timezone](./images/click-add1.png " ")
 
 2. Enter/select the following configuration:
 
@@ -183,9 +181,14 @@ When a user sets a delivery due date, the agent needs to know their timezone so 
 
 ## Summary
 
-The Procurement Agent is created and has two context tools in place. On every new message, the agent automatically knows who the user is, which warehouse they belong to, and what timezone their browser is using. This foundation ensures that every agent response is scoped and accurate for each individual user.
+You created the Procurement Agent and added two context tools. On every new message, the agent automatically identifies the user, their warehouse, and their browser timezone. This foundation ensures that every agent response is scoped and accurate for each individual user.
 
 You may now **proceed to the next lab**.
+
+## Learn More
+
+- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
+- [AI Agent Tools](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agent-tools.html)
 
 ## Acknowledgements
 
