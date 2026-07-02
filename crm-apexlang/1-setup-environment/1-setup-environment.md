@@ -38,6 +38,8 @@ Estimated Time: 15 minutes
 6. Finally, we need to install the SQLcl MCP server. Download the latest version of [SQLcl](https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/) to your local machine. 
     ![SQLcl Doenload page](images/sqlcl-download.png)
 
+    *Note:* SQLcl requires a Java Runtime Environment (JRE) or Java Development Kit (JDK) to be installed on your system. Ensure that Java is installed and available in your system’s PATH before using SQLcl.
+
 7. In the Codex chat agent, click on **Codex Settings**.
     ![Codex settings](images/codex-settings.png)
 
