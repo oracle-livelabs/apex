@@ -56,7 +56,7 @@ Open the agent creation page from within your application's Shared Components to
 
     - Under **Generative AI**:
 
-        - Service: **OCI Gen AI**
+        - Service: Select the Generative AI Service you configured in Lab 2. For example, select **OCI Gen AI** if you configured OCI Generative AI.
 
         - System Prompt: copy and paste the following:
 
