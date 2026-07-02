@@ -1,6 +1,6 @@
 -- APEX Logistics
 -- SCM Basic App data model
--- Oracle Database 19c compatible design
+-- Oracle Database 19c and 26ai compatible design
 --
 -- Scope notes
 -- 1. This schema keeps core warehouse operations, control, and traceability.
@@ -46,7 +46,9 @@ create table scm_partner_sites (
     constraint uq_scm_partner_sites_01 unique (business_partner_id, site_code),
     constraint fk_scm_partner_sites_01 foreign key (business_partner_id)
         references scm_business_partners (business_partner_id),
-    constraint ck_scm_partner_sites_01 check (site_role_code in ('PRIMARY', 'SHIP_FROM', 'SHIP_TO', 'PICKUP', 'DELIVERY', 'RETURN'))
+    constraint ck_scm_partner_sites_01 check (site_role_code in ('PRIMARY', 'SHIP_FROM', 'SHIP_TO', 'PICKUP', 'DELIVERY', 'RETURN')),
+    constraint ck_scm_partner_sites_02 check (is_primary_site in (0, 1)),
+    constraint ck_scm_partner_sites_03 check (is_active in (0, 1))
 );
 
 create table scm_warehouses (
@@ -98,7 +100,9 @@ create table scm_user_roles (
             'ADMIN'
         )
     ),
-    constraint ck_scm_user_roles_03 check (approval_authority_level >= 0)
+    constraint ck_scm_user_roles_03 check (approval_authority_level >= 0),
+    constraint ck_scm_user_roles_04 check (is_system_role in (0, 1)),
+    constraint ck_scm_user_roles_05 check (is_active in (0, 1))
 );
 
 create table scm_application_users (
@@ -142,7 +146,8 @@ create table scm_user_role_assignments (
         references scm_application_users (application_user_id),
     constraint ck_scm_user_role_assignments_01 check (assignment_status_code in ('ACTIVE', 'INACTIVE')),
     constraint ck_scm_user_role_assignments_02 check (effective_to_date is null or effective_to_date >= effective_from_date),
-    constraint ck_scm_user_role_assignments_03 check (authority_level_override is null or authority_level_override >= 0)
+    constraint ck_scm_user_role_assignments_03 check (authority_level_override is null or authority_level_override >= 0),
+    constraint ck_scm_user_role_assignments_04 check (is_primary_role in (0, 1))
 );
 
 create table scm_business_lists (
@@ -165,7 +170,8 @@ create table scm_business_list_values (
     constraint pk_scm_business_list_values primary key (business_list_value_id),
     constraint uq_scm_business_list_values_01 unique (business_list_id, value_code),
     constraint fk_scm_business_list_values_01 foreign key (business_list_id)
-        references scm_business_lists (business_list_id)
+        references scm_business_lists (business_list_id),
+    constraint ck_scm_business_list_values_01 check (is_active in (0, 1))
 );
 
 ------------------------------------------------------------------------------
@@ -213,7 +219,9 @@ create table scm_storage_locations (
     constraint fk_scm_storage_locations_03 foreign key (parent_location_id)
         references scm_storage_locations (storage_location_id),
     constraint ck_scm_storage_locations_01 check (location_type_code in ('RECEIVING', 'STORAGE', 'PICKING', 'QUARANTINE', 'RETURNS', 'DISPATCH', 'STAGING', 'BIN')),
-    constraint ck_scm_storage_locations_02 check (location_status_code in ('ACTIVE', 'INACTIVE', 'BLOCKED'))
+    constraint ck_scm_storage_locations_02 check (location_status_code in ('ACTIVE', 'INACTIVE', 'BLOCKED')),
+    constraint ck_scm_storage_locations_03 check (is_pickable in (0, 1)),
+    constraint ck_scm_storage_locations_04 check (is_active in (0, 1))
 );
 
 create table scm_items (
@@ -239,7 +247,15 @@ create table scm_items (
     constraint uq_scm_items_01 unique (item_code),
     constraint fk_scm_items_01 foreign key (owner_customer_partner_id)
         references scm_business_partners (business_partner_id),
-    constraint ck_scm_items_01 check (item_status_code in ('ACTIVE', 'INACTIVE', 'BLOCKED'))
+    constraint ck_scm_items_01 check (item_status_code in ('ACTIVE', 'INACTIVE', 'BLOCKED')),
+    constraint ck_scm_items_02 check (lot_control_flag in (0, 1)),
+    constraint ck_scm_items_03 check (serial_control_flag in (0, 1)),
+    constraint ck_scm_items_04 check (expiry_control_flag in (0, 1)),
+    constraint ck_scm_items_05 check (fragile_flag in (0, 1)),
+    constraint ck_scm_items_06 check (high_value_flag in (0, 1)),
+    constraint ck_scm_items_07 check (hazardous_flag in (0, 1)),
+    constraint ck_scm_items_08 check (temperature_control_flag in (0, 1)),
+    constraint ck_scm_items_09 check (restricted_item_flag in (0, 1))
 );
 
 create table scm_item_warehouse_policies (
@@ -273,7 +289,9 @@ create table scm_item_warehouse_policies (
         safety_stock_quantity is null
         or reorder_point_quantity is null
         or safety_stock_quantity <= reorder_point_quantity
-    )
+    ),
+    constraint ck_scm_item_warehouse_policies_08 check (low_stock_alert_enabled_flag in (0, 1)),
+    constraint ck_scm_item_warehouse_policies_09 check (is_active in (0, 1))
 );
 
 create table scm_replenishment_alerts (
@@ -389,7 +407,8 @@ create table scm_item_serials (
     constraint fk_scm_item_serials_04 foreign key (current_storage_location_id)
         references scm_storage_locations (storage_location_id),
     constraint ck_scm_item_serials_01 check (current_status_code in ('AVAILABLE', 'RESERVED', 'PICKED', 'PACKED', 'IN_TRANSIT', 'QUARANTINE', 'DAMAGED', 'BLOCKED', 'SHIPPED', 'WRITTEN_OFF')),
-    constraint ck_scm_item_serials_02 check (serial_condition_code in ('GOOD', 'DAMAGED', 'SUSPECT', 'EXPIRED'))
+    constraint ck_scm_item_serials_02 check (serial_condition_code in ('GOOD', 'DAMAGED', 'SUSPECT', 'EXPIRED')),
+    constraint ck_scm_item_serials_03 check (is_active in (0, 1))
 );
 
 create table scm_inventory_balances (
@@ -1560,7 +1579,7 @@ select u.user_name,
   from scm_application_users     u
   join scm_user_role_assignments  a   on a.application_user_id   = u.application_user_id
                                      and a.assignment_status_code = 'ACTIVE'
-                                     and a.is_primary_role        = true
+                                     and a.is_primary_role        = 1
   join scm_user_roles             r   on r.user_role_id           = a.user_role_id
   left join scm_warehouses        w   on w.warehouse_id           = u.default_warehouse_id
   left join scm_application_users mgr on mgr.application_user_id  = u.manager_user_id;
@@ -1606,7 +1625,12 @@ select u.user_name,
        ra.priority_code                                                          as alert_priority,
        ra.alert_type_code,
        ra.alert_number,
-       round((systimestamp - ra.raised_at) * 24)                                as hours_open,
+       round(
+           extract(day    from (systimestamp - ra.raised_at)) * 24
+         + extract(hour   from (systimestamp - ra.raised_at))
+         + extract(minute from (systimestamp - ra.raised_at)) / 60
+         + extract(second from (systimestamp - ra.raised_at)) / 3600
+       )                                                                         as hours_open,
        decode(ra.priority_code,'CRITICAL',1,'HIGH',2,'MEDIUM',3,'LOW',4,5)      as priority_sort,
        nvl(p.reorder_point_quantity,0) - nvl(bal.total_available,0)             as stock_gap
   from scm_item_warehouse_policies p
@@ -1622,8 +1646,8 @@ select u.user_name,
         and ra.warehouse_id      = p.warehouse_id
         and ra.alert_status_code in ('OPEN', 'IN_REVIEW')
         and ra.priority_code     = ha.priority_code
- where p.is_active                    = true
-   and p.low_stock_alert_enabled_flag = true
+ where p.is_active                    = 1
+   and p.low_stock_alert_enabled_flag = 1
    and ( nvl(bal.total_available, 0) <= nvl(p.reorder_point_quantity, 0)
          or ra.alert_number is not null )
    and not exists (
@@ -2032,7 +2056,7 @@ begin
             l_user_id,
             l_role_id,
             'ACTIVE',
-            'true'
+            1
         );
 
     end if;

@@ -2,9 +2,9 @@
 
 ## Introduction
 
-In this lab, you will complete the final two steps to bring the workshop together. First, you will add the **Procurement Agent** to the **Home Dashboard** by creating a button and attaching it to the AI Agent using a trigger action. Then you will run the application and walk through the complete procurement conversation: identifying low-stock items, evaluating suppliers, and raising a purchase order.
+In this lab, you will add the **Procurement Agent** to the **Home Dashboard** and run the complete procurement conversation. You will create a button, attach it to the AI Agent using a trigger action, then launch the application and walk through the end-to-end process: identifying low-stock items, evaluating suppliers, and raising a purchase order.
 
-Estimated Time: 10 minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 
@@ -24,7 +24,7 @@ In this task, you will configure the entry point that users will use to start th
 
 2. From the Application home page, select **Page 1 - Home Dashboard** to open it in Page Designer.
 
-    ![Application home page](./images/app-homepage.png " ")
+    ![Select Page 1 - Home Dashboard from the application home page](./images/app-homepage.png " ")
 
 3. In **Page Designer**, under **Rendering > Breadcrumb Bar**, right-click **Breadcrumb** and select **Create Button Below**.
 
@@ -101,7 +101,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *Before processing your message, the agent automatically runs `get_user_context` and `get_browser_timezone` to inject your identity, warehouse, and timezone into every response. It then calls `get_stocks_at_risk` to return the items at or below their reorder point in your warehouse.*
 
-    ![Procurement Assistant Conversation](./images/low-stock.png " ")
+    ![Agent responds with items at risk in the user's warehouse](./images/low-stock.png " ")
 
 4. Ask the agent to show suppliers for the item:
 
@@ -113,7 +113,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *Tool invoked: `get_suppliers_for_item`*
 
-    ![Procurement Assistant Conversation](./images/supplier-list.png =60%x*)
+    ![Agent returns suppliers for the selected item](./images/supplier-list.png =60%x*)
 
 5. Request delivery performance for the supplier:
 
@@ -125,7 +125,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *Tool invoked: `get_supplier_delivery_performance`*
 
-    ![Procurement Assistant Conversation](./images/supplier-perf.png =60%x*)
+    ![Agent shows supplier delivery performance scorecard](./images/supplier-perf.png =60%x*)
 
 6. Instruct the agent to raise a purchase order:
 
@@ -137,7 +137,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *The agent uses your default warehouse from `get_user_context` and asks for the quantity and delivery date.*
 
-    ![Procurement Assistant Conversation](./images/raise-po.png =60%x*)
+    ![Agent asks for quantity and delivery date to raise a purchase order](./images/raise-po.png =60%x*)
 
 7. When the agent asks for the quantity and delivery date, reply with:
 
@@ -149,7 +149,7 @@ In this task, you will launch the application and validate the end-to-end procur
 
     *The agent calls `raise_purchase_order`. Because this tool has **Requires Confirmation** enabled, APEX displays a confirmation dialog with the order details before the tool runs.*
 
-    ![Procurement Assistant Conversation](./images/quantity.png =60%x*)
+    ![Agent displays confirmation dialog after receiving quantity and date](./images/quantity.png =60%x*)
 
 8. Review the confirmation dialog and click **Raise PO** to approve the purchase order.
 
@@ -157,11 +157,11 @@ In this task, you will launch the application and validate the end-to-end procur
 
 9. The agent confirms the purchase order in the chat, showing the PO number, item, quantity, supplier, warehouse, and expected delivery date. The purchase order is now a planned inbound receipt in the system.
 
-    ![Procurement Assistant Conversation](./images/po-placed.png =60%x*)
+    ![Agent confirms the purchase order with PO number and details](./images/po-placed.png =60%x*)
 
 ## Summary
 
-You have completed this LiveLab. The Home Dashboard now has a dedicated entry point for the Procurement Agent, and users can identify low stocks, evaluate suppliers, and raise a purchase order through a single guided conversation in Oracle APEX.
+You completed this workshop. You added a dedicated entry point for the Procurement Agent to the Home Dashboard and validated the end-to-end procurement conversation. Users can now identify low stocks, evaluate suppliers, and raise a purchase order through a single guided conversation in Oracle APEX.
 
 ## Acknowledgements
 

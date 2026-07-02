@@ -84,7 +84,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
 
-    - Model ID: **meta.llama-3.3-70b-instruct** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
+    - Model ID: **cohere.command-a-03-2025** (The pre-trained models are frequently deprecated. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) for the latest pre-trained models.)
 
     - Used by App Builder: Toggle the button to turn it **ON**. Note that the Base URL is auto generated.
 
