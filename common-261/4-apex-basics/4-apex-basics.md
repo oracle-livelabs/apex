@@ -2,6 +2,12 @@
 
 Before you proceed, review the commonly used Oracle APEX terminology in the workshop to help you navigate better.
 
+Estimated Time: 5 minutes
+
+### Objectives
+
+- Learn the basic concepts used in APEX workshops
+
 ### **Page Designer**
 Page Designer is a full featured Integrated Development Environment (IDE) that includes a toolbar and multiple panes. You use Page Designer to maintain and enhance pages within an Oracle APEX application.
 
@@ -15,3 +21,9 @@ When you run an application from App Builder and view a page, the Runtime Develo
 ![App running](images/runtime-toolbar.png ' ')
 
 To learn more about the controls in the Runtime Developer Toolbar, refer to the [Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/runtime-developer-toolbar.html).
+
+
+## Acknowledgements
+
+- **Authors** - Apoorva Srinivas, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026

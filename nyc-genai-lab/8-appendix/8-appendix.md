@@ -1,6 +1,9 @@
 # Appendix: Download Instructions
 
+## Introduction
 This lab consists of tasks that need to be executed on a case-by-case basis. If you are directed to this lab at any point of time, choose the appropriate task that needs to be executed to proceed.
+
+Estimated Time: 10 minutes
 
 ## Objectives
 
@@ -39,24 +42,24 @@ To update the Web Credential in Oracle APEX:
 
 1. You need access to an OCI API Key Pair. To generate an OCI Key pair, refer to [Lab 3: Task 1 : Generate API keys using OCI Console](?lab=3-configure-oci&type=OCIGenAI#Task1:GenerateAPIKeysusingOCIConsole)
 
-Skip this step if you already have the API key.
+    Skip this step if you already have the API key.
 
 
 2. On the Workspace home page, click **App Builder**.
 
-   ![Click App Builder](images/app-builder1.png " ")
+    ![Click App Builder](images/app-builder1.png " ")
 
 3. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
 4. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/sc-web-creds.png " ")
+    ![Click Web Credentials](images/sc-web-creds.png " ")
 
 5. Click **credentials for oci gen ai**.
 
-   ![Create Web Credentials](images/apex-ai-cred.png " ")
+    ![Create Web Credentials](images/apex-ai-cred.png " ")
 
 6. Enter the following details using the configuration file you copied while generating an API key in OCI Console.
 
@@ -75,14 +78,12 @@ Skip this step if you already have the API key.
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds.png " ")
+    ![Web Credentials page](images/web-creds.png " ")
 
 5. Click **Apply Changes**.
 
 
-To Enable Generative AI in Oracle APEX:
-
-6. Click **Workspace Utilities**.
+6. To Enable Generative AI in Oracle APEX, click **Workspace Utilities**.
 
     !["Page Designer"](images/wksp-util.png "")
 
@@ -142,7 +143,7 @@ To Enable Generative AI in Oracle APEX:
 8. All set. Now, run the application and see it in action! Follow Lab 6: [Run the Application](?lab=6-run-app) to run the app. -->
 
 
-## Acknowledgments
+## Acknowledgements
 
  - **Author** - Apoorva Srinivas, Principal Product Manager
  - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026

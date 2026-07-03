@@ -7,6 +7,10 @@ Oracle APEX is the world's most popular enterprise low-code application platform
 
 Estimated Time: 5 minutes
 
+### Objectives
+
+- Learn how to create an APEX workspace
+
 ### What is an APEX Workspace?
 
 An APEX Workspace is a logical domain where you define APEX applications. Each workspace is associated with one or more database schemas (database users) which are used to store the database objects, such as tables, views, packages, and more. APEX applications are built on top of these database objects.

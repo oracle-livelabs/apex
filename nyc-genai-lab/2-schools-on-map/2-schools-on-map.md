@@ -164,7 +164,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     ![SQL Commands editor](images/plsql.png ' ')
 
 4. Navigate to **App Builder** > **Highschools** > **Search and Apply**.
-   In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
+    In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
     - Source > Where Clause:
         ```
         <copy>
@@ -408,7 +408,7 @@ You now know how to map a Faceted Search to a Map region. You also learned to fi
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
  - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff

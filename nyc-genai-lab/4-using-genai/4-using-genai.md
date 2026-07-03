@@ -42,7 +42,7 @@ In this lab, you will:
     ![Shared components page](images/ai-attributes.png ' ')
 
 4. For Service, select the Generative AI service that you configured in Lab 3. In this workshop, we choose **OCI Gen AI**. Click **Apply Changes**.'
-Note: This ensures that whenever *Application Default* is chosen for the Generative AI service, **OCI Gen AI** service will be used.
+    *Note*: This ensures that whenever *Application Default* is chosen for the Generative AI service, **OCI Gen AI** service will be used.
     ![AI attributes page](images/select-service.png ' ')
 
 3. Navigate to Shared Components and select **AI Configurations** under Generative AI.

@@ -31,11 +31,11 @@ In this task, you create a single working directory for the files that will be u
 
 3. Click the file link to open the file. Right-click on the file and select **Save As**.
 
- ![Save As](./images/save-as.png " ")
+    ![Save As](./images/save-as.png " ")
 
 4. Save both files in the `CRM_APP` folder.
 
- ![CRM APP Folder](./images/crm-app-folder.png " ")
+    ![CRM APP Folder](./images/crm-app-folder.png " ")
 
 ## Task 2: Generate Metadata and a CRM Blueprint Using Codex
 
@@ -43,25 +43,25 @@ In this task, you generate schema metadata from APEX workspace and then use Code
 
 1. Log in to your workspace. Navigate to **SQL Workshop**, then **Utilities**, and then **Describe Tables**.
 
- ![Describe Table](./images/describe-table.png " ")
+    ![Describe Table](./images/describe-table.png " ")
 
 2. Select all CRM tables from the left pane and move them to the right pane.
 
- ![Filter](./images/filter-crm.png " ")
+    ![Filter](./images/filter-crm.png " ")
 
 3. Click **Describe**.
 
- ![Click Describe](./images/click-describe.png " ")
+    ![Click Describe](./images/click-describe.png " ")
 
 4. Download the metadata file.
 
- ![Click Download](./images/click-download.png " ")
+    ![Click Download](./images/click-download.png " ")
 
 5. Rename the downloaded metadata file to `crm_schema_metadata.md`.
 
 6. Save the file in the `CRM_APP` folder.
 
- ![CRM APP 2](./images/crm-app-2.png " ")
+    ![CRM APP 2](./images/crm-app-2.png " ")
 
 7. Open VS Code.
 
@@ -69,7 +69,7 @@ In this task, you generate schema metadata from APEX workspace and then use Code
 
 9. Switch to the **Codex** tab.
 
- ![Codex Tab](./images/codex-tab.png " ")
+    ![Codex Tab](./images/codex-tab.png " ")
 
 10. Upload the `crm_functional_requirements_spec.md` file, `blueprint_prompt.md` file, and `crm_schema_metadata.md` file.
 
@@ -78,21 +78,21 @@ In this task, you generate schema metadata from APEX workspace and then use Code
     ```
     <copy>Analyze the files and generate CRM application blueprint in Markdown format. Use the file name crm_generated_blueprint.md</copy>
     ```
-> Note: Set the reasoning model to `Extra High`.
+    > Note: Set the reasoning model to `Extra High`.
 
 12. Run the prompt.
 
-![Codex Prompt](./images/codex-prompt.png " ")
+    ![Codex Prompt](./images/codex-prompt.png " ")
 
 13. During the generation of blueprint, the AI coding agent might prompt for approvals. Carefully read the instructions, and if satisfied, click on **Approve/Yes**. 
 
-*Note:* Please note that some operations - such as making changes to the markdown files are completely safe and are necessary to generate a specification from a blueprint.
+    *Note:* Please note that some operations - such as making changes to the markdown files are completely safe and are necessary to generate a specification from a blueprint.
 
- ![Codex Prompt](./images/approve.png " ")
+    ![Codex Prompt](./images/approve.png " ")
 
 14. Confirm that the file `crm_generated_blueprint.md` is generated.
 
- ![Codex Prompt](./images/generated-blueprint.png " ")
+    ![Codex Prompt](./images/generated-blueprint.png " ")
 
 ## Acknowledgements
 
