@@ -44,7 +44,8 @@ In this task, you import the generated blueprint file and validate the blueprint
 2. Upload the generated blueprint file (`crm_generated_blueprint.md`). Choose File Type **Application Blueprint**
 
   > **Note:** If you are stuck or not able to generate the blueprint file, you can download the file here
-    - [crm\_generated\_blueprint\_.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_generated_blueprint.md)
+  
+  - [crm\_generated\_blueprint\_.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_generated_blueprint.md)
 
 3. Click **Next**
 

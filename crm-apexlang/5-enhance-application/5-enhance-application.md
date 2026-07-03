@@ -36,15 +36,15 @@ To install the required Oracle APEX and database skills:
     ```
     ![VS Code](images/skill-sync.png)
 
-**Note:** *The Skills repository is updated regularly. To get the latest changes, simply re-run the same command to sync it again.*
+    **Note:** *The Skills repository is updated regularly. To get the latest changes, simply re-run the same command to sync it again.*
 
-This command installs the Oracle APEX and database-related skills needed for APEXlang workflows.
+    This command installs the Oracle APEX and database-related skills needed for APEXlang workflows.
 
-After installation, the required skills should be available locally in your coding agent’s skills directory.
+    After installation, the required skills should be available locally in your coding agent’s skills directory.
 
-You are now ready to start building APEX applications with APEXlang in your preferred AI coding agent.
+    You are now ready to start building APEX applications with APEXlang in your preferred AI coding agent.
 
-Our skills are publically available at https://github.com/oracle/skills.  More advanced users may clone, fork or download them from there and install in their local agents.
+    Our skills are publically available at https://github.com/oracle/skills.  More advanced users may clone, fork or download them from there and install in their local agents.
 
 
 <!--1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
