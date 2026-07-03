@@ -25,13 +25,13 @@ In this task, you prepare the workspace so the schema is ready for the remaining
 
 1. Log in to your Workspace. Navigate to **SQL Workshop** > **RESTful Services** > **Register Schema With ORDS**.
 
-  ![Register Schema](./images/register-schema.png " ")
+    ![Register Schema](./images/register-schema.png " ")
 
 2. Click **Save Schema Attributes**.
 
-  ![Save Schema](./images/save-schema.png " ")
+    ![Save Schema](./images/save-schema.png " ")
 
-  ![Saved Schema](./images/saved-schema.png " ")
+    ![Saved Schema](./images/saved-schema.png " ")
 
 ## Task 2: Import and Configure the Application
 
@@ -39,47 +39,47 @@ In this task, you import the generated blueprint file and validate the blueprint
 
 1. Navigate to **App Builder**. Click on **Import**.
 
-  ![Import](./images/import.png " ")
+    ![Import](./images/import.png " ")
 
 2. Upload the generated blueprint file (`crm_generated_blueprint.md`). Choose File Type **Application Blueprint**
 
-  > **Note:** If you are stuck or not able to generate the blueprint file, you can download the file here
+    > **Note:** If you are stuck or not able to generate the blueprint file, you can download the file here
   
-  - [crm\_generated\_blueprint\_.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_generated_blueprint.md)
+    - [crm\_generated\_blueprint\_.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_generated_blueprint.md)
 
 3. Click **Next**
 
-  ![App Import](./images/app-import.png " ")
+    ![App Import](./images/app-import.png " ")
 
-  > **Note:** If a blueprint error appears after Step 3, click **Copy full error log to clipboard**. Paste the copied log into VS Code so your AI assistant can analyze it and fix the errors in the generated blueprint. Once the new file is ready, repeat Step 1 to Step 3 of Task 2.
-  ![App Imported](./images/blueprint-error.png " ")
+    > **Note:** If a blueprint error appears after Step 3, click **Copy full error log to clipboard**. Paste the copied log into VS Code so your AI assistant can analyze it and fix the errors in the generated blueprint. Once the new file is ready, repeat Step 1 to Step 3 of Task 2.
+    ![App Imported](./images/blueprint-error.png " ")
 
 4. Click **Import Application**.
 
-  ![App Import](./images/import-blueprint1.png " ")
+    ![App Import](./images/import-blueprint1.png " ")
 
-  ![App Imported](./images/app-imported.png " ")
+    ![App Imported](./images/app-imported.png " ")
    
 
 5. Click on **Edit Application**.
 
-  ![Edit App](./images/edit-app.png " ")
+    ![Edit App](./images/edit-app.png " ")
 
 6. Navigate to **Shared Components**, and click **User Access Control**.
 
-  ![Shared Components](./images/shared-components.png " ")
+    ![Shared Components](./images/shared-components.png " ")
 
-  ![Application Access Control](./images/app-access.png " ")
+    ![Application Access Control](./images/app-access.png " ")
 
 7. Click **Add User Role Assignment**.
 
-  ![Add Access](./images/add-access.png " ")
+    ![Add Access](./images/add-access.png " ")
 
 8. For the purpose of this demo, we will assign all the roles to a single user to avoid multiple logins.
 
-  In this case, enter your APEX workspace username and assign the appropriate roles. Click **Create Assignment**.
+    In this case, enter your APEX workspace username and assign the appropriate roles. Click **Create Assignment**.
 
-  ![Add Roles](./images/add-roles.png " ")
+    ![Add Roles](./images/add-roles.png " ")
 
 ## Task 3: Run and Explore the Application
 
@@ -87,15 +87,15 @@ In this task, you run the application and explore the app. This final step confi
 
 1. Run the application.
 
-  ![Run App](./images/run-app.png)
+    ![Run App](./images/run-app.png)
 
 2. Explore the different pages in the app.
 
-  ![App](./images/app1.png)
+    ![App](./images/app1.png)
 
-  ![App](./images/app2.png)
+    ![App](./images/app2.png)
 
-  ![App](./images/app3.png)
+    ![App](./images/app3.png)
 
 
 ## Acknowledgements

@@ -46,25 +46,6 @@ To install the required Oracle APEX and database skills:
 
     Our skills are publically available at https://github.com/oracle/skills.  More advanced users may clone, fork or download them from there and install in their local agents.
 
-
-<!--1. Configure Visual Studio Code to work with the APEXlang Skills repository and ensure the skills content is available locally. 
-
-    Download the APEXlang skills from Github: [APEXlang skills](https://github.com/oracle/skills/tree/main). 
-    
-    Unzip the folder.
-
-    ![Visual Studio Code workspace with APEXlang skills repository cloned](images/vscode-apexlang-repo-setup.png)
-
-3. Expand the **skills-main** folder and navigate to **apex** folder. Copy the **apexlang** folder and place it under **/.codex/skills**. This ensures that APEXlang skills are loaded to codex and can be used from the codex chat agent.
-
-    ![local machine folder structure](images/codex-skills.png)
-
-
-2. Create an empty folder called **Applications** on your local machine to manage your APEX apps.
-
-    ![Folder structure](images/app-folder.png)
-    -->
-
 ## Task 2: Export the app in APEXlang format into the Applications folder
 Export the CRM application in APEXlang format and place the output inside the `applications` folder.
 
