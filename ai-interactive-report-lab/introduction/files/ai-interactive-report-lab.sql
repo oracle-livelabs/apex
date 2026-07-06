@@ -34,7 +34,7 @@ prompt APPLICATION 10753 - Supply Chain Management
 --   Application:     10753
 --   Name:            Supply Chain Management
 --   Date and Time:   04:38 Tuesday May 5, 2026
---   Exported By:     ANKITA.BERI@ORACLE.COM
+--   Exported By:     GENDEV_USER
 --   Flashback:       0
 --   Export Type:     Application Export
 --     Pages:                      4
@@ -106,8 +106,8 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_value_01=>'Supply Chain Management'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_last_updated_on=>wwv_flow_imp.dz('20260505043648Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_last_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_last_updated_by=>'GENDEV_USER'
 ,p_file_prefix=>nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>2461166034827
 ,p_version_scn=>'46906090981371'
@@ -117,6 +117,7 @@ wwv_imp_workspace.create_flow(
 ,p_pwa_is_installable=>'N'
 ,p_pwa_is_push_enabled=>'N'
 ,p_ai_remote_server_id=>1482780006407790953
+,p_enable_dictation=>'Y'
 ,p_theme_id=>42
 ,p_home_url=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
 ,p_login_url=>'f?p=&APP_ID.:LOGIN:&APP_SESSION.::&DEBUG.:::'
@@ -148,8 +149,8 @@ wwv_imp_workspace.create_credential(
 ,p_prompt_on_install=>true
 ,p_created_on=>wwv_flow_imp.dz('20260504082209Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260504082209Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -180,8 +181,8 @@ wwv_imp_workspace.create_remote_server(
 ,p_prompt_on_install=>false
 ,p_created_on=>wwv_flow_imp.dz('20260504082209Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260504082209Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -194,8 +195,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:NcagEyRP_F17oe14bnrSYSYienkBgpdRSvH17g_NxoE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589941540554788527)
@@ -207,8 +208,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:FJR60MFzlfEjx0PvnpYBK4631rNeUHXaF3eGFKxcTgE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589941816190788528)
@@ -222,8 +223,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:dQTHqehcDG0h-d-qmHe5lf-DuViElEHDw9zMkscLr6M'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589942111149788528)
@@ -237,8 +238,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:CU9J9l4sUtY-UffjdBCosfDW6ER-I0swXpw8GekLiYQ'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589942434708788529)
@@ -249,8 +250,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:jJTPfH8wphTXe7ahDytF6PbWlPl1mXrDRYylCDda0k0'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589942712051788529)
@@ -262,8 +263,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:oAqKgc-cSRXHDMjfwwNIgo78WqYXKjQz8MWGBG6Euj0'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589943032472788530)
@@ -275,8 +276,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:uT4QhQbZQY61UFxAGl7ieo2urrCo8jUsFNprrg7lGHo'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589943396644788530)
@@ -289,8 +290,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:wAjuCAsVhoIbbuKGWTMQ__Rd_YS_sY9KgWhpqOO11mc'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589943693900788531)
@@ -301,8 +302,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:GIeRbUJQ8yKfen6-dFvkghmSUZXFoUAXCCTNRhCJgh0'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589943940218788531)
@@ -313,8 +314,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:4M27aN0U-JyQ0prILtI8ITLXOphqUdO-xWNcwkSL1SI'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589944221332788532)
@@ -325,8 +326,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:tNGqNT-VaoKqWOwKbAdEqb6C0QO-GMcYRZJLXjScHMo'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589944551970788532)
@@ -337,8 +338,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:vJP7K77hiNj1R2RE6dHVyRAhlmxDg6KGn4yRE20J9Qw'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589944846320788532)
@@ -347,8 +348,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:fiSZ-OfcUl-d0e0dtJUYffG7q61xKsHlomsv7ZU1BMw'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_plugin_setting(
  p_id=>wwv_flow_imp.id(1589945156012788533)
@@ -357,8 +358,8 @@ wwv_flow_imp_shared.create_plugin_setting(
 ,p_version_scn=>'SH256:dRkCWi6vQMhdQUSqb0QlRls9iYcsZ93IPYrbTqFqJFE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -371,8 +372,8 @@ wwv_flow_imp_shared.create_list(
 ,p_version_scn=>'SH256:vnb1-G39r80BPE-5P2Enpuf0sMSVvBeNQDVbFiNwRto'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(1589960671167788716)
@@ -385,8 +386,8 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(1589961256644788717)
@@ -399,8 +400,8 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(1589961783273788718)
@@ -414,8 +415,8 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -428,8 +429,8 @@ wwv_flow_imp_shared.create_list(
 ,p_version_scn=>'SH256:H4d0TADTqBk8OFHkSp0RlJUQoR3eZOq7eRo2nM2Ypf4'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040536Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(1589958038878788709)
@@ -441,8 +442,8 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(1590734118284554874)
@@ -455,8 +456,8 @@ wwv_flow_imp_shared.create_list_item(
 ,p_list_item_current_for_pages=>'2'
 ,p_created_on=>wwv_flow_imp.dz('20260505040536Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040536Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -506,8 +507,8 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -562,8 +563,8 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -641,8 +642,8 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -663,8 +664,8 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -824,8 +825,8 @@ wwv_flow_imp_shared.create_app_static_file(
 ,p_file_content=>wwv_flow_imp.varchar2_to_blob(wwv_flow_imp.g_varchar2_table)
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -843,8 +844,8 @@ wwv_flow_imp_shared.create_security_scheme(
 ,p_caching=>'BY_USER_BY_PAGE_VIEW'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -879,8 +880,8 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_version_scn=>'SH256:CnCBOq-zabcz-aPWKwU8C5KDeZy6YuyjvpJoTrTywfI'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_static_lov_data(
  p_id=>wwv_flow_imp.id(1589960275613788715)
@@ -915,8 +916,8 @@ wwv_flow_imp_shared.create_menu(
 ,p_static_id=>'breadcrumb'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040536Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(1589946285933788535)
@@ -926,8 +927,8 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_page_id=>1
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(1590735156102554877)
@@ -937,8 +938,8 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_page_id=>2
 ,p_created_on=>wwv_flow_imp.dz('20260505040536Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040536Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -998,8 +999,8 @@ wwv_flow_imp_shared.create_theme(
 ,p_version_scn_master=>'SH256:WOPVC8vP1TPWUxczh2dJ4mCZcNGSTzA1cn8DjR2oQjY'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1043,8 +1044,8 @@ wwv_flow_imp_shared.create_build_option(
 ,p_version_scn=>'SH256:1lQI3DW9n-0ZEGoDXUirkaB0JWCIATVWpJZCTCkODmI'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1071,8 +1072,8 @@ wwv_flow_imp_shared.create_authentication(
 ,p_version_scn=>'SH256:MwlwV9vQNyvTGV3nRFfTrp5n7mJ1Ugme2lUrlsOYuxw'
 ,p_created_on=>wwv_flow_imp.dz('20260505034825Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034825Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1093,8 +1094,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'14'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_last_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_last_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_last_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1112,8 +1113,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'13'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_last_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_last_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_last_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(1589958970902788711)
@@ -1132,8 +1133,8 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1151,8 +1152,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'18'
 ,p_created_on=>wwv_flow_imp.dz('20260505040536Z')
 ,p_last_updated_on=>wwv_flow_imp.dz('20260505043648Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_last_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_last_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(1590734512187554875)
@@ -1169,8 +1170,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_menu_template_id=>4073839682315169711
 ,p_created_on=>wwv_flow_imp.dz('20260505040536Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040536Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(1590735405156555004)
@@ -1215,8 +1216,8 @@ wwv_flow_imp_page.create_page_plug(
 ,p_ai_enabled=>true
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505043648Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet(
  p_id=>wwv_flow_imp.id(1590735567295555004)
@@ -1235,8 +1236,8 @@ wwv_flow_imp_page.create_worksheet(
 ,p_ai_report_hint=>'Replenishment alerts show where stock should be moved into the pick face. High priority means urgent action. Qty to Target is the suggested replenishment quantity. Warehouse Code identifies the fulfillment location.'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505043648Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590737064396555177)
@@ -1250,8 +1251,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590737475837555180)
@@ -1263,10 +1264,12 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
+,p_ai_lov_type=>'STATIC'
+,p_ai_lov_source=>'STATIC:OPEN;OPEN,IN_REVIEW;IN_REVIEW,ACTIONED;ACTIONED,CLOSED;CLOSED,SUPPRESSED;SUPPRESSED'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590737879638555181)
@@ -1278,12 +1281,13 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
+,p_ai_column_hint=>'Business type of replenishment alert. Users may refer to these as out of stock, low stock, pick face replenishment, aging review, or short dated review.'
 ,p_ai_lov_type=>'STATIC'
-,p_ai_lov_source=>'STATIC:OPEN;OPEN,ACTIONED;ACTIONED,CLOSED;CLOSED'
+,p_ai_lov_source=>'STATIC:LOW_STOCK;LOW_STOCK,OUT_OF_STOCK;OUT_OF_STOCK,PICK_FACE_REPLENISHMENT;PICK_FACE_REPLENISHMENT,AGING_REVIEW;AGING_REVIEW,SHORT_DATED_REVIEW;SHORT_DATED_REVIEW'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040919Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590742289480555197)
@@ -1298,8 +1302,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590741496383555194)
@@ -1313,8 +1317,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590743423617555202)
@@ -1329,8 +1333,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590741047976555193)
@@ -1344,8 +1348,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590740223560555190)
@@ -1359,8 +1363,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590740618791555192)
@@ -1374,8 +1378,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590741878158555196)
@@ -1389,8 +1393,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590738284659555183)
@@ -1402,11 +1406,11 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
-,p_ai_column_hint=>'Business urgency of the replenishment alert. HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.'
+,p_ai_column_hint=>'Business urgency of the replenishment alert. CRITICAL means highest urgency requiring immediate action, HIGH means immediate attention, MEDIUM means normal attention, and LOW means lower urgency.'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590743030669555200)
@@ -1422,8 +1426,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_ai_column_hint=>'Suggested replenishment quantity to move into the pick face for this alert. Users may refer to this as replenishment quantity, suggested move quantity, restock amount, or quantity to replenish.'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590738663427555184)
@@ -1439,8 +1443,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_ai_column_hint=>'Timestamp when the replenishment alert was raised. Users may ask for alerts raised today, this week, recently, or in the last few days.'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590743841438555203)
@@ -1454,8 +1458,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590739047326555186)
@@ -1469,8 +1473,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590742638908555198)
@@ -1485,8 +1489,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040800Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590739424608555188)
@@ -1507,8 +1511,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ' order by warehouse_code'))
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040919Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_column(
  p_id=>wwv_flow_imp.id(1590739855005555189)
@@ -1522,8 +1526,8 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_available_clientside=>'N'
 ,p_created_on=>wwv_flow_imp.dz('20260505040539Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505040759Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_worksheet_rpt(
  p_id=>wwv_flow_imp.id(1591647760034742051)
@@ -1536,8 +1540,8 @@ wwv_flow_imp_page.create_worksheet_rpt(
 ||'_WH_QTY_AVAILABLE:RESERVE_CAN_COVER_TO_TARGET_FLAG'
 ,p_created_on=>wwv_flow_imp.dz('20260505043648Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505043648Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
@@ -1558,8 +1562,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_component_map=>'12'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_last_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_last_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_last_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(1589951922251788702)
@@ -1575,8 +1579,8 @@ wwv_flow_imp_page.create_page_plug(
   'output_as', 'HTML')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_button(
  p_id=>wwv_flow_imp.id(1589953551715788704)
@@ -1594,8 +1598,8 @@ wwv_flow_imp_page.create_page_button(
 ,p_grid_new_row=>'Y'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(1589952872386788703)
@@ -1618,8 +1622,8 @@ wwv_flow_imp_page.create_page_item(
   'submit_when_enter_pressed', 'Y')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(1589953238681788704)
@@ -1639,8 +1643,8 @@ wwv_flow_imp_page.create_page_item(
   'use_defaults', 'Y')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(1589952415434788703)
@@ -1666,8 +1670,8 @@ wwv_flow_imp_page.create_page_item(
   'trim_spaces', 'BOTH')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(1589957675891788708)
@@ -1682,8 +1686,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>1589957675891788708
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(1589957206483788708)
@@ -1699,8 +1703,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>1589957206483788708
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(1589953974150788705)
@@ -1717,8 +1721,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>1589953974150788705
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_invokeapi_comp_param(
  p_id=>wwv_flow_imp.id(1589954911130788706)
@@ -1733,8 +1737,8 @@ wwv_flow_imp_shared.create_invokeapi_comp_param(
 ,p_value=>'P9999_PASSWORD'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_invokeapi_comp_param(
  p_id=>wwv_flow_imp.id(1589955444821788706)
@@ -1748,8 +1752,8 @@ wwv_flow_imp_shared.create_invokeapi_comp_param(
 ,p_value_type=>'API_DEFAULT'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_invokeapi_comp_param(
  p_id=>wwv_flow_imp.id(1589954436338788705)
@@ -1764,8 +1768,8 @@ wwv_flow_imp_shared.create_invokeapi_comp_param(
 ,p_value=>'P9999_USERNAME'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_page.create_page_process(
  p_id=>wwv_flow_imp.id(1589955887278788707)
@@ -1782,8 +1786,8 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>1589955887278788707
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_invokeapi_comp_param(
  p_id=>wwv_flow_imp.id(1589956882636788708)
@@ -1798,8 +1802,8 @@ wwv_flow_imp_shared.create_invokeapi_comp_param(
 ,p_value=>'P9999_REMEMBER'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 wwv_flow_imp_shared.create_invokeapi_comp_param(
  p_id=>wwv_flow_imp.id(1589956367429788707)
@@ -1815,8 +1819,8 @@ wwv_flow_imp_shared.create_invokeapi_comp_param(
 ,p_value=>'lower( :P9999_USERNAME )'
 ,p_created_on=>wwv_flow_imp.dz('20260505034827Z')
 ,p_updated_on=>wwv_flow_imp.dz('20260505034827Z')
-,p_created_by=>'ANKITA.BERI@ORACLE.COM'
-,p_updated_by=>'ANKITA.BERI@ORACLE.COM'
+,p_created_by=>'GENDEV_USER'
+,p_updated_by=>'GENDEV_USER'
 );
 end;
 /
