@@ -88,7 +88,7 @@ In this task, you'll configure a **REST Data Source** in the **Shared Components
 
     Click **Next**.
 
-    >**Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
+    >**Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/document-understanding/20221109/>
 
     ![Create REST Data Sources](images/rest-general.png " ")
 
