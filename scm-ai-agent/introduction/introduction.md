@@ -2,7 +2,7 @@
 
 ## About This Workshop
 
-Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have. When an item drops below its reorder point and the replenishment alert is already CRITICAL, a warehouse manager needs answers fast: which items are at risk, which suppliers can help, and who has the best delivery record.
+Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have.When an item falls below its reorder point and the replenishment alert reaches CRITICAL, a warehouse manager needs fast answers: which items are at risk, which suppliers can help, and who delivers most reliably.
 
 AI Agents in Oracle APEX give your application the ability to reason through these questions and act on the answers. Instead of navigating multiple reports and forms, a user can open a chat panel and have a guided conversation. The agent understands who the user is, retrieves the right data, compares options, asks for confirmation, and raises a purchase order, all without leaving the application.
 
@@ -59,7 +59,7 @@ Every tool has an **Execution Point** that controls when it runs:
 
 ## Prerequisites
 
-- An Oracle APEX 26.1 workspace. This workshop requires APEX 26.1. Some features, instructions, and screenshots may differ or not be available in prior releases.
+- An Oracle APEX 26.1 workspace running on an Oracle Database 19c or later. This workshop requires APEX 26.1. Some features, instructions, and screenshots may differ or not be available in prior releases.
 
 - An API key for the AI provider of your choice: OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or Generic OpenAI API Compatible.
 
@@ -128,7 +128,7 @@ After completing the workshop, follow these steps to remove the application and 
 ## Learn More
 
 - [Oracle APEX](https://apex.oracle.com)
-- [APEX AI Agents Documentation](https://docs.oracle.com/en/database/oracle/apex/)
+- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
 - [APEX Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [APEX Community](https://apex.oracle.com/community)
 

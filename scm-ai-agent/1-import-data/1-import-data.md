@@ -4,9 +4,9 @@
 
 Before you can build the AI Agent, the workspace needs a schema, sample data, and a base application to work from.
 
-In this lab, you will load three SQL scripts: covering the warehouse schema, reference data, and operational data including the supplier delivery history the agent uses. You will then import the base application. Once this lab is complete, the workspace is ready for you to configure the Generative AI Service in the next lab.
+In this lab, you will load the data model script that creates the warehouse tables, run two sample data scripts that populate the schema with warehouses, users, items, suppliers, inventory balances, inbound receipts, and the supplier delivery history the agent uses, and then import the base application. Once this lab is complete, the workspace is ready for you to configure the Generative AI Service in the next lab.
 
-Estimated Time: 10 minutes
+Estimated Lab Time: 10 minutes
 
 ### Objectives
 
@@ -14,13 +14,15 @@ In this lab, you will:
 
 - Set up the SCM data model
 
-- Load the reference data and operational data
+- Load the sample data
 
 - Import the application for the workshop
 
 ## Task 1: Set Up the Data Model
 
-In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs.
+> **Note:** If you completed **Lab 1: Create a Supply Chain Management Application** in the [Build an AI Interactive Report in Oracle APEX](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?clear=RR,180&wid=4406) workshop on the same workspace, the data model and sample data are already loaded. Skip **Task 1** and **Task 2** and proceed to **Task 3: Import the SCM Application**.
+
+In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs. The data model is compatible with Oracle Database 19c and later.
 
 1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](./files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
 
@@ -38,11 +40,11 @@ In this task, you will upload and run the data model script. This creates the wa
 
 5. Select **Upload**.
 
-    ![SQL Scripts page](./images/sql-scripts-page.png " ")
+    ![Select Upload on the SQL Scripts page](./images/sql-scripts-page.png " ")
 
 6. In the **Upload Script** dialog, select the downloaded file, enter **`scm_data_model`** for **Script Name**, and select **Upload**.
 
-    ![Data Model Upload](./images/data-model-upload.png " ")
+    ![Upload Script dialog with scm_data_model file selected](./images/data-model-upload.png " ")
 
 7. In the row for **`scm_data_model`**, select **Run**.
 
@@ -54,7 +56,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
 9. Verify that the script completes successfully and that the following objects are created:
 
-    ![Data Model Results](./images/ran-data-script.png " ")
+    ![Script results showing successful data model creation](./images/ran-data-script.png " ")
 
     **Tables**
 
@@ -79,7 +81,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
     **Views and Procedures**
 
-    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple. The business logic lives in the database, not inline in the tool.
+    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple. The business logic resides in the database, not inline in the tool definition.
 
     | Object | Used by |
     | --- | --- |
@@ -94,7 +96,7 @@ In this task, you will upload and run the data model script. This creates the wa
 
 ## Task 2: Load the Sample Data
 
-In this task, you will load two sample data scripts. The first populates the reference data: warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads the operational data: inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
+In this task, you will load two sample data scripts. The first populates warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
 
 1. Download both sample data files to your local machine:
 
@@ -107,11 +109,11 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 3. Select **Upload**.
 
-    ![Upload to SQL Scripts](./images/upload-data1.png " ")
+    ![Select Upload on the SQL Scripts page](./images/upload-data1.png " ")
 
 4. In the **Upload Script** dialog, select or drag and drop the downloaded **`02_SCM_INV_WMS_SAMPLE_DATALOAD.sql`** file, enter **`scm_sample_data1`** for **Script Name**, and select **Upload**.
 
-    ![Sample Data Upload](./images/sample-data-upload1.png " ")
+    ![Upload Script dialog with scm_sample_data1 file selected](./images/sample-data-upload1.png " ")
 
 5. In the row for **`scm_sample_data1`**, select **Run**.
 
@@ -123,19 +125,19 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 7. Verify that the script completes successfully with 0 errors.
 
-    ![Sample Data Results](./images/ran-script1.png " ")
+    ![Script results showing scm_sample_data1 completed with 0 errors](./images/ran-script1.png " ")
 
 8. In the top breadcrumb, select **SQL Scripts**.
 
-    ![Sample Data Results](./images/sample-data1-return.png " ")
+    ![Select SQL Scripts in the breadcrumb to return to the scripts list](./images/sample-data1-return.png " ")
 
 9. Select **Upload** again.
 
-    ![Upload to SQL Scripts](./images/upload-data2.png " ")
+    ![Select Upload on the SQL Scripts page for the second data file](./images/upload-data2.png " ")
 
 10. In the **Upload Script** dialog, select or drag and drop the downloaded **`03_SCM_INV_WMS_OPERATIONAL_DATALOAD.sql`** file, enter **`scm_sample_data2`** for **Script Name**, and select **Upload**.
 
-    ![Operational Data Upload](./images/sample-data2-clickupload.png " ")
+    ![Upload Script dialog with scm_sample_data2 file selected](./images/sample-data2-clickupload.png " ")
 
 11. In the row for **`scm_sample_data2`**, select **Run**.
 
@@ -147,19 +149,19 @@ In this task, you will load two sample data scripts. The first populates the ref
 
 13. Verify that the script completes successfully. This script loads the inbound receipts and supplier delivery history that the agent uses for performance comparisons in Lab 4.
 
-    ![Operational Data Results](./images/sample-data2-results.png " ")
+    ![Script results showing scm_sample_data2 completed successfully](./images/sample-data2-results.png " ")
 
-The combined sample data now includes the following:
+    The combined sample data now includes the following:
 
-| Data | Details |
-| --- | --- |
-| Warehouses | 20 active warehouses across the US, including `PHX-WEST` (Cactus Ridge Retail Fulfillment Center) as the primary demo warehouse |
-| Roles | Administrator, Warehouse Manager, Inventory Controller, Operations User, Quality User, Business Viewer |
-| Users | `ops.director` (Maya Chen), `inventory.lead` (Daniel Brooks), `receiving.lead` (Sofia Martinez), `fulfillment.lead` (Ethan Walker) |
-| Suppliers | VoltNest Consumer Electronics, CedarLoft Home Furnishings, TrailPeak Outdoor Goods, PureLeaf Beauty Labs, SafeTrip Automotive Supply, PaperTrail Office Products |
-| Items | 200 inventory items across multiple product categories |
-| Inventory | Stock balances, reorder policies, and replenishment alerts for the `PHX-WEST` warehouse |
-{: title="Sample Data Summary"}
+    | Data | Details |
+    | --- | --- |
+    | Warehouses | 20 active warehouses across the US, including `PHX-WEST` (Cactus Ridge Retail Fulfillment Center) as the primary demo warehouse |
+    | Roles | Administrator, Warehouse Manager, Inventory Controller, Operations User, Quality User, Business Viewer |
+    | Users | `ops.director` (Maya Chen), `inventory.lead` (Daniel Brooks), `receiving.lead` (Sofia Martinez), `fulfillment.lead` (Ethan Walker) |
+    | Suppliers | VoltNest Consumer Electronics, CedarLoft Home Furnishings, TrailPeak Outdoor Goods, PureLeaf Beauty Labs, SafeTrip Automotive Supply, PaperTrail Office Products |
+    | Items | 200 inventory items across multiple product categories |
+    | Inventory | Stock balances, reorder policies, and replenishment alerts for the `PHX-WEST` warehouse |
+    {: title="Sample Data Summary"}
 
 ## Task 3: Import the SCM Application
 
@@ -173,7 +175,7 @@ In this task, you will import the base APEX application. It already contains the
 
 3. From the **App Builder** page, select **Import**.
 
-    ![App Builder Home](./images/app-builder-home.png " ")
+    ![Select Import on the App Builder page](./images/app-builder-home.png " ")
 
 4. In the import wizard, select the downloaded file to upload, then click **Next**.
 
@@ -181,7 +183,7 @@ In this task, you will import the base APEX application. It already contains the
 
 5. Review the import details and select **Import Application**.
 
-    ![Install Application](./images/import-file.png " ")
+    ![Import wizard showing application details with Import Application button](./images/import-file.png " ")
 
     > **Note:** APEX may assign a different application ID during import. Use the application ID shown after import for all subsequent steps in this workshop.
 
@@ -191,7 +193,7 @@ In this task, you will import the base APEX application. It already contains the
 
 ## Summary
 
-The warehouse schema, sample data, and base application are now in place. You are ready to configure the Generative AI Service in the next lab.
+You loaded the warehouse schema, sample data, and base application. You are ready to configure the Generative AI Service in the next lab.
 
 You may now **proceed to the next lab**.
 
