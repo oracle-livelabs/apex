@@ -9962,8 +9962,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43438892313121239)
 ,p_name=>'P11_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>140
 ,p_item_plug_id=>wwv_flow_imp.id(43438595955121239)
@@ -9982,8 +9982,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43439049276121239)
 ,p_name=>'P11_IS_PICKABLE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(43438595955121239)
@@ -11527,7 +11527,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>130
 ,p_column_identifier=>'H'
 ,p_column_label=>'Is Active'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -11540,7 +11540,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>120
 ,p_column_identifier=>'I'
 ,p_column_label=>'Is Primary Site'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -11979,8 +11979,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43485348494121267)
 ,p_name=>'P16_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(43484554054121266)
@@ -11999,8 +11999,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43485428434121267)
 ,p_name=>'P16_IS_PRIMARY_SITE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>120
 ,p_item_plug_id=>wwv_flow_imp.id(43484554054121266)
@@ -13342,7 +13342,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>50
 ,p_column_identifier=>'A'
 ,p_column_label=>'Is Active'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -13355,7 +13355,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>40
 ,p_column_identifier=>'B'
 ,p_column_label=>'Is System Role'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -13626,8 +13626,8 @@ wwv_flow_imp_page.create_page_button(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43424658396121231)
 ,p_name=>'P21_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>50
 ,p_item_plug_id=>wwv_flow_imp.id(43424503541121230)
@@ -13646,8 +13646,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43424690856121231)
 ,p_name=>'P21_IS_SYSTEM_ROLE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>40
 ,p_item_plug_id=>wwv_flow_imp.id(43424503541121230)
@@ -14373,8 +14373,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43324659687121118)
 ,p_name=>'P23_IS_PRIMARY_ROLE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>90
 ,p_item_plug_id=>wwv_flow_imp.id(43323949693121116)
@@ -15435,7 +15435,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>60
 ,p_column_identifier=>'D'
 ,p_column_label=>'Is Active'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -15737,8 +15737,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43361743417121199)
 ,p_name=>'P28_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>60
 ,p_item_plug_id=>wwv_flow_imp.id(43361190825121199)
@@ -17897,8 +17897,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43445134984121244)
 ,p_name=>'P31_EXPIRY_CONTROL_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>100
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -17917,8 +17917,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43445213384121244)
 ,p_name=>'P31_FRAGILE_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>110
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -17937,8 +17937,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43445292723121244)
 ,p_name=>'P31_HAZARDOUS_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -17957,8 +17957,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43445386509121244)
 ,p_name=>'P31_HIGH_VALUE_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>120
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -18104,8 +18104,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43446090121121245)
 ,p_name=>'P31_LOT_CONTROL_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>80
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -18145,8 +18145,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43446320433121245)
 ,p_name=>'P31_RESTRICTED_ITEM_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>150
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -18165,8 +18165,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43446411949121245)
 ,p_name=>'P31_SERIAL_CONTROL_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>90
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -18185,8 +18185,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43446538683121245)
 ,p_name=>'P31_TEMPERATURE_CONTROL_FLAG'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>140
 ,p_item_plug_id=>wwv_flow_imp.id(43444720875121243)
@@ -18340,7 +18340,7 @@ wwv_flow_imp_page.create_worksheet_column(
 ,p_display_order=>50
 ,p_column_identifier=>'A'
 ,p_column_label=>'Is Active'
-,p_column_type=>'BOOLEAN'
+,p_column_type=>'STRING'
 ,p_heading_alignment=>'LEFT'
 ,p_use_as_row_header=>'N'
 ,p_available_clientside=>'N'
@@ -18619,8 +18619,8 @@ wwv_flow_imp_page.create_page_button(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43402813360121218)
 ,p_name=>'P33_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>50
 ,p_item_plug_id=>wwv_flow_imp.id(43402758630121218)
@@ -20507,8 +20507,8 @@ wwv_flow_imp_page.create_page_item(
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(43394418478121213)
 ,p_name=>'P38_IS_ACTIVE'
-,p_data_type=>'BOOLEAN'
-,p_source_data_type=>'BOOLEAN'
+,p_data_type=>'NUMBER'
+,p_source_data_type=>'NUMBER'
 ,p_is_required=>true
 ,p_item_sequence=>130
 ,p_item_plug_id=>wwv_flow_imp.id(43393918339121213)
