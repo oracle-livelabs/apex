@@ -1,6 +1,9 @@
 # Appendix: Download Instructions
 
+## Introduction
 This lab consists of tasks that need to be executed on a case-by-case basis. If you are directed to this lab at any point of time, choose the appropriate task that needs to be executed to proceed.
+
+Estimated Time: 10 minutes
 
 ## Objectives
 
@@ -39,30 +42,30 @@ To update the Web Credential in Oracle APEX:
 
 1. You need access to an OCI API Key Pair. To generate an OCI Key pair, refer to [Lab 3: Task 1 : Generate API keys using OCI Console](?lab=3-configure-oci&type=OCIGenAI#Task1:GenerateAPIKeysusingOCIConsole)
 
-Skip this step if you already have the API key.
+    Skip this step if you already have the API key.
 
 
 2. On the Workspace home page, click **App Builder**.
 
-   ![Click App Builder](images/app-builder1.png " ")
+    ![Click App Builder](images/app-builder1.png " ")
 
 3. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
 4. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/sc-web-creds.png " ")
+    ![Click Web Credentials](images/sc-web-creds.png " ")
 
-5. Click **apex\_ai\_cred**.
+5. Click **credentials for oci gen ai**.
 
-   ![Create Web Credentials](images/apex-ai-cred.png " ")
+    ![Create Web Credentials](images/apex-ai-cred.png " ")
 
 6. Enter the following details using the configuration file you copied while generating an API key in OCI Console.
 
-    - **Name**: apex\_ai\_cred
+    - Name: **Credentials for oci gen ai**
 
-    - **Authentication Type**: OCI Native Authentication
+    - Authentication Type: **OCI Native Authentication**
 
     - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
@@ -75,14 +78,12 @@ Skip this step if you already have the API key.
 
     - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds.png " ")
+    ![Web Credentials page](images/web-creds.png " ")
 
 5. Click **Apply Changes**.
 
 
-To Enable Generative AI in Oracle APEX:
-
-6. Click **Workspace Utilities**.
+6. To Enable Generative AI in Oracle APEX, click **Workspace Utilities**.
 
     !["Page Designer"](images/wksp-util.png "")
 
@@ -94,11 +95,11 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/oci-gen-ai.png "")
 
-9. In the **Compartment ID** field, enter your **Compartment ID** and click **Apply Changes**. (Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID.)
+9. In the **Compartment ID** field, enter your **Compartment ID**,  and click **Apply Changes**. (Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID.)
 
     !["Page Designer"](images/comp-id.png "")
 
-
+<!--
 ## Task 3: Configure Vector Search using Search Configurations
 
 1. To load the ONXX Model, refer to [Lab 7: Task 2: Load the ONNX Model](?lab=7-vector-search&type=OCIGenAI#Task2:LoadtheONNXModel).
@@ -139,10 +140,10 @@ To Enable Generative AI in Oracle APEX:
 
     !["Page Designer"](images/highschool-chunk.png " ")
 
-8. All set. Now, run the application and see it in action! Follow Lab 6: [Run the Application](?lab=6-run-app) to run the app.
+8. All set. Now, run the application and see it in action! Follow Lab 6: [Run the Application](?lab=6-run-app) to run the app. -->
 
 
-## Acknowledgments
+## Acknowledgements
 
- - **Author** - Apoorva Srinivas, Senior Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Author** - Apoorva Srinivas, Principal Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026

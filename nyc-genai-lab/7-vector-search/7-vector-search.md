@@ -50,7 +50,7 @@ In this lab, you will:
         DECLARE
             L_ONNX_BLOB BLOB;
             L_ONNX_MOD_FILE VARCHAR2(100) := 'all_MiniLM_L12_v2.onnx';
-            L_LOCATION_URI VARCHAR2(200) := 'https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/eLddQappgBJ7jNi6Guz9m9LOtYe2u8LWY19GfgU8flFK4N9YgP4kTlrE9Px3pE12/n/adwc4pm/b/OML-Resources/o/';
+            L_LOCATION_URI VARCHAR2(200) := 'https://adwc4pm.objectstorage.us-ashburn-1.oci.customer-oci.com/p/iPX9W0MZeRkwJKWdFmdJCemmN-iKAl_bFvNGYLW7YqIrw4kKsukL24J2q93Beb9S/n/adwc4pm/b/OML-ai-models/o/';
         BEGIN
         -----------------------------------------------------
         -- Read the ONNX model file from Object Storage

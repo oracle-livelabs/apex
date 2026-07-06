@@ -4,7 +4,7 @@
 
 In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter results on the map based on faceted search results.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 10 minutes
 
@@ -164,7 +164,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     ![SQL Commands editor](images/plsql.png ' ')
 
 4. Navigate to **App Builder** > **Highschools** > **Search and Apply**.
-   In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
+    In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
     - Source > Where Clause:
         ```
         <copy>
@@ -195,6 +195,8 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     - Selection Type: **Region**
     - Region: **Map**
 
+    ![Dynamic Actions Tab in Page Designer](images/select-show.png =50%x*)
+
     ![Dynamic Actions Tab in Page Designer](images/refresh-da.png ' ')
 
 8. Click **Save**.
@@ -202,22 +204,13 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 ## Task 3: Display Cards and Maps as Radio Group
 
 1. In the Left Pane (Rendering Tree), right-click Button Bar and select **Create Page Item**.
-    ![Page Designer](images/create-page-item.png ' ')
+    ![Page Designer](images/create-page-item.png =40%x*)
 
 2. Enter/select the following in the property editor:
     - Under Identification:
         - Name: **P1\_DISPLAY\_AS**
         - Type: **Radio Group**
     - Settings > Number of Columns: **2**
-    - Layout > Slot: **Next**
-    - Under Appearance:
-        - Template: **Hidden**
-        - Template Options >  Item Group Display: **Display as Pill Button**
-
-        ![Page Designer](images/radio-display.png =40%x*)
-
-        ![Page Designer](images/template-pill.png =40%x*)
-
     - Under List of Values:
         - Type: **Static Values**
         - Static Values: click **Display1, Display 2** to edit the Static Values.
@@ -229,17 +222,26 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
         - Display Extra Values: Toggle the button to turn it **OFF**.
         - Display Null Values: Toggle the button to turn it **OFF**.
+            
+            ![Page Designer](images/radio-display.png =40%x*)
+
             ![Page Designer](images/lov.png " ")
+    - Layout > Slot: **Next**
+    - Under Appearance:
+        - Template: **Hidden**
+        - Template Options >  Item Group Display: **Display as Pill Button**
+
+        ![Page Designer](images/slot.png =40%x*)
+
+        ![Page Designer](images/template-pill.png =40%x*)
+
+    
 
     - Under Default:
         - Type: **Static**
         - Static Value: **CARDS**
 
          ![Page Designer](images/default-static.png =40%x*)
-
-3. Drag and drop the **P1\_DISPLAY\_AS** page item below **P1\_ORDER\_BY**.
-
-    ![Drag and drop](images/drag-and-drop.png " ")
 
 4. Right-click **P1\_DISPLAY\_AS** and select **Create Dynamic Action**.
     ![Page Designer](images/display-da.png =50%x*)
@@ -261,6 +263,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
         ![Page Designer](images/da-true1.png " ")
 
 7. Create another TRUE action. Right-click **True** and select **Create TRUE Action**.
+    
     ![Page Designer](images/da-true2.png =50%x*)
 
 8. Enter/select the following:
@@ -405,8 +408,8 @@ You now know how to map a Faceted Search to a Map region. You also learned to fi
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager; 
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
  - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026
