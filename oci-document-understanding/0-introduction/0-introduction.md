@@ -94,6 +94,8 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 
     - Follow Lab 2 > Task 2 to add multiple users.
 
+    - Follow Lab 3 > Task 2 to update the REST Data Source endpoint based on the OCI region where Document Understanding is available. Refer to the Document Understanding API documentation to select the appropriate endpoint for your region: [Click here](https://docs.oracle.com/en-us/iaas/api/#/en/document-understanding/20221109/).
+
     - Follow Lab 3 > Task 3 > Step 8 and update the following page item static values one after the other:
         - P1\_COMPARTMENT\_ID
         - P1\_NAMESPACE\_NAME
