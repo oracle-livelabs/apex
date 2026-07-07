@@ -113,7 +113,7 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 - [Community](https://apex.oracle.com/community)
 - [External Site + Slack](http://apex.world)
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff

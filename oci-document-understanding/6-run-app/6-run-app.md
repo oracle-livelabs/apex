@@ -55,7 +55,7 @@ In this task, you will launch the application and test the complete invoice-proc
 
 You now know how to run the Automatic Invoice Handling application and obtain results using Oracle APEX and OCI Document Understanding for uploaded invoices.
 
-## Acknowledgments
+## Acknowledgements
 
 - **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
