@@ -375,7 +375,7 @@ You now know how to create an application process and have learned to develop an
 
 You're now ready to move on to the next lab!
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff

@@ -87,7 +87,7 @@ You now know how to generate API Keys and create Bucket using the OCI console.
 
 You may now proceed to the next lab.
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff

@@ -306,7 +306,7 @@ You've gained the skills to create database objects using SQL Scripts, create mu
 
 You're now ready to move on to the next lab!
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff

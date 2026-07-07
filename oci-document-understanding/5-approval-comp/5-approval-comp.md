@@ -333,7 +333,7 @@ In this task, you'll create unified task list pages to display tasks initiated b
 
 You now know how to create a Task Definition for Invoice Approval Requests. Additionally, you learned how to set up processes to fetch employee details and manage human-task approval. Furthermore, you created two unified task list pages: one for initiated tasks and another for assigned tasks.
 
-## Acknowledgements
+## Acknowledgments
 
 - **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
 - **Contributing Author** - Pankaj Goyal, Member Technical Staff
