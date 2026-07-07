@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Automate Invoice handling using Oracle APEX and OCI Document Understanding",
+  "workshoptitle": "Automate Invoice Handling using Oracle APEX and OCI Document Understanding",
     "tutorials": [
       {
         "title": "Introduction",
@@ -7,11 +7,15 @@
       },
       {
         "title": "Sign Up for an APEX Workspace",
-        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+        "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Configure Gen AI service in APEX workspace",
+        "filename": "../../../common-261/2-configure-ai-keys/2-configure-ai-keys.md"
       },
       {
         "title": "Review Commonly Used APEX Terminology",
-        "filename": "../../../common-242/4-apex-basics/4-apex-basics.md"
+        "filename": "../../../common-261/4-apex-basics/4-apex-basics.md"
       },
       {
         "title": "Lab 1: Configure OCI API Keys and a Bucket",
