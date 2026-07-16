@@ -44,7 +44,7 @@ To install the required Oracle APEX and database skills:
 
     You are now ready to start building APEX applications with APEXlang in your preferred AI coding agent.
 
-    Our skills are publically available at https://github.com/oracle/skills.  More advanced users may clone, fork or download them from there and install in their local agents.
+    Our skills are publically available at [https://github.com/oracle/skills](https://github.com/oracle/skills).  More advanced users may clone, fork or download them from there and install in their local agents.
 
 ## Task 2: Export the app in APEXlang format into the Applications folder
 Export the CRM application in APEXlang format and place the output inside the `applications` folder.
