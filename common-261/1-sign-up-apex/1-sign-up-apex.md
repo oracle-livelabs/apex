@@ -39,7 +39,13 @@ To determine which release of Oracle APEX you are currently running, do one of t
 
 ### Where to Run the Lab
 
-You can run this lab in any Oracle Database with APEX 26.1 installed. This includes the APEX Application Development Service, the free, "Development Only" apex.oracle.com service, your on-premises Oracle Database (providing APEX 26.1 is installed), on a third-party cloud provider where APEX 26.1 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 26.1.
+You can run this lab in any Oracle Database with APEX 26.1 installed. This includes the APEX Application Development Service, the free, "Evaluation Only" oracleapex.com service, your on-premises Oracle Database (providing APEX 26.1 is installed), on a third-party cloud provider where APEX 26.1 is installed, or even on your laptop by installing Oracle XE or Oracle VirtualBox App Dev VM and installing APEX 26.1.
+
+**Note**: 
+* **oracleapex.com** is an evaluation-only instance and does not support SQL*Net connections.
+* Blueprint scaffolding is supported on **oracleapex.com**.
+* Updating an app with APEXlang skills and importing it directly into the workspace requires a SQL*Net connection from Visual Studio Code to the APEX workspace, which is not supported on **oracleapex.com**.
+* If you have an APEX application export in .apx zip format, you can import it into a workspace on **oracleapex.com** with the Import utility.
 
 <!--Below are steps on how to sign up for an **APEX Application Development** Service, or for an **Oracle Autonomous AI Database** cloud service or **oracleapex.com** service.
 
