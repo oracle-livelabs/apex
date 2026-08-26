@@ -33,50 +33,54 @@ Regardless of which route you decide to take, make sure you understand the poten
 1. Open **App Builder** by clicking on the stylized APEX icon underneath the Oracle logo in the top-left corner
 1. From the App Builder home page, open **Workspace Utilities**.
 
-![Selecting Workspace Utilities in App Builder](./images/workspace-utilities.png)
+    ![Selecting Workspace Utilities in App Builder](./images/workspace-utilities.png)
 
-1. Select **Generative AI**.
+1. Click on the **Generative AI** tile
 
-   You now have a choice to create either an OCI GenAI service as detailed in the next section, or GPT-4o as an example of a potentially free model as explained in step 5.
+   This is the second tile from the left on the top row.
+
+   ![Generative AI Service](./images/workspace-utils-gen-ai.png)
+
+   In this screen you have a choice to create either an OCI GenAI service as detailed in the next section, or GPT-4o as an example of a potentially free model as explained in step 5.
 
 1. Create an OCI GenAI Service
 
-   Click **Create** to begin the definition of the AI Service.
+    Click **Create** to begin the definition of the AI Service.
 
-   Configure the service as follows, values you see on the screen but not in the following steps are left at their defaults. These values tell APEX which OCI service, model, and compartment to use.
+    Configure the service as follows, values you see on the screen but not in the following steps are left at their defaults. These values tell APEX which OCI service, model, and compartment to use.
 
-   - **AI Provider**: OCI Generative AI Service
-   - **Name**: `google gemini` (use this exact name, including the white space).
-   - **Compartment ID**: The OCID of the compartment that contains the Generative AI resources. A compartment is the OCI container in which the service is authorized to access the model.
-   - **Region**: Select the OCI region by clicking on the name _below the textbox_ where the service is available in, for example `Germany Central (Frankfurt)`. This click will populate the corresponding **Base URL**, like `eu-frankfurt-1`.
-   - **Model ID**: `google.gemini-2.5-flash`. This identifies the Gemini model that will process the image.
+    - **AI Provider**: OCI Generative AI Service
+    - **Name**: `google gemini` (use this exact name, including the white space).
+    - **Compartment ID**: The OCID of the compartment that contains the Generative AI resources. A compartment is the OCI container in which the service is authorized to access the model.
+    - **Region**: Select the OCI region by clicking on the name _below the textbox_ where the service is available in, for example `Germany Central (Frankfurt)`. This click will populate the corresponding **Base URL**, like `eu-frankfurt-1`.
+    - **Model ID**: `google.gemini-2.5-flash`. This identifies the Gemini model that will process the image.
 
-   In the **Credentials** section, select an existing OCI credential configured for your workspace, or create one if your environment does not provide it. APEX uses this credential to authenticate the request without exposing secret values to the application. If you need to create the OCI API key, open the OCI Console, open your user profile in the top right corner, select **User Settings**, and open the **Tokens and Keys** tab. Click **Add API Key**, download the private key, and record the user OCID, tenancy OCID, fingerprint, and private key; these values are used to create the APEX Web Credential.
+    In the **Credentials** section, select an existing OCI credential configured for your workspace, or create one if your environment does not provide it. APEX uses this credential to authenticate the request without exposing secret values to the application. If you need to create the OCI API key, open the OCI Console, open your user profile in the top right corner, select **User Settings**, and open the **Tokens and Keys** tab. Click **Add API Key**, download the private key, and record the user OCID, tenancy OCID, fingerprint, and private key; these values are used to create the APEX Web Credential.
 
-   If this is your first Web Credential, populate the values in the form. If not, create the Web Credential from **Workspace Utilities** > **Web Credentials**, then select it in the Generative AI service configuration. Keep the private key in the credential store and never publish it.
+    If this is your first Web Credential, populate the values in the form. If not, create the Web Credential from **Workspace Utilities** > **Web Credentials**, then select it in the Generative AI service configuration. Keep the private key in the credential store and never publish it.
 
-   - **Static ID**: `google-gemini` will be automatically filled.  The Static ID is different from the display name: it is the stable, code-friendly identifier used by the application and by the MLE module. It must remain exactly as set, `google-gemini`.
+    - **Static ID**: `google-gemini` will be automatically filled.  The Static ID is different from the display name: it is the stable, code-friendly identifier used by the application and by the MLE module. It must remain exactly as set, `google-gemini`.
 
-   ![Definition of the Google Gemini AI Service](./images/ai-service.png)
+    ![Definition of the Google Gemini AI Service](./images/ai-service.png)
 
-   Click **Test Connection** to verify the configuration, then click **Create** or **Apply Changes**. See [Troubleshooting](#troubleshooting) below should you encounter errors.
+    Click **Test Connection** to verify the configuration, then click **Create** or **Apply Changes**. See [Troubleshooting](#troubleshooting) below should you encounter errors.
 
-1. Create an OpenAI ChatGPT-4o Service
+1. Create an OpenAI ChatGPT-4o Service [alternative to Gemini]
 
-   The process is nearly identical to the one above. Click **Create** to begin the definition of the AI Service.
+    The process is nearly identical to the one above. Click **Create** to begin the definition of the AI Service.
 
-   Configure the service as follows, values you see on the screen but not in the following steps are left at their defaults.
+    Configure the service as follows, values you see on the screen but not in the following steps are left at their defaults.
 
-   - **AI Provider**: OpenAI
-   - **Name**: whichever name you prefer
-   - **API Key**: your OpenAI API key
-   - **AI Model**: `gpt-4o`
+    - **AI Provider**: OpenAI
+    - **Name**: whichever name you prefer
+    - **API Key**: your OpenAI API key
+    - **AI Model**: `gpt-4o`
 
-   You can use the **Test Connection** button to ensure your configuration works.
+    You can use the **Test Connection** button to ensure your configuration works.
 
 The AI service is now available to the application through APEX AI Services. The remainder of this Livelab assumes the use of Gemini. If you chose a different model, you need to adapt the later labs to your AI Service.
 
-## Verify the configuration
+## Task 2: Verify the configuration
 
 Confirm that the following objects are available:
 
@@ -96,7 +100,7 @@ begin
         host => '*.oci.oraclecloud.com',
         ace  =>  xs$ace_type(
             privilege_list => xs$name_list('http'),
-            principal_name => 'APEX_260100',
+            principal_name => apex_application.g_flow_schema_owner,
             principal_type => xs_acl.ptype_db
         )
     );
@@ -118,4 +122,4 @@ Refer to the [APEX documentation for more details](https://docs.oracle.com/en/da
 
 - **Author** - Sonja Meyer, Consulting Member of Technical Staff
 - **Contributors** - Martin Bach, Senior Principal Product Manager
-- **Last Updated By/Date** - Sonja Meyer, Consulting Member of Technical Staff, August 2026
+- **Last Updated By/Date** - Martin Bach, August 2026

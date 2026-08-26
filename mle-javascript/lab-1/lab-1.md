@@ -30,13 +30,13 @@ This lab assumes that you created an APEX workspace and downloaded the [applicat
 
 ## Task 1: Log into your APEX workspace
 
-In a browser supported by APEX, open the URL for your APEX workspace. You must provide:
+In a browser supported by APEX, **open the URL** for your APEX workspace. In order to sign in, you must provide:
 
 - Workspace name
 - Your username
 - Your password
 
-Note that an Always-Free Autonomous AI Database service has been used to create the screenshots for this livelab. The developer experience is identical across platforms though, it does not matter where you created your workspace as long as you have one for APEX 26.1.
+Note that an Always-Free Autonomous AI Database service has been used to create the screenshots for this LiveLab. The developer experience is identical across platforms though, it does not matter where you created your workspace as long as you have one for APEX 26.1.
 
 ![Log into your APEX workspace](./images/apex-sign-in-to-workspace.png)
 
@@ -44,19 +44,31 @@ You are now ready to import your application.
 
 ## Task 2: Import the application scaffold
 
-After signing in, open App Builderon the top, then click _Import_ to begin the process of importing the application scaffold.
+You will load the application scaffold required for the LiveLab in this task.
 
-![Import the application scaffold](./images/apex-import-application.png)
+1. After signing in, **click on App Builder**:
 
-Drag and drop the application scaffold into the file upload box, or click inside the box and select the scaffold file from your local file system. Leave all the defaults in place, then click _Next_.
+    ![Launching App Builder to begin the application import](./images/app-builder.png)
 
-![Import the application scaffold](./images/apex-prepare-app-import.png)
+1. Next, click **Import** to begin the process of importing the application scaffold.
 
-A short confirmation dialog is displayed next. You can leave all the defaults, and click _Next_. APEX imports the application and displays the next step. The application includes supporting objects (1 Table, 1 Index and 1 Trigger) that are installed during the import process. Click on _Install Supporting Objects_ to initiate the execution of the build script.
+    ![Import the application scaffold](./images/apex-import-application.png)
 
-![Confirm the installation of supporting objects](./images/apex-install-supporting-objects.png)
+1. Drag and drop the application scaffold into the file upload box
 
-After a few seconds, APEX displays a confirmation that the supporting objects have been installed successfully. Click on _Install Summary_ to confirm the installation was successful. You should see _success_ for each script name listed in the table.
+    Alternatively, click inside the box and select the scaffold file from your local file system. Leave all the defaults in place, then click **Next**.
+
+    ![Import the application scaffold](./images/apex-prepare-app-import.png)
+
+1. Acknowledge the confirmation dialog.
+
+    A short confirmation dialog is displayed next. You can leave all the defaults, and click **Next**. APEX imports the application and displays the next step. The application includes supporting objects (1 table, 1 index and 1 trigger) that are installed during the import process. Click on **Install Supporting Objects** to initiate the execution of the build script.
+
+    ![Confirm the installation of supporting objects](./images/apex-install-supporting-objects.png)
+
+1. Verify success
+
+    After a few seconds, APEX displays a confirmation that the supporting objects have been installed successfully. Click on **Install Summary** to confirm the installation was successful. You should see _success_ for each script name listed in the table.
 
 You can now return to the App Builder.
 

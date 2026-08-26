@@ -40,19 +40,24 @@ This lab assumes that you completed [Lab 2](../lab-2/lab-2.md) and created the `
 The EXIF information this app will extract from a photo is provided in JSON format. The best way to persist the meta information along with the photo is to store it in a JSON column. `MLE_DATA` currently doesn't feature a JSON column. You add it in the following step.
 
 1. Open **SQL Workshop** and select **SQL Commands**.
+
+    ![SQL Commands](./images/sql-commands.png)
+
 1. Make sure the language drop-down is set to _SQL_
 1. Run the following statement:
 
-   ```sql
-   <copy>
-   alter table
-      mle_data
-   add
-      exif_data json;
-   </copy>
-   ```
+    ```sql
+    <copy>
+    alter table
+        mle_data
+    add
+        exif_data json;
+    </copy>
+    ```
 
-   ![Entering SQL commands in APEX](./images/sql-commands.png)
+    The following screenshot shows you what the output should look like:
+
+   ![Entering SQL commands in APEX](./images/run-sql-command.png)
 
 The DDL statement adds the `EXIF_DATA` JSON column without deleting or changing any existing image records. The JSON data type allows each image record to store a flexible set of metadata attributes, such as camera model, exposure settings, and GPS coordinates, without adding a separate relational column for every possible EXIF field. Confirm that the statement completes successfully before continuing.
 
@@ -67,6 +72,8 @@ This permission belongs to the browser and is separate from the MLE environment.
 MLE modules are database objects. They are not APEX page components, so create them in the database schema that owns `MLE_DATA` and the MLE environment. In the workshop environment, this is the schema you selected or created when you provisioned the workspace. Use **Object Browser** to create database objects in APEX.
 
 ![APEX Object Browser](./images/object-browser.png)
+
+You will create the actual MLE/JavaScript modules in the following tasks.
 
 ## Task 4: Create the EXIFR module in the database
 
@@ -91,7 +98,7 @@ Note that the module does _not_ call Gemini and does _not_ calculate a "realness
 
 ## Task 5: Create the Gemini image verification module
 
-Create a second JavaScript module:
+Create a second JavaScript module, except this time you need to copy/paste the source code. **Right-click** MLE Modules/JavaScript again, select **Create MLE Module - JavaScript** and enter the following values in the dialog that appears:
 
 - **Module Name**: `MLE_GEMINI_AI_VERIFY_MODULE`
 - **Version**: 1.0
@@ -211,6 +218,10 @@ export function analyzePhotoWithGemini(id) {
 This module first checks whether the requested `MLE_DATA` record contains an image. It then uses `session.execute` to load the BLOB representing the image and calls `APEX_AI.GENERATE` with the native APEX attachment type. JavaScript controls the overall flow, while PL/SQL is used only inside the module where APEX AI requires native database types. MLE/JavaScript understands PL/SQL Records and Collections since release 23.9, alternatively this embedded PL/SQL block could have been written entirely in JavaScript. For the sake of this Livelab though the PL/SQL approach was chosen to demonstrate how easy it is to create interoperability between SQL, PL/SQL and JavaScript.
 
 The module calls the AI service you created in lab 2 using the Static ID `google-gemini`. This is why the service created in Lab 2 must use the exact Static ID; update the static ID if you created your own AI service that deviates from the lab. Note how the module returns structured JSON containing a status, classification, confidence, and reason so the APEX page can handle successful and failed AI calls consistently.
+
+Here is a screenshot showing you the dialog:
+
+![Creating a MLE/JavaScript module from source](./images/create-mle-module-from-source.png)
 
 ## Task 5: Create the realness score module
 
@@ -336,6 +347,8 @@ function clamp(value) {
 
 This module contains only presentation helpers. It parses the JSON returned by the Gemini module, extracts the short reason shown in the application, and formats the score. It does not call an AI service and does not access the image table. Keeping this logic separate prevents the APEX page from having to calculate scores itself.
 
+The Object Browser should list the following 3 JavaScript modules:
+
 ![Editing MLE modules in APEX Object Browser](./images/edit-mle-module-code.png)
 
 ## Task 7: Create the MLE environment
@@ -373,6 +386,10 @@ The MLE environment must also be assigned to the APEX application. Creating the 
 1. In the **Database Session** section, keep the correct **Parsing Schema** selected.
 1. For **MLE Environment**, select `MLE_EXIF_ENV`.
 1. Save the application settings.
+
+Here is a screenshot showing the relevant settings:
+
+![Setting the MLE environment for the APEX application](./images/set-mle-env.png)
 
 The application is now associated with `MLE_EXIF_ENV`. When an APEX page executes MLE JavaScript, its `import` statements are resolved against this environment and its three module mappings.
 

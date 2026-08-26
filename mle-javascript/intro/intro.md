@@ -36,7 +36,7 @@ Estimated Workshop Time: 55 minutes with an optional part of 15 minutes.
 
 ## Labs
 
-The following is a list of all tasks in this Livelab:
+The following is a list of all tasks in this LiveLab:
 
 | Module | Est. Time |
 | --- | --- |
@@ -47,7 +47,7 @@ The following is a list of all tasks in this Livelab:
 | [Lab 4: Use JavaScript modules to detect fake, AI-generated images](?lab=lab-4) | 20 minutes |
 | [Lab 5: Optionally add CSS styling and debug calls](?lab=lab-4) | 15 minutes |
 
-This Livelab is designed to be completed from start to finish.
+This LiveLab is designed to be completed from start to finish.
 
 Feel free to compare your solution with the one created for this lab (see Downloads)
 
@@ -55,8 +55,8 @@ Feel free to compare your solution with the one created for this lab (see Downlo
 
 Two downloads are provided:
 
-1. [Click here](../solution/scaffold.sql) to download the application scaffold.
-1. [Click here](../solution/solution.sql) to download the completed application.
+1. Click here to download the [application scaffold](../solution/scaffold.sql).
+1. Click here to get the [finished application](../solution/solution.sql).
 
 The scaffold is intended as your starting point. Use this in the subsequent labs to build the finished app.
 
@@ -64,12 +64,11 @@ The scaffold is intended as your starting point. Use this in the subsequent labs
 
 The following links provide additional information about the topic.
 
-- [Generic JavaScript Livelab with focus on language specific features such as inline functions, SODA, etc.](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=3696)
+- [Generic JavaScript LiveLab with focus on language specific features such as inline functions, SODA, etc.](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=3696)
 - [APEX at Oracle](https://www.oracle.com/apex/)
 - [Oracle APEX in Oracle Cloud](https://apex.oracle.com/en/platform/apex-oracle-cloud/)
 - [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral/)
 - [Further APEX Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Dedicated MLE JavaScript Livelab](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?wid=3696)
 - [Oracle Database JavaScript Developer's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/26/mlejs/index.html)
 - [APEX Community](https://apex.oracle.com/community)
 - [External APEX Community Site](https://apex.world)
