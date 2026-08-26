@@ -1,0 +1,115 @@
+tms_departments
+  dept_id /pk
+  name vc100 /nn
+  manager_id num
+  location vc150
+  color vc30
+
+tms_jobs
+  job_id /pk
+  title vc150 /nn
+  min_salary num
+  max_salary num
+  dept_id /fk tms_departments
+
+tms_job_requisitions
+  req_id /pk
+  job_id /fk tms_jobs
+  dept_id /fk tms_departments
+  requested_by vc255 /nn
+  approved_by vc255
+  headcount num
+  status vc30 /check Draft, Pending Approval, Open, Filled, Cancelled, Closed
+  open_date date
+  close_date date
+
+tms_candidates
+  candidate_id /pk
+  req_id /fk tms_job_requisitions
+  first_name vc80 /nn
+  last_name vc80 /nn
+  email vc320 /nn
+  phone vc50
+  resume_blob blob
+  source vc100
+  current_stage vc30 /check Applied, Screening, Interview, Offer, Hired, Rejected
+  applied_date date
+  diversity_flag vc1 /check Y, N
+  ai_score num
+
+tms_interview_stages
+  stage_id /pk
+  candidate_id /fk tms_candidates
+  req_id /fk tms_job_requisitions
+  stage_name vc60 /check Screening, Phone Screen, Technical Interview, Manager Interview, HR Interview, Offer Review, Final
+  interviewer_id num
+  scheduled_date timestamp
+  outcome vc30 /check Scheduled, Proceed, Hold, Rejected, No Show, Completed, Cancelled
+  feedback_notes clob
+  score num
+
+tms_offers
+  offer_id /pk
+  candidate_id /fk tms_candidates
+  req_id /fk tms_job_requisitions
+  offered_salary num
+  start_date date
+  expiry_date date
+  status vc30 /check Draft, Pending Approval, Sent, Accepted, Rejected, Expired, Withdrawn
+  offer_letter_blob blob
+  approved_by vc255
+
+tms_employees
+  employee_id /pk
+  candidate_id /fk tms_candidates
+  first_name vc80 /nn
+  last_name vc80 /nn
+  email vc320 /nn
+  job_id /fk tms_jobs
+  dept_id /fk tms_departments
+  manager_id num
+  salary num
+  hire_date date
+  status vc30 /check Onboarding, Active, Inactive, Terminated
+  photo_blob blob
+
+tms_onboarding_tasks
+  task_id /pk
+  employee_id /fk tms_employees
+  task_name vc200 /nn
+  assigned_to vc255
+  category vc80
+  due_date date
+  status vc30 /check 'Not Started', 'In Progress', 'Completed', 'Blocked', 'Cancelled', 'Overdue'
+  completed_date date
+
+tms_leave_types
+  leave_type_id /pk
+  name vc100 /nn
+  max_days_per_year num
+
+tms_leave_requests
+  request_id /pk
+  employee_id /fk tms_employees
+  leave_type_id /fk tms_leave_types
+  start_date date
+  end_date date
+  days_requested num
+  reason clob
+  status vc30 /check Draft, Submitted, Approved, Rejected, Cancelled
+  approver_id num
+
+tms_leave_balances
+  balance_id /pk
+  employee_id /fk tms_employees
+  leave_type_id /fk tms_leave_types
+  year num
+  accrued num
+  used num
+  remaining num
+
+tms_hr_policy
+  policy_id /pk
+  category vc100 /nn
+  title vc200 /nn
+  content clob

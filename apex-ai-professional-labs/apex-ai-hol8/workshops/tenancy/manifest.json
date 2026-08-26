@@ -1,0 +1,47 @@
+{
+    "workshoptitle": "Managing Interactive Reports and Grids",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Customize the Candidate Pipeline Report",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../customize-candidate-pipeline/customize-candidate-pipeline.md"
+        },
+        {
+            "title": "Lab 2: Demonstrate User Report Customization",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../user-report-customization/user-report-customization.md"
+        },
+        {
+            "title": "Lab 3: Link Candidate Pipeline to Candidate Profile",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../link-candidate-profile/link-candidate-profile.md"
+        },
+        {
+            "title": "Lab 4: Link Job Cards to a Filtered Candidate List",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../filter-candidates-from-job-cards/filter-candidates-from-job-cards.md"
+        },
+        {
+            "title": "Lab 5: Build the Requisition Master-Detail Page",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../build-requisition-master-detail/build-requisition-master-detail.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Template to link to Need Help lab at the end of workshop.",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

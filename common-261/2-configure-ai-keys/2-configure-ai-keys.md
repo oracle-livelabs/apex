@@ -124,7 +124,7 @@ You may now **proceed to the next lab**.
 
 <if type="OpenAI">
 
-In this lab, you use Open AI as the AI provider to build a conversational chatbot.
+In this lab, you use OpenAI as the AI provider to build a conversational chatbot.
 
 **Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
@@ -139,7 +139,7 @@ In this lab, you:
 
 - Generate API Key for OpenAI.
 
-## Task 1: Generate API Keys using Open AI
+## Task 1: Generate API Keys using OpenAI
 
 1. Create and login to your [OpenAI account](https://platform.openai.com/).
 
@@ -173,13 +173,13 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 3. For this workshop, if you prefer to choose OpenAI as the AI provider, enter/select the following:
 
-    - AI Provider: **Open AI**
+    - AI Provider: **OpenAI**
 
     - Name: **Open AI**
 
     - Used by App Builder: Toggle the button to turn it **ON**
 
-    - API Key: Enter your *Open AI API* key that you generated in Task 1 of this lab.
+    - API Key: Enter your *OpenAI API* key that you generated in Task 1 of this lab.
 
     - AI Model: **gpt-5.4-nano** (Enter a preferred model of your choice)
 
@@ -194,7 +194,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 Congratulations! You've completed the lab.
 
-You now know how to an generate API Key using OpenAI.
+You now know how to generate an API Key using OpenAI.
 
 You may now **proceed to the next lab**.
 </if>

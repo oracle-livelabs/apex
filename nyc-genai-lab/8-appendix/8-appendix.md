@@ -99,48 +99,6 @@ To update the Web Credential in Oracle APEX:
 
     !["Page Designer"](images/comp-id.png "")
 
-<!--
-## Task 3: Configure Vector Search using Search Configurations
-
-1. To load the ONXX Model, refer to [Lab 7: Task 2: Load the ONNX Model](?lab=7-vector-search&type=OCIGenAI#Task2:LoadtheONNXModel).
-
-2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
-
-    !["Page Designer"](images/all-wksp-utilities.png " ")
-
-3. Click **Vector Providers**.
-
-    !["Page Designer"](images/select-vector-providers.png " ")
-
-4. Click **DB ONXX Model**
-
-    !["Page Designer"](images/vp-success.png " ")
-
-5. Enter/select the following and click **Apply Changes**.
-
-    - Under Local Embedding:
-
-        - For ONNX Model Owner: *Select your Parsing Schema*
-
-        - ONNX Model Name: **DOC_MODEL**
-
-    !["Page Designer"](images/doc-model.png " ")
-
-6. Expand **SQL Workshop** and select **SQL Commands**.
-
-    !["Page Designer"](images/sql-commands.png " ")
-
-7. Copy and paste the SQL code below, then click **Run**.
-
-    ```
-    <copy>
-    update HIGH_SCHOOL_INFO set chunk_v = apex_ai.get_vector_embeddings(p_value => chunk_c, p_service_static_id => 'db_onnx_model');
-    </copy>
-     ```
-
-    !["Page Designer"](images/highschool-chunk.png " ")
-
-8. All set. Now, run the application and see it in action! Follow Lab 6: [Run the Application](?lab=6-run-app) to run the app. -->
 
 
 ## Acknowledgements

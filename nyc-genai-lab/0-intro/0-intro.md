@@ -34,18 +34,18 @@ Estimated Time: 60 minutes
 
 **Quick Tip:**
 - If you’re interested in exploring only the **Generative AI** features, begin directly with [Lab 3](lab=3-configure-oci).
-- Before you start, make sure to download and install the following starter application: [Download the Starter App](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip)
+- Before you start, make sure to download and install the following starter application: [Download the Starter App](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/nyc-starter-app.sql)
 
 The starter app contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab](lab=8-appendix): 
 
-    - [Task 1: Import the App into an APEX Workspace](lab=8-appendix#Task1:ImporttheAppintoanAPEXWorkspace) 
-    - [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](lab=8-appendix#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
+- [Task 1: Import the App into an APEX Workspace](lab=8-appendix#Task1:ImporttheAppintoanAPEXWorkspace) 
+- [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](lab=8-appendix#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 
 ## Prerequisites
 
 - An APEX workspace.
 
-- API key for the AI Provider of your choice. (OCI Gen AI, Open AI, Cohere)
+- API key for the AI Provider of your choice. (OCI Gen AI, OpenAI, Cohere)
 
 - If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
     - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
@@ -94,7 +94,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, you can download and install one of the the completed app as follows:
 
-[Download the completed application zip file](files/nyc_gen_ai_app.sql)
+[Download the completed application zip file](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/nyc_gen_ai_app.sql)
 
 To run the app, follow the steps described in the [Appendix Lab: Download Instructions](?lab=8-appendix) from Task 1 and Task 2.
 

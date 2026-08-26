@@ -136,7 +136,7 @@ In this lab, you will:
        'Attendance rate: ' || ATTENDANCE_RATE || chr(10) || chr(13) ||
        'Graduation rate: ' || GRADUATION_RATE as prompt_context
     from HIGHSCHOOLS
-    where ID = :P2_SCHOOL_ID;
+    where ID = :P1_SCHOOL_ID;
     </copy>
     ```
 

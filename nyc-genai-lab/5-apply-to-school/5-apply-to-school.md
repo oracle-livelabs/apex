@@ -88,7 +88,7 @@ Let us create a new Form page for school application.
     - P3_DISPOSITION
     - P3_CREATED
     - P3_UPDATED
-    - P3\_UPDATE\_BY
+    - P3\_UPDATED\_BY
 
     In the Property Editor, select Type as **Hidden**.
 
@@ -280,6 +280,7 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
     - Use Response:
         - Type: **Item**
         - Item: **P3\_EMAIL**
+    
     Click **Save**.
 
     ![Page Designer](images/da_details.png ' ')
@@ -386,7 +387,7 @@ In this task, we use the 'Generate Text with AI' dynamic action to generate emai
 
 ## Summary
 
-You now know how to invoke the Generative AI service using the APEX_AI package. You also learnt to generate emails and submit application to a school.
+You now know how to generate emails using AI and submit application to a school.
 
 You may now **proceed to the next lab**.   
 

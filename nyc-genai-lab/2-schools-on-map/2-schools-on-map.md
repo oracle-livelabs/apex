@@ -77,7 +77,7 @@ In this lab, you will:
             </copy>
             ```
     ![Page designer](images/curr-position.png =40%x*)
-    In this workshop, we use the following coordinates as the current Geo Loacation:
+    In this workshop, we use the following coordinates as the current Geo Location:
         - Latitude: 40.748817
         - Longitude: -73.985428
 
@@ -113,7 +113,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
     ![SQL Commands editor](images/sql-type.png ' ')
 
-3. Now, copy an paste the below PL/SQL code in the editor and click **Run**.
+3. Now, copy and paste the below PL/SQL code in the editor and click **Run**.
 
     ```
     <copy>
@@ -372,7 +372,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
 5. Next, we need to update the *Page Items to Submit* property of the Map Region to include the P1_DISTANCE facet.
     Select **Map** in the rendering tree, and in the property editor, enter/update the following:
-    - Source > Page Items to Submit: **P1\_SEARCH, P1\_METHOD, P1\_BOROUGH, P1\_INTEREST, P1\_ATTENDANCE_RATE ,P1\_SAFE, P1\_DISTANCE**
+    - Source > Page Items to Submit: **P1\_SEARCH, P1\_METHOD, P1\_BOROUGH, P1\_INTEREST, P1\_ATTENDANCE_RATE, P1\_SAFE, P1\_DISTANCE**
 
         ![Page Designer](images/items-submit.png ' ')
 
