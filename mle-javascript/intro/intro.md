@@ -60,6 +60,18 @@ Two downloads are provided:
 
 The scaffold is intended as your starting point. Use this in the subsequent labs to build the finished app.
 
+## Application Overview
+
+Once finished, your application consists of 2 pages, one showing a card layout with all those photos you uploaded, including a button to upload more:
+
+![Screenshot of page 1](../lab-5/images/page-1-final.png)
+
+After clicking on a card, you are taken to the photo details page, which includes the AI assessment and a classic report showing a select few EXIF attributes that came with the photo.
+
+![Screenshot of page 2](../lab-5/images/page-2-final.png)
+
+Let's build this app together!
+
 ## Learn More
 
 The following links provide additional information about the topic.

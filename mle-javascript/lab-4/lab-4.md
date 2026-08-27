@@ -41,7 +41,7 @@ Open Page 1: _Photo Metadata_ in Page Designer and ensure the major properties a
 
 1. **Form region**: Post
 
-    Select the _Post_ form region (#1 in the screenshot) and set its table or view to `MLE_DATA` if not done so already. You can find it in the "Diaglogs, Drawers and Popups" section.
+    Select the _Post_ form region (#1 in the screenshot) and set its table or view to `MLE_DATA` if not done so already. You can find it in the "Diaglogs, Drawers and Popups" section. In the Dialog Body, set all items' types, except `P1_FILE_BLOB` and `P1_POST_COMMENT` to _hidden_ to unclutter the popup dialog.
 
 1. **Map region**: Post Locations
 
@@ -232,7 +232,7 @@ The numbered items in the list indicate where you are going to add the new regio
 
 1. **Google AI Analysis**
 
-    Add the **Google AI Analysis** region as a static item. Create it as the third sub-region for the **Summary** Region, indicated by #4 in the screenshot.
+    Add the **Google AI Analysis** region as a static item. Create it as the third sub-region for the **Summary** Region, indicated by #4 in the screenshot. Set _Start New Row_ to false but toggle the switch to start a new column.
 
     Leave the label empty. The MLE realness-score module writes the formatted value, such as `85% likely real` or `50% inconclusive`, into the page item to create next.
 
@@ -258,7 +258,7 @@ The numbered items in the list indicate where you are going to add the new regio
 
 1. **EXIF Data region** is the final region to be created
 
-    Create a sub-region named **EXIF Data** and place it after the previously created AI Analysis region. This is marked by #4 in the screenshot. Change its type to _classic report_ and set the following properties:
+    Create a sub-region named **EXIF Data** and place it after the previously created AI Analysis region in the tree. This is marked by #4 in the screenshot. Change its type to _classic report_ and set the following properties:
 
     - **Identification**:
         - Name: `EXIF_DATA`
@@ -320,6 +320,8 @@ The numbered items in the list indicate where you are going to add the new regio
     - **Messages**:
         - when no data found: Photo does not contain EXIF data.
 
+    Move the region next to the Map region and below the Gemini Analysis using the mouse.
+
 The SQL query extracts only a subset of EXIF fields extracted by the application.
 
 The final number of page items and regions is shown in this screenshot: ![Final layout for page 2 - regions](./images/page-2-completed.png)
@@ -374,12 +376,14 @@ Add these two actions in this order in the _True_ branch:
         await import('realness-score-module');
 
     const postId = apex.env.P2_ID;
+
+    // this call returns a string, not a JSON
     const assessment = analyzePhotoWithGemini(postId);
 
     apex.env.P2_AI_ASSESSMENT_POST_ID = postId;
     apex.env.P2_AI_ASSESSMENT_JSON = assessment;
 
-    apex.env.P2_AI_REASON = assessment.reason || "assessment error";
+    apex.env.P2_AI_REASON = JSON.parse(assessment).reason || "assessment error";
     apex.env.P2_REALNESS_SCORE = formatRealnessScore(
         assessment,
         postId,

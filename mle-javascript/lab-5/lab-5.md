@@ -1,8 +1,8 @@
-# Optionally implement enhanced Features
+# Optionally implement advanced Features
 
 ## Introduction
 
-In all previous labs you implemented the application up to a state where it worked. You could upload photos, and the APEX process invoking MLE/JavaScript extracted EXIF data from the photo (if present), stored it in a table, and presented it. In this lab you add extra features like debugging. You'll also remove the PL/SQL code from MLE_GEMINI_AI_VERIFY_MODULE and replace it with the JavaScript    
+In all previous labs you implemented the application up to a state where it worked. At the end of lab 4, you were able to upload photos, and the APEX process invoking MLE/JavaScript extracted EXIF data from the photo (if present), stored it in a table, and presented it. In this lab you add extra features: debug output and styling.
 
 This lab requires Oracle AI Database 26ai, Oracle APEX 26.1, and the `MLE_EXIF_ENV` environment plus all the MLE modules created in the previous lab.
 
@@ -10,23 +10,28 @@ Estimated time to complete: 10 minutes
 
 ### Prerequisites
 
-Complete [Lab 3](../lab-3/lab-3.md) first. The application uses the `MLE_DATA` table, including its `EXIF_DATA` JSON column.
-
-The `EXIF_DATA` column is populated by the EXIF MLE module after an image is uploaded. Keep the table name `MLE_DATA` throughout this lab.
+Complete [Lab 4](../lab-4/lab-4.md) first before taking this lab on.
 
 ### Objectives
 
 In this lab, you will:
 
-- Finish all APEX pages
-- Add logic to extract EXIF data to page 1
-- Complete the image detail page by passing it to Gemini for an assessment and displaying the location where the photo was taken
+- Add calls to `APEX_DEBUG` to the EXIF process
+- Enable custom CSS styles for the application
 
-## Task 1: Improve UX by adding CSS to Page 2
+## Task 1: Improve User Experience by enabling CSS in Page 2
 
 The scaffold you started your journey with came with custom CSS classes. You can see them in page designer. Open Page 2, then left click on "Page 2: Photo Metadata Details".
 
-Scroll down to the CSS section, then you'll see the CSS classes listed inline. To enable them, you need to set HTML DOM IDs; you find them in the region's _advanced_ section. These are selectors to which the CSS classes attach. You need to edit these for all regions on the page:
+Scroll down to the CSS section, then you'll see the CSS classes listed inline.
+
+![Screenshot showing page 2 in Page Designer with inline CSS classes](./images/page-2-inline-css.png)
+
+To enable these CSS classes in the application, you need to set HTML DOM IDs; you find them in each pag region's _advanced_ section. This screenshot shows you how to set the HTML DOM ID for the first region, _Realness Score_:
+
+![Setting HTML DOM ID for the Realness Score region](./images/page-2-html-dom-id.png)
+
+These are selectors to which the CSS classes attach. You need to edit these for all regions on the page accordingly:
 
 | Region | HTML DOM ID |
 | -- | -- |
@@ -39,9 +44,9 @@ Scroll down to the CSS section, then you'll see the CSS classes listed inline. T
 
 Save and reload the page, you should see a distinctly different appearance.
 
-## Task 2: Help users debug issues with the EXIF extraction process
+## Task 2: Help users debug issues with the EXIF extraction process in Page 1
 
-The EXIF extraction code you added to page 1 does the job well, but it won't help much in case something goes wrong. The code is shown here for your convenience:
+The EXIF extraction code you added to page 1 does the job well, but it won't help much in case something goes wrong. The original code you added previously is shown here for your convenience:
 
 ```javascript
 // Load the EXIF library from the MLE environment.
@@ -116,7 +121,7 @@ apex.conn.execute(`begin apex_debug.info('Important: %s', 'some string'); end;')
 // ...
 ```
 
-This isn't particularly close to a native JavaScript experience. The PL/SQL Foreign Function Interface (plsffi) addresses this problem by allowing you to resolve packages, functions, and procedures to JavaScript variables. You can read more about the feature in the JavaScript Developer's Guide, linked in the reference section.
+This isn't particularly close to a native JavaScript experience. The PL/SQL Foreign Function Interface that ships with MLE since release 23.7 (plsffi) addresses this problem by allowing you to resolve packages, functions, and procedures to JavaScript variables. You can read more about the feature in the JavaScript Developer's Guide, linked in the reference section.
 
 The above example can be rewritten using the PL/SQL Foreign Function Interface as follows:
 
@@ -136,11 +141,14 @@ This allows you to add a lot more detail to the process, as shown here:
 
 ```javascript
 <copy>
-// Load the EXIF library from the MLE environment.
+// Load the EXIF library with help from the MLE environment.
 const { default: exifr } = await import('exifr-module');
 
 // get the post ID from the APEX page
 const postId = apex.env.P1_ID;
+
+// resolve a local variable, d, to APEX_DEBUG and all its variables
+// and functions/procedures
 const d = plsffi.resolvePackage('APEX_DEBUG');
 
 // Fetch the uploaded image as a byte stream, so exifr can read it.
@@ -203,9 +211,23 @@ d.info(`${updateResult.rowsAffected} rows have been updated with ${Object.keys(e
 </copy>
 ```
 
-If everything goes to plan, you shouldn't see much output. In the following example the final line is the only one printed in the debug output:
+If everything goes to plan, you shouldn't see much output after enabling debugging in your application. In the following example the final line is the only one printed in the debug output window, indicating success:
 
 ![Screenshot showing the successful completion of the insert operation](./images/debug-message.png)
+
+Adding instrumentation to the code from the start is always a good idea.
+
+## Review the finished Application
+
+At this point, all the building blocks are available. The first screenshot shows the first page with the file upload dialog open:
+
+![Page 1 as rendered in APEX](./images/page-1-final.png)
+
+Once the photo has been uploaded, click on it to get to page 2, which presents all the EXIF metadata as well as the location where the photo was taken on the map, and the AI service's assessment.
+
+![Page 2 with CSS applied](./images/page-2-final.png)
+
+That's it! Thank you for completing this LiveLab, we hope you had fun doing so. Feel free to reach out with suggestions and feedback!
 
 ## Learn More
 
