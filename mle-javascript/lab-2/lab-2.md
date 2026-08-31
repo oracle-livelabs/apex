@@ -37,11 +37,11 @@ Regardless of which route you decide to take, make sure you understand the poten
 
 1. Click on the **Generative AI** tile
 
-   This is the second tile from the left on the top row.
+    This is the second tile from the left on the top row.
 
-   ![Generative AI Service](./images/workspace-utils-gen-ai.png)
+    ![Generative AI Service](./images/workspace-utils-gen-ai.png)
 
-   In this screen you have a choice to create either an OCI GenAI service as detailed in the next section, or GPT-4o as an example of a potentially free model as explained in step 5.
+    In this screen you have a choice to create either an OCI GenAI service as detailed in the next section, or GPT-4o as an example of a potentially free model as explained in step 5.
 
 1. Create an OCI GenAI Service
 
