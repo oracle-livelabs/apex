@@ -1,4 +1,4 @@
-# Configure AI Services and a JSON Source
+# Configure AI Services
 
 ## Introduction
 

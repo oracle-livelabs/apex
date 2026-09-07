@@ -60,6 +60,8 @@ Two downloads are provided:
 
 The scaffold is intended as your starting point. Use this in the subsequent labs to build the finished app.
 
+The solution can be used to compare your version to the one created by the original authors of this LiveLab. The `solution.sql` isn't immediately runnable. You must create the AI Service as described in Lab 2. For licensing reasons third party modules cannot be bundled with LiveLabs, please go ahead and create the EXIFR module as described in lab 3 post installation.
+
 ## Application Overview
 
 Once finished, your application consists of 2 pages, one showing a card layout with all those photos you uploaded, including a button to upload more:
