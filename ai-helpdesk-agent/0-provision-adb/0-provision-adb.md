@@ -172,13 +172,36 @@ administrator.
     > Lab 7 asks you to type the schema name, and the prefixed form is the one it wants. SQL Workshop
     > shows it in the header.
 
-4. Sign in at the same APEX URL with your workspace username and password. APEX then asks you to **select
-    a workspace** — click your workspace name to continue.
+4. The success message links your new workspace by name. Clicking it **signs you out of Administration
+    Services** — that is expected, because instance administration and your workspace are separate
+    logins. You now need to sign in again as the workspace user.
+
+    ![Success message linking to the new workspace](images/log-out-from-admin.png " ")
+
+    > **This hand-off trips people up.** Clicking the workspace link ends your `ADMIN` session, and
+    > whatever page it leaves you on is not a reliable place to sign back in. Do not fight it: go back
+    > to the **APEX public access URL** you copied in Task 2 and start from there, as step 5 describes.
+
+5. Open the **APEX public access URL** from Task 2 again. You land on a page headed *"Sign in with your
+    database credentials"* — the same Autonomous AI Database sign-in you used as `ADMIN`. Enter your
+    **workspace username** and **workspace password** from step 3 and click **Sign in**.
 
     ![APEX workspace sign-in page](images/log-in-to-workspace.png " ")
 
-You should land on the APEX home page with **0 applications and 0 tables**, and the footer showing your
-APEX release. That empty workspace is exactly what Lab 1 expects.
+    > **⚠️ There is no workspace-name field here, and the page does not look like APEX.** Every APEX
+    > entry point on an Autonomous AI Database is fronted by the database sign-in gateway — we checked
+    > `/ords/apex`, `/ords/f?p=4550:1` and the workspace-sign-in path, and all three redirect to it. So
+    > the "APEX sign-in page" you may be expecting, with three fields, never appears. Enter just the
+    > username and password; the workspace is chosen on the *next* page.
+
+6. APEX then shows **Select a Workspace**, headed *"Welcome"* and your username, listing the workspaces
+    that user belongs to. Click your workspace name — this step appears even when there is only one.
+
+You should land on the APEX home page showing four tiles — App Builder, SQL Workshop, Data Reporter and
+Gallery — with **0 applications and 0 tables** in the summary and your APEX release in the footer. That
+empty workspace is exactly what Lab 1 expects.
+
+![Empty APEX workspace home page with 0 applications and 0 tables](images/workspace-home-empty.png " ")
 
 You may now **proceed to the next lab**.
 

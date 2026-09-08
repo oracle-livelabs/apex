@@ -2,7 +2,7 @@
 -- Horizon Help Desk - canonical schema and seed data
 -- State-reset checkpoint: drops and recreates all three tables.
 -- Safe to re-run at any point in the workshop; it always restores
--- the exact state the labs expect (50 rows, 20 articles, 8 people).
+-- the exact state the labs expect (50 rows, 30 articles, 8 people).
 -- ------------------------------------------------------------------
 begin
   for t in (select table_name from user_tables

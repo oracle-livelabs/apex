@@ -59,7 +59,14 @@ OCI API keys are a public/private key pair used to authenticate REST calls to OC
 
     ![Configuration file preview dialog](images/oci-config-preview.png " ")
 
-5. You also need your **assigned compartment's OCID** — this one is *not* in the configuration file. In the LiveLabs Sandbox, open your reservation details to find your assigned compartment, or in the OCI Console navigate to **Identity & Security > Compartments** and copy the OCID shown next to your compartment.
+5. You also need your **assigned compartment's OCID** — this one is *not* in the configuration file.
+
+    * **In your own tenancy:** in the OCI Console navigate to **Identity & Security > Compartments** and
+      copy the OCID shown next to your compartment.
+    * **On a LiveLabs Sandbox:** your sandbox is assigned a compartment named after your reservation,
+      like `LL123456-COMPARTMENT`. Find it the same way — **Identity & Security > Compartments** — or
+      read it off the **View Login Info** panel on your LiveLabs reservation page, the same panel that
+      gave you your sandbox username and password.
 
     > **Running in your own tenancy's root compartment?** Then the compartment OCID *is* the tenancy OCID — reuse the `tenancy=` value from the Configuration File Preview and skip this step.
 
@@ -105,9 +112,19 @@ OCI API keys are a public/private key pair used to authenticate REST calls to OC
 3. For Credential, select **Create New** and enter, from your Task 1 scratch note:
 
     * **OCI User ID** (the user OCID)
-    * **OCI Private Key** (paste the full contents of the downloaded .pem file)
+    * **OCI Private Key** — open the key file you downloaded in Task 1, select all, and paste
     * **OCI Tenancy ID** (the tenancy OCID)
     * **OCI Public Key Fingerprint**
+
+    > **You can paste the whole key file.** Verified on APEX 26.1.4: pasting the complete downloaded
+    > file — `-----BEGIN PRIVATE KEY-----` and `-----END PRIVATE KEY-----` lines included, plus the
+    > bare `OCI_API_KEY` line the console appends after the footer — gives **Connection Succeeded**.
+    > APEX strips the armor for you, so there is no need to trim anything.
+
+    > **All four fields must come from the same API key.** That is the failure worth guarding against
+    > here: a fingerprint from one key with the private key from another authenticates as nobody and
+    > returns `HTTP-401`. If you generated more than one key pair, check the fingerprint on the
+    > **Tokens and keys** tab against the file you are pasting.
 
 4. Click **Test Connection**. When it succeeds, click **Create**.
 
@@ -177,7 +194,14 @@ OCI API keys are a public/private key pair used to authenticate REST calls to OC
 
 ## Task 4: Prove the Wiring with the APEX Assistant
 
-1. Navigate to **SQL Workshop > SQL Commands** and click the **APEX Assistant** button in the toolbar.
+1. Get back to the workspace home page first: click the **Oracle APEX** logo at the top left, or the
+    **App Builder** breadcrumb, from wherever the Generative AI pages left you. From the workspace home
+    page, navigate to **SQL Workshop > SQL Commands** and click the **APEX Assistant** button in the
+    toolbar.
+
+    > **SQL Workshop is one of the four tiles on the workspace home page**, alongside App Builder, Data
+    > Reporter and Gallery. If you cannot see them, you are still inside a builder page — click the
+    > APEX logo at the very top left to go home.
 
 2. **The first time you use an AI feature in a workspace, APEX asks you to accept the third-party AI terms.** Read them and click **Accept** — the Assistant will not open otherwise. This appears once per workspace.
 
@@ -193,7 +217,24 @@ OCI API keys are a public/private key pair used to authenticate REST calls to OC
 
 ## Go Further (optional)
 
-Paste this block into SQL Commands, select it, and ask the APEX Assistant to *explain* it — you'll meet this exact code again in Lab 5 as your AI agent's write tool:
+Stay in the **APEX Assistant** and give it a second, harder request — something with a join and a
+filter behind it, phrased the way you would ask a colleague:
+
+```
+<copy>Show me all open tickets with their priority, newest first.</copy>
+```
+
+It answers with a query card you can **Copy** or **Insert**. That is the whole point of this lab: the
+service you just wired up is now writing SQL against your own schema.
+
+> **The Assistant writes SQL — it does not explain code.** Its own greeting says it "can help you
+> author SQL based on tables and views in your current schema", and that is the literal boundary of
+> what it does. Paste a PL/SQL block in and ask *"Explain what this does"* and you get back a SQL
+> statement — often a rewrite of whatever is sitting in the editor — rather than an explanation.
+> Verified on APEX 26.1.4. Ask it for queries, not for commentary.
+
+Below is the block you will meet again in Lab 5 as your AI agent's **write tool**. Read it now — it is
+worth recognising later — but read it yourself rather than asking the Assistant about it:
 
 ```
 <copy>declare

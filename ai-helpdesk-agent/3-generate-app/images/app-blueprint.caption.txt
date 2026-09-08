@@ -1,1 +1,1 @@
-Blueprint editor: Dashboard, Tickets IR+form, Knowledge Base pages listed
+APEX Assistant chat proposing the Horizon Help Desk blueprint, with the in-chat Create Application button

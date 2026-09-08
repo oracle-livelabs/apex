@@ -34,7 +34,31 @@ The workspace-level service from Lab 1 must be selected inside the app before in
 
 ## Task 2: Open the Tickets Interactive Report
 
-1. In **Page Designer**, open the **Tickets** page and select the Tickets report region.
+Task 1 left you in Shared Components. The AI settings you need next live on the report region itself, so
+this task is pure navigation — from Shared Components to the Tickets report inside Page Designer.
+
+1. Leave Shared Components: in the breadcrumb at the top left, click your application's name
+    (**Horizon Help Desk**). You can also get there from **App Builder** and clicking the application
+    tile. Either way you land on the application home page, which lists the pages the wizard built.
+
+2. Click the **Tickets** page in that list. This opens **Page Designer** — a three-pane editor with a
+    component tree on the left, a layout in the middle and a property editor on the right.
+
+    > **Page Designer is APEX's page editor, and it is where Labs 4, 5 and 6 do most of their work.**
+    > If this is your first time in it: the left pane (**Rendering**) is the page's component tree, the
+    > right pane (**Property Editor**) shows the properties of whatever you select in that tree.
+
+3. In the left **Rendering** pane, expand **Body** and click the region named **Tickets** — its type is
+    **Interactive Report**. Selecting it loads its properties into the right-hand pane, which is where
+    Task 3 continues.
+
+    ![Page Designer with the Tickets region selected and its Type showing Interactive Report](images/page-designer-tickets-region.png " ")
+
+    > **Check you are in the right place before moving on.** Your screen should match the picture above:
+    > **Tickets** highlighted under **Body** in the Rendering tree, the right-hand pane switched to the
+    > **Region** tab, *Identification > Type* reading **Interactive Report**, and *Source > Table Name*
+    > reading `TICKETS`. If Type says Classic Report, Form, or anything else, you have selected the
+    > wrong node in the tree.
 
     > **No Interactive Report on Tickets?** Sixty-second fix: **Create Page**, describe it in natural language — `an interactive report on the TICKETS table` — and continue with the new page.
 

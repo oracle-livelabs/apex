@@ -45,6 +45,11 @@ This lab assumes you have:
 
 ## Task 2: Review the Proposal — You Are the Reviewer
 
+> **⚠️ Read this before you start: you are going to throw this SQL away.** In this task you review what
+> the AI proposed and then **close the wizard without running it**. The schema the rest of the workshop
+> uses comes from a vetted script you run in Task 3. Reviewing-then-discarding is the point of the
+> exercise, not a detour.
+
 1. Read the generated SQL the way you'd read a colleague's pull request. Check:
 
     * **Keys** — does each table have a sensible primary key? Is the ticket-to-team-member relationship a foreign key?
@@ -63,7 +68,12 @@ This lab assumes you have:
     > *"AI-generated code may contain errors or security risks. Always review and validate all code before
     > use."* This lab is that sentence turned into a habit.
 
-2. **Do not run the wizard's script.** Close the wizard after your review. (The wizard's final step *saves* a script rather than running it — we're skipping even that, because in the next task the whole room runs one vetted, identical version, so every lab, screenshot, and AI answer that follows matches what you see.)
+2. **Do not run the wizard's script — cancel out of it.** Click **Cancel** (or the **X** at the top
+    right of the wizard) to close it without creating anything, then carry on to Task 3.
+
+    Why: the wizard's final step *saves* a script rather than running it, and we skip even that, because
+    in the next task the whole room runs one vetted, identical version — so every lab, screenshot and AI
+    answer that follows matches what you see.
 
     > Already ran the AI's script before reading this? No problem — the next task's script replaces those tables cleanly.
 
@@ -79,7 +89,7 @@ This lab assumes you have:
     > script on the **SQL Scripts** page and use **Delete Checked** first. Re-*running* the script you
     > already have is always safe; it is the re-*upload* that collides.
 
-2. Verify the seed loaded:
+2. Verify the seed loaded. Go to **SQL Workshop > SQL Commands**, paste this in and click **Run**:
 
     ```
     <copy>select count(*) tickets from tickets;</copy>
@@ -87,19 +97,25 @@ This lab assumes you have:
 
     Expected result: **50**.
 
+    > **SQL Scripts and SQL Commands are two different pages.** You uploaded and ran the file on
+    > **SQL Scripts**; ad-hoc queries like this one go in **SQL Commands**. Both live under
+    > **SQL Workshop** on the workspace home page.
+
 3. Open **SQL Workshop > Object Browser** and confirm the three tables exist with data.
 
     ![Object Browser showing the three seeded tables](images/object-browser-tables.png " ")
 
 ## Go Further (optional)
 
-Ask the APEX Assistant (SQL Commands toolbar) for:
+Go back to **SQL Workshop > SQL Commands** and click **APEX Assistant** in the toolbar, then ask for:
 
 ```
 <copy>Open ticket count by category, ordered by count descending.</copy>
 ```
 
-Review its SQL — then run it. That's the Lab 2 habit, applied in five seconds.
+Read the SQL it proposes before you click **Insert** and **Run** — the same review-then-approve habit you
+just practised on the data model in Task 2, this time in about five seconds. That habit is the point of
+this lab: **AI proposes, you decide what runs.**
 
 You may now **proceed to the next lab**.
 

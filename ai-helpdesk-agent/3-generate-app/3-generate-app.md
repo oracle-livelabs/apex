@@ -51,7 +51,13 @@ This lab assumes you have:
     two. Listing them separately makes the wizard build *two* report-and-form pairs, leaving you with two
     pages both named Tickets — and Lab 4 then can't tell you which one to open.
 
-3. AI responds with an application **blueprint** — a proposed set of pages. Read it, then click **Create Application** *in the chat*.
+3. AI responds with an application **blueprint** — a proposed set of pages. Read it, then click
+    **Create Application** *in the chat panel*.
+
+    > **⚠️ There are two buttons called "Create Application", and this is the first of them.** The one
+    > here, in the chat, only hands the blueprint over to the wizard. The second one sits at the bottom
+    > of the **Create an Application** page you land on next, and *that* is the one that actually builds
+    > the app. Task 2 is everything you do on that page in between.
 
     > **🔴 Check the page names against the blueprint anyway.** Without the "use these exact page
     > names" line above, our first run came back as **Overview**, **Ticket List** and **Article
@@ -65,7 +71,12 @@ This lab assumes you have:
     > prompt suppresses both; with it, the blueprint lists no features at all. If you *want* them, drop
     > that line and turn them on deliberately.
 
-    > **That button does not create anything yet.** It hands off to the Create Application wizard, which is where the blueprint becomes editable — page names, page types, charts, features and authentication. The chat summary lists pages only; the wizard is where you can actually inspect and change them. Task 2 happens there.
+    > **What you should see next.** A full-page form headed **Create an Application**, with your app
+    > name and appearance at the top, then a **Pages** list (Dashboard, Tickets, Knowledge Base), a
+    > **Features** section of checkboxes, a **Settings** section showing Application ID, Schema and
+    > Authentication, and **Cancel** / **Create Application** buttons at the bottom. That page looks
+    > nothing like the chat you just left — it is the right place. It is where the blueprint becomes
+    > editable: page names, page types, charts, features and authentication. Task 2 happens there.
 
     ![AI-proposed application blueprint](images/app-blueprint.png " ")
 
@@ -73,6 +84,11 @@ This lab assumes you have:
 
 This is the highest-leverage review in the workshop. Everything below is **free to change now** in the
 blueprint editor, and fiddly to change after the app exists.
+
+This is the page the checks below refer to — the **Create an Application** form, not the chat panel you
+just left:
+
+![Create an Application blueprint editor listing the Dashboard, Tickets and Knowledge Base pages](images/blueprint-editor.png " ")
 
 1. Check the blueprint against all five requirements:
 
@@ -99,7 +115,9 @@ blueprint editor, and fiddly to change after the app exists.
 
 ## Task 3: Run It
 
-1. When the builder finishes, click **Run Application** and sign in with your workspace credentials.
+1. When the builder finishes, click **Run Application** and sign in with **your APEX workspace
+    username and password** — the ones you created the workspace with in the provisioning lab, not your
+    Oracle Cloud account and not the database `ADMIN` user.
 
     > **"Your session has ended" later on?** Expected, not a failure. APEX expires an idle session after
     > an hour, and this workshop runs about 90 minutes, so you will probably be asked to sign in again
