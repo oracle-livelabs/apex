@@ -21,7 +21,7 @@ In this lab, you:
 
 1. Login into your **Oracle APEX Workspace**.
 
-   ![Login into your APEX account](images/apex-login.png " ")
+    ![Login into your APEX account](images/apex-login.png " ")
 
 2. On the Workspace home page, click **App Builder.**
 
@@ -60,3 +60,8 @@ You now know how to import an Oracle APEX application.
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

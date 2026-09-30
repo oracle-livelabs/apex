@@ -159,7 +159,7 @@ In this task, we will create a Search page for Text based search.
 ## Task 3: Create Search Page for Image
 
 1. Click on the **+** Icon on the top right corner and select
-**Page**.
+    **Page**.
 
     ![Create page](images/create-pages1.png " ")
 
@@ -183,18 +183,18 @@ In this task, we will create a Search page for Text based search.
         ```
          <copy>
         WITH vector_image AS (
-   SELECT apex_ai.get_vector_embeddings (
+    SELECT apex_ai.get_vector_embeddings (
        p_value   =>  apex_web_service.blob2clobbase64(blob_content),
        p_service_static_id => 'clip_image_model') as img_vector
-   FROM apex_application_temp_files
-   WHERE filename = :P3_FILENAME
-   ORDER BY created_on DESC
-   FETCH FIRST 1 ROWS ONLY
-   )
-   SELECT A.*,
+    FROM apex_application_temp_files
+    WHERE filename = :P3_FILENAME
+    ORDER BY created_on DESC
+    FETCH FIRST 1 ROWS ONLY
+    )
+    SELECT A.*,
        TO_CHAR(ROUND(vector_distance, 3), '0.999') AS vector_distance_display
-   FROM (
-   SELECT
+    FROM (
+    SELECT
        p.id,
        p.post_comment,
        p.file_blob,
@@ -212,9 +212,9 @@ In this task, we will create a Search page for Text based search.
                )
            ELSE null
        END AS vector_distance
-   FROM sm_posts p
-   ) A
-   ORDER BY A.vector_distance, A.created DESC;
+    FROM sm_posts p
+    ) A
+    ORDER BY A.vector_distance, A.created DESC;
          </copy>
         ```
 
@@ -298,7 +298,7 @@ In this task, we will create a Search page for Text based search.
     ![Create Computation](images/create-computation2.png " ")
 
 14. In the Rendering tree, right click on **Body** and select
-**Create Page Item**.
+    **Create Page Item**.
 
     ![Create Page item](images/create-items5.png " ")
 
@@ -511,3 +511,8 @@ You have successfully enhanced the Social Media app by integrating semantic sear
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

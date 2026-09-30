@@ -59,3 +59,8 @@ You have now learned how to post images and perform AI powered searches on uploa
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

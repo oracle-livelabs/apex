@@ -1,5 +1,8 @@
 # Introduction
 
+Estimated Workshop Time: TODO - x minutes
+
+
 ## About this Workshop
 
 In today's digital landscape, visual content is everywhere, from product photos and social media posts to scanned documents and user generated media. The ability to search and understand images meaningfully, not just by filenames or tags, has become a powerful differentiator for modern applications. Traditional search methods often miss the context or content of images, limiting their effectiveness in image rich environments.
@@ -90,3 +93,8 @@ If you are stuck or the App is not working as expected, you can download and ins
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

@@ -33,11 +33,11 @@ To enable your schema to load the mining models, you must grant the necessary pr
 
 1. Login as SYS/Admin User and execute the below command.
 
-   ```sql
-   <copy>
-   GRANT CREATE MINING MODEL TO <YourSchemaName>;
-   </copy>
-   ```
+    ```sql
+    <copy>
+    GRANT CREATE MINING MODEL TO <YourSchemaName>;
+    </copy>
+    ```
 
 Replace `<YourSchemaName>` with the parsing schema used by the application.
 
@@ -53,15 +53,15 @@ The PAR-based `DBMS_VECTOR.LOAD_ONNX_MODEL_CLOUD` path does not require `EXECUTE
 
 2. Run the following query as the application schema:
 
-```sql
-<copy>
-SELECT owner,
+    ```sql
+    <copy>
+    SELECT owner,
        procedure_name
-FROM   all_procedures
-WHERE  object_name = 'DBMS_VECTOR'
-AND    procedure_name = 'LOAD_ONNX_MODEL_CLOUD';
-</copy>
-```
+    FROM   all_procedures
+    WHERE  object_name = 'DBMS_VECTOR'
+    AND    procedure_name = 'LOAD_ONNX_MODEL_CLOUD';
+    </copy>
+    ```
 
 ![Procedure check result](images/check-procedure.png " ")
 
@@ -176,3 +176,8 @@ You have granted the required model-creation privilege, loaded both CLIP ONNX mo
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
 - **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
