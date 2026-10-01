@@ -52,7 +52,7 @@ The region position controls where shared content appears. For this banner, you 
 
             ```html
             <copy>
-            <strong>Now Hiring:</strong> Open Roles at ACME Corp. <a href="f?p=&APP_ID.:2:&SESSION.">View Jobs </a>
+            <strong>Now Hiring:</strong> Open Roles at ACME Corp. [View Jobs ](f?p=&APP_ID.:2:&SESSION.)
             </copy>
             ```
 

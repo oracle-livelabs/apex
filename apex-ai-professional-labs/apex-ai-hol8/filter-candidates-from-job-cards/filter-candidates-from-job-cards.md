@@ -50,12 +50,12 @@ In this lab, you will:
        c.created_at,
        c.updated_by,
        c.updated_at
-  from tms_candidates c
-  left join tms_job_requisitions r
+    from tms_candidates c
+    left join tms_job_requisitions r
     on c.req_id = r.req_id
-  left join tms_departments d
+    left join tms_departments d
     on r.dept_id = d.dept_id
- where :P4_REQ_ID is null
+    where :P4_REQ_ID is null
     or c.req_id = :P4_REQ_ID;
 
     </copy>

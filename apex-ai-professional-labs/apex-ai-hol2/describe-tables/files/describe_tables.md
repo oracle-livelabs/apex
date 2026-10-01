@@ -1,5 +1,14 @@
 # Table: TMS_AUDIT_LOG
 
+### Objectives
+
+In this lab, you will:
+* TODO: Add objectives
+
+
+Estimated Time: TODO - x minutes
+
+
 ## Columns:
   - LOG_ID - NUMBER NOT NULL [pk]
   - TABLE_NAME - VARCHAR2(255) NOT NULL
@@ -202,3 +211,8 @@
   - TMS_OFFERS_OFFER_ID_PK - PRIMARY KEY (OFFER_ID)
   - TMS_OFFERS_CANDIDATE_ID_FK - FOREIGN KEY (CANDIDATE_ID) -> TMS_CANDIDATES(CANDIDATE_ID)
   - TMS_OFFERS_REQ_ID_FK - FOREIGN KEY (REQ_ID) -> TMS_JOB_REQUISITIONS(REQ_ID)
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

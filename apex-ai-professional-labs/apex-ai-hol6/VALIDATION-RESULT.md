@@ -1,5 +1,11 @@
 # LiveLabs Workshop Validation – apex-ai-hol6
 
+### Objectives
+
+In this lab, you will:
+* TODO: Add objectives
+
+
 Generated on 2026-07-20T06:11:38.974468+00:00
 
 ## Structure Check
@@ -52,3 +58,8 @@ Generated on 2026-07-20T06:11:38.974468+00:00
 - ✍️ Lanham score: 3/5
   - 8 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year
