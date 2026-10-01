@@ -1,0 +1,44 @@
+{
+    "workshoptitle": "Oracle APEX Developer Professional - Working with Pages and Regions",
+    "help": "livelabs-help-apex_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../../introduction/introduction.md",
+            "description": "Workshop overview, APEX page and region concepts, objectives, prerequisites, downloads, and useful links."
+        },
+        {
+            "title": "Get Started",
+            "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+        },
+        {
+            "title": "Lab 1: Create Candidate Profile Page Manually",
+            "filename": "../../1-create-candidate-profile/1-create-candidate-profile.md"
+        },
+        {
+            "title": "Lab 2: Add Regions to the Candidate Pipeline Page",
+            "filename": "../../2-candidate-pipeline-regions/2-candidate-pipeline-regions.md"
+        },
+        {
+            "title": "Lab 3: Configure the Global Page",
+            "filename": "../../3-global-page/3-global-page.md"
+        },
+        {
+            "title": "Lab 4: Add a Dynamic Content Region",
+            "filename": "../../4-dynamic-content-region/4-dynamic-content-region.md"
+        },
+        {
+            "title": "Lab 5: Enable Debugging and Review",
+            "filename": "../../5-debugging-review/5-debugging-review.md"
+        },
+        {
+            "title": "Lab 6: Employee Self Service (ESS) - Add Home Regions",
+            "filename": "../../6-ess-home-regions/6-ess-home-regions.md"
+        },
+        {
+            "title": "Need Help?",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md",
+            "description": "Solutions to common problems and directions for receiving live help."
+        }
+    ]
+}
