@@ -28,15 +28,15 @@ Estimated Time: 15 minutes
     ![Codex extension page showing install button and API key command palette entry](images/codex-set-api-key.png)
 3. While in the Extensions view, search for the SQL Developer extension and install it.
     ![Visual Studio Code Extensions view displaying SQL Developer extension listing](images/vscode-sql-developer-extension.png =40%x*)
-4. After installation, use the SQL Developer extension command palette entries to add a new connection, supplying the credentials for your APEX Workspace schema so the extension can reach the correct tenancy workspace.
+4. After installation, use the SQL Developer extension command palette entries to add a new connection, supplying the credentials for your APEX Workspace schema so the extension can reach the correct tenancy workspace. For detailed setup instructions, refer to the [documentation](https://docs.oracle.com/en/database/oracle/sql-developer-vscode/26.1/sqdnx/connecting-your-database.html#GUID-8C57B2CE-7CCE-4611-9B85-F1598930789C).
     ![SQL Developer extension new connection dialog with APEX workspace fields](images/sql-developer-new-connection.png)
 
 5. Switch back to Extensions view. Search for **Python** and click **Install**.
-    *Note:* Python is sometimes used by the AI Coding agent (Codex in this case) to persform certain tasks. For example, offline syntax validation.
+    *Note:* Python is sometimes used by the AI Coding agent (Codex in this case) to perform certain tasks. For example, offline syntax validation.
     ![Visual Studio Code Extensions view displaying Python extension listing](images/vscode-python-extension.png)
 
 6. Finally, we need to install the SQLcl MCP server. Download the latest version of [SQLcl](https://www.oracle.com/database/sqldeveloper/technologies/sqlcl/download/) to your local machine. 
-    ![SQLcl Doenload page](images/sqlcl-download.png)
+    ![SQLcl Download page](images/sqlcl-download.png)
 
     *Note:* SQLcl requires a Java Runtime Environment (JRE) or Java Development Kit (JDK) to be installed on your system. Ensure that Java is installed and available in your system’s PATH before using SQLcl.
 
@@ -56,5 +56,5 @@ Estimated Time: 15 minutes
     ![Codex settings](images/sqlcl-mcp-settings.png)
 
 ## Acknowledgements
-- **Author** - Apoorva Srinivas, Prinicpal Product Manager
+- **Author** - Apoorva Srinivas, Principal Product Manager
 - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, April 2026

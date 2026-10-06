@@ -15,7 +15,7 @@ Estimated Time: 25 minutes
 In this lab, you will:
 
 - Create the `CRM_APP` project folder in your local system.
-- Save the Functional Specification file and Oracle supplied system prompt `blueprint_prompt.md` file in the project folder.
+- Save the Functional Specification file and Oracle supplied system prompt `blueprint-prompt.md` file in the project folder.
 - Generate CRM schema metadata and rename it to `crm_schema_metadata.md`.
 - Use Codex in VS Code as your AI assistant to create `crm_generated_blueprint.md`.
 
@@ -25,9 +25,9 @@ In this task, you create a single working directory for the files that will be u
 
 1. Create a folder named `CRM_APP` in your local system.
 
-2. Download the `Functional Specification file` and `blueprint_prompt.md` file.
+2. Download the `Functional Specification file` and `blueprint-prompt.md` file.
     - [crm\_functional\_requirements\_spec.md](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/crm_functional_requirements_spec.md)
-    - [blueprint\_prompt.md](https://github.com/oracle/apex/blob/26.1/blueprints/prompt/blueprint-prompt.md)
+    - [blueprint-prompt.md](https://github.com/oracle/apex/blob/26.1/blueprints/prompt/blueprint-prompt.md)
 
 3. Click the file link to open the file. Right-click on the file and select **Save As**.
 

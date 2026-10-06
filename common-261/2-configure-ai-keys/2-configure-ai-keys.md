@@ -181,7 +181,7 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
     - API Key: Enter your *OpenAI API* key that you generated in Task 1 of this lab.
 
-    - AI Model: **gpt-5.4-nano** (Enter a preferred model of your choice)
+    - AI Model: **gpt-5.4-nano** (Enter a latest standard model for OpenAI)
 
     Click **Test Connection**.
     ![Gen AI services page](images/open-ai-details.png ' ')
