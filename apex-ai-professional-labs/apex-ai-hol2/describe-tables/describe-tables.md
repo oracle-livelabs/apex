@@ -28,14 +28,11 @@ In this lab, you will:
 
     ![Describe Tables screen showing selected tables or generated metadata.](images/download-tables-metadata.png ' ')
 
-
 ## Task 2: Confirm the module outcome
 
 1. Confirm that the TMS schema, sample data, audit-log table, and verification script are available in the .md file that you downloaded in the previous task.
 
     ![Verify markdown](images/verify-markdown.png ' ')
-
-
 
 ## Acknowledgements
 * **Author** - Apoorva Srinivas, Principal Product Manager; Roopesh Thokala, Principal Product Manager

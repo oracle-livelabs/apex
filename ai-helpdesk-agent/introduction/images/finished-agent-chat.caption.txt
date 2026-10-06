@@ -1,0 +1,1 @@
+Show AI Assistant chat panel open on the Tickets page, mid payoff-conversation (KB fix for VPN 812 + confirmation dialog)

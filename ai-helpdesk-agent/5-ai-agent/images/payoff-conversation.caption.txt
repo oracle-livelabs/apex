@@ -1,0 +1,1 @@
+Chat: KB fix cited, ticket 42 listed, confirmation dialog Mark ticket 42 as Resolved?

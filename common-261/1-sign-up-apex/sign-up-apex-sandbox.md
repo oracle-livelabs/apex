@@ -29,8 +29,8 @@ From within your Oracle Cloud environment, you will create an instance of the Au
 
 3. Enter/ select the following:
     - Workload Type: **Transaction Processing** 
-    - Always Free: Toggle **ON**
-    - Choose database version: **26ai**
+    - Always Free: Toggle **ON** *(see the note below if this is unavailable)*
+    - Choose database version: **26ai** — **change this**, the form defaults to `19c` and every AI feature in this workshop needs 26ai
     - Admin Password: enter a **```SecretPassw0rd```** password for ADMIN 
     Click **Create**.
 
@@ -39,6 +39,12 @@ From within your Oracle Cloud environment, you will create an instance of the Au
     ![Create Autonomous Database page](images/atp-settings-2.png " ")
 
     ![Create Autonomous Database page](images/atp-settings-3.png " ")
+
+    > **Always Free greyed out, or refused with a capacity message?** That is normal in a LiveLabs
+    > sandbox and nothing to fix — sandbox tenancies frequently have no Always Free capacity in the
+    > assigned region (`adb-free-count=0`), and Always Free can only be created in a tenancy's home
+    > region. **Simply leave Always Free OFF and continue** — your sandbox includes trial credits, and
+    > the database is identical for this workshop's purposes.
 
 4. You will be redirected to the Autonomous Database Details page for the new instance.
 

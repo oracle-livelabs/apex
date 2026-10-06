@@ -1,10 +1,13 @@
 # Introduction
 
+Estimated Workshop Time: TODO - x minutes
+
+
 ## About this Workshop
 
 In today's digital landscape, visual content is everywhere, from product photos and social media posts to scanned documents and user generated media. The ability to search and understand images meaningfully, not just by filenames or tags, has become a powerful differentiator for modern applications. Traditional search methods often miss the context or content of images, limiting their effectiveness in image rich environments.
 
-In this workshop, you will learn how to implement image and text semantic search in Oracle APEX using ONNX models and Oracle Database 23ai’s built in AI Vector Search. You will enhance the Social Media APEX application to intelligently interpret and search images using both text and image queries. By combining deep learning models with APEX, you’ll unlock next generation search experiences that go beyond keywords, empowering your apps to truly understand what users are looking for.
+In this workshop, you will learn how to implement image and text semantic search in Oracle APEX 26.1 using ONNX models and Oracle AI Database 26ai’s built-in AI Vector Search. You will enhance the Social Media APEX application to intelligently interpret and search images using both text and image queries. By combining deep learning models with APEX, you’ll unlock next-generation search experiences that go beyond keywords, empowering your apps to truly understand what users are looking for.
 
 Here is a quick overview of the app you will be building:
 ![Demo Application](./images/semantic-search.gif " ")
@@ -31,17 +34,17 @@ In this workshop, you:
 
 - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
-- Database Version : This workshop requires Autonomous Database 23ai, version 23.7 or later.
+- Database Version: This workshop requires Autonomous AI Database 26ai or later.
 
-*Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+*Note: This workshop assumes you are using Oracle APEX 26.1. Some features might not be available in prior releases, and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Downloads
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/image_semantic_search.sql) to download the completed application file.
+1. Click [here](image_semantic_search.sql) to download the completed application file.
 
-2. Import the **Image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
+2. Import the **image\_semantic\_search.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
 3. Once the application is installed,
     - Follow **Lab 2** to load the ONNX Models to your database.
@@ -78,9 +81,20 @@ If you are stuck or the App is not working as expected, you can download and ins
 - [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
 - [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+- [External Site + Slack](http://apex.world/)
+- [AI Vector Search](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/toc.htm)
+
+## References
+
+- [Oracle APEX 26.1 Documentation](https://docs.oracle.com/en/database/oracle/apex/26.1/)
+- [Oracle AI Vector Search User's Guide for Oracle AI Database 26ai](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/toc.htm)
 
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

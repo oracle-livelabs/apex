@@ -1,0 +1,1 @@
+get_kb_articles Retrieve Data tool config

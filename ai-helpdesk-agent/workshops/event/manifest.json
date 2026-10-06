@@ -1,0 +1,65 @@
+{
+  "workshoptitle": "Build an AI-Powered Help Desk with Oracle APEX: From Prompt to Agent",
+  "help": "livelabs-help-apex_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "What you will build and why: prompt to app to trustworthy app",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Provision an Autonomous AI Database",
+      "description": "Create an Autonomous AI Database on 26ai and an APEX workspace in your own tenancy",
+      "filename": "../../0-provision-adb/0-provision-adb.md"
+    },
+    {
+      "title": "Lab 1: Connect APEX to Generative AI",
+      "description": "Configure a Generative AI service, set token quotas, and test the APEX Assistant",
+      "filename": "../../1-connect-genai/1-connect-genai.md",
+      "type": {
+        "OCIGenAI": "OCIGenAI",
+        "OpenAI": "OpenAI"
+      }
+    },
+    {
+      "title": "Lab 2: Design the Data Model with AI",
+      "description": "Generate a data model with AI, review it, and run the vetted script",
+      "filename": "../../2-data-model-ai/2-data-model-ai.md"
+    },
+    {
+      "title": "Lab 3: Generate the App from a Prompt",
+      "description": "Create the Horizon Help Desk app with AI and take the tour",
+      "filename": "../../3-generate-app/3-generate-app.md"
+    },
+    {
+      "title": "Lab 4: Ask Your Data Anything with AI Interactive Reports",
+      "description": "Natural-language filters, charts, and governance",
+      "filename": "../../4-ai-interactive-report/4-ai-interactive-report.md"
+    },
+    {
+      "title": "Lab 5: Build the Help Desk AI Agent",
+      "description": "AI Agent with Retrieve Data tools and an approved write action",
+      "filename": "../../5-ai-agent/5-ai-agent.md"
+    },
+    {
+      "title": "Lab 6 [OPTIONAL]: Draft Replies with AI",
+      "description": "Generate Text with AI on the ticket form",
+      "filename": "../../6-generate-text/6-generate-text.md"
+    },
+    {
+      "title": "Lab 7 [OPTIONAL]: Semantic Knowledge-Base Search with AI Vector Search",
+      "description": "Vector Provider, embeddings, and a semantic search page",
+      "filename": "../../7-vector-search/7-vector-search.md"
+    },
+    {
+      "title": "Take It Home",
+      "description": "Export your app, keep the scripts, and find your next workshop",
+      "filename": "../../8-take-it-home/8-take-it-home.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
