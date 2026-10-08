@@ -22,7 +22,7 @@ Estimated Time: 15 minutes
 2. Click **Upload**.
     ![APEX SQL Workshop upload interface ready for CRM scripts](images/click-upload.png)
 
-3. Select the downloaded scripts from Task 1 (01\_crm\_ddl.sql and 02\_crm\_sample_date.sql) one after the other. Click **Upload**.
+3. Select the downloaded scripts from Task 1 (01\_crm\_ddl.sql and 02\_crm\_sample_data.sql) one after the other. Click **Upload**.
     
     ![APEX SQL Workshop upload interface ready for CRM scripts](images/upload-script.png)
 

@@ -123,7 +123,7 @@ Signing up for oracleapex.com is simply a matter of providing details on the wor
 
     ![APEX Builder homepage](images/apex-builder.png " ")
 
-<!--## Option 2: Autonomous AI Database in Oracle Cloud
+## Option 2: Autonomous AI Database in Oracle Cloud
 
 In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous AI* database. The final step in the process is to provision Oracle APEX.
 
@@ -229,7 +229,8 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
-    ## Option 3: APEX Service
+
+## Option 3: APEX Service
 
 Oracle Application Development (APEX Service) is a low cost Oracle Cloud service offering convenient access to the Oracle APEX platform. Visit [https://apex.oracle.com/en/platform/apex-service/](https://apex.oracle.com/en/platform/apex-service/) to learn more about APEX service on Oracle Cloud.
 
@@ -321,7 +322,7 @@ The password is the same as the one entered for the ADMIN user when creating the
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
--->
+
 
 ## Summary
 

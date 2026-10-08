@@ -57,7 +57,7 @@ Export the CRM application in APEXlang format and place the output inside the `a
 
 
 ## Task 3: Import the App into your APEX workspace from Visual Studio Code
-1. Expand the Applications folder and navigate to **vision-crm > pages**. Select any one of the page to open in the editor.
+1. Expand the Applications folder and navigate to **vision-crm > pages**. Select any one of the pages to open in the editor.
 
     ![VS code application files](images/select-page.png)
 
@@ -219,7 +219,7 @@ Observe that 9 pages are updated and the buttons are now visually prominent.
 - Query 3: 
     ```
     <copy>
-    Convert this lead to opportunity
+    Convert this lead to an opportunity
     </copy>
     ```
 
