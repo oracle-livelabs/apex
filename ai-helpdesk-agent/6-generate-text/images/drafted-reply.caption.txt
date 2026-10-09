@@ -1,0 +1,1 @@
+AI-drafted reply text in the Reply textarea for ticket 27

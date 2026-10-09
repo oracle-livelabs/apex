@@ -3,12 +3,12 @@
 ## Introduction
 In this lab, you learn to create an APEX application by importing data from a spreadsheet. APEX can declaratively build an app from a table that is created using a spreadsheet. Later, you learn to modify the pages and the theme of the application.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 5 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Create an APEX App](videohub:1_z1ozvg3v)
+<!-- Watch the video below for a quick walk-through of the lab.
+[Create an APEX App](videohub:1_a6bi2e62) -->
 
 ### Objectives
 
@@ -57,17 +57,17 @@ The Data Load wizard has created a new table called **HIGHSCHOOLS** and populate
     ![Image showing the success message of Load Data and options to View Table or Create Application](images/create-app-table.png " ")
 
 2. On the Create Application page, click the application icon.
-   ![Image showing the Create Application Page](images/app-thumbnail.png " ")
+    ![Image showing the Create Application Page](images/app-thumbnail.png " ")
 
 3. In the Choose Application Icon wizard, upload your own icon by selecting or dragging and dropping an image. Download a sample icon from [here](images/ai-highschools.png).
-  ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
+    ![Image showing the Choose Application Icon wizard](images/upload-icon.png " ")
 
 4. Once you select an image, the wizard allows you to crop or resize the image. Click **Save Icon**.
     ![Image showing an icon editor in Choose Application Icon wizard](images/crop-and-save.png " ")
 
 5. In the Create Application page, review the pages listed by default.
 
-   Click the **Edit** button for **Highschools Search** and update the following:
+    Click the **Edit** button for **Highschools Search** and update the following:
     - Page Name: **Search and Apply**
     - For Page Type, choose **Cards** toggle button.
 
@@ -115,7 +115,7 @@ In this task, we configure the Cards region to display the information that we n
 
 2. In the Rendering Tree, under Body, select **Search Results** region.
 
-   In the Property Editor, enter/select the following:
+    In the Property Editor, enter/select the following:
     - Under Source:
         - Type: **SQL Query**
         - SQL Query: Replace the SQL query with the following
@@ -142,7 +142,7 @@ In this task, we configure the Cards region to display the information that we n
 
         ![Page Designer](images/update-sql2.png =60%x*)
 
-    - Advanced > Static ID: **S\_SEARCH\_RESULTS**
+    - Advanced > HTML DOM ID: **S\_SEARCH\_RESULTS**
         ![Page Designer](images/search-static.png =40%x*)
 
 3. Switch to the **Attributes** tab and select the following:
@@ -280,10 +280,10 @@ You now know how to create an Oracle APEX application from a spreadsheet. You al
 
 You may now **proceed to the next lab**.   
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Authors** - Apoorva Srinivas, Principal Product Manager, Toufiq Mohammed, Principal Product Manager;
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026
 
 

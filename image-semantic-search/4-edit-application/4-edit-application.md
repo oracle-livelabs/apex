@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you will enhance your APEX Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context aware results.
+In this lab, you will enhance your Oracle APEX 26.1 Social Media app by integrating semantic search capabilities that allow users to search posted images using either text or another image as the search query. Instead of relying on traditional keyword filtering, the app will understand the meaning and visual content of the query to return relevant, context-aware results.
 
 By the end of this lab, your APEX application will support real time, AI powered search, enabling users to find similar or related posted images through natural language or visual input.
 
@@ -159,7 +159,7 @@ In this task, we will create a Search page for Text based search.
 ## Task 3: Create Search Page for Image
 
 1. Click on the **+** Icon on the top right corner and select
-**Page**.
+    **Page**.
 
     ![Create page](images/create-pages1.png " ")
 
@@ -176,44 +176,45 @@ In this task, we will create a Search page for Text based search.
 
     - Under Data Source:
 
+        - Data Source: **Local Database**
         - Source Type: **SQL Query**
         - Enter a SQL SELECT statement: copy and paste the below query:
 
         ```
          <copy>
-         WITH vector_image AS (
-            SELECT apex_ai.get_vector_embeddings (
-                p_value   =>  apex_web_service.blob2clobbase64(blob_content),
-                p_service_static_id => 'clip_image_model') as img_vector
-            FROM apex_application_temp_files
-            WHERE filename = :P3_FILENAME
-            ORDER BY created_on DESC
-            FETCH FIRST 1 ROWS ONLY
-            )
-            SELECT A.*,
-                TO_CHAR(ROUND(vector_distance, 3), '0.999') AS vector_distance_display
-            FROM (
-            SELECT
-                p.id,
-                p.post_comment,
-                p.file_blob,
-                p.file_mime,
-                p.file_name,
-                p.created,
-                p.created_by,
-                p.updated,
-                p.updated_by,
-                CASE
-                    WHEN EXISTS (SELECT 1 FROM vector_image) THEN
-                        COSINE_DISTANCE(
-                            (SELECT img_vector FROM vector_image),
-                            p.ai_image_vector
-                        )
-                    ELSE null
-                END AS vector_distance
-            FROM sm_posts p
-            ) A
-            ORDER BY A.vector_distance, A.created DESC;
+        WITH vector_image AS (
+    SELECT apex_ai.get_vector_embeddings (
+       p_value   =>  apex_web_service.blob2clobbase64(blob_content),
+       p_service_static_id => 'clip_image_model') as img_vector
+    FROM apex_application_temp_files
+    WHERE filename = :P3_FILENAME
+    ORDER BY created_on DESC
+    FETCH FIRST 1 ROWS ONLY
+    )
+    SELECT A.*,
+       TO_CHAR(ROUND(vector_distance, 3), '0.999') AS vector_distance_display
+    FROM (
+    SELECT
+       p.id,
+       p.post_comment,
+       p.file_blob,
+       p.file_mime,
+       p.file_name,
+       p.created,
+       p.created_by,
+       p.updated,
+       p.updated_by,
+       CASE
+           WHEN EXISTS (SELECT 1 FROM vector_image) THEN
+               COSINE_DISTANCE(
+                   (SELECT img_vector FROM vector_image),
+                   p.ai_image_vector
+               )
+           ELSE null
+       END AS vector_distance
+    FROM sm_posts p
+    ) A
+    ORDER BY A.vector_distance, A.created DESC;
          </copy>
         ```
 
@@ -297,7 +298,7 @@ In this task, we will create a Search page for Text based search.
     ![Create Computation](images/create-computation2.png " ")
 
 14. In the Rendering tree, right click on **Body** and select
-**Create Page Item**.
+    **Create Page Item**.
 
     ![Create Page item](images/create-items5.png " ")
 
@@ -317,8 +318,9 @@ In this task, we will create a Search page for Text based search.
         - SQL Statement: Copy and paste the below query
             ```
              <copy>
-             SELECT BLOB_CONTENT FROM APEX_APPLICATION_TEMP_FILES
-             WHERE NAME =:P3_IMAGE;
+             SELECT BLOB_CONTENT
+             FROM   APEX_APPLICATION_TEMP_FILES
+             WHERE  NAME = :P3_IMAGE
              </copy>
             ```
     - Layout > Column Span: **3**
@@ -340,7 +342,9 @@ In this task, we will create a Search page for Text based search.
 
 16. In the Rendering tree, under Body, select **Image to Image** region, and enter/select the following in the property editor:
 
-    - Identification >  Name: **Search Results**
+    - Under Identification:
+        - Name: **Search Results**
+        - Title: **Search Results**
 
     - Source > Page Items to Submit: **P3_FILENAME**
 
@@ -454,11 +458,61 @@ In this task, we will create a Search page for Text based search.
 
     ![Save application](images/save-run3.png " ")
 
+8. To populate vectors for posts imported before the process was created, run the following once in **SQL Workshop** > **SQL Commands**. It only fills rows where an image exists and the vector is still null:
+
+    ```sql
+    <copy>
+    BEGIN
+      UPDATE sm_posts
+      SET    ai_image_vector = apex_ai.get_vector_embeddings(
+               p_value             => apex_web_service.blob2clobbase64(file_blob),
+               p_service_static_id => 'clip_image_model'
+             )
+      WHERE  file_blob IS NOT NULL
+      AND    ai_image_vector IS NULL;
+
+      COMMIT;
+    END;
+    /
+    </copy>
+    ```
+
+    ![SQL Commands result](images/populate-vectors.png " ")
+
+    Confirm that stored images have vectors:
+
+    ```sql
+    <copy>
+    SELECT
+      ( SELECT COUNT(*)
+        FROM sm_posts
+        WHERE file_blob IS NOT NULL ) AS total_posts,
+      ( SELECT COUNT(*)
+        FROM sm_posts
+        WHERE file_blob IS NOT NULL
+          AND ai_image_vector IS NOT NULL ) AS posts_with_vectors
+    FROM dual;
+    </copy>
+    ```
+
+    ![Vector counts](images/verify-vectors.png " ")
+
 ## Summary
 
 You have successfully enhanced the Social Media app by integrating semantic search features that enable users to search posted images using text or image queries. You implemented search pages for both text-based and image-to-image searches and updated the Timeline region to automatically generate and store image embeddings whenever new images are posted. These enhancements empower your APEX application to deliver fast, accurate, and intelligent search results powered by AI.
 
+## References
+
+- [Adding Search to an Application in Oracle APEX 26.1](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/adding-search-to-an-application.html)
+- [Editing Pages in Page Designer](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/editing-pages-page-designer.html)
+- [Temporary Files in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/apxdc/temporary-files.html)
+
 ## Acknowledgments
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, June 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+
+## Acknowledgements
+
+* **Author** - TODO: Your Name, Your Title, Your Organization
+* **Last Updated By/Date** - TODO: Your Name, Month Year

@@ -90,35 +90,39 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
 
         - Partial: Copy and paste the following:
 
-        ```
-        <copy>
-        <div class="c-Hero #APEX$COMPONENT_CSS_CLASSES#" id="#APEX$DOM_ID#">
-        <div class="c-Hero-body">
-        {if OVERLINE/}<div class="c-Hero-overline">#OVERLINE#</div>{endif/}
-        <h1 class="c-Hero-title">#APEX$TITLE#</h1>
-        {if DESCRIPTION/}<div class="c-Hero-description">#DESCRIPTION#</div>{endif/}
-        {if SEARCH/}
-        <div class="c-HeroSearch" role="search">
-        <div class="c-HeroSearch-input">#SEARCH#</div>
-        {if CATEGORY/}<div class="c-HeroSearch-category">#CATEGORY#</div>{endif/}
-        <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
-        {if ACTION/}<div class="c-HeroSearch-action">#ACTION#</div>{endif/}
-        </div>
-        {endif/}
-        </div>
-        </div>
-       ```
-       </copy>
+            ```
+            <copy>
+            <div class="c-Hero #APEX$COMPONENT_CSS_CLASSES#" id="#APEX$DOM_ID#">
+            <div class="c-Hero-body">
+            {if OVERLINE/}<div class="c-Hero-overline">#OVERLINE#</div>{endif/}
+            <h1 class="c-Hero-title">#APEX$TITLE#</h1>
+            {if DESCRIPTION/}<div class="c-Hero-description">#DESCRIPTION#</div>{endif/}
+            {if SEARCH/}
+            <div class="c-HeroSearch" role="search">
+            <div class="c-HeroSearch-input">#SEARCH#</div>
+            {if CATEGORY/}<div class="c-HeroSearch-category">#CATEGORY#</div>{endif/}
+            <div class="c-HeroSearch-checkbox">#SELECT_ALL#</div>
+            {if ACTION/}<div class="c-HeroSearch-action">#ACTION#</div>{endif/}
+            </div>
+            {endif/}
+            </div>
+            </div>
+            ```
+            </copy>
 
-6. Click **Create Plug-in**.
+6. Click **Create Plug-in** and **Apply Changes**.
 
     ![Select Theme to Redwood Light](images/create-plug-in.png " ")
+
+    ![Select Theme to Redwood Light](images/apply-plug-in.png " ")
 
 ## Task 3: Enhance Template Component
 
 In this task, you will customize the "Hero" plug-in by adding attributes. These attributes, like overline and description, will allow more dynamic control over how content appears in the component.
 
 1. Navigate to **Hero** plug-in, under **Custom Attributes** , delete all the attributes one after the other.
+
+    ![Select Theme to Redwood Light](images/nav-to-hero.png " ")
 
     ![Select Theme to Redwood Light](images/delete-attributes.png " ")
 
@@ -162,18 +166,20 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
 
 2. Add the following four slots one after the other:
 
-    | Name | Static Identifier | Items | Supported Items | Buttons |
-    |------|------------------ | ----- | --------------- | --------|
-    | Action | ACTION |    |      |  Check |
-    | Category | CATEGORY | Check |  Select List |    |
-    | Search | SEARCH | Check | Text Field |     |
-    | Select All | SELECT_ALL | Check | Checkbox |    |
+    | Name | Static Identifier | Regions | Items | Supported Items | Buttons |
+    |------|------------------ |------| ----- | --------------- | --------|
+    | Action | ACTION | Uncheck|   |      |  Check |
+    | Category | CATEGORY | Uncheck| Check |  Select List |    |
+    | Search | SEARCH | Uncheck| Check | Text Field |     |
+    | Select All | SELECT_ALL |Uncheck|  Check | Checkbox |    |
 
 3. Click **Apply Changes**.
 
     ![Select Theme to Redwood Light](images/add-slots.png " ")
 
 4. Navigate to **Hero** plug-in. Under **Default Slots**, for **Buttons**, select **Action**.
+
+    ![Select Theme to Redwood Light](images/add-actions.png " ")
 
 5. Under **File URLs to Load**, for **Cascading Style Sheet** enter **#PLUGIN_FILES#hero#MIN#.css**.
 
@@ -259,31 +265,31 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
         - SQL Query: Copy and replace with the following code:
 
-        ```
-        <copy>
-        SELECT
-            ID,
-            PROJECT,
-            TASK_NAME,
-            START_DATE,
-            END_DATE,
-            STATUS,
-            ASSIGNED_TO,
-            COST,
-            BUDGET
-            FROM
-        DEMO_PROJECTS
-        WHERE
-        ( UPPER(TASK_NAME) LIKE '%'
-                            || UPPER(:P3_SEARCH)
-                            || '%'
-        OR UPPER(PROJECT) LIKE '%'
-                             || UPPER(:P3_SEARCH)
-                             || '%'
-        OR ( TASK_NAME IS NULL
-           AND PROJECT IS NULL ) );
-        </copy>
-        ```
+            ```
+            <copy>
+            SELECT
+                ID,
+                PROJECT,
+                TASK_NAME,
+                START_DATE,
+                END_DATE,
+                STATUS,
+                ASSIGNED_TO,
+                COST,
+                BUDGET
+                FROM
+            DEMO_PROJECTS
+            WHERE
+            ( UPPER(TASK_NAME) LIKE '%'
+                                || UPPER(:P3_SEARCH)
+                                || '%'
+            OR UPPER(PROJECT) LIKE '%'
+                                || UPPER(:P3_SEARCH)
+                                || '%'
+            OR ( TASK_NAME IS NULL
+            AND PROJECT IS NULL ) );
+            </copy>
+            ```
 
     ![Select Theme to Redwood Light](images/update-sql.png " ")
 
@@ -305,7 +311,7 @@ Finally, you'll test the "Hero" plug-in and its functionality by running the app
 
 1. Log in to the application and navigate to **Task Status**.
 
-2. On **Search** textfield type **system**, for **Update Status to**, select **Open**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, press **Enter** and click **Update** to update the status of checked rows.
+2. On **Search** textfield type **system**, for **Update Status to**, select **Closed**. Check the rows you want to update status as **Open**, or you can also check the **Check All** checkbox to update all the rows. Lastly, press **Enter** and click **Update** to update the status of checked rows.
 
     ![Select Theme to Redwood Light](images/select-search.png " ")
 
@@ -319,5 +325,5 @@ In this lab, you applied a new theme style and created a custom "Hero" plug-in a
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

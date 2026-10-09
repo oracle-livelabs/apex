@@ -4,44 +4,55 @@
 
 In this lab, you run the APEX Social Media application and perform AI Search on the uploaded images.
 
-Estimated Time: 5 Minutes
+Estimated Time: 5 minutes
 
 ### Objectives
 
-In this lab, you:
+In this lab, you learn how to:
 
-- Run the Application
+- Run the application.
+- Upload images to the Timeline page.
+- Search images using AI Search.
 
 ## Task 1: Run the Application
 
-1. Login to the application. The username and password are the same as your APEX workspace user credentials.
+1. Log in to the application using your APEX workspace credentials.
 
-    ![Click Timeline](images/social-media-login.png =60%x*)
+    ![Log in to the Social Media app](images/social-media-login.png " ")
 
-2. Click **Add Post** on the Navigation Bar.
+2. Click **Add Post** on the navigation bar.
 
-3. Drag and Drop the image from your local system or use the **Choose File** button to upload an image from your local system. Then, click **Post**.
+3. Drag and drop the image from your local system, or use the **Choose File** button to upload an image from your local system.
 
-    ![Click Timeline](images/add-post.png " ")
+    Click **Post**.
 
-    The image has been posted on your timeline. Similarly, add as many posts as you would like.
+    ![Upload an image and click Post](images/add-post.png " ")
 
-4. Now, type your Search Term in the AI Search Field available in the Navigation Bar and then click **Enter**. The app searches for and displays all the images that contain the corresponding search term.
+    The image is posted to your timeline. Add additional posts as needed.
 
-    In the following example, when you enter 'Sky' in the AI Search Field, the app displays all the images with the sky for image classification.
+4. Enter a search term in the AI Search field available in the navigation bar.
 
-    ![Click Timeline](images/img-class.png " ")
+    Press **Enter**.
 
-    In the following example, for text detection, when you enter 'Bengaluru' in the AI Search Field, the app displays all the images with the text 'Bengaluru'.
+    The application searches for and displays all images that contain the corresponding search term.
 
-    ![Click Timeline](images/text-detect.png " ")
+    *Note: Image analysis runs in the background. If a newly uploaded image does not appear in the search results immediately, wait a few seconds and search again.*
+
+    In the following example, when you enter **Sky** in the AI Search field, the application displays all images with the sky for image classification.
+
+    ![Search Sky shows image classification results](images/img-class.png " ")
+
+    In the following example, for text detection, when you enter **Bengaluru** in the AI Search field, the application displays all images with the text **Bengaluru**.
+
+    ![Search Bengaluru shows text detection results](images/text-detect.png " ")
 
 ## Summary
 
-You now know how to post an image and search for images and images with text using AI search.
+You now know how to post an image and search for images and text within images using AI search.
 
-## Acknowledgments
+You may now **proceed to the next lab**.
 
-- **Author** - Roopesh Thokala, Senior Product Manager
-- **Co-Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Sahaana Manavalan,Senior Product Manager, January 2025
+## Acknowledgements
+
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026

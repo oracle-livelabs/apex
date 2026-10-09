@@ -109,7 +109,7 @@ Follow the below steps to create Generate AI Agents in OCI Console:
 
     - Description: **RAG tool to chat with documents from OCl Object Storage**
 
-    ![Add tool](./images/select-rag-tool1.png " ")
+    ![Add tool](./images/rag-tool-select.png " ")
 
 8. Scroll down and choose your **Knowledge base**, which you created in [Lab2 > Task1](?lab=2-configure-kb-genai#Task1:CreateaKnowledgeBaseinOCI).
 

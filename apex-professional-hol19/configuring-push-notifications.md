@@ -82,7 +82,11 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
 4. For Page Attributes, enter/select the following:
 
-    - Page Definition > Name: **Push Notifications Views**
+    - Under Page Definition:
+
+        - Page Number: **6**
+
+        - Name: **Push Notifications Views**
 
     - Navigation > Breadcrumb: Toggle **OFF**
 
@@ -114,7 +118,7 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
         - Type: **Interactive Report**
 
-    - Source > Table Name: **APEX\_APPL\_PUSH\_SUBSCRIPTIONS**.
+    - Source > Table Name: **APEX\_APPL\_PUSH\_SUBSCRIPTIONS**
 
     ![configure subscriptions](images/configure-subscriptions1.png " ")
 
@@ -134,7 +138,7 @@ No matter the approach you opt for in sending push notifications, it is crucial 
 
     ![configure subscriptions](images/configure-push-queue1.png " ")
 
-11. Click **Save** and **Run** to view the changes.
+11. Click **Save and Run** to view the changes.
 
     ![configure subscriptions](images/run-save1.png " ")
 
@@ -226,5 +230,5 @@ In the upcoming hands-on lab, you will learn to Create Working Copy, Installatio
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

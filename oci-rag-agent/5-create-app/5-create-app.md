@@ -1335,7 +1335,7 @@ In this task we will create Application Items,Application Processes and Content 
 
 2. In the **Rendering Pane**, right-click  **Breadcrumb Bar** and select **Create Button**.
 
-    ![Navigate Button](./images/navigate-button.png " ")
+    ![Navigate Button](./images/button-navbar.png " ")
 
 3. In the Property Editor, enter/select the following:
 

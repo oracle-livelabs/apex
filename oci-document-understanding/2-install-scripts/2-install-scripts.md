@@ -4,9 +4,9 @@
 
 In this lab, you will run SQL commands using SQL Scripts. A SQL script can contain one or more SQL statements or PL/SQL blocks. You can use SQL scripts to create, edit, view, run, and delete database objects.
 
-Furthermore, you'll discover how to create multiple accounts in a single operation.
+You will also explore how to efficiently create multiple workspace user accounts in a single operation using the APEX Administration interface.
 
-Moreover, you'll configure Web credentials to authenticate connections to external REST services or REST-Enabled SQL services from APEX.
+Finally, you will learn how to configure Web Credentials, which enable secure authentication when connecting to external REST services or REST-Enabled SQL services from APEX.
 
 Estimated Time: 10 Minutes
 
@@ -15,14 +15,14 @@ Estimated Time: 10 Minutes
 In this lab, you:
 
 - Create database objects using SQL Scripts.
-
-- Create multiple Application Users.
-
-- Create Web Credentials.
+- Create multiple users within the workspace.
+- Create Web Credentials in Oracle APEX.
 
 ## Task 1: Create database objects using SQL Scripts
 
-1. Log in into your APEX Workspace. Click **'⌄'** next to **SQL Workshop** and select **SQL Scripts**.
+In this task, you'll create the required database objects by running **SQL Scripts** in your APEX workspace.
+
+1. Log in into your APEX Workspace. Click on **SQL Workshop** and select **SQL Scripts**.
 
     ![Select Quick SQL](images/sql_script.png " ")
 
@@ -202,13 +202,14 @@ In this lab, you:
     END IF;
 
     END UPLOAD_FILE;
+    /
 
      </copy>
     ```
 
 4. For **Script Name**: Enter **Application Scripts** and click **Run**.
 
-   ![Script Name](./images/script-name.png " ")
+    ![Script Name](./images/script-name.png " ")
 
 5. On the Run Script page, click **Run Now**.
 
@@ -220,21 +221,21 @@ In this lab, you:
 
 ## Task 2: Create Multiple Application Users
 
-Workspace administrators can create new user accounts one at a time or create multiple accounts in a single operation.
+In this task, you'll create multiple workspace user accounts for this application using the APEX Administration interface. Workspace administrators can create new user accounts individually or create multiple accounts in a single operation.
 
 To create multiple users accounts simultaneously:
 
 1. At the top of the Workspace home page, navigate to **Administration** and select **Manage Users and Groups**.
 
-   ![Administration](images/manage-users.png " ")
+    ![Administration](images/manage-users.png " ")
 
 2. Click **Create Multiple Users**.
 
-   ![Create Multiple Users](images/create-multiple-users.png " ")
+    ![Create Multiple Users](images/create-multiple-users.png " ")
 
 3. On **Create Multiple Users** dialog, enter/select the following:
 
-    - List of Email Addresses: **MATT@xyz.com, JANE@xyz.com, CLARA@xyz.com, JOHN@xyz.com**
+    - List of Email Addresses: **MATT@example.com, JANE@example.com, CLARA@example.com, JOHN@example.com**
 
     - Usernames: **Exclude @ domain as part of the username**
 
@@ -262,19 +263,19 @@ To create a Web Credential in Oracle APEX:
 
 1. On the Workspace home page, navigate to **App Builder**.
 
-   ![Click App Builder](images/app-build5.png " ")
+    ![Click App Builder](images/app-build5.png " ")
 
 2. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
 3. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/web-credentials.png " ")
+    ![Click Web Credentials](images/web-credentials.png " ")
 
 4. Click **Create**.
 
-   ![Create Web Credentials](images/create-web-creds.png " ")
+    ![Create Web Credentials](images/create-web-creds1.png " ")
 
 5. Enter/select the following details using the configuration file you copied in the previous task.
 
@@ -289,13 +290,11 @@ To create a Web Credential in Oracle APEX:
 
     - OCI Private Key: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
-    ![Private key file](images/private-key.png " ")
-
     - OCI Tenancy ID: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
     - OCI Public Key Fingerprint: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds1.png " ")
+    ![Create Web Credentials](images/create-web-creds.png " ")
 
 6. Click **Create**.
 
@@ -309,5 +308,6 @@ You're now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Contributing Author** - Pankaj Goyal, Member Technical Staff
+- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

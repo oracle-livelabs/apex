@@ -571,7 +571,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
                 FROM apex_task_parameters
                 WHERE task_id = NVL(:P<NUMBER>_TASK_ID, 0)  -- Replace <NUMBER> with your Task Detail page number
                 AND is_visible = 'Y'
-                AND param_label = 'Employee ID'
+                AND param_static_id = 'EMPLOYEE_ID'
                 AND REGEXP_LIKE(param_value, '^\d+$')
              )
              </copy>
@@ -806,7 +806,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Selection Type: **JavaScript Expression**
         - JavaScript Expression: **document**
 
-        ![Create DA](./images/da-train2.png " ")
+    ![Create DA](./images/da-train2.png " ")
 
 27. Under **True** action, select **Show** and enter/select the following in the Property Editor:
 
@@ -822,11 +822,11 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Selection Type: **Item(s)**
         - Item(s): **P36\_TRAINING\_ID**
 
-       ![Create TRUE action](./images/set-value.png " ")
+    ![Create TRUE action](./images/set-value.png " ")
 
 28. In the Rendering Tree, right click on **True** and click **Create TRUE Action**.
 
-       ![Create TRUE action](./images/create-true-action.png " ")
+    ![Create TRUE action](./images/create-true-action.png " ")
 
 29. In the Property Editor, enter/select the following:
 
@@ -844,7 +844,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
 
         - Items to Submit: **P36\_TRAINING\_ID**
 
-       ![Create TRUE action](./images/set-value2.png " ")
+    ![Create TRUE action](./images/set-value2.png " ")
 
     *Note: Your Task Definition page numbers may be different. Ensure that you update the provided SQL query to reference the correct page item numbers in your application.*
 
@@ -857,7 +857,7 @@ Our Application has two Task Definitions -  IT Setup and Allocate Trainings. For
         - Selection Type: **Region**
         - Region: **Training Details**
 
-       ![Create TRUE action](./images/set-value3.png " ")
+    ![Create TRUE action](./images/set-value3.png " ")
 
 31. Click **Save**.
 
@@ -930,4 +930,4 @@ You have successfully created a comprehensive Oracle APEX application for Onboar
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, November 2025

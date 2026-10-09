@@ -1,0 +1,1 @@
+Service config filled: OCI GenAI, us-chicago-1, Used by App Builder ON, Test Connection success

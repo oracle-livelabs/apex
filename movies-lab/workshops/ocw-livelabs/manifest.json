@@ -48,7 +48,7 @@
       },
       {
         "title": "Optional Lab: Terminate Autonomous Database",
-        "filename": "https://oracle-livelabs.github.io/common/labs/terminate-adb/terminate-adb.md"
+        "filename": "https://livelabs.oracle.com/cdn/common/labs/terminate-adb/terminate-adb.md"
      },
      {
        "title": "Optional Lab: Terminate APEX Service",
@@ -57,7 +57,7 @@
      {
        "title": "Need Help?",
        "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-       "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+       "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
      }
     ]
 }

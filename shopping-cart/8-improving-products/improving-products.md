@@ -6,7 +6,7 @@ In this lab, you will learn how to improve the Products page by adding new facet
 
 Once you have finished the workshop and updated all the products as described in the steps, your page will look like the following image:
 
-![Products page in the completed application](./images/products-page.png " ")
+![Products page in the completed application](./images/products-image-view.png " ")
 
 *Please note that customer can quickly identify the products that already have been added to the shopping cart.*
 

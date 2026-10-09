@@ -86,11 +86,15 @@ In this lab, you create a Smart Filters page on the **DEMO_PROJECTS** table.
 
     ![Create Smart Filters](./images/create-sf-page13.png " ")
 
-4. Accept the default filters and click **Create Page**.
+4. Click **Refresh**.
+
+    ![Select the Filters](./images/refresh.png " ")
+
+5. Accept the default filters and click **Create Page**.
 
     ![Select the Filters](./images/create-sf-page14.png " ")
 
-5. Click **Save and Run** to view the Smart Filters page.
+6. Click **Save and Run** to view the Smart Filters page.
 
     ![Save and Run Page](./images/create-srun.png " ")
 
@@ -154,11 +158,11 @@ In this task, you create a **Content Row** report with selection support on the 
 
         - SQL Query:
 
-        ```
-        <copy>
-        Select distinct status d, status r from demo_projects
-        </copy>
-        ```
+            ```
+            <copy>
+            Select distinct status d, status r from demo_projects
+            </copy>
+            ```
 
         - Display Extra Values: Toggle **Off**
 
@@ -290,23 +294,23 @@ In this task, you create a **Content Row** report with selection support on the 
 
     - Settings > PL/SQL Code: Copy and paste the below code in the code editor:
 
-    ```
-    <copy>
-    BEGIN
-    UPDATE DEMO_PROJECTS
-    SET
-        STATUS = :P3_STATUS
-    WHERE
-        ID IN (
-            SELECT
-                COLUMN_VALUE
-            FROM
-                TABLE ( APEX_STRING.SPLIT(:P3_SELECTION_ID, ':') )
-        );
+        ```
+        <copy>
+        BEGIN
+        UPDATE DEMO_PROJECTS
+        SET
+            STATUS = :P3_STATUS
+        WHERE
+            ID IN (
+                SELECT
+                    COLUMN_VALUE
+                FROM
+                    TABLE ( APEX_STRING.SPLIT(:P3_SELECTION_ID, ':') )
+            );
 
-    END;
-    </copy>
-    ```
+        END;
+        </copy>
+        ```
 
     - Items to Submit: **P3\_STATUS,P3\_SELECTION\_ID**
 
@@ -344,5 +348,5 @@ You now know how to create Interactive Grid, Smart Filters and Content Row pages
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

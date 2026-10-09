@@ -4,7 +4,7 @@
 
 In this lab, you learn to create a Map region and display the schools as Points on the map. You also learn to customize and filter results on the map based on faceted search results.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 10 minutes
 
@@ -22,7 +22,7 @@ In this lab, you will:
 
 ## Task 1: Create a Map Region
 
-1. Navigate to Page 1 (Search and Apply) in the Page Designer. In the rendering tree, right-click **Body** and select **Create Region**.
+1. Navigate to Page 1 (Search and Apply) in the Page Designer. In the Left Pane (Rendering Tree), right-click **Body** and select **Create Region**.
 
     ![Page designer](images/new-region.png " ")
 
@@ -41,7 +41,7 @@ In this lab, you will:
 
     ![Page designer](images/map-region-2.png =40%x*)
 
-3. In the rendering tree, select the **New** layer created under Map.
+3. In the Left Pane (Rendering Tree), select the **New** layer created under Map.
     ![Page designer](images/new-layer.png =40%x*)
 
 4. In the Property Editor, enter/select the following:
@@ -63,7 +63,7 @@ In this lab, you will:
 
     ![Page designer](images/school-layer-2.png =40%x*)
 
-5. In the rendering tree, under Map, right-click **Layers** and select **Create Layer**.
+5. In the Left Pane (Rendering Tree), under Map, right-click **Layers** and select **Create Layer**.
     ![Page designer](images/new-layer-2.png =40%x*)
 
 6. In the property editor, enter/select the following:
@@ -77,7 +77,7 @@ In this lab, you will:
             </copy>
             ```
     ![Page designer](images/curr-position.png =40%x*)
-    In this workshop, we use the following coordinates as the current Geo Loacation:
+    In this workshop, we use the following coordinates as the current Geo Location:
         - Latitude: 40.748817
         - Longitude: -73.985428
 
@@ -113,7 +113,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
     ![SQL Commands editor](images/sql-type.png ' ')
 
-3. Now, copy an paste the below PL/SQL code in the editor and click **Run**.
+3. Now, copy and paste the below PL/SQL code in the editor and click **Run**.
 
     ```
     <copy>
@@ -164,7 +164,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     ![SQL Commands editor](images/plsql.png ' ')
 
 4. Navigate to **App Builder** > **Highschools** > **Search and Apply**.
-   In the rendering tree, select the **Map** region. In the property editor, enter the following:
+    In the Left Pane (Rendering Tree), select the **Map** region. In the property editor, enter the following:
     - Source > Where Clause:
         ```
         <copy>
@@ -177,7 +177,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
     ![Page Designer](images/where-clause.png ' ')
 
-5. In the rendering tree, navigate to the Dynamic Actions tab. Right-click on **Events**, and select **Create Dynamic Action**.
+5. In the Left Pane (Rendering Tree), navigate to the Dynamic Actions tab. Right-click on **Events**, and select **Create Dynamic Action**.
 
     ![Page Designer](images/create-da.png =50%x*)
 
@@ -195,29 +195,22 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
     - Selection Type: **Region**
     - Region: **Map**
 
+    ![Dynamic Actions Tab in Page Designer](images/select-show.png =50%x*)
+
     ![Dynamic Actions Tab in Page Designer](images/refresh-da.png ' ')
 
 8. Click **Save**.
 
 ## Task 3: Display Cards and Maps as Radio Group
 
-1. In the Rendering Tree, right-click Button Bar and select **Create Page Item**.
-    ![Page Designer](images/create-page-item.png ' ')
+1. In the Left Pane (Rendering Tree), right-click Button Bar and select **Create Page Item**.
+    ![Page Designer](images/create-page-item.png =40%x*)
 
 2. Enter/select the following in the property editor:
     - Under Identification:
         - Name: **P1\_DISPLAY\_AS**
         - Type: **Radio Group**
     - Settings > Number of Columns: **2**
-    - Layout > Slot: **Next**
-    - Under Appearance:
-        - Template: **Hidden**
-        - Template Options >  Item Group Display: **Display as Pill Button**
-
-        ![Page Designer](images/radio-display.png =40%x*)
-
-        ![Page Designer](images/template-pill.png =40%x*)
-
     - Under List of Values:
         - Type: **Static Values**
         - Static Values: click **Display1, Display 2** to edit the Static Values.
@@ -229,17 +222,26 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
 
         - Display Extra Values: Toggle the button to turn it **OFF**.
         - Display Null Values: Toggle the button to turn it **OFF**.
+            
+            ![Page Designer](images/radio-display.png =40%x*)
+
             ![Page Designer](images/lov.png " ")
+    - Layout > Slot: **Next**
+    - Under Appearance:
+        - Template: **Hidden**
+        - Template Options >  Item Group Display: **Display as Pill Button**
+
+        ![Page Designer](images/slot.png =40%x*)
+
+        ![Page Designer](images/template-pill.png =40%x*)
+
+    
 
     - Under Default:
         - Type: **Static**
         - Static Value: **CARDS**
 
          ![Page Designer](images/default-static.png =40%x*)
-
-3. Drag and drop the **P1\_DISPLAY\_AS** page item below **P1\_ORDER\_BY**.
-
-    ![Drag and drop](images/drag-and-drop.png " ")
 
 4. Right-click **P1\_DISPLAY\_AS** and select **Create Dynamic Action**.
     ![Page Designer](images/display-da.png =50%x*)
@@ -261,6 +263,7 @@ In this task, we use a Dynamic Action and custom PL/SQL code to fetch the Facete
         ![Page Designer](images/da-true1.png " ")
 
 7. Create another TRUE action. Right-click **True** and select **Create TRUE Action**.
+    
     ![Page Designer](images/da-true2.png =50%x*)
 
 8. Enter/select the following:
@@ -369,7 +372,7 @@ In this task, you add a new Distance facet to filter schools based on Spatial di
 
 5. Next, we need to update the *Page Items to Submit* property of the Map Region to include the P1_DISTANCE facet.
     Select **Map** in the rendering tree, and in the property editor, enter/update the following:
-    - Source > Page Items to Submit: **P1\_SEARCH, P1\_METHOD, P1\_BOROUGH, P1\_INTEREST, P1\_ATTENDANCE_RATE ,P1\_SAFE, P1\_DISTANCE**
+    - Source > Page Items to Submit: **P1\_SEARCH, P1\_METHOD, P1\_BOROUGH, P1\_INTEREST, P1\_ATTENDANCE_RATE, P1\_SAFE, P1\_DISTANCE**
 
         ![Page Designer](images/items-submit.png ' ')
 
@@ -405,8 +408,8 @@ You now know how to map a Faceted Search to a Map region. You also learned to fi
 
 You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager 
  - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, March 2026

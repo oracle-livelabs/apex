@@ -41,7 +41,7 @@ In this task, you will upload document to OCI Object storage.
 
 4. The document will be uploaded to OCI Object Storage bucket. Ingestion job will run in the background and details like ingestion id will be stored in database table.
 
-    ![Ingestion Job](./images/ingestion-job.png " ")
+    ![Ingestion Job](./images/ingestion-jobs.png " ")
 
 5. Once the document uploaded successfully, click **Chat With AI Agent**
 

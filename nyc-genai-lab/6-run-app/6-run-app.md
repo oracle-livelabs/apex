@@ -4,7 +4,7 @@
 
 In the previous labs, you went through detailed steps to configure and use Generative AI in a Highschool Application that will enable parents to choose the best highschool for their child. Now, it is finally time to see the completed app in action.
 
-**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 24.2
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 5 minutes
 
@@ -78,15 +78,15 @@ In this lab, you will:
 
     Be thrilled to learn more about NYC Highschools by asking questions and receiving a response from Generative AI!
 
+
 ## Summary
 
 You now know how to run the app and explore the Gen AI features of the app.
 
-## Acknowledgments
+## Acknowledgements
 
- - **Authors** - Toufiq Mohammed, Senior Product Manager; Apoorva Srinivas, Senior Product Manager
- - **Contributing Author** - Pankaj Goyal, Member Technical Staff
- - **Last Updated By/Date** - Apoorva Srinivas, Senior Product Manager, February 2025
+ - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
+ - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026
 
 
 

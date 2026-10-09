@@ -1,0 +1,1 @@
+Horizon Help Desk dashboard page: status/category charts over the 50 seeded tickets, app nav visible

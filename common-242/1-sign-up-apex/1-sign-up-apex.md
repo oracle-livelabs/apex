@@ -114,9 +114,9 @@ Signing up for apex.oracle.com is simply a matter of providing details on the wo
 
     ![APEX Builder homepage](images/apex-builder.png " ")
 
-## Option 2: Autonomous Database in Oracle Cloud
+## Option 2: Autonomous AI Database in Oracle Cloud
 
-In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous Transaction Processing* database. The final step in the process is to provision Oracle APEX.
+In this part, you will create an Oracle Cloud trial account. Once you have signed up for the service, you will create an *Autonomous AI* database. The final step in the process is to provision Oracle APEX.
 
 1. Please [click this link to create your free account](https://signup.cloud.oracle.com). When you complete the registration process, you'll receive an account with a $300 credit and several "forever free" services that will enable you to complete the workshop for free. You can then use any remaining credit to continue to explore the Oracle Cloud. The forever free services will continue to work after the trial expires.
 
@@ -138,17 +138,22 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
    ![log in page for Oracle Cloud account](images/enter-user-name-and-password.png " ")
 
-5. From within your Oracle Cloud environment, you will create an instance of the Autonomous Transaction Processing database service.
+5. From within your Oracle Cloud environment, you will create an instance of the Autonomous AI Database service.
 
-    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner and then select **Autonomous Database**.
+    From the Cloud Dashboard, select the navigation menu icon in the upper left-hand corner, navigate to **Oracle AI Database** and then select **Autonomous AI Database**.
 
    ![Cloud Dashboard](images/database-atp.png " ")
 
-6. Click **Create Autonomous Database**.
+6. Click **Create Autonomous AI Database**.
 
    ![Cloud Dashboard](images/click-create-autonomous-database.png " ")
 
-7. Select the **Always Free** option, enter **```SecretPassw0rd```** for the ADMIN password, then click **Create**.
+7. Enter/ select the following:
+    - Workload Type: **Transaction Processing** 
+    - Always Free: Toggle **ON**
+    - Choose database version: **26ai**
+    - Admin Password: enter a **```SecretPassw0rd```** password for ADMIN 
+    Click **Create**.
 
     ![Create Autonomous Database page](images/atp-settings-1.png " ")
 
@@ -175,21 +180,21 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     *Note: Always Free Autonomous Database will be stopped after being inactive for 7 days. If that happens, you need to click **More Actions** and then **Start** to start your Autonomous Database, and then **Open APEX**.*
 
-11. Enter the password for the Administration Services and click **Sign In to Administration**.
+10. Enter the password for the Administration Services and click **Sign In to Administration**.
 
     The password is the same as the one entered for the ADMIN user when creating the ATP instance: **```SecretPassw0rd```**
 
     ![Administration Services login page](images/log-in-as-admin.png " ")
 
-12. Click **Create Workspace**.
+11. Click **Create Workspace**.
 
     ![Create Workspace page](images/welcome-create-workspace.png " ")
 
-13. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
+12. Depending on how you would like to create your workspace, select **New Schema** or **Existing Schema**. If you are getting started, select **New Schema**.
 
     ![Choose type of schema](images/choose-schema.png " ")
 
-14. In the Create Workspace dialog, enter the following:
+13. In the Create Workspace dialog, enter the following:
 
       | Property | Value |
       | --- | --- |
@@ -201,13 +206,13 @@ In this part, you will create an Oracle Cloud trial account. Once you have signe
 
     ![Create Workspace dialog](images/create-workspace.png " ")
 
-15. In the APEX Instance Administration page, click the **DEMO** link in the success message.
+14. In the APEX Instance Administration page, click the **DEMO** link in the success message.
 
     *Note: This will log you out of APEX Administration so that you can log into your new workspace.*
 
     ![APEX Instance Administration page](images/log-out-from-admin.png " ")
 
-16. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
+15. On the APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember Workspace and Username** checkbox, and then click **Sign In**.
 
     ![APEX Workspace log in page](images/log-in-to-workspace.png " ")
 
@@ -307,5 +312,5 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
 
-- **Author** -  Apoorva Srinivas, Senior Product Manager
-- **Last Updated By/Date**: Apoorva Srinivas, Senior Product Manager, April 2025
+- **Author** -  Apoorva Srinivas, Principal Product Manager
+- **Last Updated By/Date**: Apoorva Srinivas, Principal Product Manager, December 2025

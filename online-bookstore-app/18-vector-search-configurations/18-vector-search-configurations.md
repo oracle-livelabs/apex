@@ -10,15 +10,15 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-- Load ONNX Models
-- Create a Vector Provider
-- Generate Vector Embeddings
-- Create Search Configuration based on Oracle Vector Search
-- Create an Oracle Vector Search Page
+- Load ONNX Models.
+- Create a Vector Provider.
+- Generate Vector Embeddings.
+- Create Search Configuration based on Oracle Vector Search.
+- Create an Oracle Vector Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the export file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
 
 ## Task 1: Load the ONNX Model
 
@@ -322,4 +322,4 @@ In this lab, you loaded ONNX models into Oracle Database, created a Vector Provi
 ## Acknowledgements
 
 - **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, March 2025
+- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

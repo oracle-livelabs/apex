@@ -7,8 +7,12 @@
       "filename": "../../0-intro/0-intro.md"
     },
     {
-      "title": "Get Started",
-      "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+      "title": "Sign Up for an APEX Workspace",
+      "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+    },
+    {
+      "title": "Review Commonly Used APEX Terminology",
+      "filename": "../../../common-261/4-apex-basics/4-apex-basics.md"
     },
     {
       "title": "Lab 1: Create an APEX App",
@@ -19,8 +23,9 @@
       "filename": "../../2-schools-on-map/2-schools-on-map.md"
     },
     {
-      "title": "Lab 3: Configure a Generative AI Service in APEX",
-      "filename": "../../3-configure-oci/3-configure-oci.md",
+      "title": "Lab 3: Configure Gen AI service in APEX workspace",
+      "filename": "../../../common-261/2-configure-ai-keys/2-configure-ai-keys.md",
+      "description": "Configure Gen AI service in APEX workspace",
       "type": {
         "OCIGenAI" : "OCIGenAI",
         "OpenAI" : "OpenAI"
@@ -40,8 +45,8 @@
       "filename": "../../6-run-app/6-run-app.md"
     },
     {
-      "title": "Lab 7 [OPTIONAL]: Implement RAG using AI Vector Search",
-      "filename": "../../7-vector-search/7-vector-search.md"
+      "title": "Quiz: Test your Understanding",
+      "filename": "../../8-quiz/8-quiz.md"
     },
     {
       "title": "Lab Appendix: Download Instructions",
@@ -50,7 +55,7 @@
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

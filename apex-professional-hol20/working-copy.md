@@ -24,6 +24,10 @@ Creating a Working Copy is the first step in isolating changes. In this task, yo
 
 1. On the Workspace home page, click the **App Builder** icon and select **Demo Projects** application.
 
+    [Navigate to App Builder](images/nav-app-builder.png " ")
+
+    [Navigate to App Builder](images/nav-demo-projects.png " ")
+
 2. On the Application home page, find **Working Copy Tasks** on the side bar.
 
     ![Navigate to App Builder](images/create-copy.png " ")

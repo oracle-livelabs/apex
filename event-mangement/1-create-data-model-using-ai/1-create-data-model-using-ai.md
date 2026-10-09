@@ -1,82 +1,32 @@
-# Configure Generative AI Service and Create a Data Model using AI
+# Create a Data Model using Generative AI
 
 ## Introduction
 
-In this lab, you learn how to configure Generative AI Services to create a data model, build an application, generate SQL queries, Generate AI-powered text, and develop a chatbot. Ensure you have a secure key for accessing OCI Generative AI, OpenAI or Cohere services. You will then use Generative AI to create a data model that includes project statuses, milestones, tasks, to-dos, links, and comments—tools for efficient project management.
+In this lab, you will learn how to create a data model using Generative AI. Ensure that you have a secure key to access OCI Generative AI, OpenAI, or any other Generative AI services. You will then use Generative AI to create a data model that includes events, sessions, speakers, venues, and attendees for efficient event management.
 
-In this lab, you will explore how to use Generative AI Services to build a complete application. You will configure the Generative AI services to create a data model, generate SQL queries, produce AI-powered text, and develop a chatbot. Before starting, ensure you have a secure key to access OCI Generative AI, or OpenAI, or Cohere services.
-
-Using Generative AI, you will design a data model tailored for project management, incorporating key elements such as project statuses, milestones, tasks, task to-dos, task links, and comments. These components will provide the foundation for building an efficient and interactive project management application.
-
-Estimated Time: 5 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Create/Configure Generative AI Services into your APEX Workspace.
-
 - Create a Data Model using AI in Oracle APEX Workspace.
 
-### What You will Need
+### Before You Start
 
-- Sign up and Get access for one of the supported Generative AI Services like OCI Generative AI, OpenAI or Cohere.
+- Sign up and get access for one of the supported Generative AI Services such as OCI Generative AI, OpenAI or Cohere.
 
-- An Oracle Cloud paid account, or free trial.
+- An Oracle Cloud paid account or free trial account.
 
-- An APEX Workspace
+- An APEX workspace
 
-## Task 1: Creating a Generative AI Service Object - Open AI
+## Task 1: Create Event Management Data Model using AI
 
-1. Log into your workspace.
+To create a data model with AI, ensure that you have configured Generative AI Service and enabled **Used by App Builder** (Refer to the previous Task). If a Generative AI Service is not configured, the Create Data Model Using AI option will not be visible.
 
-2. From your APEX workspace home page, click **App Builder**
+In this task, you will learn how to leverage Oracle APEX's Generative AI Service to build an Event Management Data Model without writing SQL manually. By providing simple prompts, you will generate database objects, refine them, and add sample records automatically.
 
-    ![Click App Builder](./images/click-app-builder.png " ")
-
-3. On the **App Builder** page, select **Workspace Utilities**.
-
-    ![Select workspace utilities](./images/select-workspace-utilities.png " ")
-
-4. Under Workspace Utilities, click **Generative AI**.
-
-    ![click generative AI](./images/click-generative-ai.png " ")
-
-5. On the **Generative AI Services** page, click **Create**.
-
-    ![Click create](./images/click-create.png " ")
-
-6. If AI Provider is Open AI, under **Create/Edit** Generative AI Service Page, enter the following details.
-
-    - Under Identification:
-
-        - AI Provider: **Open AI**
-
-        - Name: **Open AI**
-
-    - Settings > Used by App Builder: **Toggle On**
-
-    - Credentials > API Key: Type 'Bearer **Enter the API Key you procured from OpenAI**'
-
-    - Advanced > AI Model: **gpt-4o**
-
-    >**Note:** When entering your API key, ensure you prepend it with **Bearer ' '**  (including a space after **Bearer**)*
-
-7. To validate the information you enter prior to completing the setup, click **Test Connection**.
-
-    ![create generative ai service](./images/create-gen-ai-service.png " ")
-
-8. Once the Connection is Successful, click **Create**.
-
-    ![connection successful](./images/connection-successfull-create.png " ")
-
-    ![AI Service Configured](./images/genai-service-created.png " ")
-
-## Task 2: Create Event Management Data Model using AI
-
-To create a data model with AI, you need to have a configured Generative AI Service and ensure the **Used by App Builder** is enabled. If no AI Service is available, the Create Data Model Using AI option will not be visible.
-
-1. Login to your Application. On the Workspace home page, click **SQL Workshop**.
+1. On the Workspace home page, from the left navigation menu click the **SQL Workshop** icon.
 
     ![select sql workshop](./images/select-sql-workshop.png " ")
 
@@ -88,44 +38,52 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     ![select create data model](./images/click-create-data-model-ai.png " ")
 
-    ![select create data model alternate](./images/click-create-data-model.png " ")
-
-    >**Note:** You can also access Create Data Model Using AI directly from the Tasks list on the SQL Workshop home page.
-
-4. When using Generative AI features within the APEX development environment, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a Dialog regarding **consent**. Click on **Accept**.
+4. When using Generative AI features within the APEX development environment *for the first time*, you will be asked to provide consent. In the **APEX Assistant** Wizard, if you see a dialog regarding **consent**. Click **Accept**.
 
     ![provide consent](./images/provide-consent.png " ")
 
-5. Use the **APEX Assistant** Wizard to create a Data Model using AI. To create a Project Management Data Model, enter the prompt mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
+5. You will use the **APEX Assistant** Wizard to create an *Event Management* Data Model using AI. To create an Event Management Data Model, enter the prompts mentioned below. Make sure that you choose **Oracle SQL** for **SQL Format**.
 
-    >Prompt:
-    >Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees
+    **Prompt 1:**
+    ```
+    <copy>
+    Create a data model for an Event Management App. The data model should include events, sessions, speakers, venues and attendees.
+    </copy>
+    ```
 
     !["provide prompt"](images/provide-prompt1.png "")
 
 6. Enter another prompt to **Add Event Types**.
 
-    >Prompt:
-    >Add Event Types
+    **Prompt 2:**
+    ```
+    <copy>
+    Add Event Types
+    </copy>
+    ```
 
     !["provide prompt"](images/add-event-types.png "")
 
 7. Add another prompt to update prefix of all database objects.
 
-    >Prompt:
-    >Prefix all objects with ev_
+    **Prompt 3:**
+    ```
+    <copy>
+    Prefix all objects with ev_
+    </copy>
+    ```
 
     !["provide prompt"](images/prefix.png "")
 
-8. To complete the **SQL script**, click **Create SQL Script**.
+8. At this point, we are satisfied with the generated SQL script. Click **Create SQL Script**.
 
     !["click create sql script"](images/review-quick-sql.png "")
 
-9. For Script Name: Enter **Event Data Model**.
+9. For Script Name, enter **Event Data Model**.
 
     !["provide script name"](images/event-data-model.png "")
 
-10. Now to add sample data into the tables. Click **APEX Assistant**.
+10. Next, we'd like to add sample data into the tables. To do this, we leverage the APEX Assistant in the Code Editor. Click **APEX Assistant**.
 
     !["provide script name"](images/click-apex-assistant.png "")
 
@@ -133,22 +91,28 @@ To create a data model with AI, you need to have a configured Generative AI Serv
 
     !["provide script name"](images/use-selection.png "")
 
-12. In APEX Assistant box, enter the prompt to generate sample data for that tables.
+12. In the APEX Assistant box, enter the prompt to generate sample data for those tables.
 
-    >Prompt:
-    >Generate Sample Data
+    **Prompt 1:**
+    ```
+    <copy>
+    Generate Sample Data
+    </copy>
+    ```
 
     !["provide script name"](images/generate-sample-data.png "")
 
-13. **Copy** the generated insert queries from the APEX Assistant box. insert it into the left code editor in the end.
+13. **Copy** the generated insert queries from the APEX Assistant box.
 
     !["provide script name"](images/copy-query.png "")
 
-14. Paste the copied queries into the left code editor in the end.
+14. Paste the copied queries into the left-hand side code editor towards the end.
 
     !["provide script name"](images/insert-query.png "")
 
-15. Replace the code editor with the below modified database objects code:
+15. Before clicking the **Run** button. Let's replace the code from the **Script Editor** with the modified database objects code below:
+
+    > Note: We are replacing the code to ensure the lab can be completed as intended. The replacement is only for consistency with the lab steps and expected results.
 
     ```
     <copy>
@@ -346,7 +310,7 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     end ev_event_attendees_biu;
     /
     -- Sample Data Insert Scripts for Event Management System
-    -- Events scheduled for July-August 2025 and November 2025
+    -- Events scheduled for July-August 2026 and November 2026
 
     -- Insert Event Types
     INSERT INTO ev_event_types (name, description) VALUES
@@ -436,99 +400,99 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     INSERT INTO ev_attendees (name, email, phone) VALUES
     ('Grace Taylor', 'grace.taylor@nonprofit.org', '555-1010');
 
-    -- Insert Events (July-August 2025 and November 2025)
+    -- Insert Events (July-August 2026 and November 2026)
 
-    -- July 2025 Events
+    -- July 2026 Events
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (1, 1, 'Tech Innovation Conference 2025', 'Annual conference showcasing the latest in technology innovation and digital transformation', DATE '2025-07-15', DATE '2025-07-17');
-
-    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (4, 3, 'Cloud Computing Webinar Series', 'Three-part webinar series covering AWS, Azure, and Google Cloud Platform best practices', DATE '2025-07-08', DATE '2025-07-08');
+    (1, 1, 'Tech Innovation Conference 2026', 'Annual conference showcasing the latest in technology innovation and digital transformation', DATE '2026-07-15', DATE '2026-07-17');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (3, 4, 'Full-Stack Development Bootcamp', 'Intensive 5-day bootcamp covering modern web development technologies', DATE '2025-07-22', DATE '2025-07-26');
+    (4, 3, 'Cloud Computing Webinar Series', 'Three-part webinar series covering AWS, Azure, and Google Cloud Platform best practices', DATE '2026-07-08', DATE '2026-07-08');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (7, 5, 'Local Developers Meetup', 'Monthly meetup for local developers to network and share knowledge', DATE '2025-07-30', DATE '2025-07-30');
-
-    -- August 2025 Events
-    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (6, 6, 'AI/ML Hackathon', '48-hour hackathon focused on artificial intelligence and machine learning solutions', DATE '2025-08-05', DATE '2025-08-07');
+    (3, 4, 'Full-Stack Development Bootcamp', 'Intensive 5-day bootcamp covering modern web development technologies', DATE '2026-07-22', DATE '2026-07-26');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (2, 2, 'Cybersecurity Roadshow', 'Multi-city roadshow covering enterprise security best practices', DATE '2025-08-12', DATE '2025-08-14');
+    (7, 5, 'Local Developers Meetup', 'Monthly meetup for local developers to network and share knowledge', DATE '2026-07-30', DATE '2026-07-30');
+
+    -- August 2026 Events
+    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
+    (6, 6, 'AI/ML Hackathon', '48-hour hackathon focused on artificial intelligence and machine learning solutions', DATE '2026-08-05', DATE '2026-08-07');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (8, 7, 'UX Design Workshop', 'Hands-on workshop covering user experience design principles and tools', DATE '2025-08-19', DATE '2025-08-20');
+    (2, 2, 'Cybersecurity Roadshow', 'Multi-city roadshow covering enterprise security best practices', DATE '2026-08-12', DATE '2026-08-14');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (4, 3, 'Database Performance Tuning Webinar', 'Advanced techniques for optimizing Oracle database performance', DATE '2025-08-25', DATE '2025-08-25');
+    (8, 7, 'UX Design Workshop', 'Hands-on workshop covering user experience design principles and tools', DATE '2026-08-19', DATE '2026-08-20');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (10, 5, 'Startup Networking Meetup', 'Networking event for entrepreneurs and startup enthusiasts', DATE '2025-08-28', DATE '2025-08-28');
-
-    -- October 2025 Events
-    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (1, 8, 'Oracle AI World 2025', 'Premier global conference showcasing Oracle AI innovations and enterprise AI solutions', DATE '2025-10-13', DATE '2025-10-16');
-
-    -- November 2025 Events
-    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (9, 8, 'Oracle APEX Summit 2025', 'Premier conference for Oracle Application Express developers and users', DATE '2025-11-15', DATE '2025-11-17');
+    (4, 3, 'Database Performance Tuning Webinar', 'Advanced techniques for optimizing Oracle database performance', DATE '2026-08-25', DATE '2026-08-25');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (5, 1, 'DevOps and Automation Conference', 'Conference focusing on DevOps practices, CI/CD, and infrastructure automation', DATE '2025-11-08', DATE '2025-11-10');
+    (10, 5, 'Startup Networking Meetup', 'Networking event for entrepreneurs and startup enthusiasts', DATE '2026-08-28', DATE '2026-08-28');
+
+    -- October 2026 Events
+    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
+    (1, 8, 'Oracle AI World 2026', 'Premier global conference showcasing Oracle AI innovations and enterprise AI solutions', DATE '2026-10-13', DATE '2026-10-16');
+
+    -- November 2026 Events
+    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
+    (9, 8, 'Oracle APEX Summit 2026', 'Premier conference for Oracle Application Express developers and users', DATE '2026-11-15', DATE '2026-11-17');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (4, 3, 'Mobile Development Trends Webinar', 'Exploring the latest trends in iOS and Android development', DATE '2025-11-22', DATE '2025-11-22');
+    (5, 1, 'DevOps and Automation Conference', 'Conference focusing on DevOps practices, CI/CD, and infrastructure automation', DATE '2026-11-08', DATE '2026-11-10');
 
     INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
-    (1, 6, 'Blockchain Innovation Hackathon', 'Weekend hackathon exploring blockchain and cryptocurrency technologies', DATE '2025-11-29', DATE '2025-12-01');
+    (4, 3, 'Mobile Development Trends Webinar', 'Exploring the latest trends in iOS and Android development', DATE '2026-11-22', DATE '2026-11-22');
 
-    -- Insert Sessions for Oracle AI World 2025
+    INSERT INTO ev_events (venue_id, event_type_id, name, description, start_date, end_date) VALUES
+    (1, 6, 'Blockchain Innovation Hackathon', 'Weekend hackathon exploring blockchain and cryptocurrency technologies', DATE '2026-11-29', DATE '2026-12-01');
+
+    -- Insert Sessions for Oracle AI World 2026
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (10, 3, 'Oracle AI Services: Enterprise Ready Solutions', 'Overview of Oracle AI services and their enterprise applications', DATE '2025-10-13' + INTERVAL '9' HOUR, DATE '2025-10-13' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
-
-    INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (10, 2, 'AI-Driven Database Management', 'How Oracle Autonomous Database leverages AI for self-managing capabilities', DATE '2025-10-13' + INTERVAL '11' HOUR, DATE '2025-10-13' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
+    (10, 3, 'Oracle AI Services: Enterprise Ready Solutions', 'Overview of Oracle AI services and their enterprise applications', DATE '2026-10-13' + INTERVAL '9' HOUR, DATE '2026-10-13' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (10, 3, 'Machine Learning at Scale with Oracle Cloud', 'Building and deploying ML models using Oracle Cloud Infrastructure', DATE '2025-10-13' + INTERVAL '14' HOUR, DATE '2025-10-13' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
+    (10, 2, 'AI-Driven Database Management', 'How Oracle Autonomous Database leverages AI for self-managing capabilities', DATE '2026-10-13' + INTERVAL '11' HOUR, DATE '2026-10-13' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (10, 8, 'AI-Powered Analytics and Business Intelligence', 'Leveraging AI for advanced analytics and decision making', DATE '2025-10-14' + INTERVAL '9' HOUR, DATE '2025-10-14' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
-
-    -- Insert Sessions for Oracle APEX Summit 2025
-    INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (11, 1, 'APEX 23.2 New Features Deep Dive', 'Comprehensive overview of the latest Oracle APEX features and enhancements', DATE '2025-11-15' + INTERVAL '9' HOUR, DATE '2025-11-15' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
+    (10, 3, 'Machine Learning at Scale with Oracle Cloud', 'Building and deploying ML models using Oracle Cloud Infrastructure', DATE '2026-10-13' + INTERVAL '14' HOUR, DATE '2026-10-13' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (11, 12, 'Building Modern Applications with APEX', 'Best practices for creating contemporary web applications using Oracle APEX', DATE '2025-11-15' + INTERVAL '11' HOUR, DATE '2025-11-15' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
+    (10, 8, 'AI-Powered Analytics and Business Intelligence', 'Leveraging AI for advanced analytics and decision making', DATE '2026-10-14' + INTERVAL '9' HOUR, DATE '2026-10-14' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
+
+    -- Insert Sessions for Oracle APEX Summit 2026
+    INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
+    (11, 1, 'APEX 23.2 New Features Deep Dive', 'Comprehensive overview of the latest Oracle APEX features and enhancements', DATE '2026-11-15' + INTERVAL '9' HOUR, DATE '2026-11-15' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (11, 8, 'APEX Performance Optimization', 'Techniques for improving Oracle APEX application performance and scalability', DATE '2025-11-15' + INTERVAL '14' HOUR, DATE '2025-11-15' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
+    (11, 12, 'Building Modern Applications with APEX', 'Best practices for creating contemporary web applications using Oracle APEX', DATE '2026-11-15' + INTERVAL '11' HOUR, DATE '2026-11-15' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (11, 1, 'APEX Security Best Practices', 'Essential security considerations for Oracle APEX applications', DATE '2025-11-16' + INTERVAL '9' HOUR, DATE '2025-11-16' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
+    (11, 8, 'APEX Performance Optimization', 'Techniques for improving Oracle APEX application performance and scalability', DATE '2026-11-15' + INTERVAL '14' HOUR, DATE '2026-11-15' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
+
+    INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
+    (11, 1, 'APEX Security Best Practices', 'Essential security considerations for Oracle APEX applications', DATE '2026-11-16' + INTERVAL '9' HOUR, DATE '2026-11-16' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
 
     -- Insert Sessions for Tech Innovation Conference
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (1, 2, 'Cloud-Native Architecture Patterns', 'Modern approaches to building scalable cloud applications', DATE '2025-07-15' + INTERVAL '9' HOUR, DATE '2025-07-15' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
+    (1, 2, 'Cloud-Native Architecture Patterns', 'Modern approaches to building scalable cloud applications', DATE '2026-07-15' + INTERVAL '9' HOUR, DATE '2026-07-15' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (1, 3, 'Machine Learning in Production', 'Best practices for deploying ML models at scale', DATE '2025-07-15' + INTERVAL '11' HOUR, DATE '2025-07-15' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
+    (1, 3, 'Machine Learning in Production', 'Best practices for deploying ML models at scale', DATE '2026-07-15' + INTERVAL '11' HOUR, DATE '2026-07-15' + INTERVAL '12' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (1, 7, 'The Future of User Experience', 'Trends and predictions in UX design and human-computer interaction', DATE '2025-07-15' + INTERVAL '14' HOUR, DATE '2025-07-15' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
+    (1, 7, 'The Future of User Experience', 'Trends and predictions in UX design and human-computer interaction', DATE '2026-07-15' + INTERVAL '14' HOUR, DATE '2026-07-15' + INTERVAL '15' HOUR + INTERVAL '30' MINUTE);
 
     -- Insert Sessions for other events
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (3, 4, 'Modern JavaScript Frameworks', 'Comparing React, Vue, and Angular for modern web development', DATE '2025-07-22' + INTERVAL '9' HOUR, DATE '2025-07-22' + INTERVAL '12' HOUR);
+    (3, 4, 'Modern JavaScript Frameworks', 'Comparing React, Vue, and Angular for modern web development', DATE '2026-07-22' + INTERVAL '9' HOUR, DATE '2026-07-22' + INTERVAL '12' HOUR);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (5, 3, 'AI Ethics and Bias Detection', 'Identifying and mitigating bias in machine learning models', DATE '2025-08-05' + INTERVAL '10' HOUR, DATE '2025-08-05' + INTERVAL '11' HOUR + INTERVAL '30' MINUTE);
+    (5, 3, 'AI Ethics and Bias Detection', 'Identifying and mitigating bias in machine learning models', DATE '2026-08-05' + INTERVAL '10' HOUR, DATE '2026-08-05' + INTERVAL '11' HOUR + INTERVAL '30' MINUTE);
 
     INSERT INTO ev_sessions (event_id, speaker_id, name, description, session_start_date, session_end_date) VALUES
-    (6, 6, 'Zero Trust Security Model', 'Implementing zero trust architecture in enterprise environments', DATE '2025-08-12' + INTERVAL '9' HOUR, DATE '2025-08-12' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
+    (6, 6, 'Zero Trust Security Model', 'Implementing zero trust architecture in enterprise environments', DATE '2026-08-12' + INTERVAL '9' HOUR, DATE '2026-08-12' + INTERVAL '10' HOUR + INTERVAL '30' MINUTE);
 
     -- Insert Event Attendees (sample registrations)
     INSERT INTO ev_event_attendees (event_id, attendee_id) VALUES (1, 1);
@@ -572,37 +536,37 @@ To create a data model with AI, you need to have a configured Generative AI Serv
     ```
     </copy>
 
-    > Note: We are replacing the code because AI-generated code might not always produce the exact results we need. By replacing it with the provided code, we ensure that our application behaves consistently and matches the expected outcome.
-
-16. After replacing the code, click **Run** and confirm it with **Yes**.
+16. After replacing the code, click **Run** in the Script Editor.
 
     !["run now"](images/confirm-yes.png "")
 
-17. Review the summary and then click **Run Now**.
+17. Click **Run** to submit the script for execution.
 
     !["run now"](images/run-now.png "")
 
-18. We can see that all the statements were run successfully.
+18. The Manage Script Results page appears listing script results.
 
     !["data model created"](images/successful-statemwnts.png "")
 
-    *Note: You do NOT want to click Create Application, as you will use Generative AI to create an application later.*
+    *Note: Do NOT click Create App yet, as you will create an app in the upcoming lab using Generative AI.*
 
-## Task 3: Review Database Objects
+## Task 2: Review Database Objects
 
-1. Navigate to **SQL Workshop** > **Object Browser**.
+Now, let's review the database objects created using AI.
+
+1. From the left navigation menu, hover over **SQL Workshop** icon, then select **Object Browser**.
 
     ![SQL Workshop home page](./images/object-browser.png " ")
 
-2. Click on tables to view different tables and then you will see various tabs, such as Data, Constraints, and so forth, to review the table details.
+2. Expand **Tables** in the Object Pane to view different tables. Select a table to view table details such as Data, Constraints, and so forth in the Details View pane on the right.
 
     ![Object Browser](./images/view-tables.png " ")
 
 ## Summary
 
-You now know how to configure Generative AI Services using Workspace Utilities and Create a Data Model using AI. You may now **proceed to the next lab**.
+You now know how to create a Data Model using AI. You may now **proceed to the next lab**.
 
-## Acknowledgments
+## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri Product Manager, August 2025
+- **Author** - Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026

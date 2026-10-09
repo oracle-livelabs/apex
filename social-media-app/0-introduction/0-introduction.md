@@ -10,18 +10,18 @@ While the initial version of the app is simple and meant to help you get started
 
 Estimated Time: 1 hour 5 minutes
 
-Watch the video below for a quick walkthrough of the workshop.
-[Create an APEX App](videohub:1_zeopb0u9)
+<!-- Watch the video below for a quick walkthrough of the workshop.
+[Create an APEX App](videohub:1_zeopb0u9) -->
 
 ### Objectives
 
-* Obtain a FREE Oracle APEX workspace
-* Build your first app in APEX
-* Build a Cards Region
-* Customize the App using Dynamic Actions and custom CSS
-* Add a Maps region, retrieve device location, and install as a PWA (Progressive Web App)
+- Obtain a FREE Oracle APEX workspace.
+- Build your first app in APEX.
+- Build a Cards Region.
+- Customize the App using Dynamic Actions and custom CSS.
+- Add a Maps region, retrieve device location, and install as a PWA (Progressive Web App).
 
-*Note: This workshop assumes you are using Oracle APEX 24.2.*
+*Note: Note: This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ### Labs
 
@@ -50,27 +50,29 @@ If the menu is not visible, you can open it by clicking the menu button (![Menu 
 
 If you are stuck or the app is not working as expected, you can download and install the completed app as follows:
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/APEX_Social_Media_HOL_FINAL_COMPLETED.zip) to download the completed application zip file.
+1. **[Click here](files/APEX_Social_Media_HOL_FINAL_COMPLETED.sql)** to download the completed application.
 
-2. To import the app, navigate to App Builder and click Import.
+2. To import the app, navigate to **App Builder** and click **Import**.
 
-    !["App Builder"](images/app-import.png =70%x*)
+    !["App Builder"](images/app-build.png)
 
-3. Drag and drop the downloaded **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file, then click Next.
+    !["App Builder"](images/import.png)
 
-    !["Import App"](images/import-app.png =60%x*)
+3. Drag and drop the downloaded **APEX\_Social\_Media\_HOL\_FINAL\_COMPLETED.zip** file, then click **Next**.
 
-4. Click Install Application.
+    !["Import App"](images/drag-and-drop.png)
 
-    !["Install App"](images/install-app.png =70%x*)
+4. Click **Import Application**.
 
-5. Click Install Supporting Objects.
+    !["Install App"](images/install-app1.png)
 
-    !["Install Supporting Objects"](images/supporting-object.png =70%x*)
+5. Click **Install Supporting Objects**.
+
+    !["Install Supporting Objects"](images/install-support.png)
 
 6. All set. Now, run the application and see it in action!
 
-    !["Run App"](images/run-app.png =70%x*)
+    !["Run App"](images/run-app2.png)
 
 ## Learn More
 
@@ -83,4 +85,5 @@ If you are stuck or the app is not working as expected, you can download and ins
 ## Acknowledgements
 
 * **Author** - Jayson Hanes, Principal Product Manager; Apoorva Srinivas, Senior Product Manager
-* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, March 2025
+
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026

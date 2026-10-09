@@ -86,7 +86,7 @@ In this lab, you will:
 
 In this task, you will extract and populate specific information from existing data into existing columns using SQL Scripts. You will work with the Products table within your database. You will update several columns (clothing, color, and department) based on the information stored in other columns.
 
-1. Click **SQL Workshop** from the top navigation menu and select **SQL Scripts**.
+1. Click down arrow **(v)** beside **SQL Workshop** from the top navigation menu and select **SQL Scripts**.
 
     ![SQL Scripts](images/navigate-to-sql-scripts1.png " ")
 
@@ -133,7 +133,7 @@ In this task, you will extract and populate specific information from existing d
 
     ![Script Results](images/sql-scripts-results1.png " ")
 
-6. To check the values in the **Products** table, click **SQL Workshop** and select **SQL Commands**.
+6. To check the values in the **Products** table, click down arrow **(v)** beside **SQL Workshop** and select **SQL Commands**.
 
     ![SQL Commands](images/open-sql-commands.png " ")
 
@@ -160,7 +160,7 @@ Since multiple products may have the same color, department, and clothing values
 
 You create lookup tables in this lab based on the three new columns. After you create a lookup table, the PRODUCTS table can reference the new color, clothing type, and department lookup value by its new numeric primary key value in the lookup table.
 
-1. From the APEX main menu, click **SQL Workshop** and  select **Object Browser**.
+1. From the APEX main menu, click down arrow **(v)** beside **SQL Workshop** and  select **Object Browser**.
 
     ![Object Browser](./images/navigate-to-object-browser2.png " ")
 
@@ -209,5 +209,5 @@ You now know how to add new columns to your existing tables, create lookup table
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+- **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

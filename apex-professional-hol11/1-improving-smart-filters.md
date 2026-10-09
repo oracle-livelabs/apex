@@ -63,9 +63,9 @@ The revised page appears.
 
 7. In the **Rendering** tree (left pane), under **Search**, select **P8\_BUDGET** within filters and enter/select the following:
 
-    - Under Identification > Type: **Input Field**
+    - Identification > Type: **Input Field**
 
-    - Under Settings > User can Choose Operator: **Toggle On**
+    - Settings > User can Choose Operator: **Toggle On**
 
     ![Enhance Facets](./images/enhance-facet1.png " ")
 
@@ -135,5 +135,5 @@ You now know how to customize existing filters and create new ones for the Proje
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, October 2024
+- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

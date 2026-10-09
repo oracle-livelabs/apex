@@ -1,0 +1,1 @@
+Vector Provider: Database ONNX Model, MINILM_L12

@@ -1,13 +1,21 @@
 {
-  "workshoptitle": "Automate Invoice handling using Oracle APEX and OCI Document Understanding",
+  "workshoptitle": "Automate Invoice Handling using Oracle APEX and OCI Document Understanding",
     "tutorials": [
       {
         "title": "Introduction",
-        "filename": "../../intro/introduction.md"
+        "filename": "../../0-introduction/0-introduction.md"
       },
       {
-        "title": "Get Started",
-        "filename": "../../../common-242/1-sign-up-apex/1-sign-up-apex.md"
+        "title": "Sign Up for an APEX Workspace",
+        "filename": "../../../common-261/1-sign-up-apex/1-sign-up-apex.md"
+      },
+      {
+        "title": "Configure Gen AI service in APEX workspace",
+        "filename": "../../../common-261/2-configure-ai-keys/2-configure-ai-keys.md"
+      },
+      {
+        "title": "Review Commonly Used APEX Terminology",
+        "filename": "../../../common-261/4-apex-basics/4-apex-basics.md"
       },
       {
         "title": "Lab 1: Configure OCI API Keys and a Bucket",
@@ -36,7 +44,7 @@
       {
         "title": "Need Help?",
         "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-        "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
       }
     ]
 }

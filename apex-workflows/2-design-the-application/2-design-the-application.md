@@ -8,11 +8,11 @@ In this lab, you design the 'Doctor Appointments Made Easy!' application using O
 
 In this lab, you will:
 
-- Create the APEX Application.
+- Create a new APEX application.
 
-- Create Application users.
+- Create application users required for workflow participation.
 
-- Install the Sample Dataset.
+- Install the sample dataset that supports appointments and workflow logic.
 
 Estimated Time: 20 minutes
 
