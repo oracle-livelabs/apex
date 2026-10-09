@@ -56,15 +56,14 @@ Basic experience with OCI Cloud Console and standard components.
 ## Task 2: Create GenAI Chatbot in your Application
 
 1. To enhance the experience for finding movies, we will utilize the OCI GenAI connection we made earlier. Return to the App Builder and select the newly created app and select Shared Components.
-    ![App builder App](./images/app_builder_app.png  "Access the application in App Builder")
     ![Shared Components](./images/app_shared_components.png  "Access shared components for the application")    
 
-2. In the lower left, select AI Configurations under the Generative AI Section. Click Create. Here we will enter a name for the configuration and select our Credential from Lab 2 from the Service drop down. 
-    ![AI Configuration ](./images/ai_configurations.png  "View AI configurations in the APEX app")
-    ![AI Configuration - Create](./images/ai_configurations_create.png  "Create a new AI configuration")
-    ![AI Configuration - Name Service](./images/ai_configurations_name_service.png  "Name the AI configuration and select the AI service")
+2. In the lower left, select AI Agents under the Generative AI Section. Click Create. Here we will enter a name for the configuration and select our Credential from Lab 2 from the Service drop down. 
+    ![AI Agent ](./images/ai_configurations.png  "View AI Agents in the APEX app")
+    ![AI Agent - Create](./images/ai_configurations_create.png  "Create a new AI Agent")
+    ![AI Agent - Name Service](./images/ai_configurations_name_service.png  "Name the AI Agent and select the AI service")
 
-3. In the System Prompt field, enter a prompt for our GenAI configuration so it knows what to do 
+3. In the System Prompt field, enter a prompt for our GenAI Agent so it knows what to do 
     ```
     <copy>
     You are an expert in movies and films. Use the data in the MOVIES table to inform your responses and make suggestions.
@@ -80,7 +79,7 @@ Basic experience with OCI Cloud Console and standard components.
     ```
     ![AI Configuration](./images/welcome_message.png  "Set welcome message for AI chatbot")
 
-5. Next we will add our database table as a RAG source for our AI Assistant. Select 'RAG Source tab' and click Create RAG Source. Enter a name and for the SQL query, enter
+5. Next we will add our database table as a RAG source for our AI Assistant. Select 'Tools' tab and click Add Tool. Enter a name and for the SQL query, enter
     ```
     <copy>
     SELECT * FROM MOVIES
@@ -127,7 +126,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 13. Now click on the True action from the rendering tree under our Dynamic Action. This is where we will select what action to take when the above When Criteria is met (in this case, clicking the button). 
     ![True Action](./images/true_action.png  "Configure True action for dynamic action")
-On the right side Action attribute, select Show AI Assistant. Now select our Configuration from the drop down.
+On the right side Action attribute, select Show AI Assistant. Now select our Agent from the drop down.
     ![Show AI Assistant](./images/show_ai_assistant.png  "Show AI Assistant action configuration")
     ![GenAI Action](./images/gen_ai_action.png  "Run GenAI action for the AI assistant")
 
@@ -146,6 +145,6 @@ You have successfully created your application and created a dynamic action to l
 
 * **Authors:**
 * Karol Stuart, Master Principal Cloud Architect 
-* Graham Anderson, Senior Cloud Architect 
+* Graham Anderson, Principal Cloud Architect 
 
-* **Last Updated by/Date** - Graham Anderson, September 2025
+* **Last Updated by/Date** - Graham Anderson, October 2026
