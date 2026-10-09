@@ -78,18 +78,18 @@ Try switching between two models — note differences in:
 1. Open the documentation for pre-trained models:  
    [OCI Generative AI Pre-trained Models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm)  
 
-   ![Grok Models](./images/grok3.png  "Grok-3 model listing in OCI Generative AI")
+   ![Grok Models](./images/grok4.png  "Grok-4 model listing in OCI Generative AI")
 
 2. Browse through the list of available models and note the **Model ID** you want to test.  
-   Example:  *xai.grok-3*
+   Example:  *xai.grok-4.7*
 
-   [xai.grok-3 Model](https://docs.oracle.com/en-us/iaas/Content/generative-ai/xai-grok-3.htm#:~:text=Model%20Name-,OCI%20Model%20Name,-Pricing%20Page%20Product)
+   [xai.grok-4 Model](https://docs.oracle.com/en-us/iaas/Content/generative-ai/x-ai-grok-4-7.htm)
 
 ### Step 1: Update Your APEX Application to use Grok Model
 1. Return to your APEX Workspace, open Workspace Utilities and select Generative AI. Open the Gen AI Service already created.
    ![Generative AI](./images/workspace_gen_ai.png  "APEX Workspace Generative AI service configuration screen")
 
-2. In the ModelID field, replace the old model id with the new Grok model (e.g.)  *xai.grok-3*
+2. In the ModelID field, replace the old model id with the new Grok model (e.g.)  *xai.grok-4.7*
    ![Update Model Grok](./images/update_model_grok.png  "Field to update Model ID for Grok in your APEX Generative AI service") and test the connection
 
    *Note: For Grok models are on demand only. (pay-as-you-go usage)*
@@ -106,7 +106,7 @@ Try switching between two models — note differences in:
 3. Interact with the assistant and observe how it responds. Try the same prompt, which you tried in the previous lab and compare the results.:
    - *I’m in a nostalgic mood and want something heartwarming.*  
 
-   ![Llama Results](./images/grok_results.png  "Sample results from Grok model after running the APEX app")
+   ![Grok Results](./images/grok_results.png  "Sample results from Grok model after running the APEX app")
 
 You’ve successfully extended your APEX app by experimenting with **different LLMs (like Llama and Grok)**.  
 This approach allows you to fine-tune the assistant experience based on different model selection.
@@ -118,6 +118,6 @@ This approach allows you to fine-tune the assistant experience based on differen
 * **Authors:**
 
 * Karol Stuart, Master Principal Cloud Architect 
-* Graham Anderson, Senior Cloud Architect 
+* Graham Anderson, Principal Cloud Architect 
 
-* **Last Updated by/Date** - Karol Stuart, August 2025
+* **Last Updated by/Date** - Graham Anderson, October 2026

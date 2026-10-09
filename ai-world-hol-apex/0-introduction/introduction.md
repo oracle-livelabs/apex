@@ -73,6 +73,6 @@ You may now **proceed to the next lab**.
 
 * **Authors:**  
 * Karol Stuart, Master Principal Cloud Architect  
-* Graham Anderson, Senior Cloud Architect  
+* Graham Anderson, Principal Cloud Architect  
 
-* **Last Updated by/Date** - Graham Anderson, August 2025  
+* **Last Updated by/Date** - Graham Anderson, October 2026  
