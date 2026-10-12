@@ -126,7 +126,7 @@ Basic experience with OCI Cloud Console and standard components.
 
 13. Now click on the True action from the rendering tree under our Dynamic Action. This is where we will select what action to take when the above When Criteria is met (in this case, clicking the button). 
     ![True Action](./images/true_action.png  "Configure True action for dynamic action")
-On the right side Action attribute, select Show AI Assistant. Now select our Agent from the drop down.
+    On the right side Action attribute, select Show AI Assistant. Now select our Agent from the drop down.
     ![Show AI Assistant](./images/show_ai_assistant.png  "Show AI Assistant action configuration")
     ![GenAI Action](./images/gen_ai_action.png  "Run GenAI action for the AI assistant")
 
