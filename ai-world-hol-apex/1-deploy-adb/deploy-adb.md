@@ -54,11 +54,11 @@ Basic experience with OCI Cloud Console and standard components.
     ![ADB Tool Configuration](./images/adb_tool_configuration.png  "ADB details page showing APEX tool configuration link")
 
 2. Here you will enter your admin password from your ADB to access APEX Administration Services.  
-    ![Click Admin Services](./images/click_admin_services.png  "APEX Workspace Services login screen. Click Administration Services link to login to admin page")
-
     ![Workspace Login](./images/workspace_login.png  "APEX login screen for workspace administrator")
 
-3. You will be greeted with a welcome to APEX page and you can select Create Workspace. A workspace in APEX is simply a protected area within an APEX environment where developers and users can create and manage APEX applications or interact with the underlying database. Here you will select whether you would like a New Schema for your workspace, or to use an existing Schema in your ADB. In this case, we will select New Schema.  
+3. You will be greeted with a welcome to APEX page and you can select Create Workspace. A workspace in APEX is simply a protected area within an APEX environment where developers and users can create and manage APEX applications or interact with the underlying database. Here you will select whether you would like a New Schema for your workspace, or to use an existing Schema in your ADB. In this case, we will select New Schema. 
+    ![Workspace Create](./images/workspace_create.png  "Select Create Workspace")
+
     ![Workspace Creation](./images/workspace_creation.png  "Create new APEX workspace with New Schema option")
 
 4. You can now choose a Workspace Name, Workspace Admin Username, and Workspace Admin Password. These credentials will be used to login to the workspace once created. Click Create Workspace.  
@@ -66,6 +66,8 @@ Basic experience with OCI Cloud Console and standard components.
 
 5. Once the workspace is created, you can sign out of the Administrative Services in the upper right corner. You can now return to the sign in screen and input your newly created workspace name, Workspace Admin Username, and Workspace Admin Password.  
     ![Workspace First Login](./images/workspace_first_login.png  "First login screen for new APEX workspace")
+
+    ![Workspace Login Selection](./images/workspace_login_selection.png  "Select APEX workspace")
 
 6. Once logged in, you will land on the APEX home page where we can select App Builder to begin working on our applications. Move on to Lab 2 where we will configure GenAI.  
     ![APEX Home Page](./images/apex_home_page.png  "Oracle APEX home page after workspace login")
@@ -76,6 +78,6 @@ You may now **proceed to the next lab**
 
 * **Authors:**
 * Karol Stuart, Master Principal Cloud Architect 
-* Graham Anderson, Senior Cloud Architect 
+* Graham Anderson, Principal Cloud Architect 
 
-* **Last Updated by/Date** - Graham Anderson, August 2025
+* **Last Updated by/Date** - Graham Anderson, October 2026
