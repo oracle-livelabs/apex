@@ -65,7 +65,7 @@ In this task, you import the generated blueprint file and validate the blueprint
 
     ![Edit App](./images/edit-app.png " ")
 
-6. Navigate to **Shared Components**, and click **User Access Control**.
+6. Navigate to **Shared Components**, and click **Application Access Control**.
 
     ![Shared Components](./images/shared-components.png " ")
 
@@ -77,7 +77,7 @@ In this task, you import the generated blueprint file and validate the blueprint
 
 8. For the purpose of this demo, we will assign all the roles to a single user to avoid multiple logins.
 
-    In this case, enter your APEX workspace username and assign the appropriate roles. Click **Create Assignment**.
+    In this case, enter your **APEX Workspace Username** and assign the appropriate roles. Click **Create Assignment**.
 
     ![Add Roles](./images/add-roles.png " ")
 
@@ -100,5 +100,5 @@ In this task, you run the application and explore the app. This final step confi
 
 ## Acknowledgements
 
-- **Author(s)** - Shailu Srivastava, Product Manager
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, April 2026
+- **Author(s)** - Apoorva Srinivas, Principal Product Manager
+- **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, October 2026
