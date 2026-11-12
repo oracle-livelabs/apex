@@ -10,15 +10,15 @@ In this workshop, you will manage and customize the Interactive report in the Sa
 
 In the previous workshop, you learned to add an Interactive Grid, Smart filters, and Content row to an application. You also learned to create application items and processes, create a variety of pages, and add an action.
 
-Estimated Time: 35 minutes
+Estimated Workshop Time: 35 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Customize your Interactive Report page in **Sample Reports** Application as a **Developer**.
+* Customize your Interactive Report page in **Sample Reports** Application as a **Developer**.
 
-- Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
+* Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
 
 <!--### Downloads
 
@@ -40,8 +40,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](customizing-interactive-report_developer.md#acknowledgements).

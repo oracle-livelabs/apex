@@ -12,25 +12,25 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Implement two Search Configurations based on two different tables.
+* Implement two Search Configurations based on two different tables.
 
-- Create a Search Page using the Create Page Wizard.
+* Create a Search Page using the Create Page Wizard.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingUsingForms-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingUsingForms-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Implement Standard Search Configurations
 
@@ -56,25 +56,25 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 6. On the **Create Search Configuration** wizard, enter/select the following details:
 
-    - Name: **Search Order Details**
+    * Name: **Search Order Details**
 
-    - Search Type: **Standard**
+    * Search Type: **Standard**
 
      Click **Next**.
 
-   ![App Builder](images/search-conf.png " ")
+    ![App Builder](images/search-conf.png " ")
 
 7. For **Table/View Name**: Select **CUSTOMER\_ORDER\_PRODUCTS** and click **Next**.
 
-   ![App Builder](images/search-conf2.png " ")
+    ![App Builder](images/search-conf2.png " ")
 
 8. Under **Column Mapping**, enter/select the following:
 
-     - Primary Key Column: **ORDER\_ID (Number)**
+    * Primary Key Column: **ORDER\_ID (Number)**
 
-     - Title Column: **FULL\_NAME (Varchar2)**
+    * Title Column: **FULL\_NAME (Varchar2)**
 
-     - Description Column: **ORDER\_STATUS (Varchar2)**
+    * Description Column: **ORDER\_STATUS (Varchar2)**
 
     Click **Create Search Configuration**.
 
@@ -82,7 +82,7 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 9. Navigate to **Column Mapping** tab, for **Subtitle Column**, select **ITEMS (Varchar2)** and click **Apply Changes**.
 
-   ![App Builder](images/column-mapping.png " ")
+    ![App Builder](images/column-mapping.png " ")
 
 10. Create a second search configuration that maps to the **PRODUCT_REVIEWS** table. Click **Create** on the Search Configurations page.
 
@@ -90,9 +90,9 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 11. On the **Create Search Configuration** wizard, enter/select the following details:
 
-     - Name: **Search Product Reviews**
+    * Name: **Search Product Reviews**
 
-     - Search Type: **Standard**
+    * Search Type: **Standard**
 
     Click **Next**.
 
@@ -104,11 +104,11 @@ In this task, you will create two search configurations, one for the CUSTOMER\_O
 
 13. Under **Column Mapping**, enter/select the following:
 
-     - Primary Key Column: **PRODUCT\_NAME (Varchar2)**
+    * Primary Key Column: **PRODUCT\_NAME (Varchar2)**
 
-     - Title Column: **PRODUCT\_NAME (Varchar2)**
+    * Title Column: **PRODUCT\_NAME (Varchar2)**
 
-     - Description Column: **REVIEW (Varchar2)**
+    * Description Column: **REVIEW (Varchar2)**
 
    Click **Create Search Configuration**.
 
@@ -136,11 +136,11 @@ To create a search page by running the Create Page Wizard:
 
 4. Under Page Definition, enter/select the following:
 
-     - Page Number: **20**
+    * Page Number: **20**
 
-     - Name: **Search Customer Order Product Details**
+    * Name: **Search Customer Order Product Details**
 
-     - Search Configurations: Select both the search configurations to be used by this page - **Search Customer Order Products and Search Product Reviews**
+    * Search Configurations: Select both the search configurations to be used by this page - **Search Customer Order Products and Search Product Reviews**
 
     Click **Create Page**.
 
@@ -158,5 +158,5 @@ In this lab, you successfully created and mapped search configurations for two t
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+* **Author** - Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

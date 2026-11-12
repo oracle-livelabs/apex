@@ -1,5 +1,7 @@
 # Add Pages to the Demo Projects application
 
+## Introduction
+
 In this lab, you will learn how to create different page types in the Demo Projects application, including Interactive Grid, Smart Filters, and Content Row pages. These pages allow users to search, filter, and manage project tasks and statuses. This hands-on experience will give you insight into how to effectively build and customize Oracle APEX applications to meet various business needs.
 
 Estimated Time: 20 minutes
@@ -8,17 +10,17 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will be able to:
 
-- Create an Interactive Grid to search and edit project tasks.
+* Create an Interactive Grid to search and edit project tasks.
 
-- Implement Smart Filters to allow efficient filtering of project tasks.
+* Implement Smart Filters to allow efficient filtering of project tasks.
 
-- Design a Content Row page to display task details with selection and action capabilities.
+* Design a Content Row page to display task details with selection and action capabilities.
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-create-app-from-spreadsheet.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshop:
+Stuck or Missed out on completing the previous labs? Don’t worry! You can download the application from **[SQL script: labfiles/demo-projects-create-app-from-spreadsheet.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-create-app-from-spreadsheet.sql)** and import it into your workspace. To run the app, please run the steps described in the following workshop:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Add Interactive Grid to Demo Projects Application
 
@@ -38,15 +40,15 @@ In this task, you will create an Interactive Grid to display and manage tasks fr
 
 4. For page attributes, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **4**
+        * Page Number: **4**
 
-        - Page Name: **Project Tasks**
+        * Page Name: **Project Tasks**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**
+    * Data Source > Table/View Name: **DEMO_PROJECTS**
 
-    - Navigation > Use Breadcrumb: Toggle **OFF**
+    * Navigation > Use Breadcrumb: Toggle **OFF**
 
       Click **Create Page**.
 
@@ -72,15 +74,15 @@ In this lab, you create a Smart Filters page on the **DEMO_PROJECTS** table.
 
 3. In **Create Smart Filters** wizard, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **8**
+        * Page Number: **8**
 
-        - Name: **Project Tasks Search**
+        * Name: **Project Tasks Search**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**
+    * Data Source > Table/View Name: **DEMO_PROJECTS**
 
-    - Navigation > Use Breadcrumb: Toggle **OFF**.
+    * Navigation > Use Breadcrumb: Toggle **OFF**.
 
       Click **Next**.
 
@@ -114,9 +116,9 @@ In this task, you create a **Content Row** report with selection support on the 
 
 3. On **Create Blank Page** wizard, enter/select the following:
 
-    - Page Number: **3**
+    * Page Number: **3**
 
-    - Name: **Tasks Status**
+    * Name: **Tasks Status**
 
       Click **Create Page**.
 
@@ -128,11 +130,11 @@ In this task, you create a **Content Row** report with selection support on the 
 
 5. In the property editor, enter/select the following:
 
-    - Identification > Name: **Selection Support**
+    * Identification > Name: **Selection Support**
 
-    - Appearance > Template Defaults: Click **Use Template Options**
+    * Appearance > Template Defaults: Click **Use Template Options**
 
-        - Common > Header: **Hidden**
+        * Common > Header: **Hidden**
 
         Click **OK**.
 
@@ -144,19 +146,19 @@ In this task, you create a **Content Row** report with selection support on the 
 
 7. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P3\_STATUS**
+        * Name: **P3\_STATUS**
 
-        - Type: **Select List**
+        * Type: **Select List**
 
-    - Label > Label: **Status**
+    * Label > Label: **Status**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query:
+        * SQL Query:
 
             ```
             <copy>
@@ -164,9 +166,9 @@ In this task, you create a **Content Row** report with selection support on the 
             </copy>
             ```
 
-        - Display Extra Values: Toggle **Off**
+        * Display Extra Values: Toggle **Off**
 
-        - Display Null Value: Toggle **Off**
+        * Display Null Value: Toggle **Off**
 
     ![Create election Support](./images/cr-page-item-detail.png " ")
 
@@ -176,15 +178,15 @@ In this task, you create a **Content Row** report with selection support on the 
 
 9. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P3\_SELECT\_ALL**
+        * Name: **P3\_SELECT\_ALL**
 
-        - Type: **Checkbox**
+        * Type: **Checkbox**
 
-    - Label > Label: **Select All**
+    * Label > Label: **Select All**
 
-    - Layout > Start New Row: Toggle **Off**
+    * Layout > Start New Row: Toggle **Off**
 
     ![Create election Support](./images/cr-page-item-detail1.png " ")
 
@@ -194,11 +196,11 @@ In this task, you create a **Content Row** report with selection support on the 
 
 11. In the property editor, enter/select the following:
 
-     - Under Identification:
+    * Under Identification:
 
-        - Name: **P3\_SELECTION_ID**
+        * Name: **P3\_SELECTION_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![Create election Support](./images/cr-page-item-detail2.png " ")
 
@@ -208,49 +210,49 @@ In this task, you create a **Content Row** report with selection support on the 
 
 13. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Update Tasks Status**
+        * Title: **Update Tasks Status**
 
-        - Type: **Content Row**
+        * Type: **Content Row**
 
-    - Source > Table Source: **DEMO\_PROJECTS**
+    * Source > Table Source: **DEMO\_PROJECTS**
 
     ![Create Region](./images/cr-region-details.png " ")
 
 14. Click **Attributes** and enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Overline: **&PROJECT.**
+        * Overline: **&PROJECT.**
 
-        - Title: **&TASK\_NAME.**
+        * Title: **&TASK\_NAME.**
 
-        - Description : **Task Assigned To: &ASSIGNED\_TO.**
+        * Description : **Task Assigned To: &ASSIGNED\_TO.**
 
-        - Miscellaneous: **Cost: &COST.**
+        * Miscellaneous: **Cost: &COST.**
 
-        - Display Avatar: Toggle **ON**
+        * Display Avatar: Toggle **ON**
 
-        - Display Badge: Toggle the button to **ON**
+        * Display Badge: Toggle the button to **ON**
 
-    - Avatar > Icon: **fa-tasks**
+    * Avatar > Icon: **fa-tasks**
 
-    - Under Badge:
+    * Under Badge:
 
-        - Label: **PROJECT**
+        * Label: **PROJECT**
 
-        - Value: **STATUS**
+        * Value: **STATUS**
 
-        - State: **ASSIGNED\_TO**
+        * State: **ASSIGNED\_TO**
 
-    - Under Row Selection:
+    * Under Row Selection:
 
-        - Type: **Multiple Selection**
+        * Type: **Multiple Selection**
 
-        - Current Selection Page Item: **P3\_SELECTION\_ID**
+        * Current Selection Page Item: **P3\_SELECTION\_ID**
 
-        - Select All Page Item: **P3\_SELECT\_ALL**
+        * Select All Page Item: **P3\_SELECT\_ALL**
 
     ![Attributes](./images/cr-attributes.png " ")
 
@@ -262,21 +264,21 @@ In this task, you create a **Content Row** report with selection support on the 
 
 16. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Update**
+        * Button Name: **Update**
 
-        - Label: **Update**
+        * Label: **Update**
 
-    - Layout > Slot: **Change**
+    * Layout > Slot: **Change**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Hot: Toggle **ON**
+        * Hot: Toggle **ON**
 
-        - Icon: **fa-save**
+        * Icon: **fa-save**
 
     ![Create Button](./images/cr-button-details.png " ")
 
@@ -290,9 +292,9 @@ In this task, you create a **Content Row** report with selection support on the 
 
 19. Click **Show** and in the property editor, enter/select the following:
 
-    - Identification > Action: **Execute Server-side Code**
+    * Identification > Action: **Execute Server-side Code**
 
-    - Settings > PL/SQL Code: Copy and paste the below code in the code editor:
+    * Settings > PL/SQL Code: Copy and paste the below code in the code editor:
 
         ```
         <copy>
@@ -312,7 +314,7 @@ In this task, you create a **Content Row** report with selection support on the 
         </copy>
         ```
 
-    - Items to Submit: **P3\_STATUS,P3\_SELECTION\_ID**
+    * Items to Submit: **P3\_STATUS,P3\_SELECTION\_ID**
 
     ![Create Dynamic Action](./images/cr-dynamic-action-details.png " ")
 
@@ -322,13 +324,13 @@ In this task, you create a **Content Row** report with selection support on the 
 
 21. In the property editor, enter/select the following:
 
-    - Identification > Action: **Refresh**
+    * Identification > Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Update Tasks Status**
+        * Region: **Update Tasks Status**
 
     ![True Action](./images/cr-true-detail.png " ")
 
@@ -348,5 +350,5 @@ You now know how to create Interactive Grid, Smart Filters and Content Row pages
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

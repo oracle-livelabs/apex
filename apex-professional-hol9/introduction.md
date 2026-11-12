@@ -8,19 +8,19 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In the last hands-on lab, you learned how to add page buttons and items to a page.
 
-Estimated Time: 15 minutes
+Estimated Workshop Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Create validations to ensure required fields are filled.
+* Create validations to ensure required fields are filled.
 
-- Implement processes to create orders and manage the shopping cart.
+* Implement processes to create orders and manage the shopping cart.
 
-- Add branching logic to transition between pages efficiently.
+* Add branching logic to transition between pages efficiently.
 
-- Clear the shopping cart and proceed to checkout seamlessly.
+* Clear the shopping cart and proceed to checkout seamlessly.
 
 <!--### Downloads
 
@@ -42,8 +42,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-creating-shopping-cart.md#acknowledgements).

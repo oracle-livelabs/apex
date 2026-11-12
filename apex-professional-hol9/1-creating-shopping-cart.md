@@ -10,29 +10,29 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create validations to ensure required fields are filled.
+* Create validations to ensure required fields are filled.
 
-- Implement processes to create orders and manage the shopping cart.
+* Implement processes to create orders and manage the shopping cart.
 
-- Add branching logic to efficiently transition between pages.
+* Add branching logic to efficiently transition between pages.
 
-- Clear the shopping cart and proceed to checkout seamlessly.
+* Clear the shopping cart and proceed to checkout seamlessly.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Create Validations on the Page
 
@@ -56,31 +56,32 @@ In this task, you will add validations to ensure that required fields on the sho
 
 5. In the property editor, enter/select the following:
 
-    - Identification > Name: **Validate Name**
+    * Identification > Name: **Validate Name**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Item is NOT NULL**
+        * Type: **Item is NOT NULL**
 
-        - Item: **P17\_CUSTOMER\_FULL_NAME**
+        * Item: **P17\_CUSTOMER\_FULL_NAME**
 
-    - Under Error:
+    * Under Error:
 
-        - Error Message: **Please enter your name.**
+        * Error Message: **Please enter your name.**
 
-        - Associated Item: **P17\_CUSTOMER\_FULLNAME**
+        * Associated Item: **P17\_CUSTOMER\_FULLNAME**
 
-    - Server-side Condition > When Button Pressed: **Proceed**
+    * Server-side Condition > When Button Pressed: **Proceed**
 
     ![Navigate to Shopping Cart Page](./images/create-validation11.png " ")
 
 6. Create two more validations for the following items: **Email** and **Store**.
 
-    | Name           | Validation > Type | Validation > Item       | Error Message                      | Associated Item         | Server-side Condition > When Button Pressed |
-    | -------------- | ----------------- | ----------------------- | ------------------------------- |----------------------- | ------------- |
-    | Validate Email | Item is NOT NULL  | P17\_CUSTOMER\_EMAIL    | Please enter your email address | P17\_CUSTOMER\_EMAIL    | Proceed |
-    | Validate Store | Item is NOT NULL  | P17_STORE               | Please select a store           | P17_STORE               | Proceed |
-    {: title="Validation Properties"}
+    | Name | Validation > Type | Validation > Item | Error Message | Associated Item | Server-side Condition > When Button Pressed |
+    | -------------- | ----------------- | ----------------------- | ------------------------------- | ----------------------- | ------------- |
+    | Validate Email | Item is NOT NULL | P17\_CUSTOMER\_EMAIL | Please enter your email address | P17\_CUSTOMER\_EMAIL | Proceed |
+    | Validate Store | Item is NOT NULL | P17_STORE | Please select a store | P17_STORE | Proceed |
+
+    *Validation Properties*
 
     ![Customize Validation](./images/create-validation3.png " ")
 
@@ -95,29 +96,29 @@ This task focuses on creating a backend process that allows users to submit thei
     ![Create Page Process](./images/create-process1.png " ")
 
 2. In the Property Editor, enter/select the following:
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Checkout**
+        * Name: **Checkout**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Type: **PL/SQL Package**
+        * Type: **PL/SQL Package**
 
-        - Package: **MANAGE_ORDERS**.  You can type in the name or pick from the list.
+        * Package: **MANAGE_ORDERS**.  You can type in the name or pick from the list.
 
-        - Procedure or Function: **CREATE_ORDER**,  defined in the selected PL/SQL package. You can type in the name or pick from the list.
+        * Procedure or Function: **CREATE_ORDER**,  defined in the selected PL/SQL package. You can type in the name or pick from the list.
 
     ![Create and Configure Invoke API Process](./images/create-process2.png " ")
 
 3. Expand the **Checkout** process. Under **Parameters**, select **p_customer** and enter/select the following:
 
-    - Under Value:
+    * Under Value:
 
-        - Type: **Item**
+        * Type: **Item**
 
-        - Value: **P17\_CUSTOMER\_FULLNAME**
+        * Value: **P17\_CUSTOMER\_FULLNAME**
 
     ![Configure Invoke API Process](./images/create-invoke-api.png " ")
 
@@ -133,12 +134,12 @@ In this task, you will create a process to clear the shopping cart when the cust
 
 2. In the property editor, enter/select the following:
 
-    - Identification > Name: **clear_cart**
+    * Identification > Name: **clear_cart**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
 
         ```
-       <copy>
+        <copy>
         BEGIN
             manage_orders.clear_cart;
         END;
@@ -146,9 +147,9 @@ In this task, you will create a process to clear the shopping cart when the cust
 
         </copy>
 
-    - Success Message > Success Message: **Your cart has been successfully cleared**
+    * Success Message > Success Message: **Your cart has been successfully cleared**
 
-    - Server-side Condition > When Button Pressed: **Clear**
+    * Server-side Condition > When Button Pressed: **Clear**
 
     ![Create and Configure Background Process](./images/clear-cart.png " ")
 
@@ -190,26 +191,27 @@ In this task, you will create a branching process that redirects the user to the
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Go to Orders**
+    * Identification > Name: **Go to Orders**
 
-    - Target: Click **No Link Defined**.
+    * Target: Click **No Link Defined**.
 
-        - Type: **Page in this application**
+        * Type: **Page in this application**
 
-        - Page: **16**
+        * Page: **16**
 
-        - Set Items: Enter/select the following:
+        * Set Items: Enter/select the following:
 
-            | Name           | Value            |
+            | Name | Value |
             | -------------- | ---------------- |
             | P16\_ORDER | &P17\_ORDER\_ID. |
-            {: title="List of Taregt Item(s)"}
 
-        - Clear Cache: **16**.
+            *List of Taregt Item(s)*
+
+        * Clear Cache: **16**.
 
         Click **OK**.
 
-    - Server-side condition > When Button Pressed: **Proceed**.
+    * Server-side condition > When Button Pressed: **Proceed**.
 
     ![Configure Branch](./images/create-branch.png " ")
 
@@ -225,5 +227,5 @@ In the next lab, you explore the use of Dynamic Actions to manage the shopping c
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

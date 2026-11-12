@@ -6,17 +6,17 @@ Oracle APEX is a low-code application platform for Oracle Database. APEX Applica
 
 Once you complete this workshop, customers will be able to:
 
-- Review the items in the shopping cart.
-- Edit the quantity of the items.
-- Remove an item.
-- Clear the shopping cart.
-- Proceed to checkout.
+* Review the items in the shopping cart.
+* Edit the quantity of the items.
+* Remove an item.
+* Clear the shopping cart.
+* Proceed to checkout.
 
 ### Recap
 
 In the last hands-on lab, you learned how to customize Interactive Grid as a developer and end user.
 
-Estimated Time: 15 minutes
+Estimated Workshop Time: 15 minutes
 
 ### Objectives
 
@@ -42,8 +42,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](creating-shopping-cart.md#acknowledgements).

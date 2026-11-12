@@ -10,13 +10,13 @@ Estimated Time: 35 minutes
 
 In this lab, you will:
 
-- Implement Email Verification for Forgot Password and User SignUp.
-- Set up Reset Password and SignUp functionality.
-- Implement Login with Google as an authentication option.
+* Implement Email Verification for Forgot Password and User SignUp.
+* Set up Reset Password and SignUp functionality.
+* Implement Login with Google as an authentication option.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab11.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab11.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab11.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
 
 ## Task 1: Creating Email Verification for Forgot Password
 
@@ -32,17 +32,17 @@ In this task, you will create a Forgot Password page with email verification fun
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **100002**
+        * Page Number: **100002**
 
-        - Name: **Email Verification for Forgot Password**
+        * Name: **Email Verification for Forgot Password**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
        Click **Create Page**.
 
@@ -50,7 +50,7 @@ In this task, you will create a Forgot Password page with email verification fun
 
 4. In the property editor, update the following:
 
-     - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
     ![close dialog](images/12-1-page-public.png " ")
 
@@ -60,7 +60,7 @@ In this task, you will create a Forgot Password page with email verification fun
 
 6. In the property editor, enter/select the following:
 
-    - Identification > Name: **Reset Password**
+    * Identification > Name: **Reset Password**
 
     ![close dialog](images/12-1-reset-pass.png " ")
 
@@ -70,7 +70,7 @@ In this task, you will create a Forgot Password page with email verification fun
 
 8. In the property editor, enter/select the following:
 
-    - Identification > Name: **EMAIL**
+    * Identification > Name: **EMAIL**
 
     ![close dialog](images/12-1-page-item-name.png " ")
 
@@ -80,21 +80,21 @@ In this task, you will create a Forgot Password page with email verification fun
 
 10. In the property editor, enter/select the following:
 
-    - Identification > Name: **Valid Email Address**
+    * Identification > Name: **Valid Email Address**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Item matches Regular Expression**
+        * Type: **Item matches Regular Expression**
 
-        - Item: **EMAIL**
+        * Item: **EMAIL**
 
-        - Regular Expression : **^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$**
+        * Regular Expression : **^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+(?:\.[a-zA-Z0-9-]+)*$**
 
-    - Under Error:
+    * Under Error:
 
-        - Error Message: **Invalid Email Address!**
+        * Error Message: **Invalid Email Address!**
 
-        - Associated Item: **-Select-**
+        * Associated Item: **-Select-**
 
     ![close dialog](images/12-1-valid-email.png " ")
 
@@ -104,13 +104,13 @@ In this task, you will create a Forgot Password page with email verification fun
 
 12. In the property editor, enter/select the following:
 
-     - Identification > Name: **Email Validation**
+    * Identification > Name: **Email Validation**
 
-     - Under Validation:
+    * Under Validation:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query: Copy and paste the below query:
+        * SQL Query: Copy and paste the below query:
 
             ```
             <copy>
@@ -118,9 +118,9 @@ In this task, you will create a Forgot Password page with email verification fun
             </copy>
             ```
 
-     - Error > Error Message: **No Account Found!**
+    * Error > Error Message: **No Account Found!**
 
-     - Server-side Condition > Type: **Inline Validation Errors NOT displayed**
+    * Server-side Condition > Type: **Inline Validation Errors NOT displayed**
 
     ![close dialog](images/12-1-email-validation.png " ")
 
@@ -130,15 +130,15 @@ In this task, you will create a Forgot Password page with email verification fun
 
 14. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Send**
+        * Button Name: **Send**
 
-        - Label: **Send Reset Password Link**
+        * Label: **Send Reset Password Link**
 
-    - Under Appearance > Template Options: Click **Use Template Defaults**
+    * Under Appearance > Template Options: Click **Use Template Defaults**
 
-        - Type: **Primary**
+        * Type: **Primary**
 
         Click **OK**
 
@@ -150,63 +150,63 @@ In this task, you will create a Forgot Password page with email verification fun
 
 16. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Send Verification Email**
+        * Name: **Send Verification Email**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **APEX_MAIL**
+        * Package: **APEX_MAIL**
 
-        - Procedure or Function: **SEND**
+        * Procedure or Function: **SEND**
 
-    - Success Message > Success Message: **Reset Password Link sent to your email address**.
+    * Success Message > Success Message: **Reset Password Link sent to your email address**.
 
-    - Server-side Condition > When Button Pressed: **Send**
+    * Server-side Condition > When Button Pressed: **Send**
 
     ![close dialog](images/12-1-send-verification-email-process.png " ")
 
 17. Under **Send Verification Email** process, expand **Parameters** and update the following:
 
-    - **p\_to**:
+    * **p\_to**:
 
-        - Under Value:
+        * Under Value:
 
-             - Type: **Item**
+            * Type: **Item**
 
-             - Item: **EMAIL**
+            * Item: **EMAIL**
 
     ![close dialog](images/12-1-p-to.png " ")
 
-    - **p\_from**:
+    * **p\_from**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **noreply.obs@oracle.com**
+            * Static Value: **<noreply.obs@oracle.com>**
 
     ![close dialog](images/12-1-p-from.png " ")
 
-    - **p\_body**:
+    * **p\_body**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
+            * Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
 
     ![close dialog](images/12-1-p-body.png " ")
 
-    - **p\_body\_html**:
+    * **p\_body\_html**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Function Body**
+            * Type: **Function Body**
 
-            - PL/SQL Function Body: Copy and Paste the below code:
+            * PL/SQL Function Body: Copy and Paste the below code:
 
                 ```
                 <copy>
@@ -240,13 +240,13 @@ In this task, you will create a Forgot Password page with email verification fun
 
     ![close dialog](images/12-1-p-body-html.png " ")
 
-    - **p\_subj**:
+    * **p\_subj**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **Reset Password**
+            * Static Value: **Reset Password**
 
     ![close dialog](images/12-1-17-p-subt.png " ")
 
@@ -256,12 +256,12 @@ In this task, you will create a Forgot Password page with email verification fun
 
 19. In the property editor, enter/select the following:
 
-    - Identification > Name: **Go To Login Page**
+    * Identification > Name: **Go To Login Page**
 
-    - Under Behavior:
-        - Target: Click **No Link Defined**
+    * Under Behavior:
+        * Target: Click **No Link Defined**
 
-            - Page: **9999**
+            * Page: **9999**
 
             Click **OK**.
 
@@ -281,32 +281,32 @@ In this task, you will create a Forgot Password page with email verification fun
 
 23. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Forgot_Password**
+        * Button Name: **Forgot_Password**
 
-        - Label: **Forgot Password**
+        * Label: **Forgot Password**
 
-    - Under Appearance > Template options: Click **Use Template Defaults**
-        - Size: **Small**
+    * Under Appearance > Template options: Click **Use Template Defaults**
+        * Size: **Small**
 
-        - Type: **Danger**
+        * Type: **Danger**
 
-        - Width: **Stretch**
+        * Width: **Stretch**
 
-        - Spacing Top: **Small**
+        * Spacing Top: **Small**
 
           Click **OK**.
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to page in this application**
+        * Action: **Redirect to page in this application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Page: **100002**
+            * Page: **100002**
 
-            - Clear Cache: **100002**
+            * Clear Cache: **100002**
 
             Click **OK**.
 
@@ -316,15 +316,15 @@ In this task, you will create a Forgot Password page with email verification fun
 
 24. Click **LOGIN** button and update the following:
 
-    - Under Appearance > Template options: Click **Use Template Defaults**
+    * Under Appearance > Template options: Click **Use Template Defaults**
 
-        - Type: **Success**
+        * Type: **Success**
 
           Click **OK**.
 
     ![close dialog](images/12-1-login-btn.png " ")
 
-25. Click **Save**. 
+25. Click **Save**.
 
 ## Task 2: Creating  Reset Password
 
@@ -342,17 +342,17 @@ In this task, you will create a Reset Password page that allows users to securel
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **100003**
+        * Page Number: **100003**
 
-        - Name: **Reset Password**
+        * Name: **Reset Password**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
        Click **Create Page**.
 
@@ -360,43 +360,43 @@ In this task, you will create a Reset Password page that allows users to securel
 
 4. In the Property editor, update the following:
 
-    - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
     ![close dialog](images/12-2-rest-page-public.png " ")
 
 5. In the left pane, right-click **Body** and select **Create Region**.
 
-   ![close dialog](images/12-2-create-region-reset.png " ")
+    ![close dialog](images/12-2-create-region-reset.png " ")
 
 6. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Update Current User**
+        * Name: **Update Current User**
 
-        - Type: **Form**
+        * Type: **Form**
 
-    - Source > Table Name: **OBS_USERS**
+    * Source > Table Name: **OBS_USERS**
 
     ![close dialog](images/12-2-update-current-user1.png " ")
 
 7. Under **Update Current User** region, select all page items except **P100003\_EMAIL** and **P100003\_PASSWORD**, right-click and select **Delete**.
 
-   ![close dialog](images/12-2-del-page-items.png " ")
+    ![close dialog](images/12-2-del-page-items.png " ")
 
 8. Select **P100003\_EMAIL** and update the following:
 
-    - Identification > Type: **Display Only**
+    * Identification > Type: **Display Only**
 
-    - Source > Primary Key: **Toggle On**
+    * Source > Primary Key: **Toggle On**
 
-    - Security > Session State Protection: **Unrestricted**
+    * Security > Session State Protection: **Unrestricted**
 
     ![close dialog](images/12-2-emaildetails.png " ")
 
 9. Select **P100003\_PASSWORD** and update the following:
 
-    - Identification > Type: **Password**
+    * Identification > Type: **Password**
 
     ![close dialog](images/12-2-password-type.png " ")
 
@@ -406,21 +406,21 @@ In this task, you will create a Reset Password page that allows users to securel
 
 11. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Not Null Validation**
+    * Identification > Name: **Not Null Validation**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Expression**
+        * Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below expression:
+        * PL/SQL Function Body: Copy and paste the below expression:
 
-         ```
+        ```
         <copy>
         :P100003_Password is not NULL
-       </copy>
+        </copy>
         ```
 
-        - Error > Error Message: **Password field should have some value.**
+        * Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/12-2-not-null-validation.png " ")
 
@@ -430,11 +430,11 @@ In this task, you will create a Reset Password page that allows users to securel
 
 13. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P100003\_CONFIRM\_PASSWORD**
+        * Name: **P100003\_CONFIRM\_PASSWORD**
 
-        - Type: **Password**
+        * Type: **Password**
 
     ![close dialog](images/12-2-confirm-password-reset.png " ")
 
@@ -444,21 +444,22 @@ In this task, you will create a Reset Password page that allows users to securel
 
 15. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Not Null Validation CF**
+    * Identification > Name: **Not Null Validation CF**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Expression**
+        * Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below expression:
+        * PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
             :P100003_CONFIRM_PASSWORD is not NULL
             </copy>
-        ```
 
-    - Error > Error Message: **Password field should have some value.**
+            ```
+
+    * Error > Error Message: **Password field should have some value.**
 
     ![close dialog](images/12-2-15-not-null-cf.png " ")
 
@@ -468,21 +469,21 @@ In this task, you will create a Reset Password page that allows users to securel
 
 17. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Compare Passwords**
+    * Identification > Name: **Compare Passwords**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Expression**
+        * Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below expression:
+        * PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
             :P100003_Password = :P100003_CONFIRM_PASSWORD
             </copy>
-           ```
+            ```
 
-    - Error > Error Message: **Confirm Password is not same as Password entered above.**
+    * Error > Error Message: **Confirm Password is not same as Password entered above.**
 
     ![close dialog](images/12-2-17-compare-pass-valid.png " ")
 
@@ -492,17 +493,17 @@ In this task, you will create a Reset Password page that allows users to securel
 
 19. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Buttons**
+    * Identification > Name: **Buttons**
 
-    - Layout > Slot: **Region Body**
+    * Layout > Slot: **Region Body**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Buttons Container**
+        * Template: **Buttons Container**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
             Click **OK**.
 
@@ -514,19 +515,19 @@ In this task, you will create a Reset Password page that allows users to securel
 
 21. In the Property editor, enter/select the following:
 
-    - Identification > Button Name: **CANCEL**
+    * Identification > Button Name: **CANCEL**
 
-    - Layout > Slot: **Close**
+    * Layout > Slot: **Close**
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to page in this Application**
+        * Action: **Redirect to page in this Application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Page: **15010**
+            * Page: **15010**
 
-            - Clear Cache: **100003**
+            * Clear Cache: **100003**
 
             Click **OK**.
 
@@ -538,9 +539,9 @@ In this task, you will create a Reset Password page that allows users to securel
 
 23. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Cancel Dialog**
+    * Identification > Name: **Cancel Dialog**
 
-    - When > Event: **Click**
+    * When > Event: **Click**
 
     ![close dialog](images/12-2-23-canel-dialog-reset.png " ")
 
@@ -550,23 +551,23 @@ In this task, you will create a Reset Password page that allows users to securel
 
 25. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **SAVE**
+        * Button Name: **SAVE**
 
-        - Label: **Apply Changes**
+        * Label: **Apply Changes**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Appearance > Hot: **Toggle On**
+    * Appearance > Hot: **Toggle On**
 
-    - Behavior > Database Action: **SQL UPDATE action**
+    * Behavior > Database Action: **SQL UPDATE action**
 
     ![close dialog](images/12-2-25-save-btn-reset.png " ")
 
 26. Select  **Buttons** and in the Property editor, update the following:
 
-    - Layout > Sequence: **70**
+    * Layout > Sequence: **70**
 
     ![close dialog](images/12-2-26-buttons-layout.png " ")
 
@@ -576,15 +577,15 @@ In this task, you will create a Reset Password page that allows users to securel
 
 28. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Process from Update current user**
+        * Name: **Process from Update current user**
 
-        - Type: **Form - Automatic Row Processing (DML)**
+        * Type: **Form - Automatic Row Processing (DML)**
 
-        - Form Region: **Update Current User**
+        * Form Region: **Update Current User**
 
-    - Success Message > Success Message: **Updated Profile details successfully!**
+    * Success Message > Success Message: **Updated Profile details successfully!**
 
     ![close dialog](images/12-2-current-user-process.png " ")
 
@@ -594,13 +595,13 @@ In this task, you will create a Reset Password page that allows users to securel
 
 30. In the property editor, enter/select the following:
 
-    - Identification > Name: **Go to My Profile**
+    * Identification > Name: **Go to My Profile**
 
-    - Under Behavior > Target: Click **No Link Defined**
+    * Under Behavior > Target: Click **No Link Defined**
 
-         - Page: **12**
+        * Page: **12**
 
-         - Clear Cache: **10**
+        * Clear Cache: **10**
 
          Click **OK**
 
@@ -618,17 +619,17 @@ In this task, you will create a Reset Password page that allows users to securel
 
 34. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **12**
+        * Page Number: **12**
 
-        - Name: **LOGIN_HOME**
+        * Name: **LOGIN_HOME**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
        Click **Create Page**.
 
@@ -640,11 +641,11 @@ In this task, you will create a Reset Password page that allows users to securel
 
 36. In the property editor, enter/select the following:
 
-    - Identification > Name: **Go To Home Page**
+    * Identification > Name: **Go To Home Page**
 
-    - Under Behavior > Target: Click **No Link Defined**
+    * Under Behavior > Target: Click **No Link Defined**
 
-         - Page: **10**
+        * Page: **10**
 
          Click **OK**
 
@@ -666,31 +667,31 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **100001**
+        * Page Number: **100001**
 
-        - Name: **Email Verification for User SignUp**
+        * Name: **Email Verification for User SignUp**
 
-    - Under Data Source:
+    * Under Data Source:
 
-        - Table/View Name: **OBS\_UNVERIFIED\_USERS**
+        * Table/View Name: **OBS\_UNVERIFIED\_USERS**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Next**.
 
     ![user-signup-page-details](images/12-3-page-prop.png " ")
 
-    - Under Branch Pages:
+    * Under Branch Pages:
 
-        - Branch Here on Submit: **9999**
+        * Branch Here on Submit: **9999**
 
-        - Cancel and Go To Page: **9999**
+        * Cancel and Go To Page: **9999**
 
     Click **Create Page**.
 
@@ -698,7 +699,7 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 4. In the property editor, update the following:
 
-     - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
     ![page-public](images/12-3-page-public.png " ")
 
@@ -712,13 +713,13 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 7. In the property editor, enter/select the following:
 
-    - Identification > Name: **If Email Already Present**
+    * Identification > Name: **If Email Already Present**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **No Rows returned**
+        * Type: **No Rows returned**
 
-        - SQL Query: Copy and paste the below query:
+        * SQL Query: Copy and paste the below query:
 
             ```
             <copy>
@@ -726,21 +727,21 @@ In this task, you will create an Email Verification process for user sign-up. Th
             </copy>
             ```
 
-    - Error > Error Message: **Account already existed for this email ID.**
+    * Error > Error Message: **Account already existed for this email ID.**
 
-    - Server-side Condition > Type: **Inline Validation Errors NOT displayed**
+    * Server-side Condition > Type: **Inline Validation Errors NOT displayed**
 
     ![valid-email](images/12-3-email-vald-prop.png " ")
 
 8. Under **Email Verification for User SignUp** region, select **CREATE** button and update the following:
 
-    - Identification > Label: **Send SignUp Email**
+    * Identification > Label: **Send SignUp Email**
 
     ![valid-email](images/12-3-create-button-label.png " ")
 
 9. Navigate to **Processing** tab, select **Process form Email Verification for User SignUp** under **Processing** and update the following:
 
-    - Success Message > Success Message: **SignUp Link sent to your email address.**
+    * Success Message > Success Message: **SignUp Link sent to your email address.**
 
     ![success-message](images/12-3-nav-process.png " ")
 
@@ -750,61 +751,61 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 11. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Send Verification Email**
+        * Name: **Send Verification Email**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **APEX_MAIL**
+        * Package: **APEX_MAIL**
 
-        - Procedure or Function: **SEND**
+        * Procedure or Function: **SEND**
 
-    - Server-side Condition > When Button Pressed: **CREATE**
+    * Server-side Condition > When Button Pressed: **CREATE**
 
     ![send-verification-email-process](images/12-3-processs-prop.png " ")
 
 12. Under **Send Verification Email** process, expand **Parameters** and update the following:
 
-    - **p\_to**:
+    * **p\_to**:
 
-        - Under Value:
+        * Under Value:
 
-             - Type: **Item**
+            * Type: **Item**
 
-             - Item: **P100001\_EMAIL**
+            * Item: **P100001\_EMAIL**
 
     ![p-to](images/12-3-p-to.png " ")
 
-    - **p\_from**:
+    * **p\_from**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **noreply.obs@oracle.com**
+            * Static Value: **<noreply.obs@oracle.com>**
 
     ![p-from](images/12-3-p-from.png " ")
 
-    - **p\_body**:
+    * **p\_body**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
+            * Static Value: **To view the content of this message, please use an HTML-enabled mail client.**
 
     ![p-body](images/12-3-p-body.png " ")
 
-    - **p\_body\_html**:
+    * **p\_body\_html**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Function Body**
+            * Type: **Function Body**
 
-            - PL/SQL Function Body: Copy and Paste the below code:
+            * PL/SQL Function Body: Copy and Paste the below code:
 
                 ```
                 <copy>
@@ -838,13 +839,13 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
     ![p-body-html](images/12-3-p-body-html-param.png " ")
 
-    - **p\_subj**:
+    * **p\_subj**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Static Value**
+            * Type: **Static Value**
 
-            - Static Value: **Set up your online bookstore account**.
+            * Static Value: **Set up your online bookstore account**.
 
     ![p-subt](images/12-3-p-subj.png " ")
 
@@ -860,29 +861,29 @@ In this task, you will create an Email Verification process for user sign-up. Th
 
 16. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **SignUp**
+        * Button Name: **SignUp**
 
-        - Label: **New here? SignUp**
+        * Label: **New here? SignUp**
 
-    - Under Appearance > Template Options: Click **Use Template Defaults**
+    * Under Appearance > Template Options: Click **Use Template Defaults**
 
-        - Size: **Small**
+        * Size: **Small**
 
-        - Style: **Display as Link**
+        * Style: **Display as Link**
 
         Click **OK**.
 
     ![image](images/12-3-16-signup-button-prop1.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this application**
+        * Action: **Redirect to Page in this application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Page: **100001**
+            * Page: **100001**
 
             Click **OK**.
 
@@ -904,31 +905,31 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **100000**
+        * Page Number: **100000**
 
-        - Name: **SignUp**
+        * Name: **SignUp**
 
-    - Under Data Source:
+    * Under Data Source:
 
-        - Table/View Name: **OBS\_USERS**
+        * Table/View Name: **OBS\_USERS**
 
-    - Under Navigation::
+    * Under Navigation::
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Next**.
 
     ![signup-page-details](images/12-4-form-page-details.png " ")
 
-    - Under Branch Pages:
+    * Under Branch Pages:
 
-        - Branch Here on Submit: **10**
+        * Branch Here on Submit: **10**
 
-        - Cancel and Go To Page: **10**
+        * Cancel and Go To Page: **10**
 
     Click **Create Page**.
 
@@ -936,7 +937,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 4. In the Property editor, update the following:
 
-    - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
     ![page-public](images/12-4-page-public.png " ")
 
@@ -946,7 +947,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 6. Select **P100000\_USERNAME**, **P100000\_FULL\_NAME** and update the following:
 
-    - Identification > Type: **Text Field**
+    * Identification > Type: **Text Field**
 
     ![page-public](images/12-4-page-items-text-field.png " ")
 
@@ -956,25 +957,25 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 8. Select **P100000\_PASSWORD** and in the property editor, update the following:
 
-    - Identification > Type: **Password**
+    * Identification > Type: **Password**
 
-    - Appearance > Template: **Required - Floating**
+    * Appearance > Template: **Required - Floating**
 
-    - Validation > Value Required: **Toggle On**
+    * Validation > Value Required: **Toggle On**
 
     ![page-public](images/12-4-password-prop.png " ")
 
 9. Select **P100000\_PROFILE\_PIC** and in the Property editor, enter/select the following:
 
-    - Identification > Type: **Image Upload**
+    * Identification > Type: **Image Upload**
 
-    - Storage > MIME Type Column: **MIME_TYPE**
+    * Storage > MIME Type Column: **MIME_TYPE**
 
     ![page-public](images/12-4-profile-pic-prop.png " ")
 
 10. Select **P100000\_IS\_ADMIN** and in the Property editor update the following:
 
-    - Identification > Type: **Hidden**
+    * Identification > Type: **Hidden**
 
     ![page-public](images/12-4-is-admin-prop.png " ")
 
@@ -992,15 +993,15 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 14. In the property editor, enter/select the following:
 
-    - Identification > Name: **Remove From Unverified Users Table**
+    * Identification > Name: **Remove From Unverified Users Table**
 
-    - Sources > PL/SQL Code: Copy and paste the below code:
+    * Sources > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
         delete from obs_unverified_users where email= lower(:P100000_EMAIL);
         </copy>
-         ```
+        ```
 
     ![page-public](images/12-4-process-prop.png " ")
 
@@ -1010,35 +1011,35 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 16. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Set Username Cookie**
+        * Name: **Set Username Cookie**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **APEX\_AUTHENTICATION**
+        * Package: **APEX\_AUTHENTICATION**
 
-        - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
+        * Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
-    - Server-side Condition > When Button Pressed: **CREATE**
+    * Server-side Condition > When Button Pressed: **CREATE**
 
     ![page-public](images/12-4-process1-prop.png " ")
 
 17. Under **Set Username Cookie** process, expand **Parameters** and update the following:
 
-    - Select **p\_username**:
+    * Select **p\_username**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Expression**
+            * Type: **Expression**
 
-            - PL/SQL Expression: **lower(:P100000_EMAIL)**
+            * PL/SQL Expression: **lower(:P100000_EMAIL)**
 
     ![page-public](images/12-4-p-username.png " ")
 
-    - Select **p\_cookie\_name**, right-click and select **Delete**
+    * Select **p\_cookie\_name**, right-click and select **Delete**
 
     ![page-public](images/12-4-p-cookie-name.png " ")
 
@@ -1048,29 +1049,29 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 19. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Login**
+        * Name: **Login**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **APEX_AUTHENTICATION**
+        * Package: **APEX_AUTHENTICATION**
 
-        - Procedure or Function: **LOGIN**
+        * Procedure or Function: **LOGIN**
 
     ![page-public](images/12-4-process2-prop.png " ")
 
 20. Under **Login** process, expand **Parameters** and update the following:
 
-    - Select **p\_username**:
+    * Select **p\_username**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Item**
+            * Type: **Item**
 
-            - Item: **P100000_EMAIL**
+            * Item: **P100000_EMAIL**
 
     ![page-public](images/12-4-username.png " ")
 
@@ -1080,13 +1081,13 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 22. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Clear Page(s) Cache**
+        * Name: **Clear Page(s) Cache**
 
-        - Type: **Clear Session State**
+        * Type: **Clear Session State**
 
-    - Server-side Condition > When Button pressed: **CREATE**
+    * Server-side Condition > When Button pressed: **CREATE**
 
     ![page-public](images/12-4-process3-prop.png " ")
 
@@ -1116,25 +1117,25 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 5. Under Project Configuration, enter the following:
 
-    - Under **App information**:
+    * Under **App information**:
 
-        - App name: **Online Bookstore**
+        * App name: **Online Bookstore**
 
-        - User support email: Enter your **Email Address**
+        * User support email: Enter your **Email Address**
 
         Click **Next**
 
     ![Click My Apps](images/12-5-5.1-app-information.png " ")
 
-     - Under **Audience** > Select **External** and click **NEXT**
+    * Under **Audience** > Select **External** and click **NEXT**
 
     ![Click My Apps](images/12-5-5.2-audience.png " ")
 
-    - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
+    * Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
     ![Click My Apps](images/12-5-5.3-contact-information.png " ")
 
-    - Under **Finish** >  Tick the checkbox and click **CONTINUE**
+    * Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
     ![Click My Apps](images/12-5-5.4-finish.png " ")
 
@@ -1148,13 +1149,13 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 8. Enter the following:
 
-     - For Application type: Select **Web Application**
+    * For Application type: Select **Web Application**
 
-     - For Name: Enter **Online Bookstore Authentication**
+    * For Name: Enter **Online Bookstore Authentication**
 
-   Under Authorized redirect URIs, click **+Add URl**
+    Under Authorized redirect URIs, click **+Add URl**
 
-     - For URls 1: Enter https://apex.oracle.com/pls/apex/apex_authentication.callback
+    * For URls 1: Enter <https://apex.oracle.com/pls/apex/apex_authentication.callback>
 
      Click **CREATE**.
 
@@ -1188,14 +1189,14 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 16. In the **Web Credentials** enter the following and click **Create**.
 
-    - Under **Attributes**:
+    * Under **Attributes**:
 
-        - Name: **Google Authentication**
-        - Static Id: **Google_Authentication**
-        - Authentication Type: Select **OAuth2 Client Credentials**.
-        - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
-        - Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
-        - Verify Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
+        * Name: **Google Authentication**
+        * Static Id: **Google_Authentication**
+        * Authentication Type: Select **OAuth2 Client Credentials**.
+        * Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
+        * Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
+        * Verify Client Secret or Password: Enter the **Client secret** you copied in **Step 10**.
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
@@ -1223,23 +1224,23 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 22. In the **Authentication Scheme**, Enter the following:
 
-    - Under **Name**:
+    * Under **Name**:
 
-        - Name: **GOOGLE**.
+        * Name: **GOOGLE**.
 
-        - Scheme Type: **Social Sign-In**.
+        * Scheme Type: **Social Sign-In**.
 
-    - Under **Settings**:
+    * Under **Settings**:
 
-        - Credential Store: **Google Authentication**
+        * Credential Store: **Google Authentication**
 
-        - Authentication Provider: Select **Google**
+        * Authentication Provider: Select **Google**
 
-        - Scope: **profile,email**
+        * Scope: **profile,email**
 
-        - Username: **email**
+        * Username: **email**
 
-        - Additional User Attributes: **profile,picture,email,username**
+        * Additional User Attributes: **profile,picture,email,username**
 
     Click **Create Authentication Scheme**
 
@@ -1251,11 +1252,11 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 24. In the Property editor, enter/select the following:
 
-    - Under Login Processing:
+    * Under Login Processing:
 
-        - Post-Authentication Procedure Name: **OBS\_AUTH.google\_post\_authenticate**
+        * Post-Authentication Procedure Name: **OBS\_AUTH.google\_post\_authenticate**
 
-        - Switch in Session: **Enabled**
+        * Switch in Session: **Enabled**
 
     Click **Apply Changes**
 
@@ -1267,7 +1268,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 26. Add the following code to the spec and body of the package above the **'end "OBS_AUTH";'** and click **Save and Compile**.
 
-    - Specification: Copy and paste the code below:
+    * Specification: Copy and paste the code below:
 
         ```
         <copy>
@@ -1275,7 +1276,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
         </copy>
         ```
 
-    - Body: Copy and paste the code below:
+    * Body: Copy and paste the code below:
 
         ```
         <copy>
@@ -1327,7 +1328,7 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 28. In the Rendering Tab, select page item **P9999_USERNAME**
 
-    - Appearance > Value Placeholder: **Email Address or Username**
+    * Appearance > Value Placeholder: **Email Address or Username**
 
     ![Click My Apps](images/12-5-28-username-placeholder.png " ")
 
@@ -1337,29 +1338,29 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 30. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Google**
+        * Button Name: **Google**
 
-        - Label: **Login/Signup with Google Account**
+        * Label: **Login/Signup with Google Account**
 
-    - Under Appearance > Template Options: Click **Use Template Defaults**
+    * Under Appearance > Template Options: Click **Use Template Defaults**
 
-        - Size: **Large**
+        * Size: **Large**
 
         Click **OK**.
 
     ![Click My Apps](images/12-5-30-google-prop1.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this application**
+        * Action: **Redirect to Page in this application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Target > Page: **12**
+            * Target > Page: **12**
 
-            - Advanced > Request: **APEX_AUTHENTICATION=GOOGLE**
+            * Advanced > Request: **APEX_AUTHENTICATION=GOOGLE**
 
             Click **OK**.
 
@@ -1371,27 +1372,27 @@ In this task, you will set up the SignUp functionality, allowing users to regist
 
 32. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Login with Google**
+        * Name: **Login with Google**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **APEX\_AUTHENTICATION**
+        * Package: **APEX\_AUTHENTICATION**
 
-        - Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
+        * Procedure or Function: **SEND\_LOGIN\_USERNAME\_COOKIE**
 
-    - Execution > Sequence: **25**
+    * Execution > Sequence: **25**
 
-    - Server-side Condition > When Button Pressed: **Google**
+    * Server-side Condition > When Button Pressed: **Google**
 
     ![Click My Apps](images/12-5-32-process-details.png " ")
 
 33. Select Login Process and update the following:
 
-    - Server-side Condition > When Button Pressed: **LOGIN**
+    * Server-side Condition > When Button Pressed: **LOGIN**
 
     ![Click My Apps](images/12-5-33-login-button.png " ")
 
@@ -1467,5 +1468,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

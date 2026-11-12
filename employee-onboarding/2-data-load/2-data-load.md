@@ -15,13 +15,13 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create Workspace users.
+* Create Workspace users.
 
-- Load the database objects that are required for this lab using SQL Scripts
+* Load the database objects that are required for this lab using SQL Scripts
 
 ### Downloads
 
-If you would like to skip the part of building the app from scratch, download the starter app [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql).
+If you would like to skip the part of building the app from scratch, download the starter app [SQL script: labfiles/emp\_onboarding\_starter\_app.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql).
 
 Complete the following steps:
 
@@ -36,13 +36,14 @@ In this task, you will create multiple **Workspace users** in Oracle APEX to rep
 
 You will create the following users:
 
-|   Employee Name |  Department |
+| Employee Name | Department |
 | -------------- | --------- |
-|    STEVE       |   HR  |
-|   AMY     |    IT  |
-|   ALEX | Sales |
+| STEVE | HR |
+| AMY | IT |
+| ALEX | Sales |
 | MONICA | Sales |
-{: title="List of Users to Create in the Workspace"}
+
+*List of Users to Create in the Workspace*
 
 *Note: MONICA is a new hire in the Sales Department, for whom we will be initating a workflow request.*
 
@@ -56,20 +57,20 @@ You will create the following users:
 
 3. In the **Create multiple Users**, enter the list of email addresses and set the following attributes:
 
-    - List of Email Addresses: Copy and Paste the below email addresses and replace yourdomain.com with your actual domain.
+    * List of Email Addresses: Copy and Paste the below email addresses and replace yourdomain.com with your actual domain.
 
-      ```
-      <copy>
+    ```
+    <copy>
       AMY@yourdomain.com
       STEVE@yourdomain.com
       ALEX@yourdomain.com
       MONICA@yourdomain.com
-      </copy>
-      ```
+    </copy>
+    ```
 
-    - Usernames: **Exclude @ domain as part of the username**
+    * Usernames: **Exclude @ domain as part of the username**
 
-    - Password and Confirm Password: **Enter a password**
+    * Password and Confirm Password: **Enter a password**
 
     *Note: These users are not Workspace Administrators or Developers, they are End Users and will only have access to the Employee Onboarding application.*
 
@@ -95,9 +96,9 @@ In this task you will use SQL Scripts to quickly load and execute the required d
 
 3. In the Script Editor, enter the following:
 
-    - Script Name:  **Employee Onboarding Database objects**
+    * Script Name:  **Employee Onboarding Database objects**
 
-    - Script: Copy and paste the following in the code editor:
+    * Script: Copy and paste the following in the code editor:
 
     ```sql
     <copy>
@@ -309,5 +310,5 @@ You have successfully completed the initial steps for designing the **Employee O
 
 ## Acknowledgements
 
-- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+* **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

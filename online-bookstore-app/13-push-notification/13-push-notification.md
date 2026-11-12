@@ -10,12 +10,12 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Configure Push Notifications using apex\_pwa.send\_push\_notification api.
-- Enable End-Users to receive Push Notifications.
+* Configure Push Notifications using apex\_pwa.send\_push\_notification api.
+* Enable End-Users to receive Push Notifications.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab12.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 6.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab12.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab12.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 6.
 
 ## Task 1: Implement Push Notifications
 
@@ -35,26 +35,26 @@ In this task, you will enable Push Notifications for the application and configu
 
 4. Enter/Select the following:
 
-    - Under General:
+    * Under General:
 
-        - Enable Progressive Web App: **Toggle On**
+        * Enable Progressive Web App: **Toggle On**
 
-        - Installable: **Toggle On**
+        * Installable: **Toggle On**
 
     ![Click My Apps](images/13-1-4-1-installable.png " ")
 
-    - Under Push Notifications:
+    * Under Push Notifications:
 
-        - Enable Push Notifications: **Toggle On**
+        * Enable Push Notifications: **Toggle On**
 
-        - Credentials: Click **+ Generate Credentials** and click **Generate Credentials** in the confirm dialog window.
+        * Credentials: Click **+ Generate Credentials** and click **Generate Credentials** in the confirm dialog window.
 
-        - Settings Page: Click **+ Settings Page** and click **Create** in the **Create Push Notifications Settings Page** dialog window
+        * Settings Page: Click **+ Settings Page** and click **Create** in the **Create Push Notifications Settings Page** dialog window
 
-    ![Click My Apps](images/13-1-4-2-Credentials.png " ")
-    ![Click My Apps](images/13-1-4-3-Credentials1.png " ")
-    ![Click My Apps](images/13-1-4-4-Settings.png " ")
-    ![Click My Apps](images/13-1-4-5-Settings1.png " ")
+    ![Click My Apps](images/13-1-4-2-credentials.png " ")
+    ![Click My Apps](images/13-1-4-3-credentials1.png " ")
+    ![Click My Apps](images/13-1-4-4-settings.png " ")
+    ![Click My Apps](images/13-1-4-5-settings1.png " ")
 
     Click **Apply Changes**
 
@@ -70,11 +70,11 @@ In this task, you will enable Push Notifications for the application and configu
 
 7. Select **P50\_AVAILABILITY\_YN** under **Edit Book Details** region and update the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P50\_AVAILABILITY**
+        * Name: **P50\_AVAILABILITY**
 
-        - Label: **Availability**
+        * Label: **Availability**
 
     ![Click My Apps](images/13-1-7-avai-item.png " ")
 
@@ -84,19 +84,19 @@ In this task, you will enable Push Notifications for the application and configu
 
 9. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P50\_AVAILABILITY\_OLD**
+        * Name: **P50\_AVAILABILITY\_OLD**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
-    - Source > Form Region: **- Select -**
+    * Source > Form Region: **- Select -**
 
-    - Under Default:
+    * Under Default:
 
-         - Type: **Item**
+        * Type: **Item**
 
-         - Item: **P50_AVAILABILITY**
+        * Item: **P50_AVAILABILITY**
 
     ![Click My Apps](images/13-1-9-avai-item-dup-details.png " ")
 
@@ -106,9 +106,9 @@ In this task, you will enable Push Notifications for the application and configu
 
 11. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Push Notification**
+    * Identification > Name: **Push Notification**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -140,9 +140,9 @@ In this task, you will enable Push Notifications for the application and configu
         end loop;
         apex_pwa.push_queue;
         </copy>
-         ```
+        ```
 
-    - Execution > Sequence: **20**
+    * Execution > Sequence: **20**
 
     ![Click My Apps](images/13-1-11-process-details.png " ")
 
@@ -172,17 +172,17 @@ In this task, you will configure the Navigation Bar to include a Settings option
 
 5. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Parent List Entry: **&USERNAME.**
+        * Parent List Entry: **&USERNAME.**
 
-        - Sequence: **1**
+        * Sequence: **1**
 
-        - Image/Class: **fa-gear**
+        * Image/Class: **fa-gear**
 
-        - List Entry Label: **Settings**
+        * List Entry Label: **Settings**
 
-    - Target > Page: **20000**
+    * Target > Page: **20000**
 
     Click **Create List Entry**.
 
@@ -194,9 +194,9 @@ In this task, you will run the application, enable push notifications, and test 
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/13-3-1-run-app.png " ")
 
@@ -224,5 +224,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

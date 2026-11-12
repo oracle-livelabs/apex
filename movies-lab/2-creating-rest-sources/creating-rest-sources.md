@@ -13,23 +13,23 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create REST data sources using a REST Catalog.
+* Create REST data sources using a REST Catalog.
 
-- Update the Web Credential needed for the REST sources.
+* Update the Web Credential needed for the REST sources.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 1.
+* Completion of workshop through Lab 1.
 
-- A TMDB API key.
+* A TMDB API key.
 
-- The <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>TMDB REST Source Catalog</a>.
+* The [TMDB REST Source Catalog](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql).
 
 ## Task 1: Import the REST Catalog
 
 You will use a REST Source Catalog that contains predefined services to create REST data sources. Using a REST Catalog will greatly simplify the process of creating REST sources to get data from TMDB API because all you will need to do is import the catalog, select the sources you want to use, and update the web credential associated with the sources.
 
-1. Download the TMDB REST Source Catalog by clicking <a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql" download>here</a>.
+1. Download the TMDB REST Source Catalog by clicking [SQL script: tmdb\_catalog.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/build-movies-watchlist-app-using-apex/tmdb_catalog.sql).
 
 2. In the App Builder tab in your browser, click **Export/Import** on the Movies Watchlist application home page.
 
@@ -41,9 +41,9 @@ You will use a REST Source Catalog that contains predefined services to create R
 
 4. On the Import page:
 
-    - Drag and drop the **tmdb_catalog.sql** file you downloaded or click on the Drag and Drop region to open the file finder and select the catalog.
+    * Drag and drop the **tmdb_catalog.sql** file you downloaded or click on the Drag and Drop region to open the file finder and select the catalog.
 
-    - Set File Type to **REST Source Catalog**.
+    * Set File Type to **REST Source Catalog**.
 
     Click **Next**.
 
@@ -91,9 +91,9 @@ Now that you have imported your REST Source Catalog, it will be very simple to c
 
 7. On the **Create REST Data Source - Catalog Services** page, you can view the different services in the TMDB REST Catalog and choose which ones you want to create REST data sources from.
 
-    - From the list of services, click **Popular Movies** to add it to the list of Selected Catalog Services.
+    * From the list of services, click **Popular Movies** to add it to the list of Selected Catalog Services.
 
-    - Select **Search Movies**, **Movie Details**, and **Movie Cast** to add each to the selected catalog services as well.
+    * Select **Search Movies**, **Movie Details**, and **Movie Cast** to add each to the selected catalog services as well.
 
     Click **Next**.
 
@@ -123,15 +123,15 @@ When you created the REST data sources from the REST Catalog, a new Web Credenti
 
 4. On the **Web Credentials** edit page, enter/select the following:
 
-    - Name: **Credentials for Movies**
+    * Name: **Credentials for Movies**
 
-    - Static Identifier: **Credentials\_for\_Movies**
+    * Static Identifier: **Credentials\_for\_Movies**
 
-    - Credential Name: **api\_key**
+    * Credential Name: **api\_key**
 
-    - Credential Secret: *Insert your unique API key here.*
+    * Credential Secret: *Insert your unique API key here.*
 
-    - Valid for URLs: **https://api.themoviedb.org/3/**
+    * Valid for URLs: **<https://api.themoviedb.org/3/>**
 
 5. Click **Apply Changes** to save your Web Credential.
 
@@ -145,39 +145,39 @@ You now know how to create REST data sources from a REST Catalog in Oracle APEX 
 
 ## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-REST-data-sources.html)
+* [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-REST-data-sources.html)
 
-- [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)
+* [REST Data Sources Video](https://www.youtube.com/watch?v=ctCwvD1qavs)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 2 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-2.sql) to download a copy of the app at the end of Lab 2.
+* [SQL script: apex/lab-2.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-2.sql) to download a copy of the app at the end of Lab 2.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in this lab. You can see in the screenshot below that Credentials for Movies does not already exist in your workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in this lab. You can see in the screenshot below that Credentials for Movies does not already exist in your workspace.
 
     ![APEX Install Application page with Web Credentials table without any Client ID or Client Secret values for Credentials for Movies](images/blank-credentials.png " ")
 
-- Within the Credentials for Movies row:
+* Within the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
     ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

@@ -4,19 +4,26 @@
 
 In this lab, you will learn how to download and import an export zip file of the app. This process is essential to run the app successfully and complete the tasks that depend on the exported file. By the end of this lab, you will have a fully functional app environment for further exploration and development.
 
+Estimated Time: Varies by environment and experience.
+
+### Objectives
+
+* Download and import the application export ZIP file.
+* Configure the credentials and application settings needed to run the app.
+
 ## Task 1: Download the App Export ZIP Files
 
 You can download an app export ZIP file from any lab. The file is available at the end of the introduction section in each lab. Each file contains everything completed up to the start of that specific lab.
 
 The export files in the Lab Introduction and Lab 1 include two app exports:
 
-- The first export contains everything completed in all labs except the optional Lab 18.
+* The first export contains everything completed in all labs except the optional Lab 18.
 
-- The second export includes Lab 18 as well. (This requires Oracle Database 23ai for Lab 18.)
+* The second export includes Lab 18 as well. (This requires Oracle Database 23ai for Lab 18.)
 
 Alternatively, you can download the export file from the table below, located in any lab row. For example, an export file in Lab Row x means the app export includes everything completed up to the end of that specific lab.
 
-| Lab |  Module | Export Zip File | To run the app, follow the steps described in the tasks below: |
+| Lab | Module | Export Zip File | To run the app, follow the steps described in the tasks below: |
 | --- | --- | --- | --- |
 | 1 | [Create the application](?lab=create-app) | [Download](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) | Task 2 Only |
 | 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | [Download](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) | Task 2 Only |
@@ -83,7 +90,7 @@ To Generate the API Keys using OCI Console:
 
 1. To create an OCI API Key, refer to [Task 1: Generate API Keys using OCI Console](?lab=8-build-an-ai-assistant-chat-widget#Task1:GenerateAPIKeysusingOCIConsole) of [Lab 8: Build an AI-Assistant Chat Widget](?lab=8-build-an-ai-assistant-chat-widget)
 
-To Configure Web Credentials in Oracle APEX:
+    To Configure Web Credentials in Oracle APEX:
 
 2. Expand **App Builder**, then select **All Workspace Utilities** and click **Workspace Utilities**.
 
@@ -99,18 +106,18 @@ To Configure Web Credentials in Oracle APEX:
 
 5. Enter the following details using the configuration file you copied and click **Apply Changes**.
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    * **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
+    * **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
-    - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
+    * **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
-    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+    * **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
     !["Page Designer"](images/19-4-5-edit-details.png "")
 
-To Enable Generative AI in Oracle APEX:
+    To Enable Generative AI in Oracle APEX:
 
 6. Click **Workspace Utilities**.
 
@@ -180,11 +187,11 @@ To Enable Generative AI in Oracle APEX:
 
 5. Enter the following and click **Apply Changes**.
 
-    - Under **Attributes**:
+    * Under **Attributes**:
 
-        - Client ID or Username: Enter the **Client ID** you copied above.
-        - Client Secret or Password: Enter the **Client secret** you copied above.
-        - Verify Client Secret or Password: Enter the **Client secret** you copied above.
+        * Client ID or Username: Enter the **Client ID** you copied above.
+        * Client Secret or Password: Enter the **Client secret** you copied above.
+        * Verify Client Secret or Password: Enter the **Client secret** you copied above.
 
     !["Page Designer"](images/19-6-5-edit-prop.png "")
 
@@ -284,11 +291,11 @@ To Enable Generative AI in Oracle APEX:
 
 5. Enter the following and click **Apply Changes**.
 
-    - Under **Attributes**:
+    * Under **Attributes**:
 
-        - Client ID or Username: Enter the **Key Id** you copied above.
-        - Client Secret or Password: Enter the **Key Secret** you copied above.
-        - Verify Client Secret or Password: Enter the **Key Secret** you copied above.
+        * Client ID or Username: Enter the **Key Id** you copied above.
+        * Client Secret or Password: Enter the **Key Secret** you copied above.
+        * Verify Client Secret or Password: Enter the **Key Secret** you copied above.
 
     !["Page Designer"](images/19-9-5-edit-prop.png "")
 
@@ -307,7 +314,7 @@ To Enable Generative AI in Oracle APEX:
 9. Navigate to **Dynamic Actions** tab, select the first **True** action under **Invoke Razorpay**, and under Settings, add one line of code to include the Razorpay key under the options in the **Code**.
 
     ```
-        <copy>
+    <copy>
         // Options for the Razorpay checkout
         var razorpayId = "&P17_RAZORPAY_ORDER_ID.";
             var amount = apex.item('P17_TOTAL').getValue();
@@ -354,8 +361,8 @@ To Enable Generative AI in Oracle APEX:
             });
 
             rzp1.open();
-        </copy>
-        ```
+    </copy>
+    ```
 
     !["Page Designer"](images/19-9-9-key.png "")
 
@@ -377,7 +384,7 @@ To Enable Generative AI in Oracle APEX:
 
 4. Navigate to **Processing**, expand **Send Verification Email** and select **Send Email Process**. Under Settings, click **Placeholder Values**, update **ICON_URL**, click OK and then click **Save**.
 
-    - In **ICON\_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
+    * In **ICON\_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain apex.oracle.com if your environment differs.
 
     !["Page Designer"](images/19-10-4-edit-icon-url.png "")
 
@@ -407,11 +414,11 @@ To Enable Generative AI in Oracle APEX:
 
 5. Enter/select the following and click **Apply Changes**.
 
-    - Under Local Embedding:
+    * Under Local Embedding:
 
-        - For ONNX Model Owner: **Select your Parsing Schema**
+        * For ONNX Model Owner: **Select your Parsing Schema**
 
-        - ONNX Model Name: **DOC_MODEL**
+        * ONNX Model Name: **DOC_MODEL**
 
     !["Page Designer"](images/19-11-5-edit-details.png "")
 
@@ -429,7 +436,7 @@ To Enable Generative AI in Oracle APEX:
         P_SERVICE_STATIC_ID => 'db_onnx_model'
     );
     </copy>
-     ```
+    ```
 
     !["Page Designer"](images/19-11-7-fill-vector-embeddings.png "")
 
@@ -439,5 +446,5 @@ In this lab, you will follow the download instructions to import an export file 
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

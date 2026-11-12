@@ -10,27 +10,27 @@ Estimated Time: 10 minutes
 
 In this lab, you will:
 
-- Create and manage column groups in an interactive grid.
+* Create and manage column groups in an interactive grid.
 
-- Rearrange columns and organize grid layout for optimal user experience.
+* Rearrange columns and organize grid layout for optimal user experience.
 
-- Enable users to save public interactive grid reports and customize downloadable formats.
+* Enable users to save public interactive grid reports and customize downloadable formats.
 
-- Convert a read-only interactive grid into an editable one.
+* Convert a read-only interactive grid into an editable one.
 
-- Modify pagination settings and display the total row count in the grid.
+* Modify pagination settings and display the total row count in the grid.
 
-- Exclude specific columns from DML operations and configure them for display-only purposes.
+* Exclude specific columns from DML operations and configure them for display-only purposes.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol5.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol5.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Manage and Customize Interactive Grid as a Developer
 
@@ -48,22 +48,23 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
 3. In the Property Editor, add the following Column Group headers to the interactive grid:
 
-    - **Project Breakdown**: Project, Task_Name columns
+    * **Project Breakdown**: Project, Task_Name columns
 
-    - **Schedule**: Start\_Date, End\_Date columns
+    * **Schedule**: Start\_Date, End\_Date columns
 
-    - **Project Financing**: Cost, Budget columns
+    * **Project Financing**: Cost, Budget columns
 
     **a)** Navigate to **Project Tasks** region, right-click **Column Groups** and select **Create Column Group**.
 
     Create the following three Column Groups one after the other.
 
-    | Column Group          | Heading       |
+    | Column Group | Heading |
     | --------------------- | ----------- |
-    | Project Breakdown  | Project Breakdown |
+    | Project Breakdown | Project Breakdown |
     | Schedule | Schedule |
     | Project Financing | Project Financing |
-    {: title="Column Groups"}
+
+    *Column Groups*
 
     ![Add column group headers](./images/create-column-group.png " ")
 
@@ -109,9 +110,9 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     **b)** In the property editor, select **Attributes**, and perform the following steps:
 
-    - Enable Users To > Save Public Report: Toggle **ON**.
+    * Enable Users To > Save Public Report: Toggle **ON**.
 
-    - Download > Disable **HTML**
+    * Download > Disable **HTML**
 
     ![save Public interactive grids](./images/enbale-public-reports11.png " ")
 
@@ -121,9 +122,9 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     **b)** In the property editor, navigate to **Attributes** and perform the following steps:
 
-    - Edit > Enabled: Toggle **ON**
+    * Edit > Enabled: Toggle **ON**
 
-    - Pagination > Type: **Page**
+    * Pagination > Type: **Page**
 
     ![Editable interactive grid](./images/edit-enabled11.png " ")
 
@@ -139,9 +140,9 @@ In this task, you customize the Interactive Grid for end users. You create colum
 
     In the Property Editor, enter/select the following:
 
-    - Identification > Type: **Display Only**
+    * Identification > Type: **Display Only**
 
-    - Heading > Heading: **ID**
+    * Heading > Heading: **ID**
 
     Click **Save and Run**.
 
@@ -155,5 +156,5 @@ You now know how to Manage and Customize the Interactive Grid as a Developer. Yo
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, SeniorProduct Manager, October 2025
+* **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, SeniorProduct Manager, October 2025

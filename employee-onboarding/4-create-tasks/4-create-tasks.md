@@ -29,7 +29,7 @@ In this lab, you will:
 
 ### Downloads
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [SQL script: labfiles/emp\_onboarding\_starter\_app.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
 
 Complete the following steps:
 
@@ -56,10 +56,10 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 4. In the Create Task Definition wizard, enter/select the following:
 
-    - Name: **IT Setup**
-    - Type: **Action Task**
-    - Subject: **IT Setup Tasks for &EMPLOYEE_NAME.**
-    - Priority: **2-High**
+    * Name: **IT Setup**
+    * Type: **Action Task**
+    * Subject: **IT Setup Tasks for &EMPLOYEE_NAME.**
+    * Priority: **2-High**
 
     Click **Create**.
 
@@ -79,13 +79,14 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 7. Under **Settings**, enter/select the following:
 
-    - Actions Source: **SQL Query**
+    * Actions Source: **SQL Query**
 
-    - Actions SQL Query: Copy and paste the below SQL Query:
+    * Actions SQL Query: Copy and paste the below SQL Query:
+
         ```
-         <copy>
+        <copy>
          Select * from EMPLOYEES WHERE EMPLOYEE_ID = :APEX$TASK_PK;
-         </copy>
+        </copy>
         ```
 
         This step ties our task to the system of records, in this case, the employee's records.
@@ -96,33 +97,34 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 8. Navigate to **Participants** tab, and click **Add Row**. Enter/select the following details:
 
-    - Participant Type: **Potential Owner**
+    * Participant Type: **Potential Owner**
 
-    - Value Type: **SQL Query**
+    * Value Type: **SQL Query**
 
-    - Value: Copy and paste the below code
+    * Value: Copy and paste the below code
 
         ```
-         <copy>
+        <copy>
          select upper(e.first_name)
          from employees   e
          join departments d
          on e.department_id = d.department_id
          where d.name = 'IT';
-         </copy>
+        </copy>
         ```
 
     ![Potential Owner](images/potential-owner1.png "")
 
 9. Navigate to **Parameters** tab, and add the below Parameters by clicking **Add Row**.
 
-    | Static ID     |   Label    |
-    |--------------------|------------|
-    | DEPARTMENT   | Department |
-    | EMAIL       | Email |
-    | EMPLOYEE_ID       | Employee ID |
-    | EMPLOYEE_NAME     | Employee Name  |
-    {: title="List of Parameters to be added for the Task Definition"}
+    | Static ID | Label |
+    | -------------------- | ------------ |
+    | DEPARTMENT | Department |
+    | EMAIL | Email |
+    | EMPLOYEE_ID | Employee ID |
+    | EMPLOYEE_NAME | Employee Name |
+
+    *List of Parameters to be added for the Task Definition*
 
     ![Add Task Parameters](./images/add-task-parameters1.png " ")
 
@@ -136,11 +138,11 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 2. In the **Create Task Definition** dialog, enter/select the following details:
 
-    - Name: **Allocate Trainings**
+    * Name: **Allocate Trainings**
 
-    - Type: **Action Task**
+    * Type: **Action Task**
 
-    - Subject: **Allocate Trainings for &EMPLOYEE_NAME.**
+    * Subject: **Allocate Trainings for &EMPLOYEE_NAME.**
 
     Click **Create**.
 
@@ -156,13 +158,14 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 4. Select **Allocate Trainings** to open the task definition in edit mode and enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Actions Source: **SQL query**
+        * Actions Source: **SQL query**
 
-        - Actions SQL Query: Provide the following SQL statement:
+        * Actions SQL Query: Provide the following SQL statement:
+
             ```
-             <copy>
+            <copy>
              select * from EMPLOYEE_TRAININGS where EMPLOYEE_ID = :APEX$TASK_PK;
             </copy>
             ```
@@ -175,36 +178,37 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 5. Now, navigate to **Participants** tab, click **Add Row** and enter/select the following:
 
-    - Participant Type: **Potential Owner**
+    * Participant Type: **Potential Owner**
 
-    - Value Type: **SQL Query**
+    * Value Type: **SQL Query**
 
-    - Value: Copy and paste the below code:
+    * Value: Copy and paste the below code:
 
         ```
-         <copy>
+        <copy>
          select upper(first_name) from employees  where employee_id = :APEX$TASK_PK;
-         </copy>
+        </copy>
         ```
 
     ![Add Potential owner to the Task](./images/add-training-participant.png " ")
 
 6. Navigate to **Parameters** tab. Add the below Parameters by clicking **Add Row**.
 
-    | Static ID     | Label |
-    |---------------|---------|
-    | EMAIL        | Email  |
-    | EMPLOYEE\_NAME               | Employee Name |
-    {: title="List of Task Parameters to be added"}
+    | Static ID | Label |
+    | --------------- | --------- |
+    | EMAIL | Email |
+    | EMPLOYEE\_NAME | Employee Name |
+
+    *List of Task Parameters to be added*
 
     ![Add Task Parameters](./images/add-training-parameters.png " ")
 
 7. Navigate to **Deadline** tab. Enter/select the following:
 
-    - Due On Type: **Interval**
-    - Due On Interval: **P2D**
-    - Expiration Policy: **Renew**
-    - Maximum Renewal Count: **3**
+    * Due On Type: **Interval**
+    * Due On Interval: **P2D**
+    * Expiration Policy: **Renew**
+    * Maximum Renewal Count: **3**
 
     *Note: The Due On Interval is set to **P2D**, which represents a period of 2 days.*
 
@@ -222,21 +226,21 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
 
 11. Enter/Select the following in the Edit Action page:
 
-    - Under Action:
+    * Under Action:
 
-        - Name: **Send Email**
-        - Type: **Send E-Mail**
-        - On Event: **Before Expire**
-        - Before Expire Interval: **PT1H**
+        * Name: **Send Email**
+        * Type: **Send E-Mail**
+        * On Event: **Before Expire**
+        * Before Expire Interval: **PT1H**
 
-    - Under Send Email Settings:
+    * Under Send Email Settings:
 
-        - To: **&EMAIL.**
-        - Subject: **Reminder: Upcoming Training Task – Complete Before Due Date**
-        - Body Plain Text: copy and paste the following:
+        * To: **&EMAIL.**
+        * Subject: **Reminder: Upcoming Training Task – Complete Before Due Date**
+        * Body Plain Text: copy and paste the following:
 
             ```
-             <copy>
+            <copy>
              Hi &EMPLOYEE_NAME.,
 
              This is a friendly reminder about your upcoming onboarding training module that's approaching its due date.
@@ -248,7 +252,7 @@ In this task, you will create a Task Definition for IT Setup and assign it to th
              Best regards,
              HR Team,
              ACME Corporation.
-             </copy>
+            </copy>
             ```
 
     Click **Create**.
@@ -267,5 +271,5 @@ You have successfully created Human Task definitions for the Employee Onboarding
 
 ## Acknowledgements
 
-- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+* **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

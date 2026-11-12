@@ -10,17 +10,17 @@ Estimated Time: 20 minutes
 
 In this lab, you:
 
-- Customize your Interactive Report page in **Sample Reports** Application as an **End User**.
+* Customize your Interactive Report page in **Sample Reports** Application as an **End User**.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
+* **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshop:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Customize an Interactive report as an End User
 
@@ -67,27 +67,27 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** In the filter dialog, enter/select the following:
 
-    - Column: **Cost**
+    * Column: **Cost**
 
-    - Operator: **<=**
+    * Operator: **<=**
 
-    - Expression: **2000**
+    * Expression: **2000**
 
     Click **Apply**.
 
     ![Filter Type](images/create-filter1.png " ")
 
-   **c.** Next, add the second filter to the **Project** column. Click the **Actions > Filter**.
+    **c.** Next, add the second filter to the **Project** column. Click the **Actions > Filter**.
 
     ![Filter](images/select-filter2.png " ")
 
-   **d.** In the filter dialog, select the following:
+    **d.** In the filter dialog, select the following:
 
-    - Column: **Project**
+    * Column: **Project**
 
-    - Operator: **=**
+    * Operator: **=**
 
-    - Expression: **Bug Tracker**
+    * Expression: **Bug Tracker**
 
     Click **Apply**.
 
@@ -95,9 +95,9 @@ In this lab, you customize and use an interactive report as an end user.
 
     ![Filter](images/run-ir2.png " ")
 
-   **e.** Notice that two filters are applied. Fewer rows are displayed because only the rows that meet the filter criteria are displayed. You can remove each filter by clicking the **Remove Filter** icon next to the filter you want to remove.
+    **e.** Notice that two filters are applied. Fewer rows are displayed because only the rows that meet the filter criteria are displayed. You can remove each filter by clicking the **Remove Filter** icon next to the filter you want to remove.
 
-   Click the **Remove Filter** icon next to both filters.
+    Click the **Remove Filter** icon next to both filters.
 
     ![Remove Filter](images/delete-filter1.png " ")
 
@@ -113,9 +113,9 @@ In this lab, you customize and use an interactive report as an end user.
 
     **c.** Select the following in Row 1:
 
-    - Column: **Cost**
+    * Column: **Cost**
 
-    - Direction: **Descending**
+    * Direction: **Descending**
 
      Click **Apply**.
 
@@ -133,9 +133,9 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** In the **Aggregate** dialog, select the following:
 
-    - Function: **Sum**
+    * Function: **Sum**
 
-    - Column: **Available Budget**.
+    * Column: **Available Budget**.
 
     Click **Apply** to add the aggregation at the end of the last Column of the report.
 
@@ -152,13 +152,13 @@ In this lab, you customize and use an interactive report as an end user.
     ![Compute](images/select-compute1.png " ")
 
     **b.** The Compute dialog appears. Enter/select the following:
-    - Column Label: **Cost with Tax**.
+    * Column Label: **Cost with Tax**.
 
-    - Computation Expression:
+    * Computation Expression:
 
-        - Under Columns alias, click **Cost**
+        * Under Columns alias, click **Cost**
 
-        - Under Keypad, click *1.05
+        * Under Keypad, click *1.05
 
     Click **Apply**.
 
@@ -190,17 +190,17 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** In the Highlight dialog, enter/select the following:
 
-    - Name: **Cost less than or equals 500**
+    * Name: **Cost less than or equals 500**
 
-    - Background Color: **#d0f1cc**
+    * Background Color: **#d0f1cc**
 
-    - Text Color: **#0000000**
+    * Text Color: **#0000000**
 
-    - Column: **Cost**
+    * Column: **Cost**
 
-    - Operator: **<=**
+    * Operator: **<=**
 
-    - Expression: **500**
+    * Expression: **500**
 
     Click **Apply**.
 
@@ -228,13 +228,13 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** In the chart dialog, select/enter the following:
 
-    - Chart Type: **Bar**
+    * Chart Type: **Bar**
 
-    - Label: **Project**
+    * Label: **Project**
 
-    - Value: **Cost**
+    * Value: **Cost**
 
-    - Function: **Average**
+    * Function: **Average**
 
     Click **Apply**.
 
@@ -252,17 +252,17 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.** In the Group By dialog, enter/select the following:
 
-    - Group By Column: **Project**
+    * Group By Column: **Project**
 
-    - Function: **Sum**
+    * Function: **Sum**
 
-    - Column: **Budget**
+    * Column: **Budget**
 
-    - Label: **Total Budget**
+    * Label: **Total Budget**
 
-    - Format Mask: **$5,234.10** (Expand the Select List to view the Format Mask list of example formats.)
+    * Format Mask: **$5,234.10** (Expand the Select List to view the Format Mask list of example formats.)
 
-    - Sum: Toggle the button to **ON**
+    * Sum: Toggle the button to **ON**
 
     Click **Apply**.
 
@@ -284,17 +284,17 @@ In this lab, you customize and use an interactive report as an end user.
 
     **b.**  In the Pivot dialog, enter/select the following:
 
-    - Pivot Columns: **Assigned To**
+    * Pivot Columns: **Assigned To**
 
-    - Row Columns: **Project**
+    * Row Columns: **Project**
 
-    - Functions: **Sum**
+    * Functions: **Sum**
 
-    - Column: **Cost** and **Budget**
+    * Column: **Cost** and **Budget**
 
-    - Label: **Total Cost** and **Total Budget**
+    * Label: **Total Cost** and **Total Budget**
 
-    - Sum: Toggle the button to **ON**.
+    * Sum: Toggle the button to **ON**.
 
     Click **Apply**.
 
@@ -358,5 +358,5 @@ In the next workshop, you learn how to customize Interactive Grid as a developer
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

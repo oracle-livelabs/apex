@@ -10,15 +10,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Improve Faceted Search to refine filtering options.
-- Create a Search Bar for keyword-based searching.
-- Enhance the Cards region with richer display details.
-- Activate Sorting options for better result ordering.
-- Create a Book Details page as a modal dialog opened from each card.
+* Improve Faceted Search to refine filtering options.
+* Create a Search Bar for keyword-based searching.
+* Enhance the Cards region with richer display details.
+* Activate Sorting options for better result ordering.
+* Create a Book Details page as a modal dialog opened from each card.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab2.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab2.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Improve Faceted Search
 
@@ -30,37 +30,38 @@ In this task, we will reorder the facets and edit their properties and ranges ac
 
 2. Under **Search** region, select **P10\_AUTHOR** facet and update the following:
 
-    - Layout > Sequence: **10**
+    * Layout > Sequence: **10**
 
     ![App builder home page](images/fs-author.png " ")
 
 3. Now, select **P10\_PRICE** facet and update the following:
 
-    - Settings > Select Multiple: **Toggle Off**
+    * Settings > Select Multiple: **Toggle Off**
 
-    - Layout > Sequence: **20**
+    * Layout > Sequence: **20**
 
-    - List of Value > Type :**- Select -**
+    * List of Value > Type :**- Select -**
 
     ![App builder home page](images/fs-price.png " ")
 
 4. Select **P10\_DISCOUNT** facet, enter/select the following:
 
-    - Layout > Sequence: **30**
+    * Layout > Sequence: **30**
 
-    - List of Values> Type: **Static Values**
+    * List of Values> Type: **Static Values**
 
-        - Click on Static Values: Enter the following
+        * Click on Static Values: Enter the following
 
-            | Display Value |  Return Value  |
-            | --- |  --- |
-            | <20  | \|20 |
+            | Display Value | Return Value |
+            | --- | --- |
+            | <20 | \|20 |
             | 20 - 50 | 20\|50 |
             | 50 - 80 | 50\|80 |
             | >80 | 80\| |
-            {: title="List of Static Values"}
 
-       - Actions Menu > Chart: **Toggle Off**
+            *List of Static Values*
+
+        * Actions Menu > Chart: **Toggle Off**
 
     ![App builder home page](images/fs-discount.png " ")
 
@@ -68,9 +69,9 @@ In this task, we will reorder the facets and edit their properties and ranges ac
 
 5. Select **P10\_CATEGORY** facet, enter/select the following:
 
-    - Layout > Sequence: **40**
+    * Layout > Sequence: **40**
 
-    - Actions Menu > Chart: **Toggle Off**
+    * Actions Menu > Chart: **Toggle Off**
 
     ![App builder home page](images/fs-cateogory.png " ")
 
@@ -88,19 +89,19 @@ In this task, we will move the search facet to a homepage search item above the 
 
 2. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P10\_SEARCH\_PAGE\_ITEM**
+        * Name: **P10\_SEARCH\_PAGE\_ITEM**
 
-        - Type: **Text field with Autocomplete**
+        * Type: **Text field with Autocomplete**
 
-    - Label > Label: **Search**
+    * Label > Label: **Search**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
             ```
             <copy>
@@ -120,13 +121,13 @@ In this task, we will move the search facet to a homepage search item above the 
 
 3. Select **P10\_SEARCH** facet, enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Input Field: **External Page Item**
+        * Input Field: **External Page Item**
 
-        - External Page Item: **P10\_SEARCH\_PAGE\_ITEM**
+        * External Page Item: **P10\_SEARCH\_PAGE\_ITEM**
 
-    - Source > Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY**
+    * Source > Database Columns: **TITLE,AUTHOR,PUBLISHER,CONTRIBUTOR,CATEGORY**
 
     ![App builder home page](images/fs-search-attributes.png " ")
 
@@ -144,38 +145,39 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
 1. Go back to the page designer, and select **Search Results** region and enter/select the following:
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code
+        * SQL Query: Copy and paste the below code
 
             ```
-        <copy>
-            SELECT
-            BOOK_ID,
-            ROUND(PRICE, 2) AS PRICE,
-            TITLE,
-            AUTHOR,
-            PUBLISHER,
-            DISCOUNT,
-            CATEGORY,
-            BOOK_IMAGE,
-            DESCRIPTION,
-            ROUND(PRICE * ((100 - DISCOUNT) / 100), 2) AS NEW_PRICE,
-            CONTRIBUTOR,
-            OBJECT_DET,
-            TEXT_DET
-        FROM
-            OBS_BOOKS;
+
+            <copy>
+                SELECT
+                BOOK_ID,
+                ROUND(PRICE, 2) AS PRICE,
+                TITLE,
+                AUTHOR,
+                PUBLISHER,
+                DISCOUNT,
+                CATEGORY,
+                BOOK_IMAGE,
+                DESCRIPTION,
+                ROUND(PRICE * ((100 - DISCOUNT) / 100), 2) AS NEW_PRICE,
+                CONTRIBUTOR,
+                OBJECT_DET,
+                TEXT_DET
+            FROM
+                OBS_BOOKS;
             </copy>
             ```
 
     ![App builder home page](images/search-results.png " ")
 
-    - Under Appearance > Select **Template Options** and enter/select the following:
+    * Under Appearance > Select **Template Options** and enter/select the following:
 
-        - Style: **Style C**
+        * Style: **Style C**
 
         click **OK**
 
@@ -183,23 +185,23 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
 2. In the Property Editor, under **Attributes** (for the Search Results region) and enter/select the following:
 
-    - Appearance > Grid Columns: **4 Columns**
+    * Appearance > Grid Columns: **4 Columns**
 
-    - Card > Primary Key Column 1: **BOOK_ID**
+    * Card > Primary Key Column 1: **BOOK_ID**
 
-    - Under Title:
+    * Under Title:
 
-        - Column: **TITLE**
+        * Column: **TITLE**
 
-        - CSS Classes: **book-title**
+        * CSS Classes: **book-title**
 
     ![App builder home page](images/search-results-attributes.png " ")
 
-    - Under Body:
+    * Under Body:
 
-        - Advanced Formatting: **Toggle On**
+        * Advanced Formatting: **Toggle On**
 
-        - HTML Expression: copy and paste the below HTML code:
+        * HTML Expression: copy and paste the below HTML code:
 
             ```
             <copy>
@@ -216,13 +218,13 @@ In this task, we will enhance the cards region on the homepage by displaying the
             </copy>
             ```
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **Image URL**
+        * Source: **Image URL**
 
-        - URL: **&BOOK_IMAGE.**
+        * URL: **&BOOK_IMAGE.**
 
-        - Image Description: **&DESCRIPTION.**
+        * Image Description: **&DESCRIPTION.**
 
     ![App builder home page](images/image-atrributes.png " ")
 
@@ -232,7 +234,7 @@ In this task, we will enhance the cards region on the homepage by displaying the
 
 4. Select **Page 10: Search Books** root node and enter the following into the property editor:
 
-    - CSS > Inline: Copy and Paste the below CSS Code:
+    * CSS > Inline: Copy and Paste the below CSS Code:
 
         ```
         <copy>
@@ -242,8 +244,8 @@ In this task, we will enhance the cards region on the homepage by displaying the
             text-align: center;
             font-weight: bold;
         }
-            </copy>
-            ```
+        </copy>
+        ```
 
     ![App builder home page](images/search-books-inline.png " ")
 
@@ -257,28 +259,29 @@ In this task, we will activate sorting options for books by title, discount, and
 
 1. Go back to the page designer, and select **Search Results** region and in the Property Editor, enter/select the following:
 
-    - Order By:
+    * Order By:
 
-        - Type: **Item**
+        * Type: **Item**
 
-        - Click **P10\_ORDER\_BY,2 Order Bys** and enter the following and click **OK**:
+        * Click **P10\_ORDER\_BY,2 Order Bys** and enter the following and click **OK**:
 
-            | Clause |  Key | Display |
-            | --- |  --- | --- |
-            | "TITLE"asc  | TITLE| Title |
-            | "NEW\_PRICE"asc | NEW\_PRICE | Price|
-            | "DISCOUNT"desc| DISCOUNT | Discount |
-            {: title="List of Items"}
+            | Clause | Key | Display |
+            | --- | --- | --- |
+            | "TITLE"asc | TITLE | Title |
+            | "NEW\_PRICE"asc | NEW\_PRICE | Price |
+            | "DISCOUNT"desc | DISCOUNT | Discount |
+
+            *List of Items*
 
     ![App builder home page](images/order-by-item.png " ")
 
 2. Select **P10\_ORDER\_BY** page item and  in the Property Editor, enter/select the following:
 
-    - Under Default:
+    * Under Default:
 
-        - Type: **Static**
+        * Type: **Static**
 
-        - Static Value: **TITLE**
+        * Static Value: **TITLE**
 
     ![App builder home page](images/default-value.png " ")
 
@@ -304,13 +307,13 @@ In this task, we will create a book details page that opens when a book on the h
 
 4. On **Create Blank Page** dialog, enter/select the following details:
 
-     - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **18**
+        * Page Number: **18**
 
-        - Name: **Book Details**
+        * Name: **Book Details**
 
-        - Page Mode: **Modal Dialog**
+        * Page Mode: **Modal Dialog**
 
     Click **Create Page**
 
@@ -318,7 +321,7 @@ In this task, we will create a book details page that opens when a book on the h
 
 5. In the left Pane, select **Page 18: Book Details** and update the following:
 
-    - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
     ![App builder home page](images/authentication-bp.png " ")
 
@@ -328,9 +331,9 @@ In this task, we will create a book details page that opens when a book on the h
 
 7. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Buttons Bar**
+    * Identification > Name: **Buttons Bar**
 
-    - Appearance > Template: **Buttons Container**
+    * Appearance > Template: **Buttons Container**
 
     ![App builder home page](images/region-details-bp.png " ")
 
@@ -340,11 +343,11 @@ In this task, we will create a book details page that opens when a book on the h
 
 9. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P18\_BOOK\_ID**
+        * Name: **P18\_BOOK\_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![App builder home page](images/page-item.png " ")
 
@@ -362,19 +365,20 @@ In this task, we will create a book details page that opens when a book on the h
 
 13. In the Property Editor, enter/select the following:
 
-    - Execution > Point: **Before Header**
+    * Execution > Point: **Before Header**
 
-    - Under Computation:
+    * Under Computation:
 
-        - Type: **SQL Query (return single value)**
+        * Type: **SQL Query (return single value)**
 
-        - SQL Query: Copy and paste below code into the code editor
+        * SQL Query: Copy and paste below code into the code editor
 
             ```
-       <copy>
-        select book_image from obs_books where book_id= :P18_BOOK_ID
-        </copy>
-         ```
+
+            <copy>
+            select book_image from obs_books where book_id= :P18_BOOK_ID
+            </copy>
+            ```
 
     ![App builder home page](images/book-image-computation.png " ")
 
@@ -384,11 +388,11 @@ In this task, we will create a book details page that opens when a book on the h
 
 15. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **IMAGE\_DISPLAY**
+    * Identification > Name: **IMAGE\_DISPLAY**
 
-    - Appearance > Template: **Image**
+    * Appearance > Template: **Image**
 
-    - Image > File URL: **&P18\_BOOK\_IMAGE.**
+    * Image > File URL: **&P18\_BOOK\_IMAGE.**
 
     ![App builder home page](images/region-details1.png " ")
 
@@ -398,49 +402,50 @@ In this task, we will create a book details page that opens when a book on the h
 
 17. In the Property Editor, enter/select the following:
 
-     - Under Identification:
+    * Under Identification:
 
-         - Name: **Book Information**
+        * Name: **Book Information**
 
-         - Type: **Classic Report**
+        * Type: **Classic Report**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste below code into the code Editor
+        * SQL Query: Copy and paste below code into the code Editor
 
             ```
-        <copy>
-        SELECT
-           BOOK_ID,
-           Round(PRICE,2) as price,
-           TITLE,
-           AUTHOR,
-           DISCOUNT,
-           PUBLISHER,
-           CONTRIBUTOR,
-           CATEGORY,
-           DESCRIPTION,
-           ROUND(Price*((100- Discount)/100),2) as new_price
-        FROM OBS_BOOKS
-        WHERE BOOK_ID=:P18_BOOK_ID
-       </copy>
+
+            <copy>
+            SELECT
+               BOOK_ID,
+               Round(PRICE,2) as price,
+               TITLE,
+               AUTHOR,
+               DISCOUNT,
+               PUBLISHER,
+               CONTRIBUTOR,
+               CATEGORY,
+               DESCRIPTION,
+               ROUND(Price*((100- Discount)/100),2) as new_price
+            FROM OBS_BOOKS
+            WHERE BOOK_ID=:P18_BOOK_ID
+            </copy>
             ```
 
     ![App builder home page](images/book-info.png " ")
 
-    - Layout > Disable **Start New Row**
+    * Layout > Disable **Start New Row**
 
-    - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
     ![App builder home page](images/book-info-details.png " ")
 
 18. In the right pane, click **Attributes**. In the Property Editor, update the following:
 
-    - Appearance > Template: **Value Attribute Pairs-Column**
+    * Appearance > Template: **Value Attribute Pairs-Column**
 
-    - Pagination > Type: **No Pagination (Show All Rows)**
+    * Pagination > Type: **No Pagination (Show All Rows)**
 
     ![App builder home page](images/book-info-save.png " ")
 
@@ -450,23 +455,25 @@ In this task, we will create a book details page that opens when a book on the h
 
 20. Select **PRICE** and update the following:
 
-     - Column Formatting > HTML Expression:
-     ```
-     <copy>
+    * Column Formatting > HTML Expression:
+
+    ```
+    <copy>
      <strike>₹#PRICE#</strike> ₹#NEW_PRICE#
-     </copy>
-      ```
+    </copy>
+    ```
 
     ![App builder home page](images/price-html.png " ")
 
 21. Select **DISCOUNT** and update the following:
 
-     - Column Formatting > HTML Expression:
-     ```
-     <copy>
+    * Column Formatting > HTML Expression:
+
+    ```
+    <copy>
      <span style="color:green;">#DISCOUNT#% Off</span>
-     </copy>
-      ```
+    </copy>
+    ```
 
     ![App builder home page](images/discount-html.png " ")
 
@@ -484,19 +491,19 @@ In this task, we will create a book details page that opens when a book on the h
 
 25. In the Property Editor, enter/select the following:
 
-    - Identification > Type: **Full Card**
+    * Identification > Type: **Full Card**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to a page in this Application**
+        * Type: **Redirect to a page in this Application**
 
-        - Click **Target**
+        * Click **Target**
 
-            - Page: **18**
+            * Page: **18**
 
-            - Name: **P18\_BOOK\_ID** and Value: **&BOOK_ID.**
+            * Name: **P18\_BOOK\_ID** and Value: **&BOOK_ID.**
 
-            - Clear Cache: **18**
+            * Clear Cache: **18**
 
             Click **OK**
 
@@ -514,5 +521,5 @@ You've learned how to enhance the faceted search page, integrate Global Search u
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

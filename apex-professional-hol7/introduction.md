@@ -10,13 +10,13 @@ In this workshop, you customize the **Demo Projects** application. You learn to 
 
 In the preceding workshop, you learned to customize the Interactive Report as a Developer and an End User.
 
-Estimated Time: 20 minutes
+Estimated Workshop Time: 20 minutes
 
 ### Objectives
 
-- Customize Interactive Grid page as a **Developer**.
+* Customize Interactive Grid page as a **Developer**.
 
-- Customize Interactive Grid page as an **End-user**.
+* Customize Interactive Grid page as an **End-user**.
 
 <!--### Downloads
 
@@ -34,8 +34,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-sign-up-apex/1-sign-up-apex.md#acknowledgements).

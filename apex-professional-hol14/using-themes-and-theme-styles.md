@@ -8,21 +8,21 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-- Apply a new theme style to the application.
+* Apply a new theme style to the application.
 
-- Create and configure a plug-in as a template component.
+* Create and configure a plug-in as a template component.
 
-- Customize the plug-in with attributes and slots.
+* Customize the plug-in with attributes and slots.
 
-- Integrate the plug-in within a page region to test its functionality.
+* Integrate the plug-in within a page region to test its functionality.
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Use Themes and Theme Styles
 
@@ -36,17 +36,17 @@ In the first task, you use the Theme Roller to apply a new theme style. This cha
 
 2. Under **Theme Roller**, enter/select the following:
 
-    - Select Theme: **Redwood Light**
+    * Select Theme: **Redwood Light**
 
-    - Redwood Options > Layout: **Floating**
+    * Redwood Options > Layout: **Floating**
 
-    - Under **Appearance**:
+    * Under **Appearance**:
 
-        - Header: **Dark**
+        * Header: **Dark**
 
-        - Body Header: **Dark**
+        * Body Header: **Dark**
 
-        - Body Background: **Dark**
+        * Body Background: **Dark**
 
 3. Click **Save As**.
 
@@ -78,17 +78,17 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
 
 5. Enter/select the following:
 
-    - Under Name:
+    * Under Name:
 
-        - Name: **Hero**
+        * Name: **Hero**
 
-        - Type: **Template Component**
+        * Type: **Template Component**
 
-    - Under Templates:
+    * Under Templates:
 
-        - Available As: Check **Region Only**
+        * Available As: Check **Region Only**
 
-        - Partial: Copy and paste the following:
+        * Partial: Copy and paste the following:
 
             ```
             <copy>
@@ -108,6 +108,7 @@ In this task, you will create a plug-in named "Hero." This plug-in will be a tem
             </div>
             </div>
             ```
+
             </copy>
 
 6. Click **Create Plug-in** and **Apply Changes**.
@@ -138,9 +139,9 @@ In this task, you will customize the "Hero" plug-in by adding attributes. These 
 
 4. Enter/select the following:
 
-    - Name > Static ID: **OVERLINE**
+    * Name > Static ID: **OVERLINE**
 
-    - Settings > Type: **Text**
+    * Settings > Type: **Text**
 
     Click **Create and Create Another**.
 
@@ -148,9 +149,9 @@ In this task, you will customize the "Hero" plug-in by adding attributes. These 
 
 5. Enter/select the following:
 
-    - Name > Static ID: **DESCRIPTION**
+    * Name > Static ID: **DESCRIPTION**
 
-    - Settings > Type: **Textarea**
+    * Settings > Type: **Textarea**
 
     Click **Create**.
 
@@ -167,11 +168,11 @@ To make the "Hero" plug-in interactive, you will define slots at the Template Co
 2. Add the following four slots one after the other:
 
     | Name | Static Identifier | Regions | Items | Supported Items | Buttons |
-    |------|------------------ |------| ----- | --------------- | --------|
-    | Action | ACTION | Uncheck|   |      |  Check |
-    | Category | CATEGORY | Uncheck| Check |  Select List |    |
-    | Search | SEARCH | Uncheck| Check | Text Field |     |
-    | Select All | SELECT_ALL |Uncheck|  Check | Checkbox |    |
+    | ------ | ------------------ | ------ | ----- | --------------- | -------- |
+    | Action | ACTION | Uncheck | | | Check |
+    | Category | CATEGORY | Uncheck | Check | Select List | |
+    | Search | SEARCH | Uncheck | Check | Text Field | |
+    | Select All | SELECT_ALL | Uncheck | Check | Checkbox | |
 
 3. Click **Apply Changes**.
 
@@ -201,11 +202,11 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 3. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Project Task**
+        * Name: **Project Task**
 
-        - Type: **Hero**
+        * Type: **Hero**
 
     ![Select Theme to Redwood Light](images/project-task-status.png " ")
 
@@ -215,13 +216,13 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 5. In the Property Editor, navigate to **Attributes** tab and enter/select the following:
 
-    - Appearance > CSS Classes: **color-us-5**
+    * Appearance > CSS Classes: **color-us-5**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Overline: **Get Started**
+        * Overline: **Get Started**
 
-        - Description: **Organize, prioritize, and complete tasks seamlessly!**
+        * Description: **Organize, prioritize, and complete tasks seamlessly!**
 
     ![Select Theme to Redwood Light](images/add-attributes.png " ")
 
@@ -231,9 +232,9 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 7. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **P3_SEARCH**
+    * Identification > Name: **P3_SEARCH**
 
-    - Label > Label: **Search**
+    * Label > Label: **Search**
 
     ![Select Theme to Redwood Light](images/serach.png " ")
 
@@ -259,11 +260,11 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 12. Select **Update Task Status** region and in the Property Editor, enter/select the following:
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL query**
+        * Type: **SQL query**
 
-        - SQL Query: Copy and replace with the following code:
+        * SQL Query: Copy and replace with the following code:
 
             ```
             <copy>
@@ -299,7 +300,7 @@ With the plug-in configured, you will add it to the Project Task Status page as 
 
 14. Select **P3_SEARCH**, in the Property Editor, and update the following:
 
-    - Appearance > Value Placeholder: **Search Project, Task Name**
+    * Appearance > Value Placeholder: **Search Project, Task Name**
 
     ![Select Theme to Redwood Light](images/search-placeholder.png " ")
 
@@ -325,5 +326,5 @@ In this lab, you applied a new theme style and created a custom "Hero" plug-in a
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

@@ -8,17 +8,17 @@ Estimated Time: 45 minutes
 
 ### Objectives
 
-- Obtain a APEX free development environment.
+* Obtain a APEX free development environment.
 
-- Build your first app through uploading a Spreadsheet.
+* Build your first app through uploading a Spreadsheet.
 
-- Improve the Faceted Search page.
+* Improve the Faceted Search page.
 
-- Improve the Interactive Report and form pages.
+* Improve the Interactive Report and form pages.
 
-- Add Maps region and install PWA.
+* Add Maps region and install PWA.
 
-- Link pages.
+* Link pages.
 
 >*Note:This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
@@ -37,18 +37,18 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### Downloads
 
-[Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fspreadsheet-lab-export.sql) to download the completed application.
+[SQL script: labfiles/spreadsheet-lab-export.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fspreadsheet-lab-export.sql) to download the completed application.
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
 
-- **Author** - Apoorva Srinivas, Senior Product Manager
-- **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+* **Author** - Apoorva Srinivas, Senior Product Manager
+* **Contributors** - Salim Hlayel, Tom McGinn, Arabella Yao
+* **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

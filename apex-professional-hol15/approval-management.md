@@ -10,29 +10,29 @@ Estimated Time: 15 mins
 
 In this lab, you will:
 
-- Configure and send automated emails from your application.
+* Configure and send automated emails from your application.
 
-- Design a feedback collection page for user input.
+* Design a feedback collection page for user input.
 
-- Create and implement email templates for consistent communication.
+* Create and implement email templates for consistent communication.
 
-- Automate application workflows using scheduled actions.
+* Automate application workflows using scheduled actions.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FUsingThemesTemplates-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FUsingThemesTemplates-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Send E - Mail from an application
 
@@ -52,11 +52,11 @@ In this task, you will learn how to configure a process to send automated email 
 
 4. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P17\_APP\_ITEM\_URL**
+        * Name: **P17\_APP\_ITEM\_URL**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![Select Sql Workshop](./images/url-hidden.png " ")
 
@@ -66,9 +66,9 @@ In this task, you will learn how to configure a process to send automated email 
 
 6. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Prepare URL**
+    * Identification > Name: **Prepare URL**
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+    * Source > PL/SQL Code: Copy and Paste the below code:
 
     ```
     <copy>
@@ -88,21 +88,21 @@ In this task, you will learn how to configure a process to send automated email 
 
 8. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Send E-Mail**
+        * Name: **Send E-Mail**
 
-        - Type: **Send E-Mail**
+        * Type: **Send E-Mail**
 
-    - Under Settings:
+    * Under Settings:
 
-        - From: **&APP_EMAIL.**
+        * From: **&APP_EMAIL.**
 
-        - To: **&P17\_CUSTOMER\_EMAIL.**
+        * To: **&P17\_CUSTOMER\_EMAIL.**
 
-        - Subject: **Your Order Confirmation : &P17\_ORDER\_ID.**
+        * Subject: **Your Order Confirmation : &P17\_ORDER\_ID.**
 
-        - Body Plain Text: Copy and paste the below text:
+        * Body Plain Text: Copy and paste the below text:
 
             ```
             <copy>
@@ -113,7 +113,7 @@ In this task, you will learn how to configure a process to send automated email 
             </copy>
             ```
 
-        - Body HTML:Copy and paste the below text:
+        * Body HTML:Copy and paste the below text:
 
             ```
             <copy>
@@ -150,9 +150,9 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
 4. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Rate your shopping experience**
+    * Identification > Name: **Rate your shopping experience**
 
-    - Layout > Start New Row: **Toggle Off**
+    * Layout > Start New Row: **Toggle Off**
 
     ![Select Sql Workshop](./images/rate-your-exp.png " ")
 
@@ -177,21 +177,21 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
 8. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Submit**
+        * Button Name: **Submit**
 
-        - Label: **Submit**
+        * Label: **Submit**
 
-    - Layout > Slot: **Copy**
+    * Layout > Slot: **Copy**
 
-    - Appearance > Hot: **Toggle On**
+    * Appearance > Hot: **Toggle On**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Item is NULL**
+        * Type: **Item is NULL**
 
-        - Item: **P16_REVIEW**
+        * Item: **P16_REVIEW**
 
     ![Select Sql Workshop](./images/btn-info.png " ")
 
@@ -203,9 +203,9 @@ This task focuses on capturing customer feedback after an order is placed. By ad
 
 10. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Submit Review**
+    * Identification > Name: **Submit Review**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
 
     ```
     <copy>
@@ -216,9 +216,9 @@ This task focuses on capturing customer feedback after an order is placed. By ad
     </copy>
     ```
 
-    - Success Message > Success Message: **Thank you for your feedback!**
+    * Success Message > Success Message: **Thank you for your feedback!**
 
-    - Server-side Condition > When Button Pressed: **Submit**
+    * Server-side Condition > When Button Pressed: **Submit**
 
      ![Select Sql Workshop](./images/submit-review.png " ")
 
@@ -230,27 +230,27 @@ Email templates simplify the process of sending structured, professional message
 
 1. Click the **Shared Components** icon on the top right corner.
 
-   ![Select email template ](./images/shared-comp1.png " ")
+    ![Select email template ](./images/shared-comp1.png " ")
 
 2. Under **User Interface**, select **Email Templates**.
 
-   ![Select email template ](./images/email-templates.png " ")
+    ![Select email template ](./images/email-templates.png " ")
 
 3. Click **Create Email Template**.
 
-   ![click Create Email Template](./images/create-email-temp.png " ")
+    ![click Create Email Template](./images/create-email-temp.png " ")
 
 4. Enter/select the following:
 
-    - Under **Identification**:
+    * Under **Identification**:
 
-        - Template Name: **Product Review Reminder**
+        * Template Name: **Product Review Reminder**
 
-        - Static Identifier: **PRODUCT\_REVIEW\_REMINDER**
+        * Static Identifier: **PRODUCT\_REVIEW\_REMINDER**
 
-        - Email Subject: **How Was Your Experience? Let Us Know!**
+        * Email Subject: **How Was Your Experience? Let Us Know!**
 
-    - HTML Format > Body: Copy and paste the below HTML
+    * HTML Format > Body: Copy and paste the below HTML
 
         ```
         <copy>
@@ -272,10 +272,10 @@ Email templates simplify the process of sending structured, professional message
 
     ![click Create Email Template](./images/product-review-reminder.png " ")
 
-    - **Plain Text Format**: Copy the text below and paste it into plain text format:
+    * **Plain Text Format**: Copy the text below and paste it into plain text format:
 
         ```
-       <copy>
+        <copy>
         Dear #CUSTOMER_NAME#,
         Thank you for purchasing [Product Name]!
         We hope you're enjoying it. Could you take a moment to rate your experience? Your feedback helps us improve and serve you better.
@@ -308,19 +308,19 @@ Automation is key to improving application efficiency and reducing manual effort
 
 4. Under **Create Automation**, enter/select the following:
 
-    - Name: **Product Review Reminder**
+    * Name: **Product Review Reminder**
 
-    - Type: **Scheduled**
+    * Type: **Scheduled**
 
-    - Actions initiated on: **Query**
+    * Actions initiated on: **Query**
 
-    - Execution Schedule: **Daily at Midnight**
+    * Execution Schedule: **Daily at Midnight**
 
     Click **Next**.
 
-    - Source Type: **Table**
+    * Source Type: **Table**
 
-    - Table/View Name: **ORDERS (table)**
+    * Table/View Name: **ORDERS (table)**
 
     Click **Create**.
 
@@ -330,9 +330,9 @@ Automation is key to improving application efficiency and reducing manual effort
 
 5. Enter/select the following:
 
-    - Settings > Schedule Status: **Active**
+    * Settings > Schedule Status: **Active**
 
-    - Source > Where Clause: Copy and paste the below code:
+    * Source > Where Clause: Copy and paste the below code:
 
         ```
         <copy>
@@ -356,9 +356,9 @@ Automation is key to improving application efficiency and reducing manual effort
 
 9. Enter/select the following:
 
-    - Action > Name: **Send E-Mail**
+    * Action > Name: **Send E-Mail**
 
-    - Code > Code: Copy and paste the below code:
+    * Code > Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -422,5 +422,5 @@ During the upcoming hands-on session, you will learn to enable a Remote Database
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024
+* **Author** - Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, November 2024

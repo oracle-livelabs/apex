@@ -13,15 +13,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Upload a document to OCI Object Storage.
+* Upload a document to OCI Object Storage.
 
-- Chat with Generative AI Agent.
+* Chat with Generative AI Agent.
 
-- View Citations for the Response.
+* View Citations for the Response.
 
-- Establish New Session.
+* Establish New Session.
 
-- Download/delete the file from Object Storage.
+* Download/delete the file from Object Storage.
 
 ## Task 1: Upload a document to OCI Object Storage
 
@@ -87,5 +87,5 @@ In this lab, you have learned how to work with static components, create computa
 
 ## Acknowledgements
 
-- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025
+* **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
+* **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025

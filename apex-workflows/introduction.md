@@ -10,23 +10,23 @@ In this context, Workflows entail the automation of business processes, whether 
 
 With the first release of APEX Workflows, you can harness the following capabilities:
 
-- **Visual Workflow Designer**: Craft and author workflow models with ease.
+* **Visual Workflow Designer**: Craft and author workflow models with ease.
 
-- **Workflow Console**: Monitor and administer workflows efficiently.
+* **Workflow Console**: Monitor and administer workflows efficiently.
 
-- **Workflow Runtime (Engine)**: Execute workflows seamlessly.
+* **Workflow Runtime (Engine)**: Execute workflows seamlessly.
 
-- **Workflow Runtime**: Runtime Engine for the execution of Workflows.
+* **Workflow Runtime**: Runtime Engine for the execution of Workflows.
 
-- **Workflow API’s**: Public API (APEX_WORKFLOW package) and SQL Views.
+* **Workflow API’s**: Public API (APEX_WORKFLOW package) and SQL Views.
 
-- **Approval Component**: Feature rich Approval Component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
+* **Approval Component**: Feature rich Approval Component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
 
-- **Workflow Dashboard**: For overview of in-flight instances.
+* **Workflow Dashboard**: For overview of in-flight instances.
 
-- **Visual Workflow Diagram**: To depict progress of Workflow at runtime.
+* **Visual Workflow Diagram**: To depict progress of Workflow at runtime.
 
-Estimated Time: 3 hours 45 minutes
+Estimated Workshop Time: 3 hours 45 minutes
 
 ## Simplify Business Process Management with Workflows
 
@@ -40,23 +40,23 @@ Stay tuned for a journey into the world of streamlined business process manageme
 
 In this workshop, you will:
 
-- Identify the manual and automated steps of your business process.
+* Identify the manual and automated steps of your business process.
 
-- Create the APEX application.
+* Create the APEX application.
 
-- Create the Doctor Appointment Workflow.
+* Create the Doctor Appointment Workflow.
 
-- Add Invoke Workflow.
+* Add Invoke Workflow.
 
-- Add Human Tasks to the Workflow.
+* Add Human Tasks to the Workflow.
 
-- Add Activities and Connections to the Workflow.
+* Add Activities and Connections to the Workflow.
 
-- Create Pages for the APEX application.
+* Create Pages for the APEX application.
 
 ## Downloads
 
-If you are stuck or the app is not working as expected, you can download and install the completed application from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflow-export.sql)**.
+If you are stuck or the app is not working as expected, you can download and install the completed application from **[SQL script: labfiles/apex-workflow-export.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflow-export.sql)**.
 
 Import them into your workspace. To run the app, please run the steps described in the following lab:
 
@@ -66,13 +66,13 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX Workflows](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX Workflows](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+* **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+* **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

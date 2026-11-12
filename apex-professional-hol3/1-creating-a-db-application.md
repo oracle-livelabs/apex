@@ -10,27 +10,27 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a database application based on existing tables.
+* Create a database application based on existing tables.
 
-- Add multiple pages, including dashboards, reports, and interactive pages.
+* Add multiple pages, including dashboards, reports, and interactive pages.
 
-- Configure administration pages and enable secure access controls.
+* Configure administration pages and enable secure access controls.
 
-- Implement Progressive Web App features.
+* Implement Progressive Web App features.
 
-- Explore and test the completed application.
+* Explore and test the completed application.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! Follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-After installing the sample dataset tables, import the SQL script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step.
+After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step.
 
-> Note: If you want to drop the database objects, run the  script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+> Note: If you want to drop the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Create an Application based on Existing Tables
 
@@ -72,65 +72,65 @@ Dashboards are essential for summarizing critical information using charts and v
 
 3. Select **Chart 1**, and enter/select the following:
 
-    - Chart Type: **Bar**
+    * Chart Type: **Bar**
 
-    - Chart Name: **Top 10 Products**
+    * Chart Name: **Top 10 Products**
 
-    - Table or View: **PRODUCT_ORDERS**
+    * Table or View: **PRODUCT_ORDERS**
 
-    - Label Column: **PRODUCT_NAME**
+    * Label Column: **PRODUCT_NAME**
 
-    - Type: **Sum**
+    * Type: **Sum**
 
-    - Value Column: **TOTAL_SALES**
+    * Value Column: **TOTAL_SALES**
 
     ![Add Chart1](./images/chart11.png " ")
 
 4. Select **Chart 2**, and enter/select the following:
 
-    - Chart Type: **Pie**
+    * Chart Type: **Pie**
 
-    - Chart Name: **Top 5 Stores**
+    * Chart Name: **Top 5 Stores**
 
-    - Table or View: **STORE_ORDERS**
+    * Table or View: **STORE_ORDERS**
 
-    - Label Column: **STORE_NAME**
+    * Label Column: **STORE_NAME**
 
-    - Type: **Sum**
+    * Type: **Sum**
 
-    - Value Column: **TOTAL_SALES**
+    * Value Column: **TOTAL_SALES**
 
     ![Add Chart2](./images/chart22.png " ")
 
 5. Select **Chart 3**, and enter/select the following:
 
-    - Chart Type: **Pie**
+    * Chart Type: **Pie**
 
-    - Chart Name: **Order Status**
+    * Chart Name: **Order Status**
 
-    - Table or View: **CUSTOMER\_ORDER\_PRODUCTS**
+    * Table or View: **CUSTOMER\_ORDER\_PRODUCTS**
 
-    - Label Column: **ORDER_STATUS**
+    * Label Column: **ORDER_STATUS**
 
-    - Type: **Sum**
+    * Type: **Sum**
 
-    - Value Column: **ORDER_ID**
+    * Value Column: **ORDER_ID**
 
     ![Add Chart3](./images/chart33.png " ")
 
 6. Select **Chart 4**, and enter/select the following:
 
-    - Chart Type: **Bar**
+    * Chart Type: **Bar**
 
-    - Chart Name: **Product Reviews**
+    * Chart Name: **Product Reviews**
 
-    - Table or View: **PRODUCT_REVIEWS**
+    * Table or View: **PRODUCT_REVIEWS**
 
-    - Label Column: **PRODUCT_NAME**
+    * Label Column: **PRODUCT_NAME**
 
-    - Type: **Column Value**
+    * Type: **Column Value**
 
-    - Value Column: **AVG_RATING**
+    * Value Column: **AVG_RATING**
 
     ![Add Chart4](./images/chart44.png " ")
 
@@ -154,12 +154,12 @@ Reports provide detailed views of data in your application. In this task, you wi
 
 3. On the **Add Multiple Reports** page, select the following tables and click **Add Pages**.
 
-    - CLOTHING_LOOKUP
-    - COLOR_LOOKUP
-    - CUSTOMERS
-    - DEPARTMENT_LOOKUP
-    - PRODUCT_REVIEWS
-    - STORES
+    * CLOTHING_LOOKUP
+    * COLOR_LOOKUP
+    * CUSTOMERS
+    * DEPARTMENT_LOOKUP
+    * PRODUCT_REVIEWS
+    * STORES
 
     ![Add Multiple reports2](./images/add-multiple-reports2.png " ")
 
@@ -171,12 +171,12 @@ Not all pages should be accessible to all users. In this task, you will configur
 
 1. Edit each of the following pages to set it as an Administration Page:
 
-    - CLOTHING_LOOKUP
-    - COLOR_LOOKUP
-    - CUSTOMERS
-    - DEPARTMENT_LOOKUP
-    - PRODUCT_REVIEWS
-    - STORES
+    * CLOTHING_LOOKUP
+    * COLOR_LOOKUP
+    * CUSTOMERS
+    * DEPARTMENT_LOOKUP
+    * PRODUCT_REVIEWS
+    * STORES
 
     ![Administration Pages](./images/edit-multiple-reports.png " ")
 
@@ -200,9 +200,9 @@ Interactive reports allow users to manage and analyze data dynamically. In this 
 
 3. On the **Add Report Page**, enter/select the following:
 
-    - Page Name: **Manage Products**
+    * Page Name: **Manage Products**
 
-    - Table: **PRODUCTS**
+    * Table: **PRODUCTS**
 
 4. Under **Advanced**, disable **Include Form** and enable **Set as Administration Page** and click **Add Page**.
 
@@ -249,5 +249,5 @@ You have successfully created a database application in Oracle APEX using existi
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

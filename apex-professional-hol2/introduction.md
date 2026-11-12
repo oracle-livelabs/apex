@@ -10,21 +10,21 @@ In this workshop, you create the database objects required to build the **Online
 
 In the previous hands-on lab, you learned how to create an APEX Workspace, navigate the major components of Oracle APEX, and install and run a packaged application.
 
-Estimated Time: 40 minutes
+Estimated Workshop Time: 40 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Install a sample dataset into your Oracle APEX Workspace.
+* Install a sample dataset into your Oracle APEX Workspace.
 
-- Add new columns to the existing Products table, populate the new columns and create lookup tables.
+* Add new columns to the existing Products table, populate the new columns and create lookup tables.
 
-- Create a package to manage the Shopping Cart.
+* Create a package to manage the Shopping Cart.
 
-- Create database objects using Quick SQL.
+* Create database objects using Quick SQL.
 
-- Load data using the Data generator and Data Workshop page.
+* Load data using the Data generator and Data Workshop page.
 
 <!--### Downloads
 
@@ -36,8 +36,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-installing-sample-tables/1-installing-sample-tables.md#acknowledgements).

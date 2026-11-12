@@ -8,25 +8,25 @@ In this workshop, you navigate to **Demo Projects Application** and create an **
 
 Later, in the **Online Shopping Cart Application**, you will create:
 
-- **Application Items** and **Application Process**
+* **Application Items** and **Application Process**
 
-- **Cards** pages to view Product Details and Customer Reviews in the Online Shopping Application.
+* **Cards** pages to view Product Details and Customer Reviews in the Online Shopping Application.
 
-- **Faceted Search Page** to view the Products.
+* **Faceted Search Page** to view the Products.
 
 ### Recap
 
 In the previous workshop, you learned to navigate and review the Page Designer panes. You acquired the skills to construct a normal page, incorporate regions, sub-regions, and page items, and manage the locking and unlocking of pages.
 
-Estimated Time: 40 minutes
+Estimated Workshop Time: 40 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Create pages to search and edit the Projects and Tasks in the **Demo Projects** Application.
+* Create pages to search and edit the Projects and Tasks in the **Demo Projects** Application.
 
-- Create a Page to list the products in the **Shopping Cart** Application.
+* Create a Page to list the products in the **Shopping Cart** Application.
 
 <!--### Downloads
 
@@ -48,8 +48,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-adding-pages-demo-projects.md#acknowledgements).

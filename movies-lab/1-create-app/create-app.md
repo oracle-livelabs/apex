@@ -15,17 +15,17 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create a new application.
+* Create a new application.
 
-- Edit the appearance and theme of your application.
+* Edit the appearance and theme of your application.
 
-- Run your application.
+* Run your application.
 
-- Sign up for a TMDB API key.
+* Sign up for a TMDB API key.
 
 ### Prerequisites
 
-- An Oracle APEX workspace
+* An Oracle APEX workspace
 
 ## Task 1: Create the App
 
@@ -51,7 +51,7 @@ In this lab, you will:
 
 6. Open the Choose Application Icon dialog by clicking on the icon to the left of the Name field.
 
-    - Select the red color swatch (fifth from the left) and the smiley face icon.
+    * Select the red color swatch (fifth from the left) and the smiley face icon.
 
     Click **Save Icon**.
 
@@ -63,13 +63,13 @@ In this lab, you will:
 
 8. In the dialog, enter/select the following:
 
-    - Page Name: **My Watchlist**
+    * Page Name: **My Watchlist**
 
-    - Click the **Set Icon** button.
+    * Click the **Set Icon** button.
 
-        - In the Select Icon dialog, search for **film**.
+        * In the Select Icon dialog, search for **film**.
 
-        - Click the film icon that has the play button in the middle.
+        * Click the film icon that has the play button in the middle.
 
         Click **Save Changes**.
 
@@ -109,13 +109,13 @@ In this lab, you will:
 
 5. Under **Global Colors**, enter/select the following:
 
-    - Copy the HEX color code: **C74634**
+    * Copy the HEX color code: **C74634**
 
-    - Click on the color swatch next to **Primary Accent** and paste the HEX code in the **Hex** text box.
+    * Click on the color swatch next to **Primary Accent** and paste the HEX code in the **Hex** text box.
 
     ![Theme Roller dialog open with the Theme and Global Colors sections expanded and the color picker open](images/theme-roller.png " ")
 
-    - Click on the color swatch next to **Body Accent** and paste the HEX code **312D2A** in the Hex text box.
+    * Click on the color swatch next to **Body Accent** and paste the HEX code **312D2A** in the Hex text box.
 
     ![Theme Roller dialog open with the Theme and Global Colors sections expanded and the color picker open](images/body-accent.png " ")
 
@@ -145,23 +145,23 @@ You now know how to create, run, and update the theme of an application. You may
 
 ## Learn More
 
-- [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/application-builder-concepts.html)
+* [App Builder Concepts](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/application-builder-concepts.html)
 
-- [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
+* [Universal Theme](https://apex.oracle.com/pls/apex/apex_pm/r/ut/getting-started)
 
-- [The Movie Database](https://www.themoviedb.org/)
+* [The Movie Database](https://www.themoviedb.org/)
 
-- [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
+* [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 1 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-1.sql) to download a copy of the app at the end of Lab 1.
+* [SQL script: apex/lab-1.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-1.sql) to download a copy of the app at the end of Lab 1.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

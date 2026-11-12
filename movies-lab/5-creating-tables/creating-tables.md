@@ -14,13 +14,13 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Set up the movie_users and watchlist tables using Quick SQL.
+* Set up the movie_users and watchlist tables using Quick SQL.
 
-- Create an application process and item for storing user information.
+* Create an application process and item for storing user information.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 4
+* Completion of workshop through Lab 4
 
 ## Task 1: Create the Movie Users Table
 
@@ -36,15 +36,16 @@ The first table you need to create is the movie\_users table. It is very simple,
     <copy>
     movie_users
         username /unique
+    </copy>
     ```
 
     ![Quick SQL page with copied movie_users code in the left pane and generated code in the right pane](images/generate-users-sql.png " ")
 
 3. Click **Settings** on the top right of the Quick SQL toolbar.
 
-    - Scroll down to Additional Columns and check **Audit columns**.
+    * Scroll down to Additional Columns and check **Audit columns**.
 
-    - This will automatically add the Created, Created\_By, Updated, and Updated\_By columns to the table.
+    * This will automatically add the Created, Created\_By, Updated, and Updated\_By columns to the table.
 
        Click **Save Changes**.
 
@@ -90,15 +91,15 @@ To store data within the movie\_users database, you will use an application proc
 
 6. Click **Create** and enter/select the following:
 
-    - Name: **Add User**
+    * Name: **Add User**
 
-    - Point: **After Authentication**
+    * Point: **After Authentication**
 
         Click **Next**.
 
     ![Create Application Process dialog over the Application Processes page](images/create-process.png " ")
 
-    - Source > Code: Copy and paste the following code into the Code editor box:
+    * Source > Code: Copy and paste the following code into the Code editor box:
 
     ```
     <copy>
@@ -122,6 +123,7 @@ To store data within the movie\_users database, you will use an application proc
                 returning
                     id into :USER_ID;
     end;
+    </copy>
     ```
 
     Click **Next**.
@@ -166,6 +168,7 @@ You will need a table to store some basic movie information in addition to the u
         release_date
         runtime num
         vote_average num
+    </copy>
     ```
 
     > *Note the /unique directive in the last line of the Quick SQL code. In the movie\_users table, you created a unique key by using the /unique directive for the username column. This prevents the same user from getting put into the table more than once by making sure the username is always unique. In the watchlist table, the unique key actually comes from two different columns: movie\_id and user\_id. A single user cannot add the same movie to the watchlist table more than once. Unique keys are extremely helpful when it comes to maintaining the integrity of the data in your local tables.*
@@ -194,41 +197,41 @@ You now know how to use Quick SQL to define new tables, and create application i
 
 ## Learn More
 
-- [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)
+* [Tour of SQL Workshop](https://www.youtube.com/watch?v=bdglHoq-Hbs)
 
-- [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/aeutl/using-quick-sql.html)
+* [Quick SQL Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/aeutl/using-quick-sql.html)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 5 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-5.sql) to download a copy of the app at the end of Lab 5.
+* [SQL script: apex/lab-5.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-5.sql) to download a copy of the app at the end of Lab 5.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     > *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
         ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

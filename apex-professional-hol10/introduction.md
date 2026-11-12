@@ -8,23 +8,23 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In the last hands-on lab, you practiced creating validations on the Page Items and adding Page processes with types like Invoke API, Clear and a branch to a page.
 
-Estimated Time: 20 minutes
+Estimated Workshop Time: 20 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Create Dynamic Actions to manage the shopping cart.
+* Create Dynamic Actions to manage the shopping cart.
 
-- Update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart.
+* Update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart.
 
-- Refresh the shopping cart region.
+* Refresh the shopping cart region.
 
-- Review the product details.
+* Review the product details.
 
-- Review the items added to the shopping cart.
+* Review the items added to the shopping cart.
 
-- Add, edit, or remove the product from the shopping cart.
+* Add, edit, or remove the product from the shopping cart.
 
 <!--### Downloads
 
@@ -46,8 +46,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](2-creating-add-to-cart-page.md#acknowledgements).

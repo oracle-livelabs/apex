@@ -3,6 +3,7 @@
 ## Build a Shopping Cart
 
 ## Overview
+
 This workshop walks you through creating a Shopping Cart application that allows managing products, customers, and stores. The application will have two application roles:
 
 * Administrators
@@ -41,24 +42,24 @@ Estimated Time: 90 minutes
 
 ### **Let's Get Started!**
 
-- If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./images/menu-button.png)) at the top of the page.
-- If you don't have experience working with APEX, please take a look at [Page Designer](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/about-page-designer.html#GUID-F4A825A2-6BD5-4A11-8D68-B24B2B6ED18B) to familiarize with it.
+* If the menu is not displayed, you can open by clicking the menu button (![Menu icon](./0-intro/images/menu-button.png)) at the top of the page.
+* If you don't have experience working with APEX, please take a look at [Page Designer](https://docs.oracle.com/en/database/oracle/application-express/21.1/htmdb/about-page-designer.html#GUID-F4A825A2-6BD5-4A11-8D68-B24B2B6ED18B) to familiarize with it.
 
 ### Downloads
 
-- [Download the completed application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/shoppingcart-app.sql).
-- [Download images for your application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/clothing-images.zip).
+* [Download the completed application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/shoppingcart-app.sql).
+* [Download images for your application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/clothing-images.zip).
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Service](https://apex.oracle.com/en/platform/apex-service/)
-- [APEX Collateral](https://apex.oracle.com)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Service](https://apex.oracle.com/en/platform/apex-service/)
+* [APEX Collateral](https://apex.oracle.com)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgments
 
-- **Author** - Monica Godoy, Principal Product Manager
-- **Last Updated By/Date** - Mónica Godoy, Principal Product Manager, September 2021
+* **Author** - Monica Godoy, Principal Product Manager
+* **Last Updated By/Date** - Mónica Godoy, Principal Product Manager, September 2021

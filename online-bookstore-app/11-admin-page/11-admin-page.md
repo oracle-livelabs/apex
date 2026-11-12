@@ -10,16 +10,16 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Create an Administration Page to manage various administrative tasks.
-- Add Navigation Entry to access the administration section.
-- Configure Authorization Schemes to restrict admin access.
-- Manage book information with search, view, and update options.
-- Create a form for editing detailed book records.
-- Manage user roles using interactive reports and forms.
+* Create an Administration Page to manage various administrative tasks.
+* Add Navigation Entry to access the administration section.
+* Configure Authorization Schemes to restrict admin access.
+* Manage book information with search, view, and update options.
+* Create a form for editing detailed book records.
+* Manage user roles using interactive reports and forms.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab10.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab10.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab10.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 5.
 
 ## Task 1: Create an Administration Page
 
@@ -34,25 +34,25 @@ This task guides you through creating an administration page for managing books 
 
 3. Enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Page Number: **15000**
+        * Page Number: **15000**
 
-        - Name: **Administration**
+        * Name: **Administration**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Create Page**.
 
-   ![close dialog](images/11-1-admin-page.png " ")
+    ![close dialog](images/11-1-admin-page.png " ")
 
 4. Navigate to **Shared Components**.
 
-   ![close dialog](images/11-1-sc-admin.png " ")
+    ![close dialog](images/11-1-sc-admin.png " ")
 
 5. Under **Navigation and Search**, click **Lists** and click **Create**.
 
@@ -67,10 +67,11 @@ This task guides you through creating an administration page for managing books 
 7. For Query or Static Values, enter/select the following:
 
     | List Entry Label | Target Page ID or custom URL |
-    | ---------- |  ------ |
+    | ---------- | ------ |
     | Manage Books Information | 40 |
     | User Role | 30 |
-    {: title="List of Entry Labels"}
+
+    *List of Entry Labels*
 
     Click **Next**.
 
@@ -85,7 +86,7 @@ This task guides you through creating an administration page for managing books 
     ![close dialog](images/11-1-click-admin-list.png " ")
 
 10. Click **Manage Books Information** and
-update Image/Class: **fa-database-file**. Click **Apply Changes**.
+    update Image/Class: **fa-database-file**. Click **Apply Changes**.
 
     ![close dialog](images/11-1-10-edit-manage-book.png " ")
 
@@ -107,23 +108,23 @@ update Image/Class: **fa-database-file**. Click **Apply Changes**.
 
 14. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Administration**
+        * Name: **Administration**
 
-        - Type: **List**
+        * Type: **List**
 
-    - Source > List: **Administration**
+    * Source > List: **Administration**
 
     ![close dialog](images/11-1-add-list.png " ")
 
 15. Navigate to **Attributes** and enter/select the following:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - List Template: **Media List**
+        * List Template: **Media List**
 
-        - Template Options > Click **Use Template Defaults** > Check **Apply Theme Colors**
+        * Template Options > Click **Use Template Defaults** > Check **Apply Theme Colors**
 
         Click **OK**.
 
@@ -153,21 +154,21 @@ In this task, you will add a navigation bar entry for the administration page. A
 
 5. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **2**
+        * Sequence: **2**
 
-        - Image/Class: **fa-user-wrench**
+        * Image/Class: **fa-user-wrench**
 
-        - List Entry Label: **Administration**
+        * List Entry Label: **Administration**
 
-    - Under Target:
+    * Under Target:
 
-        - Page: **15000**
+        * Page: **15000**
 
-        - Clear Cache: **15000**.
+        * Clear Cache: **15000**.
 
-    - Authorization > Authorization Scheme: **Administration Rights**
+    * Authorization > Authorization Scheme: **Administration Rights**
 
     Click **Create List Entry**.
 
@@ -193,9 +194,9 @@ In this task, you will update the authorization scheme to ensure that only users
 
 4. Under the Authorization Scheme, update the following:
 
-    - Schema Type: **Exists SQL Query**
+    * Schema Type: **Exists SQL Query**
 
-    - SQL Query: Copy and paste the below code:
+    * SQL Query: Copy and paste the below code:
 
         ```
         <copy>
@@ -213,11 +214,11 @@ In this task, you will update the authorization scheme to ensure that only users
 
 6. In the Property editor, enter/select the following:
 
-    - Under Security:
+    * Under Security:
 
-        - Authorization scheme: **Administration Rights**
+        * Authorization scheme: **Administration Rights**
 
-        - Deep Linking: **Disabled**
+        * Deep Linking: **Disabled**
 
     ![close dialog](images/11-3-autho-scheme.png " ")
 
@@ -237,17 +238,17 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 3. In Create Blank Page dialog, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **40**
+        * Page Number: **40**
 
-        - Name: **Manage Books Information**
+        * Name: **Manage Books Information**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Create Page**.
 
@@ -255,9 +256,9 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 4. Select **Page 40: Books Information** and in the property editor, enter/select the following:
 
-    - Appearance > Page Template: **Left Side Column**
+    * Appearance > Page Template: **Left Side Column**
 
-    - Navigation > Warn on Unsaved Changes: **Toggle Off**
+    * Navigation > Warn on Unsaved Changes: **Toggle Off**
 
     ![close dialog](images/11-4-left-side-column.png " ")
 
@@ -267,17 +268,17 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 6. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Update Book Information**
+    * Identification > Name: **Update Book Information**
 
-    - Layout > Slot: **Breadcrumb Bar**
+    * Layout > Slot: **Breadcrumb Bar**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Hero**
+        * Template: **Hero**
 
-        - Template Options > Click **Use Template Defaults**:
+        * Template Options > Click **Use Template Defaults**:
 
-            - **Display Icon**: select **No**
+            * **Display Icon**: select **No**
 
             Click **OK**.
 
@@ -289,18 +290,18 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 8. In the property editor, enter/select the following:
 
-    - Identification > Name: **Search**
+    * Identification > Name: **Search**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Blank with Attributes**
+        * Template: **Blank with Attributes**
 
-        - Template Options: Click **Use Template Defaults**
-            - Item Width: **Stretch Form Fields**
+        * Template Options: Click **Use Template Defaults**
+            * Item Width: **Stretch Form Fields**
 
             Click **OK**.
 
-        - CSS Classes: **search-region padding-md**
+        * CSS Classes: **search-region padding-md**
 
     ![close dialog](images/11-4-search-region-real.png " ")
 
@@ -310,21 +311,21 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 10. In the property editor, enter/select the following:
 
-    - Identification > Name: **P40\_SEARCH**
+    * Identification > Name: **P40\_SEARCH**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Hidden**
+        * Template: **Hidden**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Common > Size: **Large**
+            * Common > Size: **Large**
 
-            - Advanced > Item Post Text: **Display as Block**
+            * Advanced > Item Post Text: **Display as Block**
 
             Click **OK**.
 
-        - Value Placeholder: **Search here**
+        * Value Placeholder: **Search here**
 
     ![close dialog](images/11-4-search-page-item.png " ")
 
@@ -334,17 +335,17 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 12. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Master Records**
+        * Name: **Master Records**
 
-        - Type: **Classic Report**
+        * Type: **Classic Report**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
             ```
             <copy>
@@ -374,27 +375,27 @@ In this task, you'll create a page to manage book information. Start by navigati
             </copy>
             ```
 
-        - Page items to submit: **P40\_SEARCH**
+        * Page items to submit: **P40\_SEARCH**
 
-    - Layout > Slot: **Left Column**
+    * Layout > Slot: **Left Column**
 
-    - Appearance > Template: **Blank with Attributes (No Grid)**
+    * Appearance > Template: **Blank with Attributes (No Grid)**
 
     ![close dialog](images/11-4-12-master-records.png " ")
 
 13. Navigate to **Attributes** and enter/select the following:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Media List**
+        * Template: **Media List**
 
-        - Template Options > Click **Use Template Defaults**
+        * Template Options > Click **Use Template Defaults**
 
-            - Check **Show Description Only** and uncheck **Others**
+            * Check **Show Description Only** and uncheck **Others**
 
             Click **OK**.
 
-    - Messages > When No Data Found: **No Books Found.**
+    * Messages > When No Data Found: **No Books Found.**
 
     ![close dialog](images/11-4-master-record-details.png " ")
 
@@ -408,13 +409,13 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 16. Select **TRUE** Action, enter/select the following:
 
-    - Identification > Action: **Refresh**
+    * Identification > Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Master Records**
+        * Region: **Master Records**
 
     ![close dialog](images/11-4-16-true-refresh.png " ")
 
@@ -424,7 +425,7 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 18. Enter/select the following:
 
-    - Identification > Action: **Cancel Event**
+    * Identification > Action: **Cancel Event**
 
     ![close dialog](images/11-4-cancel-event.png " ")
 
@@ -434,43 +435,43 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 20. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Book Details**
+        * Name: **Book Details**
 
-        - Type: **Classic Report**
+        * Type: **Classic Report**
 
-    - Under Source:
+    * Under Source:
 
-        - Table Name: **OBS\_BOOKS**
+        * Table Name: **OBS\_BOOKS**
 
-        - Where Clause: **"BOOK\_ID" = :P40\_ID**
+        * Where Clause: **"BOOK\_ID" = :P40\_ID**
 
     ![close dialog](images/11-4-book-details-report.png " ")
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template Options > Click **Use Template Defaults**:
+        * Template Options > Click **Use Template Defaults**:
 
-            - Check **Remove Body Padding**
+            * Check **Remove Body Padding**
 
             Click **OK**
 
-        - CSS Classes: **js-master-region**
+        * CSS Classes: **js-master-region**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **ITEM IS NOT NULL**
+        * Type: **ITEM IS NOT NULL**
 
-        - Item: **P40\_ID**
+        * Item: **P40\_ID**
 
     ![close dialog](images/11-4-defaults.png " ")
 
 21. Navigate to **Attributes**, enter/select the following:
 
-    - Appearance > Template: **Value Attribute Pairs - Column**
+    * Appearance > Template: **Value Attribute Pairs - Column**
 
-    - Pagination > Type: **No Pagination(Show All Rows)**
+    * Pagination > Type: **No Pagination(Show All Rows)**
 
     ![close dialog](images/11-4-book-details-att1.png " ")
 
@@ -480,11 +481,11 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 23. Select **PRICE**, **TITLE** **AUTHOR**, **CATEGORY**, **DISCOUNT**, **PUBLISHER**, **BOOK\_IMAGE**, **CONTRIBUTOR**, **DESCRIPTION**, **BOOK\_QUANTITY** and in the property editor, enter/select the following:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
             ```
             <copy>
@@ -501,16 +502,16 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 25. Select **AVAILABLE\_YN** and update the following:
 
-    - Identification > Type: **Plain Text (based on List of Values)**
+    * Identification > Type: **Plain Text (based on List of Values)**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: Static Values
+        * Type: Static Values
 
-        - Static Values:
+        * Static Values:
 
             | Display Value | Return ValueL |
-            | ---------- |  ------ |
+            | ---------- | ------ |
             | Yes | Y |
             | No | N |
 
@@ -524,13 +525,13 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 27. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P40\_ID**
+        * Name: **P40\_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
-    - Layout > Region: **Book Details**
+    * Layout > Region: **Book Details**
 
     ![close dialog](images/11-4-id-hidden.png " ")
 
@@ -540,25 +541,25 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 29. In the property editor, enter/select the following:
 
-    - Identification > Name: **Dialog Closed**
+    * Identification > Name: **Dialog Closed**
 
-    - When > Event: **Dialog Closed**
+    * When > Event: **Dialog Closed**
 
     ![close dialog](images/11-4-dialog-closed.png " ")
 
 30. Select **TRUE Action** and enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Refresh Book Details**
+        * Name: **Refresh Book Details**
 
-        - Action: **Refresh**
+        * Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Book Details**
+        * Region: **Book Details**
 
     ![close dialog](images/11-4-30-refresh-book-details.png " ")
 
@@ -568,40 +569,41 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 32. In the property editor, enter/select the following:
 
-    - Identification > Button Name: **EDIT**
+    * Identification > Button Name: **EDIT**
 
-    - Layout > Slot: **Edit**
+    * Layout > Slot: **Edit**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Template options: Click **Use Template Defaults**
+        * Template options: Click **Use Template Defaults**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
             Click **OK**.
 
-        - Icon: **fa-pencil-square-o**
+        * Icon: **fa-pencil-square-o**
 
     ![close dialog](images/11-4-edit-btn.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Target > Page: **50**
+            * Target > Page: **50**
 
-            - Set Items:
+            * Set Items:
 
-                | Name             | Value        |
+                | Name | Value |
                 | ---------------- | ------------ |
                 | P50\_BOOK\_ID | &P40\_ID. |
-                {: title="List of Items"}
 
-            - Clear / Reset > Clear Cache: **50**
+                *List of Items*
+
+            * Clear / Reset > Clear Cache: **50**
 
            Click **OK**.
 
@@ -613,37 +615,37 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 34. In the property editor, enter/select the following:
 
-    - Identification > Button Name: **RESET**
+    * Identification > Button Name: **RESET**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Template options: Click **Use Template Defaults**
+        * Template options: Click **Use Template Defaults**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
-            - Spacing Right: **Large**
+            * Spacing Right: **Large**
 
             Click **OK**.
 
-        - Icon: **fa-undo-alt**
+        * Icon: **fa-undo-alt**
 
     ![close dialog](images/11-4-reset-btn.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Target > Page: **40**
+            * Target > Page: **40**
 
-            - Clear / Reset > Clear Cache: **40**
+            * Clear / Reset > Clear Cache: **40**
 
-            - Advanced > Request: **RESET**
+            * Advanced > Request: **RESET**
 
             Click **OK**.
 
@@ -655,37 +657,37 @@ In this task, you'll create a page to manage book information. Start by navigati
 
 36. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **CREATE**
+        * Button Name: **CREATE**
 
-        - Label: **Create**
+        * Label: **Create**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Hot: **Toggle On**
+        * Hot: **Toggle On**
 
-        - Template options: Click **Use Template Defaults**
+        * Template options: Click **Use Template Defaults**
 
-            - Style: **Default**
+            * Style: **Default**
 
-            - Spacing Right: **Default**
+            * Spacing Right: **Default**
 
             Click **OK**.
 
-        - Icon: Remove **fa-undo-alt**
+        * Icon: Remove **fa-undo-alt**
 
     ![close dialog](images/11-4-36-create-btn1.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-         - Target: Click **Page 40**
+        * Target: Click **Page 40**
 
-             - Page: **50**
+            * Page: **50**
 
-             - Clear Cache: **50**
+            * Clear Cache: **50**
 
-             - Advanced > Request: Remove **RESET**
+            * Advanced > Request: Remove **RESET**
 
              Click **OK**.
 
@@ -711,17 +713,17 @@ In this task, you will create a form that enables users to edit book records in 
 
 3. In Create Form Page dialog, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **50**
+        * Page Number: **50**
 
-        - Name: **Edit Book Details**
+        * Name: **Edit Book Details**
 
-        - Page Mode: **Drawer**
+        * Page Mode: **Drawer**
 
-    - Under Data Source:
+    * Under Data Source:
 
-        - Table / View Name: **OBS\_BOOKS**
+        * Table / View Name: **OBS\_BOOKS**
 
     Click **Next**.
 
@@ -733,9 +735,9 @@ In this task, you will create a form that enables users to edit book records in 
 
 5. Select **Page 50: Edit Book Details** and update the following:
 
-    - Dialog > Chained: **Toggle Off**
+    * Dialog > Chained: **Toggle Off**
 
-    - Navigation > Warn on Unsaved Changes: **Toggle Off**
+    * Navigation > Warn on Unsaved Changes: **Toggle Off**
 
     ![close dialog](images/11-5-5-chained-off.png " ")
 
@@ -757,23 +759,24 @@ In this task, you will create a form that enables users to edit book records in 
 
 10. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P50\_RESPONSE**
+        * Name: **P50\_RESPONSE**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
-    - Session State > Data Type: **CLOB**
+    * Session State > Data Type: **CLOB**
 
     ![close dialog](images/11-5-response-clob.png " ")
 
 11. Rearrange the Page Items in the following order by drag and drop.
-    | Page Items   |
-    | ----------   |
-    | P50\_BOOK_ID  |
-    | P50\_TITLE    |
-    | P50\_AUTHOR   |
-    | P50\_PRICE    |
+
+    | Page Items |
+    | ---------- |
+    | P50\_BOOK_ID |
+    | P50\_TITLE |
+    | P50\_AUTHOR |
+    | P50\_PRICE |
     | P50\_DISCOUNT |
     | P50\_BOOK\_QUANTITY |
     | P50\_CATEGORY |
@@ -821,23 +824,23 @@ In this task, you will build pages with interactive reports and forms to view an
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **30**
+        * Page Number: **30**
 
-        - Name: **Users Role**
+        * Name: **Users Role**
 
-        - Include Form Page: **Toggle On**
+        * Include Form Page: **Toggle On**
 
-        - Form Page Number: **29**
+        * Form Page Number: **29**
 
-        - Form Page Name: **Update Users Role**
+        * Form Page Name: **Update Users Role**
 
-    - Data Source > Table/View Name: **OBS\_USERS**
+    * Data Source > Table/View Name: **OBS\_USERS**
 
     Click **Next**
 
-   ![close dialog](images/11-6-inter-report-details.png " ")
+    ![close dialog](images/11-6-inter-report-details.png " ")
 
 4. Click **Create Page**.
 
@@ -887,13 +890,13 @@ In this task, you modify the user role update form for enhanced usability and fu
 
 5. Under **Buttons** Region, select **Delete** button and enter/select the following:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Type: **Danger**
+            * Type: **Danger**
 
-            - Style: **Simple**
+            * Style: **Simple**
 
             Click **OK**.
 
@@ -907,9 +910,9 @@ In this task, you will log in and explore the Administration section to manage b
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/11-8-1-run-app.png " ")
 
@@ -959,5 +962,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

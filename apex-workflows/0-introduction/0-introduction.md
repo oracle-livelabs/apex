@@ -12,15 +12,15 @@ Workflows automate business processes by defining how documents, information, or
 
 With the initial release of APEX Workflows, you can take advantage of the following capabilities:
 
-- **Visual Workflow Designer**: Craft and author workflow models with ease.
-- **Workflow Console**: Monitor and administer workflows efficiently.
-- **Workflow Runtime (Engine)**: Execute workflows seamlessly.
-- **Workflow APIs**: Public API (APEX_WORKFLOW package) and SQL Views.
-- **Approval Component**: Feature-rich component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
-- **Workflow Dashboard**: Provides an overview of in-flight workflow instances.
-- **Visual Workflow Diagram**: Depicts workflow progress at runtime.
-- **Workflow Variables**: Store and manage data values throughout the execution of a workflow, used for conditions, routing, and automation logic.
-- **Workflow Versioning**: Maintain multiple workflow model versions and activate new ones without affecting running instances.
+* **Visual Workflow Designer**: Craft and author workflow models with ease.
+* **Workflow Console**: Monitor and administer workflows efficiently.
+* **Workflow Runtime (Engine)**: Execute workflows seamlessly.
+* **Workflow APIs**: Public API (APEX_WORKFLOW package) and SQL Views.
+* **Approval Component**: Feature-rich component with Human Task dynamic participant assignment, task deadlines with expiration policies, vacation rules, task actions, full task history, out-of-the-box Unified Task List and Task Detail pages.
+* **Workflow Dashboard**: Provides an overview of in-flight workflow instances.
+* **Visual Workflow Diagram**: Depicts workflow progress at runtime.
+* **Workflow Variables**: Store and manage data values throughout the execution of a workflow, used for conditions, routing, and automation logic.
+* **Workflow Versioning**: Maintain multiple workflow model versions and activate new ones without affecting running instances.
 
 These capabilities enable APEX developers to embed process automation directly into applications without writing large amounts of custom code.
 
@@ -38,29 +38,29 @@ Estimated Time: 3 hours 50 minutes
 
 In this workshop, you will:
 
-- Identify the manual and automated steps of your business process.
-- Create the APEX application.
-- Create the Doctor Appointment Workflow.
-- Add Invoke Workflow.
-- Add Human Tasks to the Workflow.
-- Add Activities and Connections to the Workflow.
-- Create pages for the APEX application.
+* Identify the manual and automated steps of your business process.
+* Create the APEX application.
+* Create the Doctor Appointment Workflow.
+* Add Invoke Workflow.
+* Add Human Tasks to the Workflow.
+* Add Activities and Connections to the Workflow.
+* Create pages for the APEX application.
 
 ## Prerequisites
 
-- An APEX workspace.
+* An APEX workspace.
 
 >*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
-- *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+* *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-- *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
+* *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
 
-- *The application ID and application icon in the screenshots may vary. Please ignore the application ID and icon.*
+* *The application ID and application icon in the screenshots may vary. Please ignore the application ID and icon.*
 
 ## Labs
 
-| Lab |  Module | Est. Time |
+| Lab | Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 10 minutes |
 | 2 | [Design the Application](?lab=2-design-the-application) | 20 minutes |
@@ -84,7 +84,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, don't worry! You can download and install the completed app as follows:
 
-1. [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflow-export.sql) to download the completed application.
+1. [SQL script: labfiles/apex-workflow-export.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fapex-workflow-export.sql) to download the completed application.
 
 2. Import the **labfiles_apex-workflow-export.sql** file into your workspace. To run the app, please run the steps described in the following lab:
 
@@ -92,14 +92,14 @@ If you are stuck or the app is not working as expected, don't worry! You can dow
 
 ## Learn More - *Useful Links*
 
-- [APEX Workflows](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX Workflows](https://docs.oracle.com/en/database/oracle/apex/23.2/htmdb/managing-workflows-and-tasks.html#GUID-C2149600-4A1C-4CC5-A149-DB5C6963A599)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
-- **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025
+* **Author(s)** - Roopesh Thokala, Senior Product Manager & Ananya Chatterjee, Consulting Member of Technical Staff.
+* **Contributing Author** - Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, December 2025

@@ -33,42 +33,44 @@ Estimated Time: 60 minutes
 *Note:This workshop assumes you are using Oracle APEX 26.1.*
 
 **Quick Tip:**
-- If you’re interested in exploring only the **Generative AI** features, begin directly with [Lab 3](lab=3-configure-oci).
-- Before you start, make sure to download and install the following starter application: [Download the Starter App](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/nyc-starter-app.sql)
 
-The starter app contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab](lab=8-appendix): 
+* If you’re interested in exploring only the **Generative AI** features, begin directly with [Lab 3](lab=3-configure-oci).
+* Before you start, make sure to download and install the following starter application: [Download the Starter App](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/9DEArLjsgbKXuJgQtSG95E8hMXRFtxgHR8jiHbqz4HgyVYXVnSo0SC_s-zq5CJA3/n/c4u02/b/hosted-files/o/nyc-starter-app.sql)
 
-- [Task 1: Import the App into an APEX Workspace](lab=8-appendix#Task1:ImporttheAppintoanAPEXWorkspace) 
-- [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](lab=8-appendix#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
+The starter app contains everything completed until Lab 2. To run the app, follow the steps described in the [Appendix Lab](lab=8-appendix):
+
+* [Task 1: Import the App into an APEX Workspace](lab=8-appendix#Task1:ImporttheAppintoanAPEXWorkspace)
+* [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](lab=8-appendix#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 
 ## Prerequisites
 
-- An APEX workspace.
+* An APEX workspace.
 
-- API key for the AI Provider of your choice. (OCI Gen AI, OpenAI, Cohere)
+* API key for the AI Provider of your choice. (OCI Gen AI, OpenAI, Cohere)
 
-- If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
-    - A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
+* If you choose OCI Gen AI as your AI provider, the prerequisites are as follows:
+    * A paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 credits for 30 days to use on other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/). The OCI account must be created in or subscribed to one of the regions that supports OCI Generative AI Service. Currently, OCI Generative AI Service is supported in the following regions:
 
-        - Brazil East (Sao Paulo)
-        - Germany Central (Frankfurt)
-        - India South (Hyderabad) 
-        - Japan Central (Osaka)
-        - UAE East (Dubai)
-        - UK South (London)
-        - US Midwest (Chicago)
-        
-
-    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
-
-    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
-
-    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+        * Brazil East (Sao Paulo)
+        * Germany Central (Frankfurt)
+        * India South (Hyderabad)
+        * Japan Central (Osaka)
+        * UAE East (Dubai)
+        * UK South (London)
+        * US Midwest (Chicago)
 
 
-*Note*: 
-- This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
-- The application ID in the screenshots may vary. Please ignore the application ID.
+    * OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+
+    * An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+
+    * The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+
+
+*Note*:
+
+* This workshop assumes you are using Oracle APEX 26.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.
+* The application ID in the screenshots may vary. Please ignore the application ID.
 
 
 ## Labs
@@ -105,13 +107,14 @@ To run the app, follow the steps described in the [Appendix Lab: Download Instru
 
 ## Learn More - *Useful Links*
 
-- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
- - **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
- - **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026
+
+* **Authors** - Apoorva Srinivas, Principal Product Manager; Toufiq Mohammed, Principal Product Manager
+* **Last Updated By/Date** - Apoorva Srinivas, Principal Product Manager, June 2026

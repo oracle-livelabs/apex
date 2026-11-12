@@ -17,27 +17,27 @@ Estimated Workshop Time: ~3-4 hours.
 
 In this workshop, you will learn how to:
 
-- Build a multi step onboarding process using Oracle APEX
+* Build a multi step onboarding process using Oracle APEX
 
-- Define Workflow participants and implement role-based task routing.
+* Define Workflow participants and implement role-based task routing.
 
-- Build APEX pages to initiate Workflows and complete tasks.
+* Build APEX pages to initiate Workflows and complete tasks.
 
-- Automate notifications for onboarding steps.
+* Automate notifications for onboarding steps.
 
-- Monitor and report on onboarding progress using Workflow views.
+* Monitor and report on onboarding progress using Workflow views.
 
-- Archive Tasks and Workflows.
+* Archive Tasks and Workflows.
 
 ### Prerequisites for Building this App
 
-- An APEX Workspace.
+* An APEX Workspace.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
 ## Labs
 
-| Lab |  Module | Est. Time |
+| Lab | Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Identify Business Steps](?lab=1-identify-business-steps) | 10 minutes |
 | 2 | [Load Database Objects & Create Workspace Users](?lab=2-data-load) | 10 minutes |
@@ -57,7 +57,7 @@ In this workshop, you will learn how to:
 
 If you are stuck or the App is not working as expected, you can download and install the completed app as follows:
 
-1. Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEmployee_Onboarding_App.sql) to download the completed application file.
+1. Click [SQL script: labfiles/Employee\_Onboarding\_App.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEmployee_Onboarding_App.sql) to download the completed application file.
 
 2. Import the **labfiles\_Employee\_Onboarding\_App.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 
@@ -76,17 +76,16 @@ Choose this option to download the ready-to-use starter app. The tasks of App an
 2. Skip to the [Appendix Lab](?lab=12-appendix) and follow the instructions.
 
 
-
 ## Learn More - *Useful Links*
 
-- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
 
-- **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025
+* **Author** - Sahaana Manavalan, Senior Product Manager; Roopesh Thokala, Senior Product Manager, August 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, August 2025

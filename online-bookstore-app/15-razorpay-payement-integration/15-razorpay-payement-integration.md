@@ -10,14 +10,14 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Create a Web Credential using the Razorpay API key.
-- Create a REST Data Source to integrate with the Razorpay API.
-- Update the OBS\_MANAGE\_ORDERS package to include payment details.
-- Integrate the Razorpay payment gateway into the Shopping Cart page.
+* Create a Web Credential using the Razorpay API key.
+* Create a REST Data Source to integrate with the Razorpay API.
+* Update the OBS\_MANAGE\_ORDERS package to include payment details.
+* Integrate the Razorpay payment gateway into the Shopping Cart page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab14.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 8.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab14.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab14.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 8.
 
 ## Task 1: Create Web Credential
 
@@ -51,13 +51,13 @@ In this task, you will generate an API key in Test Mode on the Razorpay dashboar
 
 9. In the **Web Credentials** enter the following and click **Create**.
 
-    - Under **Attributes**:
+    * Under **Attributes**:
 
-        - Name: Enter **Razorpay API**
-        - Authentication Type: Select **Basic Authentication**.
-        - Client ID or Username: Enter the **Key Id** you copied in **Step 4**.
-        - Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
-        - Verify Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
+        * Name: Enter **Razorpay API**
+        * Authentication Type: Select **Basic Authentication**.
+        * Client ID or Username: Enter the **Key Id** you copied in **Step 4**.
+        * Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
+        * Verify Client Secret or Password: Enter the **Key Secret** you copied in **Step 4**.
 
     ![Click Timeline](images/15-1-9-details.png " ")
 
@@ -83,9 +83,9 @@ In this task, you will create a REST Data Source to integrate with the Razorpay 
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
 
-    - Name: **Razorpay API**
+    * Name: **Razorpay API**
 
-    - URL Endpoint: **https://api.razorpay.com/v1/orders**
+    * URL Endpoint: **<https://api.razorpay.com/v1/orders>**
 
     ![Click Timeline](images/15-2-5-details.png " ")
 
@@ -99,13 +99,13 @@ In this task, you will create a REST Data Source to integrate with the Razorpay 
 
 8. Under Authentication, select the following below and click **Create REST Source Manually**.
 
-    - Authentication Required: **Toggle On**
+    * Authentication Required: **Toggle On**
 
-    - Credentials: **Razorpay API**
+    * Credentials: **Razorpay API**
 
     ![Click Timeline](images/15-2-8-auth.png " ")
 
-   The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
+    The REST Data Source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
 9. On the REST Data Sources page, click **Razorpay API**.
 
@@ -113,11 +113,11 @@ In this task, you will create a REST Data Source to integrate with the Razorpay 
 
 10. Select the Operations tab, click **Edit icon** for the POST operation and enter the following:
 
-    - **Database Operation**: -Not Mapped-
+    * **Database Operation**: -Not Mapped-
 
-    - **Request Body Template**: Copy and paste the JSON given below.
+    * **Request Body Template**: Copy and paste the JSON given below.
 
-     ```
+    ```
     <copy>
     {
     "amount": #AMOUNT#,
@@ -138,11 +138,12 @@ In this task, you will create a REST Data Source to integrate with the Razorpay 
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-   |   | Type | Name | Direction | Default Value | Static |
-   |---|-------|------|----------| --------------| ------ |
-   | 1 | Request or Response Body| RESPONSE | Out |
-   | 2 | HTTP Header| Content-Type | In | application/json | ON
-   {: title="List of POST Operation Parameters"}
+    | | Type | Name | Direction | Default Value | Static |
+    | --- | ------- | ------ | ---------- | -------------- | ------ |
+    | 1 | Request or Response Body | RESPONSE | Out | | |
+    | 2 | HTTP Header | Content-Type | In | application/json | ON |
+
+    *List of POST Operation Parameters*
 
     ![Click Timeline](images/15-2-13-add-para1.png " ")
 
@@ -164,18 +165,18 @@ In this task, you will update the OBS\_MANAGE\_ORDERS package to include Razorpa
 
 3. Under **Specification**, replace procedure **create\_order** with the below code:
 
-     ```
-     <copy>
+    ```
+    <copy>
     PROCEDURE create_order (
         p_user_id  IN VARCHAR2,
         P_PAYMENT_ID in varchar2,
         p_razorpay_id IN VARCHAR2,
         p_order_id  OUT obs_orders.order_id%TYPE
     );
-     </copy>
-      ```
+    </copy>
+    ```
 
-   Click **Save and Compile**.
+    Click **Save and Compile**.
 
      ![Click Timeline](images/15-3-3-manage-orders-package-pecification.png " ")
 
@@ -248,12 +249,13 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 3. Right-click **Order Information** and create the following three page items, one after the other:
 
-      | Name            |  Type   |  Value Protected |
-      | --------------- |  ------ |  --------------- |
-      | P17\_RAZORPAY\_ORDER\_ID | Hidden |
+      | Name | Type | Value Protected |
+      | --------------- | ------ | --------------- |
+      | P17\_RAZORPAY\_ORDER\_ID | Hidden | |
       | P17\_PAYMENT\_ID | Hidden | Toggle OFF |
-      | P17\_RESPONSE | Hidden |
-      {: title="List of Page Items"}
+      | P17\_RESPONSE | Hidden | |
+
+      *List of Page Items*
 
     ![Click Timeline](images/15-4-3-create-pageitems.png " ")
     ![Click Timeline](images/15-4-3-create-pageitems1.png " ")
@@ -270,9 +272,9 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 6. Select **True** action and in the property editor, enter/select the following:
 
-    - Identification > Action: **Submit Page**
+    * Identification > Action: **Submit Page**
 
-    - Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
+    * Settings > Request/Button Name: **CREATE\_RAZOR\_PAY\_ORDER**
 
     ![Click Timeline](images/15-4-7-da-action.png " ")
 
@@ -286,9 +288,9 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 9. Select **True** action and enter/select the following:
 
-    - Identification > Action: **Execute Javascript Code**
+    * Identification > Action: **Execute Javascript Code**
 
-    - Settings > Code: Copy and paste the below code
+    * Settings > Code: Copy and paste the below code
 
         ```
         <copy>
@@ -340,13 +342,14 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
             rzp1.open();
         </copy>
         ```
+
     *Note: Replace &lt;Enter Your Razorpay Key> in the above code with the key ID you saved in Task 1.*
 
-    - Under Client-side Condition:
+    * Under Client-side Condition:
 
-        - Type: **Item is not null**
+        * Type: **Item is not null**
 
-        - Item: **P17\_RAZORPAY\_ORDER\_ID**
+        * Item: **P17\_RAZORPAY\_ORDER\_ID**
 
     <!-- ![Click Timeline](images/15-4-10-da-action.png " ") -->
     ![Click Timeline](images/15-4-10-da-action1.png " ")
@@ -357,15 +360,16 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 11. In the property editor, enter/select the following:
 
-    - Identification > Action: **Execute Server-side Code**
+    * Identification > Action: **Execute Server-side Code**
 
-    - Settings > PL/SQL Code: Copy and paste the below code
+    * Settings > PL/SQL Code: Copy and paste the below code
 
         ```
         <copy>
         :P17_RAZORPAY_ORDER_ID := null;
         </copy>
         ```
+
     ![Click Timeline](images/15-4-12-true2-action.png " ")
 
 12. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
@@ -374,39 +378,39 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 13. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Create Razorpay Order**
+        * Name: **Create Razorpay Order**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Type: **REST Source**
+        * Type: **REST Source**
 
-        - REST Source: **Razorpay API**
+        * REST Source: **Razorpay API**
 
-        - Operation: **POST**
+        * Operation: **POST**
 
-    - Execution > Sequence: **1**
+    * Execution > Sequence: **1**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Request = Value**
+        * Type: **Request = Value**
 
-        - Value: **CREATE\_RAZOR\_PAY\_ORDER**
+        * Value: **CREATE\_RAZOR\_PAY\_ORDER**
 
     ![Click Timeline](images/15-4-14-processing-details.png " ")
 
 14. Under **Create Razorpay Order** process, expand **Parameters** and update the following:
 
-    - **Amount**:
+    * **Amount**:
 
-        - Under Value:
+        * Under Value:
 
-             - Type: **Function Body**
+            * Type: **Function Body**
 
-             - PL/SQL Function Body: Copy and Paste the below code
+            * PL/SQL Function Body: Copy and Paste the below code
 
                 ```
                 <copy>
@@ -416,11 +420,11 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
     ![Click Timeline](images/15-4-15-para1.png " ")
 
-    - **RESPONSE**
+    * **RESPONSE**
 
-        - Parameter > Ignore Output: **Toggle Off**
+        * Parameter > Ignore Output: **Toggle Off**
 
-        - Value > Item: **P17\_RESPONSE**
+        * Value > Item: **P17\_RESPONSE**
 
     ![Click Timeline](images/15-4-15-para2.png " ")
 
@@ -430,9 +434,9 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 16. In the property editor, enter/select the following:
 
-    - Identification > Name: **Parse  Razorpay\_order\_id**
+    * Identification > Name: **Parse  Razorpay\_order\_id**
 
-    - Source > PL/SQL Code: Copy and paste the below code
+    * Source > PL/SQL Code: Copy and paste the below code
 
         ```
         <copy>
@@ -441,13 +445,13 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
         </copy>
         ```
 
-    - Execution > Sequence: **2**
+    * Execution > Sequence: **2**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Request = Value**
+        * Type: **Request = Value**
 
-        - Value: **CREATE\_RAZOR\_PAY\_ORDER**
+        * Value: **CREATE\_RAZOR\_PAY\_ORDER**
 
     ![Click Timeline](images/15-4-17-process-details.png " ")
 
@@ -457,33 +461,33 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 18. Under **Checkout** process, expand **Parameters** and update the following:
 
-    - **p\_user\_id**:
+    * **p\_user\_id**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Item**
+            * Type: **Item**
 
-            - Item: **USER\_ID**
+            * Item: **USER\_ID**
 
-    - **p\_order\_id**:
+    * **p\_order\_id**:
 
-        - Under Value > Item: **P17\_ORDER\_ID**
+        * Under Value > Item: **P17\_ORDER\_ID**
 
-    - **p\_payment\_id**:
+    * **p\_payment\_id**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Item**
+            * Type: **Item**
 
-            - Item: **P17\_PAYMENT\_ID**
+            * Item: **P17\_PAYMENT\_ID**
 
-    - **p\_razorpay\_id**:
+    * **p\_razorpay\_id**:
 
-        - Under Value:
+        * Under Value:
 
-            - Type: **Item**
+            * Type: **Item**
 
-            - Item: **P17\_RAZORPAY\_ORDER\_ID**
+            * Item: **P17\_RAZORPAY\_ORDER\_ID**
 
     ![Click Timeline](images/15-4-19-param.png " ")
 
@@ -491,7 +495,7 @@ This task integrates the Razorpay payment gateway into the Shopping Cart page, e
 
 20. In the property editor, enter/select the following:
 
-    - JavaScript > File URLs: Copy and paste the below code
+    * JavaScript > File URLs: Copy and paste the below code
 
         ```
         <copy>
@@ -509,9 +513,9 @@ In this task, you will run the application, log in, add items to the shopping ca
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/15-5-1-run-app.png " ")
 
@@ -555,5 +559,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

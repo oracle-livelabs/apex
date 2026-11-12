@@ -2,27 +2,29 @@
 
 ## Before You Begin
 
-### Introduction
+## Introduction
 
 In this lab you will use your Oracle Cloud Trial Account to upload a Data Pump export file to Object Storage and leverage SQL Developer Web to import the Data Pump export file into an Autonomous Transaction Processing (ATP) Database.
 
 Estimated time: 30 minutes
 
 ### Objectives
-- Log into OCI tenancy.
-- Create an Oracle Cloud Infrastructure (OCI) Storage Bucket and Generate a User Authorization Token.
-- Setup Product Catalog Microservice Data in Autonomous Transaction Processing (ATP) Database.
-	- Connect to SQL Developer Web.
-	- Create ATP Database user and DBMS_CLOUD Credential.
-	- Import Data into ATP Database using Data Pump API call via PL/SQL.
-	- Verify Data was Loaded.
-- Setup User Catalog Microservice Data in Autonomous Transaction Processing (ATP) Database.
-	- Connect to SQL Developer Web.
-	- Create ATP Database user.
-	- Create required tables.
+
+* Log into OCI tenancy.
+* Create an Oracle Cloud Infrastructure (OCI) Storage Bucket and Generate a User Authorization Token.
+* Setup Product Catalog Microservice Data in Autonomous Transaction Processing (ATP) Database.
+    * Connect to SQL Developer Web.
+    * Create ATP Database user and DBMS_CLOUD Credential.
+    * Import Data into ATP Database using Data Pump API call via PL/SQL.
+    * Verify Data was Loaded.
+* Setup User Catalog Microservice Data in Autonomous Transaction Processing (ATP) Database.
+    * Connect to SQL Developer Web.
+    * Create ATP Database user.
+    * Create required tables.
 
 ### Prerequisites
-- An Oracle Cloud account, Free Trail, Livelab or Paid account
+
+* An Oracle Cloud account, Free Trail, Livelab or Paid account
 
 *In addition to the workshop*, feel free to watch the walkthrough companion video by clicking on the following image:
 [](youtube:vo_doCpX0KQ)
@@ -35,97 +37,97 @@ Estimated time: 30 minutes
 
     [https://www.oracle.com/](https://www.oracle.com/)
 
-      ![](../images/common/login-screen.png " ")
+      ![Login screen](../images/common/login-screen.png " ")
 
-2. Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.   
+2. Click the icon in the upper right corner.  Click on **Sign in to Cloud** at the bottom of the drop down.
 
-      ![](../images/common/signup.png " ")   
+      ![Signup](../images/common/signup.png " ")
 
 3. Enter your **Cloud Account Name** in the input field and click the **Next** button.  *NOTE: this is NOT your email. This is the name of your tenancy noted in the email you received during signup. Do NOT click the Sign-In button, this will take you to Single Sign-On, not the Oracle Cloud.*
 
-      ![](../images/common/cloud-login-tenant.png " ")   
+      ![Cloud login tenant](../images/common/cloud-login-tenant.png " ")
 
-4. Enter your username (this may be your email address) and password and click on **Sign In**. 
-    
+4. Enter your username (this may be your email address) and password and click on **Sign In**.
 
-      ![](../images/common/username.png " ")  
 
-## Task 2: Create User Auth Token, Storage Bucket and Upload Data Pump export file.
+      ![Username](../images/common/username.png " ")
 
-1.  Navigate to the user details page from the top, right-hand menu item as shown below
+## Task 2: Create User Auth Token, Storage Bucket and Upload Data Pump export file
 
-      ![](images/image1.png " ")
+1. Navigate to the user details page from the top, right-hand menu item as shown below
 
-2.  Select **Auth Tokens** on the left, and then click **Generate Token**.
+      ![Image 1](images/image1.png " ")
 
-      ![](images/image2.png " ")
+2. Select **Auth Tokens** on the left, and then click **Generate Token**.
 
-3.  Enter **`Token for DBMS_CLOUD.create_credential`** as the description and click **Generate Token**.
+      ![Image 2](images/image2.png " ")
 
-      ![](images/image3.png " ")
+3. Enter **`Token for DBMS_CLOUD.create_credential`** as the description and click **Generate Token**.
 
-4.  Click **Copy** and save it in your notes.  You'll need it later when executing the **DBMS\_CLOUD.create\_credential** package. Click **Close** after copying the token.
+      ![Image 3](images/image3.png " ")
 
-      ![](images/image4.png " ")
+4. Click **Copy** and save it in your notes.  You'll need it later when executing the **DBMS\_CLOUD.create\_credential** package. Click **Close** after copying the token.
 
-5.  Download the Data Pump Export File [Here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/expdp_alpha121.dmp).
+      ![Image 4](images/image4.png " ")
 
-6.  Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
+5. Download the Data Pump Export File [expdp alpha121.dmp](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/expdp_alpha121.dmp).
 
-	![](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
+6. Click the **Navigation Menu** in the upper left, navigate to **Storage**, and select **Buckets**.
 
-7.  Select the **AppDev** Compartment and click **Create Bucket**
+    ![Storage buckets](https://oracle-livelabs.github.io/common/images/console/storage-buckets.png " ")
 
-      ![](images/image27.png " ")
+7. Select the **AppDev** Compartment and click **Create Bucket**
 
-8.  In the Bucket Name field, enter **atpData** and click **Create Bucket**.  Once created, click on the **atpData** Bucket to view the details.
+      ![Image 27](images/image27.png " ")
 
-      ![](images/image28.png " ")
+8. In the Bucket Name field, enter **atpData** and click **Create Bucket**.  Once created, click on the **atpData** Bucket to view the details.
 
-9.  Click **Upload Objects** and Drop or Select the **expdp_alpha121.dmp** you just downloaded and click **Upload Objects**.
+      ![Image 28](images/image28.png " ")
 
-      ![](images/image29.png " ")
+9. Click **Upload Objects** and Drop or Select the **expdp_alpha121.dmp** you just downloaded and click **Upload Objects**.
 
-      ![](images/image30.png " ")
+      ![Image 29](images/image29.png " ")
 
-10.  Click the **View Object Details** to capture the Data Pump file URL used later in this lab.
+      ![Image 30](images/image30.png " ")
 
-      ![](images/image31.png " ")
+10. Click the **View Object Details** to capture the Data Pump file URL used later in this lab.
 
-      ![](images/image32.png " ")
+      ![Image 31](images/image31.png " ")
+
+      ![Image 32](images/image32.png " ")
 
 ## Task 3: Setup Product Catalog MicroService Data in ATP
 
-1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
+1. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
+    ![Database atp](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
-2.  Select the **AppDev** Compartment and click on **ProductCatalog** Database.
+2. Select the **AppDev** Compartment and click on **ProductCatalog** Database.
 
-      ![](images/image6.png " ")
+      ![Image 6](images/image6.png " ")
 
-3.  Click on the **Tools** tab and then **Open SQL Developer Web**.
+3. Click on the **Tools** tab and then **Open SQL Developer Web**.
 
-      ![](images/image7.png " ")
+      ![Image 7](images/image7.png " ")
 
-4.  Sign In with the Username **Admin** and Password **`AppD3v0ps01_`**
+4. Sign In with the Username **Admin** and Password **`AppD3v0ps01_`**
 
-      ![](images/image8.png " ")
+      ![Image 8](images/image8.png " ")
 
-5.  At initial log-in, you are presented with guided tips, close the window for now.
+5. At initial log-in, you are presented with guided tips, close the window for now.
 
-      ![](images/image9.png " ")
+      ![Image 9](images/image9.png " ")
 
-6.  Create the database user **alpha** by executing the following SQL Statements.
+6. Create the database user **alpha** by executing the following SQL Statements.
 
     ```
     <copy>create user alpha identified by "AppD3v0ps01_";
     grant dwrole to alpha;</copy>
     ```
 
-     ![](images/image10.png " ")
+     ![Image 10](images/image10.png " ")
 
-7.  In the same **SQL Developer Web Worksheet**, execute the following SQL Statements to create the DBMS\_CLOUD Credential **IMPDP\_OBJ\_STORE** using the **User** and **Auth Token** you generated in **STEP 2.3**. Look for the PL/SQL procedure to be successfully completed.
+7. In the same **SQL Developer Web Worksheet**, execute the following SQL Statements to create the DBMS\_CLOUD Credential **IMPDP\_OBJ\_STORE** using the **User** and **Auth Token** you generated in **STEP 2.3**. Look for the PL/SQL procedure to be successfully completed.
 
     **NOTE:**  Please be sure to include the complete username.  For example, **oracleidentitycloudservice/firstname.lastname@domain.com**
 
@@ -140,9 +142,9 @@ Estimated time: 30 minutes
     /</copy>
     ```
 
-     ![](images/image11.png " ")
+     ![Image 11](images/image11.png " ")
 
-8.  Using the Data Pump API, run the following PL/SQL Script to load the data.
+8. Using the Data Pump API, run the following PL/SQL Script to load the data.
 
     **Note:**  Be sure to update the script below with the Data Pump File name URL captured in **Step 2.10**.
 
@@ -190,65 +192,66 @@ Estimated time: 30 minutes
     /</copy>
     ```
 
-     ![](images/image12.png " ")
+     ![Image 12](images/image12.png " ")
 
     **Note:**  If your auth token is not correct (eg password is wrong), you will receive an error (invalid setting).  To correct this you need to either drop and re-create the credential or create a new credential with a new name, and then re-run this script **WITH A NEW JOB NAME**.  If you create a new credential with a new name then update the credential in this code and then re-run this script **WITH A NEW JOB NAME**.
 
-9.  To check on the status of the Data Pump job, execute the following SQL Statement.  The status will be **EXECUTING** until it is finished, then the status will change to **NOT RUNNING**
+9. To check on the status of the Data Pump job, execute the following SQL Statement.  The status will be **EXECUTING** until it is finished, then the status will change to **NOT RUNNING**
 
-     ```
-     <copy>
+    ```
+    <copy>
      select * from dba_datapump_jobs;
-     </copy>
-     ```
-     ![](images/image13.png " ")
+    </copy>
+    ```
 
-     ![](images/image14.png " ")
+     ![Image 13](images/image13.png " ")
 
-10.  Refresh the browser page
+     ![Image 14](images/image14.png " ")
 
-     ![](images/image15.png " ")
+10. Refresh the browser page
 
-11.  Select the user **ALPHA**
+     ![Image 15](images/image15.png " ")
 
-     ![](images/image16.png " ")
+11. Select the user **ALPHA**
 
-12.  Drag the **PRODUCTS** table into the Worksheet
+     ![Image 16](images/image16.png " ")
 
-     ![](images/image17.png " ")
+12. Drag the **PRODUCTS** table into the Worksheet
 
-13.  Click on the **Select** type and click **Apply**.
+     ![Image 17](images/image17.png " ")
 
-     ![](images/image23.png " ")
+13. Click on the **Select** type and click **Apply**.
 
-14.  Execute the inserted SQL Statement to verify data is in the **Products** table.
+     ![Image 23](images/image23.png " ")
 
-     ![](images/image18.png " ")
+14. Execute the inserted SQL Statement to verify data is in the **Products** table.
+
+     ![Image 18](images/image18.png " ")
 
 
 ## Task 4: Setup User Catalog MicroService Data in ATP
 
-1.  Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
+1. Click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Autonomous Transaction Processing**.
 
-	![](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
+    ![Database atp](https://oracle-livelabs.github.io/common/images/console/database-atp.png " ")
 
-2.  Select the **AppDev** Compartment and click on **UserCatalog** Database.
+2. Select the **AppDev** Compartment and click on **UserCatalog** Database.
 
-     ![](images/image33.png " ")
+     ![Image 33](images/image33.png " ")
 
-3.  Click on the **Tools** tab and then **Open SQL Developer Web**.
+3. Click on the **Tools** tab and then **Open SQL Developer Web**.
 
-     ![](images/image34.png " ")
+     ![Image 34](images/image34.png " ")
 
-4.  Sign In with the Username **Admin** and Password **`AppD3v0ps01_`**
+4. Sign In with the Username **Admin** and Password **`AppD3v0ps01_`**
 
-     ![](images/image8.png " ")
+     ![Image 8](images/image8.png " ")
 
-5.  At initial log-in, you are presented with guided tips, close the window for now.
+5. At initial log-in, you are presented with guided tips, close the window for now.
 
-     ![](images/image9.png " ")
+     ![Image 9](images/image9.png " ")
 
-6.  Create the database user **alpha** by executing the following SQL Statements.
+6. Create the database user **alpha** by executing the following SQL Statements.
 
     ```
     <copy>create user alpha identified by "AppD3v0ps01_";
@@ -258,9 +261,9 @@ Estimated time: 30 minutes
     </copy>
     ```
 
-     ![](images/image37.png " ")
+     ![Image 37](images/image37.png " ")
 
-7.  In the same **SQL Developer Web Worksheet**, execute the following SQL Statement to create the table **users**  in the schema **alpha**.
+7. In the same **SQL Developer Web Worksheet**, execute the following SQL Statement to create the table **users**  in the schema **alpha**.
 
     ```
     <copy>CREATE TABLE ALPHA.USERS(
@@ -279,11 +282,11 @@ Estimated time: 30 minutes
     CONSTRAINT ensure_json CHECK ("REQUEST" IS JSON));</copy>
     ```
 
-     ![](images/image35.png " ")
+     ![Image 35](images/image35.png " ")
 
-8.  To verify the table was created, **Refresh** the browser and select the **ALPHA** user.  You will see the **USERS** table.
+8. To verify the table was created, **Refresh** the browser and select the **ALPHA** user.  You will see the **USERS** table.
 
-     ![](images/image36.png " ")
+     ![Image 36](images/image36.png " ")
 
 **This completes the Lab!**
 
@@ -293,7 +296,7 @@ Estimated time: 30 minutes
 
 This step is optional and can be done in both the Product and User ATP instances.
 
-1.  In SQL Developer Web connected as the user **ADMIN**, execute the following statements to grant user **alpha** to SQL Developer Web
+1. In SQL Developer Web connected as the user **ADMIN**, execute the following statements to grant user **alpha** to SQL Developer Web
 
     ```
     <copy>BEGIN
@@ -309,20 +312,19 @@ This step is optional and can be done in both the Product and User ATP instances
     /</copy>
     ```
 
-    ![](images/image19.png " ")
+    ![Image 19](images/image19.png " ")
 
-2.  Change the **URL** in your browser.  Change **admin** with **alpha** and hit enter to Sign in as Username **alpha** with the Password **AppD3v0ps01_**
+2. Change the **URL** in your browser.  Change **admin** with **alpha** and hit enter to Sign in as Username **alpha** with the Password **AppD3v0ps01_**
 
-    ![](images/image20.png " ")
+    ![Image 20](images/image20.png " ")
 
-    ![](images/image21.png " ")
+    ![Image 21](images/image21.png " ")
 
-    ![](images/image22.png " ")
+    ![Image 22](images/image22.png " ")
 
 ## Acknowledgements
 
-- **Authors/Contributors** - Steven Nichols
-- **Last Updated By/Date** -
-- **Workshop Expiration Date** - May 31, 2021
-
+* **Authors/Contributors** - Steven Nichols
+* **Last Updated By/Date** -
+* **Workshop Expiration Date** - May 31, 2021
 

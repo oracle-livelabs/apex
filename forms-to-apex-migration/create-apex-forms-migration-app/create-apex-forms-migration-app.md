@@ -17,15 +17,14 @@ Estimated Lab Time: 5 minutes
 
 ### Prerequisites
 
-- Have Oracle Autonomous Database already running in OCI.
-- Have Oracle APEX Workspace defined for the migration project
-
+* Have Oracle Autonomous Database already running in OCI.
+* Have Oracle APEX Workspace defined for the migration project
 
 
 ## Task 1: Download the Sample Scripts and Form
 
-1. Download the  sample forms and sample database scripts from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/create-apex-forms.zip)
-to use in the lab
+1. Download the  sample forms and sample database scripts from [application export: create-apex-forms.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/create-apex-forms.zip)
+    to use in the lab
 
 2. Unzip the files in your local Desktop
 
@@ -34,7 +33,7 @@ to use in the lab
 In order to start the conversion process, the database objects associated with your Oracle Forms application must reside in the same database as Oracle APEX.
 
 1. From the VNC session created in previous step, Open the Oracle APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
-    ![](images/log-in-to-workspace.png " ")
+    ![From the VNC session created in previous step, Open the Oracle APEX Workspace log in page, enter SecretPassw0rd for the...](../setup-apex/images/log-in-to-workspace.png " ")
 
 2. Navigate to **SQL scripts** from the Oracle APEX home Page
     ![Find SQL scripts in the menu bar.](images/scipts-upload.png " ")
@@ -49,18 +48,18 @@ In order to start the conversion process, the database objects associated with y
 Create a conversion project by running Create Migration Project Wizard and loading the application metadata extracted from Forms to XML.
 
 1. From the Apex workspace click on **Oracle Forms Migration** on the bottom right corner of the screen
-![Select Oracle forms migration.](images/forms-migration.png " ")
+    ![Select Oracle forms migration.](images/forms-migration.png " ")
 
 2. Click on **Create Project** to import XML files that is generated from Forms files.
-![Select create project.](images/create-migration-project.png " ")
+    ![Select create project.](images/create-migration-project.png " ")
 
 3. Enter **Project Name**, Choose ``DEMO`` schema and the XML file that is derived from fmb and click Next.
 
 4. Click **Create** to start building the project
-![To start building the project, click create.](images/create-migration-project2.png " ")
+    ![To start building the project, click create.](images/create-migration-project2.png " ")
 
 5. You can see the count of objects that is available in the forms. Just click on the **File name** to see list of objects and the properties attached to it.
-![You will see the available objects.](images/uploaded-forms.png " ")
+    ![You will see the available objects.](images/uploaded-forms.png " ")
 
 6. Click on **customers_fmb.xml** you can see the details of Blocks, Triggers, List of Values etc from the Customer Form. You can compare with the form builder to make sure all of the objects from forms are being accounted in APEX.
 ![Make sure all of the objects from forms are in APEX.](images/customers-fmb.png " ")
@@ -75,7 +74,7 @@ You may now *proceed to the next lab*.
 ## Acknowledgements
 
 
-- **Author** -  Vanitha Subramanyam, Senior Solution Architect
-- **Contributors** - Abhinav Jain, Staff Cloud Engineer, Sakthikumar Periyasamy Senior Cloud Engineer, Nayan Karumuri Staff Cloud Engineer
-- **Last Updated By/Date** - Andres Quintana, March 2022
+* **Author** -  Vanitha Subramanyam, Senior Solution Architect
+* **Contributors** - Abhinav Jain, Staff Cloud Engineer, Sakthikumar Periyasamy Senior Cloud Engineer, Nayan Karumuri Staff Cloud Engineer
+* **Last Updated By/Date** - Andres Quintana, March 2022
 

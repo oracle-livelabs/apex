@@ -1,17 +1,19 @@
 # Configuring a Development System for Oracle Forms Application from Marketplace in OCI
 
 ## Introduction
+
 The Oracle Cloud Infrastructure marketplace provides a pre-built Oracle Forms image with necessary client tools and drivers to build the applications.
 
 The image is pre-configured with tools and language drivers so that you can change/compile Oracle Forms Applications.
 For a complete list of features, login to your OCI account, select 'Marketplace' from the top left menu and browse details on the 'Oracle Forms Services'
-    ![](./images/marketplace-forms.png " ")
+    ![Marketplace forms](./images/marketplace-forms.png " ")
 
 Estimated Lab Time: 30 minutes
 
 ### Objectives
 
 As a database user, DBA or application developer,
+
 1. Configure a Oracle Forms system from a pre-built marketplace image
 2. Connect with SSH and complete the Forms Installation
 3. Copy the SQL Scripts and Sample Forms files to your development system
@@ -22,8 +24,8 @@ As a database user, DBA or application developer,
 
 ### Prerequisites
 
-- An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
-- VNC Viewer or other suitable VNC client on your local laptop
+* An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
+* VNC Viewer or other suitable VNC client on your local laptop
 
 ## Task 1: Provision an OCI Marketplace Forms Services image
 
@@ -32,7 +34,7 @@ We start with deploying a pre-configured client machine instance from the OCI ma
 1. Log into your cloud account using your tenant name, username and password.
 2. Click the **Navigation Menu** in the upper left and select **Marketplace**.
 
-	![Navigation menu selecting marketplace.](https://oracle-livelabs.github.io/common/images/console/marketplace.png " ")	
+    ![Navigation menu selecting marketplace.](https://oracle-livelabs.github.io/common/images/console/marketplace.png " ")
 
 3. Search for Oracle Forms Service.
       ![Oracle forms service.](./images/oracle-forms.png " ")
@@ -71,6 +73,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
     $ ssh -i <private-key> opc@PublicIP
     </copy>
     ```
+
 2. When you login, the Oracle Forms Installation will continue and you will be prompted with if you want to use DBCS, choose N
 
     ```
@@ -113,7 +116,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
     ```
 
     Make a note of all the passwords
-3.   All the installation details of software installed, ORACLE\_HOME, ORACLE\_SID, MIDDLEWARE\_HOME, FORMS\_PATH
+3. All the installation details of software installed, ORACLE\_HOME, ORACLE\_SID, MIDDLEWARE\_HOME, FORMS\_PATH
     can be found in readme file under Desktop folder
 
     ```
@@ -156,7 +159,8 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
         OHS : 7777 & 4443 (7777 & 4443 opened in Linux firewall)
 
     ```
-4.   Start your VNC server with the following command,
+
+4. Start your VNC server with the following command,
 
     ```
     <copy>
@@ -190,19 +194,21 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
     *Note: As mentioned earlier, you need a VNC client installed on your laptop. This lab uses VNC Viewer.*
 
 6. Create a tunnel for VNC through SSH, in a terminal window , issue the following command, with your public IP address at the end. This will create the SSH tunnel for you to use for VNC.
+
     ```
     ssh -N -L 5901:127.0.0.1:5901 -i ~/<privatekey> opc@<publicIP>
     ```
 
-6. Create a tunnel for VNC through SSH,
-   if you have MAC ,
+7. Create a tunnel for VNC through SSH,
+    if you have MAC ,
 
     In a terminal window , issue the following command, with your public IP address at the end. This will create the SSH tunnel for you to use for VNC.
 
     ```
     ssh -N -L 5901:127.0.0.1:5901 -i ~/<privatekey> opc@<publicIP>
     ```
-   if you have Windows,
+
+    if you have Windows,
 
       You can create SSH tunnels using the PuTTY SSH client.
 
@@ -234,30 +240,30 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
       n. Click ``Open`` to open the connection
 
 
-7. Start VNC Viewer on your laptop and configure a client connection using the settings as shown.
-    ![Start VCN viewer.](./images/VNCViewer.png " ")
+8. Start VNC Viewer on your laptop and configure a client connection using the settings as shown.
+    ![Start VCN viewer.](../../forms-to-apex-migration-dbcs/setup-oracle-forms/images/vncviewer.png " ")
 
-  Note how the connect string for VNC Server is simply localhost:1
+    Note how the connect string for VNC Server is simply localhost:1
 
-8. Connect to your VNC desktop and provide the password you provided on the host earlier.
+9. Connect to your VNC desktop and provide the password you provided on the host earlier.
 
-9. If all goes well, you should now see a linux desktop in your VNC window.
+10. If all goes well, you should now see a linux desktop in your VNC window.
 
 ## Task 3: Copy the SQL Scripts, Shell Scripts and Sample Forms files to your development system
 
-1. We have sample forms and sample database scripts that can be downloaded from [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
+1. We have sample forms and sample database scripts that can be downloaded from [application export: setup-oracle-forms.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
 
 2. Unzip the files and Copy the files over to your development system from your local Desktop
 
-      ````
-      <copy>
+    ````
+    <copy>
         scp -i  ~/.ssh/<privake key> ./files/customers.fmb opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/forms_conversion.sql opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/forms_conversion_data_insert.sql opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/frmf2xml.sh opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/formsXMLconvert.sh opc@<public ip>:/home/opc/oracle/formsmodules        
-      </copy>
-      ````
+    </copy>
+    ````
 
 ## Task 4: Connect to your DB in Development system using SQL Developer
 
@@ -279,7 +285,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 
     **Username**: sys as sysdba
 
-    **Password**: <password>
+    **Password**: `<password>`
 
     **Connection Type**: Basic
 
@@ -292,8 +298,8 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 
 ## Task 5: Run the scripts to create sample schema and insert sample data
 
-  1.  Open the script  forms_conversion_ddl.sql in SQL developer in VNC and execute the script. Make a note of the credential for order user in the script.
-  2.  In the same session connect to orders user and run the insert script forms_conversion_data_insert.sql
+  1. Open the script  forms_conversion_ddl.sql in SQL developer in VNC and execute the script. Make a note of the credential for order user in the script.
+  2. In the same session connect to orders user and run the insert script forms_conversion_data_insert.sql
 
 
 ## Task 6: Convert the Forms to XML files
@@ -314,6 +320,6 @@ You may now *proceed to the next lab*.
 
 ## Acknowledgements
 
-- **Author** -  Vanitha Subramanyam, Senior Solution Architect
-- **Contributors** - Abhinav Jain, Staff Cloud Engineer, Sakthikumar Periyasamy Senior Cloud Engineer, Nayan Karumuri Staff Cloud Engineer
-- **Last Updated By/Date** - Andres Quintana, March 2022
+* **Author** -  Vanitha Subramanyam, Senior Solution Architect
+* **Contributors** - Abhinav Jain, Staff Cloud Engineer, Sakthikumar Periyasamy Senior Cloud Engineer, Nayan Karumuri Staff Cloud Engineer
+* **Last Updated By/Date** - Andres Quintana, March 2022

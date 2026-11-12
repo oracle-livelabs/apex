@@ -15,15 +15,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Grant the privilege required to create ONNX model objects.
-- Confirm that the direct cloud-loading procedure is available.
-- Load the CLIP text and image models from Object Storage.
-- Verify model metadata and attributes.
+* Grant the privilege required to create ONNX model objects.
+* Confirm that the direct cloud-loading procedure is available.
+* Load the CLIP text and image models from Object Storage.
+* Verify model metadata and attributes.
 
 ### Prerequisites
 
-- You have imported the workshop application from Lab 1.
-- Your database supports ONNX pipeline models and AI Vector Search.
+* You have imported the workshop application from Lab 1.
+* Your database supports ONNX pipeline models and AI Vector Search.
 
 For a production deployment, prefer a private Object Storage location with a database credential or an enabled OCI resource principal. If an ONNX model uses external initializers, the PAR or credential must allow access to the entire bucket or to the prefix containing the `.onnx`, `.json`, and `.data` files.
 
@@ -168,14 +168,14 @@ You have granted the required model-creation privilege, loaded both CLIP ONNX mo
 
 ## References
 
-- [DBMS_VECTOR Package — Oracle AI Database 26ai](https://docs.oracle.com/en/database/oracle/oracle-database/26/arpls/dbms_vector1.html)
-- [SQL Quick Start Using a Vector Embedding Model Uploaded into the Database](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/sql-quick-start-using-vector-embedding-model-uploaded-database.html)
-- [Oracle AI Vector Search User's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/ai-vector-search-users-guide.pdf)
+* [DBMS_VECTOR Package — Oracle AI Database 26ai](https://docs.oracle.com/en/database/oracle/oracle-database/26/arpls/dbms_vector1.html)
+* [SQL Quick Start Using a Vector Embedding Model Uploaded into the Database](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/sql-quick-start-using-vector-embedding-model-uploaded-database.html)
+* [Oracle AI Vector Search User's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/ai-vector-search-users-guide.pdf)
 
 ## Acknowledgments
 
-- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+* **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
 
 ## Acknowledgements
 

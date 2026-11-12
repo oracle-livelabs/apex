@@ -10,23 +10,23 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Customize existing Smart Filters to improve usability.
+* Customize existing Smart Filters to improve usability.
 
-- Create new Smart Filters using different input types.
+* Create new Smart Filters using different input types.
 
-- Implement filters that allow for dynamic user input and selection.
+* Implement filters that allow for dynamic user input and selection.
 
-- Understand the significance of each filter type in enhancing the search functionality.
+* Understand the significance of each filter type in enhancing the search functionality.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol7.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol7.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshop:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Enhance Smart Filters
 
@@ -48,14 +48,14 @@ In this task, you will focus on customizing the existing Smart Filters in the **
 
 4. Under **Search** region, select **P8\_PROJECT** and enter/select the following:
 
-    - Identification > Type: **Radio Group**
+    * Identification > Type: **Radio Group**
 
-    - List Entries > Client-Side Filtering: **Toggle On**
+    * List Entries > Client-Side Filtering: **Toggle On**
 
     ![Edit Filter](images/edit-filter1.png " ")
 
 5. Click **Save and Run Page** in the upper right corner.
-The revised page appears.
+    The revised page appears.
 
     ![Show edit Filter](images/show-edit-filter.png " ")
 
@@ -63,9 +63,9 @@ The revised page appears.
 
 7. In the **Rendering** tree (left pane), under **Search**, select **P8\_BUDGET** within filters and enter/select the following:
 
-    - Identification > Type: **Input Field**
+    * Identification > Type: **Input Field**
 
-    - Settings > User can Choose Operator: **Toggle On**
+    * Settings > User can Choose Operator: **Toggle On**
 
     ![Enhance Facets](./images/enhance-facet1.png " ")
 
@@ -87,13 +87,13 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
 2. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P8\_TASK_NAME**
+        * Name: **P8\_TASK_NAME**
 
-        - Type: **Checkbox Group**
+        * Type: **Checkbox Group**
 
-    - List of Values > Type: **Distinct Values**.
+    * List of Values > Type: **Distinct Values**.
 
     ![Create Filter2](images/create-filter10.png " ")
 
@@ -105,21 +105,21 @@ In this task, you will learn how to create new Smart Filters that cater to addit
 
 4. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P8\_START\_DATE**
+        * Name: **P8\_START\_DATE**
 
-        - Type: **Range**
+        * Type: **Range**
 
-    - Settings > Select Multiple: **Toggle On**
+    * Settings > Select Multiple: **Toggle On**
 
-    - Appearance > Icon: **fa-calender-edit**
+    * Appearance > Icon: **fa-calender-edit**
 
-    - Under Source:
+    * Under Source:
 
-        - Database Column: **START_DATE**
+        * Database Column: **START_DATE**
 
-        - Data Type: **DATE**
+        * Data Type: **DATE**
 
     ![Create Filter](images/create-filter04.png " ")
 
@@ -135,5 +135,5 @@ You now know how to customize existing filters and create new ones for the Proje
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

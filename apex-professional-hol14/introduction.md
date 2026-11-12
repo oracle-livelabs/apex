@@ -10,27 +10,27 @@ In this lab, you will explore and enhance the appearance and functionality of an
 
 The last hands-on workshop taught you to configure search configurations and craft a standard search page. Furthermore, you acquired skills in improving your application through the Navigation Bar list, designating your pages as public, and eliminating the navigation menu.
 
-Estimated Time: 15 minutes
+Estimated Workshop Time: 15 minutes
 
 ### Objectives
 
-- Apply a new theme style to enhance the application's visual consistency.
+* Apply a new theme style to enhance the application's visual consistency.
 
-- Create a custom "Hero" plug-in as a template component with configurable attributes and slots.
+* Create a custom "Hero" plug-in as a template component with configurable attributes and slots.
 
-- Customize the plug-in's appearance and add it as a region within an application page to test its functionality.
+* Customize the plug-in's appearance and add it as a region within an application page to test its functionality.
 
-- Enable end users to select and switch theme styles, providing a personalized user experience.
+* Enable end users to select and switch theme styles, providing a personalized user experience.
 
-- Save, import, export, and reset theme styles for flexible design management.
+* Save, import, export, and reset theme styles for flexible design management.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following applications:
 
-- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)**
+* **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)**
 
-- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol11.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -42,12 +42,16 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
 
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
 
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
 
-- [Community](https://apex.oracle.com/community)
+* [Community](https://apex.oracle.com/community)
 
-- [External Site + Slack](http://apex.world)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](import-export-theme.md#acknowledgements).
