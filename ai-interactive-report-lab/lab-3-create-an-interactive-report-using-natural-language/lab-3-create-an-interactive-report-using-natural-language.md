@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_REPLENISHMENT_V` already created by the data model script, you will build an Interactive Report page based on that view and then enable natural language support for the report region. Once enabled, users can ask questions in plain language, and APEX automatically configures the report - applying filters, sorting, aggregates, and more based on the intent of the prompt.
+This lab creates the core replenishment report used throughout the rest of the workshop. With `SCM_REPLENISHMENT_V` already created by the data model script, you will use the natural-language page creation wizard to build an Interactive Report based on that view. Report-level Natural Language Support and context are configured in Lab 5 before you use AI search.
 
 Estimated Lab Time: 5 minutes
 
@@ -11,7 +11,6 @@ Estimated Lab Time: 5 minutes
 In this lab, you learn how to:
 
 - Create an Interactive Report page using natural language.
-- Enable natural language support for the report region.
 
 ## Task 1: Build an Interactive Report page from a view
 
@@ -55,41 +54,13 @@ Oracle APEX can generate an Interactive Report page from a natural language desc
 
     ![View the replenishment report](images/lab30image.png " ")
 
-## Task 2: Enable Natural Language on the Interactive Report
-
-Creating the report page is only half the setup. To generate report settings, APEX provides the LLM with Interactive Report context - including the report definition, column metadata, available reference values, and the current report state - so the model can determine the appropriate settings to apply. Importantly, the AI does not have direct access to your business data. It relies entirely on the metadata you provide to interpret natural language prompts. In this task, you will enable natural language support for the report region, choose the default AI search behavior, and provide a report-level context description that tells the AI what the report represents.
-
-1. In **Page Designer**, keep the **SCM Replenishment** region selected and open the **Attributes** tab.
-
-2. In the **Generative AI** section, turn **Natural Language Support** **On**.
-
-    ![Open the report region attributes](images/enable-natural-language-support.png " ")
-
-3. Confirm **Default Search Mode** is **Search with AI**.
-
-4. In **Report Context**, enter the following text:
-
-    ```
-    <copy>
-    Replenishment alerts show where stock should be moved into the pick face. High priority means urgent action. Qty to Target is the suggested replenishment quantity. Warehouse Code identifies the fulfillment location.
-    </copy>
-    ```
-
-    ![Use the Report Context field](images/enter-report-context.png " ")
-
-5. Select **Save and Run Page**.
-
-6. Confirm that the report opens with the conversational search bar.
-
-    ![Confirm Search with AI and the processing state](images/lab3-image2.png " ")
-
 ## Summary
 
-You created an Interactive Report using natural language, enabled natural language support for the report region, and added SCM-specific report context. The report is now ready for column-level AI configuration in the next lab.
+You created the SCM Replenishment Interactive Report from `SCM_REPLENISHMENT_V`. In the next lab, you will explore the APEX 26.2 report layout and its standard controls. Complete Lab 5 before returning to Lab 4 Task 2 to try its key phrases, since Search with AI is enabled in Lab 5 Task 1.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 - **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
+- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2026

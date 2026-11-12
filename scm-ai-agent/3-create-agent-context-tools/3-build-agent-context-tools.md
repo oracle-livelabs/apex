@@ -6,7 +6,7 @@ The procurement use case in this workshop is warehouse-specific. The agent must 
 
 All of this depends on knowing who the signed-in user is. The two tools in this lab solve exactly that problem. They run automatically on every new message/conversation using the **Augment System Prompt** execution point, so by the time the agent processes anything the user types, it already knows their identity, warehouse, role, and browser timezone. This is the foundation that makes every answer in Labs 4 and 5 accurate and personalized.
 
-In this lab, you will create the **Procurement Agent** and add those two context tools.
+In this lab, you will create the **Procurement Agent**, configure its Reasoning Effort when the selected model supports it, and add the two context tools.
 
 Estimated Lab Time: 15 minutes
 
@@ -15,6 +15,8 @@ Estimated Lab Time: 15 minutes
 In this lab, you will:
 
 - Create the **Procurement Agent**
+
+- Set Reasoning Effort for a supported model, or leave **Default** when support is unknown
 
 - Add context tools that automatically identify the user and capture the browser timezone
 
@@ -93,7 +95,13 @@ In this task, you will create the Procurement Agent. You will set the system pro
             </copy>
             ```
 
+    - Under **Advanced**:
+
+        - Reasoning Effort: Select a value supported by the service's provider and model. If you have not confirmed model support, leave **Default**. Default sends no explicit reasoning-effort value; it does not disable reasoning.
+
     ![Welcome Message completed for the Procurement Agent](./images/create-agent-welcome-message.png " ")
+
+    ![Reasoning Effort setting in APEX 26.2](./images/reasoning-effort.png " ")
 
 6. Select **Create**.
 
@@ -145,7 +153,7 @@ The agent needs to know who the signed-in user is before it can give useful answ
 
     | Table | What it provides |
     | --- | --- |
-    | `scm_application_users` | User name, email, default warehouse, manager |
+    | `scm_application_users` | User name, full name, email, default warehouse, manager |
     | `scm_user_role_assignments` | Active primary role and optional approval override |
     | `scm_user_roles` | Role name, scope, approval authority |
     | `scm_warehouses` | Warehouse name, code, and warehouse ID |
@@ -181,16 +189,16 @@ When a user sets a delivery due date, the agent needs to know their timezone so 
 
 ## Summary
 
-You created the Procurement Agent and added two context tools. On every new message, the agent automatically identifies the user, their warehouse, and their browser timezone. This foundation ensures that every agent response is scoped and accurate for each individual user.
+You created the Procurement Agent, reviewed its Reasoning Effort setting, and added two context tools. On every new message, the agent automatically identifies the user, their warehouse, and their browser timezone.
 
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
-- [AI Agent Tools](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-generative-ai-agent-tools.html)
+- [AI Agents in Oracle APEX 26.2](https://docs.oracle.com/en/database/oracle/apex/26.2/htmdb/managing-ai-agents-and-ai-tools.html#GUID-6ADBE051-6B05-4B22-9E43-25791AEE749F)
+- [AI Agent Tools](https://docs.oracle.com/en/database/oracle/apex/26.2/htmdb/managing-generative-ai-agent-tools.html)
 
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, October 2026

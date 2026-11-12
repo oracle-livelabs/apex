@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## Task 1: Add the Agent to the Application
 
-In this task, you will configure the entry point that users will use to start the AI Assistant from the Operational Dashboard. You will add a button to Page 1 and attach a trigger action that opens **Procurement Agent** directly from the running application.
+In this task, you will configure the entry point that users will use to start the AI Assistant from the Home Dashboard. You will add a button to Page 1 and attach a trigger action that opens **Procurement Agent** directly from the running application.
 
 1. On the **Procurement Agent** page, select the **Application &lt;APP\_ID&gt;** in the breadcrumb to return to the Application home page.
 
@@ -35,6 +35,7 @@ In this task, you will configure the entry point that users will use to start th
     - Under **Identification**:
 
         - Button Name: **PROCUREMENT_ASSISTANT**
+        - Label: **Procurement Assistant**
 
     - Under **Layout**:
 
@@ -143,13 +144,17 @@ In this task, you will launch the application and validate the end-to-end procur
 
     ```text
     <copy>
-    50 units, deliver by 2026-06-25.
+    50 units, deliver by 2026-11-25.
     </copy>
     ```
 
+    Use a future delivery date when running the lab.
+
+    If the agent asks for confirmation in chat, reply **Yes**.
+
     *The agent calls `raise_purchase_order`. Because this tool has **Requires Confirmation** enabled, APEX displays a confirmation dialog with the order details before the tool runs.*
 
-    ![Agent displays confirmation dialog after receiving quantity and date](./images/quantity.png =60%x*)
+    ![Agent asks for confirmation in chat after receiving quantity and date](./images/quantity.png =60%x*)
 
 8. Review the confirmation dialog and click **Raise PO** to approve the purchase order.
 
@@ -166,4 +171,4 @@ You completed this workshop. You added a dedicated entry point for the Procureme
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, October 2026

@@ -1,6 +1,6 @@
-# Introduction
+# Build an AI Procurement Agent in Oracle APEX
 
-## About This Workshop
+## Introduction
 
 Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have.When an item falls below its reorder point and the replenishment alert reaches CRITICAL, a warehouse manager needs fast answers: which items are at risk, which suppliers can help, and who delivers most reliably.
 
@@ -12,6 +12,8 @@ In this hands-on workshop, you will build an **AI Procurement Agent** for the **
 
 You will define seven tools using the three tool types available in APEX AI Agents: **Retrieve Data**, **Execute Server-side Code**, and **Execute Client-side Code**. You will also learn when to use each one, all configured declaratively within Oracle APEX.
 
+This workshop uses Oracle APEX 26.2 to set Reasoning Effort for the Procurement Agent. Support for Reasoning Effort varies by provider and model.
+
 Estimated Workshop Time: 60 minutes
 
 ## Objectives
@@ -19,6 +21,8 @@ Estimated Workshop Time: 60 minutes
 In this workshop, you will learn how to:
 
 - Create an AI Agent in Oracle APEX
+
+- Set Reasoning Effort for a supported AI Agent model
 
 - Define tools that retrieve user context, stock risk, supplier options, and supplier delivery performance
 
@@ -59,9 +63,9 @@ Every tool has an **Execution Point** that controls when it runs:
 
 ## Prerequisites
 
-- An Oracle APEX 26.1 workspace running on an Oracle Database 19c or later. This workshop requires APEX 26.1. Some features, instructions, and screenshots may differ or not be available in prior releases.
+- An Oracle APEX 26.2 workspace. APEX 26.2 requires Oracle Database 19c with Database Release Update 19.18 or later, or Oracle AI Database 26ai with Database Version 23.26.0 or later. See the [APEX 26.2 release notes](https://docs.oracle.com/en/database/oracle/apex/26.2/htmrn/about-release-notes.html) for details.
 
-- An API key for the AI provider of your choice: OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or Generic OpenAI API Compatible.
+- An API key for the AI provider of your choice: OCI Generative AI, OpenAI, Cohere, Google Gemini, Anthropic Claude, Mistral AI, Ollama, or Generic OpenAI API Compatible. Reasoning Effort support varies by provider and model; confirm that your selected model supports the value you use.
 
     If you choose OCI Generative AI as your AI provider, the prerequisites are as follows:
 
@@ -96,7 +100,7 @@ Every tool has an **Execution Point** that controls when it runs:
 | --- | --- | --- |
 | 1 | [Import the Data Model, Sample Data, and Base Application](?lab=1-import-data) | 10 minutes |
 | 2 | [Configure Generative AI Service](?lab=2-configure-genai-service) | 5 minutes |
-| 3 | [Build an AI Agent and Add Context Tools](?lab=3-create-agent-context-tools) | 15 minutes |
+| 3 | [Build an AI Agent, Set Reasoning Effort, and Add Context Tools](?lab=3-create-agent-context-tools) | 15 minutes |
 | 4 | [Add Supplier Evaluation and Purchase Order Tools](?lab=4-add-core-tools) | 20 minutes |
 | 5 | [Add the Agent to the Application and Run the Application](?lab=5-run-application) | 10 minutes |
 {: title="Workshop Labs"}
@@ -113,9 +117,7 @@ If you are stuck or the application is not working as expected, you can download
 
 4. Follow **Lab 2** to configure your AI provider key and Generative AI Service.
 
-5. Skip **Lab 3** and **Lab 4**. The completed application export already includes the Procurement Agent and all seven tools.
-
-6. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
+5. Follow **Lab 5 > Task 2** to run the application and walk through the end-to-end procurement conversation.
 
 ## Uninstall the Application and Data Model
 
@@ -128,11 +130,11 @@ After completing the workshop, follow these steps to remove the application and 
 ## Learn More
 
 - [Oracle APEX](https://apex.oracle.com)
-- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
+- [AI Agents in Oracle APEX 26.2](https://docs.oracle.com/en/database/oracle/apex/26.2/htmdb/managing-ai-agents-and-ai-tools.html#GUID-6ADBE051-6B05-4B22-9E43-25791AEE749F)
 - [APEX Tutorials](https://apex.oracle.com/en/learn/tutorials)
 - [APEX Community](https://apex.oracle.com/community)
 
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, October 2026

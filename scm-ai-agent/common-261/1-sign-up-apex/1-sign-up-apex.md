@@ -4,7 +4,7 @@
 
 Oracle APEX is an enterprise AI application platform for building secure, scalable web and mobile applications. Trusted by thousands of organizations, APEX powers systems that run core business operations every day. With Oracle AI Database and Oracle Cloud Infrastructure, every application inherits built-in reliability, governance, and security. APEX helps developers turn ideas into production-ready apps quickly, without sacrificing control or performance. To start this workshop, you will request a free workspace on oracleapex.com.
 
-If you already have an APEX 26.1 workspace provisioned, you can skip this lab.
+If you already have an APEX 26.2 workspace provisioned, you can skip this lab. Confirm the release on the workspace home page before continuing; this workshop uses APEX 26.2 features.
 
 Estimated Time: 5 minutes
 <!--

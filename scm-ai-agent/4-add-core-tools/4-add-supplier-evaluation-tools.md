@@ -147,7 +147,7 @@ Once the user picks an at-risk item, the conversation moves to finding who can s
     | `ITEM_ID` | Selected item identifier. | NUMBER | Yes |
     {: title="get_suppliers_for_item Parameters"}
 
-    ![Tool 4 parameter grid with ITEM\_ID added](./images/tool2-parameter.png " ")
+    ![get_suppliers_for_item parameter grid with ITEM\_ID added](./images/tool2-parameter.png " ")
 
 4. Under **Settings**, for SQL Query, copy and paste the following:
 
@@ -213,7 +213,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
 
     ![Filled configuration for get\_supplier\_delivery\_performance](./images/task3-iden.png " ")
 
-3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameters:
 
     These parameters let the agent ask a focused question: which supplier to evaluate and over what period. The `TIME_PERIOD` value keeps the same tool reusable for quarterly and yearly comparisons.
 
@@ -223,7 +223,7 @@ With a shortlist of suppliers in view, the user may want to dig deeper before co
     | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
     {: title="get_supplier_delivery_performance Parameters"}
 
-    ![Tool 5 parameter grid with SUPPLIER\_ID and TIME\_PERIOD added](./images/task3-param.png " ")
+    ![get_supplier_delivery_performance parameter grid with SUPPLIER\_ID and TIME\_PERIOD added](./images/task3-param.png " ")
 
 4. Under **Settings**, for SQL Query, copy and paste the following:
 
@@ -285,7 +285,7 @@ With a supplier chosen, the conversation turns to where the order should go. A p
     | `SUPPLIER_ID` | Selected supplier identifier. | NUMBER | Yes |
     {: title="show_warehouses_by_supplier Parameters"}
 
-    ![Tool 6 parameter grid with SUPPLIER\_ID added](./images/task4-params.png " ")
+    ![show_warehouses_by_supplier parameter grid with SUPPLIER\_ID added](./images/task4-params.png " ")
 
 4. Under **Settings**, for SQL Query, copy and paste the following:
 
@@ -349,7 +349,7 @@ The agent only calls this tool after all previous steps are complete. Because th
 
     ![Filled configuration for raise\_purchase\_order](./images/task6-iden.png " ")
 
-3. Under **Parameters** tab, click **Add Parameter** and add the following parameter:
+3. Under **Parameters** tab, click **Add Parameter** and add the following parameters:
 
     These parameters are the minimum values required to create a planned purchase order safely. The agent collects them through conversation, then passes structured values to the PL/SQL procedure.
 
@@ -433,10 +433,10 @@ You may now **proceed to the next lab**.
 
 ## Learn More
 
-- [AI Agents in Oracle APEX](https://docs.oracle.com/en/database/oracle/apex/26.1/htmdb/managing-ai-agents-and-ai-tools.html#GUID-3F444241-033B-4E7F-80DE-5A504B237DD3)
-- [APEX\_AI Package Reference](https://docs.oracle.com/en/database/oracle/apex/26.1/aeapi/APEX_AI.SET_TOOL_RESULT-Procedure-Signature-1.html#GUID-2C356F88-1A7A-4971-AF59-04CC0C1346A6)
+- [AI Agents in Oracle APEX 26.2](https://docs.oracle.com/en/database/oracle/apex/26.2/htmdb/managing-ai-agents-and-ai-tools.html)
+- [APEX\_AI Package Reference](https://docs.oracle.com/en/database/oracle/apex/26.2/aeapi/APEX_AI.SET_TOOL_RESULT-Procedure-Signature-1.html)
 
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, October 2026

@@ -20,8 +20,6 @@ In this lab, you will:
 
 ## Task 1: Set Up the Data Model
 
-> **Note:** If you completed **Lab 1: Create a Supply Chain Management Application** in the [Build an AI Interactive Report in Oracle APEX](https://livelabs.oracle.com/ords/r/dbpm/livelabs/view-workshop?clear=RR,180&wid=4406) workshop on the same workspace, the data model and sample data are already loaded. Skip **Task 1** and **Task 2** and proceed to **Task 3: Import the SCM Application**.
-
 In this task, you will upload and run the data model script. This creates the warehouse tables that the AI Agent tools will query in the later labs. The data model is compatible with Oracle Database 19c and later.
 
 1. Download the [01\_SCM\_INV\_WMS\_DATAMODEL.sql](./files/01_SCM_INV_WMS_DATAMODEL.sql) file to your local machine.
@@ -74,14 +72,14 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_replenishment_alerts` | Low-stock and out-of-stock alerts |
     | `scm_business_partners` | Supplier master data |
     | `scm_partner_sites` | Supplier site details |
-    | `scm_inbound_receipts` | Supplier delivery headers |
-    | `scm_inbound_receipt_lines` | Delivery line items and quality data |
-    | `scm_operational_tasks` | Replenishment orders raised by the agent |
+    | `scm_inbound_receipts` | Supplier delivery headers and planned purchase orders raised by the agent |
+    | `scm_inbound_receipt_lines` | Delivery line items, quality data, and planned purchase-order lines |
+    | `scm_operational_tasks` | Warehouse operational tasks |
     {: title="Database Tables"}
 
     **Views and Procedures**
 
-    The script also creates the views and stored procedure used by the AI Agent tools. These keep the tool configurations in APEX simple. The business logic resides in the database, not inline in the tool definition.
+    The script also creates the views and procedures used by the AI Agent tools and application. These keep the tool configurations in APEX simple. The business logic resides in the database, not inline in the tool definition.
 
     | Object | Used by |
     | --- | --- |
@@ -90,13 +88,14 @@ In this task, you will upload and run the data model script. This creates the wa
     | `scm_v_suppliers_for_item` | `get_suppliers_for_item` tool |
     | `scm_v_supplier_delivery_performance` | `get_supplier_delivery_performance` tool |
     | `scm_v_warehouses_by_supplier` | `show_warehouses_by_supplier` tool |
-    | `scm_replenishment_v` | Annotated replenishment alerts view for reporting |
+    | `scm_replenishment_v` | Replenishment alert details for reporting |
     | `scm_raise_purchase_order` | `raise_purchase_order` tool |
-    {: title="Agent Views and Procedure"}
+    | `scm_post_auth_register_user` | Registers new application users at sign-in |
+    {: title="Agent Views and Procedures"}
 
 ## Task 2: Load the Sample Data
 
-In this task, you will load two sample data scripts. The first populates warehouses, users, roles, items, suppliers, and inventory balances across the network. The second loads inbound receipts, replenishment alerts, and the supplier delivery history that the agent uses for performance comparisons. Both scripts must be run for the workshop to work correctly.
+In this task, you will load two sample data scripts. The first populates warehouses, users, roles, items, suppliers, and reorder policies. The second loads inventory balances, inbound receipts, and the supplier delivery history that the agent uses for performance comparisons. Run both scripts in the order shown below.
 
 1. Download both sample data files to your local machine:
 
@@ -155,11 +154,11 @@ In this task, you will load two sample data scripts. The first populates warehou
 
     | Data | Details |
     | --- | --- |
-    | Warehouses | 20 active warehouses across the US, including `PHX-WEST` (Cactus Ridge Retail Fulfillment Center) as the primary demo warehouse |
+    | Warehouses | 22 active warehouses across the US, including `PHX-WEST` (Cactus Ridge Retail Fulfillment Center) as the primary demo warehouse |
     | Roles | Administrator, Warehouse Manager, Inventory Controller, Operations User, Quality User, Business Viewer |
     | Users | `ops.director` (Maya Chen), `inventory.lead` (Daniel Brooks), `receiving.lead` (Sofia Martinez), `fulfillment.lead` (Ethan Walker) |
     | Suppliers | VoltNest Consumer Electronics, CedarLoft Home Furnishings, TrailPeak Outdoor Goods, PureLeaf Beauty Labs, SafeTrip Automotive Supply, PaperTrail Office Products |
-    | Items | 200 inventory items across multiple product categories |
+    | Items | 195 inventory items across multiple product categories |
     | Inventory | Stock balances, reorder policies, and replenishment alerts for the `PHX-WEST` warehouse |
     {: title="Sample Data Summary"}
 
@@ -200,4 +199,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Sahaana Manavalan, Senior Product Manager, April 2026
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, October 2026
