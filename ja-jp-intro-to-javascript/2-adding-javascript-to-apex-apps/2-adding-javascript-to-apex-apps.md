@@ -252,7 +252,7 @@
 
 1. 次のコードには、ホームページで呼び出されている`doWork`関数と、カテゴリ別の売上チャートの色付けを行う関数が含まれています。 2番目の関数への唯一の変更は、現在名前が付いていることです(以前は匿名関数でした)。
 
-    **この**<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/sample-db-app.js" download="sample-db-app.js" target="\_blank">リンク</a>**をクリック**して、このラボのJavascriptファイル`sample-db-app.js`をローカル・コンピュータにダウンロードしてください。
+    **この**<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/sample-db-app.js" download="sample-db-app.js" target="\_blank">リンク</a>**をクリック**して、このラボのJavascriptファイル`sample-db-app.js`をローカル・コンピュータにダウンロードしてください。
 
     または、コンピュータ上に**sample-db-app.js**という名前の新しいファイルを作成し、以下のコードを保存することもできます。
 

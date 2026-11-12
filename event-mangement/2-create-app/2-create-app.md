@@ -110,7 +110,7 @@ In this task, you will create an application using Generative AI by entering nat
 
     ![select appearance](images/set-icon.png " ")
 
-12. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**. Click **Upload your own icon**, choose the image, and click **Save Icon**.
+12. Download the icon from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**. Click **Upload your own icon**, choose the image, and click **Save Icon**.
 
     ![select appearance](images/save-icon.png " ")
 

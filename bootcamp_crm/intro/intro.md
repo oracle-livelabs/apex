@@ -77,7 +77,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-hol.sql)** to download the completed application.
+1. **[Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fcrm-hol.sql)** to download the completed application.
 
 2. Import the crm\_livelab\_export.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 

@@ -141,7 +141,7 @@ Estimated time: 30 minutes
 
 Steve has been using spreadsheets to create product forecasts.  He will take one of the existing spreadsheets and use that to build out a new APEX application.
 
-1. Download the spreadsheet using [this link](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/product_forecast.csv).
+1. Download the spreadsheet using [this link](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/product_forecast.csv).
 
 2. It is always easier to learn when you have examples.  Review the **App Gallery**.
 

@@ -25,7 +25,7 @@ In this lab, you:
 
 ### Downloads
 
-If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the **Appendix Lab**:
+If you are stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fnyc-starter-app.zip) to download the export file, which contains everything completed until Lab 2. To run the app, follow the steps described in the **Appendix Lab**:
     - [Task 1: Import the App into an APEX Workspace](?lab=8-appendix&type=OCIGenAI#Task1:ImporttheAppintoanAPEXWorkspace)
     - [Task 2: Update Web Credentials in Oracle APEX and Configure Generative AI](?lab=8-appendix&type=OCIGenAI#Task2:UpdateWebCredentialsinOracleAPEXandConfigureGenerativeAI)
 

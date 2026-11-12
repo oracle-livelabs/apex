@@ -43,7 +43,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### **Sample Files**
 
-- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
+- This workshop requires the use of files for testing the upload/download process (any file type will work). You can either use your own files or download a zip folder with a couple [sample files here.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/Sample-FIles.zip)
 
 ## Learn More
 

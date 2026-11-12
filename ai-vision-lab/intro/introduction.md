@@ -47,7 +47,7 @@ In this workshop, you learn how to:
 
 If the application is not working as expected, download and install the completed application as follows:
 
-1. Download the [ai-powered-image-search-export.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) file.
+1. Download the [ai-powered-image-search-export.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/ai-powered-image-search-export.sql) file.
 
 2. Import the **ai-powered-image-search-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the application with the supporting objects.
 

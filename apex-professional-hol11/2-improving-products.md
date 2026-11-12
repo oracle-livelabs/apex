@@ -24,7 +24,7 @@ In this lab, you will:
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreateUsingDynamicActions-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreateUsingDynamicActions-OnlineShoppingApplication.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 

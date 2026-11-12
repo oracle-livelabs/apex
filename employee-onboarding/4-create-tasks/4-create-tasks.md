@@ -29,7 +29,7 @@ In this lab, you will:
 
 ### Downloads
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Femp_onboarding_starter_app.sql) to download the export file, which contains everything completed in the previous labs.
 
 Complete the following steps:
 

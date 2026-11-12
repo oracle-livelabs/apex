@@ -83,7 +83,7 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, don't worry! You can download and install the completed app as follows:
 
-1. [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application.
+1. [Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/automate-invoice-handling-export.sql) to download the completed application.
 
 2. Import the **automate-invoice-handling-export.sql** file into your workspace. Follow the steps in the Install Application wizard to install the app along with the Supporting Objects.
 

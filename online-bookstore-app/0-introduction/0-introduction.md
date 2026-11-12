@@ -96,9 +96,9 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
 
-- **OPTION 1:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
+- **OPTION 1:** Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
 
-- **OPTION 2:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
+- **OPTION 2:** Click [here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
 
 ## Learn More - *Useful Links*
 

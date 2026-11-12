@@ -47,7 +47,7 @@ Any block in Forms not associated with a database table or view is a non-databas
 
 To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the customer's form.
 
-[Download the Sample Forms](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/sample_forms.zip)
+[Download the Sample Forms](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/sample_forms.zip)
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
 

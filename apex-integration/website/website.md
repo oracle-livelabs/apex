@@ -44,7 +44,7 @@ This lab assumes you have:
 
   ![Import Template](images/import-template.png)
 
-4.  Download [CafeSupremoSalesEnablement.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/wms-id-10041-get-started-with-cec-and-apex/CafeSupremoSalesEnablement.zip)
+4.  Download [CafeSupremoSalesEnablement.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/data-management-library-files/wms-id-10041-get-started-with-cec-and-apex/CafeSupremoSalesEnablement.zip)
 
 5. Click **Upload** button and then upload the site template zip file **CafeSupremoSalesEnablement.zip**
   

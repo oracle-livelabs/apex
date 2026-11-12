@@ -37,7 +37,7 @@ Estimated Time: 1 hour and 40 minutes
 
 If you are stuck or the App is not working as expected, you can download and install the completed App as follows:
 
-1. **[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/Smart-Project-App.sql)** to download the completed application.
+1. **[Click here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/Smart-Project-App.sql)** to download the completed application.
 2. Import the proof-of-concept-app.sql file into your workspace. Follow the Install Application wizard steps to install the app along with the Supporting Objects.
 3. Once the application is installed, follow the below steps to update the Web Credentials.
     - Click the Down Arrow next to **App Builder**, click **Workspace Utilities** and then select **All Workspace Utilities**.

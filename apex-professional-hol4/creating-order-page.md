@@ -28,7 +28,7 @@ In this lab, you will:
 
     1. First, install the sample dataset from your workspace using the following lab:**[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-    2. After installing the sample dataset tables, download the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step. To import the SQL script follow the below steps:
+    2. After installing the sample dataset tables, download the SQL script from **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step. To import the SQL script follow the below steps:
 
     - Navigate to your APEX homepage, click the down arrow next to **SQL Workshop**, and select **SQL Scripts**.
 
@@ -44,7 +44,7 @@ In this lab, you will:
 
         ![Workspace home page](./images/partial-ddl-success.png " ")
 
-    3. Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
+    3. Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
 
     4. When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the username you wish to log in to the application, choose the appropriate application role, and click **Create Assignment**.
 
@@ -52,7 +52,7 @@ In this lab, you will:
 
         ![Workspace home page](./images/add-user.png " ")
 
-> Note: If you want to reinstall the the database objects, you can download the provided **[script](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)** to drop the existing database objects.
+> Note: If you want to reinstall the the database objects, you can download the provided **[script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)** to drop the existing database objects.
 
 ## Task 1: Navigate and Review the Page Designer panes
 
