@@ -57,10 +57,10 @@ If you are stuck or the App is not working as expected, you can download and ins
 ## Learn More - *Useful Links*
 
 * APEX on Autonomous:   [https://apex.oracle.com/autonomous](https://apex.oracle.com/autonomous)
-* APEX Collateral:   [https://apex.oracle.com](https://apex.oracle.com)
+* APEX Collateral:   [apex.oracle.com](https://apex.oracle.com)
 * Tutorials:   [https://apex.oracle.com/en/learn/tutorials](https://apex.oracle.com/en/learn/tutorials)
 * Community:  [https://apex.oracle.com/community](https://apex.oracle.com/community)
-* External Site + Slack:   [http://apex.world](http://apex.world)
+* External Site + Slack:   [apex.world](http://apex.world)
 
 ## Acknowledgements
 

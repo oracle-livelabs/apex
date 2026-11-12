@@ -156,7 +156,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
     * Credential Store: **OCI IAM Credentials**
 
-    * Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: https://[idcs-service-url]/.well-known/openid-configuration/.
+    * Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: `https://<idcs-service-url>/.well-known/openid-configuration/`.
 
     * Scope: **profile, email, groups**
 
