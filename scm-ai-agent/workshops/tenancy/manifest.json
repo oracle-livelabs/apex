@@ -16,7 +16,7 @@
     },
     {
       "title": "Lab 2: Configure Generative AI Service",
-      "filename": "../../2-configure-genai-service/2-configure-genai-service.md",
+      "filename": "../../lab-2-configure-an-ai-service/lab-2-configure-an-ai-service.md",
       "type": {
         "OCIGenAI": "OCIGenAI",
         "OpenAI": "OpenAI"
