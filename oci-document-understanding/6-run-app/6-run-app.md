@@ -10,8 +10,8 @@ Estimated Time: 2 Minutes
 
 In this lab, you:
 
-- Run the Application.
-- Explore the various features of the app.
+* Run the Application.
+* Explore the various features of the app.
 
 ## Task 1: Run the Application
 
@@ -29,9 +29,9 @@ In this task, you will launch the application and test the complete invoice-proc
 
     Download the following sample invoices to upload:
 
-    - [Sample Invoice 1](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%201.pdf)
+    * [Sample Invoice 1](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%201.pdf)
 
-    - [Sample Invoice 2](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%202.pdf)
+    * [Sample Invoice 2](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FInvoice%202.pdf)
 
     ![Task Definition in Shared Components](images/process-doc.png " ")
 
@@ -57,6 +57,6 @@ You now know how to run the Automatic Invoice Handling application and obtain re
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Contributing Author** - Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026
+* **Author(s)** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Contributing Author** - Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date** - Shailu Srivastava, Product Manager, May 2026

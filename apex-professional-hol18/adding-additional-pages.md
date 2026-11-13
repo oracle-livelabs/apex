@@ -10,21 +10,21 @@ Estimated Time: 15 minutes
 
 By the end of this lab, you will be able to:
 
-- Create and customize a Calendar page for tracking events and tasks.
+* Create and customize a Calendar page for tracking events and tasks.
 
-- Build a Form page and link it to other pages.
+* Build a Form page and link it to other pages.
 
-- Integrate drag-and-drop functionality into the Calendar.
+* Integrate drag-and-drop functionality into the Calendar.
 
-- Create and configure a Tree Page for hierarchical data visualization.
+* Create and configure a Tree Page for hierarchical data visualization.
 
-- Implement a Map Page to display geographical data.
+* Implement a Map Page to display geographical data.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol14.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol14.sql)**
 
 ## Task 1: Create a Calendar
 
@@ -46,13 +46,13 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 4. In the **Create Calendar**, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **5**
+        * Page Number: **5**
 
-        - Name: **Calendar**
+        * Name: **Calendar**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**
+    * Data Source > Table/View Name: **DEMO_PROJECTS**
 
     Click **Next**.
 
@@ -60,11 +60,11 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 5. In the **Create Calendar** page, enter/select the following:
 
-    - Display Column: **TASK_NAME**
+    * Display Column: **TASK_NAME**
 
-    - Start Date Column: **START_DATE**
+    * Start Date Column: **START_DATE**
 
-    - End Date Column: **END_DATE**
+    * End Date Column: **END_DATE**
 
     Click **Create Page**
 
@@ -80,11 +80,11 @@ Calendars provide an intuitive way to visualize date-related data, such as tasks
 
 8. The Calendar page displays the Region title as Calendar and has a border around the region. In the **Rendering** tab, navigate to **Calendar** region. In the Property Editor, enter/select the following:
 
-    - Appearance > Template Options: Click **Use Template Defaults**
+    * Appearance > Template Options: Click **Use Template Defaults**
 
-        - Header: **Hidden but accessible**
+        * Header: **Hidden but accessible**
 
-        - Style: **Remove UI Decoration**
+        * Style: **Remove UI Decoration**
 
          Click **OK**.
 
@@ -104,23 +104,23 @@ Forms are essential for capturing user input and updating database records. In t
 
 2. Select **Form**.
 
-   ![Select Form](images/create-form-page2.png " ")
+    ![Select Form](images/create-form-page2.png " ")
 
 3. In the **Create Form**, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **9**
+        * Page Number: **9**
 
-        - Name: **Form on Projects**
+        * Name: **Form on Projects**
 
-        - Page Mode: **Modal Dialog**
+        * Page Mode: **Modal Dialog**
 
-    - Data Source > Table/View Name: **DEMO_PROJECTS**
+    * Data Source > Table/View Name: **DEMO_PROJECTS**
 
     Click **Next**.
 
-   ![Select Modal Dialog](images/create-form-page3.png " ")
+    ![Select Modal Dialog](images/create-form-page3.png " ")
 
 4. Leave everything as default and click **Create Page**.
 
@@ -132,50 +132,52 @@ In this task, you’ll link the Form Page created in Task 2 to the Calendar, ena
 
 1. Navigate to **Page Finder** in the page designer toolbar and select page **5**.
 
-   ![Navigate to Calender](images/customizing-calendar1.png " ")
+    ![Navigate to Calender](images/customizing-calendar1.png " ")
 
 2. To add the **Create** and **View / Edit** links, in the Rendering tree, navigate to **Calendar** region.
 
 3. In the Property Editor, click **Attributes** and enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Primary Key Column: **ID**
+        * Primary Key Column: **ID**
 
-        - Create Link: Click **No Link Defined**.
+        * Create Link: Click **No Link Defined**.
 
-            - Page: **9**
+            * Page: **9**
 
-            - Clear Cache:**9**
+            * Clear Cache:**9**
 
             Click **OK**
 
     ![Add Link](images/create-link.png " ")
 
-    - View/Edit Link: Click **No Link Defined**.
+    * View/Edit Link: Click **No Link Defined**.
 
-        - Page: **9**
+        * Page: **9**
 
-        - Set Items:
+        * Set Items:
 
             | Name | Value |
-            |----- | ----- |
+            | ----- | ----- |
             | P9_ID | &ID. |
-            {: title="Set Items"}
 
-        - Clear Cache: **9**
+            *Set Items*
+
+        * Clear Cache: **9**
 
         Click **OK**.
 
-   ![Add Link](images/customizing-calendar6.png " ")
+    ![Add Link](images/customizing-calendar6.png " ")
 
 4. Use the component attribute **Drag and Drop** to enable the calendar to drag and drop. Your SQL query must select a primary key column, and you must have set the Primary Key Column calendar attribute. Then, enter the PL/SQL code to update the event row in the database in the Drag and Drop PL/SQL Code attribute. That PL/SQL code typically performs an SQL update on the database table - the bind variables **:APEX$PK\_VALUE.**, **:APEX$NEW\_START\_DATE** and **:APEX$NEW\_END\_DATE** contain the dragged events' primary key value and the new start and end timestamp.
 
-    - Under Settings:
+    * Under Settings:
 
-        - Drag and Drop: **Toggle On**
+        * Drag and Drop: **Toggle On**
 
-        - Drag and Drop PL/SQL Code: Copy and paste the below code.
+        * Drag and Drop PL/SQL Code: Copy and paste the below code.
+
             ```
             <copy>
             begin
@@ -206,17 +208,17 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
 1. Create a blank page in the **Demo Projects** application. Navigate to Create **(+ v)** in the page designer toolbar and select **Page**.
 
-   ![Click Create Page](images/create-tree1.png " ")
+    ![Click Create Page](images/create-tree1.png " ")
 
 2. Select **Blank Page**.
 
-   ![Select Blank page](images/create-tree2.png " ")
+    ![Select Blank page](images/create-tree2.png " ")
 
 3. On **Create Blank Page**, enter/select the following:
 
-    - Page Number: **7**
+    * Page Number: **7**
 
-    - Name: **Tree Page**
+    * Name: **Tree Page**
 
     Click **Create Page**.
 
@@ -228,17 +230,17 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Tree**
+        * Name: **Tree**
 
-        - Type: **Tree**
+        * Type: **Tree**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy the following code and paste it.
+        * SQL Query: Copy the following code and paste it.
 
             ```
             <copy>
@@ -258,13 +260,13 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
             </copy>
             ```
 
-    - Under Appearance > Template Options: Click **Use Template Defaults**
+    * Under Appearance > Template Options: Click **Use Template Defaults**
 
-        - General: Check **Remove Body Padding**
+        * General: Check **Remove Body Padding**
 
-        - Header: **Hidden but accessible**
+        * Header: **Hidden but accessible**
 
-        - Style: **Remove UI Decoration**
+        * Style: **Remove UI Decoration**
 
         Click **OK**.
 
@@ -276,25 +278,25 @@ Tree Pages are an excellent way to display hierarchical data, such as organizati
 
 6. In the **Property Editor**, select **Attributes** and enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Node Label Column: **TITLE**
+        * Node Label Column: **TITLE**
 
-        - Node Value Column: **VALUE**
+        * Node Value Column: **VALUE**
 
-        - Hierarchy: **Not Computed**
+        * Hierarchy: **Not Computed**
 
-        - Node Status Column: **STATUS**
+        * Node Status Column: **STATUS**
 
-        - Hierarchy Level Column: **LEVEL**
+        * Hierarchy Level Column: **LEVEL**
 
-        - Tooltip: **Database Column**
+        * Tooltip: **Database Column**
 
-        - Tooltip Column: **TOOLTIP**
+        * Tooltip Column: **TOOLTIP**
 
 7. Click **Save and Run**.
 
-   ![Click Save and Run](images/create-tree9.png " ")
+    ![Click Save and Run](images/create-tree9.png " ")
 
 8. The **Tree Page** is now displayed.
 
@@ -306,5 +308,5 @@ In this lab, you successfully created and customized a Calendar Page to display 
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager, Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Principal Product Manager, Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

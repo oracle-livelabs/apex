@@ -13,19 +13,19 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create a new page.
+* Create a new page.
 
-- Link the Popular Movies REST data source to the new page.
+* Link the Popular Movies REST data source to the new page.
 
-- Link the Search Movies REST data source to the new page.
+* Link the Search Movies REST data source to the new page.
 
-- Set up search functionality to allow a user to search for a movie.
+* Set up search functionality to allow a user to search for a movie.
 
-- Add a button to link the Movie Search page to the Movie Watchlist page.
+* Add a button to link the Movie Search page to the Movie Watchlist page.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 2
+* Completion of workshop through Lab 2
 
 ## Task 1: Create the Movie Search Page
 
@@ -41,11 +41,11 @@ To start, you will create the Movie Search page and do a little page setup befor
 
 3. Enter/select the following page attributes:
 
-    - Page Number: **2**
+    * Page Number: **2**
 
-    - Name: **Movie Search**
+    * Name: **Movie Search**
 
-    - Page Mode: **Modal Dialog**
+    * Page Mode: **Modal Dialog**
 
     Click **Create Page** to create and go to the new page.
 
@@ -55,23 +55,23 @@ To start, you will create the Movie Search page and do a little page setup befor
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Click on the **Use Template Defaults** button next to Template Options.
+        * Click on the **Use Template Defaults** button next to Template Options.
 
-        - In the Template Options popup dialog, check the **Stretch to Fit Window** box under Common.
+        * In the Template Options popup dialog, check the **Stretch to Fit Window** box under Common.
 
         Click **Ok**.
 
     ![Page 2 open in Page Designer with Template Options dialog open](images/page-template-options.png " ")
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Cursor Focus: **First item on page**
+        * Cursor Focus: **First item on page**
 
-        - Warn on Unsaved Changes: Toggle **Off**
+        * Warn on Unsaved Changes: Toggle **Off**
 
-    - Inline > CSS: Copy the code below and paste it in the **Inline** property code box:
+    * Inline > CSS: Copy the code below and paste it in the **Inline** property code box:
 
         ```
         <copy>
@@ -101,6 +101,7 @@ To start, you will create the Movie Search page and do a little page setup befor
             vertical-align: bottom;
             opacity: 0.75;
         }
+        </copy>
         ```
 
      *Note: The above code styles the movie poster images to all be the same size. It also adds some styling for the Cards region badge attribute that will be used in a later lab, to place it in the top right of a card. Finally, it adds some styling for the movie rating that you will display on the Card along with the movie title and poster.*
@@ -119,17 +120,17 @@ In this step, you will start to add content to your app using the REST data sour
 
 2. In the Property Editor, enter/select the following properties:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Popular Movies**
+        * Title: **Popular Movies**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Location: **REST Source**
+        * Location: **REST Source**
 
-        - REST Source: **Popular Movies**
+        * REST Source: **Popular Movies**
 
         When you click the dropdown for REST Source, you should see all the REST data sources you set up earlier - Popular Movies, Search Movies, Movie Details, and Movie Cast. This will allow the Cards region to use the columns and data associated with the Popular Movies REST data source and populate the region.
 
@@ -137,42 +138,42 @@ In this step, you will start to add content to your app using the REST data sour
 
 3. Navigate to **Attributes** tab at the top of the properties pane on the right of Page Designer. This is where you can select what data will display on each movie card. Enter/select the following:
 
-    - Appearance > Grid Columns: **5 Columns**
+    * Appearance > Grid Columns: **5 Columns**
 
-    - Card > Primary Key Column 1: **ID**
+    * Card > Primary Key Column 1: **ID**
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
-    - Under Subtitle:
+    * Under Subtitle:
 
-        - Advanced Formatting: Toggle **On**
+        * Advanced Formatting: Toggle **On**
 
             In your Cards region, you will show a star icon with the average rating of the movie next to it. Including multiple columns or custom text is not built-in to an attribute, but you can use Advanced Formatting to replace it with an HTML expression.
 
-        - HTML Expression: Copy and paste the below HTML expression
+        * HTML Expression: Copy and paste the below HTML expression
 
             ```
             <copy>
             &lt;div class="movie-rating">
             &lt;span aria-hidden="true" class="fa fa-star">&lt;/span> &VOTE_AVERAGE.&lt;/div>
-            <copy>
+            </copy>
             ```
 
         > *Note: In the HTML Expression, the &NAME. syntax is used to create a substitution string for the value of the VOTE_AVERAGE column for each movie. To learn more, check out the Resources section at the end of this lab.*
 
         ![Page 2 open in Page Designer editing the first half of the Popular Movies region attributes](images/pop-region-attributes-1.png " ")
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **Image URL**
+        * Source: **Image URL**
 
-        - URL: **https://image.tmdb.org/t/p/w500&POSTER\_PATH.**
+        * URL: **<https://image.tmdb.org/t/p/w500&POSTER\_PATH.>**
 
-        - Position: **First**
+        * Position: **First**
 
-        - Appearance: **Square**
+        * Appearance: **Square**
 
-        - Sizing: **Cover**
+        * Sizing: **Cover**
 
         ![Page 2 open in Page Designer editing the second half of the Popular Movies region attributes](images/pop-region-attributes-2.png " ")
 
@@ -184,17 +185,17 @@ In this step, you will start to add content to your app using the REST data sour
 
 6. In the Property Editor, enter/select the following properties:
 
-    - Identification > Title: **Searched Movies**
+    * Identification > Title: **Searched Movies**
 
-    - Source > REST Source: **Search Movies**
+    * Source > REST Source: **Search Movies**
 
     ![ Searched movies region](images/searched-movies-region.png " ")
 
 7. You also need to set the pagination attributes for the Searched Movies region, because you are getting all the search results at one time. Within Searched Movies, set the following **Pagination** properties in Searched Movies region under **Attributes** tab:
 
-    - Type: **Page**
+    * Type: **Page**
 
-    - Cards per page: **25**
+    * Cards per page: **25**
 
     ![Close-up of the Pagination property group in the Searched Movies region attributes](images/searched-movies-pagination.png " ")
 
@@ -210,13 +211,13 @@ The final region that needs to be added to the Movie Search page is the search b
 
 2. In the Property editor, enter/select the following:
 
-    - Identification > Title: **Search Bar**
+    * Identification > Title: **Search Bar**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Blank with Attributes**
+        * Template: **Blank with Attributes**
 
-        - CSS Classes: **padding-sm**
+        * CSS Classes: **padding-sm**
 
     > *Note: If you open the options dialog next to the CSS Classes property, the only option available is margin-sm, so you need to manually enter padding-sm in the property text box.*
 
@@ -228,33 +229,33 @@ The final region that needs to be added to the Movie Search page is the search b
 
 4. In the Property editor, enter/select the following:
 
-    - Identification > Name: **P2_SEARCH**
+    * Identification > Name: **P2_SEARCH**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Hidden**
+        * Template: **Hidden**
 
-        - Open the **Template Options** dialog:
+        * Open the **Template Options** dialog:
 
-            - Select **Stretch Form Item**
+            * Select **Stretch Form Item**
 
-            - Size: **X Large**
+            * Size: **X Large**
 
             Click **Ok**.
 
-        - Icon: **fa-search**
+        * Icon: **fa-search**
 
-        - Value Placeholder: **Search for a movie...**
+        * Value Placeholder: **Search for a movie...**
 
     ![Page 2 open in Page Designer editing the P2_SEARCH item with the Template Options dialog open](images/search-item.png " ")
 
 5. Navigate to **Popular Movies** region. In the Property editor, enter/select the following:
 
-    - Under Server-Side Condition:
+    * Under Server-Side Condition:
 
-        - Type: **Item is NULL**
+        * Type: **Item is NULL**
 
-        - Item: **P2_SEARCH**
+        * Item: **P2_SEARCH**
 
     > *Note: Now you are displaying the Popular Movies region based on a condition. If the P2_SEARCH item is NULL, then the region will display. You will create an opposite condition for the Searched Movies region.*
 
@@ -262,11 +263,11 @@ The final region that needs to be added to the Movie Search page is the search b
 
 6. Navigate to **Searched Movies** region. In the Property editor, enter/select the following:
 
-    - Under Server-Side Condition:
+    * Under Server-Side Condition:
 
-        - Type: **Item is NOT NULL**
+        * Type: **Item is NOT NULL**
 
-        - Item: **P2_SEARCH**
+        * Item: **P2_SEARCH**
 
     > *Note: Now, you are only displaying Searched Movies if the P2_SEARCH item is NOT NULL (has a value).*
 
@@ -278,11 +279,11 @@ The final region that needs to be added to the Movie Search page is the search b
 
 9. Click on the **query** parameter.
 
-    - You will see that its Type is REST Source Default, which is using the default value from the used in the URL to set up the REST source.
+    * You will see that its Type is REST Source Default, which is using the default value from the used in the URL to set up the REST source.
 
-    - Change the Type from REST Source Default to **Item**.
+    * Change the Type from REST Source Default to **Item**.
 
-    - In the Item field, enter **P2_SEARCH**.
+    * In the Item field, enter **P2_SEARCH**.
 
     ![Page 2 open in Page Designer editing the Searched Movies region query parameter](images/searched-query.png " ")
 
@@ -298,7 +299,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 2. In the Rendering pane on the left, click **Movies Watchlist** region in the Breadcrumb Bar position.
 
-    - In the Property editor on the right, set the Title: **My Watchlist**
+    * In the Property editor on the right, set the Title: **My Watchlist**
 
     ![Update Title to My Watchlist](images/my-watchlist.png " ")
 
@@ -308,21 +309,21 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 4. In the Property editor, enter/select the following:
 
-    - Identification > Button Name: **ADD_MOVIE**
+    * Identification > Button Name: **ADD_MOVIE**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Appearance > Hot: Toggle **On**
+    * Appearance > Hot: Toggle **On**
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Link Defined** to open the Link Builder dialog.
+        * Target: Click **No Link Defined** to open the Link Builder dialog.
 
-            - Page: **2**
+            * Page: **2**
 
-            - Clear Cache: **2**
+            * Clear Cache: **2**
 
     > *Note: 2 is the ID of your Movie Search page. Clearing the Movie Search page cache will ensure the page items in are cleared each time the page is opened so users can perform new searches.*
 
@@ -338,9 +339,9 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 7. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Refresh on Dialog Closed**
+    * Identification > Name: **Refresh on Dialog Closed**
 
-    - When > Event: **Dialog Closed or Canceled**
+    * When > Event: **Dialog Closed or Canceled**
 
     ![Page 1 open in Page Designer editing the Dynamic Action event associated with the ADD_MOVIE button](images/da-event.png " ")
 
@@ -348,7 +349,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 9. Click **Refresh** action under True. In the Property editor, select the following:
 
-    - Identification → Action: **Submit Page**
+    * Identification → Action: **Submit Page**
 
 10. Click the **Save and Run** button at the top right of the Page Designer.
 
@@ -364,7 +365,7 @@ The last task in this lab is linking the Movie Search page to the My Watchlist p
 
 13. Type "harry potter" in the search bar and hit Enter (Return on Mac).
 
-    - You should get results for movies with the search term "harry potter" in the title.
+    * You should get results for movies with the search term "harry potter" in the title.
 
     ![Page 2 of Movies Watchlist at runtime open as a modal dialog over Page 1 displaying search results for Harry Potter movies](images/harry-potter.png " ")
 
@@ -380,49 +381,49 @@ You now know how to create a page in your APEX application and add components to
 
 ## Learn More
 
-- [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/about-page-designer.html)
+* [Page Designer Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/about-page-designer.html)
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-cards.html)
+* [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-cards.html)
 
-- [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)
+* [Cards in Universal Theme](https://apex.oracle.com/pls/apex/r/apex_pm/ut/card-regions)
 
-- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
+* [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
 
-- [Intro to Dynamic Actions Video](https://www.youtube.com/watch?v=hpcYevCC-Ow)
+* [Intro to Dynamic Actions Video](https://www.youtube.com/watch?v=hpcYevCC-Ow)
 
-- [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-dynamic-actions.html)
+* [Dynamic Actions Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-dynamic-actions.html)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 3 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-3.sql) to download a copy of the app at the end of Lab 3.
+* [SQL script: apex/lab-3.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-3.sql) to download a copy of the app at the end of Lab 3.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     > *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled.*
 
     ![APEX Install Application page with Web Credentials table without any Client ID or Client Secret values for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
     ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

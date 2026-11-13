@@ -12,11 +12,11 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Use the Movie Cast REST data source to add Cast Cards the Movie Details page.
+* Use the Movie Cast REST data source to add Cast Cards the Movie Details page.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 4
+* Completion of workshop through Lab 4
 
 ## Task 1: Add the Cast Region to Movie Details Page
 
@@ -32,25 +32,25 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 3. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Cast**
+        * Title: **Cast**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Location: **REST Source**
+        * Location: **REST Source**
 
-        - REST Source: **Movie Cast**
+        * REST Source: **Movie Cast**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Content Block**
+        * Template: **Content Block**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Region Title: **Small**
+            * Region Title: **Small**
 
                 Click **OK**.
 
@@ -58,31 +58,31 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 4. Click **Attributes** tab and enter/select the following page attributes:
 
-    - Appearance > Grid Columns: **5 Columns**
+    * Appearance > Grid Columns: **5 Columns**
 
-    - Card > Primary Key Column 1: **ID**
+    * Card > Primary Key Column 1: **ID**
 
-    - Title >  Column: **CHARACTER**
+    * Title >  Column: **CHARACTER**
 
-    - Subtitle > Column: **NAME**
+    * Subtitle > Column: **NAME**
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **Image URL**
+        * Source: **Image URL**
 
-        - URL: **https://image.tmdb.org/t/p/w500&PROFILE\_PATH.**
+        * URL: **<https://image.tmdb.org/t/p/w500&PROFILE\_PATH.>**
 
-        - Position: **First**
+        * Position: **First**
 
-        - Appearance: **Square**
+        * Appearance: **Square**
 
-        - Sizing: **Cover**
+        * Sizing: **Cover**
 
-    - Under Pagination:
+    * Under Pagination:
 
-        - Type: **Page**
+        * Type: **Page**
 
-        - Cards per Page: **10**
+        * Cards per Page: **10**
 
     ![Cast Card region attributes open in Property Editor on Page 3 in Page Designer](images/cast-attributes.png " ")
 
@@ -92,11 +92,11 @@ You already created the Movie Cast REST data source in Lab 2, and now you can us
 
 7. In the Property editor, enter/select the following page attributes:
 
-    - Under Value:
+    * Under Value:
 
-        - Type: **Item**
+        * Type: **Item**
 
-        - Item: **P3\_ID**
+        * Item: **P3\_ID**
 
     ![Cast region movie_id parameter open in Property Editor on Page 3 in Page Designer](images/cast-parameter.png " ")
 
@@ -112,41 +112,41 @@ You have now improved the Movie Details page further by displaying a list of cas
 
 ## Learn More
 
-- [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-REST-data-sources.html)
+* [REST Data Sources Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-REST-data-sources.html)
 
-- [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-cards.html)
+* [Cards Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/managing-cards.html)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through this lab and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-8.sql) to download a copy of the app at the end of this lab.
+* [SQL script: apex/lab-8.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-8.sql) to download a copy of the app at the end of this lab.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     > *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
     ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

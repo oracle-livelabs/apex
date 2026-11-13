@@ -8,35 +8,35 @@ In this workshop, you navigate to **Demo Projects Application** and create an **
 
 Later, in the **Online Shopping Cart Application**, you will create:
 
-- **Application Items** and **Application Process**
+* **Application Items** and **Application Process**
 
-- **Cards** pages to view Product Details and Customer Reviews in the Online Shopping Application.
+* **Cards** pages to view Product Details and Customer Reviews in the Online Shopping Application.
 
-- **Faceted Search Page** to view the Products.
+* **Faceted Search Page** to view the Products.
 
 ### Recap
 
 In the previous workshop, you learned to navigate and review the Page Designer panes. You acquired the skills to construct a normal page, incorporate regions, sub-regions, and page items, and manage the locking and unlocking of pages.
 
-Estimated Time: 40 minutes
+Estimated Workshop Time: 40 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Create pages to search and edit the Projects and Tasks in the **Demo Projects** Application.
+* Create pages to search and edit the Projects and Tasks in the **Demo Projects** Application.
 
-- Create a Page to list the products in the **Shopping Cart** Application.
+* Create a Page to list the products in the **Shopping Cart** Application.
 
 <!--### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingwithPagesandRegions-SampleReporting.sql)**
+- **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingwithPagesandRegions-SampleReporting.sql)**
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-OnlineShoppingApplication.sql)**
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-DemoProjects.sql)**
+- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-DemoProjects.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -48,8 +48,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-adding-pages-demo-projects.md#acknowledgements).

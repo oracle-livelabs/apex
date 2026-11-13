@@ -1,17 +1,19 @@
 # Configure a development system for Oracle Forms Application from Marketplace in OCI
 
 ## Introduction
+
 The Oracle Cloud Infrastructure marketplace provides a pre-built Oracle Forms image with necessary client tools and drivers to build the applications.
 
 The image is pre-configured with tools and language drivers so that you can change/compile Oracle Forms Applications.
 For a complete list of features, login to your OCI account, select 'Marketplace' from the top left menu and browse details on the 'Oracle Forms Services'
-    ![](./images/marketplace-forms.png " ")
+    ![Marketplace forms](../../forms-to-apex-migration/setup-oracle-forms/images/marketplace-forms.png " ")
 
 Estimated Lab Time: 30 minutes
 
 ### Objectives
 
 As a database user, DBA or application developer,
+
 1. Configure a Oracle Forms system from a pre-built marketplace image
 2. Connect with SSH and complete the Forms Installation
 3. Copy the SQL Scripts and Sample Forms files to your development system
@@ -21,8 +23,8 @@ As a database user, DBA or application developer,
 
 ### Prerequisites
 
-- An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
-- VNC Viewer or other suitable VNC client on your local laptop
+* An Oracle Cloud Infrastructure account with IAM privileges to provision compute instances
+* VNC Viewer or other suitable VNC client on your local laptop
 
 ## Task 1: Provision an OCI Marketplace Forms Services image
 
@@ -30,38 +32,39 @@ We start with deploying a pre-configured client machine instance from the OCI ma
 
 1. Log into your cloud account using your tenant name, username and password.
 2. Click the Hamburger Menu, select **Marketplace** and click **All Applications**.
-      ![](./images/cloud_marketplace.png " ")
+      ![Cloud marketplace](./images/cloud_marketplace.png " ")
 
 3. Search for Oracle Forms Services.
-      ![](./images/oracle_forms.png " ")
+      ![Oracle forms](./images/oracle_forms.png " ")
 
 4. Choose Oracle Forms Service image from Oracle Image section.
 
 5. Choose the compartment and check the "I have reviewed and accept the Oracle standard Terms and Restrictions" box before launching the instance.
-    ![](./images/choose_compartment.png " ")
+    ![Choose compartment](./images/choose_compartment.png " ")
 
-6. 
-    - Name: formstoapexstack
-    - Create in compartment: Choose your compartment
-    - Placement: Leave the defaults
-    - Image and Shape: Leave the defaults
+6. Configure the instance:
+
+    * Name: formstoapexstack
+    * Create in compartment: Choose your compartment
+    * Placement: Leave the defaults
+    * Image and Shape: Leave the defaults
 
       ![Oracle Forms Service](./images/compute.png " ")
 
     >**Note**: Please ensure you have picked the right compartment where network resources exist.
 
-    - Networking: Choose the VCN and subnet you have created in the previous lab. This would likely be the public subnet. Ensure **Assign a public IPv4 address** is set to Yes. You would need to ssh into this instance over public internet.
-    - Add SSH keys: select **Paste public keys** and paste in your ssh key.
+    * Networking: Choose the VCN and subnet you have created in the previous lab. This would likely be the public subnet. Ensure **Assign a public IPv4 address** is set to Yes. You would need to ssh into this instance over public internet.
+    * Add SSH keys: select **Paste public keys** and paste in your ssh key.
 
       ![Oracle Forms Service](./images/compute2.png " ")
 
-9. Click Create.
+7. Click Create.
       ![Oracle Forms Service](./images/compute3.png " ")
 
-10. Within a few minutes your development instance will be available and a public IP address assigned (if it is provisioned in a public subnet).
+8. Within a few minutes your development instance will be available and a public IP address assigned (if it is provisioned in a public subnet).
 
-11. Once provisioned, you can click on the instance name to see details.
-    ![](./images/computeready.png " ")
+9. Once provisioned, you can click on the instance name to see details.
+    ![Computeready](./images/computeready.png " ")
 
 
 ## Task 2: Connect from your local laptop into your development system to complete the forms installation
@@ -73,6 +76,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
     ```
     <copy>ssh -i <private-key> opc@PublicIP</copy>
     ```
+
 2. When you login, the Oracle Forms Installation will continue and you will be prompted with if you want to use your local database. Press the Enter key.
 
     ```
@@ -111,8 +115,9 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
         All Servers have been started and are ready for use.
 
     ```
+
     Make a note of all the passwords
-3.   All the installation details of software installed, ORACLE\_HOME, ORACLE\_SID, MIDDLEWARE\_HOME, FORMS\_PATH
+3. All the installation details of software installed, ORACLE\_HOME, ORACLE\_SID, MIDDLEWARE\_HOME, FORMS\_PATH
     can be found in readme file under Desktop folder
 
     ```
@@ -150,32 +155,34 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
               WLS_FORMS : 9001
               OHS : 7777 & 4443 (7777 & 4443 opened in Linux firewall)
 
-        ```    
-4.   Start your VNC server with the following command,
+    ```
 
-        ```
-        <copy>$ vncserver -geometry 1280x1024</copy>
-        ```
+4. Start your VNC server with the following command,
 
-        ```
-        VNC Server will be started with below output
-        New 'formstoapexstack:1 (opc)' desktop is formstoapexstack:1
+    ```
+    <copy>$ vncserver -geometry 1280x1024</copy>
+    ```
 
-        Starting applications specified in /home/opc/.vnc/xstartup
-        Log file is /home/opc/.vnc/formstoapexstack:1.log
-        ```
+    ```
+    VNC Server will be started with below output
+    New 'formstoapexstack:1 (opc)' desktop is formstoapexstack:1
 
-         Note down what comes after your stack name which is :1 here.
+    Starting applications specified in /home/opc/.vnc/xstartup
+    Log file is /home/opc/.vnc/formstoapexstack:1.log
+    ```
 
-        Open the Log file to check which port the VNC connection will be listening on and note down the port number which is usually 5901 .
+     Note down what comes after your stack name which is :1 here.
 
-        Excerpt from Log file:
-        ```
-        vncext:      VNC extension running!
-        vncext:      Listening for VNC connections on all interface(s), port 5901
-        vncext:      Listening for HTTP connections on all interface(s), port 5801
-        vncext:      created VNC server for screen 0
-        ```
+    Open the Log file to check which port the VNC connection will be listening on and note down the port number which is usually 5901 .
+
+    Excerpt from Log file:
+
+    ```
+    vncext:      VNC extension running!
+    vncext:      Listening for VNC connections on all interface(s), port 5901
+    vncext:      Listening for HTTP connections on all interface(s), port 5801
+    vncext:      created VNC server for screen 0
+    ```
 
 5. Your development system may now be ready for accepting VNC connections.
 
@@ -183,13 +190,15 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 
 6. Create a tunnel for VNC through SSH,
 
-   if you have MAC ,
+    if you have MAC ,
 
-          In a terminal window , issue the following command, with your public IP address at the end. This will create the SSH tunnel for you to use for VNC.
-          ```
-          ssh -N -L 5901:127.0.0.1:5901 -i ~/<privatekey> opc@<publicIP>
-          ```
-   if you have Windows,
+    In a terminal window, issue the following command, with your public IP address at the end. This will create the SSH tunnel for you to use for VNC.
+
+    ```
+      ssh -N -L 5901:127.0.0.1:5901 -i ~/<privatekey> opc@<publicIP>
+    ```
+
+    if you have Windows,
 
       You can create SSH tunnels using the PuTTY SSH client.
 
@@ -222,31 +231,32 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 
 
 7. Start VNC Viewer on your laptop and configure a client connection using the settings as shown.
-    ![](./images/VNCViewer.png " ")
+    ![VNCViewer](./images/vncviewer.png " ")
 
-  Note how the connect string for VNC Server is simply localhost:1
+    Note how the connect string for VNC Server is simply localhost:1
 
 8. Connect to your VNC desktop and provide the password you provided on the host earlier.
 
 9. If all goes well, you should now see a linux desktop in your VNC window.
 
 ## Task 3: Copy the SQL Scripts, Shell Scripts and Sample Forms files to your development system
-1. We have sample forms and sample database scripts that can be downloaded from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
+
+1. We have sample forms and sample database scripts that can be downloaded from [application export: setup-oracle-forms.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/setup-oracle-forms.zip)
 
 2. Unzip the files and Copy the files over to your development system from your local Desktop
 
-      ````
+    ````
       <copy>scp -i  ~/.ssh/<privake key> ./files/customers.fmb opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/forms_conversion.sql opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/forms_conversion_data_insert.sql opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/frmf2xml.sh opc@<public ip>:/home/opc/oracle/formsmodules
         scp -i  ~/.ssh/<privake key> ./files/formsXMLconvert.sh opc@<public ip>:/home/opc/oracle/formsmodules </copy>       
-      ````
+    ````
 
 ## Task 4: Connect to your DB in Development system using SQL Developer
 
 1. In your VNC session, invoke SQL Developer from the top left Applications menu as shown below.
-    ![](./images/sql-developer-vnc.png " ")
+    ![Sql developer vnc](./images/sql-developer-vnc.png " ")
 
 
     *Note: In the event you have issues launching SQL Developer and it prompts with a java classpath error, simply add the following line to ~/.sqldeveloper/19.1.0/product.conf and retry.*
@@ -261,7 +271,7 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 
     **Username**: sys as sysdba
 
-    **Password**: <password>
+    **Password**: `<password>`
 
     **Connection Type**: Basic
 
@@ -272,27 +282,28 @@ First we ssh into the dev client and invoke the VNC server that comes pre-instal
 3. Test your connection and save. The *Status* bar will show *Success* if it is a successful connection!
 
 
-## Task 5: Run the scripts to create sample schema and insert sample data.
+## Task 5: Run the scripts to create sample schema and insert sample data
 
-  1.  Open the script  forms_conversion_ddl.sql in SQL developer in VNC and execute the script. Make a note of the credential for order user in the script.
-  2.  In the same session connect to orders user and run the insert script forms_conversion_data_insert.sql
+  1. Open the script  forms_conversion_ddl.sql in SQL developer in VNC and execute the script. Make a note of the credential for order user in the script.
+  2. In the same session connect to orders user and run the insert script forms_conversion_data_insert.sql
 
 
 ## Task 6: Convert the Forms to XML files
 
 Before migrating  to Oracle Applications Express, Forms file have to be converted to XML file using frmf2xml utility provided with Oracle Forms Service Image. In the downloaded scripts, formsXMLconvert.sh script that can be run to convert all the Forms files in the directory where it is run from.
 
-    ````
-    <copy>cd oracle/formsmodules/
-      sh formsXMLconvert.sh</copy>
+````
+<copy>cd oracle/formsmodules/
+  sh formsXMLconvert.sh</copy>
 
-    ````  
+````
+
 After the script is run verify that you can see customers_fmb.xml
 
 You may now *proceed to the next lab*.
 
 ## Acknowledgements
 
-- **Author** -  Vanitha Subramanyam, Senior Solution Architect
-- **Contributors** - Vanitha Subramanyam, Senior Solution Architect
-- **Last Updated By/Date** - Kamryn Vinson, March 2022
+* **Author** -  Vanitha Subramanyam, Senior Solution Architect
+* **Contributors** - Vanitha Subramanyam, Senior Solution Architect
+* **Last Updated By/Date** - Kamryn Vinson, March 2022

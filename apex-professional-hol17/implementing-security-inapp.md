@@ -12,27 +12,27 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Configure Oracle IAM authentication for an application.
+* Configure Oracle IAM authentication for an application.
 
-- Implement Google Authentication for seamless social sign-in.
+* Implement Google Authentication for seamless social sign-in.
 
-- Enable multiple authentication schemes within an Oracle APEX application.
+* Enable multiple authentication schemes within an Oracle APEX application.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingApplicationData-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingApplicationData-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Configure Oracle IAM Authentication in Online Shopping Application
 
@@ -68,13 +68,13 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 9. Under **Client configuration**, enter/select the following:
 
-    - Under Authorization:
+    * Under Authorization:
 
-        - Allowed grant types: Enable **Authorization code** (This will be used later to control access to the Oracle APEX application)
+        * Allowed grant types: Enable **Authorization code** (This will be used later to control access to the Oracle APEX application)
 
-        - Redirect URL: **https://apex.oracle.com/pls/apex/apex_authentication.callback**
+        * Redirect URL: **<https://apex.oracle.com/pls/apex/apex_authentication.callback>**
 
-        - Post-logout redirect URL: **https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login**
+        * Post-logout redirect URL: `https://apex.oracle.com/pls/apex/r/<workspace_name>/<application name>/login`
 
     Click **Next**.
 
@@ -108,15 +108,15 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 16. Enter/select the following information:
 
-    - Name: **OCI IAM Credentials**
+    * Name: **OCI IAM Credentials**
 
-    - Authentication Type: **Basic Authentication**
+    * Authentication Type: **Basic Authentication**
 
-    - Client ID or Username: Enter Client ID copied in **step 12**.
+    * Client ID or Username: Enter Client ID copied in **step 12**.
 
-    - Client Secret or Password: Enter Client Secret copied in **step 12**.
+    * Client Secret or Password: Enter Client Secret copied in **step 12**.
 
-    - Verify Client Secret or Password: Enter Client Secret copied in **step 12**.
+    * Verify Client Secret or Password: Enter Client Secret copied in **step 12**.
 
     Click **Create**.
 
@@ -150,19 +150,19 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 23. Enter/select the following information:
 
-    - Name: **IAM**
+    * Name: **IAM**
 
-    - Scheme Type: **Social Sign-In**
+    * Scheme Type: **Social Sign-In**
 
-    - Credential Store: **OCI IAM Credentials**
+    * Credential Store: **OCI IAM Credentials**
 
-    - Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: https://[idcs-service-url]/.well-known/openid-configuration/.
+    * Discovery URL: Enter the OpenID Connect provider's discovery URL. For example: `https://<idcs-service-url>/.well-known/openid-configuration/`.
 
-    - Scope: **profile, email, groups**
+    * Scope: **profile, email, groups**
 
-    - Username: **#sub#**
+    * Username: **#sub#**
 
-    - Additional User Attributes: **groups**
+    * Additional User Attributes: **groups**
 
     Click **Create Authentication Scheme**.
 
@@ -194,25 +194,25 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 5. Under Project Configuration, enter the following:
 
-    - Under **App information**:
+    * Under **App information**:
 
-        - App name: Enter your **Application Name**
+        * App name: Enter your **Application Name**
 
-        - User support email: Enter your **Email Address**
+        * User support email: Enter your **Email Address**
 
         Click **Next**
 
     ![Click My Apps](images/app-information.png " ")
 
-     - Under **Audience** > Select **External** and click **NEXT**
+    * Under **Audience** > Select **External** and click **NEXT**
 
     ![Click My Apps](images/audience.png " ")
 
-    - Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
+    * Under **Contact Information** >  Email address: Enter your **Email Address** and click **NEXT**
 
     ![Click My Apps](images/contact-information.png " ")
 
-    - Under **Finish** >  Tick the checkbox and click **CONTINUE**
+    * Under **Finish** >  Tick the checkbox and click **CONTINUE**
 
     ![Click My Apps](images/finish.png " ")
 
@@ -226,13 +226,13 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 8. Enter the following:
 
-     - For Application type: Select **Web Application**
+    * For Application type: Select **Web Application**
 
-     - For Name: Enter **APEX Social Authentication**
+    * For Name: Enter **APEX Social Authentication**
 
-   Under Authorized redirect URIs, click **+Add URl**
+    Under Authorized redirect URIs, click **+Add URl**
 
-     - For URls 1: Enter https://apex.oracle.com/pls/apex/apex_authentication.callback
+    * For URls 1: Enter <https://apex.oracle.com/pls/apex/apex_authentication.callback>
 
      Click **CREATE**.
 
@@ -260,15 +260,15 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 14. In the **Web Credentials** enter/select the following:
 
-    - Under **Attributes**:
+    * Under **Attributes**:
 
-        - Name: **Google SignIn**
+        * Name: **Google SignIn**
 
-        - Authentication Type: **OAuth2 Client Credentials**.
+        * Authentication Type: **OAuth2 Client Credentials**.
 
-        - Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
+        * Client ID or Username: Enter the **Client ID** you copied in **Step 10**.
 
-        - Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
+        * Client Secret or Password and Verify Client Secret or Password: Enter the **App Secret** you copied in **Step 10**.
 
     ![Define Web Credentials](images/create-web-cred1.png " ")
 
@@ -296,21 +296,21 @@ Stuck or Missed out on completing the previous labs? Don't worry! First, follow 
 
 21. In the **Authentication Scheme**, enter/select the following:
 
-    - Under Name:
+    * Under Name:
 
-        - Name: **Google**
+        * Name: **Google**
 
-        - Scheme Type: **Social Sign-In**
+        * Scheme Type: **Social Sign-In**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Credential Store: **Google SignIn**
+        * Credential Store: **Google SignIn**
 
-        - Authentication Provider: **Google**
+        * Authentication Provider: **Google**
 
-        - Scope: **profile,email**
+        * Scope: **profile,email**
 
-        - Username: **email,name,roles**
+        * Username: **email,name,roles**
 
         Click **Create Authentication Scheme**.
 
@@ -336,11 +336,11 @@ Providing multiple authentication options improves the flexibility and usability
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Multi Authentication**
+    * Identification > Name: **Multi Authentication**
 
-    - Appearance > Template Options: Click **Use Template Defaults**
+    * Appearance > Template Options: Click **Use Template Defaults**
 
-        - Header: **Hidden**
+        * Header: **Hidden**
 
         Click **OK**
 
@@ -352,31 +352,31 @@ Providing multiple authentication options improves the flexibility and usability
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **IAM_Login**
+        * Button Name: **IAM_Login**
 
-        - Label: **IAM Authentication**
+        * Label: **IAM Authentication**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Template Options > Use Template Defaults: Width > **Stretch**
+        * Template Options > Use Template Defaults: Width > **Stretch**
 
         Click **OK**.
 
-        - Icon: **fa-oracle-o**
+        * Icon: **fa-oracle-o**
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Linked Defined**
+        * Target: Click **No Linked Defined**
 
-            - Target > Page: **10000**
+            * Target > Page: **10000**
 
-            - Advanced > Request: **APEX_AUTHENTICATION=IAM**
+            * Advanced > Request: **APEX_AUTHENTICATION=IAM**
 
         Click **OK**.
 
@@ -388,33 +388,33 @@ Providing multiple authentication options improves the flexibility and usability
 
 7. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Google_SignIn**
+        * Button Name: **Google_SignIn**
 
-        - Label: **Google Sign In**
+        * Label: **Google Sign In**
 
-    - Layout > Start New Row: **Toggle Off**
+    * Layout > Start New Row: **Toggle Off**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Template Options > Use Template Defaults: Width > **Stretch**
+        * Template Options > Use Template Defaults: Width > **Stretch**
 
         Click **OK**
 
-        - Icon: **fa-google**
+        * Icon: **fa-google**
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Linked Defined**
+        * Target: Click **No Linked Defined**
 
-            - Target > Page: **10000**
+            * Target > Page: **10000**
 
-            - Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
+            * Clear/Reset > Clear Cache: **APEX_AUTHENTICATION=Google**
 
         Click **OK**
 
@@ -424,7 +424,7 @@ Providing multiple authentication options improves the flexibility and usability
 
 8. Navigate to **Page 9999: Login Page**, update the following:
 
-    - Inline: Copy and paste the below CSS
+    * Inline: Copy and paste the below CSS
 
         ```
         <copy>
@@ -456,5 +456,5 @@ In the next hands-on lab, you will learn to create and customize a Calendar page
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Product Manager
-- **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, May 2025
+* **Author** - Ankita Beri, Product Manager
+* **Last Updated By/Date** - Pankaj Goyal, Member Technical Staff, May 2025

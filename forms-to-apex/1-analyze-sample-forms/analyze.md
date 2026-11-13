@@ -12,7 +12,7 @@ Estimated Time: 5 Minutes
 
 In this lab, you:
 
-- Understand the current business logic in Oracle Forms and how to map it to Oracle APEX components.
+* Understand the current business logic in Oracle Forms and how to map it to Oracle APEX components.
 
 ## Task 1: Analyze Forms Business Logic
 
@@ -26,19 +26,19 @@ Analyze and map the logic to the appropriate APEX component. The APEX environmen
 
 You can add business logic to Forms through the PL/SQL attached libraries, which you can usually call from form modules. When mapping to APEX, add this logic as an application-level process that can be called from any application's pages. Additionally, you may find a plug-in to install that achieves the purpose of your business logic and extends your application's functionality. Plug-ins are available on:
 
-- [apex.oracle.com](https://apex.oracle.com/en/solutions/apps/)
-- [apex.world](https://apex.world/ords/f?p=100:700)
+* [apex.oracle.com](https://apex.oracle.com/en/solutions/apps/)
+* [apex.world](https://apex.world/ords/f?p=100:700)
 
 Understanding how the mappings work on data blocks is also essential. In Forms, you can map data blocks into pages and page regions in APEX. There are different types of data blocks on Forms:
 
 1. **Single Record Blocks**:
-In Forms, you may use a single record block for data queries and modifying returned records. In APEX, you generally map Oracle Forms blocks that are insertable, updatable, and have a primary key to an interactive report with a form or an editable Interactive Grid. The edit link on the interactive report allows access to a specific record for updating or deleting, and the interactive report lets you query the entries. An editable interactive grid lets you change several rows simultaneously without navigating to another form page.
+    In Forms, you may use a single record block for data queries and modifying returned records. In APEX, you generally map Oracle Forms blocks that are insertable, updatable, and have a primary key to an interactive report with a form or an editable Interactive Grid. The edit link on the interactive report allows access to a specific record for updating or deleting, and the interactive report lets you query the entries. An editable interactive grid lets you change several rows simultaneously without navigating to another form page.
 
 2. **Tabular Forms**:
-Tabular Forms blocks in Forms map to an interactive grid in APEX, allowing you to edit each item later as needed (select list, text field, number field, etc.).
+    Tabular Forms blocks in Forms map to an interactive grid in APEX, allowing you to edit each item later as needed (select list, text field, number field, etc.).
 
 3. **Master Detail Blocks**:
-In Forms, master detail blocks highlight relationships between data blocks. In APEX, you can map this through the master detail region. The child region represents the "detail," and the parent region represents the "master," which can be a page region such as an interactive grid. Both regions connect through the foreign key relationship between the columns. You can define several child relationships deep and any number of child relationships wide.
+    In Forms, master detail blocks highlight relationships between data blocks. In APEX, you can map this through the master detail region. The child region represents the "detail," and the parent region represents the "master," which can be a page region such as an interactive grid. Both regions connect through the foreign key relationship between the columns. You can define several child relationships deep and any number of child relationships wide.
 
 4. **Non-Database Block**:
 Any block in Forms not associated with a database table or view is a non-database block. These blocks usually hold menus, lists, buttons, and other components. In APEX, we define these components based on their type. For example, the page designer defines buttons, while shared components define navigation menus.
@@ -47,7 +47,7 @@ Any block in Forms not associated with a database table or view is a non-databas
 
 To put the previous guidelines into perspective, let's see how we can analyze the business logic and components of one of our sample forms. For this example, we will use the customer's form.
 
-[Download the Sample Forms](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/sample_forms.zip)
+[Download the Sample Forms](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/sample_forms.zip)
 
 We start by reviewing the existing components in the form to analyze which can be migrated to APEX, which will be mapped to APEX components, and which will be removed or rewritten.
 
@@ -73,49 +73,49 @@ We start by reviewing the existing components in the form to analyze which can b
 
     To change this in **Oracle APEX**:
 
-    - Navigate to **App Builder** and select your application.
+    * Navigate to **App Builder** and select your application.
 
-    - Click **Shared Components**.
+    * Click **Shared Components**.
 
-    - Under **Other Components**, click **List of Values**.
+    * Under **Other Components**, click **List of Values**.
 
-    - Click the list of values and update the name and SQL Query.
+    * Click the list of values and update the name and SQL Query.
 
     *Note: Remember that you can define additional display columns for item types that support multiple display columns.*
 
-   ![LOVs SQL Query](images/sales-rep-lovs1.png " ")
+    ![LOVs SQL Query](images/sales-rep-lovs1.png " ")
 
 4. **Alerts**: We have two alerts in the customer's form. The first alert, **DELETE\_ALERT**, is automatically created when the form is created in APEX, and you can customize the displayed message:
 
     To customize the display message in Oracle APEX, follow the following steps:
 
-    - Navigate to **App Builder** and select your application.
+    * Navigate to **App Builder** and select your application.
 
-    - Click **Shared Components**.
+    * Click **Shared Components**.
 
-    - Under **Other Components**, click **Shortcuts**.
+    * Under **Other Components**, click **Shortcuts**.
 
-    - Click **Create**.
+    * Click **Create**.
 
-    - Create shortcut **From Scratch**.
+    * Create shortcut **From Scratch**.
 
-    - Click **Next**.
+    * Click **Next**.
 
-    - For Name, enter **DELETE\_ALERT**.
+    * For Name, enter **DELETE\_ALERT**.
 
-    - For Type, select **Text with JavaScript Escaped Single Quotes**.
+    * For Type, select **Text with JavaScript Escaped Single Quotes**.
 
-    - For a shortcut, enter the original message.
+    * For a shortcut, enter the original message.
 
-    - Click **Create**.
+    * Click **Create**.
 
     You have created the message and need to update the shortcut in the APEX Form.
 
-    - Go to the **Customers** form page.
+    * Go to the **Customers** form page.
 
-    - In the left pane, click the page name.
+    * In the left pane, click the page name.
 
-    - Navigate to property editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
+    * Navigate to property editor and update **Function and Global Variable Declaration** to var htmldb\_delete\_message='"DELETE\_ALERT"';
 
     The second, **CONFIRM\_REVERT**, is handled natively by APEX through the warn on unsaved changes property, which can warn users when navigating away from the page with unsaved changes.
 
@@ -131,5 +131,5 @@ This Lab provides a comprehensive approach to understanding and migrating Oracle
 
 ## Acknowledgements
 
-- **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
-- **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025
+* **Author** - Monica Godoy, Senior Principal Product Manager ; Ankita Beri, Product Manager; Paolo Paolucci, Data Development Specialist; Victor Mendo, Data Development Specialist
+* **Last Updated By/Date** - Ankita Beri, Product Manager, January 2025

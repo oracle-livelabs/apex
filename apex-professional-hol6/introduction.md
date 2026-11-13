@@ -10,25 +10,25 @@ In this workshop, you will manage and customize the Interactive report in the Sa
 
 In the previous workshop, you learned to add an Interactive Grid, Smart filters, and Content row to an application. You also learned to create application items and processes, create a variety of pages, and add an action.
 
-Estimated Time: 35 minutes
+Estimated Workshop Time: 35 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Customize your Interactive Report page in **Sample Reports** Application as a **Developer**.
+* Customize your Interactive Report page in **Sample Reports** Application as a **Developer**.
 
-- Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
+* Customize your Interactive Report page in **Sample Reports** Application as an **End user**.
 
 <!--### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
+- **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-OnlineShoppingApplication.sql)**
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-DemoProjects.sql)**
+- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-DemoProjects.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -40,8 +40,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](customizing-interactive-report_developer.md#acknowledgements).

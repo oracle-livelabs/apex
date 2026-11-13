@@ -10,15 +10,15 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-- Load ONNX Models.
-- Create a Vector Provider.
-- Generate Vector Embeddings.
-- Create Search Configuration based on Oracle Vector Search.
-- Create an Oracle Vector Search Page.
+* Load ONNX Models.
+* Create a Vector Provider.
+* Generate Vector Embeddings.
+* Create Search Configuration based on Oracle Vector Search.
+* Create an Oracle Vector Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab17.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
 
 ## Task 1: Load the ONNX Model
 
@@ -85,19 +85,19 @@ In this task, you will create a Vector Provider that will be used later to set u
 
 4. In the Vector Provider Configuration page, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Provider Type : **Database ONNX Model**
+        * Provider Type : **Database ONNX Model**
 
-        - Name: **DB ONNX Model**
+        * Name: **DB ONNX Model**
 
-        - Static ID: **db\_onnx\_model**
+        * Static ID: **db\_onnx\_model**
 
-    - Under Local Embedding:
+    * Under Local Embedding:
 
-        - For ONNX Model Owner: **Select your Parsing Schema**
+        * For ONNX Model Owner: **Select your Parsing Schema**
 
-        - ONNX Model Name: **DOC_MODEL**
+        * ONNX Model Name: **DOC_MODEL**
 
     Click **Create**.
 
@@ -117,11 +117,11 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
 
 2. Create a new column in the **OBS\_BOOKS** table to store description vector embeddings. Copy and paste the SQL code below, then click **Run**.
 
-     ```
+    ```
     <copy>
     ALTER TABLE OBS_BOOKS ADD DESCRIPTION_VECTOR VECTOR;
     </copy>
-     ```
+    ```
 
     !["Page Designer"](images/18-3-2-add-a-column.png "")
 
@@ -135,7 +135,7 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
         P_SERVICE_STATIC_ID => 'db_onnx_model'
     );
     </copy>
-     ```
+    ```
 
     !["Page Designer"](images/18-3-3-create-vector-embeddings.png "")
 
@@ -149,9 +149,9 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
 
 6. Enter/Select the following and click **Create Trigger**
 
-    - Table: **OBS_BOOKS**
+    * Table: **OBS_BOOKS**
 
-    - Firing Point: **Before**
+    * Firing Point: **Before**
 
     !["Page Designer"](images/18-3-6-click-create-trigger.png "")
 
@@ -173,7 +173,7 @@ In this task, you will enhance the **OBS\_BOOKS** table by adding a new column, 
     END;
     /
     </copy>
-     ```
+    ```
 
 8. Click **Save and Compile**
 
@@ -203,33 +203,33 @@ In this task, you will set up a Search Configuration based on Oracle Vector Sear
 
 5. In the Create Search Configuration Detail Wizard, enter the following and click **Next**.
 
-    - Name : **Online Bookstore Search - Vector**
+    * Name : **Online Bookstore Search - Vector**
 
-    - Search Type: **Oracle Vector Search**
+    * Search Type: **Oracle Vector Search**
 
     !["Page Designer"](images/18-4-5-prop.png "")
 
 6. In the Create Search Configuration **Source** Wizard, enter the following and click **Next**.
 
-    - Vector Provider : **DB ONNX Model**
+    * Vector Provider : **DB ONNX Model**
 
-    - Source Type: **Table**
+    * Source Type: **Table**
 
-    - Table/View Owner: **Select your Parsing Schema**
+    * Table/View Owner: **Select your Parsing Schema**
 
-    - Table/View Name: **OBS\_BOOKS**
+    * Table/View Name: **OBS\_BOOKS**
 
     !["Page Designer"](images/18-4-6-prop.png "")
 
 7. In the Create Search Configuration **Column Mapping** Wizard, enter the following and click **Create Search Configuration**.
 
-    - Primary Key Column: **BOOK_ID (Number)**
+    * Primary Key Column: **BOOK_ID (Number)**
 
-    - Vector Column: **DESCRIPTION_VECTOR (Vector)**
+    * Vector Column: **DESCRIPTION_VECTOR (Vector)**
 
-    - Title Column: **TITLE (Varchar2)**
+    * Title Column: **TITLE (Varchar2)**
 
-    - Description Column: **DESCRIPTION (Varchar2)**
+    * Description Column: **DESCRIPTION (Varchar2)**
 
     !["Page Designer"](images/18-4-7-search-config-prop.png "")
 
@@ -247,19 +247,19 @@ In this task, you'll create a Vector Search Page to enable advanced search funct
 
 3. Under Create Search Page wizard, enter the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **5**
+        * Page Number: **5**
 
-        - Name: **Books Vector Search**
+        * Name: **Books Vector Search**
 
-    - Search Configurations > Online Bookstore Search - Vector: **Toggle On**
+    * Search Configurations > Online Bookstore Search - Vector: **Toggle On**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Create Page**.
 
@@ -283,27 +283,27 @@ In this task, you'll create a Vector Search Page to enable advanced search funct
 
 8. Enter/select the following and click **Create List Entry**.
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **2**
+        * Sequence: **2**
 
-        - Image/Class: **fa-search-plus**
+        * Image/Class: **fa-search-plus**
 
-        - List Entry Label: **Advanced Search**
+        * List Entry Label: **Advanced Search**
 
-    - Under Target:
+    * Under Target:
 
-        - Page: **5**
+        * Page: **5**
 
-        - Clear Cache: **5**
+        * Clear Cache: **5**
 
     !["Page Designer"](images/18-5-8.1-prop.png "")
 
-     - Under Conditions:
+    * Under Conditions:
 
-        - Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
+        * Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
 
-        - Expression 1: **5**
+        * Expression 1: **5**
 
     !["Page Designer"](images/18-5-8.2-prop.png "")
 
@@ -321,5 +321,5 @@ In this lab, you loaded ONNX models into Oracle Database, created a Vector Provi
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

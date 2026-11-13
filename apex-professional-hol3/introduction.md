@@ -12,27 +12,27 @@ These labs emphasize the importance of building functional and secure applicatio
 
 In the preceding workshop, you gained knowledge on installing sample tables. You acquired skills in appending new columns to pre-existing tables, filling the new columns with data, and generating lookup tables. Additionally, you were assigned the task of crafting a package. Finally, you mastered creating database objects through Quick SQL, loading data with the Data Generator, and employing the Data Workshop page for data loading.
 
-Estimated Time: 25 minutes
+Estimated Workshop Time: 25 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Create database applications using existing tables and spreadsheets.
+* Create database applications using existing tables and spreadsheets.
 
-- Build dashboards, reports, and interactive pages to visualize and manage data.
+* Build dashboards, reports, and interactive pages to visualize and manage data.
 
-- Implement administration pages with secure access control for authorized users.
+* Implement administration pages with secure access control for authorized users.
 
-- Enable Progressive Web App (PWA) features for enhanced user experience.
+* Enable Progressive Web App (PWA) features for enhanced user experience.
 
-- Learn to restore applications using blueprints for easy customization and recovery.
+* Learn to restore applications using blueprints for easy customization and recovery.
 
-- Explore the structure and functionality of completed applications.
+* Explore the structure and functionality of completed applications.
 
 <!--### Downloads
 
-Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FUsingSQLWorkshop.sql)**.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the **[here](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FUsingSQLWorkshop.sql)**.
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -44,8 +44,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-creating-a-db-application.md#acknowledgements).

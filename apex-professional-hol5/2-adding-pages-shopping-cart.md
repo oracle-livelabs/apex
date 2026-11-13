@@ -1,5 +1,7 @@
 # Add Cards and Faceted search page to the Shopping Cart Application
 
+## Introduction
+
 In this lab, you'll extend the functionality of the Online Shopping Application by adding features to the shopping cart, product pages, and a faceted search page. Customers can review items in the cart, edit quantities, remove products, and proceed to checkout. You'll also create pages allowing users to view product details and customer reviews, enhancing the application's user experience.
 
 The tasks will guide you through the process of adding dynamic functionality to your application using Oracle APEX components such as Cards and Application Processes.
@@ -10,29 +12,29 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will:
 
-- Create application items and processes for managing the shopping cart.
+* Create application items and processes for managing the shopping cart.
 
-- Design Card regions to display product details and customer reviews.
+* Design Card regions to display product details and customer reviews.
 
-- Implement a faceted search page to list and filter products.
+* Implement a faceted search page to list and filter products.
 
-- Set up actions to edit cart items and handle checkout processes.
+* Set up actions to edit cart items and handle checkout processes.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FWorkingWithPagesAndRegions-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Create Application Items
 
@@ -56,11 +58,12 @@ In this task, you will create two application items that help display and update
 
 5. Create the following two items one after the other:
 
-    | Name                  | Scope       |
+    | Name | Scope |
     | --------------------- | ----------- |
-    | SHOPPING\_CART\_ICON  | Application |
+    | SHOPPING\_CART\_ICON | Application |
     | SHOPPING\_CART\_ITEMS | Application |
-    {: title="List of Application Items"}
+
+    *List of Application Items*
 
 6. Click **Create Application Item** and create the second item.
 
@@ -131,17 +134,17 @@ This task walks you through creating a blank page for the shopping cart, where u
 
 4. In the **Create Blank Page** wizard, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **17**
+        * Page Number: **17**
 
-        - For Name: **Shopping Cart**
+        * For Name: **Shopping Cart**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: Toggle **OFF**
+        * Use Breadcrumb: Toggle **OFF**
 
-        - Use Navigation: Toggle **OFF**
+        * Use Navigation: Toggle **OFF**
 
         Click **Create Page**.
 
@@ -157,13 +160,13 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Shopping Cart**
+    * Identification > Name: **Shopping Cart**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Enter the following SQL Query:
+        * SQL Query: Enter the following SQL Query:
 
         ```
         <copy>
@@ -195,17 +198,17 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
 3. Click **Attributes** and enter the following:
 
-    - Appearance > Layout: **Horizontal (Row)**
+    * Appearance > Layout: **Horizontal (Row)**
 
-    - Title > Column: **NAME**
+    * Title > Column: **NAME**
 
-    - Subtitle > Column: **BRAND**
+    * Subtitle > Column: **BRAND**
 
-    - Under Body:
+    * Under Body:
 
-        - Advanced Formatting: Toggle the button to **ON**
+        * Advanced Formatting: Toggle the button to **ON**
 
-        - HTML Expression: Enter the following:
+        * HTML Expression: Enter the following:
 
         ```
         <copy>
@@ -215,34 +218,34 @@ Here, you'll design a Cards region to display items in the shopping cart, includ
 
     ![Add a Cards Region](./images/change-attributes11.png " ")
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: Toggle the button to **ON**
+        * Advanced Formatting: Toggle the button to **ON**
 
-        - HTML Expression: Enter the following:
+        * HTML Expression: Enter the following:
 
-         ```
+        ```
         <copy>
         <b>Unit Price: &UNIT_PRICE. </b> <BR>
         <b>Subtotal: &SUBTOTAL. </b>
         </copy>
         ```
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **BLOB Column**
+        * Source: **BLOB Column**
 
-        - BLOB Column: **PRODUCT_IMAGE**
+        * BLOB Column: **PRODUCT_IMAGE**
 
     ![Add a Cards Region](./images/change-attributes12.png " ")
 
-    - Under Messages:
+    * Under Messages:
 
-        - When No Data Found: **Your shopping cart is empty!**
+        * When No Data Found: **Your shopping cart is empty!**
 
-        - No Data Found Icon: **fa-cart-empty**
+        * No Data Found Icon: **fa-cart-empty**
 
-    - Cards > Primary Key Column 1: **ITEM**
+    * Cards > Primary Key Column 1: **ITEM**
 
     ![Add a Cards Region](./images/change-attributes13.png " ")
 
@@ -262,25 +265,25 @@ In this task, you will add an "Edit" action button that allows users to edit the
 
 3. In the Property Editor, enter/select the following:
 
-    - Label: **Edit**
+    * Label: **Edit**
 
-    - Target: **No Link Defined**:
+    * Target: **No Link Defined**:
 
-        - Page: **18** *{Note: Page 18 will be created in the next Task}*
+        * Page: **18** *{Note: Page 18 will be created in the next Task}*
 
-        - Set items:
+        * Set items:
 
-            | Name             | Value        |
+            | Name | Value |
             | ---------------- | ------------ |
             | P18\_PRODUCT\_ID | &PRODUCT_ID. |
 
       Click **OK**.
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Display Type: **Text with Icon**
+        * Display Type: **Text with Icon**
 
-        - Icon: **fa-cart-edit**
+        * Icon: **fa-cart-edit**
 
     ![Add an Action](./images/create-action12.png " ")
 
@@ -302,11 +305,11 @@ You'll create a modal page that enables users to add products to the cart throug
 
 3. Enter/select the following:
 
-    - Page Number: **18**
+    * Page Number: **18**
 
-    - Name: **Add to Cart**
+    * Name: **Add to Cart**
 
-    - Page Mode: **Modal Dialog**
+    * Page Mode: **Modal Dialog**
 
     Click **Create Page**.
 
@@ -322,13 +325,13 @@ This task helps you create a Cards region that shows detailed product informatio
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Product**
+    * Identification > Name: **Product**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Enter the following SQL Code:
+        * SQL Query: Enter the following SQL Code:
 
     ```
     <copy>
@@ -366,11 +369,11 @@ This task helps you create a Cards region that shows detailed product informatio
     </copy>
     ```
 
-    - Page Items to Submit: **P18\_PRODUCT\_ID**
+    * Page Items to Submit: **P18\_PRODUCT\_ID**
 
-    - Under Appearance, click **Template Options**:
+    * Under Appearance, click **Template Options**:
 
-        - Style: **Style C**
+        * Style: **Style C**
 
         Click **OK**.
 
@@ -380,21 +383,21 @@ This task helps you create a Cards region that shows detailed product informatio
 
 3. Click **Attributes** and enter/select the following:
 
-    - Appearance > Layout: **Float**
+    * Appearance > Layout: **Float**
 
-    - Title > Column: **PRODUCT_NAME**
+    * Title > Column: **PRODUCT_NAME**
 
-    - Subtitle > Column: **BRAND**
+    * Subtitle > Column: **BRAND**
 
-    - Body > Column: **DESCRIPTION**
+    * Body > Column: **DESCRIPTION**
 
     ![Add Cards Region](./images/change-cards-attributes11.png " ")
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: Toggle the button to **ON**
+        * Advanced Formatting: Toggle the button to **ON**
 
-        - HTML Expression: Enter the following:
+        * HTML Expression: Enter the following:
 
         ```
         <copy>
@@ -402,21 +405,21 @@ This task helps you create a Cards region that shows detailed product informatio
         </copy>
         ```
 
-    - Under **Media** section:
+    * Under **Media** section:
 
-        - Source: **BLOB Column**
+        * Source: **BLOB Column**
 
-        - BLOB Column: **PRODUCT_IMAGE**
+        * BLOB Column: **PRODUCT_IMAGE**
 
-        - Position: **First**
+        * Position: **First**
 
-        - Appearance: **Square**
+        * Appearance: **Square**
 
-        - Sizing: **Fit**
+        * Sizing: **Fit**
 
     ![Add Cards Region](./images/change-cards-attributes12.png " ")
 
-    - Card > Primary Key Column 1: **PRODUCT_ID**
+    * Card > Primary Key Column 1: **PRODUCT_ID**
 
     ![Add Cards Region](./images/change-cards-attributes13.png " ")
 
@@ -430,13 +433,13 @@ You'll add another Cards region to display customer reviews for the selected pro
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Customer Reviews**
+    * Identification > Name: **Customer Reviews**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Enter the following SQL Code:
+        * SQL Query: Enter the following SQL Code:
 
         ```
         <copy>
@@ -454,32 +457,32 @@ You'll add another Cards region to display customer reviews for the selected pro
         </copy>
         ```
 
-        - Page Items to Submit: **P18\_PRODUCT\_ID**
+        * Page Items to Submit: **P18\_PRODUCT\_ID**
 
-    - Appearance > Template: **Standard**
+    * Appearance > Template: **Standard**
 
     ![Add Cards Region](./images/create-cards-region22.png " ")
 
 3. Click **Attributes** and enter the following:
 
-    - Appearance > Layout: **Horizontal (Row)**
+    * Appearance > Layout: **Horizontal (Row)**
 
-    - Under Title:
+    * Under Title:
 
-        - Advanced Formatting: Toggle the button to **ON**
+        * Advanced Formatting: Toggle the button to **ON**
 
-        - HTML Expression: Enter the following:
+        * HTML Expression: Enter the following:
 
         ```
         <copy>
         <b>Review:</b> &REVIEW. <br>
         <b>Rating:</b> &RATING.
         </copy>
-          ```
+        ```
 
     ![Add Cards Region](./images/create-cards-region23.png " ")
 
-    - Messages > When No Data Found: **There are no customer reviews yet.**
+    * Messages > When No Data Found: **There are no customer reviews yet.**
 
     ![Add Cards Region](./images/create-cards-region24.png " ")
 
@@ -499,15 +502,15 @@ The final task will guide you in creating a faceted search page that lists produ
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **19**
+        * Page Number: **19**
 
-        - Name: **Products**
+        * Name: **Products**
 
-    - Data Source > Table/View Name: **PRODUCTS**
+    * Data Source > Table/View Name: **PRODUCTS**
 
-    - Navigation > Use Breadcrumb: Toggle **OFF**
+    * Navigation > Use Breadcrumb: Toggle **OFF**
 
     Click **Next**.
 
@@ -521,11 +524,11 @@ The final task will guide you in creating a faceted search page that lists produ
 
 5. In the **Create Faceted Search** wizard, enter/select the following:
 
-     - Cards Layout: **Grid**
+    * Cards Layout: **Grid**
 
-     - Title Column: **PRODUCT_NAME(Varchar2)**
+    * Title Column: **PRODUCT_NAME(Varchar2)**
 
-     - Body Column : **- Select Column -** (to unselect the default column chosen)
+    * Body Column : **- Select Column -** (to unselect the default column chosen)
 
      Click **Create Page**.
 
@@ -545,5 +548,5 @@ In the next workshop, you learn how to customize an Interactive Report as a deve
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

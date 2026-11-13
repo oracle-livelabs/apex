@@ -8,29 +8,29 @@ Oracle APEX is a feature of Oracle Database, including the Autonomous Data Wareh
 
 In the last hands-on lab, you learned how to add page buttons and items to a page.
 
-Estimated Time: 15 minutes
+Estimated Workshop Time: 15 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Create validations to ensure required fields are filled.
+* Create validations to ensure required fields are filled.
 
-- Implement processes to create orders and manage the shopping cart.
+* Implement processes to create orders and manage the shopping cart.
 
-- Add branching logic to transition between pages efficiently.
+* Add branching logic to transition between pages efficiently.
 
-- Clear the shopping cart and proceed to checkout seamlessly.
+* Clear the shopping cart and proceed to checkout seamlessly.
 
 <!--### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-SampleReporting.sql)**
+- **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-SampleReporting.sql)**
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-OnlineShoppingApplication.sql)**
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-DemoProjects.sql)**
+- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingApplicationPageControls-DemoProjects.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -42,8 +42,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-creating-shopping-cart.md#acknowledgements).

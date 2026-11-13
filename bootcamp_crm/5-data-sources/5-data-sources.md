@@ -12,19 +12,19 @@ Estimated Time: 15 minutes
 
 ### Objectives
 
-- Create a REST Data Source using Oracle REST Data Services (ORDS).
+* Create a REST Data Source using Oracle REST Data Services (ORDS).
 
-- Enable synchronization between a REST Data Source and a local table.
+* Enable synchronization between a REST Data Source and a local table.
 
-- Configure scheduled synchronization.
+* Configure scheduled synchronization.
 
-- Use a REST Data Source as the source of a report region.
+* Use a REST Data Source as the source of a report region.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%202.sql)** to download the completed application till Lab 4. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
+**[SQL script: labfiles/Build-Enterprise-AI-Apps-Faster-Part 2.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%202.sql)** to download the completed application till Lab 4. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
 ## Task 1: Create REST Data Sources
 
@@ -48,11 +48,11 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
 5. On Create REST Data Source dialog, enter/select the following:
 
-    - REST Data Source Type : **Oracle REST Data Services**
+    * REST Data Source Type : **Oracle REST Data Services**
 
-    - Name: **Leads API**
+    * Name: **Leads API**
 
-    - URL Endpoint:  https://oracleapex.com/ords/t_crm/crm_leads/
+    * URL Endpoint:  <https://oracleapex.com/ords/t_crm/crm_leads/>
 
     Click **Next**.
 
@@ -76,9 +76,9 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
 10. Under Details, enter/select the following:
 
-    - Synchronize to: **Existing Table**
+    * Synchronize to: **Existing Table**
 
-    - Table Name: **CRM_LEADS**
+    * Table Name: **CRM_LEADS**
 
     Click **Save**.
 
@@ -86,17 +86,17 @@ In this task, you will create a REST Data Source using an Oracle REST Data Servi
 
 11. Under Details, enter/select the following:
 
-    - Synchronization Type: **Merge**
+    * Synchronization Type: **Merge**
 
-    - Synchronization Schedule: Click on Settings button
+    * Synchronization Schedule: Click on Settings button
 
     ![display project dashboard page](images/merge.png " ")
 
 12. In the Interval Builder dialog, enter/select the following:
 
-    - Frequency: **Minutely**
+    * Frequency: **Minutely**
 
-    - Interval: **15**
+    * Interval: **15**
 
     Click **Set Execution Interval**.
 
@@ -118,13 +118,13 @@ You will also prepare the local table for synchronization tracking.
 
 2. In the right pane, enter/select the following:
 
-    - Under Source:
+    * Under Source:
 
-        - Location: **REST Source**
+        * Location: **REST Source**
 
-        - Rest Source: **Leads API** (created in Task 1)
+        * Rest Source: **Leads API** (created in Task 1)
 
-        - REST Synchronization > Use Local table: Toggle **On**
+        * REST Synchronization > Use Local table: Toggle **On**
 
     ![display project dashboard page](images/rest-source.png " ")
 
@@ -156,17 +156,17 @@ You will also prepare the local table for synchronization tracking.
 
 In this lab, you:
 
-- Created a REST Data Source using Oracle REST Data Services
+* Created a REST Data Source using Oracle REST Data Services
 
-- Enabled synchronization with an existing database table
+* Enabled synchronization with an existing database table
 
-- Scheduled automated merge operations
+* Scheduled automated merge operations
 
-- Updated a report region to consume data from a REST source
+* Updated a report region to consume data from a REST source
 
 You now understand how Oracle APEX enables seamless integration with external APIs while maintaining local performance and scheduled data synchronization.
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
+* **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

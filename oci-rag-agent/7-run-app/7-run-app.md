@@ -13,15 +13,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Upload a document to OCI Object Storage.
+* Upload a document to OCI Object Storage.
 
-- Chat with Generative AI Agent.
+* Chat with Generative AI Agent.
 
-- View Citations for the Response.
+* View Citations for the Response.
 
-- Establish New Session.
+* Establish New Session.
 
-- Download/delete the file from Object Storage.
+* Download/delete the file from Object Storage.
 
 ## Task 1: Upload a document to OCI Object Storage
 
@@ -31,7 +31,7 @@ In this task, you will upload document to OCI Object storage.
 
     ![UI UploadDoc](./images/ui-uploaddoc.png " ")
 
-2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Foracle-apex-app-builder-users-guide.pdf?download=1) document onto the dialog window.
+2. Click  **Choose File** option or drag and drop the [App Builder User's Guide.pdf](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Foracle-apex-app-builder-users-guide.pdf?download=1) document onto the dialog window.
 
     >* Note: This document **App Builder User's Guide** is available at [Oracle APEX Documentation](https://apex.oracle.com/en/learn/documentation/) page under Oracle APEX Release 24.2.
 
@@ -87,5 +87,5 @@ In this lab, you have learned how to work with static components, create computa
 
 ## Acknowledgements
 
-- **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
-- **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025
+* **Author(s)**: Roopesh Thokala, Senior Product Manager; Shailu Srivastava, Product Manager
+* **Last Updated By/Date**: Shailu Srivastava, Product Manager, June 2025

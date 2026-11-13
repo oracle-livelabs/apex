@@ -13,19 +13,19 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Implement an Add button that inserts a movie into the watchlist table.
+* Implement an Add button that inserts a movie into the watchlist table.
 
-- Implement a Remove button that deletes a movie from the watchlist table.
+* Implement a Remove button that deletes a movie from the watchlist table.
 
-- Implement a Watched button that marks a movie as watched in your watchlist table.
+* Implement a Watched button that marks a movie as watched in your watchlist table.
 
-- Implement a Back button that takes you back to the Movie Search page.
+* Implement a Back button that takes you back to the Movie Search page.
 
-- Use badges on the Movie Search page to display what movies have been marked as added or watched.
+* Use badges on the Movie Search page to display what movies have been marked as added or watched.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 5
+* Completion of workshop through Lab 5
 
 ## Task 1: Create the Movie Details Buttons
 
@@ -39,11 +39,11 @@ In this lab, you will:
 
 4. In the **Rendering** tab, navigate to **Buttons** region and enter/select following properties:
 
-    - Layout > Slot: **Dialog Header**.
+    * Layout > Slot: **Dialog Header**.
 
-    - Appearance > Template Options > Click **Use Template Defaults**
+    * Appearance > Template Options > Click **Use Template Defaults**
 
-        - Style: **Remove UI Decoration**
+        * Style: **Remove UI Decoration**
 
         Click **Ok**.
 
@@ -51,21 +51,21 @@ In this lab, you will:
 
 5. Now, navigate to **CANCEL** button under the **Buttons** region. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Button Name: **BACK**
+    * Identification > Button Name: **BACK**
 
-    - Layout > Slot: **Previous**
+    * Layout > Slot: **Previous**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Appearance > Template Options: Open **Use Template Defaults**
+        * Appearance > Template Options: Open **Use Template Defaults**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
             Click **OK** to close the dialog.
 
-        - Icon: **fa-chevron-left**
+        * Icon: **fa-chevron-left**
 
     ![Page 3 open in Page Designer with the BACK button properties open in the Property Editor](images/back-properties.png " ")
 
@@ -81,11 +81,11 @@ In this lab, you will:
 
 9. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Button Name: **ADD\_TO\_WATCHLIST**
+    * Identification > Button Name: **ADD\_TO\_WATCHLIST**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Appearance > Hot: Toggle **On**
+    * Appearance > Hot: Toggle **On**
 
     ![Page 3 open in Page Designer with the ADD_TO_WATCHLIST button properties open in the Property Editor](images/add-button.png " ")
 
@@ -93,9 +93,9 @@ In this lab, you will:
 
 11. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Button Name: **REMOVE\_FROM\_WATCHLIST**
+    * Identification > Button Name: **REMOVE\_FROM\_WATCHLIST**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
     ![Page 3 open in Page Designer with the REMOVE_FROM_WATCHLIST button properties open in the Property Editor](images/remove-button.png " ")
 
@@ -105,15 +105,15 @@ In this lab, you will:
 
 13. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **MARK\_WATCHED**
+        * Button Name: **MARK\_WATCHED**
 
-        - Label: **I've Watched This**
+        * Label: **I've Watched This**
 
-    - Layout > Position: **Next**
+    * Layout > Position: **Next**
 
-    - Appearance > Hot: Toggle **On**
+    * Appearance > Hot: Toggle **On**
 
     ![Page 3 open in Page Designer with the MARK_WATCHED button properties open in the Property Editor](images/watched-button.png " ")
 
@@ -125,13 +125,13 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 1. In the **Rendering** tab, navigate to **BACK** button. In the Property editor, enter/select the following page attributes:
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Page: **2**
+            * Page: **2**
 
             Click **OK**.
 
@@ -139,17 +139,17 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 2. Navigate to **ADD\_TO\_WATCHLIST** button. In the Property editor, select the following page attribute:
 
-    - Behavior > Database Action: **SQL INSERT action**.
+    * Behavior > Database Action: **SQL INSERT action**.
 
     ![Page 3 open in Page Designer with the ADD_TO_WATCHLIST button Behavior properties open in the Property Editor](images/add-behavior.png " ")
 
 3. Navigate to **REMOVE\_FROM\_WATCHLIST** button. In the Property editor, select the following page attribute:
 
-    - Behavior > Database Action: **SQL DELETE action**.
+    * Behavior > Database Action: **SQL DELETE action**.
 
 4. Navigate to **MARK\_WATCHED** button. In the Property editor, select the following page attribute:
 
-    - Behavior > Database Action: **SQL UPDATE action**.
+    * Behavior > Database Action: **SQL UPDATE action**.
 
 5. At the top of the rendering pane, click the **Processing** tab (the two looping arrows).
 
@@ -157,45 +157,46 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 6. Under **Processing** tab, click on the existing **Close Dialog** process and make the following changes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Add movie**
+        * Name: **Add movie**
 
-        - Type: **Execute Code**
+        * Type: **Execute Code**
 
-    - Source > PL/SQL Code: Copy the following code and paste it into the code editor:
+    * Source > PL/SQL Code: Copy the following code and paste it into the code editor:
 
-		```
-	    <copy>
-	    insert into watchlist
-			(
-				movie_id,
-				user_id,
-				watched_yn,
-				title,
-				poster_url,
-				release_date,
-				runtime,
-				vote_average
-			)
-		values
-			(
-				:P3_ID,
-				:USER_ID,
-				'N',
-				:P3_TITLE,
-				'https://image.tmdb.org/t/p/w500'||:P3_POSTER_PATH,
-				:P3_RELEASE_DATE,
-				:P3_RUNTIME,
-				:P3_VOTE_AVERAGE
-			);
-	    ```
+        ```
+        <copy>
+        insert into watchlist
+            (
+                movie_id,
+                user_id,
+                watched_yn,
+                title,
+                poster_url,
+                release_date,
+                runtime,
+                vote_average
+            )
+        values
+            (
+                :P3_ID,
+                :USER_ID,
+                'N',
+                :P3_TITLE,
+                'https://image.tmdb.org/t/p/w500'||:P3_POSTER_PATH,
+                :P3_RELEASE_DATE,
+                :P3_RUNTIME,
+                :P3_VOTE_AVERAGE
+            );
+        </copy>
+        ```
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - When Button Pressed: **ADD\_TO\_WATCHLIST**
+        * When Button Pressed: **ADD\_TO\_WATCHLIST**
 
-        - Type: **- Select -**
+        * Type: **- Select -**
 
     ![Close-up of the Add movie process properties set in step 6](images/add-process.png " ")
 
@@ -205,18 +206,19 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 8. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Name: **Remove movie**
+    * Identification > Name: **Remove movie**
 
-    - Source > PL/SQL Code: Copy the following code and paste it into the code editor:
+    * Source > PL/SQL Code: Copy the following code and paste it into the code editor:
 
-		```
-	    <copy>
-	    delete from watchlist
-		 where movie_id = :P3_ID
-		   and user_id = :USER_ID;
-	    ```
+        ```
+        <copy>
+        delete from watchlist
+         where movie_id = :P3_ID
+           and user_id = :USER_ID;
+        </copy>
+        ```
 
-    - Server-side Condition > When Button Pressed: **REMOVE\_FROM\_WATCHLIST**
+    * Server-side Condition > When Button Pressed: **REMOVE\_FROM\_WATCHLIST**
 
     ![Close-up of the Add movie process properties set in step 6](images/remove-movie.png " ")
 
@@ -224,20 +226,21 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 10. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Name: **Update movie**
+    * Identification > Name: **Update movie**
 
-    - Source > PL/SQL Code: Copy the following code and paste it into the code editor:
+    * Source > PL/SQL Code: Copy the following code and paste it into the code editor:
 
-		```
-	    <copy>
-	    update watchlist
-		   set watched_yn = 'Y',
-			   watched = SYSDATE
-		 where movie_id = :P3_ID
-		   and user_id = :USER_ID;
-	    ```
+        ```
+        <copy>
+        update watchlist
+           set watched_yn = 'Y',
+               watched = SYSDATE
+         where movie_id = :P3_ID
+           and user_id = :USER_ID;
+        </copy>
+        ```
 
-    - Server-side Condition > When Button Pressed: **MARK\_WATCHED**
+    * Server-side Condition > When Button Pressed: **MARK\_WATCHED**
 
     ![Close-up of the Add movie process properties set in step 6](images/update-movie.png " ")
 
@@ -249,11 +252,11 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 13. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Name: **Redirect to previous page**
+    * Identification > Name: **Redirect to previous page**
 
-    - Behavior > Target: Click **No Link Defined**
+    * Behavior > Target: Click **No Link Defined**
 
-        - Page: **&P3\_PREVIOUS\_PAGE\_ID.**
+        * Page: **&P3\_PREVIOUS\_PAGE\_ID.**
 
         > *Note: The item P3\_PREVIOUS\_PAGE\_ID contains the page number of the page you were on before the Movie Details page. This is to return to whichever page the user was previously on when any of the buttons on the Details page get clicked. However, you still need to set up the Previous Page ID item, so you will do that now.*
 
@@ -269,11 +272,11 @@ Now that you have the four buttons, it's time to connect actions to them. You fi
 
 16. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P3\_PREVIOUS\_PAGE\_ID**
+        * Name: **P3\_PREVIOUS\_PAGE\_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
      ![Close-up of the Add movie process properties set in step 6](images/previous-page-item1.png " ")
 
@@ -289,19 +292,20 @@ To accomplish this, you are going to use Server-Side Conditions, like you did fo
 
 2. In the Property editor, enter/select the following page attributes:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **No Rows returned**
+        * Type: **No Rows returned**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
 
-	    ```
-	    <copy>
-	    select null
-	      from watchlist
-	     where movie_id = :P3_ID
-	       and user_id = :USER_ID
-	    ```
+            ```
+            <copy>
+            select null
+              from watchlist
+             where movie_id = :P3_ID
+               and user_id = :USER_ID
+            </copy>
+            ```
 
         ![Close-up of the ADD_TO_WATCHLIST button Server-side condition properties](images/add-ssc.png " ")
 
@@ -309,19 +313,20 @@ To accomplish this, you are going to use Server-Side Conditions, like you did fo
 
 4. In the Property editor, enter/select the following page attributes:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
 
-	    ```
-	    <copy>
-	    select null
-	      from watchlist
-	     where movie_id = :P3_ID
-	       and user_id = :USER_ID
-	    ```
+            ```
+            <copy>
+            select null
+              from watchlist
+             where movie_id = :P3_ID
+               and user_id = :USER_ID
+            </copy>
+            ```
 
         ![Close-up of the REMOVE_FROM_WATCHLIST button Server-side condition properties](images/remove-ssc.png " ")
 
@@ -329,20 +334,21 @@ To accomplish this, you are going to use Server-Side Conditions, like you did fo
 
 6. In the Property editor, enter/select the following page attributes:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
 
-	    ```
-	    <copy>
-	    select null
-	      from watchlist
-	     where movie_id =:P3_ID
-	       and user_id = :USER_ID
-	       and watched_yn = 'N'
-	    ```
+            ```
+            <copy>
+            select null
+              from watchlist
+             where movie_id =:P3_ID
+               and user_id = :USER_ID
+               and watched_yn = 'N'
+            </copy>
+            ```
 
         ![Close-up of the MARK_WATCHED button Server-side condition properties](images/watched-ssc.png " ")
 
@@ -350,13 +356,13 @@ To accomplish this, you are going to use Server-Side Conditions, like you did fo
 
 8. In the Property editor, enter/select the following page attributes:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Item = Value**
+        * Type: **Item = Value**
 
-        - Item: **P3\_PREVIOUS\_PAGE\_ID**
+        * Item: **P3\_PREVIOUS\_PAGE\_ID**
 
-        - Value: **2**
+        * Value: **2**
 
     ![Close-up of the BACK button Server-side condition properties](images/back-ssc.png " ")
 
@@ -374,11 +380,11 @@ Before you test the buttons you just implemented, you will add badges to the Mov
 
 2. Navigate to the **Popular Movies** region. In the Property editor, enter/select the following page attributes:
 
-    - Under Local Post Processing:
+    * Under Local Post Processing:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Replace the existing SQL Query with the query below:
+        * SQL Query: Replace the existing SQL Query with the query below:
 
         ```
         <copy>
@@ -405,6 +411,7 @@ Before you test the buttons you just implemented, you will add badges to the Mov
             -- doing inline select to limit rows to current user
             (select * from watchlist where user_id = :USER_ID) w
             ON w.movie_id = ads.ID
+        </copy>
         ```
 
         > *Note: The above code extends the Popular Movies data that gets returned from the REST data source by joining the REST data source with the watchlist table to add two columns: BADGE\_LABEL and BADGE\_COLOR. For the BADGE\_LABEL column, each movie in the Popular Movies list has the value 'Watched' (movies in the WATCHLIST table that are marked as Watched), 'Added' (movies in the WATCHLIST table that are not marked as Watched), or NULL (movies that are not in the WATCHLIST table). Similarly, the BADGE\_COLOR list contains values 'u-success' or NULL, based on whether or not a movie is in the WATCHLIST table and not marked as Watched.*
@@ -413,11 +420,11 @@ Before you test the buttons you just implemented, you will add badges to the Mov
 
 3. Navigate to **Attributes** tab. In the Property editor, enter/select the following page attributes:
 
-    - Under Icon and Badge:
+    * Under Icon and Badge:
 
-        - Badge Column: **BADGE\_LABEL**
+        * Badge Column: **BADGE\_LABEL**
 
-        - Badge CSS Classes: **&BADGE\_COLOR.**
+        * Badge CSS Classes: **&BADGE\_COLOR.**
 
     ![Page 2 open in Page Designer with the Icon and Badge attributes open in Property Editor](images/popular-badge.png " ")
 
@@ -425,11 +432,11 @@ Before you test the buttons you just implemented, you will add badges to the Mov
 
 5. In the Property editor, enter/select the following page attributes:
 
-    - Under Link:
+    * Under Link:
 
-    - Target: Click **Page 3**
+    * Target: Click **Page 3**
 
-        - Under Set Items, add an item:
+        * Under Set Items, add an item:
 
             | Name | Value |
             | ---- | ----- |
@@ -443,19 +450,19 @@ Before you test the buttons you just implemented, you will add badges to the Mov
 
 7. Save your changes and refresh the tab where your app is running. Now you can play around with the Movie Search and Movie Details page and test out adding, removing, and marking items as watched.
 
-    - From the Movie Search page, select a movie and you will see the Back and Add to Watchlist buttons.
+    * From the Movie Search page, select a movie and you will see the Back and Add to Watchlist buttons.
 
     ![Movie Details page with the Back and Add to Watchlist buttons at the top](images/add-runtime.png " ")
 
-    - Click the Add to Watchlist button and you will be redirected back to the Movie Search page where you will see the Added label on the movie you added.
+    * Click the Add to Watchlist button and you will be redirected back to the Movie Search page where you will see the Added label on the movie you added.
 
     ![Movie Search page in the runtime application with the Added label on the second popular movie Card](images/added.png " ")
 
-    - Click on the movie you just added to your watchlist, and you will see the Back, Remove From Watchlist, and I've Watched This buttons.
+    * Click on the movie you just added to your watchlist, and you will see the Back, Remove From Watchlist, and I've Watched This buttons.
 
     ![Movie Details page with the Back, Remove from Watchlist, and I've Watched This buttons at the top](images/remove-watched-runtime.png " ")
 
-    - Click the I've Watched This button and you will be redirected back to the Movie Search page where you will see the Watched label on the movie you just marked as watched.
+    * Click the I've Watched This button and you will be redirected back to the Movie Search page where you will see the Watched label on the movie you just marked as watched.
 
     ![Movie Search page in the runtime application with the Watched label on the second popular movie Card](images/watched.png " ")
 
@@ -465,43 +472,43 @@ You now know how to use SQL commands in Page Designer regions and processes to g
 
 ## Learn More
 
-- [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-buttons.html)
+* [Buttons Documentation](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-buttons.html)
 
-- [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/understanding-page-processes.html)
+* [Understanding Page Processes](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/understanding-page-processes.html)
 
-- [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/controlling-navigation-using-branches.html)
+* [Controlling Navigation Using Branches](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/controlling-navigation-using-branches.html)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 6 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-6.sql) to download a copy of the app at the end of Lab 6.
+* [SQL script: apex/lab-6.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-6.sql) to download a copy of the app at the end of Lab 6.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     > *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
         ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

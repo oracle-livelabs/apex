@@ -14,12 +14,12 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Load Data using Data Workshop.
-- Create a Faceted Search Page.
+* Load Data using Data Workshop.
+* Create a Faceted Search Page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab1.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab1.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Load Data using Data Workshop
 
@@ -41,9 +41,9 @@ In this task, you will load data into an existing table using Data Workshop. You
 
 4. Under **Where do you want to load this data?**, enter/select the following:
 
-    - Load To: **Existing Table**
+    * Load To: **Existing Table**
 
-    - Table: **OBS\_BOOKS**
+    * Table: **OBS\_BOOKS**
 
     ![App builder home page](images/2-1-4-select-table.png " ")
 
@@ -75,27 +75,27 @@ In this task, you will create a Faceted Search page that displays a list of book
 
 1. Go to **Online Bookstore** application. Click **Create Page**.
 
-   ![App builder home page](images/fs-create.png " ")
+    ![App builder home page](images/fs-create.png " ")
 
 2. Select **Faceted Search**.
 
-   ![App builder home page](images/fs.png " ")
+    ![App builder home page](images/fs.png " ")
 
 3. In the Create Faceted Search Page dialog, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **10**
+        * Page Number: **10**
 
-        - Name: **Search Books**
+        * Name: **Search Books**
 
-    - Data Source > Table/View Name: **OBS_BOOKS**
+    * Data Source > Table/View Name: **OBS_BOOKS**
 
-    - Navigation > Use Breadcrumb: Toggle **Off**
+    * Navigation > Use Breadcrumb: Toggle **Off**
 
     Click **Next**.
 
-   ![App builder home page](images/fs-next.png " ")
+    ![App builder home page](images/fs-next.png " ")
 
 4. For Display as, select **Cards** and click **Refresh** to refresh the column statistics to provide better recommendations.
 
@@ -135,5 +135,5 @@ You now know how to Load data using Data Workshop. Also, you know how to Create 
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

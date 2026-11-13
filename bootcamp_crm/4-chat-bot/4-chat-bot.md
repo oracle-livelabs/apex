@@ -14,23 +14,23 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will be able to:
 
-- Implement email validation to enforce proper data entry in the Leads form.
+* Implement email validation to enforce proper data entry in the Leads form.
 
-- Create dynamic actions to automatically refresh regions and improve user experience.
+* Create dynamic actions to automatically refresh regions and improve user experience.
 
-- Create an CRM AI Assistant button in your APEX application.
+* Create an CRM AI Assistant button in your APEX application.
 
-- Configure a Show AI Assistant dynamic action without using a RAG source.
+* Configure a Show AI Assistant dynamic action without using a RAG source.
 
-- Create an AI Configuration and define a RAG Source to query CRM data.
+* Create an AI Configuration and define a RAG Source to query CRM data.
 
-- Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your CRM data source.
+* Connect the AI Configuration to the Show AI Assistant dynamic action so the chatbot fetches results exclusively from your CRM data source.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%201.sql)** to download the completed application till Lab 3. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
+**[SQL script: labfiles/Build-Enterprise-AI-Apps-Faster-Part 1.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FBuild-Enterprise-AI-Apps-Faster-Part%201.sql)** to download the completed application till Lab 3. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
 
 ## Task 1: Add Email Validation in the Leads Form Page
@@ -47,17 +47,17 @@ Data validation is essential to ensure high-quality CRM records. In this task, y
 
 3. In the right pane, enter/select the following:
 
-    - Identification > Name: **Validate Email Format**
+    * Identification > Name: **Validate Email Format**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Item matched Regular Expression**
+        * Type: **Item matched Regular Expression**
 
-        - Item: **P6_EMAIL**
+        * Item: **P6_EMAIL**
 
-        - Regular Expression: **^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$**
+        * Regular Expression: **^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$**
 
-    - Error > Error Message : **Please enter a valid Email Address**
+    * Error > Error Message : **Please enter a valid Email Address**
 
     ![display project dashboard page](images/validate-email.png " ")
 
@@ -83,25 +83,25 @@ When a Lead record is edited in a dialog, the Leads Content Row region should au
 
 3. In the right pane, update Identification > Name to **Refesh Content Row** and check the defaults:
 
-    - Under When:
+    * Under When:
 
-        - Event: **Dialog Closed**
+        * Event: **Dialog Closed**
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Leads**
+        * Region: **Leads**
 
     ![display project dashboard page](images/refresh-row.png " ")
 
 4. Navigate to True Action and in the right pane, check the defaults:
 
-    - Identification > Action: **Refresh**
+    * Identification > Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Leads**
+        * Region: **Leads**
 
     ![display project dashboard page](images/true-action.png " ")
 
@@ -123,21 +123,21 @@ In this task, you will create a CRM AI Assistant button on the Dashboard page an
 
 3. In the right pane, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **CRM\_AI\_ASSISTANT**
+        * Button Name: **CRM\_AI\_ASSISTANT**
 
-        - Label: **CRM AI Assistant**
+        * Label: **CRM AI Assistant**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Hot: Toggle **On**
+        * Hot: Toggle **On**
 
-        - Icon: **fa-chatbot**
+        * Icon: **fa-chatbot**
 
     !["Click App Builder"](images/button-details.png "")
 
@@ -147,15 +147,15 @@ In this task, you will create a CRM AI Assistant button on the Dashboard page an
 
 5. In the right pane, enter the following:
 
-    - Identification > Name : **Open AI Chatbot**
+    * Identification > Name : **Open AI Chatbot**
 
     !["Click App Builder"](images/open-ai-chatbot.png "")
 
 6. Under **True** Action, click **Show**. In the right pane, enter/select the following:
 
-    - Identification > Action: **Show AI Assistant**
+    * Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Service: Select **Open AI** (Created in Lab 1)
+    * Generative AI > Service: Select **Open AI** (Created in Lab 1)
 
     !["Click App Builder"](images/show-ai.png "")
 
@@ -187,13 +187,13 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 4. In the Generative AI Configuration page, enter the following:
 
-    - Identification > Name : **CRM AI Configuration**
+    * Identification > Name : **CRM AI Configuration**
 
-    - Under Generative AI:
+    * Under Generative AI:
 
-        - Service: **Open AI** (Select the AI service which you have configured in Lab 1.)
+        * Service: **Open AI** (Select the AI service which you have configured in Lab 1.)
 
-        - System Prompt:
+        * System Prompt:
 
             ```
             <copy>
@@ -207,9 +207,10 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
             Do not guess, assume, or generalize. Keep answers precise, factual, and based strictly on the input.
 
             ```
+
             </copy>
 
-        - Welcome Message: **Hi, How may I help you?**
+        * Welcome Message: **Hi, How may I help you?**
 
 5. From right-hand side task list, enable **Return To Page**.
 
@@ -225,9 +226,9 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 8. In the RAG Source page, enter/select the following:
 
-    - Identification > Name: **Leads Details**
+    * Identification > Name: **Leads Details**
 
-    - Description: **Provides details about leads**
+    * Description: **Provides details about leads**
 
     !["Click App Builder"](images/lead-details.png "")
 
@@ -237,6 +238,7 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 10. In the APEX Assistant box, enter the following prompt and press enter:
 
     **Prompt 1:**
+
     ```
     <copy>
     Get all details about leads like account name, Channel, status etc
@@ -251,9 +253,9 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 12. Under Server-Side condition, enter/select the following:
 
-    - Type: **Last User Prompt contains**
+    * Type: **Last User Prompt contains**
 
-    - Expression 1: **Leads**
+    * Expression 1: **Leads**
 
 13. Click **Create**.
 
@@ -265,9 +267,9 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 15. In the RAG Source page, enter/select the following:
 
-    - Identification > Name: **Opportunity Details**
+    * Identification > Name: **Opportunity Details**
 
-    - Description: **Provides details about leads**
+    * Description: **Provides details about leads**
 
     !["Click App Builder"](images/opportunity-details.png "")
 
@@ -276,6 +278,7 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 17. In the APEX Assistant box, enter the following prompt and press enter:
 
     Prompt 1:
+
     ```
     <copy>
     Get all details about opportunities like Account Name, Opportunity Name, Description, Amount, Stage, Close Date.
@@ -290,9 +293,9 @@ In this task, you will create an AI Configuration and define RAG Sources. This e
 
 19. Under Server-Side condition, enter/select the following:
 
-    - Type: **Last User Prompt contains**
+    * Type: **Last User Prompt contains**
 
-    - Expression 1: **Opportunities**
+    * Expression 1: **Opportunities**
 
 20. Click **Create**.
 
@@ -310,7 +313,7 @@ In this final task, you will connect the CRM AI Configuration (with RAG sources)
 
 2. Under **CRM\_AI\_ASSISTANT** button, select True Action **Show AI Assistant** and update the following:
 
-    - Generative AI > Configuration: **CRM AI Configuration**
+    * Generative AI > Configuration: **CRM AI Configuration**
 
     !["Click App Builder"](images/conf-rag.png "")
 
@@ -321,6 +324,7 @@ In this final task, you will connect the CRM AI Configuration (with RAG sources)
 4. In the app, click the **CRM AI Assistant** button and enter the following prompts:
 
     **Prompt 1:**
+
     ```
     <copy>
     Show me all new leads
@@ -330,6 +334,7 @@ In this final task, you will connect the CRM AI Configuration (with RAG sources)
     !["Click App Builder"](images/ques1.png "")
 
     **Prompt 2:**
+
     ```
     <copy>
     Which opportunities are worth more than $500,000?
@@ -339,6 +344,7 @@ In this final task, you will connect the CRM AI Configuration (with RAG sources)
     !["Click App Builder"](images/ques2.png "")
 
     **Prompt 3:**
+
     ```
     <copy>
     Show me all opportunities with close dates in the past that aren't closed.
@@ -353,21 +359,21 @@ In this final task, you will connect the CRM AI Configuration (with RAG sources)
 
 In this lab, you:
 
-- Added validation to improve CRM data quality.
+* Added validation to improve CRM data quality.
 
-- Created dynamic actions to enhance UI responsiveness.
+* Created dynamic actions to enhance UI responsiveness.
 
-- Built a CRM AI Assistant using Show AI Assistant.
+* Built a CRM AI Assistant using Show AI Assistant.
 
-- Created an AI Configuration with a structured system prompt.
+* Created an AI Configuration with a structured system prompt.
 
-- Defined RAG sources using APEX Assistant.
+* Defined RAG sources using APEX Assistant.
 
-- Enabled secure, data-driven conversational responses.
+* Enabled secure, data-driven conversational responses.
 
 You have now successfully implemented a RAG-powered CRM Chat Assistant inside Oracle APEX, demonstrating how Generative AI can be securely integrated with enterprise data using low-code development.
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
+* **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

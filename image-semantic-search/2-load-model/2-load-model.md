@@ -15,15 +15,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Grant the privilege required to create ONNX model objects.
-- Confirm that the direct cloud-loading procedure is available.
-- Load the CLIP text and image models from Object Storage.
-- Verify model metadata and attributes.
+* Grant the privilege required to create ONNX model objects.
+* Confirm that the direct cloud-loading procedure is available.
+* Load the CLIP text and image models from Object Storage.
+* Verify model metadata and attributes.
 
 ### Prerequisites
 
-- You have imported the workshop application from Lab 1.
-- Your database supports ONNX pipeline models and AI Vector Search.
+* You have imported the workshop application from Lab 1.
+* Your database supports ONNX pipeline models and AI Vector Search.
 
 For a production deployment, prefer a private Object Storage location with a database credential or an enabled OCI resource principal. If an ONNX model uses external initializers, the PAR or credential must allow access to the entire bucket or to the prefix containing the `.onnx`, `.json`, and `.data` files.
 
@@ -79,7 +79,7 @@ Use the full URI of each ONNX file. The following are the existing workshop PAR 
       DBMS_VECTOR.LOAD_ONNX_MODEL_CLOUD(
         model_name => 'CLIP_TXT_MODEL',
         credential => NULL,
-        uri        => 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_txt.onnx',
+        uri        => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_txt.onnx',
         metadata   => JSON('{"function":"embedding",'
                          || '"embeddingOutput":"embedding",'
                          || '"input":{"input":["data"]}}')
@@ -99,7 +99,7 @@ Use the full URI of each ONNX file. The following are the existing workshop PAR 
       DBMS_VECTOR.LOAD_ONNX_MODEL_CLOUD(
         model_name => 'CLIP_IMG_MODEL',
         credential => NULL,
-        uri        => 'https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_img.onnx',
+        uri        => 'https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fclip_vit_base_patch32_img.onnx',
         metadata   => JSON('{"function":"embedding",'
                          || '"embeddingOutput":"embedding",'
                          || '"input":{"input":["data"]}}')
@@ -168,14 +168,14 @@ You have granted the required model-creation privilege, loaded both CLIP ONNX mo
 
 ## References
 
-- [DBMS_VECTOR Package — Oracle AI Database 26ai](https://docs.oracle.com/en/database/oracle/oracle-database/26/arpls/dbms_vector1.html)
-- [SQL Quick Start Using a Vector Embedding Model Uploaded into the Database](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/sql-quick-start-using-vector-embedding-model-uploaded-database.html)
-- [Oracle AI Vector Search User's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/ai-vector-search-users-guide.pdf)
+* [DBMS_VECTOR Package — Oracle AI Database 26ai](https://docs.oracle.com/en/database/oracle/oracle-database/26/arpls/dbms_vector1.html)
+* [SQL Quick Start Using a Vector Embedding Model Uploaded into the Database](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/sql-quick-start-using-vector-embedding-model-uploaded-database.html)
+* [Oracle AI Vector Search User's Guide](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/ai-vector-search-users-guide.pdf)
 
 ## Acknowledgments
 
-- **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
-- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
+* **Author** - Sahaana Manavalan, Senior Product Manager, May 2025
+* **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, September 2026
 
 ## Acknowledgements
 

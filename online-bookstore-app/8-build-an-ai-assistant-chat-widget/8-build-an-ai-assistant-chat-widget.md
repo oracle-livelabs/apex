@@ -14,15 +14,15 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Generate API Keys using OCI Console.
-- Create Web Credentials in Oracle APEX.
-- Configure Generative AI Service.
-- Create AI Configurations with RAG Data Sources.
-- Create a Navigation Bar Entry to access the AI chat interface.
+* Generate API Keys using OCI Console.
+* Create Web Credentials in Oracle APEX.
+* Configure Generative AI Service.
+* Create AI Configurations with RAG Data Sources.
+* Create a Navigation Bar Entry to access the AI chat interface.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab7.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab7.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab7.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
 
 ## Task 1: Generate API Keys using OCI Console
 
@@ -32,7 +32,7 @@ To Generate the API Keys using OCI Console:
 
 1. Login into your OCI Account.
 
-   ![Add API Key](images/oci-login.png " ")
+    ![Add API Key](images/oci-login.png " ")
 
 2. Click **My Profile** at the top-right corner and select **User settings**.
 
@@ -46,7 +46,7 @@ To Generate the API Keys using OCI Console:
 
 5. Click **Download private key**. A **.pem** file will be saved to your local device. You do not need to download the public key.
 
-   >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
+    >*Note: You will use this private key while configuring the web credentials in Oracle APEX in the upcoming lab.*
 
 6. Click **Add**.
 
@@ -66,42 +66,42 @@ To create a Web Credential in Oracle APEX:
 
 1. Login into your Oracle APEX workspace.
 
-   ![Login into your APEX account](images/apex-login.png " ")
+    ![Login into your APEX account](images/apex-login.png " ")
 
 2. On the Workspace home page, click **App Builder**.
 
-   ![Click App Builder](images/app-build.png " ")
+    ![Click App Builder](images/app-build.png " ")
 
 3. Click **Workspace Utilities**.
 
-   ![Click Workspace Utilities](images/workspace-utilities.png " ")
+    ![Click Workspace Utilities](images/workspace-utilities.png " ")
 
 4. Select **Web Credentials**.
 
-   ![Click Web Credentials](images/sc-web-creds.png " ")
+    ![Click Web Credentials](images/sc-web-creds.png " ")
 
 5. Click **Create**.
 
-   ![Create Web Credentials](images/create-wc.png " ")
+    ![Create Web Credentials](images/create-wc.png " ")
 
 6. Enter the following details using the configuration file you copied in the previous task.
 
-    - **Name**: apex\_ai\_cred
+    * **Name**: apex\_ai\_cred
 
-    - **Authentication Type**: OCI Native Authentication
+    * **Authentication Type**: OCI Native Authentication
 
-    - **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
+    * **OCI User ID**: Enter the OCID of the Oracle Cloud user Account. You can find the OCID in the Configuration File Preview generated during the API Key creation.
     Your OCI User ID looks similar to **ocid1.user.oc1..aaaaaaaa\*\*\*\*\*\*wj3v23yla**
 
-    - **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
+    * **OCI Private Key**: Open the private key (.pem file) downloaded in the previous task. Copy and paste the API Key.
 
       ![Private key file](images/private-key.png " ")
 
-    - **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
+    * **OCI Tenancy ID**: Enter the OCID for Tenancy. Your Tenancy ID looks similar to **ocid1.tenancy.oc1..aaaaaaaaf7ush\*\*\*\*cxx3qka**
 
-    - **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
+    * **OCI Public Key Fingerprint**: Enter the Fingerprint ID. Your Fingerprint ID looks similar to **a8:8e:c2:8b:fe:\*\*\*\*:ff:4d:40**
 
-   ![Web Credentials page](images/web-creds.png " ")
+    ![Web Credentials page](images/web-creds.png " ")
 
 7. Click **Create**.
 
@@ -123,25 +123,25 @@ To use the Generative AI service in APEX, you need to first configure it at the 
 
 4. In this workshop, you use OCI Generative AI Service as the AI provider. Enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - AI Provider: **OCI Generative AI Service**
+        * AI Provider: **OCI Generative AI Service**
 
-        - Name: **OCI Gen AI**
+        * Name: **OCI Gen AI**
 
-        - Static ID: **oci\_gen\_ai**
+        * Static ID: **oci\_gen\_ai**
 
-    - Under OCI Generative AI:
+    * Under OCI Generative AI:
 
-        - Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Task 1.
+        * Compartment ID: *Enter your OCI Compartment ID*. Refer to the [Documentation](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport_topic-Locating_Oracle_Cloud_Infrastructure_IDs.htm#:~:text=Finding%20the%20OCID%20of%20a,displayed%20next%20to%20each%20compartment.) to fetch your Compartment ID. If you have only one compartment, then use the OCID from the configuration file you saved in Task 1.
 
-        - Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
+        * Region: **us-chicago-1** (Currently, the OCI Generative AI Service is only available in limited regions)
 
-        - Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
+        * Model ID: **meta.llama-3.1-405b-instruct** (You can also select other models as per your choice. Refer to the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/use-playground-chat.htm#chat))
 
-    - Settings > Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
+    * Settings > Used by App Builder: Enable the toggle button to **ON**. Note that the Base URL is auto generated.
 
-    - Credentials > Credential: **apex\_ai\_cred**
+    * Credentials > Credential: **apex\_ai\_cred**
 
     Click **Test Connection** to verify that everything is configured correctly and functioning properly.
 
@@ -159,13 +159,13 @@ In this task, you'll create a Chat Page with a modal dialog layout and configure
 
 2. In the Create Blank page dialog, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **2**
+        * Page Number: **2**
 
-        - Name: **Chat Widget**
+        * Name: **Chat Widget**
 
-        - Page Mode: **Modal Dialog**
+        * Page Mode: **Modal Dialog**
 
     Click **Create Page**.
 
@@ -173,11 +173,11 @@ In this task, you'll create a Chat Page with a modal dialog layout and configure
 
 3. With **Page 2: Chat Widget** selected in the Rendering Tree, enter/select the following in the Property Editor:
 
-    - Appearance > Template Options: Click **Use Template Defaults**
+    * Appearance > Template Options: Click **Use Template Defaults**
 
-        - General: Check **Remove Body Padding**
+        * General: Check **Remove Body Padding**
 
-        - Content Padding: **Remove Padding**
+        * Content Padding: **Remove Padding**
 
         Click **OK**
 
@@ -189,25 +189,25 @@ In this task, you'll create a Chat Page with a modal dialog layout and configure
 
 5. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Chat**
+    * Identification > Name: **Chat**
 
-    - Under Appearance > Template Options:
+    * Under Appearance > Template Options:
 
-        - Under Common:
+        * Under Common:
 
-            - General: Check **Remove Body Padding**
+            * General: Check **Remove Body Padding**
 
-            - Body Height: **320px**
+            * Body Height: **320px**
 
-            - Header: **Hidden**
+            * Header: **Hidden**
 
-        - Advanced > Bottom Margin: **None**
+        * Advanced > Bottom Margin: **None**
 
         Click **OK**
 
         ![Page Designer](images/chat-to2.png =30%x*)
 
-    - Advanced > Static ID: **chat**
+    * Advanced > Static ID: **chat**
 
         ![Page Designer](images/chat-to3.png =100%x*)
 
@@ -231,16 +231,16 @@ In this task, you'll configure AI Configurations to enable book-related queries 
 
 4. Enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Books Analysis AI**
-        - Static ID: **books\_analysis\_ai**
+        * Name: **Books Analysis AI**
+        * Static ID: **books\_analysis\_ai**
 
-    - Under Generative AI
+    * Under Generative AI
 
-        - Service: **OCI Gen AI**
+        * Service: **OCI Gen AI**
 
-        - System Prompt: Copy and paste the below prompt:
+        * System Prompt: Copy and paste the below prompt:
 
             ```
             <copy>
@@ -255,7 +255,7 @@ In this task, you'll configure AI Configurations to enable book-related queries 
             </copy>
             ```
 
-        - Welcome Message: **Welcome! How may I help you?**
+        * Welcome Message: **Welcome! How may I help you?**
 
         Click **Create**
 
@@ -267,15 +267,15 @@ In this task, you'll configure AI Configurations to enable book-related queries 
 
 6. Enter/select the following:
 
-    - Identification > Name: **Books**
+    * Identification > Name: **Books**
 
-    - Description > Description: **List of price, title, author, category, discount, publisher, contributor, description**
+    * Description > Description: **List of price, title, author, category, discount, publisher, contributor, description**
 
-    - Source > SQL Query: Copy and paste the below query:
+    * Source > SQL Query: Copy and paste the below query:
 
         ```
         <copy>
-       select title, author, price, discount || '%' as discount,  round((price *( 100 - discount))/100,1) as discounted_price, category, publisher, contributor, description from obs_books
+        select title, author, price, discount || '%' as discount,  round((price *( 100 - discount))/100,1) as discounted_price, category, publisher, contributor, description from obs_books
         </copy>
         ```
 
@@ -301,21 +301,21 @@ In this task, you'll create a Dynamic Action to display the AI-powered chat widg
 
 4. Under True action, select **Show**. In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Show AI Assistant**
+    * Identification > Action: **Show AI Assistant**
 
-    - Generative AI > Configuration: **Books Analysis AI**
+    * Generative AI > Configuration: **Books Analysis AI**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Display as: **Inline**
+        * Display as: **Inline**
 
-        - Container Selector: **#chat**
+        * Container Selector: **#chat**
 
-    - Under Quick Actions:
+    * Under Quick Actions:
 
-        - Message 1: **Provide an overview of the book A Little Life**
+        * Message 1: **Provide an overview of the book A Little Life**
 
-        - Message 2: **Who is the author of the book All About Love?**
+        * Message 2: **Who is the author of the book All About Love?**
 
     Click **Save**.
 
@@ -343,15 +343,15 @@ In this task, you'll add a navigation entry to the application's navigation bar,
 
 5. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **3**
+        * Sequence: **3**
 
-        - Image/Class: **fa-ai-sparkle-message**
+        * Image/Class: **fa-ai-sparkle-message**
 
-        - List Entry Label: **AI Assistant**
+        * List Entry Label: **AI Assistant**
 
-    - Target > Page: **2**
+    * Target > Page: **2**
 
      Click **Create List Entry**.
 
@@ -363,9 +363,9 @@ In this task, you will interact with the AI Assistant, ask book-related question
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/8-8-1-run-app.png " ")
 
@@ -389,5 +389,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

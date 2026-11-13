@@ -10,19 +10,19 @@ Estimated Time: 15 minutes
 
 In this lab, you:
 
-- Implement the 'Share' button.
+* Implement the 'Share' button.
 
-- Enable Push Notifications.
+* Enable Push Notifications.
 
-- Add Shortcuts to the PWA app.
+* Add Shortcuts to the PWA app.
 
-- Include screenshots to be displayed while installing the PWA app.
+* Include screenshots to be displayed while installing the PWA app.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol18.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects-hol18.sql)**
 
 ## Task 1: Configure Progressive Web Application
 
@@ -60,9 +60,9 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     > **Note:** You can save the images by clicking on the links below:
 
-    - [**app-screenshot-1.png**](images/app-screenshot-1.png)
+    * [**app-screenshot-1.png**](images/app-screenshot-1.png)
 
-    - [**app-screenshot-2.png**](images/app-screenshot-2.png)
+    * [**app-screenshot-2.png**](images/app-screenshot-2.png)
 
 4. From your local system, select the screenshot that you wish to upload. In this case, select **app-screenshot-1** from your local system and click **Create**.
 
@@ -80,9 +80,9 @@ The Oracle APEX Progressive Web App screenshots are used for promotional purpose
 
     > **Note:**
 
-    - *View the compatibility matrix for the* **Screenshots** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
+    * *View the compatibility matrix for the* **Screenshots** [installation](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/installation)
 
-    - *View the compatibility matrix for the* **Shortcuts** [here](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon)
+    * *View the compatibility matrix for the* **Shortcuts** [app icon](https://apex.oracle.com/pls/apex/r/apex_pm/apex-pwa-reference/app-icon)
 
 ## Task 3: Add Shortcuts for the PWA app
 
@@ -108,13 +108,13 @@ By providing these shortcuts, Oracle APEX enhances the user experience and makes
 
 3. In the Add Shortcut dialog, enter/select the following:
 
-    - Name: **Dashboard**
+    * Name: **Dashboard**
 
-    - Target URL: Click **Item Picker** and select **Dashboard** page.
+    * Target URL: Click **Item Picker** and select **Dashboard** page.
 
     ![select dashboard page](images/select-dashboard-page.png " ")
 
-    - Upload an Icon: click the **Upload an Icon** button and select the icon from your local system.
+    * Upload an Icon: click the **Upload an Icon** button and select the icon from your local system.
 
     ![select dashboard page](images/upload-an-icon.png " ")
 
@@ -132,9 +132,9 @@ In this task, you add a Share button that allows a user to share the post via em
 
 > **Note:**
 
-- On macOS, Share will NOT work on Chrome and Firefox browsers. Use Edge or Safari browsers.
+* On macOS, Share will NOT work on Chrome and Firefox browsers. Use Edge or Safari browsers.
 
-- On Windows, Share will NOT work on the Edge browser. Use Chrome, Edge or Safari browsers.
+* On Windows, Share will NOT work on the Edge browser. Use Chrome, Edge or Safari browsers.
 
 1. Navigate to the **Application ID** and select the **2-Dashboard** page in your **Demo Projects** Application.
 
@@ -144,13 +144,13 @@ In this task, you add a Share button that allows a user to share the post via em
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Button Name: **Share**
+    * Identification > Button Name: **Share**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Hot: **Toggle On**
+        * Hot: **Toggle On**
 
-        - Icon: **fa-share-alt**
+        * Icon: **fa-share-alt**
 
     ![configure Share](images/configure-share.png " ")
 
@@ -164,13 +164,13 @@ In this task, you add a Share button that allows a user to share the post via em
 
 6. Under **True** action, select **show**. In the Property Editor, enter/select the following:
 
-    - Identification > Action: **Share**
+    * Identification > Action: **Share**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Title: **Share Dashboard Page**
+        * Title: **Share Dashboard Page**
 
-        - Text: **Sharing the Dashboard Page to the World!**
+        * Text: **Sharing the Dashboard Page to the World!**
 
     Click **Save**.
 
@@ -182,15 +182,15 @@ Meta tags are information about a web page that allows other systems to read a s
 
 1. In Page Designer, select **Page 2 : Dashboard** and in the Property Editor, enter/select the following:
 
-    - Security > Authentication: **Page is Public**
+    * Security > Authentication: **Page is Public**
 
-    - Advanced > Enable Meta Tags: Toggle **On**
+    * Advanced > Enable Meta Tags: Toggle **On**
 
     ![page is public](images/page-is-public.png " ")
 
 2. A new section will appear in the Page Designer under **Pre-Rendering**. Select **description** and enter the following:
 
-    - Identification > Value: **Web share - Demo Projects App, Dashboard**
+    * Identification > Value: **Web share - Demo Projects App, Dashboard**
 
     ![page is public](images/configure-meta-tags.png " ")
 
@@ -202,5 +202,5 @@ In this lab, you learned to enhance the **Demo Projects** app with mobile featur
 
 ## Acknowledgements
 
-- **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024
+* **Author(s)** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, December 2024

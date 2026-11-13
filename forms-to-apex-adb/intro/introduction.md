@@ -8,15 +8,15 @@ You will also analyze and extract crucial business logic from your existing Orac
 
 By the end of this workshop, you will be well-prepared to transform your Oracle Forms applications into powerful, user-friendly APEX applications, leveraging modern web technologies to enhance performance and usability. Join us as we explore the exciting possibilities of APEX and take your applications to the next level!
 
-Estimated Time: 1 hour
+Estimated Workshop Time: 1 hour
 
 ### Objectives
 
 In this workshop, you:
 
-- Understand Oracle Forms and Oracle APEX
-- Analyze and Extract Business Logic
-- Implement Oracle Forms functionalities using APEX
+* Understand Oracle Forms and Oracle APEX
+* Analyze and Extract Business Logic
+* Implement Oracle Forms functionalities using APEX
 
 *Note: This workshop assumes you are using Oracle APEX 24.1. Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
@@ -26,17 +26,17 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 ### Downloads
 
-[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
+[application export: APEX\_Social\_Media\_HOL\_FINAL.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/data-management-library-files/APEX_Social_Media_HOL_FINAL.zip) to download the completed application.
 
 ## Learn More
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
-## **Acknowledgements**
+## Acknowledgements
 
-- **Author** - Monica Godoy, Senior Principal Product Manager; Ankita Beri, Product Manager;
-- **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024
+* **Author** - Monica Godoy, Senior Principal Product Manager; Ankita Beri, Product Manager;
+* **Last Updated By/Date** - Ankita Beri, Product Manager, July 2024

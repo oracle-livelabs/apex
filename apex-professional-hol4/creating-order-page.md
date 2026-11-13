@@ -10,41 +10,41 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Navigate through and review the Page Designer panes.
+* Navigate through and review the Page Designer panes.
 
-- Create a blank page to display order information.
+* Create a blank page to display order information.
 
-- Add regions for static and dynamic content.
+* Add regions for static and dynamic content.
 
-- Display order details such as order date, status, total, and item-specific details.
+* Display order details such as order date, status, total, and item-specific details.
 
-- Add regions to display additional information like frequently purchased products.
+* Add regions to display additional information like frequently purchased products.
 
-- Lock and unlock pages to manage concurrent editing.
+* Lock and unlock pages to manage concurrent editing.
 
 ### Downloads
 
-- If you are stuck or the application is not working as expected, you can download and install the completed App as follows:
+* If you are stuck or the application is not working as expected, you can download and install the completed App as follows:
 
     1. First, install the sample dataset from your workspace using the following lab:**[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-    2. After installing the sample dataset tables, download the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step. To import the SQL script follow the below steps:
+    2. After installing the sample dataset tables, download the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**. If you have already created the database objects, you can skip this step. To import the SQL script follow the below steps:
 
-    - Navigate to your APEX homepage, click the down arrow next to **SQL Workshop**, and select **SQL Scripts**.
+        * Navigate to your APEX homepage, click the down arrow next to **SQL Workshop**, and select **SQL Scripts**.
 
-        ![Workspace home page](./images/click-sqlscript.png " ")
+            ![Workspace home page](./images/click-sqlscript.png " ")
 
-    - Click **Upload** and drag and drop the SQL script file downloaded in the previous step.
+        * Click **Upload** and drag and drop the SQL script file downloaded in the previous step.
 
-        ![Workspace home page](./images/click-upload.png " ")
+            ![Workspace home page](./images/click-upload.png " ")
 
-    - After uploading, click the **Run** icon.
+        * After uploading, click the **Run** icon.
 
-        ![Workspace home page](./images/run-script.png " ")
+            ![Workspace home page](./images/run-script.png " ")
 
-        ![Workspace home page](./images/partial-ddl-success.png " ")
+            ![Workspace home page](./images/partial-ddl-success.png " ")
 
-    3. Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
+    3. Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreatingDatabaseApplication-OnlineShoppingApplication.sql)** in your workspace.
 
     4. When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the username you wish to log in to the application, choose the appropriate application role, and click **Create Assignment**.
 
@@ -52,7 +52,7 @@ In this lab, you will:
 
         ![Workspace home page](./images/add-user.png " ")
 
-> Note: If you want to reinstall the the database objects, you can download the provided **[script](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)** to drop the existing database objects.
+> Note: If you want to reinstall the the database objects, you can download the provided **[script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)** to drop the existing database objects.
 
 ## Task 1: Navigate and Review the Page Designer panes
 
@@ -90,17 +90,17 @@ You will create a new blank page titled Order Information where you will display
     ![Select Blank Page](./images/select-blank-page1.png " ")
 
 2. On **Create Blank Page** dialog, enter/select the following:
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **16**
+        * Page Number: **16**
 
-        - Name: **Order Information**
+        * Name: **Order Information**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: Toggle **OFF**
+        * Use Breadcrumb: Toggle **OFF**
 
-        - Use Navigation: Toggle **OFF**
+        * Use Navigation: Toggle **OFF**
 
           Click **Create Page**.
 
@@ -118,21 +118,21 @@ After creating the page, you'll add a Static Content region to display a thank y
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Title: **Thank you for your order!**
+    * Identification > Title: **Thank you for your order!**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Content Block**
+        * Template: **Content Block**
 
-        - Template Options:
+        * Template Options:
 
-            - Click **Template Options** label to open the Template Options dialog.
+            * Click **Template Options** label to open the Template Options dialog.
 
-            - Enable **Show Region Icon**
+            * Enable **Show Region Icon**
 
             Click **OK**
 
-        - Icon: **fa-heart**
+        * Icon: **fa-heart**
 
     ![Define Icon](images/create-static-region3.png " ")
 
@@ -166,11 +166,11 @@ You'll add a hidden item to store the order ID, which will be used to query the 
 
 2. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P16_ORDER**
+        * Name: **P16_ORDER**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![Define Page Item](./images/create-page-item2.png " ")
 
@@ -184,19 +184,19 @@ In this task, you will add a region to display a list of Mostly Purchased Produc
 
 2. In the Property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Top 5 Products**
+        * Name: **Top 5 Products**
 
-        - Title: **Top 5 Products**
+        * Title: **Top 5 Products**
 
-        - Type: **Dynamic Content**
+        * Type: **Dynamic Content**
 
-    - Under Source:
+    * Under Source:
 
-        - Language: **PL/SQL**
+        * Language: **PL/SQL**
 
-        - PL/SQL Function Body returning a CLOB: Copy and paste below code in the code editor:
+        * PL/SQL Function Body returning a CLOB: Copy and paste below code in the code editor:
 
         ```
         <copy>
@@ -231,6 +231,7 @@ In this task, you will add a region to display a list of Mostly Purchased Produc
             RETURN L_RESULT;
         END;
         ```
+
         </copy>
 
     ![Define Sub Region](./images/create-sub-region21.png " ")
@@ -245,9 +246,9 @@ In this task, you will create a sub-region to display the order number and other
 
 2. In the Property editor, enter/select the following:
 
-    - Title: **Order: &P16_ORDER.** (including the period)
+    * Title: **Order: &P16_ORDER.** (including the period)
 
-    - Type: **Static Content**
+    * Type: **Static Content**
 
     ![Define Sub Region](./images/create-sub-region2.png " ")
 
@@ -261,52 +262,52 @@ You will add a Cards Region to display the key details of the customer's order, 
 
 2. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Order Details**
+        * Title: **Order Details**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Enter the following SQL Query:
+        * SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
-            SELECT
-                O.ORDER_ID,
-                O.ORDER_DATETIME,
-                O.CUSTOMER_ID,
-                O.ORDER_STATUS,
-                O.STORE_ID,
-          (
-            SELECT
-                SUM(UNIT_PRICE * QUANTITY)
-            FROM
-                ORDER_ITEMS I
-            WHERE
-                I.ORDER_ID = O.ORDER_ID
-          ) TOTAL
-            FROM
-                ORDERS O
-            WHERE
-                ORDER_ID = :P16_ORDER
+              SELECT
+                  O.ORDER_ID,
+                  O.ORDER_DATETIME,
+                  O.CUSTOMER_ID,
+                  O.ORDER_STATUS,
+                  O.STORE_ID,
+            (
+              SELECT
+                  SUM(UNIT_PRICE * QUANTITY)
+              FROM
+                  ORDER_ITEMS I
+              WHERE
+                  I.ORDER_ID = O.ORDER_ID
+            ) TOTAL
+              FROM
+                  ORDERS O
+              WHERE
+                  ORDER_ID = :P16_ORDER
             </copy>
             ```
 
-        - Page Items to Submit: **P16_ORDER**
+        * Page Items to Submit: **P16_ORDER**
 
     ![Define Sub Region2](./images/create-sub-region12.png " ")
 
 3. Click **Attributes** and enter/select the following:
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: Toggle **On**
+        * Advanced Formatting: Toggle **On**
 
-        - HTML Expression: Copy and paste the below HTML expression in the code editor:
+        * HTML Expression: Copy and paste the below HTML expression in the code editor:
 
             ```
             <copy>
@@ -328,17 +329,17 @@ Lastly, you'll create a region to show the individual items in the order, includ
 
 2. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Items**
+        * Title: **Items**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Enter the following SQL Query:
+        * SQL Query: Enter the following SQL Query:
 
             ```
             <copy>
@@ -358,19 +359,19 @@ Lastly, you'll create a region to show the individual items in the order, includ
             </copy>
             ```
 
-        - Page Items to Submit: **P16_ORDER**
+        * Page Items to Submit: **P16_ORDER**
 
     ![Define Region](./images/create-sub-region22.png " ")
 
 3. Click **Attributes** and enter/select the following:
 
-    - Title > Column: **PRODUCT**
+    * Title > Column: **PRODUCT**
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: Toggle **ON**
+        * Advanced Formatting: Toggle **ON**
 
-        - HTML Expression: Copy and paste the below HTML expression in the code editor:
+        * HTML Expression: Copy and paste the below HTML expression in the code editor:
 
             ```
             <copy>
@@ -381,19 +382,19 @@ Lastly, you'll create a region to show the individual items in the order, includ
 
     ![Define Attributes](./images/create-sub-region23.png " ")
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **BLOB Column**
+        * Source: **BLOB Column**
 
-        - BLOB Column: **PRODUCT_IMAGE**
+        * BLOB Column: **PRODUCT_IMAGE**
 
-        - Position: **Body**
+        * Position: **Body**
 
-        - Appearance: **Auto**
+        * Appearance: **Auto**
 
-        - Sizing: **Fit**
+        * Sizing: **Fit**
 
-    - Card > Primary Key Column 1: **ITEM**
+    * Card > Primary Key Column 1: **ITEM**
 
     ![Select Primary Key](./images/create-sub-region24.png " ")
 
@@ -411,5 +412,5 @@ In the next workshop, you learn how to create and develop various reports, inclu
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

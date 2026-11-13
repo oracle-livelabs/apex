@@ -10,25 +10,25 @@ Estimated Time: 15 minutes
 
 By the end of this lab, you will be able to:
 
-- Customize the Interactive Report layout and links.
+* Customize the Interactive Report layout and links.
 
-- Modify pagination settings and display row ranges.
+* Modify pagination settings and display row ranges.
 
-- Enable and configure download formats for Excel and PDF.
+* Enable and configure download formats for Excel and PDF.
 
-- Control visibility of report features like the search bar and rows per page selector.
+* Control visibility of report features like the search bar and rows per page selector.
 
-- Save and manage reports for end users.
+* Save and manage reports for end users.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
+* **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FDevelopingReports-SampleReporting.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshop:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Customize an Interactive Report as a Developer
 
@@ -78,9 +78,9 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     In the Property Editor, navigate to **Attributes > Search Bar**. Enter/select the following:
 
-    - Rows Per Page Selector: Toggle **ON**
+    * Rows Per Page Selector: Toggle **ON**
 
-    - Maximum Rows Per Page: **10**
+    * Maximum Rows Per Page: **10**
 
     ![Rows Per Page Selector](images/enable-rpp.png " ")
 
@@ -88,11 +88,11 @@ In this task, you will customize the Interactive Report within the Sample Report
 
     In the property editor, navigate to **Attributes** tab and enter/select the following:
 
-    - Under Download:
+    * Under Download:
 
-        - Formats: Enable **Excel** and **PDF**
+        * Formats: Enable **Excel** and **PDF**
 
-        - Send as Email: Toggle **OFF**
+        * Send as Email: Toggle **OFF**
 
     ![Download](images/disable-email1.png " ")
 
@@ -108,11 +108,11 @@ In this task, you will customize the Interactive Report within the Sample Report
 
 12. The Save Report dialog displays. Notice that the **Public** check box is now available. Enter/select the following:
 
-    - Save(Only displayed for developers): **As Named Report**
+    * Save(Only displayed for developers): **As Named Report**
 
-    - Name: **Projects Public Report**
+    * Name: **Projects Public Report**
 
-    - Enable **Public**
+    * Enable **Public**
 
     Click **Apply**.
 
@@ -140,5 +140,5 @@ You now know how to Manage and Customize the Interactive report as a developer. 
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

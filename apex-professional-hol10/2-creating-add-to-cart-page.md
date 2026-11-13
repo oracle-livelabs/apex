@@ -10,44 +10,44 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Create dynamic actions to manage the shopping cart page.
+* Create dynamic actions to manage the shopping cart page.
 
-- Update the badge and icon in the navigation bar when a product is added, edited, or removed.
+* Update the badge and icon in the navigation bar when a product is added, edited, or removed.
 
-- Refresh the shopping cart region.
+* Refresh the shopping cart region.
 
-- Implement computations to calculate product quantities.
+* Implement computations to calculate product quantities.
 
-- Create processes for adding, editing, and removing products from the shopping cart.
+* Create processes for adding, editing, and removing products from the shopping cart.
 
-- Format product images for a uniform appearance.
+* Format product images for a uniform appearance.
 
-- Close modal pages after shopping actions are performed.
+* Close modal pages after shopping actions are performed.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-using-ComputationsProcessesValidations-Online%20ShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-using-ComputationsProcessesValidations-Online%20ShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 
 ## Task 1: Add Dynamic Actions
 
 In this Task, you will create a dynamic action to:
 
-- Update the badge and icon in the navigation bar after the customer has added/edited/removed a product from the shopping cart.
+* Update the badge and icon in the navigation bar after the customer has added/edited/removed a product from the shopping cart.
 
-- Refresh the shopping cart region.
+* Refresh the shopping cart region.
 
 1. Navigate to **Online Shopping Application** and select **17 -Shopping Cart** page (Page No 17).
 
@@ -59,27 +59,27 @@ In this Task, you will create a dynamic action to:
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Update Shopping Cart Header**
+    * Identification > Name: **Update Shopping Cart Header**
 
-    - Under Execution:
+    * Under Execution:
 
-        - Type: **Debounce**
+        * Type: **Debounce**
 
-        - Time: **400**
+        * Time: **400**
 
-        - Immediate: **Toggle On**
+        * Immediate: **Toggle On**
 
-    - Under When:
+    * Under When:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Shopping Cart**
+        * Region: **Shopping Cart**
 
-    - Under Client-side Condition:
+    * Under Client-side Condition:
 
-        - Type: **JavaScript expression**
+        * Type: **JavaScript expression**
 
-        - JavaScript Expression: Enter the following:
+        * JavaScript Expression: Enter the following:
 
             ```
             <copy>
@@ -91,13 +91,13 @@ In this Task, you will create a dynamic action to:
 
 4. Navigate to **Refresh** action. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Update Badge & Icon**
+        * Name: **Update Badge & Icon**
 
-        - Action: **Execute JavaScript Code**
+        * Action: **Execute JavaScript Code**
 
-    - Settings > Code: Enter the following JavaScript Code:
+    * Settings > Code: Enter the following JavaScript Code:
 
         ```
         <copy>
@@ -117,17 +117,17 @@ In this Task, you will create a dynamic action to:
 
 6. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Refresh Shopping Cart region**
+        * Name: **Refresh Shopping Cart region**
 
-        - Action: **Refresh**
+        * Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Shopping Cart**
+        * Region: **Shopping Cart**
 
     ![Create Second True Action](./images/create-3da.png " ")
 
@@ -155,17 +155,17 @@ In this Task, you will create a dynamic action to:
 
 10. In the Property Editor, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Refresh Shopping Cart region**
+        * Name: **Refresh Shopping Cart region**
 
-        - Action: **Refresh**
+        * Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Shopping Cart**
+        * Region: **Shopping Cart**
 
     ![Add Properties to the second False Action](./images/create-false-action1.png " ")
 
@@ -179,7 +179,7 @@ In this task, you will add inline CSS to format the size of product images, ensu
 
 2. In the Property Editor (right pane), enter the following:
 
-    - CSS > Inline: Copy and paste the following:
+    * CSS > Inline: Copy and paste the following:
 
         ```
         <copy>
@@ -208,13 +208,13 @@ In this task, you will add a computation to calculate and display the number of 
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Item Name: **P18_QUANTITY**
+    * Identification > Item Name: **P18_QUANTITY**
 
-    - Under Computation:
+    * Under Computation:
 
-        - Type: **Function Body**
+        * Type: **Function Body**
 
-        - PL/SQL Function Body: Enter the following PL/SQL Code:
+        * PL/SQL Function Body: Enter the following PL/SQL Code:
 
         ```
         <copy>
@@ -236,9 +236,9 @@ In this task, you call the *manage\_orders.add_product* procedure that temporari
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Add product**
+    * Identification > Name: **Add product**
 
-    - Source > PL/SQL Code: Copy and paste the following PL/SQL code:
+    * Source > PL/SQL Code: Copy and paste the following PL/SQL code:
 
         ```
         <copy>
@@ -252,7 +252,7 @@ In this task, you call the *manage\_orders.add_product* procedure that temporari
         </copy>
         ```
 
-    - Server-side Condition > When Button Pressed: **Add**
+    * Server-side Condition > When Button Pressed: **Add**
 
     ![Add Properties to Page Process](./images/create-process22.png " ")
 
@@ -264,13 +264,13 @@ In this task, you call the *manage\_orders.remove\_product* and *manage\_orders.
 
 1. In the **Processing** tab, right-click **Processing** and select **Create Process**.
 
-   ![Navigate to Processing Tab](./images/navigate-to-sc2.png " ")
+    ![Navigate to Processing Tab](./images/navigate-to-sc2.png " ")
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Edit product**
+    * Identification > Name: **Edit product**
 
-    - Source > PL/SQL Code: Copy and paste the following PL/SQL code:
+    * Source > PL/SQL Code: Copy and paste the following PL/SQL code:
 
         ```
         <copy>
@@ -285,7 +285,7 @@ In this task, you call the *manage\_orders.remove\_product* and *manage\_orders.
         </copy>
         ```
 
-    - Server-side Condition > When Button Pressed: **Edit**
+    * Server-side Condition > When Button Pressed: **Edit**
 
     ![Create Second Page process](./images/create-process31.png " ")
 
@@ -301,9 +301,9 @@ In this task, you call the *manage\_orders.remove\_product* to remove a product 
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Delete product**
+    * Identification > Name: **Delete product**
 
-    - Source > PL/SQL Code: Copy and paste the following PL/SQL code:
+    * Source > PL/SQL Code: Copy and paste the following PL/SQL code:
 
         ```
         <copy>
@@ -316,7 +316,7 @@ In this task, you call the *manage\_orders.remove\_product* to remove a product 
         </copy>
         ```
 
-    - Server-side Condition > When Button Pressed: **Delete**
+    * Server-side Condition > When Button Pressed: **Delete**
 
     ![Create Third Page process](./images/create-process41.png " ")
 
@@ -332,9 +332,9 @@ In this Task, you call the *manage\_orders.get\_quantity* to get the total numbe
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Calculate Shopping Cart Items**
+    * Identification > Name: **Calculate Shopping Cart Items**
 
-    - Source > PL/SQL Code: Copy and paste the following PL/SQL code:
+    * Source > PL/SQL Code: Copy and paste the following PL/SQL code:
 
         ```
         <copy>
@@ -358,13 +358,13 @@ In this task, you will create a process that closes the modal page after the use
 
 2. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Close Dialog**
+        * Name: **Close Dialog**
 
-        - Type: **Close Dialog**
+        * Type: **Close Dialog**
 
-    - Settings > Items to Return: **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY**
+    * Settings > Items to Return: **P18\_SHOPPING\_CART\_ITEMS,P18\_PRODUCT\_ID,P18\_ACTION,P18\_QUANTITY**
 
     ![Create Close Dialog Process](./images/create-close-dialog.png " ")
 
@@ -376,13 +376,13 @@ In the final task, you will customize the modal page by adjusting its title and 
 
 2. In the Property Editor, enter/select the following:
 
-    - Identification > Title: **Manage Your Cart**
+    * Identification > Title: **Manage Your Cart**
 
-    - Under Dialog:
+    * Under Dialog:
 
-        - Width: **600**
+        * Width: **600**
 
-        - Height: **600**
+        * Height: **600**
 
     ![Enhance the Modal Page](./images/enhance-modal.png " ")
 
@@ -398,5 +398,5 @@ In the next lab, you focus on enhancing the Demo Projects application by customi
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri Product Manager, September 2024
+* **Author** - Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri Product Manager, September 2024

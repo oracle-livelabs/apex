@@ -10,14 +10,14 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Create a User Profile Page to manage account information.
-- Add Navigation Bar Entries for accessing the profile and related pages.
-- Create and Manage forms to update user details and reset passwords.
-- Implement RESTful Services for handling profile pictures and integrating them into the app.
+* Create a User Profile Page to manage account information.
+* Add Navigation Bar Entries for accessing the profile and related pages.
+* Create and Manage forms to update user details and reset passwords.
+* Implement RESTful Services for handling profile pictures and integrating them into the app.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab9.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab9.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab9.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
 
 ## Task 1: Creating a Profile Page with a Book List
 
@@ -27,7 +27,7 @@ This task provides step-by-step instructions for creating a profile page display
 
     ![close dialog](images/app-id8.png " ")
 
-2. Click **Create Page**. 
+2. Click **Create Page**.
 
     ![close dialog](images/profile-create-page.png " ")
 
@@ -37,17 +37,17 @@ This task provides step-by-step instructions for creating a profile page display
 
 4. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **15010**
+        * Page Number: **15010**
 
-        - Name: **Profile**
+        * Name: **Profile**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Create Page**.
 
@@ -63,9 +63,9 @@ This task provides step-by-step instructions for creating a profile page display
 
 7. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **My Details**
+    * Identification > Name: **My Details**
 
-    - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/profile-region-details.png " ")
 
@@ -75,17 +75,17 @@ This task provides step-by-step instructions for creating a profile page display
 
 9. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **My Books**
+        * Name: **My Books**
 
-        - Type: **Media List**
+        * Type: **Media List**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
             ```
             <copy>
@@ -102,17 +102,17 @@ This task provides step-by-step instructions for creating a profile page display
             </copy>
             ```
 
-    - Layout > Start New Row: **Toggle Off**
+    * Layout > Start New Row: **Toggle Off**
 
     ![close dialog](images/profile-my-books.png " ")
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Content Block**  
+        * Template: **Content Block**  
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Region Title: **Medium**
+            * Region Title: **Medium**
 
             Click **OK**.
 
@@ -120,65 +120,65 @@ This task provides step-by-step instructions for creating a profile page display
 
 10. Navigate to **Attributes**, enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Title: **TITLE**
+        * Title: **TITLE**
 
-        - Display Avatar: **Toggle On**
+        * Display Avatar: **Toggle On**
 
-        - Display Badge: **Toggle On**
+        * Display Badge: **Toggle On**
 
-        - Layout: **2 Column Grid**
+        * Layout: **2 Column Grid**
 
-        - Size: **Large**
+        * Size: **Large**
 
-    - Under Avatar:
+    * Under Avatar:
 
-        - Type: **Image**
+        * Type: **Image**
 
-        - Image: Click **No Media Defined** and enter/select the following.
+        * Image: Click **No Media Defined** and enter/select the following.
 
-            - Source: **URL**
+            * Source: **URL**
 
-            - URL: **&BOOK_IMAGE.**
+            * URL: **&BOOK_IMAGE.**
 
           Click **OK**
 
-        - Shape: **Square**
+        * Shape: **Square**
 
-    - Under Badge:
+    * Under Badge:
 
-        - Label: **&QUANTITY.**
+        * Label: **&QUANTITY.**
 
-        - Value: **QUANTITY**
+        * Value: **QUANTITY**
 
     ![close dialog](images/profile-attributes.png " ")
 
 11. Click **Save**.
 
-<!-- 11. Under **My Books** region, right-click **Actions** and select **Create Action**.
+    <!-- 11. Under **My Books** region, right-click **Actions** and select **Create Action**.
 
     ![close dialog](images/profile-actions.png " ")
 
 12. In the Property Editor, enter/select the following:
 
-    - Under Identification > Position: **Link**
+    * Under Identification > Position: **Link**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to URL**
+        * Type: **Redirect to URL**
 
-        - Target > URL: **&BUY_LINKS.**
+        * Target > URL: **&BUY_LINKS.**
 
           Click **OK**.
 
-        - Link Attributes: **target="_blank"**
+        * Link Attributes: **target="_blank"**
 
     ![close dialog](images/profile-actions-details.png " ")
 
 13. Click **Save**. -->
 
-## Task 2: Configure Navigation Bar Entries for User Profiles
+## Task 2: Configure Navigation Bar Entries for User Profiles
 
 In this task, you set up entries for authenticated and public users, create a login entry, and link to a profile page.
 
@@ -198,15 +198,15 @@ In this task, you set up entries for authenticated and public users, create a lo
 
     ![close dialog](images/10-2-edit-app-user.png " ")
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **20**
+        * Sequence: **20**
 
-        - Image/Class: Remove **fa-user**
+        * Image/Class: Remove **fa-user**
 
-        - List Entry Label: **&USERNAME.**
+        * List Entry Label: **&USERNAME.**
 
-    - Conditions > Condition Type: **User is Authenticated (not public)**
+    * Conditions > Condition Type: **User is Authenticated (not public)**
 
     Click **Apply Changes**.
 
@@ -220,17 +220,17 @@ In this task, you set up entries for authenticated and public users, create a lo
 
 6. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **12**
+        * Sequence: **12**
 
-        - Image/Class: **fa-user**
+        * Image/Class: **fa-user**
 
-        - List Entry Label: **Login**
+        * List Entry Label: **Login**
 
-    - Target > Page: **9999**
+    * Target > Page: **9999**
 
-    - Conditions > Condition Type: **User is the Public User (user has not authenticated)**
+    * Conditions > Condition Type: **User is the Public User (user has not authenticated)**
 
     Click **Create and Create Another**.
 
@@ -240,25 +240,25 @@ In this task, you set up entries for authenticated and public users, create a lo
 
 7. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Parent List Entry: **&USERNAME.**
+        * Parent List Entry: **&USERNAME.**
 
-        - Sequence: **12**
+        * Sequence: **12**
 
-        - Image/Class: **fa-user**
+        * Image/Class: **fa-user**
 
-        - List Entry Label: **My Profile**
+        * List Entry Label: **My Profile**
 
-    - Under Target:
+    * Under Target:
 
-        - Page: **15010**
+        * Page: **15010**
 
-        - Clear Cache: **15010**
+        * Clear Cache: **15010**
 
-    - Authorization > Authorization Scheme: **Must Not Be Public User**
+    * Authorization > Authorization Scheme: **Must Not Be Public User**
 
-    - User Defined Attributes > List Item CSS Classes: **icon-only**
+    * User Defined Attributes > List Item CSS Classes: **icon-only**
 
     Click **Create List Entry**.
 
@@ -294,11 +294,11 @@ In this task, you will learn how to create and configure a page to update the cu
 
 3. Under Page Definition, enter/select the following:
 
-    - Page Number: **26**
+    * Page Number: **26**
 
-    - Name: **Update Current User**
+    * Name: **Update Current User**
 
-    - Page Mode: **Modal Dialog**
+    * Page Mode: **Modal Dialog**
 
     Click **Create Page**.
 
@@ -314,17 +314,17 @@ In this task, you will learn how to create and configure a page to update the cu
 
 6. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Update Current User**
+        * Name: **Update Current User**
 
-        - Type: **Form**
+        * Type: **Form**
 
-    - Source > Table name: **OBS\_USERS**
+    * Source > Table name: **OBS\_USERS**
 
-    - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
-   ![close dialog](images/10-3-current-user-form.png " ")
+    ![close dialog](images/10-3-current-user-form.png " ")
 
 7. Under **Update Current User**, expand **Columns**. Select **P26\_MIME\_TYPE** and **P26\_PICTURE\_URL**, right-click and select **Delete**.
 
@@ -334,7 +334,7 @@ In this task, you will learn how to create and configure a page to update the cu
 
     ![close dialog](images/10-3-user-id.png " ")
 
-9. Select **P26\_EMAIL**, under Identification > Type: **Display Only** 
+9. Select **P26\_EMAIL**, under Identification > Type: **Display Only**
 
     ![close dialog](images/10-3-email.png " ")
 
@@ -348,15 +348,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
 12. Select **P26\_PROFILE\_PIC** and enter/select the following:
 
-    - Identification > Type: **Image Upload**
+    * Identification > Type: **Image Upload**
 
-    - Storage > Mime Type Column: **MIME_TYPE**
+    * Storage > Mime Type Column: **MIME_TYPE**
 
-    - Under Cropping:
+    * Under Cropping:
 
-        - Allow Cropping: **Toggle On**
+        * Allow Cropping: **Toggle On**
 
-        - Aspect Ratio: **1:1 (square)**
+        * Aspect Ratio: **1:1 (square)**
 
     ![close dialog](images/10-3-profile-pic.png " ")
 
@@ -366,9 +366,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
 14. In the property editor, enter/select the following:
 
-    - Identification > Name: **Buttons**
+    * Identification > Name: **Buttons**
 
-    - Appearance > Template: **Buttons Container**
+    * Appearance > Template: **Buttons Container**
 
     ![close dialog](images/10-3-create-region-buttons.png " ")
 
@@ -378,15 +378,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
 16. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **CANCEL**
+        * Button Name: **CANCEL**
 
-        - Label: **Cancel**
+        * Label: **Cancel**
 
-    - Layout > Slot: **Close**
+    * Layout > Slot: **Close**
 
-    - Behavior > Action: **Defined by Dynamic Action**
+    * Behavior > Action: **Defined by Dynamic Action**
 
     ![close dialog](images/10-3-cancel-btn.png " ")
 
@@ -396,13 +396,13 @@ In this task, you will learn how to create and configure a page to update the cu
 
 18. In the property editor, enter/select the following:
 
-    - Identification > Name: **Cancel Dialog**
+    * Identification > Name: **Cancel Dialog**
 
     ![close dialog](images/10-3-cancel-dialog.png " ")
 
 19. Select **TRUE** Action, enter/select the following:
 
-    - Identification > Action: **Cancel Dialog**
+    * Identification > Action: **Cancel Dialog**
 
     ![close dialog](images/10-3-cancel-dialog-true.png " ")
 
@@ -412,23 +412,23 @@ In this task, you will learn how to create and configure a page to update the cu
 
 21. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **SAVE**
+        * Button Name: **SAVE**
 
-        - Label: **Apply Changes**
+        * Label: **Apply Changes**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Appearance > Hot: **Toggle On**
+    * Appearance > Hot: **Toggle On**
 
-    - Behavior > Database Action: **SQL UPDATE action**
+    * Behavior > Database Action: **SQL UPDATE action**
 
-    - Under Server-side Conditions:
+    * Under Server-side Conditions:
 
-        - Type: **Item is NOT NULL**
+        * Type: **Item is NOT NULL**
 
-        - Item: **P26\_USER\_ID**
+        * Item: **P26\_USER\_ID**
 
     ![close dialog](images/10-3-save-btn.png " ")
 
@@ -438,15 +438,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
 23. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **CREATE**
+        * Button Name: **CREATE**
 
-        - Label: **Create**
+        * Label: **Create**
 
-    - Behavior > Database Action: **SQL INSERT action**
+    * Behavior > Database Action: **SQL INSERT action**
 
-    - Server-side Condition > Type: **Item is NULL**
+    * Server-side Condition > Type: **Item is NULL**
 
     ![close dialog](images/10-3-create-btn-details.png " ")
 
@@ -456,15 +456,15 @@ In this task, you will learn how to create and configure a page to update the cu
 
 25. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Update Current User**
+        * Name: **Update Current User**
 
-        - Type: **Form - Automatic Row Processing(DML)**
+        * Type: **Form - Automatic Row Processing(DML)**
 
-        - Form Region: **Update Current User**
+        * Form Region: **Update Current User**
 
-    - Success Message > Success Message: **Profile Details Updated Successfully!**
+    * Success Message > Success Message: **Profile Details Updated Successfully!**
 
     ![close dialog](images/10-3-update-current-user-proceess.png " ")
 
@@ -474,9 +474,9 @@ In this task, you will learn how to create and configure a page to update the cu
 
 27. In the property editor, enter/select the following:
 
-    - Identification > Name: **Change Username** 
+    * Identification > Name: **Change Username**
 
-    - Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
+    * Source > PL/SQL Code: **:USERNAME := :P26_USERNAME;**
 
     ![close dialog](images/10-3-change-username-process.png " ")
 
@@ -486,13 +486,13 @@ In this task, you will learn how to create and configure a page to update the cu
 
 29. In the property editor, enter/select the following:
 
-    - Identification > Name: **Go To My Profile**
+    * Identification > Name: **Go To My Profile**
 
-    - Under Behavior > Target: Click **No Link Defined**
+    * Under Behavior > Target: Click **No Link Defined**
 
-        - Page: **15010**
+        * Page: **15010**
 
-        - Clear Cache: **10**
+        * Clear Cache: **10**
 
         Click **OK**.
 
@@ -510,56 +510,57 @@ In this task, you will learn how to create and configure a page to update the cu
 
 33. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **EDIT_PROFILE**
+        * Button Name: **EDIT_PROFILE**
 
-        - Label: **Edit Profile**
+        * Label: **Edit Profile**
 
-    - Under Layout:
+    * Under Layout:
 
-        - Start New Row: **Toggle Off**
+        * Start New Row: **Toggle Off**
 
-        - New Column: **Toggle Off**
+        * New Column: **Toggle Off**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button template: **Text with Icon**
+        * Button template: **Text with Icon**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Size: **Large**
+            * Size: **Large**
 
-            - Type: **Warning**
+            * Type: **Warning**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
             Click **OK**.
 
-        - Icon: **fa-pencil-square-o**
+        * Icon: **fa-pencil-square-o**
 
     ![close dialog](images/10-3-edit-profile-btn.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: **No Link Defined**
+        * Target: **No Link Defined**
 
-            - Target > Page: **26**
+            * Target > Page: **26**
 
-            - Set Items:
+            * Set Items:
 
-                | Name             | Value        |
+                | Name | Value |
                 | ---------------- | ------------ |
                 | P26\_USER\_ID | &USER_ID. |
-                {: title="List of Items"}
 
-            - Clear / Reset > Clear Cache: **26**
+                *List of Items*
+
+            * Clear / Reset > Clear Cache: **26**
 
             Click **OK**.
 
-        - Advanced > Custom Attributes: **style="background-color: transparent;"**
+        * Advanced > Custom Attributes: **style="background-color: transparent;"**
 
     <!-- ![close dialog](images/10-3-edit-profile-redirect.png " ") -->
     ![close dialog](images/10-3-edit-profile-redirect.1.png " ")
@@ -580,11 +581,11 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 3. Under **Page Definition**, enter/select the following:
 
-    - Page Number: **27**
+    * Page Number: **27**
 
-    - Name: **Reset Password**
+    * Name: **Reset Password**
 
-    - Page Mode: **Modal Dialog**
+    * Page Mode: **Modal Dialog**
 
     Click **Create Page**.
 
@@ -596,15 +597,15 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 5. In the property editor, enter/select the following:
 
-     - Under Identification:
+    * Under Identification:
 
-          - Name: **Reset Password**
+        * Name: **Reset Password**
 
-          - Type: **Form**
+        * Type: **Form**
 
-     - Source > Table name: **OBS\_USERS**
+    * Source > Table name: **OBS\_USERS**
 
-     - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/10-4-form-details.png " ")
 
@@ -626,11 +627,11 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 10. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P27\_NEW\_PASSWORD**
+        * Name: **P27\_NEW\_PASSWORD**
 
-        - Type: **Password**
+        * Type: **Password**
 
     ![close dialog](images/10-4-new-pass.png " ")
 
@@ -640,13 +641,13 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 12. In the property editor, enter/select the following:
 
-    - Identification > Name: **Password Not Null**
+    * Identification > Name: **Password Not Null**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Expression**
+        * Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below expression:
+        * PL/SQL Function Body: Copy and paste the below expression:
 
             ```
             <copy>
@@ -654,7 +655,7 @@ This task provides a comprehensive step-by-step process for creating and configu
             </copy>
             ```
 
-     - Error > Error Message: **Password must have some value**.
+    * Error > Error Message: **Password must have some value**.
 
     ![close dialog](images/10-4-new-password-val1.png " ")
 
@@ -664,17 +665,17 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 14. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P27\_CONFIRM\_NEW\_PASSWORD**
+        * Name: **P27\_CONFIRM\_NEW\_PASSWORD**
 
-        - Type: **Password**
+        * Type: **Password**
 
-    - Under Source
+    * Under Source
 
-        - Form Region: **Reset Password**
+        * Form Region: **Reset Password**
 
-        - Column: **PASSWORD**
+        * Column: **PASSWORD**
 
     ![close dialog](images/10-4-confirm-pass.png " ")
 
@@ -684,20 +685,21 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 16. In the property editor, enter/select the following:
 
-    - Identification > Name: **Compare Passwords**
+    * Identification > Name: **Compare Passwords**
 
-    - Under Validation:
+    * Under Validation:
 
-        - Type: **Expression**
+        * Type: **Expression**
 
-        - PL/SQL Function Body: Copy and paste the below expression:
+        * PL/SQL Function Body: Copy and paste the below expression:
+
         ```
         <copy>
         :P27_NEW_PASSWORD = :P27_CONFIRM_NEW_PASSWORD
         </copy>
         ```
 
-    - Error > Error Message: **Confirm Password and Password must be same.**
+    * Error > Error Message: **Confirm Password and Password must be same.**
 
     ![close dialog](images/10-4-confirm-password-val.png " ")
 
@@ -707,9 +709,9 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 18. In the property editor, enter/select the following:
 
-    - Identification > Name: **Buttons**
+    * Identification > Name: **Buttons**
 
-    - Appearance > Template: **Buttons Container**
+    * Appearance > Template: **Buttons Container**
 
     ![close dialog](images/10-4-button-region.png " ")
 
@@ -719,19 +721,19 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 20. In the property editor, enter/select the following:
 
-    - Identification > Button Name: **CANCEL**
+    * Identification > Button Name: **CANCEL**
 
-    - Layout > Slot: **Close**
+    * Layout > Slot: **Close**
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: click **No Link Defined**
+        * Target: click **No Link Defined**
 
-            - Target > Page: **15010**
+            * Target > Page: **15010**
 
-            - Clear / Reset > Clear Cache: **27**
+            * Clear / Reset > Clear Cache: **27**
 
             Click **OK**.
 
@@ -743,13 +745,13 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 22. In the property editor, enter/select the following:
 
-    - Identification > Name: **Cancel Dialog**
+    * Identification > Name: **Cancel Dialog**
 
     ![close dialog](images/10-4-dyn-name.png " ")
 
 23. Select **TRUE** Action, enter/select the following:
 
-    - Identification > Action: **Cancel Dialog**
+    * Identification > Action: **Cancel Dialog**
 
     ![close dialog](images/10-4-true-action27.png " ")
 
@@ -758,23 +760,23 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 25. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **SAVE**
+        * Button Name: **SAVE**
 
-        - Label: **Apply Changes**
+        * Label: **Apply Changes**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Appearance > Hot: **Toggle On**
+    * Appearance > Hot: **Toggle On**
 
-    - Behavior > Database Action: **SQL UPDATE Action**
+    * Behavior > Database Action: **SQL UPDATE Action**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **ITEM IS NOT NULL**
+        * Type: **ITEM IS NOT NULL**
 
-        - Item: **P27\_EMAIL**
+        * Item: **P27\_EMAIL**
 
     ![close dialog](images/10-4-save-btn27.png " ")
 
@@ -784,17 +786,17 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 27. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Reset Password**
+        * Name: **Reset Password**
 
-        - Type: **Form - Automatic Row Processing (DML)**
+        * Type: **Form - Automatic Row Processing (DML)**
 
-        - Form Region: **Reset Password**
+        * Form Region: **Reset Password**
 
-    - Settings > Prevent Lost Updates: **Toggle Off**
+    * Settings > Prevent Lost Updates: **Toggle Off**
 
-    - Success Message > Success Message: **Password Reset Completed Successfully!**
+    * Success Message > Success Message: **Password Reset Completed Successfully!**
 
     ![close dialog](images/10-4-change-password.png " ")
 
@@ -804,13 +806,13 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 29. In the property editor, enter/select the following:
 
-    - Identification > Name: **Go To My Profile**
+    * Identification > Name: **Go To My Profile**
 
-    - Under Behavior > Target: Click **No Link Defined**
+    * Under Behavior > Target: Click **No Link Defined**
 
-         - Target > Page: **15010**
+        * Target > Page: **15010**
 
-         - Clear / Reset > Clear Cache: **10**
+        * Clear / Reset > Clear Cache: **10**
 
          Click **OK**
 
@@ -828,48 +830,49 @@ This task provides a comprehensive step-by-step process for creating and configu
 
 33. In the property editor, enter/select the following:
 
-    - Identification > Name: **CHANGE\_PASSWORD**
+    * Identification > Name: **CHANGE\_PASSWORD**
 
-    - Layout > Sequence: **2**
+    * Layout > Sequence: **2**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button template: **Text with Icon**
+        * Button template: **Text with Icon**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Size: **Large**
+            * Size: **Large**
 
-            - Type: **Warning**
+            * Type: **Warning**
 
-            - Style: **Remove UI Decoration**
+            * Style: **Remove UI Decoration**
 
             Click **OK**.
 
-        - Icon: **fa-pencil-square-o**
+        * Icon: **fa-pencil-square-o**
 
     ![close dialog](images/10-4-change-pass-pro.png " ")
 
-    - Under Behavior:
+    * Under Behavior:
 
-        - Action: **Redirect to Page in this Application**
+        * Action: **Redirect to Page in this Application**
 
-        - Target: **No Link Defined**
+        * Target: **No Link Defined**
 
-            - Target > Page: **27**
+            * Target > Page: **27**
 
-            - Set Items:
+            * Set Items:
 
-                | Name             | Value        |
+                | Name | Value |
                 | ---------------- | ------------ |
                 | P27\_USER\_ID | &USER\_ID. |
-                {: title="List of Items"}
 
-            - Clear / Reset > Clear Cache: **27**
+                *List of Items*
+
+            * Clear / Reset > Clear Cache: **27**
 
             Click **OK**.
 
-        - Advanced > Custom Attributes: **style="background-color: transparent;"**
+        * Advanced > Custom Attributes: **style="background-color: transparent;"**
 
     <!-- ![close dialog](images/10-4-change-pass-link.png " ") -->
     ![close dialog](images/10-4-change-pass-link.1.png " ")
@@ -898,9 +901,9 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
 5. Under **Module Definition**, enter/select the following:
 
-    - Module Name: **User Images**
+    * Module Name: **User Images**
 
-    - Base Path: **images**
+    * Base Path: **images**
 
     Click **Create Module**.
 
@@ -916,20 +919,21 @@ In this task, you will learn how to configure RESTful services to handle user pr
 
 8. Under **Resource Handlers**, click **Create Handler** and enter/select the following:
 
-    - Resource Handler > Source type: **Media Resource**
+    * Resource Handler > Source type: **Media Resource**
 
-    - Source > Code: Copy and paste the following code:
+    * Source > Code: Copy and paste the following code:
 
         ```
         <copy>
         select mime_type, profile_pic from obs_users where user_id = :id
         </copy>
         ```
-   Click **Create Handler**.
 
-   ![close dialog](images/10-5-create-handler.png " ")
+    Click **Create Handler**.
 
-   ![close dialog](images/10-5-create-handler1.png " ")
+    ![close dialog](images/10-5-create-handler.png " ")
+
+    ![close dialog](images/10-5-create-handler1.png " ")
 
 9. Copy the **Full URL** and save it. We will use this information in Step 14.
 
@@ -954,7 +958,7 @@ In this task, you will learn how to configure RESTful services to handle user pr
     ![close dialog](images/10-5-create-app-item-rest.png " " )
 
 13. Now, you will create an Application Computation. To create an
-Application Computation, navigate back to the shared component and under **Application Logic**, click **Application Computations**.
+    Application Computation, navigate back to the shared component and under **Application Logic**, click **Application Computations**.
 
     ![close dialog](images/10-5-sc-rest1.png " " )
 
@@ -962,15 +966,15 @@ Application Computation, navigate back to the shared component and under **Appli
 
 14. Click **Create** and enter/select the following:
 
-    - Item > Computation Item: **PICTURE\_URL**
+    * Item > Computation Item: **PICTURE\_URL**
 
-    - Frequency > Computation Point: **Before Header**
+    * Frequency > Computation Point: **Before Header**
 
-    - Under Computation:
+    * Under Computation:
 
-        - Computation Type: **SQL Query (return single value):**
+        * Computation Type: **SQL Query (return single value):**
 
-        - Computation: Copy and paste the below code:
+        * Computation: Copy and paste the below code:
 
             ```
             <copy>
@@ -997,7 +1001,7 @@ Application Computation, navigate back to the shared component and under **Appli
 
 16. Click **Navigation Bar**, then click **&USERNAME.** to edit and update the following:
 
-    - User Defined Attributes > Badge value:
+    * User Defined Attributes > Badge value:
 
         ```
         <copy>
@@ -1021,9 +1025,9 @@ Application Computation, navigate back to the shared component and under **Appli
 
 19. Enter/select the following:
 
-    - Identification > Name: **Profile Photo**
+    * Identification > Name: **Profile Photo**
 
-    - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
     ![close dialog](images/10-5-profile-photo.png " " )
 
@@ -1033,25 +1037,25 @@ Application Computation, navigate back to the shared component and under **Appli
 
 21. In the property editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **PROFILE_DISPLAY**
+        * Name: **PROFILE_DISPLAY**
 
-        - Type: **Display Image**
+        * Type: **Display Image**
 
-    - Label > Label: Keep it empty
+    * Label > Label: Keep it empty
 
-    - Settings > Based on: **Image URL stored in Page Item Value**
+    * Settings > Based on: **Image URL stored in Page Item Value**
 
-    - Appearance > Template: **Optional-Above**
+    * Appearance > Template: **Optional-Above**
 
-    - Advanced > Custom Attributes : **style="width: 40vh; height: 50vh; display: block; margin: 0 auto;"**
+    * Advanced > Custom Attributes : **style="width: 40vh; height: 50vh; display: block; margin: 0 auto;"**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **Item**
+        * Type: **Item**
 
-        - Item: **PICTURE\_URL**
+        * Item: **PICTURE\_URL**
 
     ![close dialog](images/10-5-display-img.png " " )
 
@@ -1059,11 +1063,11 @@ Application Computation, navigate back to the shared component and under **Appli
 
 22. Select **My Books** region and enter/select the following:
 
-    - Under Layout:
+    * Under Layout:
 
-        - Sequence: **40**
+        * Sequence: **40**
 
-        - Slot: **Region Body**
+        * Slot: **Region Body**
 
     ![close dialog](images/10-5-my-books-update.png " " )
 
@@ -1075,9 +1079,9 @@ In this task, you will access the My Profile page to view purchased books, updat
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/10-6-1-run-app.png " ")
 
@@ -1111,5 +1115,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: PPankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: PPankaj Goyal, Member Technical Staff, November 2025

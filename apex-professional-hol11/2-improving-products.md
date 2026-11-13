@@ -12,25 +12,25 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Rearrange and enhance search facets to improve usability.
+* Rearrange and enhance search facets to improve usability.
 
-- Customize the product cards to display more relevant information.
+* Customize the product cards to display more relevant information.
 
-- Add dynamic actions to make the page more interactive and responsive.
+* Add dynamic actions to make the page more interactive and responsive.
 
-- Understand how different filter types contribute to an efficient search experience.
+* Understand how different filter types contribute to an efficient search experience.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCreateUsingDynamicActions-OnlineShoppingApplication.sql)**
+* **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCreateUsingDynamicActions-OnlineShoppingApplication.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
 ## Task 1: Navigate to the Products Page
 
@@ -71,11 +71,11 @@ You’ll modify the settings of the faceted search to make it more intuitive for
 
 2. In the Property Editor (right pane), click **Attributes** and enter/select the following:
 
-    - Under Settings:
+    * Under Settings:
 
-        - Total Row Count Label: **Total Products**
+        * Total Row Count Label: **Total Products**
 
-        - Show Charts: **No**
+        * Show Charts: **No**
 
     ![Change faceted search](./images/change-faceted-search-attr.png " ")
 
@@ -119,23 +119,23 @@ This task focuses on updating the design and layout of the cards that display pr
 
     ![Change SQL Query](./images/change-sql-query.png " ")
 
-    - Under Appearance > Template Options:
+    * Under Appearance > Template Options:
 
-        - Click **Use Template Defaults**.
+        * Click **Use Template Defaults**.
 
-        - Common > Style: **Style A**
+        * Common > Style: **Style A**
 
-        - Click **OK**
+        * Click **OK**
 
     ![Edit Template options](./images/template-options.png " ")
 
 2. In the Property Editor, navigate to **Attributes** and enter/select the following:
 
-    - Under Subtitle:
+    * Under Subtitle:
 
-        - Set Advanced Formatting: **Toggle On**
+        * Set Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Enter the following:
+        * HTML Expression: Enter the following:
 
         ```
         <copy>
@@ -147,19 +147,19 @@ This task focuses on updating the design and layout of the cards that display pr
         </copy>
         ```
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **BLOB Column**
+        * Source: **BLOB Column**
 
-        - BLOB Column: **PRODUCT_IMAGE**
+        * BLOB Column: **PRODUCT_IMAGE**
 
-        - Position: **First**
+        * Position: **First**
 
-        - Appearance: **Widescreen**
+        * Appearance: **Widescreen**
 
-        - Sizing: **Fit**
+        * Sizing: **Fit**
 
-    - Card > Primary Key Column 1: **PRODUCT_ID**
+    * Card > Primary Key Column 1: **PRODUCT_ID**
 
     ![Add Primary key](./images/change-attributes1.png " ")
 
@@ -181,21 +181,21 @@ You’ll add interactive actions to the cards, such as linking to detailed produ
 
 3. In the Property Editor (right pane), enter/select the following:
 
-    - Identification > Type: **Full Card**
+    * Identification > Type: **Full Card**
 
-    - Link > Target: Click **No Link Defined**
+    * Link > Target: Click **No Link Defined**
 
-        - Page: **18**
+        * Page: **18**
 
-        - Set Items:
+        * Set Items:
 
-            | Name             | Value        |
+            | Name | Value |
             | ---------------- | ------------ |
             | P18\_PRODUCT\_ID | &PRODUCT_ID. |
 
-        - Clear Cache: **18**
+        * Clear Cache: **18**
 
-        - Click **OK**.
+        * Click **OK**.
 
     ![Add Link Attributes](./images/create-action2.png " ")
 
@@ -207,9 +207,9 @@ You’ll add interactive actions to the cards, such as linking to detailed produ
 
 In this task, you will create two dynamic actions:
 
-- To show a success message when a product is added/edited/removed from the shopping cart
+* To show a success message when a product is added/edited/removed from the shopping cart
 
-- To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
+* To update the badge and icon shown in the navigation bar after the customer has added/edited/removed a product from the shopping cart
 
 1. Navigate to the **Dynamic Actions** tab (left pane).
 
@@ -219,27 +219,27 @@ In this task, you will create two dynamic actions:
 
 3. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Show Success Message**
+    * Identification > Name: **Show Success Message**
 
-    - Under Execution:
+    * Under Execution:
 
-        - Type: **Debounce**
+        * Type: **Debounce**
 
-        - Time: **400**
+        * Time: **400**
 
-    - Under When:
+    * Under When:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Search Results**
+        * Region: **Search Results**
 
       ![Show success Message](./images/create-da02.png " ")
 
 4. Navigate to **Refresh** Action and update the following:
 
-    - Identification > Action: **Execute JavaScript Code**
+    * Identification > Action: **Execute JavaScript Code**
 
-    - Settings > Code: Enter the following JavaScript Code:
+    * Settings > Code: Enter the following JavaScript Code:
 
         ```
         <copy>
@@ -265,25 +265,25 @@ In this task, you will create two dynamic actions:
 
 6. In the Property Editor, enter/select the following:
 
-    - Identification > Name: **Update Shopping Cart Header**
+    * Identification > Name: **Update Shopping Cart Header**
 
-    - Under Execution:
+    * Under Execution:
 
-        - Type: **Throttle**
+        * Type: **Throttle**
 
-        - Time: **400**
+        * Time: **400**
 
-    - Under When:
+    * Under When:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Search Results**
+        * Region: **Search Results**
 
-    - Under Client-side Condition:
+    * Under Client-side Condition:
 
-        - Type: **JavaScript expression**
+        * Type: **JavaScript expression**
 
-        - JavaScript Expression: Enter the following:
+        * JavaScript Expression: Enter the following:
 
             ```
             <copy>
@@ -295,9 +295,9 @@ In this task, you will create two dynamic actions:
 
 7. Navigate to **Refresh** Action.
 
-    - Identification > Action: **Execute JavaScript Code**
+    * Identification > Action: **Execute JavaScript Code**
 
-    - Settings > Code: Enter the following JavaScript Code:
+    * Settings > Code: Enter the following JavaScript Code:
 
         ```
         <copy>
@@ -316,9 +316,9 @@ In this task, you will create two dynamic actions:
      ![Create Opposite Action](./images/create-2-opp-action.png " ")
 
 9. In the Property Editor, update the following:
-    - Settings > Code: Copy and Replace with the following JavaScript Code:
+    * Settings > Code: Copy and Replace with the following JavaScript Code:
 
-         ```
+        ```
         <copy>
         // Update Badge Text
         apex.jQuery(".js-shopping-cart-item .t-Button-badge").text('');
@@ -348,5 +348,5 @@ You’re now ready to move on to the next lab and continue building on these imp
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

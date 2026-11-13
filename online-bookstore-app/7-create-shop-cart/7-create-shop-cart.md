@@ -10,16 +10,16 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Build a Shopping Cart Page to display and manage cart items.
-- Build an Order Information Page to show order details and totals.
-- Create a Navigation Bar Entry for quick access to cart and orders.
-- Build a My Books Page to list purchased or owned books.
-- Create Application Processes to update cart and order data.
-- Create Application Computations to set values needed across these pages.
+* Build a Shopping Cart Page to display and manage cart items.
+* Build an Order Information Page to show order details and totals.
+* Create a Navigation Bar Entry for quick access to cart and orders.
+* Build a My Books Page to list purchased or owned books.
+* Create Application Processes to update cart and order data.
+* Create Application Computations to set values needed across these pages.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab6.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab6.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab6.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 3.
 
 ## Task 1: Build a Shopping Cart Page
 
@@ -39,17 +39,17 @@ In this task, you develop a new page in the application to display the shopping 
 
 4. In Create Blank Page dialog, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Page Number: **17**
+        * Page Number: **17**
 
-        - Name: **Shopping Cart**
+        * Name: **Shopping Cart**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
         Click **Create Page**.
 
@@ -61,17 +61,17 @@ In this task, you develop a new page in the application to display the shopping 
 
 6. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Shopping Cart**
+        * Name: **Shopping Cart**
 
-        - Type: **Content Row**
+        * Type: **Content Row**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
 
             ```
             <copy>
@@ -101,11 +101,11 @@ In this task, you develop a new page in the application to display the shopping 
 
 7. In the right pane, select **Attributes** and enter the following:
 
-    - Under Settings
+    * Under Settings
 
-        - Title: **&TITLE.**
+        * Title: **&TITLE.**
 
-        - Description: Copy and paste the code below:
+        * Description: Copy and paste the code below:
 
             ```
             <copy>
@@ -117,25 +117,25 @@ In this task, you develop a new page in the application to display the shopping 
             </copy>
             ```
 
-         - Display Avatar: **Toggle On**
+        * Display Avatar: **Toggle On**
 
-    - Under Avatar:
+    * Under Avatar:
 
-        - Type: **Image**
+        * Type: **Image**
 
-        - Image:
+        * Image:
 
-            - Source: **URL**
+            * Source: **URL**
 
-            - URL: **&BOOK_IMAGE.**
+            * URL: **&BOOK_IMAGE.**
 
             Click **OK**
 
-        - Shape: **No shape**
+        * Shape: **No shape**
 
-        - Size: **Extra Extra Large**
+        * Size: **Extra Extra Large**
 
-    - Messages > When No Data Found: **Your shopping cart is empty!**
+    * Messages > When No Data Found: **Your shopping cart is empty!**
 
     ![close dialog](images/create-region-att.png " ")
 
@@ -145,19 +145,19 @@ In this task, you develop a new page in the application to display the shopping 
 
 9. In the Property Editor, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-         - Position: **Primary Actions**
+        * Position: **Primary Actions**
 
-         - Template: **Button**
+        * Template: **Button**
 
-         - Label: **-**
+        * Label: **-**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to URL**
+        * Type: **Redirect to URL**
 
-        - Target > URL: **#action$decrease-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+        * Target > URL: **#action$decrease-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
 
         Click **OK**.
 
@@ -169,27 +169,27 @@ In this task, you develop a new page in the application to display the shopping 
 
 11. In the Property Editor, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-         - Position: **Primary Actions**
+        * Position: **Primary Actions**
 
-         - Template: **Button**
+        * Template: **Button**
 
-         - Label: **Remove**
+        * Label: **Remove**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to URL**
+        * Type: **Redirect to URL**
 
-        - Target > URL: **#action$remove-cart?id=&BOOK_ID.**
+        * Target > URL: **#action$remove-cart?id=&BOOK_ID.**
 
         Click **OK**.
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Display Type: **Icon**
+        * Display Type: **Icon**
 
-        - Icon: **fa-trash**
+        * Icon: **fa-trash**
 
     ![close dialog](images/primary-action.png " ")
 
@@ -199,19 +199,19 @@ In this task, you develop a new page in the application to display the shopping 
 
 13. In the Property Editor, enter the following:
 
-    - Under Identification:
+    * Under Identification:
 
-         - Position: **Primary Actions**
+        * Position: **Primary Actions**
 
-         - Template: **Button**
+        * Template: **Button**
 
-         - Label: **+**
+        * Label: **+**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to URL**
+        * Type: **Redirect to URL**
 
-        - Target > URL: **#action$increase-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
+        * Target > URL: **#action$increase-cart?id=&BOOK_ID.&quantity=&QUANTITY.**
 
         Click **OK**.
 
@@ -223,11 +223,12 @@ In this task, you develop a new page in the application to display the shopping 
 
 15. Create the following page items:
 
-    | Name            |  Type   | Value Protected |
-    | --------------- |  ------ | --------------- |
+    | Name | Type | Value Protected |
+    | --------------- | ------ | --------------- |
     | P17\_BOOK\_ID | Hidden | Toggle Off |
     | P17\_QUANTITY | Hidden | Toggle Off |
-    {: title="List of Page Items"}
+
+    *List of Page Items*
 
 
     ![close dialog](images/book-id.png " ")
@@ -236,7 +237,7 @@ In this task, you develop a new page in the application to display the shopping 
 
 16. Click **Page 17: Shopping Cart** and under JavaScript, **Execute when Page Loads**: Copy and paste the below code:
 
-     ```
+    ```
     <copy>
     apex.actions.add([{
     name: "remove-cart",
@@ -347,7 +348,7 @@ In this task, you develop a new page in the application to display the shopping 
     </copy>
     ```
 
-   Click **Save and Compile**.
+    Click **Save and Compile**.
 
     ![close dialog](images/package-body1.png " ")
 
@@ -365,12 +366,13 @@ In this task, you develop a new page in the application to display the shopping 
 
 25. Create the following three page items:
 
-    | Name            |  Type   | Label |
-    | --------------- |  ------ | --------------- |
-    | P17\_ORDER\_ID | Hidden |  |
-    | P17\_NO\_OF\_BOOKS |Display Only | Number of Books |
-    | P17\_TOTAL | Display Only | Grand Total|
-    {: title="List of Page Items"}
+    | Name | Type | Label |
+    | --------------- | ------ | --------------- |
+    | P17\_ORDER\_ID | Hidden | |
+    | P17\_NO\_OF\_BOOKS | Display Only | Number of Books |
+    | P17\_TOTAL | Display Only | Grand Total |
+
+    *List of Page Items*
 
     ![close dialog](images/order-id.png " ")
 
@@ -392,28 +394,28 @@ In this task, you create buttons for removing items from the cart and proceeding
 
 2. In the Property Editor, enter the following:
 
-    - Under Computation:
+    * Under Computation:
 
-        - Type: **SQL Query (return single value)**
+        * Type: **SQL Query (return single value)**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
-          ```
-          <copy>
-        WITH cart AS (
-            SELECT
-                n001 AS book_id,
-                n002 AS quantity
-            FROM apex_collections
-            WHERE collection_name = 'BOOKS'
-)
-SELECT
-    SUM(c.quantity) AS total_quantity
-FROM cart c
-JOIN obs_books b
-    ON b.book_id = c.book_id;
-          </copy>
-          ```
+        ```
+        <copy>
+                WITH cart AS (
+                    SELECT
+                        n001 AS book_id,
+                        n002 AS quantity
+                    FROM apex_collections
+                    WHERE collection_name = 'BOOKS'
+        )
+        SELECT
+            SUM(c.quantity) AS total_quantity
+        FROM cart c
+        JOIN obs_books b
+            ON b.book_id = c.book_id;
+        </copy>
+        ```
 
     ![close dialog](images/comp-no-of-books.png " ")
 
@@ -423,26 +425,26 @@ JOIN obs_books b
 
 4. In the Property Editor, enter/select the following:
 
-    - Under Computation:
+    * Under Computation:
 
-        - Type: **SQL Query (return single value)**
+        * Type: **SQL Query (return single value)**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
 
             ```
             <copy>
-            WITH cart AS (
-                SELECT
-                    n001 AS book_id,
-                    n002 AS quantity
-                FROM apex_collections
-                WHERE collection_name = 'BOOKS'
-)
-SELECT
-    ROUND(SUM(b.price * ((100 - b.discount) / 100) * c.quantity), 0) AS total_cost
-FROM cart c
-JOIN obs_books b
-    ON b.book_id = c.book_id;
+                        WITH cart AS (
+                            SELECT
+                                n001 AS book_id,
+                                n002 AS quantity
+                            FROM apex_collections
+                            WHERE collection_name = 'BOOKS'
+            )
+            SELECT
+                ROUND(SUM(b.price * ((100 - b.discount) / 100) * c.quantity), 0) AS total_cost
+            FROM cart c
+            JOIN obs_books b
+                ON b.book_id = c.book_id;
             </copy>
             ```
 
@@ -454,27 +456,27 @@ JOIN obs_books b
 
 6. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Clear**
+        * Button Name: **Clear**
 
-        - Label: **Clear Shopping Cart**
+        * Label: **Clear Shopping Cart**
 
-    - Layout > Slot: **Change**
+    * Layout > Slot: **Change**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Template Options: Click **Use Template Defaults, Left** 
+        * Template Options: Click **Use Template Defaults, Left**
 
-            - Size: **Small**
+            * Size: **Small**
 
-            - Type: **Danger**
+            * Type: **Danger**
 
             Click **OK**
 
-        - Icon: **fa-cart-empty**
+        * Icon: **fa-cart-empty**
 
     ![close dialog](images/clear-btn.png " ")
 
@@ -484,23 +486,23 @@ JOIN obs_books b
 
 8. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Proceed**
+        * Button Name: **Proceed**
 
-        - Label: **Proceed to Purchase**
+        * Label: **Proceed to Purchase**
 
-    - Layout > Slot: **Create**
+    * Layout > Slot: **Create**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Hot: **Toggle On**
+        * Hot: **Toggle On**
 
-        - Template Options: Click **Use Template Defaults** 
+        * Template Options: Click **Use Template Defaults**
 
-            - Size: **Small**
+            * Size: **Small**
 
-            - Type: **Success**
+            * Type: **Success**
 
             Click **OK**
 
@@ -508,11 +510,11 @@ JOIN obs_books b
 
 9. Select **Order Information** and in the Property Editor, enter/select the following:
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Item is NOT NULL**
+        * Type: **Item is NOT NULL**
 
-        - Item: **SHOPPING\_CART\_ITEMS**
+        * Item: **SHOPPING\_CART\_ITEMS**
 
     ![close dialog](images/order-information-server-side.png " ")
 
@@ -526,29 +528,29 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 2. In the Property Editor, enter the following:
 
-     - Under Identification: 
+    * Under Identification:
 
-         - Name: **Remove from Cart**
+        * Name: **Remove from Cart**
 
-         - Type: **Invoke API**  
+        * Type: **Invoke API**  
 
-     - Under Settings: 
+    * Under Settings:
 
-         - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure or Function: **REMOVE\_BOOK**
+        * Procedure or Function: **REMOVE\_BOOK**
 
-     - Under Server-side Condition:
+    * Under Server-side Condition:
 
-         - Type: **Request=Value**
+        * Type: **Request=Value**
 
-         - Value: **REMOVE\_FROM\_CART**
+        * Value: **REMOVE\_FROM\_CART**
 
     ![close dialog](images/remove-from-cart-process.png " ")
 
 3. Under **Remove from Cart** process, expand **Parameters** and select **p\_book**.
 
-     - p_book > Item: **P17\_BOOK\_ID**
+    * p_book > Item: **P17\_BOOK\_ID**
 
     ![close dialog](images/remove-p-book.png " ")
 
@@ -558,31 +560,31 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 5. In the Property Editor, enter the following:
 
-     - Under Identification:
+    * Under Identification:
 
-         - Name: **Increase Cart by 1**
+        * Name: **Increase Cart by 1**
 
-         - Type: **Invoke API**  
+        * Type: **Invoke API**  
 
-     - Under Settings:
+    * Under Settings:
 
-         - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure or Function: **INCREASE\_BOOK\_IN\_CART**
+        * Procedure or Function: **INCREASE\_BOOK\_IN\_CART**
 
-     - Under Server-side Condition:
+    * Under Server-side Condition:
 
-         - Type: **Request=Value**
+        * Type: **Request=Value**
 
-         - Value: **INCREASE\_CART**
+        * Value: **INCREASE\_CART**
 
     ![close dialog](images/remove-from-cart-process1.png " ")
 
 6. Under **Increase Cart by 1** process, expand **Parameters** and enter the following.
 
-     - p\_book > Item: **P17\_BOOK\_ID**
+    * p\_book > Item: **P17\_BOOK\_ID**
 
-     - p\_quantity > Item: **P17\_QUANTITY**
+    * p\_quantity > Item: **P17\_QUANTITY**
 
     ![close dialog](images/remove-p-book1.png " ")
     ![close dialog](images/remove-p-book2.png " ")
@@ -593,31 +595,31 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 8. In the Property Editor, enter the following:
 
-     - Under Identification:
+    * Under Identification:
 
-         - Name: **Decrease Cart by 1**
+        * Name: **Decrease Cart by 1**
 
-         - Type: **Invoke API**  
+        * Type: **Invoke API**  
 
-     - Under Settings:
+    * Under Settings:
 
-         - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure or Function: **DECREASE\_BOOK\_IN\_CART**
+        * Procedure or Function: **DECREASE\_BOOK\_IN\_CART**
 
-     - Under Server-side Condition:
+    * Under Server-side Condition:
 
-         - Type: **Request=Value**
+        * Type: **Request=Value**
 
-         - Value: **DECREASE\_CART**
+        * Value: **DECREASE\_CART**
 
     ![close dialog](images/remove-from-cart-process2.png " ")
 
 9. Under **Decrease Cart by 1** process, expand **Parameters** and enter the following.
 
-     - p\_book > Item: **P17\_BOOK\_ID**
+    * p\_book > Item: **P17\_BOOK\_ID**
 
-     - p\_quantity > Item: **P17\_QUANTITY**
+    * p\_quantity > Item: **P17\_QUANTITY**
 
     ![close dialog](images/remove-p-book3.png " ")
     ![close dialog](images/remove-p-quantity.png " ")
@@ -628,31 +630,32 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 11. In the Property Editor, enter the following:
 
-     - Under Identification:
+    * Under Identification:
 
-         - Name: **Checkout**
+        * Name: **Checkout**
 
-         - Type: **Invoke API**  
+        * Type: **Invoke API**  
 
-     - Under Settings:
+    * Under Settings:
 
-         - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure or Function: **CREATE\_ORDER**
+        * Procedure or Function: **CREATE\_ORDER**
 
-     - Success Message > Success Message: **Order successfully created: &P17\_ORDER\_ID.**
+    * Success Message > Success Message: **Order successfully created: &P17\_ORDER\_ID.**
 
-     - Server-side Condition > When Button Pressed: **Proceed**
+    * Server-side Condition > When Button Pressed: **Proceed**
 
     ![close dialog](images/checkout-param.png " ")
 
 12. Under **Checkout** process, expand **Parameters** and update the following:
 
-      | Parameter       |  Type   | Item |
-      | --------------- |  ------ | --------------- |
+      | Parameter | Type | Item |
+      | --------------- | ------ | --------------- |
       | p\_user\_id | Item | USER\_ID |
       | p\_order\_id | Item | P17\_ORDER\_ID |
-      {: title="List of Parameters"}
+
+      *List of Parameters*
 
     ![close dialog](images/user-id.png " ")
     ![close dialog](images/order-id1.png " ")
@@ -663,19 +666,19 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 14. In the Property Editor, enter the following:
 
-     - Under Identification:
+    * Under Identification:
 
-         - Name: **Clear Shopping Cart**
+        * Name: **Clear Shopping Cart**
 
-         - Type: **Invoke API**  
+        * Type: **Invoke API**  
 
-     - Under Settings:
+    * Under Settings:
 
-         - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-         - Procedure or Function: **CLEAR\_CART**
+        * Procedure or Function: **CLEAR\_CART**
 
-     - Server-side Condition > When Button Pressed: **Clear**
+    * Server-side Condition > When Button Pressed: **Clear**
 
     ![close dialog](images/clear-sho-cart-process.png " ")
 
@@ -685,17 +688,17 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 16. In the Property Editor, enter the following:
 
-     - Identification > Name: **Go To Books**
+    * Identification > Name: **Go To Books**
 
-     - Under Behavior > Target: Click **No Link Defined**
+    * Under Behavior > Target: Click **No Link Defined**
 
-          - Page: **10**
+        * Page: **10**
 
-          - Clear Cache: **10**
+        * Clear Cache: **10**
 
         Click **OK**.
 
-     - Server-side Condition > When Button Pressed: **Clear**
+    * Server-side Condition > When Button Pressed: **Clear**
 
     ![close dialog](images/7-3-16-go-to-books.png " ")
 
@@ -705,24 +708,25 @@ In this task, you create page processes to invoke PL/SQL procedures to manage ca
 
 18. In the Property Editor, enter the following:
 
-     - Identification > Name: **Go To Orders**
+    * Identification > Name: **Go To Orders**
 
-     - Behavior > Target: Click **No Link Defined**
+    * Behavior > Target: Click **No Link Defined**
 
-          - Target > Page: **16**
+        * Target > Page: **16**
 
-          - Set Items:
+        * Set Items:
 
-            | Name             | Value        |
+            | Name | Value |
             | ---------------- | ------------ |
             | P16\_ORDER\_ID | &P17\_ORDER\_ID. |
-            {: title="List of Items"}
 
-          - Clear / Reset > Clear Cache:: **16**
+            *List of Items*
+
+        * Clear / Reset > Clear Cache:: **16**
 
           Click **OK**.
 
-     - Server-side Condition > When Button Pressed: **Proceed**
+    * Server-side Condition > When Button Pressed: **Proceed**
 
     ![close dialog](images/go-to-orders.png " ")
 
@@ -748,17 +752,17 @@ In this task, you'll build an Order Information page to display order details an
 
 4. In Create Blank Page dialog, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Page Number: **16**
+        * Page Number: **16**
 
-        - Name: **Order Information**
+        * Name: **Order Information**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
         Click **Create Page**.
 
@@ -770,17 +774,17 @@ In this task, you'll build an Order Information page to display order details an
 
 6. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Thank You for purchasing!**
+        * Name: **Thank You for purchasing!**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Content Block**
+        * Template: **Content Block**
 
-        - Template Options: Click **Use Template Defaults, Large**
+        * Template Options: Click **Use Template Defaults, Large**
 
-            - Select **Show Region Icon**
+            * Select **Show Region Icon**
 
         Click **OK**
 
@@ -792,11 +796,11 @@ In this task, you'll build an Order Information page to display order details an
 
 8. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P16\_ORDER\_ID**
+        * Name: **P16\_ORDER\_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
      ![close dialog](images/page-item-prop.png " ")
 
@@ -806,7 +810,7 @@ In this task, you'll build an Order Information page to display order details an
 
 10. In the Property Editor, enter/select the following:
 
-    - Under Identification > Name: **Order Id: &P16\_ORDER\_ID.**
+    * Under Identification > Name: **Order Id: &P16\_ORDER\_ID.**
 
     ![close dialog](images/sub-region-prop.png " ")
 
@@ -816,17 +820,17 @@ In this task, you'll build an Order Information page to display order details an
 
 12. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Order Details**
+        * Name: **Order Details**
 
-        - Type: **Classic Report**
+        * Type: **Classic Report**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below query:
+        * SQL Query: Copy and paste the below query:
 
             ```
             <copy>
@@ -872,9 +876,9 @@ In this task, you'll build an Order Information page to display order details an
 
 18. Select **Order Details**, navigate to **Attributes**, enter/select the following:
 
-    - Under Appearance > Template: **Value Attribute Pairs - Column**
+    * Under Appearance > Template: **Value Attribute Pairs - Column**
 
-    - Under Pagination > Type: **No Pagination (Show All Rows)**.
+    * Under Pagination > Type: **No Pagination (Show All Rows)**.
 
     ![close dialog](images/order-details-attributes.png " ")
 
@@ -884,17 +888,17 @@ In this task, you'll build an Order Information page to display order details an
 
 20. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Items**
+        * Name: **Items**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below query:
+        * SQL Query: Copy and paste the below query:
 
             ```
             <copy>
@@ -916,17 +920,17 @@ In this task, you'll build an Order Information page to display order details an
 
 21. Navigate to **Attributes**, enter/select the following:
 
-    - Appearance > Layout: **Float**
+    * Appearance > Layout: **Float**
 
-    - Card > Primary key column 1: **BOOK_ID**
+    * Card > Primary key column 1: **BOOK_ID**
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: **Toggle On**
+        * Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and paste the below HTML Code:
+        * HTML Expression: Copy and paste the below HTML Code:
 
             ```
             <copy>
@@ -935,11 +939,11 @@ In this task, you'll build an Order Information page to display order details an
             </copy>
             ```
 
-    - Under Media:
+    * Under Media:
 
-        - Advanced Formatting: **Toggle On**
+        * Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and paste the below HTML Code:
+        * HTML Expression: Copy and paste the below HTML Code:
 
             ```
             <copy>
@@ -947,7 +951,7 @@ In this task, you'll build an Order Information page to display order details an
             </copy>
             ```
 
-        - Position: **First**
+        * Position: **First**
 
     ![close dialog](images/subregion-prop-attr.png " ")
 
@@ -963,27 +967,27 @@ In this task, you will add a navigation bar entry that links to the My Books pag
 
 2. Under **Navigation and Search**, select **Navigation Bar List**.
 
-   ![close dialog](images/navi-bar-list.png " ")
+    ![close dialog](images/navi-bar-list.png " ")
 
 3. Click **Navigation Bar**.
 
-   ![close dialog](images/navi-bar.png " ")
+    ![close dialog](images/navi-bar.png " ")
 
 4. Click **Create List Entry**.
 
-   ![close dialog](images/7-5-4-navi-create-entry1.png " ")
+    ![close dialog](images/7-5-4-navi-create-entry1.png " ")
 
 5. Enter the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **8**
+        * Sequence: **8**
 
-        - Image/Class: **fa-book**
+        * Image/Class: **fa-book**
 
-        - List Entry Label: **My Books**
+        * List Entry Label: **My Books**
 
-    - Target > Page: **20**
+    * Target > Page: **20**
 
     Click **Create List Entry**.
 
@@ -1007,17 +1011,17 @@ In this task, you'll create a My Books page to display books purchased by the us
 
 4. In Create Blank Page dialog, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Page Number: **20**
+        * Page Number: **20**
 
-        - Name: **My Books**
+        * Name: **My Books**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
         Click **Create Page**.
 
@@ -1029,17 +1033,17 @@ In this task, you'll create a My Books page to display books purchased by the us
 
 6. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **My Books**
+        * Name: **My Books**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below query:
+        * SQL Query: Copy and paste the below query:
 
             ```
             <copy>
@@ -1059,34 +1063,35 @@ In this task, you'll create a My Books page to display books purchased by the us
             </copy>
             ```
 
-    - Order By:
+    * Order By:
 
-        - Type: Item
+        * Type: Item
 
-        - Item: Click **No Order By Item** and enter the following and click **OK**:
+        * Item: Click **No Order By Item** and enter the following and click **OK**:
 
-            | Clause |  Key | Display |
-            | --- |  --- | --- |
-            | "TITLE"asc  | TITLE| Title |
-            | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price|
-            | "QUANTITY"asc| QUANTITY | Quantity |
-            {: title="List of Items"}
+            | Clause | Key | Display |
+            | --- | --- | --- |
+            | "TITLE"asc | TITLE | Title |
+            | "TOTAL_PRICE"asc | TOTAL\_PRICE | Price |
+            | "QUANTITY"asc | QUANTITY | Quantity |
+
+            *List of Items*
 
     ![close dialog](images/region-details.png " ")
 
 7. Navigate to **Attributes**, enter/select the following:
 
-    - Appearance > Layout: **Float**
+    * Appearance > Layout: **Float**
 
-    - Card > Primary key column 1: **BOOK\_ID**.
+    * Card > Primary key column 1: **BOOK\_ID**.
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
-    - Under Secondary Body:
+    * Under Secondary Body:
 
-        - Advanced Formatting: **Toggle On**
+        * Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and paste the below HTML Code:
+        * HTML Expression: Copy and paste the below HTML Code:
 
             ```
             <copy>
@@ -1098,11 +1103,11 @@ In this task, you'll create a My Books page to display books purchased by the us
             </copy>
             ```
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **Image URL**
+        * Source: **Image URL**
 
-        - URL: **&BOOK_IMAGE.**
+        * URL: **&BOOK_IMAGE.**
 
     ![close dialog](images/region-details-att.png " ")
 
@@ -1114,9 +1119,9 @@ In this task, you will navigate to the Search Books page, select a book to purch
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/7-7-1-run-app.png " ")
 
@@ -1150,5 +1155,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

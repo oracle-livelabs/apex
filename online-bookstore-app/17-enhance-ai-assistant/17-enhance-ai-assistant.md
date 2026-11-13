@@ -10,11 +10,11 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Create Multiple RAG Data Sources to enhance AI responses for order details.
+* Create Multiple RAG Data Sources to enhance AI responses for order details.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab16.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab16.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab16.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 10.
 
 ## Task 1: Create Multiple RAG Data Source
 
@@ -38,11 +38,11 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 5. Enter/select the following below:
 
-    - Server-Side Condition:
+    * Server-Side Condition:
 
-        - Type: **Any User Prompt contains**
+        * Type: **Any User Prompt contains**
 
-        - Expression 1: **price, title, author, category, discount, publisher, contributor, description**
+        * Expression 1: **price, title, author, category, discount, publisher, contributor, description**
 
 6. Click **Apply Changes**.
 
@@ -54,11 +54,11 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 8. Enter/select the following properties:
 
-    - Identification > Name: **Orders**
+    * Identification > Name: **Orders**
 
-    - Description > Description: **Order Details**
+    * Description > Description: **Order Details**
 
-    - Source > SQL Query: Copy and paste the below query:
+    * Source > SQL Query: Copy and paste the below query:
 
         ```
         <copy>
@@ -84,11 +84,11 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
         </copy>
         ```
 
-    - Server-Side Condition:
+    * Server-Side Condition:
 
-        - Type: **Any User Prompt contains**
+        * Type: **Any User Prompt contains**
 
-        - Expression 1: **order,purchase**
+        * Expression 1: **order,purchase**
 
     Click **Create**
 
@@ -96,7 +96,7 @@ In this task, you will enhance the AI configurations by adding a new RAG source 
 
 9. Enter/select the following properties:
 
-    - Generative AI > System Prompt: Copy and paste the below prompt:
+    * Generative AI > System Prompt: Copy and paste the below prompt:
 
         ```
         <copy>
@@ -140,5 +140,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

@@ -6,27 +6,27 @@ Oracle APEX is a low-code application platform for Oracle Database. APEX Applica
 
 In this workshop, you learn to obtain an APEX workspace. Once you have an APEX workspace provisioned, you explore the components like App Builder, SQL Workshop and Gallery in APEX. Later, you also learn to install a Sample Reporting App from the Gallery and run the app.
 
-Estimated Time: 10 minutes
+Estimated Workshop Time: 10 minutes
 
 ### Objectives
 
 In this workshop, you will:
 
-- Obtain a free APEX development environment.
+* Obtain a free APEX development environment.
 
-- Navigate through the major Components of Oracle APEX.
+* Navigate through the major Components of Oracle APEX.
 
-- Install and run a Packaged Application.
+* Install and run a Packaged Application.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fsample-reporting.sql)**
+* **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fsample-reporting.sql)**
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fonline-shopping-app.sql)**
+* **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fonline-shopping-app.sql)**
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects.sql)**
+* **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Fdemo-projects.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -38,8 +38,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](2-install-run-sample-application/2-hands-on-lab-01.md#acknowledgements).

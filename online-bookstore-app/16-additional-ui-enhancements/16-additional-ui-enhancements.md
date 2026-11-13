@@ -10,18 +10,18 @@ Estimated Time: 30 minutes
 
 In this lab, you will:
 
-- Add Footer Text to the App.
-- Manage the Navigation Menu for improved layout.
-- Integrate a Global Search Bar across the app.
-- Use Email Templates to send emails.
-- Set a Default Profile Picture for new users.
-- Create a My Orders Page to list user purchases.
+* Add Footer Text to the App.
+* Manage the Navigation Menu for improved layout.
+* Integrate a Global Search Bar across the app.
+* Use Email Templates to send emails.
+* Set a Default Profile Picture for new users.
+* Create a My Orders Page to list user purchases.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab15.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 9.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab15.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab15.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 9.
 
-## Task 1 Add Built with APEX To Footer
+## Task 1: Add Built with APEX To Footer
 
 In this task, you will update the application's footer to display "Built with APEX". This helps showcase the platform used for development.
 
@@ -79,11 +79,11 @@ In this task, you will integrate a global search feature that remains accessible
 
 4. Enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Redirect to Home on Search**
+        * Name: **Redirect to Home on Search**
 
-        - Point: **On Submit: After Page Submission - After Computations and Validations**
+        * Point: **On Submit: After Page Submission - After Computations and Validations**
 
        Click **Next**.
 
@@ -91,7 +91,7 @@ In this task, you will integrate a global search feature that remains accessible
 
 5. Enter the following:
 
-    - Source > Code: Copy and paste the below code.
+    * Source > Code: Copy and paste the below code.
 
         ```
         <copy>
@@ -105,9 +105,9 @@ In this task, you will integrate a global search feature that remains accessible
 
 6. Enter the following:
 
-    - Condition Type > **Request = Expression 1**
+    * Condition Type > **Request = Expression 1**
 
-    - Expression > **SEARCH_RELOAD**
+    * Expression > **SEARCH_RELOAD**
 
     Click **Create Process**.
 
@@ -135,9 +135,9 @@ In this task, you will integrate a global search feature that remains accessible
 
 12. Enter the following:
 
-    - Item Name > **P0\_SEARCH\_PAGE\_ITEM**
+    * Item Name > **P0\_SEARCH\_PAGE\_ITEM**
 
-    - Label > **Search Books**
+    * Label > **Search Books**
 
     Click **Copy**.
 
@@ -157,23 +157,23 @@ In this task, you will integrate a global search feature that remains accessible
 
 16. Enter/select the following:
 
-    - Identification > Name: **Null Facets Value**
+    * Identification > Name: **Null Facets Value**
 
-    - Under When:
+    * Under When:
 
-        - Event: **After Refresh**
+        * Event: **After Refresh**
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **Search**
+        * Region: **Search**
 
     ![Click](images/16-4-16-da-settings.png " ")
 
 17. Select **True Action** and enter/select the following:
 
-    - Identification > Action: **Executive Server-side Code**
+    * Identification > Action: **Executive Server-side Code**
 
-    - Settings > PL/SQL Code: Copy and paste the following code:
+    * Settings > PL/SQL Code: Copy and paste the following code:
 
         ```
         <copy>
@@ -184,7 +184,7 @@ In this task, you will integrate a global search feature that remains accessible
         :P10_CATEGORY := null;
         :P0_SEARCH_PAGE_ITEM := null;
         </copy>
-         ```
+        ```
 
     ![Click](images/16-4-17-action-code.png " ")
 
@@ -196,23 +196,23 @@ In this task, you will integrate a global search feature that remains accessible
 
 20. Select **P0\_SEARCH\_PAGE\_ITEM** and enter/select the following:
 
-    - Layout > Slot: **After Logo**.
+    * Layout > Slot: **After Logo**.
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Icon: **fa-search**
+        * Icon: **fa-search**
 
-        - Width: **50**
+        * Width: **50**
 
-    - Advanced > Custom Attributes: **style="height:45px;  margin-top: 6px;"**
+    * Advanced > Custom Attributes: **style="height:45px;  margin-top: 6px;"**
 
     ![Click](images/16-4-20-layout-appearance.png " ")
 
-    - Server-side Condition
+    * Server-side Condition
 
-        - Type: **Current Page is NOT in comma delimited list**
+        * Type: **Current Page is NOT in comma delimited list**
 
-        - Pages: **100000,100001,100002,100003**
+        * Pages: **100000,100001,100002,100003**
 
     ![Click](images/16-4-20.1-server-side.png " ")
 
@@ -222,29 +222,29 @@ In this task, you will integrate a global search feature that remains accessible
 
 22. Enter/select the following:
 
-    - Identification > Name: **SEARCH DA**
+    * Identification > Name: **SEARCH DA**
 
-    - Under When:
+    * Under When:
 
-        - Selection Type: **Item(s)**
+        * Selection Type: **Item(s)**
 
-        - Region: **P0\_SEARCH\_PAGE\_ITEM**
+        * Region: **P0\_SEARCH\_PAGE\_ITEM**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Current Page!=Page**
+        * Type: **Current Page!=Page**
 
-        - Page: **10**
+        * Page: **10**
 
     ![Click](images/16-4-22-da-settings.png " ")
 
 23. Select **True Action** and enter/select the following:
 
-    - Identification > Action: **Executive Server-side Code**
+    * Identification > Action: **Executive Server-side Code**
 
-    - Under Settings:
+    * Under Settings:
 
-        - PL/SQL Code: Copy and paste the following code:
+        * PL/SQL Code: Copy and paste the following code:
 
             ```
             <copy>
@@ -252,7 +252,7 @@ In this task, you will integrate a global search feature that remains accessible
             </copy>
             ```
 
-        - Items to Submit: **P0\_SEARCH\_PAGE\_ITEM**
+        * Items to Submit: **P0\_SEARCH\_PAGE\_ITEM**
 
     ![Click](images/16-4-23-da-action-code.png " ")
 
@@ -262,9 +262,9 @@ In this task, you will integrate a global search feature that remains accessible
 
 25. Enter/select the following:
 
-    - Identification > Action: **Submit Page**
+    * Identification > Action: **Submit Page**
 
-    - Settings > Request / Button Name: **SEARCH\_RELOAD**
+    * Settings > Request / Button Name: **SEARCH\_RELOAD**
 
 26. Click **Save**
 
@@ -288,21 +288,21 @@ In this task, you will integrate a global search feature that remains accessible
 
 31. Enter/select the following and click **Create List Entry**.
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **4**
+        * Sequence: **4**
 
-        - Image/Class: **fa-home**
+        * Image/Class: **fa-home**
 
-        - List Entry Label: **Home**
+        * List Entry Label: **Home**
 
-    - Target > Page: **10**
+    * Target > Page: **10**
 
-    - Under Conditions:
+    * Under Conditions:
 
-        - Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
+        * Condition Type: **Current Page Is NOT in Expression 1 (comma delimited list of pages)**
 
-        - Expression 1: **10**
+        * Expression 1: **10**
 
     ![Click](images/16-4-31.1-listentry.png " ")
 
@@ -336,17 +336,17 @@ In this task, you will create and configure email templates to standardize the e
 
 4. Enter/select the following below
 
-    - Under Identification
+    * Under Identification
 
-        - Template Name: **EmailTemplate**
+        * Template Name: **EmailTemplate**
 
-        - Static Identifier: **EMAILTEMPLATE**
+        * Static Identifier: **EMAILTEMPLATE**
 
-        - Email Subject: **#SUBJECT#**
+        * Email Subject: **#SUBJECT#**
 
-    - Under HTML Format
+    * Under HTML Format
 
-        - Header: Copy and paste the below code
+        * Header: Copy and paste the below code
 
             ```
             <copy>
@@ -355,7 +355,7 @@ In this task, you will create and configure email templates to standardize the e
             </copy>
             ```
 
-         - Body: Copy and paste the below code
+        * Body: Copy and paste the below code
 
             ```
             <copy>
@@ -366,9 +366,9 @@ In this task, you will create and configure email templates to standardize the e
             </copy>
             ```
 
-     - Under Advanced
+    * Under Advanced
 
-        - HTML Template: Copy and paste the below code
+        * HTML Template: Copy and paste the below code
 
             ```
             <copy>
@@ -475,7 +475,7 @@ In this task, you will create and configure email templates to standardize the e
 
     ![Click](images/16-3-7-create-file.png " ")
 
-8. Upload the Application Icon with name **Online\_Bookstore\_Icon.png** and click **Create**. Download a sample Application Icon [here](./images/Online_Bookstore_Icon.png).
+8. Upload the Application Icon with name **Online\_Bookstore\_Icon.png** and click **Create**. Download a sample Application Icon [Online Bookstore Icon.png](./images/Online_Bookstore_Icon.png).
 
     ![Click](images/16-3-8-download-icon.png " ")
 
@@ -493,11 +493,11 @@ In this task, you will create and configure email templates to standardize the e
 
 12. Enter/select the following below
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P100001_URL**
+        * Name: **P100001_URL**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![Click](images/16-3-12-name.png " ")
 
@@ -515,9 +515,9 @@ In this task, you will create and configure email templates to standardize the e
 
 16. Enter/select the following below
 
-    - Identification > Name: **Prepare URL for Email**
+    * Identification > Name: **Prepare URL for Email**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -536,35 +536,36 @@ In this task, you will create and configure email templates to standardize the e
 
 18. Enter/select the following below
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Send Email Process**
+        * Name: **Send Email Process**
 
-        - Type: **Send E-Mail**
+        * Type: **Send E-Mail**
 
-    - Under Settings:
+    * Under Settings:
 
-        - From: **noreply.obs@oracle.com**
+        * From: **<noreply.obs@oracle.com>**
 
-        - To: **&P100001_EMAIL.**
+        * To: **&P100001_EMAIL.**
 
-        - Email Template: **EmailTemplate**
+        * Email Template: **EmailTemplate**
 
-        - Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
+        * Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
 
-            | Placeholder     |  Item or Value   |
-            | --------------- |  ------ |
+            | Placeholder | Item or Value |
+            | --------------- | ------ |
             | SUBJECT | Welcome to Online Bookstore! |
             | TARGET_HEADING | Please click the link below to create your account: |
-            | APP_LINK | &P100001_URL.  |
-            | TARGET | Setup your account  |
-            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png  |
-            | TITLE | Online Bookstore  |
-            {: title="List of Placeholders and Their Values"}
+            | APP_LINK | &P100001_URL. |
+            | TARGET | Setup your account |
+            | ICON_URL | <https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png> |
+            | TITLE | Online Bookstore |
+
+            *List of Placeholders and Their Values*
 
             NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs.
 
-     - Success Message > Success Message: **SignUp Link sent to your email address.**
+    * Success Message > Success Message: **SignUp Link sent to your email address.**
 
     ![Click](images/16-3-18-prop.png " ")
 
@@ -574,9 +575,9 @@ In this task, you will create and configure email templates to standardize the e
 
 20. Enter/select the following below and click **Save**.
 
-    - Identification > Name: **Push email queue**
+    * Identification > Name: **Push email queue**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
 
         ```
         <copy>
@@ -596,11 +597,11 @@ In this task, you will create and configure email templates to standardize the e
 
 23. Enter/select the following below
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P100002_URL**
+        * Name: **P100002_URL**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
     ![Click](images/16-3-23-pageitem-name-type.png " ")
 
@@ -614,9 +615,10 @@ In this task, you will create and configure email templates to standardize the e
 
 26. Enter/select the following below
 
-    - Identification > Name: **Prepare URL for Email**
+    * Identification > Name: **Prepare URL for Email**
 
-    - Source > PL/SQL Code: Copy and paste the below code:
+    * Source > PL/SQL Code: Copy and paste the below code:
+
         ```
         <copy>
         :P100002_URL := apex_util.host_url || APEX_PAGE.GET_URL (
@@ -634,35 +636,36 @@ In this task, you will create and configure email templates to standardize the e
 
 28. Enter/select the following below
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Send Email Process**
+        * Name: **Send Email Process**
 
-        - Type: **Send E-Mail**
+        * Type: **Send E-Mail**
 
-    - Under Settings:
+    * Under Settings:
 
-        - From: **noreply.obs@oracle.com**
+        * From: **<noreply.obs@oracle.com>**
 
-        - To: **&EMAIL.**
+        * To: **&EMAIL.**
 
-        - Email Template: **EmailTemplate**
+        * Email Template: **EmailTemplate**
 
-        - Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
+        * Placeholder Values: Click **6 placeholders, 6 unassigned.** and enter the following:
 
-            | Placeholder     |  Item or Value  |
-            | --------------- |  ------ |
+            | Placeholder | Item or Value |
+            | --------------- | ------ |
             | SUBJECT | Online Bookstore - Reset Password! |
             | TARGET_HEADING | Please open the link to Reset Password for your account: |
             | APP_LINK | &P100002_URL. |
             | TARGET | Reset Password |
-            | ICON_URL | https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png |
+            | ICON_URL | <https://apex.oracle.com/pls/apex/r/online_bookstore_app/online-bookstore/files/static/v7/Online_Bookstore_Icon.png> |
             | TITLE | Online Bookstore |
-            {: title="List of Placeholders and Their Values"}
+
+            *List of Placeholders and Their Values*
 
             NOTE: In **ICON_URL**, replace **online\_bookstore\_app** with your **workspace\_name**, and update the domain **apex.oracle.com** if your environment differs. Additionally, update the domain **apex.oracle.com** if your environment differs.
 
-     - Success Message > Success Message: **Reset Password Link sent to your email address.**
+    * Success Message > Success Message: **Reset Password Link sent to your email address.**
 
     ![Click](images/16-3-28-prop.png " ")
 
@@ -672,9 +675,9 @@ In this task, you will create and configure email templates to standardize the e
 
 30. Enter/select the following below and click **Save**.
 
-    - Identification > Name: **Push email queue**
+    * Identification > Name: **Push email queue**
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+    * Source > PL/SQL Code: Copy and Paste the below code:
 
         ```
         <copy>
@@ -710,7 +713,7 @@ In this task, you will configure a default profile picture for users who haven't
 
     ![Click](images/16-6-3-create-file.png " ")
 
-4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**. Download a sample default profile picture [here](./images/persona-male01-apex.png).
+4. Upload a default profile picture with name **persona-male01-apex.png** and click **Create**. Download a sample default profile picture [persona male01 apex.png](./images/persona-male01-apex.png).
 
     ![Click](images/16-6-4-default-profile-pic.png " ")
 
@@ -753,17 +756,17 @@ In this task, you will create the My Orders page to display users' past orders, 
 
 3. Enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **19**
+        * Page Number: **19**
 
-        - Name: **My Orders**
+        * Name: **My Orders**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
        Click **Create Page**.
 
@@ -775,17 +778,17 @@ In this task, you will create the My Orders page to display users' past orders, 
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **My Orders**
+        * Name: **My Orders**
 
-        - Type: **Content Row**
+        * Type: **Content Row**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
 
             ```
             <copy>
@@ -806,29 +809,31 @@ In this task, you will create the My Orders page to display users' past orders, 
             </copy>
             ```
 
-    - Order By:
+    * Order By:
 
-        - Type: Item
+        * Type: Item
 
-        - Item: Click **No Order By Item** and enter the following and click **OK**:
+        * Item: Click **No Order By Item** and enter the following and click **OK**:
 
-            | Clause |  Key | Display |
-            | --- |  --- | --- |
-            | "ADDED_TIME" DESC  | ADDED_TIME| Date |
+            | Clause | Key | Display |
+            | --- | --- | --- |
+            | "ADDED_TIME" DESC | ADDED_TIME | Date |
             | "TOTAL" DESC | TOTAL | Amount |
-            {: title="List of Items"}
+
+            *List of Items*
 
     ![Click](images/16-5-5-prop.png " ")
 
 6. In the right pane, select **Attributes** and enter the following:
 
-    - Under Settings
+    * Under Settings
 
-        - Overline: **&PURCHASED_DATE. <****br>**
+        * Overline: **&PURCHASED_DATE. <****br>**
 
-        - Title: **Order Id: &ORDER_ID. <****br>**
+        * Title: **Order Id: &ORDER_ID. <****br>**
 
-        - Description: Copy and paste the code below:
+        * Description: Copy and paste the code below:
+
         ```
         <copy>
         Payment Id: &PAYMENT_ID. <br>
@@ -845,22 +850,23 @@ In this task, you will create the My Orders page to display users' past orders, 
 
 8. In the Property Editor, enter the following:
 
-    - Identification > Position: **Full Row Link**
+    * Identification > Position: **Full Row Link**
 
-    - Under Link:
+    * Under Link:
 
-        - Type: **Redirect to Page in this application**
+        * Type: **Redirect to Page in this application**
 
-        - Target: Click **No Link Defined**
+        * Target: Click **No Link Defined**
 
-            - Target > Page: **16**
+            * Target > Page: **16**
 
-            - Set Items:
+            * Set Items:
 
-                | Name             | Value        |
+                | Name | Value |
                 | ---------------- | ------------ |
                 | P16\_ORDER\_ID | &ORDER\_ID. |
-                {: title="List of Items"}
+
+                *List of Items*
 
             Click **OK**
 
@@ -886,21 +892,21 @@ In this task, you will create the My Orders page to display users' past orders, 
 
 14. Enter/select the following and click **Create List Entry**.
 
-    - Under Entry:
+    * Under Entry:
 
-        - Parent List Entry: **&USERNAME.**
+        * Parent List Entry: **&USERNAME.**
 
-        - Sequence: **27**
+        * Sequence: **27**
 
-        - Image/Class: **fa-cart-check**
+        * Image/Class: **fa-cart-check**
 
-        - List Entry Label: **My Orders**
+        * List Entry Label: **My Orders**
 
-    - Under Target:
+    * Under Target:
 
-        - Page: **19**
+        * Page: **19**
 
-        - Clear Cache: **19**
+        * Clear Cache: **19**
 
     ![Click](images/16-5-14-prop.png " ")
 
@@ -940,13 +946,13 @@ In this task, you will enhance the Home Page by updating the total book count la
 
 4. Enter/select the following below:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Hidden**
+        * Template: **Hidden**
 
-        - Icon: **fa-sort-amount-desc**
+        * Icon: **fa-sort-amount-desc**
 
-    - Advanced > CSS Classes: **no-item-ui**
+    * Advanced > CSS Classes: **no-item-ui**
 
     ![Click](images/16-7-4-prop.png " ")
 
@@ -981,5 +987,5 @@ You now know how to add a footer to your app, manage the navigation menu, implem
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

@@ -6,21 +6,27 @@ In this lab, you use the Theme Roller to save a new Theme Style. Then, you enabl
 
 Estimated Time: 5 minutes
 
+### Objectives
+
+* Save a Theme Style using the Theme Roller.
+* Enable end users to apply the style while running the application.
+* Import and export Theme Styles.
+
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FImplementingNavigation-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Use Themes and Theme Styles
 
@@ -50,7 +56,7 @@ In this task, you save a Theme Style by using the Theme Roller. Then, you enable
     ![Click User Interface Attributes](images/click-usa.png " ")
 
 5. Under **Attributes**, click **Enable End Users to Choose Theme Style**. Make sure this attribute is set to **On**.
-Notice that the new Theme Style you saved is displayed under the Theme Style list. Click **Apply Changes**.
+    Notice that the new Theme Style you saved is displayed under the Theme Style list. Click **Apply Changes**.
 
     ![Change Theme2](images/change-usa.png " ")
 
@@ -71,21 +77,21 @@ Notice that the new Theme Style you saved is displayed under the Theme Style lis
 The Theme Roller dialog appears, displaying the styles for your application. You can export and import style changes directly from Theme Roller by selecting the following options from the additional options menu: Import, Export, and Reset.
 
 1. To import theme styles:
-     - Select **Customize** from the Developer toolbar and then click **Theme Roller**.
-     - From the Additional Options menu, select **Import**. A File Browser appears.
+    * Select **Customize** from the Developer toolbar and then click **Theme Roller**.
+    * From the Additional Options menu, select **Import**. A File Browser appears.
 
-     You can download the theme-style JSON file from [**here**](files/vita-new.json) and import it into your application.
+     You can download the theme-style JSON file from [vita new.json](files/vita-new.json) and import it into your application.
 
      ![Preferences Changed](images/theme-import.png " ")
 
-     - Navigate to the downloaded file to set the custom CSS code, variable style changes, add classes, and LESS compilation configuration to be applied to the current theme style.
+    * Navigate to the downloaded file to set the custom CSS code, variable style changes, add classes, and LESS compilation configuration to be applied to the current theme style.
 
      ![Preferences Changed](images/file-import.png " ")
 
      ![Preferences Changed](images/file-imported.png " ")
 
 2. To export theme styles:
-   From the Additional Options menu, select **Export**. This option exports the current style configuration into a JSON file.
+    From the Additional Options menu, select **Export**. This option exports the current style configuration into a JSON file.
 
      ![Preferences Changed](images/export-file.png " ")
 
@@ -101,5 +107,5 @@ In this lab, you applied a new theme style and created a custom "Hero" plug-in a
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2024
+* **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2024

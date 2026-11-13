@@ -17,17 +17,15 @@ Estimated Lab Time: 5 minutes
 
 ### Prerequisites
 
-- Have DBCS Database already running in OCI.
-- Have Oracle APEX Workspace defined for the migration project
-
+* Have DBCS Database already running in OCI.
+* Have Oracle APEX Workspace defined for the migration project
 
 
 ## Task 1: **Download the Sample Scripts and Form**
 
-Download the  sample database DDL  scripts from [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/forms_conversion_ddl.sql) and sample data insert scripts from [here](
-https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/developer-library/conversion_data_insert.sql)
+Download the  sample database DDL  scripts from [SQL script: forms\_conversion\_ddl.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/forms_conversion_ddl.sql) and sample data insert scripts from [sample data insert script](
+https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/developer-library/conversion_data_insert.sql)
 to use in the lab to your desktop
-
 
 
 ## Task 2: **Create Schema Objects**: Run the Scripts
@@ -35,16 +33,16 @@ to use in the lab to your desktop
 In order to start the conversion process, the database objects associated with your Oracle Forms application must reside in the same database as Oracle APEX.
 
 1. From the VNC session created in previous step, Open the Oracle APEX Workspace log in page, enter **``SecretPassw0rd``** for the password, check the **Remember workspace and username** checkbox, and then click **Sign In**.
-    ![](images/log-in-to-workspace.png " ")
+    ![Log in to workspace](images/log-in-to-workspace.png " ")
 
 2. Navigate to **SQL scripts** from the Oracle APEX home Page.
-    ![](images/scipts_upload.png " ")
+    ![Scipts upload](images/scipts_upload.png " ")
 
 3. Upload the scripts **forms_conversion_ddl.sql** and  **conversion_data_insert.sql** from your local desktop into APEX.
-![](images/script_upload1.png " ")
+    ![Script upload 1](images/script_upload1.png " ")
 
 4. **Run** the script to create the schema objects for customer and orders form.
- ![](images/scripts_run.png " ")
+ ![Scripts run](images/scripts_run.png " ")
 
 
 ## Task 3: Create Migration Project
@@ -52,21 +50,21 @@ In order to start the conversion process, the database objects associated with y
 Create a conversion project by running Create Migration Project Wizard and loading the application metadata extracted from Forms to XML.
 
 1. From the Apex workspace click on **Oracle Forms Migration** on the bottom right corner of the Screen.
-![](images/forms_migration.png " ")
+    ![Forms migration](images/forms_migration.png " ")
 
 2. Click on **Create Project** to import XML files that is generated from Forms Files.
-![](images/create_migration_project.png " ")
+    ![Create migration project](images/create_migration_project.png " ")
 
 3. Enter **Project Name**, Choose ``DEMO`` schema and the XML file that is derived from fmb and click Next.
 
 4. Click **Create** to start building the project
-![](images/create_migration_project2.png " ")
+    ![Create migration project 2](images/create_migration_project2.png " ")
 
 5. You can see the count of objects that is available in the forms. Just click on the **File name** to see list of objects and the properties attached to it.
-![](images/uploaded_forms.png " ")
+    ![Uploaded forms](images/uploaded_forms.png " ")
 
 6. Click on **customers_fmb.xml** you can see the details of Blocks, Triggers, List of Values etc from the Customer Form. You can compare with the form builder to make sure all of the objects from forms are being accounted in APEX.
-![](images/customers_fmb.png " ")
+![Customers fmb](images/customers_fmb.png " ")
 
 ## **Summary**
 
@@ -74,8 +72,8 @@ At this point, you know how to create an APEX Migration Project and you are read
 
 You may now *proceed to the next lab*.
 
-## **Acknowledgements**
+## Acknowledgements
 
-  - **Author** -  Vanitha Subramanyam, Senior Solution Architect
-  - **Contributors** - Vanitha Subramanyam, Senior Solution Architect
-  - **Last Updated By/Date** - Vanitha Subramanyam, Senior Solution Architect, March 2021
+* **Author** -  Vanitha Subramanyam, Senior Solution Architect
+* **Contributors** - Vanitha Subramanyam, Senior Solution Architect
+* **Last Updated By/Date** - Vanitha Subramanyam, Senior Solution Architect, March 2021

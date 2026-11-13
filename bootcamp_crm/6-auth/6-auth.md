@@ -12,17 +12,17 @@ Estimated Time: 20 minutes
 
 By the end of this lab, you will be able to:
 
-- Create Custom Authentication Scheme.
+* Create Custom Authentication Scheme.
 
-- Implement Role-based Authorization Schemes.
+* Implement Role-based Authorization Schemes.
 
-- Configure Page-level and component-level authorization.
+* Configure Page-level and component-level authorization.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-**[Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FWorking-with-External-Data-Sources.sql)** to download the completed application till Lab 5. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
+**[SQL script: labfiles/Working-with-External-Data-Sources.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FWorking-with-External-Data-Sources.sql)** to download the completed application till Lab 5. Follow the [Appendix lab](?lab=8-appendix) for steps to import and install the downloaded app.
 
 ## Task 1: Create a SQL Script
 
@@ -79,13 +79,13 @@ In this task, you will create the database objects required to support authentic
 
 13. Enter/select the following details:
 
-    - Under Name:
+    * Under Name:
 
-        - Name: **Custom AuthN**
+        * Name: **Custom AuthN**
 
-        - Scheme Type: **Custom**
+        * Scheme Type: **Custom**
 
-    - Settings > Authentication Function Name: **CRM\_AUTH.AUTHENTICATE\_USER**
+    * Settings > Authentication Function Name: **CRM\_AUTH.AUTHENTICATE\_USER**
 
 14. From the right-hand side task list, enable **Stay on Page**.
 
@@ -119,13 +119,13 @@ In this task, you will create an Interactive Report with an associated form page
 
 4. Enter/select the following details:
 
-    - Name : **Manage Users**
+    * Name : **Manage Users**
 
-    - Inculde Form Page: Toggle **On**
+    * Inculde Form Page: Toggle **On**
 
-    - Form Page Name : **Manage Users**
+    * Form Page Name : **Manage Users**
 
-    - Data Source > Table: **CRM_USERS**
+    * Data Source > Table: **CRM_USERS**
 
     Click **Next**.
 
@@ -137,14 +137,14 @@ In this task, you will create an Interactive Report with an associated form page
 
 6. In the left pane, select the following columns and change the type to **Hidden**.
 
-    - PASSWORD_HASH
-    - PASSWORD_SALT
-    - PASSWORD_PLAIN
-    - ROW_VERSION
-    - CREATED_ON
-    - CREATED_BY
-    - UPDATED_ON
-    - UPDATED_BY
+    * PASSWORD_HASH
+    * PASSWORD_SALT
+    * PASSWORD_PLAIN
+    * ROW_VERSION
+    * CREATED_ON
+    * CREATED_BY
+    * UPDATED_ON
+    * UPDATED_BY
 
     !["data model created"](images/hide-items.png "")
 
@@ -158,13 +158,13 @@ In this task, you will create an Interactive Report with an associated form page
 
     >Note: Page Number might differ.
 
-    - P7\_PASSWORD\_HASH
-    - P7\_PASSWORD\_SALT
-    - P7\_ROW\_VERSION
-    - P7\_CREATED\_ON
-    - P7\_CREATED\_BY
-    - P7\_UPDATED\_ON
-    - P7\_UPDATED\_BY
+    * P7\_PASSWORD\_HASH
+    * P7\_PASSWORD\_SALT
+    * P7\_ROW\_VERSION
+    * P7\_CREATED\_ON
+    * P7\_CREATED\_BY
+    * P7\_UPDATED\_ON
+    * P7\_UPDATED\_BY
 
 9. Click **Save**.
 
@@ -222,13 +222,13 @@ Now that the authentication is working, you will configure dynamic role-based au
 
 11. Enter/select the following:
 
-    - Name : **CRM Admin**
+    * Name : **CRM Admin**
 
-    - Scheme Type : **Is in Role or Group**
+    * Scheme Type : **Is in Role or Group**
 
-    - Type : **Custom**
+    * Type : **Custom**
 
-    - Name(s) : **Admin**
+    * Name(s) : **Admin**
 
     Click **Create Authorization Scheme**.
 
@@ -242,7 +242,7 @@ Now that the authentication is working, you will configure dynamic role-based au
 
 13. In the right pane, update the following:
 
-    - Security > Authorization Scheme: **CRM Admin**
+    * Security > Authorization Scheme: **CRM Admin**
 
     !["Click App Builder"](images/authz-page.png "")
 
@@ -301,13 +301,13 @@ This demonstrates component-level authorization control.
 
 5. Enter/select the following:
 
-    - Name : **CRM Viewer**
+    * Name : **CRM Viewer**
 
-    - Scheme Type : **Is in Role or Group**
+    * Scheme Type : **Is in Role or Group**
 
-    - Type : **Custom**
+    * Type : **Custom**
 
-    - Name(s) : **Viewer**
+    * Name(s) : **Viewer**
 
     Click **Create Authorization Scheme**.
 
@@ -325,7 +325,7 @@ This demonstrates component-level authorization control.
 
 9. In the left pane, select **Create** button. In the right pane, update the following:
 
-    - Security > Authorization Scheme: Select **{Not CRM Viewer}**
+    * Security > Authorization Scheme: Select **{Not CRM Viewer}**
 
     Click **Save**.
 
@@ -341,23 +341,23 @@ This demonstrates component-level authorization control.
 
 In this lab, you:
 
-- Created a custom CRM user and role tables.
+* Created a custom CRM user and role tables.
 
-- Built a PL/SQL authentication package.
+* Built a PL/SQL authentication package.
 
-- Configured a Custom Authentication Scheme in Oracle APEX.
+* Configured a Custom Authentication Scheme in Oracle APEX.
 
-- Enabled dynamic role-based authorization.
+* Enabled dynamic role-based authorization.
 
-- Restricted access to pages and navigation entries.
+* Restricted access to pages and navigation entries.
 
-- Applied component-level authorization to buttons.
+* Applied component-level authorization to buttons.
 
-- Tested authentication and authorization using multiple roles.
+* Tested authentication and authorization using multiple roles.
 
 Your application now supports a secure, role-driven authentication and authorization model using custom database logic.
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026
+* **Author** - Ankita Beri, Senior Product Manager, Toufiq Mohammed, Principal Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, February 2026

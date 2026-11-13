@@ -10,27 +10,27 @@ In this lab, you will learn how to create and customize a **Form**, and then you
 
 In the last hands-on workshop, you customized the Smart Filters page in the Demo Projects application. Also, you enhanced both the Faceted Search and Cards region and incorporated Dynamic Actions to the page.
 
-Estimated Time: 10 minutes
+Estimated Workshop Time: 10 minutes
 
 ### Objectives
 
-- Create a basic form for a database table.
+* Create a basic form for a database table.
 
-- Link the form to a Classic Report for seamless navigation.
+* Link the form to a Classic Report for seamless navigation.
 
-- Customize the form layout and components.
+* Customize the form layout and components.
 
-- Improve user experience by adding relevant enhancements to the form.
+* Improve user experience by adding relevant enhancements to the form.
 
 <!--### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the application from the following:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-SampleReporting.sql)**
+- **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-SampleReporting.sql)**
 
-- **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-OnlineShoppingApplication.sql)**
 
-- **[Demo Projects](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-DemoProjects.sql)**
+- **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmartFilters-DemoProjects.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
@@ -42,8 +42,12 @@ Import them into your workspace. To run the app, please run the steps described 
 
 ## Learn More - *Useful Links*
 
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
+
+## Acknowledgements
+
+See the [workshop author and contributor credits](1-improving-the-report-and-form.md#acknowledgements).

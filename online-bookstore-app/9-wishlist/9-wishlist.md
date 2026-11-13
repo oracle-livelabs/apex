@@ -10,13 +10,13 @@ Estimated Time: 15 minutes
 
 In this lab, you will:
 
-- Create a Wishlist Page to display saved books.
-- Add buttons and processes to add or remove wishlist items.
-- Create a Navigation Bar Entry to access the Wishlist page.
+* Create a Wishlist Page to display saved books.
+* Add buttons and processes to add or remove wishlist items.
+* Create a Navigation Bar Entry to access the Wishlist page.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab8.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab8.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab8.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 4.
 
 ## Task 1: Create My Wishlist page
 
@@ -32,21 +32,21 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 3. In Create Blank Page dialog, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Page Number: **14**
+        * Page Number: **14**
 
-        - Name: **My Wishlist**
+        * Name: **My Wishlist**
 
-    - Under Navigation:
+    * Under Navigation:
 
-        - Use Breadcrumb: **Toggle Off**
+        * Use Breadcrumb: **Toggle Off**
 
-        - Use Navigation: **Toggle Off**
+        * Use Navigation: **Toggle Off**
 
     Click **Create Page**.
 
-   ![close dialog](images/page-details1.png " ")
+    ![close dialog](images/page-details1.png " ")
 
 4. In the left pane, right-click **Body** and select **Create Region**.
 
@@ -54,17 +54,17 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **My books**
+        * Title: **My books**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
+        * SQL Query: For the SQL Query, we will make use of the APEX Assistant to generate the query. Follow the next steps to generate the SQL query. Click the **Code Editor** icon.
 
     ![Page Designer](images/compute-sql1.png)
 
@@ -124,14 +124,15 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 10. Under **Order By**, enter/select the following:
 
-    - Type: **Item**
-    - Item: Click **No Order By Item** and enter the following:
+    * Type: **Item**
+    * Item: Click **No Order By Item** and enter the following:
 
-        | Clause     |  Key   | Display |
-        | ---------- |  ------ | ------ |
-        | "TITLE"asc | TITLE |  Title |
+        | Clause | Key | Display |
+        | ---------- | ------ | ------ |
+        | "TITLE"asc | TITLE | Title |
         | "NEW_PRICE"asc | NEW_PRICE | Price |
-        {: title="List of Items"}
+
+        *List of Items*
 
         Click **OK**.
 
@@ -139,41 +140,43 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 11. In the Property Editor, navigate to **Attributes** and enter/ select the following:
 
-    - Appearance > Grid Columns: **5 Columns**
+    * Appearance > Grid Columns: **5 Columns**
 
-    - Card > Primary Key Column 1: **BOOK_ID**
+    * Card > Primary Key Column 1: **BOOK_ID**
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
     ![close dialog](images/wishlist-att.png " ")
 
-    - Under Body:
+    * Under Body:
 
-        - Advanced Formatting: **Toggle On**
+        * Advanced Formatting: **Toggle On**
 
-        - HTML Expression: Copy and paste the below HTML code:
+        * HTML Expression: Copy and paste the below HTML code:
+
         ```
-       <copy>
-       <div>
-        <b>Author:</b> &AUTHOR.
-       </div>
+        <copy>
+        <div>
+         <b>Author:</b> &AUTHOR.
+        </div>
 
-       <div>
-        <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
-       </div>
+        <div>
+         <b>Price:</b> <strike>₹&PRICE.</strike> ₹&NEW_PRICE.
+        </div>
 
-       <div >
-        <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
-       </div>
-       </copy>
-       ```
-    - Under Media:
+        <div >
+         <b>Discount:</b> <span style="color: green;">&DISCOUNT.% Off</span>
+        </div>
+        </copy>
+        ```
 
-        - Source: **Image URL**
+    * Under Media:
 
-        - URL: **&BOOK_IMAGE.**
+        * Source: **Image URL**
 
-        - Image Description: **&DESCRIPTION.**
+        * URL: **&BOOK_IMAGE.**
+
+        * Image Description: **&DESCRIPTION.**
 
     ![close dialog](images/wishlist-att1.png " ")
 
@@ -183,20 +186,21 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 13. In the Property Editor, enter/select the following:
 
-    - Identification > Type: **Full Card**
+    * Identification > Type: **Full Card**
 
-    - Link > Target: Click **No Link Defined**
+    * Link > Target: Click **No Link Defined**
 
-        - Target > Page: **18**
+        * Target > Page: **18**
 
-        - Set Items:
+        * Set Items:
 
-            | Name             | Value        |
+            | Name | Value |
             | ---------------- | ------------ |
             | P18\_BOOK\_ID | &BOOK\_ID. |
-            {: title="List of Items"}
 
-        -  Clear/Reset > Clear Cache: **18**
+            *List of Items*
+
+        * Clear/Reset > Clear Cache: **18**
 
         Click **OK**.
 
@@ -208,13 +212,13 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 15. In the Property editor, enter/select the following:
 
-    - Under Identification
+    * Under Identification
 
-        - Name: **P14\_BOOK\_ID**
+        * Name: **P14\_BOOK\_ID**
 
-        - Type: **Hidden**
+        * Type: **Hidden**
 
-    - Settings > Value protected: **Toggle Off**
+    * Settings > Value protected: **Toggle Off**
 
     ![close dialog](images/wishlist-book-id.png " ")
 
@@ -224,58 +228,58 @@ In this task, you'll create a My Wishlist page that displays a list of books sav
 
 17. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Refresh**
+    * Identification > Name: **Refresh**
 
-    - When > Event: **Dialog Closed**
+    * When > Event: **Dialog Closed**
 
     ![close dialog](images/refresh1.png " ")
 
 18. Select **TRUE** action and enter/select the following:
 
-    - Identification > Action: **Refresh**
+    * Identification > Action: **Refresh**
 
-    - Under Affected Elements:
+    * Under Affected Elements:
 
-        - Selection Type: **Region**
+        * Selection Type: **Region**
 
-        - Region: **My books**
+        * Region: **My books**
 
     ![close dialog](images/refresh-action1.png " ")
 
 19. Click **Save**.
 
-<!-- 19. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
+    <!-- 19. Navigate to **Processing** tab, right-click **Processing** and select **Create Process**.
 
     ![close dialog](images/wishlist-create-process1.png " ")
 
 20. In the Property editor, enter/select the following:
 
-     - Under Identification:
+    * Under Identification:
 
-        - Name: **Remove from Wishlist**
+        * Name: **Remove from Wishlist**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
           
-     - Under Settings: 
+    * Under Settings: 
 
-        - Package Name: **OBS\_MANAGE\_ORDERS**
+        * Package Name: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure/Function Name: **REMOVE\_FROM\_WISHLIST**
+        * Procedure/Function Name: **REMOVE\_FROM\_WISHLIST**
 
-     - Under Server-side condition:
+    * Under Server-side condition:
 
-        - Type: **Request=Value**
+        * Type: **Request=Value**
 
-        - Value: **REMOVE\_FROM\_WISHLIST**
+        * Value: **REMOVE\_FROM\_WISHLIST**
 
       ![close dialog](images/remove-from-wishlist1.png " ")
 
 21. Under **Remove from Wishlist** process, expand parameters and enter/select the following:
 
-     | Parameter     |  Type   | Item |
-     | ---------- |  ------ | ------ |
-     | p\_book\_id | Item |  P14\_BOOK\_ID |
-     | p\_user\_id| Item | USER\_ID |
+     | Parameter | Type | Item |
+     | ---------- | ------ | ------ |
+     | p\_book\_id | Item | P14\_BOOK\_ID |
+     | p\_user\_id | Item | USER\_ID |
 
     ![close dialog](images/book-id-param1.png " ")
     ![close dialog](images/user-id-param1.png " ") -->
@@ -294,35 +298,36 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
 3. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Add\_to\_Wishlist**
+        * Button Name: **Add\_to\_Wishlist**
 
-        - Label: **Add To Wishlist**
+        * Label: **Add To Wishlist**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Hot: **Toggle On**
+        * Hot: **Toggle On**
 
-        - Template Options: Click **Use Template Defaults**
+        * Template Options: Click **Use Template Defaults**
 
-            - Type: **Primary**
+            * Type: **Primary**
 
-            - Style: **Simple**
+            * Style: **Simple**
 
             Click **Ok**
 
-        - Icon: **fa-heart-o**
+        * Icon: **fa-heart-o**
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **No rows returned**
+        * Type: **No rows returned**
 
-        - SQL Query: Copy and paste the below code into the code editor:
+        * SQL Query: Copy and paste the below code into the code editor:
+
     ```
     <copy>
     select * from obs_wishlist where user_id = :user_id AND
@@ -330,7 +335,7 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
     </copy>
     ```
 
-    - Under Security > Authorization Scheme: **Must Not Be Public User**
+    * Under Security > Authorization Scheme: **Must Not Be Public User**
 
     ![close dialog](images/button1-prop.png " ")
 
@@ -340,29 +345,30 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
 5. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Button Name: **Remove\_from\_Wishlist**
+        * Button Name: **Remove\_from\_Wishlist**
 
-        - Label: **Remove From Wishlist**
+        * Label: **Remove From Wishlist**
 
-    - Layout > Slot: **Next**
+    * Layout > Slot: **Next**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Button Template: **Text with Icon**
+        * Button Template: **Text with Icon**
 
-        - Icon: **fa-heart**
+        * Icon: **fa-heart**
 
-    - Behavior > Database Action: **SQL DELETE Action**
+    * Behavior > Database Action: **SQL DELETE Action**
 
     ![close dialog](images/create-button2-prop1.png " ")
 
-    - Under Server-side Condition:
+    * Under Server-side Condition:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query: Copy and paste the below code:
+        * SQL Query: Copy and paste the below code:
+
     ```
     <copy>
     select * from obs_wishlist where user_id = :user_id
@@ -370,7 +376,7 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
     </copy>
     ```
 
-    - Under Security > Authorization Scheme: **Must Not Be Public User**
+    * Under Security > Authorization Scheme: **Must Not Be Public User**
 
     ![close dialog](images/create-button2-prop2.png " ")
 
@@ -380,33 +386,33 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
 7. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Add to Wishlist**
+        * Name: **Add to Wishlist**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **ADD\_TO\_WISHLIST**
+        * Procedure or Function: **ADD\_TO\_WISHLIST**
 
-    - Success Message > Success Message: **Successfully added to Wishlist!**
+    * Success Message > Success Message: **Successfully added to Wishlist!**
 
-    - Error Message > Error Message: **Error adding to Wishlist!**
+    * Error Message > Error Message: **Error adding to Wishlist!**
 
-    - Server-side Condition > When button pressed: **Add\_to\_Wishlist**
+    * Server-side Condition > When button pressed: **Add\_to\_Wishlist**
 
     ![close dialog](images/process1-details.png " ")
 
 8. Under **Add to Wishlist**, expand parameters and enter/select the following:
 
-    - p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+    * p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
 
     ![close dialog](images/process1-para1.png " ")
 
-    - p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
+    * p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
 
     ![close dialog](images/process1-para2.png " ")
 
@@ -416,29 +422,29 @@ In this task, you'll add Add to Wishlist and Remove from Wishlist buttons on the
 
 10. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Remove from Wishlist**
+        * Name: **Remove from Wishlist**
 
-        - Type: **Invoke API**
+        * Type: **Invoke API**
 
-    - Under Settings:
+    * Under Settings:
 
-        - Package: **OBS\_MANAGE\_ORDERS**
+        * Package: **OBS\_MANAGE\_ORDERS**
 
-        - Procedure or Function: **REMOVE\_FROM\_WISHLIST**
+        * Procedure or Function: **REMOVE\_FROM\_WISHLIST**
 
-    - Server-side condition > When button pressed: **Remove\_from\_Wishlist**
+    * Server-side condition > When button pressed: **Remove\_from\_Wishlist**
 
     ![close dialog](images/process2-details.png " ")
 
 11. Under **Remove from Wishlist**, expand parameters and enter/select the following:
 
-    - p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
+    * p\_book\_id > Value > Type: **Item**,  Item: **P18\_BOOK\_ID**
 
     ![close dialog](images/process2-para1.png " ")
 
-    - p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
+    * p\_user\_id > Value > Type: **Item**,  Item > Application: **USER\_ID**
 
     ![close dialog](images/process2-para2.png " ")
 
@@ -470,15 +476,15 @@ In this task, you'll add a My Wishlist entry to the navigation bar, allowing use
 
 5. Enter/select the following:
 
-    - Under Entry:
+    * Under Entry:
 
-        - Sequence: **6**
+        * Sequence: **6**
 
-        - Image/Class: **fa-heart**
+        * Image/Class: **fa-heart**
 
-        - List Entry Label: **My Wishlist**
+        * List Entry Label: **My Wishlist**
 
-    - Target > Page: **14**
+    * Target > Page: **14**
 
       Click **Create List Entry**.
 
@@ -490,9 +496,9 @@ In this task, you will add books to your wishlist, view them under My Wishlist, 
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/9-4-1-run-app.png " ")
 
@@ -532,5 +538,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

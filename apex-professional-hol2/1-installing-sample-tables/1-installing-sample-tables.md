@@ -16,15 +16,15 @@ Estimated Time: 5 minutes
 
 In this lab, you will:
 
-- Install a sample dataset into your Oracle APEX Workspace.
+* Install a sample dataset into your Oracle APEX Workspace.
 
 ### Downloads
 
-Stuck or Missed out on completing the previous labs? Don't worry! You can download the application **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2GettingStarted-with-OracleAPEX-Lab1shop.sql)**.
+Stuck or Missed out on completing the previous labs? Don't worry! You can download the application **[SQL script: labfiles%2GettingStarted-with-OracleAPEX-Lab1shop.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2GettingStarted-with-OracleAPEX-Lab1shop.sql)**.
 
 Import them into your workspace. To run the app, please run the steps described in the following workshop:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Create Customer Orders Tables
 
@@ -40,7 +40,7 @@ Import them into your workspace. To run the app, please run the steps described 
 
 4. Accept the default settings and click **Next**.
 
-   *The schema name defaults to your current schema and, hence, will differ from the schema name shown below.*
+    *The schema name defaults to your current schema and, hence, will differ from the schema name shown below.*
 
     ![Manage Sample Datasets](images/manage-sample-dataset1.png " ")
 
@@ -58,5 +58,5 @@ You now know how to install sample tables and views from Sample Datasets. You ma
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Prinicpal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025

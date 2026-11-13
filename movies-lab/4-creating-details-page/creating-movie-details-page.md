@@ -13,15 +13,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create a new page, Movie Details.
+* Create a new page, Movie Details.
 
-- Use the Movie Details REST source to display data on the Movie Details page.
+* Use the Movie Details REST source to display data on the Movie Details page.
 
-- Connect the Movie Details page to the Movie Search page.
+* Connect the Movie Details page to the Movie Search page.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 3
+* Completion of workshop through Lab 3
 
 ## Task 1: Create the Movie Details Page
 
@@ -37,19 +37,19 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
 3. On **Create Form** page, enter/select the following page attributes:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **3**
+        * Page Number: **3**
 
-        - Name: **Movie Details**
+        * Name: **Movie Details**
 
-        - Mode: **Modal Dialog**
+        * Mode: **Modal Dialog**
 
-    - Under Data Source:
+    * Under Data Source:
 
-        - Data Source: **REST Source**
+        * Data Source: **REST Source**
 
-        - REST Data Source: **Movie Details**
+        * REST Data Source: **Movie Details**
 
     Click **Next**.
 
@@ -65,13 +65,13 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
 
 6. In the Property editor, enter/select the following page attributes:
 
-    - Appearance > Template Options: Click **Use Template Defaults**
+    * Appearance > Template Options: Click **Use Template Defaults**
 
-        - In the Template Options popup dialog, check the **Stretch to Fit Window** box under Common.
+        * In the Template Options popup dialog, check the **Stretch to Fit Window** box under Common.
 
             Click **Ok**.
 
-    - CSS > Inline: Copy and paste the below CSS in the code editor
+    * CSS > Inline: Copy and paste the below CSS in the code editor
 
         ```
         <copy>
@@ -94,6 +94,7 @@ You will start by creating a new page, Movie Details, which contains a Form. Whi
             /* Center align Card Body text */
             text-align: center;
         }
+        </copy>
         ```
 
     > *Note: The CSS above will style the page header you are going to create. While the original layout and format of the Cards region type can get you pretty far, a little CSS goes a long way in rounding out the entire look of a component or page.*
@@ -108,9 +109,9 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 1. You will first need to hide all the Movie page items so that you can still access the values stored in them but create your own content for the page. To do this, you can set the Type of a column to Hidden, which will not display an item on the frontend.
 
-    - To select all items, click on the first item under the Movie region, **P3\_ID**, and then hold shift and click on the last item, **P3\_BELONGS\_TO\_COLLECTION**.
+    * To select all items, click on the first item under the Movie region, **P3\_ID**, and then hold shift and click on the last item, **P3\_BELONGS\_TO\_COLLECTION**.
 
-    - In the Page Items editing pane, set Type: **Hidden**
+    * In the Page Items editing pane, set Type: **Hidden**
 
     ![Page 3 open in Page Designer with all Movie Details form items selected and their type set to Hidden in the Property Editor](images/hide-items.png " ")
 
@@ -120,23 +121,23 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 3. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Header**
+        * Title: **Header**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Location: **REST Source**
+        * Location: **REST Source**
 
-        - REST Source: **Movie Details**
+        * REST Source: **Movie Details**
 
-    - Under Local Post Processing:
+    * Under Local Post Processing:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Replace the existing SQL query with the following:
+        * SQL Query: Replace the existing SQL query with the following:
 
             ```
             <copy>
@@ -152,15 +153,16 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
                    vote_average,
                    tagline
               from #APEX$SOURCE_DATA#
+            </copy>
             ```
 
         > *Note: The above query is a simplified version of the original query because you only need a few columns for the header. It also converts RUNTIME into the hours and minutes format and returns it as RUNTIME\_FRIENDLY.*
 
         ![Page 3 open in Page Designer with Property Editor open on editing the Header region properties](images/header-region-attributes1.png " ")
 
-    - Appearance > Template Options: Click **Use Template Defaults**
+    * Appearance > Template Options: Click **Use Template Defaults**
 
-        - Style: **Style B**
+        * Style: **Style B**
 
             Click **Ok**.
 
@@ -168,23 +170,23 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 4. Navigate to **Attributes** tab at the top of the Header region Property Editor. Enter/select the following page attributes:
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Layout: **Horizontal (Row)**
+        * Layout: **Horizontal (Row)**
 
-        - CSS Classes: **movie-header-card**
+        * CSS Classes: **movie-header-card**
 
-    - Card > Primary Key Column 1: **ID**
+    * Card > Primary Key Column 1: **ID**
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
-    - Subtitle > Column: **TAGLINE**
+    * Subtitle > Column: **TAGLINE**
 
-    - Under Body:
+    * Under Body:
 
-        - Advanced Formatting: Toggle **On**
+        * Advanced Formatting: Toggle **On**
 
-        - HTML Expression: Copy and paste the below HTML expression
+        * HTML Expression: Copy and paste the below HTML expression
 
             ```
             <copy>
@@ -193,27 +195,28 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
                 &lt;span title="Runtime">&RUNTIME_FRIENDLY.&lt;/span> &amp;middot;
                 &lt;span title="&VOTE_AVERAGE. out of 10">&lt;span class="fa fa-star" aria-hidden="true">&lt;/span> &VOTE_AVERAGE.&lt;/span>
             &lt;/div>
+            </copy>
             ```
 
-    - Under Icon and Badge:
+    * Under Icon and Badge:
 
-        - Icon Source: **Image URL**
+        * Icon Source: **Image URL**
 
-        - Image URL: **&POSTER\_URL.**
+        * Image URL: **&POSTER\_URL.**
 
-        - Icon CSS Classes: **w100 h150**
+        * Icon CSS Classes: **w100 h150**
 
         ![Page 3 open in Page Designer with Property Editor open on editing the Header region attributes](images/header-attributes.png " ")
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **URL Column**
+        * Source: **URL Column**
 
-        - URL Column: **BACKDROP\_URL**
+        * URL Column: **BACKDROP\_URL**
 
-        - Position: **As Background Image**
+        * Position: **As Background Image**
 
-        - Sizing: **Cover**
+        * Sizing: **Cover**
 
         ![Page 3 open in Page Designer with Property Editor open on editing the Header region media attributes](images/header-media.png " ")
 
@@ -223,9 +226,9 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 7. Navigate to **movie\_id** parameter.
 
-    - Change the Type from REST Source Default to **Item**.
+    * Change the Type from REST Source Default to **Item**.
 
-    - In the Item field, enter **P3\_ID**.
+    * In the Item field, enter **P3\_ID**.
 
     ![Page 3 open in Page Designer with Property Editor open on editing the movie id parameter](images/movie-id-parameter.png " ")
 
@@ -241,17 +244,17 @@ You can use the value stored in the P3\_ID page item in the Movie Details form t
 
 11. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Title: **Overview**
+    * Identification > Title: **Overview**
 
-    - Source > HTML Code: **&P3\_OVERVIEW.**
+    * Source > HTML Code: **&P3\_OVERVIEW.**
 
-    - Under Appearance:
+    * Under Appearance:
 
-        - Template: **Content Block**
+        * Template: **Content Block**
 
-        - Template Options: Open **Use Template Defaults**
+        * Template Options: Open **Use Template Defaults**
 
-            - Region Title: **Small**
+            * Region Title: **Small**
 
                 Click **Ok**.
 
@@ -273,22 +276,23 @@ To be able to view the details of any movie you click on on the Movie Search pag
 
 4. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Type: **Full Card**
+    * Identification > Type: **Full Card**
 
         > *Note: The Link section is where you can connect page 3 to page 2 by redirecting the user to a new page, similar to how a user gets to the Movie Search page from the Home page.*
 
-    - Link > Target: Click **No Link Defined** to open the Link Builder dialog.
+    * Link > Target: Click **No Link Defined** to open the Link Builder dialog.
 
-        - Page: **3**
+        * Page: **3**
 
         > *Note: You also need to set the value of the ID item on page 3 (P3\_ID) so that the Movie Details page has the ID of the movie that was clicked on.*
 
-        - Set Items:
+        * Set Items:
 
             | Name | Value |
             | ---- | ----- |
-            | P3\_ID | &ID.|
-            {: title="Set Items"}
+            | P3\_ID | &ID. |
+
+            *Set Items*
 
         > *Note: You can also use the buttons next to the name and value fields to browse items that you can pass values to. Notice that the options for Name all come from the Movie Details page (P3), because that is the item you want to set. The options for Value are the columns from the Movie Search data source because this is the what you are getting from page 2 and passing to page 3.*
 
@@ -314,39 +318,39 @@ You have now set up the Movie Details page and set it up to open for any card th
 
 ## Learn More
 
-- [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
+* [Modal Dialog Pages](https://docs.oracle.com/en/database/oracle/apex/24.2/htmdb/creating-dialog-pages.html)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 4 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-4.sql) to download a copy of the app at the end of Lab 4.
+* [SQL script: apex/lab-4.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-4.sql) to download a copy of the app at the end of Lab 4.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     > *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
         ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

@@ -10,13 +10,13 @@ Estimated Time: 10 minutes
 
 In this lab, you:
 
-- Create a REST Data Source to integrate OCI Vision for object and text detection.
-- Create an Automation to update detection results when book details change.
-- Create a Trigger to reset detection fields when a book image is updated.
+* Create a REST Data Source to integrate OCI Vision for object and text detection.
+* Create an Automation to update detection results when book details change.
+* Create a Trigger to reset detection fields when a book image is updated.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab13.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 7.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab13.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab13.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 2 to Task 7.
 
 ## Task 1: Integrating with Object Detection and Text Detection
 
@@ -24,58 +24,58 @@ In this task, you will create a REST Data Source using the OCI Vision REST API a
 
 1. Navigate to the application home page and click **Shared Components**.
 
-   ![Click Timeline](images/sm-shared-comp1.png " ")
+    ![Click Timeline](images/sm-shared-comp1.png " ")
 
 2. Under Data Sources, click **REST Data Sources**.
 
-   ![Click Timeline](images/rest-data-sources1.png " ")
+    ![Click Timeline](images/rest-data-sources1.png " ")
 
 3. Click **Create**.
 
-   ![Click Timeline](images/rest-data-source-create1.png " ")
+    ![Click Timeline](images/rest-data-source-create1.png " ")
 
 4. Select **From scratch** and click **Next**.
 
-   ![Click Timeline](images/rest-method.png " ")
+    ![Click Timeline](images/rest-method.png " ")
 
 5. Under Create REST Data Source, enter the following attributes and click **Next**.
 
-    - **REST Data Source Type**: Oracle Cloud Infrastructure (OCI)
+    * **REST Data Source Type**: Oracle Cloud Infrastructure (OCI)
 
-    - **Name**: OCI Vision
+    * **Name**: OCI Vision
 
-    - **URL Endpoint**: https://vision.aiservice.us-ashburn-1.oci.oraclecloud.com/20220125/actions/analyzeImage
+    * **URL Endpoint**: <https://vision.aiservice.us-ashburn-1.oci.oraclecloud.com/20220125/actions/analyzeImage>
 
-    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125
+    **Note**: URL Endpoint may differ based on your OCI tenancy. Refer to the following link for more details- <https://docs.oracle.com/en-us/iaas/api/#/en/vision/20220125>
 
-   ![Click Timeline](images/create-rest-data.png " ")
+    ![Click Timeline](images/create-rest-data.png " ")
 
 6. Under Create REST Data Source - Remote Server, click **Next**.
 
-   ![Click Timeline](images/remote-server.png " ")
+    ![Click Timeline](images/remote-server.png " ")
 
 7. Under Authentication,
 
-    - **Authentication Required**: Toggle the button to **ON**
+    * **Authentication Required**: Toggle the button to **ON**
 
-    - **Credentials**: apex\_ai\_cred
+    * **Credentials**: apex\_ai\_cred
 
 8. Click **Create REST Source Manually**.
 
-   The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
+    The REST data source is created successfully. The next step is to configure the POST operation parameters for this REST Data Source.
 
-   ![Click Timeline](images/rest-data-authentication.png " ")
+    ![Click Timeline](images/rest-data-authentication.png " ")
 
 9. On the REST Data Sources page, click **OCI Vision**.
 
-   ![Click Timeline](images/select-oci-vision.png " ")
+    ![Click Timeline](images/select-oci-vision.png " ")
 
 10. Select the Operations tab, click **Edit icon** for the POST operation and enter the following:
-    - **Database Operation**: **-Not Mapped-**
+    * **Database Operation**: **-Not Mapped-**
 
-    - **Request Body Template**: Copy and paste the JSON given below.
+    * **Request Body Template**: Copy and paste the JSON given below.
 
-     ```
+    ```
     <copy>
     {
         "compartmentId": "#COMPARTMENT_ID#",
@@ -111,11 +111,12 @@ In this task, you will create a REST Data Source using the OCI Vision REST API a
 
 13. In the **Edit REST Data Source Parameter** dialog, add the following two parameters one after the other:
 
-    |   | Type | Name | Direction | Default Value | Static |
-    |---|-------|------|----------| --------------| ------ |
-    | 1 | Request or Response Body| RESPONSE | Out |
-    | 2 | HTTP Header| Content-Type | In | application/json | ON
-    {: title="List of POST Operation Parameters"}
+    | | Type | Name | Direction | Default Value | Static |
+    | --- | ------- | ------ | ---------- | -------------- | ------ |
+    | 1 | Request or Response Body | RESPONSE | Out | | |
+    | 2 | HTTP Header | Content-Type | In | application/json | ON |
+
+    *List of POST Operation Parameters*
 
     ![Click Timeline](images/response.png " ")
 
@@ -141,9 +142,9 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
 3. In the Create Automation wizard, enter/select the following and click **Next**:
 
-    - Name: **Index Book Cover With OCI Vision**
+    * Name: **Index Book Cover With OCI Vision**
 
-    - Type: **On demand**
+    * Type: **On demand**
 
     ![Click Timeline](images/14-2-4-create.png " ")
 
@@ -153,21 +154,21 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
 5. Enter/Select the following:
 
-    - Source > Where Clause: **(OBJECT\_DET IS NULL OR TEXT\_DET IS NULL) AND BOOK\_IMAGE IS NOT NULL**
+    * Source > Where Clause: **(OBJECT\_DET IS NULL OR TEXT\_DET IS NULL) AND BOOK\_IMAGE IS NOT NULL**
 
-    - Under Action Execution:
+    * Under Action Execution:
 
-        - Commit: **Each Row**
+        * Commit: **Each Row**
 
-        - Action Error Handling: **Terminate Automation**
+        * Action Error Handling: **Terminate Automation**
 
     ![Click Timeline](images/14-2-5-details.png " ")
 
-    - Under Action > Click **edit icon** and update the following
+    * Under Action > Click **edit icon** and update the following
 
-        - Name: **Invoke REST Data Source**
+        * Name: **Invoke REST Data Source**
 
-        - Code: Copy and Paste the JSON given below and replace **#COMPARTMENT\_ID#** with your **COMPARTMENT\_ID** at two places in the below query
+        * Code: Copy and Paste the JSON given below and replace **#COMPARTMENT\_ID#** with your **COMPARTMENT\_ID** at two places in the below query
 
             ```
             <copy>
@@ -238,8 +239,8 @@ In this task, we will create an automation in Oracle APEX that updates the objec
                 BOOK_ID = :BOOK_ID;
 
             END;
-        </copy>
-        ```
+            </copy>
+            ```
 
     Click **Apply Changes**
 
@@ -275,17 +276,18 @@ In this task, we will create an automation in Oracle APEX that updates the objec
 
 13. In the Property editor, enter/select the following:
 
-    - Identification > Name: **Call OCI Vision Automation**
+    * Identification > Name: **Call OCI Vision Automation**
 
-    - Source > PL/SQL Code: Copy and Paste the below code:
+    * Source > PL/SQL Code: Copy and Paste the below code:
 
         ```
         <copy>
         apex_automation.execute(
             p_static_id       => 'index-book-cover-with-oci-vision' );
         </copy>
-         ```
-    - Execution > Sequence: **30**
+        ```
+
+    * Execution > Sequence: **30**
 
     ![Click Timeline](images/14-2-9-process-details-calloci.png " ")
 
@@ -305,9 +307,9 @@ In this task, you will create a trigger that resets object and text detection fi
 
 3. Enter/Select the following and click **Create Trigger**
 
-    - Table: **OBS\_BOOKS**
+    * Table: **OBS\_BOOKS**
 
-    - Firing Point: **Before**
+    * Firing Point: **Before**
 
      ![Click Timeline](images/14-3-3-trigger-details.png " ")
 
@@ -327,7 +329,7 @@ In this task, you will create a trigger that resets object and text detection fi
     END;
     /
     </copy>
-        ```
+    ```
 
 5. Click **Save and Compile**
 
@@ -339,9 +341,9 @@ In this task, you will run the application and test the enhanced search function
 
 1. Run the application and enter the credentials below:
 
-      - Username: **user01**
+    * Username: **user01**
 
-      - Password: **secretPassword**
+    * Password: **secretPassword**
 
     ![close dialog](images/14-4-1-run-app.png " ")
 
@@ -361,5 +363,5 @@ You are now ready to move on to the next lab!
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

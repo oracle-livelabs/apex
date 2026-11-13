@@ -10,11 +10,11 @@ Estimated Time: 1 minute
 
 In this lab, you will:
 
-- Customize the application theme using Theme Roller.
+* Customize the application theme using Theme Roller.
 
 ### Downloads: Missed Previous Labs? Download and Install the Application
 
-If you're stuck or missed out on completing the previous labs, don't worry! Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab3.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
+If you're stuck or missed out on completing the previous labs, don't worry! Click [application export: obs-lab3.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab3.zip) to download the zip file, which contains everything completed in the previous labs. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) Task 2.
 
 ## Task 1: Update Theme of the Application
 
@@ -22,27 +22,27 @@ In this task, you'll update the application's theme using Theme Roller. You'll c
 
 1. In the runtime view, click **Customize** from the developer toolbar.
 
-   ![App builder home page](images/customize.png " ")
+    ![App builder home page](images/customize.png " ")
 
 2. Click **Theme Roller**.
 
-   ![App builder home page](images/theme-roller.png " ")
+    ![App builder home page](images/theme-roller.png " ")
 
 3. Update the following:
 
-    - Theme > Select Theme: **Redwood Light**
+    * Theme > Select Theme: **Redwood Light**
 
-    - Redwood Options > Layout: **Floating**
+    * Redwood Options > Layout: **Floating**
 
-    - Appearance > Update all the options to **Dark**
+    * Appearance > Update all the options to **Dark**
 
     Click **Save**.
 
-   ![App builder home page](images/save-roller.png " ")
+    ![App builder home page](images/save-roller.png " ")
 
 4. Style Name: **Redwood Light OBS** and click **Save**.
 
-   ![App builder home page](images/save-as-roller.png " ")
+    ![App builder home page](images/save-as-roller.png " ")
 
 5. Click on the **X** of the **Theme Roller** and observe the theme.
 
@@ -56,5 +56,5 @@ You've learned how to update the theme of the application using theme roller. Re
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

@@ -10,27 +10,27 @@ Estimated Time: 10 minutes
 
 By completing this lab, you will:
 
-- Create a modal dialog form to display and manage product details.
+* Create a modal dialog form to display and manage product details.
 
-- Link the form to an interactive report for seamless data editing and creation.
+* Link the form to an interactive report for seamless data editing and creation.
 
-- Enhance the form layout by organizing fields, hiding unnecessary items, and improving user interface elements.
+* Enhance the form layout by organizing fields, hiding unnecessary items, and improving user interface elements.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! First, follow the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
-- **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
+* **[Using SQL Workshop > Lab 1: Install Sample Tables](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3524)**
 
-- After installing the sample dataset tables, import the SQL script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
+* After installing the sample dataset tables, import the SQL script from **[SQL script: labfiles/OnlineShoppingApp-PartialDDLs.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FOnlineShoppingApp-PartialDDLs.sql)**.
 
-- Now import **[Online Shopping Application](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmart%20Filters-OnlineShoppingApplication.sql)** in your workspace.
+* Now import **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FManagingCardsFacetedSearchSmart%20Filters-OnlineShoppingApplication.sql)** in your workspace.
 
-- When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
+* When you run the application, you may encounter an “unauthorized user” error because no user has been assigned to the authorization scheme yet. To fix this, go to **Shared Components** in your workspace. Under Security, select **Application Access Control**, and click **Add User Role Assignment**. Then, add the same username you use to log in to the workspace, choose the appropriate application role, and click **Create Assignment**.
 
-- If you want to uninstall the database objects, run the  script from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
+* If you want to uninstall the database objects, run the  script from **[SQL script: labfiles/Cleanup-Scripts.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FCleanup-Scripts.sql)**.
 
 ## Task 1: Create a Product Details Form
 
@@ -52,15 +52,15 @@ In this task, you will create a form that displays product details. This Form wi
 
 4. For page attributes, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **15**
+        * Page Number: **15**
 
-        - Name: **Product Details**
+        * Name: **Product Details**
 
-        - Page Mode: **Modal Dialog**
+        * Page Mode: **Modal Dialog**
 
-    - Data Source > Table/View Name: **PRODUCTS**
+    * Data Source > Table/View Name: **PRODUCTS**
 
     Click **Next.**
 
@@ -80,29 +80,29 @@ After linking the Form to the report, it's time to enhance its usability and app
 
 2. Under **Products** region, select **PRODUCT_DETAILS** column and enter/select the following:
 
-    - Identification > Type: **DOWNLOAD BLOB**
+    * Identification > Type: **DOWNLOAD BLOB**
 
-    - Under BLOB Attributes:
+    * Under BLOB Attributes:
 
-        - Table Name: **PRODUCTS**
+        * Table Name: **PRODUCTS**
 
-        - BLOB Column: **PRODUCT_DETAILS**
+        * BLOB Column: **PRODUCT_DETAILS**
 
-        - Primary Key Column 1: **PRODUCT_ID**
+        * Primary Key Column 1: **PRODUCT_ID**
 
     ![Enhance form2](images/product-details.png " ")
 
 3. Select **PRODUCT_IMAGE** column and enter/select the following:
 
-    - Identification > Type: **Display Image**
+    * Identification > Type: **Display Image**
 
-    - Under BLOB Attributes:
+    * Under BLOB Attributes:
 
-        - Table Name: **PRODUCTS**
+        * Table Name: **PRODUCTS**
 
-        - BLOB Column: **PRODUCT_IMAGE**
+        * BLOB Column: **PRODUCT_IMAGE**
 
-        - Primary Key Column 1: **PRODUCT_ID**
+        * Primary Key Column 1: **PRODUCT_ID**
 
     ![Enhance form2](images/product-image.png " ")
 
@@ -113,11 +113,12 @@ After linking the Form to the report, it's time to enhance its usability and app
 5. Now, select **P15\_COLOR\_ID, P15\_DEPARTMENT\_ID and P15\_CLOTHING\_ID** and update **Name** as following one after the other:
 
     | Page Item | Name |
-    |-----------|------|
+    | ----------- | ------ |
     | P15\_COLOR\_ID | Color |
     | P15\_DEPARTMENT\_ID | Department |
     | P15\_CLOTHING\_ID | Clothing |
-    {: title="Page Items"}
+
+    *Page Items*
 
     ![Enhance form2](images/name-update.png " ")
 
@@ -135,7 +136,7 @@ After linking the Form to the report, it's time to enhance its usability and app
 
 8. You now need to focus on **First item on Page**. In **Page Rendering**(Left Pane), select **Page 15: Product Details**. In the **Property Editor**, update the following:
 
-    - Navigation > Cursor Focus: **First item on page**.
+    * Navigation > Cursor Focus: **First item on page**.
 
     ![Enhance form3](images/enhance-form3.png " ")
 
@@ -153,17 +154,17 @@ In this final task, you will run the application to test the integration and fun
 
 3. On the **Manage Products** page, a Classic Report is displayed.
 
-    - Perform the following actions:
+    * Perform the following actions:
 
-        - Edit Rows: Click the Edit pencil icon to modify an existing product.
+        * Edit Rows: Click the Edit pencil icon to modify an existing product.
 
-        - Add New Row: Click the Create button to add a new product.
+        * Add New Row: Click the Create button to add a new product.
 
     ![Enhanced Form](images/classic-report.png " ")
 
 4. When you click either the Edit pencil icon or the Create button:
 
-    - The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
+    * The Form dialog you built in the previous lab will open, allowing you to enter or edit product details.
 
     ![Enhanced Form](images/enhanced-form1.png " ")
 
@@ -177,5 +178,5 @@ In the next lab, you learn how to make some pages publicly accessible, allowing 
 
 ## Acknowledgements
 
-- **Author/Contributors** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
-- **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024
+* **Author/Contributors** -  Roopesh Thokala, Senior Product Manager; Ankita Beri, Product Manager
+* **Last Updated By/Date** - Ankita Beri, Product Manager, September 2024

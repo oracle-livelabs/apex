@@ -8,11 +8,11 @@ Estimated Time: 10 minutes
 
 ### Objectives
 
-- Create an application using the AI-driven Create Application wizard based on the data model created in the previous lab.
+* Create an application using the AI-driven Create Application wizard based on the data model created in the previous lab.
 
 ### Prerequisites
 
-- All previous labs are completed.
+* All previous labs are completed.
 
 ## Task 1: Refresh Data Dictionary
 
@@ -69,6 +69,7 @@ In this task, you will create an application using Generative AI by entering nat
 5. Now, you need a Form page to edit events. Enter the prompt mentioned below and hit **Enter**.
 
     Prompt 2:
+
     ```
     <copy>
     Add a form page to edit events.
@@ -80,6 +81,7 @@ In this task, you will create an application using Generative AI by entering nat
 6. Additionally, you want to enable the **Feedback** feature.
 
     Prompt 3:
+
     ```
     <copy>
     Enable Feedback feature.
@@ -110,7 +112,7 @@ In this task, you will create an application using Generative AI by entering nat
 
     ![select appearance](images/set-icon.png " ")
 
-12. Download the icon from **[here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**. Click **Upload your own icon**, choose the image, and click **Save Icon**.
+12. Download the icon from **[labfiles/AICAMP.png](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FAICAMP.png)**. Click **Upload your own icon**, choose the image, and click **Save Icon**.
 
     ![select appearance](images/save-icon.png " ")
 
@@ -144,5 +146,5 @@ You now know how to utilize Generative AI to create the first cut of your applic
 
 ## Acknowledgements
 
-- **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026
+* **Author** - Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, May 2026

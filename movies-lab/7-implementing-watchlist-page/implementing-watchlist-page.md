@@ -14,15 +14,15 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will:
 
-- Create cards to display watchlist movies.
+* Create cards to display watchlist movies.
 
-- Connect the Movie Details page to open details directly from the Watchlist.
+* Connect the Movie Details page to open details directly from the Watchlist.
 
-- Add facets to filter through movies.
+* Add facets to filter through movies.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 6
+* Completion of workshop through Lab 6
 
 ## Task 1: Create the Watchlist Cards
 
@@ -38,17 +38,17 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
 
 3. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Watchlist**
+        * Title: **Watchlist**
 
-        - Type: **Cards**
+        * Type: **Cards**
 
-    - Under Source:
+    * Under Source:
 
-        - Type: **SQL Query**
+        * Type: **SQL Query**
 
-        - SQL Query: Copy the code below and paste it into the code editor:
+        * SQL Query: Copy the code below and paste it into the code editor:
 
         ```
         <copy>
@@ -76,6 +76,7 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
                updated_by
           from watchlist
          where user_id = :USER_ID
+        </copy>
         ```
 
     ![Page 1 open in Page Designer with the Watchlist region open in Property Editor](images/watchlist.png " ")
@@ -84,36 +85,37 @@ So far, you have only added a button in the Breadcrumb Bar region of page 1. You
 
 5. In the Property editor, enter/select the following page attributes:
 
-    - Appearance > Layout: **Horizontal (Row)**
+    * Appearance > Layout: **Horizontal (Row)**
 
-    - Card > Primary Key Column 1: **ID**
+    * Card > Primary Key Column 1: **ID**
 
-    - Title > Column: **TITLE**
+    * Title > Column: **TITLE**
 
-    - Under Body:
+    * Under Body:
 
-        - Advanced Formatting: Toggle **On**
+        * Advanced Formatting: Toggle **On**
 
-        - HTML Expression: Copy and paste the below HTML expression in the code editor:
+        * HTML Expression: Copy and paste the below HTML expression in the code editor:
 
         ```
         <copy>
         Release Year: &RELEASE_YEAR.
         &lt;br>
         Rating: &VOTE_AVERAGE.
+        </copy>
         ```
 
     ![Page 1 open in Page Designer with the Watchlist region attributes open in Property Editor](images/watchlist-attributes-1.png " ")
 
-    - Secondary Body > Column: **MOVIE\_STATUS**
+    * Secondary Body > Column: **MOVIE\_STATUS**
 
-    - Icon and Badge > Badge Column: **WATCHED\_LABEL**
+    * Icon and Badge > Badge Column: **WATCHED\_LABEL**
 
-    - Under Media:
+    * Under Media:
 
-        - Source: **URL Column**
+        * Source: **URL Column**
 
-        - Media > URL: **POSTER\_URL**
+        * Media > URL: **POSTER\_URL**
 
     ![Page 1 open in Page Designer with the Watchlist region attributes open in Property Editor](images/watchlist-attributes-2.png " ")
 
@@ -127,17 +129,17 @@ In this step, you are going to connect the My Watchlist page to the Movie Detail
 
 2. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Type: **Full Card**
+    * Identification > Type: **Full Card**
 
-    - Link > Target: Click **No Link Defined**
+    * Link > Target: Click **No Link Defined**
 
-        - Page: **3**
+        * Page: **3**
 
-        - Set Items:
+        * Set Items:
 
             | Name | Value |
             | ----- | ----- |
-            | P3\_ID | &MOVIE\_ID.|
+            | P3\_ID | &MOVIE\_ID. |
             | P3\_PREVIOUS\_PAGE\_ID | 1 |
 
             Click **OK**.
@@ -162,15 +164,15 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
 2. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Title: **Filter**
+        * Title: **Filter**
 
-        - Type: **Faceted Search**
+        * Type: **Faceted Search**
 
-    - Source > Filtered Region: **Watchlist**
+    * Source > Filtered Region: **Watchlist**
 
-    - Appearance > Template: **Blank with Attributes**
+    * Appearance > Template: **Blank with Attributes**
 
     ![Page 1 open in Page Designer with the new Filter region open in Property Editor](images/faceted-search.png " ")
 
@@ -184,7 +186,7 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
 6. Navigate to **Filter** region and update the following:
 
-    - Layout > Slot: **Left Column**
+    * Layout > Slot: **Left Column**
 
     ![Page 1 open in Page Designer with the Filter region open in Property Editor](images/filter-position.png " ")
 
@@ -200,32 +202,32 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
 10. In the Property editor, enter/select the following page attributes:
 
-    - Identification > Name: **P1\_WATCHED\_YN**
+    * Identification > Name: **P1\_WATCHED\_YN**
 
-    - Label > Label: **Watched**
+    * Label > Label: **Watched**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: **Static Values**
+        * Type: **Static Values**
 
-        - Static Values > Click **Display1, Display2** to manually set up the display values that you will use for this facet.
+        * Static Values > Click **Display1, Display2** to manually set up the display values that you will use for this facet.
 
-            - Under Values:
+            * Under Values:
 
                 | Display Value | Return Value |
-                | ------------  | ------------ |
-                | Yes           | Y            |
-                | No            | N            |
+                | ------------ | ------------ |
+                | Yes | Y |
+                | No | N |
 
-            - Sort > Sort at Runtime: Toggle **Off**
+            * Sort > Sort at Runtime: Toggle **Off**
 
                 Click **OK**.
 
-    - Under Actions Menu:
+    * Under Actions Menu:
 
-        - Filter: Toggle **Off**
+        * Filter: Toggle **Off**
 
-        - Chart: Toggle **Off**
+        * Chart: Toggle **Off**
 
     > *Note: Oracle APEX auto-fills the Source based on the facet name.*
 
@@ -237,61 +239,61 @@ The next step is allowing a user to filter through movies in their watchlist to 
 
 12. Create a new facet within the Filter region and enter/select the following page attributes:
 
-    - Identification > Name: **P1\_DECADE**
+    * Identification > Name: **P1\_DECADE**
 
-    - List of Values > Type: **Distinct Values**
+    * List of Values > Type: **Distinct Values**
 
-    - List Entries > Sort By Top Counts:Toggle **Off**
+    * List Entries > Sort By Top Counts:Toggle **Off**
 
-    - Under Actions Menu:
+    * Under Actions Menu:
 
-        - Filter: Toggle **Off**
+        * Filter: Toggle **Off**
 
-        - Chart: Toggle **Off**
+        * Chart: Toggle **Off**
 
-    - Source > Data Type: **Number**
+    * Source > Data Type: **Number**
 
-	> *Note: Again, Source auto-filled based on the Name of the facet. However, the data type did not change, so you have to manually change it to match the type of data in the DECADE column.*
+        > *Note: Again, Source auto-filled based on the Name of the facet. However, the data type did not change, so you have to manually change it to match the type of data in the DECADE column.*
 
     ![Page 1 open in Page Designer with the P1_DECADE facet region open in Property Editor](images/decade-facet.png " ")
 
 13. Create another new facet within the Filter region and enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P1\_RUNTIME**
+        * Name: **P1\_RUNTIME**
 
-        - Type: **Range**
+        * Type: **Range**
 
-    - Settings > Select Multiple: Toggle **On**
+    * Settings > Select Multiple: Toggle **On**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: **Static Values**
+        * Type: **Static Values**
 
-        - Static Values: Click **Display1, Display2** to manually set up the display values that you will use for this facet.
+        * Static Values: Click **Display1, Display2** to manually set up the display values that you will use for this facet.
 
-            - Under Values:
+            * Under Values:
 
-                - Display Value: **Over 2 hours**, Return Value: **120|**
+                * Display Value: **Over 2 hours**, Return Value: **120|**
 
-                - Display Value: **90 minutes to 2 hours**, Return Value: **90|120**
+                * Display Value: **90 minutes to 2 hours**, Return Value: **90|120**
 
-                - Display Value: **Less than 90 minutes**, Return Value: **|90**
+                * Display Value: **Less than 90 minutes**, Return Value: **|90**
 
                 > *Note: The | syntax is used to define a range of return values. To learn more, see the Resources section at the end of this lab.*
 
-            - Sort > Sort at Runtime: Toggle **Off** 
+            * Sort > Sort at Runtime: Toggle **Off**
 
                 Click **OK**.
 
-    - Under Actions Menu:
+    * Under Actions Menu:
 
-        - Filter: Toggle **Off**
+        * Filter: Toggle **Off**
 
-        - Chart: Toggle **Off**
+        * Chart: Toggle **Off**
 
-    - Source > Data Type: **Number**
+    * Source > Data Type: **Number**
 
     ![P1_RUNTIME Static Values dialog open over Page 1 in Page Designer](images/runtime-facet.png " ")
 
@@ -309,33 +311,33 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
 2. In the Property editor, enter/select the following page attributes:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **P1\_SORT\_BY**
+        * Name: **P1\_SORT\_BY**
 
-        - Type: **Select List**
+        * Type: **Select List**
 
-    - Under List of Values:
+    * Under List of Values:
 
-        - Type: **Static Values**
+        * Type: **Static Values**
 
-        - Static Values: Click **Display1, Display2** to manually set up the display values that you will use for this facet.
+        * Static Values: Click **Display1, Display2** to manually set up the display values that you will use for this facet.
 
-            - Values:
+            * Values:
 
             | Display Value | Return Value |
-            | ------------  | ------------ |
-            | Title         |TITLE         |
-            | Rating        | RATING       |
-            | Date Added    | RECENT       |
+            | ------------ | ------------ |
+            | Title | TITLE |
+            | Rating | RATING |
+            | Date Added | RECENT |
 
-            - Sort > Sort at Runtime: Toggle **Off**
+            * Sort > Sort at Runtime: Toggle **Off**
 
             Click **Ok**.
 
-        - Display Null Value: Toggle **Off**
+        * Display Null Value: Toggle **Off**
 
-    - Advanced > Warn on Unsaved Changes: **Ignore**
+    * Advanced > Warn on Unsaved Changes: **Ignore**
 
     ![Page 1 open in Page Designer with the P1_SORT_BY item open in Property Editor](images/sort-by.png " ")
 
@@ -347,13 +349,13 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
 5. Click on the **Watchlist** region. In the Property editor, enter/select the following page attributes:
 
-    - Under Order By:
+    * Under Order By:
 
-        - Type: **Item**
+        * Type: **Item**
 
-        - Item: Click **No Order By Item**
+        * Item: Click **No Order By Item**
 
-            - Order By Clauses: Enter the following:
+            * Order By Clauses: Enter the following:
 
                 | Clause | Key | Display |
                 | ------- | ---- | ------ |
@@ -363,7 +365,7 @@ In addition to the Faceted Search, it would be helpful for there to be a "Sort B
 
             > *Note: The Key and Display values auto-fill with the values set in the P1\_SORT\_BY item, but you will need to add the Order By clause for each.*
 
-            - Item > Name: **P1\_SORT\_BY**
+            * Item > Name: **P1\_SORT\_BY**
 
                 Click **OK**.
 
@@ -379,9 +381,9 @@ You now know how to filter data using a Faceted Search and sort data with a sele
 
 ## Learn More
 
-- [Intro to Faceted Search](https://www.youtube.com/watch?v=xsA9SCFHDDI)
+* [Intro to Faceted Search](https://www.youtube.com/watch?v=xsA9SCFHDDI)
 
-- **Range Facet Syntax:** When implementing the static list of values for the Range facet in the Faceted Search region in this lab, you use the | symbol to help define the return value for each item in the static list. The | character represents a range of values that the movies in the Watchlist will be filtered on.
+* **Range Facet Syntax:** When implementing the static list of values for the Range facet in the Faceted Search region in this lab, you use the | symbol to help define the return value for each item in the static list. The | character represents a range of values that the movies in the Watchlist will be filtered on.
 
     For example, when setting up the P1_RUNTIME facet, the first value in the list is "Over 3 hours" and has a return value of 180|. Because you are defining a facet that represents a range, the return value 180| means that you are searching for all movies that have a runtime in the range of 180 or higher.
 
@@ -391,32 +393,32 @@ You now know how to filter data using a Faceted Search and sort data with a sele
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application through Lab 7 and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/apex%2Flab-7.sql) to download a copy of the app at the end of Lab 7.
+* [SQL script: apex/lab-7.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/apex%2Flab-7.sql) to download a copy of the app at the end of Lab 7.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 *Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
         ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

@@ -12,17 +12,17 @@ Estimated Lab Time: 5 minutes
 
 In this lab, you will:
 
-- Add a Get Started region to the My Watchlist page.
+* Add a Get Started region to the My Watchlist page.
 
-- Add custom CSS to the My Watchlist page.
+* Add custom CSS to the My Watchlist page.
 
-- Remove the navigation menu.
+* Remove the navigation menu.
 
-- Add the Oracle APEX footer.
+* Add the Oracle APEX footer.
 
 ### Prerequisites
 
-- Completion of workshop through Lab 7
+* Completion of workshop through Lab 7
 
 ## Task 1: Create a Get Started Region
 
@@ -36,9 +36,9 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 3. In the Property Editor, enter/select the following;
 
-    - Identification > Title: **Get Started**
+    * Identification > Title: **Get Started**
 
-    - Source > HTML Code: Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
+    * Source > HTML Code: Copy the below HTML code and paste it into the HTML Code box within the Source attribute group:
 
         ```
         <copy>
@@ -55,9 +55,9 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 5. In the **Get Started** region, scroll down to **Server-side Condition** and enter/select the following:
 
-    - Type: **No Rows returned**
+    * Type: **No Rows returned**
 
-    - SQL Query:
+    * SQL Query:
 
         ```
         <copy>
@@ -73,17 +73,18 @@ When a user logs into the Movies Watchlist app for the first time, they will not
 
 7. Now, navigate to **Watchlist** region. In the Property Editor, enter/select the following:
 
-    - Server-side Condition:
+    * Server-side Condition:
 
-        - Type: **Rows returned**
+        * Type: **Rows returned**
 
-        - SQL Query:
+        * SQL Query:
 
         ```
         <copy>
         select null
           from watchlist
          where user_id = :USER_ID
+        </copy>
         ```
 
     ![Close-up of Watchlist region server-side condition](images/watchlist-ssc.png " ")
@@ -114,6 +115,7 @@ On the My Watchlist page, the cards that display the movies in the watchlist are
         .a-CardView-items--row .has-media {
         grid-template-columns: minmax(32px,128px) minmax(0,var(--a-cv-icon-spacer,44px)) 1fr minmax(0,auto);
     }
+    </copy>
     ```
 
     ![Page 1 open in Page Designer with Page CSS properties in Property Editor](images/watchlist-css.png " ")
@@ -146,43 +148,43 @@ You have now completed your Movies Watchlist application and can search for movi
 
 ## Learn More
 
-- [Universal Theme Components](https://apex.oracle.com/pls/apex/apex_pm/r/ut/components)
+* [Universal Theme Components](https://apex.oracle.com/pls/apex/apex_pm/r/ut/components)
 
-- [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
+* [The Movie Database API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Stuck? Download the Application Here
 
 Stuck on a step or struggling with the lab? You can download a copy of the Movies Watchlist application and follow the instructions below to import it into your Oracle APEX workspace.
 
-- [Click here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/movies-watchlist-export.sql) to download a copy of the completed app.
+* [SQL script: movies-watchlist-export.sql](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/movies-watchlist-export.sql) to download a copy of the completed app.
 
-- You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
+* You can import the app to your APEX workspace by clicking **Import** in the App Builder home page and following the wizard steps.
 
-- You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
+* You will be prompted for the Credentials for Movies web credential that was set up in lab 2. You can see in the screenshot below that Credentials for Movies does not already exist in the workspace.
 
     >*Note: If you completed Lab 2, Credentials for Movies will already exist in your workspace and this will be pre-filled*
 
     ![APEX Install Application page with Web Credentials table without any Client ID and Client Secret for Credentials for Movies](images/blank-credentials.png " ")
 
-- If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
+* If Credentials for Movies does not already within your workspace, set the following for the Credentials for Movies row:
 
-    - In the Client ID or Username column, enter **api\_key**.
+    * In the Client ID or Username column, enter **api\_key**.
 
-    - In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
+    * In the Client Secret or Password column, paste your unique API key that you got from The Movie Database.
 
-    - In the Verify Client Secret/Password column, past your API key again.
+    * In the Verify Client Secret/Password column, past your API key again.
 
     ![APEX Install Application page with Web Credentials table containing Client ID and Client Secret for Credentials for Movies](images/complete-credentials.png " ")
 
-- Click **Next**.
+* Click **Next**.
 
-- Make sure Install Supporting Objects is **on** and click **Next** again.
+* Make sure Install Supporting Objects is **on** and click **Next** again.
 
-- Click **Install** to install the supporting objects and finish importing the application.
+* Click **Install** to install the supporting objects and finish importing the application.
 
-- To use the Vector Search capabilities of this application, you need to perform the steps mentioned in Lab - [Create Vector Search Configuration (Optional)](?lab=movies-vector-search) > Task 1, Task 2 and Task 4.
+* To use the Vector Search capabilities of this application, you need to perform the steps mentioned in Lab - [Create Vector Search Configuration (Optional)](?lab=movies-vector-search) > Task 1, Task 2 and Task 4.
 
 ## Acknowledgements
 
-- **Author** - Paige Hanssen
-- **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025
+* **Author** - Paige Hanssen
+* **Last Updated By/Date** - Ankita Beri, Product Manager, April 2025

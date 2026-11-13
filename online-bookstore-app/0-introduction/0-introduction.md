@@ -10,62 +10,62 @@ Estimated Time: 4 hours 40 minutes
 
 In this workshop, you will:
 
-- Develop an APEX Application.
-- Load Data using Data Workshop.
-- Integrate REST Data Sources.
-- Customize the application theme and UI.
-- Configure Authentication & Security.
-- Implement e-commerce features including Cart, Wishlist, Orders, Profile, and My Books, etc.
-- Add API Keys in the OCI Console.
-- Create Web Credentials in Oracle APEX.
-- Leverage AI capabilities such as RAG, OCI Vision, and the AI Assistant.
-- Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here).
-- Set Up Push Notifications to alert users when books in their wishlist become available.
-- Integrate Razorpay to support demo payment transactions within the application.
-- Create and use email templates for sending emails in the application.
-- Create Vector Providers, Search Configurations and Oracle Vector Search Page.
+* Develop an APEX Application.
+* Load Data using Data Workshop.
+* Integrate REST Data Sources.
+* Customize the application theme and UI.
+* Configure Authentication & Security.
+* Implement e-commerce features including Cart, Wishlist, Orders, Profile, and My Books, etc.
+* Add API Keys in the OCI Console.
+* Create Web Credentials in Oracle APEX.
+* Leverage AI capabilities such as RAG, OCI Vision, and the AI Assistant.
+* Implement User Authentication Features (Login/Signup with Google, Forgot Password, Signup Here).
+* Set Up Push Notifications to alert users when books in their wishlist become available.
+* Integrate Razorpay to support demo payment transactions within the application.
+* Create and use email templates for sending emails in the application.
+* Create Vector Providers, Search Configurations and Oracle Vector Search Page.
 
 *Note: This workshop assumes you are using Oracle APEX 24.2.*
 
 ## Prerequisites
 
-- An APEX workspace.
+* An APEX workspace.
 
-- We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
+* We need to use an OCI API key for Lab 14. For this, a paid Oracle Cloud Infrastructure (OCI) account or a FREE Oracle Cloud account with $300 in credits (valid for 30 days) is required. These credits can be used for other services. Read more about it at: [oracle.com/cloud/free/](https://www.oracle.com/cloud/free/).
 
-- We need to use an API key for the AI Provider of your choice (OCI Generative AI, Open AI, Cohere) for Labs 8, and 17.
+* We need to use an API key for the AI Provider of your choice (OCI Generative AI, Open AI, Cohere) for Labs 8, and 17.
 
-- In this LiveLab, OCI Generative AI is the chosen AI provider. The prerequisites are as follows:
+* In this LiveLab, OCI Generative AI is the chosen AI provider. The prerequisites are as follows:
 
-    - The OCI account must be created in or subscribed to a region that supports the OCI Generative AI Service. Currently, the OCI Generative AI Service is available in the following regions:
+    * The OCI account must be created in or subscribed to a region that supports the OCI Generative AI Service. Currently, the OCI Generative AI Service is available in the following regions:
 
-        - Brazil East (Sao Paulo)
-        - Germany Central (Frankfurt)
-        - India South (Hyderabad)
-        - Japan Central (Osaka)
-        - UAE East (Dubai)
-        - UK South (London)
-        - US Midwest (Chicago)
+        * Brazil East (Sao Paulo)
+        * Germany Central (Frankfurt)
+        * India South (Hyderabad)
+        * Japan Central (Osaka)
+        * UAE East (Dubai)
+        * UK South (London)
+        * US Midwest (Chicago)
 
-    - OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
+    * OCI Generative AI service is available in limited regions. To see if your cloud region supports OCI Generative AI service, visit the [documentation](https://docs.oracle.com/en-us/iaas/Content/generative-ai/overview.htm#regions).
 
-    - An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
+    * An OCI compartment. An Oracle Cloud account comes with two pre-configured compartments - The tenancy (root compartment) and ManagedCompartmentForPaaS (created by Oracle for Oracle Platform services).
 
-    - The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
+    * The logged-in user should have the necessary privileges to create and manage Autonomous Database instances in this compartment. You can configure these privileges via an OCI IAM Policy. If you are using a Free Tier account, it is likely that you already have all the necessary privileges.
 
 >*Note: This workshop assumes you are using Oracle APEX 24.2.*
 
-- *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
+* *Some of the features might not be available in prior releases and the instructions, flow, and screenshots might differ if you use an older version of Oracle APEX.*
 
-- *Lab 18 requires Oracle Database 23ai.*
+* *Lab 18 requires Oracle Database 23ai.*
 
-- *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
+* *The screenshots in this workshop are taken using Dark Mode in APEX 24.2*
 
-- *The application icon in the screenshots may vary. Please ignore the application icon.*
+* *The application icon in the screenshots may vary. Please ignore the application icon.*
 
 ## Labs
 
-| Lab |  Module | Est. Time |
+| Lab | Module | Est. Time |
 | --- | --- | --- |
 | 1 | [Create an APEX application](?lab=create-app) | 4 minutes |
 | 2 | [Load Data Using Data Workshop](?lab=2-load-data-using-data-workshop) | 5 minutes |
@@ -96,20 +96,20 @@ If the menu is not displayed, you can open by clicking the menu button (![Menu i
 
 If you are stuck or the app is not working as expected, don't worry! You can download and install one of the the completed app as follows:
 
-- **OPTION 1:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
+* **OPTION 1:** Click [application export: obs-lab17.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab17.zip) to download the complete application zip file, which contains everything completed in all the labs except the **Optional Lab 18**. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 10.
 
-- **OPTION 2:** Click [here](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
+* **OPTION 2:** Click [application export: obs-lab18.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/obs-lab18.zip) to download the complete application zip file, which contains everything completed in all the labs, including the **Optional Lab 18**. This app requires Oracle Database 23ai for Lab 18. To run the app, follow the steps described in the [Lab Appendix: Download Instructions](?lab=download-instructions) from Task 1 to Task 11.
 
 ## Learn More - *Useful Links*
 
-- [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
-- [APEX on Autonomous](https://apex.oracle.com/autonomous)
-- [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
-- [Tutorials](https://apex.oracle.com/en/learn/tutorials)
-- [Community](https://apex.oracle.com/community)
-- [External Site + Slack](http://apex.world)
+* [OCI Generative AI](https://www.oracle.com/artificial-intelligence/generative-ai/large-language-models/)
+* [APEX on Autonomous](https://apex.oracle.com/autonomous)
+* [APEX Collateral](https://www.oracle.com/database/technologies/appdev/apex/collateral.html)
+* [Tutorials](https://apex.oracle.com/en/learn/tutorials)
+* [Community](https://apex.oracle.com/community)
+* [External Site + Slack](http://apex.world)
 
 ## Acknowledgements
 
-- **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
-- **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025
+* **Author**: Pankaj Goyal, Member Technical Staff; Ankita Beri, Product Manager
+* **Last Updated By/Date**: Pankaj Goyal, Member Technical Staff, November 2025

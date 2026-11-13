@@ -10,25 +10,25 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-- Learn how to register and expose an Oracle database schema using Oracle REST Data Services (ORDS).
+* Learn how to register and expose an Oracle database schema using Oracle REST Data Services (ORDS).
 
-- Understand how to create and configure REST data sources in Oracle APEX.
+* Understand how to create and configure REST data sources in Oracle APEX.
 
-- Synchronize data from external REST APIs into a local database table.
+* Synchronize data from external REST APIs into a local database table.
 
-- Work with nested JSON data, flattening hierarchical structures for better display and interaction in APEX.
+* Work with nested JSON data, flattening hierarchical structures for better display and interaction in APEX.
 
-- Create a Data Load Definition to map external data into your local database.
+* Create a Data Load Definition to map external data into your local database.
 
 ### Downloads
 
 Stuck or Missed out on completing the previous labs? Don't worry! You can download the following application:
 
-- **[Sample Reporting](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2FExtendingApplicationCapabilities-SampleReporting.sql)**
+* **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FExtendingApplicationCapabilities-SampleReporting.sql)**
 
 Import them into your workspace. To run the app, please run the steps described in the following workshops:
 
-- **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
+* **[Get Started with Oracle APEX](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3509)**
 
 ## Task 1: Enable Remote Database schema to Oracle REST Data Services
 
@@ -65,19 +65,19 @@ In this task, you will set up your Oracle database schema to be accessible via O
     </copy>
     ```
 
-     ```
+    ```
     <copy>
     insert into emp_1(empno, emp_name, mgr) values (20, 'CLARA',30);
     </copy>
     ```
 
-     ```
+    ```
     <copy>
     insert into emp_1(empno, emp_name, mgr) values (30, 'JANE', 40);
     </copy>
     ```
 
-     ```
+    ```
     <copy>
     insert into emp_1(empno, emp_name, mgr) values (40, 'MATT', null);
     </copy>
@@ -105,11 +105,11 @@ In this task, you will set up your Oracle database schema to be accessible via O
 
 8. Under **AutoREST Enable Object**, enter/select the following and click **Create**.
 
-    - Object Type: **TABLE**
+    * Object Type: **TABLE**
 
-    - Object : **EMP_1**
+    * Object : **EMP_1**
 
-    - Copy the **Full URL** and paste it into your Note pad.
+    * Copy the **Full URL** and paste it into your Note pad.
 
      Click **Create**.
 
@@ -143,11 +143,11 @@ Now that you have set up a RESTful service in Task 1, you will integrate this se
 
 6. Under **Create REST Data Source**, enter/select the following and click **Next**.
 
-    - REST Data Source Type: **Oracle REST Data Services**
+    * REST Data Source Type: **Oracle REST Data Services**
 
-    - Name: **Employee Details API**
+    * Name: **Employee Details API**
 
-    - URL Endpoint: Paste the URL you **copied** in **Task 1 > Step 8**
+    * URL Endpoint: Paste the URL you **copied** in **Task 1 > Step 8**
 
     ![Enter REST Data Source name and URL endpoint](images/create-rds1.png " ")
 
@@ -175,7 +175,7 @@ In this task, you will synchronize the data from the REST data source to a local
 
 2. **Synchronization** is not configured yet. In this step, you provide the name of a new or existing table.
 
-   Select **New Table** for **Synchronise To** and select **EMP_1** for **Table Name** and click **Save**.
+    Select **New Table** for **Synchronise To** and select **EMP_1** for **Table Name** and click **Save**.
 
     ![Create REST Data Synchronisation](images/create_rest_data_sync122.png " ")
 
@@ -189,9 +189,9 @@ In this task, you will synchronize the data from the REST data source to a local
 
 5. The Interval Builder dialog displays. Enter/select the following
 
-     - Frequency: **Minutely**
+    * Frequency: **Minutely**
 
-     - Interval: **10**
+    * Interval: **10**
 
     Click **Set Execution Interval**.
 
@@ -231,9 +231,9 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
 6. Under **Create REST Data Source**, enter/select the following:
 
-    - Name: **Purchase Orders**
+    * Name: **Purchase Orders**
 
-    - URL Endpoint: **https://apex.oracle.com/pls/apex/carstenczarski/orders/purchaseorders/**
+    * URL Endpoint: **<https://apex.oracle.com/pls/apex/carstenczarski/orders/purchaseorders/>**
 
     > **Note:** This URL endpoint consists of an array of purchase orders (denoted by the "items" attribute"), and within each purchase order, there is an array of order line items.
 
@@ -254,7 +254,7 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
     ![data synchronisation is triggered](images/discover.png " ")
 
 
-10. Click **Create REST Data Source**. 
+10. Click **Create REST Data Source**.
 
     ![data synchronisation is triggered](images/create-ds.png " ")
 
@@ -272,9 +272,9 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
 14. Enter/select the following:
 
-    - Page Number: **16**
+    * Page Number: **16**
 
-    - Name: **Purchase Orders**
+    * Name: **Purchase Orders**
 
     Click **Create Page**.
 
@@ -286,17 +286,17 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
 16. In the Property Editor, enter/select the following:
 
-    - Under Identification:
+    * Under Identification:
 
-        - Name: **Purchase Orders**
+        * Name: **Purchase Orders**
 
-        - Type: **Interactive Report**
+        * Type: **Interactive Report**
 
-    - Under Source:
+    * Under Source:
 
-        - Location: **REST Source**
+        * Location: **REST Source**
 
-        - REST Source: **Purchase Orders**
+        * REST Source: **Purchase Orders**
 
     ![data synchronisation is triggered](images/google-book-region1.png " ")
 
@@ -308,7 +308,7 @@ Many modern APIs return nested or hierarchical JSON data, where objects contain 
 
 19. Select **Purchase Orders** region, in the Property Editor, enter/select the following:
 
-    - Data Profile > Nested Rows: **1. PO_LINEITEMS**
+    * Data Profile > Nested Rows: **1. PO_LINEITEMS**
 
     ![data synchronisation is triggered](images/po-line-items.png " ")
 
@@ -340,15 +340,15 @@ In this task, you will create a Data Load Definition and use it to load data int
 
 5. In **Create Data Load** dialog, enter/select the following:
 
-      - Name: **Data loading**
+    * Name: **Data loading**
 
-      - Table Name: **EBA\_DEMO\_IR\_EMP**
+    * Table Name: **EBA\_DEMO\_IR\_EMP**
 
-   Click **Next**.
+    Click **Next**.
 
     ![Click Save and Run](images/dld-loadnext.png " ")
 
-6. Download the .xlsx  file from **[here](files/emp.xlsx)** and upload it. Click **Next**.
+6. Download the .xlsx  file from **[emp.xlsx](files/emp.xlsx)** and upload it. Click **Next**.
 
     ![Click Save and Run](images/dld-sample-data.png " ")
 
@@ -378,13 +378,13 @@ In this task, you will create a Data Load Definition and use it to load data int
 
 13. In **Create Data Loading** dialog, enter/select the following:
 
-    - Under Page Definition:
+    * Under Page Definition:
 
-        - Page Number: **44**
+        * Page Number: **44**
 
-        - Name: **Data Loading**
+        * Name: **Data Loading**
 
-    - Data Load Attributes > Data Load: **Data Loading**
+    * Data Load Attributes > Data Load: **Data Loading**
 
     Click **Create Page**.
 
@@ -416,5 +416,5 @@ In the upcoming hands-on lab, you will learn to integrate multi level authentica
 
 ## Acknowledgements
 
-- **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
+* **Author** - Roopesh Thokala, Principal Product Manager; Ankita Beri, Senior Product Manager
+* **Last Updated By/Date** - Ankita Beri, Senior Product Manager, October 2025
