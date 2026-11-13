@@ -72,35 +72,17 @@ In this task, you will configure OCI Generative AI Service in your APEX workspac
 
 5. On the **Create Generative AI Service** page, enter/select the following:
 
-    - Under Identification:
-
-        - AI Provider: **OCI Generative AI Service**
-
-        - Name: **OCI Gen AI**
-
-    - Under OCI Generative AI:
-
-        - Compartment ID: Enter your OCI Compartment ID.
-
-        - Serving Mode: **On-Demand**
-
-        - Region: Enter an OCI region where your selected model is available.
-
-    - Under Settings:
-
-        - Used by App Builder: Toggle **On**
-
-        - Default for New Apps: Toggle **On**
-
-        - Base URL: Leave the auto-generated value unchanged.
-
-        - Model ID: Enter the ID of a model available in your region that supports tool calling. The screenshot uses **xai.grok-4.5**. Check the [available models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) before selecting it.
-   
-        - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential using the configuration details from Task 1.
+    - AI Provider: **OCI Generative AI Service**
+    - Name: **OCI Gen AI**
+    - Compartment ID: Enter your OCI Compartment ID.
+    - Region: Enter an OCI region where your selected model is available.
+    - Serving Mode: **On-Demand**
+    - Model ID: Enter the ID of a model available in your region that supports tool calling. The screenshot uses **cohere.command-a-03-2025**. Check the [available models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/pretrained-models.htm#pretrained-models) before selecting it.
+    - Used by App Builder: Toggle **On**
+    - Base URL: Leave the auto-generated value unchanged.
+    - Credential: Select an existing OCI credential if one is already available in your workspace. Otherwise, create a new OCI credential using the configuration details from Task 1.
 
     ![Create Generative AI Service](./images/create-genai.png " ")
-
-    ![Create Generative AI Service](./images/create-genai1.png " ")
 
 6. Select **Advanced** and set **Provider API** to **Generic** for this OCI configuration.
 

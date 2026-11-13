@@ -1,6 +1,6 @@
-# Introduction
+# Build an AI Procurement Agent in Oracle APEX
 
-## About This Workshop
+## Introduction
 
 Managing stock shortages and supplier decisions manually takes time that warehouse teams do not always have.When an item falls below its reorder point and the replenishment alert reaches CRITICAL, a warehouse manager needs fast answers: which items are at risk, which suppliers can help, and who delivers most reliably.
 

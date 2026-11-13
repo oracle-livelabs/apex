@@ -122,13 +122,14 @@ You may now **proceed to the next lab**.
 
 <if type="OpenAI">
 
-In this lab, you use OpenAI as the AI provider to build a conversational chatbot.
+In this lab, you use Open AI as the AI provider to build a conversational chatbot.
 
-> **Note:** The screenshots in this workshop are taken using dark mode in APEX 26.1.
+**Note:** The screenshots in this workshop are taken using Dark Mode in APEX 26.1
 
 Estimated Time: 10 Minutes
 
 Watch the video below for a quick walk-through of the lab.
+
 [Configure a Generative AI Service in APEX](videohub:1_caybibul)
 
 ### Objectives
@@ -198,6 +199,5 @@ You may now **proceed to the next lab**.
 </if>
 
 ## Acknowledgements
-
-- **Author** - Ankita Beri, Senior Product Manager
-- **Last Updated By/Date** - Ankita Beri, Senior Product Manager, June 2026
+- **Author** - Apoorva Srinivas, Principal Product Manager
+- **Last Updated By/Date** - Sahaana Manavalan, Senior Product Manager, May 2026
