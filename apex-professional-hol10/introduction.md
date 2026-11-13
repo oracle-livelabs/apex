@@ -32,7 +32,7 @@ Stuck or Missed out on completing the previous labs? Don't worry! You can downlo
 
 - **[Sample Reporting](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-usingComputationsProcessesValidations-SampleReporting.sql)**
 
-- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-using-ComputationsProcessesValidations-OnlineShoppingApplication.sql)**
+- **[Online Shopping Application](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-using-ComputationsProcessesValidations-Online%20ShoppingApplication.sql)**
 
 - **[Demo Projects](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2FEnhancing-your-application-using-ComputationsProcessesValidations-DemoProjects.sql)**
 
